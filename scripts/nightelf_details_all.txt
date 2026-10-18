@@ -1,0 +1,1868 @@
+=== 1. BUILDINGS ===
+ID: etol (hotkey: Q)
+  Name: [TRIGSTR_26923] |cffbebedcДрево жизни|r
+  Tip: [TRIGSTR_26924] Вырастить |cffbebedcдрево жизни|r
+  Ubertip: [TRIGSTR_5481] |cff7dc87dВремя строительства:|r |cffaaf0aa40 сек.|r|n|nБазовое здание. Призывает |cffbebedcогоньков|r и хранит добытые ресурсы. Можно улучшить, чтобы получить доступ к новым зданиям и типам войск.
+  Trains: ewsp
+  Researches: R0G1,R0G2,Renb
+  Upgrades to: etoa
+  HP: 1300, Def: 2 (fort), Food: fmade=50, fused=None
+  Abilities: A0LJ,A0LI,A0IQ,Aeat,Aro1,Atol,Arlm
+
+ID: etoa (hotkey: Z)
+  Name: [TRIGSTR_26925] |cffbebedcДрево столетий|r
+  Tip: [TRIGSTR_26935] Улучшить до |cffbebedcдрева столетий|r
+  Ubertip: [TRIGSTR_10114] |cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск.
+  Trains: ewsp
+  Researches: Renb
+  Upgrades to: etoe
+  HP: 1700, Def: 2 (fort), Food: fmade=100, fused=None
+  Abilities: A0LJ,A0LI,A0IQ,Aeat,Aro1,Atol,Arlm
+
+ID: etoe (hotkey: Z)
+  Name: [TRIGSTR_26936] |cffbebedcДрево вечности|r
+  Tip: [TRIGSTR_26937] Улучшить до |cffbebedcдрева вечности|r
+  Ubertip: [TRIGSTR_10115] |cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск.
+  Trains: ewsp
+  Researches: Renb
+  Upgrades to: None
+  HP: 2000, Def: 2 (fort), Food: fmade=150, fused=None
+  Abilities: A0LJ,A0LI,Aeat,Aro1,Atol,Arlm
+
+ID: emow (hotkey: A)
+  Name: [TRIGSTR_26938] |cffbebedcЛунный колодец|r
+  Tip: [TRIGSTR_26939] Построить |cffbebedcлунный колодец|r
+  Ubertip: [TRIGSTR_31600] |cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.
+
+|cffffff00Приносит 20 инкома|r
+  Trains: None
+  Researches: None
+  Upgrades to: None
+  HP: 600, Def: 5 (fort), Food: fmade=40, fused=None
+  Abilities: Ambt
+
+ID: eaom (hotkey: W)
+  Name: [TRIGSTR_26940] |cffbebedcДрево войны|r
+  Tip: [TRIGSTR_26941] Вырастить |cffbebedcдрево войны|r
+  Ubertip: [TRIGSTR_12949] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nЗдание для подготовки базовых войск. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск.
+  Trains: n05H,e00J,e00I,earc,esen,ebal
+  Researches: R0GA,R0G9,R0G7,Reib,Remk,Remg,Repb,R0LC
+  Upgrades to: None
+  HP: 900, Def: 2 (fort), Food: fmade=None, fused=None
+  Abilities: Abds,Aeat,Aro1
+
+ID: eate (hotkey: S)
+  Name: [TRIGSTR_27021] |cffbebedcАлтарь старейшин|r
+  Tip: [TRIGSTR_27022] Построить |cffbebedcалтарь старейшин|r
+  Ubertip: [TRIGSTR_12948] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nСооружение позволяющее призыватьновых и воскрешает павших героев.
+  Trains: E00V,E00W,E011
+  Researches: None
+  Upgrades to: None
+  HP: 900, Def: 5 (fort), Food: fmade=3, fused=None
+  Abilities: Abds
+
+ID: eaow (hotkey: R)
+  Name: [TRIGSTR_27025] |cffbebedcДрево ветров|r
+  Tip: [TRIGSTR_27026] Вырастить |cffbebedcдрево ветров|r
+  Ubertip: [TRIGSTR_31602] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n
+Приют воздушных воинов и магов. Новые виды воск, более могучих, или более разумных.
+  Trains: n064,e00H,edot,efdr
+  Researches: R0G6,Redt,Reec
+  Upgrades to: None
+  HP: 900, Def: 2 (fort), Food: fmade=None, fused=None
+  Abilities: Abds,Aeat,Aro1
+
+ID: eaoe (hotkey: D)
+  Name: [TRIGSTR_27023] |cffbebedcДрево мудрости|r
+  Tip: [TRIGSTR_27024] Вырастить |cffbebedcдрево мудрости|r
+  Ubertip: [TRIGSTR_31601] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n
+Приют наземных магов. Позволяет проводить исследование , для обучения новым способностям.
+  Trains: n05D,edry,edoc,emtg
+  Researches: R0G8,Resi,Redc,Rers,Rehs,Reeb
+  Upgrades to: None
+  HP: 900, Def: 2 (fort), Food: fmade=None, fused=None
+  Abilities: Abds,Aeat,Aro1
+
+ID: edob (hotkey: E)
+  Name: [TRIGSTR_27027] |cffbebedcДом охотников|r
+  Tip: [TRIGSTR_27028] Построить |cffbebedcдом охотников|r
+  Ubertip: [TRIGSTR_3803] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n
+Позволяет усиливать атаку и броню войск. Дает доступ к ночному зрению и лунному фонтану.
+  Trains: None
+  Researches: R0GC,Resc,Resm,Rema,Resw,Rerh,Reuv,Rews
+  Upgrades to: None
+  HP: 1100, Def: 5 (fort), Food: fmade=None, fused=None
+  Abilities: Abds
+
+ID: etrp (hotkey: Z)
+  Name: [TRIGSTR_27029] |cffbebedcСторожевое древо|r
+  Tip: [TRIGSTR_27030] Вырастить |cffbebedcсторожевое древо|r
+  Ubertip: [TRIGSTR_31604] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n
+Оборонительное древо. Пустив корни, может метать камни в находящихся рядом врагов.|n|n
+  Trains: None
+  Researches: None
+  Upgrades to: None
+  HP: 600, Def: 1 (fort), Food: fmade= - , fused=None
+  Abilities: Abds,Aeat,Aro2
+
+ID: edos (hotkey: Z)
+  Name: [TRIGSTR_27031] |cffbebedcГнездо химер|r
+  Tip: [TRIGSTR_27032] Построить |cffbebedcгнездо химер|r
+  Ubertip: [Обучает химер. |nДает доступ к «Едкому дыханию».] Обучает химер. |nДает доступ к «Едкому дыханию».
+  Trains: echm
+  Researches: Recb
+  Upgrades to: None
+  HP: 1200, Def: 5 (fort), Food: fmade=None, fused=None
+  Abilities: Abds
+
+ID: e03X (hotkey: E)
+  Name: [TRIGSTR_8676] |cff00781eХрам Друидов
+  Tip: [TRIGSTR_8742] Построить |cff00781eХрам Друидов
+  Ubertip: [TRIGSTR_9105] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n
+Храм друидов, тут вы можете использовать силы природы и попросить помощи у её обитателей
+  Trains: None
+  Researches: R0CY,R0KV,R0KW
+  Upgrades to: None
+  HP: 1600, Def: 5 (fort), Food: fmade=None, fused=None
+  Abilities: Abds
+
+ID: e03W (hotkey: E)
+  Name: [TRIGSTR_2064] |cffbd00ffХрам Элуны
+  Tip: [TRIGSTR_2930] Построить |cffbd00ff Храм Элуны
+  Ubertip: [TRIGSTR_31603] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n
+Позволяет усиливать атаку и броню войск. Дает доступ к ночному зрению и лунному фонтану.
+  Trains: None
+  Researches: R0KS,R0KT,R0KU
+  Upgrades to: None
+  HP: 1600, Def: 5 (fort), Food: fmade=None, fused=None
+  Abilities: Abds
+
+ID: h0D8 (hotkey: C)
+  Name: [TRIGSTR_10907] |cffe4cfa3Верфь|r
+  Tip: [TRIGSTR_10908] |cffe4cfa3Верфь|r (|cffffffffC|r)
+  Ubertip: [TRIGSTR_10903] |cffa6afb8ЗДАНИЕ:|cffced4da Морское сооружение для строительства и оснащения боевых кораблей.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспортный корабль|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da.|r
+  Trains: h0D9,h0DB,h0DA
+  Researches: R005,R006,R007,R002,R003
+  Upgrades to: None
+  HP: 2000, Def: 5 (fort), Food: fmade=None, fused=None
+  Abilities: A15N
+
+=== 2. WORKER & UNITS ===
+ID: ewsp (hotkey: Q)
+  Name: [TRIGSTR_27042] |cffbebedcОгонек|r
+  Tip: [TRIGSTR_27043] Призвать |cffbebedcогонька|r
+  Ubertip: [TRIGSTR_31605] |cff7dc87dВремя подготовки:|r |cffaaf0aa14 сек.|r|n
+Базовый рабочий. Добывает древесину, а также выращивает здания. Владеет «Обновлением». 
+  HP: 125, Mana: None, Def: 0 (medium)
+  Atk1: type=normal, targets=None, weapon=None
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: A0I3,Adtn,Aren,Awha,Ault
+  Upgrades: Rewd,R0GC,Reuv
+
+ID: earc (hotkey: Q)
+  Name: [TRIGSTR_1252] |cffbebedcЛучница|r
+  Tip: [TRIGSTR_1253] Обучить |cffbebedcлучницу|r
+  Ubertip: [TRIGSTR_1255] |cff7dc87dВремя подготовки:|r |cffaaf0aa20 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaПронзающий|r|n
+Базовый воин дальнего боя. Стрелы лучницы могут поразить даже самых могучих существо со всего мира.
+  HP: 275, Mana:  - , Def: 0 (medium)
+  Atk1: type=pierce, targets=ground,structure,debris,air,item,ward, weapon=missile
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: Aco2,Ashm,Aien,Ault,Aegr,Aeib,Aemk
+  Upgrades: R0G2,Resm,Rema,Reib,Remk,Reuv,Repm
+
+ID: esen (hotkey: W)
+  Name: [TRIGSTR_217] |cffbebedcОхотница|r
+  Tip: [TRIGSTR_219] Обучить |cffbebedcохотницу|r
+  Ubertip: [TRIGSTR_1250] |cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
+Ловкий воин ближнего боя. Считается авангардом армии |cffbebedcэльфов|r.
+  HP: 600, Mana: None, Def: 2 (medium)
+  Atk1: type=normal, targets=ground,structure,debris,item,ward, weapon=mbounce
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: Aesn,Ashm,Amgl,Aien,Ault,Amgi
+  Upgrades: R0G2,Resm,Rema,Resc,Reuv,Remg,Repm
+
+ID: ebal (hotkey: R)
+  Name: [TRIGSTR_1424] |cffbebedcГлефомет|r
+  Tip: [TRIGSTR_6114] Построить |cffbebedcглефомет|r
+  Ubertip: [TRIGSTR_33517] |cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный|r|n
+Дальнобойное осадное орудие, эффективное против зданий. Можно оснастить стрижающими клинками, чтобы атаковать деревья. |n|n|cffffcc00Атакует наземные цели.|r
+  HP: 300, Mana:  - , Def: 2 (large)
+  Atk1: type=siege, targets=ground,structure,debris,wall,item,ward, weapon=artillery
+  Atk2: type=siege, targets=ground,structure,debris,wall,item,ward,tree, weapon=artillery
+  Abilities: Aimp,Ault
+  Upgrades: Resm,Reuv,Repb
+
+ID: e00I (hotkey: E)
+  Name: [TRIGSTR_27293] |cffbebedcЛунный воин|r
+  Tip: [TRIGSTR_27294] Обучить |cffbebedcЛунный воин|r
+  Ubertip: [TRIGSTR_31703] Ловкий эльфийский боец ближнего боя с парными глефами. Владеет «Танцем полумесяца», позволяющим совершать стремительные перекаты вокруг врагов с рассекающим уроном.
+  HP: 800, Mana: 100, Def: 1 (small)
+  Atk1: type=normal, targets=ground,structure,debris,item,ward, weapon=normal
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: A0FD,Ault,A0EF
+  Upgrades: R0G2,Rerh,Resw
+
+ID: e00J (hotkey: Q)
+  Name: [TRIGSTR_27295] |cffbebedcДух леса|r
+  Tip: [TRIGSTR_27296] Обучить |cffbebedcДух леса|r
+  Ubertip: [TRIGSTR_31704] |cff7dc87dВремя подготовки:|r |cffaaf0aa25 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
+Дух призванный защищать леси природу всего мира.
+  HP: 530, Mana: 0, Def: 4 (small)
+  Atk1: type=normal, targets=ground,structure,debris,item,ward, weapon=normal
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: A0FC,Ault
+  Upgrades: R0G1,Rerh,Resw
+
+ID: n05H (hotkey: W)
+  Name: [TRIGSTR_27565] |cffbebedcФурболг-следопыт|r
+  Tip: [TRIGSTR_27566] Нанять |cffbebedcФурболг-следопыт|r
+  Ubertip: [TRIGSTR_31905] |cff7dc87dВремя подготовки:|r |cffaaf0aa35 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
+Тяжелый воин ближнего боя. Владеет «Волшебным огнем». 
+  HP: 780, Mana: 400, Def: 2 (medium)
+  Atk1: type=normal, targets=ground,structure,debris,item,ward, weapon=normal
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: A16K
+  Upgrades: R0GA,Rerh,Resw
+
+ID: edot (hotkey: W)
+  Name: [TRIGSTR_27055] |cffbebedcДруид-ворон|r
+  Tip: [TRIGSTR_27056] Обучить |cffbebedcдруида-ворона|r
+  Ubertip: [TRIGSTR_31599] |cff7dc87dВремя подготовки:|r |cffaaf0aa22 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|n
+Мобильный маг. Владеет «Волшебным огнем», который ослабляет броню и раскрывает местоположение врага. Может изучить облик буревестника, «Смерч» и «Знак ворона». |n|n|cffffcc00Атакует наземные и воздушные цели.|r
+  HP: 500, Mana: 75, Def: 0 (none)
+  Atk1: type=magic, targets=ground,structure,debris,air,item,ward, weapon=missile
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: Acyc,Arav,Afae,Aien,Ault
+  Upgrades: R0G1,Resm,Rema,Redt,Reuv,Repm,Reec
+
+ID: edtm (hotkey: T)
+  Name: [Друид-ворон] Друид-ворон
+  Tip: [Обучить друида-ворона] Обучить друида-ворона
+  Ubertip: ["Мобильный маг. Владеет «Волшебным огнем», который ослабляет броню и раскрывает местоположение врага. Может изучить облик буревестника, «Смерч» и «Знак ворона». |n|n|cffffcc00Атакует наземные и воздушные цели.|r"] "Мобильный маг. Владеет «Волшебным огнем», который ослабляет броню и раскрывает местоположение врага. Может изучить облик буревестника, «Смерч» и «Знак ворона». |n|n|cffffcc00Атакует наземные и воздушные цели.|r"
+  HP: 450, Mana: 75, Def: 0 (none)
+  Atk1: type=pierce, targets=ground,structure,debris,air,item,ward, weapon=missile
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: Arav,Afa2,Ault
+  Upgrades: Resw,Rerh,Reuv,Redt
+
+ID: efdr (hotkey: Q)
+  Name: [TRIGSTR_27057] |cffbebedcЧудесный дракончик|r
+  Tip: [TRIGSTR_27058] Обучить |cffbebedcчудесного дракончика|r
+  Ubertip: ["Небольшое летающее существо, мастер боя с магами и уклонения от урона. Владеет «Невосприимчивостью к магии», «Фазовым сдвигом» и «Вспышкой маны». |n|n|cffffcc00Атакует наземные и воздушные цели.|r"] "Небольшое летающее существо, мастер боя с магами и уклонения от урона. Владеет «Невосприимчивостью к магии», «Фазовым сдвигом» и «Вспышкой маны». |n|n|cffffcc00Атакует наземные и воздушные цели.|r"
+  HP: 450, Mana: 75, Def: 0 (small)
+  Atk1: type=pierce, targets=ground,structure,debris,air,item,ward, weapon=missile
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: A12K,A16L,Amfl,Apsh,Ault
+  Upgrades: Resw,Rerh,Reuv
+
+ID: e00H (hotkey: W)
+  Name: [TRIGSTR_27291] |cffbebedcДревний Гвардеец|r
+  Tip: [TRIGSTR_27292] Обучить |cffbebedcДревний Гвардеец|r
+  Ubertip: [TRIGSTR_31702] |cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|n
+Маг ближнего боя. Множество лет прожито в тренировках и изучении магии.
+  HP: 1400, Mana: 100, Def: 1 (medium)
+  Atk1: type=magic, targets=ground,structure,debris,item,ward, weapon=normal
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: A16I,A0FB,A0FA
+  Upgrades: R0G2,Rerh,Resw
+
+ID: n064 (hotkey: E)
+  Name: [TRIGSTR_5750] |cff808000Фурболг – воитель|r
+  Tip: [TRIGSTR_5765] Нанять |cff808000Фурболг – воитель|r
+  Ubertip: [TRIGSTR_33189] |cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|n|nТяжелый воин ближнего боя. Владеет «Командирской аурой» и «Громовой поступью». |n|n|cffffcc00Атакует наземные цели.|r
+  HP: 1100, Mana: 500, Def: 4 (normal)
+  Atk1: type=chaos, targets=ground,structure,debris,item,ward, weapon=normal
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: 
+  Upgrades: R0G1,Rerh,Resw
+
+ID: edry (hotkey: Q)
+  Name: [TRIGSTR_27050] |cffbebedcДриада|r
+  Tip: [TRIGSTR_27049] Обучить |cffbebedcдриаду|r
+  Ubertip: [TRIGSTR_31596] |cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaПронзающий|r|n
+Антимаг. Отравляет врагов, замедляя их и нанося им урон. Невосприимчива к магии и урону от магических способностей. 
+  HP: 670, Mana: 75, Def: 0 (none)
+  Atk1: type=pierce, targets=ground,structure,debris,air,item,ward, weapon=missile
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: Aadm,A16L,Aspo,Aien,Ault
+  Upgrades: Resm,Rema,Resi,Reuv,Repm
+
+ID: edoc (hotkey: W)
+  Name: [TRIGSTR_27051] |cffbebedcДруид-хищник|r
+  Tip: [TRIGSTR_27052] |cffbebedcОбучить друида-хищника|r
+  Ubertip: [TRIGSTR_31597] |cff7dc87dВремя подготовки:|r |cffaaf0aa35 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
+Маг ближнего боя. Владеет «Ревом», который увеличивает урон от атак. Может изучить «Омоложение», облик медведя и «Знак хищника». |n|n|cffffcc00Атакует наземные цели.|r
+  HP: 430, Mana: 100, Def: 1 (large)
+  Atk1: type=normal, targets=ground,structure,debris,item,ward, weapon=normal
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: Abrf,Arej,Aroa,Aien,Ault
+  Upgrades: R0G1,Resw,Rerh,Redc,Reuv,Repm,Reeb
+
+ID: edcm (hotkey: C)
+  Name: [Друид-хищник] Друид-хищник
+  Tip: [Обучить друида-хищника] Обучить друида-хищника
+  Ubertip: ["Маг ближнего боя. Владеет «Ревом», который увеличивает урон от атак. Может изучить «Омоложение», облик медведя и «Знак хищника». |n|n|cffffcc00Атакует наземные цели.|r"] "Маг ближнего боя. Владеет «Ревом», который увеличивает урон от атак. Может изучить «Омоложение», облик медведя и «Знак хищника». |n|n|cffffcc00Атакует наземные цели.|r"
+  HP: 810, Mana: 100, Def: 3 (large)
+  Atk1: type=normal, targets=ground,structure,debris,item,ward, weapon=normal
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: Abrf,Ara2,Aien,Ault
+  Upgrades: Resw,Rerh,Reuv,Redc,Repm
+
+ID: emtg (hotkey: E)
+  Name: [TRIGSTR_27053] |cffbebedcГорный великан|r
+  Tip: [TRIGSTR_27054] Обучить |cffbebedcгорного великана|r
+  Ubertip: [TRIGSTR_31598] |cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
+Огромный воин ближнего боя. Выдерживает большой объем урона и поражает врагов эффектами контроля. 
+  HP: 1700, Mana:  - , Def: 6 (medium)
+  Atk1: type=normal, targets=ground,structure,debris,tree,wall,item,ward, weapon=normal
+  Atk2: type=siege, targets=ground,structure,debris,tree,wall,item,ward, weapon=normal
+  Abilities: Atau,Agra,Arsk,Assk,Aien,Ault
+  Upgrades: Resw,Rerh,Rers,Rehs,Repm,Reuv
+
+ID: n05D (hotkey: R)
+  Name: [TRIGSTR_27194] |cffbebedcДруид-сова|r
+  Tip: [TRIGSTR_27627] Призвать |cffbebedcДруид-сова|r
+  Ubertip: [TRIGSTR_31904] |cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
+Рассудительный и могучий друид, легко вдохновляющий на борьбу всех своих союзников.
+  HP: 670, Mana: 75, Def: 1 (medium)
+  Atk1: type=normal, targets=ground,structure,debris,item,ward, weapon=normal
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: A164,Absk,ACfb
+  Upgrades: R0G1,Rerh,Resw
+
+ID: n05G (hotkey: None)
+  Name: [TRIGSTR_27418] |cffbebedcСовух-берсерк|r
+  Tip: [Призвать совуха-берсерка] Призвать совуха-берсерка
+  Ubertip: [TRIGSTR_32922] |cff7dc87dВремя подготовки:|r |cffaaf0aa80 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|n|nТяжелый воин ближнего боя. Владеет «Сильным ударом» и «Громовой поступью». |n|n|cffffcc00Атакует наземные цели.|r
+  HP: 1100, Mana: 500, Def: 4 (large)
+  Atk1: type=chaos, targets=ground,structure,debris,item,ward, weapon=normal
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: A164,ACbh,Absk,ACfb
+  Upgrades: R0G1,Rerh,Resw
+
+ID: echm (hotkey: C)
+  Name: [Химера] Химера
+  Tip: [Обучить химеру] Обучить химеру
+  Ubertip: [Двухголовый дракон. Может изучить «Едкое дыхание». |n|n|cffffcc00Атакует наземные цели.|r] Двухголовый дракон. Может изучить «Едкое дыхание». |n|n|cffffcc00Атакует наземные цели.|r
+  HP: 1000, Mana:  - , Def: 2 (small)
+  Atk1: type=siege, targets=structure,debris, weapon=missile
+  Atk2: type=magic, targets=ground,item,ward,structure,debris, weapon=msplash
+  Abilities: Acor,Alit,Ault
+  Upgrades: Resw,Rerh,Recb,Reuv
+
+ID: ehip (hotkey: H)
+  Name: [Гиппогриф] Гиппогриф
+  Tip: [Обучить гиппогрифа] Обучить гиппогрифа
+  Ubertip: [Летающее существо ближнего боя. Может изучить «Дрессировку гиппогрифов». |n|n|cffffcc00Атакует воздушные цели.|r] Летающее существо ближнего боя. Может изучить «Дрессировку гиппогрифов». |n|n|cffffcc00Атакует воздушные цели.|r
+  HP: 525, Mana:  - , Def: 0 (none)
+  Atk1: type=normal, targets=air, weapon=normal
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: Aco3,Ault
+  Upgrades: Resw,Rerh,Reht,Reuv
+
+ID: h0D9 (hotkey: Q)
+  Name: [TRIGSTR_10911] Транспорт
+  Tip: [Нанять транспорт] Нанять транспорт
+  Ubertip: ["Прочное судно, предназначенное для перевозки войск."] "Прочное судно, предназначенное для перевозки войск."
+  HP: 750, Mana:  - , Def: 0 (small)
+  Atk1: type=normal, targets=None, weapon=None
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: A00I,A00A,A00B,Sch5,Slo3,Sdro
+  Upgrades: R006,R007,R004,R003
+
+ID: h0DB (hotkey: W)
+  Name: [TRIGSTR_5520] Фрегат
+  Tip: [Нанять фрегат] Нанять фрегат
+  Ubertip: [TRIGSTR_10898] Корабль, предназначенный для морских битв.
+  HP: 800, Mana:  - , Def: 1 (small)
+  Atk1: type=normal, targets=ground,structure,debris,air,item,ward, weapon=msplash
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: A009,A002,A00B,A00G,A00A,A1PP
+  Upgrades: R005,R007,R004,R003,R002
+
+ID: h0DA (hotkey: E)
+  Name: [TRIGSTR_10931] Линкор
+  Tip: [Нанять линкор] Нанять линкор
+  Ubertip: [TRIGSTR_6929] Мощный корабль, эффективный как в морском бою, так и против зданий. 
+  HP: 1400, Mana:  - , Def: 5 (large)
+  Atk1: type=siege, targets=ground,structure,debris,item,ward, weapon=artillery
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: A009,A003,A00B,A00G,A00A,A001
+  Upgrades: R005,R007,R003,R002
+
+ID: efon (hotkey: None)
+  Name: [Древень] Древень
+  Tip: [None] None
+  Ubertip: [None] None
+  HP: 300, Mana:  - , Def: 0 (large)
+  Atk1: type=normal, targets=ground,structure,debris,item,ward, weapon=normal
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: Ault
+  Upgrades: Reuv,Renb
+
+ID: espv (hotkey: None)
+  Name: [Аватара возмездия] Аватара возмездия
+  Tip: [None] None
+  Ubertip: [None] None
+  HP: 1200, Mana: 400, Def: 2 (large)
+  Atk1: type=normal, targets=ground,structure,debris,air,item,ward, weapon=missile
+  Atk2: type=normal, targets=None, weapon=None
+  Abilities: ACmi,Asp1,ACrk,Avng,Ault
+  Upgrades: Reuv
+
+=== 3. HEROES ===
+ID: E00V (hotkey: X)
+  Name: [TRIGSTR_27634] |cffbebedcХранитель рощи|r
+  Tip: [TRIGSTR_20328] Призвать |cffbebedcхранителя рощи|r
+  Ubertip: [TRIGSTR_20330] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|n
+Герой-мистик, повелевающий силами природы. Главная цель его жызни - защищать лес!
+  Awaken: [TRIGSTR_20346] Воскресить |cffbebedcхранителя рощи|r
+  Revive: [TRIGSTR_20348] Воскресить |cffbebedcхранителя рощи|r
+  Propernames: [Лародар,Анубрис,Нандиб,Калифакс,Бандалар,Малорн,Гольбин,Дагда,Нуада,Огма,Кентрий,Кередвин] Лародар,Анубрис,Нандиб,Калифакс,Бандалар,Малорн,Гольбин,Дагда,Нуада,Огма,Кентрий,Кередвин
+  Hero Abils: A0FJ,A0FH,A0FI,ken0
+  Abilities: AInv,Ault
+  Atk1: type=hero, targets=ground,structure,debris,air,item,ward
+
+ID: E011 (hotkey: C)
+  Name: [TRIGSTR_16268] |cffbebedcЛунная охотница|r
+  Tip: [TRIGSTR_3857] Призвать |cffb4dc8cКатрис Звездная Песня|r
+  Ubertip: [TRIGSTR_31708] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaЛовкость |r|n 
+Мастер охоты, обучивший за свой век множество талантлевых и перспективных охотников Ночных эльфов.
+  Awaken: [TRIGSTR_3856] Воскресить жрицу Луны 
+  Revive: [TRIGSTR_3898] Воскресить |cffb4dc8cКатрис Звездная Песня|r
+  Propernames: [TRIGSTR_3714] |cffb4dc8cКатрис Звездная Песня|
+  Hero Abils: A0FL,A0FQ,A0FS,A0FT
+  Abilities: Ashm,AInv,Ault
+  Atk1: type=hero, targets=ground,structure,debris,air,item,ward
+
+ID: E00W (hotkey: Z)
+  Name: [TRIGSTR_27385] |cffbebedcДруид Мастер|r
+  Tip: [TRIGSTR_8455] Призвать |cffbebedcДруид Мастер|r
+  Ubertip: [TRIGSTR_31707] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|n
+Мастер друид, его понимание природыф поражает воображение, но и так же повышает его опасность для врагов.
+  Awaken: [TRIGSTR_27386] Воскресить |cffbebedcДруид Мастер|r
+  Revive: [TRIGSTR_27387] Воскресить |cffbebedcДруид Мастер|r
+  Propernames: [TRIGSTR_3606] |cffb4dc8cЭльф друид|r
+  Hero Abils: AEbl,ANfl,AEev,A0FM
+  Abilities: A01C,AInv,Ault
+  Atk1: type=hero, targets=ground,structure,debris,air,item,ward
+
+ID: Ewar (hotkey: W)
+  Name: [Страж] Страж
+  Tip: [Призвать Стража] Призвать Стража
+  Ubertip: ["Ловкий герой, мастер завязывания боя и выхода из него. Может изучить «Скачок», «Веер клинков», «Теневой удар» и «Возмездие». |n|n|cffffcc00Атакует наземные цели.|r"] "Ловкий герой, мастер завязывания боя и выхода из него. Может изучить «Скачок», «Веер клинков», «Теневой удар» и «Возмездие». |n|n|cffffcc00Атакует наземные цели.|r"
+  Awaken: [Воскресить Стража] Воскресить Стража
+  Revive: [Воскресить Стража] Воскресить Стража
+  Propernames: [Альза Железная Клетка,Железная Ворона,Марин Острое Крыло,Шалис Темная Охотница,Сира Лунный Страж,Сайтис,Маласса Тень,Кири Звездная Охотница,Анайя Оскверненная Роща,Мирана Звездный Свет,Фельгала Звездная Луна,Дреланим Шелест Ветра,Кордана Оскверненная Песнь,Нальмина Темный Следопыт] Альза Железная Клетка,Железная Ворона,Марин Острое Крыло,Шалис Темная Охотница,Сира Лунный Страж,Сайтис,Маласса Тень,Кири Звездная Охотница,Анайя Оскверненная Роща,Мирана Звездный Свет,Фельгала Звездная Луна,Дреланим Шелест Ветра,Кордана Оскверненная Песнь,Нальмина Темный Следопыт
+  Hero Abils: AEbl,AEfk,AEsh,AEsv
+  Abilities: Ashm,AInv,Ault
+  Atk1: type=hero, targets=ground,structure,debris,item,ward
+
+ID: Edem (hotkey: D)
+  Name: [Охотник на демонов] Охотник на демонов
+  Tip: [Призвать охотника на демонов] Призвать охотника на демонов
+  Ubertip: ["Ловкий мобильный герой. Может изучить «Обжигающий жар», «Ускользание», «Сожжение маны» и «Метаморфозу». |n|n|cffffcc00Атакует наземные цели.|r"] "Ловкий мобильный герой. Может изучить «Обжигающий жар», «Ускользание», «Сожжение маны» и «Метаморфозу». |n|n|cffffcc00Атакует наземные цели.|r"
+  Awaken: [Воскресить охотника на демонов] Воскресить охотника на демонов
+  Revive: [Воскресить охотника на демонов] Воскресить охотника на демонов
+  Propernames: [Песнь Теней,Ярость Теней,Темный Охотник,Искатель Огня,Темный Ткач,Темный Ужас,Отчаяние Тьмы,Греховодник,Убийца Боли,Дитя Преисподней,Вестник Гнева,Вестник Ярости,Огненное Клеймо,Кровавая Ярость,Жуткий Клинок] Песнь Теней,Ярость Теней,Темный Охотник,Искатель Огня,Темный Ткач,Темный Ужас,Отчаяние Тьмы,Греховодник,Убийца Боли,Дитя Преисподней,Вестник Гнева,Вестник Ярости,Огненное Клеймо,Кровавая Ярость,Жуткий Клинок
+  Hero Abils: AEmb,AEim,AEev,AEme
+  Abilities: AInv,Ault
+  Atk1: type=hero, targets=ground,structure,debris,item,ward
+
+ID: Ekee (hotkey: K)
+  Name: [Хранитель рощи] Хранитель рощи
+  Tip: [Призвать хранителя рощи] Призвать хранителя рощи
+  Ubertip: ["Герой-мистик, повелевающий силами природы. Может изучить «Гнев деревьев», «Силу природы», «Ауру шипов» и «Спокойствие».|n|n|cffffcc00Атакует наземные и воздушные цели.|r"] "Герой-мистик, повелевающий силами природы. Может изучить «Гнев деревьев», «Силу природы», «Ауру шипов» и «Спокойствие».|n|n|cffffcc00Атакует наземные и воздушные цели.|r"
+  Awaken: [Воскресить хранителя рощи] Воскресить хранителя рощи
+  Revive: [Воскресить хранителя рощи] Воскресить хранителя рощи
+  Propernames: [Лародар,Анубрис,Нандиб,Калифакс,Бандалар,Малорн,Гольбин,Дагда,Нуада,Огма,Кентрий,Кередвин] Лародар,Анубрис,Нандиб,Калифакс,Бандалар,Малорн,Гольбин,Дагда,Нуада,Огма,Кентрий,Кередвин
+  Hero Abils: AEer,AEfn,AEah,AEtq
+  Abilities: AInv,Ault
+  Atk1: type=hero, targets=ground,structure,debris,air,item,ward
+
+ID: Emoo (hotkey: P)
+  Name: [Жрица Луны] Жрица Луны
+  Tip: [Призвать жрицу Луны] Призвать жрицу Луны
+  Ubertip: ["Герой-воин. Мастер дальнего боя, усиливает дистанционные атаки. Может изучить «Разведку», «Огненные стрелы», «Ауру меткости» и «Звездопад». |n|n|cffffcc00Атакует наземные и воздушные цели.|r"] "Герой-воин. Мастер дальнего боя, усиливает дистанционные атаки. Может изучить «Разведку», «Огненные стрелы», «Ауру меткости» и «Звездопад». |n|n|cffffcc00Атакует наземные и воздушные цели.|r"
+  Awaken: [Воскресить жрицу Луны] Воскресить жрицу Луны
+  Revive: [Воскресить жрицу Луны] Воскресить жрицу Луны
+  Propernames: [Катрис Звездная Песня,Адора Ночная Тень,Мора Лунная Певица,Фелоре Лунный Свет,Анара Ледяной Ветер,Кера Звездная Драконица,Мэйв Шелест Ветра,Делас Лунный Клык,Мира Белая Грива,Тета Саблезуб,Тигра Снежный Шрам,Ариэль Темная Луна,Диана Лесной Ветер] Катрис Звездная Песня,Адора Ночная Тень,Мора Лунная Певица,Фелоре Лунный Свет,Анара Ледяной Ветер,Кера Звездная Драконица,Мэйв Шелест Ветра,Делас Лунный Клык,Мира Белая Грива,Тета Саблезуб,Тигра Снежный Шрам,Ариэль Темная Луна,Диана Лесной Ветер
+  Hero Abils: AHfa,AEst,AEar,AEsf
+  Abilities: Ashm,AInv,Ault
+  Atk1: type=hero, targets=ground,structure,debris,air,item,ward
+
+=== 4. UPGRADES ===
+ID: R07L (levels: 1)
+  Lvl 1: hotkey=[None]
+    Name: [TRIGSTR_10673] |cffe6beaaНочные Эльфы|r
+    Tip: [TRIGSTR_10674] |cffe6beaaКульт Сумеречного Молота|r
+    Ubertip: [TRIGSTR_20119] Древняя раса таинственных ночных эльфов, называющих себя калдорай, сыграла важнейшую роль в истории Азерота. Хотя теперь ночные эльфы сражаются за Альянс, они и поныне хранят в памяти события, произошедшие более десяти тысяч лет назад. А именно — Войну древних, когда им удалось остановить первое вторжение Пылающего Легиона в Азерот.
+
+ID: Renb (levels: 1)
+  Lvl 1: hotkey=[W]
+    Name: [TRIGSTR_27161] |cffbebedcБлагословение природы|r
+    Tip: [TRIGSTR_40023] Исследовать |cffbebedcБлагословение природы|r
+    Ubertip: [Ускоряет передвижение и усиливает броню древ и древней.] Ускоряет передвижение и усиливает броню древ и древней.
+
+ID: R0G1 (levels: 1)
+  Lvl 1: hotkey=[R]
+    Name: [TRIGSTR_27190] |cffbebedcКруг Кенария|r
+    Tip: [TRIGSTR_40869] Ставка на |cffbebedcКруг Кенария|r
+    Ubertip: [TRIGSTR_41852] Применяет на себя антимагический щит, поглощающий 600 магический урона в течении 40 секунд.
+
+ID: R0G2 (levels: 1)
+  Lvl 1: hotkey=[E]
+    Name: [TRIGSTR_41838] |cffc8cde1Орбаз Кровопорч|r
+    Tip: [TRIGSTR_40871] Ставка на |cffbebedcНочные эльфов|r
+    Ubertip: [TRIGSTR_20295] |cffbd00ffПозволяет нанимать войска стражей и жриц Элуны. А так же получить её благославление 
+
+ID: R0GB (levels: 1)
+  Lvl 1: hotkey=[M]
+    Name: [TRIGSTR_27604] |cffbebedcВыбор Направления|r
+    Tip: [TRIGSTR_27605] Исследовать «|cffbebedcВыбор Направления|r»
+    Ubertip: [TRIGSTR_41817] |cffc81919Власть крови|r
+
+ID: Resm (levels: 6)
+  Lvl 1: hotkey=[Q]
+    Name: [TRIGSTR_27059] |cffbebedcСила Луны|r
+    Tip: [TRIGSTR_27065] Исследовать «|cffbebedcСилу Луны|r»
+    Ubertip: [TRIGSTR_27071] Увеличивает урон |cffbebedcэльфов|r, в дальнем бою.
+  Lvl 2: hotkey=[Q]
+    Name: [TRIGSTR_27061] |cffbebedcСила Луны|r
+    Tip: [TRIGSTR_27066] Исследовать «|cffbebedcСилу Луны|r»
+    Ubertip: [TRIGSTR_27072] Дополнительно увеличивает урон |cffbebedcэльфов|r , в дальнем бою.
+  Lvl 3: hotkey=[Q]
+    Name: [TRIGSTR_27060] |cffbebedcМощь Луны|r
+    Tip: [TRIGSTR_27067] Исследовать «|cffbebedcМощь Луны|r»
+    Ubertip: [TRIGSTR_27073] Дополнительно увеличивает урон |cffbebedcэльфов|r , в дальнем бою.
+  Lvl 4: hotkey=[Q]
+    Name: [TRIGSTR_27064] |cffbebedcМощь Луны|r
+    Tip: [TRIGSTR_27070] Исследовать «|cffbebedcМощь Луны|r»
+    Ubertip: [TRIGSTR_27074] Дополнительно увеличивает урон |cffbebedcэльфов|r , в дальнем бою.
+  Lvl 5: hotkey=[Q]
+    Name: [TRIGSTR_27063] |cffbebedcМогущество Луны|r
+    Tip: [TRIGSTR_27069] Исследовать «|cffbebedcМогущество Луны|r»
+    Ubertip: [TRIGSTR_27075] Дополнительно увеличивает урон |cffbebedcэльфов|r , в дальнем бою.
+  Lvl 6: hotkey=[Q]
+    Name: [TRIGSTR_27062] |cffbebedcМогущество Луны|r
+    Tip: [TRIGSTR_27068] Исследовать «|cffbebedcМогущество Луны|r»
+    Ubertip: [TRIGSTR_27076] Дополнительно увеличивает урон |cffbebedcэльфов|r , в дальнем бою.
+
+ID: Rema (levels: 6)
+  Lvl 1: hotkey=[A]
+    Name: [TRIGSTR_27139] |cffbebedcЛунные доспехи|r
+    Tip: [TRIGSTR_27145] Исследовать |cffbebedcлунные доспехи|r
+    Ubertip: [TRIGSTR_27151] Усиливают броню |cffbebedcдруидов|r и |cffbebedcэльфов|r дальнего боя.
+  Lvl 2: hotkey=[A]
+    Name: [TRIGSTR_27140] |cffbebedcЛунные доспехи|r
+    Tip: [TRIGSTR_27146] Исследовать |cffbebedcлунные доспехи|r
+    Ubertip: [TRIGSTR_27152] Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльфов|r дальнего боя.
+  Lvl 3: hotkey=[A]
+    Name: [TRIGSTR_27141] Улучшенные |cffbebedcлунные доспехи|r
+    Tip: [TRIGSTR_27147] Исследовать |cffbebedcулучшенные лунные доспехи|r
+    Ubertip: [TRIGSTR_27153] Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльфов|r дальнего боя.
+  Lvl 4: hotkey=[A]
+    Name: [TRIGSTR_27144] Улучшенные |cffbebedcлунные доспехи|r
+    Tip: [TRIGSTR_27150] Исследовать |cffbebedcулучшенные лунные доспехи|r
+    Ubertip: [TRIGSTR_27154] Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльфов|r дальнего боя.
+  Lvl 5: hotkey=[A]
+    Name: [TRIGSTR_27143] Усиленные |cffbebedcлунные доспехи|r
+    Tip: [TRIGSTR_27149] Исследовать |cffbebedcусиленные лунные доспехи|r
+    Ubertip: [TRIGSTR_27155] Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльфов|r дальнего боя.
+  Lvl 6: hotkey=[A]
+    Name: [TRIGSTR_27142] Усиленные |cffbebedcлунные доспехи|r
+    Tip: [TRIGSTR_27148] Исследовать |cffbebedcусиленные лунные доспехи|r
+    Ubertip: [TRIGSTR_27156] Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльфов|r дальнего боя.
+
+ID: Resw (levels: 6)
+  Lvl 1: hotkey=[W]
+    Name: [TRIGSTR_27077] |cffbebedcСила леса|r
+    Tip: [TRIGSTR_27083] Исследовать «|cffbebedcСилу леса|r»
+    Ubertip: [TRIGSTR_27089] Увеличивает урон |cffbebedcдруидов|r, и |cffbebedcэльфов|r ближнего боя.
+  Lvl 2: hotkey=[W]
+    Name: [TRIGSTR_27078] |cffbebedcСила леса|r
+    Tip: [TRIGSTR_27084] Исследовать «|cffbebedcСилу леса|r»
+    Ubertip: [TRIGSTR_27090] Дополнительно увеличивает урон |cffbebedcдруидов|r и |cffbebedcэльфов|r ближнего боя.
+  Lvl 3: hotkey=[W]
+    Name: [TRIGSTR_27079] |cffbebedcМощь леса|r
+    Tip: [TRIGSTR_27085] Исследовать «|cffbebedcМощь леса|r»
+    Ubertip: [TRIGSTR_27091] Дополнительно увеличивает урон |cffbebedcдруидов|r и |cffbebedcэльфов|r ближнего боя.
+  Lvl 4: hotkey=[W]
+    Name: [TRIGSTR_27082] |cffbebedcМощь леса|r
+    Tip: [TRIGSTR_27088] Исследовать «|cffbebedcМощь леса|r»
+    Ubertip: [TRIGSTR_27092] Дополнительно увеличивает урон |cffbebedcдруидов|r и |cffbebedcэльфов|r ближнего боя.
+  Lvl 5: hotkey=[W]
+    Name: [TRIGSTR_27081] |cffbebedcМогущество леса|r
+    Tip: [TRIGSTR_27087] Исследовать «|cffbebedcМогущество леса|r»
+    Ubertip: [TRIGSTR_27093] Дополнительно увеличивает урон |cffbebedcдруидов|r и |cffbebedcэльфов|r ближнего боя.
+  Lvl 6: hotkey=[W]
+    Name: [TRIGSTR_27080] |cffbebedcМогущество леса|r
+    Tip: [TRIGSTR_27086] Исследовать «|cffbebedcМогущество леса|r»
+    Ubertip: [TRIGSTR_27094] Дополнительно увеличивает урон |cffbebedcдруидов|r и |cffbebedcэльфов|r ближнего боя.
+
+ID: Rerh (levels: 6)
+  Lvl 1: hotkey=[R]
+    Name: [TRIGSTR_27117] |cffbebedcПрочные шкуры|r
+    Tip: [TRIGSTR_27123] Исследовать |cffbebedcпрочные шкуры|r
+    Ubertip: [TRIGSTR_27129] Усиливают броню |cffbebedcдруидов|r и |cffbebedcэльфов|r ближнего боя.
+  Lvl 2: hotkey=[R]
+    Name: [TRIGSTR_27118] |cffbebedcПрочные шкуры|r
+    Tip: [TRIGSTR_27124] Исследовать |cffbebedcпрочные шкуры|r
+    Ubertip: [TRIGSTR_27130] Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльвоф|r ближнего боя.
+  Lvl 3: hotkey=[R]
+    Name: [TRIGSTR_27119] |cffbebedcУсиленные шкуры|r
+    Tip: [TRIGSTR_27125] Исследовать |cffbebedcусиленные шкуры|r
+    Ubertip: [TRIGSTR_27131] Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльвоф|r ближнего боя.
+  Lvl 4: hotkey=[R]
+    Name: [TRIGSTR_27122] |cffbebedcУсиленные шкуры|r
+    Tip: [TRIGSTR_27128] Исследовать |cffbebedcусиленные шкуры|r
+    Ubertip: [TRIGSTR_27132] Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльвоф|r ближнего боя.
+  Lvl 5: hotkey=[R]
+    Name: [TRIGSTR_27121] |cffbebedcНепробиваемые шкуры|r
+    Tip: [TRIGSTR_27127] Исследовать |cffbebedcнепробиваемые шкуры|r
+    Ubertip: [TRIGSTR_27133] Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльвоф|r ближнего боя.
+  Lvl 6: hotkey=[R]
+    Name: [TRIGSTR_27120] |cffbebedcНепробиваемые шкуры|r
+    Tip: [TRIGSTR_27126] Исследовать |cffbebedcнепробиваемые шкуры|r
+    Ubertip: [TRIGSTR_27134] Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльвоф|r ближнего боя.
+
+ID: Reuv (levels: 1)
+  Lvl 1: hotkey=[U]
+    Name: [TRIGSTR_27135] |cffbebedcНочное зрение|r
+    Tip: [TRIGSTR_27136] Исследовать |cffbebedcночное зрение|r
+    Ubertip: ["Позволяет ночным эльфам видеть ночью так же далеко, как днем."] "Позволяет ночным эльфам видеть ночью так же далеко, как днем."
+
+ID: Rews (levels: 1)
+  Lvl 1: hotkey=[E]
+    Name: [TRIGSTR_27137] |cffbebedcЛунный фонтан|r
+    Tip: [TRIGSTR_27138] Исследовать |cffbebedcлунный фонтан|r
+    Ubertip: ["+<Rews,base1> к запасу маны лунных колодцев и +<Rews,base2,%>% к скорости ее регенерации."] "+<Rews,base1> к запасу маны лунных колодцев и +<Rews,base2,%>% к скорости ее регенерации."
+
+ID: Resc (levels: 1)
+  Lvl 1: hotkey=[S]
+    Name: [TRIGSTR_27105] |cffbebedcЧасовой|r
+    Tip: [TRIGSTR_27106] Исследовать «|cffbebedcЧасового|r»
+    Ubertip: ["Позволяет охотницам отправить сову на находящееся рядом дерево, чтобы открыть обзор в прилегающей области. |nСова обнаруживает невидимые войска."] "Позволяет охотницам отправить сову на находящееся рядом дерево, чтобы открыть обзор в прилегающей области. |nСова обнаруживает невидимые войска."
+
+ID: R0GC (levels: 6)
+  Lvl 1: hotkey=[Z]
+    Name: [TRIGSTR_27655] |cffbebedcСлияние с деревьями|r
+    Tip: [TRIGSTR_27661] Исследовать |cffbebedcСлияние с деревьями|r
+    Ubertip: [TRIGSTR_26003] Увеличивают объем переносимой работниками древесины на 5.
+  Lvl 2: hotkey=[Z]
+    Name: [TRIGSTR_27656] |cffbebedcСлияние с деревьями|r
+    Tip: [TRIGSTR_27662] Исследовать |cffbebedcСлияние с деревьями|r
+    Ubertip: [TRIGSTR_25998] Увеличивают объем переносимой работниками древесины на 5.
+  Lvl 3: hotkey=[Z]
+    Name: [TRIGSTR_27657] |cffbebedcСлияние с деревьями|r
+    Tip: [TRIGSTR_27663] Исследовать |cffbebedcСлияние с деревьями|r
+    Ubertip: [TRIGSTR_25999] Увеличивают объем переносимой работниками древесины на 5.
+  Lvl 4: hotkey=[Z]
+    Name: [TRIGSTR_27658] |cffbebedcСлияние с деревьями|r
+    Tip: [TRIGSTR_27664] Исследовать |cffbebedcСлияние с деревьями|r
+    Ubertip: [TRIGSTR_26000] Увеличивают объем переносимой работниками древесины на 5.
+  Lvl 5: hotkey=[Z]
+    Name: [TRIGSTR_27659] |cffbebedcСлияние с деревьями|r
+    Tip: [TRIGSTR_27665] Исследовать |cffbebedcСлияние с деревьями|r
+    Ubertip: [TRIGSTR_26001] Увеличивают объем переносимой работниками древесины на 5.
+  Lvl 6: hotkey=[Z]
+    Name: [TRIGSTR_27660] |cffbebedcСлияние с деревьями|r
+    Tip: [TRIGSTR_27666] Исследовать |cffbebedcСлияние с деревьями|r
+    Ubertip: [TRIGSTR_26002] Увеличивают объем переносимой работниками древесины на 5.
+
+ID: Reib (levels: 1)
+  Lvl 1: hotkey=[A]
+    Name: [TRIGSTR_27099] |cffbebedcУлучшенные луки|r
+    Tip: [TRIGSTR_27100] Исследовать |cffbebedcулучшенные луки|r
+    Ubertip: [Увеличивают дальность атаки лучниц и наездниц на гиппогрифах.] Увеличивают дальность атаки лучниц и наездниц на гиппогрифах.
+
+ID: Remk (levels: 1)
+  Lvl 1: hotkey=[A]
+    Name: [TRIGSTR_27098] |cffbebedcТренировка меткости|r
+    Tip: [TRIGSTR_27097] Исследовать «|cffbebedcТренировку меткости|r»
+    Ubertip: ["+<Remk,base1> к урону лучниц и наездниц на гиппогрифах."] "+<Remk,base1> к урону лучниц и наездниц на гиппогрифах."
+
+ID: Remg (levels: 1)
+  Lvl 1: hotkey=[G]
+    Name: [TRIGSTR_27101] |cffbebedcУлучшить лунные глефы|r
+    Tip: [TRIGSTR_27102] |cffbebedcУлучшить лунные глефы|r
+    Ubertip: [Позволяют глефам охотниц поражать дополнительные цели.] Позволяют глефам охотниц поражать дополнительные цели.
+
+ID: Repb (levels: 1)
+  Lvl 1: hotkey=[P]
+    Name: [TRIGSTR_27095] |cffbebedcСтрижающие клинки|r
+    Tip: [TRIGSTR_27096] Исследовать |cffbebedcстрижающие клинки|r
+    Ubertip: [Ускоряет полет снарядов глефометов. Глефометы могут атаковать деревья.] Ускоряет полет снарядов глефометов. Глефометы могут атаковать деревья.
+
+ID: R0LC (levels: 1)
+  Lvl 1: hotkey=[C]
+    Name: [|cffbebedcТанец полумесяца|r] |cffbebedcТанец полумесяца|r
+    Tip: [Исследовать |cffbebedcТанец полумесяца|r] Исследовать |cffbebedcТанец полумесяца|r
+    Ubertip: [Обучает Лунных воинов «Танцу полумесяца».|n|nС вероятностью 15% при атаке воин совершает стремительный перекат полумесяцем за спину противника, нанося всем врагам на пути 50% от своего базового урона.] Обучает Лунных воинов «Танцу полумесяца».|n|nС вероятностью 15% при атаке воин совершает стремительный перекат полумесяцем за спину противника, нанося всем врагам на пути 50% от своего базового урона.
+
+ID: R0GA (levels: 1)
+  Lvl 1: hotkey=[S]
+    Name: [TRIGSTR_27594] |cffbebedcОбучение друидизму|r
+    Tip: [TRIGSTR_27595] Исследовать «|cffbebedcОбучение друидизму|r»
+    Ubertip: [TRIGSTR_27596] Открывает новые способности фурболгу, увеличивает скорость атаки на |cffbebedc15%|r, и здоровье на |cffbebedc50 ед|r.
+
+ID: R0G9 (levels: 1)
+  Lvl 1: hotkey=[A]
+    Name: [TRIGSTR_27579] |cffbebedcОпутывание|r
+    Tip: [TRIGSTR_27580] Исследовать «|cffbebedcОпутывание|r»
+    Ubertip: [TRIGSTR_27581] Позволяет духам лесам опутывать врагов при каждой атаке.
+
+ID: R0G7 (levels: 1)
+  Lvl 1: hotkey=[D]
+    Name: [TRIGSTR_27561] |cffbebedcУдлененные мечи|r
+    Tip: [TRIGSTR_27562] Исследовать «|cffbebedcУдлененные мечи|r»
+    Ubertip: [TRIGSTR_27554] Познания магии |cffbebedcдревних гвардейцев|r находятся на высшем уровне, что позволяет им блокировать  вражескую магию.
+
+ID: Redt (levels: 2)
+  Lvl 1: hotkey=[A]
+    Name: [TRIGSTR_27111] Сделать |cffbebedcдруидов-воронов адептами|r
+    Tip: [TRIGSTR_27113] Сделать |cffbebedcдруидов-воронов адептами|r
+    Ubertip: ["Увеличивает запас здоровья и маны, ускоряет регенерацию маны в облике ночного эльфа, а также дает доступ к облику буревестника."] "Увеличивает запас здоровья и маны, ускоряет регенерацию маны в облике ночного эльфа, а также дает доступ к облику буревестника."
+  Lvl 2: hotkey=[A]
+    Name: [TRIGSTR_27112] Сделать |cffbebedcдруидов-воронов мастерами|r
+    Tip: [TRIGSTR_27114] Сделать |cffbebedcдруидов-воронов мастерами|r
+    Ubertip: ["Увеличивает запас здоровья и маны, ускоряет регенерацию маны в облике ночного эльфа, а также обучает «Смерчу»."] "Увеличивает запас здоровья и маны, ускоряет регенерацию маны в облике ночного эльфа, а также обучает «Смерчу»."
+
+ID: Reec (levels: 1)
+  Lvl 1: hotkey=[M]
+    Name: [TRIGSTR_27159] |cffbebedcЗнак ворона|r
+    Tip: [TRIGSTR_27160] Исследовать «|cffbebedcЗнак ворона|r»
+    Ubertip: [Позволяет друидам-воронам применять «Волшебный огонь» в облике буревестника.] Позволяет друидам-воронам применять «Волшебный огонь» в облике буревестника.
+
+ID: R0G6 (levels: 3)
+  Lvl 1: hotkey=[S]
+    Name: [TRIGSTR_27546] |cffbebedcАнулирование|r
+    Tip: [TRIGSTR_8471] Исследовать «|cffbebedcАнулирование|r»
+    Ubertip: [TRIGSTR_8468] Познания магии |cffbebedcдревних гвардейцев|r находятся на высшем уровне, что позволяет им блокировать  вражескую магию. Увеличивает скорость боя на |cffbebedc10%|r. и регенерацию на |cffbebedc0.5|r.
+  Lvl 2: hotkey=[S]
+    Name: [TRIGSTR_27547] |cffbebedcАнулирование|r
+    Tip: [TRIGSTR_8472] Исследовать «|cffbebedcАнулирование|r»
+    Ubertip: [TRIGSTR_8474] Познания магии |cffbebedcдревних гвардейцев|r находятся на высшем уровне, что позволяет им блокировать  вражескую магию. Увеличивает скорость боя на |cffbebedc10%|r. и регенерацию на |cffbebedc0.5|r.
+  Lvl 3: hotkey=[S]
+    Name: [TRIGSTR_27552] |cffbebedcАнулирование|r
+    Tip: [TRIGSTR_27553] Исследовать «|cffbebedcАнулирование|r»
+    Ubertip: [TRIGSTR_8475] Познания магии |cffbebedcдревних гвардейцев|r находятся на высшем уровне, что позволяет им блокировать  вражескую магию. Увеличивает скорость боя на |cffbebedc10%|r. и регенерацию на |cffbebedc0.5|r.
+
+ID: Redc (levels: 2)
+  Lvl 1: hotkey=[L]
+    Name: [TRIGSTR_27107] Сделать |cffbebedcдруидов-хищников адептами|r
+    Tip: [TRIGSTR_27109] Сделать |cffbebedcдруидов-хищников адептами|r
+    Ubertip: ["Увеличивает урон от атак и запас здоровья и маны, ускоряет регенерацию маны в облике ночного эльфа, а также обучает «Омоложению»."] "Увеличивает урон от атак и запас здоровья и маны, ускоряет регенерацию маны в облике ночного эльфа, а также обучает «Омоложению»."
+  Lvl 2: hotkey=[L]
+    Name: [TRIGSTR_27108] Сделать |cffbebedcдруидов-хищников мастерами|r
+    Tip: [TRIGSTR_27110] Сделать |cffbebedcдруидов-хищников мастерами|r
+    Ubertip: ["Увеличивает урон от атак и запас здоровья и маны, ускоряет регенерацию маны в облике ночного эльфа, а также дает доступ к облику медведя."] "Увеличивает урон от атак и запас здоровья и маны, ускоряет регенерацию маны в облике ночного эльфа, а также дает доступ к облику медведя."
+
+ID: Reeb (levels: 1)
+  Lvl 1: hotkey=[M]
+    Name: [TRIGSTR_27044] |cffbebedcЗнак хищника|r
+    Tip: [TRIGSTR_27045] Исследовать «|cffbebedcЗнак хищника|r»
+    Ubertip: [Позволяет друидам-хищникам применять «Рев» в облике медведя.] Позволяет друидам-хищникам применять «Рев» в облике медведя.
+
+ID: Resi (levels: 1)
+  Lvl 1: hotkey=[A]
+    Name: [TRIGSTR_27115] |cffbebedcРассеяние чар|r
+    Tip: [TRIGSTR_27116] Исследовать «|cffbebedcРассеяние чар|r»
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет Элементалей воды и Элементалей океана способностью «Рассеивание чар», позволяющей снимать положительные эффекты с врагов и отрицательные с союзников, а также наносить урон призванным существам.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет Элементалей воды и Элементалей океана способностью «Рассеивание чар», позволяющей снимать положительные эффекты с врагов и отрицательные с союзников, а также наносить урон призванным существам.|r
+
+ID: Rers (levels: 1)
+  Lvl 1: hotkey=[D]
+    Name: [TRIGSTR_27103] |cffbebedcУстойчивая кожа|r
+    Tip: [TRIGSTR_27104] Исследовать «|cffbebedcУстойчивую кожу|r»
+    Ubertip: [Уменьшает получаемый горными великанами урон от способностей.] Уменьшает получаемый горными великанами урон от способностей.
+
+ID: Rehs (levels: 1)
+  Lvl 1: hotkey=[F]
+    Name: [TRIGSTR_27157] |cffbebedcКаменная кожа|r
+    Tip: [TRIGSTR_27158] Исследовать «|cffbebedcКаменную кожу|r»
+    Ubertip: [Уменьшает получаемый горными великанами урон от атак.] Уменьшает получаемый горными великанами урон от атак.
+
+ID: R0G8 (levels: 2)
+  Lvl 1: hotkey=[M]
+    Name: [TRIGSTR_27570] |cffbebedcМагия совы|r
+    Tip: [TRIGSTR_27571] Исследовать «|cffbebedcМагия совы|r»
+    Ubertip: [TRIGSTR_27572] Позволяет |cffbebedcдруидам-совухам|r использовать новые умения. Увеличивает здоровье на |cffbebedc40 ед|r., ману на |cffbebedc25 ед|r., и регенерацию маны на |cffbebedc20%|r.
+  Lvl 2: hotkey=[None]
+    Name: [TRIGSTR_27573] |cffbebedcМагия совы|r
+    Tip: [TRIGSTR_27574] Исследовать «|cffbebedcМагия совы|r»
+    Ubertip: [TRIGSTR_27575] Позволяет |cffbebedcдруидам-совухам|r использовать новые умения, и |cffbebedcОблик Совухи|r. Увеличивает здоровье на |cffbebedc40 ед|r., ману на |cffbebedc25 ед|r., и регенерацию маны на |cffbebedc20%|r.
+
+ID: Recb (levels: 1)
+  Lvl 1: hotkey=[B]
+    Name: [Едкое дыхание] Едкое дыхание
+    Tip: [Исследовать «Едкое дыхание»] Исследовать «Едкое дыхание»
+    Ubertip: ["Позволяет химерам выпускать сгустки едкой желчи, наносящей значительный урон зданиям."] "Позволяет химерам выпускать сгустки едкой желчи, наносящей значительный урон зданиям."
+
+ID: R0KS (levels: 1)
+  Lvl 1: hotkey=[Q]
+    Name: [TRIGSTR_12378] |cffbd00ffЗов Элуны
+    Tip: [TRIGSTR_41894] Дает по области временное усиление атаки и скорости
+    Ubertip: [TRIGSTR_11036] Эльфы взывают в Элуне и та дает временное им усиление 
+
+ID: R0KT (levels: 1)
+  Lvl 1: hotkey=[W]
+    Name: [TRIGSTR_41846] |cffbd00ffЯрость Элуны
+    Tip: [TRIGSTR_41897] Делает некоторых эльфиек ночными воительницами
+    Ubertip: [TRIGSTR_41896] Делает некоторых эльфиек ночными воительницами
+
+ID: R0KU (levels: 1)
+  Lvl 1: hotkey=[E]
+    Name: [TRIGSTR_41849] |cffbd00ffЗлезы Элуны
+    Tip: [TRIGSTR_41850] Дает по области перерождение воинов в виде светлячков
+    Ubertip: [TRIGSTR_41848] Дает по области перерождение воинов в виде светлячков
+
+ID: R0CY (levels: 1)
+  Lvl 1: hotkey=[Q]
+    Name: [TRIGSTR_41899] Призыв помощи
+    Tip: [TRIGSTR_31803] Друиды просят помощи у Диких Богов.
+    Ubertip: [TRIGSTR_41901] Друиды просят помощи у Диких Богов.
+
+ID: R0KV (levels: 1)
+  Lvl 1: hotkey=[W]
+    Name: [TRIGSTR_33342] |cff00781eМилость Природы
+    Tip: [TRIGSTR_33380] Дает по области дождь, который лечит воинов
+    Ubertip: [TRIGSTR_35428] Дает по области дождь, который лечит воинов
+
+ID: R0KW (levels: 1)
+  Lvl 1: hotkey=[E]
+    Name: [TRIGSTR_35453] |cff00781eЯрость Природы
+    Tip: [TRIGSTR_35455] Призывает Энтов по области
+    Ubertip: [TRIGSTR_35456] Призывает Энтов по области
+
+ID: R002 (levels: 6)
+  Lvl 1: hotkey=[A]
+    Name: [|cffe4cfa3Орудия флота — уровень 1|r] |cffe4cfa3Орудия флота — уровень 1|r
+    Tip: [|cffe4cfa3Орудия флота — уровень 1|r (|cffffffffA|r)] |cffe4cfa3Орудия флота — уровень 1|r (|cffffffffA|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+17|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+3|cffced4da к урону.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+17|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+3|cffced4da к урону.|r
+  Lvl 2: hotkey=[A]
+    Name: [|cffe4cfa3Орудия флота — уровень 2|r] |cffe4cfa3Орудия флота — уровень 2|r
+    Tip: [|cffe4cfa3Орудия флота — уровень 2|r (|cffffffffA|r)] |cffe4cfa3Орудия флота — уровень 2|r (|cffffffffA|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+34|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+6|cffced4da к урону.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+34|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+6|cffced4da к урону.|r
+  Lvl 3: hotkey=[A]
+    Name: [|cffe4cfa3Орудия флота — уровень 3|r] |cffe4cfa3Орудия флота — уровень 3|r
+    Tip: [|cffe4cfa3Орудия флота — уровень 3|r (|cffffffffA|r)] |cffe4cfa3Орудия флота — уровень 3|r (|cffffffffA|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+51|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+9|cffced4da к урону.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+51|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+9|cffced4da к урону.|r
+  Lvl 4: hotkey=[A]
+    Name: [|cffe4cfa3Орудия флота — уровень 4|r] |cffe4cfa3Орудия флота — уровень 4|r
+    Tip: [|cffe4cfa3Орудия флота — уровень 4|r (|cffffffffA|r)] |cffe4cfa3Орудия флота — уровень 4|r (|cffffffffA|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+68|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+12|cffced4da к урону.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+68|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+12|cffced4da к урону.|r
+  Lvl 5: hotkey=[A]
+    Name: [|cffe4cfa3Орудия флота — уровень 5|r] |cffe4cfa3Орудия флота — уровень 5|r
+    Tip: [|cffe4cfa3Орудия флота — уровень 5|r (|cffffffffA|r)] |cffe4cfa3Орудия флота — уровень 5|r (|cffffffffA|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+85|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+15|cffced4da к урону.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+85|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+15|cffced4da к урону.|r
+  Lvl 6: hotkey=[A]
+    Name: [|cffe4cfa3Орудия флота — уровень 6|r] |cffe4cfa3Орудия флота — уровень 6|r
+    Tip: [|cffe4cfa3Орудия флота — уровень 6|r (|cffffffffA|r)] |cffe4cfa3Орудия флота — уровень 6|r (|cffffffffA|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff6|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+102|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+18|cffced4da к урону.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff6|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+102|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+18|cffced4da к урону.|r
+
+ID: R003 (levels: 6)
+  Lvl 1: hotkey=[S]
+    Name: [|cffe4cfa3Укреплённый корпус — уровень 1|r] |cffe4cfa3Укреплённый корпус — уровень 1|r
+    Tip: [|cffe4cfa3Укреплённый корпус — уровень 1|r (|cffffffffS|r)] |cffe4cfa3Укреплённый корпус — уровень 1|r (|cffffffffS|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+100|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+1|cffced4da к броне.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+100|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+1|cffced4da к броне.|r
+  Lvl 2: hotkey=[S]
+    Name: [|cffe4cfa3Укреплённый корпус — уровень 2|r] |cffe4cfa3Укреплённый корпус — уровень 2|r
+    Tip: [|cffe4cfa3Укреплённый корпус — уровень 2|r (|cffffffffS|r)] |cffe4cfa3Укреплённый корпус — уровень 2|r (|cffffffffS|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+200|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+2|cffced4da к броне.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+200|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+2|cffced4da к броне.|r
+  Lvl 3: hotkey=[S]
+    Name: [|cffe4cfa3Укреплённый корпус — уровень 3|r] |cffe4cfa3Укреплённый корпус — уровень 3|r
+    Tip: [|cffe4cfa3Укреплённый корпус — уровень 3|r (|cffffffffS|r)] |cffe4cfa3Укреплённый корпус — уровень 3|r (|cffffffffS|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+300|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+3|cffced4da к броне.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+300|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+3|cffced4da к броне.|r
+  Lvl 4: hotkey=[S]
+    Name: [|cffe4cfa3Укреплённый корпус — уровень 4|r] |cffe4cfa3Укреплённый корпус — уровень 4|r
+    Tip: [|cffe4cfa3Укреплённый корпус — уровень 4|r (|cffffffffS|r)] |cffe4cfa3Укреплённый корпус — уровень 4|r (|cffffffffS|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+400|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+8|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+8|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+4|cffced4da к броне.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+400|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+8|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+8|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+4|cffced4da к броне.|r
+  Lvl 5: hotkey=[S]
+    Name: [|cffe4cfa3Укреплённый корпус — уровень 5|r] |cffe4cfa3Укреплённый корпус — уровень 5|r
+    Tip: [|cffe4cfa3Укреплённый корпус — уровень 5|r (|cffffffffS|r)] |cffe4cfa3Укреплённый корпус — уровень 5|r (|cffffffffS|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+500|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+10|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+10|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+5|cffced4da к броне.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+500|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+10|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+10|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+5|cffced4da к броне.|r
+  Lvl 6: hotkey=[S]
+    Name: [|cffe4cfa3Укреплённый корпус — уровень 6|r] |cffe4cfa3Укреплённый корпус — уровень 6|r
+    Tip: [|cffe4cfa3Укреплённый корпус — уровень 6|r (|cffffffffS|r)] |cffe4cfa3Укреплённый корпус — уровень 6|r (|cffffffffS|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+600|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff6|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+12|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+12|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+6|cffced4da к броне.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+600|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff6|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+12|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+12|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+6|cffced4da к броне.|r
+
+ID: R004 (levels: 1)
+  Lvl 1: hotkey=[S]
+    Name: [TRIGSTR_13295] Улучшение до |cffb4dc8cКровавого Палача|r
+    Tip: [TRIGSTR_13298] Улучшение до |cffb4dc8cКровавого Палача|r
+    Ubertip: [TRIGSTR_18682] Превращает  |cffb4dc8cВластителя|r в |cffb4dc8cКровавого Палача|r. Усиливая его боевой потенциал.
+
+ID: R005 (levels: 5)
+  Lvl 1: hotkey=[X]
+    Name: [|cffe4cfa3Обстрел — уровень 1|r] |cffe4cfa3Обстрел — уровень 1|r
+    Tip: [|cffe4cfa3Обстрел — уровень 1|r (|cffffffffX|r)] |cffe4cfa3Обстрел — уровень 1|r (|cffffffffX|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+30|cffced4da. Открывает «Массированный обстрел» и боковые пушки линкора у кораблей, имеющих эти способности.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+30|cffced4da. Открывает «Массированный обстрел» и боковые пушки линкора у кораблей, имеющих эти способности.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r
+  Lvl 2: hotkey=[X]
+    Name: [|cffe4cfa3Обстрел — уровень 2|r] |cffe4cfa3Обстрел — уровень 2|r
+    Tip: [|cffe4cfa3Обстрел — уровень 2|r (|cffffffffX|r)] |cffe4cfa3Обстрел — уровень 2|r (|cffffffffX|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+60|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+60|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r
+  Lvl 3: hotkey=[X]
+    Name: [|cffe4cfa3Обстрел — уровень 3|r] |cffe4cfa3Обстрел — уровень 3|r
+    Tip: [|cffe4cfa3Обстрел — уровень 3|r (|cffffffffX|r)] |cffe4cfa3Обстрел — уровень 3|r (|cffffffffX|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+90|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+90|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r
+  Lvl 4: hotkey=[X]
+    Name: [|cffe4cfa3Обстрел — уровень 4|r] |cffe4cfa3Обстрел — уровень 4|r
+    Tip: [|cffe4cfa3Обстрел — уровень 4|r (|cffffffffX|r)] |cffe4cfa3Обстрел — уровень 4|r (|cffffffffX|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+120|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+120|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r
+  Lvl 5: hotkey=[X]
+    Name: [|cffe4cfa3Обстрел — уровень 5|r] |cffe4cfa3Обстрел — уровень 5|r
+    Tip: [|cffe4cfa3Обстрел — уровень 5|r (|cffffffffX|r)] |cffe4cfa3Обстрел — уровень 5|r (|cffffffffX|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+150|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+150|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r
+
+ID: R006 (levels: 3)
+  Lvl 1: hotkey=[C]
+    Name: [|cffe4cfa3Дополнительные паруса — уровень 1|r] |cffe4cfa3Дополнительные паруса — уровень 1|r
+    Tip: [|cffe4cfa3Дополнительные паруса — уровень 1|r (|cffffffffC|r)] |cffe4cfa3Дополнительные паруса — уровень 1|r (|cffffffffC|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+5%|cffced4da. Открывает «Тактическое ускорение» у кораблей, имеющих эту способность, включая фрегаты и линкоры.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+5%|cffced4da. Открывает «Тактическое ускорение» у кораблей, имеющих эту способность, включая фрегаты и линкоры.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r
+  Lvl 2: hotkey=[C]
+    Name: [|cffe4cfa3Дополнительные паруса — уровень 2|r] |cffe4cfa3Дополнительные паруса — уровень 2|r
+    Tip: [|cffe4cfa3Дополнительные паруса — уровень 2|r (|cffffffffC|r)] |cffe4cfa3Дополнительные паруса — уровень 2|r (|cffffffffC|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+10%|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+10%|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r
+  Lvl 3: hotkey=[C]
+    Name: [|cffe4cfa3Дополнительные паруса — уровень 3|r] |cffe4cfa3Дополнительные паруса — уровень 3|r
+    Tip: [|cffe4cfa3Дополнительные паруса — уровень 3|r (|cffffffffC|r)] |cffe4cfa3Дополнительные паруса — уровень 3|r (|cffffffffC|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+15%|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+15%|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r
+
+ID: R007 (levels: 3)
+  Lvl 1: hotkey=[D]
+    Name: [|cffe4cfa3Починка — уровень 1|r] |cffe4cfa3Починка — уровень 1|r
+    Tip: [|cffe4cfa3Починка — уровень 1|r (|cffffffffD|r)] |cffe4cfa3Починка — уровень 1|r (|cffffffffD|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+50|cffced4da. Открывает способность «Починка» у кораблей, имеющих её.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+50|cffced4da. Открывает способность «Починка» у кораблей, имеющих её.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r
+  Lvl 2: hotkey=[D]
+    Name: [|cffe4cfa3Починка — уровень 2|r] |cffe4cfa3Починка — уровень 2|r
+    Tip: [|cffe4cfa3Починка — уровень 2|r (|cffffffffD|r)] |cffe4cfa3Починка — уровень 2|r (|cffffffffD|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+100|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+100|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r
+  Lvl 3: hotkey=[D]
+    Name: [|cffe4cfa3Починка — уровень 3|r] |cffe4cfa3Починка — уровень 3|r
+    Tip: [|cffe4cfa3Починка — уровень 3|r (|cffffffffD|r)] |cffe4cfa3Починка — уровень 3|r (|cffffffffD|r)
+    Ubertip: [|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+150|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+150|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r
+
+=== 5. ABILITIES ===
+ID: A0HL (levels: 1)
+  Name: [TRIGSTR_38863] |cffbebedcНочные Эльфы|r
+  Hotkey: [TRIGSTR_4233] S
+  Lvl 1 Tip: [TRIGSTR_38864] |cffbebedcНочные Эльфы|r
+  Lvl 1 Ubertip: [TRIGSTR_35173] |cff7dc87dСоздатель расы:|r |cffe17d00Escanor (Яхве)|r|n|cff7dc87dСложность:|r |cff37ff37Средняя|r|n|cff7dc87dПериод:|r |cffffde19WoW Vanila|r по|cff23bc23 Legion|r|n|cff7dc87dОписание:|r Ночные эльфы, или кал'дорай — древняя раса убеждённых отшельников, сыгравшая важнейшую роль в определении истории Азерота. Более десяти тысяч лет назад героизм эльфийских воинов позволил остановить первое вторжение Пылающего Легиона. Минули столетия. Разрозненные обломки Легиона вновь сплотились, заручившись помощью подлых сатиров, и эльфы опять выступили против врага. Последовавшая Война сатиров дорого обошлась ночным эльфам, но всё же они сумели изгнать со своей земли тех, кто сеял на ней хаос.
+
+ID: A0I3 (levels: 1)
+  Name: [TRIGSTR_26484] |cffe4cfa3Небольшой скачок|r
+  Hotkey: [TRIGSTR_9545] C
+  ResTip: [TRIGSTR_10064] |cffe4cfa3Небольшой скачок|r (|cffffffffC|r)
+  ResUbertip: [TRIGSTR_10976] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r
+  Lvl 1 Tip: [TRIGSTR_26476] |cffe4cfa3Небольшой скачок|r (|cffffffffC|r)
+  Lvl 1 Ubertip: [TRIGSTR_26477] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r
+
+ID: Adtn (levels: 1)
+  Name: [Взорваться] Взорваться
+  Hotkey: [D] D
+  Lvl 1 Tip: [Взорваться] Взорваться
+  Lvl 1 Ubertip: ["Уничтожает огонька, рассеивая магические эффекты и сжигая по <Adtn,DataA1> маны у находящихся рядом войск. |n|cffffcc00Наносит <Adtn,DataB1> урона призванным целям.|r"] "Уничтожает огонька, рассеивая магические эффекты и сжигая по <Adtn,DataA1> маны у находящихся рядом войск. |n|cffffcc00Наносит <Adtn,DataB1> урона призванным целям.|r"
+
+ID: Aren (levels: 1)
+  Name: [Обновление] Обновление
+  Hotkey: [R] R
+  Lvl 1 Tip: [Обновление] Обновление
+  Lvl 1 Ubertip: ["Исцеляет раненые древа, ремонтирует союзные здания и технику."] "Исцеляет раненые древа, ремонтирует союзные здания и технику."
+
+ID: Awha (levels: 1)
+  Name: [Добывать ресурсы] Добывать ресурсы
+  Hotkey: [G] G
+  Lvl 1 Tip: [Добывать ресурсы] Добывать ресурсы
+  Lvl 1 Ubertip: [Добывает золото из оплетенных рудников и древесину из деревьев.] Добывает золото из оплетенных рудников и древесину из деревьев.
+
+ID: Ault (levels: 1)
+  Name: [Ночное зрение] Ночное зрение
+  Hotkey: [None] None
+  Lvl 1 Tip: [None] None
+  Lvl 1 Ubertip: [None] None
+
+ID: Abds (levels: 1)
+  Name: [Слабое рассеивание чумы] Слабое рассеивание чумы
+  Hotkey: [None] None
+  Lvl 1 Tip: [None] None
+  Lvl 1 Ubertip: [None] None
+
+ID: Aeat (levels: 1)
+  Name: [Съесть дерево] Съесть дерево
+  Hotkey: [E] E
+  Lvl 1 Tip: [Съесть дерево] Съесть дерево
+  Lvl 1 Ubertip: ["Поглощает дерево, восполняя <Aeat,DataC1> здоровья за <Aeat,Dur1> сек."] "Поглощает дерево, восполняя <Aeat,DataC1> здоровья за <Aeat,Dur1> сек."
+
+ID: Aro1 (levels: 1)
+  Name: [Пустить корни] Пустить корни
+  Hotkey: [R] R
+  Lvl 1 Tip: [Пустить корни] Пустить корни
+  Lvl 1 Ubertip: ["Древо получает укрепленную броню и пускает корни в указанном месте, теряя возможность передвигаться, после чего может выполнять свои основные функции (подготовка войск или – в случае сторожевого древа – защита базы)."] "Древо получает укрепленную броню и пускает корни в указанном месте, теряя возможность передвигаться, после чего может выполнять свои основные функции (подготовка войск или – в случае сторожевого древа – защита базы)."
+
+ID: Aro2 (levels: 1)
+  Name: [Пустить корни] Пустить корни
+  Hotkey: [R] R
+  Lvl 1 Tip: [Пустить корни] Пустить корни
+  Lvl 1 Ubertip: ["Древо получает укрепленную броню и пускает корни в указанном месте, теряя возможность передвигаться, после чего может выполнять свои основные функции (подготовка войск или – в случае сторожевого древа – защита базы)."] "Древо получает укрепленную броню и пускает корни в указанном месте, теряя возможность передвигаться, после чего может выполнять свои основные функции (подготовка войск или – в случае сторожевого древа – защита базы)."
+
+ID: Atol (levels: 1)
+  Name: [Улучшение древа жизни] Улучшение древа жизни
+  Hotkey: [None] None
+  Lvl 1 Tip: [None] None
+  Lvl 1 Ubertip: [None] None
+
+ID: Arlm (levels: 1)
+  Name: [Вернуть древесину] Вернуть древесину
+  Hotkey: [None] None
+  Lvl 1 Tip: [None] None
+  Lvl 1 Ubertip: [None] None
+
+ID: Ambt (levels: 1)
+  Name: [Восполнить ману и здоровье] Восполнить ману и здоровье
+  Hotkey: [R] R
+  Lvl 1 Tip: [Восполнить ману и здоровье] Восполнить ману и здоровье
+  Lvl 1 Ubertip: [Восполняет здоровье и ману союзника.] Восполняет здоровье и ману союзника.
+
+ID: A15N (levels: 1)
+  Name: [TRIGSTR_25578] Зона ремонта
+  Hotkey: [None] None
+  ResTip: [TRIGSTR_25582] Зона ремонта
+  ResUbertip: [TRIGSTR_26500] Восстанавливает здоровье механическим юнитам поблизости.
+  Lvl 1 Tip: [TRIGSTR_25589] Зона ремонта
+  Lvl 1 Ubertip: [TRIGSTR_25608] Восстанавливает здоровье механическим юнитам поблизости.
+
+ID: A0LJ (levels: 1)
+  Name: [TRIGSTR_12857] Обмен |cff00ff00Дерева |rна |cffffff00Золото|r
+  Hotkey: [TRIGSTR_4259] A
+  Lvl 1 Tip: [TRIGSTR_12886] Обмен |cff00ff00Дерева |rна |cffffff00Золото|r
+  Lvl 1 Ubertip: [TRIGSTR_20631] Отнимает у игрока |cff228722500 дерева|r, но добавляет |cffffd700100 золота|r.
+
+ID: A0LI (levels: 1)
+  Name: [TRIGSTR_2888] Обмен |cffffff00Золота |rна |cff00ff00Дерево|r
+  Hotkey: [TRIGSTR_4247] S
+  Lvl 1 Tip: [TRIGSTR_3692] Обмен |cffffff00Золота |rна |cff00ff00Дерево|r
+  Lvl 1 Ubertip: [TRIGSTR_20630] Отнимает у игрока|cffffd700 500 золота|r, но добавляет |cff228722100 дерева|r.
+
+ID: A0IQ (levels: 1)
+  Name: [TRIGSTR_27193] |cffffdcb4Обозначить столицу|r
+  Hotkey: [TRIGSTR_11265] X
+  Lvl 1 Tip: [TRIGSTR_27969] |cffffdcb4Обозначить столицу|r
+  Lvl 1 Ubertip: [TRIGSTR_27970] Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение.
+
+ID: Aco2 (levels: 1)
+  Name: [Оседлать гиппогрифа] Оседлать гиппогрифа
+  Hotkey: [U] U
+  Lvl 1 Tip: [Оседлать гиппогрифа] Оседлать гиппогрифа
+  Lvl 1 Ubertip: [Лучница седлает гиппогрифа и может атаковать с воздуха. |n|n|cffffcc00Атакует наземные и воздушные цели.|r] Лучница седлает гиппогрифа и может атаковать с воздуха. |n|n|cffffcc00Атакует наземные и воздушные цели.|r
+
+ID: Ashm (levels: 1)
+  Name: [Слияние с тенью] Слияние с тенью
+  Hotkey: [I] I
+  Lvl 1 Tip: [Спрятаться] Спрятаться
+  Lvl 1 Ubertip: [При использовании ночью запрещает автоматический выбор цели и дает невидимость.] При использовании ночью запрещает автоматический выбор цели и дает невидимость.
+
+ID: Aegr (levels: 1)
+  Name: [Благословение Элуны] Благословение Элуны
+  Hotkey: [None] None
+  Lvl 1 Tip: [Благословение Элуны] Благословение Элуны
+  Lvl 1 Ubertip: ["-<Aegr,DataA1,%>% к получаемому урону от пронзающих атак и -<Aegr,DataE1,%>% к получаемому урону от способностей и магических атак."] "-<Aegr,DataA1,%>% к получаемому урону от пронзающих атак и -<Aegr,DataE1,%>% к получаемому урону от способностей и магических атак."
+
+ID: Aeib (levels: 1)
+  Name: [Улучшенные луки] Улучшенные луки
+  Hotkey: [None] None
+  Lvl 1 Tip: [Улучшенные луки] Улучшенные луки
+  Lvl 1 Ubertip: [Увеличивают дальность атаки.] Увеличивают дальность атаки.
+
+ID: Aemk (levels: 1)
+  Name: [Тренировка меткости] Тренировка меткости
+  Hotkey: [None] None
+  Lvl 1 Tip: [Тренировка меткости] Тренировка меткости
+  Lvl 1 Ubertip: ["+<Remk,base1> к урону лучниц и наездниц на гиппогрифах."] "+<Remk,base1> к урону лучниц и наездниц на гиппогрифах."
+
+ID: Aesn (levels: 1)
+  Name: [Часовой] Часовой
+  Hotkey: [E] E
+  Lvl 1 Tip: [Часовой] Часовой
+  Lvl 1 Ubertip: ["Отправляет сову на находящееся рядом дерево и открывает обзор в области вокруг него. |nСова обнаруживает невидимые войска. |n Время существования: <Aesn,DataE1> сек."] "Отправляет сову на находящееся рядом дерево и открывает обзор в области вокруг него. |nСова обнаруживает невидимые войска. |n Время существования: <Aesn,DataE1> сек."
+
+ID: Amgl (levels: 1)
+  Name: [Лунная глефа] Лунная глефа
+  Hotkey: [None] None
+  Lvl 1 Tip: [Лунная глефа] Лунная глефа
+  Lvl 1 Ubertip: [Позволяют глефам охотниц поражать дополнительные цели.] Позволяют глефам охотниц поражать дополнительные цели.
+
+ID: Amgi (levels: 1)
+  Name: [Bouncing Missile Filter] Bouncing Missile Filter
+  Hotkey: [None] None
+  Lvl 1 Tip: [None] None
+  Lvl 1 Ubertip: [None] None
+
+ID: Aimp (levels: 1)
+  Name: [None] None
+  Hotkey: [None] None
+  Lvl 1 Tip: [None] None
+  Lvl 1 Ubertip: [None] None
+
+ID: A0FD (levels: 1)
+  Name: [TRIGSTR_2917] |cffb4dc8cУдлиненные мечи|r
+  Hotkey: [None] None
+  Lvl 1 Tip: [TRIGSTR_2918] |cffb4dc8cУдлиненные мечи|r
+  Lvl 1 Ubertip: [TRIGSTR_2924] Бьет с большим радиусом поражения, нанося <ACce,DataA1,%>% урона врагам рядом с основной целью.
+
+ID: A0EF (levels: 1)
+  Name: [TRIGSTR_2731] |cffbebedcТанец полумесяца|r
+  Hotkey: [I] I
+  Lvl 1 Tip: [TRIGSTR_2732] |cffbebedcТанец полумесяца|r
+  Lvl 1 Ubertip: [При использовании ночью запрещает автоматический выбор цели и дает невидимость.] При использовании ночью запрещает автоматический выбор цели и дает невидимость.
+
+ID: A0FC (levels: 1)
+  Name: [TRIGSTR_39686] |cffb4dc8cОпутывание|r
+  Hotkey: [None] None
+  Lvl 1 Tip: [TRIGSTR_39688] |cffb4dc8cОпутывание|r
+  Lvl 1 Ubertip: [TRIGSTR_39689] При атаке опутывает врагов, замедляя ее передвижение на 20% и атаку на 15%. Время действия: 5 сек. (герой 0.5).
+
+ID: A16K (levels: 1)
+  Name: [Волшебный огонь] Волшебный огонь
+  Hotkey: [TRIGSTR_23103] Q
+  Lvl 1 Tip: [Волшебный огонь] Волшебный огонь
+  Lvl 1 Ubertip: ["Ослабляет броню врага на <ACff,DataA1> и раскрывает его местоположение. |nВремя действия: <ACff,Dur1> сек."] "Ослабляет броню врага на <ACff,DataA1> и раскрывает его местоположение. |nВремя действия: <ACff,Dur1> сек."
+
+ID: Acyc (levels: 1)
+  Name: [TRIGSTR_25834] Whirlwind
+  Hotkey: [C] C
+  Lvl 1 Tip: [TRIGSTR_25835] Whirlwind
+  Lvl 1 Ubertip: [TRIGSTR_25839] Lifts the enemy into the air, preventing movement, attacking, and using abilities. The target cannot be selected while affected. Does not work on mechanical units. |nDuration: <Acyc,Dur1> sec.
+
+ID: Arav (levels: 1)
+  Name: [Облик буревестника] Облик буревестника
+  Hotkey: [F] F
+  Lvl 1 Tip: [Облик буревестника] Облик буревестника
+  Lvl 1 Ubertip: [Превращает друида в буревестника. Позволяет летать.] Превращает друида в буревестника. Позволяет летать.
+
+ID: Afae (levels: 1)
+  Name: [Волшебный огонь] Волшебный огонь
+  Hotkey: [TRIGSTR_9179] Q
+  Lvl 1 Tip: [Волшебный огонь] Волшебный огонь
+  Lvl 1 Ubertip: ["Ослабляет броню врага на <Afae,DataA1> и раскрывает его местоположение. |nВремя действия: <Afae,Dur1> сек."] "Ослабляет броню врага на <Afae,DataA1> и раскрывает его местоположение. |nВремя действия: <Afae,Dur1> сек."
+
+ID: Afa2 (levels: 1)
+  Name: [Волшебный огонь] Волшебный огонь
+  Hotkey: [TRIGSTR_10012] Q
+  Lvl 1 Tip: [Волшебный огонь] Волшебный огонь
+  Lvl 1 Ubertip: ["Ослабляет броню врага на <Afae,DataA1> и раскрывает его местоположение. |nВремя действия: <Afae,Dur1> сек."] "Ослабляет броню врага на <Afae,DataA1> и раскрывает его местоположение. |nВремя действия: <Afae,Dur1> сек."
+
+ID: A12K (levels: 1)
+  Name: [TRIGSTR_24656] |cffbebedcРассеивание заклинаний|r
+  Hotkey: [TRIGSTR_28754] Q
+  Lvl 1 Tip: [TRIGSTR_24657] |cffbebedcРассеивание заклинаний|r
+  Lvl 1 Ubertip: ["Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r"] "Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r"
+
+ID: A16L (levels: 1)
+  Name: [TRIGSTR_27631] |cffbebedcНевосприимчивость к магии|r
+  Hotkey: [None] None
+  Lvl 1 Tip: [TRIGSTR_27632] |cffbebedcНевосприимчивость к магии|r
+  Lvl 1 Ubertip: [Дает невосприимчивость к магии и большинству способностей.] Дает невосприимчивость к магии и большинству способностей.
+
+ID: Amfl (levels: 1)
+  Name: [TRIGSTR_14084] |cffbebedcВспышка маны|r
+  Hotkey: [TRIGSTR_10054] W
+  Lvl 1 Tip: [TRIGSTR_15945] |cffbebedcВспышка маны|r
+  Lvl 1 Ubertip: ["+<Amfl,DataE1> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: <Amfl,Dur1> сек."] "+<Amfl,DataE1> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: <Amfl,Dur1> сек."
+
+ID: Apsh (levels: 1)
+  Name: [TRIGSTR_15946] |cffbebedcФазовый сдвиг|r
+  Hotkey: [TRIGSTR_7353] R
+  Lvl 1 Tip: [TRIGSTR_15950] |cffbebedcФазовый сдвиг|r
+  Lvl 1 Ubertip: ["При получении урона переходит в иное измерение, получая защиту от дальнейшего урона. |nВремя действия: <Apsh,Dur1> сек."] "При получении урона переходит в иное измерение, получая защиту от дальнейшего урона. |nВремя действия: <Apsh,Dur1> сек."
+
+ID: A16I (levels: 1)
+  Name: [TRIGSTR_8469] |cffbebedcАнулирование|r
+  Hotkey: [TRIGSTR_23097] Q
+  Lvl 1 Tip: [TRIGSTR_8470] |cffbebedcАнулирование|r
+  Lvl 1 Ubertip: [TRIGSTR_27555] При использовании дает невосприимчивость к магии.
+
+ID: A0FA (levels: 1)
+  Name: [Защита] Защита
+  Hotkey: [D] D
+  Lvl 1 Tip: [TRIGSTR_16471] |cff7f8f18Защита|r
+  Lvl 1 Ubertip: ["При использовании с <Adef,DataF1>%-й вероятностью отражает пронзающие атаки в нападающих и уменьшает урон от достигших цели атак до <Adef,DataA1,%>% базового. Замедляет передвижение на <Adef,DataC1,%>% на время действия."] "При использовании с <Adef,DataF1>%-й вероятностью отражает пронзающие атаки в нападающих и уменьшает урон от достигших цели атак до <Adef,DataA1,%>% базового. Замедляет передвижение на <Adef,DataC1,%>% на время действия."
+
+ID: A0FB (levels: 1)
+  Name: [TRIGSTR_2909] |cffb4dc8cЗачарованая глефа|r
+  Hotkey: [None] None
+  Lvl 1 Tip: [TRIGSTR_2910] |cffb4dc8cЗачарованая глефа|r
+  Lvl 1 Ubertip: ["+<Ahsb,DataB1,%>% к урону по целям со средней броней."] "+<Ahsb,DataB1,%>% к урону по целям со средней броней."
+
+ID: Aadm (levels: 1)
+  Name: [Рассеяние чар] Рассеяние чар
+  Hotkey: [B] B
+  Lvl 1 Tip: [Рассеяние чар] Рассеяние чар
+  Lvl 1 Ubertip: ["Снимает положительные эффекты с врагов и отрицательные с союзников. |n|cffffcc00Наносит <Aadm,DataB1> урона призванным целям.|r"] "Снимает положительные эффекты с врагов и отрицательные с союзников. |n|cffffcc00Наносит <Aadm,DataB1> урона призванным целям.|r"
+
+ID: Aspo (levels: 1)
+  Name: [Замедляющий яд] Замедляющий яд
+  Hotkey: [None] None
+  Lvl 1 Tip: [Замедляющий яд] Замедляющий яд
+  Lvl 1 Ubertip: ["Отравляет цель, нанося <Aspo,DataA1> урона/сек., а также замедляя ее передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек."] "Отравляет цель, нанося <Aspo,DataA1> урона/сек., а также замедляя ее передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек."
+
+ID: Aien (levels: 1)
+  Name: [Инвентарь] Инвентарь
+  Hotkey: [None] None
+  Lvl 1 Tip: [Инвентарь] Инвентарь
+  Lvl 1 Ubertip: [Позволяет носить (но не использовать) предметы для героев.] Позволяет носить (но не использовать) предметы для героев.
+
+ID: Abrf (levels: 1)
+  Name: [Облик медведя] Облик медведя
+  Hotkey: [F] F
+  Lvl 1 Tip: [Облик медведя] Облик медведя
+  Lvl 1 Ubertip: ["Превращает друида в медведя. Усиливает боевые характеристики, но замедляет регенерацию маны."] "Превращает друида в медведя. Усиливает боевые характеристики, но замедляет регенерацию маны."
+
+ID: Arej (levels: 1)
+  Name: [Омоложение] Омоложение
+  Hotkey: [E] E
+  Lvl 1 Tip: [Омоложение] Омоложение
+  Lvl 1 Ubertip: ["Восполняет союзнику <Arej,DataA1> здоровья за <Arej,Dur1> сек."] "Восполняет союзнику <Arej,DataA1> здоровья за <Arej,Dur1> сек."
+
+ID: Aroa (levels: 1)
+  Name: [Рев] Рев
+  Hotkey: [R] R
+  Lvl 1 Tip: [Рев] Рев
+  Lvl 1 Ubertip: ["+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек."] "+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек."
+
+ID: Ara2 (levels: 1)
+  Name: [Рев] Рев
+  Hotkey: [R] R
+  Lvl 1 Tip: [Рев] Рев
+  Lvl 1 Ubertip: ["+<Ara2,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Ara2,Dur1> сек."] "+<Ara2,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Ara2,Dur1> сек."
+
+ID: Atau (levels: 1)
+  Name: [Провокация] Провокация
+  Hotkey: [T] T
+  Lvl 1 Tip: [Провокация] Провокация
+  Lvl 1 Ubertip: ["Ближайшие враги (до <Atau,DataA1>) вынуждены атаковать этого воина. Через <Atau,DataE1> сек. «Провокация» снова активируется."] "Ближайшие враги (до <Atau,DataA1>) вынуждены атаковать этого воина. Через <Atau,DataE1> сек. «Провокация» снова активируется."
+
+ID: Agra (levels: 1)
+  Name: [Боевая дубинка] Боевая дубинка
+  Hotkey: [W] W
+  Lvl 1 Tip: [Боевая дубинка] Боевая дубинка
+  Lvl 1 Ubertip: ["Горный великан вырывает дерево, получая бонус к дальности атаки и возможность наносить осадный урон. |nМаксимум ударов: <Agra,DataE1>."] "Горный великан вырывает дерево, получая бонус к дальности атаки и возможность наносить осадный урон. |nМаксимум ударов: <Agra,DataE1>."
+
+ID: Arsk (levels: 1)
+  Name: [Устойчивая кожа] Устойчивая кожа
+  Hotkey: [None] None
+  Lvl 1 Tip: [Устойчивая кожа] Устойчивая кожа
+  Lvl 1 Ubertip: ["Сокращает время действия отрицательных эффектов, дает невосприимчивость к некоторым способностям."] "Сокращает время действия отрицательных эффектов, дает невосприимчивость к некоторым способностям."
+
+ID: Assk (levels: 1)
+  Name: [Каменная кожа] Каменная кожа
+  Hotkey: [None] None
+  Lvl 1 Tip: [Каменная кожа] Каменная кожа
+  Lvl 1 Ubertip: ["-<Assk,DataC1> от получаемого горным великаном урона от атак. Минимальный урон от атак: <Assk,DataB1>."] "-<Assk,DataC1> от получаемого горным великаном урона от атак. Минимальный урон от атак: <Assk,DataB1>."
+
+ID: A164 (levels: 1)
+  Name: [TRIGSTR_27420] |cffbebedcОблик совы|r
+  Hotkey: [TRIGSTR_22977] Q
+  Lvl 1 Tip: [TRIGSTR_27421] |cffbebedcОблик совы|r
+  Lvl 1 Ubertip: ["Превращает друида в медведя. Усиливает боевые характеристики, но замедляет регенерацию маны."] "Превращает друида в медведя. Усиливает боевые характеристики, но замедляет регенерацию маны."
+
+ID: Absk (levels: 1)
+  Name: [Берсерк] Берсерк
+  Hotkey: [B] B
+  Lvl 1 Tip: [Берсерк] Берсерк
+  Lvl 1 Ubertip: ["+<Absk,DataB1,%>% к скорости атаки, но +<Absk,DataC1,%>% к получаемому урону."] "+<Absk,DataB1,%>% к скорости атаки, но +<Absk,DataC1,%>% к получаемому урону."
+
+ID: ACfb (levels: 1)
+  Name: [Огненная стрела] Огненная стрела
+  Hotkey: [TRIGSTR_10047] Q
+  Lvl 1 Tip: [Огненная стрела] Огненная стрела
+  Lvl 1 Ubertip: ["Выпускает сгусток огня, оглушающий врага."] "Выпускает сгусток огня, оглушающий врага."
+
+ID: Anhe (levels: 1)
+  Name: [Исцеление] Исцеление
+  Hotkey: [E] E
+  Lvl 1 Tip: [Исцеление] Исцеление
+  Lvl 1 Ubertip: [Восполняет здоровье раненому союзнику. Не действует на технику.] Восполняет здоровье раненому союзнику. Не действует на технику.
+
+ID: ACbh (levels: 1)
+  Name: [Сильный удар] Сильный удар
+  Hotkey: [None] None
+  Lvl 1 Tip: [Сильный удар] Сильный удар
+  Lvl 1 Ubertip: ["С <ACbh,DataA1>%-й вероятностью атака нанесет на <ACbh,DataC1> больше урона и оглушит цель на <ACbh,Dur1> сек."] "С <ACbh,DataA1>%-й вероятностью атака нанесет на <ACbh,DataC1> больше урона и оглушит цель на <ACbh,Dur1> сек."
+
+ID: Acor (levels: 1)
+  Name: [Едкое дыхание] Едкое дыхание
+  Hotkey: [None] None
+  Lvl 1 Tip: [Едкое дыхание] Едкое дыхание
+  Lvl 1 Ubertip: ["Выпускает сгусток едкой желчи, наносящей значительный урон зданиям."] "Выпускает сгусток едкой желчи, наносящей значительный урон зданиям."
+
+ID: Alit (levels: 1)
+  Name: [Грозовая атака] Грозовая атака
+  Hotkey: [None] None
+  Lvl 1 Tip: [None] None
+  Lvl 1 Ubertip: [None] None
+
+ID: Aco3 (levels: 1)
+  Name: [Взять на спину лучницу] Взять на спину лучницу
+  Hotkey: [U] U
+  Lvl 1 Tip: [Взять на спину лучницу] Взять на спину лучницу
+  Lvl 1 Ubertip: ["Гиппогриф берет на спину лучницу, позволяя ей атаковать с воздуха. |n|n|cffffcc00Атакует наземные и воздушные цели.|r"] "Гиппогриф берет на спину лучницу, позволяя ей атаковать с воздуха. |n|n|cffffcc00Атакует наземные и воздушные цели.|r"
+
+ID: A0FJ (levels: 4)
+  Name: [TRIGSTR_3524] |cffb4dc8cСила природы|r
+  Hotkey: [TRIGSTR_14344] Q
+  ResTip: [TRIGSTR_3528] Изучить «|cffb4dc8cСила природы|r»
+  ResUbertip: [TRIGSTR_8459] Позволяет призывать духов леса на помощ Эльфам и друидам.
+|n|n|cffffcc001-й уровень:|r 1 дух леса.|n|cffffcc002-й уровень:|r 2 духа леса.|n|cffffcc003-й уровень:|r 3 духа леса.|n|cffffcc004-й уровень:|r 4 духа леса.
+  Lvl 1 Tip: [TRIGSTR_3431] |cffb4dc8cСила природы|r
+  Lvl 1 Ubertip: [TRIGSTR_3442] Призывает несколько духов природы.
+  Lvl 2 Tip: [TRIGSTR_3432] |cffb4dc8cСила природы|r
+  Lvl 2 Ubertip: [TRIGSTR_3443] Призывает несколько духов природы.
+  Lvl 3 Tip: [TRIGSTR_3440] |cffb4dc8cСила природы|r
+  Lvl 3 Ubertip: [TRIGSTR_3522] Призывает несколько духов природы.
+  Lvl 4 Tip: [TRIGSTR_3441] |cffb4dc8cСила природы|r
+  Lvl 4 Ubertip: [TRIGSTR_3523] Призывает несколько духов природы.
+
+ID: A0FH (levels: 4)
+  Name: [TRIGSTR_14273] R
+  Hotkey: [None] None
+  ResTip: [TRIGSTR_14320] R
+  ResUbertip: [TRIGSTR_8456] Каждая атака хранителя рощи, замедляют атакованого врага.
+|n|cffffcc001-й уровень:|r 25% замедления.|n|cffffcc002-й уровень:|r 35% замедления.|n|cffffcc003-й уровень:|r 45% замедления.|n|cffffcc004-й уровень:|r 55% замедления.
+  Lvl 1 Tip: [TRIGSTR_14275] R
+  Lvl 1 Ubertip: [TRIGSTR_2916] При атаке опутывает врагов, замедляя ее передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек.
+  Lvl 2 Tip: [TRIGSTR_14322] R
+  Lvl 2 Ubertip: [TRIGSTR_3229] При атаке опутывает врагов, замедляя ее передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек.
+  Lvl 3 Tip: [TRIGSTR_14391] R
+  Lvl 3 Ubertip: [TRIGSTR_3297] При атаке опутывает врагов, замедляя ее передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек.
+  Lvl 4 Tip: [TRIGSTR_14393] R
+  Lvl 4 Ubertip: [TRIGSTR_3298] При атаке опутывает врагов, замедляя ее передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек.
+
+ID: A0FI (levels: 4)
+  Name: [TRIGSTR_3300] |cffb4dc8cАура шипов|r
+  Hotkey: [None] None
+  ResTip: [TRIGSTR_3338] Изучить «|cffb4dc8cАуру шипов|r» [|cffffcc00%d-й уровень|r]
+  ResUbertip: [TRIGSTR_8458] Дает находящимся рядом союзникам щит, который отражает часть получаемого в ближнем бою урона в атакующих врагов. |n|n|cffffcc001-й уровень:|r <AEah,DataA1,%>% урона. |n|cffffcc002-й уровень:|r <AEah,DataA2,%>% урона. |n|cffffcc003-й уровень:|r <AEah,DataA3,%>% урона.|n|cffffcc004-й уровень:|r 20% урона.
+  Lvl 1 Tip: [TRIGSTR_3341] |cffb4dc8cАура шипов|r [|cffffcc001-й уровень|r]
+  Lvl 1 Ubertip: ["Дает находящимся рядом союзникам щит, который отражает <AEah,DataA1,%>% получаемого в ближнем бою урона от атак в атакующих врагов."] "Дает находящимся рядом союзникам щит, который отражает <AEah,DataA1,%>% получаемого в ближнем бою урона от атак в атакующих врагов."
+  Lvl 2 Tip: [TRIGSTR_3342] |cffb4dc8cАура шипов|r [|cffffcc002-й уровень|r]
+  Lvl 2 Ubertip: ["Дает находящимся рядом союзникам щит, который отражает <AEah,DataA2,%>% получаемого в ближнем бою урона от атак в атакующих врагов."] "Дает находящимся рядом союзникам щит, который отражает <AEah,DataA2,%>% получаемого в ближнем бою урона от атак в атакующих врагов."
+  Lvl 3 Tip: [TRIGSTR_3427] |cffb4dc8cАура шипов|r [|cffffcc003-й уровень|r]
+  Lvl 3 Ubertip: ["Дает находящимся рядом союзникам щит, который отражает <AEah,DataA3,%>% получаемого в ближнем бою урона от атак в атакующих врагов."] "Дает находящимся рядом союзникам щит, который отражает <AEah,DataA3,%>% получаемого в ближнем бою урона от атак в атакующих врагов."
+  Lvl 4 Tip: [TRIGSTR_3429] |cffb4dc8cАура шипов|r [|cffffcc004-й уровень|r]
+  Lvl 4 Ubertip: [TRIGSTR_3430] Дает находящимся рядом союзникам щит, который отражает <AEah,DataA3,%>% получаемого в ближнем бою урона от атак в атакующих врагов.
+
+ID: ken0 (levels: 2)
+  Name: [TRIGSTR_26390] |cffb4dc8cЯрость природы|r
+  Hotkey: [TRIGSTR_32028] R
+  Lvl 1 Tip: [TRIGSTR_30523] |cffb4dc8cЯрость природы|r
+  Lvl 1 Ubertip: [TRIGSTR_40192] Опутываеть врагов, оглушая находящихся рядом наземных врагов и нанося им урон.
+  Lvl 2 Tip: [TRIGSTR_40189] |cffb4dc8cЯрость природы|r
+  Lvl 2 Ubertip: [TRIGSTR_40193] Опутываеть врагов, оглушая находящихся рядом наземных врагов и нанося им урон.
+
+ID: A1MW (levels: 1)
+  Name: [TRIGSTR_11596] |cff8080ffОплетение|r
+  Hotkey: [] 
+  Lvl 1 Tip: [TRIGSTR_35379] |cffbec8f5Оплетение|r
+  Lvl 1 Ubertip: ["Выпускает сгусток огня, оглушающий врага."] "Выпускает сгусток огня, оглушающий врага."
+
+ID: A160 (levels: 4)
+  Name: [TRIGSTR_14835] |cffbebedcПокровительство друидов|r
+  Hotkey: [None] None
+  ResTip: [TRIGSTR_15200] Изучить «|cffbebedcПокровительство друидов|r» [|cffffcc00%d-й уровень|r]
+  ResUbertip: [TRIGSTR_9217] Усиливает броню находящихся рядом союзников. Наносит урон всем врагам вокруг. |n|n|cffffcc001-й уровень:|r +<AHad,DataA1,.> к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду. |n|cffffcc002-й уровень:|r +<AHad,DataA2,.> к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду. |n|cffffcc003-й уровень:|r +<AHad,DataA3,.> к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду.|n|cffffcc004-й уровень:|r +4 к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду.
+  Lvl 1 Tip: [TRIGSTR_14842] |cffbebedcПокровительство друидов|r
+  Lvl 1 Ubertip: [TRIGSTR_15180] Усиливает броню находящихся рядом союзников. Наносит урон всем врагам вокруг. |n|n|cffffcc001-й уровень:|r +<AHad,DataA1,.> к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду. 
+  Lvl 2 Tip: [TRIGSTR_15468] |cffbebedcПокровительство друидов|r
+  Lvl 2 Ubertip: [TRIGSTR_27374] Усиливает броню находящихся рядом союзников. Наносит урон всем врагам вокруг. |n |n|cffffcc002-й уровень:|r +<AHad,DataA2,.> к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду. 
+  Lvl 3 Tip: [TRIGSTR_27372] |cffbebedcПокровительство друидов|r
+  Lvl 3 Ubertip: [TRIGSTR_27375] Усиливает броню находящихся рядом союзников. Наносит урон всем врагам вокруг. |n |n|cffffcc003-й уровень:|r +<AHad,DataA3,.> к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду.
+  Lvl 4 Tip: [TRIGSTR_27373] |cffbebedcПокровительство друидов|r
+  Lvl 4 Ubertip: [TRIGSTR_9218] Усиливает броню находящихся рядом союзников. Наносит урон всем врагам вокруг.
+
+|cffffcc004-й уровень:|r +4 к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду.
+
+ID: A161 (levels: 1)
+  Name: [TRIGSTR_27379] |cffbebedcПокровительство друидов|r
+  Hotkey: [None] None
+  ResTip: [TRIGSTR_27381] Изучить «|cffbebedcПокровительство друидов|r» [|cffffcc00%d-й уровень|r]
+  ResUbertip: ["Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья. |n|cffffcc002-й уровень:|r +<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья. |n|cffffcc003-й уровень:|r +<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья."] "Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья. |n|cffffcc002-й уровень:|r +<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья. |n|cffffcc003-й уровень:|r +<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья."
+  Lvl 1 Tip: ["Нечистая аура [|cffffcc001-й уровень|r]"] "Нечистая аура [|cffffcc001-й уровень|r]"
+  Lvl 1 Ubertip: ["+<AUau,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."] "+<AUau,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+
+ID: A0FL (levels: 4)
+  Name: [TRIGSTR_3899] |cffb4dc8cОбстрел|r
+  Hotkey: [TRIGSTR_14425] Q
+  ResTip: [TRIGSTR_4001] Изучить «|cffb4dc8cОбстрел|r» [|cffffcc00%d-й уровень|r]
+  ResUbertip: [TRIGSTR_8461] Обстреливает указанную область стрелами, оглушая находящихся рядом наземных врагов на <ANcs,Dur1> сек. и нанося им урон. |n|n|cffffcc001-й уровень:|r 35 урона.|n|cffffcc002-й уровень:|r 65 урона.|n|cffffcc003-й уровень:|r 100 урона.|n|cffffcc004-й уровень:|r 190 урона.
+  Lvl 1 Tip: [TRIGSTR_4357] |cff0064ffВзрыв маны|r [|cffffcc001-й уровень|r]
+  Lvl 1 Ubertip: [TRIGSTR_4617] Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur1> сек.
+  Lvl 2 Tip: [TRIGSTR_4358] |cff0064ffВзрыв маны|r [|cffffcc002-й уровень|r]
+  Lvl 2 Ubertip: [TRIGSTR_4627] Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur2> сек.
+  Lvl 3 Tip: [TRIGSTR_4406] |cff0064ffВзрыв маны|r [|cffffcc003-й уровень|r]
+  Lvl 3 Ubertip: [TRIGSTR_4628] Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur3> сек.
+  Lvl 4 Tip: [TRIGSTR_4614] |cff0064ffВзрыв маны|r [|cffffcc004-й уровень|r]
+  Lvl 4 Ubertip: [TRIGSTR_4631] Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur4> сек.
+
+ID: A0FQ (levels: 4)
+  Name: [TRIGSTR_4662] |cffb4dc8cЛедяные стрелы|r
+  Hotkey: [TRIGSTR_14409] W
+  ResTip: [TRIGSTR_4668] Изучить «|cffb4dc8cЛедяные стрелы|r» [|cffffcc00%d-й уровень|r]
+  ResUbertip: [TRIGSTR_8462] Добавляет к атакам эффект льда, который наносит дополнительный урон, а также замедляет атаку и передвижение врага. |n|n|cffffcc001-й уровень:|r -<ANfa,DataB1,%>% от скорости атаки, -<ANfa,DataC1,%>% от скорости передвижения, +<ANfa,DataA1> к урону. |n|cffffcc002-й уровень:|r -<ANfa,DataB2,%>% от скорости атаки, -<ANfa,DataC2,%>% от скорости передвижения, +<ANfa,DataA2> к урону. |n|cffffcc003-й уровень:|r -<ANfa,DataB3,%>% от скорости атаки, -<ANfa,DataC3,%>% от скорости передвижения, +<ANfa,DataA3> к урону.|n|cffffcc004-й уровень:|r -90% от скорости атаки, -90% от скорости передвижения, +20 к урону.
+  Lvl 1 Tip: [TRIGSTR_4664] |cffb4dc8cЛедяные стрелы|r
+  Lvl 1 Ubertip: ["Добавляет к атакам эффект льда, который наносит <ANfa,DataA1> урона, а также замедляет атаку врага на <ANfa,DataB1,%>% и передвижение на <ANfa,DataC1,%>% на <ANfa,Dur1> сек."] "Добавляет к атакам эффект льда, который наносит <ANfa,DataA1> урона, а также замедляет атаку врага на <ANfa,DataB1,%>% и передвижение на <ANfa,DataC1,%>% на <ANfa,Dur1> сек."
+  Lvl 2 Tip: [TRIGSTR_4923] |cffb4dc8cЛедяные стрелы|r
+  Lvl 2 Ubertip: ["Добавляет к атакам эффект льда, который наносит <ANfa,DataA2> урона, а также замедляет атаку врага на <ANfa,DataB2,%>% и передвижение на <ANfa,DataC2,%>% на <ANfa,Dur2> сек."] "Добавляет к атакам эффект льда, который наносит <ANfa,DataA2> урона, а также замедляет атаку врага на <ANfa,DataB2,%>% и передвижение на <ANfa,DataC2,%>% на <ANfa,Dur2> сек."
+  Lvl 3 Tip: [TRIGSTR_4924] |cffb4dc8cЛедяные стрелы|r
+  Lvl 3 Ubertip: ["Добавляет к атакам эффект льда, который наносит <ANfa,DataA3> урона, а также замедляет атаку врага на <ANfa,DataB3,%>% и передвижение на <ANfa,DataC3,%>% на <ANfa,Dur3> сек."] "Добавляет к атакам эффект льда, который наносит <ANfa,DataA3> урона, а также замедляет атаку врага на <ANfa,DataB3,%>% и передвижение на <ANfa,DataC3,%>% на <ANfa,Dur3> сек."
+  Lvl 4 Tip: [TRIGSTR_4925] |cffb4dc8cЛедяные стрелы|r
+  Lvl 4 Ubertip: [TRIGSTR_4926] Добавляет к атакам эффект льда, который наносит <ANfa,DataA3> урона, а также замедляет атаку врага на <ANfa,DataB3,%>% и передвижение на <ANfa,DataC3,%>% на <ANfa,Dur3> сек.
+
+ID: A0FS (levels: 4)
+  Name: [TRIGSTR_4968] |cffb4dc8cАура меткости|r
+  Hotkey: [TRIGSTR_16860] E
+  ResTip: [TRIGSTR_5022] Изучить «|cffb4dc8cАуру меткости|r» [|cffffcc00%d-й уровень|r]
+  ResUbertip: [TRIGSTR_18370] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Глубинная трансформация массы тела, увеличивающая максимальный запас здоровья нерубов на |cffc8e087+15%|cffced4da.|n|n|cffe6c07bВнимание: исключает возможность исследования «Мутация конечностей».|r|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем воинам армии Нерубов.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/3|r.
+  Lvl 1 Tip: ["Аура меткости [|cffffcc001-й уровень|r]"] "Аура меткости [|cffffcc001-й уровень|r]"
+  Lvl 1 Ubertip: ["+<AEar,DataA1,%>% к урону от дальнобойных атак находящихся рядом союзников."] "+<AEar,DataA1,%>% к урону от дальнобойных атак находящихся рядом союзников."
+  Lvl 2 Tip: ["Аура меткости [|cffffcc002-й уровень|r]"] "Аура меткости [|cffffcc002-й уровень|r]"
+  Lvl 2 Ubertip: ["+<AEar,DataA2,%>% к урону от дальнобойных атак находящихся рядом союзников."] "+<AEar,DataA2,%>% к урону от дальнобойных атак находящихся рядом союзников."
+  Lvl 3 Tip: ["Аура меткости [|cffffcc003-й уровень|r]"] "Аура меткости [|cffffcc003-й уровень|r]"
+  Lvl 3 Ubertip: ["+<AEar,DataA3,%>% к урону от дальнобойных атак находящихся рядом союзников."] "+<AEar,DataA3,%>% к урону от дальнобойных атак находящихся рядом союзников."
+  Lvl 4 Tip: [TRIGSTR_5625] Аура меткости [|cffffcc004-й уровень|r]
+  Lvl 4 Ubertip: [TRIGSTR_5626] +<AEar,DataA4,%>% к урону от дальнобойных атак находящихся рядом союзников.
+
+ID: A0FT (levels: 2)
+  Name: [TRIGSTR_5023] |cffb4dc8cСмертельный выстрел|r
+  Hotkey: [TRIGSTR_15435] R
+  ResTip: [TRIGSTR_5045] Изучить «|cffb4dc8cСмертельный выстрел|r» [|cffffcc00%d-й уровень|r]
+  ResUbertip: [TRIGSTR_8463] Выпускает стрелу, нанося урон наземным войскам на прямой линии. |n|n|cffffcc001-й уровень:|r 300 урона. |n|cffffcc002-й уровень:|r 450 урона. 
+  Lvl 1 Tip: [TRIGSTR_5048] |cffb4dc8cСмертельный выстрел|r [|cffffcc001-й уровень|r]
+  Lvl 1 Ubertip: [TRIGSTR_5050] Выпускает стрелу, нанося <AOsh,DataA1> урона наземным войскам на прямой линии.
+  Lvl 2 Tip: [TRIGSTR_5049] |cffb4dc8cСмертельный выстрел|r [|cffffcc002-й уровень|r]
+  Lvl 2 Ubertip: [TRIGSTR_5051] Выпускает стрелу, нанося <AOsh,DataA2> урона наземным войскам на прямой линии.
+
+ID: AEbl (levels: 4)
+  Name: [TRIGSTR_25764] |cffe4cfa3Скачок|r
+  Hotkey: [TRIGSTR_9157] W
+  ResTip: [TRIGSTR_25765] |cffe4cfa3Скачок|r (|cffffffffW|r)
+  ResUbertip: [TRIGSTR_25763] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно перемещает героя на короткое расстояние, позволяя быстро вступить в бой или выйти из окружения.|r
+  Lvl 1 Tip: ["Скачок [|cffffcc001-й уровень|r]"] "Скачок [|cffffcc001-й уровень|r]"
+  Lvl 1 Ubertip: ["Переносит на короткое расстояние, позволяя мгновенно вступить в бой или выйти из него."] "Переносит на короткое расстояние, позволяя мгновенно вступить в бой или выйти из него."
+  Lvl 2 Tip: ["Скачок [|cffffcc002-й уровень|r]"] "Скачок [|cffffcc002-й уровень|r]"
+  Lvl 2 Ubertip: ["Переносит на короткое расстояние, позволяя мгновенно вступить в бой или выйти из него."] "Переносит на короткое расстояние, позволяя мгновенно вступить в бой или выйти из него."
+  Lvl 3 Tip: ["Скачок [|cffffcc003-й уровень|r]"] "Скачок [|cffffcc003-й уровень|r]"
+  Lvl 3 Ubertip: ["Переносит на короткое расстояние, позволяя мгновенно вступить в бой или выйти из него."] "Переносит на короткое расстояние, позволяя мгновенно вступить в бой или выйти из него."
+  Lvl 4 Tip: [TRIGSTR_9615] |cffe4cfa3Скачок — уровень 4|r (|cffffffffW|r)
+  Lvl 4 Ubertip: [TRIGSTR_9616] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно перемещает охотницу на короткое расстояние, позволяя вступить в бой или выйти из него.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r
+
+ID: ANfl (levels: 4)
+  Name: [Раздвоенная молния] Раздвоенная молния
+  Hotkey: [TRIGSTR_9182] Q
+  ResTip: [Изучить «Раздвоенную молнию» [|cffffcc00%d-й уровень|r]] Изучить «Раздвоенную молнию» [|cffffcc00%d-й уровень|r]
+  ResUbertip: [TRIGSTR_27644] Поражает молнией врагов в секторе перед собой. |n|n|cffffcc001-й уровень:|r <ANfl,DataA1> урона каждой цели, 3 цели. |n|cffffcc002-й уровень:|r <ANfl,DataA2> урона каждой цели, 5 целей. |n|cffffcc003-й уровень:|r <ANfl,DataA3> урона каждой цели, 8 целей.|n|cffffcc004-й уровень:|r 300 урона каждой цели, 10 целей.
+  Lvl 1 Tip: ["Раздвоенная молния [|cffffcc001-й уровень|r]"] "Раздвоенная молния [|cffffcc001-й уровень|r]"
+  Lvl 1 Ubertip: ["Поражает молнией до <ANfl,DataB1> врагов в секторе перед собой, нанося <ANfl,DataA1> урона."] "Поражает молнией до <ANfl,DataB1> врагов в секторе перед собой, нанося <ANfl,DataA1> урона."
+  Lvl 2 Tip: ["Раздвоенная молния [|cffffcc002-й уровень|r]"] "Раздвоенная молния [|cffffcc002-й уровень|r]"
+  Lvl 2 Ubertip: ["Поражает молнией до <ANfl,DataB2> врагов в секторе перед собой, нанося <ANfl,DataA2> урона."] "Поражает молнией до <ANfl,DataB2> врагов в секторе перед собой, нанося <ANfl,DataA2> урона."
+  Lvl 3 Tip: ["Раздвоенная молния [|cffffcc003-й уровень|r]"] "Раздвоенная молния [|cffffcc003-й уровень|r]"
+  Lvl 3 Ubertip: ["Поражает молнией до <ANfl,DataB3> врагов в секторе перед собой, нанося <ANfl,DataA3> урона."] "Поражает молнией до <ANfl,DataB3> врагов в секторе перед собой, нанося <ANfl,DataA3> урона."
+  Lvl 4 Tip: [TRIGSTR_21406] Раздвоенная молния [|cffffcc004-й уровень|r]
+  Lvl 4 Ubertip: [TRIGSTR_27563] Поражает молнией до 10 врагов в секторе перед собой, нанося 300 урона.
+
+ID: AEev (levels: 4)
+  Name: [TRIGSTR_5770] |cffc8dc8cУскользание|r
+  Hotkey: [TRIGSTR_10745] E
+  ResTip: [TRIGSTR_8767] Изучить «|cffc8dc8cУскользание|r» [|cffffcc00%d-й уровень|r]
+  ResUbertip: [TRIGSTR_12249] Дает шанс уклониться от атаки. |n|n|cffffcc001-й уровень:|r |cffc8dc8c<AEev,DataA1,%>%-й шанс.|r |n|cffffcc002-й уровень:|r |cffc8dc8c<AEev,DataA2,%>%-й шанс.|r |n|cffffcc003-й уровень:|r |cffc8dc8c<AEev,DataA3,%>%-й шанс.|r|n|cffffcc004-й уровень:|r |cffc8dc8c40%-й шанс.|r
+  Lvl 1 Tip: [TRIGSTR_10941] |cffc8dc8cУскользание|r [|cffffcc001-й уровень|r]
+  Lvl 1 Ubertip: [TRIGSTR_11335] Дает |cffc8dc8c<AEev,DataA1,%>%-й шанс|r уклониться от атаки.
+  Lvl 2 Tip: [TRIGSTR_8771] |cffc8dc8cУскользание|r [|cffffcc002-й уровень|r]
+  Lvl 2 Ubertip: [TRIGSTR_8780] Дает |cffc8dc8c<AEev,DataA2,%>%-й шанс|r уклониться от атаки.
+  Lvl 3 Tip: [TRIGSTR_8772] |cffc8dc8cУскользание|r [|cffffcc003-й уровень|r]
+  Lvl 3 Ubertip: [TRIGSTR_9392] Дает |cffc8dc8c<AEev,DataA3,%>%-й шанс|r уклониться от атаки.
+  Lvl 4 Tip: [TRIGSTR_8775] |cffc8dc8cУскользание|r [|cffffcc004-й уровень|r]
+  Lvl 4 Ubertip: [TRIGSTR_12243] Дает |cffc8dc8c40%-й шанс|r уклониться от атаки.
+
+ID: A0FM (levels: 2)
+  Name: [TRIGSTR_4379] |cffb4dc8cОблик совухи|r
+  Hotkey: [TRIGSTR_14980] R
+  ResTip: [TRIGSTR_4376] |cffb4dc8cОблик совухи|r
+  ResUbertip: [TRIGSTR_5054] Превращает друида в совуху. Усиливает боевые характеристики, но замедляет регенерацию маны.
+  Lvl 1 Tip: [TRIGSTR_4666] |cffb4dc8cОблик совухи|r
+  Lvl 1 Ubertip: [TRIGSTR_4615] Превращает друида в Совуху. Усиливает боевые характеристики, но замедляет регенерацию маны.
+  Lvl 2 Tip: [TRIGSTR_4667] |cffb4dc8cОблик совухи|r
+  Lvl 2 Ubertip: [TRIGSTR_4669] Превращает друида в Совуху. Усиливает боевые характеристики, но замедляет регенерацию маны.
+
+ID: A01C (levels: 1)
+  Name: [TRIGSTR_2038] Графика: Свечение героя
+  Hotkey: [None] None
+  Lvl 1 Tip: [TRIGSTR_2039] Графика: Свечение героя
+  Lvl 1 Ubertip: [] 
+
+ID: AEfk (levels: 3)
+  Name: [Веер клинков] Веер клинков
+  Hotkey: [F] F
+  ResTip: [Изучить «Веер клинков» [|cffffcc00%d-й уровень|r]] Изучить «Веер клинков» [|cffffcc00%d-й уровень|r]
+  ResUbertip: ["Бросает несколько кинжалов, нанося урон находящимся рядом врагам. |n|n|cffffcc001-й уровень:|r <AEfk,DataA1> урона каждой цели. |n|cffffcc002-й уровень:|r <AEfk,DataA2> урона каждой цели. |n|cffffcc003-й уровень:|r <AEfk,DataA3> урона каждой цели."] "Бросает несколько кинжалов, нанося урон находящимся рядом врагам. |n|n|cffffcc001-й уровень:|r <AEfk,DataA1> урона каждой цели. |n|cffffcc002-й уровень:|r <AEfk,DataA2> урона каждой цели. |n|cffffcc003-й уровень:|r <AEfk,DataA3> урона каждой цели."
+  Lvl 1 Tip: ["Веер клинков [|cffffcc001-й уровень|r]"] "Веер клинков [|cffffcc001-й уровень|r]"
+  Lvl 1 Ubertip: ["Бросает несколько кинжалов, нанося по <AEfk,DataA1> урона находящимся рядом врагам."] "Бросает несколько кинжалов, нанося по <AEfk,DataA1> урона находящимся рядом врагам."
+  Lvl 2 Tip: ["Веер клинков [|cffffcc002-й уровень|r]"] "Веер клинков [|cffffcc002-й уровень|r]"
+  Lvl 2 Ubertip: ["Бросает несколько кинжалов, нанося по <AEfk,DataA2> урона находящимся рядом врагам."] "Бросает несколько кинжалов, нанося по <AEfk,DataA2> урона находящимся рядом врагам."
+  Lvl 3 Tip: ["Веер клинков [|cffffcc003-й уровень|r]"] "Веер клинков [|cffffcc003-й уровень|r]"
+  Lvl 3 Ubertip: ["Бросает несколько кинжалов, нанося по <AEfk,DataA3> урона находящимся рядом врагам."] "Бросает несколько кинжалов, нанося по <AEfk,DataA3> урона находящимся рядом врагам."
+
+ID: AEsh (levels: 4)
+  Name: [TRIGSTR_418] Отравленный кинжал
+  Hotkey: [D] D
+  ResTip: [TRIGSTR_419] Изучить «Отравленный кинжал» [|cffffcc00%d-й уровень|r]
+  ResUbertip: ["Бросает отравленный кинжал, наносящий мгновенный и периодический урон и временно замедляющий передвижение цели. |n|n|cffffcc001-й уровень:|r <AEsh,DataE1> урона мгновенно и <AEsh,DataA1> периодического урона. |n|cffffcc002-й уровень:|r <AEsh,DataE2> урона мгновенно и <AEsh,DataA2> периодического урона. |n|cffffcc003-й уровень:|r <AEsh,DataE3> урона мгновенно и <AEsh,DataA3> периодического урона."] "Бросает отравленный кинжал, наносящий мгновенный и периодический урон и временно замедляющий передвижение цели. |n|n|cffffcc001-й уровень:|r <AEsh,DataE1> урона мгновенно и <AEsh,DataA1> периодического урона. |n|cffffcc002-й уровень:|r <AEsh,DataE2> урона мгновенно и <AEsh,DataA2> периодического урона. |n|cffffcc003-й уровень:|r <AEsh,DataE3> урона мгновенно и <AEsh,DataA3> периодического урона."
+  Lvl 1 Tip: ["Теневой удар [|cffffcc001-й уровень|r]"] "Теневой удар [|cffffcc001-й уровень|r]"
+  Lvl 1 Ubertip: ["Бросает отравленный кинжал во врага, нанося <AEsh,DataE1> урона мгновенно и <AEsh,DataA1> урона раз в <AEsh,Cast1> сек. в течение <AEsh,Dur1> сек. Яд временно замедляет передвижение цели."] "Бросает отравленный кинжал во врага, нанося <AEsh,DataE1> урона мгновенно и <AEsh,DataA1> урона раз в <AEsh,Cast1> сек. в течение <AEsh,Dur1> сек. Яд временно замедляет передвижение цели."
+  Lvl 2 Tip: ["Теневой удар [|cffffcc002-й уровень|r]"] "Теневой удар [|cffffcc002-й уровень|r]"
+  Lvl 2 Ubertip: ["Бросает отравленный кинжал во врага, нанося <AEsh,DataE2> урона мгновенно и <AEsh,DataA2> урона раз в <AEsh,Cast2> сек. в течение <AEsh,Dur2> сек. Яд временно замедляет передвижение цели."] "Бросает отравленный кинжал во врага, нанося <AEsh,DataE2> урона мгновенно и <AEsh,DataA2> урона раз в <AEsh,Cast2> сек. в течение <AEsh,Dur2> сек. Яд временно замедляет передвижение цели."
+  Lvl 3 Tip: ["Теневой удар [|cffffcc003-й уровень|r]"] "Теневой удар [|cffffcc003-й уровень|r]"
+  Lvl 3 Ubertip: ["Бросает отравленный кинжал во врага, нанося <AEsh,DataE3> урона мгновенно и <AEsh,DataA3> урона раз в <AEsh,Cast3> сек. в течение <AEsh,Dur3> сек. Яд временно замедляет передвижение цели."] "Бросает отравленный кинжал во врага, нанося <AEsh,DataE3> урона мгновенно и <AEsh,DataA3> урона раз в <AEsh,Cast3> сек. в течение <AEsh,Dur3> сек. Яд временно замедляет передвижение цели."
+  Lvl 4 Tip: [None] None
+  Lvl 4 Ubertip: [None] None
+
+ID: AEsv (levels: 1)
+  Name: [Возмездие] Возмездие
+  Hotkey: [V] V
+  ResTip: [Изучить «Возмездие»] Изучить «Возмездие»
+  ResUbertip: ["Создает аватару, которая призывает из находящихся рядом трупов неуязвимых духов, атакующих врагов. Когда аватара возмездия погибает, духи исчезают. |nВремя существования: <AEsv,Dur1> сек."] "Создает аватару, которая призывает из находящихся рядом трупов неуязвимых духов, атакующих врагов. Когда аватара возмездия погибает, духи исчезают. |nВремя существования: <AEsv,Dur1> сек."
+  Lvl 1 Tip: [Возмездие] Возмездие
+  Lvl 1 Ubertip: ["Создает аватару, которая призывает из находящихся рядом трупов неуязвимых духов, атакующих врагов. Когда аватара возмездия погибает, духи исчезают. |nВремя существования: <AEsv,Dur1> сек."] "Создает аватару, которая призывает из находящихся рядом трупов неуязвимых духов, атакующих врагов. Когда аватара возмездия погибает, духи исчезают. |nВремя существования: <AEsv,Dur1> сек."
+
+ID: AEav (levels: 1)
+  Name: [None] None
+  Hotkey: [None] None
+  Lvl 1 Tip: [None] None
+  Lvl 1 Ubertip: [None] None
+
+ID: Aven (levels: 1)
+  Name: [Отравленные копья] Отравленные копья
+  Hotkey: [None] None
+  Lvl 1 Tip: [Отравленные копья] Отравленные копья
+  Lvl 1 Ubertip: ["Яд наносит <Aven,DataA1> урона/сек. |nВремя действия: <Aven,Dur1> сек."] "Яд наносит <Aven,DataA1> урона/сек. |nВремя действия: <Aven,Dur1> сек."
+
+ID: AEmb (levels: 4)
+  Name: [TRIGSTR_14288] |cffc8dc8cСожжение маны|r
+  Hotkey: [TRIGSTR_8959] Q
+  ResTip: [TRIGSTR_14289] Изучить «|cffc8dc8cСожжение маны|r» [|cffffcc00%d-й уровень|r]
+  ResUbertip: [TRIGSTR_14290] Сжигает ману врага и наносит ему урон, равный объему сожженной маны. |n|n|cffffcc001-й уровень:|r |cffc8dc8cсжигает до <AEmb,DataA1> маны.|r |n|cffffcc002-й уровень:|r |cffc8dc8cсжигает до <AEmb,DataA2> маны.|r |n|cffffcc003-й уровень:|r |cffc8dc8cсжигает до <AEmb,DataA3> маны.|r|n|cffffcc004-й уровень:|r |cffc8dc8cсжигает до 200 маны.|r
+  Lvl 1 Tip: [TRIGSTR_14291] |cffc8dc8cСожжение маны|r [|cffffcc001-й уровень|r]
+  Lvl 1 Ubertip: [TRIGSTR_14295] Сжигает до |cffc8dc8c<AEmb,DataA1>|r маны врага и наносит ему столько же урона.
+  Lvl 2 Tip: [TRIGSTR_14292] |cffc8dc8cСожжение маны|r [|cffffcc002-й уровень|r]
+  Lvl 2 Ubertip: [TRIGSTR_14296] Сжигает до |cffc8dc8c<AEmb,DataA2>|r маны врага и наносит ему столько же урона.
+  Lvl 3 Tip: [TRIGSTR_14293] |cffc8dc8cСожжение маны|r [|cffffcc003-й уровень|r]
+  Lvl 3 Ubertip: [TRIGSTR_14297] Сжигает до |cffc8dc8c<AEmb,DataA3>|r маны врага и наносит ему столько же урона.
+  Lvl 4 Tip: [TRIGSTR_14294] |cffc8dc8cСожжение маны|r [|cffffcc004-й уровень|r]
+  Lvl 4 Ubertip: [TRIGSTR_14298] Сжигает до |cffc8dc8c200|r маны врага и наносит ему столько же урона.
+
+ID: AEim (levels: 4)
+  Name: [TRIGSTR_2052] |cffc8dc8cОбжигающий жар|r
+  Hotkey: [TRIGSTR_9209] W
+  ResTip: [TRIGSTR_9742] Изучить «|cffc8dc8cОбжигающий жар|r» [|cffffcc00%d-й уровень|r]
+  ResUbertip: [TRIGSTR_14287] Окружает охотника на демонов огнем, который наносит урон находящимся рядом наземным врагам. |nРасходует ману до отмены. |n|n|cffffcc001-й уровень:|r |cffc8dc8c<AEim,DataA1> урона/сек|r. |n|cffffcc002-й уровень:|r |cffc8dc8c<AEim,DataA2> урона/сек|r. |n|cffffcc003-й уровень:|r |cffc8dc8c<AEim,DataA3> урона/сек|r.|n|cffffcc004-й уровень:|r |cffc8dc8c25 урона/сек.|r
+  Lvl 1 Tip: [TRIGSTR_9756] Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc001-й уровень|r]
+  Lvl 1 Ubertip: [TRIGSTR_14227] При использовании активирует огненную ауру, которая наносит |cffc8dc8c<AEim,DataA1> урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены.
+  Lvl 2 Tip: [TRIGSTR_9758] Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc002-й уровень|r]
+  Lvl 2 Ubertip: [TRIGSTR_14230] При использовании активирует огненную ауру, которая наносит |cffc8dc8c<AEim,DataA2> урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены.
+  Lvl 3 Tip: [TRIGSTR_9760] Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc003-й уровень|r]
+  Lvl 3 Ubertip: [TRIGSTR_14233] При использовании активирует огненную ауру, которая наносит |cffc8dc8c<AEim,DataA3> урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены.
+  Lvl 4 Tip: [TRIGSTR_9910] Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc004-й уровень|r]
+  Lvl 4 Ubertip: [TRIGSTR_14236] При использовании активирует огненную ауру, которая наносит |cffc8dc8c25 урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены.
+
+ID: AEme (levels: 1)
+  Name: [Метаморфоза] Метаморфоза
+  Hotkey: [T] T
+  ResTip: [Изучить «Метаморфозу»] Изучить «Метаморфозу»
+  ResUbertip: ["Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек."] "Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек."
+  Lvl 1 Tip: [Метаморфоза] Метаморфоза
+  Lvl 1 Ubertip: ["Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек."] "Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек."
+
+ID: AEer (levels: 3)
+  Name: [Гнев деревьев] Гнев деревьев
+  Hotkey: [E] E
+  ResTip: [Изучить «Гнев деревьев» [|cffffcc00%d-й уровень|r]] Изучить «Гнев деревьев» [|cffffcc00%d-й уровень|r]
+  ResUbertip: ["Призывает из-под земли корни, которые обездвиживают и обезвреживают цель, а также наносят урон. |n|n|cffffcc001-й уровень:|r <AEer,DataA1> урона/сек. в течение <AEer,Dur1> сек. |n|cffffcc002-й уровень:|r <AEer,DataA2> урона/сек. в течение <AEer,Dur2> сек. |n|cffffcc003-й уровень:|r <AEer,DataA3> урона/сек. в течение <AEer,Dur3> сек."] "Призывает из-под земли корни, которые обездвиживают и обезвреживают цель, а также наносят урон. |n|n|cffffcc001-й уровень:|r <AEer,DataA1> урона/сек. в течение <AEer,Dur1> сек. |n|cffffcc002-й уровень:|r <AEer,DataA2> урона/сек. в течение <AEer,Dur2> сек. |n|cffffcc003-й уровень:|r <AEer,DataA3> урона/сек. в течение <AEer,Dur3> сек."
+  Lvl 1 Tip: ["Гнев деревьев [|cffffcc001-й уровень|r]"] "Гнев деревьев [|cffffcc001-й уровень|r]"
+  Lvl 1 Ubertip: ["Призывает из-под земли корни, которые обездвиживают и обезвреживают врага на <AEer,Dur1> сек. и наносят <AEer,DataA1> урона/сек."] "Призывает из-под земли корни, которые обездвиживают и обезвреживают врага на <AEer,Dur1> сек. и наносят <AEer,DataA1> урона/сек."
+  Lvl 2 Tip: ["Гнев деревьев [|cffffcc002-й уровень|r]"] "Гнев деревьев [|cffffcc002-й уровень|r]"
+  Lvl 2 Ubertip: ["Призывает из-под земли корни, которые обездвиживают и обезвреживают врага на <AEer,Dur2> сек. и наносят <AEer,DataA2> урона/сек."] "Призывает из-под земли корни, которые обездвиживают и обезвреживают врага на <AEer,Dur2> сек. и наносят <AEer,DataA2> урона/сек."
+  Lvl 3 Tip: ["Гнев деревьев [|cffffcc003-й уровень|r]"] "Гнев деревьев [|cffffcc003-й уровень|r]"
+  Lvl 3 Ubertip: ["Призывает из-под земли корни, которые обездвиживают и обезвреживают врага на <AEer,Dur3> сек. и наносят <AEer,DataA3> урона/сек."] "Призывает из-под земли корни, которые обездвиживают и обезвреживают врага на <AEer,Dur3> сек. и наносят <AEer,DataA3> урона/сек."
+
+ID: AEfn (levels: 3)
+  Name: [Сила природы] Сила природы
+  Hotkey: [F] F
+  ResTip: [Изучить «Силу природы» [|cffffcc00%d-й уровень|r]] Изучить «Силу природы» [|cffffcc00%d-й уровень|r]
+  ResUbertip: ["Превращает деревья в указанной области в древней с <efon,realHP> здоровья, наносящих <efon,mindmg1>-<efon,maxdmg1> урона. Улучшения «Силы природы» действуют на древней. |n|n|cffffcc00Древни атакуют наземные цели.|r |n|n|cffffcc001-й уровень:|r <AEfn,DataA1> древня на <AEfn,Dur1> сек. |n|cffffcc002-й уровень:|r <AEfn,DataA2> древня на <AEfn,Dur2> сек. |n|cffffcc003-й уровень:|r <AEfn,DataA3> древня на <AEfn,Dur3> сек."] "Превращает деревья в указанной области в древней с <efon,realHP> здоровья, наносящих <efon,mindmg1>-<efon,maxdmg1> урона. Улучшения «Силы природы» действуют на древней. |n|n|cffffcc00Древни атакуют наземные цели.|r |n|n|cffffcc001-й уровень:|r <AEfn,DataA1> древня на <AEfn,Dur1> сек. |n|cffffcc002-й уровень:|r <AEfn,DataA2> древня на <AEfn,Dur2> сек. |n|cffffcc003-й уровень:|r <AEfn,DataA3> древня на <AEfn,Dur3> сек."
+  Lvl 1 Tip: ["Сила природы [|cffffcc001-й уровень|r]"] "Сила природы [|cffffcc001-й уровень|r]"
+  Lvl 1 Ubertip: ["Превращает деревья в небольшой области в <AEfn,DataA1> древней с <efon,realHP> здоровья, наносящих <efon,mindmg1>-<efon,maxdmg1> урона. Улучшения «Силы природы» действуют на древней. |nВремя существования: <AEfn,Dur1> сек. |n|n|cffffcc00Древни атакуют наземные цели.|r"] "Превращает деревья в небольшой области в <AEfn,DataA1> древней с <efon,realHP> здоровья, наносящих <efon,mindmg1>-<efon,maxdmg1> урона. Улучшения «Силы природы» действуют на древней. |nВремя существования: <AEfn,Dur1> сек. |n|n|cffffcc00Древни атакуют наземные цели.|r"
+  Lvl 2 Tip: ["Сила природы [|cffffcc002-й уровень|r]"] "Сила природы [|cffffcc002-й уровень|r]"
+  Lvl 2 Ubertip: ["Превращает деревья в обширной области в <AEfn,DataA2> древней с <efon,realHP> здоровья, наносящих <efon,mindmg1>-<efon,maxdmg1> урона. Улучшения «Силы природы» действуют на древней. |nВремя существования: <AEfn,Dur2> сек. |n|n|cffffcc00Древни атакуют наземные цели.|r"] "Превращает деревья в обширной области в <AEfn,DataA2> древней с <efon,realHP> здоровья, наносящих <efon,mindmg1>-<efon,maxdmg1> урона. Улучшения «Силы природы» действуют на древней. |nВремя существования: <AEfn,Dur2> сек. |n|n|cffffcc00Древни атакуют наземные цели.|r"
+  Lvl 3 Tip: ["Сила природы [|cffffcc003-й уровень|r]"] "Сила природы [|cffffcc003-й уровень|r]"
+  Lvl 3 Ubertip: ["Превращает деревья в очень обширной области в <AEfn,DataA3> древней с <efon,realHP> здоровья, наносящих <efon,mindmg1>-<efon,maxdmg1> урона. Улучшения «Силы природы» действуют на древней. |nВремя существования: <AEfn,Dur3> сек. |n|n|cffffcc00Древни атакуют наземные цели.|r"] "Превращает деревья в очень обширной области в <AEfn,DataA3> древней с <efon,realHP> здоровья, наносящих <efon,mindmg1>-<efon,maxdmg1> урона. Улучшения «Силы природы» действуют на древней. |nВремя существования: <AEfn,Dur3> сек. |n|n|cffffcc00Древни атакуют наземные цели.|r"
+
+ID: AEah (levels: 4)
+  Name: [TRIGSTR_15762] |cffe4cfa3Аура шипов|r
+  Hotkey: [TRIGSTR_10642] E
+  ResTip: [TRIGSTR_15763] |cffe4cfa3Аура шипов|r
+  ResUbertip: ["Дает находящимся рядом союзникам щит, который отражает часть получаемого в ближнем бою урона в атакующих врагов. |n|n|cffffcc001-й уровень:|r <AEah,DataA1,%>% урона. |n|cffffcc002-й уровень:|r <AEah,DataA2,%>% урона. |n|cffffcc003-й уровень:|r <AEah,DataA3,%>% урона."] "Дает находящимся рядом союзникам щит, который отражает часть получаемого в ближнем бою урона в атакующих врагов. |n|n|cffffcc001-й уровень:|r <AEah,DataA1,%>% урона. |n|cffffcc002-й уровень:|r <AEah,DataA2,%>% урона. |n|cffffcc003-й уровень:|r <AEah,DataA3,%>% урона."
+  Lvl 1 Tip: ["Аура шипов [|cffffcc001-й уровень|r]"] "Аура шипов [|cffffcc001-й уровень|r]"
+  Lvl 1 Ubertip: ["Дает находящимся рядом союзникам щит, который отражает <AEah,DataA1,%>% получаемого в ближнем бою урона от атак в атакующих врагов."] "Дает находящимся рядом союзникам щит, который отражает <AEah,DataA1,%>% получаемого в ближнем бою урона от атак в атакующих врагов."
+  Lvl 2 Tip: ["Аура шипов [|cffffcc002-й уровень|r]"] "Аура шипов [|cffffcc002-й уровень|r]"
+  Lvl 2 Ubertip: ["Дает находящимся рядом союзникам щит, который отражает <AEah,DataA2,%>% получаемого в ближнем бою урона от атак в атакующих врагов."] "Дает находящимся рядом союзникам щит, который отражает <AEah,DataA2,%>% получаемого в ближнем бою урона от атак в атакующих врагов."
+  Lvl 3 Tip: ["Аура шипов [|cffffcc003-й уровень|r]"] "Аура шипов [|cffffcc003-й уровень|r]"
+  Lvl 3 Ubertip: ["Дает находящимся рядом союзникам щит, который отражает <AEah,DataA3,%>% получаемого в ближнем бою урона от атак в атакующих врагов."] "Дает находящимся рядом союзникам щит, который отражает <AEah,DataA3,%>% получаемого в ближнем бою урона от атак в атакующих врагов."
+  Lvl 4 Tip: [TRIGSTR_7792] |cffe4cfa3Аура шипов — уровень 4|r (|cffffffffE|r)
+  Lvl 4 Ubertip: [TRIGSTR_2643] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт окружающим союзникам щит, отражающий часть получаемого в ближнем бою урона обратно в атакующих.|r
+
+ID: AEtq (levels: 2)
+  Name: [TRIGSTR_25766] |cffe4cfa3Покой|r
+  Hotkey: [TRIGSTR_7255] R
+  ResTip: [TRIGSTR_25768] |cffe4cfa3Умиротворение|r
+  ResUbertip: [TRIGSTR_25770] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает поток целительной энергии, восстанавливающий здоровье всем союзникам в обширной области.|r
+  Lvl 1 Tip: [|cffe4cfa3Умиротворение|r [|cffffffff1-й уровень|r] (|cffffffffR|r)] |cffe4cfa3Умиротворение|r [|cffffffff1-й уровень|r] (|cffffffffR|r)
+  Lvl 1 Ubertip: [|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает поток целительной энергии, восстанавливающий союзникам в области |cffffffff48|cffced4da ед. здоровья в секунду в течение |cffffffff25|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает поток целительной энергии, восстанавливающий союзникам в области |cffffffff48|cffced4da ед. здоровья в секунду в течение |cffffffff25|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r
+  Lvl 2 Tip: [TRIGSTR_2292] |cffe4cfa3Покой — уровень 2|r (|cffffffffR|r)
+  Lvl 2 Ubertip: [TRIGSTR_2306] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает мощный поток целительной энергии, восстанавливающий союзникам в области |cffffffff90|cffced4da ед. здоровья в секунду в течение |cffffffff25|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r
+
+ID: AHfa (levels: 3)
+  Name: [Огненные стрелы] Огненные стрелы
+  Hotkey: [R] R
+  ResTip: [Изучить «Огненные стрелы» [|cffffcc00%d-й уровень|r]] Изучить «Огненные стрелы» [|cffffcc00%d-й уровень|r]
+  ResUbertip: ["Добавляет к атакам урон от огня. |n|n|cffffcc001-й уровень:|r +<AHfa,DataA1> к урону. |n|cffffcc002-й уровень:|r +<AHfa,DataA2> к урону. |n|cffffcc003-й уровень:|r +<AHfa,DataA3> к урону."] "Добавляет к атакам урон от огня. |n|n|cffffcc001-й уровень:|r +<AHfa,DataA1> к урону. |n|cffffcc002-й уровень:|r +<AHfa,DataA2> к урону. |n|cffffcc003-й уровень:|r +<AHfa,DataA3> к урону."
+  Lvl 1 Tip: ["Огненные стрелы [|cffffcc001-й уровень|r]"] "Огненные стрелы [|cffffcc001-й уровень|r]"
+  Lvl 1 Ubertip: ["+<AHfa,DataA1> урона от огня к атакам. Каждый выстрел расходует ману."] "+<AHfa,DataA1> урона от огня к атакам. Каждый выстрел расходует ману."
+  Lvl 2 Tip: ["Огненные стрелы [|cffffcc002-й уровень|r]"] "Огненные стрелы [|cffffcc002-й уровень|r]"
+  Lvl 2 Ubertip: ["+<AHfa,DataA2> урона от огня к атакам. Каждый выстрел расходует ману."] "+<AHfa,DataA2> урона от огня к атакам. Каждый выстрел расходует ману."
+  Lvl 3 Tip: ["Огненные стрелы [|cffffcc003-й уровень|r]"] "Огненные стрелы [|cffffcc003-й уровень|r]"
+  Lvl 3 Ubertip: ["+<AHfa,DataA3> урона от огня к атакам. Каждый выстрел расходует ману."] "+<AHfa,DataA3> урона от огня к атакам. Каждый выстрел расходует ману."
+
+ID: AEst (levels: 3)
+  Name: [Разведка] Разведка
+  Hotkey: [C] C
+  ResTip: [Изучить «Разведку» [|cffffcc00%d-й уровень|r]] Изучить «Разведку» [|cffffcc00%d-й уровень|r]
+  ResUbertip: ["Призывает сову для разведки местности. |nСова обнаруживает невидимые войска. |n|n|cffffcc001-й уровень:|r обычная сова за <AEst,Cost1> маны. |n|cffffcc002-й уровень:|r быстрая сова за <AEst,Cost2> маны. |n|cffffcc003-й уровень:|r очень быстрая сова за <AEst,Cost3> маны."] "Призывает сову для разведки местности. |nСова обнаруживает невидимые войска. |n|n|cffffcc001-й уровень:|r обычная сова за <AEst,Cost1> маны. |n|cffffcc002-й уровень:|r быстрая сова за <AEst,Cost2> маны. |n|cffffcc003-й уровень:|r очень быстрая сова за <AEst,Cost3> маны."
+  Lvl 1 Tip: ["Разведка [|cffffcc001-й уровень|r]"] "Разведка [|cffffcc001-й уровень|r]"
+  Lvl 1 Ubertip: ["Призывает сову для разведки местности. |nСова обнаруживает невидимые войска. |nВремя существования: <AEst,Dur1> сек."] "Призывает сову для разведки местности. |nСова обнаруживает невидимые войска. |nВремя существования: <AEst,Dur1> сек."
+  Lvl 2 Tip: ["Разведка [|cffffcc002-й уровень|r]"] "Разведка [|cffffcc002-й уровень|r]"
+  Lvl 2 Ubertip: ["Призывает быструю сову для разведки местности. |nСова обнаруживает невидимые войска. |nВремя существования: <AEst,Dur2> сек."] "Призывает быструю сову для разведки местности. |nСова обнаруживает невидимые войска. |nВремя существования: <AEst,Dur2> сек."
+  Lvl 3 Tip: ["Разведка [|cffffcc003-й уровень|r]"] "Разведка [|cffffcc003-й уровень|r]"
+  Lvl 3 Ubertip: ["Призывает очень быструю сову для разведки местности. |nСова обнаруживает невидимые войска. |nВремя существования: <AEst,Dur3> сек."] "Призывает очень быструю сову для разведки местности. |nСова обнаруживает невидимые войска. |nВремя существования: <AEst,Dur3> сек."
+
+ID: AEar (levels: 4)
+  Name: [|cffe4cfa3Аура меткости|r] |cffe4cfa3Аура меткости|r
+  Hotkey: [TRIGSTR_10518] E
+  ResTip: [Изучить «|cffe4cfa3Аура меткости|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r)] Изучить «|cffe4cfa3Аура меткости|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r)
+  ResUbertip: [|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак всех находящихся рядом союзников.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: |cffffffff+10%|cffced4da к урону|n- |cffffffff2|cffced4da: |cffffffff+20%|cffced4da к урону|n- |cffffffff3|cffced4da: |cffffffff+30%|cffced4da к урону|n- |cffffffff4|cffced4da: |cffffffff+40%|cffced4da к урону.|r] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак всех находящихся рядом союзников.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: |cffffffff+10%|cffced4da к урону|n- |cffffffff2|cffced4da: |cffffffff+20%|cffced4da к урону|n- |cffffffff3|cffced4da: |cffffffff+30%|cffced4da к урону|n- |cffffffff4|cffced4da: |cffffffff+40%|cffced4da к урону.|r
+  Lvl 1 Tip: [|cffe4cfa3Аура меткости|r [|cffffffff1-й уровень|r]] |cffe4cfa3Аура меткости|r [|cffffffff1-й уровень|r]
+  Lvl 1 Ubertip: [|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак находящихся рядом союзников на |cffffffff10%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак находящихся рядом союзников на |cffffffff10%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r
+  Lvl 2 Tip: [|cffe4cfa3Аура меткости|r [|cffffffff2-й уровень|r]] |cffe4cfa3Аура меткости|r [|cffffffff2-й уровень|r]
+  Lvl 2 Ubertip: [|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак находящихся рядом союзников на |cffffffff20%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак находящихся рядом союзников на |cffffffff20%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r
+  Lvl 3 Tip: [|cffe4cfa3Аура меткости|r [|cffffffff3-й уровень|r]] |cffe4cfa3Аура меткости|r [|cffffffff3-й уровень|r]
+  Lvl 3 Ubertip: [|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак находящихся рядом союзников на |cffffffff30%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак находящихся рядом союзников на |cffffffff30%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r
+  Lvl 4 Tip: [TRIGSTR_4964] |cffe4cfa3Аура меткости — уровень 4|r
+  Lvl 4 Ubertip: [TRIGSTR_4967] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак находящихся рядом союзников на |cffffffff40%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r
+
+ID: AEsf (levels: 1)
+  Name: [Звездопад] Звездопад
+  Hotkey: [F] F
+  ResTip: [Изучить «Звездопад»] Изучить «Звездопад»
+  ResUbertip: ["Обрушивает на находящихся рядом врагов волны падающих звезд. Каждая волна наносит <AEsf,DataA1> урона. |nВремя действия: <AEsf,Dur1> сек."] "Обрушивает на находящихся рядом врагов волны падающих звезд. Каждая волна наносит <AEsf,DataA1> урона. |nВремя действия: <AEsf,Dur1> сек."
+  Lvl 1 Tip: [Звездопад] Звездопад
+  Lvl 1 Ubertip: ["Обрушивает на находящихся рядом врагов волны падающих звезд. Каждая волна наносит <AEsf,DataA1> урона. |nВремя действия: <AEsf,Dur1> сек."] "Обрушивает на находящихся рядом врагов волны падающих звезд. Каждая волна наносит <AEsf,DataA1> урона. |nВремя действия: <AEsf,Dur1> сек."
+
+ID: A001 (levels: 1)
+  Name: [TRIGSTR_287] Абордаж!
+  Hotkey: [TRIGSTR_10212] Q
+  Lvl 1 Tip: [TRIGSTR_285] Абордаж!
+  Lvl 1 Ubertip: [TRIGSTR_286] Оглушает данный и вражеский корабль и постепенно наносит урон. Если здоровье одно из кораблей становится меньше |cffffff0018%|r, он переходит на сторону врага.
+
+ID: A002 (levels: 3)
+  Name: [TRIGSTR_289] Боковые пушки (Фрегат)
+  Hotkey: [None] None
+  Lvl 1 Tip: [TRIGSTR_509] Боковые пушки 1 (Фрегат)
+  Lvl 1 Ubertip: [TRIGSTR_290] Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном. Позволяют стрелять на ходу.
+  Lvl 2 Tip: [TRIGSTR_510] Боковые пушки 2 (Фрегат)
+  Lvl 2 Ubertip: [TRIGSTR_488] Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном. Позволяют стрелять на ходу.
+  Lvl 3 Tip: [TRIGSTR_511] Боковые пушки 3 (Фрегат)
+  Lvl 3 Ubertip: [TRIGSTR_489] Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном. Позволяют стрелять на ходу.
+
+ID: A003 (levels: 3)
+  Name: [TRIGSTR_292] Боковые пушки (Линкор)
+  Hotkey: [None] None
+  Lvl 1 Tip: [TRIGSTR_512] Боковые пушки 1 (Линкор)
+  Lvl 1 Ubertip: [TRIGSTR_293] Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.
+  Lvl 2 Tip: [TRIGSTR_513] Боковые пушки 2 (Линкор)
+  Lvl 2 Ubertip: [TRIGSTR_492] Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.
+  Lvl 3 Tip: [TRIGSTR_514] Боковые пушки 3 (Линкор)
+  Lvl 3 Ubertip: [TRIGSTR_493] Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.
+
+ID: A009 (levels: 1)
+  Name: [TRIGSTR_27198] Сделать флагманом
+  Hotkey: [TRIGSTR_7409] R
+  Lvl 1 Tip: [TRIGSTR_27197] Сделать флагманом
+  Lvl 1 Ubertip: [TRIGSTR_565] Делает корабль вашим флагманом. Его характеристики увеличиваются, а также дается аура на выбор.
+
+ID: A00A (levels: 3)
+  Name: [TRIGSTR_313] Починка
+  Hotkey: [TRIGSTR_7408] R
+  ResTip: [Изучить «Спокойствие»] Изучить «Спокойствие»
+  ResUbertip: ["Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек."] "Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек."
+  Lvl 1 Tip: [TRIGSTR_473] Починка 1
+  Lvl 1 Ubertip: [TRIGSTR_320] Корабль чинится, не используя главные орудия.
+  Lvl 2 Tip: [TRIGSTR_474] Починка 2
+  Lvl 2 Ubertip: [TRIGSTR_446] Корабль чинится, не используя главные орудия.
+  Lvl 3 Tip: [TRIGSTR_475] Починка 3
+  Lvl 3 Ubertip: [TRIGSTR_447] Корабль чинится, не используя главные орудия.
+
+ID: A00B (levels: 3)
+  Name: [TRIGSTR_327] Тактическое ускорение
+  Hotkey: [TRIGSTR_11852] E
+  Lvl 1 Tip: [TRIGSTR_515] Тактическое ускорение 1
+  Lvl 1 Ubertip: [TRIGSTR_559] Ускорение перемещения за счет раскрытия всех парусов, при этом кораблю наносится повышенный урон.
+  Lvl 2 Tip: [TRIGSTR_516] Тактическое ускорение 2
+  Lvl 2 Ubertip: [TRIGSTR_560] Ускорение перемещения за счет раскрытия всех парусов, при этом кораблю наносится повышенный урон.
+  Lvl 3 Tip: [TRIGSTR_517] Тактическое ускорение 3
+  Lvl 3 Ubertip: [TRIGSTR_561] Ускорение перемещения за счет раскрытия всех парусов, при этом кораблю наносится повышенный урон.
+
+ID: A00G (levels: 3)
+  Name: [TRIGSTR_365] Массированный обстрел
+  Hotkey: [TRIGSTR_10209] W
+  ResTip: [Изучить «Кассетные ракеты» [|cffffcc00%d-й уровень|r]] Изучить «Кассетные ракеты» [|cffffcc00%d-й уровень|r]
+  ResUbertip: ["Обстреливает указанную область ракетами, нанося урон наземным и воздушным врагам и оглушая их на <ANcs,Dur1> сек. Также поражает механических существ и здания. |n|n|cffffcc001-й уровень:|r 45 урона.|n|cffffcc002-й уровень:|r 75 урона.|n|cffffcc003-й уровень:|r 110 урона."] "Обстреливает указанную область ракетами, нанося урон наземным и воздушным врагам и оглушая их на <ANcs,Dur1> сек. Также поражает механических существ и здания. |n|n|cffffcc001-й уровень:|r 45 урона.|n|cffffcc002-й уровень:|r 75 урона.|n|cffffcc003-й уровень:|r 110 урона."
+  Lvl 1 Tip: [TRIGSTR_518] Массированный обстрел 1
+  Lvl 1 Ubertip: [TRIGSTR_367] Обстреливает указанную область.
+  Lvl 2 Tip: [TRIGSTR_519] Массированный обстрел 2
+  Lvl 2 Ubertip: [TRIGSTR_484] Обстреливает указанную область.
+  Lvl 3 Tip: [TRIGSTR_520] Массированный обстрел 3
+  Lvl 3 Ubertip: [TRIGSTR_485] Обстреливает указанную область.
+
+ID: A00I (levels: 1)
+  Name: [TRIGSTR_534] Магическая посадка
+  Hotkey: [TRIGSTR_10213] W
+  Lvl 1 Tip: [TRIGSTR_532] Магическая посадка
+  Lvl 1 Ubertip: [TRIGSTR_563] Телепортирует юнитов в выбранной области к берегу, где их постарается забрать корабль. Не факт что сработает, но часть войск должно спасти.
+
+ID: A1PP (levels: 1)
+  Name: [TRIGSTR_12029] Прицельная пальба
+  Hotkey: [TRIGSTR_30922] Q
+  Lvl 1 Tip: [TRIGSTR_12341] Прицельная пальба
+  Lvl 1 Ubertip: [TRIGSTR_12346] Выстреливает специальным снарядом, нанося 100 урона и оглушая цель на 2 секунды (герой 0.5).
+
+ID: Sch5 (levels: 1)
+  Name: [Cargo Hold] Cargo Hold
+  Hotkey: [None] None
+  Lvl 1 Tip: [None] None
+  Lvl 1 Ubertip: [None] None
+
+ID: Sdro (levels: 1)
+  Name: [Выгрузить] Выгрузить
+  Hotkey: [TRIGSTR_10207] Q
+  Lvl 1 Tip: [Выгрузить всех] Выгрузить всех
+  Lvl 1 Ubertip: [Высаживает войска в указанном месте.] Высаживает войска в указанном месте.
+
+ID: Slo3 (levels: 1)
+  Name: [Взять на борт] Взять на борт
+  Hotkey: [TRIGSTR_5910] D
+  Lvl 1 Tip: [Взять на борт] Взять на борт
+  Lvl 1 Ubertip: [Берет на борт наземного союзника.] Берет на борт наземного союзника.
+
+=== 6. BUFFS ===
+ID: B040
+  Editor: [None] None
+  Bufftip: [TRIGSTR_10343] |cffbec8f5Бритвенно-острая паутина|r
+  Buffubertip: ["Обездвиженность, периодический урон."] "Обездвиженность, периодический урон."
+
+ID: B04A
+  Editor: [None] None
+  Bufftip: [TRIGSTR_7461] |cffbec8f5Столб яда|r
+  Buffubertip: [Периодический урон.] Периодический урон.
+
+ID: B04E
+  Editor: [None] None
+  Bufftip: [TRIGSTR_11121] |cffbec8f5Аура метаморфоз|r
+  Buffubertip: [Передвижение и регенерация здоровья ускорены.] Передвижение и регенерация здоровья ускорены.
+
+ID: B01D
+  Editor: [None] None
+  Bufftip: [|cffe4cfa3Защитная аура|r] |cffe4cfa3Защитная аура|r
+  Buffubertip: [|cffa6afb8ЭФФЕКТ:|cffced4da В зависимости от источника аура изменяет защиту или восстановление здоровья цели.|r] |cffa6afb8ЭФФЕКТ:|cffced4da В зависимости от источника аура изменяет защиту или восстановление здоровья цели.|r
+
+ID: Bcyc
+  Editor: [None] None
+  Bufftip: [Смерч] Смерч
+  Buffubertip: ["Невозможно двигаться, атаковать и применять способности."] "Невозможно двигаться, атаковать и применять способности."
+
+ID: Bfae
+  Editor: [None] None
+  Bufftip: [Волшебный огонь] Волшебный огонь
+  Buffubertip: ["Броня ослаблена, местоположение раскрыто."] "Броня ослаблена, местоположение раскрыто."
+
+ID: Bfro
+  Editor: [None] None
+  Bufftip: [|cffe4cfa3Замедление холодом|r] |cffe4cfa3Замедление холодом|r
+  Buffubertip: [|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения цели |cffe69a8dснижена|cffced4da холодом.|r] |cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения цели |cffe69a8dснижена|cffced4da холодом.|r
+
+ID: Bblo
+  Editor: [None] None
+  Bufftip: [Жажда крови] Жажда крови
+  Buffubertip: [Атака и передвижение ускорены.] Атака и передвижение ускорены.
+
+ID: Bspe
+  Editor: [None] None
+  Bufftip: [Ускорение] Ускорение
+  Buffubertip: [Передвижение ускорено.] Передвижение ускорено.
+
+ID: Bprg
+  Editor: [None] None
+  Bufftip: [Развеивание магии] Развеивание магии
+  Buffubertip: ["Положительные эффекты сняты, передвижение временно замедлено."] "Положительные эффекты сняты, передвижение временно замедлено."
+
+ID: Broa
+  Editor: [None] None
+  Bufftip: [Рев] Рев
+  Buffubertip: [Урон от атак увеличен.] Урон от атак увеличен.
+
+ID: Brej
+  Editor: [None] None
+  Bufftip: [|cffe4cfa3Омоложение|r] |cffe4cfa3Омоложение|r
+  Buffubertip: [|cffa6afb8ЭФФЕКТ:|cffced4da Восстанавливающее заклинание восполняет |cffc8e087здоровье и/или ману|cffced4da цели в зависимости от источника.|r] |cffa6afb8ЭФФЕКТ:|cffced4da Восстанавливающее заклинание восполняет |cffc8e087здоровье и/или ману|cffced4da цели в зависимости от источника.|r
+
+ID: Bspl
+  Editor: [None] None
+  Bufftip: [|cffe4cfa3Духовная связь|r] |cffe4cfa3Духовная связь|r
+  Buffubertip: [|cffa6afb8ЭФФЕКТ:|cffced4da Часть получаемого урона перераспределяется между связанными существами. Доля урона определяется наложившим связь заклинанием.|r] |cffa6afb8ЭФФЕКТ:|cffced4da Часть получаемого урона перераспределяется между связанными существами. Доля урона определяется наложившим связь заклинанием.|r
+
+ID: Bpoi
+  Editor: [None] None
+  Bufftip: [Яд] Яд
+  Buffubertip: [Периодический урон.] Периодический урон.
+
+ID: Bbar
+  Editor: [None] None
+  Bufftip: [Дубовая кожа] Дубовая кожа
+  Buffubertip: [Броня усилена.] Броня усилена.
+
+ID: Btrv
+  Editor: [Teleport Reveal] Teleport Reveal
+  Bufftip: [None] None
+  Buffubertip: [None] None
+
+ID: Bams
+  Editor: [None] None
+  Bufftip: [Антимагический панцирь] Антимагический панцирь
+  Buffubertip: [Не может быть целью способностей. Можно рассеять.] Не может быть целью способностей. Можно рассеять.
+
+ID: Bpsh
+  Editor: [None] None
+  Bufftip: [Фазовый сдвиг] Фазовый сдвиг
+  Buffubertip: [Временная защита от урона.] Временная защита от урона.
+
+ID: Bcor
+  Editor: [None] None
+  Bufftip: [Едкое дыхание] Едкое дыхание
+  Buffubertip: [Периодический урон.] Периодический урон.

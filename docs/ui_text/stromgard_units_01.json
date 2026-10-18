@@ -1,0 +1,103 @@
+{
+  "race": "Стромгард",
+  "category": "Юниты",
+  "batch": "01_regular_and_worker",
+  "units": [
+    "h0G9",
+    "h0F4",
+    "h0GS",
+    "h0GT",
+    "h0GV",
+    "h0GU",
+    "h0GW",
+    "h0GX",
+    "h0HD"
+  ],
+  "changed_wts_count": 27,
+  "strings": {
+    "21246": "|cffe4cfa3Работник|r",
+    "21247": "|cffe4cfa3Работник|r (|cffffffffQ|r)",
+    "17822": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий. Возводит здания, ремонтирует постройки и добывает древесину.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deНебольшой скачок|cffced4da: мгновенно перемещается на расстояние до |cffffffff500|cffced4da.|n- |cffa9c7deРемонт|cffced4da: восстанавливает прочность зданий и техники за золото и древесину.|n- |cffa9c7deДобыча ресурсов|cffced4da: рубит лес и доставляет древесину в ратушу.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "23035": "|cffe4cfa3Ополченец|r",
+    "23046": "|cffe4cfa3Ополченец|r (|cffffffffQ|r)",
+    "37844": "|cffa6afb8ЮНИТ:|cffced4da Ополченец ближнего боя. Может обучаться в казармах или временно мобилизоваться из работников.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗащита|cffced4da: поднимает щит, усиливая защиту от атак ценой снижения скорости перемещения.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "21248": "|cffe4cfa3Пехотинец|r",
+    "21279": "|cffe4cfa3Пехотинец|r (|cffffffffE|r)",
+    "21257": "|cffa6afb8ЮНИТ:|cffced4da Профессиональный воин ближнего боя передовой линии.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПовышение|cffced4da: уничтожив |cffffffff2|cffced4da вражеских юнитов, становится капитаном.|n- |cffa9c7deЗащита|cffced4da: поднимает щит, снижая урон от стрел ценой скорости перемещения.|n- |cffa9c7deЗачарованные мечи|cffced4da: повышает урон оружия на |cffffffff10|cffced4da ед.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "20156": "|cffe4cfa3Защитник|r",
+    "23022": "|cffe4cfa3Защитник|r (|cffffffffA|r)",
+    "25275": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый пехотинец с прочной бронёй и защитной аурой.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЛатный доспех|cffced4da: поглощает до |cffffffff8|cffced4da ед. физического урона от каждой атаки.|n- |cffa9c7deАура защиты|cffced4da: даёт союзникам в радиусе |cffffffff300|cffced4da бонус |cffffffff+3|cffced4da к броне.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "21256": "|cffe4cfa3Арбалетчик|r",
+    "38979": "|cffe4cfa3Арбалетчик|r (|cffffffffW|r)",
+    "25457": "|cffa6afb8ЮНИТ:|cffced4da Стрелок дальнего боя с бронебойными болтами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deОгненные стрелы|cffced4da: расходует |cff6090e08|cffced4da ед. маны, добавляя |cffffffff+12|cffced4da ед. огненного урона.|n- |cffa9c7deЗащита|cffced4da: поднимает щит для защиты от стрел ценой снижения скорости.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "21254": "|cffe4cfa3Рыцарь|r",
+    "1788": "|cffe4cfa3Рыцарь|r (|cffffffffR|r)",
+    "25329": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый всадник прорыва, наносящий сокрушительные удары в ближнем бою.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКритический удар|cffced4da: с вероятностью |cffffffff15%|cffced4da наносит урон в |cffffffff1.5|cffced4da раза выше.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "21259": "|cffe4cfa3Жрец|r",
+    "25510": "|cffe4cfa3Жрец|r (|cffffffffQ|r)",
+    "21277": "|cffa6afb8ЮНИТ:|cffced4da Магический лекарь и поддержка передовых отрядов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолна исцеления|cffced4da: исцеляет до |cffffffff5|cffced4da союзников цепной волной (до |cffffffff200|cffced4da ед. здоровья).|n- |cffa9c7deРассеивание заклинаний|cffced4da: снимает эффекты в области и наносит |cffffffff200|cffced4da ед. урона призванным существам.|n- |cffa9c7deВнутренний огонь|cffced4da: увеличивает урон союзника на |cffffffff15%|cffced4da и броню на |cffffffff+2|cffced4da на |cffffffff60|cffced4da сек.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "23032": "|cffe4cfa3Заклинатель|r",
+    "22245": "|cffe4cfa3Заклинатель|r (|cffffffffW|r)",
+    "21285": "|cffa6afb8ЮНИТ:|cffced4da Боевой маг дальнего боя, ослабляющий и контролирующий врагов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deОгненная стрела|cffced4da: наносит |cffffffff75|cffced4da ед. урона и оглушает цель на |cffffffff2|cffced4da сек.|n- |cffa9c7deРазъедающий огонь|cffced4da: снижает урон врага на |cffffffff10%|cffced4da и броню на |cffffffff5|cffced4da ед. на |cffffffff60|cffced4da сек.|n- |cffa9c7deПроклятие|cffced4da: с вероятностью |cffffffff33%|cffced4da заставляет атаки цели промахиваться.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "21278": "|cffe4cfa3Оруженосец|r",
+    "42678": "|cffe4cfa3Оруженосец|r (|cffffffffQ|r)",
+    "31728": "|cffa6afb8ЮНИТ:|cffced4da Вспомогательный пехотинец, ускоряющий передвижение и атаки армии.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура выносливости|cffced4da: увеличивает скорость перемещения союзников на |cffffffff10%|cffced4da и скорость атаки на |cffffffff20%|cffced4da.|n|n|cffa6afb8Атакует наземные цели.|r"
+  },
+  "consumers": {
+    "h0G9": {
+      "name": 21246,
+      "tip": 21247,
+      "ubertip": 17822,
+      "hotkey": "Q"
+    },
+    "h0F4": {
+      "name": 23035,
+      "tip": 23046,
+      "ubertip": 37844,
+      "hotkey": "Q"
+    },
+    "h0GS": {
+      "name": 21248,
+      "tip": 21279,
+      "ubertip": 21257,
+      "hotkey": "E"
+    },
+    "h0GT": {
+      "name": 20156,
+      "tip": 23022,
+      "ubertip": 25275,
+      "hotkey": "A"
+    },
+    "h0GV": {
+      "name": 21256,
+      "tip": 38979,
+      "ubertip": 25457,
+      "hotkey": "W"
+    },
+    "h0GU": {
+      "name": 21254,
+      "tip": 1788,
+      "ubertip": 25329,
+      "hotkey": "R"
+    },
+    "h0GW": {
+      "name": 21259,
+      "tip": 25510,
+      "ubertip": 21277,
+      "hotkey": "Q"
+    },
+    "h0GX": {
+      "name": 23032,
+      "tip": 22245,
+      "ubertip": 21285,
+      "hotkey": "W"
+    },
+    "h0HD": {
+      "name": 21278,
+      "tip": 42678,
+      "ubertip": 31728,
+      "hotkey": "Q"
+    }
+  },
+  "in_game_checked": false
+}

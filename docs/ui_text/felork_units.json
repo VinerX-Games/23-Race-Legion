@@ -1,0 +1,499 @@
+{
+  "scope": "Орда Скверны (Fel Orcs): категория 2 — Юниты (31 юнитов)",
+  "units_count": 31,
+  "variants": [
+    "SD"
+  ],
+  "units": [
+    {
+      "id": "n06B",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 29065,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий Орды Скверны. Добывает золото и древесину, возводит и ремонтирует постройки.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06F",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 30675,
+          "after": "|cffe4cfa3Мутировавший Батрак|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35722,
+          "after": "|cffe4cfa3Мутировавший Батрак|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35248,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Мутировавший рабочий-воин Орды Скверны.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРассекающий удар|cffced4da: наносит урон по области рядом с основной целью.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n068",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 15344,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый воин ближнего боя первого ранга.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06L",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 36714,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Усиленный воин ближнего боя второго ранга.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06T",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 36723,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный ветеран ближнего боя третьего ранга с повышенным запасом здоровья и уроном.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06D",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 20943,
+          "after": "|cffe4cfa3Стрелок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34261,
+          "after": "|cffe4cfa3Стрелок|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33387,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый стрелок первого ранга с арбалетом.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06M",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31903,
+          "after": "|cffe4cfa3Стрелок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35721,
+          "after": "|cffe4cfa3Стрелок|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 36715,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Усиленный стрелок второго ранга с арбалетом.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06Q",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35808,
+          "after": "|cffe4cfa3Стрелок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35810,
+          "after": "|cffe4cfa3Стрелок|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 36720,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный стрелок третьего ранга с увеличенной дальностью и бронебойными болтами.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06G",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26975,
+          "after": "|cffe4cfa3Копьеметатель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34565,
+          "after": "|cffe4cfa3Копьеметатель|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35251,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Метатель тяжелых копий первого ранга дальнего боя.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06J",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34551,
+          "after": "|cffe4cfa3Копьеметатель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35723,
+          "after": "|cffe4cfa3Копьеметатель|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 36712,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Усиленный метатель тяжелых копий второго ранга дальнего боя.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06W",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35804,
+          "after": "|cffe4cfa3Копьеметатель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35805,
+          "after": "|cffe4cfa3Копьеметатель|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 36728,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный метатель тяжелых копий третьего ранга с повышенной дальностью поражения.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o05Q",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33452,
+          "after": "|cffe4cfa3Телохранитель вождя|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33391,
+          "after": "|cffe4cfa3Телохранитель вождя|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35245,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжелый пехотинец первого ранга, защищающий вождей Орды.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Защиты|cffced4da: повышает броню находящихся рядом союзников.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o065",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35812,
+          "after": "|cffe4cfa3Телохранитель вождя|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 36726,
+          "after": "|cffe4cfa3Телохранитель вождя|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 36727,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Усиленный тяжелый пехотинец второго ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Защиты|cffced4da: повышает броню находящихся рядом союзников.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o063",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34547,
+          "after": "|cffe4cfa3Телохранитель вождя|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 36716,
+          "after": "|cffe4cfa3Телохранитель вождя|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 36717,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный тяжелый пехотинец третьего ранга с непревзойденной защитой.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Защиты|cffced4da: повышает броню находящихся рядом союзников.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o05R",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 29076,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Дальнобойная осадная катапульта, эффективная против зданий и укреплений.|n|n|cffa6afb8Атакует наземные цели и деревья.|r"
+        }
+      ]
+    },
+    {
+      "id": "n067",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 10616,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Темный маг первого ранга, владеющий огненными стрелами и рассеиванием.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06R",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 36721,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Усиленный темный маг второго ранга.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06N",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 36718,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Высший чернокнижник третьего ранга с максимальным запасом маны.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06C",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17861,
+          "after": "|cffe4cfa3Шаман|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34537,
+          "after": "|cffe4cfa3Шаман|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33386,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Заклинатель поддержки первого ранга с раздвоенной молнией и жаждой крови.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06S",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35814,
+          "after": "|cffe4cfa3Шаман|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35816,
+          "after": "|cffe4cfa3Шаман|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 36722,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Усиленный заклинатель поддержки второго ранга.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06O",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34385,
+          "after": "|cffe4cfa3Шаман|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35720,
+          "after": "|cffe4cfa3Шаман|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 36719,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Высший шаман третьего ранга с мощными стихийными чарами.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n069",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 15345,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Быстрый кавалерист первого ранга на волке, способный обездвиживать врагов сетью.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06U",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 36724,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Усиленный кавалерист второго ранга с боевым кличем.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06K",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 36713,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный налетчик третьего ранга с высокой скоростью и сокрушительным уроном.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06A",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 33385,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Массивный боевой зверь первого ранга с барабанами и пожиранием.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06I",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 35254,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Усиленный боевой зверь второго ранга с аурой выносливости.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n06V",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 36725,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Исполинский кодо третьего ранга с колоссальным запасом здоровья.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n070",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36729,
+          "after": "|cffe4cfa3Некромант|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 36730,
+          "after": "|cffe4cfa3Некромант|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 36731,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Темный маг Орды Скверны, поднимающий скелетов из трупов врагов.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0D4",
+      "hotkey": "Q",
+      "strings": []
+    },
+    {
+      "id": "h0D6",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3002,
+          "after": "|cffe4cfa3Фрегат|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 5542,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Боевой патрульный корабль Орды, атакующий морские и береговые цели.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0D5",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10916,
+          "after": "|cffe4cfa3Дредноут|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10918,
+          "after": "|cffe4cfa3Дредноут|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6926,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжелый бронированный флагман флота Орды дальнего боя.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    }
+  ]
+}

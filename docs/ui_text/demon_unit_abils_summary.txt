@@ -1,0 +1,159 @@
+[A0I3] race=human | name=|cffe4cfa3Скачок|r | suffix=(Общее)
+  tip1=|cffe4cfa3Скачок|r (|cffffffffC|r)
+  ubertip1=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на расстояние до |cffffffff500|cffced4da ед. Время восстановления: |cffffffff40|cffced4da сек.|r
+
+[A0IQ] race=other | name=|cffffdcb4Обозначить столицу|r | suffix=(Общее)
+  tip1=|cffffdcb4Обозначить столицу|r
+  ubertip1=Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение.
+
+[A0LI] race=creeps | name=Обмен |cffffff00Золота |rна |cff00ff00Дерево|r | suffix=(Общее)
+  tip1=Обмен |cffffff00Золота |rна |cff00ff00Дерево|r
+  ubertip1=Отнимает у игрока|cffffd700 500 золота|r, но добавляет |cff228722100 дерева|r.
+
+[A0LJ] race=creeps | name=Обмен |cff00ff00Дерева |rна |cffffff00Золото|r | suffix=(Общее)
+  tip1=Обмен |cff00ff00Дерева |rна |cffffff00Золото|r
+  ubertip1=Отнимает у игрока |cff228722500 дерева|r, но добавляет |cffffd700100 золота|r.
+
+[A0LU] race=demon | name=|cffb4dc8cАура скверны|r | suffix=
+  tip1=|cffb4dc8cАура скверны|r
+  ubertip1=Востанавливает здания демонов.
+
+[A0LV] race=demon | name=|cffb4dc8cУкрыться за Щитом|r | suffix=(Демоны)
+  tip1=|cffb4dc8cПоднять щит|r
+  ubertip1=При использовании уменьшает урон от пронзающих атак до |cffffd70050%|r базового. Замедляет передвижение на |cffffd70030%|r на время действия.
+
+[A0LW] race=demon | name=|cffb4dc8cРассекающий удар|r | suffix=(1 уровень)
+  tip1=|cffb4dc8cРассекающий удар|r
+  ubertip1=Бьет с огромной силой, нанося <ACce,DataA1,%>% урона врагам рядом с основной целью.
+|cffb4dc8cРадиус поражения|r -150 ед.|r
+
+[A0LX] race=demon | name=|cffb4dc8cРассекающий удар|r | suffix=(2 уровень)
+  tip1=|cffb4dc8cРассекающий удар|r
+  ubertip1=Бьет с огромной силой, нанося <ACce,DataA1,%>% урона врагам рядом с основной целью.
+|cffb4dc8cРадиус поражения|r -150 ед.|r
+
+[A0LY] race=demon | name=|cffb4dc8cЛовушка тюремщика|r | suffix=
+  tip1=|cffb4dc8cЛовушка тюремщика|r
+  ubertip1=С каждой атаки замедляет цель, уменьшает передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек.
+
+[A0LZ] race=demon | name=|cffb4dc8cПленение|r | suffix=(Демоны)
+  tip1=|cffb4dc8cПленение|r
+  ubertip1=Помещает в подпространство противников, нанося <Advc,DataC1> урона/сек. Если Тюремщик погибает во время заключения жертвы, она освобождается.
+
+[A0M0] race=demon | name=|cffb4dc8cРазрушение заклинаний|r | suffix=
+  tip1=|cffb4dc8cРазрушение заклинаний|r
+  ubertip1=Скверна проникает в саму суть заклинаний разрушая их. Снимает эффекты с войск в указанной области.
+|cffb4dc8cНаносит <Adis,DataB1> урона призванным целям.|r
+|cffb4dc8cРадиус действия - 200 ед.|r
+
+[A0M1] race=demon | name=|cffb4dc8cПохищение жизни|r | suffix=(Демоны)
+  tip1=|cffb4dc8cПохищение жизни|r
+  ubertip1="Похищает <ACdr,DataA1> здоровья/сек. у врага. |nВремя действия: <ACdr,Dur1> сек."
+
+[A0M2] race=demon | name=|cffb4dc8cПроклятие|r | suffix=(Демоны)
+  tip1=|cffb4dc8cПроклятие|r
+  ubertip1="Проклинает врага. С <Acrs,DataA1,%>%-й вероятностью жертва промахивается при атаке.|nВремя действия: <Acrs,Dur1> сек."
+
+[A0M3] race=demon | name=|cffb4dc8cСильный удар|r | suffix=(Демоны)
+  tip1=|cffb4dc8cСильный удар|r
+  ubertip1=С <ACbh,DataA1>%-й вероятностью атака нанесет на <ACbh,DataC1> больше урона и оглушит цель на <ACbh,Dur1> сек.
+|cffb4dc8cДействует на героев - 0.5 сек.
+Действует на солдат - 2 сек.|r
+
+[A0M4] race=demon | name=Слоты в скверноботе(Orc Burrow) | suffix=
+  tip1=
+  ubertip1=
+
+[A0M5] race=orc | name=|cffb4dc8cБоевая тревога|r | suffix=
+  tip1=|cffb4dc8cБоевая тревога|r
+  ubertip1=Отправляет находящихся рядом батраков в землянки защищать базу.
+
+[A0M6] race=demon | name=|cffb4dc8cОгненный ливень|r | suffix=(Демоны)
+  tip1=|cffb4dc8cОгненный ливень|r
+  ubertip1="Обрушивает на указанную область волны огня, наносящие по <ACrf,DataB1> урона. |nМаксимум волн: <ACrf,DataA1>."
+
+[A0M7] race=demon | name=|cffb4dc8cАура скверны|r | suffix=(Демоны)
+  tip1=|cffb4dc8cАура скверны|r [|cffffcc001-й уровень|r]
+  ubertip1="+<AUau,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+
+[A0MW] race=demon | name=|cffb4dc8cСон|r | suffix=(Легион)
+  tip1=|cffb4dc8cСон|r
+  ubertip1="Погружает врага в сон на <ACsl,Dur1> сек. Спящая цель просыпается, если ее атакуют."
+
+[A0MX] race=demon | name=|cffb4dc8cАура страха|r | suffix=(Легион)
+  tip1=|cffb4dc8cАура страха|r
+  ubertip1=Уменьшает урон от атак находящихся рядом врагов.
+Радиус действия - |cffb4dc8c400|r.
+Уменьшение урона - |cffb4dc8c10%|r.
+
+[A0VY] race=creeps | name=Добывать ресурсы | suffix=9Демоны)
+  tip1=Добывать ресурсы
+  ubertip1=Добывает древесину из деревьев.
+
+[A16J] race=demon | name=Перст боли | suffix=(Демоны)
+  tip1=Перст боли
+  ubertip1=Темный разряд, последовательно поражающий |cffb4dc8c5|r противников. Первому из них наносится |cffb4dc8c125|r ед. урона, каждому последующему - несколько меньше.
+
+[A1KB] race=orc | name=Защита столицы | suffix=(Столицы)
+  tip1=Защита столицы
+  ubertip1=
+
+[ACce] race=creeps | name=Рассекающий удар | suffix=(Neutral Hostile)
+  tip1=Рассекающий удар
+  ubertip1="Бьет с огромной силой, нанося <ACce,DataA1,%>% урона врагам рядом с основной целью."
+
+[ACmi] race=creeps | name=Невосприимчивость к магии | suffix=(Neutral Hostile)
+  tip1=Невосприимчивость к магии
+  ubertip1=Дает невосприимчивость к магии и большинству способностей.
+
+[ACrk] race=creeps | name=Устойчивая кожа | suffix=(Neutral Hostile 1)
+  tip1=Устойчивая кожа
+  ubertip1="Сокращает время действия отрицательных эффектов, дает невосприимчивость к некоторым способностям."
+
+[ANha] race=other | name=Добывать ресурсы | suffix=(Общее для всех) y
+  tip1=Добывать ресурсы
+  ubertip1=Добывает золото из рудников и древесину из деревьев.
+
+[ANpi] race=other | name=Кольцо огня | suffix=(Neutral Hostile 1)
+  tip1=Кольцо огня
+  ubertip1="Наносит <ANpi,DataA1> урона/сек. находящимся рядом врагам."
+
+[Abds] race=other | name=Слабое рассеивание чумы | suffix=
+  tip1=
+  ubertip1=
+
+[Advc] race=orc | name=Devour Cargo | suffix=
+  tip1=
+  ubertip1=
+
+[Ambb] race=creeps | name=Сожжение маны | suffix=(Neutral Hostile 3)
+  tip1=Сожжение маны
+  ubertip1="Сжигает <Ambb,DataA1> маны врага и наносит ему столько же урона."
+
+[Aren] race=nightelf | name=Обновление | suffix=
+  tip1=Обновление
+  ubertip1="Исцеляет раненые древа, ремонтирует союзные здания и технику."
+
+[Argl] race=other | name=Вернуть золото и древесину | suffix=
+  tip1=
+  ubertip1=
+
+[Arlm] race=other | name=Вернуть древесину | suffix=
+  tip1=
+  ubertip1=
+
+[Arst] race=undead | name=Ремонт | suffix=
+  tip1=Ремонт
+  ubertip1=Ремонтирует здания и технику за счет ресурсов.
+
+[S003] race=demon | name=Улучшение до |cffb4dc8cКровавого Отродья|r | suffix=(2 уровень)
+  tip1=
+  ubertip1=
+
+[S004] race=demon | name=Улучшение до |cffb4dc8cКровавого Палача|r | suffix=(1 уровень)
+  tip1=
+  ubertip1=
+
+[S005] race=demon | name=Улучшение до |cffb4dc8cКровопускателя|r | suffix=(3 уровень)
+  tip1=
+  ubertip1=

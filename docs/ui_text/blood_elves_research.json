@@ -1,0 +1,671 @@
+{
+  "scope": "Эльфы Крови (Blood Elves): категория 5 — Исследования и маркеры (33 технологий)",
+  "upgrades_count": 33,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R01N",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 6113,
+          "after": "|cffe4cfa3Улучшенная кладка|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38384,
+          "after": "|cffe4cfa3Улучшенная кладка|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3095,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает прочность и показатель брони всех зданий Эльфов Крови.|n|n|cffa6afb8Применяется к:|cffced4da|n- Все здания Эльфов Крови.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01K",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 38361,
+          "after": "|cffe4cfa3Оружие дальнего боя|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38364,
+          "after": "|cffe4cfa3Оружие дальнего боя|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3020,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон немагических дальнобойных войск Эльфов Крови.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСледопыт|cffced4da|n- |cffa9c7deБаллиста|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01L",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 33784,
+          "after": "|cffe4cfa3Тяжелая броня|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40577,
+          "after": "|cffe4cfa3Тяжелая броня|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3050,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает показатель брони воинов ближнего боя, кавалерии и ведьмаков.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deВсадник|cffced4da|n- |cffa9c7deРыцарь крови|cffced4da|n- |cffa9c7deВедьмак|cffced4da|n- |cffa9c7deАрканитовый голем|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01M",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 33785,
+          "after": "|cffe4cfa3Легкая броня|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38373,
+          "after": "|cffe4cfa3Легкая броня|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3068,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает показатель брони стрелков, заклинателей и вспомогательных войск.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСледопыт|cffced4da|n- |cffa9c7deБаллиста|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deАрканистка|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da|n- |cffa9c7deЭлементаль|cffced4da|n- |cffa9c7deМагическая повозка|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01R",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 33786,
+          "after": "|cffe4cfa3Артефакты|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38385,
+          "after": "|cffe4cfa3Артефакты|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3202,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает магическую мощь и увеличивает урон атак заклинателей Эльфов Крови.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deАрканистка|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01J",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 38349,
+          "after": "|cffe4cfa3Оружие ближнего боя|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38355,
+          "after": "|cffe4cfa3Оружие ближнего боя|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 2980,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки всех воинов ближнего боя Эльфов Крови.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deВсадник|cffced4da|n- |cffa9c7deРыцарь крови|cffced4da|n- |cffa9c7deАрканитовый голем|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03I",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42350,
+          "after": "|cffe4cfa3Стационарный магический источник|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42351,
+          "after": "|cffe4cfa3Стационарный магический источник|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42352,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет регенерацию маны в Хранилищах Энергии и Колодцах.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deХранилище Энергии|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03J",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42262,
+          "after": "|cffe4cfa3Мобильные магические источники|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42263,
+          "after": "|cffe4cfa3Мобильные магические источники|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 5447,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость регенерации маны всех войск Эльфов Крови на |cffffffff0.05|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- Все войска Эльфов Крови.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01T",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 30796,
+          "after": "|cffe4cfa3Улучшенные инструменты|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 19307,
+          "after": "|cffe4cfa3Улучшенные инструменты|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 5090,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой строителями древесины на |cffffffff5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтроитель|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03E",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42275,
+          "after": "|cffe4cfa3Магическая выносливость|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42278,
+          "after": "|cffe4cfa3Магическая выносливость|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38408,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас маны всех войск на |cffffffff10%|cffced4da, но снижает регенерацию маны на |cffe69a8d0.05|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- Все войска Эльфов Крови.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03F",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 38224,
+          "after": "|cffe4cfa3Магическая сила|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38414,
+          "after": "|cffe4cfa3Магическая сила|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38420,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет регенерацию маны войск на |cffffffff0.1|cffced4da ед./сек., но снижает максимальный запас маны на |cffe69a8d5%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Все войска Эльфов Крови.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03K",
+      "levels": 1,
+      "strings": []
+    },
+    {
+      "id": "R01Y",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27326,
+          "after": "|cffe4cfa3Улучшенные луки|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27325,
+          "after": "|cffe4cfa3Улучшенные луки|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3584,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает дальность стрельбы следопытов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСледопыт|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01X",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 34865,
+          "after": "|cffe4cfa3Защита от магии|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35115,
+          "after": "|cffe4cfa3Защита от магии|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 35116,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дарует странникам и ведьмакам способность «Защита от магии», делающую их невосприимчивыми к заклинаниям.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deВедьмак|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01W",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 40520,
+          "after": "|cffe4cfa3Тренировка следопытов|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 19292,
+          "after": "|cffe4cfa3Тренировка следопытов|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42348,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон следопытов на |cffffffff3|cffced4da ед. и увеличивает их максимальный запас здоровья на |cffffffff60|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСледопыт|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BU",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 38429,
+          "after": "|cffe4cfa3Магический страж|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 33776,
+          "after": "|cffe4cfa3Магический страж|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 16454,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет защитные башни способностью обнаруживать невидимых врагов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДозорная Башня|cffced4da|n- |cffa9c7deСторожевая Башня|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01O",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9654,
+          "after": "|cffe4cfa3Посвящение магистров|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 5731,
+          "after": "|cffe4cfa3Посвящение магистров|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 41634,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья, запас маны и скорость регенерации маны магистров.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01P",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9703,
+          "after": "|cffe4cfa3Посвящение арканисток|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 6097,
+          "after": "|cffe4cfa3Посвящение арканисток|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 41831,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья, запас маны и скорость регенерации маны арканисток.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАрканистка|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01Q",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 19446,
+          "after": "|cffe4cfa3Посвящение чернокнижников|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9710,
+          "after": "|cffe4cfa3Посвящение чернокнижников|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42230,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья, запас маны и скорость регенерации маны чернокнижников.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01S",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 30685,
+          "after": "|cffe4cfa3Магический контроль|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 30688,
+          "after": "|cffe4cfa3Магический контроль|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 30795,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает ведьмаков способности «Магический контроль», позволяющей подчинять вражеских призванных существ.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВедьмак|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R025",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 32577,
+          "after": "|cffe4cfa3Приоритет на Ведьмаках|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 33764,
+          "after": "|cffe4cfa3Приоритет на Ведьмаках|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38199,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Улучшает боевые способности ведьмаков, уменьшая их уязвимость к физическому урону.|n|n|cffe69a8dОтменяет другие выбранные приоритеты!|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВедьмак|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R026",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 33772,
+          "after": "|cffe4cfa3Приоритет на Рыцарях крови|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 33773,
+          "after": "|cffe4cfa3Приоритет на Рыцарях крови|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38202,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет рыцарей крови способностью «Огненное лассо», сковывающей противника.|n|n|cffe69a8dОтменяет другие выбранные приоритеты!|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРыцарь крови|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03C",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 38203,
+          "after": "|cffe4cfa3Приоритет на Странниках и Следопытах|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38204,
+          "after": "|cffe4cfa3Приоритет на Странниках и Следопытах|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38205,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает странников и следопытов, даруя им огненные стрелы и защитные ауры.|n|n|cffe69a8dОтменяет другие выбранные приоритеты!|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deСледопыт|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03D",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 33774,
+          "after": "|cffe4cfa3Приоритет на Анклаве магов|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 33775,
+          "after": "|cffe4cfa3Приоритет на Анклаве магов|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38208,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает магические стрелы магов и увеличивает скорость регенерации маны заклинателей.|n|n|cffe69a8dОтменяет другие выбранные приоритеты!|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deАрканистка|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03N",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 33742,
+          "after": "|cffe4cfa3Алгоритмы големов|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 33745,
+          "after": "|cffe4cfa3Алгоритмы големов|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 33748,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки големов на |cffffffff15%|cffced4da, но снижает регенерацию маны на |cffe69a8d1|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАрканитовый голем|cffced4da|n- |cffa9c7deАрканитовый страж|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R021",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 38394,
+          "after": "|cffe4cfa3Подпорки|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38395,
+          "after": "|cffe4cfa3Подпорки|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20182,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет баллистам закрепляться на боевой позиции, увеличивая скорость стрельбы.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБаллиста|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03Q",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 33678,
+          "after": "|cffe4cfa3Гонка Вооружений|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 33723,
+          "after": "|cffe4cfa3Гонка Вооружений|r (|cffffffffQ|r)"
+        }
+      ]
+    },
+    {
+      "id": "Rhcd",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20181,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дарует элементалям способность «Туман», выводящую из строя оборонительные башни врага.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЭлементаль|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03R",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 33763,
+          "after": "|cffe4cfa3Емкость хранилищ|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38426,
+          "after": "|cffe4cfa3Емкость хранилищ|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 33751,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас маны Хранилищ Энергии на |cffffffff1000|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deХранилище Энергии|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01H",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 5539,
+          "after": "|cffe4cfa3Изучение бездны|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 5633,
+          "after": "|cffe4cfa3Изучение бездны|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 5649,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает фракцию магии Бездны. Превращает Хранилища Энергии в Колодцы бездны и увеличивает максимальный запас маны элементалей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deХранилище Энергии|cffced4da|n- |cffa9c7deЭлементаль|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01I",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 5660,
+          "after": "|cffe4cfa3Изучение света|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 5665,
+          "after": "|cffe4cfa3Изучение света|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 6031,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает фракцию магии Света. Превращает Хранилища Энергии в Колодцы света, увеличивает запас здоровья, маны и регенерацию рыцарей крови.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deХранилище Энергии|cffced4da|n- |cffa9c7deРыцарь крови|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01G",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 5461,
+          "after": "|cffe4cfa3Изучение скверны|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 5467,
+          "after": "|cffe4cfa3Изучение скверны|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 5471,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает фракцию магии Скверны. Превращает Хранилища Энергии в Колодцы скверны, открывает доступ к Заступникам Скверны и увеличивает запас маны чернокнижников.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deХранилище Энергии|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da|n- |cffa9c7deЗаступник Скверны|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01D",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 3875,
+          "after": "|cffe4cfa3Изучение арканы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 5334,
+          "after": "|cffe4cfa3Изучение арканы|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 5384,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает фракцию школе Тайной магии. Превращает Хранилища Энергии в Колодцы арканы и увеличивает максимальный запас маны големов, ведьмаков, магистров и арканисток.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deХранилище Энергии|cffced4da|n- Заклинатели и големы Эльфов Крови.|r"
+        }
+      ]
+    }
+  ]
+}

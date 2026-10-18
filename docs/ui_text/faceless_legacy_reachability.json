@@ -1,0 +1,93 @@
+{
+  "scope": "Old Faceless building forms",
+  "placed": {
+    "n01P": {
+      "command": "list-units",
+      "map": "F:\\Gemini_23Race\\map.w3x",
+      "matched": 0,
+      "ok": true,
+      "returned": 0,
+      "schema_version": 1,
+      "tool": "HiveWE_cli",
+      "total_placed": 647,
+      "units": []
+    },
+    "n01Q": {
+      "command": "list-units",
+      "map": "F:\\Gemini_23Race\\map.w3x",
+      "matched": 0,
+      "ok": true,
+      "returned": 0,
+      "schema_version": 1,
+      "tool": "HiveWE_cli",
+      "total_placed": 647,
+      "units": []
+    },
+    "n01R": {
+      "command": "list-units",
+      "map": "F:\\Gemini_23Race\\map.w3x",
+      "matched": 0,
+      "ok": true,
+      "returned": 0,
+      "schema_version": 1,
+      "tool": "HiveWE_cli",
+      "total_placed": 647,
+      "units": []
+    },
+    "n01S": {
+      "command": "list-units",
+      "map": "F:\\Gemini_23Race\\map.w3x",
+      "matched": 0,
+      "ok": true,
+      "returned": 0,
+      "schema_version": 1,
+      "tool": "HiveWE_cli",
+      "total_placed": 647,
+      "units": []
+    },
+    "n01U": {
+      "command": "list-units",
+      "map": "F:\\Gemini_23Race\\map.w3x",
+      "matched": 0,
+      "ok": true,
+      "returned": 0,
+      "schema_version": 1,
+      "tool": "HiveWE_cli",
+      "total_placed": 647,
+      "units": []
+    }
+  },
+  "object_references": [],
+  "lua_references": [
+    {
+      "file": "map.w3x\\_lua\\monolith_split\\sections\\80_runtime\\triggers\\races\\Bezlikie.lua",
+      "line": 133,
+      "text": "CreateNUnitsAtLoc(1, FourCC('n01Q'), GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)"
+    },
+    {
+      "file": "map.w3x\\_lua\\monolith_split\\sections\\80_runtime\\triggers\\races\\Bezlikie.lua",
+      "line": 150,
+      "text": "CreateNUnitsAtLoc(1, FourCC('n01S'), GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)"
+    },
+    {
+      "file": "map.w3x\\_lua\\monolith_split\\sections\\80_runtime\\triggers\\races\\Bezlikie.lua",
+      "line": 167,
+      "text": "CreateNUnitsAtLoc(1, FourCC('n01R'), GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)"
+    },
+    {
+      "file": "map.w3x\\_lua\\monolith_split\\sections\\80_runtime\\triggers\\races\\Bezlikie.lua",
+      "line": 184,
+      "text": "CreateNUnitsAtLoc(1, FourCC('n01U'), GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)"
+    }
+  ],
+  "disabled_at_initialization": {
+    "ZdaniyaBezlik": true,
+    "ZdaniyaBezlik_Copy": true,
+    "ZdaniyaBezlik_Copy_Copy": true,
+    "ZdaniyaBezlik_Copy_Copy_2": true,
+    "ZdaniyaBezlik_Copy_Copy_2_Copy": true
+  },
+  "enable_references": [],
+  "generated_lua_matches_sections": true,
+  "conclusion": "No placed instances or object-data acquisition references; only creation references are in triggers disabled at initialization with no explicit re-enable in canonical sections. Exclude these unavailable legacy forms from player-facing UI migration; revisit if re-enabled."
+}

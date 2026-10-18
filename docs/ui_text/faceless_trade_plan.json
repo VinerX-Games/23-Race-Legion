@@ -1,0 +1,1231 @@
+{
+  "operations": [
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "name",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip1",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+75|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff1|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip2",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+150|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff2|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip3",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+225|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff3|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip4",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+300|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff4|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip5",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip5",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+375|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff5|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip6",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip6",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+450|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff6|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip7",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip7",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+525|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff7|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip8",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip8",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+600|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff8|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip9",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip9",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+675|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff9|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip10",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip10",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+750|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff10|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip11",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip11",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+825|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff11|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip12",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip12",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+900|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff12|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip13",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip13",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+975|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff13|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip14",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip14",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+1050|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff14|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip15",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip15",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+1125|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff15|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip16",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip16",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+1200|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff16|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip17",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip17",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+1275|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff17|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip18",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip18",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+1350|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff18|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip19",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip19",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+1425|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff19|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip20",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip20",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+1500|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff20|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip21",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip21",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+1575|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff21|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip22",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip22",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+1650|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff22|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip23",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip23",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+1725|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff23|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip24",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip24",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+1800|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff24|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip25",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip25",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+1875|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff25|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip26",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip26",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+1950|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff26|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip27",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip27",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+2025|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff27|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip28",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip28",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+2100|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff28|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip29",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip29",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+2175|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff29|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip30",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip30",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+2250|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff30|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip31",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip31",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+2325|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff31|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip32",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip32",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+2400|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff32|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip33",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip33",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+2475|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff33|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip34",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip34",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+2550|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff34|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip35",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip35",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+2625|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff35|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip36",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip36",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+2700|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff36|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip37",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip37",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+2775|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff37|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip38",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip38",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+2850|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff38|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip39",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip39",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+2925|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff39|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip40",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip40",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+3000|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff40|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip41",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip41",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+3075|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff41|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip42",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip42",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+3150|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff42|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip43",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip43",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+3225|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff43|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip44",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip44",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+3300|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff44|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip45",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip45",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+3375|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff45|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip46",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip46",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+3450|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff46|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip47",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip47",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+3525|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff47|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip48",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip48",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+3600|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff48|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip49",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip49",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+3675|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff49|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip50",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip50",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+3750|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff50|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip51",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip51",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+3825|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff51|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip52",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip52",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+3900|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff52|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip53",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip53",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+3975|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff53|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip54",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip54",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+4050|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff54|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip55",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip55",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+4125|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff55|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip56",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip56",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+4200|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff56|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip57",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip57",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+4275|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff57|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip58",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip58",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+4350|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff58|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip59",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip59",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+4425|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff59|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip60",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip60",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+4500|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff60|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip61",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip61",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+4575|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff61|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip62",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip62",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+4650|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff62|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip63",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip63",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+4725|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff63|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip64",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip64",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+4800|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff64|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip65",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip65",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+4875|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff65|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip66",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip66",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+4950|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff66|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip67",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip67",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+5025|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff67|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip68",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip68",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+5100|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff68|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip69",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip69",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+5175|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff69|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip70",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip70",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+5250|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff70|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip71",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip71",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+5325|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff71|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip72",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip72",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+5400|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff72|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip73",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip73",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+5475|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff73|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip74",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip74",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+5550|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff74|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip75",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip75",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+5625|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff75|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip76",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip76",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+5700|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff76|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip77",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip77",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+5775|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff77|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip78",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip78",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+5850|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff78|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip79",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip79",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+5925|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff79|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip80",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip80",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+6000|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff80|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip81",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip81",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+6075|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff81|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip82",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip82",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+6150|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff82|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip83",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip83",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+6225|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff83|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip84",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip84",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+6300|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff84|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip85",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip85",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+6375|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff85|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip86",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip86",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+6450|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff86|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip87",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip87",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+6525|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff87|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip88",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip88",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+6600|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff88|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip89",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip89",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+6675|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff89|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip90",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip90",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+6750|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff90|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip91",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip91",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+6825|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff91|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip92",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip92",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+6900|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff92|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip93",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip93",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+6975|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff93|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip94",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip94",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+7050|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff94|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip95",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip95",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+7125|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff95|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip96",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip96",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+7200|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff96|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip97",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip97",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+7275|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff97|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip98",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip98",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+7350|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff98|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip99",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip99",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+7425|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff99|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "tip100",
+      "value": "|cffe4cfa3Налаженная торговля|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0SM",
+      "field": "ubertip100",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Учтённый вклад торговли этого здания в базовый доход золота за выплату: |cffc8e087+7500|cffced4da. Это суммарное значение текущей ступени. Итоговый доход зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff100|cffced4da из |cffffffff100|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0G8",
+      "field": "name",
+      "value": "|cffe4cfa3Торговля|r",
+      "marker": "УСЛУГА:"
+    },
+    {
+      "type": "unit",
+      "id": "h0G8",
+      "field": "tip",
+      "value": "|cffe4cfa3Торговля|r (|cffffffffD|r)",
+      "marker": "УСЛУГА:"
+    },
+    {
+      "type": "unit",
+      "id": "h0G8",
+      "field": "ubertip",
+      "value": "|cffa6afb8УСЛУГА:|cffced4da Покупка торгового улучшения для здания. Увеличивает базовый доход золота владельца на |cffc8e08775|cffced4da за выплату и повышает ступень показателя «Налаженная торговля». Итоговый доход зависит от модификаторов экономики.|n|nСтоимость — |cffffffff9000|cffced4da древесины. Покупка не создаёт постоянного воина.|r",
+      "marker": "УСЛУГА:"
+    }
+  ]
+}

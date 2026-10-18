@@ -1,0 +1,387 @@
+{
+  "scope": "Пылающий Легион (Demon): Реестр исследований (14 технологий)",
+  "researches_count": 14,
+  "researches": [
+    "R004",
+    "R08H",
+    "R08I",
+    "R08J",
+    "R08K",
+    "R08L",
+    "R08M",
+    "R08N",
+    "R08O",
+    "R08P",
+    "R08Q",
+    "R08R",
+    "R08S",
+    "R0EG"
+  ],
+  "checks_def": [
+    {
+      "id": "R004",
+      "field": "name1",
+      "expected": "|cffe4cfa3Эволюция: Кровавый палач|r"
+    },
+    {
+      "id": "R004",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Эволюция: Кровавый палач|r (|cffffffffS|r)"
+    },
+    {
+      "id": "R004",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Трансформирует всех Властителей в более могучих Кровавых палачей, повышая их запас здоровья, урон и боевые характеристики.|n|nЗатрагивает: |cffa9c7deВластитель|cffced4da.|r"
+    },
+    {
+      "id": "R08H",
+      "field": "name1",
+      "expected": "|cffe4cfa3Эволюция: Кровавое отродье|r"
+    },
+    {
+      "id": "R08H",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Эволюция: Кровавое отродье|r (|cffffffffX|r)"
+    },
+    {
+      "id": "R08H",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Трансформирует всех Кровавых палачей в свирепых Кровавых отродий, наделяя их пассивной способностью «Рассекающий удар» (25% урона по площади) и повышая характеристики.|n|nЗатрагивает: |cffa9c7deКровавый палач|cffced4da.|r"
+    },
+    {
+      "id": "R08I",
+      "field": "name1",
+      "expected": "|cffe4cfa3Эволюция: Кровопускатель|r"
+    },
+    {
+      "id": "R08I",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Эволюция: Кровопускатель|r (|cffffffffC|r)"
+    },
+    {
+      "id": "R08I",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Трансформирует всех Кровавых отродий в элитных демонических пехотинцев — Кровопускателей. Усиливает «Рассекающий удар» до 40% урона по площади и открывает возможность использовать способность «Укрыться за щитом».|n|nЗатрагивает: |cffa9c7deКровавое отродье|cffced4da.|r"
+    },
+    {
+      "id": "R08O",
+      "field": "name1",
+      "expected": "|cffe4cfa3Защита|r"
+    },
+    {
+      "id": "R08O",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Защита|r (|cffffffffZ|r)"
+    },
+    {
+      "id": "R08O",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Кровопускателей способности «Укрыться за щитом», позволяющей снижать урон от дальних пронзающих атак до 50% в обмен на снижение скорости передвижения на 30%.|n|nЗатрагивает: |cffa9c7deКровопускатель|cffced4da.|r"
+    },
+    {
+      "id": "R08J",
+      "field": "name1",
+      "expected": "|cffe4cfa3Оружие Скверны|r"
+    },
+    {
+      "id": "R08J",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Оружие Скверны|r [|cffffffffУровень 1|r] (|cffffffffQ|r)"
+    },
+    {
+      "id": "R08J",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Оружие Скверны|r [|cffffffffУровень 2|r] (|cffffffffQ|r)"
+    },
+    {
+      "id": "R08J",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Оружие Скверны|r [|cffffffffУровень 3|r] (|cffffffffQ|r)"
+    },
+    {
+      "id": "R08J",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Оружие Скверны|r [|cffffffffУровень 4|r] (|cffffffffQ|r)"
+    },
+    {
+      "id": "R08J",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Оружие Скверны|r [|cffffffffУровень 5|r] (|cffffffffQ|r)"
+    },
+    {
+      "id": "R08J",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Оружие Скверны|r [|cffffffffУровень 6|r] (|cffffffffQ|r)"
+    },
+    {
+      "id": "R08J",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак воинов ближнего боя Легиона на |cffffffff+3|cffced4da ед.|n|nЗатрагивает: |cffa9c7deВластитель|cffced4da, |cffa9c7deКровавый палач|cffced4da, |cffa9c7deКровавое отродье|cffced4da, |cffa9c7deКровопускатель|cffced4da, |cffa9c7deЗверь Саргераса|cffced4da, |cffa9c7deГромила Скверны|cffced4da.|r"
+    },
+    {
+      "id": "R08K",
+      "field": "name1",
+      "expected": "|cffe4cfa3Осквернённая броня|r"
+    },
+    {
+      "id": "R08K",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Осквернённая броня|r [|cffffffffУровень 1|r] (|cffffffffA|r)"
+    },
+    {
+      "id": "R08K",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Осквернённая броня|r [|cffffffffУровень 2|r] (|cffffffffA|r)"
+    },
+    {
+      "id": "R08K",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Осквернённая броня|r [|cffffffffУровень 3|r] (|cffffffffA|r)"
+    },
+    {
+      "id": "R08K",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Осквернённая броня|r [|cffffffffУровень 4|r] (|cffffffffA|r)"
+    },
+    {
+      "id": "R08K",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Осквернённая броня|r [|cffffffffУровень 5|r] (|cffffffffA|r)"
+    },
+    {
+      "id": "R08K",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Осквернённая броня|r [|cffffffffУровень 6|r] (|cffffffffA|r)"
+    },
+    {
+      "id": "R08K",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню воинов ближнего боя Легиона на |cffffffff+2|cffced4da ед.|n|nЗатрагивает: |cffa9c7deВластитель|cffced4da, |cffa9c7deКровавый палач|cffced4da, |cffa9c7deКровавое отродье|cffced4da, |cffa9c7deКровопускатель|cffced4da, |cffa9c7deЗверь Саргераса|cffced4da, |cffa9c7deГромила Скверны|cffced4da.|r"
+    },
+    {
+      "id": "R08L",
+      "field": "name1",
+      "expected": "|cffe4cfa3Магия Скверны|r"
+    },
+    {
+      "id": "R08L",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Магия Скверны|r [|cffffffffУровень 1|r] (|cffffffffW|r)"
+    },
+    {
+      "id": "R08L",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Магия Скверны|r [|cffffffffУровень 2|r] (|cffffffffW|r)"
+    },
+    {
+      "id": "R08L",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Магия Скверны|r [|cffffffffУровень 3|r] (|cffffffffW|r)"
+    },
+    {
+      "id": "R08L",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Магия Скверны|r [|cffffffffУровень 4|r] (|cffffffffW|r)"
+    },
+    {
+      "id": "R08L",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Магия Скверны|r [|cffffffffУровень 5|r] (|cffffffffW|r)"
+    },
+    {
+      "id": "R08L",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Магия Скверны|r [|cffffffffУровень 6|r] (|cffffffffW|r)"
+    },
+    {
+      "id": "R08L",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон магических атак и атак дальнего боя войск Легиона на |cffffffff+3|cffced4da ед.|n|nЗатрагивает: |cffa9c7deАдская колесница|cffced4da, |cffa9c7deЭредар-чернокнижник|cffced4da, |cffa9c7deЛовчий Скверны|cffced4da, |cffa9c7deИнфернал|cffced4da, |cffa9c7deСтраж ужаса|cffced4da.|r"
+    },
+    {
+      "id": "R08M",
+      "field": "name1",
+      "expected": "|cffe4cfa3Укрепление Скверной|r"
+    },
+    {
+      "id": "R08M",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Укрепление Скверной|r [|cffffffffУровень 1|r] (|cffffffffS|r)"
+    },
+    {
+      "id": "R08M",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Укрепление Скверной|r [|cffffffffУровень 2|r] (|cffffffffS|r)"
+    },
+    {
+      "id": "R08M",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Укрепление Скверной|r [|cffffffffУровень 3|r] (|cffffffffS|r)"
+    },
+    {
+      "id": "R08M",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Укрепление Скверной|r [|cffffffffУровень 4|r] (|cffffffffS|r)"
+    },
+    {
+      "id": "R08M",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Укрепление Скверной|r [|cffffffffУровень 5|r] (|cffffffffS|r)"
+    },
+    {
+      "id": "R08M",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Укрепление Скверной|r [|cffffffffУровень 6|r] (|cffffffffS|r)"
+    },
+    {
+      "id": "R08M",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню стрелков, осадных орудий и заклинателей Легиона на |cffffffff+2|cffced4da ед.|n|nЗатрагивает: |cffa9c7deАдская колесница|cffced4da, |cffa9c7deЭредар-чернокнижник|cffced4da, |cffa9c7deТюремщик|cffced4da, |cffa9c7deЛовчий Скверны|cffced4da, |cffa9c7deСтраж ужаса|cffced4da.|r"
+    },
+    {
+      "id": "R08N",
+      "field": "name1",
+      "expected": "|cffe4cfa3Познание Скверны|r"
+    },
+    {
+      "id": "R08N",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Познание Скверны|r [|cffffffffУровень 1|r] (|cffffffffD|r)"
+    },
+    {
+      "id": "R08N",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Познание Скверны|r [|cffffffffУровень 2|r] (|cffffffffD|r)"
+    },
+    {
+      "id": "R08N",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Познание Скверны|r [|cffffffffУровень 3|r] (|cffffffffD|r)"
+    },
+    {
+      "id": "R08N",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Познание Скверны|r [|cffffffffУровень 4|r] (|cffffffffD|r)"
+    },
+    {
+      "id": "R08N",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Познание Скверны|r [|cffffffffУровень 5|r] (|cffffffffD|r)"
+    },
+    {
+      "id": "R08N",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Познание Скверны|r [|cffffffffУровень 6|r] (|cffffffffD|r)"
+    },
+    {
+      "id": "R08N",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья войск Легиона на |cffffffff+40|cffced4da ед., ускоряет регенерацию здоровья на |cffffffff+1|cffced4da ед./сек. и регенерацию маны на |cffffffff+0.125|cffced4da ед./сек.|n|nЗатрагивает: все боевые единицы Легиона.|r"
+    },
+    {
+      "id": "R0EG",
+      "field": "name1",
+      "expected": "|cffe4cfa3Улучшенная добыча|r"
+    },
+    {
+      "id": "R0EG",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Улучшенная добыча|r [|cffffffffУровень 1|r] (|cffffffffZ|r)"
+    },
+    {
+      "id": "R0EG",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Улучшенная добыча|r [|cffffffffУровень 2|r] (|cffffffffZ|r)"
+    },
+    {
+      "id": "R0EG",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Улучшенная добыча|r [|cffffffffУровень 3|r] (|cffffffffZ|r)"
+    },
+    {
+      "id": "R0EG",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Улучшенная добыча|r [|cffffffffУровень 4|r] (|cffffffffZ|r)"
+    },
+    {
+      "id": "R0EG",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Улучшенная добыча|r [|cffffffffУровень 5|r] (|cffffffffZ|r)"
+    },
+    {
+      "id": "R0EG",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает вместимость переносимой рабочими древесины на |cffffffff+5|cffced4da ед.|n|nЗатрагивает: |cffa9c7deАрхитектор Скверны|cffced4da.|r"
+    },
+    {
+      "id": "R08P",
+      "field": "name1",
+      "expected": "|cffe4cfa3Древние знания эредаров|r"
+    },
+    {
+      "id": "R08P",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Древние знания эредаров|r (|cffffffffA|r)"
+    },
+    {
+      "id": "R08P",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Эредаров-чернокнижников способности «Перст боли», а также увеличивает их запас здоровья на |cffffffff+40|cffced4da ед., запас маны на |cffffffff+100|cffced4da ед. и ускоряет регенерацию маны.|n|nЗатрагивает: |cffa9c7deЭредар-чернокнижник|cffced4da.|r"
+    },
+    {
+      "id": "R08Q",
+      "field": "name1",
+      "expected": "|cffe4cfa3Мастерство владения Скверной|r"
+    },
+    {
+      "id": "R08Q",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Мастерство владения Скверной|r [|cffffffffУровень 1|r] (|cffffffffS|r)"
+    },
+    {
+      "id": "R08Q",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Мастерство владения Скверной|r [|cffffffffУровень 2|r] (|cffffffffS|r)"
+    },
+    {
+      "id": "R08Q",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Мастерство владения Скверной|r [|cffffffffУровень 3|r] (|cffffffffS|r)"
+    },
+    {
+      "id": "R08Q",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Стражей ужаса способности «Огненный ливень», а также увеличивает их урон на |cffffffff+4|cffced4da ед., запас маны на |cffffffff+100|cffced4da ед. и ускоряет восстановление маны.|n|nЗатрагивает: |cffa9c7deСтраж ужаса|cffced4da.|r"
+    },
+    {
+      "id": "R08R",
+      "field": "name1",
+      "expected": "|cffe4cfa3Дрессировка зверей|r"
+    },
+    {
+      "id": "R08R",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Дрессировка зверей|r (|cffffffffA|r)"
+    },
+    {
+      "id": "R08R",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон Ловчих Скверны на |cffffffff+4|cffced4da ед., запас здоровья на |cffffffff+75|cffced4da ед. и повышает их скорость боя на |cffffffff30%|cffced4da.|n|nЗатрагивает: |cffa9c7deЛовчий Скверны|cffced4da.|r"
+    },
+    {
+      "id": "R08S",
+      "field": "name1",
+      "expected": "|cffe4cfa3Мастерство устрашения|r"
+    },
+    {
+      "id": "R08S",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Мастерство устрашения|r (|cffffffffS|r)"
+    },
+    {
+      "id": "R08S",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Тюремщиков способности «Сон», а также увеличивает их урон на |cffffffff+4|cffced4da ед., запас маны на |cffffffff+100|cffced4da ед. и ускоряет восстановление маны.|n|nЗатрагивает: |cffa9c7deТюремщик|cffced4da.|r"
+    }
+  ]
+}

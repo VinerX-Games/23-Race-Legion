@@ -1,0 +1,293 @@
+{
+  "scope": "Даларан (Dalaran): категория 1 — Здания (14 зданий)",
+  "buildings_count": 14,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "h030",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17369,
+          "after": "|cffe4cfa3Волшебное Пристанище|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17370,
+          "after": "|cffe4cfa3Волшебное Пристанище|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31635,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Даларана. Обучает конструкторов и служит складом древесины.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deКонструктор|cffced4da: базовый строитель и рабочий.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУвеличение маны|cffced4da: увеличивает запас маны магов ценой здоровья.|n- |cffa9c7deПродолжительность жизни|cffced4da: увеличивает запас здоровья магов ценой маны.|n- |cffa9c7deУскоренное произношение заклинаний|cffced4da: повышает скорость атаки магов.|r"
+        }
+      ]
+    },
+    {
+      "id": "h031",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17371,
+          "after": "|cffe4cfa3Конденсатор Маны|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17372,
+          "after": "|cffe4cfa3Конденсатор Маны|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31636,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает войска Даларана запасом пищи и вырабатывает регулярный доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+20|cffced4da золота каждые |cffffffff25|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "h02V",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17367,
+          "after": "|cffe4cfa3Алтарь Волшебства|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17368,
+          "after": "|cffe4cfa3Алтарь Волшебства|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 2012,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Позволяет призывать и воскрешать героев Даларана.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВерховный маг|cffced4da: герой-маг стихии льда.|n- |cffa9c7deОгненный мастер|cffced4da: герой-маг разрушительного пламени.|n- |cffa9c7deМастер Тайной магии|cffced4da: герой-чародей тайной магии и телепортации.|r"
+        }
+      ]
+    },
+    {
+      "id": "h02W",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17229,
+          "after": "|cffe4cfa3Волшебная Библиотека|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17230,
+          "after": "|cffe4cfa3Волшебная Библиотека|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31633,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Центр высшего магического образования Даларана. Обучает заклинателей четырёх магических школ и исследует улучшения их мастерства.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПиромант|cffced4da: маг огня с заклинанием «Пламя феникса».|n- |cffa9c7deЧародей Льда|cffced4da: маг льда со способностью «Ледяная тюрьма».|n- |cffa9c7deАрканист|cffced4da: маг тайной энергии с заклинанием «Сверхновая».|n- |cffa9c7deМаг Бездны|cffced4da: темный чародей со способностью призыва порождений Бездны.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМагия Огня|cffced4da: открывает новые заклинания пиромантов.|n- |cffa9c7deМагия Льда|cffced4da: открывает новые заклинания чародеев льда.|n- |cffa9c7deТайная магия|cffced4da: открывает новые заклинания арканистов.|n- |cffa9c7deВзгляд в Бездну|cffced4da: открывает новые заклинания магов Бездны.|n- |cffa9c7deМагический страж|cffced4da: позволяет башням обнаруживать невидимых врагов.|r"
+        }
+      ]
+    },
+    {
+      "id": "h02X",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17231,
+          "after": "|cffe4cfa3Волшебная Оружейная|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17232,
+          "after": "|cffe4cfa3Волшебная Оружейная|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12957,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает боевых магов, защитников и магические конструкты Даларана.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПехотинец|cffced4da: стойкий мечник ближнего боя.|n- |cffa9c7deЗачарователь|cffced4da: универсальный маг, способный менять меч на посох.|n- |cffa9c7deЗаклинатель Света|cffced4da: священнослужитель с целительным тотемом и изгнанием.|n- |cffa9c7deМагический Эксперимент|cffced4da: свирепый конструкт с критическими ударами.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗащита|cffced4da: снижает урон пехотинцев от стрелковых атак.|n- |cffa9c7deМагический Щит|cffced4da: позволяет пехотинцам поглощать урон за счёт маны.|n- |cffa9c7deЗачарованное оружие|cffced4da: повышает скорость боя зачарователей.|n- |cffa9c7deПознания Света|cffced4da: увеличивает здоровье, ману и регенерацию заклинателей Света.|r"
+        }
+      ]
+    },
+    {
+      "id": "h02Y",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17233,
+          "after": "|cffe4cfa3Магическая кузня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17234,
+          "after": "|cffe4cfa3Магическая кузня|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31634,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Улучшает оружие, посохи, мантии и магическую защиту существ Даларана. Служит складом древесины.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deВолшебные Мечи|cffced4da: увеличивает урон пехотинцев и башен.|n- |cffa9c7deУсиление посоха|cffced4da: увеличивает урон атак магов дальнего боя.|n- |cffa9c7deНакидки|cffced4da: повышает броню магов и зачарователей.|n- |cffa9c7deЗащита огня|cffced4da: усиливает броню огненных созданий.|n- |cffa9c7deЗащита льда|cffced4da: усиливает броню ледяных созданий.|r"
+        }
+      ]
+    },
+    {
+      "id": "h034",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17240,
+          "after": "|cffe4cfa3Хранилище Маны|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17241,
+          "after": "|cffe4cfa3Хранилище Маны|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 30627,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Магическое сооружение первой ступени. Концентрирует запасы чародейской энергии и обеспечивает армию припасами.|n|nДаёт |cffffffff10|cffced4da ед. лимита пищи.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deХранилище Маны — уровень 2|cffced4da: расширяет резервуары маны и открывает глобальную ауру восполнения маны.|r"
+        }
+      ]
+    },
+    {
+      "id": "h035",
+      "hotkey": "T",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17242,
+          "after": "|cffe4cfa3Хранилище Маны|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17243,
+          "after": "|cffe4cfa3Хранилище Маны — уровень 2|r (|cffffffffT|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 30628,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Магическое сооружение второй ступени с расширенными резервуарами энергии.|n|nДаёт |cffffffff10|cffced4da ед. лимита пищи.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВосстановление маны|cffced4da: ускоряет регенерацию маны всех союзников по всей карте.|n- |cffa9c7deВосполнить ману|cffced4da: мгновенно восстанавливает запас маны выбранного союзника.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМагический Талисман|cffced4da: повышает скорость регенерации маны всех магов Даларана.|r"
+        }
+      ]
+    },
+    {
+      "id": "h036",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17244,
+          "after": "|cffe4cfa3Накопитель Маны|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17245,
+          "after": "|cffe4cfa3Накопитель Маны|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 30954,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Монументальный накопитель тайной магии. Аккумулирует колоссальные потоки чародейской силы и открывает высшие магические познания.|n|nДаёт |cffffffff10|cffced4da ед. лимита пищи.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deГлубокие познания|cffced4da: увеличивает максимальный запас маны всех магов Даларана.|r"
+        }
+      ]
+    },
+    {
+      "id": "h032",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17238,
+          "after": "|cffe4cfa3Магическая Башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17239,
+          "after": "|cffe4cfa3Магическая Башня|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12959,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное магическое сооружение. Атаки башни сжигают ману цели и наносят повышенный урон призванным существам.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПротиводействие|cffced4da: сжигает ману цели при каждом попадании и наносит дополнительный урон.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h037",
+      "hotkey": "T",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17246,
+          "after": "|cffe4cfa3Волшебная Темница|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17247,
+          "after": "|cffe4cfa3Волшебная Темница|r (|cffffffffT|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31638,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Специализированное хранилище опасных магических сущностей, аномалий и экспериментальных конструктов Даларана.|r"
+        }
+      ]
+    },
+    {
+      "id": "h038",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17248,
+          "after": "|cffe4cfa3Хранилище Артефактов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17249,
+          "after": "|cffe4cfa3Хранилище Артефактов|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31639,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Торговая лавка магических предметов. Предлагает могущественные артефакты и чародейские реликвии, созданные магами Даларана.|r"
+        }
+      ]
+    },
+    {
+      "id": "n063",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31593,
+          "after": "|cffe4cfa3Телепорт|r"
+        }
+      ]
+    },
+    {
+      "id": "h011",
+      "hotkey": "C",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 368,
+          "after": "|cffe4cfa3Верфь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 369,
+          "after": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 370,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Строит боевые корабли и исследует улучшения флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбстрел|cffced4da|n- |cffa9c7deДополнительные паруса|cffced4da|n- |cffa9c7deПочинка|cffced4da|n- |cffa9c7deОрудия флота|cffced4da|n- |cffa9c7deУкреплённый корпус|cffced4da.|r"
+        }
+      ]
+    }
+  ]
+}

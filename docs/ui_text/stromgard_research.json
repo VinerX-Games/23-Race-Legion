@@ -1,0 +1,462 @@
+{
+  "race": "Стромгард",
+  "category": "Исследования",
+  "researches_count": 20,
+  "researches": {
+    "R0D5": {
+      "levels": 1,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Профессиональная армия|r",
+          "tip": "|cffe4cfa3Профессиональная армия|r (|cffffffffQ|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Переводит армию королевства на регулярную основу. Увеличивает запас здоровья войск на |cffffffff20%|cffced4da, урон на |cffffffff+5|cffced4da ед. и скорость атаки на |cffffffff10%|cffced4da.|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deЗащитников|cffced4da, |cffa9c7deАрбалетчиков|cffced4da, |cffa9c7deРыцарей|cffced4da, |cffa9c7deОхотников на троллей|cffced4da, |cffa9c7deЖрецов|cffced4da и |cffa9c7deЗаклинателей|cffced4da.|n|n|cffe69a8dВнимание:|cffced4da взаимоисключает «Призывную армию».|r"
+        }
+      }
+    },
+    "R0D6": {
+      "levels": 1,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Призывная армия|r",
+          "tip": "|cffe4cfa3Призывная армия|r (|cffffffffQ|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Объявляет всеобщую мобилизацию. Позволяет казармам и магическим башням обучать сразу по |cffffffff2|cffced4da воина за цикл, но снижает их запас здоровья на |cffffffff75|cffced4da ед. и урон на |cffffffff3|cffced4da ед.|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deЗащитников|cffced4da, |cffa9c7deАрбалетчиков|cffced4da, |cffa9c7deРыцарей|cffced4da, |cffa9c7deОхотников на троллей|cffced4da, |cffa9c7deЖрецов|cffced4da и |cffa9c7deЗаклинателей|cffced4da.|n|n|cffe69a8dВнимание:|cffced4da взаимоисключает «Профессиональную армию».|r"
+        }
+      }
+    },
+    "R0DA": {
+      "levels": 6,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Железные мечи|r — уровень |cffffffff1|r",
+          "tip": "|cffe4cfa3Железные мечи|r — уровень |cffffffff1|r (|cffffffffQ|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя на |cffffffff1|cffced4da ед.|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deКапитанов|cffced4da, |cffa9c7deЗащитников|cffced4da, |cffa9c7deРыцарей|cffced4da, |cffa9c7deОполченцев|cffced4da и |cffa9c7deПаладинов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        "2": {
+          "name": "|cffe4cfa3Железные мечи|r — уровень |cffffffff2|r",
+          "tip": "|cffe4cfa3Железные мечи|r — уровень |cffffffff2|r (|cffffffffQ|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+2|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deКапитанов|cffced4da, |cffa9c7deЗащитников|cffced4da, |cffa9c7deРыцарей|cffced4da, |cffa9c7deОполченцев|cffced4da и |cffa9c7deПаладинов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        "3": {
+          "name": "|cffe4cfa3Стальные мечи|r — уровень |cffffffff3|r",
+          "tip": "|cffe4cfa3Стальные мечи|r — уровень |cffffffff3|r (|cffffffffQ|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+3|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deКапитанов|cffced4da, |cffa9c7deЗащитников|cffced4da, |cffa9c7deРыцарей|cffced4da, |cffa9c7deОполченцев|cffced4da и |cffa9c7deПаладинов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        "4": {
+          "name": "|cffe4cfa3Стальные мечи|r — уровень |cffffffff4|r",
+          "tip": "|cffe4cfa3Стальные мечи|r — уровень |cffffffff4|r (|cffffffffQ|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+4|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deКапитанов|cffced4da, |cffa9c7deЗащитников|cffced4da, |cffa9c7deРыцарей|cffced4da, |cffa9c7deОполченцев|cffced4da и |cffa9c7deПаладинов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        "5": {
+          "name": "|cffe4cfa3Мифриловые мечи|r — уровень |cffffffff5|r",
+          "tip": "|cffe4cfa3Мифриловые мечи|r — уровень |cffffffff5|r (|cffffffffQ|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+5|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deКапитанов|cffced4da, |cffa9c7deЗащитников|cffced4da, |cffa9c7deРыцарей|cffced4da, |cffa9c7deОполченцев|cffced4da и |cffa9c7deПаладинов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        "6": {
+          "name": "|cffe4cfa3Мифриловые мечи|r — уровень |cffffffff6|r",
+          "tip": "|cffe4cfa3Мифриловые мечи|r — уровень |cffffffff6|r (|cffffffffQ|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+6|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deКапитанов|cffced4da, |cffa9c7deЗащитников|cffced4da, |cffa9c7deРыцарей|cffced4da, |cffa9c7deОполченцев|cffced4da и |cffa9c7deПаладинов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      }
+    },
+    "R0DC": {
+      "levels": 6,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Железная броня|r — уровень |cffffffff1|r",
+          "tip": "|cffe4cfa3Железная броня|r — уровень |cffffffff1|r (|cffffffffA|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя на |cffffffff+1|cffced4da ед.|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deКапитанов|cffced4da, |cffa9c7deЗащитников|cffced4da, |cffa9c7deРыцарей|cffced4da, |cffa9c7deОполченцев|cffced4da и |cffa9c7deПаладинов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        "2": {
+          "name": "|cffe4cfa3Железная броня|r — уровень |cffffffff2|r",
+          "tip": "|cffe4cfa3Железная броня|r — уровень |cffffffff2|r (|cffffffffA|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя ещё на |cffffffff+1|cffced4da ед. (всего |cffffffff+2|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deКапитанов|cffced4da, |cffa9c7deЗащитников|cffced4da, |cffa9c7deРыцарей|cffced4da, |cffa9c7deОполченцев|cffced4da и |cffa9c7deПаладинов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        "3": {
+          "name": "|cffe4cfa3Стальная броня|r — уровень |cffffffff3|r",
+          "tip": "|cffe4cfa3Стальная броня|r — уровень |cffffffff3|r (|cffffffffA|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя ещё на |cffffffff+1|cffced4da ед. (всего |cffffffff+3|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deКапитанов|cffced4da, |cffa9c7deЗащитников|cffced4da, |cffa9c7deРыцарей|cffced4da, |cffa9c7deОполченцев|cffced4da и |cffa9c7deПаладинов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        "4": {
+          "name": "|cffe4cfa3Стальная броня|r — уровень |cffffffff4|r",
+          "tip": "|cffe4cfa3Стальная броня|r — уровень |cffffffff4|r (|cffffffffA|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя ещё на |cffffffff+1|cffced4da ед. (всего |cffffffff+4|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deКапитанов|cffced4da, |cffa9c7deЗащитников|cffced4da, |cffa9c7deРыцарей|cffced4da, |cffa9c7deОполченцев|cffced4da и |cffa9c7deПаладинов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        "5": {
+          "name": "|cffe4cfa3Мифриловая броня|r — уровень |cffffffff5|r",
+          "tip": "|cffe4cfa3Мифриловая броня|r — уровень |cffffffff5|r (|cffffffffA|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя ещё на |cffffffff+1|cffced4da ед. (всего |cffffffff+5|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deКапитанов|cffced4da, |cffa9c7deЗащитников|cffced4da, |cffa9c7deРыцарей|cffced4da, |cffa9c7deОполченцев|cffced4da и |cffa9c7deПаладинов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        "6": {
+          "name": "|cffe4cfa3Мифриловая броня|r — уровень |cffffffff6|r",
+          "tip": "|cffe4cfa3Мифриловая броня|r — уровень |cffffffff6|r (|cffffffffA|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя ещё на |cffffffff+1|cffced4da ед. (всего |cffffffff+6|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deКапитанов|cffced4da, |cffa9c7deЗащитников|cffced4da, |cffa9c7deРыцарей|cffced4da, |cffa9c7deОполченцев|cffced4da и |cffa9c7deПаладинов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      }
+    },
+    "R0DB": {
+      "levels": 6,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Черный порох|r — уровень |cffffffff1|r",
+          "tip": "|cffe4cfa3Черный порох|r — уровень |cffffffff1|r (|cffffffffW|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков и осадных орудий на |cffffffff1|cffced4da ед.|n|nЗатрагивает: |cffa9c7deАрбалетчиков|cffced4da, |cffa9c7deОхотников на троллей|cffced4da, |cffa9c7deКатапульты|cffced4da и |cffa9c7deБоевые танки|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        "2": {
+          "name": "|cffe4cfa3Черный порох|r — уровень |cffffffff2|r",
+          "tip": "|cffe4cfa3Черный порох|r — уровень |cffffffff2|r (|cffffffffW|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков и осадных орудий ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+2|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deАрбалетчиков|cffced4da, |cffa9c7deОхотников на троллей|cffced4da, |cffa9c7deКатапульты|cffced4da и |cffa9c7deБоевые танки|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        "3": {
+          "name": "|cffe4cfa3Черный порох|r — уровень |cffffffff3|r",
+          "tip": "|cffe4cfa3Черный порох|r — уровень |cffffffff3|r (|cffffffffW|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков и осадных орудий ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+3|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deАрбалетчиков|cffced4da, |cffa9c7deОхотников на троллей|cffced4da, |cffa9c7deКатапульты|cffced4da и |cffa9c7deБоевые танки|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        "4": {
+          "name": "|cffe4cfa3Черный порох|r — уровень |cffffffff4|r",
+          "tip": "|cffe4cfa3Черный порох|r — уровень |cffffffff4|r (|cffffffffW|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков и осадных орудий ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+4|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deАрбалетчиков|cffced4da, |cffa9c7deОхотников на троллей|cffced4da, |cffa9c7deКатапульты|cffced4da и |cffa9c7deБоевые танки|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        "5": {
+          "name": "|cffe4cfa3Черный порох|r — уровень |cffffffff5|r",
+          "tip": "|cffe4cfa3Черный порох|r — уровень |cffffffff5|r (|cffffffffW|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков и осадных орудий ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+5|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deАрбалетчиков|cffced4da, |cffa9c7deОхотников на троллей|cffced4da, |cffa9c7deКатапульты|cffced4da и |cffa9c7deБоевые танки|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        "6": {
+          "name": "|cffe4cfa3Черный порох|r — уровень |cffffffff6|r",
+          "tip": "|cffe4cfa3Черный порох|r — уровень |cffffffff6|r (|cffffffffW|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков и осадных орудий ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+6|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deАрбалетчиков|cffced4da, |cffa9c7deОхотников на троллей|cffced4da, |cffa9c7deКатапульты|cffced4da и |cffa9c7deБоевые танки|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      }
+    },
+    "R0DE": {
+      "levels": 6,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Клепаная кожа|r — уровень |cffffffff1|r",
+          "tip": "|cffe4cfa3Клепаная кожа|r — уровень |cffffffff1|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню стрелков и магов на |cffffffff+1|cffced4da ед.|n|nЗатрагивает: |cffa9c7deАрбалетчиков|cffced4da, |cffa9c7deОхотников на троллей|cffced4da, |cffa9c7deЖрецов|cffced4da и |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        "2": {
+          "name": "|cffe4cfa3Клепаная кожа|r — уровень |cffffffff2|r",
+          "tip": "|cffe4cfa3Клепаная кожа|r — уровень |cffffffff2|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню стрелков и магов ещё на |cffffffff+1|cffced4da ед. (всего |cffffffff+2|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deАрбалетчиков|cffced4da, |cffa9c7deОхотников на троллей|cffced4da, |cffa9c7deЖрецов|cffced4da и |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        "3": {
+          "name": "|cffe4cfa3Клепаная кожа|r — уровень |cffffffff3|r",
+          "tip": "|cffe4cfa3Клепаная кожа|r — уровень |cffffffff3|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню стрелков и магов ещё на |cffffffff+1|cffced4da ед. (всего |cffffffff+3|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deАрбалетчиков|cffced4da, |cffa9c7deОхотников на троллей|cffced4da, |cffa9c7deЖрецов|cffced4da и |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        "4": {
+          "name": "|cffe4cfa3Клепаная кожа|r — уровень |cffffffff4|r",
+          "tip": "|cffe4cfa3Клепаная кожа|r — уровень |cffffffff4|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню стрелков и магов ещё на |cffffffff+1|cffced4da ед. (всего |cffffffff+4|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deАрбалетчиков|cffced4da, |cffa9c7deОхотников на троллей|cffced4da, |cffa9c7deЖрецов|cffced4da и |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        "5": {
+          "name": "|cffe4cfa3Клепаная кожа|r — уровень |cffffffff5|r",
+          "tip": "|cffe4cfa3Клепаная кожа|r — уровень |cffffffff5|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню стрелков и магов ещё на |cffffffff+1|cffced4da ед. (всего |cffffffff+5|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deАрбалетчиков|cffced4da, |cffa9c7deОхотников на троллей|cffced4da, |cffa9c7deЖрецов|cffced4da и |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        "6": {
+          "name": "|cffe4cfa3Клепаная кожа|r — уровень |cffffffff6|r",
+          "tip": "|cffe4cfa3Клепаная кожа|r — уровень |cffffffff6|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню стрелков и магов ещё на |cffffffff+1|cffced4da ед. (всего |cffffffff+6|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deАрбалетчиков|cffced4da, |cffa9c7deОхотников на троллей|cffced4da, |cffa9c7deЖрецов|cffced4da и |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      }
+    },
+    "R0DD": {
+      "levels": 6,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Магическое оружие|r — уровень |cffffffff1|r",
+          "tip": "|cffe4cfa3Магическое оружие|r — уровень |cffffffff1|r (|cffffffffE|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон магических атак на |cffffffff1|cffced4da ед.|n|nЗатрагивает: |cffa9c7deЖрецов|cffced4da и |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        "2": {
+          "name": "|cffe4cfa3Магическое оружие|r — уровень |cffffffff2|r",
+          "tip": "|cffe4cfa3Магическое оружие|r — уровень |cffffffff2|r (|cffffffffE|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон магических атак ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+2|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deЖрецов|cffced4da и |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        "3": {
+          "name": "|cffe4cfa3Магическое оружие|r — уровень |cffffffff3|r",
+          "tip": "|cffe4cfa3Магическое оружие|r — уровень |cffffffff3|r (|cffffffffE|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон магических атак ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+3|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deЖрецов|cffced4da и |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        "4": {
+          "name": "|cffe4cfa3Магическое оружие|r — уровень |cffffffff4|r",
+          "tip": "|cffe4cfa3Магическое оружие|r — уровень |cffffffff4|r (|cffffffffE|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон магических атак ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+4|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deЖрецов|cffced4da и |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        "5": {
+          "name": "|cffe4cfa3Магическое оружие|r — уровень |cffffffff5|r",
+          "tip": "|cffe4cfa3Магическое оружие|r — уровень |cffffffff5|r (|cffffffffE|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон магических атак ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+5|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deЖрецов|cffced4da и |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        "6": {
+          "name": "|cffe4cfa3Магическое оружие|r — уровень |cffffffff6|r",
+          "tip": "|cffe4cfa3Магическое оружие|r — уровень |cffffffff6|r (|cffffffffE|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон магических атак ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+6|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deЖрецов|cffced4da и |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      }
+    },
+    "R0E2": {
+      "levels": 1,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Огненные стрелы|r",
+          "tip": "|cffe4cfa3Огненные стрелы|r (|cffffffffR|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Снаряжает арбалетчиков зажигательными болтами, позволяя использовать способность «Огненные стрелы».|n|nЗатрагивает: |cffa9c7deАрбалетчиков|cffced4da.|r"
+        }
+      }
+    },
+    "R0DJ": {
+      "levels": 1,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Защита|r",
+          "tip": "|cffe4cfa3Защита|r (|cffffffffZ|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает пехоту правильному построению со щитами, позволяя использовать способность «Защита».|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deКапитанов|cffced4da, |cffa9c7deАрбалетчиков|cffced4da.|r"
+        }
+      }
+    },
+    "R0DG": {
+      "levels": 1,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Выучка рыцарей|r",
+          "tip": "|cffe4cfa3Выучка рыцарей|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает боевых коней повышенной выносливости, увеличивая запас здоровья рыцарей на |cffffffff150|cffced4da ед.|n|nЗатрагивает: |cffa9c7deРыцарей|cffced4da.|r"
+        }
+      }
+    },
+    "R0DN": {
+      "levels": 3,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Тренировки Защитников|r — уровень |cffffffff1|r",
+          "tip": "|cffe4cfa3Тренировки Защитников|r — уровень |cffffffff1|r (|cffffffffD|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает боевые характеристики и показатели брони тяжёлой пехоты.|n|nЗатрагивает: |cffa9c7deЗащитников|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+        },
+        "2": {
+          "name": "|cffe4cfa3Тренировки Защитников|r — уровень |cffffffff2|r",
+          "tip": "|cffe4cfa3Тренировки Защитников|r — уровень |cffffffff2|r (|cffffffffD|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно улучшает боевые характеристики и показатели брони тяжёлой пехоты.|n|nЗатрагивает: |cffa9c7deЗащитников|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+        },
+        "3": {
+          "name": "|cffe4cfa3Специализация «Защита»|r — уровень |cffffffff3|r",
+          "tip": "|cffe4cfa3Специализация «Защита»|r — уровень |cffffffff3|r (|cffffffffA|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Завершает обучение рыцарей Света защитного направления, открывая наём и совершенствуя способности Паладинов специализации «Защита».|n|nЗатрагивает: |cffa9c7deПаладинов (Защита)|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+        }
+      }
+    },
+    "R0DL": {
+      "levels": 6,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Прочные топоры|r — уровень |cffffffff1|r",
+          "tip": "|cffe4cfa3Прочные топоры|r — уровень |cffffffff1|r (|cffffffffQ|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины на |cffffffff+5|cffced4da.|n|nЗатрагивает: |cffa9c7deРаботников|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        "2": {
+          "name": "|cffe4cfa3Прочные топоры|r — уровень |cffffffff2|r",
+          "tip": "|cffe4cfa3Прочные топоры|r — уровень |cffffffff2|r (|cffffffffQ|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины ещё на |cffffffff+5|cffced4da (всего |cffffffff+10|cffced4da).|n|nЗатрагивает: |cffa9c7deРаботников|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        "3": {
+          "name": "|cffe4cfa3Прочные топоры|r — уровень |cffffffff3|r",
+          "tip": "|cffe4cfa3Прочные топоры|r — уровень |cffffffff3|r (|cffffffffQ|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины ещё на |cffffffff+5|cffced4da (всего |cffffffff+15|cffced4da).|n|nЗатрагивает: |cffa9c7deРаботников|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        "4": {
+          "name": "|cffe4cfa3Прочные топоры|r — уровень |cffffffff4|r",
+          "tip": "|cffe4cfa3Прочные топоры|r — уровень |cffffffff4|r (|cffffffffQ|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины ещё на |cffffffff+5|cffced4da (всего |cffffffff+20|cffced4da).|n|nЗатрагивает: |cffa9c7deРаботников|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        "5": {
+          "name": "|cffe4cfa3Прочные топоры|r — уровень |cffffffff5|r",
+          "tip": "|cffe4cfa3Прочные топоры|r — уровень |cffffffff5|r (|cffffffffQ|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины ещё на |cffffffff+5|cffced4da (всего |cffffffff+25|cffced4da).|n|nЗатрагивает: |cffa9c7deРаботников|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        "6": {
+          "name": "|cffe4cfa3Прочные топоры|r — уровень |cffffffff6|r",
+          "tip": "|cffe4cfa3Прочные топоры|r — уровень |cffffffff6|r (|cffffffffQ|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины ещё на |cffffffff+5|cffced4da (всего |cffffffff+30|cffced4da).|n|nЗатрагивает: |cffa9c7deРаботников|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      }
+    },
+    "R0DM": {
+      "levels": 6,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Улучшенная кладка|r — уровень |cffffffff1|r",
+          "tip": "|cffe4cfa3Улучшенная кладка|r — уровень |cffffffff1|r (|cffffffffW|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню и увеличивает запас прочности всех построек королевства.|n|nЗатрагивает: |cffa9c7deВсе здания Стромгарда|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        "2": {
+          "name": "|cffe4cfa3Улучшенная кладка|r — уровень |cffffffff2|r",
+          "tip": "|cffe4cfa3Улучшенная кладка|r — уровень |cffffffff2|r (|cffffffffW|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню и увеличивает запас прочности всех построек королевства.|n|nЗатрагивает: |cffa9c7deВсе здания Стромгарда|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        "3": {
+          "name": "|cffe4cfa3Улучшенная кладка|r — уровень |cffffffff3|r",
+          "tip": "|cffe4cfa3Улучшенная кладка|r — уровень |cffffffff3|r (|cffffffffW|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню и увеличивает запас прочности всех построек королевства.|n|nЗатрагивает: |cffa9c7deВсе здания Стромгарда|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        "4": {
+          "name": "|cffe4cfa3Улучшенная кладка|r — уровень |cffffffff4|r",
+          "tip": "|cffe4cfa3Улучшенная кладка|r — уровень |cffffffff4|r (|cffffffffW|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню и увеличивает запас прочности всех построек королевства.|n|nЗатрагивает: |cffa9c7deВсе здания Стромгарда|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        "5": {
+          "name": "|cffe4cfa3Улучшенная кладка|r — уровень |cffffffff5|r",
+          "tip": "|cffe4cfa3Улучшенная кладка|r — уровень |cffffffff5|r (|cffffffffW|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню и увеличивает запас прочности всех построек королевства.|n|nЗатрагивает: |cffa9c7deВсе здания Стромгарда|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        "6": {
+          "name": "|cffe4cfa3Улучшенная кладка|r — уровень |cffffffff6|r",
+          "tip": "|cffe4cfa3Улучшенная кладка|r — уровень |cffffffff6|r (|cffffffffW|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню и увеличивает запас прочности всех построек королевства.|n|nЗатрагивает: |cffa9c7deВсе здания Стромгарда|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      }
+    },
+    "R0DH": {
+      "levels": 1,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Зачарованные мечи|r",
+          "tip": "|cffe4cfa3Зачарованные мечи|r (|cffffffffA|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Накладывает магические чары на клинки воинов передовой, увеличивая их урон в ближнем бою на |cffffffff10|cffced4da ед.|n|nЗатрагивает: |cffa9c7deПехотинцев|cffced4da, |cffa9c7deКапитанов|cffced4da.|r"
+        }
+      }
+    },
+    "R0DI": {
+      "levels": 6,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Посвящение жрецов|r — уровень |cffffffff1|r",
+          "tip": "|cffe4cfa3Посвящение жрецов|r — уровень |cffffffff1|r (|cffffffffA|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья жрецов на |cffffffff40|cffced4da ед., запас маны на |cffffffff100|cffced4da ед., ускоряет регенерацию маны и обучает заклинанию «Рассеивание заклинаний».|n|nЗатрагивает: |cffa9c7deЖрецов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        "2": {
+          "name": "|cffe4cfa3Посвящение жрецов|r — уровень |cffffffff2|r",
+          "tip": "|cffe4cfa3Посвящение жрецов|r — уровень |cffffffff2|r (|cffffffffA|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает запас здоровья и маны жрецов, а также ускоряет её регенерацию.|n|nЗатрагивает: |cffa9c7deЖрецов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        "3": {
+          "name": "|cffe4cfa3Мастерство жрецов|r — уровень |cffffffff3|r",
+          "tip": "|cffe4cfa3Мастерство жрецов|r — уровень |cffffffff3|r (|cffffffffA|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья жрецов ещё на |cffffffff60|cffced4da ед., запас маны на |cffffffff100|cffced4da ед., ускоряет регенерацию маны и обучает заклинанию «Внутренний огонь».|n|nЗатрагивает: |cffa9c7deЖрецов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        "4": {
+          "name": "|cffe4cfa3Мастерство жрецов|r — уровень |cffffffff4|r",
+          "tip": "|cffe4cfa3Мастерство жрецов|r — уровень |cffffffff4|r (|cffffffffA|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает запас здоровья и маны жрецов, а также ускоряет её регенерацию.|n|nЗатрагивает: |cffa9c7deЖрецов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        "5": {
+          "name": "|cffe4cfa3Высшее мастерство жрецов|r — уровень |cffffffff5|r",
+          "tip": "|cffe4cfa3Высшее мастерство жрецов|r — уровень |cffffffff5|r (|cffffffffA|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает запас здоровья и маны жрецов, а также ускоряет её регенерацию.|n|nЗатрагивает: |cffa9c7deЖрецов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        "6": {
+          "name": "|cffe4cfa3Высшее мастерство жрецов|r — уровень |cffffffff6|r",
+          "tip": "|cffe4cfa3Высшее мастерство жрецов|r — уровень |cffffffff6|r (|cffffffffA|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Доводит магические способности жрецов до совершенства, максимально увеличивая здоровье, запас и регенерацию маны.|n|nЗатрагивает: |cffa9c7deЖрецов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      }
+    },
+    "R0DK": {
+      "levels": 6,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Посвящение заклинателей|r — уровень |cffffffff1|r",
+          "tip": "|cffe4cfa3Посвящение заклинателей|r — уровень |cffffffff1|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья заклинателей на |cffffffff40|cffced4da ед., запас маны на |cffffffff100|cffced4da ед., ускоряет регенерацию маны и обучает заклинанию «Огненная стрела».|n|nЗатрагивает: |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        "2": {
+          "name": "|cffe4cfa3Посвящение заклинателей|r — уровень |cffffffff2|r",
+          "tip": "|cffe4cfa3Посвящение заклинателей|r — уровень |cffffffff2|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает запас здоровья и маны заклинателей, а также ускоряет её регенерацию.|n|nЗатрагивает: |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        "3": {
+          "name": "|cffe4cfa3Мастерство заклинателей|r — уровень |cffffffff3|r",
+          "tip": "|cffe4cfa3Мастерство заклинателей|r — уровень |cffffffff3|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья заклинателей ещё на |cffffffff60|cffced4da ед., запас маны на |cffffffff100|cffced4da ед., ускоряет регенерацию маны и обучает заклинанию «Разъедающий огонь».|n|nЗатрагивает: |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        "4": {
+          "name": "|cffe4cfa3Мастерство заклинателей|r — уровень |cffffffff4|r",
+          "tip": "|cffe4cfa3Мастерство заклинателей|r — уровень |cffffffff4|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает запас здоровья и маны заклинателей, а также ускоряет её регенерацию.|n|nЗатрагивает: |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        "5": {
+          "name": "|cffe4cfa3Высшее мастерство заклинателей|r — уровень |cffffffff5|r",
+          "tip": "|cffe4cfa3Высшее мастерство заклинателей|r — уровень |cffffffff5|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает запас здоровья и маны заклинателей, а также ускоряет её регенерацию.|n|nЗатрагивает: |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        "6": {
+          "name": "|cffe4cfa3Высшее мастерство заклинателей|r — уровень |cffffffff6|r",
+          "tip": "|cffe4cfa3Высшее мастерство заклинателей|r — уровень |cffffffff6|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Доводит магические способности заклинателей до совершенства, максимально увеличивая здоровье, запас и регенерацию маны, и обучая заклинанию «Проклятие».|n|nЗатрагивает: |cffa9c7deЗаклинателей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      }
+    },
+    "R0H1": {
+      "levels": 1,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Шрапнель|r",
+          "tip": "|cffe4cfa3Шрапнель|r (|cffffffffE|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Снаряжает охотников на троллей осколочными боеприпасами, увеличивая их урон по небронированным целям и целям со средней бронёй.|n|nЗатрагивает: |cffa9c7deОхотников на троллей|cffced4da.|r"
+        }
+      }
+    },
+    "R0H2": {
+      "levels": 1,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Длинноствольные мушкеты|r",
+          "tip": "|cffe4cfa3Длинноствольные мушкеты|r (|cffffffffX|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Удлиняет стволы стрелкового оружия, увеличивая дальность атаки стрелков на |cffffffff100|cffced4da.|n|nЗатрагивает: |cffa9c7deАрбалетчиков|cffced4da, |cffa9c7deОхотников на троллей|cffced4da.|r"
+        }
+      }
+    },
+    "R0DO": {
+      "levels": 3,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Специализация «Свет»|r — уровень |cffffffff1|r",
+          "tip": "|cffe4cfa3Специализация «Свет»|r — уровень |cffffffff1|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает паладинов путям священного Света, открывая наём и совершенствуя целительные способности паладинов и жрецов.|n|nЗатрагивает: |cffa9c7deПаладинов (Свет)|cffced4da, |cffa9c7deЖрецов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+        },
+        "2": {
+          "name": "|cffe4cfa3Специализация «Свет»|r — уровень |cffffffff2|r",
+          "tip": "|cffe4cfa3Специализация «Свет»|r — уровень |cffffffff2|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает священную ауру и запас маны паладинов Света и жрецов.|n|nЗатрагивает: |cffa9c7deПаладинов (Свет)|cffced4da, |cffa9c7deЖрецов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+        },
+        "3": {
+          "name": "|cffe4cfa3Специализация «Свет»|r — уровень |cffffffff3|r",
+          "tip": "|cffe4cfa3Специализация «Свет»|r — уровень |cffffffff3|r (|cffffffffS|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Доводит мастерство исцеления паладинов Света до совершенства, максимально увеличивая исцеление и запас здоровья.|n|nЗатрагивает: |cffa9c7deПаладинов (Свет)|cffced4da, |cffa9c7deЖрецов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+        }
+      }
+    },
+    "R0DP": {
+      "levels": 3,
+      "levels_data": {
+        "1": {
+          "name": "|cffe4cfa3Специализация «Возмездие»|r — уровень |cffffffff1|r",
+          "tip": "|cffe4cfa3Специализация «Возмездие»|r — уровень |cffffffff1|r (|cffffffffR|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает паладинов путям священного Возмездия, открывая наём и усиливая боевой урон и карающие заклинания паладинов.|n|nЗатрагивает: |cffa9c7deПаладинов (Возмездие)|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+        },
+        "2": {
+          "name": "|cffe4cfa3Специализация «Возмездие»|r — уровень |cffffffff2|r",
+          "tip": "|cffe4cfa3Специализация «Возмездие»|r — уровень |cffffffff2|r (|cffffffffR|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает командирскую ауру и боевой урон паладинов Возмездия.|n|nЗатрагивает: |cffa9c7deПаладинов (Возмездие)|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+        },
+        "3": {
+          "name": "|cffe4cfa3Специализация «Возмездие»|r — уровень |cffffffff3|r",
+          "tip": "|cffe4cfa3Специализация «Возмездие»|r — уровень |cffffffff3|r (|cffffffffR|r)",
+          "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Доводит мастерство Возмездия паладинов до совершенства, максимально увеличивая боевую мощь и силу освящённого оружия.|n|nЗатрагивает: |cffa9c7deПаладинов (Возмездие)|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+        }
+      }
+    }
+  }
+}

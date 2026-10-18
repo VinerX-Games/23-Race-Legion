@@ -1,0 +1,3598 @@
+{
+  "selection": {
+    "id": "A0HR",
+    "name": "TRIGSTR_38919",
+    "name_val": "|cffe6beaaСоюз Бандитов|r",
+    "tip1": "TRIGSTR_38920",
+    "tip1_val": "|cffe6beaaСоюз Бандитов|r",
+    "ubertip1": "TRIGSTR_35193",
+    "ubertip1_val": "|cff7dc87dСоздатель расы:|r |cff9bff0fVinerX|r|n|cff7dc87dСложность:|r |cffffbe37Средняя|r|n|cff7dc87dПериод:|r |cffffde19WoW Vanila|r|n|cff7dc87dОписание:|r |cffe6beaaСоюз бандитов|r - фракция, состоящая как ни странно, из воров, убийц, грабителей, киллеров, пиратов и тому подобных личностей. По отдельности они слабы, но объединившись, смогут стать значительной силой на азероте... Если не перегрызуться между собой.",
+    "hotkey": "TRIGSTR_16489",
+    "hotkey_val": "Z"
+  },
+  "buildings": {
+    "h007": {
+      "id": "h007",
+      "name": "TRIGSTR_7514",
+      "name_val": "|cffe6beaaЛагерь воров|r",
+      "tip": "TRIGSTR_9813",
+      "tip_val": "Построить |cffe6beaaЛагерь воров|r",
+      "ubertip": "TRIGSTR_10113",
+      "ubertip_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r|n|nБазовое здание. Обучает каменщиков и хранит добытые ресурсы. Можно улучшить, чтобы получить доступ к новым зданиям и типам войск.",
+      "hotkey": "TRIGSTR_727",
+      "hotkey_val": "Q",
+      "trains": "h002",
+      "researches": "R00I",
+      "upgrade": "h008",
+      "upgrades": "R00V",
+      "abillist": "A0LJ,A0LI,A0IQ,Argl",
+      "targs1": null,
+      "weaptype1": null
+    },
+    "h008": {
+      "id": "h008",
+      "name": "TRIGSTR_10652",
+      "name_val": "|cffe6beaaОплот воров|r",
+      "tip": "TRIGSTR_10682",
+      "tip_val": "Улучшить до |cffe6beaaОплота воров|r",
+      "ubertip": "TRIGSTR_15424",
+      "ubertip_val": "|cff7dc87dВремя улучшения:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск.",
+      "hotkey": "TRIGSTR_1713",
+      "hotkey_val": "Z",
+      "trains": "h002",
+      "researches": "R00I",
+      "upgrade": "h009",
+      "upgrades": "R00V",
+      "abillist": "A0LJ,A0LI,A0IQ,Argl",
+      "targs1": null,
+      "weaptype1": null
+    },
+    "h009": {
+      "id": "h009",
+      "name": "TRIGSTR_11712",
+      "name_val": "|cffe6beaaБастион воров|r",
+      "tip": "TRIGSTR_11713",
+      "tip_val": "Улучшить до |cffe6beaaБастиона воров|r",
+      "ubertip": "TRIGSTR_28196",
+      "ubertip_val": "|cff7dc87dВремя улучшения:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск.",
+      "hotkey": "TRIGSTR_2268",
+      "hotkey_val": "Z",
+      "trains": "h002",
+      "researches": "R0BS,R00I",
+      "upgrade": null,
+      "upgrades": "R00V",
+      "abillist": "A0LJ,A0LI,A0IQ,Argl",
+      "targs1": null,
+      "weaptype1": null
+    },
+    "h00A": {
+      "id": "h00A",
+      "name": "TRIGSTR_12087",
+      "name_val": "|cffe6beaaИзбушка|r",
+      "tip": "TRIGSTR_40036",
+      "tip_val": "Построить |cffe6beaaИзбушку|r",
+      "ubertip": "TRIGSTR_31606",
+      "ubertip_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.\n\n|cffffff00Приносит 20 инкома|r",
+      "hotkey": "TRIGSTR_1051",
+      "hotkey_val": "A",
+      "trains": null,
+      "researches": null,
+      "upgrade": null,
+      "upgrades": "R00V",
+      "abillist": null,
+      "targs1": null,
+      "weaptype1": null
+    },
+    "h00B": {
+      "id": "h00B",
+      "name": "TRIGSTR_10685",
+      "name_val": "|cffe6beaaИмповизированные казармы|r",
+      "tip": "TRIGSTR_10686",
+      "tip_val": "Построить |cffe6beaaИмпровизированные казармы|r",
+      "ubertip": "TRIGSTR_9971",
+      "ubertip_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa 40 сек.|r|n|nСляпанное из непойми чего здание для подготовки базовых войск.",
+      "hotkey": "TRIGSTR_811",
+      "hotkey_val": "W",
+      "trains": "h006,h005,n002,n004,h00Q,h003,n000,o00C",
+      "researches": null,
+      "upgrade": null,
+      "upgrades": "R00V",
+      "abillist": null,
+      "targs1": null,
+      "weaptype1": null
+    },
+    "h00O": {
+      "id": "h00O",
+      "name": "TRIGSTR_10690",
+      "name_val": "|cffe6beaaЧерная академия|r",
+      "tip": "TRIGSTR_10870",
+      "tip_val": "Построить |cffe6beaaЧерную академию|r",
+      "ubertip": "TRIGSTR_10141",
+      "ubertip_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa 65 сек.|r|n|nЗдание для подготовки магических войск.",
+      "hotkey": "TRIGSTR_3210",
+      "hotkey_val": "F",
+      "trains": "h02B,h00U,h00S,h02A,h00P,h029",
+      "researches": null,
+      "upgrade": null,
+      "upgrades": "R00V",
+      "abillist": null,
+      "targs1": null,
+      "weaptype1": null
+    },
+    "h01V": {
+      "id": "h01V",
+      "name": "TRIGSTR_11172",
+      "name_val": "|cffe6beaaИмповизированное посольство|r",
+      "tip": "TRIGSTR_12788",
+      "tip_val": "Построить |cffe6beaaИпровизированное посольство|r",
+      "ubertip": "TRIGSTR_12671",
+      "ubertip_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa 55 сек.|r|n|nЗдание, в котором союз бандитов привлекает к себе наиболее влиятельные группировки.",
+      "hotkey": "TRIGSTR_2383",
+      "hotkey_val": "D",
+      "trains": "h02U,h02T,h02R,h02S,h02Q",
+      "researches": "R00D,R00A,R00B,R00E,R00F,R00C",
+      "upgrade": null,
+      "upgrades": "R00V",
+      "abillist": null,
+      "targs1": null,
+      "weaptype1": null
+    },
+    "h01W": {
+      "id": "h01W",
+      "name": "TRIGSTR_11531",
+      "name_val": "|cffe6beaaПосольство|r",
+      "tip": "TRIGSTR_11532",
+      "tip_val": "Построить |cffe6beaaПосольство|r",
+      "ubertip": "TRIGSTR_15365",
+      "ubertip_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa 70 сек.|r|n|nМесто, в котором нанимаются воители из привлеченных в союз группировок.",
+      "hotkey": "B",
+      "hotkey_val": "B",
+      "trains": "h003,h005,h006,h00Q",
+      "researches": "Rhde,Rhan,Rhri,Rhsb",
+      "upgrade": null,
+      "upgrades": "R00V",
+      "abillist": null,
+      "targs1": null,
+      "weaptype1": null
+    },
+    "h03O": {
+      "id": "h03O",
+      "name": "TRIGSTR_11568",
+      "name_val": "|cffe6beaaКузница|r",
+      "tip": "TRIGSTR_11550",
+      "tip_val": "Построить |cffe6beaaКузницу|r",
+      "ubertip": "TRIGSTR_15421",
+      "ubertip_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa 70 сек.|r|n|nПозволяет улучшать доспехи, оружие и порох.",
+      "hotkey": "TRIGSTR_801",
+      "hotkey_val": "R",
+      "trains": null,
+      "researches": "R00X,R00L,R00M,R00N,R00J,R00W,R00K",
+      "upgrade": null,
+      "upgrades": "R00V",
+      "abillist": null,
+      "targs1": null,
+      "weaptype1": null
+    },
+    "h03P": {
+      "id": "h03P",
+      "name": "TRIGSTR_13682",
+      "name_val": "|cffe6beaaЛесопилка|r",
+      "tip": "TRIGSTR_13683",
+      "tip_val": "Построить |cffe6beaaЛесопилку|r",
+      "ubertip": "TRIGSTR_15422",
+      "ubertip_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa 60 сек.|r|n|nХранит добытую древесину. |nДает доступ к новым технологиям добычи древесины и строительства.",
+      "hotkey": "TRIGSTR_1853",
+      "hotkey_val": "E",
+      "trains": null,
+      "researches": "R00V,R00U",
+      "upgrade": null,
+      "upgrades": "R00V",
+      "abillist": "Abds,Arlm",
+      "targs1": null,
+      "weaptype1": null
+    },
+    "h03Q": {
+      "id": "h03Q",
+      "name": "TRIGSTR_13654",
+      "name_val": "|cffe6beaaХилая башня|r",
+      "tip": "TRIGSTR_13655",
+      "tip_val": "Построить |cffe6beaaХилую башню|r",
+      "ubertip": "TRIGSTR_15423",
+      "ubertip_val": "|cff7dc87dВремя улучшения:|r |cffaaf0aa 30 сек.|r|n|nБазовое оборонительное сооружение. ",
+      "hotkey": "TRIGSTR_4752",
+      "hotkey_val": "Z",
+      "trains": null,
+      "researches": null,
+      "upgrade": null,
+      "upgrades": "R00J,R00V",
+      "abillist": null,
+      "targs1": "ground,structure,debris,air,item,ward",
+      "weaptype1": null
+    },
+    "h03R": {
+      "id": "h03R",
+      "name": "TRIGSTR_1320",
+      "name_val": "Верфь",
+      "tip": "TRIGSTR_1321",
+      "tip_val": "Построить верфь",
+      "ubertip": "TRIGSTR_1322",
+      "ubertip_val": "Строит транспорты, фрегаты и линкоры.",
+      "hotkey": "TRIGSTR_2546",
+      "hotkey_val": "C",
+      "trains": "h03K,h03L,h00X,h00Y,h00Z",
+      "researches": "R005,R006,R007,R002,R003",
+      "upgrade": null,
+      "upgrades": null,
+      "abillist": "A15N",
+      "targs1": null,
+      "weaptype1": null
+    },
+    "h051": {
+      "id": "h051",
+      "name": "TRIGSTR_13675",
+      "name_val": "|cffe6beaaАлтарь воров|r",
+      "tip": "TRIGSTR_13676",
+      "tip_val": "Построить |cffe6beaaАлтарь воров|r",
+      "ubertip": "TRIGSTR_15425",
+      "ubertip_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa60 сек.|r|n|nСооружение позволяющее призывать новых и воскрешать павших героев.",
+      "hotkey": "TRIGSTR_1201",
+      "hotkey_val": "S",
+      "trains": "H03S,H047,H048",
+      "researches": null,
+      "upgrade": null,
+      "upgrades": "R00V",
+      "abillist": null,
+      "targs1": null,
+      "weaptype1": null
+    },
+    "h07G": {
+      "id": "h07G",
+      "name": "TRIGSTR_25595",
+      "name_val": "|cffe6beaaХилая башня|r",
+      "tip": "TRIGSTR_25599",
+      "tip_val": "Построить |cffe6beaaХилую башню|r",
+      "ubertip": "TRIGSTR_15426",
+      "ubertip_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa30 сек.|r|n|nЗдание, которое далее можно будет улучшить до оборонительного.",
+      "hotkey": "TRIGSTR_9250",
+      "hotkey_val": "Z",
+      "trains": null,
+      "researches": null,
+      "upgrade": "h0DH,h03Q,h0DG,h0DF",
+      "upgrades": "R00J,R00V",
+      "abillist": null,
+      "targs1": "ground,structure,debris,air,item,ward",
+      "weaptype1": null
+    },
+    "h0DF": {
+      "id": "h0DF",
+      "name": "TRIGSTR_13677",
+      "name_val": "|cffe6beaaБашня ТК Хитрой Шестеренки|r",
+      "tip": "TRIGSTR_13678",
+      "tip_val": "Улучшить до |cffe6beaaБашни ТК Хитрой Шестеренки|r",
+      "ubertip": "TRIGSTR_15427",
+      "ubertip_val": "|cff7dc87dВремя улучшения:|r |cffaaf0aa30 сек.|r|n|nБазовое оборонительное сооружение. Большая перезарядка, большой урон.",
+      "hotkey": "TRIGSTR_1484",
+      "hotkey_val": "V",
+      "trains": null,
+      "researches": null,
+      "upgrade": null,
+      "upgrades": "R00J,R00V",
+      "abillist": null,
+      "targs1": "air,debris,ground,item,structure,ward",
+      "weaptype1": null
+    },
+    "h0DG": {
+      "id": "h0DG",
+      "name": "TRIGSTR_13679",
+      "name_val": "|cffe6beaaБашня ТК Трюмных вод|r",
+      "tip": "TRIGSTR_13680",
+      "tip_val": "Улучшить до |cffe6beaaБашни ТК Трюмных вод|r",
+      "ubertip": "TRIGSTR_15428",
+      "ubertip_val": "|cff7dc87dВремя улучшени: |cffaaf0aa30 сек.|r|n|nБазовое оборонительное сооружение. Малая перезарядка, малый урон.",
+      "hotkey": "TRIGSTR_6233",
+      "hotkey_val": "C",
+      "trains": null,
+      "researches": null,
+      "upgrade": null,
+      "upgrades": "R00J,R00V",
+      "abillist": null,
+      "targs1": "air,debris,ground,item,structure,ward",
+      "weaptype1": null
+    },
+    "h0DH": {
+      "id": "h0DH",
+      "name": "TRIGSTR_40042",
+      "name_val": "|cffe6beaaХилая магическая башня|r",
+      "tip": "TRIGSTR_40101",
+      "tip_val": "Улучшить до |cffe6beaaХилой магической башни|r",
+      "ubertip": "TRIGSTR_7058",
+      "ubertip_val": "Базовое оборонительное сооружение. ",
+      "hotkey": "TRIGSTR_3213",
+      "hotkey_val": "X",
+      "trains": null,
+      "researches": null,
+      "upgrade": null,
+      "upgrades": "R00V,R00X",
+      "abillist": "Afbt",
+      "targs1": "air,debris,ground,item,organic,structure,ward",
+      "weaptype1": null
+    }
+  },
+  "heroes": {
+    "H03S": {
+      "id": "H03S",
+      "name": "TRIGSTR_13657",
+      "name_val": "|cffe6beaaПсарь|r",
+      "propernames": "TRIGSTR_1417",
+      "propernames_val": "Виртус Жестокий,Матиас Злой,Винцерт Гончий,Торас Сердитый",
+      "tip": "TRIGSTR_13662",
+      "tip_val": "Призвать |cffe6beaaПсаря|r",
+      "ubertip": "TRIGSTR_20022",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный|r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|nГерой, использующий своих собак в качестве полноценных бойцов.",
+      "hotkey": "TRIGSTR_424",
+      "hotkey_val": "X",
+      "heroabils": "A01J,A01D,A01H,Aamk,A01I",
+      "targs1": "ground,structure,debris,item,ward",
+      "weaptype1": "MetalHeavyBash"
+    },
+    "H047": {
+      "id": "H047",
+      "name": "TRIGSTR_13666",
+      "name_val": "|cffe6beaaЧерный маг|r",
+      "propernames": "Тенн Огнетворец,Нилас Чаротворец,Андромат,Шеал Заклинатель Света,Аран Чародей,Манат Воспеватель Магии,Ландазар,Дорил Магический Источник,Перил Заклинатель,Рекс Колдун,Фордред Аран,Далар Ткач Рассвета,Келен Искатель",
+      "propernames_val": "Тенн Огнетворец,Нилас Чаротворец,Андромат,Шеал Заклинатель Света,Аран Чародей,Манат Воспеватель Магии,Ландазар,Дорил Магический Источник,Перил Заклинатель,Рекс Колдун,Фордред Аран,Далар Ткач Рассвета,Келен Искатель",
+      "tip": "TRIGSTR_13669",
+      "tip_val": "Призвать |cffe6beaaЧерного мага|r",
+      "ubertip": "TRIGSTR_20030",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aa |r|nГерой-мистик, мастер дальнего боя, использующий запрещенные заклинания на благо союза.",
+      "hotkey": "TRIGSTR_4774",
+      "hotkey_val": "Z",
+      "heroabils": "A023,ANrf,AHab,ANlm,Aamk",
+      "targs1": "ground,structure,debris,air,item,ward",
+      "weaptype1": null
+    },
+    "H048": {
+      "id": "H048",
+      "name": "TRIGSTR_13671",
+      "name_val": "|cffe6beaaВоевода|r",
+      "propernames": "Гранис Темный Молот,Йорн Искупитель,Сейдж Правдивый,Малак Мститель,Гавинрад Лютый,Морлун Могучий,Агаманд Заступник,Балладор Пресветлый,Манадар Целитель,Занн Защитник,Ариус Искатель,Ауррис Чистый,Карнвильд Искатель,Бузан Бесстрашный",
+      "propernames_val": "Гранис Темный Молот,Йорн Искупитель,Сейдж Правдивый,Малак Мститель,Гавинрад Лютый,Морлун Могучий,Агаманд Заступник,Балладор Пресветлый,Манадар Целитель,Занн Защитник,Ариус Искатель,Ауррис Чистый,Карнвильд Искатель,Бузан Бесстрашный",
+      "tip": "TRIGSTR_13673",
+      "tip_val": "Призвать |cffe6beaaВоеводу|r",
+      "ubertip": "TRIGSTR_20023",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|nГерой-всадник, возглавляющий армию бандитов, берущий все риски на себя и наносящий урон по большому количеству войск врага.",
+      "hotkey": "TRIGSTR_3108",
+      "hotkey_val": "C",
+      "heroabils": "A0WV,Aamk,A026,A028,A029",
+      "targs1": "ground,structure,debris,item,ward",
+      "weaptype1": "MetalHeavyBash"
+    }
+  },
+  "units": {
+    "h002": {
+      "id": "h002",
+      "name": "TRIGSTR_11620",
+      "name_val": "|cffe6beaaКаменщик|r",
+      "tip": "TRIGSTR_11621",
+      "tip_val": "Обучить |cffe6beaaКаменщика|r",
+      "ubertip": "TRIGSTR_9737",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa15 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nБазовый рабочий союза бандитов. Хлеб давать регулярно, иначе устроит бунт. Древисину собирает плохо.",
+      "hotkey": "TRIGSTR_638",
+      "hotkey_val": "Q",
+      "abillist": "A0I3,A00M,ANha,Ahrp",
+      "upgrades": "R00U",
+      "targs1": "ground,structure,debris,item,ward",
+      "weaptype1": "MetalLightChop"
+    },
+    "h003": {
+      "id": "h003",
+      "name": "TRIGSTR_13681",
+      "name_val": "|cffe6beaaРядовой бандит|r",
+      "tip": "TRIGSTR_11634",
+      "tip_val": "Обучить |cffe6beaaРядового бандита|r",
+      "ubertip": "TRIGSTR_11167",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa16 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nБоец, чуть лучше экипированный чем крестьянин с вилами.",
+      "hotkey": "TRIGSTR_639",
+      "hotkey_val": "Q",
+      "abillist": "A00M,A000",
+      "upgrades": "R00L,R00M",
+      "targs1": "ground,structure,debris,item,ward",
+      "weaptype1": "MetalMediumSlice"
+    },
+    "h005": {
+      "id": "h005",
+      "name": "TRIGSTR_11703",
+      "name_val": "|cffe6beaaОпытный бандит|r",
+      "tip": "TRIGSTR_22460",
+      "tip_val": "Обучить |cffe6beaaЛегендарного бандита|r",
+      "ubertip": "TRIGSTR_20161",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nБоец, способный принять основной удар противника.",
+      "hotkey": "TRIGSTR_1050",
+      "hotkey_val": "A",
+      "abillist": "A00L,A00M,A01A",
+      "upgrades": "R00L,R00M",
+      "targs1": "ground,structure,debris,item,ward",
+      "weaptype1": "MetalMediumSlice"
+    },
+    "h006": {
+      "id": "h006",
+      "name": "TRIGSTR_11707",
+      "name_val": "|cffe6beaaЛегендарный бандит|r",
+      "tip": "TRIGSTR_22503",
+      "tip_val": "Обучить |cffe6beaaЛегендарногой бандита|r",
+      "ubertip": "TRIGSTR_12747",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nВетеран-бандит, знающий много трюков, чтобы победить своих врагов.",
+      "hotkey": "TRIGSTR_1691",
+      "hotkey_val": "Z",
+      "abillist": "A00P,A01B,A00L,A00M",
+      "upgrades": "R0HP,R00L,R00M",
+      "targs1": "ground,structure,debris,item,ward",
+      "weaptype1": "MetalMediumSlice"
+    },
+    "h00P": {
+      "id": "h00P",
+      "name": "TRIGSTR_12453",
+      "name_val": "|cffe6beaaРядовой колдун|r",
+      "tip": "TRIGSTR_12452",
+      "tip_val": "Обучить |cffe6beaaРядового колдуна|r",
+      "ubertip": "TRIGSTR_14874",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa24 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|nМаг, только недавно начавший использовать запретные заклинания в своих целях.",
+      "hotkey": "TRIGSTR_841",
+      "hotkey_val": "W",
+      "abillist": "A00M,A000,A013",
+      "upgrades": "R00X,R00K,R00N",
+      "targs1": "ground,structure,debris,air,item,ward",
+      "weaptype1": null
+    },
+    "h00Q": {
+      "id": "h00Q",
+      "name": "TRIGSTR_12460",
+      "name_val": "|cffe6beaaАтаман|r",
+      "tip": "TRIGSTR_12501",
+      "tip_val": "|cffe6beaaАтаман|r",
+      "ubertip": "TRIGSTR_14891",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa72 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nБандит-легенда, непревзойденный лидер и умелый боец. На коне и в прямом, и в переносном смысле.",
+      "hotkey": "TRIGSTR_2382",
+      "hotkey_val": "D",
+      "abillist": "A00J,A00P,A00N,A00L,A00M",
+      "upgrades": "R00L,R00M",
+      "targs1": "ground,structure,debris,item,ward",
+      "weaptype1": "MetalHeavySlice"
+    },
+    "h00S": {
+      "id": "h00S",
+      "name": "TRIGSTR_12703",
+      "name_val": "|cffe6beaaОпытный колдун|r",
+      "tip": "TRIGSTR_25178",
+      "tip_val": "Обучить |cffe6beaaОпытного колдуна|r",
+      "ubertip": "TRIGSTR_14892",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa46 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|nМаг, искуссно применяющий темные заклинания в своих целях.",
+      "hotkey": "TRIGSTR_1094",
+      "hotkey_val": "S",
+      "abillist": "A00M,A01A,A016,A017,A013",
+      "upgrades": "R00X,R00K,R00N",
+      "targs1": "ground,structure,debris,air,item,ward",
+      "weaptype1": null
+    },
+    "h00U": {
+      "id": "h00U",
+      "name": "TRIGSTR_12754",
+      "name_val": "|cffe6beaaЛегендарный колдун|r",
+      "tip": "TRIGSTR_25181",
+      "tip_val": "Обучить |cffe6beaaЛегендарного колдуна|r",
+      "ubertip": "TRIGSTR_14894",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa62 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|nМощнейший маг в армии бандитов, использующий большой арсенал мощных заклинаний.",
+      "hotkey": "TRIGSTR_420",
+      "hotkey_val": "X",
+      "abillist": "A00M,A016,A017,A169,A013",
+      "upgrades": "R00X,R00K,R00N",
+      "targs1": "ground,structure,debris,air,item,ward",
+      "weaptype1": null
+    },
+    "h029": {
+      "id": "h029",
+      "name": "TRIGSTR_12804",
+      "name_val": "|cffe6beaaРядовой Жрец|r",
+      "tip": "TRIGSTR_12797",
+      "tip_val": "Обучить|cffe6beaa Рядового жреца|r",
+      "ubertip": "TRIGSTR_15279",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa24 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|nМаг поддержки союза бандитов.",
+      "hotkey": "TRIGSTR_1160",
+      "hotkey_val": "Q",
+      "abillist": "A00M,A000,Ahea",
+      "upgrades": "R00X,R00W,R00N",
+      "targs1": "ground,structure,debris,air,item,ward",
+      "weaptype1": null
+    },
+    "h02A": {
+      "id": "h02A",
+      "name": "TRIGSTR_12835",
+      "name_val": "|cffe6beaaОпытный жрец|r",
+      "tip": "TRIGSTR_25580",
+      "tip_val": "Обучить |cffe6beaaОпытного жреца|r",
+      "ubertip": "TRIGSTR_15280",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa46 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|nМаг поддержки союза бандитов, улучшивший свои навыки в боях.",
+      "hotkey": "TRIGSTR_1053",
+      "hotkey_val": "A",
+      "abillist": "A00M,A01A,A00X,Ahea",
+      "upgrades": "R00X,Rhme,R00W,R00N",
+      "targs1": "ground,structure,debris,air,item,ward",
+      "weaptype1": null
+    },
+    "h02B": {
+      "id": "h02B",
+      "name": "TRIGSTR_13176",
+      "name_val": "|cffe6beaaЛегендарный жрец|r",
+      "tip": "TRIGSTR_25584",
+      "tip_val": "Обучить |cffe6beaaЛегендарного жреца|r",
+      "ubertip": "TRIGSTR_15281",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa62 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|nМощнейший маг в армии бандитов, использующий большой арсенал мощных заклинаний.",
+      "hotkey": "TRIGSTR_3698",
+      "hotkey_val": "Z",
+      "abillist": "A00M,A00X,Ahea,A00V",
+      "upgrades": "R00X,R00W,R00N",
+      "targs1": "ground,structure,debris,air,item,ward",
+      "weaptype1": null
+    },
+    "h02Q": {
+      "id": "h02Q",
+      "name": "TRIGSTR_13177",
+      "name_val": "|cffe6beaaПартизан|r",
+      "tip": "TRIGSTR_13179",
+      "tip_val": "Обучить |cffe6beaaПартизана|r",
+      "ubertip": "TRIGSTR_15418",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa35 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nБоец Братства Справедливости, способный устраивать дисерсии и ломать логистику.",
+      "hotkey": "TRIGSTR_1164",
+      "hotkey_val": "Q",
+      "abillist": "A00M,Ahrp,A00K,A165",
+      "upgrades": "R00L,R00M",
+      "targs1": "debris,ground,item,ward",
+      "weaptype1": "MetalMediumSlice"
+    },
+    "h02R": {
+      "id": "h02R",
+      "name": "TRIGSTR_13180",
+      "name_val": "|cffe6beaaБоевой крошшер|r",
+      "tip": "TRIGSTR_13181",
+      "tip_val": "Построить |cffe6beaaБоевой крошшер|r",
+      "ubertip": "TRIGSTR_15282",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa70 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nМеханизм, поставленный Картелем Хитрой Шестеренки за хорошую плату. Зарежет как ваших врагов, так и любое дерево.",
+      "hotkey": "TRIGSTR_423",
+      "hotkey_val": "X",
+      "abillist": "A00R,A00P,A19T",
+      "upgrades": "R00U,R00L,R00M",
+      "targs1": "ground,structure,debris,item,ward",
+      "weaptype1": "MetalMediumSlice"
+    },
+    "h02S": {
+      "id": "h02S",
+      "name": "TRIGSTR_13541",
+      "name_val": "|cffe6beaaКиллер|r",
+      "tip": "TRIGSTR_13542",
+      "tip_val": "Нанять |cffe6beaaКиллера|r",
+      "ubertip": "TRIGSTR_15287",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa38 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nПрофессиональный убийца Черного Ворона, хорошо убивающий героев вражеской стороны.",
+      "hotkey": "TRIGSTR_1199",
+      "hotkey_val": "S",
+      "abillist": "A00U,Aspo,A165",
+      "upgrades": "R00L,R00M",
+      "targs1": "ground,structure,debris,item,ward",
+      "weaptype1": "MetalMediumSlice"
+    },
+    "h02T": {
+      "id": "h02T",
+      "name": "TRIGSTR_13543",
+      "name_val": "|cffe6beaaОгр-Дуболом|r",
+      "tip": "TRIGSTR_13613",
+      "tip_val": "Нанять |cffe6beaaОгра-Дуболома|r",
+      "ubertip": "TRIGSTR_15291",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa65 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой.|r|nПушечное мясо Картеля Трюмных Вод.",
+      "hotkey": "TRIGSTR_1165",
+      "hotkey_val": "Q",
+      "abillist": "A00S,A00T",
+      "upgrades": "R00L,R00M",
+      "targs1": "ground,structure,debris,item,ward",
+      "weaptype1": "MetalMediumSlice"
+    },
+    "h02U": {
+      "id": "h02U",
+      "name": "TRIGSTR_13647",
+      "name_val": "|cffe6beaaОбедневший аристократ|r",
+      "tip": "TRIGSTR_13648",
+      "tip_val": "Нанять |cffe6beaaОбедневшего аристократа|r",
+      "ubertip": "TRIGSTR_15292",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa56 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nБывший землевладелец Альтерака.",
+      "hotkey": "TRIGSTR_1167",
+      "hotkey_val": "A",
+      "abillist": "A012,A00Z,A00Y",
+      "upgrades": "R00L,R00M",
+      "targs1": "ground,structure,debris,item,ward",
+      "weaptype1": "MetalMediumSlice"
+    },
+    "h03K": {
+      "id": "h03K",
+      "name": "TRIGSTR_870",
+      "name_val": "Пиратский линкор",
+      "tip": "TRIGSTR_4497",
+      "tip_val": "Нанять пиратский линкор",
+      "ubertip": "TRIGSTR_871",
+      "ubertip_val": "Мощный корабль, эффективный как в морском бою, так и против зданий. Линкор пиратов более приспособлен к абордажу.",
+      "hotkey": "TRIGSTR_1852",
+      "hotkey_val": "E",
+      "abillist": "A009,A003,A00B,A00G,A00A,A001",
+      "upgrades": "R005,R007,R004,R003,R002",
+      "targs1": "ground,structure,debris,item,ward",
+      "weaptype1": null
+    },
+    "h03L": {
+      "id": "h03L",
+      "name": "TRIGSTR_872",
+      "name_val": "Пиратский Фрегат",
+      "tip": "Нанять фрегат",
+      "tip_val": "Нанять фрегат",
+      "ubertip": "TRIGSTR_873",
+      "ubertip_val": "Корабль, предназначенный для морских битв. Более приспособлен для абордажа.",
+      "hotkey": "TRIGSTR_1403",
+      "hotkey_val": "W",
+      "abillist": "A009,A002,A00B,A00G,A00A,A001",
+      "upgrades": "R005,R007,R004,R003,R002",
+      "targs1": "ground,structure,debris,air,item,ward",
+      "weaptype1": null
+    },
+    "h03N": {
+      "id": "h03N",
+      "name": "TRIGSTR_954",
+      "name_val": "Обнищавшая свита",
+      "tip": null,
+      "tip_val": null,
+      "ubertip": null,
+      "ubertip_val": null,
+      "hotkey": null,
+      "hotkey_val": null,
+      "abillist": "ACbh",
+      "upgrades": "R00L,R00M",
+      "targs1": "ground,structure,debris,item,ward",
+      "weaptype1": "MetalMediumSlice"
+    },
+    "n000": {
+      "id": "n000",
+      "name": "TRIGSTR_11692",
+      "name_val": "|cffe6beaaРядовой грабитель|r",
+      "tip": "TRIGSTR_11694",
+      "tip_val": "Обучить |cffe6beaaРядового грабителя|r",
+      "ubertip": "TRIGSTR_985",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa22 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nБазовый воин дальнего боя.",
+      "hotkey": "TRIGSTR_767",
+      "hotkey_val": "W",
+      "abillist": "A00M,A000",
+      "upgrades": "R00J,R00N",
+      "targs1": "ground,structure,debris,air,item,ward",
+      "weaptype1": null
+    },
+    "n002": {
+      "id": "n002",
+      "name": "TRIGSTR_11711",
+      "name_val": "|cffe6beaaОпытный грабитель|r",
+      "tip": "TRIGSTR_22511",
+      "tip_val": "Обучить |cffe6beaaОпытого грабителя|r",
+      "ubertip": "TRIGSTR_12751",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa35 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nУмелый дальнобойный боец, устроивший немало засад.",
+      "hotkey": "TRIGSTR_1093",
+      "hotkey_val": "S",
+      "abillist": "A00M,A01A,Ashm,A17Q",
+      "upgrades": "R00J,R00N",
+      "targs1": "ground,structure,debris,air,item,ward",
+      "weaptype1": null
+    },
+    "n004": {
+      "id": "n004",
+      "name": "TRIGSTR_12762",
+      "name_val": "|cffe6beaaЛегендарный грабитель|r",
+      "tip": "TRIGSTR_25576",
+      "tip_val": "Обучить |cffe6beaaЛегендарногой грабителя|r",
+      "ubertip": "TRIGSTR_14895",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa52 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nВетеран-стрелок, хорошо познавший искусство убивать издалека.",
+      "hotkey": "TRIGSTR_422",
+      "hotkey_val": "X",
+      "abillist": "A00M,A011,A010,Ashm,A17Q",
+      "upgrades": "R00J,R00N",
+      "targs1": "ground,structure,debris,air,item,ward",
+      "weaptype1": null
+    },
+    "o00C": {
+      "id": "o00C",
+      "name": "TRIGSTR_12769",
+      "name_val": "|cffe6beaaКатапульта|r",
+      "tip": "TRIGSTR_12775",
+      "tip_val": "Построть |cffe6beaaКатапульту|r",
+      "ubertip": "TRIGSTR_15278",
+      "ubertip_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадная|r|nНе танк конечно, да и версия старая, но стены ломать еще может.",
+      "hotkey": "TRIGSTR_783",
+      "hotkey_val": "E",
+      "abillist": null,
+      "upgrades": "R00Y,R00J,R00N",
+      "targs1": "ground,debris,tree,wall,item,ward",
+      "weaptype1": null
+    }
+  },
+  "abils": {
+    "A000": {
+      "id": "A000",
+      "name": "TRIGSTR_26357",
+      "name_val": "|cffe6beaaДозакупка снаряжения|r",
+      "levels": 1,
+      "hotkey": "TRIGSTR_6154",
+      "hotkey_val": "D",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_26356",
+          "val": "|cffe6beaaДозакупка снаряжения|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_218",
+          "val": "Юнит становится на класс выше, повышая своих характеристики и приобретая новые способности."
+        }
+      }
+    },
+    "A00J": {
+      "id": "A00J",
+      "name": "TRIGSTR_38280",
+      "name_val": "|cffe6beaaРывок|r",
+      "levels": 1,
+      "hotkey": "TRIGSTR_20017",
+      "hotkey_val": "Q",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_38281",
+          "val": "|cffe6beaaРывок|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_2188",
+          "val": "Увеличивает скорость атаки и передвижения на 25%."
+        }
+      }
+    },
+    "A00K": {
+      "id": "A00K",
+      "name": "TRIGSTR_28668",
+      "name_val": "|cffe6beaaКапкан|r",
+      "levels": 1,
+      "hotkey": "TRIGSTR_12125",
+      "hotkey_val": "E",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_28729",
+          "val": "|cffe6beaaКапкан|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_18411",
+          "val": "Обездвиживает вражеского юнита на 5 секунд. "
+        }
+      }
+    },
+    "A00L": {
+      "id": "A00L",
+      "name": "TRIGSTR_30185",
+      "name_val": "|cffe6beaaКритический удар|r",
+      "levels": 1,
+      "hotkey": null,
+      "hotkey_val": null,
+      "researchhotkey": "C",
+      "researchhotkey_val": "C",
+      "researchtip": "Изучить «Критический удар» [|cffffcc00%d-й уровень|r]",
+      "researchtip_val": "Изучить «Критический удар» [|cffffcc00%d-й уровень|r]",
+      "researchubertip": "\"Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон.\"",
+      "researchubertip_val": "\"Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон.\"",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_30186",
+          "val": "|cffe6beaaКритический удар|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "\"Дает <AOcr,DataA1>%-й шанс нанести <AOcr,DataB1>-кратный урон при атаке.\"",
+          "val": "\"Дает <AOcr,DataA1>%-й шанс нанести <AOcr,DataB1>-кратный урон при атаке.\""
+        }
+      }
+    },
+    "A00M": {
+      "id": "A00M",
+      "name": "TRIGSTR_30182",
+      "name_val": "|cffe6beaaГрабеж|r",
+      "levels": 4,
+      "hotkey": null,
+      "hotkey_val": null,
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_30183",
+          "val": "|cffe6beaaГрабеж|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_28732",
+          "val": "|cffe6beaaБольшой грабеж|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_28733",
+          "val": "|cffe6beaaЛютый грабеж|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_30164",
+          "val": "|cffe6beaaРьяный грабеж|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_29521",
+          "val": "Нанося урон врагам, этот воин добывает ресурсы. Также, атакуя врага, у юнита есть шанс улучшиться (Уровень Грабежа * 2 \\ 100 %)"
+        },
+        "2": {
+          "raw": "TRIGSTR_20082",
+          "val": "Нанося урон врагам, этот воин добывает ресурсы. Также, атакуя врага, у юнита есть шанс улучшиться (Уровень Грабежа * 2 \\ 100 %)"
+        },
+        "3": {
+          "raw": "TRIGSTR_28691",
+          "val": "Нанося урон врагам, этот воин добывает ресурсы. Также, атакуя врага, у юнита есть шанс улучшиться (Уровень Грабежа * 2 \\ 100 %)"
+        },
+        "4": {
+          "raw": "TRIGSTR_29520",
+          "val": "Нанося урон врагам, этот воин добывает ресурсы. Также, атакуя врага, у юнита есть шанс улучшиться (Уровень Грабежа * 2 \\ 100 %)"
+        }
+      }
+    },
+    "A00N": {
+      "id": "A00N",
+      "name": "TRIGSTR_30232",
+      "name_val": "|cffe6beaaАура выносливости|r",
+      "levels": 1,
+      "hotkey": null,
+      "hotkey_val": null,
+      "researchhotkey": "E",
+      "researchhotkey_val": "E",
+      "researchtip": "Изучить «Ауру выносливости» [|cffffcc00%d-й уровень|r]",
+      "researchtip_val": "Изучить «Ауру выносливости» [|cffffcc00%d-й уровень|r]",
+      "researchubertip": "\"Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки. |n|cffffcc003-й уровень:|r +<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки.\"",
+      "researchubertip_val": "\"Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки. |n|cffffcc003-й уровень:|r +<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки.\"",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_30287",
+          "val": "|cffe6beaaАура выносливости|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_067",
+          "val": "+7% к скорости передвижения и +5% к скорости атаки находящихся близко союзников."
+        }
+      }
+    },
+    "A00P": {
+      "id": "A00P",
+      "name": "TRIGSTR_922",
+      "name_val": "Качественная броня",
+      "levels": 1,
+      "hotkey": null,
+      "hotkey_val": null,
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_923",
+          "val": "Качественная броня"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_7390",
+          "val": "-2 к получаемому юнитом урону от атак. Минимальный урон от атак: 10."
+        }
+      }
+    },
+    "A00R": {
+      "id": "A00R",
+      "name": "Рассекающий удар",
+      "name_val": "Рассекающий удар",
+      "levels": 1,
+      "hotkey": null,
+      "hotkey_val": null,
+      "researchhotkey": "C",
+      "researchhotkey_val": "C",
+      "researchtip": "Изучить «Рассекающий удар» [|cffffcc00%d-й уровень|r]",
+      "researchtip_val": "Изучить «Рассекающий удар» [|cffffcc00%d-й уровень|r]",
+      "researchubertip": "\"Атаки властителя преисподней наносят урон сразу нескольким целям. |n|n|cffffcc001-й уровень:|r <ANca,DataA1,%>% урона по области. |n|cffffcc002-й уровень:|r <ANca,DataA2,%>% урона по области. |n|cffffcc003-й уровень:|r <ANca,DataA3,%>% урона по области.\"",
+      "researchubertip_val": "\"Атаки властителя преисподней наносят урон сразу нескольким целям. |n|n|cffffcc001-й уровень:|r <ANca,DataA1,%>% урона по области. |n|cffffcc002-й уровень:|r <ANca,DataA2,%>% урона по области. |n|cffffcc003-й уровень:|r <ANca,DataA3,%>% урона по области.\"",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_928",
+          "val": "Рассекающий удар"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_23529",
+          "val": "Юнит бьет с огромной силой, нанося 7% урона врагам рядом с основной целью."
+        }
+      }
+    },
+    "A00S": {
+      "id": "A00S",
+      "name": "Сильный удар",
+      "name_val": "Сильный удар",
+      "levels": 1,
+      "hotkey": null,
+      "hotkey_val": null,
+      "researchhotkey": "B",
+      "researchhotkey_val": "B",
+      "researchtip": "Изучить «Сильный удар» [|cffffcc00%d-й уровень|r]",
+      "researchtip_val": "Изучить «Сильный удар» [|cffffcc00%d-й уровень|r]",
+      "researchubertip": "\"Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. На <AHbh,DataC1> больше урона. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. На <AHbh,DataC2> больше урона. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс. На <AHbh,DataC3> больше урона.\"",
+      "researchubertip_val": "\"Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. На <AHbh,DataC1> больше урона. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. На <AHbh,DataC2> больше урона. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс. На <AHbh,DataC3> больше урона.\"",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_931",
+          "val": "Сильный удар"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_2000",
+          "val": "С 12%-й вероятностью атака нанесет на 10 больше урона и оглушит цель на 1 сек. Не оглушает героев."
+        }
+      }
+    },
+    "A00T": {
+      "id": "A00T",
+      "name": "TRIGSTR_38298",
+      "name_val": "|cffe6beaaСамолечение|r",
+      "levels": 1,
+      "hotkey": "TRIGSTR_26024",
+      "hotkey_val": "Q",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_38296",
+          "val": "|cffe6beaaСамолечение|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_38297",
+          "val": "Восполняет 50 здоровья в секунду на протяжении 10 секунд."
+        }
+      }
+    },
+    "A00U": {
+      "id": "A00U",
+      "name": "TRIGSTR_945",
+      "name_val": "Меч-фламберг",
+      "levels": 1,
+      "hotkey": null,
+      "hotkey_val": null,
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_944",
+          "val": "Меч-фламберг"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_953",
+          "val": "+50% к урону по героям. Им не уйти."
+        }
+      }
+    },
+    "A00V": {
+      "id": "A00V",
+      "name": "TRIGSTR_30329",
+      "name_val": "|cffe6beaaТемная стая|r",
+      "levels": 1,
+      "hotkey": "TRIGSTR_12139",
+      "hotkey_val": "E",
+      "researchhotkey": "C",
+      "researchhotkey_val": "C",
+      "researchtip": "Изучить «Темную стаю» [|cffffcc00%d-й уровень|r]",
+      "researchtip_val": "Изучить «Темную стаю» [|cffffcc00%d-й уровень|r]",
+      "researchubertip": "\"Выпускает стаю нетопырей, атакующих врагов. |n|n|cffffcc001-й уровень:|r <AUcs,DataA1> урона каждой цели. |n|cffffcc002-й уровень:|r <AUcs,DataA2> урона каждой цели. |n|cffffcc003-й уровень:|r <AUcs,DataA3> урона каждой цели.\"",
+      "researchubertip_val": "\"Выпускает стаю нетопырей, атакующих врагов. |n|n|cffffcc001-й уровень:|r <AUcs,DataA1> урона каждой цели. |n|cffffcc002-й уровень:|r <AUcs,DataA2> урона каждой цели. |n|cffffcc003-й уровень:|r <AUcs,DataA3> урона каждой цели.\"",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_21817",
+          "val": "|cffe6beaaТемная стая|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_1394",
+          "val": "Выпускает в секторе перед собой стаю существ, наносящих по 65 урона врагам на своем пути."
+        }
+      }
+    },
+    "A00X": {
+      "id": "A00X",
+      "name": "TRIGSTR_30371",
+      "name_val": "|cffe6beaaВолшебный огонь|r",
+      "levels": 1,
+      "hotkey": "TRIGSTR_10215",
+      "hotkey_val": "W",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_30394",
+          "val": "|cffe6beaaВолшебный огонь|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "\"Ослабляет броню врага на <ACff,DataA1> и раскрывает его местоположение. |nВремя действия: <ACff,Dur1> сек.\"",
+          "val": "\"Ослабляет броню врага на <ACff,DataA1> и раскрывает его местоположение. |nВремя действия: <ACff,Dur1> сек.\""
+        }
+      }
+    },
+    "A00Y": {
+      "id": "A00Y",
+      "name": "TRIGSTR_956",
+      "name_val": "Призыв свиты",
+      "levels": 1,
+      "hotkey": "TRIGSTR_10380",
+      "hotkey_val": "Q",
+      "researchhotkey": "W",
+      "researchhotkey_val": "W",
+      "researchtip": "Изучить «Призыв элементаля воды» [|cffffcc00%d-й уровень|r]",
+      "researchtip_val": "Изучить «Призыв элементаля воды» [|cffffcc00%d-й уровень|r]",
+      "researchubertip": "\"Призывает элементаля воды. |nВремя существования: <AHwe,Dur1> сек. |n|n|cffffcc00Элементаль атакует наземные и воздушные цели. |r|n|n|cffffcc001-й уровень:|r <hwat,realHP> здоровья, <hwat,mindmg1>-<hwat,maxdmg1> урона. |n|cffffcc002-й уровень:|r <hwt2,realHP> здоровья, <hwt2,mindmg1>-<hwt2,maxdmg1> урона. |n|cffffcc003-й уровень:|r <hwt3,realHP> здоровья, <hwt3,mindmg1>-<hwt3,maxdmg1> урона.\"",
+      "researchubertip_val": "\"Призывает элементаля воды. |nВремя существования: <AHwe,Dur1> сек. |n|n|cffffcc00Элементаль атакует наземные и воздушные цели. |r|n|n|cffffcc001-й уровень:|r <hwat,realHP> здоровья, <hwat,mindmg1>-<hwat,maxdmg1> урона. |n|cffffcc002-й уровень:|r <hwt2,realHP> здоровья, <hwt2,mindmg1>-<hwt2,maxdmg1> урона. |n|cffffcc003-й уровень:|r <hwt3,realHP> здоровья, <hwt3,mindmg1>-<hwt3,maxdmg1> урона.\"",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_957",
+          "val": "Призыв свиты"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_958",
+          "val": "Призывает свою свиту, на 2 минуты."
+        }
+      }
+    },
+    "A00Z": {
+      "id": "A00Z",
+      "name": "TRIGSTR_30395",
+      "name_val": "|cffe6beaaАура благочестия|r",
+      "levels": 1,
+      "hotkey": null,
+      "hotkey_val": null,
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_30396",
+          "val": "|cffe6beaaАура благочестия|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_12996",
+          "val": "+2 к броне находящихся рядом союзников."
+        }
+      }
+    },
+    "A010": {
+      "id": "A010",
+      "name": "TRIGSTR_28629",
+      "name_val": "|cffe6beaaОпутывание|r",
+      "levels": 1,
+      "hotkey": "TRIGSTR_10381",
+      "hotkey_val": "Q",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_30397",
+          "val": "|cffe6beaaОпутывание|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_2002",
+          "val": "Притягивает врага к земле и обездвиживает его на 8 сек. На героев практически не действует."
+        }
+      }
+    },
+    "A011": {
+      "id": "A011",
+      "name": "TRIGSTR_30400",
+      "name_val": "|cffe6beaaОпутывание|r",
+      "levels": 1,
+      "hotkey": "TRIGSTR_10432",
+      "hotkey_val": "Q",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_32410",
+          "val": "|cffe6beaaОпутывание|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_26387",
+          "val": "Притягивает врага к земле и обездвиживает его на 7 сек. На героев действует 0.5 секунды."
+        }
+      }
+    },
+    "A012": {
+      "id": "A012",
+      "name": "TRIGSTR_31210",
+      "name_val": "|cffe6beaaПризыв свиты (автоматически на врага)|r",
+      "levels": 1,
+      "hotkey": "TRIGSTR_10217",
+      "hotkey_val": "W",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_32268",
+          "val": "|cffe6beaaПризыв свиты (автоматически на врага)|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_2374",
+          "val": "Призывает обедневшую свиту, то есть двухслабеньких, но храбрых ополченцов. Для призыва требуется враг, ведь зачем просто так гонять голодных людей?"
+        }
+      }
+    },
+    "A013": {
+      "id": "A013",
+      "name": "TRIGSTR_38248",
+      "name_val": "|cffe6beaaМорозный доспех|r",
+      "levels": 1,
+      "hotkey": "TRIGSTR_15050",
+      "hotkey_val": "Q",
+      "researchhotkey": "F",
+      "researchhotkey_val": "F",
+      "researchtip": "Изучить «Морозный доспех» [|cffffcc00%d-й уровень|r]",
+      "researchtip_val": "Изучить «Морозный доспех» [|cffffcc00%d-й уровень|r]",
+      "researchubertip": "\"Укрывает союзника ледяным щитом, который усиливает броню и замедляет атакующие его в ближнем бою войска. |n|n|cffffcc001-й уровень:|r +<AUfu,DataB1> к броне. |n|cffffcc002-й уровень:|r +<AUfu,DataB2> к броне. |n|cffffcc003-й уровень:|r +<AUfu,DataB3> к броне.\"",
+      "researchubertip_val": "\"Укрывает союзника ледяным щитом, который усиливает броню и замедляет атакующие его в ближнем бою войска. |n|n|cffffcc001-й уровень:|r +<AUfu,DataB1> к броне. |n|cffffcc002-й уровень:|r +<AUfu,DataB2> к броне. |n|cffffcc003-й уровень:|r +<AUfu,DataB3> к броне.\"",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_38247",
+          "val": "|cffe6beaaМорозный доспех|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_5239",
+          "val": "Укрывает союзника ледяным щитом, который дает +3 к броне и замедляет атакующие его в ближнем бою войска на <AUfu,Dur1> сек. |nВремя действия: <AUfu,DataA1> сек."
+        }
+      }
+    },
+    "A016": {
+      "id": "A016",
+      "name": "TRIGSTR_34604",
+      "name_val": "|cffe6beaaАнтимагический щит|r",
+      "levels": 1,
+      "hotkey": "TRIGSTR_10233",
+      "hotkey_val": "W",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_33546",
+          "val": "|cffe6beaaАнтимагический щит|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_1992",
+          "val": "Дает цели щит, поглощающий 300 урона магией."
+        }
+      }
+    },
+    "A017": {
+      "id": "A017",
+      "name": "TRIGSTR_34819",
+      "name_val": "|cffe6beaaАнтимагический панцирь|r",
+      "levels": 1,
+      "hotkey": "N",
+      "hotkey_val": "N",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {},
+      "ubertips": {}
+    },
+    "A01A": {
+      "id": "A01A",
+      "name": "TRIGSTR_29115",
+      "name_val": "|cffe6beaaДозакупка снаряжения|r",
+      "levels": 1,
+      "hotkey": "TRIGSTR_6222",
+      "hotkey_val": "D",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_28630",
+          "val": "|cffe6beaaДозакупка снаряжения|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_1251",
+          "val": "Юнит становится на класс выше, повышая своих характеристики и приобретая новые способности."
+        }
+      }
+    },
+    "A01B": {
+      "id": "A01B",
+      "name": "TRIGSTR_29625",
+      "name_val": "|cffe6beaaДозакупка снаряжения|r",
+      "levels": 3,
+      "hotkey": "TRIGSTR_6223",
+      "hotkey_val": "D",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_29624",
+          "val": "|cffe6beaaДозакупка снаряжения|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_30533",
+          "val": "|cffe6beaaДозакупка снаряжения|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_30626",
+          "val": "|cffe6beaaДозакупка снаряжения|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_7443",
+          "val": "\"Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку\" - менеджер ТК."
+        },
+        "2": {
+          "raw": "TRIGSTR_7449",
+          "val": "\"Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку\" - менеджер ТК."
+        },
+        "3": {
+          "raw": "TRIGSTR_7450",
+          "val": "\"Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку\" - менеджер ТК."
+        }
+      }
+    },
+    "A01D": {
+      "id": "A01D",
+      "name": "TRIGSTR_34824",
+      "name_val": "|cffe6beaaПризвать собак|r",
+      "levels": 4,
+      "hotkey": "W",
+      "hotkey_val": "W",
+      "researchhotkey": "W",
+      "researchhotkey_val": "W",
+      "researchtip": "TRIGSTR_35256",
+      "researchtip_val": "Изучить «|cffe6beaaПризвать собак|r» [|cffffcc00%d-й уровень|r]",
+      "researchubertip": "TRIGSTR_1545",
+      "researchubertip_val": "Призывает псов, сражающихся на вашей стороне.",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_34825",
+          "val": "|cffe6beaaПризвать собак|r [|cffffcc001-й уровень|r]"
+        },
+        "2": {
+          "raw": "TRIGSTR_35241",
+          "val": "|cffd45e29Призвать собак|r [|cffffcc002-й уровень|r]"
+        },
+        "3": {
+          "raw": "TRIGSTR_35247",
+          "val": "|cffd45e39Призвать собак|r [|cffffcc003-й уровень|r]"
+        },
+        "4": {
+          "raw": "TRIGSTR_35253",
+          "val": "|cffd45e49Призвать собак|r [|cffffcc004-й уровень|r]"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_1540",
+          "val": "Призыв псов, которые будут сражаться на вашей стороне."
+        },
+        "2": {
+          "raw": "TRIGSTR_1541",
+          "val": "Призыв псов, которые будут сражаться на вашей стороне."
+        },
+        "3": {
+          "raw": "TRIGSTR_1542",
+          "val": "Призыв псов, которые будут сражаться на вашей стороне."
+        },
+        "4": {
+          "raw": "TRIGSTR_1543",
+          "val": "Призыв псов, которые будут сражаться на вашей стороне."
+        }
+      }
+    },
+    "A01H": {
+      "id": "A01H",
+      "name": "TRIGSTR_35262",
+      "name_val": "|cffe6beaaАура выносливости|r",
+      "levels": 4,
+      "hotkey": null,
+      "hotkey_val": null,
+      "researchhotkey": "E",
+      "researchhotkey_val": "E",
+      "researchtip": "TRIGSTR_35268",
+      "researchtip_val": "Изучить «|cffe6beaaАура выносливости|r» [|cffffcc00%d-й уровень|r]",
+      "researchubertip": "\"Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки. |n|cffffcc003-й уровень:|r +<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки.\"",
+      "researchubertip_val": "\"Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки. |n|cffffcc003-й уровень:|r +<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки.\"",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_35276",
+          "val": "|cffe6beaaАура выносливости|r [|cffffcc001-й уровень|r]"
+        },
+        "2": {
+          "raw": "TRIGSTR_35570",
+          "val": "|cffd45e29Аура выносливости|r [|cffffcc002-й уровень|r]"
+        },
+        "3": {
+          "raw": "TRIGSTR_35571",
+          "val": "|cffd45e39Аура выносливости|r [|cffffcc003-й уровень|r]"
+        },
+        "4": {
+          "raw": "TRIGSTR_35259",
+          "val": "|cffd45e49Аура выносливости|r [|cffffcc004-й уровень|r]"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_27460",
+          "val": "+7% к скорости передвижения и +5% к скорости атаки находящихся рядом союзников."
+        },
+        "2": {
+          "raw": "TRIGSTR_27461",
+          "val": "+11% к скорости передвижения и +8% к скорости атаки находящихся рядом союзников."
+        },
+        "3": {
+          "raw": "TRIGSTR_27462",
+          "val": "+15% к скорости передвижения и +11% к скорости атаки находящихся рядом союзников."
+        },
+        "4": {
+          "raw": "TRIGSTR_24336",
+          "val": "+19% к скорости передвижения и +14% к скорости атаки находящихся рядом союзников."
+        }
+      }
+    },
+    "A01I": {
+      "id": "A01I",
+      "name": "TRIGSTR_36622",
+      "name_val": "|cffe6beaaОпутывание|r",
+      "levels": 4,
+      "hotkey": "E",
+      "hotkey_val": "E",
+      "researchhotkey": "TRIGSTR_12140",
+      "researchhotkey_val": "E",
+      "researchtip": "TRIGSTR_36621",
+      "researchtip_val": "|cffe6beaaОпутывание|r [|cffffcc001-й уровень|r]",
+      "researchubertip": "TRIGSTR_2045",
+      "researchubertip_val": "Опутывает врага сетью на определенное время.",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_36600",
+          "val": "|cffe6beaaОпутывание|r [|cffffcc001-й уровень|r]"
+        },
+        "2": {
+          "raw": "TRIGSTR_35861",
+          "val": "|cffd45e29Опутывание|r [|cffffcc002-й уровень|r]"
+        },
+        "3": {
+          "raw": "TRIGSTR_36585",
+          "val": "|cffd45e39Опутывание|r [|cffffcc003-й уровень|r]"
+        },
+        "4": {
+          "raw": "TRIGSTR_36586",
+          "val": "|cffd45e49Опутывание|r [|cffffcc004-й уровень|r]"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_1550",
+          "val": "Обездвиживает врага."
+        },
+        "2": {
+          "raw": "TRIGSTR_1554",
+          "val": "Обездвиживает врага."
+        },
+        "3": {
+          "raw": "TRIGSTR_1555",
+          "val": "Обездвиживает врага."
+        },
+        "4": {
+          "raw": "TRIGSTR_1556",
+          "val": "Обездвиживает врага."
+        }
+      }
+    },
+    "A01J": {
+      "id": "A01J",
+      "name": "TRIGSTR_37588",
+      "name_val": "|cffe6beaaЖажда крови|r",
+      "levels": 2,
+      "hotkey": "TRIGSTR_7410",
+      "hotkey_val": "R",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": "TRIGSTR_36623",
+      "researchtip_val": "|cffe6beaaЖажда крови|r",
+      "researchubertip": "TRIGSTR_36975",
+      "researchubertip_val": "+<A01J,DataA1,%>% к скорости атаки и +<A01J,DataB1,%>% к скорости передвижения союзника. |nВремя действия: <A01J,Dur1> сек.",
+      "tips": {
+        "1": {
+          "raw": "Жажда крови",
+          "val": "Жажда крови"
+        },
+        "2": {
+          "raw": "TRIGSTR_1560",
+          "val": "Жажда крови"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_22817",
+          "val": "+200% к скорости атаки и +70% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur1> сек."
+        },
+        "2": {
+          "raw": "TRIGSTR_22811",
+          "val": "+300% к скорости атаки и +130>% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur2> сек."
+        }
+      }
+    },
+    "A023": {
+      "id": "A023",
+      "name": "TRIGSTR_2027",
+      "name_val": "Огненный Торнадо",
+      "levels": 2,
+      "hotkey": "TRIGSTR_7470",
+      "hotkey_val": "R",
+      "researchhotkey": "TRIGSTR_7469",
+      "researchhotkey_val": "R",
+      "researchtip": "Изучить «Торнадо»",
+      "researchtip_val": "Изучить «Торнадо»",
+      "researchubertip": "TRIGSTR_2035",
+      "researchubertip_val": "Призывает управляемый торнадо, который замедляет передвижение наземных врагов,  а также наносит урон по области.",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_2028",
+          "val": "Огненный Торнадо"
+        },
+        "2": {
+          "raw": "TRIGSTR_2036",
+          "val": "Огненный Торнадо"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_2025",
+          "val": "Призывает управляемый торнадо, который замедляет передвижение наземных врагов, случайным образом подбрасывает их, а также наносит урон по области."
+        },
+        "2": {
+          "raw": "TRIGSTR_2026",
+          "val": "Призывает управляемый торнадо, который замедляет передвижение наземных врагов, случайным образом подбрасывает их, а также наносит урон по области."
+        }
+      }
+    },
+    "A026": {
+      "id": "A026",
+      "name": "TRIGSTR_25056",
+      "name_val": "|cffe6beaaВолна силы|r",
+      "levels": 4,
+      "hotkey": "TRIGSTR_10537",
+      "hotkey_val": "Q",
+      "researchhotkey": "TRIGSTR_10536",
+      "researchhotkey_val": "Q",
+      "researchtip": "TRIGSTR_25057",
+      "researchtip_val": "Изучить «|cffe6beaaВолна силы|r» [|cffffcc00%d-й уровень|r]",
+      "researchubertip": "TRIGSTR_2063",
+      "researchubertip_val": "Выпускает волну силы, наносящая урон в выбранном секторе.",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_25058",
+          "val": "|cffe6beaaВолна силы|r [|cffffcc001-й уровень|r]"
+        },
+        "2": {
+          "raw": "TRIGSTR_37690",
+          "val": "|cffd45e29Волна силы|r [|cffffcc002-й уровень|r]"
+        },
+        "3": {
+          "raw": "TRIGSTR_37709",
+          "val": "|cffd45e39Волна силы|r [|cffffcc003-й уровень|r]"
+        },
+        "4": {
+          "raw": "TRIGSTR_37753",
+          "val": "|cffd45e49Волна силы|r [|cffffcc004-й уровень|r]"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_31099",
+          "val": "Выпускает в секторе перед собой волну силы, наносящую по <A026,DataA1> урона врагам на своем пути."
+        },
+        "2": {
+          "raw": "TRIGSTR_31100",
+          "val": "Выпускает в секторе перед собой волну силы, наносящую по <A026,DataA2> урона врагам на своем пути."
+        },
+        "3": {
+          "raw": "TRIGSTR_31101",
+          "val": "Выпускает в секторе перед собой волну силы, наносящую по <A026,DataA3> урона врагам на своем пути."
+        },
+        "4": {
+          "raw": "TRIGSTR_31102",
+          "val": "Выпускает в секторе перед собой волну силы, наносящую по <A026,DataA4> урона врагам на своем пути."
+        }
+      }
+    },
+    "A028": {
+      "id": "A028",
+      "name": "TRIGSTR_38236",
+      "name_val": "|cffe6beaaЗачарованная броня|r",
+      "levels": 4,
+      "hotkey": "TRIGSTR_12626",
+      "hotkey_val": "E",
+      "researchhotkey": "TRIGSTR_12705",
+      "researchhotkey_val": "E",
+      "researchtip": "TRIGSTR_38241",
+      "researchtip_val": "|cffe6beaaЗачарованная броня|r",
+      "researchubertip": "TRIGSTR_38242",
+      "researchubertip_val": "С некоторым шансом вычитает определенное число от получаемого юнитом урона от атак. Минимальный урон от атак - 40",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_38237",
+          "val": "|cffe6beaaЗачарованная броня|r [|cffffcc001-й уровень|r]"
+        },
+        "2": {
+          "raw": "TRIGSTR_38238",
+          "val": "|cffd45e29Зачарованная броня|r [|cffffcc002-й уровень|r]"
+        },
+        "3": {
+          "raw": "TRIGSTR_38239",
+          "val": "|cffd45e39Зачарованная броня|r [|cffffcc003-й уровень|r]"
+        },
+        "4": {
+          "raw": "TRIGSTR_38240",
+          "val": "|cffd45e49Зачарованная броня|r [|cffffcc004-й уровень|r]"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_2089",
+          "val": "Дает шанс поглотить часть урона, наносенного герою."
+        },
+        "2": {
+          "raw": "TRIGSTR_2093",
+          "val": "Дает шанс поглотить часть урона, наносенного герою."
+        },
+        "3": {
+          "raw": "TRIGSTR_2094",
+          "val": "Дает шанс поглотить часть урона, наносенного герою."
+        },
+        "4": {
+          "raw": "TRIGSTR_2095",
+          "val": "Дает шанс поглотить часть урона, наносенного герою."
+        }
+      }
+    },
+    "A029": {
+      "id": "A029",
+      "name": "TRIGSTR_38245",
+      "name_val": "|cffe6beaaРезня слабаков|r",
+      "levels": 2,
+      "hotkey": "TRIGSTR_7471",
+      "hotkey_val": "R",
+      "researchhotkey": "TRIGSTR_7472",
+      "researchhotkey_val": "R",
+      "researchtip": "TRIGSTR_38246",
+      "researchtip_val": "|cffe6beaaРезня слабаков|r",
+      "researchubertip": "TRIGSTR_2100",
+      "researchubertip_val": "Увечиличивает урон по юнитам, кроме зданий и героев.",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_38243",
+          "val": "|cffe6beaaРезня слабаков|r [|cffffcc001-й уровень|r]"
+        },
+        "2": {
+          "raw": "TRIGSTR_38244",
+          "val": "|cffd45e29Резня слабаков|r [|cffffcc002-й уровень|r]"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_31872",
+          "val": "Увечиличивает в 3 раза урон по юнитам, кроме зданий и героев."
+        },
+        "2": {
+          "raw": "TRIGSTR_32687",
+          "val": "Увечиличивает в 4раза урон по юнитам, кроме зданий и героев."
+        }
+      }
+    },
+    "A0WV": {
+      "id": "A0WV",
+      "name": "TRIGSTR_38282",
+      "name_val": "|cffe6beaaМарш-бросок|r",
+      "levels": 4,
+      "hotkey": "TRIGSTR_19858",
+      "hotkey_val": "W",
+      "researchhotkey": "TRIGSTR_19859",
+      "researchhotkey_val": "W",
+      "researchtip": "TRIGSTR_38283",
+      "researchtip_val": "|cffe6beaaМарш-бросок|r",
+      "researchubertip": "TRIGSTR_20451",
+      "researchubertip_val": "Ускоряет на время юнитов вокруг героя.",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_38284",
+          "val": "|cffe6beaaМарш-бросок|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_38285",
+          "val": "|cffd45e29Марш-бросок|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_38286",
+          "val": "|cffd45e39Марш-бросок|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_38287",
+          "val": "|cffd45e49Марш-бросок|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_20455",
+          "val": "Ускоряет на время юнитов вокруг героя."
+        },
+        "2": {
+          "raw": "TRIGSTR_20456",
+          "val": "Ускоряет на время юнитов вокруг героя."
+        },
+        "3": {
+          "raw": "TRIGSTR_20457",
+          "val": "Ускоряет на время юнитов вокруг героя."
+        },
+        "4": {
+          "raw": "TRIGSTR_20458",
+          "val": "Ускоряет на время юнитов вокруг героя."
+        }
+      }
+    },
+    "A165": {
+      "id": "A165",
+      "name": "TRIGSTR_5396",
+      "name_val": "Скрыться",
+      "levels": 1,
+      "hotkey": "TRIGSTR_22981",
+      "hotkey_val": "Q",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_5403",
+          "val": "Скрыться"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_39020",
+          "val": "Дает невидимость и +15% к скорости передвижения. Атакуя, юнит становится видимым и наносит 25 дополнительного урона."
+        }
+      }
+    },
+    "A169": {
+      "id": "A169",
+      "name": "TRIGSTR_38292",
+      "name_val": "|cffe6beaaАнтимагия|r",
+      "levels": 1,
+      "hotkey": "TRIGSTR_24685",
+      "hotkey_val": "E",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_38293",
+          "val": "|cffe6beaaАнтимагия|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_25079",
+          "val": "Снимает положительные эффекты с войск в указанной области и сжигает 15 маны. |n|cffffcc00Наносит 225 урона призванным целям.|r"
+        }
+      }
+    },
+    "A17Q": {
+      "id": "A17Q",
+      "name": "TRIGSTR_38294",
+      "name_val": "|cffe6beaaЗамедляющий яд|r",
+      "levels": 1,
+      "hotkey": null,
+      "hotkey_val": null,
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_38295",
+          "val": "|cffe6beaaЗамедляющий яд|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_14679",
+          "val": "Отравляет цель, нанося |cffc8dc8c<Aspo,DataA1> урона/сек|r., а также замедляя ее передвижение на |cffc8dc8c<Aspo,DataB1,%>%|r и атаку на |cffc8dc8c<Aspo,DataC1,%>%|r. Время действия: |cffc8dc8c<Aspo,Dur1> сек|r."
+        }
+      }
+    },
+    "A19T": {
+      "id": "A19T",
+      "name": "Добывать ресурсы",
+      "name_val": "Добывать ресурсы",
+      "levels": 1,
+      "hotkey": "G",
+      "hotkey_val": "G",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "Добывать ресурсы",
+          "val": "Добывать ресурсы"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "Добывает древесину из деревьев.",
+          "val": "Добывает древесину из деревьев."
+        }
+      }
+    },
+    "ACbh": {
+      "id": "ACbh",
+      "name": "Сильный удар",
+      "name_val": "Сильный удар",
+      "levels": 1,
+      "hotkey": null,
+      "hotkey_val": null,
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "Сильный удар",
+          "val": "Сильный удар"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "\"С <ACbh,DataA1>%-й вероятностью атака нанесет на <ACbh,DataC1> больше урона и оглушит цель на <ACbh,Dur1> сек.\"",
+          "val": "\"С <ACbh,DataA1>%-й вероятностью атака нанесет на <ACbh,DataC1> больше урона и оглушит цель на <ACbh,Dur1> сек.\""
+        }
+      }
+    },
+    "AHab": {
+      "id": "AHab",
+      "name": "TRIGSTR_23080",
+      "name_val": "Aura of genius",
+      "levels": 4,
+      "hotkey": "TRIGSTR_10352",
+      "hotkey_val": "E",
+      "researchhotkey": "TRIGSTR_10351",
+      "researchhotkey_val": "E",
+      "researchtip": "TRIGSTR_25720",
+      "researchtip_val": "Study the \"Aura of Genius\" [|cffffcc00%d level|r]",
+      "researchubertip": "TRIGSTR_25744",
+      "researchubertip_val": "Speeds up the mana regeneration of nearby allies. |n|n|cffffcc001st level:|r minor bonus. |n|cffffcc002nd level:|r moderate bonus. |n|cffffcc003rd level:|r significant bonus.",
+      "tips": {
+        "1": {
+          "raw": "\"Аура гениальности [|cffffcc001-й уровень|r]\"",
+          "val": "\"Аура гениальности [|cffffcc001-й уровень|r]\""
+        },
+        "2": {
+          "raw": "\"Аура гениальности [|cffffcc002-й уровень|r]\"",
+          "val": "\"Аура гениальности [|cffffcc002-й уровень|r]\""
+        },
+        "3": {
+          "raw": "\"Аура гениальности [|cffffcc003-й уровень|r]\"",
+          "val": "\"Аура гениальности [|cffffcc003-й уровень|r]\""
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "\"Ускоряет регенерацию маны находящихся рядом союзников.\"",
+          "val": "\"Ускоряет регенерацию маны находящихся рядом союзников.\""
+        },
+        "2": {
+          "raw": "\"Ускоряет регенерацию маны находящихся рядом союзников.\"",
+          "val": "\"Ускоряет регенерацию маны находящихся рядом союзников.\""
+        },
+        "3": {
+          "raw": "\"Ускоряет регенерацию маны находящихся рядом союзников.\"",
+          "val": "\"Ускоряет регенерацию маны находящихся рядом союзников.\""
+        },
+        "4": {
+          "raw": "TRIGSTR_2016",
+          "val": "Ускоряет регенерацию маны находящихся рядом союзников."
+        }
+      }
+    },
+    "ANlm": {
+      "id": "ANlm",
+      "name": "TRIGSTR_14823",
+      "name_val": "|cffe4cfa3Призыв порождения лавы|r",
+      "levels": 4,
+      "hotkey": "W",
+      "hotkey_val": "W",
+      "researchhotkey": "W",
+      "researchhotkey_val": "W",
+      "researchtip": "TRIGSTR_14824",
+      "researchtip_val": "Изучить «|cffe4cfa3Призыв порождения лавы|r» [|cffffffff%d-й уровень|r] (|cffffffffW|r)",
+      "researchubertip": "TRIGSTR_14072",
+      "researchubertip_val": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает лавовое создание. Нанося удары, оно насыщается и разделяется на два полноценных создания с полным здоровьем.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: |cffffffff425|cffced4da ед. здоровья, |cffffffff15-21|cffced4da ед. урона, жизнь |cffffffff70|cffced4da сек.|n- |cffffffff2|cffced4da: |cffffffff550|cffced4da ед. здоровья, |cffffffff22-31|cffced4da ед. урона, жизнь |cffffffff75|cffced4da сек.|n- |cffffffff3|cffced4da: |cffffffff700|cffced4da ед. здоровья, |cffffffff29-41|cffced4da ед. урона, жизнь |cffffffff80|cffced4da сек.|n- |cffffffff4|cffced4da: |cffffffff900|cffced4da ед. здоровья, |cffffffff37-61|cffced4da ед. урона, жизнь |cffffffff85|cffced4da сек.|r",
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_14825",
+          "val": "|cffe4cfa3Призыв порождения лавы|r [|cffffffff1-й уровень|r] (|cffffffffW|r)"
+        },
+        "2": {
+          "raw": "TRIGSTR_14826",
+          "val": "|cffe4cfa3Призыв порождения лавы|r [|cffffffff2-й уровень|r] (|cffffffffW|r)"
+        },
+        "3": {
+          "raw": "TRIGSTR_14853",
+          "val": "|cffe4cfa3Призыв порождения лавы|r [|cffffffff3-й уровень|r] (|cffffffffW|r)"
+        },
+        "4": {
+          "raw": "TRIGSTR_14792",
+          "val": "|cffe4cfa3Призыв порождения лавы|r [|cffffffff4-й уровень|r] (|cffffffffW|r)"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_16141",
+          "val": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает порождение лавы (|cffffffff425|cffced4da ед. здоровья, |cffffffff15-21|cffced4da ед. урона). При атаках оно разделяется на двух созданий. Время жизни: |cffffffff70|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_16137",
+          "val": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает порождение лавы (|cffffffff550|cffced4da ед. здоровья, |cffffffff22-31|cffced4da ед. урона). При атаках оно разделяется на двух созданий. Время жизни: |cffffffff75|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_16138",
+          "val": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает порождение лавы (|cffffffff700|cffced4da ед. здоровья, |cffffffff29-41|cffced4da ед. урона). При атаках оно разделяется на двух созданий. Время жизни: |cffffffff80|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_16139",
+          "val": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает порождение лавы (|cffffffff900|cffced4da ед. здоровья, |cffffffff37-61|cffced4da ед. урона). При атаках оно разделяется на двух созданий. Время жизни: |cffffffff85|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+      }
+    },
+    "ANrf": {
+      "id": "ANrf",
+      "name": "TRIGSTR_25841",
+      "name_val": "Rain of Fire",
+      "levels": 4,
+      "hotkey": "TRIGSTR_8626",
+      "hotkey_val": "Q",
+      "researchhotkey": "TRIGSTR_8627",
+      "researchhotkey_val": "Q",
+      "researchtip": "TRIGSTR_26401",
+      "researchtip_val": "Learn Rain of Fire [|cffffcc00%d level|r]",
+      "researchubertip": "TRIGSTR_26372",
+      "researchubertip_val": "Releases waves of fire onto the target area. Each wave deals instant damage and then damage over time over <ANrf,Dur1> seconds. |n|n|cffffcc001st level:|r <ANrf,DataA1> waves, <ANrf,DataB1> damage instantly and <ANrf,DataE1> damage/sec. |n|cffffcc002nd level:|r <ANrf,DataA2> waves, <ANrf,DataB2> damage instantly and <ANrf,DataE2> damage/sec. |n|cffffcc003rd level:|r <ANrf,DataA3> waves, <ANrf,DataB3> damage instantly and <ANrf,DataE3> damage/sec.",
+      "tips": {
+        "1": {
+          "raw": "\"Огненный ливень [|cffffcc001-й уровень|r]\"",
+          "val": "\"Огненный ливень [|cffffcc001-й уровень|r]\""
+        },
+        "2": {
+          "raw": "\"Огненный ливень [|cffffcc002-й уровень|r]\"",
+          "val": "\"Огненный ливень [|cffffcc002-й уровень|r]\""
+        },
+        "3": {
+          "raw": "\"Огненный ливень [|cffffcc003-й уровень|r]\"",
+          "val": "\"Огненный ливень [|cffffcc003-й уровень|r]\""
+        },
+        "4": {
+          "raw": "TRIGSTR_2014",
+          "val": "Огненный ливень [|cffffcc004-й уровень|r]"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB1> урона мгновенно и <ANrf,DataE1> урона/сек. в течение <ANrf,Dur1> сек. |nВолн – <ANrf,DataA1>.\"",
+          "val": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB1> урона мгновенно и <ANrf,DataE1> урона/сек. в течение <ANrf,Dur1> сек. |nВолн – <ANrf,DataA1>.\""
+        },
+        "2": {
+          "raw": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB2> урона мгновенно и <ANrf,DataE2> урона/сек. в течение <ANrf,Dur2> сек. |nВолн – <ANrf,DataA2>.\"",
+          "val": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB2> урона мгновенно и <ANrf,DataE2> урона/сек. в течение <ANrf,Dur2> сек. |nВолн – <ANrf,DataA2>.\""
+        },
+        "3": {
+          "raw": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB3> урона мгновенно и <ANrf,DataE3> урона/сек. в течение <ANrf,Dur3> сек. |nВолн – <ANrf,DataA3>.\"",
+          "val": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB3> урона мгновенно и <ANrf,DataE3> урона/сек. в течение <ANrf,Dur3> сек. |nВолн – <ANrf,DataA3>.\""
+        },
+        "4": {
+          "raw": "TRIGSTR_2015",
+          "val": "Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB4> урона мгновенно и <ANrf,DataE4> урона/сек. в течение <ANrf,Dur4> сек. |nВолн – <ANrf,DataA4>."
+        }
+      }
+    },
+    "Aamk": {
+      "id": "Aamk",
+      "name": "Повышение характеристик",
+      "name_val": "Повышение характеристик",
+      "levels": 4,
+      "hotkey": null,
+      "hotkey_val": null,
+      "researchhotkey": "TRIGSTR_13076",
+      "researchhotkey_val": "F",
+      "researchtip": "Изучить повышение характеристик [|cffffcc00%d-й уровень|r]",
+      "researchtip_val": "Изучить повышение характеристик [|cffffcc00%d-й уровень|r]",
+      "researchubertip": "\"Повышает ловкость, интеллект и силу. |n|n|cffffcc001-й уровень:|r +3 к каждой характеристике.|n|cffffcc002-й уровень:|r еще +3 к каждой характеристике.|n|cffffcc003-й уровень:|r еще +3 к каждой характеристике.|n|cffffcc004-й уровень:|r еще +3 к каждой характеристике.\"",
+      "researchubertip_val": "\"Повышает ловкость, интеллект и силу. |n|n|cffffcc001-й уровень:|r +3 к каждой характеристике.|n|cffffcc002-й уровень:|r еще +3 к каждой характеристике.|n|cffffcc003-й уровень:|r еще +3 к каждой характеристике.|n|cffffcc004-й уровень:|r еще +3 к каждой характеристике.\"",
+      "tips": {
+        "1": {
+          "raw": "\"Повышение характеристик [|cffffcc001-й уровень|r]\"",
+          "val": "\"Повышение характеристик [|cffffcc001-й уровень|r]\""
+        },
+        "2": {
+          "raw": "\"Повышение характеристик [|cffffcc002-й уровень|r]\"",
+          "val": "\"Повышение характеристик [|cffffcc002-й уровень|r]\""
+        },
+        "3": {
+          "raw": "\"Повышение характеристик [|cffffcc003-й уровень|r]\"",
+          "val": "\"Повышение характеристик [|cffffcc003-й уровень|r]\""
+        },
+        "4": {
+          "raw": "\"Повышение характеристик [|cffffcc004-й уровень|r]\"",
+          "val": "\"Повышение характеристик [|cffffcc004-й уровень|r]\""
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "\"+<Aamk,DataA1> к силе, ловкости и интеллекту.\"",
+          "val": "\"+<Aamk,DataA1> к силе, ловкости и интеллекту.\""
+        },
+        "2": {
+          "raw": "\"+<Aamk,DataA2> к силе, ловкости и интеллекту.\"",
+          "val": "\"+<Aamk,DataA2> к силе, ловкости и интеллекту.\""
+        },
+        "3": {
+          "raw": "\"+<Aamk,DataA3> к силе, ловкости и интеллекту.\"",
+          "val": "\"+<Aamk,DataA3> к силе, ловкости и интеллекту.\""
+        },
+        "4": {
+          "raw": "\"+<Aamk,DataA4> к силе, ловкости и интеллекту.\"",
+          "val": "\"+<Aamk,DataA4> к силе, ловкости и интеллекту.\""
+        }
+      }
+    },
+    "Abof": {
+      "id": "Abof",
+      "name": "Горючая смесь",
+      "name_val": "Горючая смесь",
+      "levels": 1,
+      "hotkey": null,
+      "hotkey_val": null,
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "Горючая смесь",
+          "val": "Горючая смесь"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "\"Покрывает снаряды разрушителей горючей смесью, позволяя им поджигать землю и врагов.\"",
+          "val": "\"Покрывает снаряды разрушителей горючей смесью, позволяя им поджигать землю и врагов.\""
+        }
+      }
+    },
+    "Afbt": {
+      "id": "Afbt",
+      "name": "Противодействие",
+      "name_val": "Противодействие",
+      "levels": 1,
+      "hotkey": null,
+      "hotkey_val": null,
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "Противодействие",
+          "val": "Противодействие"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "\"Каждая атака уничтожает <Afbt,DataA1> маны цели и наносит ей столько же дополнительного урона.|n|nПризванные цели получают на <Afbt,DataE1> больше урона от атак этой башни.\"",
+          "val": "\"Каждая атака уничтожает <Afbt,DataA1> маны цели и наносит ей столько же дополнительного урона.|n|nПризванные цели получают на <Afbt,DataE1> больше урона от атак этой башни.\""
+        }
+      }
+    },
+    "Ashm": {
+      "id": "Ashm",
+      "name": "Слияние с тенью",
+      "name_val": "Слияние с тенью",
+      "levels": 1,
+      "hotkey": "I",
+      "hotkey_val": "I",
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "Спрятаться",
+          "val": "Спрятаться"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "При использовании ночью запрещает автоматический выбор цели и дает невидимость.",
+          "val": "При использовании ночью запрещает автоматический выбор цели и дает невидимость."
+        }
+      }
+    },
+    "Aspo": {
+      "id": "Aspo",
+      "name": "Замедляющий яд",
+      "name_val": "Замедляющий яд",
+      "levels": 1,
+      "hotkey": null,
+      "hotkey_val": null,
+      "researchhotkey": null,
+      "researchhotkey_val": null,
+      "researchtip": null,
+      "researchtip_val": null,
+      "researchubertip": null,
+      "researchubertip_val": null,
+      "tips": {
+        "1": {
+          "raw": "Замедляющий яд",
+          "val": "Замедляющий яд"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "\"Отравляет цель, нанося <Aspo,DataA1> урона/сек., а также замедляя ее передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек.\"",
+          "val": "\"Отравляет цель, нанося <Aspo,DataA1> урона/сек., а также замедляя ее передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек.\""
+        }
+      }
+    }
+  },
+  "upgrades": {
+    "R00J": {
+      "id": "R00J",
+      "levels": 6,
+      "class": "melee",
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40328",
+          "val": "|cffe6beaaСтрелы|r |cffffff00(уровень 1)|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40329",
+          "val": "|cffd45e29Стрелы|r |cffffff00(уровень 2)|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40348",
+          "val": "|cffd45e39Стрелы|r |cffffff00(уровень 3)|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40689",
+          "val": "|cffd45e49Стрелы|r |cffffff00(уровень 4)|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40690",
+          "val": "|cffd45e59Стрелы|r |cffffff00(уровень 5)|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40691",
+          "val": "|cffd45e69Стрелы|r |cffffff00(уровень 6)|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40349",
+          "val": "Нарыть |cffe6beaaСтрелы|r |cffffff00(уровень 1)|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40693",
+          "val": "Нарыть |cffd45e29Стрелы|r |cffffff00(уровень 2)|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40702",
+          "val": "Нарыть |cffd45e39Стрелы|r |cffffff00(уровень 3)|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40718",
+          "val": "Нарыть |cffd45e49Стрелы|r |cffffff00(уровень 4)|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40719",
+          "val": "Нарыть |cffd45e59Стрелы|r |cffffff00(уровень 5)|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40720",
+          "val": "Нарыть |cffd45e69Стрелы|r |cffffff00(уровень 6)|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_1017",
+          "val": "Увеличивает урон дальнобойных немагических юнитов."
+        },
+        "2": {
+          "raw": "TRIGSTR_1018",
+          "val": "Увеличивает урон дальнобойных немагических юнитов."
+        },
+        "3": {
+          "raw": "TRIGSTR_1019",
+          "val": "Увеличивает урон дальнобойных немагических юнитов."
+        },
+        "4": {
+          "raw": "TRIGSTR_1020",
+          "val": "Увеличивает урон дальнобойных немагических юнитов."
+        },
+        "5": {
+          "raw": "TRIGSTR_1021",
+          "val": "Увеличивает урон дальнобойных немагических юнитов."
+        },
+        "6": {
+          "raw": "TRIGSTR_1022",
+          "val": "Увеличивает урон дальнобойных немагических юнитов."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_32453",
+          "val": "W"
+        },
+        "2": {
+          "raw": "TRIGSTR_32481",
+          "val": "W"
+        },
+        "3": {
+          "raw": "TRIGSTR_32606",
+          "val": "W"
+        },
+        "4": {
+          "raw": "TRIGSTR_32607",
+          "val": "W"
+        },
+        "5": {
+          "raw": "TRIGSTR_32779",
+          "val": "W"
+        },
+        "6": {
+          "raw": "TRIGSTR_32780",
+          "val": "W"
+        }
+      }
+    },
+    "R00L": {
+      "id": "R00L",
+      "levels": 6,
+      "class": "melee",
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40721",
+          "val": "|cffe6beaaМечи|r |cffffff00(уровень 1)|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40722",
+          "val": "|cffd45e29Мечи|r |cffffff00(уровень 2)|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40723",
+          "val": "|cffd45e39Мечи|r |cffffff00(уровень 3)|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40724",
+          "val": "|cffd45e49Мечи|r |cffffff00(уровень 4)|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40725",
+          "val": "|cffd45e59Мечи|r |cffffff00(уровень 5)|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40726",
+          "val": "|cffd45e69Мечи|r |cffffff00(уровень 6)|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40727",
+          "val": "Нарыть |cffe6beaaМечи|r |cffffff00(уровень 1)|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40728",
+          "val": "Нарыть |cffd45e29Мечи|r |cffffff00(уровень 2)|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40729",
+          "val": "Нарыть |cffd45e39Мечи|r |cffffff00(уровень 3)|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40730",
+          "val": "Нарыть |cffd45e49Мечи|r |cffffff00(уровень 4)|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40731",
+          "val": "Нарыть |cffd45e59Мечи|r |cffffff00(уровень 5)|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40732",
+          "val": "Нарыть |cffd45e69Мечи|r |cffffff00(уровень 6)|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_1024",
+          "val": "Увеличивают урон юнитов ближнего боя."
+        },
+        "2": {
+          "raw": "TRIGSTR_1037",
+          "val": "Увеличивают урон юнитов ближнего боя."
+        },
+        "3": {
+          "raw": "TRIGSTR_1038",
+          "val": "Увеличивают урон юнитов ближнего боя."
+        },
+        "4": {
+          "raw": "TRIGSTR_1039",
+          "val": "Увеличивают урон юнитов ближнего боя."
+        },
+        "5": {
+          "raw": "TRIGSTR_1040",
+          "val": "Увеличивают урон юнитов ближнего боя."
+        },
+        "6": {
+          "raw": "TRIGSTR_1041",
+          "val": "Увеличивают урон юнитов ближнего боя."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_33007",
+          "val": "Q"
+        },
+        "2": {
+          "raw": "TRIGSTR_33008",
+          "val": "Q"
+        },
+        "3": {
+          "raw": "TRIGSTR_33014",
+          "val": "Q"
+        },
+        "4": {
+          "raw": "TRIGSTR_33043",
+          "val": "Q"
+        },
+        "5": {
+          "raw": "TRIGSTR_33044",
+          "val": "Q"
+        },
+        "6": {
+          "raw": "TRIGSTR_33102",
+          "val": "Q"
+        }
+      }
+    },
+    "R00M": {
+      "id": "R00M",
+      "levels": 6,
+      "class": "armor",
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40738",
+          "val": "|cffe6beaaТяжелая броня|r |cffffff00(уровень 1)|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40733",
+          "val": "|cffd45e29Тяжелая броня|r |cffffff00(уровень 2)|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40734",
+          "val": "|cffd45e39Тяжелая броня|r |cffffff00(уровень 3)|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40735",
+          "val": "|cffd45e49Тяжелая броня|r |cffffff00(уровень 4)|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40736",
+          "val": "|cffd45e59Тяжелая броня|r |cffffff00(уровень 5)|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40737",
+          "val": "|cffd45e69Тяжелая броня|r |cffffff00(уровень 6)|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40739",
+          "val": "Нарыть |cffe6beaaТяжелую броню|r |cffffff00(уровень 1)|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40740",
+          "val": "Нарыть |cffd45e29Тяжелую броню|r |cffffff00(уровень 2)|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40741",
+          "val": "Нарыть |cffd45e39Тяжелую броню|r |cffffff00(уровень 3)|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40742",
+          "val": "Нарыть |cffd45e49Тяжелую броню|r |cffffff00(уровень 4)|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40743",
+          "val": "Нарыть |cffd45e59Тяжелую броню|r |cffffff00(уровень 5)|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40744",
+          "val": "Нарыть |cffd45e69Тяжелую броню|r |cffffff00(уровень 6)|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_1066",
+          "val": "Усиливает броню юнитов ближнего боя."
+        },
+        "2": {
+          "raw": "TRIGSTR_1067",
+          "val": "Усиливает броню юнитов ближнего боя."
+        },
+        "3": {
+          "raw": "TRIGSTR_1068",
+          "val": "Усиливает броню юнитов ближнего боя."
+        },
+        "4": {
+          "raw": "TRIGSTR_1069",
+          "val": "Усиливает броню юнитов ближнего боя."
+        },
+        "5": {
+          "raw": "TRIGSTR_1070",
+          "val": "Усиливает броню юнитов ближнего боя."
+        },
+        "6": {
+          "raw": "TRIGSTR_1071",
+          "val": "Усиливает броню юнитов ближнего боя."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_5759",
+          "val": "A"
+        },
+        "2": {
+          "raw": "TRIGSTR_5760",
+          "val": "A"
+        },
+        "3": {
+          "raw": "TRIGSTR_5761",
+          "val": "A"
+        },
+        "4": {
+          "raw": "TRIGSTR_5783",
+          "val": "A"
+        },
+        "5": {
+          "raw": "TRIGSTR_5784",
+          "val": "A"
+        },
+        "6": {
+          "raw": "TRIGSTR_5785",
+          "val": "A"
+        }
+      }
+    },
+    "R00V": {
+      "id": "R00V",
+      "levels": 6,
+      "class": "armor",
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40779",
+          "val": "|cffe6beaaУлучшенная кладка|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40769",
+          "val": "|cffd45e29Улучшенная кладка|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40770",
+          "val": "|cffd45e39Улучшенная кладка|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40771",
+          "val": "|cffd45e49Улучшенная кладка|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40772",
+          "val": "|cffd45e59Улучшенная кладка|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40773",
+          "val": "|cffd45e69Улучшенная кладка|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40780",
+          "val": "Исследовать |cffe6beaaУлучшенную кладку|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40774",
+          "val": "Исследовать |cffd45e29Улучшенную кладку|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40775",
+          "val": "Исследовать |cffd45e39Улучшенную кладку|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40776",
+          "val": "Исследовать |cffd45e49Улучшенную кладку|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40777",
+          "val": "Исследовать |cffd45e59Улучшенную кладку|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40778",
+          "val": "Исследовать |cffd45e69Улучшенную кладку|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_1332",
+          "val": "Усиливает броню и увеличивает запас прочности зданий."
+        },
+        "2": {
+          "raw": "TRIGSTR_1333",
+          "val": "Усиливает броню и увеличивает запас прочности зданий."
+        },
+        "3": {
+          "raw": "TRIGSTR_1334",
+          "val": "Усиливает броню и увеличивает запас прочности зданий."
+        },
+        "4": {
+          "raw": "TRIGSTR_1335",
+          "val": "Усиливает броню и увеличивает запас прочности зданий."
+        },
+        "5": {
+          "raw": "TRIGSTR_1336",
+          "val": "Усиливает броню и увеличивает запас прочности зданий."
+        },
+        "6": {
+          "raw": "TRIGSTR_1337",
+          "val": "Усиливает броню и увеличивает запас прочности зданий."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_32903",
+          "val": "W"
+        },
+        "2": {
+          "raw": "TRIGSTR_32904",
+          "val": "W"
+        },
+        "3": {
+          "raw": "TRIGSTR_32976",
+          "val": "W"
+        },
+        "4": {
+          "raw": "TRIGSTR_32815",
+          "val": "W"
+        },
+        "5": {
+          "raw": "TRIGSTR_32875",
+          "val": "W"
+        },
+        "6": {
+          "raw": "TRIGSTR_32876",
+          "val": "W"
+        }
+      }
+    },
+    "R00U": {
+      "id": "R00U",
+      "levels": 6,
+      "class": null,
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40757",
+          "val": "|cffe6beaaУлучшенные инструменты|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40758",
+          "val": "|cffd45e29Улучшенные инструменты|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40759",
+          "val": "|cffd45e39Улучшенные инструменты|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40760",
+          "val": "|cffd45e49Улучшенные инструменты|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40761",
+          "val": "|cffd45e59Улучшенные инструменты|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40762",
+          "val": "|cffd45e69Улучшенные инструменты|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40763",
+          "val": "Исследовать |cffe6beaaУлучшенные инструменты|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40764",
+          "val": "Исследовать |cffd45e29Улучшенные инструменты|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40765",
+          "val": "Исследовать |cffd45e39Улучшенные инструменты|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40766",
+          "val": "Исследовать |cffd45e49Улучшенные инструменты|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40767",
+          "val": "Исследовать |cffd45e59Улучшенные инструменты|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40768",
+          "val": "Исследовать |cffd45e69Улучшенные инструменты|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_5084",
+          "val": "Увеличивают объем переносимой работниками древесины на 5."
+        },
+        "2": {
+          "raw": "TRIGSTR_5079",
+          "val": "Увеличивают объем переносимой работниками древесины на 5."
+        },
+        "3": {
+          "raw": "TRIGSTR_5080",
+          "val": "Увеличивают объем переносимой работниками древесины на 5."
+        },
+        "4": {
+          "raw": "TRIGSTR_5081",
+          "val": "Увеличивают объем переносимой работниками древесины на 5."
+        },
+        "5": {
+          "raw": "TRIGSTR_5082",
+          "val": "Увеличивают объем переносимой работниками древесины на 5."
+        },
+        "6": {
+          "raw": "TRIGSTR_5083",
+          "val": "Увеличивают объем переносимой работниками древесины на 5."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_33359",
+          "val": "Q"
+        },
+        "2": {
+          "raw": "TRIGSTR_33360",
+          "val": "Q"
+        },
+        "3": {
+          "raw": "TRIGSTR_33355",
+          "val": "Q"
+        },
+        "4": {
+          "raw": "TRIGSTR_33356",
+          "val": "Q"
+        },
+        "5": {
+          "raw": "TRIGSTR_33357",
+          "val": "Q"
+        },
+        "6": {
+          "raw": "TRIGSTR_33358",
+          "val": "Q"
+        }
+      }
+    },
+    "R00X": {
+      "id": "R00X",
+      "levels": 6,
+      "class": "melee",
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40805",
+          "val": "|cffe6beaaМагические талисманы|r |cffffff00(уровень 1)|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40806",
+          "val": "|cffd45e29Магические талисманы|r |cffffff00(уровень 2)|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40807",
+          "val": "|cffd45e39Магические талисманы|r |cffffff00(уровень 3)|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40809",
+          "val": "|cffd45e49Магические талисманы|r |cffffff00(уровень 4)|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40810",
+          "val": "|cffd45e59Магические талисманы|r |cffffff00(уровень 5)|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40811",
+          "val": "|cffd45e69Магические талисманы|r |cffffff00(уровень 6)|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40808",
+          "val": "Нарыть |cffe6beaaМагические талисманы|r |cffffff00(уровень 1)|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40812",
+          "val": "Нарыть |cffd45e29Магические талисманы|r |cffffff00(уровень 2)|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40813",
+          "val": "Нарыть |cffd45e39Магические талисманы|r |cffffff00(уровень 3)|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40814",
+          "val": "Нарыть |cffd45e49Магические талисманы|r |cffffff00(уровень 4)|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40815",
+          "val": "Нарыть |cffd45e59Магические талисманы|r |cffffff00(уровень 5)|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40816",
+          "val": "Нарыть |cffd45e69Магические талисманы|r |cffffff00(уровень 6)|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_1410",
+          "val": "Увеличивает урон магов."
+        },
+        "2": {
+          "raw": "TRIGSTR_1411",
+          "val": "Увеличивает урон магов."
+        },
+        "3": {
+          "raw": "TRIGSTR_1412",
+          "val": "Увеличивает урон магов."
+        },
+        "4": {
+          "raw": "TRIGSTR_1413",
+          "val": "Увеличивает урон магов."
+        },
+        "5": {
+          "raw": "TRIGSTR_1414",
+          "val": "Увеличивает урон магов."
+        },
+        "6": {
+          "raw": "TRIGSTR_1415",
+          "val": "Увеличивает урон магов."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_11209",
+          "val": "C"
+        },
+        "2": {
+          "raw": "TRIGSTR_11210",
+          "val": "C"
+        },
+        "3": {
+          "raw": "TRIGSTR_11211",
+          "val": "C"
+        },
+        "4": {
+          "raw": "TRIGSTR_11212",
+          "val": "C"
+        },
+        "5": {
+          "raw": "TRIGSTR_11213",
+          "val": "C"
+        },
+        "6": {
+          "raw": "TRIGSTR_11292",
+          "val": "C"
+        }
+      }
+    },
+    "R00K": {
+      "id": "R00K",
+      "levels": 6,
+      "class": "caster",
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40798",
+          "val": "|cffe6beaaКонтрабанда фолиантов|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40793",
+          "val": "|cffd45e29Контрабанда фолиантов|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40794",
+          "val": "|cffd45e39Контрабанда фолиантов|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40795",
+          "val": "|cffd45e49Контрабанда фолиантов|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40796",
+          "val": "|cffd45e59Контрабанда фолиантов|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40797",
+          "val": "|cffd45e69Контрабанда фолиантов|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40799",
+          "val": "Организовать |cffe6beaaКонтрабанда фолиантов|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40800",
+          "val": "Организовать |cffe6beaaКонтрабанда фолиантов|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40801",
+          "val": "Организовать |cffe6beaaКонтрабанда фолиантов|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40802",
+          "val": "Организовать |cffe6beaaКонтрабанда фолиантов|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40803",
+          "val": "Организовать |cffe6beaaКонтрабанда фолиантов|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40804",
+          "val": "Организовать |cffe6beaaКонтрабанда фолиантов|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_1339",
+          "val": "Увеличивает запас здоровья и маны колдунов, ускоряет регенерацию их маны."
+        },
+        "2": {
+          "raw": "TRIGSTR_1352",
+          "val": "Увеличивает запас здоровья и маны колдунов, ускоряет регенерацию их маны."
+        },
+        "3": {
+          "raw": "TRIGSTR_1353",
+          "val": "Увеличивает запас здоровья и маны колдунов, ускоряет регенерацию их маны."
+        },
+        "4": {
+          "raw": "TRIGSTR_1354",
+          "val": "Увеличивает запас здоровья и маны колдунов, ускоряет регенерацию их маны."
+        },
+        "5": {
+          "raw": "TRIGSTR_1355",
+          "val": "Увеличивает запас здоровья и маны колдунов, ускоряет регенерацию их маны."
+        },
+        "6": {
+          "raw": "TRIGSTR_1356",
+          "val": "Увеличивает запас здоровья и маны колдунов, ускоряет регенерацию их маны."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_15978",
+          "val": "X"
+        },
+        "2": {
+          "raw": "TRIGSTR_16290",
+          "val": "X"
+        },
+        "3": {
+          "raw": "TRIGSTR_15660",
+          "val": "X"
+        },
+        "4": {
+          "raw": "TRIGSTR_15661",
+          "val": "X"
+        },
+        "5": {
+          "raw": "TRIGSTR_15695",
+          "val": "X"
+        },
+        "6": {
+          "raw": "TRIGSTR_15969",
+          "val": "X"
+        }
+      }
+    },
+    "R00N": {
+      "id": "R00N",
+      "levels": 6,
+      "class": "armor",
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40745",
+          "val": "|cffe6beaaЛегкая броня|r |cffffff00(уровень 1)|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40746",
+          "val": "|cffd45e29Легкая броня|r |cffffff00(уровень 2)|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40747",
+          "val": "|cffd45e39Легкая броня|r |cffffff00(уровень 3)|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40748",
+          "val": "|cffd45e49Легкая броня|r |cffffff00(уровень 4)|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40749",
+          "val": "|cffd45e59Легкая броня|r |cffffff00(уровень 5)|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40750",
+          "val": "|cffd45e69Легкая броня|r |cffffff00(уровень 6)|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40751",
+          "val": "Нарыть |cffe6beaaЛегкую броню|r |cffffff00(уровень 1)|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40752",
+          "val": "Нарыть |cffd45e29Легкую броню|r |cffffff00(уровень 2)|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40753",
+          "val": "Нарыть |cffd45e39Легкую броню|r |cffffff00(уровень 3)|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40754",
+          "val": "Нарыть |cffd45e49Легкую броню|r |cffffff00(уровень 4)|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40755",
+          "val": "Нарыть |cffd45e59Легкую броню|r |cffffff00(уровень 5)|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40756",
+          "val": "Нарыть |cffd45e69Легкую броню|r |cffffff00(уровень 6)|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_1084",
+          "val": "Усиливают броню дальнобойных юнитов, магов, а также осадных юнитов."
+        },
+        "2": {
+          "raw": "TRIGSTR_1085",
+          "val": "Усиливают броню дальнобойных юнитов, магов, а также осадных юнитов."
+        },
+        "3": {
+          "raw": "TRIGSTR_1086",
+          "val": "Усиливают броню дальнобойных юнитов, магов, а также осадных юнитов."
+        },
+        "4": {
+          "raw": "TRIGSTR_1087",
+          "val": "Усиливают броню дальнобойных юнитов, магов, а также осадных юнитов."
+        },
+        "5": {
+          "raw": "TRIGSTR_1088",
+          "val": "Усиливают броню дальнобойных юнитов, магов, а также осадных юнитов."
+        },
+        "6": {
+          "raw": "TRIGSTR_1089",
+          "val": "Усиливают броню дальнобойных юнитов, магов, а также осадных юнитов."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_7043",
+          "val": "S"
+        },
+        "2": {
+          "raw": "TRIGSTR_7052",
+          "val": "S"
+        },
+        "3": {
+          "raw": "TRIGSTR_6680",
+          "val": "S"
+        },
+        "4": {
+          "raw": "TRIGSTR_7206",
+          "val": "S"
+        },
+        "5": {
+          "raw": "TRIGSTR_7266",
+          "val": "S"
+        },
+        "6": {
+          "raw": "TRIGSTR_7416",
+          "val": "S"
+        }
+      }
+    },
+    "R00W": {
+      "id": "R00W",
+      "levels": 6,
+      "class": "caster",
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40786",
+          "val": "|cffe6beaaКонтрабанда писаний|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40781",
+          "val": "|cffd45e29Контрабанда писаний|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40782",
+          "val": "|cffd45e39Контрабанда писаний|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40783",
+          "val": "|cffd45e49Контрабанда писаний|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40784",
+          "val": "|cffd45e59Контрабанда писаний|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40785",
+          "val": "|cffd45e69Контрабанда писаний|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40787",
+          "val": "Организовать |cffd45e69Контрабанда писаний|r"
+        },
+        "2": {
+          "raw": "TRIGSTR_40788",
+          "val": "Организовать |cffd45e69Контрабанда писаний|r"
+        },
+        "3": {
+          "raw": "TRIGSTR_40789",
+          "val": "Организовать |cffd45e69Контрабанда писаний|r"
+        },
+        "4": {
+          "raw": "TRIGSTR_40790",
+          "val": "Организовать |cffd45e69Контрабанда писаний|r"
+        },
+        "5": {
+          "raw": "TRIGSTR_40791",
+          "val": "Организовать |cffd45e69Контрабанда писаний|r"
+        },
+        "6": {
+          "raw": "TRIGSTR_40792",
+          "val": "Организовать |cffd45e69Контрабанда писаний|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_1385",
+          "val": "Увеличивает запас здоровья и маны жрецов, ускоряет регенерацию их маны."
+        },
+        "2": {
+          "raw": "TRIGSTR_1386",
+          "val": "Увеличивает запас здоровья и маны жрецов, ускоряет регенерацию их маны."
+        },
+        "3": {
+          "raw": "TRIGSTR_1387",
+          "val": "Увеличивает запас здоровья и маны жрецов, ускоряет регенерацию их маны."
+        },
+        "4": {
+          "raw": "TRIGSTR_1388",
+          "val": "Увеличивает запас здоровья и маны жрецов, ускоряет регенерацию их маны."
+        },
+        "5": {
+          "raw": "TRIGSTR_1389",
+          "val": "Увеличивает запас здоровья и маны жрецов, ускоряет регенерацию их маны."
+        },
+        "6": {
+          "raw": "TRIGSTR_1390",
+          "val": "Увеличивает запас здоровья и маны жрецов, ускоряет регенерацию их маны."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_23471",
+          "val": "Z"
+        },
+        "2": {
+          "raw": "TRIGSTR_23472",
+          "val": "Z"
+        },
+        "3": {
+          "raw": "TRIGSTR_23393",
+          "val": "Z"
+        },
+        "4": {
+          "raw": "TRIGSTR_23394",
+          "val": "Z"
+        },
+        "5": {
+          "raw": "TRIGSTR_23395",
+          "val": "Z"
+        },
+        "6": {
+          "raw": "TRIGSTR_23396",
+          "val": "Z"
+        }
+      }
+    },
+    "R0HP": {
+      "id": "R0HP",
+      "levels": 4,
+      "class": null,
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_29511",
+          "val": "Удешевление дозакупки"
+        },
+        "2": {
+          "raw": "TRIGSTR_38683",
+          "val": "R"
+        },
+        "3": {
+          "raw": "TRIGSTR_41016",
+          "val": "Дефектов нет"
+        },
+        "4": {
+          "raw": "TRIGSTR_29395",
+          "val": "Рьяный грабеж"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_29512",
+          "val": "Удешевление дозакупки"
+        },
+        "2": {
+          "raw": "TRIGSTR_38686",
+          "val": "R"
+        },
+        "3": {
+          "raw": "TRIGSTR_38753",
+          "val": "R"
+        },
+        "4": {
+          "raw": "TRIGSTR_29405",
+          "val": "Рьяный грабеж"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_29507",
+          "val": "Грейд до атаманов становится дешевлей."
+        },
+        "2": {
+          "raw": "TRIGSTR_29396",
+          "val": "Атакуя вражеские здания, юниты ближнего боя воруют золото."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "G",
+          "val": "G"
+        },
+        "2": {
+          "raw": "TRIGSTR_29386",
+          "val": "G"
+        },
+        "3": {
+          "raw": "TRIGSTR_29397",
+          "val": "G"
+        },
+        "4": {
+          "raw": "TRIGSTR_29398",
+          "val": "G"
+        }
+      }
+    },
+    "R00Y": {
+      "id": "R00Y",
+      "levels": 1,
+      "class": null,
+      "names": {
+        "1": {
+          "raw": "Горючая смесь",
+          "val": "Горючая смесь"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "Горючая смесь",
+          "val": "Горючая смесь"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_20159",
+          "val": "Покрывает снаряды катапульт горючей смесью, позволяя им поджигать землю."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_11293",
+          "val": "C"
+        }
+      }
+    },
+    "R00G": {
+      "id": "R00G",
+      "levels": 3,
+      "class": null,
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_879",
+          "val": "|cffe6beaaСоюз бандитов|r"
+        },
+        "2": {
+          "raw": "Хитиновая чешуя",
+          "val": "Хитиновая чешуя"
+        },
+        "3": {
+          "raw": "Костяная чешуя",
+          "val": "Костяная чешуя"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_880",
+          "val": "|cffe6beaaСоюз бандитов|r"
+        },
+        "2": {
+          "raw": "Исследовать хитиновую чешую",
+          "val": "Исследовать хитиновую чешую"
+        },
+        "3": {
+          "raw": "Исследовать костяную чешую",
+          "val": "Исследовать костяную чешую"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_881",
+          "val": "|cffe6beaaСоюз бандитов|r - фракция, состоящая как ни странно, из воров, убийц, грабителей, киллеров, пиратов и тому подобных личностей. По отдельности они слабы, но объединившись, смогут стать значительной силой на азероте... Если не перегрызуться между собой."
+        },
+        "2": {
+          "raw": "\"Дополнительно усиливает броню воинов-наг.\"",
+          "val": "\"Дополнительно усиливает броню воинов-наг.\""
+        },
+        "3": {
+          "raw": "\"Дополнительно усиливает броню воинов-наг.\"",
+          "val": "\"Дополнительно усиливает броню воинов-наг.\""
+        }
+      },
+      "hotkeys": {
+        "2": {
+          "raw": "C",
+          "val": "C"
+        },
+        "3": {
+          "raw": "C",
+          "val": "C"
+        }
+      }
+    },
+    "R00D": {
+      "id": "R00D",
+      "levels": 1,
+      "class": null,
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40216",
+          "val": "|cffe6beaaЗакупить механизмы Картеля|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40223",
+          "val": "|cffe6beaaЗакупить механизмы Картеля Хитрой Шестеренки|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_40263",
+          "val": "Механизмы |cff00ff00Картеля Хитрой Шестеренки|r качественно повысят эффективность нашей армии. Но вот о найме дуболомов |cffff0000Картеля Трюмных Вод|r придется на время забыть (можно менять выбор по ситуации)."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_15657",
+          "val": "X"
+        }
+      }
+    },
+    "R00A": {
+      "id": "R00A",
+      "levels": 1,
+      "class": null,
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40207",
+          "val": "|cffe6beaaПривлечь убийц Черного Ворона|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40209",
+          "val": "|cffe6beaaПривлечь убийц Черного Ворона|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_689",
+          "val": "Организация |cff00ff00Черный ворон|r славится своими профессиональными килерами. За хорошу плату они могут стать на нашу сторону... Но вот о вербовке |cffff0000Синдиката |rпридется забыть."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "S",
+          "val": "S"
+        }
+      }
+    },
+    "R00B": {
+      "id": "R00B",
+      "levels": 1,
+      "class": null,
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40212",
+          "val": "|cffe6beaaПривлечь аристократов Синдиката|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40213",
+          "val": "|cffe6beaaПривлечь аристократов Синдиката|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_693",
+          "val": "В организации |cff00ff00Синдикат|r присутствует многожество обедневших аристократов, чье присутствие сможет воодушевить наших работяг, естественно за небольшую плату. Но вот о вербовке |cffff0000Черного Ворона |rпридется забыть."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_5737",
+          "val": "A"
+        }
+      }
+    },
+    "R00E": {
+      "id": "R00E",
+      "levels": 1,
+      "class": null,
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40264",
+          "val": "|cffe6beaaПривлечь пиратов Кровавого Паруса|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40287",
+          "val": "|cffe6beaaПривлечь пиратов Кровавого Паруса|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_705",
+          "val": "Пираты |cff00ff00Кровавого Паруса|r - гарант нашего превосходства на море. Зачем строить свой флот, когда можно украсть чужой?"
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_32432",
+          "val": "W"
+        }
+      }
+    },
+    "R00F": {
+      "id": "R00F",
+      "levels": 1,
+      "class": null,
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40292",
+          "val": "|cffe6beaaПривлечь Братство Справедливости|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40293",
+          "val": "|cffe6beaaПривлечь Братство Справедливости|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_709",
+          "val": "Члены |cff00ff00Братства Справедливости|r - превосходные партизаны. Нанять их будет мудрым решением."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_32975",
+          "val": "Q"
+        }
+      }
+    },
+    "R00C": {
+      "id": "R00C",
+      "levels": 1,
+      "class": null,
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40214",
+          "val": "|cffe6beaaПривлечь дуболомов Картеля Трюмных Вод|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40215",
+          "val": "|cffe6beaaПривлечь дуболомов Картеля Трюмных Вод|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_697",
+          "val": "Дуболомы |cff00ff00Картеля Трюмных Вод|r смогут пополнить ряды нашей немногочисленной армии за небольшую плату. Но вот о покупке механизмов |cffff0000Картеля Хитрой Шестеренки|r придется забыть."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_23392",
+          "val": "Z"
+        }
+      }
+    },
+    "R00I": {
+      "id": "R00I",
+      "levels": 4,
+      "class": null,
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_902",
+          "val": "Большой грабеж"
+        },
+        "2": {
+          "raw": "TRIGSTR_896",
+          "val": "Лютый грабеж"
+        },
+        "3": {
+          "raw": "TRIGSTR_897",
+          "val": "Рьяный грабеж"
+        },
+        "4": {
+          "raw": "TRIGSTR_904",
+          "val": "Рьяный грабеж"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_895",
+          "val": "Большой грабеж"
+        },
+        "2": {
+          "raw": "TRIGSTR_903",
+          "val": "Лютый грабеж"
+        },
+        "3": {
+          "raw": "TRIGSTR_907",
+          "val": "Рьяный грабеж"
+        },
+        "4": {
+          "raw": "TRIGSTR_3794",
+          "val": "Рьяный грабеж"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_27466",
+          "val": "Атакуя врага, юниты добывают ресурсы."
+        },
+        "2": {
+          "raw": "TRIGSTR_27465",
+          "val": "Атакуя врага, юниты добывают ресурсы."
+        },
+        "3": {
+          "raw": "TRIGSTR_27468",
+          "val": "Атакуя врага, юниты добывают ресурсы."
+        },
+        "4": {
+          "raw": "TRIGSTR_27469",
+          "val": "Атакуя врага, юниты добывают ресурсы."
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_32186",
+          "val": "E"
+        },
+        "2": {
+          "raw": "TRIGSTR_32166",
+          "val": "E"
+        },
+        "3": {
+          "raw": "TRIGSTR_32167",
+          "val": "E"
+        },
+        "4": {
+          "raw": "TRIGSTR_32185",
+          "val": "E"
+        }
+      }
+    },
+    "R0BS": {
+      "id": "R0BS",
+      "levels": 1,
+      "class": null,
+      "names": {
+        "1": {
+          "raw": "TRIGSTR_40818",
+          "val": "|cffe6beaaВыбор атаманов|r"
+        }
+      },
+      "tips": {
+        "1": {
+          "raw": "TRIGSTR_40819",
+          "val": "|cffe6beaaВыбор атаманов|r"
+        }
+      },
+      "ubertips": {
+        "1": {
+          "raw": "TRIGSTR_15565",
+          "val": "Позволяет нанимать атаманов в казармах, легендарных бойцов и лидеров бандитских шаек "
+        }
+      },
+      "hotkeys": {
+        "1": {
+          "raw": "TRIGSTR_37457",
+          "val": "Q"
+        }
+      }
+    }
+  }
+}

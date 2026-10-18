@@ -1,0 +1,203 @@
+{
+  "scope": "Тролли джунглей (JungleTrolls): категория 1 — Здания",
+  "buildings_count": 10,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "h0N5",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31502,
+          "after": "|cffe4cfa3Дом вождей|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32078,
+          "after": "|cffe4cfa3Дом вождей|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33542,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Троллей джунглей первой ступени. Обеспечивает запас пищи, добычу ресурсов и выбор направления развития расы.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРемесленник|cffced4da: рабочий, добывающий древесину и возводящий строения.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЧёрное Копьё|cffced4da: союз с Ордой, доступ к магам и Бвонсамди.|n- |cffa9c7deИмперия Гурубаши|cffced4da: культ крови, доступ к колдунам вуду и Хаккару.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deКрепость вождей|cffced4da: открывает доступ к передовым сооружениям и войскам.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0N1",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31529,
+          "after": "|cffe4cfa3Крепость вождей|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32053,
+          "after": "|cffe4cfa3Крепость вождей|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 32605,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Троллей джунглей второй ступени. Существенно увеличивает запас пищи и открывает доступ к новым постройкам.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРемесленник|cffced4da: базовый рабочий.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deЦитадель вождей|cffced4da: открывает доступ к высшим технологиям и защите столицы.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0N6",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31543,
+          "after": "|cffe4cfa3Цитадель вождей|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32348,
+          "after": "|cffe4cfa3Цитадель вождей|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 32615,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Троллей джунглей третьей ступени. Обеспечивает максимальный запас пищи и защиту племени.|n|nДаёт |cffffffff160|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРемесленник|cffced4da: базовый рабочий.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗащита столицы|cffced4da: укрепляет оборону главного здания.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0N2",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31506,
+          "after": "|cffe4cfa3Жилище|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32505,
+          "after": "|cffe4cfa3Жилище|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 32612,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовое жилище троллей. Обеспечивает лимит пищи, приносит регулярный доход золота и способно обороняться дистанционными атаками.|n|nДаёт |cffffffff10|cffced4da ед. лимита пищи.|nПриносит регулярный доход золота каждые |cffffffff25|cffced4da сек.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0MY",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31497,
+          "after": "|cffe4cfa3Казармы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 31207,
+          "after": "|cffe4cfa3Казармы|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33540,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Военный лагерь для подготовки пехоты, стрелков и осадных орудий Троллей джунглей.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deВоитель|cffced4da: выносливый пехотинец ближнего боя.|n- |cffa9c7deОхотник за головами|cffced4da: меткий копейщик дальнего боя.|n- |cffa9c7deКатапульта|cffced4da: осадное орудие для разрушения укреплений.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЭликсиры жизни|cffced4da: увеличивает запас здоровья воителей и охотников.|n- |cffa9c7deОтравленные копья|cffced4da: наделяет стрелков отравляющей атакой.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0MW",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31494,
+          "after": "|cffe4cfa3Колизей|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32076,
+          "after": "|cffe4cfa3Колизей|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31956,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Арена и питомник для приручения свирепых зверей и подготовки тяжёлых бойцов джунглей.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deНаездник|cffced4da: мобильный кавалерист, переключающийся между дальним и ближним боем.|n- |cffa9c7deБерсерк|cffced4da: свирепый гигант с огромным запасом здоровья и оглушающими ударами.|n- |cffa9c7deГидра|cffced4da: могучее чудовище дальнего боя с ядовитым дыханием.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deДрессировка животных|cffced4da: повышает скорость наездников и гидр.|n- |cffa9c7deЧары гидр|cffced4da: разделение погибшей гидры на малых гидр.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0MX",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31495,
+          "after": "|cffe4cfa3Обитель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32341,
+          "after": "|cffe4cfa3Обитель|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 32271,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище духов вуду и тайных искусств Троллей джунглей.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЖрец|cffced4da: маг поддержки с жаждой крови и рассеиванием.|n- |cffa9c7deЗнахарь|cffced4da: мастер тотемов исцеления, стазиса и разведки.|n- |cffa9c7deКолдун Вуду|cffced4da: боевой маг Гурубаши с тёмными проклятиями и сглазом.|n- |cffa9c7deМаг Чёрного Копья|cffced4da: чародей льда с бураном и морозным доспехом.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбучение жрецов|cffced4da|n- |cffa9c7deОбучение знахарей|cffced4da|n- |cffa9c7deОбучение высших магов|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0N0",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31499,
+          "after": "|cffe4cfa3Алтарь Крови|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 31235,
+          "after": "|cffe4cfa3Алтарь Крови|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 32604,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Священный алтарь духов и предков. Позволяет призывать и воскрешать героев Троллей джунглей.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТемный охотник|cffced4da: герой поддержки и контроля.|n- |cffa9c7deМастер клинка|cffced4da: ловкий боец передовой с вихрем клинков.|n- |cffa9c7deНизвергатель|cffced4da: могущественный боевой маг разрушения.|n- |cffa9c7deХаккар Свежеватель Душ|cffced4da: легендарный кровавый бог Гурубаши.|n- |cffa9c7deЛоа Смерти Бвонсамди|cffced4da: легендарный покровитель Чёрного Копья.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0N3",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31958,
+          "after": "|cffe4cfa3Лесопилка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 31311,
+          "after": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 32613,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Центр обработки древесины и кузница племени. Принимает добытую древесину и разрабатывает базовые улучшения армии.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deСтальное оружие|cffced4da: повышает урон немагических войск.|n- |cffa9c7deСтальная броня|cffced4da: повышает защиту всех войск.|n- |cffa9c7deМетоды регенерации|cffced4da: ускоряет восстановление здоровья.|n- |cffa9c7deУлучшенные топоры|cffced4da: увеличивает сбор древесины.|n- |cffa9c7deКорпуса построек|cffced4da: укрепляет здания.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0D3",
+      "hotkey": "C",
+      "strings": []
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "operations": [
+    {
+      "type": "ability",
+      "id": "A1FR",
+      "field": "name",
+      "value": "|cffe4cfa3Ритуал поклонения|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1FR",
+      "field": "tip1",
+      "value": "|cffe4cfa3Ритуал поклонения|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1FR",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Подтверждает нерушимый союз племени Драккари с дикими богами. Открывает наём |cffa9c7deЛютых мамонтов|cffced4da, |cffa9c7deМагнатавров-разрушителей|cffced4da и строительство святилищ для призыва могущественных Лоа — |cffa9c7deРунока|cffced4da, |cffa9c7deМам'тота|cffced4da и |cffa9c7deАкали|cffced4da.|n|n|cffe69a8dВнимание:|cffced4da навсегда блокирует «Чрезвычайные меры» и поглощение сил Лоа.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1FS",
+      "field": "name",
+      "value": "|cffe4cfa3Чрезвычайные меры|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1FS",
+      "field": "tip1",
+      "value": "|cffe4cfa3Чрезвычайные меры|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1FS",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Приносит священных Лоа в жертву ради выживания племени. Открывает наём |cffa9c7deВзывателей душ|cffced4da, создание |cffa9c7deГолемов|cffced4da, найм героя |cffa9c7deВластелина Холода|cffced4da и |cffffffff3|cffced4da уровня исследований поглощения сил Лоа.|n|n|cffe69a8dВнимание:|cffced4da навсегда блокирует «Ритуал поклонения» и призыв Лоа на поле боя.|r"
+    },
+    {
+      "type": "buff",
+      "id": "B07I",
+      "field": "editorname",
+      "value": "|cffe4cfa3Морозное оружие|r"
+    },
+    {
+      "type": "buff",
+      "id": "B07I",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Морозное оружие|r"
+    },
+    {
+      "type": "buff",
+      "id": "B07I",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель заморожена: скорость передвижения |cffe69a8dснижена на 20%|cffced4da, скорость атаки — |cffe69a8dна 15%|cffced4da, цель получает |cffe69a8d1|cffced4da ед. урона каждую секунду.|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08L",
+      "field": "editorname",
+      "value": "|cffe4cfa3Угасание жизни|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08L",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Угасание жизни|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08L",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da На цель наложено проклятье: юнит каждую секунду |cffe69a8dтеряет 10 ед. здоровья|cffced4da.|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08M",
+      "field": "editorname",
+      "value": "|cffe4cfa3Проклятый шепот|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08M",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Проклятый шепот|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08M",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Тёмный шепот древних духов |cffe69a8dснижает броню цели на 2 ед.|cffced4da|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08N",
+      "field": "editorname",
+      "value": "|cffe4cfa3Вспышка маны|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08N",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Вспышка маны|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08N",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Любая попытка сотворить заклинание |cffe69a8dвызовет взрыв маны|cffced4da, наносящий урон цели и находящимся рядом союзникам.|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08O",
+      "field": "editorname",
+      "value": "|cffe4cfa3Тёмная перегрузка|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08O",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Тёмная перегрузка|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08O",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель поражена тёмной магией шакрамов и периодически |cffe69a8dполучает урон|cffced4da.|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08P",
+      "field": "editorname",
+      "value": "|cffe4cfa3Аура Рунока|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08P",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Аура Рунока|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08P",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Дух Рунока наполняет союзника стойкостью: броня |cffc8e087увеличена на 4 ед.|cffced4da|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08Q",
+      "field": "editorname",
+      "value": "|cffe4cfa3Аура Мам'Тота|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08Q",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Аура Мам'Тота|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08Q",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Мощь Мам'тота ведёт воинов вперёд: скорость передвижения |cffc8e087увеличена на 20%|cffced4da, скорость атаки — |cffc8e087на 20%|cffced4da.|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08R",
+      "field": "editorname",
+      "value": "|cffe4cfa3Аура Акали|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08R",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Аура Акали|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08R",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Благословение хищного Лоа: урон от любых атак |cffc8e087увеличен на 15%|cffced4da.|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08S",
+      "field": "editorname",
+      "value": "|cffe4cfa3Ярость|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08S",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Ярость|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08S",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Рунок охвачен боевой яростью: скорость атаки |cffc8e087увеличена на 50%|cffced4da.|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08T",
+      "field": "editorname",
+      "value": "|cffe4cfa3Приморозка|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08T",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Приморозка|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08T",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Скован вечной мерзлотой: цель |cffe69a8dне может двигаться|cffced4da.|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08U",
+      "field": "editorname",
+      "value": "|cffe4cfa3Ледяная стойкость|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08U",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Ледяная стойкость|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08U",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Ледяной панцирь защищает героя: броня |cffc8e087увеличена|cffced4da.|r"
+    }
+  ]
+}

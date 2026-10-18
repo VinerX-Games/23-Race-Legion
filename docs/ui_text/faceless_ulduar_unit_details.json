@@ -1,0 +1,48 @@
+{
+  "command": "get-objects-bulk",
+  "count": 2,
+  "map": "F:\\Gemini_23Race\\map.w3x",
+  "missing": [],
+  "objects": [
+    {
+      "fields": {
+        "abillist": "A0MK,A0B0,A0B1,A0B2,A0AZ,AHad",
+        "builds": "",
+        "hotkey": "U",
+        "name": "TRIGSTR_12414",
+        "requires": "",
+        "requiresamount": "",
+        "researches": "",
+        "sellunits": "",
+        "tip": "",
+        "trains": "U02F",
+        "ubertip": "",
+        "weapson": "0"
+      },
+      "id": "h0DR",
+      "name": "|cffe6beaaУльдуар (внешний)|r"
+    },
+    {
+      "fields": {
+        "abillist": "A12G,A01C,AInv,A12I",
+        "builds": "",
+        "hotkey": "TRIGSTR_5935",
+        "name": "TRIGSTR_22671",
+        "requires": "R0F9",
+        "requiresamount": "",
+        "researches": "",
+        "sellunits": "",
+        "tip": "TRIGSTR_23681",
+        "trains": "",
+        "ubertip": "|cffa6afb8ГЕРОЙ:|cffced4da Легендарный герой ближнего боя, поддерживающий войска аурами и лечением.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАнтимагическая аура|cffced4da: снижает восстановление маны окружающих врагов.|n- |cffa9c7deВечная служба|cffced4da: поднимает павших воинов для сражения на стороне героя.|n- |cffa9c7deПары саронита|cffced4da: восстанавливают здоровье союзников в области действия, пока герой поддерживает заклинание.|n- |cffa9c7deПриказ генерала|cffced4da: повышает урон от атак союзных войск рядом с героем.|n- |cffa9c7deСаронитовый панцирь|cffced4da: снижает получаемый урон от атак.|n- |cffa9c7deСлужение Йогг`Сарону|cffced4da: передаёт игроку контроль над Древним богом Йогг`Сароном.|n|nАтакует наземные цели.|r",
+        "weapson": "1"
+      },
+      "id": "U02F",
+      "name": "|cffe4cfa3Верховный генерал|r"
+    }
+  ],
+  "ok": true,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "type": "unit"
+}

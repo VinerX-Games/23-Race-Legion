@@ -1,0 +1,137 @@
+{
+  "scope": "Согласование названий Служения, Порождения придатка и Порождения Кошмара",
+  "sources": [
+    {
+      "command": "get-objects-bulk",
+      "count": 6,
+      "map": "F:\\Gemini_23Race\\map.w3x",
+      "missing": [],
+      "objects": [
+        {
+          "fields": {
+            "isbldg": "0",
+            "ubertip": "TRIGSTR_31885"
+          },
+          "id": "U02F",
+          "name": "|cffe4cfa3Верховный генерал|r"
+        },
+        {
+          "fields": {
+            "isbldg": "1",
+            "ubertip": "TRIGSTR_31847"
+          },
+          "id": "h0HZ",
+          "name": "|cffe4cfa3Забытый|r"
+        },
+        {
+          "fields": {
+            "isbldg": "1",
+            "ubertip": "TRIGSTR_31853"
+          },
+          "id": "h0I7",
+          "name": "|cffe4cfa3Сущность Страха|r"
+        },
+        {
+          "fields": {
+            "isbldg": "1",
+            "ubertip": "TRIGSTR_25357"
+          },
+          "id": "h0I8",
+          "name": "|cffe4cfa3Обитель Кошмаров|r"
+        },
+        {
+          "fields": {
+            "isbldg": "1",
+            "ubertip": "TRIGSTR_31722"
+          },
+          "id": "u02E",
+          "name": "|cffe4cfa3Малое порождение|r"
+        },
+        {
+          "fields": {
+            "isbldg": "0",
+            "ubertip": "|cffa6afb8ЮНИТ:|cffced4da Заклинатель, создающий существ из трупов и поддерживающий союзников.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПородить Кошмар|cffced4da: создаёт из трупа временного Кошмара.|n- |cffa9c7deПронзание|cffced4da: поражает наземных врагов вокруг цели атаки осколками; требуется второй уровень «Знания проклинателей».|n- |cffa9c7deМорозный доспех|cffced4da: повышает броню союзника и замедляет атакующих его в ближнем бою; требуется третий уровень «Знания проклинателей».|n|nАтакует наземные цели.|r"
+          },
+          "id": "h0K2",
+          "name": "|cffe4cfa3Проклинатель Бездны|r"
+        }
+      ],
+      "ok": true,
+      "schema_version": 1,
+      "tool": "HiveWE_cli",
+      "type": "unit"
+    },
+    {
+      "command": "get-objects-bulk",
+      "count": 1,
+      "map": "F:\\Gemini_23Race\\map.w3x",
+      "missing": [],
+      "objects": [
+        {
+          "fields": {
+            "name": "|cffe4cfa3Породить Кошмар|r",
+            "tip1": "|cffe4cfa3Породить Кошмар|r (|cffffffffV|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт из трупа одного Кошмара на |cffffffff50|cffced4da сек. Одновременно можно поддерживать до |cffffffff6|cffced4da Кошмаров.|r"
+          },
+          "id": "A16N",
+          "name": "|cffe4cfa3Породить Кошмар|r"
+        }
+      ],
+      "ok": true,
+      "schema_version": 1,
+      "tool": "HiveWE_cli",
+      "type": "ability"
+    }
+  ],
+  "strings": [
+    {
+      "rawcode": "U02F",
+      "field": "ubertip",
+      "before": "|cffa6afb8ГЕРОЙ:|cffced4da Легендарный герой ближнего боя, поддерживающий войска аурами и лечением.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАнтимагическая аура|cffced4da: снижает восстановление маны окружающих врагов.|n- |cffa9c7deВечная служба|cffced4da: поднимает павших воинов для сражения на стороне героя.|n- |cffa9c7deПары саронита|cffced4da: восстанавливают здоровье союзников в области действия, пока герой поддерживает заклинание.|n- |cffa9c7deПриказ генерала|cffced4da: повышает урон от атак союзных войск рядом с героем.|n- |cffa9c7deСаронитовый панцирь|cffced4da: снижает получаемый урон от атак.|n- |cffa9c7deСтать слугой Йогг`Сарона|cffced4da: передаёт игроку контроль над Древним богом Йогг`Сароном.|n|nАтакует наземные цели.|r",
+      "after": "|cffa6afb8ГЕРОЙ:|cffced4da Легендарный герой ближнего боя, поддерживающий войска аурами и лечением.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАнтимагическая аура|cffced4da: снижает восстановление маны окружающих врагов.|n- |cffa9c7deВечная служба|cffced4da: поднимает павших воинов для сражения на стороне героя.|n- |cffa9c7deПары саронита|cffced4da: восстанавливают здоровье союзников в области действия, пока герой поддерживает заклинание.|n- |cffa9c7deПриказ генерала|cffced4da: повышает урон от атак союзных войск рядом с героем.|n- |cffa9c7deСаронитовый панцирь|cffced4da: снижает получаемый урон от атак.|n- |cffa9c7deСлужение Йогг`Сарону|cffced4da: передаёт игроку контроль над Древним богом Йогг`Сароном.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "h0HZ",
+      "field": "ubertip",
+      "before": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff1|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПородить придаток|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deСущность Страха|cffced4da.|r",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff1|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deСущность Страха|cffced4da.|r"
+    },
+    {
+      "rawcode": "h0I7",
+      "field": "ubertip",
+      "before": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff2|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПородить придаток|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n- |cffa9c7deЗащита столицы|cffced4da: аура, ослабляющая броню ближайших противников.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deОбитель Кошмаров|cffced4da.|r",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff2|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n- |cffa9c7deЗащита столицы|cffced4da: аура, ослабляющая броню ближайших противников.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deОбитель Кошмаров|cffced4da.|r"
+    },
+    {
+      "rawcode": "h0I8",
+      "field": "ubertip",
+      "before": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff3|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПородить придаток|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|r",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff3|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|r"
+    },
+    {
+      "rawcode": "u02E",
+      "field": "ubertip",
+      "before": "|cffa6afb8ЗДАНИЕ:|cffced4da Доходная постройка безликих. Увеличивает базовый доход на |cffc8e08730|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПородить придаток|cffced4da: бесплатно создаёт ещё одно |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deДымка бездны|cffced4da: аура, повышающая скорость передвижения и восстановление здоровья ближайших союзников.|r",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Доходная постройка безликих. Увеличивает базовый доход на |cffc8e08730|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт ещё одно |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deДымка бездны|cffced4da: аура, повышающая скорость передвижения и восстановление здоровья ближайших союзников.|r"
+    },
+    {
+      "rawcode": "h0K2",
+      "field": "ubertip",
+      "before": "|cffa6afb8ЮНИТ:|cffced4da Заклинатель, создающий существ из трупов и поддерживающий союзников.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПородить Кошмар|cffced4da: создаёт из трупа временного Кошмара.|n- |cffa9c7deПронзание|cffced4da: поражает наземных врагов вокруг цели атаки осколками; требуется второй уровень «Знания проклинателей».|n- |cffa9c7deМорозный доспех|cffced4da: повышает броню союзника и замедляет атакующих его в ближнем бою; требуется третий уровень «Знания проклинателей».|n|nАтакует наземные цели.|r",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Заклинатель, создающий существ из трупов и поддерживающий союзников.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПорождение Кошмара|cffced4da: создаёт из трупа временного Кошмара.|n- |cffa9c7deПронзание|cffced4da: поражает наземных врагов вокруг цели атаки осколками; требуется второй уровень «Знания проклинателей».|n- |cffa9c7deМорозный доспех|cffced4da: повышает броню союзника и замедляет атакующих его в ближнем бою; требуется третий уровень «Знания проклинателей».|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "A16N",
+      "field": "name",
+      "before": "|cffe4cfa3Породить Кошмар|r",
+      "after": "|cffe4cfa3Порождение Кошмара|r"
+    },
+    {
+      "rawcode": "A16N",
+      "field": "tip1",
+      "before": "|cffe4cfa3Породить Кошмар|r (|cffffffffV|r)",
+      "after": "|cffe4cfa3Порождение Кошмара|r (|cffffffffV|r)"
+    }
+  ],
+  "in_game_checked": false
+}

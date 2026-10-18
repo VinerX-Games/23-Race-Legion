@@ -1,0 +1,696 @@
+{
+  "scope": "Лесные тролли (ForestTrolls): категория 5 — Исследования",
+  "upgrades_count": 12,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R01Z",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 19404,
+          "after": "|cffe4cfa3Корпуса построек|r — уровень 1"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 19410,
+          "after": "|cffe4cfa3Корпуса построек — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 32395,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет стены и каркасы зданий лесных троллей, увеличивая их запас прочности и броню на |cffc8e087+10%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем зданиям лесных троллей.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 19406,
+          "after": "|cffe4cfa3Корпуса построек|r — уровень 2"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 19607,
+          "after": "|cffe4cfa3Корпуса построек — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 32396,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет стены и каркасы зданий лесных троллей, увеличивая их запас прочности и броню на |cffc8e087+20%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем зданиям лесных троллей.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 19408,
+          "after": "|cffe4cfa3Корпуса построек|r — уровень 3"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 19668,
+          "after": "|cffe4cfa3Корпуса построек — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 32397,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет стены и каркасы зданий лесных троллей, увеличивая их запас прочности и броню на |cffc8e087+30%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем зданиям лесных троллей.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03O",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 29695,
+          "after": "|cffe4cfa3Методы регенерации|r — уровень 1"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32584,
+          "after": "|cffe4cfa3Методы регенерации — уровень 1|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33460,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет естественное исцеление ран, повышая восстановление здоровья органических войск на |cffc8e087+1|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем живым воинам лесных троллей.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 31107,
+          "after": "|cffe4cfa3Методы регенерации|r — уровень 2"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 32585,
+          "after": "|cffe4cfa3Методы регенерации — уровень 2|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 33461,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет естественное исцеление ран, повышая восстановление здоровья органических войск на |cffc8e087+2|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем живым воинам лесных троллей.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 31108,
+          "after": "|cffe4cfa3Методы регенерации|r — уровень 3"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 32586,
+          "after": "|cffe4cfa3Методы регенерации — уровень 3|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 33462,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет естественное исцеление ран, повышая восстановление здоровья органических войск на |cffc8e087+3|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем живым воинам лесных троллей.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 19825,
+          "after": "|cffe4cfa3Методы регенерации|r — уровень 4"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 32579,
+          "after": "|cffe4cfa3Методы регенерации — уровень 4|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 33463,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет естественное исцеление ран, повышая восстановление здоровья органических войск на |cffc8e087+4|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем живым воинам лесных троллей.|n|nУровень исследования: |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 22818,
+          "after": "|cffe4cfa3Методы регенерации|r — уровень 5"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 32580,
+          "after": "|cffe4cfa3Методы регенерации — уровень 5|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 33464,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет естественное исцеление ран, повышая восстановление здоровья органических войск на |cffc8e087+5|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем живым воинам лесных троллей.|n|nУровень исследования: |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 24572,
+          "after": "|cffe4cfa3Методы регенерации|r — уровень 6"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 32581,
+          "after": "|cffe4cfa3Методы регенерации — уровень 6|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 33465,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет естественное исцеление ран, повышая восстановление здоровья органических войск на |cffc8e087+6|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем живым воинам лесных троллей.|n|nУровень исследования: |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03P",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 32621,
+          "after": "|cffe4cfa3Снадобья силы|r — уровень 1"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32703,
+          "after": "|cffe4cfa3Снадобья силы — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 32596,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Закаляет тело воинов особыми настойками трав, увеличивая максимальный запас здоровья берсерков и наездников на медведях на |cffc8e087+75|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБерсерк|cffced4da, |cffa9c7deНаездник на медведе|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 32623,
+          "after": "|cffe4cfa3Снадобья силы|r — уровень 2"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 32704,
+          "after": "|cffe4cfa3Снадобья силы — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 32597,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Закаляет тело воинов особыми настойками трав, увеличивая максимальный запас здоровья берсерков и наездников на медведях на |cffc8e087+135|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБерсерк|cffced4da, |cffa9c7deНаездник на медведе|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 32640,
+          "after": "|cffe4cfa3Снадобья силы|r — уровень 3"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 32855,
+          "after": "|cffe4cfa3Снадобья силы — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 32598,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Закаляет тело воинов особыми настойками трав, увеличивая максимальный запас здоровья берсерков и наездников на медведях на |cffc8e087+195|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБерсерк|cffced4da, |cffa9c7deНаездник на медведе|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0IQ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 32937,
+          "after": "|cffe4cfa3Мастер топора|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32938,
+          "after": "|cffe4cfa3Мастер топора|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33004,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Совершенствует мастерство владения метательным оружием, повышая ранг метателей топоров до |cffa9c7deМастеров топора|cffced4da и существенно увеличивая их боевые характеристики.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМетатель топоров|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0IS",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 33073,
+          "after": "|cffe4cfa3Улучшенные топоры|r — уровень 1"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33074,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "name2",
+          "wts_id": 33070,
+          "after": "|cffe4cfa3Улучшенные топоры|r — уровень 2"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33071,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "name3",
+          "wts_id": 33056,
+          "after": "|cffe4cfa3Улучшенные топоры|r — уровень 3"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 33060,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 33064,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Улучшает лесорубные инструменты, позволяя рабочим переносить на |cffc8e087+30|cffced4da ед. больше древесины.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРемесленник|cffced4da, |cffa9c7deСобиратель|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 33057,
+          "after": "|cffe4cfa3Улучшенные топоры|r — уровень 4"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 33061,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 33065,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Улучшает лесорубные инструменты, позволяя рабочим переносить на |cffc8e087+40|cffced4da ед. больше древесины.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРемесленник|cffced4da, |cffa9c7deСобиратель|cffced4da.|n|nУровень исследования: |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 33058,
+          "after": "|cffe4cfa3Улучшенные топоры|r — уровень 5"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 33062,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 5|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 33066,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Улучшает лесорубные инструменты, позволяя рабочим переносить на |cffc8e087+50|cffced4da ед. больше древесины.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРемесленник|cffced4da, |cffa9c7deСобиратель|cffced4da.|n|nУровень исследования: |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 33059,
+          "after": "|cffe4cfa3Улучшенные топоры|r — уровень 6"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 33063,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 6|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 33067,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Улучшает лесорубные инструменты, позволяя рабочим переносить на |cffc8e087+60|cffced4da ед. больше древесины.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРемесленник|cffced4da, |cffa9c7deСобиратель|cffced4da.|n|nУровень исследования: |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0IT",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 33091,
+          "after": "|cffe4cfa3Стальная броня|r — уровень 1"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33098,
+          "after": "|cffe4cfa3Стальная броня — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33085,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет доспехи и щиты воинов, повышая броню на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым войскам лесных троллей.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 33093,
+          "after": "|cffe4cfa3Стальная броня|r — уровень 2"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33099,
+          "after": "|cffe4cfa3Стальная броня — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 33086,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет доспехи и щиты воинов, повышая броню на |cffc8e087+4|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым войскам лесных троллей.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 33094,
+          "after": "|cffe4cfa3Стальная броня|r — уровень 3"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 33100,
+          "after": "|cffe4cfa3Стальная броня — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 33087,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет доспехи и щиты воинов, повышая броню на |cffc8e087+6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым войскам лесных троллей.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 33079,
+          "after": "|cffe4cfa3Стальная броня|r — уровень 4"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 33082,
+          "after": "|cffe4cfa3Стальная броня — уровень 4|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 33088,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет доспехи и щиты воинов, повышая броню на |cffc8e087+8|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым войскам лесных троллей.|n|nУровень исследования: |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 33080,
+          "after": "|cffe4cfa3Стальная броня|r — уровень 5"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 33083,
+          "after": "|cffe4cfa3Стальная броня — уровень 5|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 33089,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет доспехи и щиты воинов, повышая броню на |cffc8e087+10|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым войскам лесных троллей.|n|nУровень исследования: |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 33081,
+          "after": "|cffe4cfa3Стальная броня|r — уровень 6"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 33084,
+          "after": "|cffe4cfa3Стальная броня — уровень 6|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 33090,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет доспехи и щиты воинов, повышая броню на |cffc8e087+12|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым войскам лесных троллей.|n|nУровень исследования: |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0IU",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 33117,
+          "after": "|cffe4cfa3Стальное оружие|r — уровень 1"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33124,
+          "after": "|cffe4cfa3Стальное оружие — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33111,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Закаляет клинки, топоры и наконечники копий, увеличивая урон немагических атак войск лесных троллей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам ближнего и дальнего боя лесных троллей.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 33119,
+          "after": "|cffe4cfa3Стальное оружие|r — уровень 2"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33125,
+          "after": "|cffe4cfa3Стальное оружие — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 33112,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Закаляет клинки, топоры и наконечники копий, увеличивая урон немагических атак войск лесных троллей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам ближнего и дальнего боя лесных троллей.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 33120,
+          "after": "|cffe4cfa3Стальное оружие|r — уровень 3"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 33126,
+          "after": "|cffe4cfa3Стальное оружие — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 33113,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Закаляет клинки, топоры и наконечники копий, увеличивая урон немагических атак войск лесных троллей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам ближнего и дальнего боя лесных троллей.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 33105,
+          "after": "|cffe4cfa3Стальное оружие|r — уровень 4"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 33108,
+          "after": "|cffe4cfa3Стальное оружие — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 33114,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Закаляет клинки, топоры и наконечники копий, увеличивая урон немагических атак войск лесных троллей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам ближнего и дальнего боя лесных троллей.|n|nУровень исследования: |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 33106,
+          "after": "|cffe4cfa3Стальное оружие|r — уровень 5"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 33109,
+          "after": "|cffe4cfa3Стальное оружие — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 33115,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Закаляет клинки, топоры и наконечники копий, увеличивая урон немагических атак войск лесных троллей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам ближнего и дальнего боя лесных троллей.|n|nУровень исследования: |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 33107,
+          "after": "|cffe4cfa3Стальное оружие|r — уровень 6"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 33110,
+          "after": "|cffe4cfa3Стальное оружие — уровень 6|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 33116,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Закаляет клинки, топоры и наконечники копий, увеличивая урон немагических атак войск лесных троллей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам ближнего и дальнего боя лесных троллей.|n|nУровень исследования: |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0IV",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 33138,
+          "after": "|cffe4cfa3Обучение заклинателей|r — ступень 1"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33128,
+          "after": "|cffe4cfa3Обучение заклинателей — ступень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33132,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья заклинателей на |cffc8e087+60|cffced4da, запас маны на |cffc8e087+150|cffced4da, ускоряет восстановление маны и открывает доступ к новым заклинаниям вуду.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЗаклинатель|cffced4da.|n|nСтупень обучения: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 33127,
+          "after": "|cffe4cfa3Обучение заклинателей|r — ступень 2"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33129,
+          "after": "|cffe4cfa3Обучение заклинателей — ступень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 33136,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья заклинателей на |cffc8e087+120|cffced4da, запас маны на |cffc8e087+300|cffced4da, ускоряет восстановление маны и открывает доступ к новым заклинаниям вуду.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЗаклинатель|cffced4da.|n|nСтупень обучения: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 33130,
+          "after": "|cffe4cfa3Обучение заклинателей|r — ступень 3"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 33131,
+          "after": "|cffe4cfa3Обучение заклинателей — ступень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 33137,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья заклинателей на |cffc8e087+180|cffced4da, запас маны на |cffc8e087+450|cffced4da, ускоряет восстановление маны и открывает доступ к новым заклинаниям вуду.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЗаклинатель|cffced4da.|n|nСтупень обучения: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0IW",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 33140,
+          "after": "|cffe4cfa3Обучение жрецов|r — ступень 1"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33142,
+          "after": "|cffe4cfa3Обучение жрецов — ступень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33146,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья жрецов на |cffc8e087+60|cffced4da, запас маны на |cffc8e087+150|cffced4da, ускоряет регенерацию маны и открывает новые целительные и очищающие ритуалы.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец|cffced4da.|n|nСтупень обучения: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 33141,
+          "after": "|cffe4cfa3Обучение жрецов|r — ступень 2"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33143,
+          "after": "|cffe4cfa3Обучение жрецов — ступень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 33150,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья жрецов на |cffc8e087+120|cffced4da, запас маны на |cffc8e087+300|cffced4da, ускоряет регенерацию маны и открывает новые целительные и очищающие ритуалы.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец|cffced4da.|n|nСтупень обучения: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 33144,
+          "after": "|cffe4cfa3Обучение жрецов|r — ступень 3"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 33145,
+          "after": "|cffe4cfa3Обучение жрецов — ступень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 33151,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья жрецов на |cffc8e087+180|cffced4da, запас маны на |cffc8e087+450|cffced4da, ускоряет регенерацию маны и открывает новые целительные и очищающие ритуалы.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец|cffced4da.|n|nСтупень обучения: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0J0",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 33491,
+          "after": "|cffe4cfa3Методы поглощения Лоа|r — уровень 1"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33498,
+          "after": "|cffe4cfa3Методы поглощения Лоа — уровень 1|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33485,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет духовную связь воинов со звериными богами, открывая новые способности и усиливая характеристики аватаров Лоа.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТролль-медведь|cffced4da, |cffa9c7deТролль-волк|cffced4da, |cffa9c7deТролль-ястреб|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 33493,
+          "after": "|cffe4cfa3Методы поглощения Лоа|r — уровень 2"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33499,
+          "after": "|cffe4cfa3Методы поглощения Лоа — уровень 2|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 33486,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет духовную связь воинов со звериными богами, открывая новые способности и усиливая характеристики аватаров Лоа.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТролль-медведь|cffced4da, |cffa9c7deТролль-волк|cffced4da, |cffa9c7deТролль-ястреб|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 33494,
+          "after": "|cffe4cfa3Методы поглощения Лоа|r — уровень 3"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 33500,
+          "after": "|cffe4cfa3Методы поглощения Лоа — уровень 3|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 33487,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет духовную связь воинов со звериными богами, открывая новые способности и усиливая характеристики аватаров Лоа.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТролль-медведь|cffced4da, |cffa9c7deТролль-волк|cffced4da, |cffa9c7deТролль-ястреб|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0J1",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 34173,
+          "after": "|cffe4cfa3Лесные тролли|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 34174,
+          "after": "|cffe4cfa3Лесные тролли|r"
+        }
+      ]
+    },
+    {
+      "id": "R0KI",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 39316,
+          "after": "|cffe4cfa3Шипы на медведе|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 39317,
+          "after": "|cffe4cfa3Шипы на медведе|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 39320,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Оснащает сбрую боевых медведей острыми стальными шипами, повышая их броню на |cffc8e087+2|cffced4da и отражая |cffffffff7%|cffced4da урона ближнего боя обратно атакующим.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНаездник на медведе|cffced4da.|r"
+        }
+      ]
+    }
+  ]
+}

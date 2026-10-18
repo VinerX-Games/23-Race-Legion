@@ -1,0 +1,1994 @@
+{
+  "A0HX": {
+    "id": "A0HX",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_38881",
+      "val": "|cffd7b4f5Культ Сумеречного Молота|r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_11147",
+      "val": "X"
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_38882",
+          "val": "|cffd7b4f5Культ Сумеречного Молота|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_35196",
+          "val": "|cff7dc87dСоздатель расы:|r |cffe17d00Escanor (Яхве)|r|n|cff7dc87dСложность:|r  |cffffbe37Средняя|r|n|cff7dc87dПериод:|r |cffff5e19Cataclysm|r|n|cff7dc87dОписание:|r |cffff00ffKyльт Cyмepeчнoгo Moлoтa|r – opгaнизaция, oбъeдинившaя выжившиx opкoв клaнa Cyмepeчнoгo Moлoтa и мнoжecтвo пpeдcтaвитeлeй дpyгиx pac. Ceйчac члeны opгaнизaции зaнимaютcя иccлeдoвaниeм yчeния Чo'гaллa и cocтaвляют кyльт в eгo нынeшнeм cocтoянии. Xoтя Cyмepeчный Moлoт и дo cиx пop cчитaeтcя клaнoм, нo тo, чтo былo paньшe плeмeнeм opкoв, yжe дaвнo cтaлo чacтью кyльтa. Opгaнизaция в нaшe вpeмя зaмeтнo oтличaeтcя oт тoгo, чeм oнa являлacь пpи зapoждeнии. Teм нe мeнee, в любoй мoмeнт иcтopии кyльтa eгo цeль - yничтoжить миp и дocтигнyть этoгo любыми cpeдcтвaми или цeнoй. Oтличитeльнoй чepтoй кyльтиcтoв являeтcя фиoлeтoвaя pacцвeткa иx дocпexoв."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A01Z": {
+    "id": "A01Z",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_1936",
+      "val": "Коррозия бездны"
+    },
+    "hotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_1937",
+          "val": "Коррозия бездны"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_1938",
+          "val": "Коррозия бездны наносит <ACvs,DataA1> урона/сек. |nВремя действия: <ACvs,Dur1> сек."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A09Q": {
+    "id": "A09Q",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_6819",
+      "val": "|cffd7b4f6Тяжелые удары|r"
+    },
+    "hotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_6820",
+          "val": "|cffd7b4f6Тяжелые удары|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_20136",
+          "val": "+<Ahsb,DataB1,%>% к урону по целям со тяжелой броней."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A09R": {
+    "id": "A09R",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_6823",
+      "val": "|cffd7b4f6Порча|r"
+    },
+    "hotkey": {
+      "raw": "T",
+      "val": "T"
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_6824",
+          "val": "|cffd7b4f6Порча|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_7658",
+          "val": "Наночит доп урон атакованой цели"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A09S": {
+    "id": "A09S",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_6826",
+      "val": "|cffd7b4f6Замедление|r"
+    },
+    "hotkey": {
+      "raw": "W",
+      "val": "W"
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_6827",
+          "val": "|cffd7b4f6Замедление|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39177",
+          "val": "Замедляет атаку врага на <Aslo,DataB1,%>% и передвижение на 35%. |nВремя действия: <Aslo,Dur1> сек."
+        },
+        "untip": {
+          "raw": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "val": "|cffc3dbffПКМ – включить автоприменение.|r"
+        },
+        "unubertip": {
+          "raw": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "val": "|cffc3dbffПКМ – отключить автоприменение.|r"
+        }
+      }
+    }
+  },
+  "A09T": {
+    "id": "A09T",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_6830",
+      "val": "|cffd7b4f6Опутывание|r"
+    },
+    "hotkey": {
+      "raw": "E",
+      "val": "E"
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_6831",
+          "val": "|cffd7b4f6Опутывание|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_6829",
+          "val": "Притягивает врага к земле и обездвиживает его на 8 сек. На героев практически не действует."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A09U": {
+    "id": "A09U",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_6832",
+      "val": "|cffd7b4f6Опутывание|r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_13294",
+      "val": "W"
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_6834",
+          "val": "|cffd7b4f6Опутывание|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_965",
+          "val": "Притягивает врага к земле и обездвиживает его на 8 сек. Опутанные воздушные цели считаются наземными."
+        },
+        "untip": {
+          "raw": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "val": "|cffc3dbffПКМ – включить автоприменение.|r"
+        },
+        "unubertip": {
+          "raw": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "val": "|cffc3dbffПКМ – отключить автоприменение.|r"
+        }
+      }
+    }
+  },
+  "A09V": {
+    "id": "A09V",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_6836",
+      "val": "|cffd7b4f6Жажда крови|r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_13359",
+      "val": "W"
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_6837",
+          "val": "|cffd7b4f6Жажда крови|r"
+        },
+        "ubertip": {
+          "raw": "\"+<Ablo,DataA1,%>% к скорости атаки и +<Ablo,DataB1,%>% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur1> сек.\"",
+          "val": "\"+<Ablo,DataA1,%>% к скорости атаки и +<Ablo,DataB1,%>% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur1> сек.\""
+        },
+        "untip": {
+          "raw": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "val": "|cffc3dbffПКМ – включить автоприменение.|r"
+        },
+        "unubertip": {
+          "raw": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "val": "|cffc3dbffПКМ – отключить автоприменение.|r"
+        }
+      }
+    }
+  },
+  "A09W": {
+    "id": "A09W",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_6839",
+      "val": "|cffd7b4f6Благодать древних богов|r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_12753",
+      "val": "Q"
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_6841",
+          "val": "|cffd7b4f6Благодать древних богов|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_4102",
+          "val": "Востанавливает хп союзникам по близости."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A09X": {
+    "id": "A09X",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_6843",
+      "val": "|cffd7b4f6Затуманенный рассудок|r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_14922",
+      "val": "E"
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_6844",
+          "val": "|cffd7b4f6Затуманенный рассудок|r"
+        },
+        "ubertip": {
+          "raw": "\"+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек.\"",
+          "val": "\"+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек.\""
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0A0": {
+    "id": "A0A0",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_6857",
+      "val": "|cffd7b4f6Выносливать |r"
+    },
+    "hotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_6858",
+          "val": "|cffd7b4f6Выносливать |r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_6859",
+          "val": "Увеличивает хп воинам."
+        },
+        "untip": {
+          "raw": "TRIGSTR_6860",
+          "val": "|cffd7b4f6Выносливать |r"
+        },
+        "unubertip": {
+          "raw": "TRIGSTR_6861",
+          "val": "Увеличивает хп воинам."
+        }
+      }
+    }
+  },
+  "A0A1": {
+    "id": "A0A1",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_6863",
+      "val": "|cffd7b4f6Выносливать |r"
+    },
+    "hotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_6864",
+          "val": "|cffd7b4f6Выносливать |r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_6865",
+          "val": "Увеличивает хп"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0A2": {
+    "id": "A0A2",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_6871",
+      "val": "|cffd7b4f6Защита Бездны|r"
+    },
+    "hotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_6872",
+          "val": "|cffd7b4f6Защита Бездны|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_13114",
+          "val": "-<Assk,DataC1> от получаемого урона от атак. Минимальный урон от атак: <Assk,DataB1>."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0AI": {
+    "id": "A0AI",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_7632",
+      "val": "|cffd7b4f6Ярость Бездны|r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_8477",
+      "val": "D"
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_7633",
+          "val": "|cffd7b4f6Ярость Бездны|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_40957",
+          "val": "+50% к скорости атаки и +20% к скорости перемещения, но +10% к получаемому урону."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0AJ": {
+    "id": "A0AJ",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_7638",
+      "val": "|cffd7b4f6Аура поглощения|r"
+    },
+    "hotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchhotkey": {
+      "raw": "V",
+      "val": "V"
+    },
+    "researchtip": {
+      "raw": "Изучить «Вампирическую ауру» [|cffffcc00%d-й уровень|r]",
+      "val": "Изучить «Вампирическую ауру» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "\"Находящиеся рядом союзники ближнего боя восполняют здоровье, нанося урон. |n|n|cffffcc001-й уровень:|r <AUav,DataA1,%>% урона от атак. |n|cffffcc002-й уровень:|r <AUav,DataA2,%>% урона от атак. |n|cffffcc003-й уровень:|r <AUav,DataA3,%>% урона от атак.\"",
+      "val": "\"Находящиеся рядом союзники ближнего боя восполняют здоровье, нанося урон. |n|n|cffffcc001-й уровень:|r <AUav,DataA1,%>% урона от атак. |n|cffffcc002-й уровень:|r <AUav,DataA2,%>% урона от атак. |n|cffffcc003-й уровень:|r <AUav,DataA3,%>% урона от атак.\""
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_7639",
+          "val": "|cffd7b4f6Аура поглощения|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_40958",
+          "val": "Находящиеся рядом союзники ближнего боя восполняют здоровье в объеме 7% от наносимого урона от атак."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0AK": {
+    "id": "A0AK",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_7640",
+      "val": "|cffd7b4f6Дробящий удар|r"
+    },
+    "hotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_7641",
+          "val": "|cffd7b4f6Дробящий удар|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_7642",
+          "val": "Наносит дробящий удар замедляя ее передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0AL": {
+    "id": "A0AL",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_1950",
+      "val": "|cffd7b4f6Порождение щупальца|r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_13083",
+      "val": "Q"
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_7643",
+          "val": "|cffd7b4f6Порождение щупальца|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_15189",
+          "val": "Призывает из под ног врага могучие щупальце."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0AM": {
+    "id": "A0AM",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_7645",
+      "val": "|cffd7b4f6Эссенция бездны|r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_13440",
+      "val": "W"
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_7719",
+          "val": "|cffd7b4f6Эссенция бездны|r"
+        },
+        "ubertip": {
+          "raw": "\"Восполняет находящимся рядом союзникам (вплоть до 6) <Arpl,DataA1> здоровья. Не действует на технику.\"",
+          "val": "\"Восполняет находящимся рядом союзникам (вплоть до 6) <Arpl,DataA1> здоровья. Не действует на технику.\""
+        },
+        "untip": {
+          "raw": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "val": "|cffc3dbffПКМ – включить автоприменение.|r"
+        },
+        "unubertip": {
+          "raw": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "val": "|cffc3dbffПКМ – отключить автоприменение.|r"
+        }
+      }
+    }
+  },
+  "A0AN": {
+    "id": "A0AN",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_7655",
+      "val": "|cffd7b4f6Порченные снаряды|r"
+    },
+    "hotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_7659",
+          "val": "|cffd7b4f6Порченные снаряды|r"
+        },
+        "ubertip": {
+          "raw": "\"Покрывает снаряды разрушителей горючей смесью, позволяя им поджигать землю и врагов.\"",
+          "val": "\"Покрывает снаряды разрушителей горючей смесью, позволяя им поджигать землю и врагов.\""
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A1QQ": {
+    "id": "A1QQ",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_31775",
+      "val": "|cffd7b4f6Ярость maksikа|r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_32941",
+      "val": "R"
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_31777",
+          "val": "|cffd7b4f6Ярость maksikа|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_31778",
+          "val": "Это самый обычный диспел, ничего интересного\n\nПоздравляю |cff8b4513Мaksik|r, ты добился мощи которая и не снилась твоему отцу. Теперь ты сможешь диспелить в ЦЕЛЫЕ 200 ед. урона, и развеивать Полезные бафы с врагов. Я горжусь тобой что ты сможешь кликать на одну кнопку больше. Продолжай в том же духе и ты станешь Топ-1 картой"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A09Z": {
+    "id": "A09Z",
+    "levels": 1,
+    "name": {
+      "raw": "TRIGSTR_6855",
+      "val": "|cffd7b4f6Знамя Культа|r"
+    },
+    "hotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": null,
+      "val": null
+    },
+    "researchubertip": {
+      "raw": null,
+      "val": null
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_6869",
+          "val": "|cffd7b4f6Знамя Культа|r"
+        },
+        "ubertip": {
+          "raw": "Увеличивает урон от атак находящихся рядом союзников.",
+          "val": "Увеличивает урон от атак находящихся рядом союзников."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0AO": {
+    "id": "A0AO",
+    "levels": 4,
+    "name": {
+      "raw": "TRIGSTR_7644",
+      "val": "|cffd7b4f6Порождение щупальца|r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_13084",
+      "val": "Q"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_13111",
+      "val": "Q"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_7759",
+      "val": "|cffd7b4f6Порождение щупальца|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_9840",
+      "val": "Поражает врага могучим щупальцем.Призывает могучих забытых,способных порождать щупальца.|n|cffffcc001-й уровень:|r |cffb4dcdcПризывает 2 щупальце.|r|n|cffffcc002-й уровень:|r |cffb4dcdcПризывает 3 щупальца.|n|cffffcc003-й уровень:|r |cffb4dcdcПризывает 4 щупальца.|n|cffffcc004-й уровень:|r |cffb4dcdcПризывает 5 щупальца."
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_7646",
+          "val": "|cffd7b4f6Порождение щупальца|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_12545",
+          "val": "Поражает врага могучим щупальцем.Призывает щупальца древних богов, способные поражать врагов на средней дитанции.|n|cffffcc001-й уровень:|r |cffb4dcdcПризывает 2 щупальце.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level2": {
+        "tip": {
+          "raw": "TRIGSTR_7656",
+          "val": "|cffd7b4f6Порождение щупальца|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_11633",
+          "val": "Поражает врага могучим щупальцем.Призывает щупальца древних богов, способные поражать врагов на средней дитанции.|n|cffffcc002-й уровень:|r |cffb4dcdcПризывает 3 щупальца.|n"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level3": {
+        "tip": {
+          "raw": "TRIGSTR_7757",
+          "val": "|cffd7b4f6Порождение щупальца|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_12541",
+          "val": "Поражает врага могучим щупальцем.Призывает щупальца древних богов, способные поражать врагов на средней дитанции.\n|cffffcc003-й уровень:|r |cffb4dcdcПризывает 4 щупальца.|n"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level4": {
+        "tip": {
+          "raw": "TRIGSTR_7758",
+          "val": "|cffd7b4f6Порождение щупальца|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_12543",
+          "val": "Поражает врага могучим щупальцем.Призывает щупальца древних богов, способные поражать врагов на средней дитанции.\n|cffffcc004-й уровень:|r |cffb4dcdcПризывает 5 щупальца."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0AP": {
+    "id": "A0AP",
+    "levels": 4,
+    "name": {
+      "raw": "TRIGSTR_7780",
+      "val": "|cffd7b4f6Дар бездны|r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_13473",
+      "val": "W"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_13570",
+      "val": "W"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_9698",
+      "val": "|cffd7b4f6Дар бездны|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_10117",
+      "val": "Востанавливает здоровье вокруг кастера.|n|cffffcc001-й уровень:|r |cffb4dcdcВостанавливает 125 ед.|r|n|cffffcc002-й уровень:|r |cffb4dcdcВостанавливает 200 ед.|r|n|cffffcc003-й уровень:|r |cffb4dcdcВостанавливает 275 ед.|n|cffffcc004-й уровень:|r |cffb4dcdcВостанавливает 350 ед.|r"
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_7781",
+          "val": "|cffd7b4f6Дар бездны|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_8218",
+          "val": "Востанавливает здоровье вокруг кастера.|n|cffffcc001-й уровень:|r |cffb4dcdcВостанавливает 125 ед.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level2": {
+        "tip": {
+          "raw": "TRIGSTR_7783",
+          "val": "|cffd7b4f6Дар бездны|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_8222",
+          "val": "Востанавливает здоровье вокруг кастера.|n|cffffcc002-й уровень:|r |cffb4dcdcВостанавливает 200 ед.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level3": {
+        "tip": {
+          "raw": "TRIGSTR_7784",
+          "val": "|cffd7b4f6Дар бездны|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_8223",
+          "val": "Востанавливает здоровье вокруг кастера.|n|cffffcc003-й уровень:|r |cffb4dcdcВостанавливает 275 ед."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level4": {
+        "tip": {
+          "raw": "TRIGSTR_7785",
+          "val": "|cffd7b4f6Дар бездны|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_8224",
+          "val": "Востанавливает здоровье вокруг кастера.\n|cffffcc004-й уровень:|r |cffb4dcdcВостанавливает 350 ед.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0B6": {
+    "id": "A0B6",
+    "levels": 4,
+    "name": {
+      "raw": "TRIGSTR_8158",
+      "val": "|cffd7b4f6Нечистая аура|r"
+    },
+    "hotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_15028",
+      "val": "E"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_8159",
+      "val": "Изучить «|cffd7b4f6Нечистая аура|r» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_10135",
+      "val": "Уменьшает регенерацию здоровья находящихся рядом врагов. |n|n|cffffcc001-й уровень:|r |cffb4dcdc-1 ед. регенерации здоровья.|r |n|cffffcc002-й уровень:|r |cffb4dcdc-1.5 ед. регенерации здоровья.|r |n|cffffcc003-й уровень:|r |cffb4dcdc-2 ед. регенерации здоровья.|r|n|cffffcc004-й уровень:|r |cffb4dcdc-2.5 ед. регенерации здоровья.|r"
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_8161",
+          "val": "|cffd7b4f6Нечистая аура|r [|cffffcc001-й уровень|r]"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_10151",
+          "val": "Уменьшает регенерацию здоровья находящихся рядом врагов. |n|n|cffffcc001-й уровень:|r |cffb4dcdc-1 ед. регенерации здоровья.|r "
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level2": {
+        "tip": {
+          "raw": "TRIGSTR_8162",
+          "val": "|cffd7b4f6Нечистая аура|r [|cffffcc002-й уровень|r]"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_10153",
+          "val": "Уменьшает регенерацию здоровья находящихся рядом врагов.  |n|cffffcc002-й уровень:|r |cffb4dcdc-1.5 ед. регенерации здоровья.|r "
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level3": {
+        "tip": {
+          "raw": "TRIGSTR_8163",
+          "val": "|cffd7b4f6Нечистая аура|r [|cffffcc003-й уровень|r]"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_10154",
+          "val": "Уменьшает регенерацию здоровья находящихся рядом врагов. |n|cffffcc003-й уровень:|r |cffb4dcdc-2 ед. регенерации здоровья."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level4": {
+        "tip": {
+          "raw": "TRIGSTR_8164",
+          "val": "|cffd7b4f6Нечистая аура|r [|cffffcc004-й уровень|r]"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_10176",
+          "val": "Уменьшает регенерацию здоровья находящихся рядом врагов. |n|cffffcc004-й уровень:|r |cffb4dcdc-2.5 ед. регенерации здоровья.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0B8": {
+    "id": "A0B8",
+    "levels": 2,
+    "name": {
+      "raw": "TRIGSTR_8179",
+      "val": "|cffd7b4f6Ужасающий вой|r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_12093",
+      "val": "R"
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_10204",
+      "val": "|cffd7b4f6Ужасающий вой|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_10203",
+      "val": "Издает ужастный вой бездны. |n|n|cffffcc001-й уровень:|r |cffb4dcdc-55% урона.|r |n|cffffcc002-й уровень:|r |cffb4dcdc-70% урона.|r "
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_8180",
+          "val": "|cffd7b4f6Ужасающий вой|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_10205",
+          "val": "Издает ужастный вой бездны. |n|n|cffffcc001-й уровень:|r |cffb4dcdc-55% урона.|r "
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level2": {
+        "tip": {
+          "raw": "TRIGSTR_8181",
+          "val": "|cffd7b4f6Ужасающий вой|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_10202",
+          "val": "Издает ужастный вой бездны.|n|cffffcc002-й уровень:|r |cffb4dcdc-70% урона.|r "
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0B9": {
+    "id": "A0B9",
+    "levels": 4,
+    "name": {
+      "raw": "TRIGSTR_8196",
+      "val": "|cffd7b4f6Костолом|r"
+    },
+    "hotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_15241",
+      "val": "E"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_8197",
+      "val": "Изучить «|cffd7b4f6Костолом|r» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_10229",
+      "val": "Дает шанс нанести при атаке на |cffb4dcdc<AHbh,DataC1>|r больше урона и оглушить цель . |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AHbh,DataA1>%-й шанс, оглушение героя - 0.4 сек.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<AHbh,DataA2>%-й шанс, оглушение героя - 0.5 сек.. |r|n|cffffcc003-й уровень:|r |cffb4dcdc<AHbh,DataA3>%-й шанс, оглушение героя - 0.6 сек..|r|n|cffffcc004-й уровень:|r |cffb4dcdc<AHbh,DataA4>%-й шанс, оглушение героя - 0.7 сек..|r"
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_8198",
+          "val": "|cffd7b4f6Костолом|r [|cffffcc001-й уровень|r]"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_10230",
+          "val": "Дает шанс нанести при атаке на |cffb4dcdc<AHbh,DataC1>|r больше урона и оглушить цель . |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AHbh,DataA1>%-й шанс, оглушение героя - 0.4 сек.|r "
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level2": {
+        "tip": {
+          "raw": "TRIGSTR_8199",
+          "val": "|cffd7b4f6Костолом|r [|cffffcc002-й уровень|r]"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_12914",
+          "val": "Дает шанс нанести при атаке на |cffb4dcdc<AHbh,DataC1>|r больше урона и оглушить цель . |n|cffffcc002-й уровень:|r |cffb4dcdc<AHbh,DataA2>%-й шанс, оглушение героя - 0.5 сек.. |r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level3": {
+        "tip": {
+          "raw": "TRIGSTR_8200",
+          "val": "|cffd7b4f6Костолом|r [|cffffcc003-й уровень|r]"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_12919",
+          "val": "Дает шанс нанести при атаке на |cffb4dcdc<AHbh,DataC1>|r больше урона и оглушить цель . |n|cffffcc003-й уровень:|r |cffb4dcdc<AHbh,DataA3>%-й шанс, оглушение героя - 0.6 сек..|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level4": {
+        "tip": {
+          "raw": "TRIGSTR_8201",
+          "val": "|cffd7b4f6Костолом|r [|cffffcc004-й уровень|r]"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_10219",
+          "val": "Дает шанс нанести при атаке на |cffb4dcdc<AHbh,DataC1>|r больше урона и оглушить цель . |n|cffffcc004-й уровень:|r |cffb4dcdc<AHbh,DataA4>%-й шанс, оглушение героя - 0.7 сек..|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0BA": {
+    "id": "A0BA",
+    "levels": 4,
+    "name": {
+      "raw": "TRIGSTR_8203",
+      "val": "|cffd7b4f6Дуэлянт|r"
+    },
+    "hotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_13639",
+      "val": "W"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_8204",
+      "val": "|cffd7b4f6Дуэлянт|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_225",
+      "val": "Герой хорошо справляется в дуэли с вражескими героями.\n|n|cffffcc001-й уровень:|r |cffb4dcdc+15% к урону по героям.|r|n|cffffcc002-й уровень:|r |cffb4dcdc+25% к урону по героям.|r|n|cffffcc003-й уровень:|r |cffb4dcdc+35% к урону по героям..|r|n|cffffcc004-й уровень:|r |cffb4dcdc+45% к урону по героям.|r"
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_8206",
+          "val": "|cffd7b4f6Дуэлянт|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_4382",
+          "val": "Герой хорошо справляется в дуэли с вражескими героями.\n|n|cffffcc001-й уровень:|r |cffb4dcdc+15% к урону по героям.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level2": {
+        "tip": {
+          "raw": "TRIGSTR_8207",
+          "val": "|cffd7b4f6Дуэлянт|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_762",
+          "val": "Герой хорошо справляется в дуэли с вражескими героями.\n|n|cffffcc002-й уровень:|r |cffb4dcdc+25% к урону по героям.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level3": {
+        "tip": {
+          "raw": "TRIGSTR_8208",
+          "val": "|cffd7b4f6Дуэлянт|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_764",
+          "val": "Герой хорошо справляется в дуэли с вражескими героями.\n|n|cffffcc003-й уровень:|r |cffb4dcdc+35% к урону по героям."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level4": {
+        "tip": {
+          "raw": "TRIGSTR_8209",
+          "val": "|cffd7b4f6Дуэлянт|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_4345",
+          "val": "Герой хорошо справляется в дуэли с вражескими героями.\n|n|cffffcc004-й уровень:|r |cffb4dcdc+45% к урону по героям.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0BB": {
+    "id": "A0BB",
+    "levels": 4,
+    "name": {
+      "raw": "TRIGSTR_8214",
+      "val": "|cffd7b4f6Устрашающий рев |r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_13123",
+      "val": "Q"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_13124",
+      "val": "Q"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_8217",
+      "val": "|cffd7b4f6Устрашающий рев |r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_7240",
+      "val": "Издает ужастный рев, понижая защиту врагам.\n|n|cffffcc001-й уровень:|r |cffb4dcdc-2 защиты.|r|n|cffffcc002-й уровень:|r |cffb4dcdc-3 защиты.|r|n|cffffcc003-й уровень:|r |cffb4dcdc-4 защиты.|r|n|cffffcc004-й уровень:|r |cffb4dcdc-5 защиты.|r"
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_8215",
+          "val": "|cffd7b4f6Устрашающий рев |r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_4383",
+          "val": "Издает ужастный рев, понижая защиту врагам.\n|n|cffffcc001-й уровень:|r |cffb4dcdc-2 защиты.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level2": {
+        "tip": {
+          "raw": "TRIGSTR_8219",
+          "val": "|cffd7b4f6Устрашающий рев |r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_7454",
+          "val": "Издает ужастный рев, понижая защиту врагам.\n|n|cffffcc002-й уровень:|r |cffb4dcdc-3 защиты.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level3": {
+        "tip": {
+          "raw": "TRIGSTR_8220",
+          "val": "|cffd7b4f6Устрашающий рев |r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_8402",
+          "val": "Издает ужастный рев, понижая защиту врагам.|n|cffffcc003-й уровень:|r |cffb4dcdc-4 защиты.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level4": {
+        "tip": {
+          "raw": "TRIGSTR_8221",
+          "val": "|cffd7b4f6Устрашающий рев |r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_8401",
+          "val": "Издает ужастный рев, понижая защиту врагам.\n|n|cffffcc004-й уровень:|r |cffb4dcdc-5 защиты.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0BC": {
+    "id": "A0BC",
+    "levels": 2,
+    "name": {
+      "raw": "TRIGSTR_8226",
+      "val": "|cffd7b4f6Реинкарнация|r"
+    },
+    "hotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchhotkey": {
+      "raw": "R",
+      "val": "R"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_8227",
+      "val": "Изучить «|cffd7b4f6Реинкарнацию|r»"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_14961",
+      "val": "Возрождается после гибели. Время восстановления: |cffb4dcdc<AOre,Cool1> сек.|r"
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_8229",
+          "val": "|cffd7b4f6Реинкарнация|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_13519",
+          "val": "Возрождается после гибели. Время восстановления: |cffb4dcdc240 сек.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level2": {
+        "tip": {
+          "raw": "TRIGSTR_8230",
+          "val": "|cffd7b4f6Реинкарнация|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_13518",
+          "val": "Возрождается после гибели. Время восстановления: |cffb4dcdc180 сек.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0BD": {
+    "id": "A0BD",
+    "levels": 4,
+    "name": {
+      "raw": "TRIGSTR_8246",
+      "val": "|cffd7b4f6Взрыв бездны|r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_13212",
+      "val": "Q"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_13213",
+      "val": "Q"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_8247",
+      "val": "Изучить «|cffd7b4f6Взрыв бездны|r» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_12938",
+      "val": "Создает столб бездны, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r |cffb4dcdc45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек.|r |n|cffffcc002-й уровень:|r |cffb4dcdc80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек.|r |n|cffffcc003-й уровень:|r |cffb4dcdc110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r|n|cffffcc004-й уровень:|r |cffb4dcdc140 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r"
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_12931",
+          "val": "|cffd7b4f6Взрыв бездны|r [|cffffcc001-й уровень|r]"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_13521",
+          "val": "Создает порчу бездны, наносящий наземным войскам в указанной области |cffb4dcdc45 урона/сек.|r в течение |cffb4dcdc3 сек.|r После исчезновения столба пораженные войска продолжают получать незначительный урон."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level2": {
+        "tip": {
+          "raw": "TRIGSTR_12932",
+          "val": "|cffd7b4f6Взрыв бездны|r [|cffffcc002-й уровень|r]"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_13529",
+          "val": "Создает порчу бездны, наносящий наземным войскам в указанной области |cffb4dcdc80 урона/сек.|r в течение |cffb4dcdc3 сек.|r После исчезновения столба пораженные войска продолжают получать небольшой урон."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level3": {
+        "tip": {
+          "raw": "TRIGSTR_12933",
+          "val": "|cffd7b4f6Взрыв бездны|r  [|cffffcc003-й уровень|r]"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_13532",
+          "val": "Создает порчу бездны, наносящий наземным войскам в указанной области |cffb4dcdc110 урона/сек.|r в течение |cffb4dcdc3 сек.|r После исчезновения столба пораженные войска продолжают получать умеренный урон."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level4": {
+        "tip": {
+          "raw": "TRIGSTR_12930",
+          "val": "|cffd7b4f6Взрыв бездны|r  [|cffffcc004-й уровень|r]"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_13520",
+          "val": "Создает порчу бездны, наносящий наземным войскам в указанной области |cffb4dcdc140 урона/сек.|r в течение|cffb4dcdc 4 сек.|r После исчезновения столба пораженные войска продолжают получать умеренный урон."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0BE": {
+    "id": "A0BE",
+    "levels": 4,
+    "name": {
+      "raw": "TRIGSTR_8252",
+      "val": "|cffd7b4f6Рассеивание заклинаний|r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_13670",
+      "val": "W"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_13727",
+      "val": "W"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_8254",
+      "val": "|cffd7b4f6Рассеивание заклинаний|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_15470",
+      "val": "Снимает положительные эффекты с войск в указанной области. |n|cffffcc001-й уровень:|r |cffb4dcdcНаносит урон призваным целям 200|r|n|cffffcc002-й уровень:|r |cffb4dcdcНаносит урон призваным целям 300|r|n|cffffcc003-й уровень:|r |cffb4dcdcНаносит урон призваным целям 400|r|n|cffffcc004-й уровень:|r |cffb4dcdcНаносит урон призваным целям 600|r"
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_8253",
+          "val": "|cffd7b4f6Рассеивание заклинаний|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_15474",
+          "val": "Снимает положительные эффекты с войск в указанной области. |n|cffffcc001-й уровень:|r |cffb4dcdcНаносит урон призваным целям 200|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level2": {
+        "tip": {
+          "raw": "TRIGSTR_8256",
+          "val": "|cffd7b4f6Рассеивание заклинаний|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_15471",
+          "val": "Снимает положительные эффекты с войск в указанной области. |n|cffffcc002-й уровень:|r |cffb4dcdcНаносит урон призваным целям 300|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level3": {
+        "tip": {
+          "raw": "TRIGSTR_8257",
+          "val": "|cffd7b4f6Рассеивание заклинаний|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_15472",
+          "val": "Снимает положительные эффекты с войск в указанной области. \n|cffffcc003-й уровень:|r |cffb4dcdcНаносит урон призваным целям 400|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level4": {
+        "tip": {
+          "raw": "TRIGSTR_8258",
+          "val": "|cffd7b4f6Рассеивание заклинаний|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_13534",
+          "val": "Снимает положительные эффекты с войск в указанной области.|n|cffffcc004-й уровень:|r |cffb4dcdcНаносит урон призваным целям 600|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0BF": {
+    "id": "A0BF",
+    "levels": 4,
+    "name": {
+      "raw": "TRIGSTR_8263",
+      "val": "|cffd7b4f6Замедляющий яд|r"
+    },
+    "hotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchhotkey": {
+      "raw": null,
+      "val": null
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_8264",
+      "val": "|cffd7b4f6Замедляющий яд|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_15475",
+      "val": "Маг использует бездну для нанисения ядовитых атак. |n|cffffcc001-й уровень:|r |cffb4dcdcЗамедляет атаку 25%, передвижение 50%, наносит урона 4/сек.|r|n|cffffcc002-й уровень:|r |cffb4dcdcЗамедляет атаку 35%, передвижение 50%, наносит урона 5/сек.|r|n|cffffcc003-й уровень:|r |cffb4dcdcЗамедляет атаку 45%, передвижение 50%, наносит урона 6/сек.|r|n|cffffcc004-й уровень:|r |cffb4dcdcЗамедляет атаку 55%, передвижение 50%, наносит урона 7/сек.|r"
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_8266",
+          "val": "|cffd7b4f6Замедляющий яд|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_15479",
+          "val": "Маг использует бездну для нанисения ядовитых атак. |n|cffffcc001-й уровень:|r |cffb4dcdcЗамедляет атаку 25%, передвижение 50%, наносит урона 4/сек.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level2": {
+        "tip": {
+          "raw": "TRIGSTR_8267",
+          "val": "|cffd7b4f6Замедляющий яд|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_15476",
+          "val": "Маг использует бездну для нанисения ядовитых атак. |n|cffffcc002-й уровень:|r |cffb4dcdcЗамедляет атаку 35%, передвижение 50%, наносит урона 5/сек.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level3": {
+        "tip": {
+          "raw": "TRIGSTR_8269",
+          "val": "|cffd7b4f6Замедляющий яд|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_15477",
+          "val": "Маг использует бездну для нанисения ядовитых атак. |n|cffffcc003-й уровень:|r |cffb4dcdcЗамедляет атаку 45%, передвижение 50%, наносит урона 6/сек.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level4": {
+        "tip": {
+          "raw": "TRIGSTR_8268",
+          "val": "|cffd7b4f6Замедляющий яд|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_15478",
+          "val": "Маг использует бездну для нанисения ядовитых атак. |n|cffffcc004-й уровень:|r |cffb4dcdcЗамедляет атаку 55%, передвижение 50%, наносит урона 7/сек.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  },
+  "A0B7": {
+    "id": "A0B7",
+    "levels": 2,
+    "name": {
+      "raw": "TRIGSTR_8169",
+      "val": "|cffd7b4f6Призыв Забытого|r"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_12055",
+      "val": "R"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_12068",
+      "val": "R"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_10179",
+      "val": "|cffd7b4f6Призыв Забытого|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_10197",
+      "val": "Призывает могучих забытых,способных порождать щупальца.|n|cffffcc001-й уровень:|r |cffb4dcdcПризывает 1 забытого.|r|n|cffffcc002-й уровень:|r |cffb4dcdcПризывает 3 забытых."
+    },
+    "levels_data": {
+      "level1": {
+        "tip": {
+          "raw": "TRIGSTR_8170",
+          "val": "|cffd7b4f6Призыв Забытого|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_10178",
+          "val": "Призывает могучих забытых,способных порождать щупальца.|n|cffffcc001-й уровень:|r |cffb4dcdcПризывает 1 забытого.|r"
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "level2": {
+        "tip": {
+          "raw": "TRIGSTR_8172",
+          "val": "|cffd7b4f6Призыв Забытого|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_10177",
+          "val": "Призывает могучих забытых,способных порождать щупальца.|n|cffffcc002-й уровень:|r |cffb4dcdcПризывает 3 забытых."
+        },
+        "untip": {
+          "raw": null,
+          "val": null
+        },
+        "unubertip": {
+          "raw": null,
+          "val": null
+        }
+      }
+    }
+  }
+}

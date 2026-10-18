@@ -1,0 +1,76 @@
+{
+  "operations": [
+    {
+      "type": "unit",
+      "id": "h0I9",
+      "field": "name",
+      "value": "|cffe4cfa3Безликий дозорный|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0I9",
+      "field": "tip",
+      "value": "|cffe4cfa3Безликий дозорный|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0I9",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЮНИТ:|cffced4da Боец с атакой хаосом для наземных сражений.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0IA",
+      "field": "name",
+      "value": "|cffe4cfa3Безликий разрушитель|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0IA",
+      "field": "tip",
+      "value": "|cffe4cfa3Безликий разрушитель|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0IA",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЮНИТ:|cffced4da Осадный боец для разрушения зданий.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0IB",
+      "field": "name",
+      "value": "|cffe4cfa3Сущность бездны|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0IB",
+      "field": "tip",
+      "value": "|cffe4cfa3Сущность бездны|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0IB",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЮНИТ:|cffced4da Боец с колющей атакой и усилениями против заклинателей.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРазрушение Эфира|cffced4da: атаки сжигают ману цели (требуется исследование «Разрушение Эфира»).|n- |cffa9c7deСотрясение Бездны|cffced4da: атаки могут оглушить цель и нанести дополнительный урон (требуется исследование «Улучшение Сущности»).|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0IC",
+      "field": "name",
+      "value": "|cffe4cfa3Могущественная Сущность бездны|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0IC",
+      "field": "tip",
+      "value": "|cffe4cfa3Могущественная Сущность бездны|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0IC",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЮНИТ:|cffced4da Боец с атакой хаосом и критическими ударами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСила Бездны|cffced4da: атаки могут нанести увеличенный урон.|n- |cffa9c7deРазрушение Эфира|cffced4da: атаки сжигают ману цели (требуется исследование «Разрушение Эфира»).|n|nАтакует наземные цели.|r"
+    }
+  ]
+}

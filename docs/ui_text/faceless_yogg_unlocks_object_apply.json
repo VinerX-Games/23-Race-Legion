@@ -1,0 +1,218 @@
+{
+  "ok": true,
+  "applied": true,
+  "method": "Only explicit string modifications spliced; all unrelated records/mods byte-identical",
+  "changes": {
+    "war3map.w3a": [
+      [
+        "A0T3",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A0T3",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A0T3",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A0W4",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A0W4",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A0W4",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A0W4",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A0W4",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A0W4",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A0W4",
+        "aub1",
+        2,
+        0
+      ]
+    ],
+    "war3mapSkin.w3a": [
+      [
+        "A0T3",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A0W4",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A0W4",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A0W4",
+        "aub1",
+        1,
+        0
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "variant": "SD",
+      "rawcode": "A0T3",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A0T3",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A0T3",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A0W4",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A0W4",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A0W4",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A0W4",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A0W4",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A0W4",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A0W4",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A0T3",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A0T3",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A0T3",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A0W4",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A0W4",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A0W4",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A0W4",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A0W4",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A0W4",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A0W4",
+      "field": "researchubertip",
+      "exact_match": true
+    }
+  ],
+  "wts_unchanged": true
+}

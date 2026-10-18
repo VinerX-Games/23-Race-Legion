@@ -1,0 +1,134 @@
+{
+  "race": "Ents",
+  "category": "heroes",
+  "wts_keys_updated": [
+    13304,
+    13416,
+    15684,
+    21268,
+    21269,
+    21271,
+    41633,
+    41635,
+    41636,
+    41637,
+    41638,
+    41640,
+    41641,
+    41642,
+    41643,
+    41645,
+    41646,
+    41647
+  ],
+  "wts_hash_before": "7dca413c9baed054997d803f0b1426671ec00f09056bd0f3b3dc0f3c9d7c3bf8",
+  "wts_hash_after": "966f2950eb4188d069fb6673a0e084e9708f94a798bf3e41941143dbaabaae3c",
+  "other_binary_hashes": {
+    "war3map.doo": "5f761068c726841056cb3148ba7da01c835e44601ab6f9554e19968f9c58dfae",
+    "war3map.imp": "d741f1b70bcc664a100317f93d41bba6b178c94a635b542ac2d35c33a624939a",
+    "war3map.lua": "27c5381999f073371dcb75f0798d3de20eeae2e4043eaabe7d63980c73d3e2f7",
+    "war3map.mmp": "75b5d57923c1be4442105bdf9ffbf72d23d2d914fe12d19f2b0a04edf88e170b",
+    "war3map.shd": "0c660f2bd3eff3150dd0040789abe2291613b9af319df870203d4f77a4913a5f",
+    "war3map.w3a": "9c2c640c6042358cc7f35e4b9812c8624a26d45f275cf0312346085c71be0494",
+    "war3map.w3b": "22b32d7d8cedc48e448f8b96ad7df304601555fd0c10590cdb21600691d4fa78",
+    "war3map.w3c": "c74a2d46a6ecca8769a47200c16612eef9c7e2d67d43659be78e4adcde9930e7",
+    "war3map.w3d": "de15401141bd2d5f9fa34a8cda9e705d686238514976e1e78e28b3f9b7a93a62",
+    "war3map.w3e": "d2339819215d6d05cd811ef9d78f9cea1b146a6696f62aaf4ba663c4abd3fb42",
+    "war3map.w3h": "c9ce62e19889c4e9e9d5d88703c4c4a02b334d5a9dd91925b40bfedc46af04a7",
+    "war3map.w3i": "24ba48092f8e0b52ec19f6690087a6e14628376246f7239dad6c521e2b5cc158",
+    "war3map.w3q": "135b21ad8ced6b949d7afd6c25f1ca434fa422bda00e79d0c18eb2ee2886ca58",
+    "war3map.w3r": "52d7bd22e25a4f4ef45e9cc294aea213786dc69678864f7a86f138ecd4865b85",
+    "war3map.w3s": "8bd8d80bf943c640d0b49b770dc5dde79011c6c033edb32c609096e1330ff274",
+    "war3map.w3t": "06c2ae97366168984df0539ed71902e2884a39a1a4b0d1a5fb98e41a0b77e6ea",
+    "war3map.w3u": "9089af232cf657f5542803c10b1e431f537a873a5174473c4ab30ac71973af1d",
+    "war3map.wct": "1c6491633c7f24691b97aeda8278a5fe2a5e4ca28e08faae2da81b6ffa201c76",
+    "war3map.wpm": "65312b9fa890fa313fac906eaa35fc4d1b9e904d2b1ae5ca94c5b9a56814dd41",
+    "war3map.wtg": "41023b2781753cc02179fa4251e324354542496fddd3cfcdc53b88fd9e16dbf6",
+    "war3mapExtra.txt": "f57b1049d3d8e81cd1df86a1904a360d81e8ef42ac55a1f054aea37cb72b8e0e",
+    "war3mapMap.blp": "63d25390bd65b340f4e0c1140edce0910f74944a18e64047d4d87c82d991ee9f",
+    "war3mapMisc.txt": "989514d23cddec9974892ea8edf5f1b2215abd839bfea1dc2480ce4a151c524f",
+    "war3mapSkin.txt": "0ea3115c01452748b57ec637b87687a79de385ae169d02316fb5127d81588316",
+    "war3mapSkin.w3a": "a19a695d68d83a146d504b4854a98264492b9363820ffc87442087bed86dcf6d",
+    "war3mapSkin.w3b": "e7b0b0c14239d3e9ca6a3f80a446dbd585526e9cc323146cc2c4fc9f60eb0c4b",
+    "war3mapSkin.w3d": "721bed7219463d0b88ad83945acf66da5fdc9325d1507fbb6c8076b9c65a0a2d",
+    "war3mapSkin.w3h": "333aae6d0cdeeebeefa002259a20fa745fc68610253bd5146a8d8751702bd6a6",
+    "war3mapSkin.w3q": "20e7986e8a87fe5100835268f53e5ff06f3585154197803c3b46839872a4f6d7",
+    "war3mapSkin.w3t": "21100b19421fd5844a0528a350d9e599705e3ab955730e608d1a40069eb39d45",
+    "war3mapSkin.w3u": "0311128a9ae57cf4b62412fd50d46d1e85e4ca7e2a8583b8d9201f1ea0c8af21",
+    "war3mapUnits.doo": "5eae6f3bb4296d7ec41b9b2f88fdd6ac62f15dd7fd824cb2d8c865f91b0d3c22"
+  },
+  "checks": [
+    {
+      "id": "E02S",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "propernames",
+        "tip",
+        "ubertip",
+        "revivetip",
+        "awakentip"
+      ]
+    },
+    {
+      "id": "E02Q",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "propernames",
+        "tip",
+        "ubertip",
+        "revivetip",
+        "awakentip"
+      ]
+    },
+    {
+      "id": "E02R",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "propernames",
+        "tip",
+        "ubertip",
+        "revivetip",
+        "awakentip"
+      ]
+    },
+    {
+      "id": "E02S",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "propernames",
+        "tip",
+        "ubertip",
+        "revivetip",
+        "awakentip"
+      ]
+    },
+    {
+      "id": "E02Q",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "propernames",
+        "tip",
+        "ubertip",
+        "revivetip",
+        "awakentip"
+      ]
+    },
+    {
+      "id": "E02R",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "propernames",
+        "tip",
+        "ubertip",
+        "revivetip",
+        "awakentip"
+      ]
+    }
+  ]
+}

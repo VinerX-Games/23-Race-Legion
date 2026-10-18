@@ -1,0 +1,118 @@
+{
+  "race": "Ents",
+  "category": "buildings",
+  "total_buildings": 10,
+  "buildings": [
+    {
+      "id": "e02B",
+      "name": "|cffe4cfa3Древо Знаний|r",
+      "tip": "|cffe4cfa3Древо Знаний|r (|cffffffffQ|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное святилище и центр поселения древней. Позволяет назначать столицу, обменивать ресурсы, призывать рабочих виспов и исследовать базовые улучшения лесной армии.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДревний Висп|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deСила природы|cffced4da|n- |cffa9c7deПрочная кора|cffced4da|n- |cffa9c7deБлагословение природы|cffced4da.|n|n|cffa6afb8Улучшается до:|cffced4da |cffa9c7deДрево просветления|cffced4da.|r",
+      "wts": {
+        "name": 35187,
+        "tip": 37723
+      },
+      "hotkey": "Q"
+    },
+    {
+      "id": "e02C",
+      "name": "|cffe4cfa3Древо просветления|r",
+      "tip": "|cffe4cfa3Древо просветления|r (|cffffffffZ|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Вторая ступень главного святилища древней. Открывает доступ к продвинутым войскам, постройкам и улучшениям, позволяет назначать столицу, обменивать ресурсы и призывать рабочих.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДревний Висп|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deСила природы|cffced4da|n- |cffa9c7deПрочная кора|cffced4da|n- |cffa9c7deБлагословение природы|cffced4da.|n|n|cffa6afb8Улучшается до:|cffced4da |cffa9c7deДрево познания|cffced4da.|r",
+      "wts": {
+        "name": 37975,
+        "tip": 40075
+      },
+      "hotkey": "Z"
+    },
+    {
+      "id": "e02D",
+      "name": "|cffe4cfa3Древо познания|r",
+      "tip": "|cffe4cfa3Древо познания|r (|cffffffffZ|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Высшая ступень святилища древней. Открывает максимальный технологический уровень, защитные чары столицы, позволяет обменивать ресурсы и призывать рабочих виспов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДревний Висп|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deСила природы|cffced4da|n- |cffa9c7deПрочная кора|cffced4da|n- |cffa9c7deБлагословение природы|cffced4da.|r",
+      "wts": {
+        "name": 41521,
+        "tip": 41536
+      },
+      "hotkey": "Z"
+    },
+    {
+      "id": "e02E",
+      "name": "|cffe4cfa3Колодец воспоминаний|r",
+      "tip": "|cffe4cfa3Колодец воспоминаний|r (|cffffffffA|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Священный источник живительной влаги. Обеспечивает поселение пищей, восстанавливает здоровье и ману союзным войскам, а также приносит доход в |cffffffff+7|cffced4da золота каждые |cffffffff25|cffced4da сек.|r",
+      "wts": {
+        "name": 41537,
+        "tip": 41538
+      },
+      "hotkey": "A"
+    },
+    {
+      "id": "e02F",
+      "name": "|cffe4cfa3Древо войны|r",
+      "tip": "|cffe4cfa3Древо войны|r (|cffffffffW|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Военная роща древней. Позволяет пробуждать боевых древесных воинов, лесных гончих и исследовать боевые улучшения.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДревень|cffced4da|n- |cffa9c7deЭнт дробитель|cffced4da|n- |cffa9c7deГончая Жизни|cffced4da|n- |cffa9c7deМалое Древо Войны|cffced4da|n- |cffa9c7deГончая Маны|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЯдовитый Сок|cffced4da|n- |cffa9c7deУсиление Ядра Маны|cffced4da|n- |cffa9c7deУсиление Ядра Жизни|cffced4da|n- |cffa9c7deМастерство Войны|cffced4da.|r",
+      "wts": {
+        "name": 41542,
+        "tip": 41543
+      },
+      "hotkey": "W"
+    },
+    {
+      "id": "e02G",
+      "name": "|cffe4cfa3Алтарь мудрейших|r",
+      "tip": "|cffe4cfa3Алтарь мудрейших|r (|cffffffffS|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Священный алтарь древнейших хранителей рощи. Позволяет призывать и воскрешать героев лесного народа.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deЛесной Смотритель|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deЕгерь диколесья|cffced4da.|r",
+      "wts": {
+        "name": 41540,
+        "tip": 41541
+      },
+      "hotkey": "S"
+    },
+    {
+      "id": "e02H",
+      "name": "|cffe4cfa3Древо мудрости|r",
+      "tip": "|cffe4cfa3Древо мудрости|r (|cffffffffE|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище древней магии природы. Позволяет призывать духов, могучих древесных гигантов и исследовать тайные знания леса.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЛесной Дух|cffced4da|n- |cffa9c7deДрево Познания|cffced4da|n- |cffa9c7deДрево Ветров|cffced4da|n- |cffa9c7deЛесной Голем|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deКрепкий панцирь|cffced4da|n- |cffa9c7deБлагословение Ветра|cffced4da|n- |cffa9c7deУчения Леса|cffced4da|n- |cffa9c7deМагия Духа|cffced4da.|r",
+      "wts": {
+        "name": 41545,
+        "tip": 41546
+      },
+      "hotkey": "E"
+    },
+    {
+      "id": "e03N",
+      "name": "|cffe4cfa3Обитель Хранителей|r",
+      "tip": "|cffe4cfa3Обитель Хранителей|r (|cffffffffR|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Роща защитников леса. Позволяет призывать лесных дракончиков, дриад, хранителей рощи и изучать их особые способности.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЛесной Дракончик|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deХранитель Рощи|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМудрость Дракончиков|cffced4da|n- |cffa9c7deАзы Дриад|cffced4da|n- |cffa9c7deЗнание Хранителей|cffced4da.|r",
+      "wts": {
+        "name": 19415,
+        "tip": 33246
+      },
+      "hotkey": "R"
+    },
+    {
+      "id": "e02I",
+      "name": "|cffe4cfa3Сторожевое древо|r",
+      "tip": "|cffe4cfa3Сторожевое древо|r (|cffffffffZ|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Древний древесный страж, защищающий границы владений. Атакует бросками тяжёлых валунов наземные и воздушные цели.|n|nАтакует наземные и воздушные цели.|r",
+      "wts": {
+        "name": 41548,
+        "tip": 41549
+      },
+      "hotkey": "Z"
+    },
+    {
+      "id": "h0D8",
+      "name": "|cffe4cfa3Верфь|r",
+      "tip": "|cffe4cfa3Верфь|r (|cffffffffC|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Строит корабли и исследует общие улучшения флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбстрел|cffced4da|n- |cffa9c7deДополнительные паруса|cffced4da|n- |cffa9c7deПочинка|cffced4da|n- |cffa9c7deОрудия флота|cffced4da|n- |cffa9c7deУкреплённый корпус|cffced4da.|n|n|cffa9c7deЗона ремонта|cffced4da восстанавливает |cffc8e0872,5|cffced4da здоровья/сек. союзным наземным механическим войскам в радиусе |cffffffff550|cffced4da.|r",
+      "wts": {
+        "name": 10907,
+        "tip": 10908,
+        "ubertip": 10903
+      },
+      "hotkey": "C"
+    }
+  ]
+}

@@ -1,0 +1,1359 @@
+{
+  "scope": "Даларан (Dalaran): категория 5 — Исследования и маркеры (20 технологий)",
+  "upgrades_count": 20,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R013",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 1651,
+          "after": "|cffe4cfa3Защита огня|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 1652,
+          "after": "|cffe4cfa3Защита огня|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 1653,
+          "after": "|cffe4cfa3Защита огня|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 1648,
+          "after": "|cffe4cfa3Защита огня|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 1649,
+          "after": "|cffe4cfa3Защита огня|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 1650,
+          "after": "|cffe4cfa3Защита огня|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 1747,
+          "after": "|cffe4cfa3Защита огня — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 1748,
+          "after": "|cffe4cfa3Защита огня — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 1749,
+          "after": "|cffe4cfa3Защита огня — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 1750,
+          "after": "|cffe4cfa3Защита огня — уровень 4|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 1751,
+          "after": "|cffe4cfa3Защита огня — уровень 5|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 1752,
+          "after": "|cffe4cfa3Защита огня — уровень 6|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 1660,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню огненных созданий Даларана на |cffffffff1|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагическое Создание Огня|cffced4da|n- |cffa9c7deУсиленное Магическое Создание Огня|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 1661,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню огненных созданий Даларана на |cffffffff2|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагическое Создание Огня|cffced4da|n- |cffa9c7deУсиленное Магическое Создание Огня|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 1662,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню огненных созданий Даларана на |cffffffff3|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагическое Создание Огня|cffced4da|n- |cffa9c7deУсиленное Магическое Создание Огня|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 1663,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню огненных созданий Даларана на |cffffffff4|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагическое Создание Огня|cffced4da|n- |cffa9c7deУсиленное Магическое Создание Огня|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 1665,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню огненных созданий Даларана на |cffffffff5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагическое Создание Огня|cffced4da|n- |cffa9c7deУсиленное Магическое Создание Огня|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 1664,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню огненных созданий Даларана на |cffffffff6|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагическое Создание Огня|cffced4da|n- |cffa9c7deУсиленное Магическое Создание Огня|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R014",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 1753,
+          "after": "|cffe4cfa3Защита льда|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 1674,
+          "after": "|cffe4cfa3Защита льда|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 1675,
+          "after": "|cffe4cfa3Защита льда|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 1670,
+          "after": "|cffe4cfa3Защита льда|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 1671,
+          "after": "|cffe4cfa3Защита льда|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 1672,
+          "after": "|cffe4cfa3Защита льда|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 1754,
+          "after": "|cffe4cfa3Защита льда — уровень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 1755,
+          "after": "|cffe4cfa3Защита льда — уровень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 1756,
+          "after": "|cffe4cfa3Защита льда — уровень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 1757,
+          "after": "|cffe4cfa3Защита льда — уровень 4|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 1758,
+          "after": "|cffe4cfa3Защита льда — уровень 5|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 1759,
+          "after": "|cffe4cfa3Защита льда — уровень 6|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 1682,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню ледяных созданий Даларана на |cffffffff1|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагическое Создание Льда|cffced4da|n- |cffa9c7deУсиленное Магическое Создание Льда|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 1683,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню ледяных созданий Даларана на |cffffffff2|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагическое Создание Льда|cffced4da|n- |cffa9c7deУсиленное Магическое Создание Льда|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 1684,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню ледяных созданий Даларана на |cffffffff3|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагическое Создание Льда|cffced4da|n- |cffa9c7deУсиленное Магическое Создание Льда|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 1685,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню ледяных созданий Даларана на |cffffffff4|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагическое Создание Льда|cffced4da|n- |cffa9c7deУсиленное Магическое Создание Льда|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 1687,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню ледяных созданий Даларана на |cffffffff5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагическое Создание Льда|cffced4da|n- |cffa9c7deУсиленное Магическое Создание Льда|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 1686,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню ледяных созданий Даларана на |cffffffff6|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагическое Создание Льда|cffced4da|n- |cffa9c7deУсиленное Магическое Создание Льда|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R012",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 1621,
+          "after": "|cffe4cfa3Усиление посоха|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 1622,
+          "after": "|cffe4cfa3Усиление посоха|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 1623,
+          "after": "|cffe4cfa3Усиление посоха|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 1624,
+          "after": "|cffe4cfa3Усиление посоха|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 1625,
+          "after": "|cffe4cfa3Усиление посоха|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 1626,
+          "after": "|cffe4cfa3Усиление посоха|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 1742,
+          "after": "|cffe4cfa3Усиление посоха — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 1741,
+          "after": "|cffe4cfa3Усиление посоха — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 1743,
+          "after": "|cffe4cfa3Усиление посоха — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 1744,
+          "after": "|cffe4cfa3Усиление посоха — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 1745,
+          "after": "|cffe4cfa3Усиление посоха — уровень 5|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 1746,
+          "after": "|cffe4cfa3Усиление посоха — уровень 6|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 1633,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак посохом всех магов дальнего боя Даларана.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 1634,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак посохом всех магов дальнего боя Даларана.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 1635,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак посохом всех магов дальнего боя Даларана.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 1636,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак посохом всех магов дальнего боя Даларана.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 1637,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак посохом всех магов дальнего боя Даларана.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 1638,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак посохом всех магов дальнего боя Даларана.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R00Q",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 24566,
+          "after": "|cffe4cfa3Волшебные Мечи|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 24567,
+          "after": "|cffe4cfa3Волшебные Мечи|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 24864,
+          "after": "|cffe4cfa3Волшебные Мечи|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 25423,
+          "after": "|cffe4cfa3Волшебные Мечи|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 25895,
+          "after": "|cffe4cfa3Волшебные Мечи|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 26367,
+          "after": "|cffe4cfa3Волшебные Мечи|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 24865,
+          "after": "|cffe4cfa3Волшебные Мечи — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 24869,
+          "after": "|cffe4cfa3Волшебные Мечи — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 24918,
+          "after": "|cffe4cfa3Волшебные Мечи — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 26485,
+          "after": "|cffe4cfa3Волшебные Мечи — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 26486,
+          "after": "|cffe4cfa3Волшебные Мечи — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 26487,
+          "after": "|cffe4cfa3Волшебные Мечи — уровень 6|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 25080,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон в ближнем бою пехотинцев и зачарователей, а также усиливает атаку Магических Башен.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМагическая Башня|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 25172,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон в ближнем бою пехотинцев и зачарователей, а также усиливает атаку Магических Башен.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМагическая Башня|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 25188,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон в ближнем бою пехотинцев и зачарователей, а также усиливает атаку Магических Башен.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМагическая Башня|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 26488,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон в ближнем бою пехотинцев и зачарователей, а также усиливает атаку Магических Башен.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМагическая Башня|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 27723,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон в ближнем бою пехотинцев и зачарователей, а также усиливает атаку Магических Башен.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМагическая Башня|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 27724,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон в ближнем бою пехотинцев и зачарователей, а также усиливает атаку Магических Башен.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМагическая Башня|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R00T",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 1208,
+          "after": "|cffe4cfa3Магическая накидка|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 1209,
+          "after": "|cffe4cfa3Магическая накидка|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 1210,
+          "after": "|cffe4cfa3Магическая накидка|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 1205,
+          "after": "|cffe4cfa3Магическая накидка|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 1206,
+          "after": "|cffe4cfa3Магическая накидка|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 1207,
+          "after": "|cffe4cfa3Магическая накидка|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 1735,
+          "after": "|cffe4cfa3Магическая накидка — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 1736,
+          "after": "|cffe4cfa3Магическая накидка — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 1737,
+          "after": "|cffe4cfa3Магическая накидка — уровень 3|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 1738,
+          "after": "|cffe4cfa3Магическая накидка — уровень 4|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 1739,
+          "after": "|cffe4cfa3Магическая накидка — уровень 5|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 1740,
+          "after": "|cffe4cfa3Магическая накидка — уровень 6|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 1217,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню пехотинцев и всех заклинателей Даларана на |cffffffff1|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 1218,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню пехотинцев и всех заклинателей Даларана на |cffffffff2|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 1219,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню пехотинцев и всех заклинателей Даларана на |cffffffff3|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 1220,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню пехотинцев и всех заклинателей Даларана на |cffffffff4|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 1222,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню пехотинцев и всех заклинателей Даларана на |cffffffff5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 1221,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню пехотинцев и всех заклинателей Даларана на |cffffffff6|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R018",
+      "levels": 10,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 1860,
+          "after": "|cffe4cfa3Увеличение маны|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 1869,
+          "after": "|cffe4cfa3Увеличение маны|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 1870,
+          "after": "|cffe4cfa3Увеличение маны|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 1871,
+          "after": "|cffe4cfa3Увеличение маны|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 1872,
+          "after": "|cffe4cfa3Увеличение маны|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 1911,
+          "after": "|cffe4cfa3Увеличение маны|r"
+        },
+        {
+          "field": "name_name7",
+          "wts_id": 1913,
+          "after": "|cffe4cfa3Увеличение маны|r"
+        },
+        {
+          "field": "name_name8",
+          "wts_id": 1912,
+          "after": "|cffe4cfa3Увеличение маны|r"
+        },
+        {
+          "field": "name_name9",
+          "wts_id": 1914,
+          "after": "|cffe4cfa3Увеличение маны|r"
+        },
+        {
+          "field": "name_name10",
+          "wts_id": 1915,
+          "after": "|cffe4cfa3Увеличение маны|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 1861,
+          "after": "|cffe4cfa3Увеличение маны — уровень 1|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 1873,
+          "after": "|cffe4cfa3Увеличение маны — уровень 2|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 1874,
+          "after": "|cffe4cfa3Увеличение маны — уровень 3|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 1875,
+          "after": "|cffe4cfa3Увеличение маны — уровень 4|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 1876,
+          "after": "|cffe4cfa3Увеличение маны — уровень 5|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 1916,
+          "after": "|cffe4cfa3Увеличение маны — уровень 6|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip7",
+          "wts_id": 1917,
+          "after": "|cffe4cfa3Увеличение маны — уровень 7|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip8",
+          "wts_id": 1918,
+          "after": "|cffe4cfa3Увеличение маны — уровень 8|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip9",
+          "wts_id": 1919,
+          "after": "|cffe4cfa3Увеличение маны — уровень 9|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip10",
+          "wts_id": 1920,
+          "after": "|cffe4cfa3Увеличение маны — уровень 10|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 1862,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны магов Даларана на |cffffffff50|cffced4da ед., но снижает их здоровье на |cffe69a8d25|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 1877,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны магов Даларана на |cffffffff100|cffced4da ед., но снижает их здоровье на |cffe69a8d50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 1878,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны магов Даларана на |cffffffff150|cffced4da ед., но снижает их здоровье на |cffe69a8d75|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 1879,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны магов Даларана на |cffffffff200|cffced4da ед., но снижает их здоровье на |cffe69a8d100|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 1880,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны магов Даларана на |cffffffff250|cffced4da ед., но снижает их здоровье на |cffe69a8d125|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 1921,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны магов Даларана на |cffffffff300|cffced4da ед., но снижает их здоровье на |cffe69a8d150|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip7",
+          "wts_id": 1922,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны магов Даларана на |cffffffff350|cffced4da ед., но снижает их здоровье на |cffe69a8d175|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff7|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip8",
+          "wts_id": 1923,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны магов Даларана на |cffffffff400|cffced4da ед., но снижает их здоровье на |cffe69a8d200|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff8|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip9",
+          "wts_id": 1924,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны магов Даларана на |cffffffff450|cffced4da ед., но снижает их здоровье на |cffe69a8d225|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff9|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip10",
+          "wts_id": 1925,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны магов Даларана на |cffffffff500|cffced4da ед., но снижает их здоровье на |cffe69a8d250|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff10|cffced4da/|cffffffff10|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R017",
+      "levels": 10,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 1850,
+          "after": "|cffe4cfa3Продолжительность жизни|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 1856,
+          "after": "|cffe4cfa3Продолжительность жизни|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 1857,
+          "after": "|cffe4cfa3Продолжительность жизни|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 1858,
+          "after": "|cffe4cfa3Продолжительность жизни|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 1859,
+          "after": "|cffe4cfa3Продолжительность жизни|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 1891,
+          "after": "|cffe4cfa3Продолжительность жизни|r"
+        },
+        {
+          "field": "name_name7",
+          "wts_id": 1892,
+          "after": "|cffe4cfa3Продолжительность жизни|r"
+        },
+        {
+          "field": "name_name8",
+          "wts_id": 1893,
+          "after": "|cffe4cfa3Продолжительность жизни|r"
+        },
+        {
+          "field": "name_name9",
+          "wts_id": 1894,
+          "after": "|cffe4cfa3Продолжительность жизни|r"
+        },
+        {
+          "field": "name_name10",
+          "wts_id": 1895,
+          "after": "|cffe4cfa3Продолжительность жизни|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 1819,
+          "after": "|cffe4cfa3Продолжительность жизни — уровень 1|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 1831,
+          "after": "|cffe4cfa3Продолжительность жизни — уровень 2|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 1832,
+          "after": "|cffe4cfa3Продолжительность жизни — уровень 3|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 1833,
+          "after": "|cffe4cfa3Продолжительность жизни — уровень 4|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 1834,
+          "after": "|cffe4cfa3Продолжительность жизни — уровень 5|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 1896,
+          "after": "|cffe4cfa3Продолжительность жизни — уровень 6|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip7",
+          "wts_id": 1897,
+          "after": "|cffe4cfa3Продолжительность жизни — уровень 7|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip8",
+          "wts_id": 1898,
+          "after": "|cffe4cfa3Продолжительность жизни — уровень 8|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip9",
+          "wts_id": 1899,
+          "after": "|cffe4cfa3Продолжительность жизни — уровень 9|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip10",
+          "wts_id": 1905,
+          "after": "|cffe4cfa3Продолжительность жизни — уровень 10|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 1820,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Даларана на |cffffffff50|cffced4da ед., но снижает их запас маны на |cffe69a8d25|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 1835,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Даларана на |cffffffff100|cffced4da ед., но снижает их запас маны на |cffe69a8d50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 1836,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Даларана на |cffffffff150|cffced4da ед., но снижает их запас маны на |cffe69a8d75|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 1837,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Даларана на |cffffffff200|cffced4da ед., но снижает их запас маны на |cffe69a8d100|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 1838,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Даларана на |cffffffff250|cffced4da ед., но снижает их запас маны на |cffe69a8d125|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 1900,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Даларана на |cffffffff300|cffced4da ед., но снижает их запас маны на |cffe69a8d150|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip7",
+          "wts_id": 1901,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Даларана на |cffffffff350|cffced4da ед., но снижает их запас маны на |cffe69a8d175|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff7|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip8",
+          "wts_id": 1902,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Даларана на |cffffffff400|cffced4da ед., но снижает их запас маны на |cffe69a8d200|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff8|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip9",
+          "wts_id": 1903,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Даларана на |cffffffff450|cffced4da ед., но снижает их запас маны на |cffe69a8d225|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff9|cffced4da/|cffffffff10|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip10",
+          "wts_id": 1904,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Даларана на |cffffffff500|cffced4da ед., но снижает их запас маны на |cffe69a8d250|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff10|cffced4da/|cffffffff10|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R015",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 1761,
+          "after": "|cffe4cfa3Ускоренное произношение заклинаний|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 1762,
+          "after": "|cffe4cfa3Ускоренное произношение заклинаний|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 1763,
+          "after": "|cffe4cfa3Ускоренное произношение заклинаний|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 1764,
+          "after": "|cffe4cfa3Ускоренное произношение заклинаний — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 1765,
+          "after": "|cffe4cfa3Ускоренное произношение заклинаний — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 1766,
+          "after": "|cffe4cfa3Ускоренное произношение заклинаний — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 1928,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки магов Даларана магическим оружием на |cffffffff17%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 1929,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки магов Даларана магическим оружием на |cffffffff34%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 1930,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки магов Даларана магическим оружием на |cffffffff51%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R016",
+      "levels": 5,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 1797,
+          "after": "|cffe4cfa3Взгляд в Бездну|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 1806,
+          "after": "|cffe4cfa3Взгляд в Бездну|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 1807,
+          "after": "|cffe4cfa3Взгляд в Бездну|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 1808,
+          "after": "|cffe4cfa3Взгляд в Бездну|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 1809,
+          "after": "|cffe4cfa3Взгляд в Бездну|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 1798,
+          "after": "|cffe4cfa3Взгляд в Бездну — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 1810,
+          "after": "|cffe4cfa3Взгляд в Бездну — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 1811,
+          "after": "|cffe4cfa3Взгляд в Бездну — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 1812,
+          "after": "|cffe4cfa3Взгляд в Бездну — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 1813,
+          "after": "|cffe4cfa3Взгляд в Бездну — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 1799,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны магов Бездны на |cffffffff35|cffced4da ед. и открывает способность «Безумие Бездны».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1|cffced4da/|cffffffff5|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 1814,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны магов Бездны на |cffffffff70|cffced4da ед. и открывает способность «Забывчивость».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2|cffced4da/|cffffffff5|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 1815,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны магов Бездны на |cffffffff105|cffced4da ед. и усиливает магический потенциал.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3|cffced4da/|cffffffff5|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 1816,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны магов Бездны на |cffffffff140|cffced4da ед. и усиливает магический потенциал.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4|cffced4da/|cffffffff5|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 1817,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны магов Бездны на |cffffffff175|cffced4da ед. и усиливает магический потенциал.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5|cffced4da/|cffffffff5|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R00Z",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 1446,
+          "after": "|cffe4cfa3Ученик стихии Огня|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 1447,
+          "after": "|cffe4cfa3Адепт стихии Огня|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 1449,
+          "after": "|cffe4cfa3Ученик стихии Огня|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 1450,
+          "after": "|cffe4cfa3Адепт стихии Огня|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 1573,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье пиромантов на |cffffffff50|cffced4da ед., ману на |cffffffff50|cffced4da ед., ускоряет регенерацию маны и открывает заклинание «Поджигание».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1|cffced4da/|cffffffff2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 1574,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает здоровье пиромантов на |cffffffff50|cffced4da ед., ману на |cffffffff50|cffced4da ед. и открывает заклинание «Призыв создания огня».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2|cffced4da/|cffffffff2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R010",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 1513,
+          "after": "|cffe4cfa3Ученик стихии Льда|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 1514,
+          "after": "|cffe4cfa3Адепт стихии Льда|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 1461,
+          "after": "|cffe4cfa3Ученик стихии Льда|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 1462,
+          "after": "|cffe4cfa3Адепт стихии Льда|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 1576,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье чародеев льда на |cffffffff40|cffced4da ед., ману на |cffffffff75|cffced4da ед., ускоряет регенерацию маны и открывает способность «Морозный доспех».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1|cffced4da/|cffffffff2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 1577,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает здоровье чародеев льда на |cffffffff40|cffced4da ед., ману на |cffffffff75|cffced4da ед. и открывает способность «Призыв создания льда».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2|cffced4da/|cffffffff2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rhse",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 40196,
+          "after": "|cffe4cfa3Магический страж|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40197,
+          "after": "|cffe4cfa3Магический страж|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 13312,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет Магические Башни способностью обнаруживать находящиеся рядом невидимые войска противника.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагическая Башня|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R011",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 1519,
+          "after": "|cffe4cfa3Ученик Тайной магии|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 1474,
+          "after": "|cffe4cfa3Адепт Тайной магии|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 1473,
+          "after": "|cffe4cfa3Ученик Тайной магии|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 1521,
+          "after": "|cffe4cfa3Адепт Тайной магии|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 1476,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье арканистов на |cffffffff40|cffced4da ед., ману на |cffffffff50|cffced4da ед., ускоряет регенерацию маны и открывает способность «Искажение времени».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАрканист|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1|cffced4da/|cffffffff2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 1477,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает здоровье арканистов на |cffffffff40|cffced4da ед., ману на |cffffffff50|cffced4da ед. и открывает способность «Зеркальное изображение».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАрканист|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2|cffced4da/|cffffffff2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01C",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 2694,
+          "after": "|cffe4cfa3Малые познания Света|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 2695,
+          "after": "|cffe4cfa3Обширные познания Света|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 2696,
+          "after": "|cffe4cfa3Глубокие познания Света|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 2697,
+          "after": "|cffe4cfa3Малые познания Света|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 2698,
+          "after": "|cffe4cfa3Обширные познания Света|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 2699,
+          "after": "|cffe4cfa3Глубокие познания Света|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20538,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье заклинателей Света на |cffffffff40|cffced4da ед., ману на |cffffffff50|cffced4da ед. и ускоряет регенерацию маны.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 20539,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно повышает характеристики заклинателей Света и открывает заклинание «Рассеивание заклинаний».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 20540,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно повышает характеристики заклинателей Света и открывает способность «Изгнание».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01B",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 2489,
+          "after": "|cffe4cfa3Зачарованное оружие|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 2492,
+          "after": "|cffe4cfa3Зачарованное оружие|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 27796,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Добавляет зачарованное оружие в экипировку зачарователей, увеличивая их скорость атаки на |cffffffff10%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЗачарователь|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R01A",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 2473,
+          "after": "|cffe4cfa3Магический Щит|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 2476,
+          "after": "|cffe4cfa3Магический Щит|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 2479,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет пехотинцев способностью «Магический Щит» и увеличивает их запас маны на |cffffffff25|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R00S",
+      "levels": 5,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 1178,
+          "after": "|cffe4cfa3Магический Талисман|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 1187,
+          "after": "|cffe4cfa3Магический Талисман|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 1188,
+          "after": "|cffe4cfa3Магический Талисман|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 1189,
+          "after": "|cffe4cfa3Магический Талисман|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 1190,
+          "after": "|cffe4cfa3Магический Талисман|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 1179,
+          "after": "|cffe4cfa3Магический Талисман — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 1191,
+          "after": "|cffe4cfa3Магический Талисман — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 1192,
+          "after": "|cffe4cfa3Магический Талисман — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 1193,
+          "after": "|cffe4cfa3Магический Талисман — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 1194,
+          "after": "|cffe4cfa3Магический Талисман — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 13594,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость регенерации маны всех магов Даларана на |cffffffff10%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1|cffced4da/|cffffffff5|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 13595,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость регенерации маны всех магов Даларана на |cffffffff20%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2|cffced4da/|cffffffff5|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 13596,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость регенерации маны всех магов Даларана на |cffffffff30%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3|cffced4da/|cffffffff5|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 13597,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость регенерации маны всех магов Даларана на |cffffffff40%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4|cffced4da/|cffffffff5|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 15790,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость регенерации маны всех магов Даларана на |cffffffff50%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5|cffced4da/|cffffffff5|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R00R",
+      "levels": 5,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 1840,
+          "after": "|cffe4cfa3Глубокие познания|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 1842,
+          "after": "|cffe4cfa3Глубокие познания|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 1843,
+          "after": "|cffe4cfa3Глубокие познания|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 1844,
+          "after": "|cffe4cfa3Глубокие познания|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 1845,
+          "after": "|cffe4cfa3Глубокие познания|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 1841,
+          "after": "|cffe4cfa3Глубокие познания — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 1846,
+          "after": "|cffe4cfa3Глубокие познания — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 1847,
+          "after": "|cffe4cfa3Глубокие познания — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 1848,
+          "after": "|cffe4cfa3Глубокие познания — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 1849,
+          "after": "|cffe4cfa3Глубокие познания — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 1159,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас маны всех магов Даларана на |cffffffff25|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1|cffced4da/|cffffffff5|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 1174,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас маны всех магов Даларана на |cffffffff50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2|cffced4da/|cffffffff5|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 1175,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас маны всех магов Даларана на |cffffffff75|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3|cffced4da/|cffffffff5|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 1176,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас маны всех магов Даларана на |cffffffff100|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4|cffced4da/|cffffffff5|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 1177,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас маны всех магов Даларана на |cffffffff125|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПиромант|cffced4da|n- |cffa9c7deЧародей Льда|cffced4da|n- |cffa9c7deАрканист|cffced4da|n- |cffa9c7deЗаклинатель Света|cffced4da|n- |cffa9c7deЗачарователь|cffced4da|n- |cffa9c7deМаг Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5|cffced4da/|cffffffff5|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BW",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9238,
+          "after": "|cffe4cfa3Даларан|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9239,
+          "after": "|cffe4cfa3Даларан|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20124,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к королевству Даларан.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0KK",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 16408,
+          "after": "|cffe4cfa3Альянс или Даларан|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 16409,
+          "after": "|cffe4cfa3Альянс или Даларан|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 16416,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Альянсу или Даларану.|r"
+        }
+      ]
+    }
+  ]
+}

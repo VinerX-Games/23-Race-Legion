@@ -1,0 +1,283 @@
+{
+  "scope": "Нерубы (Nerubs): категория 2 — Юниты (14 юнитов)",
+  "units_count": 14,
+  "variants": [
+    "SD"
+  ],
+  "units": [
+    {
+      "id": "h0BE",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10605,
+          "after": "|cffe4cfa3Постройщик|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10610,
+          "after": "|cffe4cfa3Постройщик|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6459,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Рабочий нерубов. Плетёт коконы, ремонтирует здания, собирает древесину и добывает золото.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deНебольшой скачок|cffced4da: мгновенный телепорт на короткое расстояние.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "u01B",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10327,
+          "after": "|cffe4cfa3Нерубский броненосец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11993,
+          "after": "|cffe4cfa3Нерубский броненосец|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 963,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Сверхтяжёлый штурмовой танк Нерубов, защищённый толстым хитиновым панцирем.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТолстый Панцирь|cffced4da: поглощает значительную часть входящего урона.|n- |cffa9c7deОстрые конечности|cffced4da: шанс нанести сокрушительный критический удар.|n- |cffa9c7deШипастый панцирь|cffced4da: отражает урон ближнего боя в атакующих.|n- |cffa9c7deПаутина|cffced4da: замедляет скорость цели при атаке.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "u01C",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10366,
+          "after": "|cffe4cfa3Кисло-плюй|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10367,
+          "after": "|cffe4cfa3Кисло-плюй|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 986,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Ударный передовой боец роя. Плюётся едкой кислотой и заражает врагов паразитами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПаучий Паразит|cffced4da: заражает врага паразитом, порождающим паучка при гибели цели.|n- |cffa9c7deПарализующий яд|cffced4da: шанс оглушить врага и нанести дополнительный урон.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "u01D",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4003,
+          "after": "|cffe4cfa3Вязальщик|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 6798,
+          "after": "|cffe4cfa3Вязальщик|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 2613,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Маг-паутинник дальнего боя. Контролирует перемещение врагов и ускоряет союзников.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКомок паутины|cffced4da: оглушает цель и наносит урон.|n- |cffa9c7deПаутина|cffced4da: создаёт поле паутины, ускоряющее союзные войска.|n- |cffa9c7deБритвенно-острая паутина|cffced4da: сковывает цель корнями из паутины и наносит периодический урон.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "u01E",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10336,
+          "after": "|cffe4cfa3Пророк Нерубов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10337,
+          "after": "|cffe4cfa3Пророк Нерубов|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 3198,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Подземный жрец и прорицатель роя. Опутывает летающих врагов сетью и поднимает мертвецов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПаутина|cffced4da: притягивает воздушную цель к земле.|n- |cffa9c7deВоскрешение мертвых|cffced4da: поднимает скелетов из павших тел.|n- |cffa9c7deРазложение трупа|cffced4da: регулирует баланс здоровья и урона нежити.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "u01F",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10339,
+          "after": "|cffe4cfa3Ядовитый Неруб|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 7610,
+          "after": "|cffe4cfa3Ядовитый Неруб|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 4454,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Стрелок поддержки дальнего боя. Отравляет поражённые цели смертоносным ядом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЯд нерубов|cffced4da: наносит периодический урон отравленным врагам.|n- |cffa9c7deАнтимагический панцирь|cffced4da: даёт защиту от заклинаний после мутации.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "u01G",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10368,
+          "after": "|cffe4cfa3Воин Нерубов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10369,
+          "after": "|cffe4cfa3Воин Нерубов|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 4455,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Основной стрелок армии Нерубов. Атакует цели колющими снарядами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСожжение|cffced4da: каждая атака сжигает ману цели и наносит дополнительный урон.|n- |cffa9c7deПаутина|cffced4da: при атаке замедляет скорость атаки и передвижения врага.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "u01H",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10345,
+          "after": "|cffe4cfa3Неруб Лекарь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 12540,
+          "after": "|cffe4cfa3Неруб Лекарь|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 4456,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Магический лекарь и защитник армии Нерубов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deИсцеление|cffced4da: восстанавливает здоровье раненым союзникам.|n- |cffa9c7deЯдовитый щит|cffced4da: окружает цель ядовитым облаком, ранящим врагов вокруг.|n- |cffa9c7deРассеивание заклинаний|cffced4da: снимает эффекты чар и наносит урон призванным существам.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "u01I",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10348,
+          "after": "|cffe4cfa3Неруб Страж|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 12542,
+          "after": "|cffe4cfa3Неруб Страж|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 4457,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный воин-командир дальнего боя. Вдохновляет окружающих союзников боевой аурой.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКомандирская аура|cffced4da: повышает урон от атак находящихся рядом союзников.|n- |cffa9c7deПаутина|cffced4da: замедляет скорость поражённых целей.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "u01J",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10359,
+          "after": "|cffe4cfa3Молодой неруб|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10360,
+          "after": "|cffe4cfa3Молодой неруб|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12544,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Быстрый легковооружённый боец ближнего боя. Эффективен в массовых атаках на ранних этапах игры.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deШипастый панцирь|cffced4da: повышает защиту и отражает получаемый урон.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "u01K",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10362,
+          "after": "|cffe4cfa3Глубинный Неруб|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10363,
+          "after": "|cffe4cfa3Глубинный Неруб|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 5518,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Мутировавший тяжелобронированный воин с типом атаки «Хаос». Проламывает любую броню.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deШипастый панцирь|cffced4da: усиливает защиту и отражает урон ближнего боя.|n- |cffa9c7deПаутина|cffced4da: замедляет скорость атаки и перемещения цели.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "u01T",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10414,
+          "after": "|cffe4cfa3Неруб паразит|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10415,
+          "after": "|cffe4cfa3Неруб паразит|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 5646,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Маленький арахнид, порождённый способностью «Паучий Паразит».|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deШипастый панцирь|cffced4da: отражает часть урона ближнего боя.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "lord",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 37571,
+          "after": "|cffe4cfa3Неруб Лорд|r"
+        }
+      ]
+    },
+    {
+      "id": "nq01",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 29729,
+          "after": "|cffe4cfa3Неруб Лорд|r"
+        }
+      ]
+    }
+  ]
+}

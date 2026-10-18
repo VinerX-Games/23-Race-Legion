@@ -1,0 +1,526 @@
+{
+  "scope": "Ледяные тролли: 5 оставшихся зданий (Верфь h0HO, Алтарь Лоа o06H и его ступени o06J/o06K/o06I) и прямые зависимости их меню",
+  "in_game_checked": false,
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "building_ids": [
+    "h0HO",
+    "o06H",
+    "o06I",
+    "o06J",
+    "o06K"
+  ],
+  "objects_before": {
+    "SD": {
+      "buildings": [
+        {
+          "fields": {
+            "abillist": "A15N",
+            "fmade": "",
+            "hotkey": "TRIGSTR_7031",
+            "isbldg": "1",
+            "name": "TRIGSTR_13322",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "R005,R006,R007,R002,R003",
+            "sellitems": "",
+            "sellunits": "",
+            "tip": "TRIGSTR_13323",
+            "trains": "h0D4,h0HN,h0HK",
+            "ubertip": "TRIGSTR_28306",
+            "upgrade": ""
+          },
+          "id": "h0HO",
+          "name": "Верфь"
+        },
+        {
+          "fields": {
+            "abillist": "Aspi",
+            "fmade": "3",
+            "hotkey": "TRIGSTR_8843",
+            "isbldg": "1",
+            "name": "TRIGSTR_26799",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "R0AI,R0AJ,R0AD",
+            "sellitems": "",
+            "sellunits": "",
+            "tip": "TRIGSTR_10251",
+            "trains": "n061,n062,o05B",
+            "ubertip": "TRIGSTR_25920",
+            "upgrade": "o06J,o06K,o06I"
+          },
+          "id": "o06H",
+          "name": "|cffb4dcdcАлтарь Лоа|r"
+        },
+        {
+          "fields": {
+            "abillist": "Aspi",
+            "fmade": "3",
+            "hotkey": "A",
+            "isbldg": "1",
+            "name": "TRIGSTR_2709",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "R0AI,R0AJ,R0AD",
+            "sellitems": "",
+            "sellunits": "",
+            "tip": "TRIGSTR_12383",
+            "trains": "n061",
+            "ubertip": "TRIGSTR_10252",
+            "upgrade": ""
+          },
+          "id": "o06I",
+          "name": "|cffb4dcdcАлтарь Рунока|r"
+        },
+        {
+          "fields": {
+            "abillist": "Aspi",
+            "fmade": "3",
+            "hotkey": "TRIGSTR_4177",
+            "isbldg": "1",
+            "name": "TRIGSTR_11336",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "R0AI,R0AJ,R0AD",
+            "sellitems": "",
+            "sellunits": "",
+            "tip": "TRIGSTR_11453",
+            "trains": "o05B",
+            "ubertip": "TRIGSTR_12340",
+            "upgrade": ""
+          },
+          "id": "o06J",
+          "name": "|cffb4dcdcАлтарь Акали|r"
+        },
+        {
+          "fields": {
+            "abillist": "Aspi",
+            "fmade": "3",
+            "hotkey": "TRIGSTR_4751",
+            "isbldg": "1",
+            "name": "TRIGSTR_12382",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "R0AI,R0AJ,R0AD",
+            "sellitems": "",
+            "sellunits": "",
+            "tip": "TRIGSTR_31089",
+            "trains": "n062",
+            "ubertip": "TRIGSTR_12387",
+            "upgrade": ""
+          },
+          "id": "o06K",
+          "name": "|cffb4dcdcАлтарь Мам'Тота|r"
+        }
+      ],
+      "units": [
+        {
+          "fields": {
+            "abillist": "A1PC,A1FV,A1FU,A1PA,A0W1",
+            "hotkey": "TRIGSTR_7078",
+            "name": "TRIGSTR_33012",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "",
+            "tip": "TRIGSTR_33013",
+            "trains": "",
+            "ubertip": ""
+          },
+          "id": "o05B",
+          "name": "|cffb4dcdcАкали|r"
+        },
+        {
+          "fields": {
+            "abillist": "A1PB,A1FX,A1CT,S00F",
+            "hotkey": "TRIGSTR_8478",
+            "name": "TRIGSTR_33009",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "",
+            "tip": "TRIGSTR_33010",
+            "trains": "",
+            "ubertip": "TRIGSTR_42344"
+          },
+          "id": "n062",
+          "name": "|cffb4dcdcМам'тот|r"
+        },
+        {
+          "fields": {
+            "abillist": "A1FY,A1CS,A1CR,A1P9",
+            "hotkey": "TRIGSTR_6035",
+            "name": "TRIGSTR_32033",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "",
+            "tip": "TRIGSTR_32509",
+            "trains": "",
+            "ubertip": "TRIGSTR_42343"
+          },
+          "id": "n061",
+          "name": "|cffb4dcdcРунок|r"
+        },
+        {
+          "fields": {
+            "abillist": "A00I,A00A,A00B,Sch5,Slo3,Sdro",
+            "hotkey": "TRIGSTR_3084",
+            "name": "TRIGSTR_10905",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "",
+            "tip": "Нанять транспорт",
+            "trains": "",
+            "ubertip": "\"Прочное судно, предназначенное для перевозки войск.\""
+          },
+          "id": "h0D4",
+          "name": "Транспорт"
+        },
+        {
+          "fields": {
+            "abillist": "A0Z5",
+            "hotkey": "TRIGSTR_4861",
+            "name": "TRIGSTR_22189",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "",
+            "tip": "TRIGSTR_22191",
+            "trains": "",
+            "ubertip": "TRIGSTR_20452"
+          },
+          "id": "h0HN",
+          "name": "|cffff5454Легкий корабль Орды|r"
+        },
+        {
+          "fields": {
+            "abillist": "A0Z5",
+            "hotkey": "TRIGSTR_5854",
+            "name": "TRIGSTR_22144",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "",
+            "tip": "TRIGSTR_22185",
+            "trains": "",
+            "ubertip": "TRIGSTR_10932"
+          },
+          "id": "h0HK",
+          "name": "|cffff5454Тяжелый корабль Орды|r"
+        }
+      ],
+      "upgrades": [
+        {
+          "fields": {
+            "name1": "TRIGSTR_41497",
+            "name2": "TRIGSTR_41482",
+            "name3": "TRIGSTR_41481",
+            "tip1": "TRIGSTR_41498",
+            "tip2": "TRIGSTR_41487",
+            "tip3": "TRIGSTR_41486",
+            "ubertip1": "TRIGSTR_41488",
+            "ubertip2": "TRIGSTR_41489",
+            "ubertip3": "TRIGSTR_41490"
+          },
+          "id": "R0AI",
+          "name": "|cffb4dcdcПоглощение Акали|r"
+        },
+        {
+          "fields": {
+            "name1": "TRIGSTR_41522",
+            "name2": "TRIGSTR_41504",
+            "name3": "TRIGSTR_41503",
+            "tip1": "TRIGSTR_41523",
+            "tip2": "TRIGSTR_41509",
+            "tip3": "TRIGSTR_41508",
+            "ubertip1": "TRIGSTR_31016",
+            "ubertip2": "TRIGSTR_31017",
+            "ubertip3": "TRIGSTR_31021"
+          },
+          "id": "R0AJ",
+          "name": "|cffb4dcdcПоглощение Мам'Тота|r"
+        },
+        {
+          "fields": {
+            "name1": "TRIGSTR_41474",
+            "name2": "TRIGSTR_41458",
+            "name3": "TRIGSTR_41457",
+            "tip1": "TRIGSTR_41475",
+            "tip2": "TRIGSTR_41463",
+            "tip3": "TRIGSTR_41462",
+            "ubertip1": "TRIGSTR_41464",
+            "ubertip2": "TRIGSTR_41465",
+            "ubertip3": "TRIGSTR_41466"
+          },
+          "id": "R0AD",
+          "name": "|cffb4dcdcПоглощение Рунока|r"
+        }
+      ]
+    },
+    "HD": {
+      "buildings": [
+        {
+          "fields": {
+            "abillist": "A15N",
+            "fmade": "",
+            "hotkey": "TRIGSTR_7031",
+            "isbldg": "1",
+            "name": "TRIGSTR_13322",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "R005,R006,R007,R002,R003",
+            "sellitems": "",
+            "sellunits": "",
+            "tip": "TRIGSTR_13323",
+            "trains": "h0D4,h0HN,h0HK",
+            "ubertip": "TRIGSTR_28306",
+            "upgrade": ""
+          },
+          "id": "h0HO",
+          "name": "Верфь"
+        },
+        {
+          "fields": {
+            "abillist": "Aspi",
+            "fmade": "3",
+            "hotkey": "TRIGSTR_8843",
+            "isbldg": "1",
+            "name": "TRIGSTR_26799",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "R0AI,R0AJ,R0AD",
+            "sellitems": "",
+            "sellunits": "",
+            "tip": "TRIGSTR_10251",
+            "trains": "n061,n062,o05B",
+            "ubertip": "TRIGSTR_25920",
+            "upgrade": "o06J,o06K,o06I"
+          },
+          "id": "o06H",
+          "name": "|cffb4dcdcАлтарь Лоа|r"
+        },
+        {
+          "fields": {
+            "abillist": "Aspi",
+            "fmade": "3",
+            "hotkey": "A",
+            "isbldg": "1",
+            "name": "TRIGSTR_2709",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "R0AI,R0AJ,R0AD",
+            "sellitems": "",
+            "sellunits": "",
+            "tip": "TRIGSTR_12383",
+            "trains": "n061",
+            "ubertip": "TRIGSTR_10252",
+            "upgrade": ""
+          },
+          "id": "o06I",
+          "name": "|cffb4dcdcАлтарь Рунока|r"
+        },
+        {
+          "fields": {
+            "abillist": "Aspi",
+            "fmade": "3",
+            "hotkey": "TRIGSTR_4177",
+            "isbldg": "1",
+            "name": "TRIGSTR_11336",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "R0AI,R0AJ,R0AD",
+            "sellitems": "",
+            "sellunits": "",
+            "tip": "TRIGSTR_11453",
+            "trains": "o05B",
+            "ubertip": "TRIGSTR_12340",
+            "upgrade": ""
+          },
+          "id": "o06J",
+          "name": "|cffb4dcdcАлтарь Акали|r"
+        },
+        {
+          "fields": {
+            "abillist": "Aspi",
+            "fmade": "3",
+            "hotkey": "TRIGSTR_4751",
+            "isbldg": "1",
+            "name": "TRIGSTR_12382",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "R0AI,R0AJ,R0AD",
+            "sellitems": "",
+            "sellunits": "",
+            "tip": "TRIGSTR_31089",
+            "trains": "n062",
+            "ubertip": "TRIGSTR_12387",
+            "upgrade": ""
+          },
+          "id": "o06K",
+          "name": "|cffb4dcdcАлтарь Мам'Тота|r"
+        }
+      ],
+      "units": [
+        {
+          "fields": {
+            "abillist": "A1PC,A1FV,A1FU,A1PA,A0W1",
+            "hotkey": "TRIGSTR_7078",
+            "name": "TRIGSTR_33012",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "",
+            "tip": "TRIGSTR_33013",
+            "trains": "",
+            "ubertip": ""
+          },
+          "id": "o05B",
+          "name": "|cffb4dcdcАкали|r"
+        },
+        {
+          "fields": {
+            "abillist": "A1PB,A1FX,A1CT,S00F",
+            "hotkey": "TRIGSTR_8478",
+            "name": "TRIGSTR_33009",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "",
+            "tip": "TRIGSTR_33010",
+            "trains": "",
+            "ubertip": "TRIGSTR_42344"
+          },
+          "id": "n062",
+          "name": "|cffb4dcdcМам'тот|r"
+        },
+        {
+          "fields": {
+            "abillist": "A1FY,A1CS,A1CR,A1P9",
+            "hotkey": "TRIGSTR_6035",
+            "name": "TRIGSTR_32033",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "",
+            "tip": "TRIGSTR_32509",
+            "trains": "",
+            "ubertip": "TRIGSTR_42343"
+          },
+          "id": "n061",
+          "name": "|cffb4dcdcРунок|r"
+        },
+        {
+          "fields": {
+            "abillist": "A00I,A00A,A00B,Sch5,Slo3,Sdro",
+            "hotkey": "TRIGSTR_3084",
+            "name": "TRIGSTR_10905",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "",
+            "tip": "Нанять транспорт",
+            "trains": "",
+            "ubertip": "\"Прочное судно, предназначенное для перевозки войск.\""
+          },
+          "id": "h0D4",
+          "name": "Транспорт"
+        },
+        {
+          "fields": {
+            "abillist": "A0Z5",
+            "hotkey": "TRIGSTR_4861",
+            "name": "TRIGSTR_22189",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "",
+            "tip": "TRIGSTR_22191",
+            "trains": "",
+            "ubertip": "TRIGSTR_20452"
+          },
+          "id": "h0HN",
+          "name": "|cffff5454Легкий корабль Орды|r"
+        },
+        {
+          "fields": {
+            "abillist": "A0Z5",
+            "hotkey": "TRIGSTR_5854",
+            "name": "TRIGSTR_22144",
+            "reqs": "",
+            "reqslevels": "",
+            "researches": "",
+            "tip": "TRIGSTR_22185",
+            "trains": "",
+            "ubertip": "TRIGSTR_10932"
+          },
+          "id": "h0HK",
+          "name": "|cffff5454Тяжелый корабль Орды|r"
+        }
+      ],
+      "upgrades": [
+        {
+          "fields": {
+            "name1": "TRIGSTR_41497",
+            "name2": "TRIGSTR_41482",
+            "name3": "TRIGSTR_41481",
+            "tip1": "TRIGSTR_41498",
+            "tip2": "TRIGSTR_41487",
+            "tip3": "TRIGSTR_41486",
+            "ubertip1": "TRIGSTR_41488",
+            "ubertip2": "TRIGSTR_41489",
+            "ubertip3": "TRIGSTR_41490"
+          },
+          "id": "R0AI",
+          "name": "|cffb4dcdcПоглощение Акали|r"
+        },
+        {
+          "fields": {
+            "name1": "TRIGSTR_41522",
+            "name2": "TRIGSTR_41504",
+            "name3": "TRIGSTR_41503",
+            "tip1": "TRIGSTR_41523",
+            "tip2": "TRIGSTR_41509",
+            "tip3": "TRIGSTR_41508",
+            "ubertip1": "TRIGSTR_31016",
+            "ubertip2": "TRIGSTR_31017",
+            "ubertip3": "TRIGSTR_31021"
+          },
+          "id": "R0AJ",
+          "name": "|cffb4dcdcПоглощение Мам'Тота|r"
+        },
+        {
+          "fields": {
+            "name1": "TRIGSTR_41474",
+            "name2": "TRIGSTR_41458",
+            "name3": "TRIGSTR_41457",
+            "tip1": "TRIGSTR_41475",
+            "tip2": "TRIGSTR_41463",
+            "tip3": "TRIGSTR_41462",
+            "ubertip1": "TRIGSTR_41464",
+            "ubertip2": "TRIGSTR_41465",
+            "ubertip3": "TRIGSTR_41466"
+          },
+          "id": "R0AD",
+          "name": "|cffb4dcdcПоглощение Рунока|r"
+        }
+      ]
+    }
+  },
+  "operations_count": 45,
+  "input_sha256": {
+    "map.w3x/war3map.wts": "c13c2422bae119ac2479f3ba8c30dc674c27def94f9b1dc7c2233990ae47a5af",
+    "map.w3x/war3map.w3u": "f916222e2ebea4cee3978a0ea237042d8d46e4d4883bc938b06ddf7f59794f74",
+    "map.w3x/war3mapSkin.w3u": "0642c190624839ccb851a3fa998848917c2145751bf0d83e42e7c6e6ca1e0424",
+    "map.w3x/war3map.w3q": "13cb56a7439cb826a35b5702a42d1bd58ce1f41bf6551a2f36c9f8177392c688",
+    "map.w3x/war3mapSkin.w3q": "4d0cb97b2fccb041360219fe4730926e4ada045cec132f11db0f2a12a85b20f1",
+    "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/IceTrolls.lua": "88dc8f4e6eb46ff9898fee1e3cec54bc58010faa0f037f1da991dba3278a529b"
+  },
+  "evidence": {
+    "menus": "Все списки обучения, улучшений и исследований согласованы с object data и Lua (Trig_ServeLoa, Trig_KillLoa)",
+    "altar_branches": "Алтарь Лоа o06H разветвляется на три специализированных алтаря o06I (Рунок, Q/A), o06J (Акали, W/S), o06K (Мам'Тот, E/D)",
+    "abilities_unlocked": "Улучшение святилищ разблокирует areq способности Лоа: A1FY/A1P9 для Рунока, A1PA/A1PC для Акали, A1FX/S00F для Мам'Тота",
+    "shipyard": "Верфь h0HO обучает h0D4, h0HN, h0HK и исследует 5 общих улучшений флота; имеет ауру Ремонта A15N",
+    "preservation": "Нетекстовые поля и посторонние записи побайтово сохраняются patch_blob"
+  },
+  "remaining": [
+    "Юниты ледяных троллей (полные карточки способностей и характеристик)",
+    "Герои ледяных троллей (полные карточки, имена и способности)",
+    "Способности и эффекты ледяных троллей",
+    "Исследования ледяных троллей (полные карточки и описания эффектов)",
+    "Игровые проверки в Warcraft III выполняет пользователь"
+  ]
+}

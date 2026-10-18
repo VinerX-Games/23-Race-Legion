@@ -1,0 +1,79 @@
+commit fb779062495962b1a1ba8bcdf94e1c1065dc2a37
+Author:     VinerX <vinerx2000@gmail.com>
+AuthorDate: Sat Oct 10 22:21:17 2026 +0300
+Commit:     VinerX <vinerx2000@gmail.com>
+CommitDate: Sat Oct 10 22:21:17 2026 +0300
+
+    fix(heroes): restore per-type roster limits
+
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/_races/74_w2_xp.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/_races/74_w2_xp.lua
+index c165e5a..a8aa6c4 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/_races/74_w2_xp.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/_races/74_w2_xp.lua
+@@ -157,6 +157,7 @@ function HordeW2ApplySubraceRoster(p)
+ 	SetPlayerTechMaxAllowedSwap(FourCC('xd05'), 0, p)
+ 	SetPlayerTechMaxAllowedSwap(FourCC('xd06'), 0, p)
+ 	SetPlayerTechMaxAllowedSwap(FourCC('xd07'), 0, p)
++	SetPlayerTechMaxAllowedSwap(FourCC('W200'), 1, p)
+ 
+ 	SetPlayerTechMaxAllowedSwap(FourCC('w201'), -1, p)
+ 	SetPlayerTechMaxAllowedSwap(FourCC('w202'), -1, p)
+@@ -168,14 +169,14 @@ function HordeW2ApplySubraceRoster(p)
+ 	-- Heroes (uppercase rawcodes). All branches keep W200 + W201 (Cho'gall).
+ 	-- The 3rd slot: W202 Troll Leader on base/dragonmaw, W203 Maim on Dark Horde
+ 	-- (full unit swap, same altar card slot — never both visible).
+-	SetPlayerTechMaxAllowedSwap(FourCC('W201'), -1, p)
+-	SetPlayerTechMaxAllowedSwap(FourCC('W202'), -1, p)
++	SetPlayerTechMaxAllowedSwap(FourCC('W201'), 1, p)
++	SetPlayerTechMaxAllowedSwap(FourCC('W202'), 1, p)
+ 	SetPlayerTechMaxAllowedSwap(FourCC('W203'), 0, p)
+ 
+ 	if subrace == "dark" then
+ 		-- Dark Horde replaces the Troll Leader with Maim Blackhand.
+ 		SetPlayerTechMaxAllowedSwap(FourCC('W202'), 0, p)
+-		SetPlayerTechMaxAllowedSwap(FourCC('W203'), -1, p)
++		SetPlayerTechMaxAllowedSwap(FourCC('W203'), 1, p)
+ 		SetPlayerTechMaxAllowedSwap(FourCC('w202'), 0, p)
+ 		SetPlayerTechMaxAllowedSwap(FourCC('w205'), 0, p)
+ 		SetPlayerTechMaxAllowedSwap(FourCC('w206'), 0, p)
+@@ -186,7 +187,7 @@ function HordeW2ApplySubraceRoster(p)
+ 		SetPlayerTechMaxAllowedSwap(FourCC('xd07'), -1, p)
+ 	elseif subrace == "dragonmaw" then
+ 		SetPlayerTechMaxAllowedSwap(FourCC('w201'), 0, p)
+-		SetPlayerTechMaxAllowedSwap(FourCC('w203'), 0, p)
++		SetPlayerTechMaxAllowedSwap(FourCC('W203'), 0, p)
+ 		SetPlayerTechMaxAllowedSwap(FourCC('w205'), 0, p)
+ 		SetPlayerTechMaxAllowedSwap(FourCC('xd04'), -1, p)
+ 		SetPlayerTechMaxAllowedSwap(FourCC('xd05'), -1, p)
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/07_mixed_heroes.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/07_mixed_heroes.lua
+index 8afca87..3638baa 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/07_mixed_heroes.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/07_mixed_heroes.lua
+@@ -37,7 +37,7 @@ end
+ -- Trigger: LimitHero Exep
+ --===========================================================================
+ function Trig_LimitHero_Exep_Conditions()
+-    return IsUnitType(GetTrainedUnit(), UNIT_TYPE_HERO)
++    return IsUnitIdType(GetTrainedUnitType(), UNIT_TYPE_HERO)
+ end
+ function Trig_LimitHero_Exep_Actions()
+     SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), GetTrainedUnitType(), 1)
+@@ -1084,4 +1084,4 @@ function InitTrig_Pribavka_k_zoloty()
+         if GetSpellAbilityId() ~= FourCC('A0ZN') then return end
+         Trig_Pribavka_k_zoloty_Actions()
+     end)
+-end
+\ No newline at end of file
++end
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/HordeW2.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/HordeW2.lua
+index 2ca7840..ff744de 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/HordeW2.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/HordeW2.lua
+@@ -670,6 +670,7 @@ end
+ ---@param p player
+ ---@return nothing
+ function HordeW2EnableSubraceChoice(p)
++    HordeW2ApplySubraceRoster(p)
+     SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 1, p)
+     SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 1, p)
+ end

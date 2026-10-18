@@ -1,0 +1,2617 @@
+{
+  "abils": {
+    "A01J": {
+      "id": "A01J",
+      "raw_name": "TRIGSTR_37588",
+      "name": "|cffe6beaaЖажда крови|r",
+      "levels": 2,
+      "raw_hotkey": "TRIGSTR_7410",
+      "hotkey": "R",
+      "raw_researchhotkey": null,
+      "researchhotkey": null,
+      "raw_researchtip": "TRIGSTR_36623",
+      "researchtip": "|cffe6beaaЖажда крови|r",
+      "raw_researchubertip": "TRIGSTR_36975",
+      "researchubertip": "+<A01J,DataA1,%>% к скорости атаки и +<A01J,DataB1,%>% к скорости передвижения союзника. |nВремя действия: <A01J,Dur1> сек.",
+      "tips": {
+        "tip1": {
+          "raw": "Жажда крови",
+          "val": "Жажда крови"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_1560",
+          "val": "Жажда крови"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_22817",
+          "val": "+200% к скорости атаки и +70% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur1> сек."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_22811",
+          "val": "+300% к скорости атаки и +130>% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur2> сек."
+        }
+      },
+      "untips": {
+        "untip1": {
+          "raw": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "val": "|cffc3dbffПКМ – включить автоприменение.|r"
+        },
+        "untip2": {
+          "raw": "TRIGSTR_2340",
+          "val": "|cffc3dbffПКМ – включить автоприменение.|r"
+        }
+      },
+      "unubertips": {
+        "unubertip1": {
+          "raw": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "val": "|cffc3dbffПКМ – отключить автоприменение.|r"
+        },
+        "unubertip2": {
+          "raw": "TRIGSTR_2342",
+          "val": "|cffc3dbffПКМ – отключить автоприменение.|r"
+        }
+      },
+      "fields": {
+        "area2": " - ",
+        "area3": " - ",
+        "area4": " - ",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNBloodLustOn.blp",
+        "buffid1": "Bblo",
+        "buffid2": "Bblo",
+        "buttonpos": "3",
+        "buttonpos2": "2",
+        "cast1": "0",
+        "cast2": " - ",
+        "cast3": " - ",
+        "cast4": " - ",
+        "checkdep": "1",
+        "code": "Ablo",
+        "comments": "Bloodlust",
+        "cool1": "25.000000",
+        "cool2": "15.000000",
+        "cool3": " - ",
+        "cool4": " - ",
+        "cost1": "185",
+        "cost2": "200",
+        "cost3": " - ",
+        "cost4": " - ",
+        "dataa1": "2.000000",
+        "dataa2": "3.000000",
+        "dataa3": " - ",
+        "dataa4": " - ",
+        "datab1": "0.700000",
+        "datab2": "1.300000",
+        "datab3": " - ",
+        "datab4": " - ",
+        "datac1": "0.3",
+        "datac2": "0.300000",
+        "datac3": " - ",
+        "datac4": " - ",
+        "datad1": " - ",
+        "datad2": " - ",
+        "datad3": " - ",
+        "datad4": " - ",
+        "dur1": "45.000000",
+        "dur2": "45.000000",
+        "dur3": " - ",
+        "dur4": " - ",
+        "editorsuffix": "TRIGSTR_7055",
+        "hero": "1",
+        "herodur1": "45.000000",
+        "herodur2": "45.000000",
+        "herodur3": " - ",
+        "herodur4": " - ",
+        "hotkey": "TRIGSTR_7410",
+        "inbeta": "1",
+        "item": "0",
+        "levels": "2",
+        "levelskip": "3",
+        "name": "TRIGSTR_37588",
+        "order": "bloodlust",
+        "orderoff": "bloodlustoff",
+        "orderon": "bloodluston",
+        "priority": "11",
+        "race": "human",
+        "reqlevel": "6",
+        "researchart": "ReplaceableTextures\\CommandButtons\\BTNBloodLustOn.blp",
+        "researchbuttonpos": "3",
+        "researchtip": "TRIGSTR_36623",
+        "researchubertip": "TRIGSTR_36975",
+        "rng1": "600",
+        "rng2": "600.000000",
+        "rng3": " - ",
+        "rng4": " - ",
+        "sort": "unit",
+        "targs1": "air,ground,friend,organic,self,neutral",
+        "targs2": "air,ground,friend,organic,self,neutral",
+        "tip1": "Жажда крови",
+        "tip2": "TRIGSTR_1560",
+        "ubertip1": "TRIGSTR_22817",
+        "ubertip2": "TRIGSTR_22811",
+        "unart": "ReplaceableTextures\\CommandButtons\\BTNBloodLustOff.blp",
+        "unbuttonpos": "2",
+        "unbuttonpos2": "2",
+        "unhotkey": "TRIGSTR_7411",
+        "untip1": "|cffc3dbffПКМ – включить автоприменение.|r",
+        "untip2": "TRIGSTR_2340",
+        "unubertip1": "|cffc3dbffПКМ – отключить автоприменение.|r",
+        "unubertip2": "TRIGSTR_2342",
+        "useineditor": "1",
+        "version": "0"
+      }
+    },
+    "A01D": {
+      "id": "A01D",
+      "raw_name": "TRIGSTR_34824",
+      "name": "|cffe6beaaПризвать собак|r",
+      "levels": 4,
+      "raw_hotkey": "W",
+      "hotkey": "W",
+      "raw_researchhotkey": "W",
+      "researchhotkey": "W",
+      "raw_researchtip": "TRIGSTR_35256",
+      "researchtip": "Изучить «|cffe6beaaПризвать собак|r» [|cffffcc00%d-й уровень|r]",
+      "raw_researchubertip": "TRIGSTR_1545",
+      "researchubertip": "Призывает псов, сражающихся на вашей стороне.",
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_34825",
+          "val": "|cffe6beaaПризвать собак|r [|cffffcc001-й уровень|r]"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_35241",
+          "val": "|cffd45e29Призвать собак|r [|cffffcc002-й уровень|r]"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_35247",
+          "val": "|cffd45e39Призвать собак|r [|cffffcc003-й уровень|r]"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_35253",
+          "val": "|cffd45e49Призвать собак|r [|cffffcc004-й уровень|r]"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_1540",
+          "val": "Призыв псов, которые будут сражаться на вашей стороне."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_1541",
+          "val": "Призыв псов, которые будут сражаться на вашей стороне."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_1542",
+          "val": "Призыв псов, которые будут сражаться на вашей стороне."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_1543",
+          "val": "Призыв псов, которые будут сражаться на вашей стороне."
+        }
+      },
+      "untips": {},
+      "unubertips": {},
+      "fields": {
+        "area1": "200",
+        "area2": "200",
+        "area3": "200",
+        "area4": "200",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNWolf.blp",
+        "buffid1": "B004",
+        "buffid2": "B004",
+        "buffid3": "B004",
+        "buffid4": "B004",
+        "buttonpos": "1",
+        "buttonpos2": "2",
+        "cast1": "0",
+        "checkdep": "1",
+        "code": "AHwe",
+        "comments": "Arch Mage - Water Elemental",
+        "cool1": "25.000000",
+        "cool2": "25.000000",
+        "cool3": "25.000000",
+        "cool4": "25.000000",
+        "cost1": "125",
+        "cost2": "130",
+        "cost3": "135",
+        "cost4": "140",
+        "dataa1": "3",
+        "dataa2": "3",
+        "dataa3": "3",
+        "dataa4": "3",
+        "dur1": "60",
+        "dur2": "70.000000",
+        "dur3": "80.000000",
+        "dur4": "90.000000",
+        "editorsuffix": "TRIGSTR_1043",
+        "hero": "1",
+        "herodur1": "60",
+        "herodur2": "60",
+        "herodur3": "60",
+        "herodur4": "60",
+        "hotkey": "W",
+        "inbeta": "1",
+        "item": "0",
+        "levels": "4",
+        "levelskip": "0",
+        "name": "TRIGSTR_34824",
+        "order": "waterelemental",
+        "priority": "0",
+        "race": "human",
+        "reqlevel": "1",
+        "researchart": "ReplaceableTextures\\CommandButtons\\BTNWolf.blp",
+        "researchbuttonpos": "1",
+        "researchbuttonpos2": "0",
+        "researchhotkey": "W",
+        "researchtip": "TRIGSTR_35256",
+        "researchubertip": "TRIGSTR_1545",
+        "sort": "hero",
+        "tip1": "TRIGSTR_34825",
+        "tip2": "TRIGSTR_35241",
+        "tip3": "TRIGSTR_35247",
+        "tip4": "TRIGSTR_35253",
+        "ubertip1": "TRIGSTR_1540",
+        "ubertip2": "TRIGSTR_1541",
+        "ubertip3": "TRIGSTR_1542",
+        "ubertip4": "TRIGSTR_1543",
+        "unitid1": "n00G",
+        "unitid2": "n05A",
+        "unitid3": "n05B",
+        "unitid4": "n05C",
+        "unitskinid": "ndog",
+        "useineditor": "1",
+        "version": "0"
+      }
+    },
+    "A01H": {
+      "id": "A01H",
+      "raw_name": "TRIGSTR_35262",
+      "name": "|cffe6beaaАура выносливости|r",
+      "levels": 4,
+      "raw_hotkey": null,
+      "hotkey": null,
+      "raw_researchhotkey": "E",
+      "researchhotkey": "E",
+      "raw_researchtip": "TRIGSTR_35268",
+      "researchtip": "Изучить «|cffe6beaaАура выносливости|r» [|cffffcc00%d-й уровень|r]",
+      "raw_researchubertip": "\"Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки. |n|cffffcc003-й уровень:|r +<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки.\"",
+      "researchubertip": "\"Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки. |n|cffffcc003-й уровень:|r +<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки.\"",
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_35276",
+          "val": "|cffe6beaaАура выносливости|r [|cffffcc001-й уровень|r]"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_35570",
+          "val": "|cffd45e29Аура выносливости|r [|cffffcc002-й уровень|r]"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_35571",
+          "val": "|cffd45e39Аура выносливости|r [|cffffcc003-й уровень|r]"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_35259",
+          "val": "|cffd45e49Аура выносливости|r [|cffffcc004-й уровень|r]"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_27460",
+          "val": "+7% к скорости передвижения и +5% к скорости атаки находящихся рядом союзников."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_27461",
+          "val": "+11% к скорости передвижения и +8% к скорости атаки находящихся рядом союзников."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_27462",
+          "val": "+15% к скорости передвижения и +11% к скорости атаки находящихся рядом союзников."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_24336",
+          "val": "+19% к скорости передвижения и +14% к скорости атаки находящихся рядом союзников."
+        }
+      },
+      "untips": {},
+      "unubertips": {},
+      "fields": {
+        "area1": "900",
+        "area2": "900",
+        "area3": "900",
+        "area4": "900",
+        "art": "ReplaceableTextures\\PassiveButtons\\PASBTNCommand.blp",
+        "buffid1": "BOae",
+        "buffid2": "BOae",
+        "buffid3": "BOae",
+        "buffid4": "BOae",
+        "buttonpos": "2",
+        "buttonpos2": "2",
+        "cast1": "0",
+        "checkdep": "1",
+        "code": "AOae",
+        "comments": "Chieftain - Endurance Aura",
+        "cool1": "0",
+        "dataa1": "0.070000",
+        "dataa2": "0.110000",
+        "dataa3": "0.150000",
+        "dataa4": "0.190000",
+        "datab1": "0.05",
+        "datab2": "0.080000",
+        "datab3": "0.110000",
+        "datab4": "0.140000",
+        "dur1": "0",
+        "editorsuffix": "TRIGSTR_1280",
+        "hero": "1",
+        "herodur1": "0",
+        "inbeta": "1",
+        "item": "0",
+        "levels": "4",
+        "levelskip": "0",
+        "name": "TRIGSTR_35262",
+        "priority": "0",
+        "race": "human",
+        "reqlevel": "1",
+        "researchart": "ReplaceableTextures\\CommandButtons\\BTNCommand.blp",
+        "researchbuttonpos": "2",
+        "researchbuttonpos2": "0",
+        "researchhotkey": "E",
+        "researchtip": "TRIGSTR_35268",
+        "researchubertip": "\"Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки. |n|cffffcc003-й уровень:|r +<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки.\"",
+        "sort": "hero",
+        "targetart": "Abilities\\Spells\\Orc\\CommandAura\\CommandAura.mdl",
+        "targetattach": "origin",
+        "targs1": "air,ground,friend,self,vuln,invu",
+        "targs2": "air,ground,friend,self,vuln,invu",
+        "targs3": "air,ground,friend,self,vuln,invu",
+        "targs4": "air,ground,friend,self,vuln,invu",
+        "tip1": "TRIGSTR_35276",
+        "tip2": "TRIGSTR_35570",
+        "tip3": "TRIGSTR_35571",
+        "tip4": "TRIGSTR_35259",
+        "ubertip1": "TRIGSTR_27460",
+        "ubertip2": "TRIGSTR_27461",
+        "ubertip3": "TRIGSTR_27462",
+        "ubertip4": "TRIGSTR_24336",
+        "useineditor": "1",
+        "version": "0"
+      }
+    },
+    "A01I": {
+      "id": "A01I",
+      "raw_name": "TRIGSTR_36622",
+      "name": "|cffe6beaaОпутывание|r",
+      "levels": 4,
+      "raw_hotkey": "E",
+      "hotkey": "E",
+      "raw_researchhotkey": "TRIGSTR_12140",
+      "researchhotkey": "E",
+      "raw_researchtip": "TRIGSTR_36621",
+      "researchtip": "|cffe6beaaОпутывание|r [|cffffcc001-й уровень|r]",
+      "raw_researchubertip": "TRIGSTR_2045",
+      "researchubertip": "Опутывает врага сетью на определенное время.",
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_36600",
+          "val": "|cffe6beaaОпутывание|r [|cffffcc001-й уровень|r]"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_35861",
+          "val": "|cffd45e29Опутывание|r [|cffffcc002-й уровень|r]"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_36585",
+          "val": "|cffd45e39Опутывание|r [|cffffcc003-й уровень|r]"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_36586",
+          "val": "|cffd45e49Опутывание|r [|cffffcc004-й уровень|r]"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_1550",
+          "val": "Обездвиживает врага."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_1554",
+          "val": "Обездвиживает врага."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_1555",
+          "val": "Обездвиживает врага."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_1556",
+          "val": "Обездвиживает врага."
+        }
+      },
+      "untips": {},
+      "unubertips": {},
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNEnsnare.blp",
+        "buffid1": "Bena,Beng",
+        "buffid2": "Bena,Beng",
+        "buffid3": "Bena,Beng",
+        "buffid4": "Bena,Beng",
+        "buttonpos": "0",
+        "buttonpos2": "2",
+        "cast1": "0",
+        "checkdep": "1",
+        "code": "Aens",
+        "comments": "Ensnare",
+        "cool1": "11.000000",
+        "cool2": "11.000000",
+        "cool3": "11.000000",
+        "cool4": "11.000000",
+        "cost1": "0",
+        "dataa1": "0.000000",
+        "datab1": "0.000000",
+        "datac1": "128",
+        "datac2": "128.000000",
+        "datac3": "128.000000",
+        "datac4": "128.000000",
+        "dur1": "8.000000",
+        "dur2": "12.000000",
+        "dur3": "16.000000",
+        "dur4": "20.000000",
+        "editorsuffix": "TRIGSTR_27463",
+        "hero": "1",
+        "herodur1": "1.000000",
+        "herodur2": "2.000000",
+        "herodur3": "3.000000",
+        "herodur4": "4.000000",
+        "hotkey": "E",
+        "inbeta": "1",
+        "item": "0",
+        "levels": "4",
+        "levelskip": "0",
+        "missileart": "Abilities\\Spells\\Orc\\Ensnare\\EnsnareMissile.mdl",
+        "missilehoming": "1",
+        "missilespeed": "1500",
+        "name": "TRIGSTR_36622",
+        "order": "ensnare",
+        "priority": "0",
+        "race": "human",
+        "reqlevel": "0",
+        "researchart": "ReplaceableTextures\\CommandButtons\\BTNEnsnare.blp",
+        "researchhotkey": "TRIGSTR_12140",
+        "researchtip": "TRIGSTR_36621",
+        "researchubertip": "TRIGSTR_2045",
+        "rng1": "700.000000",
+        "rng2": "800.000000",
+        "rng3": "900.000000",
+        "rng4": "1000.000000",
+        "sort": "unit",
+        "targs1": "ground,air,enemy,neutral",
+        "targs2": "ground,air,enemy,neutral",
+        "targs3": "ground,air,enemy,neutral",
+        "targs4": "ground,air,enemy,neutral",
+        "tip1": "TRIGSTR_36600",
+        "tip2": "TRIGSTR_35861",
+        "tip3": "TRIGSTR_36585",
+        "tip4": "TRIGSTR_36586",
+        "ubertip1": "TRIGSTR_1550",
+        "ubertip2": "TRIGSTR_1554",
+        "ubertip3": "TRIGSTR_1555",
+        "ubertip4": "TRIGSTR_1556",
+        "unart": "ReplaceableTextures\\CommandButtons\\BTNEnsnare.blp",
+        "useineditor": "1",
+        "version": "0"
+      }
+    },
+    "A023": {
+      "id": "A023",
+      "raw_name": "TRIGSTR_2027",
+      "name": "Огненный Торнадо",
+      "levels": 2,
+      "raw_hotkey": "TRIGSTR_7470",
+      "hotkey": "R",
+      "raw_researchhotkey": "TRIGSTR_7469",
+      "researchhotkey": "R",
+      "raw_researchtip": "Изучить «Торнадо»",
+      "researchtip": "Изучить «Торнадо»",
+      "raw_researchubertip": "TRIGSTR_2035",
+      "researchubertip": "Призывает управляемый торнадо, который замедляет передвижение наземных врагов,  а также наносит урон по области.",
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_2028",
+          "val": "Огненный Торнадо"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_2036",
+          "val": "Огненный Торнадо"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_2025",
+          "val": "Призывает управляемый торнадо, который замедляет передвижение наземных врагов, случайным образом подбрасывает их, а также наносит урон по области."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_2026",
+          "val": "Призывает управляемый торнадо, который замедляет передвижение наземных врагов, случайным образом подбрасывает их, а также наносит урон по области."
+        }
+      },
+      "untips": {},
+      "unubertips": {},
+      "fields": {
+        "animnames": "spell,channel",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNTornado.blp",
+        "buffid1": "BNto",
+        "buffid2": "BNto",
+        "buffid3": "BNto",
+        "buffid4": "BNto",
+        "buttonpos": "3",
+        "buttonpos2": "2",
+        "cast1": "0",
+        "cast2": "0",
+        "cast3": "0",
+        "cast4": "0",
+        "checkdep": "1",
+        "code": "ANto",
+        "comments": "Sea Witch - Tornado",
+        "cool1": "120",
+        "cool2": "65.000000",
+        "cool3": "120",
+        "cool4": "120",
+        "cost1": "125",
+        "cost2": "230",
+        "cost3": "150",
+        "cost4": "150",
+        "dur1": "20",
+        "dur2": "50.000000",
+        "dur3": "30",
+        "dur4": "30",
+        "hero": "1",
+        "herodur1": "20",
+        "herodur2": "40.000000",
+        "herodur3": "30",
+        "herodur4": "30",
+        "hotkey": "TRIGSTR_7470",
+        "inbeta": "1",
+        "item": "0",
+        "levels": "2",
+        "levelskip": "3",
+        "name": "TRIGSTR_2027",
+        "order": "tornado",
+        "priority": "0",
+        "race": "creeps",
+        "reqlevel": "6",
+        "researchart": "ReplaceableTextures\\CommandButtons\\BTNTornado.blp",
+        "researchbuttonpos": "3",
+        "researchbuttonpos2": "0",
+        "researchhotkey": "TRIGSTR_7469",
+        "researchtip": "Изучить «Торнадо»",
+        "researchubertip": "TRIGSTR_2035",
+        "rng1": "700",
+        "rng2": "700",
+        "rng3": "700",
+        "rng4": "700",
+        "sort": "hero",
+        "tip1": "TRIGSTR_2028",
+        "tip2": "TRIGSTR_2036",
+        "ubertip1": "TRIGSTR_2025",
+        "ubertip2": "TRIGSTR_2026",
+        "unitid1": "n00K",
+        "unitid2": "n00K",
+        "unitid3": "ntor",
+        "unitid4": "ntor",
+        "unitskinid": "ntor,ntor,ntor,ntor",
+        "useineditor": "1",
+        "version": "1"
+      }
+    },
+    "ANrf": {
+      "id": "ANrf",
+      "raw_name": "TRIGSTR_25841",
+      "name": "Rain of Fire",
+      "levels": 4,
+      "raw_hotkey": "TRIGSTR_8626",
+      "hotkey": "Q",
+      "raw_researchhotkey": "TRIGSTR_8627",
+      "researchhotkey": "Q",
+      "raw_researchtip": "TRIGSTR_26401",
+      "researchtip": "Learn Rain of Fire [|cffffcc00%d level|r]",
+      "raw_researchubertip": "TRIGSTR_26372",
+      "researchubertip": "Releases waves of fire onto the target area. Each wave deals instant damage and then damage over time over <ANrf,Dur1> seconds. |n|n|cffffcc001st level:|r <ANrf,DataA1> waves, <ANrf,DataB1> damage instantly and <ANrf,DataE1> damage/sec. |n|cffffcc002nd level:|r <ANrf,DataA2> waves, <ANrf,DataB2> damage instantly and <ANrf,DataE2> damage/sec. |n|cffffcc003rd level:|r <ANrf,DataA3> waves, <ANrf,DataB3> damage instantly and <ANrf,DataE3> damage/sec.",
+      "tips": {
+        "tip1": {
+          "raw": "\"Огненный ливень [|cffffcc001-й уровень|r]\"",
+          "val": "\"Огненный ливень [|cffffcc001-й уровень|r]\""
+        },
+        "tip2": {
+          "raw": "\"Огненный ливень [|cffffcc002-й уровень|r]\"",
+          "val": "\"Огненный ливень [|cffffcc002-й уровень|r]\""
+        },
+        "tip3": {
+          "raw": "\"Огненный ливень [|cffffcc003-й уровень|r]\"",
+          "val": "\"Огненный ливень [|cffffcc003-й уровень|r]\""
+        },
+        "tip4": {
+          "raw": "TRIGSTR_2014",
+          "val": "Огненный ливень [|cffffcc004-й уровень|r]"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB1> урона мгновенно и <ANrf,DataE1> урона/сек. в течение <ANrf,Dur1> сек. |nВолн – <ANrf,DataA1>.\"",
+          "val": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB1> урона мгновенно и <ANrf,DataE1> урона/сек. в течение <ANrf,Dur1> сек. |nВолн – <ANrf,DataA1>.\""
+        },
+        "ubertip2": {
+          "raw": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB2> урона мгновенно и <ANrf,DataE2> урона/сек. в течение <ANrf,Dur2> сек. |nВолн – <ANrf,DataA2>.\"",
+          "val": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB2> урона мгновенно и <ANrf,DataE2> урона/сек. в течение <ANrf,Dur2> сек. |nВолн – <ANrf,DataA2>.\""
+        },
+        "ubertip3": {
+          "raw": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB3> урона мгновенно и <ANrf,DataE3> урона/сек. в течение <ANrf,Dur3> сек. |nВолн – <ANrf,DataA3>.\"",
+          "val": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB3> урона мгновенно и <ANrf,DataE3> урона/сек. в течение <ANrf,Dur3> сек. |nВолн – <ANrf,DataA3>.\""
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_2015",
+          "val": "Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB4> урона мгновенно и <ANrf,DataE4> урона/сек. в течение <ANrf,Dur4> сек. |nВолн – <ANrf,DataA4>."
+        }
+      },
+      "untips": {},
+      "unubertips": {},
+      "fields": {
+        "animnames": "spell,looping",
+        "area1": "200",
+        "area2": "200",
+        "area3": "200",
+        "area4": "200",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNFire.blp",
+        "buffid1": "BNrd,BNrf",
+        "buffid2": "BNrd,BNrf",
+        "buffid3": "BNrd,BNrf",
+        "buffid4": "BNrd,BNrf",
+        "buttonpos": "0",
+        "buttonpos2": "2",
+        "cast1": "1",
+        "cast2": "1",
+        "cast3": "1",
+        "cast4": "1",
+        "checkdep": "1",
+        "code": "ANrf",
+        "comments": "Pit Lord - Rain of Fire",
+        "cool1": "8",
+        "cool2": "8",
+        "cool3": "8",
+        "cool4": "8",
+        "cost1": "85",
+        "cost2": "85",
+        "cost3": "85",
+        "cost4": "85",
+        "dataa1": "6",
+        "dataa2": "8",
+        "dataa3": "10",
+        "dataa4": "12",
+        "datab1": "10.000000",
+        "datab2": "20.000000",
+        "datab3": "30.000000",
+        "datab4": "40.000000",
+        "datac1": "6",
+        "datac2": "7",
+        "datac3": "8",
+        "datac4": "9",
+        "datad1": "0.5",
+        "datad2": "0.5",
+        "datad3": "0.5",
+        "datad4": "0.5",
+        "datae1": "5",
+        "datae2": "5.000000",
+        "datae3": "5.000000",
+        "datae4": "5.000000",
+        "dataf1": "1000.000000",
+        "dataf2": "2000.000000",
+        "dataf3": "3000.000000",
+        "dataf4": "4000.000000",
+        "dur1": "3",
+        "dur2": "3",
+        "dur3": "3",
+        "dur4": "3",
+        "editorsuffix": "TRIGSTR_15677",
+        "efctid1": "XErf",
+        "efctid2": "XErf",
+        "efctid3": "XErf",
+        "efctid4": "XErf",
+        "hero": "1",
+        "herodur1": "3",
+        "herodur2": "3",
+        "herodur3": "3",
+        "herodur4": "3",
+        "hotkey": "TRIGSTR_8626",
+        "inbeta": "1",
+        "item": "0",
+        "levels": "4",
+        "levelskip": "0",
+        "name": "TRIGSTR_25841",
+        "order": "rainoffire",
+        "priority": "0",
+        "race": "creeps",
+        "reqlevel": "1",
+        "researchart": "ReplaceableTextures\\CommandButtons\\BTNFire.blp",
+        "researchbuttonpos": "0",
+        "researchbuttonpos2": "0",
+        "researchhotkey": "TRIGSTR_8627",
+        "researchtip": "TRIGSTR_26401",
+        "researchubertip": "TRIGSTR_26372",
+        "rng1": "800",
+        "rng2": "800",
+        "rng3": "800",
+        "rng4": "800",
+        "sort": "hero",
+        "tip1": "\"Огненный ливень [|cffffcc001-й уровень|r]\"",
+        "tip2": "\"Огненный ливень [|cffffcc002-й уровень|r]\"",
+        "tip3": "\"Огненный ливень [|cffffcc003-й уровень|r]\"",
+        "tip4": "TRIGSTR_2014",
+        "ubertip1": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB1> урона мгновенно и <ANrf,DataE1> урона/сек. в течение <ANrf,Dur1> сек. |nВолн – <ANrf,DataA1>.\"",
+        "ubertip2": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB2> урона мгновенно и <ANrf,DataE2> урона/сек. в течение <ANrf,Dur2> сек. |nВолн – <ANrf,DataA2>.\"",
+        "ubertip3": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB3> урона мгновенно и <ANrf,DataE3> урона/сек. в течение <ANrf,Dur3> сек. |nВолн – <ANrf,DataA3>.\"",
+        "ubertip4": "TRIGSTR_2015",
+        "useineditor": "1",
+        "version": "0"
+      }
+    },
+    "AHab": {
+      "id": "AHab",
+      "raw_name": "TRIGSTR_23080",
+      "name": "Aura of genius",
+      "levels": 4,
+      "raw_hotkey": "TRIGSTR_10352",
+      "hotkey": "E",
+      "raw_researchhotkey": "TRIGSTR_10351",
+      "researchhotkey": "E",
+      "raw_researchtip": "TRIGSTR_25720",
+      "researchtip": "Study the \"Aura of Genius\" [|cffffcc00%d level|r]",
+      "raw_researchubertip": "TRIGSTR_25744",
+      "researchubertip": "Speeds up the mana regeneration of nearby allies. |n|n|cffffcc001st level:|r minor bonus. |n|cffffcc002nd level:|r moderate bonus. |n|cffffcc003rd level:|r significant bonus.",
+      "tips": {
+        "tip1": {
+          "raw": "\"Аура гениальности [|cffffcc001-й уровень|r]\"",
+          "val": "\"Аура гениальности [|cffffcc001-й уровень|r]\""
+        },
+        "tip2": {
+          "raw": "\"Аура гениальности [|cffffcc002-й уровень|r]\"",
+          "val": "\"Аура гениальности [|cffffcc002-й уровень|r]\""
+        },
+        "tip3": {
+          "raw": "\"Аура гениальности [|cffffcc003-й уровень|r]\"",
+          "val": "\"Аура гениальности [|cffffcc003-й уровень|r]\""
+        },
+        "tip4": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "\"Ускоряет регенерацию маны находящихся рядом союзников.\"",
+          "val": "\"Ускоряет регенерацию маны находящихся рядом союзников.\""
+        },
+        "ubertip2": {
+          "raw": "\"Ускоряет регенерацию маны находящихся рядом союзников.\"",
+          "val": "\"Ускоряет регенерацию маны находящихся рядом союзников.\""
+        },
+        "ubertip3": {
+          "raw": "\"Ускоряет регенерацию маны находящихся рядом союзников.\"",
+          "val": "\"Ускоряет регенерацию маны находящихся рядом союзников.\""
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_2016",
+          "val": "Ускоряет регенерацию маны находящихся рядом союзников."
+        }
+      },
+      "untips": {},
+      "unubertips": {},
+      "fields": {
+        "area1": "900",
+        "area2": "900",
+        "area3": "900",
+        "area4": "900",
+        "art": "ReplaceableTextures\\PassiveButtons\\PASBTNBrilliance.blp",
+        "buffid1": "BHab",
+        "buffid2": "BHab",
+        "buffid3": "BHab",
+        "buffid4": "BHab",
+        "buttonpos": "2",
+        "buttonpos2": "2",
+        "cast1": "0",
+        "checkdep": "1",
+        "code": "AHab",
+        "comments": "Arch Mage - Brilliance Aura",
+        "cool1": "0",
+        "dataa1": "0.75",
+        "dataa2": "1.25",
+        "dataa3": "2",
+        "dataa4": "3.000000",
+        "datab1": "0",
+        "datab2": "0",
+        "datab3": "0",
+        "datab4": "0",
+        "dur1": "0",
+        "hero": "1",
+        "herodur1": "0",
+        "hotkey": "TRIGSTR_10352",
+        "inbeta": "1",
+        "item": "0",
+        "levels": "4",
+        "levelskip": "0",
+        "name": "TRIGSTR_23080",
+        "priority": "0",
+        "race": "human",
+        "reqlevel": "1",
+        "researchart": "ReplaceableTextures\\CommandButtons\\BTNBrilliance.blp",
+        "researchbuttonpos": "2",
+        "researchbuttonpos2": "0",
+        "researchhotkey": "TRIGSTR_10351",
+        "researchtip": "TRIGSTR_25720",
+        "researchubertip": "TRIGSTR_25744",
+        "sort": "hero",
+        "targetart": "Abilities\\Spells\\Human\\Brilliance\\Brilliance.mdl",
+        "targetattach": "origin",
+        "targs1": "air,ground,friend,self,vuln,invu",
+        "targs2": "air,ground,friend,self,vuln,invu",
+        "targs3": "air,ground,friend,self,vuln,invu",
+        "targs4": "air,ground,friend,self,vuln,invu",
+        "tip1": "\"Аура гениальности [|cffffcc001-й уровень|r]\"",
+        "tip2": "\"Аура гениальности [|cffffcc002-й уровень|r]\"",
+        "tip3": "\"Аура гениальности [|cffffcc003-й уровень|r]\"",
+        "ubertip1": "\"Ускоряет регенерацию маны находящихся рядом союзников.\"",
+        "ubertip2": "\"Ускоряет регенерацию маны находящихся рядом союзников.\"",
+        "ubertip3": "\"Ускоряет регенерацию маны находящихся рядом союзников.\"",
+        "ubertip4": "TRIGSTR_2016",
+        "unhotkey": "TRIGSTR_10356",
+        "useineditor": "1",
+        "version": "0"
+      }
+    },
+    "ANlm": {
+      "id": "ANlm",
+      "raw_name": "TRIGSTR_14823",
+      "name": "|cffe4cfa3Призыв порождения лавы|r",
+      "levels": 4,
+      "raw_hotkey": "W",
+      "hotkey": "W",
+      "raw_researchhotkey": "W",
+      "researchhotkey": "W",
+      "raw_researchtip": "TRIGSTR_14824",
+      "researchtip": "Изучить «|cffe4cfa3Призыв порождения лавы|r» [|cffffffff%d-й уровень|r] (|cffffffffW|r)",
+      "raw_researchubertip": "TRIGSTR_14072",
+      "researchubertip": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает лавовое создание. Нанося удары, оно насыщается и разделяется на два полноценных создания с полным здоровьем.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: |cffffffff425|cffced4da ед. здоровья, |cffffffff15-21|cffced4da ед. урона, жизнь |cffffffff70|cffced4da сек.|n- |cffffffff2|cffced4da: |cffffffff550|cffced4da ед. здоровья, |cffffffff22-31|cffced4da ед. урона, жизнь |cffffffff75|cffced4da сек.|n- |cffffffff3|cffced4da: |cffffffff700|cffced4da ед. здоровья, |cffffffff29-41|cffced4da ед. урона, жизнь |cffffffff80|cffced4da сек.|n- |cffffffff4|cffced4da: |cffffffff900|cffced4da ед. здоровья, |cffffffff37-61|cffced4da ед. урона, жизнь |cffffffff85|cffced4da сек.|r",
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_14825",
+          "val": "|cffe4cfa3Призыв порождения лавы|r [|cffffffff1-й уровень|r] (|cffffffffW|r)"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_14826",
+          "val": "|cffe4cfa3Призыв порождения лавы|r [|cffffffff2-й уровень|r] (|cffffffffW|r)"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_14853",
+          "val": "|cffe4cfa3Призыв порождения лавы|r [|cffffffff3-й уровень|r] (|cffffffffW|r)"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_14792",
+          "val": "|cffe4cfa3Призыв порождения лавы|r [|cffffffff4-й уровень|r] (|cffffffffW|r)"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_16141",
+          "val": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает порождение лавы (|cffffffff425|cffced4da ед. здоровья, |cffffffff15-21|cffced4da ед. урона). При атаках оно разделяется на двух созданий. Время жизни: |cffffffff70|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_16137",
+          "val": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает порождение лавы (|cffffffff550|cffced4da ед. здоровья, |cffffffff22-31|cffced4da ед. урона). При атаках оно разделяется на двух созданий. Время жизни: |cffffffff75|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_16138",
+          "val": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает порождение лавы (|cffffffff700|cffced4da ед. здоровья, |cffffffff29-41|cffced4da ед. урона). При атаках оно разделяется на двух созданий. Время жизни: |cffffffff80|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_16139",
+          "val": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает порождение лавы (|cffffffff900|cffced4da ед. здоровья, |cffffffff37-61|cffced4da ед. урона). При атаках оно разделяется на двух созданий. Время жизни: |cffffffff85|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+      },
+      "untips": {},
+      "unubertips": {},
+      "fields": {
+        "area1": "200",
+        "area2": "200",
+        "area3": "200",
+        "area4": "200",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNLavaSpawn.blp",
+        "buffid1": "BNlm",
+        "buffid2": "BNlm",
+        "buffid3": "BNlm",
+        "buffid4": "BNlm",
+        "buttonpos": "1",
+        "buttonpos2": "2",
+        "cast1": "0",
+        "cast2": "0",
+        "cast3": "0",
+        "cast4": "0",
+        "checkdep": "1",
+        "code": "ANlm",
+        "comments": "Firelord - Summon Lava Spawn",
+        "cool1": "32",
+        "cool2": "32",
+        "cool3": "32",
+        "cool4": "35",
+        "cost1": "150",
+        "cost2": "150",
+        "cost3": "150",
+        "cost4": "150",
+        "dataa1": "1",
+        "dataa2": "1",
+        "dataa3": "1",
+        "dataa4": "1",
+        "datab1": "5",
+        "datab2": "5",
+        "datab3": "5",
+        "datab4": "5",
+        "datac1": "13",
+        "datac2": "13",
+        "datac3": "13",
+        "datac4": "9",
+        "datad1": "0.5",
+        "datad2": "0.75",
+        "datad3": "0.75",
+        "datad4": "0.5",
+        "datae1": "12",
+        "datae2": "12",
+        "datae3": "12",
+        "datae4": "12",
+        "dataf1": "3",
+        "dataf2": "3",
+        "dataf3": "3",
+        "dataf4": "3",
+        "dur1": "70",
+        "dur2": "75.000000",
+        "dur3": "80.000000",
+        "dur4": "85.000000",
+        "hero": "1",
+        "herodur1": "70",
+        "herodur2": "70",
+        "herodur3": "70",
+        "herodur4": "70.000000",
+        "hotkey": "W",
+        "inbeta": "1",
+        "item": "0",
+        "levels": "4",
+        "levelskip": "0",
+        "name": "TRIGSTR_14823",
+        "order": "slimemonster",
+        "priority": "0",
+        "race": "naga",
+        "reqlevel": "1",
+        "researchart": "ReplaceableTextures\\CommandButtons\\BTNLavaSpawn.blp",
+        "researchbuttonpos": "1",
+        "researchbuttonpos2": "0",
+        "researchhotkey": "W",
+        "researchtip": "TRIGSTR_14824",
+        "researchubertip": "TRIGSTR_14072",
+        "sort": "hero",
+        "targs1": "enemy,neutral,air,ground,ward",
+        "targs2": "enemy,neutral,air,ground,ward",
+        "targs3": "enemy,neutral,air,ground,ward",
+        "targs4": "enemy,neutral,air,ground,ward",
+        "tip1": "TRIGSTR_14825",
+        "tip2": "TRIGSTR_14826",
+        "tip3": "TRIGSTR_14853",
+        "tip4": "TRIGSTR_14792",
+        "ubertip1": "TRIGSTR_16141",
+        "ubertip2": "TRIGSTR_16137",
+        "ubertip3": "TRIGSTR_16138",
+        "ubertip4": "TRIGSTR_16139",
+        "unitid1": "nlv1",
+        "unitid2": "nlv2",
+        "unitid3": "nlv3",
+        "unitid4": "n00J",
+        "unitskinid": "nlv1,nlv2,nlv3,nlv3",
+        "useineditor": "1",
+        "version": "1"
+      }
+    },
+    "A0WV": {
+      "id": "A0WV",
+      "raw_name": "TRIGSTR_38282",
+      "name": "|cffe6beaaМарш-бросок|r",
+      "levels": 4,
+      "raw_hotkey": "TRIGSTR_19858",
+      "hotkey": "W",
+      "raw_researchhotkey": "TRIGSTR_19859",
+      "researchhotkey": "W",
+      "raw_researchtip": "TRIGSTR_38283",
+      "researchtip": "|cffe6beaaМарш-бросок|r",
+      "raw_researchubertip": "TRIGSTR_20451",
+      "researchubertip": "Ускоряет на время юнитов вокруг героя.",
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_38284",
+          "val": "|cffe6beaaМарш-бросок|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_38285",
+          "val": "|cffd45e29Марш-бросок|r"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_38286",
+          "val": "|cffd45e39Марш-бросок|r"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_38287",
+          "val": "|cffd45e49Марш-бросок|r"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_20455",
+          "val": "Ускоряет на время юнитов вокруг героя."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_20456",
+          "val": "Ускоряет на время юнитов вокруг героя."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_20457",
+          "val": "Ускоряет на время юнитов вокруг героя."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_20458",
+          "val": "Ускоряет на время юнитов вокруг героя."
+        }
+      },
+      "untips": {},
+      "unubertips": {},
+      "fields": {
+        "area1": "800.000000",
+        "area2": "800.000000",
+        "area3": "800.000000",
+        "area4": "800.000000",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNScrollOfHaste.blp",
+        "buffid1": "B05X",
+        "buffid2": "B05X",
+        "buffid3": "B05X",
+        "buffid4": "B05X",
+        "buttonpos": "1",
+        "buttonpos2": "2",
+        "cast1": "0",
+        "checkdep": "0",
+        "code": "AIsa",
+        "comments": "RuneSpeedAoe",
+        "cool1": "60",
+        "cool2": "60.000000",
+        "cool3": "60.000000",
+        "cool4": "60.000000",
+        "cost1": "60",
+        "cost2": "75",
+        "cost3": "90",
+        "cost4": "105",
+        "dataa1": "0.250000",
+        "dataa2": "0.350000",
+        "dataa3": "0.450000",
+        "dataa4": "0.550000",
+        "dur1": "20.000000",
+        "dur2": "22.000000",
+        "dur3": "24.000000",
+        "dur4": "26.000000",
+        "editorsuffix": "TRIGSTR_20449",
+        "effectsound": "PowerupSound",
+        "hero": "1",
+        "herodur1": "20.000000",
+        "herodur2": "22.000000",
+        "herodur3": "24.000000",
+        "herodur4": "26.000000",
+        "hotkey": "TRIGSTR_19858",
+        "inbeta": "1",
+        "item": "0",
+        "levels": "4",
+        "levelskip": "0",
+        "name": "TRIGSTR_38282",
+        "priority": "0",
+        "race": "human",
+        "reqlevel": "0",
+        "researchart": "ReplaceableTextures\\CommandButtons\\BTNScrollOfHaste.blp",
+        "researchbuttonpos": "1",
+        "researchhotkey": "TRIGSTR_19859",
+        "researchtip": "TRIGSTR_38283",
+        "researchubertip": "TRIGSTR_20451",
+        "sort": "item",
+        "targs1": "air,ground,friend,self,vuln,invu",
+        "targs2": "air,ground,friend,self,vuln,invu",
+        "targs3": "air,ground,friend,self,vuln,invu",
+        "targs4": "air,ground,friend,self,vuln,invu",
+        "tip1": "TRIGSTR_38284",
+        "tip2": "TRIGSTR_38285",
+        "tip3": "TRIGSTR_38286",
+        "tip4": "TRIGSTR_38287",
+        "ubertip1": "TRIGSTR_20455",
+        "ubertip2": "TRIGSTR_20456",
+        "ubertip3": "TRIGSTR_20457",
+        "ubertip4": "TRIGSTR_20458",
+        "unhotkey": "TRIGSTR_19860",
+        "useineditor": "1",
+        "version": "0"
+      }
+    },
+    "A026": {
+      "id": "A026",
+      "raw_name": "TRIGSTR_25056",
+      "name": "|cffe6beaaВолна силы|r",
+      "levels": 4,
+      "raw_hotkey": "TRIGSTR_10537",
+      "hotkey": "Q",
+      "raw_researchhotkey": "TRIGSTR_10536",
+      "researchhotkey": "Q",
+      "raw_researchtip": "TRIGSTR_25057",
+      "researchtip": "Изучить «|cffe6beaaВолна силы|r» [|cffffcc00%d-й уровень|r]",
+      "raw_researchubertip": "TRIGSTR_2063",
+      "researchubertip": "Выпускает волну силы, наносящая урон в выбранном секторе.",
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_25058",
+          "val": "|cffe6beaaВолна силы|r [|cffffcc001-й уровень|r]"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_37690",
+          "val": "|cffd45e29Волна силы|r [|cffffcc002-й уровень|r]"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_37709",
+          "val": "|cffd45e39Волна силы|r [|cffffcc003-й уровень|r]"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_37753",
+          "val": "|cffd45e49Волна силы|r [|cffffcc004-й уровень|r]"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_31099",
+          "val": "Выпускает в секторе перед собой волну силы, наносящую по <A026,DataA1> урона врагам на своем пути."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_31100",
+          "val": "Выпускает в секторе перед собой волну силы, наносящую по <A026,DataA2> урона врагам на своем пути."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_31101",
+          "val": "Выпускает в секторе перед собой волну силы, наносящую по <A026,DataA3> урона врагам на своем пути."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_31102",
+          "val": "Выпускает в секторе перед собой волну силы, наносящую по <A026,DataA4> урона врагам на своем пути."
+        }
+      },
+      "untips": {},
+      "unubertips": {},
+      "fields": {
+        "animnames": "attack,slam",
+        "area1": "125.000000",
+        "area2": "125.000000",
+        "area3": "125.000000",
+        "area4": "125.000000",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNShockWave.blp",
+        "buffid1": "BOsh",
+        "buffid2": "BOsh",
+        "buffid3": "BOsh",
+        "buffid4": "BOsh",
+        "buttonpos": "0",
+        "buttonpos2": "2",
+        "cast1": "0",
+        "checkdep": "1",
+        "code": "AUcs",
+        "comments": "Dreadlord - Carrion Swarm",
+        "cool1": "10",
+        "cool2": "10",
+        "cool3": "10",
+        "cool4": "10",
+        "cost1": "100",
+        "cost2": "135",
+        "cost3": "160",
+        "cost4": "185",
+        "dataa1": "95.000000",
+        "dataa2": "145.000000",
+        "dataa3": "195.000000",
+        "dataa4": "245.000000",
+        "datab1": "5000.000000",
+        "datab2": "6000.000000",
+        "datab3": "7000.000000",
+        "datab4": "8000.000000",
+        "datac1": "800",
+        "datac2": "1050.000000",
+        "datac3": "1300.000000",
+        "datac4": "1550.000000",
+        "datad1": "300",
+        "datad2": "300",
+        "datad3": "300",
+        "datad4": "300",
+        "dur1": "0",
+        "dur2": "0",
+        "dur3": "0",
+        "dur4": "0",
+        "editorsuffix": "TRIGSTR_27464",
+        "hero": "1",
+        "herodur1": "0",
+        "hotkey": "TRIGSTR_10537",
+        "inbeta": "1",
+        "item": "0",
+        "levels": "4",
+        "levelskip": "0",
+        "missileart": "Abilities\\Spells\\Orc\\Shockwave\\ShockwaveMissile.mdl",
+        "missilespeed": "1100",
+        "name": "TRIGSTR_25056",
+        "order": "carrionswarm",
+        "priority": "0",
+        "race": "human",
+        "reqlevel": "1",
+        "researchart": "ReplaceableTextures\\CommandButtons\\BTNShockWave.blp",
+        "researchbuttonpos": "0",
+        "researchbuttonpos2": "0",
+        "researchhotkey": "TRIGSTR_10536",
+        "researchtip": "TRIGSTR_25057",
+        "researchubertip": "TRIGSTR_2063",
+        "rng1": "700",
+        "rng2": "775.000000",
+        "rng3": "850.000000",
+        "rng4": "925.000000",
+        "sort": "hero",
+        "targs1": "ground,air",
+        "targs2": "ground,air",
+        "targs3": "ground,air",
+        "targs4": "ground,air",
+        "tip1": "TRIGSTR_25058",
+        "tip2": "TRIGSTR_37690",
+        "tip3": "TRIGSTR_37709",
+        "tip4": "TRIGSTR_37753",
+        "ubertip1": "TRIGSTR_31099",
+        "ubertip2": "TRIGSTR_31100",
+        "ubertip3": "TRIGSTR_31101",
+        "ubertip4": "TRIGSTR_31102",
+        "useineditor": "1",
+        "version": "0"
+      }
+    },
+    "A028": {
+      "id": "A028",
+      "raw_name": "TRIGSTR_38236",
+      "name": "|cffe6beaaЗачарованная броня|r",
+      "levels": 4,
+      "raw_hotkey": "TRIGSTR_12626",
+      "hotkey": "E",
+      "raw_researchhotkey": "TRIGSTR_12705",
+      "researchhotkey": "E",
+      "raw_researchtip": "TRIGSTR_38241",
+      "researchtip": "|cffe6beaaЗачарованная броня|r",
+      "raw_researchubertip": "TRIGSTR_38242",
+      "researchubertip": "С некоторым шансом вычитает определенное число от получаемого юнитом урона от атак. Минимальный урон от атак - 40",
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_38237",
+          "val": "|cffe6beaaЗачарованная броня|r [|cffffcc001-й уровень|r]"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_38238",
+          "val": "|cffd45e29Зачарованная броня|r [|cffffcc002-й уровень|r]"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_38239",
+          "val": "|cffd45e39Зачарованная броня|r [|cffffcc003-й уровень|r]"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_38240",
+          "val": "|cffd45e49Зачарованная броня|r [|cffffcc004-й уровень|r]"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_2089",
+          "val": "Дает шанс поглотить часть урона, наносенного герою."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_2093",
+          "val": "Дает шанс поглотить часть урона, наносенного герою."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_2094",
+          "val": "Дает шанс поглотить часть урона, наносенного герою."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_2095",
+          "val": "Дает шанс поглотить часть урона, наносенного герою."
+        }
+      },
+      "untips": {},
+      "unubertips": {},
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNLeatherUpgradeThree.blp",
+        "buttonpos": "2",
+        "buttonpos2": "2",
+        "cast1": "0",
+        "checkdep": "1",
+        "code": "Assk",
+        "comments": "Hardened Skin",
+        "cool1": "0",
+        "cost1": "0",
+        "dataa1": "35.000000",
+        "dataa2": "40.000000",
+        "dataa3": "45.000000",
+        "dataa4": "50.000000",
+        "datab1": "2.000000",
+        "datab2": "2.000000",
+        "datab3": "2.000000",
+        "datab4": "2.000000",
+        "datac1": "10.000000",
+        "datac2": "15.000000",
+        "datac3": "20.000000",
+        "datac4": "25.000000",
+        "datad1": "1",
+        "datad2": "1",
+        "datad3": "1",
+        "datad4": "1",
+        "datae1": "1",
+        "datae2": "1",
+        "datae3": "1",
+        "datae4": "1",
+        "dur1": "0",
+        "editorsuffix": "TRIGSTR_1045",
+        "hero": "1",
+        "herodur1": "0",
+        "hotkey": "TRIGSTR_12626",
+        "inbeta": "1",
+        "item": "0",
+        "levels": "4",
+        "levelskip": "0",
+        "name": "TRIGSTR_38236",
+        "priority": "0",
+        "race": "human",
+        "reqlevel": "0",
+        "researchart": "ReplaceableTextures\\CommandButtons\\BTNLeatherUpgradeThree.blp",
+        "researchbuttonpos": "2",
+        "researchhotkey": "TRIGSTR_12705",
+        "researchtip": "TRIGSTR_38241",
+        "researchubertip": "TRIGSTR_38242",
+        "sort": "unit",
+        "targs1": "enemy,ally",
+        "targs2": "enemy,ally",
+        "targs3": "enemy,ally",
+        "targs4": "enemy,ally",
+        "tip1": "TRIGSTR_38237",
+        "tip2": "TRIGSTR_38238",
+        "tip3": "TRIGSTR_38239",
+        "tip4": "TRIGSTR_38240",
+        "ubertip1": "TRIGSTR_2089",
+        "ubertip2": "TRIGSTR_2093",
+        "ubertip3": "TRIGSTR_2094",
+        "ubertip4": "TRIGSTR_2095",
+        "unart": "ReplaceableTextures\\CommandButtons\\BTNLeatherUpgradeThree.blp",
+        "unhotkey": "TRIGSTR_12704",
+        "useineditor": "1",
+        "version": "1"
+      }
+    },
+    "A029": {
+      "id": "A029",
+      "raw_name": "TRIGSTR_38245",
+      "name": "|cffe6beaaРезня слабаков|r",
+      "levels": 2,
+      "raw_hotkey": "TRIGSTR_7471",
+      "hotkey": "R",
+      "raw_researchhotkey": "TRIGSTR_7472",
+      "researchhotkey": "R",
+      "raw_researchtip": "TRIGSTR_38246",
+      "researchtip": "|cffe6beaaРезня слабаков|r",
+      "raw_researchubertip": "TRIGSTR_2100",
+      "researchubertip": "Увечиличивает урон по юнитам, кроме зданий и героев.",
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_38243",
+          "val": "|cffe6beaaРезня слабаков|r [|cffffcc001-й уровень|r]"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_38244",
+          "val": "|cffd45e29Резня слабаков|r [|cffffcc002-й уровень|r]"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_31872",
+          "val": "Увечиличивает в 3 раза урон по юнитам, кроме зданий и героев."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_32687",
+          "val": "Увечиличивает в 4раза урон по юнитам, кроме зданий и героев."
+        }
+      },
+      "untips": {},
+      "unubertips": {},
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNOrcMeleeUpThree.blp",
+        "buttonpos": "3",
+        "buttonpos2": "2",
+        "cast1": "0",
+        "checkdep": "1",
+        "code": "ANde",
+        "comments": "Tinkerer - Demolish (Level 0)",
+        "cool1": "0",
+        "cost1": "0",
+        "dataa1": "100",
+        "dataa2": "100.000000",
+        "datab1": "1.000000",
+        "datab2": "1.000000",
+        "datac1": "3.000000",
+        "datac2": "4.000000",
+        "datad1": "1.000000",
+        "datad2": "1.000000",
+        "dur1": "0",
+        "editorsuffix": "TRIGSTR_2018",
+        "hero": "1",
+        "herodur1": "0",
+        "hotkey": "TRIGSTR_7471",
+        "inbeta": "1",
+        "item": "0",
+        "levels": "2",
+        "levelskip": "3",
+        "name": "TRIGSTR_38245",
+        "order": "demolish",
+        "priority": "0",
+        "race": "human",
+        "reqlevel": "6",
+        "researchart": "ReplaceableTextures\\CommandButtons\\BTNOrcMeleeUpThree.blp",
+        "researchbuttonpos": "3",
+        "researchhotkey": "TRIGSTR_7472",
+        "researchtip": "TRIGSTR_38246",
+        "researchubertip": "TRIGSTR_2100",
+        "sort": "hero",
+        "targs1": "enemies,ground,vulnerable",
+        "targs2": "enemies,ground,vulnerable",
+        "tip1": "TRIGSTR_38243",
+        "tip2": "TRIGSTR_38244",
+        "ubertip1": "TRIGSTR_31872",
+        "ubertip2": "TRIGSTR_32687",
+        "unart": "ReplaceableTextures\\CommandButtons\\BTNOrcMeleeUpThree.blp",
+        "useineditor": "1",
+        "version": "1"
+      }
+    },
+    "Aamk": {
+      "id": "Aamk",
+      "raw_name": "Повышение характеристик",
+      "name": "Повышение характеристик",
+      "levels": 4,
+      "raw_hotkey": null,
+      "hotkey": null,
+      "raw_researchhotkey": "TRIGSTR_13076",
+      "researchhotkey": "F",
+      "raw_researchtip": "Изучить повышение характеристик [|cffffcc00%d-й уровень|r]",
+      "researchtip": "Изучить повышение характеристик [|cffffcc00%d-й уровень|r]",
+      "raw_researchubertip": "\"Повышает ловкость, интеллект и силу. |n|n|cffffcc001-й уровень:|r +3 к каждой характеристике.|n|cffffcc002-й уровень:|r еще +3 к каждой характеристике.|n|cffffcc003-й уровень:|r еще +3 к каждой характеристике.|n|cffffcc004-й уровень:|r еще +3 к каждой характеристике.\"",
+      "researchubertip": "\"Повышает ловкость, интеллект и силу. |n|n|cffffcc001-й уровень:|r +3 к каждой характеристике.|n|cffffcc002-й уровень:|r еще +3 к каждой характеристике.|n|cffffcc003-й уровень:|r еще +3 к каждой характеристике.|n|cffffcc004-й уровень:|r еще +3 к каждой характеристике.\"",
+      "tips": {
+        "tip1": {
+          "raw": "\"Повышение характеристик [|cffffcc001-й уровень|r]\"",
+          "val": "\"Повышение характеристик [|cffffcc001-й уровень|r]\""
+        },
+        "tip2": {
+          "raw": "\"Повышение характеристик [|cffffcc002-й уровень|r]\"",
+          "val": "\"Повышение характеристик [|cffffcc002-й уровень|r]\""
+        },
+        "tip3": {
+          "raw": "\"Повышение характеристик [|cffffcc003-й уровень|r]\"",
+          "val": "\"Повышение характеристик [|cffffcc003-й уровень|r]\""
+        },
+        "tip4": {
+          "raw": "\"Повышение характеристик [|cffffcc004-й уровень|r]\"",
+          "val": "\"Повышение характеристик [|cffffcc004-й уровень|r]\""
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "\"+<Aamk,DataA1> к силе, ловкости и интеллекту.\"",
+          "val": "\"+<Aamk,DataA1> к силе, ловкости и интеллекту.\""
+        },
+        "ubertip2": {
+          "raw": "\"+<Aamk,DataA2> к силе, ловкости и интеллекту.\"",
+          "val": "\"+<Aamk,DataA2> к силе, ловкости и интеллекту.\""
+        },
+        "ubertip3": {
+          "raw": "\"+<Aamk,DataA3> к силе, ловкости и интеллекту.\"",
+          "val": "\"+<Aamk,DataA3> к силе, ловкости и интеллекту.\""
+        },
+        "ubertip4": {
+          "raw": "\"+<Aamk,DataA4> к силе, ловкости и интеллекту.\"",
+          "val": "\"+<Aamk,DataA4> к силе, ловкости и интеллекту.\""
+        }
+      },
+      "untips": {},
+      "unubertips": {},
+      "fields": {
+        "art": "ReplaceableTextures\\PassiveButtons\\PASBTNStatUp.blp",
+        "buttonpos": "1",
+        "buttonpos2": "1",
+        "cast1": "0",
+        "cast2": "0",
+        "cast3": "0",
+        "cast4": "0",
+        "checkdep": "1",
+        "code": "Aamk",
+        "comments": "Attribute Modifier Skill",
+        "cool1": "0",
+        "cool2": "0",
+        "cool3": "0",
+        "cool4": "0",
+        "cost1": "0",
+        "cost2": "0",
+        "cost3": "0",
+        "cost4": "0",
+        "dataa1": "3",
+        "dataa2": "6",
+        "dataa3": "9",
+        "dataa4": "12",
+        "datab1": "3",
+        "datab2": "6",
+        "datab3": "9",
+        "datab4": "12",
+        "datac1": "3",
+        "datac2": "6",
+        "datac3": "9",
+        "datac4": "12",
+        "datad1": "0",
+        "datad2": "0",
+        "datad3": "0",
+        "datad4": "0",
+        "dur1": "0",
+        "dur2": "0",
+        "dur3": "0",
+        "dur4": "0",
+        "hero": "1",
+        "herodur1": "0",
+        "herodur2": "0",
+        "herodur3": "0",
+        "herodur4": "0",
+        "inbeta": "0",
+        "item": "0",
+        "levels": "4",
+        "levelskip": "0",
+        "name": "Повышение характеристик",
+        "order": "attributemodskill",
+        "priority": "0",
+        "race": "creeps",
+        "reqlevel": "1",
+        "researchart": "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp",
+        "researchbuttonpos": "3",
+        "researchbuttonpos2": "1",
+        "researchhotkey": "TRIGSTR_13076",
+        "researchtip": "Изучить повышение характеристик [|cffffcc00%d-й уровень|r]",
+        "researchubertip": "\"Повышает ловкость, интеллект и силу. |n|n|cffffcc001-й уровень:|r +3 к каждой характеристике.|n|cffffcc002-й уровень:|r еще +3 к каждой характеристике.|n|cffffcc003-й уровень:|r еще +3 к каждой характеристике.|n|cffffcc004-й уровень:|r еще +3 к каждой характеристике.\"",
+        "sort": "hero",
+        "tip1": "\"Повышение характеристик [|cffffcc001-й уровень|r]\"",
+        "tip2": "\"Повышение характеристик [|cffffcc002-й уровень|r]\"",
+        "tip3": "\"Повышение характеристик [|cffffcc003-й уровень|r]\"",
+        "tip4": "\"Повышение характеристик [|cffffcc004-й уровень|r]\"",
+        "ubertip1": "\"+<Aamk,DataA1> к силе, ловкости и интеллекту.\"",
+        "ubertip2": "\"+<Aamk,DataA2> к силе, ловкости и интеллекту.\"",
+        "ubertip3": "\"+<Aamk,DataA3> к силе, ловкости и интеллекту.\"",
+        "ubertip4": "\"+<Aamk,DataA4> к силе, ловкости и интеллекту.\"",
+        "useineditor": "1",
+        "version": "1"
+      }
+    }
+  },
+  "upgrades": {
+    "R00J": {
+      "id": "R00J",
+      "levels": 1,
+      "raw_class": "melee",
+      "names": {
+        "name1": {
+          "raw": "TRIGSTR_40328",
+          "val": "|cffe6beaaСтрелы|r |cffffff00(уровень 1)|r"
+        }
+      },
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_40349",
+          "val": "Нарыть |cffe6beaaСтрелы|r |cffffff00(уровень 1)|r"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_1017",
+          "val": "Увеличивает урон дальнобойных немагических юнитов."
+        }
+      },
+      "hotkeys": {
+        "hotkey1": {
+          "raw": "TRIGSTR_32453",
+          "val": "W"
+        }
+      },
+      "fields": {
+        "art1": "ReplaceableTextures\\CommandButtons\\BTNStrengthOfTheMoon.blp",
+        "art2": "ReplaceableTextures\\CommandButtons\\BTNStrengthOfTheMoon.blp",
+        "art3": "ReplaceableTextures\\CommandButtons\\BTNStrengthOfTheMoon.blp",
+        "art4": "ReplaceableTextures\\CommandButtons\\BTNStrengthOfTheMoon.blp",
+        "art5": "ReplaceableTextures\\CommandButtons\\BTNStrengthOfTheMoon.blp",
+        "art6": "ReplaceableTextures\\CommandButtons\\BTNStrengthOfTheMoon.blp",
+        "base1": "1",
+        "buttonpos": "1",
+        "buttonpos2": "0",
+        "class": "melee",
+        "comments": "nightelf strength of moon",
+        "editorsuffix1": "TRIGSTR_1096",
+        "effect1": "ratd",
+        "global": "0",
+        "goldbase": "500",
+        "goldmod": "1000",
+        "hotkey1": "TRIGSTR_32453",
+        "hotkey2": "TRIGSTR_32481",
+        "hotkey3": "TRIGSTR_32606",
+        "hotkey4": "TRIGSTR_32607",
+        "hotkey5": "TRIGSTR_32779",
+        "hotkey6": "TRIGSTR_32780",
+        "inbeta": "1",
+        "inherit": "0",
+        "lumberbase": "500",
+        "lumbermod": "1000",
+        "maxlevel": "6",
+        "mod1": "1",
+        "name1": "TRIGSTR_40328",
+        "name2": "TRIGSTR_40329",
+        "name3": "TRIGSTR_40348",
+        "name4": "TRIGSTR_40689",
+        "name5": "TRIGSTR_40690",
+        "name6": "TRIGSTR_40691",
+        "race": "human",
+        "requires1": "etoa",
+        "requires3": "h008",
+        "requires4": "h008",
+        "requires5": "h009",
+        "requires6": "h009",
+        "timebase": "70",
+        "timemod": "30",
+        "tip1": "TRIGSTR_40349",
+        "tip2": "TRIGSTR_40693",
+        "tip3": "TRIGSTR_40702",
+        "tip4": "TRIGSTR_40718",
+        "tip5": "TRIGSTR_40719",
+        "tip6": "TRIGSTR_40720",
+        "ubertip1": "TRIGSTR_1017",
+        "ubertip2": "TRIGSTR_1018",
+        "ubertip3": "TRIGSTR_1019",
+        "ubertip4": "TRIGSTR_1020",
+        "ubertip5": "TRIGSTR_1021",
+        "ubertip6": "TRIGSTR_1022",
+        "used": "1",
+        "version": "0"
+      }
+    },
+    "R00L": {
+      "id": "R00L",
+      "levels": 1,
+      "raw_class": "melee",
+      "names": {
+        "name1": {
+          "raw": "TRIGSTR_40721",
+          "val": "|cffe6beaaМечи|r |cffffff00(уровень 1)|r"
+        }
+      },
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_40727",
+          "val": "Нарыть |cffe6beaaМечи|r |cffffff00(уровень 1)|r"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_1024",
+          "val": "Увеличивают урон юнитов ближнего боя."
+        }
+      },
+      "hotkeys": {
+        "hotkey1": {
+          "raw": "TRIGSTR_33007",
+          "val": "Q"
+        }
+      },
+      "fields": {
+        "art1": "ReplaceableTextures\\CommandButtons\\BTNSteelMelee.blp",
+        "art2": "ReplaceableTextures\\CommandButtons\\BTNSteelMelee.blp",
+        "art3": "ReplaceableTextures\\CommandButtons\\BTNSteelMelee.blp",
+        "art4": "ReplaceableTextures\\CommandButtons\\BTNSteelMelee.blp",
+        "art5": "ReplaceableTextures\\CommandButtons\\BTNSteelMelee.blp",
+        "art6": "ReplaceableTextures\\CommandButtons\\BTNSteelMelee.blp",
+        "base1": "1",
+        "buttonpos": "0",
+        "buttonpos2": "0",
+        "class": "melee",
+        "comments": "human melee attack",
+        "editorsuffix1": "TRIGSTR_1307",
+        "effect1": "ratd",
+        "global": "0",
+        "goldbase": "500",
+        "goldmod": "1000",
+        "hotkey1": "TRIGSTR_33007",
+        "hotkey2": "TRIGSTR_33008",
+        "hotkey3": "TRIGSTR_33014",
+        "hotkey4": "TRIGSTR_33043",
+        "hotkey5": "TRIGSTR_33044",
+        "hotkey6": "TRIGSTR_33102",
+        "inbeta": "1",
+        "inherit": "0",
+        "lumberbase": "500",
+        "lumbermod": "1000",
+        "maxlevel": "6",
+        "mod1": "1",
+        "name1": "TRIGSTR_40721",
+        "name2": "TRIGSTR_40722",
+        "name3": "TRIGSTR_40723",
+        "name4": "TRIGSTR_40724",
+        "name5": "TRIGSTR_40725",
+        "name6": "TRIGSTR_40726",
+        "race": "human",
+        "requires1": "hkee",
+        "requires3": "h008",
+        "requires4": "h008",
+        "requires5": "h009",
+        "requires6": "h009",
+        "timebase": "70",
+        "timemod": "30",
+        "tip1": "TRIGSTR_40727",
+        "tip2": "TRIGSTR_40728",
+        "tip3": "TRIGSTR_40729",
+        "tip4": "TRIGSTR_40730",
+        "tip5": "TRIGSTR_40731",
+        "tip6": "TRIGSTR_40732",
+        "ubertip1": "TRIGSTR_1024",
+        "ubertip2": "TRIGSTR_1037",
+        "ubertip3": "TRIGSTR_1038",
+        "ubertip4": "TRIGSTR_1039",
+        "ubertip5": "TRIGSTR_1040",
+        "ubertip6": "TRIGSTR_1041",
+        "ubertip:custom,v01": "\"Увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+        "ubertip:custom,v02": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+        "ubertip:custom,v03": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+        "ubertip:melee,v01": "\"Увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+        "ubertip:melee,v02": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+        "ubertip:melee,v03": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+        "used": "1",
+        "version": "0"
+      }
+    },
+    "R00M": {
+      "id": "R00M",
+      "levels": 1,
+      "raw_class": "armor",
+      "names": {
+        "name1": {
+          "raw": "TRIGSTR_40738",
+          "val": "|cffe6beaaТяжелая броня|r |cffffff00(уровень 1)|r"
+        }
+      },
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_40739",
+          "val": "Нарыть |cffe6beaaТяжелую броню|r |cffffff00(уровень 1)|r"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_1066",
+          "val": "Усиливает броню юнитов ближнего боя."
+        }
+      },
+      "hotkeys": {
+        "hotkey1": {
+          "raw": "TRIGSTR_5759",
+          "val": "A"
+        }
+      },
+      "fields": {
+        "art1": "ReplaceableTextures\\CommandButtons\\BTNHumanArmorUpOne.blp",
+        "art2": "ReplaceableTextures\\CommandButtons\\BTNHumanArmorUpOne.blp",
+        "art3": "ReplaceableTextures\\CommandButtons\\BTNHumanArmorUpOne.blp",
+        "art4": "ReplaceableTextures\\CommandButtons\\BTNHumanArmorUpOne.blp",
+        "art5": "ReplaceableTextures\\CommandButtons\\BTNHumanArmorUpOne.blp",
+        "art6": "ReplaceableTextures\\CommandButtons\\BTNHumanArmorUpOne.blp",
+        "buttonpos": "0",
+        "buttonpos2": "1",
+        "class": "armor",
+        "comments": "human armor",
+        "editorsuffix1": "TRIGSTR_1308",
+        "editorsuffix2": "TRIGSTR_1309",
+        "editorsuffix3": "TRIGSTR_1310",
+        "editorsuffix4": "TRIGSTR_1324",
+        "editorsuffix5": "TRIGSTR_1325",
+        "editorsuffix6": "TRIGSTR_1326",
+        "effect1": "rarm",
+        "global": "0",
+        "goldbase": "500",
+        "goldmod": "500",
+        "hotkey1": "TRIGSTR_5759",
+        "hotkey2": "TRIGSTR_5760",
+        "hotkey3": "TRIGSTR_5761",
+        "hotkey4": "TRIGSTR_5783",
+        "hotkey5": "TRIGSTR_5784",
+        "hotkey6": "TRIGSTR_5785",
+        "inbeta": "1",
+        "inherit": "0",
+        "lumberbase": "500",
+        "lumbermod": "500",
+        "maxlevel": "6",
+        "name1": "TRIGSTR_40738",
+        "name2": "TRIGSTR_40733",
+        "name3": "TRIGSTR_40734",
+        "name4": "TRIGSTR_40735",
+        "name5": "TRIGSTR_40736",
+        "name6": "TRIGSTR_40737",
+        "race": "human",
+        "requires1": "hkee",
+        "requires3": "h008",
+        "requires4": "h008",
+        "requires5": "h009",
+        "requires6": "h009",
+        "timebase": "30",
+        "timemod": "15",
+        "tip1": "TRIGSTR_40739",
+        "tip2": "TRIGSTR_40740",
+        "tip3": "TRIGSTR_40741",
+        "tip4": "TRIGSTR_40742",
+        "tip5": "TRIGSTR_40743",
+        "tip6": "TRIGSTR_40744",
+        "ubertip1": "TRIGSTR_1066",
+        "ubertip2": "TRIGSTR_1067",
+        "ubertip3": "TRIGSTR_1068",
+        "ubertip4": "TRIGSTR_1069",
+        "ubertip5": "TRIGSTR_1070",
+        "ubertip6": "TRIGSTR_1071",
+        "ubertip:custom,v01": "\"Усиливает броню ополченцев, пехотинцев, рыцарей, ветролетов и осадных машин.\"",
+        "ubertip:custom,v02": "\"Дополнительно усиливает броню ополченцев, пехотинцев, рыцарей, ветролетов и осадных машин.\"",
+        "ubertip:custom,v03": "\"Дополнительно усиливает броню ополченцев, пехотинцев, рыцарей, ветролетов и осадных машин.\"",
+        "ubertip:melee,v01": "\"Усиливает броню ополченцев, пехотинцев, рыцарей, ветролетов и осадных машин.\"",
+        "ubertip:melee,v02": "\"Дополнительно усиливает броню ополченцев, пехотинцев, рыцарей, ветролетов и осадных машин.\"",
+        "ubertip:melee,v03": "\"Дополнительно усиливает броню ополченцев, пехотинцев, рыцарей, ветролетов и осадных машин.\"",
+        "used": "1",
+        "version": "0"
+      }
+    },
+    "R00V": {
+      "id": "R00V",
+      "levels": 1,
+      "raw_class": "armor",
+      "names": {
+        "name1": {
+          "raw": "TRIGSTR_40779",
+          "val": "|cffe6beaaУлучшенная кладка|r"
+        }
+      },
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_40780",
+          "val": "Исследовать |cffe6beaaУлучшенную кладку|r"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_1332",
+          "val": "Усиливает броню и увеличивает запас прочности зданий."
+        }
+      },
+      "hotkeys": {
+        "hotkey1": {
+          "raw": "TRIGSTR_32903",
+          "val": "W"
+        }
+      },
+      "fields": {
+        "art1": "ReplaceableTextures\\CommandButtons\\BTNStoneArchitecture.blp",
+        "art2": "ReplaceableTextures\\CommandButtons\\BTNStoneArchitecture.blp",
+        "art3": "ReplaceableTextures\\CommandButtons\\BTNStoneArchitecture.blp",
+        "art4": "ReplaceableTextures\\CommandButtons\\BTNStoneArchitecture.blp",
+        "art5": "ReplaceableTextures\\CommandButtons\\BTNStoneArchitecture.blp",
+        "art6": "ReplaceableTextures\\CommandButtons\\BTNStoneArchitecture.blp",
+        "base2": "0.1",
+        "buttonpos": "1",
+        "buttonpos2": "0",
+        "class": "armor",
+        "comments": "human architecture",
+        "editorsuffix1": "TRIGSTR_1404",
+        "effect1": "rarm",
+        "effect2": "rhpo",
+        "global": "0",
+        "goldbase": "125",
+        "goldmod": "250",
+        "hotkey1": "TRIGSTR_32903",
+        "hotkey2": "TRIGSTR_32904",
+        "hotkey3": "TRIGSTR_32976",
+        "hotkey4": "TRIGSTR_32815",
+        "hotkey5": "TRIGSTR_32875",
+        "hotkey6": "TRIGSTR_32876",
+        "inbeta": "1",
+        "inherit": "0",
+        "lumberbase": "50",
+        "lumbermod": "250",
+        "maxlevel": "6",
+        "mod2": "0.1",
+        "name1": "TRIGSTR_40779",
+        "name2": "TRIGSTR_40769",
+        "name3": "TRIGSTR_40770",
+        "name4": "TRIGSTR_40771",
+        "name5": "TRIGSTR_40772",
+        "name6": "TRIGSTR_40773",
+        "race": "human",
+        "requires1": "hkee",
+        "requires3": "h008",
+        "requires4": "h008",
+        "requires5": "h009",
+        "requires6": "h009",
+        "timebase": "30",
+        "timemod": "15",
+        "tip1": "TRIGSTR_40780",
+        "tip2": "TRIGSTR_40774",
+        "tip3": "TRIGSTR_40775",
+        "tip4": "TRIGSTR_40776",
+        "tip5": "TRIGSTR_40777",
+        "tip6": "TRIGSTR_40778",
+        "ubertip1": "TRIGSTR_1332",
+        "ubertip2": "TRIGSTR_1333",
+        "ubertip3": "TRIGSTR_1334",
+        "ubertip4": "TRIGSTR_1335",
+        "ubertip5": "TRIGSTR_1336",
+        "ubertip6": "TRIGSTR_1337",
+        "used": "1",
+        "version": "0"
+      }
+    },
+    "R00U": {
+      "id": "R00U",
+      "levels": 1,
+      "raw_class": null,
+      "names": {
+        "name1": {
+          "raw": "TRIGSTR_40757",
+          "val": "|cffe6beaaУлучшенные инструменты|r"
+        }
+      },
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_40763",
+          "val": "Исследовать |cffe6beaaУлучшенные инструменты|r"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_5084",
+          "val": "Увеличивают объем переносимой работниками древесины на 5."
+        }
+      },
+      "hotkeys": {
+        "hotkey1": {
+          "raw": "TRIGSTR_33359",
+          "val": "Q"
+        }
+      },
+      "fields": {
+        "art1": "ReplaceableTextures\\CommandButtons\\BTNHumanLumberUpgrade1.blp",
+        "art2": "ReplaceableTextures\\CommandButtons\\BTNHumanLumberUpgrade1.blp",
+        "art3": "ReplaceableTextures\\CommandButtons\\BTNHumanLumberUpgrade1.blp",
+        "art4": "ReplaceableTextures\\CommandButtons\\BTNHumanLumberUpgrade1.blp",
+        "art5": "ReplaceableTextures\\CommandButtons\\BTNHumanLumberUpgrade1.blp",
+        "art6": "ReplaceableTextures\\CommandButtons\\BTNHumanLumberUpgrade1.blp",
+        "base1": "6.000000",
+        "base2": "1",
+        "buttonpos": "0",
+        "buttonpos2": "0",
+        "code2": "Ahlh",
+        "comments": "human lumber harvesting",
+        "editorsuffix1": "TRIGSTR_1361",
+        "effect1": "rlum",
+        "effect2": "rlev",
+        "global": "0",
+        "goldbase": "100",
+        "goldmod": "350",
+        "hotkey1": "TRIGSTR_33359",
+        "hotkey2": "TRIGSTR_33360",
+        "hotkey3": "TRIGSTR_33355",
+        "hotkey4": "TRIGSTR_33356",
+        "hotkey5": "TRIGSTR_33357",
+        "hotkey6": "TRIGSTR_33358",
+        "inbeta": "1",
+        "inherit": "1",
+        "lumberbase": "0",
+        "lumbermod": "0",
+        "maxlevel": "6",
+        "mod1": "6.000000",
+        "mod2": "1",
+        "name1": "TRIGSTR_40757",
+        "name2": "TRIGSTR_40758",
+        "name3": "TRIGSTR_40759",
+        "name4": "TRIGSTR_40760",
+        "name5": "TRIGSTR_40761",
+        "name6": "TRIGSTR_40762",
+        "race": "human",
+        "requires3": "h008",
+        "requires4": "h008",
+        "requires5": "h009",
+        "requires6": "h009",
+        "timebase": "60",
+        "timemod": "30",
+        "tip1": "TRIGSTR_40763",
+        "tip2": "TRIGSTR_40764",
+        "tip3": "TRIGSTR_40765",
+        "tip4": "TRIGSTR_40766",
+        "tip5": "TRIGSTR_40767",
+        "tip6": "TRIGSTR_40768",
+        "ubertip1": "TRIGSTR_5084",
+        "ubertip2": "TRIGSTR_5079",
+        "ubertip3": "TRIGSTR_5080",
+        "ubertip4": "TRIGSTR_5081",
+        "ubertip5": "TRIGSTR_5082",
+        "ubertip6": "TRIGSTR_5083",
+        "used": "1",
+        "version": "0"
+      }
+    },
+    "R00X": {
+      "id": "R00X",
+      "levels": 1,
+      "raw_class": "melee",
+      "names": {
+        "name1": {
+          "raw": "TRIGSTR_40805",
+          "val": "|cffe6beaaМагические талисманы|r |cffffff00(уровень 1)|r"
+        }
+      },
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_40808",
+          "val": "Нарыть |cffe6beaaМагические талисманы|r |cffffff00(уровень 1)|r"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_1410",
+          "val": "Увеличивает урон магов."
+        }
+      },
+      "hotkeys": {
+        "hotkey1": {
+          "raw": "TRIGSTR_11209",
+          "val": "C"
+        }
+      },
+      "fields": {
+        "art1": "ReplaceableTextures\\CommandButtons\\BTNAmulet.blp",
+        "art2": "ReplaceableTextures\\CommandButtons\\BTNAmulet.blp",
+        "art3": "ReplaceableTextures\\CommandButtons\\BTNAmulet.blp",
+        "art4": "ReplaceableTextures\\CommandButtons\\BTNAmulet.blp",
+        "art5": "ReplaceableTextures\\CommandButtons\\BTNAmulet.blp",
+        "art6": "ReplaceableTextures\\CommandButtons\\BTNAmulet.blp",
+        "base1": "1",
+        "buttonpos": "2",
+        "buttonpos2": "2",
+        "class": "melee",
+        "comments": "nightelf strength of moon",
+        "editorsuffix1": "TRIGSTR_2032",
+        "effect1": "ratd",
+        "global": "0",
+        "goldbase": "500",
+        "goldmod": "500",
+        "hotkey1": "TRIGSTR_11209",
+        "hotkey2": "TRIGSTR_11210",
+        "hotkey3": "TRIGSTR_11211",
+        "hotkey4": "TRIGSTR_11212",
+        "hotkey5": "TRIGSTR_11213",
+        "hotkey6": "TRIGSTR_11292",
+        "inbeta": "1",
+        "inherit": "0",
+        "lumberbase": "500",
+        "lumbermod": "500",
+        "maxlevel": "6",
+        "mod1": "1",
+        "name1": "TRIGSTR_40805",
+        "name2": "TRIGSTR_40806",
+        "name3": "TRIGSTR_40807",
+        "name4": "TRIGSTR_40809",
+        "name5": "TRIGSTR_40810",
+        "name6": "TRIGSTR_40811",
+        "race": "human",
+        "requires1": "etoa",
+        "requires3": "h008",
+        "requires4": "h008",
+        "requires5": "h009",
+        "requires6": "h009",
+        "requiresamount6": "2",
+        "timebase": "30",
+        "timemod": "15",
+        "tip1": "TRIGSTR_40808",
+        "tip2": "TRIGSTR_40812",
+        "tip3": "TRIGSTR_40813",
+        "tip4": "TRIGSTR_40814",
+        "tip5": "TRIGSTR_40815",
+        "tip6": "TRIGSTR_40816",
+        "ubertip1": "TRIGSTR_1410",
+        "ubertip2": "TRIGSTR_1411",
+        "ubertip3": "TRIGSTR_1412",
+        "ubertip4": "TRIGSTR_1413",
+        "ubertip5": "TRIGSTR_1414",
+        "ubertip6": "TRIGSTR_1415",
+        "used": "1",
+        "version": "0"
+      }
+    },
+    "R00K": {
+      "id": "R00K",
+      "levels": 1,
+      "raw_class": "caster",
+      "names": {
+        "name1": {
+          "raw": "TRIGSTR_40798",
+          "val": "|cffe6beaaКонтрабанда фолиантов|r"
+        }
+      },
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_40799",
+          "val": "Организовать |cffe6beaaКонтрабанда фолиантов|r"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_1339",
+          "val": "Увеличивает запас здоровья и маны колдунов, ускоряет регенерацию их маны."
+        }
+      },
+      "hotkeys": {
+        "hotkey1": {
+          "raw": "TRIGSTR_15978",
+          "val": "X"
+        }
+      },
+      "fields": {
+        "art1": "ReplaceableTextures\\CommandButtons\\BTNSorceressAdept.blp",
+        "art2": "ReplaceableTextures\\CommandButtons\\BTNSorceressAdept.blp",
+        "art3": "ReplaceableTextures\\CommandButtons\\BTNSorceressAdept.blp",
+        "art4": "ReplaceableTextures\\CommandButtons\\BTNSorceressAdept.blp",
+        "art5": "ReplaceableTextures\\CommandButtons\\BTNSorceressAdept.blp",
+        "art6": "ReplaceableTextures\\CommandButtons\\BTNSorceressAdept.blp",
+        "base1": "100",
+        "base2": "0.325",
+        "base3": "40",
+        "base4": "0",
+        "buttonpos": "0",
+        "buttonpos2": "2",
+        "class": "caster",
+        "comments": "human sorceress training",
+        "editorsuffix1": "TRIGSTR_1436",
+        "effect1": "rmnx",
+        "effect2": "rmnr",
+        "effect3": "rhpx",
+        "effect4": "ratd",
+        "global": "0",
+        "goldbase": "350",
+        "goldmod": "350",
+        "hotkey1": "TRIGSTR_15978",
+        "hotkey2": "TRIGSTR_16290",
+        "hotkey3": "TRIGSTR_15660",
+        "hotkey4": "TRIGSTR_15661",
+        "hotkey5": "TRIGSTR_15695",
+        "hotkey6": "TRIGSTR_15969",
+        "inbeta": "1",
+        "inherit": "1",
+        "lumberbase": "350",
+        "lumbermod": "350",
+        "maxlevel": "6",
+        "mod1": "100",
+        "mod2": "0.325",
+        "mod3": "40",
+        "mod4": "0",
+        "name1": "TRIGSTR_40798",
+        "name2": "TRIGSTR_40793",
+        "name3": "TRIGSTR_40794",
+        "name4": "TRIGSTR_40795",
+        "name5": "TRIGSTR_40796",
+        "name6": "TRIGSTR_40797",
+        "race": "human",
+        "requires1": "hcas",
+        "requires3": "h008",
+        "requires4": "h008",
+        "requires5": "h009",
+        "requires6": "h009",
+        "timebase": "30",
+        "timemod": "0",
+        "tip1": "TRIGSTR_40799",
+        "tip2": "TRIGSTR_40800",
+        "tip3": "TRIGSTR_40801",
+        "tip4": "TRIGSTR_40802",
+        "tip5": "TRIGSTR_40803",
+        "tip6": "TRIGSTR_40804",
+        "ubertip1": "TRIGSTR_1339",
+        "ubertip2": "TRIGSTR_1352",
+        "ubertip3": "TRIGSTR_1353",
+        "ubertip4": "TRIGSTR_1354",
+        "ubertip5": "TRIGSTR_1355",
+        "ubertip6": "TRIGSTR_1356",
+        "ubertip:custom,v01": "\"Увеличивает урон от атак и запас здоровья и маны волшебниц, ускоряет регенерацию их маны, а также обучает их «Невидимости».\"",
+        "ubertip:custom,v02": "\"Увеличивает урон от атак и запас здоровья и маны волшебниц, ускоряет регенерацию их маны, а также обучает их «Превращению».\"",
+        "used": "1",
+        "version": "0"
+      }
+    },
+    "R00N": {
+      "id": "R00N",
+      "levels": 1,
+      "raw_class": "armor",
+      "names": {
+        "name1": {
+          "raw": "TRIGSTR_40745",
+          "val": "|cffe6beaaЛегкая броня|r |cffffff00(уровень 1)|r"
+        }
+      },
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_40751",
+          "val": "Нарыть |cffe6beaaЛегкую броню|r |cffffff00(уровень 1)|r"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_1084",
+          "val": "Усиливают броню дальнобойных юнитов, магов, а также осадных юнитов."
+        }
+      },
+      "hotkeys": {
+        "hotkey1": {
+          "raw": "TRIGSTR_7043",
+          "val": "S"
+        }
+      },
+      "fields": {
+        "art1": "ReplaceableTextures\\CommandButtons\\BTNLeatherUpgradeOne.blp",
+        "art2": "ReplaceableTextures\\CommandButtons\\BTNLeatherUpgradeOne.blp",
+        "art3": "ReplaceableTextures\\CommandButtons\\BTNLeatherUpgradeOne.blp",
+        "art4": "ReplaceableTextures\\CommandButtons\\BTNLeatherUpgradeOne.blp",
+        "art5": "ReplaceableTextures\\CommandButtons\\BTNLeatherUpgradeOne.blp",
+        "art6": "ReplaceableTextures\\CommandButtons\\BTNLeatherUpgradeOne.blp",
+        "buttonpos": "1",
+        "buttonpos2": "1",
+        "class": "armor",
+        "comments": "human leather armor",
+        "editorsuffix1": "TRIGSTR_1338",
+        "effect1": "rarm",
+        "global": "0",
+        "goldbase": "500",
+        "goldmod": "500",
+        "hotkey1": "TRIGSTR_7043",
+        "hotkey2": "TRIGSTR_7052",
+        "hotkey3": "TRIGSTR_6680",
+        "hotkey4": "TRIGSTR_7206",
+        "hotkey5": "TRIGSTR_7266",
+        "hotkey6": "TRIGSTR_7416",
+        "inbeta": "1",
+        "inherit": "0",
+        "lumberbase": "500",
+        "lumbermod": "500",
+        "maxlevel": "6",
+        "name1": "TRIGSTR_40745",
+        "name2": "TRIGSTR_40746",
+        "name3": "TRIGSTR_40747",
+        "name4": "TRIGSTR_40748",
+        "name5": "TRIGSTR_40749",
+        "name6": "TRIGSTR_40750",
+        "race": "human",
+        "requires1": "hkee",
+        "requires3": "h008",
+        "requires4": "h008",
+        "requires5": "h009",
+        "requires6": "h009",
+        "timebase": "30",
+        "timemod": "15",
+        "tip1": "TRIGSTR_40751",
+        "tip2": "TRIGSTR_40752",
+        "tip3": "TRIGSTR_40753",
+        "tip4": "TRIGSTR_40754",
+        "tip5": "TRIGSTR_40755",
+        "tip6": "TRIGSTR_40756",
+        "ubertip1": "TRIGSTR_1084",
+        "ubertip2": "TRIGSTR_1085",
+        "ubertip3": "TRIGSTR_1086",
+        "ubertip4": "TRIGSTR_1087",
+        "ubertip5": "TRIGSTR_1088",
+        "ubertip6": "TRIGSTR_1089",
+        "ubertip:custom,v01": "\"Усиливают броню стрелков, мортирных расчетов и наездников на грифонах.\"",
+        "ubertip:custom,v02": "\"Дополнительно усиливают броню стрелков, мортирных расчетов и наездников на грифонах.\"",
+        "ubertip:custom,v03": "\"Дополнительно усиливают броню стрелков, мортирных расчетов и наездников на грифонах.\"",
+        "ubertip:melee,v01": "\"Усиливают броню стрелков, мортирных расчетов и наездников на грифонах.\"",
+        "ubertip:melee,v02": "\"Дополнительно усиливают броню стрелков, мортирных расчетов и наездников на грифонах.\"",
+        "ubertip:melee,v03": "\"Дополнительно усиливают броню стрелков, мортирных расчетов и наездников на грифонах.\"",
+        "used": "1",
+        "version": "0"
+      }
+    },
+    "R00W": {
+      "id": "R00W",
+      "levels": 1,
+      "raw_class": "caster",
+      "names": {
+        "name1": {
+          "raw": "TRIGSTR_40786",
+          "val": "|cffe6beaaКонтрабанда писаний|r"
+        }
+      },
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_40787",
+          "val": "Организовать |cffd45e69Контрабанда писаний|r"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_1385",
+          "val": "Увеличивает запас здоровья и маны жрецов, ускоряет регенерацию их маны."
+        }
+      },
+      "hotkeys": {
+        "hotkey1": {
+          "raw": "TRIGSTR_23471",
+          "val": "Z"
+        }
+      },
+      "fields": {
+        "art1": "ReplaceableTextures\\CommandButtons\\BTNSnazzyScroll.blp",
+        "art2": "ReplaceableTextures\\CommandButtons\\BTNSnazzyScroll.blp",
+        "art3": "ReplaceableTextures\\CommandButtons\\BTNSnazzyScroll.blp",
+        "art4": "ReplaceableTextures\\CommandButtons\\BTNSnazzyScroll.blp",
+        "art5": "ReplaceableTextures\\CommandButtons\\BTNSnazzyScroll.blp",
+        "art6": "ReplaceableTextures\\CommandButtons\\BTNSnazzyScroll.blp",
+        "base1": "100",
+        "base2": "0.325",
+        "base3": "40",
+        "base4": "0",
+        "buttonpos": "0",
+        "buttonpos2": "2",
+        "class": "caster",
+        "comments": "human sorceress training",
+        "editorsuffix1": "TRIGSTR_1425",
+        "effect1": "rmnx",
+        "effect2": "rmnr",
+        "effect3": "rhpx",
+        "effect4": "ratd",
+        "global": "0",
+        "goldbase": "350",
+        "goldmod": "350",
+        "hotkey1": "TRIGSTR_23471",
+        "hotkey2": "TRIGSTR_23472",
+        "hotkey3": "TRIGSTR_23393",
+        "hotkey4": "TRIGSTR_23394",
+        "hotkey5": "TRIGSTR_23395",
+        "hotkey6": "TRIGSTR_23396",
+        "inbeta": "1",
+        "inherit": "1",
+        "lumberbase": "350",
+        "lumbermod": "350",
+        "maxlevel": "6",
+        "mod1": "100",
+        "mod2": "0.325",
+        "mod3": "40",
+        "mod4": "0",
+        "name1": "TRIGSTR_40786",
+        "name2": "TRIGSTR_40781",
+        "name3": "TRIGSTR_40782",
+        "name4": "TRIGSTR_40783",
+        "name5": "TRIGSTR_40784",
+        "name6": "TRIGSTR_40785",
+        "race": "human",
+        "requires1": "hcas",
+        "requires3": "h008",
+        "requires4": "h008",
+        "requires5": "h009",
+        "requires6": "h009",
+        "timebase": "30",
+        "timemod": "0",
+        "tip1": "TRIGSTR_40787",
+        "tip2": "TRIGSTR_40788",
+        "tip3": "TRIGSTR_40789",
+        "tip4": "TRIGSTR_40790",
+        "tip5": "TRIGSTR_40791",
+        "tip6": "TRIGSTR_40792",
+        "ubertip1": "TRIGSTR_1385",
+        "ubertip2": "TRIGSTR_1386",
+        "ubertip3": "TRIGSTR_1387",
+        "ubertip4": "TRIGSTR_1388",
+        "ubertip5": "TRIGSTR_1389",
+        "ubertip6": "TRIGSTR_1390",
+        "ubertip:custom,v01": "\"Увеличивает урон от атак и запас здоровья и маны волшебниц, ускоряет регенерацию их маны, а также обучает их «Невидимости».\"",
+        "ubertip:custom,v02": "\"Увеличивает урон от атак и запас здоровья и маны волшебниц, ускоряет регенерацию их маны, а также обучает их «Превращению».\"",
+        "used": "1",
+        "version": "0"
+      }
+    },
+    "R0HP": {
+      "id": "R0HP",
+      "levels": 1,
+      "raw_class": null,
+      "names": {
+        "name1": {
+          "raw": "TRIGSTR_29511",
+          "val": "Удешевление дозакупки"
+        }
+      },
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_29512",
+          "val": "Удешевление дозакупки"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_29507",
+          "val": "Грейд до атаманов становится дешевлей."
+        }
+      },
+      "hotkeys": {
+        "hotkey1": {
+          "raw": "G",
+          "val": "G"
+        }
+      },
+      "fields": {
+        "art1": "ReplaceableTextures\\CommandButtons\\BTNPendantOfEnergy.blp",
+        "base1": "1.000000",
+        "buttonpos": "2",
+        "buttonpos2": "0",
+        "code1": "A01B",
+        "comments": "orc pillage",
+        "editorsuffix1": "TRIGSTR_35177",
+        "effect1": "TRIGSTR_31264",
+        "global": "0",
+        "goldbase": "75",
+        "goldmod": "500",
+        "hotkey1": "G",
+        "hotkey2": "TRIGSTR_29386",
+        "hotkey3": "TRIGSTR_29397",
+        "hotkey4": "TRIGSTR_29398",
+        "inbeta": "1",
+        "inherit": "1",
+        "lumberbase": "25",
+        "lumbermod": "350",
+        "maxlevel": "2",
+        "mod1": "1.000000",
+        "name1": "TRIGSTR_29511",
+        "name2": "TRIGSTR_38683",
+        "name3": "TRIGSTR_41016",
+        "name4": "TRIGSTR_29395",
+        "race": "human",
+        "timebase": "45",
+        "timemod": "1",
+        "tip1": "TRIGSTR_29512",
+        "tip2": "TRIGSTR_38686",
+        "tip3": "TRIGSTR_38753",
+        "tip4": "TRIGSTR_29405",
+        "ubertip1": "TRIGSTR_29507",
+        "ubertip2": "TRIGSTR_29396",
+        "used": "1",
+        "version": "0"
+      }
+    },
+    "R00Y": {
+      "id": "R00Y",
+      "levels": 1,
+      "raw_class": null,
+      "names": {
+        "name1": {
+          "raw": "Горючая смесь",
+          "val": "Горючая смесь"
+        }
+      },
+      "tips": {
+        "tip1": {
+          "raw": "Горючая смесь",
+          "val": "Горючая смесь"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_20159",
+          "val": "Покрывает снаряды катапульт горючей смесью, позволяя им поджигать землю."
+        }
+      },
+      "hotkeys": {
+        "hotkey1": {
+          "raw": "TRIGSTR_11293",
+          "val": "C"
+        }
+      },
+      "fields": {
+        "art1": "ReplaceableTextures\\CommandButtons\\BTNFireRocks.blp",
+        "buttonpos": "2",
+        "buttonpos2": "1",
+        "comments": "orc naptha",
+        "editorsuffix1": "TRIGSTR_33249",
+        "global": "0",
+        "goldbase": "50",
+        "goldmod": "0",
+        "hotkey1": "TRIGSTR_11293",
+        "inbeta": "1",
+        "inherit": "1",
+        "lumberbase": "150",
+        "lumbermod": "0",
+        "maxlevel": "1",
+        "name1": "Горючая смесь",
+        "race": "orc",
+        "requires": "ofrt",
+        "requires1": "h009",
+        "timebase": "30",
+        "timemod": "0",
+        "tip1": "Горючая смесь",
+        "ubertip1": "TRIGSTR_20159",
+        "used": "1",
+        "version": "1"
+      }
+    },
+    "R00G": {
+      "id": "R00G",
+      "levels": 1,
+      "raw_class": null,
+      "names": {
+        "name1": {
+          "raw": "TRIGSTR_879",
+          "val": "|cffe6beaaСоюз бандитов|r"
+        }
+      },
+      "tips": {
+        "tip1": {
+          "raw": "TRIGSTR_880",
+          "val": "|cffe6beaaСоюз бандитов|r"
+        }
+      },
+      "ubertips": {
+        "ubertip1": {
+          "raw": "TRIGSTR_881",
+          "val": "|cffe6beaaСоюз бандитов|r - фракция, состоящая как ни странно, из воров, убийц, грабителей, киллеров, пиратов и тому подобных личностей. По отдельности они слабы, но объединившись, смогут стать значительной силой на азероте... Если не перегрызуться между собой."
+        }
+      },
+      "hotkeys": {
+        "hotkey1": {
+          "raw": null,
+          "val": null
+        }
+      },
+      "fields": {
+        "art1": "ReplaceableTextures\\CommandButtons\\BTNBandit.blp",
+        "art2": "ReplaceableTextures\\CommandButtons\\BTNNagaArmorUp2.blp",
+        "art3": "ReplaceableTextures\\CommandButtons\\BTNNagaArmorUp3.blp",
+        "buttonpos": "1",
+        "buttonpos2": "2",
+        "comments": "naga armor",
+        "global": "0",
+        "goldbase": "0",
+        "goldmod": "0",
+        "hotkey2": "C",
+        "hotkey3": "C",
+        "inbeta": "0",
+        "inherit": "0",
+        "lumberbase": "0",
+        "lumbermod": "0",
+        "maxlevel": "1",
+        "name1": "TRIGSTR_879",
+        "name2": "Хитиновая чешуя",
+        "name3": "Костяная чешуя",
+        "race": "other",
+        "timebase": "0",
+        "timemod": "0",
+        "tip1": "TRIGSTR_880",
+        "tip2": "Исследовать хитиновую чешую",
+        "tip3": "Исследовать костяную чешую",
+        "ubertip1": "TRIGSTR_881",
+        "ubertip2": "\"Дополнительно усиливает броню воинов-наг.\"",
+        "ubertip3": "\"Дополнительно усиливает броню воинов-наг.\"",
+        "used": "1",
+        "version": "1"
+      }
+    }
+  }
+}

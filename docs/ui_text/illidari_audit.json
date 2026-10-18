@@ -1,0 +1,114 @@
+{
+  "race": "Иллидари (Illidari)",
+  "race_id": 10,
+  "selection_ability": "A0OK",
+  "objects_audit": {
+    "buildings": {
+      "count": 13,
+      "ids": [
+        "h0E9",
+        "h0EA",
+        "h0EB",
+        "h0EC",
+        "h0ED",
+        "h0EE",
+        "h0EF",
+        "h0EG",
+        "h0EH",
+        "h0EM",
+        "h0EN",
+        "o01C",
+        "h011"
+      ],
+      "economy_building": {
+        "id": "h0EC",
+        "name": "Накопитель энергии",
+        "food_provided": 15,
+        "gold_income_per_25s": 40,
+        "verified_via": "53_economy.lua and unit ability stats"
+      }
+    },
+    "units": {
+      "count": 13,
+      "ids": [
+        "h0EI",
+        "h0EJ",
+        "o01A",
+        "o01B",
+        "o019",
+        "h0EK",
+        "h0EL",
+        "n02O",
+        "n02M",
+        "n02N",
+        "h04Y",
+        "h04Z",
+        "h050"
+      ]
+    },
+    "heroes": {
+      "count": 4,
+      "ids": [
+        "H043",
+        "E01W",
+        "E024",
+        "E025"
+      ],
+      "names": {
+        "H043": "Маг Крови (Интеллект, дальний бой)",
+        "E01W": "Охотник на демонов (Ловкость, ближний бой)",
+        "E024": "Охотник «Месть» (Сила, ближний бой)",
+        "E025": "Охотник «Истребление» (Ловкость, ближний бой)"
+      }
+    },
+    "abilities": {
+      "count": 39,
+      "total_wts_updated": 549
+    },
+    "researches": {
+      "count": 22,
+      "technologies": 19,
+      "markers": 3,
+      "mutually_exclusive_branches": {
+        "R099": "Приоритет Наги (W) — +4 урона, +20 скорости бега нагам",
+        "R09A": "Приоритет Эльфы (E) — +50 HP, +15% скорости боя эльфам/охотникам",
+        "R09B": "Приоритет Орки (R) — +10 урона оркам Скверны",
+        "trigger_enforcement": "Trig_flot1_Copy_2_Actions, Trig_arm1_Copy_2_Actions, Trig_arm1_Copy_2_Copy_Actions"
+      },
+      "markers_list": {
+        "R07H": "Маркер расы Иллидари",
+        "R0KZ": "Маркер Иллидари или Наги",
+        "R0L0": "Маркер Эльфы Крови или Иллидари"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items or inventory artifacts found in war3map.w3t for Illidari."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "No race-specific floating messages or game UI strings found in war3map.wts for Illidari."
+  },
+  "buffs_audit": {
+    "custom_buffs": [],
+    "standard_buffs_used": [
+      "BEer",
+      "Bena",
+      "Bpxf",
+      "Bblo",
+      "Bfae",
+      "Bcyc",
+      "Bfro",
+      "Bpoi",
+      "Bdef",
+      "BOac",
+      "Bcri",
+      "Bspe",
+      "Bshs"
+    ],
+    "status": "All buffs used by Illidari abilities are standard Warcraft III engine buffs. No custom text modification required."
+  },
+  "total_wts_updates": 549,
+  "total_checks": 93
+}

@@ -1,0 +1,335 @@
+{
+  "scope": "Альянс (Alliance): категория 1 — Здания (16 зданий)",
+  "buildings_count": 16,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "htow",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 27956,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов, склад и базовый запас пищи.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da: добытчик ресурсов и строитель.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deФорт|cffced4da: открывает доступ к передовым сооружениям и войскам.|r"
+        }
+      ]
+    },
+    {
+      "id": "hkee",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 8216,
+          "after": "|cffe4cfa3Форт|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 8286,
+          "after": "|cffe4cfa3Форт|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6464,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает запас пищи и открывает новые технологии.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deЗамок|cffced4da: открывает доступ к высшим технологиям и защите королевства.|r"
+        }
+      ]
+    },
+    {
+      "id": "hcas",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22325,
+          "after": "|cffe4cfa3Замок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22326,
+          "after": "|cffe4cfa3Замок|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9936,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание третьей ступени. Обеспечивает максимальный запас пищи и доступ к элитным силам Альянса.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "hhou",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 8210,
+          "after": "|cffe4cfa3Ферма|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 8211,
+          "after": "|cffe4cfa3Ферма|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 27950,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию продовольствием и увеличивает доход королевства.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи и увеличивает доход на |cffffffff40|cffced4da ед.|r"
+        }
+      ]
+    },
+    {
+      "id": "hbar",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 21619,
+          "after": "|cffe4cfa3Казармы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 21620,
+          "after": "|cffe4cfa3Казармы|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28154,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовое производственное сооружение для подготовки пехоты ближнего и дальнего боя, а также кавалерии.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deКавалерия|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deТренировка ближнего боя|cffced4da|n- |cffa9c7deТренировка дальнего боя|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "hbla",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12512,
+          "after": "|cffe4cfa3Кузница|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 12513,
+          "after": "|cffe4cfa3Кузница|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12947,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Улучшает оружие, броню, снаряды и порох для сухопутных войск Альянса.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМифриловые мечи|cffced4da|n- |cffa9c7deМифриловая броня|cffced4da|n- |cffa9c7deДоспехи из армированной кожи|cffced4da|n- |cffa9c7deУлучшенные снаряды|cffced4da|n- |cffa9c7deМагическая атака|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "hwtw",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22883,
+          "after": "|cffe4cfa3Дозорная башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 23531,
+          "after": "|cffe4cfa3Дозорная башня|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28156,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовая наблюдательная вышка. Не атакует, но может быть модернизирована в боевые башни.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deСторожевая башня|cffced4da: скорострельная стрелковая башня.|n- |cffa9c7deОрудийная башня|cffced4da: мощная осадная пушка с уроном по площади.|n- |cffa9c7deМагическая башня|cffced4da: сжигает ману врагов и раскрывает невидимость.|r"
+        }
+      ]
+    },
+    {
+      "id": "hgtw",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 8287,
+          "after": "|cffe4cfa3Сторожевая башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 9514,
+          "after": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 27951,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовое оборонительное сооружение, вооружённое скорострельными стреломётами.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "hctw",
+      "hotkey": "X",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 9515,
+          "after": "|cffe4cfa3Орудийная башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 9517,
+          "after": "|cffe4cfa3Орудийная башня|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28145,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Тяжёлое артиллерийское укрепление. Наносит сокрушительный урон по площади осадными ядрами.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "hatw",
+      "hotkey": "C",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 9520,
+          "after": "|cffe4cfa3Магическая башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 12509,
+          "after": "|cffe4cfa3Магическая башня|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28153,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Магическое защитное укрепление. Сжигает ману атакуемых врагов, нанося дополнительный урон, и раскрывает невидимость вокруг себя.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "halt",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25259,
+          "after": "|cffe4cfa3Алтарь королей|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 25271,
+          "after": "|cffe4cfa3Алтарь королей|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28160,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Священное сооружение, где призываются великие лидеры Альянса и воскрешаются павшие герои.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deПаладин|cffced4da: воин Света с выбором специализации (Воздаяние, Защита или Лечение).|n- |cffa9c7deВерховный маг|cffced4da: мастер заклинаний стихии льда и телепортации.|n- |cffa9c7deГорный король|cffced4da: могучий воитель дворфов, сокрушающий врагов молотом.|r"
+        }
+      ]
+    },
+    {
+      "id": "harm",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 9518,
+          "after": "|cffe4cfa3Мастерская|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 9519,
+          "after": "|cffe4cfa3Мастерская|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28150,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Инженерный цех Альянса по конструированию передовой осадной техники, мортир и бронемашин.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОсадный боец|cffced4da: дальнобойный мортирный расчёт.|n- |cffa9c7deТехника Альянса|cffced4da: бронированная осадная машина.|n- |cffa9c7deОсадная башня|cffced4da: мощное передвижное орудие штурма.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deКомплектование техники|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "hars",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 40534,
+          "after": "|cffe4cfa3Волшебное святилище|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 40535,
+          "after": "|cffe4cfa3Волшебное святилище|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28158,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обитель магов и жрецов. Обучает заклинателей и исследует тайны магических искусств.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deМаг (Поддержка)|cffced4da: жрец-целитель.|n- |cffa9c7deМаг (Урон)|cffced4da: волшебница Кирин-Тора.|n- |cffa9c7deМаг (Специализированный)|cffced4da: ведьмак, разрушитель чар.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбучение боевых магов|cffced4da|n- |cffa9c7deОбучение магов поддержки|cffced4da|n- |cffa9c7deОбучение специализированных магов|cffced4da|n- |cffa9c7deМагический страж|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "hlum",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12510,
+          "after": "|cffe4cfa3Лесопилка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 12511,
+          "after": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12950,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Склад древесины и центр архитектурных разработок Альянса.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенная кладка|cffced4da: усиливает прочность и броню зданий.|n- |cffa9c7deУлучшенная лесозаготовка|cffced4da: увеличивает количество переносимой древесины работниками.|r"
+        }
+      ]
+    },
+    {
+      "id": "hgra",
+      "hotkey": "X",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27439,
+          "after": "|cffe4cfa3Посольство|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 29063,
+          "after": "|cffe4cfa3Посольство|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28162,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Дипломатический центр Альянса. Определяет политический курс, заключает союзы с расами Азерота и проводит военные реформы.|n|n|cffa6afb8Исследования:|cffced4da|n- Дипломатические и военные доктрины королевства.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0M4",
+      "hotkey": "C",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22192,
+          "after": "|cffe4cfa3Верфь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22193,
+          "after": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10924,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Прибрежная верфь Альянса. Строит боевые корабли и улучшает мощь королевского флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: корабль для переброски войск по воде.|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: манёвренный боевой фрегат.|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: мощный бронированный линкор.|n|n|cffa6afb8Исследования:|cffced4da|n- Модернизация орудий, парусов и корпуса флота.|r"
+        }
+      ]
+    }
+  ]
+}

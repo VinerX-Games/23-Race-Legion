@@ -1,0 +1,148 @@
+{
+  "operations": [
+    {
+      "type": "unit",
+      "id": "U02G",
+      "field": "name",
+      "value": "|cffe4cfa3Генерал К`Траксис|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02G",
+      "field": "tip",
+      "value": "|cffe4cfa3Генерал К`Траксис|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "U02G",
+      "field": "ubertip",
+      "value": "|cffa6afb8ГЕРОЙ:|cffced4da Герой ближнего боя: защищает себя панцирем и призывает подкрепления.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКрепкий панцирь|cffced4da: снижает получаемый урон от атак.|n- |cffa9c7deОбжигающий жар|cffced4da: наносит урон окружающим врагам, расходуя ману, пока способность включена.|n- |cffa9c7deТёмный портал|cffced4da: призывает порабощённых зверей; состав зависит от уровня способности.|n- |cffa9c7deУдар клешнёй|cffced4da: наносит урон вокруг героя и снижает скорость атаки и передвижения врагов.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02G",
+      "field": "propernames",
+      "value": "|cffe4cfa3Генерал К`Траксис|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02G",
+      "field": "awakentip",
+      "value": "|cffe4cfa3Генерал К`Траксис|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02G",
+      "field": "revivetip",
+      "value": "|cffe4cfa3Генерал К`Траксис|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02H",
+      "field": "name",
+      "value": "|cffe4cfa3Верховный Душегуб|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02H",
+      "field": "tip",
+      "value": "|cffe4cfa3Верховный Душегуб|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "U02H",
+      "field": "ubertip",
+      "value": "|cffa6afb8ГЕРОЙ:|cffced4da Герой ближнего боя для внезапных атак и ослабления брони противника.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБезумие бездны|cffced4da: повышает скорость атаки и даёт вампиризм.|n- |cffa9c7deСокрытие Бездной|cffced4da: делает героя невидимым, ускоряет передвижение и усиливает удар из невидимости.|n- |cffa9c7deСотрясение Бездны|cffced4da: даёт шанс оглушить противника и нанести дополнительный урон при атаке.|n- |cffa9c7deМетка охотника|cffced4da: снижает броню врага и позволяет видеть отмеченную цель.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02H",
+      "field": "propernames",
+      "value": "|cffe4cfa3Верховный Душегуб|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02H",
+      "field": "awakentip",
+      "value": "|cffe4cfa3Верховный Душегуб|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02H",
+      "field": "revivetip",
+      "value": "|cffe4cfa3Верховный Душегуб|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02I",
+      "field": "name",
+      "value": "|cffe4cfa3Маг Запредельной Тьмы|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02I",
+      "field": "tip",
+      "value": "|cffe4cfa3Маг Запредельной Тьмы|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "U02I",
+      "field": "ubertip",
+      "value": "|cffa6afb8ГЕРОЙ:|cffced4da Герой-заклинатель, призывающий войска и поражающий область магией Бездны.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТёмный раскол|cffced4da: призывает воинов безликих; состав зависит от уровня способности.|n- |cffa9c7deВзрыв бездны|cffced4da: наносит периодический урон наземным целям в указанной области.|n- |cffa9c7deАура Бездны|cffced4da: снижает восстановление здоровья окружающих врагов.|n- |cffa9c7deПространство Бездны|cffced4da: наносит целям в области периодический урон от максимального здоровья и уничтожает деревья.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02I",
+      "field": "propernames",
+      "value": "|cffe4cfa3Маг Запредельной Тьмы|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02I",
+      "field": "awakentip",
+      "value": "|cffe4cfa3Маг Запредельной Тьмы|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02I",
+      "field": "revivetip",
+      "value": "|cffe4cfa3Маг Запредельной Тьмы|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02F",
+      "field": "name",
+      "value": "|cffe4cfa3Верховный генерал|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02F",
+      "field": "tip",
+      "value": "|cffe4cfa3Верховный генерал|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "U02F",
+      "field": "ubertip",
+      "value": "|cffa6afb8ГЕРОЙ:|cffced4da Легендарный герой ближнего боя, поддерживающий войска аурами и лечением.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАнтимагическая аура|cffced4da: снижает восстановление маны окружающих врагов.|n- |cffa9c7deВечная служба|cffced4da: поднимает павших воинов для сражения на стороне героя.|n- |cffa9c7deПары саронита|cffced4da: восстанавливают здоровье союзников в области действия, пока герой поддерживает заклинание.|n- |cffa9c7deПриказ генерала|cffced4da: повышает урон от атак союзных войск рядом с героем.|n- |cffa9c7deСаронитовый панцирь|cffced4da: снижает получаемый урон от атак.|n- |cffa9c7deСтать слугой Йогг`Сарона|cffced4da: передаёт игроку контроль над Древним богом Йогг`Сароном.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02F",
+      "field": "propernames",
+      "value": "|cffe4cfa3Генерал Везакс|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02F",
+      "field": "awakentip",
+      "value": "|cffe4cfa3Верховный генерал|r"
+    },
+    {
+      "type": "unit",
+      "id": "U02F",
+      "field": "revivetip",
+      "value": "|cffe4cfa3Верховный генерал|r"
+    }
+  ]
+}

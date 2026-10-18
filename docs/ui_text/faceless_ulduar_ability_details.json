@@ -1,0 +1,144 @@
+{
+  "command": "get-objects-bulk",
+  "count": 6,
+  "map": "F:\\Gemini_23Race\\map.w3x",
+  "missing": [],
+  "objects": [
+    {
+      "fields": {
+        "area1": "1000.000000",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNFarSight.blp",
+        "buttonpos_1": "",
+        "buttonpos_2": "",
+        "cool1": "30.000000",
+        "cost1": "0",
+        "dataa1": "3",
+        "datab1": "",
+        "datac1": "",
+        "datae1": "",
+        "dataf1": "",
+        "dur1": "50.000000",
+        "herodur1": "50.000000",
+        "levels": "1",
+        "name": "TRIGSTR_12216",
+        "targs1": ""
+      },
+      "id": "A0MK",
+      "name": "Разведка"
+    },
+    {
+      "fields": {
+        "area1": "",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNStoneArchitecture.blp",
+        "buttonpos_1": "",
+        "buttonpos_2": "",
+        "cool1": "0",
+        "cost1": "0",
+        "dataa1": "600",
+        "datab1": "900",
+        "datac1": "",
+        "datae1": "orcbuild",
+        "dataf1": "1",
+        "dur1": "0",
+        "herodur1": "0",
+        "levels": "1",
+        "name": "TRIGSTR_17283",
+        "targs1": ""
+      },
+      "id": "A0B0",
+      "name": "|cffc8e6ffУкрепить Город|r"
+    },
+    {
+      "fields": {
+        "area1": "",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNHumanLumberUpgrade1.blp",
+        "buttonpos_1": "",
+        "buttonpos_2": "",
+        "cool1": "0",
+        "cost1": "0",
+        "dataa1": "900",
+        "datab1": "500",
+        "datac1": "",
+        "datae1": "nightelfbuild",
+        "dataf1": "1",
+        "dur1": "0",
+        "herodur1": "0",
+        "levels": "1",
+        "name": "TRIGSTR_17285",
+        "targs1": ""
+      },
+      "id": "A0B1",
+      "name": "|cffc8e6ffНаладить Производство|r"
+    },
+    {
+      "fields": {
+        "area1": "",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNImbuedMasonry.blp",
+        "buttonpos_1": "",
+        "buttonpos_2": "",
+        "cool1": "0",
+        "cost1": "0",
+        "dataa1": "600",
+        "datab1": "900",
+        "datac1": "",
+        "datae1": "parasiteon",
+        "dataf1": "1",
+        "dur1": "0",
+        "herodur1": "0",
+        "levels": "1",
+        "name": "TRIGSTR_17288",
+        "targs1": ""
+      },
+      "id": "A0B2",
+      "name": "|cffc8e6ffУвеличить Размер Города|r"
+    },
+    {
+      "fields": {
+        "area1": "",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNChestOfGold.blp",
+        "buttonpos_1": "",
+        "buttonpos_2": "",
+        "cool1": "0",
+        "cost1": "0",
+        "dataa1": "1250",
+        "datab1": "800",
+        "datac1": "",
+        "datae1": "phaseshiftinstant",
+        "dataf1": "1",
+        "dur1": "0",
+        "herodur1": "0",
+        "levels": "1",
+        "name": "TRIGSTR_17280",
+        "targs1": ""
+      },
+      "id": "A0AZ",
+      "name": "|cffc8e6ffУвеличить Сбор Дани|r"
+    },
+    {
+      "fields": {
+        "area1": "900",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNCastle.blp",
+        "buttonpos_1": "",
+        "buttonpos_2": "",
+        "cool1": "0",
+        "cost1": "0",
+        "dataa1": "0.000000",
+        "datab1": "0",
+        "datac1": "",
+        "datae1": "",
+        "dataf1": "",
+        "dur1": "0",
+        "herodur1": "0",
+        "levels": "1",
+        "name": "TRIGSTR_7394",
+        "targs1": "ground,self,structure,vulnerable"
+      },
+      "id": "AHad",
+      "name": "Поселение"
+    }
+  ],
+  "ok": true,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "type": "ability"
+}

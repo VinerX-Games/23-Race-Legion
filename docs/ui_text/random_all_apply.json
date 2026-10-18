@@ -1,0 +1,18 @@
+{
+  "race": "Random",
+  "race_name_ru": "Случайная раса",
+  "race_id": 37,
+  "mode": "apply",
+  "wts_updates_applied": 3,
+  "checks_summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "success_percent": 100.0
+  },
+  "hashes": {
+    "original_wts": "456ea146746d5b32485eb60d19c396091fec55f5798ba1a094f9e9c32e1d1cc9",
+    "updated_wts": "fbe109f212ad1322ba2bcfdbbc97f9ba3f54fe0428bd7304309913f6e300f6fa"
+  },
+  "failures": []
+}

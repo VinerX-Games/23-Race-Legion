@@ -402,9 +402,10 @@ function Trig_SecondChance_Actions()
     ProbeLogWrite("[CHAT] -raceselect target=" .. tostring(udg_LocalInteger))
     if Trig_SecondChance_Func003C() then
         udg_LocalPosition2=StartLoc[GetRandomInt(0, StartLocCount - 1)] -- INLINED!!
-        DisplayTimedTextToForce(GetPlayersAll(), 5.00, "???? " .. GetPlayerName(GetTriggerPlayer()) .. " ??? ?????? " .. GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " ?????? ????!")
-        DisplayTimedTextToPlayer(ConvertedPlayer(udg_LocalInteger), 0, 0, 15.00, "? ??? ???? 15 ????? ?? ??, ????? ????????? ???????!")
+        DisplayTimedTextToForce(GetPlayersAll(), 5.00, "Хост " .. GetPlayerName(GetTriggerPlayer()) .. " дал игроку " .. GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " второй шанс!")
+        DisplayTimedTextToPlayer(ConvertedPlayer(udg_LocalInteger), 0, 0, 15.00, "У вас есть 15 минут на то, чтобы поставить столицу!")
         CreateNUnitsAtLoc(1, FourCC('h0HJ'), ConvertedPlayer(udg_LocalInteger), udg_LocalPosition2, bj_UNIT_FACING)
+        RacePickerAdopt(GetLastCreatedUnit())
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_GOLD, 5000)
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_LUMBER, 5000)
         
@@ -434,6 +435,7 @@ function BridgeRaceSelect(target_index)
     DisplayTimedTextToForce(GetPlayersAll(), 5.00, "Bridge gave player " .. GetPlayerName(target_player) .. " race selection")
     DisplayTimedTextToPlayer(target_player, 0, 0, 15.00, "You have 15 minutes to place your capital")
     CreateNUnitsAtLoc(1, FourCC('h0HJ'), target_player, udg_LocalPosition2, bj_UNIT_FACING)
+    RacePickerAdopt(GetLastCreatedUnit())
     SetPlayerStateBJ(target_player, PLAYER_STATE_RESOURCE_GOLD, 5000)
     SetPlayerStateBJ(target_player, PLAYER_STATE_RESOURCE_LUMBER, 5000)
     udg_LocalInteger = target_index
@@ -912,6 +914,7 @@ end
 --===========================================================================
 function Trig_Second_O_Func001A()
     CreateNUnitsAtLoc(1, FourCC('h0HJ'), GetEnumPlayer(), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
+    RacePickerAdopt(GetLastCreatedUnit())
 end
 function Trig_Second_O_Actions()
     ForForce(udg_AllPlayers, Trig_Second_O_Func001A)

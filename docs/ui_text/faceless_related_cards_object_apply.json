@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "applied": true,
+  "method": "Only explicit string modifications spliced; all unrelated records/mods byte-identical",
+  "changes": {
+    "war3map.w3u": [
+      [
+        "h0I6",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "h0K2",
+        "utub",
+        0,
+        0
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "variant": "SD",
+      "rawcode": "h0I6",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0K2",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0I6",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0K2",
+      "field": "ubertip",
+      "exact_match": true
+    }
+  ],
+  "wts_unchanged": true
+}

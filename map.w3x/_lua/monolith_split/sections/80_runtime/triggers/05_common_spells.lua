@@ -745,7 +745,8 @@ function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     ForGroupBJ(udg_LocalOtrad2, Trig_Sdelat_Flagman_Ot_Copy_Func005A)
     GroupClear(udg_LocalOtrad2)
     BlzSetUnitWeaponIntegerFieldBJ(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0, BlzGetUnitWeaponIntegerField(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0) * 3)
-    BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, "cffff0000r - " .. GetUnitName(GetTriggerUnit()))
+    local flagshipName = GetUnitName(GetTriggerUnit()):gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", ""):gsub("^Флагман — ", "")
+    BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, "|cffebc56cФлагман — " .. flagshipName .. "|r")
     BlzSetUnitIntegerFieldBJ(GetTriggerUnit(), UNIT_IF_TINTING_COLOR_GREEN, 175)
     BlzSetUnitIntegerFieldBJ(GetTriggerUnit(), UNIT_IF_TINTING_COLOR_BLUE, 175)
     UnitAddTypeBJ(UNIT_TYPE_HERO, GetTriggerUnit())
@@ -793,7 +794,7 @@ function Trig_Flagman_die_Ot_Actions()
     ForGroupBJ(udg_LocalOtrad2, Trig_Flagman_die_Ot_Func006A)
     
     GroupClear(udg_LocalOtrad2)
-    DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "cffff0000.r")
+    DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "|cffb99d66ФЛОТ:|cffef8173 Флагман потерян.|r")
     SetPlayerAbilityAvailableBJ(true, FourCC('A009'), GetOwningPlayer(u))
     u=nil
 end

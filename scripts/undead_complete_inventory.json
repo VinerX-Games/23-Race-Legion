@@ -1,0 +1,5900 @@
+{
+  "selection": {
+    "A0HV": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_4246",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_4246",
+          "sid": 4246,
+          "current_val": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_38877",
+          "sid": 38877,
+          "current_val": "|cffc8cde1Плеть|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_38878",
+          "sid": 38878,
+          "current_val": "|cffc8cde1Плеть|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_25783",
+          "sid": 25783,
+          "current_val": "|cffa0beaaСоздатель расы:|r |cffc8dcaaEscanor|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaСложность:|r |cfff0dc96●●●|r●●|r|n|cffa0beaaПериод:|r |cffc8dcaaWrath of the Lich King|r|n|n|cffc8cde1Плеть|r является одной из трех основных фракций нежити, существующих в мире Азерот, и основной силой, желающей захватить контроль над миром. Она имеет огромную \"империю\". Созданная изначально как предвестник вторжения Пылающего Легиона после предыдущих неудач, |cffc8cde1Плеть|r освободилась от ее демонических хозяев и под железной волей ужасающего Короля-лича создала свою базу на арктическом континенте Нордскол."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    }
+  },
+  "buildings": {
+    "n014": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_2116",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_2116",
+          "sid": 2116,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_8527",
+          "sid": 8527,
+          "current_val": "|cffc8cde1Некрополь|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_1236",
+          "sid": 1236,
+          "current_val": "Призвать |cffc8cde1Некрополь|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41914",
+          "sid": 41914,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa100 сек.|r|n|nБазовое здание. Обучает послушников и хранит древесину. Можно улучшить до чертогов мертвых, а затем – до темной цитадели, чтобы получить доступ к новым зданиям и типам войск."
+        }
+      },
+      "trains": "u00P",
+      "researches": null,
+      "upgrades_to": "u00F",
+      "upgrades": null,
+      "abils": "A0LJ,A0LI,A0IQ,Argl",
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "u00F": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_7203",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_7203",
+          "sid": 7203,
+          "current_val": "Z"
+        },
+        "name": {
+          "raw": "TRIGSTR_8554",
+          "sid": 8554,
+          "current_val": "|cffc8cde1Чертоги мертвых|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_1234",
+          "sid": 1234,
+          "current_val": "Улучшить до |cffc8cde1Чертогов мертвых|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41907",
+          "sid": 41907,
+          "current_val": "|cff7dc87dВремя улучшения:|r |cffaaf0aa100 сек.|r|n|nУлучшите до чертогов мертвых, чтобы получить доступ к новым зданиям и типам войск. "
+        }
+      },
+      "trains": "u00P",
+      "researches": null,
+      "upgrades_to": "u00G",
+      "upgrades": "Rgfo",
+      "abils": "A0LJ,A0LI,A0IQ,Argl",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,air,item,ward",
+      "targs2": null
+    },
+    "u00G": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_7268",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_7268",
+          "sid": 7268,
+          "current_val": "Z"
+        },
+        "name": {
+          "raw": "TRIGSTR_8555",
+          "sid": 8555,
+          "current_val": "|cffc8cde1Темная цитадель|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_1235",
+          "sid": 1235,
+          "current_val": "Улучшить до |cffc8cde1Темной цитадели|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41908",
+          "sid": 41908,
+          "current_val": "|cff7dc87dВремя улучшения:|r |cffaaf0aa140 сек.|r|n|nУлучшите до темной цитадели, чтобы получить доступ к новым зданиям и типам войск. "
+        }
+      },
+      "trains": "u00P",
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "Rgfo",
+      "abils": "A1KB,A0LJ,A0LI,A0IQ,Argl",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,air,item,ward",
+      "targs2": null
+    },
+    "u00H": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_1646",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_1646",
+          "sid": 1646,
+          "current_val": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_8556",
+          "sid": 8556,
+          "current_val": "|cffc8cde1Зиккурат|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_12019",
+          "sid": 12019,
+          "current_val": "Призвать |cffc8cde1Зиккурат|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41909",
+          "sid": 41909,
+          "current_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa50 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.Можно улучшить до оборонительного здания.\n\n|cffffff00Приносит 40 инкома|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": "u00I,u00J",
+      "upgrades": "Rgfo",
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "u00I": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_7513",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_7513",
+          "sid": 7513,
+          "current_val": "Z"
+        },
+        "name": {
+          "raw": "TRIGSTR_8557",
+          "sid": 8557,
+          "current_val": "|cffc8cde1Башня духов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_40236",
+          "sid": 40236,
+          "current_val": "Призвать |cffc8cde1Башню духов|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41910",
+          "sid": 41910,
+          "current_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nОборонительное сооружение."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05N",
+      "abils": null,
+      "heroabils": null,
+      "targs1": "ground,structure,debris,air,item,ward",
+      "targs2": null
+    },
+    "u00J": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_2538",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_2538",
+          "sid": 2538,
+          "current_val": "X"
+        },
+        "name": {
+          "raw": "TRIGSTR_8558",
+          "sid": 8558,
+          "current_val": "|cffc8cde1Нерубская башня|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_40237",
+          "sid": 40237,
+          "current_val": "Призвать |cffc8cde1Нерубскую башню|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41911",
+          "sid": 41911,
+          "current_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa30 сек.|r|n|nОборонительное сооружение."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05N",
+      "abils": "Afra",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,air,item,ward",
+      "targs2": null
+    },
+    "u00K": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_1516",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_1516",
+          "sid": 1516,
+          "current_val": "S"
+        },
+        "name": {
+          "raw": "TRIGSTR_8559",
+          "sid": 8559,
+          "current_val": "|cffc8cde1Алтарь тьмы|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_13004",
+          "sid": 13004,
+          "current_val": "Призвать |cffc8cde1Алтарь тьмы|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_13016",
+          "sid": 13016,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nСооружение позволяющее призывать новых и воскрешает павших героев."
+        }
+      },
+      "trains": "U00O,U00V,U00U",
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "Rgfo",
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "u00L": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_3400",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_3400",
+          "sid": 3400,
+          "current_val": "E"
+        },
+        "name": {
+          "raw": "TRIGSTR_8560",
+          "sid": 8560,
+          "current_val": "|cffc8cde1Кладбище|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_13006",
+          "sid": 13006,
+          "current_val": "Призвать |cffc8cde1Кладбище|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41517",
+          "sid": 41517,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa80 сек.|r|n|nКладбище дает возможность производить исследования, улучшающие боевые характеристики существ армии Тьмы, а также является источником тел и хранилищем древесины."
+        }
+      },
+      "trains": null,
+      "researches": "R0DQ,R05I,R05J,R05N,R05O,R05P,R05Q",
+      "upgrades_to": null,
+      "upgrades": "Rgfo",
+      "abils": "A0BR,Agyd,Arlm",
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "u00M": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_4034",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_4034",
+          "sid": 4034,
+          "current_val": "D"
+        },
+        "name": {
+          "raw": "TRIGSTR_8561",
+          "sid": 8561,
+          "current_val": "|cffc8cde1Бойня|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_13007",
+          "sid": 13007,
+          "current_val": "Призвать |cffc8cde1Бойня|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41912",
+          "sid": 41912,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nНа бойне можно нанимать мясников и труповозки, а также создавать обсидиановые статуи. Кроме того, она позволяет изобрести способности ''Ядовитое облако''."
+        }
+      },
+      "trains": "u00B,u00D,u00A",
+      "researches": "R05L,R05H",
+      "upgrades_to": null,
+      "upgrades": "Rgfo",
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "u00N": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_1866",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_1866",
+          "sid": 1866,
+          "current_val": "R"
+        },
+        "name": {
+          "raw": "TRIGSTR_8562",
+          "sid": 8562,
+          "current_val": "|cffc8cde1Храм проклятых|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_12020",
+          "sid": 12020,
+          "current_val": "Призвать |cffc8cde1Храм проклятых|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41913",
+          "sid": 41913,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nХрам Проклятых позволяет нанимать магов армии Тьмы - некромантов, безумных ученых и Скелетов-магов"
+        }
+      },
+      "trains": "u00C,u008,u00E",
+      "researches": "R05E,R05F,R05G",
+      "upgrades_to": null,
+      "upgrades": "Rgfo",
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "n012": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_2316",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_2316",
+          "sid": 2316,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_8519",
+          "sid": 8519,
+          "current_val": "|cffc8cde1Склеп|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_12017",
+          "sid": 12017,
+          "current_val": "Построить |cffc8cde1Склеп|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41832",
+          "sid": 41832,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nСклеп позволяет нанимать основных воинов армии Тьмы - вурдалаков, могильщиков и горгулий. Также склеп позволяет изобрести способности ''Ярость вурдалака'', ''Каннибализм'', ''Статуя'', ''Паутина'' и ''Норы могильщиков''."
+        }
+      },
+      "trains": "n011,n013,u03E",
+      "researches": "R05A,R05R,R05D,R05C",
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "u03B": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_9566",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_9566",
+          "sid": 9566,
+          "current_val": "X"
+        },
+        "name": {
+          "raw": "TRIGSTR_2658",
+          "sid": 2658,
+          "current_val": "|cffc8cde1Костяной завод|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_8999",
+          "sid": 8999,
+          "current_val": "Призвать |cffc8cde1Костяной завод|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_13000",
+          "sid": 13000,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa70 сек.|r|n|n На костяном заводе создаются ледяные змеи. "
+        }
+      },
+      "trains": "u034",
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "Rgfo",
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "u017": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_1906",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_1906",
+          "sid": 1906,
+          "current_val": "R"
+        },
+        "name": {
+          "raw": "TRIGSTR_9890",
+          "sid": 9890,
+          "current_val": "|cffdcaa92Алтарь перевоплощения|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_9891",
+          "sid": 9891,
+          "current_val": "Призвать |cffdcaa92Алтарь перевоплощения|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_13021",
+          "sid": 13021,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa65 сек.|r|n|nПозволяет совершать жертвоприношения, превращая послушников в невидимые тени. Тени обнаруживают невидимые войска, но не могут атаковать."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "Rgfo",
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    }
+  },
+  "heroes": {
+    "U00O": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_7620",
+      "researchhotkey": null,
+      "fields": {
+        "awakentip": {
+          "raw": "TRIGSTR_41840",
+          "sid": 41840,
+          "current_val": "Воскресить |cffc8cde1Рыцарь смерти|r"
+        },
+        "hotkey": {
+          "raw": "TRIGSTR_7620",
+          "sid": 7620,
+          "current_val": "Z"
+        },
+        "name": {
+          "raw": "TRIGSTR_24784",
+          "sid": 24784,
+          "current_val": "|cffc8cde1Рыцарь Смерти|r"
+        },
+        "propernames": {
+          "raw": "TRIGSTR_41834",
+          "sid": 41834,
+          "current_val": "|cffc8cde1Орбаз Кровопорч|r"
+        },
+        "revivetip": {
+          "raw": "TRIGSTR_41842",
+          "sid": 41842,
+          "current_val": "Воскресить |cffc8cde1Рыцарь смерти|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41841",
+          "sid": 41841,
+          "current_val": "Призвать |cffc8cde1Рыцарь смерти|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_31686",
+          "sid": 31686,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n\nЛучший рыцарь смерти армии Короля лича, мастер ближнего боя."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": "AInv",
+      "heroabils": "A0CO,A0CP,A0CR,A0CN",
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": "ground,structure,debris,air,item,ward"
+    },
+    "U00V": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_2610",
+      "researchhotkey": null,
+      "fields": {
+        "awakentip": {
+          "raw": "TRIGSTR_9056",
+          "sid": 9056,
+          "current_val": "Воскресить |cffc8cde1Владыка склепа|r"
+        },
+        "hotkey": {
+          "raw": "TRIGSTR_2610",
+          "sid": 2610,
+          "current_val": "X"
+        },
+        "name": {
+          "raw": "TRIGSTR_9055",
+          "sid": 9055,
+          "current_val": "|cffc8cde1Владыка склепа|r"
+        },
+        "namecount": {
+          "raw": "1",
+          "sid": null,
+          "current_val": "1"
+        },
+        "propernames": {
+          "raw": "TRIGSTR_9058",
+          "sid": 9058,
+          "current_val": " |cffc8cde1Фебис-Ра|r"
+        },
+        "revivetip": {
+          "raw": "TRIGSTR_9057",
+          "sid": 9057,
+          "current_val": "Воскресить |cffc8cde1Владыка склепа|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_1237",
+          "sid": 1237,
+          "current_val": "Призвать |cffc8cde1Владыку склепа|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_31687",
+          "sid": 31687,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n\nОдин из павших владык нерубов, полностью подчиняющийся королю личу."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": "AInv",
+      "heroabils": "AQ95,UN99,A0CS,AQ11",
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": "ground,structure,debris,air,item,ward"
+    },
+    "U00U": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_4175",
+      "researchhotkey": null,
+      "fields": {
+        "awakentip": {
+          "raw": "TRIGSTR_9001",
+          "sid": 9001,
+          "current_val": "Воскресить |cffc8cde1Некромант|r"
+        },
+        "hotkey": {
+          "raw": "TRIGSTR_4175",
+          "sid": 4175,
+          "current_val": "C"
+        },
+        "name": {
+          "raw": "TRIGSTR_18652",
+          "sid": 18652,
+          "current_val": "|cffc8cde1Некромант|r"
+        },
+        "propernames": {
+          "raw": "TRIGSTR_41829",
+          "sid": 41829,
+          "current_val": "|cffc8cde1Нот Чумной|r"
+        },
+        "revivetip": {
+          "raw": "TRIGSTR_41839",
+          "sid": 41839,
+          "current_val": "Воскресить |cffc8cde1Некромант|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15177",
+          "sid": 15177,
+          "current_val": "Призвать |cffc8cde1Некромант|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_31685",
+          "sid": 31685,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|n\nОдин из лучших некромантов армии короля лича."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": "AInv",
+      "heroabils": "A0CK,A0CM,A0BW,A1Q7",
+      "targs1": "ground,structure,debris,air,item,ward",
+      "targs2": "ground,structure,debris,air,item,ward"
+    },
+    "U030": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_8723",
+      "researchhotkey": null,
+      "fields": {
+        "awakentip": {
+          "raw": "TRIGSTR_25109",
+          "sid": 25109,
+          "current_val": "Воскресить |cffc8cde1Короля-предателя|r"
+        },
+        "hotkey": {
+          "raw": "TRIGSTR_8723",
+          "sid": 8723,
+          "current_val": "X"
+        },
+        "name": {
+          "raw": "TRIGSTR_40365",
+          "sid": 40365,
+          "current_val": "|cffc8cde1Ануб`Арак|r"
+        },
+        "namecount": {
+          "raw": "1",
+          "sid": null,
+          "current_val": "1"
+        },
+        "propernames": {
+          "raw": "TRIGSTR_25220",
+          "sid": 25220,
+          "current_val": " |cffc8cde1Ануб`Арак|r"
+        },
+        "revivetip": {
+          "raw": "TRIGSTR_25118",
+          "sid": 25118,
+          "current_val": "Воскресить |cffc8cde1Короля-предателя|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_27913",
+          "sid": 27913,
+          "current_val": "Призвать |cffc8cde1Короля-предателя|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_29594",
+          "sid": 29594,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaЛегендарный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n\nАнуб'арак является царём нерубианского королевства Азжол-Неруб. Он был убит вместе с другими нерубианцами во времена Войны Паука, а позже был воскрешён Нер'зулом и стал подчиняться приказам Короля-лича."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": "A1LK,AInv",
+      "heroabils": "A1LI,A1LJ,A1LL,A1LM",
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": "ground,structure,debris,air,item,ward"
+    },
+    "U014": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_2245",
+      "researchhotkey": null,
+      "fields": {
+        "awakentip": {
+          "raw": "TRIGSTR_20990",
+          "sid": 20990,
+          "current_val": "Воскресить |cffc8cde1Короля-Лича|r "
+        },
+        "hotkey": {
+          "raw": "TRIGSTR_2245",
+          "sid": 2245,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_20994",
+          "sid": 20994,
+          "current_val": "|cffc8cde1Король-Лич|r "
+        },
+        "propernames": {
+          "raw": "TRIGSTR_9111",
+          "sid": 9111,
+          "current_val": "|cffc8cde1Артас|r"
+        },
+        "revivetip": {
+          "raw": "TRIGSTR_20991",
+          "sid": 20991,
+          "current_val": "Воскресить |cffc8cde1Короля-Лича|r "
+        },
+        "tip": {
+          "raw": "TRIGSTR_20993",
+          "sid": 20993,
+          "current_val": "Призвать |cffc8cde1Короля-Лича|r "
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_20992",
+          "sid": 20992,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa 50 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaЛегендарный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n|cffc8cde1Король-Лич|r  – повелитель Плети, который мысленно управляет своим войском нежити с Ледяного Трона, расположенного на вершине Цитадели Ледяной Короны. Кил'джеден Искуситель создал Короля-лича из души орочьего шамана Нер'зула, чтобы нежить, ведомая им, ослабила Азерот перед вторжением Пылающего Легиона. Король-лич был пленён внутри Ледяного Трона вместе с Ледяной Скорбью и в конце концов предал Кил'джедена и слился воедино с человеческим принцем Артасом Менетилом. Во время войны в Нордсколе Король-лич был побежден Тирионом Фордрингом и его чемпионами Света."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": "A0WB,AInv",
+      "heroabils": "A0WD,A0CX,A0WE,A0CZ",
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": "ground,structure,debris,air,item,ward"
+    },
+    "CM00": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_8816",
+      "researchhotkey": null,
+      "fields": {
+        "awakentip": {
+          "raw": "TRIGSTR_1229",
+          "sid": 1229,
+          "current_val": "Воскресить |cffc8cde1Мертвого капитана|r"
+        },
+        "hotkey": {
+          "raw": "TRIGSTR_8816",
+          "sid": 8816,
+          "current_val": "C"
+        },
+        "name": {
+          "raw": "TRIGSTR_1225",
+          "sid": 1225,
+          "current_val": "|cffc8cde1Мертвый капитан|r"
+        },
+        "namecount": {
+          "raw": "1",
+          "sid": null,
+          "current_val": "1"
+        },
+        "propernames": {
+          "raw": "TRIGSTR_1226",
+          "sid": 1226,
+          "current_val": "Марвин"
+        },
+        "revivetip": {
+          "raw": "TRIGSTR_1228",
+          "sid": 1228,
+          "current_val": "Воскресить |cffc8cde1Мертвого капитана|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_1227",
+          "sid": 1227,
+          "current_val": "Призвать |cffc8cde1Мертвого капитана|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_40360",
+          "sid": 40360,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa 50 сек  Тестовый минигерой."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": "FL05",
+      "heroabils": "CM05,CM01,CM02,CM04",
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": "ground,structure,debris,air,item,ward"
+    },
+    "FL00": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_8755",
+      "researchhotkey": null,
+      "fields": {
+        "awakentip": {
+          "raw": "TRIGSTR_1224",
+          "sid": 1224,
+          "current_val": "Воскресить |cffc8cde1Мертвого капитана|r"
+        },
+        "hotkey": {
+          "raw": "TRIGSTR_8755",
+          "sid": 8755,
+          "current_val": "X"
+        },
+        "name": {
+          "raw": "TRIGSTR_701",
+          "sid": 701,
+          "current_val": "|cffc8cde1Мертвый капитан|r"
+        },
+        "namecount": {
+          "raw": "1",
+          "sid": null,
+          "current_val": "1"
+        },
+        "propernames": {
+          "raw": "TRIGSTR_703",
+          "sid": 703,
+          "current_val": "Фалрик"
+        },
+        "revivetip": {
+          "raw": "TRIGSTR_708",
+          "sid": 708,
+          "current_val": "Воскресить |cffc8cde1Мертвого капитана|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_707",
+          "sid": 707,
+          "current_val": "Призвать |cffc8cde1Мертвого капитана|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_40358",
+          "sid": 40358,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa 50 сек. Тестовый минигерой"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": "FL05",
+      "heroabils": "FL02,FL04,FL03,FL01",
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": "ground,structure,debris,air,item,ward"
+    }
+  },
+  "units": {
+    "u00P": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_2120",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_2120",
+          "sid": 2120,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_8530",
+          "sid": 8530,
+          "current_val": "|cffc8cde1Послушник|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41915",
+          "sid": 41915,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa15 сек.|r|n|nБазовый рабочий. Призывает и ремонтирует здания, а также добывает золото. Можно принести в жертву в жертвенной яме, чтобы создать тень. |n|n|cffffcc00Атакует наземные цели.|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "Rguv",
+      "abils": "Arst,Auns,A0I3",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": null
+    },
+    "n011": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_2005",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_2005",
+          "sid": 2005,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_8517",
+          "sid": 8517,
+          "current_val": "|cffc8cde1Вурдалак|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_8675",
+          "sid": 8675,
+          "current_val": "Воскресить |cffc8cde1вурдалака|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_38398",
+          "sid": 38398,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa19 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|nБазовый воин, способный добывать древесину. Может изучить «Каннибализм» и «Ярость вурдалака». |n|n|cffffcc00Атакует наземные цели и деревья.|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R0DQ,R05O,R05Q,R05I,R05J,R05R",
+      "abils": "A0BO,A0BP,ANha",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": null
+    },
+    "n013": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_3370",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_3370",
+          "sid": 3370,
+          "current_val": "E"
+        },
+        "name": {
+          "raw": "TRIGSTR_30586",
+          "sid": 30586,
+          "current_val": "|cffc8cde1Горгулья|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_30604",
+          "sid": 30604,
+          "current_val": "Воскресить |cffc8cde1Горгулью|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_38399",
+          "sid": 38399,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa28 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n|nМожет научиться превращаться в статую.|n|n|cffffcc00Атакует наземные"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05N,R05P,R05I,R05J",
+      "abils": "Astn,A0BO",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,air,item,ward",
+      "targs2": null
+    },
+    "u03E": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_8704",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_8704",
+          "sid": 8704,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_8520",
+          "sid": 8520,
+          "current_val": "|cffc8cde1Некроарахнид|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_33298",
+          "sid": 33298,
+          "current_val": "Воскресить |cffc8cde1Некроарахнид|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_42347",
+          "sid": 42347,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa33 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n|nВоин поддержки дальнего боя. Может изучить «Паутину» и «Закопаться». |n|n|cffffcc00Атакует наземные цели.|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05N,R05P,R05C,R05D,R05I,R05J",
+      "abils": "A0BS,Aspa,A1N8,A0BO",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": null
+    },
+    "u02B": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_5834",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_5834",
+          "sid": 5834,
+          "current_val": "E"
+        },
+        "name": {
+          "raw": "TRIGSTR_3848",
+          "sid": 3848,
+          "current_val": "|cffc8cde1Некроарахнид|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_3849",
+          "sid": 3849,
+          "current_val": "Воскресить |cffc8cde1некроарахнида|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_3954",
+          "sid": 3954,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n|nВоин поддержки дальнего боя. Может изучить «|cff808080Паутину|r» и «|cff808080Закопаться|r»."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05N,R05P,R05C,R05D,R05I,R05J",
+      "abils": "A0BO,A0BS,Aspa,Aiun,A1N8",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": null
+    },
+    "u00A": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_3371",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_3371",
+          "sid": 3371,
+          "current_val": "E"
+        },
+        "name": {
+          "raw": "TRIGSTR_8523",
+          "sid": 8523,
+          "current_val": "|cffc8cde1Поганище|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_8607",
+          "sid": 8607,
+          "current_val": "Воскресить |cffc8cde1поганище|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_38400",
+          "sid": 38400,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa37 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|n\nТяжелый воин ближнего боя. Может изучить «Болезнетворное облако» и «Каннибализм». |n|n|cffffcc00Атакует наземные цели.|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05Q,R05O,R05H,R05I,R05J",
+      "abils": "A0BO,A0BP,A0C5",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": null
+    },
+    "u00B": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_2080",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_2080",
+          "sid": 2080,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_8524",
+          "sid": 8524,
+          "current_val": "|cffc8cde1Мясной фургон|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_8679",
+          "sid": 8679,
+          "current_val": "Построить |cffc8cde1мясной фургон|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_38401",
+          "sid": 38401,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa31 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный урон|r|n|n\nТранспорт для перевозки трупов, а также дальнобойное осадное орудие, эффективное против зданий, но медленное и уязвимое. Можно оснастить «Болезнетворным облаком». |n|n|cffffcc00Атакует наземные цели и деревья.|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05H,R05O",
+      "abils": "Sch2,Amel,Amed,A0C7,A0C8",
+      "heroabils": null,
+      "targs1": "ground,debris,tree,wall,item,ward",
+      "targs2": "structure"
+    },
+    "u00D": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_2317",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_2317",
+          "sid": 2317,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_8526",
+          "sid": 8526,
+          "current_val": "|cffc8cde1Обсидиановая статуя|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_8681",
+          "sid": 8681,
+          "current_val": "Создать |cffc8cde1обсидиановую статую|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_38403",
+          "sid": 38403,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa31 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r|n|nПрочная каменная статуя, оживленная с помощью магии. Способна манипулировать магической энергией. "
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05N,R05P",
+      "abils": "A0C4,Arpl,Arpm",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,air,item,ward",
+      "targs2": null
+    },
+    "u00C": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_2087",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_2087",
+          "sid": 2087,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_8525",
+          "sid": 8525,
+          "current_val": "|cffc8cde1Некромант|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_8680",
+          "sid": 8680,
+          "current_val": "Воскресить |cffc8cde1некроманта|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_38402",
+          "sid": 38402,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa25 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r|n|nВоин поддержки дальнего боя. Может изучить «Паутину» и «Закопаться». |n|n|cffffcc00Атакует наземные цели.|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05E,R05I,R05J,R05N,R05P,R05I",
+      "abils": "A0BO,A0BT,A0BU,A1PV",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,air,item,ward",
+      "targs2": null
+    },
+    "u008": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_2584",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_2584",
+          "sid": 2584,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_31243",
+          "sid": 31243,
+          "current_val": "|cffc8cde1Безумный ученый|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_8682",
+          "sid": 8682,
+          "current_val": "|cffc8cde1Воскресить Безумца|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_33326",
+          "sid": 33326,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa35 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r|n|nБезумный ученый Плети, прошедший через многие эксперементы. Способен лечить союзников и отравлять врагов."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05G,R05I,R05J,R05N,R05P,R05I",
+      "abils": "A0BO,A0C0,A0C2,A1PX",
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "u00E": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_3438",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_3438",
+          "sid": 3438,
+          "current_val": "E"
+        },
+        "name": {
+          "raw": "TRIGSTR_8568",
+          "sid": 8568,
+          "current_val": "|cffc8cde1Скелет-маг|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_8683",
+          "sid": 8683,
+          "current_val": "Воскресить |cffc8cde1Скелет-маг|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41921",
+          "sid": 41921,
+          "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa24 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r|n|nБазовый маг |cff808080Плети|r, способный на \"|cff808080Огненный шар|r\", \"|cff808080Порча|r\", \"|cff808080Проклятие|r\"."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05F,R05I,R05J,R05N,R05P,R05I",
+      "abils": "A0BX,unA5,A1PY,A0BO",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,air,item,ward",
+      "targs2": null
+    },
+    "u034": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "TRIGSTR_7800",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_7800",
+          "sid": 7800,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_39891",
+          "sid": 39891,
+          "current_val": "|cffc8cde1Ледяной змей|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39892",
+          "sid": 39892,
+          "current_val": "Создать |cffc8cde1Ледяного змея|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_42345",
+          "sid": 42345,
+          "current_val": "|cff7dc87dВремя восстановления заряда:|r |cffaaf0aa52 сек|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nТяжелое летающее существо. Может изучить «Леденящее дыхание». |n|n|cffffcc00Атакует наземные и воздушные цели.|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05N,R05P,R05I,R05J",
+      "abils": "unA0,A0BO",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": "air"
+    },
+    "ft00": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_39427",
+          "sid": 39427,
+          "current_val": "|cffc8cde1Скелет-воин|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_3806",
+          "sid": 3806,
+          "current_val": "Воскресить скелета-воина"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05O,R05Q,R05I,R05J",
+      "abils": "A0BO",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": null
+    },
+    "ft01": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "tip": {
+          "raw": "TRIGSTR_630",
+          "sid": 630,
+          "current_val": "Призвать скелета-лучника"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05O,R05Q,R05I,R05J",
+      "abils": null,
+      "heroabils": null,
+      "targs1": "ground,structure,debris,air,item,ward",
+      "targs2": null
+    },
+    "n07H": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_22330",
+          "sid": 22330,
+          "current_val": "|cffc8cde1Скелет-орк|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_12380",
+          "sid": 12380,
+          "current_val": "Воскресить скелета-орка"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_12381",
+          "sid": 12381,
+          "current_val": "Легкий воин ближнего боя. |n|n|cffffcc00Атакует наземные цели"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05O,R05Q,R05I,R05J",
+      "abils": "A0BO",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": null
+    },
+    "u03D": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_632",
+          "sid": 632,
+          "current_val": "|cffc8cde1Скелет-лучник|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_637",
+          "sid": 637,
+          "current_val": "Воскресить скелета-лучника"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R05O,R05Q,R05I,R05J",
+      "abils": "A0BO",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": null
+    },
+    "n016": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "F",
+      "researchhotkey": null,
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_8684",
+          "sid": 8684,
+          "current_val": "|cffc8cde1Вурдалак|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R0DQ,R05O,R05Q,R05I,R05J,R05R",
+      "abils": "A0BO,A0BP,ANha",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": null
+    },
+    "n017": {
+      "type": "unit",
+      "levels": 1,
+      "hotkey": "F",
+      "researchhotkey": null,
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_12337",
+          "sid": 12337,
+          "current_val": "|cffc8cde1Хилой вурдалак|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": "R0DQ,R05O,R05Q,R05I,R05J,R05R",
+      "abils": "A0BO,A0BP,Ahrl",
+      "heroabils": null,
+      "targs1": "ground,structure,debris,item,ward",
+      "targs2": null
+    }
+  },
+  "researches": {
+    "R0DQ": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_36994",
+          "sid": 36994,
+          "current_val": "E"
+        },
+        "hotkey2": {
+          "raw": "TRIGSTR_37415",
+          "sid": 37415,
+          "current_val": "E"
+        },
+        "hotkey3": {
+          "raw": "TRIGSTR_36987",
+          "sid": 36987,
+          "current_val": "E"
+        },
+        "hotkey4": {
+          "raw": "TRIGSTR_36993",
+          "sid": 36993,
+          "current_val": "E"
+        },
+        "hotkey5": {
+          "raw": "TRIGSTR_38438",
+          "sid": 38438,
+          "current_val": "Q"
+        },
+        "hotkey6": {
+          "raw": "TRIGSTR_38444",
+          "sid": 38444,
+          "current_val": "Q"
+        },
+        "name1": {
+          "raw": "TRIGSTR_3216",
+          "sid": 3216,
+          "current_val": "Улучшенные инструменты"
+        },
+        "name2": {
+          "raw": "TRIGSTR_3217",
+          "sid": 3217,
+          "current_val": "Улучшенные инструменты"
+        },
+        "name3": {
+          "raw": "TRIGSTR_3218",
+          "sid": 3218,
+          "current_val": "Улучшенные инструменты"
+        },
+        "name4": {
+          "raw": "TRIGSTR_3219",
+          "sid": 3219,
+          "current_val": "Улучшенные инструменты"
+        },
+        "name5": {
+          "raw": "TRIGSTR_16877",
+          "sid": 16877,
+          "current_val": "Улучшенные инструменты"
+        },
+        "name6": {
+          "raw": "TRIGSTR_16891",
+          "sid": 16891,
+          "current_val": "Улучшенные инструменты"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_3222",
+          "sid": 3222,
+          "current_val": "Исследовать улучшенные инструменты"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_3223",
+          "sid": 3223,
+          "current_val": "Исследовать улучшенные инструменты"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_3224",
+          "sid": 3224,
+          "current_val": "Исследовать улучшенные инструменты"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_3225",
+          "sid": 3225,
+          "current_val": "Исследовать улучшенные инструменты"
+        },
+        "tip5": {
+          "raw": "TRIGSTR_20620",
+          "sid": 20620,
+          "current_val": "Исследовать улучшенные инструменты"
+        },
+        "tip6": {
+          "raw": "TRIGSTR_20786",
+          "sid": 20786,
+          "current_val": "Исследовать улучшенные инструменты"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_21585",
+          "sid": 21585,
+          "current_val": "Увеличивают объем переносимой работниками древесины на 8."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_21344",
+          "sid": 21344,
+          "current_val": "Увеличивают объем переносимой работниками древесины на 8."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_21455",
+          "sid": 21455,
+          "current_val": "Увеличивают объем переносимой работниками древесины на 8."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_21467",
+          "sid": 21467,
+          "current_val": "Увеличивают объем переносимой работниками древесины на 8."
+        },
+        "ubertip5": {
+          "raw": "TRIGSTR_21507",
+          "sid": 21507,
+          "current_val": "Увеличивают объем переносимой работниками древесины на 5."
+        },
+        "ubertip6": {
+          "raw": "TRIGSTR_21508",
+          "sid": 21508,
+          "current_val": "Увеличивают объем переносимой работниками древесины на 5."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R05I": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_26596",
+          "sid": 26596,
+          "current_val": "X"
+        },
+        "hotkey2": {
+          "raw": "TRIGSTR_26597",
+          "sid": 26597,
+          "current_val": "X"
+        },
+        "hotkey3": {
+          "raw": "TRIGSTR_26598",
+          "sid": 26598,
+          "current_val": "X"
+        },
+        "hotkey4": {
+          "raw": "TRIGSTR_26611",
+          "sid": 26611,
+          "current_val": "X"
+        },
+        "name1": {
+          "raw": "TRIGSTR_8706",
+          "sid": 8706,
+          "current_val": "|cffc8cde1Усугубить Разложение |r"
+        },
+        "name2": {
+          "raw": "TRIGSTR_8707",
+          "sid": 8707,
+          "current_val": "|cffc8cde1Усугубить Разложение |r"
+        },
+        "name3": {
+          "raw": "TRIGSTR_8714",
+          "sid": 8714,
+          "current_val": "|cffc8cde1Усугубить Разложение |r"
+        },
+        "name4": {
+          "raw": "TRIGSTR_8715",
+          "sid": 8715,
+          "current_val": "|cffc8cde1Усугубить Разложение |r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8708",
+          "sid": 8708,
+          "current_val": "|cffc8cde1Усугубить Разложение |r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_8709",
+          "sid": 8709,
+          "current_val": "|cffc8cde1Усугубить Разложение |r"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_8716",
+          "sid": 8716,
+          "current_val": "|cffc8cde1Усугубить Разложение |r"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_8717",
+          "sid": 8717,
+          "current_val": "|cffc8cde1Усугубить Разложение |r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_29577",
+          "sid": 29577,
+          "current_val": "Увеличивает урон нежити, при этом понижая хп.\nУрон (+4)\nХп (-35)"
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_29578",
+          "sid": 29578,
+          "current_val": "Увеличивает урон нежити, при этом понижая хп.\nУрон (+4)\nХп (-35)"
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_29579",
+          "sid": 29579,
+          "current_val": "Увеличивает урон нежити, при этом понижая хп.\nУрон (+4)\nХп (-35)"
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_29580",
+          "sid": 29580,
+          "current_val": "Увеличивает урон нежити, при этом понижая хп.\nУрон (+4)\nХп (-35)"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R05J": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_27507",
+          "sid": 27507,
+          "current_val": "Z"
+        },
+        "hotkey2": {
+          "raw": "TRIGSTR_27744",
+          "sid": 27744,
+          "current_val": "Z"
+        },
+        "hotkey3": {
+          "raw": "TRIGSTR_27775",
+          "sid": 27775,
+          "current_val": "Z"
+        },
+        "hotkey4": {
+          "raw": "TRIGSTR_27776",
+          "sid": 27776,
+          "current_val": "Z"
+        },
+        "name1": {
+          "raw": "TRIGSTR_8724",
+          "sid": 8724,
+          "current_val": "|cffc8cde1Остановить разложение|r"
+        },
+        "name2": {
+          "raw": "TRIGSTR_8725",
+          "sid": 8725,
+          "current_val": "|cffc8cde1Остановить разложение|r"
+        },
+        "name3": {
+          "raw": "TRIGSTR_8732",
+          "sid": 8732,
+          "current_val": "|cffc8cde1Остановить разложение|r"
+        },
+        "name4": {
+          "raw": "TRIGSTR_8733",
+          "sid": 8733,
+          "current_val": "|cffc8cde1Остановить разложение|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8726",
+          "sid": 8726,
+          "current_val": "|cffc8cde1Остановить разложение|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_8727",
+          "sid": 8727,
+          "current_val": "|cffc8cde1Остановить разложение|r"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_8734",
+          "sid": 8734,
+          "current_val": "|cffc8cde1Остановить разложение|r"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_8735",
+          "sid": 8735,
+          "current_val": "|cffc8cde1Остановить разложение|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_29581",
+          "sid": 29581,
+          "current_val": "Увеличивает хп нежити, при этом понижая урон.\nУрон (-4)\nХп (+35)"
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_29582",
+          "sid": 29582,
+          "current_val": "Увеличивает хп нежити, при этом понижая урон.\nУрон (-4)\nХп (+35)"
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_29583",
+          "sid": 29583,
+          "current_val": "Увеличивает хп нежити, при этом понижая урон.\nУрон (-4)\nХп (+35)"
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_29584",
+          "sid": 29584,
+          "current_val": "Увеличивает хп нежити, при этом понижая урон.\nУрон (-4)\nХп (+35)"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R05N": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_35702",
+          "sid": 35702,
+          "current_val": "W"
+        },
+        "hotkey2": {
+          "raw": "TRIGSTR_35747",
+          "sid": 35747,
+          "current_val": "W"
+        },
+        "hotkey3": {
+          "raw": "TRIGSTR_35922",
+          "sid": 35922,
+          "current_val": "W"
+        },
+        "hotkey4": {
+          "raw": "TRIGSTR_35748",
+          "sid": 35748,
+          "current_val": "W"
+        },
+        "hotkey5": {
+          "raw": "TRIGSTR_35923",
+          "sid": 35923,
+          "current_val": "W"
+        },
+        "hotkey6": {
+          "raw": "TRIGSTR_35924",
+          "sid": 35924,
+          "current_val": "W"
+        },
+        "name1": {
+          "raw": "TRIGSTR_8844",
+          "sid": 8844,
+          "current_val": "|cffc8cde1Атаки чудовищ|r"
+        },
+        "name2": {
+          "raw": "TRIGSTR_8845",
+          "sid": 8845,
+          "current_val": "|cffc8cde1Атаки чудовищ|r"
+        },
+        "name3": {
+          "raw": "TRIGSTR_8846",
+          "sid": 8846,
+          "current_val": "|cffc8cde1Улучшенные атаки чудовищ|r"
+        },
+        "name4": {
+          "raw": "TRIGSTR_8849",
+          "sid": 8849,
+          "current_val": "|cffc8cde1Улучшенные атаки чудовищ|r"
+        },
+        "name5": {
+          "raw": "TRIGSTR_8848",
+          "sid": 8848,
+          "current_val": "|cffc8cde1Усиленные атаки чудовищ|r"
+        },
+        "name6": {
+          "raw": "TRIGSTR_8847",
+          "sid": 8847,
+          "current_val": "|cffc8cde1Усиленные атаки чудовищ|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8850",
+          "sid": 8850,
+          "current_val": "Исследовать |cffc8cde1атаки чудовищ|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_8851",
+          "sid": 8851,
+          "current_val": "Исследовать |cffc8cde1атаки чудовищ|r"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_8852",
+          "sid": 8852,
+          "current_val": "Исследовать|cffc8cde1 улучшенные атаки чудовищ|r"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_8856",
+          "sid": 8856,
+          "current_val": "Исследовать|cffc8cde1 улучшенные атаки чудовищ|r"
+        },
+        "tip5": {
+          "raw": "TRIGSTR_8855",
+          "sid": 8855,
+          "current_val": "Исследовать |cffc8cde1усиленные атаки чудовищ|r"
+        },
+        "tip6": {
+          "raw": "TRIGSTR_8854",
+          "sid": 8854,
+          "current_val": "Исследовать |cffc8cde1усиленные атаки чудовищ|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_8853",
+          "sid": 8853,
+          "current_val": "Дополнительно увеличивают урон от атак некроарахнидов, горгулий, сфинксов и ледяных змеев."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_8857",
+          "sid": 8857,
+          "current_val": "Дополнительно увеличивают урон от атак некроарахнидов, горгулий, сфинксов и ледяных змеев."
+        },
+        "ubertip5": {
+          "raw": "TRIGSTR_8858",
+          "sid": 8858,
+          "current_val": "Дополнительно увеличивают урон от атак некроарахнидов, горгулий, сфинксов и ледяных змеев."
+        },
+        "ubertip6": {
+          "raw": "TRIGSTR_8859",
+          "sid": 8859,
+          "current_val": "Дополнительно увеличивают урон от атак некроарахнидов, горгулий, сфинксов и ледяных змеев."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R05O": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_34531",
+          "sid": 34531,
+          "current_val": "Q"
+        },
+        "hotkey2": {
+          "raw": "TRIGSTR_34532",
+          "sid": 34532,
+          "current_val": "Q"
+        },
+        "hotkey3": {
+          "raw": "TRIGSTR_34533",
+          "sid": 34533,
+          "current_val": "Q"
+        },
+        "hotkey4": {
+          "raw": "TRIGSTR_34601",
+          "sid": 34601,
+          "current_val": "Q"
+        },
+        "hotkey5": {
+          "raw": "TRIGSTR_34613",
+          "sid": 34613,
+          "current_val": "Q"
+        },
+        "hotkey6": {
+          "raw": "TRIGSTR_34622",
+          "sid": 34622,
+          "current_val": "Q"
+        },
+        "name1": {
+          "raw": "TRIGSTR_8877",
+          "sid": 8877,
+          "current_val": "|cffc8cde1Нечестивая сила|r"
+        },
+        "name2": {
+          "raw": "TRIGSTR_8876",
+          "sid": 8876,
+          "current_val": "|cffc8cde1Нечестивая сила|r"
+        },
+        "name3": {
+          "raw": "TRIGSTR_8874",
+          "sid": 8874,
+          "current_val": "|cffc8cde1Нечестивая мощь|r"
+        },
+        "name4": {
+          "raw": "TRIGSTR_8875",
+          "sid": 8875,
+          "current_val": "|cffc8cde1Нечестивая мощь|r"
+        },
+        "name5": {
+          "raw": "TRIGSTR_8873",
+          "sid": 8873,
+          "current_val": "|cffc8cde1Нечестивый натиск|r"
+        },
+        "name6": {
+          "raw": "TRIGSTR_8872",
+          "sid": 8872,
+          "current_val": "|cffc8cde1Нечестивый натиск|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8880",
+          "sid": 8880,
+          "current_val": "Исследовать |cffc8cde1нечестивую силу|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_8879",
+          "sid": 8879,
+          "current_val": "Исследовать |cffc8cde1нечестивую силу|r"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_8878",
+          "sid": 8878,
+          "current_val": "Исследовать |cffc8cde1нечестивую мощь|r"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_8883",
+          "sid": 8883,
+          "current_val": "Исследовать |cffc8cde1нечестивую мощь|r"
+        },
+        "tip5": {
+          "raw": "TRIGSTR_8882",
+          "sid": 8882,
+          "current_val": "Исследовать |cffc8cde1нечестивый натиск|r"
+        },
+        "tip6": {
+          "raw": "TRIGSTR_8881",
+          "sid": 8881,
+          "current_val": "Исследовать |cffc8cde1нечестивый натиск|r"
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_8884",
+          "sid": 8884,
+          "current_val": "Дополнительно увеличивает урон от атак вурдалаков, мясных фургонов, поганищ, скелетов-воинов и скелетов-магов."
+        },
+        "ubertip5": {
+          "raw": "TRIGSTR_8885",
+          "sid": 8885,
+          "current_val": "Дополнительно увеличивает урон от атак вурдалаков, мясных фургонов, поганищ, скелетов-воинов и скелетов-магов."
+        },
+        "ubertip6": {
+          "raw": "TRIGSTR_8886",
+          "sid": 8886,
+          "current_val": "Дополнительно увеличивает урон от атак вурдалаков, мясных фургонов, поганищ, скелетов-воинов и скелетов-магов."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R05P": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_12892",
+          "sid": 12892,
+          "current_val": "S"
+        },
+        "hotkey2": {
+          "raw": "TRIGSTR_12928",
+          "sid": 12928,
+          "current_val": "S"
+        },
+        "hotkey3": {
+          "raw": "TRIGSTR_12927",
+          "sid": 12927,
+          "current_val": "S"
+        },
+        "hotkey4": {
+          "raw": "TRIGSTR_13037",
+          "sid": 13037,
+          "current_val": "S"
+        },
+        "hotkey5": {
+          "raw": "TRIGSTR_13038",
+          "sid": 13038,
+          "current_val": "S"
+        },
+        "hotkey6": {
+          "raw": "TRIGSTR_13080",
+          "sid": 13080,
+          "current_val": "S"
+        },
+        "name1": {
+          "raw": "TRIGSTR_8887",
+          "sid": 8887,
+          "current_val": "|cffc8cde1Броня чудовищ|r"
+        },
+        "name2": {
+          "raw": "TRIGSTR_8888",
+          "sid": 8888,
+          "current_val": "|cffc8cde1Броня чудовищ|r"
+        },
+        "name3": {
+          "raw": "TRIGSTR_8889",
+          "sid": 8889,
+          "current_val": "|cffc8cde1Улучшенная броня чудовищ|r"
+        },
+        "name4": {
+          "raw": "TRIGSTR_8892",
+          "sid": 8892,
+          "current_val": "|cffc8cde1Улучшенная броня чудовищ|r"
+        },
+        "name5": {
+          "raw": "TRIGSTR_8891",
+          "sid": 8891,
+          "current_val": "|cffc8cde1Усиленная броня чудовищ|r"
+        },
+        "name6": {
+          "raw": "TRIGSTR_8890",
+          "sid": 8890,
+          "current_val": "|cffc8cde1Усиленная броня чудовищ|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8895",
+          "sid": 8895,
+          "current_val": "Исследовать |cffc8cde1броню чудовищ|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_8894",
+          "sid": 8894,
+          "current_val": "Исследовать |cffc8cde1броню чудовищ|r"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_8893",
+          "sid": 8893,
+          "current_val": "Исследовать |cffc8cde1улучшенную броню чудовищ|r"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_8898",
+          "sid": 8898,
+          "current_val": "Исследовать |cffc8cde1улучшенную броню чудовищ|r"
+        },
+        "tip5": {
+          "raw": "TRIGSTR_8897",
+          "sid": 8897,
+          "current_val": "Исследовать |cffc8cde1усиленную броню чудовищ|r"
+        },
+        "tip6": {
+          "raw": "TRIGSTR_8896",
+          "sid": 8896,
+          "current_val": "Исследовать |cffc8cde1усиленную броню чудовищ|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_5867",
+          "sid": 5867,
+          "current_val": "Усиливает броню солдатам дальнего боя армии Нежити."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_5868",
+          "sid": 5868,
+          "current_val": "Усиливает броню солдатам дальнего боя армии Нежити."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_5869",
+          "sid": 5869,
+          "current_val": "Усиливает броню солдатам дальнего боя армии Нежити."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_558",
+          "sid": 558,
+          "current_val": "Усиливает броню солдатам дальнего боя армии Нежити."
+        },
+        "ubertip5": {
+          "raw": "TRIGSTR_5859",
+          "sid": 5859,
+          "current_val": "Усиливает броню солдатам дальнего боя армии Нежити."
+        },
+        "ubertip6": {
+          "raw": "TRIGSTR_5860",
+          "sid": 5860,
+          "current_val": "Усиливает броню солдатам дальнего боя армии Нежити."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R05Q": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_11782",
+          "sid": 11782,
+          "current_val": "A"
+        },
+        "hotkey2": {
+          "raw": "TRIGSTR_11783",
+          "sid": 11783,
+          "current_val": "A"
+        },
+        "hotkey3": {
+          "raw": "TRIGSTR_11808",
+          "sid": 11808,
+          "current_val": "A"
+        },
+        "hotkey4": {
+          "raw": "TRIGSTR_11809",
+          "sid": 11809,
+          "current_val": "A"
+        },
+        "hotkey5": {
+          "raw": "TRIGSTR_11810",
+          "sid": 11810,
+          "current_val": "A"
+        },
+        "hotkey6": {
+          "raw": "TRIGSTR_11811",
+          "sid": 11811,
+          "current_val": "A"
+        },
+        "name1": {
+          "raw": "TRIGSTR_8908",
+          "sid": 8908,
+          "current_val": "|cffc8cde1Нечестивая броня|r"
+        },
+        "name2": {
+          "raw": "TRIGSTR_8909",
+          "sid": 8909,
+          "current_val": "|cffc8cde1Нечестивая броня|r"
+        },
+        "name3": {
+          "raw": "TRIGSTR_8910",
+          "sid": 8910,
+          "current_val": "|cffc8cde1Улучшенная нечестивая броня|r"
+        },
+        "name4": {
+          "raw": "TRIGSTR_8913",
+          "sid": 8913,
+          "current_val": "|cffc8cde1Улучшенная нечестивая броня|r"
+        },
+        "name5": {
+          "raw": "TRIGSTR_8912",
+          "sid": 8912,
+          "current_val": "|cffc8cde1Усиленная нечестивая броня|r"
+        },
+        "name6": {
+          "raw": "TRIGSTR_8911",
+          "sid": 8911,
+          "current_val": "|cffc8cde1Усиленная нечестивая броня|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8914",
+          "sid": 8914,
+          "current_val": "Исследовать |cffc8cde1нечестивую броню|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_8915",
+          "sid": 8915,
+          "current_val": "Исследовать |cffc8cde1нечестивую броню|r"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_8916",
+          "sid": 8916,
+          "current_val": "Исследовать |cffc8cde1улучшенную нечестивую броню|r"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_8919",
+          "sid": 8919,
+          "current_val": "Исследовать |cffc8cde1улучшенную нечестивую броню|r"
+        },
+        "tip5": {
+          "raw": "TRIGSTR_8918",
+          "sid": 8918,
+          "current_val": "Исследовать |cffc8cde1усиленную нечестивую броню|r"
+        },
+        "tip6": {
+          "raw": "TRIGSTR_8917",
+          "sid": 8917,
+          "current_val": "Исследовать |cffc8cde1усиленную нечестивую броню|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_9709",
+          "sid": 9709,
+          "current_val": "Усиливает броню солдатам ближнего боя армии нежити."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_10748",
+          "sid": 10748,
+          "current_val": "Усиливает броню солдатам ближнего боя армии нежити."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_12064",
+          "sid": 12064,
+          "current_val": "Усиливает броню солдатам ближнего боя армии нежити."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_6453",
+          "sid": 6453,
+          "current_val": "Усиливает броню солдатам ближнего боя армии нежити."
+        },
+        "ubertip5": {
+          "raw": "TRIGSTR_6454",
+          "sid": 6454,
+          "current_val": "Усиливает броню солдатам ближнего боя армии нежити."
+        },
+        "ubertip6": {
+          "raw": "TRIGSTR_6455",
+          "sid": 6455,
+          "current_val": "Усиливает броню солдатам ближнего боя армии нежити."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R05L": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_27777",
+          "sid": 27777,
+          "current_val": "Z"
+        },
+        "name1": {
+          "raw": "TRIGSTR_8759",
+          "sid": 8759,
+          "current_val": "|cffc8cde1Эксгумация|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8760",
+          "sid": 8760,
+          "current_val": "Исследовать «|cffc8cde1Эксгумацию|r»"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_8761",
+          "sid": 8761,
+          "current_val": "Позволяет |cffc8cde1мясным фургонам|r пополнять запас тел."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R05H": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_26595",
+          "sid": 26595,
+          "current_val": "X"
+        },
+        "name1": {
+          "raw": "TRIGSTR_8705",
+          "sid": 8705,
+          "current_val": "|cffc8cde1Болезнетворное облако|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8824",
+          "sid": 8824,
+          "current_val": "Исследовать |cffc8cde1Болезнетворное облако|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_13010",
+          "sid": 13010,
+          "current_val": "Мясные фургоны испускают болезнетворное облако при каждой атаке, нанося находящимся рядом врагам <Aap2,DataB1> урона/сек. в течение <Aap2,DataA1> сек. |nБолезнетворное облако не действует на нежить."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R05E": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_11780",
+          "sid": 11780,
+          "current_val": "A"
+        },
+        "hotkey2": {
+          "raw": "TRIGSTR_11781",
+          "sid": 11781,
+          "current_val": "A"
+        },
+        "name1": {
+          "raw": "TRIGSTR_8639",
+          "sid": 8639,
+          "current_val": "|cffc8cde1Сделать некромантов адептами|r"
+        },
+        "name2": {
+          "raw": "TRIGSTR_8640",
+          "sid": 8640,
+          "current_val": "|cffc8cde1Сделать некромантов мастерами|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8641",
+          "sid": 8641,
+          "current_val": "|cffc8cde1Сделать некромантов адептами|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_8642",
+          "sid": 8642,
+          "current_val": "|cffc8cde1Сделать некромантов мастерами|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R05F": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_17562",
+          "sid": 17562,
+          "current_val": "D"
+        },
+        "hotkey2": {
+          "raw": "TRIGSTR_17563",
+          "sid": 17563,
+          "current_val": "D"
+        },
+        "name1": {
+          "raw": "TRIGSTR_8643",
+          "sid": 8643,
+          "current_val": "|cffc8cde1Изучить магию смерти|r"
+        },
+        "name2": {
+          "raw": "TRIGSTR_8644",
+          "sid": 8644,
+          "current_val": "|cffc8cde1Изучить магию смерти|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8645",
+          "sid": 8645,
+          "current_val": "|cffc8cde1Изучить магию смерти|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_8646",
+          "sid": 8646,
+          "current_val": "|cffc8cde1Изучить магию смерти|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_8647",
+          "sid": 8647,
+          "current_val": "Увеличивает запас здоровья и маны и урона, ускоряет регенерацию их маны."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_8648",
+          "sid": 8648,
+          "current_val": "Увеличивает запас здоровья и маны и урона, ускоряет регенерацию их маны."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R05G": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_12726",
+          "sid": 12726,
+          "current_val": "S"
+        },
+        "hotkey2": {
+          "raw": "TRIGSTR_12728",
+          "sid": 12728,
+          "current_val": "S"
+        },
+        "name1": {
+          "raw": "TRIGSTR_8657",
+          "sid": 8657,
+          "current_val": "|cffc8cde1Безумная наука|r"
+        },
+        "name2": {
+          "raw": "TRIGSTR_8658",
+          "sid": 8658,
+          "current_val": "|cffc8cde1Безумная наука|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8659",
+          "sid": 8659,
+          "current_val": "|cffc8cde1Безумная наука|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_8660",
+          "sid": 8660,
+          "current_val": "|cffc8cde1Безумная наука|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_31439",
+          "sid": 31439,
+          "current_val": "Увеличивает запас здоровья и маны, а так же регенерацию маны."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_39817",
+          "sid": 39817,
+          "current_val": "Увеличивает запас здоровья и маны, а так же регенерацию маны."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R05A": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_27410",
+          "sid": 27410,
+          "current_val": "Z"
+        },
+        "name1": {
+          "raw": "TRIGSTR_8628",
+          "sid": 8628,
+          "current_val": "|cffc8cde1Каннибализм|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8629",
+          "sid": 8629,
+          "current_val": "Исследовать «|cffc8cde1Каннибализм|r»"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_8630",
+          "sid": 8630,
+          "current_val": "Обучает вурдалаков и поганищ «|cffc8cde1Каннибализму|r», который позволяет им восполнять здоровье, пожирая трупы."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R05R": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_11812",
+          "sid": 11812,
+          "current_val": "A"
+        },
+        "name1": {
+          "raw": "TRIGSTR_8929",
+          "sid": 8929,
+          "current_val": "|cffc8cde1Ярость вурдалака|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8930",
+          "sid": 8930,
+          "current_val": "Исследовать «|cffc8cde1Ярость вурдалака|r»"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_9632",
+          "sid": 9632,
+          "current_val": "+35% к скорости атаки вурдалаков и бонус к их скорости передвижения."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R05D": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_25943",
+          "sid": 25943,
+          "current_val": "X"
+        },
+        "name1": {
+          "raw": "TRIGSTR_8638",
+          "sid": 8638,
+          "current_val": "|cffc8cde1Закопаться|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8637",
+          "sid": 8637,
+          "current_val": "Исследовать «|cffc8cde1Закопаться|r»"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R05C": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "TRIGSTR_12718",
+          "sid": 12718,
+          "current_val": "S"
+        },
+        "name1": {
+          "raw": "TRIGSTR_8634",
+          "sid": 8634,
+          "current_val": "|cffc8cde1Паутина|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8635",
+          "sid": 8635,
+          "current_val": "Исследовать «|cffc8cde1Паутину|r»"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_8636",
+          "sid": 8636,
+          "current_val": "Обучает некроарахнидов «|cffc8cde1Паутине|r», которая сковывает воздушного врага и притягивает его к земле. Пораженные цели считаются наземными."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R07I": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "",
+          "sid": null,
+          "current_val": ""
+        },
+        "name1": {
+          "raw": "TRIGSTR_10664",
+          "sid": 10664,
+          "current_val": "|cffe6beaaПлеть|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_10665",
+          "sid": 10665,
+          "current_val": "|cffe6beaaПлеть|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_20116",
+          "sid": 20116,
+          "current_val": "Плеть является одной из трех основных фракций нежити, существующих в мире Азерот (двумя другими являются Отрекшиеся и рыцари Черного Клинка), и основной силой, желающей захватить контроль над миром. Она имеет огромную \"империю\". Созданная изначально как предвестник вторжения Пылающего Легиона после предыдущих неудач, Плеть освободилась от ее демонических хозяев и под железной волей ужасающего Короля-лича создала свою базу на арктическом континенте Нордскол."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "R0J5": {
+      "type": "upgrade",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "hotkey1": {
+          "raw": "",
+          "sid": null,
+          "current_val": ""
+        },
+        "name1": {
+          "raw": "TRIGSTR_34715",
+          "sid": 34715,
+          "current_val": "|cffe6beaaПлеть или Культ проклятых|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_34716",
+          "sid": 34716,
+          "current_val": "|cffe6beaaПлеть или Культ проклятых|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_34717",
+          "sid": 34717,
+          "current_val": "|cffe6beaaПлеть или Культ проклятых|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    }
+  },
+  "hero_abilities": {
+    "A0CO": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "TRIGSTR_13735",
+      "researchhotkey": "TRIGSTR_13734",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_13735",
+          "sid": 13735,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_9006",
+          "sid": 9006,
+          "current_val": "|cffc8cde1Лик смерти|r"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_13734",
+          "sid": 13734,
+          "current_val": "Q"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_9007",
+          "sid": 9007,
+          "current_val": "Изучить «|cffc8cde1Лик смерти|r» [|cffffcc00%d-й уровень|r]"
+        },
+        "researchubertip": {
+          "raw": "TRIGSTR_15504",
+          "sid": 15504,
+          "current_val": "Наносит урон живому врагу или восполняет здоровье союзнику-нежити. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AUdc,DataA1> здоровья.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<AUdc,DataA2> здоровья.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AUdc,DataA3> здоровья|r.|n|cffffcc004-й уровень:|r |cffb4dcdc<AUdc,DataA4> здоровья|r."
+        },
+        "tip1": {
+          "raw": "TRIGSTR_15505",
+          "sid": 15505,
+          "current_val": "|cffc8cde1Лик смерти|r [|cffffcc001-й уровень|r]"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_15506",
+          "sid": 15506,
+          "current_val": "|cffc8cde1Лик смерти|r [|cffffcc002-й уровень|r]"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_15507",
+          "sid": 15507,
+          "current_val": "|cffc8cde1Лик смерти|r [|cffffcc003-й уровень|r]"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_15502",
+          "sid": 15502,
+          "current_val": "|cffc8cde1Лик смерти|r [|cffffcc003-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_15508",
+          "sid": 15508,
+          "current_val": "Восполняет |cffb4dcdc<AUdc,DataA1>|r здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_15509",
+          "sid": 15509,
+          "current_val": "Восполняет |cffb4dcdc<AUdc,DataA2>|r здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_15510",
+          "sid": 15510,
+          "current_val": "Восполняет |cffb4dcdc<AUdc,DataA3> |rздоровья союзнику-нежити или наносит вдвое меньше урона живому врагу."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_15503",
+          "sid": 15503,
+          "current_val": "Восполняет |cffb4dcdc<AUdc,DataA4>|r здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,organic,notself,invu,vuln,nonancient",
+      "targs2": "air,ground,organic,notself,invu,vuln,nonancient"
+    },
+    "A0CP": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "TRIGSTR_13794",
+      "researchhotkey": "TRIGSTR_13825",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_13794",
+          "sid": 13794,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_9010",
+          "sid": 9010,
+          "current_val": "|cffc8cde1Зов смерти|r"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_13825",
+          "sid": 13825,
+          "current_val": "W"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_1267",
+          "sid": 1267,
+          "current_val": "Изучить |cffc8cde1Зов смерти|r"
+        },
+        "researchubertip": {
+          "raw": "TRIGSTR_15514",
+          "sid": 15514,
+          "current_val": "Увеличивает урон находящихся по близости созных войск. |n|cffffcc001-й уровень:|r|cffb4dcdc+15% урона.|r|n|cffffcc002-й уровень:|r|cffb4dcdc+20% урона.|r|n|cffffcc003-й уровень:|r|cffb4dcdc+25% урона.|r|n|cffffcc004-й уровень:|r|cffb4dcdc+35% урона.|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_9011",
+          "sid": 9011,
+          "current_val": "|cffc8cde1Зов смерти|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_9012",
+          "sid": 9012,
+          "current_val": "|cffc8cde1Зов смерти|r"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_9013",
+          "sid": 9013,
+          "current_val": "|cffc8cde1Зов смерти|r"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_9014",
+          "sid": 9014,
+          "current_val": "|cffc8cde1Зов смерти|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_15515",
+          "sid": 15515,
+          "current_val": "|cffb4dcdc+<Aroa,DataA1,%>%|r к урону находящихся рядом союзников. |nВремя действия: |cffb4dcdc<Aroa,Dur1> сек.|r"
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_15511",
+          "sid": 15511,
+          "current_val": "|cffb4dcdc+<Aroa,DataA2,%>%|r к урону находящихся рядом союзников. |nВремя действия: |cffb4dcdc<Aroa,Dur1> сек.|r"
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_15512",
+          "sid": 15512,
+          "current_val": "|cffb4dcdc+<Aroa,DataA3,%>%|r к урону находящихся рядом союзников. |nВремя действия: |cffb4dcdc<Aroa,Dur1> сек.|r"
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_15513",
+          "sid": 15513,
+          "current_val": "|cffb4dcdc+<Aroa,DataA4,%>%|r к урону находящихся рядом союзников. |nВремя действия: |cffb4dcdc<Aroa,Dur1> сек.|r"
+        },
+        "untip1": {
+          "raw": "TRIGSTR_9022",
+          "sid": 9022,
+          "current_val": "|cffc8cde1Зов смерти|r"
+        },
+        "untip2": {
+          "raw": "TRIGSTR_9023",
+          "sid": 9023,
+          "current_val": "|cffc8cde1Зов смерти|r"
+        },
+        "untip3": {
+          "raw": "TRIGSTR_9024",
+          "sid": 9024,
+          "current_val": "|cffc8cde1Зов смерти|r"
+        },
+        "untip4": {
+          "raw": "TRIGSTR_9025",
+          "sid": 9025,
+          "current_val": "|cffc8cde1Зов смерти|r"
+        },
+        "unubertip1": {
+          "raw": "TRIGSTR_6545",
+          "sid": 6545,
+          "current_val": "+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек."
+        },
+        "unubertip2": {
+          "raw": "TRIGSTR_8505",
+          "sid": 8505,
+          "current_val": "+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек."
+        },
+        "unubertip3": {
+          "raw": "TRIGSTR_8506",
+          "sid": 8506,
+          "current_val": "+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек."
+        },
+        "unubertip4": {
+          "raw": "TRIGSTR_8548",
+          "sid": 8548,
+          "current_val": "+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,friend,self",
+      "targs2": "air,ground,friend,self"
+    },
+    "A0CR": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "TRIGSTR_15694",
+      "researchhotkey": "TRIGSTR_15691",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_15694",
+          "sid": 15694,
+          "current_val": "E"
+        },
+        "name": {
+          "raw": "TRIGSTR_9066",
+          "sid": 9066,
+          "current_val": "|cffc8cde1Нечистая аура|r"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_15691",
+          "sid": 15691,
+          "current_val": "E"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_9067",
+          "sid": 9067,
+          "current_val": "Изучить «|cffc8cde1Нечистая аура|r» [|cffffcc00%d-й уровень|r]"
+        },
+        "researchubertip": {
+          "raw": "TRIGSTR_15523",
+          "sid": 15523,
+          "current_val": "Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdc+<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья.|r |n|cffffcc002-й уровень:|r |cffb4dcdc+<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья.|r |n|cffffcc003-й уровень:|r |cffb4dcdc+<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья.|r|n|cffffcc004-й уровень:|r |cffb4dcdc+<AUau,DataA4,%>% к скорости передвижения, большой бонус к регенерации здоровья.|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_9070",
+          "sid": 9070,
+          "current_val": "|cffc8cde1Нечистая аура|r [|cffffcc001-й уровень|r]"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_9071",
+          "sid": 9071,
+          "current_val": "|cffc8cde1Нечистая аура|r [|cffffcc002-й уровень|r]"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_9072",
+          "sid": 9072,
+          "current_val": "|cffc8cde1Нечистая аура|r [|cffffcc003-й уровень|r]"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_9068",
+          "sid": 9068,
+          "current_val": "|cffc8cde1Нечистая аура|r [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_15520",
+          "sid": 15520,
+          "current_val": "|cffb4dcdc+<AUau,DataA1,%>%|r к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_15521",
+          "sid": 15521,
+          "current_val": "|cffb4dcdc+<AUau,DataA2,%>% |rк скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_15522",
+          "sid": 15522,
+          "current_val": "|cffb4dcdc+<AUau,DataA3,%>%|r к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_15519",
+          "sid": 15519,
+          "current_val": "|cffb4dcdc+<AUau,DataA4,%>%|r к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,friend,self,vuln,invu",
+      "targs2": "air,ground,friend,self,vuln,invu"
+    },
+    "A0CN": {
+      "type": "ability",
+      "levels": 2,
+      "hotkey": "TRIGSTR_12911",
+      "researchhotkey": "TRIGSTR_12867",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_12911",
+          "sid": 12911,
+          "current_val": "R"
+        },
+        "name": {
+          "raw": "TRIGSTR_8992",
+          "sid": 8992,
+          "current_val": "|cffc8cde1Оживление мертвых|r"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_12867",
+          "sid": 12867,
+          "current_val": "R"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_8993",
+          "sid": 8993,
+          "current_val": "Изучить «|cffc8cde1Оживление мертвых|r»"
+        },
+        "researchubertip": {
+          "raw": "TRIGSTR_15500",
+          "sid": 15500,
+          "current_val": "Оживляет трупов в области действия. Оживленные воины неуязвимы.|n|cffffcc001-й уровень:|r |cffb4dcdcВоскрешает 8 трупов.|r |n|cffffcc002-й уровень:|r |cffb4dcdcВоскрешает 12 трупов.|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8994",
+          "sid": 8994,
+          "current_val": "|cffc8cde1Оживление мертвых|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_8995",
+          "sid": 8995,
+          "current_val": "|cffc8cde1Оживление мертвых|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_13587",
+          "sid": 13587,
+          "current_val": "Оживляет трупов в области действия. Сражаются на стороне некроманта.|n|cffffcc001-й уровень:|r |cffb4dcdcВоскрешает 8 трупов.|r "
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_13547",
+          "sid": 13547,
+          "current_val": "Оживляет трупов в области действия. Сражаются на стороне некроманта. |n|cffffcc002-й уровень:|r |cffb4dcdcВоскрешает 12 трупов.|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,dead",
+      "targs2": "air,ground,dead"
+    },
+    "AQ95": {
+      "type": "ability",
+      "levels": 2,
+      "hotkey": "TRIGSTR_32916",
+      "researchhotkey": "TRIGSTR_32915",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_32916",
+          "sid": 32916,
+          "current_val": "R"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_32915",
+          "sid": 32915,
+          "current_val": "R"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_41933",
+          "sid": 41933,
+          "current_val": "Рой саранчи"
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_41934",
+          "sid": 41934,
+          "current_val": "Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur2> сек."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,enemy",
+      "targs2": "air,ground,structure,neutral,enemy"
+    },
+    "UN99": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "TRIGSTR_31112",
+      "researchhotkey": "TRIGSTR_31111",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_31112",
+          "sid": 31112,
+          "current_val": "E"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_31111",
+          "sid": 31111,
+          "current_val": "E"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_35526",
+          "sid": 35526,
+          "current_val": "Шипастый панцирь [|cffffcc004-й уровень|r]"
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_35527",
+          "sid": 35527,
+          "current_val": "Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC4> к броне и отражают <AUts,DataA4,%>% получаемого в ближнем бою урона в атакующих врагов."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "A0CS": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "TRIGSTR_13737",
+      "researchhotkey": "TRIGSTR_13736",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_13737",
+          "sid": 13737,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_9073",
+          "sid": 9073,
+          "current_val": "|cffc8cde1Пронзание|r"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_13736",
+          "sid": 13736,
+          "current_val": "Q"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_9074",
+          "sid": 9074,
+          "current_val": "Изучить «|cffc8cde1Пронзание|r» [|cffffcc00%d-й уровень|r]"
+        },
+        "researchubertip": {
+          "raw": "TRIGSTR_14093",
+          "sid": 14093,
+          "current_val": "Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AUim,DataC1> урона, <AUim,Dur1> сек. оглушения.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<|AUim,DataC2> урона, <AUim,Dur2> сек. оглушения.|r|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AUim,DataC3> урона, <AUim,Dur3> сек. оглушения.|r|n|cffffcc004-й уровень:|r |cffb4dcdc140 урона, 2.4 сек. оглушения.|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_9075",
+          "sid": 9075,
+          "current_val": "|cffc8cde1Пронзание|r [|cffffcc001-й уровень|r]"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_9076",
+          "sid": 9076,
+          "current_val": "|cffc8cde1Пронзание|r [|cffffcc002-й уровень|r]"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_9077",
+          "sid": 9077,
+          "current_val": "|cffc8cde1Пронзание|r [|cffffcc003-й уровень|r]"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_9078",
+          "sid": 9078,
+          "current_val": "|cffc8cde1Пронзание|r [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_14889",
+          "sid": 14889,
+          "current_val": "Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AUim,DataC1> урона, <AUim,Dur1> сек. оглушения.|r "
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_15034",
+          "sid": 15034,
+          "current_val": "Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их. |n|cffffcc002-й уровень:|r |cffb4dcdc<|AUim,DataC2> урона, <AUim,Dur2> сек. оглушения.|r|r "
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_15056",
+          "sid": 15056,
+          "current_val": "Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их.  |n|cffffcc003-й уровень:|r |cffb4dcdc<AUim,DataC3> урона, <AUim,Dur3> сек. оглушения.|r"
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_21830",
+          "sid": 21830,
+          "current_val": "Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их. |n|cffffcc004-й уровень:|r |cffb4dcdc150 урона, 5 сек. оглушения.|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "ground,enemy,neutral,organic",
+      "targs2": "ground,enemy,neutral,organic"
+    },
+    "AQ11": {
+      "type": "ability",
+      "levels": 3,
+      "hotkey": "TRIGSTR_31472",
+      "researchhotkey": "TRIGSTR_31471",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_31472",
+          "sid": 31472,
+          "current_val": "W"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_31471",
+          "sid": 31471,
+          "current_val": "W"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "dead",
+      "targs2": "dead"
+    },
+    "A0CK": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "TRIGSTR_13729",
+      "researchhotkey": "TRIGSTR_13733",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_13729",
+          "sid": 13729,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_8939",
+          "sid": 8939,
+          "current_val": "|cffc8cde1Воскрешение мертвых|r"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_13733",
+          "sid": 13733,
+          "current_val": "Q"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_20090",
+          "sid": 20090,
+          "current_val": "|cffc8cde1Воскрешение мертвых|r"
+        },
+        "researchubertip": {
+          "raw": "TRIGSTR_15484",
+          "sid": 15484,
+          "current_val": "Воскрешает мертвых, на службу королю Личу. |n|n|cffffcc001-й уровень:|r |cffb4dcdcСкелет воин.|r|n|cffffcc002-й уровень:|r |cffb4dcdcВурдалак.|r |n|cffffcc003-й уровень:|r |cffb4dcdcПоганище.|r |n|cffffcc004-й уровень:|r |cffb4dcdcРыцарь смертик.|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8940",
+          "sid": 8940,
+          "current_val": "|cffc8cde1Воскрешение мертвых|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_8965",
+          "sid": 8965,
+          "current_val": "|cffc8cde1Воскрешение мертвых|r"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_15107",
+          "sid": 15107,
+          "current_val": "|cffc8cde1Воскрешение мертвых|r"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_15108",
+          "sid": 15108,
+          "current_val": "|cffc8cde1Воскрешение мертвых|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_15480",
+          "sid": 15480,
+          "current_val": "Воскрешает мертвых, на службу королю Личу. |n|n|cffffcc001-й уровень:|r |cffb4dcdcСкелет воин.|r"
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_15481",
+          "sid": 15481,
+          "current_val": "Воскрешает мертвых, на службу королю Личу. |n|cffffcc002-й уровень:|r |cffb4dcdcВурдалак.|r "
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_15482",
+          "sid": 15482,
+          "current_val": "Воскрешает мертвых, на службу королю Личу.  |n|cffffcc003-й уровень:|r |cffb4dcdcПоганище.|r "
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_15483",
+          "sid": 15483,
+          "current_val": "Воскрешает мертвых, на службу королю Личу.  |n|cffffcc004-й уровень:|r |cffb4dcdcРыцарь смертик.|r"
+        },
+        "unhotkey": {
+          "raw": "TRIGSTR_13730",
+          "sid": 13730,
+          "current_val": "Q"
+        },
+        "untip2": {
+          "raw": "TRIGSTR_13441",
+          "sid": 13441,
+          "current_val": "|cffc3dbffПКМ – включить автоприменение.|r"
+        },
+        "untip3": {
+          "raw": "TRIGSTR_13442",
+          "sid": 13442,
+          "current_val": "|cffc3dbffПКМ – включить автоприменение.|r"
+        },
+        "untip4": {
+          "raw": "TRIGSTR_13504",
+          "sid": 13504,
+          "current_val": "|cffc3dbffПКМ – включить автоприменение.|r"
+        },
+        "unubertip2": {
+          "raw": "TRIGSTR_13475",
+          "sid": 13475,
+          "current_val": "|cffc3dbffПКМ – отключить автоприменение.|r"
+        },
+        "unubertip3": {
+          "raw": "TRIGSTR_13507",
+          "sid": 13507,
+          "current_val": "|cffc3dbffПКМ – отключить автоприменение.|r"
+        },
+        "unubertip4": {
+          "raw": "TRIGSTR_13508",
+          "sid": 13508,
+          "current_val": "|cffc3dbffПКМ – отключить автоприменение.|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "dead",
+      "targs2": "dead"
+    },
+    "A0CM": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "TRIGSTR_15685",
+      "researchhotkey": "TRIGSTR_15631",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_15685",
+          "sid": 15685,
+          "current_val": "E"
+        },
+        "name": {
+          "raw": "TRIGSTR_8971",
+          "sid": 8971,
+          "current_val": "|cffc8cde1Массовое проклятие|r"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_15631",
+          "sid": 15631,
+          "current_val": "E"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_41279",
+          "sid": 41279,
+          "current_val": "|cffc8cde1Массовое проклятие.|r"
+        },
+        "researchubertip": {
+          "raw": "TRIGSTR_41305",
+          "sid": 41305,
+          "current_val": "Проклинает всех врагов рядом.|n|cffffcc001-й уровень:|r |cffb4dcdc100 ед. урона.|r |n|cffffcc002-й уровень:|r |cffb4dcdc150 ед. урона.|r |n|cffffcc003-й уровень:|r |cffb4dcdc200 ед. урона.|r |n|cffffcc004-й уровень:|r |cffb4dcdc250 ед. урона.|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8972",
+          "sid": 8972,
+          "current_val": "|cffc8cde1Массовое проклятие|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_8973",
+          "sid": 8973,
+          "current_val": "|cffc8cde1Массовое проклятие|r"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_8974",
+          "sid": 8974,
+          "current_val": "|cffc8cde1Массовое проклятие|r"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_8975",
+          "sid": 8975,
+          "current_val": "|cffc8cde1Массовое проклятие|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_41290",
+          "sid": 41290,
+          "current_val": "Проклинает всех врагов рядом.|n|cffffcc001-й уровень:|r |cffb4dcdc100 ед. урона.|r "
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_41291",
+          "sid": 41291,
+          "current_val": "Проклинает всех врагов рядом. |n|cffffcc002-й уровень:|r |cffb4dcdc150 ед. урона.|r "
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_41292",
+          "sid": 41292,
+          "current_val": "Проклинает всех врагов рядом. |n|cffffcc003-й уровень:|r |cffb4dcdc200 ед. урона.|r "
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_41293",
+          "sid": 41293,
+          "current_val": "Проклинает всех врагов рядом.|n|cffffcc004-й уровень:|r |cffb4dcdc250 ед. урона.|r"
+        },
+        "untip1": {
+          "raw": "TRIGSTR_8976",
+          "sid": 8976,
+          "current_val": "|cffc8cde1Массовое проклятие|r"
+        },
+        "untip2": {
+          "raw": "TRIGSTR_8981",
+          "sid": 8981,
+          "current_val": "|cffc8cde1Массовое проклятие|r"
+        },
+        "untip3": {
+          "raw": "TRIGSTR_8982",
+          "sid": 8982,
+          "current_val": "|cffc8cde1Массовое проклятие|r"
+        },
+        "untip4": {
+          "raw": "TRIGSTR_8983",
+          "sid": 8983,
+          "current_val": "|cffc8cde1Массовое проклятие|r"
+        },
+        "unubertip1": {
+          "raw": "TRIGSTR_8977",
+          "sid": 8977,
+          "current_val": "Проклинает всех врагов рядом, нанося им урон."
+        },
+        "unubertip2": {
+          "raw": "TRIGSTR_8978",
+          "sid": 8978,
+          "current_val": "Проклинает всех врагов рядом, нанося им урон."
+        },
+        "unubertip3": {
+          "raw": "TRIGSTR_8979",
+          "sid": 8979,
+          "current_val": "Проклинает всех врагов рядом, нанося им урон."
+        },
+        "unubertip4": {
+          "raw": "TRIGSTR_8980",
+          "sid": 8980,
+          "current_val": "Проклинает всех врагов рядом, нанося им урон."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,enemies,ground,invulnerable,organic,vulnerable",
+      "targs2": "air,enemies,ground,invulnerable,organic,vulnerable"
+    },
+    "A0BW": {
+      "type": "ability",
+      "levels": 2,
+      "hotkey": "TRIGSTR_32914",
+      "researchhotkey": "TRIGSTR_32871",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_32914",
+          "sid": 32914,
+          "current_val": "R"
+        },
+        "name": {
+          "raw": "TRIGSTR_41617",
+          "sid": 41617,
+          "current_val": "Создание Лоскутика"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_32871",
+          "sid": 32871,
+          "current_val": "R"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_41665",
+          "sid": 41665,
+          "current_val": "Изучить «|cff228b22Создание Лоскутика|r» [|cffffcc001-й уровень|r]"
+        },
+        "researchubertip": {
+          "raw": "TRIGSTR_41716",
+          "sid": 41716,
+          "current_val": "Создает самое совершенное из созданных Плетью поганищ.Также известный как \"воплощение войны\"."
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41843",
+          "sid": 41843,
+          "current_val": "Призвать Лоскутика|r [|cffffcc001-й уровень|r]"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_41844",
+          "sid": 41844,
+          "current_val": "Призвать Лоскутика|r [|cffffcc002-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_41739",
+          "sid": 41739,
+          "current_val": "Создает самое совершенное из созданных Плетью поганищ.Также известный как \"воплощение войны\"."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_41628",
+          "sid": 41628,
+          "current_val": "Создает самое совершенное из созданных Плетью поганищ.Также известный как \"воплощение войны\"."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "A1Q7": {
+      "type": "ability",
+      "levels": 3,
+      "hotkey": "TRIGSTR_31384",
+      "researchhotkey": "TRIGSTR_31382",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_31384",
+          "sid": 31384,
+          "current_val": "W"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_31382",
+          "sid": 31382,
+          "current_val": "W"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,friend,self,neutral",
+      "targs2": "air,ground,friend,self,neutral"
+    },
+    "A1LI": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "TRIGSTR_28540",
+      "researchhotkey": "TRIGSTR_28539",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_28540",
+          "sid": 28540,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_30949",
+          "sid": 30949,
+          "current_val": "|cffc8cde1Подкоп"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_28539",
+          "sid": 28539,
+          "current_val": "Q"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_32930",
+          "sid": 32930,
+          "current_val": "|cffc8cde1Подкоп|r [|cffffcc00Уровень %d|r]"
+        },
+        "researchubertip": {
+          "raw": "TRIGSTR_36134",
+          "sid": 36134,
+          "current_val": "Герой погружается под землю, проползая там до точки каста, подбрасывая всех врагов на своем пути. Враги получают урон от пдаения, зависящий от силы героя."
+        },
+        "tip1": {
+          "raw": "TRIGSTR_33507",
+          "sid": 33507,
+          "current_val": "|cffc8cde1Подкоп|r [|cffffcc00Уровень 1|r] "
+        },
+        "tip2": {
+          "raw": "TRIGSTR_34354",
+          "sid": 34354,
+          "current_val": "|cffc8cde1Подкоп|r [|cffffcc00Уровень 2|r] "
+        },
+        "tip3": {
+          "raw": "TRIGSTR_34687",
+          "sid": 34687,
+          "current_val": "|cffc8cde1Подкоп|r [|cffffcc00Уровень 3|r] "
+        },
+        "tip4": {
+          "raw": "TRIGSTR_38108",
+          "sid": 38108,
+          "current_val": "|cffc8cde1Подкоп|r [|cffffcc00Уровень 4|r] "
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_36889",
+          "sid": 36889,
+          "current_val": "Герой погружается под землю, проползая там до точки каста, подбрасывая всех врагов на своем пути. Враги получают урон от пдаения, зависящий от силы героя.\n\nУрон: 1.2 * силу героя + 50"
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_37032",
+          "sid": 37032,
+          "current_val": "Герой погружается под землю, проползая там до точки каста, подбрасывая всех врагов на своем пути. Враги получают урон от пдаения, зависящий от силы героя.\n\nУрон: 2.4 * силу героя + 100"
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_38107",
+          "sid": 38107,
+          "current_val": "Герой погружается под землю, проползая там до точки каста, подбрасывая всех врагов на своем пути. Враги получают урон от пдаения, зависящий от силы героя.\n\nУрон: 3.6 * силу героя + 150"
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_38658",
+          "sid": 38658,
+          "current_val": "Герой погружается под землю, проползая там до точки каста, подбрасывая всех врагов на своем пути. Враги получают урон от пдаения, зависящий от силы героя.\n\nУрон: 4.8 * силу героя + 150"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "A1LJ": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": null,
+      "researchhotkey": "TRIGSTR_29093",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_38827",
+          "sid": 38827,
+          "current_val": "|cffc8cde1Шипастый панцирь"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_29093",
+          "sid": 29093,
+          "current_val": "E"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_38828",
+          "sid": 38828,
+          "current_val": "Изучить «|cffc8cde1Шипастый панцирь» [|cffffcc00%d-й уровень|r]"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_38845",
+          "sid": 38845,
+          "current_val": "|cffc8cde1Шипастый панцирь [|cffffcc001-й уровень|r]"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_38847",
+          "sid": 38847,
+          "current_val": "|cffc8cde1Шипастый панцирь [|cffffcc002-й уровень|r]"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_38848",
+          "sid": 38848,
+          "current_val": "|cffc8cde1Шипастый панцирь [|cffffcc003-й уровень|r]"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_38800",
+          "sid": 38800,
+          "current_val": "|cffc8cde1Шипастый панцирь [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_38960",
+          "sid": 38960,
+          "current_val": "Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +4 к броне и отражают получаемый в ближнем бою урона в атакующих врагов в зависимости от силы героя.\n0.5*силу героя"
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_38961",
+          "sid": 38961,
+          "current_val": "Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +7 к броне и отражают получаемый в ближнем бою урона в атакующих врагов в зависимости от силы героя.\n0.5*силу героя"
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_38962",
+          "sid": 38962,
+          "current_val": "Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +10 к броне и отражают получаемый в ближнем бою урона в атакующих врагов в зависимости от силы героя.\n0.5*силу героя"
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_38959",
+          "sid": 38959,
+          "current_val": "Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +13 к броне и отражают получаемый в ближнем бою урона в атакующих врагов в зависимости от силы героя.\n0.5*силу героя"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "A1LL": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "TRIGSTR_28755",
+      "researchhotkey": "TRIGSTR_28723",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_28755",
+          "sid": 28755,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_38932",
+          "sid": 38932,
+          "current_val": "|cffc8cde1Смертельный союз"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_28723",
+          "sid": 28723,
+          "current_val": "W"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_38933",
+          "sid": 38933,
+          "current_val": "Изучить «|cffc8cde1Смертельный союз» [|cffffcc00%d-й уровень|r]"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_38934",
+          "sid": 38934,
+          "current_val": "|cffc8cde1Смертельный союз [|cffffcc001-й уровень|r]"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_38935",
+          "sid": 38935,
+          "current_val": "|cffc8cde1Смертельный союз [|cffffcc002-й уровень|r]"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_38936",
+          "sid": 38936,
+          "current_val": "|cffc8cde1Смертельный союз [|cffffcc003-й уровень|r]"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_38937",
+          "sid": 38937,
+          "current_val": "|cffc8cde1Смертельный союз [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_38939",
+          "sid": 38939,
+          "current_val": "Убивает союзника-нежить и передает <AUdp,DataB1,%>% его здоровья |cffc8cde1Ануб`Арака"
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_38940",
+          "sid": 38940,
+          "current_val": "Убивает союзника-нежить и передает <AUdp,DataB2,%>% его здоровья |cffc8cde1Ануб`Арака"
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_38941",
+          "sid": 38941,
+          "current_val": "Убивает союзника-нежить и передает <AUdp,DataB3,%>% его здоровья |cffc8cde1Ануб`Арака"
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_38938",
+          "sid": 38938,
+          "current_val": "Убивает союзника-нежить и передает <AUdp,DataB4,%>% его здоровья |cffc8cde1Ануб`Арака"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,player,nonhero,invu,vuln",
+      "targs2": "air,ground,player,nonhero,invu,vuln"
+    },
+    "A1LM": {
+      "type": "ability",
+      "levels": 2,
+      "hotkey": "TRIGSTR_30488",
+      "researchhotkey": "TRIGSTR_30487",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_30488",
+          "sid": 30488,
+          "current_val": "R"
+        },
+        "name": {
+          "raw": "TRIGSTR_38945",
+          "sid": 38945,
+          "current_val": "|cffc8cde1Рой саранчи"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_30487",
+          "sid": 30487,
+          "current_val": "R"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_38946",
+          "sid": 38946,
+          "current_val": "Изучить «|cffc8cde1Рой саранчи»"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_38947",
+          "sid": 38947,
+          "current_val": "|cffc8cde1Рой саранчи (1)"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_38942",
+          "sid": 38942,
+          "current_val": "|cffc8cde1Рой саранчи (2)"
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_38943",
+          "sid": 38943,
+          "current_val": "Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur2> сек."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,enemy",
+      "targs2": "air,ground,structure,neutral,enemy"
+    },
+    "A1LK": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_11505",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_11505",
+          "sid": 11505,
+          "current_val": "D"
+        },
+        "name": {
+          "raw": "TRIGSTR_39640",
+          "sid": 39640,
+          "current_val": "|cffc8cde1Жуки-падальщики|r"
+        },
+        "researchhotkey": {
+          "raw": "",
+          "sid": null,
+          "current_val": ""
+        },
+        "tip1": {
+          "raw": "TRIGSTR_39639",
+          "sid": 39639,
+          "current_val": "|cffc8cde1Жуки-падальщики|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_39641",
+          "sid": 39641,
+          "current_val": "Призывает 4 нераба неруба из указанного трупа. Максимум можно иметь 100 призванных нерубов."
+        },
+        "unhotkey": {
+          "raw": "TRIGSTR_11506",
+          "sid": 11506,
+          "current_val": "D"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "dead",
+      "targs2": "dead"
+    },
+    "A0WD": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "TRIGSTR_20304",
+      "researchhotkey": "TRIGSTR_20378",
+      "fields": {
+        "animnames": {
+          "raw": "spell",
+          "sid": null,
+          "current_val": "spell"
+        },
+        "hotkey": {
+          "raw": "TRIGSTR_20304",
+          "sid": 20304,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_21846",
+          "sid": 21846,
+          "current_val": "|cff808080Лики смерти|r"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_20378",
+          "sid": 20378,
+          "current_val": "Q"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_15316",
+          "sid": 15316,
+          "current_val": "Лики смерти"
+        },
+        "researchubertip": {
+          "raw": "TRIGSTR_19730",
+          "sid": 19730,
+          "current_val": "Во всех юнитов в указанной области прилетают лики смерти, ранящие врагов и лечащие дружескую нежить."
+        },
+        "tip1": {
+          "raw": "TRIGSTR_21831",
+          "sid": 21831,
+          "current_val": "|cff808080Лики смерти|r |cffffff00[1-й уровень]|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_21832",
+          "sid": 21832,
+          "current_val": "|cff808080Лики смерти|r |cffffff00[2-й уровень]|r"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_21833",
+          "sid": 21833,
+          "current_val": "|cff808080Лики смерти|r |cffffff00[3-й уровень]|r"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_21834",
+          "sid": 21834,
+          "current_val": "|cff808080Лики смерти|r |cffffff00[4-й уровень]|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_15584",
+          "sid": 15584,
+          "current_val": "Во всех юнитов в указанной области прилетают лики смерти, ранящие врагов и лечащие дружескую нежить."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_19726",
+          "sid": 19726,
+          "current_val": "Во всех юнитов в указанной области прилетают лики смерти, ранящие врагов и лечащие дружескую нежить."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_19727",
+          "sid": 19727,
+          "current_val": "Во всех юнитов в указанной области прилетают лики смерти, ранящие врагов и лечащие дружескую нежить."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_19728",
+          "sid": 19728,
+          "current_val": "Во всех юнитов в указанной области прилетают лики смерти, ранящие врагов и лечащие дружескую нежить."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "A0CX": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": null,
+      "researchhotkey": "TRIGSTR_15755",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41306",
+          "sid": 41306,
+          "current_val": "|cffc8cde1Мощь Ледяной Скорбиr"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_15755",
+          "sid": 15755,
+          "current_val": "E"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_41360",
+          "sid": 41360,
+          "current_val": "Изучить «|cffc8cde1Мощь Ледяной Скорби|r» [|cffffcc00%d-й уровень|r]"
+        },
+        "researchubertip": {
+          "raw": "TRIGSTR_21838",
+          "sid": 21838,
+          "current_val": "Дает шанс нанести больше урона при атаке.\n\n|cffffcc001-й уровень:|r 5%-й шанс, 10-кратный урон. \n|cffffcc002-й уровень:|r 7%-й шанс, 10-кратный урон.\n|cffffcc003-й уровень:|r 9%-й шанс, 10-кратный урон.\n|cffffcc004-й уровень:|r 11%-й шанс, 10-кратный урон."
+        },
+        "tip1": {
+          "raw": "TRIGSTR_21014",
+          "sid": 21014,
+          "current_val": "|cffc8cde1Мощь фростморна|r [|cffffcc001-й уровень|r]"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_21015",
+          "sid": 21015,
+          "current_val": "|cffc8cde1Мощь фростморна|r [|cffffcc002-й уровень|r]"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_21016",
+          "sid": 21016,
+          "current_val": "|cffc8cde1Мощь фростморна|r [|cffffcc003-й уровень|r]"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_21017",
+          "sid": 21017,
+          "current_val": "|cffc8cde1Мощь фростморна|r [|cffffcc004-й уровень|r]"
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_6389",
+          "sid": 6389,
+          "current_val": "Дает <AOcr,DataA4>%-й шанс нанести <AOcr,DataB4>-кратный урон при атаке."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,enemies,ground,neutral,self,vulnerable",
+      "targs2": "air,enemies,ground,neutral,self,vulnerable"
+    },
+    "A0WE": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "TRIGSTR_19627",
+      "researchhotkey": "TRIGSTR_19628",
+      "fields": {
+        "animnames": {
+          "raw": "spell",
+          "sid": null,
+          "current_val": "spell"
+        },
+        "hotkey": {
+          "raw": "TRIGSTR_19627",
+          "sid": 19627,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_41246",
+          "sid": 41246,
+          "current_val": "Неистовство Ледяной Скорби"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_19628",
+          "sid": 19628,
+          "current_val": "W"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_41407",
+          "sid": 41407,
+          "current_val": "|cff808080Неистовство Ледяной Скорби|r"
+        },
+        "researchubertip": {
+          "raw": "TRIGSTR_23357",
+          "sid": 23357,
+          "current_val": "Наносит урон и замедляет врагов в радиусе от Короля лича.\n|cffffcc001-й уровень:|r 125 ед урона каждой цели.\n|cffffcc002-й уровень:|r 175 ед урона каждой цели.\n|cffffcc003-й уровень:|r 250 ед урона каждой цели.\n|cffffcc004-й уровень:|r 350 ед урона каждой цели."
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41241",
+          "sid": 41241,
+          "current_val": "|cff808080Неистовство Ледяной Скорби|r |cffffff00[1-й уровень]|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_41247",
+          "sid": 41247,
+          "current_val": "|cff808080Неистовство Ледяной Скорби|r |cffffff00[2-й уровень]|r"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_41248",
+          "sid": 41248,
+          "current_val": "|cff808080Неистовство Ледяной Скорби|r |cffffff00[3-й уровень]|r"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_41251",
+          "sid": 41251,
+          "current_val": "|cff808080Неистовство Ледяной Скорби|r |cffffff00[4-й уровень]|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_23353",
+          "sid": 23353,
+          "current_val": "Наносит урон и замедляет врагов в радиусе от Короля лича.\n|cffffcc001-й уровень:|r 125 ед урона каждой цели."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_23354",
+          "sid": 23354,
+          "current_val": "Наносит урон и замедляет врагов в радиусе от Короля лича.\n|cffffcc002-й уровень:|r 175 ед урона каждой цели.\n"
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_23355",
+          "sid": 23355,
+          "current_val": "Наносит урон и замедляет врагов в радиусе от Короля лича.\n|cffffcc003-й уровень:|r 250 ед урона каждой цели.\n"
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_23356",
+          "sid": 23356,
+          "current_val": "Наносит урон и замедляет врагов в радиусе от Короля лича.\n|cffffcc004-й уровень:|r 350 ед урона каждой цели."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "A0CZ": {
+      "type": "ability",
+      "levels": 2,
+      "hotkey": "TRIGSTR_13108",
+      "researchhotkey": "TRIGSTR_13082",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_13108",
+          "sid": 13108,
+          "current_val": "R"
+        },
+        "name": {
+          "raw": "TRIGSTR_39443",
+          "sid": 39443,
+          "current_val": "|cffc8cde1Воскрешение мертвых|r"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_13082",
+          "sid": 13082,
+          "current_val": "R"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_41405",
+          "sid": 41405,
+          "current_val": "Изучить «|cffc8cde1Воскрешение мертвых|r»"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41438",
+          "sid": 41438,
+          "current_val": "|cffc8cde1Воскрешение мертвых|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_41471",
+          "sid": 41471,
+          "current_val": "|cffc8cde1Воскрешение мертвых|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_41239",
+          "sid": 41239,
+          "current_val": "Оживляет 10 трупов в области 1500."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_41238",
+          "sid": 41238,
+          "current_val": "Оживляет 25 трупа в области 1500."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,dead",
+      "targs2": "air,ground,dead"
+    },
+    "A0WB": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_39497",
+          "sid": 39497,
+          "current_val": "|cffc8cde1Правосудие смерти|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_39498",
+          "sid": 39498,
+          "current_val": "|cffc8cde1Правосудие смерти|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_7837",
+          "sid": 7837,
+          "current_val": "Боеготовность |cffff0000(Степень 4/5)|r"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_7838",
+          "sid": 7838,
+          "current_val": "Боеготовность |cffff0000(Степень 3/5)|r"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_7839",
+          "sid": 7839,
+          "current_val": "Боеготовность |cffff0000(Степень 2/5)|r"
+        },
+        "tip5": {
+          "raw": "TRIGSTR_7840",
+          "sid": 7840,
+          "current_val": "Боеготовность |cffff0000(Степень 1/5)|r"
+        },
+        "tip6": {
+          "raw": "TRIGSTR_7848",
+          "sid": 7848,
+          "current_val": "Боеготовность |cffff0000(Её нет, Марк)|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_20999",
+          "sid": 20999,
+          "current_val": "Убитые Королем-Личом органические юниты после смерти возраждаются на его стороне."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_10057",
+          "sid": 10057,
+          "current_val": "\"Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку\" - менеджер ТК."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_10658",
+          "sid": 10658,
+          "current_val": "\"Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку\" - менеджер ТК."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_10863",
+          "sid": 10863,
+          "current_val": "\"Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку\" - менеджер ТК."
+        },
+        "ubertip5": {
+          "raw": "TRIGSTR_10866",
+          "sid": 10866,
+          "current_val": "\"Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку\" - менеджер ТК."
+        },
+        "ubertip6": {
+          "raw": "TRIGSTR_10420",
+          "sid": 10420,
+          "current_val": "Дефектов нет"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "A0WC": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "D",
+      "researchhotkey": "D",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_21011",
+          "sid": 21011,
+          "current_val": "Дамми гальванизация"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_21010",
+          "sid": 21010,
+          "current_val": "Дамми гальванизация"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,dead",
+      "targs2": "air,ground,dead"
+    },
+    "A0WF": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "N",
+      "researchhotkey": "N",
+      "fields": {},
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "ground,enemy,air,neutral,organic",
+      "targs2": "ground,enemy,air,neutral,organic"
+    },
+    "CM01": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "TRIGSTR_29597",
+      "researchhotkey": "TRIGSTR_29596",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_29597",
+          "sid": 29597,
+          "current_val": "Q"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_29596",
+          "sid": 29596,
+          "current_val": "Q"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_40147",
+          "sid": 40147,
+          "current_val": "Лик смерти [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_40048",
+          "sid": 40048,
+          "current_val": "Восполняет 100 здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_40151",
+          "sid": 40151,
+          "current_val": "Восполняет 150 здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_40152",
+          "sid": 40152,
+          "current_val": "Восполняет 200 здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_40148",
+          "sid": 40148,
+          "current_val": "Восполняет 250 здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,organic,notself,invu,vuln,nonancient",
+      "targs2": "air,ground,organic,notself,invu,vuln,nonancient"
+    },
+    "CM02": {
+      "type": "ability",
+      "levels": 2,
+      "hotkey": "TRIGSTR_32027",
+      "researchhotkey": "TRIGSTR_32025",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_32027",
+          "sid": 32027,
+          "current_val": "R"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_32025",
+          "sid": 32025,
+          "current_val": "R"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_39677",
+          "sid": 39677,
+          "current_val": "Оживление мертвых"
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_40085",
+          "sid": 40085,
+          "current_val": "Оживляет 12 трупов в области действия на <AUan,Dur1> сек."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,dead",
+      "targs2": "air,ground,dead"
+    },
+    "CM04": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": null,
+      "researchhotkey": "TRIGSTR_30439",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_40094",
+          "sid": 40094,
+          "current_val": "Перо под Ребро"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_30439",
+          "sid": 30439,
+          "current_val": "E"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_40095",
+          "sid": 40095,
+          "current_val": "Критический удар [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_40156",
+          "sid": 40156,
+          "current_val": "Дает 5%-й шанс нанести 2-кратный урон при атаке."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_10426",
+          "sid": 10426,
+          "current_val": "Дает 8%-й шанс нанести 2-кратный урон при атаке."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_9201",
+          "sid": 9201,
+          "current_val": "Дает 11%-й шанс нанести 2-кратный урон при атаке."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_5371",
+          "sid": 5371,
+          "current_val": "Дает 14%-й шанс нанести 2-кратный урон при атаке."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,enemy,neutral",
+      "targs2": "air,ground,enemy,neutral"
+    },
+    "CM05": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": null,
+      "researchhotkey": "U",
+      "fields": {
+        "tip4": {
+          "raw": "TRIGSTR_27412",
+          "sid": 27412,
+          "current_val": "Нечистая аура [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_40402",
+          "sid": 40402,
+          "current_val": "+5% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_40403",
+          "sid": 40403,
+          "current_val": "+10% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_40519",
+          "sid": 40519,
+          "current_val": "+15% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_35536",
+          "sid": 35536,
+          "current_val": "+20% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,friend,self,vuln,invu",
+      "targs2": "air,ground,friend,self,vuln,invu"
+    },
+    "FL01": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "TRIGSTR_30158",
+      "researchhotkey": "TRIGSTR_30157",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_30158",
+          "sid": 30158,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_40067",
+          "sid": 40067,
+          "current_val": "Удар щитом"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_30157",
+          "sid": 30157,
+          "current_val": "W"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_40132",
+          "sid": 40132,
+          "current_val": "Сильный удар [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_40134",
+          "sid": 40134,
+          "current_val": "С 15%-й вероятностью атака нанесет на 15 больше урона и оглушит цель на <AHbh,Dur1> сек."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_40133",
+          "sid": 40133,
+          "current_val": "С 20%-й вероятностью атака нанесет на 20 больше урона и оглушит цель на <AHbh,Dur1> сек."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_40169",
+          "sid": 40169,
+          "current_val": "С 30%-й вероятностью атака нанесет на 25 больше урона и оглушит цель на <AHbh,Dur1> сек."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_26399",
+          "sid": 26399,
+          "current_val": "С 35%-й вероятностью атака нанесет на 30 больше урона и оглушит цель на <AHbh,Dur1> сек."
+        },
+        "unhotkey": {
+          "raw": "TRIGSTR_30171",
+          "sid": 30171,
+          "current_val": "W"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "ground,air",
+      "targs2": "ground,air"
+    },
+    "FL02": {
+      "type": "ability",
+      "levels": 2,
+      "hotkey": "TRIGSTR_32023",
+      "researchhotkey": "TRIGSTR_31884",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_32023",
+          "sid": 32023,
+          "current_val": "R"
+        },
+        "name": {
+          "raw": "TRIGSTR_40118",
+          "sid": 40118,
+          "current_val": "Аватар"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_31884",
+          "sid": 31884,
+          "current_val": "R"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_40136",
+          "sid": 40136,
+          "current_val": "Активировать «Аватару»"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_40070",
+          "sid": 40070,
+          "current_val": "При использовании дает Фалрику +<AHav,DataA1> к броне, +<AHav,DataB1> к запасу здоровья, +<AHav,DataC1> к урону и невосприимчивость к магии. |nВремя действия: <AHav,Dur1> сек."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_40137",
+          "sid": 40137,
+          "current_val": "При использовании дает Фалрику +10 к броне, +750 к запасу здоровья, +30 к урону и невосприимчивость к магии. |nВремя действия: <AHav,Dur1> сек."
+        },
+        "unhotkey": {
+          "raw": "TRIGSTR_32024",
+          "sid": 32024,
+          "current_val": "R"
+        },
+        "untip2": {
+          "raw": "TRIGSTR_40135",
+          "sid": 40135,
+          "current_val": "Отменить «Аватару»"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "FL03": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "TRIGSTR_29479",
+      "researchhotkey": "TRIGSTR_29478",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_29479",
+          "sid": 29479,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_40072",
+          "sid": 40072,
+          "current_val": "Сокрушительный удар"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_29478",
+          "sid": 29478,
+          "current_val": "Q"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_40138",
+          "sid": 40138,
+          "current_val": "Ударная волна [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_40143",
+          "sid": 40143,
+          "current_val": "Выпускает волну энергии, нанося 100 урона наземным войскам на прямой линии."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_40142",
+          "sid": 40142,
+          "current_val": "Выпускает волну энергии, нанося 150 урона наземным войскам на прямой линии."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_40140",
+          "sid": 40140,
+          "current_val": "Выпускает волну энергии, нанося 200 урона наземным войскам на прямой линии."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_40139",
+          "sid": 40139,
+          "current_val": "Выпускает волну энергии, нанося 250 урона наземным войскам на прямой линии."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "ground,structure",
+      "targs2": "ground,structure"
+    },
+    "FL04": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": null,
+      "researchhotkey": "TRIGSTR_30434",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_40174",
+          "sid": 40174,
+          "current_val": "|cffc8cde1Мертвый надзор|r"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_30434",
+          "sid": 30434,
+          "current_val": "E"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_40180",
+          "sid": 40180,
+          "current_val": "Изучить «|cffc8cde1Мертвый надзор|r» [|cffffcc00%d-й уровень|r]"
+        },
+        "researchubertip": {
+          "raw": "TRIGSTR_40179",
+          "sid": 40179,
+          "current_val": "Увеличивает урон от всех атак находящихся рядом союзников."
+        },
+        "tip1": {
+          "raw": "TRIGSTR_40181",
+          "sid": 40181,
+          "current_val": "|cffc8cde1Мертвый надзор|r [|cffffcc001-й уровень|r]"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_40182",
+          "sid": 40182,
+          "current_val": "|cffc8cde1Мертвый надзор|r [|cffffcc002-й уровень|r]"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_40178",
+          "sid": 40178,
+          "current_val": "|cffc8cde1Мертвый надзор|r [|cffffcc003-й уровень|r]"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_40175",
+          "sid": 40175,
+          "current_val": "|cffc8cde1Мертвый надзор|r [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_40183",
+          "sid": 40183,
+          "current_val": "+3% к урону войск игрока рядом."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_3594",
+          "sid": 3594,
+          "current_val": "+6% к урону войск игрока рядом."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_40177",
+          "sid": 40177,
+          "current_val": "+9% к урону войск игрока рядом."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_40176",
+          "sid": 40176,
+          "current_val": "+12% к урону войск игрока рядом."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,invulnerable,player,self,vulnerable",
+      "targs2": "air,ground,invulnerable,player,self,vulnerable"
+    }
+  },
+  "unit_abilities": {
+    "A0BO": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_8588",
+          "sid": 8588,
+          "current_val": "|cffc8cde1Разложение трупа|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8589",
+          "sid": 8589,
+          "current_val": "|cffc8cde1Разложение трупа|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_8590",
+          "sid": 8590,
+          "current_val": "Уменьшает хп солдатам нежити, но увеличивает их урон.Возможно с помощью магических ритуалов понижать или повышать разложение трупа, что повышает хп, и понижает урон, или наоборот."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "A0BP": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_13379",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_13379",
+          "sid": 13379,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_8592",
+          "sid": 8592,
+          "current_val": "|cffc8cde1Каннибализм|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8593",
+          "sid": 8593,
+          "current_val": "|cffc8cde1Каннибализм|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "ground,dead,organic",
+      "targs2": null
+    },
+    "A0C5": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_8670",
+          "sid": 8670,
+          "current_val": "|cffc8cde1Болезнетворное облако|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8671",
+          "sid": 8671,
+          "current_val": "|cffc8cde1Болезнетворное облако|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "ground,enemy,organic,neutral",
+      "targs2": null
+    },
+    "Amel": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "C",
+      "researchhotkey": null,
+      "fields": {},
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "ground,dead,nonhero",
+      "targs2": null
+    },
+    "Amed": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "D",
+      "researchhotkey": null,
+      "fields": {},
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "A0C7": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_8688",
+          "sid": 8688,
+          "current_val": "|cffc8cde1Болезнетворное облако|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8689",
+          "sid": 8689,
+          "current_val": "|cffc8cde1Болезнетворное облако|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "ground,enemy,structure,debris,tree,wall,organic,neutral",
+      "targs2": null
+    },
+    "A0C8": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_8690",
+          "sid": 8690,
+          "current_val": "|cffc8cde1Эксгумация|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8691",
+          "sid": 8691,
+          "current_val": "|cffc8cde1Эксгумация|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "A0BT": {
+      "type": "ability",
+      "levels": 2,
+      "hotkey": "TRIGSTR_13493",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_13493",
+          "sid": 13493,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_8602",
+          "sid": 8602,
+          "current_val": "|cffc8cde1Воскрешение мертвых|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8601",
+          "sid": 8601,
+          "current_val": "|cffc8cde1Воскрешение мертвых|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_8936",
+          "sid": 8936,
+          "current_val": "|cffc8cde1Воскрешение мертвых|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_22351",
+          "sid": 22351,
+          "current_val": "Воскрешает скелета из трупа."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_22473",
+          "sid": 22473,
+          "current_val": "Воскрешает скелета из трупа."
+        },
+        "unhotkey": {
+          "raw": "TRIGSTR_13511",
+          "sid": 13511,
+          "current_val": "Q"
+        },
+        "untip2": {
+          "raw": "TRIGSTR_12805",
+          "sid": 12805,
+          "current_val": "|cffc3dbffПКМ – включить автоприменение.|r"
+        },
+        "unubertip2": {
+          "raw": "TRIGSTR_13453",
+          "sid": 13453,
+          "current_val": "|cffc3dbffПКМ – отключить автоприменение.|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "dead",
+      "targs2": "dead"
+    },
+    "A0BU": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_13789",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_13789",
+          "sid": 13789,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_8603",
+          "sid": 8603,
+          "current_val": "|cffc8cde1Нечестивое бешенство|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8604",
+          "sid": 8604,
+          "current_val": "|cffc8cde1Нечестивое бешенство|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,player,nonhero,invu,vuln",
+      "targs2": null
+    },
+    "A1PV": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_31027",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_31027",
+          "sid": 31027,
+          "current_val": "E"
+        },
+        "name": {
+          "raw": "TRIGSTR_17792",
+          "sid": 17792,
+          "current_val": "|cffc8cde1Увечье"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_20363",
+          "sid": 20363,
+          "current_val": "|cffc8cde1Увечье|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_2596",
+          "sid": 2596,
+          "current_val": "Замедляет атаку врага на <cDap,DataB1,%>% и передвижение на <cDap,DataA1,%>%. |nВремя действия: <cDap,Dur1> сек."
+        },
+        "unhotkey": {
+          "raw": "TRIGSTR_31091",
+          "sid": 31091,
+          "current_val": "E"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,enemy",
+      "targs2": null
+    },
+    "A0C4": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_8668",
+          "sid": 8668,
+          "current_val": "|cffc8cde1Невосприимчивость к магии|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8669",
+          "sid": 8669,
+          "current_val": "|cffc8cde1Невосприимчивость к магии|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "Arpl": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_9108",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_9108",
+          "sid": 9108,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_1244",
+          "sid": 1244,
+          "current_val": "|cffc8cde1Чумная эссенция|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_1245",
+          "sid": 1245,
+          "current_val": "|cffc8cde1Чумная эссенция|r"
+        },
+        "unhotkey": {
+          "raw": "TRIGSTR_9109",
+          "sid": 9109,
+          "current_val": "Q"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "ground,air,friend,self,organic,vuln,invu",
+      "targs2": null
+    },
+    "Arpm": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_9422",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_9422",
+          "sid": 9422,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_1242",
+          "sid": 1242,
+          "current_val": "|cffc8cde1Призрачное касание|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_1243",
+          "sid": 1243,
+          "current_val": "|cffc8cde1Призрачное касание|r"
+        },
+        "unhotkey": {
+          "raw": "TRIGSTR_9423",
+          "sid": 9423,
+          "current_val": "W"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "ground,air,friend,self,organic,vuln,invu",
+      "targs2": null
+    },
+    "A0BX": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_8610",
+          "sid": 8610,
+          "current_val": "|cffc8cde1Порча|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8611",
+          "sid": 8611,
+          "current_val": "|cffc8cde1Порча|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_33330",
+          "sid": 33330,
+          "current_val": "Порча наносит, отравляя на 5 урона/сек. |nВремя действия: 25 сек."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,organic",
+      "targs2": null
+    },
+    "unA5": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_29848",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_29848",
+          "sid": 29848,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_40320",
+          "sid": 40320,
+          "current_val": "|cffc8cde1Проклятие|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_40321",
+          "sid": 40321,
+          "current_val": "|cffc8cde1Проклятие|r"
+        },
+        "unhotkey": {
+          "raw": "TRIGSTR_29849",
+          "sid": 29849,
+          "current_val": "Q"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,enemy,organic,neutral",
+      "targs2": null
+    },
+    "A1PY": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_31381",
+      "researchhotkey": "TRIGSTR_31352",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_31381",
+          "sid": 31381,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_41762",
+          "sid": 41762,
+          "current_val": "|c00ff8e78Огненный шар|r"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_31352",
+          "sid": 31352,
+          "current_val": "W"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_28849",
+          "sid": 28849,
+          "current_val": "Изучить «|cffff0000Огненная стрела|r» [%d-й уровень]"
+        },
+        "researchubertip": {
+          "raw": "TRIGSTR_32808",
+          "sid": 32808,
+          "current_val": "Инквизитор выстреливает сгустком огня в противника, нанося урон и оглушая его.|n|cffffcc001-й уровень:|r |cffb4dcdc75 урона, оглушает Героя - 2, солдата - 2.|r|n|cffffcc002-й уровень:|r |cffb4dcdc150 урона, оглушает Героя - 2, солдата - 3.|r|n|cffffcc003-й уровень:|r |cffb4dcdc270 урона, оглушает Героя - 2, солдата - 4.|r|n|cffffcc004-й уровень:|r |cffb4dcdc350 урона, оглушает Героя - 2, солдата - 5.|r|n|cffffcc005-й уровень:|r |cffb4dcdc430 урона, оглушает Героя - 2, солдата - 6.|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41756",
+          "sid": 41756,
+          "current_val": "|c00ff8e78Огненный шар|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_28845",
+          "sid": 28845,
+          "current_val": "|cffff0000Огненная стрела|r"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_28846",
+          "sid": 28846,
+          "current_val": "|cffff0000Огненная стрела|r"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_28847",
+          "sid": 28847,
+          "current_val": "|cffff0000Огненная стрела|r"
+        },
+        "tip5": {
+          "raw": "TRIGSTR_28848",
+          "sid": 28848,
+          "current_val": "|cffff0000Огненная стрела|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_41777",
+          "sid": 41777,
+          "current_val": "Выпускает огненный шар наносящий 100 урона, оглушающий врага. \n"
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_23063",
+          "sid": 23063,
+          "current_val": "Выпускает сгусток огня, оглушающий врага.\n|cffb4dcdc150 урона, оглушает Героя - 2, солдата - 3.|r"
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_28841",
+          "sid": 28841,
+          "current_val": "Выпускает сгусток огня, оглушающий врага.\n|cffb4dcdc270 урона, оглушает Героя - 2, солдата - 4.|r"
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_28842",
+          "sid": 28842,
+          "current_val": "Выпускает сгусток огня, оглушающий врага.\n|cffb4dcdc350 урона, оглушает Героя - 2, солдата - 5.|r"
+        },
+        "ubertip5": {
+          "raw": "TRIGSTR_31690",
+          "sid": 31690,
+          "current_val": "Выпускает сгусток огня, оглушающий врага.\n|cffb4dcdc430 урона, оглушает Героя - 2, солдата - 6.|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,organic,enemy,neutral",
+      "targs2": "air,ground,organic,enemy,neutral"
+    },
+    "A0C0": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_13555",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_13555",
+          "sid": 13555,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_8618",
+          "sid": 8618,
+          "current_val": "|cffc8cde1Ядовитое вещество |r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8619",
+          "sid": 8619,
+          "current_val": "|cffc8cde1Ядовитое вещество |r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_20572",
+          "sid": 20572,
+          "current_val": "Призывает неподвижного идола, который восполняет союзникам рядом с собой 1.5% запаса здоровья в секунду. Не действует на технику. |nВремя существования: <Ahwd,Dur1> сек."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "A0C2": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_8651",
+          "sid": 8651,
+          "current_val": "|cffc8cde1Отравление|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8652",
+          "sid": 8652,
+          "current_val": "|cffc8cde1Отравление|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_8686",
+          "sid": 8686,
+          "current_val": "Яд замедляет врага. |nВремя действия: <ACvs,Dur1> сек."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,organic",
+      "targs2": null
+    },
+    "A1PX": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_31351",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_31351",
+          "sid": 31351,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_22599",
+          "sid": 22599,
+          "current_val": "|cffc8cde1Сбор слизи|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41075",
+          "sid": 41075,
+          "current_val": "|cffc8cde1Сбор слизи|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_40062",
+          "sid": 40062,
+          "current_val": "Поглощает магические эффекты, действующие на войска в указанной области."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,ward,invu,vuln,tree",
+      "targs2": null
+    },
+    "unA0": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_21861",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_21861",
+          "sid": 21861,
+          "current_val": "Z"
+        },
+        "name": {
+          "raw": "TRIGSTR_33334",
+          "sid": 33334,
+          "current_val": "|cffc8cde1Леденящее дыхание|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_33338",
+          "sid": 33338,
+          "current_val": "|cffc8cde1Леденящее дыхание|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_16400",
+          "sid": 16400,
+          "current_val": "Замедляет атакованного врага."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,organic",
+      "targs2": null
+    },
+    "Aspa": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {},
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "ground,ward,item,structure,debris,enemy",
+      "targs2": null
+    },
+    "A1N8": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_29728",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_29728",
+          "sid": 29728,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_8596",
+          "sid": 8596,
+          "current_val": "|cffc8cde1Закопаться|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8597",
+          "sid": 8597,
+          "current_val": "|cffc8cde1Закопаться|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_39903",
+          "sid": 39903,
+          "current_val": "Некроарахнид закапывается в землю. При этом он становится невидимым и восполняет <ucrm,regenHP> здоровья/сек. |nЗакопавшийся некроарахнид не может атаковать. При малом здоровье некроарахнид сам закапывается в землю."
+        },
+        "unhotkey": {
+          "raw": "TRIGSTR_29748",
+          "sid": 29748,
+          "current_val": "W"
+        },
+        "untip1": {
+          "raw": "TRIGSTR_8598",
+          "sid": 8598,
+          "current_val": "|cffc8cde1Выкопаться|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "Arst": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "R",
+      "researchhotkey": null,
+      "fields": {},
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "mechanical,friend,nonancient,ground,air,structure,bridge,alive,dead,invu,vuln",
+      "targs2": null
+    },
+    "Auns": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "U",
+      "researchhotkey": null,
+      "fields": {},
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "structure,player",
+      "targs2": null
+    },
+    "Afra": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {},
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground",
+      "targs2": null
+    },
+    "A0BR": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "R",
+      "researchhotkey": null,
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_42120",
+          "sid": 42120,
+          "current_val": "|cffc8cde1Воскрешение мертвых|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41512",
+          "sid": 41512,
+          "current_val": "|cffc8cde1Воскрешение мертвых|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_42240",
+          "sid": 42240,
+          "current_val": "|cffc8cde1Воскрешение мертвых|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "dead",
+      "targs2": "dead"
+    },
+    "Agyd": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {},
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "Arlm": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": null,
+      "researchhotkey": null,
+      "fields": {},
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "A0CA": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_13557",
+      "researchhotkey": "T",
+      "fields": {
+        "animnames": {
+          "raw": "attack,slam",
+          "sid": null,
+          "current_val": "attack,slam"
+        },
+        "hotkey": {
+          "raw": "TRIGSTR_13557",
+          "sid": 13557,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_39433",
+          "sid": 39433,
+          "current_val": "|cffc8cde1Удар смерти|r"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_8770",
+          "sid": 8770,
+          "current_val": "Изучить «|cffc81919Удар смерти|r» [|cffffcc00%d-й уровень|r]"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_42125",
+          "sid": 42125,
+          "current_val": "|cffc8cde1Удар смерти|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_41159",
+          "sid": 41159,
+          "current_val": "Наносит удар по врагу, нанося 50 урона. С 5% шансом удар будет применен автоматически."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,debris,enemy,neutral,organic",
+      "targs2": "air,ground,debris,enemy,neutral,organic"
+    },
+    "A0CC": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_13584",
+      "researchhotkey": "T",
+      "fields": {
+        "animnames": {
+          "raw": "attack,slam",
+          "sid": null,
+          "current_val": "attack,slam"
+        },
+        "hotkey": {
+          "raw": "TRIGSTR_13584",
+          "sid": 13584,
+          "current_val": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_42129",
+          "sid": 42129,
+          "current_val": "|cffc8cde1Ледяной удар |r"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_8782",
+          "sid": 8782,
+          "current_val": "Изучить «|cffc81919Удар смерти|r» [|cffffcc00%d-й уровень|r]"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_42166",
+          "sid": 42166,
+          "current_val": "|cffc8cde1Ледяной удар |r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_39438",
+          "sid": 39438,
+          "current_val": "Наносит удар по врагу,  нанося 100 урона. С 5% шансом способность применится автоматически."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,debris,enemy,neutral,organic",
+      "targs2": "air,ground,debris,enemy,neutral,organic"
+    },
+    "A1ND": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30143",
+      "researchhotkey": null,
+      "fields": {
+        "animnames": {
+          "raw": "spell",
+          "sid": null,
+          "current_val": "spell"
+        },
+        "hotkey": {
+          "raw": "TRIGSTR_30143",
+          "sid": 30143,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_42241",
+          "sid": 42241,
+          "current_val": "|cffc8cde1Антимагический панцирь|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_42243",
+          "sid": 42243,
+          "current_val": "|cffc8cde1Антимагический панцирь|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_41833",
+          "sid": 41833,
+          "current_val": "Применяет на себя антимагический щит, поглощающий 600 магический урона в течении 40 секунд."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "A0CG": {
+      "type": "ability",
+      "levels": 1,
+      "hotkey": "TRIGSTR_13793",
+      "researchhotkey": null,
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_13793",
+          "sid": 13793,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_42232",
+          "sid": 42232,
+          "current_val": "|cffc8cde1Антимагический панцирь|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_42231",
+          "sid": 42231,
+          "current_val": "|cffc8cde1Антимагический панцирь|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,friend,ground",
+      "targs2": null
+    },
+    "kel0": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "TRIGSTR_29749",
+      "researchhotkey": "TRIGSTR_29850",
+      "fields": {
+        "hotkey": {
+          "raw": "TRIGSTR_29749",
+          "sid": 29749,
+          "current_val": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_39346",
+          "sid": 39346,
+          "current_val": "|cffc8cde1Смерть и разложение|r"
+        },
+        "researchhotkey": {
+          "raw": "TRIGSTR_29850",
+          "sid": 29850,
+          "current_val": "W"
+        },
+        "researchtip": {
+          "raw": "TRIGSTR_39168",
+          "sid": 39168,
+          "current_val": "|cffc8cde1Смерть и разложение|r"
+        },
+        "researchubertip": {
+          "raw": "TRIGSTR_39288",
+          "sid": 39288,
+          "current_val": "В выбранной области в течении 16 секунд юниты врага будут терять 1% здоровья каждую секунду. Работает на здания."
+        },
+        "tip1": {
+          "raw": "TRIGSTR_36995",
+          "sid": 36995,
+          "current_val": "|cffc8cde1Смерть и разложение|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_36996",
+          "sid": 36996,
+          "current_val": "|cffc8cde1Смерть и разложение|r"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_37808",
+          "sid": 37808,
+          "current_val": "|cffc8cde1Смерть и разложение|r"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_39061",
+          "sid": 39061,
+          "current_val": "|cffc8cde1Смерть и разложение|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_39062",
+          "sid": 39062,
+          "current_val": "В выбранной области в течении 16 секунд юниты врага будут терять 1% здоровья каждую секунду. Работает на здания."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_39063",
+          "sid": 39063,
+          "current_val": "В выбранной области в течении 26 секунд юниты врага будут терять 2% здоровья каждую секунду. Работает на здания."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_39064",
+          "sid": 39064,
+          "current_val": "В выбранной области в течении 36 секунд юниты врага будут терять 3% здоровья каждую секунду. Работает на здания."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_39167",
+          "sid": 39167,
+          "current_val": "В выбранной области в течении 46 секунд юниты врага будут терять 4% здоровья каждую секунду. Работает на здания."
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": null,
+      "targs2": null
+    },
+    "A1E7": {
+      "type": "ability",
+      "levels": 4,
+      "hotkey": "D",
+      "researchhotkey": "D",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_32145",
+          "sid": 32145,
+          "current_val": "|c00c5ff94Смерть и разложение|r"
+        }
+      },
+      "trains": null,
+      "researches": null,
+      "upgrades_to": null,
+      "upgrades": null,
+      "abils": null,
+      "heroabils": null,
+      "targs1": "air,ground,structure,ward",
+      "targs2": "air,ground,structure,ward"
+    }
+  }
+}

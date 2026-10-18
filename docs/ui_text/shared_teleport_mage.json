@@ -1,0 +1,57 @@
+{
+  "scope": "Общий маг телепортации; собственные карточки способностей ещё не обновлены",
+  "in_game_checked": false,
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "before_fields": {
+    "abillist": "A0IR,A0IO,A1IG",
+    "hotkey": "TRIGSTR_2229",
+    "name": "TRIGSTR_42955",
+    "targs1": "ground,structure,debris,air,item,ward",
+    "tip": "TRIGSTR_42956",
+    "ubertip": "TRIGSTR_42957",
+    "weapson": "1"
+  },
+  "strings": [
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h07A",
+      "field": "name",
+      "wts_id": 42955,
+      "category": "Общие системы: транспорт и порталы",
+      "before": "Teleportation Mage",
+      "after": "|cffe4cfa3Маг телепортации|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h07A",
+      "field": "tip",
+      "wts_id": 42956,
+      "category": "Общие системы: транспорт и порталы",
+      "before": "Train Teleportation Mage",
+      "after": "|cffe4cfa3Маг телепортации|r (|cffffffffR|r)"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h07A",
+      "field": "ubertip",
+      "wts_id": 42957,
+      "category": "Общие системы: транспорт и порталы",
+      "before": "Transports troops.",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Заклинатель для переброски войск.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМассовая телепортация|cffced4da: переносит мага и ближайшие войска игрока к союзному зданию.|n- |cffa9c7deТемный призыв|cffced4da: переносит союзников из выбранной области к магу.|n- |cffa9c7deПоддерживать связь|cffced4da: автоматически повторяет «Темный призыв» из выбранной точки по мере восстановления способности. Режим можно отключить.|n|n|cffe6c07bТемный призыв недоступен в радиусе |cffffffff1350|cffe6c07b от вражеской столицы.|cffced4da|n|nАтакует наземные и воздушные цели.|r"
+    }
+  ],
+  "evidence": [
+    "h0HY sellunits=h07A; общий юнит, используется несколькими расами",
+    "h07A abillist=A0IR,A0IO,A1IG; weapson=1; targs1 содержит ground и air; hotkey R",
+    "A0IR/A0IO: текущие object data и WTS 32450/32417",
+    "06_transport_portals.lua: Trig_TPrepeat_Actions, Trig_TPrepatStop_Actions, Trig_NoTpNearCapital_Actions (1350)"
+  ],
+  "remaining": [
+    "Собственные подсказки A0IR,A0IO,A1IG,A1IH",
+    "Связанные карточки остальных рас",
+    "Warcraft III: читаемость, клавиша, связь и ограничение у столицы"
+  ]
+}

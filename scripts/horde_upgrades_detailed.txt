@@ -1,0 +1,827 @@
+=== UPGRADE [R002] ===
+  hotkey1      : TRIGSTR_5687 -> A
+  hotkey2      : TRIGSTR_5735 -> A
+  hotkey3      : TRIGSTR_5736 -> A
+  hotkey4      : TRIGSTR_5589 -> A
+  hotkey5      : TRIGSTR_5590 -> A
+  hotkey6      : TRIGSTR_5685 -> A
+  name1        : |cffe4cfa3Орудия флота — уровень 1|r -> |cffe4cfa3Орудия флота — уровень 1|r
+  name2        : |cffe4cfa3Орудия флота — уровень 2|r -> |cffe4cfa3Орудия флота — уровень 2|r
+  name3        : |cffe4cfa3Орудия флота — уровень 3|r -> |cffe4cfa3Орудия флота — уровень 3|r
+  name4        : |cffe4cfa3Орудия флота — уровень 4|r -> |cffe4cfa3Орудия флота — уровень 4|r
+  name5        : |cffe4cfa3Орудия флота — уровень 5|r -> |cffe4cfa3Орудия флота — уровень 5|r
+  name6        : |cffe4cfa3Орудия флота — уровень 6|r -> |cffe4cfa3Орудия флота — уровень 6|r
+  tip1         : |cffe4cfa3Орудия флота — уровень 1|r (|cffffffffA|r) -> |cffe4cfa3Орудия флота — уровень 1|r (|cffffffffA|r)
+  tip2         : |cffe4cfa3Орудия флота — уровень 2|r (|cffffffffA|r) -> |cffe4cfa3Орудия флота — уровень 2|r (|cffffffffA|r)
+  tip3         : |cffe4cfa3Орудия флота — уровень 3|r (|cffffffffA|r) -> |cffe4cfa3Орудия флота — уровень 3|r (|cffffffffA|r)
+  tip4         : |cffe4cfa3Орудия флота — уровень 4|r (|cffffffffA|r) -> |cffe4cfa3Орудия флота — уровень 4|r (|cffffffffA|r)
+  tip5         : |cffe4cfa3Орудия флота — уровень 5|r (|cffffffffA|r) -> |cffe4cfa3Орудия флота — уровень 5|r (|cffffffffA|r)
+  tip6         : |cffe4cfa3Орудия флота — уровень 6|r (|cffffffffA|r) -> |cffe4cfa3Орудия флота — уровень 6|r (|cffffffffA|r)
+  ubertip1     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+17|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+3|cffced4da к урону.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+17|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+3|cffced4da к урону.|r
+  ubertip2     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+34|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+6|cffced4da к урону.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+34|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+6|cffced4da к урону.|r
+  ubertip3     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+51|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+9|cffced4da к урону.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+51|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+9|cffced4da к урону.|r
+  ubertip4     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+68|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+12|cffced4da к урону.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+68|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+12|cffced4da к урону.|r
+  ubertip5     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+85|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+15|cffced4da к урону.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+85|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+15|cffced4da к урону.|r
+  ubertip6     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff6|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+102|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+18|cffced4da к урону.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff6|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+102|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+18|cffced4da к урону.|r
+=== UPGRADE [R003] ===
+  hotkey1      : TRIGSTR_6679 -> S
+  hotkey2      : TRIGSTR_6587 -> S
+  hotkey3      : TRIGSTR_6675 -> S
+  hotkey4      : TRIGSTR_6676 -> S
+  hotkey5      : TRIGSTR_6677 -> S
+  hotkey6      : TRIGSTR_6678 -> S
+  name1        : |cffe4cfa3Укреплённый корпус — уровень 1|r -> |cffe4cfa3Укреплённый корпус — уровень 1|r
+  name2        : |cffe4cfa3Укреплённый корпус — уровень 2|r -> |cffe4cfa3Укреплённый корпус — уровень 2|r
+  name3        : |cffe4cfa3Укреплённый корпус — уровень 3|r -> |cffe4cfa3Укреплённый корпус — уровень 3|r
+  name4        : |cffe4cfa3Укреплённый корпус — уровень 4|r -> |cffe4cfa3Укреплённый корпус — уровень 4|r
+  name5        : |cffe4cfa3Укреплённый корпус — уровень 5|r -> |cffe4cfa3Укреплённый корпус — уровень 5|r
+  name6        : |cffe4cfa3Укреплённый корпус — уровень 6|r -> |cffe4cfa3Укреплённый корпус — уровень 6|r
+  tip1         : |cffe4cfa3Укреплённый корпус — уровень 1|r (|cffffffffS|r) -> |cffe4cfa3Укреплённый корпус — уровень 1|r (|cffffffffS|r)
+  tip2         : |cffe4cfa3Укреплённый корпус — уровень 2|r (|cffffffffS|r) -> |cffe4cfa3Укреплённый корпус — уровень 2|r (|cffffffffS|r)
+  tip3         : |cffe4cfa3Укреплённый корпус — уровень 3|r (|cffffffffS|r) -> |cffe4cfa3Укреплённый корпус — уровень 3|r (|cffffffffS|r)
+  tip4         : |cffe4cfa3Укреплённый корпус — уровень 4|r (|cffffffffS|r) -> |cffe4cfa3Укреплённый корпус — уровень 4|r (|cffffffffS|r)
+  tip5         : |cffe4cfa3Укреплённый корпус — уровень 5|r (|cffffffffS|r) -> |cffe4cfa3Укреплённый корпус — уровень 5|r (|cffffffffS|r)
+  tip6         : |cffe4cfa3Укреплённый корпус — уровень 6|r (|cffffffffS|r) -> |cffe4cfa3Укреплённый корпус — уровень 6|r (|cffffffffS|r)
+  ubertip1     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+100|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+1|cffced4da к броне.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+100|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+1|cffced4da к броне.|r
+  ubertip2     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+200|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+2|cffced4da к броне.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+200|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+2|cffced4da к броне.|r
+  ubertip3     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+300|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+3|cffced4da к броне.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+300|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+3|cffced4da к броне.|r
+  ubertip4     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+400|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+8|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+8|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+4|cffced4da к броне.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+400|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+8|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+8|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+4|cffced4da к броне.|r
+  ubertip5     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+500|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+10|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+10|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+5|cffced4da к броне.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+500|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+10|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+10|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+5|cffced4da к броне.|r
+  ubertip6     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+600|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff6|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+12|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+12|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+6|cffced4da к броне.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+600|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff6|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+12|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+12|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+6|cffced4da к броне.|r
+=== UPGRADE [R004] ===
+  hotkey1      : TRIGSTR_15970 -> S
+  name1        : TRIGSTR_13295 -> |cffe4cfa3Эволюция: Кровавый палач|r
+  tip1         : TRIGSTR_13298 -> |cffe4cfa3Эволюция: Кровавый палач|r (|cffffffffS|r)
+  ubertip1     : TRIGSTR_18682 -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Трансформирует всех Властителей в более могучих Кровавых палачей, повышая их запас здоровья, урон и боевые характеристики.|n|nЗатрагивает: |cffa9c7deВластитель|cffced4da.|r
+=== UPGRADE [R005] ===
+  hotkey1      : TRIGSTR_14804 -> X
+  hotkey2      : TRIGSTR_15166 -> X
+  hotkey3      : TRIGSTR_14805 -> X
+  hotkey4      : TRIGSTR_15227 -> X
+  hotkey5      : TRIGSTR_15628 -> X
+  name1        : |cffe4cfa3Обстрел — уровень 1|r -> |cffe4cfa3Обстрел — уровень 1|r
+  name2        : |cffe4cfa3Обстрел — уровень 2|r -> |cffe4cfa3Обстрел — уровень 2|r
+  name3        : |cffe4cfa3Обстрел — уровень 3|r -> |cffe4cfa3Обстрел — уровень 3|r
+  name4        : |cffe4cfa3Обстрел — уровень 4|r -> |cffe4cfa3Обстрел — уровень 4|r
+  name5        : |cffe4cfa3Обстрел — уровень 5|r -> |cffe4cfa3Обстрел — уровень 5|r
+  tip1         : |cffe4cfa3Обстрел — уровень 1|r (|cffffffffX|r) -> |cffe4cfa3Обстрел — уровень 1|r (|cffffffffX|r)
+  tip2         : |cffe4cfa3Обстрел — уровень 2|r (|cffffffffX|r) -> |cffe4cfa3Обстрел — уровень 2|r (|cffffffffX|r)
+  tip3         : |cffe4cfa3Обстрел — уровень 3|r (|cffffffffX|r) -> |cffe4cfa3Обстрел — уровень 3|r (|cffffffffX|r)
+  tip4         : |cffe4cfa3Обстрел — уровень 4|r (|cffffffffX|r) -> |cffe4cfa3Обстрел — уровень 4|r (|cffffffffX|r)
+  tip5         : |cffe4cfa3Обстрел — уровень 5|r (|cffffffffX|r) -> |cffe4cfa3Обстрел — уровень 5|r (|cffffffffX|r)
+  ubertip1     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+30|cffced4da. Открывает «Массированный обстрел» и боковые пушки линкора у кораблей, имеющих эти способности.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+30|cffced4da. Открывает «Массированный обстрел» и боковые пушки линкора у кораблей, имеющих эти способности.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r
+  ubertip2     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+60|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+60|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r
+  ubertip3     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+90|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+90|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r
+  ubertip4     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+120|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+120|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r
+  ubertip5     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+150|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+150|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r
+=== UPGRADE [R006] ===
+  hotkey1      : TRIGSTR_10942 -> C
+  hotkey2      : TRIGSTR_11205 -> C
+  hotkey3      : TRIGSTR_11206 -> C
+  name1        : |cffe4cfa3Дополнительные паруса — уровень 1|r -> |cffe4cfa3Дополнительные паруса — уровень 1|r
+  name2        : |cffe4cfa3Дополнительные паруса — уровень 2|r -> |cffe4cfa3Дополнительные паруса — уровень 2|r
+  name3        : |cffe4cfa3Дополнительные паруса — уровень 3|r -> |cffe4cfa3Дополнительные паруса — уровень 3|r
+  tip1         : |cffe4cfa3Дополнительные паруса — уровень 1|r (|cffffffffC|r) -> |cffe4cfa3Дополнительные паруса — уровень 1|r (|cffffffffC|r)
+  tip2         : |cffe4cfa3Дополнительные паруса — уровень 2|r (|cffffffffC|r) -> |cffe4cfa3Дополнительные паруса — уровень 2|r (|cffffffffC|r)
+  tip3         : |cffe4cfa3Дополнительные паруса — уровень 3|r (|cffffffffC|r) -> |cffe4cfa3Дополнительные паруса — уровень 3|r (|cffffffffC|r)
+  ubertip1     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+5%|cffced4da. Открывает «Тактическое ускорение» у кораблей, имеющих эту способность, включая фрегаты и линкоры.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+5%|cffced4da. Открывает «Тактическое ускорение» у кораблей, имеющих эту способность, включая фрегаты и линкоры.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r
+  ubertip2     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+10%|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+10%|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r
+  ubertip3     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+15%|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+15%|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r
+=== UPGRADE [R007] ===
+  hotkey1      : TRIGSTR_12361 -> D
+  hotkey2      : TRIGSTR_12371 -> D
+  hotkey3      : TRIGSTR_12374 -> D
+  name1        : |cffe4cfa3Починка — уровень 1|r -> |cffe4cfa3Починка — уровень 1|r
+  name2        : |cffe4cfa3Починка — уровень 2|r -> |cffe4cfa3Починка — уровень 2|r
+  name3        : |cffe4cfa3Починка — уровень 3|r -> |cffe4cfa3Починка — уровень 3|r
+  tip1         : |cffe4cfa3Починка — уровень 1|r (|cffffffffD|r) -> |cffe4cfa3Починка — уровень 1|r (|cffffffffD|r)
+  tip2         : |cffe4cfa3Починка — уровень 2|r (|cffffffffD|r) -> |cffe4cfa3Починка — уровень 2|r (|cffffffffD|r)
+  tip3         : |cffe4cfa3Починка — уровень 3|r (|cffffffffD|r) -> |cffe4cfa3Починка — уровень 3|r (|cffffffffD|r)
+  ubertip1     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+50|cffced4da. Открывает способность «Починка» у кораблей, имеющих её.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+50|cffced4da. Открывает способность «Починка» у кораблей, имеющих её.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r
+  ubertip2     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+100|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+100|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r
+  ubertip3     : |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+150|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+150|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r
+=== UPGRADE [R0D1] ===
+  hotkey1      : TRIGSTR_36034 -> E
+  hotkey2      : TRIGSTR_7986 -> G
+  hotkey3      : TRIGSTR_8005 -> G
+  hotkey4      : TRIGSTR_9303 -> G
+  name1        : TRIGSTR_22950 -> |cffff5454Амнистия Клана Черной Горы|r
+  name2        : TRIGSTR_4255 -> Большой грабеж
+  name3        : TRIGSTR_4290 -> Лютый грабеж
+  name4        : TRIGSTR_8550 -> Рьяный грабеж
+  tip1         : TRIGSTR_22987 -> |cffff5454Амнистия Клана Черной Горы|r
+  tip2         : TRIGSTR_4286 -> Большой грабеж
+  tip3         : TRIGSTR_5047 -> Лютый грабеж
+  tip4         : TRIGSTR_8573 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36917 -> Вождь решил дать амнистию оркам Черной Горы, которые долгое время отказывались признать как поражение во второй войне, так и новую Орду. |cff00ff00Открывает новых юнитов, снижает общее потребление пехоты на 4%|r.
+  ubertip2     : TRIGSTR_4292 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0D2] ===
+  hotkey1      : TRIGSTR_37458 -> Q
+  hotkey2      : TRIGSTR_9304 -> G
+  hotkey3      : TRIGSTR_9305 -> G
+  hotkey4      : TRIGSTR_9458 -> G
+  name1        : TRIGSTR_36236 -> |cffff5454Эльфы в беде|r
+  name2        : TRIGSTR_23547 -> Откл
+  name3        : TRIGSTR_7492 -> Лютый грабеж
+  name4        : TRIGSTR_9296 -> Рьяный грабеж
+  tip1         : TRIGSTR_22892 -> |cffff5454Эльфы в беде
+  tip2         : TRIGSTR_23548 -> Откл
+  tip3         : TRIGSTR_8008 -> Лютый грабеж
+  tip4         : TRIGSTR_9452 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36918 -> По предложению Отрекшихся мы можем принять эльфов крови к себе. |cff00ff00Их пехота, кавалерия, маги, элементали и флот могут значительно усилить нашу мощь, а траты уменьшатся на 4%.
+  ubertip2     : TRIGSTR_23549 -> Откл
+=== UPGRADE [R0D3] ===
+  hotkey1      : TRIGSTR_37510 -> Q
+  hotkey2      : TRIGSTR_9459 -> G
+  hotkey3      : TRIGSTR_9460 -> G
+  hotkey4      : TRIGSTR_9479 -> G
+  name1        : TRIGSTR_36237 -> |cffff5454Предложение отрекшихся|r
+  name2        : TRIGSTR_23550 -> Откл
+  name3        : TRIGSTR_9294 -> Лютый грабеж
+  name4        : TRIGSTR_9455 -> Рьяный грабеж
+  tip1         : TRIGSTR_40584 -> |cffff5454Предложение отрекшихся|r
+  tip2         : TRIGSTR_23551 -> Откл
+  tip3         : TRIGSTR_9451 -> Лютый грабеж
+  tip4         : TRIGSTR_9473 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36919 -> Отрекшиеся окружены врагамы, потому они и попросились в орду. |cff00ff00Их войска могут значительно усилить нашу армию. Общие расходы снизятся на 2%.|r
+  ubertip2     : TRIGSTR_23552 -> Откл
+=== UPGRADE [R0DV] ===
+  hotkey2      : C -> C
+  hotkey3      : C -> C
+  name1        : TRIGSTR_22733 -> |cffe6beaaОрда|r
+  name2        : Хитиновая чешуя -> Хитиновая чешуя
+  name3        : Костяная чешуя -> Костяная чешуя
+  tip1         : TRIGSTR_22734 -> Орда
+  tip2         : Исследовать хитиновую чешую -> Исследовать хитиновую чешую
+  tip3         : Исследовать костяную чешую -> Исследовать костяную чешую
+  ubertip1     : TRIGSTR_22735 -> Орда
+  ubertip2     : "Дополнительно усиливает броню воинов-наг." -> "Дополнительно усиливает броню воинов-наг."
+  ubertip3     : "Дополнительно усиливает броню воинов-наг." -> "Дополнительно усиливает броню воинов-наг."
+=== UPGRADE [R0DW] ===
+  hotkey1      : TRIGSTR_36857 -> R
+  hotkey2      : TRIGSTR_9480 -> G
+  hotkey3      : TRIGSTR_9481 -> G
+  hotkey4      : TRIGSTR_11357 -> G
+  name1        : TRIGSTR_36238 -> |cffff5454Отказаться от Расширения|r
+  name2        : TRIGSTR_6584 -> Большой грабеж
+  name3        : TRIGSTR_9454 -> Лютый грабеж
+  name4        : TRIGSTR_9476 -> Рьяный грабеж
+  tip1         : TRIGSTR_40585 -> |cffff5454Отказаться от Расширения|r
+  tip2         : TRIGSTR_7856 -> Большой грабеж
+  tip3         : TRIGSTR_9472 -> Лютый грабеж
+  tip4         : TRIGSTR_15033 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36920 -> Орда наконец-то смогла заслужить свое место в мире. Зачем нам нам в союзниках подозрительные отрекшиеся и или остатки старой орды, если можно просто потратить силы на развитие имеющихся у нас сил обороны? |cffff0000Закрывает возможность присоединять расы|r (остается Орда времен первой осады Терамора), но|cff00ff00 уменьшает общее потребление на 15%.|r 
+  ubertip2     : TRIGSTR_8574 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0DX] ===
+  hotkey1      : TRIGSTR_37432 -> E
+  hotkey2      : TRIGSTR_15745 -> G
+  hotkey3      : TRIGSTR_15746 -> G
+  hotkey4      : TRIGSTR_15757 -> G
+  name1        : TRIGSTR_40586 -> |cffff5454Воссоединение орков|r
+  name2        : TRIGSTR_9289 -> Большой грабеж
+  name3        : TRIGSTR_9475 -> Лютый грабеж
+  name4        : TRIGSTR_15060 -> Рьяный грабеж
+  tip1         : TRIGSTR_40587 -> |cffff5454Воссоединение орков|r
+  tip2         : TRIGSTR_9450 -> Большой грабеж
+  tip3         : TRIGSTR_11827 -> Лютый грабеж
+  tip4         : TRIGSTR_15739 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_1350 -> Орда наконец-то смогла с боем отвоевать свое место в мире. Теперь можно и задуматься об орках на востоке, оставшихся там еще со времен второй войны. Вероятно, они с радостью войдут в состав нашей державы. |cffff0000Вариант "Отказаться от расширения становится недоступен". |cff00ff00Открывает ветки с присоединиением орочьих кланов|r
+  ubertip2     : TRIGSTR_9302 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0DY] ===
+  hotkey1      : TRIGSTR_38494 -> Q
+  hotkey2      : TRIGSTR_16508 -> G
+  hotkey3      : TRIGSTR_16546 -> G
+  hotkey4      : TRIGSTR_16549 -> G
+  name1        : TRIGSTR_36239 -> |cffff5454Поиск союзников|r
+  name2        : TRIGSTR_9453 -> Большой грабеж
+  name3        : TRIGSTR_15039 -> Лютый грабеж
+  name4        : TRIGSTR_15742 -> Рьяный грабеж
+  tip1         : TRIGSTR_40588 -> |cffff5454Поиск союзников|r
+  tip2         : TRIGSTR_9471 -> Большой грабеж
+  tip3         : TRIGSTR_15738 -> Лютый грабеж
+  tip4         : TRIGSTR_16495 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_22930 -> Орда наконец-то доказала свою полезность Азероту. Теперь она является одним общим домом сразу для нескольких наций, и мы же с радостью готовы приянть к себе новых членов. |cffff0000Вариант "Отказаться от расширения становится недоступен". |cff00ff00Открывает ветки с присоединиением новых фракций.|r
+  ubertip2     : TRIGSTR_9456 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0DZ] ===
+  hotkey1      : TRIGSTR_40160 -> W
+  hotkey2      : TRIGSTR_17213 -> G
+  hotkey3      : TRIGSTR_17768 -> G
+  hotkey4      : TRIGSTR_17791 -> G
+  name1        : TRIGSTR_40589 -> |cffff5454Вопросы безопасности|r
+  name2        : TRIGSTR_9474 -> Большой грабеж
+  name3        : TRIGSTR_15741 -> Лютый грабеж
+  name4        : TRIGSTR_16505 -> Рьяный грабеж
+  tip1         : TRIGSTR_40590 -> |cffff5454Вопросы безопасности|r
+  tip2         : TRIGSTR_11826 -> Большой грабеж
+  tip3         : TRIGSTR_16494 -> Лютый грабеж
+  tip4         : TRIGSTR_16620 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_22944 -> Орда показала свою мощь в битве за Хиджал. Однако время не стоит на месте, и наше руководство ищет новые возможности усиления армии Орды. Может быть, некие малые или нейтральные фракции при должном усилии могут нам в этом помочь? |cffff0000Вариант "Отказаться от расширения становится недоступен". |cff00ff00Открывает ветки с присоединиением новых нейтральных фракций.|r
+  ubertip2     : TRIGSTR_9477 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0E0] ===
+  hotkey1      : TRIGSTR_37433 -> E
+  hotkey2      : TRIGSTR_19374 -> G
+  hotkey3      : TRIGSTR_19576 -> G
+  hotkey4      : TRIGSTR_19658 -> G
+  name1        : TRIGSTR_36240 -> |cffff5454Усилить Кор'Крон|r
+  name2        : TRIGSTR_15036 -> Большой грабеж
+  name3        : TRIGSTR_16497 -> Лютый грабеж
+  name4        : TRIGSTR_17208 -> Рьяный грабеж
+  tip1         : TRIGSTR_22999 -> |cffff5454Усилить Кор'Крон
+  tip2         : TRIGSTR_15737 -> Большой грабеж
+  tip3         : TRIGSTR_16616 -> Лютый грабеж
+  tip4         : TRIGSTR_20612 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36921 -> В охрану вождя входят лучшие воины орды, в основном орки. Расширив этот орган, можно получить полноценную армию, способную сокрушить любого. |cff00ff00Открывает мощных воинов Кор'Кронцев|r, но |cffff0000повышает общие расходы на 5%.|r
+  ubertip2     : TRIGSTR_15063 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0E1] ===
+  hotkey1      : TRIGSTR_37434 -> E
+  hotkey2      : TRIGSTR_20618 -> G
+  hotkey3      : TRIGSTR_21539 -> G
+  hotkey4      : TRIGSTR_21906 -> G
+  name1        : TRIGSTR_36241 -> |cffff5454Связаться с кланом Драконьей Пасти|r
+  name2        : TRIGSTR_15740 -> Большой грабеж
+  name3        : TRIGSTR_17207 -> Лютый грабеж
+  name4        : TRIGSTR_20615 -> Рьяный грабеж
+  tip1         : TRIGSTR_40591 -> |cffff5454Связаться с кланом Драконьей Пасти|r
+  tip2         : TRIGSTR_16482 -> Большой грабеж
+  tip3         : TRIGSTR_20611 -> Лютый грабеж
+  tip4         : TRIGSTR_22339 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36922 -> Драконья пасть также долго время не желала вести переговоры с новой Ордой. Новое же руководство(при нашей поддержке) готово предоставить|cff00ff00 нам пехоту и элитных юнитов, снизив общее потребление на 4%|r
+  ubertip2     : TRIGSTR_15743 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0E3] ===
+  hotkey1      : TRIGSTR_33134 -> X
+  hotkey2      : TRIGSTR_21997 -> G
+  hotkey3      : TRIGSTR_22243 -> G
+  hotkey4      : TRIGSTR_22345 -> G
+  name1        : TRIGSTR_40592 -> |cffff5454Дом Рыцарям смерти|r
+  name2        : TRIGSTR_16496 -> Большой грабеж
+  name3        : TRIGSTR_20614 -> Лютый грабеж
+  name4        : TRIGSTR_22342 -> Рьяный грабеж
+  tip1         : TRIGSTR_40593 -> |cffff5454Дом Рыцарям смерти|r
+  tip2         : TRIGSTR_16615 -> Большой грабеж
+  tip3         : TRIGSTR_22338 -> Лютый грабеж
+  tip4         : TRIGSTR_22355 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36923 -> Король-Лич ослаб, а некоторые его могущественные и весьма разумные слуги вышли из под контроля. В том числе рыцари смерти, среди которых не мало воинов Орды. Если мы дадим их кров, |cff00ff00наши элитные войска пополняться этими рыцарями|r. |cffff0000Общие расходы возрастут на 1%.|r
+  ubertip2     : TRIGSTR_16506 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0E4] ===
+  hotkey1      : TRIGSTR_40161 -> W
+  hotkey2      : TRIGSTR_22348 -> G
+  hotkey3      : TRIGSTR_22349 -> G
+  hotkey4      : TRIGSTR_22362 -> G
+  name1        : TRIGSTR_36242 -> |cffff5454Сделка с Гоблинами|r
+  name2        : TRIGSTR_16621 -> Большой грабеж
+  name3        : TRIGSTR_22341 -> Лютый грабеж
+  name4        : TRIGSTR_22358 -> Рьяный грабеж
+  tip1         : TRIGSTR_40594 -> |cffff5454Сделка с Гоблинами|r
+  tip2         : TRIGSTR_20610 -> Большой грабеж
+  tip3         : TRIGSTR_22354 -> Лютый грабеж
+  tip4         : TRIGSTR_22897 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36924 -> К счастью или к беде, к орде присоединяются гоблины. |cff00ff00Добавляет новых юнитов гоблинов, |cffff0000но повышает общие расходы на 2%.|r
+  ubertip2     : TRIGSTR_17209 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0E5] ===
+  hotkey1      : TRIGSTR_25533 -> S
+  hotkey2      : TRIGSTR_22363 -> G
+  hotkey3      : TRIGSTR_22364 -> G
+  hotkey4      : TRIGSTR_22880 -> G
+  name1        : TRIGSTR_36243 -> |cffff5454Подчинить Магнатавров|r
+  name2        : TRIGSTR_20613 -> Большой грабеж
+  name3        : TRIGSTR_22357 -> Лютый грабеж
+  name4        : TRIGSTR_22900 -> Рьяный грабеж
+  tip1         : TRIGSTR_40595 -> |cffff5454Подчинить Магнатавров|r
+  tip2         : TRIGSTR_21412 -> Большой грабеж
+  tip3         : TRIGSTR_22896 -> Лютый грабеж
+  tip4         : TRIGSTR_22911 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36925 -> Взяв детенышей Магнатавров в плен - суровых нордскольких существ - можно вынудить их сражаться на нашей стороне. |cff00ff00Открывает нового очень сильногокавалерийского юнита|r,|cffff0000остается вопрос этики... и 2% к общему потреблению.|r
+  ubertip2     : TRIGSTR_20616 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0E6] ===
+  hotkey1      : TRIGSTR_32070 -> Z
+  hotkey2      : TRIGSTR_32071 -> Z
+  hotkey3      : TRIGSTR_32054 -> Z
+  hotkey4      : TRIGSTR_32055 -> Z
+  hotkey5      : TRIGSTR_32056 -> Z
+  hotkey6      : TRIGSTR_32057 -> Z
+  name1        : TRIGSTR_40596 -> |cffff5454Улучшенные пилы|r
+  name2        : TRIGSTR_40606 -> |cffff5454Улучшенные пилы|r
+  name3        : TRIGSTR_40597 -> |cffff5454Улучшенные пилы|r
+  name4        : TRIGSTR_40598 -> |cffff5454Улучшенные пилы|r
+  name5        : TRIGSTR_40599 -> |cffff5454Улучшенные пилы|r
+  name6        : TRIGSTR_40600 -> |cffff5454Улучшенные пилы|r
+  tip1         : TRIGSTR_40601 -> Исследовать |cffff5454Улучшенные пилы|r
+  tip2         : TRIGSTR_40607 -> Исследовать |cffff5454Улучшенные пилы|r
+  tip3         : TRIGSTR_40602 -> Исследовать |cffff5454Улучшенные пилы|r
+  tip4         : TRIGSTR_40603 -> Исследовать |cffff5454Улучшенные пилы|r
+  tip5         : TRIGSTR_40604 -> Исследовать |cffff5454Улучшенные пилы|r
+  tip6         : TRIGSTR_40605 -> Исследовать |cffff5454Улучшенные пилы|r
+  ubertip1     : TRIGSTR_22010 -> Увеличивают объем переносимой работниками древесины на 5.
+  ubertip2     : TRIGSTR_22005 -> Увеличивают объем переносимой работниками древесины на 5.
+  ubertip3     : TRIGSTR_22006 -> Увеличивают объем переносимой работниками древесины на 5.
+  ubertip4     : TRIGSTR_22007 -> Увеличивают объем переносимой работниками древесины на 5.
+  ubertip5     : TRIGSTR_22008 -> Увеличивают объем переносимой работниками древесины на 5.
+  ubertip6     : TRIGSTR_22009 -> Увеличивают объем переносимой работниками древесины на 5.
+=== UPGRADE [R0E7] ===
+  hotkey1      : G -> G
+  hotkey2      : TRIGSTR_22903 -> G
+  hotkey3      : TRIGSTR_22904 -> G
+  hotkey4      : TRIGSTR_22905 -> G
+  name1        : TRIGSTR_36244 -> |cffff5454Фракция с магами (урон)|r
+  name2        : TRIGSTR_22337 -> Большой грабеж
+  name3        : TRIGSTR_22899 -> Лютый грабеж
+  name4        : TRIGSTR_22914 -> Рьяный грабеж
+  tip1         : TRIGSTR_3802 -> |cffff5454Фракция с магами (урон)
+  tip2         : TRIGSTR_22340 -> Большой грабеж
+  tip3         : TRIGSTR_22910 -> Лютый грабеж
+  tip4         : TRIGSTR_22925 -> Рьяный грабеж
+  ubertip2     : TRIGSTR_22343 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0E8] ===
+  hotkey1      : G -> G
+  hotkey2      : TRIGSTR_22917 -> G
+  hotkey3      : TRIGSTR_22918 -> G
+  hotkey4      : TRIGSTR_22919 -> G
+  name1        : TRIGSTR_36245 -> |cffff5454Фракция с особой техникой|r
+  name2        : TRIGSTR_22353 -> Большой грабеж
+  name3        : TRIGSTR_22913 -> Лютый грабеж
+  name4        : TRIGSTR_22928 -> Рьяный грабеж
+  tip1         : TRIGSTR_4084 -> |cffff5454Фракция с особой техникой
+  tip2         : TRIGSTR_22356 -> Большой грабеж
+  tip3         : TRIGSTR_22924 -> Лютый грабеж
+  tip4         : TRIGSTR_22939 -> Рьяный грабеж
+  ubertip2     : TRIGSTR_22359 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0E9] ===
+  hotkey1      : TRIGSTR_37435 -> E
+  hotkey2      : TRIGSTR_22931 -> G
+  hotkey3      : TRIGSTR_22932 -> G
+  hotkey4      : TRIGSTR_22933 -> G
+  name1        : TRIGSTR_24790 -> |cffff5454Сформировать Истинную Орду|r
+  name2        : TRIGSTR_22895 -> Большой грабеж
+  name3        : TRIGSTR_22927 -> Лютый грабеж
+  name4        : TRIGSTR_22942 -> Рьяный грабеж
+  tip1         : TRIGSTR_36246 -> |cffff5454Сформировать Истинную Орду|r
+  tip2         : TRIGSTR_22898 -> Большой грабеж
+  tip3         : TRIGSTR_22938 -> Лютый грабеж
+  tip4         : TRIGSTR_22991 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36926 -> Мир опасное место, и выстоять в нем могут лишь сильнейшие. Мягким и слабым нет места в Орде! Только Орки, и те, у кого останется смелости остаться смогут достигнуть истинного величия. |cff00ff00Оставляет в орде лишь сильнеших, открывает темных шаманов|r, |cffff0000но отключает эффекты от рас левой ветки "Новый дом", а также лишает фракцию троллей и тауренов (+15% к общим расходам)|r.
+  ubertip2     : TRIGSTR_22901 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0EA] ===
+  hotkey1      : TRIGSTR_37436 -> E
+  hotkey2      : TRIGSTR_22945 -> G
+  hotkey3      : TRIGSTR_22946 -> G
+  hotkey4      : TRIGSTR_22947 -> G
+  name1        : TRIGSTR_36232 -> |cffff5454Начать строительство Железной Орды|r
+  name2        : TRIGSTR_22909 -> Большой грабеж
+  name3        : TRIGSTR_22941 -> Лютый грабеж
+  name4        : TRIGSTR_22994 -> Рьяный грабеж
+  tip1         : TRIGSTR_40608 -> |cffff5454Начать строительство Железной Орды|r
+  tip2         : TRIGSTR_22912 -> Большой грабеж
+  tip3         : TRIGSTR_22990 -> Лютый грабеж
+  tip4         : TRIGSTR_23004 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36927 -> Несмотря на недавний раскол в орде, мы выстояли. Настала пора захватить этот мир! В этом нам помогут гоблинские технологии - Гений Черноплавса готов перевооружить всю нашу армию, то есть сделать её непобедимой. |cff00ff00Коренным образом изменяет юнитов в казарме, усиливает некоторых старых юнитов и открывает новых|r, |cffff0000но закрывает возможность пойти по ветке "Орда Ша", а также поднимает расходы на 6%.
+  ubertip2     : TRIGSTR_22915 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0EB] ===
+  hotkey1      : TRIGSTR_37044 -> R
+  hotkey2      : TRIGSTR_27200 -> D
+  hotkey3      : TRIGSTR_25934 -> (Наги)
+  name1        : TRIGSTR_23324 -> |cffdcbef0Ювелирное мастерство|r
+  name2        : TRIGSTR_23325 -> Адепт |cff6f2583Тайной магии|r
+  name3        : TRIGSTR_23326 -> Мастер |cff6f2583Тайной магии|r 
+  tip1         : TRIGSTR_23327 -> |cffdcbef0Ювелирное мастерство|r
+  tip2         : TRIGSTR_23328 -> Адепт |cff6f2583Тайной магии|r
+  tip3         : TRIGSTR_23329 -> Мастер |cff6f2583Тайной магии|r
+  ubertip1     : TRIGSTR_23330 -> Дает инженерам способность «Ювелирное мастерство».
+  ubertip2     : TRIGSTR_23331 -> Увеличивает запас здоровья |cffffff00(40)|r и маны |cffffff00(50)|r у магов|cff6f2583Тайной магии|r, ускоряет регенерацию их маны |cffffff00(0.5)|r, а также обучает их способлностям |cff6f2583Тайной магии|r.
+  ubertip3     : TRIGSTR_23332 -> Увеличивает запас здоровья |cffffff00(40)|r и маны |cffffff00(50)|r у магов|cff6f2583Тайной магии|r, ускоряет регенерацию их маны |cffffff00(0.5)|r, а также обучает их способлностям |cff6f2583Тайной магии|r.
+=== UPGRADE [R0EC] ===
+  hotkey1      : TRIGSTR_32088 -> Z
+  hotkey2      : TRIGSTR_32089 -> Z
+  hotkey3      : TRIGSTR_32156 -> Z
+  hotkey4      : TRIGSTR_32197 -> Z
+  hotkey5      : TRIGSTR_32292 -> Z
+  hotkey6      : TRIGSTR_32293 -> Z
+  name1        : TRIGSTR_36247 -> |cffff5454Тренировка ближнего боя|r
+  name2        : TRIGSTR_23423 -> |cffff5454Тренировка ближнего боя
+  name3        : TRIGSTR_23424 -> |cffff5454Тренировка ближнего боя
+  name4        : TRIGSTR_23426 -> |cffff5454Тренировка ближнего боя
+  name5        : TRIGSTR_23427 -> |cffff5454Тренировка ближнего боя
+  name6        : TRIGSTR_23428 -> |cffff5454Тренировка ближнего боя
+  tip1         : TRIGSTR_23425 -> |cffff5454Тренировка ближнего боя
+  tip2         : TRIGSTR_23458 -> |cffff5454Тренировка ближнего боя
+  tip3         : TRIGSTR_23459 -> |cffff5454Тренировка ближнего боя
+  tip4         : TRIGSTR_23400 -> Тренировка пехоты |cffffff00(уровень 4)|r
+  tip5         : TRIGSTR_23401 -> Тренировка пехоты |cffffff00(уровень 5)|r
+  tip6         : TRIGSTR_23402 -> Тренировка пехоты |cffffff00(уровень 6)|r
+  ubertip1     : TRIGSTR_23403 -> Усиливает воинов ближнего боя армии Орды.
+  ubertip2     : TRIGSTR_23404 -> Усиливает воинов ближнего боя армии Орды.
+  ubertip3     : TRIGSTR_23405 -> Усиливает воинов ближнего боя армии Орды.
+  ubertip4     : TRIGSTR_23406 -> Усиливает воинов ближнего боя армии Орды.
+  ubertip5     : TRIGSTR_23407 -> Усиливает воинов ближнего боя армии Орды.
+  ubertip6     : TRIGSTR_23408 -> Усиливает воинов ближнего боя армии Орды.
+=== UPGRADE [R0ED] ===
+  hotkey1      : TRIGSTR_32421 -> Z
+  hotkey2      : TRIGSTR_32438 -> Z
+  hotkey3      : TRIGSTR_32446 -> Z
+  hotkey4      : TRIGSTR_32839 -> Z
+  hotkey5      : TRIGSTR_32977 -> Z
+  hotkey6      : TRIGSTR_33048 -> Z
+  name1        : TRIGSTR_36248 -> |cffff5454Тренировка дальнего боя|r
+  name2        : TRIGSTR_23464 -> |cffff5454Тренировка дальнего боя
+  name3        : TRIGSTR_23465 -> |cffff5454Тренировка дальнего боя
+  name4        : TRIGSTR_23467 -> |cffff5454Тренировка дальнего боя
+  name5        : TRIGSTR_23468 -> |cffff5454Тренировка дальнего боя
+  name6        : TRIGSTR_23469 -> |cffff5454Тренировка дальнего боя
+  tip1         : TRIGSTR_23466 -> |cffff5454Тренировка дальнего боя
+  tip2         : TRIGSTR_23470 -> |cffff5454Тренировка дальнего боя
+  tip3         : TRIGSTR_23478 -> |cffff5454Тренировка дальнего боя
+  tip4         : TRIGSTR_23479 -> |cffff5454Тренировка дальнего боя
+  tip5         : TRIGSTR_23480 -> |cffff5454Тренировка дальнего боя
+  tip6         : TRIGSTR_23481 -> |cffff5454Тренировка дальнего боя
+  ubertip1     : TRIGSTR_23483 -> Усиливает воинов дальнего боя армии Орды.
+  ubertip2     : TRIGSTR_23484 -> Усиливает воинов дальнего боя армии Орды.
+  ubertip3     : TRIGSTR_23485 -> Усиливает воинов дальнего боя армии Орды.
+  ubertip4     : TRIGSTR_23486 -> Усиливает воинов дальнего боя армии Орды.
+  ubertip5     : TRIGSTR_23487 -> Усиливает воинов дальнего боя армии Орды.
+  ubertip6     : TRIGSTR_23488 -> Усиливает воинов дальнего боя армии Орды.
+=== UPGRADE [R0EE] ===
+  hotkey1      : TRIGSTR_38495 -> Q
+  hotkey2      : TRIGSTR_22996 -> G
+  hotkey3      : TRIGSTR_22997 -> G
+  hotkey4      : TRIGSTR_22998 -> G
+  name1        : TRIGSTR_36249 -> |cffff5454Пандаренский вопрос|r
+  name2        : TRIGSTR_23553 -> Откл
+  name3        : TRIGSTR_22993 -> Лютый грабеж
+  name4        : TRIGSTR_23007 -> Рьяный грабеж
+  tip1         : TRIGSTR_36929 -> |cffff5454Пандаренский вопрос|r
+  tip2         : TRIGSTR_23554 -> Откл
+  tip3         : TRIGSTR_23003 -> Лютый грабеж
+  tip4         : TRIGSTR_23017 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36928 -> К Орде присоединяются пандарены. Ветераны в недоумении, чем они могут быть полезны орде. |cff00ff00Открывает новых юнитов ближнего боя, общее потребление снижаетсяна 2%.
+  ubertip2     : TRIGSTR_23555 -> Откл
+=== UPGRADE [R0EF] ===
+  hotkey1      : TRIGSTR_33147 -> Z
+  hotkey2      : TRIGSTR_33148 -> Z
+  hotkey3      : TRIGSTR_33149 -> Z
+  hotkey4      : TRIGSTR_33431 -> Z
+  hotkey5      : TRIGSTR_33432 -> Z
+  hotkey6      : TRIGSTR_33595 -> Z
+  name1        : TRIGSTR_40611 -> |cffff5454Комплектование техники|r
+  name2        : TRIGSTR_40609 -> |cffff5454Комплектование техники|r
+  name3        : TRIGSTR_40610 -> |cffff5454Комплектование техники|r
+  name4        : TRIGSTR_23482 -> |cffff5454Тренировка дальнего боя
+  name5        : TRIGSTR_24313 -> |cffff5454Тренировка дальнего боя
+  name6        : TRIGSTR_24314 -> |cffff5454Тренировка дальнего боя
+  tip1         : TRIGSTR_24310 -> |cffff5454Комплектование техники
+  tip2         : TRIGSTR_24311 -> |cffff5454Комплектование техники
+  tip3         : TRIGSTR_24312 -> |cffff5454Комплектование техники
+  tip4         : TRIGSTR_24315 -> |cffff5454Тренировка дальнего боя
+  tip5         : TRIGSTR_24325 -> |cffff5454Тренировка дальнего боя
+  tip6         : TRIGSTR_24326 -> |cffff5454Тренировка дальнего боя
+  ubertip1     : TRIGSTR_25336 -> Усиливает технику Орды, повышая её характеристики.
+  ubertip2     : TRIGSTR_25337 -> Усиливает технику Орды, повышая её характеристики.
+  ubertip3     : TRIGSTR_25338 -> Усиливает технику Орды, повышая её характеристики.
+  ubertip4     : TRIGSTR_24331 -> Усиливает воинов дальнего боя армии Орды.
+  ubertip5     : TRIGSTR_24332 -> Усиливает воинов дальнего боя армии Орды.
+  ubertip6     : TRIGSTR_24333 -> Усиливает воинов дальнего боя армии Орды.
+=== UPGRADE [R0EH] ===
+  hotkey1      : TRIGSTR_38501 -> Q
+  hotkey2      : TRIGSTR_23009 -> G
+  hotkey3      : TRIGSTR_23010 -> G
+  hotkey4      : TRIGSTR_23011 -> G
+  name1        : TRIGSTR_36233 -> |cffff5454Орда - общий дом|r
+  name2        : TRIGSTR_22923 -> Большой грабеж
+  name3        : TRIGSTR_23006 -> Лютый грабеж
+  name4        : TRIGSTR_23020 -> Рьяный грабеж
+  tip1         : TRIGSTR_40612 -> |cffff5454Орда - общий дом|r
+  tip2         : TRIGSTR_22926 -> Большой грабеж
+  tip3         : TRIGSTR_23016 -> Лютый грабеж
+  tip4         : TRIGSTR_23031 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36930 -> Больше нельзя терпеть этих убийц и преступников - их поступки позорят Орду и ведут нас к безнадежной войне. Необходимо преобразовать орду, устранить деструктивные внутренние противоречия. |cffff0000Юниты правой ветки станут враждебны, их эффект на экономику прекратится|r, но |cff00ff00будут открыты новые ветки присоединения, а общие расходы снизятся на 15%.|r
+  ubertip2     : TRIGSTR_22929 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0EI] ===
+  hotkey1      : TRIGSTR_40162 -> W
+  hotkey2      : TRIGSTR_23023 -> G
+  hotkey3      : TRIGSTR_23024 -> G
+  hotkey4      : TRIGSTR_23025 -> G
+  name1        : TRIGSTR_40613 -> |cffff5454Дорога к компромису|r
+  name2        : TRIGSTR_22937 -> Большой грабеж
+  name3        : TRIGSTR_23019 -> Лютый грабеж
+  name4        : TRIGSTR_23034 -> Рьяный грабеж
+  tip1         : TRIGSTR_40614 -> |cffff5454Дорога к компромису|r
+  tip2         : TRIGSTR_22940 -> Большой грабеж
+  tip3         : TRIGSTR_23030 -> Лютый грабеж
+  tip4         : TRIGSTR_23045 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36931 -> В орду вошло много новых рас и фракций. Теперь необходимо преодалеть все внутренние противоречия, чтобы предотвратить намечаемый раскол. |cffff0000Закрывает остальные ветки|r, |cff00ff00но уменьшает общий расход на 9%.|r
+  ubertip2     : TRIGSTR_22943 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [R0F3] ===
+  hotkey1      : TRIGSTR_24979 -> A
+  hotkey2      : TRIGSTR_23037 -> G
+  hotkey3      : TRIGSTR_23038 -> G
+  hotkey4      : TRIGSTR_23039 -> G
+  name1        : TRIGSTR_36250 -> |cffff5454Присоединение Зандаларов|r
+  name2        : TRIGSTR_24890 -> Откл
+  name3        : TRIGSTR_23033 -> Лютый грабеж
+  name4        : TRIGSTR_23048 -> Рьяный грабеж
+  tip1         : TRIGSTR_40615 -> |cffff5454Присоединение Зандаларов|r
+  tip2         : TRIGSTR_24893 -> Откл
+  tip3         : TRIGSTR_23044 -> Лютый грабеж
+  tip4         : TRIGSTR_23059 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36932 -> Наследники некогда великой империи Троллей станут частью орды. |cff00ff00Наш флот получит новый легкий корабль, общее потребление снизится на 3%|r.
+  ubertip2     : TRIGSTR_24896 -> Откл
+=== UPGRADE [R0F4] ===
+  hotkey1      : TRIGSTR_38789 -> Q
+  hotkey2      : TRIGSTR_23051 -> G
+  hotkey3      : TRIGSTR_23052 -> G
+  hotkey4      : TRIGSTR_23053 -> G
+  name1        : TRIGSTR_36251 -> |cffff5454Принять Сурамарцев|r
+  name2        : TRIGSTR_24904 -> Откл
+  name3        : TRIGSTR_23047 -> Лютый грабеж
+  name4        : TRIGSTR_23062 -> Рьяный грабеж
+  tip1         : TRIGSTR_40616 -> |cffff5454Принять Сурамарцев|r
+  tip2         : TRIGSTR_24907 -> Откл
+  tip3         : TRIGSTR_23058 -> Лютый грабеж
+  tip4         : TRIGSTR_24892 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_36933 -> Вышедшие из долгой изоляции ночнорожденные готовы стать в ряды орды. |cff00ff00Добавляет нового мага поддержки и снижает общее потребление на 2%|r.
+  ubertip2     : TRIGSTR_24910 -> Откл
+=== UPGRADE [R0G5] ===
+  hotkey1      : TRIGSTR_38197 -> E
+  hotkey2      : TRIGSTR_38198 -> E
+  hotkey3      : TRIGSTR_38200 -> E
+  hotkey4      : TRIGSTR_38217 -> E
+  hotkey5      : TRIGSTR_38336 -> E
+  hotkey6      : TRIGSTR_38340 -> E
+  name1        : TRIGSTR_40617 -> |cffff5454Артефакты|r
+  name2        : TRIGSTR_40618 -> |cffff5454Артефакты|r
+  name3        : TRIGSTR_40619 -> |cffff5454Артефакты|r
+  name4        : TRIGSTR_40621 -> |cffff5454Артефакты|r
+  name5        : TRIGSTR_40622 -> |cffff5454Артефакты|r
+  name6        : TRIGSTR_40623 -> |cffff5454Артефакты|r
+  tip1         : TRIGSTR_40620 -> Исследовать |cffff5454Артефакты|r
+  tip2         : TRIGSTR_40624 -> Исследовать |cffff5454Артефакты|r
+  tip3         : TRIGSTR_40625 -> Исследовать |cffff5454Артефакты|r
+  tip4         : TRIGSTR_40626 -> Исследовать |cffff5454Артефакты|r
+  tip5         : TRIGSTR_40627 -> Исследовать |cffff5454Артефакты|r
+  tip6         : TRIGSTR_40628 -> Исследовать |cffff5454Артефакты|r
+  ubertip1     : TRIGSTR_27327 -> Увеличивает урон магов.
+  ubertip2     : TRIGSTR_27328 -> Увеличивает урон магов.
+  ubertip3     : TRIGSTR_27329 -> Увеличивает урон магов.
+  ubertip4     : TRIGSTR_27330 -> Увеличивает урон магов.
+  ubertip5     : TRIGSTR_27331 -> Увеличивает урон магов.
+  ubertip6     : TRIGSTR_27332 -> Увеличивает урон магов.
+=== UPGRADE [R0IR] ===
+  hotkey2      : C -> C
+  hotkey3      : C -> C
+  name1        : TRIGSTR_32959 -> |cffe6beaaЧерное Копье или Орда
+  name2        : Хитиновая чешуя -> Хитиновая чешуя
+  name3        : Костяная чешуя -> Костяная чешуя
+  tip1         : TRIGSTR_32960 -> |cffe6beaaЧерное Копье или Орда
+  tip2         : Исследовать хитиновую чешую -> Исследовать хитиновую чешую
+  tip3         : Исследовать костяную чешую -> Исследовать костяную чешую
+  ubertip2     : "Дополнительно усиливает броню воинов-наг." -> "Дополнительно усиливает броню воинов-наг."
+  ubertip3     : "Дополнительно усиливает броню воинов-наг." -> "Дополнительно усиливает броню воинов-наг."
+=== UPGRADE [R0J3] ===
+  hotkey2      : C -> C
+  hotkey3      : C -> C
+  name1        : TRIGSTR_17624 -> |cffe6beaaГоблины или Орда|r
+  name2        : Хитиновая чешуя -> Хитиновая чешуя
+  name3        : Костяная чешуя -> Костяная чешуя
+  tip1         : TRIGSTR_17630 -> |cffe6beaaЭкспедиция Кул-Тираса|r
+  tip2         : Исследовать хитиновую чешую -> Исследовать хитиновую чешую
+  tip3         : Исследовать костяную чешую -> Исследовать костяную чешую
+  ubertip1     : TRIGSTR_20112 -> Благодаря изворотливости и страсти к накопительству гоблины стали мастерами торговли и нажили огромные состояния. Соглашения с давними партнерами были заключены вновь, и Орда приняла гоблинов картеля Трюмных Вод с распростертыми объятиями.
+  ubertip2     : "Дополнительно усиливает броню воинов-наг." -> "Дополнительно усиливает броню воинов-наг."
+  ubertip3     : "Дополнительно усиливает броню воинов-наг." -> "Дополнительно усиливает броню воинов-наг."
+=== UPGRADE [R0KO] ===
+  hotkey1      : TRIGSTR_42188 -> Q
+  hotkey2      : TRIGSTR_30253 -> G
+  hotkey3      : TRIGSTR_30263 -> G
+  hotkey4      : TRIGSTR_30264 -> G
+  name1        : TRIGSTR_21998 -> |cffff5454Использовать Сердце И'Шараджа|r
+  name2        : TRIGSTR_30259 -> Большой грабеж
+  name3        : TRIGSTR_30260 -> Лютый грабеж
+  name4        : TRIGSTR_30273 -> Рьяный грабеж
+  tip1         : TRIGSTR_22034 -> |cffff5454Использовать Сердце И'Шараджа|r
+  tip2         : TRIGSTR_30268 -> Большой грабеж
+  tip3         : TRIGSTR_30269 -> Лютый грабеж
+  tip4         : TRIGSTR_33891 -> Рьяный грабеж
+  ubertip1     : TRIGSTR_23115 -> Орде срочно нужно ультимативное оружие, способное сломить всех врагов. И оно нашлось... Сердце древнего бога И'Шараджа позволит написать наших воинов невиданное силой. |cff00ff00Открывает новые темные способности всем юнитам, увеличивает их скорость атаки и передвижения на 15%, снижает расходы на 3%|r, |cffff0000но закрывает возможность начать строительство железной орды, а также снижает здоровье войск на 65 единиц.
+  ubertip2     : TRIGSTR_30274 -> Атакуя вражеские здания, юниты ближнего боя воруют золото.
+=== UPGRADE [Rgfo] ===
+  name1        : Знак укрепления -> Знак укрепления
+  name2        : Знак укрепления -> Знак укрепления
+  name3        : Знак укрепления -> Знак укрепления
+=== UPGRADE [Rguv] ===
+  name1        : Знак ночного зрения -> Знак ночного зрения
+=== UPGRADE [Rhme] ===
+  hotkey1      : TRIGSTR_32874 -> Q
+  hotkey2      : TRIGSTR_32901 -> Q
+  hotkey3      : TRIGSTR_32902 -> Q
+  hotkey4      : TRIGSTR_32944 -> Q
+  hotkey5      : TRIGSTR_32956 -> Q
+  hotkey6      : TRIGSTR_32957 -> Q
+  name1        : TRIGSTR_33172 -> |cffaad2ffМифриловые мечи|r
+  name2        : TRIGSTR_33726 -> |cffaad2ffМифриловые мечи|r
+  name3        : TRIGSTR_32096 -> |cffaad2ffМифриловые мечи|r
+  name4        : TRIGSTR_33821 -> |cffaad2ffМифриловые мечи|r
+  name5        : TRIGSTR_35188 -> |cffaad2ffМифриловые мечи|r
+  name6        : TRIGSTR_35191 -> |cffaad2ffМифриловые мечи|r
+  tip1         : TRIGSTR_35367 -> Исследовать |cffaad2ffМифриловые мечи|r
+  tip2         : TRIGSTR_35759 -> Исследовать |cffaad2ffМифриловые мечи|r
+  tip3         : TRIGSTR_35760 -> Исследовать |cffaad2ffМифриловые мечи|r
+  tip4         : TRIGSTR_35761 -> Исследовать |cffaad2ffМифриловые мечи|r
+  tip5         : TRIGSTR_35762 -> Исследовать |cffaad2ffМифриловые мечи|r
+  tip6         : TRIGSTR_35763 -> Исследовать |cffaad2ffМифриловые мечи|r
+  ubertip1     : TRIGSTR_35764 -> Увеличивают урон бойцов ближнего боя.
+  ubertip2     : TRIGSTR_35791 -> Увеличивают урон бойцов ближнего боя.
+  ubertip3     : TRIGSTR_35792 -> Увеличивают урон бойцов ближнего боя.
+  ubertip4     : TRIGSTR_35793 -> Увеличивают урон бойцов ближнего боя.
+  ubertip5     : TRIGSTR_35794 -> Увеличивают урон бойцов ближнего боя.
+  ubertip6     : TRIGSTR_35795 -> Увеличивают урон бойцов ближнего боя.
+=== UPGRADE [Roar] ===
+  hotkey1      : A -> A
+  hotkey2      : A -> A
+  hotkey3      : A -> A
+  hotkey4      : TRIGSTR_4739 -> A
+  hotkey5      : TRIGSTR_4802 -> A
+  hotkey6      : TRIGSTR_4803 -> A
+  name1        : TRIGSTR_36184 -> |cffff5454Улучшенная броня|r
+  name2        : TRIGSTR_36186 -> |cffff5454Улучшенная броня|r
+  name3        : TRIGSTR_36185 -> |cffff5454Улучшенная броня|r
+  name4        : TRIGSTR_36173 -> |cffff5454Улучшенная броня|r
+  name5        : TRIGSTR_36174 -> |cffff5454Улучшенная броня|r
+  name6        : TRIGSTR_36175 -> |cffff5454Улучшенная броня|r
+  tip1         : TRIGSTR_36187 -> Исследовать |cffff5454Улучшеннeю броня|r
+  tip2         : TRIGSTR_36188 -> Исследовать |cffff5454Улучшеннeю броня|r
+  tip3         : TRIGSTR_36189 -> Исследовать |cffff5454Улучшеннeю броня|r
+  tip4         : TRIGSTR_36176 -> Исследовать |cffff5454Улучшеннeю броня|r
+  tip5         : TRIGSTR_36177 -> Исследовать |cffff5454Улучшеннeю броня|r
+  tip6         : TRIGSTR_36178 -> Исследовать |cffff5454Улучшеннeю броня|r
+  ubertip1     : TRIGSTR_36190 -> Усиливает броню войск орды.
+  ubertip2     : TRIGSTR_36179 -> Усиливает броню войск орды.
+  ubertip3     : TRIGSTR_36180 -> Усиливает броню войск орды.
+  ubertip4     : TRIGSTR_36181 -> Усиливает броню войск орды.
+  ubertip5     : TRIGSTR_36182 -> Усиливает броню войск орды.
+  ubertip6     : TRIGSTR_36183 -> Усиливает броню войск орды.
+=== UPGRADE [Robf] ===
+  hotkey1      : N -> N
+  name1        : Горючая смесь -> Горючая смесь
+  tip1         : Горючая смесь -> Горючая смесь
+  ubertip1     : "Покрывает снаряды разрушителей горючей смесью, позволяя им поджигать землю." -> "Покрывает снаряды разрушителей горючей смесью, позволяя им поджигать землю."
+=== UPGRADE [Robk] ===
+  hotkey1      : E -> E
+  name1        : Улучшение до берсерка -> Улучшение до берсерка
+  tip1         : Берсерк -> Берсерк
+  ubertip1     : Превращает охотников за головами в берсерков. Дает бонус к здоровью и способность «Берсерк». -> Превращает охотников за головами в берсерков. Дает бонус к здоровью и способность «Берсерк».
+=== UPGRADE [Robs] ===
+  hotkey1      : B -> B
+  name1        : Грубая сила -> Грубая сила
+  tip1         : Исследовать «Грубую силу» -> Исследовать «Грубую силу»
+  ubertip1     : "+<Robs,base1> к запасу здоровья рубак и +<Robs,base2> к урону от их атак." -> "+<Robs,base1> к запасу здоровья рубак и +<Robs,base2> к урону от их атак."
+=== UPGRADE [Roen] ===
+  hotkey1      : N -> N
+  name1        : TRIGSTR_26346 -> Entangling
+  tip1         : TRIGSTR_26347 -> Study "Entangling"
+  ubertip1     : TRIGSTR_26366 -> Teaches raiders "Entangling," which pulls an enemy to the ground and immobilizes them. Entangled air units are considered ground units.
+=== UPGRADE [Rolf] ===
+  hotkey1      : L -> L
+  name1        : Жидкий огонь -> Жидкий огонь
+  tip1         : Исследовать «Жидкий огонь» -> Исследовать «Жидкий огонь»
+  ubertip1     : "Обучает наездников на нетопырях «Жидкому огню», который наносит зданиям противника периодический урон, замедляет их ремонт и атаки." -> "Обучает наездников на нетопырях «Жидкому огню», который наносит зданиям противника периодический урон, замедляет их ремонт и атаки."
+=== UPGRADE [Rome] ===
+  hotkey1      : TRIGSTR_32528 -> Q
+  hotkey2      : TRIGSTR_32626 -> Q
+  hotkey3      : TRIGSTR_32627 -> Q
+  hotkey4      : TRIGSTR_32365 -> Q
+  hotkey5      : TRIGSTR_32413 -> Q
+  hotkey6      : TRIGSTR_32418 -> Q
+  name1        : TRIGSTR_36197 -> |cffff5454Оружие ближнего боя|r
+  name2        : TRIGSTR_36198 -> |cffff5454Оружие ближнего боя|r
+  name3        : TRIGSTR_36199 -> |cffff5454Оружие ближнего боя|r
+  name4        : TRIGSTR_36191 -> |cffff5454Оружие ближнего боя|r
+  name5        : TRIGSTR_36192 -> |cffff5454Оружие ближнего боя|r
+  name6        : TRIGSTR_36193 -> |cffff5454Оружие ближнего боя|r
+  tip1         : TRIGSTR_36200 -> Исследовать |cffff5454Оружие ближнего боя|r
+  tip2         : TRIGSTR_36201 -> Исследовать |cffff5454Оружие ближнего боя|r
+  tip3         : TRIGSTR_36202 -> Исследовать |cffff5454Оружие ближнего боя|r
+  tip4         : TRIGSTR_36194 -> Исследовать |cffff5454Оружие ближнего боя|r
+  tip5         : TRIGSTR_36195 -> Исследовать |cffff5454Оружие ближнего боя|r
+  tip6         : TRIGSTR_36196 -> Исследовать |cffff5454Оружие ближнего боя|r
+  ubertip1     : TRIGSTR_22775 -> Увеличивает урон от атак немагических юнитов ближнего боя.
+  ubertip2     : TRIGSTR_22776 -> Увеличивает урон от атак немагических юнитов ближнего боя.
+  ubertip3     : TRIGSTR_22794 -> Увеличивает урон от атак немагических юнитов ближнего боя.
+  ubertip4     : TRIGSTR_22795 -> Увеличивает урон от атак немагических юнитов ближнего боя.
+  ubertip5     : TRIGSTR_22796 -> Увеличивает урон от атак немагических юнитов ближнего боя.
+  ubertip6     : TRIGSTR_22797 -> Увеличивает урон от атак немагических юнитов ближнего боя.
+=== UPGRADE [Ropg] ===
+  hotkey1      : TRIGSTR_33194 -> R
+  name1        : TRIGSTR_22401 -> |cffff5454Грабеж|r
+  tip1         : TRIGSTR_22402 -> |cffff5454Грабеж|r
+  ubertip1     : TRIGSTR_22403 -> Атакуя вражеские здания, некоторые юниты ближнего боя добывают ресурсы.
+=== UPGRADE [Ropm] ===
+  hotkey1      : B -> B
+  name1        : Рюкзак -> Рюкзак
+  tip1         : Исследовать рюкзак -> Исследовать рюкзак
+  ubertip1     : Позволяет некоторым наземным войскам носить предметы. -> Позволяет некоторым наземным войскам носить предметы.
+=== UPGRADE [Rora] ===
+  hotkey1      : TRIGSTR_32250 -> W
+  hotkey2      : TRIGSTR_32251 -> W
+  hotkey3      : TRIGSTR_32252 -> W
+  hotkey4      : TRIGSTR_32165 -> W
+  hotkey5      : TRIGSTR_32182 -> W
+  hotkey6      : TRIGSTR_32187 -> W
+  name1        : TRIGSTR_36167 -> |cffff5454Оружие дальнего боя|r
+  name2        : TRIGSTR_36168 -> |cffff5454Оружие дальнего боя|r
+  name3        : TRIGSTR_36169 -> |cffff5454Оружие дальнего боя|r
+  name4        : TRIGSTR_36161 -> |cffff5454Оружие дальнего боя|r
+  name5        : TRIGSTR_36162 -> |cffff5454Оружие дальнего боя|r
+  name6        : TRIGSTR_36163 -> |cffff5454Оружие дальнего боя|r
+  tip1         : TRIGSTR_36170 -> Исследовать |cffff5454Оружие дальнего боя|r
+  tip2         : TRIGSTR_36171 -> Исследовать |cffff5454Оружие дальнего боя|r
+  tip3         : TRIGSTR_36172 -> Исследовать |cffff5454Оружие дальнего боя|r
+  tip4         : TRIGSTR_36164 -> Исследовать |cffff5454Оружие дальнего боя|r
+  tip5         : TRIGSTR_36165 -> Исследовать |cffff5454Оружие дальнего боя|r
+  tip6         : TRIGSTR_36166 -> Исследовать |cffff5454Оружие дальнего боя|r
+  ubertip1     : TRIGSTR_22746 -> Увеличивает урон от немагических юнитов дальнего боя.
+  ubertip2     : TRIGSTR_22747 -> Увеличивает урон от немагических юнитов дальнего боя.
+  ubertip3     : TRIGSTR_22748 -> Увеличивает урон от немагических юнитов дальнего боя.
+  ubertip4     : TRIGSTR_22743 -> Увеличивает урон от немагических юнитов дальнего боя.
+  ubertip5     : TRIGSTR_22744 -> Увеличивает урон от немагических юнитов дальнего боя.
+  ubertip6     : TRIGSTR_22745 -> Увеличивает урон от немагических юнитов дальнего боя.
+=== UPGRADE [Rorb] ===
+  hotkey1      : D -> D
+  name1        : TRIGSTR_36224 -> |cffff5454Укрепленные стены|r
+  tip1         : TRIGSTR_36225 -> Исследовать |cffff5454Укрепленные стены|r
+  ubertip1     : Дают землянкам и сторожевым башням укрепленную броню. -> Дают землянкам и сторожевым башням укрепленную броню.
+=== UPGRADE [Rosp] ===
+  hotkey1      : S -> S
+  hotkey2      : S -> S
+  hotkey3      : S -> S
+  name1        : TRIGSTR_36226 -> |cffff5454Шипастые укрепления|r
+  name2        : TRIGSTR_36227 -> |cffff5454Шипастые укрепления|r
+  name3        : TRIGSTR_36228 -> |cffff5454Шипастые укрепления|r
+  tip1         : TRIGSTR_36229 -> Исследовать |cffff5454Шипастые укрепления|r
+  tip2         : TRIGSTR_36230 -> Исследовать |cffff5454Шипастые укрепления|r
+  tip3         : TRIGSTR_36231 -> Исследовать |cffff5454Шипастые укрепления|r
+  ubertip1     : "Покрывают здания Орды шипами, которые наносят <Rosp,base1> урона атакующим в ближнем бою врагам, а также дополнительный урон в объеме <Rosp,base2,%>% наносимого атакующими врагами урона." -> "Покрывают здания Орды шипами, которые наносят <Rosp,base1> урона атакующим в ближнем бою врагам, а также дополнительный урон в объеме <Rosp,base2,%>% наносимого атакующими врагами урона."
+  ubertip2     : "Увеличивают урон, наносимый атакующим в ближнем бою врагам, на <Rosp,mod2,%>%." -> "Увеличивают урон, наносимый атакующим в ближнем бою врагам, на <Rosp,mod2,%>%."
+  ubertip3     : "Увеличивают урон, наносимый атакующим в ближнем бою врагам, еще на <Rosp,mod1>." -> "Увеличивают урон, наносимый атакующим в ближнем бою врагам, еще на <Rosp,mod1>."
+=== UPGRADE [Rost] ===
+  hotkey1      : TRIGSTR_21978 -> Z
+  hotkey2      : TRIGSTR_22169 -> Z
+  hotkey3      : TRIGSTR_22170 -> Z
+  name1        : TRIGSTR_36203 -> |cffff5454Обучение магов поддержки|r
+  name2        : TRIGSTR_36204 -> |cffff5454Обучение магов поддержки|r
+  name3        : TRIGSTR_36207 -> |cffff5454Обучение магов поддержки|r
+  tip1         : TRIGSTR_36205 -> Исследовать |cffff5454Обучение магов поддержки (1)|r
+  tip2         : TRIGSTR_36206 -> Исследовать |cffff5454Обучение магов поддержки (1)|r
+  tip3         : TRIGSTR_36208 -> Исследовать |cffff5454Обучение магов поддержки (1)|r
+  ubertip1     : TRIGSTR_23130 -> Увеличивает запас здоровья и маны магов поддержки, ускоряет регенерацию их маны, а также обучает их новым способностям.
+  ubertip2     : TRIGSTR_23133 -> Увеличивает запас здоровья и маны магов поддержки, ускоряет регенерацию их маны, а также обучает их новым способностям.
+  ubertip3     : TRIGSTR_23134 -> Увеличивает запас здоровья и маны магов поддержки, ускоряет регенерацию их маны, а также обучает их новым способностям.
+=== UPGRADE [Rotr] ===
+  hotkey1      : R -> R
+  name1        : Регенерация троллей -> Регенерация троллей
+  name2        : Улучшенная регенерация троллей -> Улучшенная регенерация троллей
+  name3        : Ускоренная регенерация троллей -> Ускоренная регенерация троллей
+  tip1         : "Исследовать регенерацию троллей" -> "Исследовать регенерацию троллей"
+  tip2         : "Исследовать улучшенную регенерацию троллей" -> "Исследовать улучшенную регенерацию троллей"
+  tip3         : "Исследовать ускоренную регенерацию троллей" -> "Исследовать ускоренную регенерацию троллей"
+  ubertip1     : "Ускоряет регенерацию здоровья охотников за головами, знахарей и наездников на нетопырях." -> "Ускоряет регенерацию здоровья охотников за головами, знахарей и наездников на нетопырях."
+  ubertip2     : "Дополнительно ускоряет регенерацию здоровья охотников за головами, знахарей и наездников на нетопырях." -> "Дополнительно ускоряет регенерацию здоровья охотников за головами, знахарей и наездников на нетопырях."
+  ubertip3     : "Дополнительно ускоряет регенерацию здоровья охотников за головами, знахарей и наездников на нетопырях." -> "Дополнительно ускоряет регенерацию здоровья охотников за головами, знахарей и наездников на нетопырях."
+=== UPGRADE [Rovs] ===
+  hotkey1      : E -> E
+  name1        : Отравленные копья -> Отравленные копья
+  tip1         : Исследовать отравленные копья -> Исследовать отравленные копья
+  ubertip1     : "Добавляет к атакам наездников на ветрокрылах эффект яда, наносящий периодический урон." -> "Добавляет к атакам наездников на ветрокрылах эффект яда, наносящий периодический урон."
+=== UPGRADE [Rowd] ===
+  hotkey1      : TRIGSTR_10530 -> C
+  hotkey2      : TRIGSTR_10531 -> C
+  hotkey3      : TRIGSTR_10512 -> C
+  name1        : TRIGSTR_36215 -> |cffff5454Обучение специазированных магов|r
+  name2        : TRIGSTR_36216 -> |cffff5454Обучение специазированных магов|r
+  name3        : TRIGSTR_36219 -> |cffff5454Обучение специазированных магов|r
+  tip1         : TRIGSTR_36217 -> Исследовать |cffff5454Обучение специазированных магов|r
+  tip2         : TRIGSTR_36218 -> Исследовать |cffff5454Обучение специазированных магов|r
+  tip3         : TRIGSTR_36220 -> Исследовать |cffff5454Обучение специазированных магов|r
+  ubertip1     : TRIGSTR_36221 -> Увеличивает запас здоровья и маны специализированных магов, ускоряет регенерацию их маны, а также обучает их «Исцеляющему идолу».
+  ubertip2     : TRIGSTR_36222 -> Увеличивает запас здоровья и маны специализированных магов, ускоряет регенерацию их маны, а также обучает их «Исцеляющему идолу».
+  ubertip3     : TRIGSTR_36223 -> Увеличивает запас здоровья и маны специализированных магов, ускоряет регенерацию их маны, а также обучает их «Исцеляющему идолу».
+=== UPGRADE [Rows] ===
+  hotkey1      : P -> P
+  name1        : Увеличение урона от «Сокрушения» -> Увеличение урона от «Сокрушения»
+  tip1         : Улучшить «Сокрушение» -> Улучшить «Сокрушение»
+  ubertip1     : Увеличивает урон от «Сокрушения» тауренов. -> Увеличивает урон от «Сокрушения» тауренов.
+=== UPGRADE [Rowt] ===
+  hotkey1      : TRIGSTR_13641 -> X
+  hotkey2      : TRIGSTR_13642 -> X
+  hotkey3      : TRIGSTR_13643 -> X
+  name1        : TRIGSTR_36209 -> |cffff5454Обучение боевых магов|r
+  name2        : TRIGSTR_36210 -> |cffff5454Обучение боевых магов|r
+  name3        : TRIGSTR_36213 -> |cffff5454Обучение боевых магов|r
+  tip1         : TRIGSTR_36211 -> Исследовать |cffff5454Обучение боевых магов|r
+  tip2         : TRIGSTR_36212 -> Исследовать |cffff5454Обучение боевых магов|r
+  tip3         : TRIGSTR_36214 -> Исследовать |cffff5454Обучение боевых магов|r
+  ubertip1     : TRIGSTR_22153 -> Увеличивает запас здоровья и маны боевых магов ,ускоряет регенерацию их маны, а также обучает их новым способностям.
+  ubertip2     : TRIGSTR_28385 -> Увеличивает запас здоровья и маны боевых магов ,ускоряет регенерацию их маны, а также обучает их новым способностям.
+  ubertip3     : TRIGSTR_28483 -> Увеличивает запас здоровья и маны боевых магов ,ускоряет регенерацию их маны, а также обучает их новым способностям.
+=== UPGRADE [Rwdm] ===
+  hotkey1      : D -> D
+  name1        : Бонус к урону от «Боевых барабанов» -> Бонус к урону от «Боевых барабанов»
+  tip1         : Улучшить «Боевые барабаны» -> Улучшить «Боевые барабаны»
+  ubertip1     : Увеличивает бонус к урону от «Боевых барабанов» кодо. «Боевые барабаны» увеличивают урон находящихся рядом с кодо союзников. -> Увеличивает бонус к урону от «Боевых барабанов» кодо. «Боевые барабаны» увеличивают урон находящихся рядом с кодо союзников.

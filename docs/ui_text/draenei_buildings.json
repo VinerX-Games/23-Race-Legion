@@ -1,0 +1,213 @@
+{
+  "scope": "Дренеи (Draeneis): категория 1 — Здания (12 зданий)",
+  "buildings_count": 12,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "h015",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23144,
+          "after": "|cffe4cfa3Ратуша|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 23148,
+          "after": "|cffe4cfa3Ратуша|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10181,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Дренеев первой ступени. Обучает работников и служит складом ресурсов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЮвелирное мастерство|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deФорт|cffced4da: открывает доступ к передовым сооружениям и войскам Дренеев.|r"
+        }
+      ]
+    },
+    {
+      "id": "h016",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23149,
+          "after": "|cffe4cfa3Форт|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 23150,
+          "after": "|cffe4cfa3Форт|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10182,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Дренеев второй ступени. Открывает доступ к новым сооружениям и войскам.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЮвелирное мастерство|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deБастион|cffced4da: открывает доступ к высшим технологиям, войскам Озарённых и Сломленных.|r"
+        }
+      ]
+    },
+    {
+      "id": "h017",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23151,
+          "after": "|cffe4cfa3Бастион|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 23152,
+          "after": "|cffe4cfa3Бастион|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10183,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Дренеев третьей ступени. Открывает доступ к высшим технологиям, элитным силам Озарённых и Сломленных.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЮвелирное мастерство|cffced4da|n- |cffa9c7deПривлечь Сломленных|cffced4da|n- |cffa9c7deПосвящение Озаренных|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h033",
+      "hotkey": "W",
+      "strings": []
+    },
+    {
+      "id": "h055",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23170,
+          "after": "|cffe4cfa3Мастерская|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 23171,
+          "after": "|cffe4cfa3Мастерская|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31659,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Производственное сооружение Дренеев. Исследует улучшения оружия, доспехов и инструментов работников.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deРуническое оружие|cffced4da|n- |cffa9c7deАпекситовый доспех|cffced4da|n- |cffa9c7deЗаточенные наконечники|cffced4da|n- |cffa9c7deУлучшенные инструменты|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h056",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23172,
+          "after": "|cffe4cfa3Чародейский кластер|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 23173,
+          "after": "|cffe4cfa3Чародейский кластер|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 20564,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Магическое святилище Дренеев. Обучает заклинателей и исследует магические улучшения.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЧароплетница|cffced4da: маг контроля и подавления.|n- |cffa9c7deЖрец|cffced4da: священник поддержки и защиты.|n- |cffa9c7deЧародей|cffced4da: боевой маг дальнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deТаинство Магии|cffced4da|n- |cffa9c7deДар Наару|cffced4da|n- |cffa9c7deЧародейские познания|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h057",
+      "hotkey": "S",
+      "strings": []
+    },
+    {
+      "id": "h058",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17256,
+          "after": "|cffe4cfa3Храм Озаренных|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17257,
+          "after": "|cffe4cfa3Храм Озаренных|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12973,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Священная обитель воинов Света. Обучает элитных бойцов Озарённых и исследует священные улучшения.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da: стойкий воин со священным клинком.|n- |cffa9c7deЖрица Наару|cffced4da: целительница с благословением Света.|n- |cffa9c7deМаг Озаренный|cffced4da: заклинатель с чарами исцеления и молний.|n- |cffa9c7deОзаренный Паладин|cffced4da: могучий рыцарь передовой.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение Паладина|cffced4da|n- |cffa9c7deУчение наару|cffced4da|n- |cffa9c7deИзучение магии|cffced4da|n- |cffa9c7deОсвящение оружия|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h05A",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23176,
+          "after": "|cffe4cfa3Логово Сломленных|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 23177,
+          "after": "|cffe4cfa3Логово Сломленных|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12974,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Убежище изгнанников и Сломленных дренеев. Обучает ловких воинов и шаманов Тени.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deСломленный страж|cffced4da: пехотинец ближнего боя с уклонением.|n- |cffa9c7deСломленный мастер|cffced4da: стремительный боец с отравленным клинком.|n- |cffa9c7deСломленный провидец|cffced4da: шаман с молниями и исцеляющим идолом.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМастерство Пеплоустов|cffced4da|n- |cffa9c7deМастерство Сломленных|cffced4da|n- |cffa9c7deМудрость предков|cffced4da|n- |cffa9c7deМастерство танца ветра|cffced4da|n- |cffa9c7deОтравленное оружие|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h05B",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23179,
+          "after": "|cffe4cfa3Сторожевая башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 23178,
+          "after": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10725,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение Дренеев. Атакует наземные и воздушные цели стрелами света.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r"
+        }
+      ]
+    },
+    {
+      "id": "h05C",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23180,
+          "after": "|cffe4cfa3Лазарет|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 23181,
+          "after": "|cffe4cfa3Лазарет|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 18670,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию Дренеев продовольствием и приносит регулярный доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+40|cffced4da золота каждые |cffffffff25|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "h011",
+      "hotkey": "C",
+      "strings": []
+    }
+  ]
+}

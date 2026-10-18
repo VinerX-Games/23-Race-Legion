@@ -1,0 +1,335 @@
+{
+  "scope": "Эльфы Крови (Blood Elves): категория 2 — Юниты (16 юнитов)",
+  "units_count": 16,
+  "variants": [
+    "SD"
+  ],
+  "units": [
+    {
+      "id": "h04K",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 5713,
+          "after": "|cffe4cfa3Строитель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 28123,
+          "after": "|cffe4cfa3Строитель|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6526,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Основной рабочий Эльфов Крови. Добывает золото и древесину, возводит и ремонтирует здания.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h03V",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 273,
+          "after": "|cffe4cfa3Странник|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 274,
+          "after": "|cffe4cfa3Странник|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 15322,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый пехотинец ближнего боя. Может использовать ростовой щит для защиты от стрелковых атак.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: снижает урон от атак дальнего боя.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n00I",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17375,
+          "after": "|cffe4cfa3Следопыт|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17376,
+          "after": "|cffe4cfa3Следопыт|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 15326,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Меткий эльфийский стрелок дальнего боя. Эффективен против пехоты и воздушных целей противника.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h03X",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 1362,
+          "after": "|cffe4cfa3Всадник|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 1422,
+          "after": "|cffe4cfa3Всадник|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 16296,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Быстрый кавалерист ближнего боя. Идеален для стремительных атак и обхода противника с флангов.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h03Y",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 1440,
+          "after": "|cffe4cfa3Рыцарь крови|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 9310,
+          "after": "|cffe4cfa3Рыцарь крови|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 16297,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжеловооружённый паладин ордена Син'Дорай. Обладает высоким запасом здоровья, тяжёлой бронёй и целительной магией.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолна исцеления|cffced4da: восстанавливает здоровье раненым союзникам.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "e001",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 16185,
+          "after": "|cffe4cfa3Баллиста|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 20096,
+          "after": "|cffe4cfa3Баллиста|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35573,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Дальнобойное осадное орудие. Наносит сокрушительный урон укреплениям и скоплениям вражеских войск.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПодпорки|cffced4da: закрепляется на позиции, увеличивая скорость стрельбы.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "e030",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 20374,
+          "after": "|cffe4cfa3Магическая повозка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 20517,
+          "after": "|cffe4cfa3Магическая повозка|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31822,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Мобильный источник энергии. Непрерывно восполняет запас маны находящимся рядом союзным войскам.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВосполнение маны|cffced4da: передаёт запас маны союзникам.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h046",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 20331,
+          "after": "|cffe4cfa3Элементаль|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 20332,
+          "after": "|cffe4cfa3Элементаль|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 37025,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Магическое существо поддержки. Использует защитные чары и выводит из строя башни врага.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТуман|cffced4da: блокирует оборонительные строения противника.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h03Z",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 9365,
+          "after": "|cffe4cfa3Арканитовый голем|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 3197,
+          "after": "|cffe4cfa3Арканитовый голем|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 16298,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Могучий механический страж ближнего боя. Обладает исключительной защитой и разрушительными ударами.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h03W",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17377,
+          "after": "|cffe4cfa3Ведьмак|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17378,
+          "after": "|cffe4cfa3Ведьмак|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 16289,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный боец ближнего боя, специализирующийся на нейтрализации вражеских заклинателей и подчинении призванных существ.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПохищение заклинаний|cffced4da: снимает положительные эффекты с врагов и рассеивает проклятия союзников.|n- |cffa9c7deМагический контроль|cffced4da: подчиняет вражеских призванных существ.|n- |cffa9c7deЗащита от магии|cffced4da: даёт иммунитет к вражеским заклинаниям.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h040",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12951,
+          "after": "|cffe4cfa3Магистр|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 15529,
+          "after": "|cffe4cfa3Магистр|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 16300,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Боевой маг школы Огня. Испепеляет противников огненными стрелами и накладывает воспламеняющие чары.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deОгненная стрела|cffced4da: поражает врага огнём и кратковременно оглушает.|n- |cffa9c7deПоджигание|cffced4da: воспламеняет цель при атаках.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h041",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 15531,
+          "after": "|cffe4cfa3Арканистка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 15532,
+          "after": "|cffe4cfa3Арканистка|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 16301,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Заклинательница Тайной магии. Ослабляет противников искажениями времени и поражает чародейскими разрядами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЧародейская стрела|cffced4da: поражает врага арканой и замедляет его.|n- |cffa9c7deИскажение|cffced4da: замедляет скорость атаки цели при ударах.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h042",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 15533,
+          "after": "|cffe4cfa3Чернокнижник|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 16140,
+          "after": "|cffe4cfa3Чернокнижник|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 21477,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Мастер Скверны и тёмных искусств. Ослабляет броню врагов порчей и призывает демонических гончих.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСтрела скверны|cffced4da: снижает броню врага и оглушает его.|n- |cffa9c7deПорча|cffced4da: ослабляет защиту противника при атаках.|n- |cffa9c7deПризыв гончего|cffced4da: призывает демоническую гончую на поле боя.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n00O",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 39416,
+          "after": "|cffe4cfa3Гончий|r"
+        }
+      ]
+    },
+    {
+      "id": "h0BY",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 20333,
+          "after": "|cffe4cfa3Арканитовый страж|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 20341,
+          "after": "|cffe4cfa3Арканитовый страж|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 8396,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный призванный арканитовый защитник. Защищён магическим щитом и наносит сокрушительный урон типа хаос.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0O6",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3189,
+          "after": "|cffe4cfa3Заступник Скверны|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 9843,
+          "after": "|cffe4cfa3Заступник Скверны|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42390,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Осквернённый исполин ближнего боя. Поражает нескольких врагов цепными молниями Скверны.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУдар скверны|cffced4da: поражает до трёх врагов цепной молнией.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    }
+  ]
+}

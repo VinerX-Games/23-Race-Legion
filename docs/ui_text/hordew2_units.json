@@ -1,0 +1,333 @@
+{
+  "scope": "Орда Второй Войны (HordeW2): категория 2 — Юниты (21 юнитов)",
+  "units_count": 21,
+  "variants": [
+    "SD"
+  ],
+  "units": [
+    {
+      "id": "w200",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11731,
+          "after": "|cffe4cfa3Батрак|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11745,
+          "after": "|cffe4cfa3Батрак|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29074,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий Орды. Добывает золото и древесину, возводит и ремонтирует здания.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКузня войны|cffced4da: получает опыт в бою и труде, повышая наносимый урон до |cffc8e087+30%|cffced4da.|n- |cffa9c7deНебольшой скачок|cffced4da: мгновенно перемещается на короткое расстояние к ресурсам или зданиям.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "w208",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11787,
+          "after": "|cffe4cfa3Рубака|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11788,
+          "after": "|cffe4cfa3Рубака|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29535,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Выносливый орк-воин ближнего боя. Составляет основу ударной пехоты Орды.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКузня войны|cffced4da: накапливает боевой опыт, увеличивая урон до |cffc8e087+30%|cffced4da.|n- |cffa9c7deЯрость|cffced4da: после исследования на |cffffffff9|cffced4da сек. увеличивает скорость атаки на |cffc8e087+20%|cffced4da и скорость бега на |cffc8e087+15%|cffced4da.|n- |cffa9c7deОтработанные навыки|cffced4da: после исследования дарует |cffffffff5%|cffced4da шанс уклонения и |cffffffff5%|cffced4da шанс критического удара.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "w203",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11750,
+          "after": "|cffe4cfa3Метатель топоров|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11751,
+          "after": "|cffe4cfa3Метатель топоров|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29276,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Меткий лесной тролль дальнего боя, вооруженный метательными топорами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКузня войны|cffced4da: боевой ветеранский опыт увеличивает урон до |cffc8e087+30%|cffced4da.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "w204",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11752,
+          "after": "|cffe4cfa3Огр-воин|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11753,
+          "after": "|cffe4cfa3Огр-воин|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29277,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжелый пехотинец Орды с огромным запасом здоровья и разрушительным уроном.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКузня войны|cffced4da: накапливает опыт в сражениях, повышая урон до |cffc8e087+30%|cffced4da.|n- |cffa9c7deСильный удар|cffced4da: с вероятностью |cffffffff15%|cffced4da наносит дополнительный урон и оглушает цель.|n- |cffa9c7deСопротивление магии|cffced4da: после исследования получает лишь |cffffffff35%|cffced4da урона от вражеских заклинаний.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "xd04",
+      "hotkey": "T",
+      "strings": []
+    },
+    {
+      "id": "w209",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11789,
+          "after": "|cffe4cfa3Рыцарь смерти|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11790,
+          "after": "|cffe4cfa3Рыцарь смерти|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29662,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Конный колдун Орды дальнего боя, черпающий силу в некромантии и магии смерти.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКузня войны|cffced4da: повышает урон атак до |cffc8e087+30%|cffced4da с ростом ранга ветерана.|n- |cffa9c7deПохищение жизни|cffced4da: вытягивает |cffffffff45|cffced4da ед. здоровья в секунду из врага.|n- |cffa9c7deТёмный доспех|cffced4da: окружает союзника костяным щитом с поглощением урона.|n- |cffa9c7deСфера разрушения|cffced4da: пассивно усиливает атаку на |cffc8e087+20|cffced4da ед. и наносит урон по области.|n- |cffa9c7deВоскрешение мёртвых|cffced4da: поднимает скелетов из павших воинов.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "w211",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11857,
+          "after": "|cffe4cfa3Жрец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11858,
+          "after": "|cffe4cfa3Жрец|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29836,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Шаман-целитель троллей дальнего боя. Поддерживает армию исцелением и нейтрализует магию врага.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКузня войны|cffced4da: повышает боевые показатели до |cffc8e087+30%|cffced4da урона.|n- |cffa9c7deИсцеление|cffced4da: восстанавливает здоровье раненым союзникам.|n- |cffa9c7deРассеивание заклинаний|cffced4da: снимает положительные эффекты с врагов и отрицательные с союзников.|n- |cffa9c7deЗамедление|cffced4da: снижает скорость перемещения врага на |cffe69a8d30%|cffced4da и скорость атаки на |cffe69a8d15%|cffced4da.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "w205",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11754,
+          "after": "|cffe4cfa3Огр-маг|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11755,
+          "after": "|cffe4cfa3Огр-маг|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29278,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Двухголовый огр-чернокнижник ближнего боя. Усиливает передовые отряды боевым неистовством.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКузня войны|cffced4da: опыт ветерана повышает урон до |cffc8e087+30%|cffced4da.|n- |cffa9c7deЖажда крови|cffced4da: ускоряет атаку союзника на |cffc8e087+20%|cffced4da и передвижение на |cffc8e087+10%|cffced4da.|n- |cffa9c7deОко Кил'Рога|cffced4da: призывает парящее невидимое око для разведки.|n- |cffa9c7deВзрывная руна|cffced4da: размещает минные руны, наносящие взрывной урон подошедшим врагам.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "xd01",
+      "hotkey": "S",
+      "strings": []
+    },
+    {
+      "id": "xd06",
+      "hotkey": "S",
+      "strings": []
+    },
+    {
+      "id": "w207",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11785,
+          "after": "|cffe4cfa3Катапульта|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11786,
+          "after": "|cffe4cfa3Катапульта|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29473,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжелое осадное орудие дальнего боя. Разрушает вражеские укрепления и здания массивными валунами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКузня войны|cffced4da: повышает урон до |cffc8e087+30%|cffced4da по мере накопления боевого опыта.|n|n|cffa6afb8Атакует наземные цели и деревья.|r"
+        }
+      ]
+    },
+    {
+      "id": "w201",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11746,
+          "after": "|cffe4cfa3Дирижабль|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11747,
+          "after": "|cffe4cfa3Дирижабль|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29220,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Летающий транспорт гоблинов. Перевозит войска по воздуху и обеспечивает огневую поддержку ракетами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКузня войны|cffced4da: увеличивает урон до |cffc8e087+30%|cffced4da с рангом ветерана.|n- |cffa9c7deВзять на борт|cffced4da: вмещает сухопутные отряды для переброски по воздуху.|n- |cffa9c7deПерелёт|cffced4da: кратковременно ускоряет полет дирижабля.|n- |cffa9c7deРакетный обстрел|cffced4da: после исследования выпускает ракеты по наземным врагам.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "w206",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11756,
+          "after": "|cffe4cfa3Подрывной отряд|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11784,
+          "after": "|cffe4cfa3Подрывной отряд|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29454,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Команда гоблинов-камикадзе с пороховыми бочками. Взрывают себя, нанося колоссальный урон зданиям и деревьям.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБа-бах!|cffced4da: детонирует взрывчатку, сметая вражеские укрепления.|n|n|cffa6afb8Взрывает наземные цели и деревья.|r"
+        }
+      ]
+    },
+    {
+      "id": "xd02",
+      "hotkey": "G",
+      "strings": []
+    },
+    {
+      "id": "xd05",
+      "hotkey": "R",
+      "strings": []
+    },
+    {
+      "id": "w202",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11748,
+          "after": "|cffe4cfa3Красный дракон|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11749,
+          "after": "|cffe4cfa3Красный дракон|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29275,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Исполинский летающий дракон дальнего боя. Испепеляет вражеские отряды и постройки огненными шарами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКузня войны|cffced4da: ветеранский ранг усиливает урон дракона до |cffc8e087+30%|cffced4da.|n- |cffa9c7deПламенное дыхание|cffced4da: выдыхает конус пламени, нанося урон врагам.|n- |cffa9c7deОгненный столб|cffced4da: обрушивает столб огня в указанную область.|n- |cffa9c7deПрочная чешуя|cffced4da: снижает получаемый от атак урон на |cffc8e0876|cffced4da ед.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "xd07",
+      "hotkey": "W",
+      "strings": []
+    },
+    {
+      "id": "h0D4",
+      "hotkey": "Q",
+      "strings": []
+    },
+    {
+      "id": "h0D6",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3002,
+          "after": "|cffe4cfa3Фрегат|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 5542,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Скоростной боевой корабль флота Орды. Оснащен бортовыми орудиями для патрулирования и обстрела вражеских судов.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0D5",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10916,
+          "after": "|cffe4cfa3Дредноут|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10918,
+          "after": "|cffe4cfa3Дредноут|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6926,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжелый бронированный флагман флота Орды дальнего боя. Сокрушает береговые батареи и морские цели мощными залпами осадных орудий.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "w220",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22696,
+          "after": "|cffe4cfa3Нефтяной танкер|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22698,
+          "after": "|cffe4cfa3Нефтяной танкер|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 36997,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Специализированное судно Орды. Предназначено для разведки морских ресурсов и возведения нефтяных платформ.|r"
+        }
+      ]
+    }
+  ]
+}

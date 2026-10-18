@@ -1,0 +1,282 @@
+{
+  "scope": "Иллидари (Illidari): категория 1 — Здания (13 зданий)",
+  "buildings_count": 13,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "h0E9",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14055,
+          "after": "|cffe4cfa3Аванпост|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14056,
+          "after": "|cffe4cfa3Аванпост|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 5699,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Иллидари первой ступени. Обучает строителей и служит складом древесины.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deТренировки Охотников|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deКомандный центр|cffced4da: открывает доступ к передовым сооружениям и войскам Иллидари.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0EA",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 2702,
+          "after": "|cffe4cfa3Командный центр|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14059,
+          "after": "|cffe4cfa3Командный центр|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 14060,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Иллидари второй ступени. Открывает доступ к Храму магии и Нерестилищу, а также позволяет выбрать специализацию армии.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deТренировки Охотников|cffced4da|n- |cffa9c7deПриоритет Наги|cffced4da|n- |cffa9c7deПриоритет Эльфы|cffced4da|n- |cffa9c7deПриоритет Орки|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deШтаб|cffced4da: открывает доступ к Храму охоты и высшим технологиям.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0EB",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14062,
+          "after": "|cffe4cfa3Штаб|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14063,
+          "after": "|cffe4cfa3Штаб|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 14064,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Иллидари третьей ступени. Открывает доступ к Храму охоты, элитным охотникам на демонов и высшим ступеням улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deТренировки Охотников|cffced4da|n- |cffa9c7deПриоритет Наги|cffced4da|n- |cffa9c7deПриоритет Эльфы|cffced4da|n- |cffa9c7deПриоритет Орки|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0EC",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14066,
+          "after": "|cffe4cfa3Накопитель энергии|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14067,
+          "after": "|cffe4cfa3Накопитель энергии|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42689,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию Иллидари запасом пищи и вырабатывает регулярный доход.|n|nДаёт |cffffffff15|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+40|cffced4da золота каждые |cffffffff25|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0ED",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14070,
+          "after": "|cffe4cfa3Алтарь охоты|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14071,
+          "after": "|cffe4cfa3Алтарь охоты|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12976,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Призывает и воскрешает павших героев Иллидари.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deМаг Крови|cffced4da: герой дальнего боя, повелевающий пламенем и контролем маны.|n- |cffa9c7deОхотник на демонов|cffced4da: ловкий боец ближнего боя, сжигающий ману и способный принимать форму демона.|n- |cffa9c7deОхотник «Истребление»|cffced4da: стремительный воин с рывком Скверны, критическими ударами и яростью боя.|n- |cffa9c7deОхотник «Месть»|cffced4da: стойкий защитник, поглощающий здоровье врагов пламенем и возвращающий урон.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0EE",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 15182,
+          "after": "|cffe4cfa3Казармы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 15183,
+          "after": "|cffe4cfa3Казармы|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13130,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Военное сооружение для подготовки базовой пехоты, кавалерии и осадных орудий Иллидари.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deСтранник|cffced4da: пехотинец ближнего боя с защитным щитом.|n- |cffa9c7deРубака|cffced4da: сильный орк-воин ближнего боя.|n- |cffa9c7deСумеречный налётчик|cffced4da: быстрый кавалерист на волке для стремительных атак.|n- |cffa9c7deРазрушитель|cffced4da: дальнобойная осадная машина против укреплений.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da|n- |cffa9c7deГрубая сила|cffced4da|n- |cffa9c7deЯростный рывок|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0EF",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14078,
+          "after": "|cffe4cfa3Храм магии|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14079,
+          "after": "|cffe4cfa3Храм магии|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 14080,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Магическое святилище для подготовки заклинателей огня и Скверны.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deМагистр|cffced4da: чародей огня с огненным доспехом и огненными стрелами.|n- |cffa9c7deЧернокнижник|cffced4da: тёмный маг с рассеиванием чар и стрелами Скверны.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение магистров|cffced4da|n- |cffa9c7deПосвящение чернокнижников|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0EG",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14082,
+          "after": "|cffe4cfa3Нерестилище|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14083,
+          "after": "|cffe4cfa3Нерестилище|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 5700,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обитель глубинных наг, сражающихся на стороне Иллидари.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deМорской варан|cffced4da: стрелок дальнего боя с ядовитыми атаками.|n- |cffa9c7deМирмидон|cffced4da: могучий воин ближнего боя со способностью опутывания.|n- |cffa9c7deСирена|cffced4da: нага-колдунья с заклинаниями смерча, режущей воды и паразита.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМутация Наг|cffced4da|n- |cffa9c7deОпутывание|cffced4da|n- |cffa9c7deМагия воды|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0EH",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 15184,
+          "after": "|cffe4cfa3Лесопилка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 15185,
+          "after": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 3159,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Пункт приёма древесины и улучшения топоров строителей.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенные топоры|cffced4da: увеличивает объём переносимой работниками древесины.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0EM",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14798,
+          "after": "|cffe4cfa3Кузница|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14799,
+          "after": "|cffe4cfa3Кузница|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12968,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Центр разработки вооружения и брони для всех родов войск Иллидари.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПроклятое оружие|cffced4da: урон солдат ближнего боя.|n- |cffa9c7deОсквернённые доспехи|cffced4da: защита солдат ближнего боя.|n- |cffa9c7deОружие Скверны|cffced4da: урон стрелков и осадных орудий.|n- |cffa9c7deУкрепление Скверной|cffced4da: защита стрелков и заклинателей.|n- |cffa9c7deВладение магией|cffced4da: урон магов и заклинателей.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0EN",
+      "hotkey": "X",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14758,
+          "after": "|cffe4cfa3Магическая башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14759,
+          "after": "|cffe4cfa3Магическая башня|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31765,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительная башня Иллидари, атаки которой сжигают ману противников и наносят эквивалентный урон.|n|nАтакует наземные и воздушные цели (дальний бой, магический урон).|r"
+        }
+      ]
+    },
+    {
+      "id": "o01C",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14374,
+          "after": "|cffe4cfa3Храм охоты|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14375,
+          "after": "|cffe4cfa3Храм охоты|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 18691,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обитель элитных воинов Иллидари: покоренных демонов и обученных охотников на демонов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПокоренный демон|cffced4da: мощный верховой демон с яростью и рассекающими клинками.|n- |cffa9c7deОхотник «Истребление»|cffced4da: элитный пехотинец с аурой истребления и поглощением осколков.|n- |cffa9c7deОхотник «Месть»|cffced4da: элитный пехотинец с защитой от атак и противодействием магии.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deВладение Скверной|cffced4da: открывает способности покоренных демонов.|r"
+        }
+      ]
+    },
+    {
+      "id": "h011",
+      "hotkey": "C",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 368,
+          "after": "|cffe4cfa3Верфь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 369,
+          "after": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 370,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Строит боевые корабли и исследует улучшения флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбстрел|cffced4da|n- |cffa9c7deДополнительные паруса|cffced4da|n- |cffa9c7deПочинка|cffced4da|n- |cffa9c7deОрудия флота|cffced4da|n- |cffa9c7deУкреплённый корпус|cffced4da.|r"
+        }
+      ]
+    }
+  ]
+}

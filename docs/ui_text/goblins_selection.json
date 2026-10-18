@@ -1,0 +1,34 @@
+{
+  "scope": "Гоблины (Goblins): подсказка выбора расы A0AC",
+  "object": "A0AC",
+  "variants": [
+    "SD"
+  ],
+  "hotkey": {
+    "reference": "TRIGSTR_13572",
+    "value": "W"
+  },
+  "levels": 1,
+  "evidence": [
+    "04_race_selection.lua:457: InitTrig_Race_Goblins_O фильтрует A0AC; выбор создаёт 5 n00V, исследует R07E, R0J3 и запускает Trig_GoblinsOn_Actions().",
+    "A0AC находится на стартовой панели выбора рас, клавиша W (TRIGSTR_13572).",
+    "Создатель VinerX, сложность 4/5 (Высокая), период «Катаклизм» и клавиша W сохранены."
+  ],
+  "strings": [
+    {
+      "field": "name",
+      "wts_id": 38861,
+      "after": "|cffe4cfa3Гоблины|r"
+    },
+    {
+      "field": "tip1",
+      "wts_id": 38862,
+      "after": "|cffe4cfa3Гоблины|r (|cffffffffW|r)"
+    },
+    {
+      "field": "ubertip1",
+      "wts_id": 35189,
+      "after": "|cffa6afb8РАСА:|cffced4da Предприимчивые изобретатели, алхимики и торговцы картелей.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Сложность:|r |cffffffff●●●●|cffa6afb8●|r|n|cffa6afb8Период:|r |cffa9c7de«Катаклизм»|r|n|n|cffced4daГоблины — одна из самых гротескных и предприимчивых рас Азерота. Искусные инженеры, алхимики и аферисты, гоблины всегда ищут максимальную выгоду, делая ставку на передовые технологии, разрушительную пиротехнику и тотальную коммерциализацию войны.|r"
+    }
+  ]
+}

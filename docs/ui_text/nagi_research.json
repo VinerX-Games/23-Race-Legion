@@ -1,0 +1,600 @@
+{
+  "scope": "Наги (Nagi): категория 5 — Исследования и технологии",
+  "upgrades_count": 16,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R0FS",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 43187,
+          "after": "|cffe4cfa3Наги|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 43188,
+          "after": "|cffe4cfa3Наги|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 43189,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к расе Нагов (Империя Назжатар).|r"
+        }
+      ]
+    },
+    {
+      "id": "R0FE",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 43151,
+          "after": "|cffe4cfa3Владычество нагов|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 43153,
+          "after": "|cffe4cfa3Владычество нагов|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 43152,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Утверждает власть нагов в королевстве, открывая доступ к обучению элитных войск нагов и героя Владыки-стража.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГлубинный житель|cffced4da|n- |cffa9c7deСирена|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deСтраж нагов|cffced4da|n- |cffa9c7deДревний нага|cffced4da|n- |cffa9c7deВладыка-страж|cffced4da.|n|n|cffe6c07bБлокирует исследование «Владычество мурлоков».|r"
+        }
+      ]
+    },
+    {
+      "id": "R0FF",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 43154,
+          "after": "|cffe4cfa3Владычество мурлоков|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 43155,
+          "after": "|cffe4cfa3Владычество мурлоков|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 43156,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Утверждает власть мурлоков в королевстве, открывая доступ к ордам специализированных бойцов мурлоков и герою Мурлоку-гиганту.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМурлок-охотник|cffced4da|n- |cffa9c7deМурлок-чернокнижник|cffced4da|n- |cffa9c7deМурлок-шаман|cffced4da|n- |cffa9c7deМурлок-мутант|cffced4da|n- |cffa9c7deМурлок-гигант|cffced4da.|n|n|cffe6c07bБлокирует исследование «Владычество нагов».|r"
+        }
+      ]
+    },
+    {
+      "id": "R0FD",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 43148,
+          "after": "|cffe4cfa3Шипастый панцирь|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 43149,
+          "after": "|cffe4cfa3Шипастый панцирь|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 43150,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает панцири воинов острыми шипами, позволяя отражать |cffffffff15%|cffced4da урона, полученного в ближнем бою.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВоин волн|cffced4da|n- |cffa9c7deМурлок-налётчик|cffced4da|n- |cffa9c7deМурлок-охотник|cffced4da|n- |cffa9c7deМурлок-чернокнижник|cffced4da|n- |cffa9c7deМурлок-шаман|cffced4da|n- |cffa9c7deМурлок-мутант|cffced4da|n- |cffa9c7deДраконья черепаха|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0FH",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 43160,
+          "after": "|cffe4cfa3Улучшенный хват — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 43161,
+          "after": "|cffe4cfa3Улучшенный хват — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 43162,
+          "after": "|cffe4cfa3Улучшенный хват — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 43163,
+          "after": "|cffe4cfa3Улучшенный хват — уровень 4|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 43164,
+          "after": "|cffe4cfa3Улучшенный хват — уровень 1|r"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 43165,
+          "after": "|cffe4cfa3Улучшенный хват — уровень 2|r"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 43166,
+          "after": "|cffe4cfa3Улучшенный хват — уровень 3|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 43167,
+          "after": "|cffe4cfa3Улучшенный хват — уровень 4|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 43171,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет рабочим переносить |cffc8e087+8|cffced4da ед. древесины за один раз.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаб мурлоков|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/4|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 43168,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает количество переносимой древесины на |cffc8e087+8|cffced4da ед. (суммарно |cffffffff+16|cffced4da).|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаб мурлоков|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/4|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 43169,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает количество переносимой древесины на |cffc8e087+8|cffced4da ед. (суммарно |cffffffff+24|cffced4da).|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаб мурлоков|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/4|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 43170,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает количество переносимой древесины на |cffc8e087+8|cffced4da ед. (суммарно |cffffffff+32|cffced4da).|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаб мурлоков|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0FP",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 43172,
+          "after": "|cffe4cfa3Сокрушительный удар|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 43173,
+          "after": "|cffe4cfa3Сокрушительный удар|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 43174,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Морских охотников приёму «Сокрушение», дающему шанс нанести дополнительный урон и оглушить цель.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМорской охотник|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0FQ",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 43175,
+          "after": "|cffe4cfa3Господство на море — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 43178,
+          "after": "|cffe4cfa3Господство на море — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 43179,
+          "after": "|cffe4cfa3Господство на море — уровень 3|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 43176,
+          "after": "|cffe4cfa3Господство на море — уровень 1|r"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 43180,
+          "after": "|cffe4cfa3Господство на море — уровень 2|r"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 43181,
+          "after": "|cffe4cfa3Господство на море — уровень 3|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 43177,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья Мурлоков-мутантов на |cffc8e087+40|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМурлок-мутант|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 43182,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает здоровье Мурлоков-мутантов на |cffc8e087+40|cffced4da ед. (суммарно |cffffffff+80|cffced4da).|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМурлок-мутант|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 43183,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает здоровье Мурлоков-мутантов на |cffc8e087+40|cffced4da ед. (суммарно |cffffffff+120|cffced4da).|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМурлок-мутант|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0FR",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 43184,
+          "after": "|cffe4cfa3Замедляющий яд|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 43185,
+          "after": "|cffe4cfa3Замедляющий яд|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 43186,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет атаки Морских василисков смертоносным ядом, замедляющим скорость бега и атаки врага и наносящим периодический урон.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМорской василиск|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0KP",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 26369,
+          "after": "|cffe4cfa3Антимагический коатль|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 26370,
+          "after": "|cffe4cfa3Антимагический коатль|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 26371,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Коатлей способности «Противодействие», позволяя сжигать ману противника при каждой атаке и наносить дополнительный урон.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКоатль|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rnam",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 43038,
+          "after": "|cffe4cfa3Коралловая чешуя — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 43024,
+          "after": "|cffe4cfa3Коралловая чешуя — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 43021,
+          "after": "|cffe4cfa3Хитиновая чешуя — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 43025,
+          "after": "|cffe4cfa3Хитиновая чешуя — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 43023,
+          "after": "|cffe4cfa3Костяная чешуя — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 43022,
+          "after": "|cffe4cfa3Костяная чешуя — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 43026,
+          "after": "|cffe4cfa3Коралловая чешуя — уровень 1|r"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 43027,
+          "after": "|cffe4cfa3Коралловая чешуя — уровень 2|r"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 43028,
+          "after": "|cffe4cfa3Хитиновая чешуя — уровень 3|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 43031,
+          "after": "|cffe4cfa3Хитиновая чешуя — уровень 4|r"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 43030,
+          "after": "|cffe4cfa3Костяная чешуя — уровень 5|r"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 43029,
+          "after": "|cffe4cfa3Костяная чешуя — уровень 6|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 43032,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту войск нагов и мурлоков на |cffc8e087+2|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам нагов и мурлоков.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 43033,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно повышает защиту войск нагов и мурлоков на |cffc8e087+2|cffced4da ед. (суммарно |cffffffff+4|cffced4da).|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам нагов и мурлоков.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 43034,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно повышает защиту войск нагов и мурлоков на |cffc8e087+2|cffced4da ед. (суммарно |cffffffff+6|cffced4da).|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам нагов и мурлоков.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 43035,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно повышает защиту войск нагов и мурлоков на |cffc8e087+2|cffced4da ед. (суммарно |cffffffff+8|cffced4da).|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам нагов и мурлоков.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 43036,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно повышает защиту войск нагов и мурлоков на |cffc8e087+2|cffced4da ед. (суммарно |cffffffff+10|cffced4da).|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам нагов и мурлоков.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 43037,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно повышает защиту войск нагов и мурлоков на |cffc8e087+2|cffced4da ед. (суммарно |cffffffff+12|cffced4da).|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам нагов и мурлоков.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rnat",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 43039,
+          "after": "|cffe4cfa3Коралловые клинки — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 43043,
+          "after": "|cffe4cfa3Коралловые клинки — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 43040,
+          "after": "|cffe4cfa3Хитиновые клинки — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 43044,
+          "after": "|cffe4cfa3Хитиновые клинки — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 43042,
+          "after": "|cffe4cfa3Костяные клинки — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 43041,
+          "after": "|cffe4cfa3Костяные клинки — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 43045,
+          "after": "|cffe4cfa3Коралловые клинки — уровень 1|r"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 43049,
+          "after": "|cffe4cfa3Коралловые клинки — уровень 2|r"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 43046,
+          "after": "|cffe4cfa3Хитиновые клинки — уровень 3|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 43050,
+          "after": "|cffe4cfa3Хитиновые клинки — уровень 4|r"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 43048,
+          "after": "|cffe4cfa3Костяные клинки — уровень 5|r"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 43047,
+          "after": "|cffe4cfa3Костяные клинки — уровень 6|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 43051,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон войск нагов и мурлоков.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам нагов и мурлоков.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 43052,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает урон войск нагов и мурлоков.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам нагов и мурлоков.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 43053,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает урон войск нагов и мурлоков.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам нагов и мурлоков.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 43054,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает урон войск нагов и мурлоков.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам нагов и мурлоков.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 43055,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает урон войск нагов и мурлоков.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам нагов и мурлоков.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 43056,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает урон войск нагов и мурлоков.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам нагов и мурлоков.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rnen",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 25898,
+          "after": "|cffe4cfa3Опутывание|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 25944,
+          "after": "|cffe4cfa3Опутывание|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 26330,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Мирмидонов способности «Опутывание», позволяя прижимать воздушные и наземные цели к земле.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМирмидон|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rnsb",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 26331,
+          "after": "|cffe4cfa3Погружение|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 26332,
+          "after": "|cffe4cfa3Погружение|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 26333,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает войска нагов погружению под воду, даруя постоянную невидимость при нахождении в воде.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deМорской василиск|cffced4da|n- |cffa9c7deСтраж нагов|cffced4da|n- |cffa9c7deДревний нага|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rnsi",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 26334,
+          "after": "|cffe4cfa3Коралловая магия — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 26337,
+          "after": "|cffe4cfa3Коралловая магия — уровень 2|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 26335,
+          "after": "|cffe4cfa3Коралловая магия — уровень 1|r"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 26338,
+          "after": "|cffe4cfa3Коралловая магия — уровень 2|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 26336,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов поддержки на |cffc8e087+45|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед. и скорость восстановления маны.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГлубинный житель|cffced4da|n- |cffa9c7deМурлок-чернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 26339,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает здоровье магов поддержки на |cffc8e087+45|cffced4da ед., ману на |cffc8e087+100|cffced4da ед. и скорость восстановления маны.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГлубинный житель|cffced4da|n- |cffa9c7deМурлок-чернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rnsw",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 26340,
+          "after": "|cffe4cfa3Силы стихий — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 26341,
+          "after": "|cffe4cfa3Силы стихий — уровень 2|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 26342,
+          "after": "|cffe4cfa3Силы стихий — уровень 1|r"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 26343,
+          "after": "|cffe4cfa3Силы стихий — уровень 2|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 26344,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья боевых магов на |cffc8e087+45|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед. и скорость восстановления маны.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСирена|cffced4da|n- |cffa9c7deМурлок-шаман|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 26345,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает здоровье боевых магов на |cffc8e087+45|cffced4da ед., ману на |cffc8e087+100|cffced4da ед. и скорость восстановления маны.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСирена|cffced4da|n- |cffa9c7deМурлок-шаман|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0KZ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 5721,
+          "after": "|cffe4cfa3Иллидари или Наги|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9416,
+          "after": "|cffe4cfa3Иллидари или Наги|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 12518,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер союза Иллидари и Нагов в борьбе против общего врага.|r"
+        }
+      ]
+    }
+  ]
+}

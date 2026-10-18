@@ -1,0 +1,16 @@
+{
+  "race": "elements",
+  "category": "researches",
+  "total_researches": 17,
+  "total_levels": 47,
+  "total_checks": 141,
+  "all_matched": true,
+  "wts_keys_updated": 138,
+  "upgrade_ops": 3,
+  "hashes": {
+    "wts": {
+      "before": "0c03f262bde89970b61ba2f3f58900867443604a2526f8386771576657f0fe31",
+      "after": "254a8aba149ef975d9b574d1b17743f7a42f50fd05097957ec74f128662f268c"
+    }
+  }
+}

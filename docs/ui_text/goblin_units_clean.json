@@ -1,0 +1,489 @@
+[
+  {
+    "id": "h06K",
+    "name_clean": "Рекрут ТК",
+    "hotkey": "Q",
+    "name_raw": "TRIGSTR_14118",
+    "tip_raw": "TRIGSTR_14119",
+    "ubertip_raw": "TRIGSTR_13914",
+    "name_before": "|c00ffdb78Рекрут ТК|r",
+    "tip_before": "Обучить |c00ffdb78Рекрута ТК|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa20 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nБазовый, самый дешовый юнит армии гоблинов.",
+    "abils": [
+      "A0D6: |cffffff00Колотов",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0A6: |c00ffdb78Бракованные патроны|r",
+      "Aihn: Инвентарь"
+    ],
+    "atk1": "18-24 (pierce/instant, cool: 0.800000, targs: air,debris,ground,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "h06L",
+    "name_clean": "Пулеметчик",
+    "hotkey": "W",
+    "name_raw": "TRIGSTR_18717",
+    "tip_raw": "TRIGSTR_19269",
+    "ubertip_raw": "TRIGSTR_13919",
+    "name_before": "|c00ffdb78Пулеметчик|r",
+    "tip_before": "Обучить |c00ffdb78Пулеметчика|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa34 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nКрепкий юнит с большой скоростью атаки.",
+    "abils": [
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0A6: |c00ffdb78Бракованные патроны|r"
+    ],
+    "atk1": "18-24 (pierce/instant, cool: 0.600000, targs: ground,structure,debris,air,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "h06M",
+    "name_clean": "Снайпер",
+    "hotkey": "E",
+    "name_raw": "TRIGSTR_14122",
+    "tip_raw": "TRIGSTR_14123",
+    "ubertip_raw": "TRIGSTR_19267",
+    "name_before": "|c00ffdb78Снайпер|r",
+    "tip_before": "Обучить |c00ffdb78Снайпера|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa26 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nСтрелок, способный атаковать на большие дистанции.",
+    "abils": [
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "Aihn: Инвентарь"
+    ],
+    "atk1": "18-24 (pierce/missile, cool: 3.100000, targs: ground,structure,debris,air,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "h06N",
+    "name_clean": "Ракетчик",
+    "hotkey": "R",
+    "name_raw": "TRIGSTR_14124",
+    "tip_raw": "TRIGSTR_14125",
+    "ubertip_raw": "TRIGSTR_14132",
+    "name_before": "|c00ffdb78Ракетчик|r",
+    "tip_before": "Обучить |c00ffdb78Ракетчика|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa20 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный|r|nСтрелок с ракетометом, наносящий осадный урон по площади.",
+    "abils": [
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0A9: |cffffff00Шанс самоподрыва",
+      "Aihn: Инвентарь"
+    ],
+    "atk1": "18-24 (siege/missile, cool: 2.000000, targs: ground,structure,debris,air,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "h06O",
+    "name_clean": "Медик",
+    "hotkey": "S",
+    "name_raw": "TRIGSTR_14100",
+    "tip_raw": "TRIGSTR_14101",
+    "ubertip_raw": "TRIGSTR_38178",
+    "name_before": "|c00ffdb78Медик|r",
+    "tip_before": "Обучить |c00ffdb78Медика|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa32 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nГоблин, лечащий солдат каким-то неведомым лучом. Правда, потом представит счет...",
+    "abils": [
+      "A0AX: Лечение",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "Aihn: Инвентарь"
+    ],
+    "atk1": "18-24 (pierce/instant, cool: 1.4, targs: ground,structure,debris,air,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "h06P",
+    "name_clean": "Супербоец",
+    "hotkey": "W",
+    "name_raw": "TRIGSTR_14126",
+    "tip_raw": "TRIGSTR_14127",
+    "ubertip_raw": "TRIGSTR_17467",
+    "name_before": "|c00ffdb78Супербоец|r",
+    "tip_before": "Обучить |c00ffdb78Супербойца|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nМеткий стрелок, использующий специальные способности.",
+    "abils": [
+      "A0D2: |cffffff00Адренолиновые инъекции",
+      "A0Z4: |cffffff00Огнеметная турель|r",
+      "A0D1: |cffffff00ЭМИ граната",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0A6: |c00ffdb78Бракованные патроны|r",
+      "Aihn: Инвентарь"
+    ],
+    "atk1": "18-24 (pierce/instant, cool: 1.600000, targs: ground,structure,debris,air,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "h06Q",
+    "name_clean": "Огнеметчик",
+    "hotkey": "A",
+    "name_raw": "TRIGSTR_14102",
+    "tip_raw": "TRIGSTR_14103",
+    "ubertip_raw": "TRIGSTR_17472",
+    "name_before": "|c00ffdb78Огнеметчик|r",
+    "tip_before": "Обучить |c00ffdb78Огнеметчика|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa39 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r|nСтрелок, поджигающий противников.",
+    "abils": [
+      "A0AB: |cffffff00Поджог",
+      "A0AR: |cffffff00Шанс самоподжога ",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0AV: |cffffff00Коррупция: Дефект брони"
+    ],
+    "atk1": "18-24 (magic/missile, cool: 0.300000, targs: ground,structure,debris,air,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "h06R",
+    "name_clean": "БРДМ-2000",
+    "hotkey": "Q",
+    "name_raw": "TRIGSTR_14128",
+    "tip_raw": "TRIGSTR_14129",
+    "ubertip_raw": "TRIGSTR_19300",
+    "name_before": "|c00ffdb78БРДМ-2000|r",
+    "tip_before": "Построить |c00ffdb78БРДМ|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa35 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|nМашина, способная быстро перевозить юнитов.",
+    "abils": [
+      "S002: Cargo Hold",
+      "Achd: Cargo Hold Death",
+      "Sdro: Выгрузить",
+      "S001: |c00ffdb78Посадить в БРДМ|r",
+      "A0BL: |cffffff00Ускорение",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0A8: |cffffff00Взрыв напоследок",
+      "A0A7: |cffffff00Ба-бах!",
+      "A0A5: |cffffff00Расход топлива",
+      "A0A9: |cffffff00Шанс самоподрыва"
+    ],
+    "atk1": "45-55 (normal/msplash, cool: 1.850000, targs: enemies)",
+    "atk2": "17-18 (pierce/missile, cool: 2, targs: air)"
+  },
+  {
+    "id": "h06S",
+    "name_clean": "Огнестрельный танк \"Напалм-4000\"",
+    "hotkey": "R",
+    "name_raw": "TRIGSTR_14190",
+    "tip_raw": "TRIGSTR_14130",
+    "ubertip_raw": "TRIGSTR_38185",
+    "name_before": "|c00ffdb78Огнестрельный танк \"Напалм-4000\"|r",
+    "tip_before": "Построить |c00ffdb78Огнестрельный танк|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa97 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r|nМашина, поджигающая противников.",
+    "abils": [
+      "A0AB: |cffffff00Поджог",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0AR: |cffffff00Шанс самоподжога ",
+      "A0A8: |cffffff00Взрыв напоследок",
+      "A0A7: |cffffff00Ба-бах!",
+      "A0A5: |cffffff00Расход топлива",
+      "A0BL: |cffffff00Ускорение"
+    ],
+    "atk1": "45-55 (magic/missile, cool: 0.450000, targs: enemies)",
+    "atk2": "17-18 (pierce/missile, cool: 0.150000, targs: enemies)"
+  },
+  {
+    "id": "h06T",
+    "name_clean": "Штурмовой танк \"Вепрь-5000\"",
+    "hotkey": "A",
+    "name_raw": "TRIGSTR_14131",
+    "tip_raw": "TRIGSTR_2767",
+    "ubertip_raw": "TRIGSTR_18786",
+    "name_before": "|c00ffdb78Штурмовой танк \"Вепрь-5000\"|r",
+    "tip_before": "Построит |c00ffdb78Штурмовой танк|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa82 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nТяжелобронированная машина, гордость гоблинской нации.",
+    "abils": [
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0A9: |cffffff00Шанс самоподрыва",
+      "A0A8: |cffffff00Взрыв напоследок",
+      "A0A7: |cffffff00Ба-бах!",
+      "A0A5: |cffffff00Расход топлива",
+      "A0BL: |cffffff00Ускорение"
+    ],
+    "atk1": "45-55 (pierce/missile, cool: 2.350000, targs: ground,structure,debris,air,item,ward)",
+    "atk2": "17-18 (pierce/missile, cool: 2, targs: air)"
+  },
+  {
+    "id": "h06U",
+    "name_clean": "Вездеход Мурлок-3000",
+    "hotkey": "W",
+    "name_raw": "TRIGSTR_14133",
+    "tip_raw": "TRIGSTR_14134",
+    "ubertip_raw": "TRIGSTR_19186",
+    "name_before": "|c00ffdb78Вездеход Мурлок-3000|r",
+    "tip_before": "Построить |c00ffdb78Вездеход Мурлок-3000|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa47 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nМашина, способная передвигаться как по суше, так и по воде.",
+    "abils": [
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0A6: |c00ffdb78Бракованные патроны|r",
+      "A0A8: |cffffff00Взрыв напоследок",
+      "A0A7: |cffffff00Ба-бах!",
+      "A0A5: |cffffff00Расход топлива"
+    ],
+    "atk1": "45-55 (pierce/instant, cool: 0.875000, targs: ground,structure,debris,item,ward)",
+    "atk2": "17-18 (pierce/missile, cool: 2, targs: air)"
+  },
+  {
+    "id": "h06V",
+    "name_clean": "Субмарина",
+    "hotkey": "E",
+    "name_raw": "TRIGSTR_14135",
+    "tip_raw": "TRIGSTR_14136",
+    "ubertip_raw": "TRIGSTR_21612",
+    "name_before": "|c00ffdb78Субмарина|r",
+    "tip_before": "Построить |c00ffdb78Субмарину|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой |r|nМощный корабль, эффективный как в морском бою, так и против зданий. ",
+    "abils": [
+      "A1MT: |c00ffdb78Форсаж|r",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0A9: |cffffff00Шанс самоподрыва",
+      "A009: Сделать флагманом",
+      "A00A: Починка",
+      "A0LF: Почти в воде"
+    ],
+    "atk1": "78-105 (pierce/artillery, cool: 2.500000, targs: ground,structure,debris,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "h06W",
+    "name_clean": "Подводная лодка",
+    "hotkey": "R",
+    "name_raw": "TRIGSTR_14137",
+    "tip_raw": "TRIGSTR_14138",
+    "ubertip_raw": "TRIGSTR_21613",
+    "name_before": "|c00ffdb78Подводная лодка|r",
+    "tip_before": "Нанять |c00ffdb78Подводную лодку|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaДальний бой |r|nМощный корабль, эффективный как в морском бою, так и против зданий. ",
+    "abils": [
+      "A1MT: |c00ffdb78Форсаж|r",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0A9: |cffffff00Шанс самоподрыва",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0LG: |cffffff00Опуститься в воду",
+      "A009: Сделать флагманом",
+      "A00A: Починка"
+    ],
+    "atk1": "78-105 (pierce/artillery, cool: 1.800000, targs: ground,structure,debris,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "h06X",
+    "name_clean": "Универсальный Линкор",
+    "hotkey": "Q",
+    "name_raw": "TRIGSTR_14139",
+    "tip_raw": "TRIGSTR_14140",
+    "ubertip_raw": "TRIGSTR_21614",
+    "name_before": "|c00ffdb78Универсальный Линкор|r",
+    "tip_before": "Нанять |c00ffdb78Универсальный линкор|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный |r|nМощный корабль, используемый для транспортировки, но способный и постоять за себя.",
+    "abils": [
+      "A1MT: |c00ffdb78Форсаж|r",
+      "A001: Абордаж!",
+      "A0SR: |c00ffdb78Универсальный линкор все скрытые спелы",
+      "A00I: Магическая посадка",
+      "A00A: Починка",
+      "Sch5: Cargo Hold",
+      "Slo3: Взять на борт",
+      "Sdro: Выгрузить"
+    ],
+    "atk1": "78-105 (siege/artillery, cool: 2.200000, targs: ground,structure,debris,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "h06Y",
+    "name_clean": "Мобильная Артиллерия",
+    "hotkey": "E",
+    "name_raw": "TRIGSTR_14105",
+    "tip_raw": "TRIGSTR_14106",
+    "ubertip_raw": "TRIGSTR_19291",
+    "name_before": "|c00ffdb78Мобильная Артиллерия|r",
+    "tip_before": "Построить |c00ffdb78Мобильную артиллерию|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa65 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный|r|nТяжелобронированная машина, ведущая обстрел, находясь далеко от боя.",
+    "abils": [
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0A9: |cffffff00Шанс самоподрыва",
+      "A0A5: |cffffff00Расход топлива",
+      "A0A4: |c00ffdb78Закрепиться|r"
+    ],
+    "atk1": "45-55 (siege/instant, cool: 2.1, targs: ground,structure,debris,item,ward)",
+    "atk2": "17-18 (pierce/missile, cool: 2, targs: air)"
+  },
+  {
+    "id": "h06Z",
+    "name_clean": "Мобильная Артиллерия",
+    "hotkey": "E",
+    "name_raw": "TRIGSTR_14107",
+    "tip_raw": "TRIGSTR_14108",
+    "ubertip_raw": "\"Тяжелобронированная машина, эффективная против зданий. Можно оснастить системой залпового огня. |n|n|cffffcc00Атакует здания.|r\"",
+    "name_before": "|c00ffdb78Мобильная Артиллерия|r",
+    "tip_before": "Построить |c00ffdb78Мобильную артилеррию|r",
+    "ubertip_before": "\"Тяжелобронированная машина, эффективная против зданий. Можно оснастить системой залпового огня. |n|n|cffffcc00Атакует здания.|r\"",
+    "abils": [
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0A9: |cffffff00Шанс самоподрыва",
+      "A0A5: |cffffff00Расход топлива",
+      "A0A4: |c00ffdb78Закрепиться|r"
+    ],
+    "atk1": "45-55 (siege/msplash, cool: 4.000000, targs: ground,structure,debris,item,ward)",
+    "atk2": "17-18 (pierce/missile, cool: 2, targs: air)"
+  },
+  {
+    "id": "h078",
+    "name_clean": "Сапер",
+    "hotkey": "D",
+    "name_raw": "TRIGSTR_14155",
+    "tip_raw": "TRIGSTR_14156",
+    "ubertip_raw": "TRIGSTR_38396",
+    "name_before": "|c00ffdb78Сапер|r",
+    "tip_before": "Обучить |c00ffdb78Сапера|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa17 сек.|r|nГоблин, занимающийся закладкой мин, а также подрывом врагов.",
+    "abils": [
+      "Asds: Ба-бах!",
+      "A0D3: |cffffff00Закопать мину",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "Aihn: Инвентарь"
+    ],
+    "atk1": "18-24 (pierce/instant, cool: 0.700000, targs: ground,structure,debris,air,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "h07R",
+    "name_clean": "Огр-Костолом",
+    "hotkey": "Z",
+    "name_raw": "TRIGSTR_30212",
+    "tip_raw": "TRIGSTR_30283",
+    "ubertip_raw": "TRIGSTR_38397",
+    "name_before": "|c00ffdb78Огр-Костолом",
+    "tip_before": "|c00ffdb78Огр-Костолом",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa27 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|nПушечное мясо.",
+    "abils": [],
+    "atk1": "12-13 (normal/normal, cool: 1.650000, targs: ground,structure,debris,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "h0DM",
+    "name_clean": "Подводная лодка",
+    "hotkey": "R",
+    "name_raw": "TRIGSTR_14188",
+    "tip_raw": "TRIGSTR_14189",
+    "ubertip_raw": "TRIGSTR_10900",
+    "name_before": "|c00ffdb78Подводная лодка|r",
+    "tip_before": "Нанять |c00ffdb78Подводную лодку|r",
+    "ubertip_before": "Мощный корабль, эффективный как в морском бою, так и против зданий. ",
+    "abils": [
+      "A1MT: |c00ffdb78Форсаж|r",
+      "Apiv: Постоянная невидимость",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0LG: |cffffff00Опуститься в воду"
+    ],
+    "atk1": "78-105 (siege/artillery, cool: 1.800000, targs: ground,structure,debris,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "h0OD",
+    "name_clean": "Нефтяной танкер",
+    "hotkey": "A",
+    "name_raw": "TRIGSTR_34845",
+    "tip_raw": "TRIGSTR_39480",
+    "ubertip_raw": "TRIGSTR_22697",
+    "name_before": "|c00ffdb78Нефтяной танкер|r",
+    "tip_before": "Произвести |c00ffdb78Нефтяной танкер|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa35 сек.|r|nКорабль, необходимый для постройки нефтяных платформ.",
+    "abils": [
+      "A1MT: |c00ffdb78Форсаж|r",
+      "A0SR: |c00ffdb78Универсальный линкор все скрытые спелы",
+      "A00A: Починка"
+    ],
+    "atk1": "78-105 (siege/artillery, cool: 2.200000, targs: ground,structure,debris,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "n00V",
+    "name_clean": "Крошшер",
+    "hotkey": "Q",
+    "name_raw": "TRIGSTR_14109",
+    "tip_raw": "TRIGSTR_14193",
+    "ubertip_raw": "TRIGSTR_24374",
+    "name_before": "|c00ffdb78Крошшер|r",
+    "tip_before": "Нанять |c00ffdb78Крошшер|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa28 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|nЖелезная машина ближнего боя, предназначенная для добычи древесины.",
+    "abils": [
+      "A0I3: |cffe4cfa3Скачок|r",
+      "A0A8: |cffffff00Взрыв напоследок",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "Ahrp: Ремонтировать",
+      "Ahr3: Добывать ресурсы"
+    ],
+    "atk1": "34-61 (normal/normal, cool: 1.4, targs: ground,structure,debris,item,ward)",
+    "atk2": "10-10 (normal/normal, cool: 1.35, targs: tree)"
+  },
+  {
+    "id": "o00W",
+    "name_clean": "Меха \"Линчеватель-6000\"",
+    "hotkey": "E",
+    "name_raw": "TRIGSTR_14104",
+    "tip_raw": "TRIGSTR_6489",
+    "ubertip_raw": "TRIGSTR_19266",
+    "name_before": "|c00ffdb78Меха \"Линчеватель-6000\"|r",
+    "tip_before": "Построить |c00ffdb78Меху|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa78 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|nМеха, ведущая сражения на ближней дистанции.",
+    "abils": [
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0A8: |cffffff00Взрыв напоследок",
+      "A0A7: |cffffff00Ба-бах!",
+      "A0A5: |cffffff00Расход топлива"
+    ],
+    "atk1": "18-21 (normal/normal, cool: 1.6, targs: ground,structure,debris,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "o00X",
+    "name_clean": "Огнемеха \"Пожар-7000\"",
+    "hotkey": "R",
+    "name_raw": "TRIGSTR_14141",
+    "tip_raw": "TRIGSTR_14142",
+    "ubertip_raw": "TRIGSTR_38189",
+    "name_before": "|c00ffdb78Огнемеха \"Пожар-7000\"|r",
+    "tip_before": "Произвести |c00ffdb78Огнемеху \"Пожар\"|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa115 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r|nБольшая меха с огнеметами.",
+    "abils": [
+      "A0AB: |cffffff00Поджог",
+      "A0AR: |cffffff00Шанс самоподжога ",
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0A8: |cffffff00Взрыв напоследок",
+      "A0A7: |cffffff00Ба-бах!",
+      "A0A5: |cffffff00Расход топлива"
+    ],
+    "atk1": "18-21 (magic/missile, cool: 0.450000, targs: debris,ground,item,ward)",
+    "atk2": null
+  },
+  {
+    "id": "o00Y",
+    "name_clean": "Оператор Силовой Брони",
+    "hotkey": "Q",
+    "name_raw": "TRIGSTR_14191",
+    "tip_raw": "TRIGSTR_14192",
+    "ubertip_raw": "TRIGSTR_19268",
+    "name_before": "|c00ffdb78Оператор Силовой Брони|r",
+    "tip_before": "Обучить |c00ffdb78Оператора силовой брони|r",
+    "ubertip_before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa36 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|nЮнит ближнего боя, способный оглушать своих врагов.",
+    "abils": [
+      "A0AV: |cffffff00Коррупция: Дефект брони",
+      "A0AW: |cffffff00Коррупция: Дисциплина",
+      "A0AH: |cffffff00Сильный удар"
+    ],
+    "atk1": "18-21 (normal/normal, cool: 1.400000, targs: ground,structure,debris,item,ward)",
+    "atk2": null
+  }
+]

@@ -1,0 +1,470 @@
+=== Ability ID: A01N ===
+Carriers: h0F1
+Name: |cffff0000Пламя феникса|r (Raw: TRIGSTR_1596)
+Hotkey: TRIGSTR_12331
+ButtonPos: (2, 2)
+Tip1: |cffff0000Пламя феникса|r (Raw: TRIGSTR_1595)
+Ubertip1: Выпускает в секторе перед собой огненного феникса , наносящих по <AUcs,DataA1> урона врагам на своем пути.
+|cffb4dc8cМаксимальный возможный урон (300).|r (Raw: TRIGSTR_1384)
+Buffs: 
+
+=== Ability ID: A01R ===
+Carriers: n035
+Name: |cff0096ffАура мороза|r (Raw: TRIGSTR_1695)
+Hotkey: 
+ButtonPos: (0, 2)
+Tip1: |cff0096ffАура мороза|r (Raw: TRIGSTR_1696)
+Ubertip1: -<AOae,DataA1,%>% к скорости передвижения и -<AOae,DataB1,%>% к скорости атаки находящихся рядом врагам.
+|cffb4dc8cРадиус действия (150)ед.|r (Raw: TRIGSTR_2756)
+Buffs: 
+
+=== Ability ID: A01S ===
+Carriers: n02R, n02S, h0F1, n034
+Name: |cffff3200Кольцо огня|r (Raw: TRIGSTR_1699)
+Hotkey: 
+ButtonPos: (0, 2)
+Tip1: |cffff3200Кольцо огня|r (Raw: TRIGSTR_1698)
+Ubertip1: Наносит |cffb4dcdc6 урона/сек|r. находящимся рядом врагам.
+|cffb4dc8cРадиус действия (220).|r (Raw: TRIGSTR_29525)
+Buffs: 
+
+=== Ability ID: A0CE ===
+Carriers: n02T
+Name: |cff0096ffМорозный доспех|r (Raw: TRIGSTR_39439)
+Hotkey: TRIGSTR_32082
+ButtonPos: (1, 2)
+Tip1: |cff0096ffМорозный доспех|r (Raw: TRIGSTR_39440)
+Ubertip1: Укрывает союзника ледяным щитом, который дает +2 к броне и замедляет атакующие его в ближнем бою войска на <ACfa,Dur1> сек. |nВремя действия: <ACfa,DataA1> сек. (Raw: TRIGSTR_39441)
+Buffs: 
+
+=== Ability ID: A0I3 ===
+Carriers: e00F
+Name: Small jump (Raw: TRIGSTR_26484)
+Hotkey: TRIGSTR_9545
+ButtonPos: (2, 2)
+Tip1: Small jump (Raw: TRIGSTR_26476)
+Ubertip1: Transports over a short distance. (Raw: TRIGSTR_26477)
+Buffs: 
+
+=== Ability ID: A0IQ ===
+Carriers: h0EQ, h0ER, h0ES
+Name: |cffffdcb4Обозначить столицу|r (Raw: TRIGSTR_27193)
+Hotkey: TRIGSTR_11265
+ButtonPos: (1, 2)
+Tip1: |cffffdcb4Обозначить столицу|r (Raw: TRIGSTR_27969)
+Ubertip1: Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение. (Raw: TRIGSTR_27970)
+Buffs: 
+
+=== Ability ID: A0LI ===
+Carriers: h0EQ, h0ER, h0ES
+Name: Обмен |cffffff00Золота |rна |cff00ff00Дерево|r (Raw: TRIGSTR_2888)
+Hotkey: TRIGSTR_4247
+ButtonPos: (1, 1)
+Tip1: Обмен |cffffff00Золота |rна |cff00ff00Дерево|r (Raw: TRIGSTR_3692)
+Ubertip1: Отнимает у игрока|cffffd700 500 золота|r, но добавляет |cff228722100 дерева|r. (Raw: TRIGSTR_20630)
+Buffs: 
+
+=== Ability ID: A0LJ ===
+Carriers: h0EQ, h0ER, h0ES
+Name: Обмен |cff00ff00Дерева |rна |cffffff00Золото|r (Raw: TRIGSTR_12857)
+Hotkey: TRIGSTR_4259
+ButtonPos: (0, 1)
+Tip1: Обмен |cff00ff00Дерева |rна |cffffff00Золото|r (Raw: TRIGSTR_12886)
+Ubertip1: Отнимает у игрока |cff228722500 дерева|r, но добавляет |cffffd700100 золота|r. (Raw: TRIGSTR_20631)
+Buffs: 
+
+=== Ability ID: A0OZ ===
+Carriers: h0EP, h0L5
+Name: |cffb4dcdcПоджег|r (Raw: TRIGSTR_645)
+Hotkey: 
+ButtonPos: (0, 2)
+Tip1: |cffb4dcdcПоджег|r (Raw: TRIGSTR_1153)
+Ubertip1: Позволяет |cffb4dcdcСтихийным башня|r атаковать находящихся рядом врагов.
+|cffb4dcdcРадиус действия - 500.
+Урон - 25.
+Макс-кол целей - 9.|r (Raw: TRIGSTR_1375)
+Buffs: 
+
+=== Ability ID: A0PG ===
+Carriers: n031, n02Y
+Name: |cffb4dcdcГромовой удар|r (Raw: TRIGSTR_6842)
+Hotkey: TRIGSTR_16518
+ButtonPos: (0, 2)
+Tip1: |cffb4dcdcГромовой удар|r (Raw: TRIGSTR_8160)
+Ubertip1: Ударяет конечностями по земле, нанося урон вокруг себя всем врагам.
+|cffb4dcdcНаносит урон - 75.|r (Raw: TRIGSTR_8165)
+Buffs: 
+
+=== Ability ID: A0PH ===
+Carriers: n02S
+Name: |cffb4dcdcПоджог|r (Raw: TRIGSTR_8166)
+Hotkey: 
+ButtonPos: (3, 2)
+Tip1: |cffb4dcdcПоджог|r (Raw: TRIGSTR_8167)
+Ubertip1: Поджигает цель, нанося |cffb4dcdc<Aspo,DataA1> урона/сек|r. Время действия: |cffb4dcdc<Aspo,Dur1> сек.|r (Raw: TRIGSTR_8168)
+Buffs: 
+
+=== Ability ID: A0Q8 ===
+Carriers: n02S
+Name: |cffb4dcdcСожжение доспехов|r (Raw: TRIGSTR_16001)
+Hotkey: TRIGSTR_16625
+ButtonPos: (0, 2)
+Tip1: |cffb4dcdcСожжение доспехов|r (Raw: TRIGSTR_16002)
+Ubertip1: -<Ainf,DataA1,%>% к урону и -<Ainf,DataB1> к броне врагов. |nВремя действия: <Ainf,Dur1> сек. (Raw: TRIGSTR_8827)
+Buffs: 
+
+=== Ability ID: A0Q9 ===
+Carriers: n036
+Name: |cffb4dcdcРассекающий удар|r (Raw: TRIGSTR_16004)
+Hotkey: 
+ButtonPos: (0, 2)
+Tip1: |cffb4dcdcРассекающий удар|r (Raw: TRIGSTR_16005)
+Ubertip1: Бьет с огромной силой, нанося |cffb4dcdc<ACce,DataA1,%>%|r урона врагам рядом с основной целью. (Raw: TRIGSTR_16006)
+Buffs: 
+
+=== Ability ID: A0QA ===
+Carriers: n02V
+Name: |cffb4dcdcКритический удар|r (Raw: TRIGSTR_16009)
+Hotkey: 
+ButtonPos: (0, 2)
+Tip1: |cffb4dcdcКритический удар|r (Raw: TRIGSTR_16010)
+Ubertip1: Дает |cffb4dcdc<AOcr,DataA1>%-й|r шанс нанести |cffb4dcdc<AOcr,DataB1>-кратный|r урон при атаке. (Raw: TRIGSTR_16011)
+Buffs: 
+
+=== Ability ID: A0QC ===
+Carriers: n02T
+Name: |cffb4dcdcЛедяные стрелы|r (Raw: TRIGSTR_16014)
+Hotkey: TRIGSTR_16772
+ButtonPos: (0, 2)
+Tip1: |cffb4dcdcЛедяные стрелы|r (Raw: TRIGSTR_16015)
+Ubertip1: Добавляет к атакам эффект льда, который замедляет атаку врага на|cffb4dcdc <AHca,DataB1,%>%|r и передвижение на |cffb4dcdc<AHca,DataC1,%>%|r на |cffb4dcdc<AHca,Dur1> сек.|r (Raw: TRIGSTR_16016)
+Buffs: 
+
+=== Ability ID: A0QD ===
+Carriers: n032
+Name: |cffb4dcdcКольцо льда|r (Raw: TRIGSTR_16021)
+Hotkey: TRIGSTR_17111
+ButtonPos: (0, 2)
+Tip1: |cffb4dcdcКольцо льда|r (Raw: TRIGSTR_16022)
+Ubertip1: Выпускает ледяную волну, нанося |cffb4dcdc<AUfn,DataB1>|r урона цели и |cffb4dcdc<AUfn,DataA1>|r урона по области. Урон от льда замедляет передвижение и атаку целей на |cffb4dcdc<AUfn,Dur1> сек.|r (Raw: TRIGSTR_16023)
+Buffs: 
+
+=== Ability ID: A0QE ===
+Carriers: h0F1
+Name: |cffb4dcdcПламя жизни|r (Raw: TRIGSTR_7611)
+Hotkey: TRIGSTR_17125
+ButtonPos: (1, 2)
+Tip1: |cffb4dcdcПламя жизни|r (Raw: TRIGSTR_7612)
+Ubertip1: Востанавливает хп союзникам по близости.
+|cffb4dc8cВостановление здоровья (150).|r
+|cffb4dc8cРадиус действия (300).|r
+ (Raw: TRIGSTR_8388)
+Buffs: 
+
+=== Ability ID: A0QF ===
+Carriers: n033
+Name: |cffb4dcdcСокрушение|r (Raw: TRIGSTR_16029)
+Hotkey: 
+ButtonPos: (1, 2)
+Tip1: |cffb4dcdcСокрушение|r (Raw: TRIGSTR_16030)
+Ubertip1: С |cffb4dcdc25%-й|r вероятностью атака нанесет |cffb4dcdc15|r урона находящимся рядом войскам. (Raw: TRIGSTR_38133)
+Buffs: 
+
+=== Ability ID: A0QG ===
+Carriers: n031
+Name: Снижение урона от способностей (Raw: Снижение урона от способностей)
+Hotkey: 
+ButtonPos: (, )
+Tip1:  (Raw: )
+Ubertip1:  (Raw: )
+Buffs: 
+
+=== Ability ID: A0QH ===
+Carriers: n031
+Name: |cffb4dcdcКристалы антимагии|r (Raw: TRIGSTR_16051)
+Hotkey: 
+ButtonPos: (1, 2)
+Tip1: |cffb4dcdcКристалы антимагии|r (Raw: TRIGSTR_16052)
+Ubertip1: Поглощает часть любого магического урона направленного в |cffb4dcdcКристального голема|r.
+|cffb4dcdcПоглощает - 33% магического урона.|r (Raw: TRIGSTR_16053)
+Buffs: 
+
+=== Ability ID: A0QI ===
+Carriers: n02X, n033
+Name: |cffb4dcdcБросок валуна|r (Raw: TRIGSTR_16075)
+Hotkey: TRIGSTR_16774
+ButtonPos: (0, 2)
+Tip1: |cffb4dcdcБросок валуна|r (Raw: TRIGSTR_16076)
+Ubertip1: Бросает зачарованный валун, который наносит врагу  урон и оглушает его.
+|cffb4dcdcВремя оглушения - Герой 0.25 сек. солдаты 1 сек., Урона 70 ед. |r (Raw: TRIGSTR_10939)
+Buffs: 
+
+=== Ability ID: A0QM ===
+Carriers: n033
+Name: |cffb4dcdcНевосприимчивость к магии|r (Raw: TRIGSTR_16238)
+Hotkey: 
+ButtonPos: (2, 2)
+Tip1: |cffb4dcdcНевосприимчивость к магии|r (Raw: TRIGSTR_16239)
+Ubertip1: Дает невосприимчивость к магии и большинству способностей. (Raw: Дает невосприимчивость к магии и большинству способностей.)
+Buffs: 
+
+=== Ability ID: A0W7 ===
+Carriers: h0ES
+Name: Вода (Raw: TRIGSTR_40313)
+Hotkey: 
+ButtonPos: (2, 0)
+Tip1: Поддержание (Raw: Поддержание)
+Ubertip1: Поддерживает мощные защитные чары. (Raw: Поддерживает мощные защитные чары.)
+Buffs: 
+
+=== Ability ID: A0W8 ===
+Carriers: h0ES
+Name: Земля (Raw: TRIGSTR_40670)
+Hotkey: 
+ButtonPos: (2, 0)
+Tip1: Поддержание (Raw: Поддержание)
+Ubertip1: Поддерживает мощные защитные чары. (Raw: Поддерживает мощные защитные чары.)
+Buffs: 
+
+=== Ability ID: A0W9 ===
+Carriers: h0ES
+Name: Огонь (Raw: TRIGSTR_7551)
+Hotkey: 
+ButtonPos: (2, 0)
+Tip1: Поддержание (Raw: Поддержание)
+Ubertip1: Поддерживает мощные защитные чары. (Raw: Поддерживает мощные защитные чары.)
+Buffs: 
+
+=== Ability ID: A0WA ===
+Carriers: h0ES
+Name: Воздух (Raw: TRIGSTR_41562)
+Hotkey: 
+ButtonPos: (2, 0)
+Tip1: Поддержание (Raw: Поддержание)
+Ubertip1: Поддерживает мощные защитные чары. (Raw: Поддерживает мощные защитные чары.)
+Buffs: 
+
+=== Ability ID: A18B ===
+Carriers: h0L5
+Name: Темный призыв (Raw: Темный призыв)
+Hotkey: TRIGSTR_23297
+ButtonPos: (1, 2)
+Tip1: Темный призыв (Raw: Темный призыв)
+Ubertip1: Кастуется 3 секунд. Переносит до 36 союзников из указанной области в точку применения. (Raw: TRIGSTR_14974)
+Buffs: 
+
+=== Ability ID: A1MQ ===
+Carriers: n07Y, n07X, n07W, n07Z, n07O, n07T, n02Q, n02V, n07P, n07R, n02P, n07N, n07Q, n07S
+Name: |cffb4dcdcУскользание|r (Raw: TRIGSTR_2373)
+Hotkey: 
+ButtonPos: (2, 0)
+Tip1: |cffb4dcdcУскользание|r [|cffffcc001-й уровень|r] (Raw: TRIGSTR_13586)
+Ubertip1: Дает |cffb4dcdc10%-й шанс|r уклониться от атаки. (Raw: TRIGSTR_8776)
+Buffs: 
+
+=== Ability ID: ACbh ===
+Carriers: n032
+Name: Сильный удар (Raw: Сильный удар)
+Hotkey: 
+ButtonPos: (2, 2)
+Tip1: Сильный удар (Raw: Сильный удар)
+Ubertip1: "С <ACbh,DataA1>%-й вероятностью атака нанесет на <ACbh,DataC1> больше урона и оглушит цель на <ACbh,Dur1> сек." (Raw: "С <ACbh,DataA1>%-й вероятностью атака нанесет на <ACbh,DataC1> больше урона и оглушит цель на <ACbh,Dur1> сек.")
+Buffs: 
+
+=== Ability ID: ACmi ===
+Carriers: h0F1, n034, n035, n031, n033
+Name: Невосприимчивость к магии (Raw: Невосприимчивость к магии)
+Hotkey: 
+ButtonPos: (2, 2)
+Tip1: Невосприимчивость к магии (Raw: Невосприимчивость к магии)
+Ubertip1: Дает невосприимчивость к магии и большинству способностей. (Raw: Дает невосприимчивость к магии и большинству способностей.)
+Buffs: 
+
+=== Ability ID: ACrk ===
+Carriers: h0F1
+Name: Устойчивая кожа (Raw: Устойчивая кожа)
+Hotkey: 
+ButtonPos: (3, 2)
+Tip1: Устойчивая кожа (Raw: Устойчивая кожа)
+Ubertip1: "Сокращает время действия отрицательных эффектов, дает невосприимчивость к некоторым способностям." (Raw: "Сокращает время действия отрицательных эффектов, дает невосприимчивость к некоторым способностям.")
+Buffs: 
+
+=== Ability ID: ACtb ===
+Carriers: n02X, n034, n035, n031, n033, n02Y
+Name: Бросок валуна (Raw: Бросок валуна)
+Hotkey: B
+ButtonPos: (0, 2)
+Tip1: Бросок валуна (Raw: Бросок валуна)
+Ubertip1: "Бросает зачарованный валун, который наносит врагу <ACtb,DataA1> урона и оглушает его на <ACtb,Dur1> сек." (Raw: "Бросает зачарованный валун, который наносит врагу <ACtb,DataA1> урона и оглушает его на <ACtb,Dur1> сек.")
+Buffs: 
+
+=== Ability ID: ACtc ===
+Carriers: n034, n035, n031, n033, n02Y
+Name: Мощный удар (Raw: Мощный удар)
+Hotkey: L
+ButtonPos: (1, 2)
+Tip1: Мощный удар (Raw: Мощный удар)
+Ubertip1: "Бьет по земле, нанося <ACtc,DataA1> урона находящимся рядом врагам и замедляя их передвижение и атаку." (Raw: "Бьет по земле, нанося <ACtc,DataA1> урона находящимся рядом врагам и замедляя их передвижение и атаку.")
+Buffs: 
+
+=== Ability ID: AHta ===
+Carriers: h0EP, h0L5
+Name: Обнаружение (Raw: Обнаружение)
+Hotkey: TRIGSTR_16254
+ButtonPos: (0, 2)
+Tip1: Обнаружение (Raw: Обнаружение)
+Ubertip1: "Открывает обзор в указанной области. |nОбнаруживает невидимые войска. |nВремя действия: <AHta,Dur1> сек." (Raw: "Открывает обзор в указанной области. |nОбнаруживает невидимые войска. |nВремя действия: <AHta,Dur1> сек.")
+Buffs: 
+
+=== Ability ID: ANen ===
+Carriers: n07Y, n07X, n07W, n07Z, n02R, n02S, n07O, n02U, n07C, n02T, n07T, n02Z, n02Q, n02V, n07P, n07R, n02P, n07N, n07Q, n07S
+Name: |cffa0d2d2Опутывание|r (Raw: TRIGSTR_25812)
+Hotkey: TRIGSTR_10208
+ButtonPos: (0, 2)
+Tip1: |cffa0d2d2Опутывание|r (Raw: TRIGSTR_29831)
+Ubertip1: "Притягивает врага к земле и обездвиживает его на <Aens,Dur1> сек. Опутанные воздушные цели считаются наземными." (Raw: "Притягивает врага к земле и обездвиживает его на <Aens,Dur1> сек. Опутанные воздушные цели считаются наземными.")
+Buffs: 
+
+=== Ability ID: Aadm ===
+Carriers: n02U, n07C
+Name: Рассеяние чар (Raw: Рассеяние чар)
+Hotkey: B
+ButtonPos: (0, 2)
+Tip1: Рассеяние чар (Raw: Рассеяние чар)
+Ubertip1: "Снимает положительные эффекты с врагов и отрицательные с союзников. |n|cffffcc00Наносит <Aadm,DataB1> урона призванным целям.|r" (Raw: "Снимает положительные эффекты с врагов и отрицательные с союзников. |n|cffffcc00Наносит <Aadm,DataB1> урона призванным целям.|r")
+Buffs: 
+
+=== Ability ID: Abdl ===
+Carriers: h0EQ, h0ER
+Name: Сильное рассеивание чумы (Raw: Сильное рассеивание чумы)
+Hotkey: 
+ButtonPos: (, )
+Tip1:  (Raw: )
+Ubertip1:  (Raw: )
+Buffs: 
+
+=== Ability ID: Abds ===
+Carriers: h0EO, h0EP, h0L5, h0ET, h0EU, h0EV, h0EW, h0EX, h0EY
+Name: Слабое рассеивание чумы (Raw: Слабое рассеивание чумы)
+Hotkey: 
+ButtonPos: (, )
+Tip1:  (Raw: )
+Ubertip1:  (Raw: )
+Buffs: 
+
+=== Ability ID: Adis ===
+Carriers: n02T
+Name: Spell Dispel (Raw: TRIGSTR_25772)
+Hotkey: TRIGSTR_9715
+ButtonPos: (1, 2)
+Tip1: Spell Dispel (Raw: TRIGSTR_25785)
+Ubertip1: Removes positive effects from units in the target area. |n|cffffcc00Deals <Adis,DataB1> damage to summoned units.|r (Raw: TRIGSTR_25774)
+Buffs: 
+
+=== Ability ID: Adtn ===
+Carriers: e00F
+Name: Взорваться (Raw: Взорваться)
+Hotkey: D
+ButtonPos: (1, 2)
+Tip1: Взорваться (Raw: Взорваться)
+Ubertip1: "Уничтожает огонька, рассеивая магические эффекты и сжигая по <Adtn,DataA1> маны у находящихся рядом войск. |n|cffffcc00Наносит <Adtn,DataB1> урона призванным целям.|r" (Raw: "Уничтожает огонька, рассеивая магические эффекты и сжигая по <Adtn,DataA1> маны у находящихся рядом войск. |n|cffffcc00Наносит <Adtn,DataB1> урона призванным целям.|r")
+Buffs: 
+
+=== Ability ID: Adts ===
+Carriers: h0EP, h0L5
+Name: Магический страж (Raw: Магический страж)
+Hotkey: 
+ButtonPos: (1, 1)
+Tip1: Магический страж (Raw: Магический страж)
+Ubertip1: Обнаруживает находящиеся рядом невидимые войска. (Raw: Обнаруживает находящиеся рядом невидимые войска.)
+Buffs: 
+
+=== Ability ID: Afbt ===
+Carriers: h0EP, h0L5
+Name: Противодействие (Raw: Противодействие)
+Hotkey: 
+ButtonPos: (3, 2)
+Tip1: Противодействие (Raw: Противодействие)
+Ubertip1: "Каждая атака уничтожает <Afbt,DataA1> маны цели и наносит ей столько же дополнительного урона.|n|nПризванные цели получают на <Afbt,DataE1> больше урона от атак этой башни." (Raw: "Каждая атака уничтожает <Afbt,DataA1> маны цели и наносит ей столько же дополнительного урона.|n|nПризванные цели получают на <Afbt,DataE1> больше урона от атак этой башни.")
+Buffs: 
+
+=== Ability ID: Ahpe ===
+Carriers: h0F1
+Name: Феникс (Raw: Феникс)
+Hotkey: 
+ButtonPos: (0, 2)
+Tip1: Феникс (Raw: Феникс)
+Ubertip1: "Феникс обжигает находящихся рядом врагов, нанося <Apxf,DataA1> урона мгновенно и <Apxf,DataB1> урона/сек. в течение <Apxf,Dur1> сек. Также феникс наносит урон себе, а при гибели откладывает яйцо, из которого вылупляется новый феникс." (Raw: "Феникс обжигает находящихся рядом врагов, нанося <Apxf,DataA1> урона мгновенно и <Apxf,DataB1> урона/сек. в течение <Apxf,Dur1> сек. Также феникс наносит урон себе, а при гибели откладывает яйцо, из которого вылупляется новый феникс.")
+Buffs: 
+
+=== Ability ID: Amic ===
+Carriers: h0EQ, h0ER
+Name: |cffaad2ffПризыв к оружию|r (Raw: TRIGSTR_39683)
+Hotkey: TRIGSTR_7258
+ButtonPos: (3, 0)
+Tip1: |cffaad2ffПризыв к оружию|r (Raw: TRIGSTR_39684)
+Ubertip1: "Призывает находящихся рядом работников к ратуше и вооружает их. |nВремя действия: <Amil,Dur1> сек." (Raw: "Призывает находящихся рядом работников к ратуше и вооружает их. |nВремя действия: <Amil,Dur1> сек.")
+Buffs: 
+
+=== Ability ID: Aphx ===
+Carriers: h0F1
+Name: Рождение феникса (яйцо) (Raw: Рождение феникса (яйцо))
+Hotkey: 
+ButtonPos: (, )
+Tip1:  (Raw: )
+Ubertip1:  (Raw: )
+Buffs: 
+
+=== Ability ID: Apxf ===
+Carriers: h0F1
+Name: Пламя феникса (Raw: Пламя феникса)
+Hotkey: 
+ButtonPos: (0, 2)
+Tip1: Пламя феникса (Raw: Пламя феникса)
+Ubertip1: Поджигает находящихся рядом врагов. (Raw: Поджигает находящихся рядом врагов.)
+Buffs: 
+
+=== Ability ID: Aren ===
+Carriers: e00F
+Name: Обновление (Raw: Обновление)
+Hotkey: R
+ButtonPos: (1, 1)
+Tip1: Обновление (Raw: Обновление)
+Ubertip1: "Исцеляет раненые древа, ремонтирует союзные здания и технику." (Raw: "Исцеляет раненые древа, ремонтирует союзные здания и технику.")
+Buffs: 
+
+=== Ability ID: Argl ===
+Carriers: h0EQ, h0ER, h0ES
+Name: Вернуть золото и древесину (Raw: Вернуть золото и древесину)
+Hotkey: 
+ButtonPos: (, )
+Tip1:  (Raw: )
+Ubertip1:  (Raw: )
+Buffs: 
+
+=== Ability ID: Asb1 ===
+Carriers: n07Y, n07X, n07W, n07Z, n02R, n02S, n07O, n02U, n07C, n02T, n07T, n02Z, n02Q, n02V, n07P, n07R, n02P, n07N, n07Q, n07S
+Name: Погружение (Raw: Погружение)
+Hotkey: U
+ButtonPos: (3, 2)
+Tip1: Погружение (Raw: Погружение)
+Ubertip1: "Воин погружается под воду, становясь невидимым." (Raw: "Воин погружается под воду, становясь невидимым.")
+Buffs: 
+
+=== Ability ID: Ault ===
+Carriers: e00F
+Name: Ночное зрение (Raw: Ночное зрение)
+Hotkey: 
+ButtonPos: (, )
+Tip1:  (Raw: )
+Ubertip1:  (Raw: )
+Buffs: 
+
+=== Ability ID: Awha ===
+Carriers: e00F
+Name: Добывать ресурсы (Raw: Добывать ресурсы)
+Hotkey: G
+ButtonPos: (3, 1)
+Tip1: Добывать ресурсы (Raw: Добывать ресурсы)
+Ubertip1: Добывает золото из оплетенных рудников и древесину из деревьев. (Raw: Добывает золото из оплетенных рудников и древесину из деревьев.)
+Buffs: 

@@ -1,0 +1,549 @@
+=================== 1. SELECTION ABILITIES ===================
+Vryculs (A0HP):
+  Name:   [38871] |cffdcaa96Врайкулы|r
+  Tip:    [38872] |cffdcaa96Врайкулы|r (Hotkey: A)
+  Ubertip:[35175] |cff7dc87dСоздатель расы:|r |cffe17d00Escanor (Яхве)|r|n|cff7dc87dСложность:|r |cff37ff37Низкая|r|n|cff7dc87dПериод:|r |cffb1b1ffWrath of the Lich King|r|n|cff7dc87dОписание:|r Poдинa пoлyгигaнтoв |cffdcaa92Врайкулов |r— Peвyщий Фьopд нa югo-вocтoкe Hopдcкoлa. Гoвopят, чтo в дpeвнocти нapoд вpaйкyлoв coздaл пpoцвeтaющyю цивилизaцию в этиx кpaяx. Ho cлyчилocь тaк, чтo в oдин дeнь вpaйкyлы миcтичecки иcчeзли, ocтaвив пocлe ceбя лишь пycтынныe пoceлeния и зaбpoшeнныe xpaмы. B нaши дни, кoгдa нa зeмляx вpaйкyлoв был пocтpoeн Baльгapд, лaгepь Aльянca, oни вepнyлиcь. Пoд пpeдвoдитeльcтвoм кopoля Имиpoнa эти мoгyчиe вoины oбpyшилиcь нa ceлeния Opды и Aльянca, oбocнoвaвшиcь в Kpeпocти Утгapд, чтo нeдaлeкo oт Baльгapдa. Heизвecтнo, гдe вpaйкyлы пpoвeли нecкoлькo тыcяч лeт, нo ceйчac oни cpaжaютcя нa cтopoнe Kopoля-личa.
+
+Random (A12Q):
+  Name:   [24728] Случайная раса\фракция
+  Tip:    [24729] |cffff00ffС|r|cffff00ecл|r|cffff00d8у|r|cffff00c5ч|r|cffff00b1а|r|cffff009dй|r|cffff008aн|r|cffff0076а|r|cffff0063я|r|cffff004f |r|cffff003bр|r|cffff0028а|r|cffff0014с|r|cffff0000а|r (Hotkey: F)
+  Ubertip:[25197] Выбирает случайную расу из имеющихся. 
+
+=================== 2. SELECTION MARKERS ===================
+Marker R07F (levels=1):
+  Name:   [None] None
+  Tip:    [10620] |cffe6beaaВрайкулы|r
+  Ubertip:[20113] Раса разумных существ, живущая на побережье Ревущего Фьорда и Седых холмов в Нордсколе.
+
+Marker R067 (levels=1):
+  Name:   [None] None
+  Tip:    [1452] Исследовать |cffdcaa92Примкнуть к Королю Личу|r
+  Ubertip:[10874] Врайкулы переходят на сторону короля лича.
+|cffdcaa92Здоровье - (-150)
+Урон - +12
+Скорость боя - 30%
+Регенерация здоровья - +0.5|r
+|cffff0000Важно:|r Запрещает исследовать |cffdcaa92Поддерживать верность хранителям.|r
+
+Marker R068 (levels=1):
+  Name:   [None] None
+  Tip:    [1073] Исследовать |cffdcaa92Поддерживать верность хранителям|r
+  Ubertip:[25922] Врайкулы продолжают следовать традициям.
+|cffdcaa92Здоровье - +200
+Урон - +7
+Регенерация маны - +0.5
+Регенерация здоровья - +0.3|r
+|cffff0000Важно:|r Запрещает исследовать |cffdcaa92Примкнуть к Королю личу.|r
+
+=================== 3. BUILDINGS ===================
+Building h0BQ (|cffdcaa92Дом Ярла|r):
+  Name:   [9900] |cffdcaa92Дом Ярла|r
+  Tip:    [9901] Построить |cffdcaa92Дом Ярла|r (Hotkey: Q)
+  Ubertip:[None] None...
+  Trains: h0A8,h0A7,h0C9 | Researches: None | UpgradesTo: h0BR | Abils: A0LJ,A0LI,A0IQ,Argl
+
+Building h0BR (|cffdcaa92Залы Ярла|r):
+  Name:   [9902] |cffdcaa92Залы Ярла|r
+  Tip:    [9903] Улучшить до |cffdcaa92Залы Ярла|r (Hotkey: Z)
+  Ubertip:[None] None...
+  Trains: h0A8,h0A7,h0C9 | Researches: None | UpgradesTo: h0BS | Abils: A0LJ,A0LI,A0IQ,Argl
+
+Building h0BS (|cffdcaa92Крепость Ярла|r):
+  Name:   [9904] |cffdcaa92Крепость Ярла|r
+  Tip:    [9905] Улучшить до |cffdcaa92Крепость Ярла|r (Hotkey: Z)
+  Ubertip:[None] None...
+  Trains: h0A8,h0A7,h0C9 | Researches: R068,R067 | UpgradesTo: None | Abils: A0LJ,A0LI,A0IQ,Argl
+
+Building h0BT (|cffdcaa92Дом|r):
+  Name:   [9906] |cffdcaa92Дом|r
+  Tip:    [9907] Построить |cffdcaa92Дом|r (Hotkey: A)
+  Ubertip:[None] None...
+  Trains: None | Researches: None | UpgradesTo: None | Abils: Abds
+
+Building h0BU (|cffdcaa92Алтарь Героев|r):
+  Name:   [9873] |cffdcaa92Алтарь Героев|r
+  Tip:    [9874] Построить |cffdcaa92Алтарь Героев|r (Hotkey: S)
+  Ubertip:[None] None...
+  Trains: H0C6,H0C5,H0C7 | Researches: None | UpgradesTo: None | Abils: Abds
+
+Building h0BV (|cffdcaa92Дом Воинов|r):
+  Name:   [9879] |cffdcaa92Дом Воинов|r
+  Tip:    [9880] Построить |cffdcaa92Дом Воинов|r (Hotkey: W)
+  Ubertip:[None] None...
+  Trains: h0AA,h0AD,h0A5,h0A6 | Researches: R063,R05Z,R060,R064 | UpgradesTo: None | Abils: Abds
+
+Building h0BW (|cffdcaa92Лесопилка|r):
+  Name:   [9877] |cffdcaa92Лесопилка|r
+  Tip:    [9878] Построить |cffdcaa92Лесопилка|r (Hotkey: E)
+  Ubertip:[None] None...
+  Trains: None | Researches: R06F,R06E,R069,R06A,R06B,R06C,R06D | UpgradesTo: None | Abils: Abds,Arlm
+
+Building h0BX (|cffdcaa92Дом Покорителей-севера|r):
+  Name:   [9966] |cffdcaa92Дом Покорителей-севера|r
+  Tip:    [9967] Построить |cffdcaa92Дом Покорителей-севера|r (Hotkey: R)
+  Ubertip:[None] None...
+  Trains: h0BP,h0A9,h0AC,h0AE | Researches: R065,R066,R062,R061 | UpgradesTo: None | Abils: Abds
+
+Building wk01 (|cffdcaa92Темные казармы|r):
+  Name:   [7371] |cffdcaa92Темные казармы|r
+  Tip:    [29441] Построить |cffdcaa92Темные казармы|r (Hotkey: F)
+  Ubertip:[None] None...
+  Trains: wk08,wk02,wk00 | Researches: None | UpgradesTo: None | Abils: 
+
+Building h0D1 (|cffe4cfa3Верфь|r):
+  Name:   [None] |cffe4cfa3Верфь|r
+  Tip:    [None] |cffe4cfa3Верфь|r (|cffffffffC|r) (Hotkey: C)
+  Ubertip:[None] None...
+  Trains: h0D2,h0CZ,h0D0 | Researches: R005,R006,R007,R002,R003 | UpgradesTo: None | Abils: A15N
+
+Building o013 (|cffe4cfa3Сторожевая башня|r):
+  Name:   [None] |cffe4cfa3Сторожевая башня|r
+  Tip:    [None] |cffe4cfa3Сторожевая башня|r (|cffffffffZ|r) (Hotkey: Z)
+  Ubertip:[None] None...
+  Trains: None | Researches: None | UpgradesTo: None | Abils: Abds,Arbr,Aspi,Aorb
+
+=================== 4. HEROES ===================
+Hero H0C4 (|cffdcaa92Король Имирон|r):
+  Name:       [9866] |cffdcaa92Король Имирон|r
+  Propernames:[9867] |cffdcaa92Имирон|r
+  Tip:        [9869] Призвать |cffdcaa92Король Имирон|r (Hotkey: Z)
+  AwakenTip:  [9868] Воскресить |cffdcaa92Король Имирон|r
+  ReviveTip:  [9870] Воскресить |cffdcaa92Король Имирон|r
+  Ubertip:    [None] None...
+  HeroAbils:  A0ER,A0EY,A0EZ,A0Z1 | Abils: A0YQ,AInv | Targs1: ground,structure,debris,item,ward
+
+Hero H0C5 (|cffdcaa92Берсерк|r):
+  Name:       [646] |cffdcaa92Берсерк|r
+  Propernames:[644] |cffdcaa92Вандер Убийца|r
+  Tip:        [653] Призвать |cffdcaa92Берсерк|r (Hotkey: X)
+  AwakenTip:  [648] Воскресить |cffdcaa92Берсерк|r
+  ReviveTip:  [655] Воскресить |cffdcaa92Берсерк|r
+  Ubertip:    [None] None...
+  HeroAbils:  A0EN,A0EO,A0EM,A0EP | Abils: AInv | Targs1: ground,structure,debris,item,ward
+
+Hero H0C6 (|cffdcaa92Тан|r):
+  Name:       [524] |cffdcaa92Тан|r
+  Propernames:[506] |cffdcaa92Бор Камнелом|r
+  Tip:        [526] Призвать |cffdcaa92Тан|r (Hotkey: Z)
+  AwakenTip:  [525] Воскресить |cffdcaa92Тан|r
+  ReviveTip:  [527] Воскресить |cffdcaa92Тан|r
+  Ubertip:    [None] None...
+  HeroAbils:  A0ET,A0ES,A0EQ,A0ER | Abils: AInv | Targs1: ground,structure,debris,item,ward
+
+Hero H0C7 (|cffdcaa92Верховный жрец|r):
+  Name:       [529] |cffdcaa92Верховный жрец|r
+  Propernames:[531] |cffdcaa92Далар Ткач|r
+  Tip:        [535] Призвать |cffdcaa92Верховный жрец|r (Hotkey: C)
+  AwakenTip:  [533] Воскресить |cffdcaa92Верховный жрец|r
+  ReviveTip:  [536] Воскресить |cffdcaa92Верховный жрец|r
+  Ubertip:    [None] None...
+  HeroAbils:  A0EU,A0EV,A0EW,A0EX | Abils: AInv | Targs1: ground,structure,debris,air,item,ward
+
+=================== 5. UNITS ===================
+Unit h0C9 (|cffdcaa92Строитель|r):
+  Name:   [9885] |cffdcaa92Строитель|r
+  Tip:    [778] Обучить |cffdcaa92Строитель|r (Hotkey: Q)
+  Ubertip:[None] None...
+  Abils:  A0I3,ANha,Amil,Ahrp | Upgrades: R06D,Rguv | Targs1: ground,structure,debris,item,ward | Weap1: normal
+
+Unit h0AC (|cffdcaa92Скальд|r):
+  Name:   [9630] |cffdcaa92Скальд|r
+  Tip:    [9631] Обучить |cffdcaa92Скальд|r (Hotkey: E)
+  Ubertip:[None] None...
+  Abils:  A0EA,A0E9,A0E3,Aihn | Upgrades: R061,R069,R06A,R067,R068 | Targs1: ground,structure,debris,item,ward | Weap1: normal
+
+Unit h0AA (|cffdcaa92Лендрман |r):
+  Name:   [9272] |cffdcaa92Лендрман |r
+  Tip:    [9274] Обучить |cffdcaa92Лендрман |r (Hotkey: W)
+  Ubertip:[None] None...
+  Abils:  A0E7,A0E3,Aihn | Upgrades: R060,R06A,R069,R068,R067 | Targs1: ground,structure,debris,item,ward | Weap1: normal
+
+Unit h0A9 (|cffdcaa92Наездница Ульфхендар|r):
+  Name:   [9269] |cffdcaa92Наездница Ульфхендар|r
+  Tip:    [9271] Обучить |cffdcaa92Наездница Ульфхендар|r (Hotkey: W)
+  Ubertip:[None] None...
+  Abils:  A0E3,A0EB | Upgrades: R06B,R06C,R067,R068 | Targs1: ground,structure,debris,item,ward | Weap1: missile
+
+Unit h0A8 (|cffdcaa92Дикий Ульфхендар|r):
+  Name:   [9266] |cffdcaa92Дикий Ульфхендар|r
+  Tip:    [9268] Обучить |cffdcaa92Дикий Ульфхендар|r (Hotkey: W)
+  Ubertip:[None] None...
+  Abils:  wk05,A0E3,Aihn | Upgrades: R06A,R069,R068,R067,R064 | Targs1: ground,structure,debris,item,ward | Weap1: normal
+
+Unit wk00 (|cffdcaa92Всадник прото-дракона):
+  Name:   [40099] |cffdcaa92Всадник прото-дракона
+  Tip:    [3045] Обучить Всадника прото-дракона (Hotkey: W)
+  Ubertip:[None] None...
+  Abils:  wk04,wk07 | Upgrades: R069,R06A,R060,R067,R068 | Targs1: ground,structure,debris,item,ward | Weap1: normal
+
+Unit h0AD (|cffdcaa92Воин-волк|r):
+  Name:   [9281] |cffdcaa92Воин-волк|r
+  Tip:    [7370] Обучить |cffdcaa92Воина-волка|r (Hotkey: Q)
+  Ubertip:[None] None...
+  Abils:  A0E3,Aihn | Upgrades: R060,R06A,R069,R068,R067,R064 | Targs1: ground,structure,debris,item,ward | Weap1: normal
+
+Unit wk02 (|cffdcaa92Всадник прото-дракона(Меч и щит)):
+  Name:   [40141] |cffdcaa92Всадник прото-дракона(Меч и щит)
+  Tip:    [30181] Обучить Всадника прото-дракона(Меч и щит) (Hotkey: Q)
+  Ubertip:[None] None...
+  Abils:  wk07,wk03 | Upgrades: R069,R06A,R060,R067,R068 | Targs1: ground,structure,debris,item,ward | Weap1: normal
+
+Unit wk08 (|cffdcaa92Валькира|r):
+  Name:   [699] |cffdcaa92Валькира|r
+  Tip:    [700] Обучить |cffdcaa92Валькиру|r (Hotkey: E)
+  Ubertip:[None] None...
+  Abils:  wk09,wk10 | Upgrades: R06A,R069,R068,R067 | Targs1: ground,structure,debris,air,item,ward | Weap1: missile
+
+Unit h0A7 (|cffdcaa92Ульфхендар|r):
+  Name:   [9263] |cffdcaa92Ульфхендар|r
+  Tip:    [9265] Обучить |cffdcaa92Ульфхендар|r (Hotkey: E)
+  Ubertip:[None] None...
+  Abils:  wk05,A0E3,Aihn | Upgrades: R06A,R069,R068,R067,R064 | Targs1: ground,structure,debris,item,ward | Weap1: normal
+
+Unit h0A6 (|cffdcaa92Хёвдинг|r):
+  Name:   [9260] |cffdcaa92Хёвдинг|r
+  Tip:    [9262] Обучить |cffdcaa92Хёвдинг|r (Hotkey: R)
+  Ubertip:[None] None...
+  Abils:  A0E3,A0E8 | Upgrades: R060,R06B,R06C,R067,R068 | Targs1: ground,structure,debris,item,ward | Weap1: normal
+
+Unit h0A5 (|cffdcaa92Воин|r):
+  Name:   [9257] |cffdcaa92Воин|r
+  Tip:    [9259] Обучить |cffdcaa92Воин|r (Hotkey: E)
+  Ubertip:[None] None...
+  Abils:  A0E5,A0E3,A0E4 | Upgrades: R060,R06A,R069,R068,R067 | Targs1: ground,structure,debris,item,ward | Weap1: normal
+
+Unit h0BP (|cffdcaa92Заклинательница Рун|r):
+  Name:   [9634] |cffdcaa92Заклинательница Рун|r
+  Tip:    [9635] Обучить |cffdcaa92Заклинательница Рун|r (Hotkey: Q)
+  Ubertip:[None] None...
+  Abils:  A0F1,A0ED,A0EE | Upgrades: R065,R06B,R06C,R067,R068 | Targs1: ground,structure,debris,air,item,ward | Weap1: missile
+
+Unit h0AE (|cffdcaa92Наездник на прото-драконе|r):
+  Name:   [9898] |cffdcaa92Наездник на прото-драконе|r
+  Tip:    [9899] |cffdcaa92Наездник на прото-драконе|r (Hotkey: R)
+  Ubertip:[None] None...
+  Abils:  wk06,A0EI | Upgrades: R06A,R069,R068,R067 | Targs1: ground,structure,debris,item,ward | Weap1: normal
+
+Unit h0D2 (|cffe4cfa3Транспорт|r):
+  Name:   [None] |cffe4cfa3Транспорт|r
+  Tip:    [None] |cffe4cfa3Транспорт|r (|cffffffffQ|r) (Hotkey: Q)
+  Ubertip:[None] None...
+  Abils:  A00I,A00A,A00B,Sch5,Slo3,Sdro | Upgrades: R006,R007,R004,R003 | Targs1: None | Weap1: None
+
+Unit h0CZ (|cffe4cfa3Фрегат|r):
+  Name:   [None] |cffe4cfa3Фрегат|r
+  Tip:    [None] |cffe4cfa3Фрегат|r (|cffffffffW|r) (Hotkey: W)
+  Ubertip:[None] None...
+  Abils:  A009,A002,A00B,A00G,A00A,A1PP | Upgrades: R005,R007,R004,R003,R002 | Targs1: ground,structure,debris,air,item,ward | Weap1: msplash
+
+Unit h0D0 (|cffe4cfa3Линкор|r):
+  Name:   [None] |cffe4cfa3Линкор|r
+  Tip:    [None] |cffe4cfa3Линкор|r (|cffffffffE|r) (Hotkey: E)
+  Ubertip:[None] None...
+  Abils:  A009,A003,A00B,A00G,A00A,A001 | Upgrades: R005,R007,R004,R003,R002 | Targs1: ground,structure,debris,item,ward | Weap1: artillery
+
+=================== 6. UPGRADES ===================
+Upgrade R05Z (levels=1):
+  Lvl 1: Name=[9982] |cffdcaa92Защита|r | Tip=[9983] Исследовать «|cffdcaa92Защита|r» (HK: {'raw': 'TRIGSTR_21835', 'val': 'F'}) | Ub=[12014] Дает |cffdcaa92Воину|r способность «|cffdcaa92Защита|r», дел...
+
+Upgrade R060 (levels=2):
+  Lvl 1: Name=[21] |cffdcaa92Испытание крови|r | Tip=[22] Исследовать |cffdcaa92Испытание крови|r (HK: {'raw': 'TRIGSTR_13540', 'val': 'S'}) | Ub=[17104] Проводит сложное |cffdcaa92Испытание крови|r для обучения во...
+  Lvl 2: Name=[38] |cffdcaa92Испытание крови|r | Tip=[39] Исследовать |cffdcaa92Испытание крови|r (HK: {'raw': 'TRIGSTR_13275', 'val': 'S'}) | Ub=[20089] Проводит сложное |cffdcaa92Испытание крови|r для обучения во...
+
+Upgrade R061 (levels=1):
+  Lvl 1: Name=[41] |cffdcaa92Дополнительные доспехи|r | Tip=[42] Исследовать |cffdcaa92Дополнительные доспехи|r (HK: {'raw': 'TRIGSTR_17689', 'val': 'D'}) | Ub=[44] Увеличивает защиту и здоровье |cffdcaa92Скальда|r....
+
+Upgrade R062 (levels=2):
+  Lvl 1: Name=[25704] |cffdcaa92Ледяные стрелы|r | Tip=[51] Исследовать |cffdcaa92Ледяные стрелы|r (HK: {'raw': 'TRIGSTR_13598', 'val': 'S'}) | Ub=[52] Добавляет к атакам эффект льда, который наносит <ANfa,DataA1...
+  Lvl 2: Name=[25706] |cffdcaa92Ледяные стрелы|r | Tip=[18373] |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Генетическая трансформация, утолщающая наружный хитиновый скелет всех нерубов на |cffc8e087+4|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем воинам армии Нерубов.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/3|r. (HK: {'raw': None, 'val': None}) | Ub=[8633] Добавляет к атакам эффект льда, который наносит <ANfa,DataA1...
+
+Upgrade R063 (levels=1):
+  Lvl 1: Name=[9975] |cffdcaa92Морозные клинки|r | Tip=[1152] Исследовать «|cffdcaa92Морозные клинки|r» (HK: {'raw': 'D', 'val': 'D'}) | Ub=[15100] Дает воинам способность «|cffdcaa92Морозные клинки|r», замед...
+
+Upgrade R064 (levels=1):
+  Lvl 1: Name=[1157] |cffdcaa92Волчьи Навыки|r | Tip=[35335] Развить |cffdcaa92Волчьи Навыки|r (HK: {'raw': 'TRIGSTR_12893', 'val': 'A'}) | Ub=[1166] Обучает |cffdcaa92Воинов волков|r, диким повадкам волков.
+Ув...
+
+Upgrade R065 (levels=3):
+  Lvl 1: Name=[1076] |cffdcaa92Древние учение Титанорожденных|r | Tip=[1196] Исследовать |cffdcaa92Древние учение Титанорожденных|r (HK: {'raw': 'TRIGSTR_13052', 'val': 'A'}) | Ub=[20091] Заклинательницы рун познают учения Титанов, и их создателей....
+  Lvl 2: Name=[1195] |cffdcaa92Древние учение Титанорожденных|r | Tip=[1214] Исследовать |cffdcaa92Древние учение Титанорожденных|r (HK: {'raw': 'TRIGSTR_13094', 'val': 'A'}) | Ub=[20092] Заклинательницы рун познают учения Титанов, и их создателей....
+  Lvl 3: Name=[1213] |cffdcaa92Древние учение Титанорожденных|r | Tip=[1301] Исследовать |cffdcaa92Древние учение Титанорожденных|r (HK: {'raw': 'TRIGSTR_13095', 'val': 'A'}) | Ub=[20093] Заклинательницы рун познают учения Титанов, и их создателей....
+
+Upgrade R066 (levels=3):
+  Lvl 1: Name=[1303] |cffdcaa92Древние учение Короля-Лича|r | Tip=[3447] Исследовать |cffdcaa92Древнee учение Короля-Лича|r (HK: {'raw': 'TRIGSTR_27779', 'val': 'Z'}) | Ub=[9286] Увеличивает способности Заклинательниц рун.
+|cffdcaa92Увелич...
+  Lvl 2: Name=[1379] |cffdcaa92Древние учение Короля-Лича|r | Tip=[4059] Исследовать |cffdcaa92Древнee учение Короля-Лича|r (HK: {'raw': 'TRIGSTR_27780', 'val': 'Z'}) | Ub=[20094] Увеличивает способности Заклинательниц рун.
+|cffdcaa92Увелич...
+  Lvl 3: Name=[1439] |cffdcaa92Древние учение Короля-Лича|r | Tip=[8457] Исследовать |cffdcaa92Древнee учение Короля-Лича|r (HK: {'raw': 'TRIGSTR_27834', 'val': 'Z'}) | Ub=[20095] Увеличивает способности Заклинательниц рун.
+|cffdcaa92Увелич...
+
+Upgrade R067 (levels=1):
+  Lvl 1: Name=[1442] |cffdcaa92Примкнуть к Королю Личу|r | Tip=[1452] Исследовать |cffdcaa92Примкнуть к Королю Личу|r (HK: {'raw': 'TRIGSTR_17712', 'val': 'D'}) | Ub=[10874] Врайкулы переходят на сторону короля лича.
+|cffdcaa92Здоровь...
+
+Upgrade R068 (levels=1):
+  Lvl 1: Name=[1072] |cffdcaa92Поддерживать верность хранителям|r | Tip=[1073] Исследовать |cffdcaa92Поддерживать верность хранителям|r (HK: {'raw': 'TRIGSTR_13684', 'val': 'S'}) | Ub=[25922] Врайкулы продолжают следовать традициям.
+|cffdcaa92Здоровье ...
+
+Upgrade R069 (levels=6):
+  Lvl 1: Name=[1497] |cffdcaa92Железные мечи|r | Tip=[1571] Исследовать |cffdcaa92Железные мечи|r (HK: {'raw': 'TRIGSTR_34813', 'val': 'Q'}) | Ub=[15112] Увеличивают урон от атак всех воинов врайкулов сражающихся в...
+  Lvl 2: Name=[1499] |cffdcaa92Железные мечи|r | Tip=[1591] Исследовать |cffdcaa92Железные мечи|r (HK: {'raw': 'TRIGSTR_34881', 'val': 'Q'}) | Ub=[15114] Увеличивают урон от атак всех воинов врайкулов сражающихся в...
+  Lvl 3: Name=[1510] |cffdcaa92Стальные мечи|r | Tip=[1627] Исследовать |cffdcaa92Стальные мечи|r (HK: {'raw': 'TRIGSTR_34882', 'val': 'Q'}) | Ub=[15113] Увеличивают урон от атак всех воинов врайкулов сражающихся в...
+  Lvl 4: Name=[1570] |cffdcaa92Стальные мечи|r | Tip=[1628] Исследовать |cffdcaa92Стальные мечи|r (HK: {'raw': 'TRIGSTR_34892', 'val': 'Q'}) | Ub=[15109] Увеличивают урон от атак всех воинов врайкулов сражающихся в...
+  Lvl 5: Name=[1569] |cffdcaa92Мифриловые мечи|r | Tip=[1629] Исследовать |cffdcaa92Мифриловые мечи|r (HK: {'raw': 'TRIGSTR_34989', 'val': 'Q'}) | Ub=[15110] Увеличивают урон от атак всех воинов врайкулов сражающихся в...
+  Lvl 6: Name=[1568] |cffdcaa92Мифриловые мечи|r | Tip=[1630] Исследовать |cffdcaa92Мифриловые мечи|r (HK: {'raw': 'TRIGSTR_34990', 'val': 'Q'}) | Ub=[15111] Увеличивают урон от атак всех воинов врайкулов сражающихся в...
+
+Upgrade R06A (levels=6):
+  Lvl 1: Name=[1655] |cffdcaa92Железная броня|r | Tip=[1676] Исследовать |cffdcaa92Железная броня|r (HK: {'raw': 'TRIGSTR_13758', 'val': 'A'}) | Ub=[15118] Усиливает броню всем воинам Врайкулов, сражающимся в ближнем...
+  Lvl 2: Name=[1656] |cffdcaa92Железная броня|r | Tip=[1677] Исследовать |cffdcaa92Железная броня|r (HK: {'raw': 'TRIGSTR_13759', 'val': 'A'}) | Ub=[15119] Усиливает броню всем воинам Врайкулов, сражающимся в ближнем...
+  Lvl 3: Name=[1657] |cffdcaa92Стальная броня|r | Tip=[1678] Исследовать |cffdcaa92Стальная броня|r (HK: {'raw': 'TRIGSTR_13775', 'val': 'A'}) | Ub=[15120] Усиливает броню всем воинам Врайкулов, сражающимся в ближнем...
+  Lvl 4: Name=[1673] |cffdcaa92Стальная броня|r | Tip=[1681] Исследовать |cffdcaa92Стальная броня|r (HK: {'raw': 'TRIGSTR_13776', 'val': 'A'}) | Ub=[15115] Усиливает броню всем воинам Врайкулов, сражающимся в ближнем...
+  Lvl 5: Name=[1659] |cffdcaa92Мифриловая броня|r | Tip=[1680] Исследовать |cffdcaa92Мифриловая броня|r (HK: {'raw': 'TRIGSTR_14099', 'val': 'A'}) | Ub=[15116] Усиливает броню всем воинам Врайкулов, сражающимся в ближнем...
+  Lvl 6: Name=[1658] |cffdcaa92Мифриловая броня|r | Tip=[1679] Исследовать |cffdcaa92Мифриловая броня|r (HK: {'raw': 'TRIGSTR_13777', 'val': 'A'}) | Ub=[15117] Усиливает броню всем воинам Врайкулов, сражающимся в ближнем...
+
+Upgrade R06B (levels=6):
+  Lvl 1: Name=[1968] |cffdcaa92Тренировки меткости|r | Tip=[2037] Исследовать «|cffdcaa92Тренировки меткости|r» (HK: {'raw': 'TRIGSTR_36697', 'val': 'W'}) | Ub=[15124] Увеличивает урон всем врайкулам, сражающимся в дальнем бою....
+  Lvl 2: Name=[1976] |cffdcaa92Тренировки меткости|r | Tip=[2121] Исследовать «|cffdcaa92Тренировки меткости|r» (HK: {'raw': 'TRIGSTR_36698', 'val': 'W'}) | Ub=[15125] Увеличивает урон всем врайкулам, сражающимся в дальнем бою....
+  Lvl 3: Name=[1978] |cffdcaa92Тренировки меткости|r | Tip=[2130] Исследовать «|cffdcaa92Тренировки меткости|r» (HK: {'raw': 'TRIGSTR_36701', 'val': 'W'}) | Ub=[15126] Увеличивает урон всем врайкулам, сражающимся в дальнем бою....
+  Lvl 4: Name=[2011] |cffdcaa92Тренировки меткости|r | Tip=[2131] Исследовать «|cffdcaa92Тренировки меткости|r» (HK: {'raw': 'TRIGSTR_36707', 'val': 'W'}) | Ub=[15121] Увеличивает урон всем врайкулам, сражающимся в дальнем бою....
+  Lvl 5: Name=[1985] |cffdcaa92Тренировки меткости|r | Tip=[2132] Исследовать «|cffdcaa92Тренировки меткости|r» (HK: {'raw': 'TRIGSTR_36711', 'val': 'W'}) | Ub=[15122] Увеличивает урон всем врайкулам, сражающимся в дальнем бою....
+  Lvl 6: Name=[2034] |cffdcaa92Тренировки меткости|r | Tip=[2133] Исследовать «|cffdcaa92Тренировки меткости|r» (HK: {'raw': 'TRIGSTR_36735', 'val': 'W'}) | Ub=[15123] Увеличивает урон всем врайкулам, сражающимся в дальнем бою....
+
+Upgrade R06C (levels=6):
+  Lvl 1: Name=[2144] |cffdcaa92Доспехи из клепаной кожи|r | Tip=[2171] Исследовать |cffdcaa92Доспехи из клепаной кожи|r (HK: {'raw': 'TRIGSTR_13819', 'val': 'S'}) | Ub=[15130] Усиливают броню всем врайкулам, сражающимся в дальнем бою....
+  Lvl 2: Name=[2145] |cffdcaa92Доспехи из клепаной кожи|r | Tip=[2172] Исследовать |cffdcaa92Доспехи из клепаной кожи|r (HK: {'raw': 'TRIGSTR_13820', 'val': 'S'}) | Ub=[15132] Усиливают броню всем врайкулам, сражающимся в дальнем бою....
+  Lvl 3: Name=[2159] |cffdcaa92Доспехи из армированой кожи|r | Tip=[2174] Исследовать |cffdcaa92Доспехи из армированой кожи|r (HK: {'raw': 'TRIGSTR_13871', 'val': 'S'}) | Ub=[15131] Усиливают броню всем врайкулам, сражающимся в дальнем бою....
+  Lvl 4: Name=[2170] |cffdcaa92Доспехи из армированой кожи|r | Tip=[2201] Исследовать |cffdcaa92Доспехи из армированой кожи|r (HK: {'raw': 'TRIGSTR_14472', 'val': 'S'}) | Ub=[15127] Усиливают броню всем врайкулам, сражающимся в дальнем бою....
+  Lvl 5: Name=[2169] |cffdcaa92Доспехи из драконьей кожи|r | Tip=[2200] Исследовать |cffdcaa92Доспехи из драконьей кожи|r (HK: {'raw': 'TRIGSTR_14038', 'val': 'S'}) | Ub=[15128] Усиливают броню всем врайкулам, сражающимся в дальнем бою....
+  Lvl 6: Name=[2160] |cffdcaa92Доспехи из драконьей кожи|r | Tip=[2181] Исследовать |cffdcaa92Доспехи из драконьей кожи|r (HK: {'raw': 'TRIGSTR_14473', 'val': 'S'}) | Ub=[15129] Усиливают броню всем врайкулам, сражающимся в дальнем бою....
+
+Upgrade R06D (levels=6):
+  Lvl 1: Name=[2243] |cffdcaa92Улучшенные топоры|r | Tip=[20823] Исследовать |cffdcaa92Улучшенные топоры|r (HK: {'raw': 'TRIGSTR_27869', 'val': 'Z'}) | Ub=[None] "Увеличивают объем переносимой работниками древесины на <Rhl...
+  Lvl 2: Name=[20818] |cffdcaa92Улучшенные топоры|r | Tip=[2266] Исследовать |cffdcaa92Улучшенные топоры|r (HK: {'raw': 'TRIGSTR_28259', 'val': 'Z'}) | Ub=[20828] Увеличивают объем переносимой работниками древесины на <Rhlh...
+  Lvl 3: Name=[20819] |cffdcaa92Улучшенные топоры|r | Tip=[20824] Исследовать |cffdcaa92Улучшенные топоры|r (HK: {'raw': 'TRIGSTR_28569', 'val': 'Z'}) | Ub=[20829] Увеличивают объем переносимой работниками древесины на <Rhlh...
+  Lvl 4: Name=[20820] |cffdcaa92Улучшенные топоры|r | Tip=[20825] Исследовать |cffdcaa92Улучшенные топоры|r (HK: {'raw': 'TRIGSTR_28570', 'val': 'Z'}) | Ub=[20830] Увеличивают объем переносимой работниками древесины на <Rhlh...
+  Lvl 5: Name=[20821] |cffdcaa92Улучшенные топоры|r | Tip=[20826] Исследовать |cffdcaa92Улучшенные топоры|r (HK: {'raw': 'TRIGSTR_28571', 'val': 'Z'}) | Ub=[20831] Увеличивают объем переносимой работниками древесины на <Rhlh...
+  Lvl 6: Name=[20822] |cffdcaa92Улучшенные топоры|r | Tip=[20827] Исследовать |cffdcaa92Улучшенные топоры|r (HK: {'raw': 'TRIGSTR_28572', 'val': 'Z'}) | Ub=[20832] Увеличивают объем переносимой работниками древесины на <Rhlh...
+
+Upgrade R06E (levels=3):
+  Lvl 1: Name=[2270] |cffdcaa92Мастерство владение мечом|r | Tip=[2313] Исследовать |cffdcaa92Мастерство владение мечом|r (HK: {'raw': 'TRIGSTR_34418', 'val': 'E'}) | Ub=[2319] Увеличивают урон от атак героям ближнего боя....
+  Lvl 2: Name=[2311] |cffdcaa92Мастерство владение мечом|r | Tip=[2314] Исследовать |cffdcaa92Мастерство владение мечом|r (HK: {'raw': 'TRIGSTR_34419', 'val': 'E'}) | Ub=[2326] Дополнительно увеличивают урон от атак героям ближнего боя....
+  Lvl 3: Name=[2312] |cffdcaa92Мастерство владение мечом|r | Tip=[2318] Исследовать |cffdcaa92Мастерство владение мечом|r (HK: {'raw': 'TRIGSTR_34420', 'val': 'E'}) | Ub=[2327] Дополнительно увеличивают урон от атак героям ближнего боя....
+
+Upgrade R06F (levels=3):
+  Lvl 1: Name=[2346] |cffdcaa92Мастерство защиты|r | Tip=[2349] Исследовать |cffdcaa92Мастерство защиты|r (HK: {'raw': 'TRIGSTR_17713', 'val': 'D'}) | Ub=[2377] Усиливает броню героям...
+  Lvl 2: Name=[2347] |cffdcaa92Мастерство защиты|r | Tip=[2362] Исследовать |cffdcaa92Мастерство защиты|r (HK: {'raw': 'TRIGSTR_17714', 'val': 'D'}) | Ub=[2379] Дополнительно усиливает броню героям....
+  Lvl 3: Name=[2348] |cffdcaa92Мастерство защиты|r | Tip=[2363] Исследовать |cffdcaa92Мастерство защиты|r (HK: {'raw': 'TRIGSTR_17738', 'val': 'D'}) | Ub=[2380] Дополнительно усиливает броню героям....
+
+Upgrade R07F (levels=1):
+  Lvl 1: Name=[10619] |cffe6beaaВрайкулы|r | Tip=[10620] |cffe6beaaВрайкулы|r (HK: {'raw': None, 'val': None}) | Ub=[20113] Раса разумных существ, живущая на побережье Ревущего Фьорда ...
+
+Upgrade Rguv (levels=1):
+  Lvl 1: Name=[None] Знак ночного зрения | Tip=[None] None (HK: {'raw': None, 'val': None}) | Ub=[None] None...
+
+=================== 7. ABILITIES ===================
+Ability A0E3 (|cffdcaa92Ярость севера|r) [levels=1, HK=D]:
+  Lvl 1: Tip=[8] |cffdcaa92Ярость севера|r | Ub=[6519] +<Absk,DataB1,%>% к скорости атаки.
+
+Ability A0E4 (|cffdcaa92Морозные клинки|r) [levels=1, HK=None]:
+  Lvl 1: Tip=[9974] |cffdcaa92Морозные клинки|r | Ub=[9976] |cffdcaa92Морозные клинки|r замедляют врагов.
+
+Ability A0E5 (|cffdcaa92Защита|r) [levels=1, HK=W]:
+  Lvl 1: Tip=[9978] |cffdcaa92Защита|r | Ub=[None] "При использовании с <Adef,DataF1>%-й вероятностью отражает 
+
+Ability A0E7 (|cffdcaa92Перейти в дальний бой|r) [levels=1, HK=W]:
+  Lvl 1: Tip=[9991] |cffdcaa92Перейти в дальний бой|r | Ub=[9992] |cffdcaa92Перейти в дальний бой|r
+
+Ability A0E8 (|cffdcaa92Точный удар|r) [levels=1, HK=None]:
+  Lvl 1: Tip=[6] |cffdcaa92Точный удар|r | Ub=[16425] Дает 5%-й шанс нанести 2-кратный урон при атаке.
+
+Ability A0E9 (|cffdcaa92Дополнительные доспехи|r) [levels=1, HK=None]:
+  ResearchTip: [8808] |cffc8cde1Аура Смерти|r | ResearchUb: [None] "Ускоряет передвижение и регенерацию здоровья нахо
+  Lvl 1: Tip=[28] |cffdcaa92Дополнительные доспехи|r | Ub=[30] Увеличивает защиту и здоровье |cffdcaa92Скальда|r.
+
+Ability A0EA (|cffdcaa92Рассекающий удар|r) [levels=1, HK=None]:
+  Lvl 1: Tip=[32] |cffdcaa92Рассекающий удар|r | Ub=[42239] Бьет с огромной силой, нанося 10% урона врагам рядом с основ
+
+Ability A0EB (|cffdcaa92Ледяные стрелы|r) [levels=1, HK=C]:
+  Lvl 1: Tip=[35] |cffdcaa92Ледяные стрелы|r | Ub=[25703] Атаки наносят дополнительно 25 урона от льда и замедляют цел
+
+Ability A0ED (|cffdcaa92Вдохновление|r) [levels=1, HK=W]:
+  Lvl 1: Tip=[77] |cffdcaa92Вдохновление|r | Ub=[79] +<ACif,DataA1,%>% к урону . |nВремя действия: <ACif,Dur1> се
+
+Ability A0EE (|cffdcaa92Рассеивание заклинаний|r) [levels=1, HK=E]:
+  Lvl 1: Tip=[82] |cffdcaa92Рассеивание заклинаний|r | Ub=[None] "Снимает положительные эффекты с войск в указанной области. 
+
+Ability A0EI (|cffdcaa92Ужасающий вой|r) [levels=1, HK=W]:
+  Lvl 1: Tip=[220] |cffdcaa92Ужасающий вой|r | Ub=[40260] -35% урона от атак находящихся рядом врагов на <Acht,Dur1> с
+
+Ability A0EM (|cffdcaa92Аура безумия|r) [levels=4, HK=E]:
+  ResearchTip: [315] Изучить «|cffdcaa92Аура безумия|r» [|cffffcc00%d-й уровень|r] | ResearchUb: [15340] Ускоряет передвижение и атаку находящихся рядом со
+  Lvl 1: Tip=[316] |cffdcaa92Аура безумия|r [|cffffcc001-й уровень|r] | Ub=[15341] |cffb4dcdc+<AOae,DataA1,%>%|r к скорости передвижения и |cff
+  Lvl 2: Tip=[317] |cffdcaa92Аура безумия|r [|cffffcc002-й уровень|r] | Ub=[15342] |cffb4dcdc+<AOae,DataA2,%>%|r к скорости передвижения и |cff
+  Lvl 3: Tip=[318] |cffdcaa92Аура безумия|r [|cffffcc003-й уровень|r] | Ub=[15343] |cffb4dcdc+<AOae,DataA3,%>%|r к скорости передвижения и |cff
+  Lvl 4: Tip=[319] |cffdcaa92Аура безумия|r [|cffffcc004-й уровень|r] | Ub=[15339] |cffb4dcdc+40%|r к скорости передвижения и |cffb4dcdc+20%|r 
+
+Ability A0EN (|cffe4cfa3Метнуть топор|r) [levels=4, HK=Q]:
+  ResearchTip: [329] |cffe4cfa3Метнуть топор|r | ResearchUb: [35266] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, ог
+  Lvl 1: Tip=[331] |cffe4cfa3Метнуть топор — уровень 1|r (|cffffffffQ|r) | Ub=[15346] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc
+  Lvl 2: Tip=[332] |cffe4cfa3Метнуть топор — уровень 2|r (|cffffffffQ|r) | Ub=[15347] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc
+  Lvl 3: Tip=[333] |cffe4cfa3Метнуть топор — уровень 3|r (|cffffffffQ|r) | Ub=[15348] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc
+  Lvl 4: Tip=[334] |cffe4cfa3Метнуть топор — уровень 4|r (|cffffffffQ|r) | Ub=[35263] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc
+
+Ability A0EO (|cffdcaa92Рунические топоры|r) [levels=4, HK=None]:
+  ResearchTip: [342] |cffdcaa92Рунические топоры|r | ResearchUb: [15349] Топор покрыт магическими рунами, после каждой атак
+  Lvl 1: Tip=[345] |cffdcaa92Рунические топоры|r | Ub=[15350] Магические руны на топорах, при атаке замедляют врагов.
+|n|c
+  Lvl 2: Tip=[346] |cffdcaa92Рунические топоры|r | Ub=[15351] Магические руны на топорах, при атаке замедляют врагов.
+|n|c
+  Lvl 3: Tip=[347] |cffdcaa92Рунические топоры|r | Ub=[15352] Магические руны на топорах, при атаке замедляют врагов.
+|n|c
+  Lvl 4: Tip=[351] |cffdcaa92Рунические топоры|r | Ub=[15353] Магические руны на топорах, при атаке замедляют врагов.
+|n|c
+
+Ability A0EP (|cffdcaa92Аватар берсерка|r) [levels=2, HK=R]:
+  ResearchTip: [358] Изучить «|cffdcaa92Аватар берсерка|r» | ResearchUb: [359] Дает |cffdcaa92Врайкулу|r  +<AHav,DataA1> к броне,
+  Lvl 1: Tip=[363] Активировать «|cffdcaa92Аватар берсерка|r» | Ub=[360] При использовании дает |cffdcaa92Врайкулу|r +<AHav,DataA1> к
+  Lvl 2: Tip=[366] Активировать «|cffdcaa92Аватар берсерка|r» | Ub=[15354] При использовании дает |cffdcaa92Врайкулу|r +<AHav,DataA1> к
+
+Ability A0EQ (|cffdcaa92Тяжелые доспехи|r) [levels=4, HK=W]:
+  ResearchTip: [487] |cffdcaa92Тяжелые доспехи|r | ResearchUb: [15355] Герой обвешивает себя дополнительной броней.
+|n|cf
+  Lvl 1: Tip=[491] |cffdcaa92Тяжелые доспехи|r | Ub=[40059] |cffb4dcdc+3|r к броне героя.
+  Lvl 2: Tip=[494] |cffdcaa92Тяжелые доспехи|r | Ub=[40057] |cffb4dcdc+4|r к броне героя.
+  Lvl 3: Tip=[498] |cffdcaa92Тяжелые доспехи|r | Ub=[40058] |cffb4dcdc+5|r к броне героя.
+  Lvl 4: Tip=[497] |cffdcaa92Тяжелые доспехи|r | Ub=[15358] |cffb4dcdc+6|r к броне героя.
+
+Ability A0ER (|cffdcaa92Яростный удар|r) [levels=4, HK=Q]:
+  ResearchTip: [538] Изучить «|cffdcaa92Яростный удар|r» [|cffffcc00%d-й уровень|r] | ResearchUb: [31431] Производит атаку, нанося урон в секторе перед собо
+  Lvl 1: Tip=[566] |cffdcaa92Яростный удар|r [|cffffcc001-й уровень|r] | Ub=[15361] Производит удар, нанося |cffb4dcdc<ANbf,DataA1>|r урона в се
+  Lvl 2: Tip=[583] |cffdcaa92Яростный удар|r [|cffffcc002-й уровень|r] | Ub=[15362] Производит удар, нанося |cffb4dcdc<ANbf,DataA2>|r урона в се
+  Lvl 3: Tip=[594] |cffdcaa92Яростный удар|r [|cffffcc003-й уровень|r] | Ub=[15363] Производит удар, нанося|cffb4dcdc <ANbf,DataA3>|r урона в се
+  Lvl 4: Tip=[596] |cffdcaa92Яростный удар|r [|cffffcc004-й уровень|r] | Ub=[15364] Производит удар, нанося |cffb4dcdc300|r урона в секторе пере
+
+Ability A0ES (|cffdcaa92Сокрушение|r) [levels=4, HK=E]:
+  ResearchTip: [688] |cffdcaa92Сокрушение|r | ResearchUb: [15406] С некой вероятностью атака нанесет урона находящим
+  Lvl 1: Tip=[658] |cffdcaa92Сокрушение|r | Ub=[15368] С |cffb4dcdc<Awar,DataA1>%-й|r вероятностью атака нанесет |c
+  Lvl 2: Tip=[714] |cffdcaa92Сокрушение|r | Ub=[15369] С |cffb4dcdc<Awar,DataA2>%-й|r вероятностью атака нанесет |c
+  Lvl 3: Tip=[716] |cffdcaa92Сокрушение|r | Ub=[15366] С |cffb4dcdc<Awar,DataA3>%-й|r вероятностью атака нанесет |c
+  Lvl 4: Tip=[722] |cffdcaa92Сокрушение|r | Ub=[15367] С |cffb4dcdc40%-й|r вероятностью атака нанесет |cffb4dcdc100
+
+Ability A0ET (|cffdcaa92Зов|r) [levels=2, HK=R]:
+  ResearchTip: [773] |cffdcaa92Зов|r | ResearchUb: [15370] Увеличивает защиту всем союзным войскам вокруг гер
+  Lvl 1: Tip=[770] |cffdcaa92Зов|r | Ub=[15371] Увеличивает защиту всем союзным войскам вокруг героя.
+|cffb4
+  Lvl 2: Tip=[777] |cffdcaa92Зов|r | Ub=[15372] Увеличивает защиту всем союзным войскам вокруг героя.
+|cffb4
+
+Ability A0EU (|cffdcaa92Помощь Предков|r) [levels=4, HK=Q]:
+  ResearchTip: [809] Изучить «|cffdcaa92Помощь Предков|r» [|cffffcc00%d-й уровень|r] | ResearchUb: [15373] Обстреливает указанную область сгустками духов, ог
+  Lvl 1: Tip=[815] |cffdcaa92Помощь Предков|r [|cffffcc001-й уровень|r] | Ub=[15374] Обстреливает указанную сгустками духов, нанося урон находящи
+  Lvl 2: Tip=[816] |cffdcaa92Помощь Предков|r [|cffffcc002-й уровень|r] | Ub=[15375] Обстреливает указанную сгустками духов, нанося урон находящи
+  Lvl 3: Tip=[817] |cffdcaa92Помощь Предков|r [|cffffcc003-й уровень|r] | Ub=[15376] Обстреливает указанную сгустками духов, нанося урон находящи
+  Lvl 4: Tip=[820] |cffdcaa92Помощь Предков|r [|cffffcc004-й уровень|r] | Ub=[15377] Обстреливает указанную сгустками духов, нанося урон находящи
+
+Ability A0EV (|cffdcaa92Руны защиты|r) [levels=4, HK=W]:
+  ResearchTip: [846] |cffdcaa92Руны защиты|r | ResearchUb: [15407] Жрец наносит магические руны на доспехи союзников 
+  Lvl 1: Tip=[850] |cffdcaa92Руны защиты|r | Ub=[15408] Жрец наносит магические руны на доспехи союзников вокруг себ
+  Lvl 2: Tip=[854] |cffdcaa92Руны защиты|r | Ub=[15409] Жрец наносит магические руны на доспехи союзников вокруг себ
+  Lvl 3: Tip=[858] |cffdcaa92Руны защиты|r | Ub=[15410] Жрец наносит магические руны на доспехи союзников вокруг себ
+  Lvl 4: Tip=[860] |cffdcaa92Руны защиты|r | Ub=[15411] Жрец наносит магические руны на доспехи союзников вокруг себ
+
+Ability A0EW (|cffdcaa92Руны проклятия|r) [levels=4, HK=None]:
+  ResearchTip: [962] |cffdcaa92Руны проклятия|r | ResearchUb: [15412] Жрец проклинает всех атакованных врагов. Нанося пе
+  Lvl 1: Tip=[961] |cffdcaa92Руны проклятия|r | Ub=[974] Руны наносит <ACvs,DataA1> урона/сек. |nВремя действия: <ACv
+  Lvl 2: Tip=[966] |cffdcaa92Руны проклятия|r | Ub=[975] Руны наносит <ACvs,DataA1> урона/сек. |nВремя действия: <ACv
+  Lvl 3: Tip=[967] |cffdcaa92Руны проклятия|r | Ub=[976] Руны наносит <ACvs,DataA1> урона/сек. |nВремя действия: <ACv
+  Lvl 4: Tip=[968] |cffdcaa92Руны проклятия|r | Ub=[978] Руны наносит <ACvs,DataA1> урона/сек. |nВремя действия: <ACv
+
+Ability A0EX (|cffdcaa92Руны Спасения|r) [levels=2, HK=R]:
+  ResearchTip: [981] Изучить «|cffdcaa92Руны Спасения|r» | ResearchUb: [15415] Спасает |cffdcaa92Врайкулов|r, восполняющей все зд
+  Lvl 1: Tip=[982] |cffdcaa92Руны Спасения|r | Ub=[15413] Спасает |cffdcaa92Врайкулов|r, восполняющей все здоровье сою
+  Lvl 2: Tip=[984] |cffdcaa92Руны Спасения|r | Ub=[15414] Спасает |cffdcaa92Врайкулов|r, восполняющей все здоровье сою
+
+Ability A0EY (|cffdcaa92Изнурение|r) [levels=4, HK=X]:
+  ResearchTip: [1056] |cffdcaa92Изнурение|r | ResearchUb: [1057] Замедляет врагов находящихся рядом.
+  Lvl 1: Tip=[1009] |cffdcaa92Изнурение|r | Ub=[1012] Накладывает |cffdcaa92Изнурение|r на врагов вокруг.
+  Lvl 2: Tip=[1014] |cffdcaa92Изнурение|r | Ub=[1013] Накладывает |cffdcaa92Изнурение|r на врагов вокруг.
+  Lvl 3: Tip=[1025] |cffdcaa92Изнурение|r | Ub=[1026] Накладывает |cffdcaa92Изнурение|r на врагов вокруг.
+  Lvl 4: Tip=[1028] |cffdcaa92Изнурение|r | Ub=[1027] Накладывает |cffdcaa92Изнурение|r на врагов вокруг.
+
+Ability A0EZ (|cffdcaa92Сильный Удар|r) [levels=4, HK=E]:
+  ResearchTip: [1059] Изучить «|cffdcaa92Сильный Удар|r» [|cffffcc00%d-й уровень|r] | ResearchUb: [None] "Дает шанс нанести при атаке на <AHbh,DataC1> боль
+  Lvl 1: Tip=[1060] |cffdcaa92Сильный Удар|r [|cffffcc001-й уровень|r] | Ub=[None] "С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,Data
+  Lvl 2: Tip=[1061] |cffdcaa92Сильный Удар|r [|cffffcc002-й уровень|r] | Ub=[None] "С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,Data
+  Lvl 3: Tip=[1062] |cffdcaa92Сильный Удар|r [|cffffcc003-й уровень|r] | Ub=[None] "С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,Data
+  Lvl 4: Tip=[1063] |cffdcaa92Сильный Удар|r [|cffffcc004-й уровень|r] | Ub=[1064] С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC
+
+Ability A0F1 (|cffdcaa92Северный доспех|r) [levels=1, HK=Q]:
+  Lvl 1: Tip=[59] |cffdcaa92Северный доспех|r | Ub=[1142] Увеличивает защиту на (3)ед., для дружественных войск.
+
+Ability A0HP (|cffdcaa96Врайкулы|r) [levels=1, HK=A]:
+  Lvl 1: Tip=[38872] |cffdcaa96Врайкулы|r | Ub=[35175] |cff7dc87dСоздатель расы:|r |cffe17d00Escanor (Яхве)|r|n|cff
+
+Ability A0I3 (|cffe4cfa3Небольшой скачок|r) [levels=1, HK=C]:
+  ResearchTip: [10064] |cffe4cfa3Небольшой скачок|r (|cffffffffC|r) | ResearchUb: [10976] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно перемещ
+  Lvl 1: Tip=[26476] |cffe4cfa3Небольшой скачок|r (|cffffffffC|r) | Ub=[26477] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно перемещает строит
+
+Ability A0IQ (|cffe4cfa3Обозначить столицу|r) [levels=1, HK=X]:
+  Lvl 1: Tip=[27969] |cffe4cfa3Обозначить столицу|r (|cffffffffX|r) | Ub=[27970] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Обозначает главное здание в
+
+Ability A0LI (|cffe4cfa3Обмен золота на дерево|r) [levels=1, HK=S]:
+  Lvl 1: Tip=[3692] |cffe4cfa3Обмен золота на дерево|r (|cffffffffS|r) | Ub=[20630] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает |cffffffff500|cf
+
+Ability A0LJ (|cffe4cfa3Обмен дерева на золото|r) [levels=1, HK=A]:
+  Lvl 1: Tip=[12886] |cffe4cfa3Обмен дерева на золото|r (|cffffffffA|r) | Ub=[20631] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает |cffffffff500|cf
+
+Ability A0YQ (Рассекающий Удар) [levels=1, HK=None]:
+  Lvl 1: Tip=[22783] Рассекающий Удар | Ub=[None] "Бьет с огромной силой, нанося <ACce,DataA1,%>% урона врагам
+
+Ability A0Z1 (|cffe6beaaРев|r) [levels=2, HK=R]:
+  ResearchTip: [23283] |cffe6beaaРев|r | ResearchUb: [23284] Увеличивает урон и защиту союзных войск рядом с ге
+  Lvl 1: Tip=[23279] |cffe6beaaРев|r | Ub=[32881] +35% к урону, и +6 к защите находящихся рядом союзников. |nВ
+  Lvl 2: Tip=[23280] |cffe6beaaРев|r | Ub=[32924] +40% к урону, и +8 к защите находящихся рядом союзников. |nВ
+
+Ability AInv (Инвентарь) [levels=1, HK=None]:
+  Lvl 1: Tip=[None] None | Ub=[None] 
+
+Ability ANha (Добывать ресурсы) [levels=1, HK=G]:
+  Lvl 1: Tip=[None] Добывать ресурсы | Ub=[None] Добывает золото из рудников и древесину из деревьев.
+
+Ability Abds (Слабое рассеивание чумы) [levels=1, HK=None]:
+  Lvl 1: Tip=[None] None | Ub=[None] 
+
+Ability Ahrp (Ремонтировать) [levels=1, HK=R]:
+  Lvl 1: Tip=[None] Ремонтировать | Ub=[None] Ремонтирует здания и технику за счет ресурсов.
+
+Ability Aihn (Инвентарь) [levels=1, HK=None]:
+  Lvl 1: Tip=[None] Инвентарь | Ub=[None] Позволяет носить (но не использовать) предметы для героев.
+
+Ability Amil (|cffe4cfa3Призыв к оружию|r) [levels=1, HK=W]:
+  Lvl 1: Tip=[27725] |cffe4cfa3Призыв к оружию|r | Ub=[None] "Отправляет работника к ратуше, форту или замку и вооружает 
+
+Ability Argl (Вернуть золото и древесину) [levels=1, HK=None]:
+  Lvl 1: Tip=[None] None | Ub=[None] 
+
+Ability Arlm (Вернуть древесину) [levels=1, HK=None]:
+  Lvl 1: Tip=[None] None | Ub=[None] 
+
+Ability wk03 (Защита (Всадник)) [levels=1, HK=Q]:
+  Lvl 1: Tip=[None] Защита | Ub=[40074] При использовании уменьшает урон от пронзающих атак до 90% б
+
+Ability wk04 (Пробитие доспехов) [levels=1, HK=Q]:
+  Lvl 1: Tip=[40303] Пробитие доспехов | Ub=[None] "Ослабляет броню врага на <Afae,DataA1> и раскрывает его мес
+
+Ability wk05 (Сильный укус) [levels=1, HK=None]:
+  Lvl 1: Tip=[None] Замедляющий яд | Ub=[None] "Отравляет цель, нанося <Aspo,DataA1> урона/сек., а также за
+
+Ability wk06 (Пламенное дыхание) [levels=1, HK=Q]:
+  Lvl 1: Tip=[None] "Пламенное дыхание [|cffffcc001-й уровень|r]" | Ub=[None] "Выдыхает огонь, нанося <ANbf,DataA1> урона в секторе перед 
+
+Ability wk07 (Броня из драконьей чешуи) [levels=1, HK=None]:
+  Lvl 1: Tip=[None] Каменная кожа | Ub=[40307] -18 от получаемого всадником урона от атак. Минимальный урон
+
+Ability wk09 (Оживление мертвых) [levels=1, HK=Q]:
+  Lvl 1: Tip=[None] Оживление мертвых | Ub=[3046] Оживляет 3 трупа в области действия.
+
+Ability wk10 (Нечистая аура) [levels=1, HK=None]:
+  Lvl 1: Tip=[None] "Нечистая аура [|cffffcc001-й уровень|r]" | Ub=[40404] +15% к скорости передвижения находящихся рядом союзников и б
+

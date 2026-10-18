@@ -1,0 +1,982 @@
+{
+  "operations": [
+    {
+      "type": "ability",
+      "id": "A0XW",
+      "field": "name",
+      "value": "|cffe4cfa3Ударная волна|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XW",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Ударная волна|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XW",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает силовую волну энергии, наносящую урон наземным войскам на прямой линии.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Наносит |cffffffff125|cffced4da ед. урона.|n- |cffffffff2|cffced4da: Наносит |cffffffff175|cffced4da ед. урона.|n- |cffffffff3|cffced4da: Наносит |cffffffff220|cffced4da ед. урона.|n- |cffffffff4|cffced4da: Наносит |cffffffff300|cffced4da ед. урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XW",
+      "field": "tip1",
+      "value": "|cffe4cfa3Ударная волна|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XW",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает силовую волну энергии, наносящую |cffffffff125|cffced4da ед. урона наземным войскам на линии.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XW",
+      "field": "tip2",
+      "value": "|cffe4cfa3Ударная волна|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XW",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает силовую волну энергии, наносящую |cffffffff175|cffced4da ед. урона наземным войскам на линии.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XW",
+      "field": "tip3",
+      "value": "|cffe4cfa3Ударная волна|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XW",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает силовую волну энергии, наносящую |cffffffff220|cffced4da ед. урона наземным войскам на линии.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XW",
+      "field": "tip4",
+      "value": "|cffe4cfa3Ударная волна|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XW",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает силовую волну энергии, наносящую |cffffffff300|cffced4da ед. урона наземным войскам на линии.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XM",
+      "field": "name",
+      "value": "|cffe4cfa3Сторожевая башня|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XM",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Сторожевая башня|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XM",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возводит временную сторожевую башню на 30 сек., атакующую всех врагов в радиусе действия.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Башня с |cffffffff500|cffced4da ед. здоровья и |cffffffff12|cffced4da ед. урона, перезарядка |cff60b8d060|cffced4da сек.|n- |cffffffff2|cffced4da: Башня с |cffffffff650|cffced4da ед. здоровья и |cffffffff18|cffced4da ед. урона, перезарядка |cff60b8d050|cffced4da сек.|n- |cffffffff3|cffced4da: Башня с |cffffffff800|cffced4da ед. здоровья и |cffffffff24|cffced4da ед. урона, перезарядка |cff60b8d040|cffced4da сек.|n- |cffffffff4|cffced4da: Башня с |cffffffff950|cffced4da ед. здоровья и |cffffffff30|cffced4da ед. урона, перезарядка |cff60b8d030|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XM",
+      "field": "tip1",
+      "value": "|cffe4cfa3Сторожевая башня|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XM",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возводит сторожевую башню с запасом здоровья |cffffffff500|cffced4da и уроном |cffffffff12|cffced4da на |cffffffff30|cffced4da сек. Перезарядка: |cff60b8d060|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XM",
+      "field": "tip2",
+      "value": "|cffe4cfa3Сторожевая башня|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XM",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возводит сторожевую башню с запасом здоровья |cffffffff650|cffced4da и уроном |cffffffff18|cffced4da на |cffffffff30|cffced4da сек. Перезарядка: |cff60b8d050|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XM",
+      "field": "tip3",
+      "value": "|cffe4cfa3Сторожевая башня|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XM",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возводит сторожевую башню с запасом здоровья |cffffffff800|cffced4da и уроном |cffffffff24|cffced4da на |cffffffff30|cffced4da сек. Перезарядка: |cff60b8d040|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XM",
+      "field": "tip4",
+      "value": "|cffe4cfa3Сторожевая башня|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XM",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возводит сторожевую башню с запасом здоровья |cffffffff950|cffced4da и уроном |cffffffff30|cffced4da на |cffffffff30|cffced4da сек. Перезарядка: |cff60b8d030|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y8",
+      "field": "name",
+      "value": "|cffe4cfa3Жгучая кровь|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y8",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Жгучая кровь|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y8",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Особая закалка полководца ускоряет регенерацию его здоровья, позволяя дольше сражаться на передовой.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Восстановление здоровья |cffffffff+6|cffced4da ед./сек.|n- |cffffffff2|cffced4da: Восстановление здоровья |cffffffff+8|cffced4da ед./сек.|n- |cffffffff3|cffced4da: Восстановление здоровья |cffffffff+10|cffced4da ед./сек.|n- |cffffffff4|cffced4da: Восстановление здоровья |cffffffff+12|cffced4da ед./сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y8",
+      "field": "tip1",
+      "value": "|cffe4cfa3Жгучая кровь|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y8",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает скорость восстановления здоровья героя на |cffffffff+6|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y8",
+      "field": "tip2",
+      "value": "|cffe4cfa3Жгучая кровь|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y8",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает скорость восстановления здоровья героя на |cffffffff+8|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y8",
+      "field": "tip3",
+      "value": "|cffe4cfa3Жгучая кровь|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y8",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает скорость восстановления здоровья героя на |cffffffff+10|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y8",
+      "field": "tip4",
+      "value": "|cffe4cfa3Жгучая кровь|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y8",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает скорость восстановления здоровья героя на |cffffffff+12|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XZ",
+      "field": "name",
+      "value": "|cffe4cfa3Генеральская забава|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XZ",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Генеральская забава|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XZ",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Генерал произносит воодушевляющую речь, делая союзные войска в области неуязвимыми на 15 сек.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Радиус |cffffffff800|cffced4da, перезарядка |cff60b8d090|cffced4da сек.|n- |cffffffff2|cffced4da: Радиус |cffffffff1000|cffced4da, перезарядка |cff60b8d070|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XZ",
+      "field": "tip1",
+      "value": "|cffe4cfa3Генеральская забава|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XZ",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует союзным войскам в радиусе |cffffffff800|cffced4da полную неуязвимость на |cffffffff15|cffced4da сек. Перезарядка: |cff60b8d090|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XZ",
+      "field": "tip2",
+      "value": "|cffe4cfa3Генеральская забава|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XZ",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует союзным войскам в радиусе |cffffffff1000|cffced4da полную неуязвимость на |cffffffff15|cffced4da сек. Перезарядка: |cff60b8d070|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZO",
+      "field": "name",
+      "value": "|cffe4cfa3Золотая ручка|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZO",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Золотая ручка|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZO",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно уничтожает вражеского воина, обращая его стоимость в чистое золото. Не действует на героев.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Золото |cffffffff2.5x|cffced4da стоимости цели, перезарядка |cff60b8d0120|cffced4da сек.|n- |cffffffff2|cffced4da: Золото |cffffffff3.0x|cffced4da стоимости цели, перезарядка |cff60b8d0100|cffced4da сек.|n- |cffffffff3|cffced4da: Золото |cffffffff5.0x|cffced4da стоимости цели, перезарядка |cff60b8d080|cffced4da сек.|n- |cffffffff4|cffced4da: Золото |cffffffff7.0x|cffced4da стоимости цели, перезарядка |cff60b8d060|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZO",
+      "field": "tip1",
+      "value": "|cffe4cfa3Золотая ручка|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZO",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно уничтожает цель, принося золото в размере |cffffffff2.5x|cffced4da от её стоимости. Расход маны: |cff6090e0150|cffced4da, перезарядка: |cff60b8d0120|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZO",
+      "field": "tip2",
+      "value": "|cffe4cfa3Золотая ручка|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZO",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно уничтожает цель, принося золото в размере |cffffffff3.0x|cffced4da от её стоимости. Расход маны: |cff6090e0200|cffced4da, перезарядка: |cff60b8d0100|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZO",
+      "field": "tip3",
+      "value": "|cffe4cfa3Золотая ручка|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZO",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно уничтожает цель, принося золото в размере |cffffffff5.0x|cffced4da от её стоимости. Расход маны: |cff6090e0250|cffced4da, перезарядка: |cff60b8d080|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZO",
+      "field": "tip4",
+      "value": "|cffe4cfa3Золотая ручка|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZO",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно уничтожает цель, принося золото в размере |cffffffff7.0x|cffced4da от её стоимости. Расход маны: |cff6090e0300|cffced4da, перезарядка: |cff60b8d060|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZP",
+      "field": "name",
+      "value": "|cffe4cfa3Налоги|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZP",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Налоги|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZP",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждая атака казначея изымает золото у поражённого противника и передаёт его в вашу казну.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Изымает |cffffffff0.7|cffced4da ед. золота за атаку.|n- |cffffffff2|cffced4da: Изымает |cffffffff0.9|cffced4da ед. золота за атаку.|n- |cffffffff3|cffced4da: Изымает |cffffffff1.1|cffced4da ед. золота за атаку.|n- |cffffffff4|cffced4da: Изымает |cffffffff1.3|cffced4da ед. золота за атаку.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZP",
+      "field": "tip1",
+      "value": "|cffe4cfa3Налоги|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZP",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно изымает |cffffffff0.7|cffced4da ед. золота при каждой атаке по вражескому юниту.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZP",
+      "field": "tip2",
+      "value": "|cffe4cfa3Налоги|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZP",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно изымает |cffffffff0.9|cffced4da ед. золота при каждой атаке по вражескому юниту.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZP",
+      "field": "tip3",
+      "value": "|cffe4cfa3Налоги|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZP",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно изымает |cffffffff1.1|cffced4da ед. золота при каждой атаке по вражескому юниту.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZP",
+      "field": "tip4",
+      "value": "|cffe4cfa3Налоги|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZP",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно изымает |cffffffff1.3|cffced4da ед. золота при каждой атаке по вражескому юниту.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XV",
+      "field": "name",
+      "value": "|cffe4cfa3Казначейский талант|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XV",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Казначейский талант|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XV",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мастерство управления финансами увеличивает регулярный золотой доход государства каждые 25 сек.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Доход казны |cffffffff+200|cffced4da золота каждые 25 сек.|n- |cffffffff2|cffced4da: Доход казны |cffffffff+300|cffced4da золота каждые 25 сек.|n- |cffffffff3|cffced4da: Доход казны |cffffffff+400|cffced4da золота каждые 25 сек.|n- |cffffffff4|cffced4da: Доход казны |cffffffff+500|cffced4da золота каждые 25 сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XV",
+      "field": "tip1",
+      "value": "|cffe4cfa3Казначейский талант|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XV",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает периодический доход казны на |cffffffff+200|cffced4da золота каждые |cffffffff25|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XV",
+      "field": "tip2",
+      "value": "|cffe4cfa3Казначейский талант|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XV",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает периодический доход казны на |cffffffff+300|cffced4da золота каждые |cffffffff25|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XV",
+      "field": "tip3",
+      "value": "|cffe4cfa3Казначейский талант|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XV",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает периодический доход казны на |cffffffff+400|cffced4da золота каждые |cffffffff25|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XV",
+      "field": "tip4",
+      "value": "|cffe4cfa3Казначейский талант|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XV",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает периодический доход казны на |cffffffff+500|cffced4da золота каждые |cffffffff25|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZN",
+      "field": "name",
+      "value": "|cffe4cfa3Прибавка к золоту|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZN",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Прибавка к золоту|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZN",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Казначей достаёт накопленные средства и единовременно пополняет государственную казну.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Единовременно даёт |cffffffff1500|cffced4da золота.|n- |cffffffff2|cffced4da: Единовременно даёт |cffffffff3000|cffced4da золота.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZN",
+      "field": "tip1",
+      "value": "|cffe4cfa3Прибавка к золоту|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZN",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно добавляет в государственную казну |cffffffff1500|cffced4da ед. золота. Перезарядка: |cff60b8d060|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZN",
+      "field": "tip2",
+      "value": "|cffe4cfa3Прибавка к золоту|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZN",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно добавляет в государственную казну |cffffffff3000|cffced4da ед. золота. Перезарядка: |cff60b8d060|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XK",
+      "field": "name",
+      "value": "|cffe4cfa3Огненная стрела|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XK",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Огненная стрела|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XK",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает сгусток концентрированного пламени, наносящий урон и оглушающий противника.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Наносит |cffffffff75|cffced4da ед. урона, оглушение на |cffffffff2|cffced4da сек.|n- |cffffffff2|cffced4da: Наносит |cffffffff150|cffced4da ед. урона, оглушение на |cffffffff3|cffced4da сек.|n- |cffffffff3|cffced4da: Наносит |cffffffff270|cffced4da ед. урона, оглушение на |cffffffff4|cffced4da сек.|n- |cffffffff4|cffced4da: Наносит |cffffffff350|cffced4da ед. урона, оглушение на |cffffffff5|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XK",
+      "field": "tip1",
+      "value": "|cffe4cfa3Огненная стрела|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XK",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит цели |cffffffff75|cffced4da ед. урона и оглушает её на |cffffffff2|cffced4da сек. (героев на |cffffffff2|cffced4da сек.). Расход маны: |cff6090e075|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XK",
+      "field": "tip2",
+      "value": "|cffe4cfa3Огненная стрела|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XK",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит цели |cffffffff150|cffced4da ед. урона и оглушает её на |cffffffff3|cffced4da сек. (героев на |cffffffff2|cffced4da сек.). Расход маны: |cff6090e075|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XK",
+      "field": "tip3",
+      "value": "|cffe4cfa3Огненная стрела|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XK",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит цели |cffffffff270|cffced4da ед. урона и оглушает её на |cffffffff4|cffced4da сек. (героев на |cffffffff2|cffced4da сек.). Расход маны: |cff6090e075|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0XK",
+      "field": "tip4",
+      "value": "|cffe4cfa3Огненная стрела|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0XK",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит цели |cffffffff350|cffced4da ед. урона и оглушает её на |cffffffff5|cffced4da сек. (героев на |cffffffff2|cffced4da сек.). Расход маны: |cff6090e075|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZQ",
+      "field": "name",
+      "value": "|cffe4cfa3Магический котел|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZQ",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Магический котел|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZQ",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает неподвижный невосприимчивый к магии котёл на 20 сек., исцеляющий союзников и обжигающий врагов.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Исцеление |cffffffff5%|cffced4da, урон врагам |cffffffff4%|cffced4da, перезарядка |cff60b8d080|cffced4da сек.|n- |cffffffff2|cffced4da: Исцеление |cffffffff7%|cffced4da, урон врагам |cffffffff6%|cffced4da, перезарядка |cff60b8d070|cffced4da сек.|n- |cffffffff3|cffced4da: Исцеление |cffffffff9%|cffced4da, урон врагам |cffffffff8%|cffced4da, перезарядка |cff60b8d050|cffced4da сек.|n- |cffffffff4|cffced4da: Исцеление |cffffffff11%|cffced4da, урон врагам |cffffffff10%|cffced4da, перезарядка |cff60b8d040|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZQ",
+      "field": "tip1",
+      "value": "|cffe4cfa3Магический котел|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZQ",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает котёл на |cffffffff20|cffced4da сек.: восстанавливает союзникам |cffffffff5%|cffced4da здоровья в сек. и наносит врагам |cffffffff4%|cffced4da урона. Перезарядка: |cff60b8d080|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZQ",
+      "field": "tip2",
+      "value": "|cffe4cfa3Магический котел|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZQ",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает котёл на |cffffffff20|cffced4da сек.: восстанавливает союзникам |cffffffff7%|cffced4da здоровья в сек. и наносит врагам |cffffffff6%|cffced4da урона. Перезарядка: |cff60b8d070|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZQ",
+      "field": "tip3",
+      "value": "|cffe4cfa3Магический котел|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZQ",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает котёл на |cffffffff20|cffced4da сек.: восстанавливает союзникам |cffffffff9%|cffced4da здоровья в сек. и наносит врагам |cffffffff8%|cffced4da урона. Перезарядка: |cff60b8d050|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZQ",
+      "field": "tip4",
+      "value": "|cffe4cfa3Магический котел|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0ZQ",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает котёл на |cffffffff20|cffced4da сек.: восстанавливает союзникам |cffffffff11%|cffced4da здоровья в сек. и наносит врагам |cffffffff10%|cffced4da урона. Перезарядка: |cff60b8d040|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y6",
+      "field": "name",
+      "value": "|cffe4cfa3Аура гениальности|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y6",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Аура гениальности|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y6",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Магическое присутствие чародея ускоряет восполнение маны у ближайших союзных войск.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Восстановление маны |cffffffff+0.75|cffced4da ед./сек. (незначительный бонус).|n- |cffffffff2|cffced4da: Восстановление маны |cffffffff+1.50|cffced4da ед./сек. (средний бонус).|n- |cffffffff3|cffced4da: Восстановление маны |cffffffff+2.25|cffced4da ед./сек. (значительный бонус).|n- |cffffffff4|cffced4da: Восстановление маны |cffffffff+3.00|cffced4da ед./сек. (большой бонус).|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y6",
+      "field": "tip1",
+      "value": "|cffe4cfa3Аура гениальности|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y6",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает скорость восстановления маны у союзников поблизости на |cffffffff+0.75|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y6",
+      "field": "tip2",
+      "value": "|cffe4cfa3Аура гениальности|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y6",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает скорость восстановления маны у союзников поблизости на |cffffffff+1.50|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y6",
+      "field": "tip3",
+      "value": "|cffe4cfa3Аура гениальности|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y6",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает скорость восстановления маны у союзников поблизости на |cffffffff+2.25|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y6",
+      "field": "tip4",
+      "value": "|cffe4cfa3Аура гениальности|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y6",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает скорость восстановления маны у союзников поблизости на |cffffffff+3.00|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y7",
+      "field": "name",
+      "value": "|cffe4cfa3Огненный ливень|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y7",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Огненный ливень|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y7",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на указанную область сокрушительный дождь огненных метеоров, наносящих урон при падении и поджигающих землю.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: |cffffffff9|cffced4da волн по |cffffffff30|cffced4da ед. урона и |cffffffff12|cffced4da ед. горения.|n- |cffffffff2|cffced4da: |cffffffff12|cffced4da волн по |cffffffff40|cffced4da ед. урона и |cffffffff17|cffced4da ед. горения.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y7",
+      "field": "tip1",
+      "value": "|cffe4cfa3Огненный ливень|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y7",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вызывает |cffffffff9|cffced4da волн огня: каждая наносит |cffffffff30|cffced4da ед. урона и |cffffffff12|cffced4da ед. урона от горения. Расход маны: |cff6090e0125|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y7",
+      "field": "tip2",
+      "value": "|cffe4cfa3Огненный ливень|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0Y7",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вызывает |cffffffff12|cffced4da волн огня: каждая наносит |cffffffff40|cffced4da ед. урона и |cffffffff17|cffced4da ед. урона от горения. Расход маны: |cff6090e0125|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1LH",
+      "field": "name",
+      "value": "|cffe4cfa3Аура ветерана|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1LH",
+      "field": "tip1",
+      "value": "|cffe4cfa3Аура ветерана|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1LH",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Врождённая аура: увеличивает силу атаки находящихся рядом союзников на |cffffffff+10%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17V",
+      "field": "name",
+      "value": "|cffe4cfa3Всплеск ярости|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17V",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Всплеск ярости|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A17V",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Впадает в боевое безумие, резко увеличивая скорость атаки ценой повышенного входящего урона на 12 сек.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: +400% скорости боя, входящий урон |cffffffff+50%|cffced4da.|n- |cffffffff2|cffced4da: +400% скорости боя, входящий урон |cffffffff+45%|cffced4da.|n- |cffffffff3|cffced4da: +400% скорости боя, входящий урон |cffffffff+40%|cffced4da.|n- |cffffffff4|cffced4da: +400% скорости боя, входящий урон |cffffffff+35%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17V",
+      "field": "tip1",
+      "value": "|cffe4cfa3Всплеск ярости|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A17V",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость боя на |cffffffff+400%|cffced4da, но увеличивает получаемый урон на |cffffffff50%|cffced4da на |cffffffff12|cffced4da сек. Перезарядка: |cff60b8d030|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17V",
+      "field": "tip2",
+      "value": "|cffe4cfa3Всплеск ярости|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A17V",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость боя на |cffffffff+400%|cffced4da, но увеличивает получаемый урон на |cffffffff45%|cffced4da на |cffffffff12|cffced4da сек. Перезарядка: |cff60b8d030|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17V",
+      "field": "tip3",
+      "value": "|cffe4cfa3Всплеск ярости|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A17V",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость боя на |cffffffff+400%|cffced4da, но увеличивает получаемый урон на |cffffffff40%|cffced4da на |cffffffff12|cffced4da сек. Перезарядка: |cff60b8d030|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17V",
+      "field": "tip4",
+      "value": "|cffe4cfa3Всплеск ярости|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A17V",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость боя на |cffffffff+400%|cffced4da, но увеличивает получаемый урон на |cffffffff35%|cffced4da на |cffffffff12|cffced4da сек. Перезарядка: |cff60b8d030|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17X",
+      "field": "name",
+      "value": "|cffe4cfa3Боевой клич|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17X",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Боевой клич|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A17X",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Издаёт громогласный клич, временно увеличивающий силу атаки окружающих союзных войск на 35 сек.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Бонус к урону союзников |cffffffff+15%|cffced4da.|n- |cffffffff2|cffced4da: Бонус к урону союзников |cffffffff+20%|cffced4da.|n- |cffffffff3|cffced4da: Бонус к урону союзников |cffffffff+25%|cffced4da.|n- |cffffffff4|cffced4da: Бонус к урону союзников |cffffffff+30%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17X",
+      "field": "tip1",
+      "value": "|cffe4cfa3Боевой клич|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A17X",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзных войск в радиусе |cffffffff500|cffced4da на |cffffffff+15%|cffced4da на |cffffffff35|cffced4da сек. Расход маны: |cff6090e0110|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17X",
+      "field": "tip2",
+      "value": "|cffe4cfa3Боевой клич|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A17X",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзных войск в радиусе |cffffffff500|cffced4da на |cffffffff+20%|cffced4da на |cffffffff35|cffced4da сек. Расход маны: |cff6090e0120|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17X",
+      "field": "tip3",
+      "value": "|cffe4cfa3Боевой клич|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A17X",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзных войск в радиусе |cffffffff500|cffced4da на |cffffffff+25%|cffced4da на |cffffffff35|cffced4da сек. Расход маны: |cff6090e0130|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17X",
+      "field": "tip4",
+      "value": "|cffe4cfa3Боевой клич|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A17X",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзных войск в радиусе |cffffffff500|cffced4da на |cffffffff+30%|cffced4da на |cffffffff35|cffced4da сек. Расход маны: |cff6090e0140|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17W",
+      "field": "name",
+      "value": "|cffe4cfa3Ярость Трол'калар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17W",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Ярость Трол'калар|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A17W",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Легендарный клинок Трол'калар даёт шанс нанести сокрушительный удар в ближнем бою.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Множитель урона |cffffffff2.0x|cffced4da (шанс 20%).|n- |cffffffff2|cffced4da: Множитель урона |cffffffff2.5x|cffced4da (шанс 20%).|n- |cffffffff3|cffced4da: Множитель урона |cffffffff3.0x|cffced4da (шанс 20%).|n- |cffffffff4|cffced4da: Множитель урона |cffffffff3.5x|cffced4da (шанс 20%).|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17W",
+      "field": "tip1",
+      "value": "|cffe4cfa3Ярость Трол'калар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17W",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт |cffffffff20%|cffced4da шанс нанести удар с множителем урона |cffffffff2.0x|cffced4da при атаке.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17W",
+      "field": "tip2",
+      "value": "|cffe4cfa3Ярость Трол'калар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17W",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт |cffffffff20%|cffced4da шанс нанести удар с множителем урона |cffffffff2.5x|cffced4da при атаке.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17W",
+      "field": "tip3",
+      "value": "|cffe4cfa3Ярость Трол'калар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17W",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт |cffffffff20%|cffced4da шанс нанести удар с множителем урона |cffffffff3.0x|cffced4da при атаке.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17W",
+      "field": "tip4",
+      "value": "|cffe4cfa3Ярость Трол'калар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17W",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт |cffffffff20%|cffced4da шанс нанести удар с множителем урона |cffffffff3.5x|cffced4da при атаке.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17S",
+      "field": "name",
+      "value": "|cffe4cfa3Аватар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17S",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Аватар|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A17S",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Данат преисполняется титанической мощи, получая броню, здоровье, урон и невосприимчивость к магии на 60 сек.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: +5 к броне, +500 к здоровью, +15 к урону.|n- |cffffffff2|cffced4da: +7 к броне, +1000 к здоровью, +25 к урону.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17S",
+      "field": "tip1",
+      "value": "|cffe4cfa3Аватар|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A17S",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует невосприимчивость к магии, бонус |cffffffff+5|cffced4da к броне, |cffffffff+500|cffced4da к здоровью и |cffffffff+15|cffced4da к урону на |cffffffff60|cffced4da сек. Расход маны: |cff6090e0150|cffced4da, перезарядка: |cff60b8d0180|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A17S",
+      "field": "tip2",
+      "value": "|cffe4cfa3Аватар|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A17S",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует невосприимчивость к магии, бонус |cffffffff+7|cffced4da к броне, |cffffffff+1000|cffced4da к здоровью и |cffffffff+25|cffced4da к урону на |cffffffff60|cffced4da сек. Расход маны: |cff6090e0150|cffced4da, перезарядка: |cff60b8d0180|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+    }
+  ]
+}

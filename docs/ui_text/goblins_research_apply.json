@@ -1,0 +1,20 @@
+{
+  "race": "goblins",
+  "category": "researches",
+  "total_researches": 20,
+  "total_checks": 288,
+  "all_matched": true,
+  "wts_keys_updated": 281,
+  "skin_w3q_ops": 7,
+  "hashes": {
+    "wts": {
+      "before": "759757b5714a7e708ded434feae55aa1b2d9ea71a3811a36defc94b1f0e4cee4",
+      "after": "9d124d9479bd96d9ce310dfd5a70edc7218e00ee8fdbb25020580cb907dd01db"
+    },
+    "w3q_skin": {
+      "before": "2c4f7ffcf2cf7b83836aae2fa3270e5d225f9d37226cc304f19d0bb9c0fcf78f",
+      "after": "1013575457067009a0e37c88ca1b1d7b489ace113691b7b15369e4bcf7342e80"
+    }
+  },
+  "base_binaries_untouched": true
+}

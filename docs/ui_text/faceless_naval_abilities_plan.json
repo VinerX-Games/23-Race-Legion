@@ -1,0 +1,265 @@
+{
+  "operations": [
+    {
+      "type": "ability",
+      "id": "A00I",
+      "field": "name",
+      "value": "|cffe4cfa3Магическая посадка|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00I",
+      "field": "tip1",
+      "value": "|cffe4cfa3Магическая посадка|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A00I",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Перемещает подходящие войска игрока из радиуса |cffffffff250|cffced4da вокруг выбранной точки к выбранным транспортам того же типа и отдаёт приказ посадки. Распределяет войска по свободным местам: до |cffffffff10|cffced4da на транспорт. Успех посадки зависит от допустимости груза и доступности места высадки у корабля.|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff1|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00A",
+      "field": "name",
+      "value": "|cffe4cfa3Починка|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00A",
+      "field": "tip1",
+      "value": "|cffe4cfa3Починка|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A00A",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Во время поддержания восстанавливает |cffffffff10|cffced4da здоровья каждые |cffffffff1|cffced4da сек. подходящим союзным и нейтральным целям в радиусе |cffffffff5|cffced4da, включая сам корабль. Длительность — до |cffffffff150|cffced4da сек. Корабль не может использовать главные орудия, пока поддерживает способность. Требует исследования «Починка».|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff20|cffced4da сек.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00A",
+      "field": "tip2",
+      "value": "|cffe4cfa3Починка|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A00A",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Во время поддержания восстанавливает |cffffffff40|cffced4da здоровья каждые |cffffffff1|cffced4da сек. подходящим союзным и нейтральным целям в радиусе |cffffffff5|cffced4da, включая сам корабль. Длительность — до |cffffffff150|cffced4da сек. Корабль не может использовать главные орудия, пока поддерживает способность. Требует исследования «Починка». В начале применения корабль получает неуязвимость на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff15|cffced4da сек.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00A",
+      "field": "tip3",
+      "value": "|cffe4cfa3Починка|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A00A",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Во время поддержания восстанавливает |cffffffff20|cffced4da здоровья каждые |cffffffff1|cffced4da сек. подходящим союзным и нейтральным целям в радиусе |cffffffff5|cffced4da, включая сам корабль. Длительность — до |cffffffff150|cffced4da сек. Корабль не может использовать главные орудия, пока поддерживает способность. Требует исследования «Починка». В начале применения корабль получает неуязвимость на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff10|cffced4da сек.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00B",
+      "field": "name",
+      "value": "|cffe4cfa3Тактическое ускорение|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00B",
+      "field": "tip1",
+      "value": "|cffe4cfa3Тактическое ускорение|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A00B",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da На |cffffffff13|cffced4da сек. даёт |cffc8e087+40%|cffced4da к скорости передвижения. Получаемый кораблём урон увеличивается на |cffe69a8d+25%|cffced4da. Требует исследования «Дополнительные паруса».|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff120|cffced4da сек.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00B",
+      "field": "tip2",
+      "value": "|cffe4cfa3Тактическое ускорение|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A00B",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da На |cffffffff15|cffced4da сек. даёт |cffc8e087+50%|cffced4da к скорости передвижения. Получаемый кораблём урон увеличивается на |cffe69a8d+20%|cffced4da. Требует исследования «Дополнительные паруса».|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff90|cffced4da сек.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00B",
+      "field": "tip3",
+      "value": "|cffe4cfa3Тактическое ускорение|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A00B",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da На |cffffffff17|cffced4da сек. даёт |cffc8e087+60%|cffced4da к скорости передвижения. Получаемый кораблём урон увеличивается на |cffe69a8d+15%|cffced4da. Требует исследования «Дополнительные паруса».|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff60|cffced4da сек.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "Sch5",
+      "field": "name",
+      "value": "|cffe4cfa3Грузовой отсек|r",
+      "base_object": true
+    },
+    {
+      "type": "ability",
+      "id": "Sch5",
+      "field": "tip1",
+      "value": "|cffe4cfa3Грузовой отсек|r",
+      "base_object": true
+    },
+    {
+      "type": "ability",
+      "id": "Sch5",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Позволяет перевозить наземные союзные войска. Вместимость — |cffffffff10|cffced4da мест. Для посадки и высадки используются отдельные команды.|r",
+      "base_object": true
+    },
+    {
+      "type": "ability",
+      "id": "Slo3",
+      "field": "name",
+      "value": "|cffe4cfa3Посадка на борт|r"
+    },
+    {
+      "type": "ability",
+      "id": "Slo3",
+      "field": "tip1",
+      "value": "|cffe4cfa3Посадка на борт|r (|cffffffffD|r)"
+    },
+    {
+      "type": "ability",
+      "id": "Slo3",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Принимает на борт выбранного наземного союзника при наличии свободного места в грузовом отсеке.|r"
+    },
+    {
+      "type": "ability",
+      "id": "Sdro",
+      "field": "name",
+      "value": "|cffe4cfa3Высадка|r"
+    },
+    {
+      "type": "ability",
+      "id": "Sdro",
+      "field": "tip1",
+      "value": "|cffe4cfa3Высадка|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "Sdro",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Высаживает перевозимые войска в указанном месте, если местность позволяет разместить их.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A002",
+      "field": "name",
+      "value": "|cffe4cfa3Боковые пушки фрегата|r"
+    },
+    {
+      "type": "ability",
+      "id": "A002",
+      "field": "tip1",
+      "value": "|cffe4cfa3Боковые пушки фрегата|r"
+    },
+    {
+      "type": "ability",
+      "id": "A002",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Автоматически стреляет по вражеским механическим целям в радиусе |cffffffff400|cffced4da, нанося |cffffffff10|cffced4da урона за попадание. Интервал выстрелов — |cffffffff1,5|cffced4da сек. Дополнительные пушки могут стрелять во время движения корабля.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A002",
+      "field": "tip2",
+      "value": "|cffe4cfa3Боковые пушки фрегата|r"
+    },
+    {
+      "type": "ability",
+      "id": "A002",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Автоматически стреляет по вражеским механическим целям в радиусе |cffffffff500|cffced4da, нанося |cffffffff20|cffced4da урона за попадание. Интервал выстрелов — |cffffffff1,5|cffced4da сек. Дополнительные пушки могут стрелять во время движения корабля.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A002",
+      "field": "tip3",
+      "value": "|cffe4cfa3Боковые пушки фрегата|r"
+    },
+    {
+      "type": "ability",
+      "id": "A002",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Автоматически стреляет по вражеским механическим целям в радиусе |cffffffff600|cffced4da, нанося |cffffffff30|cffced4da урона за попадание. Интервал выстрелов — |cffffffff1,5|cffced4da сек. Дополнительные пушки могут стрелять во время движения корабля.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A003",
+      "field": "name",
+      "value": "|cffe4cfa3Боковые пушки линкора|r"
+    },
+    {
+      "type": "ability",
+      "id": "A003",
+      "field": "tip1",
+      "value": "|cffe4cfa3Боковые пушки линкора|r"
+    },
+    {
+      "type": "ability",
+      "id": "A003",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Автоматически стреляет по вражеским механическим целям в радиусе |cffffffff700|cffced4da, нанося |cffffffff15|cffced4da урона за попадание. Интервал выстрелов — |cffffffff1,9|cffced4da сек. Дополнительные пушки могут стрелять во время движения корабля. Требует исследования «Обстрел».|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A003",
+      "field": "tip2",
+      "value": "|cffe4cfa3Боковые пушки линкора|r"
+    },
+    {
+      "type": "ability",
+      "id": "A003",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Автоматически стреляет по вражеским механическим целям в радиусе |cffffffff800|cffced4da, нанося |cffffffff35|cffced4da урона за попадание. Интервал выстрелов — |cffffffff1,9|cffced4da сек. Дополнительные пушки могут стрелять во время движения корабля. Требует исследования «Обстрел».|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A003",
+      "field": "tip3",
+      "value": "|cffe4cfa3Боковые пушки линкора|r"
+    },
+    {
+      "type": "ability",
+      "id": "A003",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Автоматически стреляет по вражеским механическим целям в радиусе |cffffffff900|cffced4da, нанося |cffffffff55|cffced4da урона за попадание. Интервал выстрелов — |cffffffff1,9|cffced4da сек. Дополнительные пушки могут стрелять во время движения корабля. Требует исследования «Обстрел».|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1PP",
+      "field": "name",
+      "value": "|cffe4cfa3Прицельная пальба|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1PP",
+      "field": "tip1",
+      "value": "|cffe4cfa3Прицельная пальба|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1PP",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит выбранному наземному или воздушному органическому противнику |cffffffff25|cffced4da урона и оглушает на |cffffffff2|cffced4da сек.; героя — на |cffffffff0,5|cffced4da сек.|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff30|cffced4da сек.|r"
+    }
+  ]
+}

@@ -1,0 +1,2295 @@
+{
+  "schema_version": 1,
+  "errors": 38,
+  "warnings": 248,
+  "findings": [
+    {
+      "field": "builds",
+      "id": "opeo",
+      "message": "unknown unit reference",
+      "reference": "orbr",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "upgrades",
+      "id": "ewsp",
+      "message": "unknown upgrade reference",
+      "reference": "Rewd",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "nane",
+      "message": "unknown ability reference",
+      "reference": "Acvs",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "name",
+      "id": "nnad",
+      "message": "unresolved WTS reference",
+      "reference": "TRIGSTR_42938",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "editorsuffix",
+      "id": "nnad",
+      "message": "unresolved WTS reference",
+      "reference": "TRIGSTR_25695",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "trains",
+      "id": "h07B",
+      "message": "unknown unit reference",
+      "reference": "TREH",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "e01Y",
+      "message": "unknown ability reference",
+      "reference": "A1JE\r\nA1JE",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I027",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I028",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I029",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I02A",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I02B",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I024",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I02K",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I026",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I02M",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "n01W",
+      "message": "unknown ability reference",
+      "reference": "asla",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "n01X",
+      "message": "unknown ability reference",
+      "reference": "asla",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "trains",
+      "id": "h0EU",
+      "message": "unknown unit reference",
+      "reference": "n07P.n07U",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "h0G2",
+      "message": "unknown ability reference",
+      "reference": "alit",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "trains",
+      "id": "h0GJ",
+      "message": "unknown unit reference",
+      "reference": "h0P7\r\nh0P7",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "upgrades",
+      "id": "e031",
+      "message": "unknown upgrade reference",
+      "reference": "Rewd",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "upgrades",
+      "id": "h0L5",
+      "message": "unknown upgrade reference",
+      "reference": "A0OZ",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "O05U",
+      "message": "unknown ability reference",
+      "reference": "Asa2",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "pa02",
+      "message": "unknown ability reference",
+      "reference": "a003",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "pa03",
+      "message": "unknown ability reference",
+      "reference": "a003",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "upgrades",
+      "id": "pa07",
+      "message": "unknown upgrade reference",
+      "reference": "pa46",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "upgrades",
+      "id": "pa10",
+      "message": "unknown upgrade reference",
+      "reference": "PA11",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "pa17",
+      "message": "unknown ability reference",
+      "reference": "a003",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "pa18",
+      "message": "unknown ability reference",
+      "reference": "a003",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "pa19",
+      "message": "unknown ability reference",
+      "reference": "a003",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "pa20",
+      "message": "unknown ability reference",
+      "reference": "PA19",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "upgrades",
+      "id": "pa35",
+      "message": "unknown upgrade reference",
+      "reference": "PA11",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "w203",
+      "message": "unknown ability reference",
+      "reference": "w2a0\r\nw2a0",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "n076",
+      "message": "unknown ability reference",
+      "reference": "Acch",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "u039",
+      "message": "unknown ability reference",
+      "reference": "un01",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "u03A",
+      "message": "unknown ability reference",
+      "reference": "un01",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "abillist",
+      "id": "cese",
+      "message": "unknown ability reference",
+      "reference": "ASYR",
+      "severity": "error",
+      "type": "item"
+    },
+    {
+      "field": "file",
+      "id": "h02D",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "DemonBirth.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h02E",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "DraenaiBirth.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h02H",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "UBirth.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "o006",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "tacleye.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "o00F",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "tacleye.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h04V",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "ScavangerCreeper.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "art",
+      "id": "H053",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "ReplaceableTextures\\CommandButtons\\BTNSirHalaran2.1.blp",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h05P",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "..mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h05Q",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h05R",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h05S",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h05T",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "n00Q",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "TwilightHammerbattlemaster.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "u005",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "NetherDrakeRider.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "o00Z",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "AwokenOfDisasterFinal.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "e008",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "AirElemental.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "u00T",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "ScourgePlagueSpreader_BrownHorns.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "H0BN",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "u.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "art",
+      "id": "H0BN",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "N01A",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "GoblinTPM_Final.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "art",
+      "id": "h0C8",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "ReplaceableTexturesCommandButtons\\BTNVrykuls_DomVoinov.blp",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0DD",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "final_export.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h071",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "O018",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "bandits\\EdwinVancleef1.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "art",
+      "id": "n02Z",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "ReplaceableTextures\\CommandButtons\\BTN8",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0EX",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "mdx.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0G8",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "H0GB",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "u.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "art",
+      "id": "H0GB",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "e02Z",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0GI",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "..mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0GQ",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "TempleOfInsight.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0JH",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0K0",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "o033",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".mdl.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "o034",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".mdl.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "art",
+      "id": "H0L4",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "ReplaceableTextures\\CommandButtons\\BTN_Danath",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "o03Y",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".mdl.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0M5",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Storm_Sorcerer_Kul-Tiras_HD_TC.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0M7",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Rifleman_Kul-Tiras_HD_TC.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0MG",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0MK",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0ML",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0MM",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "..mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "art",
+      "id": "h0MX",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Trolls/BTNRuinsSpiritLodge",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "pa18",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Pandarens/ShamanPandarenV1.03.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "pa19",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Pandarens/PandarenEarthShaman.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "pa24",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".Pandarens/Pandarian Town Hall.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "pa25",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".Pandarens/Pandarian Town Hall.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "art",
+      "id": "pa40",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "BTNPandarenTransportShip.blp",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "w2ae",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "ю.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "repD",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "units\\critters\\Albatross\\Albatros.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h07H",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "_.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0I0",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "..mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0O2",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0OA",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0P0",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0F2",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "..mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h001",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".Pandarens/Pandarian Town Hall.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0P6",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".Pandarens/Pandarian Town Hall.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "h0P7",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1.mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "aiu0",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "..mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "arbo",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "..mdl",
+      "severity": "warning",
+      "type": "unit"
+    },
+    {
+      "field": "file",
+      "id": "I020",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "..mdl",
+      "severity": "warning",
+      "type": "item"
+    },
+    {
+      "field": "art",
+      "id": "FT00",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "ReplaceableTextures\\CommandButtons\\BTNfrostmourne",
+      "severity": "warning",
+      "type": "item"
+    },
+    {
+      "field": "art",
+      "id": "A0EL",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "ReplaceableTexturesCommandButtons\\BTNVrykuls_Valkira.blp",
+      "severity": "warning",
+      "type": "ability"
+    },
+    {
+      "field": "art",
+      "id": "A0MH",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "ReplaceableTextures\\CommandButtons\\BTNBlank.blp",
+      "severity": "warning",
+      "type": "ability"
+    },
+    {
+      "field": "art",
+      "id": "A0PD",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "BTN3.blp",
+      "severity": "warning",
+      "type": "ability"
+    },
+    {
+      "field": "art",
+      "id": "A1JY",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "ReplaceableTextures\\PassiveButtons\\DivineClarity.blp",
+      "severity": "warning",
+      "type": "ability"
+    },
+    {
+      "field": "art",
+      "id": "A1BL",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "ReplaceableTextures\\CommandButtons\\Purification.blp",
+      "severity": "warning",
+      "type": "ability"
+    },
+    {
+      "field": "art",
+      "id": "A1JZ",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "ReplaceableTextures\\CommandButtons\\RighteousBlessing.blp",
+      "severity": "warning",
+      "type": "ability"
+    },
+    {
+      "field": "file",
+      "id": "APtv",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Felwood\\Plants\\Felwood_Thorns\\Felwood_Thorns",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "AObo",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ashenvale\\Props\\AshenBrokenObilisk\\AshenBrokenObilisk",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "AOsr",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ashenvale\\Props\\ScorchedRemains\\ScorchedRemains",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ARrk",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ashenvale\\Rocks\\AshenRock\\AshenRock",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "BPca",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Barrens\\Plants\\Cactus\\Cactus",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "BObo",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Barrens\\Props\\Barrens_Bones\\Barrens_Bones",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "BOct",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Barrens\\Props\\CentaurTotem\\CentaurTotem",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "BRrk",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Barrens\\Rocks\\Barrens_Rocks\\Barrens_Rocks",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "BRrs",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Barrens\\Rocks\\Barrens_Spires\\Barrens_Spires",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "BRgs",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Barrens\\Rocks\\Geyser\\Geyser",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "CObo",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Felwood\\Props\\FelwoodBrokenObilisk\\FelwoodBrokenObilisk",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "CPbs",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Felwood\\Plants\\FelwoodBush\\FelwoodBush",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "CRrs",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Felwood\\Rocks\\Felwood_Spires\\Felwood_Spires",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "LOh1",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\LordaeronSummer\\Props\\BannerHuman\\BannerHuman",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "LOo1",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\LordaeronSummer\\Props\\BannerOrc\\BannerOrc",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "LOhb",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\LordaeronSummer\\Props\\Hay\\Hay",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "LOsh",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\LordaeronSummer\\Props\\HeadOnSpear\\HeadOnSpear",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "LOic",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\LordaeronSummer\\Props\\ImpaledBody\\ImpaledBody",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "LOlp",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\LordaeronSummer\\Props\\LanternPost\\LanternPost",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "LOpg",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\LordaeronSummer\\Props\\PeasantGrave\\PeasantGrave",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "LOrh",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\LordaeronSummer\\Props\\RottenHay\\RottenHay",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "LOss",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\LordaeronSummer\\Props\\SkullonStick\\SkullonStick",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "LOsk",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\LordaeronSummer\\Props\\SkullPile\\SkullPile",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "LOtr",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\LordaeronSummer\\Props\\Trough\\Trough",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "LRrk",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\LordaeronSummer\\Rocks\\Lords_Rock\\Lords_Rock",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "NObc",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Northrend\\Props\\NorthrendBrokenColumn\\NorthrendBrokenColumn",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "NObo",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Northrend\\Props\\North_Bones\\North_Bones",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "NOtb",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Northrend\\Props\\NorthrendTombstone\\NorthrendTombstone",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "NPth",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Northrend\\Plants\\North_Thorns\\North_Thorns",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "NRic",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Northrend\\Rocks\\North_IceClaw\\North_IceClaw",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "NRrk",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Northrend\\Rocks\\North_Rocks\\North_Rocks",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "YOgr",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Cityscape\\Props\\CityGrave\\CityGrave",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "XOmr",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Cityscape\\Props\\MagicRunes\\MagicRunes",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "YOec",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Cityscape\\Props\\EmptyCrates\\EmptyCrates",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "CRrk",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Felwood\\Rocks\\FelwoodRock\\FelwoodRock",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "DRrk",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Dungeon\\Rocks\\DungeonRock\\DungeonRock",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "DOtp",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Dungeon\\Props\\TreasurePile\\TreasurePile",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "DOjp",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Dungeon\\Props\\JunkPile\\JunkPile",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "DRst",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Dungeon\\Rocks\\DungeonStalagmite\\DungeonStalagmite",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "GRrk",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Underground\\Rocks\\UndergoundRock\\UndergoundRock",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "GRst",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Underground\\Rocks\\UndergroundStalagmite\\UndergroundStalagmite",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZObz",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Props\\Brazier\\Brazier",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZOst",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Props\\Statue\\Statue",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZOsb",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Props\\StatueBroken\\StatueBroken",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZOss",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Props\\Stone\\Stone",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZSrb",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Structures\\RuinsBuilding\\RuinsBuilding",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZOrt",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Props\\RuinsRuinedThrone\\RuinsRuinedThrone",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "IRrk",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Icecrown\\Rocks\\Ice_Rock\\Ice_Rock",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZOrp",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Props\\RuinsPillar\\RuinsPillar",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZOtb",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Props\\DalaranRuinTwoBases\\DalaranRuinTwoBases",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZRrk",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Rocks\\Ruins_Rock\\Ruins_Rock",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZPsh",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Plants\\Ruins_Shrub\\Ruins_Shrub",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZPru",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Plants\\Ruins_Rush\\Ruins_Rush",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZWcl",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Water\\Coral\\Coral",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "IOob",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Icecrown\\Props\\IceCrownObelisk\\IceCrownObelisk",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "IOpr",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Icecrown\\Props\\IceCrownPillar\\IceCrownPillar",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZRrs",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Rocks\\Ruins_Spires\\Ruins_Spires",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ORrs",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Outland\\Rocks\\Outland_Spires\\Outland_Spires",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "OPop",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Outland\\Plants\\Outland_Plant\\Outland_Plant",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ORmk",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Outland\\Rocks\\Outland_MagmaRock\\Outland_MagmaRock",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZRbs",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Rocks\\CliffRubble_Single\\CliffRubble_Single",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZRbd",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Rocks\\CliffRubble_Double\\CliffRubble_Double",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZPvp",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Plants\\VinyPlant\\VinyPlant",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ZOls",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Props\\LibraryShelf\\LibraryShelf",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "AOnt",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ashenvale\\Props\\Totem\\Totem",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "DOsv",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Dungeon\\Props\\SewerVent\\SewerVent",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "DOsw",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Dungeon\\Props\\SewerWallpipes\\SewerWallpipes",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "LOwf",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\LordaeronSummer\\Props\\WallFountainCliff\\WallFountainCliff",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "KOdr",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\BlackCitadel\\Props\\RuneArt\\RuneArt",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "IRcy",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Icecrown\\Rocks\\Icecrown_Crystal\\Icecrown_Crystal",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "OOgr",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Outland\\Props\\Grate\\Grate",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "OOob",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Outland\\Props\\Obstacle\\Obstacle",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "OOsk",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Outland\\Props\\Skull\\Skull",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "OOst",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Outland\\Props\\Stake\\Stake",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "OOsd",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Outland\\Props\\Standard\\Standard",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "JOgr",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Cinematic\\GlowingRunes\\GlowingRunes",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D00I",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "war3mapImported\\altar01.mdl",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D018",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Barrens\\Rocks\\BarrensFissure\\BarrensFissure",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D02R",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "BloodElf_Academy.mdl",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D03B",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "5124_Wall_Animated.mdl",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D03D",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Barbican.mdl",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D03I",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Windrunner_Spire.mdl",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D03K",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "DwarwenBarracks.mdl",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D03U",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "BE_HouseofNobility.mdl",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D004",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Plants\\Ruins_Shrub\\Ruins_Shrub",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D04D",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ashenvale\\Props\\ScorchedRemains\\ScorchedRemains",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D04E",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Outland\\Props\\Skull\\Skull",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D04F",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Barrens\\Props\\Barrens_Bones\\Barrens_Bones",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D04I",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Dungeon\\Props\\SewerWallpipes\\SewerWallpipes",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D04J",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Dungeon\\Props\\SewerVent\\SewerVent",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D04V",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Icecrown\\Rocks\\Icecrown_Crystal\\Icecrown_Crystal",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D05A",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Icecrown\\Rocks\\Icecrown_Crystal\\Icecrown_Crystal",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D05H",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Underground\\Rocks\\UndergoundRock\\UndergoundRock",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D05O",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Underground\\Rocks\\UndergoundRock\\UndergoundRock",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D06J",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Dungeon\\Props\\SewerWallpipes\\SewerWallpipes",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D07A",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Icecrown\\Rocks\\Icecrown_Crystal\\Icecrown_Crystal.mdl",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D07B",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Icecrown\\Rocks\\Icecrown_Crystal\\Icecrown_Crystal",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D07C",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Northrend\\Rocks\\North_IceClaw\\North_IceClaw",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D07T",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Barrens\\Rocks\\RockPillar\\RockPillar",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D088",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Barrens\\Rocks\\RockPillar\\RockPillar",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D08J",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Icecrown\\Rocks\\Icecrown_Crystal\\Icecrown_Crystal",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D08N",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "1.mdl",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D08U",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Plants\\Ruins_Shrub\\Ruins_Shrub",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D08Y",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Felwood\\Plants\\Felwood_Thorns\\Felwood_Thorns",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D09E",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Icecrown\\Rocks\\Icecrown_Crystal\\Icecrown_Crystal",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D09G",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Felwood\\Rocks\\FelwoodRock\\FelwoodRock",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D09N",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Structures\\RuinsBuilding\\RuinsBuilding",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D09O",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Rocks\\CliffRubble_Double\\CliffRubble_Double",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D09P",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Rocks\\CliffRubble_Single\\CliffRubble_Single",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D0BF",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Barrens\\Rocks\\Barrens_Spires\\Barrens_Spires",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D0BH",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\LordaeronSummer\\Plants\\RiverRushes\\RiverRushes",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D0BL",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Northrend\\Plants\\North_Thorns\\North_Thorns",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D0BQ",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Barrens\\Rocks\\Geyser\\Geyser",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D0BR",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Plants\\Ruins_Shroom\\Ruins_Shroom",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D0DG",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Underground\\Rocks\\UndergoundRock\\UndergoundRock",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D0DV",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Icecrown\\Rocks\\Glacier\\Glacier",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "D0DW",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ruins\\Water\\Coral\\Coral",
+      "severity": "warning",
+      "type": "doodad"
+    },
+    {
+      "field": "file",
+      "id": "ATtr",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\AshenTree\\AshenTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "BTtw",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\BarrensTree\\BarrensTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "CTtr",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\AshenTree\\AshenTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "FTtw",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\LordaeronTree\\LordaeronTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "LTlt",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\LordaeronTree\\LordaeronTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "WTtw",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\LordaeronTree\\LordaeronTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "WTst",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\LordaeronTree\\LordaeronTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "YTct",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\CityscapeTree\\CityscapeTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "YTwt",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\CityscapeTree\\CityscapeTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "YTst",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\CityscapeTree\\CityscapeTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "YTft",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\CityscapeTree\\CityscapeTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "VTlt",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\LordaeronTree\\LordaeronTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "ZTtw",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\RuinsTree\\RuinsTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "ITtw",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\AshenTree\\AshenTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "ATtc",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ashenvale\\Plants\\AshenCanopyTree\\AshenCanopyTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "OTtw",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\OutlandMushroomTree\\OutlandMushroomTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "KTtw",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\OutlandMushroomTree\\OutlandMushroomTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "YTfb",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".mdl.mdl",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "YTfc",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".mdl.mdl",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "YTlb",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".mdl.mdl",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "Ytlc",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".mdl.mdl",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "YTpb",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".mdl.mdl",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "YTpc",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".mdl.mdl",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "YTab",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".mdl.mdl",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "YTac",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": ".mdl.mdl",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "JTct",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\CityscapeTree\\CityscapeTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "JTtw",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\LordaeronTree\\LordaeronTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "BTtc",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ashenvale\\Plants\\AshenCanopyTree\\AshenCanopyTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "CTtc",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ashenvale\\Plants\\AshenCanopyTree\\AshenCanopyTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "NTtc",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ashenvale\\Plants\\AshenCanopyTree\\AshenCanopyTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "ZTtc",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ashenvale\\Plants\\AshenCanopyTree\\AshenCanopyTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "ITtc",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Ashenvale\\Plants\\AshenCanopyTree\\AshenCanopyTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B00G",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\LordaeronTree\\LordaeronTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B00M",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\LordaeronTree\\LordaeronTree.mdl",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B00X",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\CityscapeTree\\CityscapeTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B00Y",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\RuinsTree\\RuinsTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B00Z",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\BarrensTree\\BarrensTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B010",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\BarrensTree\\BarrensTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B011",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\BarrensTree\\BarrensTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B013",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\BarrensTree\\BarrensTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B012",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\CityscapeTree\\CityscapeTree.mdl",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B015",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\AshenTree\\AshenTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B016",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\AshenTree\\AshenTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B017",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\BarrensTree\\BarrensTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B018",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\BarrensTree\\BarrensTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B019",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\BarrensTree\\BarrensTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B01A",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\BarrensTree\\BarrensTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B01K",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\LordaeronSummer\\Terrain\\LoardaeronRockChunks\\LoardaeronRockChunks",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B006",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\LordaeronTree\\LordaeronTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B008",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\LordaeronTree\\LordaeronTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B00A",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\LordaeronTree\\LordaeronTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B00B",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\RuinsTree\\RuinsTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B00C",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\OutlandMushroomTree\\OutlandMushroomTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B00F",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\OutlandMushroomTree\\OutlandMushroomTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B00K",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\LordaeronTree\\LordaeronTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B01L",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\BarrensTree\\BarrensTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B01M",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\BarrensTree\\BarrensTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B01N",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\BarrensTree\\BarrensTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B01P",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "Doodads\\Terrain\\RuinsTree\\RuinsTree",
+      "severity": "warning",
+      "type": "destructible"
+    },
+    {
+      "field": "file",
+      "id": "B01S",
+      "message": "asset not resolved in map/CASC; inspect replacements",
+      "reference": "/.mdl",
+      "severity": "warning",
+      "type": "destructible"
+    }
+  ]
+}

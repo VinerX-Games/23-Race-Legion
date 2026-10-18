@@ -1,0 +1,198 @@
+{
+  "scope": "Культ Проклятых (Cult of the Damned): категория 1 — Здания (10 зданий)",
+  "buildings_count": 10,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "cD26",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26281,
+          "after": "|cffe4cfa3Некрополь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34731,
+          "after": "|cffe4cfa3Некрополь|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35949,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов, сбор древесины и начальный запас пищи.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПослушник|cffced4da: базовый рабочий.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deЧертоги мёртвых|cffced4da: открывает доступ к передовым сооружениям и войскам.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD12",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25807,
+          "after": "|cffe4cfa3Распылитель чумы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34548,
+          "after": "|cffe4cfa3Распылитель чумы|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35943,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное и экономическое сооружение Культа Проклятых. Распыляет чуму вокруг себя, поддерживает союзную нежить и приносит регулярный доход в казну.|n|nПриносит |cffffffff+75|cffced4da ед. дохода каждые |cffffffff25|cffced4da сек.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЧумная аура|cffced4da: ускоряет регенерацию здоровья союзной нежити.|n- |cffa9c7deЧумная эссенция|cffced4da: восполняет здоровье союзникам поблизости.|n- |cffa9c7deПризрачное касание|cffced4da: восполняет ману союзным магам.|n- |cffa9c7deЗащита распылителя|cffced4da: активирует атаку строения.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD29",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34736,
+          "after": "|cffe4cfa3Пристанище|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34737,
+          "after": "|cffe4cfa3Пристанище|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35952,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает заклинателей культа и осадные орудия, а также исследует магические посвящения.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deНекромант|cffced4da: маг костей и проклятий.|n- |cffa9c7deОсквернитель|cffced4da: маг плоти и зачумления.|n- |cffa9c7deТёмный Адепт|cffced4da: мастер ледяной магии.|n- |cffa9c7deТруповозка|cffced4da: осадное орудие и сборщик тел.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение некромантов|cffced4da|n- |cffa9c7deПосвящение осквернителей|cffced4da|n- |cffa9c7deПосвящение адептов|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD31",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26290,
+          "after": "|cffe4cfa3Кладбище|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34752,
+          "after": "|cffe4cfa3Кладбище|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35954,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Служит складом древесины, непрерывно производит трупы и проводит базовые улучшения войск культа.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВоскрешение слуг / Воскрешение бойцов|cffced4da: переключает автоматический призыв скелетов-лесорубов или скелетов-воинов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deАтака костей|cffced4da|n- |cffa9c7deЗащита костей|cffced4da|n- |cffa9c7deАтака плоти|cffced4da|n- |cffa9c7deЗащита плоти|cffced4da|n- |cffa9c7deАтака магов|cffced4da|n- |cffa9c7deЗащита магов|cffced4da|n- |cffa9c7deУлучшенные инструменты|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD30",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26285,
+          "after": "|cffe4cfa3Алтарь тьмы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34751,
+          "after": "|cffe4cfa3Алтарь тьмы|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35953,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Служит для призыва и воскрешения павших героев Культа Проклятых.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deРыцарь смерти|cffced4da: могучий воин ближнего боя с нечестивой аурой и темной магией.|n- |cffa9c7deВерховный некромант|cffced4da: могущественный призыватель нежити и мастер проклятий.|n- |cffa9c7deЛич|cffced4da: маг льда дальнего боя с разрушительными заклинаниями площади.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD28",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26283,
+          "after": "|cffe4cfa3Мясопилка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34735,
+          "after": "|cffe4cfa3Мясопилка|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35951,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Создаёт и сшивает войска из плоти, а также проводит улучшения для мясных созданий.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЗомби|cffced4da: базовый пехотинец ближнего боя, нанимаемый парами.|n- |cffa9c7deПоганище|cffced4da: тяжелый воин с высоким запасом здоровья.|n- |cffa9c7deМясной голем|cffced4da: мощный исполин ближнего боя.|n- |cffa9c7deЯдоголем|cffced4da: ядовитый осадный голем дальнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПлоть не убить|cffced4da|n- |cffa9c7deЯрость воскрешённых|cffced4da|n- |cffa9c7deУскоренная эксгумация|cffced4da|n- |cffa9c7deЗаражённые снаряды|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD27",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26282,
+          "after": "|cffe4cfa3Костомолка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34733,
+          "after": "|cffe4cfa3Костомолка|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35950,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает костяные войска и проводит исследования для усиления скелетов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deСкелет-воин|cffced4da: базовый костяной боец ближнего боя.|n- |cffa9c7deСкелет-маг|cffced4da: стрелок с магической атакой.|n- |cffa9c7deКостяной страж|cffced4da: закалённый костяной боец.|n- |cffa9c7deКостяной привратник|cffced4da: мощный костяной стрелок дальнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deКости всех переживут|cffced4da|n- |cffa9c7deУлучшенное оживление|cffced4da|n- |cffa9c7deЖивучие скелеты|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD25",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26280,
+          "after": "|cffe4cfa3Чертоги мёртвых|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34729,
+          "after": "|cffe4cfa3Чертоги мёртвых|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35970,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает запас пищи и открывает доступ к новым постройкам и улучшениям.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПослушник|cffced4da: базовый рабочий.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deТёмная цитадель|cffced4da: открывает доступ к высшим технологиям культа.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD24",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26279,
+          "after": "|cffe4cfa3Тёмная цитадель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34621,
+          "after": "|cffe4cfa3Тёмная цитадель|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35969,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание третьей ступени. Обеспечивает максимальный запас пищи и открывает все технологии Культа Проклятых.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПослушник|cffced4da: базовый рабочий.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    }
+  ]
+}

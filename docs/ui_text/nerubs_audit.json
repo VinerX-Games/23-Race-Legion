@@ -1,0 +1,107 @@
+{
+  "race": "Нерубы (Nerubs)",
+  "race_id": 21,
+  "selection_ability": "A0HT",
+  "objects_audit": {
+    "buildings": {
+      "count": 12,
+      "ids": [
+        "h0CO",
+        "h0CP",
+        "h0CQ",
+        "h0CR",
+        "h0CS",
+        "h0CT",
+        "h0CU",
+        "h0CV",
+        "h0GH",
+        "lorE",
+        "u019",
+        "u01A"
+      ],
+      "economy_building": {
+        "id": "u019",
+        "name": "Кокон",
+        "food_provided": 40,
+        "gold_income_per_25s": 30,
+        "verified_via": "53_economy.lua and unit object stats"
+      }
+    },
+    "units": {
+      "count": 14,
+      "ids": [
+        "h0BE",
+        "u01B",
+        "u01C",
+        "u01D",
+        "u01E",
+        "u01F",
+        "u01G",
+        "u01H",
+        "u01I",
+        "u01J",
+        "u01K",
+        "u01T",
+        "lord",
+        "nq01"
+      ]
+    },
+    "heroes": {
+      "count": 4,
+      "ids": [
+        "U01U",
+        "U01V",
+        "U01W",
+        "NERH"
+      ],
+      "names": {
+        "U01U": "Пророк (Гор'аман — Интеллект, дальний бой)",
+        "U01V": "Паучий лорд (Ануб'арак — Сила, ближний бой)",
+        "U01W": "Высший Страж (Омун-ул — Ловкость, дальний бой)",
+        "NERH": "Королева Нерубов (Нер-мун — Легендарный герой, Интеллект, дальний бой)"
+      }
+    },
+    "abilities": {
+      "count": 41,
+      "total_wts_updated": 485
+    },
+    "researches": {
+      "count": 22,
+      "markers_list": {
+        "R07N": "Маркер расы Нерубы"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items or inventory artifacts found in war3map.w3t for Nerubs."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "No race-specific floating messages or game UI strings found in war3map.wts for Nerubs."
+  },
+  "buffs_audit": {
+    "custom_buffs": [
+      "B01D",
+      "B040",
+      "B04A",
+      "B04E"
+    ],
+    "standard_buffs_used": [
+      "BUts",
+      "BPSE",
+      "BOwd",
+      "BEer",
+      "Brai",
+      "Bhea",
+      "Bakb",
+      "BUim",
+      "BUcs",
+      "BUau",
+      "BNlm"
+    ],
+    "status": "Standardized custom buffs with secondary color labels and clean descriptions."
+  },
+  "total_wts_updates": 485,
+  "total_checks": 97
+}

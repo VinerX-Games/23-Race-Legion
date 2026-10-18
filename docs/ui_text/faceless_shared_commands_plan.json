@@ -1,0 +1,372 @@
+{
+  "operations": [
+    {
+      "type": "ability",
+      "id": "A0LJ",
+      "field": "name",
+      "value": "|cffe4cfa3Обмен древесины на золото|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0LJ",
+      "field": "tip1",
+      "value": "|cffe4cfa3Обмен древесины на золото|r (|cffffffffA|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0LJ",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает |cffe69a8d500|cffced4da древесины на |cffc8e087100|cffced4da золота.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0LI",
+      "field": "name",
+      "value": "|cffe4cfa3Обмен золота на древесину|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0LI",
+      "field": "tip1",
+      "value": "|cffe4cfa3Обмен золота на древесину|r (|cffffffffS|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0LI",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает |cffe69a8d500|cffced4da золота на |cffc8e087100|cffced4da древесины.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0IQ",
+      "field": "name",
+      "value": "|cffe4cfa3Назначение столицы|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0IQ",
+      "field": "tip1",
+      "value": "|cffe4cfa3Назначение столицы|r (|cffffffffX|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0IQ",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Назначает это здание столицей в соответствующем режиме игры. Завершает строительство, устанавливает |cffffffff10000|cffced4da максимального и текущего здоровья и |cffffffff30|cffced4da брони. Положение столицы становится видно всем игрокам. Она получает Антимагическую броню и Неуязвимость столицы.|n|n|cffe6c07bПосле назначения кнопка становится недоступной.|cffced4da|r"
+    },
+    {
+      "type": "ability",
+      "id": "Argl",
+      "field": "name",
+      "value": "|cffe4cfa3Приём ресурсов|r",
+      "base_object": true
+    },
+    {
+      "type": "ability",
+      "id": "Argl",
+      "field": "tip1",
+      "value": "|cffe4cfa3Приём ресурсов|r",
+      "base_object": true
+    },
+    {
+      "type": "ability",
+      "id": "Argl",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Позволяет рабочим сдавать в это здание добытые золото и древесину.|r",
+      "base_object": true
+    },
+    {
+      "type": "ability",
+      "id": "ANha",
+      "field": "name",
+      "value": "|cffe4cfa3Добыча ресурсов|r"
+    },
+    {
+      "type": "ability",
+      "id": "ANha",
+      "field": "tip1",
+      "value": "|cffe4cfa3Добыча ресурсов|r (|cffffffffG|r)"
+    },
+    {
+      "type": "ability",
+      "id": "ANha",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Добывает золото из рудников и древесину из деревьев. За одну доставку переносит до |cffffffff10|cffced4da золота или |cffffffff30|cffced4da древесины. Объём переносимой древесины может быть увеличен исследованиями.|r"
+    },
+    {
+      "type": "ability",
+      "id": "Arst",
+      "field": "name",
+      "value": "|cffe4cfa3Ремонт|r",
+      "base_object": true
+    },
+    {
+      "type": "ability",
+      "id": "Arst",
+      "field": "tip1",
+      "value": "|cffe4cfa3Ремонт|r (|cffffffffR|r)",
+      "base_object": true
+    },
+    {
+      "type": "ability",
+      "id": "Arst",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье дружественных зданий и механизмов, расходуя золото и древесину. Затраты зависят от ремонтной стоимости цели и восстановленного здоровья. Не действует на Древних.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r",
+      "base_object": true
+    },
+    {
+      "type": "ability",
+      "id": "Arst",
+      "field": "untip1",
+      "value": "|cffe4cfa3Ремонт|r (|cffffffffR|r)",
+      "base_object": true
+    },
+    {
+      "type": "ability",
+      "id": "Arst",
+      "field": "unubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье дружественных зданий и механизмов, расходуя золото и древесину. Затраты зависят от ремонтной стоимости цели и восстановленного здоровья. Не действует на Древних.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r",
+      "base_object": true
+    },
+    {
+      "type": "ability",
+      "id": "A1KB",
+      "field": "name",
+      "value": "|cffe4cfa3Защита столицы|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1KB",
+      "field": "tip1",
+      "value": "|cffe4cfa3Защита столицы|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1KB",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da В радиусе |cffffffff450|cffced4da снижает восстановление здоровья органических врагов на |cffffffff2,5%|cffced4da их максимального здоровья в секунду. Действует на наземные и воздушные цели.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A15N",
+      "field": "name",
+      "value": "|cffe4cfa3Зона ремонта|r"
+    },
+    {
+      "type": "ability",
+      "id": "A15N",
+      "field": "tip1",
+      "value": "|cffe4cfa3Зона ремонта|r"
+    },
+    {
+      "type": "ability",
+      "id": "A15N",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает восстановление здоровья дружественных наземных механизмов в радиусе |cffffffff550|cffced4da на |cffc8e0872,5|cffced4da ед. в секунду.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0I6",
+      "field": "name",
+      "value": "|cffe4cfa3Антимагическая броня|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0I6",
+      "field": "tip1",
+      "value": "|cffe4cfa3Антимагическая броня|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0I6",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает получаемый урон от заклинаний на |cffc8e08780%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A145",
+      "field": "name",
+      "value": "|cffe4cfa3Неуязвимость столицы|r"
+    },
+    {
+      "type": "ability",
+      "id": "A145",
+      "field": "tip1",
+      "value": "|cffe4cfa3Неуязвимость столицы|r (|cffffffffC|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A145",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Делает столицу неуязвимой на |cffffffff30|cffced4da сек. Восстановление: |cffffffff360|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A145",
+      "field": "untip1",
+      "value": "|cffe4cfa3Неуязвимость столицы|r (|cffffffffC|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A145",
+      "field": "unubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Делает столицу неуязвимой на |cffffffff30|cffced4da сек. Восстановление: |cffffffff360|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0VG",
+      "field": "name",
+      "value": "|cffe4cfa3Дар Йогг`Сарона|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0VG",
+      "field": "tip1",
+      "value": "|cffe4cfa3Дар Йогг`Сарона|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0VG",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт герою |cffc8e087+15|cffced4da к силе, ловкости и интеллекту.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0VC",
+      "field": "name",
+      "value": "|cffe4cfa3Касание безумия|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0VC",
+      "field": "tip1",
+      "value": "|cffe4cfa3Касание безумия|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0VC",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает заклинания предмета.|n|n|cffa6afb8Содержит:|cffced4da|n- |cffa9c7deТёмное усиление|cffced4da: временно повышает урон союзников.|n- |cffa9c7deПорождение щупальца|cffced4da: призывает Щупальце Йогг`Сарона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0VD",
+      "field": "name",
+      "value": "|cffe4cfa3Тёмное усиление|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0VD",
+      "field": "tip1",
+      "value": "|cffe4cfa3Тёмное усиление|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0VD",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da На |cffffffff45|cffced4da сек. повышает урон от атак союзников в радиусе |cffffffff500|cffced4da на |cffc8e08735%|cffced4da. Действует также на владельца.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0VE",
+      "field": "name",
+      "value": "|cffe4cfa3Порождение щупальца|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0VE",
+      "field": "tip1",
+      "value": "|cffe4cfa3Порождение щупальца|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0VE",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает одно |cffa9c7deЩупальце Йогг`Сарона|cffced4da на |cffffffff180|cffced4da сек. Оно атакует наземные цели и владеет Рассекающим ударом.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0VF",
+      "field": "name",
+      "value": "|cffe4cfa3Аура отголоска Йогг`Сарона|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0VF",
+      "field": "tip1",
+      "value": "|cffe4cfa3Аура отголоска Йогг`Сарона|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0VF",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Органические союзники ближнего боя в радиусе |cffffffff1500|cffced4da восстанавливают здоровье в размере |cffc8e08710%|cffced4da урона своих атак. Действует также на владельца, если он атакует в ближнем бою.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0HZ",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff1|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deНазначение столицы|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deСущность Страха|cffced4da.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I7",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff2|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deНазначение столицы|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n- |cffa9c7deЗащита столицы|cffced4da: аура, снижающая восстановление здоровья ближайших органических противников.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deОбитель Кошмаров|cffced4da.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I8",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff3|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deНазначение столицы|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "n04M",
+      "field": "name",
+      "value": "|cffe4cfa3Щупальце Йогг`Сарона|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "n04M",
+      "field": "tip",
+      "value": "|cffe4cfa3Щупальце Йогг`Сарона|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "n04M",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЮНИТ:|cffced4da Щупальце, призываемое Касанием безумия для наземного боя.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРассекающий удар|cffced4da: атаки задевают врагов рядом с основной целью.|n|nАтакует наземные цели.|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "item",
+      "id": "I01Q",
+      "field": "name",
+      "value": "|cffe4cfa3Касание безумия|r"
+    },
+    {
+      "type": "item",
+      "id": "I01Q",
+      "field": "tip",
+      "value": "|cffe4cfa3Касание безумия|r (|cffffffffB|r)"
+    },
+    {
+      "type": "item",
+      "id": "I01Q",
+      "field": "ubertip",
+      "value": "|cffa6afb8ПРЕДМЕТ:|cffced4da Частица силы Йогг`Сарона. Даёт герою |cffc8e087+15|cffced4da к силе, ловкости и интеллекту.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТёмное усиление|cffced4da: на |cffffffff45|cffced4da сек. повышает урон союзников в радиусе |cffffffff500|cffced4da на |cffc8e08735%|cffced4da.|n- |cffa9c7deПорождение щупальца|cffced4da: создаёт Щупальце Йогг`Сарона на |cffffffff180|cffced4da сек.|n- |cffa9c7deАура отголоска Йогг`Сарона|cffced4da: союзники ближнего боя в радиусе |cffffffff1500|cffced4da получают |cffc8e08710%|cffced4da вампиризма.|n|nДля применения заклинаний откройте меню предмета.|r"
+    },
+    {
+      "type": "item",
+      "id": "I01Q",
+      "field": "description",
+      "value": "|cffa6afb8ПРЕДМЕТ:|cffced4da Даёт герою |cffc8e087+15|cffced4da ко всем характеристикам, ауру вампиризма и два заклинания: Тёмное усиление и Порождение щупальца.|r"
+    }
+  ]
+}

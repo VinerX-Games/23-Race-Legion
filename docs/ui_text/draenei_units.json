@@ -1,0 +1,304 @@
+{
+  "scope": "Дренеи (Draeneis): категория 2 — Юниты (16 юнитов)",
+  "units_count": 16,
+  "variants": [
+    "SD"
+  ],
+  "units": [
+    {
+      "id": "h012",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22902,
+          "after": "|cffe4cfa3Инженер|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22980,
+          "after": "|cffe4cfa3Инженер|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 19476,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий Дренеев. Добывает золото и древесину, возводит и чинит здания.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРемонт|cffced4da: восстанавливает прочность зданий и механизмов.|n- |cffa9c7deНебольшой скачок|cffced4da: мгновенно перемещается на короткую дистанцию.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r"
+        }
+      ]
+    },
+    {
+      "id": "e000",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23159,
+          "after": "|cffe4cfa3Рангари|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 23160,
+          "after": "|cffe4cfa3Рангари|r (|cffffffffW|r)"
+        }
+      ]
+    },
+    {
+      "id": "h01O",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 19484,
+          "after": "|cffe4cfa3Озаренный Паладин|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10509,
+          "after": "|cffe4cfa3Озаренный Паладин|r (|cffffffffR|r)"
+        }
+      ]
+    },
+    {
+      "id": "h01P",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23153,
+          "after": "|cffe4cfa3Лазутчик|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 23154,
+          "after": "|cffe4cfa3Лазутчик|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31620,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый пехотинец Дренеев. Быстрый разведчик ближнего боя, владеющий уклонением.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУскользание|cffced4da: даёт шанс уклониться от физической атаки.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r"
+        }
+      ]
+    },
+    {
+      "id": "h01Q",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23156,
+          "after": "|cffe4cfa3Жрец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 23157,
+          "after": "|cffe4cfa3Жрец|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 15,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Священник Дренеев. Поддерживает войска исцелением, рассеиванием чар и благословением Света.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deИсцеление|cffced4da: восстанавливает здоровье раненому союзнику.|n- |cffa9c7deРассеивание заклинаний|cffced4da: снимает положительные эффекты с врагов и отрицательные с союзников.|n- |cffa9c7deПламя света|cffced4da: наполняет союзника силой Света.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r"
+        }
+      ]
+    },
+    {
+      "id": "h01R",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 40965,
+          "after": "|cffe4cfa3Жрица Наару|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 3742,
+          "after": "|cffe4cfa3Жрица Наару|r (|cffffffffW|r)"
+        }
+      ]
+    },
+    {
+      "id": "h01S",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23162,
+          "after": "|cffe4cfa3Всадник на Элекке|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 23163,
+          "after": "|cffe4cfa3Всадник на Элекке|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 2439,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлая кавалерия Дренеев. Мощный всадник ближнего боя с высоким запасом здоровья и сокрушительным ударом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТяжелые удары|cffced4da: наносит повышенный урон по тяжелобронированным целям.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r"
+        }
+      ]
+    },
+    {
+      "id": "h01T",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 9738,
+          "after": "|cffe4cfa3Маг Озаренный|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 25683,
+          "after": "|cffe4cfa3Маг Озаренный|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 2440,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный маг поддержки Озарённых. Владеет исцелением, цепными молниями и сглазом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deИсцеление|cffced4da: восстанавливает здоровье союзнику.|n- |cffa9c7deЦепная молния|cffced4da: поражает молнией группу врагов.|n- |cffa9c7deСглаз|cffced4da: временно превращает врага в безобидное существо.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r"
+        }
+      ]
+    },
+    {
+      "id": "h01U",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23165,
+          "after": "|cffe4cfa3Чароплетница|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 23166,
+          "after": "|cffe4cfa3Чароплетница|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 2783,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Магический боец поддержки Дренеев. Специализируется на контроле вражеских заклинателей и подавлении противников.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗамедление|cffced4da: снижает скорость перемещения и атаки цели.|n- |cffa9c7deПохищение маны|cffced4da: вытягивает запас маны у врага.|n- |cffa9c7deНемота|cffced4da: запрещает цели применять заклинания.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r"
+        }
+      ]
+    },
+    {
+      "id": "h059",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25827,
+          "after": "|cffe4cfa3Мечник Озаренный|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 25828,
+          "after": "|cffe4cfa3Мечник Озаренный|r (|cffffffffQ|r)"
+        }
+      ]
+    },
+    {
+      "id": "h05D",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3628,
+          "after": "|cffe4cfa3Сломленный страж|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 3704,
+          "after": "|cffe4cfa3Сломленный страж|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 21866,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Скрытный боец Сломленных ближнего боя. Владеет уклонением и способен избежать гибели в тени.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУскользание|cffced4da: даёт шанс уклониться от атаки.|n- |cffa9c7deСпасение в тени|cffced4da: при гибели может возродиться у логова Сломленных.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r"
+        }
+      ]
+    },
+    {
+      "id": "h05E",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17266,
+          "after": "|cffe4cfa3Сломленный мастер|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 3705,
+          "after": "|cffe4cfa3Сломленный мастер|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 21867,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный боец Сломленных ближнего боя. Быстро сближается с противником, нанося круговые и ядовитые удары.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСтремительное приближение|cffced4da: быстрый рывок к цели.|n- |cffa9c7deРассекающий удар|cffced4da: наносит урон окружающим врагам.|n- |cffa9c7deОтравленное оружие|cffced4da: поражает цель ядом.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r"
+        }
+      ]
+    },
+    {
+      "id": "n005",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3632,
+          "after": "|cffe4cfa3Сломленный провидец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 3633,
+          "after": "|cffe4cfa3Сломленный провидец|r (|cffffffffE|r)"
+        }
+      ]
+    },
+    {
+      "id": "nDr1",
+      "hotkey": null,
+      "strings": []
+    },
+    {
+      "id": "o00H",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12375,
+          "after": "|cffe4cfa3Осадная машина|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 12376,
+          "after": "|cffe4cfa3Осадная машина|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9320,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлое осадное орудие Дренеев дальнего боя. Наносит высокий урон зданиям и укреплениям врага.|n|n|cffa6afb8Цели атаки:|cffced4da наземные здания и войска.|r"
+        }
+      ]
+    },
+    {
+      "id": "n00P",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 2745,
+          "after": "|cffe4cfa3Чародей|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 4477,
+          "after": "|cffe4cfa3Чародей|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 15390,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Боевой заклинатель Дренеев дальнего боя. Владеет магической атакой и способен повергнуть союзников в ярость.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБезумие|cffced4da: увеличивает скорость атаки выбранного союзника ценой потери здоровья.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r"
+        }
+      ]
+    }
+  ]
+}

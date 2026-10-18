@@ -1,0 +1,1274 @@
+{
+  "A0PT": {
+    "id": "A0PT",
+    "code": "AUim",
+    "levels": 4,
+    "hotkey": "TRIGSTR_30957",
+    "researchhotkey": "TRIGSTR_30924",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_25257",
+        "is_wts": true,
+        "wts_id": 25257,
+        "current_text": "|cff228b22Тернистый куст|r"
+      },
+      "researchtip": {
+        "raw": "TRIGSTR_29576",
+        "is_wts": true,
+        "wts_id": 29576,
+        "current_text": "Изучить |cff228b22Тернистый куст|r [|cffffcc001-й уровень|r]"
+      },
+      "researchubertip": {
+        "raw": "TRIGSTR_39442",
+        "is_wts": true,
+        "wts_id": 39442,
+        "current_text": "Оглушает и наносит урон юнитам, стоящим по линии удара."
+      },
+      "tip1": {
+        "raw": "TRIGSTR_30696",
+        "is_wts": true,
+        "wts_id": 30696,
+        "current_text": "|cff228b22Тернистый куст|r [|cffffcc001-й уровень|r]"
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_39900",
+        "is_wts": true,
+        "wts_id": 39900,
+        "current_text": "Оглушает и наносит урон юнитам, стоящим по линии удара."
+      },
+      "tip2": {
+        "raw": "TRIGSTR_31132",
+        "is_wts": true,
+        "wts_id": 31132,
+        "current_text": "|cff228b22Тернистый куст|r [|cffffcc002-й уровень|r]"
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_31683",
+        "is_wts": true,
+        "wts_id": 31683,
+        "current_text": "Оглушает и наносит урон юнитам, стоящим по линии удара."
+      },
+      "tip3": {
+        "raw": "TRIGSTR_31682",
+        "is_wts": true,
+        "wts_id": 31682,
+        "current_text": "|cff228b22Тернистый куст|r [|cffffcc003-й уровень|r]"
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_39430",
+        "is_wts": true,
+        "wts_id": 39430,
+        "current_text": "Оглушает и наносит урон юнитам, стоящим по линии удара."
+      },
+      "tip4": {
+        "raw": "TRIGSTR_39899",
+        "is_wts": true,
+        "wts_id": 39899,
+        "current_text": "|cff228b22Тернистый куст|r [|cffffcc004-й уровень|r]"
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_31349",
+        "is_wts": true,
+        "wts_id": 31349,
+        "current_text": "Оглушает и наносит урон юнитам, стоящим по линии удара."
+      }
+    },
+    "mechanics": {
+      "level_1": {
+        "cost": "90",
+        "cool": "21.000000",
+        "dur": "3.000000",
+        "hero": "",
+        "dataa": "600",
+        "datab": "0.3",
+        "datac": "150.000000",
+        "datad": "0.000000"
+      },
+      "level_2": {
+        "cost": "115",
+        "cool": "21.000000",
+        "dur": "4.000000",
+        "hero": "",
+        "dataa": "600",
+        "datab": "0.3",
+        "datac": "200.000000",
+        "datad": "0.000000"
+      },
+      "level_3": {
+        "cost": "130",
+        "cool": "21.000000",
+        "dur": "5.000000",
+        "hero": "",
+        "dataa": "600",
+        "datab": "0.3",
+        "datac": "250.000000",
+        "datad": "0.000000"
+      },
+      "level_4": {
+        "cost": "145",
+        "cool": "21.000000",
+        "dur": "6.000000",
+        "hero": "",
+        "dataa": "600",
+        "datab": "0.3",
+        "datac": "300.000000",
+        "datad": "0.000000"
+      }
+    }
+  },
+  "A0FW": {
+    "id": "A0FW",
+    "code": "AEah",
+    "levels": 4,
+    "hotkey": "",
+    "researchhotkey": "R",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_5405",
+        "is_wts": true,
+        "wts_id": 5405,
+        "current_text": "|cffb4dc8cАура шипов|r"
+      },
+      "researchtip": {
+        "raw": "TRIGSTR_065",
+        "is_wts": true,
+        "wts_id": 65,
+        "current_text": "Изучить |cff228b22Аура шипов|r"
+      },
+      "researchubertip": {
+        "raw": "TRIGSTR_20350",
+        "is_wts": true,
+        "wts_id": 20350,
+        "current_text": "Все рядом стоящие юниты получают щит, ортажает часть урона  в атакующего врага.\n|cffffd7001 уровеь: 10%\n2 уровеь: 20%\n3 уровеь: 30%\n4 уровеь: 40%|r"
+      },
+      "tip1": {
+        "raw": "TRIGSTR_946",
+        "is_wts": true,
+        "wts_id": 946,
+        "current_text": "|cff228b22Аура шипов|r [|cffffcc001-й уровень|r]"
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_16483",
+        "is_wts": true,
+        "wts_id": 16483,
+        "current_text": "Все рядом стоящие юниты получают щит, ортажает часть урона  в атакующего врага.\n|cffffd700Отражающий урон: 10%|r"
+      },
+      "tip2": {
+        "raw": "TRIGSTR_2759",
+        "is_wts": true,
+        "wts_id": 2759,
+        "current_text": "|cff228b22Аура шипов|r [|cffffcc002-й уровень|r]"
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_16484",
+        "is_wts": true,
+        "wts_id": 16484,
+        "current_text": "Все рядом стоящие юниты получают щит, ортажает часть урона  в атакующего врага.\n|cffffd700Отражающий урон: 20%|r"
+      },
+      "tip3": {
+        "raw": "TRIGSTR_2760",
+        "is_wts": true,
+        "wts_id": 2760,
+        "current_text": "|cff228b22Аура шипов|r [|cffffcc003-й уровень|r]"
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_16485",
+        "is_wts": true,
+        "wts_id": 16485,
+        "current_text": "Все рядом стоящие юниты получают щит, ортажает часть урона  в атакующего врага.\n|cffffd700Отражающий урон: 30%|r"
+      },
+      "tip4": {
+        "raw": "TRIGSTR_3694",
+        "is_wts": true,
+        "wts_id": 3694,
+        "current_text": "|cff228b22Аура шипов|r [|cffffcc004-й уровень|r]"
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_16480",
+        "is_wts": true,
+        "wts_id": 16480,
+        "current_text": "Все рядом стоящие юниты получают щит, ортажает часть урона  в атакующего врага.\n|cffffd700Отражающий урон: 40%|r"
+      }
+    },
+    "mechanics": {
+      "level_1": {
+        "cost": "",
+        "cool": "0",
+        "dur": "0",
+        "hero": "",
+        "dataa": "0.15",
+        "datab": "1",
+        "datac": "",
+        "datad": ""
+      },
+      "level_2": {
+        "cost": "",
+        "cool": "",
+        "dur": "",
+        "hero": "",
+        "dataa": "0.3",
+        "datab": "1",
+        "datac": "",
+        "datad": ""
+      },
+      "level_3": {
+        "cost": "",
+        "cool": "",
+        "dur": "",
+        "hero": "",
+        "dataa": "0.45",
+        "datab": "1",
+        "datac": "",
+        "datad": ""
+      },
+      "level_4": {
+        "cost": "",
+        "cool": "",
+        "dur": "",
+        "hero": "",
+        "dataa": "0.400000",
+        "datab": "1",
+        "datac": "",
+        "datad": ""
+      }
+    }
+  },
+  "A0PS": {
+    "id": "A0PS",
+    "code": "ANca",
+    "levels": 4,
+    "hotkey": "TRIGSTR_17096",
+    "researchhotkey": "TRIGSTR_16961",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_15782",
+        "is_wts": true,
+        "wts_id": 15782,
+        "current_text": "|cff808000Рассекающий удар|r"
+      },
+      "researchtip": {
+        "raw": "TRIGSTR_16559",
+        "is_wts": true,
+        "wts_id": 16559,
+        "current_text": "Изучить |cff7f8f18Рассекающий удар|r"
+      },
+      "researchubertip": {
+        "raw": "TRIGSTR_20361",
+        "is_wts": true,
+        "wts_id": 20361,
+        "current_text": "Атаки |cff7f8f18Танцора Войны|r, наносят урон всем рядом стоящим юнитам\n|cffffd7001 уровень: 30%\n2 уровень: 35%\n3 уровень: 40%\n4 уровень: 45%|r"
+      },
+      "tip1": {
+        "raw": "TRIGSTR_15783",
+        "is_wts": true,
+        "wts_id": 15783,
+        "current_text": "|cff808000Рассекающий удар|r [|cffffcc001-й уровень|r]"
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_16578",
+        "is_wts": true,
+        "wts_id": 16578,
+        "current_text": "Атаки |cff7f8f18Танцора Войны|r, наносят урон всем рядом стоящим юнитам |cffffd70030%|r урона"
+      },
+      "tip2": {
+        "raw": "TRIGSTR_15784",
+        "is_wts": true,
+        "wts_id": 15784,
+        "current_text": "|cff808000Рассекающий удар|r [|cffffcc002-й уровень|r]"
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_16581",
+        "is_wts": true,
+        "wts_id": 16581,
+        "current_text": "Атаки |cff7f8f18Танцора Войны|r, наносят урон всем рядом стоящим юнитам |cffffd70035%|r урона"
+      },
+      "tip3": {
+        "raw": "TRIGSTR_15785",
+        "is_wts": true,
+        "wts_id": 15785,
+        "current_text": "|cff808000Рассекающий удар|r [|cffffcc003-й уровень|r]"
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_16583",
+        "is_wts": true,
+        "wts_id": 16583,
+        "current_text": "Атаки |cff7f8f18Танцора Войны|r, наносят урон всем рядом стоящим юнитам |cffffd70040%|r урона"
+      },
+      "tip4": {
+        "raw": "TRIGSTR_15786",
+        "is_wts": true,
+        "wts_id": 15786,
+        "current_text": "|cff808000Рассекающий удар|r [|cffffcc004-й уровень|r]"
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_16584",
+        "is_wts": true,
+        "wts_id": 16584,
+        "current_text": "Атаки |cff7f8f18Танцора Войны|r, наносят урон всем рядом стоящим юнитам |cffffd70045%|r урона"
+      }
+    },
+    "mechanics": {
+      "level_1": {
+        "cost": "0",
+        "cool": "0",
+        "dur": "0",
+        "hero": "",
+        "dataa": "0.4",
+        "datab": "",
+        "datac": "",
+        "datad": ""
+      },
+      "level_2": {
+        "cost": "0",
+        "cool": "0",
+        "dur": "0",
+        "hero": "",
+        "dataa": "0.350000",
+        "datab": "",
+        "datac": "",
+        "datad": ""
+      },
+      "level_3": {
+        "cost": "0",
+        "cool": "0",
+        "dur": "0",
+        "hero": "",
+        "dataa": "0.400000",
+        "datab": "",
+        "datac": "",
+        "datad": ""
+      },
+      "level_4": {
+        "cost": "0",
+        "cool": "0",
+        "dur": "0",
+        "hero": "",
+        "dataa": "0.450000",
+        "datab": "",
+        "datac": "",
+        "datad": ""
+      }
+    }
+  },
+  "A0C9": {
+    "id": "A0C9",
+    "code": "AEsv",
+    "levels": 2,
+    "hotkey": "TRIGSTR_32784",
+    "researchhotkey": "TRIGSTR_32702",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_8750",
+        "is_wts": true,
+        "wts_id": 8750,
+        "current_text": "|cff228b22Дух Леса|r"
+      },
+      "researchtip": {
+        "raw": "TRIGSTR_8752",
+        "is_wts": true,
+        "wts_id": 8752,
+        "current_text": "Изучить «|cff228b22Дух Леса|r» [|cffffcc001-й уровень|r]"
+      },
+      "researchubertip": {
+        "raw": "\"Создает аватару, которая призывает из находящихся рядом трупов неуязвимых духов, атакующих врагов. Когда аватара возмездия погибает, духи исчезают. |nВремя существования: <AEsv,Dur1> сек.\"",
+        "is_wts": false,
+        "wts_id": null,
+        "current_text": "\"Создает аватару, которая призывает из находящихся рядом трупов неуязвимых духов, атакующих врагов. Когда аватара возмездия погибает, духи исчезают. |nВремя существования: <AEsv,Dur1> сек.\""
+      },
+      "tip1": {
+        "raw": "TRIGSTR_8751",
+        "is_wts": true,
+        "wts_id": 8751,
+        "current_text": "|cff228b22Дух Леса|r [|cffffcc001-й уровень|r]"
+      },
+      "ubertip1": {
+        "raw": "\"Создает аватару, которая призывает из находящихся рядом трупов неуязвимых духов, атакующих врагов. Когда аватара возмездия погибает, духи исчезают. |nВремя существования: <AEsv,Dur1> сек.\"",
+        "is_wts": false,
+        "wts_id": null,
+        "current_text": "\"Создает аватару, которая призывает из находящихся рядом трупов неуязвимых духов, атакующих врагов. Когда аватара возмездия погибает, духи исчезают. |nВремя существования: <AEsv,Dur1> сек.\""
+      },
+      "tip2": {
+        "raw": "TRIGSTR_8765",
+        "is_wts": true,
+        "wts_id": 8765,
+        "current_text": "|cff228b22Дух Леса|r [|cffffcc002-й уровень|r]"
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_8766",
+        "is_wts": true,
+        "wts_id": 8766,
+        "current_text": "Создает аватару, которая призывает из находящихся рядом трупов неуязвимых духов, атакующих врагов. Когда аватара возмездия погибает, духи исчезают. |nВремя существования: <AEsv,Dur1> сек."
+      }
+    },
+    "mechanics": {
+      "level_1": {
+        "cost": "150",
+        "cool": "180",
+        "dur": "180",
+        "hero": "",
+        "dataa": "1",
+        "datab": "",
+        "datac": "",
+        "datad": ""
+      },
+      "level_2": {
+        "cost": "125",
+        "cool": "160.000000",
+        "dur": "160.000000",
+        "hero": "",
+        "dataa": "1",
+        "datab": "",
+        "datac": "",
+        "datad": ""
+      }
+    }
+  },
+  "A0PI": {
+    "id": "A0PI",
+    "code": "AHfs",
+    "levels": 4,
+    "hotkey": "TRIGSTR_16521",
+    "researchhotkey": "TRIGSTR_16523",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_9712",
+        "is_wts": true,
+        "wts_id": 9712,
+        "current_text": "|cff228b22Семя раздора|r"
+      },
+      "researchtip": {
+        "raw": "TRIGSTR_11533",
+        "is_wts": true,
+        "wts_id": 11533,
+        "current_text": "Изучить |cff228b22Семя раздора|r"
+      },
+      "researchubertip": {
+        "raw": "TRIGSTR_20020",
+        "is_wts": true,
+        "wts_id": 20020,
+        "current_text": "Выращивает колючие корни наносящий урон в течении |cffffd7003|r сек\n\n|cffffd7001 уровень: 30 урона/сек\n2 уровень: 53 урона/сек\n3 уровень: 73 урона/сек\n4 уровень: 100 Урона/сек|r"
+      },
+      "tip1": {
+        "raw": "TRIGSTR_15599",
+        "is_wts": true,
+        "wts_id": 15599,
+        "current_text": "|cff228b22Семя раздора|r [|cffffcc001-й уровень|r]"
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_20142",
+        "is_wts": true,
+        "wts_id": 20142,
+        "current_text": "Выращивает колючие корни наносящий |cffffd70030 ед|r. урона в течении |cffffd7003|r сек"
+      },
+      "tip2": {
+        "raw": "TRIGSTR_15600",
+        "is_wts": true,
+        "wts_id": 15600,
+        "current_text": "|cff228b22Семя раздора|r [|cffffcc002-й уровень|r]"
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_20151",
+        "is_wts": true,
+        "wts_id": 20151,
+        "current_text": "Выращивает колючие корни наносящий |cffffd70053 ед|r. урона в течении |cffffd7003|r сек"
+      },
+      "tip3": {
+        "raw": "TRIGSTR_15601",
+        "is_wts": true,
+        "wts_id": 15601,
+        "current_text": "|cff228b22Семя раздора|r [|cffffcc003-й уровень|r]"
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_20192",
+        "is_wts": true,
+        "wts_id": 20192,
+        "current_text": "Выращивает колючие корни наносящий |cffffd70073 ед|r. урона в течении |cffffd7003|r сек"
+      },
+      "tip4": {
+        "raw": "TRIGSTR_7543",
+        "is_wts": true,
+        "wts_id": 7543,
+        "current_text": "|cff228b22Семя раздора|r [|cffffcc004-й уровень|r]"
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_20019",
+        "is_wts": true,
+        "wts_id": 20019,
+        "current_text": "Выращивает колючие корни наносящий |cffffd700100 ед|r. урона в течении |cffffd7003|r сек"
+      }
+    },
+    "mechanics": {
+      "level_1": {
+        "cost": "125",
+        "cool": "25.000000",
+        "dur": "9",
+        "hero": "",
+        "dataa": "15",
+        "datab": "0.33",
+        "datac": "4",
+        "datad": "1"
+      },
+      "level_2": {
+        "cost": "125",
+        "cool": "25.000000",
+        "dur": "9",
+        "hero": "",
+        "dataa": "26.666",
+        "datab": "0.33",
+        "datac": "6",
+        "datad": "1"
+      },
+      "level_3": {
+        "cost": "125",
+        "cool": "25.000000",
+        "dur": "9",
+        "hero": "",
+        "dataa": "36.666",
+        "datab": "0.33",
+        "datac": "8",
+        "datad": "1"
+      },
+      "level_4": {
+        "cost": "135",
+        "cool": "25.000000",
+        "dur": "9",
+        "hero": "",
+        "dataa": "45.000000",
+        "datab": "0.33",
+        "datac": "12.000000",
+        "datad": "1"
+      }
+    }
+  },
+  "A0PK": {
+    "id": "A0PK",
+    "code": "Aroa",
+    "levels": 4,
+    "hotkey": "TRIGSTR_16872",
+    "researchhotkey": "TRIGSTR_16940",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_15708",
+        "is_wts": true,
+        "wts_id": 15708,
+        "current_text": "|cff808000Древенская кора|r"
+      },
+      "researchtip": {
+        "raw": "TRIGSTR_16488",
+        "is_wts": true,
+        "wts_id": 16488,
+        "current_text": "Изучить |cff808000Древенская кора|r"
+      },
+      "researchubertip": {
+        "raw": "TRIGSTR_20202",
+        "is_wts": true,
+        "wts_id": 20202,
+        "current_text": "Увеличивает количество брони всех окружающих войнов\n|cffffd700\n1 уровень: 4 брони\n2 уровень: 5 брони\n3 уровень: 6 брони\n4 уровень: 7 брони|r"
+      },
+      "tip1": {
+        "raw": "TRIGSTR_20198",
+        "is_wts": true,
+        "wts_id": 20198,
+        "current_text": "|cff808000Древенская кора|r [|cffffd7001-й уровень|r]"
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_20203",
+        "is_wts": true,
+        "wts_id": 20203,
+        "current_text": "Увеличивает показатель брони на |cffffd7004 ед.|r"
+      },
+      "tip2": {
+        "raw": "TRIGSTR_20199",
+        "is_wts": true,
+        "wts_id": 20199,
+        "current_text": "|cff808000Древенская кора|r [|cffffd7002-й уровень|r]"
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_20204",
+        "is_wts": true,
+        "wts_id": 20204,
+        "current_text": "Увеличивает показатель брони на |cffffd7005 ед.|r"
+      },
+      "tip3": {
+        "raw": "TRIGSTR_20200",
+        "is_wts": true,
+        "wts_id": 20200,
+        "current_text": "|cff808000Древенская кора|r [|cffffd7003-й уровень|r]"
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_20205",
+        "is_wts": true,
+        "wts_id": 20205,
+        "current_text": "Увеличивает показатель брони на |cffffd7006 ед.|r"
+      },
+      "tip4": {
+        "raw": "TRIGSTR_20201",
+        "is_wts": true,
+        "wts_id": 20201,
+        "current_text": "|cff808000Древенская кора|r [|cffffd7004-й уровень|r]"
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_20206",
+        "is_wts": true,
+        "wts_id": 20206,
+        "current_text": "Увеличивает показатель брони на |cffffd7007 ед.|r"
+      }
+    },
+    "mechanics": {
+      "level_1": {
+        "cost": "100",
+        "cool": "20.000000",
+        "dur": "45",
+        "hero": "",
+        "dataa": "0.000000",
+        "datab": "4",
+        "datac": "0",
+        "datad": "0"
+      },
+      "level_2": {
+        "cost": "100",
+        "cool": "20.000000",
+        "dur": "45.000000",
+        "hero": "",
+        "dataa": "",
+        "datab": "5",
+        "datac": "",
+        "datad": ""
+      },
+      "level_3": {
+        "cost": "100",
+        "cool": "20.000000",
+        "dur": "45.000000",
+        "hero": "",
+        "dataa": "",
+        "datab": "6",
+        "datac": "",
+        "datad": ""
+      },
+      "level_4": {
+        "cost": "100",
+        "cool": "20.000000",
+        "dur": "45.000000",
+        "hero": "",
+        "dataa": "",
+        "datab": "7",
+        "datac": "",
+        "datad": ""
+      }
+    }
+  },
+  "A0PJ": {
+    "id": "A0PJ",
+    "code": "AUau",
+    "levels": 4,
+    "hotkey": "",
+    "researchhotkey": "TRIGSTR_20127",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_15702",
+        "is_wts": true,
+        "wts_id": 15702,
+        "current_text": "|cff808000Влияние леса|r"
+      },
+      "researchtip": {
+        "raw": "TRIGSTR_16487",
+        "is_wts": true,
+        "wts_id": 16487,
+        "current_text": "Изучить |cff808000Влияние леса|r"
+      },
+      "researchubertip": {
+        "raw": "TRIGSTR_21898",
+        "is_wts": true,
+        "wts_id": 21898,
+        "current_text": "Увеличивает регенерацию здоровья всех окружающий войнов\n\n|cffffd7001 уровень: Увеличивает регенерацию на 100%\n2 уровень: Увеличивает регенерацию на 150%\n3 уровень: Увеличивает регенерацию на 200%\n4 уровень: Увеличивает регенерацию на 250%|r"
+      },
+      "tip1": {
+        "raw": "TRIGSTR_15704",
+        "is_wts": true,
+        "wts_id": 15704,
+        "current_text": "|cff808000Влияние леса|r [|cffffcc001-й уровень|r]"
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_20195",
+        "is_wts": true,
+        "wts_id": 20195,
+        "current_text": "|cffffd700100% |rувеличения регенерации здороья"
+      },
+      "tip2": {
+        "raw": "TRIGSTR_15705",
+        "is_wts": true,
+        "wts_id": 15705,
+        "current_text": "|cff808000Влияние леса|r [|cffffcc002-й уровень|r]"
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_20196",
+        "is_wts": true,
+        "wts_id": 20196,
+        "current_text": "|cffffd700150% |rувеличения регенерации здороья"
+      },
+      "tip3": {
+        "raw": "TRIGSTR_15706",
+        "is_wts": true,
+        "wts_id": 15706,
+        "current_text": "|cff808000Влияние леса|r [|cffffcc003-й уровень|r]"
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_20197",
+        "is_wts": true,
+        "wts_id": 20197,
+        "current_text": "|cffffd700200% |rувеличения регенерации здороья"
+      },
+      "tip4": {
+        "raw": "TRIGSTR_15700",
+        "is_wts": true,
+        "wts_id": 15700,
+        "current_text": "|cff808000Влияние леса|r [|cffffcc004-й уровень|r]"
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_20193",
+        "is_wts": true,
+        "wts_id": 20193,
+        "current_text": "|cffffd700250% |rувеличения регенерации здороья"
+      }
+    },
+    "mechanics": {
+      "level_1": {
+        "cost": " - ",
+        "cool": "0",
+        "dur": "0",
+        "hero": "",
+        "dataa": "0.000000",
+        "datab": "1.000000",
+        "datac": "0",
+        "datad": ""
+      },
+      "level_2": {
+        "cost": " - ",
+        "cool": " - ",
+        "dur": " - ",
+        "hero": "",
+        "dataa": "0.000000",
+        "datab": "1.500000",
+        "datac": "0",
+        "datad": ""
+      },
+      "level_3": {
+        "cost": " - ",
+        "cool": " - ",
+        "dur": " - ",
+        "hero": "",
+        "dataa": "0.000000",
+        "datab": "2.000000",
+        "datac": "0",
+        "datad": ""
+      },
+      "level_4": {
+        "cost": " - ",
+        "cool": " - ",
+        "dur": " - ",
+        "hero": "",
+        "dataa": "0.000000",
+        "datab": "2.500000",
+        "datac": "0",
+        "datad": ""
+      }
+    }
+  },
+  "A0PL": {
+    "id": "A0PL",
+    "code": "AHtc",
+    "levels": 2,
+    "hotkey": "TRIGSTR_20671",
+    "researchhotkey": "TRIGSTR_20726",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_15602",
+        "is_wts": true,
+        "wts_id": 15602,
+        "current_text": "|cff228b22Кара леса|r"
+      },
+      "researchtip": {
+        "raw": "TRIGSTR_15604",
+        "is_wts": true,
+        "wts_id": 15604,
+        "current_text": "Изучить |cff228b22Кара леса|r"
+      },
+      "researchubertip": {
+        "raw": "TRIGSTR_20207",
+        "is_wts": true,
+        "wts_id": 20207,
+        "current_text": "Выпускает семена, сотрясающие землю и наносящие урон\n\n|cffffd7001 уровень: 250 урона\n2 уровень: 300 урона|r"
+      },
+      "tip1": {
+        "raw": "TRIGSTR_15605",
+        "is_wts": true,
+        "wts_id": 15605,
+        "current_text": "|cff228b22Кара леса|r [|cffffcc001-й уровень|r]"
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_20208",
+        "is_wts": true,
+        "wts_id": 20208,
+        "current_text": "Выпускает семена, сотрясающие землю и наносящие урон |cffffd700250 ед.|r"
+      },
+      "tip2": {
+        "raw": "TRIGSTR_15607",
+        "is_wts": true,
+        "wts_id": 15607,
+        "current_text": "|cff228b22Кара леса|r [|cffffcc002-й уровень|r]"
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_20209",
+        "is_wts": true,
+        "wts_id": 20209,
+        "current_text": "Выпускает семена, сотрясающие землю и наносящие урон|cffffd700 300 ед.|r"
+      }
+    },
+    "mechanics": {
+      "level_1": {
+        "cost": "90",
+        "cool": "50.000000",
+        "dur": "5",
+        "hero": "",
+        "dataa": "250.000000",
+        "datab": "0",
+        "datac": "0.5",
+        "datad": "0.5"
+      },
+      "level_2": {
+        "cost": "90",
+        "cool": "45.000000",
+        "dur": "5",
+        "hero": "",
+        "dataa": "300.000000",
+        "datab": "0",
+        "datac": "0.5",
+        "datad": "0.5"
+      }
+    }
+  },
+  "A0PM": {
+    "id": "A0PM",
+    "code": "Aven",
+    "levels": 4,
+    "hotkey": "",
+    "researchhotkey": "",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_15721",
+        "is_wts": true,
+        "wts_id": 15721,
+        "current_text": "|cff808000Отравленное оружие|r"
+      },
+      "researchtip": {
+        "raw": "TRIGSTR_15722",
+        "is_wts": true,
+        "wts_id": 15722,
+        "current_text": "|cff808000Отравленное оружие|r"
+      },
+      "researchubertip": {
+        "raw": "TRIGSTR_16490",
+        "is_wts": true,
+        "wts_id": 16490,
+        "current_text": "Снаряжает |cff7f8f18Егеря диколесья|r ядовитыми стрелами\n\n|cffffd7001 Уровень: 2 ед. урона в секунду\n2 Уровень: 4 ед. урона в секунду\n3 Уровень: 8 ед. урона в секунду\n4 Уровень: 16 ед. урона в секунду|r"
+      },
+      "tip1": {
+        "raw": "TRIGSTR_20351",
+        "is_wts": true,
+        "wts_id": 20351,
+        "current_text": "|cff808000Отравленное оружие|r [|cffffcc001-й уровень|r]"
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_16498",
+        "is_wts": true,
+        "wts_id": 16498,
+        "current_text": "Яд наносит |cffffd7004 ед|r. урона в секунду\n\n|cffffd700Время действия: 20 сек.\nВремя действия герой: 10 сек.|r"
+      },
+      "tip2": {
+        "raw": "TRIGSTR_20352",
+        "is_wts": true,
+        "wts_id": 20352,
+        "current_text": "|cff808000Отравленное оружие|r [|cffffcc002-й уровень|r]"
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_16499",
+        "is_wts": true,
+        "wts_id": 16499,
+        "current_text": "Яд наносит |cffffd7008 ед|r. урона в секунду\n\n|cffffd700Время действия: 20 сек.\nВремя действия герой: 10 сек.|r"
+      },
+      "tip3": {
+        "raw": "TRIGSTR_20353",
+        "is_wts": true,
+        "wts_id": 20353,
+        "current_text": "|cff808000Отравленное оружие|r [|cffffcc003-й уровень|r]"
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_16500",
+        "is_wts": true,
+        "wts_id": 16500,
+        "current_text": "Яд наносит |cffffd70016 ед|r. урона в секунду\n\n|cffffd700Время действия: 20 сек.\nВремя действия герой: 10 сек.|r"
+      },
+      "tip4": {
+        "raw": "TRIGSTR_20354",
+        "is_wts": true,
+        "wts_id": 20354,
+        "current_text": "|cff808000Отравленное оружие|r [|cffffcc004-й уровень|r]"
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_2397",
+        "is_wts": true,
+        "wts_id": 2397,
+        "current_text": "Яд наносит |cffffd70032 ед|r. урона в секунду\n\n|cffffd700Время действия: 20 сек.\nВремя действия герой: 10 сек.|r"
+      }
+    },
+    "mechanics": {
+      "level_1": {
+        "cost": "0",
+        "cool": "0",
+        "dur": "20",
+        "hero": "",
+        "dataa": "4.000000",
+        "datab": "0",
+        "datac": "0",
+        "datad": "1"
+      },
+      "level_2": {
+        "cost": "",
+        "cool": "",
+        "dur": "20.000000",
+        "hero": "",
+        "dataa": "8.000000",
+        "datab": "",
+        "datac": "",
+        "datad": "1"
+      },
+      "level_3": {
+        "cost": "",
+        "cool": "",
+        "dur": "20.000000",
+        "hero": "",
+        "dataa": "16.000000",
+        "datab": "",
+        "datac": "",
+        "datad": "1"
+      },
+      "level_4": {
+        "cost": "",
+        "cool": "",
+        "dur": "20.000000",
+        "hero": "",
+        "dataa": "32.000000",
+        "datab": "",
+        "datac": "",
+        "datad": "1"
+      }
+    }
+  },
+  "A0PN": {
+    "id": "A0PN",
+    "code": "AOwd",
+    "levels": 4,
+    "hotkey": "W",
+    "researchhotkey": "W",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_16502",
+        "is_wts": true,
+        "wts_id": 16502,
+        "current_text": "|cff7f8f18Зов Древних|r"
+      },
+      "researchtip": {
+        "raw": "TRIGSTR_16503",
+        "is_wts": true,
+        "wts_id": 16503,
+        "current_text": "Изучить |cff7f8f18Зов Древних|r"
+      },
+      "researchubertip": {
+        "raw": "TRIGSTR_39223",
+        "is_wts": true,
+        "wts_id": 39223,
+        "current_text": "Призывает Древней  сражающихся на вашей стороне |nВремя действия: |cffffd70070|r сек.|n|n|cffffd7001 уровень: 2 древня|n2 уровень: 3 древня|n3 уровень: 4 древня|n4 уровень: 6 древней|r"
+      },
+      "tip1": {
+        "raw": "TRIGSTR_20355",
+        "is_wts": true,
+        "wts_id": 20355,
+        "current_text": "|cff7f8f18Зов Древних|r [|cffffcc001-й уровень|r]"
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_39224",
+        "is_wts": true,
+        "wts_id": 39224,
+        "current_text": "Призывает |cffffd7002|r |cff7f8f18Древня|r\n|cffffd700Время действия: 70 сек.|r"
+      },
+      "tip2": {
+        "raw": "TRIGSTR_20356",
+        "is_wts": true,
+        "wts_id": 20356,
+        "current_text": "|cff7f8f18Зов Древних|r [|cffffcc002-й уровень|r]"
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_39225",
+        "is_wts": true,
+        "wts_id": 39225,
+        "current_text": "Призывает |cffffd7004|r |cff7f8f18Древня|r\n|cffffd700Время действия: 70 сек.|r"
+      },
+      "tip3": {
+        "raw": "TRIGSTR_20357",
+        "is_wts": true,
+        "wts_id": 20357,
+        "current_text": "|cff7f8f18Зов Древних|r [|cffffcc003-й уровень|r]"
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_39226",
+        "is_wts": true,
+        "wts_id": 39226,
+        "current_text": "Призывает |cffffd7006|r |cff7f8f18Древня|r\n|cffffd700Время действия: 70 сек.|r"
+      },
+      "tip4": {
+        "raw": "TRIGSTR_20358",
+        "is_wts": true,
+        "wts_id": 20358,
+        "current_text": "|cff7f8f18Зов Древних|r [|cffffcc004-й уровень|r]"
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_39227",
+        "is_wts": true,
+        "wts_id": 39227,
+        "current_text": "Призывает |cffffd7008|r |cff7f8f18Древня|r\n|cffffd700Время действия: 70 сек.|r"
+      }
+    },
+    "mechanics": {
+      "level_1": {
+        "cost": "105",
+        "cool": "20.000000",
+        "dur": "70.000000",
+        "hero": "",
+        "dataa": "2",
+        "datab": "",
+        "datac": "",
+        "datad": ""
+      },
+      "level_2": {
+        "cost": "105",
+        "cool": "20.000000",
+        "dur": "70.000000",
+        "hero": "",
+        "dataa": "4",
+        "datab": "",
+        "datac": "",
+        "datad": ""
+      },
+      "level_3": {
+        "cost": "105",
+        "cool": "20.000000",
+        "dur": "70.000000",
+        "hero": "",
+        "dataa": "6",
+        "datab": "",
+        "datac": "",
+        "datad": ""
+      },
+      "level_4": {
+        "cost": "105",
+        "cool": "20.000000",
+        "dur": "70.000000",
+        "hero": "",
+        "dataa": "8",
+        "datab": "",
+        "datac": "",
+        "datad": ""
+      }
+    }
+  },
+  "A0V3": {
+    "id": "A0V3",
+    "code": "AEar",
+    "levels": 4,
+    "hotkey": "TRIGSTR_21410",
+    "researchhotkey": "TRIGSTR_21375",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_15610",
+        "is_wts": true,
+        "wts_id": 15610,
+        "current_text": "|cff228b22Аура меткости|r"
+      },
+      "researchtip": {
+        "raw": "TRIGSTR_15611",
+        "is_wts": true,
+        "wts_id": 15611,
+        "current_text": "Изучить |cff228b22Ауру меткости|r"
+      },
+      "researchubertip": {
+        "raw": "TRIGSTR_20157",
+        "is_wts": true,
+        "wts_id": 20157,
+        "current_text": "Увеличивает урон от дистанционных атак находящихся рядом союзников.\n|cffffd7001 Уровень: 10% увелечения урона\n2 Уровень: 20% увелечения урона\n3 Уровень: 30% увелечения урона\n4 Уровень: 40% увелечения урона|r"
+      },
+      "tip1": {
+        "raw": "TRIGSTR_15613",
+        "is_wts": true,
+        "wts_id": 15613,
+        "current_text": "|cff228b22Аура меткости|r [|cffffcc001-й уровень|r]"
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_20334",
+        "is_wts": true,
+        "wts_id": 20334,
+        "current_text": "Увеличивает урон всех дальнобойных юнитов на |cffffd70010%|r"
+      },
+      "tip2": {
+        "raw": "TRIGSTR_15614",
+        "is_wts": true,
+        "wts_id": 15614,
+        "current_text": "|cff228b22Аура меткости|r [|cffffcc002-й уровень|r]"
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_20335",
+        "is_wts": true,
+        "wts_id": 20335,
+        "current_text": "Увеличивает урон всех дальнобойных юнитов на |cffffd70020%|r"
+      },
+      "tip3": {
+        "raw": "TRIGSTR_15616",
+        "is_wts": true,
+        "wts_id": 15616,
+        "current_text": "|cff228b22Аура меткости|r [|cffffcc003-й уровень|r]"
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_20336",
+        "is_wts": true,
+        "wts_id": 20336,
+        "current_text": "Увеличивает урон всех дальнобойных юнитов на |cffffd70030%|r"
+      },
+      "tip4": {
+        "raw": "TRIGSTR_15608",
+        "is_wts": true,
+        "wts_id": 15608,
+        "current_text": "|cff228b22Аура меткости|r [|cffffcc004-й уровень|r]"
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_19886",
+        "is_wts": true,
+        "wts_id": 19886,
+        "current_text": "Увеличивает урон всех дальнобойных юнитов на |cffffd70040%|r"
+      }
+    },
+    "mechanics": {
+      "level_1": {
+        "cost": " - ",
+        "cool": "0",
+        "dur": "0",
+        "hero": "",
+        "dataa": "0.1",
+        "datab": "0",
+        "datac": "1",
+        "datad": "0"
+      },
+      "level_2": {
+        "cost": " - ",
+        "cool": " - ",
+        "dur": " - ",
+        "hero": "",
+        "dataa": "0.2",
+        "datab": "0",
+        "datac": "1",
+        "datad": "0"
+      },
+      "level_3": {
+        "cost": " - ",
+        "cool": " - ",
+        "dur": " - ",
+        "hero": "",
+        "dataa": "0.3",
+        "datab": "0",
+        "datac": "1",
+        "datad": "0"
+      },
+      "level_4": {
+        "cost": " - ",
+        "cool": " - ",
+        "dur": " - ",
+        "hero": "",
+        "dataa": "0.400000",
+        "datab": "0",
+        "datac": "1",
+        "datad": "0"
+      }
+    }
+  },
+  "A0PP": {
+    "id": "A0PP",
+    "code": "ANdp",
+    "levels": 2,
+    "hotkey": "TRIGSTR_20753",
+    "researchhotkey": "TRIGSTR_20752",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_15756",
+        "is_wts": true,
+        "wts_id": 15756,
+        "current_text": "|cff808000Корни мира|r"
+      },
+      "researchtip": {
+        "raw": "TRIGSTR_16547",
+        "is_wts": true,
+        "wts_id": 16547,
+        "current_text": "Изучить |cff808000Корни мира|r"
+      },
+      "researchubertip": {
+        "raw": "TRIGSTR_16548",
+        "is_wts": true,
+        "wts_id": 16548,
+        "current_text": "Взращивает новых Войнов, сражающихся на вашей стороне."
+      },
+      "tip1": {
+        "raw": "TRIGSTR_20359",
+        "is_wts": true,
+        "wts_id": 20359,
+        "current_text": "|cff808000Корни мира|r [|cffffcc001-й уровень|r]"
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_16550",
+        "is_wts": true,
+        "wts_id": 16550,
+        "current_text": "Создает пак юнитов |cff7f8f18Энтов|r"
+      },
+      "tip2": {
+        "raw": "TRIGSTR_20360",
+        "is_wts": true,
+        "wts_id": 20360,
+        "current_text": "|cff808000Корни мира|r [|cffffcc002-й уровень|r]"
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_16551",
+        "is_wts": true,
+        "wts_id": 16551,
+        "current_text": "Создает пак юнитов |cff7f8f18Энтов|r"
+      }
+    },
+    "mechanics": {
+      "level_1": {
+        "cost": "0",
+        "cool": "100",
+        "dur": "1",
+        "hero": "",
+        "dataa": "e02N,e02O,e02M",
+        "datab": "3",
+        "datac": "5",
+        "datad": ""
+      },
+      "level_2": {
+        "cost": "0",
+        "cool": "100",
+        "dur": "1",
+        "hero": "",
+        "dataa": "e02N,e02O,e02M",
+        "datab": "3",
+        "datac": "6",
+        "datad": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "race": "goblins",
+  "category": "hero_abilities",
+  "total_abilities": 25,
+  "total_checks": 249,
+  "all_matched": true,
+  "wts_keys_updated": 172,
+  "inline_ops": 77,
+  "hashes": {
+    "wts": {
+      "before": "0f0c1aa00fd378cc43e184ae12fcd720da0ec2c7521d432e228bb97178ed5081",
+      "after": "2c1b86ead142b591e1b57f88e1f700220be513d260eddab1b87b7a3de2b91818"
+    },
+    "w3a_skin": {
+      "before": "e4ea13630a6616f6ca85e3d2b3fc6c02269655c329a8ddc13f8d161b65e46abd",
+      "after": "63bff7903e66a0d5a915efada99bafd20906313f50474840af8c16b892d91475"
+    }
+  },
+  "base_binaries_untouched": true
+}

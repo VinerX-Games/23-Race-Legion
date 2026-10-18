@@ -1,0 +1,240 @@
+{
+  "scope": "Гилнеас (Gilneas / Worgens): категория 1 — Здания (11 зданий)",
+  "buildings_count": 11,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "h0IJ",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22563,
+          "after": "|cffe4cfa3Ратуша|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22564,
+          "after": "|cffe4cfa3Ратуша|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10184,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Гилнеаса первой ступени. Обеспечивает запас пищи и добычу ресурсов.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПостройщик|cffced4da: рабочий строитель и добытчик ресурсов.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deФорт|cffced4da: открывает доступ к передовым сооружениям и технологиям.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0IK",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22567,
+          "after": "|cffe4cfa3Форт|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22568,
+          "after": "|cffe4cfa3Форт|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 27622,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Гилнеаса второй ступени. Существенно увеличивает запас пищи.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПостройщик|cffced4da: рабочий строитель и добытчик ресурсов.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deЗамок|cffced4da: открывает доступ к высшим технологиям королевства.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0IL",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22573,
+          "after": "|cffe4cfa3Замок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22574,
+          "after": "|cffe4cfa3Замок|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 27623,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Гилнеаса третьей ступени. Обеспечивает максимальный запас пищи.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПостройщик|cffced4da: рабочий строитель и добытчик ресурсов.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0IM",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22580,
+          "after": "|cffe4cfa3Ферма|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22581,
+          "after": "|cffe4cfa3Ферма|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31862,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию королевства продовольствием.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0IN",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22583,
+          "after": "|cffe4cfa3Алтарь предков|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22585,
+          "after": "|cffe4cfa3Алтарь предков|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 27624,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Позволяет призывать и воскрешать павших героев Гилнеаса.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВерховный охотник|cffced4da: мастер охоты ближнего боя.|n- |cffa9c7deЛорд друид|cffced4da: повелитель природных стихий и ауры маны.|n- |cffa9c7deГенерал Гилнеаса|cffced4da: вдохновляющий полководец с аурой урона.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0IO",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22587,
+          "after": "|cffe4cfa3Казармы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22588,
+          "after": "|cffe4cfa3Казармы|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 22454,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает базовые боевые силы и осадную технику.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПехотинец|cffced4da: универсальный боец ближнего боя со щитом.|n- |cffa9c7deСтрелок|cffced4da: меткий стрелок дальнего боя с мушкетом.|n- |cffa9c7deКатапульта|cffced4da: дальнобойное осадное орудие.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deДлинноствольные мушкеты|cffced4da|n- |cffa9c7deЗащита|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0IP",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22609,
+          "after": "|cffe4cfa3Лесопилка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22610,
+          "after": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28244,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Служит складом древесины и центром улучшения инструментов лесозаготовок.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенные инструменты|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0IQ",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22613,
+          "after": "|cffe4cfa3Кузница|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22615,
+          "after": "|cffe4cfa3Кузница|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28243,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Центр усовершенствования вооружения, доспехов и звериных способностей воргенов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОружие ближнего боя|cffced4da|n- |cffa9c7deКованая броня|cffced4da|n- |cffa9c7deОружие дальнего боя|cffced4da|n- |cffa9c7deКожаная броня|cffced4da|n- |cffa9c7deНутро зверя|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0IR",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22619,
+          "after": "|cffe4cfa3Военная академия|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22639,
+          "after": "|cffe4cfa3Военная академия|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 22433,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает специализированных бойцов и боевых магов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТопорометатель|cffced4da: стрелок поддержки с оглушающим броском.|n- |cffa9c7deРыцарь|cffced4da: тяжёлый всадник ближнего боя.|n- |cffa9c7deВорген маг|cffced4da: боевой заклинатель с рассеиванием и тёмной стаей.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deДрессировка Топорометателей|cffced4da|n- |cffa9c7deВолчья кровь|cffced4da|n- |cffa9c7deДрессировка|cffced4da|n- |cffa9c7deПознания магии|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0IS",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22668,
+          "after": "|cffe4cfa3Храм друидов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22669,
+          "after": "|cffe4cfa3Храм друидов|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 22435,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Место единения с природой и культивации первобытной силы воргенов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da: свирепый штурмовик ближнего боя.|n- |cffa9c7deВорген друид|cffced4da: целитель и заклинатель поддержки с боевым воем.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗвериные рефлексы|cffced4da|n- |cffa9c7deВолчьи конечности|cffced4da|n- |cffa9c7deСлияние с природой|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0JT",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25420,
+          "after": "|cffe4cfa3Сторожевая башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 25674,
+          "after": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 20491,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение. Обнаруживает невидимых врагов.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,712 @@
+{
+  "scope": "Ночные эльфы (Night Elf): категория 4 — Способности (33 способностей)",
+  "abilities_count": 33,
+  "variants": [
+    "SD"
+  ],
+  "abilities": [
+    {
+      "id": "A0HL",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38863,
+          "after": "|cffe4cfa3Ночные эльфы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38864,
+          "after": "|cffe4cfa3Ночные эльфы|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 35173,
+          "after": "|cffa6afb8РАСА:|cffced4da Древняя цивилизация калдорай, хранителей природы и служителей богини Элуны.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor (Яхве)|r|n|cffa6afb8Сложность:|r |cffffffff●●●|cffa6afb8○○|r|n|cffa6afb8Период:|r |cffa9c7de«WoW Vanilla — Legion»|r|n|n|cffced4daНочные эльфы, или калдорай — одна из древнейших рас Азерота, тысячелетиями оберегающая священные леса Калимдора. Опираясь на благословение Луны, мудрость друидов и первобытную силу древних древ, эльфы сочетают скрытность, меткую стрельбу и разрушительную магию природы.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0I3",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26484,
+          "after": "|cffe4cfa3Небольшой скачок|r"
+        }
+      ]
+    },
+    {
+      "id": "A15N",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25578,
+          "after": "|cffe4cfa3Зона ремонта|r"
+        }
+      ]
+    },
+    {
+      "id": "A0LJ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12857,
+          "after": "|cffe4cfa3Обмен древесины на золото|r"
+        }
+      ]
+    },
+    {
+      "id": "A0LI",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 2888,
+          "after": "|cffe4cfa3Обмен золота на древесину|r"
+        }
+      ]
+    },
+    {
+      "id": "A0IQ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27193,
+          "after": "|cffe4cfa3Обозначить столицу|r"
+        }
+      ]
+    },
+    {
+      "id": "A0FD",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 2917,
+          "after": "|cffe4cfa3Удлинённые клинки|r"
+        }
+      ]
+    },
+    {
+      "id": "A0EF",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 2731,
+          "after": "|cffe4cfa3Танец полумесяца|r"
+        }
+      ]
+    },
+    {
+      "id": "A0FC",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 39686,
+          "after": "|cffe4cfa3Опутывание|r"
+        }
+      ]
+    },
+    {
+      "id": "Acyc",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25834,
+          "after": "|cffe4cfa3Смерч|r"
+        }
+      ]
+    },
+    {
+      "id": "A12K",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 24656,
+          "after": "|cffe4cfa3Рассеивание заклинаний|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 24657,
+          "after": "|cffe4cfa3Рассеивание заклинаний|r"
+        }
+      ]
+    },
+    {
+      "id": "A16L",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27631,
+          "after": "|cffe4cfa3Невосприимчивость к магии|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27632,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Полный иммунитет ко всем видам направленных и площадных заклинаний.|r"
+        }
+      ]
+    },
+    {
+      "id": "Amfl",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14084,
+          "after": "|cffe4cfa3Вспышка маны|r"
+        }
+      ]
+    },
+    {
+      "id": "Apsh",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 15946,
+          "after": "|cffe4cfa3Фазовый сдвиг|r"
+        }
+      ]
+    },
+    {
+      "id": "A16I",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 8469,
+          "after": "|cffe4cfa3Аннулирование|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 8470,
+          "after": "|cffe4cfa3Аннулирование|r"
+        }
+      ]
+    },
+    {
+      "id": "A0FB",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 2909,
+          "after": "|cffe4cfa3Зачарованная глефа|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 2910,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Заряжает атаки глефомета или воина дополнительным магическим уроном.|r"
+        }
+      ]
+    },
+    {
+      "id": "A164",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27420,
+          "after": "|cffe4cfa3Облик совы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27421,
+          "after": "|cffe4cfa3Облик совы|r"
+        }
+      ]
+    },
+    {
+      "id": "A0FJ",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3524,
+          "after": "|cffe4cfa3Сила природы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3431,
+          "after": "|cffe4cfa3Сила природы — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 3432,
+          "after": "|cffe4cfa3Сила природы — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 3440,
+          "after": "|cffe4cfa3Сила природы — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 3441,
+          "after": "|cffe4cfa3Сила природы — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3442,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает указанную рощу деревьев в отряд из |cffffffff2|cffced4da верных древней-защитников на |cffffffff60|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 3443,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает указанную рощу деревьев в отряд из |cffffffff3|cffced4da верных древней-защитников на |cffffffff60|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 3522,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает указанную рощу деревьев в отряд из |cffffffff4|cffced4da верных древней-защитников на |cffffffff60|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 3523,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает указанную рощу деревьев в отряд из |cffffffff5|cffced4da верных древней-защитников на |cffffffff60|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0FH",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14273,
+          "after": "|cffe4cfa3Замедляющие корни|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 14275,
+          "after": "|cffe4cfa3Замедляющие корни — уровень 1|r"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 14322,
+          "after": "|cffe4cfa3Замедляющие корни — уровень 2|r"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 14391,
+          "after": "|cffe4cfa3Замедляющие корни — уровень 3|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 14393,
+          "after": "|cffe4cfa3Замедляющие корни — уровень 4|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 2916,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждая атака опутывает врага корнями, замедляя бег на |cffe69a8d15%|cffced4da и скорость боя на |cffe69a8d10%|cffced4da на |cffffffff3|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 3229,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждая атака опутывает врага корнями, замедляя бег на |cffe69a8d25%|cffced4da и скорость боя на |cffe69a8d15%|cffced4da на |cffffffff3|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 3297,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждая атака опутывает врага корнями, замедляя бег на |cffe69a8d35%|cffced4da и скорость боя на |cffe69a8d20%|cffced4da на |cffffffff3|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 3298,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждая атака опутывает врага корнями, замедляя бег на |cffe69a8d45%|cffced4da и скорость боя на |cffe69a8d25%|cffced4da на |cffffffff3|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0FI",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3300,
+          "after": "|cffe4cfa3Аура шипов|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3341,
+          "after": "|cffe4cfa3Аура шипов — уровень 1|r"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 3342,
+          "after": "|cffe4cfa3Аура шипов — уровень 2|r"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 3427,
+          "after": "|cffe4cfa3Аура шипов — уровень 3|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 3429,
+          "after": "|cffe4cfa3Аура шипов — уровень 4|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 3430,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Окружает союзников барьером из острых шипов, отражающим входящий урон ближнего боя обратно в атакующих.|r"
+        }
+      ]
+    },
+    {
+      "id": "ken0",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26390,
+          "after": "|cffe4cfa3Ярость природы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 30523,
+          "after": "|cffe4cfa3Ярость природы — уровень 1|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 40189,
+          "after": "|cffe4cfa3Ярость природы — уровень 2|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 40192,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Взывает к гневу леса, опутывая корнями и оглушая наземных врагов в большой области с нанесением урона.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 40193,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Взывает к гневу леса, опутывая корнями и оглушая наземных врагов в большой области с нанесением сокрушительного урона.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1MW",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11596,
+          "after": "|cffe4cfa3Оплетение|r"
+        }
+      ]
+    },
+    {
+      "id": "A160",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14835,
+          "after": "|cffe4cfa3Покровительство друидов|r"
+        }
+      ]
+    },
+    {
+      "id": "A161",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27379,
+          "after": "|cffe4cfa3Покровительство друидов|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 27381,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает регенерацию маны и силу заклинаний друидов.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0FL",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3899,
+          "after": "|cffe4cfa3Взрыв маны|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4357,
+          "after": "|cffe4cfa3Взрыв маны — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4358,
+          "after": "|cffe4cfa3Взрыв маны — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 4406,
+          "after": "|cffe4cfa3Взрыв маны — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 4614,
+          "after": "|cffe4cfa3Взрыв маны — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 4617,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область сгустками маны, нанося урон наземным врагам и оглушая их на |cffffffff1|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 4627,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область сгустками маны, нанося урон наземным врагам и оглушая их на |cffffffff1.5|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 4628,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область сгустками маны, нанося урон наземным врагам и оглушая их на |cffffffff2|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 4631,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область сгустками маны, нанося урон наземным врагам и оглушая их на |cffffffff2.5|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0FQ",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4662,
+          "after": "|cffe4cfa3Ледяные стрелы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4664,
+          "after": "|cffe4cfa3Ледяные стрелы — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4923,
+          "after": "|cffe4cfa3Ледяные стрелы — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 4924,
+          "after": "|cffe4cfa3Ледяные стрелы — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 4925,
+          "after": "|cffe4cfa3Ледяные стрелы — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 4926,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Заряжает стрелы холодом, нанося дополнительный урон и замедляя скорость атаки и бега цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0FS",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4968,
+          "after": "|cffe4cfa3Аура меткости|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 5625,
+          "after": "|cffe4cfa3Аура меткости — уровень 4|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 5626,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон всех союзных стрелков дальнего боя поблизости.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0FT",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 5023,
+          "after": "|cffe4cfa3Смертельный выстрел|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 5048,
+          "after": "|cffe4cfa3Смертельный выстрел — уровень 1|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 5049,
+          "after": "|cffe4cfa3Смертельный выстрел — уровень 2|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 5050,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает стрелу невероятной силы, пронзающую всех наземных врагов на прямой линии с высоким уроном.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 5051,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает стрелу невероятной силы, пронзающую всех наземных врагов на прямой линии с колоссальным уроном.|r"
+        }
+      ]
+    },
+    {
+      "id": "AEbl",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25764,
+          "after": "|cffe4cfa3Скачок|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 9615,
+          "after": "|cffe4cfa3Скачок — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 9616,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит друида на короткое расстояние, позволяя вступить в бой или уйти от опасности.|r"
+        }
+      ]
+    },
+    {
+      "id": "ANfl",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "tip_tip4",
+          "wts_id": 21406,
+          "after": "|cffe4cfa3Раздвоенная молния — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 27563,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цепью молний до |cffffffff10|cffced4da врагов в конусе перед собой, нанося |cffffffff300|cffced4da урона.|r"
+        }
+      ]
+    },
+    {
+      "id": "AEev",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 5770,
+          "after": "|cffe4cfa3Ускользание|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10941,
+          "after": "|cffe4cfa3Ускользание — уровень 1|r"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 8771,
+          "after": "|cffe4cfa3Ускользание — уровень 2|r"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 8772,
+          "after": "|cffe4cfa3Ускользание — уровень 3|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 8775,
+          "after": "|cffe4cfa3Ускользание — уровень 4|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11335,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт шанс |cffc8e08710%|cffced4da уклониться от вражеской физической атаки.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 8780,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт шанс |cffc8e08720%|cffced4da уклониться от вражеской физической атаки.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 9392,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт шанс |cffc8e08730%|cffced4da уклониться от вражеской физической атаки.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 12243,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт шанс |cffc8e08740%|cffced4da уклониться от вражеской физической атаки.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0FM",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4379,
+          "after": "|cffe4cfa3Облик совухи|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4666,
+          "after": "|cffe4cfa3Облик совухи — уровень 1|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4667,
+          "after": "|cffe4cfa3Облик совухи — уровень 2|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 4615,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает друида в могучего совуха, увеличивая броню и урон в ближнем бою.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 4669,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает друида в могучего совуха, значительно увеличивая броню и урон в ближнем бою.|r"
+        }
+      ]
+    },
+    {
+      "id": "A01C",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 2038,
+          "after": "|cffe4cfa3Свечение героя|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 2039,
+          "after": "|cffe4cfa3Свечение героя|r"
+        }
+      ]
+    }
+  ]
+}

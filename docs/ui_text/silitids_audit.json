@@ -1,0 +1,142 @@
+{
+  "race": "Силитиды и Аз'Акиры (Silitids)",
+  "race_id": 22,
+  "selection_ability": "A0J7",
+  "objects_audit": {
+    "buildings": {
+      "count": 16,
+      "ids": [
+        "e01H",
+        "e021",
+        "e020",
+        "e01I",
+        "e01J",
+        "e01K",
+        "e01L",
+        "e01M",
+        "e01X",
+        "e00B",
+        "h00C",
+        "o015",
+        "o017",
+        "h08L",
+        "h0MG",
+        "h0DL"
+      ],
+      "capital": {
+        "id": "h08L",
+        "name": "Храм Анкиража",
+        "food_provided": 200,
+        "verified_via": "01_core_economy.lua and unit object stats"
+      }
+    },
+    "units": {
+      "count": 16,
+      "ids": [
+        "e01G",
+        "e01N",
+        "e01O",
+        "e01P",
+        "e01Q",
+        "e01R",
+        "e01S",
+        "e01T",
+        "e01U",
+        "e01V",
+        "e01Y",
+        "e01Z",
+        "e023",
+        "e02W",
+        "u020",
+        "u022"
+      ]
+    },
+    "heroes": {
+      "count": 6,
+      "ids": [
+        "U023",
+        "U024",
+        "U025",
+        "U02A",
+        "U02R",
+        "U02S"
+      ],
+      "names": {
+        "U023": "Пророк (Гор'аман / Скеррам — Интеллект, дальний бой)",
+        "U024": "Генерал Киражей (Раджакс — Сила, ближний бой)",
+        "U025": "Королева (Аямисси — Ловкость, дальний бой)",
+        "U02A": "Пророк Секарим (Секарим — Мифический герой, Интеллект, дальний бой)",
+        "U02R": "Император-близнец Век'нилаш (Легендарный герой, Сила, ближний бой)",
+        "U02S": "Император-близнец Век'лор (Легендарный герой, Интеллект, дальний бой)"
+      },
+      "unused_clones_checked": {
+        "U037": "Урсол (Клон с моделью FurbolgElder.mdl, в триггерах не используется)",
+        "U038": "Урсок (Клон с моделью FurbolgElder.mdl, в триггерах не используется)"
+      }
+    },
+    "abilities": {
+      "count": 45,
+      "total_wts_updated": 601
+    },
+    "researches": {
+      "count": 23,
+      "markers_list": {
+        "R0BV": "Маркер расы Силитиды и Аз'Акиры"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items found in war3map.w3t for Silitids."
+  },
+  "messages_audit": {
+    "race_specific_messages": [
+      "TRIGSTR_38642"
+    ],
+    "status": "Standardized TRIGSTR_38642: «Один из игроков стал слугой Древнего Бога К'Туна...»"
+  },
+  "buffs_audit": {
+    "custom_buffs": [
+      "B04G",
+      "B04H",
+      "B04I",
+      "B04K",
+      "B05Z",
+      "B06W",
+      "B06X",
+      "B082"
+    ],
+    "standard_buffs_used": [
+      "BEah",
+      "BHad",
+      "BHtc",
+      "BNab",
+      "BNcg",
+      "BNfy",
+      "BNpa",
+      "BNpm",
+      "BNrf",
+      "BOae",
+      "BOhx",
+      "BOwd",
+      "BUau",
+      "BUcs",
+      "BUim",
+      "BUsl",
+      "BUsp",
+      "BUts",
+      "Bfae",
+      "Bfzy",
+      "Blsa",
+      "Bpoi",
+      "Bpsd",
+      "Brpl",
+      "Brpm",
+      "Bspl",
+      "Bust"
+    ],
+    "status": "Standardized custom buffs with secondary color labels and clean descriptions."
+  },
+  "total_wts_updates": 601,
+  "total_checks": 118
+}

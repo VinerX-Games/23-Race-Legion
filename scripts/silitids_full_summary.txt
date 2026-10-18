@@ -1,0 +1,612 @@
+=== BUILDINGS STATS ===
+[e01H] |cffe6beaaУлей|r | hp=2000 | gold=340 | lum=185 | fmade=50 | train=e01R | res=R08G,R088 | upg=e021
+[e021] |cffe6beaaМегаулей|r | hp=1500 | gold=3750 | lum=3750 | fmade=100 | train=e01R | res=R08G,R088 | upg=e020
+[e020] |cffe6beaaСверхулей|r | hp=1300 | gold=10000 | lum=10000 | fmade=150 | train=e01R | res=R08G,R088 | upg=None
+[e01I] |cffe6beaaЛичинка|r | hp=125 | gold=0 | lum=0 | fmade=None | train=None | res=None | upg=e01Z,e01V,e01T,e01U,e01Q,e01S,e01G,e02W,e01O,e01P
+[e01J] |cffe6beaaКокон|r | hp=250 | gold=80 | lum=40 | fmade=30 | train=None | res=None | upg=None
+[e01K] |cffe6beaaЭволюционный бассейн|r | hp=850 | gold=1250 | lum=600 | fmade=0 | train=None | res=R089,R08B,R085,R08A,R083,R084,R07Z,R07Y,R009,R07X | upg=None
+[e01L] |cffe6beaaКолония|r | hp=760 | gold=150 | lum=35 | fmade=0 | train=None | res=R0D0 | upg=None
+[e01M] |cffe6beaaЛогово членистоногих|r | hp=1300 | gold=2000 | lum=750 | fmade=0 | train=None | res=R08C,R08D,R08F,R08E | upg=None
+[e01X] |cffe6beaaАнтенны|r | hp=1250 | gold=1500 | lum=750 | fmade=0 | train=None | res=None | upg=None
+[e00B] |cffe6beaaАнтенны|r | hp=1250 | gold=1250 | lum=750 | fmade=0 | train=None | res=None | upg=None
+[h00C] |cffe6beaaАлтарь Песков|r | hp=1500 | gold=160 | lum=60 | fmade=3 | train=U025,U024,U023 | res=None | upg=None
+[o015] |cffe6beaaХрам Аз'Акиров|r | hp=1000 | gold=425 | lum=150 | fmade= -  | train=u020,u022,e01N | res=R086,R080,R081,R082 | upg=None
+[o017] |cffe6beaaОбелиск Аз'Акиров|r | hp=1000 | gold=2250 | lum=1250 | fmade= -  | train=None | res=R087 | upg=None
+[h08L] |cfffc8c32Храм Анкиража|r | hp=8000 | gold=1025 | lum=625 | fmade=200 | train=U02R,h0MG | res=None | upg=None
+[h0MG] |cffffdcb4Стать слугой К'Туна|r | hp=1 | gold=5000 | lum=5000 | fmade= -  | train=None | res=None | upg=None
+[h0DL] Паутина | hp=1 | gold=0 | lum=0 | fmade= -  | train=None | res=None | upg=None
+
+=== UNITS STATS ===
+[e01G] |cffe6beaaТрутень|r | hp=125 | gold=140 | lum=0 | fused=0 | atk1=normal (ground,structure,debris,item,ward) | atk2=normal (None) | abils=A0VH,A0I3,Aren,ANha,A1JE
+[e01N] |cffe6beaaАнубисат|r | hp=1500 | gold=530 | lum=180 | fused=0 | atk1=normal (ground,structure,debris,item,ward) | atk2=normal (None) | abils=A0J9,A1JE
+[e01O] |cffe6beaaСолдат Киражей|r | hp=800 | gold=235 | lum=80 | fused=0 | atk1=normal (ground,structure,debris,item,ward) | atk2=normal (None) | abils=A1JE
+[e01P] |cffe6beaaСидитид-танк|r | hp=1000 | gold=385 | lum=130 | fused=0 | atk1=normal (ground,structure,debris,item,ward) | atk2=normal (None) | abils=A1JE
+[e01Q] |cffe6beaaСилитид-оса|r | hp=370 | gold=125 | lum=45 | fused=0 | atk1=normal (ground,structure,debris,item,ward) | atk2=normal (None) | abils=A1KD,Apoi,A1JE
+[e01R] |cffe6beaaМать роя|r | hp=800 | gold=540 | lum=180 | fused=0 | atk1=pierce (ground,structure,debris,item,ward) | atk2=normal (None) | abils=A0SX,A0SW,A0KR,A0KQ,A0ZU,A0IW
+[e01S] |cffe6beaaСкарабей|r | hp=650 | gold=230 | lum=80 | fused=0 | atk1=siege (ground,structure,debris,item,ward) | atk2=normal (None) | abils=Ansk,A1JE
+[e01T] |cffe6beaaПророк Киражей|r | hp=675 | gold=310 | lum=105 | fused=0 | atk1=magic (ground,structure,debris,item,ward) | atk2=normal (None) | abils=Afae,A0JG,A0IY,A0JF,A1JE
+[e01U] |cffe6beaaПаук-страж|r | hp=550 | gold=200 | lum=70 | fused=0 | atk1=normal (ground,structure,debris,item,ward) | atk2=normal (None) | abils=A0KO,A0IZ,A1JE,A1KF,A1KG
+[e01V] |cffe6beaaКоммандир Киражей|r | hp=1125 | gold=360 | lum=120 | fused=0 | atk1=normal (ground,structure,debris,item,ward) | atk2=normal (None) | abils=A1KE,A1JE
+[e01Y] |cffe6beaaПаучок|r | hp=125 | gold=0 | lum=0 | fused=0 | atk1=normal (ground,structure,debris,item,ward) | atk2=normal (None) | abils=A1JE
+[e01Z] |cffe6beaaСлизень|r | hp=300 | gold=240 | lum=80 | fused=0 | atk1=pierce (ground,structure,debris,item,ward) | atk2=normal (None) | abils=A0KN,A0KM,A1JE
+[e023] |cffe6beaaМалый слизень|r | hp=150 | gold=0 | lum=0 | fused=0 | atk1=pierce (ground,structure,debris,item,ward) | atk2=normal (None) | abils=A1JE
+[e02W] |cffe6beaaСилитид-воин|r | hp=275 | gold=160 | lum=0 | fused=0 | atk1=normal (debris,ground,item,ward) | atk2=normal (structure) | abils=A0VH,A1JE
+[u020] |cffe6beaaОбсидиановая статуя|r | hp=650 | gold=285 | lum=95 | fused=0 | atk1=magic (ground,structure,debris,air,item,ward) | atk2=normal (None) | abils=A0C4,Arpl,Arpm
+[u022] |cffe6beaaСфинкс|r | hp=650 | gold=400 | lum=135 | fused=0 | atk1=magic (ground,structure,debris,air,item,ward) | atk2=normal (None) | abils=A1R4,Afak,Aabs,ACmi
+
+=== HEROES STATS ===
+[U023] |cffe6beaaПророк|r (Лозаж,Гор'аман) | gold=400 | lum=100 | atk1=hero (ground,structure,debris,item,ward) | heroabils=A0J2,A0SU,A0SV,A0J1
+[U024] |cffe6beaaГенерал Киражей|r (Квем,Ссинкрикс,Кву'рик) | gold=400 | lum=100 | atk1=hero (ground,structure,debris,item,ward) | heroabils=AUls,AEah,AUts,A0SQ
+[U025] |cffe6beaaКоролева|r (Ксааршедж,Лапресс) | gold=400 | lum=100 | atk1=hero (ground,structure,debris,item,ward) | heroabils=AEtq,AUau,AOhx,A0ST
+[U02A] |cffe6beaaПророк Секарим|r (Секарим) | gold=400 | lum=100 | atk1=hero (ground,structure,debris,item,ward) | heroabils=A0Y2,A0SU,A0SV,A0J1
+[U02R] |cffe6beaaИмператор-близнец (Век'Нилаш) | gold=5000 | lum=5000 | atk1=hero (ground,structure,debris,item,ward) | heroabils=A1B6,A193,A192,A188
+[U02S] |cffe6beaaИмператор-близнец (Век'Лор) | gold=5000 | lum=5000 | atk1=hero (ground,structure,debris,item,ward) | heroabils=A197,A195,A191,A188
+
+=== UPGRADES STATS ===
+[R0BV] lvl=1 | class=
+  lvl 1: name='|cffe6beaaСилитиды и Аз'Акиры' (sid:30499) | tip='|cffe6beaaСилитиды и Аз'Акиры' (sid:30500) | hk='None'
+         ub=' Силитиды - древняя насекомоподобная раса, созданная К'Туном и первоначально обитавшая на Калимдоре. В отличие от Кираджи, они неразумны, и тем не менее, являются опасными противниками.' (sid:30501)
+[R08G] lvl=6 | class=armor
+  lvl 1: name='|cffdcaa92Защитная оболочка зданий |cffffff00(уровень 1)|r' (sid:37251) | tip='Исследовать "|cffdcaa92Защитную оболочку|r" |cffffff00(уровень 1)|r' (sid:37245) | hk='X'
+         ub='Усиливает броню всех зданий.' (sid:12494)
+  lvl 2: name='|cffdcaa92Защитная оболочка зданий |cffffff00(уровень 2)|r' (sid:37240) | tip='Исследовать "|cffdcaa92Защитную оболочку|r" |cffffff00(уровень 2)|r' (sid:37246) | hk='X'
+         ub='Усиливает броню всех зданий.' (sid:12495)
+  lvl 3: name='|cffdcaa92Защитная оболочка зданий |cffffff00(уровень 3)|r' (sid:37241) | tip='Исследовать "|cffdcaa92Защитную оболочку|r" |cffffff00(уровень 3)|r' (sid:37247) | hk='X'
+         ub='Усиливает броню всех зданий.' (sid:12496)
+  lvl 4: name='|cffdcaa92Защитная оболочка зданий |cffffff00(уровень 4)|r' (sid:37242) | tip='Исследовать "|cffdcaa92Защитную оболочку|r" |cffffff00(уровень 4)|r' (sid:37248) | hk='X'
+         ub='Усиливает броню всех зданий.' (sid:12497)
+  lvl 5: name='|cffdcaa92Защитная оболочка зданий |cffffff00(уровень 5)|r' (sid:37243) | tip='Исследовать "|cffdcaa92Защитную оболочку|r" |cffffff00(уровень 5)|r' (sid:37249) | hk='X'
+         ub='Усиливает броню всех зданий.' (sid:12498)
+  lvl 6: name='|cffdcaa92Защитная оболочка зданий |cffffff00(уровень 6)|r' (sid:37244) | tip='Исследовать "|cffdcaa92Защитную оболочку|r" |cffffff00(уровень 6)|r' (sid:37250) | hk='X'
+         ub='Усиливает броню всех зданий.' (sid:12499)
+[R088] lvl=6 | class=
+  lvl 1: name='|cffdcaa92Посвящение матерей|cffffff00(Уровень 1)|r' (sid:37210) | tip='|cffdcaa92Посвящение матерей |cffffff00(Уровень 1)|r' (sid:37211) | hk='E'
+         ub='Увеличивает запас здоровья и маны |cffdcaa92матерей|r, ускоряет регенерацию их маны.' (sid:37204)
+  lvl 2: name='|cffdcaa92Посвящение матерей|cffffff00(Уровень 2)|r' (sid:37205) | tip='|cffdcaa92Посвящение матерей |cffffff00(Уровень 2)|r' (sid:37212) | hk='E'
+         ub='Увеличивает запас здоровья и маны |cffdcaa92матерей|r, ускоряет регенерацию их маны.' (sid:37217)
+  lvl 3: name='|cffdcaa92Посвящение матерей|cffffff00(Уровень 3)|r' (sid:37206) | tip='|cffdcaa92Посвящение матерей |cffffff00(Уровень 3)|r' (sid:37213) | hk='E'
+         ub='Увеличивает запас здоровья и маны |cffdcaa92матерей|r, ускоряет регенерацию их маны.' (sid:37218)
+  lvl 4: name='|cffdcaa92Посвящение матерей|cffffff00(Уровень 4)|r' (sid:37207) | tip='|cffdcaa92Посвящение матерей |cffffff00(Уровень 4)|r' (sid:37214) | hk='E'
+         ub='Увеличивает запас здоровья и маны |cffdcaa92матерей|r, ускоряет регенерацию их маны.' (sid:37219)
+  lvl 5: name='|cffdcaa92Посвящение матерей|cffffff00(Уровень 5)|r' (sid:37208) | tip='|cffdcaa92Посвящение матерей |cffffff00(Уровень 5)|r' (sid:37215) | hk='E'
+         ub='Увеличивает запас здоровья и маны |cffdcaa92матерей|r, ускоряет регенерацию их маны.' (sid:37220)
+  lvl 6: name='|cffdcaa92Посвящение матерей|cffffff00(Уровень 6)|r' (sid:37209) | tip='|cffdcaa92Посвящение матерей |cffffff00(Уровень 6)|r' (sid:37216) | hk='E'
+         ub='Увеличивает запас здоровья и маны |cffdcaa92матерей|r, ускоряет регенерацию их маны.' (sid:37221)
+[R089] lvl=1 | class=None
+  lvl 1: name='|cffdcaa92Эволюция "Плодовитость"' (sid:37222) | tip='Исследовать "|cffdcaa92Плодовитость|R"' (sid:37223) | hk='None'
+         ub='Вместо двух, из одной личинки будет появляться 3 силитида-воина, а из здоровье и скорость передвижения увеличатся. |cffff0000Однако, эволюцию "Силитиды-танки" изучить будет нельзя.|r' (sid:28348)
+[R08B] lvl=1 | class=None
+  lvl 1: name='|cffdcaa92Эволюция "Плодовитость (Осы)"' (sid:37227) | tip='Исследовать "|cffdcaa92Плодовитость (осы)|r"' (sid:37228) | hk='D'
+         ub='Из одной личинки будет появляться 2 силитида-осы. |cffff0000Однако, эволюцию "Усиленные крылья" изучить будет нельзя.|r' (sid:12435)
+[R085] lvl=1 | class=None
+  lvl 1: name='|cffdcaa92Эволюция "Силитиды-танки"' (sid:28344) | tip='Исследовать "|cffdcaa92Силитиды-танки|r"' (sid:28345) | hk='R'
+         ub='Вместо двух обычных силитидов станут доступны силитиды танки. |cffff0000Однако не получится развить эволюцию "Плодовитость".|r' (sid:28347)
+[R08A] lvl=1 | class=None
+  lvl 1: name='|cffdcaa92Эволюция "Усиленные крылья"' (sid:37224) | tip='Исследовать "|cffdcaa92Усиленные крылья|R"' (sid:37225) | hk='F'
+         ub='Увеличивает  скорость передвидения ос и дает им способность "Бешенство", также ускоряющую их передвижение и атаку. |cffff0000Однако нельзя будет изучить эволюцию "Плодовитость (Осы)"' (sid:37226)
+[R083] lvl=6 | class=None
+  lvl 1: name='|cffdcaa92Ярость |cffffff00(уровень 1)|r' (sid:37161) | tip='Исследовать |cffdcaa92«Ярость» |cffffff00(уровень 1)|r' (sid:37162) | hk='X'
+         ub='Увеличивает скорость атаки всех органических юнитов на 3%.' (sid:6738)
+  lvl 2: name='|cffdcaa92Ярость |cffffff00(уровень 2)|r' (sid:37167) | tip='Исследовать |cffdcaa92«Ярость» |cffffff00(уровень 2)|r' (sid:37163) | hk='X'
+         ub='Увеличивает скорость атаки всех органических юнитов на 3%.' (sid:6999)
+  lvl 3: name='|cffdcaa92Ярость |cffffff00(уровень 3)|r' (sid:37168) | tip='Исследовать |cffdcaa92«Ярость» |cffffff00(уровень 3)|r' (sid:37164) | hk='X'
+         ub='Увеличивает скорость атаки всех органических юнитов на 3%.' (sid:7007)
+  lvl 4: name='|cffdcaa92Ярость |cffffff00(уровень 4)|r' (sid:37169) | tip='Исследовать |cffdcaa92«Ярость» |cffffff00(уровень 4)|r' (sid:37165) | hk='X'
+         ub='Увеличивает скорость атаки всех органических юнитов на 3%.' (sid:7009)
+  lvl 5: name='|cffdcaa92Ярость |cffffff00(уровень 5)|r' (sid:37170) | tip='Исследовать |cffdcaa92«Ярость» |cffffff00(уровень 5)|r' (sid:37166) | hk='X'
+         ub='Увеличивает скорость атаки всех органических юнитов на 3%.' (sid:7090)
+  lvl 6: name='|cffdcaa92Ярость |cffffff00(уровень 6)|r' (sid:37171) | tip='Исследовать «Ярость» |cffffff00(уровень 6)|r' (sid:16442) | hk='X'
+         ub='Увеличивает скорость атаки всех органических юнитов на 3%.' (sid:11365)
+[R084] lvl=6 | class=None
+  lvl 1: name='|cffdcaa92Повышенный метаболизм' (sid:37172) | tip='Исследовать |cffdcaa92«Повышенный метаболизм»' (sid:37173) | hk='Z'
+         ub='Увеличивает скорость передвижения всех органических юнитов на 4%.' (sid:22283)
+  lvl 2: name='|cffdcaa92Повышенный метаболизм' (sid:37174) | tip='Исследовать |cffdcaa92«Повышенный метаболизм»' (sid:37179) | hk='Z'
+         ub='Увеличивает скорость передвижения всех органических юнитов на 4%.' (sid:22284)
+  lvl 3: name='|cffdcaa92Повышенный метаболизм' (sid:37175) | tip='Исследовать |cffdcaa92«Повышенный метаболизм»' (sid:37180) | hk='Z'
+         ub='Увеличивает скорость передвижения всех органических юнитов на 4%.' (sid:22285)
+  lvl 4: name='|cffdcaa92Повышенный метаболизм' (sid:37176) | tip='Исследовать |cffdcaa92«Повышенный метаболизм»' (sid:37181) | hk='Z'
+         ub='Увеличивает скорость передвижения всех органических юнитов на 4%.' (sid:22286)
+  lvl 5: name='|cffdcaa92Повышенный метаболизм' (sid:37177) | tip='Исследовать |cffdcaa92«Повышенный метаболизм»' (sid:37182) | hk='Z'
+         ub='Увеличивает скорость передвижения всех органических юнитов на 4%.' (sid:22287)
+  lvl 6: name='|cffdcaa92Повышенный метаболизм' (sid:37178) | tip='Исследовать |cffdcaa92«Повышенный метаболизм»' (sid:37183) | hk='Z'
+         ub='Увеличивает скорость передвижения всех органических юнитов на 4%.' (sid:22288)
+[R07Z] lvl=6 | class=armor
+  lvl 1: name='|cffdcaa92Выживаемость |cffffff00(уровень 1)|r' (sid:37124) | tip='Исследовать "|cffdcaa92Выживаемость|r" |cffffff00(уровень 1)|r' (sid:37125) | hk='S'
+         ub='Усиливает здоровье всех органических юнитов на 7%' (sid:33709)
+  lvl 2: name='|cffdcaa92Выживаемость |cffffff00(уровень 2)|r' (sid:37119) | tip='Исследовать"|cffdcaa92Выживаемость|r" |cffffff00(уровень 2)|r' (sid:37126) | hk='S'
+         ub='Усиливает здоровье всех органических юнитов на 7%' (sid:33710)
+  lvl 3: name='|cffdcaa92Выживаемость |cffffff00(уровень 3)|r' (sid:37120) | tip='Исследовать"|cffdcaa92Выживаемость|r" |cffffff00(уровень 3)|r' (sid:37127) | hk='S'
+         ub='Усиливает здоровье всех органических юнитов на 7%' (sid:33711)
+  lvl 4: name='|cffdcaa92Выживаемость |cffffff00(уровень 4)|r' (sid:37121) | tip='Исследовать"|cffdcaa92Выживаемость|r" |cffffff00(уровень 4)|r' (sid:37128) | hk='S'
+         ub='Усиливает здоровье всех органических юнитов на 7%' (sid:33712)
+  lvl 5: name='|cffdcaa92Выживаемость |cffffff00(уровень 5)|r' (sid:37122) | tip='Исследовать"|cffdcaa92Выживаемость|r" |cffffff00(уровень 5)|r' (sid:37129) | hk='S'
+         ub='Усиливает здоровье всех органических юнитов на 7%' (sid:33713)
+  lvl 6: name='|cffdcaa92Выживаемость |cffffff00(уровень 6)|r' (sid:37123) | tip='Исследовать"|cffdcaa92Выживаемость|r" |cffffff00(уровень 6)|r' (sid:37130) | hk='S'
+         ub='Усиливает здоровье всех органических юнитов на 7%' (sid:33714)
+[R07Y] lvl=6 | class=armor
+  lvl 1: name='|cffdcaa92Панцирь |cffffff00(уровень 1)|r' (sid:37112) | tip='Исследовать "|cffdcaa92Панцирь|r" |cffffff00(уровень 1)|r' (sid:37113) | hk='A'
+         ub='Усиливает броню всех юнитов.' (sid:11796)
+  lvl 2: name='|cffdcaa92Панцирь |cffffff00(уровень 2)|r' (sid:37107) | tip='Исследовать "|cffdcaa92Панцирь|r" |cffffff00(уровень 2)|r' (sid:37114) | hk='A'
+         ub='Усиливает броню всех юнитов.' (sid:11797)
+  lvl 3: name='|cffdcaa92Панцирь |cffffff00(уровень 3)|r' (sid:37108) | tip='Исследовать "|cffdcaa92Панцирь|r" |cffffff00(уровень 3)|r' (sid:37115) | hk='A'
+         ub='Усиливает броню всех юнитов.' (sid:11798)
+  lvl 4: name='|cffdcaa92Панцирь |cffffff00(уровень 4)|r' (sid:37109) | tip='Исследовать "|cffdcaa92Панцирь|r" |cffffff00(уровень 4)|r' (sid:37116) | hk='A'
+         ub='Усиливает броню всех юнитов.' (sid:11799)
+  lvl 5: name='|cffdcaa92Панцирь |cffffff00(уровень 5)|r' (sid:37110) | tip='Исследовать "|cffdcaa92Панцирь|r" |cffffff00(уровень 5)|r' (sid:37117) | hk='A'
+         ub='Усиливает броню всех юнитов.' (sid:11800)
+  lvl 6: name='|cffdcaa92Панцирь |cffffff00(уровень 6)|r' (sid:37111) | tip='Исследовать "|cffdcaa92Панцирь|r" |cffffff00(уровень 6)|r' (sid:37118) | hk='A'
+         ub='Усиливает броню всех юнитов.' (sid:11801)
+[R009] lvl=6 | class=melee
+  lvl 1: name='|cffdcaa92Когти |cffffff00(уровень 1)|r' (sid:36862) | tip='Развить "|cffdcaa92Когти|r" |cffffff00(уровень 1)|r' (sid:37079) | hk='Q'
+         ub='Увеличивают урон юнитов ближнего боя.' (sid:5322)
+  lvl 2: name='|cffdcaa92Когти |cffffff00(уровень 2)|r' (sid:36951) | tip='Развить "|cffdcaa92Когти|r" |cffffff00(уровень 2)|r' (sid:37084) | hk='Q'
+         ub='Увеличивают урон юнитов ближнего боя.' (sid:11732)
+  lvl 3: name='|cffdcaa92Когти |cffffff00(уровень 3)|r' (sid:36969) | tip='Развить "|cffdcaa92Когти|r" |cffffff00(уровень 3)|r' (sid:37091) | hk='Q'
+         ub='Увеличивают урон юнитов ближнего боя.' (sid:11733)
+  lvl 4: name='|cffdcaa92Когти |cffffff00(уровень 4)|r' (sid:36973) | tip='Развить "|cffdcaa92Когти|r" |cffffff00(уровень 4)|r' (sid:37092) | hk='Q'
+         ub='Увеличивают урон юнитов ближнего боя.' (sid:11734)
+  lvl 5: name='|cffdcaa92Когти |cffffff00(уровень 5)|r' (sid:36981) | tip='Развить "|cffdcaa92Когти|r" |cffffff00(уровень 5)|r' (sid:37093) | hk='Q'
+         ub='Увеличивают урон юнитов ближнего боя.' (sid:11735)
+  lvl 6: name='|cffdcaa92Когти |cffffff00(уровень 6)|r' (sid:37069) | tip='Развить "|cffdcaa92Когти|r" |cffffff00(уровень 6)|r' (sid:37094) | hk='Q'
+         ub='Увеличивают урон юнитов ближнего боя.' (sid:11736)
+[R07X] lvl=6 | class=TRIGSTR_14507
+  lvl 1: name='|cffdcaa92Дальнобойные атаки |cffffff00(уровень 1)|r' (sid:37095) | tip='Развить "|cffdcaa92Дальнобойные атаки|r"|cffffff00(уровень 1)|r' (sid:37101) | hk='W'
+         ub='Увеличивают урон юнитов дальнего боя.' (sid:11744)
+  lvl 2: name='|cffdcaa92Дальнобойные атаки |cffffff00(уровень 2)|r' (sid:37096) | tip='Развить "|cffdcaa92Дальнобойные атаки|r"|cffffff00(уровень 2)|r' (sid:37102) | hk='W'
+         ub='Увеличивают урон юнитов дальнего боя.' (sid:11757)
+  lvl 3: name='|cffdcaa92Дальнобойные атаки |cffffff00(уровень 3)|r' (sid:37097) | tip='Развить "|cffdcaa92Дальнобойные атаки|r"|cffffff00(уровень 3)|r' (sid:37103) | hk='W'
+         ub='Увеличивают урон юнитов дальнего боя.' (sid:11758)
+  lvl 4: name='|cffdcaa92Дальнобойные атаки |cffffff00(уровень 4)|r' (sid:37098) | tip='Развить "|cffdcaa92Дальнобойные атаки|r"|cffffff00(уровень 4)|r' (sid:37104) | hk='W'
+         ub='Увеличивают урон юнитов дальнего боя.' (sid:11759)
+  lvl 5: name='|cffdcaa92Дальнобойные атаки |cffffff00(уровень 5)|r' (sid:37099) | tip='Развить "|cffdcaa92Дальнобойные атаки|r"|cffffff00(уровень 5)|r' (sid:37105) | hk='W'
+         ub='Увеличивают урон юнитов дальнего боя.' (sid:11760)
+  lvl 6: name='|cffdcaa92Дальнобойные атаки |cffffff00(уровень 6)|r' (sid:37100) | tip='Развить "|cffdcaa92Дальнобойные атаки|r"|cffffff00(уровень 6)|r' (sid:37106) | hk='W'
+         ub='Увеличивают урон юнитов дальнего боя.' (sid:11761)
+[R0D0] lvl=5 | class=None
+  lvl 1: name='|cffdcaa92Улучшенная добыча' (sid:12977) | tip='Исследовать |cffdcaa92Улучшенную добычу' (sid:15013) | hk='Z'
+         ub='"Увеличивают объем переносимой работниками древесины на <Rhlh,mod1>."' (sid:None)
+  lvl 2: name='|cffdcaa92Улучшенная добыча' (sid:13609) | tip='Исследовать |cffdcaa92Улучшенную добычу' (sid:15014) | hk='|cffb4dc8c-(+200) к мане.|r
+
+Кольцо найденное в огненных недрах.'
+         ub='"Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>."' (sid:None)
+  lvl 3: name='|cffdcaa92Улучшенная добыча' (sid:15711) | tip='Исследовать |cffdcaa92Улучшенную добычу' (sid:15713) | hk='|cffb4dc8c-(+200) к мане.|r
+
+Кольцо найденное в огненных недрах.'
+         ub='Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.' (sid:20802)
+  lvl 4: name='|cffdcaa92Улучшенная добыча' (sid:15712) | tip='Исследовать |cffdcaa92Улучшенную добычу' (sid:15714) | hk='|cffb4dc8c-(+200) к мане.|r
+
+Кольцо найденное в огненных недрах.'
+         ub='Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.' (sid:21361)
+  lvl 5: name='|cffdcaa92Улучшенная добыча' (sid:15846) | tip='Исследовать |cffdcaa92Улучшенную добычу' (sid:15849) | hk='|cffb4dc8c-(+200) к мане.|r
+
+Кольцо найденное в огненных недрах.'
+         ub='Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.' (sid:21372)
+[R08C] lvl=1 | class=None
+  lvl 1: name='|cffdcaa92Эволюция "Делимость"' (sid:37229) | tip='Исследовать "|cffdcaa92делимость|R"' (sid:37230) | hk='S'
+         ub='|cffdcaa92Слизни|r после смерти будут распадаться на 2 более слабые версии самих себя. |cffff0000Однако, нельзя будет изучить "Вязкую слизь".|r' (sid:37231)
+[R08D] lvl=1 | class=None
+  lvl 1: name='|cffdcaa92Эволюция "Вязкая слизь"' (sid:37232) | tip='Исследовать "|cffdcaa92вязкую слизь|r"' (sid:37233) | hk='A'
+         ub='Атаки |cffdcaa92слизней|r будут уменьшать скорость передвижения. |cffff0000Однако, нельзя будет изучить эволюцию "Делимость".' (sid:37234)
+[R08F] lvl=1 | class=None
+  lvl 1: name='|cffdcaa92Эволюция "Паразит"' (sid:37238) | tip='Исследовать "|cffdcaa92Паразит|r"' (sid:37239) | hk='Q'
+         ub='Пауки-стражи смогут внедрять паразитов во врагов, |cffff0000однако эволюция "Плетение паутин" будет недоступна.|r' (sid:12451)
+[R08E] lvl=1 | class=None
+  lvl 1: name='|cffdcaa92Эволюция "Кислотный снаряд"' (sid:38479) | tip='Исследовать |cffdcaa92"Кислотный снаряд"' (sid:38480) | hk='W'
+         ub='Пауки-стражи получают возможность метать в своих врагов кислотные снаряды, снижающие уровень брони. |cffff0000Однако, нельзя будет изучить эволюцию "Паразит".' (sid:38481)
+[R086] lvl=1 | class=None
+  lvl 1: name='Увеличение урона от «Сокрушения»' (sid:None) | tip='Сокрушение' (sid:12205) | hk='C'
+         ub='Исследовать «Сокрушение», способность анубисатов.' (sid:12404)
+[R080] lvl=6 | class=armor
+  lvl 1: name='|cffdcaa92Каменная оболочка |cffffff00(уровень 1)|r' (sid:37142) | tip='Исследовать "|cffdcaa92Каменную оболочку|r" |cffffff00(уровень 1)|r' (sid:37136) | hk='A'
+         ub='Усиливает броню всех статуй на 1 пункт.' (sid:18419)
+  lvl 2: name='|cffdcaa92Каменная оболочка |cffffff00(уровень 2)|r' (sid:37131) | tip='Исследовать "|cffdcaa92Каменную оболочку|r" |cffffff00(уровень 2)|r' (sid:37137) | hk='A'
+         ub='Усиливает броню всех статуй на 2 пункт.' (sid:18420)
+  lvl 3: name='|cffdcaa92Каменная оболочка |cffffff00(уровень 3)|r' (sid:37132) | tip='Исследовать "|cffdcaa92Каменную оболочку|r" |cffffff00(уровень 3)|r' (sid:37138) | hk='A'
+         ub='Усиливает броню всех статуй на 3 пункт.' (sid:18421)
+  lvl 4: name='|cffdcaa92Каменная оболочка |cffffff00(уровень 4)|r' (sid:37133) | tip='Исследовать "|cffdcaa92Каменную оболочку|r" |cffffff00(уровень 4)|r' (sid:37139) | hk='A'
+         ub='Усиливает броню всех статуй на 4 пункт.' (sid:18422)
+  lvl 5: name='|cffdcaa92Каменная оболочка |cffffff00(уровень 5)|r' (sid:37134) | tip='Исследовать "|cffdcaa92Каменную оболочку|r" |cffffff00(уровень 5)|r' (sid:37140) | hk='A'
+         ub='Усиливает броню всех статуй на 5 пункт.' (sid:18423)
+  lvl 6: name='|cffdcaa92Каменная оболочка |cffffff00(уровень 6)|r' (sid:37135) | tip='Исследовать "|cffdcaa92Каменную оболочку|r" |cffffff00(уровень 6)|r' (sid:37141) | hk='A'
+         ub='Усиливает броню всех статуй на 6 пункт.' (sid:18424)
+[R081] lvl=6 | class=melee
+  lvl 1: name='|cffdcaa92Атака анубисатов |cffffff00(уровень 1)|r' (sid:37144) | tip='Улучшить атаку |cffdcaa92анубисатов |cffffff00(уровень 1)|r' (sid:37150) | hk='D'
+         ub='Увеличивают урон юнитов |cffdcaa92анубисатов.' (sid:37143)
+  lvl 2: name='|cffdcaa92Атака анубисатов |cffffff00(уровень 2)|r' (sid:37145) | tip='Улучшить атаку |cffdcaa92анубисатов |cffffff00(уровень 2)|r' (sid:37151) | hk='D'
+         ub='Увеличивают урон юнитов |cffdcaa92анубисатов.' (sid:37156)
+  lvl 3: name='|cffdcaa92Атака анубисатов |cffffff00(уровень 3)|r' (sid:37146) | tip='Улучшить атаку |cffdcaa92анубисатов |cffffff00(уровень 3)|r' (sid:37152) | hk='D'
+         ub='Увеличивают урон юнитов |cffdcaa92анубисатов.' (sid:37157)
+  lvl 4: name='|cffdcaa92Атака анубисатов |cffffff00(уровень 4)|r' (sid:37147) | tip='Улучшить атаку |cffdcaa92анубисатов |cffffff00(уровень 4)|r' (sid:37153) | hk='D'
+         ub='Увеличивают урон юнитов|cffdcaa92 анубисатов.' (sid:37158)
+  lvl 5: name='|cffdcaa92Атака анубисатов |cffffff00(уровень 5)|r' (sid:37148) | tip='Улучшить атаку |cffdcaa92анубисатов |cffffff00(уровень 5)|r' (sid:37154) | hk='D'
+         ub='Увеличивают урон юнитов|cffdcaa92 анубисатов.' (sid:37159)
+  lvl 6: name='|cffdcaa92Атака анубисатов |cffffff00(уровень 6)|r' (sid:37149) | tip='Улучшить атаку |cffdcaa92анубисатов |cffffff00(уровень 6)|r' (sid:37155) | hk='D'
+         ub='Увеличивают урон юнитов |cffdcaa92анубисатов.' (sid:37160)
+[R082] lvl=6 | class=
+  lvl 1: name='Прочность |cffffff00(уровень 1)|r' (sid:11917) | tip='Исследовать прочность|cffffff00(уровень 1)|r' (sid:11918) | hk='S'
+         ub='Усиливает здоровье всех статуй на 4%' (sid:11924)
+  lvl 2: name='Прочность |cffffff00(уровень 2)|r' (sid:11912) | tip='Исследовать прочность|cffffff00(уровень 2)|r' (sid:11919) | hk='S'
+         ub='Усиливает здоровье всех статуй на 4%' (sid:11925)
+  lvl 3: name='Прочность |cffffff00(уровень 3)|r' (sid:11913) | tip='Исследовать прочность|cffffff00(уровень 3)|r' (sid:11920) | hk='S'
+         ub='Усиливает здоровье всех статуй на 4%' (sid:11926)
+  lvl 4: name='Прочность |cffffff00(уровень 4)|r' (sid:11914) | tip='Исследовать прочность|cffffff00(уровень 4)|r' (sid:11921) | hk='S'
+         ub='Усиливает здоровье всех статуй на 4%' (sid:11927)
+  lvl 5: name='Прочность |cffffff00(уровень 5)|r' (sid:11915) | tip='Исследовать прочность|cffffff00(уровень 5)|r' (sid:11922) | hk='S'
+         ub='Усиливает здоровье всех статуй на 4%' (sid:11928)
+  lvl 6: name='Прочность |cffffff00(уровень 6)|r' (sid:11916) | tip='Исследовать прочность|cffffff00(уровень 6)|r' (sid:11923) | hk='S'
+         ub='Усиливает здоровье всех статуй на 4%' (sid:11929)
+[R087] lvl=6 | class=caster
+  lvl 1: name='|cffdcaa92Посвящение пророков |cffffff00(Уровень 1)|r' (sid:37192) | tip='|cffdcaa92Посвящение пророков |cffffff00(Уровень 1)|r' (sid:37193) | hk='Q'
+         ub='Увеличивает запас здоровья и маны |cffdcaa92пророков|r, ускоряет регенерацию их маны.' (sid:37186)
+  lvl 2: name='|cffdcaa92Посвящение пророков |cffffff00(Уровень 2)|r' (sid:37187) | tip='|cffdcaa92Посвящение пророков |cffffff00(Уровень 2)|r' (sid:37194) | hk='Q'
+         ub='Увеличивает запас здоровья и маны |cffdcaa92пророков|r, ускоряет регенерацию их маны.' (sid:37199)
+  lvl 3: name='|cffdcaa92Посвящение пророков |cffffff00(Уровень 3)|r' (sid:37188) | tip='|cffdcaa92Посвящение пророков |cffffff00(Уровень 3)|r' (sid:37195) | hk='Q'
+         ub='Увеличивает запас здоровья и маны |cffdcaa92пророков|r, ускоряет регенерацию их маны.' (sid:37200)
+  lvl 4: name='|cffdcaa92Посвящение пророков |cffffff00(Уровень 4)|r' (sid:37189) | tip='|cffdcaa92Посвящение пророков |cffffff00(Уровень 4)|r' (sid:37196) | hk='Q'
+         ub='Увеличивает запас здоровья и маны |cffdcaa92пророков|r, ускоряет регенерацию их маны.' (sid:37201)
+  lvl 5: name='|cffdcaa92Посвящение пророков |cffffff00(Уровень 5)|r' (sid:37190) | tip='|cffdcaa92Посвящение пророков |cffffff00(Уровень 5)|r' (sid:37197) | hk='Q'
+         ub='Увеличивает запас здоровья и маны |cffdcaa92пророков|r, ускоряет регенерацию их маны.' (sid:37202)
+  lvl 6: name='|cffdcaa92Посвящение пророков |cffffff00(Уровень 6)|r' (sid:37191) | tip='|cffdcaa92Посвящение пророков |cffffff00(Уровень 6)|r' (sid:37198) | hk='Q'
+         ub='Увеличивает запас здоровья и маны |cffdcaa92пророков|r, ускоряет регенерацию их маны.' (sid:37203)
+
+=== ABILITIES STATS ===
+[A0J7] |cfff0c8a0Аз'Акиры|r (sid:38883) | lvls=1 | hk=S | rtip=None (sid:None)
+  lvl 1: tip='|cfff0c8a0Аз'Акиры|r' (sid:38884)
+         ub='|cffa0beaaСоздатель расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaСложность:|r |cffff0000●●●●●|r|n|cffa0beaaПериод: |r|cffc8dcaaWoW Vanila|r|n|n|cffffa000Аз'Акиры|r|r (Aз'Aкиp - нaзвaниe импepии, инoгдa иcпoльзyeтcя кaк нaзвaниe pacы) нaзывaют дpeвниe pacы. Hepyбы и киpaжи кoгдa тo были oдним нapoдoм - Aкиpaми, нo в пpoцecce вoйны киpaжeй c тpoллями плeмeн Гypyбaши и Aмaни кyльтypa aкиpoв былa paзpyшeнa и нepyбы были вынyждeны бeжaть нa ceвep. Bce тpoe пoтoмкoв Aкиpoв нaxoдилиcь/нaxoдятcя пoд кoнтpoлeм дpeвниx бoгoв. Kиpaжи и cилитиды (мeнee paзвитыe) являютcя cлyгaми K'тyнa в Kaлимдope.' (sid:36636)
+[A1B7] |cffe6beaaСтать Слугой К'Туна|r (sid:7232) | lvls=1 | hk=X | rtip=None (sid:None)
+  lvl 1: tip='|cffe6beaaСтать Слугой К'Туна|r' (sid:6794)
+         ub='К'Тун переходит под ваш контроль. В некоторыъ режимах столица переносится на него (или создается).' (sid:30493)
+[A1B8] Око К'Туна (sid:30495) | lvls=1 | hk=E | rtip=None (sid:None)
+  lvl 1: tip='Око К'Туна' (sid:30496)
+         ub='Создает в указанном месте глаз К'Туна, следящий за происходящим.' (sid:30497)
+[A0T1] Выбрать личинки (sid:9171) | lvls=1 | hk=Q | rtip=None (sid:None)
+  lvl 1: tip='Выбрать личинки' (sid:12737)
+         ub='Выбирает максимально возможное количество личинок в радиусе от Улья.' (sid:9172)
+[A0SW] Выбрать личинки (sid:1149) | lvls=1 | hk=Q | rtip=None (sid:None)
+  lvl 1: tip='Выбрать личинки' (sid:2765)
+         ub='Выбирает максимально возможное количество личинок в радиусе от Улья.' (sid:4272)
+[A0LJ] Обмен |cff00ff00Дерева |rна |cffffff00Золото|r (sid:12857) | lvls=1 | hk=A | rtip=None (sid:None)
+  lvl 1: tip='Обмен |cff00ff00Дерева |rна |cffffff00Золото|r' (sid:12886)
+         ub='Отнимает у игрока |cff228722500 дерева|r, но добавляет |cffffd700100 золота|r.' (sid:20631)
+[A0LI] Обмен |cffffff00Золота |rна |cff00ff00Дерево|r (sid:2888) | lvls=1 | hk=S | rtip=None (sid:None)
+  lvl 1: tip='Обмен |cffffff00Золота |rна |cff00ff00Дерево|r' (sid:3692)
+         ub='Отнимает у игрока|cffffd700 500 золота|r, но добавляет |cff228722100 дерева|r.' (sid:20630)
+[A0IQ] |cffffdcb4Обозначить столицу|r (sid:27193) | lvls=1 | hk=X | rtip=None (sid:None)
+  lvl 1: tip='|cffffdcb4Обозначить столицу|r' (sid:27969)
+         ub='Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение.' (sid:27970)
+[Argl] Вернуть золото и древесину (sid:None) | lvls=1 | hk=None | rtip=None (sid:None)
+  lvl 1: tip='None' (sid:None)
+         ub='None' (sid:None)
+[A0ML] Выпустить силитида-воина (sid:682) | lvls=1 | hk=Q | rtip=None (sid:None)
+  lvl 1: tip='Выпустить силитида-воина' (sid:684)
+         ub='Убавает кокон, высвобождая юнита.' (sid:726)
+[Arlm] Вернуть древесину (sid:None) | lvls=1 | hk=None | rtip=None (sid:None)
+  lvl 1: tip='None' (sid:None)
+         ub='None' (sid:None)
+[A0J0] |cffe6beaaАура Антенн|r (sid:39514) | lvls=1 | hk=None | rtip=Изучить «Нечистую ауру» (sid:11673)
+  lvl 1: tip='|cffe6beaaАура Антенн|r' (sid:39515)
+         ub='+7% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.' (sid:12888)
+[A0Z5] ДАММИ - ВНЕ ЭКОНОМИКИ (sid:2604) | lvls=1 | hk=C | rtip=None (sid:None)
+  lvl 1: tip='ДАММИ - ВНЕ ЭКОНОМИКИ' (sid:2755)
+         ub='ДАММИ - ВНЕ ЭКОНОМИКИ' (sid:3540)
+[A0KP] Скорость на паутине (sid:12465) | lvls=1 | hk=None | rtip=Изучить «Ауру выносливости» [|cffffcc00%d-й уровень|r] (sid:None)
+  lvl 1: tip='' (sid:None)
+         ub='' (sid:None)
+[A0B0] |cffc8e6ffУкрепить Город|r (sid:17283) | lvls=1 | hk=R | rtip=None (sid:None)
+  lvl 1: tip='|cffc8e6ffУкрепить Город|r' (sid:17284)
+         ub='Увеличивает защиту здания на 4 ед.' (sid:8068)
+[A0B1] |cffc8e6ffНаладить Производство|r (sid:17285) | lvls=1 | hk=W | rtip=None (sid:None)
+  lvl 1: tip='|cffc8e6ffНаладить Производство|r' (sid:17287)
+         ub='Увеличить доход древесины на 50.' (sid:17286)
+[A0B2] |cffc8e6ffУвеличить Размер Города|r (sid:17288) | lvls=1 | hk=E | rtip=None (sid:None)
+  lvl 1: tip='|cffc8e6ffУвеличить Размер Города|r' (sid:17290)
+         ub='Увеличить здоровье здания на 2500.' (sid:17289)
+[A0AZ] |cffc8e6ffУвеличить Сбор Дани|r (sid:17280) | lvls=1 | hk=Q | rtip=None (sid:None)
+  lvl 1: tip='|cffc8e6ffУвеличить Сбор Дани|r' (sid:17282)
+         ub='Увеличить доход золота на 100.' (sid:17281)
+[AHad] Поселение (sid:7394) | lvls=1 | hk=None | rtip=Изучить «Ауру благочестия» [|cffffcc00%d-й уровень|r] (sid:None)
+  lvl 1: tip='' (sid:None)
+         ub='' (sid:None)
+[Aivs] Невидимость (sid:None) | lvls=1 | hk=I | rtip=None (sid:None)
+  lvl 1: tip='Невидимость' (sid:None)
+         ub='"Дает невидимость. Атаки и применение способностей снимают эффект. |nВремя действия: <Aivs,Dur1> сек."' (sid:None)
+[A0I3] |cffe4cfa3Небольшой скачок|r (sid:26484) | lvls=1 | hk=C | rtip=|cffe4cfa3Небольшой скачок|r (|cffffffffC|r) (sid:10064)
+  lvl 1: tip='|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)' (sid:26476)
+         ub='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r' (sid:26477)
+[Aren] Обновление (sid:None) | lvls=1 | hk=R | rtip=None (sid:None)
+  lvl 1: tip='Обновление' (sid:None)
+         ub='"Исцеляет раненые древа, ремонтирует союзные здания и технику."' (sid:None)
+[ANha] Добывать ресурсы (sid:None) | lvls=1 | hk=G | rtip=None (sid:None)
+  lvl 1: tip='Добывать ресурсы' (sid:None)
+         ub='Добывает золото из рудников и древесину из деревьев.' (sid:None)
+[A0VH] |cffe6beaaЧасть поколения|r (sid:39545) | lvls=2 | hk=None | rtip=Поджог для баффа (sid:4167)
+  lvl 1: tip='|cffe6beaaЧасть поколения |cff00ff00(Половина)|r' (sid:39543)
+         ub='Юнит потребляет лишь 50% стоимости' (sid:4168)
+  lvl 2: tip='|cffe6beaaЧасть поколения |cff00ff00(Треть)|r' (sid:39544)
+         ub='Юнит потребляет лишь 33% стоимости' (sid:4279)
+[A0J9] Сокрушение (sid:None) | lvls=2 | hk=None | rtip=None (sid:None)
+  lvl 1: tip='Сокрушение' (sid:None)
+         ub='"С <Awar,DataA1>%-й вероятностью атака нанесет <Awar,DataB1> урона находящимся рядом войскам."' (sid:None)
+  lvl 2: tip='Усиленное сокрушение' (sid:None)
+         ub='"С <Awar,DataA2>%-й вероятностью атака нанесет <Awar,DataB2> урона находящимся рядом войскам."' (sid:None)
+[A1KD] |cffe6beaaБешенство|r (sid:39555) | lvls=1 | hk=Q | rtip=None (sid:None)
+  lvl 1: tip='|cffe6beaaБешенство|r' (sid:39556)
+         ub='Ускоряет атаку на 20% и передвижение на 15% на 9 сек.' (sid:37268)
+[Apoi] Ядовитое жало (sid:None) | lvls=1 | hk=T | rtip=None (sid:None)
+  lvl 1: tip='Ядовитое жало' (sid:None)
+         ub='None' (sid:None)
+[A0SX] Сигнал рою: напасть на точку. (sid:9176) | lvls=1 | hk=F | rtip=None (sid:None)
+  lvl 1: tip='Сигнал рою: напасть на точку.' (sid:30490)
+         ub='Приказывает т1 юнитам рядом атаковать указанную точку.' (sid:30491)
+[A0KR] Сон (sid:None) | lvls=1 | hk=R | rtip=Изучить «Сон» [|cffffcc00%d-й уровень|r] (sid:None)
+  lvl 1: tip='Сон ' (sid:11856)
+         ub='"Погружает врага в сон на <AUsl,Dur1> сек. Спящая цель просыпается, если ее атакуют."' (sid:None)
+[A0KQ] |cffe6beaaВолна исцеления|r (sid:39521) | lvls=1 | hk=E | rtip=Изучить «Волну исцеления» [|cffffcc00%d-й уровень|r] (sid:None)
+  lvl 1: tip='|cffe6beaaВолна исцеления|r' (sid:39520)
+         ub='"Призывает волну энергии, которая последовательно исцеляет до <AOhw,DataB1> союзников, восполняя <AOhw,DataA1> здоровья первой цели и меньше каждой последующей цели."' (sid:None)
+[A0ZU] |cffe6beaaСоздать личинку|r (sid:39548) | lvls=1 | hk=W | rtip=None (sid:None)
+  lvl 1: tip='|cffe6beaaСоздать личинку|r' (sid:39549)
+         ub='Создает личинки, которые могут эволюционировать в нужных юнитов.' (sid:30610)
+[A0IW] |cffe6beaaАура Матери Роя|r (sid:35320) | lvls=1 | hk=None | rtip=Изучить «Ауру выносливости» [|cffffcc00%d-й уровень|r] (sid:None)
+  lvl 1: tip='|cffe6beaaАура Матери Роя|r' (sid:36650)
+         ub='Увеличивает скорость атаки и перемещения на 9%.' (sid:22230)
+[Ansk] Каменная кожа (sid:None) | lvls=1 | hk=K | rtip=None (sid:None)
+  lvl 1: tip='Каменная кожа' (sid:None)
+         ub='"-<Ansk,DataC1> от получаемого урона от атак. Минимальный урон от атак: <Ansk,DataB1>."' (sid:None)
+[Afae] Волшебный огонь (sid:None) | lvls=1 | hk=Q | rtip=None (sid:None)
+  lvl 1: tip='Волшебный огонь' (sid:None)
+         ub='"Ослабляет броню врага на <Afae,DataA1> и раскрывает его местоположение. |nВремя действия: <Afae,Dur1> сек."' (sid:None)
+[A0JG] Москиты (sid:12098) | lvls=1 | hk=W | rtip=Изучить «Рой саранчи» (sid:None)
+  lvl 1: tip='Москиты' (sid:12099)
+         ub='Призывает два москита, которые атакуют находящихся рядом врагов. Когда саранча возвращается к владыке, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек.' (sid:12097)
+[A0IY] |cffe6beaaЭмпатия (sid:39511) | lvls=1 | hk=E | rtip=None (sid:None)
+  lvl 1: tip='Эмпатия' (sid:7205)
+         ub='"Связывает <Aspl,DataB1> воинов между собой. <Aspl,DataA1,%>% получаемого каждым связанным воином урона распределяется между всеми ними. |nВремя действия: <Aspl,Dur1> сек."' (sid:None)
+[A0JF] |cffe6beaaАура Пророка|r (sid:39517) | lvls=1 | hk=None | rtip=Изучить «Ауру выносливости» [|cffffcc00%d-й уровень|r] (sid:None)
+  lvl 1: tip='|cffe6beaaАура Пророка|r' (sid:39518)
+         ub='Увеличивает скорость атаки и перемещения на 7%.' (sid:12887)
+[A0KO] |cffe6beaaПаутина|r (sid:26823) | lvls=1 | hk=Q | rtip=Изучить «Змеиного идола» [|cffffcc00%d-й уровень|r] (sid:None)
+  lvl 1: tip='|cffe6beaaПаутина|r' (sid:26824)
+         ub='Создает паутину, которая увеличивает скорость перемещения на 15%. Длительность - 5 минут.' (sid:12474)
+[A0IZ] |cffe6beaaПаразит|r (sid:39512) | lvls=1 | hk=W | rtip=None (sid:None)
+  lvl 1: tip='|cffe6beaaПаразит|r' (sid:39513)
+         ub='Заражает врага смертоносным паразитом, который наносит 4 урона/сек. в течение 35 сек. Если цель погибает под действием паразита, из ее тела появляется паучок.' (sid:26788)
+[A1KF] |cffe6beaaКислотный снаряд|r (sid:27254) | lvls=1 | hk=W | rtip=Изучить «Кислотную бомбу» [|cffffcc00%d-й уровень|r] (sid:None)
+  lvl 1: tip='|cffe6beaaКислотный снаряд|r [|cffffcc001-й уровень|r]' (sid:27447)
+         ub='Бросает в цель кислотный снаряд, который при попадании разбивается и поражает находящихся рядом врагов. |n|nОслабляет броню на 3, наносит 5 урона/сек. основной цели и немного меньше урона дополнительным целям. |nВремя действия: 15 сек.' (sid:27448)
+[A1KG] |cffe6beaaЛогово паучков|r (sid:38210) | lvls=1 | hk=E | rtip=Изучить «Портативную фабрику» [|cffffcc00%d-й уровень|r] (sid:None)
+  lvl 1: tip='|cffe6beaaЛогово паучков|r' (sid:38475)
+         ub='Создает логово, из которого переодически будут появляться маленькие паучки.' (sid:38476)
+[A1KE] |cffe6beaaДисциплина|r (sid:27245) | lvls=1 | hk=None | rtip=None (sid:None)
+  lvl 1: tip='|cffe6beaaДисциплина|r' (sid:27246)
+         ub='Увеличивает урон от атак находящихся рядом союзников на 10%. Действует только на органических юнитов.' (sid:27251)
+[A0KN] Вязкая слизь (sid:12458) | lvls=1 | hk=None | rtip=None (sid:None)
+  lvl 1: tip='Вязкая слизь' (sid:11991)
+         ub='Скорость передвижения атакованных юнитов снижается на 4% за каждый удар. Атаки стакаются.' (sid:11541)
+[A0KM] |cffe6beaaПородить малого слизня (sid:39519) | lvls=1 | hk=None | rtip=None (sid:None)
+  lvl 1: tip='None' (sid:None)
+         ub='None' (sid:None)
+[A0C4] |cffc8cde1Невосприимчивость к магии|r (sid:8668) | lvls=1 | hk=None | rtip=None (sid:None)
+  lvl 1: tip='|cffc8cde1Невосприимчивость к магии|r' (sid:8669)
+         ub='Дает невосприимчивость к способностям.' (sid:None)
+[Arpl] |cffc8cde1Чумная эссенция|r (sid:1244) | lvls=1 | hk=Q | rtip=None (sid:None)
+  lvl 1: tip='|cffc8cde1Чумная эссенция|r' (sid:1245)
+         ub='"Восполняет находящимся рядом союзникам (вплоть до 6) <Arpl,DataA1> здоровья. Не действует на технику."' (sid:None)
+[Arpm] |cffc8cde1Призрачное касание|r (sid:1242) | lvls=1 | hk=W | rtip=None (sid:None)
+  lvl 1: tip='|cffc8cde1Призрачное касание|r' (sid:1243)
+         ub='"Восполняет находящимся рядом союзникам (вплоть до 6) <Arpm,DataB1> маны. Не действует на технику."' (sid:None)
+[A1R4] |cffe6beaaПожирание магии|r (sid:42396) | lvls=1 | hk=Q | rtip=None (sid:None)
+  lvl 1: tip='|cffe6beaaПожирание магии|r' (sid:42397)
+         ub='"Поглощает магические эффекты, действующие на войска в указанной области. Дает сфинксу <Advm,DataA1> здоровья и <Advm,DataB1> маны за каждую цель. |n|cffffcc00Наносит <Advm,DataE1> урона призванным целям.|r"' (sid:None)
+[Afak] |cffc8cde1Сфера разрушения|r (sid:1258) | lvls=1 | hk=W | rtip=None (sid:None)
+  lvl 1: tip='|cffc8cde1Сфера разрушения|r' (sid:1259)
+         ub='"+<Afak,DataA1> к урону от атак сфинкса. Атаки наносят урон по области."' (sid:None)
+[Aabs] |cffc8cde1Поглощение маны|r (sid:1256) | lvls=1 | hk=E | rtip=None (sid:None)
+  lvl 1: tip='|cffc8cde1Поглощение маны|r' (sid:1257)
+         ub='"Сфинкс забирает себе всю ману одного из ваших воинов."' (sid:None)
+[ACmi] Невосприимчивость к магии (sid:None) | lvls=1 | hk=None | rtip=None (sid:None)
+  lvl 1: tip='Невосприимчивость к магии' (sid:None)
+         ub='Дает невосприимчивость к магии и большинству способностей.' (sid:None)
+[A1JE] ДАММИ -  СИЛИТИД ИЗ ИЛИ ЛИЧИНКА (sid:11543) | lvls=1 | hk=C | rtip=None (sid:None)
+  lvl 1: tip='ДАММИ - ЭТО СИЛИТИД' (sid:11545)
+         ub='ДАММИ - ЭТО СИЛИТИД' (sid:11551)
+[A0J2] |cffe6beaaПорождение щупальца|r (sid:23371) | lvls=4 | hk=Q | rtip=|cffe6beaaПорождение щупальца|r (sid:23026)
+  lvl 1: tip='|cffe6beaaПорождение щупальца|r' (sid:23370)
+         ub='Создание щупальца (или нескольких, в зависимости от уровня) в выбранной области. Эти существа могут затрудинить путь врагу и нанести ему урон.' (sid:15031)
+  lvl 2: tip='|cffe6beaaПорождение щупальца|r' (sid:22148)
+         ub='Создание щупальца (или нескольких, в зависимости от уровня) в выбранной области. Эти существа могут затрудинить путь врагу и нанести ему урон.' (sid:30476)
+  lvl 3: tip='|cffe6beaaПорождение щупальца|r' (sid:22149)
+         ub='Создание щупальца (или нескольких, в зависимости от уровня) в выбранной области. Эти существа могут затрудинить путь врагу и нанести ему урон.' (sid:30477)
+  lvl 4: tip='|cffe6beaaПорождение щупальца|r' (sid:22372)
+         ub='Создание щупальца (или нескольких, в зависимости от уровня) в выбранной области. Эти существа могут затрудинить путь врагу и нанести ему урон.' (sid:30478)
+[A0SU] Пронзание (sid:None) | lvls=4 | hk=W | rtip=Изучить «Пронзание» [|cffffcc00%d-й уровень|r] (sid:None)
+  lvl 1: tip='"Пронзание [|cffffcc001-й уровень|r]"' (sid:None)
+         ub='"Призывает из-под земли шипы, нанося <AUim,DataC1> урона наземным врагам на прямой линии, подбрасывая и оглушая их на <AUim,Dur1> сек."' (sid:None)
+  lvl 2: tip='"Пронзание [|cffffcc002-й уровень|r]"' (sid:None)
+         ub='"Призывает из-под земли шипы, нанося <AUim,DataC2> урона наземным врагам на прямой линии, подбрасывая и оглушая их на <AUim,Dur2> сек."' (sid:None)
+  lvl 3: tip='"Пронзание [|cffffcc003-й уровень|r]"' (sid:None)
+         ub='"Призывает из-под земли шипы, нанося <AUim,DataC3> урона наземным врагам на прямой линии, подбрасывая и оглушая их на <AUim,Dur3> сек."' (sid:None)
+  lvl 4: tip='Пронзание [|cffffcc004-й уровень|r]' (sid:18439)
+         ub='Призывает из-под земли шипы, нанося <AUim,DataC4> урона наземным врагам на прямой линии, подбрасывая и оглушая их на <AUim,Dur4> сек.' (sid:18440)
+[A0SV] Темная стая (sid:None) | lvls=4 | hk=E | rtip=Изучить «Темную стаю» [|cffffcc00%d-й уровень|r] (sid:None)
+  lvl 1: tip='"Темная стая [|cffffcc001-й уровень|r]"' (sid:None)
+         ub='"Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA1> урона врагам на своем пути."' (sid:None)
+  lvl 2: tip='"Темная стая [|cffffcc002-й уровень|r]"' (sid:None)
+         ub='"Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA2> урона врагам на своем пути."' (sid:None)
+  lvl 3: tip='"Темная стая [|cffffcc003-й уровень|r]"' (sid:None)
+         ub='"Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA3> урона врагам на своем пути."' (sid:None)
+  lvl 4: tip='Темная стая [|cffffcc004-й уровень|r]' (sid:12016)
+         ub='Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA4> урона врагам на своем пути.' (sid:12028)
+[A0J1] |cffe6beaaПризыв Силитидов-Танков|r (sid:19977) | lvls=2 | hk=R | rtip=Изучить «Призыв Силитидов-Танков» (sid:11939)
+  lvl 1: tip='Призыв Силитидов-Танков' (sid:11940)
+         ub='Призывает 2 мощные боевых единицы: силитидов-танков.' (sid:30963)
+  lvl 2: tip='Призыв Силитидов-Танков' (sid:11945)
+         ub='Призывает 5 мощных боевых единиц: силитидов-танков.' (sid:18436)
+[AUls] Рой саранчи (sid:None) | lvls=2 | hk=R | rtip=Изучить «Рой саранчи» (sid:None)
+  lvl 1: tip='Рой саранчи' (sid:None)
+         ub='"Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек."' (sid:None)
+  lvl 2: tip='Рой саранчи' (sid:11973)
+         ub='Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur2> сек.' (sid:11974)
+[AEah] |cff808000Аура шипов|r (sid:15762) | lvls=4 | hk=E | rtip=Изучить «|cff808000Ауру шипов|r» [|cffffcc00%d-й уровень|r] (sid:15763)
+  lvl 1: tip='"Аура шипов [|cffffcc001-й уровень|r]"' (sid:None)
+         ub='"Дает находящимся рядом союзникам щит, который отражает <AEah,DataA1,%>% получаемого в ближнем бою урона от атак в атакующих врагов."' (sid:None)
+  lvl 2: tip='"Аура шипов [|cffffcc002-й уровень|r]"' (sid:None)
+         ub='"Дает находящимся рядом союзникам щит, который отражает <AEah,DataA2,%>% получаемого в ближнем бою урона от атак в атакующих врагов."' (sid:None)
+  lvl 3: tip='"Аура шипов [|cffffcc003-й уровень|r]"' (sid:None)
+         ub='"Дает находящимся рядом союзникам щит, который отражает <AEah,DataA3,%>% получаемого в ближнем бою урона от атак в атакующих врагов."' (sid:None)
+  lvl 4: tip='Аура шипов [|cffffcc004-й уровень|r]' (sid:7792)
+         ub='Дает находящимся рядом союзникам щит, который отражает <AEah,DataA4,%>% получаемого в ближнем бою урона от атак в атакующих врагов.' (sid:2643)
+[AUts] Шипастый панцирь (sid:None) | lvls=4 | hk=None | rtip=Изучить «Шипастый панцирь» [|cffffcc00%d-й уровень|r] (sid:None)
+  lvl 1: tip='"Шипастый панцирь [|cffffcc001-й уровень|r]"' (sid:None)
+         ub='"Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC1> к броне и отражают <AUts,DataA1,%>% получаемого в ближнем бою урона в атакующих врагов."' (sid:None)
+  lvl 2: tip='"Шипастый панцирь [|cffffcc002-й уровень|r]"' (sid:None)
+         ub='"Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC2> к броне и отражают <AUts,DataA2,%>% получаемого в ближнем бою урона в атакующих врагов."' (sid:None)
+  lvl 3: tip='"Шипастый панцирь [|cffffcc003-й уровень|r]"' (sid:None)
+         ub='"Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC3> к броне и отражают <AUts,DataA3,%>% получаемого в ближнем бою урона в атакующих врагов."' (sid:None)
+  lvl 4: tip='Шипастый панцирь [|cffffcc004-й уровень|r]' (sid:11933)
+         ub='Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC4> к броне и отражают <AUts,DataA4,%>% получаемого в ближнем бою урона в атакующих врагов.' (sid:11934)
+[A0SQ] |cfff09696Раскат грома|r (sid:6528) | lvls=4 | hk=Q | rtip=Изучить «|cfff09696Раскат грома|r» [|cffffcc00%d-й уровень|r] (sid:6529)
+  lvl 1: tip='|cfff09696Раскат грома|r [|cffffcc001-й уровень|r]' (sid:6530)
+         ub='Бьет по земле, нанося |cffb4dcdc<AHtc,DataA1> |rурона находящимся рядом наземным врагам и замедляя их передвижение на |cffb4dcdc<AHtc,DataC1,%>%|r и атаку на |cffb4dcdc<AHtc,DataD1,%>%.|r' (sid:15388)
+  lvl 2: tip='|cfff09696Раскат грома|r [|cffffcc002-й уровень|r]' (sid:6531)
+         ub='Бьет по земле, нанося |cffb4dcdc<AHtc,DataA2>|r урона находящимся рядом наземным врагам и замедляя их передвижение на |cffb4dcdc<AHtc,DataC2,%>%|r и атаку на |cffb4dcdc<AHtc,DataD2,%>%.|r' (sid:15416)
+  lvl 3: tip='|cfff09696Раскат грома|r [|cffffcc003-й уровень|r]' (sid:9521)
+         ub='Бьет по земле, нанося |cffb4dcdc<AHtc,DataA3>|r урона находящимся рядом наземным врагам и замедляя их передвижение на |cffb4dcdc<AHtc,DataC3,%>%|r и атаку на |cffb4dcdc<AHtc,DataD3,%>%.|r' (sid:15389)
+  lvl 4: tip='|cfff09696Раскат грома|r [|cffffcc004-й уровень|r]' (sid:9522)
+         ub='Бьет по земле, нанося |cffb4dcdc400|r урона находящимся рядом наземным врагам и замедляя их передвижение на |cffb4dcdc<AHtc,DataC3,%>%|r и атаку на |cffb4dcdc<AHtc,DataD3,%>%.|r' (sid:15386)
+[AEtq] Calm (sid:25766) | lvls=2 | hk=R | rtip=Explore "Tranquility" (sid:25768)
+  lvl 1: tip='|cffe4cfa3Умиротворение|r [|cffffffff1-й уровень|r] (|cffffffffR|r)' (sid:None)
+         ub='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает поток целительной энергии, восстанавливающий союзникам в области |cffffffff48|cffced4da ед. здоровья в секунду в течение |cffffffff25|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r' (sid:None)
+  lvl 2: tip='Спокойствие' (sid:2292)
+         ub='Призывает поток целительной энергии, восполняющей <AEtq,DataA2> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur2> сек.' (sid:2306)
+[AUau] Нечистая аура (sid:None) | lvls=4 | hk=None | rtip=Изучить «Нечистую ауру» [|cffffcc00%d-й уровень|r] (sid:None)
+  lvl 1: tip='"Нечистая аура [|cffffcc001-й уровень|r]"' (sid:None)
+         ub='"+<AUau,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."' (sid:None)
+  lvl 2: tip='"Нечистая аура [|cffffcc002-й уровень|r]"' (sid:None)
+         ub='"+<AUau,DataA2,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."' (sid:None)
+  lvl 3: tip='"Нечистая аура [|cffffcc003-й уровень|r]"' (sid:None)
+         ub='"+<AUau,DataA3,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."' (sid:None)
+  lvl 4: tip='Нечистая аура [|cffffcc004-й уровень|r]' (sid:495)
+         ub='+<AUau,DataA4,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.' (sid:508)
+[AOhx] Сглаз (sid:None) | lvls=4 | hk=W | rtip=Изучить «Сглаз» [|cffffcc00%d-й уровень|r] (sid:None)
+  lvl 1: tip='"Сглаз [|cffffcc001-й уровень|r]"' (sid:None)
+         ub='"Превращает врага в случайное животное на <AOhx,Dur1> сек. «Сглаз» не дает использовать способности, предметы, не позволяет атаковать и уменьшает скорость передвижения цели до минимального значения."' (sid:None)
+  lvl 2: tip='"Сглаз [|cffffcc002-й уровень|r]"' (sid:None)
+         ub='"Превращает врага в случайное животное на <AOhx,Dur2> сек. «Сглаз» не дает использовать способности, предметы, не позволяет атаковать и уменьшает скорость передвижения цели до минимального значения."' (sid:None)
+  lvl 3: tip='"Сглаз [|cffffcc003-й уровень|r]"' (sid:None)
+         ub='"Превращает врага в случайное животное на <AOhx,Dur3> сек. «Сглаз» не дает использовать способности, предметы, не позволяет атаковать и уменьшает скорость передвижения цели до минимального значения."' (sid:None)
+  lvl 4: tip='Сглаз [|cffffcc004-й уровень|r]' (sid:11976)
+         ub='Превращает врага в случайное животное на <AOhx,Dur4> сек.' (sid:11977)
+[A0ST] Волна исцеления (sid:None) | lvls=4 | hk=Q | rtip=Изучить «Волну исцеления» [|cffffcc00%d-й уровень|r] (sid:None)
+  lvl 1: tip='"Волна исцеления [|cffffcc001-й уровень|r]"' (sid:None)
+         ub='Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AOhw,DataA1> здоровья, до <AOhw,DataB1> целей.|r ' (sid:18214)
+  lvl 2: tip='"Волна исцеления [|cffffcc002-й уровень|r]"' (sid:None)
+         ub='Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом. |n|cffffcc002-й уровень:|r |cffb4dcdc<AOhw,DataA2> здоровья, до <AOhw,DataB2> целей.|r ' (sid:18249)
+  lvl 3: tip='"Волна исцеления [|cffffcc003-й уровень|r]"' (sid:None)
+         ub='Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом. |n|cffffcc003-й уровень:|r |cffb4dcdc<AOhw,DataA3> здоровья, до <AOhw,DataB3> целей.|r' (sid:18253)
+  lvl 4: tip='Волна исцеления [|cffffcc004-й уровень|r]' (sid:15434)
+         ub='Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом. |n|cffffcc004-й уровень:|r |cffb4dcdc385 здоровья, до 6 целей.|r' (sid:4404)
+[A0Y2] |cffe6beaaПроклятие|r (sid:17154) | lvls=4 | hk=Q | rtip=|cffe6beaaПроклятие|r (sid:21237)
+  lvl 1: tip='|cffe6beaaПроклятие|r' (sid:17427)
+         ub='Накладывает проклятие как на врагов так и на союзников, разрущающее постеменно все к чему сможет дотянутся магия бездны. |nВремя действия: <ACls,Dur1> сек.' (sid:19555)
+  lvl 2: tip='|cffe6beaaПроклятие|r' (sid:17428)
+         ub='None' (sid:None)
+  lvl 3: tip='|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет Нерубов Стражей аурой полководца, повышающей урон окружающих союзных войск.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНеруб Страж|cffced4da.|r' (sid:18400)
+         ub='None' (sid:None)
+  lvl 4: tip='|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наращивает сверхпрочный панцирь, уменьшающий получаемый урон от вражеских атак.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНерубский броненосец|cffced4da.|r' (sid:18401)
+         ub='None' (sid:None)
+[A1B6] Создание Логова (sid:30479) | lvls=2 | hk=R | rtip=Создание Логова (sid:30480)
+  lvl 1: tip='Создание Логова' (sid:30484)
+         ub='Создает в заданной точке здание, переодически выпускающее силитидов-танков.' (sid:30483)
+  lvl 2: tip='Создание Логова' (sid:30482)
+         ub='Создает в заданной точке здание, переодически выпускающее силитидов-танков.' (sid:30485)
+[A193] Ярость (sid:23434) | lvls=4 | hk=Q | rtip=Ярость (sid:29743)
+  lvl 1: tip='Ярость' (sid:23450)
+         ub='"Ускоряет атаку на <Afzy,DataA1,%>% и передвижение на <Afzy,DataB1,%>% на <Afzy,Dur1> сек."' (sid:None)
+  lvl 2: tip='Ярость' (sid:28660)
+         ub='Ускоряет атаку на <Afzy,DataA2,%>% и передвижение на <Afzy,DataB2,%>% на <Afzy,Dur2> сек.' (sid:28939)
+  lvl 3: tip='Ярость' (sid:28661)
+         ub='Ускоряет атаку на <Afzy,DataA3,%>% и передвижение на <Afzy,DataB3,%>% на <Afzy,Dur3> сек.' (sid:29493)
+  lvl 4: tip='Ярость' (sid:29742)
+         ub='Ускоряет атаку на <Afzy,DataA4,%>% и передвижение на <Afzy,DataB4,%>% на <Afzy,Dur4> сек.' (sid:29678)
+[A192] |cffe6beaaМощь Акиров|r (sid:3176) | lvls=4 | hk=W | rtip=|cffe6beaaМощь Акиров|r (sid:3171)
+  lvl 1: tip='|cffe6beaaМощь Акиров|r' (sid:3172)
+         ub='Снижает броню врагов в небольшом радиусе от героя.' (sid:29735)
+  lvl 2: tip='|cffd45e29Мощь Акиров|r' (sid:3173)
+         ub='Снижает броню врагов в небольшом радиусе от героя.' (sid:29736)
+  lvl 3: tip='|cffd45e39Мощь Акиров|r' (sid:3174)
+         ub='Снижает броню врагов в небольшом радиусе от героя.' (sid:29737)
+  lvl 4: tip='|cffd45e49Мощь Акиров|r' (sid:3175)
+         ub='Снижает броню врагов в небольшом радиусе от героя.' (sid:29738)
+[A188] |cffe6beaaДвойная телепортация|r (sid:23372) | lvls=4 | hk=E | rtip=|cffe6beaaДвойная телепортация|r (sid:23374)
+  lvl 1: tip='|cffe6beaaДвойная телепортация|r' (sid:23375)
+         ub='Меняет близнецов местами и восстанавливает каждому некоторый процент здоровья.' (sid:28953)
+  lvl 2: tip='|cffd45e29Двойная телепортация|r' (sid:23376)
+         ub='Меняет близнецов местами и восстанавливает каждому некоторый процент здоровья.' (sid:28954)
+  lvl 3: tip='|cffd45e39Двойная телепортация|r' (sid:23387)
+         ub='Меняет близнецов местами и восстанавливает каждому некоторый процент здоровья.' (sid:28955)
+  lvl 4: tip='|cffd45e49Двойная телепортация|r' (sid:23388)
+         ub='Меняет близнецов местами и восстанавливает каждому некоторый процент здоровья.' (sid:28956)
+[A197] Создание Антенн (sid:29784) | lvls=2 | hk=R | rtip=Изучить «Создание Антенн» (sid:29785)
+  lvl 1: tip='Создание Антенн' (sid:29787)
+         ub='Создает одну антенну, усиливающую юнитов рядом.' (sid:29788)
+  lvl 2: tip='Создание Антенн' (sid:29789)
+         ub='Создает одну антенну, усиливающую юнитов рядом.' (sid:29790)
+[A195] Древняя магия (sid:29767) | lvls=4 | hk=Q | rtip=Древняя магия (sid:30410)
+  lvl 1: tip='Древняя магия' (sid:29768)
+         ub='Обрушивает на указанную область волны тьмы. Каждая волна наносит <A195,DataB1> урона мгновенно и <A195,DataE1> урона/сек. в течение <A195,Dur1> сек. |nВолн: <A195,DataA1>.' (sid:30406)
+  lvl 2: tip='Древняя магия' (sid:29770)
+         ub='Обрушивает на указанную область волны тьмы. Каждая волна наносит <A295,DataB2> урона мгновенно и <A295,DataE2> урона/сек. в течение <A295,Dur2> сек. |nВолн: <A295,DataA2>.' (sid:30407)
+  lvl 3: tip='Древняя магия' (sid:29771)
+         ub='Обрушивает на указанную область волны тьмы. Каждая волна наносит <A395,DataB3> урона мгновенно и <A395,DataE3> урона/сек. в течение <A395,Dur3> сек. |nВолн: <A395,DataA3>.' (sid:30408)
+  lvl 4: tip='Древняя магия' (sid:29772)
+         ub='Обрушивает на указанную область волны тьмы. Каждая волна наносит <A495,DataB4> урона мгновенно и <A495,DataE4> урона/сек. в течение <A495,Dur4> сек. |nВолн: <A495,DataA4>.' (sid:30409)
+[A191] Передача Жизни (sid:29722) | lvls=4 | hk=W | rtip=Изучить «Передача Жизни» [|cffffcc00%d-й уровень|r] (sid:29723)
+  lvl 1: tip='Передача Жизни [|cffffcc001-й уровень|r]' (sid:29719)
+         ub='Передает здоровье союзнику в обмен на ману.' (sid:29724)
+  lvl 2: tip='Передача Жизни [|cffffcc001-й уровень|r]' (sid:29720)
+         ub='Передает здоровье союзнику в обмен на ману.' (sid:29725)
+  lvl 3: tip='Передача Жизни [|cffffcc001-й уровень|r]' (sid:29721)
+         ub='Передает здоровье союзнику в обмен на ману.' (sid:29726)
+  lvl 4: tip='Передача Жизни [|cffffcc001-й уровень|r]' (sid:29717)
+         ub='Передает здоровье союзнику в обмен на ману.' (sid:29716)
+
+=== BUFFS STATS ===
+[B04G] tip='Аура антенн' (sid:11675) | ed='Аура антенн' (sid:11677) | ub='Передвижение и регенерация здоровья ускорены.' (sid:None)
+[B04H] tip='Аура Матери Роя' (sid:11684) | ed='Аура Матери Роя' (sid:12082) | ub='Передвижение и атака ускорены.' (sid:12466)
+[B04I] tip='Аура Пророка' (sid:12085) | ed='Аура Пророка' (sid:12086) | ub='Передвижение и атака ускорены.' (sid:12467)
+[B04K] tip='Вязкая слизь' (sid:12459) | ed='None' (sid:None) | ub='Скорость передвижения снижена на 15%.' (sid:12061)
+[B05Z] tip='|cffe6beaaПроклятие|r' (sid:21819) | ed='None' (sid:None) | ub='Находящиеся рядом союзники и враги получают урон.' (sid:None)
+[B06W] tip='Воздействие Акиров' (sid:29744) | ed='None' (sid:None) | ub='Броня снижена.' (sid:29745)
+[B06X] tip='Магия акиров' (sid:29793) | ed='None' (sid:None) | ub='Периодический урон.' (sid:None)
+[B082] tip='|cffe6beaaДисциплина|r' (sid:38477) | ed='None' (sid:None) | ub='Урон увеличен на 10%.' (sid:38478)
+[B042] tip='|cffbec8f5Скорость |r' (sid:10388) | ed='None' (sid:None) | ub='"Оглушение. Невозможно двигаться, атаковать и применять способности."' (sid:None)
+[B004] tip='Призыв' (sid:6020) | ed='None' (sid:None) | ub='Призванные цели уязвимы к рассеивающим способностям.' (sid:None)
+[B023] tip='|cffe4cfa3Поселение|r' (sid:None) | ed='None' (sid:None) | ub='|cffa6afb8ЭФФЕКТ:|cffced4da Городская аура. Не изменяет броню здания.|r' (sid:None)
+[BEah] tip='Аура шипов' (sid:None) | ed='None' (sid:None) | ub='"Враги, атакующие в ближнем бою, получают урон."' (sid:None)
+[BHad] tip='|cffe4cfa3Аура брони|r' (sid:None) | ed='None' (sid:None) | ub='|cffa6afb8ЭФФЕКТ:|cffced4da Изменяет броню. Источник ауры может давать бонус к защите или снижать её; величина и направление эффекта указаны в описании способности-источника.|r' (sid:None)
+[BHtc] tip='|cffe4cfa3Раскат грома|r' (sid:None) | ed='None' (sid:None) | ub='|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения и атаки |cffe69a8dснижена|cffced4da.|r' (sid:None)
+[BNab] tip='|cffe4cfa3Кислотная бомба|r' (sid:None) | ed='None' (sid:None) | ub='|cffa6afb8ЭФФЕКТ:|cffced4da Цель поражена кислотой. Заклинание может наносить периодический урон и ослаблять броню; параметры определяются источником.|r' (sid:None)
+[BNcg] tip='Заводной гоблин' (sid:None) | ed='None' (sid:None) | ub='"Заводной гоблин."' (sid:None)
+[BNfy] tip='Портативная фабрика' (sid:None) | ed='None' (sid:None) | ub='Портативная фабрика.' (sid:None)
+[BNpa] tip='"Паразит"' (sid:None) | ed='None' (sid:None) | ub='Периодический урон' (sid:None)
+[BNpm] tip='"Паразит"' (sid:None) | ed='None' (sid:None) | ub='Периодический урон' (sid:None)
+[BNrf] tip='None' (sid:None) | ed='Rain of Fire (Area)' (sid:None) | ub='None' (sid:None)
+[BOae] tip='|cffe4cfa3Аура скорости|r' (sid:None) | ed='None' (sid:None) | ub='|cffa6afb8ЭФФЕКТ:|cffced4da Изменяет скорость передвижения и атаки. Источник ауры может ускорять или замедлять войска; величины указаны в описании способности-источника.|r' (sid:None)
+[BOhx] tip='Сглаз' (sid:None) | ed='None' (sid:None) | ub='Превращение в животное.' (sid:None)
+[BOwd] tip='|cffe4cfa3Призванное создание|r' (sid:None) | ed='None' (sid:None) | ub='|cffa6afb8ЭФФЕКТ:|cffced4da Существо создано магией призыва.|r' (sid:None)
+[BUau] tip='Нечистая аура' (sid:None) | ed='None' (sid:None) | ub='Передвижение и регенерация здоровья ускорены.' (sid:None)
+[BUcs] tip='None' (sid:None) | ed='Carrion Swarm (Caster)' (sid:None) | ub='None' (sid:None)
+[BUim] tip='Пронзание' (sid:None) | ed='None' (sid:None) | ub='Подбрасывание в воздух.' (sid:None)
+[BUsl] tip='|cffe4cfa3Оцепенение|r' (sid:None) | ed='None' (sid:None) | ub='|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffe69a8dне может двигаться, атаковать и применять способности|cffced4da до окончания эффекта.|r' (sid:None)
+[BUsp] tip='None' (sid:None) | ed='Sleep (Pause)' (sid:None) | ub='None' (sid:None)
+[BUts] tip='None' (sid:None) | ed='Spiked Carapace' (sid:None) | ub='None' (sid:None)
+[Bfae] tip='Волшебный огонь' (sid:None) | ed='None' (sid:None) | ub='"Броня ослаблена, местоположение раскрыто."' (sid:None)
+[Bfzy] tip='Бешенство' (sid:None) | ed='None' (sid:None) | ub='Атака и передвижение ускорены.' (sid:None)
+[Blsa] tip='None' (sid:None) | ed='Lightning Shield (Caster)' (sid:None) | ub='None' (sid:None)
+[Bpoi] tip='Яд' (sid:None) | ed='None' (sid:None) | ub='Периодический урон.' (sid:None)
+[Bpsd] tip='Яд' (sid:None) | ed='None' (sid:None) | ub='Периодический урон.' (sid:None)
+[Brpl] tip='Чумная эссенция' (sid:None) | ed='None' (sid:None) | ub='Часть здоровья восполнена.' (sid:None)
+[Brpm] tip='Призрачное касание' (sid:None) | ed='None' (sid:None) | ub='Мана частично восполнена.' (sid:None)
+[Bspl] tip='|cffe4cfa3Духовная связь|r' (sid:None) | ed='None' (sid:None) | ub='|cffa6afb8ЭФФЕКТ:|cffced4da Часть получаемого урона перераспределяется между связанными существами. Доля урона определяется наложившим связь заклинанием.|r' (sid:None)
+[Bust] tip='None' (sid:None) | ed='None' (sid:None) | ub='None' (sid:None)

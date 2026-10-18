@@ -60,7 +60,7 @@ function RefreshPlayerNameRow(p)
     local row = EnsureMultiboardPlayerRow(GetPlayerId(p))
     if row ~= nil then
         local text = I2S(GetConvertedPlayerId(p)) .. "." .. GetPlayerNameCut(p)
-        MultiboardSetItemValue(MultiboardItem[row * 2], PlayerColorHexWrap(p, text))
+        MultiboardSetCell(row, 0, PlayerColorHexWrap(p, text))
     end
 end
 -- Trigger: StartTableCode
@@ -69,19 +69,11 @@ function ActivePlayers()
     return GetPlayerSlotState(GetFilterPlayer()) == PLAYER_SLOT_STATE_PLAYING and not IsPlayerInForce(GetFilterPlayer(), udg_Bots)
 end
 function GetPlayerNameCut(p)
-    local s= GetPlayerName(p)
-    local s2
-    local s3= ""
-    local i= 0
-    while true do
-        s2=SubString(s, i, i + 1)
-        if s2 == "" or i > 18 or s2 == nil then break end
-        
-        
-        s3=s3 .. s2
-        i=i + 1
-    end
-    return s3
+    -- Cut by UTF-8 characters, not bytes: a Cyrillic letter takes two bytes.
+    local s = GetPlayerName(p) or ""
+    local cut = utf8.offset(s, 21)
+    if cut ~= nil then s = string.sub(s, 1, cut - 1) end
+    return s
 end
 -- Reforged player-color hex (enum order 0..23 matches classic). Used to tint
 -- multiboard player names by their in-game color.
@@ -130,7 +122,7 @@ function EnsureMultiboardPlayerRow(pi)
 
     if ThirdColumnHeader ~= nil then
         ThirdColumn[pi]=MultiboardGetItem(Multiboard, ownerIndex, 2)
-        MultiboardSetItemValue(ThirdColumn[pi], "0.000%")
+        MultiboardSetItemValue(ThirdColumn[pi], "0%")
         MultiboardSetItemWidth(ThirdColumn[pi], 0.06)
     end
     if ArmyPowerColumnHeader ~= nil then
@@ -312,11 +304,12 @@ end
 --===========================================================================
 -- Trigger: Race Bezlikie O
 --===========================================================================
-function Trig_Race_Bezlikie_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(3, FourCC('u02D'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    RemoveUnit(GetSpellAbilityUnit())
-    SetPlayerTechResearchedSwap(FourCC('R0F9'), 1, GetOwningPlayer(GetTriggerUnit()))
+function Trig_Race_Bezlikie_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(3, FourCC('u02D'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    RemoveUnit(caster)
+    SetPlayerTechResearchedSwap(FourCC('R0F9'), 1, GetOwningPlayer(caster))
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -331,11 +324,12 @@ end
 --===========================================================================
 -- Trigger: Race IceTrols
 --===========================================================================
-function Trig_Race_IceTrols_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('o045'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    RemoveUnit(GetSpellAbilityUnit())
-    SetPlayerTechResearchedSwap(FourCC('R0L1'), 1, GetOwningPlayer(GetTriggerUnit()))
+function Trig_Race_IceTrols_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('o045'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    RemoveUnit(caster)
+    SetPlayerTechResearchedSwap(FourCC('R0L1'), 1, GetOwningPlayer(caster))
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -350,12 +344,13 @@ end
 --===========================================================================
 -- Trigger: Race Stromgard O
 --===========================================================================
-function Trig_Race_Stromgard_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('h0G9'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    RemoveUnit(GetSpellAbilityUnit())
-    SetPlayerTechResearchedSwap(FourCC('R0H3'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0HY'), 1, GetOwningPlayer(GetTriggerUnit()))
+function Trig_Race_Stromgard_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('h0G9'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    RemoveUnit(caster)
+    SetPlayerTechResearchedSwap(FourCC('R0H3'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0HY'), 1, GetOwningPlayer(caster))
     TriggerExecute(gg_trg_StromgardOn)
     RemoveLocation(udg_LocalPosition2)
 end
@@ -371,11 +366,12 @@ end
 --===========================================================================
 -- Trigger: Race Dragon O
 --===========================================================================
-function Trig_Race_Dragon_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(1, FourCC('dra1'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R0BY'), 1, GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Dragon_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(1, FourCC('dra1'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0BY'), 1, GetOwningPlayer(caster))
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
     DragonsOn()
 end
@@ -391,11 +387,12 @@ end
 --===========================================================================
 -- Trigger: Race Dragon2
 --===========================================================================
-function Trig_Race_Dragon2_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('o01D'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    --call SetPlayerTechResearchedSwap( 'R0BY', 1, GetOwningPlayer(GetTriggerUnit()) )
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Dragon2_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('o01D'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    --call SetPlayerTechResearchedSwap( 'R0BY', 1, GetOwningPlayer(caster) )
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -410,11 +407,12 @@ end
 --===========================================================================
 -- Trigger: Race Argvinol O
 --===========================================================================
-function Trig_Race_Argvinol_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('e02T'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    RemoveUnit(GetSpellAbilityUnit())
-    SetPlayerTechResearchedSwap(FourCC('R0BZ'), 1, GetOwningPlayer(GetTriggerUnit()))
+function Trig_Race_Argvinol_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('e02T'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    RemoveUnit(caster)
+    SetPlayerTechResearchedSwap(FourCC('R0BZ'), 1, GetOwningPlayer(caster))
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -429,11 +427,12 @@ end
 --===========================================================================
 -- Trigger: Race Elements O
 --===========================================================================
-function Trig_Race_Elements_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('e00F'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    RemoveUnit(GetSpellAbilityUnit())
-    SetPlayerTechResearchedSwap(FourCC('R0A2'), 1, GetOwningPlayer(GetTriggerUnit()))
+function Trig_Race_Elements_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('e00F'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    RemoveUnit(caster)
+    SetPlayerTechResearchedSwap(FourCC('R0A2'), 1, GetOwningPlayer(caster))
     ElemOn()
     RemoveLocation(udg_LocalPosition2)
 end
@@ -449,12 +448,13 @@ end
 --===========================================================================
 -- Trigger: Race Goblins O
 --===========================================================================
-function Trig_Race_Goblins_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('n00V'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R07E'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0J3'), 1, GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Goblins_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('n00V'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07E'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0J3'), 1, GetOwningPlayer(caster))
+    RemoveUnit(caster)
     TriggerExecute(gg_trg_GoblinsOn)
     RemoveLocation(udg_LocalPosition2)
 end
@@ -470,11 +470,12 @@ end
 --===========================================================================
 -- Trigger: Race Demon O
 --===========================================================================
-function Trig_Race_Demon_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(8, FourCC('e02Y'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R0AO'), 1, GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Demon_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(8, FourCC('e02Y'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0AO'), 1, GetOwningPlayer(caster))
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -489,14 +490,15 @@ end
 --===========================================================================
 -- Trigger: Race Illidari O
 --===========================================================================
-function Trig_Race_Illidari_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('h0EI'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R07H'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0KZ'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0L0'), 1, GetOwningPlayer(GetTriggerUnit()))
+function Trig_Race_Illidari_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('h0EI'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07H'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0KZ'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0L0'), 1, GetOwningPlayer(caster))
     ConditionalTriggerExecute(gg_trg_IllidaryOn)
-    RemoveUnit(GetSpellAbilityUnit())
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -511,12 +513,13 @@ end
 --===========================================================================
 -- Trigger: Race Bandits O
 --===========================================================================
-function Trig_Race_Bandits_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('h002'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R00G'), 1, GetOwningPlayer(GetTriggerUnit()))
+function Trig_Race_Bandits_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('h002'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R00G'), 1, GetOwningPlayer(caster))
     TriggerExecute(gg_trg_BanditsOn)
-    RemoveUnit(GetSpellAbilityUnit())
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -531,11 +534,12 @@ end
 --===========================================================================
 -- Trigger: Race Red Orden O
 --===========================================================================
-function Trig_Race_Red_Orden_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('h014'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R07B'), 1, GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Red_Orden_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('h014'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07B'), 1, GetOwningPlayer(caster))
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -550,12 +554,13 @@ end
 --===========================================================================
 -- Trigger: Race Undead O
 --===========================================================================
-function Trig_Race_Undead_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(3, FourCC('u00P'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R07I'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0J5'), 1, GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Undead_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(3, FourCC('u00P'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07I'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0J5'), 1, GetOwningPlayer(caster))
+    RemoveUnit(caster)
     ConditionalTriggerExecute(gg_trg_UndeadOn)
     RemoveLocation(udg_LocalPosition2)
 end
@@ -571,15 +576,16 @@ end
 --===========================================================================
 -- Trigger: Race Horde
 --===========================================================================
-function Trig_Race_Horde_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('opeo'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R0DV'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0IR'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0J3'), 1, GetOwningPlayer(GetTriggerUnit()))
+function Trig_Race_Horde_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('opeo'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0DV'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0IR'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0J3'), 1, GetOwningPlayer(caster))
     ConditionalTriggerExecute(gg_trg_HordeOn)
     ConditionalTriggerExecute(gg_trg_StartHorde)
-    RemoveUnit(GetSpellAbilityUnit())
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -594,13 +600,14 @@ end
 --===========================================================================
 -- Trigger: Race Blood Elves O
 --===========================================================================
-function Trig_Race_Blood_Elves_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('h04K'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R07C'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0L0'), 1, GetOwningPlayer(GetTriggerUnit()))
+function Trig_Race_Blood_Elves_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('h04K'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07C'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0L0'), 1, GetOwningPlayer(caster))
     ConditionalTriggerExecute(gg_trg_BloodElvesOn)
-    RemoveUnit(GetSpellAbilityUnit())
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -615,12 +622,13 @@ end
 --===========================================================================
 -- Trigger: Race Dalaran O
 --===========================================================================
-function Trig_Race_Dalaran_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(3, FourCC('u001'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R0BW'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Dalaran_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(3, FourCC('u001'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0BW'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, GetOwningPlayer(caster))
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -635,12 +643,13 @@ end
 --===========================================================================
 -- Trigger: Race KulTiras O
 --===========================================================================
-function Trig_Race_KulTiras_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('h013'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R07D'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0HX'), 1, GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_KulTiras_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('h013'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07D'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0HX'), 1, GetOwningPlayer(caster))
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -655,11 +664,12 @@ end
 --===========================================================================
 -- Trigger: Race Nocnorogdennue O
 --===========================================================================
-function Trig_Race_Nocnorogdennue_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('h0CJ'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    RemoveUnit(GetSpellAbilityUnit())
-    SetPlayerTechResearchedSwap(FourCC('R07J'), 1, GetOwningPlayer(GetTriggerUnit()))
+function Trig_Race_Nocnorogdennue_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('h0CJ'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    RemoveUnit(caster)
+    SetPlayerTechResearchedSwap(FourCC('R07J'), 1, GetOwningPlayer(caster))
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -674,11 +684,12 @@ end
 --===========================================================================
 -- Trigger: Race Draeneis O
 --===========================================================================
-function Trig_Race_Draeneis_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('h012'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R07G'), 1, GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Draeneis_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('h012'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07G'), 1, GetOwningPlayer(caster))
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -693,11 +704,12 @@ end
 --===========================================================================
 -- Trigger: Race Vryculs O
 --===========================================================================
-function Trig_Race_Vryculs_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('h0C9'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R07F'), 1, GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Vryculs_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('h0C9'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07F'), 1, GetOwningPlayer(caster))
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -712,12 +724,13 @@ end
 --===========================================================================
 -- Trigger: Race Kult Sum Molota O
 --===========================================================================
-function Trig_Race_Kult_Sum_Molota_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('o00J'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R07K'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Kult_Sum_Molota_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('o00J'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07K'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, GetOwningPlayer(caster))
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -732,11 +745,12 @@ end
 --===========================================================================
 -- Trigger: Race Nerubs O
 --===========================================================================
-function Trig_Race_Nerubs_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(3, FourCC('h0BE'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R07N'), 1, GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Nerubs_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(3, FourCC('h0BE'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07N'), 1, GetOwningPlayer(caster))
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -751,12 +765,13 @@ end
 --===========================================================================
 -- Trigger: Race Silitids O
 --===========================================================================
-function Trig_Race_Silitids_O_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(8, FourCC('e01G'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R0BV'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerAbilityAvailableBJ(true, FourCC('A1B7'), GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Silitids_O_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(8, FourCC('e01G'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0BV'), 1, GetOwningPlayer(caster))
+    SetPlayerAbilityAvailableBJ(true, FourCC('A1B7'), GetOwningPlayer(caster))
+    RemoveUnit(caster)
     ConditionalTriggerExecute(gg_trg_SilitidsOn)
     RemoveLocation(udg_LocalPosition2)
 end
@@ -772,13 +787,14 @@ end
 --===========================================================================
 -- Trigger: Race Gnomes
 --===========================================================================
-function Trig_Race_Gnomes_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('h0FA'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    CreateNUnitsAtLoc(1, FourCC('h0FX'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R0BX'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0HW'), 1, GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Gnomes_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('h0FA'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('h0FX'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0BX'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0HW'), 1, GetOwningPlayer(caster))
+    RemoveUnit(caster)
     ConditionalTriggerExecute(gg_trg_GnomesOn)
     RemoveLocation(udg_LocalPosition2)
 end
@@ -794,11 +810,12 @@ end
 --===========================================================================
 -- Trigger: Race Gilneas
 --===========================================================================
-function Trig_Race_Gilneas_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('h0IT'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R0FX'), 1, GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Gilneas_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('h0IT'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0FX'), 1, GetOwningPlayer(caster))
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -813,12 +830,13 @@ end
 --===========================================================================
 -- Trigger: Race Nagi
 --===========================================================================
-function Trig_Race_Nagi_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('nmpe'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R0FS'), 1, GetOwningPlayer(GetTriggerUnit()))
+function Trig_Race_Nagi_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('nmpe'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0FS'), 1, GetOwningPlayer(caster))
     
-    RemoveUnit(GetSpellAbilityUnit())
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -833,11 +851,12 @@ end
 --===========================================================================
 -- Trigger: Race nightelf
 --===========================================================================
-function Trig_Race_nightelf_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(6, FourCC('ewsp'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R07L'), 1, GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_nightelf_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(6, FourCC('ewsp'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07L'), 1, GetOwningPlayer(caster))
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -852,12 +871,13 @@ end
 --===========================================================================
 -- Trigger: Race Forsaken
 --===========================================================================
-function Trig_Race_Forsaken_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('h0J5'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R0G3'), 1, GetOwningPlayer(GetTriggerUnit()))
+function Trig_Race_Forsaken_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('h0J5'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0G3'), 1, GetOwningPlayer(caster))
     ForsakenOn()
-    RemoveUnit(GetSpellAbilityUnit())
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -872,11 +892,12 @@ end
 --===========================================================================
 -- Trigger: Race Ogres
 --===========================================================================
-function Trig_Race_Ogres_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('o03W'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R0HT'), 1, GetOwningPlayer(GetTriggerUnit()))
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Ogres_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('o03W'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0HT'), 1, GetOwningPlayer(caster))
+    RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -891,16 +912,17 @@ end
 --===========================================================================
 -- Trigger: Race Alliance
 --===========================================================================
-function Trig_Race_Alliance_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('hpea'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Alliance_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('hpea'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    RemoveUnit(caster)
     ConditionalTriggerExecute(gg_trg_AllyOn)
-    SetPlayerTechResearchedSwap(FourCC('R0GZ'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0HX'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0HW'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0HY'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0GZ'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0HX'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0HW'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0HY'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, GetOwningPlayer(caster))
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -915,12 +937,13 @@ end
 --===========================================================================
 -- Trigger: Race JungleTrolls
 --===========================================================================
-function Trig_Race_JungleTrolls_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('o04Q'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_JungleTrolls_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('o04Q'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    RemoveUnit(caster)
     --call ConditionalTriggerExecute( gg_trg_AllyOn )
-    SetPlayerTechResearchedSwap(FourCC('R0IH'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0IH'), 1, GetOwningPlayer(caster))
     StartJungleTrolls()
     RemoveLocation(udg_LocalPosition2)
 end
@@ -936,12 +959,13 @@ end
 --===========================================================================
 -- Trigger: Race FelOrk
 --===========================================================================
-function Trig_Race_FelOrk_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('n06B'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    RemoveUnit(GetSpellAbilityUnit())
-    SetPlayerTechResearchedSwap(FourCC('R0KA'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, GetOwningPlayer(GetTriggerUnit()))
+function Trig_Race_FelOrk_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('n06B'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    RemoveUnit(caster)
+    SetPlayerTechResearchedSwap(FourCC('R0KA'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, GetOwningPlayer(caster))
     
     RemoveLocation(udg_LocalPosition2)
 end
@@ -957,12 +981,13 @@ end
 --===========================================================================
 -- Trigger: Race ForestTrolls
 --===========================================================================
-function Trig_Race_ForestTrolls_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('o04V'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_ForestTrolls_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('o04V'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    RemoveUnit(caster)
     --call ConditionalTriggerExecute( gg_trg_AllyOn )
-    SetPlayerTechResearchedSwap(FourCC('R0J1'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0J1'), 1, GetOwningPlayer(caster))
     StartForestTrolls()
     RemoveLocation(udg_LocalPosition2)
 end
@@ -978,13 +1003,14 @@ end
 --===========================================================================
 -- Trigger: Race CultOfDamned
 --===========================================================================
-function Trig_Race_CultOfDamned_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(3, FourCC('cD02'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_CultOfDamned_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(3, FourCC('cD02'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    RemoveUnit(caster)
     
-    SetPlayerTechResearchedSwap(FourCC('R0J4'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0J5'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0J4'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0J5'), 1, GetOwningPlayer(caster))
     CultOn()
     RemoveLocation(udg_LocalPosition2)
 end
@@ -1000,14 +1026,15 @@ end
 --===========================================================================
 -- Trigger: Race Pandarens
 --===========================================================================
-function Trig_Race_Pandarens_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, FourCC('pa01'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_Pandarens_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    CreateNUnitsAtLoc(5, FourCC('pa01'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    RemoveUnit(caster)
     --call ConditionalTriggerExecute( gg_trg_AllyOn )
-    SetPlayerTechResearchedSwap(FourCC('R0L3'), 1, GetOwningPlayer(GetTriggerUnit()))
-    --call SetPlayerTechResearchedSwap( 'R0J5', 1, GetOwningPlayer(GetTriggerUnit()) )
-    Pstart(GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0L3'), 1, GetOwningPlayer(caster))
+    --call SetPlayerTechResearchedSwap( 'R0J5', 1, GetOwningPlayer(caster) )
+    Pstart(GetOwningPlayer(caster))
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -1022,23 +1049,24 @@ end
 --===========================================================================
 -- Trigger: Race HordeW2
 --===========================================================================
-function Trig_Race_HordeW2_Actions()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    HordeW2SetSubrace(GetOwningPlayer(GetTriggerUnit()), "base")
-    CreateNUnitsAtLoc(5, FourCC('w200'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    RemoveUnit(GetSpellAbilityUnit())
+function Trig_Race_HordeW2_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
+    udg_LocalPosition2=GetUnitLoc(caster)
+    HordeW2SetSubrace(GetOwningPlayer(caster), "base")
+    CreateNUnitsAtLoc(5, FourCC('w200'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    RemoveUnit(caster)
     --call ConditionalTriggerExecute( gg_trg_AllyOn )
-    SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, GetOwningPlayer(caster))
     
-    --call SetPlayerTechResearchedSwap( 'R0J5', 1, GetOwningPlayer(GetTriggerUnit()) )
-    --call Pstart(GetOwningPlayer(GetTriggerUnit()))
+    --call SetPlayerTechResearchedSwap( 'R0J5', 1, GetOwningPlayer(caster) )
+    --call Pstart(GetOwningPlayer(caster))
     RemoveLocation(udg_LocalPosition2)
     HordeW2On()
-    HordeW2ApplySubraceRoster(GetOwningPlayer(GetTriggerUnit()))
-    HordeW2ApplyDragonPreset(GetOwningPlayer(GetTriggerUnit()))
-    HordeW2EnableSubraceChoice(GetOwningPlayer(GetTriggerUnit()))
+    HordeW2ApplySubraceRoster(GetOwningPlayer(caster))
+    HordeW2ApplyDragonPreset(GetOwningPlayer(caster))
+    HordeW2EnableSubraceChoice(GetOwningPlayer(caster))
 end
 --===========================================================================
 function InitTrig_Race_HordeW2()
@@ -1056,12 +1084,13 @@ function incN()
     icrisingN=icrisingN + 1
     return icrisingN
 end
-function Trig_Race_Random_Actions()
+function Trig_Race_Random_Actions(caster)
+    caster = caster or GetSpellAbilityUnit()
     local racecount= 34
     local racechance
-    local l= GetUnitLoc(GetTriggerUnit())
-    local p= GetOwningPlayer(GetTriggerUnit())
-    RemoveUnit(GetSpellAbilityUnit())
+    local l= GetUnitLoc(caster)
+    local p= GetOwningPlayer(caster)
+    RemoveUnit(caster)
     racechance=GetRandomInt(1, racecount)
     icrisingN=0
     if racechance == incN() then
@@ -1139,7 +1168,7 @@ function Trig_Race_Random_Actions()
     if racechance == incN() then
         CreateNUnitsAtLoc(3, FourCC('u001'), p, l, bj_UNIT_FACING)
         SetPlayerTechResearchedSwap(FourCC('R0BW'), 1, p)
-        SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, GetOwningPlayer(caster))
     end
     
     if racechance == incN() then

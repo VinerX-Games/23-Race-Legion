@@ -1,0 +1,16 @@
+{
+  "race": "Драконы",
+  "category": "Расовые предметы, сообщения и интерфейсы",
+  "building_items": {},
+  "has_items": false,
+  "messages": [],
+  "has_messages": false,
+  "dialogs": [],
+  "frames": [],
+  "has_custom_ui": false,
+  "conclusion": {
+    "items": "У расы нет собственных продаваемых или изготавливаемых предметов; поля sellitems/makeitems пусты у всех 10 зданий.",
+    "messages": "Триггеры Dragons.lua не содержат видимых игроку сообщений (DisplayTextToPlayer отсутствует).",
+    "interfaces": "Специальных диалоговых окон, кастомных фреймов или интерфейсных панелей у расы нет."
+  }
+}

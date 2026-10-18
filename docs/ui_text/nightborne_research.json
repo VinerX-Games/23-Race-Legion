@@ -1,0 +1,795 @@
+{
+  "scope": "Ночнорождённые (Nightborne): категория 5 — Исследования и маркеры (16 технологий)",
+  "upgrades_count": 16,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R07J",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10667,
+          "after": "|cffe4cfa3Ночнорождённые|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10668,
+          "after": "|cffe4cfa3Ночнорождённые|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20117,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Ночнорождённым (Шал'дорай).|r"
+        }
+      ]
+    },
+    {
+      "id": "R06U",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9649,
+          "after": "|cffe4cfa3Зачарование силы|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 9650,
+          "after": "|cffe4cfa3Зачарование силы|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 9665,
+          "after": "|cffe4cfa3Зачарование силы|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 9668,
+          "after": "|cffe4cfa3Зачарование силы|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 9667,
+          "after": "|cffe4cfa3Зачарование силы|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 9666,
+          "after": "|cffe4cfa3Зачарование силы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40842,
+          "after": "|cffe4cfa3Зачарование силы — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 40843,
+          "after": "|cffe4cfa3Зачарование силы — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 40844,
+          "after": "|cffe4cfa3Зачарование силы — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 40847,
+          "after": "|cffe4cfa3Зачарование силы — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 40846,
+          "after": "|cffe4cfa3Зачарование силы — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 40845,
+          "after": "|cffe4cfa3Зачарование силы — уровень 6|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 10127,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 11421,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 11422,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 6890,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 3521,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 8046,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R06V",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9946,
+          "after": "|cffe4cfa3Лунные доспехи|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 9989,
+          "after": "|cffe4cfa3Лунные доспехи|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 10000,
+          "after": "|cffe4cfa3Лунные доспехи|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 10006,
+          "after": "|cffe4cfa3Лунные доспехи|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 10005,
+          "after": "|cffe4cfa3Лунные доспехи|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 10004,
+          "after": "|cffe4cfa3Лунные доспехи|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10001,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 10002,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 10003,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 10009,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 4|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 10008,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 5|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 10007,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 6|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11426,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту и количество брони бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 11427,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту и количество брони бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 11430,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту и количество брони бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 11423,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту и количество брони бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 11424,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту и количество брони бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 11425,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту и количество брони бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0DU",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 1781,
+          "after": "|cffe4cfa3Улучшенные инструменты|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 1782,
+          "after": "|cffe4cfa3Улучшенные инструменты|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 1783,
+          "after": "|cffe4cfa3Улучшенные инструменты|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 4560,
+          "after": "|cffe4cfa3Улучшенные инструменты|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 9326,
+          "after": "|cffe4cfa3Улучшенные инструменты|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 15564,
+          "after": "|cffe4cfa3Улучшенные инструменты|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 22228,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 23632,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 25260,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 25261,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 4|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 28665,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 5|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 29062,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 6|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 21881,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас переносимой работниками древесины на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 21603,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас переносимой работниками древесины на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 21604,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас переносимой работниками древесины на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 21605,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас переносимой работниками древесины на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 21606,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас переносимой работниками древесины на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 21880,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас переносимой работниками древесины на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R06Y",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10056,
+          "after": "|cffe4cfa3Родство с маной|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10061,
+          "after": "|cffe4cfa3Родство с маной|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 10062,
+          "after": "|cffe4cfa3Родство с маной|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40854,
+          "after": "|cffe4cfa3Родство с маной — уровень 1|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 40855,
+          "after": "|cffe4cfa3Родство с маной — уровень 2|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 40856,
+          "after": "|cffe4cfa3Родство с маной — уровень 3|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11668,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Окружает войска Ночнорождённых магическим барьером, снижая получаемый физический урон на |cffc8e087-65%|cffced4da и магический урон на |cffc8e087-80%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войска Ночнорождённых.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 11669,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Окружает войска Ночнорождённых магическим барьером, снижая получаемый физический урон на |cffc8e087-65%|cffced4da и магический урон на |cffc8e087-80%|cffced4da. Наделяет всех бойцов способностью «Щит маны».|n|n|cffa6afb8Применяется к:|cffced4da|n- Войска Ночнорождённых.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 11670,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Окружает войска Ночнорождённых магическим барьером, снижая получаемый физический урон на |cffc8e087-65%|cffced4da и магический урон на |cffc8e087-80%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войска Ночнорождённых.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R06T",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 40836,
+          "after": "|cffe4cfa3Древнее знание|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 40839,
+          "after": "|cffe4cfa3Древнее знание|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40837,
+          "after": "|cffe4cfa3Древнее знание — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 40840,
+          "after": "|cffe4cfa3Древнее знание — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 40838,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Лунного мага способности «Всплеск маны», а также повышает запас маны на |cffc8e087+75|cffced4da ед. и здоровье на |cffc8e087+50|cffced4da ед. всем войскам Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный маг|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 40841,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Лунного мага способности «Волшебный огонь», а также дополнительно повышает запас маны на |cffc8e087+75|cffced4da ед. и здоровье на |cffc8e087+50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный маг|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R06H",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 40553,
+          "after": "|cffe4cfa3Лунные глефы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40706,
+          "after": "|cffe4cfa3Лунные глефы|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 211,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает глефы Шал'дорайских воительниц, позволяя им поражать до |cffffffff3|cffced4da целей за удар.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R06I",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10656,
+          "after": "|cffe4cfa3Зачарованные доспехи|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40712,
+          "after": "|cffe4cfa3Зачарованные доспехи|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 40713,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет Наследников Сумеречной стражи зачарованными латами, блокирующими |cffffffff15|cffced4da ед. входящего урона от каждой атаки.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНаследник Сумеречной стражи|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R06W",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10013,
+          "after": "|cffe4cfa3Прочные доспехи|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10014,
+          "after": "|cffe4cfa3Прочные доспехи|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 10015,
+          "after": "|cffe4cfa3Прочные доспехи|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 10018,
+          "after": "|cffe4cfa3Прочные доспехи|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 10017,
+          "after": "|cffe4cfa3Прочные доспехи|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 10016,
+          "after": "|cffe4cfa3Прочные доспехи|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10019,
+          "after": "|cffe4cfa3Прочные доспехи — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 10020,
+          "after": "|cffe4cfa3Прочные доспехи — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 10021,
+          "after": "|cffe4cfa3Прочные доспехи — уровень 3|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 10024,
+          "after": "|cffe4cfa3Прочные доспехи — уровень 4|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 10023,
+          "after": "|cffe4cfa3Прочные доспехи — уровень 5|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 10022,
+          "after": "|cffe4cfa3Прочные доспехи — уровень 6|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11443,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и заклинателей Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 11444,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и заклинателей Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 11445,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и заклинателей Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 11440,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и заклинателей Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 11441,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и заклинателей Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 11442,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и заклинателей Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R06X",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10034,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10035,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 10036,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 10039,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 10038,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 10037,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40848,
+          "after": "|cffe4cfa3Магическая атака — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 40849,
+          "after": "|cffe4cfa3Магическая атака — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 40850,
+          "after": "|cffe4cfa3Магическая атака — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 40853,
+          "after": "|cffe4cfa3Магическая атака — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 40852,
+          "after": "|cffe4cfa3Магическая атака — уровень 5|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 40851,
+          "after": "|cffe4cfa3Магическая атака — уровень 6|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11449,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон дальних атак и боевых заклинаний стрелков и магов Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 11450,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон дальних атак и боевых заклинаний стрелков и магов Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 11451,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон дальних атак и боевых заклинаний стрелков и магов Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 11447,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон дальних атак и боевых заклинаний стрелков и магов Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 11446,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон дальних атак и боевых заклинаний стрелков и магов Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 11448,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон дальних атак и боевых заклинаний стрелков и магов Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R06S",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10862,
+          "after": "|cffe4cfa3Контроль над маной|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10865,
+          "after": "|cffe4cfa3Контроль над маной|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40834,
+          "after": "|cffe4cfa3Контроль над маной — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 40835,
+          "after": "|cffe4cfa3Контроль над маной — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 10864,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Шал'дорайского аристократа способности «Похищение маны» и увеличивает его запас маны на |cffc8e087+50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 10867,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Шал'дорайского аристократа заклинанию «Призыв элементаля воды» и увеличивает его запас маны на |cffc8e087+50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R06P",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 8531,
+          "after": "|cffe4cfa3Мана-броня|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40831,
+          "after": "|cffe4cfa3Мана-броня|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 10649,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет защитные доспехи Шал'дорайского гвардейца, повышая показатель брони на |cffc8e087+2|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R06N",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 8090,
+          "after": "|cffe4cfa3Совместные тренировки|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40829,
+          "after": "|cffe4cfa3Совместные тренировки|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 710,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает боевого леопарда Звериного стража, повышая его скорость атаки на |cffc8e087+20%|cffced4da и скорость передвижения на |cffc8e087+30|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R06J",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10964,
+          "after": "|cffe4cfa3Стальные снаряды|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10965,
+          "after": "|cffe4cfa3Стальные снаряды|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11651,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Оснащает глефомёты пробивающими стальными снарядами, поражающими цели на линии огня позади основной цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГлефомет|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R06K",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11652,
+          "after": "|cffe4cfa3Посвящение Темпомантов|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 11653,
+          "after": "|cffe4cfa3Посвящение Темпомантов|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40716,
+          "after": "|cffe4cfa3Посвящение Темпомантов — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 40717,
+          "after": "|cffe4cfa3Посвящение Темпомантов — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11654,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас маны Поклонника на |cffc8e087+60|cffced4da ед. и скорость её восстановления.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 11657,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно повышает запас маны Поклонника на |cffc8e087+60|cffced4da ед. и усиливает целительную силу.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R06L",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 8026,
+          "after": "|cffe4cfa3Тайная магия|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40827,
+          "after": "|cffe4cfa3Тайная магия|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11659,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Поклонника заклинанию «Рассеивание заклинаний», повышает запас маны на |cffc8e087+60|cffced4da ед. и атаку на |cffc8e087+4|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|r"
+        }
+      ]
+    }
+  ]
+}

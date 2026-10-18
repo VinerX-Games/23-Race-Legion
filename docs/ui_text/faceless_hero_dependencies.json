@@ -1,0 +1,354 @@
+{
+  "command": "get-objects-bulk",
+  "count": 18,
+  "map": "F:\\Gemini_23Race\\map.w3x",
+  "missing": [],
+  "objects": [
+    {
+      "fields": {
+        "code": "Aroa",
+        "dataa1": "0.000000",
+        "datab1": "0",
+        "datac1": "0",
+        "datad1": "0",
+        "datae1": "0",
+        "dur1": "0.010000",
+        "herodur1": "0.010000",
+        "levels": "1",
+        "name": "TRIGSTR_24302",
+        "tip1": "TRIGSTR_24306",
+        "ubertip1": "TRIGSTR_24308",
+        "unitid1": ""
+      },
+      "id": "A12G",
+      "name": "|cffd7b4f5Стать слугой Йогг`Сарона|r"
+    },
+    {
+      "fields": {
+        "code": "Assk",
+        "dataa1": "100",
+        "datab1": "5.000000",
+        "datac1": "38.000000",
+        "datad1": "1",
+        "datae1": "1",
+        "dur1": "0",
+        "herodur1": "0",
+        "levels": "1",
+        "name": "TRIGSTR_24559",
+        "tip1": "TRIGSTR_24561",
+        "ubertip1": "TRIGSTR_28430",
+        "unitid1": ""
+      },
+      "id": "A12I",
+      "name": "|cffd7b4f5Саронитовый Панцирь|r"
+    },
+    {
+      "fields": {
+        "code": "AHab",
+        "dataa1": "-6.000000",
+        "datab1": "0",
+        "datac1": "",
+        "datad1": "",
+        "datae1": "",
+        "dur1": "0",
+        "herodur1": "0",
+        "levels": "4",
+        "name": "TRIGSTR_24404",
+        "tip1": "TRIGSTR_36521",
+        "ubertip1": "TRIGSTR_40475",
+        "unitid1": ""
+      },
+      "id": "A12H",
+      "name": "|cffd7b4f5Антимагическая аура|r"
+    },
+    {
+      "fields": {
+        "code": "AUan",
+        "dataa1": "6",
+        "datab1": "0",
+        "datac1": "0",
+        "datad1": "",
+        "datae1": "",
+        "dur1": "3600.000000",
+        "herodur1": "3600.000000",
+        "levels": "4",
+        "name": "TRIGSTR_40020",
+        "tip1": "TRIGSTR_39997",
+        "ubertip1": "TRIGSTR_39996",
+        "unitid1": ""
+      },
+      "id": "A0V5",
+      "name": "|cffd7b4f5Вечная Служба"
+    },
+    {
+      "fields": {
+        "code": "AEtq",
+        "dataa1": "60.000000",
+        "datab1": "1",
+        "datac1": "1",
+        "datad1": "0",
+        "datae1": "",
+        "dur1": "15.000000",
+        "herodur1": "15.000000",
+        "levels": "2",
+        "name": "TRIGSTR_24626",
+        "tip1": "TRIGSTR_24629",
+        "ubertip1": "TRIGSTR_27802",
+        "unitid1": ""
+      },
+      "id": "A12J",
+      "name": "|cffd7b4f5Пары саронита|r"
+    },
+    {
+      "fields": {
+        "code": "Aakb",
+        "dataa1": "0.1",
+        "datab1": "1",
+        "datac1": "1",
+        "datad1": "0",
+        "datae1": "1",
+        "dur1": "0",
+        "herodur1": "0",
+        "levels": "4",
+        "name": "TRIGSTR_40478",
+        "tip1": "TRIGSTR_39999",
+        "ubertip1": "TRIGSTR_40014",
+        "unitid1": ""
+      },
+      "id": "A0V7",
+      "name": " |cffd7b4f5Приказ Генерала"
+    },
+    {
+      "fields": {
+        "code": "Assk",
+        "dataa1": "100",
+        "datab1": "3",
+        "datac1": "8",
+        "datad1": "1",
+        "datae1": "1",
+        "dur1": "0",
+        "herodur1": "0",
+        "levels": "4",
+        "name": "TRIGSTR_23702",
+        "tip1": "TRIGSTR_22686",
+        "ubertip1": "TRIGSTR_42420",
+        "unitid1": ""
+      },
+      "id": "A10I",
+      "name": "|cffd7b4f5Крепкий Панцирь|r"
+    },
+    {
+      "fields": {
+        "code": "AEim",
+        "dataa1": "6",
+        "datab1": "7",
+        "datac1": "10",
+        "datad1": "",
+        "datae1": "",
+        "dur1": "0.5",
+        "herodur1": "0.5",
+        "levels": "4",
+        "name": "TRIGSTR_39981",
+        "tip1": "TRIGSTR_39983",
+        "ubertip1": "TRIGSTR_3085",
+        "unitid1": ""
+      },
+      "id": "A10J",
+      "name": "|cffd7b4f5Обжигающий жар|r"
+    },
+    {
+      "fields": {
+        "code": "ANdp",
+        "dataa1": "h0MP",
+        "datab1": "4",
+        "datac1": "4",
+        "datad1": "",
+        "datae1": "",
+        "dur1": "1",
+        "herodur1": "0",
+        "levels": "2",
+        "name": "TRIGSTR_39988",
+        "tip1": "TRIGSTR_3089",
+        "ubertip1": "TRIGSTR_3093",
+        "unitid1": ""
+      },
+      "id": "A10K",
+      "name": "|cffd7b4f5Темный Портал|r"
+    },
+    {
+      "fields": {
+        "code": "AHtc",
+        "dataa1": "100.000000",
+        "datab1": "0",
+        "datac1": "0.150000",
+        "datad1": "0.150000",
+        "datae1": "0",
+        "dur1": "5",
+        "herodur1": "3",
+        "levels": "4",
+        "name": "TRIGSTR_39979",
+        "tip1": "TRIGSTR_1373",
+        "ubertip1": "TRIGSTR_1393",
+        "unitid1": ""
+      },
+      "id": "A10H",
+      "name": "|cffd7b4f5Удар Клешней|r"
+    },
+    {
+      "fields": {
+        "code": "APai",
+        "dataa1": "",
+        "datab1": "",
+        "datac1": "",
+        "datad1": "",
+        "datae1": "",
+        "dur1": "0",
+        "herodur1": "0",
+        "levels": "4",
+        "name": "TRIGSTR_19870",
+        "tip1": "TRIGSTR_20076",
+        "ubertip1": "TRIGSTR_20737",
+        "unitid1": ""
+      },
+      "id": "A1CJ",
+      "name": "|cffd7b4f5Безумие бездны|r"
+    },
+    {
+      "fields": {
+        "code": "AOwk",
+        "dataa1": "0.6",
+        "datab1": "0.300000",
+        "datac1": "50.000000",
+        "datad1": "1",
+        "datae1": "1",
+        "dur1": "25.000000",
+        "herodur1": "25.000000",
+        "levels": "4",
+        "name": "TRIGSTR_39995",
+        "tip1": "TRIGSTR_11037",
+        "ubertip1": "TRIGSTR_31041",
+        "unitid1": ""
+      },
+      "id": "A10N",
+      "name": "|cffd7b4f5Сокрытие Бездной|r"
+    },
+    {
+      "fields": {
+        "code": "AHbh",
+        "dataa1": "10.000000",
+        "datab1": "0",
+        "datac1": "40.000000",
+        "datad1": "0",
+        "datae1": "",
+        "dur1": "2",
+        "herodur1": "1",
+        "levels": "4",
+        "name": "TRIGSTR_25391",
+        "tip1": "TRIGSTR_39991",
+        "ubertip1": "TRIGSTR_8631",
+        "unitid1": ""
+      },
+      "id": "A10L",
+      "name": "|cffd7b4f5Сотресение Бездны|r"
+    },
+    {
+      "fields": {
+        "code": "Afae",
+        "dataa1": "10",
+        "datab1": "",
+        "datac1": "",
+        "datad1": "",
+        "datae1": "",
+        "dur1": "60.000000",
+        "herodur1": "15.000000",
+        "levels": "2",
+        "name": "TRIGSTR_18374",
+        "tip1": "TRIGSTR_18268",
+        "ubertip1": "TRIGSTR_19740",
+        "unitid1": ""
+      },
+      "id": "A1CG",
+      "name": "|cffd7b4f5Метка охотника|r"
+    },
+    {
+      "fields": {
+        "code": "ANdp",
+        "dataa1": "h0I9",
+        "datab1": "2",
+        "datac1": "2",
+        "datad1": "",
+        "datae1": "",
+        "dur1": "1",
+        "herodur1": "0",
+        "levels": "4",
+        "name": "TRIGSTR_40000",
+        "tip1": "TRIGSTR_11070",
+        "ubertip1": "TRIGSTR_15356",
+        "unitid1": ""
+      },
+      "id": "A10Q",
+      "name": "|cffd7b4f5Темный Раскол|r"
+    },
+    {
+      "fields": {
+        "code": "AHfs",
+        "dataa1": "15",
+        "datab1": "0.33",
+        "datac1": "5.000000",
+        "datad1": "1",
+        "datae1": "0.75",
+        "dur1": "9",
+        "herodur1": "2.67",
+        "levels": "4",
+        "name": "TRIGSTR_22979",
+        "tip1": "TRIGSTR_23282",
+        "ubertip1": "TRIGSTR_25620",
+        "unitid1": ""
+      },
+      "id": "A0WQ",
+      "name": "|cffd7b4f5Взрыв бездны|r"
+    },
+    {
+      "fields": {
+        "code": "AUau",
+        "dataa1": "0.000000",
+        "datab1": "-3.000000",
+        "datac1": "0",
+        "datad1": "",
+        "datae1": "",
+        "dur1": "0",
+        "herodur1": "0",
+        "levels": "4",
+        "name": "TRIGSTR_40004",
+        "tip1": "TRIGSTR_40006",
+        "ubertip1": "TRIGSTR_40010",
+        "unitid1": ""
+      },
+      "id": "A10R",
+      "name": "|cffd7b4f5Аура Бездны|r"
+    },
+    {
+      "fields": {
+        "code": "AUdd",
+        "dataa1": "0.04",
+        "datab1": "1",
+        "datac1": "",
+        "datad1": "",
+        "datae1": "",
+        "dur1": "35",
+        "herodur1": "35",
+        "levels": "2",
+        "name": "TRIGSTR_40013",
+        "tip1": "TRIGSTR_17699",
+        "ubertip1": "TRIGSTR_18148",
+        "unitid1": ""
+      },
+      "id": "A10S",
+      "name": "|cffd7b4f5Пространство Бездны|r"
+    }
+  ],
+  "ok": true,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "type": "ability"
+}

@@ -1,0 +1,134 @@
+{
+  "scope": "Четыре собственных эффекта безликих; общие стандартные эффекты ещё не охвачены",
+  "objects_before": {
+    "command": "get-objects-bulk",
+    "count": 4,
+    "map": "F:\\Gemini_23Race\\map.w3x",
+    "missing": [],
+    "objects": [
+      {
+        "fields": {
+          "bufftip": "TRIGSTR_5641",
+          "buffubertip": "TRIGSTR_5664",
+          "editorname": ""
+        },
+        "id": "B01I",
+        "name": "Метка охотника"
+      },
+      {
+        "fields": {
+          "bufftip": "TRIGSTR_8248",
+          "buffubertip": "Периодический урон.",
+          "editorname": ""
+        },
+        "id": "B02L",
+        "name": "|cffd7b4f6Взрыв бездны|r"
+      },
+      {
+        "fields": {
+          "bufftip": "TRIGSTR_40343",
+          "buffubertip": "TRIGSTR_40352",
+          "editorname": "TRIGSTR_40335"
+        },
+        "id": "B08E",
+        "name": "|cffd7b4f5Разложение Бездны|r(Безликие)"
+      },
+      {
+        "fields": {
+          "bufftip": "TRIGSTR_40406",
+          "buffubertip": "TRIGSTR_40407",
+          "editorname": "TRIGSTR_40356"
+        },
+        "id": "B08F",
+        "name": "|cffd7b4f5Дымка Бездны|r (Безликие)"
+      }
+    ],
+    "ok": true,
+    "schema_version": 1,
+    "tool": "HiveWE_cli",
+    "type": "buff"
+  },
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "strings": [
+    {
+      "rawcode": "B01I",
+      "field": "editorname",
+      "before": "",
+      "after": "|cffe4cfa3Метка охотника|r"
+    },
+    {
+      "rawcode": "B01I",
+      "field": "bufftip",
+      "before": "Метка охотника",
+      "after": "|cffe4cfa3Метка охотника|r"
+    },
+    {
+      "rawcode": "B01I",
+      "field": "buffubertip",
+      "before": "Броня снижена, юнит виден врагам.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Броня |cffe69a8dснижена|cffced4da. Отмеченную цель видит наложивший метку противник, даже если цель невидима.|r"
+    },
+    {
+      "rawcode": "B02L",
+      "field": "editorname",
+      "before": "",
+      "after": "|cffe4cfa3Взрыв бездны|r"
+    },
+    {
+      "rawcode": "B02L",
+      "field": "bufftip",
+      "before": "|cffd7b4f6Взрыв бездны|r",
+      "after": "|cffe4cfa3Взрыв бездны|r"
+    },
+    {
+      "rawcode": "B02L",
+      "field": "buffubertip",
+      "before": "Периодический урон.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель находится под действием пламени Бездны и получает |cffe69a8dпериодический урон|cffced4da.|r"
+    },
+    {
+      "rawcode": "B08E",
+      "field": "editorname",
+      "before": "|cffd7b4f5Разложение Бездны|r(Безликие)",
+      "after": "|cffe4cfa3Аура Бездны|r"
+    },
+    {
+      "rawcode": "B08E",
+      "field": "bufftip",
+      "before": "|cffd7b4f5Разложение Бездны",
+      "after": "|cffe4cfa3Аура Бездны|r"
+    },
+    {
+      "rawcode": "B08E",
+      "field": "buffubertip",
+      "before": "Враги получают постоянный урон",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Аура Бездны |cffe69a8dснижает восстановление здоровья|cffced4da цели.|r"
+    },
+    {
+      "rawcode": "B08F",
+      "field": "editorname",
+      "before": "|cffd7b4f5Дымка Бездны|r (Безликие)",
+      "after": "|cffe4cfa3Дымка бездны|r"
+    },
+    {
+      "rawcode": "B08F",
+      "field": "bufftip",
+      "before": "|cffd7b4f5Дымка Бездны",
+      "after": "|cffe4cfa3Дымка бездны|r"
+    },
+    {
+      "rawcode": "B08F",
+      "field": "buffubertip",
+      "before": "Придаток распыляет туманную дымку, из за чего безликию чувствуют себя более комфортно.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения повышена на |cffc8e0876%|cffced4da, восстановление здоровья — на |cffc8e0871,5|cffced4da ед. в секунду.|r"
+    }
+  ],
+  "in_game_checked": false,
+  "remaining": [
+    "Общие стандартные эффекты: проверить использование разными способностями до перевода",
+    "Проверить иконки эффектов и отображение в игре"
+  ]
+}

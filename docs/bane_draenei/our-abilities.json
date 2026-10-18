@@ -1,0 +1,412 @@
+{
+  "command": "get-objects-bulk",
+  "count": 40,
+  "map": "F:\\Gemini_23Race\\map.w3x",
+  "missing": [],
+  "objects": [
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNWepTech3.blp",
+        "code": "Aaab",
+        "name": "|cffffff00Тяжелые удары|r",
+        "ubertip1": "+<Ahsb,DataB1,%>% к урону по целям с тяжелой броней."
+      },
+      "id": "A05X",
+      "name": "|cffffff00Тяжелые удары|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNAbility_mount_mammoth_black.blp",
+        "code": "Assk",
+        "name": "|cffdcbef0Усиленная броня|r",
+        "ubertip1": "-<Assk,DataC1> от получаемого юнитом урона от атак. Минимальный урон от атак: <Assk,DataB1>."
+      },
+      "id": "A05W",
+      "name": "|cffdcbef0Усиленная броня|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNSearingArrowsOn.blp",
+        "code": "AEpa",
+        "name": "|cffdcbef0Зачарованные стрелы|r",
+        "ubertip1": "\"+<AHfa,DataA1> урона от огня к атакам. Каждый выстрел расходует ману.\""
+      },
+      "id": "A05U",
+      "name": "|cffdcbef0Зачарованные стрелы|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNHolyBolt.blp",
+        "code": "Ainf",
+        "name": "|cffffff00Свет небес|r",
+        "ubertip1": "Восполняет 150 здоровья живому союзнику или наносит вдвое меньше урона врагу-нежити."
+      },
+      "id": "A04Y",
+      "name": "|cffffff00Свет небес|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNHolyBolt.blp",
+        "code": "AHhb",
+        "name": "|cffffff00Свет небес|r",
+        "ubertip1": "\"Восполняет <AHhb,DataA1> здоровья живому союзнику или наносит вдвое меньше урона врагу-нежити.\""
+      },
+      "id": "A04W",
+      "name": "|cffffff00Свет небес|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNTitansteelShield.blp",
+        "code": "Aroa",
+        "name": "|cffffff00Защита Наару|r",
+        "ubertip1": "+4 к защите находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек."
+      },
+      "id": "A04V",
+      "name": "|cffffff00Защита Наару|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNBearBlink.blp",
+        "code": "AUau",
+        "name": "|cffffff00Аура света|r",
+        "ubertip1": "Увеличивает скорость регенерации здоровья всем союзникам по близости.\n|cffb4dc8c+(0.5) к регенерации здоровья.|r\n|cffb4dc8cРадиус действия (400).|r"
+      },
+      "id": "A04U",
+      "name": "|cffffff00Аура света|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNResurrection.blp",
+        "code": "AOre",
+        "name": "|cffffff00Возрождение|r",
+        "ubertip1": "Дреней паладин возрождается после гибели. Время восстановления: <AOre,Cool1> сек."
+      },
+      "id": "A04T",
+      "name": "|cffffff00Возрождение|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNResurrection.blp",
+        "code": "AHre",
+        "name": "|cffffff00Воскрешение|r",
+        "ubertip1": "Воскрешает 1 находящихся рядом союзников."
+      },
+      "id": "A055",
+      "name": "|cffffff00Воскрешение|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\ATCFireShield.blp",
+        "code": "Ainf",
+        "name": "|cffffff00Внутреннее жжение|r",
+        "ubertip1": "-<Ainf,DataA1,%>% к урону и -<Ainf,DataB1> к броне врагов. |nВремя действия: <Ainf,Dur1> сек."
+      },
+      "id": "A054",
+      "name": "|cffffff00Внутреннее жжение|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNHealingWave.blp",
+        "code": "AOhw",
+        "name": "|cffffff00Спасительный свет|r",
+        "ubertip1": "\"Призывает волну энергии, которая последовательно исцеляет до <AOhw,DataB1> союзников, восполняя <AOhw,DataA1> здоровья первой цели и меньше каждой последующей цели.\""
+      },
+      "id": "A053",
+      "name": "|cffffff00Спасительный свет|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\PASRC_UGRD_3blade.blp",
+        "code": "AOcr",
+        "name": "|cffffff00Критический удар|r",
+        "ubertip1": "Даёт 10%-й шанс нанести 15-кратный урон при атаке."
+      },
+      "id": "A05S",
+      "name": "|cffffff00Критический удар|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNAbility_Paladin_DivineStorm.blp",
+        "code": "Aaab",
+        "name": "|cffffff00Посвященное оружие|r",
+        "ubertip1": "+<Ahsb,DataB1,%>% к урону по целям со всем типам  брони."
+      },
+      "id": "A05L",
+      "name": "|cffffff00Посвященное оружие|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\PassiveButtons\\PASBTNSunderingBlades.blp",
+        "code": "Aaab",
+        "name": "|cffffff00Посвященное оружие|r",
+        "ubertip1": "+<Ahsb,DataB1,%>% к урону по целям со среднейвсеми типами  брони."
+      },
+      "id": "A05N",
+      "name": "|cffffff00Посвященное оружие|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\PassiveButtons\\PASBTNSunderingBlades.blp",
+        "code": "Aaab",
+        "name": "|cffffff00Посвященное оружие|r",
+        "ubertip1": "+<Ahsb,DataB1,%>% к урону по целям со среднейвсеми типами  брони."
+      },
+      "id": "A05P",
+      "name": "|cffffff00Посвященное оружие|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\PassiveButtons\\PASBTNSunderingBlades.blp",
+        "code": "Aaab",
+        "name": "|cffffff00Посвященное оружие|r",
+        "ubertip1": "+<Ahsb,DataB1,%>% к урону по целям со среднейвсеми типами  брони."
+      },
+      "id": "A05M",
+      "name": "|cffffff00Посвященное оружие|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\PassiveButtons\\PASBTNSunderingBlades.blp",
+        "code": "Aaab",
+        "name": "|cffffff00Посвященное оружие|r",
+        "ubertip1": "+<Ahsb,DataB1,%>% к урону по целям со среднейвсеми типами  брони."
+      },
+      "id": "A05O",
+      "name": "|cffffff00Посвященное оружие|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\PassiveButtons\\PASBTNSunderingBlades.blp",
+        "code": "Aaab",
+        "name": "|cffffff00Посвященное оружие|r",
+        "ubertip1": "+<Ahsb,DataB1,%>% к урону по целям со среднейвсеми типами  брони."
+      },
+      "id": "A05Q",
+      "name": "|cffffff00Посвященное оружие|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\PassiveButtons\\PASBTNSunderingBlades.blp",
+        "code": "Aaab",
+        "name": "|cffffff00Посвященное оружие|r",
+        "ubertip1": "+<Ahsb,DataB1,%>% к урону по целям со среднейвсеми типами  брони."
+      },
+      "id": "A05R",
+      "name": "|cffffff00Посвященное оружие|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNBardW.blp",
+        "code": "AHab",
+        "name": "|cffffff00Древние знания Света|r",
+        "ubertip1": "Ускоряет регенерацию маны находящихся рядом союзников.\n|cffb4dc8c+(0.55) к регенерации маны.|r\n|cffb4dc8cРадиус действия (400).|r"
+      },
+      "id": "A052",
+      "name": "|cffffff00Древние знания Света|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNChainLightning.blp",
+        "code": "AOcl",
+        "name": "|cffffff00Цепная молния|r",
+        "ubertip1": "Призывает молнию, которая наносит 85 урона цели и рикошетит до 4  раз, нанося меньше урона с каждым рикошетом."
+      },
+      "id": "A051",
+      "name": "|cffffff00Цепная молния|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNHex.blp",
+        "code": "Afae",
+        "name": "|cffffff00Сглаз|r",
+        "ubertip1": "Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA1,%>% на <AHbn,Dur1> сек. Изгнанные цели не могут атаковать, но могут применять способности. Кроме того, некоторые способности наносят им больше урона. Не действует на технику."
+      },
+      "id": "A050",
+      "name": "|cffffff00Сглаз|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNHex.blp",
+        "code": "AOhx",
+        "name": "|cffffff00Сглаз|r",
+        "ubertip1": "Превращает врага в случайное животное на <AOhx,Dur1> сек.\n|cffb4dc8cВремя действия на героев(1 сек.).|r\n|cffb4dc8cВремя действия на солдата (15 сек.).|r"
+      },
+      "id": "A04Z",
+      "name": "|cffffff00Сглаз|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNSilence.blp",
+        "code": "ANsi",
+        "name": "|cffffff00Немота|r",
+        "ubertip1": "\"Не дает врагам в указанной области применять способности в течение <ACsi,Dur1> сек.\""
+      },
+      "id": "A058",
+      "name": "|cffffff00Немота|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNSlowOn.blp",
+        "code": "Aslo",
+        "name": "|cffffff00Замедление|r",
+        "ubertip1": "Замедляет атаку врага на 25% и передвижение на 35%. |"
+      },
+      "id": "A057",
+      "name": "|cffffff00Замедление|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNManaDrain.blp",
+        "code": "AHdr",
+        "name": "|cffffff00Похищение маны|r",
+        "ubertip1": "Вытягивает |cffffff00<AHdr,DataB1>|r маны/сек. из врага или передает <AHdr,DataE1> маны/сек. союзнику.|n|n"
+      },
+      "id": "A056",
+      "name": "|cffffff00Похищение маны|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNBardQ.blp",
+        "code": "AHad",
+        "name": "|cffffff00Пламя света|r",
+        "ubertip1": "Священный огонь атакует ближайших врагов.\nНанося |cffffff0020|r ед урона, и поджигая - нанося |cffffff001|r ед. в сек."
+      },
+      "id": "A05T",
+      "name": "|cffffff00Пламя света|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNBardQ.blp",
+        "code": "Apxf",
+        "name": "|cffdcbef0Пламя света|r",
+        "ubertip1": "Поджигает находящихся рядом врагов.\n|cffb4dc8c(20) к урону.|r\n|cffb4dc8c(2) урона в секунду.|r"
+      },
+      "id": "A05C",
+      "name": "|cffdcbef0Пламя света|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNBardDisable.blp",
+        "code": "Adis",
+        "name": "|cffdcbef0Рассеивание заклинаний|r",
+        "ubertip1": "\"Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r\""
+      },
+      "id": "A05A",
+      "name": "|cffdcbef0Рассеивание заклинаний|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNHealOn.blp",
+        "code": "Anhe",
+        "name": "|cffdcbef0Исцеление|r",
+        "ubertip1": "Восполняет здоровье раненому союзнику. Не действует на технику."
+      },
+      "id": "A059",
+      "name": "|cffdcbef0Исцеление|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNCloudOfFog.blp",
+        "code": "Aclf",
+        "name": "Поле слома",
+        "ubertip1": "Значительно уменьшает скорость дальнобойной атаки врагов в области."
+      },
+      "id": "A1C8",
+      "name": "Поле слома"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\PassiveButtons\\PASBTNWellSpring.blp",
+        "code": "AHab",
+        "name": "|cff808080Мудрость Предков |r",
+        "ubertip1": "Ускоряет регенерацию маны находящихся рядом союзников.\n|cffb4dc8c(+0.45) к регенерации маны.|r\n|cffb4dc8cРадиус действия (300).|r"
+      },
+      "id": "A064",
+      "name": "|cff808080Мудрость Предков |r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNLightningShield.blp",
+        "code": "Alsh",
+        "name": "|cff808080Щит молний|r",
+        "ubertip1": "\"Окружает цель молниями, которые наносят <Alsh,DataA1> урона/сек. находящимся рядом войскам. |nВремя действия: <Alsh,Dur1> сек.\""
+      },
+      "id": "A063",
+      "name": "|cff808080Щит молний|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNHealingWard.blp",
+        "code": "Ahwd",
+        "name": "|cff808080Исцеляющий идол|r",
+        "ubertip1": "Призывает неподвижного идола, который восполняет союзникам рядом с собой 2% запаса здоровья в секунду. Не действует на технику. |nВремя существования: <Ahwd,Dur1> сек."
+      },
+      "id": "A062",
+      "name": "|cff808080Исцеляющий идол|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
+        "code": "AEbl",
+        "name": "Скачок",
+        "ubertip1": "\"Переносит на короткое расстояние, позволяя мгновенно вступить в бой или выйти из него.\""
+      },
+      "id": "A1C5",
+      "name": "Скачок"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
+        "code": "ANcl",
+        "name": "Стремительное приближение",
+        "ubertip1": "Все выбранные мастера телепортируются в заданную точку."
+      },
+      "id": "A1C4",
+      "name": "Стремительное приближение"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNAbility_Rogue_DualWeild.blp",
+        "code": "Aven",
+        "name": "|cff808080Отравленное оружие|r",
+        "ubertip1": "\"Яд наносит <ACvs,DataA1> урона/сек. |nВремя действия: <ACvs,Dur1> сек.\""
+      },
+      "id": "A05Z",
+      "name": "|cff808080Отравленное оружие|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\BTNWindWalkOn.blp",
+        "code": "AOwk",
+        "name": "|cff808080Танец ветра|r",
+        "ubertip1": "Дает невидимость и +<ANwk,DataB1,%>% к скорости передвижения. Атакуя, солдат становится видимым и наносит <ANwk,DataC1> дополнительного урона."
+      },
+      "id": "A05Y",
+      "name": "|cff808080Танец ветра|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\PassiveButtons\\PASBTNFeedBack.blp",
+        "code": "Afbk",
+        "name": "|cff808080Сжигание маны|r",
+        "ubertip1": "\"Каждая атака призрачного зверя уничтожает <Afbb,DataA1> маны цели, нанося дополнительный урон.\""
+      },
+      "id": "A061",
+      "name": "|cff808080Сжигание маны|r"
+    },
+    {
+      "fields": {
+        "art": "ReplaceableTextures\\CommandButtons\\PASRC_UGRD_1blade.blp",
+        "code": "ANca",
+        "name": "|cff808080Рассекающий удар|r",
+        "ubertip1": "Наносит удар с огромной силой, нанося  урона врагам рядом с основной целью.\n|cffb4dc8c(5%) урона врагам вокруг.|r\n|cffb4dc8c(90) радиус нанесенного урона.|r"
+      },
+      "id": "A060",
+      "name": "|cff808080Рассекающий удар|r"
+    }
+  ],
+  "ok": true,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "type": "ability"
+}

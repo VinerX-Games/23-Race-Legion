@@ -1,0 +1,30 @@
+{
+  "race": "Random",
+  "race_name_ru": "Случайная раса",
+  "race_id": 37,
+  "wts_updates": {
+    "24728": "|cffe4cfa3Случайная раса|r",
+    "24729": "|cffe4cfa3Случайная раса|r (|cffffffffF|r)",
+    "25197": "|cffa6afb8РАСА:|r |cffced4daВыбирает одну случайную игровую расу из всех доступных вариантов на карте.|n|n|cffa6afb8Особенность:|r |cffced4daПодходит для игроков, готовых адаптироваться к любой стратегии и ветке развития.|r"
+  },
+  "checks_def": [
+    {
+      "type": "ability",
+      "id": "A12Q",
+      "field": "name",
+      "expected": "|cffe4cfa3Случайная раса|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12Q",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Случайная раса|r (|cffffffffF|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A12Q",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8РАСА:|r |cffced4daВыбирает одну случайную игровую расу из всех доступных вариантов на карте.|n|n|cffa6afb8Особенность:|r |cffced4daПодходит для игроков, готовых адаптироваться к любой стратегии и ветке развития.|r"
+    }
+  ]
+}

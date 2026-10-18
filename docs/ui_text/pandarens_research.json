@@ -1,0 +1,1003 @@
+{
+  "scope": "Пандарены (Pandarens): категория 5 — Исследования и маркеры (24 технологий)",
+  "upgrades_count": 24,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "PA10",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42410,
+          "after": "|cffe4cfa3Длинные Луки|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 42452,
+          "after": "|cffe4cfa3Длинные Луки|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42450,
+          "after": "|cffe4cfa3Длинные Луки — уровень 1|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 42451,
+          "after": "|cffe4cfa3Длинные Луки — уровень 2|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 22964,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daУвеличивает дальность атаки Лучников Пандаренов на |cffc8e08725|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deЛучник Пандаренов|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/2|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 23454,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daДополнительно увеличивает дальность атаки Лучников Пандаренов на |cffc8e08750|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deЛучник Пандаренов|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/2|r"
+        }
+      ]
+    },
+    {
+      "id": "PA12",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42014,
+          "after": "|cffe4cfa3Укрепление Духа|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3805,
+          "after": "|cffe4cfa3Укрепление Духа|r (|cffffffffB|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42015,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daДарует пандаренам бонус |cffc8e087+125 к здоровью|cffced4da и |cffc8e087+10 к урону|cffced4da.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- Войскам ближнего боя пандаренов.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA14",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42016,
+          "after": "|cffe4cfa3Защита Ци|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 23126,
+          "after": "|cffe4cfa3Защита Ци|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3127,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает регенерацию здоровья Стражников Нефритовых Врат и наделяет их невосприимчивостью к заклинаниям.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deСтражник Нефритовых Врат|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA80",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 22667,
+          "after": "|cffe4cfa3Доспехи из кожи|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 25036,
+          "after": "|cffe4cfa3Доспехи из клёпаной кожи|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 31788,
+          "after": "|cffe4cfa3Доспехи из армированной кожи|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 31797,
+          "after": "|cffe4cfa3Доспехи из драконьей кожи|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 35579,
+          "after": "|cffe4cfa3Доспехи из бамбука|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 35591,
+          "after": "|cffe4cfa3Нефритовые доспехи стрелков|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35592,
+          "after": "|cffe4cfa3Доспехи из кожи — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 35930,
+          "after": "|cffe4cfa3Доспехи из клёпаной кожи — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 36607,
+          "after": "|cffe4cfa3Доспехи из армированной кожи — уровень 3|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 36608,
+          "after": "|cffe4cfa3Доспехи из драконьей кожи — уровень 4|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 36609,
+          "after": "|cffe4cfa3Доспехи из бамбука — уровень 5|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 36610,
+          "after": "|cffe4cfa3Нефритовые доспехи стрелков — уровень 6|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 36611,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает броню воинов дальнего боя армии пандаренов на |cffc8e087+1|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deЛучник Пандаренов|cffced4da|n- |cffa9c7deМастер Бури|cffced4da|n- |cffa9c7deОрудийный Расчёт|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/6|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 36618,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает броню воинов дальнего боя армии пандаренов на |cffc8e087+2|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deЛучник Пандаренов|cffced4da|n- |cffa9c7deМастер Бури|cffced4da|n- |cffa9c7deОрудийный Расчёт|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/6|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 36649,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает броню воинов дальнего боя армии пандаренов на |cffc8e087+3|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deЛучник Пандаренов|cffced4da|n- |cffa9c7deМастер Бури|cffced4da|n- |cffa9c7deОрудийный Расчёт|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/6|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 25033,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает броню воинов дальнего боя армии пандаренов на |cffc8e087+4|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deЛучник Пандаренов|cffced4da|n- |cffa9c7deМастер Бури|cffced4da|n- |cffa9c7deОрудийный Расчёт|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4/6|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 22704,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает броню воинов дальнего боя армии пандаренов на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deЛучник Пандаренов|cffced4da|n- |cffa9c7deМастер Бури|cffced4da|n- |cffa9c7deОрудийный Расчёт|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5/6|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 25034,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает броню воинов дальнего боя армии пандаренов на |cffc8e087+6|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deЛучник Пандаренов|cffced4da|n- |cffa9c7deМастер Бури|cffced4da|n- |cffa9c7deОрудийный Расчёт|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6/6|r"
+        }
+      ]
+    },
+    {
+      "id": "PA81",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41954,
+          "after": "|cffe4cfa3Железные Мечи|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 41958,
+          "after": "|cffe4cfa3Стальные мечи|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 41959,
+          "after": "|cffe4cfa3Мифриловые мечи|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 41955,
+          "after": "|cffe4cfa3Серебряные Мечи|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 41956,
+          "after": "|cffe4cfa3Вольфрамовые Мечи|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 41957,
+          "after": "|cffe4cfa3Нефритовые Мечи|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 35454,
+          "after": "|cffe4cfa3Серебряные Мечи — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 35458,
+          "after": "|cffe4cfa3Вольфрамовые Мечи — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 35457,
+          "after": "|cffe4cfa3Нефритовые Мечи — уровень 6|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 35450,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает урон воинов ближнего боя армии пандаренов на |cffc8e087+4|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deВоин Пандаренов|cffced4da|n- |cffa9c7deВоин Нефритовой Стражи|cffced4da|n- |cffa9c7deВсадник Пандарен|cffced4da|n- |cffa9c7deМастер Геомант|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4/6|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 35451,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает урон воинов ближнего боя армии пандаренов на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deВоин Пандаренов|cffced4da|n- |cffa9c7deВоин Нефритовой Стражи|cffced4da|n- |cffa9c7deВсадник Пандарен|cffced4da|n- |cffa9c7deМастер Геомант|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5/6|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 35452,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает урон воинов ближнего боя армии пандаренов на |cffc8e087+6|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deВоин Пандаренов|cffced4da|n- |cffa9c7deВоин Нефритовой Стражи|cffced4da|n- |cffa9c7deВсадник Пандарен|cffced4da|n- |cffa9c7deМастер Геомант|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6/6|r"
+        }
+      ]
+    },
+    {
+      "id": "PA82",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41960,
+          "after": "|cffe4cfa3Изучение Хмелеварения|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35464,
+          "after": "|cffe4cfa3Изучение Хмелеварения|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3119,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daОткрывает найм элитных Хмелеваров в Палатах мастеров.|n|n|cffe6c07bВнимание:|r |cffe69a8dЗапрещает найм Мастеров Геомантов.|r|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deПалаты мастеров|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA83",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41961,
+          "after": "|cffe4cfa3Изучить Геомантию|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35465,
+          "after": "|cffe4cfa3Изучить Геомантию|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3120,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daОткрывает найм Мастеров Геомантов в Палатах мастеров.|n|n|cffe6c07bВнимание:|r |cffe69a8dЗапрещает найм Хмелеваров.|r|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deПалаты мастеров|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA84",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42411,
+          "after": "|cffe4cfa3Железная Броня|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 42415,
+          "after": "|cffe4cfa3Железная Броня|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 42416,
+          "after": "|cffe4cfa3Железная Броня|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 42417,
+          "after": "|cffe4cfa3Железная Броня|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 42418,
+          "after": "|cffe4cfa3Железная Броня|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 42419,
+          "after": "|cffe4cfa3Железная Броня|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38233,
+          "after": "|cffe4cfa3Железная Броня — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 38451,
+          "after": "|cffe4cfa3Железная Броня — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 40270,
+          "after": "|cffe4cfa3Железная Броня — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 36661,
+          "after": "|cffe4cfa3Железная Броня — уровень 4|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 40427,
+          "after": "|cffe4cfa3Железная Броня — уровень 5|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 42371,
+          "after": "|cffe4cfa3Железная Броня — уровень 6|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42425,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает броню воинов ближнего боя армии пандаренов на |cffc8e087+1|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deВоин Пандаренов|cffced4da|n- |cffa9c7deВоин Нефритовой Стражи|cffced4da|n- |cffa9c7deВсадник Пандарен|cffced4da|n- |cffa9c7deМастер Земли|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/6|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 42426,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает броню воинов ближнего боя армии пандаренов на |cffc8e087+2|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deВоин Пандаренов|cffced4da|n- |cffa9c7deВоин Нефритовой Стражи|cffced4da|n- |cffa9c7deВсадник Пандарен|cffced4da|n- |cffa9c7deМастер Земли|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/6|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 42427,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает броню воинов ближнего боя армии пандаренов на |cffc8e087+3|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deВоин Пандаренов|cffced4da|n- |cffa9c7deВоин Нефритовой Стражи|cffced4da|n- |cffa9c7deВсадник Пандарен|cffced4da|n- |cffa9c7deМастер Земли|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/6|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 42412,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает броню воинов ближнего боя армии пандаренов на |cffc8e087+4|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deВоин Пандаренов|cffced4da|n- |cffa9c7deВоин Нефритовой Стражи|cffced4da|n- |cffa9c7deВсадник Пандарен|cffced4da|n- |cffa9c7deМастер Земли|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4/6|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 42413,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает броню воинов ближнего боя армии пандаренов на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deВоин Пандаренов|cffced4da|n- |cffa9c7deВоин Нефритовой Стражи|cffced4da|n- |cffa9c7deВсадник Пандарен|cffced4da|n- |cffa9c7deМастер Земли|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5/6|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 42414,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает броню воинов ближнего боя армии пандаренов на |cffc8e087+6|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deВоин Пандаренов|cffced4da|n- |cffa9c7deВоин Нефритовой Стражи|cffced4da|n- |cffa9c7deВсадник Пандарен|cffced4da|n- |cffa9c7deМастер Земли|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6/6|r"
+        }
+      ]
+    },
+    {
+      "id": "PA85",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41968,
+          "after": "|cffe4cfa3Нефритовые Доспехи|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 41969,
+          "after": "|cffe4cfa3Нефритовые Доспехи|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 35491,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daСнабжает Воинов Нефритовой Стражи тяжелыми доспехами, снижающими получаемый от атак урон на |cffc8e08718|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deВоин Нефритовой Стражи|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA86",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41970,
+          "after": "|cffe4cfa3Посвящение Мастеров Бури|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 41971,
+          "after": "|cffe4cfa3Посвящение Мастеров Бури|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 41972,
+          "after": "|cffe4cfa3Посвящение Мастеров Бури — адепты|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 41973,
+          "after": "|cffe4cfa3Посвящение Мастеров Бури — мастера|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 19840,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daУвеличивает запас здоровья Мастеров Бури на |cffc8e08740|cffced4da, маны на |cffc8e087100|cffced4da и ускоряет регенерацию маны.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deМастер Бури|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/2|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 20775,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daДополнительно увеличивает здоровье Мастеров Бури на |cffc8e08775|cffced4da, ману на |cffc8e087150|cffced4da и регенерацию маны.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deМастер Бури|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/2|r"
+        }
+      ]
+    },
+    {
+      "id": "PA87",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41974,
+          "after": "|cffe4cfa3Посвящение Мастеров Земли|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 41975,
+          "after": "|cffe4cfa3Посвящение Мастеров Земли|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 41976,
+          "after": "|cffe4cfa3Посвящение Мастеров Земли — адепты|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 41977,
+          "after": "|cffe4cfa3Посвящение Мастеров Земли — мастера|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 22726,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daУвеличивает запас здоровья Мастеров Земли на |cffc8e087100|cffced4da ед. и наделяет их невосприимчивостью к заклинаниям.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deМастер Земли|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/2|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 22749,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daДополнительно увеличивает запас здоровья Мастеров Земли на |cffc8e087125|cffced4da ед. и закрепляет невосприимчивость к магии.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deМастер Земли|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/2|r"
+        }
+      ]
+    },
+    {
+      "id": "PA88",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41978,
+          "after": "|cffe4cfa3Посвящение Мастеров Огня|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 41980,
+          "after": "|cffe4cfa3Посвящение Мастеров Огня|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 41979,
+          "after": "|cffe4cfa3Посвящение Мастеров Огня — адепты|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 41981,
+          "after": "|cffe4cfa3Посвящение Мастеров Огня — мастера|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 22893,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daУвеличивает урон от атак Мастеров Огня на |cffc8e08710|cffced4da и запас их здоровья на |cffc8e08730|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deМастер Огня|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/2|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 22907,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daДополнительно увеличивает урон Мастеров Огня на |cffc8e08715|cffced4da и запас здоровья на |cffc8e08755|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deМастер Огня|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/2|r"
+        }
+      ]
+    },
+    {
+      "id": "PA89",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41982,
+          "after": "|cffe4cfa3Посвящение Монахов Ян|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 41983,
+          "after": "|cffe4cfa3Посвящение Монахов Ян|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 41984,
+          "after": "|cffe4cfa3Посвящение Монахов Ян — адепты|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 41985,
+          "after": "|cffe4cfa3Посвящение Монахов Ян — мастера|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 2875,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daУвеличивает запас здоровья, маны и регенерацию маны Монахов Ян, а также обучает способности |cffa9c7de«Ярость»|cffced4da.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deМонах Ян|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/2|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 2883,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daДополнительно увеличивает запас здоровья, маны и регенерацию маны Монахов Ян.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deМонах Ян|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/2|r"
+        }
+      ]
+    },
+    {
+      "id": "PA90",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41986,
+          "after": "|cffe4cfa3Посвящение Геомантов|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 41987,
+          "after": "|cffe4cfa3Посвящение Геомантов|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 41988,
+          "after": "|cffe4cfa3Посвящение Геомантов|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35521,
+          "after": "|cffe4cfa3Посвящение Геомантов — ученики|r (|cffffffffC|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 35522,
+          "after": "|cffe4cfa3Посвящение Геомантов — адепты|r (|cffffffffC|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 35523,
+          "after": "|cffe4cfa3Посвящение Геомантов — мастера|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3121,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daУвеличивает урон, скорость атаки и здоровье Мастеров Геомантов.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deМастер Геомант|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/3|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 3122,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daДополнительно увеличивает урон, скорость атаки и здоровье Мастеров Геомантов.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deМастер Геомант|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/3|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 3123,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daДополнительно повышает боевые параметры и обучает Мастеров Геомантов заклинанию |cffa9c7de«Энергия Ци»|cffced4da.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deМастер Геомант|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/3|r"
+        }
+      ]
+    },
+    {
+      "id": "PA91",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41989,
+          "after": "|cffe4cfa3Посвящение Монахов Инь|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 41990,
+          "after": "|cffe4cfa3Посвящение Монахов Инь|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 41991,
+          "after": "|cffe4cfa3Посвящение Монахов Инь — адепты|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 41992,
+          "after": "|cffe4cfa3Посвящение Монахов Инь — мастера|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 35529,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daУвеличивает здоровье, ману, регенерацию маны Монахов Инь и обучает заклинанию |cffa9c7de«Рассеивание заклинаний»|cffced4da.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deМонах Инь|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/2|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 35530,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daДополнительно увеличивает здоровье, ману и регенерацию маны Монахов Инь, усиливая заклинание |cffa9c7de«Исцеление»|cffced4da.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deМонах Инь|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/2|r"
+        }
+      ]
+    },
+    {
+      "id": "PA92",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41993,
+          "after": "|cffe4cfa3Посвящение Хмелеваров|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 41994,
+          "after": "|cffe4cfa3Посвящение Хмелеваров|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 41997,
+          "after": "|cffe4cfa3Посвящение Хмелеваров|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 41995,
+          "after": "|cffe4cfa3Посвящение Хмелеваров — ученики|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 41996,
+          "after": "|cffe4cfa3Посвящение Хмелеваров — адепты|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 41998,
+          "after": "|cffe4cfa3Посвящение Хмелеваров — мастера|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3124,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daУвеличивает запас здоровья на |cffc8e087100|cffced4da, маны на |cffc8e087150|cffced4da Хмелеваров и наделяет их невосприимчивостью к магии.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deХмелевар|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/3|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 3125,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daДополнительно увеличивает здоровье на |cffc8e087125|cffced4da, ману на |cffc8e087150|cffced4da Хмелеваров и усиливает их способности.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deХмелевар|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/3|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 3126,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daДополнительно повышает боевые параметры Хмелеваров и доводит их хмельное мастерство до совершенства.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deХмелевар|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/3|r"
+        }
+      ]
+    },
+    {
+      "id": "PA93",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41999,
+          "after": "|cffe4cfa3Стальные Наконечники|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 42000,
+          "after": "|cffe4cfa3Железные Наконечники|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 42001,
+          "after": "|cffe4cfa3Мифриловые Наконечники|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 42002,
+          "after": "|cffe4cfa3Вольфрамовые Наконечники|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 42003,
+          "after": "|cffe4cfa3Серебряные Наконечники|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 42004,
+          "after": "|cffe4cfa3Нефритовые Наконечники|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35543,
+          "after": "|cffe4cfa3Стальные Наконечники — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 35710,
+          "after": "|cffe4cfa3Железные Наконечники — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 35549,
+          "after": "|cffe4cfa3Мифриловые Наконечники — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 35717,
+          "after": "|cffe4cfa3Вольфрамовые Наконечники — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 35718,
+          "after": "|cffe4cfa3Серебряные Наконечники — уровень 5|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 35719,
+          "after": "|cffe4cfa3Нефритовые Наконечники — уровень 6|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 35766,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает урон воинов дальнего боя армии пандаренов на |cffc8e087+1|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deЛучник Пандаренов|cffced4da|n- |cffa9c7deМастер Бури|cffced4da|n- |cffa9c7deОрудийный Расчёт|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/6|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 35767,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает урон воинов дальнего боя армии пандаренов на |cffc8e087+2|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deЛучник Пандаренов|cffced4da|n- |cffa9c7deМастер Бури|cffced4da|n- |cffa9c7deОрудийный Расчёт|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/6|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 35768,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает урон воинов дальнего боя армии пандаренов на |cffc8e087+3|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deЛучник Пандаренов|cffced4da|n- |cffa9c7deМастер Бури|cffced4da|n- |cffa9c7deОрудийный Расчёт|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/6|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 35711,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает урон воинов дальнего боя армии пандаренов на |cffc8e087+4|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deЛучник Пандаренов|cffced4da|n- |cffa9c7deМастер Бури|cffced4da|n- |cffa9c7deОрудийный Расчёт|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4/6|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 35712,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает урон воинов дальнего боя армии пандаренов на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deЛучник Пандаренов|cffced4da|n- |cffa9c7deМастер Бури|cffced4da|n- |cffa9c7deОрудийный Расчёт|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5/6|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 35713,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daПовышает урон воинов дальнего боя армии пандаренов на |cffc8e087+6|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deЛучник Пандаренов|cffced4da|n- |cffa9c7deМастер Бури|cffced4da|n- |cffa9c7deОрудийный Расчёт|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6/6|r"
+        }
+      ]
+    },
+    {
+      "id": "PA94",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42436,
+          "after": "|cffe4cfa3Улучшенные топоры|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 42437,
+          "after": "|cffe4cfa3Улучшенные топоры|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 42428,
+          "after": "|cffe4cfa3Улучшенные топоры|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 42429,
+          "after": "|cffe4cfa3Улучшенные топоры|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 42430,
+          "after": "|cffe4cfa3Улучшенные топоры|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 42431,
+          "after": "|cffe4cfa3Улучшенные топоры|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42438,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 42439,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 42432,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 42433,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 4|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 42434,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 5|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 42435,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 6|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 35554,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daУвеличивает объём древесины, переносимой Рабочими Пандаренов, на |cffc8e087+8|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deРабочий Пандаренов|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/6|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 35555,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daУвеличивает объём древесины, переносимой Рабочими Пандаренов, на |cffc8e087+8|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deРабочий Пандаренов|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4/6|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 35556,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daУвеличивает объём древесины, переносимой Рабочими Пандаренов, на |cffc8e087+8|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deРабочий Пандаренов|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5/6|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 35557,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daУвеличивает объём древесины, переносимой Рабочими Пандаренов, на |cffc8e087+8|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deРабочий Пандаренов|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6/6|r"
+        }
+      ]
+    },
+    {
+      "id": "PA95",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42011,
+          "after": "|cffe4cfa3Утяжелённая Рукоять|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35568,
+          "after": "|cffe4cfa3Утяжелённая Рукоять|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 35569,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daУтяжеляет оружие Воинов Нефритовой Стражи, увеличивая их урон на |cffc8e087+8|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deВоин Нефритовой Стражи|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0L3",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 28728,
+          "after": "|cffe4cfa3Пандарены|r"
+        }
+      ]
+    },
+    {
+      "id": "pa16",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42022,
+          "after": "|cffe4cfa3Усиление Мастеров Огня|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 2927,
+          "after": "|cffe4cfa3Усиление Мастеров Огня|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38751,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daВозвращает Мастерам Огня истинную мощь пламени, повышая их здоровье на |cffc8e087+200|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deМастер Огня|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "pa21",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42453,
+          "after": "|cffe4cfa3Дрессировка Животных|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42455,
+          "after": "|cffe4cfa3Дрессировка Животных|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42454,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daДарует Всадникам Пандаренам |cffc8e087+150 к здоровью|cffced4da и |cffc8e087+10% к скорости передвижения|cffced4da.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deВсадник Пандарен|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "pa39",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42018,
+          "after": "|cffe4cfa3Секреты Древних Мастеров|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 42019,
+          "after": "|cffe4cfa3Секреты Древних Мастеров|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42020,
+          "after": "|cffe4cfa3Секреты Древних Мастеров — адепты|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 42021,
+          "after": "|cffe4cfa3Секреты Древних Мастеров — мастера|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 36866,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daУвеличивает запас здоровья, урон и регенерацию маны Стражей Храма, а также наделяет их |cffa9c7de«Аурой Умиротворённости»|cffced4da.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deСтраж Храма|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/2|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 36867,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daДополнительно увеличивает здоровье, урон и усиливает восстанавливающую ману ауру Стражей Храма.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deСтраж Храма|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/2|r"
+        }
+      ]
+    },
+    {
+      "id": "pa47",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42023,
+          "after": "|cffe4cfa3Усиление Мастеров Земли|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3116,
+          "after": "|cffe4cfa3Усиление Мастеров Земли|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3117,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|r |cffced4daНаделяет Мастеров Земли несокрушимой монолитной стойкостью, повышая здоровье на |cffc8e087+400|cffced4da ед.|n|n|cffa6afb8Применяется к:|r|cffced4da|n- |cffa9c7deМастер Земли|cffced4da.|r"
+        }
+      ]
+    }
+  ]
+}

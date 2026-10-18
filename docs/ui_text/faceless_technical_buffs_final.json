@@ -1,0 +1,68 @@
+{
+  "command": "get-objects-bulk",
+  "count": 3,
+  "map": "F:\\Gemini_23Race\\map.w3x",
+  "missing": [
+    "Bust",
+    "BHtb"
+  ],
+  "objects": [
+    {
+      "fields": {
+        "bufftip": "",
+        "buffubertip": "",
+        "editorname": "Immolation (Caster)"
+      },
+      "id": "BEia",
+      "name": "Immolation (Caster)"
+    },
+    {
+      "fields": {
+        "bufftip": "",
+        "buffubertip": "",
+        "editorname": "Spiked Carapace"
+      },
+      "id": "BUts",
+      "name": "Spiked Carapace"
+    },
+    {
+      "fields": {
+        "bufftip": "",
+        "buffubertip": "",
+        "editorname": "Tranquility (Target)"
+      },
+      "id": "AEtr",
+      "name": "Tranquility (Target)"
+    }
+  ],
+  "ok": true,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "type": "buff",
+  "current_readback": {
+    "date": "2026-10-15",
+    "checks": [
+      {
+        "variant": "SD",
+        "objects": 3,
+        "missing": [
+          "Bust",
+          "BHtb"
+        ]
+      },
+      {
+        "variant": "HD",
+        "objects": 3,
+        "missing": [
+          "Bust",
+          "BHtb"
+        ]
+      }
+    ],
+    "differences": []
+  },
+  "exceptions": {
+    "BEia/BUts/AEtr": "Пустые bufftip/buffubertip SD/HD: пользовательской карточки нет; editorname — редакторская подпись.",
+    "Bust/BHtb": "Существующие отсутствующие ссылки A0PB:1/A126:1; механику не менять в задаче текстов."
+  }
+}

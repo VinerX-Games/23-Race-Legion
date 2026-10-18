@@ -1,0 +1,208 @@
+{
+  "operations": [
+    {
+      "type": "ability",
+      "id": "A00G",
+      "field": "name",
+      "value": "|cffe4cfa3Массированный обстрел|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00G",
+      "field": "tip1",
+      "value": "|cffe4cfa3Массированный обстрел|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A00G",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает выбранную область радиусом |cffffffff250|cffced4da. Выпускает |cffffffff10|cffced4da снарядов и наносит |cffffffff10|cffced4da урона с интервалом |cffffffff0,25|cffced4da сек. Предел урона по области — |cffffffff3000|cffced4da. Здания получают |cffffffff125|cffced4da% урона. Поражает наземных и воздушных противников, включая здания. Оглушение: |cffffffff1|cffced4da сек.; для героев — |cffffffff0,5|cffced4da сек.|n|nТребует исследования «Обстрел». Перезарядка — |cffffffff50|cffced4da сек.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00G",
+      "field": "tip2",
+      "value": "|cffe4cfa3Массированный обстрел|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A00G",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает выбранную область радиусом |cffffffff275|cffced4da. Выпускает |cffffffff10|cffced4da снарядов и наносит |cffffffff20|cffced4da урона с интервалом |cffffffff0,25|cffced4da сек. Предел урона по области — |cffffffff4000|cffced4da. Здания получают |cffffffff125|cffced4da% урона. Поражает наземных и воздушных противников, включая здания. Оглушение: |cffffffff1|cffced4da сек.; для героев — |cffffffff0,5|cffced4da сек.|n|nТребует исследования «Обстрел». Перезарядка — |cffffffff40|cffced4da сек.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00G",
+      "field": "tip3",
+      "value": "|cffe4cfa3Массированный обстрел|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A00G",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает выбранную область радиусом |cffffffff300|cffced4da. Выпускает |cffffffff10|cffced4da снарядов и наносит |cffffffff30|cffced4da урона с интервалом |cffffffff0,25|cffced4da сек. Предел урона по области — |cffffffff5000|cffced4da. Здания получают |cffffffff125|cffced4da% урона. Поражает наземных и воздушных противников, включая здания. Оглушение: |cffffffff1|cffced4da сек.; для героев — |cffffffff0,5|cffced4da сек.|n|nТребует исследования «Обстрел». Перезарядка — |cffffffff30|cffced4da сек.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A009",
+      "field": "name",
+      "value": "|cffe4cfa3Назначение флагмана|r"
+    },
+    {
+      "type": "ability",
+      "id": "A009",
+      "field": "tip1",
+      "value": "|cffe4cfa3Назначение флагмана|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A009",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Назначает корабль флагманом: усиливает базовый урон главных орудий, максимальное здоровье и броню, увеличивает размер и открывает выбор постоянной ауры.|n|nСтоимость — |cffffffff2500|cffced4da золота и |cffffffff2500|cffced4da древесины.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A008",
+      "field": "name",
+      "value": "|cffe4cfa3Особенность флагмана|r"
+    },
+    {
+      "type": "ability",
+      "id": "A008",
+      "field": "tip1",
+      "value": "|cffe4cfa3Особенность флагмана|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A008",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает выбор одной постоянной ауры флагмана: выносливости, стойкости или меткости. Каждый вариант стоит |cffffffff250|cffced4da золота и |cffffffff250|cffced4da древесины. При выборе ауры флагман должен оставаться выделенным.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A007",
+      "field": "name",
+      "value": "|cffe4cfa3Аура выносливости|r"
+    },
+    {
+      "type": "ability",
+      "id": "A007",
+      "field": "tip1",
+      "value": "|cffe4cfa3Аура выносливости|r"
+    },
+    {
+      "type": "ability",
+      "id": "A007",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт союзным механическим войскам, включая сам флагман, в радиусе |cffffffff900|cffced4da бонусы: |cffc8e087+20%|cffced4da к скорости передвижения и |cffc8e087+5%|cffced4da к скорости атаки.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A006",
+      "field": "name",
+      "value": "|cffe4cfa3Аура меткости|r"
+    },
+    {
+      "type": "ability",
+      "id": "A006",
+      "field": "tip1",
+      "value": "|cffe4cfa3Аура меткости|r"
+    },
+    {
+      "type": "ability",
+      "id": "A006",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт союзным механическим войскам, включая сам флагман, в радиусе |cffffffff900|cffced4da бонус |cffc8e087+15%|cffced4da к урону дальних атак. На ближние атаки не действует.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A005",
+      "field": "name",
+      "value": "|cffe4cfa3Аура стойкости|r"
+    },
+    {
+      "type": "ability",
+      "id": "A005",
+      "field": "tip1",
+      "value": "|cffe4cfa3Аура стойкости|r"
+    },
+    {
+      "type": "ability",
+      "id": "A005",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт союзным механическим войскам, включая сам флагман, в радиусе |cffffffff900|cffced4da бонус |cffc8e087+2|cffced4da к броне.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00F",
+      "field": "name",
+      "value": "|cffe4cfa3Аура выносливости|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00F",
+      "field": "tip1",
+      "value": "|cffe4cfa3Аура выносливости|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A00F",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наделяет выбранный флагман постоянной аурой. Даёт союзным механическим войскам, включая сам флагман, в радиусе |cffffffff900|cffced4da бонусы: |cffc8e087+20%|cffced4da к скорости передвижения и |cffc8e087+5%|cffced4da к скорости атаки.|n|nСтоимость — |cffffffff250|cffced4da золота и |cffffffff250|cffced4da древесины. При применении флагман должен оставаться выделенным. Выбор закрывает меню особенностей.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00E",
+      "field": "name",
+      "value": "|cffe4cfa3Аура меткости|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00E",
+      "field": "tip1",
+      "value": "|cffe4cfa3Аура меткости|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A00E",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наделяет выбранный флагман постоянной аурой. Даёт союзным механическим войскам, включая сам флагман, в радиусе |cffffffff900|cffced4da бонус |cffc8e087+15%|cffced4da к урону дальних атак. На ближние атаки не действует.|n|nСтоимость — |cffffffff250|cffced4da золота и |cffffffff250|cffced4da древесины. При применении флагман должен оставаться выделенным. Выбор закрывает меню особенностей.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00C",
+      "field": "name",
+      "value": "|cffe4cfa3Аура стойкости|r"
+    },
+    {
+      "type": "ability",
+      "id": "A00C",
+      "field": "tip1",
+      "value": "|cffe4cfa3Аура стойкости|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A00C",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наделяет выбранный флагман постоянной аурой. Даёт союзным механическим войскам, включая сам флагман, в радиусе |cffffffff900|cffced4da бонус |cffc8e087+2|cffced4da к броне.|n|nСтоимость — |cffffffff250|cffced4da золота и |cffffffff250|cffced4da древесины. При применении флагман должен оставаться выделенным. Выбор закрывает меню особенностей.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A001",
+      "field": "name",
+      "value": "|cffe4cfa3Абордаж|r"
+    },
+    {
+      "type": "ability",
+      "id": "A001",
+      "field": "tip1",
+      "value": "|cffe4cfa3Абордаж|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A001",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Команда абордажа вражеской механической цели.|n|n|cffe69a8dЗахват кораблей в текущей версии недоступен.|cffced4da Применение этой команды не передаёт корабль другому игроку.|r"
+    }
+  ]
+}

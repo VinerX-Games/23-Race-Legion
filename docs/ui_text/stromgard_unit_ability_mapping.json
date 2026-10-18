@@ -1,0 +1,216 @@
+{
+  "units": {
+    "h0G9": {
+      "name": "TRIGSTR_21246",
+      "abilities": [
+        "A0I3",
+        "ANha",
+        "Ahrp"
+      ]
+    },
+    "h0F4": {
+      "name": "TRIGSTR_23035",
+      "abilities": [
+        "A0WG"
+      ]
+    },
+    "h0GS": {
+      "name": "TRIGSTR_21248",
+      "abilities": [
+        "A0VI",
+        "A0WT",
+        "A0WG"
+      ]
+    },
+    "h0GT": {
+      "name": "TRIGSTR_20156",
+      "abilities": [
+        "A0XS",
+        "A0XQ"
+      ]
+    },
+    "h0GV": {
+      "name": "TRIGSTR_21256",
+      "abilities": [
+        "A0WO",
+        "A0WG",
+        "A0WO"
+      ]
+    },
+    "h0GU": {
+      "name": "TRIGSTR_21254",
+      "abilities": [
+        "A0WP"
+      ]
+    },
+    "h0GW": {
+      "name": "TRIGSTR_21259",
+      "abilities": [
+        "A0WM",
+        "A0WN",
+        "A0WJ",
+        "A0WJ"
+      ]
+    },
+    "h0GX": {
+      "name": "TRIGSTR_23032",
+      "abilities": [
+        "A0WK",
+        "A0WH",
+        "A0WL",
+        "A0WH"
+      ]
+    },
+    "h0HD": {
+      "name": "TRIGSTR_21278",
+      "abilities": [
+        "A0WS"
+      ]
+    },
+    "h0HE": {
+      "name": "TRIGSTR_21281",
+      "abilities": [
+        "A0WG",
+        "A0WP",
+        "A0WT"
+      ]
+    },
+    "h0L3": {
+      "name": "TRIGSTR_28770",
+      "abilities": [
+        "A17U"
+      ]
+    },
+    "o03X": {
+      "name": "TRIGSTR_28778",
+      "abilities": []
+    },
+    "h0GY": {
+      "name": "TRIGSTR_21334",
+      "abilities": []
+    },
+    "h0HC": {
+      "name": "TRIGSTR_21336",
+      "abilities": [
+        "A0WN",
+        "A0WU"
+      ]
+    },
+    "h02Z": {
+      "name": "TRIGSTR_20414",
+      "abilities": [
+        "A0XP",
+        "A0XO",
+        "A0XN"
+      ]
+    },
+    "h0HX": {
+      "name": "TRIGSTR_20421",
+      "abilities": [
+        "A0XS",
+        "A0XR",
+        "A0XQ"
+      ]
+    },
+    "h0I3": {
+      "name": "TRIGSTR_20426",
+      "abilities": [
+        "A0XY",
+        "A0XT"
+      ]
+    },
+    "o02Q": {
+      "name": "TRIGSTR_42701",
+      "abilities": [
+        "A0ZM",
+        "ACmi"
+      ]
+    },
+    "o06A": {
+      "name": "TRIGSTR_42718",
+      "abilities": [
+        "A0ZM",
+        "ACmi"
+      ]
+    },
+    "o06B": {
+      "name": "TRIGSTR_42719",
+      "abilities": [
+        "A0ZM",
+        "ACmi"
+      ]
+    },
+    "o06C": {
+      "name": "TRIGSTR_42720",
+      "abilities": [
+        "A0ZM",
+        "ACmi"
+      ]
+    },
+    "o02R": {
+      "name": "TRIGSTR_23040",
+      "abilities": [
+        "A0ZR",
+        "A0ZS"
+      ]
+    },
+    "o06D": {
+      "name": "TRIGSTR_23054",
+      "abilities": [
+        "A1O6",
+        "A0ZT"
+      ]
+    },
+    "o06E": {
+      "name": "TRIGSTR_23366",
+      "abilities": [
+        "A1O7",
+        "A1O3"
+      ]
+    },
+    "o06F": {
+      "name": "TRIGSTR_23688",
+      "abilities": [
+        "A1O8",
+        "A1O4"
+      ]
+    }
+  },
+  "all_abilities": [
+    "A0I3",
+    "A0VI",
+    "A0WG",
+    "A0WH",
+    "A0WJ",
+    "A0WK",
+    "A0WL",
+    "A0WM",
+    "A0WN",
+    "A0WO",
+    "A0WP",
+    "A0WS",
+    "A0WT",
+    "A0WU",
+    "A0XN",
+    "A0XO",
+    "A0XP",
+    "A0XQ",
+    "A0XR",
+    "A0XS",
+    "A0XT",
+    "A0XY",
+    "A0ZM",
+    "A0ZR",
+    "A0ZS",
+    "A0ZT",
+    "A17U",
+    "A1O3",
+    "A1O4",
+    "A1O6",
+    "A1O7",
+    "A1O8",
+    "ACmi",
+    "ANha",
+    "Ahrp"
+  ]
+}

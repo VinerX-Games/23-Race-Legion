@@ -1,0 +1,597 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 850ceb2..34df71a 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -11,23 +11,26 @@ project (HiveWE CXX)
+ set(CMAKE_INCLUDE_CURRENT_DIR ON)
+ set(CMAKE_CXX_EXTENSIONS OFF)
+ 
+-find_package(Qt6 COMPONENTS Core Gui Widgets OpenGL OpenGLWidgets REQUIRED)
+-find_package(Bullet CONFIG REQUIRED)
++option(HIVEWE_CLI_ONLY "Build the headless CLI without Qt/editor dependencies" OFF)
+ find_package(glm CONFIG REQUIRED)
+-find_package(glad CONFIG REQUIRED)
+-find_package(soil2 CONFIG REQUIRED)
+ find_package(stormlib CONFIG REQUIRED)
+ find_package(BZip2 REQUIRED) # Required by Stormlib
+ find_package(CascLib CONFIG REQUIRED)
++find_package(absl CONFIG REQUIRED)
++find_package(unordered_dense CONFIG REQUIRED)
++find_package(nlohmann_json CONFIG REQUIRED)
++
++if(NOT HIVEWE_CLI_ONLY)
++find_package(Qt6 COMPONENTS Core Gui Widgets OpenGL OpenGLWidgets REQUIRED)
++find_package(Bullet CONFIG REQUIRED)
++find_package(glad CONFIG REQUIRED)
++find_package(soil2 CONFIG REQUIRED)
+ find_package(JPEG REQUIRED)
+ find_package(qtadvanceddocking-qt6 CONFIG REQUIRED)
+-find_package(absl CONFIG REQUIRED)
+ find_package(TBB CONFIG REQUIRED)
+ find_package(libjpeg-turbo CONFIG REQUIRED)
+ find_package(imgui CONFIG REQUIRED)
+ find_package(outcome CONFIG REQUIRED)
+-find_package(unordered_dense CONFIG REQUIRED)
+-find_package(nlohmann_json CONFIG REQUIRED)
+ find_package(mimalloc CONFIG REQUIRED)
+ find_package(unofficial-qscintilla CONFIG REQUIRED)
+ find_package(tracy CONFIG REQUIRED)
+@@ -133,6 +136,8 @@ target_link_libraries(HiveWE PRIVATE HiveWE_lib)
+ # Qt-free. These same .ixx files are also compiled into HiveWE_lib; that
+ # duplicate compilation is intentional and harmless (distinct targets, distinct
+ # BMIs).
++endif() # GUI configuration
++
+ add_library(HiveWE_core STATIC)
+ target_sources(HiveWE_core PUBLIC FILE_SET core_modules TYPE CXX_MODULES FILES
+ 	"src/types.ixx"
+@@ -211,11 +216,12 @@ target_compile_definitions(HiveWE_cli PRIVATE UNICODE _UNICODE __STORMLIB_NO_STA
+ # Expose data/ (pjass.exe, luac.exe, common.j, ...) next to the CLI exe so
+ # validate-script can find its tools via the executable directory.
+ add_custom_command(TARGET HiveWE_cli POST_BUILD
+-	COMMAND ${CMAKE_COMMAND} -E create_symlink
++	COMMAND ${CMAKE_COMMAND} -E copy_directory
+ 	"${PROJECT_SOURCE_DIR}/data"
+ 	"$<TARGET_FILE_DIR:HiveWE_cli>/data"
+ )
+ 
++if(NOT HIVEWE_CLI_ONLY)
+ if(HIVEWE_BUILD_TESTS)
+ 	enable_testing()
+ 	add_subdirectory(tests)
+@@ -269,3 +275,5 @@ if(WIN32)
+ 		)
+ 	endif()
+ endif()
++
++endif() # GUI packaging/tests
+diff --git a/src/base/trigger_strings.ixx b/src/base/trigger_strings.ixx
+index 45432be..a4dd8f5 100644
+--- a/src/base/trigger_strings.ixx
++++ b/src/base/trigger_strings.ixx
+@@ -93,6 +93,14 @@ export class TriggerStrings {
+ 		hierarchy.map_file_write("war3map.wts", writer.buffer);
+ 	}
+ 
++	bool contains(const std::string_view key) const {
++		return strings.contains(std::string(key));
++	}
++	std::string create_string(const std::string& value) {
++		const auto key = std::format("TRIGSTR_{:03}", ++next_id);
++		strings[key] = value;
++		return key;
++	}
+ 	std::string_view string(const std::string_view key) const {
+ 		const auto found = strings.find(std::string(key));
+ 
+diff --git a/src/cli/main_cli.cpp b/src/cli/main_cli.cpp
+index 092a815..d09a2b6 100644
+--- a/src/cli/main_cli.cpp
++++ b/src/cli/main_cli.cpp
+@@ -39,7 +39,9 @@ namespace {
+ 
+ // ---- output ---------------------------------------------------------------
+ 
+-[[noreturn]] void emit(const json& result) {
++[[noreturn]] void emit(json result) {
++	result["schema_version"] = 1;
++	result["tool"] = "HiveWE_cli";
+ 	const bool ok = result.value("ok", false);
+ 	std::fputs(result.dump(2).c_str(), stdout);
+ 	std::fputc('\n', stdout);
+@@ -288,17 +290,15 @@ HWND find_main_window(DWORD pid) {
+ 	return ctx.hwnd;
+ }
+ 
++bool focus_window(HWND hwnd);
++
+ bool click_window_center(DWORD pid) {
+ 	HWND hwnd = find_main_window(pid);
+ 	if (hwnd == nullptr) {
+ 		return false;
+ 	}
+ 
+-	ShowWindow(hwnd, SW_RESTORE);
+-	BringWindowToTop(hwnd);
+-	SetForegroundWindow(hwnd);
+-	SetActiveWindow(hwnd);
+-	SetFocus(hwnd);
++	if (!focus_window(hwnd)) return false;
+ 
+ 	RECT rect{};
+ 	if (!GetClientRect(hwnd, &rect)) {
+@@ -321,11 +321,7 @@ bool send_enter_to_window(DWORD pid) {
+ 		return false;
+ 	}
+ 
+-	ShowWindow(hwnd, SW_RESTORE);
+-	BringWindowToTop(hwnd);
+-	SetForegroundWindow(hwnd);
+-	SetActiveWindow(hwnd);
+-	SetFocus(hwnd);
++	if (!focus_window(hwnd)) return false;
+ 
+ 	PostMessageW(hwnd, WM_KEYDOWN, VK_RETURN, 0);
+ 	PostMessageW(hwnd, WM_KEYUP, VK_RETURN, 0);
+@@ -352,22 +348,27 @@ std::wstring utf8_to_wstring(const std::string& text) {
+ }
+ 
+ bool focus_window(HWND hwnd) {
+-	if (hwnd == nullptr) {
+-		return false;
+-	}
+-
+-	const DWORD target_thread = GetWindowThreadProcessId(hwnd, nullptr);
+-	const DWORD my_thread = GetCurrentThreadId();
+-	AttachThreadInput(my_thread, target_thread, TRUE);
+-
+-	ShowWindow(hwnd, SW_RESTORE);
+-	BringWindowToTop(hwnd);
+-	SetForegroundWindow(hwnd);
+-	SetActiveWindow(hwnd);
+-	SetFocus(hwnd);
+-
+-	AttachThreadInput(my_thread, target_thread, FALSE);
+-	return true;
++    if (hwnd == nullptr) return false;
++    MSG pending{};
++    PeekMessageW(&pending, nullptr, 0, 0, PM_NOREMOVE);
++    const DWORD mine = GetCurrentThreadId();
++    const DWORD target = GetWindowThreadProcessId(hwnd, nullptr);
++    const DWORD foreground = GetWindowThreadProcessId(GetForegroundWindow(), nullptr);
++    std::vector<DWORD> attached;
++    for (const DWORD thread : {target, foreground}) {
++        if (thread != mine && std::find(attached.begin(), attached.end(), thread) == attached.end() &&
++            AttachThreadInput(mine, thread, TRUE)) attached.push_back(thread);
++    }
++    ShowWindow(hwnd, SW_RESTORE);
++    BringWindowToTop(hwnd);
++    SetForegroundWindow(hwnd);
++    SetActiveWindow(hwnd);
++    SetFocus(hwnd);
++    DWORD actual_pid = 0, target_pid = 0;
++    GetWindowThreadProcessId(GetForegroundWindow(), &actual_pid);
++    GetWindowThreadProcessId(hwnd, &target_pid);
++    for (const DWORD thread : attached) AttachThreadInput(mine, thread, FALSE);
++    return actual_pid == target_pid;
+ }
+ 
+ bool send_virtual_key_input(WORD vk) {
+@@ -469,7 +470,7 @@ bool send_chat_to_window(DWORD pid, const std::string& text) {
+ 		return false;
+ 	}
+ 
+-	focus_window(hwnd);
++	if (!focus_window(hwnd)) return false;
+ 	HKL prev_layout = force_english_layout(hwnd);
+ 	Sleep(100);
+ 
+@@ -1039,7 +1040,31 @@ void cmd_probe_map(const Args& args) {
+ 	const fs::path warcraft = fs::path(args.require("warcraft"));
+ 	const fs::path log_path = war3_log_path(args);
+ 	const auto probe_log_file = args.get("probe-log");
++	const auto ready_file = args.get("ready-file");
++	const auto probe_started = fs::file_time_type::clock::now();
++	bool bridge_ready = false;
+ 	const std::vector<BridgeCommand> bridge_schedule = parse_bridge_schedule(args);
++	const std::size_t wait_seconds = parse_seconds_option(args, "wait", 12);
++	const std::size_t tail_lines = parse_seconds_option(args, "tail", 120);
++	const auto click_after_opt = args.get("click-after");
++	const std::vector<TimedChatCommand> chat_schedule = parse_chat_schedule(args);
++	if (click_after_opt) {
++		const std::size_t click_after_seconds = parse_seconds_option(args, "click-after", 0);
++		if (click_after_seconds >= wait_seconds) {
++			fail("--click-after must be smaller than --wait");
++		}
++	}
++	for (const auto& command : chat_schedule) {
++		if (command.after_seconds >= wait_seconds) {
++			fail("chat command scheduled outside probe window: " + std::to_string(command.after_seconds) + ":" + command.text);
++		}
++	}
++	for (const auto& command : bridge_schedule) {
++		if (command.after_seconds >= wait_seconds) {
++			fail("bridge command scheduled outside probe window: " + std::to_string(command.after_seconds) + ":" + command.op + ":" + command.arg);
++		}
++	}
++
+ 	if (!fs::exists(map_path)) {
+ 		fail("map path not found: " + map_path.string());
+ 	}
+@@ -1071,10 +1096,6 @@ void cmd_probe_map(const Args& args) {
+ 		fail("failed to launch Warcraft III (error " + std::to_string(GetLastError()) + ")");
+ 	}
+ 
+-	const std::size_t wait_seconds = parse_seconds_option(args, "wait", 12);
+-	const std::size_t tail_lines = parse_seconds_option(args, "tail", 120);
+-	const auto click_after_opt = args.get("click-after");
+-	const std::vector<TimedChatCommand> chat_schedule = parse_chat_schedule(args);
+ 	const bool terminate_after_wait = !args.has_flag("keep-open");
+ 	bool click_sent = false;
+ 	bool click_window_found = false;
+@@ -1084,22 +1105,6 @@ void cmd_probe_map(const Args& args) {
+ 	std::vector<bool> bridge_sent(bridge_schedule.size(), !bridge_schedule.empty());
+ 	DWORD wait_result = WAIT_TIMEOUT;
+ 
+-	if (click_after_opt) {
+-		const std::size_t click_after_seconds = parse_seconds_option(args, "click-after", 0);
+-		if (click_after_seconds >= wait_seconds) {
+-			fail("--click-after must be smaller than --wait");
+-		}
+-	}
+-	for (const auto& command : chat_schedule) {
+-		if (command.after_seconds >= wait_seconds) {
+-			fail("chat command scheduled outside probe window: " + std::to_string(command.after_seconds) + ":" + command.text);
+-		}
+-	}
+-	for (const auto& command : bridge_schedule) {
+-		if (command.after_seconds >= wait_seconds) {
+-			fail("bridge command scheduled outside probe window: " + std::to_string(command.after_seconds) + ":" + command.op + ":" + command.arg);
+-		}
+-	}
+ 
+ 	const std::size_t click_after_seconds = click_after_opt ? parse_seconds_option(args, "click-after", 0) : 0;
+ 	const ULONGLONG start_tick = GetTickCount64();
+@@ -1114,6 +1119,17 @@ void cmd_probe_map(const Args& args) {
+ 
+ 		const ULONGLONG elapsed_ms = GetTickCount64() - start_tick;
+ 		const std::size_t elapsed_seconds = static_cast<std::size_t>(elapsed_ms / 1000);
++		if (ready_file && !bridge_ready) {
++			const fs::path readiness = custom_map_data_file_path(*ready_file);
++			std::error_code readiness_error;
++			if (fs::is_regular_file(readiness, readiness_error) &&
++				fs::last_write_time(readiness, readiness_error) >= probe_started && !readiness_error) {
++				bridge_ready = read_text_file(readiness).find("hb|") != std::string::npos;
++			}
++		}
++		if (bridge_ready && args.has_flag("stop-when-ready")) {
++			break;
++		}
+ 
+ 		if (click_after_opt && !click_handled && elapsed_seconds >= click_after_seconds) {
+ 			click_sent = click_window_center(proc->pid);
+@@ -1162,7 +1178,8 @@ void cmd_probe_map(const Args& args) {
+ 	const std::string excerpt = extract_log_excerpt(log_path, map_path, tail_lines, found_map_marker);
+ 	const bool has_error = excerpt.find("Map contains invalid Jass scripts that couldn't be compiled by war3") != std::string::npos;
+ 
+-	json result = {{"ok", true},
++	json result = {{"ok", !has_error && (!ready_file || bridge_ready) &&
++							 (exit_code == STILL_ACTIVE || exit_code == 0)},
+ 		  {"command", "probe-map"},
+ 		  {"map", map_path.string()},
+ 		  {"warcraft_exe", exe.string()},
+@@ -1206,6 +1223,10 @@ void cmd_probe_map(const Args& args) {
+ 		});
+ 	}
+ 	result["bridge_commands"] = bridge_results;
++	result["bridge_ready"] = bridge_ready;
++	if (ready_file && !bridge_ready) {
++		result["error"] = "fresh bridge heartbeat was not observed within the probe window";
++	}
+ 	emit(result);
+ }
+ 
+@@ -1306,6 +1327,7 @@ void cmd_validate_script(const Args& args) {
+ } // namespace
+ 
+ int main(int argc, char* argv[]) {
++	try {
+ 	fs::current_path(project_root());
+ 	const Utf8Args utf8_args = windows_utf8_args();
+ 	int effective_argc = utf8_args.argv.empty() ? argc : static_cast<int>(utf8_args.argv.size());
+@@ -1330,17 +1352,28 @@ int main(int argc, char* argv[]) {
+ 	if (args.has_flag("utf8")) {
+ 		SetConsoleOutputCP(CP_UTF8);
+ 	}
++	if (args.command == "capabilities") {
++		emit({{"ok", true}, {"command", "capabilities"},
++			  {"contract", {{"schema_version", 1}, {"success_exit", 0}, {"failure_exit", 1},
++							{"search_results_key", "matches"}, {"bulk_results_key", "objects"}}},
++			  {"features", {{"bulk_objects", true}, {"dump_all_fields", true},
++								{"fresh_probe_heartbeat", true}, {"validate_map", true},
++								{"asset_exists", true}, {"dynamic_doodad_pathing", false}}}});
++	}
+ 
+ 	if (args.command.empty() || args.command == "help" || args.has_flag("help")) {
+ 		emit({{"ok", true},
+ 			  {"tool", "HiveWE_cli"},
+ 			  {"commands", json::array({"build-map", "run-map", "probe-map", "read-war3-log", "read-custom-map-data-log", "validate-script",
+-									   "list-object-types", "search-objects", "get-object", "get-objects-bulk", "set-field", "copy-object", "batch-edit", "safe-move", "describe-race",
++									   "capabilities", "validate-map", "asset-exists", "list-object-types", "search-objects", "get-object", "get-objects-bulk", "set-field", "copy-object", "batch-edit", "safe-move", "describe-race",
+ 									   "show-building", "list-race-objects", "list-all-races", "dump-objects", "list-fields", "trace-unit", "pathing-islands", "pathing-path", "pathing-render",
+ 									   "list-regions", "add-region", "remove-region", "set-region",
+ 								   "list-units", "add-unit", "remove-unit", "set-unit",
+ 								   "island-at", "region-for-island", "regions-coverage"})},
+ 			  {"usage", json::object({
++				   {"capabilities", "(no args)"},
++				   {"validate-map", "--map <dir> [--warcraft <dir>] [--assets] [--limit N]"},
++				   {"asset-exists", "--map <dir> --path <asset> [--warcraft <dir>]"},
+ 				   {"build-map", "--map <dir> [--out <file.w3x>]"},
+ 				   {"run-map", "--map <dir|.w3x> --warcraft <dir> [--ptr] [--args \"...\"]"},
+ 				   {"probe-map", "--map <dir|.w3x> --warcraft <dir> [--wait 12] [--click-after 6] [--chat-after 20 --chat-text -ai2] [--chat-script \"20:-ai2|35:-raceselect1\"] [--bridge-script \"90:create_ai:2|105:race_select:1\"] [--tail 120] [--keep-open] [--log <War3Log.txt>] [--probe-log <relative-file>] [--args \"...\"]"},
+@@ -1402,7 +1435,8 @@ int main(int argc, char* argv[]) {
+ 		cmd_read_custom_map_data_log(args);
+ 	} else if (args.command == "validate-script") {
+ 		cmd_validate_script(args);
+-	} else if (args.command == "list-object-types" || args.command == "search-objects" ||
++	} else if (args.command == "validate-map" || args.command == "asset-exists" ||
++			   args.command == "list-object-types" || args.command == "search-objects" ||
+ 			   args.command == "get-object" || args.command == "get-objects-bulk" || args.command == "set-field" || args.command == "copy-object" || args.command == "batch-edit" || args.command == "describe-race" ||
+ 			   args.command == "show-building" || args.command == "list-race-objects" || args.command == "list-all-races" ||
+ 			   args.command == "dump-objects" || args.command == "list-fields" || args.command == "trace-unit" ||
+@@ -1417,16 +1451,21 @@ int main(int argc, char* argv[]) {
+ 			   args.command == "regions-coverage") {
+ 		bool ok = false;
+ 		const std::string result = hivewe_object_command(effective_argc, effective_argv, warcraft_dir_from_registry(), ok);
+-		std::fputs(result.c_str(), stdout);
+-		std::fputc('\n', stdout);
+-		std::exit(ok ? 0 : 1);
++		json parsed = json::parse(result, nullptr, false);
++		if (parsed.is_discarded() || !parsed.is_object()) fail("invalid object-data JSON response");
++		parsed["ok"] = ok;
++		emit(parsed);
+ 	} else if (args.command == "safe-move") {
+ 		bool ok = false;
+-		const std::string result = hivewe_safe_move_command(argc, argv, warcraft_dir_from_registry(), ok);
+-		std::fputs(result.c_str(), stdout);
+-		std::fputc('\n', stdout);
+-		std::exit(ok ? 0 : 1);
++		const std::string result = hivewe_safe_move_command(effective_argc, effective_argv, warcraft_dir_from_registry(), ok);
++		json parsed = json::parse(result, nullptr, false);
++		if (parsed.is_discarded() || !parsed.is_object()) fail("invalid safe-move JSON response");
++		parsed["ok"] = ok;
++		emit(parsed);
+ 	}
+ 
+ 	fail("unknown command: " + args.command);
++	} catch (const std::exception& exception) {
++		fail(exception.what(), {{"error_code", "exception"}});
++	}
+ }
+diff --git a/src/cli/object_data_cli.cpp b/src/cli/object_data_cli.cpp
+index 519c57b..27733c0 100644
+--- a/src/cli/object_data_cli.cpp
++++ b/src/cli/object_data_cli.cpp
+@@ -31,6 +31,26 @@ import PlacedUnits;
+ namespace {
+ namespace fs = std::filesystem;
+ 
++bool asset_available(const std::string& name) {
++	std::vector<fs::path> candidates = {fs::path(name)};
++	const auto extension = fs::path(name).extension().string();
++	if (extension.empty()) {
++		candidates.push_back(fs::path(name + ".mdx"));
++		candidates.push_back(fs::path(name + ".mdl"));
++	} else if (extension == ".blp" || extension == ".BLP") {
++		auto dds = fs::path(name); dds.replace_extension(".dds"); candidates.push_back(dds);
++	} else if (extension == ".mdl" || extension == ".MDL") {
++		auto mdx = fs::path(name); mdx.replace_extension(".mdx"); candidates.push_back(mdx);
++	}
++	for (const auto& candidate : candidates) {
++		if (hierarchy.file_exists(candidate)) return true;
++		for (const auto* flavour : {"_sd.w3mod:", "_hd.w3mod:"}) {
++			if (hierarchy.game_data.file_exists(fs::path("war3.w3mod:" + std::string(flavour) + candidate.generic_string()))) return true;
++		}
++	}
++	return false;
++}
++
+ std::string resolve_trigger_string(std::string raw, const TriggerStrings& ts) {
+ 	if (raw.starts_with("TRIGSTR")) {
+ 		const std::string_view resolved = ts.string(raw);
+@@ -671,6 +691,15 @@ std::optional<TypeInfo> type_for(const std::string& name) {
+ 
+ const char* const kTypeNames[] = {"unit", "item", "ability", "doodad", "destructible", "upgrade", "buff"};
+ 
++void persist_object_type(const TypeInfo& info) {
++	save_modification_file(info.mod_file, *info.slk, *info.meta, info.optional_ints, false);
++	const auto skin = std::string("war3mapSkin") + fs::path(info.mod_file).extension().string();
++	if (hierarchy.map_file_exists(skin)) {
++		// Main now contains the merged effective values. Old skin overrides must not mask edits.
++		save_modification_file(skin, *info.slk, *info.meta, info.optional_ints, true);
++	}
++}
++
+ std::string display_name(const slk::SLK& slk, const std::string& id, const TriggerStrings& ts) {
+ 	for (const char* col : {"name", "editorname", "name1", "bufftip"}) {
+ 		if (slk.column_headers.contains(col)) {
+@@ -2817,6 +2846,88 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
+ 		return error(std::string("failed to load object data: ") + e.what());
+ 	}
+ 
++	if (args.command == "asset-exists") {
++		const auto path = args.get("path");
++		if (!path) return error("asset-exists requires --path");
++		JsonObject result;
++		result.boolean("ok", true);
++		result.str("command", args.command);
++		result.str("path", *path);
++		result.boolean("found", asset_available(*path));
++		ok = true;
++		return result.dump();
++	}
++	if (args.command == "validate-map") {
++		const std::vector<std::pair<std::string, std::string>> references = {
++			{"builds", "unit"}, {"trains", "unit"}, {"sellunits", "unit"},
++			{"sellitems", "item"}, {"researches", "upgrade"}, {"upgrades", "upgrade"},
++			{"abillist", "ability"}, {"heroabillist", "ability"}
++		};
++		std::size_t errors = 0, warnings = 0, checked = 0;
++		std::vector<std::string> findings;
++		std::vector<std::string> asset_warnings;
++		std::unordered_map<std::string, bool> asset_cache;
++		auto finding = [&](const std::string& severity, const std::string& type,
++						   const std::string& id, const std::string& field,
++						   const std::string& value, const std::string& message) {
++			if (severity == "error") ++errors; else ++warnings;
++			JsonObject item;
++			item.str("severity", severity); item.str("type", type); item.str("id", id);
++			item.str("field", field); item.str("reference", value); item.str("message", message);
++			if (severity == "error") findings.push_back(item.dump());
++			else asset_warnings.push_back(item.dump());
++		};
++		for (const auto* type : kTypeNames) {
++			const auto table = type_for(type);
++			for (const auto& [id, row] : table->slk->row_headers) {
++				++checked;
++				for (const auto& [field, target] : references) {
++					const auto raw = table->slk->data<std::string>(field, id);
++					for (const auto& reference : split_csv(raw)) {
++						if (reference.empty() || reference == "_" || reference == "0") continue;
++						if (!type_for(target)->slk->row_headers.contains(reference)) {
++							finding("error", type, id, field, reference, "unknown " + target + " reference");
++						}
++					}
++				}
++				for (const auto& field : {"name", "editorsuffix"}) {
++					const auto raw = table->slk->data<std::string>(field, id);
++					if (raw.starts_with("TRIGSTR_") && !ts.contains(raw)) {
++						finding("error", type, id, field, raw, "unresolved WTS reference");
++					}
++				}
++				if (args.has_flag("assets") && table->slk->shadow_data.contains(id)) {
++					for (const auto& field : {"file", "art"}) {
++						const auto raw = table->slk->data<std::string>(field, id);
++						if (raw.empty() || raw == "_" || raw == "0") continue;
++						for (const auto& asset : split_csv(raw)) {
++							if (!asset_cache.contains(asset)) {
++							asset_cache[asset] = asset_available(asset);
++							}
++							if (!asset_cache[asset]) finding("warning", type, id, field, asset,
++														 "asset not resolved in map/CASC; inspect replacements");
++						}
++					}
++				}
++			}
++		}
++		findings.insert(findings.end(), asset_warnings.begin(), asset_warnings.end());
++		const auto limit = args.get("limit");
++		std::size_t maximum = limit ? std::stoull(*limit) : 25;
++		std::string items = "[";
++		for (std::size_t i = 0; i < std::min(maximum, findings.size()); ++i) {
++			if (i) items += ",";
++			items += findings[i];
++		}
++		items += "]";
++		JsonObject result;
++		result.boolean("ok", errors == 0); result.str("command", args.command);
++		result.number("objects_checked", checked); result.number("errors", errors);
++		result.number("warnings", warnings); result.number("findings_total", findings.size());
++		result.raw("findings", items);
++		ok = errors == 0;
++		return result.dump();
++	}
+ 	const auto type_opt = args.get("type");
+ 	if (!type_opt) {
+ 		return error("missing required option: --type <unit|item|ability|doodad|destructible|upgrade|buff>");
+@@ -2973,11 +3084,18 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
+ 		}
+ 		const std::string field = to_lower(*field_opt);
+ 		const std::string& id = *id_opt;
++		if (!slk.column_headers.contains(field)) {
++			return error("unknown field: " + field + " (use list-fields)");
++		}
+ 
+ 		const std::string old_value = slk.data<std::string>(field, id);
+ 		if (old_value.starts_with("TRIGSTR")) {
+-			std::string key = old_value;
+-			ts.set_string(key, *value_opt);
++			if (args.has_flag("shared-string")) {
++				std::string key = old_value;
++				ts.set_string(key, *value_opt);
++			} else {
++				slk.set_shadow_data(field, id, ts.create_string(*value_opt));
++			}
+ 			ts.save();
+ 		} else {
+ 			slk.set_shadow_data(field, id, *value_opt);
+@@ -2985,7 +3103,7 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
+ 		const std::string new_value = old_value.starts_with("TRIGSTR") ? *value_opt : slk.data<std::string>(field, id);
+ 
+ 		// Persist the modification table back into the map folder.
+-		save_modification_file(info->mod_file, *info->slk, *info->meta, info->optional_ints, false);
++		persist_object_type(*info);
+ 		{
+ 			JsonObject log;
+ 			log.str("ts", changelog_ts());
+@@ -3037,7 +3155,7 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
+ 				slk.set_shadow_data("name", *new_id_opt, *name_opt);
+ 			}
+ 
+-			save_modification_file(info->mod_file, *info->slk, *info->meta, info->optional_ints, false);
++			persist_object_type(*info);
+ 			{
+ 				JsonObject log;
+ 				log.str("ts", changelog_ts());
+@@ -3125,7 +3243,7 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
+ 		changed_arr += "]";
+ 
+ 		if (!dry_run) {
+-			save_modification_file(info->mod_file, *info->slk, *info->meta, info->optional_ints, false);
++			persist_object_type(*info);
+ 			ts.save();
+ 			{
+ 				JsonObject log;
+@@ -3230,6 +3348,11 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
+ 		if (const auto f = args.get("fields")) {
+ 			use_fields = split_csv(*f);
+ 			for (auto& col : use_fields) col = to_lower(col);
++		} else if (args.has_flag("all-fields")) {
++			for (const auto& [column, column_index] : slk.column_headers) {
++				use_fields.push_back(column);
++			}
++			std::sort(use_fields.begin(), use_fields.end());
+ 		} else {
+ 			if (type_name == "unit") {
+ 				use_fields = {"name", "editorsuffix", "goldcost", "lumbercost", "foodcost", "hitpoints",
+diff --git a/src/utilities/modification_tables.ixx b/src/utilities/modification_tables.ixx
+index 307fe3c..4ea6578 100644
+--- a/src/utilities/modification_tables.ixx
++++ b/src/utilities/modification_tables.ixx
+@@ -158,7 +158,9 @@ export void save_modification_table(BinaryWriter& writer, const slk::SLK& slk, c
+ 			sub_writer.write<uint32_t>(0); // "no changes"
+ 			continue;
+ 		}
+-		sub_writer.write<uint32_t>(properties.size() - (properties.contains("oldid") ? 1 : 0));
++		const auto changes_offset = sub_writer.buffer.size();
++		uint32_t written_changes = 0;
++		sub_writer.write<uint32_t>(0);
+ 
+ 		for (const auto& [property_id, value] : properties) {
+ 			// The oldis property is a HiveWE specific field of storing the ID a unit/ability is based on
+@@ -184,6 +186,7 @@ export void save_modification_table(BinaryWriter& writer, const slk::SLK& slk, c
+ 				continue;
+ 			}
+ 			const std::string meta_data_key = std::string(meta_id2.value());
++			++written_changes;
+ 
+ 			sub_writer.write_string(meta_data_key);
+ 			// There's an error in AbilityMetaData.slk where Crs1 instead uses Crs so we need to pad till 4 characters
+@@ -220,6 +223,7 @@ export void save_modification_table(BinaryWriter& writer, const slk::SLK& slk, c
+ 
+ 			sub_writer.write<uint32_t>(0);
+ 		}
++		std::memcpy(sub_writer.buffer.data() + changes_offset, &written_changes, sizeof(written_changes));
+ 	}
+ 
+ 	writer.write<uint32_t>(count);

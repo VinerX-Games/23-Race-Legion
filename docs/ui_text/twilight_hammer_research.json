@@ -1,0 +1,897 @@
+{
+  "scope": "Культ Сумеречного Молота (Twilight Hammer): категория 5 — Исследования и маркеры (18 технологий)",
+  "upgrades_count": 18,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R07K",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10670,
+          "after": "|cffe4cfa3Культ Сумеречного Молота|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10671,
+          "after": "|cffe4cfa3Культ Сумеречного Молота|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20118,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Культу Сумеречного Молота.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0KD",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 5598,
+          "after": "|cffe4cfa3Культ Сумеречного Молота|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 5599,
+          "after": "|cffe4cfa3Культ Сумеречного Молота|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 37033,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер выбора ветви развития Культа Сумеречного Молота.|r"
+        }
+      ]
+    },
+    {
+      "id": "R04D",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 40024,
+          "after": "|cffe4cfa3Фанатизм|r [|cffffffff1|r]"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 40026,
+          "after": "|cffe4cfa3Фанатизм|r [|cffffffff2|r]"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 40027,
+          "after": "|cffe4cfa3Фанатизм|r [|cffffffff3|r]"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 40028,
+          "after": "|cffe4cfa3Фанатизм|r [|cffffffff4|r]"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 40084,
+          "after": "|cffe4cfa3Фанатизм|r [|cffffffff5|r]"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 40104,
+          "after": "|cffe4cfa3Фанатизм|r [|cffffffff6|r]"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 12523,
+          "after": "|cffe4cfa3Фанатизм|r [|cffffffff1|r] (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 12524,
+          "after": "|cffe4cfa3Фанатизм|r [|cffffffff2|r] (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 12525,
+          "after": "|cffe4cfa3Фанатизм|r [|cffffffff3|r] (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 12526,
+          "after": "|cffe4cfa3Фанатизм|r [|cffffffff4|r] (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 12527,
+          "after": "|cffe4cfa3Фанатизм|r [|cffffffff5|r] (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 12528,
+          "after": "|cffe4cfa3Фанатизм|r [|cffffffff6|r] (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 8454,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья культистов на |cffffffff30|cffced4da ед., урон на |cffffffff2|cffced4da ед., повышает запас и регенерацию маны, а также открывает доступ к передовым технологиям и войскам.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам и постройкам Культа Сумеречного Молота.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 8453,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья культистов на |cffffffff30|cffced4da ед., урон на |cffffffff2|cffced4da ед., повышает запас и регенерацию маны, а также открывает доступ к передовым технологиям и войскам.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам и постройкам Культа Сумеречного Молота.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 8448,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья культистов на |cffffffff30|cffced4da ед., урон на |cffffffff2|cffced4da ед., повышает запас и регенерацию маны, а также открывает доступ к передовым технологиям и войскам.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам и постройкам Культа Сумеречного Молота.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 8449,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья культистов на |cffffffff30|cffced4da ед., урон на |cffffffff2|cffced4da ед., повышает запас и регенерацию маны, а также открывает доступ к передовым технологиям и войскам.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам и постройкам Культа Сумеречного Молота.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 8451,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья культистов на |cffffffff30|cffced4da ед., урон на |cffffffff2|cffced4da ед., повышает запас и регенерацию маны, а также открывает доступ к передовым технологиям и войскам.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам и постройкам Культа Сумеречного Молота.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 8452,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья культистов на |cffffffff30|cffced4da ед., урон на |cffffffff2|cffced4da ед., повышает запас и регенерацию маны, а также открывает доступ к передовым технологиям и войскам.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам и постройкам Культа Сумеречного Молота.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R04V",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 7680,
+          "after": "|cffe4cfa3Грубая Сила|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 7681,
+          "after": "|cffe4cfa3Грубая Сила|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 7682,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак рубак на |cffffffff2|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R00O",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 7661,
+          "after": "|cffe4cfa3Тяжелые удары|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 7662,
+          "after": "|cffe4cfa3Тяжелые удары|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 7663,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет рубак и огров-воинов способностью «Тяжелые удары», дающей шанс оглушить врага и нанести дополнительный урон.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da.|n- |cffa9c7deОгр-воин|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R04S",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 7664,
+          "after": "|cffe4cfa3Фанатичная Вера|r [|cffffffff1|r]"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 7667,
+          "after": "|cffe4cfa3Фанатичная Вера|r [|cffffffff2|r]"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 7665,
+          "after": "|cffe4cfa3Фанатичная Вера|r [|cffffffff1|r] (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 7668,
+          "after": "|cffe4cfa3Фанатичная Вера|r [|cffffffff2|r] (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 7666,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает боевые качества сумеречных жнецов, повышая их боевую стойкость и эффективность.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный жнец|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 7669,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно усиливает боевые качества сумеречных жнецов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный жнец|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R04U",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 7673,
+          "after": "|cffe4cfa3Порченные снаряды|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 7674,
+          "after": "|cffe4cfa3Порченные снаряды|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 7675,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет разрушителей способностью «Порченные снаряды», заражающей поражённую область и наносящей периодический урон.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0EJ",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 40857,
+          "after": "|cffe4cfa3Улучшенные инструменты|r [|cffffffff1|r]"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 40858,
+          "after": "|cffe4cfa3Улучшенные инструменты|r [|cffffffff2|r]"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 40859,
+          "after": "|cffe4cfa3Улучшенные инструменты|r [|cffffffff3|r]"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 40860,
+          "after": "|cffe4cfa3Улучшенные инструменты|r [|cffffffff4|r]"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 40861,
+          "after": "|cffe4cfa3Улучшенные инструменты|r [|cffffffff5|r]"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 40862,
+          "after": "|cffe4cfa3Улучшенные инструменты|r [|cffffffff6|r]"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40863,
+          "after": "|cffe4cfa3Улучшенные инструменты|r [|cffffffff1|r] (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 40864,
+          "after": "|cffe4cfa3Улучшенные инструменты|r [|cffffffff2|r] (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 40865,
+          "after": "|cffe4cfa3Улучшенные инструменты|r [|cffffffff3|r] (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 40866,
+          "after": "|cffe4cfa3Улучшенные инструменты|r [|cffffffff4|r] (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 40867,
+          "after": "|cffe4cfa3Улучшенные инструменты|r [|cffffffff5|r] (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 40868,
+          "after": "|cffe4cfa3Улучшенные инструменты|r [|cffffffff6|r] (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 22416,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffffffff5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 22411,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffffffff5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 22412,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffffffff5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 22413,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffffffff5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 22414,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffffffff5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 22415,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffffffff5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R05S",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9163,
+          "after": "|cffe4cfa3Стальное оружие ближнего боя|r [|cffffffff1|r]"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 9165,
+          "after": "|cffe4cfa3Стальное оружие ближнего боя|r [|cffffffff2|r]"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 9164,
+          "after": "|cffe4cfa3Ториевое оружие ближнего боя|r [|cffffffff3|r]"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 9168,
+          "after": "|cffe4cfa3Ториевое оружие ближнего боя|r [|cffffffff4|r]"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 9167,
+          "after": "|cffe4cfa3Арканитовое оружие ближнего боя|r [|cffffffff5|r]"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 9166,
+          "after": "|cffe4cfa3Арканитовое оружие ближнего боя|r [|cffffffff6|r]"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11687,
+          "after": "|cffe4cfa3Стальное оружие ближнего боя|r [|cffffffff1|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 11834,
+          "after": "|cffe4cfa3Стальное оружие ближнего боя|r [|cffffffff2|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 11868,
+          "after": "|cffe4cfa3Ториевое оружие ближнего боя|r [|cffffffff3|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 11871,
+          "after": "|cffe4cfa3Ториевое оружие ближнего боя|r [|cffffffff4|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 11870,
+          "after": "|cffe4cfa3Арканитовое оружие ближнего боя|r [|cffffffff5|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 11869,
+          "after": "|cffe4cfa3Арканитовое оружие ближнего боя|r [|cffffffff6|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11948,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак бойцов ближнего боя Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da.|n- |cffa9c7deОгр-воин|cffced4da.|n- |cffa9c7deКаратель|cffced4da.|n- |cffa9c7deСумеречный налетчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 12031,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак бойцов ближнего боя Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da.|n- |cffa9c7deОгр-воин|cffced4da.|n- |cffa9c7deКаратель|cffced4da.|n- |cffa9c7deСумеречный налетчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 12032,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак бойцов ближнего боя Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da.|n- |cffa9c7deОгр-воин|cffced4da.|n- |cffa9c7deКаратель|cffced4da.|n- |cffa9c7deСумеречный налетчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 11873,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак бойцов ближнего боя Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da.|n- |cffa9c7deОгр-воин|cffced4da.|n- |cffa9c7deКаратель|cffced4da.|n- |cffa9c7deСумеречный налетчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 11872,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак бойцов ближнего боя Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da.|n- |cffa9c7deОгр-воин|cffced4da.|n- |cffa9c7deКаратель|cffced4da.|n- |cffa9c7deСумеречный налетчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 11946,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак бойцов ближнего боя Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da.|n- |cffa9c7deОгр-воин|cffced4da.|n- |cffa9c7deКаратель|cffced4da.|n- |cffa9c7deСумеречный налетчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R05T",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9188,
+          "after": "|cffe4cfa3Стальная броня|r [|cffffffff1|r]"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 9189,
+          "after": "|cffe4cfa3Стальная броня|r [|cffffffff2|r]"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 9190,
+          "after": "|cffe4cfa3Ториевая броня|r [|cffffffff3|r]"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 9193,
+          "after": "|cffe4cfa3Ториевая броня|r [|cffffffff4|r]"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 9192,
+          "after": "|cffe4cfa3Арканитовая броня|r [|cffffffff5|r]"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 9191,
+          "after": "|cffe4cfa3Арканитовая броня|r [|cffffffff6|r]"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 12033,
+          "after": "|cffe4cfa3Стальная броня|r [|cffffffff1|r] (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 13612,
+          "after": "|cffe4cfa3Стальная броня|r [|cffffffff2|r] (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 13635,
+          "after": "|cffe4cfa3Ториевая броня|r [|cffffffff3|r] (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 18265,
+          "after": "|cffe4cfa3Ториевая броня|r [|cffffffff4|r] (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 14376,
+          "after": "|cffe4cfa3Арканитовая броня|r [|cffffffff5|r] (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 13870,
+          "after": "|cffe4cfa3Арканитовая броня|r [|cffffffff6|r] (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 18455,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню бойцов ближнего боя Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da.|n- |cffa9c7deОгр-воин|cffced4da.|n- |cffa9c7deКаратель|cffced4da.|n- |cffa9c7deСумеречный налетчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 18456,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню бойцов ближнего боя Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da.|n- |cffa9c7deОгр-воин|cffced4da.|n- |cffa9c7deКаратель|cffced4da.|n- |cffa9c7deСумеречный налетчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 18582,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню бойцов ближнего боя Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da.|n- |cffa9c7deОгр-воин|cffced4da.|n- |cffa9c7deКаратель|cffced4da.|n- |cffa9c7deСумеречный налетчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 18454,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню бойцов ближнего боя Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da.|n- |cffa9c7deОгр-воин|cffced4da.|n- |cffa9c7deКаратель|cffced4da.|n- |cffa9c7deСумеречный налетчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 18451,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню бойцов ближнего боя Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da.|n- |cffa9c7deОгр-воин|cffced4da.|n- |cffa9c7deКаратель|cffced4da.|n- |cffa9c7deСумеречный налетчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 18267,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню бойцов ближнего боя Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da.|n- |cffa9c7deОгр-воин|cffced4da.|n- |cffa9c7deКаратель|cffced4da.|n- |cffa9c7deСумеречный налетчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R05U",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9210,
+          "after": "|cffe4cfa3Магия бездны|r [|cffffffff1|r]"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 9211,
+          "after": "|cffe4cfa3Магия бездны|r [|cffffffff2|r]"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 9212,
+          "after": "|cffe4cfa3Магия бездны|r [|cffffffff3|r]"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 9215,
+          "after": "|cffe4cfa3Магия бездны|r [|cffffffff4|r]"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 9214,
+          "after": "|cffe4cfa3Магия бездны|r [|cffffffff5|r]"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 9213,
+          "after": "|cffe4cfa3Магия бездны|r [|cffffffff6|r]"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 18594,
+          "after": "|cffe4cfa3Магия бездны|r [|cffffffff1|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 18595,
+          "after": "|cffe4cfa3Магия бездны|r [|cffffffff2|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 18625,
+          "after": "|cffe4cfa3Магия бездны|r [|cffffffff3|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 18628,
+          "after": "|cffe4cfa3Магия бездны|r [|cffffffff4|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 18627,
+          "after": "|cffe4cfa3Магия бездны|r [|cffffffff5|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 18626,
+          "after": "|cffe4cfa3Магия бездны|r [|cffffffff6|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 18632,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от дистанционных и магических атак войск Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный жнец|cffced4da.|n- |cffa9c7deЖрец Бездны|cffced4da.|n- |cffa9c7deОгр-маг|cffced4da.|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 18633,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от дистанционных и магических атак войск Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный жнец|cffced4da.|n- |cffa9c7deЖрец Бездны|cffced4da.|n- |cffa9c7deОгр-маг|cffced4da.|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 18634,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от дистанционных и магических атак войск Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный жнец|cffced4da.|n- |cffa9c7deЖрец Бездны|cffced4da.|n- |cffa9c7deОгр-маг|cffced4da.|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 18629,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от дистанционных и магических атак войск Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный жнец|cffced4da.|n- |cffa9c7deЖрец Бездны|cffced4da.|n- |cffa9c7deОгр-маг|cffced4da.|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 18630,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от дистанционных и магических атак войск Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный жнец|cffced4da.|n- |cffa9c7deЖрец Бездны|cffced4da.|n- |cffa9c7deОгр-маг|cffced4da.|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 18631,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от дистанционных и магических атак войск Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный жнец|cffced4da.|n- |cffa9c7deЖрец Бездны|cffced4da.|n- |cffa9c7deОгр-маг|cffced4da.|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R05V",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9231,
+          "after": "|cffe4cfa3Покровительство Бездны|r [|cffffffff1|r]"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 9232,
+          "after": "|cffe4cfa3Покровительство Бездны|r [|cffffffff2|r]"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 9233,
+          "after": "|cffe4cfa3Покровительство Бездны|r [|cffffffff3|r]"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 9234,
+          "after": "|cffe4cfa3Покровительство Бездны|r [|cffffffff4|r]"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 9235,
+          "after": "|cffe4cfa3Покровительство Бездны|r [|cffffffff5|r]"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 9236,
+          "after": "|cffe4cfa3Покровительство Бездны|r [|cffffffff6|r]"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 18635,
+          "after": "|cffe4cfa3Покровительство Бездны|r [|cffffffff1|r] (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 18636,
+          "after": "|cffe4cfa3Покровительство Бездны|r [|cffffffff2|r] (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 18637,
+          "after": "|cffe4cfa3Покровительство Бездны|r [|cffffffff3|r] (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 18638,
+          "after": "|cffe4cfa3Покровительство Бездны|r [|cffffffff4|r] (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 18639,
+          "after": "|cffe4cfa3Покровительство Бездны|r [|cffffffff5|r] (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 18640,
+          "after": "|cffe4cfa3Покровительство Бездны|r [|cffffffff6|r] (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 18644,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и магов Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный жнец|cffced4da.|n- |cffa9c7deЖрец Бездны|cffced4da.|n- |cffa9c7deОгр-маг|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 18645,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и магов Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный жнец|cffced4da.|n- |cffa9c7deЖрец Бездны|cffced4da.|n- |cffa9c7deОгр-маг|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 18646,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и магов Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный жнец|cffced4da.|n- |cffa9c7deЖрец Бездны|cffced4da.|n- |cffa9c7deОгр-маг|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 18641,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и магов Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный жнец|cffced4da.|n- |cffa9c7deЖрец Бездны|cffced4da.|n- |cffa9c7deОгр-маг|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 18642,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и магов Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный жнец|cffced4da.|n- |cffa9c7deЖрец Бездны|cffced4da.|n- |cffa9c7deОгр-маг|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 18643,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и магов Культа Сумеречного Молота.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный жнец|cffced4da.|n- |cffa9c7deЖрец Бездны|cffced4da.|n- |cffa9c7deОгр-маг|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R04Z",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 7720,
+          "after": "|cffe4cfa3Дробящий удар|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 7721,
+          "after": "|cffe4cfa3Дробящий удар|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 7722,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет карателей способностью «Дробящий удар», позволяющей оглушать врага и наносить дополнительный урон.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКаратель|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R050",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 7727,
+          "after": "|cffe4cfa3Влияние бездны|r [|cffffffff1|r]"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 7730,
+          "after": "|cffe4cfa3Влияние бездны|r [|cffffffff2|r]"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 7728,
+          "after": "|cffe4cfa3Влияние бездны|r [|cffffffff1|r] (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 7731,
+          "after": "|cffe4cfa3Влияние бездны|r [|cffffffff2|r] (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 7729,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет жрецов Бездны новыми заклинаниями и повышает их запас характеристик.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 7732,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет жрецов Бездны высшими заклинаниями и максимально увеличивает их характеристики.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец Бездны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R051",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 7737,
+          "after": "|cffe4cfa3Защита бездны|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 7738,
+          "after": "|cffe4cfa3Защита бездны|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 7739,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает сопротивление магическому урону у аберраций и созданий Бездны.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАберрация|cffced4da.|n- |cffa9c7deКаратель|cffced4da.|n- |cffa9c7deЖрец Бездны|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R052",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 8467,
+          "after": "|cffe4cfa3Хаотичная атака|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 7745,
+          "after": "|cffe4cfa3Хаотичная атака|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20108,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет атаки аберраций типом урона «Хаос», пробивающим любые виды брони.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАберрация|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R04W",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 7691,
+          "after": "|cffe4cfa3Благодать древних богов|r [|cffffffff1|r]"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 7694,
+          "after": "|cffe4cfa3Благодать древних богов|r [|cffffffff2|r]"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 7698,
+          "after": "|cffe4cfa3Благодать древних богов|r [|cffffffff3|r]"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 7692,
+          "after": "|cffe4cfa3Благодать древних богов|r [|cffffffff1|r] (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 7695,
+          "after": "|cffe4cfa3Благодать древних богов|r [|cffffffff2|r] (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 7699,
+          "after": "|cffe4cfa3Благодать древних богов|r [|cffffffff3|r] (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 15196,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет огров-магов заклинанием «Благодать древних богов» и увеличивает их запас маны на |cffffffff45|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгр-маг|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 15197,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны огров-магов ещё на |cffffffff45|cffced4da ед. и усиливает эффект благодати.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгр-маг|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 15198,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Максимально увеличивает запас маны огров-магов ещё на |cffffffff45|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгр-маг|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R04X",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 7702,
+          "after": "|cffe4cfa3Выносливость|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 7703,
+          "after": "|cffe4cfa3Выносливость|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 15199,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья огров-воинов на |cffffffff150|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгр-воин|cffced4da.|r"
+        }
+      ]
+    }
+  ]
+}

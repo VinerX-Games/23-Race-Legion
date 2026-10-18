@@ -1,0 +1,277 @@
+{
+  "operations": [
+    {
+      "type": "ability",
+      "id": "A0MK",
+      "field": "name",
+      "value": "|cffe4cfa3Разведка|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0MK",
+      "field": "tip1",
+      "value": "|cffe4cfa3Разведка|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0MK",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает обзор в выбранной области радиусом |cffffffff1000|cffced4da на |cffffffff50|cffced4da сек. и обнаруживает невидимые войска. Перезарядка — |cffffffff30|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B0",
+      "field": "name",
+      "value": "|cffe4cfa3Укрепление города|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B0",
+      "field": "tip1",
+      "value": "|cffe4cfa3Укрепление города|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0B0",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Команда укрепления защиты города.|n|n|cffe69a8dУлучшение в текущей версии недоступно.|cffced4da Применение не повышает броню здания.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B1",
+      "field": "name",
+      "value": "|cffe4cfa3Развитие производства|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B1",
+      "field": "tip1",
+      "value": "|cffe4cfa3Развитие производства|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0B1",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает вклад поселения в доход древесины за каждый доходный цикл на |cffc8e087+50|cffced4da. При применении поселение должно оставаться выделенным.|n|nСтоимость — |cffffffff900|cffced4da золота и |cffffffff500|cffced4da древесины. Доступность команды зависит от текущей ступени развития поселения.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B2",
+      "field": "name",
+      "value": "|cffe4cfa3Расширение города|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B2",
+      "field": "tip1",
+      "value": "|cffe4cfa3Расширение города|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0B2",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Команда расширения города.|n|n|cffe69a8dУлучшение в текущей версии недоступно.|cffced4da Применение не повышает максимальное здоровье здания.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0AZ",
+      "field": "name",
+      "value": "|cffe4cfa3Увеличение сбора дани|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0AZ",
+      "field": "tip1",
+      "value": "|cffe4cfa3Увеличение сбора дани|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0AZ",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает вклад поселения в базовый доход золота за каждый доходный цикл на |cffc8e087+100|cffced4da. Итоговый доход золота зависит от модификаторов экономики. При применении поселение должно оставаться выделенным.|n|nСтоимость — |cffffffff1250|cffced4da золота и |cffffffff800|cffced4da древесины. Доступность команды зависит от текущей ступени развития поселения.|r"
+    },
+    {
+      "type": "ability",
+      "id": "AHad",
+      "field": "name",
+      "value": "|cffe4cfa3Поселение|r"
+    },
+    {
+      "type": "ability",
+      "id": "AHad",
+      "field": "tip1",
+      "value": "|cffe4cfa3Поселение|r"
+    },
+    {
+      "type": "ability",
+      "id": "AHad",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обозначает поселение. Эта аура не даёт бонуса к броне.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0AY",
+      "field": "name",
+      "value": "|cffe4cfa3Сбор дани|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0AY",
+      "field": "tip1",
+      "value": "|cffe4cfa3Сбор дани|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0AY",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в базовый доход золота за каждый доходный цикл: |cffc8e087+100|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей. Итоговый доход золота зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff1|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0AY",
+      "field": "tip2",
+      "value": "|cffe4cfa3Сбор дани|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0AY",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в базовый доход золота за каждый доходный цикл: |cffc8e087+200|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей. Итоговый доход золота зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0AY",
+      "field": "tip3",
+      "value": "|cffe4cfa3Сбор дани|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0AY",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в базовый доход золота за каждый доходный цикл: |cffc8e087+300|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей. Итоговый доход золота зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0AY",
+      "field": "tip4",
+      "value": "|cffe4cfa3Сбор дани|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0AY",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в базовый доход золота за каждый доходный цикл: |cffc8e087+400|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей. Итоговый доход золота зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0AY",
+      "field": "tip5",
+      "value": "|cffe4cfa3Сбор дани|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0AY",
+      "field": "ubertip5",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в базовый доход золота за каждый доходный цикл: |cffc8e087+500|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей. Итоговый доход золота зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff5|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B5",
+      "field": "name",
+      "value": "|cffe4cfa3Налаженное производство|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B5",
+      "field": "tip1",
+      "value": "|cffe4cfa3Налаженное производство|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B5",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в доход древесины за каждый доходный цикл: |cffc8e087+50|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff1|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B5",
+      "field": "tip2",
+      "value": "|cffe4cfa3Налаженное производство|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B5",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в доход древесины за каждый доходный цикл: |cffc8e087+100|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B5",
+      "field": "tip3",
+      "value": "|cffe4cfa3Налаженное производство|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B5",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в доход древесины за каждый доходный цикл: |cffc8e087+150|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B5",
+      "field": "tip4",
+      "value": "|cffe4cfa3Налаженное производство|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B5",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в доход древесины за каждый доходный цикл: |cffc8e087+200|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B5",
+      "field": "tip5",
+      "value": "|cffe4cfa3Налаженное производство|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B5",
+      "field": "ubertip5",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в доход древесины за каждый доходный цикл: |cffc8e087+250|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff5|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0DR",
+      "field": "name",
+      "value": "|cffe4cfa3Ульдуар (внешний)|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0DR",
+      "field": "tip",
+      "value": "|cffe4cfa3Ульдуар (внешний)|r (|cffffffffU|r)",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0DR",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Поселение, в котором Безликие могут нанять легендарного героя.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВерховный генерал|cffced4da: требуется выбор расы Безликих.|n|n|cffa6afb8Возможности:|cffced4da|n- |cffa9c7deРазведка|cffced4da: временно открывает обзор и обнаруживает невидимые войска.|n- |cffa9c7deУвеличение сбора дани|cffced4da: повышает базовый доход золота поселения.|n- |cffa9c7deРазвитие производства|cffced4da: повышает доход древесины поселения.|n- |cffa9c7deПоселение|cffced4da: городская аура без бонуса к броне.|n|n|cffe6c07bУкрепление и расширение города в текущей версии недоступны.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "buff",
+      "id": "B023",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Поселение|r"
+    },
+    {
+      "type": "buff",
+      "id": "B023",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Городская аура. Не изменяет броню здания.|r"
+    }
+  ]
+}

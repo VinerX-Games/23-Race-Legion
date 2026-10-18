@@ -1,0 +1,174 @@
+{
+  "scope": "Отрекшиеся (Forsaken): категория 3 — Герои (5 героев)",
+  "heroes_count": 5,
+  "variants": [
+    "SD"
+  ],
+  "heroes": [
+    {
+      "id": "N059",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 28906,
+          "after": "|cffe4cfa3Королева Отрекшихся|r"
+        },
+        {
+          "field": "propernames",
+          "wts_id": 25180,
+          "after": "Сильвана Ветрокрылая"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33972,
+          "after": "|cffe4cfa3Королева Отрекшихся|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33973,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Легендарная предводительница Отрекшихся, повелевающая силами тьмы, призраков и нежити.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВоскрешение мёртвых|cffced4da: поднимает скелетов из трупов павших воинов.|n- |cffa9c7deПревратиться в Банши|cffced4da: принимает форму бесплотного духа с сокрушительным уроном.|n- |cffa9c7deТёмная стрела|cffced4da: наполняет выстрелы тёмной энергией, ослабляя броню цели.|n- |cffa9c7deАбсолютная немота|cffced4da: лишает врагов возможности творить заклинания.|n|nАтакует |cffffffffназемные и воздушные|cffced4da цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 33970,
+          "after": "|cffe4cfa3Королева Отрекшихся|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 33971,
+          "after": "|cffe4cfa3Королева Отрекшихся|r"
+        }
+      ]
+    },
+    {
+      "id": "N05E",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23533,
+          "after": "|cffe4cfa3Королева Отрекшихся|r"
+        },
+        {
+          "field": "propernames",
+          "wts_id": 26826,
+          "after": "Сильвана Ветрокрылая"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33976,
+          "after": "|cffe4cfa3Королева Отрекшихся|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 33974,
+          "after": "|cffe4cfa3Королева Отрекшихся|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 33975,
+          "after": "|cffe4cfa3Королева Отрекшихся|r"
+        }
+      ]
+    },
+    {
+      "id": "N058",
+      "hotkey": "C",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 2246,
+          "after": "|cffe4cfa3Тёмный Следопыт|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 25333,
+          "after": "|cffe4cfa3Тёмный Следопыт|r (|cffffffffC|r)"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 24758,
+          "after": "|cffe4cfa3Тёмный Следопыт|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 25184,
+          "after": "|cffe4cfa3Тёмный Следопыт|r"
+        }
+      ]
+    },
+    {
+      "id": "O031",
+      "hotkey": "X",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 20078,
+          "after": "|cffe4cfa3Аптекарь|r"
+        },
+        {
+          "field": "propernames",
+          "wts_id": 26513,
+          "after": "Бакстер,Фрай,Хаммел"
+        },
+        {
+          "field": "tip",
+          "wts_id": 9465,
+          "after": "|cffe4cfa3Аптекарь|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 26514,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Мастер алхимии Королевского фармацевтического общества, создающий смертельные штаммы и защитные стимуляторы.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Регенерации|cffced4da: ускоряет союзников и восстанавливает их здоровье.|n- |cffa9c7deСтимуляторы|cffced4da: повышает скорость атаки и бега выбранного союзника.|n- |cffa9c7deКислотная бомба|cffced4da: разъедает броню врагов и наносит периодический урон.|n- |cffa9c7deИзобрести руну|cffced4da: создаёт могущественную руну для усиления союзных сил.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 2247,
+          "after": "|cffe4cfa3Аптекарь|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 7961,
+          "after": "|cffe4cfa3Аптекарь|r"
+        }
+      ]
+    },
+    {
+      "id": "O030",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 1994,
+          "after": "|cffe4cfa3Устранитель|r"
+        },
+        {
+          "field": "propernames",
+          "wts_id": 27470,
+          "after": "Уиндем,Грегори Чарльз,Давитт Хиксон,Виктор Уорд,Вильям Монтегю"
+        },
+        {
+          "field": "tip",
+          "wts_id": 2049,
+          "after": "|cffe4cfa3Устранитель|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 3872,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Смертоносный клинок карателей Отрекшихся, специализирующийся на скрытных диверсиях и уничтожении одиночных целей.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВсеобщий мрак|cffced4da: погружает союзные войска вокруг в невидимость.|n- |cffa9c7deОтравленный кинжал|cffced4da: наносит урон ядом и замедляет противника.|n- |cffa9c7deМастерство|cffced4da: даёт шанс уклониться от удара и нанести критический урон.|n- |cffa9c7deТанец ветра|cffced4da: дарует невидимость и ускорение с дополнительным уроном при выходе.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 2046,
+          "after": "|cffe4cfa3Устранитель|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 2970,
+          "after": "|cffe4cfa3Устранитель|r"
+        }
+      ]
+    }
+  ]
+}

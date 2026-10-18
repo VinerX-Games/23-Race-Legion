@@ -1,0 +1,121 @@
+{
+  "race": "Орда Скверны (Fel Orcs)",
+  "race_id": 31,
+  "selection_ability": "A1JL",
+  "objects_audit": {
+    "buildings": {
+      "count": 13,
+      "ids": [
+        "o05V",
+        "o05W",
+        "o05X",
+        "o060",
+        "o05Y",
+        "o05Z",
+        "o05T",
+        "o061",
+        "o062",
+        "o066",
+        "o067",
+        "h0D3",
+        "owtw"
+      ],
+      "town_halls": {
+        "tier1": {
+          "id": "o05V",
+          "name": "Дом вождей",
+          "food": 50
+        },
+        "tier2": {
+          "id": "o05W",
+          "name": "Крепость",
+          "food": 100
+        },
+        "tier3": {
+          "id": "o05X",
+          "name": "Цитадель",
+          "food": 150
+        }
+      }
+    },
+    "units": {
+      "count": 31,
+      "ids": [
+        "n06B",
+        "n06F",
+        "n068",
+        "n06L",
+        "n06T",
+        "n06D",
+        "n06M",
+        "n06Q",
+        "n06G",
+        "n06J",
+        "n06W",
+        "o05Q",
+        "o065",
+        "o063",
+        "o05R",
+        "n067",
+        "n06R",
+        "n06N",
+        "n06C",
+        "n06S",
+        "n06O",
+        "n069",
+        "n06U",
+        "n06K",
+        "n06A",
+        "n06I",
+        "n06V",
+        "n070",
+        "h0D4",
+        "h0D6",
+        "h0D5"
+      ]
+    },
+    "heroes": {
+      "count": 3,
+      "ids": [
+        "N06P",
+        "N072",
+        "N073"
+      ],
+      "names": {
+        "N06P": "Оскверненный шаман (Интеллект, дальний бой)",
+        "N072": "Военный лорд (Сила, ближний бой)",
+        "N073": "Мастер меча (Ловкость, ближний бой)"
+      }
+    },
+    "abilities": {
+      "count": 53,
+      "total_wts_updated": 454
+    },
+    "researches": {
+      "count": 21,
+      "markers_list": {
+        "R0KA": "Маркер расы Орда Скверны",
+        "R0KC": "Маркер расы Орда Скверны или Орда Второй Войны"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items found in war3map.w3t for Fel Orcs."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "No race-specific triggers/chat messages found for Fel Orcs."
+  },
+  "buffs_audit": {
+    "custom_buffs": [],
+    "standard_buffs_used": [
+      "Bblo",
+      "Bbsk",
+      "Bfro"
+    ],
+    "status": "Standardized buffs used."
+  },
+  "total_wts_updates": 454,
+  "total_checks": 451
+}

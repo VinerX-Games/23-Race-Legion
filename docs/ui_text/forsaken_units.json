@@ -1,0 +1,359 @@
+{
+  "scope": "Отрекшиеся (Forsaken): категория 2 — Юниты (20 юнитов)",
+  "units_count": 20,
+  "variants": [
+    "SD"
+  ],
+  "units": [
+    {
+      "id": "h0J5",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33936,
+          "after": "|cffe4cfa3Строитель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33937,
+          "after": "|cffe4cfa3Строитель|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 20377,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Основной рабочий Отрекшихся. Добывает древесину, возводит и ремонтирует сооружения.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deНебольшой скачок|cffced4da: мгновенно перемещает строителя на короткое расстояние.|n- |cffa9c7deДобывать ресурсы|cffced4da: сбор ресурсов.|n- |cffa9c7deРемонтировать|cffced4da: починка зданий и техники.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n04T",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25176,
+          "after": "|cffe4cfa3Мёртвый воин|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 26950,
+          "after": "|cffe4cfa3Мёртвый воин|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 27201,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Быстрый лёгкий пехотинец ближнего боя армии Отрекшихся.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКаннибализм|cffced4da: поедает труп для быстрого восполнения здоровья.|n- |cffa9c7deИзолирующая броня|cffced4da: снижает получаемый урон от ядов и гнили.|n- |cffa9c7deРазъедающий яд|cffced4da: наносит повышенный урон живым целям и технике.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0JC",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22462,
+          "after": "|cffe4cfa3Лучница|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 26955,
+          "after": "|cffe4cfa3Лучница|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31882,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый стрелок дальнего боя армии Отрекшихся.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deНакопительный яд|cffced4da: выстрелы отравляют жертву, замедляя и ослабляя её.|n- |cffa9c7deИзолирующая броня|cffced4da: снижает урон от ядов и чумы.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0JN",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25585,
+          "after": "|cffe4cfa3Тёмный следопыт|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 26499,
+          "after": "|cffe4cfa3Тёмный следопыт|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31892,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный дальнобойный стрелок следопытов Сильваны.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКинжал теней|cffced4da: метает отравленный кинжал, замедляющий противника.|n- |cffa9c7deНакопительный яд|cffced4da: атаки накладывают суммирующийся токсичный эффект.|n- |cffa9c7deИзолирующая броня|cffced4da: защита от ядовитых эффектов.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n04U",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25179,
+          "after": "|cffe4cfa3Страж Смерти|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 26951,
+          "after": "|cffe4cfa3Страж Смерти|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31878,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжелобронированный пехотинец ближнего боя, сдерживающий натиск врага.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗащита|cffced4da: прикрывается щитом, снижая урон от стрел.|n- |cffa9c7deТяжёлая поступь|cffced4da: сотрясает землю, оглушая находящихся рядом врагов.|n- |cffa9c7deСмердящий запах|cffced4da: замедляет скорость атаки и бега врагов вокруг.|n- |cffa9c7deКаннибализм|cffced4da: поедает труп для исцеления.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o02X",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33938,
+          "after": "|cffe4cfa3Гнилевозка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33939,
+          "after": "|cffe4cfa3Гнилевозка|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31880,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Дальнобойная осадная машина, распыляющая штаммы чумы в зоне поражения.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВыбор типа Гнили|cffced4da: переключение между обычной, коррозийной и ослабляющей чумой.|n- |cffa9c7deЗаряд Гнили|cffced4da: выпускает снаряд с выбранным болезнетворным составом.|n|nАтакует |cffffffffназемные цели и здания|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "u02C",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22498,
+          "after": "|cffe4cfa3Вождь Орды|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 26956,
+          "after": "|cffe4cfa3Вождь Орды|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31883,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Громадный сшитый боец ближнего боя, поглощающий огромное количество урона.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБолезнетворное облако|cffced4da: заражает окружающих врагов чумным газом.|n- |cffa9c7deКаннибализм|cffced4da: восполняет здоровье, пожирая трупы.|n- |cffa9c7deИзолирующая броня|cffced4da: снижает урон от токсинов.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o02Y",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33963,
+          "after": "|cffe4cfa3Улучшенная Гнилевозка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33964,
+          "after": "|cffe4cfa3Улучшенная Гнилевозка|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31898,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Усовершенствованная осадная машина Отрекшихся с усиленной чумной артиллерией.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВыбор типа Гнили|cffced4da: переключение между убийственной, заразной и заградительной чумой.|n- |cffa9c7deЗаряд Гнили|cffced4da: бомбардирует позиции врага смертоносными составами.|n|nАтакует |cffffffffназемные цели и здания|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "n04Y",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33961,
+          "after": "|cffe4cfa3Банши|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33962,
+          "after": "|cffe4cfa3Банши|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31897,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Бесплотный летающий призрак поддержки, повелевающий душами и проклятиями.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПроклятие|cffced4da: заставляет вражеские атаки промахиваться.|n- |cffa9c7deПожирание магии|cffced4da: развеивает чары и восстанавливает собственную ману.|n- |cffa9c7deОдержимость|cffced4da: вселяется во вражеского бойца и захватывает контроль над ним.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n04X",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33959,
+          "after": "|cffe4cfa3Мёртвый маг|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33960,
+          "after": "|cffe4cfa3Мёртвый маг|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31896,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тёмный чернокнижник Отрекшихся, черпающий силу из смерти и магии огня.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТёмная стая|cffced4da: направляет рой нетопырей, наносящих урон по области.|n- |cffa9c7deОгненный ливень|cffced4da: обрушивает потоки пламени на скопления врагов.|n- |cffa9c7deПоглощение жизни|cffced4da: выкачивает жизненную силу из врага в своё здоровье.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n04V",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22457,
+          "after": "|cffe4cfa3Убийца|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33940,
+          "after": "|cffe4cfa3Убийца|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31881,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Невидимый лазутчик ближнего боя, устраняющий ключевые цели внезапными ударами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСкрыться|cffced4da: входит в режим невидимости.|n- |cffa9c7deРазъедающий яд|cffced4da: наносит дополнительный урон и ослабляет цель.|n- |cffa9c7deКаннибализм|cffced4da: поедает труп для исцеления.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0JA",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4184,
+          "after": "|cffe4cfa3Валькира|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 5063,
+          "after": "|cffe4cfa3Валькира|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31879,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Крылатая вестница загробного мира, управляющая таинствами воскрешения павших.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВоскрешение|cffced4da: возвращает к жизни павших союзных бойцов.|n- |cffa9c7deОживление мёртвых|cffced4da: поднимает неуязвимых воинов из трупов на поле боя.|n- |cffa9c7deСтрела Света|cffced4da: поражает врагов святой карающей энергией.|n|nАтакует |cffffffffназемные и воздушные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "e034",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26265,
+          "after": "|cffe4cfa3Гнильной слизень|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 26266,
+          "after": "|cffe4cfa3Гнильной слизень|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 32921,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Чумное порождение, возникающее из тел погибших под действием заразной гнили.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Гнили|cffced4da: ускоряет атаку и бег союзников вокруг.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "u02J",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22282,
+          "after": "|cffe4cfa3Гниль|r"
+        }
+      ]
+    },
+    {
+      "id": "u02K",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25623,
+          "after": "|cffe4cfa3Гниль|r"
+        }
+      ]
+    },
+    {
+      "id": "u02L",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25624,
+          "after": "|cffe4cfa3Гниль|r"
+        }
+      ]
+    },
+    {
+      "id": "u02M",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25632,
+          "after": "|cffe4cfa3Гниль|r"
+        }
+      ]
+    },
+    {
+      "id": "u02N",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25634,
+          "after": "|cffe4cfa3Гниль|r"
+        }
+      ]
+    },
+    {
+      "id": "u02O",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25635,
+          "after": "|cffe4cfa3Гниль|r"
+        }
+      ]
+    },
+    {
+      "id": "u02P",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33967,
+          "after": "|cffe4cfa3Скелет-воин|r"
+        }
+      ]
+    }
+  ]
+}

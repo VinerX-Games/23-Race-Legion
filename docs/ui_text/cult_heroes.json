@@ -1,0 +1,107 @@
+{
+  "scope": "Культ Проклятых (Cult of the Damned): категория 2 — Герои (3 героев)",
+  "heroes_count": 3,
+  "variants": [
+    "SD"
+  ],
+  "heroes": [
+    {
+      "id": "CD01",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26294,
+          "after": "|cffe4cfa3Рыцарь смерти|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35022,
+          "after": "|cffe4cfa3Рыцарь смерти|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 15201,
+          "after": "|cffe4cfa3Рыцарь смерти|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 23335,
+          "after": "|cffe4cfa3Рыцарь смерти|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "propernames",
+          "wts_id": 34755,
+          "after": "Леди Селендрия, Лорд Фелина"
+        }
+      ]
+    },
+    {
+      "id": "CD02",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34787,
+          "after": "|cffe4cfa3Верховный некромант|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34758,
+          "after": "|cffe4cfa3Верховный некромант|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 34759,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Могущественный мастер тёмных искусств. Повелевает душами и телами усопших, сокрушая врагов массовыми проклятиями и легионами нежити.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВоскрешение мёртвых|cffced4da: поднимает из трупов скелетов, вурдалаков, поганищ или рыцарей смерти.|n- |cffa9c7deСоздать труп|cffced4da: извлекает из-под земли останки для некромантии.|n- |cffa9c7deМассовое проклятие|cffced4da: наносит урон окружающим врагам и проклинает их.|n- |cffa9c7deОживление мёртвых|cffced4da: временно поднимает группу неуязвимых воинов из трупов.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 34756,
+          "after": "|cffe4cfa3Верховный некромант|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 34757,
+          "after": "|cffe4cfa3Верховный некромант|r (|cffffffffA|r)"
+        },
+        {
+          "field": "propernames",
+          "wts_id": 34776,
+          "after": "Джандис Барова, Леди Смертный Шепот"
+        }
+      ]
+    },
+    {
+      "id": "U02X",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34779,
+          "after": "|cffe4cfa3Лич|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34849,
+          "after": "|cffe4cfa3Лич|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 34874,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Бессмертный владыка ледяной магии. Замораживает противников, черпает ману из союзной нежити и несёт гибель вражеским армиям.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКольцо льда|cffced4da: поражает врагов ледяной волной, нанося урон и замедляя их.|n- |cffa9c7deПоток льда|cffced4da: обрушивает шквал ледяных стрел и временно изгоняет цели в астрал.|n- |cffa9c7deТёмный ритуал|cffced4da: приносит в жертву союзную нежить, восстанавливая ману.|n- |cffa9c7deСмерть и разложение|cffced4da: наносит процентный периодический урон в области действия и уничтожает деревья.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 34846,
+          "after": "|cffe4cfa3Лич|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 34848,
+          "after": "|cffe4cfa3Лич|r (|cffffffffZ|r)"
+        }
+      ]
+    }
+  ]
+}

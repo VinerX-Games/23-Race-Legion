@@ -1,0 +1,944 @@
+{
+  "race": "Dragon",
+  "category": "unit_abilities_and_buffs",
+  "wts_keys_updated": [
+    2237,
+    2707,
+    3756,
+    7949,
+    10157,
+    11954,
+    11988,
+    13625,
+    13753,
+    13754,
+    15866,
+    15963,
+    16379,
+    16381,
+    16382,
+    16383,
+    16402,
+    16410,
+    16418,
+    16422,
+    16428,
+    16755,
+    16858,
+    16920,
+    16921,
+    16922,
+    16989,
+    16990,
+    16993,
+    16996,
+    17033,
+    17034,
+    17035,
+    17036,
+    17037,
+    17089,
+    17090,
+    17091,
+    17102,
+    17107,
+    17118,
+    17119,
+    17122,
+    17123,
+    17124,
+    17161,
+    18378,
+    21752,
+    22387,
+    22389,
+    22393,
+    22394,
+    22813,
+    22815,
+    22816,
+    23586,
+    23587,
+    23596,
+    23597,
+    23598,
+    23599,
+    24632,
+    24658,
+    25406,
+    25407,
+    25492,
+    25494,
+    30549,
+    30550,
+    32868,
+    39708,
+    39709,
+    39710,
+    39711,
+    39761,
+    39762,
+    39763,
+    39764,
+    39765,
+    39768,
+    39769,
+    39770,
+    39771,
+    39772,
+    39773,
+    39774,
+    39775,
+    39820,
+    39821,
+    39822,
+    39823,
+    39825,
+    39826,
+    39827,
+    39875,
+    39876,
+    39878,
+    39879,
+    39880,
+    40054,
+    40316,
+    40317,
+    40318,
+    41516
+  ],
+  "wts_hash_before": "9af773b73244e47cd51bcaec5a24ee27b6507a93fdb91ea9f58c32758c37e231",
+  "wts_hash_after": "415935ebcefe24d013bd10cc2dc2fdd825285578f195b1de4a481f9d9783dcc2",
+  "w3a_hash_before": "bcfe4747a774e19917607fea93587143a99a23664df8331b566695a04dad2614",
+  "w3a_hash_after": "9c2c640c6042358cc7f35e4b9812c8624a26d45f275cf0312346085c71be0494",
+  "w3a_skin_hash_before": "141701f104b78259f4751e555c5320c9f0118af7872393b7258a5ebf1374a5f8",
+  "w3a_skin_hash_after": "a19a695d68d83a146d504b4854a98264492b9363820ffc87442087bed86dcf6d",
+  "w3h_hash_before": "c1615697334d6b6b9c8a39cb6474806b3af9d62e422d38b7bcdcf6b8a1be216c",
+  "w3h_hash_after": "c9ce62e19889c4e9e9d5d88703c4c4a02b334d5a9dd91925b40bfedc46af04a7",
+  "w3h_skin_hash_before": "77c286ab4bc980dfc54472bb5869bbb0c68d684d286339cd70bc18bf0fab49e6",
+  "w3h_skin_hash_after": "333aae6d0cdeeebeefa002259a20fa745fc68610253bd5146a8d8751702bd6a6",
+  "other_binary_hashes": {
+    "war3map.doo": "5f761068c726841056cb3148ba7da01c835e44601ab6f9554e19968f9c58dfae",
+    "war3map.imp": "d741f1b70bcc664a100317f93d41bba6b178c94a635b542ac2d35c33a624939a",
+    "war3map.lua": "27c5381999f073371dcb75f0798d3de20eeae2e4043eaabe7d63980c73d3e2f7",
+    "war3map.mmp": "75b5d57923c1be4442105bdf9ffbf72d23d2d914fe12d19f2b0a04edf88e170b",
+    "war3map.shd": "0c660f2bd3eff3150dd0040789abe2291613b9af319df870203d4f77a4913a5f",
+    "war3map.w3b": "22b32d7d8cedc48e448f8b96ad7df304601555fd0c10590cdb21600691d4fa78",
+    "war3map.w3c": "c74a2d46a6ecca8769a47200c16612eef9c7e2d67d43659be78e4adcde9930e7",
+    "war3map.w3d": "de15401141bd2d5f9fa34a8cda9e705d686238514976e1e78e28b3f9b7a93a62",
+    "war3map.w3e": "d2339819215d6d05cd811ef9d78f9cea1b146a6696f62aaf4ba663c4abd3fb42",
+    "war3map.w3i": "24ba48092f8e0b52ec19f6690087a6e14628376246f7239dad6c521e2b5cc158",
+    "war3map.w3q": "c7bcf938d4702bd6f862424f30effc6908a857fcf337868dfc7b0eed773941b8",
+    "war3map.w3r": "52d7bd22e25a4f4ef45e9cc294aea213786dc69678864f7a86f138ecd4865b85",
+    "war3map.w3s": "8bd8d80bf943c640d0b49b770dc5dde79011c6c033edb32c609096e1330ff274",
+    "war3map.w3t": "06c2ae97366168984df0539ed71902e2884a39a1a4b0d1a5fb98e41a0b77e6ea",
+    "war3map.w3u": "8de53960699ae9aac41c1cae1c3e259e73b97029587b1ad12239f39b6cee92af",
+    "war3map.wct": "1c6491633c7f24691b97aeda8278a5fe2a5e4ca28e08faae2da81b6ffa201c76",
+    "war3map.wpm": "65312b9fa890fa313fac906eaa35fc4d1b9e904d2b1ae5ca94c5b9a56814dd41",
+    "war3map.wtg": "41023b2781753cc02179fa4251e324354542496fddd3cfcdc53b88fd9e16dbf6",
+    "war3mapExtra.txt": "f57b1049d3d8e81cd1df86a1904a360d81e8ef42ac55a1f054aea37cb72b8e0e",
+    "war3mapMap.blp": "63d25390bd65b340f4e0c1140edce0910f74944a18e64047d4d87c82d991ee9f",
+    "war3mapMisc.txt": "989514d23cddec9974892ea8edf5f1b2215abd839bfea1dc2480ce4a151c524f",
+    "war3mapSkin.txt": "0ea3115c01452748b57ec637b87687a79de385ae169d02316fb5127d81588316",
+    "war3mapSkin.w3b": "e7b0b0c14239d3e9ca6a3f80a446dbd585526e9cc323146cc2c4fc9f60eb0c4b",
+    "war3mapSkin.w3d": "721bed7219463d0b88ad83945acf66da5fdc9325d1507fbb6c8076b9c65a0a2d",
+    "war3mapSkin.w3q": "ab1a6f9b655796639927a51b63ef0676296df365651e144402250c027a628234",
+    "war3mapSkin.w3t": "21100b19421fd5844a0528a350d9e599705e3ab955730e608d1a40069eb39d45",
+    "war3mapSkin.w3u": "c17a5b28261fbba307107306791c2c7c6abd1ca52183aa85c5cdd218781ba10f",
+    "war3mapUnits.doo": "5eae6f3bb4296d7ec41b9b2f88fdd6ac62f15dd7fd824cb2d8c865f91b0d3c22"
+  },
+  "checks": [
+    {
+      "id": "A1LR",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0RK",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drat",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0RE",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAa",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAs",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0RO",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0RJ",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAz",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA2",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAw",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAy",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAe",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAr",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drEt",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAd",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA0",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA3",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA4",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A1BD",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA5",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0QB",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "dra3",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA6",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA1",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAq",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA7",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0RM",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA8",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA9",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1",
+        "untip1",
+        "unubertip1"
+      ]
+    },
+    {
+      "id": "A1BF",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0RL",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0QO",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0RN",
+      "type": "ability",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "B05D",
+      "type": "buff",
+      "variant": "SD",
+      "fields_verified": [
+        "bufftip",
+        "buffubertip"
+      ]
+    },
+    {
+      "id": "B05C",
+      "type": "buff",
+      "variant": "SD",
+      "fields_verified": [
+        "bufftip",
+        "buffubertip"
+      ]
+    },
+    {
+      "id": "B03U",
+      "type": "buff",
+      "variant": "SD",
+      "fields_verified": [
+        "bufftip",
+        "buffubertip"
+      ]
+    },
+    {
+      "id": "Bdr0",
+      "type": "buff",
+      "variant": "SD",
+      "fields_verified": [
+        "bufftip",
+        "buffubertip"
+      ]
+    },
+    {
+      "id": "B02J",
+      "type": "buff",
+      "variant": "SD",
+      "fields_verified": [
+        "bufftip",
+        "buffubertip"
+      ]
+    },
+    {
+      "id": "B05S",
+      "type": "buff",
+      "variant": "SD",
+      "fields_verified": [
+        "bufftip",
+        "buffubertip"
+      ]
+    },
+    {
+      "id": "A1LR",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0RK",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drat",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0RE",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAa",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAs",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0RO",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0RJ",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAz",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA2",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAw",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAy",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAe",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAr",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drEt",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAd",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA0",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA3",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA4",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A1BD",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA5",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0QB",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "dra3",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA6",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA1",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drAq",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA7",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0RM",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA8",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "drA9",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1",
+        "untip1",
+        "unubertip1"
+      ]
+    },
+    {
+      "id": "A1BF",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0RL",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0QO",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "A0RN",
+      "type": "ability",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "B05D",
+      "type": "buff",
+      "variant": "HD",
+      "fields_verified": [
+        "bufftip",
+        "buffubertip"
+      ]
+    },
+    {
+      "id": "B05C",
+      "type": "buff",
+      "variant": "HD",
+      "fields_verified": [
+        "bufftip",
+        "buffubertip"
+      ]
+    },
+    {
+      "id": "B03U",
+      "type": "buff",
+      "variant": "HD",
+      "fields_verified": [
+        "bufftip",
+        "buffubertip"
+      ]
+    },
+    {
+      "id": "Bdr0",
+      "type": "buff",
+      "variant": "HD",
+      "fields_verified": [
+        "bufftip",
+        "buffubertip"
+      ]
+    },
+    {
+      "id": "B02J",
+      "type": "buff",
+      "variant": "HD",
+      "fields_verified": [
+        "bufftip",
+        "buffubertip"
+      ]
+    },
+    {
+      "id": "B05S",
+      "type": "buff",
+      "variant": "HD",
+      "fields_verified": [
+        "bufftip",
+        "buffubertip"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,373 @@
+[
+  {
+    "id": "R09G",
+    "name": "|cffe4cfa3Огонь|r",
+    "hotkey": "Q",
+    "maxlevel": 6,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Огонь|r",
+        "tip": "|cffe4cfa3Огонь|r [|cffffffff1-й уровень|r] (|cffffffffQ|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff1|cffced4da ед. и броню на |cffffffff1|cffced4da ед. всем созданиям стихии Огня: Элементалям Огня, Гончим пламени, Возжигателям, Загробникам Огня, Огненным птицам и Особым Огня.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+      },
+      "2": {
+        "name": "|cffe4cfa3Огонь|r",
+        "tip": "|cffe4cfa3Огонь|r [|cffffffff2-й уровень|r] (|cffffffffQ|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff2|cffced4da ед. и броню на |cffffffff2|cffced4da ед. всем созданиям стихии Огня: Элементалям Огня, Гончим пламени, Возжигателям, Загробникам Огня, Огненным птицам и Особым Огня.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+      },
+      "3": {
+        "name": "|cffe4cfa3Огонь|r",
+        "tip": "|cffe4cfa3Огонь|r [|cffffffff3-й уровень|r] (|cffffffffQ|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff3|cffced4da ед. и броню на |cffffffff3|cffced4da ед. всем созданиям стихии Огня: Элементалям Огня, Гончим пламени, Возжигателям, Загробникам Огня, Огненным птицам и Особым Огня.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+      },
+      "4": {
+        "name": "|cffe4cfa3Огонь|r",
+        "tip": "|cffe4cfa3Огонь|r [|cffffffff4-й уровень|r] (|cffffffffQ|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff4|cffced4da ед. и броню на |cffffffff4|cffced4da ед. всем созданиям стихии Огня: Элементалям Огня, Гончим пламени, Возжигателям, Загробникам Огня, Огненным птицам и Особым Огня.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+      },
+      "5": {
+        "name": "|cffe4cfa3Огонь|r",
+        "tip": "|cffe4cfa3Огонь|r [|cffffffff5-й уровень|r] (|cffffffffQ|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff5|cffced4da ед. и броню на |cffffffff5|cffced4da ед. всем созданиям стихии Огня: Элементалям Огня, Гончим пламени, Возжигателям, Загробникам Огня, Огненным птицам и Особым Огня.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+      },
+      "6": {
+        "name": "|cffe4cfa3Огонь|r",
+        "tip": "|cffe4cfa3Огонь|r [|cffffffff6-й уровень|r] (|cffffffffQ|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff6|cffced4da ед. и броню на |cffffffff6|cffced4da ед. всем созданиям стихии Огня: Элементалям Огня, Гончим пламени, Возжигателям, Загробникам Огня, Огненным птицам и Особым Огня.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+      }
+    }
+  },
+  {
+    "id": "R09H",
+    "name": "|cffe4cfa3Вода|r",
+    "hotkey": "S",
+    "maxlevel": 6,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Вода|r",
+        "tip": "|cffe4cfa3Вода|r [|cffffffff1-й уровень|r] (|cffffffffS|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff1|cffced4da ед. и броню на |cffffffff1|cffced4da ед. всем созданиям стихии Воды: Элементалям Воды, Элементалям Океана, Элементалям Морей, Загробникам Глубин, Рифовым Элементалям, Грязевым Элементалям и Особым Воды.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+      },
+      "2": {
+        "name": "|cffe4cfa3Вода|r",
+        "tip": "|cffe4cfa3Вода|r [|cffffffff2-й уровень|r] (|cffffffffS|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff2|cffced4da ед. и броню на |cffffffff2|cffced4da ед. всем созданиям стихии Воды: Элементалям Воды, Элементалям Океана, Элементалям Морей, Загробникам Глубин, Рифовым Элементалям, Грязевым Элементалям и Особым Воды.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+      },
+      "3": {
+        "name": "|cffe4cfa3Вода|r",
+        "tip": "|cffe4cfa3Вода|r [|cffffffff3-й уровень|r] (|cffffffffS|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff3|cffced4da ед. и броню на |cffffffff3|cffced4da ед. всем созданиям стихии Воды: Элементалям Воды, Элементалям Океана, Элементалям Морей, Загробникам Глубин, Рифовым Элементалям, Грязевым Элементалям и Особым Воды.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+      },
+      "4": {
+        "name": "|cffe4cfa3Вода|r",
+        "tip": "|cffe4cfa3Вода|r [|cffffffff4-й уровень|r] (|cffffffffS|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff4|cffced4da ед. и броню на |cffffffff4|cffced4da ед. всем созданиям стихии Воды: Элементалям Воды, Элементалям Океана, Элементалям Морей, Загробникам Глубин, Рифовым Элементалям, Грязевым Элементалям и Особым Воды.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+      },
+      "5": {
+        "name": "|cffe4cfa3Вода|r",
+        "tip": "|cffe4cfa3Вода|r [|cffffffff5-й уровень|r] (|cffffffffS|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff5|cffced4da ед. и броню на |cffffffff5|cffced4da ед. всем созданиям стихии Воды: Элементалям Воды, Элементалям Океана, Элементалям Морей, Загробникам Глубин, Рифовым Элементалям, Грязевым Элементалям и Особым Воды.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+      },
+      "6": {
+        "name": "|cffe4cfa3Вода|r",
+        "tip": "|cffe4cfa3Вода|r [|cffffffff6-й уровень|r] (|cffffffffS|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff6|cffced4da ед. и броню на |cffffffff6|cffced4da ед. всем созданиям стихии Воды: Элементалям Воды, Элементалям Океана, Элементалям Морей, Загробникам Глубин, Рифовым Элементалям, Грязевым Элементалям и Особым Воды.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+      }
+    }
+  },
+  {
+    "id": "R09I",
+    "name": "|cffe4cfa3Земля|r",
+    "hotkey": "A",
+    "maxlevel": 6,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Земля|r",
+        "tip": "|cffe4cfa3Земля|r [|cffffffff1-й уровень|r] (|cffffffffA|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff1|cffced4da ед. и броню на |cffffffff1|cffced4da ед. всем созданиям стихии Земли и големам: Элементалям Земли, Песчаным Элементалям, големам и Особым Земли.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+      },
+      "2": {
+        "name": "|cffe4cfa3Земля|r",
+        "tip": "|cffe4cfa3Земля|r [|cffffffff2-й уровень|r] (|cffffffffA|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff2|cffced4da ед. и броню на |cffffffff2|cffced4da ед. всем созданиям стихии Земли и големам: Элементалям Земли, Песчаным Элементалям, големам и Особым Земли.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+      },
+      "3": {
+        "name": "|cffe4cfa3Земля|r",
+        "tip": "|cffe4cfa3Земля|r [|cffffffff3-й уровень|r] (|cffffffffA|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff3|cffced4da ед. и броню на |cffffffff3|cffced4da ед. всем созданиям стихии Земли и големам: Элементалям Земли, Песчаным Элементалям, големам и Особым Земли.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+      },
+      "4": {
+        "name": "|cffe4cfa3Земля|r",
+        "tip": "|cffe4cfa3Земля|r [|cffffffff4-й уровень|r] (|cffffffffA|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff4|cffced4da ед. и броню на |cffffffff4|cffced4da ед. всем созданиям стихии Земли и големам: Элементалям Земли, Песчаным Элементалям, големам и Особым Земли.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+      },
+      "5": {
+        "name": "|cffe4cfa3Земля|r",
+        "tip": "|cffe4cfa3Земля|r [|cffffffff5-й уровень|r] (|cffffffffA|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff5|cffced4da ед. и броню на |cffffffff5|cffced4da ед. всем созданиям стихии Земли и големам: Элементалям Земли, Песчаным Элементалям, големам и Особым Земли.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+      },
+      "6": {
+        "name": "|cffe4cfa3Земля|r",
+        "tip": "|cffe4cfa3Земля|r [|cffffffff6-й уровень|r] (|cffffffffA|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff6|cffced4da ед. и броню на |cffffffff6|cffced4da ед. всем созданиям стихии Земли и големам: Элементалям Земли, Песчаным Элементалям, големам и Особым Земли.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+      }
+    }
+  },
+  {
+    "id": "R09J",
+    "name": "|cffe4cfa3Ветер|r",
+    "hotkey": "W",
+    "maxlevel": 6,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Ветер|r",
+        "tip": "|cffe4cfa3Ветер|r [|cffffffff1-й уровень|r] (|cffffffffW|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff1|cffced4da ед. и броню на |cffffffff1|cffced4da ед. всем созданиям стихии Ветра: Элементалям Ветра, Грозовым Элементалям, Воздушным волкам, Загробникам Бури, Штормовым Элементалям и Особым Ветра.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+      },
+      "2": {
+        "name": "|cffe4cfa3Ветер|r",
+        "tip": "|cffe4cfa3Ветер|r [|cffffffff2-й уровень|r] (|cffffffffW|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff2|cffced4da ед. и броню на |cffffffff2|cffced4da ед. всем созданиям стихии Ветра: Элементалям Ветра, Грозовым Элементалям, Воздушным волкам, Загробникам Бури, Штормовым Элементалям и Особым Ветра.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+      },
+      "3": {
+        "name": "|cffe4cfa3Ветер|r",
+        "tip": "|cffe4cfa3Ветер|r [|cffffffff3-й уровень|r] (|cffffffffW|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff3|cffced4da ед. и броню на |cffffffff3|cffced4da ед. всем созданиям стихии Ветра: Элементалям Ветра, Грозовым Элементалям, Воздушным волкам, Загробникам Бури, Штормовым Элементалям и Особым Ветра.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+      },
+      "4": {
+        "name": "|cffe4cfa3Ветер|r",
+        "tip": "|cffe4cfa3Ветер|r [|cffffffff4-й уровень|r] (|cffffffffW|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff4|cffced4da ед. и броню на |cffffffff4|cffced4da ед. всем созданиям стихии Ветра: Элементалям Ветра, Грозовым Элементалям, Воздушным волкам, Загробникам Бури, Штормовым Элементалям и Особым Ветра.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+      },
+      "5": {
+        "name": "|cffe4cfa3Ветер|r",
+        "tip": "|cffe4cfa3Ветер|r [|cffffffff5-й уровень|r] (|cffffffffW|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff5|cffced4da ед. и броню на |cffffffff5|cffced4da ед. всем созданиям стихии Ветра: Элементалям Ветра, Грозовым Элементалям, Воздушным волкам, Загробникам Бури, Штормовым Элементалям и Особым Ветра.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+      },
+      "6": {
+        "name": "|cffe4cfa3Ветер|r",
+        "tip": "|cffe4cfa3Ветер|r [|cffffffff6-й уровень|r] (|cffffffffW|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает атаку на |cffffffff6|cffced4da ед. и броню на |cffffffff6|cffced4da ед. всем созданиям стихии Ветра: Элементалям Ветра, Грозовым Элементалям, Воздушным волкам, Загробникам Бури, Штормовым Элементалям и Особым Ветра.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+      }
+    }
+  },
+  {
+    "id": "R0DS",
+    "name": "|cffe4cfa3Улучшенная добыча|r",
+    "hotkey": "Z",
+    "maxlevel": 5,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Улучшенная добыча|r",
+        "tip": "|cffe4cfa3Улучшенная добыча|r [|cffffffff1-й уровень|r] (|cffffffffZ|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой Духами стихий древесины на |cffffffff10|cffced4da ед.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/5|cffced4da.|r"
+      },
+      "2": {
+        "name": "|cffe4cfa3Улучшенная добыча|r",
+        "tip": "|cffe4cfa3Улучшенная добыча|r [|cffffffff2-й уровень|r] (|cffffffffZ|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой Духами стихий древесины ещё на |cffffffff10|cffced4da ед. (всего |cffffffff+20|cffced4da ед.).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/5|cffced4da.|r"
+      },
+      "3": {
+        "name": "|cffe4cfa3Улучшенная добыча|r",
+        "tip": "|cffe4cfa3Улучшенная добыча|r [|cffffffff3-й уровень|r] (|cffffffffZ|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой Духами стихий древесины ещё на |cffffffff10|cffced4da ед. (всего |cffffffff+30|cffced4da ед.).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/5|cffced4da.|r"
+      },
+      "4": {
+        "name": "|cffe4cfa3Улучшенная добыча|r",
+        "tip": "|cffe4cfa3Улучшенная добыча|r [|cffffffff4-й уровень|r] (|cffffffffZ|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой Духами стихий древесины ещё на |cffffffff10|cffced4da ед. (всего |cffffffff+40|cffced4da ед.).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/5|cffced4da.|r"
+      },
+      "5": {
+        "name": "|cffe4cfa3Улучшенная добыча|r",
+        "tip": "|cffe4cfa3Улучшенная добыча|r [|cffffffff5-й уровень|r] (|cffffffffZ|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой Духами стихий древесины ещё на |cffffffff10|cffced4da ед. (всего |cffffffff+50|cffced4da ед.).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/5|cffced4da.|r"
+      }
+    }
+  },
+  {
+    "id": "R09Q",
+    "name": "|cffe4cfa3Ярость|r",
+    "hotkey": "A",
+    "maxlevel": 1,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Ярость|r",
+        "tip": "|cffe4cfa3Ярость|r (|cffffffffA|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Воспламеняет ярость всех созданий стихии Огня, повышая их урон на |cffffffff5|cffced4da ед., но снижая максимальный запас здоровья на |cffffffff50|cffced4da ед.|r"
+      }
+    }
+  },
+  {
+    "id": "R09R",
+    "name": "|cffe4cfa3Повышение температуры|r",
+    "hotkey": "S",
+    "maxlevel": 2,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Повышение температуры|r",
+        "tip": "|cffe4cfa3Повышение температуры|r [|cffffffff1-й уровень|r] (|cffffffffS|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья Возжигателей на |cffffffff25|cffced4da ед. и их запас маны на |cffffffff20|cffced4da ед.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+      },
+      "2": {
+        "name": "|cffe4cfa3Повышение температуры|r",
+        "tip": "|cffe4cfa3Повышение температуры|r [|cffffffff2-й уровень|r] (|cffffffffS|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья Возжигателей ещё на |cffffffff25|cffced4da ед. (всего |cffffffff+50|cffced4da ед.) и их запас маны ещё на |cffffffff20|cffced4da ед. (всего |cffffffff+40|cffced4da ед.).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+      }
+    }
+  },
+  {
+    "id": "R09S",
+    "name": "|cffe4cfa3Рассекающий удар|r",
+    "hotkey": "D",
+    "maxlevel": 1,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Рассекающий удар|r",
+        "tip": "|cffe4cfa3Рассекающий удар|r (|cffffffffD|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет Гончих пламени способностью «Рассекающий удар», позволяя наносить |cffffffff13%|cffced4da урона другим наземным противникам в радиусе |cffffffff150|cffced4da от цели атаки.|r"
+      }
+    }
+  },
+  {
+    "id": "R09T",
+    "name": "|cffe4cfa3Магия воды|r",
+    "hotkey": "A",
+    "maxlevel": 1,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Магия воды|r",
+        "tip": "|cffe4cfa3Магия воды|r (|cffffffffA|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наполняет Элементалей воды первозданной влагой, увеличивая их запас маны на |cffffffff50|cffced4da ед.|r"
+      }
+    }
+  },
+  {
+    "id": "R09U",
+    "name": "|cffe4cfa3Ледяные стрелы|r",
+    "hotkey": "S",
+    "maxlevel": 2,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Ледяные стрелы|r",
+        "tip": "|cffe4cfa3Ледяные стрелы|r [|cffffffff1-й уровень|r] (|cffffffffS|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет Элементалей морей способностью «Ледяные стрелы» и увеличивает их запас маны на |cffffffff30|cffced4da ед.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+      },
+      "2": {
+        "name": "|cffe4cfa3Ледяные стрелы|r",
+        "tip": "|cffe4cfa3Ледяные стрелы|r [|cffffffff2-й уровень|r] (|cffffffffS|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает эффект способности «Ледяные стрелы» и увеличивает запас маны Элементалей морей ещё на |cffffffff30|cffced4da ед. (всего |cffffffff+60|cffced4da ед.).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+      }
+    }
+  },
+  {
+    "id": "R09V",
+    "name": "|cffe4cfa3Магия морей|r",
+    "hotkey": "D",
+    "maxlevel": 2,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Магия морей|r",
+        "tip": "|cffe4cfa3Магия морей|r [|cffffffff1-й уровень|r] (|cffffffffD|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает Рифовым элементалям заклинание «Кольцо льда» и увеличивает их запас маны на |cffffffff30|cffced4da ед.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+      },
+      "2": {
+        "name": "|cffe4cfa3Магия морей|r",
+        "tip": "|cffe4cfa3Магия морей|r [|cffffffff2-й уровень|r] (|cffffffffD|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает морскую магию Рифовых элементалей и увеличивает их запас маны ещё на |cffffffff30|cffced4da ед. (всего |cffffffff+60|cffced4da ед.).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+      }
+    }
+  },
+  {
+    "id": "Resi",
+    "name": "|cffe4cfa3Рассеивание чар|r",
+    "hotkey": "A",
+    "maxlevel": 1,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Рассеивание чар|r",
+        "tip": "|cffe4cfa3Рассеивание чар|r (|cffffffffA|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет Элементалей воды и Элементалей океана способностью «Рассеивание чар», позволяющей снимать положительные эффекты с врагов и отрицательные с союзников, а также наносить урон призванным существам.|r"
+      }
+    }
+  },
+  {
+    "id": "R09Z",
+    "name": "|cffe4cfa3Лёгкость воздуха|r",
+    "hotkey": "A",
+    "maxlevel": 2,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Лёгкость воздуха|r",
+        "tip": "|cffe4cfa3Лёгкость воздуха|r [|cffffffff1-й уровень|r] (|cffffffffA|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость передвижения всех созданий стихии Ветра на |cffffffff30|cffced4da ед.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+      },
+      "2": {
+        "name": "|cffe4cfa3Лёгкость воздуха|r",
+        "tip": "|cffe4cfa3Лёгкость воздуха|r [|cffffffff2-й уровень|r] (|cffffffffA|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость передвижения всех созданий стихии Ветра ещё на |cffffffff30|cffced4da ед. (всего |cffffffff+60|cffced4da ед.).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+      }
+    }
+  },
+  {
+    "id": "R0A0",
+    "name": "|cffe4cfa3Критический удар|r",
+    "hotkey": "S",
+    "maxlevel": 1,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Критический удар|r",
+        "tip": "|cffe4cfa3Критический удар|r (|cffffffffS|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет Грозовых элементалей способностью «Критический удар», даруя |cffffffff10%|cffced4da шанс нанести двойной урон при атаке.|r"
+      }
+    }
+  },
+  {
+    "id": "R0A1",
+    "name": "|cffe4cfa3Ярость грома|r",
+    "hotkey": "D",
+    "maxlevel": 1,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Ярость грома|r",
+        "tip": "|cffe4cfa3Ярость грома|r (|cffffffffD|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет Штормовых элементалей способностью «Ярость грома», позволяя их молниям атаковать сразу несколько целей одновременно.|r"
+      }
+    }
+  },
+  {
+    "id": "R09X",
+    "name": "|cffe4cfa3Каменное здоровье|r",
+    "hotkey": "S",
+    "maxlevel": 3,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Каменное здоровье|r",
+        "tip": "|cffe4cfa3Каменное здоровье|r [|cffffffff1-й уровень|r] (|cffffffffS|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья созданий стихии Земли и големов на |cffffffff30|cffced4da ед.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+      },
+      "2": {
+        "name": "|cffe4cfa3Каменное здоровье|r",
+        "tip": "|cffe4cfa3Каменное здоровье|r [|cffffffff2-й уровень|r] (|cffffffffS|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья созданий стихии Земли и големов ещё на |cffffffff30|cffced4da ед. (всего |cffffffff+60|cffced4da ед.).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+      },
+      "3": {
+        "name": "|cffe4cfa3Каменное здоровье|r",
+        "tip": "|cffe4cfa3Каменное здоровье|r [|cffffffff3-й уровень|r] (|cffffffffS|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья созданий стихии Земли и големов ещё на |cffffffff30|cffced4da ед. (всего |cffffffff+90|cffced4da ед.).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+      }
+    }
+  },
+  {
+    "id": "R09Y",
+    "name": "|cffe4cfa3Сокрушение|r",
+    "hotkey": "D",
+    "maxlevel": 1,
+    "levels": {
+      "1": {
+        "name": "|cffe4cfa3Сокрушение|r",
+        "tip": "|cffe4cfa3Сокрушение|r (|cffffffffD|r)",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет Яростных големов способностью «Сокрушение», давая |cffffffff25%|cffced4da шанс нанести |cffffffff15|cffced4da ед. урона всем противникам поблизости от цели атаки.|r"
+      }
+    }
+  }
+]

@@ -1,0 +1,315 @@
+{
+  "scope": "Силитиды (Silitids / Аз'Акиры): категория 1 — Здания (16 зданий)",
+  "buildings_count": 16,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "e01H",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12707,
+          "after": "|cffe4cfa3Улей|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 13685,
+          "after": "|cffe4cfa3Улей|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9657,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает запас пищи и производит личинок роя.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deМать роя|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗащитная оболочка зданий|cffced4da|n- |cffa9c7deПосвящение матерей|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deМегаулей|cffced4da: открывает доступ к передовым мутациям и сооружениям.|r"
+        }
+      ]
+    },
+    {
+      "id": "e021",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 13693,
+          "after": "|cffe4cfa3Мегаулей|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 13694,
+          "after": "|cffe4cfa3Мегаулей|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9719,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает запас пищи.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deМать роя|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗащитная оболочка зданий|cffced4da|n- |cffa9c7deПосвящение матерей|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deСверхулей|cffced4da: открывает высшие технологии и силу Древних Богов.|r"
+        }
+      ]
+    },
+    {
+      "id": "e020",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 13129,
+          "after": "|cffe4cfa3Сверхулей|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 13458,
+          "after": "|cffe4cfa3Сверхулей|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9708,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Высшее главное здание третьей ступени. Обеспечивает максимальный запас пищи роя.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deМать роя|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗащитная оболочка зданий|cffced4da|n- |cffa9c7deПосвящение матерей|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "e01I",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12719,
+          "after": "|cffe4cfa3Личинка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 12723,
+          "after": "|cffe4cfa3Личинка|r (|cffffffffQ|r)"
+        }
+      ]
+    },
+    {
+      "id": "e01J",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12727,
+          "after": "|cffe4cfa3Кокон|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 13686,
+          "after": "|cffe4cfa3Кокон|r (|cffffffffA|r)"
+        }
+      ]
+    },
+    {
+      "id": "e01K",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12735,
+          "after": "|cffe4cfa3Эволюционный бассейн|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 13687,
+          "after": "|cffe4cfa3Эволюционный бассейн|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9658,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Центр генетических модификаций роя. Исследует улучшения атаки, защиты, скорости и особые ветви эволюции силитидов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deКогти|cffced4da|n- |cffa9c7deДальнобойные атаки|cffced4da|n- |cffa9c7deПанцирь|cffced4da|n- |cffa9c7deВыживаемость|cffced4da|n- |cffa9c7deЯрость|cffced4da|n- |cffa9c7deПовышенный метаболизм|cffced4da|n- Ветви эволюции: |cffa9c7deПлодовитость|cffced4da, |cffa9c7deСилитиды-танки|cffced4da, |cffa9c7deПлодовитость (Осы)|cffced4da, |cffa9c7deУсиленные крылья|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "e01L",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12741,
+          "after": "|cffe4cfa3Колония|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 13688,
+          "after": "|cffe4cfa3Колония|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9660,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение и склад древесины. Атакует наземные цели.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенная добыча|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "e01M",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 13689,
+          "after": "|cffe4cfa3Логово членистоногих|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 13690,
+          "after": "|cffe4cfa3Логово членистоногих|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9661,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Передовая мутационная лаборатория. Открывает и развивает высшие боевые свойства пауков-стражей и слизней.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЭволюция «Делимость»|cffced4da|n- |cffa9c7deЭволюция «Вязкая слизь»|cffced4da|n- |cffa9c7deЭволюция «Паразит»|cffced4da|n- |cffa9c7deЭволюция «Кислотный снаряд»|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "e01X",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 9944,
+          "after": "|cffe4cfa3Антенны|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10613,
+          "after": "|cffe4cfa3Антенны|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9707,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Органическая биовышка роя. Увеличивает скорость передвижения союзников на |cffc8e087+7%|cffced4da и ускоряет регенерацию их здоровья в радиусе |cffffffff600|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "e00B",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12820,
+          "after": "|cffe4cfa3Антенны|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 12821,
+          "after": "|cffe4cfa3Антенны|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10614,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Органическая биовышка роя. Увеличивает скорость передвижения союзников на |cffc8e087+7%|cffced4da и ускоряет регенерацию их здоровья в радиусе |cffffffff600|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h00C",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12809,
+          "after": "|cffe4cfa3Алтарь Песков|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 12812,
+          "after": "|cffe4cfa3Алтарь Песков|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9699,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Священный алтарь, где подготавливаются и воскрешаются герои Киражей.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deПророк|cffced4da: маг дальнего боя с уроном по области.|n- |cffa9c7deГенерал Киражей|cffced4da: могучий воин-полководец ближнего боя.|n- |cffa9c7deКоролева|cffced4da: владычица роя с исцелением и аурой поддержки.|r"
+        }
+      ]
+    },
+    {
+      "id": "o015",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12801,
+          "after": "|cffe4cfa3Храм Аз'Акиров|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 12803,
+          "after": "|cffe4cfa3Храм Аз'Акиров|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9676,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Культовое сооружение империи Аз'Акиров. Пробуждает древних обсидиановых исполинов и чудовищных сфинксов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОбсидиановая статуя|cffced4da|n- |cffa9c7deСфинкс|cffced4da|n- |cffa9c7deАнубисат|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deКаменная оболочка|cffced4da|n- |cffa9c7deПрочность|cffced4da|n- |cffa9c7deАтака анубисатов|cffced4da|n- |cffa9c7deСокрушение|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "o017",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 13691,
+          "after": "|cffe4cfa3Обелиск Аз'Акиров|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 13692,
+          "after": "|cffe4cfa3Обелиск Аз'Акиров|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9704,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обелиск тёмной магии, концентрирующий энергию древних владык Киражей.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение пророков|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h08L",
+      "hotkey": "U",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 30037,
+          "after": "|cffe4cfa3Храм Анкиража|r"
+        }
+      ]
+    },
+    {
+      "id": "h0MG",
+      "hotkey": "X",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 39424,
+          "after": "|cffe4cfa3Стать слугой К'Туна|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 19427,
+          "after": "|cffe4cfa3Стать слугой К'Туна|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 19428,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Ритуал присяги Древнему Богу. Передаёт К'Туна под ваш контроль и перемещает столицу в священный центр Анкиража.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0DL",
+      "hotkey": "",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12455,
+          "after": "|cffe4cfa3Паутина|r"
+        }
+      ]
+    }
+  ]
+}

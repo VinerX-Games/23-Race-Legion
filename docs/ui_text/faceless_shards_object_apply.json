@@ -1,0 +1,80 @@
+{
+  "ok": true,
+  "applied": true,
+  "method": "Only explicit string modifications spliced; all unrelated records/mods byte-identical",
+  "changes": {
+    "war3map.w3a": [
+      [
+        "A16P",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A16P",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A16P",
+        "aub1",
+        1,
+        0
+      ]
+    ],
+    "war3mapSkin.w3a": [
+      [
+        "A16P",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A16P",
+        "atp1",
+        1,
+        0
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "variant": "SD",
+      "rawcode": "A16P",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A16P",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A16P",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A16P",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A16P",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A16P",
+      "field": "ubertip1",
+      "exact_match": true
+    }
+  ],
+  "wts_unchanged": true
+}

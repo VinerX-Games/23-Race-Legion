@@ -27,10 +27,10 @@ function FeodalSetVassalMode()
 	local mode = tonumber(string.sub(msg, 11))
 	if mode == 1 then
 		FeodalVassalMode = 1
-		DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "Vassal inheritance: TRANSFER to senior's senior")
+		DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffb99d66РЕЖИМ:|r Наследование вассалов: |cffffcc00переход к вышестоящему сюзерену|r")
 	elseif mode == 2 then
 		FeodalVassalMode = 2
-		DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "Vassal inheritance: ALL VASSALS LOSE")
+		DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffb99d66РЕЖИМ:|r Наследование вассалов: |cffff4444все вассалы выбывают|r")
 	end
 end
 

@@ -1,0 +1,170 @@
+{
+  "ok": true,
+  "applied": true,
+  "method": "Only explicit string modifications spliced; all unrelated records/mods byte-identical",
+  "changes": {
+    "war3map.w3h": [
+      [
+        "BEar",
+        "ftip",
+        0,
+        0
+      ],
+      [
+        "BEar",
+        "fube",
+        0,
+        0
+      ],
+      [
+        "BHad",
+        "ftip",
+        0,
+        0
+      ],
+      [
+        "BHad",
+        "fube",
+        0,
+        0
+      ],
+      [
+        "BOae",
+        "ftip",
+        0,
+        0
+      ],
+      [
+        "BOae",
+        "fube",
+        0,
+        0
+      ],
+      [
+        "B002",
+        "ftip",
+        0,
+        0
+      ],
+      [
+        "B002",
+        "fube",
+        0,
+        0
+      ]
+    ],
+    "war3mapSkin.w3h": [
+      [
+        "B002",
+        "ftip",
+        0,
+        0
+      ],
+      [
+        "B002",
+        "fube",
+        0,
+        0
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "variant": "SD",
+      "rawcode": "B002",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "B002",
+      "field": "buffubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "BEar",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "BEar",
+      "field": "buffubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "BHad",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "BHad",
+      "field": "buffubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "BOae",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "BOae",
+      "field": "buffubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "B002",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "B002",
+      "field": "buffubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "BEar",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "BEar",
+      "field": "buffubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "BHad",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "BHad",
+      "field": "buffubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "BOae",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "BOae",
+      "field": "buffubertip",
+      "exact_match": true
+    }
+  ],
+  "wts_unchanged": true
+}

@@ -1,0 +1,199 @@
+{
+  "operations": [
+    {
+      "type": "unit",
+      "id": "e009",
+      "field": "name",
+      "value": "|cffe4cfa3Кошмар|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "e009",
+      "field": "tip",
+      "value": "|cffe4cfa3Кошмар|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "e009",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЮНИТ:|cffced4da Призываемый боец, создаваемый Проклинателем Бездны из трупа.|n|nАтакует наземные и воздушные цели.|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0OM",
+      "field": "name",
+      "value": "|cffe4cfa3Тварь из Бездны|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0OM",
+      "field": "tip",
+      "value": "|cffe4cfa3Тварь из Бездны|r (|cffffffffW|r)",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0OM",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЮНИТ:|cffced4da Могучий наземный боец Бездны с атакой по нескольким целям.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПорождение щупальца|cffced4da: призывает временное Щупальце для наземного боя.|n- |cffa9c7deРассекающий удар|cffced4da: наносит часть урона атаки врагам вокруг основной цели.|n- |cffa9c7deВзрыв Эфира|cffced4da: при гибели наносит урон наземным врагам вокруг воина.|n|nАтакует наземные цели.|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "n01T",
+      "field": "name",
+      "value": "|cffe4cfa3Щупальце|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "n01T",
+      "field": "tip",
+      "value": "|cffe4cfa3Щупальце|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "n01T",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЮНИТ:|cffced4da Неподвижное существо для наземного боя.|n|nАтакует наземные цели.|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "nfgt",
+      "field": "name",
+      "value": "|cffe4cfa3Щупальце|r",
+      "marker": "ЮНИТ:",
+      "base_object": true
+    },
+    {
+      "type": "unit",
+      "id": "nfgt",
+      "field": "tip",
+      "value": "|cffe4cfa3Щупальце|r",
+      "marker": "ЮНИТ:",
+      "base_object": true
+    },
+    {
+      "type": "unit",
+      "id": "nfgt",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЮНИТ:|cffced4da Призываемое существо, атакующее наземных противников.|n|nАтакует наземные цели.|r",
+      "marker": "ЮНИТ:",
+      "base_object": true
+    },
+    {
+      "type": "unit",
+      "id": "uloc",
+      "field": "name",
+      "value": "|cffe4cfa3Саранча|r",
+      "marker": "ЮНИТ:",
+      "base_object": true
+    },
+    {
+      "type": "unit",
+      "id": "uloc",
+      "field": "tip",
+      "value": "|cffe4cfa3Саранча|r",
+      "marker": "ЮНИТ:",
+      "base_object": true
+    },
+    {
+      "type": "unit",
+      "id": "uloc",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЮНИТ:|cffced4da Насекомое роя: автоматически атакует противников и возвращается к источнику роя, восстанавливая ему здоровье. Нельзя выбрать и отдавать обычные команды.|n|nАтакует наземные и воздушные цели.|r",
+      "marker": "ЮНИТ:",
+      "base_object": true
+    },
+    {
+      "type": "unit",
+      "id": "n03B",
+      "field": "name",
+      "value": "|cffe4cfa3Щупальце Йогг`Сарона|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "n03B",
+      "field": "tip",
+      "value": "|cffe4cfa3Щупальце Йогг`Сарона|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "n03B",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЮНИТ:|cffced4da Защитное щупальце Древнего бога для наземного боя.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРассекающий удар|cffced4da: атакой задевает наземных врагов рядом с основной целью.|n|nАтакует наземные цели.|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "n03C",
+      "field": "name",
+      "value": "|cffe4cfa3Щупальце Йогг`Сарона|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "n03C",
+      "field": "tip",
+      "value": "|cffe4cfa3Щупальце Йогг`Сарона|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "n03C",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЮНИТ:|cffced4da Защитное щупальце Древнего бога для наземного боя.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРассекающий удар|cffced4da: атакой задевает наземных врагов рядом с основной целью.|n|nАтакует наземные цели.|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "n04C",
+      "field": "name",
+      "value": "|cffe4cfa3Щупальце Йогг`Сарона|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "n04C",
+      "field": "tip",
+      "value": "|cffe4cfa3Щупальце Йогг`Сарона|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "n04C",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЮНИТ:|cffced4da Защитное щупальце Древнего бога для наземного боя.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРассекающий удар|cffced4da: атакой задевает наземных врагов рядом с основной целью.|n|nАтакует наземные цели.|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "n03A",
+      "field": "name",
+      "value": "|cffe4cfa3Йогг`Сарон|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "n03A",
+      "field": "tip",
+      "value": "|cffe4cfa3Йогг`Сарон|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "n03A",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Древний бог, призывающий войска и поддерживающий их магией. После «Служения Йогг`Сарону» становится столицей игрока.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСмертельная связь|cffced4da: перераспределяет урон между связанными вражескими войсками.|n- |cffa9c7deБожественное видение|cffced4da: открывает обзор и обнаруживает невидимые войска.|n- |cffa9c7deПокровительство бога|cffced4da: восстанавливает союзнику здоровье и ману.|n- |cffa9c7deЩупальце Йогг`Сарона|cffced4da: призывает временное щупальце.|n- |cffa9c7deПризыв бессмертных стражей|cffced4da: создаёт восемь Бессмертных стражей на ограниченное время.|n- |cffa9c7deПризыв сущностей Бездны|cffced4da: создаёт пятнадцать Могущественных Сущностей бездны на ограниченное время.|n- |cffa9c7deПортал в Бездну|cffced4da: выпускает Тварь из Бездны.|n|n|cffa6afb8Усиление при снижении здоровья:|cffced4da|n- Ниже |cffffffff17000|cffced4da здоровья получает «Залповый огонь»; требуется одноимённое исследование.|n- Ниже |cffffffff15000|cffced4da здоровья получает «Подчинение». Взятие под контроль сохраняет полученные способности.|n|nАтакует наземные и воздушные цели.|r",
+      "marker": "ЗДАНИЕ:"
+    }
+  ]
+}

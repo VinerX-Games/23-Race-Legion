@@ -1,0 +1,1682 @@
+{
+  "A0RB": {
+    "id": "A0RB",
+    "levels": 1,
+    "hotkey": "D",
+    "researchhotkey": "T",
+    "buttonpos": [
+      "1",
+      "1"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16908",
+        "raw_hd": "TRIGSTR_16908",
+        "resolved_sd": "|cff8080ffОблик дракона|r",
+        "resolved_hd": "|cff8080ffОблик дракона|r",
+        "is_wts": true,
+        "wts_id": 16908
+      },
+      "researchtip": {
+        "raw_sd": "Изучить «Метаморфозу»",
+        "raw_hd": "Изучить «Метаморфозу»",
+        "resolved_sd": "Изучить «Метаморфозу»",
+        "resolved_hd": "Изучить «Метаморфозу»",
+        "is_wts": false,
+        "wts_id": null
+      },
+      "researchubertip": {
+        "raw_sd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "raw_hd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "resolved_sd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "resolved_hd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "is_wts": false,
+        "wts_id": null
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16909",
+        "raw_hd": "TRIGSTR_16909",
+        "resolved_sd": "|cff8080ffОблик дракона|r",
+        "resolved_hd": "|cff8080ffОблик дракона|r",
+        "is_wts": true,
+        "wts_id": 16909
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_23074",
+        "raw_hd": "TRIGSTR_23074",
+        "resolved_sd": "Аспект принимает свою истинную форму, раскрывая прятаную до этого мощь.",
+        "resolved_hd": "Аспект принимает свою истинную форму, раскрывая прятаную до этого мощь.",
+        "is_wts": true,
+        "wts_id": 23074
+      }
+    }
+  },
+  "A0QY": {
+    "id": "A0QY",
+    "levels": 4,
+    "hotkey": "Q",
+    "researchhotkey": "Q",
+    "buttonpos": [
+      "0",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16701",
+        "raw_hd": "TRIGSTR_16701",
+        "resolved_sd": "|cff8080ffМанипуляция времени|r",
+        "resolved_hd": "|cff8080ffМанипуляция времени|r",
+        "is_wts": true,
+        "wts_id": 16701
+      },
+      "researchtip": {
+        "raw_sd": "TRIGSTR_16780",
+        "raw_hd": "TRIGSTR_16780",
+        "resolved_sd": "Изучить «|cff8080ffМанипуляция времени|r» [|cffffcc00%d-й уровень|r]",
+        "resolved_hd": "Изучить «|cff8080ffМанипуляция времени|r» [|cffffcc00%d-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16780
+      },
+      "researchubertip": {
+        "raw_sd": "TRIGSTR_16706",
+        "raw_hd": "TRIGSTR_16706",
+        "resolved_sd": "Проводит манипуляции временем, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r |cffb4dcdc45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек.|r |n|cffffcc002-й уровень:|r |cffb4dcdc80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек.|r |n|cffffcc003-й уровень:|r |cffb4dcdc110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r|n|cffffcc004-й уровень:|r |cffb4dcdc140 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r",
+        "resolved_hd": "Проводит манипуляции временем, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r |cffb4dcdc45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек.|r |n|cffffcc002-й уровень:|r |cffb4dcdc80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек.|r |n|cffffcc003-й уровень:|r |cffb4dcdc110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r|n|cffffcc004-й уровень:|r |cffb4dcdc140 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r",
+        "is_wts": true,
+        "wts_id": 16706
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16781",
+        "raw_hd": "TRIGSTR_16781",
+        "resolved_sd": "|cff8080ffМанипуляция времени|r [|cffffcc001-й уровень|r]",
+        "resolved_hd": "|cff8080ffМанипуляция времени|r [|cffffcc001-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16781
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_16707",
+        "raw_hd": "TRIGSTR_16707",
+        "resolved_sd": "Проводит манипуляции временем, наносящий наземным войскам в указанной области |cffb4dcdc45 урона/сек.|r в течение |cffb4dcdc3 сек.|r После исчезновения столба пораженные войска продолжают получать незначительный урон.",
+        "resolved_hd": "Проводит манипуляции временем, наносящий наземным войскам в указанной области |cffb4dcdc45 урона/сек.|r в течение |cffb4dcdc3 сек.|r После исчезновения столба пораженные войска продолжают получать незначительный урон.",
+        "is_wts": true,
+        "wts_id": 16707
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_16782",
+        "raw_hd": "TRIGSTR_16782",
+        "resolved_sd": "|cff8080ffМанипуляция времени|r [|cffffcc002-й уровень|r]",
+        "resolved_hd": "|cff8080ffМанипуляция времени|r [|cffffcc002-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16782
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_16708",
+        "raw_hd": "TRIGSTR_16708",
+        "resolved_sd": "Проводит манипуляции временем, наносящий наземным войскам в указанной области |cffb4dcdc80 урона/сек.|r в течение |cffb4dcdc3 сек.|r После исчезновения столба пораженные войска продолжают получать небольшой урон.",
+        "resolved_hd": "Проводит манипуляции временем, наносящий наземным войскам в указанной области |cffb4dcdc80 урона/сек.|r в течение |cffb4dcdc3 сек.|r После исчезновения столба пораженные войска продолжают получать небольшой урон.",
+        "is_wts": true,
+        "wts_id": 16708
+      },
+      "tip3": {
+        "raw_sd": "TRIGSTR_16783",
+        "raw_hd": "TRIGSTR_16783",
+        "resolved_sd": "|cff8080ffМанипуляция времени|r [|cffffcc003-й уровень|r]",
+        "resolved_hd": "|cff8080ffМанипуляция времени|r [|cffffcc003-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16783
+      },
+      "ubertip3": {
+        "raw_sd": "TRIGSTR_16709",
+        "raw_hd": "TRIGSTR_16709",
+        "resolved_sd": "Проводит манипуляции временем, наносящий наземным войскам в указанной области |cffb4dcdc110 урона/сек.|r в течение |cffb4dcdc3 сек.|r После исчезновения столба пораженные войска продолжают получать умеренный урон.",
+        "resolved_hd": "Проводит манипуляции временем, наносящий наземным войскам в указанной области |cffb4dcdc110 урона/сек.|r в течение |cffb4dcdc3 сек.|r После исчезновения столба пораженные войска продолжают получать умеренный урон.",
+        "is_wts": true,
+        "wts_id": 16709
+      },
+      "tip4": {
+        "raw_sd": "TRIGSTR_16779",
+        "raw_hd": "TRIGSTR_16779",
+        "resolved_sd": "|cff8080ffМанипуляция времени|r  [|cffffcc004-й уровень|r]",
+        "resolved_hd": "|cff8080ffМанипуляция времени|r  [|cffffcc004-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16779
+      },
+      "ubertip4": {
+        "raw_sd": "TRIGSTR_16700",
+        "raw_hd": "TRIGSTR_16700",
+        "resolved_sd": "Проводит манипуляции временем, наносящий наземным войскам в указанной области |cffb4dcdc140 урона/сек.|r в течение|cffb4dcdc 4 сек.|r После исчезновения столба пораженные войска продолжают получать умеренный урон.",
+        "resolved_hd": "Проводит манипуляции временем, наносящий наземным войскам в указанной области |cffb4dcdc140 урона/сек.|r в течение|cffb4dcdc 4 сек.|r После исчезновения столба пораженные войска продолжают получать умеренный урон.",
+        "is_wts": true,
+        "wts_id": 16700
+      }
+    }
+  },
+  "A0R0": {
+    "id": "A0R0",
+    "levels": 4,
+    "hotkey": "W",
+    "researchhotkey": "W",
+    "buttonpos": [
+      "1",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16717",
+        "raw_hd": "TRIGSTR_16717",
+        "resolved_sd": "|cff8080ffУскорение времени|r",
+        "resolved_hd": "|cff8080ffУскорение времени|r",
+        "is_wts": true,
+        "wts_id": 16717
+      },
+      "researchtip": {
+        "raw_sd": "TRIGSTR_16718",
+        "raw_hd": "TRIGSTR_16718",
+        "resolved_sd": "|cff8080ffУскорение времени|r",
+        "resolved_hd": "|cff8080ffУскорение времени|r",
+        "is_wts": true,
+        "wts_id": 16718
+      },
+      "researchubertip": {
+        "raw_sd": "TRIGSTR_22382",
+        "raw_hd": "TRIGSTR_22382",
+        "resolved_sd": "Ускоряет время для себя, что позволяет быстрее наносить урон врагам. Длительность воздействия |cffb4dc8c12 сек|r.\n|cffffcc001-й уровень:|r+400% к скорости атаки, но +50% к получаемому урону.\n|cffffcc002-й уровень:|r+400% к скорости атаки, но +40% к получаемому урону.\n|cffffcc003-й уровень:|r+400% к скорости атаки, но +30% к получаемому урону.\n|cffffcc004-й уровень:|r+400% к скорости атаки, но +20% к получаемому урону.|r",
+        "resolved_hd": "Ускоряет время для себя, что позволяет быстрее наносить урон врагам. Длительность воздействия |cffb4dc8c12 сек|r.\n|cffffcc001-й уровень:|r+400% к скорости атаки, но +50% к получаемому урону.\n|cffffcc002-й уровень:|r+400% к скорости атаки, но +40% к получаемому урону.\n|cffffcc003-й уровень:|r+400% к скорости атаки, но +30% к получаемому урону.\n|cffffcc004-й уровень:|r+400% к скорости атаки, но +20% к получаемому урону.|r",
+        "is_wts": true,
+        "wts_id": 22382
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16719",
+        "raw_hd": "TRIGSTR_16719",
+        "resolved_sd": "|cff8080ffУскорение времени|r",
+        "resolved_hd": "|cff8080ffУскорение времени|r",
+        "is_wts": true,
+        "wts_id": 16719
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_16728",
+        "raw_hd": "TRIGSTR_16728",
+        "resolved_sd": "|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+50%|r к получаемому урону.",
+        "resolved_hd": "|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+50%|r к получаемому урону.",
+        "is_wts": true,
+        "wts_id": 16728
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_16720",
+        "raw_hd": "TRIGSTR_16720",
+        "resolved_sd": "|cff8080ffУскорение времени|r",
+        "resolved_hd": "|cff8080ffУскорение времени|r",
+        "is_wts": true,
+        "wts_id": 16720
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_16729",
+        "raw_hd": "TRIGSTR_16729",
+        "resolved_sd": "|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+40%|r к получаемому урону.",
+        "resolved_hd": "|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+40%|r к получаемому урону.",
+        "is_wts": true,
+        "wts_id": 16729
+      },
+      "tip3": {
+        "raw_sd": "TRIGSTR_16721",
+        "raw_hd": "TRIGSTR_16721",
+        "resolved_sd": "|cff8080ffУскорение времени|r",
+        "resolved_hd": "|cff8080ffУскорение времени|r",
+        "is_wts": true,
+        "wts_id": 16721
+      },
+      "ubertip3": {
+        "raw_sd": "TRIGSTR_16730",
+        "raw_hd": "TRIGSTR_16730",
+        "resolved_sd": "|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+30%|r к получаемому урону.",
+        "resolved_hd": "|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+30%|r к получаемому урону.",
+        "is_wts": true,
+        "wts_id": 16730
+      },
+      "tip4": {
+        "raw_sd": "TRIGSTR_16722",
+        "raw_hd": "TRIGSTR_16722",
+        "resolved_sd": "|cff8080ffУскорение времени|r",
+        "resolved_hd": "|cff8080ffУскорение времени|r",
+        "is_wts": true,
+        "wts_id": 16722
+      },
+      "ubertip4": {
+        "raw_sd": "TRIGSTR_16731",
+        "raw_hd": "TRIGSTR_16731",
+        "resolved_sd": "|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+20%|r к получаемому урону.",
+        "resolved_hd": "|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+20%|r к получаемому урону.",
+        "is_wts": true,
+        "wts_id": 16731
+      }
+    }
+  },
+  "A0QX": {
+    "id": "A0QX",
+    "levels": 4,
+    "hotkey": "E",
+    "researchhotkey": "E",
+    "buttonpos": [
+      "2",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16679",
+        "raw_hd": "TRIGSTR_16679",
+        "resolved_sd": "|cff808000Здоровье прошлого|r",
+        "resolved_hd": "|cff808000Здоровье прошлого|r",
+        "is_wts": true,
+        "wts_id": 16679
+      },
+      "researchtip": {
+        "raw_sd": "TRIGSTR_16680",
+        "raw_hd": "TRIGSTR_16680",
+        "resolved_sd": "|cff808000Здоровье прошлого|r",
+        "resolved_hd": "|cff808000Здоровье прошлого|r",
+        "is_wts": true,
+        "wts_id": 16680
+      },
+      "researchubertip": {
+        "raw_sd": "TRIGSTR_16697",
+        "raw_hd": "TRIGSTR_16697",
+        "resolved_sd": "Обертает время вспять, востанавливая этим здоровье.|n|cffffcc001-й уровень:|r |cffb4dcdc300 ед.|r |n|cffffcc002-й уровень:|r |cffb4dcdc400 ед. |r |n|cffffcc003-й уровень:|r |cffb4dcdc500 ед. |r |n|cffffcc004-й уровень:|r |cffb4dcdc600 ед. |r",
+        "resolved_hd": "Обертает время вспять, востанавливая этим здоровье.|n|cffffcc001-й уровень:|r |cffb4dcdc300 ед.|r |n|cffffcc002-й уровень:|r |cffb4dcdc400 ед. |r |n|cffffcc003-й уровень:|r |cffb4dcdc500 ед. |r |n|cffffcc004-й уровень:|r |cffb4dcdc600 ед. |r",
+        "is_wts": true,
+        "wts_id": 16697
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16681",
+        "raw_hd": "TRIGSTR_16681",
+        "resolved_sd": "|cff808000Здоровье прошлого|r",
+        "resolved_hd": "|cff808000Здоровье прошлого|r",
+        "is_wts": true,
+        "wts_id": 16681
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_16685",
+        "raw_hd": "TRIGSTR_16685",
+        "resolved_sd": "Обертает время вспять, востанавливая этим здоровье.|n|cffffcc001-й уровень:|r |cffb4dcdc300 ед.|r ",
+        "resolved_hd": "Обертает время вспять, востанавливая этим здоровье.|n|cffffcc001-й уровень:|r |cffb4dcdc300 ед.|r ",
+        "is_wts": true,
+        "wts_id": 16685
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_16682",
+        "raw_hd": "TRIGSTR_16682",
+        "resolved_sd": "|cff808000Здоровье прошлого|r",
+        "resolved_hd": "|cff808000Здоровье прошлого|r",
+        "is_wts": true,
+        "wts_id": 16682
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_16686",
+        "raw_hd": "TRIGSTR_16686",
+        "resolved_sd": "Обертает время вспять, востанавливая этим здоровье. |n|cffffcc002-й уровень:|r |cffb4dcdc400 ед. |r",
+        "resolved_hd": "Обертает время вспять, востанавливая этим здоровье. |n|cffffcc002-й уровень:|r |cffb4dcdc400 ед. |r",
+        "is_wts": true,
+        "wts_id": 16686
+      },
+      "tip3": {
+        "raw_sd": "TRIGSTR_16683",
+        "raw_hd": "TRIGSTR_16683",
+        "resolved_sd": "|cff808000Здоровье прошлого|r",
+        "resolved_hd": "|cff808000Здоровье прошлого|r",
+        "is_wts": true,
+        "wts_id": 16683
+      },
+      "ubertip3": {
+        "raw_sd": "TRIGSTR_16687",
+        "raw_hd": "TRIGSTR_16687",
+        "resolved_sd": "Обертает время вспять, востанавливая этим здоровье. |n|cffffcc003-й уровень:|r |cffb4dcdc500 ед. |r",
+        "resolved_hd": "Обертает время вспять, востанавливая этим здоровье. |n|cffffcc003-й уровень:|r |cffb4dcdc500 ед. |r",
+        "is_wts": true,
+        "wts_id": 16687
+      },
+      "tip4": {
+        "raw_sd": "TRIGSTR_16684",
+        "raw_hd": "TRIGSTR_16684",
+        "resolved_sd": "|cff808000Здоровье прошлого|r",
+        "resolved_hd": "|cff808000Здоровье прошлого|r",
+        "is_wts": true,
+        "wts_id": 16684
+      },
+      "ubertip4": {
+        "raw_sd": "TRIGSTR_16688",
+        "raw_hd": "TRIGSTR_16688",
+        "resolved_sd": "Обертает время вспять, востанавливая этим здоровье.|n|cffffcc004-й уровень:|r |cffb4dcdc600 ед. |r",
+        "resolved_hd": "Обертает время вспять, востанавливая этим здоровье.|n|cffffcc004-й уровень:|r |cffb4dcdc600 ед. |r",
+        "is_wts": true,
+        "wts_id": 16688
+      }
+    }
+  },
+  "A0QZ": {
+    "id": "A0QZ",
+    "levels": 2,
+    "hotkey": "R",
+    "researchhotkey": "R",
+    "buttonpos": [
+      "3",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16711",
+        "raw_hd": "TRIGSTR_16711",
+        "resolved_sd": "|cff8080ffРеинкарнация|r",
+        "resolved_hd": "|cff8080ffРеинкарнация|r",
+        "is_wts": true,
+        "wts_id": 16711
+      },
+      "researchtip": {
+        "raw_sd": "TRIGSTR_16712",
+        "raw_hd": "TRIGSTR_16712",
+        "resolved_sd": "Изучить «|cff8080ffРеинкарнация|r»",
+        "resolved_hd": "Изучить «|cff8080ffРеинкарнация|r»",
+        "is_wts": true,
+        "wts_id": 16712
+      },
+      "researchubertip": {
+        "raw_sd": "\"Герой возрождается после гибели. Время восстановления: <ANr2,Cool1> сек.\"",
+        "raw_hd": "\"Герой возрождается после гибели. Время восстановления: <ANr2,Cool1> сек.\"",
+        "resolved_sd": "\"Герой возрождается после гибели. Время восстановления: <ANr2,Cool1> сек.\"",
+        "resolved_hd": "\"Герой возрождается после гибели. Время восстановления: <ANr2,Cool1> сек.\"",
+        "is_wts": false,
+        "wts_id": null
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16713",
+        "raw_hd": "TRIGSTR_16713",
+        "resolved_sd": "|cff8080ffРеинкарнация|r",
+        "resolved_hd": "|cff8080ffРеинкарнация|r",
+        "is_wts": true,
+        "wts_id": 16713
+      },
+      "ubertip1": {
+        "raw_sd": "\"Герой возрождается после гибели. Время восстановления: <ANr2,Cool1> сек.\"",
+        "raw_hd": "\"Герой возрождается после гибели. Время восстановления: <ANr2,Cool1> сек.\"",
+        "resolved_sd": "\"Герой возрождается после гибели. Время восстановления: <ANr2,Cool1> сек.\"",
+        "resolved_hd": "\"Герой возрождается после гибели. Время восстановления: <ANr2,Cool1> сек.\"",
+        "is_wts": false,
+        "wts_id": null
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_16714",
+        "raw_hd": "TRIGSTR_16714",
+        "resolved_sd": "|cff8080ffРеинкарнация|r",
+        "resolved_hd": "|cff8080ffРеинкарнация|r",
+        "is_wts": true,
+        "wts_id": 16714
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_16715",
+        "raw_hd": "TRIGSTR_16715",
+        "resolved_sd": "Герой возрождается после гибели. Время восстановления: <ANr2,Cool2> сек.",
+        "resolved_hd": "Герой возрождается после гибели. Время восстановления: <ANr2,Cool2> сек.",
+        "is_wts": true,
+        "wts_id": 16715
+      }
+    }
+  },
+  "A0RD": {
+    "id": "A0RD",
+    "levels": 1,
+    "hotkey": "D",
+    "researchhotkey": "T",
+    "buttonpos": [
+      "1",
+      "1"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16917",
+        "raw_hd": "TRIGSTR_16917",
+        "resolved_sd": "|cff8080ffОблик дракона|r",
+        "resolved_hd": "|cff8080ffОблик дракона|r",
+        "is_wts": true,
+        "wts_id": 16917
+      },
+      "researchtip": {
+        "raw_sd": "Изучить «Метаморфозу»",
+        "raw_hd": "Изучить «Метаморфозу»",
+        "resolved_sd": "Изучить «Метаморфозу»",
+        "resolved_hd": "Изучить «Метаморфозу»",
+        "is_wts": false,
+        "wts_id": null
+      },
+      "researchubertip": {
+        "raw_sd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "raw_hd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "resolved_sd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "resolved_hd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "is_wts": false,
+        "wts_id": null
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16918",
+        "raw_hd": "TRIGSTR_16918",
+        "resolved_sd": "|cff8080ffОблик дракона|r",
+        "resolved_hd": "|cff8080ffОблик дракона|r",
+        "is_wts": true,
+        "wts_id": 16918
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_23076",
+        "raw_hd": "TRIGSTR_23076",
+        "resolved_sd": "Аспект принимает свою истинную форму, раскрывая прятаную до этого мощь.",
+        "resolved_hd": "Аспект принимает свою истинную форму, раскрывая прятаную до этого мощь.",
+        "is_wts": true,
+        "wts_id": 23076
+      }
+    }
+  },
+  "A0R4": {
+    "id": "A0R4",
+    "levels": 4,
+    "hotkey": "Q",
+    "researchhotkey": "Q",
+    "buttonpos": [
+      "0",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16798",
+        "raw_hd": "TRIGSTR_16798",
+        "resolved_sd": "|cff8080ffЯрость Изеры|r",
+        "resolved_hd": "|cff8080ffЯрость Изеры|r",
+        "is_wts": true,
+        "wts_id": 16798
+      },
+      "researchtip": {
+        "raw_sd": "TRIGSTR_16799",
+        "raw_hd": "TRIGSTR_16799",
+        "resolved_sd": "Изучить «|cff8080ffЯрость Изеры|r» [|cffffcc00%d-й уровень|r]",
+        "resolved_hd": "Изучить «|cff8080ffЯрость Изеры|r» [|cffffcc00%d-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16799
+      },
+      "researchubertip": {
+        "raw_sd": "TRIGSTR_16800",
+        "raw_hd": "TRIGSTR_16800",
+        "resolved_sd": "Выпускает волну энергии, атакующих врагов. |n|n|cffffcc001-й уровень:|r |cff8080ff<AUcs,DataA1> урона каждой цели.|r |n|cffffcc002-й уровень:|r |cff8080ff<AUcs,DataA2> урона каждой цели.|r |n|cffffcc003-й уровень:|r |cff8080ff<AUcs,DataA3> урона каждой цели.|r |n|cffffcc004-й уровень:|r |cff8080ff<AUcs,DataA3> урона каждой цели.|r",
+        "resolved_hd": "Выпускает волну энергии, атакующих врагов. |n|n|cffffcc001-й уровень:|r |cff8080ff<AUcs,DataA1> урона каждой цели.|r |n|cffffcc002-й уровень:|r |cff8080ff<AUcs,DataA2> урона каждой цели.|r |n|cffffcc003-й уровень:|r |cff8080ff<AUcs,DataA3> урона каждой цели.|r |n|cffffcc004-й уровень:|r |cff8080ff<AUcs,DataA3> урона каждой цели.|r",
+        "is_wts": true,
+        "wts_id": 16800
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16803",
+        "raw_hd": "TRIGSTR_16803",
+        "resolved_sd": "|cff8080ffЯрость Изеры|r [|cffffcc001-й уровень|r]",
+        "resolved_hd": "|cff8080ffЯрость Изеры|r [|cffffcc001-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16803
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_16804",
+        "raw_hd": "TRIGSTR_16804",
+        "resolved_sd": "Выпускает волну энергии, атакующих врагов. |n|n|cffffcc001-й уровень:|r |cff8080ff<AUcs,DataA1> урона каждой цели.|r ",
+        "resolved_hd": "Выпускает волну энергии, атакующих врагов. |n|n|cffffcc001-й уровень:|r |cff8080ff<AUcs,DataA1> урона каждой цели.|r ",
+        "is_wts": true,
+        "wts_id": 16804
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_16801",
+        "raw_hd": "TRIGSTR_16801",
+        "resolved_sd": "|cff8080ffЯрость Изеры|r [|cffffcc002-й уровень|r]",
+        "resolved_hd": "|cff8080ffЯрость Изеры|r [|cffffcc002-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16801
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_16805",
+        "raw_hd": "TRIGSTR_16805",
+        "resolved_sd": "Выпускает волну энергии, атакующих врагов. \n |n|cffffcc002-й уровень:|r |cff8080ff<AUcs,DataA2> урона каждой цели.|r ",
+        "resolved_hd": "Выпускает волну энергии, атакующих врагов. \n |n|cffffcc002-й уровень:|r |cff8080ff<AUcs,DataA2> урона каждой цели.|r ",
+        "is_wts": true,
+        "wts_id": 16805
+      },
+      "tip3": {
+        "raw_sd": "TRIGSTR_16802",
+        "raw_hd": "TRIGSTR_16802",
+        "resolved_sd": "|cff8080ffЯрость Изеры|r [|cffffcc003-й уровень|r]",
+        "resolved_hd": "|cff8080ffЯрость Изеры|r [|cffffcc003-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16802
+      },
+      "ubertip3": {
+        "raw_sd": "TRIGSTR_16806",
+        "raw_hd": "TRIGSTR_16806",
+        "resolved_sd": "Выпускает волну энергии, атакующих врагов. |n|n|cffffcc003-й уровень:|r |cff8080ff<AUcs,DataA3> урона каждой цели.|r ",
+        "resolved_hd": "Выпускает волну энергии, атакующих врагов. |n|n|cffffcc003-й уровень:|r |cff8080ff<AUcs,DataA3> урона каждой цели.|r ",
+        "is_wts": true,
+        "wts_id": 16806
+      },
+      "tip4": {
+        "raw_sd": "TRIGSTR_16796",
+        "raw_hd": "TRIGSTR_16796",
+        "resolved_sd": "|cff8080ffЯрость Изеры|r [|cffffcc004-й уровень|r]",
+        "resolved_hd": "|cff8080ffЯрость Изеры|r [|cffffcc004-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16796
+      },
+      "ubertip4": {
+        "raw_sd": "TRIGSTR_22383",
+        "raw_hd": "TRIGSTR_22383",
+        "resolved_sd": "Выпускает волну энергии, атакующих врагов.\n |n|cffffcc004-й уровень:|r |cff8080ff<AUcs,DataA4> урона каждой цели.|r",
+        "resolved_hd": "Выпускает волну энергии, атакующих врагов.\n |n|cffffcc004-й уровень:|r |cff8080ff<AUcs,DataA4> урона каждой цели.|r",
+        "is_wts": true,
+        "wts_id": 22383
+      }
+    }
+  },
+  "A0R3": {
+    "id": "A0R3",
+    "levels": 4,
+    "hotkey": "W",
+    "researchhotkey": "W",
+    "buttonpos": [
+      "1",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16784",
+        "raw_hd": "TRIGSTR_16784",
+        "resolved_sd": "|cff8080ffАура жизни|r",
+        "resolved_hd": "|cff8080ffАура жизни|r",
+        "is_wts": true,
+        "wts_id": 16784
+      },
+      "researchtip": {
+        "raw_sd": "TRIGSTR_16785",
+        "raw_hd": "TRIGSTR_16785",
+        "resolved_sd": "Изучить «|cff8080ffАура жизни|r» [|cffffcc00%d-й уровень|r]",
+        "resolved_hd": "Изучить «|cff8080ffАура жизни|r» [|cffffcc00%d-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16785
+      },
+      "researchubertip": {
+        "raw_sd": "TRIGSTR_16794",
+        "raw_hd": "TRIGSTR_16794",
+        "resolved_sd": "Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdc+<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья.|r |n|cffffcc002-й уровень:|r |cffb4dcdc+<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья.|r |n|cffffcc003-й уровень:|r |cffb4dcdc+<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья.|r|n|cffffcc004-й уровень:|r |cffb4dcdc+<AUau,DataA4,%>% к скорости передвижения, большой бонус к регенерации здоровья.|r",
+        "resolved_hd": "Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdc+<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья.|r |n|cffffcc002-й уровень:|r |cffb4dcdc+<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья.|r |n|cffffcc003-й уровень:|r |cffb4dcdc+<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья.|r|n|cffffcc004-й уровень:|r |cffb4dcdc+<AUau,DataA4,%>% к скорости передвижения, большой бонус к регенерации здоровья.|r",
+        "is_wts": true,
+        "wts_id": 16794
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16788",
+        "raw_hd": "TRIGSTR_16788",
+        "resolved_sd": "|cff8080ffАура жизни|r [|cffffcc001-й уровень|r]",
+        "resolved_hd": "|cff8080ffАура жизни|r [|cffffcc001-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16788
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_16791",
+        "raw_hd": "TRIGSTR_16791",
+        "resolved_sd": "|cffb4dcdc+<AUau,DataA1,%>%|r к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.",
+        "resolved_hd": "|cffb4dcdc+<AUau,DataA1,%>%|r к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.",
+        "is_wts": true,
+        "wts_id": 16791
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_16789",
+        "raw_hd": "TRIGSTR_16789",
+        "resolved_sd": "|cff8080ffАура жизни|r [|cffffcc002-й уровень|r]",
+        "resolved_hd": "|cff8080ffАура жизни|r [|cffffcc002-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16789
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_16792",
+        "raw_hd": "TRIGSTR_16792",
+        "resolved_sd": "|cffb4dcdc+<AUau,DataA2,%>% |rк скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.",
+        "resolved_hd": "|cffb4dcdc+<AUau,DataA2,%>% |rк скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.",
+        "is_wts": true,
+        "wts_id": 16792
+      },
+      "tip3": {
+        "raw_sd": "TRIGSTR_16790",
+        "raw_hd": "TRIGSTR_16790",
+        "resolved_sd": "|cff8080ffАура жизни|r [|cffffcc003-й уровень|r]",
+        "resolved_hd": "|cff8080ffАура жизни|r [|cffffcc003-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16790
+      },
+      "ubertip3": {
+        "raw_sd": "TRIGSTR_16793",
+        "raw_hd": "TRIGSTR_16793",
+        "resolved_sd": "|cffb4dcdc+<AUau,DataA3,%>%|r к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.",
+        "resolved_hd": "|cffb4dcdc+<AUau,DataA3,%>%|r к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.",
+        "is_wts": true,
+        "wts_id": 16793
+      },
+      "tip4": {
+        "raw_sd": "TRIGSTR_16786",
+        "raw_hd": "TRIGSTR_16786",
+        "resolved_sd": "|cff8080ffАура жизни|r [|cffffcc004-й уровень|r]",
+        "resolved_hd": "|cff8080ffАура жизни|r [|cffffcc004-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16786
+      },
+      "ubertip4": {
+        "raw_sd": "TRIGSTR_16787",
+        "raw_hd": "TRIGSTR_16787",
+        "resolved_sd": "|cffb4dcdc+<AUau,DataA4,%>%|r к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.",
+        "resolved_hd": "|cffb4dcdc+<AUau,DataA4,%>%|r к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.",
+        "is_wts": true,
+        "wts_id": 16787
+      }
+    }
+  },
+  "A0R2": {
+    "id": "A0R2",
+    "levels": 4,
+    "hotkey": "E",
+    "researchhotkey": "E",
+    "buttonpos": [
+      "2",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16742",
+        "raw_hd": "TRIGSTR_16742",
+        "resolved_sd": "|cff8080ffНемота|r",
+        "resolved_hd": "|cff8080ffНемота|r",
+        "is_wts": true,
+        "wts_id": 16742
+      },
+      "researchtip": {
+        "raw_sd": "TRIGSTR_16743",
+        "raw_hd": "TRIGSTR_16743",
+        "resolved_sd": "Изучить «|cff8080ffНемоту|r» [|cffffcc00%d-й уровень|r]",
+        "resolved_hd": "Изучить «|cff8080ffНемоту|r» [|cffffcc00%d-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16743
+      },
+      "researchubertip": {
+        "raw_sd": "TRIGSTR_16752",
+        "raw_hd": "TRIGSTR_16752",
+        "resolved_sd": "Не дает врагам в указанной области применять способности. Размер области действия и время действия увеличиваются с каждым уровнем. |n|n|cffffcc001-й уровень:|r |cff8080ffнебольшая область, <ANsi,Dur1> сек.|r |n|cffffcc002-й уровень:|r |cff8080ffсредняя область, <ANsi,Dur2> сек.|r |n|cffffcc003-й уровень:|r |cff8080ffобширная область, <ANsi,Dur3> сек.|r|n|cffffcc004-й уровень:|r |cff8080ffбольшая область, <ANsi,Dur4> сек.|r",
+        "resolved_hd": "Не дает врагам в указанной области применять способности. Размер области действия и время действия увеличиваются с каждым уровнем. |n|n|cffffcc001-й уровень:|r |cff8080ffнебольшая область, <ANsi,Dur1> сек.|r |n|cffffcc002-й уровень:|r |cff8080ffсредняя область, <ANsi,Dur2> сек.|r |n|cffffcc003-й уровень:|r |cff8080ffобширная область, <ANsi,Dur3> сек.|r|n|cffffcc004-й уровень:|r |cff8080ffбольшая область, <ANsi,Dur4> сек.|r",
+        "is_wts": true,
+        "wts_id": 16752
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16744",
+        "raw_hd": "TRIGSTR_16744",
+        "resolved_sd": "|cff8080ffНемота|r [|cffffcc001-й уровень|r]",
+        "resolved_hd": "|cff8080ffНемота|r [|cffffcc001-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16744
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_16751",
+        "raw_hd": "TRIGSTR_16751",
+        "resolved_sd": "Не дает врагам в небольшой области применять способности в течение |cff8080ff<ANsi,Dur1> сек.|r",
+        "resolved_hd": "Не дает врагам в небольшой области применять способности в течение |cff8080ff<ANsi,Dur1> сек.|r",
+        "is_wts": true,
+        "wts_id": 16751
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_16745",
+        "raw_hd": "TRIGSTR_16745",
+        "resolved_sd": "|cff8080ffНемота|r [|cffffcc002-й уровень|r]",
+        "resolved_hd": "|cff8080ffНемота|r [|cffffcc002-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16745
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_16750",
+        "raw_hd": "TRIGSTR_16750",
+        "resolved_sd": "Не дает врагам в указанной области применять способности в течение |cff8080ff<ANsi,Dur2> сек.|r",
+        "resolved_hd": "Не дает врагам в указанной области применять способности в течение |cff8080ff<ANsi,Dur2> сек.|r",
+        "is_wts": true,
+        "wts_id": 16750
+      },
+      "tip3": {
+        "raw_sd": "TRIGSTR_16746",
+        "raw_hd": "TRIGSTR_16746",
+        "resolved_sd": "|cff8080ffНемота|r [|cffffcc003-й уровень|r]",
+        "resolved_hd": "|cff8080ffНемота|r [|cffffcc003-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16746
+      },
+      "ubertip3": {
+        "raw_sd": "TRIGSTR_16749",
+        "raw_hd": "TRIGSTR_16749",
+        "resolved_sd": "Не дает врагам в указанной обширной области применять способности в течение |cff8080ff<ANsi,Dur3> сек|r.",
+        "resolved_hd": "Не дает врагам в указанной обширной области применять способности в течение |cff8080ff<ANsi,Dur3> сек|r.",
+        "is_wts": true,
+        "wts_id": 16749
+      },
+      "tip4": {
+        "raw_sd": "TRIGSTR_16747",
+        "raw_hd": "TRIGSTR_16747",
+        "resolved_sd": "|cff8080ffНемота|r [|cffffcc004-й уровень|r]",
+        "resolved_hd": "|cff8080ffНемота|r [|cffffcc004-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16747
+      },
+      "ubertip4": {
+        "raw_sd": "TRIGSTR_16748",
+        "raw_hd": "TRIGSTR_16748",
+        "resolved_sd": "Не дает врагам в указанной обширной области применять способности в течение |cff8080ff<ANsi,Dur4> сек|r.",
+        "resolved_hd": "Не дает врагам в указанной обширной области применять способности в течение |cff8080ff<ANsi,Dur4> сек|r.",
+        "is_wts": true,
+        "wts_id": 16748
+      }
+    }
+  },
+  "A1MX": {
+    "id": "A1MX",
+    "levels": 2,
+    "hotkey": "R",
+    "researchhotkey": "R",
+    "buttonpos": [
+      "3",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16734",
+        "raw_hd": "TRIGSTR_16734",
+        "resolved_sd": "|cff8080ffЧастица изумрудного сна|r",
+        "resolved_hd": "|cff8080ffЧастица изумрудного сна|r",
+        "is_wts": true,
+        "wts_id": 16734
+      },
+      "researchtip": {
+        "raw_sd": null,
+        "raw_hd": null,
+        "resolved_sd": null,
+        "resolved_hd": null,
+        "is_wts": false,
+        "wts_id": null
+      },
+      "researchubertip": {
+        "raw_sd": null,
+        "raw_hd": null,
+        "resolved_sd": null,
+        "resolved_hd": null,
+        "is_wts": false,
+        "wts_id": null
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16736",
+        "raw_hd": "TRIGSTR_16736",
+        "resolved_sd": "|cff8080ffЧастица изумрудного сна|r [|cffffcc001-й уровень|r]",
+        "resolved_hd": "|cff8080ffЧастица изумрудного сна|r [|cffffcc001-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16736
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_39196",
+        "raw_hd": "TRIGSTR_39196",
+        "resolved_sd": "Опутываеть врагов, создавая кокон, оглушая находящихся рядом наземных врагов и нанося им урон. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AOws,DataA1> урона, <AOws,Dur1> сек. оглушения.|r ",
+        "resolved_hd": "Опутываеть врагов, создавая кокон, оглушая находящихся рядом наземных врагов и нанося им урон. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AOws,DataA1> урона, <AOws,Dur1> сек. оглушения.|r ",
+        "is_wts": true,
+        "wts_id": 39196
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_11836",
+        "raw_hd": "TRIGSTR_11836",
+        "resolved_sd": "|cff8080ffЧастица изумрудного сна|rr [|cffffcc002-й уровень|r]",
+        "resolved_hd": "|cff8080ffЧастица изумрудного сна|rr [|cffffcc002-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 11836
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_39197",
+        "raw_hd": "TRIGSTR_39197",
+        "resolved_sd": "Опутываеть врагов, создавая кокон, оглушая находящихся рядом наземных врагов и нанося им урон.  |n|cffffcc002-й уровень:|r |cffb4dcdc<AOws,DataA2> урона, <AOws,Dur2> сек. оглушения. |r",
+        "resolved_hd": "Опутываеть врагов, создавая кокон, оглушая находящихся рядом наземных врагов и нанося им урон.  |n|cffffcc002-й уровень:|r |cffb4dcdc<AOws,DataA2> урона, <AOws,Dur2> сек. оглушения. |r",
+        "is_wts": true,
+        "wts_id": 39197
+      }
+    }
+  },
+  "A0RA": {
+    "id": "A0RA",
+    "levels": 1,
+    "hotkey": "D",
+    "researchhotkey": "T",
+    "buttonpos": [
+      "1",
+      "1"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16883",
+        "raw_hd": "TRIGSTR_16883",
+        "resolved_sd": "|cff8080ffОблик дракона|r",
+        "resolved_hd": "|cff8080ffОблик дракона|r",
+        "is_wts": true,
+        "wts_id": 16883
+      },
+      "researchtip": {
+        "raw_sd": "Изучить «Метаморфозу»",
+        "raw_hd": "Изучить «Метаморфозу»",
+        "resolved_sd": "Изучить «Метаморфозу»",
+        "resolved_hd": "Изучить «Метаморфозу»",
+        "is_wts": false,
+        "wts_id": null
+      },
+      "researchubertip": {
+        "raw_sd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "raw_hd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "resolved_sd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "resolved_hd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "is_wts": false,
+        "wts_id": null
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16884",
+        "raw_hd": "TRIGSTR_16884",
+        "resolved_sd": "|cff8080ffОблик дракона|r",
+        "resolved_hd": "|cff8080ffОблик дракона|r",
+        "is_wts": true,
+        "wts_id": 16884
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_23073",
+        "raw_hd": "TRIGSTR_23073",
+        "resolved_sd": "Аспект принимает свою истинную форму, раскрывая прятаную до этого мощь.",
+        "resolved_hd": "Аспект принимает свою истинную форму, раскрывая прятаную до этого мощь.",
+        "is_wts": true,
+        "wts_id": 23073
+      }
+    }
+  },
+  "A0R5": {
+    "id": "A0R5",
+    "levels": 4,
+    "hotkey": "Q",
+    "researchhotkey": "Q",
+    "buttonpos": [
+      "0",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16807",
+        "raw_hd": "TRIGSTR_16807",
+        "resolved_sd": "|cff8080ffОгненный ливень|r",
+        "resolved_hd": "|cff8080ffОгненный ливень|r",
+        "is_wts": true,
+        "wts_id": 16807
+      },
+      "researchtip": {
+        "raw_sd": "TRIGSTR_16818",
+        "raw_hd": "TRIGSTR_16818",
+        "resolved_sd": "Изучить |cff8080ffОгненный ливень|r",
+        "resolved_hd": "Изучить |cff8080ffОгненный ливень|r",
+        "is_wts": true,
+        "wts_id": 16818
+      },
+      "researchubertip": {
+        "raw_sd": "TRIGSTR_16819",
+        "raw_hd": "TRIGSTR_16819",
+        "resolved_sd": "Обрушивает на указанную область волны огня. Каждая волна наносит  урон мгновенно и урона/сек. |nВолн: |cffb4dcdc<ACrg,DataA1>.|r\n|n|cffffcc001-й уровень:|r |cffb4dcdc25 ед. урона, 15 ед. периодического урона, длительность 3 сек.|r|n|cffffcc002-й уровень:|r |cffb4dcdc|cffb4dcdc45 ед. урона, 20 ед. периодического урона, длительность 3 сек.|r|n|cffffcc003-й уровень:|r |cffb4dcdc|cffb4dcdc50 ед. урона, 25 ед. периодического урона, длительность 3 сек.|r|n|cffffcc004-й уровень:|r |cffb4dcdc|cffb4dcdc75 ед. урона, 30 ед. периодического урона, длительность 3 сек.",
+        "resolved_hd": "Обрушивает на указанную область волны огня. Каждая волна наносит  урон мгновенно и урона/сек. |nВолн: |cffb4dcdc<ACrg,DataA1>.|r\n|n|cffffcc001-й уровень:|r |cffb4dcdc25 ед. урона, 15 ед. периодического урона, длительность 3 сек.|r|n|cffffcc002-й уровень:|r |cffb4dcdc|cffb4dcdc45 ед. урона, 20 ед. периодического урона, длительность 3 сек.|r|n|cffffcc003-й уровень:|r |cffb4dcdc|cffb4dcdc50 ед. урона, 25 ед. периодического урона, длительность 3 сек.|r|n|cffffcc004-й уровень:|r |cffb4dcdc|cffb4dcdc75 ед. урона, 30 ед. периодического урона, длительность 3 сек.",
+        "is_wts": true,
+        "wts_id": 16819
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16809",
+        "raw_hd": "TRIGSTR_16809",
+        "resolved_sd": "|cffff0000Огненный ливень|r",
+        "resolved_hd": "|cffff0000Огненный ливень|r",
+        "is_wts": true,
+        "wts_id": 16809
+      },
+      "ubertip1": {
+        "raw_sd": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ACrg,DataB1> урона мгновенно и <ACrg,DataE1> урона/сек. в течение <ACrg,Dur1> сек. |nВолн: <ACrg,DataA1>.\"",
+        "raw_hd": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ACrg,DataB1> урона мгновенно и <ACrg,DataE1> урона/сек. в течение <ACrg,Dur1> сек. |nВолн: <ACrg,DataA1>.\"",
+        "resolved_sd": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ACrg,DataB1> урона мгновенно и <ACrg,DataE1> урона/сек. в течение <ACrg,Dur1> сек. |nВолн: <ACrg,DataA1>.\"",
+        "resolved_hd": "\"Обрушивает на указанную область волны огня. Каждая волна наносит <ACrg,DataB1> урона мгновенно и <ACrg,DataE1> урона/сек. в течение <ACrg,Dur1> сек. |nВолн: <ACrg,DataA1>.\"",
+        "is_wts": false,
+        "wts_id": null
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_16810",
+        "raw_hd": "TRIGSTR_16810",
+        "resolved_sd": "|cffff0000Огненный ливень|r",
+        "resolved_hd": "|cffff0000Огненный ливень|r",
+        "is_wts": true,
+        "wts_id": 16810
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_16814",
+        "raw_hd": "TRIGSTR_16814",
+        "resolved_sd": "Обрушивает на указанную область волны огня. Каждая волна наносит <ACrg,DataB1> урона мгновенно и <ACrg,DataE1> урона/сек. в течение <ACrg,Dur1> сек. |nВолн: <ACrg,DataA1>.",
+        "resolved_hd": "Обрушивает на указанную область волны огня. Каждая волна наносит <ACrg,DataB1> урона мгновенно и <ACrg,DataE1> урона/сек. в течение <ACrg,Dur1> сек. |nВолн: <ACrg,DataA1>.",
+        "is_wts": true,
+        "wts_id": 16814
+      },
+      "tip3": {
+        "raw_sd": "TRIGSTR_16811",
+        "raw_hd": "TRIGSTR_16811",
+        "resolved_sd": "|cffff0000Огненный ливень|r",
+        "resolved_hd": "|cffff0000Огненный ливень|r",
+        "is_wts": true,
+        "wts_id": 16811
+      },
+      "ubertip3": {
+        "raw_sd": "TRIGSTR_16815",
+        "raw_hd": "TRIGSTR_16815",
+        "resolved_sd": "Обрушивает на указанную область волны огня. Каждая волна наносит <ACrg,DataB1> урона мгновенно и <ACrg,DataE1> урона/сек. в течение <ACrg,Dur1> сек. |nВолн: <ACrg,DataA1>.",
+        "resolved_hd": "Обрушивает на указанную область волны огня. Каждая волна наносит <ACrg,DataB1> урона мгновенно и <ACrg,DataE1> урона/сек. в течение <ACrg,Dur1> сек. |nВолн: <ACrg,DataA1>.",
+        "is_wts": true,
+        "wts_id": 16815
+      },
+      "tip4": {
+        "raw_sd": "TRIGSTR_16812",
+        "raw_hd": "TRIGSTR_16812",
+        "resolved_sd": "|cffff0000Огненный ливень|r",
+        "resolved_hd": "|cffff0000Огненный ливень|r",
+        "is_wts": true,
+        "wts_id": 16812
+      },
+      "ubertip4": {
+        "raw_sd": "TRIGSTR_16816",
+        "raw_hd": "TRIGSTR_16816",
+        "resolved_sd": "Обрушивает на указанную область волны огня. Каждая волна наносит <ACrg,DataB1> урона мгновенно и <ACrg,DataE1> урона/сек. в течение <ACrg,Dur1> сек. |nВолн: <ACrg,DataA1>.",
+        "resolved_hd": "Обрушивает на указанную область волны огня. Каждая волна наносит <ACrg,DataB1> урона мгновенно и <ACrg,DataE1> урона/сек. в течение <ACrg,Dur1> сек. |nВолн: <ACrg,DataA1>.",
+        "is_wts": true,
+        "wts_id": 16816
+      }
+    }
+  },
+  "A0R6": {
+    "id": "A0R6",
+    "levels": 4,
+    "hotkey": "W",
+    "researchhotkey": "W",
+    "buttonpos": [
+      "1",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16821",
+        "raw_hd": "TRIGSTR_16821",
+        "resolved_sd": "|cff8080ffВозмездие пламени|r",
+        "resolved_hd": "|cff8080ffВозмездие пламени|r",
+        "is_wts": true,
+        "wts_id": 16821
+      },
+      "researchtip": {
+        "raw_sd": "TRIGSTR_16820",
+        "raw_hd": "TRIGSTR_16820",
+        "resolved_sd": "Изучить «|cff8080ffВозмездие пламени|r» [|cffffcc00%d-й уровень|r]",
+        "resolved_hd": "Изучить «|cff8080ffВозмездие пламени|r» [|cffffcc00%d-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16820
+      },
+      "researchubertip": {
+        "raw_sd": "TRIGSTR_16822",
+        "raw_hd": "TRIGSTR_16822",
+        "resolved_sd": "Выпускает потоки огня, нанося урон находящимся рядом врагам. |n|n|cffffcc001-й уровень:|r |cff8080ff<AEfk,DataA1> урона каждой цели.|r |n|cffffcc002-й уровень:|r|cff8080ff <AEfk,DataA2> урона каждой цели.|r |n|cffffcc003-й уровень:|r |cff8080ff<AEfk,DataA3> урона каждой цели.|r|n|cffffcc004-й уровень:|r |cff8080ff<AEfk,DataA4> урона каждой цели.|r",
+        "resolved_hd": "Выпускает потоки огня, нанося урон находящимся рядом врагам. |n|n|cffffcc001-й уровень:|r |cff8080ff<AEfk,DataA1> урона каждой цели.|r |n|cffffcc002-й уровень:|r|cff8080ff <AEfk,DataA2> урона каждой цели.|r |n|cffffcc003-й уровень:|r |cff8080ff<AEfk,DataA3> урона каждой цели.|r|n|cffffcc004-й уровень:|r |cff8080ff<AEfk,DataA4> урона каждой цели.|r",
+        "is_wts": true,
+        "wts_id": 16822
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16827",
+        "raw_hd": "TRIGSTR_16827",
+        "resolved_sd": "|cff8080ffВозмездие пламени|r [|cffffcc001-й уровень|r]",
+        "resolved_hd": "|cff8080ffВозмездие пламени|r [|cffffcc001-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16827
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_16823",
+        "raw_hd": "TRIGSTR_16823",
+        "resolved_sd": "Выпускает потоки огня, нанося урон находящимся рядом врагам. |n|n|cffffcc001-й уровень:|r |cff8080ff<AEfk,DataA1> урона каждой цели.|r ",
+        "resolved_hd": "Выпускает потоки огня, нанося урон находящимся рядом врагам. |n|n|cffffcc001-й уровень:|r |cff8080ff<AEfk,DataA1> урона каждой цели.|r ",
+        "is_wts": true,
+        "wts_id": 16823
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_16828",
+        "raw_hd": "TRIGSTR_16828",
+        "resolved_sd": "|cff8080ffВозмездие пламени|r [|cffffcc002-й уровень|r]",
+        "resolved_hd": "|cff8080ffВозмездие пламени|r [|cffffcc002-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16828
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_16824",
+        "raw_hd": "TRIGSTR_16824",
+        "resolved_sd": "Выпускает потоки огня, нанося урон находящимся рядом врагам. |n |n|cffffcc002-й уровень:|r|cff8080ff <AEfk,DataA2> урона каждой цели.|r ",
+        "resolved_hd": "Выпускает потоки огня, нанося урон находящимся рядом врагам. |n |n|cffffcc002-й уровень:|r|cff8080ff <AEfk,DataA2> урона каждой цели.|r ",
+        "is_wts": true,
+        "wts_id": 16824
+      },
+      "tip3": {
+        "raw_sd": "TRIGSTR_16829",
+        "raw_hd": "TRIGSTR_16829",
+        "resolved_sd": "|cff8080ffВозмездие пламени|r [|cffffcc003-й уровень|r]",
+        "resolved_hd": "|cff8080ffВозмездие пламени|r [|cffffcc003-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16829
+      },
+      "ubertip3": {
+        "raw_sd": "TRIGSTR_16825",
+        "raw_hd": "TRIGSTR_16825",
+        "resolved_sd": "Выпускает потоки огня, нанося урон находящимся рядом врагам. |n |n|cffffcc003-й уровень:|r |cff8080ff<AEfk,DataA3> урона каждой цели.|r",
+        "resolved_hd": "Выпускает потоки огня, нанося урон находящимся рядом врагам. |n |n|cffffcc003-й уровень:|r |cff8080ff<AEfk,DataA3> урона каждой цели.|r",
+        "is_wts": true,
+        "wts_id": 16825
+      },
+      "tip4": {
+        "raw_sd": "TRIGSTR_16830",
+        "raw_hd": "TRIGSTR_16830",
+        "resolved_sd": "|cff8080ffВозмездие пламени|r [|cffffcc004-й уровень|r]",
+        "resolved_hd": "|cff8080ffВозмездие пламени|r [|cffffcc004-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16830
+      },
+      "ubertip4": {
+        "raw_sd": "TRIGSTR_16826",
+        "raw_hd": "TRIGSTR_16826",
+        "resolved_sd": "Выпускает потоки огня, нанося урон находящимся рядом врагам.\n|n|cffffcc004-й уровень:|r |cff8080ff<AEfk,DataA4> урона каждой цели.|r",
+        "resolved_hd": "Выпускает потоки огня, нанося урон находящимся рядом врагам.\n|n|cffffcc004-й уровень:|r |cff8080ff<AEfk,DataA4> урона каждой цели.|r",
+        "is_wts": true,
+        "wts_id": 16826
+      }
+    }
+  },
+  "A0R7": {
+    "id": "A0R7",
+    "levels": 4,
+    "hotkey": "E",
+    "researchhotkey": "E",
+    "buttonpos": [
+      "2",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16843",
+        "raw_hd": "TRIGSTR_16843",
+        "resolved_sd": "|cff8080ffОгненная стрела|r",
+        "resolved_hd": "|cff8080ffОгненная стрела|r",
+        "is_wts": true,
+        "wts_id": 16843
+      },
+      "researchtip": {
+        "raw_sd": "TRIGSTR_16842",
+        "raw_hd": "TRIGSTR_16842",
+        "resolved_sd": "Изучить «|cff8080ffОгненная стрела|r» [%d-й уровень]",
+        "resolved_hd": "Изучить «|cff8080ffОгненная стрела|r» [%d-й уровень]",
+        "is_wts": true,
+        "wts_id": 16842
+      },
+      "researchubertip": {
+        "raw_sd": "TRIGSTR_16844",
+        "raw_hd": "TRIGSTR_16844",
+        "resolved_sd": "Выстреливает сгустком огня в противника, нанося урон и оглушая его.|n|cffffcc001-й уровень:|r |cffb4dcdc200 урона, оглушает Героя - 2, солдата - 2.|r|n|cffffcc002-й уровень:|r |cffb4dcdc300 урона, оглушает Героя - 2, солдата - 3.|r|n|cffffcc003-й уровень:|r |cffb4dcdc400 урона, оглушает Героя - 2, солдата - 4.|r|n|cffffcc004-й уровень:|r |cffb4dcdc500 урона, оглушает Героя - 2, солдата - 5.|r",
+        "resolved_hd": "Выстреливает сгустком огня в противника, нанося урон и оглушая его.|n|cffffcc001-й уровень:|r |cffb4dcdc200 урона, оглушает Героя - 2, солдата - 2.|r|n|cffffcc002-й уровень:|r |cffb4dcdc300 урона, оглушает Героя - 2, солдата - 3.|r|n|cffffcc003-й уровень:|r |cffb4dcdc400 урона, оглушает Героя - 2, солдата - 4.|r|n|cffffcc004-й уровень:|r |cffb4dcdc500 урона, оглушает Героя - 2, солдата - 5.|r",
+        "is_wts": true,
+        "wts_id": 16844
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16837",
+        "raw_hd": "TRIGSTR_16837",
+        "resolved_sd": "|cff8080ffОгненная стрела|r",
+        "resolved_hd": "|cff8080ffОгненная стрела|r",
+        "is_wts": true,
+        "wts_id": 16837
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_16845",
+        "raw_hd": "TRIGSTR_16845",
+        "resolved_sd": "Выпускает сгусток огня, оглушающий врага. \n|cffb4dcdc200 урона, оглушает Героя - 2, солдата - 2.|r",
+        "resolved_hd": "Выпускает сгусток огня, оглушающий врага. \n|cffb4dcdc200 урона, оглушает Героя - 2, солдата - 2.|r",
+        "is_wts": true,
+        "wts_id": 16845
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_16838",
+        "raw_hd": "TRIGSTR_16838",
+        "resolved_sd": "|cff8080ffОгненная стрела|r",
+        "resolved_hd": "|cff8080ffОгненная стрела|r",
+        "is_wts": true,
+        "wts_id": 16838
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_16833",
+        "raw_hd": "TRIGSTR_16833",
+        "resolved_sd": "Выпускает сгусток огня, оглушающий врага.\n|cffb4dcdc300 урона, оглушает Героя - 2, солдата - 3.|r",
+        "resolved_hd": "Выпускает сгусток огня, оглушающий врага.\n|cffb4dcdc300 урона, оглушает Героя - 2, солдата - 3.|r",
+        "is_wts": true,
+        "wts_id": 16833
+      },
+      "tip3": {
+        "raw_sd": "TRIGSTR_16839",
+        "raw_hd": "TRIGSTR_16839",
+        "resolved_sd": "|cff8080ffОгненная стрела|r",
+        "resolved_hd": "|cff8080ffОгненная стрела|r",
+        "is_wts": true,
+        "wts_id": 16839
+      },
+      "ubertip3": {
+        "raw_sd": "TRIGSTR_16834",
+        "raw_hd": "TRIGSTR_16834",
+        "resolved_sd": "Выпускает сгусток огня, оглушающий врага.\n|cffb4dcdc400 урона, оглушает Героя - 2, солдата - 4.|r",
+        "resolved_hd": "Выпускает сгусток огня, оглушающий врага.\n|cffb4dcdc400 урона, оглушает Героя - 2, солдата - 4.|r",
+        "is_wts": true,
+        "wts_id": 16834
+      },
+      "tip4": {
+        "raw_sd": "TRIGSTR_16840",
+        "raw_hd": "TRIGSTR_16840",
+        "resolved_sd": "|cff8080ffОгненная стрела|r",
+        "resolved_hd": "|cff8080ffОгненная стрела|r",
+        "is_wts": true,
+        "wts_id": 16840
+      },
+      "ubertip4": {
+        "raw_sd": "TRIGSTR_16835",
+        "raw_hd": "TRIGSTR_16835",
+        "resolved_sd": "Выпускает сгусток огня, оглушающий врага.\n|cffb4dcdc500 урона, оглушает Героя - 2, солдата - 5.|r",
+        "resolved_hd": "Выпускает сгусток огня, оглушающий врага.\n|cffb4dcdc500 урона, оглушает Героя - 2, солдата - 5.|r",
+        "is_wts": true,
+        "wts_id": 16835
+      }
+    }
+  },
+  "A0R8": {
+    "id": "A0R8",
+    "levels": 2,
+    "hotkey": "R",
+    "researchhotkey": "R",
+    "buttonpos": [
+      "3",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16846",
+        "raw_hd": "TRIGSTR_16846",
+        "resolved_sd": "|cff8080ffПожар|r",
+        "resolved_hd": "|cff8080ffПожар|r",
+        "is_wts": true,
+        "wts_id": 16846
+      },
+      "researchtip": {
+        "raw_sd": "TRIGSTR_16847",
+        "raw_hd": "TRIGSTR_16847",
+        "resolved_sd": "Изучить «|cff8080ffПожар|r» [|cffffcc00%d-й уровень|r]",
+        "resolved_hd": "Изучить «|cff8080ffПожар|r» [|cffffcc00%d-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16847
+      },
+      "researchubertip": {
+        "raw_sd": "TRIGSTR_16852",
+        "raw_hd": "TRIGSTR_16852",
+        "resolved_sd": "Временно позволяет атаковать сразу несколько целей.\n|cffb4dcdcВремя действия - 25 сек, количество целей - 11.|r",
+        "resolved_hd": "Временно позволяет атаковать сразу несколько целей.\n|cffb4dcdcВремя действия - 25 сек, количество целей - 11.|r",
+        "is_wts": true,
+        "wts_id": 16852
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16848",
+        "raw_hd": "TRIGSTR_16848",
+        "resolved_sd": "|cff8080ffПожар|r [|cffffcc001-й уровень|r]",
+        "resolved_hd": "|cff8080ffПожар|r [|cffffcc001-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16848
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_16853",
+        "raw_hd": "TRIGSTR_16853",
+        "resolved_sd": "Временно позволяет атаковать сразу несколько целей.\n|cffb4dcdcВремя действия - 25 сек, количество целей - 11.|r",
+        "resolved_hd": "Временно позволяет атаковать сразу несколько целей.\n|cffb4dcdcВремя действия - 25 сек, количество целей - 11.|r",
+        "is_wts": true,
+        "wts_id": 16853
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_16849",
+        "raw_hd": "TRIGSTR_16849",
+        "resolved_sd": "|cff8080ffПожар|r [|cffffcc002-й уровень|r]",
+        "resolved_hd": "|cff8080ffПожар|r [|cffffcc002-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16849
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_16854",
+        "raw_hd": "TRIGSTR_16854",
+        "resolved_sd": "Временно позволяет атаковать сразу несколько целей.\n|cffb4dcdcВремя действия - 25 сек, количество целей - 11.|r",
+        "resolved_hd": "Временно позволяет атаковать сразу несколько целей.\n|cffb4dcdcВремя действия - 25 сек, количество целей - 11.|r",
+        "is_wts": true,
+        "wts_id": 16854
+      }
+    }
+  },
+  "A0RC": {
+    "id": "A0RC",
+    "levels": 1,
+    "hotkey": "D",
+    "researchhotkey": "T",
+    "buttonpos": [
+      "1",
+      "1"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16914",
+        "raw_hd": "TRIGSTR_16914",
+        "resolved_sd": "|cff8080ffОблик дракона|r",
+        "resolved_hd": "|cff8080ffОблик дракона|r",
+        "is_wts": true,
+        "wts_id": 16914
+      },
+      "researchtip": {
+        "raw_sd": "Изучить «Метаморфозу»",
+        "raw_hd": "Изучить «Метаморфозу»",
+        "resolved_sd": "Изучить «Метаморфозу»",
+        "resolved_hd": "Изучить «Метаморфозу»",
+        "is_wts": false,
+        "wts_id": null
+      },
+      "researchubertip": {
+        "raw_sd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "raw_hd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "resolved_sd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "resolved_hd": "\"Охотник превращается в демона с <AEme,DataE1> здоровья, атакующего в дальнем бою. |nВремя действия: <AEme,HeroDur1> сек.\"",
+        "is_wts": false,
+        "wts_id": null
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16915",
+        "raw_hd": "TRIGSTR_16915",
+        "resolved_sd": "|cff8080ffОблик дракона|r",
+        "resolved_hd": "|cff8080ffОблик дракона|r",
+        "is_wts": true,
+        "wts_id": 16915
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_23075",
+        "raw_hd": "TRIGSTR_23075",
+        "resolved_sd": "Аспект принимает свою истинную форму, раскрывая прятаную до этого мощь.",
+        "resolved_hd": "Аспект принимает свою истинную форму, раскрывая прятаную до этого мощь.",
+        "is_wts": true,
+        "wts_id": 23075
+      }
+    }
+  },
+  "A0QV": {
+    "id": "A0QV",
+    "levels": 4,
+    "hotkey": "Q",
+    "researchhotkey": "Q",
+    "buttonpos": [
+      "0",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16663",
+        "raw_hd": "TRIGSTR_16663",
+        "resolved_sd": "|cff808000Поле астрала|r",
+        "resolved_hd": "|cff808000Поле астрала|r",
+        "is_wts": true,
+        "wts_id": 16663
+      },
+      "researchtip": {
+        "raw_sd": "TRIGSTR_16671",
+        "raw_hd": "TRIGSTR_16671",
+        "resolved_sd": "|cff808000Поле астрала|r",
+        "resolved_hd": "|cff808000Поле астрала|r",
+        "is_wts": true,
+        "wts_id": 16671
+      },
+      "researchubertip": {
+        "raw_sd": "TRIGSTR_16672",
+        "raw_hd": "TRIGSTR_16672",
+        "resolved_sd": "Всех юнитов в области помещает в астрал. |n|cffffcc001-й уровень:|r |cffb4dcdcРадиус действия - 200.|r  |n|cffffcc002-й уровень:|r |cffb4dcdcРадиус действия - 225.|r  |n|cffffcc003-й уровень:|r |cffb4dcdcРадиус действия - 250.|r |n|cffffcc004-й уровень:|r |cffb4dcdcРадиус действия - 300.|r",
+        "resolved_hd": "Всех юнитов в области помещает в астрал. |n|cffffcc001-й уровень:|r |cffb4dcdcРадиус действия - 200.|r  |n|cffffcc002-й уровень:|r |cffb4dcdcРадиус действия - 225.|r  |n|cffffcc003-й уровень:|r |cffb4dcdcРадиус действия - 250.|r |n|cffffcc004-й уровень:|r |cffb4dcdcРадиус действия - 300.|r",
+        "is_wts": true,
+        "wts_id": 16672
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16661",
+        "raw_hd": "TRIGSTR_16661",
+        "resolved_sd": "|cff808000Поле астрала|r",
+        "resolved_hd": "|cff808000Поле астрала|r",
+        "is_wts": true,
+        "wts_id": 16661
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_16662",
+        "raw_hd": "TRIGSTR_16662",
+        "resolved_sd": "Всех юнитов в области помещает в астрал.\n|cffb4dc8cРадиус действия - 150|r",
+        "resolved_hd": "Всех юнитов в области помещает в астрал.\n|cffb4dc8cРадиус действия - 150|r",
+        "is_wts": true,
+        "wts_id": 16662
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_16665",
+        "raw_hd": "TRIGSTR_16665",
+        "resolved_sd": "|cff808000Поле астрала|r",
+        "resolved_hd": "|cff808000Поле астрала|r",
+        "is_wts": true,
+        "wts_id": 16665
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_16668",
+        "raw_hd": "TRIGSTR_16668",
+        "resolved_sd": "Всех юнитов в области помещает в астрал.\n|cffb4dc8cРадиус действия - 175|r",
+        "resolved_hd": "Всех юнитов в области помещает в астрал.\n|cffb4dc8cРадиус действия - 175|r",
+        "is_wts": true,
+        "wts_id": 16668
+      },
+      "tip3": {
+        "raw_sd": "TRIGSTR_16666",
+        "raw_hd": "TRIGSTR_16666",
+        "resolved_sd": "|cff808000Поле астрала|r",
+        "resolved_hd": "|cff808000Поле астрала|r",
+        "is_wts": true,
+        "wts_id": 16666
+      },
+      "ubertip3": {
+        "raw_sd": "TRIGSTR_16669",
+        "raw_hd": "TRIGSTR_16669",
+        "resolved_sd": "Всех юнитов в области помещает в астрал.\n|cffb4dc8cРадиус действия - 200|r",
+        "resolved_hd": "Всех юнитов в области помещает в астрал.\n|cffb4dc8cРадиус действия - 200|r",
+        "is_wts": true,
+        "wts_id": 16669
+      },
+      "tip4": {
+        "raw_sd": "TRIGSTR_16667",
+        "raw_hd": "TRIGSTR_16667",
+        "resolved_sd": "|cff808000Поле астрала|r",
+        "resolved_hd": "|cff808000Поле астрала|r",
+        "is_wts": true,
+        "wts_id": 16667
+      },
+      "ubertip4": {
+        "raw_sd": "TRIGSTR_16670",
+        "raw_hd": "TRIGSTR_16670",
+        "resolved_sd": "Всех юнитов в области помещает в астрал.\n|cffb4dc8cРадиус действия - 225|r",
+        "resolved_hd": "Всех юнитов в области помещает в астрал.\n|cffb4dc8cРадиус действия - 225|r",
+        "is_wts": true,
+        "wts_id": 16670
+      }
+    }
+  },
+  "A0QU": {
+    "id": "A0QU",
+    "levels": 4,
+    "hotkey": "W",
+    "researchhotkey": "W",
+    "buttonpos": [
+      "1",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16647",
+        "raw_hd": "TRIGSTR_16647",
+        "resolved_sd": "|cff808000Искры мощи|r",
+        "resolved_hd": "|cff808000Искры мощи|r",
+        "is_wts": true,
+        "wts_id": 16647
+      },
+      "researchtip": {
+        "raw_sd": "TRIGSTR_16648",
+        "raw_hd": "TRIGSTR_16648",
+        "resolved_sd": "Изучить «|cff808000Искры мощи|r» [|cffffcc00%d-й уровень|r]",
+        "resolved_hd": "Изучить «|cff808000Искры мощи|r» [|cffffcc00%d-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16648
+      },
+      "researchubertip": {
+        "raw_sd": "TRIGSTR_11402",
+        "raw_hd": "TRIGSTR_11402",
+        "resolved_sd": "Обстреливает указанную область сгустками маны, оглушая находящихся рядом наземных врагов на <ANcs,Dur1> сек. и нанося им урон. |n|n|cffffcc001-й уровень:|r |cff8080001 искра 11 урона, 6 искр.|n|r|cffffcc002-й уровень:|r |cff8080001 искра 20 урона, 12 искр.|n|r|cffffcc003-й уровень:|r |cff8080001 искра 30 урона, 18 искр.|n|r|cffffcc004-й уровень:|r |cff8080001 искра 40 урона, 24 искр.|n",
+        "resolved_hd": "Обстреливает указанную область сгустками маны, оглушая находящихся рядом наземных врагов на <ANcs,Dur1> сек. и нанося им урон. |n|n|cffffcc001-й уровень:|r |cff8080001 искра 11 урона, 6 искр.|n|r|cffffcc002-й уровень:|r |cff8080001 искра 20 урона, 12 искр.|n|r|cffffcc003-й уровень:|r |cff8080001 искра 30 урона, 18 искр.|n|r|cffffcc004-й уровень:|r |cff8080001 искра 40 урона, 24 искр.|n",
+        "is_wts": true,
+        "wts_id": 11402
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16650",
+        "raw_hd": "TRIGSTR_16650",
+        "resolved_sd": "|cffd7b4f6Взрыв маны|r [|cffffcc001-й уровень|r]",
+        "resolved_hd": "|cffd7b4f6Взрыв маны|r [|cffffcc001-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16650
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_16655",
+        "raw_hd": "TRIGSTR_16655",
+        "resolved_sd": "Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur1> сек.",
+        "resolved_hd": "Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur1> сек.",
+        "is_wts": true,
+        "wts_id": 16655
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_16651",
+        "raw_hd": "TRIGSTR_16651",
+        "resolved_sd": "|cffd7b4f6Взрыв маны|r [|cffffcc002-й уровень|r]",
+        "resolved_hd": "|cffd7b4f6Взрыв маны|r [|cffffcc002-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16651
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_16656",
+        "raw_hd": "TRIGSTR_16656",
+        "resolved_sd": "Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur2> сек.",
+        "resolved_hd": "Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur2> сек.",
+        "is_wts": true,
+        "wts_id": 16656
+      },
+      "tip3": {
+        "raw_sd": "TRIGSTR_16652",
+        "raw_hd": "TRIGSTR_16652",
+        "resolved_sd": "|cffd7b4f6Взрыв маны|r [|cffffcc003-й уровень|r]",
+        "resolved_hd": "|cffd7b4f6Взрыв маны|r [|cffffcc003-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16652
+      },
+      "ubertip3": {
+        "raw_sd": "TRIGSTR_16657",
+        "raw_hd": "TRIGSTR_16657",
+        "resolved_sd": "Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur3> сек.",
+        "resolved_hd": "Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur3> сек.",
+        "is_wts": true,
+        "wts_id": 16657
+      },
+      "tip4": {
+        "raw_sd": "TRIGSTR_16653",
+        "raw_hd": "TRIGSTR_16653",
+        "resolved_sd": "|cffd7b4f6Взрыв маны|r [|cffffcc004-й уровень|r]",
+        "resolved_hd": "|cffd7b4f6Взрыв маны|r [|cffffcc004-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16653
+      },
+      "ubertip4": {
+        "raw_sd": "TRIGSTR_16658",
+        "raw_hd": "TRIGSTR_16658",
+        "resolved_sd": "Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur4> сек.",
+        "resolved_hd": "Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur4> сек.",
+        "is_wts": true,
+        "wts_id": 16658
+      }
+    }
+  },
+  "A0QT": {
+    "id": "A0QT",
+    "levels": 4,
+    "hotkey": "E",
+    "researchhotkey": "E",
+    "buttonpos": [
+      "2",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_16636",
+        "raw_hd": "TRIGSTR_16636",
+        "resolved_sd": "|cff808000Владыка магии|r",
+        "resolved_hd": "|cff808000Владыка магии|r",
+        "is_wts": true,
+        "wts_id": 16636
+      },
+      "researchtip": {
+        "raw_sd": "TRIGSTR_16637",
+        "raw_hd": "TRIGSTR_16637",
+        "resolved_sd": "Изучить «|cff808000Владыка магии|r» [|cffffcc00%d-й уровень|r]",
+        "resolved_hd": "Изучить «|cff808000Владыка магии|r» [|cffffcc00%d-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16637
+      },
+      "researchubertip": {
+        "raw_sd": "TRIGSTR_16642",
+        "raw_hd": "TRIGSTR_16642",
+        "resolved_sd": "Ускоряет регенерацию маны находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdcнезначительный бонус.|r |n|cffffcc002-й уровень:|r |cffb4dcdcсредний бонус|r.|n|cffffcc003-й уровень:|r |cffb4dcdcзначительный бонус.|r\n|cffffcc004-й уровень:|r |cffb4dcdcбольшой бонус.|r",
+        "resolved_hd": "Ускоряет регенерацию маны находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdcнезначительный бонус.|r |n|cffffcc002-й уровень:|r |cffb4dcdcсредний бонус|r.|n|cffffcc003-й уровень:|r |cffb4dcdcзначительный бонус.|r\n|cffffcc004-й уровень:|r |cffb4dcdcбольшой бонус.|r",
+        "is_wts": true,
+        "wts_id": 16642
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_16638",
+        "raw_hd": "TRIGSTR_16638",
+        "resolved_sd": "|cff808000Владыка магии|r [|cffffcc001-й уровень|r]",
+        "resolved_hd": "|cff808000Владыка магии|r [|cffffcc001-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16638
+      },
+      "ubertip1": {
+        "raw_sd": "TRIGSTR_16643",
+        "raw_hd": "TRIGSTR_16643",
+        "resolved_sd": "Ускоряет регенерацию маны находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdcнезначительный бонус.|r ",
+        "resolved_hd": "Ускоряет регенерацию маны находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdcнезначительный бонус.|r ",
+        "is_wts": true,
+        "wts_id": 16643
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_16639",
+        "raw_hd": "TRIGSTR_16639",
+        "resolved_sd": "|cff808000Владыка магии|r [|cffffcc002-й уровень|r]",
+        "resolved_hd": "|cff808000Владыка магии|r [|cffffcc002-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16639
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_16644",
+        "raw_hd": "TRIGSTR_16644",
+        "resolved_sd": "Ускоряет регенерацию маны находящихся рядом союзников.|n|cffffcc002-й уровень:|r |cffb4dcdcсредний бонус|r.",
+        "resolved_hd": "Ускоряет регенерацию маны находящихся рядом союзников.|n|cffffcc002-й уровень:|r |cffb4dcdcсредний бонус|r.",
+        "is_wts": true,
+        "wts_id": 16644
+      },
+      "tip3": {
+        "raw_sd": "TRIGSTR_16640",
+        "raw_hd": "TRIGSTR_16640",
+        "resolved_sd": "|cff808000Владыка магии|r [|cffffcc003-й уровень|r]",
+        "resolved_hd": "|cff808000Владыка магии|r [|cffffcc003-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16640
+      },
+      "ubertip3": {
+        "raw_sd": "TRIGSTR_16645",
+        "raw_hd": "TRIGSTR_16645",
+        "resolved_sd": "Ускоряет регенерацию маны находящихся рядом союзников. |n|cffffcc003-й уровень:|r |cffb4dcdcзначительный бонус.|r\n",
+        "resolved_hd": "Ускоряет регенерацию маны находящихся рядом союзников. |n|cffffcc003-й уровень:|r |cffb4dcdcзначительный бонус.|r\n",
+        "is_wts": true,
+        "wts_id": 16645
+      },
+      "tip4": {
+        "raw_sd": "TRIGSTR_16641",
+        "raw_hd": "TRIGSTR_16641",
+        "resolved_sd": "|cff808000Владыка магии|r [|cffffcc004-й уровень|r]",
+        "resolved_hd": "|cff808000Владыка магии|r [|cffffcc004-й уровень|r]",
+        "is_wts": true,
+        "wts_id": 16641
+      },
+      "ubertip4": {
+        "raw_sd": "TRIGSTR_16635",
+        "raw_hd": "TRIGSTR_16635",
+        "resolved_sd": "Ускоряет регенерацию маны находящихся рядом союзников. \n|cffffcc004-й уровень:|r |cffb4dcdcбольшой бонус.|r",
+        "resolved_hd": "Ускоряет регенерацию маны находящихся рядом союзников. \n|cffffcc004-й уровень:|r |cffb4dcdcбольшой бонус.|r",
+        "is_wts": true,
+        "wts_id": 16635
+      }
+    }
+  },
+  "A10E": {
+    "id": "A10E",
+    "levels": 2,
+    "hotkey": "R",
+    "researchhotkey": "R",
+    "buttonpos": [
+      "3",
+      "2"
+    ],
+    "fields": {
+      "name": {
+        "raw_sd": "TRIGSTR_22384",
+        "raw_hd": "TRIGSTR_22384",
+        "resolved_sd": "|cff8080ffПожирание магии|r",
+        "resolved_hd": "|cff8080ffПожирание магии|r",
+        "is_wts": true,
+        "wts_id": 22384
+      },
+      "researchtip": {
+        "raw_sd": "TRIGSTR_16986",
+        "raw_hd": "TRIGSTR_16986",
+        "resolved_sd": "|cff8080ffПожирание магии|r",
+        "resolved_hd": "|cff8080ffПожирание магии|r",
+        "is_wts": true,
+        "wts_id": 16986
+      },
+      "researchubertip": {
+        "raw_sd": "TRIGSTR_22388",
+        "raw_hd": "TRIGSTR_22388",
+        "resolved_sd": "Поглощяет любые виды магии, и часть здоровья призванных существ, востанавливая ману и здоровье применившему.|n|cffffcc001-й уровень:|r Востанавливает 50 ед здоровья, 75 ед маны за каждое поглощенное заклинание. Наносит 400 ед урона призванным юнитам.|n|cffffcc002-й уровень:|r Востанавливает 60 ед здоровья, 85 ед маны за каждое поглощенное заклинание. Наносит 500 ед урона призванным юнитам.",
+        "resolved_hd": "Поглощяет любые виды магии, и часть здоровья призванных существ, востанавливая ману и здоровье применившему.|n|cffffcc001-й уровень:|r Востанавливает 50 ед здоровья, 75 ед маны за каждое поглощенное заклинание. Наносит 400 ед урона призванным юнитам.|n|cffffcc002-й уровень:|r Востанавливает 60 ед здоровья, 85 ед маны за каждое поглощенное заклинание. Наносит 500 ед урона призванным юнитам.",
+        "is_wts": true,
+        "wts_id": 22388
+      },
+      "tip1": {
+        "raw_sd": "TRIGSTR_22386",
+        "raw_hd": "TRIGSTR_22386",
+        "resolved_sd": "|cff8080ffПожирание магии|r",
+        "resolved_hd": "|cff8080ffПожирание магии|r",
+        "is_wts": true,
+        "wts_id": 22386
+      },
+      "ubertip1": {
+        "raw_sd": "\"Поглощает магические эффекты, действующие на войска в указанной области. Дает сфинксу <Advm,DataA1> здоровья и <Advm,DataB1> маны за каждую цель. |n|cffffcc00Наносит <Advm,DataE1> урона призванным целям.|r\"",
+        "raw_hd": "\"Поглощает магические эффекты, действующие на войска в указанной области. Дает сфинксу <Advm,DataA1> здоровья и <Advm,DataB1> маны за каждую цель. |n|cffffcc00Наносит <Advm,DataE1> урона призванным целям.|r\"",
+        "resolved_sd": "\"Поглощает магические эффекты, действующие на войска в указанной области. Дает сфинксу <Advm,DataA1> здоровья и <Advm,DataB1> маны за каждую цель. |n|cffffcc00Наносит <Advm,DataE1> урона призванным целям.|r\"",
+        "resolved_hd": "\"Поглощает магические эффекты, действующие на войска в указанной области. Дает сфинксу <Advm,DataA1> здоровья и <Advm,DataB1> маны за каждую цель. |n|cffffcc00Наносит <Advm,DataE1> урона призванным целям.|r\"",
+        "is_wts": false,
+        "wts_id": null
+      },
+      "tip2": {
+        "raw_sd": "TRIGSTR_16954",
+        "raw_hd": "TRIGSTR_16954",
+        "resolved_sd": "|cff8080ffПожирание магии|r",
+        "resolved_hd": "|cff8080ffПожирание магии|r",
+        "is_wts": true,
+        "wts_id": 16954
+      },
+      "ubertip2": {
+        "raw_sd": "TRIGSTR_22385",
+        "raw_hd": "TRIGSTR_22385",
+        "resolved_sd": "Поглощает магические эффекты, действующие на войска в указанной области. Дает сфинксу <Advm,DataA2> здоровья и <Advm,DataB2> маны за каждую цель. |n|cffffcc00Наносит <Advm,DataE1> урона призванным целям.|r",
+        "resolved_hd": "Поглощает магические эффекты, действующие на войска в указанной области. Дает сфинксу <Advm,DataA2> здоровья и <Advm,DataB2> маны за каждую цель. |n|cffffcc00Наносит <Advm,DataE1> урона призванным целям.|r",
+        "is_wts": true,
+        "wts_id": 22385
+      }
+    }
+  }
+}

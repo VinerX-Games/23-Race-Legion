@@ -1,0 +1,934 @@
+{
+  "ok": true,
+  "applied": true,
+  "method": "Only explicit string modifications spliced; all unrelated records/mods byte-identical",
+  "changes": {
+    "war3map.w3u": [
+      [
+        "h0D4",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "h0D4",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "h0HK",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "h0HK",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "h0HN",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "h0HN",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "h0HO",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "h0HO",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "h0HO",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "n061",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "n061",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "n062",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "n062",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "o05B",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "o05B",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "o06H",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "o06H",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "o06H",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "o06I",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "o06I",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "o06I",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "o06J",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "o06J",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "o06J",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "o06K",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "o06K",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "o06K",
+        "utub",
+        0,
+        0
+      ]
+    ],
+    "war3map.w3q": [
+      [
+        "R0AD",
+        "gnam",
+        3,
+        0
+      ],
+      [
+        "R0AD",
+        "gnam",
+        2,
+        0
+      ],
+      [
+        "R0AD",
+        "gtp1",
+        3,
+        0
+      ],
+      [
+        "R0AD",
+        "gtp1",
+        2,
+        0
+      ],
+      [
+        "R0AD",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "R0AD",
+        "gtp1",
+        1,
+        0
+      ],
+      [
+        "R0AI",
+        "gnam",
+        3,
+        0
+      ],
+      [
+        "R0AI",
+        "gnam",
+        2,
+        0
+      ],
+      [
+        "R0AI",
+        "gtp1",
+        3,
+        0
+      ],
+      [
+        "R0AI",
+        "gtp1",
+        2,
+        0
+      ],
+      [
+        "R0AI",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "R0AI",
+        "gtp1",
+        1,
+        0
+      ],
+      [
+        "R0AJ",
+        "gnam",
+        3,
+        0
+      ],
+      [
+        "R0AJ",
+        "gnam",
+        2,
+        0
+      ],
+      [
+        "R0AJ",
+        "gtp1",
+        3,
+        0
+      ],
+      [
+        "R0AJ",
+        "gtp1",
+        2,
+        0
+      ],
+      [
+        "R0AJ",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "R0AJ",
+        "gtp1",
+        1,
+        0
+      ]
+    ],
+    "war3mapSkin.w3q": [
+      [
+        "R0AD",
+        "gnam",
+        3,
+        0
+      ],
+      [
+        "R0AD",
+        "gnam",
+        2,
+        0
+      ],
+      [
+        "R0AD",
+        "gtp1",
+        3,
+        0
+      ],
+      [
+        "R0AD",
+        "gtp1",
+        2,
+        0
+      ],
+      [
+        "R0AD",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "R0AD",
+        "gtp1",
+        1,
+        0
+      ],
+      [
+        "R0AI",
+        "gnam",
+        3,
+        0
+      ],
+      [
+        "R0AI",
+        "gnam",
+        2,
+        0
+      ],
+      [
+        "R0AI",
+        "gtp1",
+        3,
+        0
+      ],
+      [
+        "R0AI",
+        "gtp1",
+        2,
+        0
+      ],
+      [
+        "R0AI",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "R0AI",
+        "gtp1",
+        1,
+        0
+      ],
+      [
+        "R0AJ",
+        "gnam",
+        3,
+        0
+      ],
+      [
+        "R0AJ",
+        "gnam",
+        2,
+        0
+      ],
+      [
+        "R0AJ",
+        "gtp1",
+        3,
+        0
+      ],
+      [
+        "R0AJ",
+        "gtp1",
+        2,
+        0
+      ],
+      [
+        "R0AJ",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "R0AJ",
+        "gtp1",
+        1,
+        0
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "variant": "SD",
+      "rawcode": "h0HO",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0HO",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0HO",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06H",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06H",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06H",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06I",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06I",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06I",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06J",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06J",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06J",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06K",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06K",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06K",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o05B",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o05B",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n062",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n062",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n061",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n061",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0D4",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0D4",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0HN",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0HN",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0HK",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0HK",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0HO",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0HO",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0HO",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06H",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06H",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06H",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06I",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06I",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06I",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06J",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06J",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06J",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06K",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06K",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06K",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o05B",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o05B",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n062",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n062",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n061",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n061",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0D4",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0D4",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0HN",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0HN",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0HK",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0HK",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AI",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AI",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AI",
+      "field": "name2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AI",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AI",
+      "field": "name3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AI",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AJ",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AJ",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AJ",
+      "field": "name2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AJ",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AJ",
+      "field": "name3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AJ",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AD",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AD",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AD",
+      "field": "name2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AD",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AD",
+      "field": "name3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0AD",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AI",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AI",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AI",
+      "field": "name2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AI",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AI",
+      "field": "name3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AI",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AJ",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AJ",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AJ",
+      "field": "name2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AJ",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AJ",
+      "field": "name3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AJ",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AD",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AD",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AD",
+      "field": "name2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AD",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AD",
+      "field": "name3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0AD",
+      "field": "tip3",
+      "exact_match": true
+    }
+  ],
+  "wts_unchanged": true
+}

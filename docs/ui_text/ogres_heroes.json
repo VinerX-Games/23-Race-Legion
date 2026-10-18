@@ -1,0 +1,138 @@
+{
+  "scope": "Огры (Ogres): категория 3 — Герои (4 героев)",
+  "heroes_count": 4,
+  "variants": [
+    "SD"
+  ],
+  "heroes": [
+    {
+      "id": "N05J",
+      "hotkey": "X",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27894,
+          "after": "|cffe4cfa3Военачальник Огров|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 28438,
+          "after": "|cffe4cfa3Военачальник Огров|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31835,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Могучий военачальник ближнего боя. Подавляет противников сокрушительными ударами и неудержимым гневом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУдар по земле|cffced4da: наносит урон и оглушает окружающих врагов.|n- |cffa9c7deРывок|cffced4da: стремительный выпад к цели с уроном и оглушением.|n- |cffa9c7deСтойкость великана|cffced4da: пассивно увеличивает силу и запас здоровья.|n- |cffa9c7deГнев Гориана|cffced4da: значительно увеличивает урон, скорость атаки и дарует неуязвимость к магии.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 28437,
+          "after": "|cffe4cfa3Военачальник Огров|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 28439,
+          "after": "|cffe4cfa3Военачальник Огров|r (|cffffffffX|r)"
+        }
+      ]
+    },
+    {
+      "id": "N05K",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27901,
+          "after": "|cffe4cfa3Вождь Огров|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 28443,
+          "after": "|cffe4cfa3Вождь Огров|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31839,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Свирепый вождь племени. Черпает силу в бою, сотрясая врагов мощными ударами и разрушительными волнами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСтойкость огра|cffced4da: пассивно ускоряет регенерацию и атаку при низком здоровье.|n- |cffa9c7deСотрясение|cffced4da: шанс оглушить цель и нанести дополнительный урон при атаке.|n- |cffa9c7deСтойкость великана|cffced4da: пассивно увеличивает силу и максимальное здоровье.|n- |cffa9c7deУдарная волна|cffced4da: выпускает сокрушительную волну энергии по прямой.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 17191,
+          "after": "|cffe4cfa3Вождь Огров|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 28442,
+          "after": "|cffe4cfa3Вождь Огров|r (|cffffffffZ|r)"
+        }
+      ]
+    },
+    {
+      "id": "N05L",
+      "hotkey": "C",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27908,
+          "after": "|cffe4cfa3Знахарь Огров|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 28447,
+          "after": "|cffe4cfa3Знахарь Огров|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31846,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Мудрый заклинатель и целитель. Поддерживает армию волнами исцеления, разведкой и вытягиванием жизненных сил.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолна исцеления|cffced4da: восстанавливает здоровье нескольким раненым союзникам.|n- |cffa9c7deРазведка|cffced4da: призывает зорких ястребов-разведчиков с аурами.|n- |cffa9c7deКислотная бомба|cffced4da: разъедает броню врагов и наносит периодический урон.|n- |cffa9c7deПохищение жизни|cffced4da: вытягивает здоровье у врага, восполняя собственное.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 28446,
+          "after": "|cffe4cfa3Знахарь Огров|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 28448,
+          "after": "|cffe4cfa3Знахарь Огров|r (|cffffffffC|r)"
+        }
+      ]
+    },
+    {
+      "id": "N05O",
+      "hotkey": "X",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 29128,
+          "after": "|cffe4cfa3Последний Гронн|r"
+        },
+        {
+          "field": "propernames",
+          "wts_id": 29129,
+          "after": "Груул"
+        },
+        {
+          "field": "tip",
+          "wts_id": 29682,
+          "after": "|cffe4cfa3Последний Гронн|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42389,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Легендарный первобытный исполин Дренора. Обладает сокрушительной физической силой и каменной стойкостью.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБроски камней|cffced4da: обстреливает область валунами с уроном и оглушением.|n- |cffa9c7deПровокация|cffced4da: заставляет ближайших врагов атаковать исполина.|n- |cffa9c7deУдар по земле|cffced4da: сотрясает землю, замедляя врагов и нанося урон.|n- |cffa9c7deКаменная кожа|cffced4da: снижает получаемый урон от атак.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 29681,
+          "after": "|cffe4cfa3Последний Гронн|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 29683,
+          "after": "|cffe4cfa3Последний Гронн|r (|cffffffffX|r)"
+        }
+      ]
+    }
+  ]
+}

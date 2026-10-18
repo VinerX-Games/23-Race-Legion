@@ -1,0 +1,110 @@
+{
+  "scope": "Драконы (Dragon): подсказка выбора расы A0RQ",
+  "object": "A0RQ",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "hotkey": {
+    "reference": "TRIGSTR_4263",
+    "value": "A"
+  },
+  "levels": 1,
+  "evidence": [
+    "04_race_selection.lua:363-381: InitTrig_Race_Dragon_O фильтрует A0RQ; выбор создаёт одну dra1, исследует R0BY и запускает DragonsOn().",
+    "04_race_selection.lua:1066-1071: случайный выбор расы также создаёт dra1, исследует R0BY и активирует триггеры DragonsOn().",
+    "Исходные поля name/tip1/ubertip1/hotkey/levels совпадают в SD/HD. Автор Escanor (Яхве), сложность 3/5 (Средняя), период «Катаклизм» и клавиша A сохранены."
+  ],
+  "exceptions": [
+    "Escanor (Яхве) — авторский ник."
+  ],
+  "consumers": [
+    {
+      "file": "war3mapSkin.w3a",
+      "id": "A0RQ",
+      "field": [
+        "anam",
+        0,
+        0
+      ],
+      "wts_id": 38893
+    },
+    {
+      "file": "war3mapSkin.w3a",
+      "id": "A0RQ",
+      "field": [
+        "atp1",
+        1,
+        0
+      ],
+      "wts_id": 38894
+    },
+    {
+      "file": "war3mapSkin.w3a",
+      "id": "A0RQ",
+      "field": [
+        "aub1",
+        1,
+        0
+      ],
+      "wts_id": 35183
+    },
+    {
+      "file": "war3map.w3a",
+      "id": "A0RQ",
+      "field": [
+        "anam",
+        0,
+        0
+      ],
+      "wts_id": 38893
+    },
+    {
+      "file": "war3map.w3a",
+      "id": "A0RQ",
+      "field": [
+        "atp1",
+        1,
+        0
+      ],
+      "wts_id": 38894
+    },
+    {
+      "file": "war3map.w3a",
+      "id": "A0RQ",
+      "field": [
+        "aub1",
+        1,
+        0
+      ],
+      "wts_id": 35183
+    }
+  ],
+  "in_game_checked": false,
+  "strings": [
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "A0RQ",
+      "field": "name",
+      "reference_before": "TRIGSTR_38893",
+      "before": "|cffc8dc8cАспекты Драконов|r",
+      "after": "|cffe4cfa3Аспекты Драконов|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "A0RQ",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_38894",
+      "before": "|cffc8dc8cАспекты Драконов|r",
+      "after": "|cffe4cfa3Аспекты Драконов|r (|cffffffffA|r)"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "A0RQ",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_35183",
+      "before": "|cff7dc87dСоздатель расы:|r |cffe17d00Escanor (Яхве)|r|n|cff7dc87dСложность:|r |cffffbe37Средняя|r|n|cff7dc87dПериод:|r |cffff5e19Cataclysm|r|n|cff7dc87dОписание: |r|cff8080ffАспекты Драконов|r - лидеры пяти кланов драконов. Аспектами стали пять драконов, наделенные огромной силой для защиты Азерота, чтобы ничто не угрожало спокойствию этого мира. Каждый титан дал часть своей силы одному из драконов, которые в последствии и стали Аспектами. Дав Могущественную Силу Аспектам, Титаны ушли из сотворенного ими мира.",
+      "after": "|cffa6afb8РАСА:|cffced4da Великие стаи драконов, хранителей Азерота.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor (Яхве)|r|n|cffa6afb8Сложность:|r |cffffffff●●●|cffa6afb8●●|r|n|cffa6afb8Период:|r |cffa9c7de«Катаклизм»|r|n|n|cffced4daАспекты Драконов — предводители пяти великих стай, наделённые титанами силой для защиты Азерота. Каждый титан передал часть своего могущества одному из владык, вверив им заботу о жизни, магии, времени, изумрудном сне и земных недрах. Объединив могущество стай, драконы стоят на страже спокойствия мира.|r"
+    }
+  ]
+}

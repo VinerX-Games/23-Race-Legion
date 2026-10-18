@@ -1,0 +1,2228 @@
+{
+  "scope": "Ледяные тролли: 11 основных зданий и названия двух прямых зависимостей; не вся категория",
+  "in_game_checked": false,
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "building_ids": [
+    "o046",
+    "o047",
+    "o048",
+    "o04C",
+    "o04A",
+    "o04B",
+    "o049",
+    "o04E",
+    "o04J",
+    "o04D",
+    "o013"
+  ],
+  "objects_before": {
+    "SD": [
+      {
+        "fields": {
+          "abillist": "Aspi",
+          "fmade": " - ",
+          "hotkey": "TRIGSTR_6188",
+          "isbldg": "1",
+          "name": "TRIGSTR_30905",
+          "regenhp": "",
+          "researches": "R0EU,R0I4,R09L",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30906",
+          "trains": "n05Z,n05U,n07B",
+          "ubertip": "TRIGSTR_21258",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o04E",
+        "name": "|cffb4dcdcОбитель духов|r"
+      },
+      {
+        "fields": {
+          "abillist": "A15N",
+          "fmade": "",
+          "hotkey": "TRIGSTR_7031",
+          "isbldg": "1",
+          "name": "TRIGSTR_13322",
+          "regenhp": "",
+          "researches": "R005,R006,R007,R002,R003",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_13323",
+          "trains": "h0D4,h0HN,h0HK",
+          "ubertip": "TRIGSTR_28306",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "h0HO",
+        "name": "Верфь"
+      },
+      {
+        "fields": {
+          "abillist": "A1FS,A1FR,Aspi,A0LJ,A0LI,A0IQ,Argl",
+          "fmade": "50",
+          "hotkey": "TRIGSTR_5530",
+          "isbldg": "1",
+          "name": "TRIGSTR_30889",
+          "regenhp": "",
+          "researches": "",
+          "sellitems": "",
+          "sellunits": "h0G8",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30890",
+          "trains": "o045",
+          "ubertip": "TRIGSTR_20568",
+          "upgrade": "o047",
+          "weapson": "0"
+        },
+        "id": "o046",
+        "name": "|cffb4dcdcДом вождей|r"
+      },
+      {
+        "fields": {
+          "abillist": "Aspi,A0LJ,A0LI,A0IQ,Argl",
+          "fmade": "100",
+          "hotkey": "TRIGSTR_13043",
+          "isbldg": "1",
+          "name": "TRIGSTR_30891",
+          "regenhp": "",
+          "researches": "",
+          "sellitems": "",
+          "sellunits": "h0G8",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30892",
+          "trains": "o045",
+          "ubertip": "TRIGSTR_20805",
+          "upgrade": "o048",
+          "weapson": "0"
+        },
+        "id": "o047",
+        "name": "|cffb4dcdcДом предков|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1KB,Aspi,A0LJ,A0LI,A0IQ,Argl",
+          "fmade": "150",
+          "hotkey": "TRIGSTR_13044",
+          "isbldg": "1",
+          "name": "TRIGSTR_30893",
+          "regenhp": "",
+          "researches": "",
+          "sellitems": "",
+          "sellunits": "h0G8",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30894",
+          "trains": "o045",
+          "ubertip": "TRIGSTR_20806",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o048",
+        "name": "|cffb4dcdcХрам Лоа|r"
+      },
+      {
+        "fields": {
+          "abillist": "",
+          "fmade": "40",
+          "hotkey": "TRIGSTR_3035",
+          "isbldg": "1",
+          "name": "TRIGSTR_30901",
+          "regenhp": "",
+          "researches": "",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_30902",
+          "trains": "",
+          "ubertip": "TRIGSTR_41519",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o04C",
+        "name": "|cffb4dcdcБерлога|r"
+      },
+      {
+        "fields": {
+          "abillist": "Aspi",
+          "fmade": " - ",
+          "hotkey": "TRIGSTR_6697",
+          "isbldg": "1",
+          "name": "TRIGSTR_30897",
+          "regenhp": "",
+          "researches": "R0I7,R0IE",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30898",
+          "trains": "n05S,n05T,o04F",
+          "ubertip": "TRIGSTR_27751",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o04A",
+        "name": "|cffb4dcdcСолдатский лагерь|r"
+      },
+      {
+        "fields": {
+          "abillist": "Aspi,Arlm",
+          "fmade": " - ",
+          "hotkey": "TRIGSTR_7562",
+          "isbldg": "1",
+          "name": "TRIGSTR_30995",
+          "regenhp": "",
+          "researches": "R0I3,R0HZ,R0I0,R0I1,R0I2,R0IF",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30996",
+          "trains": "",
+          "ubertip": "TRIGSTR_27748",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o04B",
+        "name": "|cffb4dcdcМастерская|r"
+      },
+      {
+        "fields": {
+          "abillist": "Aspi",
+          "fmade": "3",
+          "hotkey": "TRIGSTR_3543",
+          "isbldg": "1",
+          "name": "TRIGSTR_30895",
+          "regenhp": "",
+          "researches": "",
+          "sellitems": "",
+          "sellunits": "h07A",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30896",
+          "trains": "O04H,O04G,O04I,O04K",
+          "ubertip": "TRIGSTR_27804",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o049",
+        "name": "|cffb4dcdcЛедяной алтарь|r"
+      },
+      {
+        "fields": {
+          "abillist": "Aspi",
+          "fmade": " - ",
+          "hotkey": "TRIGSTR_4221",
+          "isbldg": "1",
+          "name": "TRIGSTR_30933",
+          "regenhp": "",
+          "researches": "R0I6,R0I5",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30934",
+          "trains": "n05V,n05W,n05X",
+          "ubertip": "TRIGSTR_22246",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o04J",
+        "name": "|cffb4dcdcЗверинец|r"
+      },
+      {
+        "fields": {
+          "abillist": "Aspi",
+          "fmade": " - ",
+          "hotkey": "TRIGSTR_11520",
+          "isbldg": "1",
+          "name": "TRIGSTR_41386",
+          "regenhp": "",
+          "researches": "R0IG,R09P",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_41387",
+          "trains": "n05Y,o04T",
+          "ubertip": "TRIGSTR_21253",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o04D",
+        "name": "|cffb4dcdcКатакомбы|r"
+      },
+      {
+        "fields": {
+          "abillist": "Abds,Arbr,Aspi,Aorb",
+          "fmade": "",
+          "hotkey": "TRIGSTR_8482",
+          "isbldg": "1",
+          "name": "TRIGSTR_39321",
+          "regenhp": "",
+          "researches": "",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_39322",
+          "trains": "",
+          "ubertip": "TRIGSTR_13020",
+          "upgrade": "",
+          "weapson": "1"
+        },
+        "id": "o013",
+        "name": "|cffb4dcdcСторожевая башня|r"
+      },
+      {
+        "fields": {
+          "abillist": "Aspi",
+          "fmade": "3",
+          "hotkey": "TRIGSTR_8843",
+          "isbldg": "1",
+          "name": "TRIGSTR_26799",
+          "regenhp": "",
+          "researches": "R0AI,R0AJ,R0AD",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_10251",
+          "trains": "n061,n062,o05B",
+          "ubertip": "TRIGSTR_25920",
+          "upgrade": "o06J,o06K,o06I",
+          "weapson": "0"
+        },
+        "id": "o06H",
+        "name": "|cffb4dcdcАлтарь Лоа|r"
+      }
+    ],
+    "HD": [
+      {
+        "fields": {
+          "abillist": "Aspi",
+          "fmade": " - ",
+          "hotkey": "TRIGSTR_6188",
+          "isbldg": "1",
+          "name": "TRIGSTR_30905",
+          "regenhp": "",
+          "researches": "R0EU,R0I4,R09L",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30906",
+          "trains": "n05Z,n05U,n07B",
+          "ubertip": "TRIGSTR_21258",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o04E",
+        "name": "|cffb4dcdcОбитель духов|r"
+      },
+      {
+        "fields": {
+          "abillist": "A15N",
+          "fmade": "",
+          "hotkey": "TRIGSTR_7031",
+          "isbldg": "1",
+          "name": "TRIGSTR_13322",
+          "regenhp": "",
+          "researches": "R005,R006,R007,R002,R003",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_13323",
+          "trains": "h0D4,h0HN,h0HK",
+          "ubertip": "TRIGSTR_28306",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "h0HO",
+        "name": "Верфь"
+      },
+      {
+        "fields": {
+          "abillist": "A1FS,A1FR,Aspi,A0LJ,A0LI,A0IQ,Argl",
+          "fmade": "50",
+          "hotkey": "TRIGSTR_5530",
+          "isbldg": "1",
+          "name": "TRIGSTR_30889",
+          "regenhp": "",
+          "researches": "",
+          "sellitems": "",
+          "sellunits": "h0G8",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30890",
+          "trains": "o045",
+          "ubertip": "TRIGSTR_20568",
+          "upgrade": "o047",
+          "weapson": "0"
+        },
+        "id": "o046",
+        "name": "|cffb4dcdcДом вождей|r"
+      },
+      {
+        "fields": {
+          "abillist": "Aspi,A0LJ,A0LI,A0IQ,Argl",
+          "fmade": "100",
+          "hotkey": "TRIGSTR_13043",
+          "isbldg": "1",
+          "name": "TRIGSTR_30891",
+          "regenhp": "",
+          "researches": "",
+          "sellitems": "",
+          "sellunits": "h0G8",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30892",
+          "trains": "o045",
+          "ubertip": "TRIGSTR_20805",
+          "upgrade": "o048",
+          "weapson": "0"
+        },
+        "id": "o047",
+        "name": "|cffb4dcdcДом предков|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1KB,Aspi,A0LJ,A0LI,A0IQ,Argl",
+          "fmade": "150",
+          "hotkey": "TRIGSTR_13044",
+          "isbldg": "1",
+          "name": "TRIGSTR_30893",
+          "regenhp": "",
+          "researches": "",
+          "sellitems": "",
+          "sellunits": "h0G8",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30894",
+          "trains": "o045",
+          "ubertip": "TRIGSTR_20806",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o048",
+        "name": "|cffb4dcdcХрам Лоа|r"
+      },
+      {
+        "fields": {
+          "abillist": "",
+          "fmade": "40",
+          "hotkey": "TRIGSTR_3035",
+          "isbldg": "1",
+          "name": "TRIGSTR_30901",
+          "regenhp": "",
+          "researches": "",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_30902",
+          "trains": "",
+          "ubertip": "TRIGSTR_41519",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o04C",
+        "name": "|cffb4dcdcБерлога|r"
+      },
+      {
+        "fields": {
+          "abillist": "Aspi",
+          "fmade": " - ",
+          "hotkey": "TRIGSTR_6697",
+          "isbldg": "1",
+          "name": "TRIGSTR_30897",
+          "regenhp": "",
+          "researches": "R0I7,R0IE",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30898",
+          "trains": "n05S,n05T,o04F",
+          "ubertip": "TRIGSTR_27751",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o04A",
+        "name": "|cffb4dcdcСолдатский лагерь|r"
+      },
+      {
+        "fields": {
+          "abillist": "Aspi,Arlm",
+          "fmade": " - ",
+          "hotkey": "TRIGSTR_7562",
+          "isbldg": "1",
+          "name": "TRIGSTR_30995",
+          "regenhp": "",
+          "researches": "R0I3,R0HZ,R0I0,R0I1,R0I2,R0IF",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30996",
+          "trains": "",
+          "ubertip": "TRIGSTR_27748",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o04B",
+        "name": "|cffb4dcdcМастерская|r"
+      },
+      {
+        "fields": {
+          "abillist": "Aspi",
+          "fmade": "3",
+          "hotkey": "TRIGSTR_3543",
+          "isbldg": "1",
+          "name": "TRIGSTR_30895",
+          "regenhp": "",
+          "researches": "",
+          "sellitems": "",
+          "sellunits": "h07A",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30896",
+          "trains": "O04H,O04G,O04I,O04K",
+          "ubertip": "TRIGSTR_27804",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o049",
+        "name": "|cffb4dcdcЛедяной алтарь|r"
+      },
+      {
+        "fields": {
+          "abillist": "Aspi",
+          "fmade": " - ",
+          "hotkey": "TRIGSTR_4221",
+          "isbldg": "1",
+          "name": "TRIGSTR_30933",
+          "regenhp": "",
+          "researches": "R0I6,R0I5",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_30934",
+          "trains": "n05V,n05W,n05X",
+          "ubertip": "TRIGSTR_22246",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o04J",
+        "name": "|cffb4dcdcЗверинец|r"
+      },
+      {
+        "fields": {
+          "abillist": "Aspi",
+          "fmade": " - ",
+          "hotkey": "TRIGSTR_11520",
+          "isbldg": "1",
+          "name": "TRIGSTR_41386",
+          "regenhp": "",
+          "researches": "R0IG,R09P",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_41387",
+          "trains": "n05Y,o04T",
+          "ubertip": "TRIGSTR_21253",
+          "upgrade": "",
+          "weapson": "0"
+        },
+        "id": "o04D",
+        "name": "|cffb4dcdcКатакомбы|r"
+      },
+      {
+        "fields": {
+          "abillist": "Abds,Arbr,Aspi,Aorb",
+          "fmade": "",
+          "hotkey": "TRIGSTR_8482",
+          "isbldg": "1",
+          "name": "TRIGSTR_39321",
+          "regenhp": "",
+          "researches": "",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_39322",
+          "trains": "",
+          "ubertip": "TRIGSTR_13020",
+          "upgrade": "",
+          "weapson": "1"
+        },
+        "id": "o013",
+        "name": "|cffb4dcdcСторожевая башня|r"
+      },
+      {
+        "fields": {
+          "abillist": "Aspi",
+          "fmade": "3",
+          "hotkey": "TRIGSTR_8843",
+          "isbldg": "1",
+          "name": "TRIGSTR_26799",
+          "regenhp": "",
+          "researches": "R0AI,R0AJ,R0AD",
+          "sellitems": "",
+          "sellunits": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "TRIGSTR_10251",
+          "trains": "n061,n062,o05B",
+          "ubertip": "TRIGSTR_25920",
+          "upgrade": "o06J,o06K,o06I",
+          "weapson": "0"
+        },
+        "id": "o06H",
+        "name": "|cffb4dcdcАлтарь Лоа|r"
+      }
+    ]
+  },
+  "dependencies_before": {
+    "unit": [
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_30911",
+          "tip": "TRIGSTR_30913",
+          "ubertip": "TRIGSTR_20343"
+        },
+        "id": "O04G",
+        "name": "|cffb4dcdcТемный охотник|r "
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_30916",
+          "tip": "TRIGSTR_30918",
+          "ubertip": "TRIGSTR_20439"
+        },
+        "id": "O04H",
+        "name": "|cffb4dcdcВоеначалник|r"
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_20599",
+          "tip": "TRIGSTR_30930",
+          "ubertip": "TRIGSTR_20450"
+        },
+        "id": "O04I",
+        "name": "|cffb4dcdcЖрец Лоа|r"
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_30943",
+          "tip": "TRIGSTR_30945",
+          "ubertip": "TRIGSTR_30940"
+        },
+        "id": "O04K",
+        "name": "|cffb4dcdcВместилище Лоа|r "
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_42955",
+          "tip": "TRIGSTR_42956",
+          "ubertip": "|cffa6afb8ЮНИТ:|cffced4da Заклинатель для переброски войск игрока.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМассовая телепортация|cffced4da: переносит мага и ближайшие войска игрока к союзному зданию.|n- |cffa9c7deТёмный призыв|cffced4da: переносит войска игрока из выбранной области к магу.|n- |cffa9c7deПоддержание связи|cffced4da: включает автоматические попытки Тёмного призыва из сохранённой точки; режим выключается кнопкой «Прекращение связи».|n|n|cffe6c07bТёмный призыв недоступен, если маг находится в радиусе |cffffffff1350|cffe6c07b от вражеской столицы.|cffced4da|n|nАтакует наземные и воздушные цели.|r"
+        },
+        "id": "h07A",
+        "name": "|cffe4cfa3Маг телепортации|r"
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "|cffe4cfa3Торговля|r",
+          "tip": "|cffe4cfa3Торговля|r (|cffffffffD|r)",
+          "ubertip": "|cffa6afb8УСЛУГА:|cffced4da Покупка торгового улучшения для здания. Увеличивает базовый доход золота владельца на |cffc8e08775|cffced4da за выплату и повышает ступень показателя «Налаженная торговля». Итоговый доход зависит от модификаторов экономики.|n|nСтоимость — |cffffffff9000|cffced4da древесины. Покупка не создаёт постоянного воина.|r"
+        },
+        "id": "h0G8",
+        "name": "|cffe4cfa3Торговля|r"
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_4182",
+          "tip": "TRIGSTR_4183",
+          "ubertip": "TRIGSTR_18735"
+        },
+        "id": "n05S",
+        "name": "|cffb4dcdcВоитель|r"
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_4189",
+          "tip": "TRIGSTR_4192",
+          "ubertip": "TRIGSTR_42334"
+        },
+        "id": "n05T",
+        "name": "|cffb4dcdcОхотник|r"
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_16586",
+          "tip": "TRIGSTR_20598",
+          "ubertip": "TRIGSTR_42335"
+        },
+        "id": "n05U",
+        "name": "|cffb4dcdcЖрец|r"
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_39326",
+          "tip": "TRIGSTR_39327",
+          "ubertip": "TRIGSTR_42337"
+        },
+        "id": "n05V",
+        "name": "|cffb4dcdcБелый медведь|r"
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_30937",
+          "tip": "TRIGSTR_25912",
+          "ubertip": "TRIGSTR_42338"
+        },
+        "id": "n05W",
+        "name": "|cffb4dcdcЛютый мамонт|r"
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_30939",
+          "tip": "TRIGSTR_25919",
+          "ubertip": "TRIGSTR_42339"
+        },
+        "id": "n05X",
+        "name": "|cffb4dcdcМагнатавр-разрушитель|r"
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_37673",
+          "tip": "TRIGSTR_37688",
+          "ubertip": "TRIGSTR_42340"
+        },
+        "id": "n05Y",
+        "name": "|cffb4dcdcБерсерк|r"
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_30928",
+          "tip": "TRIGSTR_20600",
+          "ubertip": "TRIGSTR_42341"
+        },
+        "id": "n05Z",
+        "name": "|cffb4dcdcЖрец Лоа|r"
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_23398",
+          "tip": "TRIGSTR_23399",
+          "ubertip": "TRIGSTR_42346"
+        },
+        "id": "n07B",
+        "name": "|cffb4dcdcВзыватель душ|r"
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_39324",
+          "tip": "TRIGSTR_39325",
+          "ubertip": "TRIGSTR_20475"
+        },
+        "id": "o045",
+        "name": "|cffb4dcdcРаботник|r "
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_30909",
+          "tip": "TRIGSTR_30910",
+          "ubertip": "TRIGSTR_42336"
+        },
+        "id": "o04F",
+        "name": "|cffb4dcdcКатапульта|r"
+      },
+      {
+        "fields": {
+          "isbldg": "0",
+          "name": "TRIGSTR_41085",
+          "tip": "TRIGSTR_41086",
+          "ubertip": "TRIGSTR_42342"
+        },
+        "id": "o04T",
+        "name": "|cffb4dcdcГолем|r"
+      }
+    ],
+    "upgrade": [
+      {
+        "fields": {
+          "name1": "TRIGSTR_41307",
+          "tip1": "TRIGSTR_41308",
+          "ubertip1": "TRIGSTR_41264"
+        },
+        "id": "R09L",
+        "name": "|cffb4dcdcАзы загробного мира|r"
+      },
+      {
+        "fields": {
+          "name1": "TRIGSTR_41384",
+          "tip1": "TRIGSTR_41385",
+          "ubertip1": "TRIGSTR_41374"
+        },
+        "id": "R09P",
+        "name": "|cffb4dcdcТемные элементы|r"
+      },
+      {
+        "fields": {
+          "name1": "TRIGSTR_20247",
+          "tip1": "TRIGSTR_20249",
+          "ubertip1": "TRIGSTR_25452"
+        },
+        "id": "R0EU",
+        "name": "|cffb4dcdcПознания жреца|r"
+      },
+      {
+        "fields": {
+          "name1": "TRIGSTR_15825",
+          "tip1": "TRIGSTR_15826",
+          "ubertip1": "TRIGSTR_28225"
+        },
+        "id": "R0HZ",
+        "name": "|cffb4dcdcОружие ближнего боя|r"
+      },
+      {
+        "fields": {
+          "name1": "TRIGSTR_15905",
+          "tip1": "TRIGSTR_15906",
+          "ubertip1": "TRIGSTR_22760"
+        },
+        "id": "R0I0",
+        "name": "|cffb4dcdcСтальная броня|r"
+      },
+      {
+        "fields": {
+          "name1": "TRIGSTR_15928",
+          "tip1": "TRIGSTR_16264",
+          "ubertip1": "TRIGSTR_28266"
+        },
+        "id": "R0I1",
+        "name": "|cffb4dcdcОружие дальнего боя|r"
+      },
+      {
+        "fields": {
+          "name1": "TRIGSTR_19461",
+          "tip1": "TRIGSTR_19463",
+          "ubertip1": "TRIGSTR_31503"
+        },
+        "id": "R0I2",
+        "name": "|cffb4dcdcТролльская регенерация|r"
+      },
+      {
+        "fields": {
+          "name1": "TRIGSTR_20245",
+          "tip1": "TRIGSTR_20246",
+          "ubertip1": "TRIGSTR_31280"
+        },
+        "id": "R0I3",
+        "name": "|cffb4dcdcЖивучесть Драккари|r"
+      },
+      {
+        "fields": {
+          "name1": "TRIGSTR_20251",
+          "tip1": "TRIGSTR_20253",
+          "ubertip1": "TRIGSTR_17750"
+        },
+        "id": "R0I4",
+        "name": "|cffb4dcdcЗнания Лоа|r"
+      },
+      {
+        "fields": {
+          "name1": "TRIGSTR_20315",
+          "tip1": "TRIGSTR_20316",
+          "ubertip1": "TRIGSTR_31297"
+        },
+        "id": "R0I5",
+        "name": "|cffb4dcdcДикая магия льда|r"
+      },
+      {
+        "fields": {
+          "name1": "TRIGSTR_41097",
+          "tip1": "TRIGSTR_41429",
+          "ubertip1": "TRIGSTR_32757"
+        },
+        "id": "R0I6",
+        "name": "|cffb4dcdcТренировки зверей|r"
+      },
+      {
+        "fields": {
+          "name1": "TRIGSTR_41528",
+          "tip1": "TRIGSTR_41529",
+          "ubertip1": "TRIGSTR_5688"
+        },
+        "id": "R0I7",
+        "name": "|cffb4dcdcОблегченные топоры|r"
+      },
+      {
+        "fields": {
+          "name1": "TRIGSTR_20324",
+          "tip1": "TRIGSTR_20325",
+          "ubertip1": "TRIGSTR_11600"
+        },
+        "id": "R0IE",
+        "name": "|cffb4dcdcТренировки троллей|r"
+      },
+      {
+        "fields": {
+          "name1": "TRIGSTR_21434",
+          "tip1": "TRIGSTR_31782",
+          "ubertip1": "TRIGSTR_28318"
+        },
+        "id": "R0IF",
+        "name": "|cffb4dcdcУлучшенные топоры|r"
+      },
+      {
+        "fields": {
+          "name1": "TRIGSTR_41082",
+          "tip1": "TRIGSTR_41084",
+          "ubertip1": "TRIGSTR_22647"
+        },
+        "id": "R0IG",
+        "name": "|cffb4dcdcБесчисленые бои|r"
+      }
+    ],
+    "ability": [
+      {
+        "fields": {
+          "code": "ANcl",
+          "dataa1": "0.300000",
+          "datab1": "0",
+          "datac1": "1",
+          "datad1": "0.010000",
+          "name": "|cffe4cfa3Назначение столицы|r",
+          "tip1": "|cffe4cfa3Назначение столицы|r (|cffffffffX|r)",
+          "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Назначает это здание столицей в соответствующем режиме игры. Завершает строительство, устанавливает |cffffffff10000|cffced4da максимального и текущего здоровья и |cffffffff30|cffced4da брони. Положение столицы становится видно всем игрокам. Она получает Антимагическую броню и Неуязвимость столицы.|n|n|cffe6c07bПосле назначения кнопка становится недоступной.|cffced4da|r"
+        },
+        "id": "A0IQ",
+        "name": "|cffe4cfa3Назначение столицы|r"
+      },
+      {
+        "fields": {
+          "code": "AAns",
+          "dataa1": "500",
+          "datab1": "-100",
+          "datac1": "",
+          "datad1": "",
+          "name": "|cffe4cfa3Обмен золота на древесину|r",
+          "tip1": "|cffe4cfa3Обмен золота на древесину|r (|cffffffffS|r)",
+          "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает |cffe69a8d500|cffced4da золота на |cffc8e087100|cffced4da древесины.|r"
+        },
+        "id": "A0LI",
+        "name": "|cffe4cfa3Обмен золота на древесину|r"
+      },
+      {
+        "fields": {
+          "code": "AAns",
+          "dataa1": "-100",
+          "datab1": "500",
+          "datac1": "",
+          "datad1": "",
+          "name": "|cffe4cfa3Обмен древесины на золото|r",
+          "tip1": "|cffe4cfa3Обмен древесины на золото|r (|cffffffffA|r)",
+          "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает |cffe69a8d500|cffced4da древесины на |cffc8e087100|cffced4da золота.|r"
+        },
+        "id": "A0LJ",
+        "name": "|cffe4cfa3Обмен древесины на золото|r"
+      },
+      {
+        "fields": {
+          "code": "ANcl",
+          "dataa1": "0.300000",
+          "datab1": "0",
+          "datac1": "1",
+          "datad1": "0.98",
+          "name": "TRIGSTR_41104",
+          "tip1": "TRIGSTR_41105",
+          "ubertip1": "TRIGSTR_41114"
+        },
+        "id": "A1FR",
+        "name": "|cffb4dcdcРитуал поклонения|r"
+      },
+      {
+        "fields": {
+          "code": "ANcl",
+          "dataa1": "0.300000",
+          "datab1": "0",
+          "datac1": "1",
+          "datad1": "0.98",
+          "name": "TRIGSTR_32519",
+          "tip1": "TRIGSTR_32845",
+          "ubertip1": "TRIGSTR_41115"
+        },
+        "id": "A1FS",
+        "name": "|cffb4dcdcЧрезвычайные меры|r"
+      },
+      {
+        "fields": {
+          "code": "Aoar",
+          "dataa1": "-0.025000",
+          "datab1": "1",
+          "datac1": "",
+          "datad1": "",
+          "name": "|cffe4cfa3Защита столицы|r",
+          "tip1": "|cffe4cfa3Защита столицы|r",
+          "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da В радиусе |cffffffff450|cffced4da снижает восстановление здоровья органических врагов на |cffffffff2,5%|cffced4da их максимального здоровья в секунду. Действует на наземные и воздушные цели.|r"
+        },
+        "id": "A1KB",
+        "name": "|cffe4cfa3Защита столицы|r"
+      },
+      {
+        "fields": {
+          "code": "Abli",
+          "dataa1": "64",
+          "datab1": "0",
+          "datac1": "",
+          "datad1": "",
+          "name": "Слабое рассеивание чумы",
+          "tip1": "",
+          "ubertip1": ""
+        },
+        "id": "Abds",
+        "name": "Слабое рассеивание чумы"
+      },
+      {
+        "fields": {
+          "code": "APai",
+          "dataa1": "",
+          "datab1": "",
+          "datac1": "",
+          "datad1": "",
+          "name": "Укрепленные стены",
+          "tip1": "Укрепленные стены",
+          "ubertip1": "Дают землянкам и сторожевым башням укрепленную броню."
+        },
+        "id": "Aorb",
+        "name": "Укрепленные стены"
+      },
+      {
+        "fields": {
+          "code": "Arbr",
+          "dataa1": "",
+          "datab1": "",
+          "datac1": "",
+          "datad1": "",
+          "name": "Укрепленные землянки",
+          "tip1": "Укрепленные землянки",
+          "ubertip1": "Дает землянкам укрепленную броню."
+        },
+        "id": "Arbr",
+        "name": "Укрепленные землянки"
+      },
+      {
+        "fields": {
+          "code": "Artn",
+          "dataa1": "1",
+          "datab1": "1",
+          "datac1": "",
+          "datad1": "",
+          "name": "|cffe4cfa3Приём ресурсов|r",
+          "tip1": "|cffe4cfa3Приём ресурсов|r",
+          "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Позволяет рабочим сдавать в это здание добытые золото и древесину.|r"
+        },
+        "id": "Argl",
+        "name": "|cffe4cfa3Приём ресурсов|r"
+      },
+      {
+        "fields": {
+          "code": "Artn",
+          "dataa1": "0",
+          "datab1": "1",
+          "datac1": "",
+          "datad1": "",
+          "name": "Вернуть древесину",
+          "tip1": "",
+          "ubertip1": ""
+        },
+        "id": "Arlm",
+        "name": "Вернуть древесину"
+      },
+      {
+        "fields": {
+          "code": "Aspi",
+          "dataa1": "",
+          "datab1": "",
+          "datac1": "",
+          "datad1": "",
+          "name": "Шипастые укрепления",
+          "tip1": "",
+          "ubertip1": ""
+        },
+        "id": "Aspi",
+        "name": "Шипастые укрепления"
+      }
+    ]
+  },
+  "requirements": {
+    "unit": [
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "O04G",
+        "name": "|cffb4dcdcТемный охотник|r "
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "O04H",
+        "name": "|cffb4dcdcВоеначалник|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "O04I",
+        "name": "|cffb4dcdcЖрец Лоа|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "O04K",
+        "name": "|cffb4dcdcВместилище Лоа|r "
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "h07A",
+        "name": "|cffe4cfa3Маг телепортации|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "h0G8",
+        "name": "|cffe4cfa3Торговля|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05S",
+        "name": "|cffb4dcdcВоитель|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05T",
+        "name": "|cffb4dcdcОхотник|r"
+      },
+      {
+        "fields": {
+          "requires": "o047",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05U",
+        "name": "|cffb4dcdcЖрец|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05V",
+        "name": "|cffb4dcdcБелый медведь|r"
+      },
+      {
+        "fields": {
+          "requires": "o048",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05W",
+        "name": "|cffb4dcdcЛютый мамонт|r"
+      },
+      {
+        "fields": {
+          "requires": "o048,o049",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05X",
+        "name": "|cffb4dcdcМагнатавр-разрушитель|r"
+      },
+      {
+        "fields": {
+          "requires": "o049",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05Y",
+        "name": "|cffb4dcdcБерсерк|r"
+      },
+      {
+        "fields": {
+          "requires": "o047",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05Z",
+        "name": "|cffb4dcdcЖрец Лоа|r"
+      },
+      {
+        "fields": {
+          "requires": "o047",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n07B",
+        "name": "|cffb4dcdcВзыватель душ|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "o045",
+        "name": "|cffb4dcdcРаботник|r "
+      },
+      {
+        "fields": {
+          "requires": "o04B,o047",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "o04F",
+        "name": "|cffb4dcdcКатапульта|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "o04T",
+        "name": "|cffb4dcdcГолем|r"
+      }
+    ],
+    "upgrade": [
+      {
+        "fields": {
+          "maxlevel": "3",
+          "requires": "ostr,ofor",
+          "requires1": "",
+          "requires2": "o048",
+          "requiresamount": ""
+        },
+        "id": "R09L",
+        "name": "|cffb4dcdcАзы загробного мира|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "3",
+          "requires": "ostr,ofor",
+          "requires1": "o048",
+          "requires2": "o048",
+          "requiresamount": ""
+        },
+        "id": "R09P",
+        "name": "|cffb4dcdcТемные элементы|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "2",
+          "requires": "",
+          "requires1": "ofrt",
+          "requires2": "o048",
+          "requiresamount": ""
+        },
+        "id": "R0EU",
+        "name": "|cffb4dcdcПознания жреца|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "6",
+          "requires": "",
+          "requires1": "ostr",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "R0HZ",
+        "name": "|cffb4dcdcОружие ближнего боя|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "6",
+          "requires": "",
+          "requires1": "ostr",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "R0I0",
+        "name": "|cffb4dcdcСтальная броня|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "6",
+          "requires": "",
+          "requires1": "ostr",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "R0I1",
+        "name": "|cffb4dcdcОружие дальнего боя|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "6",
+          "requires": "ostr,ofor",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "R0I2",
+        "name": "|cffb4dcdcТролльская регенерация|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "6",
+          "requires": "ostr,ofor",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "R0I3",
+        "name": "|cffb4dcdcЖивучесть Драккари|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "2",
+          "requires": "",
+          "requires1": "ofrt",
+          "requires2": "o048",
+          "requiresamount": ""
+        },
+        "id": "R0I4",
+        "name": "|cffb4dcdcЗнания Лоа|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "3",
+          "requires": "ostr,ofor",
+          "requires1": "o048",
+          "requires2": "o048",
+          "requiresamount": ""
+        },
+        "id": "R0I5",
+        "name": "|cffb4dcdcДикая магия льда|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "3",
+          "requires": "ostr,ofor",
+          "requires1": "",
+          "requires2": "o047",
+          "requiresamount": ""
+        },
+        "id": "R0I6",
+        "name": "|cffb4dcdcТренировки зверей|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "3",
+          "requires": "ostr,ofor",
+          "requires1": "",
+          "requires2": "o047",
+          "requiresamount": ""
+        },
+        "id": "R0I7",
+        "name": "|cffb4dcdcОблегченные топоры|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "3",
+          "requires": "ostr,ofor",
+          "requires1": "o047",
+          "requires2": "o047",
+          "requiresamount": ""
+        },
+        "id": "R0IE",
+        "name": "|cffb4dcdcТренировки троллей|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "6",
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "R0IF",
+        "name": "|cffb4dcdcУлучшенные топоры|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "2",
+          "requires": "ostr,ofor",
+          "requires1": "",
+          "requires2": "o047",
+          "requiresamount": ""
+        },
+        "id": "R0IG",
+        "name": "|cffb4dcdcБесчисленые бои|r"
+      }
+    ],
+    "requirement_names": {
+      "o047": "|cffb4dcdcДом предков|r",
+      "o048": "|cffb4dcdcХрам Лоа|r",
+      "o049": "|cffb4dcdcЛедяной алтарь|r",
+      "o04B": "|cffb4dcdcМастерская|r",
+      "ofor": "|cffff5454Лесопилка|r",
+      "ofrt": "|cffff5454Цитадель|r",
+      "ostr": "|cffff5454Крепость|r"
+    },
+    "building_consumers": [
+      {
+        "editor_suffix": "(Врайкулы)",
+        "fields": {
+          "builds": "wk01,h0D1,h0BQ,h0BT,h0BV,h0BW,o013,h0BU,h0BX",
+          "upgrade": ""
+        },
+        "id": "h0C9",
+        "name": "|cffdcaa92Строитель|r"
+      },
+      {
+        "editor_suffix": "(Льодяні Троллі)",
+        "fields": {
+          "builds": "o04E,h0HO,o046,o04C,o04A,o04B,o049,o04J,o04D,o013,o06H",
+          "upgrade": ""
+        },
+        "id": "o045",
+        "name": "|cffb4dcdcРаботник|r "
+      },
+      {
+        "editor_suffix": "(Льодяні Троллі)",
+        "fields": {
+          "builds": "",
+          "upgrade": "o047"
+        },
+        "id": "o046",
+        "name": "|cffb4dcdcДом вождей|r"
+      },
+      {
+        "editor_suffix": "(Льодяні Троллі)",
+        "fields": {
+          "builds": "",
+          "upgrade": "o048"
+        },
+        "id": "o047",
+        "name": "|cffb4dcdcДом предков|r"
+      }
+    ],
+    "unit_HD": [
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "O04G",
+        "name": "|cffb4dcdcТемный охотник|r "
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "O04H",
+        "name": "|cffe4cfa3Военачальник|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "O04I",
+        "name": "|cffb4dcdcЖрец Лоа|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "O04K",
+        "name": "|cffb4dcdcВместилище Лоа|r "
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "h07A",
+        "name": "|cffe4cfa3Маг телепортации|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "h0G8",
+        "name": "|cffe4cfa3Торговля|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05S",
+        "name": "|cffb4dcdcВоитель|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05T",
+        "name": "|cffb4dcdcОхотник|r"
+      },
+      {
+        "fields": {
+          "requires": "o047",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05U",
+        "name": "|cffb4dcdcЖрец|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05V",
+        "name": "|cffb4dcdcБелый медведь|r"
+      },
+      {
+        "fields": {
+          "requires": "o048",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05W",
+        "name": "|cffb4dcdcЛютый мамонт|r"
+      },
+      {
+        "fields": {
+          "requires": "o048,o049",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05X",
+        "name": "|cffb4dcdcМагнатавр-разрушитель|r"
+      },
+      {
+        "fields": {
+          "requires": "o049",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05Y",
+        "name": "|cffb4dcdcБерсерк|r"
+      },
+      {
+        "fields": {
+          "requires": "o047",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n05Z",
+        "name": "|cffb4dcdcЖрец Лоа|r"
+      },
+      {
+        "fields": {
+          "requires": "o047",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "n07B",
+        "name": "|cffb4dcdcВзыватель душ|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "o045",
+        "name": "|cffb4dcdcРаботник|r "
+      },
+      {
+        "fields": {
+          "requires": "o04B,o047",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "o04F",
+        "name": "|cffb4dcdcКатапульта|r"
+      },
+      {
+        "fields": {
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "o04T",
+        "name": "|cffb4dcdcГолем|r"
+      }
+    ],
+    "upgrade_HD": [
+      {
+        "fields": {
+          "maxlevel": "3",
+          "requires": "ostr,ofor",
+          "requires1": "",
+          "requires2": "o048",
+          "requiresamount": ""
+        },
+        "id": "R09L",
+        "name": "|cffb4dcdcАзы загробного мира|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "3",
+          "requires": "ostr,ofor",
+          "requires1": "o048",
+          "requires2": "o048",
+          "requiresamount": ""
+        },
+        "id": "R09P",
+        "name": "|cffb4dcdcТемные элементы|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "2",
+          "requires": "",
+          "requires1": "ofrt",
+          "requires2": "o048",
+          "requiresamount": ""
+        },
+        "id": "R0EU",
+        "name": "|cffb4dcdcПознания жреца|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "6",
+          "requires": "",
+          "requires1": "ostr",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "R0HZ",
+        "name": "|cffb4dcdcОружие ближнего боя|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "6",
+          "requires": "",
+          "requires1": "ostr",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "R0I0",
+        "name": "|cffb4dcdcСтальная броня|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "6",
+          "requires": "",
+          "requires1": "ostr",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "R0I1",
+        "name": "|cffb4dcdcОружие дальнего боя|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "6",
+          "requires": "ostr,ofor",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "R0I2",
+        "name": "|cffb4dcdcТролльская регенерация|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "6",
+          "requires": "ostr,ofor",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "R0I3",
+        "name": "|cffb4dcdcЖивучесть Драккари|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "2",
+          "requires": "",
+          "requires1": "ofrt",
+          "requires2": "o048",
+          "requiresamount": ""
+        },
+        "id": "R0I4",
+        "name": "|cffb4dcdcЗнания Лоа|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "3",
+          "requires": "ostr,ofor",
+          "requires1": "o048",
+          "requires2": "o048",
+          "requiresamount": ""
+        },
+        "id": "R0I5",
+        "name": "|cffb4dcdcДикая магия льда|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "3",
+          "requires": "ostr,ofor",
+          "requires1": "",
+          "requires2": "o047",
+          "requiresamount": ""
+        },
+        "id": "R0I6",
+        "name": "|cffb4dcdcТренировки зверей|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "3",
+          "requires": "ostr,ofor",
+          "requires1": "",
+          "requires2": "o047",
+          "requiresamount": ""
+        },
+        "id": "R0I7",
+        "name": "|cffb4dcdcОблегченные топоры|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "3",
+          "requires": "ostr,ofor",
+          "requires1": "o047",
+          "requires2": "o047",
+          "requiresamount": ""
+        },
+        "id": "R0IE",
+        "name": "|cffb4dcdcТренировки троллей|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "6",
+          "requires": "",
+          "requires1": "",
+          "requires2": "",
+          "requiresamount": ""
+        },
+        "id": "R0IF",
+        "name": "|cffb4dcdcУлучшенные топоры|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "2",
+          "requires": "ostr,ofor",
+          "requires1": "",
+          "requires2": "o047",
+          "requiresamount": ""
+        },
+        "id": "R0IG",
+        "name": "|cffe4cfa3Бесчисленные бои|r — уровень |cffffffff1|r"
+      }
+    ]
+  },
+  "title_sync_before": {
+    "unit_SD": [
+      {
+        "fields": {
+          "hotkey": "TRIGSTR_7690",
+          "name": "TRIGSTR_30916",
+          "tip": "TRIGSTR_30918"
+        },
+        "id": "O04H",
+        "name": "|cffb4dcdcВоеначалник|r"
+      }
+    ],
+    "unit_HD": [
+      {
+        "fields": {
+          "hotkey": "TRIGSTR_7690",
+          "name": "TRIGSTR_30916",
+          "tip": "TRIGSTR_30918"
+        },
+        "id": "O04H",
+        "name": "|cffb4dcdcВоеначалник|r"
+      }
+    ],
+    "upgrade_SD": [
+      {
+        "fields": {
+          "hotkey": "",
+          "name1": "TRIGSTR_41082",
+          "name2": "TRIGSTR_40715",
+          "tip1": "TRIGSTR_41084",
+          "tip2": "TRIGSTR_41023"
+        },
+        "id": "R0IG",
+        "name": "|cffb4dcdcБесчисленые бои|r"
+      }
+    ],
+    "upgrade_HD": [
+      {
+        "fields": {
+          "hotkey": "",
+          "name1": "TRIGSTR_41082",
+          "name2": "TRIGSTR_40715",
+          "tip1": "TRIGSTR_41084",
+          "tip2": "TRIGSTR_41023"
+        },
+        "id": "R0IG",
+        "name": "|cffb4dcdcБесчисленые бои|r"
+      }
+    ]
+  },
+  "strings": [
+    {
+      "rawcode": "o04E",
+      "type": "unit",
+      "field": "name",
+      "reference_before": "TRIGSTR_30905",
+      "before": "|cffb4dcdcОбитель духов|r",
+      "after": "|cffe4cfa3Обитель духов|r"
+    },
+    {
+      "rawcode": "o04E",
+      "type": "unit",
+      "field": "tip",
+      "reference_before": "TRIGSTR_30906",
+      "before": "Построить |cffb4dcdcОбитель духов|r",
+      "after": "|cffe4cfa3Обитель духов|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "o04E",
+      "type": "unit",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_21258",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa70 сек.|r|n|nЗдание для подготовки магов поддержки, позволяет исследовать улучшения",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка заклинателей и исследование их улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЖрец Лоа|cffced4da (требуется: Дом предков).|n- |cffa9c7deЖрец|cffced4da (требуется: Дом предков).|n- |cffa9c7deВзыватель душ|cffced4da (требуется: Дом предков, выбран путь «Чрезвычайные меры»).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПознания жреца|cffced4da.|n- |cffa9c7deЗнания Лоа|cffced4da.|n- |cffa9c7deАзы загробного мира|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+    },
+    {
+      "rawcode": "o046",
+      "type": "unit",
+      "field": "name",
+      "reference_before": "TRIGSTR_30889",
+      "before": "|cffb4dcdcДом вождей|r",
+      "after": "|cffe4cfa3Дом вождей|r"
+    },
+    {
+      "rawcode": "o046",
+      "type": "unit",
+      "field": "tip",
+      "reference_before": "TRIGSTR_30890",
+      "before": "Построить |cffb4dcdcДом вождей|r",
+      "after": "|cffe4cfa3Дом вождей|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "o046",
+      "type": "unit",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_20568",
+      "before": "|cff7dc87dВремя строительства:|r |cffaaf0aa150 сек.|r|n|cff7dc87d|r    |nБазовое здание. Обучает работников и хранит добытые ресурсы. Можно улучшить",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание первой ступени. Принимает добытые золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Услуги:|cffced4da|n- |cffa9c7deТорговля|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deДом предков|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deОбмен древесины на золото|cffced4da и |cffa9c7deОбмен золота на древесину|cffced4da: обмен ресурсов.|n- |cffa9c7deНазначение столицы|cffced4da: доступно в соответствующем режиме игры.|n- |cffa9c7deРитуал поклонения|cffced4da или |cffa9c7deЧрезвычайные меры|cffced4da: однократный выбор взаимоисключающего пути развития.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+    },
+    {
+      "rawcode": "o047",
+      "type": "unit",
+      "field": "name",
+      "reference_before": "TRIGSTR_30891",
+      "before": "|cffb4dcdcДом предков|r",
+      "after": "|cffe4cfa3Дом предков|r"
+    },
+    {
+      "rawcode": "o047",
+      "type": "unit",
+      "field": "tip",
+      "reference_before": "TRIGSTR_30892",
+      "before": "Улучшить |cffb4dcdcДом предков|r",
+      "after": "|cffe4cfa3Дом предков|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "o047",
+      "type": "unit",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_20805",
+      "before": "|cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|cff7dc87d|r    |nБазовое здание. Обучает работников и хранит добытые ресурсы. Можно улучшить",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание второй ступени. Принимает добытые золото и древесину и открывает дальнейшее развитие поселения.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Услуги:|cffced4da|n- |cffa9c7deТорговля|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deХрам Лоа|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deОбмен древесины на золото|cffced4da и |cffa9c7deОбмен золота на древесину|cffced4da: обмен ресурсов.|n- |cffa9c7deНазначение столицы|cffced4da: доступно в соответствующем режиме игры.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+    },
+    {
+      "rawcode": "o048",
+      "type": "unit",
+      "field": "name",
+      "reference_before": "TRIGSTR_30893",
+      "before": "|cffb4dcdcХрам Лоа|r",
+      "after": "|cffe4cfa3Храм Лоа|r"
+    },
+    {
+      "rawcode": "o048",
+      "type": "unit",
+      "field": "tip",
+      "reference_before": "TRIGSTR_30894",
+      "before": "Улучшить |cffb4dcdcХрам Лоа|r",
+      "after": "|cffe4cfa3Храм Лоа|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "o048",
+      "type": "unit",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_20806",
+      "before": "|cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|cff7dc87d|r    |nБазовое здание. Обучает работников и хранит добытые ресурсы. Можно улучшить",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание третьей, последней ступени. Принимает добытые золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Услуги:|cffced4da|n- |cffa9c7deТорговля|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deОбмен древесины на золото|cffced4da и |cffa9c7deОбмен золота на древесину|cffced4da: обмен ресурсов.|n- |cffa9c7deНазначение столицы|cffced4da: доступно в соответствующем режиме игры.|n- |cffa9c7deЗащита столицы|cffced4da: снижает восстановление здоровья ближайших органических врагов.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+    },
+    {
+      "rawcode": "o04C",
+      "type": "unit",
+      "field": "name",
+      "reference_before": "TRIGSTR_30901",
+      "before": "|cffb4dcdcБерлога|r",
+      "after": "|cffe4cfa3Берлога|r"
+    },
+    {
+      "rawcode": "o04C",
+      "type": "unit",
+      "field": "tip",
+      "reference_before": "TRIGSTR_30902",
+      "before": "Построить |cffb4dcdcБерлога|r",
+      "after": "|cffe4cfa3Берлога|r (|cffffffffA|r)"
+    },
+    {
+      "rawcode": "o04C",
+      "type": "unit",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_41519",
+      "before": "|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|n|cffffff00Приносит 40 инкома|r",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Хозяйственное здание. Увеличивает базовый доход золота на |cffc8e08740|cffced4da за выплату. Итоговый доход зависит от модификаторов экономики.|r"
+    },
+    {
+      "rawcode": "o04A",
+      "type": "unit",
+      "field": "name",
+      "reference_before": "TRIGSTR_30897",
+      "before": "|cffb4dcdcСолдатский лагерь|r",
+      "after": "|cffe4cfa3Солдатский лагерь|r"
+    },
+    {
+      "rawcode": "o04A",
+      "type": "unit",
+      "field": "tip",
+      "reference_before": "TRIGSTR_30898",
+      "before": "Построить |cffb4dcdcСолдатский лагерь|r",
+      "after": "|cffe4cfa3Солдатский лагерь|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "o04A",
+      "type": "unit",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_27751",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nЗдание для подготовки базовых войск. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка основных войск и осадных орудий Драккари.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deВоитель|cffced4da.|n- |cffa9c7deОхотник|cffced4da.|n- |cffa9c7deКатапульта|cffced4da (требуется: Мастерская, Дом предков).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОблегченные топоры|cffced4da.|n- |cffa9c7deТренировки троллей|cffced4da.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+    },
+    {
+      "rawcode": "o04B",
+      "type": "unit",
+      "field": "name",
+      "reference_before": "TRIGSTR_30995",
+      "before": "|cffb4dcdcМастерская|r",
+      "after": "|cffe4cfa3Мастерская|r"
+    },
+    {
+      "rawcode": "o04B",
+      "type": "unit",
+      "field": "tip",
+      "reference_before": "TRIGSTR_30996",
+      "before": "Построить |cffb4dcdcМастерскую|r",
+      "after": "|cffe4cfa3Мастерская|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "o04B",
+      "type": "unit",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_27748",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa70 сек.|r|n|nХранит добытую древесину. |nДает доступ к улучшениям для доспехов и оружия, а также позволяет строить укрепления.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Исследование улучшений оружия, брони и живучести войск. Принимает добытую древесину.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЖивучесть Драккари|cffced4da.|n- |cffa9c7deОружие ближнего боя|cffced4da.|n- |cffa9c7deСтальная броня|cffced4da.|n- |cffa9c7deОружие дальнего боя|cffced4da.|n- |cffa9c7deТролльская регенерация|cffced4da.|n- |cffa9c7deУлучшенные топоры|cffced4da.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+    },
+    {
+      "rawcode": "o049",
+      "type": "unit",
+      "field": "name",
+      "reference_before": "TRIGSTR_30895",
+      "before": "|cffb4dcdcЛедяной алтарь|r",
+      "after": "|cffe4cfa3Ледяной алтарь|r"
+    },
+    {
+      "rawcode": "o049",
+      "type": "unit",
+      "field": "tip",
+      "reference_before": "TRIGSTR_30896",
+      "before": "Построить |cffb4dcdcЛедяной алтарь|r",
+      "after": "|cffe4cfa3Ледяной алтарь|r (|cffffffffS|r)"
+    },
+    {
+      "rawcode": "o049",
+      "type": "unit",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_27804",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nСооружение позволяющее призывать новых и воскрешает павших героев.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Призыв новых героев и воскрешение павших.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВоеначальник|cffced4da.|n- |cffa9c7deТемный охотник|cffced4da.|n- |cffa9c7deЖрец Лоа|cffced4da.|n- |cffa9c7deВместилище Лоа|cffced4da.|n|n|cffa6afb8Найм:|cffced4da|n- |cffa9c7deМаг телепортации|cffced4da.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+    },
+    {
+      "rawcode": "o04J",
+      "type": "unit",
+      "field": "name",
+      "reference_before": "TRIGSTR_30933",
+      "before": "|cffb4dcdcЗверинец|r",
+      "after": "|cffe4cfa3Зверинец|r"
+    },
+    {
+      "rawcode": "o04J",
+      "type": "unit",
+      "field": "tip",
+      "reference_before": "TRIGSTR_30934",
+      "before": "Построить |cffb4dcdcЗверинец|r",
+      "after": "|cffe4cfa3Зверинец|r (|cffffffffD|r)"
+    },
+    {
+      "rawcode": "o04J",
+      "type": "unit",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_22246",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r\n|nЗдесь тролли приручают диких зверей себе на службу.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка приручённых зверей и исследование их улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБелый медведь|cffced4da.|n- |cffa9c7deЛютый мамонт|cffced4da (требуется: Храм Лоа, выбран путь «Ритуал поклонения»).|n- |cffa9c7deМагнатавр-разрушитель|cffced4da (требуется: Храм Лоа, Ледяной алтарь, выбран путь «Ритуал поклонения»).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deТренировки зверей|cffced4da.|n- |cffa9c7deДикая магия льда|cffced4da (требуется: выбран путь «Ритуал поклонения»).|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+    },
+    {
+      "rawcode": "o04D",
+      "type": "unit",
+      "field": "name",
+      "reference_before": "TRIGSTR_41386",
+      "before": "|cffb4dcdcКатакомбы|r",
+      "after": "|cffe4cfa3Катакомбы|r"
+    },
+    {
+      "rawcode": "o04D",
+      "type": "unit",
+      "field": "tip",
+      "reference_before": "TRIGSTR_41387",
+      "before": "Построить |cffb4dcdcКатакомбы|r",
+      "after": "|cffe4cfa3Катакомбы|r (|cffffffffF|r)"
+    },
+    {
+      "rawcode": "o04D",
+      "type": "unit",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_21253",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r\n|cff7dc87d|r|nОбучает элитный войнов Драккарской империи.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка элитных войск Драккари и исследование их улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБерсерк|cffced4da (требуется: Ледяной алтарь).|n- |cffa9c7deГолем|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deБесчисленные бои|cffced4da.|n- |cffa9c7deТемные элементы|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+    },
+    {
+      "rawcode": "o013",
+      "type": "unit",
+      "field": "name",
+      "reference_before": "TRIGSTR_39321",
+      "before": "|cffb4dcdcСторожевая башня|r",
+      "after": "|cffe4cfa3Сторожевая башня|r"
+    },
+    {
+      "rawcode": "o013",
+      "type": "unit",
+      "field": "tip",
+      "reference_before": "TRIGSTR_39322",
+      "before": "Построить |cffb4dcdcСторожевая башню|r",
+      "after": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "o013",
+      "type": "unit",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_13020",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|nОборонительное сооружение. Можно улучшить с помощью укрепленных стен. ",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение для защиты поселения. Атакует наземные и воздушные цели.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою. Броню можно усилить исследованием укреплённых стен.|r"
+    },
+    {
+      "rawcode": "O04H",
+      "type": "unit",
+      "field": "name",
+      "reference_before": "TRIGSTR_30916",
+      "before": "|cffb4dcdcВоеначалник|r",
+      "after": "|cffe4cfa3Военачальник|r"
+    },
+    {
+      "rawcode": "O04H",
+      "type": "unit",
+      "field": "tip",
+      "reference_before": "TRIGSTR_30918",
+      "before": "Призвать |cffb4dcdcВоеначалник|r",
+      "after": "|cffe4cfa3Военачальник|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "R0IG",
+      "type": "upgrade",
+      "field": "name1",
+      "reference_before": "TRIGSTR_41082",
+      "before": "|cffb4dcdcБесчисленые бои|r",
+      "after": "|cffe4cfa3Бесчисленные бои|r — уровень |cffffffff1|r"
+    },
+    {
+      "rawcode": "R0IG",
+      "type": "upgrade",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_41084",
+      "before": "Проводить |cffb4dcdcБесчисленые бои|r",
+      "after": "|cffe4cfa3Бесчисленные бои|r — уровень |cffffffff1|r"
+    },
+    {
+      "rawcode": "R0IG",
+      "type": "upgrade",
+      "field": "name2",
+      "reference_before": "TRIGSTR_40715",
+      "before": "|cffb4dcdcБесчисленые бои|r",
+      "after": "|cffe4cfa3Бесчисленные бои|r — уровень |cffffffff2|r"
+    },
+    {
+      "rawcode": "R0IG",
+      "type": "upgrade",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_41023",
+      "before": "Проводить |cffb4dcdcБесчисленые бои|r",
+      "after": "|cffe4cfa3Бесчисленные бои|r — уровень |cffffffff2|r"
+    }
+  ],
+  "input_sha256": {
+    "map.w3x/war3map.wts": "c13c2422bae119ac2479f3ba8c30dc674c27def94f9b1dc7c2233990ae47a5af",
+    "map.w3x/war3map.w3u": "27dbc36484d43416d83b1399de5f1f437e95d626ede1d65851129e3ebfc360ae",
+    "map.w3x/war3mapSkin.w3u": "0642c190624839ccb851a3fa998848917c2145751bf0d83e42e7c6e6ca1e0424",
+    "map.w3x/war3map.w3q": "203e191a3b2a8ee2712a1c5bed48ffe67694bd77025155396e8b165b38a9f6f9",
+    "map.w3x/war3mapSkin.w3q": "9dfa0f618b000b025e9093e3cf52ee763c4228594e0ca687704a57eab50e19a9",
+    "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/IceTrolls.lua": "88dc8f4e6eb46ff9898fee1e3cec54bc58010faa0f037f1da991dba3278a529b",
+    "map.w3x/_lua/monolith_split/sections/80_runtime/_lib/54_count_dis.lua": "75373f806ffb3fc4437ae1ae61ad26fb2d0c1a146ec8f5824f26e26c636139fb"
+  },
+  "evidence": {
+    "menus": "Все trains/researches/sellunits/upgrade включены. Требования юнитов — requires; ветви — IceTrollsStartEach, Trig_KillLoa_Actions и Trig_ServeLoa_Actions. Требования отдельных уровней исследований проверять в категории исследований.",
+    "economy": "54_count_dis.lua:AddCountDis: foodmade увеличивает базовый доход завершённых зданий; o04C fmade=40.",
+    "main": "Argl принимает оба ресурса; Arlm у мастерской — только древесину. o048 не имеет upgrade. A1KB — ранее подтверждённая аура снижения регенерации.",
+    "shared_tower": "o013 также входит в builds h0C9; текст нейтрален к расе. Остальные прямые потребители — o045, o046, o047. WTS не изменяется.",
+    "title_sync": "O04H: только name/tip, клавиша сохранена. R0IG: только name/tip двух уровней. Полные карточки героя и исследования не закрыты.",
+    "preservation": "Существующий apply_faceless_object_text.py: только указанные строковые модификации, readback SD/HD, остальные байты сохранены."
+  },
+  "remaining": [
+    "h0HO: верфь и прямые зависимости меню",
+    "o06H: Алтарь Лоа и upgrade-потомки o06J/o06K/o06I; проверить дальнейшие ступени",
+    "Полные карточки O04H и R0IG остаются в своих категориях",
+    "Визуальная проверка в игре — пользователь"
+  ],
+  "known_issues": [
+    "Ряд исследований сохраняет унаследованные требования ostr/ofor/ofrt; механика не изменена."
+  ],
+  "formatting_checked": true
+}

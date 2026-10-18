@@ -1,0 +1,906 @@
+{
+  "scope": "Дренеи (Draeneis): категория 5 — Исследования и маркеры (22 технологий)",
+  "upgrades_count": 22,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R07G",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10628,
+          "after": "|cffe4cfa3Дренеи|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10653,
+          "after": "|cffe4cfa3Дренеи|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20114,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Дренеям.|r"
+        }
+      ]
+    },
+    {
+      "id": "R023",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 23194,
+          "after": "|cffe4cfa3Руническое оружие [1/6]|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 23195,
+          "after": "|cffe4cfa3Руническое оружие [2/6]|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 23196,
+          "after": "|cffe4cfa3Руническое оружие [3/6]|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 23203,
+          "after": "|cffe4cfa3Руническое оружие [4/6]|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 23204,
+          "after": "|cffe4cfa3Руническое оружие [5/6]|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 23205,
+          "after": "|cffe4cfa3Руническое оружие [6/6]|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 23197,
+          "after": "|cffe4cfa3Руническое оружие [1/6]|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 23198,
+          "after": "|cffe4cfa3Руническое оружие [2/6]|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 23199,
+          "after": "|cffe4cfa3Руническое оружие [3/6]|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 23206,
+          "after": "|cffe4cfa3Руническое оружие [4/6]|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 23207,
+          "after": "|cffe4cfa3Руническое оружие [5/6]|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 23208,
+          "after": "|cffe4cfa3Руническое оружие [6/6]|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 23200,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+2|cffced4da ед. (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 23201,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+4|cffced4da ед. (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 23202,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+6|cffced4da ед. (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 23209,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+8|cffced4da ед. (уровень |cffffffff4|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 23210,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+10|cffced4da ед. (уровень |cffffffff5|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 23211,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+12|cffced4da ед. (уровень |cffffffff6|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R024",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 23215,
+          "after": "|cffe4cfa3Апекситовый доспех [1/6]|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 23216,
+          "after": "|cffe4cfa3Апекситовый доспех [2/6]|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 23217,
+          "after": "|cffe4cfa3Апекситовый доспех [3/6]|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 23212,
+          "after": "|cffe4cfa3Апекситовый доспех [4/6]|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 23213,
+          "after": "|cffe4cfa3Апекситовый доспех [5/6]|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 23214,
+          "after": "|cffe4cfa3Апекситовый доспех [6/6]|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 23218,
+          "after": "|cffe4cfa3Апекситовый доспех [1/6]|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 23219,
+          "after": "|cffe4cfa3Апекситовый доспех [2/6]|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 23220,
+          "after": "|cffe4cfa3Апекситовый доспех [3/6]|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 23221,
+          "after": "|cffe4cfa3Апекситовый доспех [4/6]|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 23222,
+          "after": "|cffe4cfa3Апекситовый доспех [5/6]|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 23223,
+          "after": "|cffe4cfa3Апекситовый доспех [6/6]|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 23224,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+2|cffced4da ед. (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 23225,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+4|cffced4da ед. (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 23226,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+6|cffced4da ед. (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 23227,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+8|cffced4da ед. (уровень |cffffffff4|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 23229,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+10|cffced4da ед. (уровень |cffffffff5|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 23228,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+12|cffced4da ед. (уровень |cffffffff6|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02P",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 23251,
+          "after": "|cffe4cfa3Заточенные наконечники [1/6]|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 23252,
+          "after": "|cffe4cfa3Заточенные наконечники [2/6]|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 23253,
+          "after": "|cffe4cfa3Заточенные наконечники [3/6]|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 23266,
+          "after": "|cffe4cfa3Заточенные наконечники [4/6]|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 23267,
+          "after": "|cffe4cfa3Заточенные наконечники [5/6]|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 23268,
+          "after": "|cffe4cfa3Заточенные наконечники [6/6]|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 23254,
+          "after": "|cffe4cfa3Заточенные наконечники [1/6]|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 23255,
+          "after": "|cffe4cfa3Заточенные наконечники [2/6]|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 23256,
+          "after": "|cffe4cfa3Заточенные наконечники [3/6]|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 23260,
+          "after": "|cffe4cfa3Заточенные наконечники [4/6]|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 23261,
+          "after": "|cffe4cfa3Заточенные наконечники [5/6]|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 23262,
+          "after": "|cffe4cfa3Заточенные наконечники [6/6]|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 23257,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+2|cffced4da ед. (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 23258,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+4|cffced4da ед. (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 23259,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+6|cffced4da ед. (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 23263,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+8|cffced4da ед. (уровень |cffffffff4|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 23264,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+10|cffced4da ед. (уровень |cffffffff5|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 23265,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+12|cffced4da ед. (уровень |cffffffff6|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02R",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 4307,
+          "after": "|cffe4cfa3Посвящение Озаренных|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4308,
+          "after": "|cffe4cfa3Посвящение Озаренных|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11682,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает возможность возводить Храм Озаренных и нанимать элитные войска Озарённых дренеев.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deХрам Озаренных|cffced4da: открывает постройку и доступ к священным воинам.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02Q",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 40968,
+          "after": "|cffe4cfa3Привлечь Сломленных|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40969,
+          "after": "|cffe4cfa3Привлечь Сломленных|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 4303,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает возможность возводить Логово Сломленных и нанимать войска Сломленных дренеев и Пеплоустов.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛогово Сломленных|cffced4da: открывает постройку и доступ к изгнанникам.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0D8",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 40971,
+          "after": "|cffe4cfa3Улучшенные инструменты [1/4]|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 40972,
+          "after": "|cffe4cfa3Улучшенные инструменты [2/4]|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 40973,
+          "after": "|cffe4cfa3Улучшенные инструменты [3/4]|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 40974,
+          "after": "|cffe4cfa3Улучшенные инструменты [4/4]|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40975,
+          "after": "|cffe4cfa3Улучшенные инструменты [1/4]|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 40976,
+          "after": "|cffe4cfa3Улучшенные инструменты [2/4]|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 40977,
+          "after": "|cffe4cfa3Улучшенные инструменты [3/4]|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 40978,
+          "after": "|cffe4cfa3Улучшенные инструменты [4/4]|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 8002,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины на |cffc8e087+8|cffced4da ед. (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 7999,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины на |cffc8e087+16|cffced4da ед. (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 8000,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины на |cffc8e087+24|cffced4da ед. (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 8001,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины на |cffc8e087+32|cffced4da ед. (уровень |cffffffff4|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R029",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41092,
+          "after": "|cffe4cfa3Дренейское мастерство [1/3]|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 41102,
+          "after": "|cffe4cfa3Дренейское мастерство [2/3]|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 41116,
+          "after": "|cffe4cfa3Дренейское мастерство [3/3]|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 41117,
+          "after": "|cffe4cfa3Дренейское мастерство [1/3]|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 41118,
+          "after": "|cffe4cfa3Дренейское мастерство [2/3]|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 41119,
+          "after": "|cffe4cfa3Дренейское мастерство [3/3]|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20601,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает боевые характеристики лазутчиков, рангари и всадников на элекках: увеличивает здоровье на |cffc8e087+40|cffced4da ед. и скорость передвижения (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 20602,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает боевые характеристики лазутчиков, рангари и всадников на элекках: увеличивает здоровье на |cffc8e087+80|cffced4da ед. и скорость передвижения (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 20603,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает боевые характеристики лазутчиков, рангари и всадников на элекках: увеличивает здоровье на |cffc8e087+120|cffced4da ед. и скорость передвижения (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02B",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 23233,
+          "after": "|cffe4cfa3Тяжелые доспехи|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 23234,
+          "after": "|cffe4cfa3Тяжелые доспехи|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 23235,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Оснащает всадников на элекках массивными доспехами, увеличивая запас здоровья на |cffc8e087+150|cffced4da ед. и показатель брони на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02C",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 4067,
+          "after": "|cffe4cfa3Ковка оружия|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4070,
+          "after": "|cffe4cfa3Ковка оружия|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 4073,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Изготавливает усиленное вооружение для всадников на элекках, увеличивая силу атаки на |cffc8e087+8|cffced4da ед.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02D",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 23236,
+          "after": "|cffe4cfa3Таинство Магии [1/2]|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 23237,
+          "after": "|cffe4cfa3Таинство Магии [2/2]|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 23238,
+          "after": "|cffe4cfa3Таинство Магии [1/2]|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 23239,
+          "after": "|cffe4cfa3Таинство Магии [2/2]|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 23240,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг чароплетниц до адептов: увеличивает здоровье на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед., скорость регенерации маны и открывает заклинание «Похищение маны» (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЧароплетница|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 23241,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг чароплетниц до мастеров: увеличивает здоровье на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед., скорость регенерации маны и открывает заклинание «Немота» (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЧароплетница|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02E",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 23242,
+          "after": "|cffe4cfa3Дар Наару [1/3]|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 23243,
+          "after": "|cffe4cfa3Дар Наару [2/3]|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 23244,
+          "after": "|cffe4cfa3Дар Наару [3/3]|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 23245,
+          "after": "|cffe4cfa3Дар Наару [1/3]|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 23246,
+          "after": "|cffe4cfa3Дар Наару [2/3]|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 23247,
+          "after": "|cffe4cfa3Дар Наару [3/3]|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 23248,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает жрецов в таинства Света: увеличивает запас маны на |cffc8e087+50|cffced4da ед., её регенерацию и открывает новые заклинания (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЖрец|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 23249,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает жрецов в таинства Света: увеличивает запас маны на |cffc8e087+100|cffced4da ед., её регенерацию и открывает новые заклинания (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЖрец|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 23250,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает жрецов в таинства Света: увеличивает запас маны на |cffc8e087+150|cffced4da ед., её регенерацию и открывает новые заклинания (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЖрец|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02F",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 4104,
+          "after": "|cffe4cfa3Чародейские познания|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4105,
+          "after": "|cffe4cfa3Чародейские познания|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 4106,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас маны чародеев на |cffc8e087+25|cffced4da ед. и открывает способность «Безумие».|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЧародей|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R022",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 19558,
+          "after": "|cffe4cfa3Посвящение Паладина [1/3]|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 19559,
+          "after": "|cffe4cfa3Посвящение Паладина [2/3]|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 19564,
+          "after": "|cffe4cfa3Посвящение Паладина [3/3]|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 19562,
+          "after": "|cffe4cfa3Посвящение Паладина [1/3]|r (|cffffffffF|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 19563,
+          "after": "|cffe4cfa3Посвящение Паладина [2/3]|r (|cffffffffF|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 19573,
+          "after": "|cffe4cfa3Посвящение Паладина [3/3]|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3747,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья паладинов на |cffc8e087+50|cffced4da ед., запас маны на |cffc8e087+40|cffced4da ед., её регенерацию и открывает священные чары (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 3748,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья паладинов на |cffc8e087+100|cffced4da ед., запас маны на |cffc8e087+80|cffced4da ед., её регенерацию и открывает священные чары (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 4208,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья паладинов на |cffc8e087+150|cffced4da ед., запас маны на |cffc8e087+120|cffced4da ед., её регенерацию и открывает священные чары (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02M",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 4224,
+          "after": "|cffe4cfa3Учение наару [1/2]|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 4225,
+          "after": "|cffe4cfa3Учение наару [2/2]|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4227,
+          "after": "|cffe4cfa3Учение наару [1/2]|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4228,
+          "after": "|cffe4cfa3Учение наару [2/2]|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 4230,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Жрицы Наару постигают глубокие знания Света: увеличивает запас маны на |cffc8e087+40|cffced4da ед. и скорость её регенерации на |cffc8e087+0.3|cffced4da ед./сек. (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЖрица Наару|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 4231,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Жрицы Наару постигают высшие знания Света: увеличивает запас маны на |cffc8e087+80|cffced4da ед. и скорость её регенерации на |cffc8e087+0.6|cffced4da ед./сек. (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЖрица Наару|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02L",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 4211,
+          "after": "|cffe4cfa3Изучение магии [1/2]|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 4212,
+          "after": "|cffe4cfa3Изучение магии [2/2]|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4214,
+          "after": "|cffe4cfa3Изучение магии [1/2]|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4215,
+          "after": "|cffe4cfa3Изучение магии [2/2]|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 4217,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Озарённых на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+50|cffced4da ед., её регенерацию на |cffc8e087+0.5|cffced4da ед./сек. и открывает способность «Цепная молния» (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deМаг Озаренный|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 4218,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Озарённых на |cffc8e087+80|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед., её регенерацию на |cffc8e087+1.0|cffced4da ед./сек. и открывает способность «Сглаз» (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deМаг Озаренный|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02N",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 4237,
+          "after": "|cffe4cfa3Освящение оружия|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4240,
+          "after": "|cffe4cfa3Освящение оружия|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 4243,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наполняет клинки мечников Озарённых священной силой, наделяя их атаки способностью «Посвященное оружие» с повышенным уроном по всем типам брони.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02J",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41093,
+          "after": "|cffe4cfa3Мастерство Пеплоустов|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 41094,
+          "after": "|cffe4cfa3Мастерство Пеплоустов|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 4273,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает воинов Сломленных боевой ярости Пеплоустов: повышает скорость атаки, но снижает скорость передвижения.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|n|n|cffff8080Исключает исследование «Мастерство Сломленных».|r"
+        }
+      ]
+    },
+    {
+      "id": "R02K",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41095,
+          "after": "|cffe4cfa3Мастерство Сломленных|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 41096,
+          "after": "|cffe4cfa3Мастерство Сломленных|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 4274,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает воинов Сломленных ловкости и стремительности: повышает скорость передвижения, но незначительно снижает скорость атаки.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|n|n|cffff8080Исключает исследование «Мастерство Пеплоустов».|r"
+        }
+      ]
+    },
+    {
+      "id": "R02G",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 4126,
+          "after": "|cffe4cfa3Мудрость предков [1/3]|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 4127,
+          "after": "|cffe4cfa3Мудрость предков [2/3]|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 4128,
+          "after": "|cffe4cfa3Мудрость предков [3/3]|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4129,
+          "after": "|cffe4cfa3Мудрость предков [1/3]|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4130,
+          "after": "|cffe4cfa3Мудрость предков [2/3]|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 4131,
+          "after": "|cffe4cfa3Мудрость предков [3/3]|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20604,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает Сломленным провидцам шаманские тайны: увеличивает дальность атаки, запас маны на |cffc8e087+25|cffced4da ед. и наделяет новыми способностями (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 20605,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает Сломленным провидцам шаманские тайны: увеличивает дальность атаки, запас маны на |cffc8e087+50|cffced4da ед. и наделяет новыми способностями (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 20606,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает Сломленным провидцам шаманские тайны: увеличивает дальность атаки, запас маны на |cffc8e087+75|cffced4da ед. и наделяет новыми способностями (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02H",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 4141,
+          "after": "|cffe4cfa3Мастерство танца ветра|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4144,
+          "after": "|cffe4cfa3Мастерство танца ветра|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 4147,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Сломленных мастеров скрытности и внезапному нападению, открывая способность «Танец ветра».|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02I",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 4154,
+          "after": "|cffe4cfa3Отравленное оружие|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4157,
+          "after": "|cffe4cfa3Отравленное оружие|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 4160,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Покрывает оружие Сломленных смертоносным ядом, замедляющим врагов и наносящим периодический урон.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+        }
+      ]
+    }
+  ]
+}

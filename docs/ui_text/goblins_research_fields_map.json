@@ -1,0 +1,1967 @@
+{
+  "R0D4": {
+    "name1": {
+      "raw": "TRIGSTR_23582",
+      "wts_id": 23582,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_23646",
+      "wts_id": 23646,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_23617",
+      "wts_id": 23617,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_23645",
+      "wts_id": 23645,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_3418",
+      "wts_id": 3418,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_4028",
+      "wts_id": 4028,
+      "is_shared": true
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  },
+  "R04P": {
+    "name1": {
+      "raw": "TRIGSTR_34264",
+      "wts_id": 34264,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_34265",
+      "wts_id": 34265,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_34266",
+      "wts_id": 34266,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_34267",
+      "wts_id": 34267,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_34268",
+      "wts_id": 34268,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_34269",
+      "wts_id": 34269,
+      "is_shared": false
+    },
+    "name7": {
+      "raw": "TRIGSTR_7419",
+      "wts_id": 7419,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_34275",
+      "wts_id": 34275,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_34270",
+      "wts_id": 34270,
+      "is_shared": false
+    },
+    "tip3": {
+      "raw": "TRIGSTR_34271",
+      "wts_id": 34271,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_34272",
+      "wts_id": 34272,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_34273",
+      "wts_id": 34273,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_34274",
+      "wts_id": 34274,
+      "is_shared": false
+    },
+    "tip7": {
+      "raw": "TRIGSTR_7425",
+      "wts_id": 7425,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_41792",
+      "wts_id": 41792,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_41806",
+      "wts_id": 41806,
+      "is_shared": false
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_41902",
+      "wts_id": 41902,
+      "is_shared": false
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_42233",
+      "wts_id": 42233,
+      "is_shared": false
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_42369",
+      "wts_id": 42369,
+      "is_shared": false
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_42370",
+      "wts_id": 42370,
+      "is_shared": false
+    },
+    "ubertip7": {
+      "raw": "TRIGSTR_7189",
+      "wts_id": 7189,
+      "is_shared": false
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  },
+  "R04E": {
+    "name1": {
+      "raw": "TRIGSTR_27009",
+      "wts_id": 27009,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_27424",
+      "wts_id": 27424,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_27425",
+      "wts_id": 27425,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_27471",
+      "wts_id": 27471,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_27697",
+      "wts_id": 27697,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_27698",
+      "wts_id": 27698,
+      "is_shared": false
+    },
+    "name7": {
+      "raw": "TRIGSTR_7027",
+      "wts_id": 7027,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_27010",
+      "wts_id": 27010,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_27699",
+      "wts_id": 27699,
+      "is_shared": false
+    },
+    "tip3": {
+      "raw": "TRIGSTR_27803",
+      "wts_id": 27803,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_28826",
+      "wts_id": 28826,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_29279",
+      "wts_id": 29279,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_30289",
+      "wts_id": 30289,
+      "is_shared": false
+    },
+    "tip7": {
+      "raw": "TRIGSTR_7033",
+      "wts_id": 7033,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_7014",
+      "wts_id": 7014,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_7034",
+      "wts_id": 7034,
+      "is_shared": false
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_7035",
+      "wts_id": 7035,
+      "is_shared": false
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_7036",
+      "wts_id": 7036,
+      "is_shared": false
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_7037",
+      "wts_id": 7037,
+      "is_shared": false
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_7038",
+      "wts_id": 7038,
+      "is_shared": false
+    },
+    "ubertip7": {
+      "raw": "TRIGSTR_7039",
+      "wts_id": 7039,
+      "is_shared": false
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  },
+  "R04F": {
+    "name1": {
+      "raw": "TRIGSTR_30629",
+      "wts_id": 30629,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_30864",
+      "wts_id": 30864,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_31175",
+      "wts_id": 31175,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_31176",
+      "wts_id": 31176,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_31221",
+      "wts_id": 31221,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_31222",
+      "wts_id": 31222,
+      "is_shared": false
+    },
+    "name7": {
+      "raw": "TRIGSTR_7057",
+      "wts_id": 7057,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_30630",
+      "wts_id": 30630,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_31225",
+      "wts_id": 31225,
+      "is_shared": false
+    },
+    "tip3": {
+      "raw": "TRIGSTR_31230",
+      "wts_id": 31230,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_31266",
+      "wts_id": 31266,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_31267",
+      "wts_id": 31267,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_31268",
+      "wts_id": 31268,
+      "is_shared": false
+    },
+    "tip7": {
+      "raw": "TRIGSTR_7063",
+      "wts_id": 7063,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_7044",
+      "wts_id": 7044,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_7064",
+      "wts_id": 7064,
+      "is_shared": false
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_7065",
+      "wts_id": 7065,
+      "is_shared": false
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_7066",
+      "wts_id": 7066,
+      "is_shared": false
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_7067",
+      "wts_id": 7067,
+      "is_shared": false
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_7068",
+      "wts_id": 7068,
+      "is_shared": false
+    },
+    "ubertip7": {
+      "raw": "TRIGSTR_7069",
+      "wts_id": 7069,
+      "is_shared": false
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  },
+  "R04G": {
+    "name1": {
+      "raw": "TRIGSTR_31269",
+      "wts_id": 31269,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_31271",
+      "wts_id": 31271,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_31272",
+      "wts_id": 31272,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_31273",
+      "wts_id": 31273,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_31274",
+      "wts_id": 31274,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_31489",
+      "wts_id": 31489,
+      "is_shared": false
+    },
+    "name7": {
+      "raw": "TRIGSTR_7087",
+      "wts_id": 7087,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_31270",
+      "wts_id": 31270,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_31611",
+      "wts_id": 31611,
+      "is_shared": false
+    },
+    "tip3": {
+      "raw": "TRIGSTR_31614",
+      "wts_id": 31614,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_31615",
+      "wts_id": 31615,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_31616",
+      "wts_id": 31616,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_31642",
+      "wts_id": 31642,
+      "is_shared": false
+    },
+    "tip7": {
+      "raw": "TRIGSTR_7093",
+      "wts_id": 7093,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_7074",
+      "wts_id": 7074,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_7094",
+      "wts_id": 7094,
+      "is_shared": false
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_7095",
+      "wts_id": 7095,
+      "is_shared": false
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_7096",
+      "wts_id": 7096,
+      "is_shared": false
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_7097",
+      "wts_id": 7097,
+      "is_shared": false
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_7098",
+      "wts_id": 7098,
+      "is_shared": false
+    },
+    "ubertip7": {
+      "raw": "TRIGSTR_7099",
+      "wts_id": 7099,
+      "is_shared": false
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  },
+  "R04H": {
+    "name1": {
+      "raw": "TRIGSTR_31644",
+      "wts_id": 31644,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_31661",
+      "wts_id": 31661,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_32264",
+      "wts_id": 32264,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_32265",
+      "wts_id": 32265,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_32266",
+      "wts_id": 32266,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_32931",
+      "wts_id": 32931,
+      "is_shared": false
+    },
+    "name7": {
+      "raw": "TRIGSTR_11013",
+      "wts_id": 11013,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_31652",
+      "wts_id": 31652,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_32932",
+      "wts_id": 32932,
+      "is_shared": false
+    },
+    "tip3": {
+      "raw": "TRIGSTR_33675",
+      "wts_id": 33675,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_33802",
+      "wts_id": 33802,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_33879",
+      "wts_id": 33879,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_33902",
+      "wts_id": 33902,
+      "is_shared": false
+    },
+    "tip7": {
+      "raw": "TRIGSTR_11026",
+      "wts_id": 11026,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_7104",
+      "wts_id": 7104,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_7124",
+      "wts_id": 7124,
+      "is_shared": false
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_7125",
+      "wts_id": 7125,
+      "is_shared": false
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_7126",
+      "wts_id": 7126,
+      "is_shared": false
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_7127",
+      "wts_id": 7127,
+      "is_shared": false
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_7128",
+      "wts_id": 7128,
+      "is_shared": false
+    },
+    "ubertip7": {
+      "raw": "TRIGSTR_7129",
+      "wts_id": 7129,
+      "is_shared": false
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  },
+  "R04I": {
+    "name1": {
+      "raw": "TRIGSTR_33930",
+      "wts_id": 33930,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_34176",
+      "wts_id": 34176,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_34177",
+      "wts_id": 34177,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_34178",
+      "wts_id": 34178,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_34179",
+      "wts_id": 34179,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_34180",
+      "wts_id": 34180,
+      "is_shared": false
+    },
+    "name7": {
+      "raw": "TRIGSTR_7147",
+      "wts_id": 7147,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_34175",
+      "wts_id": 34175,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_34181",
+      "wts_id": 34181,
+      "is_shared": false
+    },
+    "tip3": {
+      "raw": "TRIGSTR_34182",
+      "wts_id": 34182,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_34183",
+      "wts_id": 34183,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_34184",
+      "wts_id": 34184,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_34185",
+      "wts_id": 34185,
+      "is_shared": false
+    },
+    "tip7": {
+      "raw": "TRIGSTR_7153",
+      "wts_id": 7153,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_9486",
+      "wts_id": 9486,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_9487",
+      "wts_id": 9487,
+      "is_shared": false
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_9488",
+      "wts_id": 9488,
+      "is_shared": false
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_9489",
+      "wts_id": 9489,
+      "is_shared": false
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_9490",
+      "wts_id": 9490,
+      "is_shared": false
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_9491",
+      "wts_id": 9491,
+      "is_shared": false
+    },
+    "ubertip7": {
+      "raw": "TRIGSTR_7134",
+      "wts_id": 7134,
+      "is_shared": false
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  },
+  "R04J": {
+    "name1": {
+      "raw": "TRIGSTR_34186",
+      "wts_id": 34186,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_34188",
+      "wts_id": 34188,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_34189",
+      "wts_id": 34189,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_34190",
+      "wts_id": 34190,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_34191",
+      "wts_id": 34191,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_34192",
+      "wts_id": 34192,
+      "is_shared": false
+    },
+    "name7": {
+      "raw": "TRIGSTR_7177",
+      "wts_id": 7177,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_34187",
+      "wts_id": 34187,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_34193",
+      "wts_id": 34193,
+      "is_shared": false
+    },
+    "tip3": {
+      "raw": "TRIGSTR_34194",
+      "wts_id": 34194,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_34195",
+      "wts_id": 34195,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_34196",
+      "wts_id": 34196,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_34197",
+      "wts_id": 34197,
+      "is_shared": false
+    },
+    "tip7": {
+      "raw": "TRIGSTR_7183",
+      "wts_id": 7183,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_9492",
+      "wts_id": 9492,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_9493",
+      "wts_id": 9493,
+      "is_shared": false
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_9494",
+      "wts_id": 9494,
+      "is_shared": false
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_9495",
+      "wts_id": 9495,
+      "is_shared": false
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_9496",
+      "wts_id": 9496,
+      "is_shared": false
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_9497",
+      "wts_id": 9497,
+      "is_shared": false
+    },
+    "ubertip7": {
+      "raw": "TRIGSTR_7164",
+      "wts_id": 7164,
+      "is_shared": false
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  },
+  "R04K": {
+    "name1": {
+      "raw": "TRIGSTR_34198",
+      "wts_id": 34198,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_34200",
+      "wts_id": 34200,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_34201",
+      "wts_id": 34201,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_34202",
+      "wts_id": 34202,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_34203",
+      "wts_id": 34203,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_34204",
+      "wts_id": 34204,
+      "is_shared": false
+    },
+    "name7": {
+      "raw": "TRIGSTR_7207",
+      "wts_id": 7207,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_34199",
+      "wts_id": 34199,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_34205",
+      "wts_id": 34205,
+      "is_shared": false
+    },
+    "tip3": {
+      "raw": "TRIGSTR_34206",
+      "wts_id": 34206,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_34207",
+      "wts_id": 34207,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_34208",
+      "wts_id": 34208,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_34209",
+      "wts_id": 34209,
+      "is_shared": false
+    },
+    "tip7": {
+      "raw": "TRIGSTR_7213",
+      "wts_id": 7213,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_7194",
+      "wts_id": 7194,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_7214",
+      "wts_id": 7214,
+      "is_shared": false
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_7215",
+      "wts_id": 7215,
+      "is_shared": false
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_7216",
+      "wts_id": 7216,
+      "is_shared": false
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_7217",
+      "wts_id": 7217,
+      "is_shared": false
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_7218",
+      "wts_id": 7218,
+      "is_shared": false
+    },
+    "ubertip7": {
+      "raw": "TRIGSTR_7184",
+      "wts_id": 7184,
+      "is_shared": false
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  },
+  "R04L": {
+    "name1": {
+      "raw": "TRIGSTR_34210",
+      "wts_id": 34210,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_34212",
+      "wts_id": 34212,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_34213",
+      "wts_id": 34213,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_34214",
+      "wts_id": 34214,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_34215",
+      "wts_id": 34215,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_34216",
+      "wts_id": 34216,
+      "is_shared": false
+    },
+    "name7": {
+      "raw": "TRIGSTR_7237",
+      "wts_id": 7237,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_34211",
+      "wts_id": 34211,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_2151",
+      "wts_id": 2151,
+      "is_shared": true
+    },
+    "tip3": {
+      "raw": "TRIGSTR_7059",
+      "wts_id": 7059,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_8109",
+      "wts_id": 8109,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_8110",
+      "wts_id": 8110,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_9612",
+      "wts_id": 9612,
+      "is_shared": false
+    },
+    "tip7": {
+      "raw": "TRIGSTR_7243",
+      "wts_id": 7243,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_929",
+      "wts_id": 929,
+      "is_shared": true
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_1148",
+      "wts_id": 1148,
+      "is_shared": true
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_1172",
+      "wts_id": 1172,
+      "is_shared": true
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_2849",
+      "wts_id": 2849,
+      "is_shared": true
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_2894",
+      "wts_id": 2894,
+      "is_shared": true
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_7224",
+      "wts_id": 7224,
+      "is_shared": false
+    },
+    "ubertip7": {
+      "raw": "TRIGSTR_7185",
+      "wts_id": 7185,
+      "is_shared": false
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  },
+  "R04M": {
+    "name1": {
+      "raw": "TRIGSTR_12366",
+      "wts_id": 12366,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_15718",
+      "wts_id": 15718,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_15789",
+      "wts_id": 15789,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_18437",
+      "wts_id": 18437,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_22071",
+      "wts_id": 22071,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_22072",
+      "wts_id": 22072,
+      "is_shared": false
+    },
+    "name7": {
+      "raw": "TRIGSTR_7267",
+      "wts_id": 7267,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_22876",
+      "wts_id": 22876,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_22073",
+      "wts_id": 22073,
+      "is_shared": false
+    },
+    "tip3": {
+      "raw": "TRIGSTR_22139",
+      "wts_id": 22139,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_22140",
+      "wts_id": 22140,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_22723",
+      "wts_id": 22723,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_22724",
+      "wts_id": 22724,
+      "is_shared": false
+    },
+    "tip7": {
+      "raw": "TRIGSTR_7273",
+      "wts_id": 7273,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_7254",
+      "wts_id": 7254,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_7274",
+      "wts_id": 7274,
+      "is_shared": false
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_7275",
+      "wts_id": 7275,
+      "is_shared": false
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_7276",
+      "wts_id": 7276,
+      "is_shared": false
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_7277",
+      "wts_id": 7277,
+      "is_shared": false
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_7278",
+      "wts_id": 7278,
+      "is_shared": false
+    },
+    "ubertip7": {
+      "raw": "TRIGSTR_7186",
+      "wts_id": 7186,
+      "is_shared": false
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  },
+  "R056": {
+    "name1": {
+      "raw": "TRIGSTR_22267",
+      "wts_id": 22267,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_7112",
+      "wts_id": 7112,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_7113",
+      "wts_id": 7113,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_7114",
+      "wts_id": 7114,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_7115",
+      "wts_id": 7115,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_7116",
+      "wts_id": 7116,
+      "is_shared": false
+    },
+    "name7": {
+      "raw": "TRIGSTR_7117",
+      "wts_id": 7117,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_22269",
+      "wts_id": 22269,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_7118",
+      "wts_id": 7118,
+      "is_shared": false
+    },
+    "tip3": {
+      "raw": "TRIGSTR_7119",
+      "wts_id": 7119,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_7120",
+      "wts_id": 7120,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_7121",
+      "wts_id": 7121,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_7122",
+      "wts_id": 7122,
+      "is_shared": false
+    },
+    "tip7": {
+      "raw": "TRIGSTR_7123",
+      "wts_id": 7123,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_34302",
+      "wts_id": 34302,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_8413",
+      "wts_id": 8413,
+      "is_shared": false
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_8414",
+      "wts_id": 8414,
+      "is_shared": false
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_8415",
+      "wts_id": 8415,
+      "is_shared": false
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_8416",
+      "wts_id": 8416,
+      "is_shared": false
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_8417",
+      "wts_id": 8417,
+      "is_shared": false
+    },
+    "ubertip7": {
+      "raw": "TRIGSTR_8418",
+      "wts_id": 8418,
+      "is_shared": false
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  },
+  "R07A": {
+    "name1": {
+      "raw": "TRIGSTR_22290",
+      "wts_id": 22290,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_4045",
+      "wts_id": 4045,
+      "is_shared": true
+    },
+    "name3": {
+      "raw": "TRIGSTR_4053",
+      "wts_id": 4053,
+      "is_shared": true
+    },
+    "name4": {
+      "raw": "TRIGSTR_4291",
+      "wts_id": 4291,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_23516",
+      "wts_id": 23516,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_4112",
+      "wts_id": 4112,
+      "is_shared": true
+    },
+    "tip3": {
+      "raw": "TRIGSTR_4284",
+      "wts_id": 4284,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_7849",
+      "wts_id": 7849,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_34333",
+      "wts_id": 34333,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_4080",
+      "wts_id": 4080,
+      "is_shared": false
+    }
+  },
+  "R05X": {
+    "name1": {
+      "raw": "TRIGSTR_22878",
+      "wts_id": 22878,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_905",
+      "wts_id": 905,
+      "is_shared": true
+    },
+    "name3": {
+      "raw": "TRIGSTR_906",
+      "wts_id": 906,
+      "is_shared": true
+    },
+    "name4": {
+      "raw": "TRIGSTR_3797",
+      "wts_id": 3797,
+      "is_shared": true
+    },
+    "tip1": {
+      "raw": "TRIGSTR_22882",
+      "wts_id": 22882,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_3785",
+      "wts_id": 3785,
+      "is_shared": true
+    },
+    "tip3": {
+      "raw": "TRIGSTR_3786",
+      "wts_id": 3786,
+      "is_shared": true
+    },
+    "tip4": {
+      "raw": "TRIGSTR_4042",
+      "wts_id": 4042,
+      "is_shared": true
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_34327",
+      "wts_id": 34327,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_908",
+      "wts_id": 908,
+      "is_shared": true
+    }
+  },
+  "R05Y": {
+    "name1": {
+      "raw": "TRIGSTR_34331",
+      "wts_id": 34331,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_3795",
+      "wts_id": 3795,
+      "is_shared": true
+    },
+    "name3": {
+      "raw": "TRIGSTR_3796",
+      "wts_id": 3796,
+      "is_shared": true
+    },
+    "name4": {
+      "raw": "TRIGSTR_4056",
+      "wts_id": 4056,
+      "is_shared": true
+    },
+    "tip1": {
+      "raw": "TRIGSTR_34332",
+      "wts_id": 34332,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_3966",
+      "wts_id": 3966,
+      "is_shared": true
+    },
+    "tip3": {
+      "raw": "TRIGSTR_4039",
+      "wts_id": 4039,
+      "is_shared": true
+    },
+    "tip4": {
+      "raw": "TRIGSTR_4285",
+      "wts_id": 4285,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_34330",
+      "wts_id": 34330,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_3798",
+      "wts_id": 3798,
+      "is_shared": true
+    }
+  },
+  "R04N": {
+    "name1": {
+      "raw": "TRIGSTR_22884",
+      "wts_id": 22884,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_22886",
+      "wts_id": 22886,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_22888",
+      "wts_id": 22888,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_22889",
+      "wts_id": 22889,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_22890",
+      "wts_id": 22890,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_22963",
+      "wts_id": 22963,
+      "is_shared": false
+    },
+    "name7": {
+      "raw": "TRIGSTR_7297",
+      "wts_id": 7297,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_22885",
+      "wts_id": 22885,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_22967",
+      "wts_id": 22967,
+      "is_shared": false
+    },
+    "tip3": {
+      "raw": "TRIGSTR_22986",
+      "wts_id": 22986,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_23489",
+      "wts_id": 23489,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_26887",
+      "wts_id": 26887,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_26889",
+      "wts_id": 26889,
+      "is_shared": false
+    },
+    "tip7": {
+      "raw": "TRIGSTR_7303",
+      "wts_id": 7303,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_7398",
+      "wts_id": 7398,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_7399",
+      "wts_id": 7399,
+      "is_shared": false
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_7400",
+      "wts_id": 7400,
+      "is_shared": false
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_7401",
+      "wts_id": 7401,
+      "is_shared": false
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_7402",
+      "wts_id": 7402,
+      "is_shared": false
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_5406",
+      "wts_id": 5406,
+      "is_shared": false
+    },
+    "ubertip7": {
+      "raw": "TRIGSTR_7187",
+      "wts_id": 7187,
+      "is_shared": false
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  },
+  "R04Q": {
+    "name1": {
+      "raw": "TRIGSTR_34303",
+      "wts_id": 34303,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_34305",
+      "wts_id": 34305,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_34306",
+      "wts_id": 34306,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_34307",
+      "wts_id": 34307,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_34308",
+      "wts_id": 34308,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_34309",
+      "wts_id": 34309,
+      "is_shared": false
+    },
+    "name7": {
+      "raw": "TRIGSTR_7512",
+      "wts_id": 7512,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_34304",
+      "wts_id": 34304,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_34310",
+      "wts_id": 34310,
+      "is_shared": false
+    },
+    "tip3": {
+      "raw": "TRIGSTR_34311",
+      "wts_id": 34311,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_34312",
+      "wts_id": 34312,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_34313",
+      "wts_id": 34313,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_34314",
+      "wts_id": 34314,
+      "is_shared": false
+    },
+    "tip7": {
+      "raw": "TRIGSTR_7518",
+      "wts_id": 7518,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_9401",
+      "wts_id": 9401,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_9412",
+      "wts_id": 9412,
+      "is_shared": false
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_9413",
+      "wts_id": 9413,
+      "is_shared": false
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_9414",
+      "wts_id": 9414,
+      "is_shared": false
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_9415",
+      "wts_id": 9415,
+      "is_shared": false
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_12515",
+      "wts_id": 12515,
+      "is_shared": false
+    },
+    "ubertip7": {
+      "raw": "TRIGSTR_7249",
+      "wts_id": 7249,
+      "is_shared": false
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  },
+  "R04R": {
+    "name1": {
+      "raw": "TRIGSTR_34276",
+      "wts_id": 34276,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_34278",
+      "wts_id": 34278,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_34279",
+      "wts_id": 34279,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_34280",
+      "wts_id": 34280,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_34281",
+      "wts_id": 34281,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_34282",
+      "wts_id": 34282,
+      "is_shared": false
+    },
+    "name7": {
+      "raw": "TRIGSTR_7481",
+      "wts_id": 7481,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_34277",
+      "wts_id": 34277,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_34283",
+      "wts_id": 34283,
+      "is_shared": false
+    },
+    "tip3": {
+      "raw": "TRIGSTR_34284",
+      "wts_id": 34284,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_34285",
+      "wts_id": 34285,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_34286",
+      "wts_id": 34286,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_34287",
+      "wts_id": 34287,
+      "is_shared": false
+    },
+    "tip7": {
+      "raw": "TRIGSTR_7487",
+      "wts_id": 7487,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_9383",
+      "wts_id": 9383,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_9394",
+      "wts_id": 9394,
+      "is_shared": false
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_9395",
+      "wts_id": 9395,
+      "is_shared": false
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_9396",
+      "wts_id": 9396,
+      "is_shared": false
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_9397",
+      "wts_id": 9397,
+      "is_shared": false
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_12514",
+      "wts_id": 12514,
+      "is_shared": false
+    },
+    "ubertip7": {
+      "raw": "TRIGSTR_7219",
+      "wts_id": 7219,
+      "is_shared": false
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  },
+  "R053": {
+    "name1": {
+      "raw": "TRIGSTR_34288",
+      "wts_id": 34288,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_34298",
+      "wts_id": 34298,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_34289",
+      "wts_id": 34289,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_34290",
+      "wts_id": 34290,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_34291",
+      "wts_id": 34291,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_34292",
+      "wts_id": 34292,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_34293",
+      "wts_id": 34293,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_34299",
+      "wts_id": 34299,
+      "is_shared": false
+    },
+    "tip3": {
+      "raw": "TRIGSTR_34294",
+      "wts_id": 34294,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_34295",
+      "wts_id": 34295,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_34296",
+      "wts_id": 34296,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_34297",
+      "wts_id": 34297,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_13139",
+      "wts_id": 13139,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_4533",
+      "wts_id": 4533,
+      "is_shared": false
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_5002",
+      "wts_id": 5002,
+      "is_shared": false
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_9145",
+      "wts_id": 9145,
+      "is_shared": false
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_12796",
+      "wts_id": 12796,
+      "is_shared": false
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_13131",
+      "wts_id": 13131,
+      "is_shared": false
+    }
+  },
+  "R05W": {
+    "name1": {
+      "raw": "TRIGSTR_22270",
+      "wts_id": 22270,
+      "is_shared": false
+    },
+    "name2": {
+      "raw": "TRIGSTR_22271",
+      "wts_id": 22271,
+      "is_shared": false
+    },
+    "name3": {
+      "raw": "TRIGSTR_22272",
+      "wts_id": 22272,
+      "is_shared": false
+    },
+    "name4": {
+      "raw": "TRIGSTR_22273",
+      "wts_id": 22273,
+      "is_shared": false
+    },
+    "name5": {
+      "raw": "TRIGSTR_22274",
+      "wts_id": 22274,
+      "is_shared": false
+    },
+    "name6": {
+      "raw": "TRIGSTR_22279",
+      "wts_id": 22279,
+      "is_shared": false
+    },
+    "name7": {
+      "raw": "TRIGSTR_9433",
+      "wts_id": 9433,
+      "is_shared": false
+    },
+    "tip1": {
+      "raw": "TRIGSTR_34316",
+      "wts_id": 34316,
+      "is_shared": false
+    },
+    "tip2": {
+      "raw": "TRIGSTR_34322",
+      "wts_id": 34322,
+      "is_shared": false
+    },
+    "tip3": {
+      "raw": "TRIGSTR_34323",
+      "wts_id": 34323,
+      "is_shared": false
+    },
+    "tip4": {
+      "raw": "TRIGSTR_34324",
+      "wts_id": 34324,
+      "is_shared": false
+    },
+    "tip5": {
+      "raw": "TRIGSTR_34325",
+      "wts_id": 34325,
+      "is_shared": false
+    },
+    "tip6": {
+      "raw": "TRIGSTR_34326",
+      "wts_id": 34326,
+      "is_shared": false
+    },
+    "tip7": {
+      "raw": "TRIGSTR_9439",
+      "wts_id": 9439,
+      "is_shared": false
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_9420",
+      "wts_id": 9420,
+      "is_shared": false
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_9440",
+      "wts_id": 9440,
+      "is_shared": false
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_9441",
+      "wts_id": 9441,
+      "is_shared": false
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_9442",
+      "wts_id": 9442,
+      "is_shared": false
+    },
+    "ubertip5": {
+      "raw": "TRIGSTR_9443",
+      "wts_id": 9443,
+      "is_shared": false
+    },
+    "ubertip6": {
+      "raw": "TRIGSTR_12516",
+      "wts_id": 12516,
+      "is_shared": false
+    },
+    "ubertip7": {
+      "raw": "TRIGSTR_7279",
+      "wts_id": 7279,
+      "is_shared": false
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Улучшает снаряды мортирных расчетов, увеличивая их урон по небронированным и среднебронированным целям.\"",
+      "wts_id": null,
+      "is_shared": true
+    }
+  }
+}

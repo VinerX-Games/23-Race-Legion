@@ -1,0 +1,76 @@
+{
+  "operations": [
+    {
+      "type": "buff",
+      "id": "B01I",
+      "field": "editorname",
+      "value": "|cffe4cfa3Метка охотника|r"
+    },
+    {
+      "type": "buff",
+      "id": "B01I",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Метка охотника|r"
+    },
+    {
+      "type": "buff",
+      "id": "B01I",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Броня |cffe69a8dснижена|cffced4da. Отмеченную цель видит наложивший метку противник, даже если цель невидима.|r"
+    },
+    {
+      "type": "buff",
+      "id": "B02L",
+      "field": "editorname",
+      "value": "|cffe4cfa3Взрыв бездны|r"
+    },
+    {
+      "type": "buff",
+      "id": "B02L",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Взрыв бездны|r"
+    },
+    {
+      "type": "buff",
+      "id": "B02L",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель находится под действием пламени Бездны и получает |cffe69a8dпериодический урон|cffced4da.|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08E",
+      "field": "editorname",
+      "value": "|cffe4cfa3Аура Бездны|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08E",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Аура Бездны|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08E",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Аура Бездны |cffe69a8dснижает восстановление здоровья|cffced4da цели.|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08F",
+      "field": "editorname",
+      "value": "|cffe4cfa3Дымка бездны|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08F",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Дымка бездны|r"
+    },
+    {
+      "type": "buff",
+      "id": "B08F",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения повышена на |cffc8e0876%|cffced4da, восстановление здоровья — на |cffc8e0871,5|cffced4da ед. в секунду.|r"
+    }
+  ]
+}

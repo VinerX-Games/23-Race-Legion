@@ -1,0 +1,1365 @@
+{
+  "scope": "Безликие: все геройские заклинания четырёх героев и два вспомогательных эффекта Безумия бездны",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "in_game_checked": false,
+  "strings": [
+    {
+      "rawcode": "A10H",
+      "field": "name",
+      "reference_before": "TRIGSTR_39979",
+      "before": "|cffd7b4f5Удар Клешней|r",
+      "after": "|cffe4cfa3Удар клешнёй|r"
+    },
+    {
+      "rawcode": "A10H",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_1373",
+      "before": "|cffd7b4f5Удар Клшеней|r [|cffffcc001-й уровень|r]",
+      "after": "|cffe4cfa3Удар клешнёй|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A10H",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_1393",
+      "before": "|cffd7b4f5Генерал|r бьет по земле своей огромной клешней создая небольшой раскол под собой, что сильно дезориентирут врагов.\n\n|cffe1d7001-й уровень:|r |cffd7b4f5-50% скорости атаки, -50% скорости бега, 100 ед.урона|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит органическим наземным противникам в радиусе |cffffffff300|cffced4da |cffffffff100|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10H",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_1374",
+      "before": "|cffd7b4f5Удар Клшеней|r [|cffffcc002-й уровень|r]",
+      "after": "|cffe4cfa3Удар клешнёй|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A10H",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_1395",
+      "before": "|cffd7b4f5Генерал|r бьет по земле своей огромной клешней создая небольшой раскол под собой, что сильно дезориентирут врагов.\n\n|cffe1d7002-й уровень:|r |cffd7b4f5-50% скорости атаки, -50% скорости бега, 150 ед.урона|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит органическим наземным противникам в радиусе |cffffffff325|cffced4da |cffffffff150|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10H",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_1391",
+      "before": "|cffd7b4f5Удар Клшеней|r [|cffffcc003-й уровень|r]",
+      "after": "|cffe4cfa3Удар клешнёй|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A10H",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_1396",
+      "before": "|cffd7b4f5Генерал|r бьет по земле своей огромной клешней создая небольшой раскол под собой, что сильно дезориентирут врагов.\n\n|cffe1d7003-й уровень:|r |cffd7b4f5-50% скорости атаки, -50% скорости бега, 200 ед.урона|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит органическим наземным противникам в радиусе |cffffffff350|cffced4da |cffffffff200|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10H",
+      "field": "tip4",
+      "reference_before": "TRIGSTR_1370",
+      "before": "|cffd7b4f5Удар Клшеней|r [|cffffcc004-й уровень|r]",
+      "after": "|cffe4cfa3Удар клешнёй|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A10H",
+      "field": "ubertip4",
+      "reference_before": "TRIGSTR_1371",
+      "before": "|cffd7b4f5Генерал|r бьет по земле своей огромной клешней создая небольшой раскол под собой, что сильно дезориентирут врагов.\n\n|cffe1d7004-й уровень:|r |cffd7b4f5-50% скорости атаки, -50% скорости бега, 250 ед.урона|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит органическим наземным противникам в радиусе |cffffffff400|cffced4da |cffffffff250|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10H",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_41950",
+      "before": "Изучить |cffd7b4f5Удар Клешней|r [|cffffcc00%d-й уровень|r]",
+      "after": "|cffe4cfa3Удар клешнёй|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A10H",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_1392",
+      "before": "|cffd7b4f5Генерал|r бьет по земле своей огромной клешней создая небольшой раскол под собой, что сильно дезориентирут врагов.\n\n|cffe1d7001-й уровень:|r |cffd7b4f5-50% скорости атаки, -50% скорости бега, 100 ед.урона|r\n|cffe1d7002-й уровень:|r |cffd7b4f5-50% скорости атаки, -50% скорости бега, 150 ед.урона|r\n|cffe1d7003-й уровень:|r |cffd7b4f5-50% скорости атаки, -50% скорости бега, 200 ед.урона|r\n|cffe1d7004-й уровень:|r |cffd7b4f5-50% скорости атаки, -50% скорости бега, 250 ед.урона|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Удар клешнёй.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Наносит органическим наземным противникам в радиусе |cffffffff300|cffced4da |cffffffff100|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|n- |cffffffff2|cffced4da: Наносит органическим наземным противникам в радиусе |cffffffff325|cffced4da |cffffffff150|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|n- |cffffffff3|cffced4da: Наносит органическим наземным противникам в радиусе |cffffffff350|cffced4da |cffffffff200|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|n- |cffffffff4|cffced4da: Наносит органическим наземным противникам в радиусе |cffffffff400|cffced4da |cffffffff250|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|r"
+    },
+    {
+      "rawcode": "A10I",
+      "field": "name",
+      "reference_before": "TRIGSTR_23702",
+      "before": "|cffd7b4f5Крепкий Панцирь|r",
+      "after": "|cffe4cfa3Крепкий панцирь|r"
+    },
+    {
+      "rawcode": "A10I",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_22686",
+      "before": "|cff483d8bКрепкий Панцирь|r |cffffd700[1-й уровень]|r",
+      "after": "|cffe4cfa3Крепкий панцирь|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A10I",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_42420",
+      "before": "|cffd7b4f5Генерал |rпокрывается дополнительным хитином, что заметно сильно увеличивает его живучесть.\n\n|cffffd7001-й Уровень:|r|cffd7b4f5 -12 поглащения урона мин.урон 3|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает урон от атак ближнего и дальнего боя на |cffc8e0878|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10I",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_22687",
+      "before": "|cff483d8bКрепкий Панцирь|r |cffffd700[2-й уровень]|r",
+      "after": "|cffe4cfa3Крепкий панцирь|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A10I",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_41953",
+      "before": "|cffd7b4f5Генерал |rпокрывается дополнительным хитином, что заметно сильно увеличивает его живучесть.\n\n|cffffd7001-й Уровень:|r|cffd7b4f5 -15 поглащения урона мин.урон 3|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает урон от атак ближнего и дальнего боя на |cffc8e08715|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10I",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_22688",
+      "before": "|cff483d8bКрепкий Панцирь|r |cffffd700[3-й уровень]|r",
+      "after": "|cffe4cfa3Крепкий панцирь|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A10I",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_42013",
+      "before": "|cffd7b4f5Генерал |rпокрывается дополнительным хитином, что заметно сильно увеличивает его живучесть.\n\n|cffffd7001-й Уровень:|r|cffd7b4f5 -18 поглащения урона мин.урон 3|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает урон от атак ближнего и дальнего боя на |cffc8e08718|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10I",
+      "field": "tip4",
+      "reference_before": "TRIGSTR_22689",
+      "before": "|cff483d8bКрепкий Панцирь|r |cffffd700[4-й уровень]|r",
+      "after": "|cffe4cfa3Крепкий панцирь|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A10I",
+      "field": "ubertip4",
+      "reference_before": "TRIGSTR_42381",
+      "before": "|cffd7b4f5Генерал |rпокрывается дополнительным хитином, что заметно сильно увеличивает его живучесть.\n\n|cffffd7001-й Уровень:|r|cffd7b4f5 -21 поглащения урона мин.урон 3|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает урон от атак ближнего и дальнего боя на |cffc8e08721|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10I",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_42422",
+      "before": "Изучить |cffd7b4f5Крепкий Панцирь|r [|cffffcc00%d-й уровень|r]",
+      "after": "|cffe4cfa3Крепкий панцирь|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A10I",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_23697",
+      "before": "|cffd7b4f5Генерал|r покрывается дополнительным хитином, что заметно сильно увеличивает его живучесть.\n\n|cffffd7001-й Уровень:|r|cffd7b4f5-12 поглащения урона мин.урон 3|r\n|cffffd7001-й Уровень:|r|cffd7b4f5-15 поглащения урона мин.урон 3|r\n|cffffd7001-й Уровень:|r|cffd7b4f5-18 поглащения урона мин.урон 3|r\n|cffffd7001-й Уровень:|r|cffd7b4f5-21 поглащения урона мин.урон 3|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Крепкий панцирь.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Снижает урон от атак ближнего и дальнего боя на |cffc8e0878|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|n- |cffffffff2|cffced4da: Снижает урон от атак ближнего и дальнего боя на |cffc8e08715|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|n- |cffffffff3|cffced4da: Снижает урон от атак ближнего и дальнего боя на |cffc8e08718|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|n- |cffffffff4|cffced4da: Снижает урон от атак ближнего и дальнего боя на |cffc8e08721|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|r"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "name",
+      "reference_before": "TRIGSTR_39981",
+      "before": "|cffd7b4f5Обжигающий жар|r",
+      "after": "|cffe4cfa3Обжигающий жар|r"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_39983",
+      "before": "Активировать |cffd7b4f5Обжигающий жар|r |cffffd700[1-й уровень]|r",
+      "after": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_3085",
+      "before": "|cffd7b4f5Генерал|r взывает к силам бездны, окутывая себя темным пламенем, который наносит урон всем врагам подошедшим к пламени.\n\n|cffffd7001-й уровень:|r |cffd7b4f510 ед. урона в сек. -7ед маны в сек.|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff6|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "untip1",
+      "reference_before": "TRIGSTR_22705",
+      "before": "Отменить |cff483d8bОбжигающий жар|r",
+      "after": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "unubertip1",
+      "reference_before": "TRIGSTR_22709",
+      "before": "Прерывает |cff483d8bОбжигающий жар|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff6|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|n|n|cffa6afb8Состояние:|cffced4da включено; повторное применение отключает жар.|r"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_39984",
+      "before": "Активировать |cffd7b4f5Обжигающий жар|r |cffffd700[2-й уровень]|r",
+      "after": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_3086",
+      "before": "|cffd7b4f5Генерал|r взывает к силам бездны, окутывая себя темным пламенем, который наносит урон всем врагам подошедшим к пламени.\n\n|cffffd7002-й уровень:|r |cffd7b4f515 ед. урона в сек. -7ед маны в сек.|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff11|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "untip2",
+      "reference_before": "TRIGSTR_22706",
+      "before": "Отменить |cff483d8bОбжигающий жар|r",
+      "after": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "unubertip2",
+      "reference_before": "TRIGSTR_22710",
+      "before": "Прерывает |cff483d8bОбжигающий жар|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff11|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|n|n|cffa6afb8Состояние:|cffced4da включено; повторное применение отключает жар.|r"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_39985",
+      "before": "Активировать |cffd7b4f5Обжигающий жар|r |cffffd700[3-й уровень]|r",
+      "after": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_3087",
+      "before": "|cffd7b4f5Генерал|r взывает к силам бездны, окутывая себя темным пламенем, который наносит урон всем врагам подошедшим к пламени.\n\n|cffffd7003-й уровень:|r |cffd7b4f520 ед. урона в сек. -7ед маны в сек.|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff17|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "untip3",
+      "reference_before": "TRIGSTR_22707",
+      "before": "Отменить |cff483d8bОбжигающий жар|r",
+      "after": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "unubertip3",
+      "reference_before": "TRIGSTR_22711",
+      "before": "Прерывает |cff483d8bОбжигающий жар|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff17|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|n|n|cffa6afb8Состояние:|cffced4da включено; повторное применение отключает жар.|r"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "tip4",
+      "reference_before": "TRIGSTR_39986",
+      "before": "Активировать |cffd7b4f5Обжигающий жар|r |cffffd700[4-й уровень]|r",
+      "after": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "ubertip4",
+      "reference_before": "TRIGSTR_3088",
+      "before": "|cffd7b4f5Генерал|r взывает к силам бездны, окутывая себя темным пламенем, который наносит урон всем врагам подошедшим к пламени.\n\n|cffffd7004-й уровень:|r |cffd7b4f525 ед. урона в сек. -7ед маны в сек.|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff25|cffced4da урона. Расходует |cffe69a8d6|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "untip4",
+      "reference_before": "TRIGSTR_22708",
+      "before": "Отменить |cff483d8bОбжигающий жар|r",
+      "after": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "unubertip4",
+      "reference_before": "TRIGSTR_22712",
+      "before": "Прерывает |cff483d8bОбжигающий жар|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff25|cffced4da урона. Расходует |cffe69a8d6|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|n|n|cffa6afb8Состояние:|cffced4da включено; повторное применение отключает жар.|r"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_42447",
+      "before": "Изучить |cffd7b4f5Обжигающий жар|r [|cffffcc00%d-й уровень|r]",
+      "after": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10J",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_39987",
+      "before": "|cffd7b4f5Генерал|r взывает к силам бездны, окутывая себя темным пламенем, который наносит урон всем врагам подошедшим к пламени.\n\n|cffffd7001-й уровень:|r |cffd7b4f510 ед. урона в сек. -7ед маны в сек.|r\n|cffffd7002-й уровень:|r |cffd7b4f515 ед. урона в сек. -7ед маны в сек.|r\n|cffffd7003-й уровень:|r |cffd7b4f520 ед. урона в сек. -7ед маны в сек.|r\n|cffffd7004-й уровень:|r |cffd7b4f525 ед. урона в сек. -7ед маны в сек.|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обжигающий жар.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff6|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n- |cffffffff2|cffced4da: Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff11|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n- |cffffffff3|cffced4da: Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff17|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n- |cffffffff4|cffced4da: Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff25|cffced4da урона. Расходует |cffe69a8d6|cffced4da маны в секунду.|r"
+    },
+    {
+      "rawcode": "A10K",
+      "field": "name",
+      "reference_before": "TRIGSTR_39988",
+      "before": "|cffd7b4f5Темный Портал|r",
+      "after": "|cffe4cfa3Тёмный портал|r"
+    },
+    {
+      "rawcode": "A10K",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_3089",
+      "before": "|cffd7b4f5Темный портал|r [|cffffcc001-й уровень|r]",
+      "after": "|cffe4cfa3Тёмный портал|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A10K",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_3093",
+      "before": "Генерал открывает разлом, откуда выходят воины безликих, которые сражаются на вашей стороне\n\n|cffffcc001-й уровень:|r |cffd7b4f5Призывает 4 Поробощенных Зверя\n\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает портал и призывает |cffffffff4|cffced4da воинов из следующего списка:|n- |cffa9c7deПорабощённый зверь|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10K",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_3092",
+      "before": "|cffd7b4f5Темный портал|r [|cffffcc002-й уровень|r]",
+      "after": "|cffe4cfa3Тёмный портал|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A10K",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_3094",
+      "before": "Генерал открывает разлом, откуда выходят воины безликих, которые сражаются на вашей стороне\n\n|cffffcc002-й уровень:|r |cffd7b4f5Призывает 6 Жестоких Поробощенных Зверей\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает портал и призывает |cffffffff8|cffced4da воинов из следующего списка:|n- |cffa9c7deЖестокий порабощённый зверь|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10K",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_42448",
+      "before": "Изучить |cffd7b4f5Темный портал|r [|cffffcc00%d-й уровень|r]",
+      "after": "|cffe4cfa3Тёмный портал|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A10K",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_3091",
+      "before": "Генерал открывает разлом, откуда выходят воины безликих, которые сражаются на вашей стороне\n\n|cffffcc001-й уровень:|r |cffd7b4f5Призывает 4 Поробощенных Зверя\n|cffffcc002-й уровень:|r |cffd7b4f5Призывает 6 Жестоких Поробощенных Зверей\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Тёмный портал.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Открывает портал и призывает |cffffffff4|cffced4da воинов из следующего списка:|n- |cffa9c7deПорабощённый зверь|cffced4da.|n- |cffffffff2|cffced4da: Открывает портал и призывает |cffffffff8|cffced4da воинов из следующего списка:|n- |cffa9c7deЖестокий порабощённый зверь|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10L",
+      "field": "name",
+      "reference_before": "TRIGSTR_25391",
+      "before": "|cffd7b4f5Сотресение Бездны|r",
+      "after": "|cffe4cfa3Сотрясение Бездны|r"
+    },
+    {
+      "rawcode": "A10L",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_39991",
+      "before": "|cffd7b4f5Сотресение Бездны|r [|cffffcc001-й уровень|r]",
+      "after": "|cffe4cfa3Сотрясение Бездны|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10L",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_8631",
+      "before": "|cffd7b4f5Безликий|r С некоторым шансом может нанести дополнительный урон и оглушить цель на несколько секунд.\n\n|cffe1d7001-й уровень:|r |cffd7b4f510% Оглушить цель и нанести доп. 40 урона.|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff10|cffced4da% атака наносит |cffffffff40|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10L",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_39992",
+      "before": "|cffd7b4f5Сотресение Бездны|r [|cffffcc002-й уровень|r]",
+      "after": "|cffe4cfa3Сотрясение Бездны|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10L",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_8632",
+      "before": "|cffd7b4f5Безликий|r С некоторым шансом может нанести дополнительный урон и оглушить цель на несколько секунд.\n\n|cffe1d7002-й уровень:|r |cffd7b4f515% Оглушить цель и нанести доп. 50 урона.|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff15|cffced4da% атака наносит |cffffffff50|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10L",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_39993",
+      "before": "|cffd7b4f5Сотресение Бездны|r [|cffffcc003-й уровень|r]",
+      "after": "|cffe4cfa3Сотрясение Бездны|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10L",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_8677",
+      "before": "|cffd7b4f5Безликий|r С некоторым шансом может нанести дополнительный урон и оглушить цель на несколько секунд.\n\n|cffe1d7003-й уровень:|r |cffd7b4f520% Оглушить цель и нанести доп. 60 урона.|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff20|cffced4da% атака наносит |cffffffff60|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10L",
+      "field": "tip4",
+      "reference_before": "TRIGSTR_39994",
+      "before": "|cffd7b4f5Сотресение Бездны|r [|cffffcc004-й уровень|r]",
+      "after": "|cffe4cfa3Сотрясение Бездны|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10L",
+      "field": "ubertip4",
+      "reference_before": "TRIGSTR_7417",
+      "before": "|cffd7b4f5Безликий|r С некоторым шансом может нанести дополнительный урон и оглушить цель на несколько секунд.\n\n|cffe1d7004-й уровень:|r |cffd7b4f525% Оглушить цель и нанести доп. 70 урона.|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff25|cffced4da% атака наносит |cffffffff70|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10L",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_42456",
+      "before": "Изучить |cffd7b4f5Сотресение Бездны|r [|cffffcc00%d-й уровень|r]",
+      "after": "|cffe4cfa3Сотрясение Бездны|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10L",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_8529",
+      "before": "|cffd7b4f5Безликий|r С некоторым шансом может нанести дополнительный урон и оглушить цель на несколько секунд.\n\n|cffe1d7001-й уровень:|r |cffd7b4f510% Оглушить цель и нанести доп. 40 урона.|r\n|cffe1d7002-й уровень:|r |cffd7b4f515% Оглушить цель и нанести доп. 50 урона.|r\n|cffe1d7003-й уровень:|r |cffd7b4f520% Оглушить цель и нанести доп. 60 урона.|r\n|cffe1d7004-й уровень:|r |cffd7b4f525% Оглушить цель и нанести доп. 70 урона.|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сотрясение Бездны.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: С вероятностью |cffffffff10|cffced4da% атака наносит |cffffffff40|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|n- |cffffffff2|cffced4da: С вероятностью |cffffffff15|cffced4da% атака наносит |cffffffff50|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|n- |cffffffff3|cffced4da: С вероятностью |cffffffff20|cffced4da% атака наносит |cffffffff60|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|n- |cffffffff4|cffced4da: С вероятностью |cffffffff25|cffced4da% атака наносит |cffffffff70|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|r"
+    },
+    {
+      "rawcode": "A10N",
+      "field": "name",
+      "reference_before": "TRIGSTR_39995",
+      "before": "|cffd7b4f5Сокрытие Бездной|r",
+      "after": "|cffe4cfa3Сокрытие Бездной|r"
+    },
+    {
+      "rawcode": "A10N",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_11037",
+      "before": "|cffd7b4f5Сокрытие Бездной|r [|cffffcc001-й уровень|r]",
+      "after": "|cffe4cfa3Сокрытие Бездной|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A10N",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_31041",
+      "before": "|cffd7b4f5Безликий|r скрывается с потоками бездны, что делает его невидимым и ускоряя его скорость бега на некоторое время. Выйдя из невидимости |cffd7b4f5Безликий|r нанесет доп.урон.\n\n|cffffd7001-й уровень:|r |cffd7b4f550 Доп.Урона, 30% скорости передвижения. КД 35 сек.|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e08730|cffced4da%. Атака из невидимости наносит |cffffffff50|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10N",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_11065",
+      "before": "|cffd7b4f5Сокрытие Бездной|r [|cffffcc002-й уровень|r]",
+      "after": "|cffe4cfa3Сокрытие Бездной|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A10N",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_31042",
+      "before": "|cffd7b4f5Безликий|r скрывается с потоками бездны, что делает его невидимым и ускоряя его скорость бега на некоторое время. Выйдя из невидимости |cffd7b4f5Безликий|r нанесет доп.урон.\n\n|cffffd7002-й уровень:|r |cffd7b4f5100 Доп.Урона, 60% скорости передвижения. КД 35 сек.|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e08760|cffced4da%. Атака из невидимости наносит |cffffffff100|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10N",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_11066",
+      "before": "|cffd7b4f5Сокрытие Бездной|r [|cffffcc003-й уровень|r]",
+      "after": "|cffe4cfa3Сокрытие Бездной|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A10N",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_33228",
+      "before": "|cffd7b4f5Безликий|r скрывается с потоками бездны, что делает его невидимым и ускоряя его скорость бега на некоторое время. Выйдя из невидимости |cffd7b4f5Безликий|r нанесет доп.урон.\n\n|cffffd7003-й уровень:|r |cffd7b4f5150 Доп.Урона, 90% скорости передвижения. КД 35 сек.|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e08790|cffced4da%. Атака из невидимости наносит |cffffffff150|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10N",
+      "field": "tip4",
+      "reference_before": "TRIGSTR_9059",
+      "before": "|cffd7b4f5Сокрытие Бездной|r [|cffffcc004-й уровень|r]",
+      "after": "|cffe4cfa3Сокрытие Бездной|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A10N",
+      "field": "ubertip4",
+      "reference_before": "TRIGSTR_31039",
+      "before": "|cffd7b4f5Безликий|r скрывается с потоками бездны, что делает его невидимым и ускоряя его скорость бега на некоторое время. Выйдя из невидимости |cffd7b4f5Безликий|r нанесет доп.урон.\n\n|cffffd7004-й уровень:|r |cffd7b4f5200 Доп.Урона, 120% скорости передвижения. КД 35 сек.|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e087120|cffced4da%. Атака из невидимости наносит |cffffffff200|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10N",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_42458",
+      "before": "Изучить |cffd7b4f5Сокрытие Бездной|r [|cffffcc00%d-й уровень|r]",
+      "after": "|cffe4cfa3Сокрытие Бездной|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A10N",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_31040",
+      "before": "|cffd7b4f5Безликий|r скрывается с потоками бездны, что делает его невидимым и ускоряя его скорость бега на некоторое время. Выйдя из невидимости |cffd7b4f5Безликий|r нанесет доп.урон.\n\n|cffffd7001-й уровень:|r |cffd7b4f550 Доп.Урона, 30% скорости передвижения. КД 35 сек.|r\n|cffffd7002-й уровень:|r |cffd7b4f5100 Доп.Урона, 60% скорости передвижения. КД 35 сек.|r\n|cffffd7003-й уровень:|r |cffd7b4f5150 Доп.Урона, 90% скорости передвижения. КД 35 сек.|r\n|cffffd7004-й уровень:|r |cffd7b4f5200 Доп.Урона, 120% скорости передвижения. КД 35 сек.|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сокрытие Бездной.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e08730|cffced4da%. Атака из невидимости наносит |cffffffff50|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|n- |cffffffff2|cffced4da: Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e08760|cffced4da%. Атака из невидимости наносит |cffffffff100|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|n- |cffffffff3|cffced4da: Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e08790|cffced4da%. Атака из невидимости наносит |cffffffff150|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|n- |cffffffff4|cffced4da: Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e087120|cffced4da%. Атака из невидимости наносит |cffffffff200|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|r"
+    },
+    {
+      "rawcode": "A10Q",
+      "field": "name",
+      "reference_before": "TRIGSTR_40000",
+      "before": "|cffd7b4f5Темный Раскол|r",
+      "after": "|cffe4cfa3Тёмный раскол|r"
+    },
+    {
+      "rawcode": "A10Q",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_11070",
+      "before": "|cffd7b4f5Темный Портал |r[|cffffcc001-й уровень|r]",
+      "after": "|cffe4cfa3Тёмный раскол|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10Q",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_15356",
+      "before": "Маг открывает разлом, откуда выходят воины безликих, которые сражаются на вашей стороне\n\n|cffffcc001-й уровень:|r |cffd7b4f5Призывает 2 Юнита безликих\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает портал и призывает |cffffffff2|cffced4da воинов из следующего списка:|n- |cffa9c7deБезликий дозорный|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10Q",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_12406",
+      "before": "|cffd7b4f5Темный Портал |r[|cffffcc002-й уровень|r]",
+      "after": "|cffe4cfa3Тёмный раскол|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10Q",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_15357",
+      "before": "Маг открывает разлом, откуда выходят воины безликих, которые сражаются на вашей стороне\n\n|cffffcc002-й уровень:|r |cffd7b4f5Призывает 3 Юнита безликих\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает портал и призывает |cffffffff3|cffced4da воинов из следующего списка:|n- |cffa9c7deБезликий дозорный|cffced4da.|n- |cffa9c7deСущность бездны|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10Q",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_15359",
+      "before": "|cffd7b4f5Темный Портал |r[|cffffcc003-й уровень|r]",
+      "after": "|cffe4cfa3Тёмный раскол|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10Q",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_15518",
+      "before": "Маг открывает разлом, откуда выходят воины безликих, которые сражаются на вашей стороне\n\n|cffffcc003-й уровень:|r |cffd7b4f5Призывает 4 Юнитов безликих\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает портал и призывает |cffffffff4|cffced4da воинов из следующего списка:|n- |cffa9c7deБессмертный страж|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10Q",
+      "field": "tip4",
+      "reference_before": "TRIGSTR_15517",
+      "before": "|cffd7b4f5Темный Портал |r[|cffffcc004-й уровень|r]",
+      "after": "|cffe4cfa3Тёмный раскол|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10Q",
+      "field": "ubertip4",
+      "reference_before": "TRIGSTR_17423",
+      "before": "Маг открывает разлом, откуда выходят воины безликих, которые сражаются на вашей стороне\n\n|cffffcc004-й уровень:|r |cffd7b4f5Призывает 5 Юнитов безликих",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает портал и призывает |cffffffff5|cffced4da воинов из следующего списка:|n- |cffa9c7deК`Траксис|cffced4da.|n- |cffa9c7deБессмертный страж|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10Q",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_42460",
+      "before": "Изучить |cffd7b4f5Темный портал|r [|cffffcc00%d-й уровень|r]",
+      "after": "|cffe4cfa3Тёмный раскол|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A10Q",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_12345",
+      "before": "Маг открывает разлом, откуда выходят воины безликих, которые сражаются на вашей стороне\n\n|cffffcc001-й уровень:|r |cffd7b4f5Призывает 2 Юнита безликих\n|cffffcc002-й уровень:|r |cffd7b4f5Призывает 3 Юнита безликих\n|cffffcc003-й уровень:|r |cffd7b4f5Призывает 4 Юнитов безликих\n|cffffcc004-й уровень:|r |cffd7b4f5Призывает 5 Юнитов безликих",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Тёмный раскол.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Открывает портал и призывает |cffffffff2|cffced4da воинов из следующего списка:|n- |cffa9c7deБезликий дозорный|cffced4da.|n- |cffffffff2|cffced4da: Открывает портал и призывает |cffffffff3|cffced4da воинов из следующего списка:|n- |cffa9c7deБезликий дозорный|cffced4da.|n- |cffa9c7deСущность бездны|cffced4da.|n- |cffffffff3|cffced4da: Открывает портал и призывает |cffffffff4|cffced4da воинов из следующего списка:|n- |cffa9c7deБессмертный страж|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны|cffced4da.|n- |cffffffff4|cffced4da: Открывает портал и призывает |cffffffff5|cffced4da воинов из следующего списка:|n- |cffa9c7deК`Траксис|cffced4da.|n- |cffa9c7deБессмертный страж|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0WQ",
+      "field": "name",
+      "reference_before": "TRIGSTR_22979",
+      "before": "|cffd7b4f5Взрыв бездны|r",
+      "after": "|cffe4cfa3Взрыв бездны|r"
+    },
+    {
+      "rawcode": "A0WQ",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_23282",
+      "before": "|cffd7b4f5Взрыв бездны|r [|cffffcc001-й уровень|r]",
+      "after": "|cffe4cfa3Взрыв бездны|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A0WQ",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_25620",
+      "before": "Создает столб бездны, наносящий периодический урон наземным войскам в указанной области. \n\n|cffffcc001-й уровень:|r |cffd7b4f545 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек.|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff15|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff5|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff2000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0WQ",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_23575",
+      "before": "|cffd7b4f5Взрыв бездны|r [|cffffcc002-й уровень|r]",
+      "after": "|cffe4cfa3Взрыв бездны|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A0WQ",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_25913",
+      "before": "Создает столб бездны, наносящий периодический урон наземным войскам в указанной области. \n\n|cffffcc002-й уровень:|r |cffd7b4f580 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек.|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff20|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff7|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff4000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0WQ",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_24719",
+      "before": "|cffd7b4f5Взрыв бездны|r [|cffffcc003-й уровень|r]",
+      "after": "|cffe4cfa3Взрыв бездны|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A0WQ",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_25914",
+      "before": "Создает столб бездны, наносящий периодический урон наземным войскам в указанной области. \n\n|cffffcc003-й уровень:|r |cffd7b4f5110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff30|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff9|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff6000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0WQ",
+      "field": "tip4",
+      "reference_before": "TRIGSTR_21939",
+      "before": "|cffd7b4f5Взрыв бездны|r [|cffffcc004-й уровень|r]",
+      "after": "|cffe4cfa3Взрыв бездны|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A0WQ",
+      "field": "ubertip4",
+      "reference_before": "TRIGSTR_22916",
+      "before": "Создает столб бездны, наносящий периодический урон наземным войскам в указанной области. \n\n|cffffcc004-й уровень:|r |cffd7b4f5140 урона/сек. в первые 3 сек., существенный урон в последующие 6 сек.|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff45|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff12|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff8000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0WQ",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_42773",
+      "before": "Изучить |cffd7b4f5Взрыв бездны|r [|cffffcc00%d-й уровень|r]",
+      "after": "|cffe4cfa3Взрыв бездны|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A0WQ",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_24953",
+      "before": "Создает столб бездны, наносящий периодический урон наземным войскам в указанной области. \n\n|cffffcc001-й уровень:|r |cffd7b4f545 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек.|r\n|cffffcc002-й уровень:|r |cffd7b4f580 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек.|r\n|cffffcc003-й уровень:|r |cffd7b4f5110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r\n|cffffcc004-й уровень:|r |cffd7b4f5140 урона/сек. в первые 3 сек., существенный урон в последующие 6 сек.|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Взрыв бездны.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff15|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff5|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff2000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|n- |cffffffff2|cffced4da: Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff20|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff7|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff4000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|n- |cffffffff3|cffced4da: Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff30|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff9|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff6000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|n- |cffffffff4|cffced4da: Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff45|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff12|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff8000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|r"
+    },
+    {
+      "rawcode": "A10R",
+      "field": "name",
+      "reference_before": "TRIGSTR_40004",
+      "before": "|cffd7b4f5Аура Бездны|r",
+      "after": "|cffe4cfa3Аура Бездны|r"
+    },
+    {
+      "rawcode": "A10R",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_40006",
+      "before": "|cffd7b4f5Аура Бездны|r |cffffcc00[1-й уровень]|r",
+      "after": "|cffe4cfa3Аура Бездны|r"
+    },
+    {
+      "rawcode": "A10R",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_40010",
+      "before": "Распростроняет невидимую |cffd7b4f5Ауру бездны|r, которая медленно убивает всех врагов.\n\n|cffffd7001-й уровень:|r |cffd7b4f5-3% регенерации хп|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff3|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10R",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_40007",
+      "before": "|cffd7b4f5Аура Бездны|r |cffffcc00[2-й уровень]|r",
+      "after": "|cffe4cfa3Аура Бездны|r"
+    },
+    {
+      "rawcode": "A10R",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_40011",
+      "before": "Распростроняет невидимую |cffd7b4f5Ауру бездны|r, которая медленно убивает всех врагов.\n\n|cffffd7002-й уровень:|r |cffd7b4f5-6% регенерации хп|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff6|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10R",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_40008",
+      "before": "|cffd7b4f5Аура Бездны|r |cffffcc00[3-й уровень]|r",
+      "after": "|cffe4cfa3Аура Бездны|r"
+    },
+    {
+      "rawcode": "A10R",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_40012",
+      "before": "Распростроняет невидимую |cffd7b4f5Ауру бездны|r, которая медленно убивает всех врагов.\n\n|cffffd7003-й уровень:|r |cffd7b4f5-8% регенерации хп|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff8|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10R",
+      "field": "tip4",
+      "reference_before": "TRIGSTR_40002",
+      "before": "|cffd7b4f5Аура Бездны|r |cffffcc00[4-й уровень]|r",
+      "after": "|cffe4cfa3Аура Бездны|r"
+    },
+    {
+      "rawcode": "A10R",
+      "field": "ubertip4",
+      "reference_before": "TRIGSTR_40003",
+      "before": "Распростроняет невидимую |cffd7b4f5Ауру бездны|r, которая медленно убивает всех врагов.\n\n|cffffd7004-й уровень:|r |cffd7b4f5-10% регенерации хп|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff10|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10R",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_42462",
+      "before": "Изучить |cffd7b4f5Аура Бездны|r [|cffffcc00%d-й уровень|r]",
+      "after": "|cffe4cfa3Аура Бездны|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A10R",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_17425",
+      "before": "Распростроняет невидимую |cffd7b4f5Ауру бездны|r, которая медленно убивает всех врагов.\n\n|cffffd7001-й уровень:|r |cffd7b4f5-3% регенерации хп|r\n|cffffd7002-й уровень:|r |cffd7b4f5-6% регенерации хп|r\n|cffffd7003-й уровень:|r |cffd7b4f5-8% регенерации хп|r\n|cffffd7004-й уровень:|r |cffd7b4f5-10% регенерации хп|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Аура Бездны.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff3|cffced4da ед. в секунду.|n- |cffffffff2|cffced4da: Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff6|cffced4da ед. в секунду.|n- |cffffffff3|cffced4da: Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff8|cffced4da ед. в секунду.|n- |cffffffff4|cffced4da: Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff10|cffced4da ед. в секунду.|r"
+    },
+    {
+      "rawcode": "A10S",
+      "field": "name",
+      "reference_before": "TRIGSTR_40013",
+      "before": "|cffd7b4f5Пространство Бездны|r",
+      "after": "|cffe4cfa3Пространство Бездны|r"
+    },
+    {
+      "rawcode": "A10S",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_17699",
+      "before": "|cffd7b4f5Пространство Бездны|r [|cffffcc001-й уровень|r]",
+      "after": "|cffe4cfa3Пространство Бездны|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A10S",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_18148",
+      "before": "Наносит урон целям в области действия в объеме  их запаса здоровья в секунду. Уничтожает деревья.\n\n|cffffcc001-й уровень|r: |cffd7b4f52% здоровья в секунду\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока герой поддерживает заклинание, враги в радиусе |cffffffff300|cffced4da теряют |cffffffff4|cffced4da% максимального здоровья в секунду. Действует до |cffffffff35|cffced4da сек. Поражает также воздушные цели и здания; уничтожает деревья.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10S",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_17715",
+      "before": "|cffd7b4f5Пространство Бездны|r [|cffffcc002-й уровень|r]",
+      "after": "|cffe4cfa3Пространство Бездны|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A10S",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_17671",
+      "before": "Наносит урон целям в области действия в объеме  их запаса здоровья в секунду. Уничтожает деревья.\n\n|cffffcc002-й уровень|r: |cffd7b4f54% здоровья в секунду",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока герой поддерживает заклинание, враги в радиусе |cffffffff400|cffced4da теряют |cffffffff6|cffced4da% максимального здоровья в секунду. Действует до |cffffffff35|cffced4da сек. Поражает также воздушные цели и здания; уничтожает деревья.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "rawcode": "A10S",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_42464",
+      "before": "Изучить «|cffd7b4f5Пространство Бездны|r» [|cffffcc00%d-й уровень|r]",
+      "after": "|cffe4cfa3Пространство Бездны|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A10S",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_16079",
+      "before": "Наносит урон целям в области действия в объеме  их запаса здоровья в секунду. Уничтожает деревья.\n\n|cffffcc001-й уровень|r: |cffd7b4f54% здоровья в секунду\n|cffffcc002-й уровень|r: |cffd7b4f56% здоровья в секунду",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пространство Бездны.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Пока герой поддерживает заклинание, враги в радиусе |cffffffff300|cffced4da теряют |cffffffff4|cffced4da% максимального здоровья в секунду. Действует до |cffffffff35|cffced4da сек. Поражает также воздушные цели и здания; уничтожает деревья.|n- |cffffffff2|cffced4da: Пока герой поддерживает заклинание, враги в радиусе |cffffffff400|cffced4da теряют |cffffffff6|cffced4da% максимального здоровья в секунду. Действует до |cffffffff35|cffced4da сек. Поражает также воздушные цели и здания; уничтожает деревья.|r"
+    },
+    {
+      "rawcode": "A1CJ",
+      "field": "name",
+      "reference_before": "TRIGSTR_19870",
+      "before": "|cffd7b4f5Безумие бездны|r",
+      "after": "|cffe4cfa3Безумие бездны|r"
+    },
+    {
+      "rawcode": "A1CJ",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_20076",
+      "before": "|cffd7b4f5Безумие бездны|r [|cffffcc001-й уровень|r]",
+      "after": "|cffe4cfa3Безумие бездны|r"
+    },
+    {
+      "rawcode": "A1CJ",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_20737",
+      "before": "|cffd7b4f5Душегуб|r с каждой своей битвой становится все более яростей и кровожаденей, от чего его скорость атаки возростает, а кровь убитых врагов восстанавливает его\n\n|cffffcc001-й уровень:|r |cffd7b4f5Увеличивает скорость атаки на 20% и вампиризм на 20%|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08720|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08720|cffced4da% урона его атак.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A1CJ",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_20077",
+      "before": "|cffd7b4f5Безумие бездны|r [|cffffcc002-й уровень|r]",
+      "after": "|cffe4cfa3Безумие бездны|r"
+    },
+    {
+      "rawcode": "A1CJ",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_21579",
+      "before": "|cffd7b4f5Душегуб|r с каждой своей битвой становится все более яростей и кровожаденей, от чего его скорость атаки возростает, а кровь убитых врагов восстанавливает его\n\n|cffffcc002-й уровень:|r |cffd7b4f5Увеличивает скорость атаки на 25% и вампиризм на 30%|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08725|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08730|cffced4da% урона его атак.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A1CJ",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_20733",
+      "before": "|cffd7b4f5Безумие бездны|r [|cffffcc003-й уровень|r]",
+      "after": "|cffe4cfa3Безумие бездны|r"
+    },
+    {
+      "rawcode": "A1CJ",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_21795",
+      "before": "|cffd7b4f5Душегуб|r с каждой своей битвой становится все более яростей и кровожаденей, от чего его скорость атаки возростает, а кровь убитых врагов восстанавливает его\n\n|cffffcc003-й уровень:|r |cffd7b4f5Увеличивает скорость атаки на 30% и вампиризм на 40%|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08730|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08740|cffced4da% урона его атак.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A1CJ",
+      "field": "tip4",
+      "reference_before": "TRIGSTR_20735",
+      "before": "|cffd7b4f5Безумие бездны|r [|cffffcc004-й уровень|r]",
+      "after": "|cffe4cfa3Безумие бездны|r"
+    },
+    {
+      "rawcode": "A1CJ",
+      "field": "ubertip4",
+      "reference_before": "TRIGSTR_21936",
+      "before": "|cffd7b4f5Душегуб|r с каждой своей битвой становится все более яростей и кровожаденей, от чего его скорость атаки возростает, а кровь убитых врагов восстанавливает его\n\n|cffffcc004-й уровень:|r |cffd7b4f5Увеличивает скорость атаки на 40% и вампиризм на 50%|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08740|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08750|cffced4da% урона его атак.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A1CJ",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_42769",
+      "before": "Изучить |cffd7b4f5Безумие бездны|r [|cffffcc00%d-й уровень|r]",
+      "after": "|cffe4cfa3Безумие бездны|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A1CJ",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_21938",
+      "before": "|cffd7b4f5Душегуб|r с каждой своей битвой становится все более яростей и кровожаденей, от чего его скорость атаки возростает, а кровь убитых врагов восстанавливает его\n\n|cffffcc001-й уровень:|r |cffd7b4f5Увеличивает скорость атаки на 20% и вампиризм на 20%|r\n|cffffcc002-й уровень:|r |cffd7b4f5Увеличивает скорость атаки на 25% и вампиризм на 30%|r\n|cffffcc003-й уровень:|r |cffd7b4f5Увеличивает скорость атаки на 30% и вампиризм на 40%|r\n|cffffcc004-й уровень:|r |cffd7b4f5Увеличивает скорость атаки на 40% и вампиризм на 50%|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Безумие бездны.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Повышает скорость атаки героя на |cffc8e08720|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08720|cffced4da% урона его атак.|n- |cffffffff2|cffced4da: Повышает скорость атаки героя на |cffc8e08725|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08730|cffced4da% урона его атак.|n- |cffffffff3|cffced4da: Повышает скорость атаки героя на |cffc8e08730|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08740|cffced4da% урона его атак.|n- |cffffffff4|cffced4da: Повышает скорость атаки героя на |cffc8e08740|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08750|cffced4da% урона его атак.|r"
+    },
+    {
+      "rawcode": "A1CH",
+      "field": "name",
+      "reference_before": "TRIGSTR_30693",
+      "before": "Скорость безликие",
+      "after": "|cffe4cfa3Скорость бездны|r"
+    },
+    {
+      "rawcode": "A1CH",
+      "field": "tip1",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffe4cfa3Скорость бездны|r"
+    },
+    {
+      "rawcode": "A1CH",
+      "field": "ubertip1",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08720|cffced4da%. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A1CH",
+      "field": "tip2",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffe4cfa3Скорость бездны|r"
+    },
+    {
+      "rawcode": "A1CH",
+      "field": "ubertip2",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08725|cffced4da%. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A1CH",
+      "field": "tip3",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffe4cfa3Скорость бездны|r"
+    },
+    {
+      "rawcode": "A1CH",
+      "field": "ubertip3",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08730|cffced4da%. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A1CH",
+      "field": "tip4",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffe4cfa3Скорость бездны|r"
+    },
+    {
+      "rawcode": "A1CH",
+      "field": "ubertip4",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08740|cffced4da%. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A1CI",
+      "field": "name",
+      "reference_before": "TRIGSTR_30695",
+      "before": "ВАмпириз Безликие",
+      "after": "|cffe4cfa3Вампиризм бездны|r"
+    },
+    {
+      "rawcode": "A1CI",
+      "field": "tip1",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffe4cfa3Вампиризм бездны|r"
+    },
+    {
+      "rawcode": "A1CI",
+      "field": "ubertip1",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье в размере |cffc8e08720|cffced4da% урона атак владельца. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A1CI",
+      "field": "tip2",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffe4cfa3Вампиризм бездны|r"
+    },
+    {
+      "rawcode": "A1CI",
+      "field": "ubertip2",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье в размере |cffc8e08730|cffced4da% урона атак владельца. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A1CI",
+      "field": "tip3",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffe4cfa3Вампиризм бездны|r"
+    },
+    {
+      "rawcode": "A1CI",
+      "field": "ubertip3",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье в размере |cffc8e08740|cffced4da% урона атак владельца. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A1CI",
+      "field": "tip4",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffe4cfa3Вампиризм бездны|r"
+    },
+    {
+      "rawcode": "A1CI",
+      "field": "ubertip4",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье в размере |cffc8e08750|cffced4da% урона атак владельца. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A1CG",
+      "field": "name",
+      "reference_before": "TRIGSTR_18374",
+      "before": "|cffd7b4f5Метка охотника|r",
+      "after": "|cffe4cfa3Метка охотника|r"
+    },
+    {
+      "rawcode": "A1CG",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_18268",
+      "before": "|cffd7b4f5Метка охотника|r [|cffffcc001-й уровень|r]",
+      "after": "|cffe4cfa3Метка охотника|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A1CG",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_19740",
+      "before": "|cffd7b4f5Душегуб|r накладывает специальную метку что разъедает броню противника.\n\n|cffffcc001-й уровень:|r |cffd7b4f5-10 ед. брони 70 кд.|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врага на |cffffffff10|cffced4da и позволяет видеть отмеченную цель, в том числе невидимую. Действует |cffffffff60|cffced4da сек.; на героях — |cffffffff15|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "rawcode": "A1CG",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_18363",
+      "before": "|cffd7b4f5Метка охотника|r [|cffffcc002-й уровень|r]",
+      "after": "|cffe4cfa3Метка охотника|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A1CG",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_18364",
+      "before": "|cffd7b4f5Душегуб|r накладывает специальную метку что разъедает броню противника.\n\n|cffffcc002-й уровень:|r |cffd7b4f5-15 ед. брони 70 кд.|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врага на |cffffffff15|cffced4da и позволяет видеть отмеченную цель, в том числе невидимую. Действует |cffffffff60|cffced4da сек.; на героях — |cffffffff20|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "rawcode": "A1CG",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_42768",
+      "before": "Изучить |cffd7b4f5Метка охотника|r [|cffffcc00%d-й уровень|r]",
+      "after": "|cffe4cfa3Метка охотника|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A1CG",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_19739",
+      "before": "|cffd7b4f5Душегуб|r накладывает специальную метку что разъедает броню противника.\n\n|cffffcc001-й уровень:|r |cffd7b4f5-10 ед. брони 70 кд.|r\n|cffffcc002-й уровень:|r |cffd7b4f5-15 ед. брони 70 кд.|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Метка охотника.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Снижает броню врага на |cffffffff10|cffced4da и позволяет видеть отмеченную цель, в том числе невидимую. Действует |cffffffff60|cffced4da сек.; на героях — |cffffffff15|cffced4da сек.|n- |cffffffff2|cffced4da: Снижает броню врага на |cffffffff15|cffced4da и позволяет видеть отмеченную цель, в том числе невидимую. Действует |cffffffff60|cffced4da сек.; на героях — |cffffffff20|cffced4da сек.|r"
+    },
+    {
+      "rawcode": "A12G",
+      "field": "name",
+      "reference_before": "TRIGSTR_24302",
+      "before": "|cffd7b4f5Стать слугой Йогг`Сарона|r",
+      "after": "|cffe4cfa3Служение Йогг`Сарону|r"
+    },
+    {
+      "rawcode": "A12G",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_24306",
+      "before": "|cffd7b4f5Стать слугой Йогг`Сарона|r",
+      "after": "|cffe4cfa3Служение Йогг`Сарону|r"
+    },
+    {
+      "rawcode": "A12G",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_24308",
+      "before": "|cffd7b4f5Особая способность.|r\nПри активации Древний бог Йогг`Сарон становится под ваш контроль.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Передаёт игроку контроль над Древним богом Йогг`Сароном и делает его столицей. Его положение становится видно всем игрокам.|n|n|cffe6c07bПосле применения способность становится недоступна всем игрокам.|cffced4da|r"
+    },
+    {
+      "rawcode": "A12I",
+      "field": "name",
+      "reference_before": "TRIGSTR_24559",
+      "before": "|cffd7b4f5Саронитовый Панцирь|r",
+      "after": "|cffe4cfa3Саронитовый панцирь|r"
+    },
+    {
+      "rawcode": "A12I",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_24561",
+      "before": "|cffd7b4f5Саронитовый Панцирь|r |cffffd700[1-й уровень]|r",
+      "after": "|cffe4cfa3Саронитовый панцирь|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A12I",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_28430",
+      "before": "|cffd7b4f5Везакс|r покрывается дополнительным саранитовым хитином, что заметно сильно увеличивает его живучесть.\n\n|cffffd7001-й Уровень:|r |cffd7b4f5-15 поглащения урона мин.урон 3|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает урон от атак ближнего и дальнего боя на |cffc8e08738|cffced4da, но не ниже |cffffffff5|cffced4da урона за удар.|r"
+    },
+    {
+      "rawcode": "A12H",
+      "field": "name",
+      "reference_before": "TRIGSTR_24404",
+      "before": "|cffd7b4f5Антимагическая аура|r",
+      "after": "|cffe4cfa3Антимагическая аура|r"
+    },
+    {
+      "rawcode": "A12H",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_36521",
+      "before": "|cffd7b4f5Антимагическая ауру|r [|cffffcc001-й уровень|r]",
+      "after": "|cffe4cfa3Антимагическая аура|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A12H",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_40475",
+      "before": "Уменьшает регенерацию маны всех варжеских юнитов в малом радиусе от героя.\n\n|cffffd7001-й уровень|r: |cffd7b4f5-6 ед. маны в секнуду|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff6|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A12H",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_36522",
+      "before": "|cffd7b4f5Антимагическая ауру|r [|cffffcc002-й уровень|r]",
+      "after": "|cffe4cfa3Антимагическая аура|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A12H",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_40476",
+      "before": "Уменьшает регенерацию маны всех варжеских юнитов в малом радиусе от героя.\n\n|cffffd7002-й уровень|r: |cffd7b4f5-10 ед. маны в секнуду|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff10|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A12H",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_36551",
+      "before": "|cffd7b4f5Антимагическая ауру|r [|cffffcc003-й уровень|r]",
+      "after": "|cffe4cfa3Антимагическая аура|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A12H",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_40477",
+      "before": "Уменьшает регенерацию маны всех варжеских юнитов в малом радиусе от героя.\n\n|cffffd7003-й уровень|r: |cffd7b4f5-14 ед. маны в секнуду|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff14|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A12H",
+      "field": "tip4",
+      "reference_before": "TRIGSTR_36555",
+      "before": "|cffd7b4f5Антимагическая ауру|r [|cffffcc004-й уровень|r]",
+      "after": "|cffe4cfa3Антимагическая аура|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A12H",
+      "field": "ubertip4",
+      "reference_before": "TRIGSTR_16198",
+      "before": "Уменьшает регенерацию маны всех варжеских юнитов  в малом радиусе от героя.\n\n|cffffd7004-й уровень|r: |cffd7b4f5-18 ед. маны в секнуду|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff18|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A12H",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_42466",
+      "before": "Изучить |cffd7b4f5Антимагичесакую Ауру|r [|cffffcc00%d-й уровень|r]",
+      "after": "|cffe4cfa3Антимагическая аура|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A12H",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_24538",
+      "before": "Уменьшает регенерацию маны всех варжеских юнитов.\n\n|cffffd7001-й уровень|r: |cffd7b4f5-3 ед. маны в секнуду|r\n|cffffd7002-й уровень|r: |cffd7b4f5-6 ед. маны в секнуду|r\n|cffffd7003-й уровень|r: |cffd7b4f5-9 ед. маны в секнуду|r\n|cffffd7004-й уровень|r: |cffd7b4f5-12 ед. маны в секнуду|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Антимагическая аура.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff6|cffced4da ед. в секунду.|n- |cffffffff2|cffced4da: Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff10|cffced4da ед. в секунду.|n- |cffffffff3|cffced4da: Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff14|cffced4da ед. в секунду.|n- |cffffffff4|cffced4da: Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff18|cffced4da ед. в секунду.|r"
+    },
+    {
+      "rawcode": "A0V5",
+      "field": "name",
+      "reference_before": "TRIGSTR_40020",
+      "before": "|cffd7b4f5Вечная Служба",
+      "after": "|cffe4cfa3Вечная служба|r"
+    },
+    {
+      "rawcode": "A0V5",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_39997",
+      "before": "|cffd7b4f5Вечная Служба|r [|cffffcc001-й уровень|r]",
+      "after": "|cffe4cfa3Вечная служба|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A0V5",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_39996",
+      "before": "Везакс, оживляет всех умерших войнов, и они сражаются на его стороне\n\n|cffffd7001-й уровень: |cffd7b4f56 юнитов|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает до |cffffffff6|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины не наследуют исследования владельца.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0V5",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_36577",
+      "before": "|cffd7b4f5Вечная Служба|r [|cffffcc002-й уровень|r]",
+      "after": "|cffe4cfa3Вечная служба|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A0V5",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_36580",
+      "before": "Везакс, оживляет всех умерших войнов, и они сражаются на его стороне\n\n|cffffd7002-й уровень: |cffd7b4f510 юнитов|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает до |cffffffff10|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины наследуют исследования владельца.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0V5",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_36578",
+      "before": "|cffd7b4f5Вечная Служба|r [|cffffcc003-й уровень|r]",
+      "after": "|cffe4cfa3Вечная служба|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A0V5",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_39205",
+      "before": "Везакс, оживляет всех умерших войнов, и они сражаются на его стороне\n\n|cffffd7003-й уровень: |cffd7b4f514 юнитов|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает до |cffffffff14|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины наследуют исследования владельца.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0V5",
+      "field": "tip4",
+      "reference_before": "TRIGSTR_36579",
+      "before": "|cffd7b4f5Вечная Служба|r [|cffffcc004-й уровень|r]",
+      "after": "|cffe4cfa3Вечная служба|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A0V5",
+      "field": "ubertip4",
+      "reference_before": "TRIGSTR_39989",
+      "before": "Везакс, оживляет всех умерших войнов, и они сражаются на его стороне\n\n|cffffd7004-й уровень: |cffd7b4f518 юнитов|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает до |cffffffff18|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины наследуют исследования владельца.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0V5",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_42770",
+      "before": "Изучить «|cffd7b4f5Вечная Служба|r» [|cffffcc00%d-й уровень|r]",
+      "after": "|cffe4cfa3Вечная служба|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A0V5",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_40025",
+      "before": "Везакс, оживляет всех умерших войнов, и они сражаются на его стороне\n\n|cffffd7001-й уровень: |cffd7b4f56 юнитов|r\n|cffffd7002-й уровень: |cffd7b4f510 юнитов|r\n|cffffd7003-й уровень: |cffd7b4f514 юнитов|r\n|cffffd7004-й уровень: |cffd7b4f518 юнитов|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вечная служба.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Поднимает до |cffffffff6|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины не наследуют исследования владельца.|n- |cffffffff2|cffced4da: Поднимает до |cffffffff10|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины наследуют исследования владельца.|n- |cffffffff3|cffced4da: Поднимает до |cffffffff14|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины наследуют исследования владельца.|n- |cffffffff4|cffced4da: Поднимает до |cffffffff18|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины наследуют исследования владельца.|r"
+    },
+    {
+      "rawcode": "A12J",
+      "field": "name",
+      "reference_before": "TRIGSTR_24626",
+      "before": "|cffd7b4f5Пары саронита|r",
+      "after": "|cffe4cfa3Пары саронита|r"
+    },
+    {
+      "rawcode": "A12J",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_24629",
+      "before": "|cffd7b4f5Пары саронита|r |cffffd700[1-й уровень]|r",
+      "after": "|cffe4cfa3Пары саронита|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A12J",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_27802",
+      "before": "Призывает поток целительной энергии, восполняющей здоровье всех юнитов.\n\n|cffffd7001-й уровень|r: |cffd7b4f560 ед. хп/сек. Время дейтсвия 15 сек.|r\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока герой поддерживает заклинание, лечит дружественные и нейтральные цели в радиусе |cffffffff2000|cffced4da, включая себя, на |cffc8e08760|cffced4da здоровья каждые |cffffffff1|cffced4da сек. Действует до |cffffffff15|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "rawcode": "A12J",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_24596",
+      "before": "|cffd7b4f5Пары саронита|r |cffffd700[2-й уровень]|r",
+      "after": "|cffe4cfa3Пары саронита|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A12J",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_27801",
+      "before": "Призывает поток целительной энергии, восполняющей здоровье всех юнитов.\n\n|cffffd7002-й уровень|r: |cffd7b4f575 ед. хп/сек. Время дейтсвия 15 сек.|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока герой поддерживает заклинание, лечит дружественные и нейтральные цели в радиусе |cffffffff2000|cffced4da, включая себя, на |cffc8e08775|cffced4da здоровья каждые |cffffffff1|cffced4da сек. Действует до |cffffffff15|cffced4da сек. В начале поддержания герой неуязвим в течение |cffc8e0871|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "rawcode": "A12J",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_42480",
+      "before": "Изучить |cffd7b4f5Пары саронита|r [|cffffcc00%d-й уровень|r]",
+      "after": "|cffe4cfa3Пары саронита|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A12J",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_40016",
+      "before": "Призывает поток целительной энергии, восполняющей здоровье всех юнитов.\n\n|cffffd7001-й уровень|r: |cffd7b4f560 ед. хп/сек. Время дейтсвия 15 сек.|r\n|cffffd7002-й уровень|r: |cffd7b4f575 ед. хп/сек. Время дейтсвия 15 сек.|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пары саронита.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Пока герой поддерживает заклинание, лечит дружественные и нейтральные цели в радиусе |cffffffff2000|cffced4da, включая себя, на |cffc8e08760|cffced4da здоровья каждые |cffffffff1|cffced4da сек. Действует до |cffffffff15|cffced4da сек.|n- |cffffffff2|cffced4da: Пока герой поддерживает заклинание, лечит дружественные и нейтральные цели в радиусе |cffffffff2000|cffced4da, включая себя, на |cffc8e08775|cffced4da здоровья каждые |cffffffff1|cffced4da сек. Действует до |cffffffff15|cffced4da сек. В начале поддержания герой неуязвим в течение |cffc8e0871|cffced4da сек.|r"
+    },
+    {
+      "rawcode": "A0V7",
+      "field": "name",
+      "reference_before": "TRIGSTR_40478",
+      "before": " |cffd7b4f5Приказ Генерала",
+      "after": "|cffe4cfa3Приказ генерала|r"
+    },
+    {
+      "rawcode": "A0V7",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_39999",
+      "before": "|cffd7b4f5Приказ Генерала|r [|cffffcc001-й уровень|r]",
+      "after": "|cffe4cfa3Приказ генерала|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A0V7",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_40014",
+      "before": "Увеличивает урон союзных войс в радиусе от самого генерала\n\n|cffffd7001-й уровень:|r |cffd7b4f510% Увеличения урона\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08710|cffced4da%. Действует на ближний и дальний бой.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0V7",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_40001",
+      "before": "|cffd7b4f5Приказ Генерала|r [|cffffcc002-й уровень|r]",
+      "after": "|cffe4cfa3Приказ генерала|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A0V7",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_40043",
+      "before": "Увеличивает урон союзных войс в радиусе от самого генерала\n\n|cffffd7002-й уровень:|r |cffd7b4f515% Увеличения урона\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08715|cffced4da%. Действует на ближний и дальний бой.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0V7",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_40005",
+      "before": "|cffd7b4f5Приказ Генерала|r [|cffffcc003-й уровень|r]",
+      "after": "|cffe4cfa3Приказ генерала|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A0V7",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_40044",
+      "before": "Увеличивает урон союзных войс в радиусе от самого генерала\n\n|cffffd7003-й уровень:|r |cffd7b4f520% Увеличения урона\n",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08720|cffced4da%. Действует на ближний и дальний бой.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0V7",
+      "field": "tip4",
+      "reference_before": "TRIGSTR_40009",
+      "before": "|cffd7b4f5Приказ Генерала|r [|cffffcc004-й уровень|r]",
+      "after": "|cffe4cfa3Приказ генерала|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A0V7",
+      "field": "ubertip4",
+      "reference_before": "TRIGSTR_40098",
+      "before": "Увеличивает урон союзных войс в радиусе от самого генерала\n\n|cffffd7004-й уровень:|r |cffd7b4f525% Увеличения урона",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08725|cffced4da%. Действует на ближний и дальний бой.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0V7",
+      "field": "researchtip",
+      "reference_before": "TRIGSTR_40105",
+      "before": "Изучить |cffd7b4f5Приказ Генерала|r [|cffffcc001-й уровень|r]",
+      "after": "|cffe4cfa3Приказ генерала|r"
+    },
+    {
+      "rawcode": "A0V7",
+      "field": "researchubertip",
+      "reference_before": "TRIGSTR_40480",
+      "before": "Увеличивает урон союзных войс в радиусе от самого генерала\n\n|cffffd7001-й уровень:|r |cffd7b4f510% Увеличения урона\n|cffffd7002-й уровень:|r |cffd7b4f515% Увеличения урона\n|cffffd7003-й уровень:|r |cffd7b4f520% Увеличения урона\n|cffffd7004-й уровень:|r |cffd7b4f525% Увеличения урона",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Приказ генерала.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08710|cffced4da%. Действует на ближний и дальний бой.|n- |cffffffff2|cffced4da: Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08715|cffced4da%. Действует на ближний и дальний бой.|n- |cffffffff3|cffced4da: Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08720|cffced4da%. Действует на ближний и дальний бой.|n- |cffffffff4|cffced4da: Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08725|cffced4da%. Действует на ближний и дальний бой.|r"
+    }
+  ],
+  "evidence": [
+    "faceless_hero_abilities_before.json",
+    "faceless_hero_ability_metadata.json",
+    "Stromgard.lua: Trig_Passive",
+    "Bezlikie.lua: Trig_Sluga_qqgsarona"
+  ],
+  "remaining": [
+    "В Warcraft III проверить интервалы и минимальный запас маны Обжигающего жара, фазы и предел урона Взрыва бездны",
+    "Проверить окна изучения, цели и высоту списков",
+    "Согласовать новое название Служения с карточкой Везакса"
+  ]
+}

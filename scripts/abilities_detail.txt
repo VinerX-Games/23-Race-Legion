@@ -1,0 +1,316 @@
+[1] Ability A0CL (lvls=4, hotkey='W'): name='|cffc8cde1Создать Труп|r' (sid=8955)
+  researchtip: sid=8956, val='Изучить «|cffc8cde1Создать Труп|r» [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid=15488, val='Некромант поднимает из глубин земли давно умершие трупы, дабы использовать их в некромантии.'
+  L1: tip: sid=8958, val='|cffc8cde1Создать Труп|r [|cffffcc001-й уровень|r]'
+      ubertip: sid=15493, val='Некромант поднимает из глубин земли давно умершие трупы, дабы использовать их в некромантии.'
+  L2: tip: sid=8963, val='|cffc8cde1Создать Труп|r [|cffffcc002-й уровень|r]'
+      ubertip: sid=15485, val='Некромант поднимает из глубин земли давно умершие трупы, дабы использовать их в некромантии.'
+  L3: tip: sid=8964, val='|cffc8cde1Создать Труп|r [|cffffcc003-й уровень|r]'
+      ubertip: sid=15486, val='Некромант поднимает из глубин земли давно умершие трупы, дабы использовать их в некромантии.'
+  L4: tip: sid=8962, val='|cffc8cde1Создать Труп|r [|cffffcc004-й уровень|r]'
+      ubertip: sid=15487, val='Некромант поднимает из глубин земли давно умершие трупы, дабы использовать их в некромантии.'
+
+[2] Ability A0CM (lvls=4, hotkey='E'): name='|cffc8cde1Массовое проклятие|r' (sid=8971)
+  researchtip: sid=41279, val='|cffc8cde1Массовое проклятие.|r'
+  researchubertip: sid=41305, val='Проклинает всех врагов рядом.|n|cffffcc001-й уровень:|r |cffb4dcdc100 ед. урона.|r |n|cffffcc002-й уровень:|r |cffb4dcdc150 ед. урона.|r |n|cffffcc003-й уровень:|r |cffb4dcdc200 ед. урона.|r |n|cffffcc004-й уровень:|r |cffb4dcdc250 ед. урона.|r'
+  L1: tip: sid=8972, val='|cffc8cde1Массовое проклятие|r'
+      ubertip: sid=41290, val='Проклинает всех врагов рядом.|n|cffffcc001-й уровень:|r |cffb4dcdc100 ед. урона.|r '
+  L2: tip: sid=8973, val='|cffc8cde1Массовое проклятие|r'
+      ubertip: sid=41291, val='Проклинает всех врагов рядом. |n|cffffcc002-й уровень:|r |cffb4dcdc150 ед. урона.|r '
+  L3: tip: sid=8974, val='|cffc8cde1Массовое проклятие|r'
+      ubertip: sid=41292, val='Проклинает всех врагов рядом. |n|cffffcc003-й уровень:|r |cffb4dcdc200 ед. урона.|r '
+  L4: tip: sid=8975, val='|cffc8cde1Массовое проклятие|r'
+      ubertip: sid=41293, val='Проклинает всех врагов рядом.|n|cffffcc004-й уровень:|r |cffb4dcdc250 ед. урона.|r'
+
+[3] Ability A0CN (lvls=2, hotkey='R'): name='|cffc8cde1Оживление мертвых|r' (sid=8992)
+  researchtip: sid=8993, val='Изучить «|cffc8cde1Оживление мертвых|r»'
+  researchubertip: sid=15500, val='Оживляет трупов в области действия. Оживленные воины неуязвимы.|n|cffffcc001-й уровень:|r |cffb4dcdcВоскрешает 8 трупов.|r |n|cffffcc002-й уровень:|r |cffb4dcdcВоскрешает 12 трупов.|r'
+  L1: tip: sid=8994, val='|cffc8cde1Оживление мертвых|r'
+      ubertip: sid=13587, val='Оживляет трупов в области действия. Сражаются на стороне некроманта.|n|cffffcc001-й уровень:|r |cffb4dcdcВоскрешает 8 трупов.|r '
+  L2: tip: sid=8995, val='|cffc8cde1Оживление мертвых|r'
+      ubertip: sid=13547, val='Оживляет трупов в области действия. Сражаются на стороне некроманта. |n|cffffcc002-й уровень:|r |cffb4dcdcВоскрешает 12 трупов.|r'
+
+[4] Ability A0CO (lvls=4, hotkey='Q'): name='|cffc8cde1Лик смерти|r' (sid=9006)
+  researchtip: sid=9007, val='Изучить «|cffc8cde1Лик смерти|r» [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid=15504, val='Наносит урон живому врагу или восполняет здоровье союзнику-нежити. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AUdc,DataA1> здоровья.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<AUdc,DataA2> здоровья.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AUdc,DataA3> здоровья|r.|n|cffffcc004-й уровень:|r |cffb4dcdc<AUdc,DataA4> здоровья|r.'
+  L1: tip: sid=15505, val='|cffc8cde1Лик смерти|r [|cffffcc001-й уровень|r]'
+      ubertip: sid=15508, val='Восполняет |cffb4dcdc<AUdc,DataA1>|r здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу.'
+  L2: tip: sid=15506, val='|cffc8cde1Лик смерти|r [|cffffcc002-й уровень|r]'
+      ubertip: sid=15509, val='Восполняет |cffb4dcdc<AUdc,DataA2>|r здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу.'
+  L3: tip: sid=15507, val='|cffc8cde1Лик смерти|r [|cffffcc003-й уровень|r]'
+      ubertip: sid=15510, val='Восполняет |cffb4dcdc<AUdc,DataA3> |rздоровья союзнику-нежити или наносит вдвое меньше урона живому врагу.'
+  L4: tip: sid=15502, val='|cffc8cde1Лик смерти|r [|cffffcc003-й уровень|r]'
+      ubertip: sid=15503, val='Восполняет |cffb4dcdc<AUdc,DataA4>|r здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу.'
+
+[5] Ability A0CP (lvls=4, hotkey='W'): name='|cffc8cde1Зов смерти|r' (sid=9010)
+  researchtip: sid=1267, val='Изучить |cffc8cde1Зов смерти|r'
+  researchubertip: sid=15514, val='Увеличивает урон находящихся по близости созных войск. |n|cffffcc001-й уровень:|r|cffb4dcdc+15% урона.|r|n|cffffcc002-й уровень:|r|cffb4dcdc+20% урона.|r|n|cffffcc003-й уровень:|r|cffb4dcdc+25% урона.|r|n|cffffcc004-й уровень:|r|cffb4dcdc+35% урона.|r'
+  L1: tip: sid=9011, val='|cffc8cde1Зов смерти|r'
+      ubertip: sid=15515, val='|cffb4dcdc+<Aroa,DataA1,%>%|r к урону находящихся рядом союзников. |nВремя действия: |cffb4dcdc<Aroa,Dur1> сек.|r'
+  L2: tip: sid=9012, val='|cffc8cde1Зов смерти|r'
+      ubertip: sid=15511, val='|cffb4dcdc+<Aroa,DataA2,%>%|r к урону находящихся рядом союзников. |nВремя действия: |cffb4dcdc<Aroa,Dur1> сек.|r'
+  L3: tip: sid=9013, val='|cffc8cde1Зов смерти|r'
+      ubertip: sid=15512, val='|cffb4dcdc+<Aroa,DataA3,%>%|r к урону находящихся рядом союзников. |nВремя действия: |cffb4dcdc<Aroa,Dur1> сек.|r'
+  L4: tip: sid=9014, val='|cffc8cde1Зов смерти|r'
+      ubertip: sid=15513, val='|cffb4dcdc+<Aroa,DataA4,%>%|r к урону находящихся рядом союзников. |nВремя действия: |cffb4dcdc<Aroa,Dur1> сек.|r'
+
+[6] Ability A0CQ (lvls=2, hotkey='R'): name='|cff00c800Пожирание|r' (sid=9049)
+  researchtip: sid=9050, val='Изучить «|cff00c800Пожирание|r» [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid=16074, val='Выпускает несколько ликов скверны, нанося урон находящимся рядом врагам. |n|n|cffffcc001-й уровень:|r |cffb4dcdc300 урона каждой цели, кол-во целей 18.|r |n|cffffcc002-й уровень:|r |cffb4dcdc450 урона каждой цели, кол-во целей 25.|r'
+  L1: tip: sid=9051, val='|cff00c800Пожирание|r [|cffffcc001-й уровень|r]'
+      ubertip: sid=40049, val='Выпускает несколько ликов скверны, нанося урон находящимся рядом врагам. |n|n|cffffcc001-й уровень:|r |cffb4dcdc 300 урона каждой цели, кол-во целей 18.|r '
+  L2: tip: sid=9052, val='|cff00c800Пожирание|r [|cffffcc002-й уровень|r]'
+      ubertip: sid=40050, val='Выпускает несколько ликов скверны, нанося урон находящимся рядом врагам. |n|cffffcc002-й уровень:|r |cffb4dcdc 450 урона каждой цели, кол-во целей 25.|r'
+
+[7] Ability A0CR (lvls=4, hotkey='E'): name='|cffc8cde1Нечистая аура|r' (sid=9066)
+  researchtip: sid=9067, val='Изучить «|cffc8cde1Нечистая аура|r» [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid=15523, val='Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdc+<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья.|r |n|cffffcc002-й уровень:|r |cffb4dcdc+<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья.|r |n|cffffcc003-й уровень:|r |cffb4dcdc+<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья.|r|n|cffffcc004-й уровень:|r |cffb4dcdc+<AUau,DataA4,%>% к скорости передвижения, большой бонус к регенерации здоровья.|r'
+  L1: tip: sid=9070, val='|cffc8cde1Нечистая аура|r [|cffffcc001-й уровень|r]'
+      ubertip: sid=15520, val='|cffb4dcdc+<AUau,DataA1,%>%|r к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.'
+  L2: tip: sid=9071, val='|cffc8cde1Нечистая аура|r [|cffffcc002-й уровень|r]'
+      ubertip: sid=15521, val='|cffb4dcdc+<AUau,DataA2,%>% |rк скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.'
+  L3: tip: sid=9072, val='|cffc8cde1Нечистая аура|r [|cffffcc003-й уровень|r]'
+      ubertip: sid=15522, val='|cffb4dcdc+<AUau,DataA3,%>%|r к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.'
+  L4: tip: sid=9068, val='|cffc8cde1Нечистая аура|r [|cffffcc004-й уровень|r]'
+      ubertip: sid=15519, val='|cffb4dcdc+<AUau,DataA4,%>%|r к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.'
+
+[8] Ability A0I3 (lvls=1, hotkey='C'): name='|cffe4cfa3Небольшой скачок|r' (sid=26484)
+  researchtip: sid=10064, val='|cffe4cfa3Небольшой скачок|r'
+  researchubertip: sid=10976, val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно перемещает строителя на короткое расстояние.|r'
+  L1: tip: sid=26476, val='|cffe4cfa3Небольшой скачок|r'
+      ubertip: sid=26477, val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da СПОСОБНОСТЬ: Мгновенно переносит работника на небольшое расстояние.|r'
+
+[9] Ability A0IQ (lvls=1, hotkey='X'): name='|cffe4cfa3Обозначить столицу|r' (sid=27193)
+  L1: tip: sid=27969, val='|cffe4cfa3Обозначить столицу|r'
+      ubertip: sid=27970, val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение.|r'
+
+[10] Ability A0LI (lvls=1, hotkey='S'): name='|cffe4cfa3Обмен Золота на Дерево|r' (sid=2888)
+  L1: tip: sid=3692, val='|cffe4cfa3Обмен Золота на Дерево|r'
+      ubertip: sid=20630, val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Отнимает у игрока 500 золота, но добавляет 100 дерева.|r'
+
+[11] Ability A0LJ (lvls=1, hotkey='A'): name='|cffe4cfa3Обмен Дерева на Золото|r' (sid=12857)
+  L1: tip: sid=12886, val='|cffe4cfa3Обмен Дерева на Золото|r'
+      ubertip: sid=20631, val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Отнимает у игрока 500 дерева, но добавляет 100 золота.|r'
+
+[12] Ability A1HA (lvls=1, hotkey='D'): name='|cffc3b4f0Культ Проклятых|r' (sid=38911)
+  L1: tip: sid=38912, val='|cffc3b4f0Культ Проклятых|r'
+      ubertip: sid=22000, val='|cffa0beaaСоздатель расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaСложность:|r |cffff0000●●●●●|r|n|cffa0beaaПериод: |r|cffc8dcaaWarcraft 3 - Wrath of the Lich King|r|n|cffc3b4f0Культ Проклятых|r - это организация живых существ, служивших Королю-личу. Члены в основном люди, но представлены все расы. Культ был сформирован за много лет до Третьей войны, поскольку предшественник и создатель Плети официально был верен Пылающему Легиону и обосновался в Лордероне. Король-лич Нер'зул, пойманный в ловушку своего тюремного трона, телепатически мог общаться с людьми, орками и эльфами, жаждущими власти - в первую очередь с тогдашним верховным магом Кел'Тузадом, который стал верховным личем и лидером Культа Проклятых. Хотя сектанты стремятся стать нежитью, они остаются в живых, потому что нежить считается честью, которую нужно заслужить, и потому что живые существа полезны Королю-личу своей способностью шпионить в живых поселениях Орды или Альянса и вербовать могущественных людей из их числа.'
+
+[13] Ability A1HC (lvls=1, hotkey='R'): name='|cffc3b4f0Защита распылителя|r' (sid=34230)
+  L1: tip: sid=34231, val='|cffc3b4f0Защита распылителя|r'
+      ubertip: sid=9513, val='Активирует атаку распылителя, наносящую урон врагам в течении некоторого времени.'
+
+[14] Ability A1HE (lvls=4, hotkey='W'): name='|cffc3b4f0Поток льда|r' (sid=34372)
+  researchtip: sid=34379, val='|cffc3b4f0Поток льда|r'
+  researchubertip: sid=34380, val='Всех юнитов в области помещает в астрал. '
+  L1: tip: sid=34370, val='|cffc3b4f0Поток льда|r'
+      ubertip: sid=34371, val='Стреляет в юнитов в выбранной области ледяными стрелами.'
+  L2: tip: sid=34373, val='|cffc3b4f0Поток льда|r'
+      ubertip: sid=34376, val='Стреляет в юнитов в выбранной области ледяными стрелами.'
+  L3: tip: sid=34374, val='|cffc3b4f0Поток льда|r'
+      ubertip: sid=34377, val='Стреляет в юнитов в выбранной области ледяными стрелами.'
+  L4: tip: sid=34375, val='|cffc3b4f0Поток льда|r'
+      ubertip: sid=34378, val='Всех юнитов в области помещает в астрал.'
+
+[15] Ability A1HH (lvls=1, hotkey='E'): name='|cffc3b4f0Темная стая|r' (sid=34869)
+  L1: tip: sid=34870, val='|cffc3b4f0Темная стая|r'
+      ubertip: sid=35073, val='Выпускает стаю нетопырей, наносящих по 70 урона наземным врагам на прямой линии. Максимум – <ACca,DataB1> урона.'
+
+[16] Ability A1HI (lvls=1, hotkey='Q'): name='|cffc3b4f0Морозный доспех|r' (sid=34871)
+  L1: tip: sid=34872, val='|cffc3b4f0Морозный доспех|r'
+      ubertip: sid=None, val='"Укрывает союзника ледяным щитом, который дает +<ACfa,DataB1> к броне и замедляет атакующие его в ближнем бою войска на <ACfa,Dur1> сек. |nВремя действия: <ACfa,DataA1> сек."'
+
+[17] Ability A1HM (lvls=1, hotkey='W'): name='|cffc3b4f0Пожирание мании|r' (sid=35092)
+  L1: tip: sid=35093, val='|cffc3b4f0Пожирание мании|r'
+      ubertip: sid=35094, val='Поглощает магические эффекты, действующие на войска в указанной области. Дает юниту <Advm,DataA1> здоровья и <Advm,DataB1> маны за каждую цель. |n|cffffcc00Наносит <Advm,DataE1> урона призванным целям.|r'
+
+[18] Ability A1HN (lvls=1, hotkey='E'): name='|cffc3b4f0Лик смерти|r' (sid=35012)
+  L1: tip: sid=35074, val='|cffc3b4f0Лик смерти|r'
+      ubertip: sid=35076, val='Восполняет 160 здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу.'
+
+[19] Ability A1HO (lvls=1, hotkey='None'): name='|cffc3b4f0Заразительная атака|r' (sid=36961)
+  L1: tip: sid=36959, val='|cffc3b4f0Заразительная атака|r'
+      ubertip: sid=36960, val='C шансом 33% атака заразит противника.'
+
+[20] Ability A1IJ (lvls=1, hotkey='C'): name='ДАММИ - ЮНИТ НО КАК ЗДАНИЕ' (sid=35961)
+  L1: tip: sid=11590, val='ДАММИ - ВНЕ ЭКОНОМИКИ'
+      ubertip: sid=11606, val='ДАММИ - ВНЕ ЭКОНОМИКИ'
+
+[21] Ability A1IK (lvls=1, hotkey='Q'): name='|cffc3b4f0Зачумнение|r' (sid=34365)
+  L1: tip: sid=34366, val='|cffc3b4f0Зачумнение|r'
+      ubertip: sid=12071, val='Заражает врага смертоносным паразитом, который наносит <ANpa,DataA1> урона/сек. в течение <ANpa,Dur1> сек. Если цель погибает под действием паразита, из ее тела появляется водяной прислужник. При успешном заклятии восстанавливает 15 здоровья и 5 маны.'
+
+[22] Ability A1IL (lvls=4, hotkey='Q'): name='|cffc3b4f0Воскрешение мертвых|r' (sid=35974)
+  researchtip: sid=35989, val='|cffc3b4f0Воскрешение мертвых|r'
+  researchubertip: sid=35990, val='Воскрешает мертвых, на службу королю Личу. |n|n|cffffcc001-й уровень:|r |cffb4dcdcСкелет воин.|r|n|cffffcc002-й уровень:|r |cffb4dcdcВурдалак.|r |n|cffffcc003-й уровень:|r |cffb4dcdcПоганище.|r |n|cffffcc004-й уровень:|r |cffb4dcdcРыцарь смертик.|r'
+  L1: tip: sid=35975, val='|cffc3b4f0Воскрешение мертвых|r'
+      ubertip: sid=35979, val='Воскрешает мертвых, готовых стать пушечным мясом ( а точнее костями) на нужны культа.'
+  L2: tip: sid=35976, val='|cffc3b4f0Воскрешение мертвых|r'
+      ubertip: sid=35980, val='Воскрешает мертвых, готовых стать пушечным мясом ( а точнее костями) на нужны культа.'
+  L3: tip: sid=35977, val='|cffc3b4f0Воскрешение мертвых|r'
+      ubertip: sid=35981, val='Воскрешает мертвых, готовых стать пушечным мясом ( а точнее костями) на нужны культа.'
+  L4: tip: sid=35978, val='|cffc3b4f0Воскрешение мертвых|r'
+      ubertip: sid=35982, val='Воскрешает мертвых, готовых стать пушечным мясом ( а точнее костями) на нужны культа.'
+
+[23] Ability A1KB (lvls=1, hotkey='None'): name='Защита столицы' (sid=38201)
+  L1: tip: sid=38229, val='Защита столицы'
+      ubertip: sid=None, val='None'
+
+[24] Ability A1L9 (lvls=2, hotkey='C'): name='|cffc3b4f0Воскрешать бойцов|r' (sid=38662)
+  L1: tip: sid=38679, val='|cffc3b4f0Воскрешать бойцов|r'
+      ubertip: sid=38698, val='Вместо слуг кладбище будет воскрешать воинов скелетов.'
+  L2: tip: sid=38756, val='|cffc3b4f0Воскрешать слуг|r'
+      ubertip: sid=38757, val='Вместо воинов-скелетов кладбище будет воскрешать слуг.'
+
+[25] Ability AInv (lvls=1, hotkey='None'): name='Инвентарь' (sid=None)
+  L1: tip: sid=None, val='None'
+      ubertip: sid=None, val='None'
+
+[26] Ability AUdd (lvls=1, hotkey='D'): name='Смерть и разложение' (sid=None)
+  L1: tip: sid=None, val='Смерть и разложение'
+      ubertip: sid=None, val='"Наносит урон целям в области действия в объеме <AUdd,DataA1,%>% их запаса здоровья в секунду. Уничтожает деревья. |nВремя действия: <AUdd,Dur1> сек."'
+
+[27] Ability AUdr (lvls=4, hotkey='E'): name='Темный ритуал' (sid=None)
+  L1: tip: sid=None, val='"Темный ритуал [|cffffcc001-й уровень|r]"'
+      ubertip: sid=None, val='"Приносит в жертву союзника-нежить и превращает <AUdr,DataA1,%>% его здоровья в ману для лича."'
+  L2: tip: sid=None, val='"Темный ритуал [|cffffcc002-й уровень|r]"'
+      ubertip: sid=None, val='"Приносит в жертву союзника-нежить и превращает <AUdr,DataA2,%>% его здоровья в ману для лича."'
+  L3: tip: sid=None, val='"Темный ритуал [|cffffcc003-й уровень|r]"'
+      ubertip: sid=None, val='"Приносит в жертву союзника-нежить и превращает <AUdr,DataA3,%>% его здоровья в ману для лича."'
+  L4: tip: sid=29627, val='Темный ритуал [|cffffcc004-й уровень|r]'
+      ubertip: sid=29628, val='Приносит в жертву союзника-нежить и превращает <AUdr,DataA4,%>% его здоровья в ману для лича.'
+
+[28] Ability AUfn (lvls=4, hotkey='Q'): name='Кольцо льда' (sid=None)
+  researchtip: sid=None, val='Изучить «Кольцо льда» [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid=30532, val='Поражает врагов вокруг цели ледяной волной, замедляющей передвижение и атаку. |n|n|cffffcc001-й уровень:|r 100 урона цели и <AUfn,DataA1> по области. |n|cffffcc002-й уровень:|r 150 урона цели и <AUfn,DataA2> по области. |n|cffffcc003-й уровень:|r 275 урона цели и <AUfn,DataA3> по области.|n|cffffcc004-й уровень:|r 450 урона цели и <AUfn,DataA3> по области.'
+  L1: tip: sid=None, val='"Кольцо льда [|cffffcc001-й уровень|r]"'
+      ubertip: sid=None, val='"Выпускает ледяную волну, нанося <AUfn,DataB1> урона цели и <AUfn,DataA1> урона по области. Урон от льда замедляет передвижение и атаку целей на <AUfn,Dur1> сек."'
+  L2: tip: sid=None, val='"Кольцо льда [|cffffcc002-й уровень|r]"'
+      ubertip: sid=None, val='"Выпускает ледяную волну, нанося <AUfn,DataB2> урона цели и <AUfn,DataA2> урона по области. Урон от льда замедляет передвижение и атаку целей на <AUfn,Dur2> сек."'
+  L3: tip: sid=None, val='"Кольцо льда [|cffffcc003-й уровень|r]"'
+      ubertip: sid=None, val='"Выпускает ледяную волну, нанося <AUfn,DataB3> урона цели и <AUfn,DataA3> урона по области. Урон от льда замедляет передвижение и атаку целей на <AUfn,Dur3> сек."'
+  L4: tip: sid=2513, val='Кольцо льда [|cffffcc004-й уровень|r]'
+      ubertip: sid=21411, val='Выпускает ледяную волну, нанося <AUfn,DataB4> урона цели и <AUfn,DataA4> урона по области. Урон от льда замедляет передвижение и атаку целей на <AUfn,Dur4> сек.'
+
+[29] Ability Aaha (lvls=1, hotkey='G'): name='Добывать ресурсы' (sid=None)
+  L1: tip: sid=None, val='Добывать ресурсы'
+      ubertip: sid=None, val='Добывает золото из проклятого рудника.'
+
+[30] Ability Agyd (lvls=1, hotkey='None'): name='Создать труп' (sid=None)
+  L1: tip: sid=None, val='None'
+      ubertip: sid=None, val='None'
+
+[31] Ability Amed (lvls=1, hotkey='D'): name='Выгрузить труп' (sid=None)
+  L1: tip: sid=None, val='Выгрузить все трупы'
+      ubertip: sid=None, val='Выгружает все тела из мясного фургона.'
+
+[32] Ability Amel (lvls=1, hotkey='C'): name='Погрузить труп' (sid=None)
+  L1: tip: sid=None, val='Погрузить труп'
+      ubertip: sid=None, val='Грузит труп в мясной фургон.'
+
+[33] Ability Argl (lvls=1, hotkey='None'): name='Вернуть золото и древесину' (sid=None)
+  L1: tip: sid=None, val='None'
+      ubertip: sid=None, val='None'
+
+[34] Ability Arlm (lvls=1, hotkey='None'): name='Вернуть древесину' (sid=None)
+  L1: tip: sid=None, val='None'
+      ubertip: sid=None, val='None'
+
+[35] Ability Arst (lvls=1, hotkey='R'): name='Ремонт' (sid=None)
+  L1: tip: sid=None, val='Ремонт'
+      ubertip: sid=None, val='Ремонтирует здания и технику за счет ресурсов.'
+
+[36] Ability Auns (lvls=1, hotkey='U'): name='Развоплотить здание' (sid=None)
+  L1: tip: sid=None, val='Развоплотить здание'
+      ubertip: sid=None, val='"Развоплощает ваше здание, возвращая <Auns,DataA1,%>% затраченных на него ресурсов."'
+
+[37] Ability Sch2 (lvls=1, hotkey='None'): name='Cargo Hold' (sid=None)
+  L1: tip: sid=None, val='None'
+      ubertip: sid=None, val='None'
+
+[38] Ability cDA1 (lvls=1, hotkey='None'): name='|cffc3b4f0Болезнетворное облако|r' (sid=30317)
+  L1: tip: sid=35212, val='|cffc3b4f0Болезнетворное облако|r'
+      ubertip: sid=None, val='"Выпускает с каждой атакой болезнетворное облако, наносящее <Aap1,DataB1> урона/сек. |nВремя действия: <Aap1,DataA1> сек."'
+
+[39] Ability cDAZ (lvls=2, hotkey='A'): name='|cffe4cfa3Воскрешение мёртвых — [уровень 2]|r (|cffffffffR|r)' (sid=38637)
+  L1: tip: sid=38638, val='|cffe4cfa3Воскрешение мёртвых — [уровень 3]|r (|cffffffffR|r)'
+      ubertip: sid=38660, val='Призванные некроманты будут воскрешать скелетов автоматически. Касается юнитов только в этом здании!'
+  L2: tip: sid=38640, val='|cffc3b4f0Включить автокаст по умолчанию|r'
+      ubertip: sid=38661, val='Призванные некроманты будут воскрешать скелетов автоматически. Касается юнитов только в этом здании!'
+
+[40] Ability cDa2 (lvls=3, hotkey='Q'): name='|cffc3b4f0Воскрешение мертвых|r' (sid=35206)
+  L1: tip: sid=26988, val='|cffc3b4f0Воскрешение мертвых|r'
+      ubertip: sid=12004, val='Поднимает 1 скелета из трупа. При успешном поднятии восстанавливает 15 здоровья и 5 маны.'
+  L2: tip: sid=35205, val='|cffc3b4f0Воскрешение мертвых|r
+'
+      ubertip: sid=12009, val='Поднимает 1 скелета из трупа. При успешном поднятии восстанавливает 15 здоровья и 5 маны.'
+  L3: tip: sid=36912, val='|cffc3b4f0Воскрешение мертвых|r
+'
+      ubertip: sid=12011, val='Поднимает 1 скелета из трупа. При успешном поднятии восстанавливает 15 здоровья и 5 маны.'
+
+[41] Ability cDa4 (lvls=1, hotkey='Z'): name='|cffc3b4f0Воскрешение слуг|r' (sid=35071)
+  L1: tip: sid=27222, val='|cffc3b4f0Воскрешение слуг|r'
+      ubertip: sid=14535, val='Восрешает скелета, добывающего древесину.'
+
+[42] Ability cDa5 (lvls=1, hotkey='R'): name='|cffc3b4f0Плотеобработка|r' (sid=27223)
+  L1: tip: sid=35207, val='|cffc3b4f0Плотеобработка|r'
+      ubertip: sid=35971, val='Собирает сильного юнита из более слабых, состоящих из плоти. За применение используется не более 12 юнитов, ограничение по макс здоровью - 6.5к. Конверсия происходит с 60% эффективностью, и усиливается на 5% за каждое исследование соответствующего мага.'
+
+[43] Ability cDa6 (lvls=1, hotkey=''): name='|cffc3b4f0Дамми плоть|r' (sid=27247)
+  L1: tip: sid=11016, val='Увеличивают защиту магов культа.'
+      ubertip: sid=None, val=''
+
+[44] Ability cDa8 (lvls=1, hotkey='W'): name='|cffc3b4f0Призрачное касание|r' (sid=27250)
+  L1: tip: sid=38651, val='|cffc3b4f0Призрачное касание|r'
+      ubertip: sid=38652, val='Восполняет <Cda8,DataB1> маны находящимся рядом союзникам.'
+
+[45] Ability cDa9 (lvls=1, hotkey='Q'): name='|cffc3b4f0Чумная эссенция|r' (sid=28581)
+  L1: tip: sid=34982, val='|cffc3b4f0Чумная эссенция|r'
+      ubertip: sid=34983, val='Восполняет 15 здоровья находящимся рядом союзникам (до 10).'
+
+[46] Ability cDaa (lvls=1, hotkey=''): name='|cffc3b4f0Посвящение некромантов|r' (sid=34218)
+  L1: tip: sid=34619, val='|cffc3b4f0Посвящение некромантов|r'
+      ubertip: sid=None, val='"Дает невидимость и +<AOwk,DataB1,%>% к скорости передвижения на <AOwk,Dur1> сек. Атакуя, мастер клинка становится видимым и наносит <AOwk,DataC1> дополнительного урона."'
+
+[47] Ability cDad (lvls=1, hotkey='R'): name='|cffc3b4f0Кольцо льда|r' (sid=36971)
+  L1: tip: sid=36970, val='|cffc3b4f0Кольцо льда|r'
+      ubertip: sid=12074, val='Выпускает ледяную волну, нанося 75 урона цели и 60 урона по области. Урон от льда замедляет передвижение и атаку целей на 5 сек.'
+
+[48] Ability cDae (lvls=1, hotkey='E'): name='|cffc3b4f0Ледяные стрелы|r' (sid=28776)
+  L1: tip: sid=34992, val='Голем, способный наносить урон по области вблизи и заражать врагов чумой.'
+      ubertip: sid=None, val='"Атаки наносят дополнительный урон от льда и замедляют цель, но расходуют ману."'
+
+[49] Ability cDai (lvls=1, hotkey='W'): name='|cffc3b4f0Порча издыхания|r' (sid=30321)
+  L1: tip: sid=34842, val='|cffc3b4f0Порча издыхания|r'
+      ubertip: sid=38659, val='Снижает урон противника на 15% и броню на 3 ед.'
+
+[50] Ability cDao (lvls=1, hotkey='Q'): name='|cffc3b4f0Неистовство чужой души|r' (sid=12145)
+  L1: tip: sid=30331, val='|cffc3b4f0Неистовство чужой души|r'
+      ubertip: sid=12146, val='Ускоряет атаку на 30% и передвижение на 25% на 15 сек.'
+
+[51] Ability cDap (lvls=1, hotkey='W'): name='|cffc3b4f0Порча изнывания|r' (sid=696)
+  L1: tip: sid=19994, val='|cffc3b4f0Порча изнывания|r'
+      ubertip: sid=1342, val='Замедляет атаку врага на <cDap,DataB1,%>% и передвижение на <cDap,DataA1,%>%. |nВремя действия: <cDap,Dur1> сек.'
+
+[52] Ability cDaq (lvls=2, hotkey='None'): name='|cffc3b4f0Эксгумация|r' (sid=28780)
+  L1: tip: sid=34984, val='|cffc3b4f0Эксгумация|r'
+      ubertip: sid=34995, val='Каждые 30 сек. мясной фургон выкапывает из земли очередное мертвое тело.'
+  L2: tip: sid=34993, val='|cffc3b4f0Эксгумация|r'
+      ubertip: sid=34994, val='Каждые 15 сек. мясной фургон выкапывает из земли очередное мертвое тело.'
+
+[53] Ability cDar (lvls=1, hotkey='R'): name='|cffc3b4f0Костесборка|r' (sid=30299)
+  L1: tip: sid=35209, val='|cffc3b4f0Костесборка|r'
+      ubertip: sid=35972, val='Собирает сильного юнита из более слабых, состоящих из плоти. За применение используется не более 12 юнитов, ограничение по макс здоровью - 3.5к. Конверсия происходит с 60% эффективностью, и усиливается на 5% за каждое исследование соответствующего мага.'
+
+[54] Ability cDat (lvls=1, hotkey=''): name='|cffc3b4f0Дамми кости|r' (sid=30301)
+  L1: tip: sid=34666, val='Исследовать |cffc3b4f0Ярость воскрешенных|r'
+      ubertip: sid=None, val=''
+
+[55] Ability cDaw (lvls=1, hotkey='None'): name='|cffc3b4f0Чумная аура|r' (sid=30291)
+  L1: tip: sid=34996, val='|cffc3b4f0Чумная аура|r'
+      ubertip: sid=35031, val='Ускоряет регенерацию здоровья находящихся рядом союзников-нежити.'
+
+[56] Ability cDay (lvls=1, hotkey='None'): name='|cffc3b4f0Заразительные атаки|r' (sid=35211)
+  L1: tip: sid=30308, val='|cffc3b4f0Заразительные атаки|r'
+      ubertip: sid=34840, val='Атаки заражают противников чумой.'
+

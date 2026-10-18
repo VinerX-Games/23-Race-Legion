@@ -1,0 +1,267 @@
+{
+  "race": "Ents",
+  "category": "unit_abilities_and_buffs",
+  "total_abilities": 25,
+  "total_buffs": 4,
+  "abilities": [
+    {
+      "id": "A0PW",
+      "name": "|cffe4cfa3Крепкая кора|r",
+      "values": {
+        "name": "|cffe4cfa3Крепкая кора|r",
+        "tip1": "|cffe4cfa3Крепкая кора|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Плотный слой древней коры увеличивает защиту на |cffffffff1|cffced4da ед. и отражает |cffffffff10%|cffced4da полученного в ближнем бою урона обратно в атакующего врага.|r"
+      }
+    },
+    {
+      "id": "A0PU",
+      "name": "|cffe4cfa3Ядовитый сок|r",
+      "values": {
+        "name": "|cffe4cfa3Ядовитый сок|r",
+        "tip1": "|cffe4cfa3Ядовитый сок|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки отравляют цель ядовитым соком, снижая скорость передвижения на |cffffffff15%|cffced4da, скорость атаки на |cffffffff10%|cffced4da и нанося |cffffffff4|cffced4da ед. урона в секунду в течение |cffffffff5|cffced4da сек. (по героям — |cffffffff1|cffced4da сек.).|r"
+      }
+    },
+    {
+      "id": "A0Q2",
+      "name": "|cffe4cfa3Сильный удар|r",
+      "values": {
+        "name": "|cffe4cfa3Сильный удар|r",
+        "tip1": "|cffe4cfa3Сильный удар|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff20%|cffced4da наносит дополнительный урон при атаке и оглушает противника на |cffffffff2|cffced4da сек. (героев — на |cffffffff1|cffced4da сек.).|r"
+      }
+    },
+    {
+      "id": "A0O7",
+      "name": "|cffe4cfa3Ядро Жизни|r",
+      "values": {
+        "name": "|cffe4cfa3Ядро Жизни|r",
+        "tip1": "|cffe4cfa3Ядро Жизни|r (|cffffffffQ|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Высвобождает запас жизненной энергии, восстанавливая цели |cffffffff15|cffced4da ед. здоровья.|r"
+      }
+    },
+    {
+      "id": "A0PX",
+      "name": "|cffe4cfa3Аура ядра жизни|r",
+      "values": {
+        "name": "|cffe4cfa3Аура ядра жизни|r",
+        "tip1": "|cffe4cfa3Аура ядра жизни|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Излучает целительную энергию природы, ускоряя регенерацию здоровья находящихся рядом союзников на |cffffffff100%|cffced4da.|r"
+      }
+    },
+    {
+      "id": "A0Q6",
+      "name": "|cffe4cfa3Рассекающий удар|r",
+      "values": {
+        "name": "|cffe4cfa3Рассекающий удар|r",
+        "tip1": "|cffe4cfa3Рассекающий удар|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мощные размашистые удары наносят |cffffffff13%|cffced4da урона соседним вражеским бойцам.|r"
+      }
+    },
+    {
+      "id": "A0PV",
+      "name": "|cffe4cfa3Ядро Маны|r",
+      "values": {
+        "name": "|cffe4cfa3Ядро Маны|r",
+        "tip1": "|cffe4cfa3Ядро Маны|r (|cffffffffQ|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Высвобождает тайную энергию, восстанавливая выбранному союзному заклинателю |cffffffff10|cffced4da ед. маны.|r"
+      }
+    },
+    {
+      "id": "A0PY",
+      "name": "|cffe4cfa3Аура магического ядра|r",
+      "values": {
+        "name": "|cffe4cfa3Аура магического ядра|r",
+        "tip1": "|cffe4cfa3Аура магического ядра|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Излучает потоки природной магии, ускоряя восстановление маны находящихся рядом союзных заклинателей.|r"
+      }
+    },
+    {
+      "id": "A1P2",
+      "name": "|cffe4cfa3Контроль Магии|r",
+      "values": {
+        "name": "|cffe4cfa3Контроль Магии|r",
+        "tip1": "|cffe4cfa3Контроль Магии|r (|cffffffffQ|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Похищает положительный эффект с вражеского бойца и передаёт его союзнику, либо снимает отрицательное заклинание с союзника и переносит его на ближайшего врага.|r"
+      }
+    },
+    {
+      "id": "A1P0",
+      "name": "|cffe4cfa3Гнев деревьев|r",
+      "values": {
+        "name": "|cffe4cfa3Гнев деревьев|r",
+        "tip1": "|cffe4cfa3Гнев деревьев|r (|cffffffffW|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает из земли цепкие корни, которые опутывают противника, лишая его движения и возможности атаковать, и наносят |cffffffff15|cffced4da ед. урона в секунду.|r"
+      }
+    },
+    {
+      "id": "A1P1",
+      "name": "|cffe4cfa3Эссенция Яда|r",
+      "values": {
+        "name": "|cffe4cfa3Эссенция Яда|r",
+        "tip1": "|cffe4cfa3Эссенция Яда|r (|cffffffffE|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цель сгустком едкого яда, нанося |cffffffff10|cffced4da ед. урона мгновенно и периодический урон в течение времени действия, а также замедляя её передвижение.|r"
+      }
+    },
+    {
+      "id": "A0QP",
+      "name": "|cffe4cfa3Рассеивание заклинаний|r",
+      "values": {
+        "name": "|cffe4cfa3Рассеивание заклинаний|r",
+        "tip1": "|cffe4cfa3Рассеивание заклинаний|r (|cffffffffQ|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Развеивает все положительные и отрицательные эффекты в указанной области, нанося |cffffffff200|cffced4da ед. урона призванным существам.|r"
+      }
+    },
+    {
+      "id": "A0PZ",
+      "name": "|cffe4cfa3Покровительство Леса|r",
+      "values": {
+        "name": "|cffe4cfa3Покровительство Леса|r",
+        "tip1": "|cffe4cfa3Покровительство Леса|r (|cffffffffW|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Благословляет выбранный союзный отряд, повышая его урон на |cffffffff10%|cffced4da и показатель брони на |cffffffff5|cffced4da ед.|r"
+      }
+    },
+    {
+      "id": "A0Q7",
+      "name": "|cffe4cfa3Мудрость Лесов|r",
+      "values": {
+        "name": "|cffe4cfa3Мудрость Лесов|r",
+        "tip1": "|cffe4cfa3Мудрость Лесов|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Древняя природная защита уменьшает входящий урон от вражеских заклинаний, магии и дистанционных пронзающих атак.|r"
+      }
+    },
+    {
+      "id": "A1OY",
+      "name": "|cffe4cfa3Смерч|r",
+      "values": {
+        "name": "|cffe4cfa3Смерч|r",
+        "tip1": "|cffe4cfa3Смерч|r (|cffffffffQ|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает вражеского воина в воздух сильным вихрем, выводя его из боя на время действия. Не действует на осадные орудия и здания.|r"
+      }
+    },
+    {
+      "id": "A1OZ",
+      "name": "|cffe4cfa3Аура Ветров|r",
+      "values": {
+        "name": "|cffe4cfa3Аура Ветров|r",
+        "tip1": "|cffe4cfa3Аура Ветров|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Потоки попутного ветра дают |cffffffff10%|cffced4da шанс уклониться от вражеских атак.|r"
+      }
+    },
+    {
+      "id": "A0Q1",
+      "name": "|cffe4cfa3Крепкий панцирь|r",
+      "values": {
+        "name": "|cffe4cfa3Крепкий панцирь|r",
+        "tip1": "|cffe4cfa3Крепкий панцирь|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Монолитный каменный панцирь поглощает до |cffffffff12|cffced4da ед. урона при каждой вражеской атаке с вероятностью |cffffffff100%|cffced4da (минимальный получаемый урон — |cffffffff3|cffced4da ед.).|r"
+      }
+    },
+    {
+      "id": "A1PL",
+      "name": "|cffe4cfa3Слияние с Лесом|r",
+      "values": {
+        "name": "|cffe4cfa3Слияние с Лесом|r",
+        "tip1": "|cffe4cfa3Слияние с Лесом|r (|cffffffffQ|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При получении урона дракончик временно переходит в астральное состояние, становясь неуязвимым для атак на короткое время.|r"
+      }
+    },
+    {
+      "id": "A1PK",
+      "name": "|cffe4cfa3Вспышка маны|r",
+      "values": {
+        "name": "|cffe4cfa3Вспышка маны|r",
+        "tip1": "|cffe4cfa3Вспышка маны|r (|cffffffffW|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дракончик раскрывает крылья, повышая свою броню и выпуская сгустки магии, наносящие урон врагам при сотворении ими заклинаний поблизости.|r"
+      }
+    },
+    {
+      "id": "A1PM",
+      "name": "|cffe4cfa3Невосприимчивость к магии|r",
+      "values": {
+        "name": "|cffe4cfa3Невосприимчивость к магии|r",
+        "tip1": "|cffe4cfa3Невосприимчивость к магии|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обеспечивает абсолютную защиту от воздействия любых вражеских и дружественных заклинаний.|r"
+      }
+    },
+    {
+      "id": "A1P3",
+      "name": "|cffe4cfa3Рассеяние чар|r",
+      "values": {
+        "name": "|cffe4cfa3Рассеяние чар|r",
+        "tip1": "|cffe4cfa3Рассеяние чар|r (|cffffffffB|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает отрицательные заклинания с союзников и положительные с врагов, нанося |cffffffff250|cffced4da ед. урона призванным существам.|r"
+      }
+    },
+    {
+      "id": "A0Q3",
+      "name": "|cffe4cfa3Зов Древних|r",
+      "values": {
+        "name": "|cffe4cfa3Зов Древних|r",
+        "tip1": "|cffe4cfa3Зов Древних|r (|cffffffffW|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает на помощь |cffffffff2|cffced4da малых древней на |cffffffff70|cffced4da сек.|r"
+      }
+    },
+    {
+      "id": "A0Q4",
+      "name": "|cffe4cfa3Древесный покров|r",
+      "values": {
+        "name": "|cffe4cfa3Древесный покров|r",
+        "tip1": "|cffe4cfa3Древесный покров|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Укрывает союзников защитной листвой, повышая показатель брони находящихся рядом бойцов на |cffffffff2|cffced4da ед.|r"
+      }
+    },
+    {
+      "id": "A0Q5",
+      "name": "|cffe4cfa3Cпокойствие Леса|r",
+      "values": {
+        "name": "|cffe4cfa3Cпокойствие Леса|r",
+        "tip1": "|cffe4cfa3Cпокойствие Леса|r (|cffffffffE|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает поток живительной энергии, восстанавливающий по |cffffffff5|cffced4da ед. здоровья в секунду союзникам в обширной области в течение |cffffffff10|cffced4da сек.|r"
+      }
+    },
+    {
+      "id": "A1PQ",
+      "name": "|cffe4cfa3Страж Леса|r",
+      "values": {
+        "name": "|cffe4cfa3Страж Леса|r",
+        "tip1": "|cffe4cfa3Страж Леса|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает из трупов павших воинов неуязвимых духов возмездия, атакующих врагов до гибели призвавшей их аватары.|r"
+      }
+    }
+  ],
+  "buffs": [
+    {
+      "id": "B07R",
+      "name": "|cffe4cfa3Аура ядра жизни|r",
+      "values": {
+        "bufftip": "|cffe4cfa3Аура ядра жизни|r",
+        "buffubertip": "|cffa6afb8ЭФФЕКТ:|cffced4da Ускоренное восстановление здоровья под действием ауры ядра жизни.|r"
+      }
+    },
+    {
+      "id": "B08X",
+      "name": "|cffe4cfa3Древесный покров|r",
+      "values": {
+        "bufftip": "|cffe4cfa3Древесный покров|r",
+        "buffubertip": "|cffa6afb8ЭФФЕКТ:|cffced4da Повышенный показатель брони под действием древесного покрова.|r"
+      }
+    },
+    {
+      "id": "B090",
+      "name": "|cffe4cfa3Страж Леса|r",
+      "values": {
+        "bufftip": "|cffe4cfa3Страж Леса|r",
+        "buffubertip": "|cffa6afb8ЭФФЕКТ:|cffced4da Призванный дух возмездия, неуязвимый к вражеским атакам.|r"
+      }
+    },
+    {
+      "id": "B08V",
+      "name": "|cffe4cfa3Покровительство Леса|r",
+      "values": {
+        "bufftip": "|cffe4cfa3Покровительство Леса|r",
+        "buffubertip": "|cffa6afb8ЭФФЕКТ:|cffced4da Повышенный урон и показатель брони под благословением леса.|r"
+      }
+    }
+  ]
+}

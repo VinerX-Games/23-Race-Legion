@@ -1,0 +1,106 @@
+{
+  "race": "Даларан (Dalaran)",
+  "race_id": 16,
+  "selection_ability": "A0HN",
+  "objects_audit": {
+    "buildings": {
+      "count": 14,
+      "ids": [
+        "h030",
+        "h031",
+        "h02V",
+        "h02W",
+        "h02X",
+        "h02Y",
+        "h034",
+        "h035",
+        "h036",
+        "h032",
+        "h037",
+        "h038",
+        "n063",
+        "h011"
+      ],
+      "economy_building": {
+        "id": "h031",
+        "name": "Конденсатор Маны",
+        "food_provided": 40,
+        "gold_income_per_25s": 20,
+        "verified_via": "53_economy.lua and unit ability stats"
+      }
+    },
+    "units": {
+      "count": 14,
+      "ids": [
+        "u001",
+        "h02I",
+        "h02J",
+        "h02K",
+        "h02L",
+        "h02M",
+        "h02N",
+        "h02O",
+        "h02P",
+        "n009",
+        "n00A",
+        "n00B",
+        "n00M",
+        "n00N"
+      ]
+    },
+    "heroes": {
+      "count": 5,
+      "ids": [
+        "H04S",
+        "H04W",
+        "H04X",
+        "H052",
+        "H053"
+      ],
+      "names": {
+        "H04S": "Верховный маг (Интеллект, дальний бой)",
+        "H04W": "Огненный мастер (Интеллект, дальний бой)",
+        "H04X": "Мастер Тайной магии (Интеллект, дальний бой)",
+        "H052": "Глава Кирин-Тора - Ронин (Интеллект, дальний бой, легендарный герой)",
+        "H053": "Хранитель - Кадгар (Интеллект, дальний бой, легендарный герой)"
+      }
+    },
+    "abilities": {
+      "count": 55,
+      "total_wts_updated": 642
+    },
+    "researches": {
+      "count": 20,
+      "markers_list": {
+        "R0BW": "Маркер расы Даларан",
+        "R0KK": "Маркер Даларан или Альянс"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items or inventory artifacts found in war3map.w3t for Dalaran."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "No race-specific floating messages or game UI strings found in war3map.wts for Dalaran."
+  },
+  "buffs_audit": {
+    "custom_buffs": [],
+    "standard_buffs_used": [
+      "Bblo",
+      "Bfae",
+      "Bcyc",
+      "Bfro",
+      "Bpoi",
+      "Bdef",
+      "BOac",
+      "Bcri",
+      "Bspe",
+      "Bshs"
+    ],
+    "status": "All buffs used by Dalaran abilities are standard Warcraft III engine buffs. No custom text modification required."
+  },
+  "total_wts_updates": 642,
+  "total_checks": 402
+}

@@ -1,0 +1,82 @@
+{
+  "operations": [
+    {
+      "type": "unit",
+      "id": "e01Y",
+      "field": "abillist",
+      "value": "A1JE"
+    },
+    {
+      "type": "unit",
+      "id": "h0GJ",
+      "field": "trains",
+      "value": "h0P7"
+    },
+    {
+      "type": "unit",
+      "id": "w203",
+      "field": "abillist",
+      "value": "w2a0"
+    },
+    {
+      "type": "unit",
+      "id": "nane",
+      "field": "abillist",
+      "value": "ACvs"
+    },
+    {
+      "type": "unit",
+      "id": "n01W",
+      "field": "abillist",
+      "value": "A0LS,A0LR,Asla"
+    },
+    {
+      "type": "unit",
+      "id": "n01X",
+      "field": "abillist",
+      "value": "A0LS,A0LR,Asla"
+    },
+    {
+      "type": "unit",
+      "id": "h0G2",
+      "field": "abillist",
+      "value": "A16A,A0U7,A0T0,Alit"
+    },
+    {
+      "type": "unit",
+      "id": "n076",
+      "field": "abillist",
+      "value": "A1MM,ACch"
+    },
+    {
+      "type": "unit",
+      "id": "pa02",
+      "field": "abillist",
+      "value": "A003"
+    },
+    {
+      "type": "unit",
+      "id": "pa03",
+      "field": "abillist",
+      "value": "A003"
+    },
+    {
+      "type": "unit",
+      "id": "pa17",
+      "field": "abillist",
+      "value": "Amim,A003"
+    },
+    {
+      "type": "unit",
+      "id": "pa18",
+      "field": "abillist",
+      "value": "A003"
+    },
+    {
+      "type": "unit",
+      "id": "pa19",
+      "field": "abillist",
+      "value": "A003"
+    }
+  ]
+}

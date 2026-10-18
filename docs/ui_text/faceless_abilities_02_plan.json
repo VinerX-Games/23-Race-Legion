@@ -1,0 +1,502 @@
+{
+  "operations": [
+    {
+      "type": "ability",
+      "id": "A114",
+      "field": "name",
+      "value": "|cffe4cfa3Замедление|r"
+    },
+    {
+      "type": "ability",
+      "id": "A114",
+      "field": "tip1",
+      "value": "|cffe4cfa3Замедление|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A114",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает скорость передвижения врага на |cffffffff35%|cffced4da, скорость атаки — на |cffffffff25%|cffced4da. Действует |cffffffff45|cffced4da сек., на героях — |cffffffff10|cffced4da сек.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A114",
+      "field": "untip1",
+      "value": "|cffe4cfa3Замедление|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A114",
+      "field": "unubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает скорость передвижения врага на |cffffffff35%|cffced4da, скорость атаки — на |cffffffff25%|cffced4da. Действует |cffffffff45|cffced4da сек., на героях — |cffffffff10|cffced4da сек.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A115",
+      "field": "name",
+      "value": "|cffe4cfa3Проклятие|r"
+    },
+    {
+      "type": "ability",
+      "id": "A115",
+      "field": "tip1",
+      "value": "|cffe4cfa3Проклятие|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A115",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da На |cffffffff20|cffced4da сек. даёт органическому противнику |cffffffff15%|cffced4da-ю вероятность промаха при атаке.|n|nТребуется третий уровень «Укрепления Древних Знаний».|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A115",
+      "field": "untip1",
+      "value": "|cffe4cfa3Проклятие|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A115",
+      "field": "unubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da На |cffffffff20|cffced4da сек. даёт органическому противнику |cffffffff15%|cffced4da-ю вероятность промаха при атаке.|n|nТребуется третий уровень «Укрепления Древних Знаний».|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A116",
+      "field": "name",
+      "value": "|cffe4cfa3Порождение щупальца|r"
+    },
+    {
+      "type": "ability",
+      "id": "A116",
+      "field": "tip1",
+      "value": "|cffe4cfa3Порождение щупальца|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A116",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает одно щупальце на |cffffffff40|cffced4da сек.|n|nТребуется второй уровень «Укрепления Древних Знаний».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A126",
+      "field": "name",
+      "value": "|cffe4cfa3Ледяная стрела|r"
+    },
+    {
+      "type": "ability",
+      "id": "A126",
+      "field": "tip1",
+      "value": "|cffe4cfa3Ледяная стрела|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A126",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит врагу |cffffffff100|cffced4da урона и оглушает его на |cffffffff5|cffced4da сек. Герои оглушаются на |cffffffff0,5|cffced4da сек.|n|nТребуется второй уровень «Расширения Знаний».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A112",
+      "field": "name",
+      "value": "|cffe4cfa3Иней|r"
+    },
+    {
+      "type": "ability",
+      "id": "A112",
+      "field": "tip1",
+      "value": "|cffe4cfa3Иней|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A112",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит органической цели |cffffffff100|cffced4da прямого урона и ещё |cffffffff50|cffced4da урона по области радиусом |cffffffff130|cffced4da. Холод замедляет цели на |cffffffff4|cffced4da сек., героев — на |cffffffff2|cffced4da сек.|n|nТребуется третий уровень «Расширения Знаний».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1R2",
+      "field": "name",
+      "value": "|cffe4cfa3Пожирание Магии|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1R2",
+      "field": "tip1",
+      "value": "|cffe4cfa3Пожирание Магии|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1R2",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Рассеивает магические эффекты в радиусе |cffffffff200|cffced4da. За каждый поглощённый эффект восстанавливает владельцу |cffc8e08755|cffced4da здоровья и |cffc8e08755|cffced4da маны. Наносит призванным существам |cffffffff300|cffced4da урона.|n|nТребуется первый уровень «Расширения Знаний».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1R3",
+      "field": "name",
+      "value": "|cffe4cfa3Пожирание|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1R3",
+      "field": "tip1",
+      "value": "|cffe4cfa3Пожирание|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1R3",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da После убийства даёт |cffc8e087+3|cffced4da к атаке на |cffffffff9|cffced4da сек. Пока бонус действует, новые убийства не складывают его и не обновляют длительность.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1R5",
+      "field": "name",
+      "value": "|cffe4cfa3Пожирание|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1R5",
+      "field": "tip1",
+      "value": "|cffe4cfa3Пожирание|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1R5",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Временный бонус: |cffc8e087+3|cffced4da к атаке. Выдаётся на |cffffffff9|cffced4da сек. после убийства; повторные убийства во время действия не складывают и не обновляют бонус.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10P",
+      "field": "name",
+      "value": "|cffe4cfa3Ужасающий вой|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10P",
+      "field": "tip1",
+      "value": "|cffe4cfa3Ужасающий вой|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10P",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da На |cffffffff10|cffced4da сек. снижает урон от атак врагов в радиусе |cffffffff800|cffced4da на |cffffffff10%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A123",
+      "field": "name",
+      "value": "|cffe4cfa3Реинкарнация|r"
+    },
+    {
+      "type": "ability",
+      "id": "A123",
+      "field": "tip1",
+      "value": "|cffe4cfa3Реинкарнация|r"
+    },
+    {
+      "type": "ability",
+      "id": "A123",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da После гибели возрождает владельца через |cffffffff3|cffced4da сек. Восстановление: |cffffffff120|cffced4da сек. Убийство противника немедленно сбрасывает восстановление.|n|nТребуется исследование «Суть бессмертия».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10Y",
+      "field": "name",
+      "value": "|cffe4cfa3Крепкий панцирь|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10Y",
+      "field": "tip1",
+      "value": "|cffe4cfa3Крепкий панцирь|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10Y",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает получаемый урон от атак на |cffffffff8|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|n|nТребуется второй уровень «Усиления К`Траксис».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A111",
+      "field": "name",
+      "value": "|cffe4cfa3Тёмная оболочка|r"
+    },
+    {
+      "type": "ability",
+      "id": "A111",
+      "field": "tip1",
+      "value": "|cffe4cfa3Тёмная оболочка|r"
+    },
+    {
+      "type": "ability",
+      "id": "A111",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт |cffc8e087+4|cffced4da к броне и возвращает атакующим в ближнем бою |cffffffff30%|cffced4da урона от их атак.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0RR",
+      "field": "name",
+      "value": "|cffe4cfa3Взрыв Эфира|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0RR",
+      "field": "tip1",
+      "value": "|cffe4cfa3Взрыв Эфира|r (|cffffffffB|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0RR",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При гибели наносит наземным врагам |cffffffff100|cffced4da урона в радиусе |cffffffff120|cffced4da и |cffffffff30|cffced4da урона за пределами этого радиуса, но не дальше |cffffffff250|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1N5",
+      "field": "name",
+      "value": "|cffe4cfa3Взрыв Эфира|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1N5",
+      "field": "tip1",
+      "value": "|cffe4cfa3Взрыв Эфира|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1N5",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При гибели воин взрывается. Наземные враги в радиусе |cffffffff120|cffced4da получают |cffffffff100|cffced4da урона; дальше, до радиуса |cffffffff250|cffced4da, — |cffffffff30|cffced4da урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A16O",
+      "field": "name",
+      "value": "|cffe4cfa3Морозный доспех|r"
+    },
+    {
+      "type": "ability",
+      "id": "A16O",
+      "field": "tip1",
+      "value": "|cffe4cfa3Морозный доспех|r (|cffffffffF|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A16O",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da На |cffffffff45|cffced4da сек. даёт союзнику |cffc8e087+5|cffced4da к броне. Противники, атакующие его в ближнем бою, замедляются на |cffffffff3|cffced4da сек.|n|nТребуется третий уровень «Знания проклинателей».|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A16O",
+      "field": "untip1",
+      "value": "|cffe4cfa3Морозный доспех|r (|cffffffffF|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A16O",
+      "field": "unubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da На |cffffffff45|cffced4da сек. даёт союзнику |cffc8e087+5|cffced4da к броне. Противники, атакующие его в ближнем бою, замедляются на |cffffffff3|cffced4da сек.|n|nТребуется третий уровень «Знания проклинателей».|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A16N",
+      "field": "name",
+      "value": "|cffe4cfa3Породить Кошмар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A16N",
+      "field": "tip1",
+      "value": "|cffe4cfa3Породить Кошмар|r (|cffffffffV|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A16N",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт из трупа одного Кошмара на |cffffffff50|cffced4da сек. Одновременно можно поддерживать до |cffffffff6|cffced4da Кошмаров.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CK",
+      "field": "name",
+      "value": "|cffe4cfa3Помутнение разума|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CK",
+      "field": "tip1",
+      "value": "|cffe4cfa3Помутнение разума|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CK",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки снижают броню цели на |cffffffff2|cffced4da на |cffffffff7|cffced4da сек.; на героях — на |cffffffff1,5|cffced4da сек.|n|nТребуется исследование «Помутнение рассудка».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CK",
+      "field": "tip2",
+      "value": "|cffe4cfa3Помутнение разума|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CK",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки снижают броню цели на |cffffffff3|cffced4da на |cffffffff7|cffced4da сек.; на героях — на |cffffffff1,5|cffced4da сек.|n|nТребуется исследование «Помутнение рассудка».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CK",
+      "field": "tip3",
+      "value": "|cffe4cfa3Помутнение разума|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CK",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки снижают броню цели на |cffffffff4|cffced4da на |cffffffff7|cffced4da сек.; на героях — на |cffffffff1,5|cffced4da сек.|n|nТребуется исследование «Помутнение рассудка».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CF",
+      "field": "name",
+      "value": "|cffe4cfa3Помутнение рассудка|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CF",
+      "field": "tip1",
+      "value": "|cffe4cfa3Помутнение рассудка|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CF",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки снижают броню цели на |cffffffff2|cffced4da на |cffffffff7|cffced4da сек.; на героях — на |cffffffff1,5|cffced4da сек.|n|nТребуется исследование «Помутнение рассудка».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CF",
+      "field": "tip2",
+      "value": "|cffe4cfa3Помутнение рассудка|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CF",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки снижают броню цели на |cffffffff3|cffced4da на |cffffffff7|cffced4da сек.; на героях — на |cffffffff1,5|cffced4da сек.|n|nТребуется исследование «Помутнение рассудка».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CF",
+      "field": "tip3",
+      "value": "|cffe4cfa3Помутнение рассудка|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CF",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки снижают броню цели на |cffffffff4|cffced4da на |cffffffff7|cffced4da сек.; на героях — на |cffffffff1,5|cffced4da сек.|n|nТребуется исследование «Помутнение рассудка».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A122",
+      "field": "name",
+      "value": "|cffe4cfa3Кража будущего|r"
+    },
+    {
+      "type": "ability",
+      "id": "A122",
+      "field": "tip1",
+      "value": "|cffe4cfa3Кража будущего|r"
+    },
+    {
+      "type": "ability",
+      "id": "A122",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При начале атаки дополнительно наносит цели урон в размере |cffffffff1,4%|cffced4da её максимального здоровья. Не действует на здания.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A113",
+      "field": "name",
+      "value": "|cffe4cfa3Кошмар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A113",
+      "field": "tip1",
+      "value": "|cffe4cfa3Кошмар|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A113",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Оглушает органического противника на |cffffffff10|cffced4da сек.; героя — на |cffffffff5|cffced4da сек. Само оглушение не наносит урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0PC",
+      "field": "name",
+      "value": "|cffe4cfa3Яд кошмара|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0PC",
+      "field": "tip1",
+      "value": "|cffe4cfa3Яд кошмара|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0PC",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит органическому врагу |cffffffff5|cffced4da урона в секунду в течение |cffffffff10|cffced4da сек. На героях действует |cffffffff5|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "ACen",
+      "field": "name",
+      "value": "|cffe4cfa3Опутывание|r"
+    },
+    {
+      "type": "ability",
+      "id": "ACen",
+      "field": "tip1",
+      "value": "|cffe4cfa3Опутывание|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "ACen",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обездвиживает вражеского юнита на |cffffffff8|cffced4da сек. Воздушная цель притягивается к земле и считается наземной. Не действует на героев.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0I3",
+      "field": "name",
+      "value": "|cffe4cfa3Небольшой скачок|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0I3",
+      "field": "tip1",
+      "value": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0I3",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит владельца на расстояние до |cffffffff500|cffced4da. Восстановление: |cffffffff40|cffced4da сек.|r"
+    }
+  ]
+}

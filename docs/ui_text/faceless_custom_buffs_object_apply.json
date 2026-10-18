@@ -1,0 +1,284 @@
+{
+  "ok": true,
+  "applied": true,
+  "method": "Only explicit string modifications spliced; all unrelated records/mods byte-identical",
+  "changes": {
+    "war3map.w3h": [
+      [
+        "B01I",
+        "fnam",
+        0,
+        0
+      ],
+      [
+        "B01I",
+        "ftip",
+        0,
+        0
+      ],
+      [
+        "B01I",
+        "fube",
+        0,
+        0
+      ],
+      [
+        "B02L",
+        "fnam",
+        0,
+        0
+      ],
+      [
+        "B02L",
+        "ftip",
+        0,
+        0
+      ],
+      [
+        "B02L",
+        "fube",
+        0,
+        0
+      ],
+      [
+        "B08E",
+        "fnam",
+        0,
+        0
+      ],
+      [
+        "B08E",
+        "ftip",
+        0,
+        0
+      ],
+      [
+        "B08E",
+        "fube",
+        0,
+        0
+      ],
+      [
+        "B08F",
+        "fnam",
+        0,
+        0
+      ],
+      [
+        "B08F",
+        "ftip",
+        0,
+        0
+      ],
+      [
+        "B08F",
+        "fube",
+        0,
+        0
+      ]
+    ],
+    "war3mapSkin.w3h": [
+      [
+        "B01I",
+        "ftip",
+        0,
+        0
+      ],
+      [
+        "B01I",
+        "fube",
+        0,
+        0
+      ],
+      [
+        "B02L",
+        "ftip",
+        0,
+        0
+      ],
+      [
+        "B08E",
+        "fnam",
+        0,
+        0
+      ],
+      [
+        "B08E",
+        "ftip",
+        0,
+        0
+      ],
+      [
+        "B08E",
+        "fube",
+        0,
+        0
+      ],
+      [
+        "B08F",
+        "fnam",
+        0,
+        0
+      ],
+      [
+        "B08F",
+        "ftip",
+        0,
+        0
+      ],
+      [
+        "B08F",
+        "fube",
+        0,
+        0
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "variant": "SD",
+      "rawcode": "B01I",
+      "field": "editorname",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "B01I",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "B01I",
+      "field": "buffubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "B02L",
+      "field": "editorname",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "B02L",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "B02L",
+      "field": "buffubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "B08E",
+      "field": "editorname",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "B08E",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "B08E",
+      "field": "buffubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "B08F",
+      "field": "editorname",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "B08F",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "B08F",
+      "field": "buffubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "B01I",
+      "field": "editorname",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "B01I",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "B01I",
+      "field": "buffubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "B02L",
+      "field": "editorname",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "B02L",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "B02L",
+      "field": "buffubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "B08E",
+      "field": "editorname",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "B08E",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "B08E",
+      "field": "buffubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "B08F",
+      "field": "editorname",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "B08F",
+      "field": "bufftip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "B08F",
+      "field": "buffubertip",
+      "exact_match": true
+    }
+  ],
+  "wts_unchanged": true
+}

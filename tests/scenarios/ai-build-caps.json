@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "name": "ai-building-caps",
+  "steps": [
+    {"name": "active-bot", "lua": "assert(udg_AiControl[ScenarioSlot], 'no active bot'); AiBuildCapProbeSlot=ScenarioSlot; return 'active'", "expected": "active"},
+    {"name": "building-caps", "file": "../live_ai_build_caps.lua"}
+  ]
+}

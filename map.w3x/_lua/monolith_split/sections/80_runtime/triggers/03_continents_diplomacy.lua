@@ -136,11 +136,11 @@ function Trig_Continents_set_On_Func013A()
 end
 ---@return nothing
 function Trig_Continents_set_On_Actions()
-	udg_LocalText2 = "????? ???????????:|cffffff00 ???????|r"
+	udg_LocalText2 = "Режим континентов:|cffffff00 включен|r"
 	DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
-	udg_LocalText2 = "|cff00ff00????? ???????? ??? ????: |r"
+	udg_LocalText2 = "|cff00ff00Итого доступны для игры: |r"
 	if Trig_Continents_set_On_Func004C() then
-		udg_LocalText2 = udg_LocalText2 .. "????????? ???????????\\"
+		udg_LocalText2 = udg_LocalText2 .. "Восточные королевства\\"
     end
     if Trig_Continents_set_On_Func005C() then
         udg_LocalText2=udg_LocalText2 .. ""

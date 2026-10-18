@@ -1,0 +1,842 @@
+{
+  "abilities": {
+    "Aren": {
+      "id": "Aren",
+      "code": "Aren",
+      "levels": 1,
+      "hotkey": "R",
+      "fields": {
+        "name": {
+          "raw": "Обновление",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "Обновление"
+        },
+        "tip1": {
+          "raw": "Обновление",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "Обновление"
+        },
+        "ubertip1": {
+          "raw": "\"Исцеляет раненые древа, ремонтирует союзные здания и технику.\"",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "\"Исцеляет раненые древа, ремонтирует союзные здания и технику.\""
+        }
+      }
+    },
+    "Awha": {
+      "id": "Awha",
+      "code": "Awha",
+      "levels": 1,
+      "hotkey": "G",
+      "fields": {
+        "name": {
+          "raw": "Добывать ресурсы",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "Добывать ресурсы"
+        },
+        "tip1": {
+          "raw": "Добывать ресурсы",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "Добывать ресурсы"
+        },
+        "ubertip1": {
+          "raw": "Добывает золото из оплетенных рудников и древесину из деревьев.",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "Добывает золото из оплетенных рудников и древесину из деревьев."
+        }
+      }
+    },
+    "Adtn": {
+      "id": "Adtn",
+      "code": "Adtn",
+      "levels": 1,
+      "hotkey": "D",
+      "fields": {
+        "name": {
+          "raw": "Взорваться",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "Взорваться"
+        },
+        "tip1": {
+          "raw": "Взорваться",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "Взорваться"
+        },
+        "ubertip1": {
+          "raw": "\"Уничтожает огонька, рассеивая магические эффекты и сжигая по <Adtn,DataA1> маны у находящихся рядом войск. |n|cffffcc00Наносит <Adtn,DataB1> урона призванным целям.|r\"",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "\"Уничтожает огонька, рассеивая магические эффекты и сжигая по <Adtn,DataA1> маны у находящихся рядом войск. |n|cffffcc00Наносит <Adtn,DataB1> урона призванным целям.|r\""
+        }
+      }
+    },
+    "Ault": {
+      "id": "Ault",
+      "code": "Ault",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "Ночное зрение",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "Ночное зрение"
+        }
+      }
+    },
+    "A0PW": {
+      "id": "A0PW",
+      "code": "AUts",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41624",
+          "is_wts": true,
+          "wts_id": 41624,
+          "current_text": "|cff228a22Крепкая кора|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41626",
+          "is_wts": true,
+          "wts_id": 41626,
+          "current_text": "|cff228a22Крепкая кора|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_31026",
+          "is_wts": true,
+          "wts_id": 31026,
+          "current_text": "За все существование энтов, их кора стала очень толстой и крепкой, от чего их показатель брони увеличился на |cffffd7001 ед.|r, а шипы на их коре возвращают |cffffff0010%|r урона"
+        }
+      }
+    },
+    "A0PU": {
+      "id": "A0PU",
+      "code": "Aspo",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41653",
+          "is_wts": true,
+          "wts_id": 41653,
+          "current_text": "|cff228a22Ядовитый Сок|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41654",
+          "is_wts": true,
+          "wts_id": 41654,
+          "current_text": "|cff228a22Ядовитый Сок|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_27741",
+          "is_wts": true,
+          "wts_id": 27741,
+          "current_text": "Ядовитый сок, попавший на юнита, замедляет его скорость передвижения на|cffffd700 15%|r и скорость атаки на |cffffd70010%|r, при этом нанося|cffffd700 4 ед. урона в секунду.|r\nВремя дейсвия Юнит: |cffffd7005 сек.|r\nВремя дейсвия Герой: |cffffd7001 сек.|r"
+        }
+      }
+    },
+    "A0Q2": {
+      "id": "A0Q2",
+      "code": "AHbh",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41605",
+          "is_wts": true,
+          "wts_id": 41605,
+          "current_text": "|cff228a22Сильный удар|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41606",
+          "is_wts": true,
+          "wts_id": 41606,
+          "current_text": "|cff228a22Сильный удар|r"
+        },
+        "ubertip1": {
+          "raw": "\"С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "\"С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\""
+        }
+      }
+    },
+    "A0O7": {
+      "id": "A0O7",
+      "code": "Arpl",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30562",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41660",
+          "is_wts": true,
+          "wts_id": 41660,
+          "current_text": "|cff228a22Ядро Жизни|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41661",
+          "is_wts": true,
+          "wts_id": 41661,
+          "current_text": "|cff228a22Ядро Жизни|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_1349",
+          "is_wts": true,
+          "wts_id": 1349,
+          "current_text": "|cff228a22Гончая|r с помощью своего ядра способна восстанавливать |cffffff0015ед.|r здоровья своим союзникам"
+        }
+      }
+    },
+    "A0PX": {
+      "id": "A0PX",
+      "code": "AUau",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41655",
+          "is_wts": true,
+          "wts_id": 41655,
+          "current_text": "|cff228a22Аура ядра жизни|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41656",
+          "is_wts": true,
+          "wts_id": 41656,
+          "current_text": "|cff228a22Аура ядра жизни|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_35513",
+          "is_wts": true,
+          "wts_id": 35513,
+          "current_text": "Ядро |cff228a22Гончией|r источает ауру леса, от чего все союзные воины получают повышенную регерацию на |cffffff00100%|r"
+        }
+      }
+    },
+    "A0Q6": {
+      "id": "A0Q6",
+      "code": "ANca",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41597",
+          "is_wts": true,
+          "wts_id": 41597,
+          "current_text": "|cff228a22Рассекающий удар|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41598",
+          "is_wts": true,
+          "wts_id": 41598,
+          "current_text": "|cff228a22Рассекающий удар|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_2401",
+          "is_wts": true,
+          "wts_id": 2401,
+          "current_text": "Своими мосивными ударами, |cff7f8f18Защитник леса|r задевает рядом стоящих юнитов, нанося им|cffffd700 13%|r урона"
+        }
+      }
+    },
+    "A0PV": {
+      "id": "A0PV",
+      "code": "Arpm",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30599",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41663",
+          "is_wts": true,
+          "wts_id": 41663,
+          "current_text": "|cff228a22Ядро Маны|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41664",
+          "is_wts": true,
+          "wts_id": 41664,
+          "current_text": "|cff228a22Ядро Маны|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_2518",
+          "is_wts": true,
+          "wts_id": 2518,
+          "current_text": "|cff228a22Гончая|r с помощью своего ядра способна восстанавливать |cffffff0010ед.|r маны своим союзникам"
+        }
+      }
+    },
+    "A0PY": {
+      "id": "A0PY",
+      "code": "AHab",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30821",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_35520",
+          "is_wts": true,
+          "wts_id": 35520,
+          "current_text": "|cff228a22Аура магического ядра|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41666",
+          "is_wts": true,
+          "wts_id": 41666,
+          "current_text": "|cff228a22Аура магического ядра|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_35525",
+          "is_wts": true,
+          "wts_id": 35525,
+          "current_text": "Ядро |cff228a22Гончией|r начинает источать магическую силу, от чего все союзные маги чувствуют прилив магических сил"
+        }
+      }
+    },
+    "A1P2": {
+      "id": "A1P2",
+      "code": "Asps",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30619",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41285",
+          "is_wts": true,
+          "wts_id": 41285,
+          "current_text": "|cff228b22Контроль Магии|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41286",
+          "is_wts": true,
+          "wts_id": 41286,
+          "current_text": "|cff228b22Контроль Магии|r"
+        },
+        "ubertip1": {
+          "raw": "Снимает положительный эффект с врага и дает его находящемуся рядом союзнику либо снимает отрицательный эффект с союзника и применяет его к находящемуся рядом врагу.",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "Снимает положительный эффект с врага и дает его находящемуся рядом союзнику либо снимает отрицательный эффект с союзника и применяет его к находящемуся рядом врагу."
+        }
+      }
+    },
+    "A1P0": {
+      "id": "A1P0",
+      "code": "AEer",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30670",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41280",
+          "is_wts": true,
+          "wts_id": 41280,
+          "current_text": "|cff228b22Гнев деревьев|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41281",
+          "is_wts": true,
+          "wts_id": 41281,
+          "current_text": "|cff228b22Гнев деревьев|r"
+        },
+        "ubertip1": {
+          "raw": "\"Призывает из-под земли корни, которые обездвиживают и обезвреживают врага на <AEer,Dur1> сек. и наносят <AEer,DataA1> урона/сек.\"",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "\"Призывает из-под земли корни, которые обездвиживают и обезвреживают врага на <AEer,Dur1> сек. и наносят <AEer,DataA1> урона/сек.\""
+        }
+      }
+    },
+    "A1P1": {
+      "id": "A1P1",
+      "code": "AEsh",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30827",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41282",
+          "is_wts": true,
+          "wts_id": 41282,
+          "current_text": "|cff228b22Эссенция Яда|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41284",
+          "is_wts": true,
+          "wts_id": 41284,
+          "current_text": "|cff228b22Эссенция Яда|r"
+        },
+        "ubertip1": {
+          "raw": "\"Бросает отравленный кинжал во врага, нанося <AEsh,DataE1> урона мгновенно и <AEsh,DataA1> урона раз в <AEsh,Cast1> сек. в течение <AEsh,Dur1> сек. Яд временно замедляет передвижение цели.\"",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "\"Бросает отравленный кинжал во врага, нанося <AEsh,DataE1> урона мгновенно и <AEsh,DataA1> урона раз в <AEsh,Cast1> сек. в течение <AEsh,Dur1> сек. Яд временно замедляет передвижение цели.\""
+        }
+      }
+    },
+    "A0QP": {
+      "id": "A0QP",
+      "code": "Adis",
+      "levels": 1,
+      "hotkey": "TRIGSTR_16870",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_25745",
+          "is_wts": true,
+          "wts_id": 25745,
+          "current_text": "|cff228a22Рассеивание заклинаний|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_25746",
+          "is_wts": true,
+          "wts_id": 25746,
+          "current_text": "|cff228a22Рассеивание заклинаний|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_12142",
+          "is_wts": true,
+          "wts_id": 12142,
+          "current_text": "Развеивает все отрицательные и положительные эффекты в выделенной области.\n\n|cffffd700Наносит 200 ед. призванным юнитам|r"
+        }
+      }
+    },
+    "A0PZ": {
+      "id": "A0PZ",
+      "code": "Ainf",
+      "levels": 1,
+      "hotkey": "TRIGSTR_17097",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41658",
+          "is_wts": true,
+          "wts_id": 41658,
+          "current_text": "|cff228a22Покровительство Леса|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41659",
+          "is_wts": true,
+          "wts_id": 41659,
+          "current_text": "|cff228a22Покровительство Леса|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_12136",
+          "is_wts": true,
+          "wts_id": 12136,
+          "current_text": "Увеличивает урон на |cffffd70010%|r, а показатели брони на |cffffd7005 ед|r."
+        }
+      }
+    },
+    "A0Q7": {
+      "id": "A0Q7",
+      "code": "AIdd",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41669",
+          "is_wts": true,
+          "wts_id": 41669,
+          "current_text": "|cff228a22Мудрость Лесов|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41670",
+          "is_wts": true,
+          "wts_id": 41670,
+          "current_text": "|cff228a22Мудрость Лесов|r"
+        },
+        "ubertip1": {
+          "raw": "\"-<Aegr,DataA1,%>% к получаемому урону от пронзающих атак и -<Aegr,DataE1,%>% к получаемому урону от способностей и магических атак.\"",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "\"-<Aegr,DataA1,%>% к получаемому урону от пронзающих атак и -<Aegr,DataE1,%>% к получаемому урону от способностей и магических атак.\""
+        }
+      }
+    },
+    "A1OY": {
+      "id": "A1OY",
+      "code": "Acyc",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30615",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41613",
+          "is_wts": true,
+          "wts_id": 41613,
+          "current_text": "|cff228a22Смерч|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41614",
+          "is_wts": true,
+          "wts_id": 41614,
+          "current_text": "|cff228a22Смерч|r"
+        },
+        "ubertip1": {
+          "raw": "\"Подбрасывает врага в воздух, не позволяя двигаться, атаковать и применять способности. При этом жертву нельзя выбрать целью. Не действует на технику. |nВремя действия: <Acyc,Dur1> сек.\"",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "\"Подбрасывает врага в воздух, не позволяя двигаться, атаковать и применять способности. При этом жертву нельзя выбрать целью. Не действует на технику. |nВремя действия: <Acyc,Dur1> сек.\""
+        }
+      }
+    },
+    "A1OZ": {
+      "id": "A1OZ",
+      "code": "AEev",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30668",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41615",
+          "is_wts": true,
+          "wts_id": 41615,
+          "current_text": "|cff228a22Аура Ветров|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41616",
+          "is_wts": true,
+          "wts_id": 41616,
+          "current_text": "|cff228a22Аура ветров|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_26362",
+          "is_wts": true,
+          "wts_id": 26362,
+          "current_text": "Дает |cffc8dc8c<AEev,DataA1,%>%-й шанс|r уклониться от атаки."
+        }
+      }
+    },
+    "A0Q1": {
+      "id": "A0Q1",
+      "code": "Assk",
+      "levels": 1,
+      "hotkey": "TRIGSTR_16624",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41595",
+          "is_wts": true,
+          "wts_id": 41595,
+          "current_text": "|cff228a22Крепкий панцирь|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41596",
+          "is_wts": true,
+          "wts_id": 41596,
+          "current_text": "|cff228a22Крепкий панцирь|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_12137",
+          "is_wts": true,
+          "wts_id": 12137,
+          "current_text": "Поглащает |cffffd70012 ед|r. урона с шансом|cffffd700 100%|r. Минимальный проходимый урон |cffffd7003 ед|r."
+        }
+      }
+    },
+    "A1PL": {
+      "id": "A1PL",
+      "code": "Apsh",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30729",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_8394",
+          "is_wts": true,
+          "wts_id": 8394,
+          "current_text": "|cff228b22Слияние с Лесом|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8522",
+          "is_wts": true,
+          "wts_id": 8522,
+          "current_text": "|cff228b22Слияние с Лесом|r"
+        },
+        "ubertip1": {
+          "raw": "\"При получении урона переходит в иное измерение, получая защиту от дальнейшего урона. |nВремя действия: <Apsh,Dur1> сек.\"",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "\"При получении урона переходит в иное измерение, получая защиту от дальнейшего урона. |nВремя действия: <Apsh,Dur1> сек.\""
+        }
+      }
+    },
+    "A1PK": {
+      "id": "A1PK",
+      "code": "Amfl",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30886",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_15918",
+          "is_wts": true,
+          "wts_id": 15918,
+          "current_text": "|cff228b22Вспышка маны|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_15919",
+          "is_wts": true,
+          "wts_id": 15919,
+          "current_text": "|cff228b22Вспышка маны|r"
+        },
+        "ubertip1": {
+          "raw": "\"+<Amfl,DataE1> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: <Amfl,Dur1> сек.\"",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "\"+<Amfl,DataE1> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: <Amfl,Dur1> сек.\""
+        }
+      }
+    },
+    "A1PM": {
+      "id": "A1PM",
+      "code": "Amim",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41622",
+          "is_wts": true,
+          "wts_id": 41622,
+          "current_text": "|cff228a22Невосприимчивость к магии|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41623",
+          "is_wts": true,
+          "wts_id": 41623,
+          "current_text": "|cff228a22Невосприимчивость к магии|r"
+        },
+        "ubertip1": {
+          "raw": "Дает невосприимчивость к магии и большинству способностей.",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "Дает невосприимчивость к магии и большинству способностей."
+        }
+      }
+    },
+    "A1P3": {
+      "id": "A1P3",
+      "code": "Aadm",
+      "levels": 1,
+      "hotkey": "B",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41294",
+          "is_wts": true,
+          "wts_id": 41294,
+          "current_text": "|cff228b22Рассеяние чар|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41295",
+          "is_wts": true,
+          "wts_id": 41295,
+          "current_text": "|cff228b22Рассеяние чар|r"
+        },
+        "ubertip1": {
+          "raw": "\"Снимает положительные эффекты с врагов и отрицательные с союзников. |n|cffffcc00Наносит <Aadm,DataB1> урона призванным целям.|r\"",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "\"Снимает положительные эффекты с врагов и отрицательные с союзников. |n|cffffcc00Наносит <Aadm,DataB1> урона призванным целям.|r\""
+        }
+      }
+    },
+    "Amim": {
+      "id": "Amim",
+      "code": "Amim",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_15953",
+          "is_wts": true,
+          "wts_id": 15953,
+          "current_text": "|cff228a22Невосприимчивость к магии|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_15959",
+          "is_wts": true,
+          "wts_id": 15959,
+          "current_text": "|cff228a22Невосприимчивость к магии|r"
+        },
+        "ubertip1": {
+          "raw": "Дает невосприимчивость к магии и большинству способностей.",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "Дает невосприимчивость к магии и большинству способностей."
+        }
+      }
+    },
+    "A0Q3": {
+      "id": "A0Q3",
+      "code": "AOwd",
+      "levels": 1,
+      "hotkey": "W",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41607",
+          "is_wts": true,
+          "wts_id": 41607,
+          "current_text": "|cff228a22Зов Древних|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41608",
+          "is_wts": true,
+          "wts_id": 41608,
+          "current_text": "|cff228a22Зов Древних|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_41609",
+          "is_wts": true,
+          "wts_id": 41609,
+          "current_text": "Призывает |cffffd7002|r |cff228a22Малый Древень|r\n|cffffd700Время действия: 70 сек.|r"
+        }
+      }
+    },
+    "A0Q4": {
+      "id": "A0Q4",
+      "code": "AHad",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41629",
+          "is_wts": true,
+          "wts_id": 41629,
+          "current_text": "|cff228a22Древесный покров|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41630",
+          "is_wts": true,
+          "wts_id": 41630,
+          "current_text": "|cff228a22Древесный покров|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_42094",
+          "is_wts": true,
+          "wts_id": 42094,
+          "current_text": "Опытный солдат способен поднимать боевой дух союзников.\n+2 к броне находящихся рядом союзников.\n|cffb4dc8cРадиус действия (300).|r"
+        }
+      }
+    },
+    "A0Q5": {
+      "id": "A0Q5",
+      "code": "AEtq",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30824",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41610",
+          "is_wts": true,
+          "wts_id": 41610,
+          "current_text": "|cff228a22Cпокойствие Леса|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41611",
+          "is_wts": true,
+          "wts_id": 41611,
+          "current_text": "|cff228a22Спокойствие Леса|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_41612",
+          "is_wts": true,
+          "wts_id": 41612,
+          "current_text": "Призывает поток целительной энергии, восполняющей 5 здоровья/сек. союзникам в обширной области. |nВремя действия: 10 сек."
+        }
+      }
+    },
+    "A1PQ": {
+      "id": "A1PQ",
+      "code": "Avng",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30923",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_8828",
+          "is_wts": true,
+          "wts_id": 8828,
+          "current_text": "|cff228b22Страж Леса|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8830",
+          "is_wts": true,
+          "wts_id": 8830,
+          "current_text": "|cff228b22Страж Леса|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_12018",
+          "is_wts": true,
+          "wts_id": 12018,
+          "current_text": "Взращивает из трупа Стража леса. Время существования: <Avng,Dur1> сек. или до гибели аватары."
+        }
+      }
+    }
+  },
+  "buffs": {
+    "B07R": {
+      "id": "B07R",
+      "fields": {
+        "bufftip": {
+          "raw": "TRIGSTR_15618",
+          "is_wts": true,
+          "wts_id": 15618,
+          "current_text": "|cff228b22Аура камня жизни|r"
+        },
+        "buffubertip": {
+          "raw": "TRIGSTR_2986",
+          "is_wts": true,
+          "wts_id": 2986,
+          "current_text": "Увеличивает регенерацию Здоровья"
+        }
+      }
+    },
+    "B08X": {
+      "id": "B08X",
+      "fields": {
+        "bufftip": {
+          "raw": "TRIGSTR_15652",
+          "is_wts": true,
+          "wts_id": 15652,
+          "current_text": "|cff228b22Древесный Покров|r"
+        },
+        "buffubertip": {
+          "raw": "TRIGSTR_15653",
+          "is_wts": true,
+          "wts_id": 15653,
+          "current_text": "Броня усилена"
+        }
+      }
+    },
+    "B090": {
+      "id": "B090",
+      "fields": {
+        "bufftip": {
+          "raw": "TRIGSTR_40330",
+          "is_wts": true,
+          "wts_id": 40330,
+          "current_text": "|cff228b22Страж Леса|r"
+        },
+        "buffubertip": {
+          "raw": "Здесь побывал дух возмездия.",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "Здесь побывал дух возмездия."
+        }
+      }
+    },
+    "B08V": {
+      "id": "B08V",
+      "fields": {
+        "bufftip": {
+          "raw": "TRIGSTR_15619",
+          "is_wts": true,
+          "wts_id": 15619,
+          "current_text": "|cff228b22Покровительсво Леса|r"
+        },
+        "buffubertip": {
+          "raw": "\"Броня усилена, урон от атак увеличен.\"",
+          "is_wts": false,
+          "wts_id": null,
+          "current_text": "\"Броня усилена, урон от атак увеличен.\""
+        }
+      }
+    }
+  }
+}

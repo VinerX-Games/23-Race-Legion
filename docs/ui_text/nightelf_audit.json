@@ -1,0 +1,95 @@
+{
+  "race": "Ночные эльфы (Night Elf)",
+  "race_id": 26,
+  "selection_ability": "A0HL",
+  "objects_audit": {
+    "buildings": {
+      "count": 14,
+      "ids": [
+        "etol",
+        "etoa",
+        "etoe",
+        "emow",
+        "eaom",
+        "eate",
+        "eaow",
+        "eaoe",
+        "edob",
+        "etrp",
+        "edos",
+        "e03X",
+        "e03W",
+        "h0D8"
+      ],
+      "economy_building": {
+        "id": "emow",
+        "name": "Лунный колодец",
+        "food_provided": 40,
+        "gold_income_per_25s": 20,
+        "verified_via": "object data (fmade=40) and building description"
+      }
+    },
+    "units": {
+      "count": 19,
+      "ids": [
+        "ewsp",
+        "earc",
+        "esen",
+        "ebal",
+        "e00I",
+        "e00J",
+        "n05H",
+        "edot",
+        "efdr",
+        "e00H",
+        "n064",
+        "edry",
+        "edoc",
+        "emtg",
+        "n05D",
+        "n05G",
+        "h0D9",
+        "h0DB",
+        "h0DA"
+      ]
+    },
+    "heroes": {
+      "count": 3,
+      "ids": [
+        "E00V",
+        "E011",
+        "E00W"
+      ],
+      "names": {
+        "E00V": "Хранитель рощи (Интеллект, дальний бой)",
+        "E011": "Лунная охотница (Катрис Звёздная Песня — Ловкость, дальний бой)",
+        "E00W": "Друид-мастер (Интеллект, дальний бой)"
+      }
+    },
+    "abilities": {
+      "count": 33,
+      "total_wts_updated": 419
+    },
+    "researches": {
+      "count": 35,
+      "markers_list": {
+        "R07L": "Маркер расы Ночные эльфы",
+        "R0GB": "Служебный маркер выбора пути"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items or inventory artifacts found in war3map.w3t for Night Elf."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "No race-specific floating messages found in NightElf.lua."
+  },
+  "buffs_audit": {
+    "custom_buffs": [],
+    "status": "Standard melee and shared buffs used across abilities."
+  },
+  "total_wts_updates": 419,
+  "total_checks": 284
+}

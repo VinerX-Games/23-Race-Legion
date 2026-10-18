@@ -1,0 +1,322 @@
+[
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_7975",
+      "name": "TRIGSTR_25425"
+    },
+    "id": "e00F",
+    "name": "|cffb4dcdcДух стихий|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_8425",
+      "name": "TRIGSTR_42298"
+    },
+    "id": "n07Y",
+    "name": "|cffb4dcdcОсобый Огня|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_8271",
+      "name": "TRIGSTR_42294"
+    },
+    "id": "n07X",
+    "name": "|cffb4dcdcОсобый Воды|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_8270",
+      "name": "TRIGSTR_42289"
+    },
+    "id": "n07W",
+    "name": "|cffb4dcdcОсобый Земли|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_8578",
+      "name": "TRIGSTR_42306"
+    },
+    "id": "n07Z",
+    "name": "|cffb4dcdcОсобый Ветра|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_3578",
+      "name": "TRIGSTR_14747"
+    },
+    "id": "n02R",
+    "name": "|cffb4dcdcЭлементаль Огня|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "2",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_3829",
+      "name": "TRIGSTR_15285"
+    },
+    "id": "n036",
+    "name": "|cffb4dcdcГончая пламени|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "1",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_3770",
+      "name": "TRIGSTR_14890"
+    },
+    "id": "n02S",
+    "name": "|cffb4dcdcВозжигатель|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_8187",
+      "name": "TRIGSTR_31826"
+    },
+    "id": "n07O",
+    "name": "|cffb4dcdcЗагробник Огня|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "3",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_3274",
+      "name": "TRIGSTR_15288"
+    },
+    "id": "h0F1",
+    "name": "|cffb4dcdcОгненная птица|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_3579",
+      "name": "TRIGSTR_14877"
+    },
+    "id": "n02U",
+    "name": "|cffb4dcdcЭлементаль Воды|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_8261",
+      "name": "TRIGSTR_38191"
+    },
+    "id": "n07C",
+    "name": "|cffb4dcdcЭлементаль Океана|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "1",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_4920",
+      "name": "TRIGSTR_14871"
+    },
+    "id": "n02T",
+    "name": "|cffb4dcdcЭлементаль Морей|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_8260",
+      "name": "TRIGSTR_38174"
+    },
+    "id": "n07T",
+    "name": "|cffb4dcdcЗагробник Глубин|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "2",
+      "buttonpos2": "",
+      "hotkey": "TRIGSTR_2742",
+      "name": "TRIGSTR_14898"
+    },
+    "id": "n032",
+    "name": "|cffb4dcdcРифовый Эементаль|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "2",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_4966",
+      "name": "TRIGSTR_14754"
+    },
+    "id": "n02Z",
+    "name": "|cffb4dcdcГрязевой Элементаль|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_3576",
+      "name": "TRIGSTR_28667"
+    },
+    "id": "n02Q",
+    "name": "|cffb4dcdcЭлементаль Ветра|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "1",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_3771",
+      "name": "TRIGSTR_14879"
+    },
+    "id": "n02V",
+    "name": "|cffb4dcdcГрозовой Элементаль|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_8235",
+      "name": "TRIGSTR_31838"
+    },
+    "id": "n07P",
+    "name": "|cffb4dcdcВоздушный волк|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_8250",
+      "name": "TRIGSTR_31941"
+    },
+    "id": "n07R",
+    "name": "|cffb4dcdcЗагробник Бури|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "2",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_2664",
+      "name": "TRIGSTR_2951"
+    },
+    "id": "n02P",
+    "name": "|cffb4dcdcШтормовой Элементаль|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_3580",
+      "name": "TRIGSTR_3569"
+    },
+    "id": "n02W",
+    "name": "|cffb4dcdcЭлементаль Земли|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_8265",
+      "name": "TRIGSTR_41310"
+    },
+    "id": "n07V",
+    "name": "|cffb4dcdcПесчанный Элементаль|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "1",
+      "buttonpos2": "",
+      "hotkey": "TRIGSTR_4921",
+      "name": "TRIGSTR_14883"
+    },
+    "id": "n02X",
+    "name": "|cffb4dcdcКаменный голем|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "3",
+      "buttonpos2": "",
+      "hotkey": "TRIGSTR_2944",
+      "name": "TRIGSTR_15059"
+    },
+    "id": "n034",
+    "name": "|cffb4dcdcОгненный голем|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_8186",
+      "name": "TRIGSTR_31670"
+    },
+    "id": "n07N",
+    "name": "|cffb4dcdcОгненный Страж|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "3",
+      "buttonpos2": "",
+      "hotkey": "TRIGSTR_3273",
+      "name": "TRIGSTR_15062"
+    },
+    "id": "n035",
+    "name": "|cffb4dcdcЛедяной Голем|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "",
+      "buttonpos2": "1",
+      "hotkey": "TRIGSTR_2777",
+      "name": "TRIGSTR_14896"
+    },
+    "id": "n031",
+    "name": "|cffb4dcdcКристальный голем|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_8236",
+      "name": "TRIGSTR_31867"
+    },
+    "id": "n07Q",
+    "name": "|cffb4dcdcВоитель бури|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "hotkey": "TRIGSTR_8259",
+      "name": "TRIGSTR_33346"
+    },
+    "id": "n07S",
+    "name": "|cffb4dcdcЯнтарный Загробник|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "3",
+      "buttonpos2": "",
+      "hotkey": "TRIGSTR_2943",
+      "name": "TRIGSTR_15054"
+    },
+    "id": "n033",
+    "name": "|cffb4dcdcЯростный голем|r"
+  },
+  {
+    "fields": {
+      "buttonpos": "2",
+      "buttonpos2": "",
+      "hotkey": "TRIGSTR_2693",
+      "name": "TRIGSTR_14885"
+    },
+    "id": "n02Y",
+    "name": "|cffb4dcdcГранитный голем|r"
+  }
+]

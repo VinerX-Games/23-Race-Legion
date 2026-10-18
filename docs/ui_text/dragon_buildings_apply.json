@@ -1,0 +1,225 @@
+{
+  "ok": true,
+  "applied": true,
+  "buildings_count": 10,
+  "fields_verified_count": 60,
+  "wts_changed_count": 28,
+  "w3u_changed": [
+    [
+      "n044",
+      "utip",
+      0,
+      0
+    ],
+    [
+      "dra1",
+      "utub",
+      0,
+      0
+    ]
+  ],
+  "w3u_skin_changed": [
+    [
+      "n044",
+      "utip",
+      0,
+      0
+    ],
+    [
+      "dra1",
+      "utub",
+      0,
+      0
+    ]
+  ],
+  "checks": [
+    {
+      "id": "dra0",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "h0F9",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "n03I",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "n03Z",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "n041",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "n042",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "n043",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "n044",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "h0D8",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "dra1",
+      "variant": "SD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "dra0",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "h0F9",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "n03I",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "n03Z",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "n041",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "n042",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "n043",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "n044",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "h0D8",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    },
+    {
+      "id": "dra1",
+      "variant": "HD",
+      "fields_verified": [
+        "name",
+        "tip",
+        "ubertip"
+      ]
+    }
+  ],
+  "sha256": {
+    "wts_before": "310156b1dcb2f4ef64066e52896d09b3d216d8233cb672b2d6e9bf608b6be761",
+    "wts_after": "c73d9660042ebf5bb0db72a4aed3f0c56948f03da185281ba805005e97a1bf36",
+    "w3u_before": "a4738893013a54b937152ec9ab34a1b4709cd7ea8e7ad5479fbcd19a5ec87029",
+    "w3u_after": "1563f3971b56315e31cf16d09893756b74308c91be2facd2d1c2c19db1adccff",
+    "w3u_skin_before": "0642c190624839ccb851a3fa998848917c2145751bf0d83e42e7c6e6ca1e0424",
+    "w3u_skin_after": "72a2335c19c24053ae893d831e81f0a1441762d26db2b51b1ec9b37e719a0563"
+  }
+}

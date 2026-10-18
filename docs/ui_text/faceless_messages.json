@@ -1,0 +1,18 @@
+{
+  "scope": "Сообщение о гибели Йогг`Сарона",
+  "in_game_checked": false,
+  "strings": [
+    {
+      "rawcode": "Trig_Qogg_Die_Actions",
+      "field": "message",
+      "reference_before": "TRIGSTR_20558",
+      "before": "Древний бог Йогг'Сарон был убит неким игроком. За это он получил 20к золота и древесины.",
+      "after": "|cffa6afb8СОБЫТИЕ:|cffced4da |cffe4cfa3Йогг`Сарон|cffced4da повержен. Победитель получает |cffc8e08720000|cffced4da золота и |cffc8e08720000|cffced4da древесины. На месте гибели остаётся |cffa9c7deКасание безумия|cffced4da.|r"
+    }
+  ],
+  "evidence": "OldGods.lua: Trig_Qogg_Die_Actions: +20000 gold, +20000 lumber, SpawnGroundItem I01Q",
+  "remaining": [
+    "Проверить сообщение и предмет в игре",
+    "Имя после Служения: убрать ошибочный Lua-префикс cffd45e19r"
+  ]
+}

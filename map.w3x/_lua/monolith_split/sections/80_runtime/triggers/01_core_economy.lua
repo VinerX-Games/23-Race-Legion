@@ -1235,7 +1235,7 @@ function Trig_GnomeNotToMuch_Actions()
 		income[pi] = income[pi] + 40
 		
 		
-		udg_LocalText2 = "???????? ?????. ????????? ????? ??????? ?????."
+		udg_LocalText2 = "Превышен лимит. Некоторые башни сменили режим."
 		GroupEnumUnitsOfPlayer(udg_LocalOtrad, p, udg_Boolexpr)
 		udg_LocalInteger = CountUnitsInGroup(udg_LocalOtrad)
 		if Tl == 1 and udg_LocalInteger >= 15 then
@@ -1375,7 +1375,7 @@ function Trig_TimerIncome_Actions()
 			if t > 1 then
 				corruption[i] = disincome[i] * ((t - 1) * 0.15)
 				if EcLog then
-					udg_LocalText2 = "?????????" .. I2S(R2I(corruption[i]))
+					udg_LocalText2 = "Коррупция" .. I2S(R2I(corruption[i]))
 					DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 				end
 				
@@ -1386,7 +1386,7 @@ function Trig_TimerIncome_Actions()
 			if t >= 1 then
 				additional[i] = disincome[i] * (udg_MainPrice[i] / (-100.0))
 				if EcLog then
-					udg_LocalText2 = "?????????????: " .. I2S(R2I(additional[i]))
+					udg_LocalText2 = "Дополнительно: " .. I2S(R2I(additional[i]))
 					DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 				end
 				
@@ -1401,17 +1401,17 @@ function Trig_TimerIncome_Actions()
 		
 		
 		if EcLog then
-			udg_LocalText2 = "?????: " .. R2S(income[i] * IncomeMod)
+			udg_LocalText2 = "Доход: " .. R2S(income[i] * IncomeMod)
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = "??????: " .. R2S(disincome[i])
+			udg_LocalText2 = "Расход: " .. R2S(disincome[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = "?????????: " .. R2S(logistic[i])
+			udg_LocalText2 = "Логистика: " .. R2S(logistic[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = "??????: " .. I2S(udg_UnitsCount[i])
+			udg_LocalText2 = "Юнитов: " .. I2S(udg_UnitsCount[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = "?????: " .. R2S(balance[i])
+			udg_LocalText2 = "Итого: " .. R2S(balance[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = "?????????: " .. R2S(incomeW[i])
+			udg_LocalText2 = "Древесины: " .. R2S(incomeW[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 		end
 		

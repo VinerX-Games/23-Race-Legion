@@ -1,0 +1,1870 @@
+{
+  "abilities": {
+    "A0I3": {
+      "id": "A0I3",
+      "levels": 1,
+      "buttonpos": [
+        "2",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "|cffe4cfa3Небольшой скачок|r",
+          "raw_hd": "|cffe4cfa3Небольшой скачок|r",
+          "resolved_sd": "|cffe4cfa3Небольшой скачок|r",
+          "resolved_hd": "|cffe4cfa3Небольшой скачок|r",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_9545",
+          "raw_hd": "TRIGSTR_9545",
+          "resolved_sd": "C",
+          "resolved_hd": "C",
+          "is_wts": true,
+          "wts_id": 9545
+        },
+        "tip1": {
+          "raw_sd": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)",
+          "raw_hd": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)",
+          "resolved_sd": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)",
+          "resolved_hd": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "ubertip1": {
+          "raw_sd": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит владельца на расстояние до |cffffffff500|cffced4da.|n|nПерезарядка: |cff60b8d040|cffced4da сек.|r",
+          "raw_hd": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит владельца на расстояние до |cffffffff500|cffced4da.|n|nПерезарядка: |cff60b8d040|cffced4da сек.|r",
+          "resolved_sd": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит владельца на расстояние до |cffffffff500|cffced4da.|n|nПерезарядка: |cff60b8d040|cffced4da сек.|r",
+          "resolved_hd": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит владельца на расстояние до |cffffffff500|cffced4da.|n|nПерезарядка: |cff60b8d040|cffced4da сек.|r",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "A1LR": {
+      "id": "A1LR",
+      "levels": 1,
+      "buttonpos": [
+        "1",
+        "1"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_39762",
+          "raw_hd": "TRIGSTR_39762",
+          "resolved_sd": "|cff8080ffСвязь с изумрудным сном|r",
+          "resolved_hd": "|cff8080ffСвязь с изумрудным сном|r",
+          "is_wts": true,
+          "wts_id": 39762
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_39761",
+          "raw_hd": "TRIGSTR_39761",
+          "resolved_sd": "|cff8080ffСвязь с изумрудным сном|r",
+          "resolved_hd": "|cff8080ffСвязь с изумрудным сном|r",
+          "is_wts": true,
+          "wts_id": 39761
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_21752",
+          "raw_hd": "TRIGSTR_21752",
+          "resolved_sd": "При попадании в изумрудный сон юнит не потревожит местных духов.",
+          "resolved_hd": "При попадании в изумрудный сон юнит не потревожит местных духов.",
+          "is_wts": true,
+          "wts_id": 21752
+        }
+      }
+    },
+    "A0RK": {
+      "id": "A0RK",
+      "levels": 1,
+      "buttonpos": [
+        "1",
+        "1"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_11988",
+          "raw_hd": "TRIGSTR_11988",
+          "resolved_sd": "|cff8080ffРодство с магией|r",
+          "resolved_hd": "|cff8080ffРодство с магией|r",
+          "is_wts": true,
+          "wts_id": 11988
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_13625",
+          "raw_hd": "TRIGSTR_13625",
+          "resolved_sd": "|cff8080ffРодство с магией|r",
+          "resolved_hd": "|cff8080ffРодство с магией|r",
+          "is_wts": true,
+          "wts_id": 13625
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_16379",
+          "raw_hd": "TRIGSTR_16379",
+          "resolved_sd": "Дает 50% защиты от магии.",
+          "resolved_hd": "Дает 50% защиты от магии.",
+          "is_wts": true,
+          "wts_id": 16379
+        }
+      }
+    },
+    "drat": {
+      "id": "drat",
+      "levels": 1,
+      "buttonpos": [
+        "0",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_39820",
+          "raw_hd": "TRIGSTR_39820",
+          "resolved_sd": "|cff8080ffЗамедление|r",
+          "resolved_hd": "|cff8080ffЗамедление|r",
+          "is_wts": true,
+          "wts_id": 39820
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_28875",
+          "raw_hd": "TRIGSTR_28875",
+          "resolved_sd": "Q",
+          "resolved_hd": "Q",
+          "is_wts": true,
+          "wts_id": 28875
+        },
+        "unhotkey": {
+          "raw_sd": "TRIGSTR_28876",
+          "raw_hd": "TRIGSTR_28876",
+          "resolved_sd": "Q",
+          "resolved_hd": "Q",
+          "is_wts": true,
+          "wts_id": 28876
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_39821",
+          "raw_hd": "TRIGSTR_39821",
+          "resolved_sd": "|cff8080ffЗамедление|r",
+          "resolved_hd": "|cff8080ffЗамедление|r",
+          "is_wts": true,
+          "wts_id": 39821
+        },
+        "ubertip1": {
+          "raw_sd": "\"Замедляет атаку врага на <Aslo,DataB1,%>% и передвижение на <Aslo,DataA1,%>%. |nВремя действия: <Aslo,Dur1> сек.\"",
+          "raw_hd": "\"Замедляет атаку врага на <Aslo,DataB1,%>% и передвижение на <Aslo,DataA1,%>%. |nВремя действия: <Aslo,Dur1> сек.\"",
+          "resolved_sd": "\"Замедляет атаку врага на <Aslo,DataB1,%>% и передвижение на <Aslo,DataA1,%>%. |nВремя действия: <Aslo,Dur1> сек.\"",
+          "resolved_hd": "\"Замедляет атаку врага на <Aslo,DataB1,%>% и передвижение на <Aslo,DataA1,%>%. |nВремя действия: <Aslo,Dur1> сек.\"",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "untip1": {
+          "raw_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "unubertip1": {
+          "raw_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "A0RE": {
+      "id": "A0RE",
+      "levels": 1,
+      "buttonpos": [
+        "3",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_16920",
+          "raw_hd": "TRIGSTR_16920",
+          "resolved_sd": "|cff8080ffУскользание|r",
+          "resolved_hd": "|cff8080ffУскользание|r",
+          "is_wts": true,
+          "wts_id": 16920
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_16921",
+          "raw_hd": "TRIGSTR_16921",
+          "resolved_sd": "|cff8080ffУскользание|r",
+          "resolved_hd": "|cff8080ffУскользание|r",
+          "is_wts": true,
+          "wts_id": 16921
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_16922",
+          "raw_hd": "TRIGSTR_16922",
+          "resolved_sd": "Дает |cff8080ff<ACev,DataA1,%>%-й|r шанс уклониться от атаки.",
+          "resolved_hd": "Дает |cff8080ff<ACev,DataA1,%>%-й|r шанс уклониться от атаки.",
+          "is_wts": true,
+          "wts_id": 16922
+        }
+      }
+    },
+    "drAa": {
+      "id": "drAa",
+      "levels": 1,
+      "buttonpos": [
+        "1",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_39822",
+          "raw_hd": "TRIGSTR_39822",
+          "resolved_sd": "|cff8080ffЗеркальное изображение|r",
+          "resolved_hd": "|cff8080ffЗеркальное изображение|r",
+          "is_wts": true,
+          "wts_id": 39822
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_29727",
+          "raw_hd": "TRIGSTR_29727",
+          "resolved_sd": "W",
+          "resolved_hd": "W",
+          "is_wts": true,
+          "wts_id": 29727
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_39823",
+          "raw_hd": "TRIGSTR_39823",
+          "resolved_sd": "|cff8080ffЗеркальное изображение|r",
+          "resolved_hd": "|cff8080ffЗеркальное изображение|r",
+          "is_wts": true,
+          "wts_id": 39823
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_23599",
+          "raw_hd": "TRIGSTR_23599",
+          "resolved_sd": "Создает 1 иллюзорную копию дракона и снимает с него магические эффекты. Копия наносит 50% урона, но принимает столько же.\n|cffb4dc8cВремя действия (20)сек.|r",
+          "resolved_hd": "Создает 1 иллюзорную копию дракона и снимает с него магические эффекты. Копия наносит 50% урона, но принимает столько же.\n|cffb4dc8cВремя действия (20)сек.|r",
+          "is_wts": true,
+          "wts_id": 23599
+        }
+      }
+    },
+    "drAs": {
+      "id": "drAs",
+      "levels": 1,
+      "buttonpos": [
+        "0",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_39825",
+          "raw_hd": "TRIGSTR_39825",
+          "resolved_sd": "|cff8080ffСингулярная перегрузка|r",
+          "resolved_hd": "|cff8080ffСингулярная перегрузка|r",
+          "is_wts": true,
+          "wts_id": 39825
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_28877",
+          "raw_hd": "TRIGSTR_28877",
+          "resolved_sd": "Q",
+          "resolved_hd": "Q",
+          "is_wts": true,
+          "wts_id": 28877
+        },
+        "unhotkey": {
+          "raw_sd": "TRIGSTR_28902",
+          "raw_hd": "TRIGSTR_28902",
+          "resolved_sd": "Q",
+          "resolved_hd": "Q",
+          "is_wts": true,
+          "wts_id": 28902
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_39826",
+          "raw_hd": "TRIGSTR_39826",
+          "resolved_sd": "|cff8080ffСингулярная перегрузка|r",
+          "resolved_hd": "|cff8080ffСингулярная перегрузка|r",
+          "is_wts": true,
+          "wts_id": 39826
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_39827",
+          "raw_hd": "TRIGSTR_39827",
+          "resolved_sd": "Ускоряет атаку на 20% и передвижение на 15% на 9 сек.",
+          "resolved_hd": "Ускоряет атаку на 20% и передвижение на 15% на 9 сек.",
+          "is_wts": true,
+          "wts_id": 39827
+        },
+        "untip1": {
+          "raw_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "unubertip1": {
+          "raw_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "Alit": {
+      "id": "Alit",
+      "levels": 1,
+      "buttonpos": [
+        null,
+        null
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "Грозовая атака",
+          "raw_hd": "Грозовая атака",
+          "resolved_sd": "Грозовая атака",
+          "resolved_hd": "Грозовая атака",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "A0RO": {
+      "id": "A0RO",
+      "levels": 1,
+      "buttonpos": [
+        "1",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_17123",
+          "raw_hd": "TRIGSTR_17123",
+          "resolved_sd": "|cff8080ffВозврат времени|r",
+          "resolved_hd": "|cff8080ffВозврат времени|r",
+          "is_wts": true,
+          "wts_id": 17123
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_17318",
+          "raw_hd": "TRIGSTR_17318",
+          "resolved_sd": "W",
+          "resolved_hd": "W",
+          "is_wts": true,
+          "wts_id": 17318
+        },
+        "unhotkey": {
+          "raw_sd": "TRIGSTR_17442",
+          "raw_hd": "TRIGSTR_17442",
+          "resolved_sd": "W",
+          "resolved_hd": "W",
+          "is_wts": true,
+          "wts_id": 17442
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_17124",
+          "raw_hd": "TRIGSTR_17124",
+          "resolved_sd": "|cff8080ffВозврат времени|r",
+          "resolved_hd": "|cff8080ffВозврат времени|r",
+          "is_wts": true,
+          "wts_id": 17124
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_39875",
+          "raw_hd": "TRIGSTR_39875",
+          "resolved_sd": "Восполняет 25 здоровья находящимся рядом союзникам.",
+          "resolved_hd": "Восполняет 25 здоровья находящимся рядом союзникам.",
+          "is_wts": true,
+          "wts_id": 39875
+        },
+        "untip1": {
+          "raw_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "unubertip1": {
+          "raw_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "A0RJ": {
+      "id": "A0RJ",
+      "levels": 1,
+      "buttonpos": [
+        "2",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_16755",
+          "raw_hd": "TRIGSTR_16755",
+          "resolved_sd": "|cff8080ffУскорение времени|r",
+          "resolved_hd": "|cff8080ffУскорение времени|r",
+          "is_wts": true,
+          "wts_id": 16755
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_20833",
+          "raw_hd": "TRIGSTR_20833",
+          "resolved_sd": "E",
+          "resolved_hd": "E",
+          "is_wts": true,
+          "wts_id": 20833
+        },
+        "unhotkey": {
+          "raw_sd": "TRIGSTR_20976",
+          "raw_hd": "TRIGSTR_20976",
+          "resolved_sd": "E",
+          "resolved_hd": "E",
+          "is_wts": true,
+          "wts_id": 20976
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_16990",
+          "raw_hd": "TRIGSTR_16990",
+          "resolved_sd": "|cff8080ffУскорение времени|r",
+          "resolved_hd": "|cff8080ffУскорение времени|r",
+          "is_wts": true,
+          "wts_id": 16990
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_2707",
+          "raw_hd": "TRIGSTR_2707",
+          "resolved_sd": "|cff8080ff+15%|r к скорости атаки и |cff8080ff+10%|r к скорости передвижения союзника. |nВремя действия: 20 сек.",
+          "resolved_hd": "|cff8080ff+15%|r к скорости атаки и |cff8080ff+10%|r к скорости передвижения союзника. |nВремя действия: 20 сек.",
+          "is_wts": true,
+          "wts_id": 2707
+        },
+        "untip1": {
+          "raw_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "unubertip1": {
+          "raw_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "drAz": {
+      "id": "drAz",
+      "levels": 1,
+      "buttonpos": [
+        "0",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_11954",
+          "raw_hd": "TRIGSTR_11954",
+          "resolved_sd": "|cff8080ffЦепная молния|r",
+          "resolved_hd": "|cff8080ffЦепная молния|r",
+          "is_wts": true,
+          "wts_id": 11954
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_28903",
+          "raw_hd": "TRIGSTR_28903",
+          "resolved_sd": "Q",
+          "resolved_hd": "Q",
+          "is_wts": true,
+          "wts_id": 28903
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_13753",
+          "raw_hd": "TRIGSTR_13753",
+          "resolved_sd": "|cff8080ffЦепная молния|r",
+          "resolved_hd": "|cff8080ffЦепная молния|r",
+          "is_wts": true,
+          "wts_id": 13753
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_41516",
+          "raw_hd": "TRIGSTR_41516",
+          "resolved_sd": "Призывает молнию, которая наносит 125 урона цели и рикошетит до 5 раз.",
+          "resolved_hd": "Призывает молнию, которая наносит 125 урона цели и рикошетит до 5 раз.",
+          "is_wts": true,
+          "wts_id": 41516
+        }
+      }
+    },
+    "drA2": {
+      "id": "drA2",
+      "levels": 1,
+      "buttonpos": [
+        "3",
+        "1"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_3756",
+          "raw_hd": "TRIGSTR_3756",
+          "resolved_sd": "|cff8080ffПерелет|r",
+          "resolved_hd": "|cff8080ffПерелет|r",
+          "is_wts": true,
+          "wts_id": 3756
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_18377",
+          "raw_hd": "TRIGSTR_18377",
+          "resolved_sd": "F",
+          "resolved_hd": "F",
+          "is_wts": true,
+          "wts_id": 18377
+        },
+        "unhotkey": {
+          "raw_sd": "TRIGSTR_18399",
+          "raw_hd": "TRIGSTR_18399",
+          "resolved_sd": "F",
+          "resolved_hd": "F",
+          "is_wts": true,
+          "wts_id": 18399
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_25492",
+          "raw_hd": "TRIGSTR_25492",
+          "resolved_sd": "|cff8080ffПерелет|r",
+          "resolved_hd": "|cff8080ffПерелет|r",
+          "is_wts": true,
+          "wts_id": 25492
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_25494",
+          "raw_hd": "TRIGSTR_25494",
+          "resolved_sd": "Дракон медлено перелетает в выбранную точку, становясь при этом очень уязвимым. Могут только самые сильные драконы.",
+          "resolved_hd": "Дракон медлено перелетает в выбранную точку, становясь при этом очень уязвимым. Могут только самые сильные драконы.",
+          "is_wts": true,
+          "wts_id": 25494
+        }
+      }
+    },
+    "drAw": {
+      "id": "drAw",
+      "levels": 1,
+      "buttonpos": [
+        "1",
+        "1"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_39764",
+          "raw_hd": "TRIGSTR_39764",
+          "resolved_sd": "|cff8080ffФазовый сдвиг|r",
+          "resolved_hd": "|cff8080ffФазовый сдвиг|r",
+          "is_wts": true,
+          "wts_id": 39764
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_11537",
+          "raw_hd": "TRIGSTR_11537",
+          "resolved_sd": "D",
+          "resolved_hd": "D",
+          "is_wts": true,
+          "wts_id": 11537
+        },
+        "unhotkey": {
+          "raw_sd": "TRIGSTR_11538",
+          "raw_hd": "TRIGSTR_11538",
+          "resolved_sd": "D",
+          "resolved_hd": "D",
+          "is_wts": true,
+          "wts_id": 11538
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_39763",
+          "raw_hd": "TRIGSTR_39763",
+          "resolved_sd": "|cff8080ffФазовый сдвиг|r",
+          "resolved_hd": "|cff8080ffФазовый сдвиг|r",
+          "is_wts": true,
+          "wts_id": 39763
+        },
+        "ubertip1": {
+          "raw_sd": "\"При получении урона переходит в иное измерение, получая защиту от дальнейшего урона. |nВремя действия: <Apsh,Dur1> сек.\"",
+          "raw_hd": "\"При получении урона переходит в иное измерение, получая защиту от дальнейшего урона. |nВремя действия: <Apsh,Dur1> сек.\"",
+          "resolved_sd": "\"При получении урона переходит в иное измерение, получая защиту от дальнейшего урона. |nВремя действия: <Apsh,Dur1> сек.\"",
+          "resolved_hd": "\"При получении урона переходит в иное измерение, получая защиту от дальнейшего урона. |nВремя действия: <Apsh,Dur1> сек.\"",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "untip1": {
+          "raw_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "unubertip1": {
+          "raw_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "drAy": {
+      "id": "drAy",
+      "levels": 1,
+      "buttonpos": [
+        "0",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_39773",
+          "raw_hd": "TRIGSTR_39773",
+          "resolved_sd": "|cff8080ffМножественная атака|r",
+          "resolved_hd": "|cff8080ffМножественная атака|r",
+          "is_wts": true,
+          "wts_id": 39773
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_39775",
+          "raw_hd": "TRIGSTR_39775",
+          "resolved_sd": "|cff8080ffМножественная атака|r",
+          "resolved_hd": "|cff8080ffМножественная атака|r",
+          "is_wts": true,
+          "wts_id": 39775
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_39774",
+          "raw_hd": "TRIGSTR_39774",
+          "resolved_sd": "Позволяет атаковать еще на 2 цели больше.",
+          "resolved_hd": "Позволяет атаковать еще на 2 цели больше.",
+          "is_wts": true,
+          "wts_id": 39774
+        }
+      }
+    },
+    "drAe": {
+      "id": "drAe",
+      "levels": 1,
+      "buttonpos": [
+        "1",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_39876",
+          "raw_hd": "TRIGSTR_39876",
+          "resolved_sd": "|cff8080ffИзгнание|r",
+          "resolved_hd": "|cff8080ffИзгнание|r",
+          "is_wts": true,
+          "wts_id": 39876
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_29665",
+          "raw_hd": "TRIGSTR_29665",
+          "resolved_sd": "W",
+          "resolved_hd": "W",
+          "is_wts": true,
+          "wts_id": 29665
+        },
+        "unhotkey": {
+          "raw_sd": "TRIGSTR_29674",
+          "raw_hd": "TRIGSTR_29674",
+          "resolved_sd": "W",
+          "resolved_hd": "W",
+          "is_wts": true,
+          "wts_id": 29674
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_39765",
+          "raw_hd": "TRIGSTR_39765",
+          "resolved_sd": "|cff8080ffИзгнание|",
+          "resolved_hd": "|cff8080ffИзгнание|",
+          "is_wts": true,
+          "wts_id": 39765
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_39768",
+          "raw_hd": "TRIGSTR_39768",
+          "resolved_sd": "Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA1,%>% на <AHbn,Dur1> сек. Изгнанные цели не могут атаковать, но могут применять способности. Кроме того, некоторые способности наносят им больше урона. Не действует на технику.",
+          "resolved_hd": "Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA1,%>% на <AHbn,Dur1> сек. Изгнанные цели не могут атаковать, но могут применять способности. Кроме того, некоторые способности наносят им больше урона. Не действует на технику.",
+          "is_wts": true,
+          "wts_id": 39768
+        },
+        "untip1": {
+          "raw_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "unubertip1": {
+          "raw_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "drAr": {
+      "id": "drAr",
+      "levels": 1,
+      "buttonpos": [
+        "0",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_39769",
+          "raw_hd": "TRIGSTR_39769",
+          "resolved_sd": "|cff8080ffГнев деревьев|r",
+          "resolved_hd": "|cff8080ffГнев деревьев|r",
+          "is_wts": true,
+          "wts_id": 39769
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_28874",
+          "raw_hd": "TRIGSTR_28874",
+          "resolved_sd": "Q",
+          "resolved_hd": "Q",
+          "is_wts": true,
+          "wts_id": 28874
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_39770",
+          "raw_hd": "TRIGSTR_39770",
+          "resolved_sd": "|cff8080ffГнев деревьев|r",
+          "resolved_hd": "|cff8080ffГнев деревьев|r",
+          "is_wts": true,
+          "wts_id": 39770
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_23598",
+          "raw_hd": "TRIGSTR_23598",
+          "resolved_sd": "Призывает из-под земли корни, которые обездвиживают врага на 15 сек. и наносят 20 урона/сек. На героев действует 0.5 секунды.",
+          "resolved_hd": "Призывает из-под земли корни, которые обездвиживают врага на 15 сек. и наносят 20 урона/сек. На героев действует 0.5 секунды.",
+          "is_wts": true,
+          "wts_id": 23598
+        }
+      }
+    },
+    "drEt": {
+      "id": "drEt",
+      "levels": 1,
+      "buttonpos": [
+        "1",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_39771",
+          "raw_hd": "TRIGSTR_39771",
+          "resolved_sd": "|cff8080ffСон|r",
+          "resolved_hd": "|cff8080ffСон|r",
+          "is_wts": true,
+          "wts_id": 39771
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_30242",
+          "raw_hd": "TRIGSTR_30242",
+          "resolved_sd": "E",
+          "resolved_hd": "E",
+          "is_wts": true,
+          "wts_id": 30242
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_39772",
+          "raw_hd": "TRIGSTR_39772",
+          "resolved_sd": "|cff8080ffСон|r",
+          "resolved_hd": "|cff8080ffСон|r",
+          "is_wts": true,
+          "wts_id": 39772
+        },
+        "ubertip1": {
+          "raw_sd": "\"Погружает врага в сон на <ACsl,Dur1> сек. Спящая цель просыпается, если ее атакуют.\"",
+          "raw_hd": "\"Погружает врага в сон на <ACsl,Dur1> сек. Спящая цель просыпается, если ее атакуют.\"",
+          "resolved_sd": "\"Погружает врага в сон на <ACsl,Dur1> сек. Спящая цель просыпается, если ее атакуют.\"",
+          "resolved_hd": "\"Погружает врага в сон на <ACsl,Dur1> сек. Спящая цель просыпается, если ее атакуют.\"",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "drAd": {
+      "id": "drAd",
+      "levels": 1,
+      "buttonpos": [
+        "1",
+        "1"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_39878",
+          "raw_hd": "TRIGSTR_39878",
+          "resolved_sd": "|cff8080ffПоджог|r",
+          "resolved_hd": "|cff8080ffПоджог|r",
+          "is_wts": true,
+          "wts_id": 39878
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_39879",
+          "raw_hd": "TRIGSTR_39879",
+          "resolved_sd": "|cff8080ffПоджог|r",
+          "resolved_hd": "|cff8080ffПоджог|r",
+          "is_wts": true,
+          "wts_id": 39879
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_39880",
+          "raw_hd": "TRIGSTR_39880",
+          "resolved_sd": "Атакованные противники горят.",
+          "resolved_hd": "Атакованные противники горят.",
+          "is_wts": true,
+          "wts_id": 39880
+        }
+      }
+    },
+    "drA0": {
+      "id": "drA0",
+      "levels": 1,
+      "buttonpos": [
+        "0",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_24658",
+          "raw_hd": "TRIGSTR_24658",
+          "resolved_sd": "|cff8080ffИсцеляющий огонь|r",
+          "resolved_hd": "|cff8080ffИсцеляющий огонь|r",
+          "is_wts": true,
+          "wts_id": 24658
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_28807",
+          "raw_hd": "TRIGSTR_28807",
+          "resolved_sd": "Q",
+          "resolved_hd": "Q",
+          "is_wts": true,
+          "wts_id": 28807
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_25406",
+          "raw_hd": "TRIGSTR_25406",
+          "resolved_sd": "|cff8080ffИсцеляющий огонь|r",
+          "resolved_hd": "|cff8080ffИсцеляющий огонь|r",
+          "is_wts": true,
+          "wts_id": 25406
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_25407",
+          "raw_hd": "TRIGSTR_25407",
+          "resolved_sd": "Выпускает в выбранную область огонь красных драконов, тем самым леча союзников.",
+          "resolved_hd": "Выпускает в выбранную область огонь красных драконов, тем самым леча союзников.",
+          "is_wts": true,
+          "wts_id": 25407
+        }
+      }
+    },
+    "drA3": {
+      "id": "drA3",
+      "levels": 1,
+      "buttonpos": [
+        "1",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_39708",
+          "raw_hd": "TRIGSTR_39708",
+          "resolved_sd": "|cff8080ffБлагославление жизни|r",
+          "resolved_hd": "|cff8080ffБлагославление жизни|r",
+          "is_wts": true,
+          "wts_id": 39708
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_29480",
+          "raw_hd": "TRIGSTR_29480",
+          "resolved_sd": "W",
+          "resolved_hd": "W",
+          "is_wts": true,
+          "wts_id": 29480
+        },
+        "unhotkey": {
+          "raw_sd": "TRIGSTR_29531",
+          "raw_hd": "TRIGSTR_29531",
+          "resolved_sd": "W",
+          "resolved_hd": "W",
+          "is_wts": true,
+          "wts_id": 29531
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_39709",
+          "raw_hd": "TRIGSTR_39709",
+          "resolved_sd": "|cff8080ffБлагославление жизни|r",
+          "resolved_hd": "|cff8080ffБлагославление жизни|r",
+          "is_wts": true,
+          "wts_id": 39709
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_40054",
+          "raw_hd": "TRIGSTR_40054",
+          "resolved_sd": "+<Ainf,DataA1,%>% к урону и +2 к броне союзника. |nВремя действия: <Ainf,Dur1> сек.",
+          "resolved_hd": "+<Ainf,DataA1,%>% к урону и +2 к броне союзника. |nВремя действия: <Ainf,Dur1> сек.",
+          "is_wts": true,
+          "wts_id": 40054
+        },
+        "untip1": {
+          "raw_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "unubertip1": {
+          "raw_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "drA4": {
+      "id": "drA4",
+      "levels": 1,
+      "buttonpos": [
+        "2",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_39710",
+          "raw_hd": "TRIGSTR_39710",
+          "resolved_sd": "|cff8080ffВосстановление|r",
+          "resolved_hd": "|cff8080ffВосстановление|r",
+          "is_wts": true,
+          "wts_id": 39710
+        },
+        "hotkey": {
+          "raw_sd": "E",
+          "raw_hd": "E",
+          "resolved_sd": "E",
+          "resolved_hd": "E",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_39711",
+          "raw_hd": "TRIGSTR_39711",
+          "resolved_sd": "|cff8080ffВосстановление|r",
+          "resolved_hd": "|cff8080ffВосстановление|r",
+          "is_wts": true,
+          "wts_id": 39711
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_22815",
+          "raw_hd": "TRIGSTR_22815",
+          "resolved_sd": "Восполняет союзнику 800 здоровья за 30 сек.",
+          "resolved_hd": "Восполняет союзнику 800 здоровья за 30 сек.",
+          "is_wts": true,
+          "wts_id": 22815
+        }
+      }
+    },
+    "A1BD": {
+      "id": "A1BD",
+      "levels": 1,
+      "buttonpos": [
+        "0",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_17161",
+          "raw_hd": "TRIGSTR_17161",
+          "resolved_sd": "|cff8080ffПламенное дыхание|r",
+          "resolved_hd": "|cff8080ffПламенное дыхание|r",
+          "is_wts": true,
+          "wts_id": 17161
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_24576",
+          "raw_hd": "TRIGSTR_24576",
+          "resolved_sd": "Q",
+          "resolved_hd": "Q",
+          "is_wts": true,
+          "wts_id": 24576
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_24632",
+          "raw_hd": "TRIGSTR_24632",
+          "resolved_sd": "|cff8080ffПламенное дыхание|r",
+          "resolved_hd": "|cff8080ffПламенное дыхание|r",
+          "is_wts": true,
+          "wts_id": 24632
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_22813",
+          "raw_hd": "TRIGSTR_22813",
+          "resolved_sd": "Выдыхает огонь, нанося 100 урона в секторе перед собой. Максимальный урон - 800.",
+          "resolved_hd": "Выдыхает огонь, нанося 100 урона в секторе перед собой. Максимальный урон - 800.",
+          "is_wts": true,
+          "wts_id": 22813
+        }
+      }
+    },
+    "drA5": {
+      "id": "drA5",
+      "levels": 1,
+      "buttonpos": [
+        "1",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_16383",
+          "raw_hd": "TRIGSTR_16383",
+          "resolved_sd": "|cff8080ffПрочная чешуя|r",
+          "resolved_hd": "|cff8080ffПрочная чешуя|r",
+          "is_wts": true,
+          "wts_id": 16383
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_30888",
+          "raw_hd": "TRIGSTR_30888",
+          "resolved_sd": "R",
+          "resolved_hd": "R",
+          "is_wts": true,
+          "wts_id": 30888
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_16402",
+          "raw_hd": "TRIGSTR_16402",
+          "resolved_sd": "|cff8080ffПрочная чешуя|r",
+          "resolved_hd": "|cff8080ffПрочная чешуя|r",
+          "is_wts": true,
+          "wts_id": 16402
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_16410",
+          "raw_hd": "TRIGSTR_16410",
+          "resolved_sd": "-12 от получаемого драконом урона от атак. Минимальный урон от атак: 5.",
+          "resolved_hd": "-12 от получаемого драконом урона от атак. Минимальный урон от атак: 5.",
+          "is_wts": true,
+          "wts_id": 16410
+        }
+      }
+    },
+    "A0QB": {
+      "id": "A0QB",
+      "levels": 1,
+      "buttonpos": [
+        "0",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_22393",
+          "raw_hd": "TRIGSTR_22393",
+          "resolved_sd": "|cff8080ffРассеивание заклинаний|r",
+          "resolved_hd": "|cff8080ffРассеивание заклинаний|r",
+          "is_wts": true,
+          "wts_id": 22393
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_16770",
+          "raw_hd": "TRIGSTR_16770",
+          "resolved_sd": "Q",
+          "resolved_hd": "Q",
+          "is_wts": true,
+          "wts_id": 16770
+        },
+        "unhotkey": {
+          "raw_sd": "TRIGSTR_16771",
+          "raw_hd": "TRIGSTR_16771",
+          "resolved_sd": "Q",
+          "resolved_hd": "Q",
+          "is_wts": true,
+          "wts_id": 16771
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_22394",
+          "raw_hd": "TRIGSTR_22394",
+          "resolved_sd": "|cff8080ffРассеивание заклинаний|r",
+          "resolved_hd": "|cff8080ffРассеивание заклинаний|r",
+          "is_wts": true,
+          "wts_id": 22394
+        },
+        "ubertip1": {
+          "raw_sd": "\"Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r\"",
+          "raw_hd": "\"Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r\"",
+          "resolved_sd": "\"Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r\"",
+          "resolved_hd": "\"Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r\"",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "Afrb": {
+      "id": "Afrb",
+      "levels": 1,
+      "buttonpos": [
+        null,
+        null
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "Морозное дыхание",
+          "raw_hd": "Морозное дыхание",
+          "resolved_sd": "Морозное дыхание",
+          "resolved_hd": "Морозное дыхание",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "dra3": {
+      "id": "dra3",
+      "levels": 1,
+      "buttonpos": [
+        "2",
+        "1"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_40316",
+          "raw_hd": "TRIGSTR_40316",
+          "resolved_sd": "|cff8080ffТелепортация|r",
+          "resolved_hd": "|cff8080ffТелепортация|r",
+          "is_wts": true,
+          "wts_id": 40316
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_11579",
+          "raw_hd": "TRIGSTR_11579",
+          "resolved_sd": "D",
+          "resolved_hd": "D",
+          "is_wts": true,
+          "wts_id": 11579
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_40317",
+          "raw_hd": "TRIGSTR_40317",
+          "resolved_sd": "|cff8080ffТелепортация|r",
+          "resolved_hd": "|cff8080ffТелепортация|r",
+          "is_wts": true,
+          "wts_id": 40317
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_40318",
+          "raw_hd": "TRIGSTR_40318",
+          "resolved_sd": "Переносит до 5 находящихся рядом воинов игрока (включая самого верховного мага) к наземному союзнику или союзному зданию.",
+          "resolved_hd": "Переносит до 5 находящихся рядом воинов игрока (включая самого верховного мага) к наземному союзнику или союзному зданию.",
+          "is_wts": true,
+          "wts_id": 40318
+        }
+      }
+    },
+    "drA6": {
+      "id": "drA6",
+      "levels": 1,
+      "buttonpos": [
+        "2",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_16418",
+          "raw_hd": "TRIGSTR_16418",
+          "resolved_sd": "|cff8080ffБуран|r",
+          "resolved_hd": "|cff8080ffБуран|r",
+          "is_wts": true,
+          "wts_id": 16418
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_30220",
+          "raw_hd": "TRIGSTR_30220",
+          "resolved_sd": "E",
+          "resolved_hd": "E",
+          "is_wts": true,
+          "wts_id": 30220
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_16422",
+          "raw_hd": "TRIGSTR_16422",
+          "resolved_sd": "|cff8080ffБуран|r",
+          "resolved_hd": "|cff8080ffБуран|r",
+          "is_wts": true,
+          "wts_id": 16422
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_32868",
+          "raw_hd": "TRIGSTR_32868",
+          "resolved_sd": "Обрушивает на небольшую область 5  волн ледяных осколков, каждая из которых наносит 100 урона.",
+          "resolved_hd": "Обрушивает на небольшую область 5  волн ледяных осколков, каждая из которых наносит 100 урона.",
+          "is_wts": true,
+          "wts_id": 32868
+        }
+      }
+    },
+    "drA1": {
+      "id": "drA1",
+      "levels": 1,
+      "buttonpos": [
+        "1",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_17036",
+          "raw_hd": "TRIGSTR_17036",
+          "resolved_sd": "|cff8080ffКольцо льда|r",
+          "resolved_hd": "|cff8080ffКольцо льда|r",
+          "is_wts": true,
+          "wts_id": 17036
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_29564",
+          "raw_hd": "TRIGSTR_29564",
+          "resolved_sd": "W",
+          "resolved_hd": "W",
+          "is_wts": true,
+          "wts_id": 29564
+        },
+        "unhotkey": {
+          "raw_sd": "TRIGSTR_29565",
+          "raw_hd": "TRIGSTR_29565",
+          "resolved_sd": "W",
+          "resolved_hd": "W",
+          "is_wts": true,
+          "wts_id": 29565
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_17037",
+          "raw_hd": "TRIGSTR_17037",
+          "resolved_sd": "|cff8080ffКольцо льда|r",
+          "resolved_hd": "|cff8080ffКольцо льда|r",
+          "is_wts": true,
+          "wts_id": 17037
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_23596",
+          "raw_hd": "TRIGSTR_23596",
+          "resolved_sd": "Выпускает ледяную волну, нанося |cffb4dcdc100|r урона цели и |cffb4dcdc85|r урона по области. Урон от льда замедляет передвижение и атаку целей на |cffb4dcdc12 сек. (1 сек. герой)|r",
+          "resolved_hd": "Выпускает ледяную волну, нанося |cffb4dcdc100|r урона цели и |cffb4dcdc85|r урона по области. Урон от льда замедляет передвижение и атаку целей на |cffb4dcdc12 сек. (1 сек. герой)|r",
+          "is_wts": true,
+          "wts_id": 23596
+        }
+      }
+    },
+    "drAq": {
+      "id": "drAq",
+      "levels": 1,
+      "buttonpos": [
+        "0",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_17102",
+          "raw_hd": "TRIGSTR_17102",
+          "resolved_sd": "|cff8080ffЛедяная стрела|r",
+          "resolved_hd": "|cff8080ffЛедяная стрела|r",
+          "is_wts": true,
+          "wts_id": 17102
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_28855",
+          "raw_hd": "TRIGSTR_28855",
+          "resolved_sd": "Q",
+          "resolved_hd": "Q",
+          "is_wts": true,
+          "wts_id": 28855
+        },
+        "unhotkey": {
+          "raw_sd": "TRIGSTR_28856",
+          "raw_hd": "TRIGSTR_28856",
+          "resolved_sd": "Q",
+          "resolved_hd": "Q",
+          "is_wts": true,
+          "wts_id": 28856
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_17107",
+          "raw_hd": "TRIGSTR_17107",
+          "resolved_sd": "|cff8080ffЛедяная стрела|r",
+          "resolved_hd": "|cff8080ffЛедяная стрела|r",
+          "is_wts": true,
+          "wts_id": 17107
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_23597",
+          "raw_hd": "TRIGSTR_23597",
+          "resolved_sd": "Наносит врагу 140 урона и оглушает его на 7 сек. (героев 0.5).",
+          "resolved_hd": "Наносит врагу 140 урона и оглушает его на 7 сек. (героев 0.5).",
+          "is_wts": true,
+          "wts_id": 23597
+        }
+      }
+    },
+    "drA7": {
+      "id": "drA7",
+      "levels": 1,
+      "buttonpos": [
+        "0",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_22387",
+          "raw_hd": "TRIGSTR_22387",
+          "resolved_sd": "|cff8080ffПожирание магии|r",
+          "resolved_hd": "|cff8080ffПожирание магии|r",
+          "is_wts": true,
+          "wts_id": 22387
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_28832",
+          "raw_hd": "TRIGSTR_28832",
+          "resolved_sd": "Q",
+          "resolved_hd": "Q",
+          "is_wts": true,
+          "wts_id": 28832
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_22389",
+          "raw_hd": "TRIGSTR_22389",
+          "resolved_sd": "|cff8080ffПожирание магии|r",
+          "resolved_hd": "|cff8080ffПожирание магии|r",
+          "is_wts": true,
+          "wts_id": 22389
+        },
+        "ubertip1": {
+          "raw_sd": "\"Поглощает магические эффекты, действующие на войска в указанной области. Дает сфинксу <Advm,DataA1> здоровья и <Advm,DataB1> маны за каждую цель. |n|cffffcc00Наносит <Advm,DataE1> урона призванным целям.|r\"",
+          "raw_hd": "\"Поглощает магические эффекты, действующие на войска в указанной области. Дает сфинксу <Advm,DataA1> здоровья и <Advm,DataB1> маны за каждую цель. |n|cffffcc00Наносит <Advm,DataE1> урона призванным целям.|r\"",
+          "resolved_sd": "\"Поглощает магические эффекты, действующие на войска в указанной области. Дает сфинксу <Advm,DataA1> здоровья и <Advm,DataB1> маны за каждую цель. |n|cffffcc00Наносит <Advm,DataE1> урона призванным целям.|r\"",
+          "resolved_hd": "\"Поглощает магические эффекты, действующие на войска в указанной области. Дает сфинксу <Advm,DataA1> здоровья и <Advm,DataB1> маны за каждую цель. |n|cffffcc00Наносит <Advm,DataE1> урона призванным целям.|r\"",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "A0RM": {
+      "id": "A0RM",
+      "levels": 1,
+      "buttonpos": [
+        "1",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_17118",
+          "raw_hd": "TRIGSTR_17118",
+          "resolved_sd": "|cff8080ffПохищение заклинаний|r",
+          "resolved_hd": "|cff8080ffПохищение заклинаний|r",
+          "is_wts": true,
+          "wts_id": 17118
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_17235",
+          "raw_hd": "TRIGSTR_17235",
+          "resolved_sd": "W",
+          "resolved_hd": "W",
+          "is_wts": true,
+          "wts_id": 17235
+        },
+        "unhotkey": {
+          "raw_sd": "TRIGSTR_17268",
+          "raw_hd": "TRIGSTR_17268",
+          "resolved_sd": "W",
+          "resolved_hd": "W",
+          "is_wts": true,
+          "wts_id": 17268
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_17119",
+          "raw_hd": "TRIGSTR_17119",
+          "resolved_sd": "|cff8080ffПохищение заклинаний|r",
+          "resolved_hd": "|cff8080ffПохищение заклинаний|r",
+          "is_wts": true,
+          "wts_id": 17119
+        },
+        "ubertip1": {
+          "raw_sd": "Снимает положительный эффект с врага и дает его находящемуся рядом союзнику либо снимает отрицательный эффект с союзника и применяет его к находящемуся рядом врагу.",
+          "raw_hd": "Снимает положительный эффект с врага и дает его находящемуся рядом союзнику либо снимает отрицательный эффект с союзника и применяет его к находящемуся рядом врагу.",
+          "resolved_sd": "Снимает положительный эффект с врага и дает его находящемуся рядом союзнику либо снимает отрицательный эффект с союзника и применяет его к находящемуся рядом врагу.",
+          "resolved_hd": "Снимает положительный эффект с врага и дает его находящемуся рядом союзнику либо снимает отрицательный эффект с союзника и применяет его к находящемуся рядом врагу.",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "untip1": {
+          "raw_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "unubertip1": {
+          "raw_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "drA8": {
+      "id": "drA8",
+      "levels": 1,
+      "buttonpos": [
+        "3",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_16989",
+          "raw_hd": "TRIGSTR_16989",
+          "resolved_sd": "|cff8080ffВосполнение маны|r",
+          "resolved_hd": "|cff8080ffВосполнение маны|r",
+          "is_wts": true,
+          "wts_id": 16989
+        },
+        "hotkey": {
+          "raw_sd": "R",
+          "raw_hd": "R",
+          "resolved_sd": "R",
+          "resolved_hd": "R",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "unhotkey": {
+          "raw_sd": "R",
+          "raw_hd": "R",
+          "resolved_sd": "R",
+          "resolved_hd": "R",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_16996",
+          "raw_hd": "TRIGSTR_16996",
+          "resolved_sd": "|cff8080ffВосполнение маны|r",
+          "resolved_hd": "|cff8080ffВосполнение маны|r",
+          "is_wts": true,
+          "wts_id": 16996
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_22816",
+          "raw_hd": "TRIGSTR_22816",
+          "resolved_sd": "Восполняет ману союзникам в размере 65 единиц.",
+          "resolved_hd": "Восполняет ману союзникам в размере 65 единиц.",
+          "is_wts": true,
+          "wts_id": 22816
+        },
+        "untip1": {
+          "raw_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "unubertip1": {
+          "raw_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "drA9": {
+      "id": "drA9",
+      "levels": 1,
+      "buttonpos": [
+        "1",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_17033",
+          "raw_hd": "TRIGSTR_17033",
+          "resolved_sd": "|cff8080ffВспышка маны|r",
+          "resolved_hd": "|cff8080ffВспышка маны|r",
+          "is_wts": true,
+          "wts_id": 17033
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_30240",
+          "raw_hd": "TRIGSTR_30240",
+          "resolved_sd": "E",
+          "resolved_hd": "E",
+          "is_wts": true,
+          "wts_id": 30240
+        },
+        "unhotkey": {
+          "raw_sd": "TRIGSTR_30241",
+          "raw_hd": "TRIGSTR_30241",
+          "resolved_sd": "E",
+          "resolved_hd": "E",
+          "is_wts": true,
+          "wts_id": 30241
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_17034",
+          "raw_hd": "TRIGSTR_17034",
+          "resolved_sd": "|cff8080ffВспышка маны|r",
+          "resolved_hd": "|cff8080ffВспышка маны|r",
+          "is_wts": true,
+          "wts_id": 17034
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_23587",
+          "raw_hd": "TRIGSTR_23587",
+          "resolved_sd": "+<Amfl,DataE1> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: 30 сек.",
+          "resolved_hd": "+<Amfl,DataE1> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: 30 сек.",
+          "is_wts": true,
+          "wts_id": 23587
+        },
+        "untip1": {
+          "raw_sd": "TRIGSTR_17035",
+          "raw_hd": "TRIGSTR_17035",
+          "resolved_sd": "Отменить «|cff8080ffВспышку маны|r»",
+          "resolved_hd": "Отменить «|cff8080ffВспышку маны|r»",
+          "is_wts": true,
+          "wts_id": 17035
+        },
+        "unubertip1": {
+          "raw_sd": "TRIGSTR_23586",
+          "raw_hd": "TRIGSTR_23586",
+          "resolved_sd": "Прерывает действие «|cff8080ffВспышки маны|r».",
+          "resolved_hd": "Прерывает действие «|cff8080ffВспышки маны|r».",
+          "is_wts": true,
+          "wts_id": 23586
+        }
+      }
+    },
+    "A1BF": {
+      "id": "A1BF",
+      "levels": 1,
+      "buttonpos": [
+        "0",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_30549",
+          "raw_hd": "TRIGSTR_30549",
+          "resolved_sd": "Пленящая атака",
+          "resolved_hd": "Пленящая атака",
+          "is_wts": true,
+          "wts_id": 30549
+        },
+        "hotkey": {
+          "raw_sd": "TRIGSTR_24585",
+          "raw_hd": "TRIGSTR_24585",
+          "resolved_sd": "Q",
+          "resolved_hd": "Q",
+          "is_wts": true,
+          "wts_id": 24585
+        },
+        "unhotkey": {
+          "raw_sd": "TRIGSTR_24586",
+          "raw_hd": "TRIGSTR_24586",
+          "resolved_sd": "Q",
+          "resolved_hd": "Q",
+          "is_wts": true,
+          "wts_id": 24586
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_30550",
+          "raw_hd": "TRIGSTR_30550",
+          "resolved_sd": "Пленящая атака",
+          "resolved_hd": "Пленящая атака",
+          "is_wts": true,
+          "wts_id": 30550
+        },
+        "ubertip1": {
+          "raw_sd": "\"Ослабляет броню врага на <ACff,DataA1> и раскрывает его местоположение. |nВремя действия: <ACff,Dur1> сек.\"",
+          "raw_hd": "\"Ослабляет броню врага на <ACff,DataA1> и раскрывает его местоположение. |nВремя действия: <ACff,Dur1> сек.\"",
+          "resolved_sd": "\"Ослабляет броню врага на <ACff,DataA1> и раскрывает его местоположение. |nВремя действия: <ACff,Dur1> сек.\"",
+          "resolved_hd": "\"Ослабляет броню врага на <ACff,DataA1> и раскрывает его местоположение. |nВремя действия: <ACff,Dur1> сек.\"",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "untip1": {
+          "raw_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – включить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        },
+        "unubertip1": {
+          "raw_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "raw_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_sd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "resolved_hd": "|cffc3dbffПКМ – отключить автоприменение.|r",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "A0RL": {
+      "id": "A0RL",
+      "levels": 1,
+      "buttonpos": [
+        "2",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_17089",
+          "raw_hd": "TRIGSTR_17089",
+          "resolved_sd": "|cff8080ffСильный удар|r",
+          "resolved_hd": "|cff8080ffСильный удар|r",
+          "is_wts": true,
+          "wts_id": 17089
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_17090",
+          "raw_hd": "TRIGSTR_17090",
+          "resolved_sd": "|cff8080ffСильный удар|r",
+          "resolved_hd": "|cff8080ffСильный удар|r",
+          "is_wts": true,
+          "wts_id": 17090
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_17091",
+          "raw_hd": "TRIGSTR_17091",
+          "resolved_sd": "С |cff8080ff<ACbh,DataA1>%-й|r вероятностью атака нанесет на |cff8080ff<ACbh,DataC1>|r больше урона и оглушит цель на |cff8080ff<ACbh,Dur1> сек.|r",
+          "resolved_hd": "С |cff8080ff<ACbh,DataA1>%-й|r вероятностью атака нанесет на |cff8080ff<ACbh,DataC1>|r больше урона и оглушит цель на |cff8080ff<ACbh,Dur1> сек.|r",
+          "is_wts": true,
+          "wts_id": 17091
+        }
+      }
+    },
+    "A0QO": {
+      "id": "A0QO",
+      "levels": 1,
+      "buttonpos": [
+        "0",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_16381",
+          "raw_hd": "TRIGSTR_16381",
+          "resolved_sd": "|cff8080ffДраконья ярость|r",
+          "resolved_hd": "|cff8080ffДраконья ярость|r",
+          "is_wts": true,
+          "wts_id": 16381
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_16382",
+          "raw_hd": "TRIGSTR_16382",
+          "resolved_sd": "|cff8080ffДраконья ярость|r",
+          "resolved_hd": "|cff8080ffДраконья ярость|r",
+          "is_wts": true,
+          "wts_id": 16382
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_16428",
+          "raw_hd": "TRIGSTR_16428",
+          "resolved_sd": "Дает |cff8080ff<AOcr,DataA1>%-й|r шанс нанести |cff8080ff<AOcr,DataB1>|r-кратный урон при атаке.",
+          "resolved_hd": "Дает |cff8080ff<AOcr,DataA1>%-й|r шанс нанести |cff8080ff<AOcr,DataB1>|r-кратный урон при атаке.",
+          "is_wts": true,
+          "wts_id": 16428
+        }
+      }
+    },
+    "A0RN": {
+      "id": "A0RN",
+      "levels": 1,
+      "buttonpos": [
+        "1",
+        "2"
+      ],
+      "fields": {
+        "name": {
+          "raw_sd": "TRIGSTR_15866",
+          "raw_hd": "TRIGSTR_15866",
+          "resolved_sd": "|cff8080ffЯрость земли|r",
+          "resolved_hd": "|cff8080ffЯрость земли|r",
+          "is_wts": true,
+          "wts_id": 15866
+        },
+        "tip1": {
+          "raw_sd": "TRIGSTR_15963",
+          "raw_hd": "TRIGSTR_15963",
+          "resolved_sd": "|cff8080ffЯрость земли|r",
+          "resolved_hd": "|cff8080ffЯрость земли|r",
+          "is_wts": true,
+          "wts_id": 15963
+        },
+        "ubertip1": {
+          "raw_sd": "TRIGSTR_17122",
+          "raw_hd": "TRIGSTR_17122",
+          "resolved_sd": "Увеличивает урон от атак находящихся рядом союзников.\nУвеличивается урон - |cff8080ff10%.|r",
+          "resolved_hd": "Увеличивает урон от атак находящихся рядом союзников.\nУвеличивается урон - |cff8080ff10%.|r",
+          "is_wts": true,
+          "wts_id": 17122
+        }
+      }
+    }
+  },
+  "buffs": {
+    "B05D": {
+      "id": "B05D",
+      "fields": {
+        "bufftip": {
+          "raw_sd": "TRIGSTR_16858",
+          "raw_hd": "TRIGSTR_16858",
+          "resolved_sd": "|cff8080ffМанипуляция времени|r",
+          "resolved_hd": "|cff8080ffМанипуляция времени|r",
+          "is_wts": true,
+          "wts_id": 16858
+        },
+        "buffubertip": {
+          "raw_sd": "Периодический урон.",
+          "raw_hd": "Периодический урон.",
+          "resolved_sd": "Периодический урон.",
+          "resolved_hd": "Периодический урон.",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "B05C": {
+      "id": "B05C",
+      "fields": {
+        "bufftip": {
+          "raw_sd": "TRIGSTR_16993",
+          "raw_hd": "TRIGSTR_16993",
+          "resolved_sd": "|cff8080ffУскорение времени|r",
+          "resolved_hd": "|cff8080ffУскорение времени|r",
+          "is_wts": true,
+          "wts_id": 16993
+        },
+        "buffubertip": {
+          "raw_sd": "Наносимый и получаемый от атак урон увеличены.",
+          "raw_hd": "Наносимый и получаемый от атак урон увеличены.",
+          "resolved_sd": "Наносимый и получаемый от атак урон увеличены.",
+          "resolved_hd": "Наносимый и получаемый от атак урон увеличены.",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "B03U": {
+      "id": "B03U",
+      "fields": {
+        "bufftip": {
+          "raw_sd": "TRIGSTR_10157",
+          "raw_hd": "TRIGSTR_10157",
+          "resolved_sd": "|cffe1c8ebАура познаний|r",
+          "resolved_hd": "|cffe1c8ebАура познаний|r",
+          "is_wts": true,
+          "wts_id": 10157
+        },
+        "buffubertip": {
+          "raw_sd": "Регенерация маны ускорена.",
+          "raw_hd": "Регенерация маны ускорена.",
+          "resolved_sd": "Регенерация маны ускорена.",
+          "resolved_hd": "Регенерация маны ускорена.",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "Bdr0": {
+      "id": "Bdr0",
+      "fields": {
+        "bufftip": {
+          "raw_sd": "TRIGSTR_13754",
+          "raw_hd": "TRIGSTR_13754",
+          "resolved_sd": "|cff8080ffСингулярность|r",
+          "resolved_hd": "|cff8080ffСингулярность|r",
+          "is_wts": true,
+          "wts_id": 13754
+        },
+        "buffubertip": {
+          "raw_sd": "Атака и передвижение ускорены.",
+          "raw_hd": "Атака и передвижение ускорены.",
+          "resolved_sd": "Атака и передвижение ускорены.",
+          "resolved_hd": "Атака и передвижение ускорены.",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    },
+    "B02J": {
+      "id": "B02J",
+      "fields": {
+        "bufftip": {
+          "raw_sd": "TRIGSTR_2237",
+          "raw_hd": "TRIGSTR_2237",
+          "resolved_sd": "Поджог",
+          "resolved_hd": "Поджог",
+          "is_wts": true,
+          "wts_id": 2237
+        },
+        "buffubertip": {
+          "raw_sd": "TRIGSTR_7949",
+          "raw_hd": "TRIGSTR_7949",
+          "resolved_sd": "Юнит горит, получая урон.",
+          "resolved_hd": "Юнит горит, получая урон.",
+          "is_wts": true,
+          "wts_id": 7949
+        }
+      }
+    },
+    "B05S": {
+      "id": "B05S",
+      "fields": {
+        "bufftip": {
+          "raw_sd": "TRIGSTR_18378",
+          "raw_hd": "TRIGSTR_18378",
+          "resolved_sd": "Ярость земли",
+          "resolved_hd": "Ярость земли",
+          "is_wts": true,
+          "wts_id": 18378
+        },
+        "buffubertip": {
+          "raw_sd": "Урон от атак увеличен.",
+          "raw_hd": "Урон от атак увеличен.",
+          "resolved_sd": "Урон от атак увеличен.",
+          "resolved_hd": "Урон от атак увеличен.",
+          "is_wts": false,
+          "wts_id": null
+        }
+      }
+    }
+  }
+}

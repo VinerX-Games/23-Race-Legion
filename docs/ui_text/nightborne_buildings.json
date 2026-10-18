@@ -1,0 +1,261 @@
+{
+  "scope": "Ночнорождённые (Nightborne): категория 1 — Здания (12 зданий)",
+  "buildings_count": 12,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "h0CB",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 7295,
+          "after": "|cffe4cfa3Ратуша|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 16271,
+          "after": "|cffe4cfa3Ратуша|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 5692,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночнорождённых первой ступени. Обучает работников и служит складом ресурсов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deФорт|cffced4da: открывает доступ к передовым сооружениям и войскам Ночнорождённых.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CC",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 7298,
+          "after": "|cffe4cfa3Форт|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 16276,
+          "after": "|cffe4cfa3Форт|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13064,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночнорождённых второй ступени. Открывает доступ к новым сооружениям и улучшенным войскам.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deЗамок|cffced4da: открывает доступ к высшим технологиям и элитным войскам.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CD",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 7300,
+          "after": "|cffe4cfa3Замок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 16294,
+          "after": "|cffe4cfa3Замок|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13065,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночнорождённых третьей ступени. Открывает доступ к высшим ступеням улучшений и могущественной способности «Благодать маны».|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CE",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 7282,
+          "after": "|cffe4cfa3Кристалл маны|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 7283,
+          "after": "|cffe4cfa3Кристалл маны|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31698,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию Ночнорождённых запасом пищи и вырабатывает регулярный доход.|n|nДаёт |cffffffff15|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+20|cffced4da золота каждые |cffffffff25|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CF",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 7284,
+          "after": "|cffe4cfa3Казармы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 16303,
+          "after": "|cffe4cfa3Казармы|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13026,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает базовые пехотные и осадные силы Ночнорождённых.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da: ловкая мечница ближнего боя.|n- |cffa9c7deНаследник Сумеречной стражи|cffced4da: бронированный передовой боевой маг.|n- |cffa9c7deГлефомет|cffced4da: осадное орудие дальнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da|n- |cffa9c7deЛунные глефы|cffced4da|n- |cffa9c7deЗачарованные доспехи|cffced4da|n- |cffa9c7deСтальные снаряды|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CG",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 7293,
+          "after": "|cffe4cfa3Алтарь маны|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27926,
+          "after": "|cffe4cfa3Алтарь маны|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12972,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Позволяет призывать и воскрешать героев Ночнорождённых.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deКапитан Шал'дорайской стражи|cffced4da: могучий воин ближнего боя (Сила).|n- |cffa9c7deМрачная Тень|cffced4da: меткий стрелок дальнего боя (Ловкость).|n- |cffa9c7deВерховный лунный маг|cffced4da: повелитель тайной магии (Интеллект).|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CH",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 7302,
+          "after": "|cffe4cfa3Лесопилка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 20964,
+          "after": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13068,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Служит складом древесины и центром боевых улучшений армии Ночнорождённых.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗачарование силы|cffced4da|n- |cffa9c7deЛунные доспехи|cffced4da|n- |cffa9c7deМагическая атака|cffced4da|n- |cffa9c7deПрочные доспехи|cffced4da|n- |cffa9c7deРодство с маной|cffced4da|n- |cffa9c7deУлучшенные инструменты|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CI",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 7305,
+          "after": "|cffe4cfa3Святилище маны|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 7306,
+          "after": "|cffe4cfa3Святилище маны|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13009,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обучает заклинателей Ночнорождённых и открывает их магические способности.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЛунный маг|cffced4da: могущественный атакующий маг.|n- |cffa9c7deШал'дорайский аристократ|cffced4da: маг поддержки и призыватель.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deДревнее знание|cffced4da|n- |cffa9c7deКонтроль над маной|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CK",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 7318,
+          "after": "|cffe4cfa3Храм жизни|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 7319,
+          "after": "|cffe4cfa3Храм жизни|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13069,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Священная обитель, подготавливающая целителей и укротителей зверей Ночнорождённых.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da: всадник на боевом леопарде.|n- |cffa9c7deПоклонник|cffced4da: верховный целитель и темпомант.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение Темпомантов|cffced4da|n- |cffa9c7deТайная магия|cffced4da|n- |cffa9c7deМагическая сеть|cffced4da|n- |cffa9c7deСовместные тренировки|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CL",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 7320,
+          "after": "|cffe4cfa3Дом Шал'дорайской стражи|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 7321,
+          "after": "|cffe4cfa3Дом Шал'дорайской стражи|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13070,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Военная академия, подготавливающая элитных бойцов и командиров Ночнорождённых.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da: тяжёлый пехотинец, подавляющий магию врагов.|n- |cffa9c7deТемный клинок|cffced4da: скрытный убийца, наносящий сокрушительные критические удары.|n- |cffa9c7deСумеречный страж|cffced4da: тактический командир с усиливающей аурой и замедляющими оковами.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМана-броня|cffced4da|n- |cffa9c7deРассекающие клинки|cffced4da|n- |cffa9c7deКомандирская аура|cffced4da|n- |cffa9c7deМагические оковы|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CM",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3277,
+          "after": "|cffe4cfa3Магическая башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 20965,
+          "after": "|cffe4cfa3Магическая башня|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 8398,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение Ночнорождённых. Атакует цели всплесками чистой магии, сжигающими запас маны и наносящими повышенный урон призванным существам.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПротиводействие|cffced4da: уничтожает ману цели при попадании.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0D8",
+      "hotkey": "C",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10907,
+          "after": "|cffe4cfa3Верфь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10908,
+          "after": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10903,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Морское сооружение для строительства и оснащения боевых кораблей.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспортный корабль|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da.|r"
+        }
+      ]
+    }
+  ]
+}

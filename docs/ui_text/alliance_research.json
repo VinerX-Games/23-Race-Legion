@@ -1,0 +1,1564 @@
+{
+  "scope": "Альянс (Alliance): категория 5 — Исследования и маркеры (58 технологий)",
+  "upgrades_count": 58,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R002",
+      "levels": 6,
+      "strings": []
+    },
+    {
+      "id": "R003",
+      "levels": 6,
+      "strings": []
+    },
+    {
+      "id": "R004",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 13295,
+          "after": "|cffe4cfa3Улучшение до Кровавого Палача|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 13298,
+          "after": "|cffe4cfa3Улучшение до Кровавого Палача|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 18682,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Превращает  Властителя в Кровавого Палача. Усиливая его боевой потенциал.|r"
+        }
+      ]
+    },
+    {
+      "id": "R005",
+      "levels": 5,
+      "strings": []
+    },
+    {
+      "id": "R006",
+      "levels": 3,
+      "strings": []
+    },
+    {
+      "id": "R007",
+      "levels": 3,
+      "strings": []
+    },
+    {
+      "id": "R0GV",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40872,
+          "after": "|cffe4cfa3Тренировка ближнего боя — уровень 1|r"
+        },
+        {
+          "field": "names_name2",
+          "wts_id": 40873,
+          "after": "|cffe4cfa3Тренировка ближнего боя — уровень 2|r"
+        },
+        {
+          "field": "names_name3",
+          "wts_id": 40874,
+          "after": "|cffe4cfa3Тренировка ближнего боя — уровень 3|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40875,
+          "after": "|cffe4cfa3Тренировка ближнего боя — уровень 1|r"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 40876,
+          "after": "|cffe4cfa3Тренировка ближнего боя — уровень 2|r"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 40877,
+          "after": "|cffe4cfa3Тренировка ближнего боя — уровень 3|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 34339,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает воинов ближнего боя армии Альянса.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 34341,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает воинов ближнего боя армии Альянса.|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 42380,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Улучшает боевую выучку и стойкость пехоты ближнего боя Альянса.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воинам ближнего боя.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/3|r."
+        }
+      ]
+    },
+    {
+      "id": "R0GW",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40878,
+          "after": "|cffe4cfa3Тренировка дальнего боя — уровень 1|r"
+        },
+        {
+          "field": "names_name2",
+          "wts_id": 40879,
+          "after": "|cffe4cfa3Тренировка дальнего боя — уровень 2|r"
+        },
+        {
+          "field": "names_name3",
+          "wts_id": 40880,
+          "after": "|cffe4cfa3Тренировка дальнего боя — уровень 3|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40881,
+          "after": "|cffe4cfa3Тренировка дальнего боя — уровень 1|r"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 40882,
+          "after": "|cffe4cfa3Тренировка дальнего боя — уровень 2|r"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 40883,
+          "after": "|cffe4cfa3Тренировка дальнего боя — уровень 3|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 34342,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает воинов дальнего боя армии Альянса.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 34344,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает воинов дальнего боя армии Альянса.|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 42382,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Улучшает точность и урон стрелковых подразделений Альянса.|n|n|cffa6afb8Применяется к:|cffced4da|n- Стрелкам дальнего боя.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/3|r."
+        }
+      ]
+    },
+    {
+      "id": "R0GX",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40884,
+          "after": "|cffe4cfa3Политика Изоляционизма|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40885,
+          "after": "|cffe4cfa3Политика Изоляционизма|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 34345,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Альянсу (Лидерство над которым перешло теперь Штормграду, то есть нам) нужно время, чтобы оправиться от всех потрясений третьей войны. Уменьшает потребление на 15%, но отключает возможность выбирать какие-либо другие ветки.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GY",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 28634,
+          "after": "|cffe4cfa3Комплектование техники|r"
+        },
+        {
+          "field": "names_name2",
+          "wts_id": 28635,
+          "after": "|cffe4cfa3Комплектование техники|r"
+        },
+        {
+          "field": "names_name3",
+          "wts_id": 28636,
+          "after": "|cffe4cfa3Комплектование техники|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 28637,
+          "after": "|cffe4cfa3Комплектование техники|r"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 28648,
+          "after": "|cffe4cfa3Комплектование техники|r"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 28649,
+          "after": "|cffe4cfa3Комплектование техники|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 28653,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает технику армии Альянса.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 28654,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает технику армии Альянса.|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 28655,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает технику армии Альянса.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GZ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 29663,
+          "after": "|cffe4cfa3Альянс|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 29677,
+          "after": "|cffe4cfa3Альянс|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 29705,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Альянсу.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0H5",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40888,
+          "after": "|cffe4cfa3Запрос Ночных Эльфов|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40889,
+          "after": "|cffe4cfa3Запрос Ночных Эльфов|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 8781,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ночные эльфы — древняя раса убеждённых отшельников, сыгравшая важнейшую роль в определении истории Азерота. Более десяти тысяч лет назад героизм эльфийских воинов позволил остановить первое вторжение Пылающего Легиона. После нового вторжения и победы, они хотят вступить в Альянс! Добавляет т1 и т3 лучниц, а также друида-боевого мага. Уменьшает расходы на 4%.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0H6",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40890,
+          "after": "|cffe4cfa3Сформировать Седьмой Легион|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40891,
+          "after": "|cffe4cfa3Сформировать Седьмой Легион|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 8783,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Для поддерживание порядка в мире, Штормград тренирует специальный Легион. Усиливает всех воинов(не магов) Штормграда +50 к здоровью, +7% скорости атаки и 25% к скорости передвижения. заменяет новобранцев и открывает бойцов на грифонах 7-го Легиона. Повышает 4% к доходам|r"
+        }
+      ]
+    },
+    {
+      "id": "R0H7",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40892,
+          "after": "|cffe4cfa3Церковь и Государство|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40893,
+          "after": "|cffe4cfa3Церковь и Государство|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 9000,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Штормград тренирует воинов света второй войны. Добавляет элитного пехотинца-паладина, а также улучшает исцеление жреца, повышает его ману и здоровье.  Повышает расходы на 3%|r"
+        }
+      ]
+    },
+    {
+      "id": "R0H8",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40894,
+          "after": "|cffe4cfa3Взять Дренеев в Альянс|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40895,
+          "after": "|cffe4cfa3Взять Дренеев в Альянс|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 31244,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дренеи - это ответвление расы Эредаров, живших на планете Аргус 13000 лет назад. Сбежав из родного мира, который покорился Пылающему Легиону, они осели в мире Дренор, из которого вновь вынуждены были бежать из-за войны с орками. Последний межпространственный корабль дренеев Экзодар приземлился в Азероте на острове Лазурной Дымки, став их столицей. И теперь они хотят присоедениться к Альянсу! Открывает специального мага и т3 паладина.  Снижает расходы на 2%.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0H9",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40896,
+          "after": "|cffe4cfa3Былой союзник|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40897,
+          "after": "|cffe4cfa3Былой союзник|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 23114,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Страшное проклятие довлеет над обитателями уединенного королевства Гилнеас, защищенного гигантской Стеной Седогрива. Многие из них, в прошлом честные и верные граждане, превратились в воргенов — свирепых хищников, полулюдей, полуволков. Не смотря на это, Альянс готов принять их.  Открывает юнитов Воргенов.  Повышает расходы на 2%|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HA",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40898,
+          "after": "|cffe4cfa3Расширить ШРУ|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40899,
+          "after": "|cffe4cfa3Расширить ШРУ|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 40337,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Штормградская разведка расширяет сеть тайных агентов по всему миру.|n|nДобавляет агентов ШРУ, способных действовать под невидимостью и отравлять врагов ядом. |cffe69a8dПовышает расходы на 3%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Разведывательным силам Альянса.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HB",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40900,
+          "after": "|cffe4cfa3Принять к себе Пандаренов|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40901,
+          "after": "|cffe4cfa3Принять к себе Пандаренов|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 40543,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Мирные пандарены Тушуй присоединяются к силам Альянса.|n|nОткрывает мастеров боя и воинов Шадо-Пан ближнего боя. |cffc8e087Снижает расходы на 2%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам ближнего боя.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HC",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40902,
+          "after": "|cffe4cfa3Новые осадные технологии|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40903,
+          "after": "|cffe4cfa3Новые осадные технологии|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 29943,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает осадную башню.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HD",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 29296,
+          "after": "|cffe4cfa3Диалог с Кул-тирасом|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 29297,
+          "after": "|cffe4cfa3Диалог с Кул-тирасом|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 32003,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Кул-Тирас – это морская нация людей построенная на одноименном острове. Он известен своим легендарным флотом. Мы же, хотим вернуть с ними отношение. .Открывает жреца и стрелков култираса, а также галеоны. Повышает расходы на 3%.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HE",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 29309,
+          "after": "|cffe4cfa3Децентрализация|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 29310,
+          "after": "|cffe4cfa3Децентрализация|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 40544,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Гномы Гномрегана и их технологии получают статус полноправных союзников в Альянсе.|n|nОткрывает новый вид парового танка и мага поддержки гномов. |cffc8e087Снижает расходы на 10%|cffced4da и повышает шанс найма не-людей. |cffe69a8dЗакрывает другие ветки|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Инженерным и магическим войскам Альянса.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HF",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40904,
+          "after": "|cffe4cfa3Союз равных|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40905,
+          "after": "|cffe4cfa3Союз равных|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 41231,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Штормград делит верховную власть с присоединившимися народами, создавая равноправную коалицию.|n|nПовышает шансы выхода воинов не-людей, |cffc8e087уменьшает расходы на 6%|cffced4da, открывает новые дипломатические союзы. |cffe69a8dЗакрывает другие ветки|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Армии Альянса.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HG",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 29335,
+          "after": "|cffe4cfa3Восстановить Аратор|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 29336,
+          "after": "|cffe4cfa3Восстановить Аратор|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 41232,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Возрождение великой империи Аратор объединяет племена и северные пределы Восточных королевств.|n|nУвеличивает шансы найма людей, даёт |cffc8e087+100 к здоровью|cffced4da и |cffc8e087+2 к броне|cffced4da пехотинцам, а также |cffc8e087снижает расходы на 10%|cffced4da. |cffe69a8dЗакрывает другие ветки|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воинам-людям Альянса.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HH",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40906,
+          "after": "|cffe4cfa3Штормград превыше всего|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40907,
+          "after": "|cffe4cfa3Штормград превыше всего|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 32137,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Штормград встал с колен. И теперь он решает сам что для себя лучше. .Уменьшает расходы на 5%, также расходы за все присоединные расы, но нанимаются исключительно воины Штормграда.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HI",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 29361,
+          "after": "|cffe4cfa3Надавить на Даларан|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 29362,
+          "after": "|cffe4cfa3Надавить на Даларан|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 41269,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Орден Кирин-Тора усиливает поддержку сухопутных сил Альянса своими лучшими арканистами.|n|nОткрывает арканистов Даларана и повышает характеристики всех магов Альянса. |cffc8e087Снижает расходы на 3%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Магам Волшебного святилища.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HJ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40908,
+          "after": "|cffe4cfa3Реконструировать Стромгард|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40909,
+          "after": "|cffe4cfa3Реконструировать Стромгард|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 41577,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Восстановление цитадели Стромгарда укрепляет колыбель человечества.|n|nОткрывает воителей и кавалеристов Стромгарда. |cffc8e087Снижает расходы на 2%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам Стромгарда.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HK",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40910,
+          "after": "|cffe4cfa3Армия Света|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40911,
+          "after": "|cffe4cfa3Армия Света|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 41763,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Озарённые воины Великой Армии Света приходят на помощь Альянсу.|n|nОткрывает жрицу Наару и благословение Света. |cffc8e087Снижает расходы на 3%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Силам Света.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HL",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 29400,
+          "after": "|cffe4cfa3Отряды Тьмы|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 29401,
+          "after": "|cffe4cfa3Отряды Тьмы|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 41837,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Изучение темных искусств Бездны открывает доступ к тайным заклинателям Тьмы.|n|nОткрывает жрицу Тьмы. |cffc8e087Снижает расходы на 3%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Магам Волшебного святилища.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HM",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 29413,
+          "after": "|cffe4cfa3Вопрос Клана Черного Железа|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 29414,
+          "after": "|cffe4cfa3Вопрос Клана Черного Железа|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 31028,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Клан Темного Железа, управляемый королевой Мойрой Тауриссан, вдовой покойного императора Даграна Тауриссана и дочерью короля Магни Бронзоборода, стремится создать для себя новое будущее. Поэтому они хотят присоедениться к Альянсу!  Открывает голема черного железа.   Уменьшает расходы на 2%.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HN",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 29709,
+          "after": "|cffe4cfa3Память о Лотаре|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 29807,
+          "after": "|cffe4cfa3Память о Лотаре|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 29706,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Сыновья Лотара, также известные как Экспедиция Альянса и Экспедиционные силы Альянса, в основном ветераны Второй войны, которые отправились на родную планету орков Дренор во время вторжения в Дренор, с целью конфискации украденные магические артефакты у Нер'зула и его Орды Дренора, а также положить конец угрозе со стороны орков. Открывает нового юнита, Ветерана 2 войны. Так же новую способность всадникам и увеличивает их здоровье на 125 ед.   +15% к Расходам.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HO",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 28859,
+          "after": "|cffe4cfa3Маг (Специализированный)|r (|cffffffffB|r)"
+        },
+        {
+          "field": "names_name2",
+          "wts_id": 28860,
+          "after": "|cffe4cfa3Легкий корабль Альянса|r"
+        },
+        {
+          "field": "names_name3",
+          "wts_id": 28899,
+          "after": "|cffe4cfa3Жрица Наару|r"
+        },
+        {
+          "field": "names_name4",
+          "wts_id": 29253,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "names_name5",
+          "wts_id": 29430,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "names_name6",
+          "wts_id": 29431,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 28900,
+          "after": "|cffe4cfa3Жрица Тьмы|r"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 29099,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 29200,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "tips_tip4",
+          "wts_id": 29432,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "tips_tip5",
+          "wts_id": 29433,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "tips_tip6",
+          "wts_id": 29434,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 29201,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от магических атак.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 29222,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от магических атак.|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 29223,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от магических атак.|r"
+        },
+        {
+          "field": "ubertips_ubertip4",
+          "wts_id": 29435,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от магических атак.|r"
+        },
+        {
+          "field": "ubertips_ubertip5",
+          "wts_id": 29436,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от магических атак.|r"
+        },
+        {
+          "field": "ubertips_ubertip6",
+          "wts_id": 29437,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от магических атак.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HQ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40912,
+          "after": "|cffe4cfa3Человечество важнее всего|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40913,
+          "after": "|cffe4cfa3Человечество важнее всего|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 32454,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Штормград начинает присоеденять к себе другие королевства людей. возращаясь к истокам Аратора. Начинает ветку по включению других королевств.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HR",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40914,
+          "after": "|cffe4cfa3Внутреннее развитие|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40915,
+          "after": "|cffe4cfa3Внутреннее развитие|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 32471,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Штормград — столица одноименного королевства Штормград и самый крупный человеческий город в Азероте. Город находится в северо-западной части Элвиннского леса. Штормград является территорией Альянса. Открывает ветку исследований на улучшения армии штормграда.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HS",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40916,
+          "after": "|cffe4cfa3Расширение Альянса|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40917,
+          "after": "|cffe4cfa3Расширение Альянса|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 32482,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Альянс только встает на ноги, и теперь для подержания порядка в этом мире им нужны союзники. Открывает возможность принимать новые расы в Альянс.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HU",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 29689,
+          "after": "|cffe4cfa3Обучение специализированных магов|r"
+        },
+        {
+          "field": "names_name2",
+          "wts_id": 29690,
+          "after": "|cffe4cfa3Обучение специализированных магов|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 29691,
+          "after": "|cffe4cfa3Обучение специализированных магов|r"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 29692,
+          "after": "|cffe4cfa3Обучение специализированных магов|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 29693,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья и маны специализированных магов, ускоряет регенерацию их маны, а также обучает их новым способностям.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 29694,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья и маны специализированных магов, ускоряет регенерацию их маны, а также обучает их новым способностям.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HV",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40918,
+          "after": "|cffe4cfa3Интеграция Лордеронцев|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40919,
+          "after": "|cffe4cfa3Интеграция Лордеронцев|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 42384,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Принятие беженцев и уцелевших воинов павшего королевства Лордерон в ряды армии.|n|nПовышает шансы выхода людей Лордерона, открывает им новую способность и увеличивает боевые параметры. |cffe69a8dПовышает расходы на 3%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам Лордерона.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HW",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 30254,
+          "after": "|cffe4cfa3Гномы|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 29941,
+          "after": "|cffe4cfa3Гномы|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HX",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 30266,
+          "after": "|cffe4cfa3Кул-Тирас или Альянс|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 29942,
+          "after": "|cffe4cfa3Кул-Тирас или Альянс|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HY",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 30278,
+          "after": "|cffe4cfa3Стромгард или Альянс|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 30255,
+          "after": "|cffe4cfa3Стромгард или Альянс|r"
+        }
+      ]
+    },
+    {
+      "id": "R0KK",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 16408,
+          "after": "|cffe4cfa3Альянс или Даларан|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 16409,
+          "after": "|cffe4cfa3Альянс или Даларан|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 16416,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Альянсу или Даларану.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rgfo",
+      "levels": 3,
+      "strings": []
+    },
+    {
+      "id": "Rguv",
+      "levels": 1,
+      "strings": []
+    },
+    {
+      "id": "Rhac",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 28836,
+          "after": "|cffe4cfa3Основной стрелок|r"
+        },
+        {
+          "field": "names_name2",
+          "wts_id": 28837,
+          "after": "|cffe4cfa3Основной стрелок|r (|cffffffffR|r)"
+        },
+        {
+          "field": "names_name3",
+          "wts_id": 28838,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Улучшенный стрелок дальнего боя второй ступени. Наносит повышенный урон колющими выстрелами.|n|nАтакует наземные и воздушные цели.|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 28839,
+          "after": "|cffe4cfa3Элитный стрелок|r"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 28962,
+          "after": "|cffe4cfa3Улучшенную кладку|r"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 29022,
+          "after": "|cffe4cfa3Улучшенную кладку|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 29219,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню и увеличивает запас прочности зданий Альянса.|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 31032,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню и увеличивает запас прочности зданий Альянса.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rhan",
+      "levels": 1,
+      "strings": []
+    },
+    {
+      "id": "Rhar",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 31033,
+          "after": "|cffe4cfa3Доспехи из армированной кожи|r"
+        },
+        {
+          "field": "names_name2",
+          "wts_id": 31034,
+          "after": "|cffe4cfa3Доспехи из армированной кожи|r"
+        },
+        {
+          "field": "names_name3",
+          "wts_id": 31035,
+          "after": "|cffe4cfa3Доспехи из армированной кожи|r"
+        },
+        {
+          "field": "names_name4",
+          "wts_id": 31036,
+          "after": "|cffe4cfa3Доспехи из армированной кожи|r"
+        },
+        {
+          "field": "names_name5",
+          "wts_id": 31037,
+          "after": "|cffe4cfa3Доспехи из армированной кожи|r"
+        },
+        {
+          "field": "names_name6",
+          "wts_id": 31621,
+          "after": "|cffe4cfa3Доспехи из армированной кожи|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 31623,
+          "after": "|cffe4cfa3Мифриловую броню|r"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 31624,
+          "after": "|cffe4cfa3Мифриловую броню|r"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 31625,
+          "after": "|cffe4cfa3Мифриловую броню|r"
+        },
+        {
+          "field": "tips_tip4",
+          "wts_id": 31658,
+          "after": "|cffe4cfa3Мифриловую броню|r"
+        },
+        {
+          "field": "tips_tip5",
+          "wts_id": 31662,
+          "after": "|cffe4cfa3Мифриловую броню|r"
+        },
+        {
+          "field": "tips_tip6",
+          "wts_id": 31909,
+          "after": "|cffe4cfa3Мифриловую броню|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 31910,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню воинов ближнего боя.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 31911,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню воинов ближнего боя.|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 31916,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню воинов ближнего боя.|r"
+        },
+        {
+          "field": "ubertips_ubertip4",
+          "wts_id": 31948,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню воинов ближнего боя.|r"
+        },
+        {
+          "field": "ubertips_ubertip5",
+          "wts_id": 31971,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню воинов ближнего боя.|r"
+        },
+        {
+          "field": "ubertips_ubertip6",
+          "wts_id": 31970,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню воинов ближнего боя.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rhde",
+      "levels": 1,
+      "strings": []
+    },
+    {
+      "id": "Rhla",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 39800,
+          "after": "|cffe4cfa3Доспехи из армированной кожи|r"
+        },
+        {
+          "field": "names_name2",
+          "wts_id": 39561,
+          "after": "|cffe4cfa3Доспехи из армированной кожи|r"
+        },
+        {
+          "field": "names_name3",
+          "wts_id": 39810,
+          "after": "|cffe4cfa3Доспехи из армированной кожи|r"
+        },
+        {
+          "field": "names_name4",
+          "wts_id": 39883,
+          "after": "|cffe4cfa3Доспехи из армированной кожи|r"
+        },
+        {
+          "field": "names_name5",
+          "wts_id": 40384,
+          "after": "|cffe4cfa3Доспехи из армированной кожи|r"
+        },
+        {
+          "field": "names_name6",
+          "wts_id": 40661,
+          "after": "|cffe4cfa3Доспехи из армированной кожи|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 41289,
+          "after": "|cffe4cfa3Доспехи из армированной кожи — уровень 1|r"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 41496,
+          "after": "|cffe4cfa3Доспехи из армированной кожи — уровень 2|r"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 41805,
+          "after": "|cffe4cfa3Доспехи из армированной кожи — уровень 3|r"
+        },
+        {
+          "field": "tips_tip4",
+          "wts_id": 41823,
+          "after": "|cffe4cfa3Доспехи из армированной кожи — уровень 4|r"
+        },
+        {
+          "field": "tips_tip5",
+          "wts_id": 41824,
+          "after": "|cffe4cfa3Доспехи из армированной кожи — уровень 5|r"
+        },
+        {
+          "field": "tips_tip6",
+          "wts_id": 41851,
+          "after": "|cffe4cfa3Доспехи из армированной кожи — уровень 6|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 231,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливают броню юнитов дальнего боя.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 183,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливают броню юнитов дальнего боя.|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 187,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливают броню юнитов дальнего боя.|r"
+        },
+        {
+          "field": "ubertips_ubertip4",
+          "wts_id": 193,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливают броню юнитов дальнего боя.|r"
+        },
+        {
+          "field": "ubertips_ubertip5",
+          "wts_id": 194,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливают броню юнитов дальнего боя.|r"
+        },
+        {
+          "field": "ubertips_ubertip6",
+          "wts_id": 221,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливают броню юнитов дальнего боя.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rhlh",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "tips_tip1",
+          "wts_id": 28496,
+          "after": "|cffe4cfa3Улучшенная лесозаготовка|r"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 28833,
+          "after": "|cffe4cfa3Основной пехотинец|r"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 28490,
+          "after": "|cffe4cfa3Улучшенная лесозаготовка — уровень 3|r"
+        },
+        {
+          "field": "tips_tip4",
+          "wts_id": 28491,
+          "after": "|cffe4cfa3Улучшенная лесозаготовка — уровень 4|r"
+        },
+        {
+          "field": "tips_tip5",
+          "wts_id": 28492,
+          "after": "|cffe4cfa3Улучшенная лесозаготовка — уровень 5|r"
+        },
+        {
+          "field": "tips_tip6",
+          "wts_id": 28493,
+          "after": "|cffe4cfa3Улучшенная лесозаготовка — уровень 6|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 15852,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.|r"
+        },
+        {
+          "field": "ubertips_ubertip4",
+          "wts_id": 15853,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.|r"
+        },
+        {
+          "field": "ubertips_ubertip5",
+          "wts_id": 15854,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.|r"
+        },
+        {
+          "field": "ubertips_ubertip6",
+          "wts_id": 20724,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rhme",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 33172,
+          "after": "|cffe4cfa3Мифриловые мечи — уровень 1|r"
+        },
+        {
+          "field": "names_name2",
+          "wts_id": 33726,
+          "after": "|cffe4cfa3Мифриловые мечи — уровень 2|r"
+        },
+        {
+          "field": "names_name3",
+          "wts_id": 32096,
+          "after": "|cffe4cfa3Мифриловые мечи — уровень 3|r"
+        },
+        {
+          "field": "names_name4",
+          "wts_id": 33821,
+          "after": "|cffe4cfa3Мифриловые мечи — уровень 4|r"
+        },
+        {
+          "field": "names_name5",
+          "wts_id": 35188,
+          "after": "|cffe4cfa3Мифриловые мечи — уровень 5|r"
+        },
+        {
+          "field": "names_name6",
+          "wts_id": 35191,
+          "after": "|cffe4cfa3Мифриловые мечи — уровень 6|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 35367,
+          "after": "|cffe4cfa3Мифриловые мечи — уровень 1|r"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 35759,
+          "after": "|cffe4cfa3Мифриловые мечи — уровень 2|r"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 35760,
+          "after": "|cffe4cfa3Мифриловые мечи — уровень 3|r"
+        },
+        {
+          "field": "tips_tip4",
+          "wts_id": 35761,
+          "after": "|cffe4cfa3Мифриловые мечи — уровень 4|r"
+        },
+        {
+          "field": "tips_tip5",
+          "wts_id": 35762,
+          "after": "|cffe4cfa3Мифриловые мечи — уровень 5|r"
+        },
+        {
+          "field": "tips_tip6",
+          "wts_id": 35763,
+          "after": "|cffe4cfa3Мифриловые мечи — уровень 6|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 35764,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон всех воинов ближнего боя Альянса.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воинам ближнего боя.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/6|r."
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 35791,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон всех воинов ближнего боя Альянса.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воинам ближнего боя.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/6|r."
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 35792,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон всех воинов ближнего боя Альянса.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воинам ближнего боя.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/6|r."
+        },
+        {
+          "field": "ubertips_ubertip4",
+          "wts_id": 35793,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон всех воинов ближнего боя Альянса.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воинам ближнего боя.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4/6|r."
+        },
+        {
+          "field": "ubertips_ubertip5",
+          "wts_id": 35794,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон всех воинов ближнего боя Альянса.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воинам ближнего боя.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5/6|r."
+        },
+        {
+          "field": "ubertips_ubertip6",
+          "wts_id": 35795,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон всех воинов ближнего боя Альянса.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воинам ближнего боя.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6/6|r."
+        }
+      ]
+    },
+    {
+      "id": "Rhpm",
+      "levels": 1,
+      "strings": []
+    },
+    {
+      "id": "Rhpt",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 42376,
+          "after": "|cffe4cfa3Обучение боевых магов — уровень 1|r"
+        },
+        {
+          "field": "names_name2",
+          "wts_id": 42377,
+          "after": "|cffe4cfa3Обучение боевых магов — уровень 2|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 42378,
+          "after": "|cffe4cfa3Обучение боевых магов — уровень 1|r"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 42379,
+          "after": "|cffe4cfa3Обучение боевых магов — уровень 2|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 28870,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья и маны боевых магов, ускоряет регенерацию их маны, а также обучает их новым способностям.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 28871,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья и маны боевых магов, ускоряет регенерацию их маны, а также обучает их новым способностям.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rhra",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 35958,
+          "after": "|cffe4cfa3Улучшенные снаряды — уровень 1|r"
+        },
+        {
+          "field": "names_name2",
+          "wts_id": 36235,
+          "after": "|cffe4cfa3Улучшенные снаряды — уровень 2|r"
+        },
+        {
+          "field": "names_name3",
+          "wts_id": 35796,
+          "after": "|cffe4cfa3Улучшенные снаряды — уровень 3|r"
+        },
+        {
+          "field": "names_name4",
+          "wts_id": 37954,
+          "after": "|cffe4cfa3Улучшенные снаряды — уровень 4|r"
+        },
+        {
+          "field": "names_name5",
+          "wts_id": 38715,
+          "after": "|cffe4cfa3Улучшенные снаряды — уровень 5|r"
+        },
+        {
+          "field": "names_name6",
+          "wts_id": 38716,
+          "after": "|cffe4cfa3Улучшенные снаряды — уровень 6|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 38717,
+          "after": "|cffe4cfa3Улучшенные снаряды — уровень 1|r"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 38718,
+          "after": "|cffe4cfa3Улучшенные снаряды — уровень 2|r"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 38724,
+          "after": "|cffe4cfa3Улучшенные снаряды — уровень 3|r"
+        },
+        {
+          "field": "tips_tip4",
+          "wts_id": 38728,
+          "after": "|cffe4cfa3Улучшенные снаряды — уровень 4|r"
+        },
+        {
+          "field": "tips_tip5",
+          "wts_id": 38729,
+          "after": "|cffe4cfa3Улучшенные снаряды — уровень 5|r"
+        },
+        {
+          "field": "tips_tip6",
+          "wts_id": 38730,
+          "after": "|cffe4cfa3Улучшенные снаряды — уровень 6|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 38731,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков, осадных машин и кораблей Альянса.|n|n|cffa6afb8Применяется к:|cffced4da|n- Бойцам дальнего боя.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/6|r."
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 38732,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков, осадных машин и кораблей Альянса.|n|n|cffa6afb8Применяется к:|cffced4da|n- Бойцам дальнего боя.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/6|r."
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 39218,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков, осадных машин и кораблей Альянса.|n|n|cffa6afb8Применяется к:|cffced4da|n- Бойцам дальнего боя.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/6|r."
+        },
+        {
+          "field": "ubertips_ubertip4",
+          "wts_id": 39219,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков, осадных машин и кораблей Альянса.|n|n|cffa6afb8Применяется к:|cffced4da|n- Бойцам дальнего боя.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4/6|r."
+        },
+        {
+          "field": "ubertips_ubertip5",
+          "wts_id": 39220,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков, осадных машин и кораблей Альянса.|n|n|cffa6afb8Применяется к:|cffced4da|n- Бойцам дальнего боя.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5/6|r."
+        },
+        {
+          "field": "ubertips_ubertip6",
+          "wts_id": 39221,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков, осадных машин и кораблей Альянса.|n|n|cffa6afb8Применяется к:|cffced4da|n- Бойцам дальнего боя.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6/6|r."
+        }
+      ]
+    },
+    {
+      "id": "Rhri",
+      "levels": 1,
+      "strings": []
+    },
+    {
+      "id": "Rhrt",
+      "levels": 1,
+      "strings": []
+    },
+    {
+      "id": "Rhsb",
+      "levels": 1,
+      "strings": []
+    },
+    {
+      "id": "Rhse",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 40196,
+          "after": "|cffe4cfa3Магический страж|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 40197,
+          "after": "|cffe4cfa3Магический страж|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 13312,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da ИССЛЕДОВАНИЕ: Наделяет Магические Башни способностью обнаруживать находящиеся рядом невидимые войска противника.|n|nПрименяется к:|n- Магическая Башня.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rhss",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 7403,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет ведьмакам захватывать контроль над призванными существами врага.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rhst",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "names_name1",
+          "wts_id": 41898,
+          "after": "|cffe4cfa3Обучение магов поддержки — уровень 1|r"
+        },
+        {
+          "field": "names_name2",
+          "wts_id": 42235,
+          "after": "|cffe4cfa3Обучение магов поддержки — уровень 2|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 42372,
+          "after": "|cffe4cfa3Обучение магов поддержки — уровень 1|r"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 42375,
+          "after": "|cffe4cfa3Обучение магов поддержки — уровень 2|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 28394,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья и маны магов поддержки, ускоряет регенерацию их маны, а также обучает их новым способностям.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 28400,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья и маны магов поддержки, ускоряет регенерацию их маны, а также обучает их новым способностям.|r"
+        }
+      ]
+    }
+  ]
+}

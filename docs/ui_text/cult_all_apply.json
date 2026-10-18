@@ -1,0 +1,18 @@
+{
+  "race": "CultOfDamned",
+  "race_name_ru": "Культ Проклятых",
+  "race_id": 33,
+  "mode": "apply",
+  "wts_updates_applied": 501,
+  "checks_summary": {
+    "total": 499,
+    "passed": 499,
+    "failed": 0,
+    "success_percent": 100.0
+  },
+  "hashes": {
+    "original_wts": "f5a24447dc5802605a0ddcc4496c05df62b7e6298c50e75a0ab769264c8d5a25",
+    "updated_wts": "f5a24447dc5802605a0ddcc4496c05df62b7e6298c50e75a0ab769264c8d5a25"
+  },
+  "failures": []
+}

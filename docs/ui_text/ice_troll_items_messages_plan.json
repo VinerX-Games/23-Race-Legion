@@ -1,0 +1,22 @@
+{
+  "operations": [
+    {
+      "type": "upgrade",
+      "id": "R0L1",
+      "field": "name1",
+      "value": "|cffe4cfa3Ледяные тролли|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0L1",
+      "field": "tip1",
+      "value": "|cffe4cfa3Ледяные тролли|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0L1",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Расовое знание ледяных троллей Драккари, необходимое для найма Властелина Холода. Выдаётся автоматически при выборе расы.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВластелин Холода|cffced4da в Зул`Драке.|r"
+    }
+  ]
+}

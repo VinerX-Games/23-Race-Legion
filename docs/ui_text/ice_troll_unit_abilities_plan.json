@@ -1,0 +1,658 @@
+{
+  "operations": [
+    {
+      "type": "ability",
+      "id": "A10O",
+      "field": "name",
+      "value": "|cffe4cfa3Опутывание|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10O",
+      "field": "tip1",
+      "value": "|cffe4cfa3Опутывание|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10O",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Притягивает врага сетями к земле и обездвиживает его на |cffffffff2|cffced4da сек. (героев — на |cffffffff1|cffced4da сек.). Опутанные летающие цели становятся уязвимы для ближнего боя.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CL",
+      "field": "name",
+      "value": "|cffe4cfa3Рассеивание заклинаний|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CL",
+      "field": "tip1",
+      "value": "|cffe4cfa3Рассеивание заклинаний|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1CL",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает все магические эффекты с юнитов в области радиусом |cffffffff200|cffced4da и наносит |cffffffff200|cffced4da ед. урона призванным существам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CM",
+      "field": "name",
+      "value": "|cffe4cfa3Ледяная стрела|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CM",
+      "field": "tip1",
+      "value": "|cffe4cfa3Ледяная стрела|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1CM",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает во врага ледяной заряд, наносящий |cffffffff100|cffced4da ед. урона и оглушающий цель на |cffffffff0,5|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CN",
+      "field": "name",
+      "value": "|cffe4cfa3Злоба Лоа|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CN",
+      "field": "tip1",
+      "value": "|cffe4cfa3Злоба Лоа|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1CN",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Взывает к ярости Лоа, увеличивая скорость атаки союзника на |cffffffff20%|cffced4da и скорость передвижения на |cffffffff20%|cffced4da на |cffffffff60|cffced4da сек.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CN",
+      "field": "untip1",
+      "value": "|cffe4cfa3Злоба Лоа|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1CN",
+      "field": "unubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Взывает к ярости Лоа, увеличивая скорость атаки союзника на |cffffffff20%|cffced4da и скорость передвижения на |cffffffff20%|cffced4da на |cffffffff60|cffced4da сек.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CO",
+      "field": "name",
+      "value": "|cffe4cfa3Исцеление|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CO",
+      "field": "tip1",
+      "value": "|cffe4cfa3Исцеление|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1CO",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает раненому живому союзнику |cffffffff15|cffced4da ед. здоровья. Не действует на технику.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CO",
+      "field": "untip1",
+      "value": "|cffe4cfa3Исцеление|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1CO",
+      "field": "unubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает раненому живому союзнику |cffffffff15|cffced4da ед. здоровья. Не действует на технику.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CP",
+      "field": "name",
+      "value": "|cffe4cfa3Морозный доспех|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CP",
+      "field": "tip1",
+      "value": "|cffe4cfa3Морозный доспех|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1CP",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Укрывает союзника ледяным щитом на |cffffffff45|cffced4da сек., повышающим защиту на |cffffffff3|cffced4da ед. Ближние атаки врагов по защищённой цели замедляют их на |cffffffff3|cffced4da сек.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CP",
+      "field": "untip1",
+      "value": "|cffe4cfa3Морозный доспех|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1CP",
+      "field": "unubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Укрывает союзника ледяным щитом на |cffffffff45|cffced4da сек., повышающим защиту на |cffffffff3|cffced4da ед. Ближние атаки врагов по защищённой цели замедляют их на |cffffffff3|cffced4da сек.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CR",
+      "field": "name",
+      "value": "|cffe4cfa3Разрывающие удары|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CR",
+      "field": "tip1",
+      "value": "|cffe4cfa3Разрывающие удары|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CR",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки наносят на |cffffffff10%|cffced4da больше урона целям с тяжёлой бронёй.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CS",
+      "field": "name",
+      "value": "|cffe4cfa3Сильный удар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CS",
+      "field": "tip1",
+      "value": "|cffe4cfa3Сильный удар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CS",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт |cffffffff15%|cffced4da-й шанс при атаке нанести дополнительно |cffffffff25|cffced4da ед. урона и оглушить цель на |cffffffff2|cffced4da сек. (героев — на |cffffffff1|cffced4da сек.).|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CT",
+      "field": "name",
+      "value": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CT",
+      "field": "tip1",
+      "value": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CT",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Удары по наземным противникам передают |cffffffff13%|cffced4da урона соседним вражеским целям в радиусе |cffffffff150|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CV",
+      "field": "name",
+      "value": "|cffe4cfa3Кольцо льда|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CV",
+      "field": "tip1",
+      "value": "|cffe4cfa3Кольцо льда|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1CV",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает ледяную волну, наносящую |cffffffff100|cffced4da ед. урона цели и |cffffffff50|cffced4da ед. урона по области радиусом |cffffffff200|cffced4da, замедляя передвижение и атаку поражённых врагов на |cffffffff2|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CW",
+      "field": "name",
+      "value": "|cffe4cfa3Критический удар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CW",
+      "field": "tip1",
+      "value": "|cffe4cfa3Критический удар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CW",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт |cffffffff20%|cffced4da-й шанс при атаке нанести |cffffffff2|cffced4da-кратный урон.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1D6",
+      "field": "name",
+      "value": "|cffe4cfa3Сокрушение|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1D6",
+      "field": "tip1",
+      "value": "|cffe4cfa3Сокрушение|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1D6",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При каждой атаке даёт |cffffffff25%|cffced4da-й шанс нанести |cffffffff15|cffced4da ед. урона ближайшим наземным противникам в радиусе |cffffffff200|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1D6",
+      "field": "tip2",
+      "value": "|cffe4cfa3Усиленное сокрушение|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1D6",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При каждой атаке даёт |cffffffff25%|cffced4da-й шанс нанести |cffffffff60|cffced4da ед. урона ближайшим наземным противникам в радиусе |cffffffff350|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1D7",
+      "field": "name",
+      "value": "|cffe4cfa3Берсерк|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1D7",
+      "field": "tip1",
+      "value": "|cffe4cfa3Берсерк|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1D7",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da На |cffffffff12|cffced4da сек. повышает скорость атаки берсерка на |cffffffff50%|cffced4da, но увеличивает весь получаемый им урон на |cffffffff40%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1DP",
+      "field": "name",
+      "value": "|cffe4cfa3Невосприимчивость к магии|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1DP",
+      "field": "tip1",
+      "value": "|cffe4cfa3Невосприимчивость к магии|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1DP",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует полную невосприимчивость к враждебным заклинаниям и большинству магических воздействий.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1FF",
+      "field": "name",
+      "value": "|cffe4cfa3Морозное оружие|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1FF",
+      "field": "tip1",
+      "value": "|cffe4cfa3Морозное оружие|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1FF",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки покрывают цель льдом, снижая скорость её передвижения на |cffffffff20%|cffced4da, скорость атаки — на |cffffffff15%|cffced4da и нанося |cffffffff1|cffced4da ед. урона в секунду. Действует |cffffffff5|cffced4da сек. (героев — |cffffffff1|cffced4da сек.).|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1FU",
+      "field": "name",
+      "value": "|cffe4cfa3Муссон|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1FU",
+      "field": "tip1",
+      "value": "|cffe4cfa3Муссон|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1FU",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает грозовой фронт в область радиусом |cffffffff500|cffced4da на |cffffffff12|cffced4da сек., периодически поражающий противников ударами молний с уроном |cffffffff50|cffced4da ед.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1FV",
+      "field": "name",
+      "value": "|cffe4cfa3Цепная молния|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1FV",
+      "field": "tip1",
+      "value": "|cffe4cfa3Цепная молния|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1FV",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает молнию, наносящую |cffffffff120|cffced4da ед. урона выбранному противнику и рикошетящую до |cffffffff5|cffced4da раз. Каждый последующий скачок наносит на |cffffffff10%|cffced4da меньше урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1FX",
+      "field": "name",
+      "value": "|cffe4cfa3Реинкарнация|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1FX",
+      "field": "tip1",
+      "value": "|cffe4cfa3Реинкарнация|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1FX",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da После гибели Мам'тот возрождается на месте своей смерти через |cffffffff5|cffced4da сек. с полным запасом здоровья и маны.|n|nВремя восстановления: |cffffffff240|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1FY",
+      "field": "name",
+      "value": "|cffe4cfa3Ярость|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1FY",
+      "field": "tip1",
+      "value": "|cffe4cfa3Ярость|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1FY",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вводит Рунока в состояние ярости, увеличивая скорость его атаки на |cffffffff50%|cffced4da на |cffffffff20|cffced4da сек. без увеличения получаемого урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1OV",
+      "field": "name",
+      "value": "|cffe4cfa3Воскрешение падших|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1OV",
+      "field": "tip1",
+      "value": "|cffe4cfa3Воскрешение падших|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1OV",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает из трупа союзного воина скелета-восставшего на |cffffffff45|cffced4da сек. Способность действует только на трупы союзников.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1OV",
+      "field": "untip1",
+      "value": "|cffe4cfa3Воскрешение падших|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1OV",
+      "field": "unubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает из трупа союзного воина скелета-восставшего на |cffffffff45|cffced4da сек. Способность действует только на трупы союзников.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1OV",
+      "field": "tip2",
+      "value": "|cffe4cfa3Воскрешение падших|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1OV",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает из трупа союзного воина скелета-восставшего на |cffffffff45|cffced4da сек. Способность действует только на трупы союзников.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1OV",
+      "field": "untip2",
+      "value": "|cffe4cfa3Воскрешение падших|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1OV",
+      "field": "unubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает из трупа союзного воина скелета-восставшего на |cffffffff45|cffced4da сек. Способность действует только на трупы союзников.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1OW",
+      "field": "name",
+      "value": "|cffe4cfa3Угасание жизни|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1OW",
+      "field": "tip1",
+      "value": "|cffe4cfa3Угасание жизни|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1OW",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Проклинает противника на |cffffffff15|cffced4da сек., нанося ему |cffffffff10|cffced4da ед. урона каждую секунду (всего |cffffffff150|cffced4da ед.).|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1OW",
+      "field": "untip1",
+      "value": "|cffe4cfa3Угасание жизни|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1OW",
+      "field": "unubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Проклинает противника на |cffffffff15|cffced4da сек., нанося ему |cffffffff10|cffced4da ед. урона каждую секунду (всего |cffffffff150|cffced4da ед.).|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1P4",
+      "field": "name",
+      "value": "|cffe4cfa3Похищение жизни|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1P4",
+      "field": "tip1",
+      "value": "|cffe4cfa3Похищение жизни|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1P4",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вытягивает у выбранного противника |cffffffff45|cffced4da ед. здоровья в секунду и передаёт его заклинателю. Действует до |cffffffff8|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1P5",
+      "field": "name",
+      "value": "|cffe4cfa3Призыв змеи|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1P5",
+      "field": "tip1",
+      "value": "|cffe4cfa3Призыв змеи|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1P5",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает на |cffffffff70|cffced4da сек. Ледяную Змею с дальней атакой, замораживающей цели.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1P6",
+      "field": "name",
+      "value": "|cffe4cfa3Проклятый шепот|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1P6",
+      "field": "tip1",
+      "value": "|cffe4cfa3Проклятый шепот|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1P6",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Аура тёмной магии снижает защиту всех ближайших противников в радиусе |cffffffff300|cffced4da на |cffffffff2|cffced4da ед.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1P9",
+      "field": "name",
+      "value": "|cffe4cfa3Аура Рунока|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1P9",
+      "field": "tip1",
+      "value": "|cffe4cfa3Аура Рунока|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1P9",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мощь духа Рунока повышает защиту союзных войск в радиусе |cffffffff3000|cffced4da на |cffffffff4|cffced4da ед.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1PA",
+      "field": "name",
+      "value": "|cffe4cfa3Аура Акали|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1PA",
+      "field": "tip1",
+      "value": "|cffe4cfa3Аура Акали|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1PA",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Аура хищного Лоа увеличивает урон от любых атак союзных войск в радиусе |cffffffff3000|cffced4da на |cffffffff15%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1PB",
+      "field": "name",
+      "value": "|cffe4cfa3Дикий натиск|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1PB",
+      "field": "tip1",
+      "value": "|cffe4cfa3Дикий натиск|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1PB",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает стадо разъярённых мамонтов на |cffffffff30|cffced4da сек., бегущих вперёд и взрывающихся при столкновении с врагами, нанося по |cffffffff60|cffced4da ед. урона каждому.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1PC",
+      "field": "name",
+      "value": "|cffe4cfa3Раздвоенная молния|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1PC",
+      "field": "tip1",
+      "value": "|cffe4cfa3Раздвоенная молния|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1PC",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает веер молний в секторе перед собой, поражающий до |cffffffff10|cffced4da противников и наносящий каждому |cffffffff500|cffced4da ед. урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1PI",
+      "field": "name",
+      "value": "|cffe4cfa3Пожирание магии|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1PI",
+      "field": "tip1",
+      "value": "|cffe4cfa3Пожирание магии|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1PI",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поглощает все магические эффекты с юнитов в радиусе |cffffffff200|cffced4da, восстанавливая голему |cffffffff50|cffced4da ед. здоровья и |cffffffff75|cffced4da ед. маны за каждый снятый эффект, а также наносит |cffffffff160|cffced4da ед. урона призванным существам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1PJ",
+      "field": "name",
+      "value": "|cffe4cfa3Магический обстрел|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1PJ",
+      "field": "tip1",
+      "value": "|cffe4cfa3Магический обстрел|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1PJ",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на указанную область радиусом |cffffffff350|cffced4da залп тёмных снарядов, наносящий противникам |cffffffff100|cffced4da ед. урона и оглушающий их.|r"
+    },
+    {
+      "type": "ability",
+      "id": "S00F",
+      "field": "name",
+      "value": "|cffe4cfa3Аура Мам'Тота|r"
+    },
+    {
+      "type": "ability",
+      "id": "S00F",
+      "field": "tip1",
+      "value": "|cffe4cfa3Аура Мам'Тота|r"
+    },
+    {
+      "type": "ability",
+      "id": "S00F",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Величественная аура Мам'тота увеличивает скорость передвижения на |cffffffff20%|cffced4da и скорость атаки на |cffffffff20%|cffced4da всех союзных войск в радиусе |cffffffff3000|cffced4da.|r"
+    }
+  ]
+}

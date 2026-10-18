@@ -1,0 +1,378 @@
+{
+  "scope": "Ночные эльфы (Night Elf): категория 2 — Юниты (19 юнитов)",
+  "units_count": 19,
+  "variants": [
+    "SD"
+  ],
+  "units": [
+    {
+      "id": "ewsp",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27042,
+          "after": "|cffe4cfa3Огонёк|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27043,
+          "after": "|cffe4cfa3Огонёк|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31605,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий Ночных эльфов. Бестелесный дух, собирающий древесину без вырубки леса, выращивающий здания и способный развеять магию ценой своей жизни.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСамопожертвование|cffced4da: взрывается, сжигая ману врагов и нанося урон призванным существам.|n- |cffa9c7deОбновление|cffced4da: восстанавливает здоровье повреждённым древам.|n- |cffa9c7deСбор древесины|cffced4da: добывает дерево, не уничтожая деревья.|n- |cffa9c7deНебольшой скачок|cffced4da: мгновенный телепорт на короткое расстояние.|n|nНе атакует.|r"
+        }
+      ]
+    },
+    {
+      "id": "earc",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 1252,
+          "after": "|cffe4cfa3Лучница|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 1253,
+          "after": "|cffe4cfa3Лучница|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 1255,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый меткий стрелок дальнего боя калдорай.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСлиться с тенью|cffced4da: становится невидимой ночью в неподвижном состоянии.|n- |cffa9c7deЗащита Элуны|cffced4da: снижает урон от атак дальнего боя и заклинаний.|n- |cffa9c7deСесть на гиппогрифа|cffced4da: объединяется с гиппогрифом в наездницу.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "esen",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 217,
+          "after": "|cffe4cfa3Охотница|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 219,
+          "after": "|cffe4cfa3Охотница|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 1250,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Быстрый мобильный воин авангарда Ночных эльфов, верхом на свирепой пантере.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЛунные глефы|cffced4da: глефа рикошетит по дополнительным целям.|n- |cffa9c7deЧасовой|cffced4da: сажает сову-разведчика на дерево для постоянного обзора.|n- |cffa9c7deСлиться с тенью|cffced4da: скрывается ночью в неподвижности.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "ebal",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 1424,
+          "after": "|cffe4cfa3Глефомет|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 6114,
+          "after": "|cffe4cfa3Глефомет|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33517,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Дальнобойное осадное орудие Ночных эльфов, сокрушающее укрепления и скопления врагов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПронзающие лезвия|cffced4da: пробивает строй противников и позволяет срубать деревья выстрелом.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "e00I",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27293,
+          "after": "|cffe4cfa3Лунный воин|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27294,
+          "after": "|cffe4cfa3Лунный воин|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31703,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Ловкий эльфийский боец ближнего боя с парными глефами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТанец полумесяца|cffced4da: шанс |cffffffff15%|cffced4da при атаке совершить стремительный перекат за спину цели, нанося |cffffffff50%|cffced4da базового урона всем врагам на пути.|n- |cffa9c7deУдлинённые клинки|cffced4da: увеличенный радиус поражения глефами.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "e00J",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27295,
+          "after": "|cffe4cfa3Дух леса|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27296,
+          "after": "|cffe4cfa3Дух леса|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31704,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Первобытный дух чащобы, призванный охранять священные рощи.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deОпутывание|cffced4da: атаки опутывают цель живыми лозами, замедляя передвижение и скорость атаки.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n05H",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27565,
+          "after": "|cffe4cfa3Фурболг-следопыт|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27566,
+          "after": "|cffe4cfa3Фурболг-следопыт|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31905,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Мощный союзный воин ближнего боя из племени фурболгов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолшебный огонь|cffced4da: снижает броню цели и даёт обзор на ней.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "edot",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27055,
+          "after": "|cffe4cfa3Друид-ворон|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27056,
+          "after": "|cffe4cfa3Друид-ворон|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31599,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Мобильный друид стихии ветра и воздуха.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолшебный огонь|cffced4da: ослабляет броню противника и раскрывает его местоположение.|n- |cffa9c7deСмерч|cffced4da: поднимает вражеского воина в воздух, выводя из боя.|n- |cffa9c7deОблик буревестника|cffced4da: превращается в летучего ворона для разведки и воздушного боя.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "efdr",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27057,
+          "after": "|cffe4cfa3Чудесный дракончик|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27058,
+          "after": "|cffe4cfa3Чудесный дракончик|r (|cffffffffQ|r)"
+        }
+      ]
+    },
+    {
+      "id": "e00H",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27291,
+          "after": "|cffe4cfa3Древний Гвардеец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27292,
+          "after": "|cffe4cfa3Древний Гвардеец|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31702,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжелый элитный воин-маг ближнего боя, закаленный веками тренировок.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАннулирование|cffced4da: блокирует входящие вражеские заклинания.|n- |cffa9c7deЗачарованная глефа|cffced4da: заряжает оружие магической энергией.|n- |cffa9c7deЗащита|cffced4da: отражает стрелковые атаки.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n064",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 5750,
+          "after": "|cffe4cfa3Фурболг-воитель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 5765,
+          "after": "|cffe4cfa3Фурболг-воитель|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33189,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Свирепый вождь фурболгов с типом атаки Хаос.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКомандирская аура|cffced4da: повышает урон союзников поблизости.|n- |cffa9c7deГромовая поступь|cffced4da: сотрясает землю, нанося урон и замедляя врагов.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "edry",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27050,
+          "after": "|cffe4cfa3Дриада|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27049,
+          "after": "|cffe4cfa3Дриада|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31596,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Быстрый стрелок дальнего боя и главный антимаг калдорай.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗамедляющий яд|cffced4da: каждая атака наносит периодический урон и замедляет скорость цели.|n- |cffa9c7deРассеяние чар|cffced4da: снимает отрицательные эффекты с союзников и положительные с врагов.|n- |cffa9c7deНевосприимчивость к магии|cffced4da: полный иммунитет к вражеским заклинаниям.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "edoc",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27051,
+          "after": "|cffe4cfa3Друид-хищник|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27052,
+          "after": "|cffe4cfa3Друид-хищник|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31597,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Могучий друид-целитель, способный трансформироваться в свирепого боевого медведя.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРёв|cffced4da: вдохновляет союзников, увеличивая их урон на |cffc8e08725%|cffced4da.|n- |cffa9c7deОмоложение|cffced4da: восстанавливает здоровье цели в течение времени.|n- |cffa9c7deОблик медведя|cffced4da: превращается в грозного бойца ближнего боя с высоким запасом здоровья.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "emtg",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27053,
+          "after": "|cffe4cfa3Горный великан|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27054,
+          "after": "|cffe4cfa3Горный великан|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31598,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Огромный каменный исполин, способный выдерживать колоссальный урон.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПровокация|cffced4da: заставляет врагов атаковать великана.|n- |cffa9c7deБоевая дубинка|cffced4da: вырывает дерево и атакует осадным уроном с эффектом рассечения.|n- |cffa9c7deУстойчивая кожа|cffced4da: снижает урон от магии и сокращает длительность заклинаний.|n- |cffa9c7deКаменная кожа|cffced4da: снижает входящий урон от атак.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n05D",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27194,
+          "after": "|cffe4cfa3Друид-сова|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27627,
+          "after": "|cffe4cfa3Друид-сова|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31904,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Мудрый астральный друид, владеющий силами Солнца и Луны.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАстральная фаза|cffced4da: переключает стойку между Солнцем (атаки поджигают цели, заклинание «Солнечный ожог») и Луной (атаки восстанавливают ману раненому союзнику, заклинание «Звёздный луч»).|n- |cffa9c7deОблик совуха|cffced4da: трансформация в яростного совуха-берсерка.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n05G",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27418,
+          "after": "|cffe4cfa3Совух-берсерк|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 32922,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Свирепая боевая форма друида-совы с типом атаки Хаос.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБешенство совуха|cffced4da: увеличивает скорость атаки и передвижения.|n- |cffa9c7deАстральная фаза|cffced4da: использование астральных заклинаний Солнца и Луны.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0D9",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10911,
+          "after": "|cffe4cfa3Транспорт|r"
+        }
+      ]
+    },
+    {
+      "id": "h0DB",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 5520,
+          "after": "|cffe4cfa3Фрегат|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10898,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Боевой парусно-гребной корабль прибрежного флота.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0DA",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10931,
+          "after": "|cffe4cfa3Линкор|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6929,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый флагманский линейный корабль дальнего боя.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    }
+  ]
+}

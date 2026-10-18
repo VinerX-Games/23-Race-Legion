@@ -1,0 +1,338 @@
+{
+  "scope": "Стромгард (Stromgard): партия 2 — модульные строения, мастерская и верфь (6 объектов, 18 полей)",
+  "building_ids": [
+    "h0HH",
+    "h0H4",
+    "h0HI",
+    "h0HU",
+    "h0HF",
+    "h011"
+  ],
+  "total_buildings": 6,
+  "total_fields": 18,
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "buildings": [
+    {
+      "id": "h0HH",
+      "wts": {
+        "name": 21288,
+        "tip": 21289,
+        "ubertip": 21290
+      },
+      "hotkey": "W",
+      "name": "|cffe4cfa3Место постройки|r",
+      "tip": "|cffe4cfa3Место постройки|r (|cffffffffW|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Строительный фундамент Стромгарда. Позволяет возвести одно из специализированных городских строений.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deКазармы|cffced4da: подготовка пехоты, стрелков и рыцарей.|n- |cffa9c7deМагическая башня|cffced4da: подготовка жрецов и заклинателей.|n- |cffa9c7deРынок|cffced4da: найм оруженосцев и увеличение дохода.|r"
+    },
+    {
+      "id": "h0H4",
+      "wts": {
+        "name": 20884,
+        "tip": 21273,
+        "ubertip": 21063
+      },
+      "hotkey": "Z",
+      "name": "|cffe4cfa3Казармы|r",
+      "tip": "|cffe4cfa3Казармы|r (|cffffffffZ|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Военный лагерь подготовки наземных войск Стромгарда.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОполченец|cffced4da: призывной боец ближнего боя.|n- |cffa9c7deПехотинец|cffced4da: базовый воин ближнего боя.|n- |cffa9c7deЗащитник|cffced4da: тяжёлый пехотинец со щитом.|n- |cffa9c7deАрбалетчик|cffced4da: стрелок дальнего боя.|n- |cffa9c7deРыцарь|cffced4da: тяжёлый конный всадник.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffe4cfa3Защита|cffced4da: даёт пехотинцам способность снижения урона щитом.|n- |cffe4cfa3Тренировки защитников|cffced4da: повышает характеристики защитников.|n- |cffe4cfa3Дрессировка животных|cffced4da: увеличивает здоровье и скорость рыцарей.|n|n|cffa6afb8Перестраивается в:|cffced4da|n- |cffa9c7deМагическая башня|cffced4da.|n- |cffa9c7deРынок|cffced4da.|r"
+    },
+    {
+      "id": "h0HI",
+      "wts": {
+        "name": 21291,
+        "tip": 21292,
+        "ubertip": 21077
+      },
+      "hotkey": "X",
+      "name": "|cffe4cfa3Магическая башня|r",
+      "tip": "|cffe4cfa3Магическая башня|r (|cffffffffX|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Башня чародеев Стромгарда. Подготавливает заклинателей и исследует улучшения магических войск.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЖрец|cffced4da: заклинатель поддержки, исцеления и рассеивания чар.|n- |cffa9c7deЗаклинатель|cffced4da: боевой маг атакующей и вспомогательной магии.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffe4cfa3Посвящение жрецов|cffced4da: увеличивает запас маны, здоровье и скорость восстановления маны жрецов.|n- |cffe4cfa3Посвящение заклинателей|cffced4da: увеличивает запас маны, здоровье и скорость восстановления маны заклинателей.|n- |cffe4cfa3Зачарованные мечи|cffced4da: зачаровывает клинки пехотинцев магической силой.|n|n|cffa6afb8Перестраивается в:|cffced4da|n- |cffa9c7deКазармы|cffced4da.|n- |cffa9c7deРынок|cffced4da.|r"
+    },
+    {
+      "id": "h0HU",
+      "wts": {
+        "name": 20079,
+        "tip": 21309,
+        "ubertip": 42700
+      },
+      "hotkey": "C",
+      "name": "|cffe4cfa3Рынок|r",
+      "tip": "|cffe4cfa3Рынок|r (|cffffffffC|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Торговый и хозяйственный квартал. Увеличивает базовый доход золота на |cffc8e08775|cffced4da за выплату и нанимает оруженосцев.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОруженосец|cffced4da: вспомогательный воин королевства.|n|n|cffa6afb8Перестраивается в:|cffced4da|n- |cffa9c7deКазармы|cffced4da.|n- |cffa9c7deМагическая башня|cffced4da.|n|nИтоговый доход зависит от текущих модификаторов экономики.|r"
+    },
+    {
+      "id": "h0HF",
+      "wts": {
+        "name": 21284,
+        "tip": 42699,
+        "ubertip": 20487
+      },
+      "hotkey": "F",
+      "name": "|cffe4cfa3Мастерская|r",
+      "tip": "|cffe4cfa3Мастерская|r (|cffffffffF|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Осадная мастерская Стромгарда. Производит боевую технику, осадные орудия и нанимает стрелков-следопытов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОхотник на троллей|cffced4da: дальнобойный стрелок с ружьём.|n- |cffa9c7deКатапульта|cffced4da: осадное орудие дальнего боя.|n- |cffa9c7deБоевой танк|cffced4da: тяжёлая штурмовая бронемашина.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffe4cfa3Шрапнель|cffced4da: увеличивает урон охотников на троллей.|n- |cffe4cfa3Длинноствольные мушкеты|cffced4da: увеличивает дальность стрельбы стрелков.|r"
+    },
+    {
+      "id": "h011",
+      "wts": {
+        "name": 368,
+        "tip": 369,
+        "ubertip": 370
+      },
+      "hotkey": "C",
+      "name": "|cffe4cfa3Верфь|r",
+      "tip": "|cffe4cfa3Верфь|r (|cffffffffC|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Корабельная верфь. Строит суда и исследует улучшения военного и транспортного флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: вместительное морское судно для перевозки сухопутных войск.|n- |cffa9c7deФрегат|cffced4da: быстроходный боевой корабль.|n- |cffa9c7deЛинкор|cffced4da: тяжёлый артиллерийский линейный корабль.|n|n|cffa6afb8Исследования:|cffced4da|n- Корабельные орудия, обшивка, паруса и оснастка флота.|r"
+    }
+  ],
+  "evidence": [
+    "h0HH (Место постройки): upgrade=h0HU,h0H4,h0HI, hotkey=W",
+    "h0H4 (Казармы): trains=h0F4,h0GT,h0GU,h0GS,h0GV, researches=R0DN,R0DJ,R0DG, upgrade=h0HI,h0HU, hotkey=Z",
+    "h0HI (Магическая башня): trains=h0GX,h0GW, researches=R0DH,R0DI,R0DK, upgrade=h0H4,h0HU, requires=h0H0, hotkey=X",
+    "h0HU (Рынок): trains=h0HD, upgrade=h0HI,h0H4, requires=h0H0, fmade=75 (+75 базового дохода), hotkey=C",
+    "h0HF (Мастерская): trains=h0L3,o03X,h0GY, researches=R0H2,R0H1, requires=h0H0,h0H6, hotkey=F",
+    "h011 (Верфь): trains=h00X,h00Y,h00Z, researches=R005,R006,R007,R002,R003, hotkey=C"
+  ],
+  "strings": [
+    {
+      "rawcode": "h0HH",
+      "field": "name",
+      "wts_id": 21288,
+      "before": "|c00ff8e78Место постройки|r",
+      "after": "|cffe4cfa3Место постройки|r"
+    },
+    {
+      "rawcode": "h0HH",
+      "field": "tip",
+      "wts_id": 21289,
+      "before": "Возвести |c00ff8e78Место для построки|r",
+      "after": "|cffe4cfa3Место постройки|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "h0HH",
+      "field": "ubertip",
+      "wts_id": 21290,
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r|n|nЗдание для подготовки базовых строений |c00ff8e78Стромгарда|r",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Строительный фундамент Стромгарда. Позволяет возвести одно из специализированных городских строений.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deКазармы|cffced4da: подготовка пехоты, стрелков и рыцарей.|n- |cffa9c7deМагическая башня|cffced4da: подготовка жрецов и заклинателей.|n- |cffa9c7deРынок|cffced4da: найм оруженосцев и увеличение дохода.|r"
+    },
+    {
+      "rawcode": "h0H4",
+      "field": "name",
+      "wts_id": 20884,
+      "before": "|c00ff8e78Казармы|r",
+      "after": "|cffe4cfa3Казармы|r"
+    },
+    {
+      "rawcode": "h0H4",
+      "field": "tip",
+      "wts_id": 21273,
+      "before": "Возвести |c00ff8e78Казармы|r",
+      "after": "|cffe4cfa3Казармы|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "h0H4",
+      "field": "ubertip",
+      "wts_id": 21063,
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nЗдание для подготовки базовых войск. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Военный лагерь подготовки наземных войск Стромгарда.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОполченец|cffced4da: призывной боец ближнего боя.|n- |cffa9c7deПехотинец|cffced4da: базовый воин ближнего боя.|n- |cffa9c7deЗащитник|cffced4da: тяжёлый пехотинец со щитом.|n- |cffa9c7deАрбалетчик|cffced4da: стрелок дальнего боя.|n- |cffa9c7deРыцарь|cffced4da: тяжёлый конный всадник.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffe4cfa3Защита|cffced4da: даёт пехотинцам способность снижения урона щитом.|n- |cffe4cfa3Тренировки защитников|cffced4da: повышает характеристики защитников.|n- |cffe4cfa3Дрессировка животных|cffced4da: увеличивает здоровье и скорость рыцарей.|n|n|cffa6afb8Перестраивается в:|cffced4da|n- |cffa9c7deМагическая башня|cffced4da.|n- |cffa9c7deРынок|cffced4da.|r"
+    },
+    {
+      "rawcode": "h0HI",
+      "field": "name",
+      "wts_id": 21291,
+      "before": "|c00ff8e78Магическая башня|r",
+      "after": "|cffe4cfa3Магическая башня|r"
+    },
+    {
+      "rawcode": "h0HI",
+      "field": "tip",
+      "wts_id": 21292,
+      "before": "Возвести |c00ff8e78Магическую башню|r",
+      "after": "|cffe4cfa3Магическая башня|r (|cffffffffX|r)"
+    },
+    {
+      "rawcode": "h0HI",
+      "field": "ubertip",
+      "wts_id": 21077,
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nЗдание для подготовки Магов поддержки, позволяет исследовать улучшения",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Башня чародеев Стромгарда. Подготавливает заклинателей и исследует улучшения магических войск.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЖрец|cffced4da: заклинатель поддержки, исцеления и рассеивания чар.|n- |cffa9c7deЗаклинатель|cffced4da: боевой маг атакующей и вспомогательной магии.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffe4cfa3Посвящение жрецов|cffced4da: увеличивает запас маны, здоровье и скорость восстановления маны жрецов.|n- |cffe4cfa3Посвящение заклинателей|cffced4da: увеличивает запас маны, здоровье и скорость восстановления маны заклинателей.|n- |cffe4cfa3Зачарованные мечи|cffced4da: зачаровывает клинки пехотинцев магической силой.|n|n|cffa6afb8Перестраивается в:|cffced4da|n- |cffa9c7deКазармы|cffced4da.|n- |cffa9c7deРынок|cffced4da.|r"
+    },
+    {
+      "rawcode": "h0HU",
+      "field": "name",
+      "wts_id": 20079,
+      "before": "|c00ff8e78Рынок|r",
+      "after": "|cffe4cfa3Рынок|r"
+    },
+    {
+      "rawcode": "h0HU",
+      "field": "tip",
+      "wts_id": 21309,
+      "before": "Построить |c00ff8e78Рынок|r",
+      "after": "|cffe4cfa3Рынок|r (|cffffffffC|r)"
+    },
+    {
+      "rawcode": "h0HU",
+      "field": "ubertip",
+      "wts_id": 42700,
+      "before": "|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.\n\n|cffffff00Приносит 75 инкома|r",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Торговый и хозяйственный квартал. Увеличивает базовый доход золота на |cffc8e08775|cffced4da за выплату и нанимает оруженосцев.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОруженосец|cffced4da: вспомогательный воин королевства.|n|n|cffa6afb8Перестраивается в:|cffced4da|n- |cffa9c7deКазармы|cffced4da.|n- |cffa9c7deМагическая башня|cffced4da.|n|nИтоговый доход зависит от текущих модификаторов экономики.|r"
+    },
+    {
+      "rawcode": "h0HF",
+      "field": "name",
+      "wts_id": 21284,
+      "before": "|c00ff8e78Мастерская|r",
+      "after": "|cffe4cfa3Мастерская|r"
+    },
+    {
+      "rawcode": "h0HF",
+      "field": "tip",
+      "wts_id": 42699,
+      "before": "Построить |c00ff8e78Мастерскую|r",
+      "after": "|cffe4cfa3Мастерская|r (|cffffffffF|r)"
+    },
+    {
+      "rawcode": "h0HF",
+      "field": "ubertip",
+      "wts_id": 20487,
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nПозволяет нанимать осадные машины , и их улучшение.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Осадная мастерская Стромгарда. Производит боевую технику, осадные орудия и нанимает стрелков-следопытов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОхотник на троллей|cffced4da: дальнобойный стрелок с ружьём.|n- |cffa9c7deКатапульта|cffced4da: осадное орудие дальнего боя.|n- |cffa9c7deБоевой танк|cffced4da: тяжёлая штурмовая бронемашина.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffe4cfa3Шрапнель|cffced4da: увеличивает урон охотников на троллей.|n- |cffe4cfa3Длинноствольные мушкеты|cffced4da: увеличивает дальность стрельбы стрелков.|r"
+    },
+    {
+      "rawcode": "h011",
+      "field": "name",
+      "wts_id": 368,
+      "before": "Верфь",
+      "after": "|cffe4cfa3Верфь|r"
+    },
+    {
+      "rawcode": "h011",
+      "field": "tip",
+      "wts_id": 369,
+      "before": "Построить верфь",
+      "after": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+    },
+    {
+      "rawcode": "h011",
+      "field": "ubertip",
+      "wts_id": 370,
+      "before": "Строит транспорты, фрегаты и линкоры.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Корабельная верфь. Строит суда и исследует улучшения военного и транспортного флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: вместительное морское судно для перевозки сухопутных войск.|n- |cffa9c7deФрегат|cffced4da: быстроходный боевой корабль.|n- |cffa9c7deЛинкор|cffced4da: тяжёлый артиллерийский линейный корабль.|n|n|cffa6afb8Исследования:|cffced4da|n- Корабельные орудия, обшивка, паруса и оснастка флота.|r"
+    }
+  ],
+  "consumers": [
+    {
+      "file": "war3map.w3u",
+      "id": "h0HH",
+      "field": "name",
+      "wts_id": 21288
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0HH",
+      "field": "tip",
+      "wts_id": 21289
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0HH",
+      "field": "ubertip",
+      "wts_id": 21290
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H4",
+      "field": "name",
+      "wts_id": 20884
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H4",
+      "field": "tip",
+      "wts_id": 21273
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H4",
+      "field": "ubertip",
+      "wts_id": 21063
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0HI",
+      "field": "name",
+      "wts_id": 21291
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0HI",
+      "field": "tip",
+      "wts_id": 21292
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0HI",
+      "field": "ubertip",
+      "wts_id": 21077
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0HU",
+      "field": "name",
+      "wts_id": 20079
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0HU",
+      "field": "tip",
+      "wts_id": 21309
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0HU",
+      "field": "ubertip",
+      "wts_id": 42700
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0HF",
+      "field": "name",
+      "wts_id": 21284
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0HF",
+      "field": "tip",
+      "wts_id": 42699
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0HF",
+      "field": "ubertip",
+      "wts_id": 20487
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h011",
+      "field": "name",
+      "wts_id": 368
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h011",
+      "field": "tip",
+      "wts_id": 369
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h011",
+      "field": "ubertip",
+      "wts_id": 370
+    }
+  ],
+  "in_game_checked": false
+}

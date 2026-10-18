@@ -1,0 +1,131 @@
+{
+  "race": "Гилнеас (Gilneas / Worgens)",
+  "race_id": 24,
+  "selection_ability": "A121",
+  "objects_audit": {
+    "buildings": {
+      "count": 11,
+      "ids": [
+        "h0IJ",
+        "h0IK",
+        "h0IL",
+        "h0IM",
+        "h0IN",
+        "h0IO",
+        "h0IP",
+        "h0IQ",
+        "h0IR",
+        "h0IS",
+        "h0JT"
+      ],
+      "town_halls": {
+        "tier1": {
+          "id": "h0IJ",
+          "name": "Ратуша",
+          "food": 50
+        },
+        "tier2": {
+          "id": "h0IK",
+          "name": "Форт",
+          "food": 100
+        },
+        "tier3": {
+          "id": "h0IL",
+          "name": "Замок",
+          "food": 150
+        }
+      },
+      "farm": {
+        "id": "h0IM",
+        "name": "Ферма",
+        "food": 40
+      }
+    },
+    "units": {
+      "count": 11,
+      "ids": [
+        "h0IT",
+        "h0IU",
+        "h0IV",
+        "h0IW",
+        "h0IX",
+        "h0IY",
+        "h0IZ",
+        "h0J0",
+        "h0J1",
+        "h0NA",
+        "o02T"
+      ],
+      "worker": "h0IT (Постройщик)",
+      "combat_units": [
+        "h0IU (Пехотинец волк)",
+        "h0IV (Стрелок)",
+        "h0IW (Рыцарь волк)",
+        "h0IX (Ворген друид)",
+        "h0IY (Пехотинец человек)",
+        "h0IZ (Рыцарь человек)",
+        "h0J0 (Ворген маг)",
+        "h0J1 (Полудикий ворген)",
+        "h0NA (Топорометатель)",
+        "o02T (Катапульта)"
+      ]
+    },
+    "heroes": {
+      "count": 4,
+      "ids": [
+        "H0J2",
+        "H0J6",
+        "H0J7",
+        "H0J8"
+      ],
+      "names": {
+        "H0J2": "Верховный охотник (Бузан Охотник — Сила, ближний бой, Обычный герой)",
+        "H0J6": "Лорд друид (Друид — Интеллект, ближний бой, Обычный герой)",
+        "H0J7": "Генерал Гилнеаса (Генерал — Сила, ближний бой, Обычный герой)",
+        "H0J8": "Полубог (Голдринн — Сила, ближний бой, Легендарный герой)"
+      }
+    },
+    "abilities": {
+      "count": 33,
+      "total_wts_updated": 398
+    },
+    "researches": {
+      "count": 14,
+      "markers_list": {
+        "R0FX": "Маркер расы Гилнеас"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items or inventory artifacts found in war3map.w3t for Gilneas."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "No race-specific floating messages or game UI strings found in war3map.wts for Gilneas."
+  },
+  "buffs_audit": {
+    "custom_buffs": [
+      "B06A",
+      "B06B",
+      "B06C",
+      "B06D"
+    ],
+    "standard_buffs_used": [
+      "BEar",
+      "BHab",
+      "BHtc",
+      "BNms",
+      "BOsf",
+      "BPSE",
+      "BUav",
+      "BUcs",
+      "Bblo",
+      "Broa",
+      "Brpl"
+    ],
+    "status": "Standardized 4 custom buffs with secondary color labels and clean descriptions."
+  },
+  "total_wts_updates": 398,
+  "total_checks": 206
+}

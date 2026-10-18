@@ -1,0 +1,296 @@
+{
+  "abilities": [
+    {
+      "id": "A01N",
+      "name": "|cffe4cfa3Пламя феникса|r",
+      "hotkey": "E",
+      "values": {
+        "name": "|cffe4cfa3Пламя феникса|r",
+        "tip1": "|cffe4cfa3Пламя феникса|r (|cffffffffE|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает перед собой огненного феникса, наносящего по |cffffffff100|cffced4da ед. урона всем противникам на своём пути. Максимальный суммарный урон: |cffffffff300|cffced4da ед.|r"
+      }
+    },
+    {
+      "id": "A01R",
+      "name": "|cffe4cfa3Аура мороза|r",
+      "hotkey": null,
+      "values": {
+        "name": "|cffe4cfa3Аура мороза|r",
+        "tip1": "|cffe4cfa3Аура мороза|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Замедляет скорость передвижения противников поблизости на |cffffffff20%|cffced4da и скорость их атаки на |cffffffff5%|cffced4da в радиусе |cffffffff150|cffced4da.|r"
+      }
+    },
+    {
+      "id": "A01S",
+      "name": "|cffe4cfa3Кольцо огня|r",
+      "hotkey": null,
+      "values": {
+        "name": "|cffe4cfa3Кольцо огня|r",
+        "tip1": "|cffe4cfa3Кольцо огня|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Непрерывно обжигает противников вокруг себя, нанося |cffffffff6|cffced4da ед. урона в секунду в радиусе |cffffffff220|cffced4da.|r"
+      }
+    },
+    {
+      "id": "A0CE",
+      "name": "|cffe4cfa3Ледяной доспех|r",
+      "hotkey": "E",
+      "values": {
+        "name": "|cffe4cfa3Ледяной доспех|r",
+        "tip1": "|cffe4cfa3Ледяной доспех|r (|cffffffffE|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Укрывает союзника ледяным щитом на |cffffffff45|cffced4da сек., повышающим броню на |cffffffff2|cffced4da ед. и замедляющим атакующих его в ближнем бою противников на |cffffffff3|cffced4da сек.|r"
+      }
+    },
+    {
+      "id": "A0I3",
+      "name": "|cffe4cfa3Скачок|r",
+      "hotkey": "C",
+      "values": {
+        "name": "|cffe4cfa3Скачок|r",
+        "tip1": "|cffe4cfa3Скачок|r (|cffffffffC|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на расстояние до |cffffffff500|cffced4da ед. Время восстановления: |cffffffff40|cffced4da сек.|r"
+      }
+    },
+    {
+      "id": "A0OZ",
+      "name": "|cffe4cfa3Поджог|r",
+      "hotkey": null,
+      "values": {
+        "name": "|cffe4cfa3Поджог|r",
+        "tip1": "|cffe4cfa3Поджог|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Позволяет башне атаковать до |cffffffff9|cffced4da противников одновременно в радиусе |cffffffff500|cffced4da, нанося по |cffffffff25|cffced4da ед. урона каждой цели каждые |cffffffff2|cffced4da сек.|r"
+      }
+    },
+    {
+      "id": "A0PG",
+      "name": "|cffe4cfa3Громовой удар|r",
+      "hotkey": "Q",
+      "values": {
+        "name": "|cffe4cfa3Громовой удар|r",
+        "tip1": "|cffe4cfa3Громовой удар|r (|cffffffffQ|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сотрясает землю мощным ударом, нанося |cffffffff70|cffced4da ед. урона всем противникам в радиусе |cffffffff400|cffced4da.|r"
+      }
+    },
+    {
+      "id": "A0PH",
+      "name": "|cffe4cfa3Поджог|r",
+      "hotkey": null,
+      "values": {
+        "name": "|cffe4cfa3Поджог|r",
+        "tip1": "|cffe4cfa3Поджог|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждая атака поджигает цель, нанося |cffffffff2|cffced4da ед. урона в секунду в течение |cffffffff5|cffced4da сек.|r"
+      }
+    },
+    {
+      "id": "A0Q8",
+      "name": "|cffe4cfa3Сожжение доспехов|r",
+      "hotkey": "Q",
+      "values": {
+        "name": "|cffe4cfa3Сожжение доспехов|r",
+        "tip1": "|cffe4cfa3Сожжение доспехов|r (|cffffffffQ|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сжигает доспехи цели на |cffffffff60|cffced4da сек., снижая её урон на |cffffffff10%|cffced4da и броню на |cffffffff5|cffced4da ед.|r"
+      }
+    },
+    {
+      "id": "A0Q9",
+      "name": "|cffe4cfa3Рассекающий удар|r",
+      "hotkey": null,
+      "values": {
+        "name": "|cffe4cfa3Рассекающий удар|r",
+        "tip1": "|cffe4cfa3Рассекающий удар|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждая атака наносит |cffffffff13%|cffced4da урона другим наземным противникам в радиусе |cffffffff150|cffced4da от цели.|r"
+      }
+    },
+    {
+      "id": "A0QA",
+      "name": "|cffe4cfa3Критический удар|r",
+      "hotkey": null,
+      "values": {
+        "name": "|cffe4cfa3Критический удар|r",
+        "tip1": "|cffe4cfa3Критический удар|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует |cffffffff10%|cffced4da шанс нанести двойной урон при атаке.|r"
+      }
+    },
+    {
+      "id": "A0QC",
+      "name": "|cffe4cfa3Ледяные стрелы|r",
+      "hotkey": "Q",
+      "values": {
+        "name": "|cffe4cfa3Ледяные стрелы|r",
+        "tip1": "|cffe4cfa3Ледяные стрелы|r (|cffffffffQ|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Добавляет к атаке ледяной урон, нанося дополнительно |cffffffff3|cffced4da ед. урона и замедляя скорость атаки цели на |cffffffff30%|cffced4da, а скорость передвижения — на |cffffffff30%|cffced4da на |cffffffff6|cffced4da сек. (|cffffffff1|cffced4da сек. для героев).|r"
+      }
+    },
+    {
+      "id": "A0QD",
+      "name": "|cffe4cfa3Кольцо льда|r",
+      "hotkey": "W",
+      "values": {
+        "name": "|cffe4cfa3Кольцо льда|r",
+        "tip1": "|cffe4cfa3Кольцо льда|r (|cffffffffW|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает кольцо леденящей волны, наносящее цели |cffffffff75|cffced4da ед. урона и ещё |cffffffff40|cffced4da ед. урона противникам в радиусе |cffffffff150|cffced4da. Замедляет передвижение и атаку целей на |cffffffff4|cffced4da сек. (|cffffffff2|cffced4da сек. для героев).|r"
+      }
+    },
+    {
+      "id": "A0QE",
+      "name": "|cffe4cfa3Пламя жизни|r",
+      "hotkey": "W",
+      "values": {
+        "name": "|cffe4cfa3Пламя жизни|r",
+        "tip1": "|cffe4cfa3Пламя жизни|r (|cffffffffW|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff150|cffced4da ед. здоровья союзникам в радиусе |cffffffff300|cffced4da.|r"
+      }
+    },
+    {
+      "id": "A0QF",
+      "name": "|cffe4cfa3Сокрушение|r",
+      "hotkey": null,
+      "values": {
+        "name": "|cffe4cfa3Сокрушение|r",
+        "tip1": "|cffe4cfa3Сокрушение|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff25%|cffced4da каждая атака наносит |cffffffff15|cffced4da ед. урона противникам поблизости от цели.|r"
+      }
+    },
+    {
+      "id": "A0QH",
+      "name": "|cffe4cfa3Кристаллы антимагии|r",
+      "hotkey": null,
+      "values": {
+        "name": "|cffe4cfa3Кристаллы антимагии|r",
+        "tip1": "|cffe4cfa3Кристаллы антимагии|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Кристаллическая решётка рассеивает магию, поглощая |cffffffff33%|cffced4da направленного в голема заклинательного урона.|r"
+      }
+    },
+    {
+      "id": "A0QI",
+      "name": "|cffe4cfa3Бросок валуна|r",
+      "hotkey": "Q",
+      "values": {
+        "name": "|cffe4cfa3Бросок валуна|r",
+        "tip1": "|cffe4cfa3Бросок валуна|r (|cffffffffQ|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Швыряет в противника тяжёлый валун, наносящий |cffffffff70|cffced4da ед. урона и оглушающий цель на |cffffffff1|cffced4da сек. (|cffffffff0,5|cffced4da сек. для героев).|r"
+      }
+    },
+    {
+      "id": "A0QM",
+      "name": "|cffe4cfa3Невосприимчивость к магии|r",
+      "hotkey": null,
+      "values": {
+        "name": "|cffe4cfa3Невосприимчивость к магии|r",
+        "tip1": "|cffe4cfa3Невосприимчивость к магии|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует полную невосприимчивость к магии и большинству заклинаний.|r"
+      }
+    },
+    {
+      "id": "A0W7",
+      "name": "|cffe4cfa3Вода|r",
+      "hotkey": null,
+      "values": {
+        "name": "|cffe4cfa3Вода|r",
+        "tip1": "|cffe4cfa3Вода|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает верховную стихию Воды. Открывает создание Особого Воды, Рифового элементаля, Загробника Глубин, Ледяного голема и Кристального голема. Блокирует базовых элементалей Воды и Каменных големов, а также выбор других верховных стихий.|r"
+      }
+    },
+    {
+      "id": "A0W8",
+      "name": "|cffe4cfa3Земля|r",
+      "hotkey": null,
+      "values": {
+        "name": "|cffe4cfa3Земля|r",
+        "tip1": "|cffe4cfa3Земля|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает верховную стихию Земли. Открывает создание Особого Земли, Грязевого элементаля, Яростного голема, Гранитного голема и Янтарного Загробника. Блокирует базовых элементалей Земли и Каменных големов, а также выбор других верховных стихий.|r"
+      }
+    },
+    {
+      "id": "A0W9",
+      "name": "|cffe4cfa3Огонь|r",
+      "hotkey": null,
+      "values": {
+        "name": "|cffe4cfa3Огонь|r",
+        "tip1": "|cffe4cfa3Огонь|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает верховную стихию Огня. Открывает создание Особого Огня, Огненной птицы, Загробника Огня, Огненного голема и Огненного Стража. Блокирует базовых элементалей Огня и Каменных големов, а также выбор других верховных стихий.|r"
+      }
+    },
+    {
+      "id": "A0WA",
+      "name": "|cffe4cfa3Воздух|r",
+      "hotkey": null,
+      "values": {
+        "name": "|cffe4cfa3Воздух|r",
+        "tip1": "|cffe4cfa3Воздух|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает верховную стихию Ветра. Открывает создание Особого Ветра, Загробника Бури, Штормового элементаля и Воителя бури. Блокирует базовых элементалей Ветра и Каменных големов, а также выбор других верховных стихий.|r"
+      }
+    },
+    {
+      "id": "A18B",
+      "name": "|cffe4cfa3Тёмный призыв|r",
+      "hotkey": "W",
+      "values": {
+        "name": "|cffe4cfa3Тёмный призыв|r",
+        "tip1": "|cffe4cfa3Тёмный призыв|r (|cffffffffW|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da После применения в течение |cffffffff3|cffced4da сек. переносит до |cffffffff36|cffced4da союзных воинов из указанной области к этой башне.|r"
+      }
+    },
+    {
+      "id": "A1MQ",
+      "name": "|cffe4cfa3Ускользание|r",
+      "hotkey": null,
+      "values": {
+        "name": "|cffe4cfa3Ускользание|r",
+        "tip1": "|cffe4cfa3Ускользание|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует |cffffffff10%|cffced4da шанс уклониться от вражеской физической атаки.|r"
+      }
+    },
+    {
+      "id": "Adis",
+      "name": "|cffe4cfa3Рассеивание чар|r",
+      "hotkey": "Q",
+      "values": {
+        "name": "|cffe4cfa3Рассеивание чар|r",
+        "tip1": "|cffe4cfa3Рассеивание чар|r (|cffffffffQ|r)",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает положительные эффекты с противников и отрицательные с союзников в радиусе |cffffffff200|cffced4da, а также наносит |cffffffff200|cffced4da ед. урона призванным существам.|r"
+      }
+    }
+  ],
+  "buffs": [
+    {
+      "id": "B071",
+      "name": "|cffe4cfa3Сожжение доспехов|r",
+      "values": {
+        "bufftip": "|cffe4cfa3Сожжение доспехов|r",
+        "buffubertip": "|cffa6afb8ЭФФЕКТ:|cffced4da Броня этого воина снижена огненным жаром Рагнароса.|r"
+      }
+    },
+    {
+      "id": "B054",
+      "name": "|cffe4cfa3Торнадо|r",
+      "values": {
+        "bufftip": "|cffe4cfa3Торнадо|r",
+        "buffubertip": "|cffa6afb8ЭФФЕКТ:|cffced4da Этот воин находится в вихре торнадо и получает периодический урон.|r"
+      }
+    },
+    {
+      "id": "B008",
+      "name": "|cffe4cfa3Аура мороза|r",
+      "values": {
+        "bufftip": "|cffe4cfa3Аура мороза|r",
+        "buffubertip": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость атаки и передвижения этого воина снижена леденящим холодом.|r"
+      }
+    },
+    {
+      "id": "B055",
+      "name": "|cffe4cfa3Поджог|r",
+      "values": {
+        "bufftip": "|cffe4cfa3Поджог|r",
+        "buffubertip": "|cffa6afb8ЭФФЕКТ:|cffced4da Этот воин объят пламенем и получает периодический урон огнём.|r"
+      }
+    },
+    {
+      "id": "B056",
+      "name": "|cffe4cfa3Поджог|r",
+      "values": {
+        "bufftip": "|cffe4cfa3Поджог|r",
+        "buffubertip": "|cffa6afb8ЭФФЕКТ:|cffced4da Этот воин объят пламенем и получает периодический урон огнём.|r"
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "command": "get-objects-bulk",
+  "count": 1,
+  "map": "F:\\Gemini_23Race\\map.w3x",
+  "missing": [],
+  "objects": [
+    {
+      "fields": {
+        "bufftip": "TRIGSTR_6723",
+        "buffubertip": "",
+        "editorname": ""
+      },
+      "id": "B023",
+      "name": "|cff808000Поселение|r"
+    }
+  ],
+  "ok": true,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "type": "buff"
+}

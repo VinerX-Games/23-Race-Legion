@@ -1,0 +1,67 @@
+{
+  "operations": [
+    {
+      "type": "upgrade",
+      "id": "Rugf",
+      "field": "name1",
+      "value": "|cffe4cfa3Ярость вурдалака|r",
+      "base_object": true
+    },
+    {
+      "type": "upgrade",
+      "id": "Rhrt",
+      "field": "name1",
+      "value": "|cffe4cfa3Залповый огонь|r",
+      "base_object": true
+    },
+    {
+      "type": "upgrade",
+      "id": "Rhlh",
+      "field": "name1",
+      "value": "|cffe4cfa3Улучшенная лесозаготовка|r",
+      "base_object": true
+    },
+    {
+      "type": "upgrade",
+      "id": "Rhlh",
+      "field": "name2",
+      "value": "|cffe4cfa3Улучшенная лесозаготовка|r",
+      "base_object": true
+    },
+    {
+      "type": "upgrade",
+      "id": "Rhlh",
+      "field": "name3",
+      "value": "|cffe4cfa3Улучшенная лесозаготовка|r",
+      "base_object": true
+    },
+    {
+      "type": "upgrade",
+      "id": "Rhlh",
+      "field": "name4",
+      "value": "|cffe4cfa3Улучшенная лесозаготовка|r",
+      "base_object": true
+    },
+    {
+      "type": "upgrade",
+      "id": "Rhlh",
+      "field": "name5",
+      "value": "|cffe4cfa3Улучшенная лесозаготовка|r",
+      "base_object": true
+    },
+    {
+      "type": "upgrade",
+      "id": "Rhlh",
+      "field": "name6",
+      "value": "|cffe4cfa3Улучшенная лесозаготовка|r",
+      "base_object": true
+    },
+    {
+      "type": "upgrade",
+      "id": "Rhan",
+      "field": "name1",
+      "value": "|cffe4cfa3Дрессировка животных|r",
+      "base_object": true
+    }
+  ]
+}

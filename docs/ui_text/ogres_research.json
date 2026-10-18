@@ -1,0 +1,848 @@
+{
+  "scope": "Огры (Ogres): категория 5 — Исследования и маркеры (19 технологий)",
+  "upgrades_count": 19,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R0HT",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 29642,
+          "after": "|cffe4cfa3Огры|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 29643,
+          "after": "|cffe4cfa3Огры|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GL",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 28231,
+          "after": "|cffe4cfa3Заостренные дубины|r — уровень 1"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 42499,
+          "after": "|cffe4cfa3Заостренные дубины|r — уровень 2"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 42500,
+          "after": "|cffe4cfa3Заостренные дубины|r — уровень 3"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 28236,
+          "after": "|cffe4cfa3Заостренные дубины|r — уровень 4"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 42489,
+          "after": "|cffe4cfa3Заостренные дубины|r — уровень 5"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 28219,
+          "after": "|cffe4cfa3Заостренные дубины|r — уровень 6"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42501,
+          "after": "|cffe4cfa3Заостренные дубины — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 42502,
+          "after": "|cffe4cfa3Заостренные дубины — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 42503,
+          "after": "|cffe4cfa3Заостренные дубины — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 42490,
+          "after": "|cffe4cfa3Заостренные дубины — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 42491,
+          "after": "|cffe4cfa3Заостренные дубины — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 42492,
+          "after": "|cffe4cfa3Заостренные дубины — уровень 6|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42493,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон бойцов ближнего боя на |cffc8e087+7|cffced4da.|n|nПрименяется к:|n- |cffa9c7deОгр-воин|cffced4da, |cffa9c7deОгр-Командир|cffced4da, |cffa9c7deОгр-Наездник|cffced4da, |cffa9c7deОгр-Берсерк|cffced4da, |cffa9c7deОгр-Боевой Маг|cffced4da, |cffa9c7deОгроны|cffced4da, |cffa9c7deГронны|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 42494,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон бойцов ближнего боя на |cffc8e087+14|cffced4da.|n|nПрименяется к:|n- |cffa9c7deОгр-воин|cffced4da, |cffa9c7deОгр-Командир|cffced4da, |cffa9c7deОгр-Наездник|cffced4da, |cffa9c7deОгр-Берсерк|cffced4da, |cffa9c7deОгр-Боевой Маг|cffced4da, |cffa9c7deОгроны|cffced4da, |cffa9c7deГронны|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 42495,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон бойцов ближнего боя на |cffc8e087+21|cffced4da.|n|nПрименяется к:|n- |cffa9c7deОгр-воин|cffced4da, |cffa9c7deОгр-Командир|cffced4da, |cffa9c7deОгр-Наездник|cffced4da, |cffa9c7deОгр-Берсерк|cffced4da, |cffa9c7deОгр-Боевой Маг|cffced4da, |cffa9c7deОгроны|cffced4da, |cffa9c7deГронны|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 42496,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон бойцов ближнего боя на |cffc8e087+28|cffced4da.|n|nПрименяется к:|n- |cffa9c7deОгр-воин|cffced4da, |cffa9c7deОгр-Командир|cffced4da, |cffa9c7deОгр-Наездник|cffced4da, |cffa9c7deОгр-Берсерк|cffced4da, |cffa9c7deОгр-Боевой Маг|cffced4da, |cffa9c7deОгроны|cffced4da, |cffa9c7deГронны|cffced4da.|n|nУровень исследования: |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 42497,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон бойцов ближнего боя на |cffc8e087+35|cffced4da.|n|nПрименяется к:|n- |cffa9c7deОгр-воин|cffced4da, |cffa9c7deОгр-Командир|cffced4da, |cffa9c7deОгр-Наездник|cffced4da, |cffa9c7deОгр-Берсерк|cffced4da, |cffa9c7deОгр-Боевой Маг|cffced4da, |cffa9c7deОгроны|cffced4da, |cffa9c7deГронны|cffced4da.|n|nУровень исследования: |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 42498,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон бойцов ближнего боя на |cffc8e087+42|cffced4da.|n|nПрименяется к:|n- |cffa9c7deОгр-воин|cffced4da, |cffa9c7deОгр-Командир|cffced4da, |cffa9c7deОгр-Наездник|cffced4da, |cffa9c7deОгр-Берсерк|cffced4da, |cffa9c7deОгр-Боевой Маг|cffced4da, |cffa9c7deОгроны|cffced4da, |cffa9c7deГронны|cffced4da.|n|nУровень исследования: |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GM",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 28253,
+          "after": "|cffe4cfa3Шкуры зверей|r — уровень 1"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 42513,
+          "after": "|cffe4cfa3Шкуры зверей|r — уровень 2"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 42514,
+          "after": "|cffe4cfa3Шкуры зверей|r — уровень 3"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 28255,
+          "after": "|cffe4cfa3Шкуры зверей|r — уровень 4"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 28241,
+          "after": "|cffe4cfa3Шкуры зверей|r — уровень 5"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 28242,
+          "after": "|cffe4cfa3Шкуры зверей|r — уровень 6"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42517,
+          "after": "|cffe4cfa3Шкуры зверей — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 42516,
+          "after": "|cffe4cfa3Шкуры зверей — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 42515,
+          "after": "|cffe4cfa3Шкуры зверей — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 42504,
+          "after": "|cffe4cfa3Шкуры зверей — уровень 4|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 42505,
+          "after": "|cffe4cfa3Шкуры зверей — уровень 5|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 42506,
+          "after": "|cffe4cfa3Шкуры зверей — уровень 6|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42507,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту всех видов огров на |cffc8e087+2|cffced4da к броне.|n|nПрименяется к:|n- |cffa9c7deВсем войскам армии Огров|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 42508,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту всех видов огров на |cffc8e087+4|cffced4da к броне.|n|nПрименяется к:|n- |cffa9c7deВсем войскам армии Огров|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 42509,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту всех видов огров на |cffc8e087+6|cffced4da к броне.|n|nПрименяется к:|n- |cffa9c7deВсем войскам армии Огров|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 42510,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту всех видов огров на |cffc8e087+8|cffced4da к броне.|n|nПрименяется к:|n- |cffa9c7deВсем войскам армии Огров|cffced4da.|n|nУровень исследования: |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 42511,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту всех видов огров на |cffc8e087+10|cffced4da к броне.|n|nПрименяется к:|n- |cffa9c7deВсем войскам армии Огров|cffced4da.|n|nУровень исследования: |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 42512,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту всех видов огров на |cffc8e087+12|cffced4da к броне.|n|nПрименяется к:|n- |cffa9c7deВсем войскам армии Огров|cffced4da.|n|nУровень исследования: |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GN",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 28269,
+          "after": "|cffe4cfa3Крупные камни|r — уровень 1"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 42527,
+          "after": "|cffe4cfa3Крупные камни|r — уровень 2"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 42528,
+          "after": "|cffe4cfa3Крупные камни|r — уровень 3"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 28270,
+          "after": "|cffe4cfa3Крупные камни|r — уровень 4"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 28257,
+          "after": "|cffe4cfa3Крупные камни|r — уровень 5"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 28258,
+          "after": "|cffe4cfa3Крупные камни|r — уровень 6"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42529,
+          "after": "|cffe4cfa3Крупные камни — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 42531,
+          "after": "|cffe4cfa3Крупные камни — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 42530,
+          "after": "|cffe4cfa3Крупные камни — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 42518,
+          "after": "|cffe4cfa3Крупные камни — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 42519,
+          "after": "|cffe4cfa3Крупные камни — уровень 5|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 42520,
+          "after": "|cffe4cfa3Крупные камни — уровень 6|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42524,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков и метателей огров на |cffc8e087+6|cffced4da.|n|nПрименяется к:|n- |cffa9c7deОгр-Копьеметатель|cffced4da, |cffa9c7deОгр-Камнеметатель|cffced4da, |cffa9c7deОгр-Барабанщик|cffced4da, |cffa9c7deШаман Мок'Натал|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 42525,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков и метателей огров на |cffc8e087+12|cffced4da.|n|nПрименяется к:|n- |cffa9c7deОгр-Копьеметатель|cffced4da, |cffa9c7deОгр-Камнеметатель|cffced4da, |cffa9c7deОгр-Барабанщик|cffced4da, |cffa9c7deШаман Мок'Натал|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 42526,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков и метателей огров на |cffc8e087+18|cffced4da.|n|nПрименяется к:|n- |cffa9c7deОгр-Копьеметатель|cffced4da, |cffa9c7deОгр-Камнеметатель|cffced4da, |cffa9c7deОгр-Барабанщик|cffced4da, |cffa9c7deШаман Мок'Натал|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 42521,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков и метателей огров на |cffc8e087+24|cffced4da.|n|nПрименяется к:|n- |cffa9c7deОгр-Копьеметатель|cffced4da, |cffa9c7deОгр-Камнеметатель|cffced4da, |cffa9c7deОгр-Барабанщик|cffced4da, |cffa9c7deШаман Мок'Натал|cffced4da.|n|nУровень исследования: |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 42522,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков и метателей огров на |cffc8e087+30|cffced4da.|n|nПрименяется к:|n- |cffa9c7deОгр-Копьеметатель|cffced4da, |cffa9c7deОгр-Камнеметатель|cffced4da, |cffa9c7deОгр-Барабанщик|cffced4da, |cffa9c7deШаман Мок'Натал|cffced4da.|n|nУровень исследования: |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 42523,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков и метателей огров на |cffc8e087+36|cffced4da.|n|nПрименяется к:|n- |cffa9c7deОгр-Копьеметатель|cffced4da, |cffa9c7deОгр-Камнеметатель|cffced4da, |cffa9c7deОгр-Барабанщик|cffced4da, |cffa9c7deШаман Мок'Натал|cffced4da.|n|nУровень исследования: |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GO",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 28275,
+          "after": "|cffe4cfa3Крепость плоти|r — уровень 1"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 28280,
+          "after": "|cffe4cfa3Крепость плоти|r — уровень 2"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 28281,
+          "after": "|cffe4cfa3Крепость плоти|r — уровень 3"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42532,
+          "after": "|cffe4cfa3Крепость плоти — уровень 1|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 42535,
+          "after": "|cffe4cfa3Крепость плоти — уровень 2|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 42536,
+          "after": "|cffe4cfa3Крепость плоти — уровень 3|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42537,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья воинов огров на |cffc8e087+100|cffced4da ед.|n|nПрименяется к:|n- |cffa9c7deВсем воинам армии Огров|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 42533,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья воинов огров на |cffc8e087+200|cffced4da ед.|n|nПрименяется к:|n- |cffa9c7deВсем воинам армии Огров|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 42534,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья воинов огров на |cffc8e087+300|cffced4da ед.|n|nПрименяется к:|n- |cffa9c7deВсем воинам армии Огров|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GP",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 28284,
+          "after": "|cffe4cfa3Сила предков|r — уровень 1"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 28285,
+          "after": "|cffe4cfa3Сила предков|r — уровень 2"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 28286,
+          "after": "|cffe4cfa3Сила предков|r — уровень 3"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42538,
+          "after": "|cffe4cfa3Сила предков — уровень 1|r (|cffffffffF|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 42539,
+          "after": "|cffe4cfa3Сила предков — уровень 2|r (|cffffffffF|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 42540,
+          "after": "|cffe4cfa3Сила предков — уровень 3|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 28292,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость регенерации здоровья воинов огров на |cffc8e087+1|cffced4da ед./сек.|n|nПрименяется к:|n- |cffa9c7deВсем воинам армии Огров|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 28293,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость регенерации здоровья воинов огров на |cffc8e087+2|cffced4da ед./сек.|n|nПрименяется к:|n- |cffa9c7deВсем воинам армии Огров|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 28294,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость регенерации здоровья воинов огров на |cffc8e087+3|cffced4da ед./сек.|n|nПрименяется к:|n- |cffa9c7deВсем воинам армии Огров|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GQ",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42541,
+          "after": "|cffe4cfa3Сбор древесины|r — уровень 1"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 42542,
+          "after": "|cffe4cfa3Сбор древесины|r — уровень 2"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 42543,
+          "after": "|cffe4cfa3Сбор древесины|r — уровень 3"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 42544,
+          "after": "|cffe4cfa3Сбор древесины|r — уровень 4"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 42545,
+          "after": "|cffe4cfa3Сбор древесины|r — уровень 5"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 42546,
+          "after": "|cffe4cfa3Сбор древесины|r — уровень 6"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42669,
+          "after": "|cffe4cfa3Сбор древесины — уровень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 42670,
+          "after": "|cffe4cfa3Сбор древесины — уровень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 42671,
+          "after": "|cffe4cfa3Сбор древесины — уровень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 42672,
+          "after": "|cffe4cfa3Сбор древесины — уровень 4|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 42673,
+          "after": "|cffe4cfa3Сбор древесины — уровень 5|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 42674,
+          "after": "|cffe4cfa3Сбор древесины — уровень 6|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 27667,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет рабочим переносить на |cffc8e087+10|cffced4da ед. больше древесины.|n|nПрименяется к:|n- |cffa9c7deОгр-Строитель|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 25923,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет рабочим переносить на |cffc8e087+20|cffced4da ед. больше древесины.|n|nПрименяется к:|n- |cffa9c7deОгр-Строитель|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 25924,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет рабочим переносить на |cffc8e087+30|cffced4da ед. больше древесины.|n|nПрименяется к:|n- |cffa9c7deОгр-Строитель|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 25925,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет рабочим переносить на |cffc8e087+40|cffced4da ед. больше древесины.|n|nПрименяется к:|n- |cffa9c7deОгр-Строитель|cffced4da.|n|nУровень исследования: |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 25928,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет рабочим переносить на |cffc8e087+50|cffced4da ед. больше древесины.|n|nПрименяется к:|n- |cffa9c7deОгр-Строитель|cffced4da.|n|nУровень исследования: |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 28313,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет рабочим переносить на |cffc8e087+60|cffced4da ед. больше древесины.|n|nПрименяется к:|n- |cffa9c7deОгр-Строитель|cffced4da.|n|nУровень исследования: |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R09W",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42587,
+          "after": "|cffe4cfa3Усиленное копьё|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42588,
+          "after": "|cffe4cfa3Усиленное копьё|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42593,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Снаряжает копьеметателей утяжеленными наконечниками, эффективно пробивающими небронированные цели и среднюю броню.|n|nПрименяется к:|n- |cffa9c7deОгр-Копьеметатель|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GU",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 28428,
+          "after": "|cffe4cfa3Опутывание|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42566,
+          "after": "|cffe4cfa3Опутывание|r (|cffffffffZ|r)"
+        }
+      ]
+    },
+    {
+      "id": "R0L2",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42594,
+          "after": "|cffe4cfa3Кожаная мембрана|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42596,
+          "after": "|cffe4cfa3Кожаная мембрана|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42598,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Оснащает барабанщиков прочной кожаной мембраной, открывая способность «Деморализующий звук», снижающую урон врагов на |cffe69a8d10%|cffced4da.|n|nПрименяется к:|n- |cffa9c7deОгр-Барабанщик|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GR",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42547,
+          "after": "|cffe4cfa3Обучение боевых магов|r — ступень 1"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 42548,
+          "after": "|cffe4cfa3Обучение боевых магов|r — ступень 2"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 42551,
+          "after": "|cffe4cfa3Обучение боевых магов|r — ступень 3"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42549,
+          "after": "|cffe4cfa3Обучение боевых магов — ступень 1|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 42550,
+          "after": "|cffe4cfa3Обучение боевых магов — ступень 2|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 42552,
+          "after": "|cffe4cfa3Обучение боевых магов — ступень 3|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42553,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья, маны и регенерацию Огров-Боевых Магов, а также открывает заклинания: «Духовная Связь».|n|nПрименяется к:|n- |cffa9c7deОгр-Боевой Маг|cffced4da.|n|nСтупень обучения: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 28484,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья, маны и регенерацию Огров-Боевых Магов, а также открывает заклинания: «Духовная Связь», «Зачарованный руной Молот».|n|nПрименяется к:|n- |cffa9c7deОгр-Боевой Маг|cffced4da.|n|nСтупень обучения: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 36234,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья, маны и регенерацию Огров-Боевых Магов, а также открывает заклинания: «Духовная Связь», «Зачарованный руной Молот», «Огненное лассо».|n|nПрименяется к:|n- |cffa9c7deОгр-Боевой Маг|cffced4da.|n|nСтупень обучения: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GS",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42554,
+          "after": "|cffe4cfa3Обучение магов поддержки|r — ступень 1"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 42555,
+          "after": "|cffe4cfa3Обучение магов поддержки|r — ступень 2"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 42558,
+          "after": "|cffe4cfa3Обучение магов поддержки|r — ступень 3"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42556,
+          "after": "|cffe4cfa3Обучение магов поддержки — ступень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 42557,
+          "after": "|cffe4cfa3Обучение магов поддержки — ступень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 42559,
+          "after": "|cffe4cfa3Обучение магов поддержки — ступень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 28401,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья, маны и скорость восстановления маны Огров-Магов, а также открывает заклинания: «Огненная стрела».|n|nПрименяется к:|n- |cffa9c7deОгр-Маг|cffced4da.|n|nСтупень обучения: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 28407,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья, маны и скорость восстановления маны Огров-Магов, а также открывает заклинания: «Огненная стрела», «Рассеивание заклинаний».|n|nПрименяется к:|n- |cffa9c7deОгр-Маг|cffced4da.|n|nСтупень обучения: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 28413,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья, маны и скорость восстановления маны Огров-Магов, а также открывает заклинания: «Огненная стрела», «Рассеивание заклинаний», «Жажда крови».|n|nПрименяется к:|n- |cffa9c7deОгр-Маг|cffced4da.|n|nСтупень обучения: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GT",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 42560,
+          "after": "|cffe4cfa3Обучение Шаманов Мок'Натала|r — ступень 1"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 42561,
+          "after": "|cffe4cfa3Обучение Шаманов Мок'Натала|r — ступень 2"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 42564,
+          "after": "|cffe4cfa3Обучение Шаманов Мок'Натала|r — ступень 3"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42562,
+          "after": "|cffe4cfa3Обучение Шаманов Мок'Натала — ступень 1|r (|cffffffffC|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 42563,
+          "after": "|cffe4cfa3Обучение Шаманов Мок'Натала — ступень 2|r (|cffffffffC|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 42565,
+          "after": "|cffe4cfa3Обучение Шаманов Мок'Натала — ступень 3|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 28414,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья, маны и регенерацию маны Шаманов Мок'Натала, а также открывает заклинания: «Щит молний».|n|nПрименяется к:|n- |cffa9c7deШаман Мок'Натал|cffced4da.|n|nСтупень обучения: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 28885,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья, маны и регенерацию маны Шаманов Мок'Натала, а также открывает заклинания: «Щит молний», «Призыв вепря».|n|nПрименяется к:|n- |cffa9c7deШаман Мок'Натал|cffced4da.|n|nСтупень обучения: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 28886,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья, маны и регенерацию маны Шаманов Мок'Натала, а также открывает заклинания: «Щит молний», «Призыв вепря», «Цепная молния».|n|nПрименяется к:|n- |cffa9c7deШаман Мок'Натал|cffced4da.|n|nСтупень обучения: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GF",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 28061,
+          "after": "|cffe4cfa3Каменная плоть|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 28062,
+          "after": "|cffe4cfa3Каменная плоть|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 28195,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет тело древних великанов, повышая броню на |cffc8e087+5|cffced4da ед.|n|nПрименяется к:|n- |cffa9c7deОгронам|cffced4da, |cffa9c7deГроннам|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GG",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 28074,
+          "after": "|cffe4cfa3Жажда Крови|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 28075,
+          "after": "|cffe4cfa3Жажда Крови|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42485,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает способность «Жажда Крови» Красному Гронну, позволяя ускорять атаку и передвижение.|n|nПрименяется к:|n- |cffa9c7deГронн Красный|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GH",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 28087,
+          "after": "|cffe4cfa3Морозный Доспех|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 28088,
+          "after": "|cffe4cfa3Морозный Доспех|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 28197,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дарует Синему Огрону способность «Морозный доспех», увеличивающую броню и замедляющую атакующих врагов.|n|nПрименяется к:|n- |cffa9c7deОгрон-синий|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GI",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 28199,
+          "after": "|cffe4cfa3Шипастый Панцирь|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 28475,
+          "after": "|cffe4cfa3Шипастый Панцирь|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42486,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дарует Черному Гронну пассивный шипастый панцирь, отражающий |cffffffff15%|cffced4da урона ближнего боя и дающий |cffc8e087+3|cffced4da к броне.|n|nПрименяется к:|n- |cffa9c7deГронн Черный|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GJ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 28100,
+          "after": "|cffe4cfa3Сокрушение|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 28101,
+          "after": "|cffe4cfa3Сокрушение|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42487,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дарует Белому Гронну способность «Сокрушение», позволяющую с вероятностью |cffffffff40%|cffced4da наносить урон по площади.|n|nПрименяется к:|n- |cffa9c7deГронн Белый|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GK",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 28214,
+          "after": "|cffe4cfa3Неистовство|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 28476,
+          "after": "|cffe4cfa3Неистовство|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42488,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает способность «Неистовство» Красному Огрону, существенно ускоряющую его атаки в бою.|n|nПрименяется к:|n- |cffa9c7deОгрон Красный|cffced4da.|r"
+        }
+      ]
+    }
+  ]
+}

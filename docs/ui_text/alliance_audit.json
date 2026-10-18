@@ -1,0 +1,134 @@
+{
+  "race": "Альянс (Alliance)",
+  "race_id": 29,
+  "selection_ability": "A02A",
+  "objects_audit": {
+    "buildings": {
+      "count": 16,
+      "ids": [
+        "htow",
+        "hkee",
+        "hcas",
+        "hhou",
+        "hbar",
+        "hbla",
+        "hwtw",
+        "hgtw",
+        "hctw",
+        "hatw",
+        "halt",
+        "harm",
+        "hars",
+        "hlum",
+        "hgra",
+        "h0M4"
+      ]
+    },
+    "heroes": {
+      "count": 11,
+      "ids": [
+        "H0H7",
+        "H0H9",
+        "H0H8",
+        "H0ME",
+        "H0MF",
+        "H0MD",
+        "Hamg",
+        "Hmkg",
+        "Hpal",
+        "Hblm",
+        "Hlgr"
+      ]
+    },
+    "units": {
+      "count": 63,
+      "ids": [
+        "hpea",
+        "hfoo",
+        "h0K4",
+        "h0K7",
+        "hrif",
+        "h0K5",
+        "h0K6",
+        "hkni",
+        "hmtm",
+        "hmtt",
+        "h0KI",
+        "hmpr",
+        "hsor",
+        "hspt",
+        "h00X",
+        "h0L0",
+        "h0L1",
+        "h0KD",
+        "h0KH",
+        "h0LW",
+        "h0KE",
+        "h0LU",
+        "h0OW",
+        "h0KR",
+        "h0KC",
+        "h0KK",
+        "h0KW",
+        "h0M9",
+        "h0MA",
+        "h0M7",
+        "h0M5",
+        "h0M6",
+        "h0M2",
+        "h0M3",
+        "h0KN",
+        "h0L2",
+        "h0LZ",
+        "h0KT",
+        "h0KO",
+        "h0KY",
+        "h0KJ",
+        "h0KS",
+        "h0LY",
+        "h0KP",
+        "h0KZ",
+        "o044",
+        "h0MB",
+        "h0MC",
+        "h0KX",
+        "o042",
+        "o043",
+        "h0M8",
+        "o040",
+        "h0KA",
+        "h0KB",
+        "h0K9",
+        "h0KL",
+        "h0KM",
+        "h0KQ",
+        "h0KU",
+        "h0KV",
+        "h0KF",
+        "h0KG"
+      ]
+    },
+    "abilities": {
+      "count": 147
+    },
+    "researches": {
+      "count": 58
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [
+      "I020"
+    ],
+    "status": "I020 (Руна иллюзий дамми) used by spell A1A5 for creating illusions."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "No race-specific floating messages found in war3map.wts for Alliance."
+  },
+  "buffs_audit": {
+    "custom_buffs_count": 71,
+    "status": "Standardized all custom buffs referenced by Alliance abilities."
+  },
+  "total_wts_updates": 1073,
+  "total_checks": 1073
+}

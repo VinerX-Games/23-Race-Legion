@@ -1,0 +1,708 @@
+{
+  "scope": "Гилнеас (Gilneas / Worgens): категория 5 — Исследования и маркеры (14 технологий)",
+  "upgrades_count": 14,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R0FX",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 8429,
+          "after": "|cffe4cfa3Гилнеас|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 25159,
+          "after": "|cffe4cfa3Гилнеас|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 5600,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к королевству Гилнеас.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0EY",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 19103,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 19367,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 19565,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 21119,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 4|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 21127,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 1|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 21188,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 2|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 21324,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 3|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 21343,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 4|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 24798,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой древесины рабочими на |cffc8e0878|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПостройщик|cffced4da.|n|nУровень исследования: |cffffffff1/4|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 24793,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой древесины рабочими ещё на |cffc8e0878|cffced4da ед. (суммарно +|cffffffff16|cffced4da).|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПостройщик|cffced4da.|n|nУровень исследования: |cffffffff2/4|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 24794,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой древесины рабочими ещё на |cffc8e0878|cffced4da ед. (суммарно +|cffffffff24|cffced4da).|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПостройщик|cffced4da.|n|nУровень исследования: |cffffffff3/4|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 24795,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой древесины рабочими ещё на |cffc8e0878|cffced4da ед. (суммарно +|cffffffff32|cffced4da).|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПостройщик|cffced4da.|n|nУровень исследования: |cffffffff4/4|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0EM",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 24439,
+          "after": "|cffe4cfa3Железные мечи|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 24437,
+          "after": "|cffe4cfa3Железные мечи|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 24436,
+          "after": "|cffe4cfa3Стальные мечи|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 24435,
+          "after": "|cffe4cfa3Стальные мечи|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 24434,
+          "after": "|cffe4cfa3Мифриловые мечи|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 24433,
+          "after": "|cffe4cfa3Мифриловые мечи|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 24444,
+          "after": "|cffe4cfa3Железные мечи — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 24443,
+          "after": "|cffe4cfa3Железные мечи — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 24442,
+          "after": "|cffe4cfa3Стальные мечи — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 24441,
+          "after": "|cffe4cfa3Стальные мечи — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 24440,
+          "after": "|cffe4cfa3Мифриловые мечи — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 24438,
+          "after": "|cffe4cfa3Мифриловые мечи — уровень 6|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 24445,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон в ближнем бою пехотинцев, рыцарей, друидов и полудиких воргенов на |cffc8e0871|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|n|nУровень исследования: |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 24446,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон в ближнем бою пехотинцев, рыцарей, друидов и полудиких воргенов ещё на |cffc8e0871|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|n|nУровень исследования: |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 24447,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон в ближнем бою пехотинцев, рыцарей, друидов и полудиких воргенов ещё на |cffc8e0871|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|n|nУровень исследования: |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 24449,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон в ближнем бою пехотинцев, рыцарей, друидов и полудиких воргенов ещё на |cffc8e0871|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|n|nУровень исследования: |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 24448,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон в ближнем бою пехотинцев, рыцарей, друидов и полудиких воргенов ещё на |cffc8e0871|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|n|nУровень исследования: |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 24450,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон в ближнем бою пехотинцев, рыцарей, друидов и полудиких воргенов ещё на |cffc8e0871|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|n|nУровень исследования: |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0EN",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 24454,
+          "after": "|cffe4cfa3Железная броня|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 24456,
+          "after": "|cffe4cfa3Железная броня|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 24455,
+          "after": "|cffe4cfa3Стальная броня|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 24459,
+          "after": "|cffe4cfa3Стальная броня|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 24458,
+          "after": "|cffe4cfa3Мифриловая броня|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 24457,
+          "after": "|cffe4cfa3Мифриловая броня|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 24460,
+          "after": "|cffe4cfa3Железная броня — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 24461,
+          "after": "|cffe4cfa3Железная броня — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 24462,
+          "after": "|cffe4cfa3Стальная броня — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 24465,
+          "after": "|cffe4cfa3Стальная броня — уровень 4|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 24464,
+          "after": "|cffe4cfa3Мифриловая броня — уровень 5|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 24463,
+          "after": "|cffe4cfa3Мифриловая броня — уровень 6|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 24466,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту пехотинцев, рыцарей, друидов и полудиких воргенов на |cffc8e0871.5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|n|nУровень исследования: |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 24467,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту пехотинцев, рыцарей, друидов и полудиких воргенов на |cffc8e0871.5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|n|nУровень исследования: |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 24468,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту пехотинцев, рыцарей, друидов и полудиких воргенов на |cffc8e0871.5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|n|nУровень исследования: |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 24473,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту пехотинцев, рыцарей, друидов и полудиких воргенов на |cffc8e0871.5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|n|nУровень исследования: |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 24474,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту пехотинцев, рыцарей, друидов и полудиких воргенов на |cffc8e0871.5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|n|nУровень исследования: |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 24475,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту пехотинцев, рыцарей, друидов и полудиких воргенов на |cffc8e0871.5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|n|nУровень исследования: |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0EO",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 24476,
+          "after": "|cffe4cfa3Черный порох|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 24477,
+          "after": "|cffe4cfa3Черный порох|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 24478,
+          "after": "|cffe4cfa3Бездымный порох|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 24494,
+          "after": "|cffe4cfa3Бездымный порох|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 24493,
+          "after": "|cffe4cfa3Обогащенный порох|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 24492,
+          "after": "|cffe4cfa3Обогащенный порох|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 24479,
+          "after": "|cffe4cfa3Черный порох — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 24480,
+          "after": "|cffe4cfa3Черный порох — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 24481,
+          "after": "|cffe4cfa3Бездымный порох — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 24497,
+          "after": "|cffe4cfa3Бездымный порох — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 24496,
+          "after": "|cffe4cfa3Обогащенный порох — уровень 5|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 24495,
+          "after": "|cffe4cfa3Обогащенный порох — уровень 6|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 24482,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков, топорометателей, магов и катапульт на |cffc8e0871|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deТопорометатель|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|nУровень исследования: |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 24483,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков, топорометателей, магов и катапульт на |cffc8e0871|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deТопорометатель|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|nУровень исследования: |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 24484,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков, топорометателей, магов и катапульт на |cffc8e0871|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deТопорометатель|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|nУровень исследования: |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 24498,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков, топорометателей, магов и катапульт на |cffc8e0871|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deТопорометатель|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|nУровень исследования: |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 24499,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков, топорометателей, магов и катапульт на |cffc8e0871|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deТопорометатель|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|nУровень исследования: |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 24500,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков, топорометателей, магов и катапульт на |cffc8e0871|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deТопорометатель|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|nУровень исследования: |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0EP",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 24522,
+          "after": "|cffe4cfa3Накидки из клепаной кожи|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 24501,
+          "after": "|cffe4cfa3Накидки из клепаной кожи|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 24502,
+          "after": "|cffe4cfa3Накидки из армированной кожи|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 24511,
+          "after": "|cffe4cfa3Накидки из армированной кожи|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 24510,
+          "after": "|cffe4cfa3Накидки из драконьей кожи|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 24509,
+          "after": "|cffe4cfa3Накидки из драконьей кожи|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 24503,
+          "after": "|cffe4cfa3Накидки из клепаной кожи — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 24504,
+          "after": "|cffe4cfa3Накидки из клепаной кожи — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 24505,
+          "after": "|cffe4cfa3Накидки из армированной кожи — уровень 3|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 24508,
+          "after": "|cffe4cfa3Накидки из армированной кожи — уровень 4|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 24507,
+          "after": "|cffe4cfa3Накидки из драконьей кожи — уровень 5|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 24506,
+          "after": "|cffe4cfa3Накидки из драконьей кожи — уровень 6|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 24519,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту стрелков, топорометателей, магов и катапульт на |cffc8e0871.5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deТопорометатель|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|nУровень исследования: |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 24520,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту стрелков, топорометателей, магов и катапульт на |cffc8e0871.5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deТопорометатель|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|nУровень исследования: |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 24521,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту стрелков, топорометателей, магов и катапульт на |cffc8e0871.5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deТопорометатель|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|nУровень исследования: |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 24512,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту стрелков, топорометателей, магов и катапульт на |cffc8e0871.5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deТопорометатель|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|nУровень исследования: |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 24513,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту стрелков, топорометателей, магов и катапульт на |cffc8e0871.5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deТопорометатель|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|nУровень исследования: |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 24514,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту стрелков, топорометателей, магов и катапульт на |cffc8e0871.5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deТопорометатель|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|nУровень исследования: |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0EQ",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 24815,
+          "after": "|cffe4cfa3Нутро зверя — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 24816,
+          "after": "|cffe4cfa3Нутро зверя — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 24817,
+          "after": "|cffe4cfa3Нутро зверя — уровень 3|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 24530,
+          "after": "|cffe4cfa3Нутро зверя — уровень 1|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 24531,
+          "after": "|cffe4cfa3Нутро зверя — уровень 2|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 24532,
+          "after": "|cffe4cfa3Нутро зверя — уровень 3|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 24818,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет воинам воргенов пробивать среднюю броню цели на |cffc8e08715%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам воргенов.|n|nУровень исследования: |cffffffff1/3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 24819,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет воинам воргенов пробивать среднюю и тяжёлую броню цели на |cffc8e08715%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам воргенов.|n|nУровень исследования: |cffffffff2/3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 24820,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно вызывает |cffc8e087кровотечение|cffced4da при атаках воргенов.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам воргенов.|n|nУровень исследования: |cffffffff3/3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0IP",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 32816,
+          "after": "|cffe4cfa3Дрессировка Топорометателей|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 32817,
+          "after": "|cffe4cfa3Дрессировка Топорометателей|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 32818,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья топорометателей на |cffc8e087100|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТопорометатель|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0F6",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 24938,
+          "after": "|cffe4cfa3Волчья кровь|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 24939,
+          "after": "|cffe4cfa3Волчья кровь|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 24940,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обостряет рефлексы воргенов, увеличивая скорость перемещения на |cffc8e08735|cffced4da ед. и скорость атаки на |cffc8e08710%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da|n- |cffa9c7deТопорометатель|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0F5",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 24930,
+          "after": "|cffe4cfa3Дрессировка рыцарей|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 24931,
+          "after": "|cffe4cfa3Дрессировка рыцарей|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 24932,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья рыцарей на |cffc8e087100|cffced4da ед. и скорость атаки на |cffc8e08720%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРыцарь|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0EZ",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 24838,
+          "after": "|cffe4cfa3Познания магии — посвящение|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 24839,
+          "after": "|cffe4cfa3Познания магии — мастерство|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 24840,
+          "after": "|cffe4cfa3Познания магии — посвящение|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 24841,
+          "after": "|cffe4cfa3Познания магии — мастерство|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 24867,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны воргенов-магов на |cffc8e087100|cffced4da ед., скорость восстановления маны на |cffc8e0870.325|cffced4da/сек. и запас здоровья на |cffc8e08740|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВорген маг|cffced4da.|n|nУровень исследования: |cffffffff1/2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 24868,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает запас маны воргенов-магов ещё на |cffc8e087100|cffced4da ед., скорость восстановления маны на |cffc8e0870.325|cffced4da/сек. и запас здоровья на |cffc8e08740|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВорген маг|cffced4da.|n|nУровень исследования: |cffffffff2/2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0F1",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27941,
+          "after": "|cffe4cfa3Звериные рефлексы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 28001,
+          "after": "|cffe4cfa3Звериные рефлексы|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 24857,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дарует полудиким воргенам способность «|cffa9c7deЗвериные рефлексы|cffced4da», позволяющую с вероятностью |cffc8e0875%|cffced4da уклониться от атаки и с вероятностью |cffc8e0876%|cffced4da нанести |cffffffff1.5|cffced4da-кратный урон.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0F0",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 24851,
+          "after": "|cffe4cfa3Волчьи конечности|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 24852,
+          "after": "|cffe4cfa3Волчьи конечности|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 25986,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость перемещения стрелков, друидов, магов, полудиких воргенов и топорометателей на |cffc8e08735|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da|n- |cffa9c7deТопорометатель|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0F2",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 24858,
+          "after": "|cffe4cfa3Слияние с природой — посвящение|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 24859,
+          "after": "|cffe4cfa3Слияние с природой — мастерство|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 24860,
+          "after": "|cffe4cfa3Слияние с природой — посвящение|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 24861,
+          "after": "|cffe4cfa3Слияние с природой — мастерство|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 24862,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны друидов на |cffc8e087100|cffced4da ед., скорость восстановления маны на |cffc8e0870.325|cffced4da/сек. и запас здоровья на |cffc8e08740|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВорген друид|cffced4da.|n|nУровень исследования: |cffffffff1/2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 24863,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает запас маны друидов ещё на |cffc8e087100|cffced4da ед., скорость восстановления маны на |cffc8e0870.325|cffced4da/сек. и запас здоровья на |cffc8e08740|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВорген друид|cffced4da.|n|nУровень исследования: |cffffffff2/2|cffced4da.|r"
+        }
+      ]
+    }
+  ]
+}

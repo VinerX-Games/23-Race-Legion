@@ -1,0 +1,272 @@
+{
+  "scope": "Орда Второй Войны (HordeW2): категория 1 — Здания (13 зданий)",
+  "buildings_count": 13,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "w20q",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11791,
+          "after": "|cffe4cfa3Дом вождей|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11792,
+          "after": "|cffe4cfa3Дом вождей|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29700,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов, начальный запас пищи и доступ к базовым сооружениям.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБатрак|cffced4da: базовый рабочий, строитель и добытчик ресурсов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deВоенная экспертиза|cffced4da: повышает начальный опыт и боевые характеристики войск.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deКрепость|cffced4da: открывает доступ к передовым сооружениям и технологиям.|r"
+        }
+      ]
+    },
+    {
+      "id": "w20w",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11793,
+          "after": "|cffe4cfa3Крепость|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11794,
+          "after": "|cffe4cfa3Крепость|r (|cffffffffU|r)"
+        }
+      ]
+    },
+    {
+      "id": "w20e",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11795,
+          "after": "|cffe4cfa3Цитадель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11814,
+          "after": "|cffe4cfa3Цитадель|r (|cffffffffU|r)"
+        }
+      ]
+    },
+    {
+      "id": "w20r",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11815,
+          "after": "|cffe4cfa3Казармы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11816,
+          "after": "|cffe4cfa3Казармы|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29730,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Основное военное сооружение для подготовки пехоты и стрелков Орды.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРубака|cffced4da: стойкий орк-пехотинец ближнего боя.|n- |cffa9c7deМетатель топоров|cffced4da: лесной тролль дальнего боя.|n- |cffa9c7deОгр-воин|cffced4da: тяжелый двухголовый исполин ближнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deТренировки рубак|cffced4da: увеличивает запас здоровья и урон рубак.|n- |cffa9c7deТренировки огров|cffced4da: повышает запас здоровья огров.|n- |cffa9c7deТренировки метателей|cffced4da: увеличивает запас здоровья и дальность атаки метателей.|n- |cffa9c7deЗачарованные топоры|cffced4da: позволяет топорам отскакивать в дополнительные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "w20y",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11819,
+          "after": "|cffe4cfa3Свиноферма|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11820,
+          "after": "|cffe4cfa3Свиноферма|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29732,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию Орды провизией и увеличивает лимит войск.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|r"
+        }
+      ]
+    },
+    {
+      "id": "w214",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11885,
+          "after": "|cffe4cfa3Лесопилка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11886,
+          "after": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29960,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Центр сбора древесины и улучшения экипировки армии Орды.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deКрепкая броня|cffced4da: повышает защиту наземных войск Орды.|n- |cffa9c7deОружие ближнего боя|cffced4da: увеличивает урон воинов ближнего боя.|n- |cffa9c7deОружие дальнего боя|cffced4da: увеличивает урон стрелков.|n- |cffa9c7deУлучшенные пилы|cffced4da: повышает вместимость добываемой батраками древесины.|r"
+        }
+      ]
+    },
+    {
+      "id": "w20a",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11824,
+          "after": "|cffe4cfa3Алтарь бури|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11825,
+          "after": "|cffe4cfa3Алтарь бури|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29734,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище предков и темных сил. Позволяет призывать легендарных вождей Орды и воскрешать павших героев.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВождь Клана|cffced4da: могучий вождь ближнего боя.|n- |cffa9c7deСумеречный маг|cffced4da: двухголовый чернокнижник дальнего боя.|n- |cffa9c7deПредводитель троллей|cffced4da: смертоносный следопыт дальнего боя.|n- |cffa9c7deМэйм Блэкхенд|cffced4da: свирепый мастер клинка.|r"
+        }
+      ]
+    },
+    {
+      "id": "w20u",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11822,
+          "after": "|cffe4cfa3Сторожевая башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11823,
+          "after": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29733,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовое оборонительное сооружение Орды. Оснащено копьемётами для отражения вражеских атак с суши и воздуха.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "w20t",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 69,
+          "after": "|cffe4cfa3Тёмный храм|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 70,
+          "after": "|cffe4cfa3Тёмный храм|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29731,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Цитадель тёмных искусств и некромантии. Готовит могущественных колдунов и жрецов Орды.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРыцарь смерти|cffced4da: конный некромант, повелитель тёмной магии.|n- |cffa9c7deЖрец|cffced4da: священнослужитель троллей, лекарь и рассеиватель чар.|n- |cffa9c7deОгр-маг|cffced4da: двухголовый заклинатель, усиливающий союзников жаждой крови.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЧародейства огров|cffced4da: повышает здоровье, запас маны и открывает руны огров-магов.|n- |cffa9c7deРитуалы смерти|cffced4da: развивает некромантию и тёмные заклятия рыцарей смерти.|n- |cffa9c7deКолдовство вуду|cffced4da: увеличивает магический потенциал и силы жрецов.|r"
+        }
+      ]
+    },
+    {
+      "id": "w20i",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11889,
+          "after": "|cffe4cfa3Гоблинская лаборатория|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11890,
+          "after": "|cffe4cfa3Гоблинская лаборатория|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29961,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Мастерская гоблинских инженеров и алхимиков Орды.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deКатапульта|cffced4da: дальнобойное осадное орудие.|n- |cffa9c7deДирижабль|cffced4da: летающий транспорт и воздушный бомбардир.|n- |cffa9c7deПодрывной отряд|cffced4da: гоблины-саперы для подрыва зданий и укреплений.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deКомплектование дирижаблей|cffced4da: увеличивает шанс спасения пехоты и оснащает дирижабли ракетами.|n- |cffa9c7deЗаряды взрыводия|cffced4da: повышает разрушительную мощь и радиус подрывных отрядов.|r"
+        }
+      ]
+    },
+    {
+      "id": "w210",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11829,
+          "after": "|cffe4cfa3Логово красных драконов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11830,
+          "after": "|cffe4cfa3Логово красных драконов|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29740,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Загон клана Драконьей Пасти, в котором содержатся порабощенные красные драконы.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deКрасный дракон|cffced4da: могучий огнедышащий исполин небес.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deРазведение драконов|cffced4da: повышает дальность атаки и запас здоровья драконов.|r"
+        }
+      ]
+    },
+    {
+      "id": "w218",
+      "hotkey": "C",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22656,
+          "after": "|cffe4cfa3Верфь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22661,
+          "after": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28309,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Прибрежная верфь для строительства военного флота и добычи нефти.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da: корабль для освоения нефтяных месторождений.|n- |cffa9c7deТранспорт|cffced4da: судно для перевозки сухопутных войск.|n- |cffa9c7deФрегат|cffced4da: легкий патрульный боевой корабль.|n- |cffa9c7deДредноут|cffced4da: тяжелый бронированный флагман флота.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОрудия флота|cffced4da: повышает урон кораблей.|n- |cffa9c7deУкреплённый корпус|cffced4da: увеличивает запас здоровья и броню флота.|r"
+        }
+      ]
+    },
+    {
+      "id": "w219",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22670,
+          "after": "|cffe4cfa3Нефтяная платформа|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22676,
+          "after": "|cffe4cfa3Нефтяная платформа|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 22678,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Морская добывающая платформа, возводимая нефтяными танкерами над месторождениями нефти.|n|nДаёт постоянный прирост золота в казну Орды.|r"
+        }
+      ]
+    }
+  ]
+}

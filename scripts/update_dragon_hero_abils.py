@@ -1,0 +1,824 @@
+# -*- coding: utf-8 -*-
+"""Update Dragon race hero abilities (all 20 abilities, 56 levels) with complete SD/HD validation."""
+import hashlib
+import json
+from pathlib import Path
+import re
+import sys
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import wc3_hivewe as hw
+from wc3_object_tools import cli, require
+from apply_faceless_object_text import patch_blob
+
+def update_wts_string(wts_content: str, string_id: int, new_val: str) -> str:
+    pattern = rf"(STRING {string_id}\s*\{{\s*\r?\n)([\s\S]*?)(\r?\n\}})"
+    match = re.search(pattern, wts_content)
+    if not match:
+        raise ValueError(f"STRING {string_id} not found in WTS")
+    return re.sub(pattern, rf"\g<1>{new_val}\g<3>", wts_content, count=1)
+
+def main():
+    folder = ROOT / "docs/ui_text"
+    wts_path = ROOT / "map.w3x/war3map.wts"
+    w3a_path = ROOT / "map.w3x/war3map.w3a"
+    w3a_skin_path = ROOT / "map.w3x/war3mapSkin.w3a"
+
+    original_wts = wts_path.read_text(encoding="utf-8")
+    original_wts_hash = hashlib.sha256(wts_path.read_bytes()).hexdigest()
+    original_w3a_hash = hashlib.sha256(w3a_path.read_bytes()).hexdigest()
+    original_w3a_skin_hash = hashlib.sha256(w3a_skin_path.read_bytes()).hexdigest()
+
+    source = ROOT / "map.w3x"
+    other_binary_hashes = {
+        p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+        for p in source.glob("war3map*")
+        if p.is_file() and p.name not in ["war3map.wts", "war3map.w3a", "war3mapSkin.w3a"]
+    }
+
+    # Complete definitions of 20 hero abilities
+    hero_abilities = [
+        # --- НОЗДОРМУ (N040) ---
+        {
+            "id": "A0RB",
+            "name": "|cffe4cfa3Облик дракона|r",
+            "hotkey": "T",
+            "levels": 1,
+            "is_passive": False,
+            "is_innate": True,
+            "wts": {
+                "name": 16908,
+                "tip1": 16909,
+                "ubertip1": 23074
+            },
+            "values": {
+                "name": "|cffe4cfa3Облик дракона|r",
+                "tip1": "|cffe4cfa3Облик дракона|r (|cffffffffT|r)",
+                "ubertip1": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Принимает истинную форму бронзового дракона, "
+                    "получая дальний бой, бонус к запасу здоровья |cffffffff+500|cffced4da и повышенную живучесть.|n|n"
+                    "Длительность: |cffffffff60|cffced4da сек.|n"
+                    "Перезарядка: |cff60b8d0180|cffced4da сек.|r"
+                )
+            }
+        },
+        {
+            "id": "A0QY",
+            "name": "|cffe4cfa3Манипуляция времени|r",
+            "hotkey": "Q",
+            "levels": 4,
+            "is_passive": False,
+            "is_innate": False,
+            "wts": {
+                "name": 16701,
+                "researchtip": 16702,
+                "researchubertip": 16707,
+                "tip1": 16703, "ubertip1": 16708,
+                "tip2": 16704, "ubertip2": 16709,
+                "tip3": 16705, "ubertip3": 16710,
+                "tip4": 16706, "ubertip4": 16700
+            },
+            "values": {
+                "name": "|cffe4cfa3Манипуляция времени|r",
+                "researchtip": "Изучить «|cffe4cfa3Манипуляция времени|r» [|cffffffff%d-й уровень|r] (|cffffffffQ|r)",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт песчаную воронку времени, наносящую периодический урон наземным войскам в области.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: |cffffffff45|cffced4da ед. урона/сек. в первые 3 сек., малый урон затем|n"
+                    "- |cffffffff2|cffced4da: |cffffffff50|cffced4da ед. урона/сек. в первые 3 сек., малый урон затем|n"
+                    "- |cffffffff3|cffced4da: |cffffffff60|cffced4da ед. урона/сек. в первые 3 сек., малый урон затем|n"
+                    "- |cffffffff4|cffced4da: |cffffffff70|cffced4da ед. урона/сек. в первые 3 сек., малый урон затем.|r"
+                ),
+                "tip1": "|cffe4cfa3Манипуляция времени|r [|cffffffff1-й уровень|r] (|cffffffffQ|r)",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт песчаную воронку времени, наносящую наземным врагам в области |cffffffff45|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+                "tip2": "|cffe4cfa3Манипуляция времени|r [|cffffffff2-й уровень|r] (|cffffffffQ|r)",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт песчаную воронку времени, наносящую наземным врагам в области |cffffffff50|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+                "tip3": "|cffe4cfa3Манипуляция времени|r [|cffffffff3-й уровень|r] (|cffffffffQ|r)",
+                "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт песчаную воронку времени, наносящую наземным врагам в области |cffffffff60|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+                "tip4": "|cffe4cfa3Манипуляция времени|r [|cffffffff4-й уровень|r] (|cffffffffQ|r)",
+                "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт песчаную воронку времени, наносящую наземным врагам в области |cffffffff70|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+            }
+        },
+        {
+            "id": "A0R0",
+            "name": "|cffe4cfa3Ускорение времени|r",
+            "hotkey": "W",
+            "levels": 4,
+            "is_passive": False,
+            "is_innate": False,
+            "wts": {
+                "name": 16717,
+                "researchtip": 16718,
+                "researchubertip": 16723,
+                "tip1": 16719, "ubertip1": 16724,
+                "tip2": 16720, "ubertip2": 16725,
+                "tip3": 16721, "ubertip3": 16726,
+                "tip4": 16722, "ubertip4": 16727
+            },
+            "values": {
+                "name": "|cffe4cfa3Ускорение времени|r",
+                "researchtip": "Изучить «|cffe4cfa3Ускорение времени|r» [|cffffffff%d-й уровень|r] (|cffffffffW|r)",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускоряет течение времени для себя, повышая скорость атаки на |cffffffff+400%|cffced4da и скорость бега на |cffffffff+20%|cffced4da на |cffffffff12|cffced4da сек., но увеличивая получаемый урон.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: входящий урон |cffffffff+40%|cffced4da|n"
+                    "- |cffffffff2|cffced4da: входящий урон |cffffffff+40%|cffced4da|n"
+                    "- |cffffffff3|cffced4da: входящий урон |cffffffff+30%|cffced4da|n"
+                    "- |cffffffff4|cffced4da: входящий урон |cffffffff+20%|cffced4da.|r"
+                ),
+                "tip1": "|cffe4cfa3Ускорение времени|r [|cffffffff1-й уровень|r] (|cffffffffW|r)",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки на |cffffffff+400%|cffced4da и скорость бега на |cffffffff+20%|cffced4da на |cffffffff12|cffced4da сек., но увеличивает получаемый урон на |cffffffff+40%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+                "tip2": "|cffe4cfa3Ускорение времени|r [|cffffffff2-й уровень|r] (|cffffffffW|r)",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки на |cffffffff+400%|cffced4da и скорость бега на |cffffffff+20%|cffced4da на |cffffffff12|cffced4da сек., но увеличивает получаемый урон на |cffffffff+40%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+                "tip3": "|cffe4cfa3Ускорение времени|r [|cffffffff3-й уровень|r] (|cffffffffW|r)",
+                "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки на |cffffffff+400%|cffced4da и скорость бега на |cffffffff+20%|cffced4da на |cffffffff12|cffced4da сек., но увеличивает получаемый урон на |cffffffff+30%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+                "tip4": "|cffe4cfa3Ускорение времени|r [|cffffffff4-й уровень|r] (|cffffffffW|r)",
+                "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки на |cffffffff+400%|cffced4da и скорость бега на |cffffffff+20%|cffced4da на |cffffffff12|cffced4da сек., но увеличивает получаемый урон на |cffffffff+20%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+            }
+        },
+        {
+            "id": "A0QX",
+            "name": "|cffe4cfa3Здоровье прошлого|r",
+            "hotkey": "E",
+            "levels": 4,
+            "is_passive": False,
+            "is_innate": False,
+            "wts": {
+                "name": 16679,
+                "researchtip": 16680,
+                "researchubertip": 16685,
+                "tip1": 16681, "ubertip1": 16686,
+                "tip2": 16682, "ubertip2": 16687,
+                "tip3": 16683, "ubertip3": 16688,
+                "tip4": 16684, "ubertip4": 16689
+            },
+            "values": {
+                "name": "|cffe4cfa3Здоровье прошлого|r",
+                "researchtip": "Изучить «|cffe4cfa3Здоровье прошлого|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r)",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обращает время вспять, мгновенно восстанавливая запас здоровья героя.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: восстанавливает |cffffffff300|cffced4da ед. здоровья|n"
+                    "- |cffffffff2|cffced4da: восстанавливает |cffffffff400|cffced4da ед. здоровья|n"
+                    "- |cffffffff3|cffced4da: восстанавливает |cffffffff500|cffced4da ед. здоровья|n"
+                    "- |cffffffff4|cffced4da: восстанавливает |cffffffff600|cffced4da ед. здоровья.|r"
+                ),
+                "tip1": "|cffe4cfa3Здоровье прошлого|r [|cffffffff1-й уровень|r] (|cffffffffE|r)",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обращает время вспять, мгновенно восстанавливая |cffffffff300|cffced4da ед. здоровья героя.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+                "tip2": "|cffe4cfa3Здоровье прошлого|r [|cffffffff2-й уровень|r] (|cffffffffE|r)",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обращает время вспять, мгновенно восстанавливая |cffffffff400|cffced4da ед. здоровья героя.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+                "tip3": "|cffe4cfa3Здоровье прошлого|r [|cffffffff3-й уровень|r] (|cffffffffE|r)",
+                "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обращает время вспять, мгновенно восстанавливая |cffffffff500|cffced4da ед. здоровья героя.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+                "tip4": "|cffe4cfa3Здоровье прошлого|r [|cffffffff4-й уровень|r] (|cffffffffE|r)",
+                "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обращает время вспять, мгновенно восстанавливая |cffffffff600|cffced4da ед. здоровья героя.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+            }
+        },
+        {
+            "id": "A0QZ",
+            "name": "|cffe4cfa3Реинкарнация|r",
+            "hotkey": "R",
+            "levels": 2,
+            "is_passive": True,
+            "is_innate": False,
+            "wts": {
+                "name": 16711,
+                "researchtip": 16712,
+                "tip1": 16714,
+                "tip2": 16715, "ubertip2": 16716
+            },
+            "values": {
+                "name": "|cffe4cfa3Реинкарнация|r",
+                "researchtip": "Изучить «|cffe4cfa3Реинкарнация|r» [|cffffffff%d-й уровень|r]",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно возвращает героя к жизни с полным здоровьем и маной после гибели.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: перезарядка |cff60b8d0240|cffced4da сек.|n"
+                    "- |cffffffff2|cffced4da: перезарядка |cff60b8d0180|cffced4da сек.|r"
+                ),
+                "tip1": "|cffe4cfa3Реинкарнация|r [|cffffffff1-й уровень|r]",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно возвращает героя к жизни с полным здоровьем и маной после гибели.|n|nПерезарядка: |cff60b8d0240|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+                "tip2": "|cffe4cfa3Реинкарнация|r [|cffffffff2-й уровень|r]",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно возвращает героя к жизни с полным здоровьем и маной после гибели.|n|nПерезарядка: |cff60b8d0180|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+            },
+            "object_mods": {
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно возвращает героя к жизни с полным здоровьем и маной после гибели.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: перезарядка |cff60b8d0240|cffced4da сек.|n"
+                    "- |cffffffff2|cffced4da: перезарядка |cff60b8d0180|cffced4da сек.|r"
+                ),
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно возвращает героя к жизни с полным здоровьем и маной после гибели.|n|nПерезарядка: |cff60b8d0240|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r"
+            }
+        },
+
+        # --- ИЗЕРА (N047) ---
+        {
+            "id": "A0RD",
+            "name": "|cffe4cfa3Облик дракона|r",
+            "hotkey": "T",
+            "levels": 1,
+            "is_passive": False,
+            "is_innate": True,
+            "wts": {
+                "name": 16917,
+                "tip1": 16918,
+                "ubertip1": 23076
+            },
+            "values": {
+                "name": "|cffe4cfa3Облик дракона|r",
+                "tip1": "|cffe4cfa3Облик дракона|r (|cffffffffT|r)",
+                "ubertip1": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Принимает истинную форму зелёного дракона, "
+                    "получая дальний бой, бонус к запасу здоровья |cffffffff+500|cffced4da и повышенную живучесть.|n|n"
+                    "Длительность: |cffffffff60|cffced4da сек.|n"
+                    "Перезарядка: |cff60b8d0180|cffced4da сек.|r"
+                )
+            }
+        },
+        {
+            "id": "A0R4",
+            "name": "|cffe4cfa3Ярость Изеры|r",
+            "hotkey": "Q",
+            "levels": 4,
+            "is_passive": False,
+            "is_innate": False,
+            "wts": {
+                "name": 16798,
+                "researchtip": 16799,
+                "researchubertip": 16804,
+                "tip1": 16800, "ubertip1": 16805,
+                "tip2": 16801, "ubertip2": 16806,
+                "tip3": 16802, "ubertip3": 16803,
+                "tip4": 16803, "ubertip4": 16804  # note: WTS keys for lvl4
+            },
+            "values": {
+                "name": "|cffe4cfa3Ярость Изеры|r",
+                "researchtip": "Изучить «|cffe4cfa3Ярость Изеры|r» [|cffffffff%d-й уровень|r] (|cffffffffQ|r)",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает сокрушительную волну природной энергии, поражающую врагов на прямой линии.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: |cffffffff150|cffced4da ед. урона|n"
+                    "- |cffffffff2|cffced4da: |cffffffff225|cffced4da ед. урона|n"
+                    "- |cffffffff3|cffced4da: |cffffffff300|cffced4da ед. урона|n"
+                    "- |cffffffff4|cffced4da: |cffffffff375|cffced4da ед. урона.|r"
+                ),
+                "tip1": "|cffe4cfa3Ярость Изеры|r [|cffffffff1-й уровень|r] (|cffffffffQ|r)",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну природной энергии, наносящую |cffffffff150|cffced4da ед. урона врагам на линии.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+                "tip2": "|cffe4cfa3Ярость Изеры|r [|cffffffff2-й уровень|r] (|cffffffffQ|r)",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну природной энергии, наносящую |cffffffff225|cffced4da ед. урона врагам на линии.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+                "tip3": "|cffe4cfa3Ярость Изеры|r [|cffffffff3-й уровень|r] (|cffffffffQ|r)",
+                "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну природной энергии, наносящую |cffffffff300|cffced4da ед. урона врагам на линии.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+                "tip4": "|cffe4cfa3Ярость Изеры|r [|cffffffff4-й уровень|r] (|cffffffffQ|r)",
+                "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну природной энергии, наносящую |cffffffff375|cffced4da ед. урона врагам на линии.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+            }
+        },
+        {
+            "id": "A0R3",
+            "name": "|cffe4cfa3Аура жизни|r",
+            "hotkey": "W",
+            "levels": 4,
+            "is_passive": True,
+            "is_innate": False,
+            "wts": {
+                "name": 16784,
+                "researchtip": 16785,
+                "researchubertip": 16790,
+                "tip1": 16786, "ubertip1": 16791,
+                "tip2": 16787, "ubertip2": 16792,
+                "tip3": 16788, "ubertip3": 16793,
+                "tip4": 16789, "ubertip4": 16794
+            },
+            "values": {
+                "name": "|cffe4cfa3Аура жизни|r",
+                "researchtip": "Изучить «|cffe4cfa3Аура жизни|r» [|cffffffff%d-й уровень|r]",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивная аура, ускоряющая перемещение и регенерацию здоровья союзников в радиусе |cffffffff900|cffced4da.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: скорость бега |cffffffff+10%|cffced4da, регенерация |cffffffff+0,5|cffced4da ед./сек.|n"
+                    "- |cffffffff2|cffced4da: скорость бега |cffffffff+15%|cffced4da, регенерация |cffffffff+1|cffced4da ед./сек.|n"
+                    "- |cffffffff3|cffced4da: скорость бега |cffffffff+20%|cffced4da, регенерация |cffffffff+1,5|cffced4da ед./сек.|n"
+                    "- |cffffffff4|cffced4da: скорость бега |cffffffff+40%|cffced4da, регенерация |cffffffff+2|cffced4da ед./сек.|r"
+                ),
+                "tip1": "|cffe4cfa3Аура жизни|r [|cffffffff1-й уровень|r]",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения союзников на |cffffffff+10%|cffced4da и восстанавливает |cffffffff+0,5|cffced4da ед. здоровья в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+                "tip2": "|cffe4cfa3Аура жизни|r [|cffffffff2-й уровень|r] ",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения союзников на |cffffffff+15%|cffced4da и восстанавливает |cffffffff+1|cffced4da ед. здоровья в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+                "tip3": "|cffe4cfa3Аура жизни|r [|cffffffff3-й уровень|r]",
+                "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения союзников на |cffffffff+20%|cffced4da и восстанавливает |cffffffff+1,5|cffced4da ед. здоровья в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+                "tip4": "|cffe4cfa3Аура жизни|r [|cffffffff4-й уровень|r]",
+                "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения союзников на |cffffffff+40%|cffced4da и восстанавливает |cffffffff+2|cffced4da ед. здоровья в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+            }
+        },
+        {
+            "id": "A0R2",
+            "name": "|cffe4cfa3Немота|r",
+            "hotkey": "E",
+            "levels": 4,
+            "is_passive": False,
+            "is_innate": False,
+            "wts": {
+                "name": 16742,
+                "researchtip": 16743,
+                "researchubertip": 16748,
+                "tip1": 16744, "ubertip1": 16749,
+                "tip2": 16745, "ubertip2": 16750,
+                "tip3": 16746, "ubertip3": 16751,
+                "tip4": 16747, "ubertip4": 16752
+            },
+            "values": {
+                "name": "|cffe4cfa3Немота|r",
+                "researchtip": "Изучить «|cffe4cfa3Немота|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r)",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Запрещает врагам в области применять способности.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: радиус |cffffffff200|cffced4da, длительность |cffffffff16|cffced4da сек. (герои |cffffffff8|cffced4da сек.)|n"
+                    "- |cffffffff2|cffced4da: радиус |cffffffff275|cffced4da, длительность |cffffffff20|cffced4da сек. (герои |cffffffff8|cffced4da сек.)|n"
+                    "- |cffffffff3|cffced4da: радиус |cffffffff350|cffced4da, длительность |cffffffff24|cffced4da сек. (герои |cffffffff8|cffced4da сек.)|n"
+                    "- |cffffffff4|cffced4da: радиус |cffffffff425|cffced4da, длительность |cffffffff24|cffced4da сек. (герои |cffffffff8|cffced4da сек.).|r"
+                ),
+                "tip1": "|cffe4cfa3Немота|r [|cffffffff1-й уровень|r] (|cffffffffE|r)",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Запрещает врагам в радиусе |cffffffff200|cffced4da применять способности на |cffffffff16|cffced4da сек. (на героях |cffffffff8|cffced4da сек.).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+                "tip2": "|cffe4cfa3Немота|r [|cffffffff2-й уровень|r] (|cffffffffE|r)",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Запрещает врагам в радиусе |cffffffff275|cffced4da применять способности на |cffffffff20|cffced4da сек. (на героях |cffffffff8|cffced4da сек.).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+                "tip3": "|cffe4cfa3Немота|r [|cffffffff3-й уровень|r] (|cffffffffE|r)",
+                "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Запрещает врагам в радиусе |cffffffff350|cffced4da применять способности на |cffffffff24|cffced4da сек. (на героях |cffffffff8|cffced4da сек.).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+                "tip4": "|cffe4cfa3Немота|r [|cffffffff4-й уровень|r] (|cffffffffE|r)",
+                "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Запрещает врагам в радиусе |cffffffff425|cffced4da применять способности на |cffffffff24|cffced4da сек. (на героях |cffffffff8|cffced4da сек.).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+            }
+        },
+        {
+            "id": "A1MX",
+            "name": "|cffe4cfa3Частица изумрудного сна|r",
+            "hotkey": "R",
+            "levels": 2,
+            "is_passive": False,
+            "is_innate": False,
+            "wts": {
+                "name": 16734,
+                "tip1": 16735,
+                "ubertip1": 39196,
+                "tip2": 16736,
+                "ubertip2": 39197
+            },
+            "values": {
+                "name": "|cffe4cfa3Частица изумрудного сна|r",
+                "researchtip": "Изучить «|cffe4cfa3Частица изумрудного сна|r» [|cffffffff%d-й уровень|r] (|cffffffffR|r)",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Заключает врагов в сонный кокон, оглушая наземных противников и нанося им урон.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: урон и оглушение врагов в области|n"
+                    "- |cffffffff2|cffced4da: повышенный урон и длительность оглушения.|r"
+                ),
+                "tip1": "|cffe4cfa3Частица изумрудного сна|r [|cffffffff1-й уровень|r] (|cffffffffR|r)",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Заключает наземных врагов в кокон сна, нанося урон и оглушая цели в области.|n|nПерезарядка: |cff60b8d060|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+                "tip2": "|cffe4cfa3Частица изумрудного сна|r [|cffffffff2-й уровень|r] (|cffffffffR|r)",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Заключает наземных врагов в кокон сна, нанося повышенный урон и оглушая цели в области.|n|nПерезарядка: |cff60b8d060|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+            },
+            "object_mods": {
+                "researchtip": "Изучить «|cffe4cfa3Частица изумрудного сна|r» [|cffffffff%d-й уровень|r] (|cffffffffR|r)",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Заключает врагов в сонный кокон, оглушая наземных противников и нанося им урон.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: урон и оглушение врагов в области|n"
+                    "- |cffffffff2|cffced4da: повышенный урон и длительность оглушения.|r"
+                )
+            }
+        },
+
+        # --- АЛЕКСТРАЗА (N046) ---
+        {
+            "id": "A0RA",
+            "name": "|cffe4cfa3Облик дракона|r",
+            "hotkey": "T",
+            "levels": 1,
+            "is_passive": False,
+            "is_innate": True,
+            "wts": {
+                "name": 16883,
+                "tip1": 16884,
+                "ubertip1": 23073
+            },
+            "values": {
+                "name": "|cffe4cfa3Облик дракона|r",
+                "tip1": "|cffe4cfa3Облик дракона|r (|cffffffffT|r)",
+                "ubertip1": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Принимает истинную форму красного дракона, "
+                    "получая дальний бой, бонус к запасу здоровья |cffffffff+500|cffced4da и повышенную живучесть.|n|n"
+                    "Длительность: |cffffffff60|cffced4da сек.|n"
+                    "Перезарядка: |cff60b8d0180|cffced4da сек.|r"
+                )
+            }
+        },
+        {
+            "id": "A0R5",
+            "name": "|cffe4cfa3Огненный ливень|r",
+            "hotkey": "Q",
+            "levels": 4,
+            "is_passive": False,
+            "is_innate": False,
+            "wts": {
+                "name": 16807,
+                "researchtip": 16808,
+                "researchubertip": 16813,
+                "tip1": 16809,
+                "tip2": 16810, "ubertip2": 16815,
+                "tip3": 16811, "ubertip3": 16816,
+                "tip4": 16812, "ubertip4": 16817
+            },
+            "values": {
+                "name": "|cffe4cfa3Огненный ливень|r",
+                "researchtip": "Изучить «|cffe4cfa3Огненный ливень|r» [|cffffffff%d-й уровень|r] (|cffffffffQ|r)",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на выбранную область 9 волн пламени, наносящих мгновенный и периодический урон огнём.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: |cffffffff35|cffced4da ед. урона/волна, |cffffffff15|cffced4da ед./сек. горения|n"
+                    "- |cffffffff2|cffced4da: |cffffffff55|cffced4da ед. урона/волна, |cffffffff20|cffced4da ед./сек. горения|n"
+                    "- |cffffffff3|cffced4da: |cffffffff60|cffced4da ед. урона/волна, |cffffffff25|cffced4da ед./сек. горения|n"
+                    "- |cffffffff4|cffced4da: |cffffffff85|cffced4da ед. урона/волна, |cffffffff30|cffced4da ед./сек. горения.|r"
+                ),
+                "tip1": "|cffe4cfa3Огненный ливень|r [|cffffffff1-й уровень|r] (|cffffffffQ|r)",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на область |cffffffff9|cffced4da волн огня. Каждая волна наносит |cffffffff35|cffced4da ед. урона сразу и поджигает врагов на |cffffffff15|cffced4da ед./сек. на |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+                "tip2": "|cffe4cfa3Огненный ливень|r [|cffffffff2-й уровень|r] (|cffffffffQ|r)",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на область |cffffffff9|cffced4da волн огня. Каждая волна наносит |cffffffff55|cffced4da ед. урона сразу и поджигает врагов на |cffffffff20|cffced4da ед./сек. на |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+                "tip3": "|cffe4cfa3Огненный ливень|r [|cffffffff3-й уровень|r] (|cffffffffQ|r)",
+                "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на область |cffffffff9|cffced4da волн огня. Каждая волна наносит |cffffffff60|cffced4da ед. урона сразу и поджигает врагов на |cffffffff25|cffced4da ед./сек. на |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+                "tip4": "|cffe4cfa3Огненный ливень|r [|cffffffff4-й уровень|r] (|cffffffffQ|r)",
+                "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на область |cffffffff9|cffced4da волн огня. Каждая волна наносит |cffffffff85|cffced4da ед. урона сразу и поджигает врагов на |cffffffff30|cffced4da ед./сек. на |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+            },
+            "object_mods": {
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на область |cffffffff9|cffced4da волн огня. Каждая волна наносит |cffffffff35|cffced4da ед. урона сразу и поджигает врагов на |cffffffff15|cffced4da ед./сек. на |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+            }
+        },
+        {
+            "id": "A0R6",
+            "name": "|cffe4cfa3Возмездие пламени|r",
+            "hotkey": "W",
+            "levels": 4,
+            "is_passive": False,
+            "is_innate": False,
+            "wts": {
+                "name": 16821,
+                "researchtip": 16822,
+                "researchubertip": 16827,
+                "tip1": 16823, "ubertip1": 16828,
+                "tip2": 16824, "ubertip2": 16829,
+                "tip3": 16825, "ubertip3": 16830,
+                "tip4": 16826, "ubertip4": 16831
+            },
+            "values": {
+                "name": "|cffe4cfa3Возмездие пламени|r",
+                "researchtip": "Изучить «|cffe4cfa3Возмездие пламени|r» [|cffffffff%d-й уровень|r] (|cffffffffW|r)",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает кольцо огненных потоков, поражающих всех ближайших противников.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: |cffffffff150|cffced4da ед. урона (радиус 400)|n"
+                    "- |cffffffff2|cffced4da: |cffffffff250|cffced4da ед. урона (радиус 450)|n"
+                    "- |cffffffff3|cffced4da: |cffffffff350|cffced4da ед. урона (радиус 475)|n"
+                    "- |cffffffff4|cffced4da: |cffffffff450|cffced4da ед. урона (радиус 475).|r"
+                ),
+                "tip1": "|cffe4cfa3Возмездие пламени|r [|cffffffff1-й уровень|r] (|cffffffffW|r)",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает огненные потоки, наносящие |cffffffff150|cffced4da ед. урона врагам в радиусе |cffffffff400|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+                "tip2": "|cffe4cfa3Возмездие пламени|r [|cffffffff2-й уровень|r] (|cffffffffW|r)",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает огненные потоки, наносящие |cffffffff250|cffced4da ед. урона врагам в радиусе |cffffffff450|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+                "tip3": "|cffe4cfa3Возмездие пламени|r [|cffffffff3-й уровень|r] (|cffffffffW|r)",
+                "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает огненные потоки, наносящие |cffffffff350|cffced4da ед. урона врагам в радиусе |cffffffff475|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+                "tip4": "|cffe4cfa3Возмездие пламени|r [|cffffffff4-й уровень|r] (|cffffffffW|r)",
+                "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает огненные потоки, наносящие |cffffffff450|cffced4da ед. урона врагам в радиусе |cffffffff475|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+            }
+        },
+        {
+            "id": "A0R7",
+            "name": "|cffe4cfa3Огненная стрела|r",
+            "hotkey": "E",
+            "levels": 4,
+            "is_passive": False,
+            "is_innate": False,
+            "wts": {
+                "name": 16843,
+                "researchtip": 16844,
+                "researchubertip": 16841,
+                "tip1": 16837, "ubertip1": 16832,
+                "tip2": 16838, "ubertip2": 16833,
+                "tip3": 16839, "ubertip3": 16834,
+                "tip4": 16840, "ubertip4": 16835
+            },
+            "values": {
+                "name": "|cffe4cfa3Огненная стрела|r",
+                "researchtip": "Изучить «|cffe4cfa3Огненная стрела|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r)",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает сгусток концентрированного пламени, наносящий урон цели и оглушающий её.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: |cffffffff200|cffced4da ед. урона, оглушение |cffffffff2|cffced4da сек.|n"
+                    "- |cffffffff2|cffced4da: |cffffffff300|cffced4da ед. урона, оглушение |cffffffff3|cffced4da сек.|n"
+                    "- |cffffffff3|cffced4da: |cffffffff400|cffced4da ед. урона, оглушение |cffffffff4|cffced4da сек.|n"
+                    "- |cffffffff4|cffced4da: |cffffffff500|cffced4da ед. урона, оглушение |cffffffff5|cffced4da сек.|r"
+                ),
+                "tip1": "|cffe4cfa3Огненная стрела|r [|cffffffff1-й уровень|r] (|cffffffffE|r)",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff200|cffced4da ед. урона и оглушает цель на |cffffffff2|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+                "tip2": "|cffe4cfa3Огненная стрела|r [|cffffffff2-й уровень|r] (|cffffffffE|r)",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff300|cffced4da ед. урона и оглушает цель на |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+                "tip3": "|cffe4cfa3Огненная стрела|r [|cffffffff3-й уровень|r] (|cffffffffE|r)",
+                "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff400|cffced4da ед. урона и оглушает цель на |cffffffff4|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+                "tip4": "|cffe4cfa3Огненная стрела|r [|cffffffff4-й уровень|r] (|cffffffffE|r)",
+                "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff500|cffced4da ед. урона и оглушает цель на |cffffffff5|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+            }
+        },
+        {
+            "id": "A0R8",
+            "name": "|cffe4cfa3Пожар|r",
+            "hotkey": "R",
+            "levels": 2,
+            "is_passive": False,
+            "is_innate": False,
+            "wts": {
+                "name": 16846,
+                "researchtip": 16847,
+                "researchubertip": 16852,
+                "tip1": 16848, "ubertip1": 16853,
+                "tip2": 16849, "ubertip2": 16854
+            },
+            "values": {
+                "name": "|cffe4cfa3Пожар|r",
+                "researchtip": "Изучить «|cffe4cfa3Пожар|r» [|cffffffff%d-й уровень|r] (|cffffffffR|r)",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Временно наделяет атаки героя способностью поражать до |cffffffff11|cffced4da целей одновременно на |cffffffff15|cffced4da сек.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: перезарядка |cff60b8d0180|cffced4da сек.|n"
+                    "- |cffffffff2|cffced4da: перезарядка |cff60b8d0150|cffced4da сек.|r"
+                ),
+                "tip1": "|cffe4cfa3Пожар|r [|cffffffff1-й уровень|r] (|cffffffffR|r)",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Позволяет атаковать до |cffffffff11|cffced4da целей одновременно в течение |cffffffff15|cffced4da сек.|n|nПерезарядка: |cff60b8d0180|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+                "tip2": "|cffe4cfa3Пожар|r [|cffffffff2-й уровень|r] (|cffffffffR|r)",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Позволяет атаковать до |cffffffff11|cffced4da целей одновременно в течение |cffffffff15|cffced4da сек.|n|nПерезарядка: |cff60b8d0150|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+            }
+        },
+
+        # --- МАЛИГОС (N045) ---
+        {
+            "id": "A0RC",
+            "name": "|cffe4cfa3Облик дракона|r",
+            "hotkey": "T",
+            "levels": 1,
+            "is_passive": False,
+            "is_innate": True,
+            "wts": {
+                "name": 16914,
+                "tip1": 16915,
+                "ubertip1": 23075
+            },
+            "values": {
+                "name": "|cffe4cfa3Облик дракона|r",
+                "tip1": "|cffe4cfa3Облик дракона|r (|cffffffffT|r)",
+                "ubertip1": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Принимает истинную форму синего дракона, "
+                    "получая дальний бой, бонус к запасу здоровья |cffffffff+500|cffced4da и повышенную живучесть.|n|n"
+                    "Длительность: |cffffffff60|cffced4da сек.|n"
+                    "Перезарядка: |cff60b8d0180|cffced4da сек.|r"
+                )
+            }
+        },
+        {
+            "id": "A0QV",
+            "name": "|cffe4cfa3Поле астрала|r",
+            "hotkey": "Q",
+            "levels": 4,
+            "is_passive": False,
+            "is_innate": False,
+            "wts": {
+                "name": 16663,
+                "researchtip": 16671,
+                "researchubertip": 16672,
+                "tip1": 16661, "ubertip1": 16662,
+                "tip2": 16665, "ubertip2": 16668,
+                "tip3": 16666, "ubertip3": 16669,
+                "tip4": 16667, "ubertip4": 16670
+            },
+            "values": {
+                "name": "|cffe4cfa3Поле астрала|r",
+                "researchtip": "Изучить «|cffe4cfa3Поле астрала|r» [|cffffffff%d-й уровень|r] (|cffffffffQ|r)",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Переводит всех воинов в выбранной области в астральное измерение, защищая от физических атак, но делая уязвимыми к магии.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: радиус |cffffffff200|cffced4da|n"
+                    "- |cffffffff2|cffced4da: радиус |cffffffff225|cffced4da|n"
+                    "- |cffffffff3|cffced4da: радиус |cffffffff250|cffced4da|n"
+                    "- |cffffffff4|cffced4da: радиус |cffffffff300|cffced4da.|r"
+                ),
+                "tip1": "|cffe4cfa3Поле астрала|r [|cffffffff1-й уровень|r] (|cffffffffQ|r)",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Переводит всех воинов в радиусе |cffffffff200|cffced4da в астральную форму.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+                "tip2": "|cffe4cfa3Поле астрала|r [|cffffffff2-й уровень|r] (|cffffffffQ|r)",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Переводит всех воинов в радиусе |cffffffff225|cffced4da в астральную форму.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+                "tip3": "|cffe4cfa3Поле астрала|r [|cffffffff3-й уровень|r] (|cffffffffQ|r)",
+                "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Переводит всех воинов в радиусе |cffffffff250|cffced4da в астральную форму.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+                "tip4": "|cffe4cfa3Поле астрала|r [|cffffffff4-й уровень|r] (|cffffffffQ|r)",
+                "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Переводит всех воинов в радиусе |cffffffff300|cffced4da в астральную форму.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+            }
+        },
+        {
+            "id": "A0QU",
+            "name": "|cffe4cfa3Искры мощи|r",
+            "hotkey": "W",
+            "levels": 4,
+            "is_passive": False,
+            "is_innate": False,
+            "wts": {
+                "name": 16647,
+                "researchtip": 16648,
+                "researchubertip": 11402,
+                "tip1": 16650, "ubertip1": 16655,
+                "tip2": 16651, "ubertip2": 16656,
+                "tip3": 16652, "ubertip3": 16657,
+                "tip4": 16653, "ubertip4": 16658
+            },
+            "values": {
+                "name": "|cffe4cfa3Искры мощи|r",
+                "researchtip": "Изучить «|cffe4cfa3Искры мощи|r» [|cffffffff%d-й уровень|r] (|cffffffffW|r)",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область сгустками маны, оглушая врагов на |cffffffff1|cffced4da сек. и нанося урон.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: |cffffffff6|cffced4da искр по |cffffffff11|cffced4da ед. урона|n"
+                    "- |cffffffff2|cffced4da: |cffffffff12|cffced4da искр по |cffffffff20|cffced4da ед. урона|n"
+                    "- |cffffffff3|cffced4da: |cffffffff18|cffced4da искр по |cffffffff27|cffced4da ед. урона|n"
+                    "- |cffffffff4|cffced4da: |cffffffff24|cffced4da искр по |cffffffff40|cffced4da ед. урона.|r"
+                ),
+                "tip1": "|cffe4cfa3Искры мощи|r [|cffffffff1-й уровень|r] (|cffffffffW|r)",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает область |cffffffff6|cffced4da искрами маны, каждая из которых наносит |cffffffff11|cffced4da ед. урона и оглушает врагов на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+                "tip2": "|cffe4cfa3Искры мощи|r [|cffffffff2-й уровень|r] (|cffffffffW|r)",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает область |cffffffff12|cffced4da искрами маны, каждая из которых наносит |cffffffff20|cffced4da ед. урона и оглушает врагов на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+                "tip3": "|cffe4cfa3Искры мощи|r [|cffffffff3-й уровень|r] (|cffffffffW|r)",
+                "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает область |cffffffff18|cffced4da искрами маны, каждая из которых наносит |cffffffff27|cffced4da ед. урона и оглушает врагов на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+                "tip4": "|cffe4cfa3Искры мощи|r [|cffffffff4-й уровень|r] (|cffffffffW|r)",
+                "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает область |cffffffff24|cffced4da искрами маны, каждая из которых наносит |cffffffff40|cffced4da ед. урона и оглушает врагов на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+            }
+        },
+        {
+            "id": "A0QT",
+            "name": "|cffe4cfa3Владыка магии|r",
+            "hotkey": "E",
+            "levels": 4,
+            "is_passive": True,
+            "is_innate": False,
+            "wts": {
+                "name": 16636,
+                "researchtip": 16637,
+                "researchubertip": 16642,
+                "tip1": 16638, "ubertip1": 16643,
+                "tip2": 16639, "ubertip2": 16644,
+                "tip3": 16640, "ubertip3": 16645,
+                "tip4": 16641, "ubertip4": 16635
+            },
+            "values": {
+                "name": "|cffe4cfa3Владыка магии|r",
+                "researchtip": "Изучить «|cffe4cfa3Владыка магии|r» [|cffffffff%d-й уровень|r]",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивная аура, ускоряющая восстановление маны находящихся рядом союзников.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: регенерация маны |cffffffff+0,75|cffced4da ед./сек.|n"
+                    "- |cffffffff2|cffced4da: регенерация маны |cffffffff+1,25|cffced4da ед./сек.|n"
+                    "- |cffffffff3|cffced4da: регенерация маны |cffffffff+2|cffced4da ед./сек.|n"
+                    "- |cffffffff4|cffced4da: регенерация маны |cffffffff+3|cffced4da ед./сек.|r"
+                ),
+                "tip1": "|cffe4cfa3Владыка магии|r [|cffffffff1-й уровень|r]",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость восстановления маны союзников на |cffffffff+0,75|cffced4da ед./сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+                "tip2": "|cffe4cfa3Владыка магии|r [|cffffffff2-й уровень|r]",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость восстановления маны союзников на |cffffffff+1,25|cffced4da ед./сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+                "tip3": "|cffe4cfa3Владыка магии|r [|cffffffff3-й уровень|r]",
+                "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость восстановления маны союзников на |cffffffff+2|cffced4da ед./сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+                "tip4": "|cffe4cfa3Владыка магии|r [|cffffffff4-й уровень|r]",
+                "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость восстановления маны союзников на |cffffffff+3|cffced4da ед./сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+            }
+        },
+        {
+            "id": "A10E",
+            "name": "|cffe4cfa3Пожирание магии|r",
+            "hotkey": "R",
+            "levels": 2,
+            "is_passive": False,
+            "is_innate": False,
+            "wts": {
+                "name": 22384,
+                "researchtip": 16986,
+                "researchubertip": 22388,
+                "tip1": 22386,
+                "tip2": 16954, "ubertip2": 22385
+            },
+            "values": {
+                "name": "|cffe4cfa3Пожирание магии|r",
+                "researchtip": "Изучить «|cffe4cfa3Пожирание магии|r» [|cffffffff%d-й уровень|r] (|cffffffffR|r)",
+                "researchubertip": (
+                    "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поглощает магические эффекты в области, восстанавливая здоровье и ману герою, и наносит урон призванным существам.|n|n"
+                    "|cffa6afb8Уровни:|cffced4da|n"
+                    "- |cffffffff1|cffced4da: |cffffffff+50|cffced4da здоровья и |cffffffff+75|cffced4da маны за эффект, |cffffffff400|cffced4da урона призванным|n"
+                    "- |cffffffff2|cffced4da: |cffffffff+60|cffced4da здоровья и |cffffffff+85|cffced4da маны за эффект, |cffffffff500|cffced4da урона призванным.|r"
+                ),
+                "tip1": "|cffe4cfa3Пожирание магии|r [|cffffffff1-й уровень|r] (|cffffffffR|r)",
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поглощает заклинания в области, восполняя |cffffffff50|cffced4da здоровья и |cffffffff75|cffced4da маны за каждую цель. Наносит |cffffffff400|cffced4da ед. урона призванным существам.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+                "tip2": "|cffe4cfa3Пожирание магии|r [|cffffffff2-й уровень|r] (|cffffffffR|r)",
+                "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поглощает заклинания в области, восполняя |cffffffff60|cffced4da здоровья и |cffffffff85|cffced4da маны за каждую цель. Наносит |cffffffff500|cffced4da ед. урона призванным существам.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+            },
+            "object_mods": {
+                "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поглощает заклинания в области, восполняя |cffffffff50|cffced4da здоровья и |cffffffff75|cffced4da маны за каждую цель. Наносит |cffffffff400|cffced4da ед. урона призванным существам.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r"
+            }
+        }
+    ]
+
+    audit_file = folder / "dragon_hero_abils_audit.json"
+    audit = json.loads(audit_file.read_text(encoding="utf-8"))
+
+    # Update WTS strings and prepare object ops
+    updated_wts = original_wts
+    wts_changed_ids = []
+    object_ops = []
+
+    for a in hero_abilities:
+        aid = a["id"]
+        audit_fields = audit.get(aid, {}).get("fields", {})
+        for f, val in a["values"].items():
+            finfo = audit_fields.get(f)
+            if finfo and finfo.get("is_wts"):
+                string_id = finfo["wts_id"]
+                updated_wts = update_wts_string(updated_wts, string_id, val)
+                wts_changed_ids.append(string_id)
+            else:
+                object_ops.append({
+                    "type": "ability",
+                    "id": aid,
+                    "field": f,
+                    "value": val
+                })
+
+    wts_path.write_text(updated_wts, encoding="utf-8")
+    new_wts_hash = hashlib.sha256(wts_path.read_bytes()).hexdigest()
+
+    if object_ops:
+        w3a_bytes = w3a_path.read_bytes()
+        new_w3a, _ = patch_blob(w3a_bytes, object_ops, "ability", add_missing=True)
+        w3a_path.write_bytes(new_w3a)
+        new_w3a_hash = hashlib.sha256(w3a_path.read_bytes()).hexdigest()
+
+        w3a_skin_bytes = w3a_skin_path.read_bytes()
+        new_w3a_skin, _ = patch_blob(w3a_skin_bytes, object_ops, "ability", add_missing=True)
+        w3a_skin_path.write_bytes(new_w3a_skin)
+        new_w3a_skin_hash = hashlib.sha256(w3a_skin_path.read_bytes()).hexdigest()
+    else:
+        new_w3a_hash = original_w3a_hash
+        new_w3a_skin_hash = original_w3a_skin_hash
+
+    # Readback checks in SD and HD
+    checks = []
+    abil_ids = [a["id"] for a in hero_abilities]
+    for hd in (False, True):
+        hd_flag = ["--hd"] if hd else []
+        bulk = require(cli(["get-objects-bulk", "--type", "ability", "--ids", ",".join(abil_ids)] + hd_flag))
+        wts_dict = hw.load_wts_strings()
+        resolve = lambda s: wts_dict.get(int(s[8:]), s) if isinstance(s, str) and s.startswith("TRIGSTR_") else s
+
+        objects_by_id = {obj["id"]: obj["fields"] for obj in bulk.get("objects", [])}
+        for a in hero_abilities:
+            fields = objects_by_id.get(a["id"], {})
+            verified_fields = []
+            for f, expected_val in a["values"].items():
+                actual_val = resolve(fields.get(f, ""))
+                assert actual_val == expected_val, (
+                    f"Mismatch for {a['id']}.{f} (hd={hd}):\nActual: '{actual_val}'\nExpected: '{expected_val}'"
+                )
+                verified_fields.append(f)
+
+            checks.append({
+                "id": a["id"],
+                "variant": "HD" if hd else "SD",
+                "fields_verified": verified_fields
+            })
+
+    # Save artifacts
+    registry = {
+        "race": "Dragon",
+        "category": "hero_abilities",
+        "total_abilities": len(hero_abilities),
+        "total_levels": sum(a["levels"] for a in hero_abilities),
+        "hero_abilities": hero_abilities
+    }
+    (folder / "dragon_hero_abilities.json").write_text(json.dumps(registry, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    apply_artifact = {
+        "race": "Dragon",
+        "category": "hero_abilities",
+        "wts_keys_updated": sorted(list(set(wts_changed_ids))),
+        "wts_hash_before": original_wts_hash,
+        "wts_hash_after": new_wts_hash,
+        "w3a_hash_before": original_w3a_hash,
+        "w3a_hash_after": new_w3a_hash,
+        "w3a_skin_hash_before": original_w3a_skin_hash,
+        "w3a_skin_hash_after": new_w3a_skin_hash,
+        "other_binary_hashes": other_binary_hashes,
+        "checks": checks
+    }
+    (folder / "dragon_hero_abilities_apply.json").write_text(json.dumps(apply_artifact, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    print(f"Successfully updated {len(hero_abilities)} Dragon hero abilities ({len(set(wts_changed_ids))} WTS keys, {len(object_ops)} blob patches).")
+    print(f"Verified {len(checks)} SD/HD object checks.")
+
+if __name__ == "__main__":
+    main()

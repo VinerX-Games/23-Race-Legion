@@ -1,0 +1,240 @@
+{
+  "scope": "Гилнеас (Gilneas / Worgens): категория 2 — Юниты (11 юнитов)",
+  "units_count": 11,
+  "variants": [
+    "SD"
+  ],
+  "units": [
+    {
+      "id": "h0IT",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22673,
+          "after": "|cffe4cfa3Постройщик|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22680,
+          "after": "|cffe4cfa3Постройщик|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 22674,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий Гилнеаса. Добывает золото и древесину, возводит и ремонтирует здания.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deНебольшой скачок|cffced4da: мгновенно перемещается на короткую дистанцию.|n- |cffa9c7deСбор ресурсов|cffced4da: добывает золото в рудниках и рубит деревья.|n- |cffa9c7deРемонт|cffced4da: восстанавливает прочность зданий.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0IU",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22832,
+          "after": "|cffe4cfa3Пехотинец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22436,
+          "after": "|cffe4cfa3Пехотинец|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 27684,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый пехотинец ближнего боя в форме волка.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗащита|cffced4da: уменьшает получаемый урон от стрелков и отражает пронзающие атаки.|n- |cffa9c7deНутро зверя|cffced4da: пробивает среднюю и тяжёлую броню цели.|n- |cffa9c7deКровотечение|cffced4da: периодический урон после атаки.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0IV",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22836,
+          "after": "|cffe4cfa3Стрелок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 9361,
+          "after": "|cffe4cfa3Стрелок|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 27690,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Меткий стрелок дальнего боя, вооружённый длинноствольным мушкетом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deДлинноствольные мушкеты|cffced4da: увеличивает дальность стрельбы.|n- |cffa9c7deНутро зверя|cffced4da: пробивает броню цели.|n- |cffa9c7deКровотечение|cffced4da: периодический урон после атаки.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0IW",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22478,
+          "after": "|cffe4cfa3Рыцарь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22600,
+          "after": "|cffe4cfa3Рыцарь|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31278,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый бронированный кавалерист Гилнеаса.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deНутро зверя|cffced4da: пробивает среднюю и тяжёлую броню цели.|n- |cffa9c7deКровотечение|cffced4da: периодический урон после атаки.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0IX",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22857,
+          "after": "|cffe4cfa3Ворген друид|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22858,
+          "after": "|cffe4cfa3Ворген друид|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31470,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Целитель и маг поддержки, черпающий силы из дикой природы.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЭссенция здоровья|cffced4da: восстанавливает здоровье союзникам рядом.|n- |cffa9c7deВой|cffced4da: повышает урон союзных войск на |cffffffff25%|cffced4da.|n- |cffa9c7deНутро зверя|cffced4da: пробивает броню цели.|n- |cffa9c7deКровотечение|cffced4da: периодический урон после атаки.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0IY",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22865,
+          "after": "|cffe4cfa3Пехотинец (человек)|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22833,
+          "after": "|cffe4cfa3Пехотинец (человек)|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31608,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Человеческий пехотинец Гилнеаса со щитом и мечом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗащита|cffced4da: уменьшает получаемый урон от стрелков и отражает пронзающие атаки.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0IZ",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22853,
+          "after": "|cffe4cfa3Рыцарь (человек)|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22854,
+          "after": "|cffe4cfa3Рыцарь (человек)|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31610,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Человеческий кавалерист в тяжёлых доспехах.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМастерство|cffced4da: шанс нанести критический урон.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0J0",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22495,
+          "after": "|cffe4cfa3Ворген маг|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22497,
+          "after": "|cffe4cfa3Ворген маг|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31674,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Боевой заклинатель, использующий тёмную магию и первобытные усиления.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРассеивание чар|cffced4da: снимает положительные заклинания с врагов и наносит урон призванным существам.|n- |cffa9c7deДух зверя|cffced4da: увеличивает скорость атаки и передвижения союзника.|n- |cffa9c7deТемная стая|cffced4da: выпускает стаю нетопырей, поражающую врагов на линии.|n- |cffa9c7deНутро зверя|cffced4da: пробивает броню цели.|n- |cffa9c7deКровотечение|cffced4da: периодический урон после атаки.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0J1",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22548,
+          "after": "|cffe4cfa3Полудикий ворген|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22551,
+          "after": "|cffe4cfa3Полудикий ворген|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31726,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Свирепый боец передовой линии с острыми когтями.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗвериные рефлексы|cffced4da: шанс уклониться от вражеской атаки и нанести критический удар.|n- |cffa9c7deНутро зверя|cffced4da: пробивает среднюю и тяжёлую броню цели.|n- |cffa9c7deКровотечение|cffced4da: периодический урон после атаки.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NA",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32792,
+          "after": "|cffe4cfa3Топорометатель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32793,
+          "after": "|cffe4cfa3Топорометатель|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31729,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Опытный метатель топоров, поражающий врагов на средней дистанции.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМетнуть топор|cffced4da: бросает топор, нанося урон и оглушая цель.|n- |cffa9c7deЯростный бросок|cffced4da: шанс нанести критический урон при атаке.|n- |cffa9c7deНутро зверя|cffced4da: пробивает броню цели.|n- |cffa9c7deКровотечение|cffced4da: периодический урон после атаки.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o02T",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22860,
+          "after": "|cffe4cfa3Катапульта|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22861,
+          "after": "|cffe4cfa3Катапульта|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31609,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлое осадное орудие дальнего боя. Наносит осадный урон по площади.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    }
+  ]
+}

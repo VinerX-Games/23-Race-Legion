@@ -1,0 +1,1284 @@
+{
+  "scope": "Only declared active levels of the migrated Faceless abilities and direct shared dependencies",
+  "buff_sources": {
+    "B08F": [
+      {
+        "ability": "A06M",
+        "level": 1
+      }
+    ],
+    "BPSE": [
+      {
+        "ability": "A0DW",
+        "level": 1
+      },
+      {
+        "ability": "A10L",
+        "level": 1
+      },
+      {
+        "ability": "A10L",
+        "level": 2
+      },
+      {
+        "ability": "A10L",
+        "level": 3
+      },
+      {
+        "ability": "A10L",
+        "level": 4
+      },
+      {
+        "ability": "A10W",
+        "level": 1
+      }
+    ],
+    "Bust": [
+      {
+        "ability": "A0PB",
+        "level": 1
+      }
+    ],
+    "BNab": [
+      {
+        "ability": "A0PC",
+        "level": 1
+      }
+    ],
+    "BOwd": [
+      {
+        "ability": "A0T7",
+        "level": 1
+      },
+      {
+        "ability": "A0VE",
+        "level": 1
+      },
+      {
+        "ability": "A116",
+        "level": 1
+      },
+      {
+        "ability": "ACtn",
+        "level": 1
+      }
+    ],
+    "BUan": [
+      {
+        "ability": "A0V5",
+        "level": 1
+      },
+      {
+        "ability": "A0V5",
+        "level": 2
+      },
+      {
+        "ability": "A0V5",
+        "level": 3
+      },
+      {
+        "ability": "A0V5",
+        "level": 4
+      }
+    ],
+    "Bakb": [
+      {
+        "ability": "A0V7",
+        "level": 1
+      },
+      {
+        "ability": "A0V7",
+        "level": 2
+      },
+      {
+        "ability": "A0V7",
+        "level": 3
+      },
+      {
+        "ability": "A0V7",
+        "level": 4
+      }
+    ],
+    "B05N": [
+      {
+        "ability": "A0VD",
+        "level": 1
+      }
+    ],
+    "B05O": [
+      {
+        "ability": "A0VF",
+        "level": 1
+      }
+    ],
+    "B02L": [
+      {
+        "ability": "A0WQ",
+        "level": 1
+      },
+      {
+        "ability": "A0WQ",
+        "level": 2
+      },
+      {
+        "ability": "A0WQ",
+        "level": 3
+      },
+      {
+        "ability": "A0WQ",
+        "level": 4
+      }
+    ],
+    "BHtc": [
+      {
+        "ability": "A10H",
+        "level": 1
+      },
+      {
+        "ability": "A10H",
+        "level": 2
+      },
+      {
+        "ability": "A10H",
+        "level": 3
+      },
+      {
+        "ability": "A10H",
+        "level": 4
+      }
+    ],
+    "BEim": [
+      {
+        "ability": "A10J",
+        "level": 1
+      },
+      {
+        "ability": "A10J",
+        "level": 2
+      },
+      {
+        "ability": "A10J",
+        "level": 3
+      },
+      {
+        "ability": "A10J",
+        "level": 4
+      }
+    ],
+    "BEia": [
+      {
+        "ability": "A10J",
+        "level": 1
+      },
+      {
+        "ability": "A10J",
+        "level": 2
+      },
+      {
+        "ability": "A10J",
+        "level": 3
+      },
+      {
+        "ability": "A10J",
+        "level": 4
+      }
+    ],
+    "BOwk": [
+      {
+        "ability": "A10N",
+        "level": 1
+      },
+      {
+        "ability": "A10N",
+        "level": 2
+      },
+      {
+        "ability": "A10N",
+        "level": 3
+      },
+      {
+        "ability": "A10N",
+        "level": 4
+      }
+    ],
+    "BNht": [
+      {
+        "ability": "A10P",
+        "level": 1
+      }
+    ],
+    "B08E": [
+      {
+        "ability": "A10R",
+        "level": 1
+      },
+      {
+        "ability": "A10R",
+        "level": 2
+      },
+      {
+        "ability": "A10R",
+        "level": 3
+      },
+      {
+        "ability": "A10R",
+        "level": 4
+      }
+    ],
+    "BUdd": [
+      {
+        "ability": "A10S",
+        "level": 1
+      },
+      {
+        "ability": "A10S",
+        "level": 2
+      }
+    ],
+    "BUts": [
+      {
+        "ability": "A111",
+        "level": 1
+      }
+    ],
+    "Bfro": [
+      {
+        "ability": "A112",
+        "level": 1
+      }
+    ],
+    "BUsl": [
+      {
+        "ability": "A113",
+        "level": 1
+      }
+    ],
+    "Bslo": [
+      {
+        "ability": "A114",
+        "level": 1
+      }
+    ],
+    "Bcrs": [
+      {
+        "ability": "A115",
+        "level": 1
+      }
+    ],
+    "BHtb": [
+      {
+        "ability": "A126",
+        "level": 1
+      }
+    ],
+    "BHab": [
+      {
+        "ability": "A12H",
+        "level": 1
+      },
+      {
+        "ability": "A12H",
+        "level": 2
+      },
+      {
+        "ability": "A12H",
+        "level": 3
+      },
+      {
+        "ability": "A12H",
+        "level": 4
+      }
+    ],
+    "AEtr": [
+      {
+        "ability": "A12J",
+        "level": 1
+      },
+      {
+        "ability": "A12J",
+        "level": 2
+      }
+    ],
+    "BHds": [
+      {
+        "ability": "A145",
+        "level": 1
+      }
+    ],
+    "B030": [
+      {
+        "ability": "A15N",
+        "level": 1
+      }
+    ],
+    "Bvng": [
+      {
+        "ability": "A16N",
+        "level": 1
+      }
+    ],
+    "BUfa": [
+      {
+        "ability": "A16O",
+        "level": 1
+      }
+    ],
+    "Bspl": [
+      {
+        "ability": "A16Q",
+        "level": 1
+      }
+    ],
+    "Brej": [
+      {
+        "ability": "A16T",
+        "level": 1
+      }
+    ],
+    "BIcb": [
+      {
+        "ability": "A1CF",
+        "level": 1
+      },
+      {
+        "ability": "A1CF",
+        "level": 2
+      },
+      {
+        "ability": "A1CF",
+        "level": 3
+      }
+    ],
+    "B01I": [
+      {
+        "ability": "A1CG",
+        "level": 1
+      },
+      {
+        "ability": "A1CG",
+        "level": 2
+      }
+    ],
+    "B01D": [
+      {
+        "ability": "A1KB",
+        "level": 1
+      }
+    ],
+    "BOsf": [
+      {
+        "ability": "A1NA",
+        "level": 1
+      },
+      {
+        "ability": "A1NB",
+        "level": 1
+      }
+    ],
+    "Bena": [
+      {
+        "ability": "ACen",
+        "level": 1
+      }
+    ],
+    "Beng": [
+      {
+        "ability": "ACen",
+        "level": 1
+      }
+    ]
+  },
+  "objects": [
+    {
+      "fields": {
+        "buffid1": "B08F",
+        "buffid2": "BUau",
+        "buffid3": "BUau",
+        "buffid4": "BUau",
+        "levels": "1"
+      },
+      "id": "A06M",
+      "name": "|cffe4cfa3\u0414\u044b\u043c\u043a\u0430 \u0431\u0435\u0437\u0434\u043d\u044b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BPSE",
+        "buffid2": "BPSE",
+        "buffid3": "BPSE",
+        "buffid4": "BPSE",
+        "levels": "1"
+      },
+      "id": "A0DW",
+      "name": "|cffe4cfa3\u0421\u0438\u043b\u044c\u043d\u044b\u0439 \u0443\u0434\u0430\u0440|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A0I3",
+      "name": "|cffe4cfa3\u041d\u0435\u0431\u043e\u043b\u044c\u0448\u043e\u0439 \u0441\u043a\u0430\u0447\u043e\u043a|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A0I6",
+      "name": "|cffe4cfa3\u0410\u043d\u0442\u0438\u043c\u0430\u0433\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0431\u0440\u043e\u043d\u044f|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A0IQ",
+      "name": "|cffe4cfa3\u041d\u0430\u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435 \u0441\u0442\u043e\u043b\u0438\u0446\u044b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A0LI",
+      "name": "|cffe4cfa3\u041e\u0431\u043c\u0435\u043d \u0437\u043e\u043b\u043e\u0442\u0430 \u043d\u0430 \u0434\u0440\u0435\u0432\u0435\u0441\u0438\u043d\u0443|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A0LJ",
+      "name": "|cffe4cfa3\u041e\u0431\u043c\u0435\u043d \u0434\u0440\u0435\u0432\u0435\u0441\u0438\u043d\u044b \u043d\u0430 \u0437\u043e\u043b\u043e\u0442\u043e|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bust",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A0PB",
+      "name": "|cffe4cfa3\u041a\u043e\u0448\u043c\u0430\u0440|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BNab",
+        "buffid2": "BNab",
+        "buffid3": "BNab",
+        "buffid4": "BNab",
+        "levels": "1"
+      },
+      "id": "A0PC",
+      "name": "|cffe4cfa3\u042f\u0434 \u043a\u043e\u0448\u043c\u0430\u0440\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A0RR",
+      "name": "|cffe4cfa3\u0412\u0437\u0440\u044b\u0432 \u042d\u0444\u0438\u0440\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A0RS",
+      "name": "|cffe4cfa3\u0420\u0430\u0441\u0441\u0435\u043a\u0430\u044e\u0449\u0438\u0439 \u0443\u0434\u0430\u0440|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A0T3",
+      "name": "|cffe4cfa3\u0417\u0430\u043b\u043f\u043e\u0432\u044b\u0439 \u043e\u0433\u043e\u043d\u044c|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BOwd",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A0T7",
+      "name": "|cffe4cfa3\u0429\u0443\u043f\u0430\u043b\u044c\u0446\u0435 \u0419\u043e\u0433\u0433`\u0421\u0430\u0440\u043e\u043d\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BUan",
+        "buffid2": "BUan",
+        "buffid3": "BUan",
+        "buffid4": "BUan",
+        "levels": "4"
+      },
+      "id": "A0V5",
+      "name": "|cffe4cfa3\u0412\u0435\u0447\u043d\u0430\u044f \u0441\u043b\u0443\u0436\u0431\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bakb",
+        "buffid2": "Bakb",
+        "buffid3": "Bakb",
+        "buffid4": "Bakb",
+        "levels": "4"
+      },
+      "id": "A0V7",
+      "name": "|cffe4cfa3\u041f\u0440\u0438\u043a\u0430\u0437 \u0433\u0435\u043d\u0435\u0440\u0430\u043b\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A0VC",
+      "name": "|cffe4cfa3\u041a\u0430\u0441\u0430\u043d\u0438\u0435 \u0431\u0435\u0437\u0443\u043c\u0438\u044f|r"
+    },
+    {
+      "fields": {
+        "buffid1": "B05N",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A0VD",
+      "name": "|cffe4cfa3\u0422\u0451\u043c\u043d\u043e\u0435 \u0443\u0441\u0438\u043b\u0435\u043d\u0438\u0435|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BOwd",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A0VE",
+      "name": "|cffe4cfa3\u041f\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0435 \u0449\u0443\u043f\u0430\u043b\u044c\u0446\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "B05O",
+        "buffid2": "BUav",
+        "buffid3": "BUav",
+        "buffid4": "BUav",
+        "levels": "1"
+      },
+      "id": "A0VF",
+      "name": "|cffe4cfa3\u0410\u0443\u0440\u0430 \u043e\u0442\u0433\u043e\u043b\u043e\u0441\u043a\u0430 \u0419\u043e\u0433\u0433`\u0421\u0430\u0440\u043e\u043d\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A0VG",
+      "name": "|cffe4cfa3\u0414\u0430\u0440 \u0419\u043e\u0433\u0433`\u0421\u0430\u0440\u043e\u043d\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "2"
+      },
+      "id": "A0W4",
+      "name": "|cffe4cfa3\u041f\u043e\u0434\u0447\u0438\u043d\u0435\u043d\u0438\u0435|r"
+    },
+    {
+      "fields": {
+        "buffid1": "B02L",
+        "buffid2": "B02L",
+        "buffid3": "B02L",
+        "buffid4": "B02L",
+        "levels": "4"
+      },
+      "id": "A0WQ",
+      "name": "|cffe4cfa3\u0412\u0437\u0440\u044b\u0432 \u0431\u0435\u0437\u0434\u043d\u044b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BHtc",
+        "buffid2": "BHtc",
+        "buffid3": "BHtc",
+        "buffid4": "BHtc",
+        "levels": "4"
+      },
+      "id": "A10H",
+      "name": "|cffe4cfa3\u0423\u0434\u0430\u0440 \u043a\u043b\u0435\u0448\u043d\u0451\u0439|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "4"
+      },
+      "id": "A10I",
+      "name": "|cffe4cfa3\u041a\u0440\u0435\u043f\u043a\u0438\u0439 \u043f\u0430\u043d\u0446\u0438\u0440\u044c|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BEim,BEia",
+        "buffid2": "BEim,BEia",
+        "buffid3": "BEim,BEia",
+        "buffid4": "BEim,BEia",
+        "levels": "4"
+      },
+      "id": "A10J",
+      "name": "|cffe4cfa3\u041e\u0431\u0436\u0438\u0433\u0430\u044e\u0449\u0438\u0439 \u0436\u0430\u0440|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "2"
+      },
+      "id": "A10K",
+      "name": "|cffe4cfa3\u0422\u0451\u043c\u043d\u044b\u0439 \u043f\u043e\u0440\u0442\u0430\u043b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BPSE",
+        "buffid2": "BPSE",
+        "buffid3": "BPSE",
+        "buffid4": "BPSE",
+        "levels": "4"
+      },
+      "id": "A10L",
+      "name": "|cffe4cfa3\u0421\u043e\u0442\u0440\u044f\u0441\u0435\u043d\u0438\u0435 \u0411\u0435\u0437\u0434\u043d\u044b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BOwk",
+        "buffid2": "BOwk",
+        "buffid3": "BOwk",
+        "buffid4": "BOwk",
+        "levels": "4"
+      },
+      "id": "A10N",
+      "name": "|cffe4cfa3\u0421\u043e\u043a\u0440\u044b\u0442\u0438\u0435 \u0411\u0435\u0437\u0434\u043d\u043e\u0439|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BNht",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A10P",
+      "name": "|cffe4cfa3\u0423\u0436\u0430\u0441\u0430\u044e\u0449\u0438\u0439 \u0432\u043e\u0439|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "4"
+      },
+      "id": "A10Q",
+      "name": "|cffe4cfa3\u0422\u0451\u043c\u043d\u044b\u0439 \u0440\u0430\u0441\u043a\u043e\u043b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "B08E",
+        "buffid2": "B08E",
+        "buffid3": "B08E",
+        "buffid4": "B08E",
+        "levels": "4"
+      },
+      "id": "A10R",
+      "name": "|cffe4cfa3\u0410\u0443\u0440\u0430 \u0411\u0435\u0437\u0434\u043d\u044b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BUdd",
+        "buffid2": "BUdd",
+        "buffid3": "BUdd",
+        "buffid4": "BUdd",
+        "levels": "2"
+      },
+      "id": "A10S",
+      "name": "|cffe4cfa3\u041f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u043e \u0411\u0435\u0437\u0434\u043d\u044b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A10T",
+      "name": "|cffe4cfa3\u0420\u043e\u0439 \u0441\u0430\u0440\u0430\u043d\u0447\u0438|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A10U",
+      "name": "|cffe4cfa3\u0420\u043e\u0439 \u0441\u0430\u0440\u0430\u043d\u0447\u0438|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A10V",
+      "name": "|cffe4cfa3\u0420\u043e\u0439 \u0441\u0430\u0440\u0430\u043d\u0447\u0438|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BPSE",
+        "buffid2": "BPSE",
+        "buffid3": "BPSE",
+        "buffid4": "BPSE",
+        "levels": "1"
+      },
+      "id": "A10W",
+      "name": "|cffe4cfa3\u0421\u043e\u0442\u0440\u044f\u0441\u0435\u043d\u0438\u0435 \u0411\u0435\u0437\u0434\u043d\u044b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A10X",
+      "name": "|cffe4cfa3\u0420\u0430\u0437\u0440\u0443\u0448\u0435\u043d\u0438\u0435 \u042d\u0444\u0438\u0440\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A10Y",
+      "name": "|cffe4cfa3\u041a\u0440\u0435\u043f\u043a\u0438\u0439 \u043f\u0430\u043d\u0446\u0438\u0440\u044c|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A10Z",
+      "name": "|cffe4cfa3\u0421\u0438\u043b\u0430 \u0411\u0435\u0437\u0434\u043d\u044b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BUts",
+        "buffid2": "BUts",
+        "buffid3": "BUts",
+        "buffid4": "BUts",
+        "levels": "1"
+      },
+      "id": "A111",
+      "name": "|cffe4cfa3\u0422\u0451\u043c\u043d\u0430\u044f \u043e\u0431\u043e\u043b\u043e\u0447\u043a\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bfro",
+        "buffid2": "Bfro",
+        "buffid3": "Bfro",
+        "buffid4": "Bfro",
+        "levels": "1"
+      },
+      "id": "A112",
+      "name": "|cffe4cfa3\u0418\u043d\u0435\u0439|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BUsl",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A113",
+      "name": "|cffe4cfa3\u041a\u043e\u0448\u043c\u0430\u0440|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bslo",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A114",
+      "name": "|cffe4cfa3\u0417\u0430\u043c\u0435\u0434\u043b\u0435\u043d\u0438\u0435|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bcrs",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A115",
+      "name": "|cffe4cfa3\u041f\u0440\u043e\u043a\u043b\u044f\u0442\u0438\u0435|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BOwd",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A116",
+      "name": "|cffe4cfa3\u041f\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0435 \u0449\u0443\u043f\u0430\u043b\u044c\u0446\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A11G",
+      "name": "|cffe4cfa3\u041f\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0435 \u043f\u0440\u0438\u0434\u0430\u0442\u043a\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A122",
+      "name": "|cffe4cfa3\u041a\u0440\u0430\u0436\u0430 \u0431\u0443\u0434\u0443\u0449\u0435\u0433\u043e|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A123",
+      "name": "|cffe4cfa3\u0420\u0435\u0438\u043d\u043a\u0430\u0440\u043d\u0430\u0446\u0438\u044f|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BHtb",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A126",
+      "name": "|cffe4cfa3\u041b\u0435\u0434\u044f\u043d\u0430\u044f \u0441\u0442\u0440\u0435\u043b\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A12G",
+      "name": "|cffe4cfa3\u0421\u043b\u0443\u0436\u0435\u043d\u0438\u0435 \u0419\u043e\u0433\u0433`\u0421\u0430\u0440\u043e\u043d\u0443|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BHab",
+        "buffid2": "BHab",
+        "buffid3": "BHab",
+        "buffid4": "BHab",
+        "levels": "4"
+      },
+      "id": "A12H",
+      "name": "|cffe4cfa3\u0410\u043d\u0442\u0438\u043c\u0430\u0433\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0430\u0443\u0440\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A12I",
+      "name": "|cffe4cfa3\u0421\u0430\u0440\u043e\u043d\u0438\u0442\u043e\u0432\u044b\u0439 \u043f\u0430\u043d\u0446\u0438\u0440\u044c|r"
+    },
+    {
+      "fields": {
+        "buffid1": "AEtr",
+        "buffid2": "AEtr",
+        "buffid3": "AEtr",
+        "buffid4": "AEtr",
+        "levels": "2"
+      },
+      "id": "A12J",
+      "name": "|cffe4cfa3\u041f\u0430\u0440\u044b \u0441\u0430\u0440\u043e\u043d\u0438\u0442\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BHds",
+        "buffid2": "BHds",
+        "buffid3": "BHds",
+        "buffid4": "BHds",
+        "levels": "1"
+      },
+      "id": "A145",
+      "name": "|cffe4cfa3\u041d\u0435\u0443\u044f\u0437\u0432\u0438\u043c\u043e\u0441\u0442\u044c \u0441\u0442\u043e\u043b\u0438\u0446\u044b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "B030",
+        "buffid2": "B030",
+        "buffid3": "BUau",
+        "buffid4": "BUau",
+        "levels": "1"
+      },
+      "id": "A15N",
+      "name": "|cffe4cfa3\u0417\u043e\u043d\u0430 \u0440\u0435\u043c\u043e\u043d\u0442\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bvng",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A16N",
+      "name": "|cffe4cfa3\u041f\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0435 \u041a\u043e\u0448\u043c\u0430\u0440\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BUfa",
+        "buffid2": "BUfa",
+        "buffid3": "BUfa",
+        "buffid4": "BUfa",
+        "levels": "1"
+      },
+      "id": "A16O",
+      "name": "|cffe4cfa3\u041c\u043e\u0440\u043e\u0437\u043d\u044b\u0439 \u0434\u043e\u0441\u043f\u0435\u0445|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A16P",
+      "name": "|cffe4cfa3\u041f\u0440\u043e\u043d\u0437\u0430\u043d\u0438\u0435|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bspl",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A16Q",
+      "name": "|cffe4cfa3\u0421\u043c\u0435\u0440\u0442\u0435\u043b\u044c\u043d\u0430\u044f \u0441\u0432\u044f\u0437\u044c|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A16R",
+      "name": "|cffe4cfa3\u0411\u043e\u0436\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0435 \u0432\u0438\u0434\u0435\u043d\u0438\u0435|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Brej",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A16T",
+      "name": "|cffe4cfa3\u041f\u043e\u043a\u0440\u043e\u0432\u0438\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u043e \u0431\u043e\u0433\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BIcb",
+        "buffid2": "BIcb",
+        "buffid3": "BIcb",
+        "buffid4": "BIcb",
+        "levels": "3"
+      },
+      "id": "A1CF",
+      "name": "|cffe4cfa3\u041f\u043e\u043c\u0443\u0442\u043d\u0435\u043d\u0438\u0435 \u0440\u0430\u0441\u0441\u0443\u0434\u043a\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "B01I",
+        "buffid2": "B01I",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "2"
+      },
+      "id": "A1CG",
+      "name": "|cffe4cfa3\u041c\u0435\u0442\u043a\u0430 \u043e\u0445\u043e\u0442\u043d\u0438\u043a\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "4"
+      },
+      "id": "A1CH",
+      "name": "|cffe4cfa3\u0421\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0431\u0435\u0437\u0434\u043d\u044b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "4"
+      },
+      "id": "A1CI",
+      "name": "|cffe4cfa3\u0412\u0430\u043c\u043f\u0438\u0440\u0438\u0437\u043c \u0431\u0435\u0437\u0434\u043d\u044b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "4"
+      },
+      "id": "A1CJ",
+      "name": "|cffe4cfa3\u0411\u0435\u0437\u0443\u043c\u0438\u0435 \u0431\u0435\u0437\u0434\u043d\u044b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "3"
+      },
+      "id": "A1CK",
+      "name": "|cffe4cfa3\u041f\u043e\u043c\u0443\u0442\u043d\u0435\u043d\u0438\u0435 \u0440\u0430\u0437\u0443\u043c\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "B01D",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A1KB",
+      "name": "|cffe4cfa3\u0417\u0430\u0449\u0438\u0442\u0430 \u0441\u0442\u043e\u043b\u0438\u0446\u044b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A1N5",
+      "name": "|cffe4cfa3\u0412\u0437\u0440\u044b\u0432 \u042d\u0444\u0438\u0440\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BOsf",
+        "buffid2": "BOsf",
+        "buffid3": "BOsf",
+        "buffid4": "BOsf",
+        "levels": "1"
+      },
+      "id": "A1NA",
+      "name": "|cffe4cfa3\u041f\u0440\u0438\u0437\u044b\u0432 \u0431\u0435\u0441\u0441\u043c\u0435\u0440\u0442\u043d\u044b\u0445 \u0441\u0442\u0440\u0430\u0436\u0435\u0439|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BOsf",
+        "buffid2": "BOsf",
+        "buffid3": "BOsf",
+        "buffid4": "BOsf",
+        "levels": "1"
+      },
+      "id": "A1NB",
+      "name": "|cffe4cfa3\u041f\u0440\u0438\u0437\u044b\u0432 \u0441\u0443\u0449\u043d\u043e\u0441\u0442\u0435\u0439 \u0411\u0435\u0437\u0434\u043d\u044b|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A1NC",
+      "name": "|cffe4cfa3\u041f\u043e\u0440\u0442\u0430\u043b \u0432 \u0411\u0435\u0437\u0434\u043d\u0443|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A1R2",
+      "name": "|cffe4cfa3\u041f\u043e\u0436\u0438\u0440\u0430\u043d\u0438\u0435 \u041c\u0430\u0433\u0438\u0438|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A1R3",
+      "name": "|cffe4cfa3\u041f\u043e\u0436\u0438\u0440\u0430\u043d\u0438\u0435|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "A1R5",
+      "name": "|cffe4cfa3\u041f\u043e\u0436\u0438\u0440\u0430\u043d\u0438\u0435|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "ACce",
+      "name": "|cffe4cfa3\u0420\u0430\u0441\u0441\u0435\u043a\u0430\u044e\u0449\u0438\u0439 \u0443\u0434\u0430\u0440|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bena,Beng",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "ACen",
+      "name": "|cffe4cfa3\u041e\u043f\u0443\u0442\u044b\u0432\u0430\u043d\u0438\u0435|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BOwd",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "ACtn",
+      "name": "|cffe4cfa3\u041f\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u0438\u0435 \u0449\u0443\u043f\u0430\u043b\u044c\u0446\u0430|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "ANha",
+      "name": "|cffe4cfa3\u0414\u043e\u0431\u044b\u0447\u0430 \u0440\u0435\u0441\u0443\u0440\u0441\u043e\u0432|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "Argl",
+      "name": "|cffe4cfa3\u041f\u0440\u0438\u0451\u043c \u0440\u0435\u0441\u0443\u0440\u0441\u043e\u0432|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "levels": "1"
+      },
+      "id": "Arst",
+      "name": "|cffe4cfa3\u0420\u0435\u043c\u043e\u043d\u0442|r"
+    }
+  ]
+}

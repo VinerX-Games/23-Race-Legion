@@ -1,0 +1,1422 @@
+{
+  "A0AW": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_26651",
+        "wts_id": 26651,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_7892",
+        "wts_id": 7892,
+        "is_shared": false
+      },
+      "tip2": {
+        "raw": "TRIGSTR_7874",
+        "wts_id": 7874,
+        "is_shared": false
+      },
+      "tip3": {
+        "raw": "TRIGSTR_7875",
+        "wts_id": 7875,
+        "is_shared": false
+      },
+      "tip4": {
+        "raw": "TRIGSTR_7876",
+        "wts_id": 7876,
+        "is_shared": false
+      },
+      "tip5": {
+        "raw": "TRIGSTR_7877",
+        "wts_id": 7877,
+        "is_shared": false
+      },
+      "tip6": {
+        "raw": "TRIGSTR_7878",
+        "wts_id": 7878,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_7893",
+        "wts_id": 7893,
+        "is_shared": false
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_7881",
+        "wts_id": 7881,
+        "is_shared": false
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_7882",
+        "wts_id": 7882,
+        "is_shared": false
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_7883",
+        "wts_id": 7883,
+        "is_shared": false
+      },
+      "ubertip5": {
+        "raw": "TRIGSTR_7884",
+        "wts_id": 7884,
+        "is_shared": false
+      },
+      "ubertip6": {
+        "raw": "TRIGSTR_7885",
+        "wts_id": 7885,
+        "is_shared": false
+      }
+    }
+  },
+  "A0AV": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_26646",
+        "wts_id": 26646,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_7890",
+        "wts_id": 7890,
+        "is_shared": false
+      },
+      "tip2": {
+        "raw": "TRIGSTR_7860",
+        "wts_id": 7860,
+        "is_shared": false
+      },
+      "tip3": {
+        "raw": "TRIGSTR_7853",
+        "wts_id": 7853,
+        "is_shared": false
+      },
+      "tip4": {
+        "raw": "TRIGSTR_7855",
+        "wts_id": 7855,
+        "is_shared": false
+      },
+      "tip5": {
+        "raw": "TRIGSTR_7864",
+        "wts_id": 7864,
+        "is_shared": false
+      },
+      "tip6": {
+        "raw": "TRIGSTR_7868",
+        "wts_id": 7868,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_7891",
+        "wts_id": 7891,
+        "is_shared": false
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_7859",
+        "wts_id": 7859,
+        "is_shared": false
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_7861",
+        "wts_id": 7861,
+        "is_shared": false
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_10988",
+        "wts_id": 10988,
+        "is_shared": false
+      },
+      "ubertip5": {
+        "raw": "TRIGSTR_10989",
+        "wts_id": 10989,
+        "is_shared": false
+      },
+      "ubertip6": {
+        "raw": "TRIGSTR_10990",
+        "wts_id": 10990,
+        "is_shared": false
+      }
+    }
+  },
+  "A0A6": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_20662",
+        "wts_id": 20662,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_20661",
+        "wts_id": 20661,
+        "is_shared": false
+      },
+      "tip2": {
+        "raw": "TRIGSTR_21116",
+        "wts_id": 21116,
+        "is_shared": false
+      },
+      "tip3": {
+        "raw": "TRIGSTR_21255",
+        "wts_id": 21255,
+        "is_shared": false
+      },
+      "tip4": {
+        "raw": "TRIGSTR_21295",
+        "wts_id": 21295,
+        "is_shared": false
+      },
+      "tip5": {
+        "raw": "TRIGSTR_21698",
+        "wts_id": 21698,
+        "is_shared": false
+      },
+      "tip6": {
+        "raw": "TRIGSTR_21699",
+        "wts_id": 21699,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_20660",
+        "wts_id": 20660,
+        "is_shared": false
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_20663",
+        "wts_id": 20663,
+        "is_shared": false
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_20859",
+        "wts_id": 20859,
+        "is_shared": false
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_20886",
+        "wts_id": 20886,
+        "is_shared": false
+      },
+      "ubertip5": {
+        "raw": "TRIGSTR_21024",
+        "wts_id": 21024,
+        "is_shared": false
+      },
+      "ubertip6": {
+        "raw": "TRIGSTR_21074",
+        "wts_id": 21074,
+        "is_shared": false
+      },
+      "ubertip:custom,v01": {
+        "raw": "\"С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:custom,v02": {
+        "raw": "\"С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:custom,v03": {
+        "raw": "\"С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:custom,v11": {
+        "raw": "\"С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:custom,v12": {
+        "raw": "\"С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:custom,v13": {
+        "raw": "\"С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:melee,v01": {
+        "raw": "\"С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:melee,v02": {
+        "raw": "\"С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:melee,v03": {
+        "raw": "\"С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      }
+    }
+  },
+  "A0D6": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_26714",
+        "wts_id": 26714,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_26715",
+        "wts_id": 26715,
+        "is_shared": false
+      },
+      "tip2": {
+        "raw": "\"Огненный столб [|cffffcc002-й уровень|r]\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "tip3": {
+        "raw": "\"Огненный столб [|cffffcc003-й уровень|r]\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "tip4": {
+        "raw": "TRIGSTR_6067",
+        "wts_id": 6067,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_9531",
+        "wts_id": 9531,
+        "is_shared": false
+      },
+      "ubertip2": {
+        "raw": "\"Создает огненный столб, наносящий наземным войскам в указанной области 80 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать небольшой урон.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip3": {
+        "raw": "\"Создает огненный столб, наносящий наземным войскам в указанной области 110 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать умеренный урон.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_5618",
+        "wts_id": 5618,
+        "is_shared": false
+      }
+    }
+  },
+  "A0AX": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_7555",
+        "wts_id": 7555,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_7556",
+        "wts_id": 7556,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "\"Восполняет <Ahea,DataA1> здоровья раненому союзнику. Не действует на технику.\"",
+        "wts_id": null,
+        "is_shared": true
+      }
+    }
+  },
+  "A0D2": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_26699",
+        "wts_id": 26699,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_26705",
+        "wts_id": 26705,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_3534",
+        "wts_id": 3534,
+        "is_shared": true
+      }
+    }
+  },
+  "A0Z4": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_5308",
+        "wts_id": 5308,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_14342",
+        "wts_id": 14342,
+        "is_shared": false
+      },
+      "tip2": {
+        "raw": "TRIGSTR_9747",
+        "wts_id": 9747,
+        "is_shared": false
+      },
+      "tip3": {
+        "raw": "TRIGSTR_9748",
+        "wts_id": 9748,
+        "is_shared": false
+      },
+      "tip4": {
+        "raw": "TRIGSTR_9749",
+        "wts_id": 9749,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_36361",
+        "wts_id": 36361,
+        "is_shared": false
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_9750",
+        "wts_id": 9750,
+        "is_shared": false
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_9751",
+        "wts_id": 9751,
+        "is_shared": false
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_9752",
+        "wts_id": 9752,
+        "is_shared": false
+      }
+    }
+  },
+  "A0D1": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_26695",
+        "wts_id": 26695,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_26696",
+        "wts_id": 26696,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "\"Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r\"",
+        "wts_id": null,
+        "is_shared": true
+      }
+    }
+  },
+  "A0AB": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_26652",
+        "wts_id": 26652,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_26653",
+        "wts_id": 26653,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_7944",
+        "wts_id": 7944,
+        "is_shared": false
+      }
+    }
+  },
+  "A0AR": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_19969",
+        "wts_id": 19969,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_19992",
+        "wts_id": 19992,
+        "is_shared": false
+      },
+      "tip2": {
+        "raw": "TRIGSTR_20006",
+        "wts_id": 20006,
+        "is_shared": false
+      },
+      "tip3": {
+        "raw": "TRIGSTR_20007",
+        "wts_id": 20007,
+        "is_shared": false
+      },
+      "tip4": {
+        "raw": "TRIGSTR_21476",
+        "wts_id": 21476,
+        "is_shared": false
+      },
+      "tip5": {
+        "raw": "TRIGSTR_21634",
+        "wts_id": 21634,
+        "is_shared": false
+      },
+      "tip6": {
+        "raw": "TRIGSTR_21636",
+        "wts_id": 21636,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_7807",
+        "wts_id": 7807,
+        "is_shared": false
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_7813",
+        "wts_id": 7813,
+        "is_shared": false
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_7814",
+        "wts_id": 7814,
+        "is_shared": false
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_7815",
+        "wts_id": 7815,
+        "is_shared": false
+      },
+      "ubertip5": {
+        "raw": "TRIGSTR_7816",
+        "wts_id": 7816,
+        "is_shared": false
+      },
+      "ubertip6": {
+        "raw": "TRIGSTR_7901",
+        "wts_id": 7901,
+        "is_shared": false
+      }
+    }
+  },
+  "A0A8": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_17452",
+        "wts_id": 17452,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_17228",
+        "wts_id": 17228,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_7439",
+        "wts_id": 7439,
+        "is_shared": false
+      }
+    }
+  },
+  "A0A7": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_17066",
+        "wts_id": 17066,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_11605",
+        "wts_id": 11605,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_7435",
+        "wts_id": 7435,
+        "is_shared": false
+      }
+    }
+  },
+  "A0A5": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_1358",
+        "wts_id": 1358,
+        "is_shared": true
+      },
+      "tip1": {
+        "raw": "TRIGSTR_2103",
+        "wts_id": 2103,
+        "is_shared": true
+      },
+      "tip2": {
+        "raw": "TRIGSTR_7022",
+        "wts_id": 7022,
+        "is_shared": false
+      },
+      "tip3": {
+        "raw": "TRIGSTR_9237",
+        "wts_id": 9237,
+        "is_shared": false
+      },
+      "tip4": {
+        "raw": "TRIGSTR_10728",
+        "wts_id": 10728,
+        "is_shared": false
+      },
+      "tip5": {
+        "raw": "TRIGSTR_10729",
+        "wts_id": 10729,
+        "is_shared": false
+      },
+      "tip6": {
+        "raw": "TRIGSTR_11604",
+        "wts_id": 11604,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_12883",
+        "wts_id": 12883,
+        "is_shared": false
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_12884",
+        "wts_id": 12884,
+        "is_shared": false
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_4280",
+        "wts_id": 4280,
+        "is_shared": true
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_4281",
+        "wts_id": 4281,
+        "is_shared": true
+      },
+      "ubertip5": {
+        "raw": "TRIGSTR_4282",
+        "wts_id": 4282,
+        "is_shared": true
+      },
+      "ubertip6": {
+        "raw": "TRIGSTR_4283",
+        "wts_id": 4283,
+        "is_shared": true
+      }
+    }
+  },
+  "A0BL": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_26694",
+        "wts_id": 26694,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_26654",
+        "wts_id": 26654,
+        "is_shared": false
+      },
+      "tip2": {
+        "raw": "TRIGSTR_8384",
+        "wts_id": 8384,
+        "is_shared": false
+      },
+      "tip3": {
+        "raw": "TRIGSTR_8385",
+        "wts_id": 8385,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_26691",
+        "wts_id": 26691,
+        "is_shared": false
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_8386",
+        "wts_id": 8386,
+        "is_shared": false
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_8387",
+        "wts_id": 8387,
+        "is_shared": false
+      }
+    }
+  },
+  "A0A9": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_17453",
+        "wts_id": 17453,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_17455",
+        "wts_id": 17455,
+        "is_shared": false
+      },
+      "tip2": {
+        "raw": "TRIGSTR_17456",
+        "wts_id": 17456,
+        "is_shared": false
+      },
+      "tip3": {
+        "raw": "TRIGSTR_18561",
+        "wts_id": 18561,
+        "is_shared": false
+      },
+      "tip4": {
+        "raw": "TRIGSTR_19695",
+        "wts_id": 19695,
+        "is_shared": false
+      },
+      "tip5": {
+        "raw": "TRIGSTR_19701",
+        "wts_id": 19701,
+        "is_shared": false
+      },
+      "tip6": {
+        "raw": "TRIGSTR_19752",
+        "wts_id": 19752,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_7451",
+        "wts_id": 7451,
+        "is_shared": false
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_7452",
+        "wts_id": 7452,
+        "is_shared": false
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_7453",
+        "wts_id": 7453,
+        "is_shared": false
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_7836",
+        "wts_id": 7836,
+        "is_shared": false
+      },
+      "ubertip5": {
+        "raw": "TRIGSTR_7842",
+        "wts_id": 7842,
+        "is_shared": false
+      },
+      "ubertip6": {
+        "raw": "TRIGSTR_7900",
+        "wts_id": 7900,
+        "is_shared": false
+      }
+    }
+  },
+  "A1MT": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_39464",
+        "wts_id": 39464,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_39431",
+        "wts_id": 39431,
+        "is_shared": false
+      },
+      "tip2": {
+        "raw": "TRIGSTR_39465",
+        "wts_id": 39465,
+        "is_shared": false
+      },
+      "tip3": {
+        "raw": "TRIGSTR_39466",
+        "wts_id": 39466,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_39444",
+        "wts_id": 39444,
+        "is_shared": false
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_39467",
+        "wts_id": 39467,
+        "is_shared": false
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_39468",
+        "wts_id": 39468,
+        "is_shared": false
+      }
+    }
+  },
+  "A0LG": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_26983",
+        "wts_id": 26983,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_26984",
+        "wts_id": 26984,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_3610",
+        "wts_id": 3610,
+        "is_shared": true
+      }
+    }
+  },
+  "A0LF": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_12843",
+        "wts_id": 12843,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_12844",
+        "wts_id": 12844,
+        "is_shared": false
+      },
+      "tip2": {
+        "raw": "\"Ускользание [|cffffcc002-й уровень|r]\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "tip3": {
+        "raw": "\"Ускользание [|cffffcc003-й уровень|r]\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_12851",
+        "wts_id": 12851,
+        "is_shared": false
+      },
+      "ubertip2": {
+        "raw": "\"Дает <AEev,DataA2,%>%-й шанс уклониться от атаки.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip3": {
+        "raw": "\"Дает <AEev,DataA3,%>%-й шанс уклониться от атаки.\"",
+        "wts_id": null,
+        "is_shared": true
+      }
+    }
+  },
+  "A0A4": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_20655",
+        "wts_id": 20655,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_20658",
+        "wts_id": 20658,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_6940",
+        "wts_id": 6940,
+        "is_shared": false
+      }
+    }
+  },
+  "A0D3": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_26707",
+        "wts_id": 26707,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_26712",
+        "wts_id": 26712,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_26713",
+        "wts_id": 26713,
+        "is_shared": false
+      }
+    }
+  },
+  "A0D4": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_9501",
+        "wts_id": 9501,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_9503",
+        "wts_id": 9503,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_9502",
+        "wts_id": 9502,
+        "is_shared": false
+      }
+    }
+  },
+  "Asds": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "Ба-бах!",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "tip1": {
+        "raw": "Ба-бах!",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip1": {
+        "raw": "\"Наносит <Asds,DataB1> урона в небольшой области. Особенно эффективен против зданий и деревьев.\"",
+        "wts_id": null,
+        "is_shared": true
+      }
+    }
+  },
+  "A0AH": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_19939",
+        "wts_id": 19939,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_19968",
+        "wts_id": 19968,
+        "is_shared": false
+      },
+      "tip2": {
+        "raw": "\"Сильный удар [|cffffcc002-й уровень|r]\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "tip3": {
+        "raw": "\"Сильный удар [|cffffcc003-й уровень|r]\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_7594",
+        "wts_id": 7594,
+        "is_shared": false
+      },
+      "ubertip2": {
+        "raw": "\"С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC2> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip3": {
+        "raw": "\"С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC3> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:custom,v01": {
+        "raw": "\"С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:custom,v02": {
+        "raw": "\"С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:custom,v03": {
+        "raw": "\"С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:custom,v11": {
+        "raw": "\"С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:custom,v12": {
+        "raw": "\"С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:custom,v13": {
+        "raw": "\"С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:melee,v01": {
+        "raw": "\"С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:melee,v02": {
+        "raw": "\"С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip:melee,v03": {
+        "raw": "\"С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+        "wts_id": null,
+        "is_shared": true
+      }
+    }
+  },
+  "A0BK": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_22223",
+        "wts_id": 22223,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_22224",
+        "wts_id": 22224,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_22225",
+        "wts_id": 22225,
+        "is_shared": false
+      }
+    }
+  },
+  "A0AS": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_21640",
+        "wts_id": 21640,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_21639",
+        "wts_id": 21639,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_7823",
+        "wts_id": 7823,
+        "is_shared": false
+      }
+    }
+  },
+  "A0AT": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_25481",
+        "wts_id": 25481,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_21785",
+        "wts_id": 21785,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_7828",
+        "wts_id": 7828,
+        "is_shared": false
+      }
+    }
+  },
+  "A0AU": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_26626",
+        "wts_id": 26626,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_26627",
+        "wts_id": 26627,
+        "is_shared": false
+      },
+      "tip2": {
+        "raw": "TRIGSTR_26636",
+        "wts_id": 26636,
+        "is_shared": false
+      },
+      "tip3": {
+        "raw": "TRIGSTR_26638",
+        "wts_id": 26638,
+        "is_shared": false
+      },
+      "tip4": {
+        "raw": "TRIGSTR_26643",
+        "wts_id": 26643,
+        "is_shared": false
+      },
+      "tip5": {
+        "raw": "TRIGSTR_26644",
+        "wts_id": 26644,
+        "is_shared": false
+      },
+      "tip6": {
+        "raw": "TRIGSTR_26645",
+        "wts_id": 26645,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_7843",
+        "wts_id": 7843,
+        "is_shared": false
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_7844",
+        "wts_id": 7844,
+        "is_shared": false
+      },
+      "ubertip3": {
+        "raw": "TRIGSTR_9577",
+        "wts_id": 9577,
+        "is_shared": false
+      },
+      "ubertip4": {
+        "raw": "TRIGSTR_9578",
+        "wts_id": 9578,
+        "is_shared": false
+      },
+      "ubertip5": {
+        "raw": "TRIGSTR_9579",
+        "wts_id": 9579,
+        "is_shared": false
+      },
+      "ubertip6": {
+        "raw": "TRIGSTR_7902",
+        "wts_id": 7902,
+        "is_shared": false
+      }
+    }
+  },
+  "A0KS": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_39523",
+        "wts_id": 39523,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_39522",
+        "wts_id": 39522,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_131",
+        "wts_id": 131,
+        "is_shared": true
+      }
+    }
+  },
+  "A0LD": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_39526",
+        "wts_id": 39526,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_39525",
+        "wts_id": 39525,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_7103",
+        "wts_id": 7103,
+        "is_shared": false
+      }
+    }
+  },
+  "A0LE": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_39529",
+        "wts_id": 39529,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_39528",
+        "wts_id": 39528,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_18354",
+        "wts_id": 18354,
+        "is_shared": false
+      }
+    }
+  },
+  "A0LH": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_39532",
+        "wts_id": 39532,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_39531",
+        "wts_id": 39531,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_12863",
+        "wts_id": 12863,
+        "is_shared": false
+      }
+    }
+  },
+  "S001": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_21845",
+        "wts_id": 21845,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_11454",
+        "wts_id": 11454,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_11456",
+        "wts_id": 11456,
+        "is_shared": false
+      }
+    }
+  },
+  "A15N": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_25578",
+        "wts_id": 25578,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "TRIGSTR_25589",
+        "wts_id": 25589,
+        "is_shared": false
+      },
+      "tip2": {
+        "raw": "TRIGSTR_25593",
+        "wts_id": 25593,
+        "is_shared": false
+      },
+      "tip3": {
+        "raw": "TRIGSTR_25597",
+        "wts_id": 25597,
+        "is_shared": false
+      },
+      "tip4": {
+        "raw": "TRIGSTR_25605",
+        "wts_id": 25605,
+        "is_shared": false
+      },
+      "ubertip1": {
+        "raw": "TRIGSTR_25608",
+        "wts_id": 25608,
+        "is_shared": false
+      },
+      "ubertip2": {
+        "raw": "TRIGSTR_25616",
+        "wts_id": 25616,
+        "is_shared": false
+      },
+      "ubertip3": {
+        "raw": "\"+<AUau,DataA3,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.\"",
+        "wts_id": null,
+        "is_shared": true
+      }
+    }
+  },
+  "A0UU": {
+    "type": "ability",
+    "fields": {
+      "name": {
+        "raw": "TRIGSTR_7437",
+        "wts_id": 7437,
+        "is_shared": false
+      },
+      "tip1": {
+        "raw": "Ба-бах!",
+        "wts_id": null,
+        "is_shared": true
+      },
+      "ubertip1": {
+        "raw": "\"Наносит <Asdg,DataB1> урона в небольшой области.\"",
+        "wts_id": null,
+        "is_shared": true
+      }
+    }
+  },
+  "B028": {
+    "type": "buff",
+    "fields": {
+      "bufftip": {
+        "raw": "TRIGSTR_7333",
+        "wts_id": 7333,
+        "is_shared": false
+      },
+      "buffubertip": {
+        "raw": "TRIGSTR_7334",
+        "wts_id": 7334,
+        "is_shared": false
+      }
+    }
+  },
+  "B02H": {
+    "type": "buff",
+    "fields": {
+      "bufftip": {
+        "raw": "TRIGSTR_17832",
+        "wts_id": 17832,
+        "is_shared": false
+      },
+      "buffubertip": {
+        "raw": "TRIGSTR_7863",
+        "wts_id": 7863,
+        "is_shared": false
+      }
+    }
+  },
+  "B02I": {
+    "type": "buff",
+    "fields": {
+      "bufftip": {
+        "raw": "TRIGSTR_17845",
+        "wts_id": 17845,
+        "is_shared": false
+      },
+      "buffubertip": {
+        "raw": "TRIGSTR_7888",
+        "wts_id": 7888,
+        "is_shared": false
+      }
+    }
+  },
+  "B087": {
+    "type": "buff",
+    "fields": {
+      "bufftip": {
+        "raw": "TRIGSTR_39500",
+        "wts_id": 39500,
+        "is_shared": false
+      },
+      "buffubertip": {
+        "raw": "TRIGSTR_39501",
+        "wts_id": 39501,
+        "is_shared": false
+      }
+    }
+  },
+  "B02A": {
+    "type": "buff",
+    "fields": {
+      "bufftip": {
+        "raw": "TRIGSTR_27005",
+        "wts_id": 27005,
+        "is_shared": false
+      },
+      "buffubertip": {
+        "raw": "Восполнение здоровья.",
+        "wts_id": null,
+        "is_shared": true
+      }
+    }
+  },
+  "B02J": {
+    "type": "buff",
+    "fields": {
+      "bufftip": {
+        "raw": "TRIGSTR_2237",
+        "wts_id": 2237,
+        "is_shared": true
+      },
+      "buffubertip": {
+        "raw": "TRIGSTR_7949",
+        "wts_id": 7949,
+        "is_shared": false
+      }
+    }
+  },
+  "B02V": {
+    "type": "buff",
+    "fields": {
+      "bufftip": {
+        "raw": "TRIGSTR_27006",
+        "wts_id": 27006,
+        "is_shared": false
+      },
+      "buffubertip": {
+        "raw": "TRIGSTR_9468",
+        "wts_id": 9468,
+        "is_shared": false
+      }
+    }
+  },
+  "B02W": {
+    "type": "buff",
+    "fields": {
+      "bufftip": {
+        "raw": "TRIGSTR_9529",
+        "wts_id": 9529,
+        "is_shared": false
+      },
+      "buffubertip": {
+        "raw": "Периодический урон.",
+        "wts_id": null,
+        "is_shared": true
+      }
+    }
+  },
+  "B089": {
+    "type": "buff",
+    "fields": {
+      "bufftip": {
+        "raw": "TRIGSTR_39622",
+        "wts_id": 39622,
+        "is_shared": false
+      },
+      "buffubertip": {
+        "raw": "Передвижение замедлено.",
+        "wts_id": null,
+        "is_shared": true
+      }
+    }
+  }
+}

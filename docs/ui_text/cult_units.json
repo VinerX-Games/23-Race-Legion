@@ -1,0 +1,324 @@
+{
+  "scope": "Культ Проклятых (Cult of the Damned): категория 3 — Юниты (18 юнитов)",
+  "units_count": 18,
+  "variants": [
+    "SD"
+  ],
+  "units": [
+    {
+      "id": "cD14",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26131,
+          "after": "|cffe4cfa3Ядоголем|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34560,
+          "after": "|cffe4cfa3Ядоголем|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28406,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Чумной голем дальнего боя. Атакует ядовитыми сгустками на расстоянии и заражает врагов смертоносной чумой.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗаразительные атаки|cffced4da: атаки отравляют цели и распространяют болезнь.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD33",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26295,
+          "after": "|cffe4cfa3Костяной страж|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34777,
+          "after": "|cffe4cfa3Костяной страж|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35955,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый костяной воин ближнего боя. Может впадать в неистовство, временно ускоряя атаку и бег.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deНеистовство чужой души|cffced4da: временно увеличивает скорость атаки на |cffffffff30%|cffced4da и скорость передвижения на |cffffffff25%|cffced4da.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD09",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25792,
+          "after": "|cffe4cfa3Мясной голем|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34540,
+          "after": "|cffe4cfa3Мясной голем|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28399,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый исполин ближнего боя, созданный из тел павших. Обладает огромным запасом здоровья и высокой сокрушительной мощью.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD10",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 7358,
+          "after": "|cffe4cfa3Поганище|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34542,
+          "after": "|cffe4cfa3Поганище|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28403,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Могучий и выносливый боец из сшитой плоти. Принимает на себя основной урон в бою и служит основой для сбора големов.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD02",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22859,
+          "after": "|cffe4cfa3Послушник|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 19518,
+          "after": "|cffe4cfa3Послушник|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35936,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий отряд Культа Проклятых. Добывает золото из осквернённого рудника, призывает и ремонтирует здания культа.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deНебольшой скачок|cffced4da: мгновенно перемещается на короткое расстояние.|n- |cffa9c7deРемонт|cffced4da: восстанавливает прочность повреждённых построек.|n- |cffa9c7deРазвоплотить здание|cffced4da: уничтожает строение, возвращая часть ресурсов.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD19",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26200,
+          "after": "|cffe4cfa3Скелет-воин|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34570,
+          "after": "|cffe4cfa3Скелет-воин|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 3065,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый костяной боец ближнего боя. Служит передовым отрядом и материалом для костесборки.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD35",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36972,
+          "after": "|cffe4cfa3Скелет-воин|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 38639,
+          "after": "|cffe4cfa3Скелет-воин|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 38641,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Закалённый в битвах костяной боец ближнего боя высшего уровня подготовки.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD11",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11015,
+          "after": "|cffe4cfa3Зомби|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34546,
+          "after": "|cffe4cfa3Зомби|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28404,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый пехотинец из плоти. Нанимается сразу по двое бойцов, служит расходным материалом для армии и плотеобработки.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗаразительная атака|cffced4da: с вероятностью |cffffffff33%|cffced4da заражает атакуемую цель чумой.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD34",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34616,
+          "after": "|cffe4cfa3Скелет-воин|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35167,
+          "after": "|cffe4cfa3Скелет-воин|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 36940,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Усиленный костяной боец ближнего боя. Обладает повышенными боевыми характеристиками.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD08",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25546,
+          "after": "|cffe4cfa3Тёмный Адепт|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34386,
+          "after": "|cffe4cfa3Тёмный Адепт|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28398,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Высший маг культа, владеющий смертоносным холодом и рассеиванием магии.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЛедяные стрелы|cffced4da: автоприменяемая атака, наносящая урон от холода и замедляющая цель.|n- |cffa9c7deКольцо льда|cffced4da: ледяная волна с уроном цели и замедлением по области.|n- |cffa9c7deМорозный доспех|cffced4da: повышает броню союзника и замедляет атакующих его врагов; требует посвящения.|n- |cffa9c7deПожирание магии|cffced4da: поглощает чары в области, восстанавливая здоровье и ману; требует посвящения.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD13",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25936,
+          "after": "|cffe4cfa3Труповозка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34550,
+          "after": "|cffe4cfa3Труповозка|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28405,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Дальнобойное осадное орудие и сборщик тел. Перевозит и добывает трупы для некромантов, а также обстреливает вражеские укрепления заражёнными снарядами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПогрузить труп / Выгрузить все трупы|cffced4da: загрузка и выгрузка тел.|n- |cffa9c7deЭксгумация|cffced4da: периодически выкапывает свежие тела из земли.|n- |cffa9c7deБолезнетворное облако|cffced4da: оставляет ядовитый след в месте падения снаряда; требует «Заражённых снарядов».|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD03",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23021,
+          "after": "|cffe4cfa3Некромант|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 19522,
+          "after": "|cffe4cfa3Некромант|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28392,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Заклинатель культа, управляющий костями и душами. Поднимает скелетов из павших, проклинает врагов и объединяет скелетов в могучих стражей.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВоскрешение мёртвых|cffced4da: поднимает скелетов из трупа.|n- |cffa9c7deКостесборка|cffced4da: собирает группу скелетов в единого мощного воина.|n- |cffa9c7deПорча изнывания|cffced4da: замедляет атаку и передвижение врага.|n- |cffa9c7deЛик смерти|cffced4da: лечит нежить или наносит урон живому врагу; требует посвящения.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD22",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26201,
+          "after": "|cffe4cfa3Скелет-маг|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34572,
+          "after": "|cffe4cfa3Скелет-маг|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28498,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Костяной стрелок дальнего боя. Поражает врагов магическими снарядами, эффективными против тяжёлой брони.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD18",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26173,
+          "after": "|cffe4cfa3Костяной привратник|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34566,
+          "after": "|cffe4cfa3Костяной привратник|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28412,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный костяной стрелок дальнего боя. Наносит высокий урон наземным и воздушным целям.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "cD05",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 24412,
+          "after": "|cffe4cfa3Осквернитель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 3525,
+          "after": "|cffe4cfa3Осквернитель|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28393,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тёмный алхимик и маг плоти. Заражает врагов паразитами, собирает мясных големов и ослабляет врагов порчей.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗачумление|cffced4da: заражает цель паразитом, нанося урон и призывая прислужника при её гибели.|n- |cffa9c7deПлотеобработка|cffced4da: объединяет группу мясных созданий в мощного голема.|n- |cffa9c7deПорча издыхания|cffced4da: снижает урон и броню противника.|n- |cffa9c7deТёмная стая|cffced4da: выпускает стаю летучих мышей по прямой линии; требует посвящения.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    }
+  ]
+}

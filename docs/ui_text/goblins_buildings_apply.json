@@ -1,0 +1,274 @@
+{
+  "race": "Goblins",
+  "category": "buildings",
+  "total_buildings": 10,
+  "total_fields": 30,
+  "wts_updated": [
+    14143,
+    14144,
+    6490,
+    14153,
+    14154,
+    20481,
+    14145,
+    14146,
+    11989,
+    14147,
+    14148,
+    11990,
+    14149,
+    14150,
+    19556,
+    14151,
+    14152,
+    20476,
+    14157,
+    14158,
+    20488,
+    14159,
+    14160,
+    20627,
+    14186,
+    14187,
+    18417,
+    14184,
+    14185,
+    20646
+  ],
+  "hashes_before": {
+    "wts": "3b2de740faee1c62627caeb6a86d5b67553180a47094e29e501eac4cff9ae121",
+    "w3u": "e5215968f5129fcb3f5e0d6de70c1cf91b8e15e85e5ee4e13645eb9c65ac204c",
+    "w3u_skin": "7943de19a61017eb67a7e10dac839eb4783070f222cb411cfc500a00c4a8bb03",
+    "w3a": "9376f2b203b2792b7b7a9a44636113055bf6c9c6c3911e1b699f8e7d8a6b2262",
+    "w3a_skin": "e4ea13630a6616f6ca85e3d2b3fc6c02269655c329a8ddc13f8d161b65e46abd",
+    "w3h": "2459a6453679843b0828809e4dedcad2cc96028ee9feaaae94700e261007f2c4",
+    "w3h_skin": "ce74142eec6276353fc00f51ce790304b2107df49e970bd5a019d8cedc0d3e03",
+    "w3q": "135b21ad8ced6b949d7afd6c25f1ca434fa422bda00e79d0c18eb2ee2886ca58",
+    "w3q_skin": "2c4f7ffcf2cf7b83836aae2fa3270e5d225f9d37226cc304f19d0bb9c0fcf78f"
+  },
+  "hashes_after": {
+    "wts": "d6ac4178be94d73cb8d7275fab9e7c5ed251ae2eb6799ad88fcfebbd9533c4d5",
+    "w3u": "e5215968f5129fcb3f5e0d6de70c1cf91b8e15e85e5ee4e13645eb9c65ac204c",
+    "w3u_skin": "7943de19a61017eb67a7e10dac839eb4783070f222cb411cfc500a00c4a8bb03",
+    "w3a": "9376f2b203b2792b7b7a9a44636113055bf6c9c6c3911e1b699f8e7d8a6b2262",
+    "w3a_skin": "e4ea13630a6616f6ca85e3d2b3fc6c02269655c329a8ddc13f8d161b65e46abd",
+    "w3h": "2459a6453679843b0828809e4dedcad2cc96028ee9feaaae94700e261007f2c4",
+    "w3h_skin": "ce74142eec6276353fc00f51ce790304b2107df49e970bd5a019d8cedc0d3e03",
+    "w3q": "135b21ad8ced6b949d7afd6c25f1ca434fa422bda00e79d0c18eb2ee2886ca58",
+    "w3q_skin": "2c4f7ffcf2cf7b83836aae2fa3270e5d225f9d37226cc304f19d0bb9c0fcf78f"
+  },
+  "binary_files_unchanged": true,
+  "checks": [
+    {
+      "id": "h070",
+      "field": "name",
+      "expected": "|cffe4cfa3База|r",
+      "actual": "|cffe4cfa3База|r",
+      "ok": true
+    },
+    {
+      "id": "h070",
+      "field": "tip",
+      "expected": "|cffe4cfa3База|r (|cffffffffQ|r)",
+      "actual": "|cffe4cfa3База|r (|cffffffffQ|r)",
+      "ok": true
+    },
+    {
+      "id": "h070",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное командное и экономическое здание картеля. Служит складом ресурсов, даёт начальные припасы и позволяет объявить город столицей.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deКрошшер|r|n|n|cffa6afb8Исследования:|r|n- |cffa9c7deРасширить банковский сектор|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Столица: объявляет базу столицей государства.|r|n|cffced4da- Торговля: позволяет обменивать золото на древесину и древесину на золото.|r|n|cffced4da- Коррупция: позволяет регулировать уровень коррупции картеля.|r|n|cffced4da- Припасы: |cffffffff+50|r единиц.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное командное и экономическое здание картеля. Служит складом ресурсов, даёт начальные припасы и позволяет объявить город столицей.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deКрошшер|r|n|n|cffa6afb8Исследования:|r|n- |cffa9c7deРасширить банковский сектор|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Столица: объявляет базу столицей государства.|r|n|cffced4da- Торговля: позволяет обменивать золото на древесину и древесину на золото.|r|n|cffced4da- Коррупция: позволяет регулировать уровень коррупции картеля.|r|n|cffced4da- Припасы: |cffffffff+50|r единиц.|r",
+      "ok": true
+    },
+    {
+      "id": "h077",
+      "field": "name",
+      "expected": "|cffe4cfa3Банк|r",
+      "actual": "|cffe4cfa3Банк|r",
+      "ok": true
+    },
+    {
+      "id": "h077",
+      "field": "tip",
+      "expected": "|cffe4cfa3Банк|r (|cffffffffA|r)",
+      "actual": "|cffe4cfa3Банк|r (|cffffffffA|r)",
+      "ok": true
+    },
+    {
+      "id": "h077",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Финансовый центр картеля. Обеспечивает кланы припасами и генерирует стабильный доход для расширения империи.|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Доход: приносит |cffffffff+40|r золота каждые |cffffffff25|r с.|r|n|cffced4da- Припасы: |cffffffff+40|r единиц.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Финансовый центр картеля. Обеспечивает кланы припасами и генерирует стабильный доход для расширения империи.|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Доход: приносит |cffffffff+40|r золота каждые |cffffffff25|r с.|r|n|cffced4da- Припасы: |cffffffff+40|r единиц.|r",
+      "ok": true
+    },
+    {
+      "id": "h073",
+      "field": "name",
+      "expected": "|cffe4cfa3Казармы|r",
+      "actual": "|cffe4cfa3Казармы|r",
+      "ok": true
+    },
+    {
+      "id": "h073",
+      "field": "tip",
+      "expected": "|cffe4cfa3Казармы|r (|cffffffffW|r)",
+      "actual": "|cffe4cfa3Казармы|r (|cffffffffW|r)",
+      "ok": true
+    },
+    {
+      "id": "h073",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Тренировочный лагерь пехоты. Обучает регулярные стрелковые и штурмовые отряды, а также нанимает наёмных огров.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deРекрут ТК|r|n- |cffa9c7deПулеметчик|r|n- |cffa9c7deОгнеметчик|r|n- |cffa9c7deРакетчик|r|n- |cffa9c7deСнайпер|r|n- |cffa9c7deСапер|r|n- |cffa9c7deМедик|r|n|n|cffa6afb8Нанимает:|r|n- |cffa9c7deОгр-костолом|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Тренировочный лагерь пехоты. Обучает регулярные стрелковые и штурмовые отряды, а также нанимает наёмных огров.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deРекрут ТК|r|n- |cffa9c7deПулеметчик|r|n- |cffa9c7deОгнеметчик|r|n- |cffa9c7deРакетчик|r|n- |cffa9c7deСнайпер|r|n- |cffa9c7deСапер|r|n- |cffa9c7deМедик|r|n|n|cffa6afb8Нанимает:|r|n- |cffa9c7deОгр-костолом|r",
+      "ok": true
+    },
+    {
+      "id": "h074",
+      "field": "name",
+      "expected": "|cffe4cfa3Завод|r",
+      "actual": "|cffe4cfa3Завод|r",
+      "ok": true
+    },
+    {
+      "id": "h074",
+      "field": "tip",
+      "expected": "|cffe4cfa3Завод|r (|cffffffffD|r)",
+      "actual": "|cffe4cfa3Завод|r (|cffffffffD|r)",
+      "ok": true
+    },
+    {
+      "id": "h074",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Промышленный комплекс тяжелого машиностроения. Производит бронетехнику, амфибии и самоходную артиллерию.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deОгнестрельный танк «Напалм-4000»|r|n- |cffa9c7deВездеход «Мурлок-3000»|r|n- |cffa9c7deМобильная артиллерия|r|n- |cffa9c7deБРДМ-2000|r|n- |cffa9c7deШтурмовой танк «Вепрь-5000»|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Промышленный комплекс тяжелого машиностроения. Производит бронетехнику, амфибии и самоходную артиллерию.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deОгнестрельный танк «Напалм-4000»|r|n- |cffa9c7deВездеход «Мурлок-3000»|r|n- |cffa9c7deМобильная артиллерия|r|n- |cffa9c7deБРДМ-2000|r|n- |cffa9c7deШтурмовой танк «Вепрь-5000»|r",
+      "ok": true
+    },
+    {
+      "id": "h075",
+      "field": "name",
+      "expected": "|cffe4cfa3Фабрика|r",
+      "actual": "|cffe4cfa3Фабрика|r",
+      "ok": true
+    },
+    {
+      "id": "h075",
+      "field": "tip",
+      "expected": "|cffe4cfa3Фабрика|r (|cffffffffF|r)",
+      "actual": "|cffe4cfa3Фабрика|r (|cffffffffF|r)",
+      "ok": true
+    },
+    {
+      "id": "h075",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Высокотехнологичное предприятие картеля. Производит шагающие боевые мехи и оснащает элитную штурмовую пехоту экзоскелетами.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deМеха «Линчеватель-6000»|r|n- |cffa9c7deОператор силовой брони|r|n- |cffa9c7deОгнемеха «Пожар-7000»|r|n- |cffa9c7deСупербоец|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Высокотехнологичное предприятие картеля. Производит шагающие боевые мехи и оснащает элитную штурмовую пехоту экзоскелетами.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deМеха «Линчеватель-6000»|r|n- |cffa9c7deОператор силовой брони|r|n- |cffa9c7deОгнемеха «Пожар-7000»|r|n- |cffa9c7deСупербоец|r",
+      "ok": true
+    },
+    {
+      "id": "h076",
+      "field": "name",
+      "expected": "|cffe4cfa3Лаборатория|r",
+      "actual": "|cffe4cfa3Лаборатория|r",
+      "ok": true
+    },
+    {
+      "id": "h076",
+      "field": "tip",
+      "expected": "|cffe4cfa3Лаборатория|r (|cffffffffR|r)",
+      "actual": "|cffe4cfa3Лаборатория|r (|cffffffffR|r)",
+      "ok": true
+    },
+    {
+      "id": "h076",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Научно-исследовательский комплекс. Разрабатывает новые виды вооружения и брони, открывающие доступ к продвинутым боевым единицам картеля.|r|n|n|cffa6afb8Исследования:|r|n- |cffa9c7deБиологические эксперименты|r|n- |cffa9c7deПули|r|n- |cffa9c7deРакеты|r|n- |cffa9c7deОгнеметы|r|n- |cffa9c7deУдарные механизмы|r|n- |cffa9c7deМоторы|r|n- |cffa9c7deПодвижные механизмы|r|n- |cffa9c7deЛегкая обшивка|r|n- |cffa9c7deТяжелая обшивка|r|n- |cffa9c7deУвеличительная оптика|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Обнаружение: проводит платную разведку указанной области карты.|r|n|cffced4da- Развитие технологий: количество действующих лабораторий определяет технологический уровень картеля.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Научно-исследовательский комплекс. Разрабатывает новые виды вооружения и брони, открывающие доступ к продвинутым боевым единицам картеля.|r|n|n|cffa6afb8Исследования:|r|n- |cffa9c7deБиологические эксперименты|r|n- |cffa9c7deПули|r|n- |cffa9c7deРакеты|r|n- |cffa9c7deОгнеметы|r|n- |cffa9c7deУдарные механизмы|r|n- |cffa9c7deМоторы|r|n- |cffa9c7deПодвижные механизмы|r|n- |cffa9c7deЛегкая обшивка|r|n- |cffa9c7deТяжелая обшивка|r|n- |cffa9c7deУвеличительная оптика|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Обнаружение: проводит платную разведку указанной области карты.|r|n|cffced4da- Развитие технологий: количество действующих лабораторий определяет технологический уровень картеля.|r",
+      "ok": true
+    },
+    {
+      "id": "h079",
+      "field": "name",
+      "expected": "|cffe4cfa3Бюро разработок|r",
+      "actual": "|cffe4cfa3Бюро разработок|r",
+      "ok": true
+    },
+    {
+      "id": "h079",
+      "field": "tip",
+      "expected": "|cffe4cfa3Бюро разработок|r (|cffffffffE|r)",
+      "actual": "|cffe4cfa3Бюро разработок|r (|cffffffffE|r)",
+      "ok": true
+    },
+    {
+      "id": "h079",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Конструкторское бюро и склад древесины. Создает специальные инженерные модификации и нестандартные боеприпасы для техники и пехоты.|r|n|n|cffa6afb8Исследования:|r|n- |cffa9c7deУскорение|r|n- |cffa9c7deКоктейль Молотова|r|n- |cffa9c7deЭМИ-граната|r|n- |cffa9c7deАдреналиновые инъекции|r|n- |cffa9c7deСтандарты потребления|r|n- |cffa9c7deСпецбоеприпасы ракет|r|n- |cffa9c7deСпецбоеприпасы огнеметов|r|n- |cffa9c7deУлучшенные пилы|r|n- |cffa9c7deСпецкалибр пуль|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Склад древесины: рабочие могут сдавать сюда заготовленное дерево.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Конструкторское бюро и склад древесины. Создает специальные инженерные модификации и нестандартные боеприпасы для техники и пехоты.|r|n|n|cffa6afb8Исследования:|r|n- |cffa9c7deУскорение|r|n- |cffa9c7deКоктейль Молотова|r|n- |cffa9c7deЭМИ-граната|r|n- |cffa9c7deАдреналиновые инъекции|r|n- |cffa9c7deСтандарты потребления|r|n- |cffa9c7deСпецбоеприпасы ракет|r|n- |cffa9c7deСпецбоеприпасы огнеметов|r|n- |cffa9c7deУлучшенные пилы|r|n- |cffa9c7deСпецкалибр пуль|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Склад древесины: рабочие могут сдавать сюда заготовленное дерево.|r",
+      "ok": true
+    },
+    {
+      "id": "h07S",
+      "field": "name",
+      "expected": "|cffe4cfa3Турель|r",
+      "actual": "|cffe4cfa3Турель|r",
+      "ok": true
+    },
+    {
+      "id": "h07S",
+      "field": "tip",
+      "expected": "|cffe4cfa3Турель|r (|cffffffffZ|r)",
+      "actual": "|cffe4cfa3Турель|r (|cffffffffZ|r)",
+      "ok": true
+    },
+    {
+      "id": "h07S",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Автоматическая пулеметная турель. Обеспечивает базовую оборону базы и укрепленных позиций картеля.|r|n|n|cffa6afb8Атака:|cffced4da Дальний бой (прокалывающая), урон |cffffffff23-27|r, интервал |cffffffff1,5|r с.|r|n|cffced4daАтакует наземные и воздушные цели.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Автоматическая пулеметная турель. Обеспечивает базовую оборону базы и укрепленных позиций картеля.|r|n|n|cffa6afb8Атака:|cffced4da Дальний бой (прокалывающая), урон |cffffffff23-27|r, интервал |cffffffff1,5|r с.|r|n|cffced4daАтакует наземные и воздушные цели.|r",
+      "ok": true
+    },
+    {
+      "id": "o016",
+      "field": "name",
+      "expected": "|cffe4cfa3Алтарь Торговли|r",
+      "actual": "|cffe4cfa3Алтарь Торговли|r",
+      "ok": true
+    },
+    {
+      "id": "o016",
+      "field": "tip",
+      "expected": "|cffe4cfa3Алтарь Торговли|r (|cffffffffS|r)",
+      "actual": "|cffe4cfa3Алтарь Торговли|r (|cffffffffS|r)",
+      "ok": true
+    },
+    {
+      "id": "o016",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище коммерции и наёмного контракта. Позволяет призывать уникальных лидеров гоблинов и возвращать к жизни павших героев.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deСпецназовец|r|n- |cffa9c7deАлхимик|r|n- |cffa9c7deМеханик|r|n|n|cffa6afb8Нанимает:|r|n- |cffa9c7deМаг телепортации|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Воскрешает павших героев.|r|n|cffced4da- Припасы: |cffffffff+3|r единицы.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище коммерции и наёмного контракта. Позволяет призывать уникальных лидеров гоблинов и возвращать к жизни павших героев.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deСпецназовец|r|n- |cffa9c7deАлхимик|r|n- |cffa9c7deМеханик|r|n|n|cffa6afb8Нанимает:|r|n- |cffa9c7deМаг телепортации|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Воскрешает павших героев.|r|n|cffced4da- Припасы: |cffffffff+3|r единицы.|r",
+      "ok": true
+    },
+    {
+      "id": "h0D7",
+      "field": "name",
+      "expected": "|cffe4cfa3Верфь|r",
+      "actual": "|cffe4cfa3Верфь|r",
+      "ok": true
+    },
+    {
+      "id": "h0D7",
+      "field": "tip",
+      "expected": "|cffe4cfa3Верфь|r (|cffffffffC|r)",
+      "actual": "|cffe4cfa3Верфь|r (|cffffffffC|r)",
+      "ok": true
+    },
+    {
+      "id": "h0D7",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Портовое сооружение картеля. Строит суда флота, подводные лодки и амфибии, а также ремонтирует корабли в доках.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deВездеход «Мурлок-3000»|r|n- |cffa9c7deУниверсальный линкор|r|n- |cffa9c7deСубмарина|r|n- |cffa9c7deПодводная лодка|r|n- |cffa9c7deНефтяной танкер|r|n|n|cffa6afb8Исследования:|r|n- |cffa9c7deПочинка|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Зона ремонта: пассивная аура восстанавливает |cffffffff2,5|r ед. прочности в секунду повреждённым союзным кораблям поблизости.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Портовое сооружение картеля. Строит суда флота, подводные лодки и амфибии, а также ремонтирует корабли в доках.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deВездеход «Мурлок-3000»|r|n- |cffa9c7deУниверсальный линкор|r|n- |cffa9c7deСубмарина|r|n- |cffa9c7deПодводная лодка|r|n- |cffa9c7deНефтяной танкер|r|n|n|cffa6afb8Исследования:|r|n- |cffa9c7deПочинка|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Зона ремонта: пассивная аура восстанавливает |cffffffff2,5|r ед. прочности в секунду повреждённым союзным кораблям поблизости.|r",
+      "ok": true
+    }
+  ],
+  "all_checks_passed": true
+}

@@ -1,0 +1,469 @@
+commit fec12dec0ba0fa4bceebdd812a19c7aa18eddbb3
+Author:     VinerX <vinerx2000@gmail.com>
+AuthorDate: Sat Oct 10 22:21:37 2026 +0300
+Commit:     VinerX <vinerx2000@gmail.com>
+CommitDate: Sat Oct 10 22:21:37 2026 +0300
+
+    fix(sync): remove BJ timer and root handle hazards
+
+diff --git a/map.w3x/_lua/monolith_split/sections/01_globals.lua b/map.w3x/_lua/monolith_split/sections/01_globals.lua
+index 00fbfa3..9cac894 100644
+--- a/map.w3x/_lua/monolith_split/sections/01_globals.lua
++++ b/map.w3x/_lua/monolith_split/sections/01_globals.lua
+@@ -17,12 +17,12 @@ LIBRARY_ArmyBonus = true	---@type boolean
+ -- endglobals from ArmyBonus
+ -- globals from Global:
+ LIBRARY_Global = true	---@type boolean	
+-Global_Hash = InitHashtable()	---@type hashtable	
+-Global_Timer = CreateTimer()	---@type timer	
++Global_Hash = nil	---@type hashtable	
++Global_Timer = nil	---@type timer	
+ -- ==========================================
+-Global_TempGroup = CreateGroup()	---@type group	
+-Global_TempRect = Rect(0, 0, 0, 0)	---@type rect	
+-Global_TempLoc = Location(0, 0)	---@type location	
++Global_TempGroup = nil	---@type group	
++Global_TempRect = nil	---@type rect	
++Global_TempLoc = nil	---@type location	
+ -- ==========================================
+ Global___TempUnitArray = {}	---@type unit	
+ Global___TempIntArray = {}	---@type integer	
+@@ -2202,11 +2202,11 @@ gg_unit_n003_0305 = nil	---@type unit
+ gg_unit_h0OT_0545 = nil	---@type unit	
+ Dummy = FourCC('h05P')	---@type integer	
+ -- Hash removed: all hashtable data migrated to Lua tables/closures
+-gForce = CreateForce()	---@type force	
+-gGroup = CreateGroup()	---@type group	
+-gEnemyGroup = CreateGroup()	---@type group	
+-gAllyGroup = CreateGroup()	---@type group	
+-gSubGroup = CreateGroup()	---@type group	
++gForce = nil	---@type force	
++gGroup = nil	---@type group	
++gEnemyGroup = nil	---@type group	
++gAllyGroup = nil	---@type group	
++gSubGroup = nil	---@type group	
+ gSubGroupCounter = 0	---@type integer	
+ -- gLoc	---@type location	
+ -- gRect	---@type rect	
+@@ -2244,6 +2244,7 @@ gDummySpell = FourCC('A0Z5')	---@type integer
+ ArmyExp = {}	---@type real	
+ ArmyExpBonus = {}	---@type unit	
+ ArmyPowerColumn = {}	---@type multiboarditem	
++ArmyPowerColumnHeader = nil	---@type multiboarditem	
+ income = {}	---@type real	
+ incomeW = {}	---@type real	
+ disincome = {}	---@type real	
+@@ -2253,7 +2254,7 @@ balance = {}	---@type real
+ additional = {}	---@type real	
+ IncomeMod = 1	---@type real	
+ Tax = 0.15	---@type real	
+-Allmap = CreateRegion()	---@type region	
++Allmap = nil	---@type region	
+ AllyTax = {}	---@type real	
+ face = nil	---@type framehandle	
+ faceHover = nil	---@type framehandle	
+@@ -2267,7 +2268,11 @@ StartLocCount = 0	---@type integer
+ AiSpawnIndex = 0	---@type integer
+ AiSpawnPoint = {}	---@type table<integer, {x: real, y: real}>
+ MIN_SPAWN_DISTANCE = 2500	---@type real
+-SubGroup2 = CreateGroup()	---@type group	
++AiUnitsToPort = {}	---@type group
++AiCapitalGuard = {}	---@type group
++AiCapitalBuildigs = {}	---@type group
++Grades = {}	---@type integer
++SubGroup2 = nil	---@type group	
+ Gfarm = StringHash("Gfarm")	---@type integer	
+ Gtier = StringHash("Gtier")	---@type integer	
+ PointForAi = {}	---@type location	
+@@ -2278,15 +2283,15 @@ AiRepeat = 5	---@type integer
+ AiRadius = 6	---@type integer	
+ AiLimit = 150	---@type integer	
+ AiBuildingRadius = 1000	---@type real	
+-udg_BotsActive = CreateForce()	---@type force	
+-udg_BotsActiveB = CreateForce()	---@type force	
+-udg_BotsActiveN = CreateForce()	---@type force	
++udg_BotsActive = nil	---@type force	
++udg_BotsActiveB = nil	---@type force	
++udg_BotsActiveN = nil	---@type force	
+ --  Таймеры ИИ
+-udg_TimerSmall4 = CreateTimer()	---@type timer	
+-udg_PlayerGet2 = CreateTimer()	---@type timer	
+-udg_PlayerGet1 = CreateTimer()	---@type timer	
+-udg_PlayerGet4 = CreateTimer()	---@type timer	
+-aiFixer = CreateTimer()	---@type timer	
++udg_TimerSmall4 = nil	---@type timer	
++udg_PlayerGet2 = nil	---@type timer	
++udg_PlayerGet1 = nil	---@type timer	
++udg_PlayerGet4 = nil	---@type timer	
++aiFixer = nil	---@type timer	
+ udg_B_EnemyUnitP = nil	---@type boolexpr	
+ udg_B_EnemyUnit = nil	---@type boolexpr	
+ udg_B_EnemyUnitN = nil	---@type boolexpr	
+@@ -2317,8 +2322,8 @@ CheckPlayer = nil	---@type player
+ LastDestantion = nil	---@type location	
+ LastDestantionN = nil	---@type location	
+ Ochet = false	---@type boolean	
+-TryPortal = CreateGroup()	---@type group	
+-AfterPortal = CreateGroup()	---@type group	
++TryPortal = nil	---@type group	
++AfterPortal = nil	---@type group	
+ AiRace = {}	---@type string	
+ BonusUnit = {}	---@type unit	
+ udg_B_InKalim = nil	---@type boolexpr	
+@@ -2347,8 +2352,8 @@ LastDisincome = {}	---@type integer
+ LastBalance = {}	---@type integer	
+ DisOn = false	---@type boolean	
+ EcLog = false	---@type boolean	
+-DeadGroup = CreateGroup()	---@type group	
+-PortalBuildingAi = CreateGroup()	---@type group	
++DeadGroup = nil	---@type group	
++PortalBuildingAi = nil	---@type group	
+ ModeBuildingI = 0	---@type integer	
+ ModeBuilding = nil	---@type unit	
+ playerCapital = {}	---@type unit	
+@@ -2358,6 +2363,7 @@ Senior = {}	---@type player
+ Capital = {}	---@type unit	
+ FeodalVassalMode = 1	---@type integer	
+ ThirdColumn = {}	---@type multiboarditem	
++ThirdColumnHeader = nil	---@type multiboarditem	
+ CityCount = 0	---@type integer	
+ CityPlayerCount = {}	---@type integer	
+ PercentWin = 65	---@type integer	
+@@ -2382,16 +2388,16 @@ JSTRKofDmg2 = 50	---@type real
+ JSTRBoolMove = false	---@type boolean	
+ Bwonsamdy = {}	---@type unit	
+ SecondChance = {}	---@type timer	
+-Observers = CreateForce()	---@type force	
++Observers = nil	---@type force	
+ OwnGold = {}	---@type integer	
+ OwnLumber = {}	---@type integer	
+ GoldDifference = {}	---@type integer	
+ LumberDifference = {}	---@type integer	
+ NotOwnRes = {}	---@type boolean	
+ -- TryBuild_u	---@type unit	
+-DeadGroupAi = CreateGroup()	---@type group	
+-Navy = CreateGroup()	---@type group	
+-Port = CreateGroup()	---@type group	
++DeadGroupAi = nil	---@type group	
++Navy = nil	---@type group	
++Port = nil	---@type group	
+ DalaranOutType = FourCC('h0NB')	---@type integer	
+ DalaranOut = gg_unit_e00C_0590	---@type unit	
+ AbilityAp = FourCC('A1FZ')	---@type integer	
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/_infra/10_globals.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/_infra/10_globals.lua
+index 5f8e91b..ef9b976 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/_infra/10_globals.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/_infra/10_globals.lua
+@@ -14,6 +14,26 @@
+ -- ***************************************************************************
+ ---@return nothing
+ function InitGlobals()
++	gForce = CreateForce()
++	gGroup = CreateGroup()
++	gEnemyGroup = CreateGroup()
++	gAllyGroup = CreateGroup()
++	gSubGroup = CreateGroup()
++	Allmap = CreateRegion()
++	SubGroup2 = CreateGroup()
++	udg_BotsActive = CreateForce()
++	udg_BotsActiveB = CreateForce()
++	udg_BotsActiveN = CreateForce()
++	TryPortal = CreateGroup()
++	AfterPortal = CreateGroup()
++	DeadGroup = CreateGroup()
++	PortalBuildingAi = CreateGroup()
++	Observers = CreateForce()
++	DeadGroupAi = CreateGroup()
++	Navy = CreateGroup()
++	Port = CreateGroup()
++	SetPortalGroup()
++	FixEcAliveFilter = Condition(UnitAliveBool)
+ 	local i = 0
+ 	i = 0
+ 	while true do
+@@ -24,6 +44,11 @@ function InitGlobals()
+ 	
+ 	udg_IncomeTimerFirst = CreateTimer()
+ 	udg_IncomeTimerSecond = CreateTimer()
++	udg_TimerSmall4 = CreateTimer()
++	udg_PlayerGet2 = CreateTimer()
++	udg_PlayerGet1 = CreateTimer()
++	udg_PlayerGet4 = CreateTimer()
++	aiFixer = CreateTimer()
+ 	udg_LocalOtrad = CreateGroup()
+ 	i = 0
+ 	while true do
+@@ -730,4 +755,4 @@ function SaveIntegerIfPresent(hash, parent, child, value)
+     if value ~= nil then
+         SaveInteger(hash, parent, child, value)
+     end
+-end
+\ No newline at end of file
++end
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/01_core_economy.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/01_core_economy.lua
+index 9787391..2cfca06 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/01_core_economy.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/01_core_economy.lua
+@@ -1728,6 +1728,7 @@ end
+ ---@return nothing
+ function FixEcEnum()
+ 	local u = GetEnumUnit()
++	if u == nil or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then return end
+ 	local pi = GetPlayerId(GetOwningPlayer(u))
+ 	
+ 	if GetUnitAbilityLevel(u, FourCC('AHad')) > 0 then
+@@ -1746,11 +1747,12 @@ end
+ ---@return nothing
+ function FixEc(pi)
+ 	local r
++	if pi < 0 or pi > 23 then return end
+ 	local g = CreateGroup()
+ 	ClearEc(pi)
+ 	
+ 	
+-	GroupEnumUnitsOfPlayer(g, Player(pi), b)
++	GroupEnumUnitsOfPlayer(g, Player(pi), nil)
+ 	ForGroup(g, FixEcEnum)
+ 	
+ 	if udg_GameMode == 3 then
+@@ -1760,8 +1762,6 @@ function FixEc(pi)
+ 	
+ 	DestroyGroup(g)
+ 	g = nil
+-	DestroyBoolExpr(b)
+-	b = nil
+ end
+ ---@return nothing
+ function FixEcAll()
+@@ -1770,10 +1770,9 @@ function FixEcAll()
+ 	
+ 	
+ 	while true do
+-		if i >= 23 then break end
++		if i >= 24 then break end
+ 		
+ 		FixEc(i)
+-		DisplayTextToPlayer(Player(i), 0, 0, "????????? ???? ??????? ??????????? ????? ???????? ?????????????? ?????, ??? ???????????????? ???????")
+ 		i = i + 1
+ 	end
+ 	
+@@ -2524,4 +2523,4 @@ function InitTrig_Demontag()
+         if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
+         Trig_Demontag_Actions()
+     end)
+-end
+\ No newline at end of file
++end
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/03_continents_diplomacy.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/03_continents_diplomacy.lua
+index 26bc89b..e5f0d8c 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/03_continents_diplomacy.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/03_continents_diplomacy.lua
+@@ -163,7 +163,7 @@ function Trig_Continents_set_On_Actions()
+     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
+     EnableTrigger(gg_trg_LeaveNeadedRegions)
+     ForGroupBJ(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Continents_set_On_Func013001002)), Trig_Continents_set_On_Func013A)
+-    StartTimerBJ(udg_TimerToCont, false, 0.50)
++    TimerStart(udg_TimerToCont, 0.50, false, nil)
+ end
+ --===========================================================================
+ function InitTrig_Continents_set_On()
+@@ -1402,12 +1402,14 @@ function Trig_Timer_Func009C()
+ end
+ function Trig_Timer_Actions()
+     udg_AllPlayers=GetPlayersAll()
+-    StartTimerBJ(udg_IncomeTimerSecond, true, I2R(udg_SET_TimerTime))
+-    CreateTimerDialogBJ(GetLastCreatedTimerBJ(), "TRIGSTR_4633")
+-    udg_TimerSecond=GetLastCreatedTimerDialogBJ()
+-    StartTimerBJ(udg_IncomeTimerFirst, false, 600.00)
+-    CreateTimerDialogBJ(GetLastCreatedTimerBJ(), "TRIGSTR_7397")
+-    udg_TimerToDis=GetLastCreatedTimerDialogBJ()
++    TimerStart(udg_IncomeTimerSecond, I2R(udg_SET_TimerTime), true, nil)
++    udg_TimerSecond=CreateTimerDialog(udg_IncomeTimerSecond)
++    TimerDialogSetTitle(udg_TimerSecond, GetLocalizedString("TRIGSTR_4633"))
++    TimerDialogDisplay(udg_TimerSecond, true)
++    TimerStart(udg_IncomeTimerFirst, 600.00, false, nil)
++    udg_TimerToDis=CreateTimerDialog(udg_IncomeTimerFirst)
++    TimerDialogSetTitle(udg_TimerToDis, GetLocalizedString("TRIGSTR_7397"))
++    TimerDialogDisplay(udg_TimerToDis, true)
+     if Trig_Timer_Func009C() then
+         ForForce(udg_AllPlayers, Trig_Timer_Func009Func001A)
+     end
+@@ -1424,7 +1426,7 @@ end
+ function Trig_ChangeTimerHost_Actions()
+     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_19902")
+     udg_SET_TimerTime=S2I(SubStringBJ(GetEventPlayerChatString(), 7, 8))
+-    StartTimerBJ(udg_IncomeTimerSecond, true, I2R(udg_SET_TimerTime))
++    TimerStart(udg_IncomeTimerSecond, I2R(udg_SET_TimerTime), true, nil)
+ end
+ --===========================================================================
+ function InitTrig_ChangeTimerHost()
+@@ -1450,4 +1452,4 @@ function InitTrig_DisIncomeStart()
+     gg_trg_DisIncomeStart=CreateTrigger()
+     TriggerRegisterTimerExpireEventBJ(gg_trg_DisIncomeStart, udg_IncomeTimerFirst)
+     TriggerAddAction(gg_trg_DisIncomeStart, Trig_DisIncomeStart_Actions)
+-end
+\ No newline at end of file
++end
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/05_common_spells.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/05_common_spells.lua
+index fd9b875..410bf93 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/05_common_spells.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/05_common_spells.lua
+@@ -308,7 +308,7 @@ function Trig_Spell_Copy_Actions()
+     udg_Dummy[1]=GetLastCreatedUnit()
+     CreateNUnitsAtLoc(1, FourCC('h0MJ'), GetOwningPlayer(udg_Caster), PolarProjectionBJ(udg_To4kaCaster, 100.00, 240.00), bj_UNIT_FACING)
+     udg_Dummy[2]=GetLastCreatedUnit()
+-    StartTimerBJ(udg_Timer, true, 0.03)
++    TimerStart(udg_Timer, 0.03, true, nil)
+ end
+ --===========================================================================
+ function InitTrig_Spell_Copy()
+@@ -841,4 +841,4 @@ function InitTrig_Aura_Flagmana_Stoikost_O()
+         if not Trig_Aura_Flagmana_Stoikost_O_Conditions() then return end
+         Trig_Aura_Flagmana_Stoikost_O_Actions()
+     end)
+-end
+\ No newline at end of file
++end
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/IceTrolls.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/IceTrolls.lua
+index db91daf..c84b213 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/IceTrolls.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/IceTrolls.lua
+@@ -121,7 +121,7 @@ function Trig_Spell_E_Copy_Actions()
+     PauseUnitBJ(true, udg_Caster_E_Glaz[udg_MUI_E_Glaz])
+     SetUnitAnimation(udg_Caster_E_Glaz[udg_MUI_E_Glaz], "attackwalkstandspin")
+     udg_Logika_E_Glaz[udg_MUI_E_Glaz]=true
+-    StartTimerBJ(udg_Timer_E_Glaz, true, 0.03)
++    TimerStart(udg_Timer_E_Glaz, 0.03, true, nil)
+ end
+ --===========================================================================
+ function InitTrig_Spell_E_Copy()
+@@ -407,4 +407,4 @@ function InitTrig_TakenDamage()
+     TriggerRegisterAnyUnitEventBJ(gg_trg_TakenDamage, EVENT_PLAYER_UNIT_ATTACKED)
+     TriggerAddCondition(gg_trg_TakenDamage, Condition(Trig_TakenDamage_Conditions))
+     TriggerAddAction(gg_trg_TakenDamage, Trig_TakenDamage_Actions)
+-end
+\ No newline at end of file
++end
+diff --git a/map.w3x/_lua/monolith_split/sections/libraries/04_AI0.lua b/map.w3x/_lua/monolith_split/sections/libraries/04_AI0.lua
+index a04493e..7d8bf39 100644
+--- a/map.w3x/_lua/monolith_split/sections/libraries/04_AI0.lua
++++ b/map.w3x/_lua/monolith_split/sections/libraries/04_AI0.lua
+@@ -267,16 +267,15 @@ end
+ --  
+ ---@return nothing
+ function SetPortalGroup()
+-	
+-	local i = 0
+-	
+-	while true do
+-		if i >= 24 then break end
+-		AiUnitsToPort[i] = CreateGroup()
+-		AiCapitalGuard[i] = CreateGroup()
+-		AiCapitalBuildigs[i] = CreateGroup()
+-		Grades[i] = 0
+-		i = i + 1
++	if AiUnitsToPort == nil then AiUnitsToPort = {} end
++	if AiCapitalGuard == nil then AiCapitalGuard = {} end
++	if AiCapitalBuildigs == nil then AiCapitalBuildigs = {} end
++	if Grades == nil then Grades = {} end
++	for i = 0, 23 do
++		if AiUnitsToPort[i] == nil then AiUnitsToPort[i] = CreateGroup() end
++		if AiCapitalGuard[i] == nil then AiCapitalGuard[i] = CreateGroup() end
++		if AiCapitalBuildigs[i] == nil then AiCapitalBuildigs[i] = CreateGroup() end
++		if Grades[i] == nil then Grades[i] = 0 end
+ 	end
+ end
+ ---@return nothing
+@@ -311,7 +310,7 @@ function SetBools()
+ 	udg_B_EnemyUnitN = Condition(f_EnemyUnitN)
+ 	udg_B_EnemyUnit = Condition(f_EnemyUnit)
+ 	udg_B_EnemyUnitP = Condition(f_EnemyUnitP)
+-	PortB = Condition(f_PortB)
++	if PortB == nil then PortB = Condition(f_PortB) end
+ 	FixZ = Condition(f_FixZ)
+ 	LiveHero = Condition(f_LiveHero)
+ 	
+diff --git a/map.w3x/_lua/monolith_split/sections/libraries/06_Global.lua b/map.w3x/_lua/monolith_split/sections/libraries/06_Global.lua
+index da0d8aa..c5ad339 100644
+--- a/map.w3x/_lua/monolith_split/sections/libraries/06_Global.lua
++++ b/map.w3x/_lua/monolith_split/sections/libraries/06_Global.lua
+@@ -251,6 +251,11 @@ end
+ -- ==========================================
+ ---@return nothing
+ function Global___Init()
++	Global_Hash = InitHashtable()
++	Global_Timer = CreateTimer()
++	Global_TempGroup = CreateGroup()
++	Global_TempRect = Rect(0, 0, 0, 0)
++	Global_TempLoc = Location(0, 0)
+ 	TimerStart(Global_Timer, 999999, false, nil)
+ end
+ -- library Global ends
+diff --git a/map.w3x/_lua/monolith_split/sections/libraries/08_RandomLocs.lua b/map.w3x/_lua/monolith_split/sections/libraries/08_RandomLocs.lua
+index 5def786..5b4776f 100644
+--- a/map.w3x/_lua/monolith_split/sections/libraries/08_RandomLocs.lua
++++ b/map.w3x/_lua/monolith_split/sections/libraries/08_RandomLocs.lua
+@@ -48,21 +48,27 @@ end
+ ---@param y real
+ ---@return boolean
+ function IsSpawnFarEnough(x, y)
+-	for pi, pt in pairs(AiSpawnPoint) do
++	for pi = 0, bj_MAX_PLAYERS - 1 do
++		local pt = AiSpawnPoint[pi]
++		if pt ~= nil then
+ 		if DistanceBetweenCoords(x, y, pt.x, pt.y) < MIN_SPAWN_DISTANCE then
+ 			return false
+ 		end
++		end
+ 	end
+ 	return true
+ end
+ ---@return real
+ function SpawnMinDistToOthers(x, y)
+ 	local best = 999999.0
+-	for pi, pt in pairs(AiSpawnPoint) do
++	for pi = 0, bj_MAX_PLAYERS - 1 do
++		local pt = AiSpawnPoint[pi]
++		if pt ~= nil then
+ 		local d = DistanceBetweenCoords(x, y, pt.x, pt.y)
+ 		if d < best then
+ 			best = d
+ 		end
++		end
+ 	end
+ 	return best
+ end
+diff --git a/map.w3x/_lua/monolith_split/sections/libraries/14_AI2.lua b/map.w3x/_lua/monolith_split/sections/libraries/14_AI2.lua
+index a612f0a..2956b6c 100644
+--- a/map.w3x/_lua/monolith_split/sections/libraries/14_AI2.lua
++++ b/map.w3x/_lua/monolith_split/sections/libraries/14_AI2.lua
+@@ -281,23 +281,23 @@ function createAiPlayer(pi, raceToken)
+ 	
+ 	-- TimerSmall (builders): disabled in brain mode; BrainBuild handles it
+ 	if not AiBrainEnabled(pi) then
+-		StartTimerBJ(udg_TimerSmall, false, 1.11 * AiRepeat / 5)
++		TimerStart(udg_TimerSmall, 1.11 * AiRepeat / 5, false, nil)
+ 		ProbeLogWrite("[AI] createAiPlayer TimerSmall started period=" .. tostring(1.11 * AiRepeat / 5))
+-		StartTimerBJ(udg_TimerSmall2, false, 2.12 * AiRepeat / 5)
++		TimerStart(udg_TimerSmall2, 2.12 * AiRepeat / 5, false, nil)
+ 		ProbeLogWrite("[AI] createAiPlayer TimerSmall2 started period=" .. tostring(2.12 * AiRepeat / 5))
+ 		-- TimerSmall4 (navy join): disabled in brain mode; BrainNavalFocus handles it
+-		StartTimerBJ(udg_TimerSmall4, false, 4.14 * AiRepeat / 5)
++		TimerStart(udg_TimerSmall4, 4.14 * AiRepeat / 5, false, nil)
+ 		ProbeLogWrite("[AI] createAiPlayer TimerSmall4 started period=" .. tostring(4.14 * AiRepeat / 5))
+ 		else
+ 		-- Brain mode: start PlayerGet1 directly (round-robin, no ForcePickRandom)
+ 		TimerStart(udg_PlayerGet1, 0.8 * AiRepeat / 5, true, nil)
+ 		ProbeLogWrite("[AI] createAiPlayer PlayerGet1 started directly (brain round-robin) period=" .. tostring(0.8 * AiRepeat / 5))
+ 	end
+-	StartTimerBJ(udg_TimerSmall3, false, 3.13 * AiRepeat / 5)
++	TimerStart(udg_TimerSmall3, 3.13 * AiRepeat / 5, false, nil)
+ 	ProbeLogWrite("[AI] createAiPlayer TimerSmall3 started period=" .. tostring(3.13 * AiRepeat / 5))
+-	StartTimerBJ(udg_AiTimerStrateg, true, 15.15 * AiRepeat / 5)
++	TimerStart(udg_AiTimerStrateg, 15.15 * AiRepeat / 5, true, nil)
+ 	ProbeLogWrite("[AI] createAiPlayer AiTimerStrateg started period=" .. tostring(15.15 * AiRepeat / 5))
+-	StartTimerBJ(udg_TimerToChangeAi, false, 600.00)
++	TimerStart(udg_TimerToChangeAi, 600.00, false, nil)
+ 	TimerStart(aiFixer, 1800.00, true, nil)
+ 	ProbeLogWrite("[AI] createAiPlayer DONE pi=" .. tostring(pi) .. " race=" .. tostring(AiRace[pi]) .. " AiRepeat=" .. tostring(AiRepeat))
+ end

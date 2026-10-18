@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="850" viewBox="0 0 1100 850">
   <rect width="1100" height="850" fill="#14191f"/>
   <g font-family="Segoe UI,Arial,sans-serif">
-    <text x="48" y="58" font-size="28" fill="#e4cfa3">23 Race Legion · Палитра текста</text>
+    <text x="48" y="58" font-size="28" fill="#e4cfa3">23 Race Forever · Палитра текста</text>
     <text x="48" y="90" font-size="16" fill="#a6afb8">Единый цветовой язык названий, описаний и сообщений</text>
     <g font-size="20">
       <rect x="48" y="125" width="38" height="38" rx="6" fill="#ced4da"/><text x="104" y="151" fill="#ced4da">CED4DA · Основной текст</text>

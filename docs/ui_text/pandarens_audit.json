@@ -1,0 +1,114 @@
+{
+  "race": "Пандарены (Pandarens)",
+  "race_id": 34,
+  "selection_ability": "A1I6",
+  "objects_audit": {
+    "buildings": {
+      "count": 15,
+      "ids": [
+        "pa23",
+        "pa24",
+        "pa25",
+        "pa26",
+        "pa27",
+        "pa28",
+        "pa30",
+        "pa31",
+        "pa32",
+        "pa33",
+        "pa34",
+        "h0NZ",
+        "h0P5",
+        "h0P3",
+        "h0P4"
+      ],
+      "town_halls": {
+        "tier1": {
+          "id": "pa23",
+          "name": "Ратуша Синего Зяблика",
+          "food": 50
+        },
+        "tier2": {
+          "id": "pa24",
+          "name": "Крепость Четырёх Мастеров",
+          "food": 100
+        },
+        "tier3": {
+          "id": "pa25",
+          "name": "Цитадель Равновесия",
+          "food": 150
+        }
+      }
+    },
+    "units": {
+      "count": 15,
+      "ids": [
+        "pa11",
+        "pa29",
+        "pa05",
+        "pa13",
+        "pa04",
+        "pa06",
+        "pa12",
+        "pa10",
+        "pa38",
+        "pa09",
+        "pa01",
+        "pa14",
+        "pa07",
+        "pa08",
+        "pa35"
+      ]
+    },
+    "heroes": {
+      "count": 5,
+      "ids": [
+        "PA36",
+        "PA37",
+        "PA38",
+        "PA40",
+        "pa22"
+      ],
+      "names": {
+        "PA36": "Лидер Шадо-Пан (Ловкость, ближний бой)",
+        "PA37": "Мастер Железной Лапы (Сила, ближний бой)",
+        "PA38": "Высший Монах (Интеллект, дальний бой)",
+        "PA40": "Танцующий с Ветром (Ловкость, ближний бой)",
+        "pa22": "Хмелевар (Элитный гибридный юнит / мастер стиля)"
+      }
+    },
+    "abilities": {
+      "count": 39,
+      "total_wts_updated": 443
+    },
+    "researches": {
+      "count": 24,
+      "markers_list": {
+        "R0L3": "Маркер расы Пандарены"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items found for Pandarens."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "No race-specific chat messages found for Pandarens."
+  },
+  "buffs_audit": {
+    "custom_buffs": [],
+    "standard_buffs_used": [
+      "BUfa",
+      "BUts",
+      "Bblo",
+      "Bcyc",
+      "Bwwv",
+      "Binv",
+      "Bpig"
+    ],
+    "status": "No race-specific custom buffs in war3map.w3h for Pandarens."
+  },
+  "total_wts_updates": 443,
+  "total_checks": 109
+}

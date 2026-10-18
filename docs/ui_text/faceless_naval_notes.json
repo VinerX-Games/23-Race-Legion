@@ -1,0 +1,13 @@
+{
+  "scope": "Shared fleet dependencies of the Faceless shipyard",
+  "source": "80_runtime/triggers/06_transport_portals.lua",
+  "source_sha256": "e676a25ff118fad023c884f386d3056794de5f4d9bf7fcafe49c8e8ece90760e",
+  "pending": [
+    "R005 is range bonus, R006 movement speed, R007 flat maximum HP, R002 attack dice, R003 flat maximum HP plus defense upgrade.",
+    "R005 levels 2/3 set A00G to levels 2/3. Existing-unit research callbacks enumerate udg_LocalPlayer rather than explicitly the researching player: verify in engine before promising reliable skill progression.",
+    "New-ship callbacks test exactly research levels 2 and 3; at R005 levels 4/5 new ships retain the default level-1 A00G.",
+    "R006 affects transport stats, but its A00B ability is also on the combat ships. R007 enables A00A repair and adds 50/100/150 maximum HP.",
+    "All named recipients must come from faceless_shared_naval_consumers.json; R002 also occurs on pa17 (Earth Warrior).",
+    "Inspect the boarding, flagship, side-gun and mass-boarding Lua before editing the three ship cards."
+  ]
+}

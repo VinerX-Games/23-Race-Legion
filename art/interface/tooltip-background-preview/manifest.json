@@ -1,0 +1,28 @@
+{
+  "status": "imported_in_map",
+  "original_game_path": "UI/Widgets/ToolTips/Human/human-tooltip-background.blp",
+  "original_rgba": [
+    24,
+    34,
+    49,
+    195
+  ],
+  "new_rgba": [
+    8,
+    8,
+    8,
+    195
+  ],
+  "alpha_byte_identical_in_png_tga_blp": true,
+  "files": [
+    {
+      "name": "panel-background",
+      "title": "Общая подложка — почти чёрная",
+      "frame": "ToolTipBackground → BoxedTextBackgroundTemplate / BoxedText",
+      "size": [
+        64,
+        64
+      ]
+    }
+  ]
+}

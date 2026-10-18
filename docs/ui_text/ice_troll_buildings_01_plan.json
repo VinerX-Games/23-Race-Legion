@@ -1,0 +1,249 @@
+{
+  "operations": [
+    {
+      "type": "unit",
+      "id": "o04E",
+      "field": "name",
+      "value": "|cffe4cfa3Обитель духов|r"
+    },
+    {
+      "type": "unit",
+      "id": "o04E",
+      "field": "tip",
+      "value": "|cffe4cfa3Обитель духов|r (|cffffffffR|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o04E",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка заклинателей и исследование их улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЖрец Лоа|cffced4da (требуется: Дом предков).|n- |cffa9c7deЖрец|cffced4da (требуется: Дом предков).|n- |cffa9c7deВзыватель душ|cffced4da (требуется: Дом предков, выбран путь «Чрезвычайные меры»).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПознания жреца|cffced4da.|n- |cffa9c7deЗнания Лоа|cffced4da.|n- |cffa9c7deАзы загробного мира|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "o046",
+      "field": "name",
+      "value": "|cffe4cfa3Дом вождей|r"
+    },
+    {
+      "type": "unit",
+      "id": "o046",
+      "field": "tip",
+      "value": "|cffe4cfa3Дом вождей|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o046",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание первой ступени. Принимает добытые золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Услуги:|cffced4da|n- |cffa9c7deТорговля|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deДом предков|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deОбмен древесины на золото|cffced4da и |cffa9c7deОбмен золота на древесину|cffced4da: обмен ресурсов.|n- |cffa9c7deНазначение столицы|cffced4da: доступно в соответствующем режиме игры.|n- |cffa9c7deРитуал поклонения|cffced4da или |cffa9c7deЧрезвычайные меры|cffced4da: однократный выбор взаимоисключающего пути развития.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "o047",
+      "field": "name",
+      "value": "|cffe4cfa3Дом предков|r"
+    },
+    {
+      "type": "unit",
+      "id": "o047",
+      "field": "tip",
+      "value": "|cffe4cfa3Дом предков|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o047",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание второй ступени. Принимает добытые золото и древесину и открывает дальнейшее развитие поселения.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Услуги:|cffced4da|n- |cffa9c7deТорговля|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deХрам Лоа|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deОбмен древесины на золото|cffced4da и |cffa9c7deОбмен золота на древесину|cffced4da: обмен ресурсов.|n- |cffa9c7deНазначение столицы|cffced4da: доступно в соответствующем режиме игры.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "o048",
+      "field": "name",
+      "value": "|cffe4cfa3Храм Лоа|r"
+    },
+    {
+      "type": "unit",
+      "id": "o048",
+      "field": "tip",
+      "value": "|cffe4cfa3Храм Лоа|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o048",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание третьей, последней ступени. Принимает добытые золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Услуги:|cffced4da|n- |cffa9c7deТорговля|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deОбмен древесины на золото|cffced4da и |cffa9c7deОбмен золота на древесину|cffced4da: обмен ресурсов.|n- |cffa9c7deНазначение столицы|cffced4da: доступно в соответствующем режиме игры.|n- |cffa9c7deЗащита столицы|cffced4da: снижает восстановление здоровья ближайших органических врагов.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "o04C",
+      "field": "name",
+      "value": "|cffe4cfa3Берлога|r"
+    },
+    {
+      "type": "unit",
+      "id": "o04C",
+      "field": "tip",
+      "value": "|cffe4cfa3Берлога|r (|cffffffffA|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o04C",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Хозяйственное здание. Увеличивает базовый доход золота на |cffc8e08740|cffced4da за выплату. Итоговый доход зависит от модификаторов экономики.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "o04A",
+      "field": "name",
+      "value": "|cffe4cfa3Солдатский лагерь|r"
+    },
+    {
+      "type": "unit",
+      "id": "o04A",
+      "field": "tip",
+      "value": "|cffe4cfa3Солдатский лагерь|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o04A",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка основных войск и осадных орудий Драккари.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deВоитель|cffced4da.|n- |cffa9c7deОхотник|cffced4da.|n- |cffa9c7deКатапульта|cffced4da (требуется: Мастерская, Дом предков).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОблегченные топоры|cffced4da.|n- |cffa9c7deТренировки троллей|cffced4da.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "o04B",
+      "field": "name",
+      "value": "|cffe4cfa3Мастерская|r"
+    },
+    {
+      "type": "unit",
+      "id": "o04B",
+      "field": "tip",
+      "value": "|cffe4cfa3Мастерская|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o04B",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Исследование улучшений оружия, брони и живучести войск. Принимает добытую древесину.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЖивучесть Драккари|cffced4da.|n- |cffa9c7deОружие ближнего боя|cffced4da.|n- |cffa9c7deСтальная броня|cffced4da.|n- |cffa9c7deОружие дальнего боя|cffced4da.|n- |cffa9c7deТролльская регенерация|cffced4da.|n- |cffa9c7deУлучшенные топоры|cffced4da.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "o049",
+      "field": "name",
+      "value": "|cffe4cfa3Ледяной алтарь|r"
+    },
+    {
+      "type": "unit",
+      "id": "o049",
+      "field": "tip",
+      "value": "|cffe4cfa3Ледяной алтарь|r (|cffffffffS|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o049",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Призыв новых героев и воскрешение павших.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВоеначальник|cffced4da.|n- |cffa9c7deТемный охотник|cffced4da.|n- |cffa9c7deЖрец Лоа|cffced4da.|n- |cffa9c7deВместилище Лоа|cffced4da.|n|n|cffa6afb8Найм:|cffced4da|n- |cffa9c7deМаг телепортации|cffced4da.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "o04J",
+      "field": "name",
+      "value": "|cffe4cfa3Зверинец|r"
+    },
+    {
+      "type": "unit",
+      "id": "o04J",
+      "field": "tip",
+      "value": "|cffe4cfa3Зверинец|r (|cffffffffD|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o04J",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка приручённых зверей и исследование их улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБелый медведь|cffced4da.|n- |cffa9c7deЛютый мамонт|cffced4da (требуется: Храм Лоа, выбран путь «Ритуал поклонения»).|n- |cffa9c7deМагнатавр-разрушитель|cffced4da (требуется: Храм Лоа, Ледяной алтарь, выбран путь «Ритуал поклонения»).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deТренировки зверей|cffced4da.|n- |cffa9c7deДикая магия льда|cffced4da (требуется: выбран путь «Ритуал поклонения»).|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "o04D",
+      "field": "name",
+      "value": "|cffe4cfa3Катакомбы|r"
+    },
+    {
+      "type": "unit",
+      "id": "o04D",
+      "field": "tip",
+      "value": "|cffe4cfa3Катакомбы|r (|cffffffffF|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o04D",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка элитных войск Драккари и исследование их улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБерсерк|cffced4da (требуется: Ледяной алтарь).|n- |cffa9c7deГолем|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deБесчисленные бои|cffced4da.|n- |cffa9c7deТемные элементы|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "o013",
+      "field": "name",
+      "value": "|cffe4cfa3Сторожевая башня|r"
+    },
+    {
+      "type": "unit",
+      "id": "o013",
+      "field": "tip",
+      "value": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o013",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение для защиты поселения. Атакует наземные и воздушные цели.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою. Броню можно усилить исследованием укреплённых стен.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "O04H",
+      "field": "name",
+      "value": "|cffe4cfa3Военачальник|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04H",
+      "field": "tip",
+      "value": "|cffe4cfa3Военачальник|r (|cffffffffE|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IG",
+      "field": "name1",
+      "value": "|cffe4cfa3Бесчисленные бои|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IG",
+      "field": "tip1",
+      "value": "|cffe4cfa3Бесчисленные бои|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IG",
+      "field": "name2",
+      "value": "|cffe4cfa3Бесчисленные бои|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IG",
+      "field": "tip2",
+      "value": "|cffe4cfa3Бесчисленные бои|r — уровень |cffffffff2|r"
+    }
+  ]
+}

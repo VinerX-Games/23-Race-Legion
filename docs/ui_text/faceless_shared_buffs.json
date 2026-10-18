@@ -1,0 +1,434 @@
+{
+  "scope": "28 общих видимых эффектов, используемых способностями безликих и прямыми зависимостями",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "strings": [
+    {
+      "rawcode": "B01D",
+      "field": "bufftip",
+      "reference_before": "TRIGSTR_5033",
+      "before": "|cff0064ffАбсолютная Защита|r",
+      "after": "|cffe4cfa3Защитная аура|r"
+    },
+    {
+      "rawcode": "B01D",
+      "field": "buffubertip",
+      "reference_before": "TRIGSTR_5034",
+      "before": "Защита увеличена",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da В зависимости от источника аура изменяет защиту или восстановление здоровья цели.|r"
+    },
+    {
+      "rawcode": "B030",
+      "field": "bufftip",
+      "reference_before": "TRIGSTR_9801",
+      "before": "Поле саморемонта",
+      "after": "|cffe4cfa3Аура восстановления|r"
+    },
+    {
+      "rawcode": "B030",
+      "field": "buffubertip",
+      "reference_before": "TRIGSTR_9802",
+      "before": "У техники теперь есть регенерация.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Восстановление здоровья |cffc8e087ускорено|cffced4da. Величина бонуса определяется источником ауры.|r"
+    },
+    {
+      "rawcode": "B05N",
+      "field": "bufftip",
+      "reference_before": "TRIGSTR_19866",
+      "before": "Темное усиление",
+      "after": "|cffe4cfa3Тёмное усиление|r"
+    },
+    {
+      "rawcode": "B05N",
+      "field": "buffubertip",
+      "reference_before": "Урон от атак увеличен.",
+      "before": "Урон от атак увеличен.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Урон от атак |cffc8e087повышен на 35%|cffced4da.|r"
+    },
+    {
+      "rawcode": "B05O",
+      "field": "bufftip",
+      "reference_before": "TRIGSTR_20420",
+      "before": "Отголосок Йогг'Сарона",
+      "after": "|cffe4cfa3Отголосок Йогг`Сарона|r"
+    },
+    {
+      "rawcode": "B05O",
+      "field": "buffubertip",
+      "reference_before": "TRIGSTR_20555",
+      "before": "Часть нанесенного урона возвращается в виде здоровья. Отголоски древнего бога очень полезны...",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Органические союзники ближнего боя восстанавливают здоровье в размере |cffc8e08710%|cffced4da урона своих атак.|r"
+    },
+    {
+      "rawcode": "BEim",
+      "field": "bufftip",
+      "reference_before": "Обжигающий жар",
+      "before": "Обжигающий жар",
+      "after": "|cffe4cfa3Обжигающий жар|r"
+    },
+    {
+      "rawcode": "BEim",
+      "field": "buffubertip",
+      "reference_before": "Находящиеся рядом наземные враги получают периодический урон.",
+      "before": "Находящиеся рядом наземные враги получают периодический урон.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Существо окружено пламенем, наносящим |cffffffffпериодический урон|cffced4da находящимся рядом противникам.|r"
+    },
+    {
+      "rawcode": "BHab",
+      "field": "bufftip",
+      "reference_before": "Аура гениальности",
+      "before": "Аура гениальности",
+      "after": "|cffe4cfa3Аура маны|r"
+    },
+    {
+      "rawcode": "BHab",
+      "field": "buffubertip",
+      "reference_before": "Регенерация маны ускорена.",
+      "before": "Регенерация маны ускорена.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Аура изменяет восстановление маны цели. Направление и величина изменения зависят от способности-источника.|r"
+    },
+    {
+      "rawcode": "BHds",
+      "field": "bufftip",
+      "reference_before": "Божественный щит",
+      "before": "Божественный щит",
+      "after": "|cffe4cfa3Божественный щит|r"
+    },
+    {
+      "rawcode": "BHds",
+      "field": "buffubertip",
+      "reference_before": "Неуязвимость.",
+      "before": "Неуязвимость.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffc8e087неуязвима|cffced4da на время действия щита.|r"
+    },
+    {
+      "rawcode": "BHtc",
+      "field": "bufftip",
+      "reference_before": "Раскат грома",
+      "before": "Раскат грома",
+      "after": "|cffe4cfa3Раскат грома|r"
+    },
+    {
+      "rawcode": "BHtc",
+      "field": "buffubertip",
+      "reference_before": "Передвижение и атака замедлены.",
+      "before": "Передвижение и атака замедлены.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения и атаки |cffe69a8dснижена|cffced4da.|r"
+    },
+    {
+      "rawcode": "BIcb",
+      "field": "bufftip",
+      "reference_before": "Порча",
+      "before": "Порча",
+      "after": "|cffe4cfa3Порча|r"
+    },
+    {
+      "rawcode": "BIcb",
+      "field": "buffubertip",
+      "reference_before": "Броня ослаблена.",
+      "before": "Броня ослаблена.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Броня цели |cffe69a8dснижена|cffced4da.|r"
+    },
+    {
+      "rawcode": "BNab",
+      "field": "bufftip",
+      "reference_before": "Кислотная бомба",
+      "before": "Кислотная бомба",
+      "after": "|cffe4cfa3Кислотная бомба|r"
+    },
+    {
+      "rawcode": "BNab",
+      "field": "buffubertip",
+      "reference_before": "\"Броня ослаблена, периодический урон.\"",
+      "before": "\"Броня ослаблена, периодический урон.\"",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель поражена кислотой. Заклинание может наносить периодический урон и ослаблять броню; параметры определяются источником.|r"
+    },
+    {
+      "rawcode": "BNht",
+      "field": "bufftip",
+      "reference_before": "Ужасающий вой",
+      "before": "Ужасающий вой",
+      "after": "|cffe4cfa3Ужасающий вой|r"
+    },
+    {
+      "rawcode": "BNht",
+      "field": "buffubertip",
+      "reference_before": "Наносимый урон уменьшен.",
+      "before": "Наносимый урон уменьшен.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Урон от атак цели |cffe69a8dснижен|cffced4da.|r"
+    },
+    {
+      "rawcode": "BOsf",
+      "field": "bufftip",
+      "reference_before": "Дух волка",
+      "before": "Дух волка",
+      "after": "|cffe4cfa3Призванное существо|r"
+    },
+    {
+      "rawcode": "BOsf",
+      "field": "buffubertip",
+      "reference_before": "Призванные цели получают урон от рассеивающих способностей.",
+      "before": "Призванные цели получают урон от рассеивающих способностей.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Существо создано призывающим заклинанием.|r"
+    },
+    {
+      "rawcode": "BOwd",
+      "field": "bufftip",
+      "reference_before": "Идол",
+      "before": "Идол",
+      "after": "|cffe4cfa3Призванное создание|r"
+    },
+    {
+      "rawcode": "BOwd",
+      "field": "buffubertip",
+      "reference_before": "Призванные цели получают урон от рассеивающих способностей.",
+      "before": "Призванные цели получают урон от рассеивающих способностей.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Существо создано магией призыва.|r"
+    },
+    {
+      "rawcode": "BOwk",
+      "field": "bufftip",
+      "reference_before": "Танец ветра",
+      "before": "Танец ветра",
+      "after": "|cffe4cfa3Танец ветра|r"
+    },
+    {
+      "rawcode": "BOwk",
+      "field": "buffubertip",
+      "reference_before": "\"Невидимость, передвижение ускорено. Первая атака в состоянии невидимости нанесет больше урона.\"",
+      "before": "\"Невидимость, передвижение ускорено. Первая атака в состоянии невидимости нанесет больше урона.\"",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffc8e087невидима|cffced4da и передвигается быстрее. Атака из невидимости получает дополнительный урон и раскрывает атакующего.|r"
+    },
+    {
+      "rawcode": "BPSE",
+      "field": "bufftip",
+      "reference_before": "Оглушение",
+      "before": "Оглушение",
+      "after": "|cffe4cfa3Оглушение|r"
+    },
+    {
+      "rawcode": "BPSE",
+      "field": "buffubertip",
+      "reference_before": "Невозможно двигаться.",
+      "before": "Невозможно двигаться.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffe69a8dне может двигаться, атаковать и применять способности|cffced4da.|r"
+    },
+    {
+      "rawcode": "BUan",
+      "field": "bufftip",
+      "reference_before": "Оживление мертвых",
+      "before": "Оживление мертвых",
+      "after": "|cffe4cfa3Оживление мёртвых|r"
+    },
+    {
+      "rawcode": "BUan",
+      "field": "buffubertip",
+      "reference_before": "Призванные цели получают урон от рассеивающих способностей.",
+      "before": "Призванные цели получают урон от рассеивающих способностей.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Существо поднято из трупа и временно сражается на стороне призвавшего его владельца.|r"
+    },
+    {
+      "rawcode": "BUdd",
+      "field": "bufftip",
+      "reference_before": "Смерть и разложение",
+      "before": "Смерть и разложение",
+      "after": "|cffe4cfa3Смерть и разложение|r"
+    },
+    {
+      "rawcode": "BUdd",
+      "field": "buffubertip",
+      "reference_before": "Периодический урон.",
+      "before": "Периодический урон.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель получает |cffe69a8dпериодический урон|cffced4da от разлагающей магии.|r"
+    },
+    {
+      "rawcode": "BUfa",
+      "field": "bufftip",
+      "reference_before": "Морозный доспех",
+      "before": "Морозный доспех",
+      "after": "|cffe4cfa3Морозный доспех|r"
+    },
+    {
+      "rawcode": "BUfa",
+      "field": "buffubertip",
+      "reference_before": "\"Броня усилена. Враги, атакующие в ближнем бою, временно теряют скорость передвижения и атаки.\"",
+      "before": "\"Броня усилена. Враги, атакующие в ближнем бою, временно теряют скорость передвижения и атаки.\"",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Броня |cffc8e087повышена|cffced4da. Противники, атакующие цель в ближнем бою, временно теряют скорость передвижения и атаки.|r"
+    },
+    {
+      "rawcode": "BUsl",
+      "field": "bufftip",
+      "reference_before": "Сон",
+      "before": "Сон",
+      "after": "|cffe4cfa3Оцепенение|r"
+    },
+    {
+      "rawcode": "BUsl",
+      "field": "buffubertip",
+      "reference_before": "Невозможно двигаться и применять способности. Проснется при атаке.",
+      "before": "Невозможно двигаться и применять способности. Проснется при атаке.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffe69a8dне может двигаться, атаковать и применять способности|cffced4da до окончания эффекта.|r"
+    },
+    {
+      "rawcode": "Bakb",
+      "field": "bufftip",
+      "reference_before": "Боевые барабаны",
+      "before": "Боевые барабаны",
+      "after": "|cffe4cfa3Боевые барабаны|r"
+    },
+    {
+      "rawcode": "Bakb",
+      "field": "buffubertip",
+      "reference_before": "Урон от атак увеличен.",
+      "before": "Урон от атак увеличен.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Урон от атак союзника |cffc8e087повышен|cffced4da под действием ауры.|r"
+    },
+    {
+      "rawcode": "Bcrs",
+      "field": "bufftip",
+      "reference_before": "Проклятие",
+      "before": "Проклятие",
+      "after": "|cffe4cfa3Проклятие|r"
+    },
+    {
+      "rawcode": "Bcrs",
+      "field": "buffubertip",
+      "reference_before": "Вероятность промахнуться при атаке.",
+      "before": "Вероятность промахнуться при атаке.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Проклятие |cffe69a8dповышает вероятность промаха|cffced4da при атаке.|r"
+    },
+    {
+      "rawcode": "Bena",
+      "field": "bufftip",
+      "reference_before": "Опутывание",
+      "before": "Опутывание",
+      "after": "|cffe4cfa3Опутывание|r"
+    },
+    {
+      "rawcode": "Bena",
+      "field": "buffubertip",
+      "reference_before": "Обездвиженность. Невозможно взлететь.",
+      "before": "Обездвиженность. Невозможно взлететь.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffe69a8dне может двигаться|cffced4da. Воздушная цель притянута к земле и считается наземной.|r"
+    },
+    {
+      "rawcode": "Beng",
+      "field": "bufftip",
+      "reference_before": "Опутывание",
+      "before": "Опутывание",
+      "after": "|cffe4cfa3Опутывание|r"
+    },
+    {
+      "rawcode": "Beng",
+      "field": "buffubertip",
+      "reference_before": "Обездвиженность. Невозможно взлететь.",
+      "before": "Обездвиженность. Невозможно взлететь.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffe69a8dне может двигаться|cffced4da. Воздушная цель притянута к земле и считается наземной.|r"
+    },
+    {
+      "rawcode": "Bfro",
+      "field": "bufftip",
+      "reference_before": "Замедление",
+      "before": "Замедление",
+      "after": "|cffe4cfa3Замедление холодом|r"
+    },
+    {
+      "rawcode": "Bfro",
+      "field": "buffubertip",
+      "reference_before": "Передвижение замедлено.",
+      "before": "Передвижение замедлено.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения цели |cffe69a8dснижена|cffced4da холодом.|r"
+    },
+    {
+      "rawcode": "Brej",
+      "field": "bufftip",
+      "reference_before": "Омоложение",
+      "before": "Омоложение",
+      "after": "|cffe4cfa3Омоложение|r"
+    },
+    {
+      "rawcode": "Brej",
+      "field": "buffubertip",
+      "reference_before": "Восполнение здоровья.",
+      "before": "Восполнение здоровья.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Восстанавливающее заклинание восполняет |cffc8e087здоровье и/или ману|cffced4da цели в зависимости от источника.|r"
+    },
+    {
+      "rawcode": "Bslo",
+      "field": "bufftip",
+      "reference_before": "Замедление",
+      "before": "Замедление",
+      "after": "|cffe4cfa3Замедление|r"
+    },
+    {
+      "rawcode": "Bslo",
+      "field": "buffubertip",
+      "reference_before": "Передвижение и атака замедлены.",
+      "before": "Передвижение и атака замедлены.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения и атаки цели |cffe69a8dснижена|cffced4da.|r"
+    },
+    {
+      "rawcode": "Bspl",
+      "field": "bufftip",
+      "reference_before": "Духовная связь",
+      "before": "Духовная связь",
+      "after": "|cffe4cfa3Духовная связь|r"
+    },
+    {
+      "rawcode": "Bspl",
+      "field": "buffubertip",
+      "reference_before": "Часть получаемого урона распределяется между другими связанными воинами.",
+      "before": "Часть получаемого урона распределяется между другими связанными воинами.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Часть получаемого урона перераспределяется между связанными существами. Доля урона определяется наложившим связь заклинанием.|r"
+    },
+    {
+      "rawcode": "Bvng",
+      "field": "bufftip",
+      "reference_before": "Дух возмездия",
+      "before": "Дух возмездия",
+      "after": "|cffe4cfa3Дух возмездия|r"
+    },
+    {
+      "rawcode": "Bvng",
+      "field": "buffubertip",
+      "reference_before": "Здесь побывал дух возмездия.",
+      "before": "Здесь побывал дух возмездия.",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Из этих останков создан призванный дух.|r"
+    }
+  ],
+  "in_game_checked": false,
+  "evidence": [
+    "faceless_shared_buffs_before.json",
+    "faceless_active_buff_sources.json",
+    "faceless_shared_custom_buff_users.json"
+  ],
+  "notes": [
+    "B01D is shared by A077 and A1KB, B030 by A0DR/A0TE/A15N. Fixed direction or numbers cannot be attributed to every source.",
+    "BHab is used by both mana-regeneration bonuses and penalties; its status wording is neutral.",
+    "BUsl is reused for sleep and the stun of A113. Do not promise awakening on damage for all sources.",
+    "Shared status magnitudes can vary; exact numbers belong to the source spell tooltip. No buff IDs or stacking rules are changed."
+  ],
+  "excluded": {
+    "no_player_tooltip": [
+      "AEtr",
+      "BEia",
+      "BUts"
+    ],
+    "unresolved_existing_ids": [
+      "BHtb",
+      "Bust"
+    ],
+    "own_buffs_in_separate_batch": [
+      "B01I",
+      "B02L",
+      "B08E",
+      "B08F"
+    ]
+  },
+  "remaining": [
+    "Проверить показ эффектов в игре, включая английскую локаль клиента",
+    "BHtb/Bust: существующие неразрешённые ссылки, механические поля в задаче текстов не менять"
+  ]
+}

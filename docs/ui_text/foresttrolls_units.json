@@ -1,0 +1,324 @@
+{
+  "scope": "Лесные тролли (ForestTrolls): категория 2 — Юниты",
+  "units_count": 16,
+  "variants": [
+    "SD"
+  ],
+  "units": [
+    {
+      "id": "o05O",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31402,
+          "after": "|cffe4cfa3Тролль-ястреб|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32942,
+          "after": "|cffe4cfa3Тролль-ястреб|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 37776,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Могущественный аватар Лоа Ястреба. Обрушивает на врагов разрушительные бури, молнии и питает союзных магов неисчерпаемой маной.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Ястреба|cffced4da: ускоряет регенерацию маны ближайших союзников на |cffc8e087+3|cffced4da ед./сек.|n- |cffa9c7deЦепная молния|cffced4da: поражает молнией до |cffffffff10|cffced4da врагов, нанося от |cffffffff70|cffced4da ед. урона.|n- |cffa9c7deБуря|cffced4da: призывает грозовой шторм, наносящий |cffffffff50|cffced4da ед. урона/сек. в области в течение |cffffffff15|cffced4da сек.|n- |cffa9c7deСмерть врагам Амани|cffced4da: атаки поражают сразу несколько целей.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o04Z",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31321,
+          "after": "|cffe4cfa3Берсерк|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32961,
+          "after": "|cffe4cfa3Берсерк|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 36647,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Свирепый воин ближнего боя, не знающий страха и боли. Прорубает ряды противника сокрушительным шквалом ударов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБерсерк|cffced4da: активирует боевое безумие, ускоряя атаки на |cffffffff+35%|cffced4da ценой получаемого урона.|n- |cffa9c7deСвирепость Лесов|cffced4da: ускоряет удары по мере потери здоровья.|n- |cffa9c7deСнадобья силы|cffced4da: увеличивает запас здоровья после исследования в Колизее.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o04Y",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31237,
+          "after": "|cffe4cfa3Мастер топора|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35547,
+          "after": "|cffe4cfa3Мастер топора|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 8212,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Закалённый в бесчисленных битвах стрелок. Обладает повышенными характеристиками и смертоносной точностью бросков.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБерсерк|cffced4da: повышает скорость атаки на |cffffffff+35%|cffced4da, увеличивая получаемый урон на |cffe69a8d+30%|cffced4da.|n- |cffa9c7deСвирепость Лесов|cffced4da: повышает боевые характеристики по мере потери здоровья.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o052",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31330,
+          "after": "|cffe4cfa3Жрец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32321,
+          "after": "|cffe4cfa3Жрец|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9695,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Маг-целитель лесных троллей. Поддерживает армию целебными ритуалами, развеивает вражеские чары и благословляет воинов огненной мощью.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЦелительный ритуал|cffced4da: восстанавливает |cffc8e08725|cffced4da ед. здоровья раненому союзнику.|n- |cffa9c7deРассеивание заклинаний|cffced4da: снимает эффекты магии в области и наносит |cffe69a8d200|cffced4da ед. урона призванным существам.|n- |cffa9c7deОгонь Амани|cffced4da: дарует соратнику |cffc8e087+15%|cffced4da к урону и |cffc8e087+3|cffced4da к броне на |cffffffff60|cffced4da сек.|n- |cffa9c7deЖертва кровью|cffced4da: приносит в жертву |cffe69a8d100|cffced4da ед. здоровья ради |cffc8e087100|cffced4da ед. маны.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o05M",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32950,
+          "after": "|cffe4cfa3Тролль-медведь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33636,
+          "after": "|cffe4cfa3Тролль-медведь|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 37605,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Могучий исполин, воплотивший силу Лоа Медведя. Обладает сокрушительными ударами по площади и защищает войско священным рёвом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Медведя|cffced4da: увеличивает броню окружающих союзников на |cffc8e087+4|cffced4da.|n- |cffa9c7deПрыжок медведя|cffced4da: совершает сокрушительный прыжок в цель, нанося урон по приземлении.|n- |cffa9c7deЧудодейственный рёв|cffced4da: дарует союзникам |cffc8e087+2|cffced4da к броне и ускоряет регенерацию здоровья на |cffffffff20|cffced4da сек.|n- |cffa9c7deОгромная сила|cffced4da: наносит |cffffffff15%|cffced4da рассекающего урона по площади вокруг цели.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o04W",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31200,
+          "after": "|cffe4cfa3Метатель топоров|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32946,
+          "after": "|cffe4cfa3Метатель топоров|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6795,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Рядовой стрелок лесных троллей. Поражает врагов тяжёлыми метательными топорами на средней дистанции.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБерсерк|cffced4da: кратковременно увеличивает скорость атаки ценой получаемого урона.|n- |cffa9c7deСвирепость Лесов|cffced4da: увеличивает скорость боя при получении ранений.|n- |cffa9c7deМастер топора|cffced4da: может быть улучшен в казармах до мастера топора.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o05F",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31537,
+          "after": "|cffe4cfa3Катапульта|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33633,
+          "after": "|cffe4cfa3Катапульта|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10753,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлое осадное орудие лесных троллей дальнего действия. Наносит колоссальный урон вражеским укреплениям и скоплениям пехоты.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o051",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31327,
+          "after": "|cffe4cfa3Заклинатель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 31535,
+          "after": "|cffe4cfa3Заклинатель|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9656,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тёмный шаман армии троллей. Поражает врагов ударами духов, расставляет защитные тотемы и вводит воинов в безудержное неистовство.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУдары духов|cffced4da: обстреливает выбранную область сгустками магии вуду.|n- |cffa9c7deЗмеиный идол|cffced4da: призывает стреляющий тотем, атакующий наземные и воздушные цели.|n- |cffa9c7deБешенство|cffced4da: ускоряет атаку до |cffffffff4|cffced4da союзников на |cffffffff+30%|cffced4da ценой потери |cffe69a8d3|cffced4da ед. здоровья/сек.|n- |cffa9c7deЖертва кровью|cffced4da: жертвует здоровьем ради мгновенного восстановления маны.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o04X",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31234,
+          "after": "|cffe4cfa3Собиратель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 31464,
+          "after": "|cffe4cfa3Собиратель|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6796,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Быстрый разведчик и охотник племени. Способен сражаться на передовой и заготавливать древесину.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСвирепость Лесов|cffced4da: ускоряет скорость атаки при потере здоровья.|n- |cffa9c7deСбор древесины|cffced4da: способен рубить и носить лес.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o050",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31324,
+          "after": "|cffe4cfa3Наездник на медведе|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 31534,
+          "after": "|cffe4cfa3Наездник на медведе|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9380,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Могучий всадник на боевом медведе. Обладает огромным запасом здоровья, оглушает противников и держит передовую строя.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСильный удар|cffced4da: с вероятностью |cffffffff15%|cffced4da наносит |cffffffff+15|cffced4da ед. урона и оглушает врага на |cffffffff1|cffced4da сек.|n- |cffa9c7deАманийские шипы|cffced4da: после исследования «Шипов на медведе» повышает броню на |cffc8e087+2|cffced4da и отражает |cffffffff7%|cffced4da урона ближнего боя.|n- |cffa9c7deСвирепость Лесов|cffced4da: боевой расовый бонус при потере здоровья.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o05N",
+      "hotkey": "X",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32951,
+          "after": "|cffe4cfa3Тролль-волк|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33637,
+          "after": "|cffe4cfa3Тролль-волк|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 37750,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Грозный хищный аватар Лоа Волка. Направляет первобытную ярость на усиление союзных войск и терзает врагов в ближнем бою.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Волка|cffced4da: увеличивает силу атак ближайших союзников на |cffc8e087+20%|cffced4da.|n- |cffa9c7deБезрассудный берсерк|cffced4da: дарует |cffffffff+100%|cffced4da к скорости атаки и |cffffffff+25%|cffced4da к скорости бега ценой получаемого урона.|n- |cffa9c7deУжасающий вой|cffced4da: снижает броню окружающих врагов на |cffe69a8d-3|cffced4da.|n- |cffa9c7deВкус битвы|cffced4da: наделяет окружающих союзников |cffc8e08725%|cffced4da вампиризмом на |cffffffff20|cffced4da сек.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o04V",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31180,
+          "after": "|cffe4cfa3Ремесленник|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 39299,
+          "after": "|cffe4cfa3Ремесленник|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 36601,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий лесных троллей. Добывает древесину, возводит и ремонтирует постройки.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deНебольшой скачок|cffced4da: мгновенно переносит рабочего на небольшое расстояние.|n- |cffa9c7deСвирепость Лесов|cffced4da: расовая ярость, ускоряющая атаки при получении ранений.|n- |cffa9c7deРемонт|cffced4da: чинит повреждённые здания за счёт ресурсов.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o053",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32934,
+          "after": "|cffe4cfa3Мастер копья|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32440,
+          "after": "|cffe4cfa3Мастер копья|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10615,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый копейщик лесных троллей. Поражает врагов с дистанции и выводит из строя опасные цели тяжёлым аманийским копьём.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАманийское копьё|cffced4da: бросает копьё во врага, нанося |cffffffff65|cffced4da ед. урона и оглушая его на |cffffffff2|cffced4da сек.|n- |cffa9c7deБерсерк|cffced4da: кратковременно увеличивает скорость атаки на |cffffffff+35%|cffced4da.|n- |cffa9c7deСвирепость Лесов|cffced4da: усиливает боевые характеристики при получении ранений.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0D4",
+      "hotkey": "Q",
+      "strings": []
+    },
+    {
+      "id": "h0D6",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3002,
+          "after": "|cffe4cfa3Фрегат|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 5542,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Быстрый боевой корабль Орды, патрулирующий прибрежные воды и атакующий морские и береговые цели.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0D5",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10916,
+          "after": "|cffe4cfa3Дредноут|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10918,
+          "after": "|cffe4cfa3Дредноут|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6926,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Могучий бронированный флагман флота дальнего действия. Наносит сокрушительный урон кораблям и укреплениям противника.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    }
+  ]
+}

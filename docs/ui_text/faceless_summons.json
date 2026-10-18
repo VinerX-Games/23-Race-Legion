@@ -1,0 +1,208 @@
+{
+  "scope": "Безликие: призывы, Йогг`Сарон и его щупальца; общие nfgt/uloc",
+  "strings": [
+    {
+      "rawcode": "e009",
+      "field": "name",
+      "reference_before": "TRIGSTR_10843",
+      "before": "|cffd7b4f5Кошмар|r",
+      "after": "|cffe4cfa3Кошмар|r"
+    },
+    {
+      "rawcode": "e009",
+      "field": "tip",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffe4cfa3Кошмар|r"
+    },
+    {
+      "rawcode": "e009",
+      "field": "ubertip",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Призываемый боец, создаваемый Проклинателем Бездны из трупа.|n|nАтакует наземные и воздушные цели.|r"
+    },
+    {
+      "rawcode": "h0OM",
+      "field": "name",
+      "reference_before": "TRIGSTR_8762",
+      "before": "|cffd7b4f5Тварь Из Бездны",
+      "after": "|cffe4cfa3Тварь из Бездны|r"
+    },
+    {
+      "rawcode": "h0OM",
+      "field": "tip",
+      "reference_before": "TRIGSTR_25381",
+      "before": "Обучить |cffd7b4f5К`Траксис|r",
+      "after": "|cffe4cfa3Тварь из Бездны|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "h0OM",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_8778",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная-Осадная|r|n\nТяжелая боевая единица |cffd7b4f5Безликих|r",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Могучий наземный боец Бездны с атакой по нескольким целям.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПорождение щупальца|cffced4da: призывает временное Щупальце для наземного боя.|n- |cffa9c7deРассекающий удар|cffced4da: наносит часть урона атаки врагам вокруг основной цели.|n- |cffa9c7deВзрыв Эфира|cffced4da: при гибели наносит урон наземным врагам вокруг воина.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "n01T",
+      "field": "name",
+      "reference_before": "TRIGSTR_12906",
+      "before": "|cff6f6483Щупальце|r",
+      "after": "|cffe4cfa3Щупальце|r"
+    },
+    {
+      "rawcode": "n01T",
+      "field": "tip",
+      "reference_before": "TRIGSTR_12907",
+      "before": "Призвать |cff6f6483Щупальце|r",
+      "after": "|cffe4cfa3Щупальце|r"
+    },
+    {
+      "rawcode": "n01T",
+      "field": "ubertip",
+      "reference_before": "Жуткое щупальце из морской пучины. |n|n|cffffcc00Атакует наземные цели.|r",
+      "before": "Жуткое щупальце из морской пучины. |n|n|cffffcc00Атакует наземные цели.|r",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Неподвижное существо для наземного боя.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "nfgt",
+      "field": "name",
+      "reference_before": "Щупальце",
+      "before": "Щупальце",
+      "after": "|cffe4cfa3Щупальце|r"
+    },
+    {
+      "rawcode": "nfgt",
+      "field": "tip",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffe4cfa3Щупальце|r"
+    },
+    {
+      "rawcode": "nfgt",
+      "field": "ubertip",
+      "reference_before": "Жуткое щупальце из морской пучины. |n|n|cffffcc00Атакует наземные цели.|r",
+      "before": "Жуткое щупальце из морской пучины. |n|n|cffffcc00Атакует наземные цели.|r",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Призываемое существо, атакующее наземных противников.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "uloc",
+      "field": "name",
+      "reference_before": "Саранча",
+      "before": "Саранча",
+      "after": "|cffe4cfa3Саранча|r"
+    },
+    {
+      "rawcode": "uloc",
+      "field": "tip",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffe4cfa3Саранча|r"
+    },
+    {
+      "rawcode": "uloc",
+      "field": "ubertip",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Насекомое роя: автоматически атакует противников и возвращается к источнику роя, восстанавливая ему здоровье. Нельзя выбрать и отдавать обычные команды.|n|nАтакует наземные и воздушные цели.|r"
+    },
+    {
+      "rawcode": "n03B",
+      "field": "name",
+      "reference_before": "TRIGSTR_9590",
+      "before": "|cff806480Щупальце Йог-сарона|r",
+      "after": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+    },
+    {
+      "rawcode": "n03B",
+      "field": "tip",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+    },
+    {
+      "rawcode": "n03B",
+      "field": "ubertip",
+      "reference_before": "Жуткое щупальце из морской пучины. |n|n|cffffcc00Атакует наземные цели.|r",
+      "before": "Жуткое щупальце из морской пучины. |n|n|cffffcc00Атакует наземные цели.|r",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Защитное щупальце Древнего бога для наземного боя.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРассекающий удар|cffced4da: атакой задевает наземных врагов рядом с основной целью.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "n03C",
+      "field": "name",
+      "reference_before": "TRIGSTR_9831",
+      "before": "|cff806480Щупальце Йог-сарона|r",
+      "after": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+    },
+    {
+      "rawcode": "n03C",
+      "field": "tip",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+    },
+    {
+      "rawcode": "n03C",
+      "field": "ubertip",
+      "reference_before": "Жуткое щупальце из морской пучины. |n|n|cffffcc00Атакует наземные цели.|r",
+      "before": "Жуткое щупальце из морской пучины. |n|n|cffffcc00Атакует наземные цели.|r",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Защитное щупальце Древнего бога для наземного боя.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРассекающий удар|cffced4da: атакой задевает наземных врагов рядом с основной целью.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "n04C",
+      "field": "name",
+      "reference_before": "TRIGSTR_10743",
+      "before": "|cff806480Щупальце Йог-сарона|r",
+      "after": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+    },
+    {
+      "rawcode": "n04C",
+      "field": "tip",
+      "reference_before": "",
+      "before": "",
+      "after": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+    },
+    {
+      "rawcode": "n04C",
+      "field": "ubertip",
+      "reference_before": "Жуткое щупальце из морской пучины. |n|n|cffffcc00Атакует наземные цели.|r",
+      "before": "Жуткое щупальце из морской пучины. |n|n|cffffcc00Атакует наземные цели.|r",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Защитное щупальце Древнего бога для наземного боя.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРассекающий удар|cffced4da: атакой задевает наземных врагов рядом с основной целью.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "n03A",
+      "field": "name",
+      "reference_before": "TRIGSTR_15644",
+      "before": "|cff806480Йог-сарон|r",
+      "after": "|cffe4cfa3Йогг`Сарон|r"
+    },
+    {
+      "rawcode": "n03A",
+      "field": "tip",
+      "reference_before": "TRIGSTR_15645",
+      "before": "|cff806480Йог-сарон|r",
+      "after": "|cffe4cfa3Йогг`Сарон|r"
+    },
+    {
+      "rawcode": "n03A",
+      "field": "ubertip",
+      "reference_before": "\"Древнее могущественное существо. Атакует врагов сгустками огня. Владеет «Порождением щупальца», «Огненной стрелой» и «Подчинением». |n|n|cffffcc00Атакует наземные и воздушные цели.|r\"",
+      "before": "\"Древнее могущественное существо. Атакует врагов сгустками огня. Владеет «Порождением щупальца», «Огненной стрелой» и «Подчинением». |n|n|cffffcc00Атакует наземные и воздушные цели.|r\"",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Древний бог, призывающий войска и поддерживающий их магией. После «Служения Йогг`Сарону» становится столицей игрока.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСмертельная связь|cffced4da: перераспределяет урон между связанными вражескими войсками.|n- |cffa9c7deБожественное видение|cffced4da: открывает обзор и обнаруживает невидимые войска.|n- |cffa9c7deПокровительство бога|cffced4da: восстанавливает союзнику здоровье и ману.|n- |cffa9c7deЩупальце Йогг`Сарона|cffced4da: призывает временное щупальце.|n- |cffa9c7deПризыв бессмертных стражей|cffced4da: создаёт восемь Бессмертных стражей на ограниченное время.|n- |cffa9c7deПризыв сущностей Бездны|cffced4da: создаёт пятнадцать Могущественных Сущностей бездны на ограниченное время.|n- |cffa9c7deПортал в Бездну|cffced4da: выпускает Тварь из Бездны.|n|n|cffa6afb8Усиление при снижении здоровья:|cffced4da|n- Ниже |cffffffff17000|cffced4da здоровья получает «Залповый огонь»; требуется одноимённое исследование.|n- Ниже |cffffffff15000|cffced4da здоровья получает «Подчинение». Взятие под контроль сохраняет полученные способности.|n|nАтакует наземные и воздушные цели.|r"
+    }
+  ],
+  "in_game_checked": false,
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "evidence": [
+    "faceless_remaining_units_before.json",
+    "OldGods.lua: InitTrig_AncienGods_Add_MassAttak, InitTrig_AncientGods_add_MindControl",
+    "Bezlikie.lua: Trig_Sluga_qqgsarona"
+  ],
+  "remaining": [
+    "Игра: призывы, обе атаки Твари и динамические способности Йогг`Сарона",
+    "OldGods.lua: случайные призывы n04K/n04L сейчас ссылаются на Пиратский порт и Serpent's Lair; механику в этой задаче не менять"
+  ]
+}

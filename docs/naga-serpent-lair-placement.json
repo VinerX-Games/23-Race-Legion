@@ -1,0 +1,6 @@
+{
+  "operations": [
+    {"type": "unit", "id": "n04L", "field": "preventplace", "value": "unwalkable,unfloat"},
+    {"type": "unit", "id": "n04L", "field": "movetp", "value": "float"}
+  ]
+}

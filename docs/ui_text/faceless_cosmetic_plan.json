@@ -1,0 +1,22 @@
+{
+  "operations": [
+    {
+      "type": "ability",
+      "id": "A01C",
+      "field": "name",
+      "value": "|cffe4cfa3Свечение героя|r"
+    },
+    {
+      "type": "ability",
+      "id": "A01C",
+      "field": "tip1",
+      "value": "|cffe4cfa3Свечение героя|r"
+    },
+    {
+      "type": "ability",
+      "id": "A01C",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Декоративное свечение героя. Не повышает урон от атак.|r"
+    }
+  ]
+}

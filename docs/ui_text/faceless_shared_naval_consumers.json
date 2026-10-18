@@ -1,0 +1,455 @@
+{
+  "command": "dump-objects",
+  "count": 2785,
+  "fields_used": [
+    "name",
+    "upgrades",
+    "defup",
+    "sides1",
+    "sides2",
+    "weapson",
+    "regenhp",
+    "regentype"
+  ],
+  "map": "F:\\Gemini_23Race\\map.w3x",
+  "objects": [
+    {
+      "editor_suffix": "(Шаблон флота)",
+      "fields": {
+        "defup": "2",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "",
+        "sides2": "",
+        "upgrades": "R006,R007,R004,R003",
+        "weapson": "0"
+      },
+      "id": "h00X",
+      "name": "Транспорт"
+    },
+    {
+      "editor_suffix": "(шаблон флота)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "15",
+        "sides2": "",
+        "upgrades": "R005,R007,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h00Y",
+      "name": "Фрегат"
+    },
+    {
+      "editor_suffix": "(шаблон флота)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "10",
+        "sides2": "",
+        "upgrades": "R005,R007,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h00Z",
+      "name": "Линкор"
+    },
+    {
+      "editor_suffix": "(бандиты)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "10",
+        "sides2": "",
+        "upgrades": "R005,R007,R004,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h03K",
+      "name": "Пиратский линкор"
+    },
+    {
+      "editor_suffix": "(бандиты)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "15",
+        "sides2": "",
+        "upgrades": "R005,R007,R004,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h03L",
+      "name": "Пиратский Фрегат"
+    },
+    {
+      "editor_suffix": "(нежить)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "15",
+        "sides2": "",
+        "upgrades": "R005,R007,R004,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0CZ",
+      "name": "Фрегат"
+    },
+    {
+      "editor_suffix": "(Нежить)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "10",
+        "sides2": "",
+        "upgrades": "R005,R007,R004,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0D0",
+      "name": "Линкор"
+    },
+    {
+      "editor_suffix": "(Нежить)",
+      "fields": {
+        "defup": "2",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "",
+        "sides2": "",
+        "upgrades": "R006,R007,R004,R003",
+        "weapson": "0"
+      },
+      "id": "h0D2",
+      "name": "Транспорт"
+    },
+    {
+      "editor_suffix": "(Орда)",
+      "fields": {
+        "defup": "2",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "",
+        "sides2": "",
+        "upgrades": "R006,R007,R004,R003",
+        "weapson": "0"
+      },
+      "id": "h0D4",
+      "name": "Транспорт"
+    },
+    {
+      "editor_suffix": "(шаблон орда)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "10",
+        "sides2": "",
+        "upgrades": "R005,R007,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0D5",
+      "name": "Дредноут"
+    },
+    {
+      "editor_suffix": "(шаблон Орда)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "15",
+        "sides2": "",
+        "upgrades": "R005,R007,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0D6",
+      "name": "|cffff5454Фрегат|r"
+    },
+    {
+      "editor_suffix": "(Ночные эльфы)",
+      "fields": {
+        "defup": "2",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "",
+        "sides2": "",
+        "upgrades": "R006,R007,R004,R003",
+        "weapson": "0"
+      },
+      "id": "h0D9",
+      "name": "Транспорт"
+    },
+    {
+      "editor_suffix": "(Ночные эльфы)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "10",
+        "sides2": "",
+        "upgrades": "R005,R007,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0DA",
+      "name": "Линкор"
+    },
+    {
+      "editor_suffix": "(Ночные эльфы)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "15",
+        "sides2": "",
+        "upgrades": "R005,R007,R004,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0DB",
+      "name": "Фрегат"
+    },
+    {
+      "editor_suffix": "(Кул тирас)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "15",
+        "sides2": "",
+        "upgrades": "R027,R005,R007,R004,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0E4",
+      "name": "Фрегат"
+    },
+    {
+      "editor_suffix": "(Кул тирас)",
+      "fields": {
+        "defup": "2",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "",
+        "sides2": "",
+        "upgrades": "R006,R007,R004,R003",
+        "weapson": "0"
+      },
+      "id": "h0E5",
+      "name": "Транспорт"
+    },
+    {
+      "editor_suffix": "(Кул тирас)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "10",
+        "sides2": "",
+        "upgrades": "R027,R007,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0E6",
+      "name": "Линкор"
+    },
+    {
+      "editor_suffix": "(Кул тирас)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "15",
+        "sides2": "",
+        "upgrades": "kt01,R027,R005,R007,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0E8",
+      "name": "Галеон"
+    },
+    {
+      "editor_suffix": "(орда)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "10",
+        "sides2": "",
+        "upgrades": "R005,R007,R004,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0HM",
+      "name": "|cffff5454Броненосец|r"
+    },
+    {
+      "editor_suffix": "(Орда)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "15",
+        "sides2": "",
+        "upgrades": "R005,R007,R004,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0HN",
+      "name": "|cffff5454Легкий корабль Орды|r"
+    },
+    {
+      "editor_suffix": "(Орда)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "15",
+        "sides2": "",
+        "upgrades": "R005,R007,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0HT",
+      "name": "|cffff5454Фрегат Син'Дорай|r"
+    },
+    {
+      "editor_suffix": "(Орда)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "15",
+        "sides2": "",
+        "upgrades": "R005,R007,R004,R002",
+        "weapson": "1"
+      },
+      "id": "h0J3",
+      "name": "|cffff5454Фрегат Отррекшихся|r"
+    },
+    {
+      "editor_suffix": "(Орда)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "17",
+        "sides2": "",
+        "upgrades": "R005,R007,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0J4",
+      "name": "|cffff5454Гордость Зандалара|r"
+    },
+    {
+      "editor_suffix": "(орда)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "10",
+        "sides2": "",
+        "upgrades": "R005,R007,R004,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0I5",
+      "name": "Линкор Отрекшихся"
+    },
+    {
+      "editor_suffix": "(Орда)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "15",
+        "sides2": "",
+        "upgrades": "R005,R007,R004,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0JB",
+      "name": "Судно Гоблинов"
+    },
+    {
+      "editor_suffix": "(Альянс)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "15",
+        "sides2": "",
+        "upgrades": "R005,R007,R004,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0L0",
+      "name": "|cffaad2ffЛегкий корабль Альянса|r"
+    },
+    {
+      "editor_suffix": "(Альянс)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "10",
+        "sides2": "",
+        "upgrades": "R005,R007,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0L1",
+      "name": "|cffaad2ffТяжелый корабль Альянса|r"
+    },
+    {
+      "editor_suffix": "(Альянс)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "15",
+        "sides2": "",
+        "upgrades": "R005,R007,R003,R002",
+        "weapson": "1"
+      },
+      "id": "h0M6",
+      "name": "Галеон"
+    },
+    {
+      "editor_suffix": "(Кул тирас)",
+      "fields": {
+        "defup": "2",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "",
+        "sides2": "",
+        "upgrades": "R006,R007,R004,R003",
+        "weapson": "0"
+      },
+      "id": "h0NW",
+      "name": "Рыбацкая лодка"
+    },
+    {
+      "editor_suffix": "(ПА)",
+      "fields": {
+        "defup": "2",
+        "regenhp": "0.25",
+        "regentype": "always",
+        "sides1": "3",
+        "sides2": "",
+        "upgrades": "R001,R002",
+        "weapson": "1"
+      },
+      "id": "pa17",
+      "name": "|cffb4d2ebВоин Земли|r"
+    },
+    {
+      "editor_suffix": "(Ор2)",
+      "fields": {
+        "defup": "1",
+        "regenhp": "",
+        "regentype": "none",
+        "sides1": "10",
+        "sides2": "",
+        "upgrades": "R007,R003",
+        "weapson": "0"
+      },
+      "id": "w220",
+      "name": "|cffdcb496Нефтяной танкер|r"
+    }
+  ],
+  "ok": true,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "type": "unit"
+}

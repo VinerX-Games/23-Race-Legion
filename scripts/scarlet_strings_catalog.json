@@ -1,0 +1,6419 @@
+{
+  "38865": [
+    {
+      "category": "selection",
+      "obj_id": "A0HM",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Алый Орден|r"
+    }
+  ],
+  "38866": [
+    {
+      "category": "selection",
+      "obj_id": "A0HM",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Алый Орден|r"
+    }
+  ],
+  "11204": [
+    {
+      "category": "selection",
+      "obj_id": "A0HM",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "|cffa0beaaСоздатель расы:|r |cffc8dcaaEscanor(Яхве)|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaNiCAmCHiK|r|n|cffa0beaaСложность:|r |cffadff2f●●|r●●●|n|cffa0beaaПериод:|r |cffc8dcaaWoW Classic - Battle for Azeroth|r|n|n|cffff0000Aлый opдeн|r – peлигиoзнaя opгaнизaция, бopящaяcя пpoтив нeжити. Oни являютcя ocнoвнoй пpoблeмoй для Oтpeкшиxcя, и нecкoлькo зaдaний в Tиpиcфaльcкиx лecax включaют в ceбя aтaки нa иx вoйcкa, лидepoв и кpeпocти. Aлый opдeн pacпoлaгaeт нecкoлькими бacтиoнaми пo вceй тeppитopии бывшиx зeмeль Лopдepoнa: Moнacтыpь Aлoгo opдeнa, Дoльный Oчaг, Длaнь Tиpa, бacтиoн Aлoгo opдeнa в Cтpaтxoльмe и нecкoлькo мeлкиx лaгepeй и нaблюдaтeльныx бaшeн пo вceй тeppитopии. Taкжe Aлый opдeн - пocлeдниe ocтaтки вoйcк кopoлeвcтвa Лopдepoн, yничтoжeннoгo Плeтью. Пocлe aтaки нa Aнклaв Aлoгo opдeнa, Aлый opдeн пepeимeнoвaлcя в Aлый Haтиcк и тeпepь paбoтaeт в Hopдcкoлe."
+    }
+  ],
+  "15243": [
+    {
+      "category": "selection",
+      "obj_id": "A0HM",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "17404": [
+    {
+      "category": "building",
+      "obj_id": "h05U",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfffa9696Ратуша|r"
+    }
+  ],
+  "17405": [
+    {
+      "category": "building",
+      "obj_id": "h05U",
+      "field": "tip",
+      "note": "",
+      "current_val": "Построить |cfffa9696Ратушу|r"
+    }
+  ],
+  "12539": [
+    {
+      "category": "building",
+      "obj_id": "h05U",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa135 сек.|r|n|nБазовое здание. Обучает работников и хранит добытые ресурсы. Можно улучшить до форта, а затем до замка, чтобы получить доступ к новым зданиям и типам войск."
+    }
+  ],
+  "1558": [
+    {
+      "category": "building",
+      "obj_id": "h05U",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "17406": [
+    {
+      "category": "building",
+      "obj_id": "h05V",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfffa9696Форт|r"
+    }
+  ],
+  "17407": [
+    {
+      "category": "building",
+      "obj_id": "h05V",
+      "field": "tip",
+      "note": "",
+      "current_val": "Улучшить до |cfffa9696Форта|r"
+    }
+  ],
+  "12962": [
+    {
+      "category": "building",
+      "obj_id": "h05V",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск."
+    }
+  ],
+  "5273": [
+    {
+      "category": "building",
+      "obj_id": "h05V",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Z"
+    }
+  ],
+  "17408": [
+    {
+      "category": "building",
+      "obj_id": "h05W",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfffa9696Замок|r"
+    }
+  ],
+  "17409": [
+    {
+      "category": "building",
+      "obj_id": "h05W",
+      "field": "tip",
+      "note": "",
+      "current_val": "Улучшить до |cfffa9696Замка|r"
+    }
+  ],
+  "12963": [
+    {
+      "category": "building",
+      "obj_id": "h05W",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск."
+    }
+  ],
+  "5274": [
+    {
+      "category": "building",
+      "obj_id": "h05W",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Z"
+    }
+  ],
+  "17410": [
+    {
+      "category": "building",
+      "obj_id": "h05X",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfffa9696Алтарь Покорности|r"
+    }
+  ],
+  "17411": [
+    {
+      "category": "building",
+      "obj_id": "h05X",
+      "field": "tip",
+      "note": "",
+      "current_val": "Построить |cfffa9696Алтарь Покорности|r"
+    }
+  ],
+  "9278": [
+    {
+      "category": "building",
+      "obj_id": "h05X",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nСооружение позволяющее призывать новых и воскрешает павших героев."
+    }
+  ],
+  "1285": [
+    {
+      "category": "building",
+      "obj_id": "h05X",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "S"
+    }
+  ],
+  "17412": [
+    {
+      "category": "building",
+      "obj_id": "h05Y",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfffa9696Ферма|r"
+    }
+  ],
+  "17413": [
+    {
+      "category": "building",
+      "obj_id": "h05Y",
+      "field": "tip",
+      "note": "",
+      "current_val": "Построить |cfffa9696Ферму|r"
+    }
+  ],
+  "31660": [
+    {
+      "category": "building",
+      "obj_id": "h05Y",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.\n\n|cffffff00Приносит 20 инкома|r"
+    }
+  ],
+  "1454": [
+    {
+      "category": "building",
+      "obj_id": "h05Y",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "A"
+    }
+  ],
+  "17415": [
+    {
+      "category": "building",
+      "obj_id": "h05Z",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfffa9696Казармы|r"
+    }
+  ],
+  "17416": [
+    {
+      "category": "building",
+      "obj_id": "h05Z",
+      "field": "tip",
+      "note": "",
+      "current_val": "Построить |cfffa9696Казармы|r"
+    }
+  ],
+  "12982": [
+    {
+      "category": "building",
+      "obj_id": "h05Z",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nЗдание для подготовки базовых войск. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск."
+    }
+  ],
+  "1772": [
+    {
+      "category": "building",
+      "obj_id": "h05Z",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "17417": [
+    {
+      "category": "building",
+      "obj_id": "h060",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfffa9696Кузница|r"
+    }
+  ],
+  "17418": [
+    {
+      "category": "building",
+      "obj_id": "h060",
+      "field": "tip",
+      "note": "",
+      "current_val": "Построить |cfffa9696Кузницу|r"
+    }
+  ],
+  "20437": [
+    {
+      "category": "building",
+      "obj_id": "h060",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa70 сек.|r|n|nПозволяет улучшать доспехи, оружие и порох."
+    }
+  ],
+  "1081": [
+    {
+      "category": "building",
+      "obj_id": "h060",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "R"
+    }
+  ],
+  "17258": [
+    {
+      "category": "building",
+      "obj_id": "h061",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfffa9696Храм Алого Ордена|r"
+    }
+  ],
+  "17259": [
+    {
+      "category": "building",
+      "obj_id": "h061",
+      "field": "tip",
+      "note": "",
+      "current_val": "Построить |cfffa9696Храм Алого Ордена|r"
+    }
+  ],
+  "12971": [
+    {
+      "category": "building",
+      "obj_id": "h061",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa70 сек.|r|n|nОбучает магов и волшебников. Дает возможность улучшать магов и волшебников и открывать новые способности."
+    }
+  ],
+  "2703": [
+    {
+      "category": "building",
+      "obj_id": "h061",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "D"
+    }
+  ],
+  "17419": [
+    {
+      "category": "building",
+      "obj_id": "h062",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfffa9696Лесопилка|r"
+    }
+  ],
+  "17420": [
+    {
+      "category": "building",
+      "obj_id": "h062",
+      "field": "tip",
+      "note": "",
+      "current_val": "Построить |cfffa9696Лесопилку|r"
+    }
+  ],
+  "12985": [
+    {
+      "category": "building",
+      "obj_id": "h062",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nХранит добытую древесину. |nДает доступ к новым технологиям добычи древесины и строительства."
+    }
+  ],
+  "2330": [
+    {
+      "category": "building",
+      "obj_id": "h062",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "E"
+    }
+  ],
+  "17260": [
+    {
+      "category": "building",
+      "obj_id": "h063",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfffa9696Сторожевая Башня|r"
+    }
+  ],
+  "17261": [
+    {
+      "category": "building",
+      "obj_id": "h063",
+      "field": "tip",
+      "note": "",
+      "current_val": "Построить |cfffa9696Сторожевую Башню|r"
+    }
+  ],
+  "8049": [
+    {
+      "category": "building",
+      "obj_id": "h063",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nБазовое оборонительное сооружение. "
+    }
+  ],
+  "5315": [
+    {
+      "category": "building",
+      "obj_id": "h063",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Z"
+    }
+  ],
+  "17421": [
+    {
+      "category": "building",
+      "obj_id": "h064",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfffa9696Мастерская|r"
+    }
+  ],
+  "17422": [
+    {
+      "category": "building",
+      "obj_id": "h064",
+      "field": "tip",
+      "note": "",
+      "current_val": "Построить |cfffa9696Мастерскую|r"
+    }
+  ],
+  "12987": [
+    {
+      "category": "building",
+      "obj_id": "h064",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nПозволяет нанимать осадные машины , и строить орудия сады."
+    }
+  ],
+  "9173": [
+    {
+      "category": "building",
+      "obj_id": "h064",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "F"
+    }
+  ],
+  "17264": [
+    {
+      "category": "building",
+      "obj_id": "h068",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfffa9696Церковь Алого Ордена|r"
+    }
+  ],
+  "17265": [
+    {
+      "category": "building",
+      "obj_id": "h068",
+      "field": "tip",
+      "note": "",
+      "current_val": "Построить |cfffa9696Церковь Алого Ордена|r"
+    }
+  ],
+  "12988": [
+    {
+      "category": "building",
+      "obj_id": "h068",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa70 сек.|r|n|nОбучает фанатично верных солдат алаого ордена. Дает возможность улучшать способности фанатиков."
+    }
+  ],
+  "1605": [
+    {
+      "category": "building",
+      "obj_id": "h068",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "X"
+    }
+  ],
+  "861": [
+    {
+      "category": "hero",
+      "obj_id": "H03H",
+      "field": "name",
+      "note": "",
+      "current_val": "|cffff0000Паладин Алого Ордена |r"
+    }
+  ],
+  "6475": [
+    {
+      "category": "hero",
+      "obj_id": "H03H",
+      "field": "propernames",
+      "note": "",
+      "current_val": "|cffff0000Паладин Алого Ордена |"
+    }
+  ],
+  "6477": [
+    {
+      "category": "hero",
+      "obj_id": "H03H",
+      "field": "tip",
+      "note": "",
+      "current_val": "Призвать|cfff09696 паладина|r"
+    }
+  ],
+  "31647": [
+    {
+      "category": "hero",
+      "obj_id": "H03H",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n\nСильный воин и клирик ближнего боя, уничтожает боевой дух врагов."
+    }
+  ],
+  "1715": [
+    {
+      "category": "hero",
+      "obj_id": "H03H",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "C"
+    }
+  ],
+  "6549": [
+    {
+      "category": "hero",
+      "obj_id": "H06C",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Епископ Ордена|r"
+    }
+  ],
+  "6550": [
+    {
+      "category": "hero",
+      "obj_id": "H06C",
+      "field": "propernames",
+      "note": "",
+      "current_val": "|cfff09696Епископ Ордена|r"
+    }
+  ],
+  "6552": [
+    {
+      "category": "hero",
+      "obj_id": "H06C",
+      "field": "tip",
+      "note": "",
+      "current_val": "Призвать |cfff09696Епископ Ордена|r"
+    }
+  ],
+  "31673": [
+    {
+      "category": "hero",
+      "obj_id": "H06C",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|n\nСтрогий носитель веры Алого ордена, сжигающий всех еретиков."
+    }
+  ],
+  "5562": [
+    {
+      "category": "hero",
+      "obj_id": "H06C",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Z"
+    }
+  ],
+  "6479": [
+    {
+      "category": "hero",
+      "obj_id": "H06B",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Капитан Ордена|r"
+    }
+  ],
+  "6480": [
+    {
+      "category": "hero",
+      "obj_id": "H06B",
+      "field": "propernames",
+      "note": "",
+      "current_val": "|cfff09696Капитан Ордена|r"
+    }
+  ],
+  "6482": [
+    {
+      "category": "hero",
+      "obj_id": "H06B",
+      "field": "tip",
+      "note": "",
+      "current_val": "Призвать |cfff09696Капитан Ордена|r"
+    }
+  ],
+  "31672": [
+    {
+      "category": "hero",
+      "obj_id": "H06B",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n\nОдин из лучших воинов ближнего боя в ордене, мастер дуели."
+    }
+  ],
+  "1710": [
+    {
+      "category": "hero",
+      "obj_id": "H06B",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "X"
+    }
+  ],
+  "5249": [
+    {
+      "category": "unit",
+      "obj_id": "h014",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Работник|r"
+    }
+  ],
+  "5250": [
+    {
+      "category": "unit",
+      "obj_id": "h014",
+      "field": "tip",
+      "note": "",
+      "current_val": "Обучить |cfff09696Работник|r"
+    }
+  ],
+  "13415": [
+    {
+      "category": "unit",
+      "obj_id": "h014",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa15 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nБазовый рабочий. Добывает золото и древесину, а также строит и ремонтирует здания."
+    }
+  ],
+  "1121": [
+    {
+      "category": "unit",
+      "obj_id": "h014",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "5311": [
+    {
+      "category": "unit",
+      "obj_id": "h039",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Тяжелый Пехотинец |r"
+    }
+  ],
+  "5312": [
+    {
+      "category": "unit",
+      "obj_id": "h039",
+      "field": "tip",
+      "note": "",
+      "current_val": "Обучить |cfff09696Тяжелый Пехотинец |r"
+    }
+  ],
+  "16938": [
+    {
+      "category": "unit",
+      "obj_id": "h039",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa43 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|nЗакаленный в боях воин |cffff3200Алого ордена|r, закованный в тяжелые доспехи. Представляет мощную единицу ближнего боя.\n"
+    }
+  ],
+  "1080": [
+    {
+      "category": "unit",
+      "obj_id": "h039",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "E"
+    }
+  ],
+  "5251": [
+    {
+      "category": "unit",
+      "obj_id": "h03A",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Ополченец|r"
+    }
+  ],
+  "5252": [
+    {
+      "category": "unit",
+      "obj_id": "h03A",
+      "field": "tip",
+      "note": "",
+      "current_val": "Обучить |cfff09696Ополченец|r"
+    }
+  ],
+  "19302": [
+    {
+      "category": "unit",
+      "obj_id": "h03A",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa24 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\nЛегко вооруженный ополченец. не является сильной боевой единицей."
+    }
+  ],
+  "1500": [
+    {
+      "category": "unit",
+      "obj_id": "h03A",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "E"
+    }
+  ],
+  "5253": [
+    {
+      "category": "unit",
+      "obj_id": "h03B",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Мечник|r"
+    }
+  ],
+  "5254": [
+    {
+      "category": "unit",
+      "obj_id": "h03B",
+      "field": "tip",
+      "note": "",
+      "current_val": "Обучить |cfff09696Мечник|r"
+    }
+  ],
+  "19447": [
+    {
+      "category": "unit",
+      "obj_id": "h03B",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa25 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\nОсновная боевая единица |cfff09696Алого Ордена|r, не является сильной боевой единицей."
+    }
+  ],
+  "1184": [
+    {
+      "category": "unit",
+      "obj_id": "h03B",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "5255": [
+    {
+      "category": "unit",
+      "obj_id": "h03C",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Дровосек|r"
+    }
+  ],
+  "5256": [
+    {
+      "category": "unit",
+      "obj_id": "h03C",
+      "field": "tip",
+      "note": "",
+      "current_val": "Обучить |cfff09696Дровосек|r"
+    }
+  ],
+  "31643": [
+    {
+      "category": "unit",
+      "obj_id": "h03C",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa15 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\nЛегко вооруженный ополченец. не является сильной боевой единицей. Может добывать |cffe6beaaдревесину|r."
+    }
+  ],
+  "1401": [
+    {
+      "category": "unit",
+      "obj_id": "h03C",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "5257": [
+    {
+      "category": "unit",
+      "obj_id": "h03D",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Берсерк|r"
+    }
+  ],
+  "5258": [
+    {
+      "category": "unit",
+      "obj_id": "h03D",
+      "field": "tip",
+      "note": "",
+      "current_val": "Обучить |cfff09696Берсерк|r"
+    }
+  ],
+  "25177": [
+    {
+      "category": "unit",
+      "obj_id": "h03D",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\nФанатично верующий воин |cffff3200Алого ордена|r, умело сражающийся как в ближнем так и в дальнем бою."
+    }
+  ],
+  "1402": [
+    {
+      "category": "unit",
+      "obj_id": "h03D",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "5259": [
+    {
+      "category": "unit",
+      "obj_id": "h03F",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Паладин Алого Ордена|r"
+    }
+  ],
+  "5260": [
+    {
+      "category": "unit",
+      "obj_id": "h03F",
+      "field": "tip",
+      "note": "",
+      "current_val": "Обучить |cfff09696Паладина Алого Ордена|r"
+    }
+  ],
+  "20904": [
+    {
+      "category": "unit",
+      "obj_id": "h03F",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa49 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|nВетеран боевых действий, умелый боец, Жрец света.Своим присутствием вдохновляет союзников.\n"
+    }
+  ],
+  "799": [
+    {
+      "category": "unit",
+      "obj_id": "h03F",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "R"
+    }
+  ],
+  "5261": [
+    {
+      "category": "unit",
+      "obj_id": "h03G",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Гладиатор|r"
+    }
+  ],
+  "5262": [
+    {
+      "category": "unit",
+      "obj_id": "h03G",
+      "field": "tip",
+      "note": "",
+      "current_val": "Обучить |cfff09696Гладиатор|r"
+    }
+  ],
+  "21283": [
+    {
+      "category": "unit",
+      "obj_id": "h03G",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa57 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\nВоин, блестяще владеющий оружием ближнего боя. Способен впадать в ярость по собственному желанию."
+    }
+  ],
+  "1185": [
+    {
+      "category": "unit",
+      "obj_id": "h03G",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "8785": [
+    {
+      "category": "unit",
+      "obj_id": "h03I",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Инквизитор|r"
+    }
+  ],
+  "14748": [
+    {
+      "category": "unit",
+      "obj_id": "h03I",
+      "field": "tip",
+      "note": "",
+      "current_val": "Обучить |cfff09696Инквизитора|r"
+    }
+  ],
+  "21611": [
+    {
+      "category": "unit",
+      "obj_id": "h03I",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa27 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|nЖрец не знающий пощады, несущий собственную веру в ряды противника.\n"
+    }
+  ],
+  "1851": [
+    {
+      "category": "unit",
+      "obj_id": "h03I",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "E"
+    }
+  ],
+  "5300": [
+    {
+      "category": "unit",
+      "obj_id": "h065",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Берсерк|r"
+    }
+  ],
+  "5301": [
+    {
+      "category": "unit",
+      "obj_id": "h065",
+      "field": "tip",
+      "note": "",
+      "current_val": "Обучить |cfff09696Берсерк|r"
+    }
+  ],
+  "21616": [
+    {
+      "category": "unit",
+      "obj_id": "h065",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa40 сек.|r\nУниверсальный пехотинец. Может изучить «Защиту». |n|n|cffffcc00Атакует наземные цели.|r"
+    }
+  ],
+  "1827": [
+    {
+      "category": "unit",
+      "obj_id": "h065",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "5302": [
+    {
+      "category": "unit",
+      "obj_id": "h066",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Рыцарь Ордена|r"
+    }
+  ],
+  "5303": [
+    {
+      "category": "unit",
+      "obj_id": "h066",
+      "field": "tip",
+      "note": "",
+      "current_val": "Обучить |cfff09696Рыцарь Ордена|r"
+    }
+  ],
+  "21617": [
+    {
+      "category": "unit",
+      "obj_id": "h066",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa47 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|nТяжелый всадник, мощный солдат кавалерии, предназначен как для нанесения большого урона , так и для защиты.\n"
+    }
+  ],
+  "1082": [
+    {
+      "category": "unit",
+      "obj_id": "h066",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "R"
+    }
+  ],
+  "5306": [
+    {
+      "category": "unit",
+      "obj_id": "h067",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Монахиня Алого Ордена|r"
+    }
+  ],
+  "5307": [
+    {
+      "category": "unit",
+      "obj_id": "h067",
+      "field": "tip",
+      "note": "",
+      "current_val": "Обучить |cfff09696Монахиня Алого Ордена|r"
+    }
+  ],
+  "21618": [
+    {
+      "category": "unit",
+      "obj_id": "h067",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa46 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|nФанатичная |cffff3200монахиня|r |cffff3200алого ордена|r изучающая магию поддержки.\n"
+    }
+  ],
+  "1559": [
+    {
+      "category": "unit",
+      "obj_id": "h067",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "5247": [
+    {
+      "category": "unit",
+      "obj_id": "n007",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Арбалетчик|r"
+    }
+  ],
+  "5248": [
+    {
+      "category": "unit",
+      "obj_id": "n007",
+      "field": "tip",
+      "note": "",
+      "current_val": "Обучить |cfff09696Арбалетчика|r"
+    }
+  ],
+  "21615": [
+    {
+      "category": "unit",
+      "obj_id": "n007",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa28 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n\nМеткий стрелок |cfff09696Алого Ордена|r. Универсальная боевая единица армии. Может изучать улучшения для стрельбы."
+    }
+  ],
+  "1771": [
+    {
+      "category": "unit",
+      "obj_id": "n007",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "1231": [
+    {
+      "category": "unit",
+      "obj_id": "n008",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Жрец Алого Ордена|r"
+    }
+  ],
+  "919": [
+    {
+      "category": "unit",
+      "obj_id": "n008",
+      "field": "tip",
+      "note": "",
+      "current_val": "Нанять |cfff09696Жреца Алого Ордена|r"
+    }
+  ],
+  "22381": [
+    {
+      "category": "unit",
+      "obj_id": "n008",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa44 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний Бой|r|nЖрец, способен как спасти жизнь верующего, так и превратить жизнь неверующего - в |cffff3200ад|r!\n"
+    }
+  ],
+  "1828": [
+    {
+      "category": "unit",
+      "obj_id": "n008",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "1232": [
+    {
+      "category": "unit",
+      "obj_id": "o00I",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Катапульта|r"
+    }
+  ],
+  "1233": [
+    {
+      "category": "unit",
+      "obj_id": "o00I",
+      "field": "tip",
+      "note": "",
+      "current_val": "Произвести |cfff09696Катапульту|r"
+    }
+  ],
+  "24741": [
+    {
+      "category": "unit",
+      "obj_id": "o00I",
+      "field": "ubertip",
+      "note": "",
+      "current_val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa32 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный|r|nКлассическое осадное орудие, простое но эффективное!\n"
+    }
+  ],
+  "1561": [
+    {
+      "category": "unit",
+      "obj_id": "o00I",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "12502": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A097",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "6376": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A097",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Волна исцеления|r"
+    }
+  ],
+  "12398": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A097",
+      "field": "researchhotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "6377": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A097",
+      "field": "researchtip",
+      "note": "",
+      "current_val": "Изучить «|cfff09696Волна исцеления|r» [|cffffcc00%d-й уровень|r]"
+    }
+  ],
+  "622": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A097",
+      "field": "researchubertip",
+      "note": "",
+      "current_val": "Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AOhw,DataA1> здоровья, до <AOhw,DataB1> целей.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<AOhw,DataA2> здоровья, до <AOhw,DataB2> целей.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AOhw,DataA3> здоровья, до <AOhw,DataB3> целей.|r|r |n|cffffcc004-й уровень:|r |cffb4dcdc420 здоровья, до 8 целей.|r"
+    }
+  ],
+  "6378": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A097",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Волна исцеления|r [|cffffcc001-й уровень|r]"
+    }
+  ],
+  "6379": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A097",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Волна исцеления|r [|cffffcc002-й уровень|r]"
+    }
+  ],
+  "6380": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A097",
+      "field": "tip3",
+      "note": "",
+      "current_val": "|cfff09696Волна исцеления|r [|cffffcc003-й уровень|r]"
+    }
+  ],
+  "6381": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A097",
+      "field": "tip4",
+      "note": "",
+      "current_val": "|cfff09696Волна исцеления|r [|cffffcc004-й уровень|r]"
+    }
+  ],
+  "5862": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A097",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AOhw,DataA1> здоровья, до <AOhw,DataB1> целей.|r "
+    }
+  ],
+  "5863": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A097",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом. |n|cffffcc002-й уровень:|r |cffb4dcdc<AOhw,DataA2> здоровья, до <AOhw,DataB2> целей.|r "
+    }
+  ],
+  "725": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A097",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом.|n|cffffcc003-й уровень:|r |cffb4dcdc<AOhw,DataA3> здоровья, до <AOhw,DataB3> целей.|r|r "
+    }
+  ],
+  "615": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A097",
+      "field": "ubertip4",
+      "note": "",
+      "current_val": "Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом. |n|cffffcc004-й уровень:|r |cffb4dcdc420 здоровья, до 8 целей.|r"
+    }
+  ],
+  "13034": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "6438": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Благословление|r"
+    }
+  ],
+  "12926": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "researchhotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "6507": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "researchtip",
+      "note": "",
+      "current_val": "|cfff09696Благословление|r"
+    }
+  ],
+  "825": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "researchubertip",
+      "note": "",
+      "current_val": "Покрывает божественным щитом союзников вокруг.Время действия - |cffb4dcdc30 сек.|r\n|n|cffffcc001-й уровень:|r |cffb4dcdc+2 к защите|r|n|cffffcc002-й уровень:|r |cffb4dcdc+3 к защите|r|n|cffffcc003-й уровень:|r |cffb4dcdc+4 к защите|r|n|cffffcc004-й уровень:|r |cffb4dcdc+6 к защите.|r"
+    }
+  ],
+  "6437": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Благословление|r"
+    }
+  ],
+  "6440": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Благословление|r"
+    }
+  ],
+  "6441": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "tip3",
+      "note": "",
+      "current_val": "|cfff09696Благословление|r"
+    }
+  ],
+  "6442": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "tip4",
+      "note": "",
+      "current_val": "|cfff09696Благословление|r"
+    }
+  ],
+  "11127": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Покрывает божественным щитом союзников вокруг.Время действия - |cffb4dcdc20 сек.|r\n|n|cffffcc001-й уровень:|r |cffb4dcdc+2 к защите|r"
+    }
+  ],
+  "11207": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Покрывает божественным щитом союзников вокруг.Время действия - |cffb4dcdc20 сек.|r\n|n|cffffcc002-й уровень:|r |cffb4dcdc+3 к защите|r"
+    }
+  ],
+  "11208": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Покрывает божественным щитом союзников вокруг.Время действия - |cffb4dcdc20 сек.|r\n|n|cffffcc003-й уровень:|r |cffb4dcdc+4 к защите|r"
+    }
+  ],
+  "11381": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "ubertip4",
+      "note": "",
+      "current_val": "Покрывает божественным щитом союзников вокруг.Время действия - |cffb4dcdc20 сек.|r\n|n|cffffcc004-й уровень:|r |cffb4dcdc+6 к защите.|r"
+    }
+  ],
+  "6449": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "untip1",
+      "note": "",
+      "current_val": "|cfff09696Благословление|r"
+    }
+  ],
+  "6450": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "untip2",
+      "note": "",
+      "current_val": "|cfff09696Благословление|r"
+    }
+  ],
+  "6451": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "untip3",
+      "note": "",
+      "current_val": "|cfff09696Благословление|r"
+    }
+  ],
+  "6452": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "untip4",
+      "note": "",
+      "current_val": "|cfff09696Благословление|r"
+    }
+  ],
+  "6445": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "unubertip1",
+      "note": "",
+      "current_val": "к защите находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек."
+    }
+  ],
+  "6443": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "unubertip2",
+      "note": "",
+      "current_val": "к защите находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек."
+    }
+  ],
+  "6439": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "unubertip3",
+      "note": "",
+      "current_val": "к защите находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек."
+    }
+  ],
+  "6444": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09C",
+      "field": "unubertip4",
+      "note": "",
+      "current_val": "к защите находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек."
+    }
+  ],
+  "6468": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09E",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Воскрешение|r"
+    }
+  ],
+  "6469": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09E",
+      "field": "researchtip",
+      "note": "",
+      "current_val": "Изучить «|cfff09696Воскрешение|r»"
+    }
+  ],
+  "4368": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09E",
+      "field": "researchubertip",
+      "note": "",
+      "current_val": "Воскрешает находящихся рядом союзников.\n|n|cffffcc001-й уровень:|r |cffb4dcdcВоскрешает 12 солдат.|r|n|cffffcc002-й уровень:|r |cffb4dcdc|cffb4dcdcВоскрешает 24 солдат.|r"
+    }
+  ],
+  "6470": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09E",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Воскрешение|r"
+    }
+  ],
+  "6466": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09E",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Воскрешение|r"
+    }
+  ],
+  "4369": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09E",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Воскрешает находящихся рядом союзников.\n|n|cffffcc001-й уровень:|r |cffb4dcdcВоскрешает 12 солдат.|r"
+    }
+  ],
+  "2581": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09E",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Воскрешает находящихся рядом союзников.\n|n|cffffcc002-й уровень:|r |cffb4dcdc|cffb4dcdcВоскрешает 24 солдат.|r"
+    }
+  ],
+  "6457": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09D",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Аура Воеводы|r"
+    }
+  ],
+  "14783": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09D",
+      "field": "researchhotkey",
+      "note": "",
+      "current_val": "E"
+    }
+  ],
+  "6460": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09D",
+      "field": "researchtip",
+      "note": "",
+      "current_val": "|cfff09696Аура Воеводы|r"
+    }
+  ],
+  "828": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09D",
+      "field": "researchubertip",
+      "note": "",
+      "current_val": "Увеличивает урон рядом стоящих солдат.\n|n|cffffcc001-й уровень:|r |cffb4dcdc+10% к урону.|r|n|cffffcc002-й уровень:|r |cffb4dcdc|cffb4dcdc+15% к урону.|r|n|cffffcc003-й уровень:|r |cffb4dcdc|cffb4dcdc+20% к урону.|r|n|cffffcc004-й уровень:|r |cffb4dcdc|cffb4dcdc+25% к урону.|r"
+    }
+  ],
+  "6458": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09D",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Аура Воеводы|r"
+    }
+  ],
+  "6461": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09D",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Аура Воеводы|r"
+    }
+  ],
+  "6462": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09D",
+      "field": "tip3",
+      "note": "",
+      "current_val": "|cfff09696Аура Воеводы|r"
+    }
+  ],
+  "6471": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09D",
+      "field": "tip4",
+      "note": "",
+      "current_val": "|cfff09696Аура Воеводы|r"
+    }
+  ],
+  "2579": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09D",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Увеличивает урон рядом стоящих солдат.\n|n|cffffcc001-й уровень:|r |cffb4dcdc+10% к урону.|r"
+    }
+  ],
+  "829": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09D",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Увеличивает урон рядом стоящих солдат.\n|n|cffffcc002-й уровень:|r |cffb4dcdc|cffb4dcdc+15% к урону.|r"
+    }
+  ],
+  "831": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09D",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Увеличивает урон рядом стоящих солдат.\n|n|cffffcc003-й уровень:|r |cffb4dcdc|cffb4dcdc+20% к урону.|r"
+    }
+  ],
+  "2577": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09D",
+      "field": "ubertip4",
+      "note": "",
+      "current_val": "Увеличивает урон рядом стоящих солдат.\n|n|cffffcc004-й уровень:|r |cffb4dcdc|cffb4dcdc+25% к урону.|r"
+    }
+  ],
+  "12623": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09K",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "6559": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09K",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Огненный столб|r"
+    }
+  ],
+  "12698": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09K",
+      "field": "researchhotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "6560": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09K",
+      "field": "researchtip",
+      "note": "",
+      "current_val": "Изучить «|cfff09696Огненный столб|r» [|cffffcc00%d-й уровень|r]"
+    }
+  ],
+  "15394": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09K",
+      "field": "researchubertip",
+      "note": "",
+      "current_val": "Создает огненный столб, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r |cffb4dcdc45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек.|r |n|cffffcc002-й уровень:|r |cffb4dcdc80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек.|r |n|cffffcc003-й уровень:|r |cffb4dcdc110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r|n|cffffcc004-й уровень:|r |cffb4dcdc135 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r"
+    }
+  ],
+  "6556": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09K",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Огненный столб|r [|cffffcc001-й уровень|r]"
+    }
+  ],
+  "6558": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09K",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Огненный столб|r [|cffffcc002-й уровень|r]"
+    }
+  ],
+  "6557": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09K",
+      "field": "tip3",
+      "note": "",
+      "current_val": "|cfff09696Огненный столб|r [|cffffcc003-й уровень|r]"
+    }
+  ],
+  "6554": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09K",
+      "field": "tip4",
+      "note": "",
+      "current_val": "|cfff09696Огненный столб|r [|cffffcc004-й уровень|r]"
+    }
+  ],
+  "15395": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09K",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Создает огненный столб, наносящий наземным войскам в указанной области |cffb4dcdc45 урона/сек.|r в течение |cffb4dcdc3 сек|r. После исчезновения столба пораженные войска продолжают получать незначительный урон."
+    }
+  ],
+  "15396": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09K",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Создает огненный столб, наносящий наземным войскам в указанной области |cffb4dcdc80 урона/сек.|r в течение |cffb4dcdc3 сек.|r После исчезновения столба пораженные войска продолжают получать небольшой урон."
+    }
+  ],
+  "15397": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09K",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Создает огненный столб, наносящий наземным войскам в указанной области |cffb4dcdc110 урона/сек.|r в течение |cffb4dcdc3 сек.|r После исчезновения столба пораженные войска продолжают получать умеренный урон."
+    }
+  ],
+  "15393": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09K",
+      "field": "ubertip4",
+      "note": "",
+      "current_val": "Создает огненный столб, наносящий наземным войскам в указанной области |cffb4dcdc135 урона/сек.|r в течение|cffb4dcdc 4 сек.|r После исчезновения столба пораженные войска продолжают получать умеренный урон."
+    }
+  ],
+  "13165": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "6561": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Огненная стрела|r"
+    }
+  ],
+  "13078": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "researchhotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "6562": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "researchtip",
+      "note": "",
+      "current_val": "Изучить «|cfff09696Огненная стрела|r» [%d-й уровень]"
+    }
+  ],
+  "15035": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "researchubertip",
+      "note": "",
+      "current_val": "Инквизитор выстреливает сгустком огня в противника, нанося урон и оглушая его.|n|cffffcc001-й уровень:|r |cffb4dcdc75 урона, оглушает Героя - 2, солдата - 2.|r|n|cffffcc002-й уровень:|r |cffb4dcdc150 урона, оглушает Героя - 2, солдата - 3.|r|n|cffffcc003-й уровень:|r |cffb4dcdc270 урона, оглушает Героя - 2, солдата - 4.|r|n|cffffcc004-й уровень:|r |cffb4dcdc350 урона, оглушает Героя - 2, солдата - 5.|r"
+    }
+  ],
+  "6563": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Огненная стрела|r"
+    }
+  ],
+  "6564": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Огненная стрела|r"
+    }
+  ],
+  "6565": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "tip3",
+      "note": "",
+      "current_val": "|cfff09696Огненная стрела|r"
+    }
+  ],
+  "6566": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "tip4",
+      "note": "",
+      "current_val": "|cfff09696Огненная стрела|r"
+    }
+  ],
+  "2564": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Выпускает сгусток огня, оглушающий врага."
+    }
+  ],
+  "2565": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Выпускает сгусток огня, оглушающий врага."
+    }
+  ],
+  "2566": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "ubertip4",
+      "note": "",
+      "current_val": "Выпускает сгусток огня, оглушающий врага."
+    }
+  ],
+  "13274": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "unhotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "6570": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "untip1",
+      "note": "",
+      "current_val": "|cfff09696Огненная стрела|r"
+    }
+  ],
+  "6571": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "untip2",
+      "note": "",
+      "current_val": "|cfff09696Огненная стрела|r"
+    }
+  ],
+  "6572": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "untip3",
+      "note": "",
+      "current_val": "|cfff09696Огненная стрела|r"
+    }
+  ],
+  "6573": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "untip4",
+      "note": "",
+      "current_val": "|cfff09696Огненная стрела|r"
+    }
+  ],
+  "2567": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "unubertip1",
+      "note": "",
+      "current_val": "Выпускает сгусток огня, оглушающий врага."
+    }
+  ],
+  "6567": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "unubertip2",
+      "note": "",
+      "current_val": "Выпускает сгусток огня, оглушающий врага."
+    }
+  ],
+  "6568": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "unubertip3",
+      "note": "",
+      "current_val": "Выпускает сгусток огня, оглушающий врага."
+    }
+  ],
+  "6569": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09L",
+      "field": "unubertip4",
+      "note": "",
+      "current_val": "Выпускает сгусток огня, оглушающий врага."
+    }
+  ],
+  "14921": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09N",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "E"
+    }
+  ],
+  "6590": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09N",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Мольба к свету|r"
+    }
+  ],
+  "14920": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09N",
+      "field": "researchhotkey",
+      "note": "",
+      "current_val": "E"
+    }
+  ],
+  "6591": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09N",
+      "field": "researchtip",
+      "note": "",
+      "current_val": "Изучить «|cfff09696Мольба к свету|r» [|cffffcc00%d-й уровень|r]"
+    }
+  ],
+  "15402": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09N",
+      "field": "researchubertip",
+      "note": "",
+      "current_val": "Ускоряет регенерацию маны находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdcнезначительный бонус.|r |n|cffffcc002-й уровень:|r |cffb4dcdcсредний бонус.|r|n|cffffcc003-й уровень:|r |cffb4dcdcзначительный бонус.|r|n|cffffcc004-й уровень:|r |cffb4dcdcБольшой бонус.|r"
+    }
+  ],
+  "6592": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09N",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Мольба к свету|r [|cffffcc001-й уровень|r]"
+    }
+  ],
+  "6593": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09N",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Мольба к свету|r [|cffffcc002-й уровень|r]"
+    }
+  ],
+  "6594": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09N",
+      "field": "tip3",
+      "note": "",
+      "current_val": "|cfff09696Мольба к свету|r [|cffffcc003-й уровень|r]"
+    }
+  ],
+  "6595": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09N",
+      "field": "tip4",
+      "note": "",
+      "current_val": "|cfff09696Мольба к свету|r [|cffffcc004-й уровень|r]"
+    }
+  ],
+  "15403": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09N",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Ускоряет регенерацию маны находящихся рядом союзников.\n|cffb4dcdcБонус к регенерации - 0.7.|r"
+    }
+  ],
+  "15404": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09N",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Ускоряет регенерацию маны находящихся рядом союзников.\n|cffb4dcdcБонус к регенерации - 1.5.|r"
+    }
+  ],
+  "15405": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09N",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Ускоряет регенерацию маны находящихся рядом союзников.\n|cffb4dcdcБонус к регенерации - 2.25.|r"
+    }
+  ],
+  "15401": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09N",
+      "field": "ubertip4",
+      "note": "",
+      "current_val": "Ускоряет регенерацию маны находящихся рядом союзников.\n|cffb4dcdcБонус к регенерации - 3.|r"
+    }
+  ],
+  "11625": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09M",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "R"
+    }
+  ],
+  "6578": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09M",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Фанатики|r"
+    }
+  ],
+  "11617": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09M",
+      "field": "researchhotkey",
+      "note": "",
+      "current_val": "R"
+    }
+  ],
+  "6579": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09M",
+      "field": "researchtip",
+      "note": "",
+      "current_val": "Изучить «|cfff09696Фанатики|r» [|cffffcc00%d-й уровень|r]"
+    }
+  ],
+  "15400": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09M",
+      "field": "researchubertip",
+      "note": "",
+      "current_val": "Инквизитор взывает к подченненным |cfff09696Фанатикам|r. |n|cffffcc001-й уровень:|r |cffb4dcdcПризывает 5 фанатиков.|r|n|cffffcc002-й уровень:|r |cffb4dcdcПризывает 10 фанатиков.|r"
+    }
+  ],
+  "6580": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09M",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Фанатики|r [|cffffcc001-й уровень|r]"
+    }
+  ],
+  "6581": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09M",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Фанатики|r [|cffffcc002-й уровень|r]"
+    }
+  ],
+  "6582": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09M",
+      "field": "tip3",
+      "note": "",
+      "current_val": "|cff8cc8a0Королевская Гвардия|r [|cffffcc003-й уровень|r]"
+    }
+  ],
+  "6583": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09M",
+      "field": "tip4",
+      "note": "",
+      "current_val": "|cff8cc8a0Королевская Гвардия|r [|cffffcc004-й уровень|r]"
+    }
+  ],
+  "15398": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09M",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Инквизитор взывает к подченненным |cfff09696Фанатикам|r. |n|cffffcc001-й уровень:|r |cffb4dcdcПризывает 5 фанатиков.|r"
+    }
+  ],
+  "15399": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09M",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Инквизитор взывает к подченненным |cfff09696Фанатикам|r. |n|cffffcc002-й уровень:|r |cffb4dcdcПризывает 10 фанатиков.|r"
+    }
+  ],
+  "5118": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09M",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Призывает |cff8cc8a0Королевскую Гвардию|r с <hwt3,realHP> здоровья, наносящего <hwt3,mindmg1>-<hwt3,maxdmg1> урона. |nВремя существования: <AHwe,Dur1> сек. |n|n|cffffcc00Элементаль атакует наземные и воздушные цели.|r"
+    }
+  ],
+  "5114": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09M",
+      "field": "ubertip4",
+      "note": "",
+      "current_val": "Призывает |cff8cc8a0Королевскую Гвардию|r с <hwt4,realHP> здоровья, наносящего <hwt4,mindmg1>-<hwt4,maxdmg1> урона. |nВремя существования: <AHwe,Dur1> сек. |n|n|cffffcc00Элементаль атакует наземные и воздушные цели.|r"
+    }
+  ],
+  "12537": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "5990": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Ярость|r"
+    }
+  ],
+  "12536": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "researchhotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "6509": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "researchtip",
+      "note": "",
+      "current_val": "|cfff09696Ярость|r"
+    }
+  ],
+  "21897": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "researchubertip",
+      "note": "",
+      "current_val": "Увеличивает скорость боя и передвижения капитана. |n|cffffcc001-й уровень:|r |cffb4dcdc100% к скорости для, 20% к скорости передвижения.|r|n|cffffcc002-й уровень:|r |cffb4dcdc200% к скорости для, 20% к скорости передвижения.|r|n|cffffcc003-й уровень:|r |cffb4dcdc300% к скорости для, 20% к скорости передвижения.|r|n|cffffcc004-й уровень:|r |cffb4dcdc400% к скорости для, 20% к скорости передвижения.|r"
+    }
+  ],
+  "6511": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Ярость|r"
+    }
+  ],
+  "6512": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Ярость|r"
+    }
+  ],
+  "6513": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "tip3",
+      "note": "",
+      "current_val": "|cfff09696Ярость|r"
+    }
+  ],
+  "6514": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "tip4",
+      "note": "",
+      "current_val": "|cfff09696Ярость|r"
+    }
+  ],
+  "15385": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Увеличивает скорость боя и передвижения капитана. |n|cffffcc001-й уровень:|r |cffb4dcdc100% к скорости бля, 20% к скорости передвижения.|r"
+    }
+  ],
+  "15382": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Увеличивает скорость боя и передвижения капитана. |n|cffffcc002-й уровень:|r |cffb4dcdc200% к скорости бля, 20% к скорости передвижения.|r"
+    }
+  ],
+  "15383": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Увеличивает скорость боя и передвижения капитана. |n|cffffcc003-й уровень:|r |cffb4dcdc300% к скорости бля, 20% к скорости передвижения.|r"
+    }
+  ],
+  "15384": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "ubertip4",
+      "note": "",
+      "current_val": "Увеличивает скорость боя и передвижения капитана. |n|cffffcc004-й уровень:|r |cffb4dcdc400% к скорости бля, 20% к скорости передвижения.|r"
+    }
+  ],
+  "6518": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "untip1",
+      "note": "",
+      "current_val": "|cfff09696Ярость|r"
+    }
+  ],
+  "6520": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "untip2",
+      "note": "",
+      "current_val": "|cfff09696Ярость|r"
+    }
+  ],
+  "6521": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "untip3",
+      "note": "",
+      "current_val": "|cfff09696Ярость|r"
+    }
+  ],
+  "6522": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "untip4",
+      "note": "",
+      "current_val": "|cfff09696Ярость|r"
+    }
+  ],
+  "6517": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "unubertip1",
+      "note": "",
+      "current_val": "+<Absk,DataB4,%>% к скорости атаки."
+    }
+  ],
+  "6524": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "unubertip2",
+      "note": "",
+      "current_val": "+<Absk,DataB4,%>% к скорости атаки."
+    }
+  ],
+  "6523": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "unubertip3",
+      "note": "",
+      "current_val": "+<Absk,DataB4,%>% к скорости атаки."
+    }
+  ],
+  "6525": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09G",
+      "field": "unubertip4",
+      "note": "",
+      "current_val": "+<Absk,DataB4,%>% к скорости атаки."
+    }
+  ],
+  "13077": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "39147": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Кровотечение|r"
+    }
+  ],
+  "13035": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "researchhotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "39148": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "researchtip",
+      "note": "",
+      "current_val": "|cfff09696Кровотечение|r"
+    }
+  ],
+  "6375": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "researchubertip",
+      "note": "",
+      "current_val": "Пускает кровь врагам , нанося периодический урон.|n|cffffcc001-й уровень:|r |cffb4dcdc5 ед. урона, Время действие Герой - 5 сек., солдат - 20.|r|n|cffffcc002-й уровень:|r |cffb4dcdc7 ед. урона, Время действие Герой - 7 сек., солдат - 20.|r|n|cffffcc003-й уровень:|r |cffb4dcdc9 ед. урона, Время действие Герой - 9 сек., солдат - 20.|r|n|cffffcc004-й уровень:|r |cffb4dcdc11 ед. урона, Время действие Герой - 11 сек., солдат - 20.|r"
+    }
+  ],
+  "39149": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Кровотечение|r"
+    }
+  ],
+  "39150": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Кровотечение|r"
+    }
+  ],
+  "39151": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "tip3",
+      "note": "",
+      "current_val": "|cfff09696Кровотечение|r"
+    }
+  ],
+  "39152": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "tip4",
+      "note": "",
+      "current_val": "|cfff09696Кровотечение|r"
+    }
+  ],
+  "9832": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Пускает кровь врагам, нанося периодический урон.|n|cffffcc001-й уровень:|r |cffb4dcdc5 ед. урона, Время действие Герой - 5 сек., солдат - 20.|r"
+    }
+  ],
+  "35327": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Пускает кровь врагам, нанося периодический урон.|n|cffffcc002-й уровень:|r |cffb4dcdc7 ед. урона, Время действие Герой - 7 сек., солдат - 20.|r"
+    }
+  ],
+  "35468": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Пускает кровь врагам, нанося периодический урон.|n|cffffcc003-й уровень:|r |cffb4dcdc9 ед. урона, Время действие Герой - 9 сек., солдат - 20.|r"
+    }
+  ],
+  "35470": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "ubertip4",
+      "note": "",
+      "current_val": "Пускает кровь врагам, нанося периодический урон.|n|cffffcc004-й уровень:|r |cffb4dcdc11 ед. урона, Время действие Герой - 11 сек., солдат - 20.|r"
+    }
+  ],
+  "39153": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "untip1",
+      "note": "",
+      "current_val": "|cfff09696Кровотечение|r"
+    }
+  ],
+  "39154": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "untip2",
+      "note": "",
+      "current_val": "|cfff09696Кровотечение|r"
+    }
+  ],
+  "39155": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "untip3",
+      "note": "",
+      "current_val": "|cfff09696Кровотечение|r"
+    }
+  ],
+  "39156": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "untip4",
+      "note": "",
+      "current_val": "|cfff09696Кровотечение|r"
+    }
+  ],
+  "6486": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "unubertip1",
+      "note": "",
+      "current_val": "Пускает кровь врагам , нанося периодический урон."
+    }
+  ],
+  "6491": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "unubertip2",
+      "note": "",
+      "current_val": "Пускает кровь врагам , нанося периодический урон."
+    }
+  ],
+  "6492": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "unubertip3",
+      "note": "",
+      "current_val": "Пускает кровь врагам , нанося периодический урон."
+    }
+  ],
+  "6493": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09F",
+      "field": "unubertip4",
+      "note": "",
+      "current_val": "Пускает кровь врагам , нанося периодический урон."
+    }
+  ],
+  "14801": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09I",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "E"
+    }
+  ],
+  "890": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09I",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Раскат грома|r"
+    }
+  ],
+  "14784": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09I",
+      "field": "researchhotkey",
+      "note": "",
+      "current_val": "E"
+    }
+  ],
+  "5682": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09I",
+      "field": "researchtip",
+      "note": "",
+      "current_val": "Изучить «|cfff09696Раскат грома|r» [|cffffcc00%d-й уровень|r]"
+    }
+  ],
+  "9524": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09I",
+      "field": "researchubertip",
+      "note": "",
+      "current_val": "Бьет по земле, нанося урон находящимся рядом наземным врагам и замедляя их передвижение и атаку. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AHtc,DataA1> урона, -<AHtc,DataC1,%>% от скорости передвижения, -<AHtc,DataD1,%>% от скорости атаки.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<AHtc,DataA2> урона, -<AHtc,DataC2,%>% от скорости передвижения, -<AHtc,DataD2,%>% от скорости атаки.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AHtc,DataA3> урона, -<AHtc,DataC3,%>% от скорости передвижения, -<AHtc,DataD3,%>% от скорости атаки.|r|n|cffffcc004-й уровень:|r |cffb4dcdc200 урона, -<AHtc,DataC3,%>% от скорости передвижения, -<AHtc,DataD3,%>% от скорости атаки.|r"
+    }
+  ],
+  "6249": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09I",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Раскат грома|r [|cffffcc001-й уровень|r]"
+    }
+  ],
+  "6264": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09I",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Раскат грома|r [|cffffcc002-й уровень|r]"
+    }
+  ],
+  "6532": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09I",
+      "field": "tip3",
+      "note": "",
+      "current_val": "|cfff09696Раскат грома|r [|cffffcc003-й уровень|r]"
+    }
+  ],
+  "6533": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09I",
+      "field": "tip4",
+      "note": "",
+      "current_val": "|cfff09696Раскат грома|r [|cffffcc004-й уровень|r]"
+    }
+  ],
+  "10551": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09I",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Бьет по земле, нанося |cffb4dcdc<AHtc,DataA1> |rурона находящимся рядом наземным врагам и замедляя их передвижение на |cffb4dcdc<AHtc,DataC1,%>%|r и атаку на |cffb4dcdc<AHtc,DataD1,%>%.|r"
+    }
+  ],
+  "10552": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09I",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Бьет по земле, нанося |cffb4dcdc<AHtc,DataA2>|r урона находящимся рядом наземным врагам и замедляя их передвижение на |cffb4dcdc<AHtc,DataC2,%>%|r и атаку на |cffb4dcdc<AHtc,DataD2,%>%.|r"
+    }
+  ],
+  "10553": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09I",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Бьет по земле, нанося |cffb4dcdc<AHtc,DataA3>|r урона находящимся рядом наземным врагам и замедляя их передвижение на |cffb4dcdc<AHtc,DataC3,%>%|r и атаку на |cffb4dcdc<AHtc,DataD3,%>%.|r"
+    }
+  ],
+  "9523": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09I",
+      "field": "ubertip4",
+      "note": "",
+      "current_val": "Бьет по земле, нанося |cffb4dcdc400|r урона находящимся рядом наземным врагам и замедляя их передвижение на |cffb4dcdc<AHtc,DataC3,%>%|r и атаку на |cffb4dcdc<AHtc,DataD3,%>%.|r"
+    }
+  ],
+  "6540": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09J",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Вдохновляющая Речь|r"
+    }
+  ],
+  "11578": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09J",
+      "field": "researchhotkey",
+      "note": "",
+      "current_val": "R"
+    }
+  ],
+  "6544": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09J",
+      "field": "researchtip",
+      "note": "",
+      "current_val": "|cfff09696Вдохновляющая Речь|r"
+    }
+  ],
+  "15391": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09J",
+      "field": "researchubertip",
+      "note": "",
+      "current_val": "Произносит вдохновляющую речь, поднимая базовый урон союзников.|n|cffffcc001-й уровень:|r |cffb4dcdc+ 35% к урону.|r|n|cffffcc002-й уровень:|r |cffb4dcdc+ 45% к урону.|r"
+    }
+  ],
+  "6541": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09J",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Вдохновляющая Речь|r"
+    }
+  ],
+  "6542": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09J",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Вдохновляющая Речь|r"
+    }
+  ],
+  "23630": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09J",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Произносит вдохновляющую речь, поднимая базовый урон союзников.|n|cffffcc001-й уровень:|r |cffb4dcdc+ 30% к урону.|r"
+    }
+  ],
+  "14840": [
+    {
+      "category": "hero_ability",
+      "obj_id": "A09J",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Произносит вдохновляющую речь, поднимая базовый урон союзников.|n|cffffcc002-й уровень:|r |cffb4dcdc+ 40% к урону.|r"
+    }
+  ],
+  "11709": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07I",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "5701": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07I",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Ярость|r"
+    }
+  ],
+  "5702": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07I",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Ярость|r"
+    }
+  ],
+  "11737": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07I",
+      "field": "unhotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "11771": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07X",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "3743": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07X",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Укрыться за щитом|r"
+    }
+  ],
+  "3744": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07X",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Укрыться за щитом|r"
+    }
+  ],
+  "11842": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07X",
+      "field": "unhotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "3745": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07X",
+      "field": "untip1",
+      "note": "",
+      "current_val": "Отменить «|cfff09696Укрыться за щитом|r»"
+    }
+  ],
+  "5707": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07Y",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Стальной наконечник болта|r"
+    }
+  ],
+  "5708": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07Y",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Стальной наконечник болта|r"
+    }
+  ],
+  "5709": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07Y",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "+<Ahsb,DataB1,%>% к урону по целям со тяжелой броней."
+    }
+  ],
+  "12306": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07Z",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "5912": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07Z",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Защита от магии|r"
+    }
+  ],
+  "5913": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07Z",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Защита от магии|r"
+    }
+  ],
+  "12358": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07Z",
+      "field": "unhotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "5914": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A07Z",
+      "field": "untip1",
+      "note": "",
+      "current_val": "Отменить «|cfff09696Защита от магии|r»"
+    }
+  ],
+  "5915": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A080",
+      "field": "name",
+      "note": "",
+      "current_val": "Броня |cfff09696Алого Ордена|r"
+    }
+  ],
+  "5916": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A080",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Броня |cfff09696Алого Ордена|r"
+    }
+  ],
+  "2001": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A080",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "-<Assk,DataC1> от получаемого  урона от атак. Минимальный урон от атак: <Assk,DataB1>."
+    }
+  ],
+  "5917": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A081",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Возрождение|r"
+    }
+  ],
+  "5918": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A081",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Возрождение|r"
+    }
+  ],
+  "5919": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A081",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Воины |cfff09696Алого Ордена|r возрождается после гибели. Время восстановления: <AOre,Cool1> сек."
+    }
+  ],
+  "5929": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A082",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Тяжелые Тренировки|r"
+    }
+  ],
+  "5930": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A082",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Тяжелые Тренировки|r"
+    }
+  ],
+  "1592": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A082",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Ускорение скорости боя всадников |cfff09696Алого Ордена|r.\n|cffb4dc8c(20%) к скорости боя.|r\n"
+    }
+  ],
+  "6038": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A083",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Священный Молот|r"
+    }
+  ],
+  "6039": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A083",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Священный Молот|r"
+    }
+  ],
+  "6040": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A083",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Дает дополнительный урон |cfff09696инквизитору|r, так же поджигает атакованых врагов."
+    }
+  ],
+  "11843": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A084",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "5936": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A084",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Перейти в ближний бой|r"
+    }
+  ],
+  "5937": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A084",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Перейти в ближний бой|r"
+    }
+  ],
+  "5938": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A084",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Переходит в ближний бой"
+    }
+  ],
+  "11894": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A084",
+      "field": "unhotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "5939": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A084",
+      "field": "untip1",
+      "note": "",
+      "current_val": "|cfff09696Перейти в ближний бой|r"
+    }
+  ],
+  "5940": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A084",
+      "field": "unubertip1",
+      "note": "",
+      "current_val": "Переходит в ближний бой"
+    }
+  ],
+  "11895": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A085",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "5943": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A085",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Перейти в дальний бой|r"
+    }
+  ],
+  "5944": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A085",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Перейти в дальний бой|r"
+    }
+  ],
+  "5945": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A085",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Переходит в дальний бой"
+    }
+  ],
+  "11956": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A085",
+      "field": "unhotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "5946": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A085",
+      "field": "untip1",
+      "note": "",
+      "current_val": "|cfff09696Перейти в дальний бой|r"
+    }
+  ],
+  "5947": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A085",
+      "field": "unubertip1",
+      "note": "",
+      "current_val": "Переходит в дальний бой"
+    }
+  ],
+  "5951": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A087",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Молитва|r"
+    }
+  ],
+  "5952": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A087",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Молитва|r"
+    }
+  ],
+  "6501": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A087",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "+5% к скорости передвижения и +3% к скорости атаки находящихся рядом союзников."
+    }
+  ],
+  "12359": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A088",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "5953": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A088",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Внутренний огонь|r"
+    }
+  ],
+  "5954": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A088",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Внутренний огонь|r"
+    }
+  ],
+  "38980": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A088",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "+1%>% к урону и +4 к броне союзника."
+    }
+  ],
+  "12391": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A088",
+      "field": "unhotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "11963": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A089",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "5955": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A089",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Поглощение Света|r"
+    }
+  ],
+  "5956": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A089",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Поглощение Света|r"
+    }
+  ],
+  "11964": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A089",
+      "field": "unhotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "11965": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08A",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "5958": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08A",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Исцеление|r"
+    }
+  ],
+  "5959": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08A",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Исцеление|r"
+    }
+  ],
+  "6502": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08A",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Восполняет 25 здоровья раненому союзнику. Не действует на технику."
+    }
+  ],
+  "12063": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08A",
+      "field": "unhotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "12392": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08B",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "5960": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08B",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Рассеивание заклинаний|r"
+    }
+  ],
+  "5961": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08B",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Рассеивание заклинаний|r"
+    }
+  ],
+  "12393": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08B",
+      "field": "unhotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "14390": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08C",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "E"
+    }
+  ],
+  "5963": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08C",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Очищающий Огонь|r"
+    }
+  ],
+  "5964": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08C",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Очищающий Огонь|r"
+    }
+  ],
+  "14392": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08C",
+      "field": "unhotkey",
+      "note": "",
+      "current_val": "E"
+    }
+  ],
+  "5978": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08D",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Оглушающее попадание|r"
+    }
+  ],
+  "5979": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08D",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Оглушающее попадание|r"
+    }
+  ],
+  "13105": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08D",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\n|cffb4dc8cДействует на героев (0.3)сек.|r\n|cffb4dc8cДействует на героев (1)сек.|r"
+    }
+  ],
+  "5980": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08E",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Броня Берсерка|r"
+    }
+  ],
+  "5981": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08E",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Броня Берсерка|r"
+    }
+  ],
+  "5982": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08E",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Позволяет  улучшить броню берсерка, которые дают +<AUts,DataC1> к броне и отражают <AUts,DataA1,%>% получаемого в ближнем бою урона в атакующих врагов."
+    }
+  ],
+  "5984": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08F",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Критический удар|r"
+    }
+  ],
+  "5985": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08F",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Критический удар|r"
+    }
+  ],
+  "12394": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08G",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "26492": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08G",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Боевой клич|r"
+    }
+  ],
+  "38799": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08G",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Боевой клич|r"
+    }
+  ],
+  "6503": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08G",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "+15% к урону находящихся рядом союзников. |nВремя действия: <A08G,Dur1> сек.\n|cffb4dc8cРадиус действия (500).|r"
+    }
+  ],
+  "12462": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08G",
+      "field": "unhotkey",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "38818": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08G",
+      "field": "untip1",
+      "note": "",
+      "current_val": "|cfff09696Боевой клич|r"
+    }
+  ],
+  "13116": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08G",
+      "field": "unubertip1",
+      "note": "",
+      "current_val": "+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек.\n|cffb4dc8cРадиус действия (500).|r"
+    }
+  ],
+  "6041": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08J",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Священный Молот|r"
+    }
+  ],
+  "6042": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08J",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Священный Молот|r"
+    }
+  ],
+  "13117": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08J",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Дает дополнительный урон |cfff09696инквизитору|r, так же поджигает атакованых врагов.\n|cffb4dc8cДополнительный урон(5).|r\n|cffb4dc8cУрон от поджога (2).|r\n"
+    }
+  ],
+  "6055": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08K",
+      "field": "name",
+      "note": "",
+      "current_val": "Аура |cfff09696Алого ордена|r"
+    }
+  ],
+  "6056": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08K",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Аура |cfff09696Алого ордена|r"
+    }
+  ],
+  "1705": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08K",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Ускоряет регенерацию здоровья находящихся рядом союзников. \n|cffb4dc8c(+0.5) к регенерации здоровья.|r\n|cffb4dc8cРадиус действия (400).|r"
+    }
+  ],
+  "39046": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08L",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfffa9696Воскрешение|r"
+    }
+  ],
+  "39048": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08L",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfffa9696Воскрешение|r"
+    }
+  ],
+  "6046": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08L",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Воскрешает 1 находящихся рядом союзников."
+    }
+  ],
+  "11307": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08L",
+      "field": "unhotkey",
+      "note": "",
+      "current_val": "R"
+    }
+  ],
+  "12395": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08M",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "6047": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08M",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Массовая благодать|r"
+    }
+  ],
+  "6048": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08M",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Массовая благодать|r"
+    }
+  ],
+  "7204": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08M",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Востанавливает хп союзникам по близости.\n|cffb4dc8cВостановление здоровья (100).|r\n|cffb4dc8cРадиус действия (300).|r\n"
+    }
+  ],
+  "5931": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08N",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Тяжелые Тренировки|r"
+    }
+  ],
+  "5932": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08N",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Тяжелые Тренировки|r"
+    }
+  ],
+  "13115": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08N",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Ускорение скорости боя всадников |cfff09696Алого Ордена|r.\n|cffb4dc8c(20%) к скорости боя.|r\n"
+    }
+  ],
+  "6061": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08O",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Рассекающий удар|r"
+    }
+  ],
+  "6059": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08O",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Рассекающий удар|r"
+    }
+  ],
+  "13107": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08O",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Паладин бьет с огромной силой, нанося  урона врагам рядом с основной целью.\n|cffb4dc8c(7%) урона рядом с целью.|r\n|cffb4dc8cРадиус поражения (200).|r"
+    }
+  ],
+  "14406": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08P",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "E"
+    }
+  ],
+  "6062": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08P",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Аура Воеводы|r"
+    }
+  ],
+  "6063": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08P",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Аура Воеводы|r"
+    }
+  ],
+  "13119": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08P",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Увеличивает урон от атак находящихся рядом союзников.\n|cffb4dc8c(10%) к урону.|r\n|cffb4dc8cРадиус действия (400).|r\n"
+    }
+  ],
+  "6126": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08P",
+      "field": "untip1",
+      "note": "",
+      "current_val": "|cfff09696Аура Воеводы|r"
+    }
+  ],
+  "13578": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08P",
+      "field": "unubertip1",
+      "note": "",
+      "current_val": "Увеличивает урон от атак находящихся рядом союзников.\n|cffb4dc8c(10%) к урону.|r\n|cffb4dc8cРадиус действия (400).|r\n"
+    }
+  ],
+  "14593": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08X",
+      "field": "hotkey",
+      "note": "",
+      "current_val": "E"
+    }
+  ],
+  "6120": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08X",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Свет небес|r"
+    }
+  ],
+  "6119": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08X",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Свет небес|r"
+    }
+  ],
+  "6121": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08X",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Восполняет 150 здоровья живому союзнику или наносит вдвое меньше урона врагу-нежити."
+    }
+  ],
+  "14675": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08X",
+      "field": "unhotkey",
+      "note": "",
+      "current_val": "E"
+    }
+  ],
+  "6123": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08Y",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Свет небес|r"
+    }
+  ],
+  "6124": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A08Y",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Свет небес|r"
+    }
+  ],
+  "6608": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A09O",
+      "field": "name",
+      "note": "",
+      "current_val": "|cfff09696Ненависть |r"
+    }
+  ],
+  "6609": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A09O",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Ненависть |r"
+    }
+  ],
+  "35489": [
+    {
+      "category": "unit_ability",
+      "obj_id": "A09O",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Уменьшает регенерацию здоровья находящихся рядом нежити.\n|cffb4dc8c(-1) к регенерации здоровья.|r\n|cffb4dc8cРадиус действия (400).|r"
+    }
+  ],
+  "5966": [
+    {
+      "category": "buff",
+      "obj_id": "B01K",
+      "field": "ftip",
+      "note": "",
+      "current_val": "|cfff09696Молитва|r"
+    }
+  ],
+  "5989": [
+    {
+      "category": "buff",
+      "obj_id": "B01L",
+      "field": "fnam",
+      "note": "",
+      "current_val": "|cfff09696Броня Берсерка|r"
+    }
+  ],
+  "39268": [
+    {
+      "category": "buff",
+      "obj_id": "B01M",
+      "field": "ftip",
+      "note": "",
+      "current_val": "|cfff09696Ярость|r"
+    }
+  ],
+  "39163": [
+    {
+      "category": "buff",
+      "obj_id": "B01N",
+      "field": "ftip",
+      "note": "",
+      "current_val": "|cfff09696Боевой клич|r"
+    }
+  ],
+  "6064": [
+    {
+      "category": "buff",
+      "obj_id": "B01P",
+      "field": "ftip",
+      "note": "",
+      "current_val": "Аура |cfff09696Алого ордена|r"
+    }
+  ],
+  "6472": [
+    {
+      "category": "buff",
+      "obj_id": "B01R",
+      "field": "ftip",
+      "note": "",
+      "current_val": "|cfff09696Аура Воеводы|r"
+    }
+  ],
+  "17826": [
+    {
+      "category": "buff",
+      "obj_id": "B01W",
+      "field": "ftip",
+      "note": "",
+      "current_val": "|cfff09696Аура Воеводы|r"
+    }
+  ],
+  "6473": [
+    {
+      "category": "buff",
+      "obj_id": "B01W",
+      "field": "fnsf",
+      "note": "",
+      "current_val": "(герой)"
+    }
+  ],
+  "6487": [
+    {
+      "category": "buff",
+      "obj_id": "B01X",
+      "field": "ftip",
+      "note": "",
+      "current_val": "|cfff09696Кровотичение|r"
+    }
+  ],
+  "6504": [
+    {
+      "category": "buff",
+      "obj_id": "B01Y",
+      "field": "ftip",
+      "note": "",
+      "current_val": "|cfff09696Кровотичение|r "
+    }
+  ],
+  "39269": [
+    {
+      "category": "buff",
+      "obj_id": "B01Z",
+      "field": "ftip",
+      "note": "",
+      "current_val": "|cfff09696Ярость|r"
+    }
+  ],
+  "6547": [
+    {
+      "category": "buff",
+      "obj_id": "B01Z",
+      "field": "fnsf",
+      "note": "",
+      "current_val": "(герой)"
+    }
+  ],
+  "14839": [
+    {
+      "category": "buff",
+      "obj_id": "B020",
+      "field": "ftip",
+      "note": "",
+      "current_val": "|cfff09696Вдохновляющая Речь|r"
+    }
+  ],
+  "6596": [
+    {
+      "category": "buff",
+      "obj_id": "B021",
+      "field": "ftip",
+      "note": "",
+      "current_val": "|cfff09696Мольба к свету|r"
+    }
+  ],
+  "6611": [
+    {
+      "category": "buff",
+      "obj_id": "B022",
+      "field": "ftip",
+      "note": "",
+      "current_val": "|cfff09696Ненависть |r"
+    }
+  ],
+  "6612": [
+    {
+      "category": "buff",
+      "obj_id": "B022",
+      "field": "fube",
+      "note": "",
+      "current_val": "Регенерация здоровья уменьшена."
+    }
+  ],
+  "10799": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03K",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "A"
+    }
+  ],
+  "5703": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03K",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Укрытся за щитом|r"
+    }
+  ],
+  "5714": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03K",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать «|cfff09696Укрытся за щитом|r»"
+    }
+  ],
+  "5715": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03K",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Дает пехотинцам способность «|cfff09696Укрытся за щитом|r», делающую их более устойчивыми к пронзающим атакам."
+    }
+  ],
+  "11340": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03L",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "S"
+    }
+  ],
+  "5717": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03L",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Стальной наконечник болта|r"
+    }
+  ],
+  "5718": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03L",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать «|cfff09696Стальной наконечник болта|r»"
+    }
+  ],
+  "5719": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03L",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Увеличивает пробивную способность болтов арбалета по тяжелой броне."
+    }
+  ],
+  "16981": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03M",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "X"
+    }
+  ],
+  "16974": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03M",
+      "field": "hotkey2",
+      "note": "",
+      "current_val": "X"
+    }
+  ],
+  "38951": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03M",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Улучшенная тетева|r"
+    }
+  ],
+  "39093": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03M",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cfff09696Улучшенная тетева|r"
+    }
+  ],
+  "38966": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03M",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать «|cfff09696Улучшенная тетева|r»"
+    }
+  ],
+  "39094": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03M",
+      "field": "tip2",
+      "note": "",
+      "current_val": "Исследовать «|cfff09696Улучшенная тетева|r»"
+    }
+  ],
+  "15145": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03M",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Увеличивает дальность стрельбы с арбалета.\n|cffff0000Дальность - +70.|r"
+    }
+  ],
+  "15146": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03M",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Увеличивает дальность стрельбы с арбалета.\n|cffff0000Дальность - +70.|r"
+    }
+  ],
+  "11370": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03S",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "A"
+    }
+  ],
+  "11329": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03S",
+      "field": "hotkey2",
+      "note": "",
+      "current_val": "A"
+    }
+  ],
+  "5892": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03S",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Длинный Арбалет|r"
+    }
+  ],
+  "5897": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03S",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cfff09696Длинный Арбалет|r"
+    }
+  ],
+  "5893": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03S",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать «|cfff09696Длинный Арбалет|r»"
+    }
+  ],
+  "5898": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03S",
+      "field": "tip2",
+      "note": "",
+      "current_val": "Исследовать «|cfff09696Длинный Арбалет|r»"
+    }
+  ],
+  "15147": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03S",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Увеличивает дальность стрельбы с арбалета на (+100), но уменьшает скорость боя на |cffffff00(10)|r%.\n|cfff09696ВАЖНО|r Запрещает возможность исследовать |cfff09696Короткий Арбалет|r."
+    }
+  ],
+  "15148": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03S",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Увеличивает дальность стрельбы с арбалета на (+100), но уменьшает скорость боя на |cffffff00(10)|r%.\n|cfff09696ВАЖНО|r Запрещает возможность исследовать |cfff09696Короткий Арбалет|r."
+    }
+  ],
+  "11376": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03T",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "S"
+    }
+  ],
+  "11371": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03T",
+      "field": "hotkey2",
+      "note": "",
+      "current_val": "S"
+    }
+  ],
+  "5902": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03T",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Короткий Арбалет|r"
+    }
+  ],
+  "5907": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03T",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cfff09696Короткий Арбалет|r"
+    }
+  ],
+  "5903": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03T",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать «|cfff09696Короткий Арбалет|r»"
+    }
+  ],
+  "5908": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03T",
+      "field": "tip2",
+      "note": "",
+      "current_val": "Исследовать «|cfff09696Короткий Арбалет|r»"
+    }
+  ],
+  "18138": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03T",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Увеличивает скорость  стрельбы с арбалета на |cffffff00(10)|r%, но уменьшает дальность стрельбы на (-100).\n|cfff09696ВАЖНО|r Запрещает исследовать \"|cfff09696Длинный Арбалет|r\""
+    }
+  ],
+  "18173": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03T",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Увеличивает скорость  стрельбы с арбалета на |cffffff00(10)|r%, но уменьшает дальность стрельбы на (-100).\n|cfff09696ВАЖНО|r Запрещает исследовать \"|cfff09696Длинный Арбалет|r\""
+    }
+  ],
+  "34441": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03U",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "5976": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03U",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Горючая смесь|r"
+    }
+  ],
+  "5977": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03U",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Горючая смесь|r"
+    }
+  ],
+  "17150": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03V",
+      "field": "hotkey2",
+      "note": "",
+      "current_val": "D"
+    }
+  ],
+  "39095": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03V",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Броня Алого Ордена|r"
+    }
+  ],
+  "39097": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03V",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cfff09696Броня Алого Ордена|r"
+    }
+  ],
+  "39096": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03V",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать «|cfff09696Броня Алого Ордена|r»"
+    }
+  ],
+  "39098": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03V",
+      "field": "tip2",
+      "note": "",
+      "current_val": "Исследовать «|cfff09696Броня Алого Ордена|r»"
+    }
+  ],
+  "6131": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03V",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Тяжелые доспехи |cfff09696Алого Ордена|r."
+    }
+  ],
+  "6134": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03V",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Тяжелые доспехи |cfff09696Алого Ордена|r."
+    }
+  ],
+  "6136": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03W",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Тяжелые Тренировки|r"
+    }
+  ],
+  "6135": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03W",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать «|cfff09696Тяжелые Тренировки|r»"
+    }
+  ],
+  "6137": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03W",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Тренирует всадников |cfff09696Алого Ордена|r. Дает +2 к урону."
+    }
+  ],
+  "26557": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03X",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "Z"
+    }
+  ],
+  "26561": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03X",
+      "field": "hotkey2",
+      "note": "",
+      "current_val": "Z"
+    }
+  ],
+  "26639": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03X",
+      "field": "hotkey3",
+      "note": "",
+      "current_val": "Z"
+    }
+  ],
+  "6139": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03X",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Вера в Пламя|r"
+    }
+  ],
+  "6140": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03X",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cfff09696Вера в Пламя|r"
+    }
+  ],
+  "6147": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03X",
+      "field": "name3",
+      "note": "",
+      "current_val": "|cfff09696Вера в Пламя|r"
+    }
+  ],
+  "6141": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03X",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Вера в Пламя|r"
+    }
+  ],
+  "6142": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03X",
+      "field": "tip2",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Вера в Пламя|r"
+    }
+  ],
+  "6146": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03X",
+      "field": "tip3",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Вера в Пламя|r"
+    }
+  ],
+  "11722": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03X",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Увеличивает запас здоровья на (|cffe6beaa25|r) и маны на (|cffe6beaa125|r) жрецов, ускоряет регенерацию их маны на (|cffe6beaa0.3|r), а также обучает их «|cffe6beaaРассеиванию заклинаний|r»."
+    }
+  ],
+  "11723": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03X",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Увеличивает запас здоровья на (|cffe6beaa25|r) и маны на (|cffe6beaa125|r) жрецов, ускоряет регенерацию их маны на (|cffe6beaa0.3|r), а также обучает их «|cffe6beaaРассеиванию заклинаний|r»."
+    }
+  ],
+  "11724": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03X",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Увеличивает запас здоровья на (|cffe6beaa25|r) и маны на (|cffe6beaa125|r) жрецов, ускоряет регенерацию их маны на (|cffe6beaa0.3|r), а также обучает их «|cffe6beaaРассеиванию заклинаний|r»."
+    }
+  ],
+  "18604": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03Y",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "X"
+    }
+  ],
+  "18607": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03Y",
+      "field": "hotkey2",
+      "note": "",
+      "current_val": "X"
+    }
+  ],
+  "18613": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03Y",
+      "field": "hotkey3",
+      "note": "",
+      "current_val": "X"
+    }
+  ],
+  "39099": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03Y",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Просветление|r"
+    }
+  ],
+  "39100": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03Y",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cffff2900Просветление|r"
+    }
+  ],
+  "39103": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03Y",
+      "field": "name3",
+      "note": "",
+      "current_val": "|cffff3900Просветление|r"
+    }
+  ],
+  "39104": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03Y",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Просветление|r"
+    }
+  ],
+  "39101": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03Y",
+      "field": "tip2",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Просветление|r"
+    }
+  ],
+  "39102": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03Y",
+      "field": "tip3",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Просветление|r"
+    }
+  ],
+  "11725": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03Y",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Увеличивает запас здоровья на (|cffe6beaa40|r) и маны на (|cffe6beaa100|r) жрецов, ускоряет регенерацию их маны на (|cffe6beaa0.3|r), а также обучает их «|cffe6beaaРассеиванию заклинаний|r»."
+    }
+  ],
+  "11726": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03Y",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Увеличивает запас здоровья на (|cffe6beaa40|r) и маны на (|cffe6beaa100|r) жрецов, ускоряет регенерацию их маны на (|cffe6beaa0.3|r), а также обучает их «|cffe6beaaРассеиванию заклинаний|r»."
+    }
+  ],
+  "11727": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03Y",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Увеличивает запас здоровья на (|cffe6beaa40|r) и маны на (|cffe6beaa100|r) жрецов, ускоряет регенерацию их маны на (|cffe6beaa0.3|r), а также обучает их «|cffe6beaaРассеиванию заклинаний|r»."
+    }
+  ],
+  "6168": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03Z",
+      "field": "name1",
+      "note": "",
+      "current_val": "Примкнуть к |cfff09696Алому Натиску|r"
+    }
+  ],
+  "6169": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03Z",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Примкнуть к |cfff09696Алому Натиску|r"
+    }
+  ],
+  "41177": [
+    {
+      "category": "upgrade",
+      "obj_id": "R03Z",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Позволяет нанимать войска |cfff09696Алого Натиска|r \n|cffffff00Преимущества|r\nБонус к урона - |cffffff006|r\nУвеличивает скорость боя - |cffffff0015%|r.\n|cffff0000ВАЖНО:|r\nИсключает возможность исследовать |cfff09696Алого Ордена|r"
+    }
+  ],
+  "6175": [
+    {
+      "category": "upgrade",
+      "obj_id": "R040",
+      "field": "name1",
+      "note": "",
+      "current_val": "Оставить |cfff09696Алый Орден|r"
+    }
+  ],
+  "6176": [
+    {
+      "category": "upgrade",
+      "obj_id": "R040",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Оставить |cfff09696Алый Орден|r"
+    }
+  ],
+  "6220": [
+    {
+      "category": "upgrade",
+      "obj_id": "R040",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Позволяет нанимать войска |cfff09696Алого Ордена|r \n|cffffff00Преимущества|r\nБонус к хп - |cffffff0050|r.\nБонус к мане - |cffffff0075|r.\nБонус к регенерации хп - |cffffff003%|r.\n|cffff0000ВАЖНО:|r\nИсключает возможность исследовать |cfff09696Алого Натиска|r"
+    }
+  ],
+  "11391": [
+    {
+      "category": "upgrade",
+      "obj_id": "R041",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "S"
+    }
+  ],
+  "11400": [
+    {
+      "category": "upgrade",
+      "obj_id": "R041",
+      "field": "hotkey2",
+      "note": "",
+      "current_val": "S"
+    }
+  ],
+  "11417": [
+    {
+      "category": "upgrade",
+      "obj_id": "R041",
+      "field": "hotkey3",
+      "note": "",
+      "current_val": "S"
+    }
+  ],
+  "6183": [
+    {
+      "category": "upgrade",
+      "obj_id": "R041",
+      "field": "name1",
+      "note": "",
+      "current_val": "Ярость |cfff09696Инквизиции|r"
+    }
+  ],
+  "6190": [
+    {
+      "category": "upgrade",
+      "obj_id": "R041",
+      "field": "name2",
+      "note": "",
+      "current_val": "Ярость |cfff09696Инквизиции|r"
+    }
+  ],
+  "6191": [
+    {
+      "category": "upgrade",
+      "obj_id": "R041",
+      "field": "name3",
+      "note": "",
+      "current_val": "Ярость |cfff09696Инквизиции|r"
+    }
+  ],
+  "6184": [
+    {
+      "category": "upgrade",
+      "obj_id": "R041",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Ярость |cfff09696Инквизиции|r"
+    }
+  ],
+  "6192": [
+    {
+      "category": "upgrade",
+      "obj_id": "R041",
+      "field": "tip2",
+      "note": "",
+      "current_val": "Ярость |cfff09696Инквизиции|r"
+    }
+  ],
+  "6193": [
+    {
+      "category": "upgrade",
+      "obj_id": "R041",
+      "field": "tip3",
+      "note": "",
+      "current_val": "Ярость |cfff09696Инквизиции|r"
+    }
+  ],
+  "41810": [
+    {
+      "category": "upgrade",
+      "obj_id": "R041",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Позволяет использовать способности инквизитора.\nУвеличивает хп на 70\nУвеличивает мп на 50"
+    }
+  ],
+  "41178": [
+    {
+      "category": "upgrade",
+      "obj_id": "R041",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Позволяет использовать способности инквизитора.\nУвеличивает хп на 70\nУвеличивает мп на 50"
+    }
+  ],
+  "41224": [
+    {
+      "category": "upgrade",
+      "obj_id": "R041",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Позволяет использовать способности инквизитора.\nУвеличивает хп на 70\nУвеличивает мп на 50"
+    }
+  ],
+  "17151": [
+    {
+      "category": "upgrade",
+      "obj_id": "R042",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "D"
+    }
+  ],
+  "17152": [
+    {
+      "category": "upgrade",
+      "obj_id": "R042",
+      "field": "hotkey2",
+      "note": "",
+      "current_val": "D"
+    }
+  ],
+  "17153": [
+    {
+      "category": "upgrade",
+      "obj_id": "R042",
+      "field": "hotkey3",
+      "note": "",
+      "current_val": "D"
+    }
+  ],
+  "6196": [
+    {
+      "category": "upgrade",
+      "obj_id": "R042",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Учения Паладина|r"
+    }
+  ],
+  "6197": [
+    {
+      "category": "upgrade",
+      "obj_id": "R042",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cfff09696Учения Паладина|r"
+    }
+  ],
+  "6202": [
+    {
+      "category": "upgrade",
+      "obj_id": "R042",
+      "field": "name3",
+      "note": "",
+      "current_val": "|cfff09696Учения Паладина|r"
+    }
+  ],
+  "39164": [
+    {
+      "category": "upgrade",
+      "obj_id": "R042",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Учения Паладина|r"
+    }
+  ],
+  "39165": [
+    {
+      "category": "upgrade",
+      "obj_id": "R042",
+      "field": "tip2",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Учения Паладина|r"
+    }
+  ],
+  "39166": [
+    {
+      "category": "upgrade",
+      "obj_id": "R042",
+      "field": "tip3",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Учения Паладина|r"
+    }
+  ],
+  "6198": [
+    {
+      "category": "upgrade",
+      "obj_id": "R042",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Тренирует паладина алого ордена.\nБонус к регенерации хп - |cffffff003%|r.|r "
+    }
+  ],
+  "6206": [
+    {
+      "category": "upgrade",
+      "obj_id": "R042",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Тренирует паладина алого ордена.\nБонус к регенерации хп - |cffffff003%|r.|r "
+    }
+  ],
+  "6207": [
+    {
+      "category": "upgrade",
+      "obj_id": "R042",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Тренирует паладина алого ордена.\nБонус к регенерации хп - |cffffff003%|r.|r "
+    }
+  ],
+  "13173": [
+    {
+      "category": "upgrade",
+      "obj_id": "R043",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "C"
+    }
+  ],
+  "6208": [
+    {
+      "category": "upgrade",
+      "obj_id": "R043",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Освящение молота|r"
+    }
+  ],
+  "6203": [
+    {
+      "category": "upgrade",
+      "obj_id": "R043",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cfff09696Учения Паладина|r"
+    }
+  ],
+  "6204": [
+    {
+      "category": "upgrade",
+      "obj_id": "R043",
+      "field": "name3",
+      "note": "",
+      "current_val": "|cfff09696Учения Паладина|r"
+    }
+  ],
+  "6209": [
+    {
+      "category": "upgrade",
+      "obj_id": "R043",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Освящение молота|r"
+    }
+  ],
+  "6205": [
+    {
+      "category": "upgrade",
+      "obj_id": "R043",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Учения Паладина|r"
+    }
+  ],
+  "6213": [
+    {
+      "category": "upgrade",
+      "obj_id": "R043",
+      "field": "tip3",
+      "note": "",
+      "current_val": "|cfff09696Учения Паладина|r"
+    }
+  ],
+  "6210": [
+    {
+      "category": "upgrade",
+      "obj_id": "R043",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Освящает оружие |cfff09696инквизитора|r."
+    }
+  ],
+  "6217": [
+    {
+      "category": "upgrade",
+      "obj_id": "R043",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Тренирует паладина алого ордена.\nБонус к регенерации хп - |cffffff003%|r.|r "
+    }
+  ],
+  "6218": [
+    {
+      "category": "upgrade",
+      "obj_id": "R043",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Тренирует паладина алого ордена.\nБонус к регенерации хп - |cffffff003%|r.|r "
+    }
+  ],
+  "11372": [
+    {
+      "category": "upgrade",
+      "obj_id": "R044",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "A"
+    }
+  ],
+  "11379": [
+    {
+      "category": "upgrade",
+      "obj_id": "R044",
+      "field": "hotkey2",
+      "note": "",
+      "current_val": "A"
+    }
+  ],
+  "6228": [
+    {
+      "category": "upgrade",
+      "obj_id": "R044",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Тренировочные бои|r"
+    }
+  ],
+  "6234": [
+    {
+      "category": "upgrade",
+      "obj_id": "R044",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cfff09696Тренировочные бои|r"
+    }
+  ],
+  "6214": [
+    {
+      "category": "upgrade",
+      "obj_id": "R044",
+      "field": "name3",
+      "note": "",
+      "current_val": "|cfff09696Учения Паладина|r"
+    }
+  ],
+  "6229": [
+    {
+      "category": "upgrade",
+      "obj_id": "R044",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Тренировочные бои|r"
+    }
+  ],
+  "6236": [
+    {
+      "category": "upgrade",
+      "obj_id": "R044",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Тренировочные бои|r"
+    }
+  ],
+  "6215": [
+    {
+      "category": "upgrade",
+      "obj_id": "R044",
+      "field": "tip3",
+      "note": "",
+      "current_val": "|cfff09696Учения Паладина|r"
+    }
+  ],
+  "18258": [
+    {
+      "category": "upgrade",
+      "obj_id": "R044",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Проводит тренировочные бои. Ускоряет скорость боя на 30%"
+    }
+  ],
+  "18264": [
+    {
+      "category": "upgrade",
+      "obj_id": "R044",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Проводит тренировочные бои. Ускоряет скорость боя на 30%"
+    }
+  ],
+  "6239": [
+    {
+      "category": "upgrade",
+      "obj_id": "R044",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Тренирует паладина алого ордена.\nБонус к регенерации хп - |cffffff003%|r.|r "
+    }
+  ],
+  "17181": [
+    {
+      "category": "upgrade",
+      "obj_id": "R045",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "D"
+    }
+  ],
+  "6240": [
+    {
+      "category": "upgrade",
+      "obj_id": "R045",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Улучшенная секира|r"
+    }
+  ],
+  "6245": [
+    {
+      "category": "upgrade",
+      "obj_id": "R045",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cfff09696Тренировочные бои|r"
+    }
+  ],
+  "6216": [
+    {
+      "category": "upgrade",
+      "obj_id": "R045",
+      "field": "name3",
+      "note": "",
+      "current_val": "|cfff09696Учения Паладина|r"
+    }
+  ],
+  "6241": [
+    {
+      "category": "upgrade",
+      "obj_id": "R045",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Улучшенная секира|r"
+    }
+  ],
+  "6247": [
+    {
+      "category": "upgrade",
+      "obj_id": "R045",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Тренировочные бои|r"
+    }
+  ],
+  "6235": [
+    {
+      "category": "upgrade",
+      "obj_id": "R045",
+      "field": "tip3",
+      "note": "",
+      "current_val": "|cfff09696Учения Паладина|r"
+    }
+  ],
+  "6242": [
+    {
+      "category": "upgrade",
+      "obj_id": "R045",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Позволяет использовать критический удар для |cfff09696Гладиатора|r."
+    }
+  ],
+  "6230": [
+    {
+      "category": "upgrade",
+      "obj_id": "R045",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Проводит тренировочные бои. Ускоряет скорость боя на 3%"
+    }
+  ],
+  "6250": [
+    {
+      "category": "upgrade",
+      "obj_id": "R045",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Тренирует паладина алого ордена.\nБонус к регенерации хп - |cffffff003%|r.|r "
+    }
+  ],
+  "18690": [
+    {
+      "category": "upgrade",
+      "obj_id": "R046",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "X"
+    }
+  ],
+  "6251": [
+    {
+      "category": "upgrade",
+      "obj_id": "R046",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Броня Берсерка|r"
+    }
+  ],
+  "6252": [
+    {
+      "category": "upgrade",
+      "obj_id": "R046",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Броня Берсерка|r"
+    }
+  ],
+  "39105": [
+    {
+      "category": "upgrade",
+      "obj_id": "R046",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Увеличивает броню |cfff09696Берсерка|r."
+    }
+  ],
+  "26640": [
+    {
+      "category": "upgrade",
+      "obj_id": "R047",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "Z"
+    }
+  ],
+  "6255": [
+    {
+      "category": "upgrade",
+      "obj_id": "R047",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Зачарованные топоры|r"
+    }
+  ],
+  "6260": [
+    {
+      "category": "upgrade",
+      "obj_id": "R047",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cfff09696Тренировочные бои|r"
+    }
+  ],
+  "6237": [
+    {
+      "category": "upgrade",
+      "obj_id": "R047",
+      "field": "name3",
+      "note": "",
+      "current_val": "|cfff09696Учения Паладина|r"
+    }
+  ],
+  "6256": [
+    {
+      "category": "upgrade",
+      "obj_id": "R047",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cfff09696Зачарованные топоры|r"
+    }
+  ],
+  "6262": [
+    {
+      "category": "upgrade",
+      "obj_id": "R047",
+      "field": "tip2",
+      "note": "",
+      "current_val": "|cfff09696Тренировочные бои|r"
+    }
+  ],
+  "6246": [
+    {
+      "category": "upgrade",
+      "obj_id": "R047",
+      "field": "tip3",
+      "note": "",
+      "current_val": "|cfff09696Учения Паладина|r"
+    }
+  ],
+  "6257": [
+    {
+      "category": "upgrade",
+      "obj_id": "R047",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Позволяет использовать |cfff09696Оглушающее попадание|r, |cfff09696Берсеркам|r."
+    }
+  ],
+  "6238": [
+    {
+      "category": "upgrade",
+      "obj_id": "R047",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Проводит тренировочные бои. Ускоряет скорость боя на 3%"
+    }
+  ],
+  "6265": [
+    {
+      "category": "upgrade",
+      "obj_id": "R047",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Тренирует паладина алого ордена.\nБонус к регенерации хп - |cffffff003%|r.|r "
+    }
+  ],
+  "33415": [
+    {
+      "category": "upgrade",
+      "obj_id": "R048",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "E"
+    }
+  ],
+  "6613": [
+    {
+      "category": "upgrade",
+      "obj_id": "R048",
+      "field": "name1",
+      "note": "",
+      "current_val": "Учение |cfff09696Алого Ордена|r"
+    }
+  ],
+  "6614": [
+    {
+      "category": "upgrade",
+      "obj_id": "R048",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать «Учение |cfff09696Алого Ордена|r»"
+    }
+  ],
+  "20101": [
+    {
+      "category": "upgrade",
+      "obj_id": "R048",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Дает способность к ненависти. Уменьшает регенерацию рядом находящейся нежити (-0.5%) регенерации. Радиус 400"
+    }
+  ],
+  "34430": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "34431": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "hotkey2",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "34432": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "hotkey3",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "34433": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "hotkey4",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "34442": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "hotkey5",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "34443": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "hotkey6",
+      "note": "",
+      "current_val": "Q"
+    }
+  ],
+  "6616": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Железные мечи|r"
+    }
+  ],
+  "6618": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cfff09696Железные мечи|r"
+    }
+  ],
+  "6617": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "name3",
+      "note": "",
+      "current_val": "|cfff09696Стальные мечи|r"
+    }
+  ],
+  "6621": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "name4",
+      "note": "",
+      "current_val": "|cfff09696Стальные мечи|r"
+    }
+  ],
+  "6620": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "name5",
+      "note": "",
+      "current_val": "|cfff09696Мифриловые мечи|r"
+    }
+  ],
+  "6619": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "name6",
+      "note": "",
+      "current_val": "|cfff09696Мифриловые мечи|r"
+    }
+  ],
+  "6622": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать |cfff09696железные мечи|r"
+    }
+  ],
+  "6623": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "tip2",
+      "note": "",
+      "current_val": "Исследовать |cfff09696железные мечи|r"
+    }
+  ],
+  "6624": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "tip3",
+      "note": "",
+      "current_val": "Исследовать |cfff09696стальные мечи|r"
+    }
+  ],
+  "6627": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "tip4",
+      "note": "",
+      "current_val": "Исследовать |cfff09696стальные мечи|r"
+    }
+  ],
+  "6626": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "tip5",
+      "note": "",
+      "current_val": "Исследовать |cfff09696мифриловые мечи|r"
+    }
+  ],
+  "6625": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "tip6",
+      "note": "",
+      "current_val": "Исследовать |cfff09696мифриловые мечи|r"
+    }
+  ],
+  "15154": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Увеличивают урон от атак воинов ближнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "15155": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Увеличивают урон от атак воинов ближнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "15156": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Увеличивают урон от атак воинов ближнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "15151": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "ubertip4",
+      "note": "",
+      "current_val": "Увеличивают урон от атак воинов ближнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "15152": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "ubertip5",
+      "note": "",
+      "current_val": "Увеличивают урон от атак воинов ближнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "15153": [
+    {
+      "category": "upgrade",
+      "obj_id": "R049",
+      "field": "ubertip6",
+      "note": "",
+      "current_val": "Увеличивают урон от атак воинов ближнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "11389": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "A"
+    }
+  ],
+  "11390": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "hotkey2",
+      "note": "",
+      "current_val": "A"
+    }
+  ],
+  "11392": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "hotkey3",
+      "note": "",
+      "current_val": "A"
+    }
+  ],
+  "11452": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "hotkey4",
+      "note": "",
+      "current_val": "A"
+    }
+  ],
+  "11487": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "hotkey5",
+      "note": "",
+      "current_val": "A"
+    }
+  ],
+  "11486": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "hotkey6",
+      "note": "",
+      "current_val": "A"
+    }
+  ],
+  "6638": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Железная броня|r"
+    }
+  ],
+  "6639": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cfff09696Железная броня|r"
+    }
+  ],
+  "6640": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "name3",
+      "note": "",
+      "current_val": "|cfff09696Стальная броня|r"
+    }
+  ],
+  "6643": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "name4",
+      "note": "",
+      "current_val": "|cfff09696Стальная броня|r"
+    }
+  ],
+  "6642": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "name5",
+      "note": "",
+      "current_val": "|cfff09696Мифриловая броня|r"
+    }
+  ],
+  "6641": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "name6",
+      "note": "",
+      "current_val": "|cfff09696Мифриловая броня|r"
+    }
+  ],
+  "6652": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать |cfff09696железную броню|r"
+    }
+  ],
+  "6651": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "tip2",
+      "note": "",
+      "current_val": "Исследовать |cfff09696железную броню|r"
+    }
+  ],
+  "6650": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "tip3",
+      "note": "",
+      "current_val": "Исследовать |cfff09696стальную броню|r"
+    }
+  ],
+  "6655": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "tip4",
+      "note": "",
+      "current_val": "Исследовать |cfff09696стальную броню|r"
+    }
+  ],
+  "6654": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "tip5",
+      "note": "",
+      "current_val": "Исследовать |cfff09696мифриловую броню|r"
+    }
+  ],
+  "6653": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "tip6",
+      "note": "",
+      "current_val": "Исследовать |cfff09696мифриловую броню|r"
+    }
+  ],
+  "20810": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Усиливает броню  воинов ближнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "20811": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Усиливает броню  воинов ближнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "20812": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Усиливает броню  воинов ближнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "15157": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "ubertip4",
+      "note": "",
+      "current_val": "Усиливает броню  воинов ближнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "20808": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "ubertip5",
+      "note": "",
+      "current_val": "Усиливает броню  воинов ближнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "20809": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04A",
+      "field": "ubertip6",
+      "note": "",
+      "current_val": "Усиливает броню  воинов ближнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "11460": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "S"
+    }
+  ],
+  "11489": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "hotkey2",
+      "note": "",
+      "current_val": "S"
+    }
+  ],
+  "11490": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "hotkey3",
+      "note": "",
+      "current_val": "S"
+    }
+  ],
+  "11491": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "hotkey4",
+      "note": "",
+      "current_val": "S"
+    }
+  ],
+  "11493": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "hotkey5",
+      "note": "",
+      "current_val": "S"
+    }
+  ],
+  "11628": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "hotkey6",
+      "note": "",
+      "current_val": "S"
+    }
+  ],
+  "6660": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Доспехи из клепаной кожи|r"
+    }
+  ],
+  "6661": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cfff09696Доспехи из клепаной кожи|r"
+    }
+  ],
+  "6662": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "name3",
+      "note": "",
+      "current_val": "|cfff09696Доспехи из армированной кожи|r"
+    }
+  ],
+  "6671": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "name4",
+      "note": "",
+      "current_val": "|cfff09696Доспехи из армированной кожи|r"
+    }
+  ],
+  "6670": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "name5",
+      "note": "",
+      "current_val": "|cfff09696Доспехи из драконьей кожи|r"
+    }
+  ],
+  "6669": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "name6",
+      "note": "",
+      "current_val": "|cfff09696Доспехи из драконьей кожи|r"
+    }
+  ],
+  "6663": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать |cfff09696доспехи из клепаной кожи|r"
+    }
+  ],
+  "6664": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "tip2",
+      "note": "",
+      "current_val": "Исследовать |cfff09696доспехи из клепаной кожи|r"
+    }
+  ],
+  "6665": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "tip3",
+      "note": "",
+      "current_val": "Исследовать |cfff09696доспехи из армированной кожи|r"
+    }
+  ],
+  "6668": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "tip4",
+      "note": "",
+      "current_val": "Исследовать |cfff09696доспехи из армированной кожи|r"
+    }
+  ],
+  "6667": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "tip5",
+      "note": "",
+      "current_val": "Исследовать |cfff09696доспехи из драконьей кожи|r"
+    }
+  ],
+  "6666": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "tip6",
+      "note": "",
+      "current_val": "Исследовать |cfff09696доспехи из драконьей кожи|r"
+    }
+  ],
+  "20815": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Усиливают броню  воинов дальнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "20816": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Усиливают броню  воинов дальнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "20817": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Усиливают броню  воинов дальнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "15158": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "ubertip4",
+      "note": "",
+      "current_val": "Усиливают броню  воинов дальнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "20813": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "ubertip5",
+      "note": "",
+      "current_val": "Усиливают броню  воинов дальнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "20814": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04B",
+      "field": "ubertip6",
+      "note": "",
+      "current_val": "Усиливают броню  воинов дальнего боя, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "34480": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "34481": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "hotkey2",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "34482": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "hotkey3",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "34483": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "hotkey4",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "34484": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "hotkey5",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "34485": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "hotkey6",
+      "note": "",
+      "current_val": "W"
+    }
+  ],
+  "6682": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Меткость|r"
+    }
+  ],
+  "6683": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cfff09696Меткость|r"
+    }
+  ],
+  "6684": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "name3",
+      "note": "",
+      "current_val": "|cfff09696Меткость|r"
+    }
+  ],
+  "6685": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "name4",
+      "note": "",
+      "current_val": "|cfff09696Меткость|r"
+    }
+  ],
+  "6686": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "name5",
+      "note": "",
+      "current_val": "|cfff09696Меткость|r"
+    }
+  ],
+  "6687": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "name6",
+      "note": "",
+      "current_val": "|cfff09696Меткость|r"
+    }
+  ],
+  "6688": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Меткость|r"
+    }
+  ],
+  "6689": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "tip2",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Меткость|r"
+    }
+  ],
+  "6690": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "tip3",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Меткость|r"
+    }
+  ],
+  "6691": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "tip4",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Меткость|r"
+    }
+  ],
+  "6692": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "tip5",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Меткость|r"
+    }
+  ],
+  "6693": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "tip6",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Меткость|r"
+    }
+  ],
+  "15162": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Увеличивает урон от дистанционных атак  воинов, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "15163": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Увеличивает урон от дистанционных атак  воинов, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "15164": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Увеличивает урон от дистанционных атак  воинов, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "15159": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "ubertip4",
+      "note": "",
+      "current_val": "Увеличивает урон от дистанционных атак  воинов, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "15160": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "ubertip5",
+      "note": "",
+      "current_val": "Увеличивает урон от дистанционных атак  воинов, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "15161": [
+    {
+      "category": "upgrade",
+      "obj_id": "R04C",
+      "field": "ubertip6",
+      "note": "",
+      "current_val": "Увеличивает урон от дистанционных атак  воинов, |cfff09696Алого Ордена.|r"
+    }
+  ],
+  "7373": [
+    {
+      "category": "upgrade",
+      "obj_id": "R07B",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cffe6beaaАлый Орден|r"
+    }
+  ],
+  "7508": [
+    {
+      "category": "upgrade",
+      "obj_id": "R07B",
+      "field": "tip1",
+      "note": "",
+      "current_val": "|cffe6beaaАлый Орден|r"
+    }
+  ],
+  "5597": [
+    {
+      "category": "upgrade",
+      "obj_id": "R07B",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Организация, состоящая полностью из людей и ставящая своей целью уничтожение всей нежити и ее пособников на территории бывшего Лордерона"
+    }
+  ],
+  "40391": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KG",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "X"
+    }
+  ],
+  "40396": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KG",
+      "field": "hotkey2",
+      "note": "",
+      "current_val": "X"
+    }
+  ],
+  "40554": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KG",
+      "field": "hotkey3",
+      "note": "",
+      "current_val": "X"
+    }
+  ],
+  "39121": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KG",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfffa9696Улучшенная кладка|r"
+    }
+  ],
+  "42582": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "hotkey1",
+      "note": "",
+      "current_val": "Z"
+    }
+  ],
+  "42583": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "hotkey2",
+      "note": "",
+      "current_val": "Z"
+    }
+  ],
+  "42573": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "hotkey3",
+      "note": "",
+      "current_val": "Z"
+    }
+  ],
+  "42574": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "hotkey4",
+      "note": "",
+      "current_val": "Z"
+    }
+  ],
+  "42575": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "hotkey5",
+      "note": "",
+      "current_val": "Z"
+    }
+  ],
+  "42579": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "hotkey6",
+      "note": "",
+      "current_val": "Z"
+    }
+  ],
+  "6129": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "name1",
+      "note": "",
+      "current_val": "|cfff09696Улучшенные инструменты|r"
+    }
+  ],
+  "6130": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "name2",
+      "note": "",
+      "current_val": "|cffff2900Улучшенные инструменты|r"
+    }
+  ],
+  "6132": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "name3",
+      "note": "",
+      "current_val": "|cffff3900Улучшенные инструменты|r"
+    }
+  ],
+  "6133": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "name4",
+      "note": "",
+      "current_val": "|cffff4900Улучшенные инструменты|r"
+    }
+  ],
+  "6248": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "name5",
+      "note": "",
+      "current_val": "|cffff5900Улучшенные инструменты|r"
+    }
+  ],
+  "6253": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "name6",
+      "note": "",
+      "current_val": "|cffff6900Улучшенные инструменты|r"
+    }
+  ],
+  "6261": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "tip1",
+      "note": "",
+      "current_val": "Исследовать |cfff09696Улучшенные инструменты|r"
+    }
+  ],
+  "6263": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "tip2",
+      "note": "",
+      "current_val": "Исследовать |cffff2900Улучшенные инструменты|r"
+    }
+  ],
+  "6465": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "tip3",
+      "note": "",
+      "current_val": "Исследовать |cffff3900Улучшенные инструменты|r"
+    }
+  ],
+  "6484": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "tip4",
+      "note": "",
+      "current_val": "Исследовать |cffff4900Улучшенные инструменты|r"
+    }
+  ],
+  "6485": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "tip5",
+      "note": "",
+      "current_val": "Исследовать |cffff5900Улучшенные инструменты|r"
+    }
+  ],
+  "6488": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "tip6",
+      "note": "",
+      "current_val": "Исследовать |cffff6900Улучшенные инструменты|r"
+    }
+  ],
+  "39144": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "ubertip1",
+      "note": "",
+      "current_val": "Увеличивает объем переносимой работниками древесины на 6."
+    }
+  ],
+  "39139": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "ubertip2",
+      "note": "",
+      "current_val": "Увеличивает объем переносимой работниками древесины на 6."
+    }
+  ],
+  "39140": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "ubertip3",
+      "note": "",
+      "current_val": "Увеличивает объем переносимой работниками древесины на 6."
+    }
+  ],
+  "39141": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "ubertip4",
+      "note": "",
+      "current_val": "Увеличивает объем переносимой работниками древесины на 6."
+    }
+  ],
+  "39142": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "ubertip5",
+      "note": "",
+      "current_val": "Увеличивает объем переносимой работниками древесины на 6."
+    }
+  ],
+  "39143": [
+    {
+      "category": "upgrade",
+      "obj_id": "R0KH",
+      "field": "ubertip6",
+      "note": "",
+      "current_val": "Увеличивает объем переносимой работниками древесины на 6."
+    }
+  ]
+}

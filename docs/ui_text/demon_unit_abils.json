@@ -1,0 +1,567 @@
+{
+  "scope": "Пылающий Легион (Demon): Реестр способностей войск/зданий и баффов",
+  "abilities_count": 21,
+  "buffs_count": 13,
+  "abilities": [
+    "A0LU",
+    "A0LV",
+    "A0LW",
+    "A0LX",
+    "A0LY",
+    "A0LZ",
+    "A0M0",
+    "A0M1",
+    "A0M2",
+    "A0M3",
+    "A0M4",
+    "A0M5",
+    "A0M6",
+    "A0M7",
+    "A0MW",
+    "A0MX",
+    "A0VY",
+    "A16J",
+    "S003",
+    "S004",
+    "S005"
+  ],
+  "buffs": [
+    "B04O",
+    "B04P",
+    "B04Q",
+    "B04R",
+    "B04S",
+    "B04U",
+    "B04V",
+    "B04W",
+    "B04Y",
+    "B04Z",
+    "B050",
+    "B051",
+    "BNbf"
+  ],
+  "checks_def": [
+    {
+      "id": "A0LU",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Аура Скверны|r"
+    },
+    {
+      "id": "A0LU",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Аура Скверны|r"
+    },
+    {
+      "id": "A0LU",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивная аура строения. Постепенно восстанавливает здоровье окружающим союзным строениям Легиона.|r"
+    },
+    {
+      "id": "A0LV",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Укрыться за щитом|r"
+    },
+    {
+      "id": "A0LV",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Укрыться за щитом|r (|cffffffffD|r)"
+    },
+    {
+      "id": "A0LV",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Кровопускатель поднимает щит, снижая получаемый урон от дальних пронзающих атак до |cffffffff50%|cffced4da, но его скорость передвижения уменьшается на |cffffffff30%|cffced4da.|r"
+    },
+    {
+      "id": "A0LV",
+      "type": "ability",
+      "field": "untip1",
+      "expected": "|cffe4cfa3Опустить щит|r (|cffffffffD|r)"
+    },
+    {
+      "id": "A0LV",
+      "type": "ability",
+      "field": "unubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Опустить щит, возвращая обычную скорость передвижения и стандартную защиту от пронзающих атак.|r"
+    },
+    {
+      "id": "A0LW",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "id": "A0LW",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "id": "A0LW",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сокрушительные удары наносят |cffffffff25%|cffced4da урона всем наземным врагам в радиусе |cffffffff150|cffced4da ед. вокруг основной цели.|r"
+    },
+    {
+      "id": "A0LX",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "id": "A0LX",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "id": "A0LX",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сокрушительные удары наносят |cffffffff40%|cffced4da урона всем наземным врагам в радиусе |cffffffff150|cffced4da ед. вокруг основной цели.|r"
+    },
+    {
+      "id": "A0LY",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Ловушка Тюремщика|r"
+    },
+    {
+      "id": "A0LY",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Ловушка Тюремщика|r"
+    },
+    {
+      "id": "A0LY",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждая атака сковывает цель демоническими путами, замедляя её скорость передвижения на |cffffffff30%|cffced4da и скорость боя на |cffffffff15%|cffced4da. Время действия: |cffffffff5|cffced4da сек.|r"
+    },
+    {
+      "id": "A0LZ",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Пленение|r"
+    },
+    {
+      "id": "A0LZ",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Пленение|r (|cffffffffE|r)"
+    },
+    {
+      "id": "A0LZ",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Захватывает вражеского воина в подпространство своей клетки, нанося ему |cffffffff25|cffced4da ед. урона в секунду, пока тот не погибнет. Если Тюремщик погибает, пленник освобождается.|r"
+    },
+    {
+      "id": "A0M0",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Разрушение заклинаний|r"
+    },
+    {
+      "id": "A0M0",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Разрушение заклинаний|r (|cffffffffW|r)"
+    },
+    {
+      "id": "A0M0",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Развеивает все положительные и отрицательные магические эффекты с существ в радиусе |cffffffff200|cffced4da ед., а также наносит |cffffffff250|cffced4da ед. урона призванным существам.|r"
+    },
+    {
+      "id": "A0M1",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Похищение жизни|r"
+    },
+    {
+      "id": "A0M1",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Похищение жизни|r (|cffffffffQ|r)"
+    },
+    {
+      "id": "A0M1",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Чернокнижник поддерживает поток темной энергии, вытягивая по |cffffffff25|cffced4da ед. здоровья в секунду из цели и передавая его себе. Длительность: до |cffffffff6|cffced4da сек.|r"
+    },
+    {
+      "id": "A0M2",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Проклятие|r"
+    },
+    {
+      "id": "A0M2",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Проклятие|r (|cffffffffW|r)"
+    },
+    {
+      "id": "A0M2",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Проклинает вражеского воина, в результате чего его атаки получают |cffffffff33%|cffced4da шанс промахнуться. Длительность: |cffffffff60|cffced4da сек. (на героях |cffffffff10|cffced4da сек.).|r"
+    },
+    {
+      "id": "A0M2",
+      "type": "ability",
+      "field": "untip1",
+      "expected": "|cffe4cfa3Автозаклинание включено|r"
+    },
+    {
+      "id": "A0M2",
+      "type": "ability",
+      "field": "unubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Правый клик мыши включает или выключает автоматическое наложение проклятия на врагов при их приближении.|r"
+    },
+    {
+      "id": "A0M3",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Сокрушительный удар|r"
+    },
+    {
+      "id": "A0M3",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Сокрушительный удар|r"
+    },
+    {
+      "id": "A0M3",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дает |cffffffff20%|cffced4da шанс при атаке нанести дополнительно |cffffffff25|cffced4da ед. урона и оглушить цель на |cffffffff2|cffced4da сек. (героев на |cffffffff0.5|cffced4da сек.).|r"
+    },
+    {
+      "id": "A0M4",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Вместилище Скверно-бота|r"
+    },
+    {
+      "id": "A0M5",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Боевая тревога|r"
+    },
+    {
+      "id": "A0M5",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Боевая тревога|r (|cffffffffQ|r)"
+    },
+    {
+      "id": "A0M5",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Приказывает ближайшим Архитекторам Скверны укрыться внутри Скверно-бота для усиления его огневой мощи.|r"
+    },
+    {
+      "id": "A0M6",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Огненный ливень|r"
+    },
+    {
+      "id": "A0M6",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Огненный ливень|r (|cffffffffQ|r)"
+    },
+    {
+      "id": "A0M6",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на указанную область |cffffffff4|cffced4da волны огня, каждая из которых наносит |cffffffff30|cffced4da ед. урона и поджигает пораженные войска.|r"
+    },
+    {
+      "id": "A0M7",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Аура Скверны|r"
+    },
+    {
+      "id": "A0M7",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Аура Скверны|r"
+    },
+    {
+      "id": "A0M7",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения союзных существ на |cffffffff10%|cffced4da и ускоряет регенерацию их здоровья на |cffffffff0.5|cffced4da ед./сек.|r"
+    },
+    {
+      "id": "A0MW",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Сон|r"
+    },
+    {
+      "id": "A0MW",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Сон|r (|cffffffffR|r)"
+    },
+    {
+      "id": "A0MW",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Погружает вражеское существо в глубокий сон на |cffffffff15|cffced4da сек. (героев на |cffffffff4|cffced4da сек.). Спящая цель не может действовать, но мгновенно просыпается при получении урона.|r"
+    },
+    {
+      "id": "A0MX",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Аура страха|r"
+    },
+    {
+      "id": "A0MX",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Аура страха|r"
+    },
+    {
+      "id": "A0MX",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Внушает первобытный ужас вражеским войскам в радиусе |cffffffff400|cffced4da ед., снижая наносимый ими урон от атак на |cffffffff10%|cffced4da.|r"
+    },
+    {
+      "id": "A16J",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Перст боли|r"
+    },
+    {
+      "id": "A16J",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Перст боли|r (|cffffffffE|r)"
+    },
+    {
+      "id": "A16J",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает разрушительный темный разряд, поражающий до |cffffffff5|cffced4da противников. Первой цели наносится |cffffffff125|cffced4da ед. урона, а каждой последующей урон снижается на |cffffffff15%|cffced4da.|r"
+    },
+    {
+      "id": "A0VY",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Сбор ресурсов|r"
+    },
+    {
+      "id": "A0VY",
+      "type": "ability",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Сбор ресурсов|r (|cffffffffG|r)"
+    },
+    {
+      "id": "A0VY",
+      "type": "ability",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Приказывает рабочему добывать древесину из указанных деревьев.|r"
+    },
+    {
+      "id": "A0VY",
+      "type": "ability",
+      "field": "untip1",
+      "expected": "|cffe4cfa3Вернуть ресурсы|r (|cffffffffE|r)"
+    },
+    {
+      "id": "A0VY",
+      "type": "ability",
+      "field": "unubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Нести добытую древесину в ближайшее главное здание или лесопилку.|r"
+    },
+    {
+      "id": "S003",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Эволюция: Кровавое отродье|r"
+    },
+    {
+      "id": "S004",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Эволюция: Кровавый палач|r"
+    },
+    {
+      "id": "S005",
+      "type": "ability",
+      "field": "name",
+      "expected": "|cffe4cfa3Эволюция: Кровопускатель|r"
+    },
+    {
+      "id": "B04O",
+      "type": "buff",
+      "field": "tip",
+      "expected": "|cffe4cfa3Аура Скверны|r"
+    },
+    {
+      "id": "B04O",
+      "type": "buff",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость восстановления здоровья строения увеличена под воздействием Ауры Скверны.|r"
+    },
+    {
+      "id": "B04P",
+      "type": "buff",
+      "field": "tip",
+      "expected": "|cffe4cfa3Ловушка Тюремщика|r"
+    },
+    {
+      "id": "B04P",
+      "type": "buff",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения и скорость боя снижены демоническими путами Тюремщика.|r"
+    },
+    {
+      "id": "B04Q",
+      "type": "buff",
+      "field": "tip",
+      "expected": "|cffe4cfa3Ловушка Тюремщика|r"
+    },
+    {
+      "id": "B04Q",
+      "type": "buff",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения и скорость боя снижены демоническими путами Тюремщика.|r"
+    },
+    {
+      "id": "B04R",
+      "type": "buff",
+      "field": "tip",
+      "expected": "|cffe4cfa3Аура Скверны|r"
+    },
+    {
+      "id": "B04R",
+      "type": "buff",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения и скорость восстановления здоровья увеличены под воздействием Ауры Скверны.|r"
+    },
+    {
+      "id": "B04S",
+      "type": "buff",
+      "field": "tip",
+      "expected": "|cffe4cfa3Осквернение|r"
+    },
+    {
+      "id": "B04S",
+      "type": "buff",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения снижена, а шанс промахнуться при атаке увеличен под действием оскверненной земли.|r"
+    },
+    {
+      "id": "B04U",
+      "type": "buff",
+      "field": "tip",
+      "expected": "|cffe4cfa3Испепеление|r"
+    },
+    {
+      "id": "B04U",
+      "type": "buff",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель охвачена пламенем Скверны и взорвется при гибели, нанося урон ближайшим существам.|r"
+    },
+    {
+      "id": "B04V",
+      "type": "buff",
+      "field": "tip",
+      "expected": "|cffe4cfa3Дары Скверны|r"
+    },
+    {
+      "id": "B04V",
+      "type": "buff",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Защита и урон от атак существенно увеличены темным благословением Кил'джедена.|r"
+    },
+    {
+      "id": "B04W",
+      "type": "buff",
+      "field": "tip",
+      "expected": "|cffe4cfa3Коррозия Скверны|r"
+    },
+    {
+      "id": "B04W",
+      "type": "buff",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Урон от атак снижен под действием разъедающей Скверны.|r"
+    },
+    {
+      "id": "B04Y",
+      "type": "buff",
+      "field": "tip",
+      "expected": "|cffe4cfa3Щит Скверны|r"
+    },
+    {
+      "id": "B04Y",
+      "type": "buff",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Враги, атакующие это существо в ближнем бою, получают ответный урон пламенем Скверны.|r"
+    },
+    {
+      "id": "B04Z",
+      "type": "buff",
+      "field": "tip",
+      "expected": "|cffe4cfa3Поглощение Скверны|r"
+    },
+    {
+      "id": "B04Z",
+      "type": "buff",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Часть наносимого урона возвращается существу в виде здоровья.|r"
+    },
+    {
+      "id": "B050",
+      "type": "buff",
+      "field": "tip",
+      "expected": "|cffe4cfa3Аура страха|r"
+    },
+    {
+      "id": "B050",
+      "type": "buff",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Урон от атак снижен под воздействием подавляющего ужаса.|r"
+    },
+    {
+      "id": "B051",
+      "type": "buff",
+      "field": "tip",
+      "expected": "|cffe4cfa3Повелевание Скверной|r"
+    },
+    {
+      "id": "B051",
+      "type": "buff",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Урон от атак увеличен под воздействием воли Повелителя Легиона.|r"
+    },
+    {
+      "id": "BNbf",
+      "type": "buff",
+      "field": "tip",
+      "expected": "|cffe4cfa3Сгусток Скверны|r"
+    },
+    {
+      "id": "BNbf",
+      "type": "buff",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Получает периодический урон от поражения сгустком темной магии.|r"
+    }
+  ]
+}

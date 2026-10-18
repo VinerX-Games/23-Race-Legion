@@ -1,0 +1,2251 @@
+{
+  "race": "Ночные эльфы (Night Elf)",
+  "race_id": 26,
+  "selection": {
+    "ability_id": "A0HL",
+    "marker_id": "R07L"
+  },
+  "categories": {
+    "buildings": [
+      "etol",
+      "etoa",
+      "etoe",
+      "emow",
+      "eaom",
+      "eate",
+      "eaow",
+      "eaoe",
+      "edob",
+      "etrp",
+      "edos",
+      "e03X",
+      "e03W",
+      "h0D8"
+    ],
+    "units": [
+      "ewsp",
+      "earc",
+      "esen",
+      "ebal",
+      "e00I",
+      "e00J",
+      "n05H",
+      "edot",
+      "efdr",
+      "e00H",
+      "n064",
+      "edry",
+      "edoc",
+      "emtg",
+      "n05D",
+      "n05G",
+      "h0D9",
+      "h0DB",
+      "h0DA"
+    ],
+    "heroes": [
+      "E00V",
+      "E011",
+      "E00W"
+    ],
+    "research": [
+      "R07L",
+      "Renb",
+      "R0G1",
+      "R0G2",
+      "R0GB",
+      "Resm",
+      "Rema",
+      "Resw",
+      "Rerh",
+      "Reuv",
+      "Rews",
+      "Resc",
+      "R0GC",
+      "Reib",
+      "Remk",
+      "Remg",
+      "Repb",
+      "R0GA",
+      "R0G9",
+      "R0G7",
+      "Redt",
+      "Reec",
+      "R0G6",
+      "Redc",
+      "Reeb",
+      "Resi",
+      "Rers",
+      "Rehs",
+      "R0G8",
+      "R0KS",
+      "R0KT",
+      "R0KU",
+      "R0CY",
+      "R0KV",
+      "R0KW"
+    ],
+    "abilities": [
+      "A0HL",
+      "A0I3",
+      "A0FD",
+      "A0EF",
+      "A0FC",
+      "Acyc",
+      "A12K",
+      "A16L",
+      "Amfl",
+      "Apsh",
+      "A16I",
+      "A0FB",
+      "A164",
+      "A0FJ",
+      "A0FH",
+      "A0FI",
+      "ken0",
+      "A1MW",
+      "A160",
+      "A161",
+      "A0FL",
+      "A0FQ",
+      "A0FS",
+      "A0FT",
+      "AEbl",
+      "ANfl",
+      "AEev",
+      "A0FM",
+      "A01C",
+      "A0LJ",
+      "A0LI",
+      "A0IQ",
+      "A15N"
+    ]
+  },
+  "wts_updates": {
+    "38863": "|cffe4cfa3Ночные эльфы|r",
+    "38864": "|cffe4cfa3Ночные эльфы|r (|cffffffffS|r)",
+    "35173": "|cffa6afb8РАСА:|cffced4da Древняя цивилизация калдорай, хранителей природы и служителей богини Элуны.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor (Яхве)|r|n|cffa6afb8Сложность:|r |cffffffff●●●|cffa6afb8○○|r|n|cffa6afb8Период:|r |cffa9c7de«WoW Vanilla — Legion»|r|n|n|cffced4daНочные эльфы, или калдорай — одна из древнейших рас Азерота, тысячелетиями оберегающая священные леса Калимдора. Опираясь на благословение Луны, мудрость друидов и первобытную силу древних древ, эльфы сочетают скрытность, меткую стрельбу и разрушительную магию природы.|r",
+    "10673": "|cffe4cfa3Ночные эльфы|r",
+    "10674": "|cffe4cfa3Ночные эльфы|r",
+    "20119": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к расе Ночных эльфов.|r",
+    "26923": "|cffe4cfa3Древо жизни|r",
+    "26924": "|cffe4cfa3Древо жизни|r (|cffffffffQ|r)",
+    "5481": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночных эльфов первой ступени. Обеспечивает запас пищи и добычу ресурсов.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгонёк|cffced4da: базовый рабочий.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deКруг Кенария|cffced4da|n- |cffa9c7deПуть Элуны|cffced4da|n- |cffa9c7deБлагословение природы|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deДрево столетий|cffced4da: открывает доступ к передовым сооружениям и технологиям.|r",
+    "26925": "|cffe4cfa3Древо столетий|r",
+    "26935": "|cffe4cfa3Древо столетий|r (|cffffffffZ|r)",
+    "10114": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночных эльфов второй ступени. Существенно увеличивает запас пищи.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгонёк|cffced4da: базовый рабочий.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deБлагословение природы|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deДрево вечности|cffced4da: открывает доступ к высшим технологиям Ночных эльфов.|r",
+    "26936": "|cffe4cfa3Древо вечности|r",
+    "26937": "|cffe4cfa3Древо вечности|r (|cffffffffZ|r)",
+    "10115": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночных эльфов третьей ступени. Обеспечивает максимальный запас пищи.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгонёк|cffced4da: базовый рабочий.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deБлагословение природы|cffced4da.|r",
+    "26938": "|cffe4cfa3Лунный колодец|r",
+    "26939": "|cffe4cfa3Лунный колодец|r (|cffffffffA|r)",
+    "31600": "|cffa6afb8ЗДАНИЕ:|cffced4da Экономическое и вспомогательное сооружение. Накапливает живительную воду, восполняющую здоровье и ману союзников, а также приносит доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит |cffc8e087+20|cffced4da ед. дохода каждые |cffffffff25|cffced4da сек.|r",
+    "26940": "|cffe4cfa3Древо войны|r",
+    "26941": "|cffe4cfa3Древо войны|r (|cffffffffW|r)",
+    "12949": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовое военное сооружение армии Ночных эльфов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЛучница|cffced4da: меткий стрелок дальнего боя.|n- |cffa9c7deОхотница|cffced4da: быстрый штурмовой боец с рикошетящей глефой.|n- |cffa9c7deГлефомет|cffced4da: дальнобойное осадное орудие.|n- |cffa9c7deЛунный воин|cffced4da: ловкий боец ближнего боя.|n- |cffa9c7deДух леса|cffced4da: древний лесной страж природы.|n- |cffa9c7deФурболг-следопыт|cffced4da: союзный воин ближнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенные луки|cffced4da|n- |cffa9c7deТренировка меткости|cffced4da|n- |cffa9c7deУлучшенные лунные глефы|cffced4da|n- |cffa9c7deПронзающие лезвия|cffced4da|n- |cffa9c7deТанец полумесяца|cffced4da|n- |cffa9c7deОбучение друидизму|cffced4da|n- |cffa9c7deОпутывание|cffced4da|n- |cffa9c7deУдлинённые клинки|cffced4da.|r",
+    "27021": "|cffe4cfa3Алтарь старейшин|r",
+    "27022": "|cffe4cfa3Алтарь старейшин|r (|cffffffffS|r)",
+    "12948": "|cffa6afb8ЗДАНИЕ:|cffced4da Священный алтарь для призыва и воскрешения героев Ночных эльфов.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deХранитель рощи|cffced4da: герой-мистик, повелитель природы.|n- |cffa9c7deДруид-мастер|cffced4da: могущественный маг стихий и друидизма.|n- |cffa9c7deЛунная охотница|cffced4da: смертоносный ловкий стрелок Элуны.|r",
+    "27025": "|cffe4cfa3Древо ветров|r",
+    "27026": "|cffe4cfa3Древо ветров|r (|cffffffffR|r)",
+    "31602": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает летающих существ и магов стихии воздуха.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДруид-ворон|cffced4da: маг поддержки, владеющий ветром и обликом буревестника.|n- |cffa9c7deЧудесный дракончик|cffced4da: летучий истребитель вражеских магов.|n- |cffa9c7deДревний Гвардеец|cffced4da: стойкий элитный страж ветров.|n- |cffa9c7deФурболг-воитель|cffced4da: могучий вождь фурболгов с аурой.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение друида-ворона|cffced4da|n- |cffa9c7deЗнак ворона|cffced4da|n- |cffa9c7deАннулирование|cffced4da.|r",
+    "27023": "|cffe4cfa3Древо мудрости|r",
+    "27024": "|cffe4cfa3Древо мудрости|r (|cffffffffD|r)",
+    "31601": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает магов земли, целителей и тяжелых лесных исполинов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДриада|cffced4da: быстрый стрелок-антимаг с замедляющим ядом.|n- |cffa9c7deДруид-хищник|cffced4da: маг-целитель, способный принимать облик свирепого медведя.|n- |cffa9c7deГорный великан|cffced4da: тяжелый исполин, поглощающий осадный и магический урон.|n- |cffa9c7deДруид-сова|cffced4da: астральный друид Солнца и Луны.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение друида-хищника|cffced4da|n- |cffa9c7deЗнак хищника|cffced4da|n- |cffa9c7deРассеяние чар|cffced4da|n- |cffa9c7deУстойчивая кожа|cffced4da|n- |cffa9c7deКаменная кожа|cffced4da|n- |cffa9c7deМагия совы|cffced4da.|r",
+    "27027": "|cffe4cfa3Дом охотников|r",
+    "27028": "|cffe4cfa3Дом охотников|r (|cffffffffE|r)",
+    "3803": "|cffa6afb8ЗДАНИЕ:|cffced4da Главная кузница и арсенал Ночных эльфов. Улучшает вооружение и защиту армии.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deСила Луны|cffced4da: повышает урон стрелков.|n- |cffa9c7deЛунные доспехи|cffced4da: повышает броню стрелков и друидов.|n- |cffa9c7deСила леса|cffced4da: повышает урон воинов ближнего боя и зверей.|n- |cffa9c7deПрочные шкуры|cffced4da: повышает броню воинов ближнего боя и зверей.|n- |cffa9c7deНочное зрение|cffced4da|n- |cffa9c7deЛунный фонтан|cffced4da|n- |cffa9c7deЧасовой|cffced4da|n- |cffa9c7deСлияние с деревьями|cffced4da.|r",
+    "27029": "|cffe4cfa3Сторожевое древо|r",
+    "27030": "|cffe4cfa3Сторожевое древо|r (|cffffffffZ|r)",
+    "31604": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение Ночных эльфов. Мечет тяжелые валуны в приближающихся врагов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкоренение|cffced4da: укрепляется в земле для дальнобойной стрельбы.|n- |cffa9c7deСъесть дерево|cffced4da: восстанавливает здоровье, поглощая дерево.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "27031": "|cffe4cfa3Гнездо химер|r",
+    "27032": "|cffe4cfa3Гнездо химер|r (|cffffffffZ|r)",
+    "8676": "|cffe4cfa3Храм Друидов|r",
+    "8742": "|cffe4cfa3Храм Друидов|r (|cffffffffE|r)",
+    "9105": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище древних друидов, взывающее к силам дикой природы и первобытных зверей.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПризыв помощи|cffced4da: призыв сил Диких Богов.|n- |cffa9c7deМилость Природы|cffced4da: целительный природный дождь.|n- |cffa9c7deЯрость Природы|cffced4da: призыв могучих древней.|r",
+    "2064": "|cffe4cfa3Храм Элуны|r",
+    "2930": "|cffe4cfa3Храм Элуны|r (|cffffffffE|r)",
+    "31603": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище богини Луны, дарующее благословение и небесную мощь воительницам калдорай.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗов Элуны|cffced4da: аура боевого неистовства.|n- |cffa9c7deЯрость Элуны|cffced4da: посвящение в ночные воительницы.|n- |cffa9c7deСлёзы Элуны|cffced4da: перерождение павших воинов в огоньки.|r",
+    "10907": "|cffe4cfa3Верфь|r",
+    "10908": "|cffe4cfa3Верфь|r (|cffffffffC|r)",
+    "10903": "|cffa6afb8ЗДАНИЕ:|cffced4da Морское сооружение для строительства и оснащения боевых кораблей.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспортный корабль|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОрудия флота|cffced4da|n- |cffa9c7deУкреплённый корпус|cffced4da.|r",
+    "27042": "|cffe4cfa3Огонёк|r",
+    "27043": "|cffe4cfa3Огонёк|r (|cffffffffQ|r)",
+    "31605": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий Ночных эльфов. Бестелесный дух, собирающий древесину без вырубки леса, выращивающий здания и способный развеять магию ценой своей жизни.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСамопожертвование|cffced4da: взрывается, сжигая ману врагов и нанося урон призванным существам.|n- |cffa9c7deОбновление|cffced4da: восстанавливает здоровье повреждённым древам.|n- |cffa9c7deСбор древесины|cffced4da: добывает дерево, не уничтожая деревья.|n- |cffa9c7deНебольшой скачок|cffced4da: мгновенный телепорт на короткое расстояние.|n|nНе атакует.|r",
+    "1252": "|cffe4cfa3Лучница|r",
+    "1253": "|cffe4cfa3Лучница|r (|cffffffffQ|r)",
+    "1255": "|cffa6afb8ЮНИТ:|cffced4da Базовый меткий стрелок дальнего боя калдорай.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСлиться с тенью|cffced4da: становится невидимой ночью в неподвижном состоянии.|n- |cffa9c7deЗащита Элуны|cffced4da: снижает урон от атак дальнего боя и заклинаний.|n- |cffa9c7deСесть на гиппогрифа|cffced4da: объединяется с гиппогрифом в наездницу.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "217": "|cffe4cfa3Охотница|r",
+    "219": "|cffe4cfa3Охотница|r (|cffffffffW|r)",
+    "1250": "|cffa6afb8ЮНИТ:|cffced4da Быстрый мобильный воин авангарда Ночных эльфов, верхом на свирепой пантере.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЛунные глефы|cffced4da: глефа рикошетит по дополнительным целям.|n- |cffa9c7deЧасовой|cffced4da: сажает сову-разведчика на дерево для постоянного обзора.|n- |cffa9c7deСлиться с тенью|cffced4da: скрывается ночью в неподвижности.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "1424": "|cffe4cfa3Глефомет|r",
+    "6114": "|cffe4cfa3Глефомет|r (|cffffffffR|r)",
+    "33517": "|cffa6afb8ЮНИТ:|cffced4da Дальнобойное осадное орудие Ночных эльфов, сокрушающее укрепления и скопления врагов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПронзающие лезвия|cffced4da: пробивает строй противников и позволяет срубать деревья выстрелом.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "27293": "|cffe4cfa3Лунный воин|r",
+    "27294": "|cffe4cfa3Лунный воин|r (|cffffffffE|r)",
+    "31703": "|cffa6afb8ЮНИТ:|cffced4da Ловкий эльфийский боец ближнего боя с парными глефами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТанец полумесяца|cffced4da: шанс |cffffffff15%|cffced4da при атаке совершить стремительный перекат за спину цели, нанося |cffffffff50%|cffced4da базового урона всем врагам на пути.|n- |cffa9c7deУдлинённые клинки|cffced4da: увеличенный радиус поражения глефами.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "27295": "|cffe4cfa3Дух леса|r",
+    "27296": "|cffe4cfa3Дух леса|r (|cffffffffQ|r)",
+    "31704": "|cffa6afb8ЮНИТ:|cffced4da Первобытный дух чащобы, призванный охранять священные рощи.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deОпутывание|cffced4da: атаки опутывают цель живыми лозами, замедляя передвижение и скорость атаки.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "27565": "|cffe4cfa3Фурболг-следопыт|r",
+    "27566": "|cffe4cfa3Фурболг-следопыт|r (|cffffffffW|r)",
+    "31905": "|cffa6afb8ЮНИТ:|cffced4da Мощный союзный воин ближнего боя из племени фурболгов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолшебный огонь|cffced4da: снижает броню цели и даёт обзор на ней.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "27055": "|cffe4cfa3Друид-ворон|r",
+    "27056": "|cffe4cfa3Друид-ворон|r (|cffffffffW|r)",
+    "31599": "|cffa6afb8ЮНИТ:|cffced4da Мобильный друид стихии ветра и воздуха.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолшебный огонь|cffced4da: ослабляет броню противника и раскрывает его местоположение.|n- |cffa9c7deСмерч|cffced4da: поднимает вражеского воина в воздух, выводя из боя.|n- |cffa9c7deОблик буревестника|cffced4da: превращается в летучего ворона для разведки и воздушного боя.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "27057": "|cffe4cfa3Чудесный дракончик|r",
+    "27058": "|cffe4cfa3Чудесный дракончик|r (|cffffffffQ|r)",
+    "27291": "|cffe4cfa3Древний Гвардеец|r",
+    "27292": "|cffe4cfa3Древний Гвардеец|r (|cffffffffW|r)",
+    "31702": "|cffa6afb8ЮНИТ:|cffced4da Тяжелый элитный воин-маг ближнего боя, закаленный веками тренировок.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАннулирование|cffced4da: блокирует входящие вражеские заклинания.|n- |cffa9c7deЗачарованная глефа|cffced4da: заряжает оружие магической энергией.|n- |cffa9c7deЗащита|cffced4da: отражает стрелковые атаки.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "5750": "|cffe4cfa3Фурболг-воитель|r",
+    "5765": "|cffe4cfa3Фурболг-воитель|r (|cffffffffE|r)",
+    "33189": "|cffa6afb8ЮНИТ:|cffced4da Свирепый вождь фурболгов с типом атаки Хаос.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКомандирская аура|cffced4da: повышает урон союзников поблизости.|n- |cffa9c7deГромовая поступь|cffced4da: сотрясает землю, нанося урон и замедляя врагов.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "27050": "|cffe4cfa3Дриада|r",
+    "27049": "|cffe4cfa3Дриада|r (|cffffffffQ|r)",
+    "31596": "|cffa6afb8ЮНИТ:|cffced4da Быстрый стрелок дальнего боя и главный антимаг калдорай.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗамедляющий яд|cffced4da: каждая атака наносит периодический урон и замедляет скорость цели.|n- |cffa9c7deРассеяние чар|cffced4da: снимает отрицательные эффекты с союзников и положительные с врагов.|n- |cffa9c7deНевосприимчивость к магии|cffced4da: полный иммунитет к вражеским заклинаниям.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "27051": "|cffe4cfa3Друид-хищник|r",
+    "27052": "|cffe4cfa3Друид-хищник|r (|cffffffffW|r)",
+    "31597": "|cffa6afb8ЮНИТ:|cffced4da Могучий друид-целитель, способный трансформироваться в свирепого боевого медведя.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРёв|cffced4da: вдохновляет союзников, увеличивая их урон на |cffc8e08725%|cffced4da.|n- |cffa9c7deОмоложение|cffced4da: восстанавливает здоровье цели в течение времени.|n- |cffa9c7deОблик медведя|cffced4da: превращается в грозного бойца ближнего боя с высоким запасом здоровья.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "27053": "|cffe4cfa3Горный великан|r",
+    "27054": "|cffe4cfa3Горный великан|r (|cffffffffE|r)",
+    "31598": "|cffa6afb8ЮНИТ:|cffced4da Огромный каменный исполин, способный выдерживать колоссальный урон.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПровокация|cffced4da: заставляет врагов атаковать великана.|n- |cffa9c7deБоевая дубинка|cffced4da: вырывает дерево и атакует осадным уроном с эффектом рассечения.|n- |cffa9c7deУстойчивая кожа|cffced4da: снижает урон от магии и сокращает длительность заклинаний.|n- |cffa9c7deКаменная кожа|cffced4da: снижает входящий урон от атак.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "27194": "|cffe4cfa3Друид-сова|r",
+    "27627": "|cffe4cfa3Друид-сова|r (|cffffffffR|r)",
+    "31904": "|cffa6afb8ЮНИТ:|cffced4da Мудрый астральный друид, владеющий силами Солнца и Луны.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАстральная фаза|cffced4da: переключает стойку между Солнцем (атаки поджигают цели, заклинание «Солнечный ожог») и Луной (атаки восстанавливают ману раненому союзнику, заклинание «Звёздный луч»).|n- |cffa9c7deОблик совуха|cffced4da: трансформация в яростного совуха-берсерка.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "27418": "|cffe4cfa3Совух-берсерк|r",
+    "32922": "|cffa6afb8ЮНИТ:|cffced4da Свирепая боевая форма друида-совы с типом атаки Хаос.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБешенство совуха|cffced4da: увеличивает скорость атаки и передвижения.|n- |cffa9c7deАстральная фаза|cffced4da: использование астральных заклинаний Солнца и Луны.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "10911": "|cffe4cfa3Транспорт|r",
+    "5520": "|cffe4cfa3Фрегат|r",
+    "10898": "|cffa6afb8ЮНИТ:|cffced4da Боевой парусно-гребной корабль прибрежного флота.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "10931": "|cffe4cfa3Линкор|r",
+    "6929": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый флагманский линейный корабль дальнего боя.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "27634": "|cffe4cfa3Хранитель рощи|r",
+    "20328": "|cffe4cfa3Хранитель рощи|r (|cffffffffK|r)",
+    "20330": "|cffa6afb8ГЕРОЙ:|cffced4da Полубог-мистик священных рощ Калимдора, повелевающий первозданными силами природы и леса.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСила природы|cffced4da: превращает деревья в преданных духов-древней.|n- |cffa9c7deЗамедляющие корни|cffced4da: атаки опутывают врагов, снижая скорость бега и атаки.|n- |cffa9c7deАура шипов|cffced4da: окружает союзников щитом, отражающим урон ближнего боя.|n- |cffa9c7deЯрость природы|cffced4da: массовое опутывание и поражение врагов грозовыми ударами.|n|n|cffa6afb8Основная характеристика:|r |cffffffffИнтеллект|r|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "20346": "|cffe4cfa3Хранитель рощи|r",
+    "20348": "|cffe4cfa3Хранитель рощи|r",
+    "16268": "|cffe4cfa3Лунная охотница|r",
+    "3714": "|cffa9c7deКатрис Звёздная Песня|r",
+    "3857": "|cffe4cfa3Лунная охотница|r (|cffffffffC|r)",
+    "31708": "|cffa6afb8ГЕРОЙ:|cffced4da Искусный верховный следопыт Часовых, разящая врагов стрелами Элуны с дистанции.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВзрыв маны|cffced4da: обстреливает область сгустками маны, оглушая врагов.|n- |cffa9c7deЛедяные стрелы|cffced4da: атаки наносят дополнительный урон и замедляют цель.|n- |cffa9c7deАура меткости|cffced4da: увеличивает урон дальнобойных атак союзников.|n- |cffa9c7deСмертельный выстрел|cffced4da: выпускает мощную стрелу, пронзающую врагов на линии.|n|n|cffa6afb8Основная характеристика:|r |cffffffffЛовкость|r|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "3856": "|cffe4cfa3Лунная охотница|r",
+    "3898": "|cffe4cfa3Лунная охотница|r",
+    "27385": "|cffe4cfa3Друид-мастер|r",
+    "3606": "|cffa9c7deВерховный друид|r",
+    "8455": "|cffe4cfa3Друид-мастер|r (|cffffffffZ|r)",
+    "31707": "|cffa6afb8ГЕРОЙ:|cffced4da Верховный архидруид, в совершенстве овладевший стихией бури, скрытностью и древними звериными формами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРаздвоенная молния|cffced4da: поражает веером молний группу противников перед собой.|n- |cffa9c7deСкачок|cffced4da: мгновенно телепортируется на короткую дистанцию.|n- |cffa9c7deУскользание|cffced4da: шанс уклониться от входящих атак.|n- |cffa9c7deОблик совухи|cffced4da: превращается в грозного совуха с усиленными характеристиками.|n|n|cffa6afb8Основная характеристика:|r |cffffffffИнтеллект|r|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "27386": "|cffe4cfa3Друид-мастер|r",
+    "27387": "|cffe4cfa3Друид-мастер|r",
+    "27190": "|cffe4cfa3Круг Кенария|r",
+    "40869": "|cffe4cfa3Круг Кенария|r (|cffffffffR|r)",
+    "41852": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Выбор пути друидов Круга Кенария и духов дикой природы. Открывает доступ к друидам и фурболгам, блокируя ветку Часовых Элуны.|n|n|cffa6afb8Открывает доступ к:|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deДруид-ворон|cffced4da|n- |cffa9c7deДруид-хищник|cffced4da|n- |cffa9c7deДруид-сова|cffced4da|n- |cffa9c7deФурболг-следопыт|cffced4da|n- |cffa9c7deФурболг-воитель|cffced4da.|r",
+    "41838": "|cffe4cfa3Путь Элуны|r",
+    "40871": "|cffe4cfa3Путь Элуны|r (|cffffffffE|r)",
+    "20295": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Выбор пути воинства Часовых и служителей богини Элуны. Открывает доступ к эльфийским воинам и стрелкам, блокируя ветку Круга Кенария.|n|n|cffa6afb8Открывает доступ к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДревний Гвардеец|cffced4da|n- |cffa9c7deТанец полумесяца|cffced4da.|r",
+    "27604": "|cffe4cfa3Выбор направления|r",
+    "27605": "|cffe4cfa3Выбор направления|r",
+    "41817": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер выбора пути развития расы Ночных эльфов (Круг Кенария или Путь Элуны).|r",
+    "27161": "|cffe4cfa3Благословение природы|r",
+    "40023": "|cffe4cfa3Благословение природы|r (|cffffffffW|r)",
+    "27059": "|cffe4cfa3Сила Луны — уровень 1|r",
+    "27065": "|cffe4cfa3Сила Луны — уровень 1|r (|cffffffffQ|r)",
+    "27071": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "27061": "|cffe4cfa3Сила Луны — уровень 2|r",
+    "27066": "|cffe4cfa3Сила Луны — уровень 2|r (|cffffffffQ|r)",
+    "27072": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "27060": "|cffe4cfa3Сила Луны — уровень 3|r",
+    "27067": "|cffe4cfa3Сила Луны — уровень 3|r (|cffffffffQ|r)",
+    "27073": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "27064": "|cffe4cfa3Сила Луны — уровень 4|r",
+    "27070": "|cffe4cfa3Сила Луны — уровень 4|r (|cffffffffQ|r)",
+    "27074": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "27063": "|cffe4cfa3Сила Луны — уровень 5|r",
+    "27069": "|cffe4cfa3Сила Луны — уровень 5|r (|cffffffffQ|r)",
+    "27075": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "27062": "|cffe4cfa3Сила Луны — уровень 6|r",
+    "27068": "|cffe4cfa3Сила Луны — уровень 6|r (|cffffffffQ|r)",
+    "27076": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "27139": "|cffe4cfa3Лунные доспехи — уровень 1|r",
+    "27145": "|cffe4cfa3Лунные доспехи — уровень 1|r (|cffffffffA|r)",
+    "27151": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "27140": "|cffe4cfa3Лунные доспехи — уровень 2|r",
+    "27146": "|cffe4cfa3Лунные доспехи — уровень 2|r (|cffffffffA|r)",
+    "27152": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "27141": "|cffe4cfa3Лунные доспехи — уровень 3|r",
+    "27147": "|cffe4cfa3Лунные доспехи — уровень 3|r (|cffffffffA|r)",
+    "27153": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "27144": "|cffe4cfa3Лунные доспехи — уровень 4|r",
+    "27150": "|cffe4cfa3Лунные доспехи — уровень 4|r (|cffffffffA|r)",
+    "27154": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "27143": "|cffe4cfa3Лунные доспехи — уровень 5|r",
+    "27149": "|cffe4cfa3Лунные доспехи — уровень 5|r (|cffffffffA|r)",
+    "27155": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "27142": "|cffe4cfa3Лунные доспехи — уровень 6|r",
+    "27148": "|cffe4cfa3Лунные доспехи — уровень 6|r (|cffffffffA|r)",
+    "27156": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "27077": "|cffe4cfa3Сила леса — уровень 1|r",
+    "27083": "|cffe4cfa3Сила леса — уровень 1|r (|cffffffffW|r)",
+    "27089": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "27078": "|cffe4cfa3Сила леса — уровень 2|r",
+    "27084": "|cffe4cfa3Сила леса — уровень 2|r (|cffffffffW|r)",
+    "27090": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "27079": "|cffe4cfa3Сила леса — уровень 3|r",
+    "27085": "|cffe4cfa3Сила леса — уровень 3|r (|cffffffffW|r)",
+    "27091": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "27082": "|cffe4cfa3Сила леса — уровень 4|r",
+    "27088": "|cffe4cfa3Сила леса — уровень 4|r (|cffffffffW|r)",
+    "27092": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "27081": "|cffe4cfa3Сила леса — уровень 5|r",
+    "27087": "|cffe4cfa3Сила леса — уровень 5|r (|cffffffffW|r)",
+    "27093": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "27080": "|cffe4cfa3Сила леса — уровень 6|r",
+    "27086": "|cffe4cfa3Сила леса — уровень 6|r (|cffffffffW|r)",
+    "27094": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "27117": "|cffe4cfa3Прочные шкуры — уровень 1|r",
+    "27123": "|cffe4cfa3Прочные шкуры — уровень 1|r (|cffffffffR|r)",
+    "27129": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "27118": "|cffe4cfa3Прочные шкуры — уровень 2|r",
+    "27124": "|cffe4cfa3Прочные шкуры — уровень 2|r (|cffffffffR|r)",
+    "27130": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "27119": "|cffe4cfa3Прочные шкуры — уровень 3|r",
+    "27125": "|cffe4cfa3Прочные шкуры — уровень 3|r (|cffffffffR|r)",
+    "27131": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "27122": "|cffe4cfa3Прочные шкуры — уровень 4|r",
+    "27128": "|cffe4cfa3Прочные шкуры — уровень 4|r (|cffffffffR|r)",
+    "27132": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "27121": "|cffe4cfa3Прочные шкуры — уровень 5|r",
+    "27127": "|cffe4cfa3Прочные шкуры — уровень 5|r (|cffffffffR|r)",
+    "27133": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "27120": "|cffe4cfa3Прочные шкуры — уровень 6|r",
+    "27126": "|cffe4cfa3Прочные шкуры — уровень 6|r (|cffffffffR|r)",
+    "27134": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "27655": "|cffe4cfa3Слияние с деревьями — уровень 1|r",
+    "27661": "|cffe4cfa3Слияние с деревьями — уровень 1|r (|cffffffffZ|r)",
+    "26003": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "27656": "|cffe4cfa3Слияние с деревьями — уровень 2|r",
+    "27662": "|cffe4cfa3Слияние с деревьями — уровень 2|r (|cffffffffZ|r)",
+    "25998": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "27657": "|cffe4cfa3Слияние с деревьями — уровень 3|r",
+    "27663": "|cffe4cfa3Слияние с деревьями — уровень 3|r (|cffffffffZ|r)",
+    "25999": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "27658": "|cffe4cfa3Слияние с деревьями — уровень 4|r",
+    "27664": "|cffe4cfa3Слияние с деревьями — уровень 4|r (|cffffffffZ|r)",
+    "26000": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "27659": "|cffe4cfa3Слияние с деревьями — уровень 5|r",
+    "27665": "|cffe4cfa3Слияние с деревьями — уровень 5|r (|cffffffffZ|r)",
+    "26001": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "27660": "|cffe4cfa3Слияние с деревьями — уровень 6|r",
+    "27666": "|cffe4cfa3Слияние с деревьями — уровень 6|r (|cffffffffZ|r)",
+    "26002": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "27135": "|cffe4cfa3Ночное зрение|r",
+    "27136": "|cffe4cfa3Ночное зрение|r (|cffffffffU|r)",
+    "27137": "|cffe4cfa3Лунный фонтан|r",
+    "27138": "|cffe4cfa3Лунный фонтан|r (|cffffffffE|r)",
+    "27105": "|cffe4cfa3Часовой|r",
+    "27106": "|cffe4cfa3Часовой|r (|cffffffffS|r)",
+    "27099": "|cffe4cfa3Улучшенные луки|r",
+    "27100": "|cffe4cfa3Улучшенные луки|r (|cffffffffA|r)",
+    "27098": "|cffe4cfa3Тренировка меткости|r",
+    "27097": "|cffe4cfa3Тренировка меткости|r (|cffffffffA|r)",
+    "27101": "|cffe4cfa3Улучшенные лунные глефы|r",
+    "27102": "|cffe4cfa3Улучшенные лунные глефы|r (|cffffffffG|r)",
+    "27095": "|cffe4cfa3Пронзающие лезвия|r",
+    "27096": "|cffe4cfa3Пронзающие лезвия|r (|cffffffffP|r)",
+    "27594": "|cffe4cfa3Обучение друидизму|r",
+    "27595": "|cffe4cfa3Обучение друидизму|r (|cffffffffS|r)",
+    "27596": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает фурболгов тайным искусствам друидов. Повышает скорость атаки на |cffc8e087+15%|cffced4da и максимальный запас здоровья на |cffc8e087+50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deФурболг-следопыт|cffced4da.|r",
+    "27579": "|cffe4cfa3Опутывание|r",
+    "27580": "|cffe4cfa3Опутывание|r (|cffffffffA|r)",
+    "27581": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет атаки Духов леса способностью оплетать врагов живыми лозами, замедляя их скорость атаки и передвижения.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДух леса|cffced4da.|r",
+    "27561": "|cffe4cfa3Удлинённые клинки|r",
+    "27562": "|cffe4cfa3Удлинённые клинки|r (|cffffffffD|r)",
+    "27554": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает радиус поражения глефами и наделяет воинов способностью блокировать входящие заклинания.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДревний Гвардеец|cffced4da.|r",
+    "27111": "|cffe4cfa3Друид-ворон: посвящение в адепты|r",
+    "27113": "|cffe4cfa3Друид-ворон: посвящение в адепты|r (|cffffffffA|r)",
+    "27112": "|cffe4cfa3Друид-ворон: посвящение в мастера|r",
+    "27114": "|cffe4cfa3Друид-ворон: посвящение в мастера|r (|cffffffffA|r)",
+    "27159": "|cffe4cfa3Знак ворона|r",
+    "27160": "|cffe4cfa3Знак ворона|r (|cffffffffM|r)",
+    "27546": "|cffe4cfa3Аннулирование — уровень 1|r",
+    "8471": "|cffe4cfa3Аннулирование — уровень 1|r (|cffffffffS|r)",
+    "8468": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает магическую защиту Древних Гвардейцев. Увеличивает скорость атаки на |cffc8e087+10%|cffced4da и регенерацию здоровья на |cffc8e087+0.5|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДревний Гвардеец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r",
+    "27547": "|cffe4cfa3Аннулирование — уровень 2|r",
+    "8472": "|cffe4cfa3Аннулирование — уровень 2|r (|cffffffffS|r)",
+    "8474": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает магическую защиту Древних Гвардейцев. Увеличивает скорость атаки на |cffc8e087+20%|cffced4da и регенерацию здоровья на |cffc8e087+1.0|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДревний Гвардеец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r",
+    "27552": "|cffe4cfa3Аннулирование — уровень 3|r",
+    "27553": "|cffe4cfa3Аннулирование — уровень 3|r (|cffffffffS|r)",
+    "8475": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает магическую защиту Древних Гвардейцев. Увеличивает скорость атаки на |cffc8e087+30%|cffced4da и регенерацию здоровья на |cffc8e087+1.5|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДревний Гвардеец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r",
+    "27107": "|cffe4cfa3Друид-хищник: посвящение в адепты|r",
+    "27109": "|cffe4cfa3Друид-хищник: посвящение в адепты|r (|cffffffffL|r)",
+    "27108": "|cffe4cfa3Друид-хищник: посвящение в мастера|r",
+    "27110": "|cffe4cfa3Друид-хищник: посвящение в мастера|r (|cffffffffL|r)",
+    "27044": "|cffe4cfa3Знак хищника|r",
+    "27045": "|cffe4cfa3Знак хищника|r (|cffffffffM|r)",
+    "27115": "|cffe4cfa3Рассеяние чар|r",
+    "27116": "|cffe4cfa3Рассеяние чар|r (|cffffffffA|r)",
+    "27103": "|cffe4cfa3Устойчивая кожа|r",
+    "27104": "|cffe4cfa3Устойчивая кожа|r (|cffffffffD|r)",
+    "27157": "|cffe4cfa3Каменная кожа|r",
+    "27158": "|cffe4cfa3Каменная кожа|r (|cffffffffF|r)",
+    "27570": "|cffe4cfa3Магия совы — уровень 1|r",
+    "27571": "|cffe4cfa3Магия совы — уровень 1|r (|cffffffffM|r)",
+    "27572": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает друидов-сов, повышая здоровье на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+25|cffced4da ед. и скорость регенерации маны на |cffc8e087+20%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДруид-сова|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r",
+    "27573": "|cffe4cfa3Магия совы — уровень 2|r",
+    "27574": "|cffe4cfa3Магия совы — уровень 2|r",
+    "27575": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает друидам-совам «Облик совуха», дополнительно увеличивая здоровье на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+25|cffced4da ед. и регенерацию маны на |cffc8e087+20%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДруид-сова|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r",
+    "12378": "|cffe4cfa3Зов Элуны|r",
+    "41894": "|cffe4cfa3Зов Элуны|r (|cffffffffQ|r)",
+    "11036": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет союзников благословением богини Луны, временно повышая скорость атаки и передвижения войск в области действия.|n|n|cffa6afb8Действует на:|cffced4da войска Ночных эльфов.|r",
+    "41846": "|cffe4cfa3Ярость Элуны|r",
+    "41897": "|cffe4cfa3Ярость Элуны|r (|cffffffffW|r)",
+    "41896": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает эльфийских воительниц в священный орден Ночных воительниц, наделяя их оружие дополнительным уроном тёмной лунной энергии.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da.|r",
+    "41849": "|cffe4cfa3Слёзы Элуны|r",
+    "41850": "|cffe4cfa3Слёзы Элуны|r (|cffffffffE|r)",
+    "41848": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дарует павшим воинам шанс переродиться в виде священных светлячков-огоньков, возвращая ресурсы и поддерживая жизнь рощи.|n|n|cffa6afb8Действует на:|cffced4da павших воинов Ночных эльфов.|r",
+    "41899": "|cffe4cfa3Призыв помощи|r",
+    "31803": "|cffe4cfa3Призыв помощи|r (|cffffffffQ|r)",
+    "41901": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Друиды обращаются за поддержкой к Диким Богам Азерота, призывая защитников чащи на помощь легионам эльфов.|n|n|cffa6afb8Действует на:|cffced4da силы природы Ночных эльфов.|r",
+    "33342": "|cffe4cfa3Милость Природы|r",
+    "33380": "|cffe4cfa3Милость Природы|r (|cffffffffW|r)",
+    "35428": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Орошает землю целительным дождём природы, исцеляющим раненых союзных воинов в выбранной области.|n|n|cffa6afb8Действует на:|cffced4da союзные войска Ночных эльфов.|r",
+    "35453": "|cffe4cfa3Ярость Природы|r",
+    "35455": "|cffe4cfa3Ярость Природы|r (|cffffffffE|r)",
+    "35456": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Призывает в выбранную рощу отряд могучих древней-защитников, сокрушающих нападающих врагов.|n|n|cffa6afb8Призывает:|cffced4da лесных древней.|r",
+    "26484": "|cffe4cfa3Небольшой скачок|r",
+    "10617": "|cffe4cfa3Небольшой скачок|r (|cffffffffW|r)",
+    "10618": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно перемещает огонька на короткую дистанцию, спасая от преследования.|r",
+    "2917": "|cffe4cfa3Удлинённые клинки|r",
+    "2919": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает дальность и ширину поражения клинками в ближнем бою.|r",
+    "2731": "|cffe4cfa3Танец полумесяца|r",
+    "2733": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff15%|cffced4da при атаке воин совершает стремительный перекат полумесяцем за спину цели, нанося |cffffffff50%|cffced4da от своего базового урона всем врагам на пути.|r",
+    "39686": "|cffe4cfa3Опутывание|r",
+    "39687": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки опутывают цель живыми побегами, замедляя скорость передвижения и боя.|r",
+    "25834": "|cffe4cfa3Смерч|r",
+    "27586": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает вражеского воина в воздух вихрем смерча, временно выводя его из сражения.|r",
+    "24656": "|cffe4cfa3Рассеивание заклинаний|r",
+    "24657": "|cffe4cfa3Рассеивание заклинаний|r",
+    "24658": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает положительные эффекты с врагов и отрицательные эффекты с союзников.|r",
+    "27631": "|cffe4cfa3Невосприимчивость к магии|r",
+    "27632": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Полный иммунитет ко всем видам направленных и площадных заклинаний.|r",
+    "14084": "|cffe4cfa3Вспышка маны|r",
+    "14085": "|cffe4cfa3Вспышка маны|r",
+    "14086": "|cffe4cfa3Отменить вспышку маны|r",
+    "14087": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Переходит в энергетический режим, нанося магический урон врагам поблизости при произнесении ими заклинаний.|r",
+    "15946": "|cffe4cfa3Фазовый сдвиг|r",
+    "15948": "|cffe4cfa3Фазовый сдвиг|r",
+    "15949": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При получении урона дракончик временно перемещается в другое измерение, избегая атак.|r",
+    "8469": "|cffe4cfa3Аннулирование|r",
+    "8470": "|cffe4cfa3Аннулирование|r",
+    "8473": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Блокирует входящие вражеские заклинания и повышает скорость боя стража.|r",
+    "2909": "|cffe4cfa3Зачарованная глефа|r",
+    "2910": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Заряжает атаки глефомета или воина дополнительным магическим уроном.|r",
+    "27420": "|cffe4cfa3Облик совы|r",
+    "27421": "|cffe4cfa3Облик совы|r",
+    "27422": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Трансформирует друида в яростного совуха, усиливая физические параметры.|r",
+    "3524": "|cffe4cfa3Сила природы|r",
+    "3431": "|cffe4cfa3Сила природы — уровень 1|r (|cffffffffQ|r)",
+    "3432": "|cffe4cfa3Сила природы — уровень 2|r (|cffffffffQ|r)",
+    "3440": "|cffe4cfa3Сила природы — уровень 3|r (|cffffffffQ|r)",
+    "3441": "|cffe4cfa3Сила природы — уровень 4|r (|cffffffffQ|r)",
+    "3442": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает указанную рощу деревьев в отряд из |cffffffff2|cffced4da верных древней-защитников на |cffffffff60|cffced4da сек.|r",
+    "3443": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает указанную рощу деревьев в отряд из |cffffffff3|cffced4da верных древней-защитников на |cffffffff60|cffced4da сек.|r",
+    "3522": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает указанную рощу деревьев в отряд из |cffffffff4|cffced4da верных древней-защитников на |cffffffff60|cffced4da сек.|r",
+    "3523": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает указанную рощу деревьев в отряд из |cffffffff5|cffced4da верных древней-защитников на |cffffffff60|cffced4da сек.|r",
+    "14273": "|cffe4cfa3Замедляющие корни|r",
+    "14275": "|cffe4cfa3Замедляющие корни — уровень 1|r",
+    "14322": "|cffe4cfa3Замедляющие корни — уровень 2|r",
+    "14391": "|cffe4cfa3Замедляющие корни — уровень 3|r",
+    "14393": "|cffe4cfa3Замедляющие корни — уровень 4|r",
+    "2916": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждая атака опутывает врага корнями, замедляя бег на |cffe69a8d15%|cffced4da и скорость боя на |cffe69a8d10%|cffced4da на |cffffffff3|cffced4da сек.|r",
+    "3229": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждая атака опутывает врага корнями, замедляя бег на |cffe69a8d25%|cffced4da и скорость боя на |cffe69a8d15%|cffced4da на |cffffffff3|cffced4da сек.|r",
+    "3297": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждая атака опутывает врага корнями, замедляя бег на |cffe69a8d35%|cffced4da и скорость боя на |cffe69a8d20%|cffced4da на |cffffffff3|cffced4da сек.|r",
+    "3298": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждая атака опутывает врага корнями, замедляя бег на |cffe69a8d45%|cffced4da и скорость боя на |cffe69a8d25%|cffced4da на |cffffffff3|cffced4da сек.|r",
+    "3300": "|cffe4cfa3Аура шипов|r",
+    "3341": "|cffe4cfa3Аура шипов — уровень 1|r",
+    "3342": "|cffe4cfa3Аура шипов — уровень 2|r",
+    "3427": "|cffe4cfa3Аура шипов — уровень 3|r",
+    "3429": "|cffe4cfa3Аура шипов — уровень 4|r",
+    "3430": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Окружает союзников барьером из острых шипов, отражающим входящий урон ближнего боя обратно в атакующих.|r",
+    "26390": "|cffe4cfa3Ярость природы|r",
+    "30523": "|cffe4cfa3Ярость природы — уровень 1|r (|cffffffffR|r)",
+    "40189": "|cffe4cfa3Ярость природы — уровень 2|r (|cffffffffR|r)",
+    "40192": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Взывает к гневу леса, опутывая корнями и оглушая наземных врагов в большой области с нанесением урона.|r",
+    "40193": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Взывает к гневу леса, опутывая корнями и оглушая наземных врагов в большой области с нанесением сокрушительного урона.|r",
+    "11596": "|cffe4cfa3Оплетение|r",
+    "11597": "|cffe4cfa3Оплетение|r",
+    "11598": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сковывает цель корнями, обездвиживая и нанося периодический урон.|r",
+    "14835": "|cffe4cfa3Покровительство друидов|r",
+    "27376": "|cffe4cfa3Покровительство друидов — уровень 1|r",
+    "27377": "|cffe4cfa3Покровительство друидов — уровень 2|r",
+    "27378": "|cffe4cfa3Покровительство друидов — уровень 3|r",
+    "27380": "|cffe4cfa3Покровительство друидов — уровень 4|r",
+    "27381": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает регенерацию маны и силу заклинаний друидов.|r",
+    "27382": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает регенерацию маны и силу заклинаний друидов.|r",
+    "27383": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает регенерацию маны и силу заклинаний друидов.|r",
+    "27384": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает регенерацию маны и силу заклинаний друидов.|r",
+    "27379": "|cffe4cfa3Покровительство друидов|r",
+    "3899": "|cffe4cfa3Взрыв маны|r",
+    "4357": "|cffe4cfa3Взрыв маны — уровень 1|r (|cffffffffQ|r)",
+    "4358": "|cffe4cfa3Взрыв маны — уровень 2|r (|cffffffffQ|r)",
+    "4406": "|cffe4cfa3Взрыв маны — уровень 3|r (|cffffffffQ|r)",
+    "4614": "|cffe4cfa3Взрыв маны — уровень 4|r (|cffffffffQ|r)",
+    "4617": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область сгустками маны, нанося урон наземным врагам и оглушая их на |cffffffff1|cffced4da сек.|r",
+    "4627": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область сгустками маны, нанося урон наземным врагам и оглушая их на |cffffffff1.5|cffced4da сек.|r",
+    "4628": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область сгустками маны, нанося урон наземным врагам и оглушая их на |cffffffff2|cffced4da сек.|r",
+    "4631": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область сгустками маны, нанося урон наземным врагам и оглушая их на |cffffffff2.5|cffced4da сек.|r",
+    "4662": "|cffe4cfa3Ледяные стрелы|r",
+    "4664": "|cffe4cfa3Ледяные стрелы — уровень 1|r (|cffffffffW|r)",
+    "4923": "|cffe4cfa3Ледяные стрелы — уровень 2|r (|cffffffffW|r)",
+    "4924": "|cffe4cfa3Ледяные стрелы — уровень 3|r (|cffffffffW|r)",
+    "4925": "|cffe4cfa3Ледяные стрелы — уровень 4|r (|cffffffffW|r)",
+    "4926": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Заряжает стрелы холодом, нанося дополнительный урон и замедляя скорость атаки и бега цели.|r",
+    "4968": "|cffe4cfa3Аура меткости|r",
+    "5625": "|cffe4cfa3Аура меткости — уровень 4|r",
+    "5626": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон всех союзных стрелков дальнего боя поблизости.|r",
+    "5023": "|cffe4cfa3Смертельный выстрел|r",
+    "5048": "|cffe4cfa3Смертельный выстрел — уровень 1|r (|cffffffffR|r)",
+    "5049": "|cffe4cfa3Смертельный выстрел — уровень 2|r (|cffffffffR|r)",
+    "5050": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает стрелу невероятной силы, пронзающую всех наземных врагов на прямой линии с высоким уроном.|r",
+    "5051": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает стрелу невероятной силы, пронзающую всех наземных врагов на прямой линии с колоссальным уроном.|r",
+    "25764": "|cffe4cfa3Скачок|r",
+    "9615": "|cffe4cfa3Скачок — уровень 4|r (|cffffffffW|r)",
+    "9616": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит друида на короткое расстояние, позволяя вступить в бой или уйти от опасности.|r",
+    "21406": "|cffe4cfa3Раздвоенная молния — уровень 4|r (|cffffffffQ|r)",
+    "27563": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цепью молний до |cffffffff10|cffced4da врагов в конусе перед собой, нанося |cffffffff300|cffced4da урона.|r",
+    "5770": "|cffe4cfa3Ускользание|r",
+    "10941": "|cffe4cfa3Ускользание — уровень 1|r",
+    "8771": "|cffe4cfa3Ускользание — уровень 2|r",
+    "8772": "|cffe4cfa3Ускользание — уровень 3|r",
+    "8775": "|cffe4cfa3Ускользание — уровень 4|r",
+    "11335": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт шанс |cffc8e08710%|cffced4da уклониться от вражеской физической атаки.|r",
+    "8780": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт шанс |cffc8e08720%|cffced4da уклониться от вражеской физической атаки.|r",
+    "9392": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт шанс |cffc8e08730%|cffced4da уклониться от вражеской физической атаки.|r",
+    "12243": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт шанс |cffc8e08740%|cffced4da уклониться от вражеской физической атаки.|r",
+    "4379": "|cffe4cfa3Облик совухи|r",
+    "4666": "|cffe4cfa3Облик совухи — уровень 1|r (|cffffffffR|r)",
+    "4667": "|cffe4cfa3Облик совухи — уровень 2|r (|cffffffffR|r)",
+    "4615": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает друида в могучего совуха, увеличивая броню и урон в ближнем бою.|r",
+    "4669": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает друида в могучего совуха, значительно увеличивая броню и урон в ближнем бою.|r",
+    "2038": "|cffe4cfa3Свечение героя|r",
+    "2039": "|cffe4cfa3Свечение героя|r",
+    "12857": "|cffe4cfa3Обмен древесины на золото|r",
+    "12858": "|cffe4cfa3Обмен древесины на золото|r",
+    "12859": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает запас древесины на золото в государственной казне.|r",
+    "2888": "|cffe4cfa3Обмен золота на древесину|r",
+    "2889": "|cffe4cfa3Обмен золота на древесину|r",
+    "2890": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает золото на древесину в государственной казне.|r",
+    "27193": "|cffe4cfa3Обозначить столицу|r",
+    "27191": "|cffe4cfa3Обозначить столицу|r",
+    "27192": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Провозглашает главное древо официальной столицей государства Ночных эльфов.|r",
+    "25578": "|cffe4cfa3Зона ремонта|r",
+    "25579": "|cffe4cfa3Зона ремонта|r",
+    "25580": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Автоматически восстанавливает прочность находящихся рядом кораблей.|r"
+  },
+  "checks_def": [
+    {
+      "type": "ability",
+      "id": "A0HL",
+      "field": "name",
+      "expected": "|cffe4cfa3Ночные эльфы|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0HL",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Ночные эльфы|r (|cffffffffS|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0HL",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8РАСА:|cffced4da Древняя цивилизация калдорай, хранителей природы и служителей богини Элуны.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor (Яхве)|r|n|cffa6afb8Сложность:|r |cffffffff●●●|cffa6afb8○○|r|n|cffa6afb8Период:|r |cffa9c7de«WoW Vanilla — Legion»|r|n|n|cffced4daНочные эльфы, или калдорай — одна из древнейших рас Азерота, тысячелетиями оберегающая священные леса Калимдора. Опираясь на благословение Луны, мудрость друидов и первобытную силу древних древ, эльфы сочетают скрытность, меткую стрельбу и разрушительную магию природы.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R07L",
+      "field": "name1",
+      "expected": "|cffe4cfa3Ночные эльфы|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R07L",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Ночные эльфы|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R07L",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к расе Ночных эльфов.|r"
+    },
+    {
+      "type": "unit",
+      "id": "etol",
+      "field": "name",
+      "expected": "|cffe4cfa3Древо жизни|r"
+    },
+    {
+      "type": "unit",
+      "id": "etol",
+      "field": "tip",
+      "expected": "|cffe4cfa3Древо жизни|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "etol",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночных эльфов первой ступени. Обеспечивает запас пищи и добычу ресурсов.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгонёк|cffced4da: базовый рабочий.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deКруг Кенария|cffced4da|n- |cffa9c7deПуть Элуны|cffced4da|n- |cffa9c7deБлагословение природы|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deДрево столетий|cffced4da: открывает доступ к передовым сооружениям и технологиям.|r"
+    },
+    {
+      "type": "unit",
+      "id": "etoa",
+      "field": "name",
+      "expected": "|cffe4cfa3Древо столетий|r"
+    },
+    {
+      "type": "unit",
+      "id": "etoa",
+      "field": "tip",
+      "expected": "|cffe4cfa3Древо столетий|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "etoa",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночных эльфов второй ступени. Существенно увеличивает запас пищи.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгонёк|cffced4da: базовый рабочий.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deБлагословение природы|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deДрево вечности|cffced4da: открывает доступ к высшим технологиям Ночных эльфов.|r"
+    },
+    {
+      "type": "unit",
+      "id": "etoe",
+      "field": "name",
+      "expected": "|cffe4cfa3Древо вечности|r"
+    },
+    {
+      "type": "unit",
+      "id": "etoe",
+      "field": "tip",
+      "expected": "|cffe4cfa3Древо вечности|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "etoe",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночных эльфов третьей ступени. Обеспечивает максимальный запас пищи.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгонёк|cffced4da: базовый рабочий.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deБлагословение природы|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "emow",
+      "field": "name",
+      "expected": "|cffe4cfa3Лунный колодец|r"
+    },
+    {
+      "type": "unit",
+      "id": "emow",
+      "field": "tip",
+      "expected": "|cffe4cfa3Лунный колодец|r (|cffffffffA|r)"
+    },
+    {
+      "type": "unit",
+      "id": "emow",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Экономическое и вспомогательное сооружение. Накапливает живительную воду, восполняющую здоровье и ману союзников, а также приносит доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит |cffc8e087+20|cffced4da ед. дохода каждые |cffffffff25|cffced4da сек.|r"
+    },
+    {
+      "type": "unit",
+      "id": "eaom",
+      "field": "name",
+      "expected": "|cffe4cfa3Древо войны|r"
+    },
+    {
+      "type": "unit",
+      "id": "eaom",
+      "field": "tip",
+      "expected": "|cffe4cfa3Древо войны|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "eaom",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовое военное сооружение армии Ночных эльфов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЛучница|cffced4da: меткий стрелок дальнего боя.|n- |cffa9c7deОхотница|cffced4da: быстрый штурмовой боец с рикошетящей глефой.|n- |cffa9c7deГлефомет|cffced4da: дальнобойное осадное орудие.|n- |cffa9c7deЛунный воин|cffced4da: ловкий боец ближнего боя.|n- |cffa9c7deДух леса|cffced4da: древний лесной страж природы.|n- |cffa9c7deФурболг-следопыт|cffced4da: союзный воин ближнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенные луки|cffced4da|n- |cffa9c7deТренировка меткости|cffced4da|n- |cffa9c7deУлучшенные лунные глефы|cffced4da|n- |cffa9c7deПронзающие лезвия|cffced4da|n- |cffa9c7deТанец полумесяца|cffced4da|n- |cffa9c7deОбучение друидизму|cffced4da|n- |cffa9c7deОпутывание|cffced4da|n- |cffa9c7deУдлинённые клинки|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "eate",
+      "field": "name",
+      "expected": "|cffe4cfa3Алтарь старейшин|r"
+    },
+    {
+      "type": "unit",
+      "id": "eate",
+      "field": "tip",
+      "expected": "|cffe4cfa3Алтарь старейшин|r (|cffffffffS|r)"
+    },
+    {
+      "type": "unit",
+      "id": "eate",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Священный алтарь для призыва и воскрешения героев Ночных эльфов.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deХранитель рощи|cffced4da: герой-мистик, повелитель природы.|n- |cffa9c7deДруид-мастер|cffced4da: могущественный маг стихий и друидизма.|n- |cffa9c7deЛунная охотница|cffced4da: смертоносный ловкий стрелок Элуны.|r"
+    },
+    {
+      "type": "unit",
+      "id": "eaow",
+      "field": "name",
+      "expected": "|cffe4cfa3Древо ветров|r"
+    },
+    {
+      "type": "unit",
+      "id": "eaow",
+      "field": "tip",
+      "expected": "|cffe4cfa3Древо ветров|r (|cffffffffR|r)"
+    },
+    {
+      "type": "unit",
+      "id": "eaow",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает летающих существ и магов стихии воздуха.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДруид-ворон|cffced4da: маг поддержки, владеющий ветром и обликом буревестника.|n- |cffa9c7deЧудесный дракончик|cffced4da: летучий истребитель вражеских магов.|n- |cffa9c7deДревний Гвардеец|cffced4da: стойкий элитный страж ветров.|n- |cffa9c7deФурболг-воитель|cffced4da: могучий вождь фурболгов с аурой.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение друида-ворона|cffced4da|n- |cffa9c7deЗнак ворона|cffced4da|n- |cffa9c7deАннулирование|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "eaoe",
+      "field": "name",
+      "expected": "|cffe4cfa3Древо мудрости|r"
+    },
+    {
+      "type": "unit",
+      "id": "eaoe",
+      "field": "tip",
+      "expected": "|cffe4cfa3Древо мудрости|r (|cffffffffD|r)"
+    },
+    {
+      "type": "unit",
+      "id": "eaoe",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает магов земли, целителей и тяжелых лесных исполинов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДриада|cffced4da: быстрый стрелок-антимаг с замедляющим ядом.|n- |cffa9c7deДруид-хищник|cffced4da: маг-целитель, способный принимать облик свирепого медведя.|n- |cffa9c7deГорный великан|cffced4da: тяжелый исполин, поглощающий осадный и магический урон.|n- |cffa9c7deДруид-сова|cffced4da: астральный друид Солнца и Луны.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение друида-хищника|cffced4da|n- |cffa9c7deЗнак хищника|cffced4da|n- |cffa9c7deРассеяние чар|cffced4da|n- |cffa9c7deУстойчивая кожа|cffced4da|n- |cffa9c7deКаменная кожа|cffced4da|n- |cffa9c7deМагия совы|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "edob",
+      "field": "name",
+      "expected": "|cffe4cfa3Дом охотников|r"
+    },
+    {
+      "type": "unit",
+      "id": "edob",
+      "field": "tip",
+      "expected": "|cffe4cfa3Дом охотников|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "edob",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главная кузница и арсенал Ночных эльфов. Улучшает вооружение и защиту армии.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deСила Луны|cffced4da: повышает урон стрелков.|n- |cffa9c7deЛунные доспехи|cffced4da: повышает броню стрелков и друидов.|n- |cffa9c7deСила леса|cffced4da: повышает урон воинов ближнего боя и зверей.|n- |cffa9c7deПрочные шкуры|cffced4da: повышает броню воинов ближнего боя и зверей.|n- |cffa9c7deНочное зрение|cffced4da|n- |cffa9c7deЛунный фонтан|cffced4da|n- |cffa9c7deЧасовой|cffced4da|n- |cffa9c7deСлияние с деревьями|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "etrp",
+      "field": "name",
+      "expected": "|cffe4cfa3Сторожевое древо|r"
+    },
+    {
+      "type": "unit",
+      "id": "etrp",
+      "field": "tip",
+      "expected": "|cffe4cfa3Сторожевое древо|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "etrp",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение Ночных эльфов. Мечет тяжелые валуны в приближающихся врагов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкоренение|cffced4da: укрепляется в земле для дальнобойной стрельбы.|n- |cffa9c7deСъесть дерево|cffced4da: восстанавливает здоровье, поглощая дерево.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "edos",
+      "field": "name",
+      "expected": "|cffe4cfa3Гнездо химер|r"
+    },
+    {
+      "type": "unit",
+      "id": "edos",
+      "field": "tip",
+      "expected": "|cffe4cfa3Гнездо химер|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e03X",
+      "field": "name",
+      "expected": "|cffe4cfa3Храм Друидов|r"
+    },
+    {
+      "type": "unit",
+      "id": "e03X",
+      "field": "tip",
+      "expected": "|cffe4cfa3Храм Друидов|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e03X",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище древних друидов, взывающее к силам дикой природы и первобытных зверей.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПризыв помощи|cffced4da: призыв сил Диких Богов.|n- |cffa9c7deМилость Природы|cffced4da: целительный природный дождь.|n- |cffa9c7deЯрость Природы|cffced4da: призыв могучих древней.|r"
+    },
+    {
+      "type": "unit",
+      "id": "e03W",
+      "field": "name",
+      "expected": "|cffe4cfa3Храм Элуны|r"
+    },
+    {
+      "type": "unit",
+      "id": "e03W",
+      "field": "tip",
+      "expected": "|cffe4cfa3Храм Элуны|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e03W",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище богини Луны, дарующее благословение и небесную мощь воительницам калдорай.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗов Элуны|cffced4da: аура боевого неистовства.|n- |cffa9c7deЯрость Элуны|cffced4da: посвящение в ночные воительницы.|n- |cffa9c7deСлёзы Элуны|cffced4da: перерождение павших воинов в огоньки.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0D8",
+      "field": "name",
+      "expected": "|cffe4cfa3Верфь|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0D8",
+      "field": "tip",
+      "expected": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0D8",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Морское сооружение для строительства и оснащения боевых кораблей.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспортный корабль|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОрудия флота|cffced4da|n- |cffa9c7deУкреплённый корпус|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "ewsp",
+      "field": "name",
+      "expected": "|cffe4cfa3Огонёк|r"
+    },
+    {
+      "type": "unit",
+      "id": "ewsp",
+      "field": "tip",
+      "expected": "|cffe4cfa3Огонёк|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "ewsp",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий Ночных эльфов. Бестелесный дух, собирающий древесину без вырубки леса, выращивающий здания и способный развеять магию ценой своей жизни.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСамопожертвование|cffced4da: взрывается, сжигая ману врагов и нанося урон призванным существам.|n- |cffa9c7deОбновление|cffced4da: восстанавливает здоровье повреждённым древам.|n- |cffa9c7deСбор древесины|cffced4da: добывает дерево, не уничтожая деревья.|n- |cffa9c7deНебольшой скачок|cffced4da: мгновенный телепорт на короткое расстояние.|n|nНе атакует.|r"
+    },
+    {
+      "type": "unit",
+      "id": "earc",
+      "field": "name",
+      "expected": "|cffe4cfa3Лучница|r"
+    },
+    {
+      "type": "unit",
+      "id": "earc",
+      "field": "tip",
+      "expected": "|cffe4cfa3Лучница|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "earc",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Базовый меткий стрелок дальнего боя калдорай.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСлиться с тенью|cffced4da: становится невидимой ночью в неподвижном состоянии.|n- |cffa9c7deЗащита Элуны|cffced4da: снижает урон от атак дальнего боя и заклинаний.|n- |cffa9c7deСесть на гиппогрифа|cffced4da: объединяется с гиппогрифом в наездницу.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "esen",
+      "field": "name",
+      "expected": "|cffe4cfa3Охотница|r"
+    },
+    {
+      "type": "unit",
+      "id": "esen",
+      "field": "tip",
+      "expected": "|cffe4cfa3Охотница|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "esen",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Быстрый мобильный воин авангарда Ночных эльфов, верхом на свирепой пантере.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЛунные глефы|cffced4da: глефа рикошетит по дополнительным целям.|n- |cffa9c7deЧасовой|cffced4da: сажает сову-разведчика на дерево для постоянного обзора.|n- |cffa9c7deСлиться с тенью|cffced4da: скрывается ночью в неподвижности.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "ebal",
+      "field": "name",
+      "expected": "|cffe4cfa3Глефомет|r"
+    },
+    {
+      "type": "unit",
+      "id": "ebal",
+      "field": "tip",
+      "expected": "|cffe4cfa3Глефомет|r (|cffffffffR|r)"
+    },
+    {
+      "type": "unit",
+      "id": "ebal",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Дальнобойное осадное орудие Ночных эльфов, сокрушающее укрепления и скопления врагов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПронзающие лезвия|cffced4da: пробивает строй противников и позволяет срубать деревья выстрелом.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "e00I",
+      "field": "name",
+      "expected": "|cffe4cfa3Лунный воин|r"
+    },
+    {
+      "type": "unit",
+      "id": "e00I",
+      "field": "tip",
+      "expected": "|cffe4cfa3Лунный воин|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e00I",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Ловкий эльфийский боец ближнего боя с парными глефами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТанец полумесяца|cffced4da: шанс |cffffffff15%|cffced4da при атаке совершить стремительный перекат за спину цели, нанося |cffffffff50%|cffced4da базового урона всем врагам на пути.|n- |cffa9c7deУдлинённые клинки|cffced4da: увеличенный радиус поражения глефами.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "e00J",
+      "field": "name",
+      "expected": "|cffe4cfa3Дух леса|r"
+    },
+    {
+      "type": "unit",
+      "id": "e00J",
+      "field": "tip",
+      "expected": "|cffe4cfa3Дух леса|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e00J",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Первобытный дух чащобы, призванный охранять священные рощи.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deОпутывание|cffced4da: атаки опутывают цель живыми лозами, замедляя передвижение и скорость атаки.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n05H",
+      "field": "name",
+      "expected": "|cffe4cfa3Фурболг-следопыт|r"
+    },
+    {
+      "type": "unit",
+      "id": "n05H",
+      "field": "tip",
+      "expected": "|cffe4cfa3Фурболг-следопыт|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n05H",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Мощный союзный воин ближнего боя из племени фурболгов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолшебный огонь|cffced4da: снижает броню цели и даёт обзор на ней.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "edot",
+      "field": "name",
+      "expected": "|cffe4cfa3Друид-ворон|r"
+    },
+    {
+      "type": "unit",
+      "id": "edot",
+      "field": "tip",
+      "expected": "|cffe4cfa3Друид-ворон|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "edot",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Мобильный друид стихии ветра и воздуха.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолшебный огонь|cffced4da: ослабляет броню противника и раскрывает его местоположение.|n- |cffa9c7deСмерч|cffced4da: поднимает вражеского воина в воздух, выводя из боя.|n- |cffa9c7deОблик буревестника|cffced4da: превращается в летучего ворона для разведки и воздушного боя.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "efdr",
+      "field": "name",
+      "expected": "|cffe4cfa3Чудесный дракончик|r"
+    },
+    {
+      "type": "unit",
+      "id": "efdr",
+      "field": "tip",
+      "expected": "|cffe4cfa3Чудесный дракончик|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e00H",
+      "field": "name",
+      "expected": "|cffe4cfa3Древний Гвардеец|r"
+    },
+    {
+      "type": "unit",
+      "id": "e00H",
+      "field": "tip",
+      "expected": "|cffe4cfa3Древний Гвардеец|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e00H",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Тяжелый элитный воин-маг ближнего боя, закаленный веками тренировок.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАннулирование|cffced4da: блокирует входящие вражеские заклинания.|n- |cffa9c7deЗачарованная глефа|cffced4da: заряжает оружие магической энергией.|n- |cffa9c7deЗащита|cffced4da: отражает стрелковые атаки.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n064",
+      "field": "name",
+      "expected": "|cffe4cfa3Фурболг-воитель|r"
+    },
+    {
+      "type": "unit",
+      "id": "n064",
+      "field": "tip",
+      "expected": "|cffe4cfa3Фурболг-воитель|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n064",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Свирепый вождь фурболгов с типом атаки Хаос.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКомандирская аура|cffced4da: повышает урон союзников поблизости.|n- |cffa9c7deГромовая поступь|cffced4da: сотрясает землю, нанося урон и замедляя врагов.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "edry",
+      "field": "name",
+      "expected": "|cffe4cfa3Дриада|r"
+    },
+    {
+      "type": "unit",
+      "id": "edry",
+      "field": "tip",
+      "expected": "|cffe4cfa3Дриада|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "edry",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Быстрый стрелок дальнего боя и главный антимаг калдорай.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗамедляющий яд|cffced4da: каждая атака наносит периодический урон и замедляет скорость цели.|n- |cffa9c7deРассеяние чар|cffced4da: снимает отрицательные эффекты с союзников и положительные с врагов.|n- |cffa9c7deНевосприимчивость к магии|cffced4da: полный иммунитет к вражеским заклинаниям.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "edoc",
+      "field": "name",
+      "expected": "|cffe4cfa3Друид-хищник|r"
+    },
+    {
+      "type": "unit",
+      "id": "edoc",
+      "field": "tip",
+      "expected": "|cffe4cfa3Друид-хищник|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "edoc",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Могучий друид-целитель, способный трансформироваться в свирепого боевого медведя.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРёв|cffced4da: вдохновляет союзников, увеличивая их урон на |cffc8e08725%|cffced4da.|n- |cffa9c7deОмоложение|cffced4da: восстанавливает здоровье цели в течение времени.|n- |cffa9c7deОблик медведя|cffced4da: превращается в грозного бойца ближнего боя с высоким запасом здоровья.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "emtg",
+      "field": "name",
+      "expected": "|cffe4cfa3Горный великан|r"
+    },
+    {
+      "type": "unit",
+      "id": "emtg",
+      "field": "tip",
+      "expected": "|cffe4cfa3Горный великан|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "emtg",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Огромный каменный исполин, способный выдерживать колоссальный урон.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПровокация|cffced4da: заставляет врагов атаковать великана.|n- |cffa9c7deБоевая дубинка|cffced4da: вырывает дерево и атакует осадным уроном с эффектом рассечения.|n- |cffa9c7deУстойчивая кожа|cffced4da: снижает урон от магии и сокращает длительность заклинаний.|n- |cffa9c7deКаменная кожа|cffced4da: снижает входящий урон от атак.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n05D",
+      "field": "name",
+      "expected": "|cffe4cfa3Друид-сова|r"
+    },
+    {
+      "type": "unit",
+      "id": "n05D",
+      "field": "tip",
+      "expected": "|cffe4cfa3Друид-сова|r (|cffffffffR|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n05D",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Мудрый астральный друид, владеющий силами Солнца и Луны.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАстральная фаза|cffced4da: переключает стойку между Солнцем (атаки поджигают цели, заклинание «Солнечный ожог») и Луной (атаки восстанавливают ману раненому союзнику, заклинание «Звёздный луч»).|n- |cffa9c7deОблик совуха|cffced4da: трансформация в яростного совуха-берсерка.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n05G",
+      "field": "name",
+      "expected": "|cffe4cfa3Совух-берсерк|r"
+    },
+    {
+      "type": "unit",
+      "id": "n05G",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Свирепая боевая форма друида-совы с типом атаки Хаос.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБешенство совуха|cffced4da: увеличивает скорость атаки и передвижения.|n- |cffa9c7deАстральная фаза|cffced4da: использование астральных заклинаний Солнца и Луны.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0D9",
+      "field": "name",
+      "expected": "|cffe4cfa3Транспорт|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0DB",
+      "field": "name",
+      "expected": "|cffe4cfa3Фрегат|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0DB",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Боевой парусно-гребной корабль прибрежного флота.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0DA",
+      "field": "name",
+      "expected": "|cffe4cfa3Линкор|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0DA",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый флагманский линейный корабль дальнего боя.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "E00V",
+      "field": "name",
+      "expected": "|cffe4cfa3Хранитель рощи|r"
+    },
+    {
+      "type": "unit",
+      "id": "E00V",
+      "field": "tip",
+      "expected": "|cffe4cfa3Хранитель рощи|r (|cffffffffK|r)"
+    },
+    {
+      "type": "unit",
+      "id": "E00V",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Полубог-мистик священных рощ Калимдора, повелевающий первозданными силами природы и леса.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСила природы|cffced4da: превращает деревья в преданных духов-древней.|n- |cffa9c7deЗамедляющие корни|cffced4da: атаки опутывают врагов, снижая скорость бега и атаки.|n- |cffa9c7deАура шипов|cffced4da: окружает союзников щитом, отражающим урон ближнего боя.|n- |cffa9c7deЯрость природы|cffced4da: массовое опутывание и поражение врагов грозовыми ударами.|n|n|cffa6afb8Основная характеристика:|r |cffffffffИнтеллект|r|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "E011",
+      "field": "name",
+      "expected": "|cffe4cfa3Лунная охотница|r"
+    },
+    {
+      "type": "unit",
+      "id": "E011",
+      "field": "propernames",
+      "expected": "|cffa9c7deКатрис Звёздная Песня|r"
+    },
+    {
+      "type": "unit",
+      "id": "E011",
+      "field": "tip",
+      "expected": "|cffe4cfa3Лунная охотница|r (|cffffffffC|r)"
+    },
+    {
+      "type": "unit",
+      "id": "E011",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Искусный верховный следопыт Часовых, разящая врагов стрелами Элуны с дистанции.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВзрыв маны|cffced4da: обстреливает область сгустками маны, оглушая врагов.|n- |cffa9c7deЛедяные стрелы|cffced4da: атаки наносят дополнительный урон и замедляют цель.|n- |cffa9c7deАура меткости|cffced4da: увеличивает урон дальнобойных атак союзников.|n- |cffa9c7deСмертельный выстрел|cffced4da: выпускает мощную стрелу, пронзающую врагов на линии.|n|n|cffa6afb8Основная характеристика:|r |cffffffffЛовкость|r|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "E00W",
+      "field": "name",
+      "expected": "|cffe4cfa3Друид-мастер|r"
+    },
+    {
+      "type": "unit",
+      "id": "E00W",
+      "field": "propernames",
+      "expected": "|cffa9c7deВерховный друид|r"
+    },
+    {
+      "type": "unit",
+      "id": "E00W",
+      "field": "tip",
+      "expected": "|cffe4cfa3Друид-мастер|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "E00W",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Верховный архидруид, в совершенстве овладевший стихией бури, скрытностью и древними звериными формами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРаздвоенная молния|cffced4da: поражает веером молний группу противников перед собой.|n- |cffa9c7deСкачок|cffced4da: мгновенно телепортируется на короткую дистанцию.|n- |cffa9c7deУскользание|cffced4da: шанс уклониться от входящих атак.|n- |cffa9c7deОблик совухи|cffced4da: превращается в грозного совуха с усиленными характеристиками.|n|n|cffa6afb8Основная характеристика:|r |cffffffffИнтеллект|r|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G1",
+      "field": "name1",
+      "expected": "|cffe4cfa3Круг Кенария|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G1",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Круг Кенария|r (|cffffffffR|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G1",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Выбор пути друидов Круга Кенария и духов дикой природы. Открывает доступ к друидам и фурболгам, блокируя ветку Часовых Элуны.|n|n|cffa6afb8Открывает доступ к:|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deДруид-ворон|cffced4da|n- |cffa9c7deДруид-хищник|cffced4da|n- |cffa9c7deДруид-сова|cffced4da|n- |cffa9c7deФурболг-следопыт|cffced4da|n- |cffa9c7deФурболг-воитель|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G2",
+      "field": "name1",
+      "expected": "|cffe4cfa3Путь Элуны|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G2",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Путь Элуны|r (|cffffffffE|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G2",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Выбор пути воинства Часовых и служителей богини Элуны. Открывает доступ к эльфийским воинам и стрелкам, блокируя ветку Круга Кенария.|n|n|cffa6afb8Открывает доступ к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДревний Гвардеец|cffced4da|n- |cffa9c7deТанец полумесяца|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GB",
+      "field": "name1",
+      "expected": "|cffe4cfa3Выбор направления|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GB",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Выбор направления|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GB",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер выбора пути развития расы Ночных эльфов (Круг Кенария или Путь Элуны).|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Renb",
+      "field": "name1",
+      "expected": "|cffe4cfa3Благословение природы|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Renb",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Благословение природы|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "name1",
+      "expected": "|cffe4cfa3Сила Луны — уровень 1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Сила Луны — уровень 1|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "name2",
+      "expected": "|cffe4cfa3Сила Луны — уровень 2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Сила Луны — уровень 2|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "name3",
+      "expected": "|cffe4cfa3Сила Луны — уровень 3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Сила Луны — уровень 3|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "name4",
+      "expected": "|cffe4cfa3Сила Луны — уровень 4|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Сила Луны — уровень 4|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "name5",
+      "expected": "|cffe4cfa3Сила Луны — уровень 5|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Сила Луны — уровень 5|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "ubertip5",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "name6",
+      "expected": "|cffe4cfa3Сила Луны — уровень 6|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Сила Луны — уровень 6|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resm",
+      "field": "ubertip6",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "name1",
+      "expected": "|cffe4cfa3Лунные доспехи — уровень 1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Лунные доспехи — уровень 1|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "name2",
+      "expected": "|cffe4cfa3Лунные доспехи — уровень 2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Лунные доспехи — уровень 2|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "name3",
+      "expected": "|cffe4cfa3Лунные доспехи — уровень 3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Лунные доспехи — уровень 3|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "name4",
+      "expected": "|cffe4cfa3Лунные доспехи — уровень 4|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Лунные доспехи — уровень 4|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "name5",
+      "expected": "|cffe4cfa3Лунные доспехи — уровень 5|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Лунные доспехи — уровень 5|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "ubertip5",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "name6",
+      "expected": "|cffe4cfa3Лунные доспехи — уровень 6|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Лунные доспехи — уровень 6|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rema",
+      "field": "ubertip6",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "name1",
+      "expected": "|cffe4cfa3Сила леса — уровень 1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Сила леса — уровень 1|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "name2",
+      "expected": "|cffe4cfa3Сила леса — уровень 2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Сила леса — уровень 2|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "name3",
+      "expected": "|cffe4cfa3Сила леса — уровень 3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Сила леса — уровень 3|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "name4",
+      "expected": "|cffe4cfa3Сила леса — уровень 4|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Сила леса — уровень 4|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "name5",
+      "expected": "|cffe4cfa3Сила леса — уровень 5|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Сила леса — уровень 5|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "ubertip5",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "name6",
+      "expected": "|cffe4cfa3Сила леса — уровень 6|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Сила леса — уровень 6|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resw",
+      "field": "ubertip6",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "name1",
+      "expected": "|cffe4cfa3Прочные шкуры — уровень 1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Прочные шкуры — уровень 1|r (|cffffffffR|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "name2",
+      "expected": "|cffe4cfa3Прочные шкуры — уровень 2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Прочные шкуры — уровень 2|r (|cffffffffR|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "name3",
+      "expected": "|cffe4cfa3Прочные шкуры — уровень 3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Прочные шкуры — уровень 3|r (|cffffffffR|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "name4",
+      "expected": "|cffe4cfa3Прочные шкуры — уровень 4|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Прочные шкуры — уровень 4|r (|cffffffffR|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "name5",
+      "expected": "|cffe4cfa3Прочные шкуры — уровень 5|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Прочные шкуры — уровень 5|r (|cffffffffR|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "ubertip5",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "name6",
+      "expected": "|cffe4cfa3Прочные шкуры — уровень 6|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Прочные шкуры — уровень 6|r (|cffffffffR|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rerh",
+      "field": "ubertip6",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "name1",
+      "expected": "|cffe4cfa3Слияние с деревьями — уровень 1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Слияние с деревьями — уровень 1|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "name2",
+      "expected": "|cffe4cfa3Слияние с деревьями — уровень 2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Слияние с деревьями — уровень 2|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "name3",
+      "expected": "|cffe4cfa3Слияние с деревьями — уровень 3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Слияние с деревьями — уровень 3|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "name4",
+      "expected": "|cffe4cfa3Слияние с деревьями — уровень 4|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Слияние с деревьями — уровень 4|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "name5",
+      "expected": "|cffe4cfa3Слияние с деревьями — уровень 5|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Слияние с деревьями — уровень 5|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "ubertip5",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "name6",
+      "expected": "|cffe4cfa3Слияние с деревьями — уровень 6|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Слияние с деревьями — уровень 6|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GC",
+      "field": "ubertip6",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Reuv",
+      "field": "name1",
+      "expected": "|cffe4cfa3Ночное зрение|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Reuv",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Ночное зрение|r (|cffffffffU|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rews",
+      "field": "name1",
+      "expected": "|cffe4cfa3Лунный фонтан|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rews",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Лунный фонтан|r (|cffffffffE|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resc",
+      "field": "name1",
+      "expected": "|cffe4cfa3Часовой|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resc",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Часовой|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Reib",
+      "field": "name1",
+      "expected": "|cffe4cfa3Улучшенные луки|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Reib",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Улучшенные луки|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Remk",
+      "field": "name1",
+      "expected": "|cffe4cfa3Тренировка меткости|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Remk",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Тренировка меткости|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Remg",
+      "field": "name1",
+      "expected": "|cffe4cfa3Улучшенные лунные глефы|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Remg",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Улучшенные лунные глефы|r (|cffffffffG|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Repb",
+      "field": "name1",
+      "expected": "|cffe4cfa3Пронзающие лезвия|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Repb",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Пронзающие лезвия|r (|cffffffffP|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GA",
+      "field": "name1",
+      "expected": "|cffe4cfa3Обучение друидизму|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GA",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Обучение друидизму|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GA",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает фурболгов тайным искусствам друидов. Повышает скорость атаки на |cffc8e087+15%|cffced4da и максимальный запас здоровья на |cffc8e087+50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deФурболг-следопыт|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G9",
+      "field": "name1",
+      "expected": "|cffe4cfa3Опутывание|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G9",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Опутывание|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G9",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет атаки Духов леса способностью оплетать врагов живыми лозами, замедляя их скорость атаки и передвижения.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДух леса|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G7",
+      "field": "name1",
+      "expected": "|cffe4cfa3Удлинённые клинки|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G7",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Удлинённые клинки|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G7",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает радиус поражения глефами и наделяет воинов способностью блокировать входящие заклинания.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДревний Гвардеец|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Redt",
+      "field": "name1",
+      "expected": "|cffe4cfa3Друид-ворон: посвящение в адепты|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Redt",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Друид-ворон: посвящение в адепты|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Redt",
+      "field": "name2",
+      "expected": "|cffe4cfa3Друид-ворон: посвящение в мастера|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Redt",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Друид-ворон: посвящение в мастера|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Reec",
+      "field": "name1",
+      "expected": "|cffe4cfa3Знак ворона|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Reec",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Знак ворона|r (|cffffffffM|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G6",
+      "field": "name1",
+      "expected": "|cffe4cfa3Аннулирование — уровень 1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G6",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Аннулирование — уровень 1|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G6",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает магическую защиту Древних Гвардейцев. Увеличивает скорость атаки на |cffc8e087+10%|cffced4da и регенерацию здоровья на |cffc8e087+0.5|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДревний Гвардеец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G6",
+      "field": "name2",
+      "expected": "|cffe4cfa3Аннулирование — уровень 2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G6",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Аннулирование — уровень 2|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G6",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает магическую защиту Древних Гвардейцев. Увеличивает скорость атаки на |cffc8e087+20%|cffced4da и регенерацию здоровья на |cffc8e087+1.0|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДревний Гвардеец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G6",
+      "field": "name3",
+      "expected": "|cffe4cfa3Аннулирование — уровень 3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G6",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Аннулирование — уровень 3|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G6",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает магическую защиту Древних Гвардейцев. Увеличивает скорость атаки на |cffc8e087+30%|cffced4da и регенерацию здоровья на |cffc8e087+1.5|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДревний Гвардеец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Redc",
+      "field": "name1",
+      "expected": "|cffe4cfa3Друид-хищник: посвящение в адепты|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Redc",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Друид-хищник: посвящение в адепты|r (|cffffffffL|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Redc",
+      "field": "name2",
+      "expected": "|cffe4cfa3Друид-хищник: посвящение в мастера|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Redc",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Друид-хищник: посвящение в мастера|r (|cffffffffL|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Reeb",
+      "field": "name1",
+      "expected": "|cffe4cfa3Знак хищника|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Reeb",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Знак хищника|r (|cffffffffM|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resi",
+      "field": "name1",
+      "expected": "|cffe4cfa3Рассеяние чар|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Resi",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Рассеяние чар|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rers",
+      "field": "name1",
+      "expected": "|cffe4cfa3Устойчивая кожа|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rers",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Устойчивая кожа|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rehs",
+      "field": "name1",
+      "expected": "|cffe4cfa3Каменная кожа|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Rehs",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Каменная кожа|r (|cffffffffF|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G8",
+      "field": "name1",
+      "expected": "|cffe4cfa3Магия совы — уровень 1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G8",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Магия совы — уровень 1|r (|cffffffffM|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G8",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает друидов-сов, повышая здоровье на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+25|cffced4da ед. и скорость регенерации маны на |cffc8e087+20%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДруид-сова|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G8",
+      "field": "name2",
+      "expected": "|cffe4cfa3Магия совы — уровень 2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G8",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Магия совы — уровень 2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0G8",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает друидам-совам «Облик совуха», дополнительно увеличивая здоровье на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+25|cffced4da ед. и регенерацию маны на |cffc8e087+20%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДруид-сова|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KS",
+      "field": "name1",
+      "expected": "|cffe4cfa3Зов Элуны|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KS",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Зов Элуны|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KS",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет союзников благословением богини Луны, временно повышая скорость атаки и передвижения войск в области действия.|n|n|cffa6afb8Действует на:|cffced4da войска Ночных эльфов.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KT",
+      "field": "name1",
+      "expected": "|cffe4cfa3Ярость Элуны|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KT",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Ярость Элуны|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KT",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает эльфийских воительниц в священный орден Ночных воительниц, наделяя их оружие дополнительным уроном тёмной лунной энергии.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KU",
+      "field": "name1",
+      "expected": "|cffe4cfa3Слёзы Элуны|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KU",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Слёзы Элуны|r (|cffffffffE|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KU",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дарует павшим воинам шанс переродиться в виде священных светлячков-огоньков, возвращая ресурсы и поддерживая жизнь рощи.|n|n|cffa6afb8Действует на:|cffced4da павших воинов Ночных эльфов.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0CY",
+      "field": "name1",
+      "expected": "|cffe4cfa3Призыв помощи|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0CY",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Призыв помощи|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0CY",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Друиды обращаются за поддержкой к Диким Богам Азерота, призывая защитников чащи на помощь легионам эльфов.|n|n|cffa6afb8Действует на:|cffced4da силы природы Ночных эльфов.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KV",
+      "field": "name1",
+      "expected": "|cffe4cfa3Милость Природы|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KV",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Милость Природы|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KV",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Орошает землю целительным дождём природы, исцеляющим раненых союзных воинов в выбранной области.|n|n|cffa6afb8Действует на:|cffced4da союзные войска Ночных эльфов.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KW",
+      "field": "name1",
+      "expected": "|cffe4cfa3Ярость Природы|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KW",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Ярость Природы|r (|cffffffffE|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KW",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Призывает в выбранную рощу отряд могучих древней-защитников, сокрушающих нападающих врагов.|n|n|cffa6afb8Призывает:|cffced4da лесных древней.|r"
+    }
+  ]
+}

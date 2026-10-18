@@ -1,0 +1,256 @@
+{
+  "operations": [
+    {
+      "type": "ability",
+      "id": "A0HW",
+      "field": "name",
+      "value": "|cffe4cfa3Безликие|r",
+      "marker": "РАСА:"
+    },
+    {
+      "type": "ability",
+      "id": "A0HW",
+      "field": "tip1",
+      "value": "|cffe4cfa3Безликие|r (|cffffffffX|r)",
+      "marker": "РАСА:"
+    },
+    {
+      "type": "ability",
+      "id": "A0HW",
+      "field": "ubertip1",
+      "value": "|cffa6afb8РАСА:|cffced4da Служители Древних богов.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deNiCAmCHiK|r|n|cffa6afb8Куратор расы:|r |cffa9c7deNiCAmCHiK|r|n|cffa6afb8Сложность:|r |cffffffff●●●|cffa6afb8●●|r|n|cffa6afb8Период:|r |cffa9c7deКлассический World of Warcraft — «Битва за Азерот»|r|n|n|cffced4daБезликие, или н’раки, — загадочные и могущественные существа, возникшие из живой материи Древних богов и верно служащие своим создателям. Во времена Чёрной Империи они надзирали за акирами, заставляя их возводить цитадели и храмы во славу своих повелителей. Войны Древних богов обращали безликих друг против друга. Когда титаны заточили их хозяев в глубинах земли и океана, безликие разделили их участь и продолжили служение. Они общаются на языке, который другим народам Азерота трудно понять или даже произнести; многие способны передавать мысли прямо в чужой разум.|r",
+      "marker": "РАСА:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I1",
+      "field": "name",
+      "value": "|cffe4cfa3Яма бездны|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I1",
+      "field": "tip",
+      "value": "|cffe4cfa3Яма бездны|r (|cffffffffW|r)",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I1",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка войск безликих и исследование их улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий Кошмар|cffced4da (требуется: Обитель Кошмаров).|n- |cffa9c7deСтрах|cffced4da (требуется: Сущность Страха).|n- |cffa9c7deБезликий дозорный|cffced4da.|n- |cffa9c7deБезликий разрушитель|cffced4da (требуется: Обитель эволюции).|n- |cffa9c7deСущность бездны|cffced4da (требуется: Обитель эволюции).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПомутнение рассудка|cffced4da.|n- |cffa9c7deРазрушение Эфира|cffced4da.|n- |cffa9c7deУлучшение Сущности|cffced4da.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I2",
+      "field": "name",
+      "value": "|cffe4cfa3Катакомбы магов|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I2",
+      "field": "tip",
+      "value": "|cffe4cfa3Катакомбы магов|r (|cffffffffR|r)",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I2",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка заклинателей Бездны и исследование их улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПожиратель Бездны|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума|cffced4da (требуется: Сущность Страха, Обитель эволюции).|n- |cffa9c7deПроклинатель Бездны|cffced4da (требуется: Сущность Страха, Обитель эволюции).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗнание проклинателей|cffced4da.|n- |cffa9c7deРасширение Знаний|cffced4da.|n- |cffa9c7deУкрепление Древних Знаний|cffced4da.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I4",
+      "field": "name",
+      "value": "|cffe4cfa3Портал Бездны|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I4",
+      "field": "tip",
+      "value": "|cffe4cfa3Портал Бездны|r (|cffffffffA|r)",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I4",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка высших существ Бездны и исследование их улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deВодное Порождение|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n- |cffa9c7deБессмертный страж|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n- |cffa9c7deК`Траксис|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n- |cffa9c7deМогущественная Сущность бездны|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deСуть бессмертия|cffced4da.|n- |cffa9c7deУсиление К`Траксис|cffced4da.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I6",
+      "field": "name",
+      "value": "|cffe4cfa3Обитель эволюции|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I6",
+      "field": "tip",
+      "value": "|cffe4cfa3Обитель эволюции|r (|cffffffffE|r)",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I6",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Исследование улучшений армии и добычи древесины.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deДереводобыча|cffced4da.|n- |cffa9c7deРазвить силу|cffced4da.|n- |cffa9c7deРазвить Скорость|cffced4da.|n- |cffa9c7deНаращивание Мышц|cffced4da.|n- |cffa9c7deУсиление мышц|cffced4da.|n|n|cffe6c07bИсследования «Развить силу» и «Развить Скорость» взаимоисключают друг друга. Начало одного исследования блокирует другое; отмена возвращает возможность выбора.|cffced4da|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0HZ",
+      "field": "name",
+      "value": "|cffe4cfa3Забытый|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0HZ",
+      "field": "tip",
+      "value": "|cffe4cfa3Забытый|r (|cffffffffQ|r)",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0HZ",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff1|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПородить придаток|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deСущность Страха|cffced4da.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I7",
+      "field": "name",
+      "value": "|cffe4cfa3Сущность Страха|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I7",
+      "field": "tip",
+      "value": "|cffe4cfa3Сущность Страха|r (|cffffffffZ|r)",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I7",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff2|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПородить придаток|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n- |cffa9c7deЗащита столицы|cffced4da: аура, ослабляющая броню ближайших противников.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deОбитель Кошмаров|cffced4da.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I8",
+      "field": "name",
+      "value": "|cffe4cfa3Обитель Кошмаров|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I8",
+      "field": "tip",
+      "value": "|cffe4cfa3Обитель Кошмаров|r (|cffffffffZ|r)",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0I8",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff3|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПородить придаток|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0K3",
+      "field": "name",
+      "value": "|cffe4cfa3Башня Смерти|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0K3",
+      "field": "tip",
+      "value": "|cffe4cfa3Башня Смерти|r (|cffffffffZ|r)",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0K3",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительная башня для защиты базы.|n|nАтакует наземные цели.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "u02E",
+      "field": "name",
+      "value": "|cffe4cfa3Малое порождение|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "u02E",
+      "field": "tip",
+      "value": "|cffe4cfa3Малое порождение|r (|cffffffffW|r)",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "u02E",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Доходная постройка безликих. Увеличивает базовый доход на |cffc8e08730|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПородить придаток|cffced4da: бесплатно создаёт ещё одно |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deДымка бездны|cffced4da: аура, повышающая скорость передвижения и восстановление здоровья ближайших союзников.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0HY",
+      "field": "name",
+      "value": "|cffe4cfa3Алтарь Древних Богов|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0HY",
+      "field": "tip",
+      "value": "|cffe4cfa3Алтарь Древних Богов|r (|cffffffffS|r)",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h0HY",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Призывает героев безликих и воскрешает павших героев.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВерховный Душегуб|cffced4da.|n- |cffa9c7deГенерал К`Траксис|cffced4da.|n- |cffa9c7deМаг Запредельной Тьмы|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da Найм мага телепортации для переброски войск.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "h07A",
+      "field": "name",
+      "value": "|cffe4cfa3Маг телепортации|r",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "h07A",
+      "field": "tip",
+      "value": "|cffe4cfa3Маг телепортации|r (|cffffffffR|r)",
+      "marker": "ЮНИТ:"
+    },
+    {
+      "type": "unit",
+      "id": "h07A",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЮНИТ:|cffced4da Заклинатель для переброски войск.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМассовая телепортация|cffced4da: переносит мага и ближайшие войска игрока к союзному зданию.|n- |cffa9c7deТемный призыв|cffced4da: переносит союзников из выбранной области к магу.|n- |cffa9c7deПоддерживать связь|cffced4da: автоматически повторяет «Темный призыв» из выбранной точки по мере восстановления способности. Режим можно отключить.|n|n|cffe6c07bТемный призыв недоступен в радиусе |cffffffff1350|cffe6c07b от вражеской столицы.|cffced4da|n|nАтакует наземные и воздушные цели.|r",
+      "marker": "ЮНИТ:"
+    }
+  ]
+}

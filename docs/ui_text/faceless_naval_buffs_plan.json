@@ -1,0 +1,58 @@
+{
+  "operations": [
+    {
+      "type": "buff",
+      "id": "B002",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Все паруса|r"
+    },
+    {
+      "type": "buff",
+      "id": "B002",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения |cffc8e087повышена|cffced4da, но получаемый урон |cffe69a8dувеличен|cffced4da. Величины зависят от уровня ускорения.|r"
+    },
+    {
+      "type": "buff",
+      "id": "BEar",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Аура урона|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BEar",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Повышает урон атак. Величина бонуса и затрагиваемый тип атак — ближние или дальние — зависят от источника ауры.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BHad",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Аура брони|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BHad",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Изменяет броню. Источник ауры может давать бонус к защите или снижать её; величина и направление эффекта указаны в описании способности-источника.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BOae",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Аура скорости|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BOae",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Изменяет скорость передвижения и атаки. Источник ауры может ускорять или замедлять войска; величины указаны в описании способности-источника.|r",
+      "base_object": true
+    }
+  ]
+}

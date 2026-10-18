@@ -1,0 +1,762 @@
+[
+  {
+    "file": "BlazingSpecialArt.mdx",
+    "info": {
+      "ok": true,
+      "sha256": "87d9645eabd9b13e39097f785ff22db268e06de15b36ab36daab70817eed3ccf",
+      "result": {
+        "file": "F:\\Gemini_23Race\\map.w3x\\Draenei\\Effects\\BlazingSpecialArt.mdx",
+        "format": "mdx",
+        "version": 800,
+        "readOnly": false,
+        "name": "HolyBoltSpecialArt",
+        "bounds": {
+          "min": [
+            -167.694,
+            -163.986,
+            -62.682
+          ],
+          "max": [
+            162.75,
+            166.46,
+            354.269
+          ],
+          "radius": 232.261
+        },
+        "blendTime": 150,
+        "counts": {
+          "Sequences": 1,
+          "Textures": 6,
+          "Materials": 3,
+          "Geosets": 3,
+          "GeosetAnims": 2,
+          "Bones": 6,
+          "Helpers": 1,
+          "EventObjects": 1,
+          "ParticleEmitters2": 3,
+          "Lights": 1
+        },
+        "triangles": 102,
+        "vertices": 204,
+        "sequences": [
+          {
+            "i": 0,
+            "name": "Birth",
+            "start": 0,
+            "end": 2800,
+            "length": 2800,
+            "nonLooping": true
+          }
+        ],
+        "textures": [
+          {
+            "i": 0,
+            "path": "Textures\\star6.blp"
+          },
+          {
+            "i": 1,
+            "path": "Textures\\Dust5A.blp"
+          },
+          {
+            "i": 2,
+            "path": "Textures\\star5tga.blp"
+          },
+          {
+            "i": 3,
+            "path": "Textures\\firering4.blp"
+          },
+          {
+            "i": 4,
+            "path": "Textures\\DemonRune6.blp"
+          },
+          {
+            "i": 5,
+            "path": "Textures\\Yellow_Glow_Dim2.blp"
+          }
+        ],
+        "materials": [
+          {
+            "i": 0,
+            "renderMode": 1,
+            "layers": [
+              {
+                "filter": "Additive",
+                "texture": 3,
+                "alpha": "4 keys Linear",
+                "shading": [
+                  "TwoSided"
+                ]
+              }
+            ]
+          },
+          {
+            "i": 1,
+            "renderMode": 1,
+            "layers": [
+              {
+                "filter": "Additive",
+                "texture": 4,
+                "alpha": "6 keys Linear",
+                "shading": [
+                  "Unshaded"
+                ]
+              }
+            ]
+          },
+          {
+            "i": 2,
+            "layers": [
+              {
+                "filter": "Additive",
+                "texture": 5,
+                "alpha": "6 keys Linear",
+                "shading": [
+                  "Unshaded",
+                  "TwoSided"
+                ]
+              }
+            ]
+          }
+        ],
+        "geosets": [
+          {
+            "i": 0,
+            "vertices": 192,
+            "triangles": 96,
+            "material": 0,
+            "matrixGroups": 3,
+            "uvSets": 1,
+            "alpha": 0,
+            "color": [
+              1,
+              0.847,
+              0
+            ]
+          },
+          {
+            "i": 1,
+            "vertices": 4,
+            "triangles": 2,
+            "material": 1,
+            "matrixGroups": 1,
+            "uvSets": 1,
+            "alpha": 0,
+            "color": [
+              0.992,
+              0.91,
+              0
+            ]
+          },
+          {
+            "i": 2,
+            "vertices": 8,
+            "triangles": 4,
+            "material": 2,
+            "matrixGroups": 2,
+            "uvSets": 1
+          }
+        ],
+        "attachments": [],
+        "diagnostics": {
+          "errors": 0,
+          "warnings": 0,
+          "first": []
+        }
+      },
+      "errors": []
+    },
+    "textures": [
+      {
+        "path": "Textures\\star6.blp",
+        "found": true
+      },
+      {
+        "path": "Textures\\Dust5A.blp",
+        "found": true
+      },
+      {
+        "path": "Textures\\star5tga.blp",
+        "found": true
+      },
+      {
+        "path": "Textures\\firering4.blp",
+        "found": true
+      },
+      {
+        "path": "Textures\\DemonRune6.blp",
+        "found": true
+      },
+      {
+        "path": "Textures\\Yellow_Glow_Dim2.blp",
+        "found": true
+      }
+    ]
+  },
+  {
+    "file": "GlowShield.mdx",
+    "info": {
+      "ok": true,
+      "sha256": "ebfbf88ca5633b601e43bc8e91b9afea512780a27868ecb35d1aca2464bc4780",
+      "result": {
+        "file": "F:\\Gemini_23Race\\map.w3x\\Draenei\\Effects\\GlowShield.mdx",
+        "format": "mdx",
+        "version": 800,
+        "readOnly": false,
+        "name": "GeneralAuraTarget",
+        "bounds": {
+          "min": [
+            -82.13,
+            -82.323,
+            -45.329
+          ],
+          "max": [
+            82.488,
+            82.295,
+            70.274
+          ],
+          "radius": 0
+        },
+        "blendTime": 150,
+        "counts": {
+          "Sequences": 6,
+          "GlobalSequences": 2,
+          "Textures": 3,
+          "Materials": 1,
+          "Geosets": 1,
+          "GeosetAnims": 1,
+          "Bones": 1,
+          "Helpers": 1,
+          "ParticleEmitters2": 4
+        },
+        "triangles": 2,
+        "vertices": 4,
+        "sequences": [
+          {
+            "i": 0,
+            "name": "Stand",
+            "start": 333,
+            "end": 2500,
+            "length": 2167
+          },
+          {
+            "i": 1,
+            "name": "Death",
+            "start": 2833,
+            "end": 3167,
+            "length": 334,
+            "nonLooping": true
+          },
+          {
+            "i": 2,
+            "name": "Stand Medium",
+            "start": 3833,
+            "end": 6000,
+            "length": 2167
+          },
+          {
+            "i": 3,
+            "name": "Death Medium",
+            "start": 6333,
+            "end": 6667,
+            "length": 334,
+            "nonLooping": true
+          },
+          {
+            "i": 4,
+            "name": "Stand Large",
+            "start": 7567,
+            "end": 9733,
+            "length": 2166
+          },
+          {
+            "i": 5,
+            "name": "Death Large",
+            "start": 10067,
+            "end": 10400,
+            "length": 333,
+            "nonLooping": true
+          }
+        ],
+        "globalSequences": [
+          70,
+          48
+        ],
+        "textures": [
+          {
+            "i": 0,
+            "path": "Textures\\GenericGlow2c.blp"
+          },
+          {
+            "i": 1,
+            "path": "Textures\\GenericGlow2b.blp"
+          },
+          {
+            "i": 2,
+            "path": "Textures\\sun.blp"
+          }
+        ],
+        "materials": [
+          {
+            "i": 0,
+            "renderMode": 1,
+            "layers": [
+              {
+                "filter": "Additive",
+                "texture": 0,
+                "alpha": "21 keys Linear",
+                "shading": [
+                  "Unshaded",
+                  "Unfogged"
+                ]
+              }
+            ]
+          }
+        ],
+        "geosets": [
+          {
+            "i": 0,
+            "vertices": 4,
+            "triangles": 2,
+            "material": 0,
+            "matrixGroups": 1,
+            "uvSets": 1,
+            "alpha": 0,
+            "color": [
+              1,
+              1,
+              0
+            ]
+          }
+        ],
+        "attachments": [],
+        "diagnostics": {
+          "errors": 0,
+          "warnings": 0,
+          "first": []
+        }
+      },
+      "errors": []
+    },
+    "textures": [
+      {
+        "path": "Textures\\GenericGlow2c.blp",
+        "found": true
+      },
+      {
+        "path": "Textures\\GenericGlow2b.blp",
+        "found": true
+      },
+      {
+        "path": "Textures\\sun.blp",
+        "found": true
+      }
+    ]
+  },
+  {
+    "file": "HolyAura.mdx",
+    "info": {
+      "ok": true,
+      "sha256": "9c856c178922b8b7b6d98c602a9ba89eca1a9bffc3230f14308713d35a43c048",
+      "result": {
+        "file": "F:\\Gemini_23Race\\map.w3x\\Draenei\\Effects\\HolyAura.mdx",
+        "format": "mdx",
+        "version": 800,
+        "readOnly": false,
+        "name": "RunicalAura",
+        "bounds": {
+          "min": [
+            -110.226,
+            -110.964,
+            16.89
+          ],
+          "max": [
+            111.027,
+            110.29,
+            20.25
+          ],
+          "radius": 156.459
+        },
+        "blendTime": 150,
+        "counts": {
+          "Sequences": 1,
+          "Textures": 2,
+          "Materials": 2,
+          "Geosets": 2,
+          "GeosetAnims": 1,
+          "Bones": 3
+        },
+        "triangles": 6,
+        "vertices": 12,
+        "sequences": [
+          {
+            "i": 0,
+            "name": "Stand",
+            "start": 333,
+            "end": 1600,
+            "length": 1267
+          }
+        ],
+        "textures": [
+          {
+            "i": 0,
+            "path": "abilities\\Spells\\Human\\Resurrect\\Rune1b_64.blp"
+          },
+          {
+            "i": 1,
+            "path": "Textures\\Shockwave10.blp"
+          }
+        ],
+        "materials": [
+          {
+            "i": 0,
+            "layers": [
+              {
+                "filter": "AddAlpha",
+                "texture": 0,
+                "alpha": "3 keys Bezier",
+                "shading": []
+              }
+            ]
+          },
+          {
+            "i": 1,
+            "renderMode": 1,
+            "layers": [
+              {
+                "filter": "Additive",
+                "texture": 1,
+                "alpha": "3 keys Bezier",
+                "shading": []
+              }
+            ]
+          }
+        ],
+        "geosets": [
+          {
+            "i": 0,
+            "vertices": 8,
+            "triangles": 4,
+            "material": 0,
+            "matrixGroups": 2,
+            "uvSets": 1
+          },
+          {
+            "i": 1,
+            "vertices": 4,
+            "triangles": 2,
+            "material": 1,
+            "matrixGroups": 1,
+            "uvSets": 1,
+            "alpha": 1,
+            "color": [
+              0.482,
+              0.145,
+              0.898
+            ]
+          }
+        ],
+        "attachments": [],
+        "diagnostics": {
+          "errors": 0,
+          "warnings": 0,
+          "first": []
+        }
+      },
+      "errors": []
+    },
+    "textures": [
+      {
+        "path": "abilities\\Spells\\Human\\Resurrect\\Rune1b_64.blp",
+        "found": true
+      },
+      {
+        "path": "Textures\\Shockwave10.blp",
+        "found": true
+      }
+    ]
+  },
+  {
+    "file": "NetherArrow.mdx",
+    "info": {
+      "ok": true,
+      "sha256": "5c6981cfcc254aa7e41f723965d8d493976fa909663640f7b8992e144aa53666",
+      "result": {
+        "file": "F:\\Gemini_23Race\\map.w3x\\Draenei\\Effects\\NetherArrow.mdx",
+        "format": "mdx",
+        "version": 800,
+        "readOnly": false,
+        "name": "DraeneiTower",
+        "bounds": {
+          "min": [
+            -564.812,
+            -267.589,
+            -157.624
+          ],
+          "max": [
+            156.366,
+            555.702,
+            455.707
+          ],
+          "radius": 0
+        },
+        "blendTime": 150,
+        "counts": {
+          "Sequences": 2,
+          "Textures": 3,
+          "Materials": 2,
+          "Geosets": 2,
+          "Bones": 1,
+          "ParticleEmitters2": 1,
+          "Cameras": 1
+        },
+        "triangles": 18,
+        "vertices": 54,
+        "sequences": [
+          {
+            "i": 0,
+            "name": "Stand",
+            "start": 76667,
+            "end": 80000,
+            "length": 3333
+          },
+          {
+            "i": 1,
+            "name": "Death",
+            "start": 313333,
+            "end": 314000,
+            "length": 667,
+            "nonLooping": true
+          }
+        ],
+        "textures": [
+          {
+            "i": 0,
+            "path": "DraeneiCrystal.blp",
+            "flags": 3
+          },
+          {
+            "i": 1,
+            "path": "DranaiCrossbow.blp",
+            "flags": 3
+          },
+          {
+            "i": 2,
+            "path": "ReplaceableTextures\\Weather\\Clouds8x8.blp"
+          }
+        ],
+        "materials": [
+          {
+            "i": 0,
+            "layers": [
+              {
+                "filter": "AddAlpha",
+                "texture": 0,
+                "alpha": "2 keys DontInterp",
+                "shading": [
+                  "Unshaded"
+                ]
+              }
+            ]
+          },
+          {
+            "i": 1,
+            "layers": [
+              {
+                "filter": "Transparent",
+                "texture": 1,
+                "alpha": "2 keys DontInterp",
+                "shading": [
+                  "TwoSided"
+                ]
+              }
+            ]
+          }
+        ],
+        "geosets": [
+          {
+            "i": 0,
+            "vertices": 30,
+            "triangles": 10,
+            "material": 0,
+            "matrixGroups": 1,
+            "uvSets": 1
+          },
+          {
+            "i": 1,
+            "vertices": 24,
+            "triangles": 8,
+            "material": 1,
+            "matrixGroups": 1,
+            "uvSets": 1
+          }
+        ],
+        "attachments": [],
+        "diagnostics": {
+          "errors": 0,
+          "warnings": 0,
+          "first": []
+        }
+      },
+      "errors": []
+    },
+    "textures": [
+      {
+        "path": "DraeneiCrystal.blp",
+        "found": true
+      },
+      {
+        "path": "DranaiCrossbow.blp",
+        "found": true
+      },
+      {
+        "path": "ReplaceableTextures\\Weather\\Clouds8x8.blp",
+        "found": true
+      }
+    ]
+  },
+  {
+    "file": "Reconstitute.mdx",
+    "info": {
+      "ok": true,
+      "sha256": "14f2a6fad5a3dbf4e5c8fc560f7c9beeafbfeb2d20c4c8a3f9c878e9cb2e6470",
+      "result": {
+        "file": "F:\\Gemini_23Race\\map.w3x\\Draenei\\Effects\\Reconstitute.mdx",
+        "format": "mdx",
+        "version": 800,
+        "readOnly": false,
+        "name": "HealTarget",
+        "bounds": {
+          "min": [
+            0,
+            -58.028,
+            18.182
+          ],
+          "max": [
+            0,
+            59.93,
+            136.141
+          ],
+          "radius": 0
+        },
+        "blendTime": 150,
+        "counts": {
+          "Sequences": 1,
+          "GlobalSequences": 1,
+          "Textures": 6,
+          "Materials": 1,
+          "Geosets": 1,
+          "GeosetAnims": 1,
+          "Bones": 1,
+          "Helpers": 1,
+          "EventObjects": 1,
+          "ParticleEmitters2": 3
+        },
+        "triangles": 2,
+        "vertices": 4,
+        "sequences": [
+          {
+            "i": 0,
+            "name": "Birth",
+            "start": 0,
+            "end": 1833,
+            "length": 1833,
+            "nonLooping": true
+          }
+        ],
+        "globalSequences": [
+          700
+        ],
+        "textures": [
+          {
+            "i": 0,
+            "path": "Textures\\Yellow_Star_Dim.blp"
+          },
+          {
+            "i": 1,
+            "path": "Textures\\star5tga.blp"
+          },
+          {
+            "i": 2,
+            "path": "Textures\\Yellow_Glow.blp"
+          },
+          {
+            "i": 3,
+            "path": "Textures\\Blue_Glow2.blp"
+          },
+          {
+            "i": 4,
+            "path": "Textures\\Star9.blp"
+          },
+          {
+            "i": 5,
+            "path": "Textures\\BlueWaves.blp"
+          }
+        ],
+        "materials": [
+          {
+            "i": 0,
+            "layers": [
+              {
+                "filter": "Additive",
+                "texture": 3,
+                "alpha": "5 keys Linear",
+                "shading": [
+                  "Unshaded"
+                ]
+              }
+            ]
+          }
+        ],
+        "geosets": [
+          {
+            "i": 0,
+            "vertices": 4,
+            "triangles": 2,
+            "material": 0,
+            "matrixGroups": 1,
+            "uvSets": 1,
+            "alpha": "1 keys DontInterp",
+            "color": [
+              0.502,
+              1,
+              1
+            ]
+          }
+        ],
+        "attachments": [],
+        "diagnostics": {
+          "errors": 0,
+          "warnings": 0,
+          "first": []
+        }
+      },
+      "errors": []
+    },
+    "textures": [
+      {
+        "path": "Textures\\Yellow_Star_Dim.blp",
+        "found": true
+      },
+      {
+        "path": "Textures\\star5tga.blp",
+        "found": true
+      },
+      {
+        "path": "Textures\\Yellow_Glow.blp",
+        "found": true
+      },
+      {
+        "path": "Textures\\Blue_Glow2.blp",
+        "found": true
+      },
+      {
+        "path": "Textures\\Star9.blp",
+        "found": true
+      },
+      {
+        "path": "Textures\\BlueWaves.blp",
+        "found": true
+      }
+    ]
+  }
+]

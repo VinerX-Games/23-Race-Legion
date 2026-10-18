@@ -548,23 +548,45 @@
   },
   "ADr1": {
    "type": "ability",
-   "name": ""
+   "name": "Призматические наконечники",
+   "hotkey": "P",
+   "levels": 3,
+   "requires": [
+    "RDr1"
+   ]
   },
   "ADr2": {
    "type": "ability",
-   "name": ""
+   "name": "Озарённый клинок",
+   "hotkey": "L",
+   "levels": 1,
+   "requires": [
+    "RDr2"
+   ]
   },
   "ADr3": {
    "type": "ability",
-   "name": ""
+   "name": "Обет защитника",
+   "hotkey": "B",
+   "levels": 1,
+   "requires": [
+    "RDr3"
+   ]
   },
   "ADr4": {
    "type": "ability",
-   "name": ""
+   "name": "Спасительный свет",
+   "hotkey": "W",
+   "levels": 1
   },
   "ADr5": {
    "type": "ability",
-   "name": ""
+   "name": "Идол памяти",
+   "hotkey": "E",
+   "levels": 1,
+   "requires": [
+    "RDr5"
+   ]
   },
   "AInv": {
    "type": "ability",
@@ -1638,6 +1660,10 @@
   "A0Z3 requires R0EB",
   "A1C6 requires Rugf",
   "A1C8 requires R02G",
+  "ADr1 requires RDr1",
+  "ADr2 requires RDr2",
+  "ADr3 requires RDr3",
+  "ADr5 requires RDr5",
   "Aihn requires Rhpm",
   "Ault requires Reuv",
   "H05K has-ability AInv",

@@ -1,0 +1,219 @@
+{
+  "scope": "Гоблины (Goblins): категория 1 — Здания (10 зданий)",
+  "buildings_count": 10,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "h070",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14143,
+          "after": "|cffe4cfa3База|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14144,
+          "after": "|cffe4cfa3База|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6490,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное командное и экономическое здание картеля. Служит складом ресурсов, даёт начальные припасы и позволяет объявить город столицей.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deКрошшер|r|n|n|cffa6afb8Исследования:|r|n- |cffa9c7deРасширить банковский сектор|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Столица: объявляет базу столицей государства.|r|n|cffced4da- Торговля: позволяет обменивать золото на древесину и древесину на золото.|r|n|cffced4da- Коррупция: позволяет регулировать уровень коррупции картеля.|r|n|cffced4da- Припасы: |cffffffff+50|r единиц.|r"
+        }
+      ]
+    },
+    {
+      "id": "h077",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14153,
+          "after": "|cffe4cfa3Банк|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14154,
+          "after": "|cffe4cfa3Банк|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 20481,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Финансовый центр картеля. Обеспечивает кланы припасами и генерирует стабильный доход для расширения империи.|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Доход: приносит |cffffffff+40|r золота каждые |cffffffff25|r с.|r|n|cffced4da- Припасы: |cffffffff+40|r единиц.|r"
+        }
+      ]
+    },
+    {
+      "id": "h073",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14145,
+          "after": "|cffe4cfa3Казармы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14146,
+          "after": "|cffe4cfa3Казармы|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 11989,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Тренировочный лагерь пехоты. Обучает регулярные стрелковые и штурмовые отряды, а также нанимает наёмных огров.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deРекрут ТК|r|n- |cffa9c7deПулеметчик|r|n- |cffa9c7deОгнеметчик|r|n- |cffa9c7deРакетчик|r|n- |cffa9c7deСнайпер|r|n- |cffa9c7deСапер|r|n- |cffa9c7deМедик|r|n|n|cffa6afb8Нанимает:|r|n- |cffa9c7deОгр-костолом|r"
+        }
+      ]
+    },
+    {
+      "id": "h074",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14147,
+          "after": "|cffe4cfa3Завод|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14148,
+          "after": "|cffe4cfa3Завод|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 11990,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Промышленный комплекс тяжелого машиностроения. Производит бронетехнику, амфибии и самоходную артиллерию.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deОгнестрельный танк «Напалм-4000»|r|n- |cffa9c7deВездеход «Мурлок-3000»|r|n- |cffa9c7deМобильная артиллерия|r|n- |cffa9c7deБРДМ-2000|r|n- |cffa9c7deШтурмовой танк «Вепрь-5000»|r"
+        }
+      ]
+    },
+    {
+      "id": "h075",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14149,
+          "after": "|cffe4cfa3Фабрика|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14150,
+          "after": "|cffe4cfa3Фабрика|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 19556,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Высокотехнологичное предприятие картеля. Производит шагающие боевые мехи и оснащает элитную штурмовую пехоту экзоскелетами.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deМеха «Линчеватель-6000»|r|n- |cffa9c7deОператор силовой брони|r|n- |cffa9c7deОгнемеха «Пожар-7000»|r|n- |cffa9c7deСупербоец|r"
+        }
+      ]
+    },
+    {
+      "id": "h076",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14151,
+          "after": "|cffe4cfa3Лаборатория|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14152,
+          "after": "|cffe4cfa3Лаборатория|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 20476,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Научно-исследовательский комплекс. Разрабатывает новые виды вооружения и брони, открывающие доступ к продвинутым боевым единицам картеля.|r|n|n|cffa6afb8Исследования:|r|n- |cffa9c7deБиологические эксперименты|r|n- |cffa9c7deПули|r|n- |cffa9c7deРакеты|r|n- |cffa9c7deОгнеметы|r|n- |cffa9c7deУдарные механизмы|r|n- |cffa9c7deМоторы|r|n- |cffa9c7deПодвижные механизмы|r|n- |cffa9c7deЛегкая обшивка|r|n- |cffa9c7deТяжелая обшивка|r|n- |cffa9c7deУвеличительная оптика|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Обнаружение: проводит платную разведку указанной области карты.|r|n|cffced4da- Развитие технологий: количество действующих лабораторий определяет технологический уровень картеля.|r"
+        }
+      ]
+    },
+    {
+      "id": "h079",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14157,
+          "after": "|cffe4cfa3Бюро разработок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14158,
+          "after": "|cffe4cfa3Бюро разработок|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 20488,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Конструкторское бюро и склад древесины. Создает специальные инженерные модификации и нестандартные боеприпасы для техники и пехоты.|r|n|n|cffa6afb8Исследования:|r|n- |cffa9c7deУскорение|r|n- |cffa9c7deКоктейль Молотова|r|n- |cffa9c7deЭМИ-граната|r|n- |cffa9c7deАдреналиновые инъекции|r|n- |cffa9c7deСтандарты потребления|r|n- |cffa9c7deСпецбоеприпасы ракет|r|n- |cffa9c7deСпецбоеприпасы огнеметов|r|n- |cffa9c7deУлучшенные пилы|r|n- |cffa9c7deСпецкалибр пуль|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Склад древесины: рабочие могут сдавать сюда заготовленное дерево.|r"
+        }
+      ]
+    },
+    {
+      "id": "h07S",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14159,
+          "after": "|cffe4cfa3Турель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14160,
+          "after": "|cffe4cfa3Турель|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 20627,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Автоматическая пулеметная турель. Обеспечивает базовую оборону базы и укрепленных позиций картеля.|r|n|n|cffa6afb8Атака:|cffced4da Дальний бой (прокалывающая), урон |cffffffff23-27|r, интервал |cffffffff1,5|r с.|r|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o016",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14186,
+          "after": "|cffe4cfa3Алтарь Торговли|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14187,
+          "after": "|cffe4cfa3Алтарь Торговли|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 18417,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище коммерции и наёмного контракта. Позволяет призывать уникальных лидеров гоблинов и возвращать к жизни павших героев.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deСпецназовец|r|n- |cffa9c7deАлхимик|r|n- |cffa9c7deМеханик|r|n|n|cffa6afb8Нанимает:|r|n- |cffa9c7deМаг телепортации|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Воскрешает павших героев.|r|n|cffced4da- Припасы: |cffffffff+3|r единицы.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0D7",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 14184,
+          "after": "|cffe4cfa3Верфь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 14185,
+          "after": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 20646,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Портовое сооружение картеля. Строит суда флота, подводные лодки и амфибии, а также ремонтирует корабли в доках.|r|n|n|cffa6afb8Обучает:|r|n- |cffa9c7deВездеход «Мурлок-3000»|r|n- |cffa9c7deУниверсальный линкор|r|n- |cffa9c7deСубмарина|r|n- |cffa9c7deПодводная лодка|r|n- |cffa9c7deНефтяной танкер|r|n|n|cffa6afb8Исследования:|r|n- |cffa9c7deПочинка|r|n|n|cffa6afb8Особенности:|r|n|cffced4da- Зона ремонта: пассивная аура восстанавливает |cffffffff2,5|r ед. прочности в секунду повреждённым союзным кораблям поблизости.|r"
+        }
+      ]
+    }
+  ]
+}

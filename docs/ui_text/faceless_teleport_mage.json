@@ -1,0 +1,210 @@
+{
+  "scope": "Общий маг телепортации: все четыре команды и согласованная карточка",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "in_game_checked": false,
+  "objects_before": [
+    {
+      "command": "get-objects-bulk",
+      "count": 4,
+      "map": "F:\\Gemini_23Race\\map.w3x",
+      "missing": [],
+      "objects": [
+        {
+          "fields": {
+            "area1": "800",
+            "code": "AHmt",
+            "cool1": "25.000000",
+            "cost1": "100",
+            "dataa1": "15",
+            "datab1": "3",
+            "datac1": "1",
+            "hotkey": "TRIGSTR_15632",
+            "levels": "1",
+            "name": "Массовая телепортация",
+            "targs1": "friend,structure",
+            "tip1": "Массовая телепортация",
+            "ubertip1": "TRIGSTR_32450"
+          },
+          "id": "A0IR",
+          "name": "Массовая телепортация"
+        },
+        {
+          "fields": {
+            "area1": "700",
+            "code": "AUds",
+            "cool1": "15.000000",
+            "cost1": "100",
+            "dataa1": "15",
+            "datab1": "0.100000",
+            "datac1": "1",
+            "hotkey": "TRIGSTR_15275",
+            "levels": "1",
+            "name": "Темный призыв",
+            "targs1": "air,ground,vuln,invu,player",
+            "tip1": "Темный призыв",
+            "ubertip1": "TRIGSTR_32417"
+          },
+          "id": "A0IO",
+          "name": "Темный призыв"
+        },
+        {
+          "fields": {
+            "area1": "700.000000",
+            "code": "ANcl",
+            "cool1": "0",
+            "cost1": "0",
+            "dataa1": "0.000000",
+            "datab1": "2",
+            "datac1": "3",
+            "hotkey": "TRIGSTR_28039",
+            "levels": "1",
+            "name": "TRIGSTR_9940",
+            "targs1": "",
+            "tip1": "TRIGSTR_9941",
+            "ubertip1": "TRIGSTR_10919"
+          },
+          "id": "A1IG",
+          "name": "Поддерживать связь"
+        },
+        {
+          "fields": {
+            "area1": "700.000000",
+            "code": "ANcl",
+            "cool1": "0",
+            "cost1": "0",
+            "dataa1": "0.000000",
+            "datab1": "0",
+            "datac1": "1",
+            "hotkey": "TRIGSTR_28040",
+            "levels": "1",
+            "name": "TRIGSTR_35088",
+            "targs1": "",
+            "tip1": "TRIGSTR_35090",
+            "ubertip1": "TRIGSTR_35091"
+          },
+          "id": "A1IH",
+          "name": "Прекратить связь"
+        }
+      ],
+      "ok": true,
+      "schema_version": 1,
+      "tool": "HiveWE_cli",
+      "type": "ability"
+    },
+    {
+      "command": "get-objects-bulk",
+      "count": 1,
+      "map": "F:\\Gemini_23Race\\map.w3x",
+      "missing": [],
+      "objects": [
+        {
+          "fields": {
+            "abillist": "A0IR,A0IO,A1IG",
+            "targs1": "ground,structure,debris,air,item,ward",
+            "ubertip": "TRIGSTR_42957",
+            "weapson": "1"
+          },
+          "id": "h07A",
+          "name": "|cffe4cfa3Маг телепортации|r"
+        }
+      ],
+      "ok": true,
+      "schema_version": 1,
+      "tool": "HiveWE_cli",
+      "type": "unit"
+    }
+  ],
+  "strings": [
+    {
+      "rawcode": "A0IR",
+      "field": "name",
+      "before": "Массовая телепортация",
+      "after": "|cffe4cfa3Массовая телепортация|r"
+    },
+    {
+      "rawcode": "A0IR",
+      "field": "tip1",
+      "before": "Массовая телепортация",
+      "after": "|cffe4cfa3Массовая телепортация|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A0IR",
+      "field": "ubertip1",
+      "before": "Переносит до 15 находящихся рядом воинов игрока (включая самого верховного мага) к союзному зданию.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Через |cffffffff3|cffced4da сек. переносит до |cffffffff15|cffced4da воинов игрока из радиуса |cffffffff800|cffced4da, включая самого мага, к выбранному союзному зданию.|r"
+    },
+    {
+      "rawcode": "A0IO",
+      "field": "name",
+      "before": "Темный призыв",
+      "after": "|cffe4cfa3Тёмный призыв|r"
+    },
+    {
+      "rawcode": "A0IO",
+      "field": "tip1",
+      "before": "Темный призыв",
+      "after": "|cffe4cfa3Тёмный призыв|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A0IO",
+      "field": "ubertip1",
+      "before": "Переносит до 15 союзников из указанной области в точку применения.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Через |cffffffff0,1|cffced4da сек. переносит до |cffffffff15|cffced4da воинов игрока из выбранной области радиусом |cffffffff700|cffced4da к магу. При начале призыва маг получает неуязвимость на |cffffffff1,5|cffced4da сек.|n|n|cffe6c07bТёмный призыв недоступен, если маг находится в радиусе |cffffffff1350|cffe6c07b от вражеской столицы.|cffced4da|r"
+    },
+    {
+      "rawcode": "A1IG",
+      "field": "name",
+      "before": "Поддерживать связь",
+      "after": "|cffe4cfa3Поддержание связи|r"
+    },
+    {
+      "rawcode": "A1IG",
+      "field": "tip1",
+      "before": "Поддерживать связь",
+      "after": "|cffe4cfa3Поддержание связи|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A1IG",
+      "field": "ubertip1",
+      "before": "Маг телепортатор телепортирует юнитов из выбранной точки по возможности.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сохраняет выбранную точку и включает автоматические попытки применить |cffa9c7deТёмный призыв|cffced4da из этой области. Интервал попыток — не менее |cffffffff15|cffced4da сек.; первая выполняется после первого интервала. Каждый призыв расходует |cffffffff100|cffced4da маны. Режим выключается кнопкой «Прекращение связи».|n|n|cffe6c07bТёмный призыв недоступен, если маг находится в радиусе |cffffffff1350|cffe6c07b от вражеской столицы.|cffced4da|r"
+    },
+    {
+      "rawcode": "A1IH",
+      "field": "name",
+      "before": "Прекратить связь",
+      "after": "|cffe4cfa3Прекращение связи|r"
+    },
+    {
+      "rawcode": "A1IH",
+      "field": "tip1",
+      "before": "Прекратить связь",
+      "after": "|cffe4cfa3Прекращение связи|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A1IH",
+      "field": "ubertip1",
+      "before": "Маг телепортатор перестает телепортировать юнитов из выбранной точки по возможности.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Отключает автоматические попытки |cffa9c7deТёмного призыва|cffced4da из сохранённой точки и возвращает кнопку «Поддержание связи».|r"
+    },
+    {
+      "rawcode": "h07A",
+      "field": "ubertip",
+      "before": "|cffa6afb8ЮНИТ:|cffced4da Заклинатель для переброски войск.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМассовая телепортация|cffced4da: переносит мага и ближайшие войска игрока к союзному зданию.|n- |cffa9c7deТемный призыв|cffced4da: переносит союзников из выбранной области к магу.|n- |cffa9c7deПоддерживать связь|cffced4da: автоматически повторяет «Темный призыв» из выбранной точки по мере восстановления способности. Режим можно отключить.|n|n|cffe6c07bТемный призыв недоступен в радиусе |cffffffff1350|cffe6c07b от вражеской столицы.|cffced4da|n|nАтакует наземные и воздушные цели.|r",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Заклинатель для переброски войск игрока.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМассовая телепортация|cffced4da: переносит мага и ближайшие войска игрока к союзному зданию.|n- |cffa9c7deТёмный призыв|cffced4da: переносит войска игрока из выбранной области к магу.|n- |cffa9c7deПоддержание связи|cffced4da: включает автоматические попытки Тёмного призыва из сохранённой точки; режим выключается кнопкой «Прекращение связи».|n|n|cffe6c07bТёмный призыв недоступен, если маг находится в радиусе |cffffffff1350|cffe6c07b от вражеской столицы.|cffced4da|n|nАтакует наземные и воздушные цели.|r"
+    }
+  ],
+  "evidence": [
+    "06_transport_portals.lua: Trig_MageTp / Trig_TPrepeat / Trig_TPrepatStop / Trig_NoTpNearCapital",
+    "Installed Warcraft III HumanAbilityStrings: AHmt count includes the caster",
+    "AbilityMetaData: AHmt/AUds casting delay, maximum units, teleport clustering"
+  ],
+  "remaining": [
+    "В игре проверить таймер связи и проверку UnitAlive",
+    "Проверить допустимые цели и задержки телепортации",
+    "Проверить читаемость и состояние отмены в SD/HD"
+  ]
+}

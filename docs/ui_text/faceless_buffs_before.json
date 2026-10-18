@@ -1,0 +1,294 @@
+{
+  "command": "get-objects-bulk",
+  "count": 31,
+  "map": "F:\\Gemini_23Race\\map.w3x",
+  "missing": [
+    "BHtb",
+    "Bust"
+  ],
+  "objects": [
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "AEtr",
+      "name": "Tranquility (Target)"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "B01I",
+      "name": "Метка охотника"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "B02L",
+      "name": "|cffd7b4f6Взрыв бездны|r"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "B08E",
+      "name": "|cffd7b4f5Разложение Бездны|r(Безликие)"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "B08F",
+      "name": "|cffd7b4f5Дымка Бездны|r (Безликие)"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BEia",
+      "name": "Immolation (Caster)"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BEim",
+      "name": "Обжигающий жар"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BHab",
+      "name": "Аура гениальности"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BHtc",
+      "name": "Раскат грома"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BIcb",
+      "name": "Порча"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BNab",
+      "name": "Кислотная бомба"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BNht",
+      "name": "Ужасающий вой"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BOsf",
+      "name": "Дух волка"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BOwd",
+      "name": "Идол"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BOwk",
+      "name": "Танец ветра"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BPSE",
+      "name": "Оглушение"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BUan",
+      "name": "Оживление мертвых"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BUau",
+      "name": "Нечистая аура"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BUdd",
+      "name": "Смерть и разложение"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BUfa",
+      "name": "Морозный доспех"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BUsl",
+      "name": "Сон"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "BUts",
+      "name": "Spiked Carapace"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "Bakb",
+      "name": "Боевые барабаны"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "Bcrs",
+      "name": "Проклятие"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "Bena",
+      "name": "Опутывание"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "Beng",
+      "name": "Опутывание"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "Bfro",
+      "name": "Замедление"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "Brej",
+      "name": "Омоложение"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "Bslo",
+      "name": "Замедление"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "Bspl",
+      "name": "Духовная связь"
+    },
+    {
+      "fields": {
+        "name": "",
+        "tip": "",
+        "ubertip": ""
+      },
+      "id": "Bvng",
+      "name": "Дух возмездия"
+    }
+  ],
+  "ok": true,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "type": "buff"
+}

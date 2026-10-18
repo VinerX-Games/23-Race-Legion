@@ -38,6 +38,7 @@ function I2S(n) return tostring(n) end
 function EnsureMultiboardPlayerRow(p) if noBoard then return nil end; return p+1 end
 MultiboardItem=setmetatable({}, {__index=function(t,k) return k end})
 function MultiboardSetItemValue(item,s) board[item]=s end
+function MultiboardSetCell(row,col,s) board[row*2+col]=s end
 function PlayerColorHexWrap(p,s) return tostring(colors[p] or 0)..':'..s end
 function GetPlayerNameCut(p) return GetPlayerName(p) end
 function CreateGroup() return {} end

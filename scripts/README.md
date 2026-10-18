@@ -3,6 +3,12 @@
 Скрипты живут в `scripts/` + два ключевых в корне.
 Сгруппированы по назначению.
 
+Поддерживаемый рабочий цикл и новые команды: [TOOLING_WORKFLOW.md](../docs/TOOLING_WORKFLOW.md).
+Основные утилиты: `wc3_tools.py`, `wc3_hivewe.py`, `wc3_scenarios.py`, `wc3_models.py`.
+Исторические миграции ниже не являются стандартным этапом сборки. В частности,
+`group_condition_to_direct.py` и `inline_condition_vars.py` могут нарушать требования
+WC3 к boolexpr: не запускать их повторно без анализа и проверки в игре.
+
 ---
 
 ## СБОРКА — канонический build-chain

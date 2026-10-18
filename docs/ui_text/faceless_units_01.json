@@ -1,0 +1,182 @@
+{
+  "scope": "Безликие: первая партия юнитов; не вся категория",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "in_game_checked": false,
+  "objects_before": [
+    {
+      "fields": {
+        "abillist": "",
+        "atktype1": "chaos",
+        "hotkey": "TRIGSTR_4779",
+        "name": "TRIGSTR_25358",
+        "targs1": "ground,structure,debris,item,ward",
+        "tip": "TRIGSTR_25360",
+        "ubertip": "TRIGSTR_21287",
+        "upgrades": "R0F7,R0F8,R0ER,R0ET",
+        "weapson": "1"
+      },
+      "id": "h0I9",
+      "name": "|cffd7b4f5Безликий дозорный|r"
+    },
+    {
+      "fields": {
+        "abillist": "",
+        "atktype1": "siege",
+        "hotkey": "TRIGSTR_6117",
+        "name": "TRIGSTR_25361",
+        "targs1": "ground,structure,debris,item,ward",
+        "tip": "TRIGSTR_25363",
+        "ubertip": "TRIGSTR_21574",
+        "upgrades": "R0F7,R0F8,R0ER,R0ET",
+        "weapson": "1"
+      },
+      "id": "h0IA",
+      "name": "|cffd7b4f5Безликий разрушитель|r"
+    },
+    {
+      "fields": {
+        "abillist": "A10X,A10W",
+        "atktype1": "pierce",
+        "hotkey": "TRIGSTR_4919",
+        "name": "TRIGSTR_25364",
+        "targs1": "ground,structure,debris,item,ward",
+        "tip": "TRIGSTR_25366",
+        "ubertip": "TRIGSTR_23592",
+        "upgrades": "R0F7,R0F8,R0ER,R0ET",
+        "weapson": "1"
+      },
+      "id": "h0IB",
+      "name": "|cffd7b4f5Сущность бездны|r"
+    },
+    {
+      "fields": {
+        "abillist": "A10Z,A10X",
+        "atktype1": "chaos",
+        "hotkey": "TRIGSTR_6118",
+        "name": "TRIGSTR_25367",
+        "targs1": "ground,structure,debris,item,ward",
+        "tip": "TRIGSTR_25369",
+        "ubertip": "TRIGSTR_25269",
+        "upgrades": "R0F7,R0F8,R0ER,R0ET",
+        "weapson": "1"
+      },
+      "id": "h0IC",
+      "name": "|cffd7b4f5Могущественная Сущность бездны|r"
+    }
+  ],
+  "strings": [
+    {
+      "rawcode": "h0I9",
+      "field": "name",
+      "source": "object data / war3map.wts",
+      "reference_before": "TRIGSTR_25358",
+      "before": "|cffd7b4f5Безликий дозорный|r",
+      "after": "|cffe4cfa3Безликий дозорный|r"
+    },
+    {
+      "rawcode": "h0I9",
+      "field": "tip",
+      "source": "object data / war3map.wts",
+      "reference_before": "TRIGSTR_25360",
+      "before": "Обучить |cffd7b4f5Безликого дозорного|r",
+      "after": "|cffe4cfa3Безликий дозорный|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "h0I9",
+      "field": "ubertip",
+      "source": "object data / war3map.wts",
+      "reference_before": "TRIGSTR_21287",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r\n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r\nСущество что обитает в тени. Его скорость поражает любого, все что нужно, для отличного разведчика, перед вторжением.\n|cfff0e68cВозможные улучшения|r:\n• Развить силу ИЛИ Развить скорость:\n|cfff0e68cОсобенности|r:\n• Отсутсвует",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Боец с атакой хаосом для наземных сражений.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "h0IA",
+      "field": "name",
+      "source": "object data / war3map.wts",
+      "reference_before": "TRIGSTR_25361",
+      "before": "|cffd7b4f5Безликий разрушитель|r",
+      "after": "|cffe4cfa3Безликий разрушитель|r"
+    },
+    {
+      "rawcode": "h0IA",
+      "field": "tip",
+      "source": "object data / war3map.wts",
+      "reference_before": "TRIGSTR_25363",
+      "before": "Обучить |cffd7b4f5Безликого разрушителя|r",
+      "after": "|cffe4cfa3Безликий разрушитель|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "h0IA",
+      "field": "ubertip",
+      "source": "object data / war3map.wts",
+      "reference_before": "TRIGSTR_21574",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa23 сек.|r\n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный|r\nРазрушитель, это тяжелый вони, что способен поражать массивные строения, но крайне медлителен и не эффективен против юнитов.\n|cfff0e68cВозможные улучшения|r:\n• Развить силу ИЛИ Развить скорость:\n|cfff0e68cОсобенности|r:\n• Отсутвует",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Осадный боец для разрушения зданий.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "h0IB",
+      "field": "name",
+      "source": "object data / war3map.wts",
+      "reference_before": "TRIGSTR_25364",
+      "before": "|cffd7b4f5Сущность бездны|r",
+      "after": "|cffe4cfa3Сущность бездны|r"
+    },
+    {
+      "rawcode": "h0IB",
+      "field": "tip",
+      "source": "object data / war3map.wts",
+      "reference_before": "TRIGSTR_25366",
+      "before": "Обучить |cffd7b4f5Сущность бездны|r",
+      "after": "|cffe4cfa3Сущность бездны|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "h0IB",
+      "field": "ubertip",
+      "source": "object data / war3map.wts",
+      "reference_before": "TRIGSTR_23592",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa29 сек.|r\n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r\nСлабое проявление бездны, что явилось в материальный мир, не полностью, но оно способно внушать страх во врагов\n|cfff0e68cВозможные улучшения|r:\n• Развить силу ИЛИ Развить скорость:\n• Разрушение эфира\n|cfff0e68cОсобенности|r:\n• Сотрясение бездны: С небольшой вероятностью мжет оглушить цель.",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Боец с колющей атакой и усилениями против заклинателей.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРазрушение Эфира|cffced4da: атаки сжигают ману цели (требуется исследование «Разрушение Эфира»).|n- |cffa9c7deСотрясение Бездны|cffced4da: атаки могут оглушить цель и нанести дополнительный урон (требуется исследование «Улучшение Сущности»).|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "h0IC",
+      "field": "name",
+      "source": "object data / war3map.wts",
+      "reference_before": "TRIGSTR_25367",
+      "before": "|cffd7b4f5Могущественная Сущность бездны|r",
+      "after": "|cffe4cfa3Могущественная Сущность бездны|r"
+    },
+    {
+      "rawcode": "h0IC",
+      "field": "tip",
+      "source": "object data / war3map.wts",
+      "reference_before": "TRIGSTR_25369",
+      "before": "Обучить |cffd7b4f5Могущественна Сущность бездны|r",
+      "after": "|cffe4cfa3Могущественная Сущность бездны|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "h0IC",
+      "field": "ubertip",
+      "source": "object data / war3map.wts",
+      "reference_before": "TRIGSTR_25269",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa33 сек.|r\n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r\nСущность, что состоит из чистейшей энергии безды. Она куда сильнее обычной сущности, и куда свирепие.\n|cfff0e68cВозможные улучшения|r:\n• Развить силу ИЛИ Развить скорость:\n• Разрушение эфира\n|cfff0e68cОсобенности|r:\n• Сила бездны: Атаки сущности, могут наносить кратный урон своим врагам.",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Боец с атакой хаосом и критическими ударами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСила Бездны|cffced4da: атаки могут нанести увеличенный урон.|n- |cffa9c7deРазрушение Эфира|cffced4da: атаки сжигают ману цели (требуется исследование «Разрушение Эфира»).|n|nАтакует наземные цели.|r"
+    }
+  ],
+  "evidence": {
+    "abilities": [
+      "A10X: Afbk, requires R0EL",
+      "A10W: AHbh, requires R0EK, levels=1",
+      "A10Z: AOcr, levels=1"
+    ],
+    "attacks": "weapson=1; targs1 includes ground and excludes air",
+    "lua": "Bezlikie.lua: no references to these four units or three abilities"
+  },
+  "remaining": [
+    "Остальные юниты, рабочие, призывы и формы",
+    "Собственные карточки способностей и исследований",
+    "Проверка отображения в Warcraft III"
+  ]
+}

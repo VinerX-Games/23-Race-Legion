@@ -1,0 +1,299 @@
+=== UPGRADE R07K (levels: 1) ===
+ Level 1:
+   name: |cffe6beaaКульт Сумеречного Молота|r (raw: TRIGSTR_10670)
+   tip: |cffe6beaaКульт Сумеречного Молота|r (raw: TRIGSTR_10671)
+   hotkey: None (raw: None)
+   ubertip: Это изначально оркская организация, которая охватывает неестественное расширение прав и возможностей и апокалипсис. Сегодня это организация различных рас, верований и происхождения, которые все едины в своем вечном стремлении к забвению. (raw: TRIGSTR_20118)
+
+=== UPGRADE R0KD (levels: 1) ===
+ Level 1:
+   name: |cffe6beaaКульт Сумеречного Молота или Орда Второй Войны|r (raw: TRIGSTR_5598)
+   tip: |cffe6beaaКульт Сумеречного Молота или Орда Второй Войны|r (raw: TRIGSTR_5599)
+   hotkey: None (raw: None)
+   ubertip: Организация, состоящая полностью из людей и ставящая своей целью уничтожение всей нежити и ее пособников на территории бывшего Лордерона (raw: TRIGSTR_37033)
+
+=== UPGRADE R04D (levels: 6) ===
+ Level 1:
+   name: |cffd7b4f6Фанатизм|r |cffffff00[1]|r (raw: TRIGSTR_40024)
+   tip: |cffd7b4f6Фанатизм|r [1] (raw: TRIGSTR_12523)
+   hotkey: Z (raw: TRIGSTR_26641)
+   ubertip: Увеличивает запас маны всем культистам, ускоряет регенерацию их маны, а также увеличивает их урон на 2 ед., увеличивает здоровье на 30 ед. (raw: TRIGSTR_8454)
+ Level 2:
+   name: |cffd7b4f6Фанатизм|r |cffffff00[2]|r (raw: TRIGSTR_40026)
+   tip: |cffd7b4f6Фанатизм|r [2] (raw: TRIGSTR_12524)
+   hotkey: Z (raw: TRIGSTR_26642)
+   ubertip: Увеличивает запас маны всем культистам, ускоряет регенерацию их маны, а также увеличивает их урон на 2 ед., увеличивает здоровье на 30 ед. (raw: TRIGSTR_8453)
+ Level 3:
+   name: |cffd7b4f6Фанатизм|r |cffffff00[3]|r (raw: TRIGSTR_40027)
+   tip: |cffd7b4f6Фанатизм|r [3] (raw: TRIGSTR_12525)
+   hotkey: Z (raw: TRIGSTR_26655)
+   ubertip: Увеличивает запас маны всем культистам, ускоряет регенерацию их маны, а также увеличивает их урон на 2 ед., увеличивает здоровье на 30 ед. (raw: TRIGSTR_8448)
+ Level 4:
+   name: |cffd7b4f6Фанатизм|r |cffffff00[4]|r (raw: TRIGSTR_40028)
+   tip: |cffd7b4f6Фанатизм|r [4] (raw: TRIGSTR_12526)
+   hotkey: Z (raw: TRIGSTR_26692)
+   ubertip: Увеличивает запас маны всем культистам, ускоряет регенерацию их маны, а также увеличивает их урон на 2 ед., увеличивает здоровье на 30 ед. (raw: TRIGSTR_8449)
+ Level 5:
+   name: |cffd7b4f6Фанатизм|r |cffffff00[5]|r (raw: TRIGSTR_40084)
+   tip: |cffd7b4f6Фанатизм|r [5] (raw: TRIGSTR_12527)
+   hotkey: Z (raw: TRIGSTR_26708)
+   ubertip: Увеличивает запас маны всем культистам, ускоряет регенерацию их маны, а также увеличивает их урон на 2 ед., увеличивает здоровье на 30 ед. (raw: TRIGSTR_8451)
+ Level 6:
+   name: |cffd7b4f6Фанатизм|r |cffffff00[6]|r (raw: TRIGSTR_40104)
+   tip: |cffd7b4f6Фанатизм|r [6] (raw: TRIGSTR_12528)
+   hotkey: Z (raw: TRIGSTR_26709)
+   ubertip: Увеличивает запас маны всем культистам, ускоряет регенерацию их маны, а также увеличивает их урон на 2 ед., увеличивает здоровье на 30 ед. (raw: TRIGSTR_8452)
+
+=== UPGRADE R04V (levels: 1) ===
+ Level 1:
+   name: |cffd7b4f6Грубая Сила|r (raw: TRIGSTR_7680)
+   tip: Исследовать «|cffd7b4f6Грубая Сила|r» (raw: TRIGSTR_7681)
+   hotkey: A (raw: TRIGSTR_11616)
+   ubertip: Увеличивает урон на 2 ед., |cffd7b4f6Рубаке|r (raw: TRIGSTR_7682)
+
+=== UPGRADE R00O (levels: 1) ===
+ Level 1:
+   name: |cffd7b4f6Тяжелые удары|r (raw: TRIGSTR_7661)
+   tip: Исследовать «|cffd7b4f6Тяжелые удары|r» (raw: TRIGSTR_7662)
+   hotkey: Z (raw: TRIGSTR_26867)
+   ubertip: Позволяет использовать способность |cffd7b4f6Тяжелые удары|r (raw: TRIGSTR_7663)
+
+=== UPGRADE R04S (levels: 2) ===
+ Level 1:
+   name: |cffd7b4f6Фанатичная Вера|r (raw: TRIGSTR_7664)
+   tip: Исследовать «|cffd7b4f6Фанатичная Вера|r» (raw: TRIGSTR_7665)
+   hotkey: S (raw: TRIGSTR_12123)
+   ubertip: Позволяет использовать способность |cffd7b4f6Тяжелые удары|r (raw: TRIGSTR_7666)
+ Level 2:
+   name: |cffd7b4f6Фанатичная Вера|r (raw: TRIGSTR_7667)
+   tip: Исследовать «|cffd7b4f6Фанатичная Вера|r» (raw: TRIGSTR_7668)
+   hotkey: S (raw: TRIGSTR_12141)
+   ubertip: Позволяет использовать способность |cffd7b4f6Тяжелые удары|r (raw: TRIGSTR_7669)
+
+=== UPGRADE R04U (levels: 1) ===
+ Level 1:
+   name: |cffd7b4f6Порченные снаряды|r (raw: TRIGSTR_7673)
+   tip: Исследовать «|cffd7b4f6Порченные снаряды|r» (raw: TRIGSTR_7674)
+   hotkey: C (raw: TRIGSTR_17186)
+   ubertip: Позволяет использовать способность |cffd7b4f6Порченные снаряды|r (raw: TRIGSTR_7675)
+
+=== UPGRADE R0EJ (levels: 6) ===
+ Level 1:
+   name: |cffd7b4f6Улучшенные инструменты|r (raw: TRIGSTR_40857)
+   tip: Исследовать |cffd7b4f6Улучшенные инструменты|r (raw: TRIGSTR_40863)
+   hotkey: Z (raw: TRIGSTR_34473)
+   ubertip: Увеличивают объем переносимой работниками древесины на 5. (raw: TRIGSTR_22416)
+ Level 2:
+   name: |cffd7b4f6Улучшенные инструменты|r (raw: TRIGSTR_40858)
+   tip: Исследовать |cffd7b4f6Улучшенные инструменты|r (raw: TRIGSTR_40864)
+   hotkey: Z (raw: TRIGSTR_34608)
+   ubertip: Увеличивают объем переносимой работниками древесины на 5. (raw: TRIGSTR_22411)
+ Level 3:
+   name: |cffd7b4f6Улучшенные инструменты|r (raw: TRIGSTR_40859)
+   tip: Исследовать |cffd7b4f6Улучшенные инструменты|r (raw: TRIGSTR_40865)
+   hotkey: Z (raw: TRIGSTR_34469)
+   ubertip: Увеличивают объем переносимой работниками древесины на 5. (raw: TRIGSTR_22412)
+ Level 4:
+   name: |cffd7b4f6Улучшенные инструменты|r (raw: TRIGSTR_40860)
+   tip: Исследовать |cffd7b4f6Улучшенные инструменты|r (raw: TRIGSTR_40866)
+   hotkey: Z (raw: TRIGSTR_34470)
+   ubertip: Увеличивают объем переносимой работниками древесины на 5. (raw: TRIGSTR_22413)
+ Level 5:
+   name: |cffd7b4f6Улучшенные инструменты|r (raw: TRIGSTR_40861)
+   tip: Исследовать |cffd7b4f6Улучшенные инструменты|r (raw: TRIGSTR_40867)
+   hotkey: Z (raw: TRIGSTR_34471)
+   ubertip: Увеличивают объем переносимой работниками древесины на 5. (raw: TRIGSTR_22414)
+ Level 6:
+   name: |cffd7b4f6Улучшенные инструменты|r (raw: TRIGSTR_40862)
+   tip: Исследовать |cffd7b4f6Улучшенные инструменты|r (raw: TRIGSTR_40868)
+   hotkey: Z (raw: TRIGSTR_34472)
+   ubertip: Увеличивают объем переносимой работниками древесины на 5. (raw: TRIGSTR_22415)
+
+=== UPGRADE R05S (levels: 6) ===
+ Level 1:
+   name: |cffd7b4f6Стальное оружие ближнего боя|r (raw: TRIGSTR_9163)
+   tip: Исследовать |cffd7b4f6стальное оружие ближнего боя|r |cffffff00[1]|r (raw: TRIGSTR_11687)
+   hotkey: Q (raw: TRIGSTR_34639)
+   ubertip: Увеличивает урон от атак приспешников сумеречного молота, которые сражаются в ближнем бою. (raw: TRIGSTR_11948)
+ Level 2:
+   name: |cffd7b4f6Стальное оружие ближнего боя|r (raw: TRIGSTR_9165)
+   tip: Исследовать |cffd7b4f6стальное оружие ближнего боя|r |cffffff00[2]|r (raw: TRIGSTR_11834)
+   hotkey: Q (raw: TRIGSTR_34640)
+   ubertip: Увеличивает урон от атак приспешников сумеречного молота, которые сражаются в ближнем бою. (raw: TRIGSTR_12031)
+ Level 3:
+   name: |cffd7b4f6Ториевое оружие ближнего боя|r (raw: TRIGSTR_9164)
+   tip: Исследовать |cffd7b4f6ториевое оружие ближнего боя|r |cffffff00[3]|r (raw: TRIGSTR_11868)
+   hotkey: Q (raw: TRIGSTR_34691)
+   ubertip: Увеличивает урон от атак приспешников сумеречного молота, которые сражаются в ближнем бою. (raw: TRIGSTR_12032)
+ Level 4:
+   name: |cffd7b4f6Ториевое оружие ближнего боя|r (raw: TRIGSTR_9168)
+   tip: Исследовать |cffd7b4f6ториевое оружие ближнего боя|r |cffffff00[4]|r (raw: TRIGSTR_11871)
+   hotkey: Q (raw: TRIGSTR_34754)
+   ubertip: Увеличивает урон от атак приспешников сумеречного молота, которые сражаются в ближнем бою. (raw: TRIGSTR_11873)
+ Level 5:
+   name: |cffd7b4f6Арканитовое оружие ближнего боя|r (raw: TRIGSTR_9167)
+   tip: Исследовать |cffd7b4f6арканитовое оружие ближнего боя|r |cffffff00[5]|r (raw: TRIGSTR_11870)
+   hotkey: Q (raw: TRIGSTR_34692)
+   ubertip: Увеличивает урон от атак приспешников сумеречного молота, которые сражаются в ближнем бою. (raw: TRIGSTR_11872)
+ Level 6:
+   name: |cffd7b4f6Арканитовое оружие ближнего боя|r (raw: TRIGSTR_9166)
+   tip: Исследовать |cffd7b4f6арканитовое оружие ближнего боя|r |cffffff00[6]|r (raw: TRIGSTR_11869)
+   hotkey: Q (raw: TRIGSTR_34812)
+   ubertip: Увеличивает урон от атак приспешников сумеречного молота, которые сражаются в ближнем бою. (raw: TRIGSTR_11946)
+
+=== UPGRADE R05T (levels: 6) ===
+ Level 1:
+   name: |cffd7b4f6Стальная броня|r (raw: TRIGSTR_9188)
+   tip: Исследовать |cffd7b4f6стальную броню|r |cffffff00[1]|r (raw: TRIGSTR_12033)
+   hotkey: A (raw: A)
+   ubertip: Усиливает броню приспешников сумеречного молота, которые сражаются в ближнем бою. (raw: TRIGSTR_18455)
+ Level 2:
+   name: |cffd7b4f6Стальная броня|r (raw: TRIGSTR_9189)
+   tip: Исследовать |cffd7b4f6стальную броню|r |cffffff00[2]|r (raw: TRIGSTR_13612)
+   hotkey: A (raw: A)
+   ubertip: Усиливает броню приспешников сумеречного молота, которые сражаются в ближнем бою. (raw: TRIGSTR_18456)
+ Level 3:
+   name: |cffd7b4f6Ториевая броня|r (raw: TRIGSTR_9190)
+   tip: Исследовать |cffd7b4f6ториевую броню|r |cffffff00[3]|r (raw: TRIGSTR_13635)
+   hotkey: A (raw: A)
+   ubertip: Усиливает броню приспешников сумеречного молота, которые сражаются в ближнем бою. (raw: TRIGSTR_18582)
+ Level 4:
+   name: |cffd7b4f6Ториевая броня|r (raw: TRIGSTR_9193)
+   tip: Исследовать |cffd7b4f6ториевую броню|r |cffffff00[4]|r (raw: TRIGSTR_18265)
+   hotkey: A (raw: TRIGSTR_11813)
+   ubertip: Усиливает броню приспешников сумеречного молота, которые сражаются в ближнем бою. (raw: TRIGSTR_18454)
+ Level 5:
+   name: |cffd7b4f6Арканитовая броня|r (raw: TRIGSTR_9192)
+   tip: Исследовать |cffd7b4f6арканитовую броню|r |cffffff00[5]|r (raw: TRIGSTR_14376)
+   hotkey: A (raw: TRIGSTR_11851)
+   ubertip: Усиливает броню приспешников сумеречного молота, которые сражаются в ближнем бою. (raw: TRIGSTR_18451)
+ Level 6:
+   name: |cffd7b4f6Арканитовая броня|r (raw: TRIGSTR_9191)
+   tip: Исследовать |cffd7b4f6арканитовую броню|r |cffffff00[6]|r (raw: TRIGSTR_13870)
+   hotkey: A (raw: TRIGSTR_12477)
+   ubertip: Усиливает броню приспешников сумеречного молота, которые сражаются в ближнем бою. (raw: TRIGSTR_18267)
+
+=== UPGRADE R05U (levels: 6) ===
+ Level 1:
+   name: |cffd7b4f6Магия бездны|r (raw: TRIGSTR_9210)
+   tip: Исследовать |cffd7b4f6Магия бездны|r |cffffff00[1]|r (raw: TRIGSTR_18594)
+   hotkey: W (raw: TRIGSTR_36352)
+   ubertip: Увеличивает урон от дистанционных атак приспешников сумеречного молота. (raw: TRIGSTR_18632)
+ Level 2:
+   name: |cffd7b4f6Магия бездны|r (raw: TRIGSTR_9211)
+   tip: Исследовать |cffd7b4f6Магия бездны|r |cffffff00[2]|r (raw: TRIGSTR_18595)
+   hotkey: W (raw: TRIGSTR_36353)
+   ubertip: Увеличивает урон от дистанционных атак приспешников сумеречного молота. (raw: TRIGSTR_18633)
+ Level 3:
+   name: |cffd7b4f6Магия бездны|r (raw: TRIGSTR_9212)
+   tip: Исследовать |cffd7b4f6Магия бездны|r |cffffff00[3]|r (raw: TRIGSTR_18625)
+   hotkey: W (raw: TRIGSTR_36354)
+   ubertip: Увеличивает урон от дистанционных атак приспешников сумеречного молота. (raw: TRIGSTR_18634)
+ Level 4:
+   name: |cffd7b4f6Магия бездны|r (raw: TRIGSTR_9215)
+   tip: Исследовать |cffd7b4f6Магия бездны|r |cffffff00[4]|r (raw: TRIGSTR_18628)
+   hotkey: W (raw: TRIGSTR_36688)
+   ubertip: Увеличивает урон от дистанционных атак приспешников сумеречного молота. (raw: TRIGSTR_18629)
+ Level 5:
+   name: |cffd7b4f6Магия бездны|r (raw: TRIGSTR_9214)
+   tip: Исследовать |cffd7b4f6Магия бездны|r |cffffff00[5]|r (raw: TRIGSTR_18627)
+   hotkey: W (raw: TRIGSTR_36689)
+   ubertip: Увеличивает урон от дистанционных атак приспешников сумеречного молота. (raw: TRIGSTR_18630)
+ Level 6:
+   name: |cffd7b4f6Магия бездны|r (raw: TRIGSTR_9213)
+   tip: Исследовать |cffd7b4f6Магия бездны|r |cffffff00[6]|r (raw: TRIGSTR_18626)
+   hotkey: W (raw: TRIGSTR_36695)
+   ubertip: Увеличивает урон от дистанционных атак приспешников сумеречного молота. (raw: TRIGSTR_18631)
+
+=== UPGRADE R05V (levels: 6) ===
+ Level 1:
+   name: |cffd7b4f6Покровительство Бездны|r (raw: TRIGSTR_9231)
+   tip: Исследовать |cffd7b4f6Покровительство Бездны|r |cffffff00[1]|r (raw: TRIGSTR_18635)
+   hotkey: S (raw: TRIGSTR_13081)
+   ubertip: Усиливает броню приспешников сумеречного молта, которые сражаются в дальнем бою. (raw: TRIGSTR_18644)
+ Level 2:
+   name: |cffd7b4f6Покровительство Бездны|r (raw: TRIGSTR_9232)
+   tip: Исследовать |cffd7b4f6Покровительство Бездны|r |cffffff00[2]|r (raw: TRIGSTR_18636)
+   hotkey: S (raw: TRIGSTR_13168)
+   ubertip: Усиливает броню приспешников сумеречного молта, которые сражаются в дальнем бою. (raw: TRIGSTR_18645)
+ Level 3:
+   name: |cffd7b4f6Покровительство Бездны|r (raw: TRIGSTR_9233)
+   tip: Исследовать |cffd7b4f6Покровительство Бездны|r |cffffff00[3]|r (raw: TRIGSTR_18637)
+   hotkey: S (raw: TRIGSTR_13169)
+   ubertip: Усиливает броню приспешников сумеречного молта, которые сражаются в дальнем бою. (raw: TRIGSTR_18646)
+ Level 4:
+   name: |cffd7b4f6Покровительство Бездны|r (raw: TRIGSTR_9234)
+   tip: Исследовать |cffd7b4f6Покровительство Бездны|r |cffffff00[4]|r (raw: TRIGSTR_18638)
+   hotkey: S (raw: TRIGSTR_13170)
+   ubertip: Усиливает броню приспешников сумеречного молта, которые сражаются в дальнем бою. (raw: TRIGSTR_18641)
+ Level 5:
+   name: |cffd7b4f6Покровительство Бездны|r (raw: TRIGSTR_9235)
+   tip: Исследовать |cffd7b4f6Покровительство Бездны|r |cffffff00[5]|r (raw: TRIGSTR_18639)
+   hotkey: S (raw: TRIGSTR_13171)
+   ubertip: Усиливает броню приспешников сумеречного молта, которые сражаются в дальнем бою. (raw: TRIGSTR_18642)
+ Level 6:
+   name: |cffd7b4f6Покровительство Бездны|r (raw: TRIGSTR_9236)
+   tip: Исследовать |cffd7b4f6Покровительство Бездны|r |cffffff00[6]|r (raw: TRIGSTR_18640)
+   hotkey: S (raw: TRIGSTR_13172)
+   ubertip: Усиливает броню приспешников сумеречного молта, которые сражаются в дальнем бою. (raw: TRIGSTR_18643)
+
+=== UPGRADE R04Z (levels: 1) ===
+ Level 1:
+   name: |cffd7b4f6Дробящий удар|r (raw: TRIGSTR_7720)
+   tip: Исследовать «|cffd7b4f6Дробящий удар|r» (raw: TRIGSTR_7721)
+   hotkey: A (raw: TRIGSTR_11779)
+   ubertip: Позволяет использовать способность |cffd7b4f6Дробящий удар|r (raw: TRIGSTR_7722)
+
+=== UPGRADE R050 (levels: 2) ===
+ Level 1:
+   name: |cffd7b4f6Влияние бездны|r (raw: TRIGSTR_7727)
+   tip: Исследовать «|cffd7b4f6Влияние бездны|r» (raw: TRIGSTR_7728)
+   hotkey: S (raw: TRIGSTR_12335)
+   ubertip: Позволяет использовать способность |cffd7b4f6Влияние бездны|r , увеличивает характеристики  (raw: TRIGSTR_7729)
+ Level 2:
+   name: |cffd7b4f6Влияние бездны|r (raw: TRIGSTR_7730)
+   tip: Исследовать «|cffd7b4f6Влияние бездны|r» (raw: TRIGSTR_7731)
+   hotkey: S (raw: TRIGSTR_12336)
+   ubertip: Позволяет использовать способность |cffd7b4f6Влияние бездны|r , увеличивает характеристики  (raw: TRIGSTR_7732)
+
+=== UPGRADE R051 (levels: 1) ===
+ Level 1:
+   name: |cffd7b4f6Защита бездны|r (raw: TRIGSTR_7737)
+   tip: Исследовать «|cffd7b4f6Защита бездны|r» (raw: TRIGSTR_7738)
+   hotkey: C (raw: TRIGSTR_17566)
+   ubertip: Позволяет использовать способность |cffd7b4f6Защита бездны|r (raw: TRIGSTR_7739)
+
+=== UPGRADE R052 (levels: 1) ===
+ Level 1:
+   name: |cffd7b4f6Хаотичная атака|r (raw: TRIGSTR_8467)
+   tip: Исследовать «|cffd7b4f6Хаотичная атака|r» (raw: TRIGSTR_7745)
+   hotkey: D (raw: TRIGSTR_17539)
+   ubertip: Позволяет использовать способность |cffd7b4f6Хаотичная атака|r (raw: TRIGSTR_20108)
+
+=== UPGRADE R04W (levels: 3) ===
+ Level 1:
+   name: |cffd7b4f6Благодать богов|r (raw: TRIGSTR_7691)
+   tip: Исследовать «|cffd7b4f6Благодать богов|r» (raw: TRIGSTR_7692)
+   hotkey: A (raw: TRIGSTR_11629)
+   ubertip: Позволяет использовать способность Огру магу, увеличивает ману .
+Увеличение маны - +45 (raw: TRIGSTR_15196)
+ Level 2:
+   name: |cffd7b4f6Благодать богов|r (raw: TRIGSTR_7694)
+   tip: Исследовать «|cffd7b4f6Благодать богов|r» (raw: TRIGSTR_7695)
+   hotkey: A (raw: TRIGSTR_11667)
+   ubertip: Позволяет использовать способность Огру магу, увеличивает ману .
+Увеличение маны - +45 (raw: TRIGSTR_15197)
+ Level 3:
+   name: |cffd7b4f6Благодать богов|r (raw: TRIGSTR_7698)
+   tip: Исследовать «|cffd7b4f6Благодать богов|r» (raw: TRIGSTR_7699)
+   hotkey: A (raw: TRIGSTR_11778)
+   ubertip: Позволяет использовать способность Огру магу, увеличивает ману .
+Увеличение маны - +45 (raw: TRIGSTR_15198)
+
+=== UPGRADE R04X (levels: 1) ===
+ Level 1:
+   name: |cffd7b4f6Выносливость|r (raw: TRIGSTR_7702)
+   tip: Исследовать «|cffd7b4f6Выносливость|r» (raw: TRIGSTR_7703)
+   hotkey: S (raw: TRIGSTR_12333)
+   ubertip: Увеличивает здоровье Огру воину.
+|cff6f2583Увеличение здоровья - + 150.|r (raw: TRIGSTR_15199)

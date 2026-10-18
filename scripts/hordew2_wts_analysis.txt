@@ -1,0 +1,736 @@
+=== SELECTION ===
+A1JN name: sid=26684 -> '|cffdcb496Орда Второй Войны|r'
+A1JN tips[tip1]: sid=35847 -> '|cffdcb496Орда Второй Войны|r'
+A1JN ubertips[ubertip1]: sid=25701 -> "|cffa0beaaСоздатель расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaСложность:|r |cffdcd2aa●●●|r●●|r|n|cffa0beaaПериод:|r |cffc8dcaaWarcraft II|r|n|nВ последние дни Первой Войны, лидер Теневого Совета, колдун Гул'дан впал в глубокую кому, пытаясь проникнуть в разум Медива. Без происков Теневого Совета Орда стала жертвой междоусобиц. В результате государственного переворота, возглавляемого Оргримом Молотом Рока, чтобы покончить с тем, что он считал разлагающим влиянием на Орду, Теневой Совет был уничтожен, а также его марионеточный вождь, Чернорук Разрушитель. Молот Рока успешно взял под контроль оставшиеся силы Орды и начал подкреплять их опустошенные армии орками и ограми из Темного Портала. Тролли, огры и орки сражались бок о бок, и вскоре предприимчивые гоблины увидели потенциальную выгоду в помощи им. Орда получила поддержку от гоблинов-машинистов и наемников, и с помощью Души Демона сумела поработить Красного Дракона Алекстразу и большую часть ее выводка."
+
+=== MARKERS ===
+Marker R0KB names[name1]: sid=32677 -> '|cffdcb496Орда Второй Войны'
+Marker R0KB tips[tip1]: sid=32678 -> '|cffdcb496Орда Второй Войны'
+Marker R0KB ubertips[ubertip1]: sid=None -> None
+Marker R0KC names[name1]: sid=5595 -> '|cffe6beaaОрда скверны или Орда Второй Войны|r'
+Marker R0KC tips[tip1]: sid=5596 -> '|cffe6beaaОрда скверны или Орда Второй Войны|r'
+Marker R0KC ubertips[ubertip1]: sid=27305 -> 'Организация, состоящая полностью из людей и ставящая своей целью уничтожение всей нежити и ее пособников на территории бывшего Лордерона'
+Marker R0KD names[name1]: sid=5598 -> '|cffe4cfa3Культ Сумеречного Молота|r'
+Marker R0KD tips[tip1]: sid=5599 -> '|cffe4cfa3Культ Сумеречного Молота|r'
+Marker R0KD ubertips[ubertip1]: sid=37033 -> '|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер выбора ветви развития Культа Сумеречного Молота.|r'
+
+=== BUILDINGS (13) ===
+[w20q] HK=Q name_sid=11791 ('|cffdcb496Дом вождей|r') tip_sid=11792 ('Построить |cffdcb496Дом вождей|r') ub_sid=None (None)
+[w20w] HK=Z name_sid=11793 ('|cffdcb496Крепость|r') tip_sid=11794 ('Улучшить до |cffdcb496Крепости|r') ub_sid=None (None)
+[w20e] HK=Z name_sid=11795 ('|cffdcb496Цитадель|r') tip_sid=11814 ('Улучшить до |cffdcb496Цитадели|r') ub_sid=None (None)
+[w20r] HK=W name_sid=11815 ('|cffdcb496Казармы|r') tip_sid=11816 ('Построить |cffdcb496Казармы|r') ub_sid=None (None)
+[w20y] HK=A name_sid=11819 ('|cffdcb496Свиноферма|r') tip_sid=11820 ('Построить |cffdcb496Свиноферма|r') ub_sid=None (None)
+[w214] HK=E name_sid=11885 ('|cffdcb496Лесопилка|r') tip_sid=11886 ('Построить |cffdcb496Лесопилку|r') ub_sid=None (None)
+[w20a] HK=S name_sid=11824 ('|cffdcb496Алтарь бури|r') tip_sid=11825 ('Построить |cffdcb496Алтарь бури|r') ub_sid=None (None)
+[w20u] HK=Z name_sid=11822 ('|cffdcb496Сторожевая башня|r') tip_sid=11823 ('Построить |cffdcb496Сторожевую башню|r') ub_sid=None (None)
+[w20t] HK=R name_sid=69 ('|cffdcb496Темный Храм|r') tip_sid=70 ('Построить |cffdcb496Темный Храм|r') ub_sid=None (None)
+[w20i] HK=D name_sid=11889 ('|cffdcb496Гоблинская лабаратория|r') tip_sid=11890 ('Построить |cffdcb496Гоблинскую лабараторию|r') ub_sid=None (None)
+[w210] HK=F name_sid=11829 ('|cffdcb496Логово красных драконов|r') tip_sid=11830 ('Построить |cffdcb496Логово красных драконов|r') ub_sid=None (None)
+[w218] HK=C name_sid=22656 ('|cffdcb496Верфь|r') tip_sid=22661 ('Построить |cffdcb496Верфь|r') ub_sid=None (None)
+[w219] HK=Q name_sid=22670 ('|cffdcb496Нефтяная платформа|r') tip_sid=22676 ('Построить |cffdcb496Нефтяную платформу|r') ub_sid=None (None)
+
+=== HEROES (4) ===
+[W200] HK=Z name_sid=11863 ('|cffdcb496Вождь Клана|r') tip_sid=11867 ('Призвать |cffdcb496Вождя клана|r') ub_sid=None (None) prop_sid=11864 ('Мейм,Некрош,Ренд') awk_sid=11865 ('Воскресить |cffdcb496Вождя клана|r') rev_sid=11866 ('Воскресить |cffdcb496Вождя клана|r')
+[W201] HK=C name_sid=11874 ('|cffdcb496Сумеречный маг|r') tip_sid=11879 ('Призвать |cffdcb496Сумеречного мага|r') ub_sid=None (None) prop_sid=11876 ('Горлоп,Оммок,Дентарг') awk_sid=11877 ('Воскресить |cffdcb496Сумеречного мага|r') rev_sid=11878 ('Воскресить |cffdcb496Сумеречного мага|r')
+[W202] HK=X name_sid=11880 ('|cffdcb496Предводитель троллей|r') tip_sid=11884 ('Призвать |cffdcb496Предводителя троллей|r') ub_sid=None (None) prop_sid=11881 ('Мэйм') awk_sid=11882 ('Воскресить |cffdcb496Предводителя троллей|r') rev_sid=11883 ('Воскресить |cffdcb496Предводителя троллей|r')
+[W203] HK=B name_sid=None (None) tip_sid=None (None) ub_sid=None (None) prop_sid=None (None) awk_sid=None (None) rev_sid=None (None)
+
+=== UNITS (21) ===
+[w200] HK=Q name_sid=11731 ('|cffdcb496Батрак|r') tip_sid=11745 ('Обучить |cffdcb496Батрака|r') ub_sid=None (None)
+[w208] HK=Q name_sid=11787 ('|cffdcb496Рубака|r') tip_sid=11788 ('Обучить |cffdcb496Рубаку|r') ub_sid=None (None)
+[w203] HK=W name_sid=11750 ('|cffdcb496Метатель топоров|r') tip_sid=11751 ('Нанять |cffdcb496Метателя топоров|r') ub_sid=None (None)
+[w204] HK=E name_sid=11752 ('|cffdcb496Огр-воин|r') tip_sid=11753 ('Нанять |cffdcb496Огра-воина|r') ub_sid=None (None)
+[xd04] HK=T name_sid=None (None) tip_sid=None (None) ub_sid=None (None)
+[w209] HK=E name_sid=11789 ('|cffdcb496Рыцарь смерти|r') tip_sid=11790 ('Нанять |cffdcb496Рыцаря Смерти|r') ub_sid=None (None)
+[w211] HK=Q name_sid=11857 ('|cffdcb496Жрец|r') tip_sid=11858 ('Нанять |cffdcb496Жреца|r') ub_sid=None (None)
+[w205] HK=W name_sid=11754 ('|cffdcb496Огр-маг|r') tip_sid=11755 ('Нанять |cffdcb496Огр-мага|r') ub_sid=None (None)
+[xd01] HK=S name_sid=None (None) tip_sid=None (None) ub_sid=None (None)
+[xd06] HK=S name_sid=None (None) tip_sid=None (None) ub_sid=None (None)
+[w207] HK=E name_sid=11785 ('|cffdcb496Катапульта|r') tip_sid=11786 ('Построить |cffdcb496Катапульту|r') ub_sid=None (None)
+[w201] HK=W name_sid=11746 ('|cffdcb496Дирижабль|r') tip_sid=11747 ('Нанять |cffdcb496Дирижабль|r') ub_sid=None (None)
+[w206] HK=Q name_sid=11756 ('|cffdcb496Подрывной отряд|r') tip_sid=11784 ('Нанять |cffdcb496Подрывной отряд|r') ub_sid=None (None)
+[xd02] HK=G name_sid=None (None) tip_sid=None (None) ub_sid=None (None)
+[xd05] HK=R name_sid=None (None) tip_sid=None (None) ub_sid=None (None)
+[w202] HK=Q name_sid=11748 ('|cffdcb496Красный дракон|r') tip_sid=11749 ('Призвать |cffdcb496Красного дракона|r') ub_sid=None (None)
+[xd07] HK=W name_sid=None (None) tip_sid=None (None) ub_sid=None (None)
+[h0D4] HK=Q name_sid=None (None) tip_sid=None (None) ub_sid=None (None)
+[h0D6] HK=W name_sid=3002 ('|cffe4cfa3Фрегат|r') tip_sid=None (None) ub_sid=None (None)
+[h0D5] HK=E name_sid=10916 ('|cffe4cfa3Дредноут|r') tip_sid=10918 ('|cffe4cfa3Дредноут|r (|cffffffffE|r)') ub_sid=None (None)
+[w220] HK=A name_sid=22696 ('|cffdcb496Нефтяной танкер|r') tip_sid=22698 ('Произвести |cffdcb496Нефтяной танкер|r') ub_sid=None (None)
+
+=== UPGRADES (40) ===
+[R004] levels=1 (sids: 3)
+   names[name1]: sid=13295 -> '|cffe4cfa3Улучшение до Кровавого Палача
+   tips[tip1]: sid=13298 -> '|cffe4cfa3Улучшение до Кровавого Палача
+   ubertips[ubertip1]: sid=18682 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Превр
+[R0KB] levels=1 (sids: 2)
+   names[name1]: sid=32677 -> '|cffdcb496Орда Второй Войны'
+   tips[tip1]: sid=32678 -> '|cffdcb496Орда Второй Войны'
+[R0KC] levels=1 (sids: 3)
+   names[name1]: sid=5595 -> '|cffe6beaaОрда скверны или Орда Второй 
+   tips[tip1]: sid=5596 -> '|cffe6beaaОрда скверны или Орда Второй 
+   ubertips[ubertip1]: sid=27305 -> 'Организация, состоящая полностью из люд
+[R0KD] levels=1 (sids: 3)
+   names[name1]: sid=5598 -> '|cffe4cfa3Культ Сумеречного Молота|r'
+   tips[tip1]: sid=5599 -> '|cffe4cfa3Культ Сумеречного Молота|r'
+   ubertips[ubertip1]: sid=37033 -> '|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебн
+[Roar] levels=6 (sids: 18)
+   names[name1]: sid=36184 -> '|cffe4cfa3Улучшенная броня — уровень 1|
+   names[name2]: sid=36186 -> '|cffe4cfa3Улучшенная броня — уровень 3|
+   names[name3]: sid=36185 -> '|cffe4cfa3Улучшенная броня — уровень 2|
+   names[name4]: sid=36173 -> '|cffff5454Улучшенная броня|r'
+   names[name5]: sid=36174 -> '|cffff5454Улучшенная броня|r'
+   names[name6]: sid=36175 -> '|cffff5454Улучшенная броня|r'
+   tips[tip1]: sid=36187 -> '|cffe4cfa3Улучшенная броня — уровень 1|
+   tips[tip2]: sid=36188 -> '|cffe4cfa3Улучшенная броня — уровень 2|
+   tips[tip3]: sid=36189 -> '|cffe4cfa3Улучшенная броня — уровень 3|
+   tips[tip4]: sid=36176 -> 'Исследовать |cffff5454Улучшеннeю броня|
+   tips[tip5]: sid=36177 -> 'Исследовать |cffff5454Улучшеннeю броня|
+   tips[tip6]: sid=36178 -> '|cffe4cfa3Улучшенная броня — уровень 4|
+   ubertips[ubertip1]: sid=36190 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увели
+   ubertips[ubertip2]: sid=36179 -> '|cffe4cfa3Улучшенная броня — уровень 5|
+   ubertips[ubertip3]: sid=36180 -> '|cffe4cfa3Улучшенная броня — уровень 6|
+   ubertips[ubertip4]: sid=36181 -> '|cffe4cfa3Улучшенная броня — уровень 4|
+   ubertips[ubertip5]: sid=36182 -> '|cffe4cfa3Улучшенная броня — уровень 5|
+   ubertips[ubertip6]: sid=36183 -> '|cffe4cfa3Улучшенная броня — уровень 6|
+[Roen] levels=1 (sids: 3)
+   names[name1]: sid=26346 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повыш
+   tips[tip1]: sid=26347 -> 'Study "Entangling"'
+   ubertips[ubertip1]: sid=26366 -> 'Teaches raiders "Entangling," which pul
+[Rome] levels=6 (sids: 18)
+   names[name1]: sid=36197 -> '|cffe4cfa3Оружие ближнего боя — уровень
+   names[name2]: sid=36198 -> '|cffe4cfa3Оружие ближнего боя — уровень
+   names[name3]: sid=36199 -> '|cffe4cfa3Оружие ближнего боя — уровень
+   names[name4]: sid=36191 -> '|cffe4cfa3Оружие ближнего боя — уровень
+   names[name5]: sid=36192 -> '|cffe4cfa3Оружие ближнего боя — уровень
+   names[name6]: sid=36193 -> '|cffe4cfa3Оружие ближнего боя — уровень
+   tips[tip1]: sid=36200 -> '|cffe4cfa3Оружие ближнего боя — уровень
+   tips[tip2]: sid=36201 -> '|cffe4cfa3Оружие ближнего боя — уровень
+   tips[tip3]: sid=36202 -> '|cffe4cfa3Оружие ближнего боя — уровень
+   tips[tip4]: sid=36194 -> '|cffe4cfa3Оружие ближнего боя — уровень
+   tips[tip5]: sid=36195 -> '|cffe4cfa3Оружие ближнего боя — уровень
+   tips[tip6]: sid=36196 -> '|cffe4cfa3Оружие ближнего боя — уровень
+   ubertips[ubertip1]: sid=22775 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увели
+   ubertips[ubertip2]: sid=22776 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увели
+   ubertips[ubertip3]: sid=22794 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увели
+   ubertips[ubertip4]: sid=22795 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увели
+   ubertips[ubertip5]: sid=22796 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увели
+   ubertips[ubertip6]: sid=22797 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увели
+[Ropg] levels=1 (sids: 3)
+   names[name1]: sid=22401 -> '|cffe4cfa3Грабеж|r'
+   tips[tip1]: sid=22402 -> '|cffe4cfa3Грабеж|r'
+   ubertips[ubertip1]: sid=22403 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Воины
+[Rora] levels=6 (sids: 18)
+   names[name1]: sid=36167 -> '|cffe4cfa3Оружие дальнего боя — уровень
+   names[name2]: sid=36168 -> '|cffe4cfa3Оружие дальнего боя — уровень
+   names[name3]: sid=36169 -> '|cffe4cfa3Оружие дальнего боя — уровень
+   names[name4]: sid=36161 -> '|cffe4cfa3Оружие дальнего боя — уровень
+   names[name5]: sid=36162 -> '|cffe4cfa3Оружие дальнего боя — уровень
+   names[name6]: sid=36163 -> '|cffe4cfa3Оружие дальнего боя — уровень
+   tips[tip1]: sid=36170 -> '|cffe4cfa3Оружие дальнего боя — уровень
+   tips[tip2]: sid=36171 -> '|cffe4cfa3Оружие дальнего боя — уровень
+   tips[tip3]: sid=36172 -> '|cffe4cfa3Оружие дальнего боя — уровень
+   tips[tip4]: sid=36164 -> '|cffe4cfa3Оружие дальнего боя — уровень
+   tips[tip5]: sid=36165 -> '|cffe4cfa3Оружие дальнего боя — уровень
+   tips[tip6]: sid=36166 -> '|cffe4cfa3Оружие дальнего боя — уровень
+   ubertips[ubertip1]: sid=22746 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увели
+   ubertips[ubertip2]: sid=22747 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увели
+   ubertips[ubertip3]: sid=22748 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увели
+   ubertips[ubertip4]: sid=22743 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увели
+   ubertips[ubertip5]: sid=22744 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увели
+   ubertips[ubertip6]: sid=22745 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увели
+[Rost] levels=3 (sids: 9)
+   names[name1]: sid=36203 -> '|cffe4cfa3Обучение магов поддержки — ст
+   names[name2]: sid=36204 -> '|cffe4cfa3Обучение магов поддержки — ст
+   names[name3]: sid=36207 -> '|cffe4cfa3Обучение магов поддержки — ст
+   tips[tip1]: sid=36205 -> '|cffe4cfa3Обучение магов поддержки — ст
+   tips[tip2]: sid=36206 -> '|cffe4cfa3Обучение магов поддержки — ст
+   tips[tip3]: sid=36208 -> '|cffe4cfa3Обучение магов поддержки — ст
+   ubertips[ubertip1]: sid=23130 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повыш
+   ubertips[ubertip2]: sid=23133 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повыш
+   ubertips[ubertip3]: sid=23134 -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повыш
+[w286] levels=1 (sids: 3)
+   names[name1]: sid=37885 -> '|cffdcb496Зачарованные топоры|r'
+   tips[tip1]: sid=37886 -> '|cffdcb496Зачарованные топоры|r'
+   ubertips[ubertip1]: sid=37888 -> 'Топоры спогут отскакивать в дополнитель
+[w291] levels=1 (sids: 3)
+   names[name1]: sid=37800 -> '|cffdcb496Драконы маг|r'
+   tips[tip1]: sid=37801 -> '|cffdcb496Драконы маг|r'
+   ubertips[ubertip1]: sid=37802 -> '|cffdcb496Драконы маг|r'
+[w292] levels=1 (sids: 3)
+   names[name1]: sid=37791 -> '|cffdcb496Драконы хп|r'
+   tips[tip1]: sid=37792 -> '|cffdcb496Драконы хп|r'
+   ubertips[ubertip1]: sid=37793 -> '|cffdcb496Драконы хп|r'
+[w293] levels=1 (sids: 3)
+   names[name1]: sid=37782 -> '|cffdcb496Драконы урон|r'
+   tips[tip1]: sid=37783 -> '|cffdcb496Драконы урон|r'
+   ubertips[ubertip1]: sid=37784 -> '|cffdcb496Драконы урон|r'
+[w2r0] levels=6 (sids: 18)
+   names[name1]: sid=37490 -> '|cffdcb496Крепкая броня|r'
+   names[name2]: sid=37491 -> '|cffdcb496Крепкая броня|r'
+   names[name3]: sid=37492 -> '|cffdcb496Крепкая броня|r'
+   names[name4]: sid=37493 -> '|cffdcb496Крепкая броня|r'
+   names[name5]: sid=37494 -> '|cffdcb496Крепкая броня|r'
+   names[name6]: sid=37495 -> '|cffdcb496Крепкая броня|r'
+   tips[tip1]: sid=37496 -> 'Исследовать |cffdcb496Крепкую броню|r'
+   tips[tip2]: sid=37497 -> 'Исследовать |cffdcb496Крепкую броню|r'
+   tips[tip3]: sid=37498 -> 'Исследовать |cffdcb496Крепкую броню|r'
+   tips[tip4]: sid=37499 -> 'Исследовать |cffdcb496Крепкую броню|r'
+   tips[tip5]: sid=37500 -> 'Исследовать |cffdcb496Крепкую броню|r'
+   tips[tip6]: sid=37501 -> 'Исследовать |cffdcb496Крепкую броню|r'
+   ubertips[ubertip1]: sid=37502 -> 'Усиливает броню армию Орды.'
+   ubertips[ubertip2]: sid=37503 -> 'Усиливает броню армию Орды.'
+   ubertips[ubertip3]: sid=37504 -> 'Усиливает броню армию Орды.'
+   ubertips[ubertip4]: sid=37505 -> 'Усиливает броню армию Орды.'
+   ubertips[ubertip5]: sid=37506 -> 'Усиливает броню армию Орды.'
+   ubertips[ubertip6]: sid=37507 -> 'Усиливает броню армию Орды.'
+[w2r1] levels=6 (sids: 18)
+   names[name1]: sid=37513 -> '|cffdcb496Оружие ближнего боя|r'
+   names[name2]: sid=37514 -> '|cffdcb496Оружие ближнего боя|r'
+   names[name3]: sid=37515 -> '|cffdcb496Оружие ближнего боя|r'
+   names[name4]: sid=37516 -> '|cffdcb496Оружие ближнего боя|r'
+   names[name5]: sid=37517 -> '|cffdcb496Оружие ближнего боя|r'
+   names[name6]: sid=37518 -> '|cffdcb496Оружие ближнего боя|r'
+   tips[tip1]: sid=37519 -> 'Исследовать |cffdcb496Оружие ближнего б
+   tips[tip2]: sid=37520 -> 'Исследовать |cffdcb496Оружие ближнего б
+   tips[tip3]: sid=37521 -> 'Исследовать |cffdcb496Оружие ближнего б
+   tips[tip4]: sid=37522 -> 'Исследовать |cffdcb496Оружие ближнего б
+   tips[tip5]: sid=37523 -> 'Исследовать |cffdcb496Оружие ближнего б
+   tips[tip6]: sid=37524 -> 'Исследовать |cffdcb496Оружие ближнего б
+   ubertips[ubertip1]: sid=37525 -> 'Усиливает урон воинов Орды ближнего боя
+   ubertips[ubertip2]: sid=37526 -> 'Усиливает урон воинов Орды ближнего боя
+   ubertips[ubertip3]: sid=37527 -> 'Усиливает урон воинов Орды ближнего боя
+   ubertips[ubertip4]: sid=37528 -> 'Усиливает урон воинов Орды ближнего боя
+   ubertips[ubertip5]: sid=37529 -> 'Усиливает урон воинов Орды ближнего боя
+   ubertips[ubertip6]: sid=37530 -> 'Усиливает урон воинов Орды ближнего боя
+[w2r2] levels=6 (sids: 18)
+   names[name1]: sid=37539 -> '|cffdcb496Оружие дальнего боя|r'
+   names[name2]: sid=37540 -> '|cffdcb496Оружие дальнего боя|r'
+   names[name3]: sid=37541 -> '|cffdcb496Оружие дальнего боя|r'
+   names[name4]: sid=37542 -> '|cffdcb496Оружие дальнего боя|r'
+   names[name5]: sid=37543 -> '|cffdcb496Оружие дальнего боя|r'
+   names[name6]: sid=37544 -> '|cffdcb496Оружие дальнего боя|r'
+   tips[tip1]: sid=37545 -> 'Исследовать |cffdcb496Оружие дальнего б
+   tips[tip2]: sid=37546 -> 'Исследовать |cffdcb496Оружие ближнего б
+   tips[tip3]: sid=37547 -> 'Исследовать |cffdcb496Оружие дальнего б
+   tips[tip4]: sid=37548 -> 'Исследовать |cffdcb496Оружие дальнего б
+   tips[tip5]: sid=37549 -> 'Исследовать |cffdcb496Оружие дальнего б
+   tips[tip6]: sid=37550 -> 'Исследовать |cffdcb496Оружие дальнего б
+   ubertips[ubertip1]: sid=37551 -> 'Усиливает урон воинов Орды ближнего боя
+   ubertips[ubertip2]: sid=37552 -> 'Усиливает урон воинов Орды ближнего боя
+   ubertips[ubertip3]: sid=37553 -> 'Усиливает урон воинов Орды ближнего боя
+   ubertips[ubertip4]: sid=37554 -> 'Усиливает урон воинов Орды ближнего боя
+   ubertips[ubertip5]: sid=37555 -> 'Усиливает урон воинов Орды ближнего боя
+   ubertips[ubertip6]: sid=37556 -> 'Усиливает урон воинов Орды ближнего боя
+[w2r3] levels=4 (sids: 12)
+   names[name1]: sid=37561 -> '|cffdcb496Военная экспертиза|r'
+   names[name2]: sid=37562 -> '|cffdcb496Военная экспертиза|r'
+   names[name3]: sid=37563 -> '|cffdcb496Военная экспертиза|r'
+   names[name4]: sid=37564 -> '|cffdcb496Военная экспертиза|r'
+   tips[tip1]: sid=37565 -> 'Исследовать |cffdcb496Военную экспертиз
+   tips[tip2]: sid=37566 -> 'Исследовать |cffdcb496Военную экспертиз
+   tips[tip3]: sid=37567 -> 'Исследовать |cffdcb496Военную экспертиз
+   tips[tip4]: sid=37568 -> 'Исследовать |cffdcb496Военную экспертиз
+   ubertips[ubertip1]: sid=37569 -> 'Увеличивает начальный опыт юнита, а тем
+   ubertips[ubertip2]: sid=37573 -> 'Увеличивает начальный опыт юнита, а тем
+   ubertips[ubertip3]: sid=37574 -> 'Увеличивает начальный опыт юнита, а тем
+   ubertips[ubertip4]: sid=37575 -> 'Увеличивает начальный опыт юнита, а тем
+[w2r4] levels=4 (sids: 12)
+   names[name1]: sid=37579 -> '|cffdcb496Чародейства Огров|r'
+   names[name2]: sid=37580 -> '|cffdcb496Чародейства Огров|r'
+   names[name3]: sid=37581 -> '|cffdcb496Чародейства Огров|r'
+   names[name4]: sid=37582 -> '|cffdcb496Чародейства Огров|r'
+   tips[tip1]: sid=37583 -> 'Исследовать |cffdcb496Чародейства Огров
+   tips[tip2]: sid=37586 -> 'Исследовать |cffdcb496Чародейства Огров
+   tips[tip3]: sid=37584 -> 'Исследовать |cffdcb496Чародейства Огров
+   tips[tip4]: sid=37585 -> 'Исследовать |cffdcb496Чародейства Огров
+   ubertips[ubertip1]: sid=37589 -> 'Увеличивает запас здоровья и маны огров
+   ubertips[ubertip2]: sid=37590 -> 'Увеличивает запас здоровья и маны огров
+   ubertips[ubertip3]: sid=37591 -> 'Увеличивает запас здоровья и маны огров
+   ubertips[ubertip4]: sid=37592 -> 'Увеличивает запас здоровья и маны огров
+[w2r5] levels=4 (sids: 12)
+   names[name1]: sid=37596 -> '|cffdcb496Ритуалы смерти|r'
+   names[name2]: sid=37597 -> '|cffdcb496Ритуалы смерти|r'
+   names[name3]: sid=37598 -> '|cffdcb496Ритуалы смерти|r'
+   names[name4]: sid=37599 -> '|cffdcb496Ритуалы смерти|r'
+   tips[tip1]: sid=37600 -> 'Исследовать |cffdcb496Ритуалы смерти|r'
+   tips[tip2]: sid=37603 -> 'Исследовать |cffdcb496Ритуалы смерти|r'
+   tips[tip3]: sid=37601 -> 'Исследовать |cffdcb496Ритуалы смерти|r'
+   tips[tip4]: sid=37602 -> 'Исследовать |cffdcb496Ритуалы смерти|r'
+   ubertips[ubertip1]: sid=37606 -> 'Увеличивает запас здоровья и маны рыцар
+   ubertips[ubertip2]: sid=37607 -> 'Увеличивает запас здоровья и маны рыцар
+   ubertips[ubertip3]: sid=37608 -> 'Увеличивает запас здоровья и маны рыцар
+   ubertips[ubertip4]: sid=37609 -> 'Увеличивает запас здоровья и маны рыцар
+[w2r6] levels=4 (sids: 12)
+   names[name1]: sid=37613 -> '|cffdcb496Колдовство вуду|r'
+   names[name2]: sid=37614 -> '|cffdcb496Колдовство вуду|r'
+   names[name3]: sid=37615 -> '|cffdcb496Колдовство вуду|r'
+   names[name4]: sid=37616 -> '|cffdcb496Колдовство вуду|r'
+   tips[tip1]: sid=37617 -> 'Исследовать |cffdcb496Колдовство вуду|r
+   tips[tip2]: sid=37620 -> 'Исследовать |cffdcb496Колдовство вуду|r
+   tips[tip3]: sid=37618 -> 'Исследовать |cffdcb496Колдовство вуду|r
+   tips[tip4]: sid=37619 -> 'Исследовать |cffdcb496Колдовство вуду|r
+   ubertips[ubertip1]: sid=37623 -> 'Увеличивает запас здоровья и маны жрецо
+   ubertips[ubertip2]: sid=37624 -> 'Увеличивает запас здоровья и маны жрецо
+   ubertips[ubertip3]: sid=37625 -> 'Увеличивает запас здоровья и маны жрецо
+   ubertips[ubertip4]: sid=37626 -> 'Увеличивает запас здоровья и маны жрецо
+[w2r7] levels=3 (sids: 9)
+   names[name1]: sid=22194 -> '|cffdcb496Тренировки рубак|r'
+   names[name2]: sid=37627 -> '|cffdcb496Тренировки рубак|r'
+   names[name3]: sid=37631 -> '|cffdcb496Тренировки рубак|r'
+   tips[tip1]: sid=25319 -> 'Исследовать |cffdcb496Тренировки рубак|
+   tips[tip2]: sid=37628 -> 'Исследовать |cffdcb496Тренировки рубак|
+   tips[tip3]: sid=37634 -> 'Исследовать |cffdcb496Тренировки рубак|
+   ubertips[ubertip1]: sid=5532 -> '+100 к запасу здоровья рубак и +5 к уро
+   ubertips[ubertip2]: sid=5535 -> '+100 к запасу здоровья рубак и +5 к уро
+   ubertips[ubertip3]: sid=7897 -> '+100 к запасу здоровья рубак и +5 к уро
+[w2r8] levels=3 (sids: 9)
+   names[name1]: sid=7899 -> '|cffdcb496Тренировки огров|r'
+   names[name2]: sid=37636 -> '|cffdcb496Тренировки огров|r'
+   names[name3]: sid=37640 -> '|cffdcb496Тренировки огров|r'
+   tips[tip1]: sid=11817 -> 'Исследовать |cffdcb496Тренировки огров|
+   tips[tip2]: sid=37637 -> 'Исследовать |cffdcb496Тренировки огров|
+   tips[tip3]: sid=37643 -> 'Исследовать |cffdcb496Тренировки огров|
+   ubertips[ubertip1]: sid=40228 -> '+125 к запасу здоровья огров.'
+   ubertips[ubertip2]: sid=40229 -> '+125 к запасу здоровья огров.'
+   ubertips[ubertip3]: sid=40230 -> '+125 к запасу здоровья огров.'
+[w2r9] levels=3 (sids: 9)
+   names[name1]: sid=18418 -> '|cffdcb496Тренировки метателей|r'
+   names[name2]: sid=37647 -> '|cffdcb496Тренировки метателей|r'
+   names[name3]: sid=37651 -> '|cffdcb496Тренировки метателей|r'
+   tips[tip1]: sid=20461 -> 'Исследовать |cffdcb496Тренировки метате
+   tips[tip2]: sid=37648 -> 'Исследовать |cffdcb496Тренировки метате
+   tips[tip3]: sid=37654 -> 'Исследовать |cffdcb496Тренировки метате
+   ubertips[ubertip1]: sid=5537 -> '+85 к запасу здоровья метателей топоров
+   ubertips[ubertip2]: sid=5556 -> '+85 к запасу здоровья метателей топоров
+   ubertips[ubertip3]: sid=21251 -> '+85 к запасу здоровья метателей топоров
+[w2ra] levels=2 (sids: 6)
+   names[name1]: sid=37713 -> '|cffdcb496Разведение драконов|r'
+   names[name2]: sid=37714 -> '|cffdcb496Разведение драконов|r'
+   tips[tip1]: sid=37717 -> 'Исследовать |cffdcb496Разведение дракон
+   tips[tip2]: sid=37720 -> 'Исследовать |cffdcb496Разведение дракон
+   ubertips[ubertip1]: sid=12715 -> 'Увеличивает дальность атаки драконов и 
+   ubertips[ubertip2]: sid=12958 -> 'Увеличивает дальность атаки драконов и 
+[w2rb] levels=6 (sids: 18)
+   names[name1]: sid=37730 -> '|cffdcb496Улучшенные пилы|r'
+   names[name2]: sid=37748 -> '|cffdcb496Улучшенные пилы|r'
+   names[name3]: sid=37731 -> '|cffdcb496Улучшенные пилы|r'
+   names[name4]: sid=37732 -> '|cffdcb496Улучшенные пилы|r'
+   names[name5]: sid=37733 -> '|cffdcb496Улучшенные пилы|r'
+   names[name6]: sid=37734 -> '|cffdcb496Улучшенные пилы|r'
+   tips[tip1]: sid=37735 -> 'Исследовать |cffdcb496Улучшенные пилы|r
+   tips[tip2]: sid=37749 -> 'Исследовать |cffdcb496Улучшенные пилы|r
+   tips[tip3]: sid=37736 -> 'Исследовать |cffdcb496Улучшенные пилы|r
+   tips[tip4]: sid=37737 -> 'Исследовать |cffdcb496Улучшенные пилы|r
+   tips[tip5]: sid=37738 -> 'Исследовать |cffdcb496Улучшенные пилы|r
+   tips[tip6]: sid=37739 -> 'Исследовать |cffdcb496Улучшенные пилы|r
+   ubertips[ubertip1]: sid=37745 -> 'Увеличивают объем переносимой работника
+   ubertips[ubertip2]: sid=37740 -> 'Увеличивают объем переносимой работника
+   ubertips[ubertip3]: sid=37741 -> 'Увеличивают объем переносимой работника
+   ubertips[ubertip4]: sid=37742 -> 'Увеличивают объем переносимой работника
+   ubertips[ubertip5]: sid=37743 -> 'Увеличивают объем переносимой работника
+   ubertips[ubertip6]: sid=37744 -> 'Увеличивают объем переносимой работника
+[w2re] levels=2 (sids: 4)
+   names[name1]: sid=37676 -> '|cffdcb496Заряды взрыводия|r'
+   names[name2]: sid=37677 -> '|cffdcb496Заряды взрыводия|r'
+   tips[tip1]: sid=37680 -> 'Исследовать |cffdcb496Заряды взрыводия|
+   tips[tip2]: sid=37683 -> 'Исследовать |cffdcb496Заряды взрыводия|
+[w2rq] levels=2 (sids: 6)
+   names[name1]: sid=37659 -> '|cffdcb496Комплектование дирижаблей|r'
+   names[name2]: sid=37660 -> '|cffdcb496Комплектование дирижаблей|r'
+   tips[tip1]: sid=37663 -> 'Исследовать |cffdcb496Комплектование ди
+   tips[tip2]: sid=37666 -> 'Исследовать |cffdcb496Комплектование ди
+   ubertips[ubertip1]: sid=37669 -> 'Увеличивает шансы, что дирижабли подбер
+   ubertips[ubertip2]: sid=37670 -> 'Увеличивает шансы, что дирижабли подбер
+
+=== ABILITIES (86) ===
+[A001] |cffe4cfa3Абордаж!|r (levels: 1) sids: 3
+   name: sid=287 -> '|cffe4cfa3Абордаж!|r'
+   tips_tip1: sid=285 -> '|cffe4cfa3Абордаж!|r'
+   ubertips_ubertip1: sid=286 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Оглуша
+[A002] |cffe4cfa3Боковые пушки|r (levels: 3) sids: 7
+   name: sid=289 -> '|cffe4cfa3Боковые пушки|r'
+   tips_tip1: sid=509 -> '|cffe4cfa3Боковые пушки 1|r'
+   tips_tip2: sid=510 -> '|cffe4cfa3Боковые пушки 2|r'
+   tips_tip3: sid=511 -> '|cffe4cfa3Боковые пушки 3|r'
+   ubertips_ubertip1: sid=290 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дополн
+   ubertips_ubertip2: sid=488 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дополн
+   ubertips_ubertip3: sid=489 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дополн
+[A003] Боковые пушки (Линкор) (levels: 3) sids: 7
+   name: sid=292 -> 'Боковые пушки (Линкор)'
+   tips_tip1: sid=512 -> 'Боковые пушки 1 (Линкор)'
+   tips_tip2: sid=513 -> 'Боковые пушки 2 (Линкор)'
+   tips_tip3: sid=514 -> 'Боковые пушки 3 (Линкор)'
+   ubertips_ubertip1: sid=293 -> 'Дополнительные выстрелы из боковых пуше
+   ubertips_ubertip2: sid=492 -> 'Дополнительные выстрелы из боковых пуше
+   ubertips_ubertip3: sid=493 -> 'Дополнительные выстрелы из боковых пуше
+[A009] |cffe4cfa3Сделать флагманом|r (levels: 1) sids: 3
+   name: sid=27198 -> '|cffe4cfa3Сделать флагманом|r'
+   tips_tip1: sid=27197 -> '|cffe4cfa3Сделать флагманом|r'
+   ubertips_ubertip1: sid=565 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Делает
+[A00A] |cffe4cfa3Починка|r (levels: 3) sids: 7
+   name: sid=313 -> '|cffe4cfa3Починка|r'
+   tips_tip1: sid=473 -> '|cffe4cfa3Починка 1|r'
+   tips_tip2: sid=474 -> '|cffe4cfa3Починка 2|r'
+   tips_tip3: sid=475 -> '|cffe4cfa3Починка 3|r'
+   ubertips_ubertip1: sid=320 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Корабл
+   ubertips_ubertip2: sid=446 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Корабл
+   ubertips_ubertip3: sid=447 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Корабл
+[A00B] |cffe4cfa3Тактическое ускорение|r (levels: 3) sids: 7
+   name: sid=327 -> '|cffe4cfa3Тактическое ускорение|r'
+   tips_tip1: sid=515 -> '|cffe4cfa3Тактическое ускорение 1|r'
+   tips_tip2: sid=516 -> '|cffe4cfa3Тактическое ускорение 2|r'
+   tips_tip3: sid=517 -> '|cffe4cfa3Тактическое ускорение 3|r'
+   ubertips_ubertip1: sid=559 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускоре
+   ubertips_ubertip2: sid=560 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускоре
+   ubertips_ubertip3: sid=561 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускоре
+[A00G] |cffe4cfa3Массированный обстрел|r (levels: 3) sids: 7
+   name: sid=365 -> '|cffe4cfa3Массированный обстрел|r'
+   tips_tip1: sid=518 -> '|cffe4cfa3Массированный обстрел 1|r'
+   tips_tip2: sid=519 -> '|cffe4cfa3Массированный обстрел 2|r'
+   tips_tip3: sid=520 -> '|cffe4cfa3Массированный обстрел 3|r'
+   ubertips_ubertip1: sid=367 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстре
+   ubertips_ubertip2: sid=484 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстре
+   ubertips_ubertip3: sid=485 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстре
+[A00I] |cffe4cfa3Магическая посадка|r (levels: 1) sids: 3
+   name: sid=534 -> '|cffe4cfa3Магическая посадка|r'
+   tips_tip1: sid=532 -> '|cffe4cfa3Магическая посадка|r'
+   ubertips_ubertip1: sid=563 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Телепо
+[A01C] |cffe4cfa3Свечение героя|r (levels: 1) sids: 2
+   name: sid=2038 -> '|cffe4cfa3Свечение героя|r'
+   tips_tip1: sid=2039 -> '|cffe4cfa3Свечение героя|r'
+[A0I3] |cffe4cfa3Небольшой скачок|r (levels: 1) sids: 5
+   name: sid=26484 -> '|cffe4cfa3Небольшой скачок|r'
+   researchtip: sid=10064 -> '|cffe4cfa3Небольшой скачок|r'
+   researchubertip: sid=10976 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгнове
+   tips_tip1: sid=26476 -> '|cffe4cfa3Небольшой скачок|r'
+   ubertips_ubertip1: sid=26477 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da СПОСОБ
+[A0IQ] |cffe4cfa3Обозначить столицу|r (levels: 1) sids: 3
+   name: sid=27193 -> '|cffe4cfa3Обозначить столицу|r'
+   tips_tip1: sid=27969 -> '|cffe4cfa3Обозначить столицу|r'
+   ubertips_ubertip1: sid=27970 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обозна
+[A0LI] |cffe4cfa3Обмен Золота на Дерево|r (levels: 1) sids: 3
+   name: sid=2888 -> '|cffe4cfa3Обмен Золота на Дерево|r'
+   tips_tip1: sid=3692 -> '|cffe4cfa3Обмен Золота на Дерево|r'
+   ubertips_ubertip1: sid=20630 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Отнима
+[A0LJ] |cffe4cfa3Обмен Дерева на Золото|r (levels: 1) sids: 3
+   name: sid=12857 -> '|cffe4cfa3Обмен Дерева на Золото|r'
+   tips_tip1: sid=12886 -> '|cffe4cfa3Обмен Дерева на Золото|r'
+   ubertips_ubertip1: sid=20631 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Отнима
+[A0QO] |cff8080ffДраконья ярость|r (levels: 1) sids: 3
+   name: sid=16381 -> '|cff8080ffДраконья ярость|r'
+   tips_tip1: sid=16382 -> '|cff8080ffДраконья ярость|r'
+   ubertips_ubertip1: sid=16428 -> 'Дает |cff8080ff<AOcr,DataA1>%-й|r шанс 
+[A0RE] |cff8080ffУскользание|r (levels: 1) sids: 3
+   name: sid=16920 -> '|cff8080ffУскользание|r'
+   tips_tip1: sid=16921 -> '|cff8080ffУскользание|r'
+   ubertips_ubertip1: sid=16922 -> 'Дает |cff8080ff<ACev,DataA1,%>%-й|r шан
+[A0Z7] |cffff5454Усиленная броня|r (levels: 1) sids: 3
+   name: sid=35389 -> '|cffff5454Усиленная броня|r'
+   tips_tip1: sid=35398 -> '|cffff5454Усиленная броня|r'
+   ubertips_ubertip1: sid=35956 -> '-4 от получаемого юнитом урона от атак.
+[A0ZA] |cffe4cfa3Скрытая ярость|r (levels: 1) sids: 3
+   name: sid=36869 -> '|cffe4cfa3Скрытая ярость|r'
+   tips_tip1: sid=36868 -> '|cffff5454Скрытая ярость|r'
+   ubertips_ubertip1: sid=9882 -> 'С вероятность 4% воин войдет в состояни
+[A15N] |cffe4cfa3Зона ремонта|r (levels: 1) sids: 5
+   name: sid=25578 -> '|cffe4cfa3Зона ремонта|r'
+   researchtip: sid=25582 -> '|cffe4cfa3Зона ремонта|r'
+   researchubertip: sid=26500 -> 'Восстанавливает здоровье механическим ю
+   tips_tip1: sid=25589 -> '|cffe4cfa3Зона ремонта|r'
+   ubertips_ubertip1: sid=25608 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восста
+[A176] |cffe4cfa3Сильный удар|r (levels: 1) sids: 3
+   name: sid=28183 -> '|cffe4cfa3Сильный удар|r'
+   tips_tip1: sid=28182 -> '|cffe4cfa3Сильный удар|r'
+   ubertips_ubertip1: sid=28961 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da С веро
+[A178] |cffe4cfa3Аура Защиты|r (levels: 1) sids: 3
+   name: sid=27766 -> '|cffe4cfa3Аура Защиты|r'
+   tips_tip1: sid=27767 -> '|cffe4cfa3Аура Защиты|r'
+   ubertips_ubertip1: sid=20305 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увелич
+[A1JN] |cffdcb496Орда Второй Войны|r (levels: 1) sids: 3
+   name: sid=26684 -> '|cffdcb496Орда Второй Войны|r'
+   tips_tip1: sid=35847 -> '|cffdcb496Орда Второй Войны|r'
+   ubertips_ubertip1: sid=25701 -> "|cffa0beaaСоздатель расы:|r |cffc8dcaaV
+[A1JO] |cffdcb496Взять на борт|r (levels: 1) sids: 3
+   name: sid=32683 -> '|cffdcb496Взять на борт|r'
+   tips_tip1: sid=32684 -> '|cffdcb496Взять на борт|r'
+   ubertips_ubertip1: sid=32685 -> 'Берет на борт наземного союзника, не та
+[A1LO] |cffe4cfa3Жажда крови|r (levels: 1) sids: 2
+   name: sid=39019 -> '|cffe4cfa3Жажда крови|r'
+   tips_tip1: sid=39021 -> '|cffff5454Жажда крови|r'
+[A1LS] |cffff5454Рассеивание заклинаний|r (levels: 1) sids: 2
+   name: sid=39023 -> '|cffff5454Рассеивание заклинаний|r'
+   tips_tip1: sid=39024 -> '|cffff5454Рассеивание заклинаний|r'
+[A1OJ] |cffe4cfa3Воин Ша|r (levels: 1) sids: 3
+   name: sid=10871 -> '|cffe4cfa3Воин Ша|r'
+   tips_tip1: sid=10873 -> '|cffff5454Воин Ша|r'
+   ubertips_ubertip1: sid=41120 -> '+20% к скорости атаки и перемещения, но
+[AOcr] Критический удар (levels: 4) sids: 2
+   tips_tip4: sid=9628 -> 'Критический удар [|cffffcc004-й уровень
+   ubertips_ubertip4: sid=5166 -> 'Дает <AOcr,DataA4>%-й шанс нанести <AOc
+[AOmi] Зеркальная копия (levels: 4) sids: 4
+   tips_tip4: sid=22621 -> 'Зеркальная копия [|cffffcc004-й уровень
+   ubertips_ubertip2: sid=22622 -> 'Создает <AOmi,DataA2> иллюзорную копию 
+   ubertips_ubertip3: sid=22623 -> 'Создает <AOmi,DataA3> иллюзорную копию 
+   ubertips_ubertip4: sid=22624 -> 'Создает <AOmi,DataA4> иллюзорную копию 
+[AOwk] Танец ветра (levels: 4) sids: 2
+   tips_tip4: sid=23502 -> '|cffe4cfa3Танец ветра — [уровень 4]|r (
+   ubertips_ubertip4: sid=20908 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует
+[AOww] Вихрь клинков (levels: 2) sids: 2
+   tips_tip2: sid=9617 -> 'Вихрь клинков'
+   ubertips_ubertip2: sid=23512 -> 'Окружает мастера клинка вихрем разрушит
+[Ablo] |cffff5454Жажда крови|r (levels: 1) sids: 2
+   name: sid=32726 -> '|cffff5454Жажда крови|r'
+   tips_tip1: sid=36909 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Скрытн
+[Alsh] |cffff5454Щит молний|r (levels: 1) sids: 2
+   name: sid=39009 -> '|cffff5454Щит молний|r'
+   tips_tip1: sid=39008 -> '|cffff5454Щит молний|r'
+[Aprg] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость перемещения и атаки союзника.|r (levels: 1) sids: 2
+   name: sid=39011 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увелич
+   tips_tip1: sid=39012 -> '|cffff5454Развеивание магии|r'
+[w284] |cffdcb496Сопротивление магии|r (levels: 1) sids: 3
+   name: sid=38304 -> '|cffdcb496Сопротивление магии|r'
+   tips_tip1: sid=38303 -> '|cffdcb496Сопротивление магии|r'
+   ubertips_ubertip1: sid=27982 -> 'Огры получают лишь 35% магического урон
+[w285] |cffdcb496Сопротивление магии|r (levels: 1) sids: 1
+   name: sid=38302 -> '|cffdcb496Сопротивление магии|r'
+[w288] |cffdcb496Пламенное дыхание|r (levels: 1) sids: 3
+   name: sid=37769 -> '|cffdcb496Пламенное дыхание|r'
+   tips_tip1: sid=37770 -> '|cffdcb496Пламенное дыхание|r'
+   ubertips_ubertip1: sid=37771 -> 'Выдыхает огонь, нанося 55 урона врагам 
+[w289] |cffdcb496Огненный столб|r (levels: 1) sids: 2
+   name: sid=37767 -> '|cffdcb496Огненный столб|r'
+   tips_tip1: sid=37768 -> '|cffdcb496Огненный столб|r'
+[w290] |cffdcb496Прочная чешуя|r (levels: 1) sids: 3
+   name: sid=37765 -> '|cffdcb496Прочная чешуя|r'
+   tips_tip1: sid=37766 -> '|cffdcb496Прочная чешуя|r'
+   ubertips_ubertip1: sid=4677 -> '-6 от получаемого драконом урона от ата
+[w294] |cffdcb496Драконы защитники|r (levels: 1) sids: 3
+   name: sid=37761 -> '|cffdcb496Драконы защитники|r'
+   tips_tip1: sid=37762 -> '|cffdcb496Драконы защитники|r'
+   ubertips_ubertip1: sid=37763 -> 'Увеличивает здоровье драконов и добавля
+[w295] |cffdcb496Драконы поджигатели|r (levels: 1) sids: 3
+   name: sid=37758 -> '|cffdcb496Драконы поджигатели|r'
+   tips_tip1: sid=37759 -> '|cffdcb496Драконы поджигатели|r'
+   ubertips_ubertip1: sid=37760 -> 'Добавляет драконам способности.'
+[w296] |cffdcb496Обстрел|r (levels: 1) sids: 3
+   name: sid=37399 -> '|cffdcb496Обстрел|r'
+   tips_tip1: sid=37400 -> '|cffdcb496Обстрел|r'
+   ubertips_ubertip1: sid=26773 -> 'Дирижабль раз в 5 секунд выпускает раке
+[w297] |cffdcb496Драконы огнепускатели|r (levels: 1) sids: 3
+   name: sid=11818 -> '|cffdcb496Драконы огнепускатели|r'
+   tips_tip1: sid=11958 -> '|cffdcb496Драконы огнепускатели|r'
+   ubertips_ubertip1: sid=37757 -> 'Увеличивает урон атак драконов.'
+[w298] |cffdcb496Страх|r (levels: 2) sids: 7
+   name: sid=37398 -> '|cffdcb496Страх|r'
+   researchtip: sid=37395 -> '|cffdcb496Страх|r'
+   researchubertip: sid=37396 -> 'Не дает врагам в указанной области атак
+   tips_tip1: sid=37391 -> '|cffdcb496Страх|r'
+   tips_tip2: sid=37392 -> '|cffdcb496Страх|r'
+   ubertips_ubertip1: sid=37393 -> 'Не дает врагам в указанной области атак
+   ubertips_ubertip2: sid=37394 -> 'Не дает врагам в указанной области атак
+[w299] |cffdcb496Поле развоплощения|r (levels: 4) sids: 7
+   name: sid=37384 -> '|cffdcb496Поле развоплощения|r'
+   researchtip: sid=37385 -> 'Изучить |cffdcb496Поле развоплощения|r 
+   tips_tip1: sid=37386 -> '|cffdcb496Поле развоплощения|r [|cffffc
+   tips_tip2: sid=37387 -> '|cffdcb496Поле развоплощения|r [|cffffc
+   tips_tip3: sid=37388 -> '|cffdcb496Поле развоплощения|r [|cffffc
+   tips_tip4: sid=37389 -> '|cffdcb496Поле развоплощения|r [|cffffc
+   ubertips_ubertip4: sid=9844 -> 'Обрушивает на указанную область <AHbz,D
+[w2a0] |cffdcb496Кузня войны|r (levels: 15) sids: 31
+   name: sid=11961 -> '|cffdcb496Кузня войны|r'
+   tips_tip1: sid=11960 -> '|cffdcb496Кузня войны|r'
+   tips_tip2: sid=11969 -> '|cffdcb496Кузня войны|r'
+   tips_tip3: sid=11970 -> '|cffdcb496Кузня войны|r'
+   tips_tip4: sid=11971 -> '|cffdcb496Кузня войны|r'
+   tips_tip5: sid=11972 -> '|cffdcb496Кузня войны|r'
+   tips_tip6: sid=12088 -> '|cffdcb496Кузня войны|r'
+   tips_tip7: sid=12101 -> '|cffdcb496Кузня войны|r'
+   tips_tip8: sid=12102 -> '|cffdcb496Кузня войны|r'
+   tips_tip9: sid=12103 -> '|cffdcb496Кузня войны|r'
+   tips_tip10: sid=12104 -> '|cffdcb496Кузня войны|r'
+   tips_tip11: sid=12105 -> '|cffdcb496Кузня войны|r'
+   tips_tip12: sid=12106 -> '|cffdcb496Кузня войны|r'
+   tips_tip13: sid=12107 -> '|cffdcb496Кузня войны|r'
+   tips_tip14: sid=12108 -> '|cffdcb496Кузня войны|r'
+   tips_tip15: sid=12109 -> '|cffdcb496Герой Войны|r'
+   ubertips_ubertip1: sid=11968 -> 'Данный юнит при любых своих полезных де
+   ubertips_ubertip2: sid=12110 -> 'Данный юнит при любых своих полезных де
+   ubertips_ubertip3: sid=12111 -> 'Данный юнит при любых своих полезных де
+   ubertips_ubertip4: sid=12112 -> 'Данный юнит при любых своих полезных де
+   ubertips_ubertip5: sid=12113 -> 'Данный юнит при любых своих полезных де
+   ubertips_ubertip6: sid=12114 -> 'Данный юнит при любых своих полезных де
+   ubertips_ubertip7: sid=12115 -> 'Данный юнит при любых своих полезных де
+   ubertips_ubertip8: sid=12116 -> 'Данный юнит при любых своих полезных де
+   ubertips_ubertip9: sid=12117 -> 'Данный юнит при любых своих полезных де
+   ubertips_ubertip10: sid=12118 -> 'Данный юнит при любых своих полезных де
+   ubertips_ubertip11: sid=12167 -> 'Данный юнит при любых своих полезных де
+   ubertips_ubertip12: sid=12168 -> 'Данный юнит при любых своих полезных де
+   ubertips_ubertip13: sid=12169 -> 'Данный юнит при любых своих полезных де
+   ubertips_ubertip14: sid=12170 -> 'Данный юнит при любых своих полезных де
+   ubertips_ubertip15: sid=12171 -> '|cffdcb496Текущий уровень бойца 15|r, п
+[w2a1] |cffdcb496Разыскная бригада|r (levels: 3) sids: 7
+   name: sid=12173 -> '|cffdcb496Разыскная бригада|r'
+   tips_tip1: sid=12172 -> '|cffdcb496Разыскная пригада|r'
+   tips_tip2: sid=12176 -> '|cffdcb496Разыскная пригада|r'
+   tips_tip3: sid=12177 -> '|cffdcb496Разыскная пригада|r'
+   ubertips_ubertip1: sid=12175 -> 'Юниты, которые могли погибнуть от гряду
+   ubertips_ubertip2: sid=12428 -> 'Юниты, которые могли погибнуть от гряду
+   ubertips_ubertip3: sid=12431 -> 'Юниты, которые могли погибнуть от гряду
+[w2a2] |cffdcb496Ба-бах!|r (levels: 3) sids: 7
+   name: sid=12493 -> '|cffdcb496Ба-бах!|r'
+   tips_tip1: sid=12492 -> '|cffdcb496Ба-бах!|r'
+   tips_tip2: sid=12766 -> '|cffdcb496Ба-бах!|r'
+   tips_tip3: sid=12770 -> '|cffdcb496Ба-бах!|r'
+   ubertips_ubertip1: sid=12778 -> 'Наносит 100 урона в небольшой области. 
+   ubertips_ubertip2: sid=12791 -> 'Наносит 125 урона в небольшой области. 
+   ubertips_ubertip3: sid=12800 -> 'Наносит 150 урона в небольшой области. 
+[w2a3] |cffdcb496Перелет|r (levels: 1) sids: 3
+   name: sid=12488 -> '|cffdcb496Перелет|r'
+   tips_tip1: sid=12489 -> '|cffdcb496Перелет|r'
+   ubertips_ubertip1: sid=12490 -> 'В течении 30 секунд юнит сможет перелет
+[w2a4] |cffdcb496Жажда крови|r (levels: 1) sids: 3
+   name: sid=16439 -> '|cffdcb496Жажда крови|r'
+   tips_tip1: sid=16440 -> '|cffdcb496Жажда крови|r'
+   ubertips_ubertip1: sid=16441 -> '+20% к скорости атаки и +10% к скорости
+[w2a5] |cffdcb496Воскрешение мертвых|r (levels: 1) sids: 2
+   name: sid=16444 -> '|cffdcb496Воскрешение мертвых|r'
+   tips_tip1: sid=16445 -> '|cffdcb496Воскрешение мертвых|r'
+[w2a6] |cffdcb496Око Кил'Рога|r (levels: 1) sids: 3
+   name: sid=16446 -> "|cffdcb496Око Кил'Рога|r"
+   tips_tip1: sid=16447 -> "|cffdcb496Око Кил'Рога|r"
+   ubertips_ubertip1: sid=20211 -> 'Призывает Око Килрога, усиливающее арми
+[w2a8] |cffdcb496Темный доспех|r (levels: 1) sids: 3
+   name: sid=37256 -> '|cffdcb496Темный доспех|r'
+   tips_tip1: sid=37257 -> '|cffdcb496Темный доспех|r'
+   ubertips_ubertip1: sid=37258 -> 'Укрывает союзника костяным щитом, котор
+[w2a9] |cffdcb496Взрывная руна|r (levels: 1) sids: 3
+   name: sid=20757 -> '|cffdcb496Взрывная руна|r'
+   tips_tip1: sid=20212 -> '|cffdcb496Взрывная руна|r'
+   ubertips_ubertip1: sid=20215 -> 'Создает 3 руны, которые через 3 секунды
+[w2aA] |cffdcb496Ярость берсерка|r (levels: 4) sids: 11
+   name: sid=37364 -> '|cffdcb496Ярость берсерка|r'
+   researchtip: sid=37706 -> '|cffdcb496Ярость берсерка|r'
+   researchubertip: sid=37705 -> 'Ускоряет атаку и передвижение героя.'
+   tips_tip1: sid=37350 -> '|cffdcb496Ярость берсерка|r'
+   tips_tip2: sid=37351 -> '|cffdcb496Ярость берсерка|r'
+   tips_tip3: sid=37352 -> '|cffdcb496Ярость берсерка|r'
+   tips_tip4: sid=37353 -> '|cffdcb496Ярость берсерка|r'
+   ubertips_ubertip1: sid=37363 -> 'Ускоряет атаку на <w2aA,DataA1,%>% и пе
+   ubertips_ubertip2: sid=37354 -> 'Ускоряет атаку на <w2aA,DataA1,%>% и пе
+   ubertips_ubertip3: sid=37355 -> 'Ускоряет атаку на <w2aA,DataA1,%>% и пе
+   ubertips_ubertip4: sid=37356 -> 'Ускоряет атаку на <w2aA,DataA1,%>% и пе
+[w2aQ] |cffdcb496Разъедающее зелье|r (levels: 2) sids: 4
+   name: sid=37366 -> '|cffdcb496Разъедающее зелье|r'
+   researchtip: sid=37369 -> 'Изучить |cffdcb496Разъедающее зелье|r [
+   tips_tip1: sid=37367 -> '|cffdcb496Разъедающее зелье|r [|cffffcc
+   tips_tip2: sid=37368 -> '|cffdcb496Разъедающее зелье|r [|cffffcc
+[w2aW] |cffdcb496Стрелы тьмы|r (levels: 4) sids: 7
+   name: sid=37370 -> '|cffdcb496Стрелы тьмы|r'
+   researchtip: sid=37371 -> 'Изучить |cffdcb496Стрелы тьмы|r [|cffff
+   tips_tip1: sid=37372 -> '|cffdcb496Стрелы тьмы|r [|cffffcc001-й 
+   tips_tip2: sid=37373 -> '|cffdcb496Стрелы тьмы|r [|cffffcc002-й 
+   tips_tip3: sid=37374 -> '|cffdcb496Стрелы тьмы|r [|cffffcc003-й 
+   tips_tip4: sid=37375 -> '|cffdcb496Стрелы тьмы|r [|cffffcc004-й 
+   ubertips_ubertip4: sid=27451 -> 'Выпускает в секторе перед собой стаю не
+[w2aZ] |cffdcb496Аура гениальности|r (levels: 4) sids: 6
+   name: sid=37378 -> '|cffdcb496Аура гениальности|r'
+   tips_tip1: sid=37379 -> '|cffdcb496Аура Гениальности|r [|cffffcc
+   tips_tip2: sid=37380 -> '|cffdcb496Аура Гениальности|r [|cffffcc
+   tips_tip3: sid=37381 -> '|cffdcb496Аура Гениальности|r [|cffffcc
+   tips_tip4: sid=37382 -> '|cffdcb496Аура Гениальности|r [|cffffcc
+   ubertips_ubertip4: sid=37383 -> 'Ускоряет регенерацию маны находящихся р
+[w2ab] |cffdcb496Похищение жизни|r (levels: 1) sids: 3
+   name: sid=37263 -> '|cffdcb496Похищение жизни|r'
+   tips_tip1: sid=37264 -> '|cffdcb496Похищение жизни|r'
+   ubertips_ubertip1: sid=2926 -> 'Похищает 40 здоровья/сек. у врага. |nВр
+[w2ac] |cffdcb496Замедление|r (levels: 1) sids: 3
+   name: sid=36850 -> '|cffdcb496Замедление|r'
+   tips_tip1: sid=36849 -> '|cffdcb496Замедление|r'
+   ubertips_ubertip1: sid=37074 -> 'Замедляет атаку врага на 15% и передвиж
+[w2ad] |cffdcb496Вихрь клинков|r (levels: 4) sids: 9
+   name: sid=37326 -> '|cffdcb496Вихрь клинков|r'
+   researchtip: sid=37327 -> 'Изучить |cffdcb496Вихрь клинков|r'
+   tips_tip1: sid=37328 -> '|cffdcb496Вихрь клинков|r'
+   tips_tip2: sid=37329 -> '|cffdcb496Вихрь клинков|r'
+   tips_tip3: sid=37330 -> '|cffdcb496Вихрь клинков|r'
+   tips_tip4: sid=37331 -> '|cffdcb496Вихрь клинков|r'
+   ubertips_ubertip2: sid=37332 -> 'Окружает мастера клинка вихрем разрушит
+   ubertips_ubertip3: sid=37333 -> 'Окружает мастера клинка вихрем разрушит
+   ubertips_ubertip4: sid=37334 -> 'Окружает мастера клинка вихрем разрушит
+[w2af] |cffdcb496Метание топоров|r (levels: 4) sids: 11
+   name: sid=37336 -> '|cffdcb496Метание топоров|r'
+   researchtip: sid=37346 -> '|cffdcb496Метание топоров|r'
+   researchubertip: sid=37347 -> 'Метает топоры по каждому юниту в выбран
+   tips_tip1: sid=37337 -> '|cffdcb496Метание топоров|r'
+   tips_tip2: sid=37338 -> '|cffdcb496Метание топоров|r'
+   tips_tip3: sid=37339 -> '|cffdcb496Метание топоров|r'
+   tips_tip4: sid=37340 -> '|cffdcb496Метание топоров|r'
+   ubertips_ubertip1: sid=37341 -> 'Метает топоры по каждому юниту в выбран
+   ubertips_ubertip2: sid=37342 -> 'Метает топоры по каждому юниту в выбран
+   ubertips_ubertip3: sid=37343 -> 'Метает топоры по каждому юниту в выбран
+   ubertips_ubertip4: sid=37344 -> 'Метает топоры по каждому юниту в выбран
+[w2ag] |cffdcb496Сильный удар|r (levels: 1) sids: 3
+   name: sid=37284 -> '|cffdcb496Сильный удар|r'
+   tips_tip1: sid=37285 -> '|cffdcb496Сильный удар|r'
+   ubertips_ubertip1: sid=37286 -> 'С 15%-й вероятностью атака нанесет на 2
+[w2ah] |cffdcb496Аура меткости|r (levels: 4) sids: 11
+   name: sid=37314 -> '|cffdcb496Аура меткости|r'
+   researchtip: sid=37315 -> 'Изучить |cffdcb496Аура меткости|r [|cff
+   researchubertip: sid=37316 -> 'Увеличивает урон от дистанционных атак 
+   tips_tip1: sid=37317 -> '|cffdcb496Аура меткости|r [|cffffcc001-
+   tips_tip2: sid=37318 -> '|cffdcb496Аура меткости|r [|cffffcc002-
+   tips_tip3: sid=37319 -> '|cffdcb496Аура меткости|r [|cffffcc003-
+   tips_tip4: sid=37320 -> '|cffdcb496Аура меткости|r [|cffffcc004-
+   ubertips_ubertip1: sid=37324 -> '+<w2ah,DataA1,%>% к урону от дальнобойн
+   ubertips_ubertip2: sid=37321 -> '+<w2ah,DataA1,%>% к урону от дальнобойн
+   ubertips_ubertip3: sid=37322 -> '+<w2ah,DataA1,%>% к урону от дальнобойн
+   ubertips_ubertip4: sid=37323 -> '+<w2ah,DataA1,%>% к урону от дальнобойн
+[w2ak] |cffdcb496Аура выносливости|r (levels: 4) sids: 5
+   name: sid=37300 -> '|cffdcb496Аура выносливости|r'
+   tips_tip1: sid=37301 -> '|cffdcb496Аура выносливости|r [|cffffcc
+   tips_tip2: sid=37302 -> '|cffdcb496Аура выносливости|r [|cffffcc
+   tips_tip3: sid=37303 -> '|cffdcb496Аура выносливости|r [|cffffcc
+   tips_tip4: sid=37304 -> '|cffdcb496Аура выносливости|r [|cffffcc
+[w2al] |cffdcb496Держать строй|r (levels: 4) sids: 11
+   name: sid=37289 -> '|cffdcb496Держать строй|r'
+   researchtip: sid=37297 -> '|cffdcb496Держать строй|r'
+   researchubertip: sid=37298 -> 'Увеличивает броню и регенерацию союзник
+   tips_tip1: sid=37288 -> '|cffdcb496Держать строй|r'
+   tips_tip2: sid=37291 -> '|cffdcb496Держать строй|r'
+   tips_tip3: sid=37290 -> '|cffdcb496Держать строй|r'
+   tips_tip4: sid=37292 -> '|cffdcb496Держать строй|r'
+   ubertips_ubertip1: sid=37293 -> 'Увеличивает броню и регенерацию союзник
+   ubertips_ubertip2: sid=37294 -> 'Увеличивает броню и регенерацию союзник
+   ubertips_ubertip3: sid=37295 -> 'Увеличивает броню и регенерацию союзник
+   ubertips_ubertip4: sid=37296 -> 'Увеличивает броню и регенерацию союзник
+[w2am] |cffdcb496Отработанные навыки|r (levels: 1) sids: 3
+   name: sid=37269 -> '|cffdcb496Отработанные навыки|r'
+   tips_tip1: sid=37270 -> '|cffdcb496Отработанные навыки|r'
+   ubertips_ubertip1: sid=37271 -> 'Дает 5-й шанс уклониться от атаки и 5%-
+[w2an] |cffdcb496Ярость|r (levels: 1) sids: 3
+   name: sid=37266 -> '|cffdcb496Ярость|r'
+   tips_tip1: sid=37267 -> '|cffdcb496Ярость|r'
+   ubertips_ubertip1: sid=27227 -> 'Ускоряет атаку на 20% и передвижение на
+[w2ap] |cffdcb496Резня слабаков|r (levels: 2) sids: 7
+   name: sid=37306 -> '|cffdcb496Резня слабаков|r'
+   researchtip: sid=37311 -> '|cffdcb496Резня слабаков|r'
+   researchubertip: sid=37312 -> 'Увеличивает урон от атак по юнитам не г
+   tips_tip1: sid=37307 -> '|cffdcb496Резня слабаков|r'
+   tips_tip2: sid=37308 -> '|cffdcb496Резня слабаков|r'
+   ubertips_ubertip1: sid=37310 -> '3-кратно увеличивает урон от атак по юн
+   ubertips_ubertip2: sid=32681 -> '4-кратно увеличивает урон от атак по юн
+[w2as] |cffdcb496Ракетный обстел|r (levels: 1) sids: 2
+   name: sid=37272 -> '|cffdcb496Ракетный обстел|r'
+   tips_tip1: sid=37273 -> '|cffdcb496Ракетный обстел|r'
+[w2av] |cffdcb496Сфера разрушения|r (levels: 1) sids: 3
+   name: sid=37259 -> '|cffdcb496Сфера разрушения|r'
+   tips_tip1: sid=37260 -> '|cffdcb496Сфера разрушения|r'
+   ubertips_ubertip1: sid=37261 -> '+20 к урону от атак юнита. Атаки нанося
+[w2ax] |cffdcb496Рассеивание заклинаний|r (levels: 1) sids: 3
+   name: sid=35606 -> '|cffdcb496Рассеивание заклинаний|r'
+   tips_tip1: sid=35784 -> '|cffdcb496Рассеивание заклинаний|r'
+   ubertips_ubertip1: sid=36762 -> 'Снимает положительные эффекты с войск в
+[w2az] |cffdcb496Исцеление|r (levels: 1) sids: 2
+   name: sid=31629 -> '|cffdcb496Исцеление|r'
+   tips_tip1: sid=30004 -> '|cffdcb496Исцеление|r'

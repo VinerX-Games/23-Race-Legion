@@ -1,0 +1,264 @@
+﻿=== BUILDINGS ===
+[h0JW] Name: TRIGSTR_42986 -> |cffa0d2d2Coral Crusher|r
+     Tip: TRIGSTR_42987 -> Build |cffa0d2d2Coral Crusher|r
+     Ub: TRIGSTR_42985 -> '|cff7dc87dConstruction time:|r |cffaaf0aa70 sec.|r|n|n\nAll...
+     HK: TRIGSTR_6602 -> E
+     Trains: None
+     Researches: R0FD,R0FH,Rnat,Rnam,Rnsb
+     Upgrades_to: None
+     FoodMade:  - 
+[h0JX] Name: TRIGSTR_42992 -> |cff4280deAbyssal Temple|r
+     Tip: TRIGSTR_42991 -> Upgrade to |cff4280deAbyssal Temple|r
+     Ub: TRIGSTR_42993 -> '|cff7dc87dUpgrade time:|r |cffaaf0aa140 sec.|r|n|n\nGrants ...
+     HK: TRIGSTR_11530 -> Z
+     Trains: nmpe,nnmg
+     Researches: None
+     Upgrades_to: h0JY
+     FoodMade: 100
+[h0JY] Name: TRIGSTR_42994 -> |cff4280deCoral Temple|r
+     Tip: TRIGSTR_42995 -> Upgrade to |cff4280deCoral Temple|r
+     Ub: TRIGSTR_42996 -> '|cff7dc87dUpgrade time:|r |cffaaf0aa140 sec.|r|n|n\nGrants ...
+     HK: TRIGSTR_11602 -> Z
+     Trains: nmpe,nnmg
+     Researches: None
+     Upgrades_to: None
+     FoodMade: 150
+[n04L] Name: TRIGSTR_43006 -> |cffa0d2d2Serpent's Lair|r
+     Tip: TRIGSTR_43007 -> Build |cffa0d2d2Serpent's Lair|r
+     Ub: TRIGSTR_43008 -> '|cff7dc87d\nConstruction time:|r |cffaaf0aa60 sec.|r|n|n\nB...
+     HK: TRIGSTR_8757 -> X
+     Trains: n079
+     Researches: None
+     Upgrades_to: None
+     FoodMade:  - 
+[n055] Name: TRIGSTR_42982 -> |cffa0d2d2Sea Gates|r
+     Tip: TRIGSTR_42983 -> Build |cffa0d2d2Sea Gates|r
+     Ub: TRIGSTR_42984 -> '|cff7dc87dConstruction time:|r |cffaaf0aa60 sec.|r|n|n\nTra...
+     HK: TRIGSTR_4163 -> D
+     Trains: n050,nnrg,n056,nwgs
+     Researches: R0FQ,R0FP,R0KP
+     Upgrades_to: None
+     FoodMade:  - 
+[nnfm] Name: TRIGSTR_31829 -> |cffa0d2d2Coral reef|r
+     Tip: TRIGSTR_35837 -> Grow |cffa0d2d2Coral reef|r
+     Ub: TRIGSTR_35937 -> '|cff7dc87dConstruction time:|r |cffaaf0aa45 sec.|r|n|nBring...
+     HK: TRIGSTR_037 -> A
+     Trains: None
+     Researches: None
+     Upgrades_to: None
+     FoodMade: 40
+[nnsa] Name: TRIGSTR_28025 -> |cffa0d2d2Sanctuary of Azshara|r
+     Tip: TRIGSTR_29009 -> Build |cffa0d2d2Sanctuary of Azshara|r
+     Ub: TRIGSTR_29010 -> '|cff7dc87dConstruction time:|r |cffaaf0aa70 sec.|r|n|n\nTra...
+     HK: TRIGSTR_121 -> R
+     Trains: n051,nnsw,n053,n054
+     Researches: Rnsw,Rnsi
+     Upgrades_to: None
+     FoodMade:  - 
+[nnsg] Name: TRIGSTR_29028 -> |cffa0d2d2Spawning groundr
+     Tip: TRIGSTR_29077 -> Build |cffa0d2d2Spawning ground|r
+     Ub: TRIGSTR_29079 -> '|cff7dc87dConstruction time:|r |cffaaf0aa60 sec.|r|n|nTrain...
+     HK: TRIGSTR_019 -> W
+     Trains: n052,n04Z,nmyr,nsnp,nhyc
+     Researches: R0FR,Rnen
+     Upgrades_to: None
+     FoodMade:  - 
+[nntg] Name: TRIGSTR_42941 -> |cffa0d2d2Tidal Guardian|r
+     Tip: TRIGSTR_42942 -> Build |cffa0d2d2Tidal Guardian|r
+     Ub: TRIGSTR_42943 -> '|cff7dc87dConstruction time:|r |cffaaf0aa45 sec.|r|n|n\nBas...
+     HK: TRIGSTR_393 -> Z
+     Trains: None
+     Researches: None
+     Upgrades_to: None
+     FoodMade:  - 
+[nntt] Name: TRIGSTR_8060 -> |cffa0d2d2Temple of the Abyss|r
+     Tip: TRIGSTR_8036 -> Build |cffa0d2d2Temple of the Abyss|r
+     Ub: TRIGSTR_25675 -> '|cff7dc87dConstruction time:|r |cffaaf0aa140 sec.|r|n|n\nBa...
+     HK: TRIGSTR_409 -> Q
+     Trains: nmpe,nnmg
+     Researches: R0FF,R0FE
+     Upgrades_to: h0JX
+     FoodMade: 100
+
+=== HEROES ===
+[H0JU] Name: TRIGSTR_42964 -> |cffa0d2d2Lord Guardian|r
+     Tip: TRIGSTR_42967 -> Summon |cffa0d2d2Lord Guardian|r
+     Ub: TRIGSTR_42969 -> '|cff7dc87dPreparation Time:|r |cffaaf0aa60 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_5116 -> X
+     HeroAbils: A14I,A14F,A14G,A14H
+     Abils: AInv,A1LT
+     Atk1: type=hero, dice=2d6+20, targs=ground,structure,debris,item,ward
+[H0JV] Name: TRIGSTR_42970 -> |cffa0d2d2Deep Huntress|r
+     Tip: TRIGSTR_42974 -> Summon |cffa0d2d2Deep Huntress|r
+     Ub: TRIGSTR_42975 -> '|cff7dc87dPreparation Time:|r |cffaaf0aa60 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_7432 -> C
+     HeroAbils: A13C,AEbl,A13A,A13D
+     Abils: A01C,AInv,A1LT
+     Atk1: type=hero, dice=2d4+15, targs=ground,structure,debris,air,item,ward
+[H0OZ] Name: TRIGSTR_41066 -> |cffa0d2d2╠єЁыюъ-├шурэЄ|r
+     Tip: TRIGSTR_41069 -> ╧ЁшчтрЄ№ |cffa0d2d2╠єЁыюър-├шурэЄр|r
+     Ub: TRIGSTR_41071 -> '|cff7dc87d┬Ёхь  яюфуюЄютъш:|r |cffaaf0aa60 ёхъ.|r|n|cff7dc8...
+     HK: TRIGSTR_8758 -> X
+     HeroAbils: A14I,A14F,A14G,A14H
+     Abils: AInv,A1LT
+     Atk1: type=hero, dice=2d7+225, targs=ground,structure,debris,item,ward
+[N07A] Name: TRIGSTR_43012 -> |cffa0d2d2Murloc Sorcerer|r
+     Tip: TRIGSTR_43014 -> Summon |cffa0d2d2Murloc Sorcerer|r
+     Ub: TRIGSTR_43017 -> '|cff7dc87dPreparation Time:|r |cffaaf0aa60 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_15630 -> Z
+     HeroAbils: AEtq,AHbn,AHab,ANrf
+     Abils: A01C,AInv,A1LT
+     Atk1: type=hero, dice=2d6+15, targs=ground,structure,debris,air,item,ward
+[N054] Name: TRIGSTR_25735 -> |cffa0d2d2╠єЁыюъ-ўрЁюфхщ|r
+     Tip: TRIGSTR_25738 -> ╧ЁшчтрЄ№ |cffa0d2d2╠єЁыюъ-ўрЁюфхщ|r
+     Ub: TRIGSTR_26681 -> '|cff7dc87d┬Ёхь  яюфуюЄютъш:|r |cffaaf0aa60 ёхъ.|r|n|cff7dc8...
+     HK: TRIGSTR_11503 -> Z
+     HeroAbils: AEtq,AHbn,AHab,ANrf
+     Abils: A01C,AInv,A1LT
+     Atk1: type=hero, dice=2d6+15, targs=ground,structure,debris,air,item,ward
+
+=== WORKER & UNITS ===
+[nmpe] Name: TRIGSTR_42944 -> |cffa0d2d2Murloc Slave|r
+     Tip: TRIGSTR_42945 -> Train |cff4280e1Murloc Slave|r
+     Ub: TRIGSTR_42946 -> '|cff7dc87dPreparation time:|r |cffaaf0aa15 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_412 -> Q
+     Abils: A0I3,ANha,Arep,A1LT
+     Upgs: R0FH
+     Atk1: type=normal, dice=1d2+6, targs=ground,structure,debris,item,ward
+     Atk2: type=normal, dice=1d1+0, targs=tree
+[n04Z] Name: TRIGSTR_42958 -> |cffa0d2d2Warrior of the Waves|r
+     Tip: TRIGSTR_42959 -> Hire |cffa0d2d2Warrior of the Waves|r
+     Ub: TRIGSTR_42960 -> '|cff7dc87dPreparation time:|r |cffaaf0aa20 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_5205 -> Q
+     Abils: A13B,A1LT
+     Upgs: R0FF,Rnat,Rnam
+     Atk1: type=normal, dice=1d2+15, targs=ground,structure,debris,item,ward
+     Atk2: type=normal, dice=NonedNone+None, targs=None
+[n050] Name: TRIGSTR_42961 -> |cffa0d2d2Murloc Mutant|r
+     Tip: TRIGSTR_42962 -> Hire |cffa0d2d2Murloc Mutant|r
+     Ub: TRIGSTR_42963 -> '|cff7dc87dPreparation time:|r |cffaaf0aa45 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_5221 -> Q
+     Abils: A14K,A13B,A1OR,A1LT
+     Upgs: R0FF,Rnat,Rnam,R0FQ
+     Atk1: type=chaos, dice=1d2+35, targs=ground,structure,debris,item,ward
+     Atk2: type=normal, dice=NonedNone+None, targs=None
+[n051] Name: TRIGSTR_42998 -> |cff4280deAbyssal Dweller|r
+     Tip: TRIGSTR_42997 -> Train |cff4280deAbyssal Dweller|r
+     Ub: TRIGSTR_42999 -> '|cff7dc87dPreparation time:|r |cffaaf0aa28 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_5319 -> Q
+     Abils: A14N,A14M,A14L,A1LT
+     Upgs: Rnat,Rnam,Rnsi,Rguv
+     Atk1: type=magic, dice=1d4+16, targs=ground,structure,debris,air,item,ward
+     Atk2: type=normal, dice=NonedNone+None, targs=None
+[n052] Name: TRIGSTR_42976 -> |cffa0d2d2Murloc Hunter|r
+     Tip: TRIGSTR_42977 -> Hire |cffa0d2d2Murloc Hunter|r
+     Ub: TRIGSTR_42978 -> '|cff7dc87dPreparation time:|r |cffaaf0aa40 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_6539 -> E
+     Abils: A13B,ACen,A1LT
+     Upgs: R0FF,Rnat,Rnam
+     Atk1: type=normal, dice=1d5+37, targs=ground,structure,debris,item,ward
+     Atk2: type=normal, dice=NonedNone+None, targs=None
+[n053] Name: TRIGSTR_42979 -> |cffa0d2d2Murloc - Dark Mage|r
+     Tip: TRIGSTR_42980 -> Hire |cffa0d2d2Murloc - Dark Mage|r
+     Ub: TRIGSTR_42981 -> '|cff7dc87dPreparation time:|r |cffaaf0aa40 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_5309 -> Q
+     Abils: A14N,A13B,AChx,A14L,A1LT
+     Upgs: R0FF,Rnsi,Rnat,Rnam
+     Atk1: type=magic, dice=1d3+21, targs=ground,structure,debris,air,item,ward
+     Atk2: type=normal, dice=NonedNone+None, targs=None
+[n054] Name: TRIGSTR_43003 -> |cffa0d2d2Murloc - Shaman|r
+     Tip: TRIGSTR_43004 -> Hire |cffa0d2d2Murloc - Shaman|r
+     Ub: TRIGSTR_43005 -> '|cff7dc87dPreparation time:|r |cffaaf0aa30 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_8377 -> W
+     Abils: A1OQ,A1OO,A1ON,A13B,A1LT,A1OP
+     Upgs: R0FF,Rnsw,Rnat,Rnam
+     Atk1: type=magic, dice=1d5+21, targs=ground,structure,debris,air,item,ward
+     Atk2: type=normal, dice=NonedNone+None, targs=None
+[n056] Name: TRIGSTR_42988 -> |cffa0d2d2Sea Hunter|r
+     Tip: TRIGSTR_42989 -> Summon |cffa0d2d2Sea Hunter|r
+     Ub: TRIGSTR_42990 -> '|cff7dc87dPreparation time:|r |cffaaf0aa45 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_6603 -> E
+     Abils: S00A,ACpv,ACen,A1LT
+     Upgs: Rnat,Rnam
+     Atk1: type=normal, dice=1d4+35, targs=ground,structure,debris,item,ward
+     Atk2: type=normal, dice=NonedNone+None, targs=None
+[n057] Name: TRIGSTR_43001 -> |cff4280deAncient Naga|r
+     Tip: TRIGSTR_43000 -> Train |cff4280deAncient Naga|r
+     Ub: TRIGSTR_43002 -> 'An incredibly powerful melee warrior. Master of "Diving," w...
+     HK: None -> None
+     Abils: Asb2,ACcv,ACcb,ACwe,ACsk,A1LT
+     Upgs: Rguv,Rnam,Rnat,Rnsb
+     Atk1: type=chaos, dice=2d7+70, targs=ground,structure,debris,item,ward
+     Atk2: type=normal, dice=NonedNone+None, targs=None
+[n079] Name: TRIGSTR_43009 -> |cffa0d2d2Sea Serpent|r
+     Tip: TRIGSTR_43010 -> Summon |cffa0d2d2Sea Serpent|r
+     Ub: TRIGSTR_43011 -> '|cff7dc87dPreparation time:|r |cffaaf0aa50 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_8069 -> Q
+     Abils: A1OM,A1LT
+     Upgs: Rnat,Rnam
+     Atk1: type=chaos, dice=1d8+25, targs=ground,structure,debris,item,ward
+     Atk2: type=normal, dice=NonedNone+None, targs=None
+[nmyr] Name: TRIGSTR_42929 -> |cffa0d2d2Myrmidon|r
+     Tip: TRIGSTR_42930 -> Train |cffa0d2d2Myrmidon|r
+     Ub: TRIGSTR_42931 -> '|cff7dc87dPreparation time:|r |cffaaf0aa40 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_268 -> E
+     Abils: ANen,Asb1,A1LT
+     Upgs: Rguv,Rnam,Rnat,Rnsb,Rnen
+     Atk1: type=normal, dice=1d7+32, targs=ground,structure,debris,item,ward
+     Atk2: type=normal, dice=NonedNone+None, targs=None
+[nnmg] Name: TRIGSTR_42920 -> |cffa0d2d2Murloc Raider|r
+     Tip: TRIGSTR_42921 -> Train |cffa0d2d2Murloc Raider|r
+     Ub: TRIGSTR_42922 -> '|cff7dc87dPreparation time:|r |cffaaf0aa18 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_020 -> W
+     Abils: A13B,A1LT
+     Upgs: Rguv,Rnam,Rnat
+     Atk1: type=normal, dice=1d4+17, targs=ground,structure,debris,item,ward
+     Atk2: type=normal, dice=NonedNone+None, targs=None
+[nnrg] Name: TRIGSTR_42933 -> |cffa0d2d2Naga Guard|r
+     Tip: TRIGSTR_42932 -> Train |cffa0d2d2Naga Guard|r
+     Ub: TRIGSTR_42934 -> '|cff7dc87dPreparation time:|r |cffaaf0aa40 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_410 -> Q
+     Abils: Asb2,A06U,ACsk,A1LT,drAq
+     Upgs: Rguv,Rnam,Rnat,Rnsb
+     Atk1: type=chaos, dice=2d4+45, targs=ground,structure,debris,item,ward
+     Atk2: type=normal, dice=NonedNone+None, targs=None
+[nnsw] Name: TRIGSTR_42924 -> |cffa0d2d2Siren|r
+     Tip: TRIGSTR_42923 -> Train |cffa0d2d2Siren|r
+     Ub: TRIGSTR_42925 -> '|cff7dc87dPreparation time:|r |cffaaf0aa28 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_090 -> W
+     Abils: Acny,ACfu,ANpa,A1LT
+     Upgs: Rnat,Rnam,Rnsw,Rguv
+     Atk1: type=magic, dice=1d3+15, targs=ground,structure,debris,air,item,ward
+     Atk2: type=normal, dice=NonedNone+None, targs=None
+[nwgs] Name: TRIGSTR_42952 -> |cffa0d2d2Couatl|r
+     Tip: TRIGSTR_42953 -> Train |cffa0d2d2Couatl|r
+     Ub: TRIGSTR_42954 -> '|cff7dc87dPreparation time:|r |cffaaf0aa35 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_642 -> W
+     Abils: A1OL,A1LT
+     Upgs: Rnat,Rnam
+     Atk1: type=pierce, dice=2d6+20, targs=air,ward,structure,ground,item,debris
+     Atk2: type=normal, dice=NonedNone+None, targs=None
+[nsnp] Name: TRIGSTR_42926 -> |cffa0d2d2Sea Basilisk|r
+     Tip: TRIGSTR_42927 -> Train |cffa0d2d2Sea Basilisk|r
+     Ub: TRIGSTR_42928 -> '|cff7dc87dPreparation time:|r |cffaaf0aa26 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_091 -> W
+     Abils: A14J,Asb3,A1LT
+     Upgs: Rguv,Rnam,Rnat,Rnsb
+     Atk1: type=pierce, dice=1d5+24, targs=ground,air,structure,debris,item,ward
+     Atk2: type=normal, dice=NonedNone+None, targs=None
+[nhyc] Name: TRIGSTR_42935 -> |cffa0d2d2Dragon Turtle|r
+     Tip: TRIGSTR_42936 -> Train |cffa0d2d2Dragon Turtle|r
+     Ub: TRIGSTR_42937 -> '|cff7dc87dPreparation time:|r |cffaaf0aa40 sec.|r|n|cff7dc8...
+     HK: TRIGSTR_294 -> R
+     Abils: A13B,Advc,A1LT
+     Upgs: Rguv,Rnam,Rnat
+     Atk1: type=siege, dice=1d4+55, targs=ground,structure,tree,ward
+     Atk2: type=siege, dice=1d18+62, targs=structure,tree
+[ntor] Name: ╥юЁэрфю -> ╥юЁэрфю
+     Tip: None -> None
+     Ub: None -> None...
+     HK: None -> None
+     Abils: Atdg,Atsp,Aasl
+     Upgs: None
+     Atk1: type=normal, dice=NonedNone+None, targs=None
+     Atk2: type=normal, dice=NonedNone+None, targs=None

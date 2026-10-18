@@ -1,0 +1,595 @@
+=== 1. SELECTION ===
+A0OK name: sid=38887 val='|cffc8dc8cИллидари|r'
+A0OK tip: sid=None val=None
+A0OK ubertip: sid=None val=None
+A0OK fields: {'animnames': 'spell,channel', 'art': 'ReplaceableTextures\\CommandButtons\\BTNBEDemonHunter.blp', 'buttonpos': '2', 'buttonpos2': '2', 'cast1': '0', 'cast2': '0', 'cast3': '0', 'cast4': '0', 'casterart': 'Abilities\\Spells\\NightElf\\ManaBurn\\ManaBurnTarget.mdl', 'casterattach': 'head', 'checkdep': '1', 'code': 'ANcl', 'comments': 'Illidan - Channel', 'cool1': '0', 'cool2': '0', 'cool3': '0', 'cool4': '0', 'cost1': '0', 'cost2': '0', 'cost3': '0', 'cost4': '0', 'dataa1': '0.300000', 'dataa2': '180', 'dataa3': '180', 'dataa4': '180', 'datab1': '0', 'datab2': '0', 'datab3': '0', 'datab4': '0', 'datac1': '1', 'datac2': '0', 'datac3': '0', 'datac4': '0', 'datad1': '0.98', 'datad2': '0.98', 'datad3': '0.98', 'datad4': '0.98', 'datae1': '0', 'datae2': '1', 'datae3': '1', 'datae4': '1', 'dataf1': 'attributemodskill', 'dur1': '0', 'dur2': '0', 'dur3': '0', 'dur4': '0', 'editorsuffix': 'TRIGSTR_12303', 'effectart': 'Abilities\\Spells\\NightElf\\ManaBurn\\ManaBurnTarget.mdl', 'hero': '0', 'herodur1': '0', 'herodur2': '0', 'herodur3': '0', 'herodur4': '0', 'hotkey': 'C', 'inbeta': '1', 'item': '0', 'levels': '1', 'levelskip': '0', 'name': 'TRIGSTR_38887', 'order': 'cloudoffog', 'priority': '0', 'race': 'other', 'reqlevel': '1', 'rng1': '0.000000', 'rng2': '500', 'rng3': '500', 'rng4': '500', 'sort': 'hero', 'targetart': 'Abilities\\Spells\\NightElf\\ManaBurn\\ManaBurnTarget.mdl', 'targetattach': 'origin', 'tip1': 'TRIGSTR_38888', 'ubertip1': 'TRIGSTR_35180', 'unart': 'ReplaceableTextures\\CommandButtons\\BTNBEDemonHunter.blp', 'useineditor': '1', 'version': '0'}
+A0OK hotkey: C
+
+=== 2. BUILDINGS ===
+Building: h0E9
+  name: sid=14055 raw=TRIGSTR_14055 val='|cffc8dc8cАванпост|r'
+  tip: sid=14056 raw=TRIGSTR_14056 val='Построить |cffc8dc8cАванпост|r'
+  ubertip: sid=5699 raw=TRIGSTR_5699 val='|cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r|n|nБазовое здание. Обучает работников и хранит добытые ресурсы. Можно улучшить до форта, а затем до замка, чтобы получить доступ к новым зданиям и типам войск.'
+  trains=h0EI researches=R096 upgrades_to=h0EA hotkey=Q
+Building: h0EA
+  name: sid=2702 raw=TRIGSTR_2702 val='|cffc8dc8cКомандный центр|r'
+  tip: sid=14059 raw=TRIGSTR_14059 val='Улучшить до |cffc8dc8cКомандный центер|r'
+  ubertip: sid=14060 raw=TRIGSTR_14060 val='|cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r|n|nДает доступ к новым зданиям и типам войск.'
+  trains=h0EI researches=R099,R09A,R09B,R096 upgrades_to=h0EB hotkey=Z
+Building: h0EB
+  name: sid=14062 raw=TRIGSTR_14062 val='|cffc8dc8cШтаб|r'
+  tip: sid=14063 raw=TRIGSTR_14063 val='Улучшить до |cffc8dc8cШтаб|r'
+  ubertip: sid=14064 raw=TRIGSTR_14064 val='|cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r|n|nДает доступ к новым зданиям и типам войск.'
+  trains=h0EI researches=R099,R09A,R09B,R096 upgrades_to=None hotkey=Z
+Building: h0EC
+  name: sid=14066 raw=TRIGSTR_14066 val='|cffc8dc8cНакопитель энергии|r'
+  tip: sid=14067 raw=TRIGSTR_14067 val='Построить |cffc8dc8cНакопитель энергии|r'
+  ubertip: sid=42689 raw=TRIGSTR_42689 val='|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.\n\n|cffffff00Приносит 40 инкома|r'
+  trains=None researches=None upgrades_to=None hotkey=A
+Building: h0ED
+  name: sid=14070 raw=TRIGSTR_14070 val='|cffc8dc8cАлтарь охоты|r'
+  tip: sid=14071 raw=TRIGSTR_14071 val='Построить |cffc8dc8cАлтарь охоты|r'
+  ubertip: sid=12976 raw=TRIGSTR_12976 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nСооружение позволяющее призыватьновых и воскрешает павших героев.'
+  trains=H043,E01W,E025,E024 researches=None upgrades_to=None hotkey=S
+Building: h0EE
+  name: sid=15182 raw=TRIGSTR_15182 val='|cffc8dc8cКазармы|r'
+  tip: sid=15183 raw=TRIGSTR_15183 val='Построить |cffc8dc8cКазармы|r'
+  ubertip: sid=13130 raw=TRIGSTR_13130 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nЗдание для подготовки базовых войск. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск.'
+  trains=h0EJ,o01A,o01B,o019 researches=R08Y,R091,R095 upgrades_to=None hotkey=W
+Building: h0EF
+  name: sid=14078 raw=TRIGSTR_14078 val='|cffc8dc8cХрам магии|r'
+  tip: sid=14079 raw=TRIGSTR_14079 val='Построить |cffc8dc8cХрам магии|r'
+  ubertip: sid=14080 raw=TRIGSTR_14080 val='|cff7dc87dВремя строительства:|r |cffaaf0aa60 сек.|r|n|nПризывает ночнорожденных к любви ко всей жизни. Позволяет нанимать войска защищающие и востанавливающие жизнь в любом ее проявлении.'
+  trains=h0EK,h0EL researches=R08Z,R090 upgrades_to=None hotkey=F
+Building: h0EG
+  name: sid=14082 raw=TRIGSTR_14082 val='|cffc8dc8cНерестилище|r'
+  tip: sid=14083 raw=TRIGSTR_14083 val='Построить |cffc8dc8cНерестилище|r'
+  ubertip: sid=5700 raw=TRIGSTR_5700 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nПозволяет обучать наг Иллидариев.'
+  trains=n02O,n02M,n02N researches=R094,R092,R093 upgrades_to=None hotkey=D
+Building: h0EH
+  name: sid=15184 raw=TRIGSTR_15184 val='|cffc8dc8cЛесопилка|r'
+  tip: sid=15185 raw=TRIGSTR_15185 val='Построить |cffc8dc8cЛесопилка|r'
+  ubertip: sid=3159 raw=TRIGSTR_3159 val='|cff7dc87dВремя строительства:|r |cffaaf0aa60 сек.|r|n|nХранит добытую древесину. |nДает доступ к новым улучшениям и доступ к новой армии.'
+  trains=None researches=R097 upgrades_to=None hotkey=E
+Building: h0EM
+  name: sid=14798 raw=TRIGSTR_14798 val='|cffc8dc8cКузница|r'
+  tip: sid=14799 raw=TRIGSTR_14799 val='Построить |cffc8dc8cКузницу|r'
+  ubertip: sid=12968 raw=TRIGSTR_12968 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa70 сек.|r|n|nПозволяет улучшать доспехи, оружие и прочее'
+  trains=None researches=R08W,R08T,R08U,R08V,R08X upgrades_to=None hotkey=R
+Building: h0EN
+  name: sid=14758 raw=TRIGSTR_14758 val='|cffc8dc8cМагическая башня|r'
+  tip: sid=14759 raw=TRIGSTR_14759 val='Построить |cffc8dc8cМагическая башня|r'
+  ubertip: sid=31765 raw=TRIGSTR_31765 val='|cff7dc87dВремя строительства:|r |cffaaf0aa50 сек.|r\nМагическое оборонительное сооружение, особенно эффективное против героев и магов. Атаки уничтожают ману врагов, нанося им урон, равный объему уничтоженной маны. Можно оснастить «Магическим стражем». |n|n|cffffcc00Атакует наземные и воздушные цели.'
+  trains=None researches=None upgrades_to=None hotkey=X
+Building: o01C
+  name: sid=14374 raw=TRIGSTR_14374 val='|cffc8dc8cХрам охоты|r'
+  tip: sid=14375 raw=TRIGSTR_14375 val='Построить |cffc8dc8cХрам охоты|r'
+  ubertip: sid=18691 raw=TRIGSTR_18691 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nТренирует Элитных солдат Иллидариев. Способно обучить их новым способностям.'
+  trains=h04Y,h04Z,h050 researches=R098 upgrades_to=None hotkey=Z
+Building: h011
+  name: sid=368 raw=TRIGSTR_368 val='Верфь'
+  tip: sid=369 raw=TRIGSTR_369 val='Построить верфь'
+  ubertip: sid=370 raw=TRIGSTR_370 val='Строит транспорты, фрегаты и линкоры.'
+  trains=h00X,h00Y,h00Z researches=R005,R006,R007,R002,R003 upgrades_to=None hotkey=C
+
+=== 3. UNITS ===
+Unit: h0EI
+  name: sid=14346 raw=TRIGSTR_14346 val='|cffc8dc8cСтроитель|r'
+  tip: sid=14348 raw=TRIGSTR_14348 val='Обучить |cffc8dc8cСтроитель|r'
+  ubertip: sid=20571 raw=TRIGSTR_20571 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa15 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nБазовый рабочий. Добывает  древесину, а также строит и ремонтирует здания.'
+  abils=None atk1=None atk2=None hotkey=Q
+Unit: h0EJ
+  name: sid=14354 raw=TRIGSTR_14354 val='|cffc8dc8cСтранник|r'
+  tip: sid=14355 raw=TRIGSTR_14355 val='Обучить |cffc8dc8cСтранник|r'
+  ubertip: sid=35864 raw=TRIGSTR_35864 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa26 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\n\nРядовой пехотинец примкнувший к |cffc8dc8cИлидири|r.'
+  abils=None atk1=None atk2=None hotkey=Q
+Unit: o01A
+  name: sid=14357 raw=TRIGSTR_14357 val='|cffc8dc8cРубака|r'
+  tip: sid=14358 raw=TRIGSTR_14358 val='Обучить |cffc8dc8cРубака|r'
+  ubertip: sid=35865 raw=TRIGSTR_35865 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa31 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\n \nОрк-воин. Способный солдат ближнего боя, яростный и бесстрашный.'
+  abils=None atk1=None atk2=None hotkey=W
+Unit: o01B
+  name: sid=14361 raw=TRIGSTR_14361 val='|cffc8dc8cСумеречный налетчик|r'
+  tip: sid=14362 raw=TRIGSTR_14362 val='Обучить |cffc8dc8cСумеречный налетчик|r'
+  ubertip: sid=35866 raw=TRIGSTR_35866 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa27 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|n\nБыстрый наездник на волке. Предназначен для фланговых и тыловых атак.'
+  abils=None atk1=None atk2=None hotkey=E
+Unit: o019
+  name: sid=14351 raw=TRIGSTR_14351 val='|cffc8dc8cРазрушитель|r'
+  tip: sid=14352 raw=TRIGSTR_14352 val='Построить |cffc8dc8cРазрушитель|r'
+  ubertip: sid=35863 raw=TRIGSTR_35863 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa25 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный урон|r|n\nДальнобойное осадное орудие, эффективное против зданий, но медленное и уязвимое.'
+  abils=None atk1=None atk2=None hotkey=R
+Unit: h0EK
+  name: sid=14365 raw=TRIGSTR_14365 val='|cffc8dc8cМагистр|r'
+  tip: sid=14366 raw=TRIGSTR_14366 val='Обучить |cffc8dc8cМагистр|r'
+  ubertip: sid=35867 raw=TRIGSTR_35867 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa32 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая атака|r|n|nМаги огня, слегкостью повишающий характеристки союзникам, и выводит врагов из боя.'
+  abils=None atk1=None atk2=None hotkey=Q
+Unit: h0EL
+  name: sid=9655 raw=TRIGSTR_9655 val='|cffc8dc8cЧернокнижник|r'
+  tip: sid=10080 raw=TRIGSTR_10080 val='Обучить |cffc8dc8cЧернокнижник|r'
+  ubertip: sid=35868 raw=TRIGSTR_35868 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa42 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая атака|r|n|nМаг, покорившый магию скверны для использования как в бою, так и для других целей.'
+  abils=None atk1=None atk2=None hotkey=W
+Unit: n02O
+  name: sid=14553 raw=TRIGSTR_14553 val='|cffc8dc8cМорской варан|r'
+  tip: sid=14554 raw=TRIGSTR_14554 val='Обучить |cffc8dc8cМорской варан|r'
+  ubertip: sid=42374 raw=TRIGSTR_42374 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa31 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n\n\nЛовкое и быстрое морское создание, способно отравлять атакованых врагов.'
+  abils=None atk1=None atk2=None hotkey=Q
+Unit: n02M
+  name: sid=14349 raw=TRIGSTR_14349 val='|cffc8dc8cМирмидон|r'
+  tip: sid=14350 raw=TRIGSTR_14350 val='Обучить |cffc8dc8cмирмидона|r'
+  ubertip: sid=35261 raw=TRIGSTR_35261 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa44 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\nМощный воин ближнего боя. Предназначенный для фронтовых атак, или удержания врагов.'
+  abils=None atk1=None atk2=None hotkey=W
+Unit: n02N
+  name: sid=14371 raw=TRIGSTR_14371 val='|cffc8dc8cСирена|r'
+  tip: sid=14372 raw=TRIGSTR_14372 val='Обучить |cffc8dc8cСирену|r'
+  ubertip: sid=42373 raw=TRIGSTR_42373 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa40 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая атака|r|n|nМогущественный маг. Владеет магией стихии воды, предназначен для нанисение магического урона врагам.'
+  abils=None atk1=None atk2=None hotkey=E
+Unit: h04Y
+  name: sid=14359 raw=TRIGSTR_14359 val='|cffc8dc8cПокоренный демон|r'
+  tip: sid=14363 raw=TRIGSTR_14363 val='Обучить |cffc8dc8cПокоренного демона|r'
+  ubertip: sid=15194 raw=TRIGSTR_15194 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|nМогучий верховой воин. Некогда служащий |cffc8dc8cПылающему легиону|r.'
+  abils=None atk1=None atk2=None hotkey=E
+Unit: h04Z
+  name: sid=14681 raw=TRIGSTR_14681 val='|cffc8dc8cОхотник Истребление|r'
+  tip: sid=14682 raw=TRIGSTR_14682 val='Обучить |cffc8dc8cОхотника Истребление|r'
+  ubertip: sid=35056 raw=TRIGSTR_35056 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|n\n\nЭлитные воска Илидари, в первую очередь предназначены для устранения |cffc8dc8cДемонов|r.'
+  abils=None atk1=None atk2=None hotkey=Q
+Unit: h050
+  name: sid=14685 raw=TRIGSTR_14685 val='|cffc8dc8cОхотник Месть|r'
+  tip: sid=14686 raw=TRIGSTR_14686 val='Обучить |cffc8dc8cОхотник Месть|r'
+  ubertip: sid=35243 raw=TRIGSTR_35243 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa59 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|n\n\nЭлитные воска Илидари, в первую очередь предназначены для устранения |cffc8dc8cДемонов|r.'
+  abils=None atk1=None atk2=None hotkey=W
+
+=== 4. HEROES ===
+Hero: H043
+  name: sid=4403 raw=TRIGSTR_4403 val='|cfffa9696Маг Крови|r'
+  propernames: sid=None raw=Элдин Солнечный Скиталец,Танин Ястребиное Крыло,Лорн Кровожадный,Олдос Огненная Звезда,Гиларас Драконорожденный,Хейл Волшебный Огонь,Кат'ранис Ремар,Тиорил Ловчий Солнца,Сильвос Ветрокрылый,Тенрис Мутная Кровь,Мараканис Ярость Звезд,Гелдор Земное Пламя,Галендор Пламерожденный,Келен Разрушитель val="Элдин Солнечный Скиталец,Танин Ястребиное Крыло,Лорн Кровожадный,Олдос Огненная Звезда,Гиларас Драконорожденный,Хейл Волшебный Огонь,Кат'ранис Ремар,Тиорил Ловчий Солнца,Сильвос Ветрокрылый,Тенрис Мутная Кровь,Мараканис Ярость Звезд,Гелдор Земное Пламя,Галендор Пламерожденный,Келен Разрушитель"
+  tip: sid=5839 raw=TRIGSTR_5839 val='Призвать |cfffa9696Мага Крови|r'
+  ubertip: sid=5011 raw=TRIGSTR_5011 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|nГерой-мистик, мастер магии, сражающийся в дальнем бою. '
+  awakentip: sid=None raw=None val=None
+  revivetip: sid=None raw=None val=None
+  abils=None atk1=None atk2=None hotkey=A
+Hero: E01W
+  name: sid=798 raw=TRIGSTR_798 val='|cffc8dc8cОхотник на демонов|r'
+  propernames: sid=802 raw=TRIGSTR_802 val='|cffc8dc8cЯрость Теней|r'
+  tip: sid=20840 raw=TRIGSTR_20840 val='Призвать |cffc8dc8cОхотника на демонов|r'
+  ubertip: sid=31755 raw=TRIGSTR_31755 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaЛовкость |r|n\nОдин из лучший охотников на демонов, признанный самим Иллиданом.'
+  awakentip: sid=None raw=None val=None
+  revivetip: sid=None raw=None val=None
+  abils=None atk1=None atk2=None hotkey=Q
+Hero: E024
+  name: sid=942 raw=TRIGSTR_942 val='|cffc8dc8cОхотник "Месть"|r'
+  propernames: sid=1249 raw=TRIGSTR_1249 val='|cffc8dc8cТихая смерть|r'
+  tip: sid=14787 raw=TRIGSTR_14787 val='Призвать |cffc8dc8cОхотник "Месть"|r'
+  ubertip: sid=31757 raw=TRIGSTR_31757 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n\nОдин из лучший охотников на демонов, признанный самим Иллиданом.'
+  awakentip: sid=None raw=None val=None
+  revivetip: sid=None raw=None val=None
+  abils=None atk1=None atk2=None hotkey=E
+Hero: E025
+  name: sid=14034 raw=TRIGSTR_14034 val='|cffc8dc8cОхотник "Истребление"|r'
+  propernames: sid=6900 raw=TRIGSTR_6900 val='|cffc8dc8cЯростный охотник|r'
+  tip: sid=14789 raw=TRIGSTR_14789 val='Призвать |cffc8dc8cОхотник Истребление|r '
+  ubertip: sid=38606 raw=TRIGSTR_38606 val='|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaЛовкость |r|n\nОдин из лучших охотников на демонов, чьи таланты были признанный даже самим Иллиданом.'
+  awakentip: sid=None raw=None val=None
+  revivetip: sid=None raw=None val=None
+  abils=None atk1=None atk2=None hotkey=W
+
+=== 5. UPGRADES ===
+Upgrade: R08W max_lvl=None
+  names.name1: sid=14495 raw=TRIGSTR_14495 val='|cffc8dc8cОружие скверны|r'
+  tips.tip1: sid=14500 raw=TRIGSTR_14500 val='Исследовать |cffc8dc8cОружие скверны|r'
+  ubertips.ubertip1: sid=14501 raw=TRIGSTR_14501 val='Увеличивают урон от атак воинам |cffc8dc8cИллидари|r.'
+  hotkeys.hotkey1: sid=37446 raw=TRIGSTR_37446 val='W'
+Upgrade: R08T max_lvl=None
+  names.name1: sid=14410 raw=TRIGSTR_14410 val='|cffc8dc8cПроклятое оружие|r'
+  tips.tip1: sid=14416 raw=TRIGSTR_14416 val='«|cffc8dc8cПроклятое оружие|r» '
+  ubertips.ubertip1: sid=14431 raw=TRIGSTR_14431 val='Увеличивает урон солдат, сражающихся в ближнем бою.'
+  hotkeys.hotkey1: sid=36672 raw=TRIGSTR_36672 val='Q'
+Upgrade: R08U max_lvl=None
+  names.name1: sid=14435 raw=TRIGSTR_14435 val='|cffc8dc8cОскверненные доспехи|r'
+  tips.tip1: sid=14438 raw=TRIGSTR_14438 val='Исследовать |cffc8dc8cОскверненные доспехи|r'
+  ubertips.ubertip1: sid=15974 raw=TRIGSTR_15974 val='Усиливает броню всех воинов, сражающихся в ближним бою.'
+  hotkeys.hotkey1: sid=None raw=A val='A'
+Upgrade: R08V max_lvl=None
+  names.name1: sid=14457 raw=TRIGSTR_14457 val='|cffc8dc8cУкрепление скверной|r'
+  tips.tip1: sid=14460 raw=TRIGSTR_14460 val='Исследовать |cffc8dc8cУкрепление скверной|r'
+  ubertips.ubertip1: sid=14479 raw=TRIGSTR_14479 val='Усиливают броню магов |cffc8dc8cИллидари|r.'
+  hotkeys.hotkey1: sid=16337 raw=TRIGSTR_16337 val='S'
+Upgrade: R08X max_lvl=None
+  names.name1: sid=14508 raw=TRIGSTR_14508 val='|cffc8dc8cВладение магией|r'
+  tips.tip1: sid=14514 raw=TRIGSTR_14514 val='«|cffc8dc8cВладение магией|r» '
+  ubertips.ubertip1: sid=14529 raw=TRIGSTR_14529 val='Увеличивает урон солдат, сражающихся в с помощью магии.'
+  hotkeys.hotkey1: sid=28642 raw=TRIGSTR_28642 val='Z'
+Upgrade: R096 max_lvl=None
+  names.name1: sid=14802 raw=TRIGSTR_14802 val='|cffc8dc8cТренировки Охотников|r [|cffc8dc8c1|r]'
+  tips.tip1: sid=14728 raw=TRIGSTR_14728 val='Исследовать «|cffc8dc8cТренировки Охотников|r»'
+  ubertips.ubertip1: sid=38530 raw=TRIGSTR_38530 val='Охотники на демонов проходят сложнейшие тренировки, увеличивае свое мастерство.\n|cffc8dc8cУвеличивает скорость боя -  5%.\nУвеличивает урон - 4.\nУвеличивает шанс уклонения на 6%.|r'
+  hotkeys.hotkey1: sid=32191 raw=TRIGSTR_32191 val='X'
+Upgrade: R099 max_lvl=None
+  names.name1: sid=14852 raw=TRIGSTR_14852 val='|cffc8dc8cПриоритет Наги|r'
+  tips.tip1: sid=15228 raw=TRIGSTR_15228 val='Исследовать «|cffc8dc8cПриоритет Наги|r»'
+  ubertips.ubertip1: sid=14858 raw=TRIGSTR_14858 val='После этого исследования в приоритете будет тренировка войск |cffc8dc8cНаг|r.\n|cffc8dc8cУвеличивает урон - 4.\nУвеличивает скорость передвижения - 20.|r\n|cffff0000Важно: Исследовать "Приоритет Эльфы", "Приоритет Орки", будет невозможно.|r'
+  hotkeys.hotkey1: sid=37461 raw=TRIGSTR_37461 val='W'
+Upgrade: R09A max_lvl=None
+  names.name1: sid=14859 raw=TRIGSTR_14859 val='|cffc8dc8cПриоритет Эльфы|r'
+  tips.tip1: sid=14860 raw=TRIGSTR_14860 val='Исследовать «|cffc8dc8cПриоритет Эльфы|r»'
+  ubertips.ubertip1: sid=14865 raw=TRIGSTR_14865 val='После этого исследования в приоритете будет тренировка войск |cffc8dc8cЭльфы|r.\n|cffc8dc8cУвеличивает здоровье - 50.\nУвеличивает скорость боя - 15%.|r\n|cffff0000Важно: Исследовать "Приоритет Наги", "Приоритет Орки", будет невозможно.|r'
+  hotkeys.hotkey1: sid=34579 raw=TRIGSTR_34579 val='E'
+Upgrade: R09B max_lvl=None
+  names.name1: sid=14866 raw=TRIGSTR_14866 val='|cffc8dc8cПриоритет Орки|r'
+  tips.tip1: sid=14867 raw=TRIGSTR_14867 val='Исследовать «|cffc8dc8cПриоритет Орки|r»'
+  ubertips.ubertip1: sid=2950 raw=TRIGSTR_2950 val='После этого исследования в приоритете будет тренировка войск |cffc8dc8cОрков|r.\n|cffc8dc8cУвеличивает урон - 10.\n|cffff0000Важно: Исследовать "Приоритет Наги", "Приоритет Эльфы", будет невозможно.|r'
+  hotkeys.hotkey1: sid=35752 raw=TRIGSTR_35752 val='R'
+Upgrade: R08Y max_lvl=None
+  names.name1: sid=14541 raw=TRIGSTR_14541 val='|cffc8dc8cУкрыться за щитом|r'
+  tips.tip1: sid=14550 raw=TRIGSTR_14550 val='Исследовать «|cffc8dc8cУкрыться за щитом|r»'
+  ubertips.ubertip1: sid=None raw="Дает пехотинцам способность «Защита», делающую их более устойчивыми к пронзающим атакам." val='"Дает пехотинцам способность «Защита», делающую их более устойчивыми к пронзающим атакам."'
+  hotkeys.hotkey1: sid=17691 raw=TRIGSTR_17691 val='A'
+Upgrade: R091 max_lvl=None
+  names.name1: sid=14628 raw=TRIGSTR_14628 val='|cffc8dc8cГрубая сила|r'
+  tips.tip1: sid=14629 raw=TRIGSTR_14629 val='Исследовать «|cffc8dc8cГрубая сила|r»'
+  ubertips.ubertip1: sid=14637 raw=TRIGSTR_14637 val='|cffc8dc8c+<Robs,base1>|r к запасу здоровья |cffc8dc8cрубак|r, |cffc8dc8cСумеречных налетчиков|r и |cffc8dc8c+<Robs,base2>|r к урону от их атак.'
+  hotkeys.hotkey1: sid=17590 raw=TRIGSTR_17590 val='S'
+Upgrade: R095 max_lvl=None
+  names.name1: sid=14716 raw=TRIGSTR_14716 val='|cffc8dc8cЯростный рывок|r'
+  tips.tip1: sid=14720 raw=TRIGSTR_14720 val='|cffc8dc8cЯростный рывок|r'
+  ubertips.ubertip1: sid=14722 raw=TRIGSTR_14722 val='Ускоряет передвижение |cffc8dc8cСумеречного налетчика|r, но понижает его урон.\n|cffc8dc8cК скорости передвижения - 35.\n|cffff0000Важно|r: |cffc8dc8cПонижает урон на (-3)|r.|r'
+  hotkeys.hotkey1: sid=18621 raw=TRIGSTR_18621 val='D'
+Upgrade: R08Z max_lvl=None
+  names.name1: sid=14585 raw=TRIGSTR_14585 val='|cffc8dc8cПосвящение магистров|r |cffffff00(Уровень 1)|r'
+  tips.tip1: sid=14586 raw=TRIGSTR_14586 val='|cffc8dc8cПосвящение магистров|r |cffffff00(Уровень 1)|r'
+  ubertips.ubertip1: sid=15215 raw=TRIGSTR_15215 val='Увеличивает запас здоровья и маны магистров, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 50.\nРегенерацию маны + 0.3.\nЗдоровье + 40.|r'
+  hotkeys.hotkey1: sid=17741 raw=TRIGSTR_17741 val='A'
+Upgrade: R090 max_lvl=None
+  names.name1: sid=14610 raw=TRIGSTR_14610 val='|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 1)|r'
+  tips.tip1: sid=14611 raw=TRIGSTR_14611 val='|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 1)|r'
+  ubertips.ubertip1: sid=15221 raw=TRIGSTR_15221 val='Увеличивает запас здоровья и маны чернокнижников, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 40.\nРегенерацию маны + 0.5.\nЗдоровье + 40.|r'
+  hotkeys.hotkey1: sid=17573 raw=TRIGSTR_17573 val='S'
+Upgrade: R094 max_lvl=None
+  names.name1: sid=14705 raw=TRIGSTR_14705 val='|cffc8dc8cМутация Наг|r'
+  tips.tip1: sid=14709 raw=TRIGSTR_14709 val='|cffc8dc8cМутация Наг|r'
+  ubertips.ubertip1: sid=14711 raw=TRIGSTR_14711 val='Увеличивает запас здоровья, ускоряет передвижение, а также обучает их новым способностям.\n|cffc8dc8cК скорости передвижения - 20.\nК здоровью - 35.|r'
+  hotkeys.hotkey1: sid=17766 raw=TRIGSTR_17766 val='A'
+Upgrade: R092 max_lvl=None
+  names.name1: sid=40385 raw=TRIGSTR_40385 val='|cffc8dc8cОпутывание|r'
+  tips.tip1: sid=40386 raw=TRIGSTR_40386 val='|cffc8dc8cОпутывание|r'
+  ubertips.ubertip1: sid=14645 raw=TRIGSTR_14645 val='Выдать "|cffc8dc8cСетку|r" для поимки врагов.'
+  hotkeys.hotkey1: sid=17593 raw=TRIGSTR_17593 val='S'
+Upgrade: R093 max_lvl=None
+  names.name1: sid=14659 raw=TRIGSTR_14659 val='|cffc8dc8cМагия воды|r |cffffff00(Уровень 1)|r'
+  tips.tip1: sid=14660 raw=TRIGSTR_14660 val='|cffc8dc8cМагия воды|r |cffffff00(Уровень 1)|r'
+  ubertips.ubertip1: sid=16042 raw=TRIGSTR_16042 val='Увеличивает запас здоровья и маны |cffc8dc8cнаге сирене|r, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 50.\nРегенерацию маны + 0.3.\nЗдоровье + 70.|r'
+  hotkeys.hotkey1: sid=18597 raw=TRIGSTR_18597 val='D'
+Upgrade: R097 max_lvl=None
+  names.name1: sid=14745 raw=TRIGSTR_14745 val='|cffc8dc8cУлучшенные топоры|r'
+  tips.tip1: sid=14749 raw=TRIGSTR_14749 val='Исследовать |cffc8dc8cУлучшенные топоры|r'
+  ubertips.ubertip1: sid=14751 raw=TRIGSTR_14751 val='Увеличивают объем переносимой работниками древесины на |cffc8dc8c<Rhlh,mod1>|r.'
+  hotkeys.hotkey1: sid=36854 raw=TRIGSTR_36854 val='Q'
+Upgrade: R098 max_lvl=None
+  names.name1: sid=14815 raw=TRIGSTR_14815 val='|cffc8dc8cВладение скверной|r |cffffff00(Уровень 1)|r'
+  tips.tip1: sid=14816 raw=TRIGSTR_14816 val='|cffc8dc8cВладение скверной|r |cffffff00(Уровень 1)|r'
+  ubertips.ubertip1: sid=14809 raw=TRIGSTR_14809 val='Позволяет |cffc8dc8cПокоренному демону|r использовать новые способности.\n'
+  hotkeys.hotkey1: sid=17781 raw=TRIGSTR_17781 val='A'
+Upgrade: R07H max_lvl=None
+  names.name1: sid=9219 raw=TRIGSTR_9219 val='|cffe6beaaИллидари'
+  tips.tip1: sid=9220 raw=TRIGSTR_9220 val='|cffe6beaaИллидари'
+  ubertips.ubertip1: sid=9444 raw=TRIGSTR_9444 val='Войско созданное и организованное Иллиданом Яростью Бури из собственных последователей, для борьбы с Пылающим Легионом.'
+  hotkeys.hotkey1: sid=None raw=None val=None
+Upgrade: R0KZ max_lvl=None
+  names.name1: sid=5721 raw=TRIGSTR_5721 val='|cffe6beaaИллидари или Наги|r'
+  tips.tip1: sid=9416 raw=TRIGSTR_9416 val='|cffe6beaaИллидари или Наги|r'
+  ubertips.ubertip1: sid=12518 raw=TRIGSTR_12518 val='Войско созданное и организованное Иллиданом Яростью Бури из собственных последователей, для борьбы с Пылающим Легионом.'
+  hotkeys.hotkey1: sid=None raw=None val=None
+Upgrade: R0L0 max_lvl=None
+  names.name1: sid=12039 raw=TRIGSTR_12039 val='|cffe6beaaЭльфы Крови или Иллидари|r'
+  tips.tip1: sid=12062 raw=TRIGSTR_12062 val='|cffe6beaaЭльфы Крови или Иллидари|r'
+  ubertips.ubertip1: sid=20115 raw=TRIGSTR_20115 val='Войско созданное и организованное Иллиданом Яростью Бури из собственных последователей, для борьбы с Пылающим Легионом.'
+  hotkeys.hotkey1: sid=None raw=None val=None
+
+=== 6. ABILITIES ===
+Ability: AHfs lvls=4
+  name: sid=None raw=|cffe4cfa3Огненный столб|r val='|cffe4cfa3Огненный столб|r'
+  name: sid=None raw=|cffe4cfa3Огненный столб|r val='|cffe4cfa3Огненный столб|r'
+  tips.tip1: sid=None raw=|cffe4cfa3Огненный столб|r [|cffffffff1-й уровень|r] (|cffffffffQ|r) val='|cffe4cfa3Огненный столб|r [|cffffffff1-й уровень|r] (|cffffffffQ|r)'
+  tips.tip2: sid=None raw=|cffe4cfa3Огненный столб|r [|cffffffff2-й уровень|r] (|cffffffffQ|r) val='|cffe4cfa3Огненный столб|r [|cffffffff2-й уровень|r] (|cffffffffQ|r)'
+  tips.tip3: sid=None raw=|cffe4cfa3Огненный столб|r [|cffffffff3-й уровень|r] (|cffffffffQ|r) val='|cffe4cfa3Огненный столб|r [|cffffffff3-й уровень|r] (|cffffffffQ|r)'
+  tips.tip4: sid=5617 raw=TRIGSTR_5617 val='|cffe4cfa3Огненный столб|r [|cffffffff4-й уровень|r] (|cffffffffQ|r)'
+  ubertips.ubertip1: sid=None raw=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff45|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff45|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r'
+  ubertips.ubertip2: sid=None raw=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff80|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff80|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r'
+  ubertips.ubertip3: sid=None raw=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff110|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff110|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r'
+  ubertips.ubertip4: sid=1441 raw=TRIGSTR_1441 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff150|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r'
+Ability: AHbn lvls=4
+  name: sid=25760 raw=TRIGSTR_25760 val='Banishment'
+  name: sid=25760 raw=TRIGSTR_25760 val='Banishment'
+  tips.tip1: sid=None raw="Изгнание [|cffffcc001-й уровень|r]" val='"Изгнание [|cffffcc001-й уровень|r]"'
+  tips.tip2: sid=None raw="Изгнание [|cffffcc002-й уровень|r]" val='"Изгнание [|cffffcc002-й уровень|r]"'
+  tips.tip3: sid=None raw="Изгнание [|cffffcc003-й уровень|r]" val='"Изгнание [|cffffcc003-й уровень|r]"'
+  tips.tip4: sid=5621 raw=TRIGSTR_5621 val='Изгнание [|cffffcc004-й уровень|r]'
+  ubertips.ubertip1: sid=None raw="Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA1,%>% на <AHbn,Dur1> сек. Изгнанные цели не могут атаковать, но могут применять способности. Кроме того, некоторые способности наносят им больше урона. Не действует на технику." val='"Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA1,%>% на <AHbn,Dur1> сек. Изгнанные цели не могут атаковать, но могут применять способности. Кроме того, некоторые способности наносят им больше урона. Не действует на технику."'
+  ubertips.ubertip2: sid=None raw="Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA2,%>% на <AHbn,Dur2> сек. Изгнанные цели не могут атаковать, но могут применять способности. Кроме того, некоторые способности наносят им больше урона." val='"Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA2,%>% на <AHbn,Dur2> сек. Изгнанные цели не могут атаковать, но могут применять способности. Кроме того, некоторые способности наносят им больше урона."'
+  ubertips.ubertip3: sid=None raw="Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA3,%>% на <AHbn,Dur3> сек. Изгнанные цели не могут атаковать, но могут применять способности. Кроме того, некоторые способности наносят им больше урона." val='"Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA3,%>% на <AHbn,Dur3> сек. Изгнанные цели не могут атаковать, но могут применять способности. Кроме того, некоторые способности наносят им больше урона."'
+  ubertips.ubertip4: sid=5622 raw=TRIGSTR_5622 val='Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA4,%>% на <AHbn,Dur4> сек. Изгнанные цели не могут атаковать, но могут применять способности. Кроме того, некоторые способности наносят им больше урона.'
+Ability: AHdr lvls=4
+  name: sid=None raw=Похищение маны val='Похищение маны'
+  name: sid=None raw=Похищение маны val='Похищение маны'
+  tips.tip1: sid=None raw="Похищение маны [|cffffcc001-й уровень|r]" val='"Похищение маны [|cffffcc001-й уровень|r]"'
+  tips.tip2: sid=None raw="Похищение маны [|cffffcc002-й уровень|r]" val='"Похищение маны [|cffffcc002-й уровень|r]"'
+  tips.tip3: sid=None raw="Похищение маны [|cffffcc003-й уровень|r]" val='"Похищение маны [|cffffcc003-й уровень|r]"'
+  tips.tip4: sid=5619 raw=TRIGSTR_5619 val='Похищение маны [|cffffcc004-й уровень|r]'
+  ubertips.ubertip1: sid=None raw="Вытягивает <AHdr,DataB1> маны/сек. из врага или передает <AHdr,DataE1> маны/сек. союзнику.|n|nПри этом запас маны мага крови может превысить максимальный, но неиспользованные излишки быстро исчезают.|nВремя действия: <AHdr,Dur1> сек." val='"Вытягивает <AHdr,DataB1> маны/сек. из врага или передает <AHdr,DataE1> маны/сек. союзнику.|n|nПри этом запас маны мага крови может превысить максимальный, но неиспользованные излишки быстро исчезают.|nВремя действия: <AHdr,Dur1> сек."'
+  ubertips.ubertip2: sid=None raw="Вытягивает <AHdr,DataB2> маны/сек. из врага или передает <AHdr,DataE2> маны/сек. союзнику.|n|nПри этом запас маны мага крови может превысить максимальный, но неиспользованные излишки быстро исчезают.|nВремя действия: <AHdr,Dur2> сек." val='"Вытягивает <AHdr,DataB2> маны/сек. из врага или передает <AHdr,DataE2> маны/сек. союзнику.|n|nПри этом запас маны мага крови может превысить максимальный, но неиспользованные излишки быстро исчезают.|nВремя действия: <AHdr,Dur2> сек."'
+  ubertips.ubertip3: sid=None raw="Вытягивает <AHdr,DataB3> маны/сек. из врага или передает <AHdr,DataE3> маны/сек. союзнику.|n|nПри этом запас маны мага крови может превысить максимальный, но неиспользованные излишки быстро исчезают.|nВремя действия: <AHdr,Dur3> сек." val='"Вытягивает <AHdr,DataB3> маны/сек. из врага или передает <AHdr,DataE3> маны/сек. союзнику.|n|nПри этом запас маны мага крови может превысить максимальный, но неиспользованные излишки быстро исчезают.|nВремя действия: <AHdr,Dur3> сек."'
+  ubertips.ubertip4: sid=5620 raw=TRIGSTR_5620 val='Вытягивает <AHdr,DataB4> маны/сек. из врага или передает <AHdr,DataE4> маны/сек. союзнику.|n|nПри этом запас маны мага крови может превысить максимальный, но неиспользованные излишки быстро исчезают.|nВремя действия: <AHdr,Dur4> сек.'
+Ability: AHpx lvls=2
+  name: sid=16143 raw=TRIGSTR_16143 val='|cffe4cfa3Феникс|r'
+  name: sid=16143 raw=TRIGSTR_16143 val='|cffe4cfa3Феникс|r'
+  tips.tip1: sid=None raw=|cffe4cfa3Феникс|r [|cffffffff1-й уровень|r] (|cffffffffR|r) val='|cffe4cfa3Феникс|r [|cffffffff1-й уровень|r] (|cffffffffR|r)'
+  tips.tip2: sid=5623 raw=TRIGSTR_5623 val='|cffe4cfa3Феникс|r [|cffffffff2-й уровень|r] (|cffffffffR|r)'
+  ubertips.ubertip1: sid=None raw=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает могучего огненного феникса. Феникс невосприимчив к магии, наносит периодический урон огнём вокруг себя и перерождается из яйца после гибели.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает могучего огненного феникса. Феникс невосприимчив к магии, наносит периодический урон огнём вокруг себя и перерождается из яйца после гибели.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r'
+  ubertips.ubertip2: sid=5624 raw=TRIGSTR_5624 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff2|cffced4da могучих огненных фениксов. Фениксы невосприимчивы к магии, наносят периодический урон огнём вокруг себя и перерождаются из яиц после гибели.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r'
+Ability: AEmb lvls=4
+  name: sid=14288 raw=TRIGSTR_14288 val='|cffc8dc8cСожжение маны|r'
+  name: sid=14288 raw=TRIGSTR_14288 val='|cffc8dc8cСожжение маны|r'
+  tips.tip1: sid=14291 raw=TRIGSTR_14291 val='|cffc8dc8cСожжение маны|r [|cffffcc001-й уровень|r]'
+  tips.tip2: sid=14292 raw=TRIGSTR_14292 val='|cffc8dc8cСожжение маны|r [|cffffcc002-й уровень|r]'
+  tips.tip3: sid=14293 raw=TRIGSTR_14293 val='|cffc8dc8cСожжение маны|r [|cffffcc003-й уровень|r]'
+  tips.tip4: sid=14294 raw=TRIGSTR_14294 val='|cffc8dc8cСожжение маны|r [|cffffcc004-й уровень|r]'
+  ubertips.ubertip1: sid=14295 raw=TRIGSTR_14295 val='Сжигает до |cffc8dc8c<AEmb,DataA1>|r маны врага и наносит ему столько же урона.'
+  ubertips.ubertip2: sid=14296 raw=TRIGSTR_14296 val='Сжигает до |cffc8dc8c<AEmb,DataA2>|r маны врага и наносит ему столько же урона.'
+  ubertips.ubertip3: sid=14297 raw=TRIGSTR_14297 val='Сжигает до |cffc8dc8c<AEmb,DataA3>|r маны врага и наносит ему столько же урона.'
+  ubertips.ubertip4: sid=14298 raw=TRIGSTR_14298 val='Сжигает до |cffc8dc8c200|r маны врага и наносит ему столько же урона.'
+Ability: AEim lvls=4
+  name: sid=2052 raw=TRIGSTR_2052 val='|cffc8dc8cОбжигающий жар|r'
+  name: sid=2052 raw=TRIGSTR_2052 val='|cffc8dc8cОбжигающий жар|r'
+  tips.tip1: sid=9756 raw=TRIGSTR_9756 val='Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc001-й уровень|r]'
+  tips.tip2: sid=9758 raw=TRIGSTR_9758 val='Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc002-й уровень|r]'
+  tips.tip3: sid=9760 raw=TRIGSTR_9760 val='Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc003-й уровень|r]'
+  tips.tip4: sid=9910 raw=TRIGSTR_9910 val='Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc004-й уровень|r]'
+  ubertips.ubertip1: sid=14227 raw=TRIGSTR_14227 val='При использовании активирует огненную ауру, которая наносит |cffc8dc8c<AEim,DataA1> урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены.'
+  ubertips.ubertip2: sid=14230 raw=TRIGSTR_14230 val='При использовании активирует огненную ауру, которая наносит |cffc8dc8c<AEim,DataA2> урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены.'
+  ubertips.ubertip3: sid=14233 raw=TRIGSTR_14233 val='При использовании активирует огненную ауру, которая наносит |cffc8dc8c<AEim,DataA3> урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены.'
+  ubertips.ubertip4: sid=14236 raw=TRIGSTR_14236 val='При использовании активирует огненную ауру, которая наносит |cffc8dc8c25 урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены.'
+  untips.untip1: sid=14237 raw=TRIGSTR_14237 val='Отменить «|cffc8dc8cОбжигающий жар|r»'
+  untips.untip2: sid=14240 raw=TRIGSTR_14240 val='Отменить «|cffc8dc8cОбжигающий жар|r»'
+  untips.untip3: sid=14281 raw=TRIGSTR_14281 val='Отменить «|cffc8dc8cОбжигающий жар|r»'
+  untips.untip4: sid=14282 raw=TRIGSTR_14282 val='Отменить «|cffc8dc8cОбжигающий жар|r»'
+  unubertips.unubertip1: sid=14283 raw=TRIGSTR_14283 val='Прерывает «|cffc8dc8cОбжигающий жар|r». Останавливает расход маны.'
+  unubertips.unubertip2: sid=14284 raw=TRIGSTR_14284 val='Прерывает «|cffc8dc8cОбжигающий жар|r». Останавливает расход маны.'
+  unubertips.unubertip3: sid=14285 raw=TRIGSTR_14285 val='Прерывает «|cffc8dc8cОбжигающий жар|r». Останавливает расход маны.'
+  unubertips.unubertip4: sid=14286 raw=TRIGSTR_14286 val='Прерывает «|cffc8dc8cОбжигающий жар|r». Останавливает расход маны.'
+Ability: AEev lvls=4
+  name: sid=5770 raw=TRIGSTR_5770 val='|cffc8dc8cУскользание|r'
+  name: sid=5770 raw=TRIGSTR_5770 val='|cffc8dc8cУскользание|r'
+  tips.tip1: sid=10941 raw=TRIGSTR_10941 val='|cffc8dc8cУскользание|r [|cffffcc001-й уровень|r]'
+  tips.tip2: sid=8771 raw=TRIGSTR_8771 val='|cffc8dc8cУскользание|r [|cffffcc002-й уровень|r]'
+  tips.tip3: sid=8772 raw=TRIGSTR_8772 val='|cffc8dc8cУскользание|r [|cffffcc003-й уровень|r]'
+  tips.tip4: sid=8775 raw=TRIGSTR_8775 val='|cffc8dc8cУскользание|r [|cffffcc004-й уровень|r]'
+  ubertips.ubertip1: sid=11335 raw=TRIGSTR_11335 val='Дает |cffc8dc8c<AEev,DataA1,%>%-й шанс|r уклониться от атаки.'
+  ubertips.ubertip2: sid=8780 raw=TRIGSTR_8780 val='Дает |cffc8dc8c<AEev,DataA2,%>%-й шанс|r уклониться от атаки.'
+  ubertips.ubertip3: sid=9392 raw=TRIGSTR_9392 val='Дает |cffc8dc8c<AEev,DataA3,%>%-й шанс|r уклониться от атаки.'
+  ubertips.ubertip4: sid=12243 raw=TRIGSTR_12243 val='Дает |cffc8dc8c40%-й шанс|r уклониться от атаки.'
+Ability: A0NZ lvls=2
+  name: sid=14310 raw=TRIGSTR_14310 val='|cffc8dc8cМетаморфоза|r'
+  name: sid=14310 raw=TRIGSTR_14310 val='|cffc8dc8cМетаморфоза|r'
+  tips.tip1: sid=14313 raw=TRIGSTR_14313 val='|cffc8dc8cМетаморфоза|r'
+  tips.tip2: sid=14314 raw=TRIGSTR_14314 val='|cffc8dc8cМетаморфоза|r'
+  ubertips.ubertip1: sid=14316 raw=TRIGSTR_14316 val='Охотник превращается в демона с |cffc8dc8c<AEme,DataE1>|r здоровья, атакующего в дальнем бою. |nВремя действия: |cffc8dc8c<AEme,HeroDur1>|r сек.'
+  ubertips.ubertip2: sid=14315 raw=TRIGSTR_14315 val='Охотник превращается в демона с |cffc8dc8c700|r здоровья, атакующего в дальнем бою. |nВремя действия: |cffc8dc8c<AEme,HeroDur1>|r сек.'
+Ability: A0UV lvls=4
+  name: sid=6801 raw=TRIGSTR_6801 val='|cffc8dc8cВспышка скверны|r'
+  name: sid=6801 raw=TRIGSTR_6801 val='|cffc8dc8cВспышка скверны|r'
+  tips.tip1: sid=6802 raw=TRIGSTR_6802 val='|cffc8dc8cВспышка скверны|r'
+  tips.tip2: sid=6803 raw=TRIGSTR_6803 val='|cffc8dc8cВспышка скверны|r'
+  tips.tip3: sid=6806 raw=TRIGSTR_6806 val='|cffc8dc8cВспышка скверны|r'
+  tips.tip4: sid=10672 raw=TRIGSTR_10672 val='|cffc8dc8cВспышка скверны|r'
+  ubertips.ubertip1: sid=None raw="+<Amfl,DataE1> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: <Amfl,Dur1> сек." val='"+<Amfl,DataE1> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: <Amfl,Dur1> сек."'
+  ubertips.ubertip2: sid=10666 raw=TRIGSTR_10666 val='+<Amfl,DataE2> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: <Amfl,Dur1> сек.'
+  ubertips.ubertip3: sid=10669 raw=TRIGSTR_10669 val='+<Amfl,DataE3> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: <Amfl,Dur1> сек.'
+  ubertips.ubertip4: sid=10675 raw=TRIGSTR_10675 val='+<Amfl,DataE4> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: <Amfl,Dur1> сек.'
+  untips.untip1: sid=6807 raw=TRIGSTR_6807 val='Отменить «|cffc8dc8cВспышка скверны|r»'
+  untips.untip2: sid=7746 raw=TRIGSTR_7746 val='Отменить «|cffc8dc8cВспышка скверны|r»'
+  untips.untip3: sid=10283 raw=TRIGSTR_10283 val='Отменить «|cffc8dc8cВспышка скверны|r»'
+  untips.untip4: sid=10678 raw=TRIGSTR_10678 val='Отменить «|cffc8dc8cВспышка скверны|r»'
+  unubertips.unubertip1: sid=10618 raw=TRIGSTR_10618 val='Прерывает действие «|cffc8dc8cВспышка скверны|r».'
+  unubertips.unubertip2: sid=10622 raw=TRIGSTR_10622 val='Прерывает действие «|cffc8dc8cВспышка скверны|r».'
+  unubertips.unubertip3: sid=10654 raw=TRIGSTR_10654 val='Прерывает действие «|cffc8dc8cВспышка скверны|r».'
+  unubertips.unubertip4: sid=10681 raw=TRIGSTR_10681 val='Прерывает действие «|cffc8dc8cВспышка скверны|r».'
+Ability: A0NJ lvls=4
+  name: sid=9824 raw=TRIGSTR_9824 val='|cffc8dc8cЖар поглощения|r'
+  name: sid=9824 raw=TRIGSTR_9824 val='|cffc8dc8cЖар поглощения|r'
+  tips.tip1: sid=9826 raw=TRIGSTR_9826 val='|cffc8dc8cЖар поглощения|r'
+  tips.tip2: sid=9912 raw=TRIGSTR_9912 val='|cffc8dc8cЖар поглощения|r'
+  tips.tip3: sid=9911 raw=TRIGSTR_9911 val='|cffc8dc8cЖар поглощения|r'
+  tips.tip4: sid=11099 raw=TRIGSTR_11099 val='|cffc8dc8cЖар поглощения|r'
+  ubertips.ubertip1: sid=14035 raw=TRIGSTR_14035 val='Выпускает внутренний огонь скверны, который поглощает здоровье всех окружающих существ, передвая его охотнику. Длительность - |cffc8dc8c15 сек.|r|n|cffffcc001-й уровень:|r |cffc8dc8cРадиус поражения -180, урона 10 в сек.'
+  ubertips.ubertip2: sid=14036 raw=TRIGSTR_14036 val='Выпускает внутренний огонь скверны, который поглощает здоровье всех окружающих существ, передвая его охотнику. Длительность - |cffc8dc8c15 сек.|r|n|cffffcc002-й уровень:|r |cffc8dc8cРадиус поражения -220, урона 10 в сек.'
+  ubertips.ubertip3: sid=14039 raw=TRIGSTR_14039 val='Выпускает внутренний огонь скверны, который поглощает здоровье всех окружающих существ, передвая его охотнику. Длительность - |cffc8dc8c15 сек.|r|n|cffffcc003-й уровень:|r |cffc8dc8cРадиус поражения -220, урона 20 в сек.'
+  ubertips.ubertip4: sid=14096 raw=TRIGSTR_14096 val='Выпускает внутренний огонь скверны, который поглощает здоровье всех окружающих существ, передвая его охотнику. Длительность - |cffc8dc8c15 сек.|r|n|cffffcc004-й уровень:|r |cffc8dc8cРадиус поражения -220, урона 30 в сек.'
+Ability: A0NS lvls=4
+  name: sid=14194 raw=TRIGSTR_14194 val='|cffc8dc8cВзор скверны|r'
+  name: sid=14194 raw=TRIGSTR_14194 val='|cffc8dc8cВзор скверны|r'
+  tips.tip1: sid=14196 raw=TRIGSTR_14196 val='|cffc8dc8cВзор скверны|r [|cffffcc001-й уровень|r]'
+  tips.tip2: sid=14197 raw=TRIGSTR_14197 val='|cffc8dc8cВзор скверны|r [|cffffcc002-й уровень|r]'
+  tips.tip3: sid=14198 raw=TRIGSTR_14198 val='|cffc8dc8cВзор скверны|r [|cffffcc003-й уровень|r]'
+  tips.tip4: sid=14199 raw=TRIGSTR_14199 val='|cffc8dc8cВзор скверны|r [|cffffcc004-й уровень|r]'
+  ubertips.ubertip1: sid=14201 raw=TRIGSTR_14201 val='Дает |cffc8dc8c<AOcr,DataA1>%-й|r шанс нанести |cffc8dc8c<AOcr,DataB1>|r-кратный урон при атаке.'
+  ubertips.ubertip2: sid=14202 raw=TRIGSTR_14202 val='Дает |cffc8dc8c<AOcr,DataA2>%-й|r шанс нанести |cffc8dc8c<AOcr,DataB2>|r-кратный урон при атаке.'
+  ubertips.ubertip3: sid=14203 raw=TRIGSTR_14203 val='Дает |cffc8dc8c<AOcr,DataA3>%-й|r шанс нанести |cffc8dc8c<AOcr,DataB3>|r-кратный урон при атаке.'
+  ubertips.ubertip4: sid=14200 raw=TRIGSTR_14200 val='Дает |cffc8dc8c15-й|r шанс нанести |cffc8dc8c6|r-кратный урон при атаке.'
+Ability: A0NU lvls=2
+  name: sid=14211 raw=TRIGSTR_14211 val='|cffc8dc8cПламенная боль|r'
+  name: sid=14211 raw=TRIGSTR_14211 val='|cffc8dc8cПламенная боль|r'
+  tips.tip1: sid=14212 raw=TRIGSTR_14212 val='|cffc8dc8cПламенная боль|r'
+  tips.tip2: sid=14218 raw=TRIGSTR_14218 val='|cffc8dc8cПламенная боль|r'
+  ubertips.ubertip1: sid=14213 raw=TRIGSTR_14213 val='Возвращает весь нанесенный урон по союзным войскам. Радиус действия - |cffc8dc8c900|r|r|n|cffffcc001-й уровень:|r |cffc8dc8cДлительность действия - 20 сек.'
+  ubertips.ubertip2: sid=14220 raw=TRIGSTR_14220 val='Возвращает весь нанесенный урон по союзным войскам. Радиус действия - |cffc8dc8c900|r|r|n|cffffcc002-й уровень:|r |cffc8dc8cДлительность действия - 20 сек.'
+Ability: A0NF lvls=4
+  name: sid=6918 raw=TRIGSTR_6918 val='|cffc8dc8cРывок Скверны|r'
+  name: sid=6918 raw=TRIGSTR_6918 val='|cffc8dc8cРывок Скверны|r'
+  tips.tip1: sid=6922 raw=TRIGSTR_6922 val='|cffc8dc8cРывок Скверны|r'
+  tips.tip2: sid=6925 raw=TRIGSTR_6925 val='|cffc8dc8cРывок Скверны|r'
+  tips.tip3: sid=6928 raw=TRIGSTR_6928 val='|cffc8dc8cРывок Скверны|r'
+  tips.tip4: sid=6933 raw=TRIGSTR_6933 val='|cffc8dc8cРывок Скверны|r'
+  ubertips.ubertip1: sid=7132 raw=TRIGSTR_7132 val='Охотник на демонов совершает рывок в указаном направлении нанося урон всем задетым врагам.\n |n|n|cffffcc001-й уровень:|r |cffc8dc8c75 урона всем врагам.|r'
+  ubertips.ubertip2: sid=7202 raw=TRIGSTR_7202 val='Охотник на демонов совершает рывок в указаном направлении нанося урон всем задетым врагам.r|n|cffffcc002-й уровень:|r |cffc8dc8c150 урона всем врагам.|r'
+  ubertips.ubertip3: sid=12043 raw=TRIGSTR_12043 val='Охотник на демонов совершает рывок в указаном направлении нанося урон всем задетым врагам.\n|n|cffffcc003-й уровень:|r |cffc8dc8c220 урона всем врагам.|r'
+  ubertips.ubertip4: sid=12053 raw=TRIGSTR_12053 val='Охотник на демонов совершает рывок в указаном направлении нанося урон всем задетым врагам.r|n|cffffcc004-й уровень:|r |cffc8dc8c300 урона всем врагам.|r'
+Ability: A0NX lvls=4
+  name: sid=14248 raw=TRIGSTR_14248 val='|cffc8dc8cЯрость скверны|r'
+  name: sid=14248 raw=TRIGSTR_14248 val='|cffc8dc8cЯрость скверны|r'
+  tips.tip1: sid=14250 raw=TRIGSTR_14250 val='|cffc8dc8cЯрость скверны|r'
+  tips.tip2: sid=14251 raw=TRIGSTR_14251 val='|cffc8dc8cЯрость скверны|r'
+  tips.tip3: sid=14252 raw=TRIGSTR_14252 val='|cffc8dc8cЯрость скверны|r'
+  tips.tip4: sid=14253 raw=TRIGSTR_14253 val='|cffc8dc8cЯрость скверны|r'
+  ubertips.ubertip1: sid=14259 raw=TRIGSTR_14259 val='|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+50%|r к получаемому урону.'
+  ubertips.ubertip2: sid=14260 raw=TRIGSTR_14260 val='|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+40%|r к получаемому урону.'
+  ubertips.ubertip3: sid=14261 raw=TRIGSTR_14261 val='|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+30%|r к получаемому урону.'
+  ubertips.ubertip4: sid=14262 raw=TRIGSTR_14262 val='|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+20%|r к получаемому урону.'
+  untips.untip1: sid=14254 raw=TRIGSTR_14254 val='|cffc8dc8cЯрость скверны|r'
+  untips.untip2: sid=14255 raw=TRIGSTR_14255 val='|cffc8dc8cЯрость скверны|r'
+  untips.untip3: sid=14256 raw=TRIGSTR_14256 val='|cffc8dc8cЯрость скверны|r'
+  untips.untip4: sid=14257 raw=TRIGSTR_14257 val='|cffc8dc8cЯрость скверны|r'
+Ability: A0NW lvls=4
+  name: sid=14235 raw=TRIGSTR_14235 val='|cffc8dc8cРазлом|r'
+  name: sid=14235 raw=TRIGSTR_14235 val='|cffc8dc8cРазлом|r'
+  tips.tip1: sid=14243 raw=TRIGSTR_14243 val='|cffc8dc8cРазлом|r [|cffffcc001-й уровень|r]'
+  tips.tip2: sid=14244 raw=TRIGSTR_14244 val='|cffc8dc8cРазлом|r [|cffffcc002-й уровень|r]'
+  tips.tip3: sid=14245 raw=TRIGSTR_14245 val='|cffc8dc8cРазлом|r [|cffffcc003-й уровень|r]'
+  tips.tip4: sid=14246 raw=TRIGSTR_14246 val='|cffc8dc8cРазлом|r [|cffffcc004-й уровень|r]'
+  ubertips.ubertip1: sid=None raw="С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек." val='"С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек."'
+  ubertips.ubertip2: sid=None raw="С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC2> больше урона и оглушит цель на <AHbh,Dur1> сек." val='"С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC2> больше урона и оглушит цель на <AHbh,Dur1> сек."'
+  ubertips.ubertip3: sid=None raw="С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC3> больше урона и оглушит цель на <AHbh,Dur1> сек." val='"С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC3> больше урона и оглушит цель на <AHbh,Dur1> сек."'
+  ubertips.ubertip4: sid=None raw=None val=None
+Ability: A0NV lvls=2
+  name: sid=14228 raw=TRIGSTR_14228 val='|cffc8dc8cКлинки скверны|r'
+  name: sid=14228 raw=TRIGSTR_14228 val='|cffc8dc8cКлинки скверны|r'
+  tips.tip1: sid=14264 raw=TRIGSTR_14264 val='|cffc8dc8cКлинки скверны|r'
+  tips.tip2: sid=14265 raw=TRIGSTR_14265 val='|cffc8dc8cКлинки скверны|r'
+  ubertips.ubertip1: sid=14276 raw=TRIGSTR_14276 val='Атаки героя наносят урон рядом стоящим с атакованной целью. Длительность - |cffc8dc8c25 сек.|r|n|cffffcc001-й уровень:|r |cffc8dc8c40% урона, радиус - 180.'
+  ubertips.ubertip2: sid=14278 raw=TRIGSTR_14278 val='Атаки героя наносят урон рядом стоящим с атакованной целью. Длительность - |cffc8dc8c25 сек.|r|n|cffffcc002-й уровень:|r |cffc8dc8c40% урона, радиус - 180'
+Ability: A0O2 lvls=4
+  name: sid=38522 raw=TRIGSTR_38522 val='|cffc8dc8cЛовкость иллидари|r'
+  name: sid=38522 raw=TRIGSTR_38522 val='|cffc8dc8cЛовкость иллидари|r'
+  tips.tip1: sid=38524 raw=TRIGSTR_38524 val='|cffc8dc8cЛовкость иллидари|r'
+  tips.tip2: sid=38525 raw=TRIGSTR_38525 val='|cffc8dc8cЛовкость иллидари|r'
+  tips.tip3: sid=38526 raw=TRIGSTR_38526 val='|cffc8dc8cЛовкость иллидари|r'
+  tips.tip4: sid=38546 raw=TRIGSTR_38546 val='|cffc8dc8cЛовкость иллидари|r'
+  ubertips.ubertip1: sid=38523 raw=TRIGSTR_38523 val='Дает |cffc8dc8c<A0O2,DataA1,%>%-й шанс|r уклониться от атаки.'
+  ubertips.ubertip2: sid=38527 raw=TRIGSTR_38527 val='Дает |cffc8dc8c<A0O2,DataA2,%>%-й шанс|r уклониться от атаки.'
+  ubertips.ubertip3: sid=38528 raw=TRIGSTR_38528 val='Дает |cffc8dc8c<A0O2,DataA3,%>%-й шанс|r уклониться от атаки.'
+  ubertips.ubertip4: sid=38529 raw=TRIGSTR_38529 val='Дает |cffc8dc8c<A0O2,DataA4,%>%-й шанс|r уклониться от атаки.'
+Ability: A0O5 lvls=1
+  name: sid=38548 raw=TRIGSTR_38548 val='|cffc8dc8cПоглощение силы|r'
+  name: sid=38548 raw=TRIGSTR_38548 val='|cffc8dc8cПоглощение силы|r'
+  tips.tip1: sid=38550 raw=TRIGSTR_38550 val='|cffc8dc8cПоглощение силы|r'
+  ubertips.ubertip1: sid=14533 raw=TRIGSTR_14533 val='Каждый нанесенный урон восстанавливает 0.5% от максимального здоровья юнита. Если урон способностью, то процент равен 0.25.'
+Ability: A0OH lvls=1
+  name: sid=14769 raw=TRIGSTR_14769 val='|cffc8dc8cЯрость демон-зверя|r'
+  name: sid=14769 raw=TRIGSTR_14769 val='|cffc8dc8cЯрость демон-зверя|r'
+  tips.tip1: sid=14770 raw=TRIGSTR_14770 val='|cffc8dc8cЯрость демон-зверя|r'
+  ubertips.ubertip1: sid=14771 raw=TRIGSTR_14771 val='Увеличивает скорость передвижения |cffc8dc8cПокоренному демону|r.\n|cffc8dc8cУвеличивает скорость - 50.|r'
+Ability: A0OG lvls=1
+  name: sid=14766 raw=TRIGSTR_14766 val='|cffc8dc8cОстрые клинки|r'
+  name: sid=14766 raw=TRIGSTR_14766 val='|cffc8dc8cОстрые клинки|r'
+  tips.tip1: sid=14767 raw=TRIGSTR_14767 val='|cffc8dc8cОстрые клинки|r'
+  ubertips.ubertip1: sid=14768 raw=TRIGSTR_14768 val='|cffc8dc8c+<Ahsb,DataB1,%>%|r к урону по целям со средней броней.'
+Ability: A1GU lvls=1
+  name: sid=794 raw=TRIGSTR_794 val='Поглощение осколков'
+  name: sid=794 raw=TRIGSTR_794 val='Поглощение осколков'
+  tips.tip1: sid=2215 raw=TRIGSTR_2215 val='Поглощение осколков'
+  ubertips.ubertip1: sid=2219 raw=TRIGSTR_2219 val='Когда Охотник на демонов атакует цель, он разбивает ее душу на множество осколов, и поглощает эти осколки, что позволяет ему востанавливать себе здоровье в розмере 15% от урона. \n'
+Ability: A0OF lvls=1
+  name: sid=14763 raw=TRIGSTR_14763 val='|cffc8dc8cАура истребления|r'
+  name: sid=14763 raw=TRIGSTR_14763 val='|cffc8dc8cАура истребления|r'
+  tips.tip1: sid=14764 raw=TRIGSTR_14764 val='|cffc8dc8cАура истребления|r'
+  ubertips.ubertip1: sid=14765 raw=TRIGSTR_14765 val='Увеличивает урон от атак находящихся рядом союзников.\n|cffc8dc8cРадиус действия - 400.\nБонус к урону - 10%.|r'
+Ability: A0OE lvls=1
+  name: sid=14760 raw=TRIGSTR_14760 val='|cffc8dc8cПропитка скверной|r'
+  name: sid=14760 raw=TRIGSTR_14760 val='|cffc8dc8cПропитка скверной|r'
+  tips.tip1: sid=14761 raw=TRIGSTR_14761 val='|cffc8dc8cПропитка скверной|r'
+  ubertips.ubertip1: sid=15038 raw=TRIGSTR_15038 val='|cffc8dc8c-<Assk,DataC1> |rот получаемого  урона от атак. Минимальный урон от атак: |cffc8dc8c<Assk,DataB1>|r.'
+Ability: A0O1 lvls=1
+  name: sid=14329 raw=TRIGSTR_14329 val='|cffc8dc8cВзор скверны|r'
+  name: sid=14329 raw=TRIGSTR_14329 val='|cffc8dc8cВзор скверны|r'
+  tips.tip1: sid=14331 raw=TRIGSTR_14331 val='|cffc8dc8cВзор скверны|r [|cffffcc001-й уровень|r]'
+  ubertips.ubertip1: sid=14336 raw=TRIGSTR_14336 val='Дает |cffc8dc8c<AOcr,DataA1>%-й|r шанс нанести |cffc8dc8c<AOcr,DataB1>|r-кратный урон при атаке.'
+Ability: A0O0 lvls=1
+  name: sid=14317 raw=TRIGSTR_14317 val='|cffc8dc8cПротиводействие|r'
+  name: sid=14317 raw=TRIGSTR_14317 val='|cffc8dc8cПротиводействие|r'
+  tips.tip1: sid=14318 raw=TRIGSTR_14318 val='|cffc8dc8cПротиводействие|r'
+  ubertips.ubertip1: sid=12939 raw=TRIGSTR_12939 val='Каждая атака Охотников на демонов уничтожает ману цели, нанося дополнительный урон.\n|cffc8dc8c6 ед. маны - героям.\n20 ед. маны - солдатам.|r'
+Ability: A048 lvls=1
+  name: sid=2967 raw=TRIGSTR_2967 val='|cff00ff00Инфернальный прыжок|r'
+  name: sid=2967 raw=TRIGSTR_2967 val='|cff00ff00Инфернальный прыжок|r'
+  tips.tip1: sid=2968 raw=TRIGSTR_2968 val='|cff00ff00Инфернальный прыжок|r'
+  ubertips.ubertip1: sid=927 raw=TRIGSTR_927 val='Совершает рывок к противнику, нанося урон.'
+  untips.untip1: sid=None raw=|cffc3dbffПКМ – включить автоприменение.|r val='|cffc3dbffПКМ – включить автоприменение.|r'
+  unubertips.unubertip1: sid=None raw=|cffc3dbffПКМ – отключить автоприменение.|r val='|cffc3dbffПКМ – отключить автоприменение.|r'
+Ability: A1KL lvls=1
+  name: sid=38565 raw=TRIGSTR_38565 val='|cffc8dc8cОгненная стрела|r'
+  name: sid=38565 raw=TRIGSTR_38565 val='|cffc8dc8cОгненная стрела|r'
+  tips.tip1: sid=38566 raw=TRIGSTR_38566 val='|cffc8dc8cОгненная стрела|r'
+  ubertips.ubertip1: sid=38607 raw=TRIGSTR_38607 val='Выпускает сгусток огня, оглушающий врага.'
+  untips.untip1: sid=None raw=|cffc3dbffПКМ – включить автоприменение.|r val='|cffc3dbffПКМ – включить автоприменение.|r'
+  unubertips.unubertip1: sid=None raw=|cffc3dbffПКМ – отключить автоприменение.|r val='|cffc3dbffПКМ – отключить автоприменение.|r'
+Ability: A1KO lvls=1
+  name: sid=38590 raw=TRIGSTR_38590 val='|cffc8dc8cСтрела скверны|r'
+  name: sid=38590 raw=TRIGSTR_38590 val='|cffc8dc8cСтрела скверны|r'
+  tips.tip1: sid=38591 raw=TRIGSTR_38591 val='|cffc8dc8cСтрела скверны|r'
+  ubertips.ubertip1: sid=38595 raw=TRIGSTR_38595 val='Выпускает сгусток скверны, наносящий урон и ослабляющий броню цели и врагов поблизости.'
+  untips.untip1: sid=None raw=|cffc3dbffПКМ – включить автоприменение.|r val='|cffc3dbffПКМ – включить автоприменение.|r'
+  unubertips.unubertip1: sid=None raw=|cffc3dbffПКМ – отключить автоприменение.|r val='|cffc3dbffПКМ – отключить автоприменение.|r'
+Ability: A0NI lvls=1
+  name: sid=9741 raw=TRIGSTR_9741 val='Ускользание +100'
+  name: sid=9741 raw=TRIGSTR_9741 val='Ускользание +100'
+  tips.tip1: sid=None raw="Ускользание [|cffffcc001-й уровень|r]" val='"Ускользание [|cffffcc001-й уровень|r]"'
+  ubertips.ubertip1: sid=None raw="Дает <AEev,DataA1,%>%-й шанс уклониться от атаки." val='"Дает <AEev,DataA1,%>%-й шанс уклониться от атаки."'
+Ability: A0NT lvls=1
+  name: sid=14208 raw=TRIGSTR_14208 val='|cffc8dc8cПламенная боль|r'
+  name: sid=14208 raw=TRIGSTR_14208 val='|cffc8dc8cПламенная боль|r'
+  tips.tip1: sid=None raw="Аура шипов [|cffffcc001-й уровень|r]" val='"Аура шипов [|cffffcc001-й уровень|r]"'
+  ubertips.ubertip1: sid=None raw="Дает находящимся рядом союзникам щит, который отражает <AEah,DataA1,%>% получаемого в ближнем бою урона от атак в атакующих врагов." val='"Дает находящимся рядом союзникам щит, который отражает <AEah,DataA1,%>% получаемого в ближнем бою урона от атак в атакующих врагов."'
+Ability: A0NY lvls=1
+  name: sid=14279 raw=TRIGSTR_14279 val='|cffc8dc8cКлинки скверны|r'
+  name: sid=14279 raw=TRIGSTR_14279 val='|cffc8dc8cКлинки скверны|r'
+  tips.tip1: sid=14280 raw=TRIGSTR_14280 val='|cffc8dc8cКлинки скверны|r'
+  ubertips.ubertip1: sid=None raw="Бьет с огромной силой, нанося <ACce,DataA1,%>% урона врагам рядом с основной целью." val='"Бьет с огромной силой, нанося <ACce,DataA1,%>% урона врагам рядом с основной целью."'
+Ability: A0NO lvls=1
+  name: sid=11509 raw=TRIGSTR_11509 val='|cffc8dc8cЖар поглощения|r'
+  name: sid=11509 raw=TRIGSTR_11509 val='|cffc8dc8cЖар поглощения|r'
+  tips.tip1: sid=None raw="Нечистая аура [|cffffcc001-й уровень|r]" val='"Нечистая аура [|cffffcc001-й уровень|r]"'
+  ubertips.ubertip1: sid=None raw="+<AUau,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья." val='"+<AUau,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."'
+Ability: A0NM lvls=1
+  name: sid=11291 raw=TRIGSTR_11291 val='|cffc8dc8cЖар поглощения|r'
+  name: sid=11291 raw=TRIGSTR_11291 val='|cffc8dc8cЖар поглощения|r'
+  tips.tip1: sid=None raw=Кольцо огня val='Кольцо огня'
+  ubertips.ubertip1: sid=None raw="Наносит <ANpi,DataA1> урона/сек. находящимся рядом врагам." val='"Наносит <ANpi,DataA1> урона/сек. находящимся рядом врагам."'
+Ability: A0NP lvls=1
+  name: sid=11548 raw=TRIGSTR_11548 val='|cffc8dc8cЖар поглощения|r'
+  name: sid=11548 raw=TRIGSTR_11548 val='|cffc8dc8cЖар поглощения|r'
+  tips.tip1: sid=None raw="Нечистая аура [|cffffcc001-й уровень|r]" val='"Нечистая аура [|cffffcc001-й уровень|r]"'
+  ubertips.ubertip1: sid=None raw="+<AUau,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья." val='"+<AUau,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."'
+Ability: A0NK lvls=1
+  name: sid=11138 raw=TRIGSTR_11138 val='|cffc8dc8cЖар поглощения|r'
+  name: sid=11138 raw=TRIGSTR_11138 val='|cffc8dc8cЖар поглощения|r'
+  tips.tip1: sid=None raw=Кольцо огня val='Кольцо огня'
+  ubertips.ubertip1: sid=None raw="Наносит <ANpi,DataA1> урона/сек. находящимся рядом врагам." val='"Наносит <ANpi,DataA1> урона/сек. находящимся рядом врагам."'
+Ability: A0NR lvls=1
+  name: sid=12850 raw=TRIGSTR_12850 val='|cffc8dc8cЖар поглощения|r'
+  name: sid=12850 raw=TRIGSTR_12850 val='|cffc8dc8cЖар поглощения|r'
+  tips.tip1: sid=None raw="Нечистая аура [|cffffcc001-й уровень|r]" val='"Нечистая аура [|cffffcc001-й уровень|r]"'
+  ubertips.ubertip1: sid=None raw="+<AUau,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья." val='"+<AUau,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."'
+Ability: A0NL lvls=1
+  name: sid=11282 raw=TRIGSTR_11282 val='|cffc8dc8cЖар поглощения|r'
+  name: sid=11282 raw=TRIGSTR_11282 val='|cffc8dc8cЖар поглощения|r'
+  tips.tip1: sid=None raw=Кольцо огня val='Кольцо огня'
+  ubertips.ubertip1: sid=None raw="Наносит <ANpi,DataA1> урона/сек. находящимся рядом врагам." val='"Наносит <ANpi,DataA1> урона/сек. находящимся рядом врагам."'
+Ability: A0NQ lvls=1
+  name: sid=12252 raw=TRIGSTR_12252 val='|cffc8dc8cЖар поглощения|r'
+  name: sid=12252 raw=TRIGSTR_12252 val='|cffc8dc8cЖар поглощения|r'
+  tips.tip1: sid=None raw="Нечистая аура [|cffffcc001-й уровень|r]" val='"Нечистая аура [|cffffcc001-й уровень|r]"'
+  ubertips.ubertip1: sid=None raw="+<AUau,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья." val='"+<AUau,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."'
+Ability: A0NN lvls=1
+  name: sid=11352 raw=TRIGSTR_11352 val='|cffc8dc8cЖар поглощения|r'
+  name: sid=11352 raw=TRIGSTR_11352 val='|cffc8dc8cЖар поглощения|r'
+  tips.tip1: sid=11366 raw=TRIGSTR_11366 val='|cffc8dc8cЖар поглощения|r'
+  ubertips.ubertip1: sid=None raw="Наносит <ANpi,DataA1> урона/сек. находящимся рядом врагам." val='"Наносит <ANpi,DataA1> урона/сек. находящимся рядом врагам."'

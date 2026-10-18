@@ -1,0 +1,1246 @@
+{
+  "scope": "Иллидари (Illidari): категория 5 — Исследования и маркеры (22 технологии)",
+  "upgrades_count": 22,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R08W",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14495,
+          "after": "|cffe4cfa3Оружие Скверны — уровень 1|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 14493,
+          "after": "|cffe4cfa3Оружие Скверны — уровень 2|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 14492,
+          "after": "|cffe4cfa3Оружие Скверны — уровень 3|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 14491,
+          "after": "|cffe4cfa3Оружие Скверны — уровень 4|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 14490,
+          "after": "|cffe4cfa3Оружие Скверны — уровень 5|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 14489,
+          "after": "|cffe4cfa3Оружие Скверны — уровень 6|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14500,
+          "after": "|cffe4cfa3Оружие Скверны — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 14499,
+          "after": "|cffe4cfa3Оружие Скверны — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 14498,
+          "after": "|cffe4cfa3Оружие Скверны — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 14497,
+          "after": "|cffe4cfa3Оружие Скверны — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 14496,
+          "after": "|cffe4cfa3Оружие Скверны — уровень 5|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 14494,
+          "after": "|cffe4cfa3Оружие Скверны — уровень 6|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 14501,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных орудий Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМорской варан|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 14502,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных орудий Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМорской варан|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 14503,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных орудий Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМорской варан|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 14505,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных орудий Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМорской варан|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 14504,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных орудий Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМорской варан|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 14506,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных орудий Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМорской варан|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R08T",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14410,
+          "after": "|cffe4cfa3Проклятое оружие — уровень 1|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 14411,
+          "after": "|cffe4cfa3Проклятое оружие — уровень 2|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 14412,
+          "after": "|cffe4cfa3Проклятое оружие — уровень 3|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 14415,
+          "after": "|cffe4cfa3Проклятое оружие — уровень 4|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 14414,
+          "after": "|cffe4cfa3Проклятое оружие — уровень 5|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 14413,
+          "after": "|cffe4cfa3Проклятое оружие — уровень 6|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14416,
+          "after": "|cffe4cfa3Проклятое оружие — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 14417,
+          "after": "|cffe4cfa3Проклятое оружие — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 14418,
+          "after": "|cffe4cfa3Проклятое оружие — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 14421,
+          "after": "|cffe4cfa3Проклятое оружие — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 14420,
+          "after": "|cffe4cfa3Проклятое оружие — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 14419,
+          "after": "|cffe4cfa3Проклятое оружие — уровень 6|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 14431,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deПокоренный демон|cffced4da|n- |cffa9c7deОхотник «Истребление»|cffced4da|n- |cffa9c7deОхотник «Месть»|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 14432,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deПокоренный демон|cffced4da|n- |cffa9c7deОхотник «Истребление»|cffced4da|n- |cffa9c7deОхотник «Месть»|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 14433,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deПокоренный демон|cffced4da|n- |cffa9c7deОхотник «Истребление»|cffced4da|n- |cffa9c7deОхотник «Месть»|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 14423,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deПокоренный демон|cffced4da|n- |cffa9c7deОхотник «Истребление»|cffced4da|n- |cffa9c7deОхотник «Месть»|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 14422,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deПокоренный демон|cffced4da|n- |cffa9c7deОхотник «Истребление»|cffced4da|n- |cffa9c7deОхотник «Месть»|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 14424,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deПокоренный демон|cffced4da|n- |cffa9c7deОхотник «Истребление»|cffced4da|n- |cffa9c7deОхотник «Месть»|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R08U",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14435,
+          "after": "|cffe4cfa3Осквернённые доспехи — уровень 1|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 14436,
+          "after": "|cffe4cfa3Осквернённые доспехи — уровень 2|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 14437,
+          "after": "|cffe4cfa3Осквернённые доспехи — уровень 3|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 14446,
+          "after": "|cffe4cfa3Осквернённые доспехи — уровень 4|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 14445,
+          "after": "|cffe4cfa3Осквернённые доспехи — уровень 5|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 14444,
+          "after": "|cffe4cfa3Осквернённые доспехи — уровень 6|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14438,
+          "after": "|cffe4cfa3Осквернённые доспехи — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 14439,
+          "after": "|cffe4cfa3Осквернённые доспехи — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 14440,
+          "after": "|cffe4cfa3Осквернённые доспехи — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 14449,
+          "after": "|cffe4cfa3Осквернённые доспехи — уровень 4|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 14448,
+          "after": "|cffe4cfa3Осквернённые доспехи — уровень 5|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 14447,
+          "after": "|cffe4cfa3Осквернённые доспехи — уровень 6|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 15974,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех воинов ближнего боя Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deПокоренный демон|cffced4da|n- |cffa9c7deОхотник «Истребление»|cffced4da|n- |cffa9c7deОхотник «Месть»|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 15975,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех воинов ближнего боя Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deПокоренный демон|cffced4da|n- |cffa9c7deОхотник «Истребление»|cffced4da|n- |cffa9c7deОхотник «Месть»|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 15976,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех воинов ближнего боя Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deПокоренный демон|cffced4da|n- |cffa9c7deОхотник «Истребление»|cffced4da|n- |cffa9c7deОхотник «Месть»|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 15971,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех воинов ближнего боя Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deПокоренный демон|cffced4da|n- |cffa9c7deОхотник «Истребление»|cffced4da|n- |cffa9c7deОхотник «Месть»|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 15972,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех воинов ближнего боя Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deПокоренный демон|cffced4da|n- |cffa9c7deОхотник «Истребление»|cffced4da|n- |cffa9c7deОхотник «Месть»|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 15973,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех воинов ближнего боя Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deПокоренный демон|cffced4da|n- |cffa9c7deОхотник «Истребление»|cffced4da|n- |cffa9c7deОхотник «Месть»|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R08V",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14457,
+          "after": "|cffe4cfa3Укрепление Скверной — уровень 1|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 14458,
+          "after": "|cffe4cfa3Укрепление Скверной — уровень 2|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 14459,
+          "after": "|cffe4cfa3Укрепление Скверной — уровень 3|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 14468,
+          "after": "|cffe4cfa3Укрепление Скверной — уровень 4|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 14467,
+          "after": "|cffe4cfa3Укрепление Скверной — уровень 5|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 14466,
+          "after": "|cffe4cfa3Укрепление Скверной — уровень 6|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14460,
+          "after": "|cffe4cfa3Укрепление Скверной — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 14461,
+          "after": "|cffe4cfa3Укрепление Скверной — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 14462,
+          "after": "|cffe4cfa3Укрепление Скверной — уровень 3|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 14465,
+          "after": "|cffe4cfa3Укрепление Скверной — уровень 4|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 14464,
+          "after": "|cffe4cfa3Укрепление Скверной — уровень 5|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 14463,
+          "after": "|cffe4cfa3Укрепление Скверной — уровень 6|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 14479,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони стрелков, заклинателей и осадных орудий Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da|n- |cffa9c7deМорской варан|cffced4da|n- |cffa9c7deСирена|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 14480,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони стрелков, заклинателей и осадных орудий Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da|n- |cffa9c7deМорской варан|cffced4da|n- |cffa9c7deСирена|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 14481,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони стрелков, заклинателей и осадных орудий Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da|n- |cffa9c7deМорской варан|cffced4da|n- |cffa9c7deСирена|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 14469,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони стрелков, заклинателей и осадных орудий Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da|n- |cffa9c7deМорской варан|cffced4da|n- |cffa9c7deСирена|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 14470,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони стрелков, заклинателей и осадных орудий Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da|n- |cffa9c7deМорской варан|cffced4da|n- |cffa9c7deСирена|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 13833,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони стрелков, заклинателей и осадных орудий Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da|n- |cffa9c7deМорской варан|cffced4da|n- |cffa9c7deСирена|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R08X",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14508,
+          "after": "|cffe4cfa3Владение магией — уровень 1|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 14509,
+          "after": "|cffe4cfa3Владение магией — уровень 2|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 14510,
+          "after": "|cffe4cfa3Владение магией — уровень 3|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 14513,
+          "after": "|cffe4cfa3Владение магией — уровень 4|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 14512,
+          "after": "|cffe4cfa3Владение магией — уровень 5|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 14511,
+          "after": "|cffe4cfa3Владение магией — уровень 6|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14514,
+          "after": "|cffe4cfa3Владение магией — уровень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 14515,
+          "after": "|cffe4cfa3Владение магией — уровень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 14516,
+          "after": "|cffe4cfa3Владение магией — уровень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 14519,
+          "after": "|cffe4cfa3Владение магией — уровень 4|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 14518,
+          "after": "|cffe4cfa3Владение магией — уровень 5|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 14517,
+          "after": "|cffe4cfa3Владение магией — уровень 6|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 14529,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает магический урон от атак заклинателей Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da|n- |cffa9c7deСирена|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 14530,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает магический урон от атак заклинателей Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da|n- |cffa9c7deСирена|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 14531,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает магический урон от атак заклинателей Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da|n- |cffa9c7deСирена|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 14521,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает магический урон от атак заклинателей Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da|n- |cffa9c7deСирена|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 14520,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает магический урон от атак заклинателей Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da|n- |cffa9c7deСирена|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 14522,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает магический урон от атак заклинателей Иллидари.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da|n- |cffa9c7deСирена|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R096",
+      "hotkey": "X",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14802,
+          "after": "|cffe4cfa3Тренировки Охотников — уровень 1|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 14806,
+          "after": "|cffe4cfa3Тренировки Охотников — уровень 2|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 14807,
+          "after": "|cffe4cfa3Тренировки Охотников — уровень 3|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14728,
+          "after": "|cffe4cfa3Тренировки Охотников — уровень 1|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 14737,
+          "after": "|cffe4cfa3Тренировки Охотников — уровень 2|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 14738,
+          "after": "|cffe4cfa3Тренировки Охотников — уровень 3|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 38530,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Охотники на демонов и воины Иллидари проходят суровые тренировки, повышая боевое мастерство и активируя способность «Поглощение силы».|n|n|cffa6afb8Бонусы:|cffced4da|n- Скорость атаки: |cffc8e087+5%|cffced4da.|n- Урон от атак: |cffc8e087+4|cffced4da.|n- Шанс уклонения: |cffc8e087+6%|cffced4da.|n- Активирует вампиризм способности |cffa9c7de«Поглощение силы»|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da всем регулярным войскам Иллидари.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 38531,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Охотники на демонов углубляют боевые тренировки, развивая скорость ударов и выживаемость.|n|n|cffa6afb8Бонусы:|cffced4da|n- Скорость атаки: |cffc8e087+10%|cffced4da.|n- Урон от атак: |cffc8e087+8|cffced4da.|n- Шанс уклонения: |cffc8e087+12%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da всем регулярным войскам Иллидари.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 38532,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Высшая ступень тренировок охотников на демонов, наделяющая армию совершенными рефлексами.|n|n|cffa6afb8Бонусы:|cffced4da|n- Скорость атаки: |cffc8e087+15%|cffced4da.|n- Урон от атак: |cffc8e087+12|cffced4da.|n- Шанс уклонения: |cffc8e087+18%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da всем регулярным войскам Иллидари.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R099",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14852,
+          "after": "|cffe4cfa3Приоритет Наги|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 15228,
+          "after": "|cffe4cfa3Приоритет Наги|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 14858,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Направляет военные ресурсы на подготовку и усиление глубинных войск наг.|n|n|cffa6afb8Бонусы:|cffced4da|n- Урон от атак: |cffc8e087+4|cffced4da.|n- Скорость передвижения: |cffc8e087+20|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМорской варан|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deСирена|cffced4da.|n|n|cffe6c07bВнимание:|cffced4da исключает выбор «Приоритета Эльфов» и «Приоритета Орков».|r"
+        }
+      ]
+    },
+    {
+      "id": "R09A",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14859,
+          "after": "|cffe4cfa3Приоритет Эльфы|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14860,
+          "after": "|cffe4cfa3Приоритет Эльфы|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 14865,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Направляет военные ресурсы на подготовку и укрепление эльфов крови и охотников.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+50|cffced4da.|n- Скорость атаки: |cffc8e087+15%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтранник|cffced4da|n- |cffa9c7deМагистр|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da|n- |cffa9c7deОхотник «Истребление»|cffced4da|n- |cffa9c7deОхотник «Месть»|cffced4da.|n|n|cffe6c07bВнимание:|cffced4da исключает выбор «Приоритета Наг» и «Приоритета Орков».|r"
+        }
+      ]
+    },
+    {
+      "id": "R09B",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14866,
+          "after": "|cffe4cfa3Приоритет Орки|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14867,
+          "after": "|cffe4cfa3Приоритет Орки|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 2950,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Направляет военные ресурсы на подготовку и свирепую мощь орков Скверны.|n|n|cffa6afb8Бонусы:|cffced4da|n- Урон от атак: |cffc8e087+10|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da.|n|n|cffe6c07bВнимание:|cffced4da исключает выбор «Приоритета Наг» и «Приоритета Эльфов».|r"
+        }
+      ]
+    },
+    {
+      "id": "R08Y",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14541,
+          "after": "|cffe4cfa3Укрыться за щитом|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14550,
+          "after": "|cffe4cfa3Укрыться за щитом|r (|cffffffffA|r)"
+        }
+      ]
+    },
+    {
+      "id": "R091",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14628,
+          "after": "|cffe4cfa3Грубая сила — уровень 1|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 14633,
+          "after": "|cffe4cfa3Грубая сила — уровень 2|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 14634,
+          "after": "|cffe4cfa3Грубая сила — уровень 3|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14629,
+          "after": "|cffe4cfa3Грубая сила — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 14636,
+          "after": "|cffe4cfa3Грубая сила — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 14635,
+          "after": "|cffe4cfa3Грубая сила — уровень 3|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 14637,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Развивает ярость и физическую мощь орков Скверны.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+100|cffced4da.|n- Урон от атак: |cffc8e087+3|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 14638,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дальнейшее развитие силы и выносливости орков Скверны.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+200|cffced4da.|n- Урон от атак: |cffc8e087+6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 14639,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Высшая степень закалки и неистовства орков Скверны.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+300|cffced4da.|n- Урон от атак: |cffc8e087+9|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R095",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14716,
+          "after": "|cffe4cfa3Яростный рывок — уровень 1|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 14717,
+          "after": "|cffe4cfa3Яростный рывок — уровень 2|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14720,
+          "after": "|cffe4cfa3Яростный рывок — уровень 1|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 14721,
+          "after": "|cffe4cfa3Яростный рывок — уровень 2|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 14722,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает сумеречных налётчиков стремительному галопу ценой снижения силы атаки.|n|n|cffa6afb8Бонусы:|cffced4da|n- Скорость передвижения: |cffc8e087+35|cffced4da.|n|n|cffe69a8dШтраф:|cffced4da|n- Урон от атак: |cffe69a8d-3|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 14725,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно разгоняет волков сумеречных налётчиков до предельной скорости.|n|n|cffa6afb8Бонусы:|cffced4da|n- Скорость передвижения: |cffc8e087+70|cffced4da.|n|n|cffe69a8dШтраф:|cffced4da|n- Урон от атак: |cffe69a8d-6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный налётчик|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R08Z",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14585,
+          "after": "|cffe4cfa3Посвящение магистров — уровень 1|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 14580,
+          "after": "|cffe4cfa3Посвящение магистров — уровень 2|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 14581,
+          "after": "|cffe4cfa3Посвящение магистров — уровень 3|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 14582,
+          "after": "|cffe4cfa3Посвящение магистров — уровень 4|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 14583,
+          "after": "|cffe4cfa3Посвящение магистров — уровень 5|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 14584,
+          "after": "|cffe4cfa3Посвящение магистров — уровень 6|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14586,
+          "after": "|cffe4cfa3Посвящение магистров — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 14587,
+          "after": "|cffe4cfa3Посвящение магистров — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 14588,
+          "after": "|cffe4cfa3Посвящение магистров — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 14589,
+          "after": "|cffe4cfa3Посвящение магистров — уровень 4|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 14590,
+          "after": "|cffe4cfa3Посвящение магистров — уровень 5|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 14591,
+          "after": "|cffe4cfa3Посвящение магистров — уровень 6|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 15215,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг магистров, увеличивая их характеристики и открывая новые заклинания огня.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+40|cffced4da.|n- Запас маны: |cffc8e087+50|cffced4da.|n- Восстановление маны: |cffc8e087+0.3|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 15216,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг магистров, увеличивая их характеристики и открывая новые заклинания огня.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+80|cffced4da.|n- Запас маны: |cffc8e087+100|cffced4da.|n- Восстановление маны: |cffc8e087+0.6|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 15217,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг магистров, увеличивая их характеристики и открывая новые заклинания огня.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+120|cffced4da.|n- Запас маны: |cffc8e087+150|cffced4da.|n- Восстановление маны: |cffc8e087+0.9|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 15218,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг магистров, увеличивая их характеристики и открывая новые заклинания огня.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+160|cffced4da.|n- Запас маны: |cffc8e087+200|cffced4da.|n- Восстановление маны: |cffc8e087+1.2|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 15219,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг магистров, увеличивая их характеристики и открывая новые заклинания огня.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+200|cffced4da.|n- Запас маны: |cffc8e087+250|cffced4da.|n- Восстановление маны: |cffc8e087+1.5|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 15220,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг магистров, увеличивая их характеристики и открывая новые заклинания огня.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+240|cffced4da.|n- Запас маны: |cffc8e087+300|cffced4da.|n- Восстановление маны: |cffc8e087+1.8|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМагистр|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R090",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14610,
+          "after": "|cffe4cfa3Посвящение чернокнижников — уровень 1|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 14605,
+          "after": "|cffe4cfa3Посвящение чернокнижников — уровень 2|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 14606,
+          "after": "|cffe4cfa3Посвящение чернокнижников — уровень 3|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 14607,
+          "after": "|cffe4cfa3Посвящение чернокнижников — уровень 4|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 14608,
+          "after": "|cffe4cfa3Посвящение чернокнижников — уровень 5|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 14609,
+          "after": "|cffe4cfa3Посвящение чернокнижников — уровень 6|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14611,
+          "after": "|cffe4cfa3Посвящение чернокнижников — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 14612,
+          "after": "|cffe4cfa3Посвящение чернокнижников — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 14613,
+          "after": "|cffe4cfa3Посвящение чернокнижников — уровень 3|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 14614,
+          "after": "|cffe4cfa3Посвящение чернокнижников — уровень 4|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 14615,
+          "after": "|cffe4cfa3Посвящение чернокнижников — уровень 5|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 14616,
+          "after": "|cffe4cfa3Посвящение чернокнижников — уровень 6|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 15221,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг чернокнижников, увеличивая их характеристики и открывая новые тёмные заклинания Скверны.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+40|cffced4da.|n- Запас маны: |cffc8e087+40|cffced4da.|n- Восстановление маны: |cffc8e087+0.5|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 15222,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг чернокнижников, увеличивая их характеристики и открывая новые тёмные заклинания Скверны.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+80|cffced4da.|n- Запас маны: |cffc8e087+80|cffced4da.|n- Восстановление маны: |cffc8e087+1.0|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 15223,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг чернокнижников, увеличивая их характеристики и открывая новые тёмные заклинания Скверны.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+120|cffced4da.|n- Запас маны: |cffc8e087+120|cffced4da.|n- Восстановление маны: |cffc8e087+1.5|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 15224,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг чернокнижников, увеличивая их характеристики и открывая новые тёмные заклинания Скверны.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+160|cffced4da.|n- Запас маны: |cffc8e087+160|cffced4da.|n- Восстановление маны: |cffc8e087+2.0|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 15225,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг чернокнижников, увеличивая их характеристики и открывая новые тёмные заклинания Скверны.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+200|cffced4da.|n- Запас маны: |cffc8e087+200|cffced4da.|n- Восстановление маны: |cffc8e087+2.5|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 15226,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг чернокнижников, увеличивая их характеристики и открывая новые тёмные заклинания Скверны.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+240|cffced4da.|n- Запас маны: |cffc8e087+240|cffced4da.|n- Восстановление маны: |cffc8e087+3.0|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЧернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R094",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14705,
+          "after": "|cffe4cfa3Мутация Наг — уровень 1|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 14706,
+          "after": "|cffe4cfa3Мутация Наг — уровень 2|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14709,
+          "after": "|cffe4cfa3Мутация Наг — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 14710,
+          "after": "|cffe4cfa3Мутация Наг — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 14711,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает телосложение глубинных войск наг темными мутациями Скверны.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+35|cffced4da.|n- Скорость передвижения: |cffc8e087+20|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМорской варан|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deСирена|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 14714,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дальнейшая мутация наг Скверны, усиливающая стойкость и проворство.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+70|cffced4da.|n- Скорость передвижения: |cffc8e087+40|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМорской варан|cffced4da|n- |cffa9c7deМирмидон|cffced4da|n- |cffa9c7deСирена|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R092",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 40385,
+          "after": "|cffe4cfa3Опутывание|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 40386,
+          "after": "|cffe4cfa3Опутывание|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 14645,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Даёт мирмидонам способность бросать сеть, приковывая противника к земле и опуская летающие цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМирмидон|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R093",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14659,
+          "after": "|cffe4cfa3Магия воды — уровень 1|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 14654,
+          "after": "|cffe4cfa3Магия воды — уровень 2|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 14655,
+          "after": "|cffe4cfa3Магия воды — уровень 3|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 14656,
+          "after": "|cffe4cfa3Магия воды — уровень 4|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 14657,
+          "after": "|cffe4cfa3Магия воды — уровень 5|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 14658,
+          "after": "|cffe4cfa3Магия воды — уровень 6|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14660,
+          "after": "|cffe4cfa3Магия воды — уровень 1|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 14661,
+          "after": "|cffe4cfa3Магия воды — уровень 2|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 14662,
+          "after": "|cffe4cfa3Магия воды — уровень 3|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 14663,
+          "after": "|cffe4cfa3Магия воды — уровень 4|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 14664,
+          "after": "|cffe4cfa3Магия воды — уровень 5|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 14665,
+          "after": "|cffe4cfa3Магия воды — уровень 6|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 16042,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг сирен наг, раскрывая высшие секреты управления стихией воды.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+70|cffced4da.|n- Запас маны: |cffc8e087+50|cffced4da.|n- Восстановление маны: |cffc8e087+0.3|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСирена|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 16043,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг сирен наг, раскрывая высшие секреты управления стихией воды.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+140|cffced4da.|n- Запас маны: |cffc8e087+100|cffced4da.|n- Восстановление маны: |cffc8e087+0.6|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСирена|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 16044,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг сирен наг, раскрывая высшие секреты управления стихией воды.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+210|cffced4da.|n- Запас маны: |cffc8e087+150|cffced4da.|n- Восстановление маны: |cffc8e087+0.9|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСирена|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 16045,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг сирен наг, раскрывая высшие секреты управления стихией воды.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+280|cffced4da.|n- Запас маны: |cffc8e087+200|cffced4da.|n- Восстановление маны: |cffc8e087+1.2|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСирена|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 16046,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг сирен наг, раскрывая высшие секреты управления стихией воды.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+350|cffced4da.|n- Запас маны: |cffc8e087+250|cffced4da.|n- Восстановление маны: |cffc8e087+1.5|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСирена|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 16047,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг сирен наг, раскрывая высшие секреты управления стихией воды.|n|n|cffa6afb8Бонусы:|cffced4da|n- Запас здоровья: |cffc8e087+420|cffced4da.|n- Запас маны: |cffc8e087+300|cffced4da.|n- Восстановление маны: |cffc8e087+1.8|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСирена|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R097",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14745,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 1|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 14746,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 2|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 14755,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 3|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 18382,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 4|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 18383,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 5|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 19466,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 6|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14749,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 14750,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 14756,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 20837,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 20844,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 20845,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 6|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 14751,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой строителями древесины на |cffc8e087+10|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 14752,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой строителями древесины на |cffc8e087+20|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 14757,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой строителями древесины на |cffc8e087+30|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 20846,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой строителями древесины на |cffc8e087+40|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 20847,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой строителями древесины на |cffc8e087+50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 20848,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой строителями древесины на |cffc8e087+60|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R098",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 14815,
+          "after": "|cffe4cfa3Владение Скверной — уровень 1|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 14810,
+          "after": "|cffe4cfa3Владение Скверной — уровень 2|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 14816,
+          "after": "|cffe4cfa3Владение Скверной — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 14817,
+          "after": "|cffe4cfa3Владение Скверной — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 14809,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Раскрывает боевую мощь покоренных демонов, обучая их способностям «Ярость демон-зверя» и «Острые клинки».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПокоренный демон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 14822,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно раскрывает потенциал покоренных демонов, усиливая их боевые навыки.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПокоренный демон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R07H",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 9219,
+          "after": "|cffe4cfa3Иллидари|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 9220,
+          "after": "|cffe4cfa3Иллидари|r"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 9444,
+          "after": "|cffa6afb8РАСА:|cffced4da Войско, созданное и обученное Иллиданом Яростью Бури из преданных последователей для беспощадной войны против Пылающего Легиона.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0KZ",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 5721,
+          "after": "|cffe4cfa3Иллидари или Наги|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 9416,
+          "after": "|cffe4cfa3Иллидари или Наги|r"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 12518,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Иллидари или Нагам.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0L0",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 12039,
+          "after": "|cffe4cfa3Эльфы Крови или Иллидари|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 12062,
+          "after": "|cffe4cfa3Эльфы Крови или Иллидари|r"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 20115,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Эльфам Крови или Иллидари.|r"
+        }
+      ]
+    }
+  ]
+}

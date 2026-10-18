@@ -1,0 +1,240 @@
+{
+  "scope": "Огры (Ogres): категория 1 — Здания (11 зданий)",
+  "buildings_count": 11,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "o035",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 13118,
+          "after": "|cffe4cfa3Дом огров|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 28368,
+          "after": "|cffe4cfa3Дом огров|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 3536,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов и начальный лимит пищи.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгр-Строитель|cffced4da: базовый рабочий.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deКрепость огров|cffced4da: открывает доступ к передовым сооружениям и войскам.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03D",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27835,
+          "after": "|cffe4cfa3Крепость огров|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 28433,
+          "after": "|cffe4cfa3Крепость огров|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35441,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает запас пищи и открывает доступ к новым постройкам.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгр-Строитель|cffced4da: базовый рабочий.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deЦитадель огров|cffced4da: открывает доступ к высшим технологиям и древним исполинам.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03E",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27839,
+          "after": "|cffe4cfa3Цитадель огров|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 28434,
+          "after": "|cffe4cfa3Цитадель огров|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35442,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание третьей ступени. Обеспечивает максимальный запас пищи и открывает все технологии расы.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгр-Строитель|cffced4da: базовый рабочий.|r"
+        }
+      ]
+    },
+    {
+      "id": "o036",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 19649,
+          "after": "|cffe4cfa3Свиноферма|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 28420,
+          "after": "|cffe4cfa3Свиноферма|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 11344,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию огров провизией. Позволяет укрывать рабочих для защиты от врагов.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|r"
+        }
+      ]
+    },
+    {
+      "id": "o037",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 19663,
+          "after": "|cffe4cfa3Алтарь крови|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22728,
+          "after": "|cffe4cfa3Алтарь крови|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 23546,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Служит для призыва и воскрешения павших героев расы Огров.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВоеначальник Огров|cffced4da: герой ближнего боя, повелитель натиска.|n- |cffa9c7deВождь Огров|cffced4da: стойкий герой ближнего боя с сокрушительными ударами.|n- |cffa9c7deЗнахарь Огров|cffced4da: герой-заклинатель поддержки и исцеления.|r"
+        }
+      ]
+    },
+    {
+      "id": "o038",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 19704,
+          "after": "|cffe4cfa3Сторожевая башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 28424,
+          "after": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 19750,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение, атакующее врагов острыми кольями.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03A",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25549,
+          "after": "|cffe4cfa3Арена|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 28431,
+          "after": "|cffe4cfa3Арена|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35432,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает базовых воинов и стрелков армии Огров.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгр-воин|cffced4da: базовый боец ближнего боя.|n- |cffa9c7deОгр-Копьеметатель|cffced4da: стрелок дальнего боя с пробивающими копьями.|n- |cffa9c7deОгр-Камнеметатель|cffced4da: осадный стрелок, наносящий урон по площади.|n- |cffa9c7deОгр-Командир|cffced4da: тяжелый воин с защитной аурой.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУсиленное копьё|cffced4da|n- |cffa9c7deКрепость плоти|cffced4da|n- |cffa9c7deСила предков|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "o039",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 19751,
+          "after": "|cffe4cfa3Пристанище|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 28418,
+          "after": "|cffe4cfa3Пристанище|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35424,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает мобильных всадников, берсерков и барабанщиков поддержки.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгр-Наездник|cffced4da: быстрый всадник, способный опутывать врагов.|n- |cffa9c7deОгр-Барабанщик|cffced4da: боец поддержки с боевыми аурами.|n- |cffa9c7deОгр-Берсерк|cffced4da: свирепый воин с рассекающими ударами.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОпутывание|cffced4da|n- |cffa9c7deКожаная мембрана|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03J",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27851,
+          "after": "|cffe4cfa3Пристанище магов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 28421,
+          "after": "|cffe4cfa3Пристанище магов|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 41949,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает заклинателей и магов армии Огров.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгр-Маг|cffced4da: двухголовый колдун с жаждой крови и рассеиванием.|n- |cffa9c7deОгр-Боевой Маг|cffced4da: маг с духовной связью и огненным лассо.|n- |cffa9c7deШаман Мок'Натал|cffced4da: шаман со щитом молний, призывом вепря и цепной молнией.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбучение магов поддержки|cffced4da|n- |cffa9c7deОбучение боевых магов|cffced4da|n- |cffa9c7deОбучение Шаманов Мок'Натала|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03C",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35433,
+          "after": "|cffe4cfa3Пещера Древних|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35434,
+          "after": "|cffe4cfa3Пещера Древних|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35440,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обитель гигантских существ: свирепых огронов и колоссальных гроннов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгрон|cffced4da: массивный боец ближнего боя.|n- |cffa9c7deОгрон-синий|cffced4da: морозный огрон с ледяным доспехом.|n- |cffa9c7deОгрон Красный|cffced4da: яростный огрон с повышенной скоростью атаки.|n- |cffa9c7deГронн Черный|cffced4da: исполин с шипастым панцирем, отражающим урон.|n- |cffa9c7deГронн Белый|cffced4da: северный гронн с сокрушительными ударами по площади.|n- |cffa9c7deГронн Красный|cffced4da: свирепый гронн с боевым бешенством.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deКаменная плоть|cffced4da|n- |cffa9c7deЖажда Крови|cffced4da|n- |cffa9c7deМорозный Доспех|cffced4da|n- |cffa9c7deШипастый Панцирь|cffced4da|n- |cffa9c7deСокрушение|cffced4da|n- |cffa9c7deНеистовство|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03B",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27745,
+          "after": "|cffe4cfa3Лесопилка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 28432,
+          "after": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 21090,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Служит пунктом сдачи древесины и центром базовых улучшений армии Огров.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗаостренные дубины|cffced4da: повышает урон ближнего боя.|n- |cffa9c7deШкуры зверей|cffced4da: повышает броню воинов.|n- |cffa9c7deКрупные камни|cffced4da: повышает урон дальнего боя.|n- |cffa9c7deСбор древесины|cffced4da: увеличивает вместимость переносимой древесины.|r"
+        }
+      ]
+    }
+  ]
+}

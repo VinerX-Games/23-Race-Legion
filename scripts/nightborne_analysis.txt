@@ -1,0 +1,1310 @@
+===============================================================================
+1. SELECTION & MARKERS
+===============================================================================
+Selection Ability: A0HU
+  Name: |cffe1c8ebНочнорожденные|r (raw: TRIGSTR_38875, sid: 38875)
+  Hotkey: E (raw: TRIGSTR_17621)
+  tip1: |cffe1c8ebНочнорожденные|r (sid: 38876)
+  ubertip1: |cffa0beaaСоздатель расы:|r |cffc8dcaaEscanor(Яхве)|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaNiCAmCHiK|r|n|cffa0beaaСложность:|r |cffadff2f●●|r●●●|n|cffa0beaaПериод:|r |cffc8dcaaLegion - Battle for Azeroth|r|n|n| |cff8080ffНочнорожденные|r - Эльфы Сурамара провели 10 000 лет под защитой магического барьера, и за это время они стали слишком зависимы от тайной магии Ночного Колодца. Чтобы защитить источник своей силы, лидеры ночнорожденных заключили сделку с Пылающим Легионом, ввергнув свое государство в гражданскую войну. Отвоевав свободу у своих хозяев-демонов, ночнорожденные присоединились к Орде в надежде вновь обрести свое место на Азероте. (sid: 21994)
+
+Selection Marker: R07J
+  name1: |cffe6beaaНочнорожденные|r (sid: 10667)
+  tip1: |cffe6beaaНочнорожденные|r (sid: 10668)
+  ubertip1: Эльфы Сурамара провели 10 000 лет под защитой магического барьера, и за это время они стали слишком зависимы от тайной магии Ночного Колодца. Чтобы защитить источник своей силы, лидеры ночнорожденных заключили сделку с Пылающим Легионом, ввергнув свое государство в гражданскую войну. (sid: 20117)
+
+===============================================================================
+2. BUILDINGS
+===============================================================================
+
+Building: h0CB -> |cffe1c8ebРатуша|r
+  Name sid: 7295
+  Tip: Построить |cffe1c8ebРатушу|r (sid: 16271)
+  Ubertip: |cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r|n|nБазовое здание. Обучает работников и хранит добытые ресурсы. Можно улучшить до форта, а затем до замка, чтобы получить доступ к новым зданиям и типам войск. (sid: 5692)
+  Hotkey: Q (raw: TRIGSTR_2357)
+  Trains: None
+  Researches: None
+  Upgrades to: h0CC
+  Abilities: A0LJ,A0LI,A0IQ,Argl,A0GL
+  Targs1: None, Targs2: None
+
+Building: h0CC -> |cffe1c8ebФорт|r
+  Name sid: 7298
+  Tip: Улучшить до |cffe1c8ebФорта|r (sid: 16276)
+  Ubertip: |cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r|n|nДает доступ к новым зданиям и типам войск. (sid: 13064)
+  Hotkey: Z (raw: TRIGSTR_8738)
+  Trains: None
+  Researches: None
+  Upgrades to: h0CD
+  Abilities: A0LJ,A0LI,Argl,A0GL
+  Targs1: None, Targs2: None
+
+Building: h0CD -> |cffe1c8ebЗамок|r
+  Name sid: 7300
+  Tip: Улучшить до |cffe1c8ebЗамка|r (sid: 16294)
+  Ubertip: |cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r|n|nДает доступ к новым зданиям и типам войск. (sid: 13065)
+  Hotkey: Z (raw: TRIGSTR_8739)
+  Trains: None
+  Researches: None
+  Upgrades to: None
+  Abilities: A0GK,A1KB,A0LJ,A0LI,A0IQ,Argl
+  Targs1: None, Targs2: None
+
+Building: h0CE -> |cffe1c8ebКристал маны|r
+  Name sid: 7282
+  Tip: Построить |cffe1c8ebКристал маны|r (sid: 7283)
+  Ubertip: |cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.
+
+|cffffff00Приносит 20 инкома|r (sid: 31698)
+  Hotkey: A (raw: TRIGSTR_1818)
+  Trains: None
+  Researches: None
+  Upgrades to: None
+  Abilities: None
+  Targs1: None, Targs2: None
+
+Building: h0CF -> |cffe1c8ebКазармы|r
+  Name sid: 7284
+  Tip: Построить |cffe1c8ebКазармы|r (sid: 16303)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nЗдание для подготовки базовых войск. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск. (sid: 13026)
+  Hotkey: W (raw: TRIGSTR_3011)
+  Trains: None
+  Researches: None
+  Upgrades to: None
+  Abilities: None
+  Targs1: None, Targs2: None
+
+Building: h0CG -> |cffe1c8ebАлтарь маны|r
+  Name sid: 7293
+  Tip: Построить |cffe1c8ebАлтарь маны|r (sid: 27926)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nСооружение позволяющее призыватьновых и воскрешает павших героев. (sid: 12972)
+  Hotkey: S (raw: TRIGSTR_2138)
+  Trains: None
+  Researches: None
+  Upgrades to: None
+  Abilities: None
+  Targs1: None, Targs2: None
+
+Building: h0CH -> |cffe1c8ebЛесопилка|r
+  Name sid: 7302
+  Tip: Построить |cffe1c8ebЛесопилку|r (sid: 20964)
+  Ubertip: |cff7dc87dВремя строительства:|r |cffaaf0aa60 сек.|r|n|nХранит добытую древесину. |nДает доступ к новым улучшениям армии,  позволяет изучить родство с маной. (sid: 13068)
+  Hotkey: E (raw: TRIGSTR_3811)
+  Trains: None
+  Researches: None
+  Upgrades to: None
+  Abilities: Abds,Arlm
+  Targs1: None, Targs2: None
+
+Building: h0CI -> |cffe1c8ebСвятилище маны|r
+  Name sid: 7305
+  Tip: Построить |cffe1c8ebСвятилище маны|r (sid: 7306)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nОбучает магов и волшебников. Дает возможность улучшать магов и волшебников и открывать новые способности. (sid: 13009)
+  Hotkey: D (raw: TRIGSTR_4037)
+  Trains: None
+  Researches: None
+  Upgrades to: None
+  Abilities: Abds
+  Targs1: None, Targs2: None
+
+Building: h0CK -> |cffe1c8ebХрам жизни|r
+  Name sid: 7318
+  Tip: Построить |cffe1c8ebХрам жизни|r (sid: 7319)
+  Ubertip: |cff7dc87dВремя строительства:|r |cffaaf0aa60 сек.|r|n|nПризывает ночнорожденных к любви ко всей жизни. Позволяет нанимать войска защищающие и востанавливающие жизнь в любом ее проявлении. (sid: 13069)
+  Hotkey: R (raw: TRIGSTR_1908)
+  Trains: None
+  Researches: None
+  Upgrades to: None
+  Abilities: None
+  Targs1: None, Targs2: None
+
+Building: h0CL -> |cffe1c8ebДом Шал'дорайской стражи|r
+  Name sid: 7320
+  Tip: Построить |cffe1c8ebДом Шал'дорайской стражи|r (sid: 7321)
+  Ubertip: |cff7dc87dВремя строительства:|r |cffaaf0aa75 сек.|r|n|nОбучает сильных и опытных стражей Шал'дорай, позволяет улучшать их способности. (sid: 13070)
+  Hotkey: D (raw: TRIGSTR_4048)
+  Trains: None
+  Researches: None
+  Upgrades to: None
+  Abilities: Abds
+  Targs1: None, Targs2: None
+
+Building: h0CM -> |cffe1c8ebМагическая башня|r
+  Name sid: 3277
+  Tip: Улучшить до |cffe1c8ebМагической башни|r (sid: 20965)
+  Ubertip: |cff7dc87dВремя строительства:|r |cffaaf0aa50 сек.|r|n|nМагическое оборонительное сооружение, особенно эффективное против героев и магов. Атаки уничтожают ману врагов, нанося им урон, равный объему уничтоженной маны. Можно оснастить «Магическим стражем». |n|n|cffffcc00Атакует наземные и воздушные цели. (sid: 8398)
+  Hotkey: Z (raw: TRIGSTR_8740)
+  Trains: None
+  Researches: None
+  Upgrades to: None
+  Abilities: Afbt
+  Targs1: ground,structure,debris,air,item,ward, Targs2: None
+
+Building: h0D8 -> Верфь
+  Name sid: 10907
+  Tip: Построить верфь (sid: 10908)
+  Ubertip: Строит транспорты, фрегаты и линкоры. (sid: 10903)
+  Hotkey: C (raw: TRIGSTR_6227)
+  Trains: None
+  Researches: None
+  Upgrades to: None
+  Abilities: A15N
+  Targs1: None, Targs2: None
+
+===============================================================================
+3. UNITS
+===============================================================================
+
+Unit: h0CJ -> |cffe1c8ebРаботник|r
+  Name sid: 7307
+  Tip: Обучить |cffe1c8ebработника|r (sid: 7308)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa15 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nБазовый рабочий. Добывает золото и древесину, а также строит и ремонтирует здания.  (sid: 13417)
+  Hotkey: Q (raw: TRIGSTR_2396)
+  Abilities: A0I3,ANha,Ahrp
+  Upgrades: R0DU,Rguv
+  HP: 240, Mana:  - 
+  Atk1: normal, Targs1: ground,structure,debris,item,ward, Weap1: MetalLightChop
+  Atk2: normal, Targs2: tree, Weap2: AxeMediumChop
+
+Unit: e013 -> |cffe1c8ebШал'дорайская воительница|r
+  Name sid: 6091
+  Tip: Обучить |cffe1c8ebШал'дорайская воительница|r (sid: 6092)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa25 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|n|cffe1c8ebШал`дорайская воительница|r-Юнит ближнего боя, способный одной атакой поразить несколько целей. Впоследствии может обучиться способности |cffe1c8eb"Укрыться за щитом"|r и освоить |cffe1c8eb"Лунные глефы"|r. (sid: 12379)
+  Hotkey: Q (raw: TRIGSTR_2310)
+  Abilities: A0GE,A0G5,A0G1,A0FZ,Ault
+  Upgrades: R06U,R06V,R06Y,R06T,R06H
+  HP: 500, Mana: 350
+  Atk1: normal, Targs1: ground,structure,debris,item,ward, Weap1: MetalMediumSlice
+  Atk2: normal, Targs2: None, Weap2: None
+
+Unit: e014 -> |cffe1c8ebНаследник Сумеречной стражи|r
+  Name sid: 6170
+  Tip: Обучить |cffe1c8ebНаследник Сумеречной стражи|r (sid: 6177)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa35 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r
+|cff4040e1Наследник Сумеречной стражи|r-маг, сражающийся на передовой и способный поглотить много урона. |cff4040e1Зачарованные доспехи|r позволяют ему минимизировать входящий урон. (sid: 31709)
+  Hotkey: W (raw: TRIGSTR_2972)
+  Abilities: A0GE,A0G2
+  Upgrades: R06I,R06U,R06V,R06T,R06Y
+  HP: 550, Mana: 450
+  Atk1: magic, Targs1: ground,structure,debris,item,ward, Weap1: WoodHeavyBash
+  Atk2: normal, Targs2: structure, Weap2: None
+
+Unit: e015 -> |cffe1c8ebШал'дорайский аристократ|r
+  Name sid: 6704
+  Tip: Обучить |cffe1c8ebШал'дорайский аристократ|r (sid: 6722)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa40 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r
+Аристократы используют свои ресурсы и влияние для обучения могущественной магии. (sid: 31710)
+  Hotkey: Q (raw: TRIGSTR_2324)
+  Abilities: A0GE,A0G5,A0G4,A0G6
+  Upgrades: R06W,R06X,R06T,R06S,R06Y
+  HP: 600, Mana: 550
+  Atk1: pierce, Targs1: ground,structure,debris,item,ward, Weap1: WoodHeavyBash
+  Atk2: pierce, Targs2: None, Weap2: None
+
+Unit: e016 -> |cffe1c8ebШал'дорайский гвардеец|r
+  Name sid: 6751
+  Tip: Обучить |cffe1c8ebШал'дорайский гвардеец|r (sid: 6752)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r
+Элитная боевая единица армии |cffe1c8ebНочнорожденных|r, способная использовать "|cffe1c8ebнемоту|r". (sid: 31711)
+  Hotkey: W (raw: TRIGSTR_3008)
+  Abilities: A0G5,A0GE,A0GG,A0G1,A0FZ
+  Upgrades: R06P,R06U,R06V,R06Y,R06T
+  HP: 800, Mana: 450
+  Atk1: normal, Targs1: ground,structure,debris,item,ward, Weap1: MetalMediumSlice
+  Atk2: normal, Targs2: None, Weap2: None
+
+Unit: e017 -> |cffe1c8ebЗвериный страж|r
+  Name sid: 6784
+  Tip: Обучить |cffe1c8ebЗвериный страж|r (sid: 6856)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa40 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r
+Воин ночнорожденных, использющий покоренного леопарда для своих атак. (sid: 31712)
+  Hotkey: W (raw: TRIGSTR_3009)
+  Abilities: A1O9,A0GE,A0G5,A0GJ
+  Upgrades: R06U,R06V,R06Y,R06N,R06T
+  HP: 800, Mana: 450
+  Atk1: normal, Targs1: ground,structure,debris,item,ward, Weap1: WoodHeavyBash
+  Atk2: normal, Targs2: None, Weap2: None
+
+Unit: e018 -> |cffe1c8ebСумеречный страж|r
+  Name sid: 6906
+  Tip: Обучить |cffe1c8ebСумеречный страж|r (sid: 6910)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa40 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r
+Страж |cffe1c8ebночнорожденных|r, владеет "|cffe1c8ebкомандирской аурой|r", и "|cffe1c8ebмагическими путами|r". (sid: 31713)
+  Hotkey: E (raw: TRIGSTR_3810)
+  Abilities: A0GI,A0GH,A0GE,A0G1,A0G2
+  Upgrades: R06U,R06V,R06T,R06S,R06Y
+  HP: 750, Mana: 450
+  Atk1: magic, Targs1: ground,structure,debris,item,ward, Weap1: WoodHeavyBash
+  Atk2: normal, Targs2: structure, Weap2: None
+
+Unit: e019 -> |cffe1c8ebТемный клинок|r
+  Name sid: 6969
+  Tip: Обучить |cffe1c8ebТемный клинок|r (sid: 6974)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r
+Убийца |cffe1c8ebНочнорожденных|r, специально натренирован для нанисения "|cffe1c8ebкритических ударов|r". (sid: 31714)
+  Hotkey: Q (raw: TRIGSTR_2355)
+  Abilities: A03C,A0GF,A0G5,A0GE
+  Upgrades: R06U,R06V,R06Y,R06T
+  HP: 700, Mana: 450
+  Atk1: normal, Targs1: ground,structure,debris,item,ward, Weap1: WoodHeavyBash
+  Atk2: normal, Targs2: None, Weap2: None
+
+Unit: e01A -> |cffe1c8ebЛунный маг|r
+  Name sid: 7154
+  Tip: Обучить |cffe1c8ebЛунный маг|r (sid: 7155)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa40 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r
+Маг |cffe1c8ebночнорожденных|r, веками изучавший секреты магии. (sid: 20879)
+  Hotkey: W (raw: TRIGSTR_3010)
+  Abilities: A1MO,A0GE,A0G5,A0G7,A0GA
+  Upgrades: R06X,R06W,R06T,R06Y,R06S
+  HP: 600, Mana: 750
+  Atk1: chaos, Targs1: ground,structure,debris,item,ward, Weap1: WoodHeavyBash
+  Atk2: normal, Targs2: None, Weap2: None
+
+Unit: e01B -> |cffe1c8ebГлефомет|r
+  Name sid: 7310
+  Tip: Построить |cffe1c8ebглефомет|r (sid: 7316)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный урон|r
+|cffe1c8ebГлефомет|r-осадное орудие, эффективное против вражеских зданий. После улучшения способно поражать врагов, стоящих за целью. (sid: 31718)
+  Hotkey: E (raw: TRIGSTR_3828)
+  Abilities: A0G3,Ault
+  Upgrades: R06U,R06J
+  HP: 300, Mana:  - 
+  Atk1: siege, Targs1: ground,structure,debris,wall,item,ward, Weap1: None
+  Atk2: siege, Targs2: ground,structure,debris,wall,item,ward,tree, Weap2: None
+
+Unit: h0CA -> |cffbd00ffПоклонник
+  Name sid: 25787
+  Tip: Обучить |cffbd00ffПоклонник (sid: 25794)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa28 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r
+Маг поддержки. Владеет «|cffbd00ffДар исцеления|r». Может изучить «|cffbd00ffРассеивание заклинаний|r» и «|cffbd00ffДух возмездия|r». (sid: 25795)
+  Hotkey: Q (raw: TRIGSTR_2356)
+  Abilities: A1RK,A1RJ,A1RL
+  Upgrades: R06W,R06X,R06Y,R06T,R06S,R06K,R06L
+  HP: 350, Mana: 450
+  Atk1: magic, Targs1: ground,structure,debris,air,item,ward, Weap1: None
+  Atk2: normal, Targs2: None, Weap2: None
+
+===============================================================================
+4. HEROES
+===============================================================================
+
+Hero: E01E -> |cffe1c8ebКапитан Шал'дорайский стражи|r 
+  Name sid: 10086
+  Propernames: |cffe1c8ebКвенель|r (sid: 10087)
+  Tip: Призвать |cffe1c8ebКапитан Шал'дорайский стражи|r  (sid: 10280)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n
+Опытный воин, копивший свои навыки многими веками. (sid: 25232)
+  Hotkey: Z (raw: TRIGSTR_8826)
+  Hero abils: A0GM,A0GO,A0GT,A0GU
+  Other abils: AInv,Ault
+  Primary stat: STR
+  Atk1: hero, Targs1: ground,structure,debris,item,ward
+
+Hero: E01D -> |cffe1c8ebМрачная Тень|r 
+  Name sid: 10083
+  Propernames: |cffe1c8ebКалеастра|r (sid: 10082)
+  Tip: Призвать |cffe1c8ebМрачная Тень|r  (sid: 10279)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaЛовкость |r|n
+Мастер стрельбы, меткость которой была известна в древние время по всем городам. (sid: 31719)
+  Hotkey: X (raw: TRIGSTR_3128)
+  Hero abils: A0GS,A0GV,A0GW,A0GX
+  Other abils: AInv,Ashm,Ault
+  Primary stat: AGI
+  Atk1: hero, Targs1: ground,structure,debris,air,item,ward
+
+Hero: E01F -> |cffe1c8ebВерховный лунный маг|r 
+  Name sid: 10090
+  Propernames: |cffe1c8ebАвнель|r (sid: 10091)
+  Tip: Призвать |cffe1c8ebВерховного лунного мага|r  (sid: 28308)
+  Ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|n
+Могучий волшебник, один из лучших во владении и направлении маны. (sid: 31721)
+  Hotkey: C (raw: TRIGSTR_4209)
+  Hero abils: A0GN,A0GP,A0GQ,A0GR
+  Other abils: AInv,Ault
+  Primary stat: INT
+  Atk1: hero, Targs1: ground,structure,debris,air,item,ward
+
+===============================================================================
+5. UPGRADES
+===============================================================================
+
+Upgrade: R07J (levels: 1)
+  Level 1:
+    Name: |cffe6beaaНочнорожденные|r (sid: 10667)
+    Hotkey: None (raw: None)
+    Tip: |cffe6beaaНочнорожденные|r (sid: 10668)
+    Ubertip: Эльфы Сурамара провели 10 000 лет под защитой магического барьера, и за это время они стали слишком зависимы от тайной магии Ночного Колодца. Чтобы защитить источник своей силы, лидеры ночнорожденных заключили сделку с Пылающим Легионом, ввергнув свое государство в гражданскую войну. (sid: 20117)
+
+Upgrade: Rhac (levels: 3)
+  Level 1:
+    Name: |cffaad2ffУлучшенная кладка|r (sid: 28836)
+    Hotkey: X (raw: TRIGSTR_12616)
+    Tip: Исследовать |cffaad2ffУлучшенную кладку|r (sid: 28839)
+    Ubertip: "Усиливает броню и увеличивает запас прочности зданий Альянса." (sid: None)
+  Level 2:
+    Name: |cffaad2ffУлучшенная кладка|r (sid: 28837)
+    Hotkey: X (raw: TRIGSTR_12632)
+    Tip: Исследовать |cffaad2ffУлучшенную кладку|r (sid: 28962)
+    Ubertip: Усиливает броню и увеличивает запас прочности зданий Альянса. (sid: 29219)
+  Level 3:
+    Name: |cffaad2ffУлучшенная кладка|r (sid: 28838)
+    Hotkey: X (raw: TRIGSTR_12697)
+    Tip: Исследовать |cffaad2ffУлучшенную кладку|r (sid: 29022)
+    Ubertip: Усиливает броню и увеличивает запас прочности зданий Альянса. (sid: 31032)
+
+Upgrade: Rgfo (levels: 3)
+  Level 1:
+    Name: Знак укрепления (sid: None)
+    Hotkey: None (raw: None)
+    Tip: None (sid: None)
+    Ubertip: None (sid: None)
+  Level 2:
+    Name: Знак укрепления (sid: None)
+    Hotkey: None (raw: None)
+    Tip: None (sid: None)
+    Ubertip: None (sid: None)
+  Level 3:
+    Name: Знак укрепления (sid: None)
+    Hotkey: None (raw: None)
+    Tip: None (sid: None)
+    Ubertip: None (sid: None)
+
+Upgrade: R06U (levels: 6)
+  Level 1:
+    Name: |cffe1c8ebЗачарование силы|r (sid: 9649)
+    Hotkey: Q (raw: TRIGSTR_34997)
+    Tip: Изучить |cffe1c8ebЗачарование силы|r (sid: 40842)
+    Ubertip: Увеличивает урон всех|cff4040ff ночнорожденных|r, сражающихся в ближнем бою. (sid: 10127)
+  Level 2:
+    Name: |cffe1c8ebЗачарование силы|r (sid: 9650)
+    Hotkey: Q (raw: TRIGSTR_34998)
+    Tip: Изучить |cffe1c8ebЗачарование силы|r (sid: 40843)
+    Ubertip: Увеличивает урон всех|cff4040ff ночнорожденных|r, сражающихся в ближнем бою. (sid: 11421)
+  Level 3:
+    Name: |cffe1c8ebЗачарование мощи|r (sid: 9665)
+    Hotkey: Q (raw: TRIGSTR_35006)
+    Tip: Изучить |cffe1c8ebЗачарование мощи|r (sid: 40844)
+    Ubertip: Увеличивает урон всех|cff4040ff ночнорожденных|r, сражающихся в ближнем бою. (sid: 11422)
+  Level 4:
+    Name: |cffe1c8ebЗачарование мощи|r (sid: 9668)
+    Hotkey: Q (raw: TRIGSTR_35007)
+    Tip: Изучить |cffe1c8ebЗачарование мощи|r (sid: 40847)
+    Ubertip: Увеличивает урон всех|cff4040ff ночнорожденных|r, сражающихся в ближнем бою. (sid: 6890)
+  Level 5:
+    Name: |cffe1c8ebЗачарование могущества|r (sid: 9667)
+    Hotkey: Q (raw: TRIGSTR_35008)
+    Tip: Изучить |cffe1c8ebЗачарование могущества|r (sid: 40846)
+    Ubertip: Увеличивает урон всех|cff4040ff ночнорожденных|r, сражающихся в ближнем бою. (sid: 3521)
+  Level 6:
+    Name: |cffe1c8ebЗачарование могущества|r (sid: 9666)
+    Hotkey: Q (raw: TRIGSTR_35013)
+    Tip: Изучить |cffe1c8ebЗачарование могущества|r (sid: 40845)
+    Ubertip: Увеличивает урон всех|cff4040ff ночнорожденных|r, сражающихся в ближнем бою. (sid: 8046)
+
+Upgrade: R06V (levels: 6)
+  Level 1:
+    Name: |cffe1c8ebЛунные доспехи|r (sid: 9946)
+    Hotkey: A (raw: A)
+    Tip: Исследовать |cffe1c8ebЛунные доспехи|r (sid: 10001)
+    Ubertip: Усиливает броню всех |cff4040ffночнорожденных|r, сражающихся в ближним бою. (sid: 11426)
+  Level 2:
+    Name: |cffe1c8ebЛунные доспехи|r (sid: 9989)
+    Hotkey: A (raw: A)
+    Tip: Исследовать |cffe1c8ebЛунные доспехи|r (sid: 10002)
+    Ubertip: Усиливает броню всех |cff4040ffночнорожденных|r, сражающихся в ближним бою. (sid: 11427)
+  Level 3:
+    Name: |cffe1c8ebУлучшенные лунные доспехи|r (sid: 10000)
+    Hotkey: A (raw: A)
+    Tip: Исследовать |cffe1c8ebУлучшенные лунные доспехи|r (sid: 10003)
+    Ubertip: Усиливает броню всех |cff4040ffночнорожденных|r, сражающихся в ближним бою. (sid: 11430)
+  Level 4:
+    Name: |cffe1c8ebУлучшенные лунные доспехи|r (sid: 10006)
+    Hotkey: A (raw: TRIGSTR_14708)
+    Tip: Исследовать |cffe1c8ebУлучшенные лунные доспехи|r (sid: 10009)
+    Ubertip: Усиливает броню всех |cff4040ffночнорожденных|r, сражающихся в ближним бою. (sid: 11423)
+  Level 5:
+    Name: |cffe1c8ebУсиленные лунные доспехи|r (sid: 10005)
+    Hotkey: A (raw: TRIGSTR_15072)
+    Tip: Исследовать |cffe1c8ebУсиленные лунные доспехи|r (sid: 10008)
+    Ubertip: Усиливает броню всех |cff4040ffночнорожденных|r, сражающихся в ближним бою. (sid: 11424)
+  Level 6:
+    Name: |cffe1c8ebУсиленные лунные доспехи|r (sid: 10004)
+    Hotkey: A (raw: TRIGSTR_15546)
+    Tip: Исследовать |cffe1c8ebУсиленные лунные доспехи|r (sid: 10007)
+    Ubertip: Усиливает броню всех |cff4040ffночнорожденных|r, сражающихся в ближним бою. (sid: 11425)
+
+Upgrade: R0DU (levels: 6)
+  Level 1:
+    Name: |cffe1c8ebУлучшенные инструменты|r (sid: 1781)
+    Hotkey: Z (raw: TRIGSTR_31511)
+    Tip: Исследовать |cffe1c8ebУлучшенные инструменты|r (sid: 22228)
+    Ubertip: Увеличивают объем переносимой работниками древесины на 5. (sid: 21881)
+  Level 2:
+    Name: |cffe1c8ebУлучшенные инструменты|r (sid: 1782)
+    Hotkey: Z (raw: TRIGSTR_31924)
+    Tip: Исследовать |cffe1c8ebУлучшенные инструменты|r (sid: 23632)
+    Ubertip: Увеличивают объем переносимой работниками древесины на 5. (sid: 21603)
+  Level 3:
+    Name: |cffe1c8ebУлучшенные инструменты|r (sid: 1783)
+    Hotkey: Z (raw: TRIGSTR_31216)
+    Tip: Исследовать |cffe1c8ebУлучшенные инструменты|r (sid: 25260)
+    Ubertip: Увеличивают объем переносимой работниками древесины на 5. (sid: 21604)
+  Level 4:
+    Name: |cffe1c8ebУлучшенные инструменты|r (sid: 4560)
+    Hotkey: Z (raw: TRIGSTR_31217)
+    Tip: Исследовать |cffe1c8ebУлучшенные инструменты|r (sid: 25261)
+    Ubertip: Увеличивают объем переносимой работниками древесины на 5. (sid: 21605)
+  Level 5:
+    Name: |cffe1c8ebУлучшенные инструменты|r (sid: 9326)
+    Hotkey: Z (raw: TRIGSTR_31218)
+    Tip: Исследовать |cffe1c8ebУлучшенные инструменты|r (sid: 28665)
+    Ubertip: Увеличивают объем переносимой работниками древесины на 5. (sid: 21606)
+  Level 6:
+    Name: |cffe1c8ebУлучшенные инструменты|r (sid: 15564)
+    Hotkey: Z (raw: TRIGSTR_31461)
+    Tip: Исследовать |cffe1c8ebУлучшенные инструменты|r (sid: 29062)
+    Ubertip: Увеличивают объем переносимой работниками древесины на 5. (sid: 21880)
+
+Upgrade: Rguv (levels: 1)
+  Level 1:
+    Name: Знак ночного зрения (sid: None)
+    Hotkey: None (raw: None)
+    Tip: None (sid: None)
+    Ubertip: None (sid: None)
+
+Upgrade: R06Y (levels: 3)
+  Level 1:
+    Name: |cffe1c8ebРодство с маной|r (sid: 10056)
+    Hotkey: E (raw: TRIGSTR_34421)
+    Tip: Исследовать |cffe1c8ebРодство с маной|r (sid: 40854)
+    Ubertip: Войска ночнорождённых окружает магический щит, отражающий часть урона от пронзающих атак и способностей
+|cffffd700-65|r% от получению физичиских атак.
+|cffffd700-80|r% от получения магических атак и способностей. (sid: 11668)
+  Level 2:
+    Name: |cffe1c8ebРодство с маной|r (sid: 10061)
+    Hotkey: E (raw: TRIGSTR_34422)
+    Tip: Исследовать |cffe1c8ebРодство с маной|r (sid: 40855)
+    Ubertip: Войска ночнорождённых окружает магический щит, отражающий часть урона от пронзающих атак и способностей
+|cffffd700-65|r% от получению физичиских атак.
+|cffffd700-80|r% от получения магических атак и способностей.
+Все|cff4040ff ночнорожденные|r получают способность "|cff4040ffЩит маны|r" (sid: 11669)
+  Level 3:
+    Name: |cffe1c8ebРодство с маной|r (sid: 10062)
+    Hotkey: E (raw: TRIGSTR_34457)
+    Tip: Исследовать |cffe1c8ebРодство с маной|r (sid: 40856)
+    Ubertip: Войска ночнорождённых окружает магический щит, отражающий часть урона от пронзающих атак и способностей
+|cffffd700-65|r% от получению физичиских атак.
+|cffffd700-80|r% от получения магических атак и способностей. (sid: 11670)
+
+Upgrade: R06T (levels: 2)
+  Level 1:
+    Name: |cffe1c8ebДревнее знание|r (sid: 40836)
+    Hotkey: S (raw: TRIGSTR_14477)
+    Tip: Изучить |cffe1c8ebДревние знание|r (sid: 40837)
+    Ubertip: Обучение |cffe1c8ebЛунного мага|r новой способности |cffe1c8ebВсплеск маны|r.
+Увеличивает ману всем |cffe1c8ebНочнорожденным |rна |cffffd70075|r ед.
+Увеличивает хп всем |cffe1c8ebНочнорожденным|r на |cffffd70050|r ед.
+Увеличивает регенерацию маны всем |cffe1c8ebНочнорожденным|r на |cffffd7000.3|r%. (sid: 40838)
+  Level 2:
+    Name: |cffe1c8ebДревнее знание|r (sid: 40839)
+    Hotkey: S (raw: TRIGSTR_14622)
+    Tip: Изучить |cffe1c8ebДревние знание|r (sid: 40840)
+    Ubertip: Обучение |cffe1c8ebЛунного мага|r новой способности |cffe1c8ebВолшебный огонь|r.
+Увеличивает ману всем |cffe1c8ebНочнорожденным |rна |cffffd70075|r ед.
+Увеличивает хп всем |cffe1c8ebНочнорожденным|r на |cffffd70050|r ед.
+Увеличивает регенерацию маны всем |cffe1c8ebНочнорожденным|r на |cffffd7000.3|r%. (sid: 40841)
+
+Upgrade: R06H (levels: 1)
+  Level 1:
+    Name: |cffe1c8ebЛунные глефы|r (sid: 40553)
+    Hotkey: Z (raw: TRIGSTR_28573)
+    Tip: Выковать |cffe1c8ebЛунные глефы|r (sid: 40706)
+    Ubertip: Позволяют глефам |cff6464f1Шал`Дорайских воительнец|r поражать до |cffffd7003х|r целей за раз. (sid: 211)
+
+Upgrade: R06I (levels: 1)
+  Level 1:
+    Name: |cffe1c8ebЗачарованные Доспехи|r (sid: 10656)
+    Hotkey: S (raw: TRIGSTR_14474)
+    Tip: Выковать |cffe1c8ebЗачарованные Доспехи|r (sid: 40712)
+    Ubertip: Оснащение |cffe1c8ebНаследников Сумеречной стражи|r специальными доспехами. (sid: 40713)
+
+Upgrade: R06W (levels: 6)
+  Level 1:
+    Name: |cffe1c8ebПрочные доспехи|r (sid: 10013)
+    Hotkey: S (raw: TRIGSTR_14630)
+    Tip: Исследовать |cffe1c8ebПрочные доспехи|r (sid: 10019)
+    Ubertip: Увеличивает кол-во брони |cff4040ffночнорожденным|r, атакающие в дальнем бою. (sid: 11443)
+  Level 2:
+    Name: |cffe1c8ebПрочные доспехи|r (sid: 10014)
+    Hotkey: S (raw: TRIGSTR_14623)
+    Tip: Исследовать |cffe1c8ebПрочные доспехи|r (sid: 10020)
+    Ubertip: Увеличивает кол-во брони |cff4040ffночнорожденным|r, атакающие в дальнем бою. (sid: 11444)
+  Level 3:
+    Name: |cffe1c8ebУсиленные доспехи|r (sid: 10015)
+    Hotkey: S (raw: TRIGSTR_14624)
+    Tip: Исследовать |cffe1c8ebУсиленные доспехи|r (sid: 10021)
+    Ubertip: Увеличивает кол-во брони |cff4040ffночнорожденным|r, атакающие в дальнем бою. (sid: 11445)
+  Level 4:
+    Name: |cffe1c8ebУсиленные доспехи|r (sid: 10018)
+    Hotkey: S (raw: TRIGSTR_14625)
+    Tip: Исследовать |cffe1c8ebУсиленные доспехи|r (sid: 10024)
+    Ubertip: Увеличивает кол-во брони |cff4040ffночнорожденным|r, атакающие в дальнем бою. (sid: 11440)
+  Level 5:
+    Name: |cffe1c8ebНепробиваемые доспехи|r (sid: 10017)
+    Hotkey: S (raw: TRIGSTR_14626)
+    Tip: Исследовать |cffe1c8ebНепробиваемые доспехи|r (sid: 10023)
+    Ubertip: Увеличивает кол-во брони |cff4040ffночнорожденным|r, атакающие в дальнем бою. (sid: 11441)
+  Level 6:
+    Name: |cffe1c8ebНепробиваемые доспехи|r (sid: 10016)
+    Hotkey: S (raw: TRIGSTR_14627)
+    Tip: Исследовать |cffe1c8ebНепробиваемые доспехи|r (sid: 10022)
+    Ubertip: Увеличивает кол-во брони |cff4040ffночнорожденным|r, атакающие в дальнем бою. (sid: 11442)
+
+Upgrade: R06X (levels: 6)
+  Level 1:
+    Name: |cffe1c8ebМагическая атака|r (sid: 10034)
+    Hotkey: W (raw: TRIGSTR_36802)
+    Tip: Исследовать |cffe1c8ebМагическую атаку|r (sid: 40848)
+    Ubertip: Увеличивает урон всем |cff4040ffночнорожденным|r, атакующие в дальнем бою. (sid: 11449)
+  Level 2:
+    Name: |cffe1c8ebМагическая атака|r (sid: 10035)
+    Hotkey: W (raw: TRIGSTR_36803)
+    Tip: Исследовать |cffe1c8ebМагическую атаку|r (sid: 40849)
+    Ubertip: Увеличивает урон всем |cff4040ffночнорожденным|r, атакующие в дальнем бою. (sid: 11450)
+  Level 3:
+    Name: |cffe1c8ebМагическая атака|r (sid: 10036)
+    Hotkey: W (raw: TRIGSTR_37026)
+    Tip: Исследовать |cffe1c8ebМагическую атаку|r (sid: 40850)
+    Ubertip: Увеличивает урон всем |cff4040ffночнорожденным|r, атакующие в дальнем бою. (sid: 11451)
+  Level 4:
+    Name: |cffe1c8ebМагическая атака|r (sid: 10039)
+    Hotkey: W (raw: TRIGSTR_37028)
+    Tip: Исследовать |cffe1c8ebМагическую атаку|r (sid: 40853)
+    Ubertip: Увеличивает урон всем |cff4040ffночнорожденным|r, атакующие в дальнем бою. (sid: 11447)
+  Level 5:
+    Name: |cffe1c8ebМагическая атака|r (sid: 10038)
+    Hotkey: W (raw: TRIGSTR_37029)
+    Tip: Исследовать |cffe1c8ebМагическую атаку|r (sid: 40852)
+    Ubertip: Увеличивает урон всем |cff4040ffночнорожденным|r, атакующие в дальнем бою. (sid: 11446)
+  Level 6:
+    Name: |cffe1c8ebМагическая атака|r (sid: 10037)
+    Hotkey: W (raw: TRIGSTR_37038)
+    Tip: Исследовать |cffe1c8ebМагическую атаку|r (sid: 40851)
+    Ubertip: Увеличивает урон всем |cff4040ffночнорожденным|r, атакующие в дальнем бою. (sid: 11448)
+
+Upgrade: R06S (levels: 2)
+  Level 1:
+    Name: |cffe1c8ebКонтроль на маной|r (sid: 10862)
+    Hotkey: A (raw: TRIGSTR_14647)
+    Tip: Освоить |cffe1c8ebКонтроль над маной|r (sid: 40834)
+    Ubertip: Обучение |cffe1c8ebШал'дорайского аристократа|r новой способностью "|cffe1c8ebПохищение Маны|r" 
+Увеличивает Ману  |cffe1c8ebШал'дорайскому аристократу|r на |cffffd70050|r ед.
+Увеличивает Скорость боя всем юнитам, атакующих магией на |cffffd7000.3|r%
+Увеличивает регенерацию маны на |cffffd7000.3|r% (sid: 10864)
+  Level 2:
+    Name: |cffe1c8ebКонтроль над маной|r (sid: 10865)
+    Hotkey: A (raw: TRIGSTR_14707)
+    Tip: Освоить |cffe1c8ebКонтроль над маной|r (sid: 40835)
+    Ubertip: Обучение |cffe1c8ebШал'дорайского аристократа|r новой способностью "|cffe1c8ebПризыв Элементаля Воды|r" 
+Увеличивает Ману  |cffe1c8ebШал'дорайскому аристократу|r на |cffffd70050|r ед.
+Увеличивает Скорость боя всем юнитам, атакующих магией на |cffffd7000.3|r%
+Увеличивает регенерацию маны на |cffffd7000.3|r% (sid: 10867)
+
+Upgrade: R06P (levels: 1)
+  Level 1:
+    Name: |cffe1c8ebМана-броня|r (sid: 8531)
+    Hotkey: S (raw: TRIGSTR_14476)
+    Tip: Исследовать |cffe1c8ebМана-броню|r (sid: 40831)
+    Ubertip: Повышает количество брони |cff4040e1Шал`дорайскому гвардейцу|r на|cffffd700 2|r ед. (sid: 10649)
+
+Upgrade: R06N (levels: 1)
+  Level 1:
+    Name: |cffe1c8ebСовместные тренировки|r (sid: 8090)
+    Hotkey: X (raw: TRIGSTR_27928)
+    Tip: Провести |cffe1c8ebСовместные тренировки|r (sid: 40829)
+    Ubertip: |cffe1c8ebЗвериный страж|r обучает своего зверя, что позволяет увеличить его скорость перемещения и атаку.
+Скорость боя: |cffffd7000.20|r%
+Скорость передвижения: |cffffd70030|r ед. (sid: 710)
+
+Upgrade: R06J (levels: 1)
+  Level 1:
+    Name: |cffe1c8ebСтальные снаряды|r (sid: 10964)
+    Hotkey: D (raw: TRIGSTR_17739)
+    Tip: Выковать |cffe1c8ebСтальные снаряды|r (sid: 10965)
+    Ubertip: Оснащение |cff6464e1Глефомета|r |cff6464e1стальными снарядами|r для эффиктивного поражения строений, позволяющими при выстреле поражать врагов, находящихся позади цели (sid: 11651)
+
+Upgrade: R06K (levels: 2)
+  Level 1:
+    Name: |cffe1c8ebПосвящение Темпомантов|r (sid: 11652)
+    Hotkey: A (raw: TRIGSTR_14442)
+    Tip: Исследовать |cffe1c8ebПосвящение Темпомантов|r (sid: 40716)
+    Ubertip: |cff4040e1Темпомант|r осваивает способность "|cff4040e1Восполнение маны|r"
+Увеличение кол-во маны на|cffffd700 60|r ед. и ее регенерации на |cffffd7000.4|r% (sid: 11654)
+  Level 2:
+    Name: |cffe1c8ebПосвящение Темпомантов|r (sid: 11653)
+    Hotkey: A (raw: TRIGSTR_14443)
+    Tip: Исследовать |cffe1c8ebПосвящение Темпомантов|r (sid: 40717)
+    Ubertip: |cff4040e1Темпомант|r осваивает способность "|cff4040e1Востановление жизни|r"
+Увеличение кол-во маны на|cffffd700 60|r ед. и ее регенерации на |cffffd7000.4|r% (sid: 11657)
+
+Upgrade: R06L (levels: 1)
+  Level 1:
+    Name: |cffe1c8ebТайная магия|r (sid: 8026)
+    Hotkey: Z (raw: TRIGSTR_28574)
+    Tip: Изучить |cffe1c8ebТайную магию|r (sid: 40827)
+    Ubertip: |cff4040e1Темпомант|r осваивает способность "|cff4040e1Обнуление заклинаний|r"
+Увеличение кол-ва маны |cff4040ffтемпоманта|r на|cffffd700 60|r ед.
+Увеличение урона от атак |cff4040ffтемпоманта|r на |cffffd7004|r ед. (sid: 11659)
+
+===============================================================================
+6. ABILITIES
+===============================================================================
+
+Ability: A0HU -> |cffe1c8ebНочнорожденные|r (levels: 1)
+  Name sid: 38875
+  Hotkey: E (raw: TRIGSTR_17621)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebНочнорожденные|r (sid: 38876)
+    Ubertip: |cffa0beaaСоздатель расы:|r |cffc8dcaaEscanor(Яхве)|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaNiCAmCHiK|r|n|cffa0beaaСложность:|r |cffadff2f●●|r●●●|n|cffa0beaaПериод:|r |cffc8dcaaLegion - Battle for Azeroth|r|n|n| |cff8080ffНочнорожденные|r - Эльфы Сурамара провели 10 000 лет под защитой магического барьера, и за это время они стали слишком зависимы от тайной магии Ночного Колодца. Чтобы защитить источник своей силы, лидеры ночнорожденных заключили сделку с Пылающим Легионом, ввергнув свое государство в гражданскую войну. Отвоевав свободу у своих хозяев-демонов, ночнорожденные присоединились к Орде в надежде вновь обрести свое место на Азероте. (sid: 21994)
+
+Ability: A0LJ -> Обмен |cff00ff00Дерева |rна |cffffff00Золото|r (levels: 1)
+  Name sid: 12857
+  Hotkey: A (raw: TRIGSTR_4259)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: Обмен |cff00ff00Дерева |rна |cffffff00Золото|r (sid: 12886)
+    Ubertip: Отнимает у игрока |cff228722500 дерева|r, но добавляет |cffffd700100 золота|r. (sid: 20631)
+
+Ability: A0LI -> Обмен |cffffff00Золота |rна |cff00ff00Дерево|r (levels: 1)
+  Name sid: 2888
+  Hotkey: S (raw: TRIGSTR_4247)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: Обмен |cffffff00Золота |rна |cff00ff00Дерево|r (sid: 3692)
+    Ubertip: Отнимает у игрока|cffffd700 500 золота|r, но добавляет |cff228722100 дерева|r. (sid: 20630)
+
+Ability: A0IQ -> |cffffdcb4Обозначить столицу|r (levels: 1)
+  Name sid: 27193
+  Hotkey: X (raw: TRIGSTR_11265)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffffdcb4Обозначить столицу|r (sid: 27969)
+    Ubertip: Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение. (sid: 27970)
+
+Ability: Argl -> Вернуть золото и древесину (levels: 1)
+  Name sid: None
+  Hotkey: None (raw: None)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: None (sid: None)
+    Ubertip: None (sid: None)
+
+Ability: A0GL -> |cffe1c8ebДар маны|r (levels: 1)
+  Name sid: 7976
+  Hotkey: R (raw: R)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebДар маны|r (sid: 7978)
+    Ubertip: Повышение урона всем ночнорожденным по всей карте на |cffffd70025|r% на 45 секунд. (sid: 28372)
+
+Ability: A0GK -> |cffe1c8ebБлагодать маны|r (levels: 1)
+  Name sid: 7963
+  Hotkey: X (raw: TRIGSTR_10608)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebБлагодать маны|r (sid: 7971)
+    Ubertip: Повышение урона и брони всех |cff4040e1ночнорожденных|r
+Броня(|cffffd7003ед|r)
+Урон(|cffffd70050|r%) (sid: 39169)
+
+Ability: A1KB -> Защита столицы (levels: 1)
+  Name sid: 38201
+  Hotkey: None (raw: None)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: Защита столицы (sid: 38229)
+    Ubertip: None (sid: None)
+
+Ability: Abds -> Слабое рассеивание чумы (levels: 1)
+  Name sid: None
+  Hotkey: None (raw: None)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: None (sid: None)
+    Ubertip: None (sid: None)
+
+Ability: Arlm -> Вернуть древесину (levels: 1)
+  Name sid: None
+  Hotkey: None (raw: None)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: None (sid: None)
+    Ubertip: None (sid: None)
+
+Ability: Afbt -> Противодействие (levels: 1)
+  Name sid: None
+  Hotkey: None (raw: None)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: Противодействие (sid: None)
+    Ubertip: "Каждая атака уничтожает <Afbt,DataA1> маны цели и наносит ей столько же дополнительного урона.|n|nПризванные цели получают на <Afbt,DataE1> больше урона от атак этой башни." (sid: None)
+
+Ability: A15N -> Зона ремонта (levels: 1)
+  Name sid: 25578
+  Hotkey: None (raw: None)
+  Research hotkey: None (raw: None)
+  Research tip: Зона ремонта (sid: 25582)
+  Research ubertip: Восстанавливает здоровье механическим юнитам поблизости. (sid: 26500)
+  Level 1:
+    Tip: Зона ремонта (sid: 25589)
+    Ubertip: Восстанавливает здоровье механическим юнитам поблизости. (sid: 25608)
+
+Ability: A0I3 -> Small jump (levels: 1)
+  Name sid: 26484
+  Hotkey: C (raw: TRIGSTR_9545)
+  Research hotkey: E (raw: TRIGSTR_18243)
+  Research tip: Небольшой скачок (sid: 10064)
+  Research ubertip: Переносит  на небольшое расстояние. (sid: 10976)
+  Level 1:
+    Tip: Small jump (sid: 26476)
+    Ubertip: Transports over a short distance. (sid: 26477)
+
+Ability: ANha -> Добывать ресурсы (levels: 1)
+  Name sid: None
+  Hotkey: G (raw: G)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: Добывать ресурсы (sid: None)
+    Ubertip: Добывает золото из рудников и древесину из деревьев. (sid: None)
+
+Ability: Ahrp -> Ремонтировать (levels: 1)
+  Name sid: None
+  Hotkey: R (raw: R)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: Ремонтировать (sid: None)
+    Ubertip: Ремонтирует здания и технику за счет ресурсов. (sid: None)
+
+Ability: A0GE -> |cffe1c8ebЩит маны|r (levels: 1)
+  Name sid: 7520
+  Hotkey: D (raw: TRIGSTR_8822)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebЩит маны|r (sid: 7519)
+    Ubertip: Активировать "|cff4040e1щит маны|r" поглащающий |cffffd7001|r ед. урона за |cffffd7001|r ману. (sid: 2953)
+
+Ability: A0G5 -> |cffe1c8ebРодство с магией|r (levels: 1)
+  Name sid: 7428
+  Hotkey: None (raw: None)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebРодство с магией|r (sid: 7427)
+    Ubertip: Понижает урон от магических спелов и автоатак.
+|cffffd700-65|r% от получению автоатак.
+|cffffd700-80|r% от получения магических спелов. (sid: 11455)
+
+Ability: A0G1 -> |cffe1c8ebУкрыться за Щитом|r (levels: 1)
+  Name sid: 970
+  Hotkey: Q (raw: TRIGSTR_14428)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebПоднять щит|r  (sid: 7344)
+    Ubertip: При использовании уменьшает урон от пронзающих атак до |cffffd70050%|r базового. Замедляет передвижение на |cffffd70030%|r на время действия. (sid: 10852)
+
+Ability: A0FZ -> |cffe1c8ebЛунная глефа|r (levels: 1)
+  Name sid: 7324
+  Hotkey: None (raw: None)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebЛунная глефа|r (sid: 7325)
+    Ubertip: Позволяют глефам |cff6464feШал`Дорйских вотельнец|r поражать до |cffffd7003|rх целей за раз (sid: 33470)
+
+Ability: Ault -> Ночное зрение (levels: 1)
+  Name sid: None
+  Hotkey: None (raw: None)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: None (sid: None)
+    Ubertip: None (sid: None)
+
+Ability: A0G2 -> |cffe1c8ebЗачарованный доспех|r (levels: 1)
+  Name sid: 9763
+  Hotkey: None (raw: None)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebЗачарованный доспех|r (sid: 10645)
+    Ubertip: |cffffd700-15 |rед. к получаемому |cff4040e1Наследником Сумеречной стражи|r урону от атак. Минимальный урон: |cffffd7005|r ед.  (sid: 10856)
+
+Ability: A0G4 -> |cffe1c8ebПризыв элементаля воды|r (levels: 1)
+  Name sid: 7406
+  Hotkey: W (raw: W)
+  Research hotkey: W (raw: W)
+  Research tip: Изучить «Призыв элементаля воды» [|cffffcc00%d-й уровень|r] (sid: None)
+  Research ubertip: "Призывает элементаля воды. |nВремя существования: <AHwe,Dur1> сек. |n|n|cffffcc00Элементаль атакует наземные и воздушные цели. |r|n|n|cffffcc001-й уровень:|r <hwat,realHP> здоровья, <hwat,mindmg1>-<hwat,maxdmg1> урона. |n|cffffcc002-й уровень:|r <hwt2,realHP> здоровья, <hwt2,mindmg1>-<hwt2,maxdmg1> урона. |n|cffffcc003-й уровень:|r <hwt3,realHP> здоровья, <hwt3,mindmg1>-<hwt3,maxdmg1> урона." (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebПризыв элементаля воды|r (sid: 7426)
+    Ubertip: Призывает |cff4040e1элементаля воды|r, сражающегося на вашей стороне.
+Хп: |cffffd700450|r ед.
+Атака: |cffffd70021-29|r ед.
+Время призыва 60 сек.|r (sid: 11644)
+
+Ability: A0G6 -> |cffe1c8ebПохищение маны|r (levels: 1)
+  Name sid: 7429
+  Hotkey: Q (raw: TRIGSTR_14430)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebПохищение маны|r (sid: 7430)
+    Ubertip: Похищает |cffffd70020 |rед. маны/сек. у врага. |nВремя действия: |cffffd7008|r сек. (sid: 11645)
+
+Ability: A0GG -> |cffe1c8ebНемота|r (levels: 1)
+  Name sid: 7841
+  Hotkey: W (raw: TRIGSTR_14774)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebНемота|r  (sid: 11648)
+    Ubertip: Вражеские юниты, попавшие в зону действия теряют возможность использовать заклинания.
+Время действия: |cffffd70015|r сек.
+Время дейсвие(герои): |cffffd7001|r сек. (sid: 28371)
+
+Ability: A1O9 -> |cffe1c8ebРазгром|r (levels: 1)
+  Name sid: 28664
+  Hotkey: None (raw: None)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebРазгром|r (sid: 28686)
+    Ubertip: 1.5-кратно увеличивает урон от атак по зданиям. (sid: 28912)
+
+Ability: A0GJ -> |cffe1c8ebМагическая сетка|r (levels: 1)
+  Name sid: 5130
+  Hotkey: Q (raw: TRIGSTR_14488)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebМагическая Сетка|r (sid: 5131)
+    Ubertip: |cff4040e1Магическая сетка|r способна прибить врага к земле на некоторое время.
+Время действия: |cffffd70012|r сек. 
+Герой: |cffffd7003|r сек. (sid: 106)
+
+Ability: A0GI -> |cffe1c8ebМагические оковы|r (levels: 1)
+  Name sid: 10659
+  Hotkey: E (raw: TRIGSTR_17093)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebМагические оковы|r (sid: 23412)
+    Ubertip: Уменьшает скорость атаки противника на|cffffd700 0.25|r% и скорость передвижения на |cffffd7000.6|r%.
+Время действия Герой:|cffffd70010|r сек.
+Время действия Юниты:|cffffd70060|r сек. (sid: 10861)
+
+Ability: A0GH -> |cffe1c8ebКомандирская аура|r (levels: 1)
+  Name sid: 7846
+  Hotkey: None (raw: None)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebКомандирская аура|r (sid: 7847)
+    Ubertip: Увеличение урона всем рядом стоящим юнитам на |cffffd70010%|r (sid: 10963)
+
+Ability: A03C -> |cffe1c8ebСлияние с тенью|r (levels: 1)
+  Name sid: 7327
+  Hotkey: Q (raw: TRIGSTR_28605)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebСлияние с тенью|r (sid: 7329)
+    Ubertip: "Дает невидимость и +<ANwk,DataB1,%>% к скорости передвижения. Атакуя, пандарен становится видимым и наносит <ANwk,DataC1> дополнительного урона." (sid: None)
+
+Ability: A0GF -> |cffe1c8ebРассекание|r (levels: 1)
+  Name sid: 10876
+  Hotkey: None (raw: None)
+  Research hotkey: C (raw: C)
+  Research tip: Изучить «Критический удар» [|cffffcc00%d-й уровень|r] (sid: None)
+  Research ubertip: "Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон." (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebРассекание|r (sid: 10877)
+    Ubertip: |cff6464e1Темный Клинок|r с вероятность |cffffd70015|r% нанесет|cffffd700 5х|r кратный урон по цели (sid: 39222)
+
+Ability: A1MO -> |cffe1c8ebСфера разрушения|r (levels: 1)
+  Name sid: 28662
+  Hotkey: E (raw: TRIGSTR_29566)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebСфера разрушения|r (sid: 39398)
+    Ubertip: +20 к урону от атак |cffe1c8ebЛунного мага|r. Атаки наносят урон по области. (sid: 39399)
+
+Ability: A0G7 -> |cffe1c8ebВсплеск маны|r (levels: 1)
+  Name sid: 7467
+  Hotkey: Q (raw: TRIGSTR_14484)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebВсплеск маны|r (sid: 7468)
+    Ubertip: Выпускает заряд маны, нанося |cffffd70050|r ед. урона цели и |cffffd70050 |rед. урона по области. Урон от "|cff4040e1Всплеска Маны|r" истощает врага, снижая их скорость перемещения и атаки.
+Время действия: |cffffd7004|r сек. (|cffffd7002|r сек.-по героям) (sid: 10859)
+
+Ability: A0GA -> |cffe1c8ebВолшебный огонь|r  (levels: 1)
+  Name sid: 10648
+  Hotkey: W (raw: TRIGSTR_14620)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebВолшебный огонь|r (sid: 7507)
+    Ubertip: Снижает показатель брони цели на |cffffd7004|r ед. и раскрывает ее местоположение.
+Время действия:|cffffd70090|r сек. (|cffffd70060|r сек.-по героям). (sid: 10860)
+
+Ability: A0G3 -> |cffe1c8ebСтальной снаряд|r (levels: 1)
+  Name sid: 2
+  Hotkey: None (raw: None)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffe1c8ebСтальной снаряд|r (sid: 10957)
+    Ubertip: Позволяет оснастить |cff6464e1Глефомет|r |cff6464e1стальными снарядами|r для эффиктивного поражения строений, позволяющими при выстреле поражать врагов, находящихся позади цели (sid: 11643)
+
+Ability: A1RK -> |cffbd00ffДар Исцеления|r (levels: 1)
+  Name sid: 25798
+  Hotkey: Q (raw: TRIGSTR_32362)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cffbd00ffДар Исцеления|r (sid: 25799)
+    Ubertip: Восполняет 25 здоровья раненому союзнику. Не действует на технику. (sid: 10040)
+
+Ability: A1RJ -> |cff228a22Рассеивание заклинаний|r (levels: 1)
+  Name sid: 41599
+  Hotkey: Q (raw: TRIGSTR_32360)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: |cff228a22Рассеивание заклинаний|r (sid: 41600)
+    Ubertip: Развеивает все отрицательные и положительные эффекты в выделенной области.
+
+|cffffd700Наносит 200 ед. призванным юнитам|r (sid: 42076)
+
+Ability: A1RL -> Дух возмездия (levels: 1)
+  Name sid: None
+  Hotkey: V (raw: V)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: Дух возмездия (sid: None)
+    Ubertip: "Призывает из трупа неуязвимого дикого духа. Время существования: <Avng,Dur1> сек. или до гибели аватары." (sid: None)
+
+Ability: AInv -> Инвентарь (levels: 1)
+  Name sid: None
+  Hotkey: None (raw: None)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: None (sid: None)
+    Ubertip: None (sid: None)
+
+Ability: A0GM -> |cffe1c8ebЗачарованные Доспехи|r (levels: 4)
+  Name sid: 10100
+  Hotkey: None (raw: None)
+  Research hotkey: None (raw: None)
+  Research tip: |cffe1c8ebЗачарованные Доспехи|r (sid: 10094)
+  Research ubertip: Уменьшает урон от заклинаний, и автоматических магических атак. (sid: 40021)
+  Level 1:
+    Tip: |cffe1c8ebЗачарованные Доспехи|r (sid: 10095)
+    Ubertip: Уменьшает урон от заклинаний, и автоматических магических атак.|n|n|cffffcc001-й уровень:|r |cffb4dcdc-<Aegr,DataA1,%>% к  урону от пронзающих атак и -<Aegr,DataE1,%>% к  урону от способностей и магических атак.|r|r  (sid: 15453)
+  Level 2:
+    Tip: |cffe1c8ebЗачарованные Доспехи|r (sid: 10097)
+    Ubertip: Уменьшает урон от заклинаний, и автоматических магических атак. |n|cffffcc002-й уровень:|r|cffb4dcdc-<Aegr,DataA2,%>% к  урону от пронзающих атак и -<Aegr,DataE2,%>% к  урону от способностей и магических атак.|r  (sid: 15450)
+  Level 3:
+    Tip: |cffe1c8ebЗачарованные Доспехи|r (sid: 10098)
+    Ubertip: Уменьшает урон от заклинаний, и автоматических магических атак |n|cffffcc003-й уровень:|r |cffb4dcdc-<Aegr,DataA3,%>% к  урону от пронзающих атак и -<Aegr,DataE3,%>% к  урону от способностей и магических атак.|r (sid: 15451)
+  Level 4:
+    Tip: |cffe1c8ebЗачарованные Доспехи|r (sid: 10099)
+    Ubertip: Уменьшает урон от заклинаний, и автоматических магических атак.|n|cffffcc004-й уровень:|r|cffb4dcdc-<Aegr,DataA4,%>% к  урону от пронзающих атак и -<Aegr,DataE4,%>% к  урону от способностей и магических атак.|r
+
+ (sid: 15452)
+
+Ability: A0GO -> |cffe1c8ebПризыв Леопарда|r (levels: 4)
+  Name sid: 10110
+  Hotkey: Q (raw: TRIGSTR_14575)
+  Research hotkey: Q (raw: TRIGSTR_14574)
+  Research tip: Изучить «|cffe1c8ebПризыв Леопарда|r» [|cffffcc00%d-й уровень|r] (sid: 10128)
+  Research ubertip: Призывает Леопарда – ловкую, сильную, атакующую врагов. |n|cffffcc001-й уровень:|r |cffb4dcdc2 леопарда.|r|n|cffffcc002-й уровень:|r |cffb4dcdc2 леопарда.|r|n|cffffcc003-й уровень:|r |cffb4dcdc4 леопарда.|r|n|cffffcc004-й уровень:|r |cffb4dcdc4 леопарда.|r (sid: 31715)
+  Level 1:
+    Tip: |cffe1c8ebПризыв Леопарда|r [|cffffcc001-й уровень|r] (sid: 10118)
+    Ubertip: Призывает Леопарда – ловкую, сильную, атакующую врагов. |n|cffffcc001-й уровень:|r |cffb4dcdc2 леопарда.|r (sid: 101)
+  Level 2:
+    Tip: |cffe1c8ebПризыв Леопарда|r [|cffffcc002-й уровень|r] (sid: 10119)
+    Ubertip: Призывает Леопарда – ловкую, сильную, атакующую врагов. |n|cffffcc002-й уровень:|r |cffb4dcdc2 леопарда.|r (sid: 15455)
+  Level 3:
+    Tip: |cffe1c8ebПризыв Леопарда|r [|cffffcc003-й уровень|r] (sid: 10120)
+    Ubertip: Призывает Леопарда – ловкую, сильную, атакующую врагов. |n|cffffcc003-й уровень:|r |cffb4dcdc4 леопарда.|r (sid: 202)
+  Level 4:
+    Tip: |cffe1c8ebПризыв Леопарда|r [|cffffcc004-й уровень|r] (sid: 10121)
+    Ubertip: Призывает Леопарда – ловкую, сильную, атакующую врагов.|n|cffffcc004-й уровень:|r |cffb4dcdc4 леопарда.|r (sid: 15457)
+
+Ability: A0GT -> |cffe1c8ebШипастая броня|r (levels: 4)
+  Name sid: 12940
+  Hotkey: W (raw: TRIGSTR_14795)
+  Research hotkey: W (raw: TRIGSTR_14779)
+  Research tip: Изучить «|cffe1c8ebШипастую броню|r» [|cffffcc00%d-й уровень|r] (sid: 12941)
+  Research ubertip: Броня покрыта шипами, которые усиливают броню и отражают получаемый в ближнем бою урон в атакующих врагов. |n|n|cffffcc001-й уровень:|r |cffb4dcdcотражение <AUts,DataA1,%>% урона, +<AUts,DataC1> к броне.|r |n|cffffcc002-й уровень:|r |cffb4dcdcотражение <AUts,DataA2,%>% урона, +<AUts,DataC2> к броне.|r |n|cffffcc003-й уровень:|r |cffb4dcdcотражение <AUts,DataA3,%>% урона, +<AUts,DataC3> к броне|r.|n|cffffcc004-й уровень:|r |cffb4dcdcотражение <AUts,DataA4,%>% урона, +<AUts,DataC4> к броне.|r
+
+ (sid: 15459)
+  Level 1:
+    Tip: |cffe1c8ebШипастая броня|r [|cffffcc001-й уровень|r] (sid: 12943)
+    Ubertip: Броня покрыта шипами, которые усиливают броню и отражают получаемый в ближнем бою урон в атакующих врагов. |n|n|cffffcc001-й уровень:|r |cffb4dcdcотражение <AUts,DataA1,%>% урона, +<AUts,DataC1> к броне.|r  (sid: 15460)
+  Level 2:
+    Tip: |cffe1c8ebШипастая броня|r [|cffffcc002-й уровень|r] (sid: 12944)
+    Ubertip: Броня покрыта шипами, которые усиливают броню и отражают получаемый в ближнем бою урон в атакующих врагов.  |n|cffffcc002-й уровень:|r |cffb4dcdcотражение <AUts,DataA2,%>% урона, +<AUts,DataC2> к броне.|r
+ (sid: 15461)
+  Level 3:
+    Tip: |cffe1c8ebШипастая броня|r [|cffffcc003-й уровень|r] (sid: 12945)
+    Ubertip: Броня покрыта шипами, которые усиливают броню и отражают получаемый в ближнем бою урон в атакующих врагов. |n|cffffcc003-й уровень:|r |cffb4dcdcотражение <AUts,DataA3,%>% урона, +<AUts,DataC3> к броне|r.|n
+ (sid: 15462)
+  Level 4:
+    Tip: |cffe1c8ebШипастая броня|r [|cffffcc004-й уровень|r] (sid: 12946)
+    Ubertip: Броня покрыта шипами, которые усиливают броню и отражают получаемый в ближнем бою урон в атакующих врагов. 
+
+|cffffcc004-й уровень:|r |cffb4dcdcотражение <AUts,DataA4,%>% урона, +<AUts,DataC4> к броне.|r
+
+ (sid: 15463)
+
+Ability: A0GU -> |cffe1c8ebМагический вампиризм|r (levels: 2)
+  Name sid: 10191
+  Hotkey: R (raw: TRIGSTR_15995)
+  Research hotkey: R (raw: TRIGSTR_15807)
+  Research tip: Изучить «|cffe1c8ebМагический вампиризм|r» [|cffffcc00%d-й уровень|r] (sid: 10192)
+  Research ubertip: Находящиеся рядом союзники ближнего боя восполняют здоровье, нанося урон. |n|n|cffffcc001-й уровень:|r |cffb4dcdc35% урона от атак|r. |n|cffffcc002-й уровень:|r |cffb4dcdc40% урона от атак. |r (sid: 39406)
+  Level 1:
+    Tip: |cffe1c8ebМагический вампиризм|r [|cffffcc001-й уровень|r] (sid: 10193)
+    Ubertip: Находящиеся рядом союзники ближнего боя восполняют здоровье, нанося урон. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AUav,DataA1,%>% урона от атак|r.  (sid: 15465)
+  Level 2:
+    Tip: |cffe1c8ebМагический вампиризм|r [|cffffcc002-й уровень|r] (sid: 10194)
+    Ubertip: Находящиеся рядом союзники ближнего боя восполняют здоровье, нанося урон.  |n|cffffcc002-й уровень:|r |cffb4dcdc<AUav,DataA2,%>% урона от атак. |r (sid: 15466)
+
+Ability: Ashm -> Слияние с тенью (levels: 1)
+  Name sid: None
+  Hotkey: I (raw: I)
+  Research hotkey: None (raw: None)
+  Research tip: None (sid: None)
+  Research ubertip: None (sid: None)
+  Level 1:
+    Tip: Спрятаться (sid: None)
+    Ubertip: При использовании ночью запрещает автоматический выбор цели и дает невидимость. (sid: None)
+
+Ability: A0GS -> |cffe1c8ebПротиводействие|r (levels: 4)
+  Name sid: 10103
+  Hotkey: Q (raw: TRIGSTR_14680)
+  Research hotkey: Q (raw: TRIGSTR_14596)
+  Research tip: |cffe1c8ebПротиводействие|r (sid: 10175)
+  Research ubertip: Каждая атака уничтожает  ману цели, нанося дополнительный урон.
+|n|cffffcc001-й уровень:|r |cffb4dcdc6|r ед. герою, |cffb4dcdc20|r солдату.
+|cffffcc002-й уровень:|r |cffb4dcdc8|r ед. герою, |cffb4dcdc30|r солдату.
+|cffffcc003-й уровень:|r |cffb4dcdc10|r ед. герою, |cffb4dcdc35|r солдату.
+|cffffcc004-й уровень:|r |cffb4dcdc12|r ед. герою, |cffb4dcdc40|r солдату. (sid: 31181)
+  Level 1:
+    Tip: |cffe1c8ebПротиводействие|r (sid: 10171)
+    Ubertip: Каждая атака уничтожает  ману цели, нанося дополнительный урон.
+|n|cffffcc001-й уровень:|r |cffb4dcdc6|r ед. герою, |cffb4dcdc20|r солдату.
+ (sid: 31186)
+  Level 2:
+    Tip: |cffe1c8ebПротиводействие|r (sid: 10172)
+    Ubertip: Каждая атака уничтожает  ману цели, нанося дополнительный урон.
+
+|cffffcc002-й уровень:|r |cffb4dcdc8|r ед. герою, |cffb4dcdc30|r солдату.
+ (sid: 28827)
+  Level 3:
+    Tip: |cffe1c8ebПротиводействие|r (sid: 10173)
+    Ubertip: Каждая атака уничтожает  ману цели, нанося дополнительный урон.
+
+|cffffcc003-й уровень:|r |cffb4dcdc10|r ед. герою, |cffb4dcdc35|r солдату.
+ (sid: 28828)
+  Level 4:
+    Tip: |cffe1c8ebПротиводействие|r (sid: 10174)
+    Ubertip: Каждая атака уничтожает  ману цели, нанося дополнительный урон.
+
+|cffffcc004-й уровень:|r |cffb4dcdc12|r ед. герою, |cffb4dcdc40|r солдату. (sid: 31171)
+
+Ability: A0GV -> |cffe1c8ebСтрела проклятия|r (levels: 4)
+  Name sid: 10195
+  Hotkey: W (raw: TRIGSTR_14849)
+  Research hotkey: W (raw: TRIGSTR_14848)
+  Research tip: Изучить «|cffe1c8ebСтрела проклятия|r» [|cffffcc00%d-й уровень|r] (sid: 10196)
+  Research ubertip: Выпускает темную стрелу, атакующих врагов. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AUcs,DataA1> урона каждой цели.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<AUcs,DataA2> урона каждой цели.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AUcs,DataA3> урона каждой цели.|r|n|cffffcc004-й уровень:|r |cffb4dcdc<AUcs,DataA4> урона каждой цели.|r (sid: 11111)
+  Level 1:
+    Tip: |cffe1c8ebСтрела проклятия|r [|cffffcc001-й уровень|r] (sid: 10198)
+    Ubertip: Выпускает темную стрелу, атакующих врагов. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AUcs,DataA1> урона каждой цели.|r  (sid: 11112)
+  Level 2:
+    Tip: |cffe1c8ebСтрела проклятия|r [|cffffcc002-й уровень|r] (sid: 10199)
+    Ubertip: Выпускает темную стрелу, атакующих врагов. |n|cffffcc002-й уровень:|r |cffb4dcdc<AUcs,DataA2> урона каждой цели.|r  (sid: 11113)
+  Level 3:
+    Tip: |cffe1c8ebСтрела проклятия|r [|cffffcc003-й уровень|r] (sid: 10200)
+    Ubertip: Выпускает темную стрелу, атакующих врагов.  |n|cffffcc003-й уровень:|r |cffb4dcdc<AUcs,DataA3> урона каждой цели.|r (sid: 11114)
+  Level 4:
+    Tip: |cffe1c8ebСтрела проклятия|r [|cffffcc004-й уровень|r] (sid: 10201)
+    Ubertip: Выпускает темную стрелу, атакующих врагов.|n|cffffcc004-й уровень:|r |cffb4dcdc<AUcs,DataA4> урона каждой цели.|r (sid: 11155)
+
+Ability: A0GW -> |cffe1c8ebАура меткости|r (levels: 4)
+  Name sid: 10220
+  Hotkey: E (raw: TRIGSTR_17139)
+  Research hotkey: E (raw: TRIGSTR_17138)
+  Research tip: Изучить «|cffe1c8ebАура меткости|r» [|cffffcc00%d-й уровень|r] (sid: 10221)
+  Research ubertip: Увеличивает урон от дистанционных атак находящихся рядом союзников. |n|cffffcc001-й уровень:|r |cffb4dcdc+10% к урону.|r 
+|cffffcc002-й уровень:|r |cffb4dcdc+20% к урону.|r 
+|cffffcc003-й уровень:|r |cffb4dcdc+30% к урону.|r
+|cffffcc004-й уровень:|r |cffb4dcdc+40% к урону.|r (sid: 39408)
+  Level 1:
+    Tip: |cffe1c8ebАура меткости|r [|cffffcc001-й уровень|r] (sid: 10222)
+    Ubertip: Увеличивает урон от дистанционных атак находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffe1c8eb+10% к урону.|r  (sid: 39409)
+  Level 2:
+    Tip: |cffe1c8ebАура меткости|r [|cffffcc002-й уровень|r] (sid: 10223)
+    Ubertip: Увеличивает урон от дистанционных атак находящихся рядом союзников. |n|n|cffffcc002-й уровень:|r |cffe1c8eb+20% к урону.|r  (sid: 39410)
+  Level 3:
+    Tip: |cffe1c8ebАура меткости|r [|cffffcc003-й уровень|r] (sid: 10224)
+    Ubertip: Увеличивает урон от дистанционных атак находящихся рядом союзников. |n|n|cffffcc003-й уровень:|r |cffe1c8eb+30% к урону.|r  (sid: 39411)
+  Level 4:
+    Tip: |cffe1c8ebАура меткости|r [|cffffcc004-й уровень|r] (sid: 10218)
+    Ubertip: Увеличивает урон от дистанционных атак находящихся рядом союзников. |n|n|cffffcc004-й уровень:|r |cffe1c8eb+40% к урону.|r  (sid: 39407)
+
+Ability: A0GX -> |cffe1c8ebРазящие стрелы|r (levels: 2)
+  Name sid: 10225
+  Hotkey: R (raw: TRIGSTR_16448)
+  Research hotkey: R (raw: TRIGSTR_16000)
+  Research tip: Изучить «|cffe1c8ebРазящие стрелы|r» [|cffffcc00%d-й уровень|r] (sid: 10226)
+  Research ubertip: Стреляет в нескольких врагов, нанося всем урон. |n|n|cffffcc001-й уровень:|r |cffb4dcdc300 урона каждой цели, кол-во целей 15.|r |n|cffffcc002-й уровень:|r |cffb4dcdc500 урона каждой цели, кол-во целей 20. |r (sid: 556)
+  Level 1:
+    Tip: |cffe1c8ebРазящие стрелы|r [|cffffcc001-й уровень|r] (sid: 10227)
+    Ubertip: Стреляет в нескольких врагов, нанося всем урон. |n|n|cffffcc001-й уровень:|r |cffb4dcdc300 урона каждой цели, кол-во целей 15.|r  (sid: 39412)
+  Level 2:
+    Tip: |cffe1c8ebРазящие стрелы|r [|cffffcc002-й уровень|r] (sid: 10228)
+    Ubertip: Стреляет в нескольких врагов, нанося всем урон.  |n|cffffcc002-й уровень:|r |cffb4dcdc500 урона каждой цели, кол-во целей 20. |r (sid: 39413)
+
+Ability: A0GN -> |cffe1c8ebВсплеск маны|r (levels: 4)
+  Name sid: 7485
+  Hotkey: Q (raw: TRIGSTR_14547)
+  Research hotkey: Q (raw: TRIGSTR_14573)
+  Research tip: Изучить |cffe1c8ebВсплеск маны|r (sid: 1780)
+  Research ubertip: Наносит урон маной врагу и окружающим его солдатам.  |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AUfn,DataB1> урона цели и <AUfn,DataA1> по области|r. |n|cffffcc002-й уровень:|r |cffb4dcdc<AUfn,DataB2> урона цели и <AUfn,DataA2> по области.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AUfn,DataB3> урона цели и <AUfn,DataA3> по области.|r |n|cffffcc004-й уровень:|r |cffb4dcdc<AUfn,DataB4> урона цели и <AUfn,DataA4> по области |n|r (sid: 9390)
+  Level 1:
+    Tip: |cffe1c8ebВсплеск маны|r (sid: 10104)
+    Ubertip: Наносит урон маной врагу и окружающим его солдатам.  |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AUfn,DataB1> урона цели и <AUfn,DataA1> по области|r.  (sid: 9391)
+  Level 2:
+    Tip: |cffe1c8ebВсплеск маны|r (sid: 10106)
+    Ubertip: Наносит урон маной врагу и окружающим его солдатам. 
+|cffffcc002-й уровень:|r |cffb4dcdc<AUfn,DataB2> урона цели и <AUfn,DataA2> по области.|r  (sid: 8403)
+  Level 3:
+    Tip: |cffe1c8ebВсплеск маны|r (sid: 10111)
+    Ubertip: Наносит урон маной врагу и окружающим его солдатам.   |n|cffffcc003-й уровень:|r |cffb4dcdc<AUfn,DataB3> урона цели и <AUfn,DataA3> по области.|r |n (sid: 9382)
+  Level 4:
+    Tip: |cffe1c8ebВсплеск маны|r (sid: 10112)
+    Ubertip: Наносит урон маной врагу и окружающим его солдатам.  
+|cffffcc004-й уровень:|r |cffb4dcdc<AUfn,DataB4> урона цели и <AUfn,DataA4> по области |n|r (sid: 9389)
+
+Ability: A0GP -> |cffe1c8ebЩит маны|r (levels: 4)
+  Name sid: 7820
+  Hotkey: W (raw: TRIGSTR_14777)
+  Research hotkey: W (raw: TRIGSTR_14776)
+  Research tip: Изучить «|cffe1c8ebЩит маны|r» [|cffffcc00%d-й уровень|r] (sid: 10130)
+  Research ubertip: Создает щит, который поглощает урон за счет маны. |n|n|cffffcc001-й уровень:|r |cffb4dcdc3 урона за единицу маны.|r |n|cffffcc002-й уровень:|r |cffb4dcdc4 урона за единицу маны.|r |n|cffffcc003-й уровень:|r |cffb4dcdc5 урона за единицу маны.|r|n|cffffcc004-й уровень:|r |cffb4dcdc6 урона за единицу маны.|r (sid: 39402)
+  Level 1:
+    Tip: Активировать «|cffe1c8ebЩит маны|r» [|cffffcc001-й уровень|r] (sid: 10131)
+    Ubertip: Дает щит, который поглощает |cffb4dcdc3|r урона за|cffb4dcdc 1|r ед. маны. (sid: 39403)
+  Level 2:
+    Tip: Активировать «|cffe1c8ebЩит маны|r» [|cffffcc002-й уровень|r] (sid: 10132)
+    Ubertip: Дает щит, который поглощает |cffb4dcdc4 |rурона за |cffb4dcdc1|r ед. маны. (sid: 39404)
+  Level 3:
+    Tip: Активировать «|cffe1c8ebЩит маны|r» [|cffffcc003-й уровень|r] (sid: 10133)
+    Ubertip: Дает щит, который поглощает |cffb4dcdc5|r урона за |cffb4dcdc1|r ед. маны. (sid: 39405)
+  Level 4:
+    Tip: Активировать «|cffe1c8ebЩит маны|r» [|cffffcc004-й уровень|r] (sid: 10134)
+    Ubertip: Дает щит, который поглощает |cffb4dcdc6|r урона за |cffb4dcdc1|r ед. маны. (sid: 31720)
+
+Ability: A0GQ -> |cffe1c8ebАура познаний|r (levels: 4)
+  Name sid: 10142
+  Hotkey: E (raw: TRIGSTR_17136)
+  Research hotkey: E (raw: TRIGSTR_17095)
+  Research tip: Изучить «|cffe1c8ebАура познаний|r» [|cffffcc00%d-й уровень|r] (sid: 10143)
+  Research ubertip: Ускоряет регенерацию маны находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdcнезначительный бонус.|r |n|cffffcc002-й уровень:|r |cffb4dcdcсредний бонус|r.|n|cffffcc003-й уровень:|r |cffb4dcdcзначительный бонус.|r
+|cffffcc004-й уровень:|r |cffb4dcdcбольшой бонус.|r (sid: 10109)
+  Level 1:
+    Tip: |cffe1c8ebАура познаний|r [|cffffcc001-й уровень|r] (sid: 10144)
+    Ubertip: Ускоряет регенерацию маны находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdcнезначительный бонус.|r  (sid: 10126)
+  Level 2:
+    Tip: |cffe1c8ebАура познаний|r [|cffffcc002-й уровень|r] (sid: 10145)
+    Ubertip: Ускоряет регенерацию маны находящихся рядом союзников.|n|cffffcc002-й уровень:|r |cffb4dcdcсредний бонус|r. (sid: 10187)
+  Level 3:
+    Tip: |cffe1c8ebАура познаний|r [|cffffcc003-й уровень|r] (sid: 10146)
+    Ubertip: Ускоряет регенерацию маны находящихся рядом союзников. |n|cffffcc003-й уровень:|r |cffb4dcdcзначительный бонус.|r
+ (sid: 10188)
+  Level 4:
+    Tip: |cffe1c8ebАура познаний|r [|cffffcc004-й уровень|r] (sid: 10147)
+    Ubertip: Ускоряет регенерацию маны находящихся рядом союзников. 
+|cffffcc004-й уровень:|r |cffb4dcdcбольшой бонус.|r (sid: 10102)
+
+Ability: A0GR -> |cffe1c8ebЗащита маны|r (levels: 2)
+  Name sid: 10148
+  Hotkey: R (raw: TRIGSTR_15805)
+  Research hotkey: R (raw: TRIGSTR_15761)
+  Research tip: Изучить «|cffe1c8ebЗащита маны|r» (sid: 10149)
+  Research ubertip: Дает неуязвимость союзникам в области вокруг . |nСам кастер остается уязвимым. |nВремя действия: |cffb4dcdc<AOvd,Dur1> сек.|r  (sid: 10189)
+  Level 1:
+    Tip: |cffe1c8ebЗащита маны|r (sid: 10150)
+    Ubertip: Дает неуязвимость союзникам в области вокруг. |nСам кастер остается уязвимым. |nВремя действия: |cffb4dcdc<AOvd,Dur1> сек.|r (sid: 10190)
+  Level 2:
+    Tip: |cffe1c8ebЗащита маны|r (sid: 10152)
+    Ubertip: Дает неуязвимость союзникам в области вокруг. |nСам кастер остается уязвимым. |nВремя действия: |cffb4dcdc<AOvd,Dur1> сек.|r (sid: 10687)

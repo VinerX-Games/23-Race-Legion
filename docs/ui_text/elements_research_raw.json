@@ -1,0 +1,1643 @@
+{
+  "R0DS": {
+    "id": "R0DS",
+    "maxlevel": 5,
+    "names": [
+      "|cffdcaa92Улучшенная добыча",
+      "|cffdcaa92Улучшенная добыча",
+      "|cffdcaa92Улучшенная добыча",
+      "|cffdcaa92Улучшенная добыча",
+      "|cffdcaa92Улучшенная добыча"
+    ],
+    "raw_names": [
+      "TRIGSTR_15847",
+      "TRIGSTR_15848",
+      "TRIGSTR_16619",
+      "TRIGSTR_16622",
+      "TRIGSTR_16623"
+    ],
+    "tips": [
+      "Исследовать |cffdcaa92Улучшенную добычу",
+      "Исследовать |cffdcaa92Улучшенную добычу",
+      "Исследовать |cffdcaa92Улучшенную добычу",
+      "Исследовать |cffdcaa92Улучшенную добычу",
+      "Исследовать |cffdcaa92Улучшенную добычу"
+    ],
+    "raw_tips": [
+      "TRIGSTR_15850",
+      "TRIGSTR_15851",
+      "TRIGSTR_17215",
+      "TRIGSTR_19487",
+      "TRIGSTR_19488"
+    ],
+    "ubertips": [
+      "\"Увеличивают объем переносимой работниками древесины на <Rhlh,mod1>.\"",
+      "\"Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.\"",
+      "Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.",
+      "Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.",
+      "Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>."
+    ],
+    "raw_ubertips": [
+      "\"Увеличивают объем переносимой работниками древесины на <Rhlh,mod1>.\"",
+      "\"Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.\"",
+      "TRIGSTR_21373",
+      "TRIGSTR_21374",
+      "TRIGSTR_21684"
+    ],
+    "hotkeys": [
+      "TRIGSTR_30641",
+      "TRIGSTR_30642",
+      "TRIGSTR_30643",
+      "TRIGSTR_30644",
+      "TRIGSTR_30645"
+    ],
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "requires": [
+      "h0ER",
+      "h0ER"
+    ],
+    "effects": [
+      {
+        "effect": "rlum",
+        "base": "10",
+        "mod": "10",
+        "code": null,
+        "target": null
+      },
+      {
+        "effect": "rlev",
+        "base": "1",
+        "mod": "1",
+        "code": "Ahlh",
+        "target": null
+      }
+    ],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNHumanLumberUpgrade1.blp",
+      "art2": "ReplaceableTextures\\CommandButtons\\BTNHumanLumberUpgrade2.blp",
+      "art3": "ReplaceableTextures\\CommandButtons\\BTNHumanLumberUpgrade2.blp",
+      "art4": "ReplaceableTextures\\CommandButtons\\BTNHumanLumberUpgrade2.blp",
+      "art5": "ReplaceableTextures\\CommandButtons\\BTNHumanLumberUpgrade2.blp",
+      "base1": "10",
+      "base2": "1",
+      "buttonpos": "0",
+      "buttonpos2": "2",
+      "code2": "Ahlh",
+      "comments": "human lumber harvesting",
+      "editorsuffix1": "(Элементали)",
+      "effect1": "rlum",
+      "effect2": "rlev",
+      "global": "0",
+      "goldbase": "100",
+      "goldmod": "250",
+      "hotkey1": "Z",
+      "hotkey2": "Z",
+      "hotkey3": "Z",
+      "hotkey4": "Z",
+      "hotkey5": "Z",
+      "inbeta": "1",
+      "inherit": "1",
+      "lumberbase": "0",
+      "lumbermod": "0",
+      "maxlevel": "5",
+      "mod1": "10",
+      "mod2": "1",
+      "name1": "|cffdcaa92Улучшенная добыча",
+      "name2": "|cffdcaa92Улучшенная добыча",
+      "name3": "|cffdcaa92Улучшенная добыча",
+      "name4": "|cffdcaa92Улучшенная добыча",
+      "name5": "|cffdcaa92Улучшенная добыча",
+      "race": "nightelf",
+      "requires2": "h0ER",
+      "requires3": "h0ER",
+      "requires4": "h0ES",
+      "requires5": "h0ES",
+      "timebase": "60",
+      "timemod": "15",
+      "tip1": "Исследовать |cffdcaa92Улучшенную добычу",
+      "tip2": "Исследовать |cffdcaa92Улучшенную добычу",
+      "tip3": "Исследовать |cffdcaa92Улучшенную добычу",
+      "tip4": "Исследовать |cffdcaa92Улучшенную добычу",
+      "tip5": "Исследовать |cffdcaa92Улучшенную добычу",
+      "ubertip1": "\"Увеличивают объем переносимой работниками древесины на <Rhlh,mod1>.\"",
+      "ubertip2": "\"Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.\"",
+      "ubertip3": "Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.",
+      "ubertip4": "Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.",
+      "ubertip5": "Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "R09G": {
+    "id": "R09G",
+    "maxlevel": 6,
+    "names": [
+      "|cffb4dcdcОгонь|r",
+      "|cffb4dcdcОгонь|r",
+      "|cffb4dcdcОгонь|r",
+      "|cffb4dcdcОгонь|r",
+      "|cffb4dcdcОгонь|r",
+      "|cffb4dcdcОгонь|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_15297",
+      "TRIGSTR_15293",
+      "TRIGSTR_8953",
+      "TRIGSTR_8944",
+      "TRIGSTR_8943",
+      "TRIGSTR_8942"
+    ],
+    "tips": [
+      "Исследовать |cffb4dcdcОгонь|r |cffffff00[1]|r",
+      "Исследовать |cffb4dcdcОгонь|r |cffffff00[2]|r",
+      "Исследовать |cffb4dcdcОгонь|r |cffffff00[3]|r",
+      "Исследовать |cffb4dcdcОгонь|r |cffffff00[4]|r",
+      "Исследовать |cffb4dcdcОгонь|r |cffffff00[5]|r",
+      "Исследовать |cffb4dcdcОгонь|r |cffffff00[6]|r"
+    ],
+    "raw_tips": [
+      "TRIGSTR_8986",
+      "TRIGSTR_8985",
+      "TRIGSTR_8970",
+      "TRIGSTR_8966",
+      "TRIGSTR_8957",
+      "TRIGSTR_8952"
+    ],
+    "ubertips": [
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r."
+    ],
+    "raw_ubertips": [
+      "TRIGSTR_16090",
+      "TRIGSTR_16091",
+      "TRIGSTR_16092",
+      "TRIGSTR_16094",
+      "TRIGSTR_16093",
+      "TRIGSTR_16095"
+    ],
+    "hotkeys": [
+      "TRIGSTR_37235",
+      "TRIGSTR_37236",
+      "TRIGSTR_37237",
+      "TRIGSTR_37418",
+      "TRIGSTR_37419",
+      "TRIGSTR_37420"
+    ],
+    "buttonpos": "0",
+    "buttonpos2": "0",
+    "requires": [
+      "hkee",
+      "h0ER"
+    ],
+    "effects": [
+      {
+        "effect": "ratd",
+        "base": "1",
+        "mod": "1",
+        "code": null,
+        "target": null
+      },
+      {
+        "effect": "TRIGSTR_15570",
+        "base": null,
+        "mod": null,
+        "code": null,
+        "target": null
+      }
+    ],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNFireShield.blp",
+      "art2": "ReplaceableTextures\\CommandButtons\\BTNFireShield.blp",
+      "art3": "ReplaceableTextures\\CommandButtons\\BTNFireShield.blp",
+      "art4": "ReplaceableTextures\\CommandButtons\\BTNFireShield.blp",
+      "art5": "ReplaceableTextures\\CommandButtons\\BTNFireShield.blp",
+      "art6": "ReplaceableTextures\\CommandButtons\\BTNFireShield.blp",
+      "base1": "1",
+      "buttonpos": "0",
+      "buttonpos2": "0",
+      "class": "melee",
+      "comments": "human melee attack",
+      "editorsuffix1": "(Элементали)(Ап характеристики)",
+      "effect1": "ratd",
+      "effect2": "rarm",
+      "global": "0",
+      "goldbase": "500",
+      "goldmod": "1000",
+      "hotkey1": "Q",
+      "hotkey2": "Q",
+      "hotkey3": "Q",
+      "hotkey4": "Q",
+      "hotkey5": "Q",
+      "hotkey6": "Q",
+      "inbeta": "1",
+      "inherit": "0",
+      "lumberbase": "450",
+      "lumbermod": "900",
+      "maxlevel": "6",
+      "mod1": "1",
+      "name1": "|cffb4dcdcОгонь|r",
+      "name2": "|cffb4dcdcОгонь|r",
+      "name3": "|cffb4dcdcОгонь|r",
+      "name4": "|cffb4dcdcОгонь|r",
+      "name5": "|cffb4dcdcОгонь|r",
+      "name6": "|cffb4dcdcОгонь|r",
+      "race": "demon",
+      "requires1": "hkee",
+      "requires3": "h0ER",
+      "requires4": "h0ER",
+      "requires5": "h0ES",
+      "requires6": "h0ES",
+      "timebase": "60",
+      "timemod": "15",
+      "tip1": "Исследовать |cffb4dcdcОгонь|r |cffffff00[1]|r",
+      "tip2": "Исследовать |cffb4dcdcОгонь|r |cffffff00[2]|r",
+      "tip3": "Исследовать |cffb4dcdcОгонь|r |cffffff00[3]|r",
+      "tip4": "Исследовать |cffb4dcdcОгонь|r |cffffff00[4]|r",
+      "tip5": "Исследовать |cffb4dcdcОгонь|r |cffffff00[5]|r",
+      "tip6": "Исследовать |cffb4dcdcОгонь|r |cffffff00[6]|r",
+      "ubertip1": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r.",
+      "ubertip2": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r.",
+      "ubertip3": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r.",
+      "ubertip4": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r.",
+      "ubertip5": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r.",
+      "ubertip6": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r.",
+      "ubertip:custom,v01": "\"Увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:custom,v02": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:custom,v03": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:melee,v01": "\"Увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:melee,v02": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:melee,v03": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "R09H": {
+    "id": "R09H",
+    "maxlevel": 6,
+    "names": [
+      "|cffb4dcdcВода|r",
+      "|cffb4dcdcВода|r",
+      "|cffb4dcdcВода|r",
+      "|cffb4dcdcВода|r",
+      "|cffb4dcdcВода|r",
+      "|cffb4dcdcВода|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_15303",
+      "TRIGSTR_15299",
+      "TRIGSTR_9093",
+      "TRIGSTR_9091",
+      "TRIGSTR_9090",
+      "TRIGSTR_9086"
+    ],
+    "tips": [
+      "Исследовать |cffb4dcdcВода|r |cffffff00[1]|r",
+      "Исследовать |cffb4dcdcВода|r |cffffff00[2]|r",
+      "Исследовать |cffb4dcdcВода|r |cffffff00[3]|r",
+      "Исследовать |cffb4dcdcВода|r |cffffff00[4]|r",
+      "Исследовать |cffb4dcdcВода|r |cffffff00[5]|r",
+      "Исследовать |cffb4dcdcВода|r |cffffff00[6]|r"
+    ],
+    "raw_tips": [
+      "TRIGSTR_11984",
+      "TRIGSTR_11980",
+      "TRIGSTR_9528",
+      "TRIGSTR_9116",
+      "TRIGSTR_9115",
+      "TRIGSTR_9092"
+    ],
+    "ubertips": [
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r."
+    ],
+    "raw_ubertips": [
+      "TRIGSTR_16096",
+      "TRIGSTR_16097",
+      "TRIGSTR_16098",
+      "TRIGSTR_16100",
+      "TRIGSTR_16099",
+      "TRIGSTR_16101"
+    ],
+    "hotkeys": [
+      "S",
+      "S",
+      "S",
+      "TRIGSTR_17869",
+      "TRIGSTR_17870",
+      "TRIGSTR_17871"
+    ],
+    "buttonpos": "3",
+    "buttonpos2": "1",
+    "requires": [
+      "hkee",
+      "h0ER"
+    ],
+    "effects": [
+      {
+        "effect": "ratd",
+        "base": "1",
+        "mod": "1",
+        "code": null,
+        "target": null
+      },
+      {
+        "effect": "TRIGSTR_15596",
+        "base": null,
+        "mod": null,
+        "code": null,
+        "target": null
+      }
+    ],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNFrostShield.blp",
+      "art2": "ReplaceableTextures\\CommandButtons\\BTNFrostShield.blp",
+      "art3": "ReplaceableTextures\\CommandButtons\\BTNFrostShield.blp",
+      "art4": "ReplaceableTextures\\CommandButtons\\BTNFrostShield.blp",
+      "art5": "ReplaceableTextures\\CommandButtons\\BTNFrostShield.blp",
+      "art6": "ReplaceableTextures\\CommandButtons\\BTNFrostShield.blp",
+      "base1": "1",
+      "buttonpos": "3",
+      "buttonpos2": "1",
+      "class": "melee",
+      "comments": "human melee attack",
+      "editorsuffix1": "(Элементали)(Ап характеристики)",
+      "effect1": "ratd",
+      "effect2": "rarm",
+      "global": "0",
+      "goldbase": "500",
+      "goldmod": "1000",
+      "hotkey1": "S",
+      "hotkey2": "S",
+      "hotkey3": "S",
+      "hotkey4": "S",
+      "hotkey5": "S",
+      "hotkey6": "S",
+      "inbeta": "1",
+      "inherit": "0",
+      "lumberbase": "450",
+      "lumbermod": "900",
+      "maxlevel": "6",
+      "mod1": "1",
+      "name1": "|cffb4dcdcВода|r",
+      "name2": "|cffb4dcdcВода|r",
+      "name3": "|cffb4dcdcВода|r",
+      "name4": "|cffb4dcdcВода|r",
+      "name5": "|cffb4dcdcВода|r",
+      "name6": "|cffb4dcdcВода|r",
+      "race": "demon",
+      "requires1": "hkee",
+      "requires3": "h0ER",
+      "requires4": "h0ER",
+      "requires5": "h0ES",
+      "requires6": "h0ES",
+      "timebase": "60",
+      "timemod": "15",
+      "tip1": "Исследовать |cffb4dcdcВода|r |cffffff00[1]|r",
+      "tip2": "Исследовать |cffb4dcdcВода|r |cffffff00[2]|r",
+      "tip3": "Исследовать |cffb4dcdcВода|r |cffffff00[3]|r",
+      "tip4": "Исследовать |cffb4dcdcВода|r |cffffff00[4]|r",
+      "tip5": "Исследовать |cffb4dcdcВода|r |cffffff00[5]|r",
+      "tip6": "Исследовать |cffb4dcdcВода|r |cffffff00[6]|r",
+      "ubertip1": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r.",
+      "ubertip2": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r.",
+      "ubertip3": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r.",
+      "ubertip4": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r.",
+      "ubertip5": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r.",
+      "ubertip6": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r.",
+      "ubertip:custom,v01": "\"Увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:custom,v02": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:custom,v03": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:melee,v01": "\"Увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:melee,v02": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:melee,v03": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "R09I": {
+    "id": "R09I",
+    "maxlevel": 6,
+    "names": [
+      "|cffb4dcdcЗемля|r",
+      "|cffb4dcdcЗемля|r",
+      "|cffb4dcdcЗемля|r",
+      "|cffb4dcdcЗемля|r",
+      "|cffb4dcdcЗемля|r",
+      "|cffb4dcdcЗемля|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_15558",
+      "TRIGSTR_15556",
+      "TRIGSTR_15555",
+      "TRIGSTR_15554",
+      "TRIGSTR_15553",
+      "TRIGSTR_15552"
+    ],
+    "tips": [
+      "Исследовать |cffb4dcdcЗемля|r |cffffff00[1]|r",
+      "Исследовать |cffb4dcdcЗемля|r |cffffff00[2]|r",
+      "Исследовать |cffb4dcdcЗемля|r |cffffff00[3]|r",
+      "Исследовать |cffb4dcdcЗемля|r |cffffff00[4]|r",
+      "Исследовать |cffb4dcdcЗемля|r |cffffff00[5]|r",
+      "Исследовать |cffb4dcdcЗемля|r |cffffff00[6]|r"
+    ],
+    "raw_tips": [
+      "TRIGSTR_15563",
+      "TRIGSTR_15562",
+      "TRIGSTR_15561",
+      "TRIGSTR_15560",
+      "TRIGSTR_15559",
+      "TRIGSTR_15557"
+    ],
+    "ubertips": [
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r."
+    ],
+    "raw_ubertips": [
+      "TRIGSTR_16102",
+      "TRIGSTR_16103",
+      "TRIGSTR_16104",
+      "TRIGSTR_16106",
+      "TRIGSTR_16105",
+      "TRIGSTR_16107"
+    ],
+    "hotkeys": [
+      "TRIGSTR_18568",
+      "TRIGSTR_18569",
+      "TRIGSTR_18598",
+      "TRIGSTR_18599",
+      "TRIGSTR_18600",
+      "TRIGSTR_18648"
+    ],
+    "buttonpos": "2",
+    "buttonpos2": "1",
+    "requires": [
+      "hkee",
+      "h0ER"
+    ],
+    "effects": [
+      {
+        "effect": "ratd",
+        "base": "1",
+        "mod": "1",
+        "code": null,
+        "target": null
+      },
+      {
+        "effect": "TRIGSTR_15956",
+        "base": null,
+        "mod": null,
+        "code": null,
+        "target": null
+      }
+    ],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNLightningShield.blp",
+      "art2": "ReplaceableTextures\\CommandButtons\\BTNLightningShield.blp",
+      "art3": "ReplaceableTextures\\CommandButtons\\BTNLightningShield.blp",
+      "art4": "ReplaceableTextures\\CommandButtons\\BTNLightningShield.blp",
+      "art5": "ReplaceableTextures\\CommandButtons\\BTNLightningShield.blp",
+      "art6": "ReplaceableTextures\\CommandButtons\\BTNLightningShield.blp",
+      "base1": "1",
+      "buttonpos": "2",
+      "buttonpos2": "1",
+      "class": "melee",
+      "comments": "human melee attack",
+      "editorsuffix1": "(Элементали)(Ап характеристики)",
+      "effect1": "ratd",
+      "effect2": "rarm",
+      "global": "0",
+      "goldbase": "500",
+      "goldmod": "1000",
+      "hotkey1": "A",
+      "hotkey2": "A",
+      "hotkey3": "A",
+      "hotkey4": "A",
+      "hotkey5": "A",
+      "hotkey6": "A",
+      "inbeta": "1",
+      "inherit": "0",
+      "lumberbase": "450",
+      "lumbermod": "900",
+      "maxlevel": "6",
+      "mod1": "1",
+      "name1": "|cffb4dcdcЗемля|r",
+      "name2": "|cffb4dcdcЗемля|r",
+      "name3": "|cffb4dcdcЗемля|r",
+      "name4": "|cffb4dcdcЗемля|r",
+      "name5": "|cffb4dcdcЗемля|r",
+      "name6": "|cffb4dcdcЗемля|r",
+      "race": "demon",
+      "requires1": "hkee",
+      "requires3": "h0ER",
+      "requires4": "h0ER",
+      "requires5": "h0ES",
+      "requires6": "h0ES",
+      "timebase": "60",
+      "timemod": "15",
+      "tip1": "Исследовать |cffb4dcdcЗемля|r |cffffff00[1]|r",
+      "tip2": "Исследовать |cffb4dcdcЗемля|r |cffffff00[2]|r",
+      "tip3": "Исследовать |cffb4dcdcЗемля|r |cffffff00[3]|r",
+      "tip4": "Исследовать |cffb4dcdcЗемля|r |cffffff00[4]|r",
+      "tip5": "Исследовать |cffb4dcdcЗемля|r |cffffff00[5]|r",
+      "tip6": "Исследовать |cffb4dcdcЗемля|r |cffffff00[6]|r",
+      "ubertip1": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r.",
+      "ubertip2": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r.",
+      "ubertip3": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r.",
+      "ubertip4": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r.",
+      "ubertip5": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r.",
+      "ubertip6": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r.",
+      "ubertip:custom,v01": "\"Увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:custom,v02": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:custom,v03": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:melee,v01": "\"Увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:melee,v02": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:melee,v03": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "R09J": {
+    "id": "R09J",
+    "maxlevel": 6,
+    "names": [
+      "|cffb4dcdcВетер|r",
+      "|cffb4dcdcВетер|r",
+      "|cffb4dcdcВетер|r",
+      "|cffb4dcdcВетер|r",
+      "|cffb4dcdcВетер|r",
+      "|cffb4dcdcВетер|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_15582",
+      "TRIGSTR_15581",
+      "TRIGSTR_15580",
+      "TRIGSTR_15579",
+      "TRIGSTR_15578",
+      "TRIGSTR_15315"
+    ],
+    "tips": [
+      "Исследовать |cffb4dcdcВетер|r |cffffff00[1]|r",
+      "Исследовать |cffb4dcdcВетер|r |cffffff00[2]|r",
+      "Исследовать |cffb4dcdcВетер|r |cffffff00[3]|r",
+      "Исследовать |cffb4dcdcВетер|r |cffffff00[4]|r",
+      "Исследовать |cffb4dcdcВетер|r |cffffff00[5]|r",
+      "Исследовать |cffb4dcdcВетер|r |cffffff00[6]|r"
+    ],
+    "raw_tips": [
+      "TRIGSTR_15589",
+      "TRIGSTR_15588",
+      "TRIGSTR_15587",
+      "TRIGSTR_15586",
+      "TRIGSTR_15585",
+      "TRIGSTR_15583"
+    ],
+    "ubertips": [
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r.",
+      "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r."
+    ],
+    "raw_ubertips": [
+      "TRIGSTR_16108",
+      "TRIGSTR_16109",
+      "TRIGSTR_16110",
+      "TRIGSTR_16112",
+      "TRIGSTR_16111",
+      "TRIGSTR_16113"
+    ],
+    "hotkeys": [
+      "TRIGSTR_37462",
+      "TRIGSTR_37463",
+      "TRIGSTR_38218",
+      "TRIGSTR_38227",
+      "TRIGSTR_38454",
+      "TRIGSTR_38486"
+    ],
+    "buttonpos": "1",
+    "buttonpos2": "0",
+    "requires": [
+      "hkee",
+      "h0ER"
+    ],
+    "effects": [
+      {
+        "effect": "ratd",
+        "base": "1",
+        "mod": "1",
+        "code": null,
+        "target": null
+      },
+      {
+        "effect": "TRIGSTR_16114",
+        "base": null,
+        "mod": null,
+        "code": null,
+        "target": null
+      }
+    ],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNPoisoning Shield.blp",
+      "art2": "ReplaceableTextures\\CommandButtons\\BTNPoisoning Shield.blp",
+      "art3": "ReplaceableTextures\\CommandButtons\\BTNPoisoning Shield.blp",
+      "art4": "ReplaceableTextures\\CommandButtons\\BTNPoisoning Shield.blp",
+      "art5": "ReplaceableTextures\\CommandButtons\\BTNPoisoning Shield.blp",
+      "art6": "ReplaceableTextures\\CommandButtons\\BTNPoisoning Shield.blp",
+      "base1": "1",
+      "buttonpos": "1",
+      "buttonpos2": "0",
+      "class": "melee",
+      "comments": "human melee attack",
+      "editorsuffix1": "(Элементали)(Ап характеристики)",
+      "effect1": "ratd",
+      "effect2": "rarm",
+      "global": "0",
+      "goldbase": "500",
+      "goldmod": "1000",
+      "hotkey1": "W",
+      "hotkey2": "W",
+      "hotkey3": "W",
+      "hotkey4": "W",
+      "hotkey5": "W",
+      "hotkey6": "W",
+      "inbeta": "1",
+      "inherit": "0",
+      "lumberbase": "450",
+      "lumbermod": "900",
+      "maxlevel": "6",
+      "mod1": "1",
+      "name1": "|cffb4dcdcВетер|r",
+      "name2": "|cffb4dcdcВетер|r",
+      "name3": "|cffb4dcdcВетер|r",
+      "name4": "|cffb4dcdcВетер|r",
+      "name5": "|cffb4dcdcВетер|r",
+      "name6": "|cffb4dcdcВетер|r",
+      "race": "demon",
+      "requires1": "hkee",
+      "requires3": "h0ER",
+      "requires4": "h0ER",
+      "requires5": "h0ES",
+      "requires6": "h0ES",
+      "timebase": "60",
+      "timemod": "15",
+      "tip1": "Исследовать |cffb4dcdcВетер|r |cffffff00[1]|r",
+      "tip2": "Исследовать |cffb4dcdcВетер|r |cffffff00[2]|r",
+      "tip3": "Исследовать |cffb4dcdcВетер|r |cffffff00[3]|r",
+      "tip4": "Исследовать |cffb4dcdcВетер|r |cffffff00[4]|r",
+      "tip5": "Исследовать |cffb4dcdcВетер|r |cffffff00[5]|r",
+      "tip6": "Исследовать |cffb4dcdcВетер|r |cffffff00[6]|r",
+      "ubertip1": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r.",
+      "ubertip2": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r.",
+      "ubertip3": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r.",
+      "ubertip4": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r.",
+      "ubertip5": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r.",
+      "ubertip6": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r.",
+      "ubertip:custom,v01": "\"Увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:custom,v02": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:custom,v03": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:melee,v01": "\"Увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:melee,v02": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "ubertip:melee,v03": "\"Дополнительно увеличивают урон от атак ополченцев, пехотинцев, наездников на грифонах и рыцарей.\"",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "R09Q": {
+    "id": "R09Q",
+    "maxlevel": 1,
+    "names": [
+      "|cffb4dcdcЯрость|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_41424"
+    ],
+    "tips": [
+      "Исследовать «|cffb4dcdcЯрость|r»"
+    ],
+    "raw_tips": [
+      "TRIGSTR_16243"
+    ],
+    "ubertips": [
+      "Увеличивает ярость, целой уменьшения здоровья.\nУвеличивает всем элементалям |cffff0000огня|r.\n |cffb4dcdcУвеличивает урон - 5 ед.|r\n |cffb4dcdcУменьшает здоровье - 50 ед|r.|cffff0000\n"
+    ],
+    "raw_ubertips": [
+      "TRIGSTR_16244"
+    ],
+    "hotkeys": [
+      "TRIGSTR_18649"
+    ],
+    "buttonpos": "2",
+    "buttonpos2": "1",
+    "requires": [
+      "h0ES"
+    ],
+    "effects": [
+      {
+        "effect": "TRIGSTR_14870",
+        "base": "5.000000",
+        "mod": "5.000000",
+        "code": null,
+        "target": null
+      },
+      {
+        "effect": "TRIGSTR_16249",
+        "base": "-50.000000",
+        "mod": "-50.000000",
+        "code": null,
+        "target": null
+      }
+    ],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNIncinerate.blp",
+      "base1": "5.000000",
+      "base2": "-50.000000",
+      "buttonpos": "2",
+      "buttonpos2": "1",
+      "comments": "human footman defend",
+      "editorsuffix1": "(Элементали)",
+      "effect1": "ratx",
+      "effect2": "rhpx",
+      "global": "0",
+      "goldbase": "430",
+      "goldmod": "0",
+      "hotkey1": "A",
+      "inbeta": "1",
+      "inherit": "1",
+      "lumberbase": "430",
+      "lumbermod": "0",
+      "maxlevel": "1",
+      "mod1": "5.000000",
+      "mod2": "-50.000000",
+      "name1": "|cffb4dcdcЯрость|r",
+      "name2": "|cffb4dcdcОгонь|r",
+      "race": "demon",
+      "requires2": "h0ES",
+      "timebase": "40",
+      "timemod": "0",
+      "tip1": "Исследовать «|cffb4dcdcЯрость|r»",
+      "tip2": "Исследовать «|cffb4dcdcОгонь|r»",
+      "ubertip1": "Увеличивает ярость, целой уменьшения здоровья.\nУвеличивает всем элементалям |cffff0000огня|r.\n |cffb4dcdcУвеличивает урон - 5 ед.|r\n |cffb4dcdcУменьшает здоровье - 50 ед|r.|cffff0000\n",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "R09R": {
+    "id": "R09R",
+    "maxlevel": 2,
+    "names": [
+      "|cffb4dcdcПовышение температуры|r",
+      "|cffb4dcdcПовышение температуры|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_16251",
+      "TRIGSTR_16255"
+    ],
+    "tips": [
+      "Исследовать «|cffb4dcdcПовышение температуры|r»",
+      "Исследовать «|cffb4dcdcПовышение температуры|r»"
+    ],
+    "raw_tips": [
+      "TRIGSTR_16252",
+      "TRIGSTR_16256"
+    ],
+    "ubertips": [
+      "Позволяет |cffb4dcdcВозжигателю|r использовать более высокие температуры для сотворения заклинаний.\n\n |cffb4dcdcУвеличивает ману - 20 ед.|r\n |cffb4dcdcУвеличивает здоровье - 25 ед|r.|cffff0000\n",
+      "Позволяет |cffb4dcdcВозжигателю|r использовать более высокие температуры для сотворения заклинаний.\n\n |cffb4dcdcУвеличивает ману - 20 ед.|r\n |cffb4dcdcУвеличивает здоровье - 25 ед|r.|cffff0000\n"
+    ],
+    "raw_ubertips": [
+      "TRIGSTR_32315",
+      "TRIGSTR_32319"
+    ],
+    "hotkeys": [
+      "TRIGSTR_17872",
+      "TRIGSTR_17873"
+    ],
+    "buttonpos": "3",
+    "buttonpos2": "1",
+    "requires": [
+      "h0ER,R09C",
+      "h0ER,R09C"
+    ],
+    "effects": [
+      {
+        "effect": "TRIGSTR_16998",
+        "base": "20.000000",
+        "mod": "20.000000",
+        "code": null,
+        "target": null
+      },
+      {
+        "effect": "TRIGSTR_16258",
+        "base": "25.000000",
+        "mod": "25.000000",
+        "code": null,
+        "target": null
+      }
+    ],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNImmolationOn.blp",
+      "art2": "ReplaceableTextures\\CommandButtons\\BTNImmolationOn.blp",
+      "base1": "20.000000",
+      "base2": "25.000000",
+      "buttonpos": "3",
+      "buttonpos2": "1",
+      "comments": "human footman defend",
+      "editorsuffix1": "(Элементали)",
+      "effect1": "rmnx",
+      "effect2": "rhpx",
+      "global": "0",
+      "goldbase": "540",
+      "goldmod": "0",
+      "hotkey1": "S",
+      "hotkey2": "S",
+      "inbeta": "1",
+      "inherit": "1",
+      "lumberbase": "650",
+      "lumbermod": "0",
+      "maxlevel": "2",
+      "mod1": "20.000000",
+      "mod2": "25.000000",
+      "name1": "|cffb4dcdcПовышение температуры|r",
+      "name2": "|cffb4dcdcПовышение температуры|r",
+      "race": "demon",
+      "requires1": "h0ER,R09C",
+      "requires2": "h0ER,R09C",
+      "timebase": "40",
+      "timemod": "0",
+      "tip1": "Исследовать «|cffb4dcdcПовышение температуры|r»",
+      "tip2": "Исследовать «|cffb4dcdcПовышение температуры|r»",
+      "ubertip1": "Позволяет |cffb4dcdcВозжигателю|r использовать более высокие температуры для сотворения заклинаний.\n\n |cffb4dcdcУвеличивает ману - 20 ед.|r\n |cffb4dcdcУвеличивает здоровье - 25 ед|r.|cffff0000\n",
+      "ubertip2": "Позволяет |cffb4dcdcВозжигателю|r использовать более высокие температуры для сотворения заклинаний.\n\n |cffb4dcdcУвеличивает ману - 20 ед.|r\n |cffb4dcdcУвеличивает здоровье - 25 ед|r.|cffff0000\n",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "R09S": {
+    "id": "R09S",
+    "maxlevel": 1,
+    "names": [
+      "|cffb4dcdcРассекающий удар|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_41413"
+    ],
+    "tips": [
+      "Исследовать «|cffb4dcdcРассекающий удар|r»"
+    ],
+    "raw_tips": [
+      "TRIGSTR_16262"
+    ],
+    "ubertips": [
+      "Позволяет гончей пламени наносить удары по области.\n"
+    ],
+    "raw_ubertips": [
+      "TRIGSTR_16263"
+    ],
+    "hotkeys": [
+      "D"
+    ],
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "requires": [
+      "R09C",
+      "h0ES"
+    ],
+    "effects": [],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNCleavingAttack.blp",
+      "art2": "ReplaceableTextures\\CommandButtons\\BTNImmolationOn.blp",
+      "base1": "20.000000",
+      "base2": "25.000000",
+      "buttonpos": "0",
+      "buttonpos2": "2",
+      "comments": "human footman defend",
+      "editorsuffix1": "(Элементали)",
+      "global": "0",
+      "goldbase": "560",
+      "goldmod": "0",
+      "hotkey1": "D",
+      "inbeta": "1",
+      "inherit": "1",
+      "lumberbase": "760",
+      "lumbermod": "0",
+      "maxlevel": "1",
+      "mod1": "20.000000",
+      "mod2": "25.000000",
+      "name1": "|cffb4dcdcРассекающий удар|r",
+      "name2": "|cffb4dcdcПовышение температуры|r",
+      "race": "demon",
+      "requires1": "R09C",
+      "requires2": "h0ES",
+      "timebase": "40",
+      "timemod": "0",
+      "tip1": "Исследовать «|cffb4dcdcРассекающий удар|r»",
+      "tip2": "Исследовать «|cffb4dcdcПовышение температуры|r»",
+      "ubertip1": "Позволяет гончей пламени наносить удары по области.\n",
+      "ubertip2": "Позволяет |cffb4dcdcвозжыгателю|r использовать на много более высокие температуры для сотворения заклинаний.\n\n |cffb4dcdcУвеличивает ману - 20 ед.|r\n |cffb4dcdcУвеличивает здоровье - 25 ед|r.|cffff0000\n",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "R09T": {
+    "id": "R09T",
+    "maxlevel": 1,
+    "names": [
+      "|cffb4dcdcМагия воды|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_16269"
+    ],
+    "tips": [
+      "Исследовать «|cffb4dcdcМагия воды|r»"
+    ],
+    "raw_tips": [
+      "TRIGSTR_16270"
+    ],
+    "ubertips": [
+      "Силы стихий наполняют |cffb4dcdcЭлементалей воды|r увеличивая ману на |cffb4dcdc50 ед.|r"
+    ],
+    "raw_ubertips": [
+      "TRIGSTR_32356"
+    ],
+    "hotkeys": [
+      "TRIGSTR_18702"
+    ],
+    "buttonpos": "2",
+    "buttonpos2": "1",
+    "requires": [
+      "h0ES"
+    ],
+    "effects": [
+      {
+        "effect": "TRIGSTR_19465",
+        "base": "50.000000",
+        "mod": "50.000000",
+        "code": null,
+        "target": null
+      }
+    ],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNManaStone.blp",
+      "art2": "ReplaceableTextures\\CommandButtons\\BTNImmolationOn.blp",
+      "base1": "50.000000",
+      "base2": "25.000000",
+      "buttonpos": "2",
+      "buttonpos2": "1",
+      "comments": "human footman defend",
+      "editorsuffix1": "(Элементали)",
+      "effect1": "rmnx",
+      "global": "0",
+      "goldbase": "430",
+      "goldmod": "430",
+      "hotkey1": "A",
+      "inbeta": "1",
+      "inherit": "1",
+      "lumberbase": "430",
+      "lumbermod": "0",
+      "maxlevel": "1",
+      "mod1": "50.000000",
+      "mod2": "25.000000",
+      "name1": "|cffb4dcdcМагия воды|r",
+      "name2": "|cffb4dcdcПовышение температуры|r",
+      "race": "demon",
+      "requires2": "h0ES",
+      "timebase": "40",
+      "timemod": "0",
+      "tip1": "Исследовать «|cffb4dcdcМагия воды|r»",
+      "tip2": "Исследовать «|cffb4dcdcПовышение температуры|r»",
+      "ubertip1": "Силы стихий наполняют |cffb4dcdcЭлементалей воды|r увеличивая ману на |cffb4dcdc50 ед.|r",
+      "ubertip2": "Позволяет |cffb4dcdcвозжыгателю|r использовать на много более высокие температуры для сотворения заклинаний.\n\n |cffb4dcdcУвеличивает ману - 20 ед.|r\n |cffb4dcdcУвеличивает здоровье - 25 ед|r.|cffff0000\n",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "R09U": {
+    "id": "R09U",
+    "maxlevel": 2,
+    "names": [
+      "|cffb4dcdcЛедяные стрелы|r",
+      "|cffb4dcdcЛедяные стрелы|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_16278",
+      "TRIGSTR_16282"
+    ],
+    "tips": [
+      "Исследовать «|cffb4dcdcЛедяные стрелы|r»",
+      "Исследовать «|cffb4dcdcЛедяные стрелы|r»"
+    ],
+    "raw_tips": [
+      "TRIGSTR_16279",
+      "TRIGSTR_16283"
+    ],
+    "ubertips": [
+      "Позволяет |cffb4dcdcЭлементалю морей|r, использовать ледяные стрелы. Увеличивает ману на |cffb4dcdc30 ед.|r",
+      "Позволяет |cffb4dcdcЭлементалю морей|r, использовать ледяные стрелы. Увеличивает ману на |cffb4dcdc30 ед.|r"
+    ],
+    "raw_ubertips": [
+      "TRIGSTR_16280",
+      "TRIGSTR_16285"
+    ],
+    "hotkeys": [
+      "TRIGSTR_17874",
+      "TRIGSTR_17887"
+    ],
+    "buttonpos": "3",
+    "buttonpos2": "1",
+    "requires": [
+      "R09D",
+      "R09D"
+    ],
+    "effects": [
+      {
+        "effect": "TRIGSTR_21358",
+        "base": "30.000000",
+        "mod": "30.000000",
+        "code": null,
+        "target": null
+      }
+    ],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNColdArrows.blp",
+      "art2": "ReplaceableTextures\\CommandButtons\\BTNColdArrows.blp",
+      "base1": "30.000000",
+      "base2": "25.000000",
+      "buttonpos": "3",
+      "buttonpos2": "1",
+      "comments": "human footman defend",
+      "editorsuffix1": "(Элементали)",
+      "effect1": "rmnx",
+      "global": "0",
+      "goldbase": "430",
+      "goldmod": "0",
+      "hotkey1": "S",
+      "hotkey2": "S",
+      "inbeta": "1",
+      "inherit": "1",
+      "lumberbase": "540",
+      "lumbermod": "0",
+      "maxlevel": "2",
+      "mod1": "30.000000",
+      "mod2": "25.000000",
+      "name1": "|cffb4dcdcЛедяные стрелы|r",
+      "name2": "|cffb4dcdcЛедяные стрелы|r",
+      "race": "demon",
+      "requires1": "R09D",
+      "requires2": "R09D",
+      "timebase": "40",
+      "timemod": "0",
+      "tip1": "Исследовать «|cffb4dcdcЛедяные стрелы|r»",
+      "tip2": "Исследовать «|cffb4dcdcЛедяные стрелы|r»",
+      "ubertip1": "Позволяет |cffb4dcdcЭлементалю морей|r, использовать ледяные стрелы. Увеличивает ману на |cffb4dcdc30 ед.|r",
+      "ubertip2": "Позволяет |cffb4dcdcЭлементалю морей|r, использовать ледяные стрелы. Увеличивает ману на |cffb4dcdc30 ед.|r",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "R09V": {
+    "id": "R09V",
+    "maxlevel": 2,
+    "names": [
+      "|cffb4dcdcМагия морей|r",
+      "|cffb4dcdcМагия морей|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_16287",
+      "TRIGSTR_16291"
+    ],
+    "tips": [
+      "Исследовать «|cffb4dcdcМагия морей|r»",
+      "Исследовать «|cffb4dcdcМагия морей|r»"
+    ],
+    "raw_tips": [
+      "TRIGSTR_16288",
+      "TRIGSTR_16292"
+    ],
+    "ubertips": [
+      "Позволяет |cffb4dcdcРифовым элементалям|r, атакующую и востанавливающую магию морей. Увеличивает ману на |cffb4dcdc30 ед.|r ",
+      "Позволяет |cffb4dcdcРифовым элементалям|r, атакующую и востанавливающую магию морей. Увеличивает ману на |cffb4dcdc30 ед.|r "
+    ],
+    "raw_ubertips": [
+      "TRIGSTR_39678",
+      "TRIGSTR_39679"
+    ],
+    "hotkeys": [
+      "D",
+      "TRIGSTR_18699"
+    ],
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "requires": [
+      "R09D,h0ER",
+      "R09D,h0ER"
+    ],
+    "effects": [
+      {
+        "effect": "TRIGSTR_21386",
+        "base": "30.000000",
+        "mod": "30.000000",
+        "code": null,
+        "target": null
+      }
+    ],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNOrbOfFrost.blp",
+      "art2": "ReplaceableTextures\\CommandButtons\\BTNOrbOfFrost.blp",
+      "base1": "30.000000",
+      "base2": "25.000000",
+      "buttonpos": "0",
+      "buttonpos2": "2",
+      "comments": "human footman defend",
+      "editorsuffix1": "(Элементали)",
+      "effect1": "rmnx",
+      "global": "0",
+      "goldbase": "470",
+      "goldmod": "450",
+      "hotkey1": "D",
+      "hotkey2": "D",
+      "inbeta": "1",
+      "inherit": "1",
+      "lumberbase": "760",
+      "lumbermod": "435",
+      "maxlevel": "2",
+      "mod1": "30.000000",
+      "mod2": "25.000000",
+      "name1": "|cffb4dcdcМагия морей|r",
+      "name2": "|cffb4dcdcМагия морей|r",
+      "race": "demon",
+      "requires1": "R09D,h0ER",
+      "requires2": "R09D,h0ER",
+      "timebase": "40",
+      "timemod": "0",
+      "tip1": "Исследовать «|cffb4dcdcМагия морей|r»",
+      "tip2": "Исследовать «|cffb4dcdcМагия морей|r»",
+      "ubertip1": "Позволяет |cffb4dcdcРифовым элементалям|r, атакующую и востанавливающую магию морей. Увеличивает ману на |cffb4dcdc30 ед.|r ",
+      "ubertip2": "Позволяет |cffb4dcdcРифовым элементалям|r, атакующую и востанавливающую магию морей. Увеличивает ману на |cffb4dcdc30 ед.|r ",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "Resi": {
+    "id": "Resi",
+    "maxlevel": 1,
+    "names": [
+      "|cffbebedcРассеяние чар|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_27115"
+    ],
+    "tips": [
+      "Исследовать «|cffbebedcРассеяние чар|r»"
+    ],
+    "raw_tips": [
+      "TRIGSTR_27116"
+    ],
+    "ubertips": [
+      "Позволяет дриадам снимать положительные эффекты с врагов и отрицательные с союзников. |nНаносит урон призванным целям."
+    ],
+    "raw_ubertips": [
+      "Позволяет дриадам снимать положительные эффекты с врагов и отрицательные с союзников. |nНаносит урон призванным целям."
+    ],
+    "hotkeys": [
+      "TRIGSTR_5291"
+    ],
+    "buttonpos": "0",
+    "buttonpos2": "1",
+    "requires": [],
+    "effects": [],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNDryadDispelMagic.blp",
+      "buttonpos": "0",
+      "buttonpos2": "1",
+      "comments": "nightelf abolish magic",
+      "global": "0",
+      "goldbase": "320",
+      "goldmod": "0",
+      "hotkey1": "A",
+      "inbeta": "1",
+      "inherit": "1",
+      "lumberbase": "560",
+      "lumbermod": "0",
+      "maxlevel": "1",
+      "name1": "|cffbebedcРассеяние чар|r",
+      "race": "nightelf",
+      "timebase": "45",
+      "timemod": "0",
+      "tip1": "Исследовать «|cffbebedcРассеяние чар|r»",
+      "ubertip1": "Позволяет дриадам снимать положительные эффекты с врагов и отрицательные с союзников. |nНаносит урон призванным целям.",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "R0A1": {
+    "id": "R0A1",
+    "maxlevel": 1,
+    "names": [
+      "|cffb4dcdcЯрость грома|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_16359"
+    ],
+    "tips": [
+      "Исследовать «|cffb4dcdcЯрость грома|r»"
+    ],
+    "raw_tips": [
+      "TRIGSTR_16360"
+    ],
+    "ubertips": [
+      "Позволяет |cffb4dcdcштормовому элементалю|r атаковать сразу несколько целей."
+    ],
+    "raw_ubertips": [
+      "TRIGSTR_16361"
+    ],
+    "hotkeys": [
+      "D"
+    ],
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "requires": [
+      "h0ES",
+      "h0ER",
+      "h0ES"
+    ],
+    "effects": [],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNOrbOfLightning.blp",
+      "art2": "ReplaceableTextures\\CommandButtons\\BTNWind Shield.blp",
+      "art3": "ReplaceableTextures\\PassiveButtons\\PASBTNHardenedSkin.blp",
+      "base2": "25.000000",
+      "buttonpos": "0",
+      "buttonpos2": "2",
+      "comments": "human footman defend",
+      "editorsuffix1": "(Элементали)",
+      "global": "0",
+      "goldbase": "870",
+      "goldmod": "0",
+      "hotkey1": "D",
+      "inbeta": "1",
+      "inherit": "1",
+      "lumberbase": "1200",
+      "lumbermod": "0",
+      "maxlevel": "1",
+      "mod2": "25.000000",
+      "name1": "|cffb4dcdcЯрость грома|r",
+      "name2": "|cffb4dcdcЛегкость воздуха|r",
+      "name3": "|cffb4dcdcКаменное здоровье|r",
+      "race": "demon",
+      "requires1": "h0ES",
+      "requires2": "h0ER",
+      "requires3": "h0ES",
+      "timebase": "40",
+      "timemod": "0",
+      "tip1": "Исследовать «|cffb4dcdcЯрость грома|r»",
+      "tip2": "Исследовать «|cffb4dcdcЛегкость воздуха|r»",
+      "tip3": "Исследовать «|cffb4dcdcКаменное здоровье|r»",
+      "ubertip1": "Позволяет |cffb4dcdcштормовому элементалю|r атаковать сразу несколько целей.",
+      "ubertip2": "Увеличивает скорость предвижения всех |cffb4dcdcэлементалей ветра|r.\n|cffb4dcdcУвеличивает скорость передвижения на 30 ед.|r",
+      "ubertip3": "Увеличивает здоровье элементалям земли. \n|cffb4dcdcУвеличивает на 30 ед.|r",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "R0A0": {
+    "id": "R0A0",
+    "maxlevel": 1,
+    "names": [
+      "|cffb4dcdcКритический удар|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_41399"
+    ],
+    "tips": [
+      "Исследовать «|cffb4dcdcКритический удар|r»"
+    ],
+    "raw_tips": [
+      "TRIGSTR_16350"
+    ],
+    "ubertips": [
+      "Позволяет |cffb4dcdcгрозовым эдементалям|r наносить двухкратный урон."
+    ],
+    "raw_ubertips": [
+      "TRIGSTR_16351"
+    ],
+    "hotkeys": [
+      "TRIGSTR_17911"
+    ],
+    "buttonpos": "3",
+    "buttonpos2": "1",
+    "requires": [
+      "h0ER",
+      "h0ER",
+      "h0ES"
+    ],
+    "effects": [],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\PassiveButtons\\PASBTNStormHammer.blp",
+      "art2": "ReplaceableTextures\\CommandButtons\\BTNWind Shield.blp",
+      "art3": "ReplaceableTextures\\PassiveButtons\\PASBTNHardenedSkin.blp",
+      "base2": "25.000000",
+      "buttonpos": "3",
+      "buttonpos2": "1",
+      "comments": "human footman defend",
+      "editorsuffix1": "(Элементали)",
+      "global": "0",
+      "goldbase": "560",
+      "goldmod": "0",
+      "hotkey1": "S",
+      "inbeta": "1",
+      "inherit": "1",
+      "lumberbase": "540",
+      "lumbermod": "0",
+      "maxlevel": "1",
+      "mod2": "25.000000",
+      "name1": "|cffb4dcdcКритический удар|r",
+      "name2": "|cffb4dcdcЛегкость воздуха|r",
+      "name3": "|cffb4dcdcКаменное здоровье|r",
+      "race": "demon",
+      "requires1": "h0ER",
+      "requires2": "h0ER",
+      "requires3": "h0ES",
+      "timebase": "40",
+      "timemod": "0",
+      "tip1": "Исследовать «|cffb4dcdcКритический удар|r»",
+      "tip2": "Исследовать «|cffb4dcdcЛегкость воздуха|r»",
+      "tip3": "Исследовать «|cffb4dcdcКаменное здоровье|r»",
+      "ubertip1": "Позволяет |cffb4dcdcгрозовым эдементалям|r наносить двухкратный урон.",
+      "ubertip2": "Увеличивает скорость предвижения всех |cffb4dcdcэлементалей ветра|r.\n|cffb4dcdcУвеличивает скорость передвижения на 30 ед.|r",
+      "ubertip3": "Увеличивает здоровье элементалям земли. \n|cffb4dcdcУвеличивает на 30 ед.|r",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "R09Z": {
+    "id": "R09Z",
+    "maxlevel": 2,
+    "names": [
+      "|cffb4dcdcЛегкость воздуха|r",
+      "|cffb4dcdcЛегкость воздуха|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_16338",
+      "TRIGSTR_16341"
+    ],
+    "tips": [
+      "Исследовать «|cffb4dcdcЛегкость воздуха|r»",
+      "Исследовать «|cffb4dcdcЛегкость воздуха|r»"
+    ],
+    "raw_tips": [
+      "TRIGSTR_16339",
+      "TRIGSTR_16342"
+    ],
+    "ubertips": [
+      "Увеличивает скорость предвижения всех |cffb4dcdcэлементалей ветра|r.\n|cffb4dcdcУвеличивает скорость передвижения на 30 ед.|r",
+      "Увеличивает скорость предвижения всех |cffb4dcdcэлементалей ветра|r.\n|cffb4dcdcУвеличивает скорость передвижения на 30 ед.|r"
+    ],
+    "raw_ubertips": [
+      "TRIGSTR_16340",
+      "TRIGSTR_16344"
+    ],
+    "hotkeys": [
+      "TRIGSTR_18703",
+      "TRIGSTR_18704"
+    ],
+    "buttonpos": "2",
+    "buttonpos2": "1",
+    "requires": [
+      "h0ER",
+      "h0ES"
+    ],
+    "effects": [
+      {
+        "effect": "TRIGSTR_14723",
+        "base": "30.000000",
+        "mod": "30.000000",
+        "code": null,
+        "target": null
+      }
+    ],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNWind Shield.blp",
+      "art2": "ReplaceableTextures\\CommandButtons\\BTNWind Shield.blp",
+      "art3": "ReplaceableTextures\\PassiveButtons\\PASBTNHardenedSkin.blp",
+      "base1": "30.000000",
+      "base2": "25.000000",
+      "buttonpos": "2",
+      "buttonpos2": "1",
+      "comments": "human footman defend",
+      "editorsuffix1": "(Элементали)",
+      "effect1": "rmvx",
+      "global": "0",
+      "goldbase": "450",
+      "goldmod": "450",
+      "hotkey1": "A",
+      "hotkey2": "A",
+      "inbeta": "1",
+      "inherit": "1",
+      "lumberbase": "555",
+      "lumbermod": "555",
+      "maxlevel": "2",
+      "mod1": "30.000000",
+      "mod2": "25.000000",
+      "name1": "|cffb4dcdcЛегкость воздуха|r",
+      "name2": "|cffb4dcdcЛегкость воздуха|r",
+      "name3": "|cffb4dcdcКаменное здоровье|r",
+      "race": "demon",
+      "requires2": "h0ER",
+      "requires3": "h0ES",
+      "timebase": "40",
+      "timemod": "0",
+      "tip1": "Исследовать «|cffb4dcdcЛегкость воздуха|r»",
+      "tip2": "Исследовать «|cffb4dcdcЛегкость воздуха|r»",
+      "tip3": "Исследовать «|cffb4dcdcКаменное здоровье|r»",
+      "ubertip1": "Увеличивает скорость предвижения всех |cffb4dcdcэлементалей ветра|r.\n|cffb4dcdcУвеличивает скорость передвижения на 30 ед.|r",
+      "ubertip2": "Увеличивает скорость предвижения всех |cffb4dcdcэлементалей ветра|r.\n|cffb4dcdcУвеличивает скорость передвижения на 30 ед.|r",
+      "ubertip3": "Увеличивает здоровье элементалям земли. \n|cffb4dcdcУвеличивает на 30 ед.|r",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "R09X": {
+    "id": "R09X",
+    "maxlevel": 3,
+    "names": [
+      "|cffb4dcdcКаменное здоровье|r",
+      "|cffb4dcdcКаменное здоровье|r",
+      "|cffb4dcdcКаменное здоровье|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_16304",
+      "TRIGSTR_16308",
+      "TRIGSTR_16313"
+    ],
+    "tips": [
+      "Исследовать «|cffb4dcdcКаменное здоровье|r»",
+      "Исследовать «|cffb4dcdcКаменное здоровье|r»",
+      "Исследовать «|cffb4dcdcКаменное здоровье|r»"
+    ],
+    "raw_tips": [
+      "TRIGSTR_16305",
+      "TRIGSTR_16309",
+      "TRIGSTR_16314"
+    ],
+    "ubertips": [
+      "Увеличивает здоровье элементалям земли. \n|cffb4dcdcУвеличивает на 30 ед.|r",
+      "Увеличивает здоровье элементалям земли. \n|cffb4dcdcУвеличивает на 30 ед.|r",
+      "Увеличивает здоровье элементалям земли. \n|cffb4dcdcУвеличивает на 30 ед.|r"
+    ],
+    "raw_ubertips": [
+      "TRIGSTR_16306",
+      "TRIGSTR_16311",
+      "TRIGSTR_16315"
+    ],
+    "hotkeys": [
+      "TRIGSTR_17888",
+      "TRIGSTR_17889",
+      "TRIGSTR_17910"
+    ],
+    "buttonpos": "3",
+    "buttonpos2": "1",
+    "requires": [
+      "h0ER",
+      "h0ER",
+      "h0ES"
+    ],
+    "effects": [
+      {
+        "effect": "TRIGSTR_16312",
+        "base": "30.000000",
+        "mod": "30.000000",
+        "code": null,
+        "target": null
+      }
+    ],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\PassiveButtons\\PASBTNHardenedSkin.blp",
+      "art2": "ReplaceableTextures\\PassiveButtons\\PASBTNHardenedSkin.blp",
+      "art3": "ReplaceableTextures\\PassiveButtons\\PASBTNHardenedSkin.blp",
+      "base1": "30.000000",
+      "base2": "25.000000",
+      "buttonpos": "3",
+      "buttonpos2": "1",
+      "comments": "human footman defend",
+      "editorsuffix1": "(Элементали)",
+      "effect1": "rhpx",
+      "global": "0",
+      "goldbase": "650",
+      "goldmod": "650",
+      "hotkey1": "S",
+      "hotkey2": "S",
+      "hotkey3": "S",
+      "inbeta": "1",
+      "inherit": "1",
+      "lumberbase": "740",
+      "lumbermod": "740",
+      "maxlevel": "3",
+      "mod1": "30.000000",
+      "mod2": "25.000000",
+      "name1": "|cffb4dcdcКаменное здоровье|r",
+      "name2": "|cffb4dcdcКаменное здоровье|r",
+      "name3": "|cffb4dcdcКаменное здоровье|r",
+      "race": "demon",
+      "requires1": "h0ER",
+      "requires2": "h0ER",
+      "requires3": "h0ES",
+      "timebase": "40",
+      "timemod": "0",
+      "tip1": "Исследовать «|cffb4dcdcКаменное здоровье|r»",
+      "tip2": "Исследовать «|cffb4dcdcКаменное здоровье|r»",
+      "tip3": "Исследовать «|cffb4dcdcКаменное здоровье|r»",
+      "ubertip1": "Увеличивает здоровье элементалям земли. \n|cffb4dcdcУвеличивает на 30 ед.|r",
+      "ubertip2": "Увеличивает здоровье элементалям земли. \n|cffb4dcdcУвеличивает на 30 ед.|r",
+      "ubertip3": "Увеличивает здоровье элементалям земли. \n|cffb4dcdcУвеличивает на 30 ед.|r",
+      "used": "1",
+      "version": "0"
+    }
+  },
+  "R09Y": {
+    "id": "R09Y",
+    "maxlevel": 1,
+    "names": [
+      "|cffb4dcdcСокрушение|r"
+    ],
+    "raw_names": [
+      "TRIGSTR_41416"
+    ],
+    "tips": [
+      "Исследовать «|cffb4dcdcСокрушение|r»"
+    ],
+    "raw_tips": [
+      "TRIGSTR_16317"
+    ],
+    "ubertips": [
+      "Позволяет |cffb4dcdcяростному голему|r использовать сокрушение."
+    ],
+    "raw_ubertips": [
+      "TRIGSTR_16318"
+    ],
+    "hotkeys": [
+      "D"
+    ],
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "requires": [
+      "h0ES",
+      "h0ER",
+      "h0ES"
+    ],
+    "effects": [],
+    "all_fields": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNQuillSprayOff.blp",
+      "art2": "ReplaceableTextures\\PassiveButtons\\PASBTNHardenedSkin.blp",
+      "art3": "ReplaceableTextures\\PassiveButtons\\PASBTNHardenedSkin.blp",
+      "base1": "30.000000",
+      "base2": "25.000000",
+      "buttonpos": "0",
+      "buttonpos2": "2",
+      "comments": "human footman defend",
+      "editorsuffix1": "(Элементали)",
+      "global": "0",
+      "goldbase": "540",
+      "goldmod": "0",
+      "hotkey1": "D",
+      "inbeta": "1",
+      "inherit": "1",
+      "lumberbase": "800",
+      "lumbermod": "0",
+      "maxlevel": "1",
+      "mod1": "30.000000",
+      "mod2": "25.000000",
+      "name1": "|cffb4dcdcСокрушение|r",
+      "name2": "|cffb4dcdcКаменное здоровье|r",
+      "name3": "|cffb4dcdcКаменное здоровье|r",
+      "race": "demon",
+      "requires1": "h0ES",
+      "requires2": "h0ER",
+      "requires3": "h0ES",
+      "timebase": "40",
+      "timemod": "0",
+      "tip1": "Исследовать «|cffb4dcdcСокрушение|r»",
+      "tip2": "Исследовать «|cffb4dcdcКаменное здоровье|r»",
+      "tip3": "Исследовать «|cffb4dcdcКаменное здоровье|r»",
+      "ubertip1": "Позволяет |cffb4dcdcяростному голему|r использовать сокрушение.",
+      "ubertip2": "Увеличивает здоровье элементалям земли. \n|cffb4dcdcУвеличивает на 30 ед.|r",
+      "ubertip3": "Увеличивает здоровье элементалям земли. \n|cffb4dcdcУвеличивает на 30 ед.|r",
+      "used": "1",
+      "version": "0"
+    }
+  }
+}

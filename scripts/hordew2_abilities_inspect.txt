@@ -1,0 +1,910 @@
+=== ABILITY A001 (|cffe4cfa3Абордаж!|r) levels: 1 ===
+  raw_name: TRIGSTR_287
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=285 raw=TRIGSTR_285 val='|cffe4cfa3Абордаж!|r'
+  ubertips:
+    ubertip1: sid=286 raw=TRIGSTR_286 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Оглушает данный и вражеский корабль и постепенно наносит урон. Если здоровье одно из кораблей становится меньше 18%, он переходит на сторону врага.|r'
+
+=== ABILITY A002 (|cffe4cfa3Боковые пушки|r) levels: 3 ===
+  raw_name: TRIGSTR_289
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=509 raw=TRIGSTR_509 val='|cffe4cfa3Боковые пушки 1|r'
+    tip2: sid=510 raw=TRIGSTR_510 val='|cffe4cfa3Боковые пушки 2|r'
+    tip3: sid=511 raw=TRIGSTR_511 val='|cffe4cfa3Боковые пушки 3|r'
+  ubertips:
+    ubertip1: sid=290 raw=TRIGSTR_290 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном. Позволяют стрелять на ходу.|r'
+    ubertip2: sid=488 raw=TRIGSTR_488 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном. Позволяют стрелять на ходу.|r'
+    ubertip3: sid=489 raw=TRIGSTR_489 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном. Позволяют стрелять на ходу.|r'
+
+=== ABILITY A003 (Боковые пушки (Линкор)) levels: 3 ===
+  raw_name: TRIGSTR_292
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=512 raw=TRIGSTR_512 val='Боковые пушки 1 (Линкор)'
+    tip2: sid=513 raw=TRIGSTR_513 val='Боковые пушки 2 (Линкор)'
+    tip3: sid=514 raw=TRIGSTR_514 val='Боковые пушки 3 (Линкор)'
+  ubertips:
+    ubertip1: sid=293 raw=TRIGSTR_293 val='Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.'
+    ubertip2: sid=492 raw=TRIGSTR_492 val='Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.'
+    ubertip3: sid=493 raw=TRIGSTR_493 val='Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.'
+
+=== ABILITY A009 (|cffe4cfa3Сделать флагманом|r) levels: 1 ===
+  raw_name: TRIGSTR_27198
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=27197 raw=TRIGSTR_27197 val='|cffe4cfa3Сделать флагманом|r'
+  ubertips:
+    ubertip1: sid=565 raw=TRIGSTR_565 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Делает корабль вашим флагманом. Его характеристики увеличиваются, а также дается аура на выбор.|r'
+
+=== ABILITY A00A (|cffe4cfa3Починка|r) levels: 3 ===
+  raw_name: TRIGSTR_313
+  researchtip: sid=Изучить «Спокойствие» val='Изучить «Спокойствие»'
+  researchubertip: sid="Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек." val='"Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек."'
+  tips:
+    tip1: sid=473 raw=TRIGSTR_473 val='|cffe4cfa3Починка 1|r'
+    tip2: sid=474 raw=TRIGSTR_474 val='|cffe4cfa3Починка 2|r'
+    tip3: sid=475 raw=TRIGSTR_475 val='|cffe4cfa3Починка 3|r'
+  ubertips:
+    ubertip1: sid=320 raw=TRIGSTR_320 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Корабль чинится, не используя главные орудия.|r'
+    ubertip2: sid=446 raw=TRIGSTR_446 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Корабль чинится, не используя главные орудия.|r'
+    ubertip3: sid=447 raw=TRIGSTR_447 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Корабль чинится, не используя главные орудия.|r'
+
+=== ABILITY A00B (|cffe4cfa3Тактическое ускорение|r) levels: 3 ===
+  raw_name: TRIGSTR_327
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=515 raw=TRIGSTR_515 val='|cffe4cfa3Тактическое ускорение 1|r'
+    tip2: sid=516 raw=TRIGSTR_516 val='|cffe4cfa3Тактическое ускорение 2|r'
+    tip3: sid=517 raw=TRIGSTR_517 val='|cffe4cfa3Тактическое ускорение 3|r'
+  ubertips:
+    ubertip1: sid=559 raw=TRIGSTR_559 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускорение перемещения за счет раскрытия всех парусов, при этом кораблю наносится повышенный урон.|r'
+    ubertip2: sid=560 raw=TRIGSTR_560 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускорение перемещения за счет раскрытия всех парусов, при этом кораблю наносится повышенный урон.|r'
+    ubertip3: sid=561 raw=TRIGSTR_561 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускорение перемещения за счет раскрытия всех парусов, при этом кораблю наносится повышенный урон.|r'
+
+=== ABILITY A00G (|cffe4cfa3Массированный обстрел|r) levels: 3 ===
+  raw_name: TRIGSTR_365
+  researchtip: sid=Изучить «Кассетные ракеты» [|cffffcc00%d-й уровень|r] val='Изучить «Кассетные ракеты» [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid="Обстреливает указанную область ракетами, нанося урон наземным и воздушным врагам и оглушая их на <ANcs,Dur1> сек. Также поражает механических существ и здания. |n|n|cffffcc001-й уровень:|r 45 урона.|n|cffffcc002-й уровень:|r 75 урона.|n|cffffcc003-й уровень:|r 110 урона." val='"Обстреливает указанную область ракетами, нанося урон наземным и воздушным врагам и оглушая их на <ANcs,Dur1> сек. Также поражает механических существ и здания. |n|n|cffffcc001-й уровень:|r 45 урона.|n|cffffcc002-й уровень:|r 75 урона.|n|cffffcc003-й уровень:|r 110 урона."'
+  tips:
+    tip1: sid=518 raw=TRIGSTR_518 val='|cffe4cfa3Массированный обстрел 1|r'
+    tip2: sid=519 raw=TRIGSTR_519 val='|cffe4cfa3Массированный обстрел 2|r'
+    tip3: sid=520 raw=TRIGSTR_520 val='|cffe4cfa3Массированный обстрел 3|r'
+  ubertips:
+    ubertip1: sid=367 raw=TRIGSTR_367 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область.|r'
+    ubertip2: sid=484 raw=TRIGSTR_484 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область.|r'
+    ubertip3: sid=485 raw=TRIGSTR_485 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область.|r'
+
+=== ABILITY A00I (|cffe4cfa3Магическая посадка|r) levels: 1 ===
+  raw_name: TRIGSTR_534
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=532 raw=TRIGSTR_532 val='|cffe4cfa3Магическая посадка|r'
+  ubertips:
+    ubertip1: sid=563 raw=TRIGSTR_563 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Телепортирует юнитов в выбранной области к берегу, где их постарается забрать корабль. Не факт что сработает, но часть войск должно спасти.|r'
+
+=== ABILITY A01C (|cffe4cfa3Свечение героя|r) levels: 1 ===
+  raw_name: TRIGSTR_2038
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=2039 raw=TRIGSTR_2039 val='|cffe4cfa3Свечение героя|r'
+  ubertips:
+    ubertip1: sid=None raw= val=''
+
+=== ABILITY A0I3 (|cffe4cfa3Небольшой скачок|r) levels: 1 ===
+  raw_name: TRIGSTR_26484
+  researchtip: sid=TRIGSTR_10064 val='|cffe4cfa3Небольшой скачок|r'
+  researchubertip: sid=TRIGSTR_10976 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно перемещает строителя на короткое расстояние.|r'
+  tips:
+    tip1: sid=26476 raw=TRIGSTR_26476 val='|cffe4cfa3Небольшой скачок|r'
+  ubertips:
+    ubertip1: sid=26477 raw=TRIGSTR_26477 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da СПОСОБНОСТЬ: Мгновенно переносит работника на небольшое расстояние.|r'
+
+=== ABILITY A0IQ (|cffe4cfa3Обозначить столицу|r) levels: 1 ===
+  raw_name: TRIGSTR_27193
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=27969 raw=TRIGSTR_27969 val='|cffe4cfa3Обозначить столицу|r'
+  ubertips:
+    ubertip1: sid=27970 raw=TRIGSTR_27970 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение.|r'
+
+=== ABILITY A0LI (|cffe4cfa3Обмен Золота на Дерево|r) levels: 1 ===
+  raw_name: TRIGSTR_2888
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=3692 raw=TRIGSTR_3692 val='|cffe4cfa3Обмен Золота на Дерево|r'
+  ubertips:
+    ubertip1: sid=20630 raw=TRIGSTR_20630 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Отнимает у игрока 500 золота, но добавляет 100 дерева.|r'
+
+=== ABILITY A0LJ (|cffe4cfa3Обмен Дерева на Золото|r) levels: 1 ===
+  raw_name: TRIGSTR_12857
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=12886 raw=TRIGSTR_12886 val='|cffe4cfa3Обмен Дерева на Золото|r'
+  ubertips:
+    ubertip1: sid=20631 raw=TRIGSTR_20631 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Отнимает у игрока 500 дерева, но добавляет 100 золота.|r'
+
+=== ABILITY A0QO (|cff8080ffДраконья ярость|r) levels: 1 ===
+  raw_name: TRIGSTR_16381
+  researchtip: sid=Изучить «Критический удар» [|cffffcc00%d-й уровень|r] val='Изучить «Критический удар» [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid="Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон." val='"Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон."'
+  tips:
+    tip1: sid=16382 raw=TRIGSTR_16382 val='|cff8080ffДраконья ярость|r'
+  ubertips:
+    ubertip1: sid=16428 raw=TRIGSTR_16428 val='Дает |cff8080ff<AOcr,DataA1>%-й|r шанс нанести |cff8080ff<AOcr,DataB1>|r-кратный урон при атаке.'
+
+=== ABILITY A0RE (|cff8080ffУскользание|r) levels: 1 ===
+  raw_name: TRIGSTR_16920
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=16921 raw=TRIGSTR_16921 val='|cff8080ffУскользание|r'
+  ubertips:
+    ubertip1: sid=16922 raw=TRIGSTR_16922 val='Дает |cff8080ff<ACev,DataA1,%>%-й|r шанс уклониться от атаки.'
+
+=== ABILITY A0Z7 (|cffff5454Усиленная броня|r) levels: 1 ===
+  raw_name: TRIGSTR_35389
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=35398 raw=TRIGSTR_35398 val='|cffff5454Усиленная броня|r'
+  ubertips:
+    ubertip1: sid=35956 raw=TRIGSTR_35956 val='-4 от получаемого юнитом урона от атак. Минимальный урон от атак: 4.'
+
+=== ABILITY A0ZA (|cffe4cfa3Скрытая ярость|r) levels: 1 ===
+  raw_name: TRIGSTR_36869
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=36868 raw=TRIGSTR_36868 val='|cffff5454Скрытая ярость|r'
+  ubertips:
+    ubertip1: sid=9882 raw=TRIGSTR_9882 val='С вероятность 4% воин войдет в состояние берсерка, с увеличенной скоростью атаки и передвижения.'
+
+=== ABILITY A15N (|cffe4cfa3Зона ремонта|r) levels: 1 ===
+  raw_name: TRIGSTR_25578
+  researchtip: sid=TRIGSTR_25582 val='|cffe4cfa3Зона ремонта|r'
+  researchubertip: sid=TRIGSTR_26500 val='Восстанавливает здоровье механическим юнитам поблизости.'
+  tips:
+    tip1: sid=25589 raw=TRIGSTR_25589 val='|cffe4cfa3Зона ремонта|r'
+  ubertips:
+    ubertip1: sid=25608 raw=TRIGSTR_25608 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье механическим юнитам поблизости.|r'
+
+=== ABILITY A176 (|cffe4cfa3Сильный удар|r) levels: 1 ===
+  raw_name: TRIGSTR_28183
+  researchtip: sid=Изучить «Сильный удар» [|cffffcc00%d-й уровень|r] val='Изучить «Сильный удар» [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid="Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. На <AHbh,DataC1> больше урона. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. На <AHbh,DataC2> больше урона. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс. На <AHbh,DataC3> больше урона." val='"Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. На <AHbh,DataC1> больше урона. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. На <AHbh,DataC2> больше урона. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс. На <AHbh,DataC3> больше урона."'
+  tips:
+    tip1: sid=28182 raw=TRIGSTR_28182 val='|cffe4cfa3Сильный удар|r'
+  ubertips:
+    ubertip1: sid=28961 raw=TRIGSTR_28961 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff12%|cffced4da наносит в |cffffffff2|cffced4da раза больше урона и оглушает цель на |cffffffff1|cffced4da сек. (|cffffffff0.2|cffced4da сек. для героев).|r'
+
+=== ABILITY A178 (|cffe4cfa3Аура Защиты|r) levels: 1 ===
+  raw_name: TRIGSTR_27766
+  researchtip: sid=Изучить «Ауру благочестия» [|cffffcc00%d-й уровень|r] val='Изучить «Ауру благочестия» [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid="Усиливает броню находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AHad,DataA1,.> к базовой броне. |n|cffffcc002-й уровень:|r +<AHad,DataA2,.> к базовой броне. |n|cffffcc003-й уровень:|r +<AHad,DataA3,.> к базовой броне." val='"Усиливает броню находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AHad,DataA1,.> к базовой броне. |n|cffffcc002-й уровень:|r +<AHad,DataA2,.> к базовой броне. |n|cffffcc003-й уровень:|r +<AHad,DataA3,.> к базовой броне."'
+  tips:
+    tip1: sid=27767 raw=TRIGSTR_27767 val='|cffe4cfa3Аура Защиты|r'
+  ubertips:
+    ubertip1: sid=20305 raw=TRIGSTR_20305 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает броню находящихся рядом дружественных войск на |cffc8e087+2|cffced4da.|n|nРадиус действия: |cffffffff300|cffced4da.|r'
+
+=== ABILITY A1JN (|cffdcb496Орда Второй Войны|r) levels: 1 ===
+  raw_name: TRIGSTR_26684
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=35847 raw=TRIGSTR_35847 val='|cffdcb496Орда Второй Войны|r'
+  ubertips:
+    ubertip1: sid=25701 raw=TRIGSTR_25701 val="|cffa0beaaСоздатель расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaСложность:|r |cffdcd2aa●●●|r●●|r|n|cffa0beaaПериод:|r |cffc8dcaaWarcraft II|r|n|nВ последние дни Первой Войны, лидер Теневого Совета, колдун Гул'дан впал в глубокую кому, пытаясь проникнуть в разум Медива. Без происков Теневого Совета Орда стала жертвой междоусобиц. В результате государственного переворота, возглавляемого Оргримом Молотом Рока, чтобы покончить с тем, что он считал разлагающим влиянием на Орду, Теневой Совет был уничтожен, а также его марионеточный вождь, Чернорук Разрушитель. Молот Рока успешно взял под контроль оставшиеся силы Орды и начал подкреплять их опустошенные армии орками и ограми из Темного Портала. Тролли, огры и орки сражались бок о бок, и вскоре предприимчивые гоблины увидели потенциальную выгоду в помощи им. Орда получила поддержку от гоблинов-машинистов и наемников, и с помощью Души Демона сумела поработить Красного Дракона Алекстразу и большую часть ее выводка."
+
+=== ABILITY A1JO (|cffdcb496Взять на борт|r) levels: 1 ===
+  raw_name: TRIGSTR_32683
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=32684 raw=TRIGSTR_32684 val='|cffdcb496Взять на борт|r'
+  ubertips:
+    ubertip1: sid=32685 raw=TRIGSTR_32685 val='Берет на борт наземного союзника, не тахнику.'
+
+=== ABILITY A1LO (|cffe4cfa3Жажда крови|r) levels: 1 ===
+  raw_name: TRIGSTR_39019
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=39021 raw=TRIGSTR_39021 val='|cffff5454Жажда крови|r'
+  ubertips:
+    ubertip1: sid=None raw="+<Ablo,DataA1,%>% к скорости атаки и +<Ablo,DataB1,%>% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur1> сек." val='"+<Ablo,DataA1,%>% к скорости атаки и +<Ablo,DataB1,%>% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur1> сек."'
+
+=== ABILITY A1LS (|cffff5454Рассеивание заклинаний|r) levels: 1 ===
+  raw_name: TRIGSTR_39023
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=39024 raw=TRIGSTR_39024 val='|cffff5454Рассеивание заклинаний|r'
+  ubertips:
+    ubertip1: sid=None raw="Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r" val='"Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r"'
+
+=== ABILITY A1OJ (|cffe4cfa3Воин Ша|r) levels: 1 ===
+  raw_name: TRIGSTR_10871
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=10873 raw=TRIGSTR_10873 val='|cffff5454Воин Ша|r'
+  ubertips:
+    ubertip1: sid=41120 raw=TRIGSTR_41120 val='+20% к скорости атаки и перемещения, но +20% к получаемому урону.|nПассивно, при атаке врага юнит c шансом 1% может породить отголоски Ша.'
+
+=== ABILITY AInv (Инвентарь) levels: 1 ===
+  raw_name: Инвентарь
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=None val=None
+  ubertips:
+    ubertip1: sid=None raw=None val=None
+
+=== ABILITY AOcr (Критический удар) levels: 4 ===
+  raw_name: Критический удар
+  researchtip: sid=Изучить «Критический удар» [|cffffcc00%d-й уровень|r] val='Изучить «Критический удар» [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid="Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон." val='"Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон."'
+  tips:
+    tip1: sid=None raw="Критический удар [|cffffcc001-й уровень|r]" val='"Критический удар [|cffffcc001-й уровень|r]"'
+    tip2: sid=None raw="Критический удар [|cffffcc002-й уровень|r]" val='"Критический удар [|cffffcc002-й уровень|r]"'
+    tip3: sid=None raw="Критический удар [|cffffcc003-й уровень|r]" val='"Критический удар [|cffffcc003-й уровень|r]"'
+    tip4: sid=9628 raw=TRIGSTR_9628 val='Критический удар [|cffffcc004-й уровень|r]'
+  ubertips:
+    ubertip1: sid=None raw="Дает <AOcr,DataA1>%-й шанс нанести <AOcr,DataB1>-кратный урон при атаке." val='"Дает <AOcr,DataA1>%-й шанс нанести <AOcr,DataB1>-кратный урон при атаке."'
+    ubertip2: sid=None raw="Дает <AOcr,DataA2>%-й шанс нанести <AOcr,DataB2>-кратный урон при атаке." val='"Дает <AOcr,DataA2>%-й шанс нанести <AOcr,DataB2>-кратный урон при атаке."'
+    ubertip3: sid=None raw="Дает <AOcr,DataA3>%-й шанс нанести <AOcr,DataB3>-кратный урон при атаке." val='"Дает <AOcr,DataA3>%-й шанс нанести <AOcr,DataB3>-кратный урон при атаке."'
+    ubertip4: sid=5166 raw=TRIGSTR_5166 val='Дает <AOcr,DataA4>%-й шанс нанести <AOcr,DataB4>-кратный урон при атаке.'
+
+=== ABILITY AOmi (Зеркальная копия) levels: 4 ===
+  raw_name: Зеркальная копия
+  researchtip: sid=Изучить «Зеркальную копию» [|cffffcc00%d-й уровень|r] val='Изучить «Зеркальную копию» [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid="Создает иллюзорные копии мастера клинка и снимает с него магические эффекты. |n|n|cffffcc001-й уровень:|r <AOmi,DataA1> иллюзия. |n|cffffcc002-й уровень:|r <AOmi,DataA2> иллюзии. |n|cffffcc003-й уровень:|r <AOmi,DataA3> иллюзии." val='"Создает иллюзорные копии мастера клинка и снимает с него магические эффекты. |n|n|cffffcc001-й уровень:|r <AOmi,DataA1> иллюзия. |n|cffffcc002-й уровень:|r <AOmi,DataA2> иллюзии. |n|cffffcc003-й уровень:|r <AOmi,DataA3> иллюзии."'
+  tips:
+    tip1: sid=None raw="Зеркальная копия [|cffffcc001-й уровень|r]" val='"Зеркальная копия [|cffffcc001-й уровень|r]"'
+    tip2: sid=None raw="Зеркальная копия [|cffffcc002-й уровень|r]" val='"Зеркальная копия [|cffffcc002-й уровень|r]"'
+    tip3: sid=None raw="Зеркальная копия [|cffffcc003-й уровень|r]" val='"Зеркальная копия [|cffffcc003-й уровень|r]"'
+    tip4: sid=22621 raw=TRIGSTR_22621 val='Зеркальная копия [|cffffcc004-й уровень|r]'
+  ubertips:
+    ubertip1: sid=None raw="Создает <AOmi,DataA1> иллюзорную копию мастера клинка и снимает с него магические эффекты. |nВремя действия: <AOmi,Dur1> сек." val='"Создает <AOmi,DataA1> иллюзорную копию мастера клинка и снимает с него магические эффекты. |nВремя действия: <AOmi,Dur1> сек."'
+    ubertip2: sid=22622 raw=TRIGSTR_22622 val='Создает <AOmi,DataA2> иллюзорную копию мастера клинка и снимает с него магические эффекты. |nВремя действия: <AOmi,Dur2> сек.'
+    ubertip3: sid=22623 raw=TRIGSTR_22623 val='Создает <AOmi,DataA3> иллюзорную копию мастера клинка и снимает с него магические эффекты. |nВремя действия: <AOmi,Dur3> сек.'
+    ubertip4: sid=22624 raw=TRIGSTR_22624 val='Создает <AOmi,DataA4> иллюзорную копию мастера клинка и снимает с него магические эффекты. |nВремя действия: <AOmi,Dur4> сек.'
+
+=== ABILITY AOwk (Танец ветра) levels: 4 ===
+  raw_name: Танец ветра
+  researchtip: sid=Изучить «Танец ветра» [|cffffcc00%d-й уровень|r] val='Изучить «Танец ветра» [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid="Дает невидимость и временно ускоряет передвижение. Атакуя, мастер клинка становится видимым, но при этом наносит больше урона. |n|n|cffffcc001-й уровень:|r +<AOwk,DataB1,%>% к скорости передвижения, +<AOwk,DataC1> к урону, действует <AOwk,Dur1> сек. |n|cffffcc002-й уровень:|r +<AOwk,DataB2,%>% к скорости передвижения, +<AOwk,DataC2> к урону, действует <AOwk,Dur2> сек. |n|cffffcc003-й уровень:|r +<AOwk,DataB3,%>% к скорости передвижения, +<AOwk,DataC3> к урону, действует <AOwk,Dur3> сек." val='"Дает невидимость и временно ускоряет передвижение. Атакуя, мастер клинка становится видимым, но при этом наносит больше урона. |n|n|cffffcc001-й уровень:|r +<AOwk,DataB1,%>% к скорости передвижения, +<AOwk,DataC1> к урону, действует <AOwk,Dur1> сек. |n|cffffcc002-й уровень:|r +<AOwk,DataB2,%>% к скорости передвижения, +<AOwk,DataC2> к урону, действует <AOwk,Dur2> сек. |n|cffffcc003-й уровень:|r +<AOwk,DataB3,%>% к скорости передвижения, +<AOwk,DataC3> к урону, действует <AOwk,Dur3> сек."'
+  tips:
+    tip1: sid=None raw="Танец ветра [|cffffcc001-й уровень|r]" val='"Танец ветра [|cffffcc001-й уровень|r]"'
+    tip2: sid=None raw="Танец ветра [|cffffcc002-й уровень|r]" val='"Танец ветра [|cffffcc002-й уровень|r]"'
+    tip3: sid=None raw="Танец ветра [|cffffcc003-й уровень|r]" val='"Танец ветра [|cffffcc003-й уровень|r]"'
+    tip4: sid=23502 raw=TRIGSTR_23502 val='|cffe4cfa3Танец ветра — [уровень 4]|r (|cffffffffW|r)'
+  ubertips:
+    ubertip1: sid=None raw="Дает невидимость и +<AOwk,DataB1,%>% к скорости передвижения на <AOwk,Dur1> сек. Атакуя, мастер клинка становится видимым и наносит <AOwk,DataC1> дополнительного урона." val='"Дает невидимость и +<AOwk,DataB1,%>% к скорости передвижения на <AOwk,Dur1> сек. Атакуя, мастер клинка становится видимым и наносит <AOwk,DataC1> дополнительного урона."'
+    ubertip2: sid=None raw="Дает невидимость и +<AOwk,DataB2,%>% к скорости передвижения на <AOwk,Dur2> сек. Атакуя, мастер клинка становится видимым и наносит <AOwk,DataC2> дополнительного урона." val='"Дает невидимость и +<AOwk,DataB2,%>% к скорости передвижения на <AOwk,Dur2> сек. Атакуя, мастер клинка становится видимым и наносит <AOwk,DataC2> дополнительного урона."'
+    ubertip3: sid=None raw="Дает невидимость и +<AOwk,DataB3,%>% к скорости передвижения на <AOwk,Dur3> сек. Атакуя, мастер клинка становится видимым и наносит <AOwk,DataC3> дополнительного урона." val='"Дает невидимость и +<AOwk,DataB3,%>% к скорости передвижения на <AOwk,Dur3> сек. Атакуя, мастер клинка становится видимым и наносит <AOwk,DataC3> дополнительного урона."'
+    ubertip4: sid=20908 raw=TRIGSTR_20908 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует невидимость и ускорение. Атака из невидимости наносит критический дополнительный урон.|r'
+
+=== ABILITY AOww (Вихрь клинков) levels: 2 ===
+  raw_name: Вихрь клинков
+  researchtip: sid=Изучить «Вихрь клинков» val='Изучить «Вихрь клинков»'
+  researchubertip: sid="Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам." val='"Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам."'
+  tips:
+    tip1: sid=None raw=Вихрь клинков val='Вихрь клинков'
+    tip2: sid=9617 raw=TRIGSTR_9617 val='Вихрь клинков'
+  ubertips:
+    ubertip1: sid=None raw="Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur1> сек." val='"Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur1> сек."'
+    ubertip2: sid=23512 raw=TRIGSTR_23512 val='Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA2> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur2> сек.'
+
+=== ABILITY Ablo (|cffff5454Жажда крови|r) levels: 1 ===
+  raw_name: TRIGSTR_32726
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=36909 raw=TRIGSTR_36909 val='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Скрытная атака, наносящая два быстрых удара подряд.|r'
+  ubertips:
+    ubertip1: sid=None raw="+<Ablo,DataA1,%>% к скорости атаки и +<Ablo,DataB1,%>% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur1> сек." val='"+<Ablo,DataA1,%>% к скорости атаки и +<Ablo,DataB1,%>% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur1> сек."'
+
+=== ABILITY Achd (Cargo Hold Death) levels: 1 ===
+  raw_name: Cargo Hold Death
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=None val=None
+  ubertips:
+    ubertip1: sid=None raw=None val=None
+
+=== ABILITY Adro (Выгрузить) levels: 1 ===
+  raw_name: Выгрузить
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=Выгрузить всех val='Выгрузить всех'
+  ubertips:
+    ubertip1: sid=None raw=Высаживает войска в указанном месте. val='Высаживает войска в указанном месте.'
+
+=== ABILITY Ahar (Добывать ресурсы) levels: 1 ===
+  raw_name: Добывать ресурсы
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=Добывать ресурсы val='Добывать ресурсы'
+  ubertips:
+    ubertip1: sid=None raw=Добывает золото из рудников и древесину из деревьев. val='Добывает золото из рудников и древесину из деревьев.'
+
+=== ABILITY Aion (Инвентарь) levels: 1 ===
+  raw_name: Инвентарь
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=Инвентарь val='Инвентарь'
+  ubertips:
+    ubertip1: sid=None raw=Позволяет носить (но не использовать) предметы для героев. val='Позволяет носить (но не использовать) предметы для героев.'
+
+=== ABILITY Alsh (|cffff5454Щит молний|r) levels: 1 ===
+  raw_name: TRIGSTR_39009
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=39008 raw=TRIGSTR_39008 val='|cffff5454Щит молний|r'
+  ubertips:
+    ubertip1: sid=None raw="Окружает цель молниями, которые наносят <Alsh,DataA1> урона/сек. находящимся рядом войскам. |nВремя действия: <Alsh,Dur1> сек." val='"Окружает цель молниями, которые наносят <Alsh,DataA1> урона/сек. находящимся рядом войскам. |nВремя действия: <Alsh,Dur1> сек."'
+
+=== ABILITY Aprg (|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость перемещения и атаки союзника.|r) levels: 1 ===
+  raw_name: TRIGSTR_39011
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=39012 raw=TRIGSTR_39012 val='|cffff5454Развеивание магии|r'
+  ubertips:
+    ubertip1: sid=None raw="Снимает положительные эффекты с цели и замедляет ее передвижение в <Aprg,DataA1> раз. Замедление постепенно рассеивается за <Aprg,Dur1> сек. |n|cffffcc00Наносит <Aprg,DataC1> урона призванным целям.|r" val='"Снимает положительные эффекты с цели и замедляет ее передвижение в <Aprg,DataA1> раз. Замедление постепенно рассеивается за <Aprg,Dur1> сек. |n|cffffcc00Наносит <Aprg,DataC1> урона призванным целям.|r"'
+
+=== ABILITY Arep (Ремонтировать) levels: 1 ===
+  raw_name: Ремонтировать
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=Ремонтировать val='Ремонтировать'
+  ubertips:
+    ubertip1: sid=None raw=Ремонтирует здания и технику за счет ресурсов. val='Ремонтирует здания и технику за счет ресурсов.'
+
+=== ABILITY Argl (Вернуть золото и древесину) levels: 1 ===
+  raw_name: Вернуть золото и древесину
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=None val=None
+  ubertips:
+    ubertip1: sid=None raw=None val=None
+
+=== ABILITY Arlm (Вернуть древесину) levels: 1 ===
+  raw_name: Вернуть древесину
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=None val=None
+  ubertips:
+    ubertip1: sid=None raw=None val=None
+
+=== ABILITY Asal (Грабеж) levels: 1 ===
+  raw_name: Грабеж
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=Грабеж val='Грабеж'
+  ubertips:
+    ubertip1: sid=None raw="Нанося урон зданиям, этот воин добывает ресурсы." val='"Нанося урон зданиям, этот воин добывает ресурсы."'
+
+=== ABILITY Aspi (Шипастые укрепления) levels: 1 ===
+  raw_name: Шипастые укрепления
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=None val=None
+  ubertips:
+    ubertip1: sid=None raw=None val=None
+
+=== ABILITY Aven (Отравленные копья) levels: 1 ===
+  raw_name: Отравленные копья
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=Отравленные копья val='Отравленные копья'
+  ubertips:
+    ubertip1: sid=None raw="Яд наносит <Aven,DataA1> урона/сек. |nВремя действия: <Aven,Dur1> сек." val='"Яд наносит <Aven,DataA1> урона/сек. |nВремя действия: <Aven,Dur1> сек."'
+
+=== ABILITY Sch3 (Cargo Hold) levels: 1 ===
+  raw_name: Cargo Hold
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=None val=None
+  ubertips:
+    ubertip1: sid=None raw=None val=None
+
+=== ABILITY Sch5 (Cargo Hold) levels: 1 ===
+  raw_name: Cargo Hold
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=None val=None
+  ubertips:
+    ubertip1: sid=None raw=None val=None
+
+=== ABILITY Sdro (Выгрузить) levels: 1 ===
+  raw_name: Выгрузить
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=Выгрузить всех val='Выгрузить всех'
+  ubertips:
+    ubertip1: sid=None raw=Высаживает войска в указанном месте. val='Высаживает войска в указанном месте.'
+
+=== ABILITY Slo3 (Взять на борт) levels: 1 ===
+  raw_name: Взять на борт
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=Взять на борт val='Взять на борт'
+  ubertips:
+    ubertip1: sid=None raw=Берет на борт наземного союзника. val='Берет на борт наземного союзника.'
+
+=== ABILITY w284 (|cffdcb496Сопротивление магии|r) levels: 1 ===
+  raw_name: TRIGSTR_38304
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=38303 raw=TRIGSTR_38303 val='|cffdcb496Сопротивление магии|r'
+  ubertips:
+    ubertip1: sid=27982 raw=TRIGSTR_27982 val='Огры получают лишь 35% магического урона.'
+
+=== ABILITY w285 (|cffdcb496Сопротивление магии|r) levels: 1 ===
+  raw_name: TRIGSTR_38302
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=None raw=None val=None
+  ubertips:
+    ubertip1: sid=None raw=None val=None
+
+=== ABILITY w288 (|cffdcb496Пламенное дыхание|r) levels: 1 ===
+  raw_name: TRIGSTR_37769
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=37770 raw=TRIGSTR_37770 val='|cffdcb496Пламенное дыхание|r'
+  ubertips:
+    ubertip1: sid=37771 raw=TRIGSTR_37771 val='Выдыхает огонь, нанося 55 урона врагам в секторе перед собой.'
+
+=== ABILITY w289 (|cffdcb496Огненный столб|r) levels: 1 ===
+  raw_name: TRIGSTR_37767
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=37768 raw=TRIGSTR_37768 val='|cffdcb496Огненный столб|r'
+  ubertips:
+    ubertip1: sid=None raw="Создает огненный столб, наносящий наземным войскам в указанной области 45 урона/сек. в течение 2 сек. После исчезновения столба пораженные войска продолжают получать незначительный урон." val='"Создает огненный столб, наносящий наземным войскам в указанной области 45 урона/сек. в течение 2 сек. После исчезновения столба пораженные войска продолжают получать незначительный урон."'
+
+=== ABILITY w290 (|cffdcb496Прочная чешуя|r) levels: 1 ===
+  raw_name: TRIGSTR_37765
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=37766 raw=TRIGSTR_37766 val='|cffdcb496Прочная чешуя|r'
+  ubertips:
+    ubertip1: sid=4677 raw=TRIGSTR_4677 val='-6 от получаемого драконом урона от атак. Минимальный урон от атак: 4.'
+
+=== ABILITY w294 (|cffdcb496Драконы защитники|r) levels: 1 ===
+  raw_name: TRIGSTR_37761
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=37762 raw=TRIGSTR_37762 val='|cffdcb496Драконы защитники|r'
+  ubertips:
+    ubertip1: sid=37763 raw=TRIGSTR_37763 val='Увеличивает здоровье драконов и добавляет им способность.'
+
+=== ABILITY w295 (|cffdcb496Драконы поджигатели|r) levels: 1 ===
+  raw_name: TRIGSTR_37758
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=37759 raw=TRIGSTR_37759 val='|cffdcb496Драконы поджигатели|r'
+  ubertips:
+    ubertip1: sid=37760 raw=TRIGSTR_37760 val='Добавляет драконам способности.'
+
+=== ABILITY w296 (|cffdcb496Обстрел|r) levels: 1 ===
+  raw_name: TRIGSTR_37399
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=37400 raw=TRIGSTR_37400 val='|cffdcb496Обстрел|r'
+  ubertips:
+    ubertip1: sid=26773 raw=TRIGSTR_26773 val='Дирижабль раз в 5 секунд выпускает ракету, наносящую 25 урона.'
+
+=== ABILITY w297 (|cffdcb496Драконы огнепускатели|r) levels: 1 ===
+  raw_name: TRIGSTR_11818
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=11958 raw=TRIGSTR_11958 val='|cffdcb496Драконы огнепускатели|r'
+  ubertips:
+    ubertip1: sid=37757 raw=TRIGSTR_37757 val='Увеличивает урон атак драконов.'
+
+=== ABILITY w298 (|cffdcb496Страх|r) levels: 2 ===
+  raw_name: TRIGSTR_37398
+  researchtip: sid=TRIGSTR_37395 val='|cffdcb496Страх|r'
+  researchubertip: sid=TRIGSTR_37396 val='Не дает врагам в указанной области атаковать и применять способности в течение 20 сек.'
+  tips:
+    tip1: sid=37391 raw=TRIGSTR_37391 val='|cffdcb496Страх|r'
+    tip2: sid=37392 raw=TRIGSTR_37392 val='|cffdcb496Страх|r'
+  ubertips:
+    ubertip1: sid=37393 raw=TRIGSTR_37393 val='Не дает врагам в указанной области атаковать и применять способности в течение 20 сек.'
+    ubertip2: sid=37394 raw=TRIGSTR_37394 val='Не дает врагам в указанной области атаковать и применять способности в течение 20 сек.'
+
+=== ABILITY w299 (|cffdcb496Поле развоплощения|r) levels: 4 ===
+  raw_name: TRIGSTR_37384
+  researchtip: sid=TRIGSTR_37385 val='Изучить |cffdcb496Поле развоплощения|r [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid="Призывает волны ледяных осколков, наносящих урон в области действия. |n|n|cffffcc001-й уровень:|r <AHbz,DataA1> волн по <AHbz,DataB1> урона. |n|cffffcc002-й уровень:|r <AHbz,DataA2> волн по <AHbz,DataB2> урона. |n|cffffcc003-й уровень:|r <AHbz,DataA3> волн по <AHbz,DataB3> урона." val='"Призывает волны ледяных осколков, наносящих урон в области действия. |n|n|cffffcc001-й уровень:|r <AHbz,DataA1> волн по <AHbz,DataB1> урона. |n|cffffcc002-й уровень:|r <AHbz,DataA2> волн по <AHbz,DataB2> урона. |n|cffffcc003-й уровень:|r <AHbz,DataA3> волн по <AHbz,DataB3> урона."'
+  tips:
+    tip1: sid=37386 raw=TRIGSTR_37386 val='|cffdcb496Поле развоплощения|r [|cffffcc001-й уровень|r]'
+    tip2: sid=37387 raw=TRIGSTR_37387 val='|cffdcb496Поле развоплощения|r [|cffffcc002-й уровень|r]'
+    tip3: sid=37388 raw=TRIGSTR_37388 val='|cffdcb496Поле развоплощения|r [|cffffcc003-й уровень|r]'
+    tip4: sid=37389 raw=TRIGSTR_37389 val='|cffdcb496Поле развоплощения|r [|cffffcc004-й уровень|r]'
+  ubertips:
+    ubertip1: sid=None raw="Обрушивает на указанную область <AHbz,DataA1> волн ледяных осколков, каждая из которых наносит <AHbz,DataB1> урона." val='"Обрушивает на указанную область <AHbz,DataA1> волн ледяных осколков, каждая из которых наносит <AHbz,DataB1> урона."'
+    ubertip2: sid=None raw="Обрушивает на указанную область <AHbz,DataA2> волн ледяных осколков, каждая из которых наносит <AHbz,DataB2> урона." val='"Обрушивает на указанную область <AHbz,DataA2> волн ледяных осколков, каждая из которых наносит <AHbz,DataB2> урона."'
+    ubertip3: sid=None raw="Обрушивает на указанную область <AHbz,DataA3> волн ледяных осколков, каждая из которых наносит <AHbz,DataB3> урона." val='"Обрушивает на указанную область <AHbz,DataA3> волн ледяных осколков, каждая из которых наносит <AHbz,DataB3> урона."'
+    ubertip4: sid=9844 raw=TRIGSTR_9844 val='Обрушивает на указанную область <AHbz,DataA4> волн ледяных осколков, каждая из которых наносит <AHbz,DataB4> урона.'
+
+=== ABILITY w2a0 (|cffdcb496Кузня войны|r) levels: 15 ===
+  raw_name: TRIGSTR_11961
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=11960 raw=TRIGSTR_11960 val='|cffdcb496Кузня войны|r'
+    tip2: sid=11969 raw=TRIGSTR_11969 val='|cffdcb496Кузня войны|r'
+    tip3: sid=11970 raw=TRIGSTR_11970 val='|cffdcb496Кузня войны|r'
+    tip4: sid=11971 raw=TRIGSTR_11971 val='|cffdcb496Кузня войны|r'
+    tip5: sid=11972 raw=TRIGSTR_11972 val='|cffdcb496Кузня войны|r'
+    tip6: sid=12088 raw=TRIGSTR_12088 val='|cffdcb496Кузня войны|r'
+    tip7: sid=12101 raw=TRIGSTR_12101 val='|cffdcb496Кузня войны|r'
+    tip8: sid=12102 raw=TRIGSTR_12102 val='|cffdcb496Кузня войны|r'
+    tip9: sid=12103 raw=TRIGSTR_12103 val='|cffdcb496Кузня войны|r'
+    tip10: sid=12104 raw=TRIGSTR_12104 val='|cffdcb496Кузня войны|r'
+    tip11: sid=12105 raw=TRIGSTR_12105 val='|cffdcb496Кузня войны|r'
+    tip12: sid=12106 raw=TRIGSTR_12106 val='|cffdcb496Кузня войны|r'
+    tip13: sid=12107 raw=TRIGSTR_12107 val='|cffdcb496Кузня войны|r'
+    tip14: sid=12108 raw=TRIGSTR_12108 val='|cffdcb496Кузня войны|r'
+    tip15: sid=12109 raw=TRIGSTR_12109 val='|cffdcb496Герой Войны|r'
+  ubertips:
+    ubertip1: sid=11968 raw=TRIGSTR_11968 val='Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 1|r'
+    ubertip2: sid=12110 raw=TRIGSTR_12110 val='Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 2|r'
+    ubertip3: sid=12111 raw=TRIGSTR_12111 val='Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 3|r'
+    ubertip4: sid=12112 raw=TRIGSTR_12112 val='Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 4|r'
+    ubertip5: sid=12113 raw=TRIGSTR_12113 val='Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 5|r'
+    ubertip6: sid=12114 raw=TRIGSTR_12114 val='Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 6|r'
+    ubertip7: sid=12115 raw=TRIGSTR_12115 val='Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 7|r'
+    ubertip8: sid=12116 raw=TRIGSTR_12116 val='Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 8|r'
+    ubertip9: sid=12117 raw=TRIGSTR_12117 val='Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 9|r'
+    ubertip10: sid=12118 raw=TRIGSTR_12118 val='Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 10|r'
+    ubertip11: sid=12167 raw=TRIGSTR_12167 val='Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 11|r'
+    ubertip12: sid=12168 raw=TRIGSTR_12168 val='Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 12|r'
+    ubertip13: sid=12169 raw=TRIGSTR_12169 val='Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 13|r'
+    ubertip14: sid=12170 raw=TRIGSTR_12170 val='Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 14|r'
+    ubertip15: sid=12171 raw=TRIGSTR_12171 val='|cffdcb496Текущий уровень бойца 15|r, потому он считается героем войны. '
+
+=== ABILITY w2a1 (|cffdcb496Разыскная бригада|r) levels: 3 ===
+  raw_name: TRIGSTR_12173
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=12172 raw=TRIGSTR_12172 val='|cffdcb496Разыскная пригада|r'
+    tip2: sid=12176 raw=TRIGSTR_12176 val='|cffdcb496Разыскная пригада|r'
+    tip3: sid=12177 raw=TRIGSTR_12177 val='|cffdcb496Разыскная пригада|r'
+  ubertips:
+    ubertip1: sid=12175 raw=TRIGSTR_12175 val='Юниты, которые могли погибнуть от грядущей атаки с шансом 50% помещаются в дирижабль. Для подрывных бригад шанс 66%.'
+    ubertip2: sid=12428 raw=TRIGSTR_12428 val='Юниты, которые могли погибнуть от грядущей атаки с шансом 50% помещаются в дирижабль. Для подрывных бригад шанс 66%.'
+    ubertip3: sid=12431 raw=TRIGSTR_12431 val='Юниты, которые могли погибнуть от грядущей атаки с шансом 50% помещаются в дирижабль. Для подрывных бригад шанс 66%.'
+
+=== ABILITY w2a2 (|cffdcb496Ба-бах!|r) levels: 3 ===
+  raw_name: TRIGSTR_12493
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=12492 raw=TRIGSTR_12492 val='|cffdcb496Ба-бах!|r'
+    tip2: sid=12766 raw=TRIGSTR_12766 val='|cffdcb496Ба-бах!|r'
+    tip3: sid=12770 raw=TRIGSTR_12770 val='|cffdcb496Ба-бах!|r'
+  ubertips:
+    ubertip1: sid=12778 raw=TRIGSTR_12778 val='Наносит 100 урона в небольшой области. Особенно эффективен против зданий и деревьев.'
+    ubertip2: sid=12791 raw=TRIGSTR_12791 val='Наносит 125 урона в небольшой области. Особенно эффективен против зданий и деревьев.'
+    ubertip3: sid=12800 raw=TRIGSTR_12800 val='Наносит 150 урона в небольшой области. Особенно эффективен против зданий и деревьев.'
+
+=== ABILITY w2a3 (|cffdcb496Перелет|r) levels: 1 ===
+  raw_name: TRIGSTR_12488
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=12489 raw=TRIGSTR_12489 val='|cffdcb496Перелет|r'
+  ubertips:
+    ubertip1: sid=12490 raw=TRIGSTR_12490 val='В течении 30 секунд юнит сможет перелетать через юнитов (не зданий).'
+
+=== ABILITY w2a4 (|cffdcb496Жажда крови|r) levels: 1 ===
+  raw_name: TRIGSTR_16439
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=16440 raw=TRIGSTR_16440 val='|cffdcb496Жажда крови|r'
+  ubertips:
+    ubertip1: sid=16441 raw=TRIGSTR_16441 val='+20% к скорости атаки и +10% к скорости передвижения союзника. |nВремя действия: 60 сек.'
+
+=== ABILITY w2a5 (|cffdcb496Воскрешение мертвых|r) levels: 1 ===
+  raw_name: TRIGSTR_16444
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=16445 raw=TRIGSTR_16445 val='|cffdcb496Воскрешение мертвых|r'
+  ubertips:
+    ubertip1: sid=None raw="Поднимает <Arai,DataA1> скелетов из трупа." val='"Поднимает <Arai,DataA1> скелетов из трупа."'
+
+=== ABILITY w2a6 (|cffdcb496Око Кил'Рога|r) levels: 1 ===
+  raw_name: TRIGSTR_16446
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=16447 raw=TRIGSTR_16447 val="|cffdcb496Око Кил'Рога|r"
+  ubertips:
+    ubertip1: sid=20211 raw=TRIGSTR_20211 val='Призывает Око Килрога, усиливающее армию рядом. |nВремя существования: 120 сек. '
+
+=== ABILITY w2a8 (|cffdcb496Темный доспех|r) levels: 1 ===
+  raw_name: TRIGSTR_37256
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=37257 raw=TRIGSTR_37257 val='|cffdcb496Темный доспех|r'
+  ubertips:
+    ubertip1: sid=37258 raw=TRIGSTR_37258 val='Укрывает союзника костяным щитом, который дает +8 к броне, но наносит магический урон в треть от текущего здоровья (максимум 500). |nВремя действия: 70 сек.'
+
+=== ABILITY w2a9 (|cffdcb496Взрывная руна|r) levels: 1 ===
+  raw_name: TRIGSTR_20757
+  researchtip: sid=Изучить «Темный портал» val='Изучить «Темный портал»'
+  researchubertip: sid="Открывает портал, впускающий на Азерот демонов Архимонда." val='"Открывает портал, впускающий на Азерот демонов Архимонда."'
+  tips:
+    tip1: sid=20212 raw=TRIGSTR_20212 val='|cffdcb496Взрывная руна|r'
+  ubertips:
+    ubertip1: sid=20215 raw=TRIGSTR_20215 val='Создает 3 руны, которые через 3 секунды взорвуться и нанесут огромный урон.'
+
+=== ABILITY w2aA (|cffdcb496Ярость берсерка|r) levels: 4 ===
+  raw_name: TRIGSTR_37364
+  researchtip: sid=TRIGSTR_37706 val='|cffdcb496Ярость берсерка|r'
+  researchubertip: sid=TRIGSTR_37705 val='Ускоряет атаку и передвижение героя.'
+  tips:
+    tip1: sid=37350 raw=TRIGSTR_37350 val='|cffdcb496Ярость берсерка|r'
+    tip2: sid=37351 raw=TRIGSTR_37351 val='|cffdcb496Ярость берсерка|r'
+    tip3: sid=37352 raw=TRIGSTR_37352 val='|cffdcb496Ярость берсерка|r'
+    tip4: sid=37353 raw=TRIGSTR_37353 val='|cffdcb496Ярость берсерка|r'
+  ubertips:
+    ubertip1: sid=37363 raw=TRIGSTR_37363 val='Ускоряет атаку на <w2aA,DataA1,%>% и передвижение на <w2aA,DataB1,%>% на <w2aA,Dur1> сек.'
+    ubertip2: sid=37354 raw=TRIGSTR_37354 val='Ускоряет атаку на <w2aA,DataA1,%>% и передвижение на <w2aA,DataB1,%>% на <w2aA,Dur1> сек.'
+    ubertip3: sid=37355 raw=TRIGSTR_37355 val='Ускоряет атаку на <w2aA,DataA1,%>% и передвижение на <w2aA,DataB1,%>% на <w2aA,Dur1> сек.'
+    ubertip4: sid=37356 raw=TRIGSTR_37356 val='Ускоряет атаку на <w2aA,DataA1,%>% и передвижение на <w2aA,DataB1,%>% на <w2aA,Dur1> сек.'
+
+=== ABILITY w2aQ (|cffdcb496Разъедающее зелье|r) levels: 2 ===
+  raw_name: TRIGSTR_37366
+  researchtip: sid=TRIGSTR_37369 val='Изучить |cffdcb496Разъедающее зелье|r [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid="Бросает в цель сосуд с кислотой, который при попадании разбивается и поражает находящихся рядом врагов. |n|nОслабляет броню, наносит существенный периодический урон основной цели и немного меньше урона дополнительным целям. |nВремя действия: <ANab,Dur1> сек. |n|n|cffffcc001-й уровень:|r до <ANab,DataD1> урона/сек., -<ANab,DataC1> от брони. |n|cffffcc002-й уровень:|r до <ANab,DataD2> урона/сек., -<ANab,DataC2> от брони. |n|cffffcc003-й уровень:|r до <ANab,DataD3> урона/сек., -<ANab,DataC3> от брони." val='"Бросает в цель сосуд с кислотой, который при попадании разбивается и поражает находящихся рядом врагов. |n|nОслабляет броню, наносит существенный периодический урон основной цели и немного меньше урона дополнительным целям. |nВремя действия: <ANab,Dur1> сек. |n|n|cffffcc001-й уровень:|r до <ANab,DataD1> урона/сек., -<ANab,DataC1> от брони. |n|cffffcc002-й уровень:|r до <ANab,DataD2> урона/сек., -<ANab,DataC2> от брони. |n|cffffcc003-й уровень:|r до <ANab,DataD3> урона/сек., -<ANab,DataC3> от брони."'
+  tips:
+    tip1: sid=37367 raw=TRIGSTR_37367 val='|cffdcb496Разъедающее зелье|r [|cffffcc001-й уровень|r]'
+    tip2: sid=37368 raw=TRIGSTR_37368 val='|cffdcb496Разъедающее зелье|r [|cffffcc002-й уровень|r]'
+  ubertips:
+    ubertip1: sid=None raw="Бросает в цель сосуд с кислотой, который при попадании разбивается и поражает находящихся рядом врагов. |n|nОслабляет броню на <ANab,DataC1>, наносит <ANab,DataD1> урона/сек. основной цели и немного меньше урона дополнительным целям. |nВремя действия: <ANab,Dur1> сек." val='"Бросает в цель сосуд с кислотой, который при попадании разбивается и поражает находящихся рядом врагов. |n|nОслабляет броню на <ANab,DataC1>, наносит <ANab,DataD1> урона/сек. основной цели и немного меньше урона дополнительным целям. |nВремя действия: <ANab,Dur1> сек."'
+    ubertip2: sid=None raw="Бросает в цель сосуд с кислотой, который при попадании разбивается и поражает находящихся рядом врагов. |n|nОслабляет броню на <ANab,DataC2>, наносит <ANab,DataD2> урона/сек. основной цели и немного меньше урона дополнительным целям. |nВремя действия: <ANab,Dur2> сек." val='"Бросает в цель сосуд с кислотой, который при попадании разбивается и поражает находящихся рядом врагов. |n|nОслабляет броню на <ANab,DataC2>, наносит <ANab,DataD2> урона/сек. основной цели и немного меньше урона дополнительным целям. |nВремя действия: <ANab,Dur2> сек."'
+
+=== ABILITY w2aW (|cffdcb496Стрелы тьмы|r) levels: 4 ===
+  raw_name: TRIGSTR_37370
+  researchtip: sid=TRIGSTR_37371 val='Изучить |cffdcb496Стрелы тьмы|r [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid="Выпускает стаю нетопырей, атакующих врагов. |n|n|cffffcc001-й уровень:|r <AUcs,DataA1> урона каждой цели. |n|cffffcc002-й уровень:|r <AUcs,DataA2> урона каждой цели. |n|cffffcc003-й уровень:|r <AUcs,DataA3> урона каждой цели." val='"Выпускает стаю нетопырей, атакующих врагов. |n|n|cffffcc001-й уровень:|r <AUcs,DataA1> урона каждой цели. |n|cffffcc002-й уровень:|r <AUcs,DataA2> урона каждой цели. |n|cffffcc003-й уровень:|r <AUcs,DataA3> урона каждой цели."'
+  tips:
+    tip1: sid=37372 raw=TRIGSTR_37372 val='|cffdcb496Стрелы тьмы|r [|cffffcc001-й уровень|r]'
+    tip2: sid=37373 raw=TRIGSTR_37373 val='|cffdcb496Стрелы тьмы|r [|cffffcc002-й уровень|r]'
+    tip3: sid=37374 raw=TRIGSTR_37374 val='|cffdcb496Стрелы тьмы|r [|cffffcc003-й уровень|r]'
+    tip4: sid=37375 raw=TRIGSTR_37375 val='|cffdcb496Стрелы тьмы|r [|cffffcc004-й уровень|r]'
+  ubertips:
+    ubertip1: sid=None raw="Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA1> урона врагам на своем пути." val='"Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA1> урона врагам на своем пути."'
+    ubertip2: sid=None raw="Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA2> урона врагам на своем пути." val='"Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA2> урона врагам на своем пути."'
+    ubertip3: sid=None raw="Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA3> урона врагам на своем пути." val='"Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA3> урона врагам на своем пути."'
+    ubertip4: sid=27451 raw=TRIGSTR_27451 val='Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA4> урона врагам на своем пути.'
+
+=== ABILITY w2aZ (|cffdcb496Аура гениальности|r) levels: 4 ===
+  raw_name: TRIGSTR_37378
+  researchtip: sid=Изучить «Ауру гениальности» [|cffffcc00%d-й уровень|r] val='Изучить «Ауру гениальности» [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid=Ускоряет регенерацию маны находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r незначительный бонус. |n|cffffcc002-й уровень:|r средний бонус.|n|cffffcc003-й уровень:|r значительный бонус. val='Ускоряет регенерацию маны находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r незначительный бонус. |n|cffffcc002-й уровень:|r средний бонус.|n|cffffcc003-й уровень:|r значительный бонус.'
+  tips:
+    tip1: sid=37379 raw=TRIGSTR_37379 val='|cffdcb496Аура Гениальности|r [|cffffcc001-й уровень|r]'
+    tip2: sid=37380 raw=TRIGSTR_37380 val='|cffdcb496Аура Гениальности|r [|cffffcc002-й уровень|r]'
+    tip3: sid=37381 raw=TRIGSTR_37381 val='|cffdcb496Аура Гениальности|r [|cffffcc003-й уровень|r]'
+    tip4: sid=37382 raw=TRIGSTR_37382 val='|cffdcb496Аура Гениальности|r [|cffffcc004-й уровень|r]'
+  ubertips:
+    ubertip1: sid=None raw="Ускоряет регенерацию маны находящихся рядом союзников." val='"Ускоряет регенерацию маны находящихся рядом союзников."'
+    ubertip2: sid=None raw="Ускоряет регенерацию маны находящихся рядом союзников." val='"Ускоряет регенерацию маны находящихся рядом союзников."'
+    ubertip3: sid=None raw="Ускоряет регенерацию маны находящихся рядом союзников." val='"Ускоряет регенерацию маны находящихся рядом союзников."'
+    ubertip4: sid=37383 raw=TRIGSTR_37383 val='Ускоряет регенерацию маны находящихся рядом союзников.'
+
+=== ABILITY w2ab (|cffdcb496Похищение жизни|r) levels: 1 ===
+  raw_name: TRIGSTR_37263
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=37264 raw=TRIGSTR_37264 val='|cffdcb496Похищение жизни|r'
+  ubertips:
+    ubertip1: sid=2926 raw=TRIGSTR_2926 val='Похищает 40 здоровья/сек. у врага. |nВремя действия: 8 сек.'
+
+=== ABILITY w2ac (|cffdcb496Замедление|r) levels: 1 ===
+  raw_name: TRIGSTR_36850
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=36849 raw=TRIGSTR_36849 val='|cffdcb496Замедление|r'
+  ubertips:
+    ubertip1: sid=37074 raw=TRIGSTR_37074 val='Замедляет атаку врага на 15% и передвижение на 30% на 20 сек. На героев действует 2 секунды.'
+
+=== ABILITY w2ad (|cffdcb496Вихрь клинков|r) levels: 4 ===
+  raw_name: TRIGSTR_37326
+  researchtip: sid=TRIGSTR_37327 val='Изучить |cffdcb496Вихрь клинков|r'
+  researchubertip: sid="Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам." val='"Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам."'
+  tips:
+    tip1: sid=37328 raw=TRIGSTR_37328 val='|cffdcb496Вихрь клинков|r'
+    tip2: sid=37329 raw=TRIGSTR_37329 val='|cffdcb496Вихрь клинков|r'
+    tip3: sid=37330 raw=TRIGSTR_37330 val='|cffdcb496Вихрь клинков|r'
+    tip4: sid=37331 raw=TRIGSTR_37331 val='|cffdcb496Вихрь клинков|r'
+  ubertips:
+    ubertip1: sid=None raw="Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur1> сек." val='"Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur1> сек."'
+    ubertip2: sid=37332 raw=TRIGSTR_37332 val='Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur1> сек.'
+    ubertip3: sid=37333 raw=TRIGSTR_37333 val='Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur1> сек.'
+    ubertip4: sid=37334 raw=TRIGSTR_37334 val='Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur1> сек.'
+
+=== ABILITY w2af (|cffdcb496Метание топоров|r) levels: 4 ===
+  raw_name: TRIGSTR_37336
+  researchtip: sid=TRIGSTR_37346 val='|cffdcb496Метание топоров|r'
+  researchubertip: sid=TRIGSTR_37347 val='Метает топоры по каждому юниту в выбранной области.'
+  tips:
+    tip1: sid=37337 raw=TRIGSTR_37337 val='|cffdcb496Метание топоров|r'
+    tip2: sid=37338 raw=TRIGSTR_37338 val='|cffdcb496Метание топоров|r'
+    tip3: sid=37339 raw=TRIGSTR_37339 val='|cffdcb496Метание топоров|r'
+    tip4: sid=37340 raw=TRIGSTR_37340 val='|cffdcb496Метание топоров|r'
+  ubertips:
+    ubertip1: sid=37341 raw=TRIGSTR_37341 val='Метает топоры по каждому юниту в выбранной области.'
+    ubertip2: sid=37342 raw=TRIGSTR_37342 val='Метает топоры по каждому юниту в выбранной области.'
+    ubertip3: sid=37343 raw=TRIGSTR_37343 val='Метает топоры по каждому юниту в выбранной области.'
+    ubertip4: sid=37344 raw=TRIGSTR_37344 val='Метает топоры по каждому юниту в выбранной области.'
+
+=== ABILITY w2ag (|cffdcb496Сильный удар|r) levels: 1 ===
+  raw_name: TRIGSTR_37284
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=37285 raw=TRIGSTR_37285 val='|cffdcb496Сильный удар|r'
+  ubertips:
+    ubertip1: sid=37286 raw=TRIGSTR_37286 val='С 15%-й вероятностью атака нанесет на 20 больше урона и оглушит цель на 2 сек.'
+
+=== ABILITY w2ah (|cffdcb496Аура меткости|r) levels: 4 ===
+  raw_name: TRIGSTR_37314
+  researchtip: sid=TRIGSTR_37315 val='Изучить |cffdcb496Аура меткости|r [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid=TRIGSTR_37316 val='Увеличивает урон от дистанционных атак находящихся рядом союзников.'
+  tips:
+    tip1: sid=37317 raw=TRIGSTR_37317 val='|cffdcb496Аура меткости|r [|cffffcc001-й уровень|r]'
+    tip2: sid=37318 raw=TRIGSTR_37318 val='|cffdcb496Аура меткости|r [|cffffcc002-й уровень|r]'
+    tip3: sid=37319 raw=TRIGSTR_37319 val='|cffdcb496Аура меткости|r [|cffffcc003-й уровень|r]'
+    tip4: sid=37320 raw=TRIGSTR_37320 val='|cffdcb496Аура меткости|r [|cffffcc004-й уровень|r]'
+  ubertips:
+    ubertip1: sid=37324 raw=TRIGSTR_37324 val='+<w2ah,DataA1,%>% к урону от дальнобойных атак находящихся рядом союзников.'
+    ubertip2: sid=37321 raw=TRIGSTR_37321 val='+<w2ah,DataA1,%>% к урону от дальнобойных атак находящихся рядом союзников.'
+    ubertip3: sid=37322 raw=TRIGSTR_37322 val='+<w2ah,DataA1,%>% к урону от дальнобойных атак находящихся рядом союзников.'
+    ubertip4: sid=37323 raw=TRIGSTR_37323 val='+<w2ah,DataA1,%>% к урону от дальнобойных атак находящихся рядом союзников.'
+
+=== ABILITY w2ak (|cffdcb496Аура выносливости|r) levels: 4 ===
+  raw_name: TRIGSTR_37300
+  researchtip: sid=Изучить «Ауру выносливости» [|cffffcc00%d-й уровень|r] val='Изучить «Ауру выносливости» [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid="Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки. |n|cffffcc003-й уровень:|r +<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки." val='"Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки. |n|cffffcc003-й уровень:|r +<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки."'
+  tips:
+    tip1: sid=37301 raw=TRIGSTR_37301 val='|cffdcb496Аура выносливости|r [|cffffcc001-й уровень|r]'
+    tip2: sid=37302 raw=TRIGSTR_37302 val='|cffdcb496Аура выносливости|r [|cffffcc002-й уровень|r]'
+    tip3: sid=37303 raw=TRIGSTR_37303 val='|cffdcb496Аура выносливости|r [|cffffcc003-й уровень|r]'
+    tip4: sid=37304 raw=TRIGSTR_37304 val='|cffdcb496Аура выносливости|r [|cffffcc004-й уровень|r]'
+  ubertips:
+    ubertip1: sid=None raw="+<AOae,DataA1,%>% к скорости передвижения и +<AOae,DataB1,%>% к скорости атаки находящихся рядом союзников." val='"+<AOae,DataA1,%>% к скорости передвижения и +<AOae,DataB1,%>% к скорости атаки находящихся рядом союзников."'
+    ubertip2: sid=None raw="+<AOae,DataA2,%>% к скорости передвижения и +<AOae,DataB2,%>% к скорости атаки находящихся рядом союзников." val='"+<AOae,DataA2,%>% к скорости передвижения и +<AOae,DataB2,%>% к скорости атаки находящихся рядом союзников."'
+    ubertip3: sid=None raw="+<AOae,DataA3,%>% к скорости передвижения и +<AOae,DataB3,%>% к скорости атаки находящихся рядом союзников." val='"+<AOae,DataA3,%>% к скорости передвижения и +<AOae,DataB3,%>% к скорости атаки находящихся рядом союзников."'
+    ubertip4: sid=None raw=None val=None
+
+=== ABILITY w2al (|cffdcb496Держать строй|r) levels: 4 ===
+  raw_name: TRIGSTR_37289
+  researchtip: sid=TRIGSTR_37297 val='|cffdcb496Держать строй|r'
+  researchubertip: sid=TRIGSTR_37298 val='Увеличивает броню и регенерацию союзников рядом на 20 секунд.'
+  tips:
+    tip1: sid=37288 raw=TRIGSTR_37288 val='|cffdcb496Держать строй|r'
+    tip2: sid=37291 raw=TRIGSTR_37291 val='|cffdcb496Держать строй|r'
+    tip3: sid=37290 raw=TRIGSTR_37290 val='|cffdcb496Держать строй|r'
+    tip4: sid=37292 raw=TRIGSTR_37292 val='|cffdcb496Держать строй|r'
+  ubertips:
+    ubertip1: sid=37293 raw=TRIGSTR_37293 val='Увеличивает броню и регенерацию союзников рядом на 20 секунд.'
+    ubertip2: sid=37294 raw=TRIGSTR_37294 val='Увеличивает броню и регенерацию союзников рядом на 20 секунд.'
+    ubertip3: sid=37295 raw=TRIGSTR_37295 val='Увеличивает броню и регенерацию союзников рядом на 20 секунд.'
+    ubertip4: sid=37296 raw=TRIGSTR_37296 val='Увеличивает броню и регенерацию союзников рядом на 20 секунд.'
+
+=== ABILITY w2am (|cffdcb496Отработанные навыки|r) levels: 1 ===
+  raw_name: TRIGSTR_37269
+  researchtip: sid=Изучить «Пьяного мастера» [|cffffcc00%d-й уровень|r] val='Изучить «Пьяного мастера» [|cffffcc00%d-й уровень|r]'
+  researchubertip: sid="Дает шанс уклониться от атаки и <ANdb,DataA1>%-й шанс нанести больше урона. |n|n|cffffcc001-й уровень:|r <ANdb,DataD1,%>%-й шанс уклониться, <ANdb,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <ANdb,DataD2,%>%-й шанс уклониться, <ANdb,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <ANdb,DataD3,%>%-й шанс уклониться, <ANdb,DataB3>-кратный урон." val='"Дает шанс уклониться от атаки и <ANdb,DataA1>%-й шанс нанести больше урона. |n|n|cffffcc001-й уровень:|r <ANdb,DataD1,%>%-й шанс уклониться, <ANdb,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <ANdb,DataD2,%>%-й шанс уклониться, <ANdb,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <ANdb,DataD3,%>%-й шанс уклониться, <ANdb,DataB3>-кратный урон."'
+  tips:
+    tip1: sid=37270 raw=TRIGSTR_37270 val='|cffdcb496Отработанные навыки|r'
+  ubertips:
+    ubertip1: sid=37271 raw=TRIGSTR_37271 val='Дает 5-й шанс уклониться от атаки и 5%-й шанс нанести 2-кратный урон.'
+
+=== ABILITY w2an (|cffdcb496Ярость|r) levels: 1 ===
+  raw_name: TRIGSTR_37266
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=37267 raw=TRIGSTR_37267 val='|cffdcb496Ярость|r'
+  ubertips:
+    ubertip1: sid=27227 raw=TRIGSTR_27227 val='Ускоряет атаку на 20% и передвижение на 15% на 9 сек.'
+
+=== ABILITY w2ap (|cffdcb496Резня слабаков|r) levels: 2 ===
+  raw_name: TRIGSTR_37306
+  researchtip: sid=TRIGSTR_37311 val='|cffdcb496Резня слабаков|r'
+  researchubertip: sid=TRIGSTR_37312 val='Увеличивает урон от атак по юнитам не героям.'
+  tips:
+    tip1: sid=37307 raw=TRIGSTR_37307 val='|cffdcb496Резня слабаков|r'
+    tip2: sid=37308 raw=TRIGSTR_37308 val='|cffdcb496Резня слабаков|r'
+  ubertips:
+    ubertip1: sid=37310 raw=TRIGSTR_37310 val='3-кратно увеличивает урон от атак по юнитам не героям.'
+    ubertip2: sid=32681 raw=TRIGSTR_32681 val='4-кратно увеличивает урон от атак по юнитам не героям.'
+
+=== ABILITY w2as (|cffdcb496Ракетный обстел|r) levels: 1 ===
+  raw_name: TRIGSTR_37272
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=37273 raw=TRIGSTR_37273 val='|cffdcb496Ракетный обстел|r'
+  ubertips:
+    ubertip1: sid=None raw=Поджигает находящихся рядом врагов. val='Поджигает находящихся рядом врагов.'
+
+=== ABILITY w2av (|cffdcb496Сфера разрушения|r) levels: 1 ===
+  raw_name: TRIGSTR_37259
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=37260 raw=TRIGSTR_37260 val='|cffdcb496Сфера разрушения|r'
+  ubertips:
+    ubertip1: sid=37261 raw=TRIGSTR_37261 val='+20 к урону от атак юнита. Атаки наносят урон по области.'
+
+=== ABILITY w2ax (|cffdcb496Рассеивание заклинаний|r) levels: 1 ===
+  raw_name: TRIGSTR_35606
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=35784 raw=TRIGSTR_35784 val='|cffdcb496Рассеивание заклинаний|r'
+  ubertips:
+    ubertip1: sid=36762 raw=TRIGSTR_36762 val='Снимает положительные эффекты с войск в указанной области. Наносит 200 урона призванным юнитам.'
+
+=== ABILITY w2az (|cffdcb496Исцеление|r) levels: 1 ===
+  raw_name: TRIGSTR_31629
+  researchtip: sid=None val=None
+  researchubertip: sid=None val=None
+  tips:
+    tip1: sid=30004 raw=TRIGSTR_30004 val='|cffdcb496Исцеление|r'
+  ubertips:
+    ubertip1: sid=None raw=Восполняет здоровье раненому союзнику. Не действует на технику. val='Восполняет здоровье раненому союзнику. Не действует на технику.'
+

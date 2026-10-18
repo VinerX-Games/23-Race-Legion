@@ -1,0 +1,309 @@
+{
+  "scope": "Пандарены (Pandarens): категория 1 — Здания (15 зданий)",
+  "buildings_count": 15,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "pa23",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36638,
+          "after": "|cffe4cfa3Ратуша Синего Зяблика|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35288,
+          "after": "|cffe4cfa3Ратуша Синего Зяблика|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 2214,
+          "after": "|cffa6afb8ЗДАНИЕ:|r |cffced4daГлавное здание первой ступени. Обеспечивает добычу ресурсов и начальный лимит пищи.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|r|cffced4da|n- |cffa9c7deРабочий Пандаренов|cffced4da: базовый рабочий и строитель.|n|n|cffa6afb8Исследования:|r|cffced4da|n- |cffa9c7deУсиление Мастеров Земли|cffced4da|n- |cffa9c7deУсиление Мастеров Огня|cffced4da|n- |cffa9c7deИзучение Хмелеварения|cffced4da|n- |cffa9c7deИзучить Геомантию|cffced4da.|n|n|cffa6afb8Улучшение:|r|cffced4da|n- |cffa9c7deКрепость Четырёх Мастеров|cffced4da: требует не менее 20 ферм или рыбацких домов.|r"
+        }
+      ]
+    },
+    {
+      "id": "pa24",
+      "hotkey": "U",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3144,
+          "after": "|cffe4cfa3Крепость Четырёх Мастеров|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35292,
+          "after": "|cffe4cfa3Крепость Четырёх Мастеров|r (|cffffffffU|r)"
+        }
+      ]
+    },
+    {
+      "id": "pa25",
+      "hotkey": "U",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3145,
+          "after": "|cffe4cfa3Цитадель Равновесия|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35294,
+          "after": "|cffe4cfa3Цитадель Равновесия|r (|cffffffffU|r)"
+        }
+      ]
+    },
+    {
+      "id": "pa26",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36639,
+          "after": "|cffe4cfa3Ферма|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 2241,
+          "after": "|cffa6afb8ЗДАНИЕ:|r |cffced4daОбеспечивает армию пандаренов провизией. Увеличение числа ферм усиливает здоровье воинов по расовой способности.|n|nДаёт |cffffffff20|cffced4da ед. лимита пищи.|r"
+        }
+      ]
+    },
+    {
+      "id": "pa27",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36640,
+          "after": "|cffe4cfa3Алтарь Древних Мастеров|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35296,
+          "after": "|cffe4cfa3Алтарь Древних Мастеров|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 2283,
+          "after": "|cffa6afb8ЗДАНИЕ:|r |cffced4daСлужит для призыва и воскрешения павших героев расы Пандаренов.|n|n|cffa6afb8Герои:|r|cffced4da|n- |cffa9c7deЛидер Шадо-Пан|cffced4da: герой поддержки и призыва подкреплений.|n- |cffa9c7deМастер Железной Лапы|cffced4da: несокрушимый защитник ближнего боя с каменной стойкостью.|n- |cffa9c7deВысший Монах|cffced4da: повелитель бури и целитель союзников.|n- |cffa9c7deТанцующий с Ветром|cffced4da: стремительный мастер клинка со скрытными атаками.|r"
+        }
+      ]
+    },
+    {
+      "id": "pa28",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36641,
+          "after": "|cffe4cfa3Палаты мастеров|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35298,
+          "after": "|cffe4cfa3Палаты мастеров|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 2285,
+          "after": "|cffa6afb8ЗДАНИЕ:|r |cffced4daБазовое военное сооружение. Обучает пехоту, стрелков, всадников и элитных мастеров.|n|n|cffa6afb8Обучает:|r|cffced4da|n- |cffa9c7deВоин Пандаренов|cffced4da: базовый боец ближнего боя.|n- |cffa9c7deЛучник Пандаренов|cffced4da: стрелок дальнего боя с грозовыми стрелами.|n- |cffa9c7deВсадник Пандарен|cffced4da: мобильный боец кавалерии.|n- |cffa9c7deМастер Геомант|cffced4da: маг земли и целитель (требует «Изучить Геомантию»).|n- |cffa9c7deХмелевар|cffced4da: элитный боец-гибрид (требует «Изучение Хмелеварения»).|n|n|cffa6afb8Исследования:|r|cffced4da|n- |cffa9c7deСделать Геомантов Адептами|cffced4da|n- |cffa9c7deСделать Хмелеваров адептами|cffced4da|n- |cffa9c7deУтяжелённая Рукоять|cffced4da|n- |cffa9c7deНефритовые Доспехи|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "pa30",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36642,
+          "after": "|cffe4cfa3Башня размышления|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35679,
+          "after": "|cffe4cfa3Башня размышления|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 2320,
+          "after": "|cffa6afb8ЗДАНИЕ:|r |cffced4daАкадемия и кузница пандаренов. Служит для исследования улучшений атаки, брони и заготовки древесины.|n|n|cffa6afb8Исследования:|r|cffced4da|n- |cffa9c7deЖелезные Мечи|cffced4da: повышает урон бойцов ближнего боя (уровни 1–6).|n- |cffa9c7deЖелезная Броня|cffced4da: повышает защиту бойцов ближнего боя (уровни 1–6).|n- |cffa9c7deСтальные Наконечники|cffced4da: повышает урон стрелков и артиллерии (уровни 1–6).|n- |cffa9c7deДоспехи из кожи|cffced4da: повышает защиту стрелков и артиллерии (уровни 1–6).|n- |cffa9c7deУлучшенные топоры|cffced4da: увеличивает добычу древесины (уровни 1–6).|r"
+        }
+      ]
+    },
+    {
+      "id": "pa31",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36643,
+          "after": "|cffe4cfa3Оружейная|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35302,
+          "after": "|cffe4cfa3Оружейная|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 2322,
+          "after": "|cffa6afb8ЗДАНИЕ:|r |cffced4daПодготавливает тяжелую пехоту, стражей врат и осадную артиллерию пандаренов.|n|n|cffa6afb8Обучает:|r|cffced4da|n- |cffa9c7deВоин Нефритовой Стражи|cffced4da: бронированный тяжелый пехотинец.|n- |cffa9c7deСтражник Нефритовых Врат|cffced4da: защитник с невосприимчивостью к заклинаниям.|n- |cffa9c7deОрудийный Расчёт|cffced4da: дальнобойная осадная мортира.|n|n|cffa6afb8Исследования:|r|cffced4da|n- |cffa9c7deДрессировка Животных|cffced4da|n- |cffa9c7deДлинные Луки|cffced4da|n- |cffa9c7deЗащита Ци|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "pa32",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36644,
+          "after": "|cffe4cfa3Вместилище Стихий|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35304,
+          "after": "|cffe4cfa3Вместилище Стихий|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 2369,
+          "after": "|cffa6afb8ЗДАНИЕ:|r |cffced4daСвятилище духов стихий. Обучает мастеров огня, земли и бури, а также развивает их способности.|n|n|cffa6afb8Обучает:|r|cffced4da|n- |cffa9c7deМастер Огня|cffced4da: штурмовик ближнего боя с огненной аурой.|n- |cffa9c7deМастер Земли|cffced4da: стойкий боец ближнего боя с рассекающими ударами.|n- |cffa9c7deМастер Бури|cffced4da: маг дальнего боя с вихрями и раздвоенной молнией.|n|n|cffa6afb8Исследования:|r|cffced4da|n- |cffa9c7deПосвящение Мастеров Огня|cffced4da|n- |cffa9c7deПосвящение Мастеров Земли|cffced4da|n- |cffa9c7deПосвящение Мастеров Бури|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "pa33",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36645,
+          "after": "|cffe4cfa3Обитель Монахов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35306,
+          "after": "|cffe4cfa3Обитель Монахов|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 2371,
+          "after": "|cffa6afb8ЗДАНИЕ:|r |cffced4daМонастырь боевых искусств. Обучает монахов Инь и Ян, стражей храма и мастеров стиля Пьяной Лапы.|n|n|cffa6afb8Обучает:|r|cffced4da|n- |cffa9c7deМонах Инь|cffced4da: маг поддержки с рассеиванием заклинаний и исцелением.|n- |cffa9c7deМонах Ян|cffced4da: монах ярости и боевого баланса.|n- |cffa9c7deМастер Пьяной Лапы|cffced4da: боец ближнего боя с оглушающими ударами.|n- |cffa9c7deСтраж Храма|cffced4da: элитный защитник с аурой регенерации маны.|n|n|cffa6afb8Исследования:|r|cffced4da|n- |cffa9c7deСделать Монахов Адептами|cffced4da|n- |cffa9c7deПосвящение Монахов Ян в адепты|cffced4da|n- |cffa9c7deСекреты Древних Мастеров|cffced4da|n- |cffa9c7deУкрепление Духа|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "pa34",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 2874,
+          "after": "|cffe4cfa3Защитная Башня Пандаренов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 20695,
+          "after": "|cffe4cfa3Защитная Башня Пандаренов|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 2406,
+          "after": "|cffa6afb8ЗДАНИЕ:|r |cffced4daСкорострельная оборонительная башня, обстреливающая приближающихся противников.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NZ",
+      "hotkey": "X",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36654,
+          "after": "|cffe4cfa3Рыбацкий дом|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35959,
+          "after": "|cffe4cfa3Рыбацкий дом|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 3593,
+          "after": "|cffa6afb8ЗДАНИЕ:|r |cffced4daОбеспечивает припасами и свежей рыбой армию пандаренов. Засчитывается для перехода на следующие ступени цитадели.|n|nДаёт |cffffffff20|cffced4da ед. лимита пищи.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0P5",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36646,
+          "after": "|cffe4cfa3Башня Пандаренов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35309,
+          "after": "|cffe4cfa3Башня Пандаренов|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 25066,
+          "after": "|cffa6afb8ЗДАНИЕ:|r |cffced4daБазовое оборонительное сооружение и защитная стена пандаренов.|n|n|cffa6afb8Улучшение:|r|cffced4da|n- |cffa9c7deЗащитная Башня Пандаренов|cffced4da: скорострельная башня.|n- |cffa9c7deМагическая Башня Пандаренов|cffced4da: башня с магическим уроном.|n- |cffa9c7deОсадная Башня Пандаренов|cffced4da: тяжелая башня с уроном по площади.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0P3",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 9508,
+          "after": "|cffe4cfa3Магическая Башня Пандаренов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22645,
+          "after": "|cffe4cfa3Магическая Башня Пандаренов|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 20700,
+          "after": "|cffa6afb8ЗДАНИЕ:|r |cffced4daОборонительная башня, поражающая врагов концентрированными зарядами энергии Ци.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0P4",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22644,
+          "after": "|cffe4cfa3Осадная Башня Пандаренов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 25064,
+          "after": "|cffe4cfa3Осадная Башня Пандаренов|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 22988,
+          "after": "|cffa6afb8ЗДАНИЕ:|r |cffced4daТяжелая орудийная башня, поражающая врагов разрывными пороховыми зарядами по площади.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    }
+  ]
+}

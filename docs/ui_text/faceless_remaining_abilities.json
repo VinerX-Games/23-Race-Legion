@@ -1,0 +1,376 @@
+{
+  "scope": "Безликие: 17 строительных, вспомогательных и связанных с Йогг`Сароном способностей",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "in_game_checked": false,
+  "strings": [
+    {
+      "rawcode": "A11G",
+      "field": "name",
+      "reference_before": "TRIGSTR_33261",
+      "before": "|cffd7b4f5Породить придаток|r",
+      "after": "|cffe4cfa3Порождение придатка|r"
+    },
+    {
+      "rawcode": "A11G",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_33262",
+      "before": "|cffd7b4f5Породить придаток|r",
+      "after": "|cffe4cfa3Порождение придатка|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A11G",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_24886",
+      "before": "Бесплатно создает инком-здание.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бесплатно создаёт |cffa9c7deМалое порождение|cffced4da в выбранном месте. Оно увеличивает доход владельца и поддерживает союзников аурой. Восстановление: |cffffffff60|cffced4da сек.|r"
+    },
+    {
+      "rawcode": "A06M",
+      "field": "name",
+      "reference_before": "TRIGSTR_40145",
+      "before": "|cffd7b4f5Дымка бездны|r",
+      "after": "|cffe4cfa3Дымка бездны|r"
+    },
+    {
+      "rawcode": "A06M",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_40252",
+      "before": "|cffd7b4f5Дымка бездны|r",
+      "after": "|cffe4cfa3Дымка бездны|r"
+    },
+    {
+      "rawcode": "A06M",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_40250",
+      "before": "|cffd7b4f5Увеличивает регенерацию здоровья на 150%, а скорость передвижения на 6%|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость передвижения союзников в радиусе |cffffffff900|cffced4da на |cffc8e0876%|cffced4da, восстановление здоровья — на |cffc8e0871,5|cffced4da ед. в секунду. Действует также на источник ауры.|r"
+    },
+    {
+      "rawcode": "A0DW",
+      "field": "name",
+      "reference_before": "Сильный удар",
+      "before": "Сильный удар",
+      "after": "|cffe4cfa3Сильный удар|r"
+    },
+    {
+      "rawcode": "A0DW",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_9888",
+      "before": "Сильный удар",
+      "after": "|cffe4cfa3Сильный удар|r"
+    },
+    {
+      "rawcode": "A0DW",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_9887",
+      "before": "С 18%-й вероятностью атака нанесет на 30 больше урона и оглушит цель на 1 сек. Не оглушает героев.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff12%|cffced4da атака наносит |cffffffff10|cffced4da дополнительного урона и оглушает цель на |cffffffff1|cffced4da сек. Не оглушает героев.|r"
+    },
+    {
+      "rawcode": "A0PB",
+      "field": "name",
+      "reference_before": "TRIGSTR_36602",
+      "before": "|cffd7b4f5Кошмар|r",
+      "after": "|cffe4cfa3Кошмар|r"
+    },
+    {
+      "rawcode": "A0PB",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_31692",
+      "before": "|cffd7b4f5Кошмар|r",
+      "after": "|cffe4cfa3Кошмар|r"
+    },
+    {
+      "rawcode": "A0PB",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_37059",
+      "before": "Заставляет врагов погрузится в ужасный кошмар, который ментально уничтожает врагов.\n|cffe1d7005 урона в сек, оглушает Героя - 5, солдата - 10.|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Оглушает органического противника на |cffffffff10|cffced4da сек.; героя — на |cffffffff5|cffced4da сек. Само оглушение не наносит урона.|r"
+    },
+    {
+      "rawcode": "A0RS",
+      "field": "name",
+      "reference_before": "TRIGSTR_39663",
+      "before": "|cffd7b4f5Рассекающий удар",
+      "after": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "rawcode": "A0RS",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_39664",
+      "before": "|cffd7b4f5Рассекающий удар ",
+      "after": "|cffe4cfa3Рассекающий удар|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A0RS",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_39643",
+      "before": "Атаки наносят урон сразу нескольким целям. <ANca,DataA1,%>% урона по области. ",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки наносят окружающим основную цель наземным врагам |cffffffff40%|cffced4da урона от атаки. Радиус: |cffffffff250|cffced4da.|r"
+    },
+    {
+      "rawcode": "ACce",
+      "field": "name",
+      "reference_before": "Рассекающий удар",
+      "before": "Рассекающий удар",
+      "after": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "rawcode": "ACce",
+      "field": "tip1",
+      "reference_before": "Рассекающий удар",
+      "before": "Рассекающий удар",
+      "after": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "rawcode": "ACce",
+      "field": "ubertip1",
+      "reference_before": "\"Бьет с огромной силой, нанося <ACce,DataA1,%>% урона врагам рядом с основной целью.\"",
+      "before": "\"Бьет с огромной силой, нанося <ACce,DataA1,%>% урона врагам рядом с основной целью.\"",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки наносят окружающим основную цель наземным врагам |cffffffff7%|cffced4da урона от атаки. Радиус: |cffffffff150|cffced4da.|r"
+    },
+    {
+      "rawcode": "ACtn",
+      "field": "name",
+      "reference_before": "Порождение щупальца",
+      "before": "Порождение щупальца",
+      "after": "|cffe4cfa3Порождение щупальца|r"
+    },
+    {
+      "rawcode": "ACtn",
+      "field": "tip1",
+      "reference_before": "Порождение щупальца",
+      "before": "Порождение щупальца",
+      "after": "|cffe4cfa3Порождение щупальца|r (|cffffffffT|r)"
+    },
+    {
+      "rawcode": "ACtn",
+      "field": "ubertip1",
+      "reference_before": "Поражает врага могучим щупальцем.",
+      "before": "Поражает врага могучим щупальцем.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает одно |cffa9c7deЩупальце|cffced4da на |cffffffff180|cffced4da сек. Щупальце атакует наземные цели.|r"
+    },
+    {
+      "rawcode": "A16Q",
+      "field": "name",
+      "reference_before": "TRIGSTR_3134",
+      "before": "|cffd7b4f5Смертельная свзяь",
+      "after": "|cffe4cfa3Смертельная связь|r"
+    },
+    {
+      "rawcode": "A16Q",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_3136",
+      "before": "|cffd7b4f5Смертельная свзяь",
+      "after": "|cffe4cfa3Смертельная связь|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A16Q",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_40019",
+      "before": "Связывает жизни 60 врагов между собой, от чего урон по ним становится больше",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Связывает до |cffffffff60|cffced4da органических наземных врагов в радиусе |cffffffff500|cffced4da на |cffffffff75|cffced4da сек. |cffffffff100%|cffced4da получаемого ими урона перераспределяется между связанными целями.|r"
+    },
+    {
+      "rawcode": "A16R",
+      "field": "name",
+      "reference_before": "TRIGSTR_27813",
+      "before": "|cffd7b4f5Божественное виденье|r",
+      "after": "|cffe4cfa3Божественное видение|r"
+    },
+    {
+      "rawcode": "A16R",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_27814",
+      "before": "|cffd7b4f5Божественное виденье|r",
+      "after": "|cffe4cfa3Божественное видение|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A16R",
+      "field": "ubertip1",
+      "reference_before": "\"Открывает обзор в указанной области на <AOfs,Dur1> сек. Обнаруживает невидимые войска.\"",
+      "before": "\"Открывает обзор в указанной области на <AOfs,Dur1> сек. Обнаруживает невидимые войска.\"",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает обзор в выбранной области радиусом |cffffffff99999|cffced4da на |cffffffff12|cffced4da сек. Обнаруживает невидимые войска.|r"
+    },
+    {
+      "rawcode": "A16T",
+      "field": "name",
+      "reference_before": "TRIGSTR_27820",
+      "before": "|cffd7b4f5Покровительство Бога|r",
+      "after": "|cffe4cfa3Покровительство бога|r"
+    },
+    {
+      "rawcode": "A16T",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_40017",
+      "before": "|cffd7b4f5Покровительство Бога|r",
+      "after": "|cffe4cfa3Покровительство бога|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A16T",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_27821",
+      "before": "Восполняет союзнику 4000 здоровья и 4000 маны за 12 сек.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da За |cffffffff12|cffced4da сек. восстанавливает дружественной или нейтральной органической цели |cffc8e0874000|cffced4da здоровья и |cffc8e0874000|cffced4da маны.|r"
+    },
+    {
+      "rawcode": "A0T7",
+      "field": "name",
+      "reference_before": "Порождение щупальца",
+      "before": "Порождение щупальца",
+      "after": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+    },
+    {
+      "rawcode": "A0T7",
+      "field": "tip1",
+      "reference_before": "Порождение щупальца",
+      "before": "Порождение щупальца",
+      "after": "|cffe4cfa3Щупальце Йогг`Сарона|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A0T7",
+      "field": "ubertip1",
+      "reference_before": "Поражает врага могучим щупальцем.",
+      "before": "Поражает врага могучим щупальцем.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает одно |cffa9c7deЩупальце Йогг`Сарона|cffced4da на |cffffffff30|cffced4da сек. Оно атакует наземные цели и владеет «Рассекающим ударом».|r"
+    },
+    {
+      "rawcode": "A1NA",
+      "field": "name",
+      "reference_before": "TRIGSTR_36755",
+      "before": "Призыв Йогг 2",
+      "after": "|cffe4cfa3Призыв бессмертных стражей|r"
+    },
+    {
+      "rawcode": "A1NA",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_39969",
+      "before": "Призыв Йогг 2",
+      "after": "|cffe4cfa3Призыв бессмертных стражей|r"
+    },
+    {
+      "rawcode": "A1NA",
+      "field": "ubertip1",
+      "reference_before": "\"Призывает <AOsf,DataB1> призрачных волков с <osw1,realHP> здоровья, наносящих <osw1,mindmg1>-<osw1,maxdmg1> урона. |nВремя существования: <AOsf,Dur1> сек. |n|n|cffffcc00Волки атакуют наземные цели.|r\"",
+      "before": "\"Призывает <AOsf,DataB1> призрачных волков с <osw1,realHP> здоровья, наносящих <osw1,mindmg1>-<osw1,maxdmg1> урона. |nВремя существования: <AOsf,Dur1> сек. |n|n|cffffcc00Волки атакуют наземные цели.|r\"",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff8|cffced4da |cffa9c7deБессмертных стражей|cffced4da на |cffffffff60|cffced4da сек. Они атакуют наземные цели.|r"
+    },
+    {
+      "rawcode": "A1NB",
+      "field": "name",
+      "reference_before": "TRIGSTR_39972",
+      "before": "Призыв Йогг",
+      "after": "|cffe4cfa3Призыв сущностей Бездны|r"
+    },
+    {
+      "rawcode": "A1NB",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_39973",
+      "before": "Призыв Йогг 2",
+      "after": "|cffe4cfa3Призыв сущностей Бездны|r"
+    },
+    {
+      "rawcode": "A1NB",
+      "field": "ubertip1",
+      "reference_before": "\"Призывает <AOsf,DataB1> призрачных волков с <osw1,realHP> здоровья, наносящих <osw1,mindmg1>-<osw1,maxdmg1> урона. |nВремя существования: <AOsf,Dur1> сек. |n|n|cffffcc00Волки атакуют наземные цели.|r\"",
+      "before": "\"Призывает <AOsf,DataB1> призрачных волков с <osw1,realHP> здоровья, наносящих <osw1,mindmg1>-<osw1,maxdmg1> урона. |nВремя существования: <AOsf,Dur1> сек. |n|n|cffffcc00Волки атакуют наземные цели.|r\"",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff15|cffced4da |cffa9c7deМогущественных Сущностей бездны|cffced4da на |cffffffff60|cffced4da сек. Они атакуют наземные цели.|r"
+    },
+    {
+      "rawcode": "A1NC",
+      "field": "name",
+      "reference_before": "TRIGSTR_38930",
+      "before": "|cffd7b4f5Портал в Безду",
+      "after": "|cffe4cfa3Портал в Бездну|r"
+    },
+    {
+      "rawcode": "A1NC",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_39977",
+      "before": "|cffd7b4f5Портал в Безду",
+      "after": "|cffe4cfa3Портал в Бездну|r (|cffffffffD|r)"
+    },
+    {
+      "rawcode": "A1NC",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_39978",
+      "before": "Открывает портал, и выпусскат Огромную Тварь из бездны.\n\n|cffff0000ВНИМЕНИЕ НЕ ПРЕРЫВАТЬ ДЕЙСТВИЕ СПОСОБНОСТИ|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает портал и выпускает одну |cffa9c7deТварь из Бездны|cffced4da. Восстановление: |cffffffff400|cffced4da сек.|n|n|cffe6c07bДождитесь завершения призыва.|cffced4da|r"
+    },
+    {
+      "rawcode": "A10T",
+      "field": "name",
+      "reference_before": "TRIGSTR_25385",
+      "before": "|cffd7b4f5Рой саранчи|r",
+      "after": "|cffe4cfa3Рой саранчи|r"
+    },
+    {
+      "rawcode": "A10T",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_25386",
+      "before": "|cffd7b4f5Рой саранчи|r",
+      "after": "|cffe4cfa3Рой саранчи|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A10T",
+      "field": "ubertip1",
+      "reference_before": "\"Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек.\"",
+      "before": "\"Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек.\"",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает рой из |cffffffff12|cffced4da насекомых, атакующих наземных и воздушных врагов в радиусе |cffffffff800|cffced4da. Возвращаясь к источнику роя, насекомые восстанавливают ему здоровье в размере |cffc8e08775%|cffced4da нанесённого ими урона. Действует |cffffffff30|cffced4da сек.|r"
+    },
+    {
+      "rawcode": "A10U",
+      "field": "name",
+      "reference_before": "TRIGSTR_25387",
+      "before": "|cffd7b4f5Рой саранчи|r",
+      "after": "|cffe4cfa3Рой саранчи|r"
+    },
+    {
+      "rawcode": "A10U",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_25388",
+      "before": "|cffd7b4f5Рой саранчи|r",
+      "after": "|cffe4cfa3Рой саранчи|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A10U",
+      "field": "ubertip1",
+      "reference_before": "\"Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек.\"",
+      "before": "\"Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек.\"",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает рой из |cffffffff15|cffced4da насекомых, атакующих наземных и воздушных врагов в радиусе |cffffffff800|cffced4da. Возвращаясь к источнику роя, насекомые восстанавливают ему здоровье в размере |cffc8e08775%|cffced4da нанесённого ими урона. Действует |cffffffff30|cffced4da сек.|r"
+    },
+    {
+      "rawcode": "A10V",
+      "field": "name",
+      "reference_before": "TRIGSTR_25389",
+      "before": "|cffd7b4f5Рой саранчи|r",
+      "after": "|cffe4cfa3Рой саранчи|r"
+    },
+    {
+      "rawcode": "A10V",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_25390",
+      "before": "|cffd7b4f5Рой саранчи|r",
+      "after": "|cffe4cfa3Рой саранчи|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A10V",
+      "field": "ubertip1",
+      "reference_before": "\"Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек.\"",
+      "before": "\"Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек.\"",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает рой из |cffffffff20|cffced4da насекомых, атакующих наземных и воздушных врагов в радиусе |cffffffff800|cffced4da. Возвращаясь к источнику роя, насекомые восстанавливают ему здоровье в размере |cffc8e08775%|cffced4da нанесённого ими урона. Действует |cffffffff30|cffced4da сек.|r"
+    }
+  ],
+  "evidence": [
+    "faceless_remaining_abilities_before.json",
+    "faceless_remaining_ability_metadata.json"
+  ],
+  "remaining": [
+    "Проверить цели Смертельной связи, возврат здоровья роя и призывы в Warcraft III",
+    "Согласовать новые названия в карточках",
+    "Проверить размещённых существ и путь получения Везакса"
+  ]
+}

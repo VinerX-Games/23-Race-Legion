@@ -1,0 +1,99 @@
+{
+  "race": "Дренеи (Draeneis)",
+  "race_id": 19,
+  "selection_ability": "A0HS",
+  "objects_audit": {
+    "buildings": {
+      "count": 12,
+      "ids": [
+        "h015",
+        "h016",
+        "h017",
+        "h033",
+        "h055",
+        "h056",
+        "h057",
+        "h058",
+        "h05A",
+        "h05B",
+        "h05C",
+        "h011"
+      ],
+      "economy_building": {
+        "id": "h05C",
+        "name": "Лазарет",
+        "food_provided": 40,
+        "gold_income_per_25s": 40,
+        "verified_via": "53_economy.lua and unit object stats"
+      }
+    },
+    "units": {
+      "count": 16,
+      "ids": [
+        "h012",
+        "e000",
+        "h01O",
+        "h01P",
+        "h01Q",
+        "h01R",
+        "h01S",
+        "h01T",
+        "h01U",
+        "h059",
+        "h05D",
+        "h05E",
+        "n005",
+        "nDr1",
+        "o00H",
+        "n00P"
+      ]
+    },
+    "heroes": {
+      "count": 4,
+      "ids": [
+        "H05K",
+        "H05L",
+        "H05M",
+        "H0MI"
+      ],
+      "names": {
+        "H05K": "Дреней Паладин (Сила, ближний бой)",
+        "H05L": "Капитан Гвардии (Ловкость, ближний бой)",
+        "H05M": "Пророк Сломленных (Интеллект, дальний бой)",
+        "H0MI": "Наару / А'дал (Интеллект, дальний бой, легендарный)"
+      }
+    },
+    "abilities": {
+      "count": 59,
+      "total_wts_updated": 506
+    },
+    "researches": {
+      "count": 22,
+      "markers_list": {
+        "R07G": "Маркер расы Дренеи"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items or inventory artifacts found in war3map.w3t for Draeneis."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "No race-specific floating messages or game UI strings found in war3map.wts for Draeneis."
+  },
+  "buffs_audit": {
+    "custom_buffs": [],
+    "standard_buffs_used": [
+      "Bspe",
+      "Bfro",
+      "Bdef",
+      "BOac",
+      "Bcri",
+      "Bshs"
+    ],
+    "status": "All buffs used by Draenei abilities are standard Warcraft III engine buffs. No custom text modification required."
+  },
+  "total_wts_updates": 506,
+  "total_checks": 481
+}

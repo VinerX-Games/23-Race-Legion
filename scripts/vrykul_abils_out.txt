@@ -1,0 +1,628 @@
+=== VRYCUL ABILITIES ===
+
+Ability A0E3:
+  buffid1: B033
+  hotkey: [8817] D
+  levels: 1
+  levelskip: 0
+  name: [9970] |cffdcaa92Ярость севера|r
+  tip1: [8] |cffdcaa92Ярость севера|r
+  ubertip1: [6519] +<Absk,DataB1,%>% к скорости атаки.
+
+Ability A0E4:
+  buffid1: Bfro
+  levels: 1
+  levelskip: 0
+  name: [1151] |cffdcaa92Морозные клинки|r
+  tip1: [9974] |cffdcaa92Морозные клинки|r
+  ubertip1: [9976] |cffdcaa92Морозные клинки|r замедляют врагов.
+
+Ability A0E5:
+  hotkey: [14022] W
+  levels: 1
+  levelskip: 0
+  name: [9977] |cffdcaa92Защита|r
+  tip1: [9978] |cffdcaa92Защита|r
+  ubertip1: "При использовании с <Adef,DataF1>%-й вероятностью отражает пронзающие атаки в нападающих и уменьшает урон от достигших цели атак до <Adef,DataA1,%>% базового. Замедляет передвижение на <Adef,DataC1,%>% на время действия."
+  ubertip:custom,v01: "При использовании уменьшает урон от пронзающих атак до <Adef,DataA1,%>% базового. Замедляет передвижение на <Adef,DataC1,%>% на время действия."
+  ubertip:custom,v11: "При использовании уменьшает урон от пронзающих атак до <Adef,DataA1,%>% базового. Замедляет передвижение на <Adef,DataC1,%>% на время действия."
+  ubertip:melee,v01: "При использовании уменьшает урон от пронзающих атак до <Adef,DataA1,%>% базового. Замедляет передвижение на <Adef,DataC1,%>% на время действия."
+
+Ability A0E7:
+  hotkey: [14068] W
+  levels: 1
+  levelskip: 0
+  name: [9990] |cffdcaa92Перейти в дальний бой|r
+  tip1: [9991] |cffdcaa92Перейти в дальний бой|r
+  ubertip1: [9992] |cffdcaa92Перейти в дальний бой|r
+
+Ability A0E8:
+  levels: 1
+  levelskip: 0
+  name: [0] |cffdcaa92Точный удар|r
+  researchart: ReplaceableTextures\CommandButtons\BTNCriticalStrike.blp
+  researchbuttonpos: 2
+  researchbuttonpos2: 0
+  researchhotkey: C
+  researchtip: Изучить «Критический удар» [|cffffcc00%d-й уровень|r]
+  researchubertip: "Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон."
+  researchubertip:custom,v0: "Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон."
+  researchubertip:custom,v1: "Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон."
+  researchubertip:melee,v0: "Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон."
+  tip1: [6] |cffdcaa92Точный удар|r
+  tip2: "Критический удар [|cffffcc002-й уровень|r]"
+  tip3: "Критический удар [|cffffcc003-й уровень|r]"
+  ubertip1: [16425] Дает 5%-й шанс нанести 2-кратный урон при атаке.
+  ubertip2: "Дает <AOcr,DataA2>%-й шанс нанести <AOcr,DataB2>-кратный урон при атаке."
+  ubertip3: "Дает <AOcr,DataA3>%-й шанс нанести <AOcr,DataB3>-кратный урон при атаке."
+  ubertip:custom,v01: "Дает <AOcr,DataA1>%-й шанс нанести <AOcr,DataB1>-кратный урон при атаке."
+  ubertip:custom,v02: "Дает <AOcr,DataA2>%-й шанс нанести <AOcr,DataB2>-кратный урон при атаке."
+  ubertip:custom,v03: "Дает <AOcr,DataA3>%-й шанс нанести <AOcr,DataB3>-кратный урон при атаке."
+  ubertip:custom,v11: "Дает <AOcr,DataA1>%-й шанс нанести <AOcr,DataB1>-кратный урон при атаке."
+  ubertip:custom,v12: "Дает <AOcr,DataA2>%-й шанс нанести <AOcr,DataB2>-кратный урон при атаке."
+  ubertip:custom,v13: "Дает <AOcr,DataA3>%-й шанс нанести <AOcr,DataB3>-кратный урон при атаке."
+  ubertip:melee,v01: "Дает <AOcr,DataA1>%-й шанс нанести <AOcr,DataB1>-кратный урон при атаке."
+  ubertip:melee,v02: "Дает <AOcr,DataA2>%-й шанс нанести <AOcr,DataB2>-кратный урон при атаке."
+  ubertip:melee,v03: "Дает <AOcr,DataA3>%-й шанс нанести <AOcr,DataB3>-кратный урон при атаке."
+
+Ability A0E9:
+  buffid1: 
+  buffid2: BUau
+  buffid3: BUau
+  buffid4: BUau
+  levels: 1
+  levelskip: 0
+  name: [26] |cffdcaa92Дополнительные доспехи|r
+  researchart: ReplaceableTextures\CommandButtons\BTNUnholyAura.blp
+  researchbuttonpos: 2
+  researchbuttonpos2: 0
+  researchhotkey: U
+  researchtip: [8808] |cffc8cde1Аура Смерти|r
+  researchubertip: "Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья. |n|cffffcc002-й уровень:|r +<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья. |n|cffffcc003-й уровень:|r +<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья."
+  tip1: [28] |cffdcaa92Дополнительные доспехи|r
+  tip2: "Нечистая аура [|cffffcc002-й уровень|r]"
+  tip3: "Нечистая аура [|cffffcc003-й уровень|r]"
+  ubertip1: [30] Увеличивает защиту и здоровье |cffdcaa92Скальда|r.
+  ubertip2: "+<AUau,DataA2,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+  ubertip3: "+<AUau,DataA3,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+
+Ability A0EA:
+  levels: 1
+  levelskip: 0
+  name: [31] |cffdcaa92Рассекающий удар|r
+  tip1: [32] |cffdcaa92Рассекающий удар|r
+  ubertip1: [42239] Бьет с огромной силой, нанося 10% урона врагам рядом с основной целью.
+
+Ability A0EB:
+  buffid1: BHca,Bcsd,Bcsi
+  hotkey: C
+  levels: 1
+  levelskip: 0
+  name: [34] |cffdcaa92Ледяные стрелы|r
+  tip1: [35] |cffdcaa92Ледяные стрелы|r
+  ubertip1: [25703] Атаки наносят дополнительно 25 урона от льда и замедляют цель, но расходуют ману.
+
+Ability A0ED:
+  buffid1: B034
+  hotkey: [14225] W
+  levels: 1
+  levelskip: 0
+  name: [66] |cffdcaa92Вдохновление|r
+  tip1: [77] |cffdcaa92Вдохновление|r
+  ubertip1: [79] +<ACif,DataA1,%>% к урону . |nВремя действия: <ACif,Dur1> сек.
+
+Ability A0EE:
+  hotkey: [16241] E
+  levels: 1
+  levelskip: 0
+  name: [81] |cffdcaa92Рассеивание заклинаний|r
+  tip1: [82] |cffdcaa92Рассеивание заклинаний|r
+  ubertip1: "Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r"
+
+Ability A0EI:
+  buffid1: BNht
+  hotkey: W
+  levels: 1
+  levelskip: 0
+  name: [216] |cffdcaa92Ужасающий вой|r
+  tip1: [220] |cffdcaa92Ужасающий вой|r
+  ubertip1: [40260] -35% урона от атак находящихся рядом врагов на <Acht,Dur1> сек.
+
+Ability A0EM:
+  buffid1: B037
+  buffid2: B037
+  buffid3: B037
+  buffid4: B037
+  hotkey: [16516] E
+  levels: 4
+  levelskip: 0
+  name: [314] |cffdcaa92Аура безумия|r
+  researchart: ReplaceableTextures\CommandButtons\BTNRC_UGRD_3blade.blp
+  researchbuttonpos: 2
+  researchbuttonpos2: 0
+  researchhotkey: E
+  researchtip: [315] Изучить «|cffdcaa92Аура безумия|r» [|cffffcc00%d-й уровень|r]
+  researchubertip: [15340] Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdc+<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки.|r |n|cffffcc002-й уровень:|r |cffb4dcdc+<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки.|r |n|cffffcc003-й уровень:|r |cffb4dcdc+<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки.|r|n|cffffcc004-й уровень:|r |cffb4dcdc+40% к скорости передвижения, +20% к скорости атаки.|r
+  tip1: [316] |cffdcaa92Аура безумия|r [|cffffcc001-й уровень|r]
+  tip2: [317] |cffdcaa92Аура безумия|r [|cffffcc002-й уровень|r]
+  tip3: [318] |cffdcaa92Аура безумия|r [|cffffcc003-й уровень|r]
+  tip4: [319] |cffdcaa92Аура безумия|r [|cffffcc004-й уровень|r]
+  ubertip1: [15341] |cffb4dcdc+<AOae,DataA1,%>%|r к скорости передвижения и |cffb4dcdc+<AOae,DataB1,%>%|r к скорости атаки находящихся рядом союзников.
+  ubertip2: [15342] |cffb4dcdc+<AOae,DataA2,%>%|r к скорости передвижения и |cffb4dcdc+<AOae,DataB2,%>%|r к скорости атаки находящихся рядом союзников.
+  ubertip3: [15343] |cffb4dcdc+<AOae,DataA3,%>%|r к скорости передвижения и |cffb4dcdc+<AOae,DataB3,%>%|r к скорости атаки находящихся рядом союзников.
+  ubertip4: [15339] |cffb4dcdc+40%|r к скорости передвижения и |cffb4dcdc+20%|r к скорости атаки находящихся рядом союзников.
+
+Ability A0EN:
+  buffid1: BPSE
+  buffid2: BPSE
+  buffid3: BPSE
+  buffid4: BPSE
+  hotkey: [13946] Q
+  levels: 4
+  levelskip: 0
+  name: [328] |cffe4cfa3Метнуть топор|r
+  researchart: ReplaceableTextures\CommandButtons\BTNOrcMeleeUpOne.blp
+  researchbuttonpos: 0
+  researchbuttonpos2: 0
+  researchhotkey: [13945] Q
+  researchtip: [329] |cffe4cfa3Метнуть топор|r
+  researchubertip: [35266] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, оглушая цель и нанося ей урон.|n|n|cffa6afb8Уровень 1:|r |cffc8e087100|cffced4da ед. урона, оглушение 5/0,3 сек.|n|cffa6afb8Уровень 2:|r |cffc8e087200|cffced4da ед. урона, оглушение 5/0,4 сек.|n|cffa6afb8Уровень 3:|r |cffc8e087325|cffced4da ед. урона, оглушение 5/0,5 сек.|n|cffa6afb8Уровень 4:|r |cffc8e087500|cffced4da ед. урона, оглушение 5/0,6 сек.|r
+  tip1: [331] |cffe4cfa3Метнуть топор — уровень 1|r (|cffffffffQ|r)
+  tip2: [332] |cffe4cfa3Метнуть топор — уровень 2|r (|cffffffffQ|r)
+  tip3: [333] |cffe4cfa3Метнуть топор — уровень 3|r (|cffffffffQ|r)
+  tip4: [334] |cffe4cfa3Метнуть топор — уровень 4|r (|cffffffffQ|r)
+  ubertip1: [15346] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc8e087100|cffced4da ед. урона и оглушая цель на |cffffffff5|cffced4da сек. (|cffffffff0,3|cffced4da сек. героев).|r
+  ubertip2: [15347] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc8e087200|cffced4da ед. урона и оглушая цель на |cffffffff5|cffced4da сек. (|cffffffff0,4|cffced4da сек. героев).|r
+  ubertip3: [15348] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc8e087325|cffced4da ед. урона и оглушая цель на |cffffffff5|cffced4da сек. (|cffffffff0,5|cffced4da сек. героев).|r
+  ubertip4: [35263] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc8e087500|cffced4da ед. урона и оглушая цель на |cffffffff5|cffced4da сек. (|cffffffff0,6|cffced4da сек. героев).|r
+
+Ability A0EO:
+  buffid1: B038,B038
+  buffid2: B038,B038
+  buffid3: B038,B038
+  buffid4: B038,B038
+  levels: 4
+  levelskip: 0
+  name: [341] |cffdcaa92Рунические топоры|r
+  researchart: ReplaceableTextures\CommandButtons\BTNSpiritWalkerAdeptTraining.blp
+  researchbuttonpos: 1
+  researchtip: [342] |cffdcaa92Рунические топоры|r
+  researchubertip: [15349] Топор покрыт магическими рунами, после каждой атаки топором враг замедляется.|n|n|cffffcc001-й уровень:|r |cffb4dcdc30% замеделния, 2 сек. Герой, 5 сек. солдат оглушения.|r|n|n|cffffcc002-й уровень:|r |cffb4dcdc40% замеделния, 3 сек. Герой, 5 сек. солдат оглушения.|r|n|n|cffffcc003-й уровень:|r |cffb4dcdc50% замеделния, 4 сек. Герой, 5 сек. солдат оглушения.|r|n|n|cffffcc004-й уровень:|r |cffb4dcdc60% замеделния, 5 сек. Герой, 5 сек. солдат оглушения.|r
+  tip1: [345] |cffdcaa92Рунические топоры|r
+  tip2: [346] |cffdcaa92Рунические топоры|r
+  tip3: [347] |cffdcaa92Рунические топоры|r
+  tip4: [351] |cffdcaa92Рунические топоры|r
+  ubertip1: [15350] Магические руны на топорах, при атаке замедляют врагов.
+|n|cffb4dcdc30% замеделния, 2 сек. Герой, 5 сек. солдат оглушения.|r
+  ubertip2: [15351] Магические руны на топорах, при атаке замедляют врагов.
+|n|cffb4dcdc40% замеделния, 3 сек. Герой, 5 сек. солдат оглушения.|r
+  ubertip3: [15352] Магические руны на топорах, при атаке замедляют врагов.
+|n|cffb4dcdc50% замеделния, 4 сек. Герой, 5 сек. солдат оглушения.|r
+  ubertip4: [15353] Магические руны на топорах, при атаке замедляют врагов.
+|n|cffb4dcdc60% замеделния, 5 сек. Герой, 5 сек. солдат оглушения.|r
+
+Ability A0EP:
+  hotkey: [14020] R
+  levels: 2
+  levelskip: 0
+  name: [356] |cffdcaa92Аватар берсерка|r
+  researchart: ReplaceableTextures\CommandButtons\BTNVrykuls_Hero.blp
+  researchbuttonpos: 3
+  researchbuttonpos2: 0
+  researchhotkey: [13917] R
+  researchtip: [358] Изучить «|cffdcaa92Аватар берсерка|r»
+  researchubertip: [359] Дает |cffdcaa92Врайкулу|r  +<AHav,DataA1> к броне, +<AHav,DataB1> к запасу здоровья, +<AHav,DataC1> к урону и невосприимчивость к магии. |nВремя действия: <AHav,Dur1> сек.
+  tip1: [363] Активировать «|cffdcaa92Аватар берсерка|r»
+  tip2: [366] Активировать «|cffdcaa92Аватар берсерка|r»
+  ubertip1: [360] При использовании дает |cffdcaa92Врайкулу|r +<AHav,DataA1> к броне, +<AHav,DataB1> к запасу здоровья, +<AHav,DataC1> к урону и невосприимчивость к магии. |nВремя действия: <AHav,Dur1> сек.
+  ubertip2: [15354] При использовании дает |cffdcaa92Врайкулу|r +<AHav,DataA1> к броне, +600 к запасу здоровья, +30 к урону и невосприимчивость к магии. |nВремя действия: <AHav,Dur1> сек.
+
+Ability A0EQ:
+  buffid1: B03A
+  buffid2: B03A
+  buffid3: B03A
+  buffid4: B03A
+  hotkey: [14347] W
+  levels: 4
+  levelskip: 0
+  name: [486] |cffdcaa92Тяжелые доспехи|r
+  researchart: ReplaceableTextures\CommandButtons\BTNLeatherUpgradeThree.blp
+  researchbuttonpos: 1
+  researchhotkey: [14345] W
+  researchtip: [487] |cffdcaa92Тяжелые доспехи|r
+  researchubertip: [15355] Герой обвешивает себя дополнительной броней.
+|n|cffffcc001-й уровень:|r |cffb4dcdc+3 к защите.|r|n|cffffcc002-й уровень:|r |cffb4dcdc+4 к защите.|r|n|cffffcc003-й уровень:|r |cffb4dcdc+5 к защите.|r|n|cffffcc004-й уровень:|r |cffb4dcdc+6 к защите.|r
+  tip1: [491] |cffdcaa92Тяжелые доспехи|r
+  tip2: [494] |cffdcaa92Тяжелые доспехи|r
+  tip3: [498] |cffdcaa92Тяжелые доспехи|r
+  tip4: [497] |cffdcaa92Тяжелые доспехи|r
+  ubertip1: [40059] |cffb4dcdc+3|r к броне героя.
+  ubertip2: [40057] |cffb4dcdc+4|r к броне героя.
+  ubertip3: [40058] |cffb4dcdc+5|r к броне героя.
+  ubertip4: [15358] |cffb4dcdc+6|r к броне героя.
+
+Ability A0ER:
+  buffid1: B03B
+  buffid2: B03B
+  buffid3: B03B
+  buffid4: B03B
+  hotkey: [14052] Q
+  levels: 4
+  levelskip: 0
+  name: [537] |cffdcaa92Яростный удар|r
+  researchart: ReplaceableTextures\CommandButtons\BTNArcaniteMelee.blp
+  researchbuttonpos: 0
+  researchbuttonpos2: 0
+  researchhotkey: [14051] Q
+  researchtip: [538] Изучить «|cffdcaa92Яростный удар|r» [|cffffcc00%d-й уровень|r]
+  researchubertip: [31431] Производит атаку, нанося урон в секторе перед собой, при этом получают кровотичение периодический урон. |nВремя действия: <ANbf,Dur1> сек. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<ANbf,DataA1> урона мгновенно, <ANbf,DataE1> урона/сек.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<ANbf,DataA2> урона мгновенно, <ANbf,DataE2> урона/сек.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<ANbf,DataA3> урона мгновенно, <ANbf,DataE3> урона/сек.|r|n|cffffcc004-й уровень:|r |cffb4dcdc350 урона мгновенно, 30 урона/сек.|r
+  tip1: [566] |cffdcaa92Яростный удар|r [|cffffcc001-й уровень|r]
+  tip2: [583] |cffdcaa92Яростный удар|r [|cffffcc002-й уровень|r]
+  tip3: [594] |cffdcaa92Яростный удар|r [|cffffcc003-й уровень|r]
+  tip4: [596] |cffdcaa92Яростный удар|r [|cffffcc004-й уровень|r]
+  tip5: "Пламенное дыхание [|cffffcc002-й уровень|r]"
+  tip6: "Пламенное дыхание [|cffffcc003-й уровень|r]"
+  ubertip1: [15361] Производит удар, нанося |cffb4dcdc<ANbf,DataA1>|r урона в секторе перед собой. Враги, получают кровотичение, при этом  получают |cffb4dcdc<ANbf,DataE1> урона/сек.|r в течение |cffb4dcdc<ANbf,Dur1> сек.|r
+  ubertip2: [15362] Производит удар, нанося |cffb4dcdc<ANbf,DataA2>|r урона в секторе перед собой. Враги, получают кровотичение, при этом  получают |cffb4dcdc<ANbf,DataE1> урона/сек|r. в течение |cffb4dcdc<ANbf,Dur2> сек.|r
+  ubertip3: [15363] Производит удар, нанося|cffb4dcdc <ANbf,DataA3>|r урона в секторе перед собой. Враги, получают кровотичение, при этом  получают |cffb4dcdc<ANbf,DataE1> урона/сек.|r в течение |cffb4dcdc<ANbf,Dur3> сек.|r
+  ubertip4: [15364] Производит удар, нанося |cffb4dcdc300|r урона в секторе перед собой. Враги, получают кровотичение, при этом  получают |cffb4dcdc30 урона/сек.|r в течение |cffb4dcdc<ANbf,Dur3> сек.|r
+  ubertip5: "Выдыхает огонь в секторе перед собой, нанося врагам <ANbf,DataA2> урона мгновенно и <ANbf,DataE2> урона/сек. в течение <ANbf,Dur2> сек."
+  ubertip6: "Выдыхает огонь в секторе перед собой, нанося врагам <ANbf,DataA3> урона мгновенно и <ANbf,DataE3> урона/сек. в течение <ANbf,Dur3> сек."
+
+Ability A0ES:
+  hotkey: [16556] E
+  levels: 4
+  levelskip: 0
+  name: [656] |cffdcaa92Сокрушение|r
+  researchart: ReplaceableTextures\PassiveButtons\PASBTNSunderingBlades.blp
+  researchbuttonpos: 2
+  researchhotkey: [16520] E
+  researchtip: [688] |cffdcaa92Сокрушение|r
+  researchubertip: [15406] С некой вероятностью атака нанесет урона находящимся рядом войскам.|n|cffffcc001-й уровень:|r |cffb4dcdcС вероятностью 25% наносит 70 урона.|r|n|cffffcc002-й уровень:|r |cffb4dcdcС вероятностью 30% наносит 80 урона.|r|n|cffffcc003-й уровень:|r |cffb4dcdcС вероятностью 35% наносит 90 урона.|r|n|cffffcc004-й уровень:|r |cffb4dcdcС вероятностью 40% наносит 100 урона.|r
+  tip1: [658] |cffdcaa92Сокрушение|r
+  tip2: [714] |cffdcaa92Сокрушение|r
+  tip3: [716] |cffdcaa92Сокрушение|r
+  tip4: [722] |cffdcaa92Сокрушение|r
+  ubertip1: [15368] С |cffb4dcdc<Awar,DataA1>%-й|r вероятностью атака нанесет |cffb4dcdc<Awar,DataB1>|r урона находящимся рядом войскам.
+  ubertip2: [15369] С |cffb4dcdc<Awar,DataA2>%-й|r вероятностью атака нанесет |cffb4dcdc<Awar,DataB2>|r урона находящимся рядом войскам.
+  ubertip3: [15366] С |cffb4dcdc<Awar,DataA3>%-й|r вероятностью атака нанесет |cffb4dcdc<Awar,DataB3>|r урона находящимся рядом войскам.
+  ubertip4: [15367] С |cffb4dcdc40%-й|r вероятностью атака нанесет |cffb4dcdc100|r урона находящимся рядом войскам.
+
+Ability A0ET:
+  buffid1: B03C
+  buffid2: B03C
+  hotkey: R
+  levels: 2
+  levelskip: 0
+  name: [768] |cffdcaa92Зов|r
+  researchart: ReplaceableTextures\CommandButtons\BTNMaskOfDeath.blp
+  researchbuttonpos: 3
+  researchhotkey: [14030] R
+  researchtip: [773] |cffdcaa92Зов|r
+  researchubertip: [15370] Увеличивает защиту всем союзным войскам вокруг героя.|n|cffffcc001-й уровень:|r |cffb4dcdcУвеличение защиты +5.|n|cffffcc001-й уровень:|r |cffb4dcdcУвеличение защиты +8.
+  tip1: [770] |cffdcaa92Зов|r
+  tip2: [777] |cffdcaa92Зов|r
+  ubertip1: [15371] Увеличивает защиту всем союзным войскам вокруг героя.
+|cffb4dcdcВремя действия - Героя 30 сек. Солдат 45 сек.
+Увеличение защиты - 5.|r
+  ubertip2: [15372] Увеличивает защиту всем союзным войскам вокруг героя.
+|cffb4dcdcВремя действия - Героя 30 сек. Солдат 45 сек.
+Увеличение защиты - 8.|r
+
+Ability A0EU:
+  buffid1: BNcs
+  buffid2: BNcs
+  buffid3: BNcs
+  buffid4: BNcs
+  hotkey: [14224] Q
+  levels: 4
+  levelskip: 0
+  name: [807] |cffdcaa92Помощь Предков|r
+  researchart: ReplaceableTextures\CommandButtons\BTNfrostpresence.blp
+  researchbuttonpos: 0
+  researchbuttonpos2: 0
+  researchhotkey: [14094] Q
+  researchtip: [809] Изучить «|cffdcaa92Помощь Предков|r» [|cffffcc00%d-й уровень|r]
+  researchubertip: [15373] Обстреливает указанную область сгустками духов, оглушая находящихся рядом наземных врагов на |cffb4dcdc<ANcs,Dur1> сек|r. и нанося им урон.|n|cffffcc001-й уровень:|r |cffb4dcdcКоличество сгустков - 6, урон - 8.7.|n|cffffcc002-й уровень:|r |cffb4dcdcКоличество сгустков - 12, урон - 16.25.|n|cffffcc003-й уровень:|r |cffb4dcdcКоличество сгустков - 18, урон - 25.|n|cffffcc004-й уровень:|r |cffb4dcdcКоличество сгустков - 35, урон - 35.
+  researchubertip:custom,v0: "Обстреливает указанную область ракетами, оглушая находящихся рядом наземных врагов на <ANcs,Dur1> сек. и нанося им урон. |n|n|cffffcc001-й уровень:|r 35 урона.|n|cffffcc002-й уровень:|r 65 урона.|n|cffffcc003-й уровень:|r 100 урона."
+  researchubertip:custom,v1: "Обстреливает указанную область ракетами, оглушая находящихся рядом наземных врагов на <ANcs,Dur1> сек. и нанося им урон. |n|n|cffffcc001-й уровень:|r 35 урона.|n|cffffcc002-й уровень:|r 65 урона.|n|cffffcc003-й уровень:|r 100 урона."
+  researchubertip:melee,v0: "Обстреливает указанную область ракетами, оглушая находящихся рядом наземных врагов на <ANcs,Dur1> сек. и нанося им урон. |n|n|cffffcc001-й уровень:|r 35 урона.|n|cffffcc002-й уровень:|r 65 урона.|n|cffffcc003-й уровень:|r 100 урона."
+  tip1: [815] |cffdcaa92Помощь Предков|r [|cffffcc001-й уровень|r]
+  tip2: [816] |cffdcaa92Помощь Предков|r [|cffffcc002-й уровень|r]
+  tip3: [817] |cffdcaa92Помощь Предков|r [|cffffcc003-й уровень|r]
+  tip4: [820] |cffdcaa92Помощь Предков|r [|cffffcc004-й уровень|r]
+  tip5: [4616] |cff0064ffВзрыв маны|r [|cffffcc005-й уровень|r]
+  ubertip1: [15374] Обстреливает указанную сгустками духов, нанося урон находящимся рядом наземным врагам и оглушая их на |cffb4dcdc<ANcs,Dur1> сек.|r
+ |cffb4dcdcКоличество сгустков - 6, урон - 8.7.
+  ubertip2: [15375] Обстреливает указанную сгустками духов, нанося урон находящимся рядом наземным врагам и оглушая их на |cffb4dcdc<ANcs,Dur1> сек.|r
+ |cffb4dcdcКоличество сгустков - 12, урон - 16.
+  ubertip3: [15376] Обстреливает указанную сгустками духов, нанося урон находящимся рядом наземным врагам и оглушая их на |cffb4dcdc<ANcs,Dur1> сек.|r
+ |cffb4dcdcКоличество сгустков - 18, урон - 25.
+  ubertip4: [15377] Обстреливает указанную сгустками духов, нанося урон находящимся рядом наземным врагам и оглушая их на |cffb4dcdc<ANcs,Dur1> сек.|r
+ |cffb4dcdcКоличество сгустков - 24, урон - 30.
+  ubertip5: [3314] Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur5> сек.
+  ubertip:custom,v01: "Обстреливает указанную область ракетами, нанося до 35 урона находящимся рядом наземным врагам и оглушая их на <ANcs,Dur1> сек."
+  ubertip:custom,v02: "Обстреливает указанную область ракетами, нанося до 65 урона находящимся рядом наземным врагам и оглушая их на <ANcs,Dur2> сек."
+  ubertip:custom,v03: "Обстреливает указанную область ракетами, нанося до 100 урона находящимся рядом наземным врагам и оглушая их на <ANcs,Dur3> сек."
+  ubertip:custom,v11: "Обстреливает указанную область ракетами, нанося до 35 урона находящимся рядом наземным врагам и оглушая их на <ANcs,Dur1> сек."
+  ubertip:custom,v12: "Обстреливает указанную область ракетами, нанося до 65 урона находящимся рядом наземным врагам и оглушая их на <ANcs,Dur2> сек."
+  ubertip:custom,v13: "Обстреливает указанную область ракетами, нанося до 100 урона находящимся рядом наземным врагам и оглушая их на <ANcs,Dur3> сек."
+  ubertip:melee,v01: "Обстреливает указанную область ракетами, нанося до 35 урона находящимся рядом наземным врагам и оглушая их на <ANcs,Dur1> сек."
+  ubertip:melee,v02: "Обстреливает указанную область ракетами, нанося до 65 урона находящимся рядом наземным врагам и оглушая их на <ANcs,Dur2> сек."
+  ubertip:melee,v03: "Обстреливает указанную область ракетами, нанося до 100 урона находящимся рядом наземным врагам и оглушая их на <ANcs,Dur3> сек."
+
+Ability A0EV:
+  buffid1: B03D
+  buffid2: B03D
+  buffid3: B03D
+  buffid4: B03D
+  hotkey: [14402] W
+  levels: 4
+  levelskip: 0
+  name: [843] |cffdcaa92Руны защиты|r
+  researchart: ReplaceableTextures\CommandButtons\BTNFrostShield.blp
+  researchhotkey: [14408] W
+  researchtip: [846] |cffdcaa92Руны защиты|r
+  researchubertip: [15407] Жрец наносит магические руны на доспехи союзников вокруг себя. Время действия - |cffb4dcdc30 сек.|r
+|n|cffffcc001-й уровень:|r |cffb4dcdc+2 к защите|r|n|cffffcc002-й уровень:|r |cffb4dcdc+3 к защите|r|n|cffffcc003-й уровень:|r |cffb4dcdc+4 к защите|r|n|cffffcc004-й уровень:|r |cffb4dcdc+5 к защите.|r
+  tip1: [850] |cffdcaa92Руны защиты|r
+  tip2: [854] |cffdcaa92Руны защиты|r
+  tip3: [858] |cffdcaa92Руны защиты|r
+  tip4: [860] |cffdcaa92Руны защиты|r
+  ubertip1: [15408] Жрец наносит магические руны на доспехи союзников вокруг себя. Время действия - |cffb4dcdc30 сек.|r
+|cffb4dcdc+2 к защите|r
+  ubertip2: [15409] Жрец наносит магические руны на доспехи союзников вокруг себя. Время действия - |cffb4dcdc30 сек.|r
+|cffb4dcdc+3 к защите|r
+  ubertip3: [15410] Жрец наносит магические руны на доспехи союзников вокруг себя. Время действия - |cffb4dcdc30 сек.|r
+|cffb4dcdc+4 к защите|r
+  ubertip4: [15411] Жрец наносит магические руны на доспехи союзников вокруг себя. Время действия - |cffb4dcdc30 сек.|r
+|cffb4dcdc+5 к защите|r
+
+Ability A0EW:
+  buffid1: B03E,B03F
+  buffid2: B03E,B03F
+  buffid3: B03E,B03F
+  buffid4: B03E,B03F
+  levels: 4
+  levelskip: 0
+  name: [943] |cffdcaa92Руны проклятия|r
+  researchart: ReplaceableTextures\CommandButtons\BTNLightningShield.blp
+  researchbuttonpos: 2
+  researchhotkey: [16612] E
+  researchtip: [962] |cffdcaa92Руны проклятия|r
+  researchubertip: [15412] Жрец проклинает всех атакованных врагов. Нанося периодический урон.
+|n|cffffcc001-й уровень:|r |cffb4dcdc5 ед. урона, Время действие Герой - 5 сек., солдат - 20.|r|n|cffffcc002-й уровень:|r |cffb4dcdc7 ед. урона, Время действие Герой - 7 сек., солдат - 20.|r|n|cffffcc003-й уровень:|r |cffb4dcdc9 ед. урона, Время действие Герой - 9 сек., солдат - 20.|r|n|cffffcc004-й уровень:|r |cffb4dcdc11 ед. урона, Время действие Герой - 11 сек., солдат - 20.|r
+  tip1: [961] |cffdcaa92Руны проклятия|r
+  tip2: [966] |cffdcaa92Руны проклятия|r
+  tip3: [967] |cffdcaa92Руны проклятия|r
+  tip4: [968] |cffdcaa92Руны проклятия|r
+  ubertip1: [974] Руны наносит <ACvs,DataA1> урона/сек. |nВремя действия: <ACvs,Dur1> сек.
+  ubertip2: [975] Руны наносит <ACvs,DataA1> урона/сек. |nВремя действия: <ACvs,Dur1> сек.
+  ubertip3: [976] Руны наносит <ACvs,DataA1> урона/сек. |nВремя действия: <ACvs,Dur1> сек.
+  ubertip4: [978] Руны наносит <ACvs,DataA1> урона/сек. |nВремя действия: <ACvs,Dur1> сек.
+
+Ability A0EX:
+  buffid1: AEtr
+  buffid2: AEtr
+  buffid3: AEtr
+  buffid4: AEtr
+  hotkey: [14271] R
+  levels: 2
+  levelskip: 0
+  name: [980] |cffdcaa92Руны Спасения|r
+  researchart: ReplaceableTextures\CommandButtons\BTNPoisoning Shield.blp
+  researchbuttonpos: 3
+  researchbuttonpos2: 0
+  researchhotkey: [14268] R
+  researchtip: [981] Изучить «|cffdcaa92Руны Спасения|r»
+  researchubertip: [15415] Спасает |cffdcaa92Врайкулов|r, восполняющей все здоровье союзникам в обширной области. |n|cffffcc001-й уровень:|r |cffb4dcdcРадиус действия - 1800.|r|n|cffffcc002-й уровень:|r |cffb4dcdcРадиус действия - 2400.|r
+  researchubertip:custom,v0: "Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек."
+  researchubertip:custom,v1: "Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек."
+  researchubertip:melee,v0: "Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек."
+  tip1: [982] |cffdcaa92Руны Спасения|r
+  tip2: [984] |cffdcaa92Руны Спасения|r
+  ubertip1: [15413] Спасает |cffdcaa92Врайкулов|r, восполняющей все здоровье союзникам в обширной области. |n|cffffcc001-й уровень:|r |cffb4dcdcРадиус действия - 1800.|r
+  ubertip2: [15414] Спасает |cffdcaa92Врайкулов|r, восполняющей все здоровье союзникам в обширной области. |n|cffffcc002-й уровень:|r |cffb4dcdcРадиус действия - 2400.|r
+  ubertip:custom,v01: "Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек."
+  ubertip:custom,v11: "Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек."
+  ubertip:melee,v01: "Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек."
+
+Ability A0EY:
+  buffid1: B03G
+  buffid2: B03G
+  buffid3: B03G
+  buffid4: B03G
+  hotkey: [10607] X
+  levels: 4
+  levelskip: 0
+  name: [1008] |cffdcaa92Изнурение|r
+  researchart: ReplaceableTextures\CommandButtons\BTNInferno.blp
+  researchtip: [1056] |cffdcaa92Изнурение|r
+  researchubertip: [1057] Замедляет врагов находящихся рядом.
+  tip1: [1009] |cffdcaa92Изнурение|r
+  tip2: [1014] |cffdcaa92Изнурение|r
+  tip3: [1025] |cffdcaa92Изнурение|r
+  tip4: [1028] |cffdcaa92Изнурение|r
+  ubertip1: [1012] Накладывает |cffdcaa92Изнурение|r на врагов вокруг.
+  ubertip2: [1013] Накладывает |cffdcaa92Изнурение|r на врагов вокруг.
+  ubertip3: [1026] Накладывает |cffdcaa92Изнурение|r на врагов вокруг.
+  ubertip4: [1027] Накладывает |cffdcaa92Изнурение|r на врагов вокруг.
+
+Ability A0EZ:
+  buffid1: BPSE
+  buffid2: BPSE
+  buffid3: BPSE
+  buffid4: BPSE
+  hotkey: [16757] E
+  levels: 4
+  levelskip: 0
+  name: [1058] |cffdcaa92Сильный Удар|r
+  researchart: ReplaceableTextures\CommandButtons\PASGlaiveCrit.blp
+  researchbuttonpos: 2
+  researchbuttonpos2: 0
+  researchhotkey: [16756] E
+  researchtip: [1059] Изучить «|cffdcaa92Сильный Удар|r» [|cffffcc00%d-й уровень|r]
+  researchubertip: "Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. На <AHbh,DataC1> больше урона. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. На <AHbh,DataC2> больше урона. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс. На <AHbh,DataC3> больше урона."
+  researchubertip:custom,v0: "Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс."
+  researchubertip:custom,v1: "Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс."
+  researchubertip:melee,v0: "Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс."
+  tip1: [1060] |cffdcaa92Сильный Удар|r [|cffffcc001-й уровень|r]
+  tip2: [1061] |cffdcaa92Сильный Удар|r [|cffffcc002-й уровень|r]
+  tip3: [1062] |cffdcaa92Сильный Удар|r [|cffffcc003-й уровень|r]
+  tip4: [1063] |cffdcaa92Сильный Удар|r [|cffffcc004-й уровень|r]
+  ubertip1: "С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек."
+  ubertip2: "С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC2> больше урона и оглушит цель на <AHbh,Dur1> сек."
+  ubertip3: "С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC3> больше урона и оглушит цель на <AHbh,Dur1> сек."
+  ubertip4: [1064] С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.
+  ubertip:custom,v01: "С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек."
+  ubertip:custom,v02: "С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек."
+  ubertip:custom,v03: "С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек."
+  ubertip:custom,v11: "С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек."
+  ubertip:custom,v12: "С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек."
+  ubertip:custom,v13: "С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек."
+  ubertip:melee,v01: "С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек."
+  ubertip:melee,v02: "С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек."
+  ubertip:melee,v03: "С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек."
+
+Ability A0F1:
+  buffid1: B035
+  hotkey: [14323] Q
+  levels: 1
+  levelskip: 0
+  name: [55] |cffdcaa92Северный доспех|r
+  tip1: [59] |cffdcaa92Северный доспех|r
+  ubertip1: [1142] Увеличивает защиту на (3)ед., для дружественных войск.
+
+Ability A0HP:
+  hotkey: [4181] A
+  levels: 1
+  levelskip: 0
+  name: [38871] |cffdcaa96Врайкулы|r
+  tip1: [38872] |cffdcaa96Врайкулы|r
+  ubertip1: [35175] |cff7dc87dСоздатель расы:|r |cffe17d00Escanor (Яхве)|r|n|cff7dc87dСложность:|r |cff37ff37Низкая|r|n|cff7dc87dПериод:|r |cffb1b1ffWrath of the Lich King|r|n|cff7dc87dОписание:|r Poдинa пoлyгигaнтoв |cffdcaa92Врайкулов |r— Peвyщий Фьopд нa югo-вocтoкe Hopдcкoлa. Гoвopят, чтo в дpeвнocти нapoд вpaйкyлoв coздaл пpoцвeтaющyю цивилизaцию в этиx кpaяx. Ho cлyчилocь тaк, чтo в oдин дeнь вpaйкyлы миcтичecки иcчeзли, ocтaвив пocлe ceбя лишь пycтынныe пoceлeния и зaбpoшeнныe xpaмы. B нaши дни, кoгдa нa зeмляx вpaйкyлoв был пocтpoeн Baльгapд, лaгepь Aльянca, oни вepнyлиcь. Пoд пpeдвoдитeльcтвoм кopoля Имиpoнa эти мoгyчиe вoины oбpyшилиcь нa ceлeния Opды и Aльянca, oбocнoвaвшиcь в Kpeпocти Утгapд, чтo нeдaлeкo oт Baльгapдa. Heизвecтнo, гдe вpaйкyлы пpoвeли нecкoлькo тыcяч лeт, нo ceйчac oни cpaжaютcя нa cтopoнe Kopoля-личa.
+
+Ability A0YQ:
+  levels: 1
+  levelskip: 0
+  name: [22782] Рассекающий Удар
+  tip1: [22783] Рассекающий Удар
+  ubertip1: "Бьет с огромной силой, нанося <ACce,DataA1,%>% урона врагам рядом с основной целью."
+
+Ability A0Z1:
+  buffid1: B063
+  buffid2: B063
+  hotkey: R
+  levels: 2
+  levelskip: 0
+  name: [23285] |cffe6beaaРев|r
+  researchart: ReplaceableTextures\CommandButtons\BTNWeaponUPG3.BLP
+  researchhotkey: [21672] R
+  researchtip: [23283] |cffe6beaaРев|r
+  researchubertip: [23284] Увеличивает урон и защиту союзных войск рядом с героем.
+|n|cffffcc001-й уровень:|r +35% к урона, +6 к защите.|n|cffffcc002-й уровень:|r +45% к урона, +8 к защите.
+  tip1: [23279] |cffe6beaaРев|r
+  tip2: [23280] |cffe6beaaРев|r
+  ubertip1: [32881] +35% к урону, и +6 к защите находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек.
+  ubertip2: [32924] +40% к урону, и +8 к защите находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек.
+
+Ability wk03:
+  hotkey: [29637] Q
+  levels: 1
+  levelskip: 0
+  name: [40066] Защита (Всадник)
+  tip1: Защита
+  ubertip1: [40074] При использовании уменьшает урон от пронзающих атак до 90% базового. Замедляет передвижение на 10% на время действия.
+  ubertip:custom,v01: "При использовании уменьшает урон от пронзающих атак до <Adef,DataA1,%>% базового. Замедляет передвижение на <Adef,DataC1,%>% на время действия."
+  ubertip:custom,v11: "При использовании уменьшает урон от пронзающих атак до <Adef,DataA1,%>% базового. Замедляет передвижение на <Adef,DataC1,%>% на время действия."
+  ubertip:melee,v01: "При использовании уменьшает урон от пронзающих атак до <Adef,DataA1,%>% базового. Замедляет передвижение на <Adef,DataC1,%>% на время действия."
+
+Ability wk04:
+  buffid1: Bfae
+  hotkey: [29746] Q
+  levels: 1
+  levelskip: 0
+  name: [40302] Пробитие доспехов
+  tip1: [40303] Пробитие доспехов
+  ubertip1: "Ослабляет броню врага на <Afae,DataA1> и раскрывает его местоположение. |nВремя действия: <Afae,Dur1> сек."
+
+Ability wk05:
+  buffid1: Bspo,Bssd
+  levels: 1
+  levelskip: 0
+  name: [40304] Сильный укус
+  tip1: Замедляющий яд
+  ubertip1: "Отравляет цель, нанося <Aspo,DataA1> урона/сек., а также замедляя ее передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек."
+
+Ability wk06:
+  buffid1: BNbf
+  buffid2: BNbf
+  buffid3: BNbf
+  buffid4: BNbf
+  hotkey: [29800] Q
+  levels: 1
+  levelskip: 0
+  name: Пламенное дыхание
+  researchart: ReplaceableTextures\CommandButtons\BTNBreathOfFire.blp
+  researchbuttonpos: 0
+  researchbuttonpos2: 0
+  researchhotkey: [29799] Q
+  researchtip: "Изучить «Пламенное дыхание» [|cffffcc00%d-й уровень|r]"
+  researchubertip: "Выдыхает огонь, нанося урон в секторе перед собой. Враги, пораженные «Хмельными парами», при этом загораются и получают периодический урон. |nВремя действия: <ANbf,Dur1> сек. |n|n|cffffcc001-й уровень:|r <ANbf,DataA1> урона мгновенно, <ANbf,DataE1> урона/сек. |n|cffffcc002-й уровень:|r <ANbf,DataA2> урона мгновенно, <ANbf,DataE2> урона/сек. |n|cffffcc003-й уровень:|r <ANbf,DataA3> урона мгновенно, <ANbf,DataE3> урона/сек."
+  tip1: "Пламенное дыхание [|cffffcc001-й уровень|r]"
+  tip2: "Пламенное дыхание [|cffffcc002-й уровень|r]"
+  tip3: "Пламенное дыхание [|cffffcc003-й уровень|r]"
+  tip4: "Пламенное дыхание [|cffffcc001-й уровень|r]"
+  tip5: "Пламенное дыхание [|cffffcc002-й уровень|r]"
+  tip6: "Пламенное дыхание [|cffffcc003-й уровень|r]"
+  ubertip1: "Выдыхает огонь, нанося <ANbf,DataA1> урона в секторе перед собой. Враги, пораженные «Хмельными парами», при этом загораются и получают <ANbf,DataE1> урона/сек. в течение <ANbf,Dur1> сек."
+  ubertip2: "Выдыхает огонь, нанося <ANbf,DataA2> урона в секторе перед собой. Враги, пораженные «Хмельными парами», при этом загораются и получают <ANbf,DataE2> урона/сек. в течение <ANbf,Dur2> сек."
+  ubertip3: "Выдыхает огонь, нанося <ANbf,DataA3> урона в секторе перед собой. Враги, пораженные «Хмельными парами», при этом загораются и получают <ANbf,DataE3> урона/сек. в течение <ANbf,Dur3> сек."
+  ubertip4: "Выдыхает огонь в секторе перед собой, нанося врагам <ANbf,DataA1> урона мгновенно и <ANbf,DataE1> урона/сек. в течение <ANbf,Dur1> сек."
+  ubertip5: "Выдыхает огонь в секторе перед собой, нанося врагам <ANbf,DataA2> урона мгновенно и <ANbf,DataE2> урона/сек. в течение <ANbf,Dur2> сек."
+  ubertip6: "Выдыхает огонь в секторе перед собой, нанося врагам <ANbf,DataA3> урона мгновенно и <ANbf,DataE3> урона/сек. в течение <ANbf,Dur3> сек."
+
+Ability wk07:
+  levels: 1
+  levelskip: 0
+  name: [40305] Броня из драконьей чешуи
+  tip1: Каменная кожа
+  ubertip1: [40307] -18 от получаемого всадником урона от атак. Минимальный урон от атак: 8.
+
+Ability wk09:
+  buffid1: BUan
+  buffid2: BUan
+  buffid3: BUan
+  buffid4: BUan
+  hotkey: [30170] Q
+  levels: 1
+  levelskip: 0
+  name: Оживление мертвых
+  researchart: ReplaceableTextures\CommandButtons\BTNAnimateDead.blp
+  researchbuttonpos: 3
+  researchbuttonpos2: 0
+  researchhotkey: D
+  researchtip: Изучить «Оживление мертвых»
+  researchubertip: "Оживляет <AUan,DataA1> трупов в области действия на <AUan,Dur1> сек."
+  tip1: Оживление мертвых
+  ubertip1: [3046] Оживляет 3 трупа в области действия.
+
+Ability wk10:
+  buffid1: BUau
+  buffid2: BUau
+  buffid3: BUau
+  buffid4: BUau
+  levels: 1
+  levelskip: 0
+  name: Нечистая аура
+  researchart: ReplaceableTextures\CommandButtons\BTNUnholyAura.blp
+  researchbuttonpos: 2
+  researchbuttonpos2: 0
+  researchhotkey: U
+  researchtip: Изучить «Нечистую ауру» [|cffffcc00%d-й уровень|r]
+  researchubertip: "Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья. |n|cffffcc002-й уровень:|r +<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья. |n|cffffcc003-й уровень:|r +<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья."
+  tip1: "Нечистая аура [|cffffcc001-й уровень|r]"
+  tip2: "Нечистая аура [|cffffcc002-й уровень|r]"
+  tip3: "Нечистая аура [|cffffcc003-й уровень|r]"
+  ubertip1: [40404] +15% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.
+  ubertip2: "+<AUau,DataA2,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+  ubertip3: "+<AUau,DataA3,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."

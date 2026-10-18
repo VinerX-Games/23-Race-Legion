@@ -1,0 +1,256 @@
+{
+  "scope": "Нерубы (Nerubs): категория 1 — Здания (12 зданий)",
+  "buildings_count": 12,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "h0CO",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10299,
+          "after": "|cffe4cfa3Залы Нерубов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10300,
+          "after": "|cffe4cfa3Залы Нерубов|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13023,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Нерубов первой ступени. Обеспечивает запас пищи и добычу ресурсов.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deПалаты Нерубов|cffced4da: открывает доступ к передовым сооружениям и технологиям.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CP",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10302,
+          "after": "|cffe4cfa3Палаты Нерубов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10303,
+          "after": "|cffe4cfa3Палаты Нерубов|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 20412,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Нерубов второй ступени. Существенно увеличивает запас пищи.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deКрепость Нерубов|cffced4da: открывает доступ к высшим технологиям и защите столицы.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CQ",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10305,
+          "after": "|cffe4cfa3Крепость Нерубов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 15181,
+          "after": "|cffe4cfa3Крепость Нерубов|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 20416,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Нерубов третьей ступени. Обеспечивает максимальный запас пищи и защиту королевства.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CR",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10308,
+          "after": "|cffe4cfa3Казармы Нерубов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10309,
+          "after": "|cffe4cfa3Казармы Нерубов|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13072,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает базовые боевые силы армии Нерубов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deМолодой неруб|cffced4da: быстрый лёгкий боец ближнего боя.|n- |cffa9c7deВоин Нерубов|cffced4da: стрелок дальнего боя, способный сжигать ману цели.|n- |cffa9c7deЯдовитый Неруб|cffced4da: стрелок поддержки, отравляющий атакованные цели.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deШипастый панцирь|cffced4da|n- |cffa9c7deЯд нерубов|cffced4da|n- |cffa9c7deМутации Ядовитого неруба|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CS",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10311,
+          "after": "|cffe4cfa3Хранилище|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10312,
+          "after": "|cffe4cfa3Хранилище|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13027,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Служит складом древесины и центром генетических мутаций всей расы Нерубов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deСильные передние конечности|cffced4da|n- |cffa9c7deБроня туловища|cffced4da|n- |cffa9c7deБроня чрева|cffced4da|n- |cffa9c7deМутация Панциря|cffced4da|n- |cffa9c7deМутация крови|cffced4da|n- |cffa9c7deМутация здоровья|cffced4da|n- |cffa9c7deМутация конечностей|cffced4da|n- |cffa9c7deМутация нерубов|cffced4da|n- |cffa9c7deУлучшенные инструменты|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CT",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10317,
+          "after": "|cffe4cfa3Храм Нерубов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10318,
+          "after": "|cffe4cfa3Храм Нерубов|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13029,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает специализированных и тяжёлых воинов подземного роя.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deКисло-плюй|cffced4da: кислотный штурмовик, внедряющий паразитов.|n- |cffa9c7deГлубинный Неруб|cffced4da: мутировавший боец с хаотической атакой.|n- |cffa9c7deНерубский броненосец|cffced4da: сверхтяжёлый бронированный защитник.|n- |cffa9c7deНеруб Страж|cffced4da: элитный командир с усиливающей аурой.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУсилить Конечности|cffced4da|n- |cffa9c7deКомандирская аура|cffced4da|n- |cffa9c7deТолстый Панцирь|cffced4da|n- |cffa9c7deПаучья слизь|cffced4da|n- |cffa9c7deСильные конечности|cffced4da|n- |cffa9c7deМутация ДНК ядов|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0CU",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10320,
+          "after": "|cffe4cfa3Паучий Алтарь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10321,
+          "after": "|cffe4cfa3Паучий Алтарь|r (|cffffffffS|r)"
+        }
+      ]
+    },
+    {
+      "id": "h0CV",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10323,
+          "after": "|cffe4cfa3Святилище Нерубов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10324,
+          "after": "|cffe4cfa3Святилище Нерубов|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13030,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обитель магов и мастеров паутины Нерубов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deНеруб Лекарь|cffced4da: маг поддержки с исцелением и щитом.|n- |cffa9c7deВязальщик|cffced4da: чародей паутины, связывающий и замедляющий врагов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗнания Нерубов|cffced4da|n- |cffa9c7deЯдовитый щит|cffced4da|n- |cffa9c7deМастерство плетения|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0GH",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 19368,
+          "after": "|cffe4cfa3Туннель нерубов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 19370,
+          "after": "|cffe4cfa3Туннель нерубов|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 19366,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подземный ход сообщения Нерубов. Позволяет связывать две точки карты и мгновенно перемещать войска.|r"
+        }
+      ]
+    },
+    {
+      "id": "lorE",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 37973,
+          "after": "|cffe4cfa3Кокон Лорда|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 37974,
+          "after": "|cffe4cfa3Кокон Лорда|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31848,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Особый инкубационный кокон. Через |cffffffff60|cffced4da сек. созревает и порождает могучего |cffa9c7deНеруба Лорда|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "u019",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10296,
+          "after": "|cffe4cfa3Кокон|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10297,
+          "after": "|cffe4cfa3Кокон|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 21249,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовая основа для возведения любых сооружений Нерубов. Даёт лимит пищи и доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+30|cffced4da золота каждые |cffffffff25|cffced4da сек.|n|n|cffa6afb8Мутирует в:|cffced4da любое здание Нерубов.|r"
+        }
+      ]
+    },
+    {
+      "id": "u01A",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10314,
+          "after": "|cffe4cfa3Башня Оплетения|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10315,
+          "after": "|cffe4cfa3Башня Оплетения|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13028,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Защитное оборонительное сооружение Нерубов. Опутывает врагов паутиной и поражает цели на расстоянии.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    }
+  ]
+}

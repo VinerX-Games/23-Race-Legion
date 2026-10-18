@@ -1,0 +1,650 @@
+{
+  "scope": "Кул-Тирас (Kul Tiras): категория 2 — Юниты (31 юнитов)",
+  "units_count": 31,
+  "variants": [
+    "SD"
+  ],
+  "units": [
+    {
+      "id": "h013",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3140,
+          "after": "|cffe4cfa3Работник|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 3141,
+          "after": "|cffe4cfa3Работник|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 20561,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Основная рабочая сила Кул-Тираса. Возводит сооружения, добывает золото и древесину, а также ремонтирует повреждённые здания и боевую технику.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deДобывать ресурсы|cffced4da: сбор древесины и золота.|n- |cffa9c7deРемонтировать|cffced4da: восстановление прочности техники и построек.|n- |cffa9c7deКороткий прыжок|cffced4da: быстрое перемещение на небольшое расстояние.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h019",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 2226,
+          "after": "|cffe4cfa3Пехотинец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34624,
+          "after": "|cffe4cfa3Пехотинец|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 38150,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Универсальный боец передовой линии Кул-Тираса.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: снижает урон от стрел и отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h01A",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38851,
+          "after": "|cffe4cfa3Морской волк|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 38852,
+          "after": "|cffe4cfa3Морской волк|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 38151,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Опытный морской стрелок-абордажник Кул-Тираса.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСвинцовые пули|cffced4da: увеличивает урон по тяжелой броне.|n- |cffa9c7deОглушающий выстрел|cffced4da: даёт шанс оглушить врага и нанести дополнительный урон.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h01C",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38853,
+          "after": "|cffe4cfa3Рыцарь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 38854,
+          "after": "|cffe4cfa3Рыцарь|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 38152,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный конный всадник Кул-Тираса в тяжелых доспехах.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h01D",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4476,
+          "after": "|cffe4cfa3Гвардеец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34625,
+          "after": "|cffe4cfa3Гвардеец|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 24553,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Закалённый ветеран королевской гвардии Кул-Тираса.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: защищает от атак дальнего боя.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает входящий физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h01E",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38855,
+          "after": "|cffe4cfa3Стрелок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 38856,
+          "after": "|cffe4cfa3Стрелок|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 38153,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Пехотинец дальнего боя, вооружённый дальнобойным мушкетом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСвинцовые пули|cffced4da: увеличивает урон по тяжелой броне.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h01F",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38857,
+          "after": "|cffe4cfa3Жрец Штормов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 38858,
+          "after": "|cffe4cfa3Жрец Штормов|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 38154,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Боевой маг приливов и штормов Кул-Тираса.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМорская прохлада|cffced4da: замедляет противников и повышает урон атак.|n- |cffa9c7deПризыв Духа Моря|cffced4da: призывает морского духа на поле боя.|n- |cffa9c7deСокрушительная волна|cffced4da: наносит урон наземным врагам на прямой линии.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h01G",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4695,
+          "after": "|cffe4cfa3Палубный Доктор|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34651,
+          "after": "|cffe4cfa3Палубный Доктор|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 24732,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Корабельный лекарь и полевой санитар флота Кул-Тираса.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМассовое исцеление|cffced4da: восстанавливает здоровье ближайшим союзникам.|n- |cffa9c7deМассовое восполнение маны|cffced4da: восстанавливает ману союзникам вокруг.|n- |cffa9c7deМассовый бонус к броне|cffced4da: повышает броню ближайших союзных бойцов.|n- |cffa9c7deРассеивание заклинаний|cffced4da: снимает эффекты и наносит урон призванным существам.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h01H",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4712,
+          "after": "|cffe4cfa3Алебардщик|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34693,
+          "after": "|cffe4cfa3Алебардщик|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 38155,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый пехотинец ближнего боя с дальнобойной алебардой.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗаточка и освящение|cffced4da: увеличивает урон по средней броне.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h01I",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12338,
+          "after": "|cffe4cfa3Мортирный расчет|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 12339,
+          "after": "|cffe4cfa3Мортирный расчет|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 38156,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Дальнобойный артиллерийский расчёт осадного действия.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deШрапнель|cffced4da: повышает урон по небронированным и среднебронированным целям.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "kt00",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 9623,
+          "after": "|cffe4cfa3Линкор Кул-Тираса|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NC",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 2744,
+          "after": "|cffe4cfa3Авангард 1|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34695,
+          "after": "|cffe4cfa3Авангард 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31868,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 1-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0ND",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33287,
+          "after": "|cffe4cfa3Авангард 2|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34696,
+          "after": "|cffe4cfa3Авангард 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33218,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 2-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NE",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33291,
+          "after": "|cffe4cfa3Авангард 3|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34697,
+          "after": "|cffe4cfa3Авангард 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33289,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 3-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NF",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33295,
+          "after": "|cffe4cfa3Авангард 4|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34701,
+          "after": "|cffe4cfa3Авангард 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33293,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 4-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NG",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33299,
+          "after": "|cffe4cfa3Авангард 5|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34702,
+          "after": "|cffe4cfa3Авангард 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33297,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 5-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NH",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33303,
+          "after": "|cffe4cfa3Авангард 6|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34707,
+          "after": "|cffe4cfa3Авангард 6|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33301,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 6-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NI",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33307,
+          "after": "|cffe4cfa3Авангард 7|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34708,
+          "after": "|cffe4cfa3Авангард 7|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33305,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 7-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NJ",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33311,
+          "after": "|cffe4cfa3Авангард 8|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34709,
+          "after": "|cffe4cfa3Авангард 8|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33309,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 8-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NS",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33343,
+          "after": "|cffe4cfa3Авангард 9|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34745,
+          "after": "|cffe4cfa3Авангард 9|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33341,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 9-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NL",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33315,
+          "after": "|cffe4cfa3Авангард 10|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34710,
+          "after": "|cffe4cfa3Авангард 10|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33313,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 10-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NM",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33319,
+          "after": "|cffe4cfa3Авангард 11|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34724,
+          "after": "|cffe4cfa3Авангард 11|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33317,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 11-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NN",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33323,
+          "after": "|cffe4cfa3Авангард 12|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34725,
+          "after": "|cffe4cfa3Авангард 12|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33321,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 12-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NO",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33327,
+          "after": "|cffe4cfa3Авангард 13|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34726,
+          "after": "|cffe4cfa3Авангард 13|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33325,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 13-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NP",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33331,
+          "after": "|cffe4cfa3Авангард 14|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34727,
+          "after": "|cffe4cfa3Авангард 14|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33329,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 14-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NQ",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33335,
+          "after": "|cffe4cfa3Авангард 15|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34728,
+          "after": "|cffe4cfa3Авангард 15|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33333,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 15-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NR",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33339,
+          "after": "|cffe4cfa3Авангард 16|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34744,
+          "after": "|cffe4cfa3Авангард 16|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33337,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 16-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NK",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33347,
+          "after": "|cffe4cfa3Авангард 17|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34746,
+          "after": "|cffe4cfa3Авангард 17|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33345,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 17-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NT",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33369,
+          "after": "|cffe4cfa3Авангард 18|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34747,
+          "after": "|cffe4cfa3Авангард 18|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33349,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 18-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NU",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33372,
+          "after": "|cffe4cfa3Авангард 19|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34748,
+          "after": "|cffe4cfa3Авангард 19|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33371,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 19-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0NV",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33376,
+          "after": "|cffe4cfa3Авангард 20|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34749,
+          "after": "|cffe4cfa3Авангард 20|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33374,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный пехотинец авангарда Кул-Тираса 20-го ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: с высокой вероятностью отражает пронзающие атаки.|n- |cffa9c7deМастерство|cffced4da: даёт шанс нанести критический удар.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    }
+  ]
+}

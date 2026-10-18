@@ -1,0 +1,126 @@
+Unit [cD14]: hotkey='R'
+  name: sid=26131, val='|cffc3b4f0Ядоголем|r'
+  tip: sid=34560, val='Произвести |cffc3b4f0Ядоголема|r'
+  ubertip: sid=28406, val='|cff7dc87dВремя подготовки:|r |cffaaf0aa131 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nГолем, способный наносить урон по области вблизи и заражать врагов чумой.'
+  attacks: targs1=ground,structure,debris,item,ward, targs2=None
+  abillist: cDa6,cDay
+
+Unit [cD33]: hotkey='R'
+  name: sid=26295, val='|cffc3b4f0Костяной страж|r'
+  tip: sid=34777, val='Произвести |cffc3b4f0Костяной стража|r'
+  ubertip: sid=35955, val='|cff7dc87dВремя подготовки:|r |cffaaf0aa42 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|nСильный юнит ближнего боя.'
+  attacks: targs1=ground,structure,debris,item,ward, targs2=None
+  abillist: cDat,cDao
+
+Unit [cD09]: hotkey='E'
+  name: sid=25792, val='|cffc3b4f0Мясной голем|r'
+  tip: sid=34540, val='Произвести |cffc3b4f0Мясной голема|r'
+  ubertip: sid=28399, val='|cff7dc87dВремя подготовки:|r |cffaaf0aa86 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|nСильный юнит ближнего боя.'
+  attacks: targs1=ground,structure,debris,item,ward, targs2=None
+  abillist: cDa6
+
+Unit [cD10]: hotkey='W'
+  name: sid=7358, val='|cffc3b4f0Поганище|r'
+  tip: sid=34542, val='Произвести |cffc3b4f0Поганище|r'
+  ubertip: sid=28403, val='|cff7dc87dВремя подготовки:|r |cffaaf0aa47 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|nТяжелый воин ближнего боя.'
+  attacks: targs1=ground,structure,debris,item,ward, targs2=None
+  abillist: cDa6
+
+Unit [cD02]: hotkey='Q'
+  name: sid=22859, val='|cffc3b4f0Послушник|r'
+  tip: sid=19518, val='Обучить |cffc3b4f0Послушника|r'
+  ubertip: sid=35936, val='|cff7dc87dВремя подготовки:|r |cffaaf0aa20 сек|r|nБазовый рабочий. Призывает и ремонтирует здания.'
+  attacks: targs1=ground,structure,debris,item,ward, targs2=None
+  abillist: Aaha,Arst,Auns,A0I3
+
+Unit [cD19]: hotkey='Q'
+  name: sid=26200, val='|cffc3b4f0Cкелет воин|r'
+  tip: sid=34570, val='Произвести |cffc3b4f0Cкелета воина|r'
+  ubertip: sid=3065, val='|cff7dc87dВремя подготовки:|r |cffaaf0aa20 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|nСлабый воин ближнего боя.'
+  attacks: targs1=ground,structure,debris,item,ward, targs2=None
+  abillist: cDat
+
+Unit [cD35]: hotkey='Q'
+  name: sid=36972, val='|cffc3b4f0Cкелет воин|r'
+  tip: sid=38639, val='|cffe4cfa3Воскрешение мёртвых — [уровень 4]|r (|cffffffffR|r)'
+  ubertip: sid=38641, val='|cff7dc87dВремя подготовки:|r |cffaaf0aa28 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|nСлабый воин ближнего боя.'
+  attacks: targs1=ground,structure,debris,item,ward, targs2=None
+  abillist: cDat
+
+Unit [cD11]: hotkey='Q'
+  name: sid=11015, val='|cffc3b4f0Зомби|r'
+  tip: sid=34546, val='Произвести |cffc3b4f0Зомби|r'
+  ubertip: sid=28404, val='|cff7dc87dВремя подготовки:|r |cffaaf0aa22 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|nПростой юнит ближнего боя, нанимается сразу 2 экземпляра.'
+  attacks: targs1=ground,structure,debris,item,ward, targs2=None
+  abillist: cDa6,A1HO
+
+Unit [cD34]: hotkey='Q'
+  name: sid=34616, val='|cffc3b4f0Cкелет воин|r'
+  tip: sid=35167, val='Произвести |cffc3b4f0Cкелета воина|r'
+  ubertip: sid=36940, val='|cff7dc87dВремя подготовки:|r |cffaaf0aa28 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|nСлабый воин ближнего боя.'
+  attacks: targs1=ground,structure,debris,item,ward, targs2=None
+  abillist: cDat
+
+Unit [cD08]: hotkey='R'
+  name: sid=25546, val='|cffc3b4f0Темный Адепт|r'
+  tip: sid=34386, val='Обучить |cffc3b4f0Темный Адепта|r'
+  ubertip: sid=28398, val='|cff7dc87dВремя подготовки:|r |cffaaf0aa37 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|nСмертоносный маг, наносящий большой урон с помощью ледяных заклинаний.'
+  attacks: targs1=ground,structure,debris,air,item,ward, targs2=None
+  abillist: cDae,cDad,A1HI,A1HM
+
+Unit [cD13]: hotkey='E'
+  name: sid=25936, val='|cffc3b4f0Труповозка|r'
+  tip: sid=34550, val='Произвести |cffc3b4f0Труповозку|r'
+  ubertip: sid=28405, val='|cff7dc87dВремя подготовки:|r |cffaaf0aa32 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадная|r|nТранспорт для перевозки трупов, а также дальнобойное осадное орудие, эффективное против зданий, но медленное и уязвимое.'
+  attacks: targs1=ground,debris,tree,wall,item,ward, targs2=structure
+  abillist: Sch2,Amel,Amed,cDA1,cDaq
+
+Unit [cD03]: hotkey='Q'
+  name: sid=23021, val='|cffc3b4f0Некромант|r'
+  tip: sid=19522, val='Обучить |cffc3b4f0Некроманта|r'
+  ubertip: sid=28392, val='|cff7dc87dВремя подготовки:|r |cffaaf0aa27 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|nБазовый маг, способный воскрешать скелетов и использовать другие полезные заклинания.'
+  attacks: targs1=ground,structure,debris,air,item,ward, targs2=None
+  abillist: cDa2,cDar,cDap,A1HN
+
+Unit [cD22]: hotkey='W'
+  name: sid=26201, val='|cffc3b4f0Скелет-маг|r'
+  tip: sid=34572, val='Произвести |cffc3b4f0Скелет-мага|r'
+  ubertip: sid=28498, val='|cff7dc87dВремя подготовки:|r |cffaaf0aa15 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|nСлабый юнит дальнего боя.'
+  attacks: targs1=ground,structure,debris,air,item,ward, targs2=None
+  abillist: cDat
+
+Unit [cD18]: hotkey='E'
+  name: sid=26173, val='|cffc3b4f0Костяной привратник|r'
+  tip: sid=34566, val='|cffc3b4f0Костяной привратник|r'
+  ubertip: sid=28412, val='|cff7dc87dВремя подготовки:|r |cffaaf0aa43 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nСильный юнит дальнего боя.'
+  attacks: targs1=ground,structure,debris,air,item,ward, targs2=None
+  abillist: cDat
+
+Unit [cD05]: hotkey='W'
+  name: sid=24412, val='|cffc3b4f0Осквернитель|r'
+  tip: sid=3525, val='Обучить |cffc3b4f0Осквернителя|r'
+  ubertip: sid=28393, val='|cff7dc87dВремя подготовки:|r |cffaaf0aa28 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|nМаг, специализирующийся на воскрешении зомби.'
+  attacks: targs1=ground,structure,debris,air,item,ward, targs2=None
+  abillist: A1IK,cDa5,cDai,A1HH
+
+Unit [h0D2]: hotkey='Q'
+  name: sid=None, val='|cffe4cfa3Транспорт|r'
+  tip: sid=None, val='|cffe4cfa3Транспорт|r (|cffffffffQ|r)'
+  ubertip: sid=None, val='|cffa6afb8ЮНИТ:|cffced4da Неатакующий корабль для перевозки наземных союзных войск. Грузовой отсек вмещает |cffffffff10|cffced4da мест.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМагическая посадка|cffced4da: перемещает подходящие войска игрока из выбранной области к выделенным транспортам того же типа и отдаёт приказ посадки.|n- |cffa9c7deПосадка на борт|cffced4da: принимает выбранного союзника при наличии места.|n- |cffa9c7deВысадка|cffced4da: высаживает груз в указанном месте.|n- |cffa9c7deТактическое ускорение|cffced4da: временно повышает скорость передвижения ценой увеличения получаемого урона; требует «Дополнительных парусов».|n- |cffa9c7deПочинка|cffced4da: восстанавливает здоровье при поддержании; требует одноимённого исследования.|r'
+  attacks: targs1=None, targs2=None
+  abillist: A00I,A00A,A00B,Sch5,Slo3,Sdro
+
+Unit [h0CZ]: hotkey='W'
+  name: sid=None, val='|cffe4cfa3Фрегат|r'
+  tip: sid=None, val='|cffe4cfa3Фрегат|r (|cffffffffW|r)'
+  ubertip: sid=None, val='|cffa6afb8ЮНИТ:|cffced4da Боевой корабль для поддержки флота и обстрела противников.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБоковые пушки фрегата|cffced4da: автоматически стреляют по вражеским механическим целям, в том числе на ходу.|n- |cffa9c7deТактическое ускорение|cffced4da: временно повышает скорость передвижения ценой увеличения получаемого урона; требует «Дополнительных парусов».|n- |cffa9c7deМассированный обстрел|cffced4da: поражает противников в выбранной области; требует «Обстрела».|n- |cffa9c7deПочинка|cffced4da: восстанавливает здоровье при поддержании; требует одноимённого исследования.|n- |cffa9c7deПрицельная пальба|cffced4da: наносит урон и оглушает органическую цель.|n- |cffa9c7deНазначение флагмана|cffced4da: усиливает корабль и открывает выбор постоянной ауры.|n|nАтакует наземные и воздушные цели.|r'
+  attacks: targs1=ground,structure,debris,air,item,ward, targs2=None
+  abillist: A009,A002,A00B,A00G,A00A,A1PP
+
+Unit [h0D0]: hotkey='E'
+  name: sid=None, val='|cffe4cfa3Линкор|r'
+  tip: sid=None, val='|cffe4cfa3Линкор|r (|cffffffffE|r)'
+  ubertip: sid=None, val='|cffa6afb8ЮНИТ:|cffced4da Тяжёлый боевой корабль для обстрела наземных целей и зданий.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБоковые пушки линкора|cffced4da: автоматически стреляют по вражеским механическим целям, в том числе на ходу; требуют «Обстрела».|n- |cffa9c7deТактическое ускорение|cffced4da: временно повышает скорость передвижения ценой увеличения получаемого урона; требует «Дополнительных парусов».|n- |cffa9c7deМассированный обстрел|cffced4da: поражает противников в выбранной области; требует «Обстрела».|n- |cffa9c7deПочинка|cffced4da: восстанавливает здоровье при поддержании; требует одноимённого исследования.|n- |cffa9c7deАбордаж|cffced4da: захват кораблей в текущей версии недоступен.|n- |cffa9c7deНазначение флагмана|cffced4da: усиливает корабль и открывает выбор постоянной ауры.|n|nАтакует наземные цели.|r'
+  attacks: targs1=ground,structure,debris,item,ward, targs2=None
+  abillist: A009,A003,A00B,A00G,A00A,A001
+

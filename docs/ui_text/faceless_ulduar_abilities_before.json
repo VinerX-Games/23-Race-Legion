@@ -1,0 +1,159 @@
+{
+  "command": "get-objects-bulk",
+  "count": 7,
+  "map": "F:\\Gemini_23Race\\map.w3x",
+  "missing": [],
+  "objects": [
+    {
+      "fields": {
+        "area1": "550.000000",
+        "buffid1": "B030",
+        "code": "AUau",
+        "cool1": "0",
+        "dataa1": "0.000000",
+        "datab1": "2.500000",
+        "datac1": "0",
+        "datad1": "",
+        "hotkey": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Зона ремонта|r",
+        "requires": "",
+        "targs1": "friend,ground,invulnerable,mechanical,self,vulnerable",
+        "tip1": "|cffe4cfa3Зона ремонта|r",
+        "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает восстановление здоровья дружественных наземных механизмов в радиусе |cffffffff550|cffced4da на |cffc8e0872,5|cffced4da ед. в секунду.|r"
+      },
+      "id": "A15N",
+      "name": "|cffe4cfa3Зона ремонта|r"
+    },
+    {
+      "fields": {
+        "area1": "1000.000000",
+        "buffid1": "",
+        "code": "AOfs",
+        "cool1": "30.000000",
+        "dataa1": "3",
+        "datab1": "",
+        "datac1": "",
+        "datad1": "",
+        "hotkey": "TRIGSTR_16930",
+        "levels": "1",
+        "name": "TRIGSTR_12216",
+        "requires": "",
+        "targs1": "",
+        "tip1": "TRIGSTR_23303",
+        "ubertip1": "\"Открывает обзор в указанной области на <AOfs,Dur1> сек. Обнаруживает невидимые войска.\""
+      },
+      "id": "A0MK",
+      "name": "Разведка"
+    },
+    {
+      "fields": {
+        "area1": "",
+        "buffid1": "",
+        "code": "AAns",
+        "cool1": "0",
+        "dataa1": "600",
+        "datab1": "900",
+        "datac1": "",
+        "datad1": "",
+        "hotkey": "TRIGSTR_12045",
+        "levels": "1",
+        "name": "TRIGSTR_17283",
+        "requires": "",
+        "targs1": "",
+        "tip1": "TRIGSTR_17284",
+        "ubertip1": "TRIGSTR_8068"
+      },
+      "id": "A0B0",
+      "name": "|cffc8e6ffУкрепить Город|r"
+    },
+    {
+      "fields": {
+        "area1": "",
+        "buffid1": "",
+        "code": "AAns",
+        "cool1": "0",
+        "dataa1": "900",
+        "datab1": "500",
+        "datac1": "",
+        "datad1": "",
+        "hotkey": "TRIGSTR_13637",
+        "levels": "1",
+        "name": "TRIGSTR_17285",
+        "requires": "",
+        "targs1": "",
+        "tip1": "TRIGSTR_17287",
+        "ubertip1": "TRIGSTR_17286"
+      },
+      "id": "A0B1",
+      "name": "|cffc8e6ffНаладить Производство|r"
+    },
+    {
+      "fields": {
+        "area1": "",
+        "buffid1": "",
+        "code": "AAns",
+        "cool1": "0",
+        "dataa1": "600",
+        "datab1": "900",
+        "datac1": "",
+        "datad1": "",
+        "hotkey": "TRIGSTR_15027",
+        "levels": "1",
+        "name": "TRIGSTR_17288",
+        "requires": "",
+        "targs1": "",
+        "tip1": "TRIGSTR_17290",
+        "ubertip1": "TRIGSTR_17289"
+      },
+      "id": "A0B2",
+      "name": "|cffc8e6ffУвеличить Размер Города|r"
+    },
+    {
+      "fields": {
+        "area1": "",
+        "buffid1": "",
+        "code": "AAns",
+        "cool1": "0",
+        "dataa1": "1250",
+        "datab1": "800",
+        "datac1": "",
+        "datad1": "",
+        "hotkey": "TRIGSTR_13122",
+        "levels": "1",
+        "name": "TRIGSTR_17280",
+        "requires": "",
+        "targs1": "",
+        "tip1": "TRIGSTR_17282",
+        "ubertip1": "TRIGSTR_17281"
+      },
+      "id": "A0AZ",
+      "name": "|cffc8e6ffУвеличить Сбор Дани|r"
+    },
+    {
+      "fields": {
+        "area1": "900",
+        "buffid1": "B023",
+        "code": "AHad",
+        "cool1": "0",
+        "dataa1": "0.000000",
+        "datab1": "0",
+        "datac1": "",
+        "datad1": "",
+        "hotkey": "",
+        "levels": "1",
+        "name": "TRIGSTR_7394",
+        "requires": "",
+        "targs1": "ground,self,structure,vulnerable",
+        "tip1": "",
+        "ubertip1": ""
+      },
+      "id": "AHad",
+      "name": "Поселение"
+    }
+  ],
+  "ok": true,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "type": "ability"
+}

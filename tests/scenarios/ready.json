@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "name": "map-ready",
+  "steps": [
+    {"name": "initialization", "lua": "assert(type(AiRaceOf)=='function', 'AI not initialized'); assert(InitErrors==nil or #InitErrors==0, 'initialization errors'); ProbeLogEnableFlush(); return 'ready'", "expected": "ready"}
+  ]
+}

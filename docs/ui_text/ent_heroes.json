@@ -1,0 +1,64 @@
+{
+  "race": "Ents",
+  "category": "heroes",
+  "total_heroes": 3,
+  "heroes": [
+    {
+      "id": "E02S",
+      "name": "|cffe4cfa3Лесной Смотритель|r",
+      "propernames": "|cffe4cfa3Ядрин Леший|r",
+      "tip": "|cffe4cfa3Лесной Смотритель|r (|cffffffffC|r)",
+      "ubertip": "|cffa6afb8ГЕРОЙ:|cffced4da Могучий лесной хранитель ближнего боя, отражающий вражеские атаки шипастой аурой и сокрушающий врагов живой силой леса.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТернистый куст|cffced4da: оглушает врагов и наносит урон по линии удара.|n- |cffa9c7deАура шипов|cffced4da: отражает часть входящего урона ближнего боя обратно в атакующего.|n- |cffa9c7deРассекающий удар|cffced4da: базовые атаки наносят урон окружающим вражеским бойцам.|n- |cffa9c7deДух Леса|cffced4da: призывает могучую аватару возмездия, поднимающую неуязвимых духов из трупов.|n|n|cffa6afb8Атакует:|cffced4da только наземные цели.|r",
+      "revivetip": "Воскресить |cffe4cfa3Лесной Смотритель|r (|cffffffffC|r)",
+      "awakentip": "Оживить |cffe4cfa3Лесной Смотритель|r (|cffffffffC|r)",
+      "wts": {
+        "name": 41643,
+        "propernames": 15684,
+        "tip": 41646,
+        "ubertip": 21271,
+        "revivetip": 41647,
+        "awakentip": 41645
+      },
+      "hotkey": "C",
+      "primary": "STR"
+    },
+    {
+      "id": "E02Q",
+      "name": "|cffe4cfa3Дух леса|r",
+      "propernames": "|cffe4cfa3Ника|r,|cffe4cfa3Эсса Лесной Дух|r",
+      "tip": "|cffe4cfa3Дух леса|r (|cffffffffZ|r)",
+      "ubertip": "|cffa6afb8ГЕРОЙ:|cffced4da Магический дух поддержки дальнего боя, укрепляющий союзную армию аурами брони и регенерации и карающий врагов силами природы.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСемя раздора|cffced4da: проращивает корни, наносящие цели периодический урон.|n- |cffa9c7deДревесная кора|cffced4da: повышает показатель защиты всех союзников поблизости.|n- |cffa9c7deВлияние леса|cffced4da: существенно ускоряет восстановление здоровья союзных войск.|n- |cffa9c7deКара леса|cffced4da: сотрясает землю мощным природным взрывом, наносящим урон по площади.|n|n|cffa6afb8Атакует:|cffced4da наземные и воздушные цели.|r",
+      "revivetip": "Воскресить |cffe4cfa3Дух леса|r (|cffffffffZ|r)",
+      "awakentip": "Оживить |cffe4cfa3Дух леса|r (|cffffffffZ|r)",
+      "wts": {
+        "name": 41633,
+        "propernames": 13304,
+        "tip": 41636,
+        "ubertip": 21268,
+        "revivetip": 41637,
+        "awakentip": 41635
+      },
+      "hotkey": "Z",
+      "primary": "INT"
+    },
+    {
+      "id": "E02R",
+      "name": "|cffe4cfa3Егерь диколесья|r",
+      "propernames": "|cffe4cfa3Катрин Лесная Песня|r",
+      "tip": "|cffe4cfa3Егерь диколесья|r (|cffffffffX|r)",
+      "ubertip": "|cffa6afb8ГЕРОЙ:|cffced4da Быстрый стрелок дальнего боя, усиливающий стрелков союзной армии, отравляющий врагов и призывающий древней из чащи.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deОтравленное оружие|cffced4da: стрелы наносят цели периодический урон ядом.|n- |cffa9c7deЗов Древних|cffced4da: призывает древней для сражения на передовой линии.|n- |cffa9c7deАура меткости|cffced4da: повышает силу дистанционных атак находящихся рядом союзников.|n- |cffa9c7deКорни мира|cffced4da: сковывает врагов корнями и взращивает отряд лесных защитников.|n|n|cffa6afb8Атакует:|cffced4da наземные и воздушные цели.|r",
+      "revivetip": "Воскресить |cffe4cfa3Егерь диколесья|r (|cffffffffX|r)",
+      "awakentip": "Оживить |cffe4cfa3Егерь диколесья|r (|cffffffffX|r)",
+      "wts": {
+        "name": 41638,
+        "propernames": 13416,
+        "tip": 41641,
+        "ubertip": 21269,
+        "revivetip": 41642,
+        "awakentip": 41640
+      },
+      "hotkey": "X",
+      "primary": "AGI"
+    }
+  ]
+}

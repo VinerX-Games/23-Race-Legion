@@ -1,0 +1,132 @@
+{
+  "scope": "Подписи внешних требований, автоматически отображаемые у способностей Безликих и общих показателей дохода",
+  "objects_before": {
+    "command": "get-objects-bulk",
+    "count": 4,
+    "map": "F:\\Gemini_23Race\\map.w3x",
+    "missing": [],
+    "objects": [
+      {
+        "fields": {
+          "maxlevel": "1",
+          "name1": "Ярость вурдалака",
+          "name2": "",
+          "name3": "",
+          "name4": "",
+          "name5": "",
+          "name6": ""
+        },
+        "id": "Rugf",
+        "name": "Ярость вурдалака"
+      },
+      {
+        "fields": {
+          "maxlevel": "1",
+          "name1": "Залповый огонь",
+          "name2": "",
+          "name3": "",
+          "name4": "",
+          "name5": "",
+          "name6": ""
+        },
+        "id": "Rhrt",
+        "name": "Залповый огонь"
+      },
+      {
+        "fields": {
+          "maxlevel": "6",
+          "name1": "TRIGSTR_28494",
+          "name2": "TRIGSTR_28495",
+          "name3": "TRIGSTR_28486",
+          "name4": "TRIGSTR_28487",
+          "name5": "TRIGSTR_28488",
+          "name6": "TRIGSTR_28489"
+        },
+        "id": "Rhlh",
+        "name": "|cffaad2ffУлучшенная лесозаготовка|r"
+      },
+      {
+        "fields": {
+          "maxlevel": "1",
+          "name1": "Дрессировка животных",
+          "name2": "",
+          "name3": "",
+          "name4": "",
+          "name5": "",
+          "name6": ""
+        },
+        "id": "Rhan",
+        "name": "Дрессировка животных"
+      }
+    ],
+    "ok": true,
+    "schema_version": 1,
+    "tool": "HiveWE_cli",
+    "type": "upgrade"
+  },
+  "strings": [
+    {
+      "rawcode": "Rugf",
+      "field": "name1",
+      "before": "Ярость вурдалака",
+      "after": "|cffe4cfa3Ярость вурдалака|r"
+    },
+    {
+      "rawcode": "Rhrt",
+      "field": "name1",
+      "before": "Залповый огонь",
+      "after": "|cffe4cfa3Залповый огонь|r"
+    },
+    {
+      "rawcode": "Rhlh",
+      "field": "name1",
+      "before": "|cffaad2ffУлучшенная лесозаготовка|r",
+      "after": "|cffe4cfa3Улучшенная лесозаготовка|r"
+    },
+    {
+      "rawcode": "Rhlh",
+      "field": "name2",
+      "before": "|cffaad2ffУлучшенная лесозаготовка|r",
+      "after": "|cffe4cfa3Улучшенная лесозаготовка|r"
+    },
+    {
+      "rawcode": "Rhlh",
+      "field": "name3",
+      "before": "|cffaad2ffУлучшенная лесозаготовка|r",
+      "after": "|cffe4cfa3Улучшенная лесозаготовка|r"
+    },
+    {
+      "rawcode": "Rhlh",
+      "field": "name4",
+      "before": "|cffaad2ffУлучшенная лесозаготовка|r",
+      "after": "|cffe4cfa3Улучшенная лесозаготовка|r"
+    },
+    {
+      "rawcode": "Rhlh",
+      "field": "name5",
+      "before": "|cffaad2ffУлучшенная лесозаготовка|r",
+      "after": "|cffe4cfa3Улучшенная лесозаготовка|r"
+    },
+    {
+      "rawcode": "Rhlh",
+      "field": "name6",
+      "before": "|cffaad2ffУлучшенная лесозаготовка|r",
+      "after": "|cffe4cfa3Улучшенная лесозаготовка|r"
+    },
+    {
+      "rawcode": "Rhan",
+      "field": "name1",
+      "before": "Дрессировка животных",
+      "after": "|cffe4cfa3Дрессировка животных|r"
+    }
+  ],
+  "in_game_checked": false,
+  "evidence": [
+    "checkdep=1 and requires on A0AY/A0B5/A0SM/A122/A0T3/A1N5/A1R3",
+    "Research menus of these other factions are outside the Faceless tree; only the names visible as requirements are migrated here"
+  ],
+  "limitations": [
+    "Requirements and gameplay effects are not removed or changed; inherited requirements may remain unavailable to Faceless"
+  ],
+  "verification_owner": "Игровые проверки выполняет пользователь"
+}

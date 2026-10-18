@@ -199,7 +199,7 @@ function Trig_Del1FromTable_C_Actions()
     -- (identical on all clients), so the early return is deterministic and desync-safe.
     local oi = MultiboardItemOwnerIndex[i]
     if oi == nil then return end
-    MultiboardSetItemValue(MultiboardItem[oi * 2 + 1], I2S(udg_UnitsCount[i + 1] or 0))
+    MultiboardSetCell(oi, 1, I2S(udg_UnitsCount[i] or 0))
     i=0
 end
 --===========================================================================

@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "applied": true,
+  "method": "WTS-only",
+  "changed_wts_ids": [
+    20558
+  ],
+  "binary_sha256_unchanged": {
+    "war3map.w3a": "99d045b1d4190238a5fcebe27d81694ebfcf2fcd3a8074cd3f53d3d08ca89561",
+    "war3map.w3b": "22b32d7d8cedc48e448f8b96ad7df304601555fd0c10590cdb21600691d4fa78",
+    "war3map.w3c": "c74a2d46a6ecca8769a47200c16612eef9c7e2d67d43659be78e4adcde9930e7",
+    "war3map.w3d": "de15401141bd2d5f9fa34a8cda9e705d686238514976e1e78e28b3f9b7a93a62",
+    "war3map.w3e": "d2339819215d6d05cd811ef9d78f9cea1b146a6696f62aaf4ba663c4abd3fb42",
+    "war3map.w3h": "a8c6b1b46bba272d2a789c9b862b19d6dbc6092af2dc0ae88a0f17912876ecb3",
+    "war3map.w3i": "24ba48092f8e0b52ec19f6690087a6e14628376246f7239dad6c521e2b5cc158",
+    "war3map.w3q": "c54fb8c459107a1080d9b9fdf4431448794a47a3fcbfb143951ebadae1d1bfd6",
+    "war3map.w3r": "52d7bd22e25a4f4ef45e9cc294aea213786dc69678864f7a86f138ecd4865b85",
+    "war3map.w3s": "8bd8d80bf943c640d0b49b770dc5dde79011c6c033edb32c609096e1330ff274",
+    "war3map.w3t": "06c2ae97366168984df0539ed71902e2884a39a1a4b0d1a5fb98e41a0b77e6ea",
+    "war3map.w3u": "4c7537f4593e5a6686c066e5949791dcd24208d6a70ef468ef922ba842ec3e8c",
+    "war3mapSkin.w3a": "b19abe8960a44eeee8f718fd1d7c73399ffb7c930f1e63f247bf6aaeafa38e11",
+    "war3mapSkin.w3b": "e7b0b0c14239d3e9ca6a3f80a446dbd585526e9cc323146cc2c4fc9f60eb0c4b",
+    "war3mapSkin.w3d": "721bed7219463d0b88ad83945acf66da5fdc9325d1507fbb6c8076b9c65a0a2d",
+    "war3mapSkin.w3h": "dd4345c303ae7db660995237501140ddfdf72c79476abb18ca288c1bca09d75c",
+    "war3mapSkin.w3q": "a0c7977fe9be0144f25e7758dbcaf103a9ef8955b233c3e24b53257c69722345",
+    "war3mapSkin.w3t": "21100b19421fd5844a0528a350d9e599705e3ab955730e608d1a40069eb39d45",
+    "war3mapSkin.w3u": "0642c190624839ccb851a3fa998848917c2145751bf0d83e42e7c6e6ca1e0424"
+  },
+  "before_wts_sha256": "10cccba1cebc8c1a40fa58ed011a30afe1158bb273fa9dfb101363130eff4396",
+  "after_wts_sha256": "9f48f211184dd37c81bfadd0303aee8194d3a4fedf296cb72e3166a8f7c8dad5"
+}

@@ -1,0 +1,240 @@
+{
+  "scope": "Лесные тролли (ForestTrolls): категория 1 — Здания",
+  "buildings_count": 11,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "h0MT",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 21796,
+          "after": "|cffe4cfa3Дом вождей|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33538,
+          "after": "|cffe4cfa3Дом вождей|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 32614,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание лесных троллей первой ступени. Обеспечивает добычу ресурсов, начальный запас пищи и основу базы.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРемесленник|cffced4da: строитель, добывающий древесину и возводящий строения.|n- |cffa9c7deСобиратель|cffced4da: базовый охотник и сборщик ресурсов.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deКрепость вождей|cffced4da: открывает доступ к передовым сооружениям и технологиям.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0MR",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31447,
+          "after": "|cffe4cfa3Колизей|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10895,
+          "after": "|cffe4cfa3Колизей|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33545,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Боевая арена для тренировки элитных воинов, всадников и берсерков, а также усиления их выносливости.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБерсерк|cffced4da: неистовый боец ближнего боя.|n- |cffa9c7deМастер копья|cffced4da: тяжёлый копейщик с оглушающим броском.|n- |cffa9c7deНаездник на медведе|cffced4da: мощная тяжёлая кавалерия.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deСнадобья силы|cffced4da: повышает запас здоровья берсерков и наездников на медведях.|n- |cffa9c7deШипы на медведе|cffced4da: дарует всадникам шипастую броню, отражающую урон.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0MS",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31375,
+          "after": "|cffe4cfa3Казармы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33537,
+          "after": "|cffe4cfa3Казармы|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 32323,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Военный лагерь для подготовки базовой пехоты, стрелков и осадных орудий лесных троллей.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deМетатель топоров|cffced4da: воин дальнего боя.|n- |cffa9c7deСобиратель|cffced4da: лёгкий боец с яростью.|n- |cffa9c7deКатапульта|cffced4da: дальнобойное осадное орудие.|n- |cffa9c7deМастер топора|cffced4da: усиленный стрелок (требует исследования).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМастер топора|cffced4da: улучшает метателей топоров до мастеров топора.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0MU",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 24551,
+          "after": "|cffe4cfa3Алтарь Лоа|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27805,
+          "after": "|cffe4cfa3Алтарь Лоа|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 37464,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Священный алтарь духов Лоа. Служит для призыва и воскрешения павших героев, а также найма воинов, впитавших силу звериных богов.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deПовелитель проклятий|cffced4da, |cffa9c7deМастер клинка|cffced4da, |cffa9c7deВоеначальник|cffced4da.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТролль-ястреб|cffced4da: маг воздуха с грозовой бурей и аурой маны.|n- |cffa9c7deТролль-медведь|cffced4da: исполин с рассекающим ударом и аурой защиты.|n- |cffa9c7deТролль-волк|cffced4da: свирепый зверь с аурой атаки и жаждой битвы.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМетоды поглощения Лоа|cffced4da: усиливает аватары Лоа и открывает их способности.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0MV",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31459,
+          "after": "|cffe4cfa3Лачуга|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33539,
+          "after": "|cffe4cfa3Лачуга|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 37485,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Традиционное жилище троллей. Обеспечивает лимит пищи и приносит регулярный доход золота в казну каждые |cffffffff25|cffced4da сек.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0MZ",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31486,
+          "after": "|cffe4cfa3Ложе Вуду|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27806,
+          "after": "|cffe4cfa3Ложе Вуду|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33541,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Ритуальное святилище магии вуду. Обучает заклинателей и жрецов, а также совершенствует их магическое искусство.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЖрец|cffced4da: целитель, рассеивающий вражеские чары и усиливающий соратников пламенем.|n- |cffa9c7deЗаклинатель|cffced4da: боевой маг, призывающий змеиные идолы и вызывающий безумие в бою.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбучение жрецов|cffced4da: повышает характеристики и открывает способности жрецов.|n- |cffa9c7deОбучение заклинателей|cffced4da: повышает характеристики и открывает способности заклинателей.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0N4",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31513,
+          "after": "|cffe4cfa3Сторожевой пост|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32936,
+          "after": "|cffe4cfa3Сторожевой пост|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 32935,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение лесных троллей. Обстреливает приближающихся противников метательными снарядами.|n|n|cffa6afb8Атакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0N7",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32326,
+          "after": "|cffe4cfa3Лесопилка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33635,
+          "after": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33547,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Центр сбора древесины и кузница улучшений оружия, доспехов, регенерации и прочности укреплений лесных троллей.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deСтальное оружие|cffced4da: повышает урон немагических войск.|n- |cffa9c7deСтальная броня|cffced4da: увеличивает броню всех видов войск.|n- |cffa9c7deМетоды регенерации|cffced4da: ускоряет восстановление здоровья воинов.|n- |cffa9c7deКорпуса построек|cffced4da: увеличивает запас здоровья и броню зданий.|n- |cffa9c7deУлучшенные топоры|cffced4da: повышает количество древесины, переносимой работниками.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0N8",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32338,
+          "after": "|cffe4cfa3Крепость вождей|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32345,
+          "after": "|cffe4cfa3Крепость вождей|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33548,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание лесных троллей второй ступени. Существенно увеличивает запас пищи и открывает доступ к новым постройкам.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРемесленник|cffced4da: рабочий-строитель.|n- |cffa9c7deСобиратель|cffced4da: охотник и добытчик.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deЦитадель вождей|cffced4da: высшая ступень развития столицы.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0N9",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32665,
+          "after": "|cffe4cfa3Цитадель вождей|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32710,
+          "after": "|cffe4cfa3Цитадель вождей|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 33549,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание лесных троллей третьей ступени. Обеспечивает максимальный запас пищи и открывает доступ ко всем технологиям расы.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРемесленник|cffced4da: рабочий-строитель.|n- |cffa9c7deСобиратель|cffced4da: охотник и добытчик.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0D3",
+      "hotkey": "C",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10901,
+          "after": "|cffe4cfa3Верфь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10902,
+          "after": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 22662,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Строит корабли и исследует улучшения флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da.|n- |cffa9c7deФрегат|cffced4da.|n- |cffa9c7deДредноут|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбстрел|cffced4da.|n- |cffa9c7deДополнительные паруса|cffced4da.|n- |cffa9c7deПочинка|cffced4da.|n- |cffa9c7deОрудия флота|cffced4da.|n- |cffa9c7deУкреплённый корпус|cffced4da.|n|n|cffa9c7deЗона ремонта|cffced4da восстанавливает |cff60dc702,5|cffced4da здоровья/сек. союзным кораблям поблизости.|r"
+        }
+      ]
+    }
+  ]
+}

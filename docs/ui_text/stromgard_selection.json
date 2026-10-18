@@ -1,0 +1,79 @@
+{
+  "scope": "Стромгард (Stromgard): подсказка выбора расы A0Y0",
+  "object": "A0Y0",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "hotkey": {
+    "reference": "TRIGSTR_20098",
+    "value": "W"
+  },
+  "levels": 1,
+  "evidence": [
+    "04_race_selection.lua:342-358: InitTrig_Race_Stromgard_O фильтрует A0Y0; выбор создаёт пять h0G9, исследует R0H3, R0HY и запускает gg_trg_StromgardOn.",
+    "Исходные поля name/tip1/ubertip1/hotkey/levels совпадают в SD/HD. Автор и куратор NiCAmCHiK, сложность 2/5 и клавиша W сохранены."
+  ],
+  "exceptions": [
+    "NiCAmCHiK — авторский ник."
+  ],
+  "consumers": [
+    {
+      "file": "war3mapSkin.w3a",
+      "id": "A0Y0",
+      "field": [
+        "anam",
+        0,
+        0
+      ],
+      "wts_id": 38897
+    },
+    {
+      "file": "war3mapSkin.w3a",
+      "id": "A0Y0",
+      "field": [
+        "atp1",
+        1,
+        0
+      ],
+      "wts_id": 38898
+    },
+    {
+      "file": "war3mapSkin.w3a",
+      "id": "A0Y0",
+      "field": [
+        "aub1",
+        1,
+        0
+      ],
+      "wts_id": 25678
+    }
+  ],
+  "in_game_checked": false,
+  "strings": [
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "A0Y0",
+      "field": "name",
+      "reference_before": "TRIGSTR_38897",
+      "before": "|cffeb968cСтромгард|r",
+      "after": "|cffe4cfa3Стромгард|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "A0Y0",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_38898",
+      "before": "|cffeb968cСтромгард|r",
+      "after": "|cffe4cfa3Стромгард|r (|cffffffffW|r)"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "A0Y0",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_25678",
+      "before": "|cffa0beaaСоздатель расы:|r |cffc8dcaaNiCAmCHiK|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaNiCAmCHiK|r|n|cffa0beaaСложность:|r |cffadff2f●●|r●●●|n|cffa0beaaПериод:|r |cffc8dcaaLegion - Battle for Azeroth|r|n|nКоролевство |c00ff8e78Стромгард|r (или просто |c00ff8e78Стромгард|r) - первое королевство, основанное людьми в Восточных королевствах. Объединив разрозненные племена, Стромгард стал столицей империи Аратор.  После битвы за Лордерон низина Арати стала военным фронтом между Альянсом и Ордой. Горожане, похоже, вернулись в отвоеванную столицу, и во главе с Данатом Троллебоем защищали свой восстановленный город от вторжения Орды во время битвы за Стромгард.\n",
+      "after": "|cffa6afb8РАСА:|cffced4da Древнейшее королевство людей в низине Арати.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deNiCAmCHiK|r|n|cffa6afb8Куратор расы:|r |cffa9c7deNiCAmCHiK|r|n|cffa6afb8Сложность:|r |cffffffff●●|cffa6afb8●●●|r|n|cffa6afb8Период:|r |cffa9c7de«Битва за Азерот»|r|n|n|cffced4daКоролевство Стромгард — первое государство людей в Восточных королевствах, объединившее разрозненные племена и ставшее столицей древней империи Аратор. После битвы за Лордерон низина Арати превратилась в военный фронт между Альянсом и Ордой. Жители вернулись в отвоёванную столицу и во главе с Данатом Троллебоем встали на защиту восстановленного города во время битвы за Стромгард.|r"
+    }
+  ]
+}

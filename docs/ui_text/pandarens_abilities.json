@@ -1,0 +1,1048 @@
+{
+  "scope": "Пандарены (Pandarens): категория 4 — Способности (39 способностей)",
+  "abilities_count": 39,
+  "variants": [
+    "SD"
+  ],
+  "abilities": [
+    {
+      "id": "A1I6",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38913,
+          "after": "|cffe4cfa3Пандарены|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38914,
+          "after": "|cffe4cfa3Пандарены|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42408,
+          "after": "|cffa6afb8РАСА:|r |cffced4daМиролюбивые и мудрые жители Пандарии, в совершенстве владеющие боевыми искусствами, магией стихий и тайнами хмелеварения.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deCapral|r|n|cffa6afb8Куратор расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Сложность:|r |cffffffff●|r|cffa6afb8○○○○|r|n|cffa6afb8Период:|r |cffa9c7de«Mists of Pandaria»|r|n|n|cffced4daПандарены — древний гармоничный народ Туманного континента, приверженцы равновесия стихий и внутреннего покоя. Однако их миролюбие обманчиво: в час опасности монахи и мастера стихий встают на защиту родной земли, обрушивая на врагов мощь огня, земли, бури и сокрушительную силу рукопашного боя. Чем богаче запасы на фермах пандаренов, тем крепче здоровье и стойкость их воинов.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1I7",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35480,
+          "after": "|cffe4cfa3Сытые и довольные|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35578,
+          "after": "|cffe4cfa3Сытые и довольные|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 25601,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daПассивная расовая способность пандаренов. Чем больше построено ферм и рыбацких домов, тем выше шанс, что новые воины выйдут из казарм с увеличенным запасом здоровья.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1RB",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 42010,
+          "after": "|cffe4cfa3Исцеление|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42009,
+          "after": "|cffe4cfa3Исцеление|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42236,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daВосполняет |cffffffff5|cffced4da ед. здоровья находящимся рядом раненым союзникам (до |cffffffff8|cffced4da целей).|n|nРасход маны: |cffffffff2|cffced4da ед. Перезарядка: |cffffffff1|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA02",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35484,
+          "after": "|cffe4cfa3Единение с Инь|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 35925,
+          "after": "|cffe4cfa3Единение с Инь|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35926,
+          "after": "|cffe4cfa3Единение с Инь|r (|cffffffffR|r)"
+        }
+      ]
+    },
+    {
+      "id": "PA03",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35485,
+          "after": "|cffe4cfa3Веер Клинков|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 35383,
+          "after": "|cffe4cfa3Веер Клинков — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 35575,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daВыпускает веер кинжалов во всех направлениях, нанося по |cffffffff95|cffced4da ед. урона окружающим врагам.|n|nРасход маны: |cffffffff100|cffced4da ед. Перезарядка: |cffffffff12|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 35705,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daВыпускает веер кинжалов во всех направлениях, нанося по |cffffffff145|cffced4da ед. урона окружающим врагам.|n|nРасход маны: |cffffffff90|cffced4da ед. Перезарядка: |cffffffff10|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 35706,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daВыпускает веер кинжалов во всех направлениях, нанося по |cffffffff210|cffced4da ед. урона окружающим врагам.|n|nРасход маны: |cffffffff85|cffced4da ед. Перезарядка: |cffffffff8|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 35385,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daВыпускает веер кинжалов во всех направлениях, нанося по |cffffffff240|cffced4da ед. урона окружающим врагам.|n|nРасход маны: |cffffffff65|cffced4da ед. Перезарядка: |cffffffff6|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA05",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35486,
+          "after": "|cffe4cfa3Удары Ци|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35929,
+          "after": "|cffe4cfa3Удары Ци|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 35931,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daПассивная способность. Каждая атака Мастера Геоманта сжигает |cffffffff30|cffced4da ед. маны цели и наносит дополнительный урон.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA13",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35487,
+          "after": "|cffe4cfa3Защита Ци|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3765,
+          "after": "|cffe4cfa3Защита Ци|r"
+        }
+      ]
+    },
+    {
+      "id": "PA15",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36665,
+          "after": "|cffe4cfa3Воодушевляющее Присутствие|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 38450,
+          "after": "|cffe4cfa3Воодушевляющее Присутствие|r"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 23367,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daАура Лидера Шадо-Пан, вдохновляющая окружающие войска и повышающая их силу атаки на |cffc8e0877%–28%|cffced4da.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 23131,
+          "after": "|cffe4cfa3Воодушевляющее Присутствие — уровень 1|r"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 23132,
+          "after": "|cffe4cfa3Воодушевляющее Присутствие — уровень 2|r"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 23145,
+          "after": "|cffe4cfa3Воодушевляющее Присутствие — уровень 3|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 23146,
+          "after": "|cffe4cfa3Воодушевляющее Присутствие — уровень 4|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 40273,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daАура. Вдохновляет находящихся рядом союзных воинов, увеличивая их атаку на |cffc8e0877%|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 40278,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daАура. Вдохновляет находящихся рядом союзных воинов, увеличивая их атаку на |cffc8e08714%|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 40277,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daАура. Вдохновляет находящихся рядом союзных воинов, увеличивая их атаку на |cffc8e08721%|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 40279,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daАура. Вдохновляет находящихся рядом союзных воинов, увеличивая их атаку на |cffc8e08728%|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA16",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 40295,
+          "after": "|cffe4cfa3Энергия Ци|r"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 32280,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daСоздает целительную волну энергии, восстанавливающую здоровье союзников последовательными скачками.|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 28016,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daСоздает волну энергии, восстанавливающую |cffffffff45|cffced4da ед. здоровья первой цели и исцеляющую до |cffffffff6|cffced4da союзников.|n|nРасход маны: |cffffffff90|cffced4da ед. Перезарядка: |cffffffff9|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA20",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 42409,
+          "after": "|cffe4cfa3Аура Умиротворённости|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 36667,
+          "after": "|cffe4cfa3Аура Умиротворённости — уровень 1|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 36666,
+          "after": "|cffe4cfa3Аура Умиротворённости — уровень 2|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 35034,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daАура. Ускоряет регенерацию маны находящихся рядом союзников на |cffc8e087+1.75|cffced4da ед. в секунду.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 35904,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daАура. Ускоряет регенерацию маны находящихся рядом союзников на |cffc8e087+3.5|cffced4da ед. в секунду.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA45",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 9143,
+          "after": "|cffe4cfa3Нефритовые Доспехи|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9507,
+          "after": "|cffe4cfa3Нефритовые Доспехи|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 9506,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daПассивная способность. Защитные зачарованные пластины снижают получаемый урон от вражеских атак на |cffffffff18|cffced4da ед. (минимальный урон |cffffffff2|cffced4da).|r"
+        }
+      ]
+    },
+    {
+      "id": "PA46",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12384,
+          "after": "|cffe4cfa3Рассеивание заклинаний|r"
+        }
+      ]
+    },
+    {
+      "id": "PA50",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 21395,
+          "after": "|cffe4cfa3Удар Восходящего Солнца|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 35347,
+          "after": "|cffe4cfa3Удар Восходящего Солнца|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35348,
+          "after": "|cffe4cfa3Удар Восходящего Солнца — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 35349,
+          "after": "|cffe4cfa3Удар Восходящего Солнца — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 35350,
+          "after": "|cffe4cfa3Удар Восходящего Солнца — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 35351,
+          "after": "|cffe4cfa3Удар Восходящего Солнца — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 34328,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daБросает сокрушительный молот в цель, нанося |cffffffff450|cffced4da ед. урона и оглушая противника на |cffffffff6|cffced4da сек. (|cffffffff3|cffced4da сек. героев).|n|nРасход маны: |cffffffff75|cffced4da ед. Перезарядка: |cffffffff12|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA51",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 21427,
+          "after": "|cffe4cfa3Выдержка Монастыря Земли|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 34335,
+          "after": "|cffe4cfa3Выдержка Монастыря Земли|r"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 30676,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daПассивная стойкость монастыря Земли, поглощающая от |cffffffff12|cffced4da до |cffffffff30|cffced4da ед. входящего урона от атак.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 12317,
+          "after": "|cffe4cfa3Выдержка Монастыря Земли — уровень 1|r"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 14452,
+          "after": "|cffe4cfa3Выдержка Монастыря Земли — уровень 2|r"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 15980,
+          "after": "|cffe4cfa3Выдержка Монастыря Земли — уровень 3|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 21680,
+          "after": "|cffe4cfa3Выдержка Монастыря Земли — уровень 4|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 15593,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daСнижает получаемый от вражеских атак урон на |cffffffff12|cffced4da ед. (минимальный урон |cffffffff1|cffced4da).|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 15594,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daСнижает получаемый от вражеских атак урон на |cffffffff15|cffced4da ед. (минимальный урон |cffffffff1|cffced4da).|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 16889,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daСнижает получаемый от вражеских атак урон на |cffffffff18|cffced4da ед. (минимальный урон |cffffffff1|cffced4da).|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 20694,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daСнижает получаемый от вражеских атак урон на |cffffffff30|cffced4da ед. (минимальный урон |cffffffff1|cffced4da).|r"
+        }
+      ]
+    },
+    {
+      "id": "PA53",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 21766,
+          "after": "|cffe4cfa3Ярость|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 29754,
+          "after": "|cffe4cfa3Ярость|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38745,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daВводит выбранного союзника в состояние боевого ража, увеличивая скорость атаки на |cffc8e087+50%|cffced4da и скорость бега на |cffc8e087+35%|cffced4da на |cffffffff60|cffced4da сек.|n|nРасход маны: |cffffffff50|cffced4da ед. Перезарядка: |cffffffff1|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA55",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 21924,
+          "after": "|cffe4cfa3Буря Клинков|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 35369,
+          "after": "|cffe4cfa3Буря Клинков|r (|cffffffffR|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 35371,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daОсобая способность. Окружает героя вихрем клинков с иммунитетом к магии, наносящим |cffffffff180|cffced4da урона/сек. наземным врагам.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35368,
+          "after": "|cffe4cfa3Буря Клинков|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 35372,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daВращается в смертоносном вихре в течение |cffffffff7|cffced4da сек., получая невосприимчивость к магии и нанося по |cffffffff180|cffced4da урона в секунду наземным врагам.|n|nРасход маны: |cffffffff200|cffced4da ед. Перезарядка: |cffffffff120|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA57",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 29964,
+          "after": "|cffe4cfa3Танец Ветра|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 36742,
+          "after": "|cffe4cfa3Танец Ветра — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 36743,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daДарует невидимость и |cffc8e087+90% к скорости передвижения|cffced4da на |cffffffff60|cffced4da сек. Атака из невидимости наносит |cffffffff150|cffced4da бонусного урона.|n|nРасход маны: |cffffffff5|cffced4da ед. Перезарядка: |cffffffff7|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA59",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35264,
+          "after": "|cffe4cfa3Техника Тысячи Порезов|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 35388,
+          "after": "|cffe4cfa3Техника Тысячи Порезов|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35391,
+          "after": "|cffe4cfa3Техника Тысячи Порезов — уровень 1|r"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 35392,
+          "after": "|cffe4cfa3Техника Тысячи Порезов — уровень 2|r"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 35393,
+          "after": "|cffe4cfa3Техника Тысячи Порезов — уровень 3|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 35394,
+          "after": "|cffe4cfa3Техника Тысячи Порезов — уровень 4|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 39183,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daПассивная способность. Дает |cffffffff15%|cffced4da шанс нанести |cffffffff2-кратный|cffced4da критический урон при атаке.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 39184,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daПассивная способность. Дает |cffffffff15%|cffced4da шанс нанести |cffffffff3-кратный|cffced4da критический урон при атаке.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 39185,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daПассивная способность. Дает |cffffffff15%|cffced4da шанс нанести |cffffffff4-кратный|cffced4da критический урон при атаке.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 39182,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daПассивная способность. Дает |cffffffff15%|cffced4da шанс нанести |cffffffff5-кратный|cffced4da критический урон при атаке.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA60",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35400,
+          "after": "|cffe4cfa3Цепная молния|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 35396,
+          "after": "|cffe4cfa3Цепная молния — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 36745,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daПоражает цель молнией на |cffffffff400|cffced4da ед. урона, перескакивающей до |cffffffff15|cffced4da врагов с потерей |cffffffff5%|cffced4da мощности за скачок.|n|nРасход маны: |cffffffff85|cffced4da ед. Перезарядка: |cffffffff9|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA61",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35401,
+          "after": "|cffe4cfa3Багманское пиво|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42402,
+          "after": "|cffe4cfa3Багманское пиво|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42404,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daАура. Хмельной дух ускоряет перемещение союзников на |cffc8e087+15%|cffced4da и повышает скорость регенерации их здоровья на |cffc8e087+50%|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA62",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 42405,
+          "after": "|cffe4cfa3Грозовые Стрелы|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 35404,
+          "after": "|cffe4cfa3Грозовые Стрелы|r"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 35405,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daЗаряжает стрелы лучников силой грозы, добавляя к выстрелам урон от молний.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 42406,
+          "after": "|cffe4cfa3Грозовые Стрелы|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 42407,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daАвтокаст. Добавляет |cffffffff5|cffced4da ед. урона от бури к каждой атаке.|n|nРасход маны: |cffffffff4|cffced4da ед. за выстрел.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA63",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35402,
+          "after": "|cffe4cfa3Обжигающее Пламя Дракона|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35408,
+          "after": "|cffe4cfa3Обжигающее Пламя Дракона|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38747,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daВключаемая аура. Окружает Мастера Огня языками пламени, наносящими |cffffffff15|cffced4da ед. урона каждые |cffffffff0.5|cffced4da сек. наземным врагам поблизости.|n|nРасход маны: |cffffffff10|cffced4da ед./сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA65",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35406,
+          "after": "|cffe4cfa3Призыв к Балансу|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 23129,
+          "after": "|cffe4cfa3Призыв к Балансу|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38748,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daВоодушевляет соратников, повышая урон на |cffc8e087+15%|cffced4da и броню на |cffc8e087+4|cffced4da ед. на |cffffffff45|cffced4da сек.|n|nРасход маны: |cffffffff100|cffced4da ед.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA66",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22591,
+          "after": "|cffe4cfa3Испепеление|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 22597,
+          "after": "|cffe4cfa3Испепеление|r"
+        }
+      ]
+    },
+    {
+      "id": "PA67",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35413,
+          "after": "|cffe4cfa3Пламенное дыхание|r"
+        }
+      ]
+    },
+    {
+      "id": "PA68",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 22657,
+          "after": "|cffe4cfa3Чувство баланса|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 22659,
+          "after": "|cffe4cfa3Чувство баланса|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 22665,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daПассивная расовая ловкость. Дает |cffffffff7%|cffced4da шанс уклониться от вражеской атаки и |cffffffff10%|cffced4da шанс нанести на |cffc8e08720%|cffced4da больше урона.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA69",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35415,
+          "after": "|cffe4cfa3Удар Гнева Земли|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 5769,
+          "after": "|cffe4cfa3Удар Гнева Земли|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 5768,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daПассивные рассекающие удары. Атаки наносят |cffffffff5%|cffced4da урона по площади всем врагам рядом с основной целью.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA70",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35416,
+          "after": "|cffe4cfa3Хмельные Пары|r"
+        }
+      ]
+    },
+    {
+      "id": "PA73",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35418,
+          "after": "|cffe4cfa3Раздвоенная молния|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3808,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daВыпускает конус молний перед собой, поражая до |cffffffff4|cffced4da врагов и нанося по |cffffffff125|cffced4da ед. урона.|n|nРасход маны: |cffffffff50|cffced4da ед. Перезарядка: |cffffffff11|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA74",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35472,
+          "after": "|cffe4cfa3Удар Хмельной Бочки|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 39157,
+          "after": "|cffe4cfa3Удар Хмельной Бочки|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 35471,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daПассивная способность. Атаки с |cffffffff15%|cffced4da вероятностью наносят |cffffffff+15|cffced4da ед. бонусного урона и оглушают цель на |cffffffff2|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA75",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35473,
+          "after": "|cffe4cfa3Катаклизм|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 35421,
+          "after": "|cffe4cfa3Катаклизм|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35422,
+          "after": "|cffe4cfa3Катаклизм — уровень 1|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 39160,
+          "after": "|cffe4cfa3Катаклизм — уровень 2|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 34611,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daПризывает бурю молний в указанную область на |cffffffff15|cffced4da сек., наносящую по |cffffffff25|cffced4da ед. урона врагам каждую секунду.|n|nРасход маны: |cffffffff200|cffced4da ед. Перезарядка: |cffffffff100|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 40315,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daПризывает сокрушительную бурю молний на |cffffffff15|cffced4da сек., наносящую по |cffffffff35|cffced4da ед. урона врагам каждую секунду.|n|nРасход маны: |cffffffff300|cffced4da ед. Перезарядка: |cffffffff100|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA76",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35479,
+          "after": "|cffe4cfa3Призыв Помощи|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 3967,
+          "after": "|cffe4cfa3Призыв Помощи|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 4085,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daОткрывает пространственный портал, призывающий союзных воинов пандаренов на помощь герою.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3955,
+          "after": "|cffe4cfa3Призыв Помощи — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 36603,
+          "after": "|cffe4cfa3Призыв Помощи — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 36604,
+          "after": "|cffe4cfa3Призыв Помощи — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 36605,
+          "after": "|cffe4cfa3Призыв Помощи — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38430,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daОткрывает портал и призывает воина пандаренов на помощь в бою.|n|nПерезарядка: |cffffffff60|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 38439,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daОткрывает портал и призывает двух воинов Нефритовой Стражи на помощь в бою.|n|nПерезарядка: |cffffffff50|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 38448,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daОткрывает портал и призывает трех стражников Нефритовых Врат на помощь в бою.|n|nПерезарядка: |cffffffff40|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 38449,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daОткрывает портал и призывает отряд элитных стражей храма на помощь в бою.|n|nПерезарядка: |cffffffff30|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA77",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35414,
+          "after": "|cffe4cfa3Пьяный Мастер|r"
+        }
+      ]
+    },
+    {
+      "id": "PA78",
+      "levels": 5,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6735,
+          "after": "|cffe4cfa3Провокация|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 6789,
+          "after": "|cffe4cfa3Провокация|r (|cffffffffW|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 6790,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daЗаставляет врагов атаковать героя, снижая получаемый урон на |cffffffff10%|cffced4da и возвращая часть урона врагам в ближнем бою.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 6788,
+          "after": "|cffe4cfa3Провокация — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 6736,
+          "after": "|cffe4cfa3Провокация — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 6737,
+          "after": "|cffe4cfa3Провокация — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 6742,
+          "after": "|cffe4cfa3Провокация — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 6745,
+          "after": "|cffe4cfa3Провокация — уровень 5|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 6791,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daВынуждает ближайших врагов атаковать героя. Снижает получаемый урон на |cffffffff10%|cffced4da на |cffffffff7|cffced4da сек. и возвращает |cffffffff5%|cffced4da ближнего урона атакующим.|n|nПерезарядка: |cffffffff20|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 6747,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daВынуждает ближайших врагов атаковать героя. Снижает получаемый урон на |cffffffff10%|cffced4da на |cffffffff7|cffced4da сек. и возвращает |cffffffff10%|cffced4da ближнего урона атакующим.|n|nПерезарядка: |cffffffff18|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 6756,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daВынуждает ближайших врагов атаковать героя. Снижает получаемый урон на |cffffffff10%|cffced4da на |cffffffff7|cffced4da сек. и возвращает |cffffffff20%|cffced4da ближнего урона атакующим.|n|nПерезарядка: |cffffffff16|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 6748,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daВынуждает ближайших врагов атаковать героя. Снижает получаемый урон на |cffffffff10%|cffced4da на |cffffffff7|cffced4da сек. и возвращает |cffffffff30%|cffced4da ближнего урона атакующим.|n|nПерезарядка: |cffffffff14|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 6768,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daВынуждает ближайших врагов атаковать героя. Снижает получаемый урон на |cffffffff10%|cffced4da на |cffffffff7|cffced4da сек. и возвращает |cffffffff40%|cffced4da ближнего урона атакующим.|n|nПерезарядка: |cffffffff12|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "PA79",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35426,
+          "after": "|cffe4cfa3Добывать Ресурсы|r"
+        }
+      ]
+    },
+    {
+      "id": "pa15",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 41935,
+          "after": "|cffe4cfa3Торнадо|r"
+        }
+      ]
+    },
+    {
+      "id": "pa36",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 41632,
+          "after": "|cffe4cfa3Огненная стрела|r"
+        }
+      ]
+    },
+    {
+      "id": "pa37",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 41819,
+          "after": "|cffe4cfa3Волна исцеления|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 30016,
+          "after": "|cffe4cfa3Волна исцеления — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 38211,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daПризывает мощную волну энергии Ци, восстанавливающую |cffffffff300|cffced4da ед. здоровья первой цели и исцеляющую до |cffffffff5|cffced4da союзников с потерей |cffffffff25%|cffced4da мощности за скачок.|n|nРасход маны: |cffffffff90|cffced4da ед. Перезарядка: |cffffffff9|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "pa44",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 41820,
+          "after": "|cffe4cfa3Защита Древних Мастеров|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 6499,
+          "after": "|cffe4cfa3Защита Древних Мастеров|r (|cffffffffR|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 6500,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daОсобая способность. Дарует полную неуязвимость окружающим союзникам в области вокруг Шадо-Пана.|n|nСам герой остается уязвимым.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 36848,
+          "after": "|cffe4cfa3Защита Древних Мастеров — уровень 1|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 36851,
+          "after": "|cffe4cfa3Защита Древних Мастеров — уровень 2|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38220,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daДарует неуязвимость всем союзникам вокруг героя на |cffffffff20|cffced4da сек. Сам герой остается уязвимым.|n|nРасход маны: |cffffffff150|cffced4da ед. Перезарядка: |cffffffff180|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 38219,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|r |cffced4daДарует неуязвимость всем союзникам вокруг героя на |cffffffff30|cffced4da сек. Сам герой остается уязвимым.|n|nРасход маны: |cffffffff150|cffced4da ед. Перезарядка: |cffffffff120|cffced4da сек.|r"
+        }
+      ]
+    }
+  ]
+}

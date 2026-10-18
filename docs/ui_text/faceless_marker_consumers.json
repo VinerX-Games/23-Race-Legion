@@ -1,0 +1,25 @@
+{
+  "unit": [
+    {
+      "editor_suffix": "(Безликие)",
+      "fields": {
+        "builds": "",
+        "requires": "R0F9",
+        "requires1": "",
+        "requires2": "",
+        "requires3": "",
+        "requires4": "",
+        "requires5": "",
+        "requires6": "",
+        "requires7": "",
+        "requires8": "",
+        "sellunits": "",
+        "trains": ""
+      },
+      "id": "U02F",
+      "name": "|cffe4cfa3Верховный генерал|r"
+    }
+  ],
+  "upgrade": [],
+  "ability": []
+}

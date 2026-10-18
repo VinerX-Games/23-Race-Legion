@@ -1,0 +1,2383 @@
+{
+  "R0D9": {
+    "id": "R0D9",
+    "maxlevel": 2,
+    "effects": {},
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_30535",
+          "wts_id": 30535,
+          "is_wts": true,
+          "resolved": "Z"
+        },
+        "name": {
+          "raw": "TRIGSTR_39650",
+          "wts_id": 39650,
+          "is_wts": true,
+          "resolved": "|cff8080ffНовое поколение|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39651",
+          "wts_id": 39651,
+          "is_wts": true,
+          "resolved": "|cff8080ffНовое поколение|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_18672",
+          "wts_id": 18672,
+          "is_wts": true,
+          "resolved": "Позволяет выводить и нанимать новые поколения драконидов, увеличивает общее количество гнезд драконов."
+        },
+        "requires": ""
+      },
+      {
+        "level": 2,
+        "hotkey": {
+          "raw": "TRIGSTR_30536",
+          "wts_id": 30536,
+          "is_wts": true,
+          "resolved": "Z"
+        },
+        "name": {
+          "raw": "TRIGSTR_39653",
+          "wts_id": 39653,
+          "is_wts": true,
+          "resolved": "|cff8080ffНовое поколение|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39652",
+          "wts_id": 39652,
+          "is_wts": true,
+          "resolved": "|cff8080ffНовое поколение|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_18673",
+          "wts_id": 18673,
+          "is_wts": true,
+          "resolved": "Позволяет выводить и нанимать новые поколения драконидов, увеличивает общее количество гнезд драконов."
+        },
+        "requires": ""
+      }
+    ]
+  },
+  "R0DT": {
+    "id": "R0DT",
+    "maxlevel": 3,
+    "effects": {
+      "effect1": {
+        "effect": "rlum",
+        "code": null,
+        "base": "10",
+        "mod": "10"
+      },
+      "effect2": {
+        "effect": "rlev",
+        "code": "Ahlh",
+        "base": "1",
+        "mod": "1"
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_30646",
+          "wts_id": 30646,
+          "is_wts": true,
+          "resolved": "Z"
+        },
+        "name": {
+          "raw": "TRIGSTR_21956",
+          "wts_id": 21956,
+          "is_wts": true,
+          "resolved": "|cffdcaa92Улучшенная добыча"
+        },
+        "tip": {
+          "raw": "TRIGSTR_21971",
+          "wts_id": 21971,
+          "is_wts": true,
+          "resolved": "Исследовать |cffdcaa92Улучшенную добычу"
+        },
+        "ubertip": {
+          "raw": "\"Увеличивают объем переносимой работниками древесины на <Rhlh,mod1>.\"",
+          "wts_id": null,
+          "is_wts": false,
+          "resolved": "\"Увеличивают объем переносимой работниками древесины на <Rhlh,mod1>.\""
+        },
+        "requires": ""
+      },
+      {
+        "level": 2,
+        "hotkey": {
+          "raw": "TRIGSTR_30647",
+          "wts_id": 30647,
+          "is_wts": true,
+          "resolved": "Z"
+        },
+        "name": {
+          "raw": "TRIGSTR_21970",
+          "wts_id": 21970,
+          "is_wts": true,
+          "resolved": "|cffdcaa92Улучшенная добыча"
+        },
+        "tip": {
+          "raw": "TRIGSTR_21972",
+          "wts_id": 21972,
+          "is_wts": true,
+          "resolved": "Исследовать |cffdcaa92Улучшенную добычу"
+        },
+        "ubertip": {
+          "raw": "\"Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.\"",
+          "wts_id": null,
+          "is_wts": false,
+          "resolved": "\"Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.\""
+        },
+        "requires": ""
+      },
+      {
+        "level": 3,
+        "hotkey": {
+          "raw": "TRIGSTR_31005",
+          "wts_id": 31005,
+          "is_wts": true,
+          "resolved": "Z"
+        },
+        "name": {
+          "raw": "TRIGSTR_21979",
+          "wts_id": 21979,
+          "is_wts": true,
+          "resolved": "|cffdcaa92Улучшенная добыча"
+        },
+        "tip": {
+          "raw": "TRIGSTR_21982",
+          "wts_id": 21982,
+          "is_wts": true,
+          "resolved": "Исследовать |cffdcaa92Улучшенную добычу"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_21985",
+          "wts_id": 21985,
+          "is_wts": true,
+          "resolved": "Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>."
+        },
+        "requires": ""
+      }
+    ]
+  },
+  "R0AV": {
+    "id": "R0AV",
+    "maxlevel": 6,
+    "effects": {
+      "effect1": {
+        "effect": "ratd",
+        "code": null,
+        "base": "1",
+        "mod": "1"
+      },
+      "effect2": {
+        "effect": "TRIGSTR_17016",
+        "code": null,
+        "base": null,
+        "mod": null
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_37425",
+          "wts_id": 37425,
+          "is_wts": true,
+          "resolved": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_15873",
+          "wts_id": 15873,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость зеленых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15887",
+          "wts_id": 15887,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость зеленых драконов|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_15888",
+          "wts_id": 15888,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffЗеленых драконов|r."
+        },
+        "requires": "hkee"
+      },
+      {
+        "level": 2,
+        "hotkey": {
+          "raw": "TRIGSTR_37426",
+          "wts_id": 37426,
+          "is_wts": true,
+          "resolved": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_15871",
+          "wts_id": 15871,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость зеленых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15886",
+          "wts_id": 15886,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость зеленых драконов|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_15889",
+          "wts_id": 15889,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffЗеленых драконов|r."
+        },
+        "requires": "hkee"
+      },
+      {
+        "level": 3,
+        "hotkey": {
+          "raw": "TRIGSTR_37427",
+          "wts_id": 37427,
+          "is_wts": true,
+          "resolved": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_15870",
+          "wts_id": 15870,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость зеленых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15876",
+          "wts_id": 15876,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость зеленых драконов|r |cffffff00[3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_15892",
+          "wts_id": 15892,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffЗеленых драконов|r."
+        },
+        "requires": "R0A9"
+      },
+      {
+        "level": 4,
+        "hotkey": {
+          "raw": "TRIGSTR_37421",
+          "wts_id": 37421,
+          "is_wts": true,
+          "resolved": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_15869",
+          "wts_id": 15869,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость зеленых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15875",
+          "wts_id": 15875,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость зеленых драконов|r |cffffff00[4]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_15894",
+          "wts_id": 15894,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffЗеленых драконов|r."
+        },
+        "requires": "R0A9"
+      },
+      {
+        "level": 5,
+        "hotkey": {
+          "raw": "TRIGSTR_37422",
+          "wts_id": 37422,
+          "is_wts": true,
+          "resolved": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_15868",
+          "wts_id": 15868,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость зеленых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15874",
+          "wts_id": 15874,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость зеленых драконов|r |cffffff00[5]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_15893",
+          "wts_id": 15893,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffЗеленых драконов|r."
+        },
+        "requires": "R0AA"
+      },
+      {
+        "level": 6,
+        "hotkey": {
+          "raw": "TRIGSTR_37424",
+          "wts_id": 37424,
+          "is_wts": true,
+          "resolved": "Q"
+        },
+        "name": {
+          "raw": "TRIGSTR_15867",
+          "wts_id": 15867,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость зеленых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15872",
+          "wts_id": 15872,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость зеленых драконов|r |cffffff00[6]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_15895",
+          "wts_id": 15895,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffЗеленых драконов|r."
+        },
+        "requires": "R0AA"
+      }
+    ]
+  },
+  "R0AW": {
+    "id": "R0AW",
+    "maxlevel": 6,
+    "effects": {
+      "effect1": {
+        "effect": "ratd",
+        "code": null,
+        "base": "1",
+        "mod": "1"
+      },
+      "effect2": {
+        "effect": "TRIGSTR_17039",
+        "code": null,
+        "base": null,
+        "mod": null
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_36702",
+          "wts_id": 36702,
+          "is_wts": true,
+          "resolved": "R"
+        },
+        "name": {
+          "raw": "TRIGSTR_16705",
+          "wts_id": 16705,
+          "is_wts": true,
+          "resolved": "|cffe4cfa3Манипуляция времени|r [|cffffffff3-й уровень|r] (|cffffffffQ|r)"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16987",
+          "wts_id": 16987,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость синих драконов|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16997",
+          "wts_id": 16997,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffСиних драконов|r."
+        },
+        "requires": "hkee"
+      },
+      {
+        "level": 2,
+        "hotkey": {
+          "raw": "TRIGSTR_36733",
+          "wts_id": 36733,
+          "is_wts": true,
+          "resolved": "R"
+        },
+        "name": {
+          "raw": "TRIGSTR_16703",
+          "wts_id": 16703,
+          "is_wts": true,
+          "resolved": "|cffe4cfa3Манипуляция времени|r [|cffffffff1-й уровень|r] (|cffffffffQ|r)"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16958",
+          "wts_id": 16958,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость синих драконов|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17011",
+          "wts_id": 17011,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffСиних драконов|r."
+        },
+        "requires": "hkee"
+      },
+      {
+        "level": 3,
+        "hotkey": {
+          "raw": "TRIGSTR_36734",
+          "wts_id": 36734,
+          "is_wts": true,
+          "resolved": "R"
+        },
+        "name": {
+          "raw": "TRIGSTR_16702",
+          "wts_id": 16702,
+          "is_wts": true,
+          "resolved": "Изучить «|cffe4cfa3Манипуляция времени|r» [|cffffffff%d-й уровень|r] (|cffffffffQ|r)"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16936",
+          "wts_id": 16936,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость синих драконов|r |cffffff00[3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17012",
+          "wts_id": 17012,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffСиних драконов|r."
+        },
+        "requires": "R0A3"
+      },
+      {
+        "level": 4,
+        "hotkey": {
+          "raw": "TRIGSTR_36691",
+          "wts_id": 36691,
+          "is_wts": true,
+          "resolved": "R"
+        },
+        "name": {
+          "raw": "TRIGSTR_16699",
+          "wts_id": 16699,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость синих драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16913",
+          "wts_id": 16913,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость синих драконов|r |cffffff00[4]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17014",
+          "wts_id": 17014,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffСиних драконов|r."
+        },
+        "requires": "R0A3"
+      },
+      {
+        "level": 5,
+        "hotkey": {
+          "raw": "TRIGSTR_36692",
+          "wts_id": 36692,
+          "is_wts": true,
+          "resolved": "R"
+        },
+        "name": {
+          "raw": "TRIGSTR_16388",
+          "wts_id": 16388,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость синих драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16912",
+          "wts_id": 16912,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость синих драконов|r |cffffff00[5]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17013",
+          "wts_id": 17013,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffСиних драконов|r."
+        },
+        "requires": "R0A4"
+      },
+      {
+        "level": 6,
+        "hotkey": {
+          "raw": "TRIGSTR_36699",
+          "wts_id": 36699,
+          "is_wts": true,
+          "resolved": "R"
+        },
+        "name": {
+          "raw": "TRIGSTR_16387",
+          "wts_id": 16387,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость синих драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16704",
+          "wts_id": 16704,
+          "is_wts": true,
+          "resolved": "|cffe4cfa3Манипуляция времени|r [|cffffffff2-й уровень|r] (|cffffffffQ|r)"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17015",
+          "wts_id": 17015,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffСиних драконов|r."
+        },
+        "requires": "R0A4"
+      }
+    ]
+  },
+  "R0AX": {
+    "id": "R0AX",
+    "maxlevel": 6,
+    "effects": {
+      "effect1": {
+        "effect": "ratd",
+        "code": null,
+        "base": "1",
+        "mod": "1"
+      },
+      "effect2": {
+        "effect": "TRIGSTR_17062",
+        "code": null,
+        "base": null,
+        "mod": null
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_35704",
+          "wts_id": 35704,
+          "is_wts": true,
+          "resolved": "E"
+        },
+        "name": {
+          "raw": "TRIGSTR_17027",
+          "wts_id": 17027,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость красных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17032",
+          "wts_id": 17032,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость красных драконов|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39734",
+          "wts_id": 39734,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffКрасным драконам|r."
+        },
+        "requires": "hkee"
+      },
+      {
+        "level": 2,
+        "hotkey": {
+          "raw": "TRIGSTR_35749",
+          "wts_id": 35749,
+          "is_wts": true,
+          "resolved": "E"
+        },
+        "name": {
+          "raw": "TRIGSTR_17025",
+          "wts_id": 17025,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость красных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17031",
+          "wts_id": 17031,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость красных драконов|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39735",
+          "wts_id": 39735,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffКрасным драконам|r."
+        },
+        "requires": "hkee"
+      },
+      {
+        "level": 3,
+        "hotkey": {
+          "raw": "TRIGSTR_35817",
+          "wts_id": 35817,
+          "is_wts": true,
+          "resolved": "E"
+        },
+        "name": {
+          "raw": "TRIGSTR_17024",
+          "wts_id": 17024,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость красных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17030",
+          "wts_id": 17030,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость красных драконов|r |cffffff00[3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39736",
+          "wts_id": 39736,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffКрасным драконам|r."
+        },
+        "requires": "R0A5"
+      },
+      {
+        "level": 4,
+        "hotkey": {
+          "raw": "TRIGSTR_35548",
+          "wts_id": 35548,
+          "is_wts": true,
+          "resolved": "E"
+        },
+        "name": {
+          "raw": "TRIGSTR_17023",
+          "wts_id": 17023,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость красных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17029",
+          "wts_id": 17029,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость красных драконов|r |cffffff00[4]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39738",
+          "wts_id": 39738,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffКрасным драконам|r."
+        },
+        "requires": "R0A5"
+      },
+      {
+        "level": 5,
+        "hotkey": {
+          "raw": "TRIGSTR_35567",
+          "wts_id": 35567,
+          "is_wts": true,
+          "resolved": "E"
+        },
+        "name": {
+          "raw": "TRIGSTR_17022",
+          "wts_id": 17022,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость красных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17028",
+          "wts_id": 17028,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость красных драконов|r |cffffff00[5]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39737",
+          "wts_id": 39737,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffКрасным драконам|r."
+        },
+        "requires": "R0A6"
+      },
+      {
+        "level": 6,
+        "hotkey": {
+          "raw": "TRIGSTR_35685",
+          "wts_id": 35685,
+          "is_wts": true,
+          "resolved": "E"
+        },
+        "name": {
+          "raw": "TRIGSTR_17021",
+          "wts_id": 17021,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость красных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17026",
+          "wts_id": 17026,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость красных драконов|r |cffffff00[6]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39739",
+          "wts_id": 39739,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffКрасным драконам|r."
+        },
+        "requires": "R0A6"
+      }
+    ]
+  },
+  "R0AY": {
+    "id": "R0AY",
+    "maxlevel": 6,
+    "effects": {
+      "effect1": {
+        "effect": "ratd",
+        "code": null,
+        "base": "1",
+        "mod": "1"
+      },
+      "effect2": {
+        "effect": "TRIGSTR_17085",
+        "code": null,
+        "base": null,
+        "mod": null
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_38680",
+          "wts_id": 38680,
+          "is_wts": true,
+          "resolved": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_17050",
+          "wts_id": 17050,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость бронзовых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17055",
+          "wts_id": 17055,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость бронзовых драконов|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17056",
+          "wts_id": 17056,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffБронзовых драконов|r."
+        },
+        "requires": "hkee"
+      },
+      {
+        "level": 2,
+        "hotkey": {
+          "raw": "TRIGSTR_38681",
+          "wts_id": 38681,
+          "is_wts": true,
+          "resolved": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_17048",
+          "wts_id": 17048,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость бронзовых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17054",
+          "wts_id": 17054,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость бронзовых драконов|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17057",
+          "wts_id": 17057,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffБронзовых драконов|r."
+        },
+        "requires": "hkee"
+      },
+      {
+        "level": 3,
+        "hotkey": {
+          "raw": "TRIGSTR_38682",
+          "wts_id": 38682,
+          "is_wts": true,
+          "resolved": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_17047",
+          "wts_id": 17047,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость бронзовых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17053",
+          "wts_id": 17053,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость бронзовых драконов|r |cffffff00[3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17058",
+          "wts_id": 17058,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffБронзовых драконов|r."
+        },
+        "requires": "R0AC"
+      },
+      {
+        "level": 4,
+        "hotkey": {
+          "raw": "TRIGSTR_38490",
+          "wts_id": 38490,
+          "is_wts": true,
+          "resolved": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_17046",
+          "wts_id": 17046,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость бронзовых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17052",
+          "wts_id": 17052,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость бронзовых драконов|r |cffffff00[4]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17060",
+          "wts_id": 17060,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffБронзовых драконов|r."
+        },
+        "requires": "R0AC"
+      },
+      {
+        "level": 5,
+        "hotkey": {
+          "raw": "TRIGSTR_38491",
+          "wts_id": 38491,
+          "is_wts": true,
+          "resolved": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_17045",
+          "wts_id": 17045,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость бронзовых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17051",
+          "wts_id": 17051,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость бронзовых драконов|r |cffffff00[5]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17059",
+          "wts_id": 17059,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffБронзовых драконов|r."
+        },
+        "requires": "R0AB"
+      },
+      {
+        "level": 6,
+        "hotkey": {
+          "raw": "TRIGSTR_38615",
+          "wts_id": 38615,
+          "is_wts": true,
+          "resolved": "W"
+        },
+        "name": {
+          "raw": "TRIGSTR_17044",
+          "wts_id": 17044,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость бронзовых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17049",
+          "wts_id": 17049,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость бронзовых драконов|r |cffffff00[6]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17061",
+          "wts_id": 17061,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffБронзовых драконов|r."
+        },
+        "requires": "R0AB"
+      }
+    ]
+  },
+  "R0AZ": {
+    "id": "R0AZ",
+    "maxlevel": 6,
+    "effects": {
+      "effect1": {
+        "effect": "ratd",
+        "code": null,
+        "base": "1",
+        "mod": "1"
+      },
+      "effect2": {
+        "effect": "TRIGSTR_19327",
+        "code": null,
+        "base": null,
+        "mod": null
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_18864",
+          "wts_id": 18864,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_17073",
+          "wts_id": 17073,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость черных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17078",
+          "wts_id": 17078,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость черных драконов|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17079",
+          "wts_id": 17079,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffЧерных драконов|r."
+        },
+        "requires": "hkee"
+      },
+      {
+        "level": 2,
+        "hotkey": {
+          "raw": "TRIGSTR_18865",
+          "wts_id": 18865,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_17071",
+          "wts_id": 17071,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость черных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17077",
+          "wts_id": 17077,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость черных драконов|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17080",
+          "wts_id": 17080,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffЧерных драконов|r."
+        },
+        "requires": "hkee"
+      },
+      {
+        "level": 3,
+        "hotkey": {
+          "raw": "TRIGSTR_18888",
+          "wts_id": 18888,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_17070",
+          "wts_id": 17070,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость черных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17076",
+          "wts_id": 17076,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость черных драконов|r |cffffff00[3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17081",
+          "wts_id": 17081,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffЧерных драконов|r."
+        },
+        "requires": "hkee"
+      },
+      {
+        "level": 4,
+        "hotkey": {
+          "raw": "TRIGSTR_18839",
+          "wts_id": 18839,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_17069",
+          "wts_id": 17069,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость черных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17075",
+          "wts_id": 17075,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость черных драконов|r |cffffff00[4]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17083",
+          "wts_id": 17083,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffЧерных драконов|r."
+        },
+        "requires": "hkee"
+      },
+      {
+        "level": 5,
+        "hotkey": {
+          "raw": "TRIGSTR_18840",
+          "wts_id": 18840,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_17068",
+          "wts_id": 17068,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость черных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17074",
+          "wts_id": 17074,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость черных драконов|r |cffffff00[5]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17082",
+          "wts_id": 17082,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffЧерных драконов|r."
+        },
+        "requires": "hkee"
+      },
+      {
+        "level": 6,
+        "hotkey": {
+          "raw": "TRIGSTR_18863",
+          "wts_id": 18863,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_17067",
+          "wts_id": 17067,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость черных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17072",
+          "wts_id": 17072,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость черных драконов|r |cffffff00[6]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17084",
+          "wts_id": 17084,
+          "is_wts": true,
+          "resolved": "Увеличивает броню и атаку всем |cff8080ffЧерных драконов|r."
+        },
+        "requires": "hkee"
+      }
+    ]
+  },
+  "R0B0": {
+    "id": "R0B0",
+    "maxlevel": 3,
+    "effects": {
+      "effect1": {
+        "effect": "TRIGSTR_14829",
+        "code": "n03Q",
+        "base": "20.000000",
+        "mod": "20.000000"
+      },
+      "effect2": {
+        "effect": null,
+        "code": "n03R",
+        "base": "100.000000",
+        "mod": "100.000000"
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_17914",
+          "wts_id": 17914,
+          "is_wts": true,
+          "resolved": "S"
+        },
+        "name": {
+          "raw": "TRIGSTR_39839",
+          "wts_id": 39839,
+          "is_wts": true,
+          "resolved": "|cff8080ffПрактика полетов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39840",
+          "wts_id": 39840,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffПрактику полетов|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39841",
+          "wts_id": 39841,
+          "is_wts": true,
+          "resolved": "Увеличивает скорость передвижения драконов на 20 ед."
+        },
+        "requires": ""
+      },
+      {
+        "level": 2,
+        "hotkey": {
+          "raw": "TRIGSTR_17915",
+          "wts_id": 17915,
+          "is_wts": true,
+          "resolved": "S"
+        },
+        "name": {
+          "raw": "TRIGSTR_39842",
+          "wts_id": 39842,
+          "is_wts": true,
+          "resolved": "|cff8080ffПрактика полетов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39844",
+          "wts_id": 39844,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffПрактику полетов|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39846",
+          "wts_id": 39846,
+          "is_wts": true,
+          "resolved": "Увеличивает скорость передвижения драконов на 20 ед."
+        },
+        "requires": ""
+      },
+      {
+        "level": 3,
+        "hotkey": {
+          "raw": "TRIGSTR_17916",
+          "wts_id": 17916,
+          "is_wts": true,
+          "resolved": "S"
+        },
+        "name": {
+          "raw": "TRIGSTR_39843",
+          "wts_id": 39843,
+          "is_wts": true,
+          "resolved": "|cff8080ffПрактика полетов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39845",
+          "wts_id": 39845,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffПрактику полетов|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39847",
+          "wts_id": 39847,
+          "is_wts": true,
+          "resolved": "Увеличивает скорость передвижения драконов на 20 ед."
+        },
+        "requires": ""
+      }
+    ]
+  },
+  "R0AT": {
+    "id": "R0AT",
+    "maxlevel": 4,
+    "effects": {
+      "effect1": {
+        "effect": "TRIGSTR_27712",
+        "code": "n03Q",
+        "base": "0.050000",
+        "mod": "0.050000"
+      },
+      "effect2": {
+        "effect": "TRIGSTR_26424",
+        "code": "n03R",
+        "base": "0.050000",
+        "mod": "0.050000"
+      },
+      "effect3": {
+        "effect": "TRIGSTR_21359",
+        "code": null,
+        "base": "0.050000",
+        "mod": "0.050000"
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_18790",
+          "wts_id": 18790,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_16994",
+          "wts_id": 16994,
+          "is_wts": true,
+          "resolved": "|cff8080ffМагия времени|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16995",
+          "wts_id": 16995,
+          "is_wts": true,
+          "resolved": "|cff8080ffМагия времени|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39713",
+          "wts_id": 39713,
+          "is_wts": true,
+          "resolved": "|cff8080ffБронзовые драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": ""
+      },
+      {
+        "level": 2,
+        "hotkey": {
+          "raw": "TRIGSTR_18813",
+          "wts_id": 18813,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_18685",
+          "wts_id": 18685,
+          "is_wts": true,
+          "resolved": "|cff8080ffМагия времени|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_18686",
+          "wts_id": 18686,
+          "is_wts": true,
+          "resolved": "|cff8080ffМагия времени|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39749",
+          "wts_id": 39749,
+          "is_wts": true,
+          "resolved": "|cff8080ffБронзовые драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": "R0AC"
+      },
+      {
+        "level": 3,
+        "hotkey": {
+          "raw": "TRIGSTR_18814",
+          "wts_id": 18814,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_39750",
+          "wts_id": 39750,
+          "is_wts": true,
+          "resolved": "|cff8080ffМагия времени|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39752",
+          "wts_id": 39752,
+          "is_wts": true,
+          "resolved": "|cff8080ffМагия времени|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39837",
+          "wts_id": 39837,
+          "is_wts": true,
+          "resolved": "|cff8080ffБронзовые драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": "R0AC"
+      },
+      {
+        "level": 4,
+        "hotkey": {
+          "raw": "TRIGSTR_18815",
+          "wts_id": 18815,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_39751",
+          "wts_id": 39751,
+          "is_wts": true,
+          "resolved": "|cff8080ffМагия времени|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39835",
+          "wts_id": 39835,
+          "is_wts": true,
+          "resolved": "|cff8080ffМагия времени|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39838",
+          "wts_id": 39838,
+          "is_wts": true,
+          "resolved": "|cff8080ffБронзовые драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": "R0AB"
+      }
+    ]
+  },
+  "R0AC": {
+    "id": "R0AC",
+    "maxlevel": 1,
+    "effects": {
+      "effect1": {
+        "effect": null,
+        "code": "n03Q",
+        "base": "1",
+        "mod": null
+      },
+      "effect2": {
+        "effect": null,
+        "code": "n03R",
+        "base": "-1",
+        "mod": null
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_32412",
+          "wts_id": 32412,
+          "is_wts": true,
+          "resolved": "X"
+        },
+        "name": {
+          "raw": "TRIGSTR_36800",
+          "wts_id": 36800,
+          "is_wts": true,
+          "resolved": "|cff8080ffЭволюция бронзовых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16421",
+          "wts_id": 16421,
+          "is_wts": true,
+          "resolved": "Эволюция |cff8080ffБронзовый драконов|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_25672",
+          "wts_id": 25672,
+          "is_wts": true,
+          "resolved": "Драконы развиваются со временем, увеличиваясь что в размерах что в способностях, в некоторых случаях."
+        },
+        "requires": ""
+      }
+    ]
+  },
+  "R0AB": {
+    "id": "R0AB",
+    "maxlevel": 1,
+    "effects": {
+      "effect1": {
+        "effect": null,
+        "code": "n03R",
+        "base": "1",
+        "mod": null
+      },
+      "effect2": {
+        "effect": null,
+        "code": "n03S",
+        "base": "-1",
+        "mod": null
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_25225",
+          "wts_id": 25225,
+          "is_wts": true,
+          "resolved": "C"
+        },
+        "name": {
+          "raw": "TRIGSTR_33850",
+          "wts_id": 33850,
+          "is_wts": true,
+          "resolved": "|cff8080ffЭволюция бронзовых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16420",
+          "wts_id": 16420,
+          "is_wts": true,
+          "resolved": "Эволюция |cff8080ffБронзовый драконов|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_25671",
+          "wts_id": 25671,
+          "is_wts": true,
+          "resolved": "Драконы развиваются со временем, увеличиваясь что в размерах что в способностях, в некоторых случаях."
+        },
+        "requires": "R0AC"
+      }
+    ]
+  },
+  "R0AP": {
+    "id": "R0AP",
+    "maxlevel": 4,
+    "effects": {
+      "effect1": {
+        "effect": "TRIGSTR_19593",
+        "code": "n03Q",
+        "base": "0.050000",
+        "mod": "0.050000"
+      },
+      "effect2": {
+        "effect": "TRIGSTR_24747",
+        "code": "n03R",
+        "base": "0.050000",
+        "mod": "0.050000"
+      },
+      "effect3": {
+        "effect": "TRIGSTR_19594",
+        "code": null,
+        "base": "0.050000",
+        "mod": "0.050000"
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_18737",
+          "wts_id": 18737,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_13756",
+          "wts_id": 13756,
+          "is_wts": true,
+          "resolved": "|cff8080ffИзумрудная связь|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_14087",
+          "wts_id": 14087,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffИзумрудную связь|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_37790",
+          "wts_id": 37790,
+          "is_wts": true,
+          "resolved": "|cff8080ffЗеленые драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": ""
+      },
+      {
+        "level": 2,
+        "hotkey": {
+          "raw": "TRIGSTR_18738",
+          "wts_id": 18738,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_39198",
+          "wts_id": 39198,
+          "is_wts": true,
+          "resolved": "|cff8080ffИзумрудная связь|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39630",
+          "wts_id": 39630,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffИзумрудную связь|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_37790",
+          "wts_id": 37790,
+          "is_wts": true,
+          "resolved": "|cff8080ffЗеленые драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": "R0A9"
+      },
+      {
+        "level": 3,
+        "hotkey": {
+          "raw": "TRIGSTR_18761",
+          "wts_id": 18761,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_39298",
+          "wts_id": 39298,
+          "is_wts": true,
+          "resolved": "|cff8080ffИзумрудная связь|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39702",
+          "wts_id": 39702,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffИзумрудную связь|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_37790",
+          "wts_id": 37790,
+          "is_wts": true,
+          "resolved": "|cff8080ffЗеленые драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": "R0A9"
+      },
+      {
+        "level": 4,
+        "hotkey": {
+          "raw": "TRIGSTR_18762",
+          "wts_id": 18762,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_39471",
+          "wts_id": 39471,
+          "is_wts": true,
+          "resolved": "|cff8080ffИзумрудная связь|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39703",
+          "wts_id": 39703,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffИзумрудную связь|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_37790",
+          "wts_id": 37790,
+          "is_wts": true,
+          "resolved": "|cff8080ffЗеленые драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": "R0AA"
+      }
+    ]
+  },
+  "R0A9": {
+    "id": "R0A9",
+    "maxlevel": 1,
+    "effects": {
+      "effect1": {
+        "effect": null,
+        "code": "n03T",
+        "base": "1",
+        "mod": null
+      },
+      "effect2": {
+        "effect": null,
+        "code": "n03U",
+        "base": "-1",
+        "mod": null
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_32387",
+          "wts_id": 32387,
+          "is_wts": true,
+          "resolved": "X"
+        },
+        "name": {
+          "raw": "TRIGSTR_17159",
+          "wts_id": 17159,
+          "is_wts": true,
+          "resolved": "|cff8080ffЭволюция зеленых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16412",
+          "wts_id": 16412,
+          "is_wts": true,
+          "resolved": "Эволюция |cff8080ffЗеленый драконов|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_25617",
+          "wts_id": 25617,
+          "is_wts": true,
+          "resolved": "Драконы развиваются со временем, увеличиваясь что в размерах что в способностях, в некоторых случаях."
+        },
+        "requires": ""
+      }
+    ]
+  },
+  "R0AA": {
+    "id": "R0AA",
+    "maxlevel": 1,
+    "effects": {
+      "effect1": {
+        "effect": null,
+        "code": "n03U",
+        "base": "1",
+        "mod": null
+      },
+      "effect2": {
+        "effect": null,
+        "code": "n03V",
+        "base": "-1",
+        "mod": null
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_25224",
+          "wts_id": 25224,
+          "is_wts": true,
+          "resolved": "C"
+        },
+        "name": {
+          "raw": "TRIGSTR_22395",
+          "wts_id": 22395,
+          "is_wts": true,
+          "resolved": "|cff8080ffЭволюция зеленых драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16413",
+          "wts_id": 16413,
+          "is_wts": true,
+          "resolved": "Эволюция |cff8080ffЗеленый драконов|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_25670",
+          "wts_id": 25670,
+          "is_wts": true,
+          "resolved": "Драконы развиваются со временем, увеличиваясь что в размерах что в способностях, в некоторых случаях."
+        },
+        "requires": "R0A9"
+      }
+    ]
+  },
+  "R0AS": {
+    "id": "R0AS",
+    "maxlevel": 4,
+    "effects": {
+      "effect1": {
+        "effect": "TRIGSTR_24775",
+        "code": "n03Q",
+        "base": "0.050000",
+        "mod": "0.050000"
+      },
+      "effect2": {
+        "effect": "TRIGSTR_21428",
+        "code": "n03R",
+        "base": "0.050000",
+        "mod": "0.050000"
+      },
+      "effect3": {
+        "effect": "TRIGSTR_20679",
+        "code": null,
+        "base": "0.050000",
+        "mod": "0.050000"
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_18763",
+          "wts_id": 18763,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_39801",
+          "wts_id": 39801,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость жизни|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39802",
+          "wts_id": 39802,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость жизни|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39712",
+          "wts_id": 39712,
+          "is_wts": true,
+          "resolved": "|cff8080ffКрасные драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": ""
+      },
+      {
+        "level": 2,
+        "hotkey": {
+          "raw": "TRIGSTR_18776",
+          "wts_id": 18776,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_39804",
+          "wts_id": 39804,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость жизни|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39807",
+          "wts_id": 39807,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость жизни|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39712",
+          "wts_id": 39712,
+          "is_wts": true,
+          "resolved": "|cff8080ffКрасные драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": "R0A5"
+      },
+      {
+        "level": 3,
+        "hotkey": {
+          "raw": "TRIGSTR_18788",
+          "wts_id": 18788,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_39805",
+          "wts_id": 39805,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость жизни|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39808",
+          "wts_id": 39808,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость жизни|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39712",
+          "wts_id": 39712,
+          "is_wts": true,
+          "resolved": "|cff8080ffКрасные драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": "R0A5"
+      },
+      {
+        "level": 4,
+        "hotkey": {
+          "raw": "TRIGSTR_18789",
+          "wts_id": 18789,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_39806",
+          "wts_id": 39806,
+          "is_wts": true,
+          "resolved": "|cff8080ffМудрость жизни|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39809",
+          "wts_id": 39809,
+          "is_wts": true,
+          "resolved": "Исследовать |cff8080ffМудрость жизни|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39712",
+          "wts_id": 39712,
+          "is_wts": true,
+          "resolved": "|cff8080ffКрасные драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": "R0A6"
+      }
+    ]
+  },
+  "R0A5": {
+    "id": "R0A5",
+    "maxlevel": 1,
+    "effects": {
+      "effect2": {
+        "effect": null,
+        "code": "n03L",
+        "base": "-1",
+        "mod": null
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_32385",
+          "wts_id": 32385,
+          "is_wts": true,
+          "resolved": "X"
+        },
+        "name": {
+          "raw": "TRIGSTR_17087",
+          "wts_id": 17087,
+          "is_wts": true,
+          "resolved": "|cff8080ffЭволюция красных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16396",
+          "wts_id": 16396,
+          "is_wts": true,
+          "resolved": "Эволюция |cff8080ffКрасный драконов|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_25607",
+          "wts_id": 25607,
+          "is_wts": true,
+          "resolved": "Драконы развиваются со временем, увеличиваясь что в размерах что в способностях, в некоторых случаях."
+        },
+        "requires": ""
+      }
+    ]
+  },
+  "R0A6": {
+    "id": "R0A6",
+    "maxlevel": 1,
+    "effects": {
+      "effect1": {
+        "effect": null,
+        "code": "n03L",
+        "base": "1",
+        "mod": null
+      },
+      "effect2": {
+        "effect": null,
+        "code": "n03M",
+        "base": "-1",
+        "mod": null
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_25139",
+          "wts_id": 25139,
+          "is_wts": true,
+          "resolved": "C"
+        },
+        "name": {
+          "raw": "TRIGSTR_17100",
+          "wts_id": 17100,
+          "is_wts": true,
+          "resolved": "|cff8080ffЭволюция красных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16397",
+          "wts_id": 16397,
+          "is_wts": true,
+          "resolved": "Эволюция |cff8080ffКрасный драконов|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_25610",
+          "wts_id": 25610,
+          "is_wts": true,
+          "resolved": "Драконы развиваются со временем, увеличиваясь что в размерах что в способностях, в некоторых случаях."
+        },
+        "requires": "R0A5"
+      }
+    ]
+  },
+  "R0B3": {
+    "id": "R0B3",
+    "maxlevel": 4,
+    "effects": {
+      "effect1": {
+        "effect": "TRIGSTR_27578",
+        "code": "n03Q",
+        "base": "0.050000",
+        "mod": "0.050000"
+      },
+      "effect2": {
+        "effect": "TRIGSTR_33508",
+        "code": "n03R",
+        "base": "0.050000",
+        "mod": "0.050000"
+      },
+      "effect3": {
+        "effect": "TRIGSTR_21426",
+        "code": null,
+        "base": "0.050000",
+        "mod": "0.050000"
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_18889",
+          "wts_id": 18889,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_39785",
+          "wts_id": 39785,
+          "is_wts": true,
+          "resolved": "|cff8080ffПрактика арканы|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39789",
+          "wts_id": 39789,
+          "is_wts": true,
+          "resolved": "Изучить |cff8080ffПрактику арканы|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39848",
+          "wts_id": 39848,
+          "is_wts": true,
+          "resolved": "|cff8080ffСиние драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": ""
+      },
+      {
+        "level": 2,
+        "hotkey": {
+          "raw": "TRIGSTR_18890",
+          "wts_id": 18890,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_39786",
+          "wts_id": 39786,
+          "is_wts": true,
+          "resolved": "|cff8080ffПрактика арканы|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39790",
+          "wts_id": 39790,
+          "is_wts": true,
+          "resolved": "Изучить |cff8080ffПрактику арканы|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39849",
+          "wts_id": 39849,
+          "is_wts": true,
+          "resolved": "|cff8080ffСиние драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": "R0A3"
+      },
+      {
+        "level": 3,
+        "hotkey": {
+          "raw": "TRIGSTR_18913",
+          "wts_id": 18913,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_39787",
+          "wts_id": 39787,
+          "is_wts": true,
+          "resolved": "|cff8080ffПрактика арканы|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39791",
+          "wts_id": 39791,
+          "is_wts": true,
+          "resolved": "Изучить |cff8080ffПрактику арканы|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39850",
+          "wts_id": 39850,
+          "is_wts": true,
+          "resolved": "|cff8080ffСиние драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": "R0A3"
+      },
+      {
+        "level": 4,
+        "hotkey": {
+          "raw": "TRIGSTR_18914",
+          "wts_id": 18914,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_39788",
+          "wts_id": 39788,
+          "is_wts": true,
+          "resolved": "|cff8080ffПрактика арканы|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_39792",
+          "wts_id": 39792,
+          "is_wts": true,
+          "resolved": "Изучить |cff8080ffПрактику арканы|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39851",
+          "wts_id": 39851,
+          "is_wts": true,
+          "resolved": "|cff8080ffСиние драконы|r усовершенствуют свои магические способности, что повысит их запас здоровья и маны, ускорит скорость регенерации маны, а также откроет новые способности."
+        },
+        "requires": "R0A4"
+      }
+    ]
+  },
+  "R0A4": {
+    "id": "R0A4",
+    "maxlevel": 1,
+    "effects": {
+      "effect1": {
+        "effect": null,
+        "code": "n03X",
+        "base": "1",
+        "mod": null
+      },
+      "effect2": {
+        "effect": null,
+        "code": "n03Y",
+        "base": "-1",
+        "mod": null
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_25119",
+          "wts_id": 25119,
+          "is_wts": true,
+          "resolved": "C"
+        },
+        "name": {
+          "raw": "TRIGSTR_16991",
+          "wts_id": 16991,
+          "is_wts": true,
+          "resolved": "|cff8080ffЭволюция синих драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_19414",
+          "wts_id": 19414,
+          "is_wts": true,
+          "resolved": "Эволюция |cff8080ffCиних драконов|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_25606",
+          "wts_id": 25606,
+          "is_wts": true,
+          "resolved": "Драконы развиваются со временем, увеличиваясь что в размерах что в способностях, в некоторых случаях."
+        },
+        "requires": "R0A3"
+      }
+    ]
+  },
+  "R0A3": {
+    "id": "R0A3",
+    "maxlevel": 1,
+    "effects": {
+      "effect1": {
+        "effect": null,
+        "code": "n03W",
+        "base": "1",
+        "mod": null
+      },
+      "effect2": {
+        "effect": null,
+        "code": "n03X",
+        "base": "-1",
+        "mod": null
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_32384",
+          "wts_id": 32384,
+          "is_wts": true,
+          "resolved": "X"
+        },
+        "name": {
+          "raw": "TRIGSTR_16985",
+          "wts_id": 16985,
+          "is_wts": true,
+          "resolved": "|cff8080ffЭволюция синих драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17157",
+          "wts_id": 17157,
+          "is_wts": true,
+          "resolved": "Эволюция |cff8080ffCиних драконов|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_25604",
+          "wts_id": 25604,
+          "is_wts": true,
+          "resolved": "Драконы развиваются со временем, увеличиваясь что в размерах что в способностях, в некоторых случаях."
+        },
+        "requires": ""
+      }
+    ]
+  },
+  "R0B4": {
+    "id": "R0B4",
+    "maxlevel": 1,
+    "effects": {
+      "effect1": {
+        "effect": null,
+        "code": "n03Q",
+        "base": "150.000000",
+        "mod": "150.000000"
+      },
+      "effect2": {
+        "effect": null,
+        "code": "n03R",
+        "base": "100.000000",
+        "mod": "100.000000"
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_28700",
+          "wts_id": 28700,
+          "is_wts": true,
+          "resolved": "Z"
+        },
+        "name": {
+          "raw": "TRIGSTR_17120",
+          "wts_id": 17120,
+          "is_wts": true,
+          "resolved": "|cff8080ffЯрость земли|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17121",
+          "wts_id": 17121,
+          "is_wts": true,
+          "resolved": "|cff8080ffЯрость земли|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16934",
+          "wts_id": 16934,
+          "is_wts": true,
+          "resolved": "|cff8080ffЧерные драконы|r способны увеличивать урон своей аурой союзникам по близости."
+        },
+        "requires": ""
+      }
+    ]
+  },
+  "R0B2": {
+    "id": "R0B2",
+    "maxlevel": 1,
+    "effects": {
+      "effect1": {
+        "effect": null,
+        "code": "n03Q",
+        "base": "150.000000",
+        "mod": "150.000000"
+      },
+      "effect2": {
+        "effect": null,
+        "code": "n03R",
+        "base": "100.000000",
+        "mod": "100.000000"
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_28699",
+          "wts_id": 28699,
+          "is_wts": true,
+          "resolved": "Z"
+        },
+        "name": {
+          "raw": "TRIGSTR_17113",
+          "wts_id": 17113,
+          "is_wts": true,
+          "resolved": "|cff8080ffУскользание|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17114",
+          "wts_id": 17114,
+          "is_wts": true,
+          "resolved": "|cff8080ffУскользание|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17117",
+          "wts_id": 17117,
+          "is_wts": true,
+          "resolved": "Позволяет |cff8080ffДраконам|r и |cff8080ffДраконидам|r уклонятся от вражеских атак."
+        },
+        "requires": ""
+      }
+    ]
+  },
+  "R0AU": {
+    "id": "R0AU",
+    "maxlevel": 1,
+    "effects": {
+      "effect1": {
+        "effect": null,
+        "code": "n03Q",
+        "base": "150.000000",
+        "mod": "150.000000"
+      },
+      "effect2": {
+        "effect": null,
+        "code": "n03R",
+        "base": "100.000000",
+        "mod": "100.000000"
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_18838",
+          "wts_id": 18838,
+          "is_wts": true,
+          "resolved": "A"
+        },
+        "name": {
+          "raw": "TRIGSTR_17006",
+          "wts_id": 17006,
+          "is_wts": true,
+          "resolved": "|cff8080ffДраконья ярость|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17007",
+          "wts_id": 17007,
+          "is_wts": true,
+          "resolved": "|cff8080ffДраконья ярость|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_17010",
+          "wts_id": 17010,
+          "is_wts": true,
+          "resolved": "Позволяет |cff8080ffЧерным Драконам|r, с небольшим шансом наносить двухкратный урон."
+        },
+        "requires": "R0A7"
+      }
+    ]
+  },
+  "R0A7": {
+    "id": "R0A7",
+    "maxlevel": 1,
+    "effects": {
+      "effect1": {
+        "effect": "rtma",
+        "code": "n03N",
+        "base": "1",
+        "mod": null
+      },
+      "effect2": {
+        "effect": "rtma",
+        "code": "n03O",
+        "base": "-1",
+        "mod": null
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_18700",
+          "wts_id": 18700,
+          "is_wts": true,
+          "resolved": "D"
+        },
+        "name": {
+          "raw": "TRIGSTR_17155",
+          "wts_id": 17155,
+          "is_wts": true,
+          "resolved": "|cff8080ffЭволюция черных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16404",
+          "wts_id": 16404,
+          "is_wts": true,
+          "resolved": "Эволюция |cff8080ffЧерных драконов|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_25614",
+          "wts_id": 25614,
+          "is_wts": true,
+          "resolved": "Драконы развиваются со временем, увеличиваясь что в размерах что в способностях, в некоторых случаях."
+        },
+        "requires": ""
+      }
+    ]
+  },
+  "R0A8": {
+    "id": "R0A8",
+    "maxlevel": 1,
+    "effects": {
+      "effect1": {
+        "effect": "rtma",
+        "code": "n03O",
+        "base": "1",
+        "mod": null
+      },
+      "effect2": {
+        "effect": "rtma",
+        "code": "n03P",
+        "base": "-1",
+        "mod": null
+      }
+    },
+    "levels": [
+      {
+        "level": 1,
+        "hotkey": {
+          "raw": "TRIGSTR_32386",
+          "wts_id": 32386,
+          "is_wts": true,
+          "resolved": "X"
+        },
+        "name": {
+          "raw": "TRIGSTR_17156",
+          "wts_id": 17156,
+          "is_wts": true,
+          "resolved": "|cff8080ffЭволюция черных драконов|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16405",
+          "wts_id": 16405,
+          "is_wts": true,
+          "resolved": "Эволюция |cff8080ffЧерных драконов|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_25615",
+          "wts_id": 25615,
+          "is_wts": true,
+          "resolved": "Драконы развиваются со временем, увеличиваясь что в размерах что в способностях, в некоторых случаях."
+        },
+        "requires": "R0A7"
+      }
+    ]
+  }
+}

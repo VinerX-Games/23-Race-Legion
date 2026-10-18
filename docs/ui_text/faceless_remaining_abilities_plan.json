@@ -1,0 +1,310 @@
+{
+  "operations": [
+    {
+      "type": "ability",
+      "id": "A11G",
+      "field": "name",
+      "value": "|cffe4cfa3Порождение придатка|r"
+    },
+    {
+      "type": "ability",
+      "id": "A11G",
+      "field": "tip1",
+      "value": "|cffe4cfa3Порождение придатка|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A11G",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бесплатно создаёт |cffa9c7deМалое порождение|cffced4da в выбранном месте. Оно увеличивает доход владельца и поддерживает союзников аурой. Восстановление: |cffffffff60|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06M",
+      "field": "name",
+      "value": "|cffe4cfa3Дымка бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06M",
+      "field": "tip1",
+      "value": "|cffe4cfa3Дымка бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06M",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость передвижения союзников в радиусе |cffffffff900|cffced4da на |cffc8e0876%|cffced4da, восстановление здоровья — на |cffc8e0871,5|cffced4da ед. в секунду. Действует также на источник ауры.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0DW",
+      "field": "name",
+      "value": "|cffe4cfa3Сильный удар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0DW",
+      "field": "tip1",
+      "value": "|cffe4cfa3Сильный удар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0DW",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff12%|cffced4da атака наносит |cffffffff10|cffced4da дополнительного урона и оглушает цель на |cffffffff1|cffced4da сек. Не оглушает героев.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0PB",
+      "field": "name",
+      "value": "|cffe4cfa3Кошмар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0PB",
+      "field": "tip1",
+      "value": "|cffe4cfa3Кошмар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0PB",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Оглушает органического противника на |cffffffff10|cffced4da сек.; героя — на |cffffffff5|cffced4da сек. Само оглушение не наносит урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0RS",
+      "field": "name",
+      "value": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0RS",
+      "field": "tip1",
+      "value": "|cffe4cfa3Рассекающий удар|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0RS",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки наносят окружающим основную цель наземным врагам |cffffffff40%|cffced4da урона от атаки. Радиус: |cffffffff250|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "ACce",
+      "field": "name",
+      "value": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "type": "ability",
+      "id": "ACce",
+      "field": "tip1",
+      "value": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "type": "ability",
+      "id": "ACce",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки наносят окружающим основную цель наземным врагам |cffffffff7%|cffced4da урона от атаки. Радиус: |cffffffff150|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "ACtn",
+      "field": "name",
+      "value": "|cffe4cfa3Порождение щупальца|r"
+    },
+    {
+      "type": "ability",
+      "id": "ACtn",
+      "field": "tip1",
+      "value": "|cffe4cfa3Порождение щупальца|r (|cffffffffT|r)"
+    },
+    {
+      "type": "ability",
+      "id": "ACtn",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает одно |cffa9c7deЩупальце|cffced4da на |cffffffff180|cffced4da сек. Щупальце атакует наземные цели.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A16Q",
+      "field": "name",
+      "value": "|cffe4cfa3Смертельная связь|r"
+    },
+    {
+      "type": "ability",
+      "id": "A16Q",
+      "field": "tip1",
+      "value": "|cffe4cfa3Смертельная связь|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A16Q",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Связывает до |cffffffff60|cffced4da органических наземных врагов в радиусе |cffffffff500|cffced4da на |cffffffff75|cffced4da сек. |cffffffff100%|cffced4da получаемого ими урона перераспределяется между связанными целями.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A16R",
+      "field": "name",
+      "value": "|cffe4cfa3Божественное видение|r"
+    },
+    {
+      "type": "ability",
+      "id": "A16R",
+      "field": "tip1",
+      "value": "|cffe4cfa3Божественное видение|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A16R",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает обзор в выбранной области радиусом |cffffffff99999|cffced4da на |cffffffff12|cffced4da сек. Обнаруживает невидимые войска.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A16T",
+      "field": "name",
+      "value": "|cffe4cfa3Покровительство бога|r"
+    },
+    {
+      "type": "ability",
+      "id": "A16T",
+      "field": "tip1",
+      "value": "|cffe4cfa3Покровительство бога|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A16T",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da За |cffffffff12|cffced4da сек. восстанавливает дружественной или нейтральной органической цели |cffc8e0874000|cffced4da здоровья и |cffc8e0874000|cffced4da маны.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0T7",
+      "field": "name",
+      "value": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0T7",
+      "field": "tip1",
+      "value": "|cffe4cfa3Щупальце Йогг`Сарона|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0T7",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает одно |cffa9c7deЩупальце Йогг`Сарона|cffced4da на |cffffffff30|cffced4da сек. Оно атакует наземные цели и владеет «Рассекающим ударом».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1NA",
+      "field": "name",
+      "value": "|cffe4cfa3Призыв бессмертных стражей|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1NA",
+      "field": "tip1",
+      "value": "|cffe4cfa3Призыв бессмертных стражей|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1NA",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff8|cffced4da |cffa9c7deБессмертных стражей|cffced4da на |cffffffff60|cffced4da сек. Они атакуют наземные цели.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1NB",
+      "field": "name",
+      "value": "|cffe4cfa3Призыв сущностей Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1NB",
+      "field": "tip1",
+      "value": "|cffe4cfa3Призыв сущностей Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1NB",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff15|cffced4da |cffa9c7deМогущественных Сущностей бездны|cffced4da на |cffffffff60|cffced4da сек. Они атакуют наземные цели.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1NC",
+      "field": "name",
+      "value": "|cffe4cfa3Портал в Бездну|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1NC",
+      "field": "tip1",
+      "value": "|cffe4cfa3Портал в Бездну|r (|cffffffffD|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1NC",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает портал и выпускает одну |cffa9c7deТварь из Бездны|cffced4da. Восстановление: |cffffffff400|cffced4da сек.|n|n|cffe6c07bДождитесь завершения призыва.|cffced4da|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10T",
+      "field": "name",
+      "value": "|cffe4cfa3Рой саранчи|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10T",
+      "field": "tip1",
+      "value": "|cffe4cfa3Рой саранчи|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10T",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает рой из |cffffffff12|cffced4da насекомых, атакующих наземных и воздушных врагов в радиусе |cffffffff800|cffced4da. Возвращаясь к источнику роя, насекомые восстанавливают ему здоровье в размере |cffc8e08775%|cffced4da нанесённого ими урона. Действует |cffffffff30|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10U",
+      "field": "name",
+      "value": "|cffe4cfa3Рой саранчи|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10U",
+      "field": "tip1",
+      "value": "|cffe4cfa3Рой саранчи|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10U",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает рой из |cffffffff15|cffced4da насекомых, атакующих наземных и воздушных врагов в радиусе |cffffffff800|cffced4da. Возвращаясь к источнику роя, насекомые восстанавливают ему здоровье в размере |cffc8e08775%|cffced4da нанесённого ими урона. Действует |cffffffff30|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10V",
+      "field": "name",
+      "value": "|cffe4cfa3Рой саранчи|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10V",
+      "field": "tip1",
+      "value": "|cffe4cfa3Рой саранчи|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10V",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает рой из |cffffffff20|cffced4da насекомых, атакующих наземных и воздушных врагов в радиусе |cffffffff800|cffced4da. Возвращаясь к источнику роя, насекомые восстанавливают ему здоровье в размере |cffc8e08775%|cffced4da нанесённого ими урона. Действует |cffffffff30|cffced4da сек.|r"
+    }
+  ]
+}

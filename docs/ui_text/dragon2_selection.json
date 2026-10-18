@@ -1,0 +1,78 @@
+{
+  "scope": "Драконий Союз (Dragon2): подсказка выбора расы A1MZ",
+  "object": "A1MZ",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "hotkey": {
+    "reference": "TRIGSTR_28741",
+    "value": "Q"
+  },
+  "levels": 1,
+  "evidence": [
+    "04_race_selection.lua:383-401: InitTrig_Race_Dragon2 фильтрует A1MZ; выбор создаёт 5 o01D.",
+    "Dragons.lua:128-144: Trig_DragonUnionStart_Actions отключает n044, R0A7, R0AZ при применении A1MZ.",
+    "A1MZ находится на драконьем стартовом маркере dra1 (Выбор Стаи).",
+    "Автор Escanor, переработал VinerX, куратор VinerX, сложность 4/5, период «Катаклизм» и клавиша Q сохранены."
+  ],
+  "consumers": [
+    {
+      "file": "war3mapSkin.w3a",
+      "id": "A1MZ",
+      "field": [
+        "anam",
+        0,
+        0
+      ],
+      "wts_id": 39558
+    },
+    {
+      "file": "war3mapSkin.w3a",
+      "id": "A1MZ",
+      "field": [
+        "atp1",
+        1,
+        0
+      ],
+      "wts_id": 39559
+    },
+    {
+      "file": "war3mapSkin.w3a",
+      "id": "A1MZ",
+      "field": [
+        "aub1",
+        1,
+        0
+      ],
+      "wts_id": 28525
+    }
+  ],
+  "in_game_checked": false,
+  "strings": [
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "A1MZ",
+      "field": "name",
+      "reference_before": "TRIGSTR_39558",
+      "before": "|cff8080ffДраконий Союз|r",
+      "after": "|cffe4cfa3Драконий Союз|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "A1MZ",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_39559",
+      "before": "|cff8080ffДраконий Союз|r",
+      "after": "|cffe4cfa3Драконий Союз|r (|cffffffffQ|r)"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "A1MZ",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_28525",
+      "before": "|cffa6afb8РАСА:|cffced4da Альянс четырёх благородных стай драконов.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor|r|n|cffa6afb8Переработал:|r |cffa9c7deVinerX|r|n|cffa6afb8Куратор расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Сложность:|r |cffffffff●●●●|cffa6afb8●|r|n|cffa6afb8Период:|r |cffa9c7de«Катаклизм»|r|n|n|cffced4daКрасная, зелёная, бронзовая и синяя стаи объединяются в союз, чтобы противостоять угрозам новых времён. Чёрная стая исключена из союза, а её гнездо и особые мутации недоступны.|r",
+      "after": "|cffa6afb8РАСА:|cffced4da Альянс четырёх благородных стай драконов.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor|r|n|cffa6afb8Переработал:|r |cffa9c7deVinerX|r|n|cffa6afb8Куратор расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Сложность:|r |cffffffff●●●●|cffa6afb8●|r|n|cffa6afb8Период:|r |cffa9c7de«Катаклизм»|r|n|n|cffced4daКрасная, зелёная, бронзовая и синяя стаи объединяются в союз, чтобы противостоять угрозам новых времён. Чёрная стая исключена из союза, а её гнездо и особые мутации недоступны.|r"
+    }
+  ]
+}

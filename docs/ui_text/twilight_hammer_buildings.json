@@ -1,0 +1,198 @@
+{
+  "scope": "Культ Сумеречного Молота (Twilight Hammer): категория 1 — Здания (9 зданий)",
+  "buildings_count": 9,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "o00K",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6718,
+          "after": "|cffe4cfa3Бастион Сумеречного Молота|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 6719,
+          "after": "|cffe4cfa3Бастион Сумеречного Молота|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12989,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное святилище Культа Сумеречного Молота. Обучает батраков, исследует уровни «Фанатизма» и служит складом ресурсов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБатрак|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deФанатизм|cffced4da.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|r"
+        }
+      ]
+    },
+    {
+      "id": "o00T",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6770,
+          "after": "|cffe4cfa3Землянка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 6771,
+          "after": "|cffe4cfa3Землянка|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31676,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию Культа Сумеречного Молота припасами. Позволяет батракам укрыться внутри и вести огонь по противникам.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+20|cffced4da золота каждые |cffffffff25|cffced4da сек.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o00L",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6720,
+          "after": "|cffe4cfa3Казармы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 6721,
+          "after": "|cffe4cfa3Казармы|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12990,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Военное сооружение, подготавливающее базовые боевые единицы и осадные орудия Культа Сумеречного Молота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРубака|cffced4da.|n- |cffa9c7deСумеречный жнец|cffced4da.|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deГрубая Сила|cffced4da.|n- |cffa9c7deТяжелые удары|cffced4da.|n- |cffa9c7deФанатичная Вера|cffced4da.|n- |cffa9c7deПорченные снаряды|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "o00R",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6764,
+          "after": "|cffe4cfa3Лесопилка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 6765,
+          "after": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12992,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Пункт приёма древесины. Исследует улучшения вооружения, защиты и добычи ресурсов для войск Культа Сумеречного Молота.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенные инструменты|cffced4da.|n- |cffa9c7deОружие ближнего боя|cffced4da.|n- |cffa9c7deБроня ближнего боя|cffced4da.|n- |cffa9c7deМагия бездны|cffced4da.|n- |cffa9c7deПокровительство Бездны|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "o00V",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6781,
+          "after": "|cffe4cfa3Алтарь приношений|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 6782,
+          "after": "|cffe4cfa3Алтарь приношений|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31678,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Мрачное святилище, призывающее чудовищ Бездны, аберраций и тёмных жрецов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deКаратель|cffced4da.|n- |cffa9c7deЖрец Бездны|cffced4da.|n- |cffa9c7deАберрация|cffced4da.|n- |cffa9c7deАстральная аберрация|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deДробящий удар|cffced4da.|n- |cffa9c7deВлияние бездны|cffced4da.|n- |cffa9c7deЗащита бездны|cffced4da.|n- |cffa9c7deХаотичная атака|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "o00P",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6758,
+          "after": "|cffe4cfa3Алтарь культа|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 6759,
+          "after": "|cffe4cfa3Алтарь культа|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13003,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Позволяет призывать и воскрешать героев Культа Сумеречного Молота.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВерховный Жрец бездны|cffced4da: маг Бездны, призывающий щупальца и ослабляющий врагов.|n- |cffa9c7deВоеначальник Культа|cffced4da: могучий воин ближнего боя, сокрушающий врагов в дуэлях.|n- |cffa9c7deТемный волшебник|cffced4da: чародей тёмной магии, призывающий Забытого.|r"
+        }
+      ]
+    },
+    {
+      "id": "o00U",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6779,
+          "after": "|cffe4cfa3Обитель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 6780,
+          "after": "|cffe4cfa3Обитель|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31677,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Лагерь огров клана Сумеречного Молота. Нанимает огров-воинов и огров-магов, а также исследует их улучшения.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгр-воин|cffced4da.|n- |cffa9c7deОгр-маг|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deБлагодать древних богов|cffced4da.|n- |cffa9c7deВыносливость|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "o00Q",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6761,
+          "after": "|cffe4cfa3Сторожевая башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 6762,
+          "after": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 1421,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение Культа Сумеречного Молота. Атакует наземных и воздушных противников с высокой дистанции.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0D3",
+      "hotkey": "C",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10901,
+          "after": "|cffe4cfa3Верфь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10902,
+          "after": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 22662,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Строит корабли и исследует улучшения флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da.|n- |cffa9c7deФрегат|cffced4da.|n- |cffa9c7deДредноут|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбстрел|cffced4da.|n- |cffa9c7deДополнительные паруса|cffced4da.|n- |cffa9c7deПочинка|cffced4da.|n- |cffa9c7deОрудия флота|cffced4da.|n- |cffa9c7deУкреплённый корпус|cffced4da.|n|n|cffa9c7deЗона ремонта|cffced4da восстанавливает |cff60dc702,5|cffced4da здоровья/сек. союзным кораблям поблизости.|r"
+        }
+      ]
+    }
+  ]
+}

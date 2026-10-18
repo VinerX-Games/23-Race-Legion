@@ -1,0 +1,212 @@
+{
+  "scope": "Орда Скверны (Fel Orcs): категория 1 — Здания (13 зданий)",
+  "buildings_count": 13,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "o05V",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 20727,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов и начальный лимит пищи.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da: базовый рабочий.|n- |cffa9c7deМутировавший Батрак|cffced4da: рабочий-воин с рассекающим ударом.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deГрабеж|cffced4da: воины добывают золото при атаке зданий.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deКрепость|cffced4da: открывает доступ к передовым сооружениям и войскам.|r"
+        }
+      ]
+    },
+    {
+      "id": "o05W",
+      "hotkey": "U",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 21453,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает запас пищи и открывает доступ к новым постройкам.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da: базовый рабочий.|n- |cffa9c7deМутировавший Батрак|cffced4da: рабочий-воин с рассекающим ударом.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deГрабеж|cffced4da: воины добывают золото при атаке зданий.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deЦитадель|cffced4da: открывает доступ к высшим технологиям расы.|r"
+        }
+      ]
+    },
+    {
+      "id": "o05X",
+      "hotkey": "U",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 25409,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание третьей ступени. Обеспечивает максимальный запас пищи и открывает все технологии расы.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da: базовый рабочий.|n- |cffa9c7deМутировавший Батрак|cffced4da: рабочий-воин с рассекающим ударом.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deГрабеж|cffced4da: воины добывают золото при атаке зданий.|r"
+        }
+      ]
+    },
+    {
+      "id": "o060",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33924,
+          "after": "|cffe4cfa3Свиноферма|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33925,
+          "after": "|cffe4cfa3Свиноферма|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31830,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию Орды Скверны провизией. Позволяет укрывать батраков для защиты базы.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|n|n|cffa6afb8Атакует наземные и воздушные цели|cffced4da (при укрытии батраков).|r"
+        }
+      ]
+    },
+    {
+      "id": "o05Y",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33453,
+          "after": "|cffe4cfa3Алтарь скверны|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33905,
+          "after": "|cffe4cfa3Алтарь скверны|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28995,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Позволяет призывать и воскрешать павших героев Орды Скверны.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВоенный лорд|cffced4da: герой-воин ближнего боя (Сила).|n- |cffa9c7deМастер меча|cffced4da: мастер клинка ближнего боя (Ловкость).|n- |cffa9c7deОскверненный шаман|cffced4da: темный шаман дальнего боя (Интеллект).|r"
+        }
+      ]
+    },
+    {
+      "id": "o05Z",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 28988,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовое производственное сооружение Орды Скверны. Подготавливает пехоту, стрелков и осадные орудия.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da: базовый боец ближнего боя.|n- |cffa9c7deСтрелок|cffced4da: стрелок с арбалетом.|n- |cffa9c7deКопьеметатель|cffced4da: метатель копий дальнего боя.|n- |cffa9c7deТелохранитель вождя|cffced4da: тяжелый воин с аурой защиты.|n- |cffa9c7deРазрушитель|cffced4da: осадная катапульта дальнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deГорючая смесь|cffced4da: поджигает землю при атаке разрушителей.|n- |cffa9c7deГрубая сила|cffced4da: повышает здоровье и урон рубак.|n- |cffa9c7deСверхлегкие копья|cffced4da: увеличивает дальность атаки копьеметателей.|n- |cffa9c7deЗаточеный болт|cffced4da: повышает урон стрелков по тяжелой броне.|r"
+        }
+      ]
+    },
+    {
+      "id": "o05T",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 30681,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Служит пунктом сбора древесины и центром кузнечных разработок Орды Скверны.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОружие ближнего боя|cffced4da: повышает урон немагических войск ближнего боя.|n- |cffa9c7deОружие дальнего боя|cffced4da: повышает урон войск дальнего боя.|n- |cffa9c7deСтальная броня|cffced4da: повышает броню воинов ближнего боя.|n- |cffa9c7deУлучшенные пилы|cffced4da: увеличивает сбор древесины батраками.|n- |cffa9c7deПоощрять ярость|cffced4da: увеличивает урон бойцов ценой снижения здоровья.|n- |cffa9c7deПодавлять ярость|cffced4da: увеличивает здоровье бойцов ценой снижения урона.|n- |cffa9c7deГрабеж|cffced4da: воины добывают золото при атаке зданий.|r"
+        }
+      ]
+    },
+    {
+      "id": "o061",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "ubertip",
+          "wts_id": 30653,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает могущественных заклинателей и магов поддержки Орды Скверны.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЧернокнижник Скверны|cffced4da: темный маг с рассеиванием и огненной стрелой.|n- |cffa9c7deШаман|cffced4da: заклинатель с раздвоенной молнией и жаждой крови.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбучение шаманов|cffced4da: открывает новые ранги и способности шаманов.|n- |cffa9c7deЧерная магия|cffced4da: открывает новые ранги и способности чернокнижников.|r"
+        }
+      ]
+    },
+    {
+      "id": "o062",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "tip",
+          "wts_id": 22879,
+          "after": "|cffe4cfa3Зверинец|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 30660,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Содержит и тренирует боевых зверей, кавалерию и элитную охрану Орды Скверны.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da: быстрая волчья кавалерия с опутыванием и воем.|n- |cffa9c7deКодо Скверны|cffced4da: массивный зверь с пожиранием и аурой выносливости.|n- |cffa9c7deТелохранитель вождя|cffced4da: элитный тяжелый воин с аурой защиты.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deТренировки с волками|cffced4da: повышает скорость и урон налетчиков.|n- |cffa9c7deОбучение телохранителя|cffced4da: усиливает телохранителей вождя.|n- |cffa9c7deТренировки кодо|cffced4da: увеличивает запас здоровья и урон боевых кодо.|r"
+        }
+      ]
+    },
+    {
+      "id": "o066",
+      "hotkey": "X",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34730,
+          "after": "|cffe4cfa3Оскверненный источник|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 34732,
+          "after": "|cffe4cfa3Оскверненный источник|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 30686,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Мистический источник демонической энергии. Насыщает войска Скверной и открывает ритуалы развития армии.|n|n|cffa6afb8Ритуалы:|cffced4da|n- |cffa9c7deРитуал некромантии|cffced4da: открывает постройку Чертогов мертвых.|n- |cffa9c7deРитуал мутации|cffced4da: открывает обучение Мутировавших батраков.|n|n|cffa6afb8Улучшения:|cffced4da|n- Позволяет улучшать войска Орды Скверны до третьего ранга.|r"
+        }
+      ]
+    },
+    {
+      "id": "o067",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3807,
+          "after": "|cffe4cfa3Чертоги мертвых|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33444,
+          "after": "|cffe4cfa3Чертоги мертвых|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 30687,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Центр изучения тёмных искусств и некромантии Орды Скверны.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deНекромант|cffced4da: темный маг, поднимающий скелетов из трупов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deИскусное воскрешение|cffced4da: позволяет призывать скелетов-защитников.|n- |cffa9c7deЖивучие скелеты|cffced4da: увеличивает длительность существования скелетов.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0D3",
+      "hotkey": "C",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10901,
+          "after": "|cffe4cfa3Верфь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10902,
+          "after": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 22662,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Строит корабли и исследует улучшения морского флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: перевозка сухопутных войск по воде.|n- |cffa9c7deФрегат|cffced4da: патрульный артиллерийский корабль.|n- |cffa9c7deДредноут|cffced4da: тяжелый бронированный флагман флота.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбстрел|cffced4da.|n- |cffa9c7deДополнительные паруса|cffced4da.|n- |cffa9c7deПочинка|cffced4da.|n- |cffa9c7deОрудия флота|cffced4da.|n- |cffa9c7deУкреплённый корпус|cffced4da.|n|n|cffa9c7deЗона ремонта|cffced4da восстанавливает |cffc8e0872,5|cffced4da ед. здоровья в секунду союзным кораблям поблизости.|r"
+        }
+      ]
+    },
+    {
+      "id": "owtw",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36068,
+          "after": "|cffe4cfa3Сторожевая башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 36069,
+          "after": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)"
+        }
+      ]
+    }
+  ]
+}

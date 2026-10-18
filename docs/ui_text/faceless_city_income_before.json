@@ -1,0 +1,54 @@
+{
+  "command": "get-objects-bulk",
+  "count": 2,
+  "map": "F:\\Gemini_23Race\\map.w3x",
+  "missing": [],
+  "objects": [
+    {
+      "fields": {
+        "buffid1": "",
+        "code": "APai",
+        "dataa1": "",
+        "datab1": "",
+        "datac1": "",
+        "levels": "5",
+        "name": "TRIGSTR_17267",
+        "tip1": "TRIGSTR_33521",
+        "tip2": "TRIGSTR_33522",
+        "tip3": "TRIGSTR_33523",
+        "tip4": "TRIGSTR_33524",
+        "ubertip1": "TRIGSTR_17269",
+        "ubertip2": "TRIGSTR_17275",
+        "ubertip3": "TRIGSTR_17276",
+        "ubertip4": "TRIGSTR_17277"
+      },
+      "id": "A0AY",
+      "name": "|cffc8e6ffСбор Дани|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "code": "APai",
+        "dataa1": "",
+        "datab1": "",
+        "datac1": "",
+        "levels": "5",
+        "name": "TRIGSTR_17317",
+        "tip1": "TRIGSTR_33629",
+        "tip2": "TRIGSTR_33630",
+        "tip3": "TRIGSTR_33638",
+        "tip4": "TRIGSTR_33667",
+        "ubertip1": "TRIGSTR_17319",
+        "ubertip2": "TRIGSTR_17325",
+        "ubertip3": "TRIGSTR_17326",
+        "ubertip4": "TRIGSTR_17327"
+      },
+      "id": "A0B5",
+      "name": "|cffc8e6ffНалаженное Производство|r"
+    }
+  ],
+  "ok": true,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "type": "ability"
+}

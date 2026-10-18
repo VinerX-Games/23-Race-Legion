@@ -1,0 +1,219 @@
+{
+  "scope": "Гномы (Gnomes): категория 1 — Здания (10 зданий)",
+  "buildings_count": 10,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "h0FI",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 20141,
+          "after": "|cffe4cfa3Энергобашня (активна)|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 20139,
+          "after": "|cffe4cfa3Энергобашня (активна)|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31820,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Энергетическое оборонительное сооружение гномов. Обеспечивает доход и ведёт огонь по врагам.|n|n|cffa6afb8Особенности:|cffced4da боевой режим активирован сразу.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FK",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17459,
+          "after": "|cffe4cfa3Главный цех|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17460,
+          "after": "|cffe4cfa3Главный цех|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 8105,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание гномов первой ступени. Обеспечивает добычу ресурсов и обучает рабочих.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deИнженер|cffced4da: рабочий строитель и ремонтник.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deВооружение|cffced4da|n- |cffa9c7deПрочные детали|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deГлавный цех, V2|cffced4da: открывает доступ к передовым сооружениям и технологиям.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FL",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 2750,
+          "after": "|cffe4cfa3Энергобашня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 2757,
+          "after": "|cffe4cfa3Энергобашня|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 2764,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Энергетическое сооружение гномов, обеспечивающее запас пищи и доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСменить режим|cffced4da: переходит в активный боевой режим для обороны базы.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FR",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17461,
+          "after": "|cffe4cfa3Главный цех, V2|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17462,
+          "after": "|cffe4cfa3Главный цех, V2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 8114,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание гномов второй ступени. Существенно увеличивает запас пищи и открывает новые постройки.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deВооружение|cffced4da|n- |cffa9c7deПрочные детали|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deГлавный цех, V3|cffced4da: открывает высшие военные проекты гномов.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FS",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17463,
+          "after": "|cffe4cfa3Главный цех, V3|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17464,
+          "after": "|cffe4cfa3Главный цех, V3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 8127,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание гномов третьей ступени. Обеспечивает максимальный запас пищи.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deВооружение|cffced4da|n- |cffa9c7deПрочные детали|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FY",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 5673,
+          "after": "|cffe4cfa3Фабрика|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 5674,
+          "after": "|cffe4cfa3Фабрика|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 18623,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Предприятие по производству боевых роботов, шагоходов и специализированных машин гномов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРеженоги|cffced4da: быстрый сферический робот-мясорубка.|n- |cffa9c7deМеханобоец|cffced4da: экзоскелет ближнего боя с молотами.|n- |cffa9c7deКлап Клап (v0.58889)|cffced4da: экспериментальный робот-рубщик.|n- |cffa9c7deКлап Клап (v1.0 Opt)|cffced4da: облегчённый дешёвый рабочий робот.|n- |cffa9c7deКлап Клап (v1.0 Big)|cffced4da: тяжёлый взрывной робот.|n- |cffa9c7deШагоход|cffced4da: скоростной пулемётный шагоход.|n- |cffa9c7deНаногном|cffced4da: электрический спецбоец.|n- |cffa9c7deМехагигант|cffced4da: тяжёлый боевой колосс.|n- |cffa9c7deМеханопаук|cffced4da: ракетный многоногий паук.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенное управление|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FZ",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17476,
+          "after": "|cffe4cfa3Энергоядро|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17477,
+          "after": "|cffe4cfa3Энергоядро|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 18234,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главный научно-технический центр гномов. Открывает инновационные инженерные проекты, новые боевые машины и модификации вооружения.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0G0",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 8083,
+          "after": "|cffe4cfa3Мастерская|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 8084,
+          "after": "|cffe4cfa3Мастерская|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 18624,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Завод по производству бронемашин, танков и артиллерии гномов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБронемашина|cffced4da: бронетранспортёр поддержки с аурой логистики.|n- |cffa9c7deМинитанк|cffced4da: маневренный танк с артвыстрелом.|n- |cffa9c7deЭкспериментальный ГГТ|cffced4da: многоцелевая модульная платформа.|n- |cffa9c7deСамоходная артиллерия|cffced4da: дальнобойное осадное орудие.|n- |cffa9c7deУниверсальный танк|cffced4da: тяжёлый танк с пулемётами и огнемётом.|n- |cffa9c7deТанк «Венец»|cffced4da: сверхтяжёлый флагманский танк.|n- |cffa9c7deМега-Артиллерия|cffced4da: осадное суперорудие.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенные компоненты|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0G3",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 8089,
+          "after": "|cffe4cfa3Мехаказармы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 8118,
+          "after": "|cffe4cfa3Мехаказармы|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 8121,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает пехоту, стрелков и заклинателей гномов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deГном-пехотинец|cffced4da: боец ближнего боя с оглушающим ударом.|n- |cffa9c7deСтрелок|cffced4da: стрелок с длинноствольным мушкетом.|n- |cffa9c7deШпион|cffced4da: невидимый диверсант с отравленным кинжалом.|n- |cffa9c7deПодрывник|cffced4da: стрелок с зажигательными гранатами.|n- |cffa9c7deГном-маг|cffced4da: заклинатель поддержки с ледяной бронёй и бурей.|n- |cffa9c7deГном-чернокнижник|cffced4da: тёмный маг с проклятиями и увечьем.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенная тренировка пехоты|cffced4da|n- |cffa9c7deУсиленная броня|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0G7",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 18238,
+          "after": "|cffe4cfa3Алтарь Великих Умов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 18239,
+          "after": "|cffe4cfa3Алтарь Великих Умов|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 19759,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Священное сооружение гномской науки для призыва и воскрешения павших героев.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deТанк УТ v1.23|cffced4da: боевая машина огневой поддержки.|n- |cffa9c7deФронтовой Гений|cffced4da: изобретатель в экзоскелете ближнего боя.|n- |cffa9c7deСтрелок-ветеран|cffced4da: дальнобойный снайпер с ракетным комплексом.|r"
+        }
+      ]
+    }
+  ]
+}

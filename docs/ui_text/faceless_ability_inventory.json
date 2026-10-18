@@ -1,0 +1,587 @@
+[
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "BPSE",
+      "code": "AHbh",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A0DW",
+    "name": "Сильный удар"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "BHtc",
+      "code": "AHtc",
+      "levels": "4",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A10H",
+    "name": "|cffd7b4f5Удар Клешней|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "Assk",
+      "levels": "4",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A10I",
+    "name": "|cffd7b4f5Крепкий Панцирь|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "BEim,BEia",
+      "code": "AEim",
+      "levels": "4",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A10J",
+    "name": "|cffd7b4f5Обжигающий жар|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "ANdp",
+      "levels": "2",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A10K",
+    "name": "|cffd7b4f5Темный Портал|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "BPSE",
+      "code": "AHbh",
+      "levels": "4",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A10L",
+    "name": "|cffd7b4f5Сотресение Бездны|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "BOwk",
+      "code": "AOwk",
+      "levels": "4",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A10N",
+    "name": "|cffd7b4f5Сокрытие Бездной|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "ANdp",
+      "levels": "4",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A10Q",
+    "name": "|cffd7b4f5Темный Раскол|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "B08E",
+      "code": "AUau",
+      "levels": "4",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A10R",
+    "name": "|cffd7b4f5Аура Бездны|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "BUdd",
+      "code": "AUdd",
+      "levels": "2",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A10S",
+    "name": "|cffd7b4f5Пространство Бездны|r"
+  },
+  {
+    "editor_suffix": "(Безликие)(т1)",
+    "fields": {
+      "buffid1": "",
+      "code": "AUls",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": "uloc"
+    },
+    "id": "A10T",
+    "name": "|cffd7b4f5Рой саранчи|r"
+  },
+  {
+    "editor_suffix": "(Безликие)(т2)",
+    "fields": {
+      "buffid1": "",
+      "code": "AUls",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": "uloc"
+    },
+    "id": "A10U",
+    "name": "|cffd7b4f5Рой саранчи|r"
+  },
+  {
+    "editor_suffix": "(Безликие)(т3)",
+    "fields": {
+      "buffid1": "",
+      "code": "AUls",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": "uloc"
+    },
+    "id": "A10V",
+    "name": "|cffd7b4f5Рой саранчи|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "BPSE",
+      "code": "AHbh",
+      "levels": "1",
+      "requires": "R0EK",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A10W",
+    "name": "|cffe4cfa3Сотрясение Бездны|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "Afbk",
+      "levels": "1",
+      "requires": "R0EL",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A10X",
+    "name": "|cffe4cfa3Разрушение Эфира|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "Assk",
+      "levels": "1",
+      "requires": "R0EV",
+      "requiresamount": "2",
+      "unitid1": ""
+    },
+    "id": "A10Y",
+    "name": "|cffd7b4f5Крепкий Панцирь|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "AOcr",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A10Z",
+    "name": "|cffe4cfa3Сила Бездны|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "Bslo",
+      "code": "Aslo",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A114",
+    "name": "|cffd7b4f5Замедление|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "Bcrs",
+      "code": "Acrs",
+      "levels": "1",
+      "requires": "R0EX",
+      "requiresamount": "3",
+      "unitid1": ""
+    },
+    "id": "A115",
+    "name": "|cffd7b4f5Проклятие|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "BOwd",
+      "code": "AOwd",
+      "levels": "1",
+      "requires": "R0EX",
+      "requiresamount": "2",
+      "unitid1": "nfgt"
+    },
+    "id": "A116",
+    "name": "|cffd7b4f5Порождение щупальца|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "AIbl",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": "u02E"
+    },
+    "id": "A11G",
+    "name": "|cffd7b4f5Породить придаток|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "APai",
+      "levels": "1",
+      "requires": "Rugf",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A122",
+    "name": "|cffd7b4f5Кража будущего|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "ACrn",
+      "levels": "1",
+      "requires": "R0FA",
+      "requiresamount": "1",
+      "unitid1": ""
+    },
+    "id": "A123",
+    "name": "|cffd7b4f5Реинкарнация|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "BUfa",
+      "code": "AUfu",
+      "levels": "1",
+      "requires": "R0GD",
+      "requiresamount": "3",
+      "unitid1": ""
+    },
+    "id": "A16O",
+    "name": "|cffd7b4f5Морозный доспех |r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "Afsh",
+      "levels": "1",
+      "requires": "R0GD",
+      "requiresamount": "2",
+      "unitid1": ""
+    },
+    "id": "A16P",
+    "name": "|cffd7b4f5Пронзание|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "BIcb",
+      "code": "AIcb",
+      "levels": "3",
+      "requires": "R0ES",
+      "requiresamount": "1",
+      "unitid1": ""
+    },
+    "id": "A1CF",
+    "name": "|cffd7b4f5Помутнение рассудка"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "B01I",
+      "code": "Afae",
+      "levels": "2",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A1CG",
+    "name": "|cffd7b4f5Метка охотника|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "AIas",
+      "levels": "4",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A1CH",
+    "name": "Скорость безликие"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "AIva",
+      "levels": "4",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A1CI",
+    "name": "ВАмпириз Безликие"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "APai",
+      "levels": "4",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A1CJ",
+    "name": "|cffd7b4f5Безумие бездны|r"
+  },
+  {
+    "editor_suffix": "Безликие (Icon)",
+    "fields": {
+      "buffid1": "",
+      "code": "APai",
+      "levels": "3",
+      "requires": "R0ES",
+      "requiresamount": "1",
+      "unitid1": ""
+    },
+    "id": "A1CK",
+    "name": "|cffd7b4f5Помутнение разума|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "Bfro",
+      "code": "AUfn",
+      "levels": "1",
+      "requires": "R0EW",
+      "requiresamount": "3",
+      "unitid1": ""
+    },
+    "id": "A112",
+    "name": "|cffd7b4f5Иней|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "BUts",
+      "code": "AUts",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A111",
+    "name": "|cffd7b4f5Темная Оболочка|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "Asds",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A0RR",
+    "name": "|cffd7b4f5Взрыв Эфира"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "ANca",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A0RS",
+    "name": "|cffd7b4f5Рассекающий удар"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "B02L",
+      "code": "AHfs",
+      "levels": "4",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A0WQ",
+    "name": "|cffd7b4f5Взрыв бездны|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "BNht",
+      "code": "ANht",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A10P",
+    "name": "|cffd7b4f5Ужасающий вой"
+  },
+  {
+    "editor_suffix": "(Безликие Придаток)",
+    "fields": {
+      "buffid1": "B08F",
+      "code": "AUau",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A06M",
+    "name": "|cffd7b4f5Дымка бездны|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "BHtb",
+      "code": "AHtb",
+      "levels": "1",
+      "requires": "R0EW",
+      "requiresamount": "2",
+      "unitid1": ""
+    },
+    "id": "A126",
+    "name": "|cffd7b4f5Ледяная стрела|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "",
+      "code": "Advm",
+      "levels": "1",
+      "requires": "R0EW",
+      "requiresamount": "1",
+      "unitid1": ""
+    },
+    "id": "A1R2",
+    "name": "|cffd7b4f5Пожирание Магии|r"
+  },
+  {
+    "editor_suffix": "(Безликие пустышка)",
+    "fields": {
+      "buffid1": "BUsl",
+      "code": "ANfb",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A113",
+    "name": "|cffd7b4f5Кошмар|r"
+  },
+  {
+    "editor_suffix": "(Безликие ДАММИ)",
+    "fields": {
+      "buffid1": "",
+      "code": "APai",
+      "levels": "1",
+      "requires": "Rhan",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A1R3",
+    "name": "|cffd7b4f5Пожирание|r"
+  },
+  {
+    "editor_suffix": "(Безликие Урон)",
+    "fields": {
+      "buffid1": "",
+      "code": "AIat",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A1R5",
+    "name": "|cffd7b4f5Пожирание|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "Bust",
+      "code": "ANfb",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A0PB",
+    "name": "|cffd7b4f5Кошмар|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "buffid1": "BNab",
+      "code": "ANab",
+      "levels": "1",
+      "requires": "",
+      "requiresamount": "",
+      "unitid1": ""
+    },
+    "id": "A0PC",
+    "name": "|cffd7b4f5Кошмар ЯД|r"
+  }
+]

@@ -1,0 +1,212 @@
+{
+  "ok": true,
+  "applied": true,
+  "method": "Only explicit string modifications spliced; all unrelated records/mods byte-identical",
+  "changes": {
+    "war3map.w3q": [
+      [
+        "Rhlh",
+        "gnam",
+        3,
+        0
+      ],
+      [
+        "Rhlh",
+        "gnam",
+        4,
+        0
+      ],
+      [
+        "Rhlh",
+        "gnam",
+        5,
+        0
+      ],
+      [
+        "Rhlh",
+        "gnam",
+        6,
+        0
+      ],
+      [
+        "Rhlh",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "Rhlh",
+        "gnam",
+        2,
+        0
+      ],
+      [
+        "Rhan",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "Rhrt",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "Rugf",
+        "gnam",
+        1,
+        0
+      ]
+    ],
+    "war3mapSkin.w3q": [
+      [
+        "Rhlh",
+        "gnam",
+        3,
+        0
+      ],
+      [
+        "Rhlh",
+        "gnam",
+        4,
+        0
+      ],
+      [
+        "Rhlh",
+        "gnam",
+        5,
+        0
+      ],
+      [
+        "Rhlh",
+        "gnam",
+        6,
+        0
+      ],
+      [
+        "Rhlh",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "Rhlh",
+        "gnam",
+        2,
+        0
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "variant": "SD",
+      "rawcode": "Rugf",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "Rhrt",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "Rhlh",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "Rhlh",
+      "field": "name2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "Rhlh",
+      "field": "name3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "Rhlh",
+      "field": "name4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "Rhlh",
+      "field": "name5",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "Rhlh",
+      "field": "name6",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "Rhan",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "Rugf",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "Rhrt",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "Rhlh",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "Rhlh",
+      "field": "name2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "Rhlh",
+      "field": "name3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "Rhlh",
+      "field": "name4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "Rhlh",
+      "field": "name5",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "Rhlh",
+      "field": "name6",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "Rhan",
+      "field": "name1",
+      "exact_match": true
+    }
+  ],
+  "wts_unchanged": true
+}

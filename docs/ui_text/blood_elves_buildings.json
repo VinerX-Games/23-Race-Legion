@@ -1,0 +1,303 @@
+{
+  "scope": "Эльфы Крови (Blood Elves): категория 1 — Здания (14 зданий)",
+  "buildings_count": 14,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "h04C",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17383,
+          "after": "|cffe4cfa3Ратуша|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17384,
+          "after": "|cffe4cfa3Ратуша|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6799,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Эльфов Крови первой ступени. Обучает строителей и служит складом древесины.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deФорт|cffced4da: открывает доступ к передовым сооружениям и войскам Эльфов Крови.|r"
+        }
+      ]
+    },
+    {
+      "id": "h04B",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17381,
+          "after": "|cffe4cfa3Форт|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17382,
+          "after": "|cffe4cfa3Форт|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28198,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Эльфов Крови второй ступени. Открывает доступ к Волшебному Святилищу, Хранилищу Энергии и передовым войскам.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deЗамок|cffced4da: открывает доступ к высшим технологиям, элитным бойцам и осадным орудиям.|r"
+        }
+      ]
+    },
+    {
+      "id": "h04A",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17379,
+          "after": "|cffe4cfa3Замок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17380,
+          "after": "|cffe4cfa3Замок|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6463,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Эльфов Крови третьей ступени. Открывает доступ к Мастерской, Рыцарям крови, Арканитовым големам и высшим ступеням улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deСтроитель|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h04M",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17389,
+          "after": "|cffe4cfa3Сторожка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17390,
+          "after": "|cffe4cfa3Сторожка|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31649,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию Эльфов Крови запасом пищи и вырабатывает регулярный доход.|n|nДаёт |cffffffff15|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+40|cffced4da золота каждые |cffffffff25|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "h04D",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17386,
+          "after": "|cffe4cfa3Казармы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17385,
+          "after": "|cffe4cfa3Казармы|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6494,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает базовые пехотные и кавалерийские силы Эльфов Крови.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deСтранник|cffced4da: базовый мечник ближнего боя.|n- |cffa9c7deСледопыт|cffced4da: меткий стрелок дальнего боя.|n- |cffa9c7deВсадник|cffced4da: быстрая конница ближнего боя.|n- |cffa9c7deРыцарь крови|cffced4da: элитный тяжеловооружённый паладин.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенные луки|cffced4da|n- |cffa9c7deЗащита от магии|cffced4da|n- |cffa9c7deТренировка следопытов|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h04N",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17392,
+          "after": "|cffe4cfa3Дозорная Башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17393,
+          "after": "|cffe4cfa3Дозорная Башня|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6508,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовая наблюдательная вышка. Обеспечивает обзор прилегающей территории. Не может атаковать до улучшения.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deСторожевая Башня|cffced4da: оснащается стрелковым оружием для отражения врагов.|n- |cffa9c7deМагическая Башня|cffced4da: атакует магической энергией, сжигающей ману врагов.|r"
+        }
+      ]
+    },
+    {
+      "id": "h04O",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17252,
+          "after": "|cffe4cfa3Сторожевая Башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17253,
+          "after": "|cffe4cfa3Сторожевая Башня|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6510,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительная стрелковая башня. Эффективна против лёгких войск и летающих существ.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h04P",
+      "hotkey": "X",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17254,
+          "after": "|cffe4cfa3Магическая Башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17255,
+          "after": "|cffe4cfa3Магическая Башня|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6515,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Магическое оборонительное сооружение. Атакует магической энергией, уничтожая ману цели и нанося повышенный урон призванным существам.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПротиводействие|cffced4da: сжигает ману цели при попадании.|n- |cffa9c7deОбнаружение|cffced4da: раскрывает невидимых врагов в указанной области.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h04Q",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17394,
+          "after": "|cffe4cfa3Лесопилка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17395,
+          "after": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12967,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Склад древесины и центр магических исследований энергосистемы.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенные инструменты|cffced4da|n- |cffa9c7deУлучшенная кладка|cffced4da|n- |cffa9c7deСтационарный магический источник|cffced4da|n- |cffa9c7deМобильные магические источники|cffced4da|n- |cffa9c7deМагическая выносливость|cffced4da|n- |cffa9c7deМагическая сила|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h04R",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17396,
+          "after": "|cffe4cfa3Кузница|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17397,
+          "after": "|cffe4cfa3Кузница|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6516,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оружейная мастерская. Улучшает оружие, доспехи и артефакты войск Эльфов Крови, а также позволяет выбрать боевой приоритет армии.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОружие ближнего боя|cffced4da|n- |cffa9c7deОружие дальнего боя|cffced4da|n- |cffa9c7deТяжелая броня|cffced4da|n- |cffa9c7deЛегкая броня|cffced4da|n- |cffa9c7deАртефакты|cffced4da|n- |cffa9c7deПриоритет на Ведьмаках|cffced4da|n- |cffa9c7deПриоритет на Рыцарях крови|cffced4da|n- |cffa9c7deПриоритет на Анклаве магов|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h05J",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17402,
+          "after": "|cffe4cfa3Алтарь Син'Дорай|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17403,
+          "after": "|cffe4cfa3Алтарь Син'Дорай|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 7762,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Призывает и воскрешает павших героев Эльфов Крови.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deМаг Крови|cffced4da: могущественный чародей, повелевающий огнём и поглощающий магическую энергию.|n- |cffa9c7deРенджер|cffced4da: искусный стрелок, усиливающий союзников аурой меткости и поражающий врагов зачарованными стрелами.|n- |cffa9c7deВерховный Рыцарь Крови|cffced4da: доблестный паладин Син'Дорай, владеющий исцеляющей волной и щитом света.|r"
+        }
+      ]
+    },
+    {
+      "id": "h04G",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17262,
+          "after": "|cffe4cfa3Мастерская|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17263,
+          "after": "|cffe4cfa3Мастерская|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6497,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Производит осадную технику, големов и элементалей.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБаллиста|cffced4da: дальнобойное осадное орудие.|n- |cffa9c7deЭлементаль|cffced4da: магическое существо поддержки.|n- |cffa9c7deАрканитовый голем|cffced4da: несокрушимый страж ближнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПодпорки|cffced4da|n- |cffa9c7deАлгоритмы големов|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h04E",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17250,
+          "after": "|cffe4cfa3Волшебное Святилище|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17251,
+          "after": "|cffe4cfa3Волшебное Святилище|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6495,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает заклинателей различных магических школ Эльфов Крови.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deВедьмак|cffced4da: элитный разрушитель чар, похищающий вражеские заклинания.|n- |cffa9c7deМагистр|cffced4da: повелитель стихии пламени.|n- |cffa9c7deАрканистка|cffced4da: чародейка Тайной магии.|n- |cffa9c7deЧернокнижник|cffced4da: мастер демонических искусств и порчи.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение магистров|cffced4da|n- |cffa9c7deПосвящение арканисток|cffced4da|n- |cffa9c7deПосвящение чернокнижников|cffced4da|n- |cffa9c7deМагический контроль|cffced4da|n- |cffa9c7deМагический страж|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h04F",
+      "hotkey": "X",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17387,
+          "after": "|cffe4cfa3Хранилище Энергии|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17388,
+          "after": "|cffe4cfa3Хранилище Энергии|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 6496,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Накапливает запасы маны для армии и определяет магическую специализацию Эльфов Крови (Аркана, Скверна, Бездна, Свет).|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deМагическая повозка|cffced4da: мобильный источник маны для союзных войск.|n|n|cffa6afb8Исследования путей:|cffced4da|n- |cffa9c7deИзучение арканы|cffced4da: превращает в Колодец арканы.|n- |cffa9c7deИзучение скверны|cffced4da: превращает в Колодец скверны.|n- |cffa9c7deИзучение бездны|cffced4da: превращает в Колодец бездны.|n- |cffa9c7deИзучение света|cffced4da: превращает в Колодец света.|n- |cffa9c7deЕмкость хранилищ|cffced4da.|r"
+        }
+      ]
+    }
+  ]
+}

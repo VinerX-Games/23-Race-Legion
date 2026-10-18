@@ -1,0 +1,580 @@
+{
+  "scope": "Безликие: первая партия зданий; не вся категория",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "in_game_checked": false,
+  "strings": [
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I1",
+      "field": "name",
+      "wts_id": 23036,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cffd7b4f5Яма бездны|r",
+      "after": "|cffe4cfa3Яма бездны|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I1",
+      "field": "tip",
+      "wts_id": 23050,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "Построить |cffd7b4f5Яма Бездны|r",
+      "after": "|cffe4cfa3Яма бездны|r (|cffffffffW|r)"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I1",
+      "field": "ubertip",
+      "wts_id": 23365,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|nЗдание для подготовки базовых войск. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка войск безликих и исследование их улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий Кошмар|cffced4da (требуется: Обитель Кошмаров).|n- |cffa9c7deСтрах|cffced4da (требуется: Сущность Страха).|n- |cffa9c7deБезликий дозорный|cffced4da.|n- |cffa9c7deБезликий разрушитель|cffced4da (требуется: Обитель эволюции).|n- |cffa9c7deСущность бездны|cffced4da (требуется: Обитель эволюции).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПомутнение рассудка|cffced4da.|n- |cffa9c7deРазрушение Эфира|cffced4da.|n- |cffa9c7deУлучшение Сущности|cffced4da.|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I2",
+      "field": "name",
+      "wts_id": 23556,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cffd7b4f5Катакомбы магов|r",
+      "after": "|cffe4cfa3Катакомбы магов|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I2",
+      "field": "tip",
+      "wts_id": 24328,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "Построить |cffd7b4f5Катакомбы магов|r",
+      "after": "|cffe4cfa3Катакомбы магов|r (|cffffffffR|r)"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I2",
+      "field": "ubertip",
+      "wts_id": 24329,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|nЗдание для подготовки базовых войск. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка заклинателей Бездны и исследование их улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПожиратель Бездны|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума|cffced4da (требуется: Сущность Страха, Обитель эволюции).|n- |cffa9c7deПроклинатель Бездны|cffced4da (требуется: Сущность Страха, Обитель эволюции).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗнание проклинателей|cffced4da.|n- |cffa9c7deРасширение Знаний|cffced4da.|n- |cffa9c7deУкрепление Древних Знаний|cffced4da.|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I4",
+      "field": "name",
+      "wts_id": 24330,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cffd7b4f5Портал Бездны|r",
+      "after": "|cffe4cfa3Портал Бездны|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I4",
+      "field": "tip",
+      "wts_id": 24897,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "Построить |cffd7b4f5Портал Бездны|r",
+      "after": "|cffe4cfa3Портал Бездны|r (|cffffffffA|r)"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I4",
+      "field": "ubertip",
+      "wts_id": 24911,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nЗдание для подготовки сильнейших войнов бездны. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка высших существ Бездны и исследование их улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deВодное Порождение|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n- |cffa9c7deБессмертый страж|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n- |cffa9c7deК`Траксис|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n- |cffa9c7deМогущественная Сущность бездны|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deСуть бессмертия|cffced4da.|n- |cffa9c7deУсиление К`Траксис|cffced4da.|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I6",
+      "field": "name",
+      "wts_id": 25349,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cffd7b4f5Обитель эволюции|r",
+      "after": "|cffe4cfa3Обитель эволюции|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I6",
+      "field": "tip",
+      "wts_id": 25350,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "Построить |cffd7b4f5Обитель Эволюции|r",
+      "after": "|cffe4cfa3Обитель эволюции|r (|cffffffffE|r)"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I6",
+      "field": "ubertip",
+      "wts_id": 31849,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r\n\nПозволяет делать улучшения для всей армии",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Исследование улучшений армии и добычи древесины.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deДереводобыча|cffced4da.|n- |cffa9c7deРазвить силу|cffced4da.|n- |cffa9c7deРазвить Скорость|cffced4da.|n- |cffa9c7deНаращивание Мышц|cffced4da.|n- |cffa9c7deУсиление мышц|cffced4da.|n|n|cffe6c07bИсследования «Развить силу» и «Развить Скорость» взаимоисключают друг друга. Начало одного исследования блокирует другое; отмена возвращает возможность выбора.|cffced4da|r"
+    }
+  ],
+  "buildings": [
+    {
+      "fields": {
+        "abillist": "Abds",
+        "bldtm": "50",
+        "hotkey": "TRIGSTR_4866",
+        "name": "TRIGSTR_23036",
+        "requires": "",
+        "researches": "R0ES,R0EL,R0EK",
+        "tip": "TRIGSTR_23050",
+        "trains": "h0MO,h0MN,h0I9,h0IA,h0IB",
+        "ubertip": "TRIGSTR_23365",
+        "upgrades": ""
+      },
+      "id": "h0I1",
+      "name": "|cffd7b4f5Яма бездны|r"
+    },
+    {
+      "fields": {
+        "abillist": "Abds",
+        "bldtm": "50",
+        "hotkey": "TRIGSTR_5052",
+        "name": "TRIGSTR_23556",
+        "requires": "h0I7",
+        "researches": "R0GD,R0EW,R0EX",
+        "tip": "TRIGSTR_24328",
+        "trains": "h0IE,h0ID,h0K2",
+        "ubertip": "TRIGSTR_24329",
+        "upgrades": ""
+      },
+      "id": "h0I2",
+      "name": "|cffd7b4f5Катакомбы магов|r"
+    },
+    {
+      "fields": {
+        "abillist": "Abds",
+        "bldtm": "60",
+        "hotkey": "TRIGSTR_2879",
+        "name": "TRIGSTR_24330",
+        "requires": "h0I8",
+        "researches": "R0FA,R0EV",
+        "tip": "TRIGSTR_24897",
+        "trains": "n05I,h0IF,h0IG,h0IC",
+        "ubertip": "TRIGSTR_24911",
+        "upgrades": ""
+      },
+      "id": "h0I4",
+      "name": "|cffd7b4f5Портал Бездны|r"
+    },
+    {
+      "fields": {
+        "abillist": "Abds",
+        "bldtm": "30",
+        "hotkey": "TRIGSTR_5972",
+        "name": "TRIGSTR_25349",
+        "requires": "h0HZ",
+        "researches": "R0GE,R0F7,R0F8,R0ET,R0ER",
+        "tip": "TRIGSTR_25350",
+        "trains": "",
+        "ubertip": "TRIGSTR_31849",
+        "upgrades": ""
+      },
+      "id": "h0I6",
+      "name": "|cffd7b4f5Обитель эволюции|r"
+    }
+  ],
+  "units": [
+    {
+      "fields": {
+        "name": "TRIGSTR_25358",
+        "requires": "",
+        "requiresamount": ""
+      },
+      "id": "h0I9",
+      "name": "|cffd7b4f5Безликий дозорный|r"
+    },
+    {
+      "fields": {
+        "name": "TRIGSTR_25361",
+        "requires": "h0I6",
+        "requiresamount": ""
+      },
+      "id": "h0IA",
+      "name": "|cffd7b4f5Безликий разрушитель|r"
+    },
+    {
+      "fields": {
+        "name": "TRIGSTR_25364",
+        "requires": "h0I6",
+        "requiresamount": ""
+      },
+      "id": "h0IB",
+      "name": "|cffd7b4f5Сущность бездны|r"
+    },
+    {
+      "fields": {
+        "name": "TRIGSTR_25367",
+        "requires": "h0I8,h0I6",
+        "requiresamount": ""
+      },
+      "id": "h0IC",
+      "name": "|cffd7b4f5Могущественная Сущность бездны|r"
+    },
+    {
+      "fields": {
+        "name": "TRIGSTR_25370",
+        "requires": "h0I7,h0I6",
+        "requiresamount": ""
+      },
+      "id": "h0ID",
+      "name": "|cffd7b4f5Злобный бичеватель разума|r"
+    },
+    {
+      "fields": {
+        "name": "TRIGSTR_5538",
+        "requires": "",
+        "requiresamount": ""
+      },
+      "id": "h0IE",
+      "name": "|cffd7b4f5Пожиратель Бездны|r"
+    },
+    {
+      "fields": {
+        "name": "TRIGSTR_25376",
+        "requires": "h0I8,h0I6",
+        "requiresamount": ""
+      },
+      "id": "h0IF",
+      "name": "|cffd7b4f5Бессмертый страж|r"
+    },
+    {
+      "fields": {
+        "name": "TRIGSTR_25379",
+        "requires": "h0I8,h0I6",
+        "requiresamount": ""
+      },
+      "id": "h0IG",
+      "name": "|cffd7b4f5К`Траксис|r"
+    },
+    {
+      "fields": {
+        "name": "TRIGSTR_25115",
+        "requires": "h0I7,h0I6",
+        "requiresamount": ""
+      },
+      "id": "h0K2",
+      "name": "|cffd7b4f5Проклинатель Бездны|r"
+    },
+    {
+      "fields": {
+        "name": "TRIGSTR_30678",
+        "requires": "h0I7",
+        "requiresamount": ""
+      },
+      "id": "h0MN",
+      "name": "|cffd7b4f5Страх|r"
+    },
+    {
+      "fields": {
+        "name": "TRIGSTR_31182",
+        "requires": "h0I8",
+        "requiresamount": ""
+      },
+      "id": "h0MO",
+      "name": "|cffd7b4f5Безликий Кошмар|r"
+    },
+    {
+      "fields": {
+        "name": "TRIGSTR_29947",
+        "requires": "h0I8,h0I6",
+        "requiresamount": ""
+      },
+      "id": "n05I",
+      "name": "|cffd7b4f5Водное Порождение|r"
+    },
+    {
+      "fields": {
+        "name": "TRIGSTR_25352",
+        "requires": "",
+        "requiresamount": ""
+      },
+      "id": "h0I7",
+      "name": "|cffd7b4f5Сущность Страха|r"
+    },
+    {
+      "fields": {
+        "name": "TRIGSTR_25355",
+        "requires": "",
+        "requiresamount": ""
+      },
+      "id": "h0I8",
+      "name": "|cffd7b4f5Обитель Кошмаров|r"
+    }
+  ],
+  "upgrades": [
+    {
+      "fields": {
+        "requires": "hkee",
+        "requires1": "",
+        "tip1": "TRIGSTR_28131"
+      },
+      "id": "R0EK",
+      "name": "Улучшение |cffd7b4f5Сущности|r"
+    },
+    {
+      "fields": {
+        "requires": "hkee",
+        "requires1": "h0I7",
+        "tip1": "TRIGSTR_25429"
+      },
+      "id": "R0EL",
+      "name": "|cffd7b4f5Разрушение Эфира|r"
+    },
+    {
+      "fields": {
+        "requires": "",
+        "requires1": "unp1",
+        "tip1": "TRIGSTR_25438"
+      },
+      "id": "R0ER",
+      "name": "|cffd7b4f5Усиление|r |cffe1d700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "requires": "unp2",
+        "requires1": "h0I7",
+        "tip1": "TRIGSTR_28134"
+      },
+      "id": "R0ES",
+      "name": "|cffd7b4f5Помутнение рассудка|r"
+    },
+    {
+      "fields": {
+        "requires": "",
+        "requires1": "unp1",
+        "tip1": "TRIGSTR_25464"
+      },
+      "id": "R0ET",
+      "name": "|cffd7b4f5Наращивание Силы|r |cffe1d700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "requires": "",
+        "requires1": "h0I7",
+        "tip1": "TRIGSTR_25491"
+      },
+      "id": "R0EV",
+      "name": "|cffd7b4f5Усиление К`Траксис|r |cffe1d700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "requires": "",
+        "requires1": "unp1",
+        "tip1": "TRIGSTR_25503"
+      },
+      "id": "R0EW",
+      "name": "|cffd7b4f5Расширение Знаний|r |cffe1d700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "requires": "",
+        "requires1": "unp1",
+        "tip1": "TRIGSTR_25523"
+      },
+      "id": "R0EX",
+      "name": "|cffd7b4f5Укрепление Древних Знаний|r |cffe1d700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "requires": "hcas",
+        "requires1": "",
+        "tip1": "TRIGSTR_25535"
+      },
+      "id": "R0F7",
+      "name": "|cffd7b4f5Развить силу|r |cffffd700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "requires": "hcas",
+        "requires1": "",
+        "tip1": "TRIGSTR_27753"
+      },
+      "id": "R0F8",
+      "name": "|cffd7b4f5Развить скорость|r |cffffd700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "requires": "",
+        "requires1": "unp1",
+        "tip1": "TRIGSTR_25568"
+      },
+      "id": "R0FA",
+      "name": "|cffd7b4f5Суть бессмертия|r"
+    },
+    {
+      "fields": {
+        "requires": "",
+        "requires1": "unp1",
+        "tip1": "TRIGSTR_26490"
+      },
+      "id": "R0GD",
+      "name": "|cffd7b4f5Знание проклинателей|r |cffe1d700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "requires": "",
+        "requires1": "",
+        "tip1": "TRIGSTR_27785"
+      },
+      "id": "R0GE",
+      "name": "|cffd7b4f5Дереводобыча|r"
+    }
+  ],
+  "wts_consumers": [
+    {
+      "variant": "SD",
+      "rawcode": "h0I1",
+      "field": "tip",
+      "reference": "TRIGSTR_23050"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0I1",
+      "field": "ubertip",
+      "reference": "TRIGSTR_23365"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0I2",
+      "field": "tip",
+      "reference": "TRIGSTR_24328"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0I2",
+      "field": "ubertip",
+      "reference": "TRIGSTR_24329"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0I4",
+      "field": "tip",
+      "reference": "TRIGSTR_24897"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0I4",
+      "field": "ubertip",
+      "reference": "TRIGSTR_24911"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0I6",
+      "field": "tip",
+      "reference": "TRIGSTR_25350"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0I6",
+      "field": "ubertip",
+      "reference": "TRIGSTR_31849"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0I1",
+      "field": "tip",
+      "reference": "TRIGSTR_23050"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0I1",
+      "field": "ubertip",
+      "reference": "TRIGSTR_23365"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0I2",
+      "field": "tip",
+      "reference": "TRIGSTR_24328"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0I2",
+      "field": "ubertip",
+      "reference": "TRIGSTR_24329"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0I4",
+      "field": "tip",
+      "reference": "TRIGSTR_24897"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0I4",
+      "field": "ubertip",
+      "reference": "TRIGSTR_24911"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0I6",
+      "field": "tip",
+      "reference": "TRIGSTR_25350"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0I6",
+      "field": "ubertip",
+      "reference": "TRIGSTR_31849"
+    }
+  ],
+  "names": {
+    "h0I9": "Безликий дозорный",
+    "h0IA": "Безликий разрушитель",
+    "h0IB": "Сущность бездны",
+    "h0IC": "Могущественная Сущность бездны",
+    "h0ID": "Злобный бичеватель разума",
+    "h0IE": "Пожиратель Бездны",
+    "h0IF": "Бессмертый страж",
+    "h0IG": "К`Траксис",
+    "h0K2": "Проклинатель Бездны",
+    "h0MN": "Страх",
+    "h0MO": "Безликий Кошмар",
+    "n05I": "Водное Порождение",
+    "h0I7": "Сущность Страха",
+    "h0I8": "Обитель Кошмаров",
+    "h0I1": "Яма бездны",
+    "h0I2": "Катакомбы магов",
+    "h0I4": "Портал Бездны",
+    "h0I6": "Обитель эволюции",
+    "R0EK": "Улучшение Сущности",
+    "R0EL": "Разрушение Эфира",
+    "R0ER": "Усиление мышц",
+    "R0ES": "Помутнение рассудка",
+    "R0ET": "Наращивание Мышц",
+    "R0EV": "Усиление К`Траксис",
+    "R0EW": "Расширение Знаний",
+    "R0EX": "Укрепление Древних Знаний",
+    "R0F7": "Развить силу",
+    "R0F8": "Развить Скорость",
+    "R0FA": "Суть бессмертия",
+    "R0GD": "Знание проклинателей",
+    "R0GE": "Дереводобыча"
+  },
+  "lua_evidence": "80_runtime/triggers/races/Bezlikie.lua: Trig_Sila1/2 и Trig_Skorost1/2",
+  "remaining": [
+    "Остальные здания, ступени и формы",
+    "Обновление собственных карточек связанных юнитов и исследований",
+    "Проверка в Warcraft III"
+  ]
+}

@@ -1,0 +1,124 @@
+=== ABILITY HOTKEYS ===
+A001: hk='Q', rhk=''
+A005: hk='', rhk='V'
+A006: hk='', rhk='T'
+A007: hk='', rhk='E'
+A00E: hk='E', rhk=''
+A0I3: hk='C', rhk='E'
+A0IQ: hk='X', rhk=''
+A0LI: hk='S', rhk=''
+A0LJ: hk='A', rhk=''
+A0Z5: hk='C', rhk=''
+A1I6: hk='Z', rhk=''
+A1RB: hk='Q', rhk=''
+ANbf: hk='"F"', rhk='"F"'
+ANdh: hk='D', rhk='D'
+Ahrp: hk='R', rhk=''
+PA02: hk='R', rhk='R'
+PA03: hk='|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает ядовитые эффекты атак пехоты и стрелков армии Отрекшихся.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМёртвый воин|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deТёмный следопыт|cffced4da|n- |cffa9c7deСтраж Смерти|cffced4da|n- |cffa9c7deУбийца|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/4|r.', rhk='Q'
+PA16: hk='Q', rhk='Q'
+PA20: hk='E', rhk='E'
+PA45: hk='K', rhk=''
+PA46: hk='D', rhk=''
+PA50: hk='Q', rhk='Q'
+PA51: hk='E', rhk='E'
+PA53: hk='W', rhk=''
+PA55: hk='R', rhk='R'
+PA57: hk='W', rhk='W'
+PA59: hk='', rhk='E'
+PA60: hk='W', rhk='W'
+PA61: hk='', rhk='U'
+PA62: hk='Q', rhk='R'
+PA63: hk='W', rhk='L'
+PA65: hk='Q', rhk=''
+PA66: hk='C', rhk='C'
+PA67: hk='Q', rhk='"F"'
+PA68: hk='', rhk='B'
+PA69: hk='', rhk='C'
+PA70: hk='W', rhk='D'
+PA73: hk='Q', rhk=''
+PA75: hk='R', rhk='R'
+PA76: hk='Q', rhk='Q'
+PA77: hk='', rhk='E'
+PA78: hk='W', rhk='W'
+PA79: hk='G', rhk=''
+pa15: hk='|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Чествование подвига сэра Андуина Лотара и сыновей Лотара из экспедиции в Дренор.|n|nОткрывает ветерана войны, даёт всадникам новую способность и |cffc8e087+125 к здоровью|cffced4da. |cffe69a8dПовышает расходы на 15%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Кавалерии и пехоте Альянса.|r', rhk=''
+pa36: hk='Q', rhk=''
+pa37: hk='Q', rhk='Q'
+pa44: hk='R', rhk='R'
+
+=== UPGRADE HOTKEYS ===
+PA10: hks=['X', 'X']
+PA11: hks=['']
+PA12: hks=['B']
+PA14: hks=['Z']
+PA80: hks=['S', 'S', 'S', 'S', 'S', 'S']
+PA81: hks=['Q', 'Q', 'Q', 'Q', 'Q', 'Q']
+PA82: hks=['Z']
+PA83: hks=['X']
+PA84: hks=['A', 'A', 'A', 'A', 'A', 'A']
+PA85: hks=['Z']
+PA86: hks=['W', 'W']
+PA87: hks=['E', 'E']
+PA88: hks=['Q', 'Q']
+PA89: hks=['S', 'S']
+PA90: hks=['C', 'C', 'C']
+PA91: hks=['A', 'A']
+PA92: hks=['X', 'X', 'X']
+PA93: hks=['W', 'W', 'W', 'W', 'W', 'W']
+PA94: hks=['Z', 'Z', 'Z', 'Z', 'Z', 'Z']
+PA95: hks=['X']
+R0L3: hks=['']
+Rhfl: hks=['R']
+Rhfs: hks=['S']
+pa16: hks=['Q']
+pa21: hks=['C']
+pa39: hks=['D', 'D']
+pa46: hks=['']
+pa47: hks=['R']
+
+=== BUILDING HOTKEYS ===
+pa23: name='|cffb4d2ebРатуша Синего Зяблика|r', hk='Q'
+pa24: name='|cffb4d2ebБольше 20 ферм или рыбацких домов|r', hk='U'
+pa25: name='|cffb4d2ebБольше 55 ферм или рыбацких домов|r', hk='U'
+pa26: name='|cffb4d2ebФерма|r', hk='A'
+pa27: name='|cffb4d2ebАлтарь Древних Мастеров|r', hk='S'
+pa28: name='|cffb4d2ebПалаты мастеров|r', hk='W'
+pa30: name='|cffb4d2ebБашня размышления|r', hk='E'
+pa31: name='|cffb4d2eb|cffb4d2ebОружейная|r|r', hk='D'
+pa32: name='|cffb4d2ebВместилище Стихий|r', hk='F'
+pa33: name='|cffb4d2ebОбитель Монахов|r', hk='R'
+pa34: name='|cffb4d2ebЗащитная Башня Пандаренов|r', hk='Z'
+h0NZ: name='|cffb4d2ebРыбацкий дом|r', hk='X'
+h0P5: name='|cffb4d2ebБашня Пандаренов|r', hk='Z'
+h0P3: name='|cffb4d2ebМагическая Башня Пандаренов|r', hk='Z'
+h0P4: name='|cffb4d2ebОсадная Башня Пандаренов|r', hk='Z'
+h011: name='|cffe4cfa3Верфь|r', hk='C'
+
+=== HERO HOTKEYS ===
+PA36: name='|cffb4d2ebЛидер Шадо-Пан|r', hk='W'
+PA37: name='|cffb4d2ebМастер Железной Лапы|r', hk='R'
+PA38: name='|cffb4d2ebВысший Монах|r', hk='Q'
+PA39: name='Хмелевар', hk='N'
+PA40: name='|cffb4d2ebТанцующий с Ветром|r', hk='E'
+pa22: name='|cffb4d2ebХмелевар|r', hk='R'
+
+=== UNIT HOTKEYS ===
+pa11: name='|cffb4d2ebВсадник Пандарен|r', hk='E'
+pa29: name='|cffb4d2ebМонах Инь|r', hk='W'
+pa05: name='|cffb4d2ebВоин Пандаренов|r', hk='Q'
+pa13: name='|cffb4d2ebМастер Бури|r', hk='W'
+pa04: name='|cffb4d2ebВоин Нефритовой Стражи|r', hk='E'
+pa06: name='|cffb4d2ebМастер Геомант|r', hk='R'
+pa12: name='|cffb4d2ebЛучник Пандаренов|r', hk='W'
+pa10: name='|cffb4d2ebСтражник Нефритовых Врат|r', hk='A'
+pa38: name='|cffb4d2ebМонах Ян|r', hk='Q'
+pa09: name='|cffb4d2ebМастер Пьяной Лапы|r', hk='R'
+pa01: name='|cffb4d2ebРабочий Пандаренов|r', hk='Q'
+pa14: name='|cffb4d2ebОрудийный Расчёт|r', hk='Q'
+pa07: name='|cffb4d2ebМастер Земли|r', hk='E'
+pa08: name='|cffb4d2ebМастер Огня|r', hk='Q'
+pa35: name='|cffb4d2ebСтраж Храма|r', hk='E'
+h00X: name='|cffe4cfa3Транспорт|r', hk='Q'
+h00Y: name='Фрегат', hk='W'
+h00Z: name='Линкор', hk='E'

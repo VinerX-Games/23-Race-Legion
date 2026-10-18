@@ -1,0 +1,245 @@
+{
+  "scope": "Отрекшиеся (Forsaken): категория 1 — Здания (12 зданий)",
+  "buildings_count": 12,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "h0JP",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33955,
+          "after": "|cffe4cfa3Ратуша|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33956,
+          "after": "|cffe4cfa3Ратуша|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35934,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Отрекшихся первой ступени. Обеспечивает добычу ресурсов и базовый запас пищи.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deСтроитель|cffced4da: рабочий отряд расы.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deКрепость|cffced4da: открывает доступ к продвинутым технологиям и войскам.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0JQ",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33957,
+          "after": "|cffe4cfa3Крепость|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33958,
+          "after": "|cffe4cfa3Крепость|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31895,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Отрекшихся второй ступени. Существенно увеличивает запас пищи и открывает передовые сооружения.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deСтроитель|cffced4da: рабочий отряд расы.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deБастион|cffced4da: открывает доступ к высшим технологиям и защите столицы.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0JL",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33949,
+          "after": "|cffe4cfa3Бастион|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33950,
+          "after": "|cffe4cfa3Бастион|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31890,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Отрекшихся третьей ступени. Обеспечивает максимальный запас пищи и защиту королевства.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deСтроитель|cffced4da: рабочий отряд расы.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0JD",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33941,
+          "after": "|cffe4cfa3Дом Брошенных|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33942,
+          "after": "|cffe4cfa3Дом Брошенных|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31786,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Жилое сооружение Отрекшихся. Обеспечивает запас пищи и приносит регулярный доход в казну.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит |cffffffff+20|cffced4da ед. дохода каждые |cffffffff25|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0JJ",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33945,
+          "after": "|cffe4cfa3Казармы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33946,
+          "after": "|cffe4cfa3Казармы|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31888,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает базовые пехотные и стрелковые силы армии Отрекшихся.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deМёртвый воин|cffced4da: лёгкий боец ближнего боя с каннибализмом.|n- |cffa9c7deЛучница|cffced4da: стрелок дальнего боя с отравленными стрелами.|n- |cffa9c7deТёмный следопыт|cffced4da: элитный стрелок дальнего боя с отравленным кинжалом.|n- |cffa9c7deСтраж Смерти|cffced4da: тяжёлый пехотинец с защитной стойкой и замедляющей поступью.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deСмертоносные ингредиенты|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0JI",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33943,
+          "after": "|cffe4cfa3Лаборатория|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33944,
+          "after": "|cffe4cfa3Лаборатория|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31887,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Производственный и исследовательский центр боевых штаммов чумы и осадных орудий Отрекшихся.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deГнилевозка|cffced4da: осадное орудие дальнего боя с выбором типа чумы.|n- |cffa9c7deВождь Орды|cffced4da: могучий командир поддержки с чумным облаком.|n- |cffa9c7deУлучшенная Гнилевозка|cffced4da: передовая осадная машина с усиленными штаммами гнили.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЭксперименты с Гнилью|cffced4da|n- |cffa9c7deМетоды Изоляции|cffced4da|n- |cffa9c7deУсилить смертоносность|cffced4da|n- |cffa9c7deУлучшенные поршни|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0JO",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33953,
+          "after": "|cffe4cfa3Кузница|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33954,
+          "after": "|cffe4cfa3Кузница|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31893,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Служит складом древесины и центром кузнечных разработок оружия и доспехов Отрекшихся.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЖелезные мечи|cffced4da|n- |cffa9c7deЖелезная броня|cffced4da|n- |cffa9c7deЖелезные снаряды|cffced4da|n- |cffa9c7deЛёгкая броня|cffced4da|n- |cffa9c7deМагическая практика|cffced4da|n- |cffa9c7deУлучшенные инструменты|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0JR",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33965,
+          "after": "|cffe4cfa3Алтарь Королевы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33966,
+          "after": "|cffe4cfa3Алтарь Королевы|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31899,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Позволяет призывать и воскрешать героев Отрекшихся.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deТёмный Следопыт|cffced4da: стрелок дальнего боя с немотой и похищением жизни.|n- |cffa9c7deАптекарь|cffced4da: алхимик поддержки с регенерацией, стимуляторами и рунами.|n- |cffa9c7deУстранитель|cffced4da: смертоносный убийца с невидимостью и критами.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0JK",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33947,
+          "after": "|cffe4cfa3Мастерская смерти|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33948,
+          "after": "|cffe4cfa3Мастерская смерти|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31889,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Центр подготовки магов, призраков и служителей культа смерти Отрекшихся.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБанши|cffced4da: бесплотный дух с проклятием, пожиранием магии и подчинением.|n- |cffa9c7deМёртвый маг|cffced4da: заклинатель с тёмной стаей, огненным ливнем и вытягиванием жизни.|n- |cffa9c7deУбийца|cffced4da: невидимый диверсант со скрытностью и ядами.|n- |cffa9c7deВалькира|cffced4da: крылатая вестница смерти, способная воскрешать павших.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение Банши|cffced4da|n- |cffa9c7deОбучение магов|cffced4da|n- |cffa9c7deОбучение Убийц|cffced4da|n- |cffa9c7deУсиление Валь'Кир|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0JM",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33951,
+          "after": "|cffe4cfa3Башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33952,
+          "after": "|cffe4cfa3Башня|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31891,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовое сторожевое укрепление Отрекшихся.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deОборонительная башня|cffced4da: оснащается мощным стрелковым орудием.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0JZ",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33968,
+          "after": "|cffe4cfa3Оборонительная башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 33969,
+          "after": "|cffe4cfa3Оборонительная башня|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 35935,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Укреплённая сторожевая башня, ведущая прицельный огонь по вражеским силам.|n|nАтакует |cffffffffназемные и воздушные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0D1",
+      "hotkey": "C",
+      "strings": []
+    }
+  ]
+}

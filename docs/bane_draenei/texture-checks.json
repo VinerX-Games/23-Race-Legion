@@ -1,0 +1,530 @@
+[
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Buildings\\Naga\\AltarOfDepths\\AltarOfDepths.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Buildings\\NightElf\\BearDen\\BearDen.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Buildings\\Other\\Waygate\\WayGate1.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Buildings\\Undead\\SacrificialPit\\CreepySacrificialPit.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "ReplaceableTextures\\Selection\\SpellAreaofEffect_Orc.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "ReplaceableTextures\\Splats\\ThunderClapUbersplat.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "ReplaceableTextures\\Weather\\Clouds8x8.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\AuraRune8.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\BloodPriest.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\BlueWaves.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Blue_Glow2.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\CartoonCloud.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\CloudSingle.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Clouds8x8Fire.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Clouds8x8Mod.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\DeathSmug.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\DemonRune3.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\DrainIn.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Dust3.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Dust3x.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Dust5A.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Dust5ABlack.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Flare.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Footman.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\FountainOfLife.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\GenericGlow2_64.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\GenericGlow2b.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\GenericGlow2c.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\GenericGlow64.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\GenericGlowFaded.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Ice3b.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Lords0000.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\ManaDrainIn2.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\MountainGiant.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\RockParticle.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Rune1d.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Shade.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Shockwave10.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Shockwave1White.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\ShockwaveWater1.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\ShockwaveWater1Black.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Sparkle_Anim.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\SpinningBoard.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Star7b.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Star8.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Star9.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Steamtank.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\UndeadAirBarge.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\WaterBlobs1.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Water_Particles.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Yellow_Glow.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Yellow_Star_Dim.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\Yellow_glow3.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\clouds_anim1_bw.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\firering1A.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\gutz.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\pixies1.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\star2_32.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\star4.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\star5tga.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\sun.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Textures\\white.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "Units\\Creeps\\FurbolgElder\\FurBolgElder.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "abilities\\Spells\\Human\\InnerFire\\Rune7.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "abilities\\Spells\\Human\\Resurrect\\Rune1b_64.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  },
+  {
+    "command": "asset-exists",
+    "found": true,
+    "ok": true,
+    "path": "buildings\\NightElf\\AncientOfWonder\\AncientOfWonders.blp",
+    "schema_version": 1,
+    "tool": "HiveWE_cli"
+  }
+]

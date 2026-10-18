@@ -1,0 +1,17 @@
+{
+  "system": "CommonSystems",
+  "system_name_ru": "Общие объекты и системы",
+  "mode": "apply",
+  "wts_updates_applied": 245,
+  "checks_summary": {
+    "total": 220,
+    "passed": 220,
+    "failed": 0,
+    "success_percent": 100.0
+  },
+  "hashes": {
+    "original_wts": "dba854237f536d0ef2281993f502ac35c35137e267484cac7b3c40c8fc1df145",
+    "updated_wts": "449684ff1aea4dff070d872b3fde8b48b1738078a14596f93981c9e5ad0defbb"
+  },
+  "failures": []
+}

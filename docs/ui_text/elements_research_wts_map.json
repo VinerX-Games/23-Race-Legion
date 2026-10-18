@@ -1,0 +1,886 @@
+{
+  "R0DS": {
+    "maxlevel": 5,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_15847",
+          "wts_id": 15847,
+          "val": "|cffdcaa92Улучшенная добыча"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15850",
+          "wts_id": 15850,
+          "val": "Исследовать |cffdcaa92Улучшенную добычу"
+        },
+        "ubertip": {
+          "raw": "\"Увеличивают объем переносимой работниками древесины на <Rhlh,mod1>.\"",
+          "wts_id": null,
+          "val": "\"Увеличивают объем переносимой работниками древесины на <Rhlh,mod1>.\""
+        }
+      },
+      "2": {
+        "name": {
+          "raw": "TRIGSTR_15848",
+          "wts_id": 15848,
+          "val": "|cffdcaa92Улучшенная добыча"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15851",
+          "wts_id": 15851,
+          "val": "Исследовать |cffdcaa92Улучшенную добычу"
+        },
+        "ubertip": {
+          "raw": "\"Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.\"",
+          "wts_id": null,
+          "val": "\"Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.\""
+        }
+      },
+      "3": {
+        "name": {
+          "raw": "TRIGSTR_16619",
+          "wts_id": 16619,
+          "val": "|cffdcaa92Улучшенная добыча"
+        },
+        "tip": {
+          "raw": "TRIGSTR_17215",
+          "wts_id": 17215,
+          "val": "Исследовать |cffdcaa92Улучшенную добычу"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_21373",
+          "wts_id": 21373,
+          "val": "Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>."
+        }
+      },
+      "4": {
+        "name": {
+          "raw": "TRIGSTR_16622",
+          "wts_id": 16622,
+          "val": "|cffdcaa92Улучшенная добыча"
+        },
+        "tip": {
+          "raw": "TRIGSTR_19487",
+          "wts_id": 19487,
+          "val": "Исследовать |cffdcaa92Улучшенную добычу"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_21374",
+          "wts_id": 21374,
+          "val": "Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>."
+        }
+      },
+      "5": {
+        "name": {
+          "raw": "TRIGSTR_16623",
+          "wts_id": 16623,
+          "val": "|cffdcaa92Улучшенная добыча"
+        },
+        "tip": {
+          "raw": "TRIGSTR_19488",
+          "wts_id": 19488,
+          "val": "Исследовать |cffdcaa92Улучшенную добычу"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_21684",
+          "wts_id": 21684,
+          "val": "Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>."
+        }
+      }
+    }
+  },
+  "R09G": {
+    "maxlevel": 6,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_15297",
+          "wts_id": 15297,
+          "val": "|cffb4dcdcОгонь|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_8986",
+          "wts_id": 8986,
+          "val": "Исследовать |cffb4dcdcОгонь|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16090",
+          "wts_id": 16090,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r."
+        }
+      },
+      "2": {
+        "name": {
+          "raw": "TRIGSTR_15293",
+          "wts_id": 15293,
+          "val": "|cffb4dcdcОгонь|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_8985",
+          "wts_id": 8985,
+          "val": "Исследовать |cffb4dcdcОгонь|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16091",
+          "wts_id": 16091,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r."
+        }
+      },
+      "3": {
+        "name": {
+          "raw": "TRIGSTR_8953",
+          "wts_id": 8953,
+          "val": "|cffb4dcdcОгонь|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_8970",
+          "wts_id": 8970,
+          "val": "Исследовать |cffb4dcdcОгонь|r |cffffff00[3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16092",
+          "wts_id": 16092,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r."
+        }
+      },
+      "4": {
+        "name": {
+          "raw": "TRIGSTR_8944",
+          "wts_id": 8944,
+          "val": "|cffb4dcdcОгонь|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_8966",
+          "wts_id": 8966,
+          "val": "Исследовать |cffb4dcdcОгонь|r |cffffff00[4]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16094",
+          "wts_id": 16094,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r."
+        }
+      },
+      "5": {
+        "name": {
+          "raw": "TRIGSTR_8943",
+          "wts_id": 8943,
+          "val": "|cffb4dcdcОгонь|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_8957",
+          "wts_id": 8957,
+          "val": "Исследовать |cffb4dcdcОгонь|r |cffffff00[5]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16093",
+          "wts_id": 16093,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r."
+        }
+      },
+      "6": {
+        "name": {
+          "raw": "TRIGSTR_8942",
+          "wts_id": 8942,
+          "val": "|cffb4dcdcОгонь|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_8952",
+          "wts_id": 8952,
+          "val": "Исследовать |cffb4dcdcОгонь|r |cffffff00[6]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16095",
+          "wts_id": 16095,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r."
+        }
+      }
+    }
+  },
+  "R09H": {
+    "maxlevel": 6,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_15303",
+          "wts_id": 15303,
+          "val": "|cffb4dcdcВода|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_11984",
+          "wts_id": 11984,
+          "val": "Исследовать |cffb4dcdcВода|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16096",
+          "wts_id": 16096,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r."
+        }
+      },
+      "2": {
+        "name": {
+          "raw": "TRIGSTR_15299",
+          "wts_id": 15299,
+          "val": "|cffb4dcdcВода|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_11980",
+          "wts_id": 11980,
+          "val": "Исследовать |cffb4dcdcВода|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16097",
+          "wts_id": 16097,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r."
+        }
+      },
+      "3": {
+        "name": {
+          "raw": "TRIGSTR_9093",
+          "wts_id": 9093,
+          "val": "|cffb4dcdcВода|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_9528",
+          "wts_id": 9528,
+          "val": "Исследовать |cffb4dcdcВода|r |cffffff00[3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16098",
+          "wts_id": 16098,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r."
+        }
+      },
+      "4": {
+        "name": {
+          "raw": "TRIGSTR_9091",
+          "wts_id": 9091,
+          "val": "|cffb4dcdcВода|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_9116",
+          "wts_id": 9116,
+          "val": "Исследовать |cffb4dcdcВода|r |cffffff00[4]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16100",
+          "wts_id": 16100,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r."
+        }
+      },
+      "5": {
+        "name": {
+          "raw": "TRIGSTR_9090",
+          "wts_id": 9090,
+          "val": "|cffb4dcdcВода|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_9115",
+          "wts_id": 9115,
+          "val": "Исследовать |cffb4dcdcВода|r |cffffff00[5]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16099",
+          "wts_id": 16099,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r."
+        }
+      },
+      "6": {
+        "name": {
+          "raw": "TRIGSTR_9086",
+          "wts_id": 9086,
+          "val": "|cffb4dcdcВода|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_9092",
+          "wts_id": 9092,
+          "val": "Исследовать |cffb4dcdcВода|r |cffffff00[6]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16101",
+          "wts_id": 16101,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r."
+        }
+      }
+    }
+  },
+  "R09I": {
+    "maxlevel": 6,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_15558",
+          "wts_id": 15558,
+          "val": "|cffb4dcdcЗемля|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15563",
+          "wts_id": 15563,
+          "val": "Исследовать |cffb4dcdcЗемля|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16102",
+          "wts_id": 16102,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r."
+        }
+      },
+      "2": {
+        "name": {
+          "raw": "TRIGSTR_15556",
+          "wts_id": 15556,
+          "val": "|cffb4dcdcЗемля|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15562",
+          "wts_id": 15562,
+          "val": "Исследовать |cffb4dcdcЗемля|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16103",
+          "wts_id": 16103,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r."
+        }
+      },
+      "3": {
+        "name": {
+          "raw": "TRIGSTR_15555",
+          "wts_id": 15555,
+          "val": "|cffb4dcdcЗемля|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15561",
+          "wts_id": 15561,
+          "val": "Исследовать |cffb4dcdcЗемля|r |cffffff00[3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16104",
+          "wts_id": 16104,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r."
+        }
+      },
+      "4": {
+        "name": {
+          "raw": "TRIGSTR_15554",
+          "wts_id": 15554,
+          "val": "|cffb4dcdcЗемля|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15560",
+          "wts_id": 15560,
+          "val": "Исследовать |cffb4dcdcЗемля|r |cffffff00[4]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16106",
+          "wts_id": 16106,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r."
+        }
+      },
+      "5": {
+        "name": {
+          "raw": "TRIGSTR_15553",
+          "wts_id": 15553,
+          "val": "|cffb4dcdcЗемля|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15559",
+          "wts_id": 15559,
+          "val": "Исследовать |cffb4dcdcЗемля|r |cffffff00[5]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16105",
+          "wts_id": 16105,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r."
+        }
+      },
+      "6": {
+        "name": {
+          "raw": "TRIGSTR_15552",
+          "wts_id": 15552,
+          "val": "|cffb4dcdcЗемля|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15557",
+          "wts_id": 15557,
+          "val": "Исследовать |cffb4dcdcЗемля|r |cffffff00[6]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16107",
+          "wts_id": 16107,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r."
+        }
+      }
+    }
+  },
+  "R09J": {
+    "maxlevel": 6,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_15582",
+          "wts_id": 15582,
+          "val": "|cffb4dcdcВетер|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15589",
+          "wts_id": 15589,
+          "val": "Исследовать |cffb4dcdcВетер|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16108",
+          "wts_id": 16108,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r."
+        }
+      },
+      "2": {
+        "name": {
+          "raw": "TRIGSTR_15581",
+          "wts_id": 15581,
+          "val": "|cffb4dcdcВетер|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15588",
+          "wts_id": 15588,
+          "val": "Исследовать |cffb4dcdcВетер|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16109",
+          "wts_id": 16109,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r."
+        }
+      },
+      "3": {
+        "name": {
+          "raw": "TRIGSTR_15580",
+          "wts_id": 15580,
+          "val": "|cffb4dcdcВетер|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15587",
+          "wts_id": 15587,
+          "val": "Исследовать |cffb4dcdcВетер|r |cffffff00[3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16110",
+          "wts_id": 16110,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r."
+        }
+      },
+      "4": {
+        "name": {
+          "raw": "TRIGSTR_15579",
+          "wts_id": 15579,
+          "val": "|cffb4dcdcВетер|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15586",
+          "wts_id": 15586,
+          "val": "Исследовать |cffb4dcdcВетер|r |cffffff00[4]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16112",
+          "wts_id": 16112,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r."
+        }
+      },
+      "5": {
+        "name": {
+          "raw": "TRIGSTR_15578",
+          "wts_id": 15578,
+          "val": "|cffb4dcdcВетер|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15585",
+          "wts_id": 15585,
+          "val": "Исследовать |cffb4dcdcВетер|r |cffffff00[5]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16111",
+          "wts_id": 16111,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r."
+        }
+      },
+      "6": {
+        "name": {
+          "raw": "TRIGSTR_15315",
+          "wts_id": 15315,
+          "val": "|cffb4dcdcВетер|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_15583",
+          "wts_id": 15583,
+          "val": "Исследовать |cffb4dcdcВетер|r |cffffff00[6]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16113",
+          "wts_id": 16113,
+          "val": "Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r."
+        }
+      }
+    }
+  },
+  "R09Q": {
+    "maxlevel": 1,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_41424",
+          "wts_id": 41424,
+          "val": "|cffb4dcdcЯрость|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16243",
+          "wts_id": 16243,
+          "val": "Исследовать «|cffb4dcdcЯрость|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16244",
+          "wts_id": 16244,
+          "val": "Увеличивает ярость, целой уменьшения здоровья.\nУвеличивает всем элементалям |cffff0000огня|r.\n |cffb4dcdcУвеличивает урон - 5 ед.|r\n |cffb4dcdcУменьшает здоровье - 50 ед|r.|cffff0000\n"
+        }
+      }
+    }
+  },
+  "R09R": {
+    "maxlevel": 2,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_16251",
+          "wts_id": 16251,
+          "val": "|cffb4dcdcПовышение температуры|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16252",
+          "wts_id": 16252,
+          "val": "Исследовать «|cffb4dcdcПовышение температуры|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_32315",
+          "wts_id": 32315,
+          "val": "Позволяет |cffb4dcdcВозжигателю|r использовать более высокие температуры для сотворения заклинаний.\n\n |cffb4dcdcУвеличивает ману - 20 ед.|r\n |cffb4dcdcУвеличивает здоровье - 25 ед|r.|cffff0000\n"
+        }
+      },
+      "2": {
+        "name": {
+          "raw": "TRIGSTR_16255",
+          "wts_id": 16255,
+          "val": "|cffb4dcdcПовышение температуры|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16256",
+          "wts_id": 16256,
+          "val": "Исследовать «|cffb4dcdcПовышение температуры|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_32319",
+          "wts_id": 32319,
+          "val": "Позволяет |cffb4dcdcВозжигателю|r использовать более высокие температуры для сотворения заклинаний.\n\n |cffb4dcdcУвеличивает ману - 20 ед.|r\n |cffb4dcdcУвеличивает здоровье - 25 ед|r.|cffff0000\n"
+        }
+      }
+    }
+  },
+  "R09S": {
+    "maxlevel": 1,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_41413",
+          "wts_id": 41413,
+          "val": "|cffb4dcdcРассекающий удар|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16262",
+          "wts_id": 16262,
+          "val": "Исследовать «|cffb4dcdcРассекающий удар|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16263",
+          "wts_id": 16263,
+          "val": "Позволяет гончей пламени наносить удары по области.\n"
+        }
+      }
+    }
+  },
+  "R09T": {
+    "maxlevel": 1,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_16269",
+          "wts_id": 16269,
+          "val": "|cffb4dcdcМагия воды|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16270",
+          "wts_id": 16270,
+          "val": "Исследовать «|cffb4dcdcМагия воды|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_32356",
+          "wts_id": 32356,
+          "val": "Силы стихий наполняют |cffb4dcdcЭлементалей воды|r увеличивая ману на |cffb4dcdc50 ед.|r"
+        }
+      }
+    }
+  },
+  "R09U": {
+    "maxlevel": 2,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_16278",
+          "wts_id": 16278,
+          "val": "|cffb4dcdcЛедяные стрелы|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16279",
+          "wts_id": 16279,
+          "val": "Исследовать «|cffb4dcdcЛедяные стрелы|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16280",
+          "wts_id": 16280,
+          "val": "Позволяет |cffb4dcdcЭлементалю морей|r, использовать ледяные стрелы. Увеличивает ману на |cffb4dcdc30 ед.|r"
+        }
+      },
+      "2": {
+        "name": {
+          "raw": "TRIGSTR_16282",
+          "wts_id": 16282,
+          "val": "|cffb4dcdcЛедяные стрелы|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16283",
+          "wts_id": 16283,
+          "val": "Исследовать «|cffb4dcdcЛедяные стрелы|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16285",
+          "wts_id": 16285,
+          "val": "Позволяет |cffb4dcdcЭлементалю морей|r, использовать ледяные стрелы. Увеличивает ману на |cffb4dcdc30 ед.|r"
+        }
+      }
+    }
+  },
+  "R09V": {
+    "maxlevel": 2,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_16287",
+          "wts_id": 16287,
+          "val": "|cffb4dcdcМагия морей|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16288",
+          "wts_id": 16288,
+          "val": "Исследовать «|cffb4dcdcМагия морей|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39678",
+          "wts_id": 39678,
+          "val": "Позволяет |cffb4dcdcРифовым элементалям|r, атакующую и востанавливающую магию морей. Увеличивает ману на |cffb4dcdc30 ед.|r "
+        }
+      },
+      "2": {
+        "name": {
+          "raw": "TRIGSTR_16291",
+          "wts_id": 16291,
+          "val": "|cffb4dcdcМагия морей|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16292",
+          "wts_id": 16292,
+          "val": "Исследовать «|cffb4dcdcМагия морей|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_39679",
+          "wts_id": 39679,
+          "val": "Позволяет |cffb4dcdcРифовым элементалям|r, атакующую и востанавливающую магию морей. Увеличивает ману на |cffb4dcdc30 ед.|r "
+        }
+      }
+    }
+  },
+  "Resi": {
+    "maxlevel": 1,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_27115",
+          "wts_id": 27115,
+          "val": "|cffbebedcРассеяние чар|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_27116",
+          "wts_id": 27116,
+          "val": "Исследовать «|cffbebedcРассеяние чар|r»"
+        },
+        "ubertip": {
+          "raw": "Позволяет дриадам снимать положительные эффекты с врагов и отрицательные с союзников. |nНаносит урон призванным целям.",
+          "wts_id": null,
+          "val": "Позволяет дриадам снимать положительные эффекты с врагов и отрицательные с союзников. |nНаносит урон призванным целям."
+        }
+      }
+    }
+  },
+  "R0A1": {
+    "maxlevel": 1,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_16359",
+          "wts_id": 16359,
+          "val": "|cffb4dcdcЯрость грома|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16360",
+          "wts_id": 16360,
+          "val": "Исследовать «|cffb4dcdcЯрость грома|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16361",
+          "wts_id": 16361,
+          "val": "Позволяет |cffb4dcdcштормовому элементалю|r атаковать сразу несколько целей."
+        }
+      }
+    }
+  },
+  "R0A0": {
+    "maxlevel": 1,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_41399",
+          "wts_id": 41399,
+          "val": "|cffb4dcdcКритический удар|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16350",
+          "wts_id": 16350,
+          "val": "Исследовать «|cffb4dcdcКритический удар|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16351",
+          "wts_id": 16351,
+          "val": "Позволяет |cffb4dcdcгрозовым эдементалям|r наносить двухкратный урон."
+        }
+      }
+    }
+  },
+  "R09Z": {
+    "maxlevel": 2,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_16338",
+          "wts_id": 16338,
+          "val": "|cffb4dcdcЛегкость воздуха|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16339",
+          "wts_id": 16339,
+          "val": "Исследовать «|cffb4dcdcЛегкость воздуха|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16340",
+          "wts_id": 16340,
+          "val": "Увеличивает скорость предвижения всех |cffb4dcdcэлементалей ветра|r.\n|cffb4dcdcУвеличивает скорость передвижения на 30 ед.|r"
+        }
+      },
+      "2": {
+        "name": {
+          "raw": "TRIGSTR_16341",
+          "wts_id": 16341,
+          "val": "|cffb4dcdcЛегкость воздуха|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16342",
+          "wts_id": 16342,
+          "val": "Исследовать «|cffb4dcdcЛегкость воздуха|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16344",
+          "wts_id": 16344,
+          "val": "Увеличивает скорость предвижения всех |cffb4dcdcэлементалей ветра|r.\n|cffb4dcdcУвеличивает скорость передвижения на 30 ед.|r"
+        }
+      }
+    }
+  },
+  "R09X": {
+    "maxlevel": 3,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_16304",
+          "wts_id": 16304,
+          "val": "|cffb4dcdcКаменное здоровье|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16305",
+          "wts_id": 16305,
+          "val": "Исследовать «|cffb4dcdcКаменное здоровье|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16306",
+          "wts_id": 16306,
+          "val": "Увеличивает здоровье элементалям земли. \n|cffb4dcdcУвеличивает на 30 ед.|r"
+        }
+      },
+      "2": {
+        "name": {
+          "raw": "TRIGSTR_16308",
+          "wts_id": 16308,
+          "val": "|cffb4dcdcКаменное здоровье|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16309",
+          "wts_id": 16309,
+          "val": "Исследовать «|cffb4dcdcКаменное здоровье|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16311",
+          "wts_id": 16311,
+          "val": "Увеличивает здоровье элементалям земли. \n|cffb4dcdcУвеличивает на 30 ед.|r"
+        }
+      },
+      "3": {
+        "name": {
+          "raw": "TRIGSTR_16313",
+          "wts_id": 16313,
+          "val": "|cffb4dcdcКаменное здоровье|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16314",
+          "wts_id": 16314,
+          "val": "Исследовать «|cffb4dcdcКаменное здоровье|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16315",
+          "wts_id": 16315,
+          "val": "Увеличивает здоровье элементалям земли. \n|cffb4dcdcУвеличивает на 30 ед.|r"
+        }
+      }
+    }
+  },
+  "R09Y": {
+    "maxlevel": 1,
+    "levels": {
+      "1": {
+        "name": {
+          "raw": "TRIGSTR_41416",
+          "wts_id": 41416,
+          "val": "|cffb4dcdcСокрушение|r"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16317",
+          "wts_id": 16317,
+          "val": "Исследовать «|cffb4dcdcСокрушение|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16318",
+          "wts_id": 16318,
+          "val": "Позволяет |cffb4dcdcяростному голему|r использовать сокрушение."
+        }
+      }
+    }
+  }
+}

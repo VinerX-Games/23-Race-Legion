@@ -1,0 +1,418 @@
+{
+  "operations": [
+    {
+      "type": "upgrade",
+      "id": "R005",
+      "field": "name1",
+      "value": "|cffe4cfa3Обстрел — уровень 1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R005",
+      "field": "tip1",
+      "value": "|cffe4cfa3Обстрел — уровень 1|r (|cffffffffX|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R005",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+30|cffced4da. Открывает «Массированный обстрел» и боковые пушки линкора у кораблей, имеющих эти способности.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R005",
+      "field": "name2",
+      "value": "|cffe4cfa3Обстрел — уровень 2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R005",
+      "field": "tip2",
+      "value": "|cffe4cfa3Обстрел — уровень 2|r (|cffffffffX|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R005",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+60|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R005",
+      "field": "name3",
+      "value": "|cffe4cfa3Обстрел — уровень 3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R005",
+      "field": "tip3",
+      "value": "|cffe4cfa3Обстрел — уровень 3|r (|cffffffffX|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R005",
+      "field": "ubertip3",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+90|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R005",
+      "field": "name4",
+      "value": "|cffe4cfa3Обстрел — уровень 4|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R005",
+      "field": "tip4",
+      "value": "|cffe4cfa3Обстрел — уровень 4|r (|cffffffffX|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R005",
+      "field": "ubertip4",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+120|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R005",
+      "field": "name5",
+      "value": "|cffe4cfa3Обстрел — уровень 5|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R005",
+      "field": "tip5",
+      "value": "|cffe4cfa3Обстрел — уровень 5|r (|cffffffffX|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R005",
+      "field": "ubertip5",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+150|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R006",
+      "field": "name1",
+      "value": "|cffe4cfa3Дополнительные паруса — уровень 1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R006",
+      "field": "tip1",
+      "value": "|cffe4cfa3Дополнительные паруса — уровень 1|r (|cffffffffC|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R006",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+5%|cffced4da. Открывает «Тактическое ускорение» у кораблей, имеющих эту способность, включая фрегаты и линкоры.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R006",
+      "field": "name2",
+      "value": "|cffe4cfa3Дополнительные паруса — уровень 2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R006",
+      "field": "tip2",
+      "value": "|cffe4cfa3Дополнительные паруса — уровень 2|r (|cffffffffC|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R006",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+10%|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R006",
+      "field": "name3",
+      "value": "|cffe4cfa3Дополнительные паруса — уровень 3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R006",
+      "field": "tip3",
+      "value": "|cffe4cfa3Дополнительные паруса — уровень 3|r (|cffffffffC|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R006",
+      "field": "ubertip3",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+15%|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R007",
+      "field": "name1",
+      "value": "|cffe4cfa3Починка — уровень 1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R007",
+      "field": "tip1",
+      "value": "|cffe4cfa3Починка — уровень 1|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R007",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+50|cffced4da. Открывает способность «Починка» у кораблей, имеющих её.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R007",
+      "field": "name2",
+      "value": "|cffe4cfa3Починка — уровень 2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R007",
+      "field": "tip2",
+      "value": "|cffe4cfa3Починка — уровень 2|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R007",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+100|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R007",
+      "field": "name3",
+      "value": "|cffe4cfa3Починка — уровень 3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R007",
+      "field": "tip3",
+      "value": "|cffe4cfa3Починка — уровень 3|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R007",
+      "field": "ubertip3",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+150|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "name1",
+      "value": "|cffe4cfa3Орудия флота — уровень 1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "tip1",
+      "value": "|cffe4cfa3Орудия флота — уровень 1|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+17|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+3|cffced4da к урону.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "name2",
+      "value": "|cffe4cfa3Орудия флота — уровень 2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "tip2",
+      "value": "|cffe4cfa3Орудия флота — уровень 2|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+34|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+6|cffced4da к урону.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "name3",
+      "value": "|cffe4cfa3Орудия флота — уровень 3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "tip3",
+      "value": "|cffe4cfa3Орудия флота — уровень 3|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "ubertip3",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+51|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+9|cffced4da к урону.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "name4",
+      "value": "|cffe4cfa3Орудия флота — уровень 4|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "tip4",
+      "value": "|cffe4cfa3Орудия флота — уровень 4|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "ubertip4",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+68|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+12|cffced4da к урону.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "name5",
+      "value": "|cffe4cfa3Орудия флота — уровень 5|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "tip5",
+      "value": "|cffe4cfa3Орудия флота — уровень 5|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "ubertip5",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+85|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+15|cffced4da к урону.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "name6",
+      "value": "|cffe4cfa3Орудия флота — уровень 6|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "tip6",
+      "value": "|cffe4cfa3Орудия флота — уровень 6|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R002",
+      "field": "ubertip6",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff6|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+102|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+18|cffced4da к урону.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "name1",
+      "value": "|cffe4cfa3Укреплённый корпус — уровень 1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "tip1",
+      "value": "|cffe4cfa3Укреплённый корпус — уровень 1|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+100|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+1|cffced4da к броне.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "name2",
+      "value": "|cffe4cfa3Укреплённый корпус — уровень 2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "tip2",
+      "value": "|cffe4cfa3Укреплённый корпус — уровень 2|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+200|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+2|cffced4da к броне.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "name3",
+      "value": "|cffe4cfa3Укреплённый корпус — уровень 3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "tip3",
+      "value": "|cffe4cfa3Укреплённый корпус — уровень 3|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "ubertip3",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+300|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+3|cffced4da к броне.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "name4",
+      "value": "|cffe4cfa3Укреплённый корпус — уровень 4|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "tip4",
+      "value": "|cffe4cfa3Укреплённый корпус — уровень 4|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "ubertip4",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+400|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+8|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+8|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+4|cffced4da к броне.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "name5",
+      "value": "|cffe4cfa3Укреплённый корпус — уровень 5|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "tip5",
+      "value": "|cffe4cfa3Укреплённый корпус — уровень 5|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "ubertip5",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+500|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+10|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+10|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+5|cffced4da к броне.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "name6",
+      "value": "|cffe4cfa3Укреплённый корпус — уровень 6|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "tip6",
+      "value": "|cffe4cfa3Укреплённый корпус — уровень 6|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R003",
+      "field": "ubertip6",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+600|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff6|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+12|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+12|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+6|cffced4da к броне.|r"
+    }
+  ]
+}

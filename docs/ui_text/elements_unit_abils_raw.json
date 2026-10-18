@@ -1,0 +1,910 @@
+{
+  "A01N": {
+    "id": "A01N",
+    "name": "|cffff0000Пламя феникса|r",
+    "raw_name": "TRIGSTR_1596",
+    "tip1": "|cffff0000Пламя феникса|r",
+    "raw_tip1": "TRIGSTR_1595",
+    "ubertip1": "Выпускает в секторе перед собой огненного феникса , наносящих по <AUcs,DataA1> урона врагам на своем пути.\n|cffb4dc8cМаксимальный возможный урон (300).|r",
+    "raw_ubertip1": "TRIGSTR_1384",
+    "hotkey": "TRIGSTR_12331",
+    "buttonpos": "2",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "h0F1"
+    ]
+  },
+  "A01R": {
+    "id": "A01R",
+    "name": "|cff0096ffАура мороза|r",
+    "raw_name": "TRIGSTR_1695",
+    "tip1": "|cff0096ffАура мороза|r",
+    "raw_tip1": "TRIGSTR_1696",
+    "ubertip1": "-<AOae,DataA1,%>% к скорости передвижения и -<AOae,DataB1,%>% к скорости атаки находящихся рядом врагам.\n|cffb4dc8cРадиус действия (150)ед.|r",
+    "raw_ubertip1": "TRIGSTR_2756",
+    "hotkey": "",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n035"
+    ]
+  },
+  "A01S": {
+    "id": "A01S",
+    "name": "|cffff3200Кольцо огня|r",
+    "raw_name": "TRIGSTR_1699",
+    "tip1": "|cffff3200Кольцо огня|r",
+    "raw_tip1": "TRIGSTR_1698",
+    "ubertip1": "Наносит |cffb4dcdc6 урона/сек|r. находящимся рядом врагам.\n|cffb4dc8cРадиус действия (220).|r",
+    "raw_ubertip1": "TRIGSTR_29525",
+    "hotkey": "",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n02R",
+      "n02S",
+      "h0F1",
+      "n034"
+    ]
+  },
+  "A0CE": {
+    "id": "A0CE",
+    "name": "|cff0096ffМорозный доспех|r",
+    "raw_name": "TRIGSTR_39439",
+    "tip1": "|cff0096ffМорозный доспех|r",
+    "raw_tip1": "TRIGSTR_39440",
+    "ubertip1": "Укрывает союзника ледяным щитом, который дает +2 к броне и замедляет атакующие его в ближнем бою войска на <ACfa,Dur1> сек. |nВремя действия: <ACfa,DataA1> сек.",
+    "raw_ubertip1": "TRIGSTR_39441",
+    "hotkey": "TRIGSTR_32082",
+    "buttonpos": "1",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n02T"
+    ]
+  },
+  "A0I3": {
+    "id": "A0I3",
+    "name": "Small jump",
+    "raw_name": "TRIGSTR_26484",
+    "tip1": "Small jump",
+    "raw_tip1": "TRIGSTR_26476",
+    "ubertip1": "Transports over a short distance.",
+    "raw_ubertip1": "TRIGSTR_26477",
+    "hotkey": "TRIGSTR_9545",
+    "buttonpos": "2",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "e00F"
+    ]
+  },
+  "A0IQ": {
+    "id": "A0IQ",
+    "name": "|cffffdcb4Обозначить столицу|r",
+    "raw_name": "TRIGSTR_27193",
+    "tip1": "|cffffdcb4Обозначить столицу|r",
+    "raw_tip1": "TRIGSTR_27969",
+    "ubertip1": "Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение.",
+    "raw_ubertip1": "TRIGSTR_27970",
+    "hotkey": "TRIGSTR_11265",
+    "buttonpos": "1",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "h0EQ",
+      "h0ER",
+      "h0ES"
+    ]
+  },
+  "A0LI": {
+    "id": "A0LI",
+    "name": "Обмен |cffffff00Золота |rна |cff00ff00Дерево|r",
+    "raw_name": "TRIGSTR_2888",
+    "tip1": "Обмен |cffffff00Золота |rна |cff00ff00Дерево|r",
+    "raw_tip1": "TRIGSTR_3692",
+    "ubertip1": "Отнимает у игрока|cffffd700 500 золота|r, но добавляет |cff228722100 дерева|r.",
+    "raw_ubertip1": "TRIGSTR_20630",
+    "hotkey": "TRIGSTR_4247",
+    "buttonpos": "1",
+    "buttonpos2": "1",
+    "buff1": "",
+    "carriers": [
+      "h0EQ",
+      "h0ER",
+      "h0ES"
+    ]
+  },
+  "A0LJ": {
+    "id": "A0LJ",
+    "name": "Обмен |cff00ff00Дерева |rна |cffffff00Золото|r",
+    "raw_name": "TRIGSTR_12857",
+    "tip1": "Обмен |cff00ff00Дерева |rна |cffffff00Золото|r",
+    "raw_tip1": "TRIGSTR_12886",
+    "ubertip1": "Отнимает у игрока |cff228722500 дерева|r, но добавляет |cffffd700100 золота|r.",
+    "raw_ubertip1": "TRIGSTR_20631",
+    "hotkey": "TRIGSTR_4259",
+    "buttonpos": "0",
+    "buttonpos2": "1",
+    "buff1": "",
+    "carriers": [
+      "h0EQ",
+      "h0ER",
+      "h0ES"
+    ]
+  },
+  "A0OZ": {
+    "id": "A0OZ",
+    "name": "|cffb4dcdcПоджег|r",
+    "raw_name": "TRIGSTR_645",
+    "tip1": "|cffb4dcdcПоджег|r",
+    "raw_tip1": "TRIGSTR_1153",
+    "ubertip1": "Позволяет |cffb4dcdcСтихийным башня|r атаковать находящихся рядом врагов.\n|cffb4dcdcРадиус действия - 500.\nУрон - 25.\nМакс-кол целей - 9.|r",
+    "raw_ubertip1": "TRIGSTR_1375",
+    "hotkey": "",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "h0EP",
+      "h0L5"
+    ]
+  },
+  "A0PG": {
+    "id": "A0PG",
+    "name": "|cffb4dcdcГромовой удар|r",
+    "raw_name": "TRIGSTR_6842",
+    "tip1": "|cffb4dcdcГромовой удар|r",
+    "raw_tip1": "TRIGSTR_8160",
+    "ubertip1": "Ударяет конечностями по земле, нанося урон вокруг себя всем врагам.\n|cffb4dcdcНаносит урон - 75.|r",
+    "raw_ubertip1": "TRIGSTR_8165",
+    "hotkey": "TRIGSTR_16518",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n031",
+      "n02Y"
+    ]
+  },
+  "A0PH": {
+    "id": "A0PH",
+    "name": "|cffb4dcdcПоджог|r",
+    "raw_name": "TRIGSTR_8166",
+    "tip1": "|cffb4dcdcПоджог|r",
+    "raw_tip1": "TRIGSTR_8167",
+    "ubertip1": "Поджигает цель, нанося |cffb4dcdc<Aspo,DataA1> урона/сек|r. Время действия: |cffb4dcdc<Aspo,Dur1> сек.|r",
+    "raw_ubertip1": "TRIGSTR_8168",
+    "hotkey": "",
+    "buttonpos": "3",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n02S"
+    ]
+  },
+  "A0Q8": {
+    "id": "A0Q8",
+    "name": "|cffb4dcdcСожжение доспехов|r",
+    "raw_name": "TRIGSTR_16001",
+    "tip1": "|cffb4dcdcСожжение доспехов|r",
+    "raw_tip1": "TRIGSTR_16002",
+    "ubertip1": "-<Ainf,DataA1,%>% к урону и -<Ainf,DataB1> к броне врагов. |nВремя действия: <Ainf,Dur1> сек.",
+    "raw_ubertip1": "TRIGSTR_8827",
+    "hotkey": "TRIGSTR_16625",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n02S"
+    ]
+  },
+  "A0Q9": {
+    "id": "A0Q9",
+    "name": "|cffb4dcdcРассекающий удар|r",
+    "raw_name": "TRIGSTR_16004",
+    "tip1": "|cffb4dcdcРассекающий удар|r",
+    "raw_tip1": "TRIGSTR_16005",
+    "ubertip1": "Бьет с огромной силой, нанося |cffb4dcdc<ACce,DataA1,%>%|r урона врагам рядом с основной целью.",
+    "raw_ubertip1": "TRIGSTR_16006",
+    "hotkey": "",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n036"
+    ]
+  },
+  "A0QA": {
+    "id": "A0QA",
+    "name": "|cffb4dcdcКритический удар|r",
+    "raw_name": "TRIGSTR_16009",
+    "tip1": "|cffb4dcdcКритический удар|r",
+    "raw_tip1": "TRIGSTR_16010",
+    "ubertip1": "Дает |cffb4dcdc<AOcr,DataA1>%-й|r шанс нанести |cffb4dcdc<AOcr,DataB1>-кратный|r урон при атаке.",
+    "raw_ubertip1": "TRIGSTR_16011",
+    "hotkey": "",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n02V"
+    ]
+  },
+  "A0QC": {
+    "id": "A0QC",
+    "name": "|cffb4dcdcЛедяные стрелы|r",
+    "raw_name": "TRIGSTR_16014",
+    "tip1": "|cffb4dcdcЛедяные стрелы|r",
+    "raw_tip1": "TRIGSTR_16015",
+    "ubertip1": "Добавляет к атакам эффект льда, который замедляет атаку врага на|cffb4dcdc <AHca,DataB1,%>%|r и передвижение на |cffb4dcdc<AHca,DataC1,%>%|r на |cffb4dcdc<AHca,Dur1> сек.|r",
+    "raw_ubertip1": "TRIGSTR_16016",
+    "hotkey": "TRIGSTR_16772",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n02T"
+    ]
+  },
+  "A0QD": {
+    "id": "A0QD",
+    "name": "|cffb4dcdcКольцо льда|r",
+    "raw_name": "TRIGSTR_16021",
+    "tip1": "|cffb4dcdcКольцо льда|r",
+    "raw_tip1": "TRIGSTR_16022",
+    "ubertip1": "Выпускает ледяную волну, нанося |cffb4dcdc<AUfn,DataB1>|r урона цели и |cffb4dcdc<AUfn,DataA1>|r урона по области. Урон от льда замедляет передвижение и атаку целей на |cffb4dcdc<AUfn,Dur1> сек.|r",
+    "raw_ubertip1": "TRIGSTR_16023",
+    "hotkey": "TRIGSTR_17111",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n032"
+    ]
+  },
+  "A0QE": {
+    "id": "A0QE",
+    "name": "|cffb4dcdcПламя жизни|r",
+    "raw_name": "TRIGSTR_7611",
+    "tip1": "|cffb4dcdcПламя жизни|r",
+    "raw_tip1": "TRIGSTR_7612",
+    "ubertip1": "Востанавливает хп союзникам по близости.\n|cffb4dc8cВостановление здоровья (150).|r\n|cffb4dc8cРадиус действия (300).|r\n",
+    "raw_ubertip1": "TRIGSTR_8388",
+    "hotkey": "TRIGSTR_17125",
+    "buttonpos": "1",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "h0F1"
+    ]
+  },
+  "A0QF": {
+    "id": "A0QF",
+    "name": "|cffb4dcdcСокрушение|r",
+    "raw_name": "TRIGSTR_16029",
+    "tip1": "|cffb4dcdcСокрушение|r",
+    "raw_tip1": "TRIGSTR_16030",
+    "ubertip1": "С |cffb4dcdc25%-й|r вероятностью атака нанесет |cffb4dcdc15|r урона находящимся рядом войскам.",
+    "raw_ubertip1": "TRIGSTR_38133",
+    "hotkey": "",
+    "buttonpos": "1",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n033"
+    ]
+  },
+  "A0QG": {
+    "id": "A0QG",
+    "name": "Снижение урона от способностей",
+    "raw_name": "Снижение урона от способностей",
+    "tip1": "",
+    "raw_tip1": "",
+    "ubertip1": "",
+    "raw_ubertip1": "",
+    "hotkey": "",
+    "buttonpos": "",
+    "buttonpos2": "",
+    "buff1": "",
+    "carriers": [
+      "n031"
+    ]
+  },
+  "A0QH": {
+    "id": "A0QH",
+    "name": "|cffb4dcdcКристалы антимагии|r",
+    "raw_name": "TRIGSTR_16051",
+    "tip1": "|cffb4dcdcКристалы антимагии|r",
+    "raw_tip1": "TRIGSTR_16052",
+    "ubertip1": "Поглощает часть любого магического урона направленного в |cffb4dcdcКристального голема|r.\n|cffb4dcdcПоглощает - 33% магического урона.|r",
+    "raw_ubertip1": "TRIGSTR_16053",
+    "hotkey": "",
+    "buttonpos": "1",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n031"
+    ]
+  },
+  "A0QI": {
+    "id": "A0QI",
+    "name": "|cffb4dcdcБросок валуна|r",
+    "raw_name": "TRIGSTR_16075",
+    "tip1": "|cffb4dcdcБросок валуна|r",
+    "raw_tip1": "TRIGSTR_16076",
+    "ubertip1": "Бросает зачарованный валун, который наносит врагу  урон и оглушает его.\n|cffb4dcdcВремя оглушения - Герой 0.25 сек. солдаты 1 сек., Урона 70 ед. |r",
+    "raw_ubertip1": "TRIGSTR_10939",
+    "hotkey": "TRIGSTR_16774",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n02X",
+      "n033"
+    ]
+  },
+  "A0QM": {
+    "id": "A0QM",
+    "name": "|cffb4dcdcНевосприимчивость к магии|r",
+    "raw_name": "TRIGSTR_16238",
+    "tip1": "|cffb4dcdcНевосприимчивость к магии|r",
+    "raw_tip1": "TRIGSTR_16239",
+    "ubertip1": "Дает невосприимчивость к магии и большинству способностей.",
+    "raw_ubertip1": "Дает невосприимчивость к магии и большинству способностей.",
+    "hotkey": "",
+    "buttonpos": "2",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n033"
+    ]
+  },
+  "A0W7": {
+    "id": "A0W7",
+    "name": "Вода",
+    "raw_name": "TRIGSTR_40313",
+    "tip1": "Поддержание",
+    "raw_tip1": "Поддержание",
+    "ubertip1": "Поддерживает мощные защитные чары.",
+    "raw_ubertip1": "Поддерживает мощные защитные чары.",
+    "hotkey": "",
+    "buttonpos": "2",
+    "buttonpos2": "0",
+    "buff1": "",
+    "carriers": [
+      "h0ES"
+    ]
+  },
+  "A0W8": {
+    "id": "A0W8",
+    "name": "Земля",
+    "raw_name": "TRIGSTR_40670",
+    "tip1": "Поддержание",
+    "raw_tip1": "Поддержание",
+    "ubertip1": "Поддерживает мощные защитные чары.",
+    "raw_ubertip1": "Поддерживает мощные защитные чары.",
+    "hotkey": "",
+    "buttonpos": "2",
+    "buttonpos2": "0",
+    "buff1": "",
+    "carriers": [
+      "h0ES"
+    ]
+  },
+  "A0W9": {
+    "id": "A0W9",
+    "name": "Огонь",
+    "raw_name": "TRIGSTR_7551",
+    "tip1": "Поддержание",
+    "raw_tip1": "Поддержание",
+    "ubertip1": "Поддерживает мощные защитные чары.",
+    "raw_ubertip1": "Поддерживает мощные защитные чары.",
+    "hotkey": "",
+    "buttonpos": "2",
+    "buttonpos2": "0",
+    "buff1": "",
+    "carriers": [
+      "h0ES"
+    ]
+  },
+  "A0WA": {
+    "id": "A0WA",
+    "name": "Воздух",
+    "raw_name": "TRIGSTR_41562",
+    "tip1": "Поддержание",
+    "raw_tip1": "Поддержание",
+    "ubertip1": "Поддерживает мощные защитные чары.",
+    "raw_ubertip1": "Поддерживает мощные защитные чары.",
+    "hotkey": "",
+    "buttonpos": "2",
+    "buttonpos2": "0",
+    "buff1": "",
+    "carriers": [
+      "h0ES"
+    ]
+  },
+  "A18B": {
+    "id": "A18B",
+    "name": "Темный призыв",
+    "raw_name": "Темный призыв",
+    "tip1": "Темный призыв",
+    "raw_tip1": "Темный призыв",
+    "ubertip1": "Кастуется 3 секунд. Переносит до 36 союзников из указанной области в точку применения.",
+    "raw_ubertip1": "TRIGSTR_14974",
+    "hotkey": "TRIGSTR_23297",
+    "buttonpos": "1",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "h0L5"
+    ]
+  },
+  "A1MQ": {
+    "id": "A1MQ",
+    "name": "|cffb4dcdcУскользание|r",
+    "raw_name": "TRIGSTR_2373",
+    "tip1": "|cffb4dcdcУскользание|r [|cffffcc001-й уровень|r]",
+    "raw_tip1": "TRIGSTR_13586",
+    "ubertip1": "Дает |cffb4dcdc10%-й шанс|r уклониться от атаки.",
+    "raw_ubertip1": "TRIGSTR_8776",
+    "hotkey": "",
+    "buttonpos": "2",
+    "buttonpos2": "0",
+    "buff1": "",
+    "carriers": [
+      "n07Y",
+      "n07X",
+      "n07W",
+      "n07Z",
+      "n07O",
+      "n07T",
+      "n02Q",
+      "n02V",
+      "n07P",
+      "n07R",
+      "n02P",
+      "n07N",
+      "n07Q",
+      "n07S"
+    ]
+  },
+  "ACbh": {
+    "id": "ACbh",
+    "name": "Сильный удар",
+    "raw_name": "Сильный удар",
+    "tip1": "Сильный удар",
+    "raw_tip1": "Сильный удар",
+    "ubertip1": "\"С <ACbh,DataA1>%-й вероятностью атака нанесет на <ACbh,DataC1> больше урона и оглушит цель на <ACbh,Dur1> сек.\"",
+    "raw_ubertip1": "\"С <ACbh,DataA1>%-й вероятностью атака нанесет на <ACbh,DataC1> больше урона и оглушит цель на <ACbh,Dur1> сек.\"",
+    "hotkey": "",
+    "buttonpos": "2",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n032"
+    ]
+  },
+  "ACmi": {
+    "id": "ACmi",
+    "name": "Невосприимчивость к магии",
+    "raw_name": "Невосприимчивость к магии",
+    "tip1": "Невосприимчивость к магии",
+    "raw_tip1": "Невосприимчивость к магии",
+    "ubertip1": "Дает невосприимчивость к магии и большинству способностей.",
+    "raw_ubertip1": "Дает невосприимчивость к магии и большинству способностей.",
+    "hotkey": "",
+    "buttonpos": "2",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "h0F1",
+      "n034",
+      "n035",
+      "n031",
+      "n033"
+    ]
+  },
+  "ACrk": {
+    "id": "ACrk",
+    "name": "Устойчивая кожа",
+    "raw_name": "Устойчивая кожа",
+    "tip1": "Устойчивая кожа",
+    "raw_tip1": "Устойчивая кожа",
+    "ubertip1": "\"Сокращает время действия отрицательных эффектов, дает невосприимчивость к некоторым способностям.\"",
+    "raw_ubertip1": "\"Сокращает время действия отрицательных эффектов, дает невосприимчивость к некоторым способностям.\"",
+    "hotkey": "",
+    "buttonpos": "3",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "h0F1"
+    ]
+  },
+  "ACtb": {
+    "id": "ACtb",
+    "name": "Бросок валуна",
+    "raw_name": "Бросок валуна",
+    "tip1": "Бросок валуна",
+    "raw_tip1": "Бросок валуна",
+    "ubertip1": "\"Бросает зачарованный валун, который наносит врагу <ACtb,DataA1> урона и оглушает его на <ACtb,Dur1> сек.\"",
+    "raw_ubertip1": "\"Бросает зачарованный валун, который наносит врагу <ACtb,DataA1> урона и оглушает его на <ACtb,Dur1> сек.\"",
+    "hotkey": "B",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n02X",
+      "n034",
+      "n035",
+      "n031",
+      "n033",
+      "n02Y"
+    ]
+  },
+  "ACtc": {
+    "id": "ACtc",
+    "name": "Мощный удар",
+    "raw_name": "Мощный удар",
+    "tip1": "Мощный удар",
+    "raw_tip1": "Мощный удар",
+    "ubertip1": "\"Бьет по земле, нанося <ACtc,DataA1> урона находящимся рядом врагам и замедляя их передвижение и атаку.\"",
+    "raw_ubertip1": "\"Бьет по земле, нанося <ACtc,DataA1> урона находящимся рядом врагам и замедляя их передвижение и атаку.\"",
+    "hotkey": "L",
+    "buttonpos": "1",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n034",
+      "n035",
+      "n031",
+      "n033",
+      "n02Y"
+    ]
+  },
+  "AHta": {
+    "id": "AHta",
+    "name": "Обнаружение",
+    "raw_name": "Обнаружение",
+    "tip1": "Обнаружение",
+    "raw_tip1": "Обнаружение",
+    "ubertip1": "\"Открывает обзор в указанной области. |nОбнаруживает невидимые войска. |nВремя действия: <AHta,Dur1> сек.\"",
+    "raw_ubertip1": "\"Открывает обзор в указанной области. |nОбнаруживает невидимые войска. |nВремя действия: <AHta,Dur1> сек.\"",
+    "hotkey": "TRIGSTR_16254",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "h0EP",
+      "h0L5"
+    ]
+  },
+  "ANen": {
+    "id": "ANen",
+    "name": "|cffa0d2d2Опутывание|r",
+    "raw_name": "TRIGSTR_25812",
+    "tip1": "|cffa0d2d2Опутывание|r",
+    "raw_tip1": "TRIGSTR_29831",
+    "ubertip1": "\"Притягивает врага к земле и обездвиживает его на <Aens,Dur1> сек. Опутанные воздушные цели считаются наземными.\"",
+    "raw_ubertip1": "\"Притягивает врага к земле и обездвиживает его на <Aens,Dur1> сек. Опутанные воздушные цели считаются наземными.\"",
+    "hotkey": "TRIGSTR_10208",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n07Y",
+      "n07X",
+      "n07W",
+      "n07Z",
+      "n02R",
+      "n02S",
+      "n07O",
+      "n02U",
+      "n07C",
+      "n02T",
+      "n07T",
+      "n02Z",
+      "n02Q",
+      "n02V",
+      "n07P",
+      "n07R",
+      "n02P",
+      "n07N",
+      "n07Q",
+      "n07S"
+    ]
+  },
+  "Aadm": {
+    "id": "Aadm",
+    "name": "Рассеяние чар",
+    "raw_name": "Рассеяние чар",
+    "tip1": "Рассеяние чар",
+    "raw_tip1": "Рассеяние чар",
+    "ubertip1": "\"Снимает положительные эффекты с врагов и отрицательные с союзников. |n|cffffcc00Наносит <Aadm,DataB1> урона призванным целям.|r\"",
+    "raw_ubertip1": "\"Снимает положительные эффекты с врагов и отрицательные с союзников. |n|cffffcc00Наносит <Aadm,DataB1> урона призванным целям.|r\"",
+    "hotkey": "B",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n02U",
+      "n07C"
+    ]
+  },
+  "Abdl": {
+    "id": "Abdl",
+    "name": "Сильное рассеивание чумы",
+    "raw_name": "Сильное рассеивание чумы",
+    "tip1": "",
+    "raw_tip1": "",
+    "ubertip1": "",
+    "raw_ubertip1": "",
+    "hotkey": "",
+    "buttonpos": "",
+    "buttonpos2": "",
+    "buff1": "",
+    "carriers": [
+      "h0EQ",
+      "h0ER"
+    ]
+  },
+  "Abds": {
+    "id": "Abds",
+    "name": "Слабое рассеивание чумы",
+    "raw_name": "Слабое рассеивание чумы",
+    "tip1": "",
+    "raw_tip1": "",
+    "ubertip1": "",
+    "raw_ubertip1": "",
+    "hotkey": "",
+    "buttonpos": "",
+    "buttonpos2": "",
+    "buff1": "",
+    "carriers": [
+      "h0EO",
+      "h0EP",
+      "h0L5",
+      "h0ET",
+      "h0EU",
+      "h0EV",
+      "h0EW",
+      "h0EX",
+      "h0EY"
+    ]
+  },
+  "Adis": {
+    "id": "Adis",
+    "name": "Spell Dispel",
+    "raw_name": "TRIGSTR_25772",
+    "tip1": "Spell Dispel",
+    "raw_tip1": "TRIGSTR_25785",
+    "ubertip1": "Removes positive effects from units in the target area. |n|cffffcc00Deals <Adis,DataB1> damage to summoned units.|r",
+    "raw_ubertip1": "TRIGSTR_25774",
+    "hotkey": "TRIGSTR_9715",
+    "buttonpos": "1",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n02T"
+    ]
+  },
+  "Adtn": {
+    "id": "Adtn",
+    "name": "Взорваться",
+    "raw_name": "Взорваться",
+    "tip1": "Взорваться",
+    "raw_tip1": "Взорваться",
+    "ubertip1": "\"Уничтожает огонька, рассеивая магические эффекты и сжигая по <Adtn,DataA1> маны у находящихся рядом войск. |n|cffffcc00Наносит <Adtn,DataB1> урона призванным целям.|r\"",
+    "raw_ubertip1": "\"Уничтожает огонька, рассеивая магические эффекты и сжигая по <Adtn,DataA1> маны у находящихся рядом войск. |n|cffffcc00Наносит <Adtn,DataB1> урона призванным целям.|r\"",
+    "hotkey": "D",
+    "buttonpos": "1",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "e00F"
+    ]
+  },
+  "Adts": {
+    "id": "Adts",
+    "name": "Магический страж",
+    "raw_name": "Магический страж",
+    "tip1": "Магический страж",
+    "raw_tip1": "Магический страж",
+    "ubertip1": "Обнаруживает находящиеся рядом невидимые войска.",
+    "raw_ubertip1": "Обнаруживает находящиеся рядом невидимые войска.",
+    "hotkey": "",
+    "buttonpos": "1",
+    "buttonpos2": "1",
+    "buff1": "",
+    "carriers": [
+      "h0EP",
+      "h0L5"
+    ]
+  },
+  "Afbt": {
+    "id": "Afbt",
+    "name": "Противодействие",
+    "raw_name": "Противодействие",
+    "tip1": "Противодействие",
+    "raw_tip1": "Противодействие",
+    "ubertip1": "\"Каждая атака уничтожает <Afbt,DataA1> маны цели и наносит ей столько же дополнительного урона.|n|nПризванные цели получают на <Afbt,DataE1> больше урона от атак этой башни.\"",
+    "raw_ubertip1": "\"Каждая атака уничтожает <Afbt,DataA1> маны цели и наносит ей столько же дополнительного урона.|n|nПризванные цели получают на <Afbt,DataE1> больше урона от атак этой башни.\"",
+    "hotkey": "",
+    "buttonpos": "3",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "h0EP",
+      "h0L5"
+    ]
+  },
+  "Ahpe": {
+    "id": "Ahpe",
+    "name": "Феникс",
+    "raw_name": "Феникс",
+    "tip1": "Феникс",
+    "raw_tip1": "Феникс",
+    "ubertip1": "\"Феникс обжигает находящихся рядом врагов, нанося <Apxf,DataA1> урона мгновенно и <Apxf,DataB1> урона/сек. в течение <Apxf,Dur1> сек. Также феникс наносит урон себе, а при гибели откладывает яйцо, из которого вылупляется новый феникс.\"",
+    "raw_ubertip1": "\"Феникс обжигает находящихся рядом врагов, нанося <Apxf,DataA1> урона мгновенно и <Apxf,DataB1> урона/сек. в течение <Apxf,Dur1> сек. Также феникс наносит урон себе, а при гибели откладывает яйцо, из которого вылупляется новый феникс.\"",
+    "hotkey": "",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "h0F1"
+    ]
+  },
+  "Amic": {
+    "id": "Amic",
+    "name": "|cffaad2ffПризыв к оружию|r",
+    "raw_name": "TRIGSTR_39683",
+    "tip1": "|cffaad2ffПризыв к оружию|r",
+    "raw_tip1": "TRIGSTR_39684",
+    "ubertip1": "\"Призывает находящихся рядом работников к ратуше и вооружает их. |nВремя действия: <Amil,Dur1> сек.\"",
+    "raw_ubertip1": "\"Призывает находящихся рядом работников к ратуше и вооружает их. |nВремя действия: <Amil,Dur1> сек.\"",
+    "hotkey": "TRIGSTR_7258",
+    "buttonpos": "3",
+    "buttonpos2": "0",
+    "buff1": "",
+    "carriers": [
+      "h0EQ",
+      "h0ER"
+    ]
+  },
+  "Aphx": {
+    "id": "Aphx",
+    "name": "Рождение феникса (яйцо)",
+    "raw_name": "Рождение феникса (яйцо)",
+    "tip1": "",
+    "raw_tip1": "",
+    "ubertip1": "",
+    "raw_ubertip1": "",
+    "hotkey": "",
+    "buttonpos": "",
+    "buttonpos2": "",
+    "buff1": "",
+    "carriers": [
+      "h0F1"
+    ]
+  },
+  "Apxf": {
+    "id": "Apxf",
+    "name": "Пламя феникса",
+    "raw_name": "Пламя феникса",
+    "tip1": "Пламя феникса",
+    "raw_tip1": "Пламя феникса",
+    "ubertip1": "Поджигает находящихся рядом врагов.",
+    "raw_ubertip1": "Поджигает находящихся рядом врагов.",
+    "hotkey": "",
+    "buttonpos": "0",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "h0F1"
+    ]
+  },
+  "Aren": {
+    "id": "Aren",
+    "name": "Обновление",
+    "raw_name": "Обновление",
+    "tip1": "Обновление",
+    "raw_tip1": "Обновление",
+    "ubertip1": "\"Исцеляет раненые древа, ремонтирует союзные здания и технику.\"",
+    "raw_ubertip1": "\"Исцеляет раненые древа, ремонтирует союзные здания и технику.\"",
+    "hotkey": "R",
+    "buttonpos": "1",
+    "buttonpos2": "1",
+    "buff1": "",
+    "carriers": [
+      "e00F"
+    ]
+  },
+  "Argl": {
+    "id": "Argl",
+    "name": "Вернуть золото и древесину",
+    "raw_name": "Вернуть золото и древесину",
+    "tip1": "",
+    "raw_tip1": "",
+    "ubertip1": "",
+    "raw_ubertip1": "",
+    "hotkey": "",
+    "buttonpos": "",
+    "buttonpos2": "",
+    "buff1": "",
+    "carriers": [
+      "h0EQ",
+      "h0ER",
+      "h0ES"
+    ]
+  },
+  "Asb1": {
+    "id": "Asb1",
+    "name": "Погружение",
+    "raw_name": "Погружение",
+    "tip1": "Погружение",
+    "raw_tip1": "Погружение",
+    "ubertip1": "\"Воин погружается под воду, становясь невидимым.\"",
+    "raw_ubertip1": "\"Воин погружается под воду, становясь невидимым.\"",
+    "hotkey": "U",
+    "buttonpos": "3",
+    "buttonpos2": "2",
+    "buff1": "",
+    "carriers": [
+      "n07Y",
+      "n07X",
+      "n07W",
+      "n07Z",
+      "n02R",
+      "n02S",
+      "n07O",
+      "n02U",
+      "n07C",
+      "n02T",
+      "n07T",
+      "n02Z",
+      "n02Q",
+      "n02V",
+      "n07P",
+      "n07R",
+      "n02P",
+      "n07N",
+      "n07Q",
+      "n07S"
+    ]
+  },
+  "Ault": {
+    "id": "Ault",
+    "name": "Ночное зрение",
+    "raw_name": "Ночное зрение",
+    "tip1": "",
+    "raw_tip1": "",
+    "ubertip1": "",
+    "raw_ubertip1": "",
+    "hotkey": "",
+    "buttonpos": "",
+    "buttonpos2": "",
+    "buff1": "",
+    "carriers": [
+      "e00F"
+    ]
+  },
+  "Awha": {
+    "id": "Awha",
+    "name": "Добывать ресурсы",
+    "raw_name": "Добывать ресурсы",
+    "tip1": "Добывать ресурсы",
+    "raw_tip1": "Добывать ресурсы",
+    "ubertip1": "Добывает золото из оплетенных рудников и древесину из деревьев.",
+    "raw_ubertip1": "Добывает золото из оплетенных рудников и древесину из деревьев.",
+    "hotkey": "G",
+    "buttonpos": "3",
+    "buttonpos2": "1",
+    "buff1": "",
+    "carriers": [
+      "e00F"
+    ]
+  }
+}

@@ -1,0 +1,1330 @@
+[
+  {
+    "id": "A0PT",
+    "code": "AUim",
+    "levels": "4",
+    "hotkey": {
+      "raw": "TRIGSTR_30957",
+      "str_id": 30957,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Q"
+    },
+    "name": {
+      "raw": "TRIGSTR_25257",
+      "str_id": 25257,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Тернистый куст|r"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_30924",
+      "str_id": 30924,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Q"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_29576",
+      "str_id": 29576,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Изучить |cff228b22Тернистый куст|r [|cffffcc001-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_39442",
+      "str_id": 39442,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Оглушает и наносит урон юнитам, стоящим по линии удара."
+    },
+    "tip": {
+      "raw": "",
+      "text": ""
+    },
+    "tip1": {
+      "raw": "TRIGSTR_30696",
+      "str_id": 30696,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Тернистый куст|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_31132",
+      "str_id": 31132,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Тернистый куст|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_31682",
+      "str_id": 31682,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Тернистый куст|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_39899",
+      "str_id": 39899,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Тернистый куст|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_39900",
+      "str_id": 39900,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Оглушает и наносит урон юнитам, стоящим по линии удара."
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_31683",
+      "str_id": 31683,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Оглушает и наносит урон юнитам, стоящим по линии удара."
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_39430",
+      "str_id": 39430,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Оглушает и наносит урон юнитам, стоящим по линии удара."
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_31349",
+      "str_id": 31349,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Оглушает и наносит урон юнитам, стоящим по линии удара."
+    }
+  },
+  {
+    "id": "A0FW",
+    "code": "AEah",
+    "levels": "4",
+    "hotkey": {
+      "raw": "",
+      "text": ""
+    },
+    "name": {
+      "raw": "TRIGSTR_5405",
+      "str_id": 5405,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cffb4dc8cАура шипов|r"
+    },
+    "researchhotkey": {
+      "raw": "R",
+      "text": "R"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_065",
+      "str_id": 65,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Изучить |cff228b22Аура шипов|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_20350",
+      "str_id": 20350,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Все рядом стоящие юниты получают щит, ортажает часть урона  в атакующего врага.\n|cffffd7001 уровеь: 10%\n2 уровеь: 20%\n3 уровеь: 30%\n4 уровеь: 40%|r"
+    },
+    "tip": {
+      "raw": "",
+      "text": ""
+    },
+    "tip1": {
+      "raw": "TRIGSTR_946",
+      "str_id": 946,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Аура шипов|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_2759",
+      "str_id": 2759,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Аура шипов|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_2760",
+      "str_id": 2760,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Аура шипов|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_3694",
+      "str_id": 3694,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Аура шипов|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16483",
+      "str_id": 16483,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Все рядом стоящие юниты получают щит, ортажает часть урона  в атакующего врага.\n|cffffd700Отражающий урон: 10%|r"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16484",
+      "str_id": 16484,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Все рядом стоящие юниты получают щит, ортажает часть урона  в атакующего врага.\n|cffffd700Отражающий урон: 20%|r"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_16485",
+      "str_id": 16485,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Все рядом стоящие юниты получают щит, ортажает часть урона  в атакующего врага.\n|cffffd700Отражающий урон: 30%|r"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_16480",
+      "str_id": 16480,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Все рядом стоящие юниты получают щит, ортажает часть урона  в атакующего врага.\n|cffffd700Отражающий урон: 40%|r"
+    }
+  },
+  {
+    "id": "A0PS",
+    "code": "ANca",
+    "levels": "4",
+    "hotkey": {
+      "raw": "TRIGSTR_17096",
+      "str_id": 17096,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "W"
+    },
+    "name": {
+      "raw": "TRIGSTR_15782",
+      "str_id": 15782,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Рассекающий удар|r"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_16961",
+      "str_id": 16961,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "W"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_16559",
+      "str_id": 16559,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Изучить |cff7f8f18Рассекающий удар|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_20361",
+      "str_id": 20361,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Атаки |cff7f8f18Танцора Войны|r, наносят урон всем рядом стоящим юнитам\n|cffffd7001 уровень: 30%\n2 уровень: 35%\n3 уровень: 40%\n4 уровень: 45%|r"
+    },
+    "tip": {
+      "raw": "",
+      "text": ""
+    },
+    "tip1": {
+      "raw": "TRIGSTR_15783",
+      "str_id": 15783,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Рассекающий удар|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_15784",
+      "str_id": 15784,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Рассекающий удар|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_15785",
+      "str_id": 15785,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Рассекающий удар|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_15786",
+      "str_id": 15786,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Рассекающий удар|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16578",
+      "str_id": 16578,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Атаки |cff7f8f18Танцора Войны|r, наносят урон всем рядом стоящим юнитам |cffffd70030%|r урона"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16581",
+      "str_id": 16581,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Атаки |cff7f8f18Танцора Войны|r, наносят урон всем рядом стоящим юнитам |cffffd70035%|r урона"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_16583",
+      "str_id": 16583,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Атаки |cff7f8f18Танцора Войны|r, наносят урон всем рядом стоящим юнитам |cffffd70040%|r урона"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_16584",
+      "str_id": 16584,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Атаки |cff7f8f18Танцора Войны|r, наносят урон всем рядом стоящим юнитам |cffffd70045%|r урона"
+    }
+  },
+  {
+    "id": "A0C9",
+    "code": "AEsv",
+    "levels": "2",
+    "hotkey": {
+      "raw": "TRIGSTR_32784",
+      "str_id": 32784,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "R"
+    },
+    "name": {
+      "raw": "TRIGSTR_8750",
+      "str_id": 8750,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Дух Леса|r"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_32702",
+      "str_id": 32702,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "R"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_8752",
+      "str_id": 8752,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Изучить «|cff228b22Дух Леса|r» [|cffffcc001-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "\"Создает аватару, которая призывает из находящихся рядом трупов неуязвимых духов, атакующих врагов. Когда аватара возмездия погибает, духи исчезают. |nВремя существования: <AEsv,Dur1> сек.\"",
+      "text": "\"Создает аватару, которая призывает из находящихся рядом трупов неуязвимых духов, атакующих врагов. Когда аватара возмездия погибает, духи исчезают. |nВремя существования: <AEsv,Dur1> сек.\""
+    },
+    "tip": {
+      "raw": "",
+      "text": ""
+    },
+    "tip1": {
+      "raw": "TRIGSTR_8751",
+      "str_id": 8751,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Дух Леса|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_8765",
+      "str_id": 8765,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Дух Леса|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "",
+      "text": ""
+    },
+    "tip4": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip1": {
+      "raw": "\"Создает аватару, которая призывает из находящихся рядом трупов неуязвимых духов, атакующих врагов. Когда аватара возмездия погибает, духи исчезают. |nВремя существования: <AEsv,Dur1> сек.\"",
+      "text": "\"Создает аватару, которая призывает из находящихся рядом трупов неуязвимых духов, атакующих врагов. Когда аватара возмездия погибает, духи исчезают. |nВремя существования: <AEsv,Dur1> сек.\""
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_8766",
+      "str_id": 8766,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Создает аватару, которая призывает из находящихся рядом трупов неуязвимых духов, атакующих врагов. Когда аватара возмездия погибает, духи исчезают. |nВремя существования: <AEsv,Dur1> сек."
+    },
+    "ubertip3": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip4": {
+      "raw": "",
+      "text": ""
+    }
+  },
+  {
+    "id": "A0PI",
+    "code": "AHfs",
+    "levels": "4",
+    "hotkey": {
+      "raw": "TRIGSTR_16521",
+      "str_id": 16521,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Q"
+    },
+    "name": {
+      "raw": "TRIGSTR_9712",
+      "str_id": 9712,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Семя раздора|r"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_16523",
+      "str_id": 16523,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Q"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_11533",
+      "str_id": 11533,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Изучить |cff228b22Семя раздора|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_20020",
+      "str_id": 20020,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Выращивает колючие корни наносящий урон в течении |cffffd7003|r сек\n\n|cffffd7001 уровень: 30 урона/сек\n2 уровень: 53 урона/сек\n3 уровень: 73 урона/сек\n4 уровень: 100 Урона/сек|r"
+    },
+    "tip": {
+      "raw": "",
+      "text": ""
+    },
+    "tip1": {
+      "raw": "TRIGSTR_15599",
+      "str_id": 15599,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Семя раздора|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_15600",
+      "str_id": 15600,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Семя раздора|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_15601",
+      "str_id": 15601,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Семя раздора|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_7543",
+      "str_id": 7543,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Семя раздора|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_20142",
+      "str_id": 20142,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Выращивает колючие корни наносящий |cffffd70030 ед|r. урона в течении |cffffd7003|r сек"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_20151",
+      "str_id": 20151,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Выращивает колючие корни наносящий |cffffd70053 ед|r. урона в течении |cffffd7003|r сек"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_20192",
+      "str_id": 20192,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Выращивает колючие корни наносящий |cffffd70073 ед|r. урона в течении |cffffd7003|r сек"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_20019",
+      "str_id": 20019,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Выращивает колючие корни наносящий |cffffd700100 ед|r. урона в течении |cffffd7003|r сек"
+    }
+  },
+  {
+    "id": "A0PK",
+    "code": "Aroa",
+    "levels": "4",
+    "hotkey": {
+      "raw": "TRIGSTR_16872",
+      "str_id": 16872,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "W"
+    },
+    "name": {
+      "raw": "TRIGSTR_15708",
+      "str_id": 15708,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Древенская кора|r"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_16940",
+      "str_id": 16940,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "W"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_16488",
+      "str_id": 16488,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Изучить |cff808000Древенская кора|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_20202",
+      "str_id": 20202,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Увеличивает количество брони всех окружающих войнов\n|cffffd700\n1 уровень: 4 брони\n2 уровень: 5 брони\n3 уровень: 6 брони\n4 уровень: 7 брони|r"
+    },
+    "tip": {
+      "raw": "",
+      "text": ""
+    },
+    "tip1": {
+      "raw": "TRIGSTR_20198",
+      "str_id": 20198,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Древенская кора|r [|cffffd7001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_20199",
+      "str_id": 20199,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Древенская кора|r [|cffffd7002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_20200",
+      "str_id": 20200,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Древенская кора|r [|cffffd7003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_20201",
+      "str_id": 20201,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Древенская кора|r [|cffffd7004-й уровень|r]"
+    },
+    "ubertip": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_20203",
+      "str_id": 20203,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Увеличивает показатель брони на |cffffd7004 ед.|r"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_20204",
+      "str_id": 20204,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Увеличивает показатель брони на |cffffd7005 ед.|r"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_20205",
+      "str_id": 20205,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Увеличивает показатель брони на |cffffd7006 ед.|r"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_20206",
+      "str_id": 20206,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Увеличивает показатель брони на |cffffd7007 ед.|r"
+    }
+  },
+  {
+    "id": "A0PJ",
+    "code": "AUau",
+    "levels": "4",
+    "hotkey": {
+      "raw": "",
+      "text": ""
+    },
+    "name": {
+      "raw": "TRIGSTR_15702",
+      "str_id": 15702,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Влияние леса|r"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_20127",
+      "str_id": 20127,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "E"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_16487",
+      "str_id": 16487,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Изучить |cff808000Влияние леса|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_21898",
+      "str_id": 21898,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Увеличивает регенерацию здоровья всех окружающий войнов\n\n|cffffd7001 уровень: Увеличивает регенерацию на 100%\n2 уровень: Увеличивает регенерацию на 150%\n3 уровень: Увеличивает регенерацию на 200%\n4 уровень: Увеличивает регенерацию на 250%|r"
+    },
+    "tip": {
+      "raw": "",
+      "text": ""
+    },
+    "tip1": {
+      "raw": "TRIGSTR_15704",
+      "str_id": 15704,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Влияние леса|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_15705",
+      "str_id": 15705,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Влияние леса|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_15706",
+      "str_id": 15706,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Влияние леса|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_15700",
+      "str_id": 15700,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Влияние леса|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_20195",
+      "str_id": 20195,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cffffd700100% |rувеличения регенерации здороья"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_20196",
+      "str_id": 20196,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cffffd700150% |rувеличения регенерации здороья"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_20197",
+      "str_id": 20197,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cffffd700200% |rувеличения регенерации здороья"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_20193",
+      "str_id": 20193,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cffffd700250% |rувеличения регенерации здороья"
+    }
+  },
+  {
+    "id": "A0PL",
+    "code": "AHtc",
+    "levels": "2",
+    "hotkey": {
+      "raw": "TRIGSTR_20671",
+      "str_id": 20671,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "R"
+    },
+    "name": {
+      "raw": "TRIGSTR_15602",
+      "str_id": 15602,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Кара леса|r"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_20726",
+      "str_id": 20726,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "R"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_15604",
+      "str_id": 15604,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Изучить |cff228b22Кара леса|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_20207",
+      "str_id": 20207,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Выпускает семена, сотрясающие землю и наносящие урон\n\n|cffffd7001 уровень: 250 урона\n2 уровень: 300 урона|r"
+    },
+    "tip": {
+      "raw": "",
+      "text": ""
+    },
+    "tip1": {
+      "raw": "TRIGSTR_15605",
+      "str_id": 15605,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Кара леса|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_15607",
+      "str_id": 15607,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Кара леса|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "\"Раскат грома [|cffffcc003-й уровень|r]\"",
+      "text": "\"Раскат грома [|cffffcc003-й уровень|r]\""
+    },
+    "tip4": {
+      "raw": "TRIGSTR_15715",
+      "str_id": 15715,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Раскат грома [|cffffcc004-й уровень|r]"
+    },
+    "ubertip": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_20208",
+      "str_id": 20208,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Выпускает семена, сотрясающие землю и наносящие урон |cffffd700250 ед.|r"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_20209",
+      "str_id": 20209,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Выпускает семена, сотрясающие землю и наносящие урон|cffffd700 300 ед.|r"
+    },
+    "ubertip3": {
+      "raw": "\"Бьет по земле, нанося <AHtc,DataA3> урона находящимся рядом наземным врагам и замедляя их передвижение на <AHtc,DataC3,%>% и атаку на <AHtc,DataD3,%>%.\"",
+      "text": "\"Бьет по земле, нанося <AHtc,DataA3> урона находящимся рядом наземным врагам и замедляя их передвижение на <AHtc,DataC3,%>% и атаку на <AHtc,DataD3,%>%.\""
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_15716",
+      "str_id": 15716,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Бьет по земле, нанося <AHtc,DataA4> урона находящимся рядом наземным врагам и замедляя их передвижение на <AHtc,DataC4,%>% и атаку на <AHtc,DataD4,%>%."
+    }
+  },
+  {
+    "id": "A0PM",
+    "code": "Aven",
+    "levels": "4",
+    "hotkey": {
+      "raw": "",
+      "text": ""
+    },
+    "name": {
+      "raw": "TRIGSTR_15721",
+      "str_id": 15721,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Отравленное оружие|r"
+    },
+    "researchhotkey": {
+      "raw": "",
+      "text": ""
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_15722",
+      "str_id": 15722,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Отравленное оружие|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_16490",
+      "str_id": 16490,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Снаряжает |cff7f8f18Егеря диколесья|r ядовитыми стрелами\n\n|cffffd7001 Уровень: 2 ед. урона в секунду\n2 Уровень: 4 ед. урона в секунду\n3 Уровень: 8 ед. урона в секунду\n4 Уровень: 16 ед. урона в секунду|r"
+    },
+    "tip": {
+      "raw": "",
+      "text": ""
+    },
+    "tip1": {
+      "raw": "TRIGSTR_20351",
+      "str_id": 20351,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Отравленное оружие|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_20352",
+      "str_id": 20352,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Отравленное оружие|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_20353",
+      "str_id": 20353,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Отравленное оружие|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_20354",
+      "str_id": 20354,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Отравленное оружие|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16498",
+      "str_id": 16498,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Яд наносит |cffffd7004 ед|r. урона в секунду\n\n|cffffd700Время действия: 20 сек.\nВремя действия герой: 10 сек.|r"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16499",
+      "str_id": 16499,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Яд наносит |cffffd7008 ед|r. урона в секунду\n\n|cffffd700Время действия: 20 сек.\nВремя действия герой: 10 сек.|r"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_16500",
+      "str_id": 16500,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Яд наносит |cffffd70016 ед|r. урона в секунду\n\n|cffffd700Время действия: 20 сек.\nВремя действия герой: 10 сек.|r"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_2397",
+      "str_id": 2397,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Яд наносит |cffffd70032 ед|r. урона в секунду\n\n|cffffd700Время действия: 20 сек.\nВремя действия герой: 10 сек.|r"
+    }
+  },
+  {
+    "id": "A0PN",
+    "code": "AOwd",
+    "levels": "4",
+    "hotkey": {
+      "raw": "W",
+      "text": "W"
+    },
+    "name": {
+      "raw": "TRIGSTR_16502",
+      "str_id": 16502,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff7f8f18Зов Древних|r"
+    },
+    "researchhotkey": {
+      "raw": "W",
+      "text": "W"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_16503",
+      "str_id": 16503,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Изучить |cff7f8f18Зов Древних|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_39223",
+      "str_id": 39223,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Призывает Древней  сражающихся на вашей стороне |nВремя действия: |cffffd70070|r сек.|n|n|cffffd7001 уровень: 2 древня|n2 уровень: 3 древня|n3 уровень: 4 древня|n4 уровень: 6 древней|r"
+    },
+    "tip": {
+      "raw": "",
+      "text": ""
+    },
+    "tip1": {
+      "raw": "TRIGSTR_20355",
+      "str_id": 20355,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff7f8f18Зов Древних|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_20356",
+      "str_id": 20356,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff7f8f18Зов Древних|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_20357",
+      "str_id": 20357,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff7f8f18Зов Древних|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_20358",
+      "str_id": 20358,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff7f8f18Зов Древних|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_39224",
+      "str_id": 39224,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Призывает |cffffd7002|r |cff7f8f18Древня|r\n|cffffd700Время действия: 70 сек.|r"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_39225",
+      "str_id": 39225,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Призывает |cffffd7004|r |cff7f8f18Древня|r\n|cffffd700Время действия: 70 сек.|r"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_39226",
+      "str_id": 39226,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Призывает |cffffd7006|r |cff7f8f18Древня|r\n|cffffd700Время действия: 70 сек.|r"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_39227",
+      "str_id": 39227,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Призывает |cffffd7008|r |cff7f8f18Древня|r\n|cffffd700Время действия: 70 сек.|r"
+    }
+  },
+  {
+    "id": "A0V3",
+    "code": "AEar",
+    "levels": "4",
+    "hotkey": {
+      "raw": "TRIGSTR_21410",
+      "str_id": 21410,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "E"
+    },
+    "name": {
+      "raw": "TRIGSTR_15610",
+      "str_id": 15610,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Аура меткости|r"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_21375",
+      "str_id": 21375,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "E"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_15611",
+      "str_id": 15611,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Изучить |cff228b22Ауру меткости|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_20157",
+      "str_id": 20157,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Увеличивает урон от дистанционных атак находящихся рядом союзников.\n|cffffd7001 Уровень: 10% увелечения урона\n2 Уровень: 20% увелечения урона\n3 Уровень: 30% увелечения урона\n4 Уровень: 40% увелечения урона|r"
+    },
+    "tip": {
+      "raw": "",
+      "text": ""
+    },
+    "tip1": {
+      "raw": "TRIGSTR_15613",
+      "str_id": 15613,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Аура меткости|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_15614",
+      "str_id": 15614,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Аура меткости|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_15616",
+      "str_id": 15616,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Аура меткости|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_15608",
+      "str_id": 15608,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff228b22Аура меткости|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_20334",
+      "str_id": 20334,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Увеличивает урон всех дальнобойных юнитов на |cffffd70010%|r"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_20335",
+      "str_id": 20335,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Увеличивает урон всех дальнобойных юнитов на |cffffd70020%|r"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_20336",
+      "str_id": 20336,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Увеличивает урон всех дальнобойных юнитов на |cffffd70030%|r"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_19886",
+      "str_id": 19886,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Увеличивает урон всех дальнобойных юнитов на |cffffd70040%|r"
+    }
+  },
+  {
+    "id": "A0PP",
+    "code": "ANdp",
+    "levels": "2",
+    "hotkey": {
+      "raw": "TRIGSTR_20753",
+      "str_id": 20753,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "R"
+    },
+    "name": {
+      "raw": "TRIGSTR_15756",
+      "str_id": 15756,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Корни мира|r"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_20752",
+      "str_id": 20752,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "R"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_16547",
+      "str_id": 16547,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Изучить |cff808000Корни мира|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_16548",
+      "str_id": 16548,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Взращивает новых Войнов, сражающихся на вашей стороне."
+    },
+    "tip": {
+      "raw": "",
+      "text": ""
+    },
+    "tip1": {
+      "raw": "TRIGSTR_20359",
+      "str_id": 20359,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Корни мира|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_20360",
+      "str_id": 20360,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "|cff808000Корни мира|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "",
+      "text": ""
+    },
+    "tip4": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16550",
+      "str_id": 16550,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Создает пак юнитов |cff7f8f18Энтов|r"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16551",
+      "str_id": 16551,
+      "used_in": [
+        "war3mapSkin.w3a"
+      ],
+      "text": "Создает пак юнитов |cff7f8f18Энтов|r"
+    },
+    "ubertip3": {
+      "raw": "",
+      "text": ""
+    },
+    "ubertip4": {
+      "raw": "",
+      "text": ""
+    }
+  }
+]

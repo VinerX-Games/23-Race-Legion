@@ -1,0 +1,1437 @@
+{
+  "scope": "Силитиды (Silitids / Аз'Акиры): категория 5 — Исследования и маркеры (23 технологий)",
+  "upgrades_count": 23,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R0BV",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 30499,
+          "after": "|cffe4cfa3Силитиды и Аз'Акиры|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 30500,
+          "after": "|cffe4cfa3Силитиды и Аз'Акиры|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 30501,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к империи Аз'Акиров и рою Силитидов.|r"
+        }
+      ]
+    },
+    {
+      "id": "R08G",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37251,
+          "after": "|cffe4cfa3Защитная оболочка зданий — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 37240,
+          "after": "|cffe4cfa3Защитная оболочка зданий — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 37241,
+          "after": "|cffe4cfa3Защитная оболочка зданий — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 37242,
+          "after": "|cffe4cfa3Защитная оболочка зданий — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 37243,
+          "after": "|cffe4cfa3Защитная оболочка зданий — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 37244,
+          "after": "|cffe4cfa3Защитная оболочка зданий — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37245,
+          "after": "|cffe4cfa3Защитная оболочка зданий — уровень 1|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 37246,
+          "after": "|cffe4cfa3Защитная оболочка зданий — уровень 2|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 37247,
+          "after": "|cffe4cfa3Защитная оболочка зданий — уровень 3|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 37248,
+          "after": "|cffe4cfa3Защитная оболочка зданий — уровень 4|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 37249,
+          "after": "|cffe4cfa3Защитная оболочка зданий — уровень 5|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 37250,
+          "after": "|cffe4cfa3Защитная оболочка зданий — уровень 6|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 12494,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню всех зданий Силитидов на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем зданиям.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 12495,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню всех зданий Силитидов на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем зданиям.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 12496,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню всех зданий Силитидов на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем зданиям.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 12497,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню всех зданий Силитидов на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем зданиям.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 12498,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню всех зданий Силитидов на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем зданиям.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 12499,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню всех зданий Силитидов на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем зданиям.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R088",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37210,
+          "after": "|cffe4cfa3Посвящение матерей — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 37205,
+          "after": "|cffe4cfa3Посвящение матерей — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 37206,
+          "after": "|cffe4cfa3Посвящение матерей — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 37207,
+          "after": "|cffe4cfa3Посвящение матерей — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 37208,
+          "after": "|cffe4cfa3Посвящение матерей — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 37209,
+          "after": "|cffe4cfa3Посвящение матерей — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37211,
+          "after": "|cffe4cfa3Посвящение матерей — уровень 1|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 37212,
+          "after": "|cffe4cfa3Посвящение матерей — уровень 2|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 37213,
+          "after": "|cffe4cfa3Посвящение матерей — уровень 3|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 37214,
+          "after": "|cffe4cfa3Посвящение матерей — уровень 4|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 37215,
+          "after": "|cffe4cfa3Посвящение матерей — уровень 5|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 37216,
+          "after": "|cffe4cfa3Посвящение матерей — уровень 6|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 37204,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья на |cffc8e087+100|cffced4da, запас маны на |cffc8e087+100|cffced4da и ускоряет регенерацию маны Матерей роя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМать роя|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 37217,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья на |cffc8e087+100|cffced4da, запас маны на |cffc8e087+100|cffced4da и ускоряет регенерацию маны Матерей роя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМать роя|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 37218,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья на |cffc8e087+100|cffced4da, запас маны на |cffc8e087+100|cffced4da и ускоряет регенерацию маны Матерей роя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМать роя|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 37219,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья на |cffc8e087+100|cffced4da, запас маны на |cffc8e087+100|cffced4da и ускоряет регенерацию маны Матерей роя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМать роя|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 37220,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья на |cffc8e087+100|cffced4da, запас маны на |cffc8e087+100|cffced4da и ускоряет регенерацию маны Матерей роя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМать роя|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 37221,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья на |cffc8e087+100|cffced4da, запас маны на |cffc8e087+100|cffced4da и ускоряет регенерацию маны Матерей роя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМать роя|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R089",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37222,
+          "after": "|cffe4cfa3Эволюция «Плодовитость»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37223,
+          "after": "|cffe4cfa3Эволюция «Плодовитость»|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 28348,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Из каждой личинки появляется сразу |cffffffff3|cffced4da Силитида-воина вместо 2, повышается их здоровье и скорость.|n|n|cffe6c07bВзаимоисключение: исследование «Силитиды-танки» станет недоступно.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСилитид-воин|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R08B",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37227,
+          "after": "|cffe4cfa3Эволюция «Плодовитость (Осы)»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37228,
+          "after": "|cffe4cfa3Эволюция «Плодовитость (Осы)»|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 12435,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Из одной личинки появляется сразу |cffffffff2|cffced4da Силитида-осы.|n|n|cffe6c07bВзаимоисключение: исследование «Усиленные крылья» станет недоступно.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСилитид-оса|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R085",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 28344,
+          "after": "|cffe4cfa3Эволюция «Силитиды-танки»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 28345,
+          "after": "|cffe4cfa3Эволюция «Силитиды-танки»|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 28347,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает мутацию личинок в тяжелых Силитидов-танков.|n|n|cffe6c07bВзаимоисключение: исследование «Плодовитость» станет недоступно.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛичинка|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R08A",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37224,
+          "after": "|cffe4cfa3Эволюция «Усиленные крылья»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37225,
+          "after": "|cffe4cfa3Эволюция «Усиленные крылья»|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 37226,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает скорость перемещения Силитидов-ос и наделяет их способностью «Бешенство».|n|n|cffe6c07bВзаимоисключение: исследование «Плодовитость (Осы)» станет недоступно.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСилитид-оса|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R083",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37161,
+          "after": "|cffe4cfa3Ярость — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 37167,
+          "after": "|cffe4cfa3Ярость — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 37168,
+          "after": "|cffe4cfa3Ярость — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 37169,
+          "after": "|cffe4cfa3Ярость — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 37170,
+          "after": "|cffe4cfa3Ярость — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 37171,
+          "after": "|cffe4cfa3Ярость — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37162,
+          "after": "|cffe4cfa3Ярость — уровень 1|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 37163,
+          "after": "|cffe4cfa3Ярость — уровень 2|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 37164,
+          "after": "|cffe4cfa3Ярость — уровень 3|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 37165,
+          "after": "|cffe4cfa3Ярость — уровень 4|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 37166,
+          "after": "|cffe4cfa3Ярость — уровень 5|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 16442,
+          "after": "|cffe4cfa3Ярость — уровень 6|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 6738,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки всех органических войск роя на |cffc8e087+3%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 6999,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки всех органических войск роя на |cffc8e087+3%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 7007,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки всех органических войск роя на |cffc8e087+3%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 7009,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки всех органических войск роя на |cffc8e087+3%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 7090,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки всех органических войск роя на |cffc8e087+3%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 11365,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки всех органических войск роя на |cffc8e087+3%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R084",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37172,
+          "after": "|cffe4cfa3Повышенный метаболизм — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 37174,
+          "after": "|cffe4cfa3Повышенный метаболизм — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 37175,
+          "after": "|cffe4cfa3Повышенный метаболизм — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 37176,
+          "after": "|cffe4cfa3Повышенный метаболизм — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 37177,
+          "after": "|cffe4cfa3Повышенный метаболизм — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 37178,
+          "after": "|cffe4cfa3Повышенный метаболизм — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37173,
+          "after": "|cffe4cfa3Повышенный метаболизм — уровень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 37179,
+          "after": "|cffe4cfa3Повышенный метаболизм — уровень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 37180,
+          "after": "|cffe4cfa3Повышенный метаболизм — уровень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 37181,
+          "after": "|cffe4cfa3Повышенный метаболизм — уровень 4|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 37182,
+          "after": "|cffe4cfa3Повышенный метаболизм — уровень 5|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 37183,
+          "after": "|cffe4cfa3Повышенный метаболизм — уровень 6|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 22283,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость перемещения всех органических войск роя на |cffc8e087+4%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 22284,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость перемещения всех органических войск роя на |cffc8e087+4%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 22285,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость перемещения всех органических войск роя на |cffc8e087+4%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 22286,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость перемещения всех органических войск роя на |cffc8e087+4%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 22287,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость перемещения всех органических войск роя на |cffc8e087+4%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 22288,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость перемещения всех органических войск роя на |cffc8e087+4%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R07Z",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37124,
+          "after": "|cffe4cfa3Выживаемость — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 37119,
+          "after": "|cffe4cfa3Выживаемость — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 37120,
+          "after": "|cffe4cfa3Выживаемость — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 37121,
+          "after": "|cffe4cfa3Выживаемость — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 37122,
+          "after": "|cffe4cfa3Выживаемость — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 37123,
+          "after": "|cffe4cfa3Выживаемость — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37125,
+          "after": "|cffe4cfa3Выживаемость — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 37126,
+          "after": "|cffe4cfa3Выживаемость — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 37127,
+          "after": "|cffe4cfa3Выживаемость — уровень 3|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 37128,
+          "after": "|cffe4cfa3Выживаемость — уровень 4|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 37129,
+          "after": "|cffe4cfa3Выживаемость — уровень 5|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 37130,
+          "after": "|cffe4cfa3Выживаемость — уровень 6|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 33709,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья всех органических войск роя на |cffc8e087+7%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 33710,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья всех органических войск роя на |cffc8e087+7%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 33711,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья всех органических войск роя на |cffc8e087+7%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 33712,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья всех органических войск роя на |cffc8e087+7%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 33713,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья всех органических войск роя на |cffc8e087+7%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 33714,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья всех органических войск роя на |cffc8e087+7%|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем органическим воинам.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R07Y",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37112,
+          "after": "|cffe4cfa3Панцирь — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 37107,
+          "after": "|cffe4cfa3Панцирь — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 37108,
+          "after": "|cffe4cfa3Панцирь — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 37109,
+          "after": "|cffe4cfa3Панцирь — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 37110,
+          "after": "|cffe4cfa3Панцирь — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 37111,
+          "after": "|cffe4cfa3Панцирь — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37113,
+          "after": "|cffe4cfa3Панцирь — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 37114,
+          "after": "|cffe4cfa3Панцирь — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 37115,
+          "after": "|cffe4cfa3Панцирь — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 37116,
+          "after": "|cffe4cfa3Панцирь — уровень 4|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 37117,
+          "after": "|cffe4cfa3Панцирь — уровень 5|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 37118,
+          "after": "|cffe4cfa3Панцирь — уровень 6|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11796,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню всех воинов роя на |cffc8e087+1,5|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем воинам Силитидов.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 11797,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню всех воинов роя на |cffc8e087+1,5|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем воинам Силитидов.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 11798,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню всех воинов роя на |cffc8e087+1,5|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем воинам Силитидов.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 11799,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню всех воинов роя на |cffc8e087+1,5|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем воинам Силитидов.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 11800,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню всех воинов роя на |cffc8e087+1,5|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем воинам Силитидов.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 11801,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню всех воинов роя на |cffc8e087+1,5|cffced4da.|n|n|cffa6afb8Применяется ко:|cffced4da всем воинам Силитидов.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R009",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 36862,
+          "after": "|cffe4cfa3Когти — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 36951,
+          "after": "|cffe4cfa3Когти — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 36969,
+          "after": "|cffe4cfa3Когти — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 36973,
+          "after": "|cffe4cfa3Когти — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 36981,
+          "after": "|cffe4cfa3Когти — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 37069,
+          "after": "|cffe4cfa3Когти — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37079,
+          "after": "|cffe4cfa3Когти — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 37084,
+          "after": "|cffe4cfa3Когти — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 37091,
+          "after": "|cffe4cfa3Когти — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 37092,
+          "after": "|cffe4cfa3Когти — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 37093,
+          "after": "|cffe4cfa3Когти — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 37094,
+          "after": "|cffe4cfa3Когти — уровень 6|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 5322,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСилитид-воин|cffced4da|n- |cffa9c7deСилитид-оса|cffced4da|n- |cffa9c7deСкарабей|cffced4da|n- |cffa9c7deСолдат Киражей|cffced4da|n- |cffa9c7deПаук-страж|cffced4da|n- |cffa9c7deКомандир Киражей|cffced4da|n- |cffa9c7deСилитид-танк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 11732,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСилитид-воин|cffced4da|n- |cffa9c7deСилитид-оса|cffced4da|n- |cffa9c7deСкарабей|cffced4da|n- |cffa9c7deСолдат Киражей|cffced4da|n- |cffa9c7deПаук-страж|cffced4da|n- |cffa9c7deКомандир Киражей|cffced4da|n- |cffa9c7deСилитид-танк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 11733,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСилитид-воин|cffced4da|n- |cffa9c7deСилитид-оса|cffced4da|n- |cffa9c7deСкарабей|cffced4da|n- |cffa9c7deСолдат Киражей|cffced4da|n- |cffa9c7deПаук-страж|cffced4da|n- |cffa9c7deКомандир Киражей|cffced4da|n- |cffa9c7deСилитид-танк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 11734,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСилитид-воин|cffced4da|n- |cffa9c7deСилитид-оса|cffced4da|n- |cffa9c7deСкарабей|cffced4da|n- |cffa9c7deСолдат Киражей|cffced4da|n- |cffa9c7deПаук-страж|cffced4da|n- |cffa9c7deКомандир Киражей|cffced4da|n- |cffa9c7deСилитид-танк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 11735,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСилитид-воин|cffced4da|n- |cffa9c7deСилитид-оса|cffced4da|n- |cffa9c7deСкарабей|cffced4da|n- |cffa9c7deСолдат Киражей|cffced4da|n- |cffa9c7deПаук-страж|cffced4da|n- |cffa9c7deКомандир Киражей|cffced4da|n- |cffa9c7deСилитид-танк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 11736,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСилитид-воин|cffced4da|n- |cffa9c7deСилитид-оса|cffced4da|n- |cffa9c7deСкарабей|cffced4da|n- |cffa9c7deСолдат Киражей|cffced4da|n- |cffa9c7deПаук-страж|cffced4da|n- |cffa9c7deКомандир Киражей|cffced4da|n- |cffa9c7deСилитид-танк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R07X",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37095,
+          "after": "|cffe4cfa3Дальнобойные атаки — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 37096,
+          "after": "|cffe4cfa3Дальнобойные атаки — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 37097,
+          "after": "|cffe4cfa3Дальнобойные атаки — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 37098,
+          "after": "|cffe4cfa3Дальнобойные атаки — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 37099,
+          "after": "|cffe4cfa3Дальнобойные атаки — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 37100,
+          "after": "|cffe4cfa3Дальнобойные атаки — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37101,
+          "after": "|cffe4cfa3Дальнобойные атаки — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 37102,
+          "after": "|cffe4cfa3Дальнобойные атаки — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 37103,
+          "after": "|cffe4cfa3Дальнобойные атаки — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 37104,
+          "after": "|cffe4cfa3Дальнобойные атаки — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 37105,
+          "after": "|cffe4cfa3Дальнобойные атаки — уровень 5|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 37106,
+          "after": "|cffe4cfa3Дальнобойные атаки — уровень 6|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11744,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСлизень|cffced4da|n- |cffa9c7deМалый слизень|cffced4da|n- |cffa9c7deМать роя|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 11757,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСлизень|cffced4da|n- |cffa9c7deМалый слизень|cffced4da|n- |cffa9c7deМать роя|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 11758,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСлизень|cffced4da|n- |cffa9c7deМалый слизень|cffced4da|n- |cffa9c7deМать роя|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 11759,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСлизень|cffced4da|n- |cffa9c7deМалый слизень|cffced4da|n- |cffa9c7deМать роя|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 11760,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСлизень|cffced4da|n- |cffa9c7deМалый слизень|cffced4da|n- |cffa9c7deМать роя|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 11761,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСлизень|cffced4da|n- |cffa9c7deМалый слизень|cffced4da|n- |cffa9c7deМать роя|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0D0",
+      "levels": 5,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 12977,
+          "after": "|cffe4cfa3Улучшенная добыча — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 13609,
+          "after": "|cffe4cfa3Улучшенная добыча — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 15711,
+          "after": "|cffe4cfa3Улучшенная добыча — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 15712,
+          "after": "|cffe4cfa3Улучшенная добыча — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 15846,
+          "after": "|cffe4cfa3Улучшенная добыча — уровень 5|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 15013,
+          "after": "|cffe4cfa3Улучшенная добыча — уровень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 15014,
+          "after": "|cffe4cfa3Улучшенная добыча — уровень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 15713,
+          "after": "|cffe4cfa3Улучшенная добыча — уровень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 15714,
+          "after": "|cffe4cfa3Улучшенная добыча — уровень 4|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 15849,
+          "after": "|cffe4cfa3Улучшенная добыча — уровень 5|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 20802,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой трутнями древесины на |cffc8e087+10|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТрутень|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/5|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 21361,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой трутнями древесины на |cffc8e087+10|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТрутень|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/5|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 21372,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой трутнями древесины на |cffc8e087+10|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТрутень|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/5|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R08C",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37229,
+          "after": "|cffe4cfa3Эволюция «Делимость»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37230,
+          "after": "|cffe4cfa3Эволюция «Делимость»|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 37231,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Слизни после гибели распадаются на двух Малых слизней.|n|n|cffe6c07bВзаимоисключение: исследование «Вязкая слизь» станет недоступно.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСлизень|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R08D",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37232,
+          "after": "|cffe4cfa3Эволюция «Вязкая слизь»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37233,
+          "after": "|cffe4cfa3Эволюция «Вязкая слизь»|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 37234,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Атаки Слизней замедляют передвижение цели на |cffe69a8d4%|cffced4da за удар (эффект суммируется).|n|n|cffe6c07bВзаимоисключение: исследование «Делимость» станет недоступно.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСлизень|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R08F",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37238,
+          "after": "|cffe4cfa3Эволюция «Паразит»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37239,
+          "after": "|cffe4cfa3Эволюция «Паразит»|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 12451,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Пауки-стражи обучаются внедрять во врагов паразитов, наносящих урон и порождающих паучков.|n|n|cffe6c07bВзаимоисключение: исследование «Кислотный снаряд» станет недоступно.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПаук-страж|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R08E",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 38479,
+          "after": "|cffe4cfa3Эволюция «Кислотный снаряд»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38480,
+          "after": "|cffe4cfa3Эволюция «Кислотный снаряд»|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38481,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Пауки-стражи обучаются метать кислотные снаряды, наносящие урон по области и снижающие броню на |cffe69a8d3|cffced4da.|n|n|cffe6c07bВзаимоисключение: исследование «Паразит» станет недоступно.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПаук-страж|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R086",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "tip_tip1",
+          "wts_id": 12205,
+          "after": "|cffe4cfa3Сокрушение|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 12404,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет Анубисатов шансом |cffffffff20%|cffced4da нанести сокрушительный удар по области вокруг цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАнубисат|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R080",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37142,
+          "after": "|cffe4cfa3Каменная оболочка — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 37131,
+          "after": "|cffe4cfa3Каменная оболочка — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 37132,
+          "after": "|cffe4cfa3Каменная оболочка — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 37133,
+          "after": "|cffe4cfa3Каменная оболочка — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 37134,
+          "after": "|cffe4cfa3Каменная оболочка — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 37135,
+          "after": "|cffe4cfa3Каменная оболочка — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37136,
+          "after": "|cffe4cfa3Каменная оболочка — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 37137,
+          "after": "|cffe4cfa3Каменная оболочка — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 37138,
+          "after": "|cffe4cfa3Каменная оболочка — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 37139,
+          "after": "|cffe4cfa3Каменная оболочка — уровень 4|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 37140,
+          "after": "|cffe4cfa3Каменная оболочка — уровень 5|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 37141,
+          "after": "|cffe4cfa3Каменная оболочка — уровень 6|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 18419,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню Обсидиановых статуй и Сфинксов на |cffc8e087+1|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОбсидиановая статуя|cffced4da|n- |cffa9c7deСфинкс|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 18420,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню Обсидиановых статуй и Сфинксов на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОбсидиановая статуя|cffced4da|n- |cffa9c7deСфинкс|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 18421,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню Обсидиановых статуй и Сфинксов на |cffc8e087+3|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОбсидиановая статуя|cffced4da|n- |cffa9c7deСфинкс|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 18422,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню Обсидиановых статуй и Сфинксов на |cffc8e087+4|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОбсидиановая статуя|cffced4da|n- |cffa9c7deСфинкс|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 18423,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню Обсидиановых статуй и Сфинксов на |cffc8e087+5|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОбсидиановая статуя|cffced4da|n- |cffa9c7deСфинкс|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 18424,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню Обсидиановых статуй и Сфинксов на |cffc8e087+6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОбсидиановая статуя|cffced4da|n- |cffa9c7deСфинкс|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R081",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37144,
+          "after": "|cffe4cfa3Атака анубисатов — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 37145,
+          "after": "|cffe4cfa3Атака анубисатов — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 37146,
+          "after": "|cffe4cfa3Атака анубисатов — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 37147,
+          "after": "|cffe4cfa3Атака анубисатов — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 37148,
+          "after": "|cffe4cfa3Атака анубисатов — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 37149,
+          "after": "|cffe4cfa3Атака анубисатов — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37150,
+          "after": "|cffe4cfa3Атака анубисатов — уровень 1|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 37151,
+          "after": "|cffe4cfa3Атака анубисатов — уровень 2|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 37152,
+          "after": "|cffe4cfa3Атака анубисатов — уровень 3|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 37153,
+          "after": "|cffe4cfa3Атака анубисатов — уровень 4|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 37154,
+          "after": "|cffe4cfa3Атака анубисатов — уровень 5|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 37155,
+          "after": "|cffe4cfa3Атака анубисатов — уровень 6|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 37143,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак Анубисатов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАнубисат|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 37156,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак Анубисатов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАнубисат|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 37157,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак Анубисатов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАнубисат|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 37158,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак Анубисатов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАнубисат|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 37159,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак Анубисатов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАнубисат|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 37160,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак Анубисатов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАнубисат|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R082",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11917,
+          "after": "|cffe4cfa3Прочность — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 11912,
+          "after": "|cffe4cfa3Прочность — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 11913,
+          "after": "|cffe4cfa3Прочность — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 11914,
+          "after": "|cffe4cfa3Прочность — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 11915,
+          "after": "|cffe4cfa3Прочность — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 11916,
+          "after": "|cffe4cfa3Прочность — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11918,
+          "after": "|cffe4cfa3Прочность — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 11919,
+          "after": "|cffe4cfa3Прочность — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 11920,
+          "after": "|cffe4cfa3Прочность — уровень 3|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 11921,
+          "after": "|cffe4cfa3Прочность — уровень 4|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 11922,
+          "after": "|cffe4cfa3Прочность — уровень 5|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 11923,
+          "after": "|cffe4cfa3Прочность — уровень 6|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11924,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья Обсидиановых статуй и Сфинксов на |cffc8e087+4%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОбсидиановая статуя|cffced4da|n- |cffa9c7deСфинкс|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 11925,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья Обсидиановых статуй и Сфинксов на |cffc8e087+4%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОбсидиановая статуя|cffced4da|n- |cffa9c7deСфинкс|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 11926,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья Обсидиановых статуй и Сфинксов на |cffc8e087+4%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОбсидиановая статуя|cffced4da|n- |cffa9c7deСфинкс|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 11927,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья Обсидиановых статуй и Сфинксов на |cffc8e087+4%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОбсидиановая статуя|cffced4da|n- |cffa9c7deСфинкс|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 11928,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья Обсидиановых статуй и Сфинксов на |cffc8e087+4%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОбсидиановая статуя|cffced4da|n- |cffa9c7deСфинкс|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 11929,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья Обсидиановых статуй и Сфинксов на |cffc8e087+4%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОбсидиановая статуя|cffced4da|n- |cffa9c7deСфинкс|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R087",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 37192,
+          "after": "|cffe4cfa3Посвящение пророков — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 37187,
+          "after": "|cffe4cfa3Посвящение пророков — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 37188,
+          "after": "|cffe4cfa3Посвящение пророков — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 37189,
+          "after": "|cffe4cfa3Посвящение пророков — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 37190,
+          "after": "|cffe4cfa3Посвящение пророков — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 37191,
+          "after": "|cffe4cfa3Посвящение пророков — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 37193,
+          "after": "|cffe4cfa3Посвящение пророков — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 37194,
+          "after": "|cffe4cfa3Посвящение пророков — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 37195,
+          "after": "|cffe4cfa3Посвящение пророков — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 37196,
+          "after": "|cffe4cfa3Посвящение пророков — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 37197,
+          "after": "|cffe4cfa3Посвящение пророков — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 37198,
+          "after": "|cffe4cfa3Посвящение пророков — уровень 6|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 37186,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья, маны и ускоряет регенерацию маны Пророков Киражей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПророк Киражей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 37199,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья, маны и ускоряет регенерацию маны Пророков Киражей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПророк Киражей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 37200,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья, маны и ускоряет регенерацию маны Пророков Киражей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПророк Киражей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 37201,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья, маны и ускоряет регенерацию маны Пророков Киражей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПророк Киражей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 37202,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья, маны и ускоряет регенерацию маны Пророков Киражей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПророк Киражей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 37203,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья, маны и ускоряет регенерацию маны Пророков Киражей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПророк Киражей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    }
+  ]
+}

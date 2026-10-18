@@ -1,0 +1,3530 @@
+{
+  "race": "Draeneis",
+  "wts_updates": {
+    "15": "|cffa6afb8ЮНИТ:|cffced4da Священник Дренеев. Поддерживает войска исцелением, рассеиванием чар и благословением Света.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deИсцеление|cffced4da: восстанавливает здоровье раненому союзнику.|n- |cffa9c7deРассеивание заклинаний|cffced4da: снимает положительные эффекты с врагов и отрицательные с союзников.|n- |cffa9c7deПламя света|cffced4da: наполняет союзника силой Света.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r",
+    "62": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает поток целительной энергии, восполняющей здоровье союзникам в обширной области.|n|n|cffa6afb8Уровень 1:|r |cffffffff20|cffced4da ед. здоровья в сек.|n|cffa6afb8Уровень 2:|r |cffffffff30|cffced4da ед. здоровья в сек.|r",
+    "63": "|cffe4cfa3Волна исцеления|r [|cffffffff4|r] (|cffffffffQ|r)",
+    "201": "|cffe4cfa3Спокойствие|r",
+    "352": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает на помощь верных воинов дренеев.|n|n|cffa6afb8Уровень 1:|r |cffffffff1|cffced4da воин дреней.|n|cffa6afb8Уровень 2:|r |cffffffff2|cffced4da воина дренея.|n|cffa6afb8Уровень 3:|r |cffffffff3|cffced4da воина дренея.|n|cffa6afb8Уровень 4:|r |cffffffff4|cffced4da воина дренея.|r",
+    "353": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff1|cffced4da воина дренея на помощь.|r",
+    "354": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff2|cffced4da воинов дренеев на помощь.|r",
+    "355": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff3|cffced4da воинов дренеев на помощь.|r",
+    "444": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff4|cffced4da воинов дренеев на помощь.|r",
+    "490": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff14|cffced4da волн ледяных осколков по |cffffffff60|cffced4da ед. урона.|r",
+    "500": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает волны ледяных осколков, наносящих урон в области действия.|n|n|cffa6afb8Уровень 1:|r |cffffffff6|cffced4da волн по |cffffffff25|cffced4da ед. урона.|n|cffa6afb8Уровень 2:|r |cffffffff8|cffced4da волн по |cffffffff35|cffced4da ед. урона.|n|cffa6afb8Уровень 3:|r |cffffffff10|cffced4da волн по |cffffffff45|cffced4da ед. урона.|n|cffa6afb8Уровень 4:|r |cffffffff14|cffced4da волн по |cffffffff60|cffced4da ед. урона.|r",
+    "501": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff6|cffced4da волн ледяных осколков по |cffffffff25|cffced4da ед. урона.|r",
+    "502": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff8|cffced4da волн ледяных осколков по |cffffffff35|cffced4da ед. урона.|r",
+    "539": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff10|cffced4da волн ледяных осколков по |cffffffff45|cffced4da ед. урона.|r",
+    "627": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff130|cffced4da ед. здоровья цели и переходит к |cffffffff3|cffced4da союзникам.|r",
+    "628": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff205|cffced4da ед. здоровья цели и переходит к |cffffffff4|cffced4da союзникам.|r",
+    "663": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восполняет союзникам |cffffffff20|cffced4da ед. здоровья в сек. в обширной области.|r",
+    "667": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восполняет союзникам |cffffffff30|cffced4da ед. здоровья в сек. в обширной области.|r",
+    "775": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Покрывает щитом союзников вокруг на |cffffffff30|cffced4da сек., даруя |cffc8e087+2|cffced4da к броне.|r",
+    "779": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Покрывает щитом союзников вокруг на |cffffffff30|cffced4da сек., даруя |cffc8e087+3|cffced4da к броне.|r",
+    "780": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Покрывает щитом союзников вокруг на |cffffffff30|cffced4da сек., даруя |cffc8e087+4|cffced4da к броне.|r",
+    "810": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Покрывает щитом союзников вокруг на |cffffffff30|cffced4da сек., даруя |cffc8e087+6|cffced4da к броне.|r",
+    "889": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff150|cffced4da ед. цели и |cffffffff100|cffced4da ед. врагам по области.|r",
+    "1010": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff200|cffced4da ед. цели и |cffffffff150|cffced4da ед. врагам по области.|r",
+    "1281": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff350|cffced4da ед. цели и |cffffffff200|cffced4da ед. врагам по области.|r",
+    "1587": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поджигает находящихся рядом врагов, нанося |cffffffff20|cffced4da ед. урона и |cffffffff2|cffced4da ед./сек.|r",
+    "2175": "|cffe4cfa3Ускользание|r",
+    "2177": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff100|cffced4da ед. цели и |cffffffff50|cffced4da ед. врагам по области.|r",
+    "2439": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлая кавалерия Дренеев. Мощный всадник ближнего боя с высоким запасом здоровья и сокрушительным ударом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТяжелые удары|cffced4da: наносит повышенный урон по тяжелобронированным целям.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r",
+    "2440": "|cffa6afb8ЮНИТ:|cffced4da Элитный маг поддержки Озарённых. Владеет исцелением, цепными молниями и сглазом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deИсцеление|cffced4da: восстанавливает здоровье союзнику.|n- |cffa9c7deЦепная молния|cffced4da: поражает молнией группу врагов.|n- |cffa9c7deСглаз|cffced4da: временно превращает врага в безобидное существо.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r",
+    "2745": "|cffe4cfa3Чародей|r",
+    "2783": "|cffa6afb8ЮНИТ:|cffced4da Магический боец поддержки Дренеев. Специализируется на контроле вражеских заклинателей и подавлении противников.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗамедление|cffced4da: снижает скорость перемещения и атаки цели.|n- |cffa9c7deПохищение маны|cffced4da: вытягивает запас маны у врага.|n- |cffa9c7deНемота|cffced4da: запрещает цели применять заклинания.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r",
+    "3557": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует шанс уклониться от ударов противника и нанести критический урон.|n|n|cffa6afb8Уровень 1:|r шанс |cffffffff10%|cffced4da.|n|cffa6afb8Уровень 2:|r шанс |cffffffff15%|cffced4da.|n|cffa6afb8Уровень 3:|r шанс |cffffffff20%|cffced4da.|n|cffa6afb8Уровень 4:|r шанс |cffffffff25%|cffced4da.|r",
+    "3615": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит мощный удар в ближнем бою, нанося урон и оглушая цель.|n|n|cffa6afb8Уровень 1:|r |cffffffff100|cffced4da ед. урона, оглушение |cffffffff2|cffced4da сек.|n|cffa6afb8Уровень 2:|r |cffffffff200|cffced4da ед. урона, оглушение |cffffffff3|cffced4da сек.|r",
+    "3628": "|cffe4cfa3Сломленный страж|r",
+    "3632": "|cffe4cfa3Сломленный провидец|r",
+    "3633": "|cffe4cfa3Сломленный провидец|r (|cffffffffE|r)",
+    "3658": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff100|cffced4da ед. урона цели и оглушает её на |cffffffff2|cffced4da сек.|r",
+    "3704": "|cffe4cfa3Сломленный страж|r (|cffffffffQ|r)",
+    "3705": "|cffe4cfa3Сломленный мастер|r (|cffffffffW|r)",
+    "3706": "|cffe4cfa3Возрождение|r",
+    "3707": "|cffe4cfa3Возрождение|r",
+    "3708": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Озарённый паладин мгновенно возрождается после гибели.|r",
+    "3709": "|cffe4cfa3Аура света|r",
+    "3710": "|cffe4cfa3Аура света|r",
+    "3715": "|cffe4cfa3Свет небес|r",
+    "3716": "|cffe4cfa3Свет небес|r (|cffffffffR|r)",
+    "3735": "|cffe4cfa3Свет небес|r (|cffffffffQ|r)",
+    "3736": "|cffe4cfa3Свет небес|r",
+    "3737": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восполняет |cffffffff150|cffced4da ед. здоровья живому союзнику или наносит вдвое меньший урон нежити.|r",
+    "3742": "|cffe4cfa3Жрица Наару|r (|cffffffffW|r)",
+    "3747": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья паладинов на |cffc8e087+50|cffced4da ед., запас маны на |cffc8e087+40|cffced4da ед., её регенерацию и открывает священные чары (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da.|r",
+    "3748": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья паладинов на |cffc8e087+100|cffced4da ед., запас маны на |cffc8e087+80|cffced4da ед., её регенерацию и открывает священные чары (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da.|r",
+    "3751": "|cffe4cfa3Сглаз|r",
+    "3752": "|cffe4cfa3Сглаз|r (|cffffffffE|r)",
+    "3754": "|cffe4cfa3Сглаз|r (|cffffffffE|r)",
+    "3755": "|cffe4cfa3Сглаз|r",
+    "3757": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Изгоняет вражескую цель в астрал, замедляя её и лишая возможности атаковать.|r",
+    "3813": "|cffe4cfa3Цепная молния|r",
+    "3814": "|cffe4cfa3Цепная молния|r (|cffffffffQ|r)",
+    "3815": "|cffe4cfa3Цепная молния|r (|cffffffffQ|r)",
+    "3823": "|cffe4cfa3Внутреннее жжение|r",
+    "3824": "|cffe4cfa3Внутреннее жжение|r (|cffffffffW|r)",
+    "3825": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает урон врагов и уменьшает их показатель брони.|r",
+    "3826": "|cffe4cfa3Воскрешение|r",
+    "3827": "|cffe4cfa3Воскрешение|r (|cffffffffE|r)",
+    "3833": "|cffe4cfa3Похищение маны|r",
+    "3834": "|cffe4cfa3Похищение маны|r (|cffffffffW|r)",
+    "3835": "|cffe4cfa3Замедление|r",
+    "3836": "|cffe4cfa3Замедление|r (|cffffffffQ|r)",
+    "3837": "|cffe4cfa3Немота|r",
+    "3838": "|cffe4cfa3Немота|r (|cffffffffE|r)",
+    "3922": "|cffe4cfa3Посвященное оружие|r",
+    "3923": "|cffe4cfa3Посвященное оружие|r",
+    "3924": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон целям со всеми типами брони.|r",
+    "3925": "|cffe4cfa3Посвященное оружие|r",
+    "3926": "|cffe4cfa3Посвященное оружие|r",
+    "3927": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон целям со всеми типами брони.|r",
+    "3929": "|cffe4cfa3Посвященное оружие|r",
+    "3930": "|cffe4cfa3Посвященное оружие|r",
+    "3931": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон целям со всеми типами брони.|r",
+    "3933": "|cffe4cfa3Посвященное оружие|r",
+    "3934": "|cffe4cfa3Посвященное оружие|r",
+    "3935": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон целям со всеми типами брони.|r",
+    "3937": "|cffe4cfa3Посвященное оружие|r",
+    "3938": "|cffe4cfa3Посвященное оружие|r",
+    "3939": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон целям со всеми типами брони.|r",
+    "3941": "|cffe4cfa3Посвященное оружие|r",
+    "3942": "|cffe4cfa3Посвященное оружие|r",
+    "3943": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон целям со всеми типами брони.|r",
+    "3945": "|cffe4cfa3Посвященное оружие|r",
+    "3946": "|cffe4cfa3Посвященное оружие|r",
+    "3950": "|cffe4cfa3Пламя света|r",
+    "3951": "|cffe4cfa3Пламя света|r",
+    "3968": "|cffe4cfa3Тяжелые удары|r",
+    "3969": "|cffe4cfa3Тяжелые удары|r",
+    "3970": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон по целям с тяжёлой бронёй.|r",
+    "3974": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон целям со всеми типами брони.|r",
+    "3975": "|cffe4cfa3Танец ветра|r",
+    "3976": "|cffe4cfa3Танец ветра|r (|cffffffffW|r)",
+    "3977": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует невидимость и ускорение. Первая атака из невидимости наносит повышенный урон.|r",
+    "3979": "|cffe4cfa3Отравленное оружие|r",
+    "3980": "|cffe4cfa3Отравленное оружие|r",
+    "3982": "|cffe4cfa3Рассекающий удар|r",
+    "3984": "|cffe4cfa3Рассекающий удар|r",
+    "3985": "|cffe4cfa3Сжигание маны|r",
+    "3986": "|cffe4cfa3Сжигание маны|r",
+    "3991": "|cffe4cfa3Щит молний|r",
+    "3992": "|cffe4cfa3Щит молний|r (|cffffffffE|r)",
+    "4016": "|cffe4cfa3Безумие|r",
+    "4017": "|cffe4cfa3Безумие|r (|cffffffffQ|r)",
+    "4022": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Священный огонь атакует ближайших врагов, нанося |cffffffff20|cffced4da ед. урона и поджигая их на |cffffffff1|cffced4da ед./сек.|r",
+    "4023": "|cffe4cfa3Массовое исцеление|r",
+    "4067": "|cffe4cfa3Ковка оружия|r",
+    "4070": "|cffe4cfa3Ковка оружия|r (|cffffffffC|r)",
+    "4073": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Изготавливает усиленное вооружение для всадников на элекках, увеличивая силу атаки на |cffc8e087+8|cffced4da ед.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da.|r",
+    "4101": "|cffe4cfa3Массовое исцеление|r (|cffffffffW|r)",
+    "4104": "|cffe4cfa3Чародейские познания|r",
+    "4105": "|cffe4cfa3Чародейские познания|r (|cffffffffD|r)",
+    "4106": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас маны чародеев на |cffc8e087+25|cffced4da ед. и открывает способность «Безумие».|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЧародей|cffced4da.|r",
+    "4126": "|cffe4cfa3Мудрость предков [1/3]|r",
+    "4127": "|cffe4cfa3Мудрость предков [2/3]|r",
+    "4128": "|cffe4cfa3Мудрость предков [3/3]|r",
+    "4129": "|cffe4cfa3Мудрость предков [1/3]|r (|cffffffffA|r)",
+    "4130": "|cffe4cfa3Мудрость предков [2/3]|r (|cffffffffA|r)",
+    "4131": "|cffe4cfa3Мудрость предков [3/3]|r (|cffffffffA|r)",
+    "4141": "|cffe4cfa3Мастерство танца ветра|r",
+    "4144": "|cffe4cfa3Мастерство танца ветра|r (|cffffffffD|r)",
+    "4147": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Сломленных мастеров скрытности и внезапному нападению, открывая способность «Танец ветра».|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r",
+    "4154": "|cffe4cfa3Отравленное оружие|r",
+    "4157": "|cffe4cfa3Отравленное оружие|r (|cffffffffD|r)",
+    "4160": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Покрывает оружие Сломленных смертоносным ядом, замедляющим врагов и наносящим периодический урон.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r",
+    "4201": "|cffe4cfa3Древние знания Света|r",
+    "4202": "|cffe4cfa3Древние знания Света|r",
+    "4203": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Воскрешает |cffffffff1|cffced4da павшего союзного воина поблизости.|r",
+    "4208": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья паладинов на |cffc8e087+150|cffced4da ед., запас маны на |cffc8e087+120|cffced4da ед., её регенерацию и открывает священные чары (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da.|r",
+    "4211": "|cffe4cfa3Изучение магии [1/2]|r",
+    "4212": "|cffe4cfa3Изучение магии [2/2]|r",
+    "4214": "|cffe4cfa3Изучение магии [1/2]|r (|cffffffffD|r)",
+    "4215": "|cffe4cfa3Изучение магии [2/2]|r (|cffffffffD|r)",
+    "4217": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Озарённых на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+50|cffced4da ед., её регенерацию на |cffc8e087+0.5|cffced4da ед./сек. и открывает способность «Цепная молния» (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deМаг Озаренный|cffced4da.|r",
+    "4218": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Озарённых на |cffc8e087+80|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед., её регенерацию на |cffc8e087+1.0|cffced4da ед./сек. и открывает способность «Сглаз» (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deМаг Озаренный|cffced4da.|r",
+    "4224": "|cffe4cfa3Учение наару [1/2]|r",
+    "4225": "|cffe4cfa3Учение наару [2/2]|r",
+    "4227": "|cffe4cfa3Учение наару [1/2]|r (|cffffffffS|r)",
+    "4228": "|cffe4cfa3Учение наару [2/2]|r (|cffffffffS|r)",
+    "4230": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Жрицы Наару постигают глубокие знания Света: увеличивает запас маны на |cffc8e087+40|cffced4da ед. и скорость её регенерации на |cffc8e087+0.3|cffced4da ед./сек. (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЖрица Наару|cffced4da.|r",
+    "4231": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Жрицы Наару постигают высшие знания Света: увеличивает запас маны на |cffc8e087+80|cffced4da ед. и скорость её регенерации на |cffc8e087+0.6|cffced4da ед./сек. (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЖрица Наару|cffced4da.|r",
+    "4237": "|cffe4cfa3Освящение оружия|r",
+    "4240": "|cffe4cfa3Освящение оружия|r (|cffffffffA|r)",
+    "4243": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наполняет клинки мечников Озарённых священной силой, наделяя их атаки способностью «Посвященное оружие» с повышенным уроном по всем типам брони.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da.|r",
+    "4273": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает воинов Сломленных боевой ярости Пеплоустов: повышает скорость атаки, но снижает скорость передвижения.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|n|n|cffff8080Исключает исследование «Мастерство Сломленных».|r",
+    "4274": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает воинов Сломленных ловкости и стремительности: повышает скорость передвижения, но незначительно снижает скорость атаки.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|n|n|cffff8080Исключает исследование «Мастерство Пеплоустов».|r",
+    "4303": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает возможность возводить Логово Сломленных и нанимать войска Сломленных дренеев и Пеплоустов.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛогово Сломленных|cffced4da: открывает постройку и доступ к изгнанникам.|r",
+    "4307": "|cffe4cfa3Посвящение Озаренных|r",
+    "4308": "|cffe4cfa3Посвящение Озаренных|r (|cffffffffR|r)",
+    "4316": "|cffe4cfa3Дреней Паладин|r",
+    "4317": "Мараад,Нобундо,Ирель,Барос Алекстон,Виндикатор Борос,Аргус,Карабор,Велен",
+    "4319": "|cffe4cfa3Дреней Паладин|r (|cffffffffE|r)",
+    "4321": "|cffe4cfa3Аура Доблести|r",
+    "4322": "|cffe4cfa3Аура Доблести|r [|cffffffff1|r]",
+    "4323": "|cffe4cfa3Аура Доблести|r (|cffffffffE|r)",
+    "4324": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзников на |cffc8e087+20%|cffced4da.|r",
+    "4325": "|cffe4cfa3Аура Доблести|r [|cffffffff2|r]",
+    "4326": "|cffe4cfa3Аура Доблести|r [|cffffffff3|r]",
+    "4327": "|cffe4cfa3Аура Доблести|r [|cffffffff4|r]",
+    "4328": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзников на |cffc8e087+30%|cffced4da.|r",
+    "4329": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзников на |cffc8e087+40%|cffced4da.|r",
+    "4339": "|cffe4cfa3Сокрушение|r [|cffffffff1|r]",
+    "4340": "|cffe4cfa3Сокрушение|r [|cffffffff2|r]",
+    "4341": "|cffe4cfa3Сокрушение|r [|cffffffff3|r]",
+    "4342": "|cffe4cfa3Сокрушение|r [|cffffffff4|r]",
+    "4346": "|cffe4cfa3Сокрушение|r",
+    "4347": "|cffe4cfa3Сокрушение|r (|cffffffffQ|r)",
+    "4380": "|cffe4cfa3Благодать|r",
+    "4381": "|cffe4cfa3Благодать|r (|cffffffffR|r)",
+    "4384": "|cffe4cfa3Благодать|r [|cffffffff1|r] (|cffffffffR|r)",
+    "4385": "|cffe4cfa3Благодать|r [|cffffffff2|r] (|cffffffffR|r)",
+    "4391": "|cffe4cfa3Капитан Гвардии|r",
+    "4393": "|cffe4cfa3Капитан Гвардии|r (|cffffffffW|r)",
+    "4396": "|cffe4cfa3Священная кара|r (|cffffffffQ|r)",
+    "4397": "|cffe4cfa3Священная кара|r [|cffffffff1|r] (|cffffffffQ|r)",
+    "4398": "|cffe4cfa3Священная кара|r [|cffffffff2|r] (|cffffffffQ|r)",
+    "4399": "|cffe4cfa3Священная кара|r [|cffffffff3|r] (|cffffffffQ|r)",
+    "4400": "|cffe4cfa3Священная кара|r [|cffffffff4|r] (|cffffffffQ|r)",
+    "4411": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff280|cffced4da ед. здоровья цели и переходит к |cffffffff5|cffced4da союзникам.|r",
+    "4420": "|cffe4cfa3Удачливость|r",
+    "4421": "|cffe4cfa3Удачливость|r (|cffffffffE|r)",
+    "4422": "|cffe4cfa3Удачливость|r [|cffffffff1|r]",
+    "4423": "|cffe4cfa3Удачливость|r [|cffffffff2|r]",
+    "4424": "|cffe4cfa3Удачливость|r [|cffffffff3|r]",
+    "4425": "|cffe4cfa3Удачливость|r [|cffffffff4|r]",
+    "4426": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует шанс |cffffffff25%|cffced4da уклониться от ударов или нанести критический урон.|r",
+    "4427": "|cffe4cfa3Идеальный Удар|r",
+    "4428": "|cffe4cfa3Идеальный Удар|r (|cffffffffB|r)",
+    "4429": "|cffe4cfa3Идеальный Удар|r [|cffffffff1|r]",
+    "4430": "|cffe4cfa3Идеальный Удар|r [|cffffffff2|r]",
+    "4433": "|cffe4cfa3Пророк Сломленных|r",
+    "4435": "|cffe4cfa3Пророк Сломленных|r (|cffffffffQ|r)",
+    "4437": "|cffe4cfa3Спокойствие|r [|cffffffff1|r] (|cffffffffR|r)",
+    "4438": "|cffe4cfa3Спокойствие|r (|cffffffffR|r)",
+    "4439": "|cffe4cfa3Спокойствие|r [|cffffffff2|r] (|cffffffffR|r)",
+    "4440": "|cffe4cfa3Внушение|r",
+    "4441": "|cffe4cfa3Внушение|r (|cffffffffE|r)",
+    "4442": "|cffe4cfa3Внушение|r [|cffffffff1|r]",
+    "4443": "|cffe4cfa3Внушение|r [|cffffffff2|r]",
+    "4444": "|cffe4cfa3Внушение|r [|cffffffff3|r]",
+    "4445": "|cffe4cfa3Внушение|r [|cffffffff4|r]",
+    "4447": "|cffe4cfa3Зов помощи|r",
+    "4448": "|cffe4cfa3Зов помощи|r (|cffffffffW|r)",
+    "4450": "|cffe4cfa3Зов помощи|r [|cffffffff1|r] (|cffffffffW|r)",
+    "4451": "|cffe4cfa3Зов помощи|r [|cffffffff2|r] (|cffffffffW|r)",
+    "4452": "|cffe4cfa3Зов помощи|r [|cffffffff3|r] (|cffffffffW|r)",
+    "4453": "|cffe4cfa3Зов помощи|r [|cffffffff4|r] (|cffffffffW|r)",
+    "4458": "|cffe4cfa3Снежная буря|r",
+    "4459": "|cffe4cfa3Снежная буря|r (|cffffffffQ|r)",
+    "4460": "|cffe4cfa3Снежная буря|r [|cffffffff1|r] (|cffffffffQ|r)",
+    "4461": "|cffe4cfa3Снежная буря|r [|cffffffff2|r] (|cffffffffQ|r)",
+    "4462": "|cffe4cfa3Снежная буря|r [|cffffffff3|r] (|cffffffffQ|r)",
+    "4463": "|cffe4cfa3Снежная буря|r [|cffffffff4|r] (|cffffffffQ|r)",
+    "4477": "|cffe4cfa3Чародей|r (|cffffffffE|r)",
+    "5830": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff200|cffced4da ед. урона цели и оглушает её на |cffffffff3|cffced4da сек.|r",
+    "5843": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует неуязвимость окружающим союзникам. Сам паладин остаётся уязвимым.|n|n|cffa6afb8Уровень 1:|r длительность |cffffffff30|cffced4da сек.|n|cffa6afb8Уровень 2:|r длительность |cffffffff40|cffced4da сек.|r",
+    "5844": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует неуязвимость окружающим союзникам на |cffffffff40|cffced4da сек.|r",
+    "5861": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует неуязвимость окружающим союзникам на |cffffffff30|cffced4da сек.|r",
+    "7583": "|cffe4cfa3Священная кара|r",
+    "7585": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает вспышки Света на врагов вокруг героя, нанося урон раз в несколько секунд.|n|n|cffa6afb8Уровень 1:|r |cffffffff50|cffced4da ед. урона раз в |cffffffff4|cffced4da сек.|n|cffa6afb8Уровень 2:|r |cffffffff80|cffced4da ед. урона раз в |cffffffff3.5|cffced4da сек.|n|cffa6afb8Уровень 3:|r |cffffffff100|cffced4da ед. урона раз в |cffffffff3|cffced4da сек.|n|cffa6afb8Уровень 4:|r |cffffffff120|cffced4da ед. урона раз в |cffffffff2|cffced4da сек.|r",
+    "7999": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины на |cffc8e087+16|cffced4da ед. (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|r",
+    "8000": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины на |cffc8e087+24|cffced4da ед. (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|r",
+    "8001": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины на |cffc8e087+32|cffced4da ед. (уровень |cffffffff4|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|r",
+    "8002": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины на |cffc8e087+8|cffced4da ед. (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|r",
+    "8176": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон от атак находящихся рядом союзников.|n|n|cffa6afb8Уровень 1:|r |cffc8e087+10%|cffced4da к урону.|n|cffa6afb8Уровень 2:|r |cffc8e087+20%|cffced4da к урону.|n|cffa6afb8Уровень 3:|r |cffc8e087+30%|cffced4da к урону.|n|cffa6afb8Уровень 4:|r |cffc8e087+40%|cffced4da к урону.|r",
+    "8515": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость регенерации здоровья всем союзникам поблизости на |cffc8e087+0.5|cffced4da ед./сек.|r",
+    "8528": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Временно превращает врага в безобидное животное.|r",
+    "8535": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускоряет регенерацию маны находящихся рядом союзников на |cffc8e087+0.55|cffced4da ед./сек.|r",
+    "9320": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлое осадное орудие Дренеев дальнего боя. Наносит высокий урон зданиям и укреплениям врага.|n|n|cffa6afb8Цели атаки:|cffced4da наземные здания и войска.|r",
+    "9738": "|cffe4cfa3Маг Озаренный|r",
+    "10181": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Дренеев первой ступени. Обучает работников и служит складом ресурсов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЮвелирное мастерство|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deФорт|cffced4da: открывает доступ к передовым сооружениям и войскам Дренеев.|r",
+    "10182": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Дренеев второй ступени. Открывает доступ к новым сооружениям и войскам.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЮвелирное мастерство|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deБастион|cffced4da: открывает доступ к высшим технологиям, войскам Озарённых и Сломленных.|r",
+    "10183": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Дренеев третьей ступени. Открывает доступ к высшим технологиям, элитным силам Озарённых и Сломленных.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЮвелирное мастерство|cffced4da|n- |cffa9c7deПривлечь Сломленных|cffced4da|n- |cffa9c7deПосвящение Озаренных|cffced4da.|r",
+    "10266": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Значительно снижает скорость дальнобойной атаки врагов в указанной области.|r",
+    "10509": "|cffe4cfa3Озаренный Паладин|r (|cffffffffR|r)",
+    "10628": "|cffe4cfa3Дренеи|r",
+    "10653": "|cffe4cfa3Дренеи|r",
+    "10725": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение Дренеев. Атакует наземные и воздушные цели стрелами света.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r",
+    "11597": "|cffe4cfa3Массовое исцеление|r [|cffffffff1|r] (|cffffffffR|r)",
+    "11682": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает возможность возводить Храм Озаренных и нанимать элитные войска Озарённых дренеев.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deХрам Озаренных|cffced4da: открывает постройку и доступ к священным воинам.|r",
+    "12375": "|cffe4cfa3Осадная машина|r",
+    "12376": "|cffe4cfa3Осадная машина|r (|cffffffffR|r)",
+    "12655": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff250|cffced4da ед. здоровья союзникам поблизости.|r",
+    "12973": "|cffa6afb8ЗДАНИЕ:|cffced4da Священная обитель воинов Света. Обучает элитных бойцов Озарённых и исследует священные улучшения.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da: стойкий воин со священным клинком.|n- |cffa9c7deЖрица Наару|cffced4da: целительница с благословением Света.|n- |cffa9c7deМаг Озаренный|cffced4da: заклинатель с чарами исцеления и молний.|n- |cffa9c7deОзаренный Паладин|cffced4da: могучий рыцарь передовой.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение Паладина|cffced4da|n- |cffa9c7deУчение наару|cffced4da|n- |cffa9c7deИзучение магии|cffced4da|n- |cffa9c7deОсвящение оружия|cffced4da.|r",
+    "12974": "|cffa6afb8ЗДАНИЕ:|cffced4da Убежище изгнанников и Сломленных дренеев. Обучает ловких воинов и шаманов Тени.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deСломленный страж|cffced4da: пехотинец ближнего боя с уклонением.|n- |cffa9c7deСломленный мастер|cffced4da: стремительный боец с отравленным клинком.|n- |cffa9c7deСломленный провидец|cffced4da: шаман с молниями и исцеляющим идолом.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМастерство Пеплоустов|cffced4da|n- |cffa9c7deМастерство Сломленных|cffced4da|n- |cffa9c7deМудрость предков|cffced4da|n- |cffa9c7deМастерство танца ветра|cffced4da|n- |cffa9c7deОтравленное оружие|cffced4da.|r",
+    "13096": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит круговой урон по площади врагам рядом с основной целью.|r",
+    "13106": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff125|cffced4da ед. здоровья всем союзникам в радиусе |cffffffff300|cffced4da.|r",
+    "15187": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вытягивает запас маны из вражеского юнита или передаёт ману союзнику.|r",
+    "15390": "|cffa6afb8ЮНИТ:|cffced4da Боевой заклинатель Дренеев дальнего боя. Владеет магической атакой и способен повергнуть союзников в ярость.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБезумие|cffced4da: увеличивает скорость атаки выбранного союзника ценой потери здоровья.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r",
+    "15567": "|cffe4cfa3Аура Спасения|r (|cffffffffE|r)",
+    "16456": "|cffe4cfa3Массовое исцеление|r [|cffffffff2|r] (|cffffffffR|r)",
+    "16457": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff350|cffced4da ед. здоровья союзникам поблизости.|r",
+    "16461": "|cffe4cfa3Массовое исцеление|r (|cffffffffR|r)",
+    "16462": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье союзникам поблизости.|n|n|cffa6afb8Уровень 1:|r |cffffffff250|cffced4da ед. здоровья.|n|cffa6afb8Уровень 2:|r |cffffffff350|cffced4da ед. здоровья.|r",
+    "16463": "|cffe4cfa3Массовое исцеление|r",
+    "17256": "|cffe4cfa3Храм Озаренных|r",
+    "17257": "|cffe4cfa3Храм Озаренных|r (|cffffffffF|r)",
+    "17266": "|cffe4cfa3Сломленный мастер|r",
+    "18670": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию Дренеев продовольствием и приносит регулярный доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+40|cffced4da золота каждые |cffffffff25|cffced4da сек.|r",
+    "19476": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий Дренеев. Добывает золото и древесину, возводит и чинит здания.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРемонт|cffced4da: восстанавливает прочность зданий и механизмов.|n- |cffa9c7deНебольшой скачок|cffced4da: мгновенно перемещается на короткую дистанцию.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r",
+    "19484": "|cffe4cfa3Озаренный Паладин|r",
+    "19558": "|cffe4cfa3Посвящение Паладина [1/3]|r",
+    "19559": "|cffe4cfa3Посвящение Паладина [2/3]|r",
+    "19562": "|cffe4cfa3Посвящение Паладина [1/3]|r (|cffffffffF|r)",
+    "19563": "|cffe4cfa3Посвящение Паладина [2/3]|r (|cffffffffF|r)",
+    "19564": "|cffe4cfa3Посвящение Паладина [3/3]|r",
+    "19573": "|cffe4cfa3Посвящение Паладина [3/3]|r (|cffffffffF|r)",
+    "20071": "|cffe4cfa3Наару|r",
+    "20114": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Дренеям.|r",
+    "20564": "|cffa6afb8ЗДАНИЕ:|cffced4da Магическое святилище Дренеев. Обучает заклинателей и исследует магические улучшения.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЧароплетница|cffced4da: маг контроля и подавления.|n- |cffa9c7deЖрец|cffced4da: священник поддержки и защиты.|n- |cffa9c7deЧародей|cffced4da: боевой маг дальнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deТаинство Магии|cffced4da|n- |cffa9c7deДар Наару|cffced4da|n- |cffa9c7deЧародейские познания|cffced4da.|r",
+    "20573": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость перемещения на |cffc8e087+40%|cffced4da и повышает восстановление здоровья.|r",
+    "20574": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость перемещения на |cffc8e087+10%|cffced4da и повышает восстановление здоровья.|r",
+    "20575": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость перемещения на |cffc8e087+20%|cffced4da и повышает восстановление здоровья.|r",
+    "20576": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость перемещения на |cffc8e087+30%|cffced4da и повышает восстановление здоровья.|r",
+    "20601": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает боевые характеристики лазутчиков, рангари и всадников на элекках: увеличивает здоровье на |cffc8e087+40|cffced4da ед. и скорость передвижения (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da.|r",
+    "20602": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает боевые характеристики лазутчиков, рангари и всадников на элекках: увеличивает здоровье на |cffc8e087+80|cffced4da ед. и скорость передвижения (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da.|r",
+    "20603": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает боевые характеристики лазутчиков, рангари и всадников на элекках: увеличивает здоровье на |cffc8e087+120|cffced4da ед. и скорость передвижения (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da.|r",
+    "20604": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает Сломленным провидцам шаманские тайны: увеличивает дальность атаки, запас маны на |cffc8e087+25|cffced4da ед. и наделяет новыми способностями (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r",
+    "20605": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает Сломленным провидцам шаманские тайны: увеличивает дальность атаки, запас маны на |cffc8e087+50|cffced4da ед. и наделяет новыми способностями (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r",
+    "20606": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает Сломленным провидцам шаманские тайны: увеличивает дальность атаки, запас маны на |cffc8e087+75|cffced4da ед. и наделяет новыми способностями (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r",
+    "21866": "|cffa6afb8ЮНИТ:|cffced4da Скрытный боец Сломленных ближнего боя. Владеет уклонением и способен избежать гибели в тени.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУскользание|cffced4da: даёт шанс уклониться от атаки.|n- |cffa9c7deСпасение в тени|cffced4da: при гибели может возродиться у логова Сломленных.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r",
+    "21867": "|cffa6afb8ЮНИТ:|cffced4da Элитный боец Сломленных ближнего боя. Быстро сближается с противником, нанося круговые и ядовитые удары.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСтремительное приближение|cffced4da: быстрый рывок к цели.|n- |cffa9c7deРассекающий удар|cffced4da: наносит урон окружающим врагам.|n- |cffa9c7deОтравленное оружие|cffced4da: поражает цель ядом.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r",
+    "22531": "А'дал",
+    "22902": "|cffe4cfa3Инженер|r",
+    "22980": "|cffe4cfa3Инженер|r (|cffffffffQ|r)",
+    "23144": "|cffe4cfa3Ратуша|r",
+    "23148": "|cffe4cfa3Ратуша|r (|cffffffffQ|r)",
+    "23149": "|cffe4cfa3Форт|r",
+    "23150": "|cffe4cfa3Форт|r (|cffffffffZ|r)",
+    "23151": "|cffe4cfa3Бастион|r",
+    "23152": "|cffe4cfa3Бастион|r (|cffffffffZ|r)",
+    "23153": "|cffe4cfa3Лазутчик|r",
+    "23154": "|cffe4cfa3Лазутчик|r (|cffffffffQ|r)",
+    "23156": "|cffe4cfa3Жрец|r",
+    "23157": "|cffe4cfa3Жрец|r (|cffffffffW|r)",
+    "23159": "|cffe4cfa3Рангари|r",
+    "23160": "|cffe4cfa3Рангари|r (|cffffffffW|r)",
+    "23162": "|cffe4cfa3Всадник на Элекке|r",
+    "23163": "|cffe4cfa3Всадник на Элекке|r (|cffffffffE|r)",
+    "23165": "|cffe4cfa3Чароплетница|r",
+    "23166": "|cffe4cfa3Чароплетница|r (|cffffffffQ|r)",
+    "23167": "|cffe4cfa3Казармы Аргуса|r",
+    "23168": "|cffe4cfa3Казармы Аргуса|r (|cffffffffW|r)",
+    "23170": "|cffe4cfa3Мастерская|r",
+    "23171": "|cffe4cfa3Мастерская|r (|cffffffffE|r)",
+    "23172": "|cffe4cfa3Чародейский кластер|r",
+    "23173": "|cffe4cfa3Чародейский кластер|r (|cffffffffR|r)",
+    "23174": "|cffe4cfa3Алтарь Наару|r",
+    "23175": "|cffe4cfa3Алтарь Наару|r (|cffffffffS|r)",
+    "23176": "|cffe4cfa3Логово Сломленных|r",
+    "23177": "|cffe4cfa3Логово Сломленных|r (|cffffffffD|r)",
+    "23178": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)",
+    "23179": "|cffe4cfa3Сторожевая башня|r",
+    "23180": "|cffe4cfa3Лазарет|r",
+    "23181": "|cffe4cfa3Лазарет|r (|cffffffffA|r)",
+    "23183": "|cffe4cfa3Исцеление|r",
+    "23184": "|cffe4cfa3Исцеление|r (|cffffffffQ|r)",
+    "23185": "|cffe4cfa3Рассеивание заклинаний|r",
+    "23186": "|cffe4cfa3Рассеивание заклинаний|r (|cffffffffW|r)",
+    "23187": "|cffe4cfa3Пламя света|r",
+    "23188": "|cffe4cfa3Пламя света|r",
+    "23192": "|cffe4cfa3Усиленная броня|r",
+    "23193": "|cffe4cfa3Усиленная броня|r (|cffffffffQ|r)",
+    "23194": "|cffe4cfa3Руническое оружие [1/6]|r",
+    "23195": "|cffe4cfa3Руническое оружие [2/6]|r",
+    "23196": "|cffe4cfa3Руническое оружие [3/6]|r",
+    "23197": "|cffe4cfa3Руническое оружие [1/6]|r (|cffffffffQ|r)",
+    "23198": "|cffe4cfa3Руническое оружие [2/6]|r (|cffffffffQ|r)",
+    "23199": "|cffe4cfa3Руническое оружие [3/6]|r (|cffffffffQ|r)",
+    "23200": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+2|cffced4da ед. (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r",
+    "23201": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+4|cffced4da ед. (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r",
+    "23202": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+6|cffced4da ед. (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r",
+    "23203": "|cffe4cfa3Руническое оружие [4/6]|r",
+    "23204": "|cffe4cfa3Руническое оружие [5/6]|r",
+    "23205": "|cffe4cfa3Руническое оружие [6/6]|r",
+    "23206": "|cffe4cfa3Руническое оружие [4/6]|r (|cffffffffQ|r)",
+    "23207": "|cffe4cfa3Руническое оружие [5/6]|r (|cffffffffQ|r)",
+    "23208": "|cffe4cfa3Руническое оружие [6/6]|r (|cffffffffQ|r)",
+    "23209": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+8|cffced4da ед. (уровень |cffffffff4|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r",
+    "23210": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+10|cffced4da ед. (уровень |cffffffff5|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r",
+    "23211": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+12|cffced4da ед. (уровень |cffffffff6|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r",
+    "23212": "|cffe4cfa3Апекситовый доспех [4/6]|r",
+    "23213": "|cffe4cfa3Апекситовый доспех [5/6]|r",
+    "23214": "|cffe4cfa3Апекситовый доспех [6/6]|r",
+    "23215": "|cffe4cfa3Апекситовый доспех [1/6]|r",
+    "23216": "|cffe4cfa3Апекситовый доспех [2/6]|r",
+    "23217": "|cffe4cfa3Апекситовый доспех [3/6]|r",
+    "23218": "|cffe4cfa3Апекситовый доспех [1/6]|r (|cffffffffA|r)",
+    "23219": "|cffe4cfa3Апекситовый доспех [2/6]|r (|cffffffffA|r)",
+    "23220": "|cffe4cfa3Апекситовый доспех [3/6]|r (|cffffffffA|r)",
+    "23221": "|cffe4cfa3Апекситовый доспех [4/6]|r (|cffffffffA|r)",
+    "23222": "|cffe4cfa3Апекситовый доспех [5/6]|r (|cffffffffA|r)",
+    "23223": "|cffe4cfa3Апекситовый доспех [6/6]|r (|cffffffffA|r)",
+    "23224": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+2|cffced4da ед. (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r",
+    "23225": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+4|cffced4da ед. (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r",
+    "23226": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+6|cffced4da ед. (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r",
+    "23227": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+8|cffced4da ед. (уровень |cffffffff4|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r",
+    "23228": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+12|cffced4da ед. (уровень |cffffffff6|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r",
+    "23229": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+10|cffced4da ед. (уровень |cffffffff5|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r",
+    "23233": "|cffe4cfa3Тяжелые доспехи|r",
+    "23234": "|cffe4cfa3Тяжелые доспехи|r (|cffffffffD|r)",
+    "23235": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Оснащает всадников на элекках массивными доспехами, увеличивая запас здоровья на |cffc8e087+150|cffced4da ед. и показатель брони на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da.|r",
+    "23236": "|cffe4cfa3Таинство Магии [1/2]|r",
+    "23237": "|cffe4cfa3Таинство Магии [2/2]|r",
+    "23238": "|cffe4cfa3Таинство Магии [1/2]|r (|cffffffffA|r)",
+    "23239": "|cffe4cfa3Таинство Магии [2/2]|r (|cffffffffA|r)",
+    "23240": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг чароплетниц до адептов: увеличивает здоровье на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед., скорость регенерации маны и открывает заклинание «Похищение маны» (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЧароплетница|cffced4da.|r",
+    "23241": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг чароплетниц до мастеров: увеличивает здоровье на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед., скорость регенерации маны и открывает заклинание «Немота» (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЧароплетница|cffced4da.|r",
+    "23242": "|cffe4cfa3Дар Наару [1/3]|r",
+    "23243": "|cffe4cfa3Дар Наару [2/3]|r",
+    "23244": "|cffe4cfa3Дар Наару [3/3]|r",
+    "23245": "|cffe4cfa3Дар Наару [1/3]|r (|cffffffffS|r)",
+    "23246": "|cffe4cfa3Дар Наару [2/3]|r (|cffffffffS|r)",
+    "23247": "|cffe4cfa3Дар Наару [3/3]|r (|cffffffffS|r)",
+    "23248": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает жрецов в таинства Света: увеличивает запас маны на |cffc8e087+50|cffced4da ед., её регенерацию и открывает новые заклинания (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЖрец|cffced4da.|r",
+    "23249": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает жрецов в таинства Света: увеличивает запас маны на |cffc8e087+100|cffced4da ед., её регенерацию и открывает новые заклинания (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЖрец|cffced4da.|r",
+    "23250": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает жрецов в таинства Света: увеличивает запас маны на |cffc8e087+150|cffced4da ед., её регенерацию и открывает новые заклинания (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЖрец|cffced4da.|r",
+    "23251": "|cffe4cfa3Заточенные наконечники [1/6]|r",
+    "23252": "|cffe4cfa3Заточенные наконечники [2/6]|r",
+    "23253": "|cffe4cfa3Заточенные наконечники [3/6]|r",
+    "23254": "|cffe4cfa3Заточенные наконечники [1/6]|r (|cffffffffW|r)",
+    "23255": "|cffe4cfa3Заточенные наконечники [2/6]|r (|cffffffffW|r)",
+    "23256": "|cffe4cfa3Заточенные наконечники [3/6]|r (|cffffffffW|r)",
+    "23257": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+2|cffced4da ед. (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r",
+    "23258": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+4|cffced4da ед. (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r",
+    "23259": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+6|cffced4da ед. (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r",
+    "23260": "|cffe4cfa3Заточенные наконечники [4/6]|r (|cffffffffW|r)",
+    "23261": "|cffe4cfa3Заточенные наконечники [5/6]|r (|cffffffffW|r)",
+    "23262": "|cffe4cfa3Заточенные наконечники [6/6]|r (|cffffffffW|r)",
+    "23263": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+8|cffced4da ед. (уровень |cffffffff4|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r",
+    "23264": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+10|cffced4da ед. (уровень |cffffffff5|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r",
+    "23265": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+12|cffced4da ед. (уровень |cffffffff6|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r",
+    "23266": "|cffe4cfa3Заточенные наконечники [4/6]|r",
+    "23267": "|cffe4cfa3Заточенные наконечники [5/6]|r",
+    "23268": "|cffe4cfa3Заточенные наконечники [6/6]|r",
+    "23313": "|cffe4cfa3Ювелирное мастерство|r",
+    "23314": "|cffe4cfa3Ювелирное мастерство|r",
+    "23315": "|cffe4cfa3Ювелирное мастерство|r",
+    "23321": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Инженер имеет |cffffffff50%|cffced4da шанс начать строительство здания с |cffffffff20%|cffced4da начального прогресса.|r",
+    "23348": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает получаемый юнитом урон от вражеских атак.|r",
+    "23417": "|cffe4cfa3Аура Спасения|r [|cffffffff3|r]",
+    "25654": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке с шансом |cffffffff25%|cffced4da наносит |cffffffff150|cffced4da ед. урона по площади.|r",
+    "25655": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке с шансом |cffffffff30%|cffced4da наносит |cffffffff180|cffced4da ед. урона по площади.|r",
+    "25661": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт шанс нанести дополнительный урон окружающим войскам при атаке.|n|n|cffa6afb8Уровень 1:|r шанс |cffffffff15%|cffced4da, |cffffffff80|cffced4da ед. урона.|n|cffa6afb8Уровень 2:|r шанс |cffffffff20%|cffced4da, |cffffffff100|cffced4da ед. урона.|n|cffa6afb8Уровень 3:|r шанс |cffffffff25%|cffced4da, |cffffffff150|cffced4da ед. урона.|n|cffa6afb8Уровень 4:|r шанс |cffffffff30%|cffced4da, |cffffffff180|cffced4da ед. урона.|r",
+    "25662": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке с шансом |cffffffff15%|cffced4da наносит |cffffffff80|cffced4da ед. урона по площади.|r",
+    "25663": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке с шансом |cffffffff20%|cffced4da наносит |cffffffff100|cffced4da ед. урона по площади.|r",
+    "25683": "|cffe4cfa3Маг Озаренный|r (|cffffffffE|r)",
+    "25827": "|cffe4cfa3Мечник Озаренный|r",
+    "25828": "|cffe4cfa3Мечник Озаренный|r (|cffffffffQ|r)",
+    "26373": "|cffe4cfa3Кара света|r [|cffffffff1|r]",
+    "26408": "|cffe4cfa3Кара света|r [|cffffffff2|r]",
+    "26411": "|cffe4cfa3Кара света|r [|cffffffff3|r]",
+    "26468": "|cffe4cfa3Кара света|r [|cffffffff4|r]",
+    "26658": "|cffe4cfa3Кара света|r",
+    "26659": "|cffe4cfa3Кара света|r",
+    "26661": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff50|cffced4da ед. урона врагам вокруг раз в |cffffffff4|cffced4da сек.|r",
+    "26662": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff80|cffced4da ед. урона врагам вокруг раз в |cffffffff3.5|cffced4da сек.|r",
+    "26663": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff100|cffced4da ед. урона врагам вокруг раз в |cffffffff3|cffced4da сек.|r",
+    "26664": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff120|cffced4da ед. урона врагам вокруг раз в |cffffffff2|cffced4da сек.|r",
+    "28012": "|cffe4cfa3Исцеление|r",
+    "28014": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff385|cffced4da ед. здоровья цели и переходит к |cffffffff20|cffced4da союзникам.|r",
+    "28015": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создает волну энергии, восстанавливающую здоровье цели и переходящую к ближайшим союзникам.|n|n|cffa6afb8Уровень 1:|r |cffffffff130|cffced4da ед., до |cffffffff3|cffced4da целей.|n|cffa6afb8Уровень 2:|r |cffffffff205|cffced4da ед., до |cffffffff4|cffced4da целей.|n|cffa6afb8Уровень 3:|r |cffffffff280|cffced4da ед., до |cffffffff5|cffced4da целей.|n|cffa6afb8Уровень 4:|r |cffffffff385|cffced4da ед., до |cffffffff20|cffced4da целей.|r",
+    "30152": "|cffe4cfa3Наару|r (|cffffffffZ|r)",
+    "30207": "|cffa6afb8ГЕРОЙ:|cffced4da Легендарное существо из чистой энергии Света, лидер Ша'тар и защитник Шаттрата. Обладает неисчерпаемой мощью исцеления и священной защиты.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Спасения|cffced4da: ослабляет броню врагов и предотвращает гибель союзников.|n- |cffa9c7deМассовое исцеление|cffced4da: восполняет здоровье окружающим соратникам.|n- |cffa9c7deБлагословление|cffced4da: дарует божественный щит союзникам вокруг.|n- |cffa9c7deВоскрешение|cffced4da: возвращает к жизни павших союзных воинов.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r",
+    "30855": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт шанс |cffffffff17%|cffced4da уклониться от вражеской атаки.|r",
+    "30856": "|cffe4cfa3Стремительное приближение|r",
+    "30857": "|cffe4cfa3Стремительное приближение|r (|cffffffffE|r)",
+    "30858": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выбранные мастера совершают стремительный телепорт в указанную точку.|r",
+    "30861": "|cffe4cfa3Скачок|r (|cffffffffB|r)",
+    "30863": "|cffe4cfa3Скачок|r (|cffffffffB|r)",
+    "30865": "|cffe4cfa3Спасение в тени|r",
+    "30866": "|cffe4cfa3Спасение в тени|r",
+    "30867": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При гибели воина есть |cffffffff50%|cffced4da шанс, что он возродится у логова Сломленных.|r",
+    "30875": "|cffe4cfa3Поле слома|r",
+    "31512": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цель и врагов вокруг волной святой энергии.|n|n|cffa6afb8Уровень 1:|r |cffffffff100|cffced4da ед. цели, |cffffffff50|cffced4da по области.|n|cffa6afb8Уровень 2:|r |cffffffff150|cffced4da ед. цели, |cffffffff100|cffced4da по области.|n|cffa6afb8Уровень 3:|r |cffffffff200|cffced4da ед. цели, |cffffffff150|cffced4da по области.|n|cffa6afb8Уровень 4:|r |cffffffff350|cffced4da ед. цели, |cffffffff200|cffced4da по области.|r",
+    "31620": "|cffa6afb8ЮНИТ:|cffced4da Базовый пехотинец Дренеев. Быстрый разведчик ближнего боя, владеющий уклонением.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУскользание|cffced4da: даёт шанс уклониться от физической атаки.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r",
+    "31659": "|cffa6afb8ЗДАНИЕ:|cffced4da Производственное сооружение Дренеев. Исследует улучшения оружия, доспехов и инструментов работников.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deРуническое оружие|cffced4da|n- |cffa9c7deАпекситовый доспех|cffced4da|n- |cffa9c7deЗаточенные наконечники|cffced4da|n- |cffa9c7deУлучшенные инструменты|cffced4da.|r",
+    "31663": "|cffa6afb8ГЕРОЙ:|cffced4da Несокрушимый защитник Света и борец с Легионом. Обладает мощной защитой, целительной силой и священным молотом правосудия.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолна исцеления|cffced4da: исцеляет цепочку раненых союзников.|n- |cffa9c7deБлагодать|cffced4da: дарует неуязвимость окружающим союзникам.|n- |cffa9c7deАура Доблести|cffced4da: увеличивает урон находящихся рядом союзников.|n- |cffa9c7deСокрушение|cffced4da: даёт шанс нанести дополнительный урон по площади.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r",
+    "31664": "|cffa6afb8ГЕРОЙ:|cffced4da Непревзойдённый воин ближнего боя и военачальник стражи Дренеев. Сочетает фехтовальное мастерство и священный гнев.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКара света|cffced4da: пассивно наносит урон окружающим противникам вспышками Света.|n- |cffa9c7deИдеальный Удар|cffced4da: наносит мощный удар и оглушает цель.|n- |cffa9c7deУдачливость|cffced4da: даёт шанс уклониться от ударов и нанести критический урон.|n- |cffa9c7deСвященная кара|cffced4da: поражает волной света цель и окружающих врагов.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r",
+    "31665": "|cffa6afb8ГЕРОЙ:|cffced4da Духовный вождь изгнанников, овладевший стихиями и шаманскими силами. Способен призывать ледяные бури и защищать соратников силой природы.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСнежная буря|cffced4da: обрушивает ледяные осколки на область.|n- |cffa9c7deЗов помощи|cffced4da: призывает союзных бойцов дренеев.|n- |cffa9c7deВнушение|cffced4da: ускоряет союзников и усиливает их восстановление.|n- |cffa9c7deСпокойствие|cffced4da: непрерывно исцеляет всех союзников вокруг.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r",
+    "32283": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников.|n|n|cffa6afb8Уровень 1:|r |cffc8e087+10%|cffced4da к скорости, малый бонус к регенерации.|n|cffa6afb8Уровень 2:|r |cffc8e087+20%|cffced4da к скорости, средний бонус к регенерации.|n|cffa6afb8Уровень 3:|r |cffc8e087+30%|cffced4da к скорости, высокий бонус к регенерации.|n|cffa6afb8Уровень 4:|r |cffc8e087+40%|cffced4da к скорости, высший бонус к регенерации.|r",
+    "35178": "|cffe4cfa3Аура Спасения|r [|cffffffff4|r]",
+    "35184": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врагов на |cffff8080-4|cffced4da и предотвращает гибель союзников.|r",
+    "35194": "|cffa6afb8РАСА:|cffced4da Благородный народ эредаров, бежавший с Аргуса под предводительством пророка Велена и ведомый священным Светом Наару.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor (Яхве)|r|n|cffa6afb8Куратор расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Сложность:|r |cffffffff●●|cffa6afb8●●●|r|n|cffa6afb8Период:|r |cffa9c7de«The Burning Crusade»|r|n|n|cffced4daДренеи — непреклонные защитники Света, отвергшие скверну Пылающего Легиона. Обладая высокими технологиями Аргуса, силой священных кристаллов и поддержкой Наару, они объединяют под своим знаменем благочестивых паладинов Озарённых и мудрых изгнанников Сломленных. Их армия опирается на крепкую оборону, исцеляющие чары и разрушительную магию Света.|r",
+    "35200": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врагов на |cffff8080-3|cffced4da и предотвращает гибель союзников.|r",
+    "37764": "|cffe4cfa3Волна исцеления|r",
+    "38598": "|cffe4cfa3Благословление|r [|cffffffff1|r] (|cffffffffW|r)",
+    "38599": "|cffe4cfa3Благословление|r",
+    "38600": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возвращает к жизни до |cffffffff8|cffced4da павших союзников.|r",
+    "38601": "|cffe4cfa3Благословление|r [|cffffffff2|r] (|cffffffffW|r)",
+    "38604": "|cffe4cfa3Благословление|r [|cffffffff3|r] (|cffffffffW|r)",
+    "38616": "|cffe4cfa3Благословление|r [|cffffffff4|r] (|cffffffffW|r)",
+    "38654": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создает волну энергии, восстанавливающую здоровье цели и переходящую к ближайшим союзникам.|n|n|cffa6afb8Уровень 1:|r |cffffffff130|cffced4da ед., до |cffffffff3|cffced4da целей.|r",
+    "38655": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создает волну энергии, восстанавливающую |cffffffff130|cffced4da ед. здоровья цели и переходящую к |cffffffff3|cffced4da союзникам.|r",
+    "38713": "|cffe4cfa3Благословление|r (|cffffffffW|r)",
+    "38714": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Покрывает божественным щитом союзников вокруг, повышая урон на |cffc8e087+10%|cffced4da и регенерацию здоровья на |cffc8e087+5|cffced4da ед./сек. на |cffffffff20|cffced4da сек.|n|n|cffa6afb8Уровень 1:|r |cffc8e087+10|cffced4da к броне.|n|cffa6afb8Уровень 2:|r |cffc8e087+20|cffced4da к броне.|n|cffa6afb8Уровень 3:|r |cffc8e087+30|cffced4da к броне.|n|cffa6afb8Уровень 4:|r |cffc8e087+40|cffced4da к броне.|r",
+    "38734": "|cffe4cfa3Воскрешение|r [|cffffffff2|r] (|cffffffffQ|r)",
+    "38736": "|cffe4cfa3Воскрешение|r",
+    "38737": "|cffe4cfa3Воскрешение|r (|cffffffffQ|r)",
+    "38738": "|cffe4cfa3Воскрешение|r [|cffffffff1|r] (|cffffffffQ|r)",
+    "38739": "|cffe4cfa3Воскрешение|r [|cffffffff3|r] (|cffffffffQ|r)",
+    "38740": "|cffe4cfa3Воскрешение|r [|cffffffff4|r] (|cffffffffQ|r)",
+    "38741": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возвращает к жизни до |cffffffff10|cffced4da павших союзников.|r",
+    "38742": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возвращает к жизни до |cffffffff12|cffced4da павших союзников.|r",
+    "38743": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возвращает к жизни павших союзных воинов вокруг героя.|n|n|cffa6afb8Уровень 1:|r до |cffffffff6|cffced4da союзников.|n|cffa6afb8Уровень 2:|r до |cffffffff8|cffced4da союзников.|n|cffa6afb8Уровень 3:|r до |cffffffff10|cffced4da союзников.|n|cffa6afb8Уровень 4:|r до |cffffffff12|cffced4da союзников.|r",
+    "38759": "|cffe4cfa3Аура Спасения|r [|cffffffff1|r]",
+    "38760": "|cffe4cfa3Аура Спасения|r [|cffffffff2|r]",
+    "38802": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждые |cffffffff12|cffced4da сек. наару выпускает волну света, исцеляющую союзника на |cffffffff100|cffced4da ед. здоровья и переходящую к другим целям.|r",
+    "38806": "|cffe4cfa3Свет Надежды|r",
+    "38807": "|cffe4cfa3Свет Надежды|r",
+    "38809": "|cffe4cfa3Аура Спасения|r",
+    "38811": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню находящихся рядом врагов и даёт шанс предотвратить гибель союзника рядом.|n|n|cffa6afb8Уровень 1:|r |cffff8080-1|cffced4da к броне врагов.|n|cffa6afb8Уровень 2:|r |cffff8080-2|cffced4da к броне врагов.|n|cffa6afb8Уровень 3:|r |cffff8080-3|cffced4da к броне врагов.|n|cffa6afb8Уровень 4:|r |cffff8080-4|cffced4da к броне врагов.|r",
+    "38813": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врагов на |cffff8080-1|cffced4da и предотвращает гибель союзников.|r",
+    "38814": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врагов на |cffff8080-2|cffced4da и предотвращает гибель союзников.|r",
+    "38873": "|cffe4cfa3Дренеи|r",
+    "38874": "|cffe4cfa3Дренеи|r (|cffffffffX|r)",
+    "38968": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Замедляет скорость атаки врага на |cffff808025%|cffced4da и скорость передвижения на |cffff808035%|cffced4da.|r",
+    "40965": "|cffe4cfa3Жрица Наару|r",
+    "40968": "|cffe4cfa3Привлечь Сломленных|r",
+    "40969": "|cffe4cfa3Привлечь Сломленных|r (|cffffffffE|r)",
+    "40971": "|cffe4cfa3Улучшенные инструменты [1/4]|r",
+    "40972": "|cffe4cfa3Улучшенные инструменты [2/4]|r",
+    "40973": "|cffe4cfa3Улучшенные инструменты [3/4]|r",
+    "40974": "|cffe4cfa3Улучшенные инструменты [4/4]|r",
+    "40975": "|cffe4cfa3Улучшенные инструменты [1/4]|r (|cffffffffZ|r)",
+    "40976": "|cffe4cfa3Улучшенные инструменты [2/4]|r (|cffffffffZ|r)",
+    "40977": "|cffe4cfa3Улучшенные инструменты [3/4]|r (|cffffffffZ|r)",
+    "40978": "|cffe4cfa3Улучшенные инструменты [4/4]|r (|cffffffffZ|r)",
+    "41092": "|cffe4cfa3Дренейское мастерство [1/3]|r",
+    "41093": "|cffe4cfa3Мастерство Пеплоустов|r",
+    "41094": "|cffe4cfa3Мастерство Пеплоустов|r (|cffffffffD|r)",
+    "41095": "|cffe4cfa3Мастерство Сломленных|r",
+    "41096": "|cffe4cfa3Мастерство Сломленных|r (|cffffffffD|r)",
+    "41102": "|cffe4cfa3Дренейское мастерство [2/3]|r",
+    "41116": "|cffe4cfa3Дренейское мастерство [3/3]|r",
+    "41117": "|cffe4cfa3Дренейское мастерство [1/3]|r (|cffffffffA|r)",
+    "41118": "|cffe4cfa3Дренейское мастерство [2/3]|r (|cffffffffA|r)",
+    "41119": "|cffe4cfa3Дренейское мастерство [3/3]|r (|cffffffffA|r)",
+    "41155": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает молнией цель, нанося |cffffffff85|cffced4da ед. урона, и переходит до |cffffffff4|cffced4da раз к другим врагам.|r"
+  },
+  "checks_def": [
+    {
+      "type": "ability",
+      "id": "A0HS",
+      "field": "name",
+      "expected": "|cffe4cfa3Дренеи|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0HS",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Дренеи|r (|cffffffffX|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0HS",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8РАСА:|cffced4da Благородный народ эредаров, бежавший с Аргуса под предводительством пророка Велена и ведомый священным Светом Наару.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor (Яхве)|r|n|cffa6afb8Куратор расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Сложность:|r |cffffffff●●|cffa6afb8●●●|r|n|cffa6afb8Период:|r |cffa9c7de«The Burning Crusade»|r|n|n|cffced4daДренеи — непреклонные защитники Света, отвергшие скверну Пылающего Легиона. Обладая высокими технологиями Аргуса, силой священных кристаллов и поддержкой Наару, они объединяют под своим знаменем благочестивых паладинов Озарённых и мудрых изгнанников Сломленных. Их армия опирается на крепкую оборону, исцеляющие чары и разрушительную магию Света.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R07G",
+      "field": "name1",
+      "expected": "|cffe4cfa3Дренеи|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R07G",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Дренеи|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R07G",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Дренеям.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h015",
+      "field": "name",
+      "expected": "|cffe4cfa3Ратуша|r"
+    },
+    {
+      "type": "unit",
+      "id": "h015",
+      "field": "tip",
+      "expected": "|cffe4cfa3Ратуша|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h015",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Дренеев первой ступени. Обучает работников и служит складом ресурсов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЮвелирное мастерство|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deФорт|cffced4da: открывает доступ к передовым сооружениям и войскам Дренеев.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h016",
+      "field": "name",
+      "expected": "|cffe4cfa3Форт|r"
+    },
+    {
+      "type": "unit",
+      "id": "h016",
+      "field": "tip",
+      "expected": "|cffe4cfa3Форт|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h016",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Дренеев второй ступени. Открывает доступ к новым сооружениям и войскам.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЮвелирное мастерство|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deБастион|cffced4da: открывает доступ к высшим технологиям, войскам Озарённых и Сломленных.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h017",
+      "field": "name",
+      "expected": "|cffe4cfa3Бастион|r"
+    },
+    {
+      "type": "unit",
+      "id": "h017",
+      "field": "tip",
+      "expected": "|cffe4cfa3Бастион|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h017",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Дренеев третьей ступени. Открывает доступ к высшим технологиям, элитным силам Озарённых и Сломленных.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЮвелирное мастерство|cffced4da|n- |cffa9c7deПривлечь Сломленных|cffced4da|n- |cffa9c7deПосвящение Озаренных|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h055",
+      "field": "name",
+      "expected": "|cffe4cfa3Мастерская|r"
+    },
+    {
+      "type": "unit",
+      "id": "h055",
+      "field": "tip",
+      "expected": "|cffe4cfa3Мастерская|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h055",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Производственное сооружение Дренеев. Исследует улучшения оружия, доспехов и инструментов работников.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deРуническое оружие|cffced4da|n- |cffa9c7deАпекситовый доспех|cffced4da|n- |cffa9c7deЗаточенные наконечники|cffced4da|n- |cffa9c7deУлучшенные инструменты|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h056",
+      "field": "name",
+      "expected": "|cffe4cfa3Чародейский кластер|r"
+    },
+    {
+      "type": "unit",
+      "id": "h056",
+      "field": "tip",
+      "expected": "|cffe4cfa3Чародейский кластер|r (|cffffffffR|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h056",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Магическое святилище Дренеев. Обучает заклинателей и исследует магические улучшения.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЧароплетница|cffced4da: маг контроля и подавления.|n- |cffa9c7deЖрец|cffced4da: священник поддержки и защиты.|n- |cffa9c7deЧародей|cffced4da: боевой маг дальнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deТаинство Магии|cffced4da|n- |cffa9c7deДар Наару|cffced4da|n- |cffa9c7deЧародейские познания|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h058",
+      "field": "name",
+      "expected": "|cffe4cfa3Храм Озаренных|r"
+    },
+    {
+      "type": "unit",
+      "id": "h058",
+      "field": "tip",
+      "expected": "|cffe4cfa3Храм Озаренных|r (|cffffffffF|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h058",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Священная обитель воинов Света. Обучает элитных бойцов Озарённых и исследует священные улучшения.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da: стойкий воин со священным клинком.|n- |cffa9c7deЖрица Наару|cffced4da: целительница с благословением Света.|n- |cffa9c7deМаг Озаренный|cffced4da: заклинатель с чарами исцеления и молний.|n- |cffa9c7deОзаренный Паладин|cffced4da: могучий рыцарь передовой.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение Паладина|cffced4da|n- |cffa9c7deУчение наару|cffced4da|n- |cffa9c7deИзучение магии|cffced4da|n- |cffa9c7deОсвящение оружия|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h05A",
+      "field": "name",
+      "expected": "|cffe4cfa3Логово Сломленных|r"
+    },
+    {
+      "type": "unit",
+      "id": "h05A",
+      "field": "tip",
+      "expected": "|cffe4cfa3Логово Сломленных|r (|cffffffffD|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h05A",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Убежище изгнанников и Сломленных дренеев. Обучает ловких воинов и шаманов Тени.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deСломленный страж|cffced4da: пехотинец ближнего боя с уклонением.|n- |cffa9c7deСломленный мастер|cffced4da: стремительный боец с отравленным клинком.|n- |cffa9c7deСломленный провидец|cffced4da: шаман с молниями и исцеляющим идолом.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМастерство Пеплоустов|cffced4da|n- |cffa9c7deМастерство Сломленных|cffced4da|n- |cffa9c7deМудрость предков|cffced4da|n- |cffa9c7deМастерство танца ветра|cffced4da|n- |cffa9c7deОтравленное оружие|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h05B",
+      "field": "name",
+      "expected": "|cffe4cfa3Сторожевая башня|r"
+    },
+    {
+      "type": "unit",
+      "id": "h05B",
+      "field": "tip",
+      "expected": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h05B",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение Дренеев. Атакует наземные и воздушные цели стрелами света.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h05C",
+      "field": "name",
+      "expected": "|cffe4cfa3Лазарет|r"
+    },
+    {
+      "type": "unit",
+      "id": "h05C",
+      "field": "tip",
+      "expected": "|cffe4cfa3Лазарет|r (|cffffffffA|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h05C",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию Дренеев продовольствием и приносит регулярный доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+40|cffced4da золота каждые |cffffffff25|cffced4da сек.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h012",
+      "field": "name",
+      "expected": "|cffe4cfa3Инженер|r"
+    },
+    {
+      "type": "unit",
+      "id": "h012",
+      "field": "tip",
+      "expected": "|cffe4cfa3Инженер|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h012",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий Дренеев. Добывает золото и древесину, возводит и чинит здания.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРемонт|cffced4da: восстанавливает прочность зданий и механизмов.|n- |cffa9c7deНебольшой скачок|cffced4da: мгновенно перемещается на короткую дистанцию.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r"
+    },
+    {
+      "type": "unit",
+      "id": "e000",
+      "field": "name",
+      "expected": "|cffe4cfa3Рангари|r"
+    },
+    {
+      "type": "unit",
+      "id": "e000",
+      "field": "tip",
+      "expected": "|cffe4cfa3Рангари|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h01O",
+      "field": "name",
+      "expected": "|cffe4cfa3Озаренный Паладин|r"
+    },
+    {
+      "type": "unit",
+      "id": "h01O",
+      "field": "tip",
+      "expected": "|cffe4cfa3Озаренный Паладин|r (|cffffffffR|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h01P",
+      "field": "name",
+      "expected": "|cffe4cfa3Лазутчик|r"
+    },
+    {
+      "type": "unit",
+      "id": "h01P",
+      "field": "tip",
+      "expected": "|cffe4cfa3Лазутчик|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h01P",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Базовый пехотинец Дренеев. Быстрый разведчик ближнего боя, владеющий уклонением.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУскользание|cffced4da: даёт шанс уклониться от физической атаки.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h01Q",
+      "field": "name",
+      "expected": "|cffe4cfa3Жрец|r"
+    },
+    {
+      "type": "unit",
+      "id": "h01Q",
+      "field": "tip",
+      "expected": "|cffe4cfa3Жрец|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h01Q",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Священник Дренеев. Поддерживает войска исцелением, рассеиванием чар и благословением Света.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deИсцеление|cffced4da: восстанавливает здоровье раненому союзнику.|n- |cffa9c7deРассеивание заклинаний|cffced4da: снимает положительные эффекты с врагов и отрицательные с союзников.|n- |cffa9c7deПламя света|cffced4da: наполняет союзника силой Света.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h01R",
+      "field": "name",
+      "expected": "|cffe4cfa3Жрица Наару|r"
+    },
+    {
+      "type": "unit",
+      "id": "h01R",
+      "field": "tip",
+      "expected": "|cffe4cfa3Жрица Наару|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h01S",
+      "field": "name",
+      "expected": "|cffe4cfa3Всадник на Элекке|r"
+    },
+    {
+      "type": "unit",
+      "id": "h01S",
+      "field": "tip",
+      "expected": "|cffe4cfa3Всадник на Элекке|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h01S",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлая кавалерия Дренеев. Мощный всадник ближнего боя с высоким запасом здоровья и сокрушительным ударом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТяжелые удары|cffced4da: наносит повышенный урон по тяжелобронированным целям.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h01T",
+      "field": "name",
+      "expected": "|cffe4cfa3Маг Озаренный|r"
+    },
+    {
+      "type": "unit",
+      "id": "h01T",
+      "field": "tip",
+      "expected": "|cffe4cfa3Маг Озаренный|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h01T",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Элитный маг поддержки Озарённых. Владеет исцелением, цепными молниями и сглазом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deИсцеление|cffced4da: восстанавливает здоровье союзнику.|n- |cffa9c7deЦепная молния|cffced4da: поражает молнией группу врагов.|n- |cffa9c7deСглаз|cffced4da: временно превращает врага в безобидное существо.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h01U",
+      "field": "name",
+      "expected": "|cffe4cfa3Чароплетница|r"
+    },
+    {
+      "type": "unit",
+      "id": "h01U",
+      "field": "tip",
+      "expected": "|cffe4cfa3Чароплетница|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h01U",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Магический боец поддержки Дренеев. Специализируется на контроле вражеских заклинателей и подавлении противников.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗамедление|cffced4da: снижает скорость перемещения и атаки цели.|n- |cffa9c7deПохищение маны|cffced4da: вытягивает запас маны у врага.|n- |cffa9c7deНемота|cffced4da: запрещает цели применять заклинания.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h059",
+      "field": "name",
+      "expected": "|cffe4cfa3Мечник Озаренный|r"
+    },
+    {
+      "type": "unit",
+      "id": "h059",
+      "field": "tip",
+      "expected": "|cffe4cfa3Мечник Озаренный|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h05D",
+      "field": "name",
+      "expected": "|cffe4cfa3Сломленный страж|r"
+    },
+    {
+      "type": "unit",
+      "id": "h05D",
+      "field": "tip",
+      "expected": "|cffe4cfa3Сломленный страж|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h05D",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Скрытный боец Сломленных ближнего боя. Владеет уклонением и способен избежать гибели в тени.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУскользание|cffced4da: даёт шанс уклониться от атаки.|n- |cffa9c7deСпасение в тени|cffced4da: при гибели может возродиться у логова Сломленных.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h05E",
+      "field": "name",
+      "expected": "|cffe4cfa3Сломленный мастер|r"
+    },
+    {
+      "type": "unit",
+      "id": "h05E",
+      "field": "tip",
+      "expected": "|cffe4cfa3Сломленный мастер|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h05E",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Элитный боец Сломленных ближнего боя. Быстро сближается с противником, нанося круговые и ядовитые удары.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСтремительное приближение|cffced4da: быстрый рывок к цели.|n- |cffa9c7deРассекающий удар|cffced4da: наносит урон окружающим врагам.|n- |cffa9c7deОтравленное оружие|cffced4da: поражает цель ядом.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n005",
+      "field": "name",
+      "expected": "|cffe4cfa3Сломленный провидец|r"
+    },
+    {
+      "type": "unit",
+      "id": "n005",
+      "field": "tip",
+      "expected": "|cffe4cfa3Сломленный провидец|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o00H",
+      "field": "name",
+      "expected": "|cffe4cfa3Осадная машина|r"
+    },
+    {
+      "type": "unit",
+      "id": "o00H",
+      "field": "tip",
+      "expected": "|cffe4cfa3Осадная машина|r (|cffffffffR|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o00H",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлое осадное орудие Дренеев дальнего боя. Наносит высокий урон зданиям и укреплениям врага.|n|n|cffa6afb8Цели атаки:|cffced4da наземные здания и войска.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n00P",
+      "field": "name",
+      "expected": "|cffe4cfa3Чародей|r"
+    },
+    {
+      "type": "unit",
+      "id": "n00P",
+      "field": "tip",
+      "expected": "|cffe4cfa3Чародей|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n00P",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Боевой заклинатель Дренеев дальнего боя. Владеет магической атакой и способен повергнуть союзников в ярость.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБезумие|cffced4da: увеличивает скорость атаки выбранного союзника ценой потери здоровья.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r"
+    },
+    {
+      "type": "unit",
+      "id": "H05K",
+      "field": "name",
+      "expected": "|cffe4cfa3Дреней Паладин|r"
+    },
+    {
+      "type": "unit",
+      "id": "H05K",
+      "field": "propernames",
+      "expected": "Мараад,Нобундо,Ирель,Барос Алекстон,Виндикатор Борос,Аргус,Карабор,Велен"
+    },
+    {
+      "type": "unit",
+      "id": "H05K",
+      "field": "tip",
+      "expected": "|cffe4cfa3Дреней Паладин|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "H05K",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Несокрушимый защитник Света и борец с Легионом. Обладает мощной защитой, целительной силой и священным молотом правосудия.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолна исцеления|cffced4da: исцеляет цепочку раненых союзников.|n- |cffa9c7deБлагодать|cffced4da: дарует неуязвимость окружающим союзникам.|n- |cffa9c7deАура Доблести|cffced4da: увеличивает урон находящихся рядом союзников.|n- |cffa9c7deСокрушение|cffced4da: даёт шанс нанести дополнительный урон по площади.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r"
+    },
+    {
+      "type": "unit",
+      "id": "H05L",
+      "field": "name",
+      "expected": "|cffe4cfa3Капитан Гвардии|r"
+    },
+    {
+      "type": "unit",
+      "id": "H05L",
+      "field": "tip",
+      "expected": "|cffe4cfa3Капитан Гвардии|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "H05L",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Непревзойдённый воин ближнего боя и военачальник стражи Дренеев. Сочетает фехтовальное мастерство и священный гнев.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКара света|cffced4da: пассивно наносит урон окружающим противникам вспышками Света.|n- |cffa9c7deИдеальный Удар|cffced4da: наносит мощный удар и оглушает цель.|n- |cffa9c7deУдачливость|cffced4da: даёт шанс уклониться от ударов и нанести критический урон.|n- |cffa9c7deСвященная кара|cffced4da: поражает волной света цель и окружающих врагов.|n|n|cffa6afb8Цели атаки:|cffced4da наземные.|r"
+    },
+    {
+      "type": "unit",
+      "id": "H05M",
+      "field": "name",
+      "expected": "|cffe4cfa3Пророк Сломленных|r"
+    },
+    {
+      "type": "unit",
+      "id": "H05M",
+      "field": "tip",
+      "expected": "|cffe4cfa3Пророк Сломленных|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "H05M",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Духовный вождь изгнанников, овладевший стихиями и шаманскими силами. Способен призывать ледяные бури и защищать соратников силой природы.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСнежная буря|cffced4da: обрушивает ледяные осколки на область.|n- |cffa9c7deЗов помощи|cffced4da: призывает союзных бойцов дренеев.|n- |cffa9c7deВнушение|cffced4da: ускоряет союзников и усиливает их восстановление.|n- |cffa9c7deСпокойствие|cffced4da: непрерывно исцеляет всех союзников вокруг.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r"
+    },
+    {
+      "type": "unit",
+      "id": "H0MI",
+      "field": "name",
+      "expected": "|cffe4cfa3Наару|r"
+    },
+    {
+      "type": "unit",
+      "id": "H0MI",
+      "field": "propernames",
+      "expected": "А'дал"
+    },
+    {
+      "type": "unit",
+      "id": "H0MI",
+      "field": "tip",
+      "expected": "|cffe4cfa3Наару|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "H0MI",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Легендарное существо из чистой энергии Света, лидер Ша'тар и защитник Шаттрата. Обладает неисчерпаемой мощью исцеления и священной защиты.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Спасения|cffced4da: ослабляет броню врагов и предотвращает гибель союзников.|n- |cffa9c7deМассовое исцеление|cffced4da: восполняет здоровье окружающим соратникам.|n- |cffa9c7deБлагословление|cffced4da: дарует божественный щит союзникам вокруг.|n- |cffa9c7deВоскрешение|cffced4da: возвращает к жизни павших союзных воинов.|n|n|cffa6afb8Цели атаки:|cffced4da наземные и воздушные.|r"
+    },
+    {
+      "type": "ability",
+      "id": "AOhw",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создает волну энергии, восстанавливающую здоровье цели и переходящую к ближайшим союзникам.|n|n|cffa6afb8Уровень 1:|r |cffffffff130|cffced4da ед., до |cffffffff3|cffced4da целей.|n|cffa6afb8Уровень 2:|r |cffffffff205|cffced4da ед., до |cffffffff4|cffced4da целей.|n|cffa6afb8Уровень 3:|r |cffffffff280|cffced4da ед., до |cffffffff5|cffced4da целей.|n|cffa6afb8Уровень 4:|r |cffffffff385|cffced4da ед., до |cffffffff20|cffced4da целей.|r"
+    },
+    {
+      "type": "ability",
+      "id": "AOhw",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Волна исцеления|r [|cffffffff4|r] (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "AOhw",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff130|cffced4da ед. здоровья цели и переходит к |cffffffff3|cffced4da союзникам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "AOhw",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff205|cffced4da ед. здоровья цели и переходит к |cffffffff4|cffced4da союзникам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "AOhw",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff280|cffced4da ед. здоровья цели и переходит к |cffffffff5|cffced4da союзникам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "AOhw",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff385|cffced4da ед. здоровья цели и переходит к |cffffffff20|cffced4da союзникам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06C",
+      "field": "name",
+      "expected": "|cffe4cfa3Благодать|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06C",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Благодать|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06C",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует неуязвимость окружающим союзникам. Сам паладин остаётся уязвимым.|n|n|cffa6afb8Уровень 1:|r длительность |cffffffff30|cffced4da сек.|n|cffa6afb8Уровень 2:|r длительность |cffffffff40|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06C",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Благодать|r [|cffffffff1|r] (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06C",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Благодать|r [|cffffffff2|r] (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06C",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует неуязвимость окружающим союзникам на |cffffffff30|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06C",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует неуязвимость окружающим союзникам на |cffffffff40|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A068",
+      "field": "name",
+      "expected": "|cffe4cfa3Аура Доблести|r"
+    },
+    {
+      "type": "ability",
+      "id": "A068",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Аура Доблести|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A068",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон от атак находящихся рядом союзников.|n|n|cffa6afb8Уровень 1:|r |cffc8e087+10%|cffced4da к урону.|n|cffa6afb8Уровень 2:|r |cffc8e087+20%|cffced4da к урону.|n|cffa6afb8Уровень 3:|r |cffc8e087+30%|cffced4da к урону.|n|cffa6afb8Уровень 4:|r |cffc8e087+40%|cffced4da к урону.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A068",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Аура Доблести|r [|cffffffff1|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A068",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Аура Доблести|r [|cffffffff2|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A068",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Аура Доблести|r [|cffffffff3|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A068",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Аура Доблести|r [|cffffffff4|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A068",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзников на |cffc8e087+20%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A068",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзников на |cffc8e087+30%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A068",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзников на |cffc8e087+40%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A069",
+      "field": "name",
+      "expected": "|cffe4cfa3Сокрушение|r"
+    },
+    {
+      "type": "ability",
+      "id": "A069",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Сокрушение|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A069",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт шанс нанести дополнительный урон окружающим войскам при атаке.|n|n|cffa6afb8Уровень 1:|r шанс |cffffffff15%|cffced4da, |cffffffff80|cffced4da ед. урона.|n|cffa6afb8Уровень 2:|r шанс |cffffffff20%|cffced4da, |cffffffff100|cffced4da ед. урона.|n|cffa6afb8Уровень 3:|r шанс |cffffffff25%|cffced4da, |cffffffff150|cffced4da ед. урона.|n|cffa6afb8Уровень 4:|r шанс |cffffffff30%|cffced4da, |cffffffff180|cffced4da ед. урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A069",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Сокрушение|r [|cffffffff1|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A069",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Сокрушение|r [|cffffffff2|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A069",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Сокрушение|r [|cffffffff3|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A069",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Сокрушение|r [|cffffffff4|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A069",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке с шансом |cffffffff15%|cffced4da наносит |cffffffff80|cffced4da ед. урона по площади.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A069",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке с шансом |cffffffff20%|cffced4da наносит |cffffffff100|cffced4da ед. урона по площади.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A069",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке с шансом |cffffffff25%|cffced4da наносит |cffffffff150|cffced4da ед. урона по площади.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A069",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке с шансом |cffffffff30%|cffced4da наносит |cffffffff180|cffced4da ед. урона по площади.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Z0",
+      "field": "name",
+      "expected": "|cffe4cfa3Кара света|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Z0",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Кара света|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Z0",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает вспышки Света на врагов вокруг героя, нанося урон раз в несколько секунд.|n|n|cffa6afb8Уровень 1:|r |cffffffff50|cffced4da ед. урона раз в |cffffffff4|cffced4da сек.|n|cffa6afb8Уровень 2:|r |cffffffff80|cffced4da ед. урона раз в |cffffffff3.5|cffced4da сек.|n|cffa6afb8Уровень 3:|r |cffffffff100|cffced4da ед. урона раз в |cffffffff3|cffced4da сек.|n|cffa6afb8Уровень 4:|r |cffffffff120|cffced4da ед. урона раз в |cffffffff2|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Z0",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Кара света|r [|cffffffff1|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A0Z0",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Кара света|r [|cffffffff2|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A0Z0",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Кара света|r [|cffffffff3|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A0Z0",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Кара света|r [|cffffffff4|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A0Z0",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff50|cffced4da ед. урона врагам вокруг раз в |cffffffff4|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Z0",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff80|cffced4da ед. урона врагам вокруг раз в |cffffffff3.5|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Z0",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff100|cffced4da ед. урона врагам вокруг раз в |cffffffff3|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Z0",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff120|cffced4da ед. урона врагам вокруг раз в |cffffffff2|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06F",
+      "field": "name",
+      "expected": "|cffe4cfa3Идеальный Удар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06F",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Идеальный Удар|r (|cffffffffB|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06F",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит мощный удар в ближнем бою, нанося урон и оглушая цель.|n|n|cffa6afb8Уровень 1:|r |cffffffff100|cffced4da ед. урона, оглушение |cffffffff2|cffced4da сек.|n|cffa6afb8Уровень 2:|r |cffffffff200|cffced4da ед. урона, оглушение |cffffffff3|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06F",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Идеальный Удар|r [|cffffffff1|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A06F",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Идеальный Удар|r [|cffffffff2|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A06F",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff100|cffced4da ед. урона цели и оглушает её на |cffffffff2|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06F",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff200|cffced4da ед. урона цели и оглушает её на |cffffffff3|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06E",
+      "field": "name",
+      "expected": "|cffe4cfa3Удачливость|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06E",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Удачливость|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06E",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует шанс уклониться от ударов противника и нанести критический урон.|n|n|cffa6afb8Уровень 1:|r шанс |cffffffff10%|cffced4da.|n|cffa6afb8Уровень 2:|r шанс |cffffffff15%|cffced4da.|n|cffa6afb8Уровень 3:|r шанс |cffffffff20%|cffced4da.|n|cffa6afb8Уровень 4:|r шанс |cffffffff25%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06E",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Удачливость|r [|cffffffff1|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A06E",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Удачливость|r [|cffffffff2|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A06E",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Удачливость|r [|cffffffff3|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A06E",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Удачливость|r [|cffffffff4|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A06E",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует шанс |cffffffff25%|cffced4da уклониться от ударов или нанести критический урон.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06A",
+      "field": "name",
+      "expected": "|cffe4cfa3Священная кара|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06A",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Священная кара|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06A",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цель и врагов вокруг волной святой энергии.|n|n|cffa6afb8Уровень 1:|r |cffffffff100|cffced4da ед. цели, |cffffffff50|cffced4da по области.|n|cffa6afb8Уровень 2:|r |cffffffff150|cffced4da ед. цели, |cffffffff100|cffced4da по области.|n|cffa6afb8Уровень 3:|r |cffffffff200|cffced4da ед. цели, |cffffffff150|cffced4da по области.|n|cffa6afb8Уровень 4:|r |cffffffff350|cffced4da ед. цели, |cffffffff200|cffced4da по области.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06A",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Священная кара|r [|cffffffff1|r] (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06A",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Священная кара|r [|cffffffff2|r] (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06A",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Священная кара|r [|cffffffff3|r] (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06A",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Священная кара|r [|cffffffff4|r] (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06A",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff100|cffced4da ед. цели и |cffffffff50|cffced4da ед. врагам по области.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06A",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff150|cffced4da ед. цели и |cffffffff100|cffced4da ед. врагам по области.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06A",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff200|cffced4da ед. цели и |cffffffff150|cffced4da ед. врагам по области.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06A",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff350|cffced4da ед. цели и |cffffffff200|cffced4da ед. врагам по области.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06J",
+      "field": "name",
+      "expected": "|cffe4cfa3Снежная буря|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06J",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Снежная буря|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06J",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает волны ледяных осколков, наносящих урон в области действия.|n|n|cffa6afb8Уровень 1:|r |cffffffff6|cffced4da волн по |cffffffff25|cffced4da ед. урона.|n|cffa6afb8Уровень 2:|r |cffffffff8|cffced4da волн по |cffffffff35|cffced4da ед. урона.|n|cffa6afb8Уровень 3:|r |cffffffff10|cffced4da волн по |cffffffff45|cffced4da ед. урона.|n|cffa6afb8Уровень 4:|r |cffffffff14|cffced4da волн по |cffffffff60|cffced4da ед. урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06J",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Снежная буря|r [|cffffffff1|r] (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06J",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Снежная буря|r [|cffffffff2|r] (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06J",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Снежная буря|r [|cffffffff3|r] (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06J",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Снежная буря|r [|cffffffff4|r] (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06J",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff6|cffced4da волн ледяных осколков по |cffffffff25|cffced4da ед. урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06J",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff8|cffced4da волн ледяных осколков по |cffffffff35|cffced4da ед. урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06J",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff10|cffced4da волн ледяных осколков по |cffffffff45|cffced4da ед. урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06J",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff14|cffced4da волн ледяных осколков по |cffffffff60|cffced4da ед. урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06I",
+      "field": "name",
+      "expected": "|cffe4cfa3Зов помощи|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06I",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Зов помощи|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06I",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает на помощь верных воинов дренеев.|n|n|cffa6afb8Уровень 1:|r |cffffffff1|cffced4da воин дреней.|n|cffa6afb8Уровень 2:|r |cffffffff2|cffced4da воина дренея.|n|cffa6afb8Уровень 3:|r |cffffffff3|cffced4da воина дренея.|n|cffa6afb8Уровень 4:|r |cffffffff4|cffced4da воина дренея.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06I",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Зов помощи|r [|cffffffff1|r] (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06I",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Зов помощи|r [|cffffffff2|r] (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06I",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Зов помощи|r [|cffffffff3|r] (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06I",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Зов помощи|r [|cffffffff4|r] (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06I",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff1|cffced4da воина дренея на помощь.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06I",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff2|cffced4da воинов дренеев на помощь.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06I",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff3|cffced4da воинов дренеев на помощь.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06I",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff4|cffced4da воинов дренеев на помощь.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06H",
+      "field": "name",
+      "expected": "|cffe4cfa3Внушение|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06H",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Внушение|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06H",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников.|n|n|cffa6afb8Уровень 1:|r |cffc8e087+10%|cffced4da к скорости, малый бонус к регенерации.|n|cffa6afb8Уровень 2:|r |cffc8e087+20%|cffced4da к скорости, средний бонус к регенерации.|n|cffa6afb8Уровень 3:|r |cffc8e087+30%|cffced4da к скорости, высокий бонус к регенерации.|n|cffa6afb8Уровень 4:|r |cffc8e087+40%|cffced4da к скорости, высший бонус к регенерации.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06H",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Внушение|r [|cffffffff1|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A06H",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Внушение|r [|cffffffff2|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A06H",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Внушение|r [|cffffffff3|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A06H",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Внушение|r [|cffffffff4|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A06H",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость перемещения на |cffc8e087+10%|cffced4da и повышает восстановление здоровья.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06H",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость перемещения на |cffc8e087+20%|cffced4da и повышает восстановление здоровья.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06H",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость перемещения на |cffc8e087+30%|cffced4da и повышает восстановление здоровья.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06H",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость перемещения на |cffc8e087+40%|cffced4da и повышает восстановление здоровья.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06G",
+      "field": "name",
+      "expected": "|cffe4cfa3Спокойствие|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06G",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Спокойствие|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06G",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает поток целительной энергии, восполняющей здоровье союзникам в обширной области.|n|n|cffa6afb8Уровень 1:|r |cffffffff20|cffced4da ед. здоровья в сек.|n|cffa6afb8Уровень 2:|r |cffffffff30|cffced4da ед. здоровья в сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06G",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Спокойствие|r [|cffffffff1|r] (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06G",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Спокойствие|r [|cffffffff2|r] (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A06G",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восполняет союзникам |cffffffff20|cffced4da ед. здоровья в сек. в обширной области.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A06G",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восполняет союзникам |cffffffff30|cffced4da ед. здоровья в сек. в обширной области.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L6",
+      "field": "name",
+      "expected": "|cffe4cfa3Аура Спасения|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L6",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Аура Спасения|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1L6",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню находящихся рядом врагов и даёт шанс предотвратить гибель союзника рядом.|n|n|cffa6afb8Уровень 1:|r |cffff8080-1|cffced4da к броне врагов.|n|cffa6afb8Уровень 2:|r |cffff8080-2|cffced4da к броне врагов.|n|cffa6afb8Уровень 3:|r |cffff8080-3|cffced4da к броне врагов.|n|cffa6afb8Уровень 4:|r |cffff8080-4|cffced4da к броне врагов.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L6",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Аура Спасения|r [|cffffffff1|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A1L6",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Аура Спасения|r [|cffffffff2|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A1L6",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Аура Спасения|r [|cffffffff3|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A1L6",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Аура Спасения|r [|cffffffff4|r]"
+    },
+    {
+      "type": "ability",
+      "id": "A1L6",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врагов на |cffff8080-1|cffced4da и предотвращает гибель союзников.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L6",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врагов на |cffff8080-2|cffced4da и предотвращает гибель союзников.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L6",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врагов на |cffff8080-3|cffced4da и предотвращает гибель союзников.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L6",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врагов на |cffff8080-4|cffced4da и предотвращает гибель союзников.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L7",
+      "field": "name",
+      "expected": "|cffe4cfa3Массовое исцеление|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L7",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Массовое исцеление|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1L7",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье союзникам поблизости.|n|n|cffa6afb8Уровень 1:|r |cffffffff250|cffced4da ед. здоровья.|n|cffa6afb8Уровень 2:|r |cffffffff350|cffced4da ед. здоровья.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L7",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Массовое исцеление|r [|cffffffff1|r] (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1L7",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Массовое исцеление|r [|cffffffff2|r] (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1L7",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff250|cffced4da ед. здоровья союзникам поблизости.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L7",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff350|cffced4da ед. здоровья союзникам поблизости.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L4",
+      "field": "name",
+      "expected": "|cffe4cfa3Благословление|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L4",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Благословление|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1L4",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Покрывает божественным щитом союзников вокруг, повышая урон на |cffc8e087+10%|cffced4da и регенерацию здоровья на |cffc8e087+5|cffced4da ед./сек. на |cffffffff20|cffced4da сек.|n|n|cffa6afb8Уровень 1:|r |cffc8e087+10|cffced4da к броне.|n|cffa6afb8Уровень 2:|r |cffc8e087+20|cffced4da к броне.|n|cffa6afb8Уровень 3:|r |cffc8e087+30|cffced4da к броне.|n|cffa6afb8Уровень 4:|r |cffc8e087+40|cffced4da к броне.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L4",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Благословление|r [|cffffffff1|r] (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1L4",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Благословление|r [|cffffffff2|r] (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1L4",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Благословление|r [|cffffffff3|r] (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1L4",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Благословление|r [|cffffffff4|r] (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1L4",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Покрывает щитом союзников вокруг на |cffffffff30|cffced4da сек., даруя |cffc8e087+2|cffced4da к броне.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L4",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Покрывает щитом союзников вокруг на |cffffffff30|cffced4da сек., даруя |cffc8e087+3|cffced4da к броне.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L4",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Покрывает щитом союзников вокруг на |cffffffff30|cffced4da сек., даруя |cffc8e087+4|cffced4da к броне.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L4",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Покрывает щитом союзников вокруг на |cffffffff30|cffced4da сек., даруя |cffc8e087+6|cffced4da к броне.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L5",
+      "field": "name",
+      "expected": "|cffe4cfa3Воскрешение|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L5",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Воскрешение|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1L5",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возвращает к жизни павших союзных воинов вокруг героя.|n|n|cffa6afb8Уровень 1:|r до |cffffffff6|cffced4da союзников.|n|cffa6afb8Уровень 2:|r до |cffffffff8|cffced4da союзников.|n|cffa6afb8Уровень 3:|r до |cffffffff10|cffced4da союзников.|n|cffa6afb8Уровень 4:|r до |cffffffff12|cffced4da союзников.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L5",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Воскрешение|r [|cffffffff1|r] (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1L5",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Воскрешение|r [|cffffffff2|r] (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1L5",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Воскрешение|r [|cffffffff3|r] (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1L5",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Воскрешение|r [|cffffffff4|r] (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1L5",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возвращает к жизни до |cffffffff8|cffced4da павших союзников.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L5",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возвращает к жизни до |cffffffff10|cffced4da павших союзников.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L5",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возвращает к жизни до |cffffffff12|cffced4da павших союзников.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L3",
+      "field": "name",
+      "expected": "|cffe4cfa3Свет Надежды|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L3",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Свет Надежды|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L3",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждые |cffffffff12|cffced4da сек. наару выпускает волну света, исцеляющую союзника на |cffffffff100|cffced4da ед. здоровья и переходящую к другим целям.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L2",
+      "field": "name",
+      "expected": "|cffe4cfa3Волна исцеления|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L2",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создает волну энергии, восстанавливающую здоровье цели и переходящую к ближайшим союзникам.|n|n|cffa6afb8Уровень 1:|r |cffffffff130|cffced4da ед., до |cffffffff3|cffced4da целей.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L2",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создает волну энергии, восстанавливающую |cffffffff130|cffced4da ед. здоровья цели и переходящую к |cffffffff3|cffced4da союзникам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1L1",
+      "field": "name",
+      "expected": "|cffe4cfa3Исцеление|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Z3",
+      "field": "name",
+      "expected": "|cffe4cfa3Ювелирное мастерство|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Z3",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Ювелирное мастерство|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Z3",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Ювелирное мастерство|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0Z3",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Инженер имеет |cffffffff50%|cffced4da шанс начать строительство здания с |cffffffff20%|cffced4da начального прогресса.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A04Y",
+      "field": "name",
+      "expected": "|cffe4cfa3Свет небес|r"
+    },
+    {
+      "type": "ability",
+      "id": "A04Y",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Свет небес|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A04Y",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восполняет |cffffffff150|cffced4da ед. здоровья живому союзнику или наносит вдвое меньший урон нежити.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A04W",
+      "field": "name",
+      "expected": "|cffe4cfa3Свет небес|r"
+    },
+    {
+      "type": "ability",
+      "id": "A04W",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Свет небес|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A04U",
+      "field": "name",
+      "expected": "|cffe4cfa3Аура света|r"
+    },
+    {
+      "type": "ability",
+      "id": "A04U",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Аура света|r"
+    },
+    {
+      "type": "ability",
+      "id": "A04U",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость регенерации здоровья всем союзникам поблизости на |cffc8e087+0.5|cffced4da ед./сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A04T",
+      "field": "name",
+      "expected": "|cffe4cfa3Возрождение|r"
+    },
+    {
+      "type": "ability",
+      "id": "A04T",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Возрождение|r"
+    },
+    {
+      "type": "ability",
+      "id": "A04T",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Озарённый паладин мгновенно возрождается после гибели.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05V",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Ускользание|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05V",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт шанс |cffffffff17%|cffced4da уклониться от вражеской атаки.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05T",
+      "field": "name",
+      "expected": "|cffe4cfa3Пламя света|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05T",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Пламя света|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05T",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Священный огонь атакует ближайших врагов, нанося |cffffffff20|cffced4da ед. урона и поджигая их на |cffffffff1|cffced4da ед./сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05C",
+      "field": "name",
+      "expected": "|cffe4cfa3Пламя света|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05C",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Пламя света|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05C",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поджигает находящихся рядом врагов, нанося |cffffffff20|cffced4da ед. урона и |cffffffff2|cffced4da ед./сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05A",
+      "field": "name",
+      "expected": "|cffe4cfa3Рассеивание заклинаний|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05A",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Рассеивание заклинаний|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A059",
+      "field": "name",
+      "expected": "|cffe4cfa3Исцеление|r"
+    },
+    {
+      "type": "ability",
+      "id": "A059",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Исцеление|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A055",
+      "field": "name",
+      "expected": "|cffe4cfa3Воскрешение|r"
+    },
+    {
+      "type": "ability",
+      "id": "A055",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Воскрешение|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A055",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Воскрешает |cffffffff1|cffced4da павшего союзного воина поблизости.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A054",
+      "field": "name",
+      "expected": "|cffe4cfa3Внутреннее жжение|r"
+    },
+    {
+      "type": "ability",
+      "id": "A054",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Внутреннее жжение|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A054",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает урон врагов и уменьшает их показатель брони.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05X",
+      "field": "name",
+      "expected": "|cffe4cfa3Тяжелые удары|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05X",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Тяжелые удары|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05X",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон по целям с тяжёлой бронёй.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05W",
+      "field": "name",
+      "expected": "|cffe4cfa3Усиленная броня|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05W",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Усиленная броня|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A05W",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает получаемый юнитом урон от вражеских атак.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A052",
+      "field": "name",
+      "expected": "|cffe4cfa3Древние знания Света|r"
+    },
+    {
+      "type": "ability",
+      "id": "A052",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Древние знания Света|r"
+    },
+    {
+      "type": "ability",
+      "id": "A052",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускоряет регенерацию маны находящихся рядом союзников на |cffc8e087+0.55|cffced4da ед./сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A051",
+      "field": "name",
+      "expected": "|cffe4cfa3Цепная молния|r"
+    },
+    {
+      "type": "ability",
+      "id": "A051",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Цепная молния|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A051",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Цепная молния|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A051",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает молнией цель, нанося |cffffffff85|cffced4da ед. урона, и переходит до |cffffffff4|cffced4da раз к другим врагам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A050",
+      "field": "name",
+      "expected": "|cffe4cfa3Сглаз|r"
+    },
+    {
+      "type": "ability",
+      "id": "A050",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Сглаз|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A050",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Изгоняет вражескую цель в астрал, замедляя её и лишая возможности атаковать.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A04Z",
+      "field": "name",
+      "expected": "|cffe4cfa3Сглаз|r"
+    },
+    {
+      "type": "ability",
+      "id": "A04Z",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Сглаз|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A04Z",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Временно превращает врага в безобидное животное.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A058",
+      "field": "name",
+      "expected": "|cffe4cfa3Немота|r"
+    },
+    {
+      "type": "ability",
+      "id": "A058",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Немота|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A057",
+      "field": "name",
+      "expected": "|cffe4cfa3Замедление|r"
+    },
+    {
+      "type": "ability",
+      "id": "A057",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Замедление|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A057",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Замедляет скорость атаки врага на |cffff808025%|cffced4da и скорость передвижения на |cffff808035%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A056",
+      "field": "name",
+      "expected": "|cffe4cfa3Похищение маны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A056",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Похищение маны|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A056",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вытягивает запас маны из вражеского юнита или передаёт ману союзнику.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A061",
+      "field": "name",
+      "expected": "|cffe4cfa3Сжигание маны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A061",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Сжигание маны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A060",
+      "field": "name",
+      "expected": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A060",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A060",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит круговой урон по площади врагам рядом с основной целью.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1C6",
+      "field": "name",
+      "expected": "|cffe4cfa3Спасение в тени|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1C6",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Спасение в тени|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1C6",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При гибели воина есть |cffffffff50%|cffced4da шанс, что он возродится у логова Сломленных.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1C5",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Скачок|r (|cffffffffB|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1C5",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Скачок|r (|cffffffffB|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1C4",
+      "field": "name",
+      "expected": "|cffe4cfa3Стремительное приближение|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1C4",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Стремительное приближение|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1C4",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выбранные мастера совершают стремительный телепорт в указанную точку.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05Z",
+      "field": "name",
+      "expected": "|cffe4cfa3Отравленное оружие|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05Z",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Отравленное оружие|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05Y",
+      "field": "name",
+      "expected": "|cffe4cfa3Танец ветра|r"
+    },
+    {
+      "type": "ability",
+      "id": "A05Y",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Танец ветра|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A05Y",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует невидимость и ускорение. Первая атака из невидимости наносит повышенный урон.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1C8",
+      "field": "name",
+      "expected": "|cffe4cfa3Поле слома|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1C8",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Значительно снижает скорость дальнобойной атаки врагов в указанной области.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A063",
+      "field": "name",
+      "expected": "|cffe4cfa3Щит молний|r"
+    },
+    {
+      "type": "ability",
+      "id": "A063",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Щит молний|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A067",
+      "field": "name",
+      "expected": "|cffe4cfa3Массовое исцеление|r"
+    },
+    {
+      "type": "ability",
+      "id": "A067",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Массовое исцеление|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A067",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff125|cffced4da ед. здоровья всем союзникам в радиусе |cffffffff300|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A066",
+      "field": "name",
+      "expected": "|cffe4cfa3Безумие|r"
+    },
+    {
+      "type": "ability",
+      "id": "A066",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Безумие|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "name1",
+      "expected": "|cffe4cfa3Руническое оружие [1/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Руническое оружие [1/6]|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+2|cffced4da ед. (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "name2",
+      "expected": "|cffe4cfa3Руническое оружие [2/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Руническое оружие [2/6]|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+4|cffced4da ед. (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "name3",
+      "expected": "|cffe4cfa3Руническое оружие [3/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Руническое оружие [3/6]|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+6|cffced4da ед. (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "name4",
+      "expected": "|cffe4cfa3Руническое оружие [4/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Руническое оружие [4/6]|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+8|cffced4da ед. (уровень |cffffffff4|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "name5",
+      "expected": "|cffe4cfa3Руническое оружие [5/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Руническое оружие [5/6]|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "ubertip5",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+10|cffced4da ед. (уровень |cffffffff5|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "name6",
+      "expected": "|cffe4cfa3Руническое оружие [6/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Руническое оружие [6/6]|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R023",
+      "field": "ubertip6",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки воинов ближнего боя Дренеев на |cffc8e087+12|cffced4da ед. (уровень |cffffffff6|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "name1",
+      "expected": "|cffe4cfa3Апекситовый доспех [1/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Апекситовый доспех [1/6]|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+2|cffced4da ед. (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "name2",
+      "expected": "|cffe4cfa3Апекситовый доспех [2/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Апекситовый доспех [2/6]|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+4|cffced4da ед. (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "name3",
+      "expected": "|cffe4cfa3Апекситовый доспех [3/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Апекситовый доспех [3/6]|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+6|cffced4da ед. (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "name4",
+      "expected": "|cffe4cfa3Апекситовый доспех [4/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Апекситовый доспех [4/6]|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+8|cffced4da ед. (уровень |cffffffff4|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "name5",
+      "expected": "|cffe4cfa3Апекситовый доспех [5/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Апекситовый доспех [5/6]|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "ubertip5",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+10|cffced4da ед. (уровень |cffffffff5|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "name6",
+      "expected": "|cffe4cfa3Апекситовый доспех [6/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Апекситовый доспех [6/6]|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R024",
+      "field": "ubertip6",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает показатель брони всех сухопутных войск Дренеев на |cffc8e087+12|cffced4da ед. (уровень |cffffffff6|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все сухопутные войска Дренеев.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "name1",
+      "expected": "|cffe4cfa3Заточенные наконечники [1/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Заточенные наконечники [1/6]|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+2|cffced4da ед. (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "name2",
+      "expected": "|cffe4cfa3Заточенные наконечники [2/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Заточенные наконечники [2/6]|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+4|cffced4da ед. (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "name3",
+      "expected": "|cffe4cfa3Заточенные наконечники [3/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Заточенные наконечники [3/6]|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+6|cffced4da ед. (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "name4",
+      "expected": "|cffe4cfa3Заточенные наконечники [4/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Заточенные наконечники [4/6]|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+8|cffced4da ед. (уровень |cffffffff4|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "name5",
+      "expected": "|cffe4cfa3Заточенные наконечники [5/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Заточенные наконечники [5/6]|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "ubertip5",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+10|cffced4da ед. (уровень |cffffffff5|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "name6",
+      "expected": "|cffe4cfa3Заточенные наконечники [6/6]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Заточенные наконечники [6/6]|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02P",
+      "field": "ubertip6",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки стрелков и осадных машин Дренеев на |cffc8e087+12|cffced4da ед. (уровень |cffffffff6|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deОсадная машина|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02R",
+      "field": "name1",
+      "expected": "|cffe4cfa3Посвящение Озаренных|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02R",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Посвящение Озаренных|r (|cffffffffR|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02R",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает возможность возводить Храм Озаренных и нанимать элитные войска Озарённых дренеев.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deХрам Озаренных|cffced4da: открывает постройку и доступ к священным воинам.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02Q",
+      "field": "name1",
+      "expected": "|cffe4cfa3Привлечь Сломленных|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02Q",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Привлечь Сломленных|r (|cffffffffE|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02Q",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает возможность возводить Логово Сломленных и нанимать войска Сломленных дренеев и Пеплоустов.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛогово Сломленных|cffced4da: открывает постройку и доступ к изгнанникам.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0D8",
+      "field": "name1",
+      "expected": "|cffe4cfa3Улучшенные инструменты [1/4]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0D8",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Улучшенные инструменты [1/4]|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0D8",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины на |cffc8e087+8|cffced4da ед. (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0D8",
+      "field": "name2",
+      "expected": "|cffe4cfa3Улучшенные инструменты [2/4]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0D8",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Улучшенные инструменты [2/4]|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0D8",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины на |cffc8e087+16|cffced4da ед. (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0D8",
+      "field": "name3",
+      "expected": "|cffe4cfa3Улучшенные инструменты [3/4]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0D8",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Улучшенные инструменты [3/4]|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0D8",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины на |cffc8e087+24|cffced4da ед. (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0D8",
+      "field": "name4",
+      "expected": "|cffe4cfa3Улучшенные инструменты [4/4]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0D8",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Улучшенные инструменты [4/4]|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0D8",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой работниками древесины на |cffc8e087+32|cffced4da ед. (уровень |cffffffff4|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deИнженер|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R029",
+      "field": "name1",
+      "expected": "|cffe4cfa3Дренейское мастерство [1/3]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R029",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Дренейское мастерство [1/3]|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R029",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает боевые характеристики лазутчиков, рангари и всадников на элекках: увеличивает здоровье на |cffc8e087+40|cffced4da ед. и скорость передвижения (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R029",
+      "field": "name2",
+      "expected": "|cffe4cfa3Дренейское мастерство [2/3]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R029",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Дренейское мастерство [2/3]|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R029",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает боевые характеристики лазутчиков, рангари и всадников на элекках: увеличивает здоровье на |cffc8e087+80|cffced4da ед. и скорость передвижения (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R029",
+      "field": "name3",
+      "expected": "|cffe4cfa3Дренейское мастерство [3/3]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R029",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Дренейское мастерство [3/3]|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R029",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает боевые характеристики лазутчиков, рангари и всадников на элекках: увеличивает здоровье на |cffc8e087+120|cffced4da ед. и скорость передвижения (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЛазутчик|cffced4da|n- |cffa9c7deРангари|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02B",
+      "field": "name1",
+      "expected": "|cffe4cfa3Тяжелые доспехи|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02B",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Тяжелые доспехи|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02B",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Оснащает всадников на элекках массивными доспехами, увеличивая запас здоровья на |cffc8e087+150|cffced4da ед. и показатель брони на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02C",
+      "field": "name1",
+      "expected": "|cffe4cfa3Ковка оружия|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02C",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Ковка оружия|r (|cffffffffC|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02C",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Изготавливает усиленное вооружение для всадников на элекках, увеличивая силу атаки на |cffc8e087+8|cffced4da ед.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deВсадник на Элекке|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02D",
+      "field": "name1",
+      "expected": "|cffe4cfa3Таинство Магии [1/2]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02D",
+      "field": "name2",
+      "expected": "|cffe4cfa3Таинство Магии [2/2]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02D",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Таинство Магии [1/2]|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02D",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Таинство Магии [2/2]|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02D",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг чароплетниц до адептов: увеличивает здоровье на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед., скорость регенерации маны и открывает заклинание «Похищение маны» (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЧароплетница|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02D",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает ранг чароплетниц до мастеров: увеличивает здоровье на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед., скорость регенерации маны и открывает заклинание «Немота» (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЧароплетница|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02E",
+      "field": "name1",
+      "expected": "|cffe4cfa3Дар Наару [1/3]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02E",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Дар Наару [1/3]|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02E",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает жрецов в таинства Света: увеличивает запас маны на |cffc8e087+50|cffced4da ед., её регенерацию и открывает новые заклинания (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЖрец|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02E",
+      "field": "name2",
+      "expected": "|cffe4cfa3Дар Наару [2/3]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02E",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Дар Наару [2/3]|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02E",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает жрецов в таинства Света: увеличивает запас маны на |cffc8e087+100|cffced4da ед., её регенерацию и открывает новые заклинания (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЖрец|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02E",
+      "field": "name3",
+      "expected": "|cffe4cfa3Дар Наару [3/3]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02E",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Дар Наару [3/3]|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02E",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает жрецов в таинства Света: увеличивает запас маны на |cffc8e087+150|cffced4da ед., её регенерацию и открывает новые заклинания (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЖрец|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02F",
+      "field": "name1",
+      "expected": "|cffe4cfa3Чародейские познания|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02F",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Чародейские познания|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02F",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас маны чародеев на |cffc8e087+25|cffced4da ед. и открывает способность «Безумие».|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЧародей|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R022",
+      "field": "name1",
+      "expected": "|cffe4cfa3Посвящение Паладина [1/3]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R022",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Посвящение Паладина [1/3]|r (|cffffffffF|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R022",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья паладинов на |cffc8e087+50|cffced4da ед., запас маны на |cffc8e087+40|cffced4da ед., её регенерацию и открывает священные чары (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R022",
+      "field": "name2",
+      "expected": "|cffe4cfa3Посвящение Паладина [2/3]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R022",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Посвящение Паладина [2/3]|r (|cffffffffF|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R022",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья паладинов на |cffc8e087+100|cffced4da ед., запас маны на |cffc8e087+80|cffced4da ед., её регенерацию и открывает священные чары (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R022",
+      "field": "name3",
+      "expected": "|cffe4cfa3Посвящение Паладина [3/3]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R022",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Посвящение Паладина [3/3]|r (|cffffffffF|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R022",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья паладинов на |cffc8e087+150|cffced4da ед., запас маны на |cffc8e087+120|cffced4da ед., её регенерацию и открывает священные чары (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deОзаренный Паладин|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02M",
+      "field": "name1",
+      "expected": "|cffe4cfa3Учение наару [1/2]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02M",
+      "field": "name2",
+      "expected": "|cffe4cfa3Учение наару [2/2]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02M",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Учение наару [1/2]|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02M",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Учение наару [2/2]|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02M",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Жрицы Наару постигают глубокие знания Света: увеличивает запас маны на |cffc8e087+40|cffced4da ед. и скорость её регенерации на |cffc8e087+0.3|cffced4da ед./сек. (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЖрица Наару|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02M",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Жрицы Наару постигают высшие знания Света: увеличивает запас маны на |cffc8e087+80|cffced4da ед. и скорость её регенерации на |cffc8e087+0.6|cffced4da ед./сек. (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deЖрица Наару|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02L",
+      "field": "name1",
+      "expected": "|cffe4cfa3Изучение магии [1/2]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02L",
+      "field": "name2",
+      "expected": "|cffe4cfa3Изучение магии [2/2]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02L",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Изучение магии [1/2]|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02L",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Изучение магии [2/2]|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02L",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Озарённых на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+50|cffced4da ед., её регенерацию на |cffc8e087+0.5|cffced4da ед./сек. и открывает способность «Цепная молния» (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deМаг Озаренный|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02L",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья магов Озарённых на |cffc8e087+80|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед., её регенерацию на |cffc8e087+1.0|cffced4da ед./сек. и открывает способность «Сглаз» (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deМаг Озаренный|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02N",
+      "field": "name1",
+      "expected": "|cffe4cfa3Освящение оружия|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02N",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Освящение оружия|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02N",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наполняет клинки мечников Озарённых священной силой, наделяя их атаки способностью «Посвященное оружие» с повышенным уроном по всем типам брони.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deМечник Озаренный|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02J",
+      "field": "name1",
+      "expected": "|cffe4cfa3Мастерство Пеплоустов|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02J",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Мастерство Пеплоустов|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02J",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает воинов Сломленных боевой ярости Пеплоустов: повышает скорость атаки, но снижает скорость передвижения.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|n|n|cffff8080Исключает исследование «Мастерство Сломленных».|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02K",
+      "field": "name1",
+      "expected": "|cffe4cfa3Мастерство Сломленных|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02K",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Мастерство Сломленных|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02K",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает воинов Сломленных ловкости и стремительности: повышает скорость передвижения, но незначительно снижает скорость атаки.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный страж|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|n|n|cffff8080Исключает исследование «Мастерство Пеплоустов».|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02G",
+      "field": "name1",
+      "expected": "|cffe4cfa3Мудрость предков [1/3]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02G",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Мудрость предков [1/3]|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02G",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает Сломленным провидцам шаманские тайны: увеличивает дальность атаки, запас маны на |cffc8e087+25|cffced4da ед. и наделяет новыми способностями (уровень |cffffffff1|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02G",
+      "field": "name2",
+      "expected": "|cffe4cfa3Мудрость предков [2/3]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02G",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Мудрость предков [2/3]|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02G",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает Сломленным провидцам шаманские тайны: увеличивает дальность атаки, запас маны на |cffc8e087+50|cffced4da ед. и наделяет новыми способностями (уровень |cffffffff2|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02G",
+      "field": "name3",
+      "expected": "|cffe4cfa3Мудрость предков [3/3]|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02G",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Мудрость предков [3/3]|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02G",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает Сломленным провидцам шаманские тайны: увеличивает дальность атаки, запас маны на |cffc8e087+75|cffced4da ед. и наделяет новыми способностями (уровень |cffffffff3|cffced4da).|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный провидец|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02H",
+      "field": "name1",
+      "expected": "|cffe4cfa3Мастерство танца ветра|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02H",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Мастерство танца ветра|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02H",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Сломленных мастеров скрытности и внезапному нападению, открывая способность «Танец ветра».|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02I",
+      "field": "name1",
+      "expected": "|cffe4cfa3Отравленное оружие|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02I",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Отравленное оружие|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R02I",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Покрывает оружие Сломленных смертоносным ядом, замедляющим врагов и наносящим периодический урон.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deСломленный мастер|cffced4da.|r"
+    }
+  ],
+  "categories": {
+    "selection": [
+      "A0HS"
+    ],
+    "markers": [
+      "R07G"
+    ],
+    "buildings": [
+      "h015",
+      "h016",
+      "h017",
+      "h033",
+      "h055",
+      "h056",
+      "h057",
+      "h058",
+      "h05A",
+      "h05B",
+      "h05C",
+      "h011"
+    ],
+    "units": [
+      "h012",
+      "e000",
+      "h01O",
+      "h01P",
+      "h01Q",
+      "h01R",
+      "h01S",
+      "h01T",
+      "h01U",
+      "h059",
+      "h05D",
+      "h05E",
+      "n005",
+      "nDr1",
+      "o00H",
+      "n00P"
+    ],
+    "heroes": [
+      "H05K",
+      "H05L",
+      "H05M",
+      "H0MI"
+    ],
+    "upgrades": [
+      "R07G",
+      "R023",
+      "R024",
+      "R02P",
+      "R02R",
+      "R02Q",
+      "R0D8",
+      "R029",
+      "R02B",
+      "R02C",
+      "R02D",
+      "R02E",
+      "R02F",
+      "R022",
+      "R02M",
+      "R02L",
+      "R02N",
+      "R02J",
+      "R02K",
+      "R02G",
+      "R02H",
+      "R02I"
+    ],
+    "abilities": [
+      "A0HS",
+      "A0Z3",
+      "A04Y",
+      "A04W",
+      "A04U",
+      "A04T",
+      "A05V",
+      "A05T",
+      "A05C",
+      "A05A",
+      "A059",
+      "A055",
+      "A054",
+      "A05X",
+      "A05W",
+      "A052",
+      "A051",
+      "A050",
+      "A04Z",
+      "A058",
+      "A057",
+      "A056",
+      "A05L",
+      "A05N",
+      "A05P",
+      "A05M",
+      "A05O",
+      "A05Q",
+      "A05R",
+      "A061",
+      "A060",
+      "A1C6",
+      "A1C5",
+      "A1C4",
+      "A05Z",
+      "A05Y",
+      "A1C8",
+      "A063",
+      "A067",
+      "A066",
+      "AOhw",
+      "A06C",
+      "A068",
+      "A069",
+      "A0Z0",
+      "A06F",
+      "A06E",
+      "A06A",
+      "A06J",
+      "A06I",
+      "A06H",
+      "A06G",
+      "A1L6",
+      "A1L7",
+      "A1L4",
+      "A1L5",
+      "A1L3",
+      "A1L2",
+      "A1L1"
+    ]
+  }
+}

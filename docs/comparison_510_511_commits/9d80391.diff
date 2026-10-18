@@ -1,0 +1,380 @@
+commit 9d803919c80e64d7db8a65171f83c57151849edb
+Author:     VinerX <vinerx2000@gmail.com>
+AuthorDate: Sat Oct 10 22:20:59 2026 +0300
+Commit:     VinerX <vinerx2000@gmail.com>
+CommitDate: Sat Oct 10 22:20:59 2026 +0300
+
+    fix(ui): stabilize multiboard player rows
+
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/50_lib_new_functions.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/50_lib_new_functions.lua
+index f9f5c5a..fcd6e4f 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/50_lib_new_functions.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/50_lib_new_functions.lua
+@@ -47,23 +47,23 @@ end
+ ---@return nothing
+ function ExpandTableArmyExpr()
+ 	local i = 0
+-	local l__max = 1
+ 	MultiboardSetColumnCount(Multiboard, 4)
+ 	
+ 	
+-	ArmyPowerColumn[24] = MultiboardGetItem(Multiboard, 0, 3)
+-	MultiboardSetItemValue(ArmyPowerColumn[24], "Опыт")
+-	MultiboardSetItemWidth(ArmyPowerColumn[24], 0.06)
+-	MultiboardReleaseItem(ArmyPowerColumn[24])
++	local header = MultiboardGetItem(Multiboard, 0, 3)
++	ArmyPowerColumnHeader = header
++	MultiboardSetItemValue(header, "Опыт")
++	MultiboardSetItemWidth(header, 0.06)
++	MultiboardReleaseItem(header)
+ 	
+ 	while true do
+ 		if i > 23 then break end
+ 		ArmyExp[i] = 0.001
+-		if GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING or IsPlayerInForce(Player(i), udg_Bots) then
+-			ArmyPowerColumn[i] = MultiboardGetItem(Multiboard, l__max, 3)
++		local ownerIndex = MultiboardItemOwnerIndex[i]
++		if ownerIndex ~= nil then
++			ArmyPowerColumn[i] = MultiboardGetItem(Multiboard, ownerIndex, 3)
+ 			MultiboardSetItemValue(ArmyPowerColumn[i], "0")
+ 			MultiboardSetItemWidth(ArmyPowerColumn[i], 0.06)
+-			l__max = l__max + 1
+ 		end
+ 		i = i + 1
+ 		
+@@ -75,4 +75,4 @@ function ExpandTableArmyExpr()
+ 	MultiboardDisplay(Multiboard, true)
+ 	
+ 	
+-end
+\ No newline at end of file
++end
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/51_update_graph.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/51_update_graph.lua
+index 90f32a7..400e938 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/51_update_graph.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/51_update_graph.lua
+@@ -4,29 +4,41 @@
+ ---@param pi integer
+ ---@return nothing
+ function PercentGraph(pi)
+-	if ThirdColumn[pi] == nil and EnsureMultiboardPlayerRow(pi) == nil then
+-		return
++	local ownerIndex = MultiboardItemOwnerIndex[pi]
++	if ownerIndex == nil and EnsureMultiboardPlayerRow(pi) == nil then return end
++	local item = ThirdColumn[pi]
++	if item == nil and ownerIndex ~= nil then
++		item = MultiboardGetItem(Multiboard, ownerIndex, 2)
++		ThirdColumn[pi] = item
++	end
++	if item ~= nil then
++		local count = CityCount or 0
++		local pct = count > 0 and I2R(CityPlayerCount[pi] or 0) * 100.0 / I2R(count) or 0.0
++		MultiboardSetItemValue(item, R2SW_Polyfill(pct) .. "%")
+ 	end
+-	MultiboardSetItemValue(ThirdColumn[pi], R2SW_Polyfill(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount)) .. "%")
+ end
+ ---@param pi integer
+ ---@return nothing
+ function ArmyExpGraph(pi)
+-	if ArmyPowerColumn[pi] == nil and EnsureMultiboardPlayerRow(pi) == nil then
+-		return
++	local ownerIndex = MultiboardItemOwnerIndex[pi]
++	if ownerIndex == nil and EnsureMultiboardPlayerRow(pi) == nil then return end
++	local item = ArmyPowerColumn[pi]
++	if item == nil and ownerIndex ~= nil then
++		item = MultiboardGetItem(Multiboard, ownerIndex, 3)
++		ArmyPowerColumn[pi] = item
+ 	end
+-	MultiboardSetItemValue(ArmyPowerColumn[pi], R2SW_Polyfill(ArmyExp[pi]))
++	if item ~= nil then MultiboardSetItemValue(item, R2SW_Polyfill(ArmyExp[pi] or 0.001)) end
+ end
+ ---@param pi integer
+ ---@return nothing
+ function UpdateGraf(pi)
+ 	local p = Player(pi)
+ 	local ownerIndex = EnsureMultiboardPlayerRow(pi)
+-	local r = R2I(udg_UnitsCount[pi] / 25.00)
++	local r = R2I((udg_UnitsCount[pi] or 0) / 25.00)
+ 	logistic[pi] = (500 + 100 * (r - 1)) / 2 * r	--  ??????????
+ 	
+ 	-- ????? ??????????? ????????
+-	if GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) >= 1 then
++	if (udg_MainPrice[pi] or 0) ~= 0 and GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) >= 1 then
+ 		additional[pi] = disincome[pi] * (udg_MainPrice[pi] / (-100.0))
+ 	end
+ 	
+@@ -41,8 +53,8 @@ function UpdateGraf(pi)
+ 	if ownerIndex == nil then
+ 		return
+ 	end
+-	MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi]))
++	MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi] or 0))
+ 	PercentGraph(pi)
+ 	ArmyExpGraph(pi)
+ 	
+-end
+\ No newline at end of file
++end
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/52_enter.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/52_enter.lua
+index 69f7493..ea94380 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/52_enter.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/52_enter.lua
+@@ -14,7 +14,7 @@ function Enter(u)
+ 	if ownerIndex == nil then
+ 		return
+ 	end
+-	MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi]))
++	MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi] or 0))
+ 	
+ 	
+-end
+\ No newline at end of file
++end
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/54_count_dis.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/54_count_dis.lua
+index 94b7b8c..d0a021f 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/54_count_dis.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/_lib/54_count_dis.lua
+@@ -12,6 +12,7 @@ function AddCountDis(u, pi)
+ 		return 
+ 	end
+ 	if income[pi] == nil then return end
++	udg_UnitsCount[pi] = udg_UnitsCount[pi] or 0
+ 	
+ 	--  ???? ?????? ??? ??? ?????????
+ 	if IsUnitType(u, UNIT_TYPE_STRUCTURE) or GetUnitAbilityLevel(u, FourCC('A1IJ')) > 0 then
+@@ -93,7 +94,7 @@ function AddCountDis(u, pi)
+ 	
+ 	
+ 	
+-	UpdateGraf(pi)
++	if MultiboardItemOwnerIndex[pi] ~= nil then UpdateGraf(pi) end
+ 	
+ end
+ ---@param u unit
+@@ -107,6 +108,7 @@ function DelCountDis(u, pi)
+ 		return 
+ 	end
+ 	if income[pi] == nil then return end
++	udg_UnitsCount[pi] = udg_UnitsCount[pi] or 0
+ 	
+ 	
+ 	-- ????
+@@ -197,7 +199,7 @@ function DelCountDis(u, pi)
+ 		
+ 	end
+ 	
+-	UpdateGraf(pi)
++	if MultiboardItemOwnerIndex[pi] ~= nil then UpdateGraf(pi) end
+ 	u = nil
+ end
+ ---@return nothing
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/04_race_selection.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/04_race_selection.lua
+index e5dee55..43188ff 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/04_race_selection.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/04_race_selection.lua
+@@ -13,40 +13,42 @@ end
+ ---@return nothing
+ function InitColorCommands()
+ 	local COLOR_MAP = {
+-		[" - colorred"] = PLAYER_COLOR_RED,
+-		[" - colorblue"] = PLAYER_COLOR_BLUE,
+-		[" - colorpurple"] = PLAYER_COLOR_PURPLE,
+-		[" - colorteal"] = PLAYER_COLOR_CYAN,
+-		[" - coloryellow"] = PLAYER_COLOR_YELLOW,
+-		[" - colororange"] = PLAYER_COLOR_ORANGE,
+-		[" - colorgreen"] = PLAYER_COLOR_GREEN,
+-		[" - colorpink"] = PLAYER_COLOR_PINK,
+-		[" - colorgray"] = PLAYER_COLOR_LIGHT_GRAY,
+-		[" - colorlight - blue"] = PLAYER_COLOR_LIGHT_BLUE,
+-		[" - colordark - green"] = PLAYER_COLOR_AQUA,
+-		[" - colorbrown"] = PLAYER_COLOR_BROWN,
+-		[" - colormaroon"] = PLAYER_COLOR_MAROON,
+-		[" - colornavy"] = PLAYER_COLOR_NAVY,
+-		[" - colorturquoise"] = PLAYER_COLOR_TURQUOISE,
+-		[" - colorviolet"] = PLAYER_COLOR_VIOLET,
+-		[" - colorwheat"] = PLAYER_COLOR_WHEAT,
+-		[" - colorpeach"] = PLAYER_COLOR_PEACH,
+-		[" - colormint"] = PLAYER_COLOR_MINT,
+-		[" - colorlavender"] = PLAYER_COLOR_LAVENDER,
+-		[" - colorcoal"] = PLAYER_COLOR_COAL,
+-		[" - colorsnow"] = PLAYER_COLOR_SNOW,
+-		[" - coloremerald"] = PLAYER_COLOR_EMERALD,
+-		[" - colorpeanut"] = PLAYER_COLOR_PEANUT,
++		["-colorred"] = PLAYER_COLOR_RED,
++		["-colorblue"] = PLAYER_COLOR_BLUE,
++		["-colorpurple"] = PLAYER_COLOR_PURPLE,
++		["-colorteal"] = PLAYER_COLOR_CYAN,
++		["-coloryellow"] = PLAYER_COLOR_YELLOW,
++		["-colororange"] = PLAYER_COLOR_ORANGE,
++		["-colorgreen"] = PLAYER_COLOR_GREEN,
++		["-colorpink"] = PLAYER_COLOR_PINK,
++		["-colorgray"] = PLAYER_COLOR_LIGHT_GRAY,
++		["-colorlight-blue"] = PLAYER_COLOR_LIGHT_BLUE,
++		["-colordark-green"] = PLAYER_COLOR_AQUA,
++		["-colorbrown"] = PLAYER_COLOR_BROWN,
++		["-colormaroon"] = PLAYER_COLOR_MAROON,
++		["-colornavy"] = PLAYER_COLOR_NAVY,
++		["-colorturquoise"] = PLAYER_COLOR_TURQUOISE,
++		["-colorviolet"] = PLAYER_COLOR_VIOLET,
++		["-colorwheat"] = PLAYER_COLOR_WHEAT,
++		["-colorpeach"] = PLAYER_COLOR_PEACH,
++		["-colormint"] = PLAYER_COLOR_MINT,
++		["-colorlavender"] = PLAYER_COLOR_LAVENDER,
++		["-colorcoal"] = PLAYER_COLOR_COAL,
++		["-colorsnow"] = PLAYER_COLOR_SNOW,
++		["-coloremerald"] = PLAYER_COLOR_EMERALD,
++		["-colorpeanut"] = PLAYER_COLOR_PEANUT,
+ 	}
+ 
+ 	local t = CreateTrigger()
+ 	for i = 0, 23 do
+-		for cmd, _ in pairs(COLOR_MAP) do
+-			TriggerRegisterPlayerChatEvent(t, Player(i), cmd, true)
+-		end
++		TriggerRegisterPlayerChatEvent(t, Player(i), "color", true)
+ 	end
+ 	TriggerAddAction(t, function()
+-		local color = COLOR_MAP[GetEventPlayerChatString()]
++		local command = string.lower(string.gsub(GetEventPlayerChatString(), "%s+", ""))
++		if string.sub(command, 1, 1) ~= "-" then
++			command = "-" .. command
++		end
++		local color = COLOR_MAP[command]
+ 		if color then
+ 			SetPlayerColorBJ(GetTriggerPlayer(), color, true)
+ 		end
+@@ -117,12 +119,12 @@ function EnsureMultiboardPlayerRow(pi)
+     MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi] or 0))
+     MultiboardSetItemWidth(MultiboardItem[ownerIndex * 2 + 1], 0.06)
+ 
+-    if ThirdColumn[24] ~= nil then
++    if ThirdColumnHeader ~= nil then
+         ThirdColumn[pi]=MultiboardGetItem(Multiboard, ownerIndex, 2)
+         MultiboardSetItemValue(ThirdColumn[pi], "0.000%")
+         MultiboardSetItemWidth(ThirdColumn[pi], 0.06)
+     end
+-    if ArmyPowerColumn[24] ~= nil then
++    if ArmyPowerColumnHeader ~= nil then
+         ArmyPowerColumn[pi]=MultiboardGetItem(Multiboard, ownerIndex, 3)
+         MultiboardSetItemValue(ArmyPowerColumn[pi], R2SW_Polyfill(ArmyExp[pi] or 0.001))
+         MultiboardSetItemWidth(ArmyPowerColumn[pi], 0.06)
+@@ -131,6 +133,10 @@ function EnsureMultiboardPlayerRow(pi)
+     return ownerIndex
+ end
+ function Trig_StartTableCode_Actions()
++	if Multiboard ~= nil then
++		MultiboardDisplay(Multiboard, true)
++		return
++	end
+     local i= 0
+     udg_PlayersCount=CountPlayersInForceBJ(GetPlayersMatching(Condition(ActivePlayers)))
+     udg_PlayersCount=udg_PlayersCount + CountPlayersInForceBJ(udg_Bots)
+@@ -147,6 +153,7 @@ function Trig_StartTableCode_Actions()
+     MultiboardSetItemWidth(MultiboardItem[1], 0.06)
+     MultiboardReleaseItem(MultiboardItem[0])
+     MultiboardReleaseItem(MultiboardItem[1])
++    max = 0
+     while true do
+         if GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING or IsPlayerInForce(Player(i), udg_Bots) or udg_AiControl[i] then
+             max=max + 1
+@@ -158,7 +165,7 @@ function Trig_StartTableCode_Actions()
+             --set udg_LocalText2 = SubString(udg_LocalText2, 0, StringLength(udg_LocalText2)-4 )
+             MultiboardSetItemValue(MultiboardItem[max * 2], PlayerColorHexWrap(Player(i), udg_LocalText2))
+             MultiboardSetItemWidth(MultiboardItem[max * 2], 0.14)
+-            MultiboardSetItemValue(MultiboardItem[max * 2 + 1], "0")
++            MultiboardSetItemValue(MultiboardItem[max * 2 + 1], I2S(udg_UnitsCount[i] or 0))
+             MultiboardSetItemWidth(MultiboardItem[max * 2 + 1], 0.06)
+         end
+         i=i + 1
+@@ -200,7 +207,7 @@ end
+ function Trig_UnitsToBuildingSituation2_Actions()
+     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+     udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] - 1
+-    MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
++    UpdateGraf(i)
+     i=0
+ end
+ --===========================================================================
+@@ -222,7 +229,7 @@ end
+ function Trig_CanselSituation2_Actions()
+     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+     udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 1
+-    MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
++    UpdateGraf(i)
+     i=0
+ end
+ --===========================================================================
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/Bandits.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/Bandits.lua
+index 7d916b8..dbeb3a2 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/Bandits.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/Bandits.lua
+@@ -460,7 +460,7 @@ function Trig_Dovorougenie_3t_O_Actions()
+         SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
+     end
+ end
+-    MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
++    UpdateGraf(i)
+     i=0
+ end
+ --===========================================================================
+@@ -864,4 +864,4 @@ function InitTrig_AreaOfDeath2()
+         if GetSpellAbilityId() ~= FourCC('A1K1') then return end
+         Trig_AreaOfDeath2_Actions()
+     end)
+-end
+\ No newline at end of file
++end
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/Demon.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/Demon.lua
+index 1ae3e14..a910dd5 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/Demon.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/Demon.lua
+@@ -170,7 +170,6 @@ function Trig_StartBuildingDEmon_Actions()
+     disincome[pi]=disincome[pi] - 6
+     udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+     UpdateGraf(pi)
+-    Enter(GetTriggerUnit())
+ end
+ --===========================================================================
+ function InitTrig_StartBuildingDEmon()
+@@ -191,7 +190,6 @@ function Trig_CanselBuilding_Copy_Actions()
+     udg_UnitsCount[pi]=udg_UnitsCount[pi] + 1
+     disincome[pi]=disincome[pi] + 6
+     UpdateGraf(pi)
+-    Enter(GetTriggerUnit())
+ end
+ --===========================================================================
+ function InitTrig_CanselBuilding_Copy()
+@@ -477,4 +475,4 @@ function InitTrig_SomeDemonSpell()
+         if GetSpellAbilityId() ~= FourCC('A0NB') then return end
+         Trig_SomeDemonSpell_Actions()
+     end)
+-end
+\ No newline at end of file
++end
+diff --git a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/NightElf.lua b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/NightElf.lua
+index 6af6b40..1b9c042 100644
+--- a/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/NightElf.lua
++++ b/map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/NightElf.lua
+@@ -788,7 +788,6 @@ function Trig_StartBuildingTree_Actions()
+     disincome[pi]=disincome[pi] - 6
+     udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+     UpdateGraf(pi)
+-    Enter(GetTriggerUnit())
+ end
+ --===========================================================================
+ function InitTrig_StartBuildingTree()
+@@ -811,7 +810,6 @@ function Trig_CanselBuildingTree_Actions()
+     disincome[pi]=disincome[pi] + 6
+     udg_UnitsCount[pi]=udg_UnitsCount[pi] + 1
+     UpdateGraf(pi)
+-    Enter(GetTriggerUnit())
+ end
+ --===========================================================================
+ function InitTrig_CanselBuildingTree()
+@@ -835,4 +833,4 @@ function InitTrig_GuadrianSpell()
+         if GetSpellAbilityId() ~= FourCC('ken0') then return end
+         Trig_GuadrianSpell_Actions()
+     end)
+-end
+\ No newline at end of file
++end

@@ -1,0 +1,681 @@
+{
+  "scope": "Девять общих корабельных способностей, все объявленные уровни",
+  "strings": [
+    {
+      "rawcode": "A00I",
+      "field": "name",
+      "before": "Магическая посадка",
+      "after": "|cffe4cfa3Магическая посадка|r"
+    },
+    {
+      "rawcode": "A00I",
+      "field": "tip1",
+      "before": "Магическая посадка",
+      "after": "|cffe4cfa3Магическая посадка|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A00I",
+      "field": "ubertip1",
+      "before": "Телепортирует юнитов в выбранной области к берегу, где их постарается забрать корабль. Не факт что сработает, но часть войск должно спасти.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Перемещает подходящие войска игрока из радиуса |cffffffff250|cffced4da вокруг выбранной точки к выбранным транспортам того же типа и отдаёт приказ посадки. Распределяет войска по свободным местам: до |cffffffff10|cffced4da на транспорт. Успех посадки зависит от допустимости груза и доступности места высадки у корабля.|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff1|cffced4da сек.|r"
+    },
+    {
+      "rawcode": "A00A",
+      "field": "name",
+      "before": "Починка",
+      "after": "|cffe4cfa3Починка|r"
+    },
+    {
+      "rawcode": "A00A",
+      "field": "tip1",
+      "before": "Починка 1",
+      "after": "|cffe4cfa3Починка|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A00A",
+      "field": "ubertip1",
+      "before": "Корабль чинится, не используя главные орудия.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Во время поддержания восстанавливает |cffffffff10|cffced4da здоровья каждые |cffffffff1|cffced4da сек. подходящим союзным и нейтральным целям в радиусе |cffffffff5|cffced4da, включая сам корабль. Длительность — до |cffffffff150|cffced4da сек. Корабль не может использовать главные орудия, пока поддерживает способность. Требует исследования «Починка».|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff20|cffced4da сек.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "rawcode": "A00A",
+      "field": "tip2",
+      "before": "Починка 2",
+      "after": "|cffe4cfa3Починка|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A00A",
+      "field": "ubertip2",
+      "before": "Корабль чинится, не используя главные орудия.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Во время поддержания восстанавливает |cffffffff40|cffced4da здоровья каждые |cffffffff1|cffced4da сек. подходящим союзным и нейтральным целям в радиусе |cffffffff5|cffced4da, включая сам корабль. Длительность — до |cffffffff150|cffced4da сек. Корабль не может использовать главные орудия, пока поддерживает способность. Требует исследования «Починка». В начале применения корабль получает неуязвимость на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff15|cffced4da сек.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "rawcode": "A00A",
+      "field": "tip3",
+      "before": "Починка 3",
+      "after": "|cffe4cfa3Починка|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A00A",
+      "field": "ubertip3",
+      "before": "Корабль чинится, не используя главные орудия.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Во время поддержания восстанавливает |cffffffff20|cffced4da здоровья каждые |cffffffff1|cffced4da сек. подходящим союзным и нейтральным целям в радиусе |cffffffff5|cffced4da, включая сам корабль. Длительность — до |cffffffff150|cffced4da сек. Корабль не может использовать главные орудия, пока поддерживает способность. Требует исследования «Починка». В начале применения корабль получает неуязвимость на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff10|cffced4da сек.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "rawcode": "A00B",
+      "field": "name",
+      "before": "Тактическое ускорение",
+      "after": "|cffe4cfa3Тактическое ускорение|r"
+    },
+    {
+      "rawcode": "A00B",
+      "field": "tip1",
+      "before": "Тактическое ускорение 1",
+      "after": "|cffe4cfa3Тактическое ускорение|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A00B",
+      "field": "ubertip1",
+      "before": "Ускорение перемещения за счет раскрытия всех парусов, при этом кораблю наносится повышенный урон.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da На |cffffffff13|cffced4da сек. даёт |cffc8e087+40%|cffced4da к скорости передвижения. Получаемый кораблём урон увеличивается на |cffe69a8d+25%|cffced4da. Требует исследования «Дополнительные паруса».|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff120|cffced4da сек.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "rawcode": "A00B",
+      "field": "tip2",
+      "before": "Тактическое ускорение 2",
+      "after": "|cffe4cfa3Тактическое ускорение|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A00B",
+      "field": "ubertip2",
+      "before": "Ускорение перемещения за счет раскрытия всех парусов, при этом кораблю наносится повышенный урон.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da На |cffffffff15|cffced4da сек. даёт |cffc8e087+50%|cffced4da к скорости передвижения. Получаемый кораблём урон увеличивается на |cffe69a8d+20%|cffced4da. Требует исследования «Дополнительные паруса».|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff90|cffced4da сек.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "rawcode": "A00B",
+      "field": "tip3",
+      "before": "Тактическое ускорение 3",
+      "after": "|cffe4cfa3Тактическое ускорение|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A00B",
+      "field": "ubertip3",
+      "before": "Ускорение перемещения за счет раскрытия всех парусов, при этом кораблю наносится повышенный урон.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da На |cffffffff17|cffced4da сек. даёт |cffc8e087+60%|cffced4da к скорости передвижения. Получаемый кораблём урон увеличивается на |cffe69a8d+15%|cffced4da. Требует исследования «Дополнительные паруса».|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff60|cffced4da сек.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "rawcode": "Sch5",
+      "field": "name",
+      "before": "Cargo Hold",
+      "after": "|cffe4cfa3Грузовой отсек|r"
+    },
+    {
+      "rawcode": "Sch5",
+      "field": "tip1",
+      "before": "",
+      "after": "|cffe4cfa3Грузовой отсек|r"
+    },
+    {
+      "rawcode": "Sch5",
+      "field": "ubertip1",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Позволяет перевозить наземные союзные войска. Вместимость — |cffffffff10|cffced4da мест. Для посадки и высадки используются отдельные команды.|r"
+    },
+    {
+      "rawcode": "Slo3",
+      "field": "name",
+      "before": "Взять на борт",
+      "after": "|cffe4cfa3Посадка на борт|r"
+    },
+    {
+      "rawcode": "Slo3",
+      "field": "tip1",
+      "before": "Взять на борт",
+      "after": "|cffe4cfa3Посадка на борт|r (|cffffffffD|r)"
+    },
+    {
+      "rawcode": "Slo3",
+      "field": "ubertip1",
+      "before": "Берет на борт наземного союзника.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Принимает на борт выбранного наземного союзника при наличии свободного места в грузовом отсеке.|r"
+    },
+    {
+      "rawcode": "Sdro",
+      "field": "name",
+      "before": "Выгрузить",
+      "after": "|cffe4cfa3Высадка|r"
+    },
+    {
+      "rawcode": "Sdro",
+      "field": "tip1",
+      "before": "Выгрузить всех",
+      "after": "|cffe4cfa3Высадка|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "Sdro",
+      "field": "ubertip1",
+      "before": "Высаживает войска в указанном месте.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Высаживает перевозимые войска в указанном месте, если местность позволяет разместить их.|r"
+    },
+    {
+      "rawcode": "A002",
+      "field": "name",
+      "before": "Боковые пушки (Фрегат)",
+      "after": "|cffe4cfa3Боковые пушки фрегата|r"
+    },
+    {
+      "rawcode": "A002",
+      "field": "tip1",
+      "before": "Боковые пушки 1 (Фрегат)",
+      "after": "|cffe4cfa3Боковые пушки фрегата|r"
+    },
+    {
+      "rawcode": "A002",
+      "field": "ubertip1",
+      "before": "Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном. Позволяют стрелять на ходу.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Автоматически стреляет по вражеским механическим целям в радиусе |cffffffff400|cffced4da, нанося |cffffffff10|cffced4da урона за попадание. Интервал выстрелов — |cffffffff1,5|cffced4da сек. Дополнительные пушки могут стрелять во время движения корабля.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "rawcode": "A002",
+      "field": "tip2",
+      "before": "Боковые пушки 2 (Фрегат)",
+      "after": "|cffe4cfa3Боковые пушки фрегата|r"
+    },
+    {
+      "rawcode": "A002",
+      "field": "ubertip2",
+      "before": "Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном. Позволяют стрелять на ходу.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Автоматически стреляет по вражеским механическим целям в радиусе |cffffffff500|cffced4da, нанося |cffffffff20|cffced4da урона за попадание. Интервал выстрелов — |cffffffff1,5|cffced4da сек. Дополнительные пушки могут стрелять во время движения корабля.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "rawcode": "A002",
+      "field": "tip3",
+      "before": "Боковые пушки 3 (Фрегат)",
+      "after": "|cffe4cfa3Боковые пушки фрегата|r"
+    },
+    {
+      "rawcode": "A002",
+      "field": "ubertip3",
+      "before": "Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном. Позволяют стрелять на ходу.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Автоматически стреляет по вражеским механическим целям в радиусе |cffffffff600|cffced4da, нанося |cffffffff30|cffced4da урона за попадание. Интервал выстрелов — |cffffffff1,5|cffced4da сек. Дополнительные пушки могут стрелять во время движения корабля.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "rawcode": "A003",
+      "field": "name",
+      "before": "Боковые пушки (Линкор)",
+      "after": "|cffe4cfa3Боковые пушки линкора|r"
+    },
+    {
+      "rawcode": "A003",
+      "field": "tip1",
+      "before": "Боковые пушки 1 (Линкор)",
+      "after": "|cffe4cfa3Боковые пушки линкора|r"
+    },
+    {
+      "rawcode": "A003",
+      "field": "ubertip1",
+      "before": "Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Автоматически стреляет по вражеским механическим целям в радиусе |cffffffff700|cffced4da, нанося |cffffffff15|cffced4da урона за попадание. Интервал выстрелов — |cffffffff1,9|cffced4da сек. Дополнительные пушки могут стрелять во время движения корабля. Требует исследования «Обстрел».|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "rawcode": "A003",
+      "field": "tip2",
+      "before": "Боковые пушки 2 (Линкор)",
+      "after": "|cffe4cfa3Боковые пушки линкора|r"
+    },
+    {
+      "rawcode": "A003",
+      "field": "ubertip2",
+      "before": "Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Автоматически стреляет по вражеским механическим целям в радиусе |cffffffff800|cffced4da, нанося |cffffffff35|cffced4da урона за попадание. Интервал выстрелов — |cffffffff1,9|cffced4da сек. Дополнительные пушки могут стрелять во время движения корабля. Требует исследования «Обстрел».|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "rawcode": "A003",
+      "field": "tip3",
+      "before": "Боковые пушки 3 (Линкор)",
+      "after": "|cffe4cfa3Боковые пушки линкора|r"
+    },
+    {
+      "rawcode": "A003",
+      "field": "ubertip3",
+      "before": "Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Автоматически стреляет по вражеским механическим целям в радиусе |cffffffff900|cffced4da, нанося |cffffffff55|cffced4da урона за попадание. Интервал выстрелов — |cffffffff1,9|cffced4da сек. Дополнительные пушки могут стрелять во время движения корабля. Требует исследования «Обстрел».|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da.|r"
+    },
+    {
+      "rawcode": "A1PP",
+      "field": "name",
+      "before": "Прицельная пальба",
+      "after": "|cffe4cfa3Прицельная пальба|r"
+    },
+    {
+      "rawcode": "A1PP",
+      "field": "tip1",
+      "before": "Прицельная пальба",
+      "after": "|cffe4cfa3Прицельная пальба|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A1PP",
+      "field": "ubertip1",
+      "before": "Выстреливает специальным снарядом, нанося 100 урона и оглушая цель на 2 секунды (герой 0.5).",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит выбранному наземному или воздушному органическому противнику |cffffffff25|cffced4da урона и оглушает на |cffffffff2|cffced4da сек.; героя — на |cffffffff0,5|cffced4da сек.|n|n|cffa6afb8Перезарядка:|cffced4da |cffffffff30|cffced4da сек.|r"
+    }
+  ],
+  "objects_before": {
+    "command": "get-objects-bulk",
+    "count": 9,
+    "map": "F:\\Gemini_23Race\\map.w3x",
+    "missing": [],
+    "objects": [
+      {
+        "fields": {
+          "area1": "180.000000",
+          "area2": "",
+          "area3": "",
+          "code": "ANcl",
+          "cool1": "1.000000",
+          "cool2": "0",
+          "cool3": "0",
+          "dataa1": "0.000000",
+          "dataa2": "5.000000",
+          "dataa3": "5.000000",
+          "datab1": "2",
+          "datab2": "0",
+          "datab3": "0",
+          "datac1": "7",
+          "datac2": "0",
+          "datac3": "0",
+          "datad1": "1.000000",
+          "datad2": "5.000000",
+          "datad3": "5.000000",
+          "dur1": "0",
+          "dur2": "0",
+          "dur3": "0",
+          "herodur1": "0",
+          "herodur2": "0",
+          "herodur3": "0",
+          "hotkey": "TRIGSTR_10213",
+          "levels": "1",
+          "name": "TRIGSTR_534",
+          "req": "",
+          "targs1": "",
+          "targs2": "",
+          "targs3": "",
+          "tip1": "TRIGSTR_532",
+          "tip2": "",
+          "tip3": "",
+          "ubertip1": "TRIGSTR_563",
+          "ubertip2": "",
+          "ubertip3": ""
+        },
+        "id": "A00I",
+        "name": "Магическая посадка"
+      },
+      {
+        "fields": {
+          "area1": "5.000000",
+          "area2": "5.000000",
+          "area3": "5.000000",
+          "code": "AEtq",
+          "cool1": "20.000000",
+          "cool2": "15.000000",
+          "cool3": "10.000000",
+          "dataa1": "10.000000",
+          "dataa2": "40",
+          "dataa3": "20.000000",
+          "datab1": "1",
+          "datab2": "1",
+          "datab3": "1",
+          "datac1": "1",
+          "datac2": "",
+          "datac3": "",
+          "datad1": "0",
+          "datad2": "1",
+          "datad3": "1",
+          "dur1": "150.000000",
+          "dur2": "150.000000",
+          "dur3": "150.000000",
+          "herodur1": "150.000000",
+          "herodur2": "150.000000",
+          "herodur3": "150.000000",
+          "hotkey": "TRIGSTR_7408",
+          "levels": "3",
+          "name": "TRIGSTR_313",
+          "req": "",
+          "targs1": "air,ground,friend,self,vuln,invu,neutral",
+          "targs2": "air,ground,friend,self,vuln,invu,neutral",
+          "targs3": "air,ground,friend,self,vuln,invu,neutral",
+          "tip1": "TRIGSTR_473",
+          "tip2": "TRIGSTR_474",
+          "tip3": "TRIGSTR_475",
+          "ubertip1": "TRIGSTR_320",
+          "ubertip2": "TRIGSTR_446",
+          "ubertip3": "TRIGSTR_447"
+        },
+        "id": "A00A",
+        "name": "Починка"
+      },
+      {
+        "fields": {
+          "area1": "",
+          "area2": "",
+          "area3": "",
+          "code": "Absk",
+          "cool1": "120.000000",
+          "cool2": "90.000000",
+          "cool3": "60.000000",
+          "dataa1": "0.400000",
+          "dataa2": "0.500000",
+          "dataa3": "0.600000",
+          "datab1": "0.000000",
+          "datab2": "",
+          "datab3": "",
+          "datac1": "0.250000",
+          "datac2": "0.200000",
+          "datac3": "0.150000",
+          "datad1": "",
+          "datad2": "",
+          "datad3": "",
+          "dur1": "13.000000",
+          "dur2": "15.000000",
+          "dur3": "17.000000",
+          "herodur1": "13.000000",
+          "herodur2": "15.000000",
+          "herodur3": "17.000000",
+          "hotkey": "TRIGSTR_11852",
+          "levels": "3",
+          "name": "TRIGSTR_327",
+          "req": "",
+          "targs1": "",
+          "targs2": "",
+          "targs3": "",
+          "tip1": "TRIGSTR_515",
+          "tip2": "TRIGSTR_516",
+          "tip3": "TRIGSTR_517",
+          "ubertip1": "TRIGSTR_559",
+          "ubertip2": "TRIGSTR_560",
+          "ubertip3": "TRIGSTR_561"
+        },
+        "id": "A00B",
+        "name": "Тактическое ускорение"
+      },
+      {
+        "fields": {
+          "area1": "250",
+          "area2": "",
+          "area3": "",
+          "code": "Acar",
+          "cool1": "0",
+          "cool2": "",
+          "cool3": "",
+          "dataa1": "10",
+          "dataa2": "",
+          "dataa3": "",
+          "datab1": "",
+          "datab2": "",
+          "datab3": "",
+          "datac1": "",
+          "datac2": "",
+          "datac3": "",
+          "datad1": "",
+          "datad2": "",
+          "datad3": "",
+          "dur1": "0.5",
+          "dur2": "",
+          "dur3": "",
+          "herodur1": "0.5",
+          "herodur2": "",
+          "herodur3": "",
+          "hotkey": "",
+          "levels": "1",
+          "name": "Cargo Hold",
+          "req": "",
+          "targs1": "ground,friend,vuln,invu,nonsapper",
+          "targs2": "",
+          "targs3": "",
+          "tip1": "",
+          "tip2": "",
+          "tip3": "",
+          "ubertip1": "",
+          "ubertip2": "",
+          "ubertip3": ""
+        },
+        "id": "Sch5",
+        "name": "Cargo Hold"
+      },
+      {
+        "fields": {
+          "area1": "",
+          "area2": "",
+          "area3": "",
+          "code": "Aloa",
+          "cool1": "0",
+          "cool2": "",
+          "cool3": "",
+          "dataa1": "",
+          "dataa2": "",
+          "dataa3": "",
+          "datab1": "",
+          "datab2": "",
+          "datab3": "",
+          "datac1": "",
+          "datac2": "",
+          "datac3": "",
+          "datad1": "",
+          "datad2": "",
+          "datad3": "",
+          "dur1": "0",
+          "dur2": "",
+          "dur3": "",
+          "herodur1": "0",
+          "herodur2": "",
+          "herodur3": "",
+          "hotkey": "TRIGSTR_5910",
+          "levels": "1",
+          "name": "Взять на борт",
+          "req": "",
+          "targs1": "ground,friend,invu,vuln",
+          "targs2": "",
+          "targs3": "",
+          "tip1": "Взять на борт",
+          "tip2": "",
+          "tip3": "",
+          "ubertip1": "Берет на борт наземного союзника.",
+          "ubertip2": "",
+          "ubertip3": ""
+        },
+        "id": "Slo3",
+        "name": "Взять на борт"
+      },
+      {
+        "fields": {
+          "area1": "",
+          "area2": "",
+          "area3": "",
+          "code": "Adro",
+          "cool1": "0",
+          "cool2": "",
+          "cool3": "",
+          "dataa1": "",
+          "dataa2": "",
+          "dataa3": "",
+          "datab1": "",
+          "datab2": "",
+          "datab3": "",
+          "datac1": "",
+          "datac2": "",
+          "datac3": "",
+          "datad1": "",
+          "datad2": "",
+          "datad3": "",
+          "dur1": "0",
+          "dur2": "",
+          "dur3": "",
+          "herodur1": "0",
+          "herodur2": "",
+          "herodur3": "",
+          "hotkey": "TRIGSTR_10207",
+          "levels": "1",
+          "name": "Выгрузить",
+          "req": "",
+          "targs1": "",
+          "targs2": "",
+          "targs3": "",
+          "tip1": "Выгрузить всех",
+          "tip2": "",
+          "tip3": "",
+          "ubertip1": "Высаживает войска в указанном месте.",
+          "ubertip2": "",
+          "ubertip3": ""
+        },
+        "id": "Sdro",
+        "name": "Выгрузить"
+      },
+      {
+        "fields": {
+          "area1": "400.000000",
+          "area2": "500.000000",
+          "area3": "600.000000",
+          "code": "Apxf",
+          "cool1": "1.500000",
+          "cool2": "1.500000",
+          "cool3": "1.500000",
+          "dataa1": "10.000000",
+          "dataa2": "20.000000",
+          "dataa3": "30.000000",
+          "datab1": "0.000000",
+          "datab2": "",
+          "datab3": "",
+          "datac1": "",
+          "datac2": "",
+          "datac3": "",
+          "datad1": "",
+          "datad2": "",
+          "datad3": "",
+          "dur1": "0.010000",
+          "dur2": "0.010000",
+          "dur3": "0.010000",
+          "herodur1": "0.010000",
+          "herodur2": "0.010000",
+          "herodur3": "0.010000",
+          "hotkey": "",
+          "levels": "3",
+          "name": "TRIGSTR_289",
+          "req": "",
+          "targs1": "enemies,mechanical",
+          "targs2": "enemies,mechanical",
+          "targs3": "enemies,mechanical",
+          "tip1": "TRIGSTR_509",
+          "tip2": "TRIGSTR_510",
+          "tip3": "TRIGSTR_511",
+          "ubertip1": "TRIGSTR_290",
+          "ubertip2": "TRIGSTR_488",
+          "ubertip3": "TRIGSTR_489"
+        },
+        "id": "A002",
+        "name": "Боковые пушки (Фрегат)"
+      },
+      {
+        "fields": {
+          "area1": "700.000000",
+          "area2": "800.000000",
+          "area3": "900.000000",
+          "code": "Apxf",
+          "cool1": "1.900000",
+          "cool2": "1.900000",
+          "cool3": "1.900000",
+          "dataa1": "15.000000",
+          "dataa2": "35.000000",
+          "dataa3": "55.000000",
+          "datab1": "0.000000",
+          "datab2": "",
+          "datab3": "",
+          "datac1": "",
+          "datac2": "",
+          "datac3": "",
+          "datad1": "",
+          "datad2": "",
+          "datad3": "",
+          "dur1": "0.010000",
+          "dur2": "0.010000",
+          "dur3": "0.010000",
+          "herodur1": "0.010000",
+          "herodur2": "0.010000",
+          "herodur3": "0.010000",
+          "hotkey": "",
+          "levels": "3",
+          "name": "TRIGSTR_292",
+          "req": "",
+          "targs1": "enemies,mechanical",
+          "targs2": "enemies,mechanical",
+          "targs3": "enemies,mechanical",
+          "tip1": "TRIGSTR_512",
+          "tip2": "TRIGSTR_513",
+          "tip3": "TRIGSTR_514",
+          "ubertip1": "TRIGSTR_293",
+          "ubertip2": "TRIGSTR_492",
+          "ubertip3": "TRIGSTR_493"
+        },
+        "id": "A003",
+        "name": "Боковые пушки (Линкор)"
+      },
+      {
+        "fields": {
+          "area1": "",
+          "area2": "",
+          "area3": "",
+          "code": "ACtb",
+          "cool1": "30.000000",
+          "cool2": "",
+          "cool3": "",
+          "dataa1": "25.000000",
+          "dataa2": "",
+          "dataa3": "",
+          "datab1": "",
+          "datab2": "",
+          "datab3": "",
+          "datac1": "",
+          "datac2": "",
+          "datac3": "",
+          "datad1": "",
+          "datad2": "",
+          "datad3": "",
+          "dur1": "2",
+          "dur2": "",
+          "dur3": "",
+          "herodur1": "0.500000",
+          "herodur2": "",
+          "herodur3": "",
+          "hotkey": "TRIGSTR_30922",
+          "levels": "1",
+          "name": "TRIGSTR_12029",
+          "req": "",
+          "targs1": "air,ground,organic,enemy,neutral",
+          "targs2": "",
+          "targs3": "",
+          "tip1": "TRIGSTR_12341",
+          "tip2": "",
+          "tip3": "",
+          "ubertip1": "TRIGSTR_12346",
+          "ubertip2": "",
+          "ubertip3": ""
+        },
+        "id": "A1PP",
+        "name": "Прицельная пальба"
+      }
+    ],
+    "ok": true,
+    "schema_version": 1,
+    "tool": "HiveWE_cli",
+    "type": "ability"
+  },
+  "in_game_checked": false,
+  "evidence": [
+    "Native ability data and installed AbilityMetaData: AEtq, Absk, Apxf",
+    "06_transport_portals.lua Trig_MassPosadka2: actual radius 250; transport capacity 10"
+  ],
+  "remaining": [
+    "Check transport loading, channelled repair and initial immunity in engine",
+    "Verify native side-gun firing while moving and actual ability-level assignment",
+    "Flagship, boarding and cluster bombardment remain separate unfinished objects"
+  ]
+}

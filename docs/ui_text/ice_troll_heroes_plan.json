@@ -1,0 +1,184 @@
+{
+  "operations": [
+    {
+      "type": "unit",
+      "id": "O04G",
+      "field": "name",
+      "value": "|cffe4cfa3Темный охотник|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04G",
+      "field": "tip",
+      "value": "|cffe4cfa3Темный охотник|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "O04G",
+      "field": "ubertip",
+      "value": "|cffa6afb8ГЕРОЙ:|cffced4da Герой поддержки дальнего боя: исцеляет союзников цепной волной, оглушает врагов стрелами и призывает тотемы.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолна исцеления|cffced4da: восстанавливает здоровье цели и переходит на ближайших союзников.|n- |cffa9c7deОгненная стрела|cffced4da: выпускает стрелу во врага, нанося урон и оглушая цель.|n- |cffa9c7deЗмеиный идол|cffced4da: призывает неподвижного и невосприимчивого к магии стража-змея.|n- |cffa9c7deСтрашное вуду|cffced4da: дарует временную неуязвимость окружающим союзникам.|n|nАтакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04G",
+      "field": "propernames",
+      "value": "|cffe4cfa3Зул'кис|r,|cffe4cfa3Зул'абар|r,|cffe4cfa3Зул'раджас|r,|cffe4cfa3Зул'маран|r,|cffe4cfa3Джо-Джо Собиратель Голов|r,|cffe4cfa3Шака-зан|r,|cffe4cfa3Шакти-лар|r,|cffe4cfa3Мезил-кри|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04G",
+      "field": "awakentip",
+      "value": "|cffe4cfa3Темный охотник|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04G",
+      "field": "revivetip",
+      "value": "|cffe4cfa3Темный охотник|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04H",
+      "field": "name",
+      "value": "|cffe4cfa3Военачальник|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04H",
+      "field": "tip",
+      "value": "|cffe4cfa3Военачальник|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "O04H",
+      "field": "ubertip",
+      "value": "|cffa6afb8ГЕРОЙ:|cffced4da Мобильный герой ближнего боя: совершает стремительные рывки, рассекает врагов и временно увеличивает боевую мощь.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЯростный удар|cffced4da: наносит урон в секторе перед собой и вызывает кровотечение.|n- |cffa9c7deРывок|cffced4da: совершает стремительный рывок вперёд, нанося урон врагам на пути.|n- |cffa9c7deМощь тролля|cffced4da: временно увеличивает скорость боя и передвижения героя.|n- |cffa9c7deВихрь клинков|cffced4da: наносит урон окружающим врагам и дарует невосприимчивость к магии.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04H",
+      "field": "propernames",
+      "value": "|cffe4cfa3Тодзара|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04H",
+      "field": "awakentip",
+      "value": "|cffe4cfa3Военачальник|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04H",
+      "field": "revivetip",
+      "value": "|cffe4cfa3Военачальник|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04I",
+      "field": "name",
+      "value": "|cffe4cfa3Жрец Лоа|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04I",
+      "field": "tip",
+      "value": "|cffe4cfa3Жрец Лоа|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "O04I",
+      "field": "ubertip",
+      "value": "|cffa6afb8ГЕРОЙ:|cffced4da Стрелок дальнего боя: поражает группы врагов шакрамами, усиливает союзных стрелков и уклоняется от атак.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБольшой шакрам|cffced4da: выпускает шакрам по прямой, наносящий урон врагам на пути.|n- |cffa9c7deВеер шакрамов|cffced4da: бросает несколько шакрамов, нанося урон находящимся рядом врагам.|n- |cffa9c7deАура меткости|cffced4da: увеличивает урон от дистанционных атак союзников поблизости.|n- |cffa9c7deУскользание|cffced4da: даёт шанс уклониться от вражеской атаки.|n|nАтакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04I",
+      "field": "propernames",
+      "value": "|cffe4cfa3Мезил-кри|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04I",
+      "field": "awakentip",
+      "value": "|cffe4cfa3Жрец Лоа|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04I",
+      "field": "revivetip",
+      "value": "|cffe4cfa3Жрец Лоа|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04K",
+      "field": "name",
+      "value": "|cffe4cfa3Вместилище Лоа|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04K",
+      "field": "tip",
+      "value": "|cffe4cfa3Вместилище Лоа|r (|cffffffffS|r)"
+    },
+    {
+      "type": "unit",
+      "id": "O04K",
+      "field": "ubertip",
+      "value": "|cffa6afb8ГЕРОЙ:|cffced4da Воин ближнего боя: наносит рассекающие удары по группам врагов, способен впадать в ярость и принимать облик Лоа.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВсплеск ярости|cffced4da: повышает скорость атаки, но увеличивает получаемый урон.|n- |cffa9c7deНеуязвимость|cffced4da: временно защищает от любого урона и снимает отрицательные эффекты.|n- |cffa9c7deРассекающий удар|cffced4da: атаки наносят часть урона всем целям вокруг жертвы.|n- |cffa9c7deВоплощение Лоа|cffced4da: увеличивает броню, здоровье, урон и дарует невосприимчивость к магии.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04K",
+      "field": "propernames",
+      "value": "|cffe4cfa3Дзюбей|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04K",
+      "field": "awakentip",
+      "value": "|cffe4cfa3Вместилище Лоа|r"
+    },
+    {
+      "type": "unit",
+      "id": "O04K",
+      "field": "revivetip",
+      "value": "|cffe4cfa3Вместилище Лоа|r"
+    },
+    {
+      "type": "unit",
+      "id": "O06L",
+      "field": "name",
+      "value": "|cffe4cfa3Властелин Холода|r"
+    },
+    {
+      "type": "unit",
+      "id": "O06L",
+      "field": "tip",
+      "value": "|cffe4cfa3Властелин Холода|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "O06L",
+      "field": "ubertip",
+      "value": "|cffa6afb8ГЕРОЙ:|cffced4da Могучий повелитель льда ближнего боя: замедляет врагов аурой холода, усиливает защиту союзников и принимает ледяную аватару.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЛедяной порыв|cffced4da: наносит урон и оглушает врагов по линии удара.|n- |cffa9c7deАура мороза|cffced4da: замедляет атаку и передвижение противников вокруг героя.|n- |cffa9c7deЛедяная стойкость|cffced4da: увеличивает защиту героя и ближайших союзников.|n- |cffa9c7deЛедяное сокрушение|cffced4da: даёт шанс при атаке нанести дополнительный урон врагам рядом.|n- |cffa9c7deЛедяная аватара|cffced4da: значительно увеличивает броню, запас здоровья и урон героя.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "O06L",
+      "field": "propernames",
+      "value": "|cffe4cfa3Малакк|r"
+    },
+    {
+      "type": "unit",
+      "id": "O06L",
+      "field": "awakentip",
+      "value": "|cffe4cfa3Властелин Холода|r"
+    },
+    {
+      "type": "unit",
+      "id": "O06L",
+      "field": "revivetip",
+      "value": "|cffe4cfa3Властелин Холода|r"
+    }
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "command": "get-objects-bulk",
+  "count": 27,
+  "map": "F:\\Gemini_23Race\\map.w3x",
+  "missing": [],
+  "objects": [
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Абордаж|r"
+      },
+      "id": "A001",
+      "name": "|cffe4cfa3Абордаж|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "3",
+        "name": "|cffe4cfa3Боковые пушки фрегата|r"
+      },
+      "id": "A002",
+      "name": "|cffe4cfa3Боковые пушки фрегата|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "3",
+        "name": "|cffe4cfa3Боковые пушки линкора|r"
+      },
+      "id": "A003",
+      "name": "|cffe4cfa3Боковые пушки линкора|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BHad",
+        "buffid2": "BHad",
+        "buffid3": "BHad",
+        "buffid4": "BHad",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Аура стойкости|r"
+      },
+      "id": "A005",
+      "name": "|cffe4cfa3Аура стойкости|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BEar",
+        "buffid2": "BEar",
+        "buffid3": "BEar",
+        "buffid4": "BEar",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Аура меткости|r"
+      },
+      "id": "A006",
+      "name": "|cffe4cfa3Аура меткости|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BOae",
+        "buffid2": "BOae",
+        "buffid3": "BOae",
+        "buffid4": "BOae",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Аура выносливости|r"
+      },
+      "id": "A007",
+      "name": "|cffe4cfa3Аура выносливости|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Особенность флагмана|r"
+      },
+      "id": "A008",
+      "name": "|cffe4cfa3Особенность флагмана|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Назначение флагмана|r"
+      },
+      "id": "A009",
+      "name": "|cffe4cfa3Назначение флагмана|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "AEtr",
+        "buffid5": "",
+        "levels": "3",
+        "name": "|cffe4cfa3Починка|r"
+      },
+      "id": "A00A",
+      "name": "|cffe4cfa3Починка|r"
+    },
+    {
+      "fields": {
+        "buffid1": "B002",
+        "buffid2": "B002",
+        "buffid3": "B002",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "3",
+        "name": "|cffe4cfa3Тактическое ускорение|r"
+      },
+      "id": "A00B",
+      "name": "|cffe4cfa3Тактическое ускорение|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Аура стойкости|r"
+      },
+      "id": "A00C",
+      "name": "|cffe4cfa3Аура стойкости|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Аура меткости|r"
+      },
+      "id": "A00E",
+      "name": "|cffe4cfa3Аура меткости|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Аура выносливости|r"
+      },
+      "id": "A00F",
+      "name": "|cffe4cfa3Аура выносливости|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "BNcs",
+        "buffid5": "",
+        "levels": "3",
+        "name": "|cffe4cfa3Массированный обстрел|r"
+      },
+      "id": "A00G",
+      "name": "|cffe4cfa3Массированный обстрел|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Магическая посадка|r"
+      },
+      "id": "A00I",
+      "name": "|cffe4cfa3Магическая посадка|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "5",
+        "name": "|cffe4cfa3Сбор дани|r"
+      },
+      "id": "A0AY",
+      "name": "|cffe4cfa3Сбор дани|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Увеличение сбора дани|r"
+      },
+      "id": "A0AZ",
+      "name": "|cffe4cfa3Увеличение сбора дани|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Укрепление города|r"
+      },
+      "id": "A0B0",
+      "name": "|cffe4cfa3Укрепление города|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Развитие производства|r"
+      },
+      "id": "A0B1",
+      "name": "|cffe4cfa3Развитие производства|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Расширение города|r"
+      },
+      "id": "A0B2",
+      "name": "|cffe4cfa3Расширение города|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "5",
+        "name": "|cffe4cfa3Налаженное производство|r"
+      },
+      "id": "A0B5",
+      "name": "|cffe4cfa3Налаженное производство|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Разведка|r"
+      },
+      "id": "A0MK",
+      "name": "|cffe4cfa3Разведка|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BPSE",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Прицельная пальба|r"
+      },
+      "id": "A1PP",
+      "name": "|cffe4cfa3Прицельная пальба|r"
+    },
+    {
+      "fields": {
+        "buffid1": "B023",
+        "buffid2": "BHad",
+        "buffid3": "BHad",
+        "buffid4": "BHad",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Поселение|r"
+      },
+      "id": "AHad",
+      "name": "|cffe4cfa3Поселение|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Грузовой отсек|r"
+      },
+      "id": "Sch5",
+      "name": "|cffe4cfa3Грузовой отсек|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Высадка|r"
+      },
+      "id": "Sdro",
+      "name": "|cffe4cfa3Высадка|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": "",
+        "buffid5": "",
+        "levels": "1",
+        "name": "|cffe4cfa3Посадка на борт|r"
+      },
+      "id": "Slo3",
+      "name": "|cffe4cfa3Посадка на борт|r"
+    }
+  ],
+  "ok": true,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "type": "ability"
+}

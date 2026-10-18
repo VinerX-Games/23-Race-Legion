@@ -1,0 +1,594 @@
+﻿=== UPGRADES DETAILS ===
+
+--- Upgrade R0KB (1 lvls) ---
+
+--- Upgrade R0KC (1 lvls) ---
+
+--- Upgrade R0KD (1 lvls) ---
+
+--- Upgrade w286 (1 lvls) ---
+  effect1: ratc
+  effect2: rart
+  base1: 1
+  base2: 2
+
+--- Upgrade w291 (1 lvls) ---
+  effect1: TRIGSTR_41190
+  effect2: TRIGSTR_39870
+  base1: 300.000000
+  base2: 2.000000
+
+--- Upgrade w292 (1 lvls) ---
+  effect1: rhpx
+  base1: 425.000000
+  base2: 3
+  mod2: 3.000000
+
+--- Upgrade w293 (1 lvls) ---
+  effect1: TRIGSTR_36764
+  effect2: TRIGSTR_40692
+  base1: 25.000000
+  base2: 125.000000
+
+--- Upgrade w2r0 (6 lvls) ---
+  effect1: rarm
+
+--- Upgrade w2r1 (6 lvls) ---
+  effect1: TRIGSTR_37508
+  base1: 1.000000
+  mod1: 1.000000
+
+--- Upgrade w2r2 (6 lvls) ---
+  effect1: TRIGSTR_37534
+  base1: 1.000000
+  mod1: 1.000000
+
+--- Upgrade w2r3 (4 lvls) ---
+
+--- Upgrade w2r4 (4 lvls) ---
+  effect1: rmnx
+  effect2: rmnr
+  effect3: rhpx
+  effect4: ratd
+  base1: 150
+  base2: 0.42
+  mod1: 150
+  mod2: 0.42
+
+--- Upgrade w2r5 (4 lvls) ---
+  effect1: rmnx
+  effect2: rmnr
+  effect3: rhpx
+  effect4: ratd
+  base1: 150
+  base2: 0.42
+  mod1: 150
+  mod2: 0.42
+
+--- Upgrade w2r6 (4 lvls) ---
+  effect1: rmnx
+  effect2: rmnr
+  effect3: rhpx
+  effect4: ratd
+  base1: 150
+  base2: 0.42
+  mod1: 150
+  mod2: 0.42
+
+--- Upgrade w2r7 (3 lvls) ---
+  effect1: rhpx
+  effect2: ratx
+  base1: 125
+  base2: 5.000000
+  mod1: 100.000000
+  mod2: 5.000000
+
+--- Upgrade w2r8 (3 lvls) ---
+  effect1: rhpx
+  base1: 125.000000
+  base2: 0.000000
+  mod1: 125.000000
+
+--- Upgrade w2r9 (3 lvls) ---
+  effect1: rhpx
+  effect2: TRIGSTR_29703
+  effect3: TRIGSTR_37646
+  base1: 85.000000
+  base2: 0.150000
+  mod1: 85.000000
+  mod2: 0.150000
+
+--- Upgrade w2ra (2 lvls) ---
+  effect1: TRIGSTR_37814
+  effect2: TRIGSTR_35504
+  base1: 35.000000
+  base2: 75.000000
+  mod1: 35.000000
+  mod2: 75.000000
+
+--- Upgrade w2rb (6 lvls) ---
+  effect1: rlum
+  effect2: rlev
+  base1: 10
+  base2: 1
+  mod1: 10
+  mod2: 1
+
+--- Upgrade w2re (2 lvls) ---
+  effect1: TRIGSTR_38209
+  effect2: TRIGSTR_35500
+  base1: 1.000000
+  base2: 50.000000
+  mod1: 1.000000
+  mod2: 50.000000
+
+--- Upgrade w2rq (2 lvls) ---
+  base1: 150
+  base2: 0.42
+  mod1: 150
+  mod2: 0.42
+
+=== ABILITIES DETAILS ===
+
+--- Ability A0QO (|cff8080ff╨Ф╤А╨░╨║╨╛╨╜╤М╤П ╤П╤А╨╛╤Б╤В╤М|r) ---
+  dataa1: 10.000000
+  requires: R0AU
+
+--- Ability A0RE (|cff8080ff╨г╤Б╨║╨╛╨╗╤М╨╖╨░╨╜╨╕╨╡|r) ---
+
+--- Ability A0Z7 (|cffff5454╨г╤Б╨╕╨╗╨╡╨╜╨╜╨░╤П ╨▒╤А╨╛╨╜╤П|r) ---
+  datab1: 5.000000
+  datac1: 4.000000
+  requires: 
+
+--- Ability A0ZA (|cffe4cfa3╨б╨║╤А╤Л╤В╨░╤П ╤П╤А╨╛╤Б╤В╤М|r) ---
+
+--- Ability A176 (|cffe4cfa3╨б╨╕╨╗╤М╨╜╤Л╨╣ ╤Г╨┤╨░╤А|r) ---
+  dataa1: 12.000000
+  datab1: 2.000000
+  datac1: 10.000000
+  dur1: 1.000000
+
+--- Ability A178 (|cffe4cfa3╨Р╤Г╤А╨░ ╨Ч╨░╤Й╨╕╤В╤Л|r) ---
+  area1: 300.000000
+  dataa1: 2.000000
+  requiresamount: 1
+  targetart: 
+  targetattach: 
+
+--- Ability A1JN (|cffdcb496╨Ю╤А╨┤╨░ ╨Т╤В╨╛╤А╨╛╨╣ ╨Т╨╛╨╣╨╜╤Л|r) ---
+  casterart: Abilities\Spells\NightElf\ManaBurn\ManaBurnTarget.mdl
+  casterattach: head
+  dataa1: 0.300000
+  datac1: 1
+  datae1: 0
+  dataf1: drunkenhaze
+  effectart: Abilities\Spells\NightElf\ManaBurn\ManaBurnTarget.mdl
+  rng1: 0.000000
+  targetart: Abilities\Spells\NightElf\ManaBurn\ManaBurnTarget.mdl
+
+--- Ability A1OJ (|cffe4cfa3╨Т╨╛╨╕╨╜ ╨и╨░|r) ---
+  cool1: 75.000000
+  datab1: 0.200000
+  datac1: 0.200000
+  dur1: 20.000000
+  effectsound: ZigguratMissileLaunch
+
+--- Ability w284 (|cffdcb496╨б╨╛╨┐╤А╨╛╤В╨╕╨▓╨╗╨╡╨╜╨╕╨╡ ╨╝╨░╨│╨╕╨╕|r) ---
+  requires: w2r8
+
+--- Ability w285 (|cffdcb496╨б╨╛╨┐╤А╨╛╤В╨╕╨▓╨╗╨╡╨╜╨╕╨╡ ╨╝╨░╨│╨╕╨╕|r) ---
+  datab1: 0.350000
+  requires: w2r8
+
+--- Ability w288 (|cffdcb496╨Я╨╗╨░╨╝╨╡╨╜╨╜╨╛╨╡ ╨┤╤Л╤Е╨░╨╜╨╕╨╡|r) ---
+  cost1: 100
+  dataa1: 55.000000
+  datab1: 3000.000000
+  datac1: 900.000000
+  datae1: 3.000000
+  dur1: 3.000000
+
+--- Ability w289 (|cffdcb496╨Ю╨│╨╜╨╡╨╜╨╜╤Л╨╣ ╤Б╤В╨╛╨╗╨▒|r) ---
+  area1: 175.000000
+  cast1: 0.830000
+  cool1: 20.000000
+  dataa1: 10.000000
+  datac1: 5.000000
+  dataf1: 1500.000000
+  dur1: 5.000000
+  requires: w2ra
+
+--- Ability w290 (|cffdcb496╨Я╤А╨╛╤З╨╜╨░╤П ╤З╨╡╤И╤Г╤П|r) ---
+  datab1: 4.000000
+  datac1: 6.000000
+  requires: w2ra
+
+--- Ability w294 (|cffdcb496╨Ф╤А╨░╨║╨╛╨╜╤Л ╨╖╨░╤Й╨╕╤В╨╜╨╕╨║╨╕|r) ---
+  area1: 700.000000
+  casterart: 
+  dataa1: 0.000000
+  datac1: 1
+  datad1: 0.000000
+  datae1: 0
+  dataf1: chemicalrage
+  effectart: 
+  rng1: 1000000000.000000
+  targetart: 
+
+--- Ability w295 (|cffdcb496╨Ф╤А╨░╨║╨╛╨╜╤Л ╨┐╨╛╨┤╨╢╨╕╨│╨░╤В╨╡╨╗╨╕|r) ---
+  area1: 700.000000
+  casterart: 
+  dataa1: 0.000000
+  datac1: 1
+  datad1: 0.000000
+  datae1: 0
+  dataf1: clusterrockets
+  effectart: 
+  rng1: 1000000000.000000
+  targetart: 
+
+--- Ability w296 (|cffdcb496╨Ю╨▒╤Б╤В╤А╨╡╨╗|r) ---
+  requires: w2rq
+
+--- Ability w297 (|cffdcb496╨Ф╤А╨░╨║╨╛╨╜╤Л ╨╛╨│╨╜╨╡╨┐╤Г╤Б╨║╨░╤В╨╡╨╗╨╕|r) ---
+  area1: 700.000000
+  casterart: 
+  dataa1: 0.000000
+  datac1: 1
+  datad1: 0.000000
+  datae1: 0
+  dataf1: cloudoffog
+  effectart: 
+  rng1: 1000000000.000000
+  targetart: 
+
+--- Ability w298 (|cffdcb496╨б╤В╤А╨░╤Е|r) ---
+  area1: 350.000000
+  area2: 350.000000
+  cool1: 90.000000
+  cool2: 65.000000
+  cost1: 150
+  cost2: 200
+  dataa1: 15
+  dataa2: 15
+  dur1: 10.000000
+  dur2: 10.000000
+  reqlevel: 6
+  rng2: 700.000000
+  targs2: air,ground,enemy,organic,neutral
+
+--- Ability w299 (|cffdcb496╨Я╨╛╨╗╨╡ ╤А╨░╨╖╨▓╨╛╨┐╨╗╨╛╤Й╨╡╨╜╨╕╤П|r) ---
+  area1: 165.000000
+  area2: 165.000000
+  area3: 165.000000
+  area4: 165.000000
+  cast1: 0.500000
+  cast2: 0.500000
+  cast3: 0.500000
+  cast4: 0.500000
+  dataa1: 10
+  dataa2: 10
+  datab1: 20.000000
+  datab2: 30.000000
+  datab3: 40.000000
+  datac1: 5
+  datac2: 6
+  datac3: 7
+  datac4: 8
+  datae1: 10.000000
+  datae2: 15.000000
+  datae3: 25.000000
+  datae4: 35.000000
+  dataf1: 5000.000000
+  dataf2: 9999.000000
+  dataf3: 9999.000000
+  dataf4: 9999.000000
+
+--- Ability w2a0 (|cffdcb496╨Ъ╤Г╨╖╨╜╤П ╨▓╨╛╨╣╨╜╤Л|r) ---
+
+--- Ability w2a1 (|cffdcb496╨а╨░╨╖╤Л╤Б╨║╨╜╨░╤П ╨▒╤А╨╕╨│╨░╨┤╨░|r) ---
+
+--- Ability w2a2 (|cffdcb496╨С╨░-╨▒╨░╤Е!|r) ---
+  dataa1: 85.000000
+  dataa2: 85.000000
+  dataa3: 85.000000
+  datab1: 125.000000
+  datab2: 150.000000
+  datab3: 175.000000
+  datac1: 175.000000
+  datac2: 175.000000
+  datac3: 175.000000
+  datad1: 85.000000
+  datad2: 95.000000
+  datad3: 105.000000
+  datae1: 1.500000
+  datae2: 2.000000
+  datae3: 2.500000
+  dataf1: 1
+  dataf2: 1
+  dataf3: 1
+  dur2: 0.100000
+  dur3: 0.100000
+  targs1: debris,enemies,ground,structure,tree,ward
+  targs2: debris,enemies,ground,structure,tree,ward
+  targs3: debris,enemies,ground,structure,tree,ward
+
+--- Ability w2a3 (|cffdcb496╨Я╨╡╤А╨╡╨╗╨╡╤В|r) ---
+  cool1: 0.000000
+  cost1: 0
+  dataa1: 300.000000
+  datab1: 0.300000
+  datac1: 0.000000
+  datad1: 0
+  dur1: 30.000000
+
+--- Ability w2a4 (|cffdcb496╨Ц╨░╨╢╨┤╨░ ╨║╤А╨╛╨▓╨╕|r) ---
+  dataa1: 0.200000
+  datab1: 0.100000
+  datac1: 0.100000
+  requires: w2r4
+  requiresamount: 1
+
+--- Ability w2a5 (|cffdcb496╨Т╨╛╤Б╨║╤А╨╡╤И╨╡╨╜╨╕╨╡ ╨╝╨╡╤А╤В╨▓╤Л╤Е|r) ---
+  dataa1: 1
+  datac1: w217
+  requires: w2r5
+  requiresamount: 2
+
+--- Ability w2a6 (|cffdcb496╨Ю╨║╨╛ ╨Ъ╨╕╨╗'╨а╨╛╨│╨░|r) ---
+  datab1: 1
+
+--- Ability w2a8 (|cffdcb496╨в╨╡╨╝╨╜╤Л╨╣ ╨┤╨╛╤Б╨┐╨╡╤Е|r) ---
+  cool1: 12.000000
+  dataa1: 70.000000
+  datab1: 6.000000
+  dur1: 0.000000
+  requires: w2r5
+  targs1: air,ground,neutral,player,self
+
+--- Ability w2a9 (|cffdcb496╨Т╨╖╤А╤Л╨▓╨╜╨░╤П ╤А╤Г╨╜╨░|r) ---
+  cool1: 25.000000
+  cost1: 60
+  dataa1: w216
+  dataa2: w216
+  dataa3: w216
+  datab3: 3
+  datac1: 3
+  datac2: 3
+  datac3: 3
+  dur1: 0.100000
+  effectart: Abilities\Spells\Other\Silence\SilenceAreaBirth.mdl
+  requires: w2r4
+  requiresamount: 2
+  rng1: 825.000000
+
+--- Ability w2aA (|cffdcb496╨п╤А╨╛╤Б╤В╤М ╨▒╨╡╤А╤Б╨╡╤А╨║╨░|r) ---
+  cool1: 25.000000
+  cool2: 25.000000
+  cool3: 25.000000
+  cool4: 25.000000
+  cost1: 50
+  cost2: 75
+  cost3: 100
+  cost4: 125
+  dataa1: 0.150000
+  dataa2: 0.300000
+  dataa3: 0.450000
+  dataa4: 0.600000
+  datab1: 0.000000
+  datac1: 0.000000
+  dur2: 20.000000
+  dur3: 20.000000
+  dur4: 20.000000
+  targs2: air,ground,self
+  targs3: air,ground,self
+  targs4: air,ground,self
+
+--- Ability w2aQ (|cffdcb496╨а╨░╨╖╤К╨╡╨┤╨░╤О╤Й╨╡╨╡ ╨╖╨╡╨╗╤М╨╡|r) ---
+  cool1: 60.000000
+  cool2: 60.000000
+  dataa1: 0.200000
+  dataa2: 0.200000
+  datac1: 6
+  datac2: 12
+  reqlevel: 6
+
+--- Ability w2aW (|cffdcb496╨б╤В╤А╨╡╨╗╤Л ╤В╤М╨╝╤Л|r) ---
+  cool1: 15.000000
+  cool2: 15.000000
+  cool3: 15.000000
+  cool4: 15.000000
+  cost2: 125
+  cost3: 140
+  cost4: 155
+  dataa1: 25.000000
+  dataa2: 30.000000
+  dataa3: 35.000000
+  dataa4: 40.000000
+  datab1: 99999.000000
+  datab2: 99999.000000
+  datab3: 99999.000000
+  datab4: 99999.000000
+  datad1: 100.000000
+  datad2: 100.000000
+  datad3: 100.000000
+  datad4: 100.000000
+
+--- Ability w2aZ (|cffdcb496╨Р╤Г╤А╨░ ╨│╨╡╨╜╨╕╨░╨╗╤М╨╜╨╛╤Б╤В╨╕|r) ---
+  area1: 500.000000
+  area2: 500.000000
+  area3: 500.000000
+  area4: 500.000000
+  dataa4: 3.000000
+
+--- Ability w2ab (|cffdcb496╨Я╨╛╤Е╨╕╤Й╨╡╨╜╨╕╨╡ ╨╢╨╕╨╖╨╜╨╕|r) ---
+  cost1: 50
+  dataa1: 45.000000
+  datad1: 45.000000
+  datae1: 25.000000
+  dataf1: 1.000000
+  datag1: 1.000000
+  datah1: 1.000000
+  datai1: 1.000000
+
+--- Ability w2ac (|cffdcb496╨Ч╨░╨╝╨╡╨┤╨╗╨╡╨╜╨╕╨╡|r) ---
+  dataa1: 0.300000
+  datab1: 0.150000
+  datac1: 1
+  requires: w2r6
+  requiresamount: 2
+
+--- Ability w2ad (|cffdcb496╨Т╨╕╤Е╤А╤М ╨║╨╗╨╕╨╜╨║╨╛╨▓|r) ---
+  area1: 150.000000
+  area2: 150.000000
+  area3: 150.000000
+  area4: 150.000000
+  cool1: 30.000000
+  cool2: 30.000000
+  cool3: 30.000000
+  cool4: 30.000000
+  dataa1: 60.000000
+  dataa2: 120.000000
+  dataa3: 180.000000
+  dataa4: 240.000000
+  dur1: 3.000000
+  dur2: 3.000000
+  dur3: 3.000000
+  dur4: 3.000000
+  reqlevel: 1
+
+--- Ability w2af (|cffdcb496╨Ь╨╡╤В╨░╨╜╨╕╨╡ ╤В╨╛╨┐╨╛╤А╨╛╨▓|r) ---
+  area1: 315.000000
+  area2: 315.000000
+  area3: 315.000000
+  area4: 315.000000
+  casterart: 
+  cool1: 15.000000
+  cool2: 15.000000
+  cool3: 15.000000
+  cool4: 15.000000
+  dataa1: 0.000000
+  dataa2: 0.000000
+  dataa3: 0.000000
+  dataa4: 0.000000
+  datab1: 2
+  datab2: 2
+  datab3: 2
+  datab4: 2
+  datac1: 7
+  datac2: 7
+  datac3: 7
+  datac4: 7
+  datae1: 0
+  datae2: 0
+  datae3: 0
+  datae4: 0
+  dataf1: charm
+  dataf2: charm
+  dataf3: charm
+  dataf4: charm
+  effectart: 
+  rng1: 600.000000
+  rng2: 600.000000
+  rng3: 600.000000
+  rng4: 600.000000
+  targetart: 
+
+--- Ability w2ag (|cffdcb496╨б╨╕╨╗╤М╨╜╤Л╨╣ ╤Г╨┤╨░╤А|r) ---
+
+--- Ability w2ah (|cffdcb496╨Р╤Г╤А╨░ ╨╝╨╡╤В╨║╨╛╤Б╤В╨╕|r) ---
+  area1: 600.000000
+  area2: 600.000000
+  area3: 600.000000
+  area4: 600.000000
+  dataa4: 0.400000
+
+--- Ability w2ak (|cffdcb496╨Р╤Г╤А╨░ ╨▓╤Л╨╜╨╛╤Б╨╗╨╕╨▓╨╛╤Б╤В╨╕|r) ---
+  area1: 500.000000
+  area2: 500.000000
+  area3: 500.000000
+  area4: 500.000000
+  dataa1: 0.050000
+  dataa2: 0.100000
+  dataa3: 0.150000
+  dataa4: 0.200000
+  datab4: 0.200000
+
+--- Ability w2al (|cffdcb496╨Ф╨╡╤А╨╢╨░╤В╤М ╤Б╤В╤А╨╛╨╣|r) ---
+  area2: 500.000000
+  area3: 500.000000
+  area4: 500.000000
+  cool1: 20.000000
+  cool2: 20.000000
+  cool3: 20.000000
+  cool4: 20.000000
+  cost2: 125
+  cost3: 150
+  cost4: 175
+  dataa1: 0.000000
+  datab1: 4
+  datab2: 5
+  datab3: 6
+  datab4: 7
+  datac1: 15.000000
+  datac2: 25.000000
+  datac3: 35.000000
+  datac4: 45.000000
+  dur1: 20.000000
+  dur2: 20.000000
+  dur3: 20.000000
+  dur4: 20.000000
+  targs2: air,ground,friend,self
+  targs3: air,ground,friend,self
+  targs4: air,ground,friend,self
+
+--- Ability w2am (|cffdcb496╨Ю╤В╤А╨░╨▒╨╛╤В╨░╨╜╨╜╤Л╨╡ ╨╜╨░╨▓╤Л╨║╨╕|r) ---
+  dataa1: 5.000000
+  datad1: 0.050000
+  requires: w2r7
+  requiresamount: 2
+
+--- Ability w2an (|cffdcb496╨п╤А╨╛╤Б╤В╤М|r) ---
+  cool1: 35.000000
+  dataa1: 0.200000
+  datab1: 0.150000
+  datac1: 0.000000
+  dur1: 9.000000
+  requires: w2r7
+  rng1: 450.000000
+
+--- Ability w2ap (|cffdcb496╨а╨╡╨╖╨╜╤П ╤Б╨╗╨░╨▒╨░╨║╨╛╨▓|r) ---
+  dataa2: 100.000000
+  datab1: 1.000000
+  datab2: 1.000000
+  datac1: 3.000000
+  datac2: 4.000000
+  datad1: 1.000000
+  datad2: 1.000000
+  reqlevel: 6
+  targs1: enemies,ground
+  targs2: enemies,ground
+
+--- Ability w2as (|cffdcb496╨а╨░╨║╨╡╤В╨╜╤Л╨╣ ╨╛╨▒╤Б╤В╨╡╨╗|r) ---
+  area1: 750.000000
+  cool1: 5.000000
+  dataa1: 25.000000
+  datab1: 0.000000
+  dur1: 0.001000
+  requires: w2rq
+
+--- Ability w2av (|cffdcb496╨б╤Д╨╡╤А╨░ ╤А╨░╨╖╤А╤Г╤И╨╡╨╜╨╕╤П|r) ---
+  cost1: 10
+  datab1: 0.400000
+  datac1: 0.200000
+  requires: w2r5
+  requiresamount: 3
+  rng1: 600.000000
+
+--- Ability w2ax (|cffdcb496╨а╨░╤Б╤Б╨╡╨╕╨▓╨░╨╜╨╕╨╡ ╨╖╨░╨║╨╗╨╕╨╜╨░╨╜╨╕╨╣|r) ---
+  requires: w2r6
+  rng1: 600.000000
+
+--- Ability w2az (|cffdcb496╨Ш╤Б╤Ж╨╡╨╗╨╡╨╜╨╕╨╡|r) ---
+  dataa1: 20.000000

@@ -1,0 +1,64 @@
+{
+  "operations": [
+    {
+      "type": "ability",
+      "id": "A0T3",
+      "field": "name",
+      "value": "|cffe4cfa3Залповый огонь|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0T3",
+      "field": "tip1",
+      "value": "|cffe4cfa3Залповый огонь|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0T3",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Позволяет поражать до |cffffffff9|cffced4da вражеских целей в радиусе |cffffffff600|cffced4da. Урон каждой цели: |cffffffff300|cffced4da; предел урона: |cffffffff3000|cffced4da.|n|n|cffe6c07bЙогг`Сарон получает способность при снижении здоровья ниже 17000. Требуется исследование «Залповый огонь».|cffced4da|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0W4",
+      "field": "name",
+      "value": "|cffe4cfa3Подчинение|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0W4",
+      "field": "tip1",
+      "value": "|cffe4cfa3Подчинение|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0W4",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Навсегда подчиняет вражеского или нейтрального юнита не выше |cffffffff7|cffced4da-го уровня. Не действует на героев и здания.|n|n|cffe6c07bЙогг`Сарон получает способность при снижении здоровья ниже 15000.|cffced4da|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0W4",
+      "field": "tip2",
+      "value": "|cffe4cfa3Подчинение|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0W4",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Навсегда подчиняет вражеского или нейтрального юнита не выше |cffffffff7|cffced4da-го уровня. Не действует на героев и здания.|n|n|cffe6c07bЙогг`Сарон получает способность при снижении здоровья ниже 15000.|cffced4da|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0W4",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Подчинение|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0W4",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Навсегда подчиняет вражеского или нейтрального юнита не выше |cffffffff7|cffced4da-го уровня. Не действует на героев и здания.|n|n|cffe6c07bЙогг`Сарон получает способность при снижении здоровья ниже 15000.|cffced4da|n|nОба уровня имеют одинаковый предел уровня цели.|r"
+    }
+  ]
+}

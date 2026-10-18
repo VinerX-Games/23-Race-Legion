@@ -1,0 +1,572 @@
+=== 1. SELECTION ===
+Selection ability: A0HT name='|cffbec8f5Нерубы|r' tip='|cffbec8f5Нерубы|r' hotkey='W'
+Ubertip: '|cff7dc87dСоздатель расы:|r |cffe17d00Escanor (Яхве)|r|n|cff7dc87dСложность:|r |cffffbe37Средняя|r|n|cff7dc87dПериод:|r |cffb1b1ffWrath of the Lich King|r|n|cff7dc87dОписание:|r Возьмите туловище паука, соедините его с верхней частью темнокожего человека с когтистыми щипцами вместо рук и хитиновой кожей, и вы получите самое близкое описание неруба. Однажды нерубы владели самой великой цивилизацией в Нордсколе, изумительной и высокоразвитой. Азжол-Неруб казался непобедимым - до того дня, пока не появилась Плеть. Нер’зул убил многих нерубов и разрушил их города; он украл их земли, их знания и даже их тела в преследовании своей мечты о власти над миром.'
+Marker R07N: name='|cffe6beaaНерубы|r' tip='|cffe6beaaНерубы|r' ubertip='Древняя раса высокоинтеллектуальных арахноидов. Уроженцы Нордскола, эти люди-пауки когда-то правили королевством Азджол-Неруб, которое раскинулось огромной паутиной под пустынными ледниками "крыши мира".'
+
+=== 2. BUILDINGS (12) ===
+Building [h0CO] name='|cffbec8f5Залы Нерубов|r' (raw=TRIGSTR_10299) tip='Построить |cffbec8f5Залы Нерубов|r' (raw=TRIGSTR_10300) hk='Q' (raw=TRIGSTR_2539)
+  upgrades_to=h0CP trains=None res=None abils=A186,A0LJ,A0LI,A0IQ,Argl fmade=40
+  ubertip='|cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r|n|nБазовое здание. Обучает работников и хранит добытые ресурсы. Можно улучшить до Палаты Нерубов, а затем до Крепость Нерубов, чтобы получить доступ к новым зданиям и типам войск.' (raw=TRIGSTR_13023)
+Building [h0CP] name='|cffbec8f5Палаты Нерубов|r' (raw=TRIGSTR_10302) tip='Построить вокруг кокона палаты |cffbec8f5Нерубов|r' (raw=TRIGSTR_10303) hk='Z' (raw=TRIGSTR_8998)
+  upgrades_to=h0CQ trains=None res=None abils=A186,A0LJ,A0LI,A0IQ,Argl fmade=100
+  ubertip='|cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск.' (raw=TRIGSTR_20412)
+Building [h0CQ] name='|cffbec8f5Крепость Нерубов|r' (raw=TRIGSTR_10305) tip='Улучшить до |cffbec8f5Крепость Нерубов|r' (raw=TRIGSTR_15181) hk='Z' (raw=TRIGSTR_9161)
+  upgrades_to=None trains=None res=None abils=A1KB,A186,A0LJ,A0LI,A0IQ,Argl fmade=150
+  ubertip='|cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск.' (raw=TRIGSTR_20416)
+Building [h0CR] name='|cffbec8f5Казармы Нерубов|r' (raw=TRIGSTR_10308) tip='Построить |cffbec8f5Казармы Нерубов|r' (raw=TRIGSTR_10309) hk='W' (raw=TRIGSTR_3012)
+  upgrades_to=None trains=None res=None abils=Abds fmade=40
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nЗдание для подготовки базовых войск. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск.' (raw=TRIGSTR_13072)
+Building [h0CS] name='|cffbec8f5Хранилище|r' (raw=TRIGSTR_10311) tip='Построить |cffbec8f5Хранилище|r' (raw=TRIGSTR_10312) hk='E' (raw=TRIGSTR_3903)
+  upgrades_to=None trains=None res=None abils=Abds,Arlm fmade=40
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nХранит добытую древесину. |nДает доступ к новым улучшениям для всей фракции.' (raw=TRIGSTR_13027)
+Building [h0CT] name='|cffbec8f5Храм Нерубов|r' (raw=TRIGSTR_10317) tip='Построить |cffbec8f5Храм Нерубов|r' (raw=TRIGSTR_10318) hk='R' (raw=TRIGSTR_1909)
+  upgrades_to=None trains=None res=None abils=None fmade=40
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nОбучает могучих и разных нерубов, дает возможность улучшать их способности.' (raw=TRIGSTR_13029)
+Building [h0CU] name='|cffbec8f5Паучий Алтарь|r' (raw=TRIGSTR_10320) tip='Построить |cffbec8f5Паучий Алтарь|r' (raw=TRIGSTR_10321) hk='S' (raw=TRIGSTR_2139)
+  upgrades_to=None trains=None res=None abils=Abds fmade=40
+  ubertip='Призывает новых и воскрешает павших героев.' (raw=Призывает новых и воскрешает павших героев.)
+Building [h0CV] name='|cffbec8f5Святилище Нерубов|r' (raw=TRIGSTR_10323) tip='Построить |cffbec8f5Святилище Нерубов|r' (raw=TRIGSTR_10324) hk='D' (raw=TRIGSTR_4049)
+  upgrades_to=None trains=None res=None abils=Abds fmade=50
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nОбучает магов и волшебников. Дает возможность улучшать магов и волшебников и открывать новые способности.' (raw=TRIGSTR_13030)
+Building [h0GH] name='|cffbec8f5Туннель нерубов' (raw=TRIGSTR_19368) tip='|cffbec8f5Туннель нерубов' (raw=TRIGSTR_19370) hk='F' (raw=TRIGSTR_11483)
+  upgrades_to=None trains=None res=None abils=A0TQ fmade=40
+  ubertip='Можно связать с другим.' (raw=TRIGSTR_19366)
+Building [lorE] name='Кокон Лорда' (raw=TRIGSTR_37973) tip='Кокон Лорда' (raw=TRIGSTR_37974) hk='Q' (raw=TRIGSTR_7524)
+  upgrades_to=lord trains=None res=None abils=None fmade=0
+  ubertip='|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.\n\n|cffffff00Приносит 30 инкома|r' (raw=TRIGSTR_31848)
+Building [u019] name='|cffbec8f5Кокон|r' (raw=TRIGSTR_10296) tip='Сплести |cffbec8f5Кокон|r' (raw=TRIGSTR_10297) hk='Q' (raw=TRIGSTR_2455)
+  upgrades_to=h0GH,h0CV,h0CO,h0CU,h0CR,h0CT,h0CS,u01A trains=None res=None abils=Asud fmade=40
+  ubertip='|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.\n\n|cffffff00Приносит 30 инкома|r' (raw=TRIGSTR_21249)
+Building [u01A] name='|cffbec8f5Башня Оплетения|r' (raw=TRIGSTR_10314) tip='Улучшить до |cffbec8f5Башня Оплетения|r' (raw=TRIGSTR_10315) hk='A' (raw=TRIGSTR_1821)
+  upgrades_to=None trains=None res=None abils=None fmade=40
+  ubertip='|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nОборонительное сооружение. ' (raw=TRIGSTR_13028)
+
+=== 3. UNITS (15) ===
+Unit [h0BE] name='|cffbec8f5Постройщик|r' (raw=TRIGSTR_10605) tip='Обучить |cffbec8f5Постройщик|r' (raw=TRIGSTR_10610) hk='Q' (raw=TRIGSTR_2973)
+  atk1=normal dmg=1d5+5 targs1=ground,structure,debris,item,ward weap1=MetalLightChop
+  atk2=normal dmg=1d1+0 targs2=tree weap2=AxeMediumChop
+  hp=235 mana= -  def=0 (medium) abils=A0I3,ANha,Ahrp upgs=R0DR,Rguv
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa15 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n|nРабочий нерубов. Маг, специализирующийся на призыве и ремонте зданий.' (raw=TRIGSTR_6459)
+Unit [u01B] name='|cffbec8f5Нерубский броненосец|r' (raw=TRIGSTR_10327) tip='Нанять |cffbec8f5Нерубского броненосца|r' (raw=TRIGSTR_11993) hk='R' (raw=TRIGSTR_1910)
+  atk1=normal dmg=1d6+24 targs1=ground,structure,debris,item,ward weap1=None
+  atk2=normal dmg=NonedNone+None targs2=None weap2=None
+  hp=850 mana= -  def=5 (large) abils=A0HJ,A0HD,A0H9,A0H4 upgs=R074,R075,R06Z,R070,R071,R072,R073
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa42 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|nМогучий воин нерубов, покрытый толстым слоем брони. Имеет "|cff3264ffтолстый панцирь|r" . а так же "|cff3264ffОстрые конечности|r".' (raw=TRIGSTR_963)
+Unit [u01C] name='|cffbec8f5Кисло-плюй|r' (raw=TRIGSTR_10366) tip='Нанять |cffbec8f5Кисло-плюя|r' (raw=TRIGSTR_10367) hk='Q' (raw=TRIGSTR_2540)
+  atk1=normal dmg=1d6+21 targs1=ground,structure,debris,item,ward weap1=None
+  atk2=normal dmg=NonedNone+None targs2=None weap2=None
+  hp=550 mana=150 def=0 (medium) abils=A0HC,A0HB upgs=R074,R075,R06Z,R070,R071,R072,R073
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa26 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|nАвангард армии нерубов, способен извергать"|cff3264ffядовитую кислоту|r", а так же внедрять "|cff3264ffпаразитов|r" во вражеские тела.' (raw=TRIGSTR_986)
+Unit [u01D] name='|cffbec8f5Вязальщик|r' (raw=TRIGSTR_4003) tip='Нанять |cffbec8f5Вязальщика|r' (raw=TRIGSTR_6798) hk='W' (raw=TRIGSTR_3013)
+  atk1=magic dmg=1d6+20 targs1=debris,ground,item,ward weap1=None
+  atk2=pierce dmg=1d5+17 targs2=ground,structure,debris,item,ward weap2=None
+  hp=600 mana=150 def=0 (medium) abils=A0H7,A0H5,A0H6 upgs=R074,R076,R06Z,R070,R071,R072,R073
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa51 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая и Дальний бой|r|n|n Воин поддержки дальнего боя. Может изучить«|cff3264ffКомок Паутины|r» «|cff3264ffПаутину|r» и «|cff3264ffБритвенно острая паутина|r».' (raw=TRIGSTR_2613)
+Unit [u01E] name='|cffbec8f5Пророк Нерубов|r' (raw=TRIGSTR_10336) tip='Воскресить |cffbec8f5Пророк Нерубов|r' (raw=TRIGSTR_10337) hk='E' (raw=TRIGSTR_3962)
+  atk1=pierce dmg=1d6+25 targs1=ground,structure,debris,item,ward weap1=None
+  atk2=normal dmg=NonedNone+None targs2=None weap2=None
+  hp=575 mana= -  def=0 (medium) abils=A0BO,A0BS,Aspa,A0BR,Aiun upgs=R05N,R05P,R05C,R05D,R05I,R05J
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa37 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n|nВоин поддержки дальнего боя. Может изучить «Паутину» и «Закопаться». |n|n|cffffcc00Атакует наземные цели.|r' (raw=TRIGSTR_3198)
+Unit [u01F] name='|cffbec8f5Ядовитый Неруб|r' (raw=TRIGSTR_10339) tip='Нанять |cffbec8f5Ядовитый Неруб|r' (raw=TRIGSTR_7610) hk='W' (raw=TRIGSTR_3047)
+  atk1=pierce dmg=1d6+22 targs1=ground,structure,debris,item,ward weap1=None
+  atk2=normal dmg=NonedNone+None targs2=None weap2=None
+  hp=575 mana= -  def=0 (medium) abils=A0HK,A0HA upgs=R079,R074,R076,R06Z,R070,R071,R072,R073
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa33 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n|nВоин поддержки дальнего боя. Способен отравлять атакованные цели.' (raw=TRIGSTR_4454)
+Unit [u01G] name='|cffbec8f5Воин Нерубов|r' (raw=TRIGSTR_10368) tip='Нанять |cffbec8f5Воина Нерубов|r' (raw=TRIGSTR_10369) hk='E' (raw=TRIGSTR_3965)
+  atk1=pierce dmg=1d5+28 targs1=ground,structure,debris,item,ward weap1=None
+  atk2=normal dmg=NonedNone+None targs2=None weap2=None
+  hp=600 mana= -  def=0 (medium) abils=A0HF,A0H4 upgs=R074,R076,R06Z,R070,R071,R072,R073
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa37 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n|nБазовый воин армии Нерубов, способен изучить "|cff3264ffСожжение|r".' (raw=TRIGSTR_4455)
+Unit [u01H] name='|cffbec8f5Неруб Лекарь|r' (raw=TRIGSTR_10345) tip='Нанять |cffbec8f5Неруб Лекарь|r' (raw=TRIGSTR_12540) hk='Q' (raw=TRIGSTR_2586)
+  atk1=magic dmg=1d4+17 targs1=ground,structure,debris,item,ward weap1=None
+  atk2=normal dmg=NonedNone+None targs2=None weap2=None
+  hp=535 mana=150 def=0 (medium) abils=A0HI,A0HH,A0HG,A0H4 upgs=R07U,R07V,R074,R076,R06Z,R070,R071,R072,R073
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|n|nЛекарь неруб, предназначен для  поддержки основной армии. Способен так же рассеивать заклинания.' (raw=TRIGSTR_4456)
+Unit [u01I] name='|cffbec8f5Неруб Страж|r' (raw=TRIGSTR_10348) tip='Нанять |cffbec8f5Неруб Страж|r' (raw=TRIGSTR_12542) hk='E' (raw=TRIGSTR_3997)
+  atk1=pierce dmg=1d4+35 targs1=ground,structure,debris,item,ward weap1=None
+  atk2=normal dmg=NonedNone+None targs2=None weap2=None
+  hp=645 mana= -  def=0 (medium) abils=A0HE,A0H4 upgs=R074,R076,R06Z,R070,R071,R072,R073
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa42 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|n Опытный воин нерубов, способен вдохновлять дружественных воинов, а так же имеет более крепкий |cff3264ffпанцирь|r.' (raw=TRIGSTR_4457)
+Unit [u01J] name='|cffbec8f5Молодой неруб|r' (raw=TRIGSTR_10359) tip='Нанять |cffbec8f5Молодой неруб|r' (raw=TRIGSTR_10360) hk='Q' (raw=TRIGSTR_2635)
+  atk1=normal dmg=1d4+13 targs1=ground,structure,debris,item,ward weap1=None
+  atk2=normal dmg=NonedNone+None targs2=None weap2=None
+  hp=550 mana= -  def=0 (medium) abils=A0H9 upgs=R074,R075,R06Z,R070,R071,R072,R073
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa20 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|n Новорожденный |cff3264ffнеруб|r, является слабым воином ближнего боя.' (raw=TRIGSTR_12544)
+Unit [u01K] name='|cffbec8f5Глубинный Неруб|r' (raw=TRIGSTR_10362) tip='Нанять |cffbec8f5Глубинный Неруб|r' (raw=TRIGSTR_10363) hk='W' (raw=TRIGSTR_3190)
+  atk1=chaos dmg=1d6+25 targs1=ground,structure,debris,item,ward weap1=None
+  atk2=normal dmg=NonedNone+None targs2=None weap2=None
+  hp=550 mana= -  def=0 (medium) abils=A0H9,A0H4 upgs=R07Q,R074,R075,R07S,R07P,R06Z,R070,R071,R072,R073
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa27 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|n|n Мутировавший неруб, способен при помощи своего хвоста проламывать вражескую броню, что дает возможность наносить больше вреда здоровью.' (raw=TRIGSTR_5518)
+Unit [u01T] name='|cffbec8f5Неруб паразит|r' (raw=TRIGSTR_10414) tip='Нанять |cffbec8f5Неруб паразит|r' (raw=TRIGSTR_10415) hk='Q' (raw=TRIGSTR_2636)
+  atk1=normal dmg=1d6+12 targs1=ground,structure,debris,item,ward weap1=None
+  atk2=normal dmg=NonedNone+None targs2=None weap2=None
+  hp=375 mana= -  def=0 (medium) abils=A0H9 upgs=R074,R076,R06Z,R070,R071,R072,R073
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa16 сек.|r\nВоин поддержки дальнего боя. Может изучить «Паутину» и «Закопаться». |n|n|cffffcc00Атакует наземные цели.|r' (raw=TRIGSTR_5646)
+Unit [lord] name='Неруб Лорд ' (raw=TRIGSTR_37571) tip='Призвать королеву нерубов' (raw=Призвать королеву нерубов) hk=None (raw=None)
+  atk1=magic dmg=2d4+55 targs1=ground,structure,debris,item,ward weap1=None
+  atk2=normal dmg=NonedNone+None targs2=None weap2=None
+  hp=1500 mana=500 def=7 (large) abils=NQ13,A0HJ,NQ11,NQ04 upgs=R074,R076,R06Z,R070,R071,R072,R073
+  ubertip='"Тяжелый воин ближнего боя. Владеет «Нечистой аурой», «Воскрешением мертвых» и «Темной стаей». |n|n|cffffcc00Атакует наземные цели.|r"' (raw="Тяжелый воин ближнего боя. Владеет «Нечистой аурой», «Воскрешением мертвых» и «Темной стаей». |n|n|cffffcc00Атакует наземные цели.|r")
+Unit [nq01] name='Неруб Лорд ' (raw=TRIGSTR_29729) tip='Призвать королеву нерубов' (raw=Призвать королеву нерубов) hk=None (raw=None)
+  atk1=hero dmg=2d4+55 targs1=ground,structure,debris,item,ward weap1=None
+  atk2=normal dmg=NonedNone+None targs2=None weap2=None
+  hp=1500 mana=500 def=7 (large) abils=NQ13,A0HJ,ACce,NQ11,NQ04 upgs=R074,R076,R06Z,R070,R071,R072,R073
+  ubertip='"Тяжелый воин ближнего боя. Владеет «Нечистой аурой», «Воскрешением мертвых» и «Темной стаей». |n|n|cffffcc00Атакует наземные цели.|r"' (raw="Тяжелый воин ближнего боя. Владеет «Нечистой аурой», «Воскрешением мертвых» и «Темной стаей». |n|n|cffffcc00Атакует наземные цели.|r")
+Unit [u02T] name=None (raw=None) tip=None (raw=None) hk='R' (raw=TRIGSTR_6185)
+  atk1=normal dmg=1d6+51 targs1=ground,structure,debris,item,ward weap1=None
+  atk2=normal dmg=NonedNone+None targs2=None weap2=None
+  hp=2300 mana= -  def=8 (large) abils=A0HJ,A0HD,A0H9,A0H4 upgs=R074,R075,R06Z,R070,R071,R072,R073
+  ubertip=None (raw=None)
+
+=== 4. HEROES (3) ===
+Hero [U01U] name='|cffbec8f5Пророк|r' (raw=TRIGSTR_7233) proper="Гор'аман" (raw=TRIGSTR_7234) tip='Призвать |cffbec8f5Пророк|r' (raw=TRIGSTR_7236) hk='Z'
+  heroabils=A0I7,A0I9,A0IA,A1M9 abils=AInv
+  atk1=hero dmg=2d4+22 targs1=ground,structure,debris,item,ward
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|n\nНеруб мастер плетения нитей судьб. Умелый полководец подземной армии.' (raw=TRIGSTR_31723)
+Hero [U01V] name='|cffbec8f5Паучий лорд|r' (raw=TRIGSTR_9411) proper='|cffbec8f5Паучий лорд|r' (raw=TRIGSTR_9428) tip='Призвать |cffbec8f5Паучий лорд|r' (raw=TRIGSTR_9429) hk='X'
+  heroabils=A0ID,A0IC,A0IB,A0IE abils=A01C,AInv
+  atk1=hero dmg=2d4+22 targs1=ground,structure,debris,item,ward
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n\nОдин из владык нерубов, входящий в число старейшин.' (raw=TRIGSTR_31724)
+Hero [U01W] name='|cffbec8f5Высший Страж|r' (raw=TRIGSTR_11132) proper=' |cffc8cde1Омун-ул|r' (raw=TRIGSTR_11135) tip='Призвать |cffbec8f5Высший Страж|r' (raw=TRIGSTR_11136) hk='C'
+  heroabils=A0IF,A0IG,A0IL,A0IM abils=AInv
+  atk1=hero dmg=2d4+22 targs1=ground,structure,debris,item,ward
+  ubertip='|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaЛовокость |r|n\nДревний неруб отвечающий за защиту входов в подземное королевсто.' (raw=TRIGSTR_31725)
+
+=== 5. UPGRADES ===
+Upgrade [R07N] levels=1 class=None
+  L1: name='|cffe6beaaНерубы|r' tip='|cffe6beaaНерубы|r' hk=None
+      ubertip='Древняя раса высокоинтеллектуальных арахноидов. Уроженцы Нордскола, эти люди-пауки когда-то правили королевством Азджол-Неруб, которое раскинулось огромной паутиной под пустынными ледниками "крыши мира".'
+Upgrade [R074] levels=6 class=melee
+  L1: name='|cffbec8f5Сильные передние конечности|r' tip='Исследовать |cffbec8f5Сильные передние конечности|r' hk='Q'
+      ubertip='Увеличивает урон от атак всех нерубианцев.'
+  L2: name='|cffbec8f5Сильные передние конечности|r' tip='Исследовать |cffbec8f5Сильные передние конечности|r' hk='Q'
+      ubertip='Увеличивает урон от атак всех нерубианцев.'
+  L3: name='|cffbec8f5Сильные передние конечности|r' tip='Исследовать |cffbec8f5Сильные передние конечности|r' hk='Q'
+      ubertip='Увеличивает урон от атак всех нерубианцев.'
+  L4: name='|cffbec8f5Сильные передние конечности|r' tip='Исследовать |cffbec8f5Сильные передние конечности|r' hk='Q'
+      ubertip='Увеличивает урон от атак всех нерубианцев.'
+  L5: name='|cffbec8f5Сильные передние конечности|r' tip='Исследовать |cffbec8f5Сильные передние конечности|r' hk='Q'
+      ubertip='Увеличивает урон от атак всех нерубианцев.'
+  L6: name='|cffbec8f5Сильные передние конечности|r' tip='Исследовать |cffbec8f5Сильные передние конечности|r' hk='Q'
+      ubertip='Увеличивает урон от атак всех нерубианцев.'
+Upgrade [R075] levels=6 class=armor
+  L1: name='|cffbec8f5Броня туловища|r' tip='Исследовать |cffbec8f5Броня туловища|r' hk='A'
+      ubertip='Усиливает броню Нерубианцам ближнего боя.'
+  L2: name='|cffbec8f5Броня туловища|r' tip='Исследовать |cffbec8f5Броня туловища|r' hk='A'
+      ubertip='Усиливает броню Нерубианцам ближнего боя.'
+  L3: name='|cffbec8f5Броня туловища|r' tip='Исследовать |cffbec8f5Броня туловища|r' hk='A'
+      ubertip='Усиливает броню Нерубианцам ближнего боя.'
+  L4: name='|cffbec8f5Броня туловища|r' tip='Исследовать |cffbec8f5Броня туловища|r' hk='A'
+      ubertip='Усиливает броню Нерубианцам ближнего боя.'
+  L5: name='|cffbec8f5Броня туловища|r' tip='Исследовать |cffbec8f5Броня туловища|r' hk='A'
+      ubertip='Усиливает броню Нерубианцам ближнего боя.'
+  L6: name='|cffbec8f5Броня туловища|r' tip='Исследовать |cffbec8f5Броня туловища|r' hk='A'
+      ubertip='Усиливает броню Нерубианцам ближнего боя.'
+Upgrade [R076] levels=6 class=armor
+  L1: name='|cffbec8f5Броня чрева|r' tip='Исследовать |cffbec8f5Броня чрева|r' hk='S'
+      ubertip='Усиливает броню Нерубианцам дальнего боя.'
+  L2: name='|cffbec8f5Броня чрева|r' tip='Исследовать |cffbec8f5Броня чрева|r' hk='S'
+      ubertip='Усиливает броню Нерубианцам дальнего боя.'
+  L3: name='|cffbec8f5Броня чрева|r' tip='Исследовать |cffbec8f5Броня чрева|r' hk='S'
+      ubertip='Усиливает броню Нерубианцам дальнего боя.'
+  L4: name='|cffbec8f5Броня чрева|r' tip='Исследовать |cffbec8f5Броня чрева|r' hk='S'
+      ubertip='Усиливает броню Нерубианцам дальнего боя.'
+  L5: name='|cffbec8f5Броня чрева|r' tip='Исследовать |cffbec8f5Броня чрева|r' hk='S'
+      ubertip='Усиливает броню Нерубианцам дальнего боя.'
+  L6: name='|cffbec8f5Броня чрева|r' tip='Исследовать |cffbec8f5Броня чрева|r' hk='S'
+      ubertip='Усиливает броню Нерубианцам дальнего боя.'
+Upgrade [R070] levels=3 class=None
+  L1: name='|cffbec8f5Мутация Панциря|r' tip='Исследовать |cffbec8f5Мутация Панциря|r' hk='E'
+      ubertip='Увеличивает защиту Нерубам.'
+  L2: name='|cffbec8f5Мутация Панциря|r' tip='Исследовать |cffbec8f5Мутация Панциря|r' hk='Увеличивает познание скверны воинов |cffb4dc8cЛегиона|r. Преобретая |cffb4dc8c+40|r к здоровью, |cffb4dc8c+1 ед.|r к регенерации здоровья, |cffb4dc8c+0.5|r к регенерации маны.'
+      ubertip='Увеличивает защиту Нерубам.'
+  L3: name='|cffbec8f5Мутация Панциря|r' tip='Исследовать |cffbec8f5Мутация Панциря|r' hk='Увеличивает познание скверны воинов |cffb4dc8cЛегиона|r. Преобретая |cffb4dc8c+40|r к здоровью, |cffb4dc8c+1 ед.|r к регенерации здоровья, |cffb4dc8c+0.5|r к регенерации маны.'
+      ubertip='Увеличивает защиту Нерубам.'
+Upgrade [R06Z] levels=3 class=None
+  L1: name='|cffbec8f5Мутация крови|r' tip='Исследовать |cffbec8f5Мутация крови|r' hk='R'
+      ubertip='Увеличивает регенерацию хп нерубов - 0.3'
+  L2: name='|cffbec8f5Мутация крови|r' tip='Исследовать |cffbec8f5Мутация крови|r' hk='R'
+      ubertip='Увеличивает регенерацию хп нерубов - 0.3'
+  L3: name='|cffbec8f5Мутация крови|r' tip='Исследовать |cffbec8f5Мутация крови|r' hk='R'
+      ubertip='Увеличивает регенерацию хп нерубов - 0.3'
+Upgrade [R071] levels=3 class=None
+  L1: name='|cffbec8f5Мутация здоровья|r' tip='Исследовать |cffbec8f5Мутация здоровья|r' hk='D'
+      ubertip='Увеличивает хп нерубов - 25 ед.'
+  L2: name='|cffbec8f5Мутация здоровья|r' tip='Исследовать |cffbec8f5Мутация здоровья|r' hk='D'
+      ubertip='Увеличивает хп нерубов - 25 ед.'
+  L3: name='|cffbec8f5Мутация здоровья|r' tip='Исследовать |cffbec8f5Мутация здоровья|r' hk='D'
+      ubertip='Увеличивает хп нерубов - 25 ед.'
+Upgrade [R072] levels=3 class=None
+  L1: name='|cffbec8f5Мутация конечностей|r' tip='Исследовать |cffbec8f5Мутация конечностей|r' hk='F'
+      ubertip='Увеличивает скорость передвижения - 20\nУвеличивает скорость боя - 20%\n|cffff0000Исключает возможность|r |cffbec8f5Мутация нерубов|r'
+  L2: name='|cffbec8f5Мутация конечностей|r' tip='Исследовать |cffbec8f5Мутация конечностей|r' hk='F'
+      ubertip='Увеличивает скорость передвижения - 20\nУвеличивает скорость боя - 20%\n|cffff0000Исключает возможность|r |cffbec8f5Мутация нерубов|r'
+  L3: name='|cffbec8f5Мутация конечностей|r' tip='Исследовать |cffbec8f5Мутация конечностей|r' hk='F'
+      ubertip='Увеличивает скорость передвижения - 20\nУвеличивает скорость боя - 20%\n|cffff0000Исключает возможность|r |cffbec8f5Мутация нерубов|r'
+Upgrade [R073] levels=3 class=None
+  L1: name='|cffbec8f5Мутация нерубов|r' tip='Исследовать |cffbec8f5Мутация нерубов|r' hk='C'
+      ubertip='Увеличивает хп нерубам - 30%\n|cffff0000Исключает возможность|r |cffbec8f5Мутации конечностей|r'
+  L2: name='|cffbec8f5Мутация нерубов|r' tip='Исследовать |cffbec8f5Мутация нерубов|r' hk='C'
+      ubertip='Увеличивает хп нерубам - 15%\n|cffff0000Исключает возможность|r |cffbec8f5Мутации конечностей|r'
+  L3: name='|cffbec8f5Мутация нерубов|r' tip='Исследовать |cffbec8f5Мутация нерубов|r' hk='C'
+      ubertip='Увеличивает хп нерубам - 15%\n|cffff0000Исключает возможность|r |cffbec8f5Мутации конечностей|r'
+Upgrade [Rhac] levels=3 class=armor
+  L1: name='|cffaad2ffУлучшенная кладка|r' tip='Исследовать |cffaad2ffУлучшенную кладку|r' hk='X'
+      ubertip='"Усиливает броню и увеличивает запас прочности зданий Альянса."'
+  L2: name='|cffaad2ffУлучшенная кладка|r' tip='Исследовать |cffaad2ffУлучшенную кладку|r' hk='X'
+      ubertip='Усиливает броню и увеличивает запас прочности зданий Альянса.'
+  L3: name='|cffaad2ffУлучшенная кладка|r' tip='Исследовать |cffaad2ffУлучшенную кладку|r' hk='X'
+      ubertip='Усиливает броню и увеличивает запас прочности зданий Альянса.'
+Upgrade [Rgfo] levels=3 class=None
+  L1: name='Знак укрепления' tip=None hk=None
+      ubertip=None
+  L2: name='Знак укрепления' tip=None hk=None
+      ubertip=None
+  L3: name='Знак укрепления' tip=None hk=None
+      ubertip=None
+Upgrade [R0DR] levels=4 class=None
+  L1: name='Улучшенные инструменты' tip='Исследовать улучшенные инструменты' hk='E'
+      ubertip='Увеличивают объем переносимой работниками древесины на 8.'
+  L2: name='Улучшенные инструменты' tip='Исследовать улучшенные инструменты' hk='E'
+      ubertip='Увеличивают объем переносимой работниками древесины на 8.'
+  L3: name='Улучшенные инструменты' tip='Исследовать улучшенные инструменты' hk='E'
+      ubertip='Увеличивают объем переносимой работниками древесины на 8.'
+  L4: name='Улучшенные инструменты' tip='Исследовать улучшенные инструменты' hk='E'
+      ubertip='Увеличивают объем переносимой работниками древесины на 8.'
+Upgrade [Rguv] levels=1 class=None
+  L1: name='Знак ночного зрения' tip=None hk=None
+      ubertip=None
+Upgrade [R05N] levels=6 class=ranged
+  L1: name='|cffc8cde1Атаки чудовищ|r' tip='Исследовать |cffc8cde1атаки чудовищ|r' hk='W'
+      ubertip='Дополнительно увеличивают урон от атак некроарахнидов, горгулий, сфинксов и ледяных змеев.'
+  L2: name='|cffc8cde1Атаки чудовищ|r' tip='Исследовать |cffc8cde1атаки чудовищ|r' hk='W'
+      ubertip='"Дополнительно увеличивают урон от атак некроарахнидов, горгулий, сфинксов и ледяных змеев."'
+  L3: name='|cffc8cde1Улучшенные атаки чудовищ|r' tip='Исследовать|cffc8cde1 улучшенные атаки чудовищ|r' hk='W'
+      ubertip='"Дополнительно увеличивают урон от атак некроарахнидов, горгулий, сфинксов и ледяных змеев."'
+  L4: name='|cffc8cde1Улучшенные атаки чудовищ|r' tip='Исследовать|cffc8cde1 улучшенные атаки чудовищ|r' hk='W'
+      ubertip='Дополнительно увеличивают урон от атак некроарахнидов, горгулий, сфинксов и ледяных змеев.'
+  L5: name='|cffc8cde1Усиленные атаки чудовищ|r' tip='Исследовать |cffc8cde1усиленные атаки чудовищ|r' hk='W'
+      ubertip='Дополнительно увеличивают урон от атак некроарахнидов, горгулий, сфинксов и ледяных змеев.'
+  L6: name='|cffc8cde1Усиленные атаки чудовищ|r' tip='Исследовать |cffc8cde1усиленные атаки чудовищ|r' hk='W'
+      ubertip='Дополнительно увеличивают урон от атак некроарахнидов, горгулий, сфинксов и ледяных змеев.'
+Upgrade [R05P] levels=6 class=armor
+  L1: name='|cffc8cde1Броня чудовищ|r' tip='Исследовать |cffc8cde1броню чудовищ|r' hk='S'
+      ubertip='Усиливает броню солдатам дальнего боя армии Нежити.'
+  L2: name='|cffc8cde1Броня чудовищ|r' tip='Исследовать |cffc8cde1броню чудовищ|r' hk='S'
+      ubertip='Усиливает броню солдатам дальнего боя армии Нежити.'
+  L3: name='|cffc8cde1Улучшенная броня чудовищ|r' tip='Исследовать |cffc8cde1улучшенную броню чудовищ|r' hk='S'
+      ubertip='Усиливает броню солдатам дальнего боя армии Нежити.'
+  L4: name='|cffc8cde1Улучшенная броня чудовищ|r' tip='Исследовать |cffc8cde1улучшенную броню чудовищ|r' hk='S'
+      ubertip='Усиливает броню солдатам дальнего боя армии Нежити.'
+  L5: name='|cffc8cde1Усиленная броня чудовищ|r' tip='Исследовать |cffc8cde1усиленную броню чудовищ|r' hk='S'
+      ubertip='Усиливает броню солдатам дальнего боя армии Нежити.'
+  L6: name='|cffc8cde1Усиленная броня чудовищ|r' tip='Исследовать |cffc8cde1усиленную броню чудовищ|r' hk='S'
+      ubertip='Усиливает броню солдатам дальнего боя армии Нежити.'
+Upgrade [R05C] levels=1 class=None
+  L1: name='|cffc8cde1Паутина|r' tip='Исследовать «|cffc8cde1Паутину|r»' hk='S'
+      ubertip='Обучает некроарахнидов «|cffc8cde1Паутине|r», которая сковывает воздушного врага и притягивает его к земле. Пораженные цели считаются наземными.'
+Upgrade [R05D] levels=1 class=None
+  L1: name='|cffc8cde1Закопаться|r' tip='Исследовать «|cffc8cde1Закопаться|r»' hk='X'
+      ubertip='"Позволяет некроарахнидам закапываться в землю. Закопавшиеся некроарахниды не могут атаковать, но становятся невидимыми и регенерируют здоровье быстрее."'
+Upgrade [R05I] levels=4 class=None
+  L1: name='|cffc8cde1Усугубить Разложение |r' tip='|cffc8cde1Усугубить Разложение |r' hk='X'
+      ubertip='Увеличивает урон нежити, при этом понижая хп.\nУрон (+4)\nХп (-35)'
+  L2: name='|cffc8cde1Усугубить Разложение |r' tip='|cffc8cde1Усугубить Разложение |r' hk='X'
+      ubertip='Увеличивает урон нежити, при этом понижая хп.\nУрон (+4)\nХп (-35)'
+  L3: name='|cffc8cde1Усугубить Разложение |r' tip='|cffc8cde1Усугубить Разложение |r' hk='X'
+      ubertip='Увеличивает урон нежити, при этом понижая хп.\nУрон (+4)\nХп (-35)'
+  L4: name='|cffc8cde1Усугубить Разложение |r' tip='|cffc8cde1Усугубить Разложение |r' hk='X'
+      ubertip='Увеличивает урон нежити, при этом понижая хп.\nУрон (+4)\nХп (-35)'
+Upgrade [R05J] levels=4 class=caster
+  L1: name='|cffc8cde1Остановить разложение|r' tip='|cffc8cde1Остановить разложение|r' hk='Z'
+      ubertip='Увеличивает хп нежити, при этом понижая урон.\nУрон (-4)\nХп (+35)'
+  L2: name='|cffc8cde1Остановить разложение|r' tip='|cffc8cde1Остановить разложение|r' hk='Z'
+      ubertip='Увеличивает хп нежити, при этом понижая урон.\nУрон (-4)\nХп (+35)'
+  L3: name='|cffc8cde1Остановить разложение|r' tip='|cffc8cde1Остановить разложение|r' hk='Z'
+      ubertip='Увеличивает хп нежити, при этом понижая урон.\nУрон (-4)\nХп (+35)'
+  L4: name='|cffc8cde1Остановить разложение|r' tip='|cffc8cde1Остановить разложение|r' hk='Z'
+      ubertip='Увеличивает хп нежити, при этом понижая урон.\nУрон (-4)\nХп (+35)'
+Upgrade [R079] levels=3 class=None
+  L1: name='|cffbec8f5Мутации Ядовитого неруба|r' tip='Исследовать «|cffbec8f5Мутации Способностей неруба|r»' hk='X'
+      ubertip='Увеличивает скорость передвижения |cffbec8f5Ядовитого неруба |r на 30%.'
+  L2: name='|cffbec8f5Мутации Ядовитого неруба|r' tip='Исследовать «|cffbec8f5Мутации Способностей неруба|r»' hk='X'
+      ubertip='Увеличивает скорость передвижения |cffbec8f5Ядовитого неруба |r на 30%, открывает способность "|cffbec8f5Антимагический панцирь|r".'
+  L3: name='|cffbec8f5Мутации Ядовитого неруба|r' tip='Исследовать «|cffbec8f5Мутации Способностей неруба|r»' hk=None
+      ubertip='Увеличивает скорость передвижения |cffbec8f5Ядовитого неруба |r на 30%, открывает способность "|cffbec8f5Антимагический панцирь|r", |cffbec8f5Сожжение|r".'
+Upgrade [R07U] levels=2 class=None
+  L1: name='|cffbec8f5Знания Нерубов|r' tip='Исследовать «|cffbec8f5Знания Нерубов|r»' hk='A'
+      ubertip='Увеличивает хп на 25\nУвеличивает ману на 30%\nИ регенерацию маны на 40%'
+  L2: name='|cffbec8f5Знания Нерубов|r' tip='Исследовать «|cffbec8f5Знания Нерубов|r»' hk='A'
+      ubertip='Увеличивает хп на 25\nУвеличивает ману на 30%\nИ регенерацию маны на 40%'
+Upgrade [R07V] levels=1 class=None
+  L1: name='|cffbec8f5Ядовитый щит|r' tip='Исследовать «|cffbec8f5Ядовитый щит|r»' hk='Z'
+      ubertip='Увеличивает хп на 25\nУвеличивает ману на 30%\nИ регенерацию маны на 40%'
+Upgrade [R07Q] levels=1 class=None
+  L1: name='|cffbec8f5Сильные конечности|r' tip='Исследовать «|cffbec8f5Сильные конечности|r»' hk='Z'
+      ubertip='Ускоряет передвижение, и скорость боя |cffbec8f5Глубинного неруба|r.'
+Upgrade [R07S] levels=1 class=None
+  L1: name='|cffbec8f5Толстый Панцирь|r' tip='Наростить «|cffbec8f5Толстый Панцирь|r»' hk='X'
+      ubertip='Наращивает |cffbec8f5Толстый Панцирь|r на нерубах.'
+Upgrade [R07P] levels=1 class=None
+  L1: name='|cffbec8f5Паучья слизь|r' tip='Исследовать «|cffbec8f5Паучья слизь|r»' hk='S'
+      ubertip='Покрывает |cffbec8f5глубинного неруба|r, тонким прозрачным слоем слизи увеличивающая броню.'
+
+=== 6. ABILITIES ===
+Ability [A0HT] name='|cffbec8f5Нерубы|r' levels=1 hk='W' res_hk=None
+  L1: tip='|cffbec8f5Нерубы|r'
+      ub='|cff7dc87dСоздатель расы:|r |cffe17d00Escanor (Яхве)|r|n|cff7dc87dСложность:|r |cffffbe37Средняя|r|n|cff7dc87dПериод:|r |cffb1b1ffWrath of the Lich King|r|n|cff7dc87dОписание:|r Возьмите туловище паука, соедините его с верхней частью темнокожего человека с когтистыми щипцами вместо рук и хитиновой кожей, и вы получите самое близкое описание неруба. Однажды нерубы владели самой великой цивилизацией в Нордсколе, изумительной и высокоразвитой. Азжол-Неруб казался непобедимым - до того дня, пока не появилась Плеть. Нер’зул убил многих нерубов и разрушил их города; он украл их земли, их знания и даже их тела в преследовании своей мечты о власти над миром.'
+Ability [A186] name='|cffbec8f5Подземные жители|r' levels=1 hk=None res_hk='E'
+  Research: tip='Подземные жители' rub='|c00ff8e78Увеличивает регенерацию владельца способности|r\n\n|cffffd700[1-й уровень]|r |c00ff8e78Увеличивает регенарацию на 6 ед.|r\n|cffffd700[2-й уровень]|r |c00ff8e78Увеличивает регенарацию на 8 ед.|r\n|cffffd700[3-й уровень]|r |c00ff8e78Увеличивает регенарацию на 10 ед.|r\n|cffffd700[4-й уровень]|r |c00ff8e78Увеличивает регенарацию на 12 ед.|r\n'
+  L1: tip='|cffbec8f5Подземные жители|r'
+      ub='У Нерубов нет "Торговли", но здания после улучшения не перестают давать инком. '
+Ability [A0LJ] name='Обмен |cff00ff00Дерева |rна |cffffff00Золото|r' levels=1 hk='A' res_hk=None
+  L1: tip='Обмен |cff00ff00Дерева |rна |cffffff00Золото|r'
+      ub='Отнимает у игрока |cff228722500 дерева|r, но добавляет |cffffd700100 золота|r.'
+Ability [A0LI] name='Обмен |cffffff00Золота |rна |cff00ff00Дерево|r' levels=1 hk='S' res_hk=None
+  L1: tip='Обмен |cffffff00Золота |rна |cff00ff00Дерево|r'
+      ub='Отнимает у игрока|cffffd700 500 золота|r, но добавляет |cff228722100 дерева|r.'
+Ability [A0IQ] name='|cffffdcb4Обозначить столицу|r' levels=1 hk='X' res_hk=None
+  L1: tip='|cffffdcb4Обозначить столицу|r'
+      ub='Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение.'
+Ability [Argl] name='Вернуть золото и древесину' levels=1 hk=None res_hk=None
+  L1: tip=None
+      ub=None
+Ability [A1KB] name='Защита столицы' levels=1 hk=None res_hk=None
+  L1: tip='Защита столицы'
+      ub=None
+Ability [Abds] name='Слабое рассеивание чумы' levels=1 hk=None res_hk=None
+  L1: tip=None
+      ub=None
+Ability [Arlm] name='Вернуть древесину' levels=1 hk=None res_hk=None
+  L1: tip=None
+      ub=None
+Ability [A0TQ] name='|cffbec8f5Прокопать туннель|r' levels=1 hk='Q' res_hk=None
+  L1: tip='|cffbec8f5Прокопать туннель|r'
+      ub='Соединяет два туннеля нерубов, которые выступают в роли порталов.'
+Ability [Asud] name='Продать войска' levels=1 hk=None res_hk=None
+  L1: tip='Продать войска'
+      ub='Позволяет продавать войска.'
+Ability [A0I3] name='|cffe4cfa3Небольшой скачок|r' levels=1 hk='C' res_hk='E'
+  Research: tip='|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)' rub='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r'
+  L1: tip='|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)'
+      ub='|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r'
+Ability [ANha] name='Добывать ресурсы' levels=1 hk='G' res_hk=None
+  L1: tip='Добывать ресурсы'
+      ub='Добывает золото из рудников и древесину из деревьев.'
+Ability [Ahrp] name='Ремонтировать' levels=1 hk='R' res_hk=None
+  L1: tip='Ремонтировать'
+      ub='Ремонтирует здания и технику за счет ресурсов.'
+Ability [A0HJ] name='|cffbec8f5Толстый Панцирь|r' levels=1 hk='E' res_hk=None
+  L1: tip='|cffbec8f5Толстый Панцирь|r'
+      ub='-<Assk,DataC1> от получаемого нерубами урона от атак. Минимальный урон от атак: <Assk,DataB1>.'
+Ability [A0HD] name='|cffbec8f5Острые конечночсти |r' levels=1 hk=None res_hk='C'
+  Research: tip='Изучить «Критический удар» [|cffffcc00%d-й уровень|r]' rub='"Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон."'
+  L1: tip='|cffbec8f5Острые конечночсти |r'
+      ub='"Дает <AOcr,DataA1>%-й шанс нанести <AOcr,DataB1>-кратный урон при атаке."'
+Ability [A0H9] name='|cffbec8f5Шипастый панцирь|r' levels=1 hk=None res_hk='S'
+  Research: tip='Изучить «Шипастый панцирь» [|cffffcc00%d-й уровень|r]' rub='"Покрывает панцирь владыки склепа хитиновыми шипами, которые усиливают броню и отражают получаемый в ближнем бою урон в атакующих врагов. |n|n|cffffcc001-й уровень:|r отражение <AUts,DataA1,%>% урона, +<AUts,DataC1> к броне. |n|cffffcc002-й уровень:|r отражение <AUts,DataA2,%>% урона, +<AUts,DataC2> к броне. |n|cffffcc003-й уровень:|r отражение <AUts,DataA3,%>% урона, +<AUts,DataC3> к броне."'
+  L1: tip='|cffbec8f5Шипастый панцирь|r'
+      ub='Покрывает панцирь нерубов хитиновыми шипами, которые дают +2 к броне и отражают <AUts,DataA1,%>% получаемого в ближнем бою урона в атакующих врагов.'
+Ability [A0H4] name='|cffbec8f5Паутина|r' levels=1 hk='Q' res_hk=None
+  Research: tip='|cffb4dc8cОпутивание|r' rub='Замедляет атакованного врага.'
+  L1: tip='|cffbec8f5Паутина|r'
+      ub='При атаке опутывает врагов, замедляя ее передвижение на 15% и атаку на 15%. Время действия: <Aspo,Dur1> сек.'
+Ability [A0HC] name='|cffbec8f5Паучий Паразит|r' levels=1 hk='W' res_hk=None
+  L1: tip='|cffbec8f5Паучий Паразит|r'
+      ub='Заражает врага смертоносным паразитом пауком, который наносит <ANpa,DataA1> урона/сек. в течение <ANpa,Dur1> сек. Если цель погибает под действием паразита, из ее тела появляется маленький неруб.'
+Ability [A0HB] name='|cffbec8f5Парализирующий яд|r' levels=1 hk=None res_hk='B'
+  Research: tip='Изучить «Сильный удар» [|cffffcc00%d-й уровень|r]' rub='"Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. На <AHbh,DataC1> больше урона. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. На <AHbh,DataC2> больше урона. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс. На <AHbh,DataC3> больше урона."'
+  L1: tip='|cffbec8f5Парализирующий яд|r'
+      ub='"С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек."'
+Ability [A0H7] name='|cffbec8f5Комок паутины|r' levels=1 hk='Q' res_hk='T'
+  Research: tip='Изучить «Грозовой молот» [|cffffcc00%d-й уровень|r]' rub='"Бросает молот, оглушая врага и нанося урон. |n|n|cffffcc001-й уровень:|r <AHtb,DataA1> урона, <AHtb,Dur1> сек. оглушения. |n|cffffcc002-й уровень:|r <AHtb,DataA2> урона, <AHtb,Dur2> сек. оглушения. |n|cffffcc003-й уровень:|r <AHtb,DataA3> урона, <AHtb,Dur3> сек. оглушения."'
+  L1: tip='|cffbec8f5Комок паутины|r'
+      ub='Бросает |cffbec8f5Комок паутины|r,  нанося <AHtb,DataA1> урона.'
+Ability [A0H5] name='|cffbec8f5Паутина|r' levels=1 hk='W' res_hk='W'
+  Research: tip='Изучить «Змеиного идола» [|cffffcc00%d-й уровень|r]' rub='"Призывает неподвижного и невосприимчивого к магии идола. |nВремя действия: <AOsw,Dur1> сек. |n|n|cffffcc00Идол атакует наземные и воздушные цели.|r |n|n|cffffcc001-й уровень:|r <osp1,realHP> прочности, <osp1,mindmg1>-<osp1,maxdmg1> урона. |n|cffffcc002-й уровень:|r <osp2,realHP> прочности, <osp2,mindmg1>-<osp2,maxdmg1> урона. |n|cffffcc003-й уровень:|r <osp3,realHP> прочности, <osp3,mindmg1>-<osp3,maxdmg1> урона."'
+  L1: tip='|cffbec8f5Паутина |r'
+      ub='Неруб создает в указанной точке паутину, которая увеличивает скорость передвижения союзных войск на 50%.|nДлительность - 10 минут.'
+Ability [A0H6] name='|cffbec8f5Бритвенно-острая паутина|r' levels=1 hk='E' res_hk='E'
+  Research: tip='Изучить «Гнев деревьев» [|cffffcc00%d-й уровень|r]' rub='"Призывает из-под земли корни, которые обездвиживают и обезвреживают цель, а также наносят урон. |n|n|cffffcc001-й уровень:|r <AEer,DataA1> урона/сек. в течение <AEer,Dur1> сек. |n|cffffcc002-й уровень:|r <AEer,DataA2> урона/сек. в течение <AEer,Dur2> сек. |n|cffffcc003-й уровень:|r <AEer,DataA3> урона/сек. в течение <AEer,Dur3> сек."'
+  L1: tip='|cffbec8f5Бритвенно-острая паутина|r'
+      ub='Плюет паутиной , которые обездвиживают и обезвреживают врага на <AEer,Dur1> сек. и наносят <AEer,DataA1> урона/сек.'
+Ability [A0BO] name='|cffc8cde1Разложение трупа|r' levels=1 hk=None res_hk=None
+  L1: tip='|cffc8cde1Разложение трупа|r'
+      ub='Уменьшает хп солдатам нежити, но увеличивает их урон.Возможно с помощью магических ритуалов понижать или повышать разложение трупа, что повышает хп, и понижает урон, или наоборот.'
+Ability [A0BS] name='|cffc8cde1Паутина|r' levels=1 hk='Q' res_hk=None
+  L1: tip='|cffc8cde1Паутина|r'
+      ub='"Сковывает воздушного врага и притягивает его к земле. Пораженные цели считаются наземными. |nВремя действия: <Aweb,Dur1> сек."'
+Ability [Aspa] name='Атака пауков' levels=1 hk=None res_hk=None
+  L1: tip=None
+      ub=None
+Ability [A0BR] name='|cffc8cde1Воскрешение мертвых|r' levels=1 hk='R' res_hk=None
+  L1: tip='|cffc8cde1Воскрешение мертвых|r'
+      ub='"Поднимает <Arai,DataA1> скелетов из трупа."'
+Ability [Aiun] name='Инвентарь' levels=1 hk=None res_hk=None
+  L1: tip='Инвентарь'
+      ub='Позволяет носить (но не использовать) предметы для героев.'
+Ability [A0HK] name='|cffbec8f5Анти-магический панцирь|r' levels=1 hk=None res_hk=None
+  L1: tip='|cffbec8f5Анти-магический панцирь|r'
+      ub='"Сокращает время действия отрицательных эффектов, дает невосприимчивость к некоторым способностям."'
+Ability [A0HA] name='|cffbec8f5Яд нерубов|r' levels=1 hk=None res_hk=None
+  L1: tip='|cffbec8f5Яд нерубов|r'
+      ub='Отравляет цель, нанося <Aspo,DataA1> урона/сек. Время действия: <Aspo,Dur1> сек.'
+Ability [A0HF] name='|cffbec8f5Сожжение|r' levels=1 hk=None res_hk=None
+  L1: tip='|cffbec8f5Сожжение|r'
+      ub='"Каждая атака уничтожает <Afbt,DataA1> маны цели и наносит ей столько же дополнительного урона.|n|nПризванные цели получают на <Afbt,DataE1> больше урона от атак этой башни."'
+Ability [A0HI] name='|cffbec8f5Ядовитый щит|r' levels=1 hk='W' res_hk=None
+  L1: tip='|cffbec8f5Ядовитый щит|r'
+      ub='Окружает цель ядовитыми испарениями, которые наносят <Alsh,DataA1> урона/сек. находящимся рядом войскам. |nВремя действия: <Alsh,Dur1> сек.'
+Ability [A0HH] name='|cffbec8f5Рассеивание заклинаний|r' levels=1 hk='E' res_hk=None
+  L1: tip='|cffbec8f5Рассеивание заклинаний|r'
+      ub='"Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r"'
+Ability [A0HG] name='|cffbec8f5Исцеление|r' levels=1 hk='Q' res_hk=None
+  L1: tip='|cffbec8f5Исцеление|r'
+      ub='"Восполняет <Ahea,DataA1> здоровья раненому союзнику. Не действует на технику."'
+Ability [A0HE] name='|cffbec8f5Командирская аура|r' levels=1 hk=None res_hk=None
+  L1: tip='|cffbec8f5Командирская аура|r'
+      ub='Увеличивает урон от атак находящихся рядом союзников.'
+Ability [NQ13] name='Пронзание' levels=1 hk='W' res_hk='E'
+  Research: tip='Изучить «Пронзание» [|cffffcc00%d-й уровень|r]' rub='"Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их. |n|n|cffffcc001-й уровень:|r <AUim,DataC1> урона, <AUim,Dur1> сек. оглушения. |n|cffffcc002-й уровень:|r <AUim,DataC2> урона, <AUim,Dur2> сек. оглушения. |n|cffffcc003-й уровень:|r <AUim,DataC3> урона, <AUim,Dur3> сек. оглушения."'
+  L1: tip='"Пронзание [|cffffcc001-й уровень|r]"'
+      ub='"Призывает из-под земли шипы, нанося <AUim,DataC1> урона наземным врагам на прямой линии, подбрасывая и оглушая их на <AUim,Dur1> сек."'
+Ability [NQ11] name='Особенности Лорда' levels=1 hk=None res_hk='B'
+  Research: tip='Особенности Лорда' rub='Текст для теста '
+  L1: tip='Особенности Лорда'
+      ub='Неруб Лорд применяет способность |cff80ff80"Воля Королеви"|r вместе с героем |nКогда герой поражает противника |cff80ff80"Подавлением"|r , рядом стоящие Лорди вижигаю ману и наносят пропорциональний урон противнику (|cffff000055/110/200/300|r)'
+Ability [NQ04] name='|c00c5ff94Сменить дистанцию боя|r' levels=1 hk='Q' res_hk=None
+  L1: tip='|c00c5ff94Сменить дистанцию боя|r'
+      ub='Начать ближний бой'
+Ability [ACce] name='Рассекающий удар' levels=1 hk=None res_hk=None
+  L1: tip='Рассекающий удар'
+      ub='"Бьет с огромной силой, нанося <ACce,DataA1,%>% урона врагам рядом с основной целью."'
+Ability [AInv] name='Инвентарь' levels=1 hk=None res_hk=None
+  L1: tip=None
+      ub=None
+Ability [A0I7] name='|cffbec8f5Столб яда|r' levels=4 hk='Q' res_hk='Q'
+  Research: tip='Изучить «|cffbec8f5Столб яда|r» [|cffffcc00%d-й уровень|r]' rub='Создает ядовитый  столб, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r |cffb4dcdc45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек.|r |n|cffffcc002-й уровень:|r |cffb4dcdc80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек.|r |n|cffffcc003-й уровень:|r |cffb4dcdc110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r|n|cffffcc004-й уровень:|r |cffb4dcdc140 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r'
+  L1: tip='|cffbec8f5Столб яда|r [|cffffcc001-й уровень|r]'
+      ub='Создает |cffbec8f5Столб яда|r, наносящий наземным войскам в указанной области 45 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать незначительный урон.'
+  L2: tip='|cffbec8f5Столб яда|r [|cffffcc002-й уровень|r]'
+      ub='Создает |cffbec8f5Столб яда|r, наносящий наземным войскам в указанной области 80 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать небольшой урон.'
+  L3: tip='|cffbec8f5Столб яда|r [|cffffcc003-й уровень|r]'
+      ub='Создает |cffbec8f5Столб яда|r, наносящий наземным войскам в указанной области 110 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать умеренный урон.'
+  L4: tip='|cffbec8f5Столб яда|r [|cffffcc004-й уровень|r]'
+      ub='Создает |cffbec8f5Столб яда|r, наносящий наземным войскам в указанной области 140 урона/сек. в течение 4 сек. После исчезновения столба пораженные войска продолжают получать умеренный урон.'
+Ability [A0I9] name='|cffbec8f5Эссенция яда|r' levels=4 hk='W' res_hk='W'
+  Research: tip='Изучить «|cffbec8f5Эссенция яда|r» [|cffffcc00%d-й уровень|r]' rub='Бросает |cffbec8f5Эссенция яда|r, восполняет здоровье . |n|n|cffffcc001-й уровень:|r |cffb4dcdc100 ед. здоровья каждой цели.|r |n|cffffcc002-й уровень:|r |cffb4dcdc150 ед. здоровья каждой цели.|r |n|cffffcc003-й уровень:|r |cffb4dcdc200 ед. здоровья каждой цели.|r|n|cffffcc004-й уровень:|r |cffb4dcdc300 ед. здоровья каждой цели.|r'
+  L1: tip='|cffbec8f5Эссенция яда|r [|cffffcc001-й уровень|r]'
+      ub='Бросает |cffbec8f5Эссенция яда|r, восполняет здоровье . |n|n|cffffcc001-й уровень:|r |cffb4dcdc100 ед. здоровья каждой цели.|r '
+  L2: tip='|cffbec8f5Эссенция яда|r [|cffffcc002-й уровень|r]'
+      ub='Бросает |cffbec8f5Эссенция яда|r, восполняет здоровье .  |n|cffffcc002-й уровень:|r |cffb4dcdc150 ед. здоровья каждой цели.|r'
+  L3: tip='|cffbec8f5Эссенция яда|r [|cffffcc003-й уровень|r]'
+      ub='Бросает |cffbec8f5Эссенция яда|r, восполняет здоровье .|n|cffffcc003-й уровень:|r |cffb4dcdc200 ед. здоровья каждой цели.|r'
+  L4: tip='|cffbec8f5Эссенция яда|r [|cffffcc004-й уровень|r]'
+      ub='Бросает |cffbec8f5Эссенция яда|r, восполняет здоровье . |n|cffffcc004-й уровень:|r |cffb4dcdc300 ед. здоровья каждой цели.|r'
+Ability [A0IA] name='|cffbec8f5Дар пророка|r' levels=4 hk='E' res_hk='E'
+  Research: tip='Изучить «|cffbec8f5Дар пророка|r» [|cffffcc00%d-й уровень|r]' rub='Пророк заглядывает в будущее, что дает шанс уклониться от атаки. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AEev,DataA1,%>%-й шанс.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<AEev,DataA2,%>%-й шанс.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AEev,DataA3,%>%-й шанс.|r|n|cffffcc004-й уровень:|r |cffb4dcdc40%-й шанс.|r'
+  L1: tip='|cffbec8f5Дар пророка|r [|cffffcc001-й уровень|r]'
+      ub='Пророк заглядывает в будущее, что дает шанс уклониться от атаки. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AEev,DataA1,%>%-й шанс.|r '
+  L2: tip='|cffbec8f5Дар пророка|r [|cffffcc002-й уровень|r]'
+      ub='Пророк заглядывает в будущее, что дает шанс уклониться от атаки. |n|cffffcc002-й уровень:|r |cffb4dcdc<AEev,DataA2,%>%-й шанс.|r'
+  L3: tip='|cffbec8f5Дар пророка|r [|cffffcc003-й уровень|r]'
+      ub='Пророк заглядывает в будущее, что дает шанс уклониться от атаки. |n|cffffcc003-й уровень:|r |cffb4dcdc<AEev,DataA3,%>%-й шанс.|r'
+  L4: tip='|cffbec8f5Дар пророка|r [|cffffcc004-й уровень|r]'
+      ub='Пророк заглядывает в будущее, что дает шанс уклониться от атаки.|n|cffffcc004-й уровень:|r |cffb4dcdc40%-й шанс.|r'
+Ability [A1M9] name='|cffbec8f5Оплетение|r' levels=2 hk='R' res_hk='R'
+  L1: tip='|cffbec8f5Оплетение|r [|cffffcc001-й уровень|r]'
+      ub='Опутываеть врагов, создавая кокон, оглушая находящихся рядом наземных врагов и нанося им урон. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AOws,DataA1> урона, <AOws,Dur1> сек. оглушения.|r '
+  L2: tip='|cffbec8f5Оплетение|r [|cffffcc002-й уровень|r]'
+      ub='Опутываеть врагов, создавая кокон, оглушая находящихся рядом наземных врагов и нанося им урон.  |n|cffffcc002-й уровень:|r |cffb4dcdc<AOws,DataA2> урона, <AOws,Dur2> сек. оглушения. |r'
+Ability [A01C] name='Графика: Свечение героя' levels=1 hk=None res_hk=None
+  L1: tip='Графика: Свечение героя'
+      ub=None
+Ability [A0ID] name='|cffbec8f5Темная стая|r' levels=4 hk='Q' res_hk='Q'
+  Research: tip='Изучить «|cffbec8f5Темная стая|r» [|cffffcc00%d-й уровень|r]' rub='Выпускает темную энергию, атакующих врагов. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AUcs,DataA1> урона каждой цели.|r |n|cffffcc002-й уровень:|r|cffb4dcdc <AUcs,DataA2> урона каждой цели.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AUcs,DataA3> урона каждой цели.|r|n|cffffcc004-й уровень:|r |cffb4dcdc250 урона каждой цели.|r'
+  L1: tip='|cffbec8f5Темная стая|r [|cffffcc001-й уровень|r]'
+      ub='Выпускает темную энергию, атакующих врагов. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AUcs,DataA1> урона каждой цели.|r '
+  L2: tip='|cffbec8f5Темная стая|r [|cffffcc002-й уровень|r]'
+      ub='Выпускает темную энергию, атакующих врагов. | |n|cffffcc002-й уровень:|r|cffb4dcdc <AUcs,DataA2> урона каждой цели.|r'
+  L3: tip='|cffbec8f5Темная стая|r [|cffffcc003-й уровень|r]'
+      ub='Выпускает темную энергию, атакующих врагов. |n|cffffcc003-й уровень:|r |cffb4dcdc<AUcs,DataA3> урона каждой цели.|r'
+  L4: tip='|cffbec8f5Темная стая|r [|cffffcc004-й уровень|r]'
+      ub='Выпускает темную энергию, атакующих врагов.|n|cffffcc004-й уровень:|r |cffb4dcdc250 урона каждой цели.|r'
+Ability [A0IC] name='|cffbec8f5Поражающий удар|r' levels=4 hk=None res_hk=None
+  Research: tip='|cffbec8f5Поражающий удар|r' rub='Каждая атака паучего лорда оставляет кровотечнение. |n|n|cffffcc001-й уровень:|r |cffb4dcdc3 урона/сек., длительность 10 сек.|r |n|cffffcc002-й уровень:|r|cffb4dcdc 4 урона/сек., длительность 15 сек.|r |n|cffffcc003-й уровень:|r |cffb4dcdc5 урона/сек., длительность 20 сек..|r|n|cffffcc004-й уровень:|r |cffb4dcdc6 урона/сек., длительность 25 сек.|r'
+  L1: tip='|cffbec8f5Поражающий удар|r'
+      ub='Каждая атака паучего лорда оставляет кровотечнение. |n|n|cffffcc001-й уровень:|r |cffb4dcdc3 урона/сек., длительность 10 сек.|r '
+  L2: tip='|cffbec8f5Поражающий удар|r'
+      ub='Каждая атака паучего лорда оставляет кровотечнение.  |n|cffffcc002-й уровень:|r|cffb4dcdc 4 урона/сек., длительность 15 сек.|r '
+  L3: tip='|cffbec8f5Поражающий удар|r'
+      ub='Каждая атака паучего лорда оставляет кровотечнение.  |n|cffffcc003-й уровень:|r |cffb4dcdc5 урона/сек., длительность 20 сек..|r'
+  L4: tip='|cffbec8f5Поражающий удар|r'
+      ub='Каждая атака паучего лорда оставляет кровотечнение. |n|cffffcc004-й уровень:|r |cffb4dcdc6 урона/сек., длительность 25 сек.|r'
+Ability [A0IB] name='|cffbec8f5Критический удар|r' levels=4 hk='E' res_hk='E'
+  Research: tip='Изучить «|cffbec8f5Критический удар|r» [|cffffcc00%d-й уровень|r]' rub='Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r |cffbec8f5<AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон.|r |n|cffffcc002-й уровень:|r |cffbec8f5<AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон.|r |n|cffffcc003-й уровень:|r |cffbec8f5<AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон.|r|n|cffffcc004-й уровень:|r |cffbec8f5<AOcr,DataA4>%-й шанс, <AOcr,DataB4>-кратный урон.|r'
+  L1: tip='|cffbec8f5Критический удар|r [|cffffcc001-й уровень|r]'
+      ub='"Дает <AOcr,DataA1>%-й шанс нанести <AOcr,DataB1>-кратный урон при атаке."'
+  L2: tip='|cffbec8f5Критический удар|r [|cffffcc002-й уровень|r]'
+      ub='"Дает <AOcr,DataA2>%-й шанс нанести <AOcr,DataB2>-кратный урон при атаке."'
+  L3: tip='|cffbec8f5Критический удар|r [|cffffcc003-й уровень|r]'
+      ub='"Дает <AOcr,DataA3>%-й шанс нанести <AOcr,DataB3>-кратный урон при атаке."'
+  L4: tip='|cffbec8f5Критический удар|r [|cffffcc004-й уровень|r]'
+      ub='Дает <AOcr,DataA4>%-й шанс нанести <AOcr,DataB4>-кратный урон при атаке.'
+Ability [A0IE] name='|cffbec8f5Аура метаморфоз|r' levels=2 hk='R' res_hk='R'
+  Research: tip='Изучить «|cffbec8f5Аура метаморфоз|r» [|cffffcc00%d-й уровень|r]' rub='Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdc+<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья.|r |n|cffffcc002-й уровень:|r |cffb4dcdc+<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья. |r'
+  L1: tip='|cffbec8f5Аура метаморфоз|r [|cffffcc001-й уровень|r]'
+      ub='Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdc+<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья.|r '
+  L2: tip='|cffbec8f5Аура метаморфоз|r [|cffffcc002-й уровень|r]'
+      ub='Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников.  |n|cffffcc002-й уровень:|r |cffb4dcdc+<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья. |r'
+Ability [A0IF] name='|cffbec8f5Пронзание|r' levels=4 hk='Q' res_hk='Q'
+  Research: tip='Изучить «|cffbec8f5Пронзание|r» [|cffffcc00%d-й уровень|r]' rub='Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их. |n|n|cffffcc001-й уровень:|r |cffb4dcdc80 урона, 0.6 сек. оглушения.|r |n|cffffcc002-й уровень:|r |cffb4dcdc100 урона, 1.2 сек. оглушения.|r|r |n|cffffcc003-й уровень:|r |cffb4dcdc120 урона, 1.7 сек. оглушения.|r|n|cffffcc004-й уровень:|r |cffb4dcdc140 урона, 2.4 сек. оглушения.|r'
+  L1: tip='|cffbec8f5Пронзание|r [|cffffcc001-й уровень|r]'
+      ub='Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AUim,DataC1> урона, <AUim,Dur1> сек. оглушения.|r '
+  L2: tip='|cffbec8f5Пронзание|r [|cffffcc002-й уровень|r]'
+      ub='Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их. |n|cffffcc002-й уровень:|r |cffb4dcdc<|AUim,DataC2> урона, <AUim,Dur2> сек. оглушения.|r|r '
+  L3: tip='|cffbec8f5Пронзание|r [|cffffcc003-й уровень|r]'
+      ub='Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их.  |n|cffffcc003-й уровень:|r |cffb4dcdc<AUim,DataC3> урона, <AUim,Dur3> сек. оглушения.|r'
+  L4: tip='|cffbec8f5Пронзание|r [|cffffcc004-й уровень|r]'
+      ub='Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их. |n|cffffcc004-й уровень:|r |cffb4dcdc140 урона, 2.4 сек. оглушения.|r'
+Ability [A0IG] name='|cffbec8f5Создание кокона|r' levels=4 hk='W' res_hk='W'
+  Research: tip='Изучить «|cffbec8f5Создание кокона|r» [|cffffcc00%d-й уровень|r]' rub='Создает паучий кокон, из которого по истечению времени рождается новый неруб. |n|n|cffffcc001-й уровень:|r |cffb4dcdc1 кокон.|r |n|cffffcc002-й уровень:|r |cffb4dcdc2 кокона.|r |n|cffffcc003-й уровень:|r |cffb4dcdc3 кокона.|r|n|cffffcc004-й уровень:|r |cffb4dcdc4 кокона.|r'
+  L1: tip='|cffbec8f5Создание кокона|r [|cffffcc001-й уровень|r]'
+      ub='Создает паучий кокон, из которого по истечению времени рождается новый неруб. |n|n|cffffcc001-й уровень:|r |cffb4dcdc1 кокон.|r'
+  L2: tip='|cffbec8f5Создание кокона|r [|cffffcc002-й уровень|r]'
+      ub='Создает паучий кокон, из которого по истечению времени рождается новый неруб. |n|cffffcc002-й уровень:|r |cffb4dcdc2 кокона.|r '
+  L3: tip='|cffbec8f5Создание кокона|r [|cffffcc003-й уровень|r]'
+      ub='Создает паучий кокон, из которого по истечению времени рождается новый неруб.  |n|cffffcc003-й уровень:|r |cffb4dcdc3 кокона.|r'
+  L4: tip='|cffbec8f5Создание кокона|r [|cffffcc004-й уровень|r]'
+      ub='Создает паучий кокон, из которого по истечению времени рождается новый неруб. |n|cffffcc004-й уровень:|r |cffb4dcdc4 кокона.|r'
+Ability [A0IL] name='|cffbec8f5Рассекающий удар|r' levels=4 hk='E' res_hk='E'
+  Research: tip='Изучить «|cffbec8f5Рассекающий удар|r» [|cffffcc00%d-й уровень|r]' rub='Атаки  наносят урон сразу нескольким целям. |n|n|cffffcc001-й уровень:|r |cffb4dcdc20% урона по области.|r |n|cffffcc002-й уровень:|r |cffb4dcdc30% урона по области.|r |n|cffffcc003-й уровень:|r |cffb4dcdc40% урона по области.|r|n|cffffcc004-й уровень:|r |cffb4dcdc50% урона по области.|r'
+  L1: tip='|cffbec8f5Рассекающий удар|r [|cffffcc001-й уровень|r]'
+      ub='Атаки  наносят урон сразу нескольким целям. |n|n|cffffcc001-й уровень:|r |cffb4dcdc20% урона по области.|r '
+  L2: tip='|cffbec8f5Рассекающий удар|r [|cffffcc002-й уровень|r]'
+      ub='Атаки  наносят урон сразу нескольким целям.  |n|cffffcc002-й уровень:|r |cffb4dcdc30% урона по области.|r'
+  L3: tip='|cffbec8f5Рассекающий удар|r [|cffffcc003-й уровень|r]'
+      ub='Атаки  наносят урон сразу нескольким целям. |n|cffffcc003-й уровень:|r |cffb4dcdc40% урона по области.|r'
+  L4: tip='|cffbec8f5Рассекающий удар|r [|cffffcc004-й уровень|r]'
+      ub='Атаки  наносят урон сразу нескольким целям. |n|cffffcc004-й уровень:|r |cffb4dcdc50% урона по области.|r'
+Ability [A0IM] name='|cffbec8f5Рой саранчи|r' levels=2 hk='R' res_hk='R'
+  Research: tip='Изучить «|cffbec8f5Рой саранчи|r»' rub='Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владельцу, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек.'
+  L1: tip='|cffbec8f5Рой саранчи|r'
+      ub='"Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек."'
+  L2: tip='|cffbec8f5Рой саранчи|r'
+      ub='Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек.'
+
+=== 7. BUFFS ===
+Buff [B01D] editorname=None tip='|cffe4cfa3Защитная аура|r' ubertip='|cffa6afb8ЭФФЕКТ:|cffced4da В зависимости от источника аура изменяет защиту или восстановление здоровья цели.|r'
+Buff [BUts] editorname='Spiked Carapace' tip=None ubertip=None
+Buff [BPSE] editorname=None tip='|cffe4cfa3Оглушение|r' ubertip='|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffe69a8dне может двигаться, атаковать и применять способности|cffced4da.|r'
+Buff [BOwd] editorname=None tip='|cffe4cfa3Призванное создание|r' ubertip='|cffa6afb8ЭФФЕКТ:|cffced4da Существо создано магией призыва.|r'
+Buff [B040] editorname=None tip='|cffbec8f5Бритвенно-острая паутина|r' ubertip='"Обездвиженность, периодический урон."'
+Buff [BEer] editorname=None tip='Гнев деревьев' ubertip='"Обездвиженность, периодический урон."'
+Buff [Brai] editorname=None tip='Скелет-прислужник' ubertip='Призванные цели получают урон от рассеивающих способностей.'
+Buff [Bhea] editorname=None tip='Исцеление' ubertip='Восполнение здоровья.'
+Buff [Bakb] editorname=None tip='|cffe4cfa3Боевые барабаны|r' ubertip='|cffa6afb8ЭФФЕКТ:|cffced4da Урон от атак союзника |cffc8e087повышен|cffced4da под действием ауры.|r'
+Buff [BUim] editorname=None tip='Пронзание' ubertip='Подбрасывание в воздух.'
+Buff [B04A] editorname=None tip='|cffbec8f5Столб яда|r' ubertip='Периодический урон.'
+Buff [BUcs] editorname='Carrion Swarm (Caster)' tip=None ubertip=None
+Buff [B04E] editorname=None tip='|cffbec8f5Аура метаморфоз|r' ubertip='Передвижение и регенерация здоровья ускорены.'
+Buff [BUau] editorname=None tip='Нечистая аура' ubertip='Передвижение и регенерация здоровья ускорены.'
+Buff [BNlm] editorname=None tip='Порождение лавы' ubertip='Порождение лавы.'

@@ -1,0 +1,492 @@
+{
+  "scope": "Гномы (Gnomes): категория 2 — Юниты и рабочие (23 юнитов)",
+  "units_count": 23,
+  "variants": [
+    "SD"
+  ],
+  "units": [
+    {
+      "id": "h0FA",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 20084,
+          "after": "|cffe4cfa3Инженер|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 20087,
+          "after": "|cffe4cfa3Инженер|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 839,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий гномов. Добывает золото и древесину, возводит сооружения и ремонтирует боевую технику.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРемонтировать|cffced4da: восстанавливает прочность зданий и механизмов.|n- |cffa9c7deНебольшой скачок|cffced4da: мгновенно перемещается на небольшое расстояние.|n|n|cffced4daАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FX",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 18136,
+          "after": "|cffe4cfa3Клап Клап (v0.58889)|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 18592,
+          "after": "|cffe4cfa3Клап Клап (v0.58889)|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42329,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Экспериментальный робот-помощник ранней модели. Способен рубить лес и взрываться при уничтожении.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deДобывать ресурсы|cffced4da: рубит древесину.|n- |cffa9c7deБа-бах!|cffced4da: взрывается при гибели, нанося урон по области.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FB",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17474,
+          "after": "|cffe4cfa3Стрелок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17475,
+          "after": "|cffe4cfa3Стрелок|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31816,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Меткий стрелок армии гномов, вооружённый длинноствольным мушкетом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМеткий выстрел|cffced4da: шанс нанести критический урон.|n- |cffa9c7deФазовый спаситель|cffced4da: кратковременный уход от урона при ранении.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FC",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11598,
+          "after": "|cffe4cfa3Гном-пехотинец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11599,
+          "after": "|cffe4cfa3Гном-пехотинец|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42317,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый боец ближнего боя армии гномов, оснащённый щитом и топором.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСильный удар|cffced4da: шанс оглушить противника и нанести дополнительный урон.|n- |cffa9c7deФазовый спаситель|cffced4da: кратковременная защита от урона.|n|n|cffced4daАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FD",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 776,
+          "after": "|cffe4cfa3Шпион|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 4474,
+          "after": "|cffe4cfa3Шпион|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42318,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Разведчик и диверсант гномов, обученный скрытному перемещению и ликвидации целей.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСкрыться|cffced4da: переход в невидимость.|n- |cffa9c7deОтравленный кинжал|cffced4da: поражает врага замедляющим ядом.|n- |cffa9c7deОтточенные навыки|cffced4da: уклонение от атак и критические удары.|n- |cffa9c7deФазовый спаситель|cffced4da.|n|n|cffced4daАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FE",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 13559,
+          "after": "|cffe4cfa3Подрывник|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 13561,
+          "after": "|cffe4cfa3Подрывник|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42319,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Осадный стрелок гномов, метающий зажигательные гранаты по скоплениям врага.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗажигательная граната|cffced4da: создаёт область бушующего пламени с периодическим уроном.|n- |cffa9c7deФазовый спаситель|cffced4da.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FF",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4480,
+          "after": "|cffe4cfa3Универсальный танк|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 8122,
+          "after": "|cffe4cfa3Универсальный танк|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9731,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлая многоцелевая боевая машина гномов с пушечным и огнемётным вооружением.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСгусток огня|cffced4da: обжигает противников струёй пламени.|n- |cffa9c7deПрицельная пальба из пулемётов|cffced4da: непрерывный огонь по выбранной цели.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FG",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11615,
+          "after": "|cffe4cfa3Танк «Венец»|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 4630,
+          "after": "|cffe4cfa3Танк «Венец»|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42320,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Сверхтяжёлый бронированный колосс гномов, флагман сухопутной армии.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deДвойной выстрел|cffced4da: повторный выстрел главного калибра.|n- |cffa9c7deПереключить режим|cffced4da: смена типа орудий.|n- |cffa9c7deЗалп ракет|cffced4da: обстрел площади ракетами с оглушением.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FH",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 9886,
+          "after": "|cffe4cfa3Шагоход|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11609,
+          "after": "|cffe4cfa3Шагоход|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 13861,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Скоростная двуногая боевая машина с автоматическим орудием.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРазрывные снаряды|cffced4da: повышенный урон по лёгкой броне.|n- |cffa9c7deБронебойные снаряды|cffced4da: повышенный урон по тяжёлой броне.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FJ",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 8119,
+          "after": "|cffe4cfa3Самоходная артиллерия|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 12262,
+          "after": "|cffe4cfa3Самоходная артиллерия|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42321,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Мобильное дальнобойное осадное орудие, сокрушающее вражеские укрепления на огромной дистанции.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FM",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17465,
+          "after": "|cffe4cfa3Гном-чернокнижник|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17466,
+          "after": "|cffe4cfa3Гном-чернокнижник|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42322,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Маг тёмных искусств гномов, ослабляющий противников проклятиями и разрушительными чарами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПроклятие|cffced4da: накладывает промах при атаке.|n- |cffa9c7deУвечье|cffced4da: замедляет бег, атаку и снижает урон цели.|n- |cffa9c7deВолшебный огонь|cffced4da: снижает броню и открывает видимость.|n- |cffa9c7deФазовый спаситель|cffced4da.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FN",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 13563,
+          "after": "|cffe4cfa3Минитанк|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 13565,
+          "after": "|cffe4cfa3Минитанк|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42323,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Компактный маневренный танк поддержки с артиллерийской пушкой.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАртвыстрел|cffced4da: мощный залп по выбранной области.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FO",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12328,
+          "after": "|cffe4cfa3Экспериментальный ГГТ|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 13240,
+          "after": "|cffe4cfa3Экспериментальный ГГТ|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 22324,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Гениальное Гномье Творение — модульная боевая машина с широкими возможностями модификации.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПроизвести реженоги|cffced4da: временная сборка боевых роботов.|n- |cffa9c7deЗакопать мину|cffced4da: устанавливает скрытую мину в указанной точке.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FP",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17443,
+          "after": "|cffe4cfa3Реженоги|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 1383,
+          "after": "|cffe4cfa3Реженоги|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42324,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Быстрый сферический робот-мясорубка с вращающимися лезвиями.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРезня|cffced4da: круговые удары лезвиями по нескольким целям одновременно.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FQ",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4555,
+          "after": "|cffe4cfa3Бронемашина|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 5279,
+          "after": "|cffe4cfa3Бронемашина|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42325,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Бронированный транспорт для перевозки пехоты, оснащённый пулемётом и системой логистики.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВзять на борт|cffced4da / |cffa9c7deВыгрузить|cffced4da: транспортировка десанта.|n- |cffa9c7deХорошая логистика|cffced4da: аура ускорения атаки и движения союзных машин.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FT",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17817,
+          "after": "|cffe4cfa3Мега-Артиллерия|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17818,
+          "after": "|cffe4cfa3Мега-Артиллерия|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 26721,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Колоссальное осадное орудие гномов, стреляющее на сверхдальние дистанции.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВыстрелить один снаряд|cffced4da: залп на колоссальное расстояние.|n- |cffa9c7deАннигиляция|cffced4da: сокрушительный ядерный удар по указанной зоне.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FU",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 8074,
+          "after": "|cffe4cfa3Гном-маг|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 8075,
+          "after": "|cffe4cfa3Гном-маг|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42326,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Волшебник гномов, повелевающий силами тайной магии и льда.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУскорение|cffced4da: повышает скорость атаки и бега союзника.|n- |cffa9c7deМорозный доспех|cffced4da: ледяной щит, повышающий броню и замедляющий врагов.|n- |cffa9c7deСнежная буря|cffced4da: ледяной град по области.|n- |cffa9c7deФазовый спаситель|cffced4da.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FV",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17468,
+          "after": "|cffe4cfa3Механопаук|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17469,
+          "after": "|cffe4cfa3Механопаук|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42327,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Скоростной многоногий механизм с мощными клешнями и ракетным комплексом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗалп ракет|cffced4da: обстрел площади ракетами.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0FW",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17448,
+          "after": "|cffe4cfa3Мехагигант|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17449,
+          "after": "|cffe4cfa3Мехагигант|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42328,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Могучий бронированный робот-великан передовой гномской инженерии.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deШокоудары|cffced4da: мощные круговые удары с уроном по области.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0G1",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 930,
+          "after": "|cffe4cfa3Механобоец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17565,
+          "after": "|cffe4cfa3Механобоец|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42330,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Механизированный штурмовой экзоскелет с гидравлическими силовыми молотами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСильный удар|cffced4da: шанс оглушить врага и нанести повышенный урон.|n|n|cffced4daАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0G2",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 13571,
+          "after": "|cffe4cfa3Наногном|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 13591,
+          "after": "|cffe4cfa3Наногном|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42331,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Высокотехнологичный боец, использующий направленную энергию электричества.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЭМИ|cffced4da: снимает заклинания и наносит урон призывам.|n- |cffa9c7deСожжение|cffced4da: сжигает ману врага при атаках.|n- |cffa9c7deЭлектрическое поле|cffced4da: окружает цель наносящим урон вихрем молний.|n|n|cffced4daАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0G4",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 18137,
+          "after": "|cffe4cfa3Клап Клап (v1.0 Opt)|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 18593,
+          "after": "|cffe4cfa3Клап Клап (v1.0 Opt)|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42332,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Оптимизированная облегчённая версия робота «Клап Клап». Дешёвый в сборке и эффективный в работе.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deДобывать ресурсы|cffced4da: рубит древесину.|n- |cffa9c7deБа-бах!|cffced4da: взрывается при уничтожении.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0G5",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 18140,
+          "after": "|cffe4cfa3Клап Клап (v1.0 Big)|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 18141,
+          "after": "|cffe4cfa3Клап Клап (v1.0 Big)|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42333,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Укрупнённый тяжеловесный робот модели «Клап Клап» с повышенной прочностью и мощным зарядом взрывчатки.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deДобывать ресурсы|cffced4da: рубит древесину.|n- |cffa9c7deБа-бах!|cffced4da: взрывается при уничтожении с повышенным уроном.|n|n|cffced4daАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    }
+  ]
+}

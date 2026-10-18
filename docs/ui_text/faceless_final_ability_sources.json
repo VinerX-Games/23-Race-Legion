@@ -1,0 +1,578 @@
+{
+  "abilities_checked": 115,
+  "sources": [
+    {
+      "ability": "A005",
+      "level": 1,
+      "field": "buffid",
+      "value": "BHad"
+    },
+    {
+      "ability": "A006",
+      "level": 1,
+      "field": "buffid",
+      "value": "BEar"
+    },
+    {
+      "ability": "A007",
+      "level": 1,
+      "field": "buffid",
+      "value": "BOae"
+    },
+    {
+      "ability": "A00B",
+      "level": 1,
+      "field": "buffid",
+      "value": "B002"
+    },
+    {
+      "ability": "A00B",
+      "level": 2,
+      "field": "buffid",
+      "value": "B002"
+    },
+    {
+      "ability": "A00B",
+      "level": 3,
+      "field": "buffid",
+      "value": "B002"
+    },
+    {
+      "ability": "A06M",
+      "level": 1,
+      "field": "buffid",
+      "value": "B08F"
+    },
+    {
+      "ability": "A0DW",
+      "level": 1,
+      "field": "buffid",
+      "value": "BPSE"
+    },
+    {
+      "ability": "A0PB",
+      "level": 1,
+      "field": "buffid",
+      "value": "Bust"
+    },
+    {
+      "ability": "A0PC",
+      "level": 1,
+      "field": "buffid",
+      "value": "BNab"
+    },
+    {
+      "ability": "A0T7",
+      "level": 1,
+      "field": "buffid",
+      "value": "BOwd"
+    },
+    {
+      "ability": "A0T7",
+      "level": 1,
+      "field": "unitid",
+      "value": "n03B"
+    },
+    {
+      "ability": "A0V5",
+      "level": 1,
+      "field": "buffid",
+      "value": "BUan"
+    },
+    {
+      "ability": "A0V5",
+      "level": 2,
+      "field": "buffid",
+      "value": "BUan"
+    },
+    {
+      "ability": "A0V5",
+      "level": 3,
+      "field": "buffid",
+      "value": "BUan"
+    },
+    {
+      "ability": "A0V5",
+      "level": 4,
+      "field": "buffid",
+      "value": "BUan"
+    },
+    {
+      "ability": "A0V7",
+      "level": 1,
+      "field": "buffid",
+      "value": "Bakb"
+    },
+    {
+      "ability": "A0V7",
+      "level": 2,
+      "field": "buffid",
+      "value": "Bakb"
+    },
+    {
+      "ability": "A0V7",
+      "level": 3,
+      "field": "buffid",
+      "value": "Bakb"
+    },
+    {
+      "ability": "A0V7",
+      "level": 4,
+      "field": "buffid",
+      "value": "Bakb"
+    },
+    {
+      "ability": "A0VD",
+      "level": 1,
+      "field": "buffid",
+      "value": "B05N"
+    },
+    {
+      "ability": "A0VE",
+      "level": 1,
+      "field": "buffid",
+      "value": "BOwd"
+    },
+    {
+      "ability": "A0VE",
+      "level": 1,
+      "field": "unitid",
+      "value": "n04M"
+    },
+    {
+      "ability": "A0VF",
+      "level": 1,
+      "field": "buffid",
+      "value": "B05O"
+    },
+    {
+      "ability": "A0WQ",
+      "level": 1,
+      "field": "buffid",
+      "value": "B02L"
+    },
+    {
+      "ability": "A0WQ",
+      "level": 2,
+      "field": "buffid",
+      "value": "B02L"
+    },
+    {
+      "ability": "A0WQ",
+      "level": 3,
+      "field": "buffid",
+      "value": "B02L"
+    },
+    {
+      "ability": "A0WQ",
+      "level": 4,
+      "field": "buffid",
+      "value": "B02L"
+    },
+    {
+      "ability": "A10H",
+      "level": 1,
+      "field": "buffid",
+      "value": "BHtc"
+    },
+    {
+      "ability": "A10H",
+      "level": 2,
+      "field": "buffid",
+      "value": "BHtc"
+    },
+    {
+      "ability": "A10H",
+      "level": 3,
+      "field": "buffid",
+      "value": "BHtc"
+    },
+    {
+      "ability": "A10H",
+      "level": 4,
+      "field": "buffid",
+      "value": "BHtc"
+    },
+    {
+      "ability": "A10J",
+      "level": 1,
+      "field": "buffid",
+      "value": "BEim,BEia"
+    },
+    {
+      "ability": "A10J",
+      "level": 2,
+      "field": "buffid",
+      "value": "BEim,BEia"
+    },
+    {
+      "ability": "A10J",
+      "level": 3,
+      "field": "buffid",
+      "value": "BEim,BEia"
+    },
+    {
+      "ability": "A10J",
+      "level": 4,
+      "field": "buffid",
+      "value": "BEim,BEia"
+    },
+    {
+      "ability": "A10L",
+      "level": 1,
+      "field": "buffid",
+      "value": "BPSE"
+    },
+    {
+      "ability": "A10L",
+      "level": 2,
+      "field": "buffid",
+      "value": "BPSE"
+    },
+    {
+      "ability": "A10L",
+      "level": 3,
+      "field": "buffid",
+      "value": "BPSE"
+    },
+    {
+      "ability": "A10L",
+      "level": 4,
+      "field": "buffid",
+      "value": "BPSE"
+    },
+    {
+      "ability": "A10N",
+      "level": 1,
+      "field": "buffid",
+      "value": "BOwk"
+    },
+    {
+      "ability": "A10N",
+      "level": 2,
+      "field": "buffid",
+      "value": "BOwk"
+    },
+    {
+      "ability": "A10N",
+      "level": 3,
+      "field": "buffid",
+      "value": "BOwk"
+    },
+    {
+      "ability": "A10N",
+      "level": 4,
+      "field": "buffid",
+      "value": "BOwk"
+    },
+    {
+      "ability": "A10P",
+      "level": 1,
+      "field": "buffid",
+      "value": "BNht"
+    },
+    {
+      "ability": "A10R",
+      "level": 1,
+      "field": "buffid",
+      "value": "B08E"
+    },
+    {
+      "ability": "A10R",
+      "level": 2,
+      "field": "buffid",
+      "value": "B08E"
+    },
+    {
+      "ability": "A10R",
+      "level": 3,
+      "field": "buffid",
+      "value": "B08E"
+    },
+    {
+      "ability": "A10R",
+      "level": 4,
+      "field": "buffid",
+      "value": "B08E"
+    },
+    {
+      "ability": "A10S",
+      "level": 1,
+      "field": "buffid",
+      "value": "BUdd"
+    },
+    {
+      "ability": "A10S",
+      "level": 2,
+      "field": "buffid",
+      "value": "BUdd"
+    },
+    {
+      "ability": "A10T",
+      "level": 1,
+      "field": "unitid",
+      "value": "uloc"
+    },
+    {
+      "ability": "A10U",
+      "level": 1,
+      "field": "unitid",
+      "value": "uloc"
+    },
+    {
+      "ability": "A10V",
+      "level": 1,
+      "field": "unitid",
+      "value": "uloc"
+    },
+    {
+      "ability": "A10W",
+      "level": 1,
+      "field": "buffid",
+      "value": "BPSE"
+    },
+    {
+      "ability": "A111",
+      "level": 1,
+      "field": "buffid",
+      "value": "BUts"
+    },
+    {
+      "ability": "A112",
+      "level": 1,
+      "field": "buffid",
+      "value": "Bfro"
+    },
+    {
+      "ability": "A113",
+      "level": 1,
+      "field": "buffid",
+      "value": "BUsl"
+    },
+    {
+      "ability": "A114",
+      "level": 1,
+      "field": "buffid",
+      "value": "Bslo"
+    },
+    {
+      "ability": "A115",
+      "level": 1,
+      "field": "buffid",
+      "value": "Bcrs"
+    },
+    {
+      "ability": "A116",
+      "level": 1,
+      "field": "buffid",
+      "value": "BOwd"
+    },
+    {
+      "ability": "A116",
+      "level": 1,
+      "field": "unitid",
+      "value": "nfgt"
+    },
+    {
+      "ability": "A11G",
+      "level": 1,
+      "field": "unitid",
+      "value": "u02E"
+    },
+    {
+      "ability": "A126",
+      "level": 1,
+      "field": "buffid",
+      "value": "BHtb"
+    },
+    {
+      "ability": "A12H",
+      "level": 1,
+      "field": "buffid",
+      "value": "BHab"
+    },
+    {
+      "ability": "A12H",
+      "level": 2,
+      "field": "buffid",
+      "value": "BHab"
+    },
+    {
+      "ability": "A12H",
+      "level": 3,
+      "field": "buffid",
+      "value": "BHab"
+    },
+    {
+      "ability": "A12H",
+      "level": 4,
+      "field": "buffid",
+      "value": "BHab"
+    },
+    {
+      "ability": "A12J",
+      "level": 1,
+      "field": "buffid",
+      "value": "AEtr"
+    },
+    {
+      "ability": "A12J",
+      "level": 2,
+      "field": "buffid",
+      "value": "AEtr"
+    },
+    {
+      "ability": "A145",
+      "level": 1,
+      "field": "buffid",
+      "value": "BHds"
+    },
+    {
+      "ability": "A15N",
+      "level": 1,
+      "field": "buffid",
+      "value": "B030"
+    },
+    {
+      "ability": "A16N",
+      "level": 1,
+      "field": "buffid",
+      "value": "Bvng"
+    },
+    {
+      "ability": "A16O",
+      "level": 1,
+      "field": "buffid",
+      "value": "BUfa"
+    },
+    {
+      "ability": "A16Q",
+      "level": 1,
+      "field": "buffid",
+      "value": "Bspl"
+    },
+    {
+      "ability": "A16T",
+      "level": 1,
+      "field": "buffid",
+      "value": "Brej"
+    },
+    {
+      "ability": "A1CF",
+      "level": 1,
+      "field": "buffid",
+      "value": "BIcb"
+    },
+    {
+      "ability": "A1CF",
+      "level": 2,
+      "field": "buffid",
+      "value": "BIcb"
+    },
+    {
+      "ability": "A1CF",
+      "level": 3,
+      "field": "buffid",
+      "value": "BIcb"
+    },
+    {
+      "ability": "A1CG",
+      "level": 1,
+      "field": "buffid",
+      "value": "B01I"
+    },
+    {
+      "ability": "A1CG",
+      "level": 2,
+      "field": "buffid",
+      "value": "B01I"
+    },
+    {
+      "ability": "A1KB",
+      "level": 1,
+      "field": "buffid",
+      "value": "B01D"
+    },
+    {
+      "ability": "A1NA",
+      "level": 1,
+      "field": "buffid",
+      "value": "BOsf"
+    },
+    {
+      "ability": "A1NA",
+      "level": 1,
+      "field": "unitid",
+      "value": "h0IF"
+    },
+    {
+      "ability": "A1NB",
+      "level": 1,
+      "field": "buffid",
+      "value": "BOsf"
+    },
+    {
+      "ability": "A1NB",
+      "level": 1,
+      "field": "unitid",
+      "value": "h0IC"
+    },
+    {
+      "ability": "A1PP",
+      "level": 1,
+      "field": "buffid",
+      "value": "BPSE"
+    },
+    {
+      "ability": "ACen",
+      "level": 1,
+      "field": "buffid",
+      "value": "Bena,Beng"
+    },
+    {
+      "ability": "ACtn",
+      "level": 1,
+      "field": "buffid",
+      "value": "BOwd"
+    },
+    {
+      "ability": "ACtn",
+      "level": 1,
+      "field": "unitid",
+      "value": "nfgt"
+    },
+    {
+      "ability": "AHad",
+      "level": 1,
+      "field": "buffid",
+      "value": "B023"
+    }
+  ],
+  "unmigrated_buffs": {
+    "Bust": [
+      "A0PB:1"
+    ],
+    "BEia": [
+      "A10J:1",
+      "A10J:2",
+      "A10J:3",
+      "A10J:4"
+    ],
+    "BUts": [
+      "A111:1"
+    ],
+    "BHtb": [
+      "A126:1"
+    ],
+    "AEtr": [
+      "A12J:1",
+      "A12J:2"
+    ]
+  },
+  "unmigrated_summons": {},
+  "current_readback": {
+    "date": "2026-10-15",
+    "checked_fields": 182,
+    "differences": []
+  }
+}

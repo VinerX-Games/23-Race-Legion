@@ -1,0 +1,26 @@
+{
+  "race": "goblins",
+  "category": "unit_abilities_and_buffs",
+  "total_abilities": 34,
+  "total_buffs": 9,
+  "total_checks": 190,
+  "all_matched": true,
+  "wts_keys_updated": 170,
+  "skin_w3a_ops": 16,
+  "skin_w3h_ops": 4,
+  "hashes": {
+    "wts": {
+      "before": "2c1b86ead142b591e1b57f88e1f700220be513d260eddab1b87b7a3de2b91818",
+      "after": "759757b5714a7e708ded434feae55aa1b2d9ea71a3811a36defc94b1f0e4cee4"
+    },
+    "w3a_skin": {
+      "before": "63bff7903e66a0d5a915efada99bafd20906313f50474840af8c16b892d91475",
+      "after": "8f3973d444521b35dbb57318dcacab9def82952bd10a7213bfc27bbefaf20d2a"
+    },
+    "w3h_skin": {
+      "before": "ce74142eec6276353fc00f51ce790304b2107df49e970bd5a019d8cedc0d3e03",
+      "after": "888e1c4c6bf1c0149e59959dcc7473d8a89d699e0873b2485f10e536cab97daf"
+    }
+  },
+  "base_binaries_untouched": true
+}

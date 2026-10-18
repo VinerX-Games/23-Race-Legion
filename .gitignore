@@ -15,6 +15,16 @@ _cli_races.json
 probe_detached.*
 tmp_screen*.png
 /tmp
+/.cache/
+/wc3.local.json
 hivewe.log
 results.txt
 23_race_*.w3x
+
+# Собранные карты, сторонние карты и тяжёлые диагностические артефакты
+/*.w3x
+/war3map.j
+/diagnostics/
+/scratch/
+/out.json
+/draenei_units.txt

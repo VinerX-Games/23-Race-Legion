@@ -1,0 +1,22 @@
+{
+  "operations": [
+    {
+      "type": "unit",
+      "id": "h0HY",
+      "field": "name",
+      "value": "|cffe4cfa3Алтарь Древних Богов|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0HY",
+      "field": "tip",
+      "value": "|cffe4cfa3Алтарь Древних Богов|r (|cffffffffS|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0HY",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Призывает героев безликих и воскрешает павших героев.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВерховный Душегуб|cffced4da.|n- |cffa9c7deГенерал К`Траксис|cffced4da.|n- |cffa9c7deМаг Запредельной Тьмы|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da Найм мага телепортации для переброски войск.|r"
+    }
+  ]
+}

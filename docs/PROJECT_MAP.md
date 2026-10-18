@@ -1,10 +1,10 @@
-# 23 Race Legion — Карта проекта
+# 23 Race Forever — Карта проекта
 
 Warcraft III: Reforged — кастомная карта Altered Melee с 30+ фракциями, поддержкой до 24 игроков.
 
 | | |
 |---|---|
-| **Версия** | `23_race_1_6_514` |
+| **Версия** | `23_race_1_6_515` |
 | **Репозиторий** | https://github.com/VinerX-Games/23-Race-Legion |
 | **Язык** | Русский (скрипты, комментарии, строки) |
 | **Скрипт** | Lua (сконвертирован из vJASS), ~65 000 строк |
@@ -148,7 +148,7 @@ Warcraft III: Reforged — кастомная карта Altered Melee с 30+ ф
 | `01_core_economy.lua` | Индексатор юнитов, AI-счёт, экономика, ивенты юнитов | 2637 |
 | `02_game_modes.lua` | Лобби, столицы, феоды, доминация, fast test | 1530 |
 | `03_continents_diplomacy.lua` | 7 континентов, дипломатия, income, туман войны | 1598 |
-| `04_race_selection.lua` | Выбор расы (37 рас), 4 страницы UI | 1529 |
+| `04_race_selection.lua` | Выбор расы (37 рас): `Trig_Race_*_Actions(caster)`, старое меню из 4 страниц (отключено панелью `_ui/63_race_picker.lua`) | 1529 |
 | `05_common_spells.lua` | Spell-система, предметы, флагманы, Fireball | 1009 |
 | `06_transport_portals.lua` | Транспорт, корабли, порталы, F2, телепорты | 2671 |
 | `07_mixed_heroes.lua` | Остаток 07: Deathwing, элементали, огры, аспекты драконов | — |

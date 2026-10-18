@@ -1,0 +1,302 @@
+{
+  "race": "Elements",
+  "category": "buildings",
+  "wts_changed_count": 35,
+  "wts_changed_ids": [
+    13651,
+    7296,
+    8099,
+    13656,
+    7299,
+    15037,
+    13659,
+    7301,
+    15040,
+    9240,
+    24394,
+    14076,
+    7322,
+    14949,
+    32142,
+    15030,
+    18365,
+    15077,
+    15078,
+    15029,
+    15079,
+    15080,
+    15043,
+    15057,
+    15058,
+    12970,
+    15283,
+    15284,
+    15046,
+    19661,
+    15069,
+    30661,
+    15044,
+    15045,
+    12980
+  ],
+  "object_ops": [
+    {
+      "type": "unit",
+      "id": "h0L5",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Улучшенное оборонительное сооружение стихий. Атакует несколько целей одновременно и наделено способностью «Тёмный призыв», позволяющей телепортировать союзные войска к башне.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТёмный призыв|cffced4da: мгновенно телепортирует выбранные союзные войска к башне.|n|n|cffa6afb8Атакует:|cffced4da наземные и воздушные цели (дальний бой, колющий урон, мульти-атака).|r"
+    }
+  ],
+  "wts_hash_before": "ce41780a9cc948d02729ac315bd4b3403c9922900fffc36450124f74ea72626a",
+  "wts_hash_after": "ce41780a9cc948d02729ac315bd4b3403c9922900fffc36450124f74ea72626a",
+  "w3u_hash_before": "782ed2be444b1cfaa6d8b97330dba3eec2fffa71d235778d3de05dd884b730b6",
+  "w3u_hash_after": "782ed2be444b1cfaa6d8b97330dba3eec2fffa71d235778d3de05dd884b730b6",
+  "w3u_skin_hash_before": "b0727e3e7b362024767f391082c356c680defd5e403cebe83fae81740708ecf0",
+  "w3u_skin_hash_after": "b0727e3e7b362024767f391082c356c680defd5e403cebe83fae81740708ecf0",
+  "checks_summary": {
+    "total_checks": 24,
+    "passed": 24
+  },
+  "checks": [
+    {
+      "id": "h0EQ",
+      "mode": "SD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Скопление стихий|r",
+      "actual_tip": "|cffe4cfa3Скопление стихий|r (|cffffffffQ|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное святилище и центр концентрации первичных стихий. Позволяет призывать духов стихий, добывать и складировать ресурсы. Приносит |cffffffff1500|cffced4da ед. золота каждые |cffffffff25|cffced4da сек. и даёт |cffffffff50|cffced4da ед. пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДух стихий|cffced4da.|n|n|cffa6afb8Улучшается до:|cffced4da |cffa9c7deНаполнитель стихий|cffced4da.|r"
+    },
+    {
+      "id": "h0ER",
+      "mode": "SD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Наполнитель стихий|r",
+      "actual_tip": "|cffe4cfa3Наполнитель стихий|r (|cffffffffZ|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Развитое святилище стихий второго уровня. Позволяет призывать духов стихий, открывает доступ к новым типам стихийных войск и улучшениям. Приносит |cffffffff1500|cffced4da ед. золота каждые |cffffffff25|cffced4da сек. и увеличивает лимит пищи до |cffffffff100|cffced4da ед.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДух стихий|cffced4da.|n|n|cffa6afb8Улучшается до:|cffced4da |cffa9c7deСтихийный Бастион|cffced4da.|r"
+    },
+    {
+      "id": "h0ES",
+      "mode": "SD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Стихийный Бастион|r",
+      "actual_tip": "|cffe4cfa3Стихийный Бастион|r (|cffffffffZ|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Высшая цитадель могущества стихий третьего уровня. Открывает доступ к элитным воинам стихий и высшим элементальным воплощениям. Приносит |cffffffff1500|cffced4da ед. золота каждые |cffffffff25|cffced4da сек. и увеличивает лимит пищи до |cffffffff150|cffced4da ед.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДух стихий|cffced4da|n- |cffa9c7deОсобый Огня|cffced4da|n- |cffa9c7deОсобый Воды|cffced4da|n- |cffa9c7deОсобый Земли|cffced4da|n- |cffa9c7deОсобый Ветра|cffced4da.|r"
+    },
+    {
+      "id": "h0EO",
+      "mode": "SD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Огненные недра|r",
+      "actual_tip": "|cffe4cfa3Огненные недра|r (|cffffffffF|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Обитель первичной стихии Огня. Обучает пламенных элементалей, гончих и огненных птиц, а также исследует усиления боевой ярости и температуры пламени.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЭлементаль Огня|cffced4da|n- |cffa9c7deГончая пламени|cffced4da|n- |cffa9c7deВозжигатель|cffced4da|n- |cffa9c7deЗагробник Огня|cffced4da|n- |cffa9c7deОгненная птица|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЯрость|cffced4da|n- |cffa9c7deПовышение температуры|cffced4da|n- |cffa9c7deРассекающий удар|cffced4da.|r"
+    },
+    {
+      "id": "h0EP",
+      "mode": "SD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Магическая башня|r",
+      "actual_tip": "|cffe4cfa3Магическая башня|r (|cffffffffZ|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовое оборонительное сооружение стихий. Благодаря силе огня атакует несколько целей одновременно зарядами стихийной энергии. Может быть улучшена до башни с телепортацией.|n|n|cffa6afb8Улучшается до:|cffced4da |cffa9c7deМагическая башня|cffced4da (получает способность «Тёмный призыв»).|n|n|cffa6afb8Атакует:|cffced4da наземные и воздушные цели (дальний бой, колющий урон, мульти-атака).|r"
+    },
+    {
+      "id": "h0L5",
+      "mode": "SD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Магическая башня|r",
+      "actual_tip": "|cffe4cfa3Магическая башня|r (|cffffffffZ|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Улучшенное оборонительное сооружение стихий. Атакует несколько целей одновременно и наделено способностью «Тёмный призыв», позволяющей телепортировать союзные войска к башне.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТёмный призыв|cffced4da: мгновенно телепортирует выбранные союзные войска к башне.|n|n|cffa6afb8Атакует:|cffced4da наземные и воздушные цели (дальний бой, колющий урон, мульти-атака).|r"
+    },
+    {
+      "id": "h0ET",
+      "mode": "SD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Морской бассейн|r",
+      "actual_tip": "|cffe4cfa3Морской бассейн|r (|cffffffffR|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Обитель первичной стихии Воды. Обучает элементалей воды, морей, океанов и грязи, а также исследует ледяные стрелы, рассеяние чар и водную магию.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЭлементаль Воды|cffced4da|n- |cffa9c7deЭлементаль Океана|cffced4da|n- |cffa9c7deЭлементаль Морей|cffced4da|n- |cffa9c7deЗагробник Глубин|cffced4da|n- |cffa9c7deРифовый Элементаль|cffced4da|n- |cffa9c7deГрязевой Элементаль|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМагия воды|cffced4da|n- |cffa9c7deЛедяные стрелы|cffced4da|n- |cffa9c7deМагия морей|cffced4da|n- |cffa9c7deРассеяние чар|cffced4da.|r"
+    },
+    {
+      "id": "h0EU",
+      "mode": "SD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Ветролом|r",
+      "actual_tip": "|cffe4cfa3Ветролом|r (|cffffffffW|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Обитель первичной стихии Воздуха. Обучает элементалей ветра, грозы и шторма, воздушных волков, а также исследует скорость воздуха, критические удары и ярость грома.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЭлементаль Ветра|cffced4da|n- |cffa9c7deГрозовой Элементаль|cffced4da|n- |cffa9c7deВоздушный волк|cffced4da|n- |cffa9c7deЗагробник Бури|cffced4da|n- |cffa9c7deШтормовой Элементаль|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЯрость грома|cffced4da|n- |cffa9c7deКритический удар|cffced4da|n- |cffa9c7deЛегкость воздуха|cffced4da.|r"
+    },
+    {
+      "id": "h0EV",
+      "mode": "SD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Элементальная мастерская|r",
+      "actual_tip": "|cffe4cfa3Элементальная мастерская|r (|cffffffffD|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Центр стихийных исследований и концентрации магии. Позволяет исследовать базовые усиления четырёх стихий (Огня, Воды, Земли и Ветра), повышая силу атаки и защиту войск, а также улучшать эффективность добычи ресурсов духами стихий.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенная добыча|cffced4da|n- |cffa9c7deОгонь|cffced4da|n- |cffa9c7deВода|cffced4da|n- |cffa9c7deЗемля|cffced4da|n- |cffa9c7deВетер|cffced4da.|r"
+    },
+    {
+      "id": "h0EW",
+      "mode": "SD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Каменоломня|r",
+      "actual_tip": "|cffe4cfa3Каменоломня|r (|cffffffffE|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Обитель первичной стихии Земли. Обучает элементалей земли и песка, разнообразные типы големов и воителей бури, а также исследует каменное здоровье и сокрушающие удары.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЭлементаль Земли|cffced4da|n- |cffa9c7deПесчаный Элементаль|cffced4da|n- |cffa9c7deКаменный голем|cffced4da|n- |cffa9c7deОгненный голем|cffced4da|n- |cffa9c7deОгненный Страж|cffced4da|n- |cffa9c7deЛедяной Голем|cffced4da|n- |cffa9c7deКристальный голем|cffced4da|n- |cffa9c7deВоитель бури|cffced4da|n- |cffa9c7deЯнтарный Загробник|cffced4da|n- |cffa9c7deЯростный голем|cffced4da|n- |cffa9c7deГранитный голем|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deКаменное здоровье|cffced4da|n- |cffa9c7deСокрушение|cffced4da.|r"
+    },
+    {
+      "id": "h0EX",
+      "mode": "SD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Стихийный кристалл|r",
+      "actual_tip": "|cffe4cfa3Стихийный кристалл|r (|cffffffffA|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Энергетический кристалл стихийного снабжения. Предоставляет пищу для поддержания стихийной армии и генерирует регулярный доход золота.|n|n|cffa6afb8Свойства:|cffced4da|n- Предоставляет |cffffffff40|cffced4da ед. пищи.|n- Приносит |cffffffff30|cffced4da ед. золота каждые |cffffffff25|cffced4da сек.|r"
+    },
+    {
+      "id": "h0EY",
+      "mode": "SD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Алтарь Пространства|r",
+      "actual_tip": "|cffe4cfa3Алтарь Пространства|r (|cffffffffS|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Священный алтарь героев стихий. Позволяет призывать великих лордов стихий и воскрешать павших героев. Предоставляет |cffffffff3|cffced4da ед. пищи.|n|n|cffa6afb8Призывает героев:|cffced4da|n- |cffa9c7deКристальный владыка|cffced4da|n- |cffa9c7deМастер ветра|cffced4da|n- |cffa9c7deПовелитель огня|cffced4da.|r"
+    },
+    {
+      "id": "h0EQ",
+      "mode": "HD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Скопление стихий|r",
+      "actual_tip": "|cffe4cfa3Скопление стихий|r (|cffffffffQ|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное святилище и центр концентрации первичных стихий. Позволяет призывать духов стихий, добывать и складировать ресурсы. Приносит |cffffffff1500|cffced4da ед. золота каждые |cffffffff25|cffced4da сек. и даёт |cffffffff50|cffced4da ед. пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДух стихий|cffced4da.|n|n|cffa6afb8Улучшается до:|cffced4da |cffa9c7deНаполнитель стихий|cffced4da.|r"
+    },
+    {
+      "id": "h0ER",
+      "mode": "HD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Наполнитель стихий|r",
+      "actual_tip": "|cffe4cfa3Наполнитель стихий|r (|cffffffffZ|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Развитое святилище стихий второго уровня. Позволяет призывать духов стихий, открывает доступ к новым типам стихийных войск и улучшениям. Приносит |cffffffff1500|cffced4da ед. золота каждые |cffffffff25|cffced4da сек. и увеличивает лимит пищи до |cffffffff100|cffced4da ед.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДух стихий|cffced4da.|n|n|cffa6afb8Улучшается до:|cffced4da |cffa9c7deСтихийный Бастион|cffced4da.|r"
+    },
+    {
+      "id": "h0ES",
+      "mode": "HD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Стихийный Бастион|r",
+      "actual_tip": "|cffe4cfa3Стихийный Бастион|r (|cffffffffZ|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Высшая цитадель могущества стихий третьего уровня. Открывает доступ к элитным воинам стихий и высшим элементальным воплощениям. Приносит |cffffffff1500|cffced4da ед. золота каждые |cffffffff25|cffced4da сек. и увеличивает лимит пищи до |cffffffff150|cffced4da ед.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДух стихий|cffced4da|n- |cffa9c7deОсобый Огня|cffced4da|n- |cffa9c7deОсобый Воды|cffced4da|n- |cffa9c7deОсобый Земли|cffced4da|n- |cffa9c7deОсобый Ветра|cffced4da.|r"
+    },
+    {
+      "id": "h0EO",
+      "mode": "HD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Огненные недра|r",
+      "actual_tip": "|cffe4cfa3Огненные недра|r (|cffffffffF|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Обитель первичной стихии Огня. Обучает пламенных элементалей, гончих и огненных птиц, а также исследует усиления боевой ярости и температуры пламени.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЭлементаль Огня|cffced4da|n- |cffa9c7deГончая пламени|cffced4da|n- |cffa9c7deВозжигатель|cffced4da|n- |cffa9c7deЗагробник Огня|cffced4da|n- |cffa9c7deОгненная птица|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЯрость|cffced4da|n- |cffa9c7deПовышение температуры|cffced4da|n- |cffa9c7deРассекающий удар|cffced4da.|r"
+    },
+    {
+      "id": "h0EP",
+      "mode": "HD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Магическая башня|r",
+      "actual_tip": "|cffe4cfa3Магическая башня|r (|cffffffffZ|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовое оборонительное сооружение стихий. Благодаря силе огня атакует несколько целей одновременно зарядами стихийной энергии. Может быть улучшена до башни с телепортацией.|n|n|cffa6afb8Улучшается до:|cffced4da |cffa9c7deМагическая башня|cffced4da (получает способность «Тёмный призыв»).|n|n|cffa6afb8Атакует:|cffced4da наземные и воздушные цели (дальний бой, колющий урон, мульти-атака).|r"
+    },
+    {
+      "id": "h0L5",
+      "mode": "HD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Магическая башня|r",
+      "actual_tip": "|cffe4cfa3Магическая башня|r (|cffffffffZ|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Улучшенное оборонительное сооружение стихий. Атакует несколько целей одновременно и наделено способностью «Тёмный призыв», позволяющей телепортировать союзные войска к башне.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТёмный призыв|cffced4da: мгновенно телепортирует выбранные союзные войска к башне.|n|n|cffa6afb8Атакует:|cffced4da наземные и воздушные цели (дальний бой, колющий урон, мульти-атака).|r"
+    },
+    {
+      "id": "h0ET",
+      "mode": "HD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Морской бассейн|r",
+      "actual_tip": "|cffe4cfa3Морской бассейн|r (|cffffffffR|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Обитель первичной стихии Воды. Обучает элементалей воды, морей, океанов и грязи, а также исследует ледяные стрелы, рассеяние чар и водную магию.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЭлементаль Воды|cffced4da|n- |cffa9c7deЭлементаль Океана|cffced4da|n- |cffa9c7deЭлементаль Морей|cffced4da|n- |cffa9c7deЗагробник Глубин|cffced4da|n- |cffa9c7deРифовый Элементаль|cffced4da|n- |cffa9c7deГрязевой Элементаль|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМагия воды|cffced4da|n- |cffa9c7deЛедяные стрелы|cffced4da|n- |cffa9c7deМагия морей|cffced4da|n- |cffa9c7deРассеяние чар|cffced4da.|r"
+    },
+    {
+      "id": "h0EU",
+      "mode": "HD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Ветролом|r",
+      "actual_tip": "|cffe4cfa3Ветролом|r (|cffffffffW|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Обитель первичной стихии Воздуха. Обучает элементалей ветра, грозы и шторма, воздушных волков, а также исследует скорость воздуха, критические удары и ярость грома.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЭлементаль Ветра|cffced4da|n- |cffa9c7deГрозовой Элементаль|cffced4da|n- |cffa9c7deВоздушный волк|cffced4da|n- |cffa9c7deЗагробник Бури|cffced4da|n- |cffa9c7deШтормовой Элементаль|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЯрость грома|cffced4da|n- |cffa9c7deКритический удар|cffced4da|n- |cffa9c7deЛегкость воздуха|cffced4da.|r"
+    },
+    {
+      "id": "h0EV",
+      "mode": "HD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Элементальная мастерская|r",
+      "actual_tip": "|cffe4cfa3Элементальная мастерская|r (|cffffffffD|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Центр стихийных исследований и концентрации магии. Позволяет исследовать базовые усиления четырёх стихий (Огня, Воды, Земли и Ветра), повышая силу атаки и защиту войск, а также улучшать эффективность добычи ресурсов духами стихий.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенная добыча|cffced4da|n- |cffa9c7deОгонь|cffced4da|n- |cffa9c7deВода|cffced4da|n- |cffa9c7deЗемля|cffced4da|n- |cffa9c7deВетер|cffced4da.|r"
+    },
+    {
+      "id": "h0EW",
+      "mode": "HD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Каменоломня|r",
+      "actual_tip": "|cffe4cfa3Каменоломня|r (|cffffffffE|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Обитель первичной стихии Земли. Обучает элементалей земли и песка, разнообразные типы големов и воителей бури, а также исследует каменное здоровье и сокрушающие удары.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЭлементаль Земли|cffced4da|n- |cffa9c7deПесчаный Элементаль|cffced4da|n- |cffa9c7deКаменный голем|cffced4da|n- |cffa9c7deОгненный голем|cffced4da|n- |cffa9c7deОгненный Страж|cffced4da|n- |cffa9c7deЛедяной Голем|cffced4da|n- |cffa9c7deКристальный голем|cffced4da|n- |cffa9c7deВоитель бури|cffced4da|n- |cffa9c7deЯнтарный Загробник|cffced4da|n- |cffa9c7deЯростный голем|cffced4da|n- |cffa9c7deГранитный голем|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deКаменное здоровье|cffced4da|n- |cffa9c7deСокрушение|cffced4da.|r"
+    },
+    {
+      "id": "h0EX",
+      "mode": "HD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Стихийный кристалл|r",
+      "actual_tip": "|cffe4cfa3Стихийный кристалл|r (|cffffffffA|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Энергетический кристалл стихийного снабжения. Предоставляет пищу для поддержания стихийной армии и генерирует регулярный доход золота.|n|n|cffa6afb8Свойства:|cffced4da|n- Предоставляет |cffffffff40|cffced4da ед. пищи.|n- Приносит |cffffffff30|cffced4da ед. золота каждые |cffffffff25|cffced4da сек.|r"
+    },
+    {
+      "id": "h0EY",
+      "mode": "HD",
+      "name_ok": true,
+      "tip_ok": true,
+      "ubertip_ok": true,
+      "actual_name": "|cffe4cfa3Алтарь Пространства|r",
+      "actual_tip": "|cffe4cfa3Алтарь Пространства|r (|cffffffffS|r)",
+      "actual_ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Священный алтарь героев стихий. Позволяет призывать великих лордов стихий и воскрешать павших героев. Предоставляет |cffffffff3|cffced4da ед. пищи.|n|n|cffa6afb8Призывает героев:|cffced4da|n- |cffa9c7deКристальный владыка|cffced4da|n- |cffa9c7deМастер ветра|cffced4da|n- |cffa9c7deПовелитель огня|cffced4da.|r"
+    }
+  ]
+}

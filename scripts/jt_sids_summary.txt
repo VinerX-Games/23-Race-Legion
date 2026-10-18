@@ -1,0 +1,100 @@
+=== SELECTION ===
+Selection A1DZ: name_sid=32019, tip_sid=32430, ub_sid=35186, hk=C
+Marker R0IH: name_sid=32049, tip_sid=32050, ub_sid=None
+Marker R0IR: name_sid=32959, tip_sid=32960, ub_sid=None
+
+=== BUILDINGS ===
+h0N5 (|c00c5ff94Дом вождей|r): name_sid=31502, tip_sid=32078, ub_sid=33542, hk=Q
+h0N1 (|c00c5ff94Крепость вождей|r): name_sid=31529, tip_sid=32053, ub_sid=32605, hk=Z
+h0N6 (|c00c5ff94Цитадель вождей|r): name_sid=31543, tip_sid=32348, ub_sid=32615, hk=Z
+h0N2 (|c00c5ff94Жилище|r): name_sid=31506, tip_sid=32505, ub_sid=32612, hk=A
+h0MY (|c00c5ff94Казармы|r): name_sid=31497, tip_sid=31207, ub_sid=33540, hk=W
+h0MW (|c00c5ff94Колизей|r): name_sid=31494, tip_sid=32076, ub_sid=31956, hk=D
+h0MX (|c00c5ff94Обитель|r): name_sid=31495, tip_sid=32341, ub_sid=32271, hk=R
+h0N0 (|c00c5ff94Алтарь Крови|r): name_sid=31499, tip_sid=31235, ub_sid=32604, hk=S
+h0N3 (|c00c5ff94Лесопилка|r): name_sid=31958, tip_sid=31311, ub_sid=32613, hk=E
+h0D3 (|cffe4cfa3Верфь|r): name_sid=10901, tip_sid=10902, ub_sid=22662, hk=C
+
+=== UNITS ===
+o04Q (|c00c5ff94Ремесленник|r): name_sid=30969, tip_sid=31177, ub_sid=28587, hk=Q
+o04M (|c00c5ff94Воитель|r): name_sid=30951, tip_sid=31952, ub_sid=14341, hk=W
+o05K (|c00c5ff94Воитель|r): name_sid=32351, tip_sid=32352, ub_sid=32281, hk=W
+o04L (|c00c5ff94Охотник за головами|r): name_sid=30948, tip_sid=15178, ub_sid=11854, hk=Q
+o05E (|c00c5ff94Катапульта|r): name_sid=31533, tip_sid=31322, ub_sid=20162, hk=E
+o04O (|c00c5ff94Жрец|r): name_sid=15590, tip_sid=32304, ub_sid=15419, hk=Q
+o04R (|c00c5ff94Знахарь|r): name_sid=30621, tip_sid=32314, ub_sid=15433, hk=W
+o04N (|c00c5ff94Колдун Вуду|r): name_sid=27731, tip_sid=27825, ub_sid=15417, hk=E
+o04P (|c00c5ff94Маг|r): name_sid=30965, tip_sid=32306, ub_sid=15430, hk=E
+o04S (|c00c5ff94Наездник|r): name_sid=31105, tip_sid=31957, ub_sid=20155, hk=Q
+o05J (|c00c5ff94Наездник|r): name_sid=32002, tip_sid=32079, ub_sid=20166, hk=A
+o04U (|c00c5ff94Берсерк|r): name_sid=31173, tip_sid=28991, ub_sid=20160, hk=W
+o05G (|c00c5ff94Гидра|r): name_sid=31959, tip_sid=32419, ub_sid=32625, hk=E
+o05I (|c00c5ff94Малая гидра|r): name_sid=27853, tip_sid=22887, ub_sid=20164, hk=Q
+
+=== HEROES ===
+O054 (|c00c5ff94Темный охотник|r): name_sid=31336, proper=Зул'кис,Зул'абар,Зул'раджас,Зул'маран,Джо-Джо Собиратель Голов,Шака-зан,Шакти-лар,Мезил-кри, proper_sid=Зул'кис,Зул'абар,Зул'раджас,Зул'маран,Джо-Джо Собиратель Голов,Шака-зан,Шакти-лар,Мезил-кри, tip_sid=32484, ub_sid=31259, hk=Z
+O05A (|c00c5ff94Мастер клинка|r): name_sid=31346, proper=Зул'кис,Зул'абар,Зул'раджас,Зул'маран,Джо-Джо Собиратель Голов,Шака-зан,Шакти-лар,Мезил-кри, proper_sid=Зул'кис,Зул'абар,Зул'раджас,Зул'маран,Джо-Джо Собиратель Голов,Шака-зан,Шакти-лар,Мезил-кри, tip_sid=31514, ub_sid=31908, hk=Q
+O05D (|c00c5ff94Низвергатель|r): name_sid=31524, proper=Зул'кис,Зул'абар,Зул'раджас,Зул'маран,Джо-Джо Собиратель Голов,Шака-зан,Шакти-лар,Мезил-кри, proper_sid=Зул'кис,Зул'абар,Зул'раджас,Зул'маран,Джо-Джо Собиратель Голов,Шака-зан,Шакти-лар,Мезил-кри, tip_sid=32333, ub_sid=31955, hk=A
+O055 (|c00c5ff94Свеживатель душ|r): name_sid=27215, proper=Хаккар, proper_sid=TRIGSTR_25323, tip_sid=357, ub_sid=39637, hk=S
+O05L (|c00c5ff94Лоа Смерти|r): name_sid=31348, proper=Бвонсамди, proper_sid=TRIGSTR_30633, tip_sid=30654, ub_sid=39638, hk=S
+O05C (|c00c5ff94Лоа Смерти|r): name_sid=30632, proper=Бвонсамди, proper_sid=TRIGSTR_25511, tip_sid=None, ub_sid=32860, hk=S
+
+=== UPGRADES ===
+R0IH (1 lvls):
+  L1: name_sid=32049, tip_sid=32050, ub_sid=None, hk=None
+R0IR (1 lvls):
+  L1: name_sid=32959, tip_sid=32960, ub_sid=None, hk=None
+R0I8 (6 lvls):
+  L1: name_sid=32155, tip_sid=32529, ub_sid=31516, hk=Q
+  L2: name_sid=32403, tip_sid=32530, ub_sid=32020, hk=Q
+  L3: name_sid=32408, tip_sid=32531, ub_sid=32021, hk=Q
+  L4: name_sid=31501, tip_sid=32525, ub_sid=32151, hk=Q
+  L5: name_sid=31505, tip_sid=32526, ub_sid=32152, hk=Q
+  L6: name_sid=31507, tip_sid=32527, ub_sid=32153, hk=Q
+R0I9 (6 lvls):
+  L1: name_sid=31583, tip_sid=32540, ub_sid=32422, hk=W
+  L2: name_sid=31586, tip_sid=32541, ub_sid=32535, hk=W
+  L3: name_sid=31587, tip_sid=32542, ub_sid=32536, hk=W
+  L4: name_sid=31571, tip_sid=32532, ub_sid=32537, hk=W
+  L5: name_sid=31572, tip_sid=32533, ub_sid=32538, hk=W
+  L6: name_sid=31573, tip_sid=32534, ub_sid=32539, hk=W
+R0IA (6 lvls):
+  L1: name_sid=32496, tip_sid=32420, ub_sid=27312, hk=A
+  L2: name_sid=32497, tip_sid=32455, ub_sid=27313, hk=A
+  L3: name_sid=32498, tip_sid=32464, ub_sid=27314, hk=A
+  L4: name_sid=32490, tip_sid=27308, ub_sid=27686, hk=A
+  L5: name_sid=32491, tip_sid=27309, ub_sid=28589, hk=A
+  L6: name_sid=32492, tip_sid=27310, ub_sid=29044, hk=A
+R0IB (3 lvls):
+  L1: name_sid=16588, tip_sid=17346, ub_sid=18366, hk=Z
+  L2: name_sid=16589, tip_sid=17391, ub_sid=18650, hk=Z
+  L3: name_sid=17414, tip_sid=18237, ub_sid=18651, hk=Z
+R0IC (3 lvls):
+  L1: name_sid=32550, tip_sid=32543, ub_sid=32547, hk=X
+  L2: name_sid=19900, tip_sid=32544, ub_sid=32548, hk=X
+  L3: name_sid=32545, tip_sid=32546, ub_sid=32549, hk=X
+R0ID (3 lvls):
+  L1: name_sid=19961, tip_sid=20005, ub_sid=19287, hk=C
+  L2: name_sid=19979, tip_sid=20056, ub_sid=19830, hk=C
+  L3: name_sid=20097, tip_sid=20140, ub_sid=19893, hk=C
+R0II (6 lvls):
+  L1: name_sid=32075, tip_sid=32723, ub_sid=None, hk=X
+  L2: name_sid=32072, tip_sid=32722, ub_sid=None, hk=X
+  L3: name_sid=32058, tip_sid=32460, ub_sid=32066, hk=X
+  L4: name_sid=32059, tip_sid=32461, ub_sid=32067, hk=X
+  L5: name_sid=32060, tip_sid=32462, ub_sid=32068, hk=X
+  L6: name_sid=32061, tip_sid=32721, ub_sid=32069, hk=X
+R0IJ (3 lvls):
+  L1: name_sid=32094, tip_sid=32392, ub_sid=19352, hk=Z
+  L2: name_sid=32095, tip_sid=32393, ub_sid=19354, hk=Z
+  L3: name_sid=32389, tip_sid=32394, ub_sid=19355, hk=Z
+R0IK (3 lvls):
+  L1: name_sid=32502, tip_sid=32506, ub_sid=32105, hk=Z
+  L2: name_sid=32503, tip_sid=32507, ub_sid=32107, hk=Z
+  L3: name_sid=32504, tip_sid=33046, ub_sid=32108, hk=Z
+R0IL (1 lvls):
+  L1: name_sid=32307, tip_sid=32310, ub_sid=32301, hk=Z
+R0IM (1 lvls):
+  L1: name_sid=32206, tip_sid=32730, ub_sid=32409, hk=A
+R0IN (1 lvls):
+  L1: name_sid=32510, tip_sid=32511, ub_sid=32340, hk=X

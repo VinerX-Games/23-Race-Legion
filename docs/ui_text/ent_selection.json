@@ -1,0 +1,77 @@
+{
+  "scope": "Энты (Argvinol): подсказка выбора расы A0QQ",
+  "object": "A0QQ",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "hotkey": {
+    "reference": "TRIGSTR_20465",
+    "value": "E"
+  },
+  "levels": 1,
+  "evidence": [
+    "04_race_selection.lua:402-419: InitTrig_Race_Argvinol_O фильтрует A0QQ; выбор создаёт 5 e02T и исследует R0BZ.",
+    "A0QQ находится на стартовом алтаре/таверне выбора рас карты.",
+    "Автор NiCAmCHiK, куратор NiCAmCHiK, сложность 3/5, период «Битва за Азерот» и клавиша E сохранены."
+  ],
+  "consumers": [
+    {
+      "file": "war3mapSkin.w3a",
+      "id": "A0QQ",
+      "field": [
+        "anam",
+        0,
+        0
+      ],
+      "wts_id": 15815
+    },
+    {
+      "file": "war3mapSkin.w3a",
+      "id": "A0QQ",
+      "field": [
+        "atp1",
+        1,
+        0
+      ],
+      "wts_id": 15818
+    },
+    {
+      "file": "war3mapSkin.w3a",
+      "id": "A0QQ",
+      "field": [
+        "aub1",
+        1,
+        0
+      ],
+      "wts_id": 15823
+    }
+  ],
+  "in_game_checked": false,
+  "strings": [
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "A0QQ",
+      "field": "name",
+      "reference_before": "TRIGSTR_15815",
+      "before": "|cff228b22Энты|r",
+      "after": "|cffe4cfa3Энты|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "A0QQ",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_15818",
+      "before": "|cffa0dcc8Энты|r",
+      "after": "|cffe4cfa3Энты|r (|cffffffffE|r)"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "A0QQ",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_15823",
+      "before": "|cffa0beaaСоздатель расы:|r |cffc8dcaaNiCAmCHiK|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaNiCAmCHiK|r|n|cffa0beaaСложность:|r |cfff0dc96●●●|r●●|n|cffa0beaaПериод:|r |cffc8dcaaWarCraft III - Battle for Azeroth|r|n|n|rЭнты - могущественные, древние деревья и более примитивные формы мудрых Древних, которые служили под началом Кенария в прошлые века. Они тесно связаны с друидами, и их часто можно увидеть сопровождающими могущественных друидов и хранителей рощи.",
+      "after": "|cffa6afb8РАСА:|cffced4da Первобытные древесные стражи и хранители природы.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deNiCAmCHiK|r|n|cffa6afb8Куратор расы:|r |cffa9c7deNiCAmCHiK|r|n|cffa6afb8Сложность:|r |cffffffff●●●|cffa6afb8●●|r|n|cffa6afb8Период:|r |cffa9c7de«Битва за Азерот»|r|n|n|cffced4daЭнты — могущественные первобытные древни и ожившие хранители лесов, служившие Кенарию на протяжении эпох. Тесно связанные с друидами и хранителями рощи, они оберегают священные чащи, черпая силу из живительных источников и пробуждая саму природу на защиту мира.|r"
+    }
+  ]
+}

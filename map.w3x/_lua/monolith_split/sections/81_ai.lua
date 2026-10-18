@@ -527,7 +527,11 @@ function _castAbility(u, entry, target, p)
     if AiCombatProtected(u) then return false end
     if entry.needAbil ~= nil and GetUnitAbilityLevel(u, entry.needAbil) == 0 then return false end
     local tp = entry.type or "target"
-    if tp == "immediate" then
+    if tp == "draenei_vow" then
+        return AiCombatOrderResult(u, DraeneiCombat.AiVow(u))
+    elseif tp == "draenei_idol" then
+        return AiCombatOrderResult(u, DraeneiCombat.AiIdol(u))
+    elseif tp == "immediate" then
         if entry.orderId ~= nil then
             return AiCombatOrderResult(u, IssueImmediateOrderById(u, entry.orderId))
         end
@@ -542,7 +546,11 @@ function _castAbility(u, entry, target, p)
             if ally ~= nil and GetUnitTypeId(ally) ~= 0
                 and GetUnitState(ally, UNIT_STATE_LIFE) > 0.405
                 and IsUnitAlly(ally, GetOwningPlayer(u))
-                and not IsUnitType(ally, UNIT_TYPE_STRUCTURE) then
+                and not IsUnitType(ally, UNIT_TYPE_STRUCTURE)
+                and (not entry.organicOnly or (not IsUnitType(ally, UNIT_TYPE_MECHANICAL)
+                    and not IsUnitType(ally, UNIT_TYPE_WARD) and not IsUnitIllusion(ally)))
+                and (entry.minLostHP == nil or GetUnitState(ally, UNIT_STATE_MAX_LIFE)
+                    - GetUnitState(ally, UNIT_STATE_LIFE) >= entry.minLostHP) then
                 local hp = GetUnitStatePercent(ally, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE)
                 if hp < lowest then best, lowest = ally, hp end
             end

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "session": "daa5895d2d4d46d0a4bc4d91f9a406fb",
+  "scenario": "map-ready",
+  "sha256": "ef2fafedaba64b69ca051ec1b1bd8146edff4723ba0892a331964fc3f8e89bef",
+  "ok": false,
+  "steps": [],
+  "launched": true,
+  "launch_map": "F:\\Gemini_23Race\\.cache\\wc3\\scenarios\\daa5895d2d4d46d0a4bc4d91f9a406fb\\map.w3x",
+  "error": "No fresh bridge heartbeat; enable -bridge:eval:on in the loaded map",
+  "seconds": 180.17,
+  "artifact": "F:\\Gemini_23Race\\.cache\\wc3\\scenarios\\daa5895d2d4d46d0a4bc4d91f9a406fb\\report.json",
+  "observed_ui": "Battle.net sign-in; blank panel after Help. No loaded map or bridge heartbeat observed.",
+  "in_game_checked": false,
+  "research_observation_executed": false,
+  "screenshots": [
+    ".cache/wc3/faceless_game_start.png",
+    ".cache/wc3/faceless_game_state.png"
+  ]
+}

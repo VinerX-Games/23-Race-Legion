@@ -1,0 +1,574 @@
+=== ITEM FT00 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_11193 (sid=11193) -> 'Купить Ледяную Скорбь'
+  ubertip_raw: TRIGSTR_11198 (sid=11198) -> 'Ледяная Скорбь жаждет крови!'
+  desc_raw: TRIGSTR_39478 (sid=39478) -> 'Ледяная скорбь жаждет крови!'
+  gold: 500 (sid=None) -> '500'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I000 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_7088 (sid=7088) -> 'Купить |cff0064ffМорозный Кинжал|r'
+  ubertip_raw: TRIGSTR_7143 (sid=7143) -> '|cffb4dc8c-(+10) к урону от атак героя.|r\n|cffb4dc8c-(7%) замедляет врага.|r\nКлинок ковался с преминением магии льда, что позволяет ему замораживать врагов при атаке.'
+  desc_raw: TRIGSTR_12546 (sid=12546) -> '2 уровень'
+  gold: 5000 (sid=None) -> '5000'
+  lumber: None (sid=None) -> None
+=== ITEM I001 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_10010 (sid=10010) -> 'Купить |cff0064ffМорозный доспех|r'
+  ubertip_raw: TRIGSTR_21581 (sid=21581) -> '|cffb4dc8c-(+5) к броне.|r\n|cffb4dc8c-(5%) замедляет врага.|r\n\nМагический доспех способен замораживать врагов вокруг себя.\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: TRIGSTR_12547 (sid=12547) -> '2 уровень'
+  gold: 5400 (sid=None) -> '5400'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I002 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_10027 (sid=10027) -> 'Купить |cff0064ffМорозная накидка|r'
+  ubertip_raw: TRIGSTR_21810 (sid=21810) -> '|cffb4dc8c-(+5) ко всем характеристикам.|r\n\nНактика была соткана из магических нитей, наделяет своего носителя дополнительными характеристиками.\n\n|cff808080Легкая броня - повышает скорость передвижения на 20.|r'
+  desc_raw: TRIGSTR_12548 (sid=12548) -> '2 уровень'
+  gold: 5500 (sid=None) -> '5500'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I003 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_11683 (sid=11683) -> 'Купить |cff0064ffМорозная щит|r'
+  ubertip_raw: TRIGSTR_29526 (sid=29526) -> '|cffb4dc8c-(+7) к броне.|r\n|cffb4dc8c-(8 ед.) урона игнорирует (5 ед. урона минимально проходит всегда).|r\nМорозный щит не только защищает носителя, но и дополнительно поглощает урон.'
+  desc_raw: TRIGSTR_12549 (sid=12549) -> '2 уровень'
+  gold: 5700 (sid=None) -> '5700'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I004 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_11688 (sid=11688) -> 'Купить |cff0064ffМорозная шлем|r'
+  ubertip_raw: TRIGSTR_21582 (sid=21582) -> '|cffb4dc8c-(+4) к броне.|r\n|cffb4dc8c-(30%) урона от скилов игнорируеться.|r\n\nНа морозный шлем были наложены чары сопротивление магии.\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: TRIGSTR_12550 (sid=12550) -> '2 уровень'
+  gold: 5600 (sid=None) -> '5600'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I005 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12079 (sid=12079) -> 'Купить |cff0064ffАмулет жизни|r'
+  ubertip_raw: TRIGSTR_27903 (sid=27903) -> '|cffb4dc8c-Увиличивает регенерацию здоровья.|r\n\nАртефакт найденный в роще ночных эльфов.'
+  desc_raw: Ускоряет регенерацию здоровья. (sid=None) -> 'Ускоряет регенерацию здоровья.'
+  gold: 1900 (sid=None) -> '1900'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I006 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_11896 (sid=11896) -> 'Купить |cff0064ffКираса неустрашимости|r'
+  ubertip_raw: TRIGSTR_30941 (sid=30941) -> '|cffb4dc8c-(+2) к броне.|r\n\nНеплохая кирасса.\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 600 (sid=None) -> '600'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I007 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_11899 (sid=11899) -> 'Купить |cff0064ffКираса правосудия|r'
+  ubertip_raw: TRIGSTR_21679 (sid=21679) -> '|cffb4dc8c- Дает способность Массовой защиты.\n-(+5) к броне.|r\n\nПравосудие восторжествует!\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 8500 (sid=None) -> '8500'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I008 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12012 (sid=12012) -> 'Купить |cff0064ffКираса Гладиатора|r'
+  ubertip_raw: TRIGSTR_29527 (sid=29527) -> '|cffb4dc8c-(+7) к силе.\n-(+4) к броне.|r\n\nЛучшие доспехи для ближнего боя по мнению рабовладельцев Кабестана.\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 8000 (sid=None) -> '8000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I009 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12027 (sid=12027) -> 'Купить |cff0064ffЛатный доспех|r'
+  ubertip_raw: TRIGSTR_27540 (sid=27540) -> '|cffb4dc8c-(+4) к броне.|r\n|cffb4dc8c-(+300) к здоровью.|r\n|cffb4dc8c-(+7) к силе.|r\n\nКаждый ребенок хотел бы себе этот доспех как мини-крепость.\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 11000 (sid=None) -> '11000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00A ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12047 (sid=12047) -> 'Купить |cff0064ff Броня с латными нашивкам|r'
+  ubertip_raw: TRIGSTR_21683 (sid=21683) -> '|cffb4dc8c-(+3) к броне.|r\n|cffb4dc8c-(+3) к ловкости.|r\n\nКрепкая, но удобная броня.\n\n|cff808080Тяжелая броня - понижает скорость боя -5%, и скорость передвижения - 20 ед.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 2100 (sid=None) -> '2100'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00B ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12050 (sid=12050) -> 'Купить |cff0064ffКожаная броня|r'
+  ubertip_raw: TRIGSTR_9722 (sid=9722) -> '|cffb4dc8c-(+60) к скорости передвижения.|r\n|cffb4dc8c-(+5) к ловкости.|r\n\nОчень удобная броня.\n\n|cff808080Легкая броня - повышает скорость передвижения на 20.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 7800 (sid=None) -> '7800'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00C ===
+  name_raw: None (sid=None) -> None
+  tip_raw: Купить знак всевидения (sid=None) -> 'Купить знак всевидения'
+  ubertip_raw: "Открывает обзор всей карты на <AIrv,Dur1> сек." (sid=None) -> '"Открывает обзор всей карты на <AIrv,Dur1> сек."'
+  desc_raw: Открывает обзор всей карты. (sid=None) -> 'Открывает обзор всей карты.'
+  gold: 5000 (sid=None) -> '5000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00D ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12830 (sid=12830) -> 'Купить |cff0064ffБроня убийцы|r'
+  ubertip_raw: TRIGSTR_28960 (sid=28960) -> '|cffb4dc8c-(+3) к регенерации здоровья.|r\n|cffb4dc8c-(+4) к защите.|r\n|cffb4dc8c-Способность Лассо убийцы(наносит 30 ед. урона в сек.|r\n\nБроня настоящего любителя крови.'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 6500 (sid=None) -> '6500'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00E ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12070 (sid=12070) -> 'Купить |cff0064ffНаплечник даларана|r'
+  ubertip_raw: TRIGSTR_30674 (sid=30674) -> '|cffb4dc8c-(+3) к регенерации здоровья.|r\n|cffb4dc8c-(+200) к маны.|r\n|cffb4dc8c-Способность Пожирание маны|r( Поглощает все бафы, де-бафы, наносит урон призваным существам при этом востанавливая владельцу здоровье).\n\nНаплечник одного из главных магов даларана.'
+  desc_raw: TRIGSTR_12551 (sid=12551) -> '2 уровень'
+  gold: 4500 (sid=None) -> '4500'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00F ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12073 (sid=12073) -> 'Купить |cff0064ffОтсечение|r'
+  ubertip_raw: TRIGSTR_9716 (sid=9716) -> '|cffb4dc8c-(+15) к урону.|r\n|cffb4dc8c-(10%) шанс нанести 2-кратный урон.|r\n\nСлишком острый топор.'
+  desc_raw: TRIGSTR_12552 (sid=12552) -> '2 уровень'
+  gold: 8000 (sid=None) -> '8000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00G ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12160 (sid=12160) -> 'Купить |cff0064ffЭльфийские сапоги|r'
+  ubertip_raw: TRIGSTR_11457 (sid=11457) -> '|cffb4dc8c-(+60) к скорости передвижения.|r\n|cffb4dc8c-Ускоряет передвижение всех союзников вокруг, время действия (30 сек) .|r\n\nСозданно лучшими мастерами луносвета.\n\n'
+  desc_raw: TRIGSTR_12553 (sid=12553) -> '2 уровень'
+  gold: 7600 (sid=None) -> '7600'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00H ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12218 (sid=12218) -> 'Купить |cff0064ffЭльфийские наручи|r'
+  ubertip_raw: TRIGSTR_39200 (sid=39200) -> '|cffb4dc8c-(+15%) Скорости боя.|r\n|cffb4dc8c-(+8) к урону.|r\n\nСозданно лучшими мастерами луносвета.\n'
+  desc_raw: TRIGSTR_12554 (sid=12554) -> '2 уровень'
+  gold: 6000 (sid=None) -> '6000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00I ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12221 (sid=12221) -> 'Купить |cff0064ffЭльфийские шлем|r'
+  ubertip_raw: TRIGSTR_39474 (sid=39474) -> '|cffb4dc8c-(40%) урона от способностей игнорируеться.|r\n\n\nСозданно лучшими мастерами луносвета. Навсегда подчиняет выбранного воина владельцу скипетра.|nНе действует на героев, а также на монстров выше <AIco,DataA1>-го уровня.|n\n'
+  desc_raw: TRIGSTR_12555 (sid=12555) -> '2 уровень'
+  gold: 5600 (sid=None) -> '5600'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00J ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12224 (sid=12224) -> 'Купить |cff0064ffЭльфийские доспех|r'
+  ubertip_raw: TRIGSTR_39475 (sid=39475) -> '|cffb4dc8c-Отражает 1 способность, в 40 сек.|r\n|cffb4dc8c-(5) к брони.|r\n\nСозданно лучшими мастерами луносвета.'
+  desc_raw: TRIGSTR_12557 (sid=12557) -> '2 уровень'
+  gold: 7000 (sid=None) -> '7000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00K ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12227 (sid=12227) -> 'Купить |cff0064ffМеховая куртка|r'
+  ubertip_raw: TRIGSTR_21910 (sid=21910) -> '|cffb4dc8c-(+200) к здоровью.|r\n|cffb4dc8c-(+100) к мане.|r\n\nТеплая куртка!\n\n|cff808080Легкая броня - повышает скорость передвижения на 20.|r'
+  desc_raw: TRIGSTR_1966 (sid=1966) -> '1 уровень'
+  gold: 125 (sid=None) -> '125'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00L ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12230 (sid=12230) -> 'Купить |cff0064ffТканевая куртка|r'
+  ubertip_raw: TRIGSTR_21934 (sid=21934) -> '|cffb4dc8c-(+200) к здоровью.|r\n|cffb4dc8c-(+100) к Маны.|r\n\nХорошая куртка.\n\n|cff808080Легкая броня - повышает скорость передвижения на 20.|r'
+  desc_raw: TRIGSTR_12556 (sid=12556) -> '1 уровень'
+  gold: 1800 (sid=None) -> '1800'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00M ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12233 (sid=12233) -> 'Купить |cff0064ffКольцо огненной магии|r'
+  ubertip_raw: TRIGSTR_15324 (sid=15324) -> '|cffb4dc8c-(+200) к мане.|r\n\nКольцо найденное в огненных недрах.'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 3000 (sid=None) -> '3000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00N ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12245 (sid=12245) -> 'Купить |cff0064ffЛатный шлем|r'
+  ubertip_raw: TRIGSTR_21685 (sid=21685) -> '|cffb4dc8c-(+5) к всем характеристикам.|r\n\nИдеально подошел бы к мини-крепости ребенка.\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 5600 (sid=None) -> '5600'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00O ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12248 (sid=12248) -> 'Купить |cff0064ffЛегендарный шлем|r'
+  ubertip_raw: TRIGSTR_9723 (sid=9723) -> '|cffb4dc8c-(+7) к всем характеристикам.|r\n\nСудя по названию он должен быть лучше...\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: TRIGSTR_8312 (sid=8312) -> '3 уровень'
+  gold: 8900 (sid=None) -> '8900'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00P ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12251 (sid=12251) -> 'Купить |cff0064ffЖелезный шлем|r'
+  ubertip_raw: TRIGSTR_38970 (sid=38970) -> '|cffb4dc8c-(10%) Шанс уклонится от атаки.|r\n\nХороший железный шлем.\n\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 3400 (sid=None) -> '3400'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00Q ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12254 (sid=12254) -> 'Купить |cff0064ffКлинок убийцы|r'
+  ubertip_raw: TRIGSTR_30275 (sid=30275) -> '|cffb4dc8c-(+15%) скорости боя.|r\n|cffb4dc8c-(+20ед) скорости передвижения.|r\n|cffb4dc8c-(3) ед. урона в сек.|r\n|cffb4dc8c-(+10) к урону.|r\n\nПозволяет всадить под ребро перо.'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 15000 (sid=None) -> '15000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00R ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12257 (sid=12257) -> 'Купить |cff0064ffТопор убийцы|r'
+  ubertip_raw: TRIGSTR_30276 (sid=30276) -> '|cffb4dc8c-(+20) к урону.|r\n|cffb4dc8c-Способность Берсерк(+35% к скорости атаки и +15% к скорости передвижения, но и +35% к получаемому урону.|r\n\nТопор с которого постоянно капает кровь.'
+  desc_raw: TRIGSTR_12590 (sid=12590) -> '2 уровень'
+  gold: 6700 (sid=None) -> '6700'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00S ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12269 (sid=12269) -> 'Купить |cff0064ffШлем убийцы|r'
+  ubertip_raw: TRIGSTR_11395 (sid=11395) -> '|cffb4dc8c-(+10) к ловкости.|r\n|cffb4dc8c-Дает способность "невидимость", длительность 20 сек.|r\n\nХраните свои ребра, когда кто то рядом надевает этот шлем.'
+  desc_raw: TRIGSTR_12677 (sid=12677) -> '2 уровень'
+  gold: 5670 (sid=None) -> '5670'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00T ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12272 (sid=12272) -> 'Купить |cff0064ffКуртка вора|r'
+  ubertip_raw: TRIGSTR_11500 (sid=11500) -> '|cffb4dc8c-(+10) к ловкости.|r\n|cffb4dc8c-Дает способность "невидимость", длительность 20 сек.|r\n\nИменно в этой куртке был украден один известный камень.'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 6700 (sid=None) -> '6700'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00U ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12278 (sid=12278) -> 'Купить |cff0064ffКапюшон вора|r'
+  ubertip_raw: TRIGSTR_21935 (sid=21935) -> '|cffb4dc8c-Способность "Ясновидение".|r\n|cffb4dc8c-(+5) к ловкости.|r\n\nПозволяет увидеть то, что не видят обычные смерти.\n\n|cff808080Легкая броня - повышает скорость передвижения на 20.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 1900 (sid=None) -> '1900'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00V ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12281 (sid=12281) -> 'Купить |cff0064ffКапюшон вора|r'
+  ubertip_raw: TRIGSTR_11897 (sid=11897) -> '|cffb4dc8c-Скорость передвижения увеличена на (80 ед).|r\n|cffb4dc8c-(+5) к ловкости.|r\n\nТихие и быстре ботинки.'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 3000 (sid=None) -> '3000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00W ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_29904 (sid=29904) -> 'Купить |cff0064ffОдеяние Даларана|r'
+  ubertip_raw: TRIGSTR_39476 (sid=39476) -> '|cffb4dc8c-(10 ед.) к интеллекту.|r\n|cffb4dc8c-(200 ед.) к мане.|r\n|cffb4dc8c-Щит маны.|r\n\nОдияние соткано из пропитанных магией воды нитей.'
+  desc_raw: TRIGSTR_12678 (sid=12678) -> '2 уровень'
+  gold: 7000 (sid=None) -> '7000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00X ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12559 (sid=12559) -> 'Купить |cff0064ffКольцо владыки морей|r'
+  ubertip_raw: TRIGSTR_38971 (sid=38971) -> '|cffb4dc8c-Дает способность Ледяное кольцо.|r\n|cffb4dc8c-(+10) к интеллекту.|r\n\nКольцо найденное в недрах Цитадели Ледяной Короны.'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 4500 (sid=None) -> '4500'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00Y ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12310 (sid=12310) -> 'Купить |cff0064ffКольцо астрала|r'
+  ubertip_raw: TRIGSTR_1973 (sid=1973) -> '|cffb4dc8c-Способность изгнать в астрал.|r\nЛегкий артефакт, найденый на пути в даларан.\n|cffffff00Для использования необходимо кликом правой клавиши указать цель.|r'
+  desc_raw: Атаки героя наносят урон от молнии. (sid=None) -> 'Атаки героя наносят урон от молнии.'
+  gold: 5000 (sid=None) -> '5000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I00Z ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12313 (sid=12313) -> 'Купить |cff0064ffМаска владыки мертвых|r'
+  ubertip_raw: TRIGSTR_1974 (sid=1974) -> '|cffb4dc8c-Позволяет подчинять нежить с 50% шансом, перезарядка 10 сек..|r\nМаска создана очень талантливым неркомантом.\n|cffffff00Для использования необходимо кликом правой клавиши указать цель.|r'
+  desc_raw: Атаки героя наносят урон от молнии. (sid=None) -> 'Атаки героя наносят урон от молнии.'
+  gold: 1300 (sid=None) -> '1300'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I010 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12316 (sid=12316) -> 'Купить |cff0064ffЧерепокол|r'
+  ubertip_raw: TRIGSTR_15979 (sid=15979) -> '|cffb4dc8c-(+15) к урону.|r\n|cffb4dc8c-Способность критический удар, 10% шанс нанести 3-кратный урон.|r\n\nГрозное оружие в сильных руках.'
+  desc_raw: TRIGSTR_12561 (sid=12561) -> '3 уровень'
+  gold: 4500 (sid=None) -> '4500'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I011 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12319 (sid=12319) -> 'Купить |cff0064ffСумерки|r'
+  ubertip_raw: TRIGSTR_35359 (sid=35359) -> '|cffb4dc8c-(+20) к урону.|r\n|cffb4dc8c-(+10%) Аура вампиризма.|r \n\nМечь настоящего кровопускателя.'
+  desc_raw: TRIGSTR_12583 (sid=12583) -> '3 уровень'
+  gold: 8900 (sid=None) -> '8900'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I012 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12563 (sid=12563) -> 'Купить |cff0064ffНаручи гладиатора|r'
+  ubertip_raw: TRIGSTR_599 (sid=599) -> '|cffb4dc8c-(+15%) к скорости боя.|r\n|cffb4dc8c-(5 ед.) к ловкости.|r\n|cffb4dc8c-Способность Пожирание магии, востанавливает здоровье при рассеивании заклинаний.|r\n\n\nНаручи сильнейшего воина.'
+  desc_raw: TRIGSTR_12679 (sid=12679) -> '2 уровень'
+  gold: 7000 (sid=None) -> '7000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I013 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12566 (sid=12566) -> 'Купить |cff0064ffШлем рыцаря|r'
+  ubertip_raw: TRIGSTR_21753 (sid=21753) -> '|cffb4dc8c-Способность увеличения брони союзникам рядом.|r\n|cffb4dc8c-(7 ед.) к силе.|r\n\nОбедневший рыцарь, продал фамильные реликвии.\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: TRIGSTR_12681 (sid=12681) -> '2 уровень'
+  gold: 7000 (sid=None) -> '7000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I014 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12569 (sid=12569) -> 'Купить |cff0064ffШлем палача|r'
+  ubertip_raw: TRIGSTR_10421 (sid=10421) -> '|cffb4dc8c-Поглощает 33% маг урона.|r\n|cffb4dc8c-(+7) к ловкости.|r\n|cffb4dc8c-(+10) к силе.|r\n\nШлем запятнан кровью.'
+  desc_raw: TRIGSTR_12680 (sid=12680) -> '3 уровень'
+  gold: 6700 (sid=None) -> '6700'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I015 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12571 (sid=12571) -> '|cff0064ffКамень телепортации|r'
+  ubertip_raw: TRIGSTR_4449 (sid=4449) -> 'Телепортирует героя к дружественной постройке.'
+  desc_raw: TRIGSTR_9734 (sid=9734) -> 'Телепортирует героя к дружественной постройке.'
+  gold: 650 (sid=None) -> '650'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I016 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12575 (sid=12575) -> 'Купить |cff0064ffДоспех палача|r'
+  ubertip_raw: TRIGSTR_21790 (sid=21790) -> '|cffb4dc8c-(25%.) к уклонению .|r\n|cffb4dc8c-(+10 .) к ловкости.|r\n\nДоспех позволяющий очень долго преследовать цель.\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 6000 (sid=None) -> '6000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I017 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12578 (sid=12578) -> 'Купить |cff0064ffДоспех паладина|r'
+  ubertip_raw: TRIGSTR_34875 (sid=34875) -> '|cffb4dc8c-Способность востановление на 450 е .|r\n|cffb4dc8c-Аура (+5 %.) к скорости передвижения и +1 здоровья в секунду.|r\n|cffb4dc8c-(+450 ед.) к здоровью.|r\n\nКлассический доспех паладина, помогает в трудную минуту.\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 9700 (sid=None) -> '9700'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I018 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12581 (sid=12581) -> 'Купить |cff0064ffЩит рыцаря|r'
+  ubertip_raw: TRIGSTR_21792 (sid=21792) -> '|cffb4dc8c-(+5) к броне.|r\n|cffb4dc8c-Поглощает заклинание 1 раз в минуту.|r\n\nЩит с странными рунами.\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: TRIGSTR_12683 (sid=12683) -> '3 уровень'
+  gold: 4500 (sid=None) -> '4500'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I019 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_21968 (sid=21968) -> 'Купить |cff0064ffЗолотое кольцо|r'
+  ubertip_raw: TRIGSTR_21969 (sid=21969) -> '|cffb4dc8c-Золотое поглощение.|r\n|cffb4dc8c-(+10) к урону.|r\n\nКольцо найденное в огненных недрах. Мгновенно уничтожает цель, превращая ее в золото. <AIts,DataA1,%>% от стоимости цели прибавляется к вашему запасу золота.|n|cff808080Не действует на героев, а также на монстров выше <AIts,DataC1>-го уровня.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 2800 (sid=None) -> '2800'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01A ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12588 (sid=12588) -> 'Купить |cff0064ffПерчатки убийцы|r'
+  ubertip_raw: TRIGSTR_12286 (sid=12286) -> '|cffb4dc8c-(+20%) к скорости атаки.|r\n|cffb4dc8c-(+10) к Ловкости.|r\n\nПерчатки омытые сотней кровавых рек.'
+  desc_raw: TRIGSTR_12682 (sid=12682) -> '2 уровень'
+  gold: 7000 (sid=None) -> '7000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01B ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12592 (sid=12592) -> 'Купить |cff0064ffЩит|r'
+  ubertip_raw: TRIGSTR_38972 (sid=38972) -> '|cffb4dc8c-(+5) к броне.|r\n|cffb4dc8c-(-100 ед.) к скорости передвижения.|r\n\nОчень хороший, но очень тяжелый щит.\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: TRIGSTR_12594 (sid=12594) -> '1 уровень'
+  gold: 700 (sid=None) -> '700'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01C ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12596 (sid=12596) -> 'Купить |cff0064ff|cff0064ffДоспех Верховного воина|r|r'
+  ubertip_raw: TRIGSTR_38973 (sid=38973) -> '|cffb4dc8c-(+300) к здоровью.|r\n|cffb4dc8c-(+4) к защите.|r\n|cffb4dc8c-(10%) поглощения магического урона.|r\nБроня сильнейшего воина азерота.\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 12000 (sid=None) -> '12000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01D ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12599 (sid=12599) -> 'Купить |cff0064ffСикира Верховного воина|r'
+  ubertip_raw: TRIGSTR_35360 (sid=35360) -> '|cffb4dc8c-(+25) к урону.|r\n|cffb4dc8c-(-30%) к скорости боя.|r\n|cffb4dc8c-Способность критический удар, с шансом 10%, 3-кратный урон.|r\n\nНа удивление очень легкая сикира.\n\n|cff808080Тяжелая оружие - понижает скорость боя на 5%.|r'
+  desc_raw: TRIGSTR_12684 (sid=12684) -> '3 уровень'
+  gold: 12000 (sid=None) -> '12000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01E ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12602 (sid=12602) -> 'Купить |cff0064ffМечь Верховного воина|r'
+  ubertip_raw: TRIGSTR_15984 (sid=15984) -> '|cffb4dc8c-(20%) к урону по героям.|r\n|cffb4dc8c-(+25) к урону.|r \n\nМечь настоящего убийцы героев.'
+  desc_raw: TRIGSTR_12686 (sid=12686) -> '3 уровень'
+  gold: 12000 (sid=None) -> '12000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01F ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12605 (sid=12605) -> 'Купить |cff0064ffЛук Верховного воина|r'
+  ubertip_raw: TRIGSTR_35361 (sid=35361) -> '|cffb4dc8c-(+10) к урону.|r\n|cffb4dc8c-(+10) к ловкости.\n-(10%)к скорости боя.|r\nОружие дальнего боя, самого сильного воина.'
+  desc_raw: TRIGSTR_12687 (sid=12687) -> '3 уровень'
+  gold: 12000 (sid=None) -> '12000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01G ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12608 (sid=12608) -> 'Купить |cff0064ffМолот Верховного воина|r'
+  ubertip_raw: TRIGSTR_21797 (sid=21797) -> '|cffb4dc8c-(+15) к урону.|r\n|cffb4dc8c-Способность сокрушение.|r\n\nРадиус поражение слишком большой.\n\n|cff808080Тяжелая оружие - понижает скорость боя на 5%.|r'
+  desc_raw: TRIGSTR_12688 (sid=12688) -> '3 уровень'
+  gold: 12000 (sid=None) -> '12000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01H ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12611 (sid=12611) -> 'Купить |cff0064ffТапки скороходы|r'
+  ubertip_raw: TRIGSTR_26685 (sid=26685) -> '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает ядовитые эффекты атак пехоты и стрелков армии Отрекшихся.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМёртвый воин|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deТёмный следопыт|cffced4da|n- |cffa9c7deСтраж Смерти|cffced4da|n- |cffa9c7deУбийца|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/4|r.'
+  desc_raw: TRIGSTR_12613 (sid=12613) -> '1 уровень'
+  gold: 1500 (sid=None) -> '1500'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01I ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12615 (sid=12615) -> 'Купить |cff0064ffЛук кровопускания|r'
+  ubertip_raw: TRIGSTR_35362 (sid=35362) -> '|cffb4dc8c-Способности Кровотичение.|r\n|cffb4dc8c-(+8) к урону.|r\n\nБыл найден в разрушеной деревни.'
+  desc_raw: TRIGSTR_12685 (sid=12685) -> '2 уровень'
+  gold: 9000 (sid=None) -> '9000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01J ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12618 (sid=12618) -> 'Купить |cff0064ffПосох безумца|r'
+  ubertip_raw: TRIGSTR_12320 (sid=12320) -> '|cffb4dc8c-Способность Безумие.|r\n|cffb4dc8c-(+5) к Интеллекту.|r\n\nПосох найден при раскопках в Ульдуме.'
+  desc_raw: TRIGSTR_12620 (sid=12620) -> '1 уровень'
+  gold: 4300 (sid=None) -> '4300'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01K ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12622 (sid=12622) -> 'Купить |cff0064ffИллюзорный плащ|r'
+  ubertip_raw: TRIGSTR_34887 (sid=34887) -> '|cffb4dc8c-(+5) к интеллекту.|r\n\n\n\n|cff808080Легкая броня - повышает скорость передвижения на 20.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 2300 (sid=None) -> '2300'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01L ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12625 (sid=12625) -> 'Купить |cff0064ffКирасса волшебства|r'
+  ubertip_raw: TRIGSTR_21798 (sid=21798) -> '|cffb4dc8c-(+2) к регенерации маны.|r\n|cffb4dc8c-(+5) к интеллекту.|r\n|cffb4dc8c-(+400) к мане.|r\n\nОчень нестандартная броня для мага.\n\n|cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 6500 (sid=None) -> '6500'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01M ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12628 (sid=12628) -> 'Купить |cff0064ffМечь антимагии|r'
+  ubertip_raw: TRIGSTR_18869 (sid=18869) -> '|cffb4dc8c-Способность Сожжение маны.|r\n|cffb4dc8c-(+10) к урону.|r\n|cffb4dc8c-Аура сожжения маны (-3) ед.|r\n\nИдеальное оружие против магов.'
+  desc_raw: TRIGSTR_12690 (sid=12690) -> '2 уровень'
+  gold: 7000 (sid=None) -> '7000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01N ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12631 (sid=12631) -> 'Купить |cff0064ffШлем антимагии|r'
+  ubertip_raw: TRIGSTR_35419 (sid=35419) -> '|cffb4dc8c-(25%) снижает урон от магических способностей.|r\n|cffb4dc8c-(+4) к броне.|r\n|cffb4dc8c-Способность антимагический щит (поглощает 300 ед. магического урона).|r\n\nОдин охотник на демонов хотел надеть этот шлем, но рога помешали...'
+  desc_raw: TRIGSTR_12692 (sid=12692) -> '2 уровень'
+  gold: 5600 (sid=None) -> '5600'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01O ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12634 (sid=12634) -> 'Купить |cff0064ffШлем паладина|r'
+  ubertip_raw: TRIGSTR_39477 (sid=39477) -> '|cffb4dc8c-Способность воскрешение 10 дружественных войск.|r\n|cffb4dc8c-(+4) к броне.|r\n\nШлем спасающий ближнего своего.'
+  desc_raw: TRIGSTR_12693 (sid=12693) -> '2 уровень'
+  gold: 7500 (sid=None) -> '7500'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01P ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12637 (sid=12637) -> 'Купить |cff0064ffКрушитель|r'
+  ubertip_raw: TRIGSTR_28272 (sid=28272) -> '|cffb4dc8c-(10%) больше урона наносит зданиям.|r\n|cffb4dc8c-(+10) к урону.|r\n\nСлишком большой размах.\n\n|cff808080Тяжелая оружие - понижает скорость боя на 5%.|r'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 5600 (sid=None) -> '5600'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01Q ===
+  name_raw: None (sid=None) -> None
+  tip_raw: |cffe4cfa3Касание безумия|r (|cffffffffB|r) (sid=None) -> '|cffe4cfa3Касание безумия|r (|cffffffffB|r)'
+  ubertip_raw: |cffa6afb8ПРЕДМЕТ:|cffced4da Частица силы Йогг`Сарона. Даёт герою |cffc8e087+15|cffced4da к силе, ловкости и интеллекту.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТёмное усиление|cffced4da: на |cffffffff45|cffced4da сек. повышает урон союзников в радиусе |cffffffff500|cffced4da на |cffc8e08735%|cffced4da.|n- |cffa9c7deПорождение щупальца|cffced4da: создаёт Щупальце Йогг`Сарона на |cffffffff180|cffced4da сек.|n- |cffa9c7deАура отголоска Йогг`Сарона|cffced4da: союзники ближнего боя в радиусе |cffffffff1500|cffced4da получают |cffc8e08710%|cffced4da вампиризма.|n|nДля применения заклинаний откройте меню предмета.|r (sid=None) -> '|cffa6afb8ПРЕДМЕТ:|cffced4da Частица силы Йогг`Сарона. Даёт герою |cffc8e087+15|cffced4da к силе, ловкости и интеллекту.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТёмное усиление|cffced4da: на |cffffffff45|cffced4da сек. повышает урон союзников в радиусе |cffffffff500|cffced4da на |cffc8e08735%|cffced4da.|n- |cffa9c7deПорождение щупальца|cffced4da: создаёт Щупальце Йогг`Сарона на |cffffffff180|cffced4da сек.|n- |cffa9c7deАура отголоска Йогг`Сарона|cffced4da: союзники ближнего боя в радиусе |cffffffff1500|cffced4da получают |cffc8e08710%|cffced4da вампиризма.|n|nДля применения заклинаний откройте меню предмета.|r'
+  desc_raw: |cffa6afb8ПРЕДМЕТ:|cffced4da Даёт герою |cffc8e087+15|cffced4da ко всем характеристикам, ауру вампиризма и два заклинания: Тёмное усиление и Порождение щупальца.|r (sid=None) -> '|cffa6afb8ПРЕДМЕТ:|cffced4da Даёт герою |cffc8e087+15|cffced4da ко всем характеристикам, ауру вампиризма и два заклинания: Тёмное усиление и Порождение щупальца.|r'
+  gold: 325 (sid=None) -> '325'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01R ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_20867 (sid=20867) -> "Знак К'Туна"
+  ubertip_raw: TRIGSTR_20870 (sid=20870) -> "Артефакт, в котором заключена часть силы древнего Бога К'туна.\nГерой получает 15 ко всем характеристикам и ауру."
+  desc_raw: TRIGSTR_20868 (sid=20868) -> "Знак К'Туна"
+  gold: 325 (sid=None) -> '325'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01S ===
+  name_raw: None (sid=None) -> None
+  tip_raw: Купить кольцо регенерации (sid=None) -> 'Купить кольцо регенерации'
+  ubertip_raw: "Ускоряет регенерацию здоровья героя на <Arel,DataA1>/сек." (sid=None) -> '"Ускоряет регенерацию здоровья героя на <Arel,DataA1>/сек."'
+  desc_raw: Ускоряет регенерацию здоровья. (sid=None) -> 'Ускоряет регенерацию здоровья.'
+  gold: 300 (sid=None) -> '300'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01T ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_22038 (sid=22038) -> 'Купить |cff0064ffКамень телепортации|r'
+  ubertip_raw: Переносит героя к наземному союзнику или союзному зданию. (sid=None) -> 'Переносит героя к наземному союзнику или союзному зданию.'
+  desc_raw: TRIGSTR_22036 (sid=22036) -> 'Камень телепортации'
+  gold: 150 (sid=None) -> '150'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01U ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12284 (sid=12284) -> 'Купить |cff0064ffОдияние Даларана|r'
+  ubertip_raw: TRIGSTR_729 (sid=729) -> 'Сильнейший артефакт, усиливающий урон от способностей на 25%, повышающий интеллект на 25 и запас маны на 400.\n\nПри погрузке на дирижабль автоматически преобразуется в Мана-бомбу.'
+  desc_raw: TRIGSTR_25211 (sid=25211) -> '10 уровень'
+  gold: 7000 (sid=None) -> '7000'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01V ===
+  name_raw: None (sid=None) -> None
+  tip_raw: Купить руну защиты (sid=None) -> 'Купить руну защиты'
+  ubertip_raw: "Дает находящимся рядом союзникам щит, который блокирует следующую вражескую вредоносную способность." (sid=None) -> '"Дает находящимся рядом союзникам щит, который блокирует следующую вражескую вредоносную способность."'
+  desc_raw: "Дает находящимся рядом войскам щит, блокирующий одну вражескую способность." (sid=None) -> '"Дает находящимся рядом войскам щит, блокирующий одну вражескую способность."'
+  gold: 300 (sid=None) -> '300'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01W ===
+  name_raw: None (sid=None) -> None
+  tip_raw: Купить руну исцеления (sid=None) -> 'Купить руну исцеления'
+  ubertip_raw: "Восполняет находящимся рядом союзникам <APh2,DataA1> здоровья. Не действует на технику." (sid=None) -> '"Восполняет находящимся рядом союзникам <APh2,DataA1> здоровья. Не действует на технику."'
+  desc_raw: Восполняет здоровье находящихся рядом войск. (sid=None) -> 'Восполняет здоровье находящихся рядом войск.'
+  gold: 200 (sid=None) -> '200'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01X ===
+  name_raw: None (sid=None) -> None
+  tip_raw: Купить мощную руну исцеления (sid=None) -> 'Купить мощную руну исцеления'
+  ubertip_raw: "Восполняет находящимся рядом союзникам <APh3,DataA1> здоровья. Не действует на технику." (sid=None) -> '"Восполняет находящимся рядом союзникам <APh3,DataA1> здоровья. Не действует на технику."'
+  desc_raw: Восполняет здоровье находящихся рядом войск. (sid=None) -> 'Восполняет здоровье находящихся рядом войск.'
+  gold: 300 (sid=None) -> '300'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01Y ===
+  name_raw: None (sid=None) -> None
+  tip_raw: Купить руну скорости (sid=None) -> 'Купить руну скорости'
+  ubertip_raw: "Ускоряет передвижение находящихся рядом союзников до максимума. |nВремя действия: <APsa,Dur1> сек." (sid=None) -> '"Ускоряет передвижение находящихся рядом союзников до максимума. |nВремя действия: <APsa,Dur1> сек."'
+  desc_raw: Ускоряет передвижение войск. (sid=None) -> 'Ускоряет передвижение войск.'
+  gold: 200 (sid=None) -> '200'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I01Z ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_29649 (sid=29649) -> 'Помощь света'
+  ubertip_raw: TRIGSTR_29650 (sid=29650) -> 'Помощь света'
+  desc_raw: TRIGSTR_29647 (sid=29647) -> 'Помощь света'
+  gold: 200 (sid=None) -> '200'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I020 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_29057 (sid=29057) -> 'Руна иллюзий дамми'
+  ubertip_raw: TRIGSTR_29058 (sid=29058) -> 'Руна иллюзий дамми'
+  desc_raw: TRIGSTR_29055 (sid=29055) -> 'Руна иллюзий дамми'
+  gold: 200 (sid=None) -> '200'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I021 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_39360 (sid=39360) -> 'Надменный взгляд'
+  ubertip_raw: TRIGSTR_39362 (sid=39362) -> "Артефакт, наполенный силой И'Шараджа. Носящий его слишком долго становится горделив, а потому - уявим. При нажатии порождает отголосок гордыни, быстро производящий себе подобных, а также дает ауру и 15+ ко всем характеристикам."
+  desc_raw: TRIGSTR_39361 (sid=39361) -> 'Надменный взгляд'
+  gold: 325 (sid=None) -> '325'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I02S ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_10340 (sid=10340) -> 'Купить |cff0064ffШлем|r'
+  ubertip_raw: TRIGSTR_15986 (sid=15986) -> '|cffb4dc8c-(+3) к брони.|r\n\nСделан из меди.'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 300 (sid=None) -> '300'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I02T ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_10395 (sid=10395) -> 'Купить |cff0064ffКинжал|r'
+  ubertip_raw: TRIGSTR_13606 (sid=13606) -> '|cffb4dc8c-(+6) к урону.|r\nХорошо наточеный кинжал.'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 400 (sid=None) -> '400'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I02W ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12825 (sid=12825) -> 'Купить  |cff0064ffШлем гладиатора|r'
+  ubertip_raw: TRIGSTR_168 (sid=168) -> '|cffb4dc8c-(+10 сек.) неуязвимости (60 секунд перезарядки).|r\n|cffb4dc8c-(+10) к ловкости.|r\n\nСпасает в самую трудную минуту.'
+  desc_raw: TRIGSTR_12694 (sid=12694) -> '2 уровень'
+  gold: 7800 (sid=None) -> '7800'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I02X ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_12834 (sid=12834) -> 'Купить |cff0064ffМеч|r'
+  ubertip_raw: TRIGSTR_13608 (sid=13608) -> '|cffb4dc8c-(+5) к урону.|r\nНормальный.'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 500 (sid=None) -> '500'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I02Y ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_8310 (sid=8310) -> 'Купить |cff0064ffМолот |r'
+  ubertip_raw: TRIGSTR_21801 (sid=21801) -> '|cffb4dc8c-(+7) к урону.|r\n\nОчень тяжелый.\n\n|cff808080Тяжелая оружие - понижает скорость боя на 5%.|r'
+  desc_raw: TRIGSTR_12689 (sid=12689) -> '3 уровень'
+  gold: 700 (sid=None) -> '700'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I02Z ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_13128 (sid=13128) -> 'Купить |cff0064ffТопор|r'
+  ubertip_raw: TRIGSTR_13610 (sid=13610) -> '|cffb4dc8c-(+5) к урону.|r\nДрова колит, прекрасно.'
+  desc_raw: +2 к броне. (sid=None) -> '+2 к броне.'
+  gold: 500 (sid=None) -> '500'
+  lumber: 0 (sid=None) -> '0'
+=== ITEM I030 ===
+  name_raw: None (sid=None) -> None
+  tip_raw: TRIGSTR_1965 (sid=1965) -> 'Купить |cff0064ffПерчатки|r'
+  ubertip_raw: TRIGSTR_13611 (sid=13611) -> '|cffb4dc8c-(+10%) Скорости боя.|r\nПрикрывают руку.'
+  desc_raw: TRIGSTR_12691 (sid=12691) -> '1 уровень'
+  gold: 125 (sid=None) -> '125'
+  lumber: 0 (sid=None) -> '0'

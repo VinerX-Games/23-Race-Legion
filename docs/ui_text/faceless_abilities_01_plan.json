@@ -1,0 +1,58 @@
+{
+  "operations": [
+    {
+      "type": "ability",
+      "id": "A10X",
+      "field": "name",
+      "value": "|cffe4cfa3Разрушение Эфира|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10X",
+      "field": "tip1",
+      "value": "|cffe4cfa3Разрушение Эфира|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10X",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке сжигает до |cffffffff20|cffced4da ед. маны у обычного противника или до |cffffffff10|cffced4da ед. у героя. Каждая сожжённая единица маны наносит |cffffffff2|cffced4da ед. урона.|n|n|cffe6c07bТребуется исследование «Разрушение Эфира».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10W",
+      "field": "name",
+      "value": "|cffe4cfa3Сотрясение Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10W",
+      "field": "tip1",
+      "value": "|cffe4cfa3Сотрясение Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10W",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff10%|cffced4da атака наносит |cffffffff10|cffced4da дополнительного урона и оглушает цель на |cffffffff0,5|cffced4da сек. Герои оглушаются на |cffffffff0,2|cffced4da сек.|n|n|cffe6c07bТребуется исследование «Улучшение Сущности».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10Z",
+      "field": "name",
+      "value": "|cffe4cfa3Сила Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10Z",
+      "field": "tip1",
+      "value": "|cffe4cfa3Сила Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10Z",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff15%|cffced4da атака наносит |cffffffff1,9|cffced4da-кратный урон.|r"
+    }
+  ]
+}

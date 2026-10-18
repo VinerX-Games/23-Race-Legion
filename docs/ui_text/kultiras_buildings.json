@@ -1,0 +1,282 @@
+{
+  "scope": "Кул-Тирас (Kul Tiras): категория 1 — Здания (13 зданий)",
+  "buildings_count": 13,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "h01X",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17330,
+          "after": "|cffe4cfa3Ратуша|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 4498,
+          "after": "|cffe4cfa3Ратуша|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 4499,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Кул-Тираса первой ступени. Обучает работников и служит складом древесины.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deФорт|cffced4da: открывает доступ к передовым сооружениям и войскам Кул-Тираса.|r"
+        }
+      ]
+    },
+    {
+      "id": "h01Y",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17332,
+          "after": "|cffe4cfa3Форт|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17333,
+          "after": "|cffe4cfa3Форт|r (|cffffffffU|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10185,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Кул-Тираса второй ступени. Открывает доступ к Храму Жрецов Моря, Мастерской и передовым войскам.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deИнвестировать в Флот|cffced4da.|n- |cffa9c7deИнвестировать в Армию|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deЗамок|cffced4da: открывает доступ к высшим военным технологиям и элитным силам флота.|r"
+        }
+      ]
+    },
+    {
+      "id": "h01Z",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17334,
+          "after": "|cffe4cfa3Замок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17335,
+          "after": "|cffe4cfa3Замок|r (|cffffffffU|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10186,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Кул-Тираса третьей ступени. Открывает доступ к высшим военным технологиям и элитным силам флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h020",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17336,
+          "after": "|cffe4cfa3Оружейная|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17337,
+          "after": "|cffe4cfa3Оружейная|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12960,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Кузница и арсенал Кул-Тираса. Разрабатывает базовые улучшения атаки и защиты пехоты, стрелков и заклинателей.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЖелезные мечи|cffced4da: увеличивает урон ближнего боя.|n- |cffa9c7deЖелезная броня|cffced4da: повышает защиту тяжелой пехоты.|n- |cffa9c7deДоспехи из клепаной кожи|cffced4da: повышает защиту стрелков и морских волков.|n- |cffa9c7deЧерный порох|cffced4da: увеличивает урон стрелков и мортир.|n- |cffa9c7deМагическая атака|cffced4da: увеличивает урон жрецов штормов.|r"
+        }
+      ]
+    },
+    {
+      "id": "h021",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17338,
+          "after": "|cffe4cfa3Глубинный Алтарь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17339,
+          "after": "|cffe4cfa3Глубинный Алтарь|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12955,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Священный алтарь глубин. Позволяет призывать легендарных героев Кул-Тираса и воскрешать их в случае гибели.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deКапитан|cffced4da: мастер фехтования и дуэлей.|n- |cffa9c7deВерховная Жрица Морей|cffced4da: повелительница стихии воды и морозных штормов.|n- |cffa9c7deАдмирал|cffced4da: закалённый флотоводец и мастер меткой стрельбы.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0G6",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 18235,
+          "after": "|cffe4cfa3Глубинный Алтарь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 18236,
+          "after": "|cffe4cfa3Глубинный Алтарь|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 22586,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Священный алтарь глубин. Позволяет призывать легендарных героев Кул-Тираса и воскрешать их в случае гибели.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deКапитан|cffced4da: мастер фехтования и дуэлей.|n- |cffa9c7deВерховная Жрица Морей|cffced4da: повелительница стихии воды и морозных штормов.|n- |cffa9c7deАдмирал|cffced4da: закалённый флотоводец и мастер меткой стрельбы.|r"
+        }
+      ]
+    },
+    {
+      "id": "h022",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17340,
+          "after": "|cffe4cfa3Казармы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17341,
+          "after": "|cffe4cfa3Казармы|r (|cffffffffB|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12956,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Военный комплекс для подготовки регулярных сухопутных войск Кул-Тираса.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deГвардеец|cffced4da.|n- |cffa9c7deРыцарь|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da.|n- |cffa9c7deПерековка меча|cffced4da.|n- |cffa9c7deМастерство|cffced4da.|n- |cffa9c7deТренировка ветерана|cffced4da.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da.|n- |cffa9c7deУдлиненные стволы|cffced4da.|n- |cffa9c7deТренировка с порохом|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h023",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17342,
+          "after": "|cffe4cfa3Лесопилка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17343,
+          "after": "|cffe4cfa3Лесопилка|r (|cffffffffL|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12961,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Лесопильный комбинат Кул-Тираса. Служит складом древесины и центром укрепления построек.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенная кладка|cffced4da: повышает прочность и броню построек.|n- |cffa9c7deУлучшенные топоры|cffced4da: увеличивает переносимый работниками объём древесины.|r"
+        }
+      ]
+    },
+    {
+      "id": "h024",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 17344,
+          "after": "|cffe4cfa3Ферма|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 17345,
+          "after": "|cffe4cfa3Ферма|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31626,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию Кул-Тираса запасом пищи и вырабатывает регулярный доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+20|cffced4da золота каждые |cffffffff25|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "h025",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 9696,
+          "after": "|cffe4cfa3Сторожевая Башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 11394,
+          "after": "|cffe4cfa3Сторожевая Башня|r (|cffffffffT|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31627,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное укрепление Кул-Тираса. Ведёт автоматический обстрел приближающихся противников.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h026",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 11908,
+          "after": "|cffe4cfa3Храм Жрецов Моря|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 12080,
+          "after": "|cffe4cfa3Храм Жрецов Моря|r (|cffffffffM|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12953,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище морских жрецов и полевых целителей Кул-Тираса.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЖрец Штормов|cffced4da.|n- |cffa9c7deПалубный Доктор|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deФолиант познаний магии морей|cffced4da.|n- |cffa9c7deОбучение доктора|cffced4da.|n- |cffa9c7deВысшее познание|cffced4da.|n- |cffa9c7deЖертвоприношение Владыкам Моря|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "h027",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12166,
+          "after": "|cffe4cfa3Мастерская|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 12260,
+          "after": "|cffe4cfa3Мастерская|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12954,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Военная мануфактура Кул-Тираса. Подготавливает тяжелых алебардщиков, морских волков и мортирные расчеты, а также исследует артиллерийские технологии.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deАлебардщик|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n- |cffa9c7deМортирный расчет|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deШрапнель|cffced4da.|n- |cffa9c7deЗаточка и освящение|cffced4da.|n- |cffa9c7deСвинцовые пули|cffced4da.|n- |cffa9c7deНовый сплав|cffced4da.|n- |cffa9c7deУвеличение количества пороха|cffced4da.|n- |cffa9c7deОглушающий выстрел|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "kt02",
+      "hotkey": "X",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31999,
+          "after": "|cffe4cfa3Храм Моря|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 20294,
+          "after": "|cffe4cfa3Храм Моря|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 25340,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Величественный морской собор Кул-Тираса. Служит центром подношений морским божествам и сбора авангардных отрядов королевства.|r"
+        }
+      ]
+    }
+  ]
+}

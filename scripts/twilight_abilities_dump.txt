@@ -1,0 +1,498 @@
+=== ABILITY A01C (levels: 1) ===
+ Name: Графика: Свечение героя (raw: TRIGSTR_2038)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: Графика: Свечение героя (raw: TRIGSTR_2039)
+   ubertip: None (raw: None)
+
+=== ABILITY A01Z (levels: 1) ===
+ Name: Коррозия бездны (raw: TRIGSTR_1936)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: Коррозия бездны (raw: TRIGSTR_1937)
+   ubertip: Коррозия бездны наносит <ACvs,DataA1> урона/сек. |nВремя действия: <ACvs,Dur1> сек. (raw: TRIGSTR_1938)
+
+=== ABILITY A09Q (levels: 1) ===
+ Name: |cffd7b4f6Тяжелые удары|r (raw: TRIGSTR_6819)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Тяжелые удары|r (raw: TRIGSTR_6820)
+   ubertip: +<Ahsb,DataB1,%>% к урону по целям со тяжелой броней. (raw: TRIGSTR_20136)
+
+=== ABILITY A09R (levels: 1) ===
+ Name: |cffd7b4f6Порча|r (raw: TRIGSTR_6823)
+ Hotkey: T (raw: T), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Порча|r (raw: TRIGSTR_6824)
+   ubertip: Наночит доп урон атакованой цели (raw: TRIGSTR_7658)
+
+=== ABILITY A09S (levels: 1) ===
+ Name: |cffd7b4f6Замедление|r (raw: TRIGSTR_6826)
+ Hotkey: W (raw: W), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Замедление|r (raw: TRIGSTR_6827)
+   ubertip: Замедляет атаку врага на <Aslo,DataB1,%>% и передвижение на 35%. |nВремя действия: <Aslo,Dur1> сек. (raw: TRIGSTR_39177)
+
+=== ABILITY A09T (levels: 1) ===
+ Name: |cffd7b4f6Опутывание|r (raw: TRIGSTR_6830)
+ Hotkey: E (raw: E), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Опутывание|r (raw: TRIGSTR_6831)
+   ubertip: Притягивает врага к земле и обездвиживает его на 8 сек. На героев практически не действует. (raw: TRIGSTR_6829)
+
+=== ABILITY A09U (levels: 1) ===
+ Name: |cffd7b4f6Опутывание|r (raw: TRIGSTR_6832)
+ Hotkey: W (raw: TRIGSTR_13294), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Опутывание|r (raw: TRIGSTR_6834)
+   ubertip: Притягивает врага к земле и обездвиживает его на 8 сек. Опутанные воздушные цели считаются наземными. (raw: TRIGSTR_965)
+
+=== ABILITY A09V (levels: 1) ===
+ Name: |cffd7b4f6Жажда крови|r (raw: TRIGSTR_6836)
+ Hotkey: W (raw: TRIGSTR_13359), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Жажда крови|r (raw: TRIGSTR_6837)
+   ubertip: "+<Ablo,DataA1,%>% к скорости атаки и +<Ablo,DataB1,%>% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur1> сек." (raw: "+<Ablo,DataA1,%>% к скорости атаки и +<Ablo,DataB1,%>% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur1> сек.")
+
+=== ABILITY A09W (levels: 1) ===
+ Name: |cffd7b4f6Благодать древних богов|r (raw: TRIGSTR_6839)
+ Hotkey: Q (raw: TRIGSTR_12753), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Благодать древних богов|r (raw: TRIGSTR_6841)
+   ubertip: Востанавливает хп союзникам по близости. (raw: TRIGSTR_4102)
+
+=== ABILITY A09X (levels: 1) ===
+ Name: |cffd7b4f6Затуманенный рассудок|r (raw: TRIGSTR_6843)
+ Hotkey: E (raw: TRIGSTR_14922), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Затуманенный рассудок|r (raw: TRIGSTR_6844)
+   ubertip: "+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек." (raw: "+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек.")
+
+=== ABILITY A0A0 (levels: 1) ===
+ Name: |cffd7b4f6Выносливать |r (raw: TRIGSTR_6857)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Выносливать |r (raw: TRIGSTR_6858)
+   ubertip: Увеличивает хп воинам. (raw: TRIGSTR_6859)
+
+=== ABILITY A0A1 (levels: 1) ===
+ Name: |cffd7b4f6Выносливать |r (raw: TRIGSTR_6863)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Выносливать |r (raw: TRIGSTR_6864)
+   ubertip: Увеличивает хп (raw: TRIGSTR_6865)
+
+=== ABILITY A0A2 (levels: 1) ===
+ Name: |cffd7b4f6Защита Бездны|r (raw: TRIGSTR_6871)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Защита Бездны|r (raw: TRIGSTR_6872)
+   ubertip: -<Assk,DataC1> от получаемого урона от атак. Минимальный урон от атак: <Assk,DataB1>. (raw: TRIGSTR_13114)
+
+=== ABILITY A0AI (levels: 1) ===
+ Name: |cffd7b4f6Ярость Бездны|r (raw: TRIGSTR_7632)
+ Hotkey: D (raw: TRIGSTR_8477), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Ярость Бездны|r (raw: TRIGSTR_7633)
+   ubertip: +50% к скорости атаки и +20% к скорости перемещения, но +10% к получаемому урону. (raw: TRIGSTR_40957)
+
+=== ABILITY A0AJ (levels: 1) ===
+ Name: |cffd7b4f6Аура поглощения|r (raw: TRIGSTR_7638)
+ Hotkey: None (raw: None), ResearchHotkey: V (raw: V)
+ ResearchTip: Изучить «Вампирическую ауру» [|cffffcc00%d-й уровень|r] (raw: Изучить «Вампирическую ауру» [|cffffcc00%d-й уровень|r])
+ ResearchUbertip: "Находящиеся рядом союзники ближнего боя восполняют здоровье, нанося урон. |n|n|cffffcc001-й уровень:|r <AUav,DataA1,%>% урона от атак. |n|cffffcc002-й уровень:|r <AUav,DataA2,%>% урона от атак. |n|cffffcc003-й уровень:|r <AUav,DataA3,%>% урона от атак." (raw: "Находящиеся рядом союзники ближнего боя восполняют здоровье, нанося урон. |n|n|cffffcc001-й уровень:|r <AUav,DataA1,%>% урона от атак. |n|cffffcc002-й уровень:|r <AUav,DataA2,%>% урона от атак. |n|cffffcc003-й уровень:|r <AUav,DataA3,%>% урона от атак.")
+ Level 1:
+   tip: |cffd7b4f6Аура поглощения|r (raw: TRIGSTR_7639)
+   ubertip: Находящиеся рядом союзники ближнего боя восполняют здоровье в объеме 7% от наносимого урона от атак. (raw: TRIGSTR_40958)
+
+=== ABILITY A0AK (levels: 1) ===
+ Name: |cffd7b4f6Дробящий удар|r (raw: TRIGSTR_7640)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Дробящий удар|r (raw: TRIGSTR_7641)
+   ubertip: Наносит дробящий удар замедляя ее передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек. (raw: TRIGSTR_7642)
+
+=== ABILITY A0AL (levels: 1) ===
+ Name: |cffd7b4f6Порождение щупальца|r (raw: TRIGSTR_1950)
+ Hotkey: Q (raw: TRIGSTR_13083), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Порождение щупальца|r (raw: TRIGSTR_7643)
+   ubertip: Призывает из под ног врага могучие щупальце. (raw: TRIGSTR_15189)
+
+=== ABILITY A0AM (levels: 1) ===
+ Name: |cffd7b4f6Эссенция бездны|r (raw: TRIGSTR_7645)
+ Hotkey: W (raw: TRIGSTR_13440), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Эссенция бездны|r (raw: TRIGSTR_7719)
+   ubertip: "Восполняет находящимся рядом союзникам (вплоть до 6) <Arpl,DataA1> здоровья. Не действует на технику." (raw: "Восполняет находящимся рядом союзникам (вплоть до 6) <Arpl,DataA1> здоровья. Не действует на технику.")
+
+=== ABILITY A0AN (levels: 1) ===
+ Name: |cffd7b4f6Порченные снаряды|r (raw: TRIGSTR_7655)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Порченные снаряды|r (raw: TRIGSTR_7659)
+   ubertip: "Покрывает снаряды разрушителей горючей смесью, позволяя им поджигать землю и врагов." (raw: "Покрывает снаряды разрушителей горючей смесью, позволяя им поджигать землю и врагов.")
+
+=== ABILITY A0AO (levels: 4) ===
+ Name: |cffd7b4f6Порождение щупальца|r (raw: TRIGSTR_7644)
+ Hotkey: Q (raw: TRIGSTR_13084), ResearchHotkey: Q (raw: TRIGSTR_13111)
+ ResearchTip: |cffd7b4f6Порождение щупальца|r (raw: TRIGSTR_7759)
+ ResearchUbertip: Поражает врага могучим щупальцем.Призывает могучих забытых,способных порождать щупальца.|n|cffffcc001-й уровень:|r |cffb4dcdcПризывает 2 щупальце.|r|n|cffffcc002-й уровень:|r |cffb4dcdcПризывает 3 щупальца.|n|cffffcc003-й уровень:|r |cffb4dcdcПризывает 4 щупальца.|n|cffffcc004-й уровень:|r |cffb4dcdcПризывает 5 щупальца. (raw: TRIGSTR_9840)
+ Level 1:
+   tip: |cffd7b4f6Порождение щупальца|r (raw: TRIGSTR_7646)
+   ubertip: Поражает врага могучим щупальцем.Призывает щупальца древних богов, способные поражать врагов на средней дитанции.|n|cffffcc001-й уровень:|r |cffb4dcdcПризывает 2 щупальце.|r (raw: TRIGSTR_12545)
+ Level 2:
+   tip: |cffd7b4f6Порождение щупальца|r (raw: TRIGSTR_7656)
+   ubertip: Поражает врага могучим щупальцем.Призывает щупальца древних богов, способные поражать врагов на средней дитанции.|n|cffffcc002-й уровень:|r |cffb4dcdcПризывает 3 щупальца.|n (raw: TRIGSTR_11633)
+ Level 3:
+   tip: |cffd7b4f6Порождение щупальца|r (raw: TRIGSTR_7757)
+   ubertip: Поражает врага могучим щупальцем.Призывает щупальца древних богов, способные поражать врагов на средней дитанции.
+|cffffcc003-й уровень:|r |cffb4dcdcПризывает 4 щупальца.|n (raw: TRIGSTR_12541)
+ Level 4:
+   tip: |cffd7b4f6Порождение щупальца|r (raw: TRIGSTR_7758)
+   ubertip: Поражает врага могучим щупальцем.Призывает щупальца древних богов, способные поражать врагов на средней дитанции.
+|cffffcc004-й уровень:|r |cffb4dcdcПризывает 5 щупальца. (raw: TRIGSTR_12543)
+
+=== ABILITY A0AP (levels: 4) ===
+ Name: |cffd7b4f6Дар бездны|r (raw: TRIGSTR_7780)
+ Hotkey: W (raw: TRIGSTR_13473), ResearchHotkey: W (raw: TRIGSTR_13570)
+ ResearchTip: |cffd7b4f6Дар бездны|r (raw: TRIGSTR_9698)
+ ResearchUbertip: Востанавливает здоровье вокруг кастера.|n|cffffcc001-й уровень:|r |cffb4dcdcВостанавливает 125 ед.|r|n|cffffcc002-й уровень:|r |cffb4dcdcВостанавливает 200 ед.|r|n|cffffcc003-й уровень:|r |cffb4dcdcВостанавливает 275 ед.|n|cffffcc004-й уровень:|r |cffb4dcdcВостанавливает 350 ед.|r (raw: TRIGSTR_10117)
+ Level 1:
+   tip: |cffd7b4f6Дар бездны|r (raw: TRIGSTR_7781)
+   ubertip: Востанавливает здоровье вокруг кастера.|n|cffffcc001-й уровень:|r |cffb4dcdcВостанавливает 125 ед.|r (raw: TRIGSTR_8218)
+ Level 2:
+   tip: |cffd7b4f6Дар бездны|r (raw: TRIGSTR_7783)
+   ubertip: Востанавливает здоровье вокруг кастера.|n|cffffcc002-й уровень:|r |cffb4dcdcВостанавливает 200 ед.|r (raw: TRIGSTR_8222)
+ Level 3:
+   tip: |cffd7b4f6Дар бездны|r (raw: TRIGSTR_7784)
+   ubertip: Востанавливает здоровье вокруг кастера.|n|cffffcc003-й уровень:|r |cffb4dcdcВостанавливает 275 ед. (raw: TRIGSTR_8223)
+ Level 4:
+   tip: |cffd7b4f6Дар бездны|r (raw: TRIGSTR_7785)
+   ubertip: Востанавливает здоровье вокруг кастера.
+|cffffcc004-й уровень:|r |cffb4dcdcВостанавливает 350 ед.|r (raw: TRIGSTR_8224)
+
+=== ABILITY A0B6 (levels: 4) ===
+ Name: |cffd7b4f6Нечистая аура|r (raw: TRIGSTR_8158)
+ Hotkey: None (raw: None), ResearchHotkey: E (raw: TRIGSTR_15028)
+ ResearchTip: Изучить «|cffd7b4f6Нечистая аура|r» [|cffffcc00%d-й уровень|r] (raw: TRIGSTR_8159)
+ ResearchUbertip: Уменьшает регенерацию здоровья находящихся рядом врагов. |n|n|cffffcc001-й уровень:|r |cffb4dcdc-1 ед. регенерации здоровья.|r |n|cffffcc002-й уровень:|r |cffb4dcdc-1.5 ед. регенерации здоровья.|r |n|cffffcc003-й уровень:|r |cffb4dcdc-2 ед. регенерации здоровья.|r|n|cffffcc004-й уровень:|r |cffb4dcdc-2.5 ед. регенерации здоровья.|r (raw: TRIGSTR_10135)
+ Level 1:
+   tip: |cffd7b4f6Нечистая аура|r [|cffffcc001-й уровень|r] (raw: TRIGSTR_8161)
+   ubertip: Уменьшает регенерацию здоровья находящихся рядом врагов. |n|n|cffffcc001-й уровень:|r |cffb4dcdc-1 ед. регенерации здоровья.|r  (raw: TRIGSTR_10151)
+ Level 2:
+   tip: |cffd7b4f6Нечистая аура|r [|cffffcc002-й уровень|r] (raw: TRIGSTR_8162)
+   ubertip: Уменьшает регенерацию здоровья находящихся рядом врагов.  |n|cffffcc002-й уровень:|r |cffb4dcdc-1.5 ед. регенерации здоровья.|r  (raw: TRIGSTR_10153)
+ Level 3:
+   tip: |cffd7b4f6Нечистая аура|r [|cffffcc003-й уровень|r] (raw: TRIGSTR_8163)
+   ubertip: Уменьшает регенерацию здоровья находящихся рядом врагов. |n|cffffcc003-й уровень:|r |cffb4dcdc-2 ед. регенерации здоровья. (raw: TRIGSTR_10154)
+ Level 4:
+   tip: |cffd7b4f6Нечистая аура|r [|cffffcc004-й уровень|r] (raw: TRIGSTR_8164)
+   ubertip: Уменьшает регенерацию здоровья находящихся рядом врагов. |n|cffffcc004-й уровень:|r |cffb4dcdc-2.5 ед. регенерации здоровья.|r (raw: TRIGSTR_10176)
+
+=== ABILITY A0B7 (levels: 2) ===
+ Name: |cffd7b4f6Призыв Забытого|r (raw: TRIGSTR_8169)
+ Hotkey: R (raw: TRIGSTR_12055), ResearchHotkey: R (raw: TRIGSTR_12068)
+ ResearchTip: |cffd7b4f6Призыв Забытого|r (raw: TRIGSTR_10179)
+ ResearchUbertip: Призывает могучих забытых,способных порождать щупальца.|n|cffffcc001-й уровень:|r |cffb4dcdcПризывает 1 забытого.|r|n|cffffcc002-й уровень:|r |cffb4dcdcПризывает 3 забытых. (raw: TRIGSTR_10197)
+ Level 1:
+   tip: |cffd7b4f6Призыв Забытого|r (raw: TRIGSTR_8170)
+   ubertip: Призывает могучих забытых,способных порождать щупальца.|n|cffffcc001-й уровень:|r |cffb4dcdcПризывает 1 забытого.|r (raw: TRIGSTR_10178)
+ Level 2:
+   tip: |cffd7b4f6Призыв Забытого|r (raw: TRIGSTR_8172)
+   ubertip: Призывает могучих забытых,способных порождать щупальца.|n|cffffcc002-й уровень:|r |cffb4dcdcПризывает 3 забытых. (raw: TRIGSTR_10177)
+
+=== ABILITY A0B8 (levels: 2) ===
+ Name: |cffd7b4f6Ужасающий вой|r (raw: TRIGSTR_8179)
+ Hotkey: R (raw: TRIGSTR_12093), ResearchHotkey: None (raw: None)
+ ResearchTip: |cffd7b4f6Ужасающий вой|r (raw: TRIGSTR_10204)
+ ResearchUbertip: Издает ужастный вой бездны. |n|n|cffffcc001-й уровень:|r |cffb4dcdc-55% урона.|r |n|cffffcc002-й уровень:|r |cffb4dcdc-70% урона.|r  (raw: TRIGSTR_10203)
+ Level 1:
+   tip: |cffd7b4f6Ужасающий вой|r (raw: TRIGSTR_8180)
+   ubertip: Издает ужастный вой бездны. |n|n|cffffcc001-й уровень:|r |cffb4dcdc-55% урона.|r  (raw: TRIGSTR_10205)
+ Level 2:
+   tip: |cffd7b4f6Ужасающий вой|r (raw: TRIGSTR_8181)
+   ubertip: Издает ужастный вой бездны.|n|cffffcc002-й уровень:|r |cffb4dcdc-70% урона.|r  (raw: TRIGSTR_10202)
+
+=== ABILITY A0B9 (levels: 4) ===
+ Name: |cffd7b4f6Костолом|r (raw: TRIGSTR_8196)
+ Hotkey: None (raw: None), ResearchHotkey: E (raw: TRIGSTR_15241)
+ ResearchTip: Изучить «|cffd7b4f6Костолом|r» [|cffffcc00%d-й уровень|r] (raw: TRIGSTR_8197)
+ ResearchUbertip: Дает шанс нанести при атаке на |cffb4dcdc<AHbh,DataC1>|r больше урона и оглушить цель . |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AHbh,DataA1>%-й шанс, оглушение героя - 0.4 сек.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<AHbh,DataA2>%-й шанс, оглушение героя - 0.5 сек.. |r|n|cffffcc003-й уровень:|r |cffb4dcdc<AHbh,DataA3>%-й шанс, оглушение героя - 0.6 сек..|r|n|cffffcc004-й уровень:|r |cffb4dcdc<AHbh,DataA4>%-й шанс, оглушение героя - 0.7 сек..|r (raw: TRIGSTR_10229)
+ Level 1:
+   tip: |cffd7b4f6Костолом|r [|cffffcc001-й уровень|r] (raw: TRIGSTR_8198)
+   ubertip: Дает шанс нанести при атаке на |cffb4dcdc<AHbh,DataC1>|r больше урона и оглушить цель . |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AHbh,DataA1>%-й шанс, оглушение героя - 0.4 сек.|r  (raw: TRIGSTR_10230)
+ Level 2:
+   tip: |cffd7b4f6Костолом|r [|cffffcc002-й уровень|r] (raw: TRIGSTR_8199)
+   ubertip: Дает шанс нанести при атаке на |cffb4dcdc<AHbh,DataC1>|r больше урона и оглушить цель . |n|cffffcc002-й уровень:|r |cffb4dcdc<AHbh,DataA2>%-й шанс, оглушение героя - 0.5 сек.. |r (raw: TRIGSTR_12914)
+ Level 3:
+   tip: |cffd7b4f6Костолом|r [|cffffcc003-й уровень|r] (raw: TRIGSTR_8200)
+   ubertip: Дает шанс нанести при атаке на |cffb4dcdc<AHbh,DataC1>|r больше урона и оглушить цель . |n|cffffcc003-й уровень:|r |cffb4dcdc<AHbh,DataA3>%-й шанс, оглушение героя - 0.6 сек..|r (raw: TRIGSTR_12919)
+ Level 4:
+   tip: |cffd7b4f6Костолом|r [|cffffcc004-й уровень|r] (raw: TRIGSTR_8201)
+   ubertip: Дает шанс нанести при атаке на |cffb4dcdc<AHbh,DataC1>|r больше урона и оглушить цель . |n|cffffcc004-й уровень:|r |cffb4dcdc<AHbh,DataA4>%-й шанс, оглушение героя - 0.7 сек..|r (raw: TRIGSTR_10219)
+
+=== ABILITY A0BA (levels: 4) ===
+ Name: |cffd7b4f6Дуэлянт|r (raw: TRIGSTR_8203)
+ Hotkey: None (raw: None), ResearchHotkey: W (raw: TRIGSTR_13639)
+ ResearchTip: |cffd7b4f6Дуэлянт|r (raw: TRIGSTR_8204)
+ ResearchUbertip: Герой хорошо справляется в дуэли с вражескими героями.
+|n|cffffcc001-й уровень:|r |cffb4dcdc+15% к урону по героям.|r|n|cffffcc002-й уровень:|r |cffb4dcdc+25% к урону по героям.|r|n|cffffcc003-й уровень:|r |cffb4dcdc+35% к урону по героям..|r|n|cffffcc004-й уровень:|r |cffb4dcdc+45% к урону по героям.|r (raw: TRIGSTR_225)
+ Level 1:
+   tip: |cffd7b4f6Дуэлянт|r (raw: TRIGSTR_8206)
+   ubertip: Герой хорошо справляется в дуэли с вражескими героями.
+|n|cffffcc001-й уровень:|r |cffb4dcdc+15% к урону по героям.|r (raw: TRIGSTR_4382)
+ Level 2:
+   tip: |cffd7b4f6Дуэлянт|r (raw: TRIGSTR_8207)
+   ubertip: Герой хорошо справляется в дуэли с вражескими героями.
+|n|cffffcc002-й уровень:|r |cffb4dcdc+25% к урону по героям.|r (raw: TRIGSTR_762)
+ Level 3:
+   tip: |cffd7b4f6Дуэлянт|r (raw: TRIGSTR_8208)
+   ubertip: Герой хорошо справляется в дуэли с вражескими героями.
+|n|cffffcc003-й уровень:|r |cffb4dcdc+35% к урону по героям. (raw: TRIGSTR_764)
+ Level 4:
+   tip: |cffd7b4f6Дуэлянт|r (raw: TRIGSTR_8209)
+   ubertip: Герой хорошо справляется в дуэли с вражескими героями.
+|n|cffffcc004-й уровень:|r |cffb4dcdc+45% к урону по героям.|r (raw: TRIGSTR_4345)
+
+=== ABILITY A0BB (levels: 4) ===
+ Name: |cffd7b4f6Устрашающий рев |r (raw: TRIGSTR_8214)
+ Hotkey: Q (raw: TRIGSTR_13123), ResearchHotkey: Q (raw: TRIGSTR_13124)
+ ResearchTip: |cffd7b4f6Устрашающий рев |r (raw: TRIGSTR_8217)
+ ResearchUbertip: Издает ужастный рев, понижая защиту врагам.
+|n|cffffcc001-й уровень:|r |cffb4dcdc-2 защиты.|r|n|cffffcc002-й уровень:|r |cffb4dcdc-3 защиты.|r|n|cffffcc003-й уровень:|r |cffb4dcdc-4 защиты.|r|n|cffffcc004-й уровень:|r |cffb4dcdc-5 защиты.|r (raw: TRIGSTR_7240)
+ Level 1:
+   tip: |cffd7b4f6Устрашающий рев |r (raw: TRIGSTR_8215)
+   ubertip: Издает ужастный рев, понижая защиту врагам.
+|n|cffffcc001-й уровень:|r |cffb4dcdc-2 защиты.|r (raw: TRIGSTR_4383)
+ Level 2:
+   tip: |cffd7b4f6Устрашающий рев |r (raw: TRIGSTR_8219)
+   ubertip: Издает ужастный рев, понижая защиту врагам.
+|n|cffffcc002-й уровень:|r |cffb4dcdc-3 защиты.|r (raw: TRIGSTR_7454)
+ Level 3:
+   tip: |cffd7b4f6Устрашающий рев |r (raw: TRIGSTR_8220)
+   ubertip: Издает ужастный рев, понижая защиту врагам.|n|cffffcc003-й уровень:|r |cffb4dcdc-4 защиты.|r (raw: TRIGSTR_8402)
+ Level 4:
+   tip: |cffd7b4f6Устрашающий рев |r (raw: TRIGSTR_8221)
+   ubertip: Издает ужастный рев, понижая защиту врагам.
+|n|cffffcc004-й уровень:|r |cffb4dcdc-5 защиты.|r (raw: TRIGSTR_8401)
+
+=== ABILITY A0BC (levels: 2) ===
+ Name: |cffd7b4f6Реинкарнация|r (raw: TRIGSTR_8226)
+ Hotkey: None (raw: None), ResearchHotkey: R (raw: R)
+ ResearchTip: Изучить «|cffd7b4f6Реинкарнацию|r» (raw: TRIGSTR_8227)
+ ResearchUbertip: Возрождается после гибели. Время восстановления: |cffb4dcdc<AOre,Cool1> сек.|r (raw: TRIGSTR_14961)
+ Level 1:
+   tip: |cffd7b4f6Реинкарнация|r (raw: TRIGSTR_8229)
+   ubertip: Возрождается после гибели. Время восстановления: |cffb4dcdc240 сек.|r (raw: TRIGSTR_13519)
+ Level 2:
+   tip: |cffd7b4f6Реинкарнация|r (raw: TRIGSTR_8230)
+   ubertip: Возрождается после гибели. Время восстановления: |cffb4dcdc180 сек.|r (raw: TRIGSTR_13518)
+
+=== ABILITY A0BD (levels: 4) ===
+ Name: |cffd7b4f6Взрыв бездны|r (raw: TRIGSTR_8246)
+ Hotkey: Q (raw: TRIGSTR_13212), ResearchHotkey: Q (raw: TRIGSTR_13213)
+ ResearchTip: Изучить «|cffd7b4f6Взрыв бездны|r» [|cffffcc00%d-й уровень|r] (raw: TRIGSTR_8247)
+ ResearchUbertip: Создает столб бездны, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r |cffb4dcdc45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек.|r |n|cffffcc002-й уровень:|r |cffb4dcdc80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек.|r |n|cffffcc003-й уровень:|r |cffb4dcdc110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r|n|cffffcc004-й уровень:|r |cffb4dcdc140 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r (raw: TRIGSTR_12938)
+ Level 1:
+   tip: |cffd7b4f6Взрыв бездны|r [|cffffcc001-й уровень|r] (raw: TRIGSTR_12931)
+   ubertip: Создает порчу бездны, наносящий наземным войскам в указанной области |cffb4dcdc45 урона/сек.|r в течение |cffb4dcdc3 сек.|r После исчезновения столба пораженные войска продолжают получать незначительный урон. (raw: TRIGSTR_13521)
+ Level 2:
+   tip: |cffd7b4f6Взрыв бездны|r [|cffffcc002-й уровень|r] (raw: TRIGSTR_12932)
+   ubertip: Создает порчу бездны, наносящий наземным войскам в указанной области |cffb4dcdc80 урона/сек.|r в течение |cffb4dcdc3 сек.|r После исчезновения столба пораженные войска продолжают получать небольшой урон. (raw: TRIGSTR_13529)
+ Level 3:
+   tip: |cffd7b4f6Взрыв бездны|r  [|cffffcc003-й уровень|r] (raw: TRIGSTR_12933)
+   ubertip: Создает порчу бездны, наносящий наземным войскам в указанной области |cffb4dcdc110 урона/сек.|r в течение |cffb4dcdc3 сек.|r После исчезновения столба пораженные войска продолжают получать умеренный урон. (raw: TRIGSTR_13532)
+ Level 4:
+   tip: |cffd7b4f6Взрыв бездны|r  [|cffffcc004-й уровень|r] (raw: TRIGSTR_12930)
+   ubertip: Создает порчу бездны, наносящий наземным войскам в указанной области |cffb4dcdc140 урона/сек.|r в течение|cffb4dcdc 4 сек.|r После исчезновения столба пораженные войска продолжают получать умеренный урон. (raw: TRIGSTR_13520)
+
+=== ABILITY A0BE (levels: 4) ===
+ Name: |cffd7b4f6Рассеивание заклинаний|r (raw: TRIGSTR_8252)
+ Hotkey: W (raw: TRIGSTR_13670), ResearchHotkey: W (raw: TRIGSTR_13727)
+ ResearchTip: |cffd7b4f6Рассеивание заклинаний|r (raw: TRIGSTR_8254)
+ ResearchUbertip: Снимает положительные эффекты с войск в указанной области. |n|cffffcc001-й уровень:|r |cffb4dcdcНаносит урон призваным целям 200|r|n|cffffcc002-й уровень:|r |cffb4dcdcНаносит урон призваным целям 300|r|n|cffffcc003-й уровень:|r |cffb4dcdcНаносит урон призваным целям 400|r|n|cffffcc004-й уровень:|r |cffb4dcdcНаносит урон призваным целям 600|r (raw: TRIGSTR_15470)
+ Level 1:
+   tip: |cffd7b4f6Рассеивание заклинаний|r (raw: TRIGSTR_8253)
+   ubertip: Снимает положительные эффекты с войск в указанной области. |n|cffffcc001-й уровень:|r |cffb4dcdcНаносит урон призваным целям 200|r (raw: TRIGSTR_15474)
+ Level 2:
+   tip: |cffd7b4f6Рассеивание заклинаний|r (raw: TRIGSTR_8256)
+   ubertip: Снимает положительные эффекты с войск в указанной области. |n|cffffcc002-й уровень:|r |cffb4dcdcНаносит урон призваным целям 300|r (raw: TRIGSTR_15471)
+ Level 3:
+   tip: |cffd7b4f6Рассеивание заклинаний|r (raw: TRIGSTR_8257)
+   ubertip: Снимает положительные эффекты с войск в указанной области. 
+|cffffcc003-й уровень:|r |cffb4dcdcНаносит урон призваным целям 400|r (raw: TRIGSTR_15472)
+ Level 4:
+   tip: |cffd7b4f6Рассеивание заклинаний|r (raw: TRIGSTR_8258)
+   ubertip: Снимает положительные эффекты с войск в указанной области.|n|cffffcc004-й уровень:|r |cffb4dcdcНаносит урон призваным целям 600|r (raw: TRIGSTR_13534)
+
+=== ABILITY A0BF (levels: 4) ===
+ Name: |cffd7b4f6Замедляющий яд|r (raw: TRIGSTR_8263)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ ResearchTip: |cffd7b4f6Замедляющий яд|r (raw: TRIGSTR_8264)
+ ResearchUbertip: Маг использует бездну для нанисения ядовитых атак. |n|cffffcc001-й уровень:|r |cffb4dcdcЗамедляет атаку 25%, передвижение 50%, наносит урона 4/сек.|r|n|cffffcc002-й уровень:|r |cffb4dcdcЗамедляет атаку 35%, передвижение 50%, наносит урона 5/сек.|r|n|cffffcc003-й уровень:|r |cffb4dcdcЗамедляет атаку 45%, передвижение 50%, наносит урона 6/сек.|r|n|cffffcc004-й уровень:|r |cffb4dcdcЗамедляет атаку 55%, передвижение 50%, наносит урона 7/сек.|r (raw: TRIGSTR_15475)
+ Level 1:
+   tip: |cffd7b4f6Замедляющий яд|r (raw: TRIGSTR_8266)
+   ubertip: Маг использует бездну для нанисения ядовитых атак. |n|cffffcc001-й уровень:|r |cffb4dcdcЗамедляет атаку 25%, передвижение 50%, наносит урона 4/сек.|r (raw: TRIGSTR_15479)
+ Level 2:
+   tip: |cffd7b4f6Замедляющий яд|r (raw: TRIGSTR_8267)
+   ubertip: Маг использует бездну для нанисения ядовитых атак. |n|cffffcc002-й уровень:|r |cffb4dcdcЗамедляет атаку 35%, передвижение 50%, наносит урона 5/сек.|r (raw: TRIGSTR_15476)
+ Level 3:
+   tip: |cffd7b4f6Замедляющий яд|r (raw: TRIGSTR_8269)
+   ubertip: Маг использует бездну для нанисения ядовитых атак. |n|cffffcc003-й уровень:|r |cffb4dcdcЗамедляет атаку 45%, передвижение 50%, наносит урона 6/сек.|r (raw: TRIGSTR_15477)
+ Level 4:
+   tip: |cffd7b4f6Замедляющий яд|r (raw: TRIGSTR_8268)
+   ubertip: Маг использует бездну для нанисения ядовитых атак. |n|cffffcc004-й уровень:|r |cffb4dcdcЗамедляет атаку 55%, передвижение 50%, наносит урона 7/сек.|r (raw: TRIGSTR_15478)
+
+=== ABILITY A0HX (levels: 1) ===
+ Name: |cffd7b4f5Культ Сумеречного Молота|r (raw: TRIGSTR_38881)
+ Hotkey: X (raw: TRIGSTR_11147), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f5Культ Сумеречного Молота|r (raw: TRIGSTR_38882)
+   ubertip: |cff7dc87dСоздатель расы:|r |cffe17d00Escanor (Яхве)|r|n|cff7dc87dСложность:|r  |cffffbe37Средняя|r|n|cff7dc87dПериод:|r |cffff5e19Cataclysm|r|n|cff7dc87dОписание:|r |cffff00ffKyльт Cyмepeчнoгo Moлoтa|r – opгaнизaция, oбъeдинившaя выжившиx opкoв клaнa Cyмepeчнoгo Moлoтa и мнoжecтвo пpeдcтaвитeлeй дpyгиx pac. Ceйчac члeны opгaнизaции зaнимaютcя иccлeдoвaниeм yчeния Чo'гaллa и cocтaвляют кyльт в eгo нынeшнeм cocтoянии. Xoтя Cyмepeчный Moлoт и дo cиx пop cчитaeтcя клaнoм, нo тo, чтo былo paньшe плeмeнeм opкoв, yжe дaвнo cтaлo чacтью кyльтa. Opгaнизaция в нaшe вpeмя зaмeтнo oтличaeтcя oт тoгo, чeм oнa являлacь пpи зapoждeнии. Teм нe мeнee, в любoй мoмeнт иcтopии кyльтa eгo цeль - yничтoжить миp и дocтигнyть этoгo любыми cpeдcтвaми или цeнoй. Oтличитeльнoй чepтoй кyльтиcтoв являeтcя фиoлeтoвaя pacцвeткa иx дocпexoв. (raw: TRIGSTR_35196)
+
+=== ABILITY A0I3 (levels: 1) ===
+ Name: |cffe4cfa3Небольшой скачок|r (raw: TRIGSTR_26484)
+ Hotkey: C (raw: TRIGSTR_9545), ResearchHotkey: E (raw: TRIGSTR_18243)
+ ResearchTip: |cffe4cfa3Небольшой скачок|r (|cffffffffC|r) (raw: TRIGSTR_10064)
+ ResearchUbertip: |cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r (raw: TRIGSTR_10976)
+ Level 1:
+   tip: |cffe4cfa3Небольшой скачок|r (|cffffffffC|r) (raw: TRIGSTR_26476)
+   ubertip: |cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r (raw: TRIGSTR_26477)
+
+=== ABILITY A0IQ (levels: 1) ===
+ Name: |cffffdcb4Обозначить столицу|r (raw: TRIGSTR_27193)
+ Hotkey: X (raw: TRIGSTR_11265), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffffdcb4Обозначить столицу|r (raw: TRIGSTR_27969)
+   ubertip: Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение. (raw: TRIGSTR_27970)
+
+=== ABILITY A0LI (levels: 1) ===
+ Name: Обмен |cffffff00Золота |rна |cff00ff00Дерево|r (raw: TRIGSTR_2888)
+ Hotkey: S (raw: TRIGSTR_4247), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: Обмен |cffffff00Золота |rна |cff00ff00Дерево|r (raw: TRIGSTR_3692)
+   ubertip: Отнимает у игрока|cffffd700 500 золота|r, но добавляет |cff228722100 дерева|r. (raw: TRIGSTR_20630)
+
+=== ABILITY A0LJ (levels: 1) ===
+ Name: Обмен |cff00ff00Дерева |rна |cffffff00Золото|r (raw: TRIGSTR_12857)
+ Hotkey: A (raw: TRIGSTR_4259), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: Обмен |cff00ff00Дерева |rна |cffffff00Золото|r (raw: TRIGSTR_12886)
+   ubertip: Отнимает у игрока |cff228722500 дерева|r, но добавляет |cffffd700100 золота|r. (raw: TRIGSTR_20631)
+
+=== ABILITY A15N (levels: 1) ===
+ Name: Зона ремонта (raw: TRIGSTR_25578)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ ResearchTip: Зона ремонта (raw: TRIGSTR_25582)
+ ResearchUbertip: Восстанавливает здоровье механическим юнитам поблизости. (raw: TRIGSTR_26500)
+ Level 1:
+   tip: Зона ремонта (raw: TRIGSTR_25589)
+   ubertip: Восстанавливает здоровье механическим юнитам поблизости. (raw: TRIGSTR_25608)
+
+=== ABILITY A1OF (levels: 1) ===
+ Name: Загрузка землянки (raw: TRIGSTR_40959)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: None (raw: None)
+   ubertip: None (raw: None)
+
+=== ABILITY A1QQ (levels: 1) ===
+ Name: |cffd7b4f6Ярость maksikа|r (raw: TRIGSTR_31775)
+ Hotkey: R (raw: TRIGSTR_32941), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: |cffd7b4f6Ярость maksikа|r (raw: TRIGSTR_31777)
+   ubertip: Это самый обычный диспел, ничего интересного
+
+Поздравляю |cff8b4513Мaksik|r, ты добился мощи которая и не снилась твоему отцу. Теперь ты сможешь диспелить в ЦЕЛЫЕ 200 ед. урона, и развеивать Полезные бафы с врагов. Я горжусь тобой что ты сможешь кликать на одну кнопку больше. Продолжай в том же духе и ты станешь Топ-1 картой (raw: TRIGSTR_31778)
+
+=== ABILITY ACcr (levels: 1) ===
+ Name: Увечье (raw: Увечье)
+ Hotkey: C (raw: C), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: Увечье (raw: Увечье)
+   ubertip: "Замедляет передвижение врага на <ACcr,DataA1,%>% и атаку на <ACcr,DataB1,%>%, уменьшает наносимый урон на <ACcr,DataC1,%>%. |nВремя действия: <ACcr,Dur1> сек." (raw: "Замедляет передвижение врага на <ACcr,DataA1,%>% и атаку на <ACcr,DataB1,%>%, уменьшает наносимый урон на <ACcr,DataC1,%>%. |nВремя действия: <ACcr,Dur1> сек.")
+
+=== ABILITY ACmi (levels: 1) ===
+ Name: Невосприимчивость к магии (raw: Невосприимчивость к магии)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: Невосприимчивость к магии (raw: Невосприимчивость к магии)
+   ubertip: Дает невосприимчивость к магии и большинству способностей. (raw: Дает невосприимчивость к магии и большинству способностей.)
+
+=== ABILITY AInv (levels: 1) ===
+ Name: Инвентарь (raw: Инвентарь)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: None (raw: None)
+   ubertip: None (raw: None)
+
+=== ABILITY ANha (levels: 1) ===
+ Name: Добывать ресурсы (raw: Добывать ресурсы)
+ Hotkey: G (raw: G), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: Добывать ресурсы (raw: Добывать ресурсы)
+   ubertip: Добывает золото из рудников и древесину из деревьев. (raw: Добывает золото из рудников и древесину из деревьев.)
+
+=== ABILITY Abds (levels: 1) ===
+ Name: Слабое рассеивание чумы (raw: Слабое рассеивание чумы)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: None (raw: None)
+   ubertip: None (raw: None)
+
+=== ABILITY Abun (levels: 1) ===
+ Name: Cargo Hold (Orc Burrow) (raw: Cargo Hold (Orc Burrow))
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: None (raw: None)
+   ubertip: None (raw: None)
+
+=== ABILITY Aorb (levels: 1) ===
+ Name: Укрепленные стены (raw: Укрепленные стены)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: Укрепленные стены (raw: Укрепленные стены)
+   ubertip: Дают землянкам и сторожевым башням укрепленную броню. (raw: Дают землянкам и сторожевым башням укрепленную броню.)
+
+=== ABILITY Arbr (levels: 1) ===
+ Name: Укрепленные землянки (raw: Укрепленные землянки)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: Укрепленные землянки (raw: Укрепленные землянки)
+   ubertip: Дает землянкам укрепленную броню. (raw: Дает землянкам укрепленную броню.)
+
+=== ABILITY Arep (levels: 1) ===
+ Name: Ремонтировать (raw: Ремонтировать)
+ Hotkey: R (raw: R), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: Ремонтировать (raw: Ремонтировать)
+   ubertip: Ремонтирует здания и технику за счет ресурсов. (raw: Ремонтирует здания и технику за счет ресурсов.)
+
+=== ABILITY Argl (levels: 1) ===
+ Name: Вернуть золото и древесину (raw: Вернуть золото и древесину)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: None (raw: None)
+   ubertip: None (raw: None)
+
+=== ABILITY Arlm (levels: 1) ===
+ Name: Вернуть древесину (raw: Вернуть древесину)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: None (raw: None)
+   ubertip: None (raw: None)
+
+=== ABILITY Asal (levels: 1) ===
+ Name: Грабеж (raw: Грабеж)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: Грабеж (raw: Грабеж)
+   ubertip: "Нанося урон зданиям, этот воин добывает ресурсы." (raw: "Нанося урон зданиям, этот воин добывает ресурсы.")
+
+=== ABILITY Aspi (levels: 1) ===
+ Name: Шипастые укрепления (raw: Шипастые укрепления)
+ Hotkey: None (raw: None), ResearchHotkey: None (raw: None)
+ Level 1:
+   tip: None (raw: None)
+   ubertip: None (raw: None)

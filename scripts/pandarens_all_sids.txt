@@ -1,0 +1,638 @@
+=== 1. SELECTION & MARKER ===
+A1I6 name: sid=38913 | text=|cffb4d2ebПандарены|r
+A1I6 researchtip: sid=None | text=None
+A1I6 researchubertip: sid=None | text=None
+A1I6 tip_tip1: sid=38914 | text=|cffb4d2ebПандарены|r
+A1I6 ubertip_ubertip1: sid=42408 | text=|cffa0beaaСоздатель расы:|r |cffc8dcaaCapral|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaСложность:|r |cfff0dc96●|r●●●●|r|n|cffa0beaaПериод:|r |cffc8dcaaMists of Pandaria|r|n|n|r|cffb4d2ebПандарены|r, фракция внешне схожая с фурборлогами. Жители Пандарии приверженцы мирного и дипломатического решения конфликтов. Однако не стоит считать их безобидными, они известны за свою миролюбивость, дружелюбие и любовь провести время за кружечкой пива, но также они прославились за свою ловкость, проворство и силу в бою. Особенно выделяются монахи пандаренов и мастера стихий, отдавшими себя гармонией с духами элементов воды, ветра, земли и огня.
+R0L3 name1: sid=28728 | text=|cffe6beaaПандарены|r
+R0L3 tip1: sid=None | text=None
+R0L3 ubertip1: sid=None | text=None
+
+=== 2. BUILDINGS ===
+Building pa23 name: sid=36638 | text=|cffb4d2ebРатуша Синего Зяблика|r
+Building pa23 tip: sid=35288 | text=Ратуша Синего Зяблика
+Building pa23 ubertip: sid=None | text=None
+Building pa24 name: sid=3144 | text=|cffb4d2ebБольше 20 ферм или рыбацких домов|r
+Building pa24 tip: sid=35292 | text=Улучшить до Крепости Четырёх Мастеров
+Building pa24 ubertip: sid=None | text=None
+Building pa25 name: sid=3145 | text=|cffb4d2ebБольше 55 ферм или рыбацких домов|r
+Building pa25 tip: sid=35294 | text=Улучшить до Цитадель Равновесия
+Building pa25 ubertip: sid=None | text=None
+Building pa26 name: sid=36639 | text=|cffb4d2ebФерма|r
+Building pa26 tip: sid=None | text=None
+Building pa26 ubertip: sid=None | text=None
+Building pa27 name: sid=36640 | text=|cffb4d2ebАлтарь Древних Мастеров|r
+Building pa27 tip: sid=35296 | text=Построить Алтарь Древних Мастеров
+Building pa27 ubertip: sid=None | text=None
+Building pa28 name: sid=36641 | text=|cffb4d2ebПалаты мастеров|r
+Building pa28 tip: sid=35298 | text=Построить Додзё
+Building pa28 ubertip: sid=None | text=None
+Building pa30 name: sid=36642 | text=|cffb4d2ebБашня размышления|r
+Building pa30 tip: sid=35679 | text=Построить Башню размышления
+Building pa30 ubertip: sid=None | text=None
+Building pa31 name: sid=36643 | text=|cffb4d2eb|cffb4d2ebОружейная|r|r
+Building pa31 tip: sid=35302 | text=Построить Оружейную
+Building pa31 ubertip: sid=None | text=None
+Building pa32 name: sid=36644 | text=|cffb4d2ebВместилище Стихий|r
+Building pa32 tip: sid=35304 | text=Построить Вместилище Стихий
+Building pa32 ubertip: sid=None | text=None
+Building pa33 name: sid=36645 | text=|cffb4d2ebОбитель Монахов|r
+Building pa33 tip: sid=35306 | text=Построить Обитель Монахов
+Building pa33 ubertip: sid=None | text=None
+Building pa34 name: sid=2874 | text=|cffb4d2ebЗащитная Башня Пандаренов|r
+Building pa34 tip: sid=20695 | text=Улучшить до Башня Пандаренов
+Building pa34 ubertip: sid=None | text=None
+Building h0NZ name: sid=36654 | text=|cffb4d2ebРыбацкий дом|r
+Building h0NZ tip: sid=35959 | text=Построить Рыбацкое дом
+Building h0NZ ubertip: sid=None | text=None
+Building h0P5 name: sid=36646 | text=|cffb4d2ebБашня Пандаренов|r
+Building h0P5 tip: sid=35309 | text=Улучшить до Башня Пандаренов
+Building h0P5 ubertip: sid=None | text=None
+Building h0P3 name: sid=9508 | text=|cffb4d2ebМагическая Башня Пандаренов|r
+Building h0P3 tip: sid=22645 | text=Улучшить до Башня Пандаренов
+Building h0P3 ubertip: sid=None | text=None
+Building h0P4 name: sid=22644 | text=|cffb4d2ebОсадная Башня Пандаренов|r
+Building h0P4 tip: sid=25064 | text=Улучшить до Башня Пандаренов
+Building h0P4 ubertip: sid=None | text=None
+Building h011 name: sid=368 | text=|cffe4cfa3Верфь|r
+Building h011 tip: sid=369 | text=|cffe4cfa3Верфь|r (|cffffffffC|r)
+Building h011 ubertip: sid=None | text=None
+
+=== 3. UNITS ===
+Unit pa11 name: sid=36626 | text=|cffb4d2ebВсадник Пандарен|r
+Unit pa11 tip: sid=39813 | text=Обучить |cffb4d2ebВсадника Пандаренов|r
+Unit pa11 ubertip: sid=None | text=None
+Unit pa29 name: sid=30611 | text=|cffb4d2ebМонах Инь|r
+Unit pa29 tip: sid=30612 | text=Обучить Монах  Инь
+Unit pa29 ubertip: sid=None | text=None
+Unit pa05 name: sid=16554 | text=|cffb4d2ebВоин Пандаренов|r
+Unit pa05 tip: sid=39812 | text=Обучить |cffb4d2ebВоина Пандаренов|r
+Unit pa05 ubertip: sid=None | text=None
+Unit pa13 name: sid=36628 | text=|cffb4d2ebМастер Бури|r
+Unit pa13 tip: sid=35267 | text=Обучить Мастер Бури
+Unit pa13 ubertip: sid=None | text=None
+Unit pa04 name: sid=15727 | text=|cffb4d2ebВоин Нефритовой Стражи|r
+Unit pa04 tip: sid=35240 | text=Обучить Воин Нефритовой Стражи
+Unit pa04 ubertip: sid=None | text=None
+Unit pa06 name: sid=23143 | text=|cffb4d2ebМастер Геомант|r
+Unit pa06 tip: sid=35246 | text=Обучить Мастер Геомант
+Unit pa06 ubertip: sid=None | text=None
+Unit pa12 name: sid=36627 | text=|cffb4d2ebЛучник Пандаренов|r
+Unit pa12 tip: sid=42401 | text=Обучить |cffb4d2ebЛучника Пандаренов|r
+Unit pa12 ubertip: sid=None | text=None
+Unit pa10 name: sid=35299 | text=|cffb4d2ebСтражник Нефритовых Врат|r
+Unit pa10 tip: sid=35258 | text=Обучить Стражника Нефритовых Врат
+Unit pa10 ubertip: sid=None | text=None
+Unit pa38 name: sid=36631 | text=|cffb4d2ebМонах Ян|r
+Unit pa38 tip: sid=35275 | text=Обучить Монах Ян
+Unit pa38 ubertip: sid=None | text=None
+Unit pa09 name: sid=23448 | text=|cffb4d2ebМастер Пьяной Лапы|r
+Unit pa09 tip: sid=35255 | text=Обучить Мастер Пьяной Лапы
+Unit pa09 ubertip: sid=None | text=None
+Unit pa01 name: sid=14453 | text=|cffb4d2ebРабочий Пандаренов|r
+Unit pa01 tip: sid=3538 | text=Обучить |cffb4d2ebРабочего Пандаренов|r
+Unit pa01 ubertip: sid=None | text=None
+Unit pa14 name: sid=36629 | text=|cffb4d2ebОрудийный Расчёт|r
+Unit pa14 tip: sid=35270 | text=Обучить Орудийный Расчёт
+Unit pa14 ubertip: sid=None | text=None
+Unit pa07 name: sid=23409 | text=|cffb4d2ebМастер Земли|r
+Unit pa07 tip: sid=35249 | text=Обучить Мастер Земли
+Unit pa07 ubertip: sid=None | text=None
+Unit pa08 name: sid=23447 | text=|cffb4d2ebМастер Огня|r
+Unit pa08 tip: sid=35252 | text=Обучить Мастер Огня
+Unit pa08 ubertip: sid=None | text=None
+Unit pa35 name: sid=35244 | text=|cffb4d2ebСтраж Храма|r
+Unit pa35 tip: sid=35250 | text=Обучить Страж Храма
+Unit pa35 ubertip: sid=None | text=None
+Unit h00X name: sid=276 | text=|cffe4cfa3Транспорт|r
+Unit h00X tip: sid=None | text=None
+Unit h00X ubertip: sid=None | text=None
+Unit h00Y name: sid=277 | text=Фрегат
+Unit h00Y tip: sid=None | text=None
+Unit h00Y ubertip: sid=None | text=None
+Unit h00Z name: sid=279 | text=Линкор
+Unit h00Z tip: sid=None | text=None
+Unit h00Z ubertip: sid=None | text=None
+
+=== 4. HEROES ===
+Hero PA36 name: sid=21966 | text=|cffb4d2ebЛидер Шадо-Пан|r
+Hero PA36 propernames: sid=35317 | text=Хуниг Тростниковая Вода
+Hero PA36 tip: sid=30098 | text=Призвать |cffb4d2ebЛидера Шадо-Пан|r
+Hero PA36 ubertip: sid=None | text=None
+Hero PA36 awakentip: sid=26526 | text=Воскресить |cffb4d2ebЛидер Шадо-Пан|r
+Hero PA36 revivetip: sid=33471 | text=Воскресить |cffb4d2ebЛидера Шадо-Пан|r
+Hero PA37 name: sid=36651 | text=|cffb4d2ebМастер Железной Лапы|r
+Hero PA37 propernames: sid=35322 | text=Синдзё Медовар
+Hero PA37 tip: sid=6726 | text=Призвать |cffb4d2ebМастера Железной Лапы|r
+Hero PA37 ubertip: sid=None | text=None
+Hero PA37 awakentip: sid=5226 | text=Воскресить |cffb4d2ebМастера Железной Лапы|r
+Hero PA37 revivetip: sid=6728 | text=Воскресить |cffb4d2ebМастера Железной Лапы|r
+Hero PA38 name: sid=35265 | text=|cffb4d2ebВысший Монах|r
+Hero PA38 propernames: sid=35330 | text=Моджо Ярость Стихий
+Hero PA38 tip: sid=35300 | text=Призвать Высший Монах
+Hero PA38 ubertip: sid=None | text=None
+Hero PA38 awakentip: sid=35328 | text=Воскресить Высший Монах
+Hero PA38 revivetip: sid=35329 | text=Воскресить Высший Монах
+Hero PA39 name: sid=None | text=None
+Hero PA39 propernames: sid=None | text=None
+Hero PA39 tip: sid=None | text=None
+Hero PA39 ubertip: sid=None | text=None
+Hero PA39 awakentip: sid=None | text=None
+Hero PA39 revivetip: sid=None | text=None
+Hero PA40 name: sid=36648 | text=|cffb4d2ebТанцующий с Ветром|r
+Hero PA40 propernames: sid=35311 | text=Моджо Тёмный Эль
+Hero PA40 tip: sid=6731 | text=|cffe4cfa3Алтарь приношений|r (|cffffffffR|r)
+Hero PA40 ubertip: sid=None | text=None
+Hero PA40 awakentip: sid=6730 | text=|cffe4cfa3Алтарь приношений|r
+Hero PA40 revivetip: sid=6733 | text=Воскресить |cffb4d2ebТанцующего с Ветром|r
+Hero pa22 name: sid=36637 | text=|cffb4d2ebХмелевар|r
+Hero pa22 propernames: sid=None | text=None
+Hero pa22 tip: sid=35287 | text=Обучить Хмелевара
+Hero pa22 ubertip: sid=None | text=None
+Hero pa22 awakentip: sid=None | text=None
+Hero pa22 revivetip: sid=None | text=None
+
+=== 5. UPGRADES ===
+Upgrade PA10 name1: sid=42410 | text=|cffb4d2ebДлинные Луки|r
+Upgrade PA10 tip1: sid=42450 | text=Исследовать |cffb4d2ebДлинные Луки|r
+Upgrade PA10 ubertip1: sid=22964 | text=Увеличивают дальность атаки Лучников Пандаренов.
+Upgrade PA10 name2: sid=42452 | text=|cffb4d2ebДлинные Луки|r
+Upgrade PA10 tip2: sid=42451 | text=Исследовать |cffb4d2ebДлинные Луки|r
+Upgrade PA10 ubertip2: sid=23454 | text=Увеличивают дальность атаки Лучников Пандаренов.
+Upgrade PA11 name1: sid=None | text=None
+Upgrade PA11 tip1: sid=None | text=None
+Upgrade PA11 ubertip1: sid=None | text=None
+Upgrade PA12 name1: sid=42014 | text=|cffb4d2ebУкрепление Духа
+Upgrade PA12 tip1: sid=3805 | text=Исследовать «Укрепление Духа»
+Upgrade PA12 ubertip1: sid=42015 | text=+100 к запасу здоровья пандаренов и +10 к урону от их атак.
+Upgrade PA14 name1: sid=42016 | text=|cffb4d2ebЗащита Ци 
+Upgrade PA14 tip1: sid=23126 | text=Исследовать Защита Ци 
+Upgrade PA14 ubertip1: sid=3127 | text=Увеличивает регенирацию здоровья Стражей Нефритовых Врат, а так же даёт ей невосприимчивость к магии.
+Upgrade PA80 name1: sid=22667 | text=|cffb4d2ebДоспехи из кожи|r
+Upgrade PA80 tip1: sid=35592 | text=Исследовать |cffb4d2ebДоспехи из кожи|r
+Upgrade PA80 ubertip1: sid=36611 | text=Усиливают броню воинов дальнего боя.
+Upgrade PA80 name2: sid=25036 | text=|cffb4d2ebДоспехи из клёпаной кожи|r
+Upgrade PA80 tip2: sid=35930 | text=Исследовать |cffb4d2ebДоспехи из клёпаной кожи|r
+Upgrade PA80 ubertip2: sid=36618 | text=Усиливают броню воинов дальнего боя.
+Upgrade PA80 name3: sid=31788 | text=|cffb4d2ebДоспехи из армированой кожи|r
+Upgrade PA80 tip3: sid=36607 | text=Исследовать |cffb4d2ebДоспехи из армированой кожи|r
+Upgrade PA80 ubertip3: sid=36649 | text=Усиливают броню воинов дальнего боя.
+Upgrade PA80 name4: sid=31797 | text=|cffb4d2ebДоспехи из драконьей кожи|r
+Upgrade PA80 tip4: sid=36608 | text=Исследовать |cffb4d2ebДоспехи из драконьей кожи|r
+Upgrade PA80 ubertip4: sid=25033 | text=Усиливают броню воинов дальнего боя.
+Upgrade PA80 name5: sid=35579 | text=|cffb4d2ebДоспехи из бамбука|r
+Upgrade PA80 tip5: sid=36609 | text=Исследовать |cffb4d2ebДоспехи из бамбука|r
+Upgrade PA80 ubertip5: sid=22704 | text=Усиливают броню воинов дальнего боя.
+Upgrade PA80 name6: sid=35591 | text=|cffb4d2ebДоспехи из драконьей кожи с вставками из нефрита|r
+Upgrade PA80 tip6: sid=36610 | text=Исследовать |cffb4d2ebДоспехи из драконьей кожи с вставками из нефрита|r
+Upgrade PA80 ubertip6: sid=25034 | text=Усиливают броню воинов дальнего боя.
+Upgrade PA81 name1: sid=41954 | text=|cffb4d2ebЖелезные Мечи
+Upgrade PA81 tip1: sid=None | text=None
+Upgrade PA81 ubertip1: sid=None | text=None
+Upgrade PA81 name2: sid=41958 | text=|cffb4d2ebСтальные мечи
+Upgrade PA81 tip2: sid=None | text=None
+Upgrade PA81 ubertip2: sid=None | text=None
+Upgrade PA81 name3: sid=41959 | text=|cffb4d2ebМифриловые мечи
+Upgrade PA81 tip3: sid=None | text=None
+Upgrade PA81 ubertip3: sid=None | text=None
+Upgrade PA81 name4: sid=41955 | text=|cffb4d2ebСеребрянные Мечи
+Upgrade PA81 tip4: sid=35454 | text=Исследовать Серебрянные Мечи
+Upgrade PA81 ubertip4: sid=35450 | text=Дополнительно увеличивают урон от атак ополченцев, пехотинцев, разрушителей чар, наездников на дракондорах и грифонах, а также рыцарей.
+Upgrade PA81 name5: sid=41956 | text=|cffb4d2ebВольфрамовые Мечи
+Upgrade PA81 tip5: sid=35458 | text=Исследовать Вольфрамовые Мечи
+Upgrade PA81 ubertip5: sid=35451 | text=Дополнительно увеличивают урон от атак ополченцев, пехотинцев, разрушителей чар, наездников на дракондорах и грифонах, а также рыцарей.
+Upgrade PA81 name6: sid=41957 | text=|cffb4d2ebНефритовые Мечи
+Upgrade PA81 tip6: sid=35457 | text=Исследовать Нефритовые Мечи
+Upgrade PA81 ubertip6: sid=35452 | text=Дополнительно увеличивают урон от атак ополченцев, пехотинцев, разрушителей чар, наездников на дракондорах и грифонах, а также рыцарей.
+Upgrade PA82 name1: sid=41960 | text=|cffb4d2ebИзучения Хмелеварения
+Upgrade PA82 tip1: sid=35464 | text=Исследовать «Изучения Хмелеварения»
+Upgrade PA82 ubertip1: sid=3119 | text=Позволяет нанимать Хмелеваров сильных гибридных юнитов. |cffff0000Запрещает найм Мастеров Геомантов|r
+Upgrade PA83 name1: sid=41961 | text=|cffb4d2ebИзучить Геомантию
+Upgrade PA83 tip1: sid=35465 | text=Изучить Геомантию
+Upgrade PA83 ubertip1: sid=3120 | text=Позволяет нанимать Мастеров Геомантов, сильных юнитов ближнего боя. |cffff0000Запрещает найм Хмелеваров|r
+Upgrade PA84 name1: sid=42411 | text=|cffb4d2ebЖелезная Броня|r
+Upgrade PA84 tip1: sid=38233 | text=Исследовать |cffb4d2ebЖелезную Броню|r
+Upgrade PA84 ubertip1: sid=42425 | text=Усиливает броню воинов ближнего боя армии пандаренов.
+Upgrade PA84 name2: sid=42415 | text=|cffb4d2ebЖелезная Броня|r
+Upgrade PA84 tip2: sid=38451 | text=Исследовать |cffb4d2ebЖелезную Броню|r
+Upgrade PA84 ubertip2: sid=42426 | text=Усиливает броню воинов ближнего боя армии пандаренов.
+Upgrade PA84 name3: sid=42416 | text=|cffb4d2ebЖелезная Броня|r
+Upgrade PA84 tip3: sid=40270 | text=Исследовать |cffb4d2ebЖелезную Броню|r
+Upgrade PA84 ubertip3: sid=42427 | text=Усиливает броню воинов ближнего боя армии пандаренов.
+Upgrade PA84 name4: sid=42417 | text=|cffb4d2ebЖелезная Броня|r
+Upgrade PA84 tip4: sid=36661 | text=Исследовать |cffb4d2ebЖелезную Броню|r
+Upgrade PA84 ubertip4: sid=42412 | text=Усиливает броню воинов ближнего боя армии пандаренов.
+Upgrade PA84 name5: sid=42418 | text=|cffb4d2ebЖелезная Броня|r
+Upgrade PA84 tip5: sid=40427 | text=Исследовать |cffb4d2ebЖелезную Броню|r
+Upgrade PA84 ubertip5: sid=42413 | text=Усиливает броню воинов ближнего боя армии пандаренов.
+Upgrade PA84 name6: sid=42419 | text=|cffb4d2ebЖелезная Броня|r
+Upgrade PA84 tip6: sid=42371 | text=Исследовать |cffb4d2ebЖелезную Броню|r
+Upgrade PA84 ubertip6: sid=42414 | text=Усиливает броню воинов ближнего боя армии пандаренов.
+Upgrade PA85 name1: sid=41968 | text=|cffb4d2ebНефритовые Доспехи
+Upgrade PA85 tip1: sid=41969 | text=|cffb4d2ebИсследовать Нефритовые Доспехи
+Upgrade PA85 ubertip1: sid=35491 | text=Усиливает броню Воинов Нефритовой Гвардии
+Upgrade PA86 name1: sid=41970 | text=|cffb4d2ebПосвящение Мастеров Бури
+Upgrade PA86 tip1: sid=41972 | text=|cffb4d2ebПосвящение Мастеров Бури
+Upgrade PA86 ubertip1: sid=19840 | text=Увеличивает запас здоровья и маны  Мастеров Бури, ускоряет регенерацию их маны.
+Upgrade PA86 name2: sid=41971 | text=|cffb4d2ebПосвящение Мастеров Бури
+Upgrade PA86 tip2: sid=41973 | text=|cffb4d2ebПосвящение Мастеров Бури
+Upgrade PA86 ubertip2: sid=20775 | text=Увеличивает запас здоровья и маны Мастеров Бури, ускоряет регенерацию их маны.
+Upgrade PA87 name1: sid=41974 | text=||cffb4d2ebПосвящение Мастеров Земли
+Upgrade PA87 tip1: sid=41976 | text=||cffb4d2ebПосвящение Мастеров Земли
+Upgrade PA87 ubertip1: sid=22726 | text=Увеличивает запас здоровья Мастеров Земли,а так же даёт им невосприимчивость к магии.
+Upgrade PA87 name2: sid=41975 | text=||cffb4d2ebПосвящение Мастеров Земли
+Upgrade PA87 tip2: sid=41977 | text=||cffb4d2ebПосвящение Мастеров Земли
+Upgrade PA87 ubertip2: sid=22749 | text=Дополнительно увеличивает запас здоровья Мастеров Земли, а так же даёт невосприимчивость к магии.
+Upgrade PA88 name1: sid=41978 | text=|cffb4d2ebПосвящение Мастеров Огня
+Upgrade PA88 tip1: sid=41979 | text=|cffb4d2ebПосвящение Мастеров Огня
+Upgrade PA88 ubertip1: sid=22893 | text=Увеличивают урон от атак Мастеров Огня, а так же их запас здоровья.
+Upgrade PA88 name2: sid=41980 | text=|cffb4d2ebПосвящение Мастеров Огня
+Upgrade PA88 tip2: sid=41981 | text=|cffb4d2ebПосвящение Мастеров Огня
+Upgrade PA88 ubertip2: sid=22907 | text=Дополнительно увеличивают урон от атак Мастеров огня, а так же их запас здоровья.
+Upgrade PA89 name1: sid=41982 | text=|cffb4d2ebПосвящение Монахов Ян в адепты
+Upgrade PA89 tip1: sid=41984 | text=|cffb4d2ebПосвящение Монахов Ян в адепты
+Upgrade PA89 ubertip1: sid=2875 | text=Увеличивает запас здоровья и маны Монахов Ян ускоряет регенерацию их маны, а также обучает их «Ярости».
+Upgrade PA89 name2: sid=41983 | text=|cffb4d2ebПосвящение Монахов Ян в адепты
+Upgrade PA89 tip2: sid=41985 | text=|cffb4d2ebПосвящение Монахов Ян в адепты
+Upgrade PA89 ubertip2: sid=2883 | text=Увеличивает запас здоровья и маны Монахов Ян, ускоряет регенерацию их маны.
+Upgrade PA90 name1: sid=41986 | text=|cffb4d2ebСделать Геомантов Адептами
+Upgrade PA90 tip1: sid=35521 | text=Исследовать Сделать Геомантов Адептами
+Upgrade PA90 ubertip1: sid=3121 | text=Увеличивают урон от атак Мастеров Геомантов, а так же их скорость атаки и здоровье.
+Upgrade PA90 name2: sid=41987 | text=|cffb4d2ebСделать Геомантов Адептами
+Upgrade PA90 tip2: sid=35522 | text=Исследовать Сделать Геомантов Адептами
+Upgrade PA90 ubertip2: sid=3122 | text=Дополнительно увеличивают урон от атак Мастеров Геомантов, а так же их скорость атаки и здоровье.
+Upgrade PA90 name3: sid=41988 | text=|cffb4d2ebСделать Геомантов Адептами
+Upgrade PA90 tip3: sid=35523 | text=Исследовать Сделать Геомантов Адептами
+Upgrade PA90 ubertip3: sid=3123 | text=Дополнительно увеличивают урон от атак Мастеров Геомантов, а так же их скорость атаки и здоровье, Обучает Мастеров Геомантов заклинанию Энергия Ци.
+Upgrade PA91 name1: sid=41989 | text=|cffb4d2ebСделать Монахов Адептами
+Upgrade PA91 tip1: sid=41991 | text=|cffb4d2ebСделать Монахов Адептами
+Upgrade PA91 ubertip1: sid=35529 | text=Увеличивает запас здоровья и маны монахов, ускоряет регенерацию их маны, а также обучает их «Невидимости».
+Upgrade PA91 name2: sid=41990 | text=|cffb4d2ebСделать Монахов Мастерами
+Upgrade PA91 tip2: sid=41992 | text=|cffb4d2ebСделать Монахов Мастерами
+Upgrade PA91 ubertip2: sid=35530 | text=Увеличивает запас здоровья и маны монахов, ускоряет регенерацию их маны, а также обучает их «Превращению».
+Upgrade PA92 name1: sid=41993 | text=|cffb4d2ebСделать Хмелеваров учениками
+Upgrade PA92 tip1: sid=41995 | text=|cffb4d2ebСделать Хмелеваров адептами
+Upgrade PA92 ubertip1: sid=3124 | text=Увеличивает запас здоровья и маны Хмелеваров,а так же добавляет им невоспримчивость к магии.
+Upgrade PA92 name2: sid=41994 | text=|cffb4d2ebСделать Хмелеваров адептами
+Upgrade PA92 tip2: sid=41996 | text=|cffb4d2ebСделать Хмелеваров мастерами
+Upgrade PA92 ubertip2: sid=3125 | text=Увеличивает запас здоровья и маны Хмелеваров,а так же добавляет им невоспримчивость к магии.
+Upgrade PA92 name3: sid=41997 | text=|cffb4d2ebСделать Хмелеваров мастерами
+Upgrade PA92 tip3: sid=41998 | text=|cffb4d2ebСделать Хмелеваров мастерами
+Upgrade PA92 ubertip3: sid=3126 | text=Увеличивает запас здоровья и маны Хмелеваров,а так же добавляет им невоспримчивость к магии.
+Upgrade PA93 name1: sid=41999 | text=|cffb4d2ebСтальные Наконечники
+Upgrade PA93 tip1: sid=35543 | text=Исследовать «Стальные Наконечники»
+Upgrade PA93 ubertip1: sid=35766 | text=Увеличивает урон лучников, Мастеров бури, орудийных расчётов.
+Upgrade PA93 name2: sid=42000 | text=|cffb4d2ebЖелезные Наконечники
+Upgrade PA93 tip2: sid=35710 | text=Исследовать «Железные Наконечники»
+Upgrade PA93 ubertip2: sid=35767 | text=Дополнительно увеличивает урон лучников, Мастеров Бури,орудийных расчётов.
+Upgrade PA93 name3: sid=42001 | text=|cffb4d2ebМифриловые Наконечники
+Upgrade PA93 tip3: sid=35549 | text=Исследовать «Мифриловые Наконечники»
+Upgrade PA93 ubertip3: sid=35768 | text=Дополнительно увеличивает урон лучников, Мастеров Бури,орудийных расчётов.
+Upgrade PA93 name4: sid=42002 | text=|cffb4d2ebВольфрамовые Наконечники
+Upgrade PA93 tip4: sid=35717 | text=Исследовать «Вольфрамовые Наконечники»
+Upgrade PA93 ubertip4: sid=35711 | text=Дополнительно увеличивает урон лучников, Мастеров Бури,орудийных расчётов.
+Upgrade PA93 name5: sid=42003 | text=|cffb4d2ebСеребрянные Наконечники
+Upgrade PA93 tip5: sid=35718 | text=Исследовать «Серебрянные Наконечники»
+Upgrade PA93 ubertip5: sid=35712 | text=Дополнительно увеличивает урон лучников, Мастеров Бури,орудийных расчётов.
+Upgrade PA93 name6: sid=42004 | text=|cffb4d2ebНефритовые Наконечники
+Upgrade PA93 tip6: sid=35719 | text=Исследовать «Нефритовые Наконечники»
+Upgrade PA93 ubertip6: sid=35713 | text=Дополнительно увеличивает урон лучников, Мастеров Бури,орудийных расчётов.
+Upgrade PA94 name1: sid=42436 | text=|cffb4d2ebУлучшенные топоры|r
+Upgrade PA94 tip1: sid=42438 | text=Исследовать |cffb4d2ebУлучшенные топоры|r
+Upgrade PA94 ubertip1: sid=None | text=None
+Upgrade PA94 name2: sid=42437 | text=|cffb4d2ebУлучшенные топоры|r
+Upgrade PA94 tip2: sid=42439 | text=Исследовать |cffb4d2ebУлучшенные топоры|r
+Upgrade PA94 ubertip2: sid=None | text=None
+Upgrade PA94 name3: sid=42428 | text=|cffb4d2ebУлучшенные топоры|r
+Upgrade PA94 tip3: sid=42432 | text=Исследовать |cffb4d2ebУлучшенные топоры|r
+Upgrade PA94 ubertip3: sid=35554 | text=Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.
+Upgrade PA94 name4: sid=42429 | text=|cffb4d2ebУлучшенные топоры|r
+Upgrade PA94 tip4: sid=42433 | text=Исследовать |cffb4d2ebУлучшенные топоры|r
+Upgrade PA94 ubertip4: sid=35555 | text=Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.
+Upgrade PA94 name5: sid=42430 | text=|cffb4d2ebУлучшенные топоры|r
+Upgrade PA94 tip5: sid=42434 | text=Исследовать |cffb4d2ebУлучшенные топоры|r
+Upgrade PA94 ubertip5: sid=35556 | text=Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.
+Upgrade PA94 name6: sid=42431 | text=|cffb4d2ebУлучшенные топоры|r
+Upgrade PA94 tip6: sid=42435 | text=Исследовать |cffb4d2ebУлучшенные топоры|r
+Upgrade PA94 ubertip6: sid=35557 | text=Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.
+Upgrade PA95 name1: sid=42011 | text=|cffb4d2ebУтяжелённая Рукоять
+Upgrade PA95 tip1: sid=35568 | text=Исследовать «Утяжелённая Рукоять»
+Upgrade PA95 ubertip1: sid=35569 | text=Воины Нефритовой Гвардии наносят больше урона.
+Upgrade R0L3 name1: sid=28728 | text=|cffe6beaaПандарены|r
+Upgrade R0L3 tip1: sid=None | text=None
+Upgrade R0L3 ubertip1: sid=None | text=None
+Upgrade Rhfl name1: sid=None | text=None
+Upgrade Rhfl tip1: sid=None | text=None
+Upgrade Rhfl ubertip1: sid=None | text=None
+Upgrade Rhfs name1: sid=None | text=None
+Upgrade Rhfs tip1: sid=None | text=None
+Upgrade Rhfs ubertip1: sid=None | text=None
+Upgrade pa16 name1: sid=42022 | text=|cffb4d2ebУсиление Мастеров Огня
+Upgrade pa16 tip1: sid=2927 | text=Исследовать Усиление Мастеров Огня
+Upgrade pa16 ubertip1: sid=38751 | text=Возвращает Мастерам Огня былое могущество.
+Upgrade pa21 name1: sid=42453 | text=|cffb4d2ebДрессировка Животных|r
+Upgrade pa21 tip1: sid=42455 | text=Исследовать |cffb4d2ebДрессировку Животных|r
+Upgrade pa21 ubertip1: sid=42454 | text=+150 к запасу здоровья и 10% к скорости передвижения всадников пандаренов.
+Upgrade pa39 name1: sid=42018 | text=|cffb4d2ebСекреты Древних Мастеров
+Upgrade pa39 tip1: sid=42020 | text=|cffb4d2ebСекреты Древних Мастеров
+Upgrade pa39 ubertip1: sid=36866 | text=Увеличивает запас здоровья и маны Стражей Храма, ускоряет регенерацию их маны, а также обучает их «Ауре Умиротворённости».
+Upgrade pa39 name2: sid=42019 | text=|cffb4d2ebСекреты Древних Мастеров
+Upgrade pa39 tip2: sid=42021 | text=|cffb4d2ebСекреты Древних Мастеров
+Upgrade pa39 ubertip2: sid=36867 | text=Увеличивает запас здоровья и маны Стражей Храма, ускоряет регенерацию их маны, а также обучает их «Ауре Умиротворённости».
+Upgrade pa46 name1: sid=None | text=None
+Upgrade pa46 tip1: sid=None | text=None
+Upgrade pa46 ubertip1: sid=None | text=None
+Upgrade pa47 name1: sid=42023 | text=|cffb4d2ebУсиление Мастеров Земли
+Upgrade pa47 tip1: sid=3116 | text=Исследовать Усиление Мастеров Земли
+Upgrade pa47 ubertip1: sid=3117 | text=Они получили власть которая и не снилась их отцам.
+
+=== 6. ABILITIES ===
+Ability A001 name: sid=287 | text=|cffe4cfa3Абордаж!|r
+Ability A001 tip1: sid=285 | text=|cffe4cfa3Абордаж!|r
+Ability A001 ubertip1: sid=286 | text=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Оглушает данный и вражеский корабль и постепенно наносит урон. Если здоровье одно из кораблей становится меньше 18%, он переходит на сторону врага.|r
+Ability A003 name: sid=292 | text=Боковые пушки (Линкор)
+Ability A003 tip1: sid=512 | text=Боковые пушки 1 (Линкор)
+Ability A003 ubertip1: sid=293 | text=Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.
+Ability A003 tip2: sid=513 | text=Боковые пушки 2 (Линкор)
+Ability A003 ubertip2: sid=492 | text=Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.
+Ability A003 tip3: sid=514 | text=Боковые пушки 3 (Линкор)
+Ability A003 ubertip3: sid=493 | text=Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.
+Ability A005 name: sid=568 | text=Аура стойкости
+Ability A005 researchtip: sid=570 | text=Изучить ауру стойкости
+Ability A005 researchubertip: sid=569 | text=Усиливает броню находящихся рядом союзников. 
+Ability A005 tip1: sid=571 | text=Аура стойкости
+Ability A005 ubertip1: sid=572 | text=2 к броне находящихся рядом союзников.
+Ability A006 name: sid=None | text=None
+Ability A006 researchtip: sid=575 | text=Изучить Ауру меткости
+Ability A006 researchubertip: sid=574 | text=Увеличивает урон от дистанционных атак находящихся рядом союзников.
+Ability A006 tip1: sid=573 | text=Аура меткости
+Ability A006 ubertip1: sid=576 | text=+15% к урону от дальнобойных атак находящихся рядом союзников.
+Ability A007 name: sid=None | text=None
+Ability A007 tip1: sid=577 | text=Аура выносливости
+Ability A007 ubertip1: sid=578 | text=+20% к скорости передвижения и +5% к скорости атаки находящихся рядом союзников.
+Ability A00E name: sid=584 | text=Выбрать ауру меткости
+Ability A00E tip1: sid=582 | text=Выбрать ауру меткости
+Ability A00E ubertip1: sid=589 | text=Флагман получит ауру, повышающую урон флота.
+Ability A0I3 name: sid=26484 | text=|cffe4cfa3Небольшой скачок|r
+Ability A0I3 researchtip: sid=10064 | text=|cffe4cfa3Небольшой скачок|r
+Ability A0I3 researchubertip: sid=10976 | text=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно перемещает строителя на короткое расстояние.|r
+Ability A0I3 tip1: sid=26476 | text=|cffe4cfa3Небольшой скачок|r
+Ability A0I3 ubertip1: sid=26477 | text=|cffa6afb8СПОСОБНОСТЬ:|cffced4da СПОСОБНОСТЬ: Мгновенно переносит работника на небольшое расстояние.|r
+Ability A0IQ name: sid=27193 | text=|cffe4cfa3Обозначить столицу|r
+Ability A0IQ tip1: sid=27969 | text=|cffe4cfa3Обозначить столицу|r
+Ability A0IQ ubertip1: sid=27970 | text=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение.|r
+Ability A0LI name: sid=2888 | text=|cffe4cfa3Обмен Золота на Дерево|r
+Ability A0LI tip1: sid=3692 | text=|cffe4cfa3Обмен Золота на Дерево|r
+Ability A0LI ubertip1: sid=20630 | text=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Отнимает у игрока 500 золота, но добавляет 100 дерева.|r
+Ability A0LJ name: sid=12857 | text=|cffe4cfa3Обмен Дерева на Золото|r
+Ability A0LJ tip1: sid=12886 | text=|cffe4cfa3Обмен Дерева на Золото|r
+Ability A0LJ ubertip1: sid=20631 | text=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Отнимает у игрока 500 дерева, но добавляет 100 золота.|r
+Ability A0Z5 name: sid=2604 | text=|cffe4cfa3ДАММИ - ВНЕ ЭКОНОМИКИ|r
+Ability A0Z5 tip1: sid=2755 | text=|cffe4cfa3ДАММИ - ВНЕ ЭКОНОМИКИ|r
+Ability A0Z5 ubertip1: sid=3540 | text=|cffa6afb8СПОСОБНОСТЬ:|cffced4da ДАММИ - ВНЕ ЭКОНОМИКИ|r
+Ability A1I6 name: sid=38913 | text=|cffb4d2ebПандарены|r
+Ability A1I6 tip1: sid=38914 | text=|cffb4d2ebПандарены|r
+Ability A1I6 ubertip1: sid=42408 | text=|cffa0beaaСоздатель расы:|r |cffc8dcaaCapral|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaСложность:|r |cfff0dc96●|r●●●●|r|n|cffa0beaaПериод:|r |cffc8dcaaMists of Pandaria|r|n|n|r|cffb4d2ebПандарены|r, фракция внешне схожая с фурборлогами. Жители Пандарии приверженцы мирного и дипломатического решения конфликтов. Однако не стоит считать их безобидными, они известны за свою миролюбивость, дружелюбие и любовь провести время за кружечкой пива, но также они прославились за свою ловкость, проворство и силу в бою. Особенно выделяются монахи пандаренов и мастера стихий, отдавшими себя гармонией с духами элементов воды, ветра, земли и огня.
+Ability A1I7 name: sid=35480 | text=|cffb4d2ebСытые и довольные
+Ability A1I7 tip1: sid=35578 | text=Сытые и довольные
+Ability A1I7 ubertip1: sid=25601 | text=Чем больше ферм, тем выше шанс что юниты выйдут c большим количеством здоровья из казарм.
+Ability A1RB name: sid=42010 | text=|cffb4d2ebИсцеление|r
+Ability A1RB tip1: sid=42009 | text=|cffb4d2ebИсцеление|r
+Ability A1RB ubertip1: sid=42236 | text=Восполняет 5 здоровья находящимся рядом союзникам (до 8 юнитов).
+Ability AInv name: sid=None | text=None
+Ability AInv tip1: sid=None | text=None
+Ability AInv ubertip1: sid=None | text=None
+Ability ANbf name: sid=None | text=None
+Ability ANbf tip1: sid=None | text=None
+Ability ANbf ubertip1: sid=None | text=None
+Ability ANbf tip2: sid=None | text=None
+Ability ANbf ubertip2: sid=None | text=None
+Ability ANbf tip3: sid=None | text=None
+Ability ANbf ubertip3: sid=None | text=None
+Ability ANdh name: sid=None | text=None
+Ability ANdh tip1: sid=None | text=None
+Ability ANdh ubertip1: sid=None | text=None
+Ability ANdh tip2: sid=None | text=None
+Ability ANdh ubertip2: sid=None | text=None
+Ability ANdh tip3: sid=None | text=None
+Ability ANdh ubertip3: sid=None | text=None
+Ability Ahrp name: sid=None | text=None
+Ability Ahrp tip1: sid=None | text=None
+Ability Ahrp ubertip1: sid=None | text=None
+Ability Aloc name: sid=None | text=None
+Ability Aloc tip1: sid=None | text=None
+Ability Aloc ubertip1: sid=None | text=None
+Ability Apiv name: sid=None | text=None
+Ability Apiv tip1: sid=None | text=None
+Ability Apiv ubertip1: sid=None | text=None
+Ability Argl name: sid=None | text=None
+Ability Argl tip1: sid=None | text=None
+Ability Argl ubertip1: sid=None | text=None
+Ability Arlm name: sid=None | text=None
+Ability Arlm tip1: sid=None | text=None
+Ability Arlm ubertip1: sid=None | text=None
+Ability Asph name: sid=None | text=None
+Ability Asph tip1: sid=None | text=None
+Ability Asph ubertip1: sid=None | text=None
+Ability Avul name: sid=None | text=None
+Ability Avul tip1: sid=None | text=None
+Ability Avul ubertip1: sid=None | text=None
+Ability PA02 name: sid=35484 | text=|cffb4d2ebЕдинение с Инь (ПА)
+Ability PA02 researchtip: sid=35925 | text=Изучить «Единение с Инь»
+Ability PA02 tip1: sid=35926 | text=Активировать «Единение с Инь»
+Ability PA02 ubertip1: sid=None | text=None
+Ability PA03 name: sid=35485 | text=|cffb4d2ebВеер Клинков (ПА)
+Ability PA03 tip1: sid=None | text=None
+Ability PA03 ubertip1: sid=35575 | text=Бросает несколько кинжалов, нанося по 95 урона находящимся рядом врагам.
+Ability PA03 tip2: sid=None | text=None
+Ability PA03 ubertip2: sid=35705 | text=Бросает несколько кинжалов, нанося по 145 урона находящимся рядом врагам.
+Ability PA03 tip3: sid=None | text=None
+Ability PA03 ubertip3: sid=35706 | text=Бросает несколько кинжалов, нанося по 210 урона находящимся рядом врагам.
+Ability PA03 tip4: sid=35383 | text=Веер клинков [|cffffcc004-й уровень|r]
+Ability PA03 ubertip4: sid=35385 | text=Бросает несколько кинжалов, нанося по 240 урона находящимся рядом врагам.
+Ability PA05 name: sid=35486 | text=|cffb4d2ebУдары Ци
+Ability PA05 tip1: sid=35929 | text=Удары Ци
+Ability PA05 ubertip1: sid=35931 | text=Каждая атака Мастера Геоманта уничтожает <Afbk,DataA1> маны цели, нанося дополнительный урон.
+Ability PA13 name: sid=35487 | text=|cffb4d2ebЗащита Ци
+Ability PA13 tip1: sid=3765 | text=Защита Ци
+Ability PA13 ubertip1: sid=None | text=None
+Ability PA15 name: sid=36665 | text=|cffb4d2ebВоодушевляющиее Присутствие
+Ability PA15 researchtip: sid=38450 | text=Воодушевляющиее Присутствие
+Ability PA15 researchubertip: sid=23367 | text=Воодушевляющиее Присутствие
+Ability PA15 tip1: sid=23131 | text=Воодушевляющиее Присутствие
+Ability PA15 ubertip1: sid=40273 | text=Шадо-Пан воодушевляет находящихся рядом воинов сражаться смертоноснее, увеличивая атаку на 7%.
+Ability PA15 tip2: sid=23132 | text=Воодушевляющиее Присутствие
+Ability PA15 ubertip2: sid=40278 | text=Шадо-Пан воодушевляет находящихся рядом воинов сражаться смертоноснее, увеличивая атаку на 14%.
+Ability PA15 tip3: sid=23145 | text=Воодушевляющиее Присутствие
+Ability PA15 ubertip3: sid=40277 | text=Шадо-Пан воодушевляет находящихся рядом воинов сражаться смертоноснее, увеличивая атаку на 21%.
+Ability PA15 tip4: sid=23146 | text=Воодушевляющиее Присутствие
+Ability PA15 ubertip4: sid=40279 | text=Шадо-Пан воодушевляет находящихся рядом воинов сражаться смертоноснее, увеличивая атаку на 28%.
+Ability PA16 name: sid=40295 | text=|cffb4d2ebЭнергия Ци 1
+Ability PA16 researchubertip: sid=32280 | text=Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AOhw,DataA1> здоровья, до <AOhw,DataB1> целей.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<AOhw,DataA2> здоровья, до <AOhw,DataB2> целей.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AOhw,DataA3> здоровья, до <AOhw,DataB3> целей.|r |n|cffffcc004-й уровень:|r |cffb4dcdc385 здоровья, до 20 целей.|r
+Ability PA16 tip1: sid=None | text=None
+Ability PA16 ubertip1: sid=28016 | text=Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AOhw,DataA1> здоровья, до <AOhw,DataB1> целей.|r 
+Ability PA20 name: sid=42409 | text=|cffb4d2ebАура Умиротворёности|r
+Ability PA20 tip1: sid=36667 | text=Аура Умиротворёности [|cffffcc001-й уровень|r]
+Ability PA20 ubertip1: sid=35034 | text=Ускоряет регенерацию маны находящихся рядом союзников, +1 мана в секунду.
+Ability PA20 tip2: sid=36666 | text=Аура Умиротворёности [|cffffcc002-й уровень|r]
+Ability PA20 ubertip2: sid=35904 | text=Ускоряет регенерацию маны находящихся рядом союзников, +3 маны в секунду.
+Ability PA45 name: sid=9143 | text=|cffb4d2ebНефритовые Доспехи
+Ability PA45 tip1: sid=9507 | text=Нефритовые Доспехи
+Ability PA45 ubertip1: sid=9506 | text=-18 получаемого урона от атак, минимальный урон 2
+Ability PA46 name: sid=12384 | text=|cffb4d2ebРассеивание заклинаний
+Ability PA46 tip1: sid=None | text=None
+Ability PA46 ubertip1: sid=None | text=None
+Ability PA50 name: sid=21395 | text=|cffb4d2ebУдар Восходящего Солнца
+Ability PA50 researchtip: sid=35347 | text=Изучить «Удар Восходящего Солнца» [|cffffcc00%d-й уровень|r]
+Ability PA50 tip1: sid=35348 | text=Удар Восходящего Солнца [|cffffcc001-й уровень|r]
+Ability PA50 ubertip1: sid=None | text=None
+Ability PA50 tip2: sid=35349 | text=Удар Восходящего Солнца [|cffffcc002-й уровень|r]
+Ability PA50 ubertip2: sid=None | text=None
+Ability PA50 tip3: sid=35350 | text=Удар Восходящего Солнца [|cffffcc003-й уровень|r]
+Ability PA50 ubertip3: sid=None | text=None
+Ability PA50 tip4: sid=35351 | text=Удар Восходящего Солнца [|cffffcc004-й уровень|r]
+Ability PA50 ubertip4: sid=34328 | text=Бросает молот, оглушая врага на <AHtb,Dur3> сек. и нанося <AHtb,DataA3> урона.
+Ability PA51 name: sid=21427 | text=|cffb4d2ebВыдержка Монастыря Земли
+Ability PA51 researchtip: sid=34335 | text=Выдержка Монастыря Земли
+Ability PA51 researchubertip: sid=30676 | text=Выдержка Монастыря Земли
+Ability PA51 tip1: sid=12317 | text=Выдержка Монастыря Земли
+Ability PA51 ubertip1: sid=15593 | text=-12 от получаемого урона от атак. Минимальный урон от атак:  1.
+Ability PA51 tip2: sid=14452 | text=Выдержка Монастыря Земли
+Ability PA51 ubertip2: sid=15594 | text=-15 получаемого урона от атак. Минимальный урон от атак: 1.
+Ability PA51 tip3: sid=15980 | text=Выдержка Монастыря Земли
+Ability PA51 ubertip3: sid=16889 | text=-18 получаемого урона от атак. Минимальный урон от атак: 1.
+Ability PA51 tip4: sid=21680 | text=Выдержка Монастыря Земли
+Ability PA51 ubertip4: sid=20694 | text=-20 получаемого урона от атак. Минимальный урон от атак: 1.
+Ability PA53 name: sid=21766 | text=|cffb4d2ebЯрость
+Ability PA53 tip1: sid=29754 | text=Ярость
+Ability PA53 ubertip1: sid=38745 | text=+50% к скорости атаки и +35% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur1> сек.
+Ability PA55 name: sid=21924 | text=|cffb4d2ebБуря Клинков
+Ability PA55 researchtip: sid=35369 | text=Изучить «Буря Клинков»
+Ability PA55 researchubertip: sid=35371 | text=Окружает Танцующего с Ветром вихрем разрушительной силы, который дает невосприимчивость к магии и наносит 140 урона/сек. находящимся рядом наземным врагам.
+Ability PA55 tip1: sid=35368 | text=Буря Клинков
+Ability PA55 ubertip1: sid=35372 | text=Окружает Танцующего с Ветром вихрем разрушительной силы, который дает невосприимчивость к магии и наносит 140 урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur1> сек.
+Ability PA57 name: sid=29964 | text=|cffb4d2ebТанец Ветра
+Ability PA57 tip1: sid=None | text=None
+Ability PA57 ubertip1: sid=None | text=None
+Ability PA57 tip2: sid=None | text=None
+Ability PA57 ubertip2: sid=None | text=None
+Ability PA57 tip3: sid=None | text=None
+Ability PA57 ubertip3: sid=None | text=None
+Ability PA57 tip4: sid=36742 | text=Танец ветра [|cffffcc004-й уровень|r]
+Ability PA57 ubertip4: sid=36743 | text=Даёт невидимость  +90% к скорости передвижения на 60 секунд. Атакуя Танцующий с ветром становится видимым и наносит 150 дополнительного урона.
+Ability PA59 name: sid=35264 | text=|cffb4d2ebТехника Тысячи Порезов
+Ability PA59 researchtip: sid=35388 | text=Изучить «Технику Тысячи Порезов» [|cffffcc00%d-й уровень|r]
+Ability PA59 tip1: sid=35391 | text=Техника Тысячи Порезов [|cffffcc001-й уровень|r]
+Ability PA59 ubertip1: sid=39183 | text=Дает 15%-й шанс нанести <PA59,DataB1>-кратный урон при атаке.
+Ability PA59 tip2: sid=35392 | text=Техника Тысячи Порезов [|cffffcc002-й уровень|r]
+Ability PA59 ubertip2: sid=39184 | text=Дает 15%-й шанс нанести <PA59,DataB2>-кратный урон при атаке.
+Ability PA59 tip3: sid=35393 | text=Техника Тысячи Порезов [|cffffcc003-й уровень|r]
+Ability PA59 ubertip3: sid=39185 | text=Дает 15%-й шанс нанести <PA59,DataB3>-кратный урон при атаке.
+Ability PA59 tip4: sid=35394 | text=Техника Тысячи Порезов [|cffffcc004-й уровень|r]
+Ability PA59 ubertip4: sid=39182 | text=Дает 15%-й шанс нанести <PA59,DataB4>-кратный урон при атаке.
+Ability PA60 name: sid=35400 | text=|cffb4d2ebЦепная молния
+Ability PA60 tip1: sid=None | text=None
+Ability PA60 ubertip1: sid=None | text=None
+Ability PA60 tip2: sid=None | text=None
+Ability PA60 ubertip2: sid=None | text=None
+Ability PA60 tip3: sid=None | text=None
+Ability PA60 ubertip3: sid=None | text=None
+Ability PA60 tip4: sid=35396 | text=Цепная молния [|cffffcc004-й уровень|r]
+Ability PA60 ubertip4: sid=36745 | text=Призывает молнию, которая наносит 380 урона цели и рикошетит до 15  раз, нанося меньше урона с каждым рикошетом.
+Ability PA61 name: sid=35401 | text=|cffb4d2ebБагманское пиво|r
+Ability PA61 tip1: sid=42402 | text=|cffb4d2ebБагманское пиво|r
+Ability PA61 ubertip1: sid=42404 | text=+15% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья в 50%.
+Ability PA62 name: sid=42405 | text=|cffb4d2ebГрозовые Стрелы|r
+Ability PA62 researchtip: sid=35404 | text=Изучить «Грозовые Стрелы» [|cffffcc00%d-й уровень|r]
+Ability PA62 researchubertip: sid=35405 | text=Добавляет к атакам урон от грозы. |n|n|cffffcc001-й уровень:|r +<AHfa,DataA1> к урону. |n|cffffcc002-й уровень:|r +<AHfa,DataA2> к урону. |n|cffffcc003-й уровень:|r +<AHfa,DataA3> к урону.
+Ability PA62 tip1: sid=42406 | text=|cffb4d2ebГрозовые  Стрелы|r
+Ability PA62 ubertip1: sid=42407 | text=+5 урона от бури к атакам. Каждый выстрел расходует ману.
+Ability PA63 name: sid=35402 | text=|cffb4d2ebОбжигающее Пламя Дракона
+Ability PA63 tip1: sid=35408 | text=Активировать «Обжигающее Пламя Дракона» [|cffffcc001-й уровень|r]
+Ability PA63 ubertip1: sid=38747 | text=При использовании активирует огненную ауру, которая наносит 15 урона каждые 0,5 сек. находящимся рядом наземным врагам.|nРасходует ману до отмены.
+Ability PA65 name: sid=35406 | text=|cffb4d2ebПризыв к Балансу
+Ability PA65 tip1: sid=23129 | text=Призыв к Балансу
+Ability PA65 ubertip1: sid=38748 | text=+15% к урону находящихся рядом союзников и 4 брони. |nВремя действия: <Aroa,Dur1> сек.
+Ability PA66 name: sid=22591 | text=|cffb4d2ebИспепеление|r
+Ability PA66 tip1: sid=22597 | text=|cffb4d2ebИспепеление|r
+Ability PA66 ubertip1: sid=None | text=None
+Ability PA67 name: sid=35413 | text=Пламенное дыхание 1
+Ability PA67 tip1: sid=None | text=None
+Ability PA67 ubertip1: sid=None | text=None
+Ability PA68 name: sid=22657 | text=|cffb4d2ebЧувство баланса|r
+Ability PA68 tip1: sid=22659 | text=|cffb4d2ebЧувство баланса|r
+Ability PA68 ubertip1: sid=22665 | text=Движения пандаренов точны до миллиметров. Дает 7%-й шанс уклониться от атаки и 10%-й шанс нанести на 20% больше урона.
+Ability PA69 name: sid=35415 | text=Удар Гнева Земли
+Ability PA69 tip1: sid=5769 | text=Удар Гнева Земли [|cffffcc001-й уровень|r]
+Ability PA69 ubertip1: sid=5768 | text=Мастер Земли бьет с огромной силой, нанося 5% урона врагам рядом с основной целью.
+Ability PA70 name: sid=35416 | text=Хмельные Пары
+Ability PA70 tip1: sid=None | text=None
+Ability PA70 ubertip1: sid=None | text=None
+Ability PA73 name: sid=35418 | text=Раздвоенная молния (Neutral Hostile)
+Ability PA73 tip1: sid=None | text=None
+Ability PA73 ubertip1: sid=3808 | text=Поражает молнией до 4 врагов в секторе перед собой, нанося 175 урона.
+Ability PA74 name: sid=35472 | text=|cffb4d2ebУдар Хмельной Бочки|r
+Ability PA74 tip1: sid=39157 | text=|cffb4d2ebУдар Хмельной Бочки|r
+Ability PA74 ubertip1: sid=35471 | text=С 15%-й вероятностью атака нанесет на 15 больше урона и оглушит цель на 2 сек.
+Ability PA75 name: sid=35473 | text=|cffb4d2ebКатаклизм
+Ability PA75 researchtip: sid=35421 | text=Изучить «Катаклизм» [|cffffcc00%d-й уровень|r]
+Ability PA75 tip1: sid=35422 | text=Катаклизм [|cffffcc001-й уровень|r]
+Ability PA75 ubertip1: sid=34611 | text=Призывает молнии, наносящие 25 урона раз в секунду врагам в небольшой области. |nВремя действия: 15 сек.
+Ability PA75 tip2: sid=39160 | text=Катаклизм [|cffffcc002-й уровень|r]
+Ability PA75 ubertip2: sid=40315 | text=Призывает молнии, наносящие 35 урона раз в секунду врагам в небольшой области. |nВремя действия: 15 сек.
+Ability PA76 name: sid=35479 | text=|cffb4d2ebПризыв Помощи 
+Ability PA76 researchtip: sid=3967 | text=Изучить «Призыв Помощи »
+Ability PA76 researchubertip: sid=4085 | text=Открывает портал, впускающий на помощь пандаренам новые силы.
+Ability PA76 tip1: sid=3955 | text=Призыв Помощи 
+Ability PA76 ubertip1: sid=38430 | text=Открывает портал, впускающий на помощь пандаренам новые силы. Перезарядка:60
+Ability PA76 tip2: sid=36603 | text=Призыв Помощи 
+Ability PA76 ubertip2: sid=38439 | text=Открывает портал, впускающий на помощь пандаренам новые силы. Перезарядка:50
+Ability PA76 tip3: sid=36604 | text=Призыв Помощи 
+Ability PA76 ubertip3: sid=38448 | text=Открывает портал, впускающий на помощь пандаренам новые силы. Перезарядка:40
+Ability PA76 tip4: sid=36605 | text=Призыв Помощи 
+Ability PA76 ubertip4: sid=38449 | text=Открывает портал, впускающий на помощь пандаренам новые силы. Перезарядка:30
+Ability PA77 name: sid=35414 | text=Пьяный Мастер
+Ability PA77 tip1: sid=None | text=None
+Ability PA77 ubertip1: sid=None | text=None
+Ability PA77 tip2: sid=None | text=None
+Ability PA77 ubertip2: sid=None | text=None
+Ability PA77 tip3: sid=None | text=None
+Ability PA77 ubertip3: sid=None | text=None
+Ability PA78 name: sid=6735 | text=|cffb4d2ebПровокация|r
+Ability PA78 researchtip: sid=6789 | text=|cffb4d2ebПровокация|r
+Ability PA78 researchubertip: sid=6790 | text=Изучить |cffb4d2ebПровокацию|r
+Ability PA78 tip1: sid=6788 | text=|cffb4d2ebПровокация|r
+Ability PA78 ubertip1: sid=6791 | text=Ближайшие враги (до <ANta,DataA1>) вынуждены атаковать этого воина. Понижает получаемый урон на 10% на 7 секунд, а также возвращает 30% урона в ближнем бою врагам.
+Ability PA78 tip2: sid=6736 | text=|cffb4d2ebПровокация|r
+Ability PA78 ubertip2: sid=6747 | text=Ближайшие враги (до <ANta,DataA1>) вынуждены атаковать этого воина. Понижает получаемый урон на 10% на 7 секунд, а также возвращает 30% урона в ближнем бою врагам.
+Ability PA78 tip3: sid=6737 | text=|cffb4d2ebПровокация|r
+Ability PA78 ubertip3: sid=6756 | text=Ближайшие враги (до <ANta,DataA1>) вынуждены атаковать этого воина. Понижает получаемый урон на 10% на 7 секунд, а также возвращает 30% урона в ближнем бою врагам.
+Ability PA78 tip4: sid=6742 | text=|cffb4d2ebПровокация|r
+Ability PA78 ubertip4: sid=6748 | text=Ближайшие враги (до <ANta,DataA1>) вынуждены атаковать этого воина. Понижает получаемый урон на 10% на 7 секунд, а также возвращает 30% урона в ближнем бою врагам.
+Ability PA78 tip5: sid=6745 | text=|cffb4d2ebПровокация|r
+Ability PA78 ubertip5: sid=6768 | text=Ближайшие враги (до <ANta,DataA1>) вынуждены атаковать этого воина. Понижает получаемый урон на 10% на 7 секунд, а также возвращает 30% урона в ближнем бою врагам.
+Ability PA79 name: sid=35426 | text=Добывать Ресурсы
+Ability PA79 tip1: sid=None | text=None
+Ability PA79 ubertip1: sid=None | text=None
+Ability pa15 name: sid=41935 | text=|cffb4d2ebТорнадо
+Ability pa15 tip1: sid=None | text=None
+Ability pa15 ubertip1: sid=None | text=None
+Ability pa36 name: sid=41632 | text=|cffb4d2ebОгненная стрела 
+Ability pa36 tip1: sid=None | text=None
+Ability pa36 ubertip1: sid=None | text=None
+Ability pa37 name: sid=41819 | text=|cffb4d2ebВолна исцеления
+Ability pa37 tip1: sid=None | text=None
+Ability pa37 ubertip1: sid=None | text=None
+Ability pa37 tip2: sid=None | text=None
+Ability pa37 ubertip2: sid=None | text=None
+Ability pa37 tip3: sid=None | text=None
+Ability pa37 ubertip3: sid=None | text=None
+Ability pa37 tip4: sid=30016 | text=Волна исцеления [|cffffcc004-й уровень|r]
+Ability pa37 ubertip4: sid=38211 | text=Призывает волну энергии, которая последовательно исцеляет до <AOhw,DataB3> союзников, восполняя <AOhw,DataA3> здоровья первой цели и меньше каждой последующей цели.
+Ability pa44 name: sid=41820 | text=|cffb4d2ebЗащита Древних Мастеров
+Ability pa44 researchtip: sid=6499 | text=Изучить Защита Древних Мастеров
+Ability pa44 researchubertip: sid=6500 | text=Дает неуязвимость союзникам в области вокруг Шадо-Пана. |nСам Шадо-Пан остается уязвимым. |n|n|cffffcc001-й уровень:|r |cffb4dcdcВремя действия - 30 сек.|r |n|cffffcc002-й уровень:|r |cffb4dcdcВремя действия - 40 сек.. |r
+Ability pa44 tip1: sid=36848 | text=Защита Древних Мастеров
+Ability pa44 ubertip1: sid=38220 | text=Дает неуязвимость союзникам в области вокруг Шадо-Пана. |nСам Шадо-Пан остается уязвимым. |n|n|cffffcc001-й уровень:|r |cffb4dcdcВремя действия - 30 сек.|r 
+Ability pa44 tip2: sid=36851 | text=Защита Древних Мастеров
+Ability pa44 ubertip2: sid=38219 | text=Дает неуязвимость союзникам в области вокруг Шадо-Пана. |nСам Шадо-Пан остается уязвимым.  |n|cffffcc002-й уровень:|r |cffb4dcdcВремя действия - 40 сек.. |r

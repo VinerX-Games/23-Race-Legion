@@ -1,0 +1,796 @@
+{
+  "operations": [
+    {
+      "type": "upgrade",
+      "id": "R0HZ",
+      "field": "name1",
+      "value": "|cffe4cfa3Оружие ближнего боя|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0HZ",
+      "field": "tip1",
+      "value": "|cffe4cfa3Оружие ближнего боя|r — уровень |cffffffff1|r (|cffffffffM|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0HZ",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак немагических воинов ближнего боя на |cffffffff1|cffced4da ед.|n|nЗатрагивает: |cffa9c7deВоителей|cffced4da, |cffa9c7deБелых медведей|cffced4da, |cffa9c7deЛютых мамонтов|cffced4da, |cffa9c7deМагнатавров-разрушителей|cffced4da, |cffa9c7deБерсерков|cffced4da, |cffa9c7deГолемов|cffced4da, |cffa9c7deВосставших|cffced4da и Лоа (|cffa9c7deАкали|cffced4da, |cffa9c7deМам'тота|cffced4da, |cffa9c7deРунока|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0HZ",
+      "field": "name2",
+      "value": "|cffe4cfa3Оружие ближнего боя|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0HZ",
+      "field": "tip2",
+      "value": "|cffe4cfa3Оружие ближнего боя|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0HZ",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак немагических воинов ближнего боя ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+2|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deВоителей|cffced4da, |cffa9c7deБелых медведей|cffced4da, |cffa9c7deЛютых мамонтов|cffced4da, |cffa9c7deМагнатавров-разрушителей|cffced4da, |cffa9c7deБерсерков|cffced4da, |cffa9c7deГолемов|cffced4da, |cffa9c7deВосставших|cffced4da и Лоа (|cffa9c7deАкали|cffced4da, |cffa9c7deМам'тота|cffced4da, |cffa9c7deРунока|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0HZ",
+      "field": "name3",
+      "value": "|cffe4cfa3Оружие ближнего боя|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0HZ",
+      "field": "tip3",
+      "value": "|cffe4cfa3Оружие ближнего боя|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0HZ",
+      "field": "ubertip3",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак немагических воинов ближнего боя ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+3|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deВоителей|cffced4da, |cffa9c7deБелых медведей|cffced4da, |cffa9c7deЛютых мамонтов|cffced4da, |cffa9c7deМагнатавров-разрушителей|cffced4da, |cffa9c7deБерсерков|cffced4da, |cffa9c7deГолемов|cffced4da, |cffa9c7deВосставших|cffced4da и Лоа (|cffa9c7deАкали|cffced4da, |cffa9c7deМам'тота|cffced4da, |cffa9c7deРунока|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I0",
+      "field": "name1",
+      "value": "|cffe4cfa3Стальная броня|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I0",
+      "field": "tip1",
+      "value": "|cffe4cfa3Стальная броня|r — уровень |cffffffff1|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I0",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту всех наземных и летающих войск на |cffffffff1|cffced4da ед.|n|nЗатрагивает: все войска и чудовищ |cffa9c7deДраккари|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I0",
+      "field": "name2",
+      "value": "|cffe4cfa3Стальная броня|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I0",
+      "field": "tip2",
+      "value": "|cffe4cfa3Стальная броня|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I0",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту всех наземных и летающих войск ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+2|cffced4da ед.).|n|nЗатрагивает: все войска и чудовищ |cffa9c7deДраккари|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I0",
+      "field": "name3",
+      "value": "|cffe4cfa3Стальная броня|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I0",
+      "field": "tip3",
+      "value": "|cffe4cfa3Стальная броня|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I0",
+      "field": "ubertip3",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту всех наземных и летающих войск ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+3|cffced4da ед.).|n|nЗатрагивает: все войска и чудовищ |cffa9c7deДраккари|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I1",
+      "field": "name1",
+      "value": "|cffe4cfa3Оружие дальнего боя|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I1",
+      "field": "tip1",
+      "value": "|cffe4cfa3Оружие дальнего боя|r — уровень |cffffffff1|r (|cffffffffR|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I1",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелковых и осадных атак на |cffffffff1|cffced4da ед.|n|nЗатрагивает: |cffa9c7deОхотников|cffced4da, |cffa9c7deКатапульты|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da и |cffa9c7deЛедяных Змей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I1",
+      "field": "name2",
+      "value": "|cffe4cfa3Оружие дальнего боя|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I1",
+      "field": "tip2",
+      "value": "|cffe4cfa3Оружие дальнего боя|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I1",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелковых и осадных атак ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+2|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deОхотников|cffced4da, |cffa9c7deКатапульты|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da и |cffa9c7deЛедяных Змей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I1",
+      "field": "name3",
+      "value": "|cffe4cfa3Оружие дальнего боя|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I1",
+      "field": "tip3",
+      "value": "|cffe4cfa3Оружие дальнего боя|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I1",
+      "field": "ubertip3",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелковых и осадных атак ещё на |cffffffff1|cffced4da ед. (всего |cffffffff+3|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deОхотников|cffced4da, |cffa9c7deКатапульты|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da и |cffa9c7deЛедяных Змей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I2",
+      "field": "name1",
+      "value": "|cffe4cfa3Тролльская регенерация|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I2",
+      "field": "tip1",
+      "value": "|cffe4cfa3Тролльская регенерация|r — уровень |cffffffff1|r (|cffffffffT|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I2",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет естественное восстановление здоровья троллей на |cffffffff0,3|cffced4da ед. в секунду.|n|nЗатрагивает: всех троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da и героев).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I2",
+      "field": "name2",
+      "value": "|cffe4cfa3Тролльская регенерация|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I2",
+      "field": "tip2",
+      "value": "|cffe4cfa3Тролльская регенерация|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I2",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет естественное восстановление здоровья троллей ещё на |cffffffff0,3|cffced4da ед. в секунду (всего |cffffffff+0,6|cffced4da ед./сек.).|n|nЗатрагивает: всех троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da и героев).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I2",
+      "field": "name3",
+      "value": "|cffe4cfa3Тролльская регенерация|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I2",
+      "field": "tip3",
+      "value": "|cffe4cfa3Тролльская регенерация|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I2",
+      "field": "ubertip3",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет естественное восстановление здоровья троллей ещё на |cffffffff0,3|cffced4da ед. в секунду (всего |cffffffff+0,9|cffced4da ед./сек.).|n|nЗатрагивает: всех троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da и героев).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I3",
+      "field": "name1",
+      "value": "|cffe4cfa3Живучесть Драккари|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I3",
+      "field": "tip1",
+      "value": "|cffe4cfa3Живучесть Драккари|r — уровень |cffffffff1|r (|cffffffffV|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I3",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья троллей на |cffffffff50|cffced4da ед.|n|nЗатрагивает: всех троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da и героев).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I3",
+      "field": "name2",
+      "value": "|cffe4cfa3Живучесть Драккари|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I3",
+      "field": "tip2",
+      "value": "|cffe4cfa3Живучесть Драккари|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I3",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья троллей ещё на |cffffffff50|cffced4da ед. (всего |cffffffff+100|cffced4da ед.).|n|nЗатрагивает: всех троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da и героев).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I3",
+      "field": "name3",
+      "value": "|cffe4cfa3Живучесть Драккари|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I3",
+      "field": "tip3",
+      "value": "|cffe4cfa3Живучесть Драккари|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I3",
+      "field": "ubertip3",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья троллей ещё на |cffffffff50|cffced4da ед. (всего |cffffffff+150|cffced4da ед.).|n|nЗатрагивает: всех троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da и героев).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IF",
+      "field": "name1",
+      "value": "|cffe4cfa3Улучшенные топоры|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IF",
+      "field": "tip1",
+      "value": "|cffe4cfa3Улучшенные топоры|r (|cffffffffX|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IF",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём древесины, переносимой работниками за один раз, на |cffffffff5|cffced4da ед.|n|nЗатрагивает: |cffa9c7deРаботников|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I7",
+      "field": "name1",
+      "value": "|cffe4cfa3Облегченные топоры|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I7",
+      "field": "tip1",
+      "value": "|cffe4cfa3Облегченные топоры|r (|cffffffffL|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I7",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Делает боевые и метательные топоры легче, увеличивая скорость атаки воинов на |cffffffff10%|cffced4da.|n|nЗатрагивает: |cffa9c7deВоителей|cffced4da и |cffa9c7deОхотников|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IE",
+      "field": "name1",
+      "value": "|cffe4cfa3Тренировки троллей|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IE",
+      "field": "tip1",
+      "value": "|cffe4cfa3Тренировки троллей|r — уровень |cffffffff1|r (|cffffffffT|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IE",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость передвижения троллей на |cffffffff40|cffced4da ед. и урон от атак на |cffffffff4|cffced4da ед.|n|nЗатрагивает: всех троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IE",
+      "field": "name2",
+      "value": "|cffe4cfa3Тренировки троллей|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IE",
+      "field": "tip2",
+      "value": "|cffe4cfa3Тренировки троллей|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IE",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость передвижения троллей ещё на |cffffffff40|cffced4da ед. и урон на |cffffffff4|cffced4da ед. (всего |cffffffff+80|cffced4da скорости и |cffffffff+8|cffced4da урона).|n|nЗатрагивает: всех троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IE",
+      "field": "name3",
+      "value": "|cffe4cfa3Тренировки троллей|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IE",
+      "field": "tip3",
+      "value": "|cffe4cfa3Тренировки троллей|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IE",
+      "field": "ubertip3",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость передвижения троллей ещё на |cffffffff40|cffced4da ед. и урон на |cffffffff4|cffced4da ед. (всего |cffffffff+120|cffced4da скорости и |cffffffff+12|cffced4da урона).|n|nЗатрагивает: всех троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0EU",
+      "field": "name1",
+      "value": "|cffe4cfa3Познания жреца|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0EU",
+      "field": "tip1",
+      "value": "|cffe4cfa3Познания жреца|r (|cffffffffP|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0EU",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает мастерство Жрецов: увеличивает их запас здоровья на |cffffffff40|cffced4da ед., маны — на |cffffffff100|cffced4da ед., скорость восстановления маны — на |cffffffff0,325|cffced4da ед./сек. и открывает способности «Рассеивание заклинаний» и «Морозный доспех».|n|nЗатрагивает: |cffa9c7deЖрецов|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I4",
+      "field": "name1",
+      "value": "|cffe4cfa3Знания Лоа|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I4",
+      "field": "tip1",
+      "value": "|cffe4cfa3Знания Лоа|r (|cffffffffK|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I4",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает мастерство Жрецов Лоа: увеличивает их запас здоровья на |cffffffff50|cffced4da ед., маны — на |cffffffff70|cffced4da ед., скорость восстановления маны — на |cffffffff0,325|cffced4da ед./сек. и открывает способности «Злоба Лоа» и «Призыв змеи».|n|nЗатрагивает: |cffa9c7deЖрецов Лоа|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R09L",
+      "field": "name1",
+      "value": "|cffe4cfa3Азы загробного мира|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R09L",
+      "field": "tip1",
+      "value": "|cffe4cfa3Азы загробного мира|r — уровень |cffffffff1|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R09L",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Взывателей душ: увеличивает их здоровье на |cffffffff40|cffced4da ед., урон — на |cffffffff4|cffced4da ед., ману — на |cffffffff35|cffced4da ед. и открывает способность «Похищение жизни».|n|nЗатрагивает: |cffa9c7deВзывателей душ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R09L",
+      "field": "name2",
+      "value": "|cffe4cfa3Азы загробного мира|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R09L",
+      "field": "tip2",
+      "value": "|cffe4cfa3Азы загробного мира|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R09L",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Возводит Взывателей душ в ранг мастеров смерти: увеличивает здоровье ещё на |cffffffff40|cffced4da ед., урон — на |cffffffff4|cffced4da ед., ману — на |cffffffff35|cffced4da ед. (всего |cffffffff+80|cffced4da HP, |cffffffff+8|cffced4da урона, |cffffffff+70|cffced4da MP) и открывает способность «Воскрешение падших».|n|nЗатрагивает: |cffa9c7deВзывателей душ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I6",
+      "field": "name1",
+      "value": "|cffe4cfa3Тренировка зверей|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I6",
+      "field": "tip1",
+      "value": "|cffe4cfa3Тренировка зверей|r — уровень |cffffffff1|r (|cffffffffB|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I6",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость передвижения подчинённых зверей на |cffffffff15|cffced4da ед., урон от атак — на |cffffffff5|cffced4da ед. и здоровье — на |cffffffff50|cffced4da ед.|n|nЗатрагивает: |cffa9c7deБелых медведей|cffced4da, |cffa9c7deЛютых мамонтов|cffced4da, |cffa9c7deМагнатавров-разрушителей|cffced4da и Лоа (|cffa9c7deАкали|cffced4da, |cffa9c7deМам'тота|cffced4da, |cffa9c7deРунока|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I6",
+      "field": "name2",
+      "value": "|cffe4cfa3Тренировка зверей|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I6",
+      "field": "tip2",
+      "value": "|cffe4cfa3Тренировка зверей|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I6",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость передвижения зверей ещё на |cffffffff15|cffced4da ед., урон — на |cffffffff5|cffced4da ед. и здоровье — на |cffffffff50|cffced4da ед. (всего |cffffffff+30|cffced4da скорости, |cffffffff+10|cffced4da урона, |cffffffff+100|cffced4da HP).|n|nЗатрагивает: |cffa9c7deБелых медведей|cffced4da, |cffa9c7deЛютых мамонтов|cffced4da, |cffa9c7deМагнатавров-разрушителей|cffced4da и Лоа (|cffa9c7deАкали|cffced4da, |cffa9c7deМам'тота|cffced4da, |cffa9c7deРунока|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I6",
+      "field": "name3",
+      "value": "|cffe4cfa3Тренировка зверей|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I6",
+      "field": "tip3",
+      "value": "|cffe4cfa3Тренировка зверей|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I6",
+      "field": "ubertip3",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость передвижения зверей ещё на |cffffffff15|cffced4da ед., урон — на |cffffffff5|cffced4da ед. и здоровье — на |cffffffff50|cffced4da ед. (всего |cffffffff+45|cffced4da скорости, |cffffffff+15|cffced4da урона, |cffffffff+150|cffced4da HP).|n|nЗатрагивает: |cffa9c7deБелых медведей|cffced4da, |cffa9c7deЛютых мамонтов|cffced4da, |cffa9c7deМагнатавров-разрушителей|cffced4da и Лоа (|cffa9c7deАкали|cffced4da, |cffa9c7deМам'тота|cffced4da, |cffa9c7deРунока|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I5",
+      "field": "name1",
+      "value": "|cffe4cfa3Дикая магия льда|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I5",
+      "field": "tip1",
+      "value": "|cffe4cfa3Дикая магия льда|r — уровень |cffffffff1|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I5",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье Магнатавра на |cffffffff40|cffced4da ед., урон — на |cffffffff4|cffced4da ед., ману — на |cffffffff35|cffced4da ед. и открывает способность «Кольцо льда».|n|nЗатрагивает: |cffa9c7deМагнатавров-разрушителей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I5",
+      "field": "name2",
+      "value": "|cffe4cfa3Дикая магия льда|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I5",
+      "field": "tip2",
+      "value": "|cffe4cfa3Дикая магия льда|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0I5",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье Магнатавра ещё на |cffffffff40|cffced4da ед., урон — на |cffffffff4|cffced4da ед., ману — на |cffffffff35|cffced4da ед. (всего |cffffffff+80|cffced4da HP, |cffffffff+8|cffced4da урона, |cffffffff+70|cffced4da MP) и открывает способность «Невосприимчивость к магии».|n|nЗатрагивает: |cffa9c7deМагнатавров-разрушителей|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IG",
+      "field": "name1",
+      "value": "|cffe4cfa3Бесчисленные бои|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IG",
+      "field": "tip1",
+      "value": "|cffe4cfa3Бесчисленные бои|r — уровень |cffffffff1|r (|cffffffffC|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IG",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Закаляет Берсерка в непрестанных сражениях: увеличивает его здоровье на |cffffffff40|cffced4da ед. и открывает способности «Берсерк» и «Сокрушение».|n|nЗатрагивает: |cffa9c7deБерсерков|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IG",
+      "field": "name2",
+      "value": "|cffe4cfa3Бесчисленные бои|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IG",
+      "field": "tip2",
+      "value": "|cffe4cfa3Бесчисленные бои|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IG",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Возводит Берсерка в ранг непобедимого гладиатора: увеличивает здоровье ещё на |cffffffff40|cffced4da ед. (всего |cffffffff+80|cffced4da HP) и улучшает способность до «Усиленного сокрушения» (урон по области |cffffffff60|cffced4da ед. в радиусе |cffffffff350|cffced4da).|n|nЗатрагивает: |cffa9c7deБерсерков|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R09P",
+      "field": "name1",
+      "value": "|cffe4cfa3Тёмные элементы|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R09P",
+      "field": "tip1",
+      "value": "|cffe4cfa3Тёмные элементы|r — уровень |cffffffff1|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R09P",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Внедряет в голема древние тёмные кристаллы: увеличивает его здоровье на |cffffffff50|cffced4da ед., атаку — на |cffffffff4|cffced4da ед. и открывает способность «Пожирание магии».|n|nЗатрагивает: |cffa9c7deГолемов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R09P",
+      "field": "name2",
+      "value": "|cffe4cfa3Тёмные элементы|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R09P",
+      "field": "tip2",
+      "value": "|cffe4cfa3Тёмные элементы|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R09P",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Завершает насыщение голема магией Бездны: увеличивает здоровье ещё на |cffffffff50|cffced4da ед. и атаку — на |cffffffff4|cffced4da ед. (всего |cffffffff+100|cffced4da HP, |cffffffff+8|cffced4da урона) и открывает способность «Магический обстрел».|n|nЗатрагивает: |cffa9c7deГолемов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AD",
+      "field": "name1",
+      "value": "|cffe4cfa3Поглощение Рунока|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AD",
+      "field": "tip1",
+      "value": "|cffe4cfa3Поглощение Рунока|r — уровень |cffffffff1|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AD",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Поглощает яростную силу Лоа Рунока, увеличивая скорость атаки всех войск на |cffffffff10%|cffced4da.|n|nЗатрагивает: все войска троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AD",
+      "field": "name2",
+      "value": "|cffe4cfa3Поглощение Рунока|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AD",
+      "field": "tip2",
+      "value": "|cffe4cfa3Поглощение Рунока|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AD",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает приток энергии Рунока, увеличивая скорость атаки войск ещё на |cffffffff10%|cffced4da (всего |cffffffff+20%|cffced4da).|n|nЗатрагивает: все войска троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AD",
+      "field": "name3",
+      "value": "|cffe4cfa3Поглощение Рунока|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AD",
+      "field": "tip3",
+      "value": "|cffe4cfa3Поглощение Рунока|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AD",
+      "field": "ubertip3",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Достигает полного слияния с духом Рунока, увеличивая скорость атаки войск ещё на |cffffffff10%|cffced4da (всего |cffffffff+30%|cffced4da).|n|nЗатрагивает: все войска троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AI",
+      "field": "name1",
+      "value": "|cffe4cfa3Поглощение Акали|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AI",
+      "field": "tip1",
+      "value": "|cffe4cfa3Поглощение Акали|r — уровень |cffffffff1|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AI",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Поглощает хищную мощь Лоа Акали, увеличивая урон от любых атак всех войск на |cffffffff4|cffced4da ед.|n|nЗатрагивает: все войска троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AI",
+      "field": "name2",
+      "value": "|cffe4cfa3Поглощение Акали|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AI",
+      "field": "tip2",
+      "value": "|cffe4cfa3Поглощение Акали|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AI",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает приток энергии Акали, увеличивая урон от атак войск ещё на |cffffffff4|cffced4da ед. (всего |cffffffff+8|cffced4da ед.).|n|nЗатрагивает: все войска троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AI",
+      "field": "name3",
+      "value": "|cffe4cfa3Поглощение Акали|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AI",
+      "field": "tip3",
+      "value": "|cffe4cfa3Поглощение Акали|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AI",
+      "field": "ubertip3",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Достигает полного слияния с духом Акали, увеличивая урон от атак войск ещё на |cffffffff4|cffced4da ед. (всего |cffffffff+12|cffced4da ед.).|n|nЗатрагивает: все войска троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AJ",
+      "field": "name1",
+      "value": "|cffe4cfa3Поглощение Мам'Тота|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AJ",
+      "field": "tip1",
+      "value": "|cffe4cfa3Поглощение Мам'Тота|r — уровень |cffffffff1|r (|cffffffffE|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AJ",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Поглощает несокрушимую стойкость Лоа Мам'тота, увеличивая максимальный запас здоровья всех войск на |cffffffff75|cffced4da ед.|n|nЗатрагивает: все войска троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AJ",
+      "field": "name2",
+      "value": "|cffe4cfa3Поглощение Мам'Тота|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AJ",
+      "field": "tip2",
+      "value": "|cffe4cfa3Поглощение Мам'Тота|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AJ",
+      "field": "ubertip2",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает приток энергии Мам'тота, увеличивая здоровье войск ещё на |cffffffff75|cffced4da ед. (всего |cffffffff+150|cffced4da ед.).|n|nЗатрагивает: все войска троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AJ",
+      "field": "name3",
+      "value": "|cffe4cfa3Поглощение Мам'Тота|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AJ",
+      "field": "tip3",
+      "value": "|cffe4cfa3Поглощение Мам'Тота|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AJ",
+      "field": "ubertip3",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Достигает полного слияния с духом Мам'тота, увеличивая здоровье войск ещё на |cffffffff75|cffced4da ед. (всего |cffffffff+225|cffced4da ед.).|n|nЗатрагивает: все войска троллей (|cffa9c7deРаботников|cffced4da, |cffa9c7deВоителей|cffced4da, |cffa9c7deОхотников|cffced4da, |cffa9c7deЖрецов|cffced4da, |cffa9c7deЖрецов Лоа|cffced4da, |cffa9c7deВзывателей душ|cffced4da, |cffa9c7deБерсерков|cffced4da).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IX",
+      "field": "name1",
+      "value": "|cffe4cfa3Чрезвычайные меры|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IX",
+      "field": "tip1",
+      "value": "|cffe4cfa3Чрезвычайные меры|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IX",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обозначает выбор пути жертвоприношения Лоа: разблокирует наём |cffa9c7deВзывателей душ|cffced4da, создание |cffa9c7deГолемов|cffced4da, найм героя |cffa9c7deВластелина Холода|cffced4da и |cffffffff3|cffced4da уровня исследований поглощения Лоа.|n|nЗатрагивает: армию |cffa9c7deДраккари|cffced4da.|n|n|cffe69a8dВнутренний маркер:|cffced4da выдаётся при завершении ритуала «Чрезвычайные меры».|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IY",
+      "field": "name1",
+      "value": "|cffe4cfa3Ритуал поклонения|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IY",
+      "field": "tip1",
+      "value": "|cffe4cfa3Ритуал поклонения|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0IY",
+      "field": "ubertip1",
+      "value": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обозначает выбор пути служения Лоа: разблокирует наём |cffa9c7deЛютых мамонтов|cffced4da, |cffa9c7deМагнатавров-разрушителей|cffced4da и святилища для призыва Лоа — |cffa9c7deРунока|cffced4da, |cffa9c7deМам'тота|cffced4da и |cffa9c7deАкали|cffced4da.|n|nЗатрагивает: армию |cffa9c7deДраккари|cffced4da.|n|n|cffe69a8dВнутренний маркер:|cffced4da выдаётся при завершении ритуала «Ритуал поклонения».|r"
+    }
+  ]
+}

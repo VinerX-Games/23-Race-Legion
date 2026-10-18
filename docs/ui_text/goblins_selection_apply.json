@@ -1,0 +1,53 @@
+{
+  "race": "Goblins",
+  "ability": "A0AC",
+  "wts_updated": [
+    38861,
+    38862,
+    35189
+  ],
+  "hashes_before": {
+    "wts": "254a8aba149ef975d9b574d1b17743f7a42f50fd05097957ec74f128662f268c",
+    "w3u": "e5215968f5129fcb3f5e0d6de70c1cf91b8e15e85e5ee4e13645eb9c65ac204c",
+    "w3u_skin": "7943de19a61017eb67a7e10dac839eb4783070f222cb411cfc500a00c4a8bb03",
+    "w3a": "9376f2b203b2792b7b7a9a44636113055bf6c9c6c3911e1b699f8e7d8a6b2262",
+    "w3a_skin": "e4ea13630a6616f6ca85e3d2b3fc6c02269655c329a8ddc13f8d161b65e46abd",
+    "w3h": "2459a6453679843b0828809e4dedcad2cc96028ee9feaaae94700e261007f2c4",
+    "w3h_skin": "ce74142eec6276353fc00f51ce790304b2107df49e970bd5a019d8cedc0d3e03",
+    "w3q": "135b21ad8ced6b949d7afd6c25f1ca434fa422bda00e79d0c18eb2ee2886ca58",
+    "w3q_skin": "2c4f7ffcf2cf7b83836aae2fa3270e5d225f9d37226cc304f19d0bb9c0fcf78f"
+  },
+  "hashes_after": {
+    "wts": "3b2de740faee1c62627caeb6a86d5b67553180a47094e29e501eac4cff9ae121",
+    "w3u": "e5215968f5129fcb3f5e0d6de70c1cf91b8e15e85e5ee4e13645eb9c65ac204c",
+    "w3u_skin": "7943de19a61017eb67a7e10dac839eb4783070f222cb411cfc500a00c4a8bb03",
+    "w3a": "9376f2b203b2792b7b7a9a44636113055bf6c9c6c3911e1b699f8e7d8a6b2262",
+    "w3a_skin": "e4ea13630a6616f6ca85e3d2b3fc6c02269655c329a8ddc13f8d161b65e46abd",
+    "w3h": "2459a6453679843b0828809e4dedcad2cc96028ee9feaaae94700e261007f2c4",
+    "w3h_skin": "ce74142eec6276353fc00f51ce790304b2107df49e970bd5a019d8cedc0d3e03",
+    "w3q": "135b21ad8ced6b949d7afd6c25f1ca434fa422bda00e79d0c18eb2ee2886ca58",
+    "w3q_skin": "2c4f7ffcf2cf7b83836aae2fa3270e5d225f9d37226cc304f19d0bb9c0fcf78f"
+  },
+  "binary_files_unchanged": true,
+  "checks": [
+    {
+      "field": "name",
+      "expected": "|cffe4cfa3Гоблины|r",
+      "actual": "|cffe4cfa3Гоблины|r",
+      "ok": true
+    },
+    {
+      "field": "tip1",
+      "expected": "|cffe4cfa3Гоблины|r (|cffffffffW|r)",
+      "actual": "|cffe4cfa3Гоблины|r (|cffffffffW|r)",
+      "ok": true
+    },
+    {
+      "field": "ubertip1",
+      "expected": "|cffa6afb8РАСА:|cffced4da Предприимчивые изобретатели, алхимики и торговцы картелей.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Сложность:|r |cffffffff●●●●|cffa6afb8●|r|n|cffa6afb8Период:|r |cffa9c7de«Катаклизм»|r|n|n|cffced4daГоблины — одна из самых гротескных и предприимчивых рас Азерота. Искусные инженеры, алхимики и аферисты, гоблины всегда ищут максимальную выгоду, делая ставку на передовые технологии, разрушительную пиротехнику и тотальную коммерциализацию войны.|r",
+      "actual": "|cffa6afb8РАСА:|cffced4da Предприимчивые изобретатели, алхимики и торговцы картелей.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Сложность:|r |cffffffff●●●●|cffa6afb8●|r|n|cffa6afb8Период:|r |cffa9c7de«Катаклизм»|r|n|n|cffced4daГоблины — одна из самых гротескных и предприимчивых рас Азерота. Искусные инженеры, алхимики и аферисты, гоблины всегда ищут максимальную выгоду, делая ставку на передовые технологии, разрушительную пиротехнику и тотальную коммерциализацию войны.|r",
+      "ok": true
+    }
+  ],
+  "all_checks_passed": true
+}

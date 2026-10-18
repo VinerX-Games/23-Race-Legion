@@ -1,0 +1,133 @@
+{
+  "race": "Отрекшиеся (Forsaken)",
+  "race_id": 27,
+  "selection_ability": "A155",
+  "objects_audit": {
+    "buildings": {
+      "count": 12,
+      "ids": [
+        "h0JP",
+        "h0JQ",
+        "h0JL",
+        "h0JD",
+        "h0JJ",
+        "h0JI",
+        "h0JO",
+        "h0JR",
+        "h0JK",
+        "h0JM",
+        "h0JZ",
+        "h0D1"
+      ],
+      "economy_building": {
+        "id": "h0JD",
+        "name": "Дом Брошенных",
+        "food_provided": 40,
+        "gold_income_per_25s": 20,
+        "verified_via": "01_core_economy.lua and unit object stats"
+      }
+    },
+    "units": {
+      "count": 20,
+      "ids": [
+        "h0J5",
+        "n04T",
+        "h0JC",
+        "h0JN",
+        "n04U",
+        "o02X",
+        "u02C",
+        "o02Y",
+        "n04Y",
+        "n04X",
+        "n04V",
+        "h0JA",
+        "e034",
+        "u02J",
+        "u02K",
+        "u02L",
+        "u02M",
+        "u02N",
+        "u02O",
+        "u02P"
+      ]
+    },
+    "heroes": {
+      "count": 5,
+      "ids": [
+        "N059",
+        "N05E",
+        "N058",
+        "O031",
+        "O030"
+      ],
+      "names": {
+        "N059": "Королева Отрекшихся (Сильвана Ветрокрылая — Интеллект, дальний бой)",
+        "N05E": "Королева Отрекшихся (Форма Банши — Интеллект, дальний бой)",
+        "N058": "Тёмный Следопыт (Ловкость, дальний бой)",
+        "O031": "Аптекарь (Сила/Интеллект, алхимия ядов)",
+        "O030": "Устранитель (Ловкость, ближний бой)"
+      }
+    },
+    "abilities": {
+      "count": 67,
+      "total_wts_updated": 616
+    },
+    "researches": {
+      "count": 17,
+      "markers_list": {
+        "R0G3": "Маркер расы Отрекшиеся",
+        "R0FW": "Служебный маркер урона гнили"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [
+      "I01X",
+      "I01V",
+      "I01W",
+      "I01Y"
+    ],
+    "status": "4 runes spawned dynamically by Apothecary ultimate A15B (Trig_Ult_Actions in Forsaken.lua). Standardized in object data."
+  },
+  "messages_audit": {
+    "race_specific_messages": [
+      "TRIGSTR_27438"
+    ],
+    "status": "Standardized trigger notification message in Trig_MassMindControl2_Func007A."
+  },
+  "buffs_audit": {
+    "custom_buffs": [
+      "B06I",
+      "B06J",
+      "B06K",
+      "B06L"
+    ],
+    "standard_buffs_used": [
+      "BEme",
+      "BEsh",
+      "BIcb",
+      "BNab",
+      "BNba",
+      "BNdm",
+      "BNpa",
+      "BNpm",
+      "BNrd",
+      "BNrf",
+      "BNsi",
+      "BOwk",
+      "BUan",
+      "BUau",
+      "BUcs",
+      "Bapl",
+      "Bcrs",
+      "Binv",
+      "Bplg",
+      "Bpsd",
+      "Brai"
+    ],
+    "status": "Standardized custom buffs with secondary color labels and clean descriptions."
+  },
+  "total_wts_updates": 616,
+  "total_checks": 101
+}

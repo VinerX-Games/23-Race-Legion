@@ -1,0 +1,619 @@
+{
+  "source": {
+    "source": "WL - Bane Burrow v1.63.w3x",
+    "sha256": "3ec1c62801ccc7bba6161943a4a31e8c2a5fb1c7fff1c27d78e2ba63167cd886",
+    "files": 10013
+  },
+  "assets": [
+    {
+      "path": "BTNExodar Draenei - Arkonite Radiance.blp",
+      "bytes": 6300,
+      "sha256": "45c2c15ba6d515ebd7fe7b60033a210cdfd5eba22528373bf0b9697314fd846a",
+      "kind": "icon",
+      "disabled": "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Arkonite Radiance.blp"
+    },
+    {
+      "path": "BTNExodar Draenei - Gift of Narru.blp",
+      "bytes": 11049,
+      "sha256": "9bc1b9e805cd8144b51a979b42caf6233c740166807621ed0531c7feb0cfda36",
+      "kind": "icon",
+      "disabled": null
+    },
+    {
+      "path": "BTNExodar Draenei - Charged Gems.blp",
+      "bytes": 4771,
+      "sha256": "ae322182429e86fbf494eb98b12bf3c3137739857ce2010423622b3727673df8",
+      "kind": "icon",
+      "disabled": "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Charged Gems.blp"
+    },
+    {
+      "path": "BTNExodar Draenei - Shield of Argus.blp",
+      "bytes": 4978,
+      "sha256": "ff0e447a9186181372bfdb70826bcc9d1bda8c8203b4aa9d6f7903e268edc9b5",
+      "kind": "icon",
+      "disabled": "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Shield of Argus.blp"
+    },
+    {
+      "path": "BTNExodar Draenei - Exiled Arrowhead.blp",
+      "bytes": 5733,
+      "sha256": "48d3833f5fddca66aa6cd1755ffa2525d8bb90bfee7d1ec10d4e798b69e53db6",
+      "kind": "icon",
+      "disabled": "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Exiled Arrowhead.blp"
+    },
+    {
+      "path": "BTNLightforged - True Faith.blp",
+      "bytes": 4609,
+      "sha256": "ea09163f8146284a2e259395a87f33a44f04caebb147ae94b5adec2a75094fbb",
+      "kind": "icon",
+      "disabled": "ReplaceableTextures/CommandButtonsDisabled/DISBTNLightforged - True Faith.blp"
+    },
+    {
+      "path": "BTNLightforged - Enduring Grace.blp",
+      "bytes": 6041,
+      "sha256": "78746fba4c592848f47468368a43ff0db3e0781afc977219f3a4b8f1ba4785dd",
+      "kind": "icon",
+      "disabled": "ReplaceableTextures/CommandButtonsDisabled/DISBTNLightforged - Enduring Grace.blp"
+    },
+    {
+      "path": "BTNLightforged - Warframe.blp",
+      "bytes": 5551,
+      "sha256": "b711a8af8387e85b3b0ff2fd02ddb1c23c2fa69459df6a5b047f1d60167e0ca3",
+      "kind": "icon",
+      "disabled": "ReplaceableTextures/CommandButtonsDisabled/DISBTNLightforged - Warframe.blp"
+    },
+    {
+      "path": "BTNLightforged - BlindPenance.blp",
+      "bytes": 6300,
+      "sha256": "a35fd16c42997bd86ec4cf2644733ba259aee5f7a9f3aecd5b5d66245289d9dd",
+      "kind": "icon",
+      "disabled": "ReplaceableTextures/CommandButtonsDisabled/DISBTNLightforged - BlindPenance.blp"
+    },
+    {
+      "path": "PASLightforged - NovaFire.blp",
+      "bytes": 4813,
+      "sha256": "58ca6dff619cd176244a8af7fbfc1240332483af81aaa026757465203778e26d",
+      "kind": "icon",
+      "disabled": "ReplaceableTextures/CommandButtonsDisabled/DISPASLightforged - NovaFire.blp"
+    },
+    {
+      "path": "BTNExodar Draenei - Shield of ArgusOFF.blp",
+      "bytes": 5098,
+      "sha256": "38a260a045e7d937ee9af845221fbf64fe5058e1d304f2a62b4b81db0fd5f073",
+      "kind": "icon",
+      "disabled": "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Shield of ArgusOFF.blp"
+    },
+    {
+      "path": "BTNExodar Draenei - Harmonized.blp",
+      "bytes": 6274,
+      "sha256": "de112d516cc56b039ca171b986e9dfcf21b3def11b5f7dc8b99a3c2f901468e6",
+      "kind": "icon",
+      "disabled": "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Harmonized.blp"
+    },
+    {
+      "path": "BTNExodar Draenei - Tempest Tusk.blp",
+      "bytes": 4921,
+      "sha256": "5f689961e2b03509108334fe08e770554fdb8e5a803b049fee933db764b26f4b",
+      "kind": "icon",
+      "disabled": "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Tempest Tusk.blp"
+    },
+    {
+      "path": "BTNLightforged - NovaFire.blp",
+      "bytes": 6300,
+      "sha256": "f5f3779b7086ca2ac777faebfa1b4ddc279c49a4693932a16f29a4b902257350",
+      "kind": "icon",
+      "disabled": "ReplaceableTextures/CommandButtonsDisabled/DISBTNLightforged - NovaFire.blp"
+    },
+    {
+      "path": "Exodar Draenei - DraeneiArcaneGenerator.mdx",
+      "bytes": 85567,
+      "sha256": "535b0310742333cf864754411246f1888004e84d0853b68a216afd9d4a5afbe1",
+      "kind": "model",
+      "textures": [
+        {
+          "path": "Buildings\\NightElf\\BearDen\\BearDen.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\DeathSmug.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Footman.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Steamtank.blp",
+          "in_archive": false
+        },
+        {
+          "path": "DraeneiBuilding1.blp",
+          "in_archive": true
+        },
+        {
+          "path": "Textures\\AuraRune8.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Ice3b.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Blue_Glow2.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\FountainOfLife.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\firering1A.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Dust5A.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\CloudSingle.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\RockParticle.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\SpinningBoard.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Clouds8x8Fire.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\CartoonCloud.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Dust3x.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Star8.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Star7b.blp",
+          "in_archive": false
+        }
+      ]
+    },
+    {
+      "path": "Exodar Draenei - Emitter.mdx",
+      "bytes": 180328,
+      "sha256": "f1c49cf259d23e04d026d17645646009bc464bb0defa70cadd65edc26c7df397",
+      "kind": "model",
+      "textures": [
+        {
+          "path": "Textures\\DraeneiComboTexInverted.blp",
+          "in_archive": true
+        },
+        {
+          "path": "Textures\\PsionicGlow.blp",
+          "in_archive": true
+        },
+        {
+          "path": "Textures\\DraeneiComboTexInverted_A.blp",
+          "in_archive": true
+        },
+        {
+          "path": "Units\\Creeps\\FurbolgElder\\FurBolgElder.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Buildings\\Naga\\AltarOfDepths\\AltarOfDepths.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\PsionicGlow.blp",
+          "in_archive": true
+        },
+        {
+          "path": "Textures\\Shockwave10.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Buildings\\Undead\\SacrificialPit\\CreepySacrificialPit.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\star4.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\pixies1.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Dust5A.blp",
+          "in_archive": false
+        }
+      ]
+    },
+    {
+      "path": "Exodar Draenei - Draenei_Vigilant.mdx",
+      "bytes": 176848,
+      "sha256": "2f50babd2fa9ff95a2e9145b7dd2a930723ee4eba8e64cbbc25da742e4c3d0f9",
+      "kind": "model",
+      "textures": [
+        {
+          "path": "buildings\\NightElf\\AncientOfWonder\\AncientOfWonders.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Buildings\\NightElf\\BearDen\\BearDen.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Buildings\\Other\\Waygate\\WayGate1.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Shade.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Buildings\\Undead\\SacrificialPit\\CreepySacrificialPit.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\GenericGlow64.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Clouds8x8Fire.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\star2_32.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\GenericGlowFaded.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "in_archive": false
+        }
+      ],
+      "portrait": "Exodar Draenei - Draenei_Vigilant_Portrait.mdx"
+    },
+    {
+      "path": "Lightforged - DivineGolem.mdx",
+      "bytes": 182302,
+      "sha256": "4ea3daa15c41ebe9341686b5b3360371558402824e4a3ad5e0f5b27b084f7b26",
+      "kind": "model",
+      "textures": [
+        {
+          "path": "Textures\\MountainGiant.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Yellow_glow3.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\clouds_anim1_bw.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Rune1d.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\UndeadAirBarge.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\GenericGlow2c.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\pixies1.blp",
+          "in_archive": false
+        }
+      ],
+      "portrait": "Lightforged - DivineGolem_Portrait.mdx"
+    },
+    {
+      "path": "Lightforged - Crystal.mdx",
+      "bytes": 142064,
+      "sha256": "a587b79a9c04ea53e9aee4fa85662aee1e2b4ea316727511b66ce1ac394cb2d3",
+      "kind": "model",
+      "textures": [
+        {
+          "path": "Textures\\PsionicGlow.blp",
+          "in_archive": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "in_archive": false
+        },
+        {
+          "path": "DraeneiComboTexLightforgedTC.blp",
+          "in_archive": true
+        },
+        {
+          "path": "Textures\\Lords0000.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\draenei_air_defense_crystal01.blp",
+          "in_archive": true
+        },
+        {
+          "path": "Textures\\WaterBlobs1.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\ManaDrainIn2.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Flare.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Water_Particles.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Shockwave1White.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\ShockwaveWater1.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Dust5ABlack.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Clouds8x8Mod.blp",
+          "in_archive": false
+        },
+        {
+          "path": "ReplaceableTextures\\Splats\\ThunderClapUbersplat.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\white.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Clouds8x8Fire.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Dust3.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\ShockwaveWater1Black.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Sparkle_Anim.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\GenericGlow2_64.blp",
+          "in_archive": false
+        }
+      ]
+    },
+    {
+      "path": "Lightforged - LightbornePriest_V1.mdx",
+      "bytes": 97250,
+      "sha256": "482cab83858f67fbadd0c6317915e6c616964b183ead9716e2979c754db1a88f",
+      "kind": "model",
+      "textures": [
+        {
+          "path": "Textures\\BloodPriest.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Yellow_Star_Dim.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\gutz.blp",
+          "in_archive": false
+        },
+        {
+          "path": "LightbornePriest.blp",
+          "in_archive": true
+        }
+      ],
+      "portrait": "Lightforged - LightbornePriest_V1_Portrait.mdx"
+    },
+    {
+      "path": "Exodar Draenei - Reconstitute.mdx",
+      "bytes": 6109,
+      "sha256": "14f2a6fad5a3dbf4e5c8fc560f7c9beeafbfeb2d20c4c8a3f9c878e9cb2e6470",
+      "kind": "effect",
+      "textures": [
+        {
+          "path": "Textures\\Yellow_Star_Dim.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Yellow_Glow.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Blue_Glow2.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Star9.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\BlueWaves.blp",
+          "in_archive": false
+        }
+      ]
+    },
+    {
+      "path": "Exodar Draenei - Crest of Protection.mdx",
+      "bytes": 10705,
+      "sha256": "902bc37602bfdf28bc1e6764d68c6b72fbba3d03f81abb98e5bbe289d5f9c812",
+      "kind": "effect",
+      "textures": [
+        {
+          "path": "ReplaceableTextures\\Selection\\SpellAreaofEffect_Orc.blp",
+          "in_archive": false
+        },
+        {
+          "path": "abilities\\Spells\\Human\\InnerFire\\Rune7.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\DemonRune3.blp",
+          "in_archive": false
+        }
+      ]
+    },
+    {
+      "path": "Lightforged - GlowShield026.mdx",
+      "bytes": 5388,
+      "sha256": "ebfbf88ca5633b601e43bc8e91b9afea512780a27868ecb35d1aca2464bc4780",
+      "kind": "effect",
+      "textures": [
+        {
+          "path": "Textures\\GenericGlow2c.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\GenericGlow2b.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\sun.blp",
+          "in_archive": false
+        }
+      ]
+    },
+    {
+      "path": "Lightforged - Echo of Brilliance.mdx",
+      "bytes": 2054,
+      "sha256": "3cd02a1ebfc56e43888b5ea1050803d0b51a61424e5a8c3e2cedcb718b410441",
+      "kind": "effect",
+      "textures": [
+        {
+          "path": "Textures\\DrainIn.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\CloudSingle.blp",
+          "in_archive": false
+        }
+      ]
+    },
+    {
+      "path": "Lightforged - Runical-Holy Aura.mdx",
+      "bytes": 2840,
+      "sha256": "9c856c178922b8b7b6d98c602a9ba89eca1a9bffc3230f14308713d35a43c048",
+      "kind": "effect",
+      "textures": [
+        {
+          "path": "abilities\\Spells\\Human\\Resurrect\\Rune1b_64.blp",
+          "in_archive": false
+        },
+        {
+          "path": "Textures\\Shockwave10.blp",
+          "in_archive": false
+        }
+      ]
+    },
+    {
+      "path": "Exodar Draenei - Nether Arrow.mdx",
+      "bytes": 5057,
+      "sha256": "5c6981cfcc254aa7e41f723965d8d493976fa909663640f7b8992e144aa53666",
+      "kind": "effect",
+      "textures": [
+        {
+          "path": "DraeneiCrystal.blp",
+          "in_archive": true
+        },
+        {
+          "path": "DranaiCrossbow.blp",
+          "in_archive": true
+        },
+        {
+          "path": "ReplaceableTextures\\Weather\\Clouds8x8.blp",
+          "in_archive": false
+        }
+      ]
+    }
+  ],
+  "package_files": [
+    "BTNExodar Draenei - Arkonite Radiance.blp",
+    "BTNExodar Draenei - Charged Gems.blp",
+    "BTNExodar Draenei - Exiled Arrowhead.blp",
+    "BTNExodar Draenei - Gift of Narru.blp",
+    "BTNExodar Draenei - Harmonized.blp",
+    "BTNExodar Draenei - Shield of Argus.blp",
+    "BTNExodar Draenei - Shield of ArgusOFF.blp",
+    "BTNExodar Draenei - Tempest Tusk.blp",
+    "BTNLightforged - BlindPenance.blp",
+    "BTNLightforged - Enduring Grace.blp",
+    "BTNLightforged - NovaFire.blp",
+    "BTNLightforged - True Faith.blp",
+    "BTNLightforged - Warframe.blp",
+    "DraeneiBuilding1.blp",
+    "DraeneiComboTexLightforgedTC.blp",
+    "DraeneiCrystal.blp",
+    "DranaiCrossbow.blp",
+    "Exodar Draenei - Crest of Protection.mdx",
+    "Exodar Draenei - DraeneiArcaneGenerator.mdx",
+    "Exodar Draenei - Draenei_Vigilant.mdx",
+    "Exodar Draenei - Draenei_Vigilant_Portrait.mdx",
+    "Exodar Draenei - Emitter.mdx",
+    "Exodar Draenei - Nether Arrow.mdx",
+    "Exodar Draenei - Reconstitute.mdx",
+    "LightbornePriest.blp",
+    "Lightforged - Crystal.mdx",
+    "Lightforged - DivineGolem.mdx",
+    "Lightforged - DivineGolem_Portrait.mdx",
+    "Lightforged - Echo of Brilliance.mdx",
+    "Lightforged - GlowShield026.mdx",
+    "Lightforged - LightbornePriest_V1.mdx",
+    "Lightforged - LightbornePriest_V1_Portrait.mdx",
+    "Lightforged - Runical-Holy Aura.mdx",
+    "PASLightforged - NovaFire.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Arkonite Radiance.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Charged Gems.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Exiled Arrowhead.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Harmonized.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Shield of Argus.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Shield of ArgusOFF.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Tempest Tusk.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNLightforged - BlindPenance.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNLightforged - Enduring Grace.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNLightforged - NovaFire.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNLightforged - True Faith.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNLightforged - Warframe.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISPASLightforged - NovaFire.blp",
+    "Textures/DraeneiComboTexInverted.blp",
+    "Textures/DraeneiComboTexInverted_A.blp",
+    "Textures/PsionicGlow.blp",
+    "Textures/draenei_air_defense_crystal01.blp"
+  ]
+}

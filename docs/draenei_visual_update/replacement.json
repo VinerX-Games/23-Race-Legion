@@ -1,0 +1,417 @@
+{
+  "source": "WL - Bane Burrow v1.63.w3x",
+  "buildings": [
+    {
+      "id": "h057",
+      "donor_id": "h053",
+      "before": {
+        "file": "DraeneiAltar V1_01.mdl",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNDraeneiAltarA.blp",
+        "modelscale": "0.800000",
+        "collision": "120.000000",
+        "pathtex": "PathTextures\\4x4SimpleSolid.tga",
+        "researches": null,
+        "trains": "H05K,H05L,H05M"
+      },
+      "after": {
+        "file": "Draenei/Buildings/Altar.mdx",
+        "art": "ReplaceableTextures/CommandButtons/BTNDraeneiAltar.blp",
+        "modelscale": 1.0
+      }
+    },
+    {
+      "id": "h055",
+      "donor_id": "h057",
+      "before": {
+        "file": "LostOneFarm V1_01.mdl",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNLostOneStrongHold.blp",
+        "modelscale": "0.800000",
+        "collision": "144",
+        "pathtex": "PathTextures\\4x4SimpleSolid.tga",
+        "researches": "R0D8,R023,R024,R02P",
+        "trains": null
+      },
+      "after": {
+        "file": "Draenei/Buildings/Workshop.mdx",
+        "art": "ReplaceableTextures/CommandButtons/BTNDraeneiWorkshop.blp",
+        "modelscale": 0.65
+      }
+    },
+    {
+      "id": "h056",
+      "donor_id": "h058",
+      "before": {
+        "file": "Draeneitower.mdl",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNdbase2.blp",
+        "modelscale": "1.200000",
+        "collision": "144",
+        "pathtex": "PathTextures\\4x4SimpleSolid.tga",
+        "researches": "R02D,R02E,R02F,R02F",
+        "trains": "h01U,h01Q,n00P"
+      },
+      "after": {
+        "file": "Draenei/Buildings/ArcaneCluster.mdx",
+        "art": "ReplaceableTextures/CommandButtons/BTNDraeneiArcaneCluster.blp",
+        "modelscale": 0.75
+      }
+    },
+    {
+      "id": "h033",
+      "donor_id": "h055",
+      "before": {
+        "file": "Draeneibarrack.mdl",
+        "art": "ReplaceableTextures\\CommandButtons\\BTNdbarrack.blp",
+        "modelscale": "1",
+        "collision": "100.000000",
+        "pathtex": "PathTextures\\4x4SimpleSolid.tga",
+        "researches": "R029,RDr1,R02B,R02C",
+        "trains": "h01S,h01P,e000,o00H"
+      },
+      "after": {
+        "file": "Draenei/Buildings/Barracks.mdx",
+        "art": "ReplaceableTextures/CommandButtons/BTNDraeneiBarracks.blp",
+        "modelscale": 1.0
+      }
+    }
+  ],
+  "operations": [
+    {
+      "type": "unit",
+      "id": "h057",
+      "field": "file",
+      "value": "Draenei\\Buildings\\Altar.mdx"
+    },
+    {
+      "type": "unit",
+      "id": "h057",
+      "field": "art",
+      "value": "ReplaceableTextures\\CommandButtons\\BTNDraeneiAltar.blp"
+    },
+    {
+      "type": "unit",
+      "id": "h057",
+      "field": "modelscale",
+      "value": 1.0
+    },
+    {
+      "type": "unit",
+      "id": "h057",
+      "field": "name",
+      "value": "|cffdcbef0Алтарь Наару|r"
+    },
+    {
+      "type": "unit",
+      "id": "h057",
+      "field": "tip",
+      "value": "Построить |cffdcbef0Алтарь Наару|r"
+    },
+    {
+      "type": "unit",
+      "id": "h057",
+      "field": "ubertip",
+      "value": "Призывает и воскрешает героев дренеев."
+    },
+    {
+      "type": "unit",
+      "id": "h055",
+      "field": "file",
+      "value": "Draenei\\Buildings\\Workshop.mdx"
+    },
+    {
+      "type": "unit",
+      "id": "h055",
+      "field": "art",
+      "value": "ReplaceableTextures\\CommandButtons\\BTNDraeneiWorkshop.blp"
+    },
+    {
+      "type": "unit",
+      "id": "h055",
+      "field": "modelscale",
+      "value": 0.65
+    },
+    {
+      "type": "unit",
+      "id": "h056",
+      "field": "file",
+      "value": "Draenei\\Buildings\\ArcaneCluster.mdx"
+    },
+    {
+      "type": "unit",
+      "id": "h056",
+      "field": "art",
+      "value": "ReplaceableTextures\\CommandButtons\\BTNDraeneiArcaneCluster.blp"
+    },
+    {
+      "type": "unit",
+      "id": "h056",
+      "field": "modelscale",
+      "value": 0.75
+    },
+    {
+      "type": "unit",
+      "id": "h033",
+      "field": "file",
+      "value": "Draenei\\Buildings\\Barracks.mdx"
+    },
+    {
+      "type": "unit",
+      "id": "h033",
+      "field": "art",
+      "value": "ReplaceableTextures\\CommandButtons\\BTNDraeneiBarracks.blp"
+    },
+    {
+      "type": "unit",
+      "id": "h033",
+      "field": "modelscale",
+      "value": 1.0
+    },
+    {
+      "type": "unit",
+      "id": "h033",
+      "field": "name",
+      "value": "|cffdcbef0Казармы Аргуса|r"
+    },
+    {
+      "type": "unit",
+      "id": "h033",
+      "field": "tip",
+      "value": "Построить |cffdcbef0Казармы Аргуса|r"
+    },
+    {
+      "type": "unit",
+      "id": "h033",
+      "field": "ubertip",
+      "value": "Обучает рангари, лазутчиков и всадников на элекках. Здесь исследуются Призматические наконечники и другие воинские навыки дренеев."
+    },
+    {
+      "type": "unit",
+      "id": "n005",
+      "field": "abillist",
+      "value": "A1C8,ADr5,A063,A05V,A1C6"
+    },
+    {
+      "type": "unit",
+      "id": "n005",
+      "field": "ubertip",
+      "value": "Сломленный провидец дальнего боя. Сохраняет Щит молний, Поле слома и способности Сломленных. После исследования Памяти предков создаёт Идол памяти (E): лечит собственный отряд и ускоряет восстановление Призматических наконечников и Озарённого клинка."
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "hotkey",
+      "value": "E"
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "buttonpos",
+      "value": 3
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "buttonpos2",
+      "value": 2
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "tip1",
+      "value": "Идол памяти (|cffffcc00E|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A063",
+      "field": "hotkey",
+      "value": "L"
+    },
+    {
+      "type": "ability",
+      "id": "A063",
+      "field": "tip1",
+      "value": "Щит молний (|cffffcc00L|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1C8",
+      "field": "buttonpos",
+      "value": 1
+    },
+    {
+      "type": "ability",
+      "id": "A1C8",
+      "field": "buttonpos2",
+      "value": 2
+    },
+    {
+      "type": "unit",
+      "id": "e000",
+      "field": "ubertip",
+      "value": "Дренейка-охотница дальнего боя. После исследования Призматических наконечников готовит два заряженных выстрела с осколками. Идол памяти ускоряет восстановление зарядов."
+    },
+    {
+      "type": "unit",
+      "id": "h059",
+      "field": "ubertip",
+      "value": "Воин Озарённых ближнего боя. Сохраняет Посвященное оружие. После исследования Озарённого клинка при высоком здоровье готовит усиленный удар. Лечение и Идол памяти помогают быстрее подготовить следующий удар."
+    },
+    {
+      "type": "unit",
+      "id": "h01O",
+      "field": "ubertip",
+      "value": "Элитный воин дренеев. Сохраняет Свет небес, Ауру света и Возрождение. После исследования Обета защитника прикрывает одного союзника зарядами защиты от атак. Защита героев слабее и длится меньше."
+    },
+    {
+      "type": "unit",
+      "id": "h01R",
+      "field": "ubertip",
+      "value": "Жрица Наару лечит до трёх раненых союзников Спасительным светом. Благословение Наару позволяет кратко защищать первую существенно исцелённую цель. Сохраняет Внутреннее жжение и Воскрешение."
+    }
+  ],
+  "assets": [
+    {
+      "source": "Exodar Draenei - DraeneiAltar.mdx",
+      "path": "Draenei/Buildings/Altar.mdx",
+      "bytes": 132024,
+      "sha256": "f7064e3b3fb109866f37da322bf337553488ee12f53d59f235d0a633362ac8b0"
+    },
+    {
+      "source": "DraeneiBuilding1.blp",
+      "path": "DraeneiBuilding1.blp",
+      "bytes": 347321,
+      "sha256": "d23e79122368037fb2884a25235935ea00d15d717ba6dea69ed541d49e5e14a9"
+    },
+    {
+      "source": "BTNExodar Draenei - Altar New.blp",
+      "path": "ReplaceableTextures/CommandButtons/BTNDraeneiAltar.blp",
+      "bytes": 5931,
+      "sha256": "becf8a7fe4718429287152818cdea1e56b9148ceec80cc1d9e8e2a5ba86aca74"
+    },
+    {
+      "source": "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Altar New.blp",
+      "path": "ReplaceableTextures/CommandButtonsDisabled/DISBTNDraeneiAltar.blp",
+      "bytes": 3406,
+      "sha256": "8283839865d930dd68326be94c49ef12e11fb75bf367d465b7024ff96ca6b206"
+    },
+    {
+      "source": "Exodar Draenei - DraeneiWorkshopV1.mdx",
+      "path": "Draenei/Buildings/Workshop.mdx",
+      "bytes": 174719,
+      "sha256": "ebcfcf24479d09f3461214d257e2f1bffc572eebd691cc71d6a440dd7525bd03"
+    },
+    {
+      "source": "DraeneiBuilding1.blp",
+      "path": "DraeneiBuilding1.blp",
+      "bytes": 347321,
+      "sha256": "d23e79122368037fb2884a25235935ea00d15d717ba6dea69ed541d49e5e14a9"
+    },
+    {
+      "source": "BTNExodar Draenei - Workshop New.blp",
+      "path": "ReplaceableTextures/CommandButtons/BTNDraeneiWorkshop.blp",
+      "bytes": 6077,
+      "sha256": "b946b051fac4f6c2c6b7bff7ba7d6bdcda16288304aa098083bdc6803ecae99a"
+    },
+    {
+      "source": "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Workshop New.blp",
+      "path": "ReplaceableTextures/CommandButtonsDisabled/DISBTNDraeneiWorkshop.blp",
+      "bytes": 3699,
+      "sha256": "087f129cf0a46952cd8fd532cb34928f782407d61429677bf8628cbb107870d9"
+    },
+    {
+      "source": "Exodar Draenei - DraeneiTemple.mdx",
+      "path": "Draenei/Buildings/ArcaneCluster.mdx",
+      "bytes": 159754,
+      "sha256": "b3b55b4f0055756c1469dc3698bcf4f53c132ffd8053f455f0ad8bb05339d439"
+    },
+    {
+      "source": "DraeneiBuilding1.blp",
+      "path": "DraeneiBuilding1.blp",
+      "bytes": 347321,
+      "sha256": "d23e79122368037fb2884a25235935ea00d15d717ba6dea69ed541d49e5e14a9"
+    },
+    {
+      "source": "BTNExodar Draenei - Hall New.blp",
+      "path": "ReplaceableTextures/CommandButtons/BTNDraeneiArcaneCluster.blp",
+      "bytes": 5978,
+      "sha256": "f173f48af22562fcfffefc1ef46af105db27e3fbd117f102f04bde54c93a4b15"
+    },
+    {
+      "source": "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Hall New.blp",
+      "path": "ReplaceableTextures/CommandButtonsDisabled/DISBTNDraeneiArcaneCluster.blp",
+      "bytes": 3575,
+      "sha256": "8dc353ded08c5a639633e06e510cbb6b399496c8077820bf8f9dea95a0191f2a"
+    },
+    {
+      "source": "Exodar Draenei - DraeneiBarracks.mdx",
+      "path": "Draenei/Buildings/Barracks.mdx",
+      "bytes": 147556,
+      "sha256": "e3107933b203c3909d9e4b00b974ed4e4b88876b56dfa8bf755bcfdfd20a7997"
+    },
+    {
+      "source": "DraeneiBuilding1.blp",
+      "path": "DraeneiBuilding1.blp",
+      "bytes": 347321,
+      "sha256": "d23e79122368037fb2884a25235935ea00d15d717ba6dea69ed541d49e5e14a9"
+    },
+    {
+      "source": "BTNExodar Draenei - Casern New.blp",
+      "path": "ReplaceableTextures/CommandButtons/BTNDraeneiBarracks.blp",
+      "bytes": 6284,
+      "sha256": "1217d132b5fa29de5bdda121a47c97787385ecb380098a167f54b4a9a1dcbfc4"
+    },
+    {
+      "source": "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Casern New.blp",
+      "path": "ReplaceableTextures/CommandButtonsDisabled/DISBTNDraeneiBarracks.blp",
+      "bytes": 4070,
+      "sha256": "fa9e298be8aea6a177f6549934a9baf15eb0038ab7c6e7c7b7a617d5e60e22d3"
+    }
+  ],
+  "asset_files": [
+    "Draenei/Buildings/Altar.mdx",
+    "Draenei/Buildings/ArcaneCluster.mdx",
+    "Draenei/Buildings/Barracks.mdx",
+    "Draenei/Buildings/Workshop.mdx",
+    "DraeneiBuilding1.blp",
+    "ReplaceableTextures/CommandButtons/BTNDraeneiAltar.blp",
+    "ReplaceableTextures/CommandButtons/BTNDraeneiArcaneCluster.blp",
+    "ReplaceableTextures/CommandButtons/BTNDraeneiBarracks.blp",
+    "ReplaceableTextures/CommandButtons/BTNDraeneiWorkshop.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNDraeneiAltar.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNDraeneiArcaneCluster.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNDraeneiBarracks.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNDraeneiWorkshop.blp"
+  ],
+  "removed": [
+    "DraeneiAltar V1_01.mdx",
+    "Draeneibarrack.mdx",
+    "Draeneitower.mdx",
+    "LostOneFarm V1_01.mdx",
+    "ReplaceableTextures/CommandButtons/BTNDraeneiAltarA.blp",
+    "ReplaceableTextures/CommandButtons/BTNLostOneStrongHold.blp",
+    "ReplaceableTextures/CommandButtons/BTNdbarrack.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNDraeneiAltarA.blp",
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNLostOneStrongHold.blp"
+  ],
+  "retained_references": {
+    "ReplaceableTextures/CommandButtonsDisabled/DISBTNdbase2.blp": [
+      "implicit dependency of ReplaceableTextures/CommandButtons/BTNdbase2.blp"
+    ],
+    "ReplaceableTextures/CommandButtons/BTNdbase2.blp": [
+      "war3map.w3u"
+    ]
+  },
+  "changed_files": [
+    "war3map.w3u",
+    "war3map.w3a",
+    "war3mapSkin.w3a",
+    "war3map.imp"
+  ],
+  "before_hashes": {
+    "war3map.w3u": "4545940ba9a6d504b43e21eb802492715f6245850dbb48ce34b1cdfc5e7acb8a",
+    "war3mapSkin.w3u": "0642c190624839ccb851a3fa998848917c2145751bf0d83e42e7c6e6ca1e0424",
+    "war3map.w3a": "0b23078a625e80f76f8d73c77bed77de412f4a5ec085c862503841cd0dc09f6c",
+    "war3mapSkin.w3a": "4061f1f80acdb7c18b795b993ba224766236b2581560b7a32fd537de747fe11f",
+    "war3map.wts": "63ac893c7b014d24f440ddfba24f3050fd9172f81d0d3b44525d2b265b31b189",
+    "war3map.imp": "1501c9e0b49a49832b42f3f4f7b538e5acdb3fbfdfde3f6220d121c098d5f4b5"
+  }
+}

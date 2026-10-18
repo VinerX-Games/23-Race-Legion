@@ -29,7 +29,6 @@ function Trig_Sluga_qqgsarona_Actions()
     -- --
     ForGroupDestroy(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), CachedFilter(Trig_Sluga_qqgsarona_Func012001002)), Trig_Sluga_qqgsarona_Func012A)
     GroupAddUnitSimple(gg_unit_n03A_0657, udg_StolicaGroups)
-    BlzSetUnitStringFieldBJ(gg_unit_n03A_0657, UNIT_SF_NAME, "cffd45e19r" .. GetUnitName(gg_unit_n03A_0657))
     ForForce(GetPlayersAll(), Trig_Sluga_qqgsarona_Func017A)
     DisableTrigger(GetTriggeringTrigger())
 end

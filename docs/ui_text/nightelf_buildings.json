@@ -1,0 +1,298 @@
+{
+  "scope": "Ночные эльфы (Night Elf): категория 1 — Здания (14 зданий)",
+  "buildings_count": 14,
+  "variants": [
+    "SD"
+  ],
+  "buildings": [
+    {
+      "id": "etol",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26923,
+          "after": "|cffe4cfa3Древо жизни|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 26924,
+          "after": "|cffe4cfa3Древо жизни|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 5481,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночных эльфов первой ступени. Обеспечивает запас пищи и добычу ресурсов.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгонёк|cffced4da: базовый рабочий.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deКруг Кенария|cffced4da|n- |cffa9c7deПуть Элуны|cffced4da|n- |cffa9c7deБлагословение природы|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deДрево столетий|cffced4da: открывает доступ к передовым сооружениям и технологиям.|r"
+        }
+      ]
+    },
+    {
+      "id": "etoa",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26925,
+          "after": "|cffe4cfa3Древо столетий|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 26935,
+          "after": "|cffe4cfa3Древо столетий|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10114,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночных эльфов второй ступени. Существенно увеличивает запас пищи.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгонёк|cffced4da: базовый рабочий.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deБлагословение природы|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deДрево вечности|cffced4da: открывает доступ к высшим технологиям Ночных эльфов.|r"
+        }
+      ]
+    },
+    {
+      "id": "etoe",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26936,
+          "after": "|cffe4cfa3Древо вечности|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 26937,
+          "after": "|cffe4cfa3Древо вечности|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10115,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночных эльфов третьей ступени. Обеспечивает максимальный запас пищи.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deОгонёк|cffced4da: базовый рабочий.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deБлагословение природы|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "emow",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26938,
+          "after": "|cffe4cfa3Лунный колодец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 26939,
+          "after": "|cffe4cfa3Лунный колодец|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31600,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Экономическое и вспомогательное сооружение. Накапливает живительную воду, восполняющую здоровье и ману союзников, а также приносит доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит |cffc8e087+20|cffced4da ед. дохода каждые |cffffffff25|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "eaom",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26940,
+          "after": "|cffe4cfa3Древо войны|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 26941,
+          "after": "|cffe4cfa3Древо войны|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12949,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовое военное сооружение армии Ночных эльфов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЛучница|cffced4da: меткий стрелок дальнего боя.|n- |cffa9c7deОхотница|cffced4da: быстрый штурмовой боец с рикошетящей глефой.|n- |cffa9c7deГлефомет|cffced4da: дальнобойное осадное орудие.|n- |cffa9c7deЛунный воин|cffced4da: ловкий боец ближнего боя.|n- |cffa9c7deДух леса|cffced4da: древний лесной страж природы.|n- |cffa9c7deФурболг-следопыт|cffced4da: союзный воин ближнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенные луки|cffced4da|n- |cffa9c7deТренировка меткости|cffced4da|n- |cffa9c7deУлучшенные лунные глефы|cffced4da|n- |cffa9c7deПронзающие лезвия|cffced4da|n- |cffa9c7deТанец полумесяца|cffced4da|n- |cffa9c7deОбучение друидизму|cffced4da|n- |cffa9c7deОпутывание|cffced4da|n- |cffa9c7deУдлинённые клинки|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "eate",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27021,
+          "after": "|cffe4cfa3Алтарь старейшин|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27022,
+          "after": "|cffe4cfa3Алтарь старейшин|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 12948,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Священный алтарь для призыва и воскрешения героев Ночных эльфов.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deХранитель рощи|cffced4da: герой-мистик, повелитель природы.|n- |cffa9c7deДруид-мастер|cffced4da: могущественный маг стихий и друидизма.|n- |cffa9c7deЛунная охотница|cffced4da: смертоносный ловкий стрелок Элуны.|r"
+        }
+      ]
+    },
+    {
+      "id": "eaow",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27025,
+          "after": "|cffe4cfa3Древо ветров|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27026,
+          "after": "|cffe4cfa3Древо ветров|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31602,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает летающих существ и магов стихии воздуха.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДруид-ворон|cffced4da: маг поддержки, владеющий ветром и обликом буревестника.|n- |cffa9c7deЧудесный дракончик|cffced4da: летучий истребитель вражеских магов.|n- |cffa9c7deДревний Гвардеец|cffced4da: стойкий элитный страж ветров.|n- |cffa9c7deФурболг-воитель|cffced4da: могучий вождь фурболгов с аурой.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение друида-ворона|cffced4da|n- |cffa9c7deЗнак ворона|cffced4da|n- |cffa9c7deАннулирование|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "eaoe",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27023,
+          "after": "|cffe4cfa3Древо мудрости|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27024,
+          "after": "|cffe4cfa3Древо мудрости|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31601,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает магов земли, целителей и тяжелых лесных исполинов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deДриада|cffced4da: быстрый стрелок-антимаг с замедляющим ядом.|n- |cffa9c7deДруид-хищник|cffced4da: маг-целитель, способный принимать облик свирепого медведя.|n- |cffa9c7deГорный великан|cffced4da: тяжелый исполин, поглощающий осадный и магический урон.|n- |cffa9c7deДруид-сова|cffced4da: астральный друид Солнца и Луны.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение друида-хищника|cffced4da|n- |cffa9c7deЗнак хищника|cffced4da|n- |cffa9c7deРассеяние чар|cffced4da|n- |cffa9c7deУстойчивая кожа|cffced4da|n- |cffa9c7deКаменная кожа|cffced4da|n- |cffa9c7deМагия совы|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "edob",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27027,
+          "after": "|cffe4cfa3Дом охотников|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27028,
+          "after": "|cffe4cfa3Дом охотников|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 3803,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главная кузница и арсенал Ночных эльфов. Улучшает вооружение и защиту армии.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deСила Луны|cffced4da: повышает урон стрелков.|n- |cffa9c7deЛунные доспехи|cffced4da: повышает броню стрелков и друидов.|n- |cffa9c7deСила леса|cffced4da: повышает урон воинов ближнего боя и зверей.|n- |cffa9c7deПрочные шкуры|cffced4da: повышает броню воинов ближнего боя и зверей.|n- |cffa9c7deНочное зрение|cffced4da|n- |cffa9c7deЛунный фонтан|cffced4da|n- |cffa9c7deЧасовой|cffced4da|n- |cffa9c7deСлияние с деревьями|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "etrp",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27029,
+          "after": "|cffe4cfa3Сторожевое древо|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27030,
+          "after": "|cffe4cfa3Сторожевое древо|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31604,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение Ночных эльфов. Мечет тяжелые валуны в приближающихся врагов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкоренение|cffced4da: укрепляется в земле для дальнобойной стрельбы.|n- |cffa9c7deСъесть дерево|cffced4da: восстанавливает здоровье, поглощая дерево.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "edos",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27031,
+          "after": "|cffe4cfa3Гнездо химер|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27032,
+          "after": "|cffe4cfa3Гнездо химер|r (|cffffffffZ|r)"
+        }
+      ]
+    },
+    {
+      "id": "e03X",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 8676,
+          "after": "|cffe4cfa3Храм Друидов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 8742,
+          "after": "|cffe4cfa3Храм Друидов|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 9105,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище древних друидов, взывающее к силам дикой природы и первобытных зверей.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПризыв помощи|cffced4da: призыв сил Диких Богов.|n- |cffa9c7deМилость Природы|cffced4da: целительный природный дождь.|n- |cffa9c7deЯрость Природы|cffced4da: призыв могучих древней.|r"
+        }
+      ]
+    },
+    {
+      "id": "e03W",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 2064,
+          "after": "|cffe4cfa3Храм Элуны|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 2930,
+          "after": "|cffe4cfa3Храм Элуны|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31603,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище богини Луны, дарующее благословение и небесную мощь воительницам калдорай.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗов Элуны|cffced4da: аура боевого неистовства.|n- |cffa9c7deЯрость Элуны|cffced4da: посвящение в ночные воительницы.|n- |cffa9c7deСлёзы Элуны|cffced4da: перерождение павших воинов в огоньки.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0D8",
+      "hotkey": "C",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 10907,
+          "after": "|cffe4cfa3Верфь|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 10908,
+          "after": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 10903,
+          "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Морское сооружение для строительства и оснащения боевых кораблей.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспортный корабль|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОрудия флота|cffced4da|n- |cffa9c7deУкреплённый корпус|cffced4da.|r"
+        }
+      ]
+    }
+  ]
+}

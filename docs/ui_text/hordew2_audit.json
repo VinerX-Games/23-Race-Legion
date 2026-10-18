@@ -1,0 +1,116 @@
+{
+  "race": "Орда Второй Войны (HordeW2)",
+  "race_id": 35,
+  "selection_ability": "A1JN",
+  "objects_audit": {
+    "buildings": {
+      "count": 13,
+      "ids": [
+        "w20q",
+        "w20w",
+        "w20e",
+        "w20r",
+        "w20y",
+        "w214",
+        "w20a",
+        "w20u",
+        "w20t",
+        "w20i",
+        "w210",
+        "w218",
+        "w219"
+      ],
+      "town_halls": {
+        "tier1": {
+          "id": "w20q",
+          "name": "Дом вождей",
+          "food": 50
+        },
+        "tier2": {
+          "id": "w20w",
+          "name": "Крепость",
+          "food": 100
+        },
+        "tier3": {
+          "id": "w20e",
+          "name": "Цитадель",
+          "food": 150
+        }
+      }
+    },
+    "units": {
+      "count": 21,
+      "ids": [
+        "w200",
+        "w208",
+        "w203",
+        "w204",
+        "xd04",
+        "w209",
+        "w211",
+        "w205",
+        "xd01",
+        "xd06",
+        "w207",
+        "w201",
+        "w206",
+        "xd02",
+        "xd05",
+        "w202",
+        "xd07",
+        "h0D4",
+        "h0D6",
+        "h0D5",
+        "w220"
+      ]
+    },
+    "heroes": {
+      "count": 4,
+      "ids": [
+        "W200",
+        "W201",
+        "W202",
+        "W203"
+      ],
+      "names": {
+        "W200": "Вождь Клана (Оргрим Молот Рока, Сила, ближний бой)",
+        "W201": "Сумеречный маг (Чо'Галл, Интеллект, дальний бой)",
+        "W202": "Предводитель троллей (Зул'джин, Ловкость, дальний бой)",
+        "W203": "Мэйм Блэкхенд (Мастер клинка, Ловкость, ближний бой)"
+      }
+    },
+    "abilities": {
+      "count": 40,
+      "total_wts_updated": 491
+    },
+    "researches": {
+      "count": 21,
+      "markers_list": {
+        "R0KB": "Маркер расы Орда Второй Войны",
+        "R0KC": "Маркер выбора между Ордой Скверны и Ордой Второй Войны",
+        "R0KD": "Маркер выбора ветви Культа Сумеречного Молота"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items found for HordeW2."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "No race-specific triggers/chat messages found for HordeW2."
+  },
+  "buffs_audit": {
+    "custom_buffs": [],
+    "standard_buffs_used": [
+      "Bblo",
+      "Bfro",
+      "Bhea",
+      "Binv",
+      "Bpig"
+    ],
+    "status": "No custom buffs with unstandardized text found."
+  },
+  "total_wts_updates": 491,
+  "total_checks": 405
+}

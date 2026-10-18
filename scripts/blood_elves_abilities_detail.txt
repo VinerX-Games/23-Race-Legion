@@ -1,0 +1,723 @@
+=== Ability AHfs (levels: 4) ===
+  name: |cffe4cfa3Огненный столб|r -> |cffe4cfa3Огненный столб|r
+  hotkey: TRIGSTR_8693 -> Q
+  rtip: Изучить «|cffe4cfa3Огненный столб|r» [|cffffffff%d-й уровень|r] (|cffffffffQ|r) -> Изучить «|cffe4cfa3Огненный столб|r» [|cffffffff%d-й уровень|r] (|cffffffffQ|r)
+  rubt: |cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на указанную область столб бушующего пламени, наносящий высокий урон в первые |cffffffff3|cffced4da сек. и малый урон в последующие |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: |cffffffff45|cffced4da ед. урона/сек.|n- |cffffffff2|cffced4da: |cffffffff80|cffced4da ед. урона/сек.|n- |cffffffff3|cffced4da: |cffffffff110|cffced4da ед. урона/сек.|n- |cffffffff4|cffced4da: |cffffffff150|cffced4da ед. урона/сек.|r -> |cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на указанную область столб бушующего пламени, наносящий высокий урон в первые |cffffffff3|cffced4da сек. и малый урон в последующие |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: |cffffffff45|cffced4da ед. урона/сек.|n- |cffffffff2|cffced4da: |cffffffff80|cffced4da ед. урона/сек.|n- |cffffffff3|cffced4da: |cffffffff110|cffced4da ед. урона/сек.|n- |cffffffff4|cffced4da: |cffffffff150|cffced4da ед. урона/сек.|r
+  tip1: |cffe4cfa3Огненный столб|r [|cffffffff1-й уровень|r] (|cffffffffQ|r) -> |cffe4cfa3Огненный столб|r [|cffffffff1-й уровень|r] (|cffffffffQ|r)
+  ubertip1: |cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff45|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff4
+  tip2: |cffe4cfa3Огненный столб|r [|cffffffff2-й уровень|r] (|cffffffffQ|r) -> |cffe4cfa3Огненный столб|r [|cffffffff2-й уровень|r] (|cffffffffQ|r)
+  ubertip2: |cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff80|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff8
+  tip3: |cffe4cfa3Огненный столб|r [|cffffffff3-й уровень|r] (|cffffffffQ|r) -> |cffe4cfa3Огненный столб|r [|cffffffff3-й уровень|r] (|cffffffffQ|r)
+  ubertip3: |cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff110|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff1
+  tip4: TRIGSTR_5617 -> |cffe4cfa3Огненный столб|r [|cffffffff4-й уровень|r] (|cffffffffQ|r)
+  ubertip4: TRIGSTR_1441 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff1
+=== Ability AHdr (levels: 4) ===
+  name: Похищение маны -> Похищение маны
+  hotkey: TRIGSTR_10468 -> E
+  rtip: Изучить «Похищение маны» [|cffffcc00%d-й уровень|r] -> Изучить «Похищение маны» [|cffffcc00%d-й уровень|r]
+  rubt: TRIGSTR_32062 -> |cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт магический канал, вытягивающий ману из вражеского юнита или передающий собственную ману союзнику.|r
+  tip1: "Похищение маны [|cffffcc001-й уровень|r]" -> "Похищение маны [|cffffcc001-й уровень|r]"
+  ubertip1: "Вытягивает <AHdr,DataB1> маны/сек. из врага или передает <AHdr,DataE1> маны/сек. союзнику.|n|nПри этом запас маны мага крови может превысить максимальный, но неиспользованные излишки быстро исчезают.|nВремя действия: <AHdr,Dur1> сек." -> '"Вытягивает <AHdr,DataB1> маны/сек. из врага или передает <AHdr,DataE1> маны/се
+  tip2: "Похищение маны [|cffffcc002-й уровень|r]" -> "Похищение маны [|cffffcc002-й уровень|r]"
+  ubertip2: "Вытягивает <AHdr,DataB2> маны/сек. из врага или передает <AHdr,DataE2> маны/сек. союзнику.|n|nПри этом запас маны мага крови может превысить максимальный, но неиспользованные излишки быстро исчезают.|nВремя действия: <AHdr,Dur2> сек." -> '"Вытягивает <AHdr,DataB2> маны/сек. из врага или передает <AHdr,DataE2> маны/се
+  tip3: "Похищение маны [|cffffcc003-й уровень|r]" -> "Похищение маны [|cffffcc003-й уровень|r]"
+  ubertip3: "Вытягивает <AHdr,DataB3> маны/сек. из врага или передает <AHdr,DataE3> маны/сек. союзнику.|n|nПри этом запас маны мага крови может превысить максимальный, но неиспользованные излишки быстро исчезают.|nВремя действия: <AHdr,Dur3> сек." -> '"Вытягивает <AHdr,DataB3> маны/сек. из врага или передает <AHdr,DataE3> маны/се
+  tip4: TRIGSTR_5619 -> |cffe4cfa3Похищение маны|r [|cffffffff4-й уровень|r] (|cffffffffE|r)
+  ubertip4: TRIGSTR_5620 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вытягивает |cffffffff60|cffced4da ед. маны/сек
+=== Ability AHpx (levels: 2) ===
+  name: TRIGSTR_16143 -> |cffe4cfa3Феникс|r
+  hotkey: TRIGSTR_7168 -> R
+  rtip: TRIGSTR_16142 -> |cffe4cfa3Феникс|r (|cffffffffR|r)
+  rubt: TRIGSTR_16144 -> |cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает могучего огненного феникса, обладающего иммунитетом к магии и огненной аурой. После гибели феникс превращается в яйцо и перерождается.|r
+  tip1: |cffe4cfa3Феникс|r [|cffffffff1-й уровень|r] (|cffffffffR|r) -> |cffe4cfa3Феникс|r [|cffffffff1-й уровень|r] (|cffffffffR|r)
+  ubertip1: |cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает могучего огненного феникса. Феникс невосприимчив к магии, наносит периодический урон огнём вокруг себя и перерождается из яйца после гибели.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает могучего огненного феникса. Феникс н
+  tip2: TRIGSTR_5623 -> |cffe4cfa3Феникс|r [|cffffffff2-й уровень|r] (|cffffffffR|r)
+  ubertip2: TRIGSTR_5624 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff2|cffced4da могучих огненн
+=== Ability AHbn (levels: 4) ===
+  name: TRIGSTR_25760 -> |cffe4cfa3Изгнание|r
+  hotkey: TRIGSTR_8861 -> W
+  rtip: TRIGSTR_25761 -> |cffe4cfa3Изгнание|r (|cffffffffW|r)
+  rubt: TRIGSTR_25762 -> |cffa6afb8СПОСОБНОСТЬ:|cffced4da Изгоняет выбранную цель в астральный план. Изгнанная цель замедляется, теряет способность атаковать, но получает значительно больше урона от магии и заклинаний.|r
+  tip1: "Изгнание [|cffffcc001-й уровень|r]" -> "Изгнание [|cffffcc001-й уровень|r]"
+  ubertip1: "Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA1,%>% на <AHbn,Dur1> сек. Изгнанные цели не могут атаковать, но могут применять способности. Кроме того, некоторые способности наносят им больше урона. Не действует на технику." -> '"Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA1,%>% на <A
+  tip2: "Изгнание [|cffffcc002-й уровень|r]" -> "Изгнание [|cffffcc002-й уровень|r]"
+  ubertip2: "Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA2,%>% на <AHbn,Dur2> сек. Изгнанные цели не могут атаковать, но могут применять способности. Кроме того, некоторые способности наносят им больше урона." -> '"Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA2,%>% на <A
+  tip3: "Изгнание [|cffffcc003-й уровень|r]" -> "Изгнание [|cffffcc003-й уровень|r]"
+  ubertip3: "Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA3,%>% на <AHbn,Dur3> сек. Изгнанные цели не могут атаковать, но могут применять способности. Кроме того, некоторые способности наносят им больше урона." -> '"Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA3,%>% на <A
+  tip4: TRIGSTR_5621 -> |cffe4cfa3Изгнание|r [|cffffffff4-й уровень|r] (|cffffffffW|r)
+  ubertip4: TRIGSTR_5622 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Изгоняет цель в астральный план на |cffffffff5
+=== Ability A08R (levels: 4) ===
+  name: TRIGSTR_38033 -> |cfffa9696Поле астрала|r
+  hotkey: TRIGSTR_12469 -> W
+  rtip: TRIGSTR_38037 -> |cfffa9696Поле астрала|r
+  rubt: TRIGSTR_6083 -> Всех юнитов в области помещает в астрал. 
+  tip1: TRIGSTR_38032 -> |cfffa9696Поле астрала|r
+  ubertip1: TRIGSTR_6074 -> 'Всех юнитов в области помещает в астрал.'
+  tip2: TRIGSTR_38034 -> |cfffa9696Поле астрала|r
+  ubertip2: TRIGSTR_6079 -> 'Всех юнитов в области помещает в астрал.'
+  tip3: TRIGSTR_38035 -> |cfffa9696Поле астрала|r
+  ubertip3: TRIGSTR_6080 -> 'Всех юнитов в области помещает в астрал.'
+  tip4: TRIGSTR_38036 -> |cfffa9696Поле астрала|r
+  ubertip4: TRIGSTR_6081 -> 'Всех юнитов в области помещает в астрал.'
+=== Ability A07U (levels: 4) ===
+  name: TRIGSTR_38000 -> |cfffa9696Зачарованный лук|r
+  hotkey: None -> None
+  rtip: TRIGSTR_38006 -> Изучить |cfffa9696Зачарованный лук|r
+  rubt: TRIGSTR_38005 -> Каждая атака поражает дополнительные цели.
+  tip1: TRIGSTR_37996 -> |cfffa9696Зачарованный лук|r
+  ubertip1: TRIGSTR_2601 -> 'Дополнительно выпускает в цели рядом стрелы. Имеет ограничение по урону, растущ
+  tip2: TRIGSTR_37997 -> |cfffa9696Зачарованный лук|r
+  ubertip2: TRIGSTR_2605 -> 'Дополнительно выпускает в цели рядом стрелы. Имеет ограничение по урону, растущ
+  tip3: TRIGSTR_37998 -> |cfffa9696Зачарованный лук|r
+  ubertip3: TRIGSTR_2606 -> 'Дополнительно выпускает в цели рядом стрелы. Имеет ограничение по урону, растущ
+  tip4: TRIGSTR_37999 -> |cfffa9696Зачарованный лук|r
+  ubertip4: TRIGSTR_10695 -> 'Дополнительно выпускает в цели рядом стрелы. Имеет ограничение по урону, растущ
+=== Ability A0LQ (levels: 4) ===
+  name: TRIGSTR_40570 -> |cfffa9696Отравленный кинжал|r
+  hotkey: TRIGSTR_15809 -> Q
+  rtip: TRIGSTR_40571 -> Изучить «|cfffa9696Отравленный кинжал|r» [|cffffcc00%d-й уровень|r]
+  rubt: "Бросает отравленный кинжал, наносящий мгновенный и периодический урон и временно замедляющий передвижение цели. |n|n|cffffcc001-й уровень:|r <AEsh,DataE1> урона мгновенно и <AEsh,DataA1> периодического урона. |n|cffffcc002-й уровень:|r <AEsh,DataE2> урона мгновенно и <AEsh,DataA2> периодического урона. |n|cffffcc003-й уровень:|r <AEsh,DataE3> урона мгновенно и <AEsh,DataA3> периодического урона." -> "Бросает отравленный кинжал, наносящий мгновенный и периодический урон и временно замедляющий передвижение цели. |n|n|cffffcc001-й уровень:|r <AEsh,DataE1> урона мгновенно и <AEsh,DataA1> периодического урона. |n|cffffcc002-й уровень:|r <AEsh,DataE2> урона мгновенно и <AEsh,DataA2> периодического урона. |n|cffffcc003-й уровень:|r <AEsh,DataE3> урона мгновенно и <AEsh,DataA3> периодического урона."
+  tip1: TRIGSTR_40572 -> |cfffa9696Отравленный кинжал|r [|cffffcc001-й уровень|r]
+  ubertip1: "Бросает отравленный кинжал во врага, нанося <AEsh,DataE1> урона мгновенно и <AEsh,DataA1> урона раз в <AEsh,Cast1> сек. в течение <AEsh,Dur1> сек. Яд временно замедляет передвижение цели." -> '"Бросает отравленный кинжал во врага, нанося <AEsh,DataE1> урона мгновенно и <A
+  tip2: TRIGSTR_40573 -> |cfffa9696Отравленный кинжал|r [|cffffcc002-й уровень|r]
+  ubertip2: "Бросает отравленный кинжал во врага, нанося <AEsh,DataE2> урона мгновенно и <AEsh,DataA2> урона раз в <AEsh,Cast2> сек. в течение <AEsh,Dur2> сек. Яд временно замедляет передвижение цели." -> '"Бросает отравленный кинжал во врага, нанося <AEsh,DataE2> урона мгновенно и <A
+  tip3: TRIGSTR_40574 -> |cfffa9696Отравленный кинжал|r [|cffffcc003-й уровень|r]
+  ubertip3: "Бросает отравленный кинжал во врага, нанося <AEsh,DataE3> урона мгновенно и <AEsh,DataA3> урона раз в <AEsh,Cast3> сек. в течение <AEsh,Dur3> сек. Яд временно замедляет передвижение цели." -> '"Бросает отравленный кинжал во врага, нанося <AEsh,DataE3> урона мгновенно и <A
+  tip4: TRIGSTR_40575 -> |cfffa9696Отравленный кинжал|r [|cffffcc004-й уровень|r]
+  ubertip4: None -> None
+=== Ability AEar (levels: 4) ===
+  name: |cffe4cfa3Аура меткости|r -> |cffe4cfa3Аура меткости|r
+  hotkey: TRIGSTR_10518 -> E
+  rtip: Изучить «|cffe4cfa3Аура меткости|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r) -> Изучить «|cffe4cfa3Аура меткости|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r)
+  rubt: |cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак всех находящихся рядом союзников.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: |cffffffff+10%|cffced4da к урону|n- |cffffffff2|cffced4da: |cffffffff+20%|cffced4da к урону|n- |cffffffff3|cffced4da: |cffffffff+30%|cffced4da к урону|n- |cffffffff4|cffced4da: |cffffffff+40%|cffced4da к урону.|r -> |cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак всех находящихся рядом союзников.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: |cffffffff+10%|cffced4da к урону|n- |cffffffff2|cffced4da: |cffffffff+20%|cffced4da к урону|n- |cffffffff3|cffced4da: |cffffffff+30%|cffced4da к урону|n- |cffffffff4|cffced4da: |cffffffff+40%|cffced4da к урону.|r
+  tip1: |cffe4cfa3Аура меткости|r [|cffffffff1-й уровень|r] -> |cffe4cfa3Аура меткости|r [|cffffffff1-й уровень|r]
+  ubertip1: |cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак находящихся рядом союзников на |cffffffff10%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак
+  tip2: |cffe4cfa3Аура меткости|r [|cffffffff2-й уровень|r] -> |cffe4cfa3Аура меткости|r [|cffffffff2-й уровень|r]
+  ubertip2: |cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак находящихся рядом союзников на |cffffffff20%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак
+  tip3: |cffe4cfa3Аура меткости|r [|cffffffff3-й уровень|r] -> |cffe4cfa3Аура меткости|r [|cffffffff3-й уровень|r]
+  ubertip3: |cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак находящихся рядом союзников на |cffffffff30%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак
+  tip4: TRIGSTR_4964 -> |cffe4cfa3Аура меткости|r [|cffffffff4-й уровень|r]
+  ubertip4: TRIGSTR_4967 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак
+=== Ability A07V (levels: 2) ===
+  name: TRIGSTR_38010 -> |cfffa9696Метка охотника|r
+  hotkey: R -> R
+  rtip: TRIGSTR_38012 -> |cfffa9696Метка охотника|r
+  rubt: TRIGSTR_6023 -> Ослабляет броню врага на <Afae,DataA1> и раскрывает его местоположение. |nВремя действия: <Afae,Dur1> сек.
+  tip1: TRIGSTR_38007 -> |cfffa9696Метка охотника|r
+  ubertip1: "Ослабляет броню врага на <Afae,DataA1> и раскрывает его местоположение. |nВремя действия: <Afae,Dur1> сек." -> '"Ослабляет броню врага на <Afae,DataA1> и раскрывает его местоположение. |nВрем
+  tip2: TRIGSTR_38008 -> |cfffa9696Метка охотника|r
+  ubertip2: TRIGSTR_5640 -> 'Ослабляет броню врага на <Afae,DataA2> и раскрывает его местоположение. |nВремя
+=== Ability A16M (levels: 2) ===
+  name: TRIGSTR_38129 -> |cfffa9696Антимагическая броня|r
+  hotkey: TRIGSTR_25122 -> R
+  rtip: TRIGSTR_27687 -> Броня ведьмака
+  rubt: TRIGSTR_27689 -> Броня ведьмака
+  tip1: TRIGSTR_38130 -> |cfffa9696Антимагическая броня|r
+  ubertip1: TRIGSTR_27688 -> 'На время дает броню и антимагическую защиту.'
+  tip2: TRIGSTR_38131 -> |cfffa9696Антимагическая броня|r
+  ubertip2: TRIGSTR_27692 -> 'На время дает броню и антимагическую защиту.'
+=== Ability A0DD (levels: 2) ===
+  name: TRIGSTR_38065 -> |cfffa9696Доспехи ведьмака|r
+  hotkey: None -> None
+  rtip: TRIGSTR_9730 -> Изучить «Доспехи ведьмака» [|cffffcc00%d-й уровень|r]
+  rubt: TRIGSTR_9651 -> Увеличивает броню и дает полную защиту от магии.
+  tip1: TRIGSTR_38061 -> |cfffa9696Доспехи ведьмака|r [|cffffcc001-й уровень|r]
+  ubertip1: TRIGSTR_38063 -> 'Дает возможность получить на время броню и неуязвимость к магии.'
+  tip2: TRIGSTR_38062 -> |cfffa9696Доспехи ведьмака|r [|cffffcc002-й уровень|r]
+  ubertip2: TRIGSTR_38064 -> 'Дает возможность получить на время броню и неуязвимость к магии.'
+=== Ability ACmi (levels: 1) ===
+  name: Невосприимчивость к магии -> Невосприимчивость к магии
+  hotkey: None -> None
+  tip1: Невосприимчивость к магии -> Невосприимчивость к магии
+  ubertip1: Дает невосприимчивость к магии и большинству способностей. -> 'Дает невосприимчивость к магии и большинству способностей.'
+=== Ability A08H (levels: 4) ===
+  name: TRIGSTR_40564 -> |cfffa9696Веер света|r
+  hotkey: TRIGSTR_12304 -> Q
+  rtip: TRIGSTR_40565 -> Изучить «|cfffa9696Веер света|r» [|cffffcc00%d-й уровень|r]
+  rubt: TRIGSTR_6011 -> Бросает несколько пучков света, нанося урон находящимся рядом врагам.
+  tip1: TRIGSTR_40566 -> |cfffa9696Веер света|r [|cffffcc001-й уровень|r]
+  ubertip1: TRIGSTR_6016 -> 'Бросает несколько пучков света, нанося по <AEfk,DataA1> урона находящимся рядом
+  tip2: TRIGSTR_40567 -> |cfffa9696Веер света|r [|cffffcc002-й уровень|r]
+  ubertip2: TRIGSTR_6017 -> 'Бросает несколько пучков света, нанося по <AEfk,DataA2> урона находящимся рядом
+  tip3: TRIGSTR_40568 -> |cfffa9696Веер света|r [|cffffcc003-й уровень|r]
+  ubertip3: TRIGSTR_6018 -> 'Бросает несколько пучков света, нанося по <AEfk,DataA3> урона находящимся рядом
+  tip4: TRIGSTR_40569 -> |cfffa9696Веер света|r [|cffffcc004-й уровень|r]
+  ubertip4: TRIGSTR_6019 -> 'Бросает несколько пучков света, нанося по <AEfk,DataA4> урона находящимся рядом
+=== Ability A07W (levels: 4) ===
+  name: TRIGSTR_38020 -> |cfffa9696Щит света|r
+  hotkey: TRIGSTR_12191 -> W
+  rtip: TRIGSTR_38021 -> |cfffa9696Щит света|r
+  rubt: TRIGSTR_6028 -> Увеличивает броню союзников на 15 секунд. +2 ед брони за уровень способности.
+  tip1: TRIGSTR_3064 -> |cfffa9696Щит света|r
+  ubertip1: TRIGSTR_5650 -> 'Увеличивает броню союзников на 15 секунд. +2 ед брони за уровень способности.'
+  tip2: TRIGSTR_38013 -> |cfffa9696Щит света|r
+  ubertip2: TRIGSTR_6024 -> 'Увеличивает броню союзников на 15 секунд. +2 ед брони за уровень способности.'
+  tip3: TRIGSTR_38014 -> |cfffa9696Щит света|r
+  ubertip3: TRIGSTR_6025 -> 'Увеличивает броню союзников на 15 секунд. +2 ед брони за уровень способности.'
+  tip4: TRIGSTR_38015 -> |cfffa9696Щит света|r
+  ubertip4: TRIGSTR_6026 -> 'Увеличивает броню союзников на 15 секунд. +2 ед брони за уровень способности.'
+=== Ability AHbh (levels: 4) ===
+  name: Сильный удар -> Сильный удар
+  hotkey: None -> None
+  rtip: Изучить «Сильный удар» [|cffffcc00%d-й уровень|r] -> Изучить «Сильный удар» [|cffffcc00%d-й уровень|r]
+  rubt: "Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. На <AHbh,DataC1> больше урона. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. На <AHbh,DataC2> больше урона. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс. На <AHbh,DataC3> больше урона." -> "Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. На <AHbh,DataC1> больше урона. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. На <AHbh,DataC2> больше урона. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс. На <AHbh,DataC3> больше урона."
+  tip1: "Сильный удар [|cffffcc001-й уровень|r]" -> "Сильный удар [|cffffcc001-й уровень|r]"
+  ubertip1: "С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек." -> '"С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и 
+  tip2: "Сильный удар [|cffffcc002-й уровень|r]" -> "Сильный удар [|cffffcc002-й уровень|r]"
+  ubertip2: TRIGSTR_29446 -> 'С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC2> больше урона и о
+  tip3: "Сильный удар [|cffffcc003-й уровень|r]" -> "Сильный удар [|cffffcc003-й уровень|r]"
+  ubertip3: TRIGSTR_29447 -> 'С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC3> больше урона и о
+  tip4: TRIGSTR_29445 -> Сильный удар [|cffffcc004-й уровень|r]
+  ubertip4: TRIGSTR_29448 -> 'С <AHbh,DataA4>%-й вероятностью атака нанесет на <AHbh,DataC4> больше урона и о
+=== Ability AHre (levels: 2) ===
+  name: Воскрешение -> Воскрешение
+  hotkey: R -> R
+  rtip: Изучить «Воскрешение» -> Изучить «Воскрешение»
+  rubt: "Воскрешает до <AHre,DataA1> находящихся рядом союзников." -> "Воскрешает до <AHre,DataA1> находящихся рядом союзников."
+  tip1: Воскрешение -> Воскрешение
+  ubertip1: "Воскрешает до <AHre,DataA1> находящихся рядом союзников." -> '"Воскрешает до <AHre,DataA1> находящихся рядом союзников."'
+  tip2: TRIGSTR_173 -> Воскрешение
+  ubertip2: TRIGSTR_182 -> 'Воскрешает до <AHre,DataA2> находящихся рядом союзников.'
+=== Ability A1KU (levels: 2) ===
+  name: TRIGSTR_38473 -> |cffff4242Всепроникающий свет|r
+  hotkey: TRIGSTR_30338 -> R
+  rtip: TRIGSTR_38647 -> |cffff4242Всепроникающий свет|r
+  rubt: TRIGSTR_38648 -> На 15 значительно увеличивает регенерацию союзников в среднем радиусе, делая их практически неубиваемыми.
+  tip1: TRIGSTR_38645 -> |cffff4242Всепроникающий свет|r
+  ubertip1: TRIGSTR_38646 -> 'На 15 значительно увеличивает регенерацию союзников в среднем радиусе, делая их
+  tip2: TRIGSTR_38649 -> |cffff4242Всепроникающий свет|r
+  ubertip2: TRIGSTR_38650 -> 'На 15 значительно увеличивает регенерацию союзников в среднем радиусе, делая их
+=== Ability A1KV (levels: 1) ===
+  name: TRIGSTR_24377 -> |cffff4242Лиадрин ульта|r
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability A1KY (levels: 4) ===
+  name: TRIGSTR_38675 -> |cffff4242Свет небес дамми
+  hotkey: None -> None
+  rtip: Изучить «Свет небес» [|cffffcc00%d-й уровень|r] -> Изучить «Свет небес» [|cffffcc00%d-й уровень|r]
+  rubt: "Наносит урон врагу-нежити или восполняет здоровье живому союзнику. |n|n|cffffcc001-й уровень:|r <AHhb,DataA1> здоровья. |n|cffffcc002-й уровень:|r <AHhb,DataA2> здоровья. |n|cffffcc003-й уровень:|r <AHhb,DataA3> здоровья." -> "Наносит урон врагу-нежити или восполняет здоровье живому союзнику. |n|n|cffffcc001-й уровень:|r <AHhb,DataA1> здоровья. |n|cffffcc002-й уровень:|r <AHhb,DataA2> здоровья. |n|cffffcc003-й уровень:|r <AHhb,DataA3> здоровья."
+  tip1: "Свет небес [|cffffcc001-й уровень|r]" -> "Свет небес [|cffffcc001-й уровень|r]"
+  ubertip1: "Восполняет <AHhb,DataA1> здоровья живому союзнику или наносит вдвое меньше урона врагу-нежити." -> '"Восполняет <AHhb,DataA1> здоровья живому союзнику или наносит вдвое меньше уро
+  tip2: "Свет небес [|cffffcc002-й уровень|r]" -> "Свет небес [|cffffcc002-й уровень|r]"
+  ubertip2: "Восполняет <AHhb,DataA2> здоровья живому союзнику или наносит вдвое меньше урона врагу-нежити." -> '"Восполняет <AHhb,DataA2> здоровья живому союзнику или наносит вдвое меньше уро
+  tip3: "Свет небес [|cffffcc003-й уровень|r]" -> "Свет небес [|cffffcc003-й уровень|r]"
+  ubertip3: "Восполняет <AHhb,DataA3> здоровья живому союзнику или наносит вдвое меньше урона врагу-нежити." -> '"Восполняет <AHhb,DataA3> здоровья живому союзнику или наносит вдвое меньше уро
+  tip4: None -> None
+  ubertip4: None -> None
+=== Ability A05J (levels: 1) ===
+  name: TRIGSTR_37896 -> |cfffa9696Похищение заклинаний|r
+  hotkey: TRIGSTR_11276 -> Q
+  tip1: TRIGSTR_37897 -> |cfffa9696Похищение заклинаний|r
+  ubertip1: Снимает положительный эффект с врага и дает его находящемуся рядом союзнику либо снимает отрицательный эффект с союзника и применяет его к находящемуся рядом врагу. -> 'Снимает положительный эффект с врага и дает его находящемуся рядом союзнику либ
+=== Ability A05K (levels: 1) ===
+  name: TRIGSTR_37898 -> |cfffa9696Магический контроль|r
+  hotkey: TRIGSTR_10294 -> X
+  tip1: TRIGSTR_37899 -> |cfffa9696Магический контроль|r
+  ubertip1: TRIGSTR_37900 -> 'Подчиняет призванного врага. Стоимость равна 45% текущего запаса здоровья цели.
+=== Ability A049 (levels: 1) ===
+  name: TRIGSTR_36829 -> |cfffa9696Магический контроль|r
+  hotkey: TRIGSTR_9711 -> X
+  tip1: TRIGSTR_36830 -> |cfffa9696Магический контроль|r
+  ubertip1: TRIGSTR_36831 -> 'Подчиняет призванного врага. Стоимость равна 45% текущего запаса здоровья цели.
+=== Ability Asps (levels: 1) ===
+  name: TRIGSTR_16062 -> |cfffa9696Похищение заклинаний|r
+  hotkey: TRIGSTR_9955 -> W
+  tip1: TRIGSTR_16064 -> |cfffa9696Похищение заклинаний|r
+  ubertip1: Снимает положительный эффект с врага и дает его находящемуся рядом союзнику либо снимает отрицательный эффект с союзника и применяет его к находящемуся рядом врагу. -> 'Снимает положительный эффект с врага и дает его находящемуся рядом союзнику либ
+=== Ability A07L (levels: 1) ===
+  name: TRIGSTR_37983 -> |cfffa9696Волна исцеления|r
+  hotkey: TRIGSTR_11738 -> Q
+  rtip: Изучить «Волну исцеления» [|cffffcc00%d-й уровень|r] -> Изучить «Волну исцеления» [|cffffcc00%d-й уровень|r]
+  rubt: "Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом. |n|n|cffffcc001-й уровень:|r <AOhw,DataA1> здоровья, до <AOhw,DataB1> целей. |n|cffffcc002-й уровень:|r <AOhw,DataA2> здоровья, до <AOhw,DataB2> целей. |n|cffffcc003-й уровень:|r <AOhw,DataA3> здоровья, до <AOhw,DataB3> целей." -> "Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом. |n|n|cffffcc001-й уровень:|r <AOhw,DataA1> здоровья, до <AOhw,DataB1> целей. |n|cffffcc002-й уровень:|r <AOhw,DataA2> здоровья, до <AOhw,DataB2> целей. |n|cffffcc003-й уровень:|r <AOhw,DataA3> здоровья, до <AOhw,DataB3> целей."
+  tip1: TRIGSTR_36828 -> |cfffa9696Волна исцеления|r
+  ubertip1: TRIGSTR_37984 -> 'Призывает волну энергии, которая последовательно исцеляет до 8 союзников, воспо
+=== Ability A037 (levels: 1) ===
+  name: TRIGSTR_36798 -> |cfffa9696Волна исцеления|r
+  hotkey: TRIGSTR_10740 -> Q
+  rtip: Изучить «Волну исцеления» [|cffffcc00%d-й уровень|r] -> Изучить «Волну исцеления» [|cffffcc00%d-й уровень|r]
+  rubt: "Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом. |n|n|cffffcc001-й уровень:|r <AOhw,DataA1> здоровья, до <AOhw,DataB1> целей. |n|cffffcc002-й уровень:|r <AOhw,DataA2> здоровья, до <AOhw,DataB2> целей. |n|cffffcc003-й уровень:|r <AOhw,DataA3> здоровья, до <AOhw,DataB3> целей." -> "Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом. |n|n|cffffcc001-й уровень:|r <AOhw,DataA1> здоровья, до <AOhw,DataB1> целей. |n|cffffcc002-й уровень:|r <AOhw,DataA2> здоровья, до <AOhw,DataB2> целей. |n|cffffcc003-й уровень:|r <AOhw,DataA3> здоровья, до <AOhw,DataB3> целей."
+  tip1: TRIGSTR_35539 -> |cfffa9696Волна исцеления|r
+  ubertip1: TRIGSTR_259 -> 'Призывает волну энергии, которая последовательно исцеляет до 6 союзников, воспо
+=== Ability A07K (levels: 1) ===
+  name: TRIGSTR_37981 -> |cfffa9696Огненное лассо|r
+  hotkey: TRIGSTR_12131 -> W
+  tip1: TRIGSTR_37982 -> |cfffa9696Огненное лассо|r
+  ubertip1: TRIGSTR_5380 -> 'Сковывает врага.'
+=== Ability A07P (levels: 1) ===
+  name: TRIGSTR_25643 -> |cfffa9696Огненная стрела|r
+  hotkey: TRIGSTR_11764 -> Q
+  tip1: TRIGSTR_33619 -> |cfffa9696Огненная стрела|r
+  ubertip1: TRIGSTR_5504 -> 'Выпускает сгусток огня, оглушающий врага, а также полжигающий его на 9 секунд.'
+=== Ability A07Q (levels: 1) ===
+  name: TRIGSTR_33673 -> |cfffa9696Огненная стрела|r
+  hotkey: TRIGSTR_11765 -> Q
+  tip1: TRIGSTR_33679 -> |cfffa9696Огненная стрела|r
+  ubertip1: TRIGSTR_5510 -> 'Выпускает сгусток огня, оглушающий врага, а также поджигающий его.'
+=== Ability A07N (levels: 1) ===
+  name: TRIGSTR_33739 -> |cfffa9696Стрела скверны|r
+  hotkey: TRIGSTR_11742 -> Q
+  tip1: TRIGSTR_33738 -> |cfffa9696Стрела скверны|r
+  ubertip1: TRIGSTR_5484 -> 'Выпускает сгусток скверны, оглушающий врага, а также снижающий броню врагов.'
+=== Ability A07O (levels: 1) ===
+  name: TRIGSTR_33740 -> |cfffa9696Стрела скверны|r
+  hotkey: TRIGSTR_11762 -> Q
+  tip1: TRIGSTR_33741 -> |cfffa9696Стрела скверны|r
+  ubertip1: TRIGSTR_5492 -> 'Выпускает сгусток скверны, оглушающий врага, а также снижающий броню врагов.'
+=== Ability A02G (levels: 1) ===
+  name: TRIGSTR_37989 -> |cfffa9696Чародейская стрела|r
+  hotkey: TRIGSTR_11739 -> Q
+  tip1: TRIGSTR_37988 -> |cfffa9696Чародейская стрела|r
+  ubertip1: TRIGSTR_5464 -> 'Выпускает сгусток арканы, оглушающий врага, а также замедляющий скорось его ата
+=== Ability A07D (levels: 1) ===
+  name: TRIGSTR_37990 -> |cfffa9696Чародейская стрела|r
+  hotkey: TRIGSTR_11740 -> Q
+  tip1: TRIGSTR_37991 -> |cfffa9696Чародейская стрела|r
+  ubertip1: TRIGSTR_5472 -> 'Выпускает сгусток арканы, оглушающий врага, а также замедляющий скорось его ата
+=== Ability A07M (levels: 1) ===
+  name: TRIGSTR_37986 -> |cfffa9696Укрыться|r
+  hotkey: TRIGSTR_14270 -> E
+  rtip: Изучить «Танец ветра» [|cffffcc00%d-й уровень|r] -> Изучить «Танец ветра» [|cffffcc00%d-й уровень|r]
+  rubt: "Дает невидимость и временно ускоряет передвижение. Атакуя, мастер клинка становится видимым, но при этом наносит больше урона. |n|n|cffffcc001-й уровень:|r +<AOwk,DataB1,%>% к скорости передвижения, +<AOwk,DataC1> к урону, действует <AOwk,Dur1> сек. |n|cffffcc002-й уровень:|r +<AOwk,DataB2,%>% к скорости передвижения, +<AOwk,DataC2> к урону, действует <AOwk,Dur2> сек. |n|cffffcc003-й уровень:|r +<AOwk,DataB3,%>% к скорости передвижения, +<AOwk,DataC3> к урону, действует <AOwk,Dur3> сек." -> "Дает невидимость и временно ускоряет передвижение. Атакуя, мастер клинка становится видимым, но при этом наносит больше урона. |n|n|cffffcc001-й уровень:|r +<AOwk,DataB1,%>% к скорости передвижения, +<AOwk,DataC1> к урону, действует <AOwk,Dur1> сек. |n|cffffcc002-й уровень:|r +<AOwk,DataB2,%>% к скорости передвижения, +<AOwk,DataC2> к урону, действует <AOwk,Dur2> сек. |n|cffffcc003-й уровень:|r +<AOwk,DataB3,%>% к скорости передвижения, +<AOwk,DataC3> к урону, действует <AOwk,Dur3> сек."
+  tip1: TRIGSTR_37987 -> |cfffa9696Укрыться|r
+  ubertip1: TRIGSTR_5386 -> 'Дает невидимость, но снижает скорость передвижения вдвое. При выходе из невидим
+=== Ability A07S (levels: 1) ===
+  name: TRIGSTR_37992 -> |cfffa9696Неуловимый щит|r
+  hotkey: TRIGSTR_7769 -> D
+  tip1: TRIGSTR_37993 -> |cfffa9696Неуловимый щит|r
+  ubertip1: TRIGSTR_33680 -> 'Дает щит, который поглощает 75% урона, 1 ед маны тратится за одну сохраненную е
+=== Ability A07R (levels: 1) ===
+  name: TRIGSTR_3019 -> |cfffa9696Неуловимый щит|r
+  hotkey: TRIGSTR_7172 -> D
+  tip1: TRIGSTR_3062 -> |cfffa9696Неуловимый щит|r
+  ubertip1: TRIGSTR_22333 -> 'Дает щит, который поглощает 45% урона, 1 ед маны тратится за одну сохраненную е
+=== Ability A07T (levels: 1) ===
+  name: Огненные стрелы -> Огненные стрелы
+  hotkey: TRIGSTR_11767 -> Q
+  rtip: Изучить «Огненные стрелы» [|cffffcc00%d-й уровень|r] -> Изучить «Огненные стрелы» [|cffffcc00%d-й уровень|r]
+  rubt: "Добавляет к атакам урон от огня. |n|n|cffffcc001-й уровень:|r +<AHfa,DataA1> к урону. |n|cffffcc002-й уровень:|r +<AHfa,DataA2> к урону. |n|cffffcc003-й уровень:|r +<AHfa,DataA3> к урону." -> "Добавляет к атакам урон от огня. |n|n|cffffcc001-й уровень:|r +<AHfa,DataA1> к урону. |n|cffffcc002-й уровень:|r +<AHfa,DataA2> к урону. |n|cffffcc003-й уровень:|r +<AHfa,DataA3> к урону."
+  tip1: TRIGSTR_2179 -> Огненные стрелы 
+  ubertip1: TRIGSTR_2178 -> '+10 урона от огня к атакам. Каждый выстрел расходует10 маны.'
+=== Ability A02J (levels: 1) ===
+  name: TRIGSTR_20501 -> |cfffa9696Огненная стрела|r
+  hotkey: TRIGSTR_10731 -> Q
+  tip1: TRIGSTR_20502 -> |cfffa9696Огненная стрела|r
+  ubertip1: TRIGSTR_2259 -> 'Выпускает сгусток огня, оглушающий врага, а также полжигающий его на 9 секунд.'
+=== Ability A00W (levels: 1) ===
+  name: TRIGSTR_19732 -> |cfffa9696Огненная стрела|r
+  hotkey: TRIGSTR_10353 -> Q
+  tip1: TRIGSTR_20498 -> |cfffa9696Огненная стрела|r
+  ubertip1: TRIGSTR_2273 -> 'Выпускает сгусток огня, оглушающий врага, а также поджигающий его.'
+=== Ability A030 (levels: 1) ===
+  name: TRIGSTR_33734 -> |cfffa9696Стрела скверны|r
+  hotkey: TRIGSTR_10737 -> Q
+  tip1: TRIGSTR_33733 -> |cfffa9696Стрела скверны|r
+  ubertip1: TRIGSTR_2345 -> 'Выпускает сгусток скверны, оглушающий врага, а также снижающий броню врагов.'
+=== Ability A02Z (levels: 1) ===
+  name: TRIGSTR_33731 -> |cfffa9696Стрела скверны|r
+  hotkey: TRIGSTR_10735 -> Q
+  tip1: TRIGSTR_33732 -> |cfffa9696Стрела скверны|r
+  ubertip1: TRIGSTR_2336 -> 'Выпускает сгусток скверны, оглушающий врага, а также снижающий броню врагов.'
+=== Ability A02R (levels: 1) ===
+  name: TRIGSTR_32700 -> |cfffa9696Чародейская стрела|r
+  hotkey: TRIGSTR_10732 -> Q
+  tip1: TRIGSTR_32699 -> |cfffa9696Чародейская стрела|r
+  ubertip1: TRIGSTR_2280 -> 'Выпускает сгусток арканы, оглушающий врага, а также замедляющий скорось его ата
+=== Ability A02U (levels: 1) ===
+  name: TRIGSTR_32705 -> |cfffa9696Чародейская стрела|r
+  hotkey: TRIGSTR_10733 -> Q
+  tip1: TRIGSTR_32706 -> |cfffa9696Чародейская стрела|r
+  ubertip1: TRIGSTR_2298 -> 'Выпускает сгусток арканы, оглушающий врага, а также замедляющий скорось его ата
+=== Ability A02D (levels: 1) ===
+  name: TRIGSTR_32692 -> |cfffa9696Передача маны|r
+  hotkey: N -> N
+  rtip: Изучить «Похищение маны» [|cffffcc00%d-й уровень|r] -> Изучить «Похищение маны» [|cffffcc00%d-й уровень|r]
+  rubt: "Вытягивает ману из врага или передает ману союзнику. |n|nПри этом запас маны мага крови может превысить максимальный, но неиспользованные излишки быстро исчезают. |nВремя действия: <AHdr,Dur1> сек.|n|n|cffffcc001-й уровень:|r <AHdr,DataB1> маны/сек. |n|cffffcc002-й уровень:|r <AHdr,DataB2> маны/сек. |n|cffffcc003-й уровень:|r <AHdr,DataB3> маны/сек." -> "Вытягивает ману из врага или передает ману союзнику. |n|nПри этом запас маны мага крови может превысить максимальный, но неиспользованные излишки быстро исчезают. |nВремя действия: <AHdr,Dur1> сек.|n|n|cffffcc001-й уровень:|r <AHdr,DataB1> маны/сек. |n|cffffcc002-й уровень:|r <AHdr,DataB2> маны/сек. |n|cffffcc003-й уровень:|r <AHdr,DataB3> маны/сек."
+  tip1: TRIGSTR_32693 -> |cfffa9696Передача маны|r
+  ubertip1: TRIGSTR_32694 -> 'Вытягивает из врага 15 маны/сек.'
+=== Ability A02E (levels: 1) ===
+  name: TRIGSTR_32695 -> |cfffa9696Восполнение маны|r
+  hotkey: TRIGSTR_16375 -> Z
+  tip1: TRIGSTR_32696 -> |cfffa9696Восполнение маны|r
+  ubertip1: Восполняет ману союзника. -> 'Восполняет ману союзника.'
+=== Ability A02N (levels: 1) ===
+  name: TRIGSTR_38118 -> |cfffa9696Поджигание|r
+  hotkey: None -> None
+  tip1: TRIGSTR_38117 -> |cfffa9696Поджигание|r
+  ubertip1: TRIGSTR_2234 -> 'С вероятность 10% атака подожжет противника на 10 секунд с уроном -7здоровья в 
+=== Ability A02O (levels: 1) ===
+  name: TRIGSTR_2050 -> |cfffa9696Поджог|r
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability A02Q (levels: 1) ===
+  name: TRIGSTR_32698 -> |cfffa9696Поджог для баффа|r
+  hotkey: None -> None
+  rtip: TRIGSTR_2252 -> Поджог для баффа
+  rubt: TRIGSTR_2253 -> Поджог для баффа
+  tip1: TRIGSTR_2255 -> Поджог для баффа
+  ubertip1: TRIGSTR_2254 -> 'Поджог для баффа'
+=== Ability A02S (levels: 1) ===
+  name: TRIGSTR_2487 -> |cfffa9696Искажение|r
+  hotkey: None -> None
+  tip1: TRIGSTR_2486 -> |cfffa9696Искажение|r
+  ubertip1: TRIGSTR_20057 -> 'С вероятность 10% атака снизит скорость атаки врага на 10%.'
+=== Ability A02T (levels: 1) ===
+  name: TRIGSTR_32701 -> |cfffa9696Искажение эффект|r
+  hotkey: None -> None
+  rtip: Изучить «Ауру выносливости» [|cffffcc00%d-й уровень|r] -> Изучить «Ауру выносливости» [|cffffcc00%d-й уровень|r]
+  rubt: "Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки. |n|cffffcc003-й уровень:|r +<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки." -> "Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки. |n|cffffcc003-й уровень:|r +<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки."
+  tip1: TRIGSTR_2289 -> Искажение эффект
+  ubertip1: TRIGSTR_5727 -> '-15% скорость атаки'
+=== Ability A02X (levels: 1) ===
+  name: TRIGSTR_2834 -> |cfffa9696Порча|r
+  hotkey: None -> None
+  tip1: TRIGSTR_2811 -> |cfffa9696Порча|r
+  ubertip1: TRIGSTR_2321 -> 'С вероятность 10% атака снизит броню противника на 2 ед.'
+=== Ability A02Y (levels: 1) ===
+  name: TRIGSTR_2988 -> |cfffa9696Кровавый союз|r
+  hotkey: TRIGSTR_10453 -> W
+  tip1: TRIGSTR_2987 -> |cfffa9696Кровавый союз|r
+  ubertip1: TRIGSTR_27538 -> 'Увеличивает максимальное здоровье цели на 130 ед.'
+=== Ability A032 (levels: 1) ===
+  name: TRIGSTR_38024 -> |cfffa9696Призвать гончего|r
+  hotkey: TRIGSTR_14274 -> E
+  tip1: TRIGSTR_38023 -> |cfffa9696Призвать гончего|r
+  ubertip1: TRIGSTR_789 -> 'Призывает демона-гончего на 3 минуты. Применяется на врага.'
+=== Ability A035 (levels: 1) ===
+  name: TRIGSTR_36797 -> |cfffa9696Сфера разрушения|r
+  hotkey: TRIGSTR_10738 -> Q
+  tip1: TRIGSTR_40560 -> |cfffa9696Сфера разрушения|r
+  ubertip1: TRIGSTR_39034 -> '+20 к урону от атак сфинкса. Атаки наносят урон по области.'
+=== Ability A0IQ (levels: 1) ===
+  name: TRIGSTR_27193 -> |cffffdcb4Обозначить столицу|r
+  hotkey: TRIGSTR_11265 -> X
+  tip1: TRIGSTR_27969 -> |cffffdcb4Обозначить столицу|r
+  ubertip1: TRIGSTR_27970 -> 'Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели сто
+=== Ability A0LI (levels: 1) ===
+  name: TRIGSTR_2888 -> Обмен |cffffff00Золота |rна |cff00ff00Дерево|r
+  hotkey: TRIGSTR_4247 -> S
+  tip1: TRIGSTR_3692 -> Обмен |cffffff00Золота |rна |cff00ff00Дерево|r
+  ubertip1: TRIGSTR_20630 -> 'Отнимает у игрока|cffffd700 500 золота|r, но добавляет |cff228722100 дерева|r.'
+=== Ability A0LJ (levels: 1) ===
+  name: TRIGSTR_12857 -> Обмен |cff00ff00Дерева |rна |cffffff00Золото|r
+  hotkey: TRIGSTR_4259 -> A
+  tip1: TRIGSTR_12886 -> Обмен |cff00ff00Дерева |rна |cffffff00Золото|r
+  ubertip1: TRIGSTR_20631 -> 'Отнимает у игрока |cff228722500 дерева|r, но добавляет |cffffd700100 золота|r.'
+=== Ability A0SY (levels: 1) ===
+  name: TRIGSTR_38109 -> |cfffa9696Магический страж|r
+  hotkey: None -> None
+  tip1: TRIGSTR_38110 -> |cfffa9696Магический страж|r
+  ubertip1: Обнаруживает находящиеся рядом невидимые войска. -> 'Обнаруживает находящиеся рядом невидимые войска.'
+=== Ability A16H (levels: 1) ===
+  name: Бонус к здоровью -> Бонус к здоровью
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability A1LW (levels: 1) ===
+  name: TRIGSTR_3201 -> |cfffa9696Удар скверны|r
+  hotkey: TRIGSTR_28788 -> W
+  tip1: TRIGSTR_36886 -> |cfffa9696Удар скверны|r
+  ubertip1: TRIGSTR_38963 -> 'Поражает молнией до 3 врагов в секторе перед собой, нанося 35 урона. C 6% шансо
+=== Ability A1QZ (levels: 1) ===
+  name: TRIGSTR_31861 -> |cfffa9696Бонус к здоровью
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability A1R0 (levels: 1) ===
+  name: TRIGSTR_32104 -> |cfffa9696Бонус к скорости атаки
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability A1R1 (levels: 1) ===
+  name: TRIGSTR_32193 -> |cfffa9696Бонус к броне|r
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability Afbt (levels: 1) ===
+  name: Противодействие -> Противодействие
+  hotkey: None -> None
+  tip1: Противодействие -> Противодействие
+  ubertip1: "Каждая атака уничтожает <Afbt,DataA1> маны цели и наносит ей столько же дополнительного урона.|n|nПризванные цели получают на <Afbt,DataE1> больше урона от атак этой башни." -> '"Каждая атака уничтожает <Afbt,DataA1> маны цели и наносит ей столько же дополн
+=== Ability AHta (levels: 1) ===
+  name: Обнаружение -> Обнаружение
+  hotkey: TRIGSTR_16254 -> Z
+  tip1: Обнаружение -> Обнаружение
+  ubertip1: "Открывает обзор в указанной области. |nОбнаруживает невидимые войска. |nВремя действия: <AHta,Dur1> сек." -> '"Открывает обзор в указанной области. |nОбнаруживает невидимые войска. |nВремя 
+=== Ability Arlm (levels: 1) ===
+  name: Вернуть древесину -> Вернуть древесину
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability Argl (levels: 1) ===
+  name: Вернуть золото и древесину -> Вернуть золото и древесину
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability B00F (levels: 1) ===
+  name: None -> None
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability R01V (levels: 1) ===
+  name: None -> None
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability R0KF (levels: 1) ===
+  name: None -> None
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability R005 (levels: 1) ===
+  name: None -> None
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability R006 (levels: 1) ===
+  name: None -> None
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability R007 (levels: 1) ===
+  name: None -> None
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability R002 (levels: 1) ===
+  name: None -> None
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability R003 (levels: 1) ===
+  name: None -> None
+  hotkey: None -> None
+  tip1: None -> None
+  ubertip1: None -> None
+=== Ability A1LX (levels: 4) ===
+  name: TRIGSTR_39045 -> |cfffa9696Сильный удар|r
+  hotkey: None -> None
+  rtip: TRIGSTR_39044 -> Изучить «|cfffa9696Сильный удар|r» [|cffffcc00%d-й уровень|r]
+  rubt: "Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. На <AHbh,DataC1> больше урона. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. На <AHbh,DataC2> больше урона. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс. На <AHbh,DataC3> больше урона." -> "Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. На <AHbh,DataC1> больше урона. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. На <AHbh,DataC2> больше урона. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс. На <AHbh,DataC3> больше урона."
+  tip1: TRIGSTR_39041 -> |cfffa9696Сильный удар|r [|cffffcc001-й уровень|r]
+  ubertip1: "С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек." -> '"С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и 
+  tip2: TRIGSTR_39042 -> |cfffa9696Сильный удар|r [|cffffcc002-й уровень|r]
+  ubertip2: TRIGSTR_39038 -> 'С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC2> больше урона и о
+  tip3: TRIGSTR_39043 -> |cfffa9696Сильный удар|r [|cffffcc003-й уровень|r]
+  ubertip3: TRIGSTR_39039 -> 'С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC3> больше урона и о
+  tip4: TRIGSTR_39037 -> |cfffa9696Сильный удар|r [|cffffcc004-й уровень|r]
+  ubertip4: TRIGSTR_39040 -> 'С <AHbh,DataA4>%-й вероятностью атака нанесет на <AHbh,DataC4> больше урона и о
+=== Ability A097 (levels: 4) ===
+  name: TRIGSTR_6376 -> |cffe4cfa3Волна исцеления|r
+  hotkey: TRIGSTR_12502 -> Q
+  rtip: TRIGSTR_6377 -> |cffe4cfa3Волна исцеления|r (|cffffffffQ|r)
+  rubt: TRIGSTR_622 -> |cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну священной энергии, восполняющую здоровье выбранной цели и переходящую на ближайших союзников. С каждым переходом сила исцеления уменьшается.|n|n|cffa6afb8Уровень 1:|cffced4da восполняет |cffc8e087130|cffced4da ед. здоровья, до |cffffffff3|cffced4da целей.|n|cffa6afb8Уровень 2:|cffced4da восполняет |cffc8e087215|cffced4da ед. здоровья, до |cffffffff4|cffced4da целей.|n|cffa6afb8Уровень 3:|cffced4da восполняет |cffc8e087300|cffced4da ед. здоровья, до |cffffffff5|cffced4da целей.|n|cffa6afb8Уровень 4:|cffced4da восполняет |cffc8e087420|cffced4da ед. здоровья, до |cffffffff8|cffced4da целей.|r
+  tip1: TRIGSTR_6378 -> |cffe4cfa3Волна исцеления — уровень 1|r (|cffffffffQ|r)
+  ubertip1: TRIGSTR_5862 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Волна энергии восполняет |cffc8e087130|cffced4
+  tip2: TRIGSTR_6379 -> |cffe4cfa3Волна исцеления — уровень 2|r (|cffffffffQ|r)
+  ubertip2: TRIGSTR_5863 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Волна энергии восполняет |cffc8e087215|cffced4
+  tip3: TRIGSTR_6380 -> |cffe4cfa3Волна исцеления — уровень 3|r (|cffffffffQ|r)
+  ubertip3: TRIGSTR_725 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Волна энергии восполняет |cffc8e087300|cffced4
+  tip4: TRIGSTR_6381 -> |cffe4cfa3Волна исцеления — уровень 4|r (|cffffffffQ|r)
+  ubertip4: TRIGSTR_615 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Волна энергии восполняет |cffc8e087420|cffced4
+=== Ability A09C (levels: 4) ===
+  name: TRIGSTR_6438 -> |cffe4cfa3Благословление|r
+  hotkey: TRIGSTR_13034 -> W
+  rtip: TRIGSTR_6507 -> |cffe4cfa3Благословление|r (|cffffffffW|r)
+  rubt: TRIGSTR_825 -> |cffa6afb8СПОСОБНОСТЬ:|cffced4da Окружает союзников благословенным щитом, временно увеличивая их защиту. Время действия — |cffffffff20|cffced4da сек.|n|n|cffa6afb8Уровень 1:|cffced4da |cffc8e087+2|cffced4da к броне.|n|cffa6afb8Уровень 2:|cffced4da |cffc8e087+3|cffced4da к броне.|n|cffa6afb8Уровень 3:|cffced4da |cffc8e087+4|cffced4da к броне.|n|cffa6afb8Уровень 4:|cffced4da |cffc8e087+6|cffced4da к броне.|r
+  tip1: TRIGSTR_6437 -> |cffe4cfa3Благословление — уровень 1|r (|cffffffffW|r)
+  ubertip1: TRIGSTR_11127 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт находящимся рядом союзникам |cffc8e087+2|
+  tip2: TRIGSTR_6440 -> |cffe4cfa3Благословление — уровень 2|r (|cffffffffW|r)
+  ubertip2: TRIGSTR_11207 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт находящимся рядом союзникам |cffc8e087+3|
+  tip3: TRIGSTR_6441 -> |cffe4cfa3Благословление — уровень 3|r (|cffffffffW|r)
+  ubertip3: TRIGSTR_11208 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт находящимся рядом союзникам |cffc8e087+4|
+  tip4: TRIGSTR_6442 -> |cffe4cfa3Благословление — уровень 4|r (|cffffffffW|r)
+  ubertip4: TRIGSTR_11381 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт находящимся рядом союзникам |cffc8e087+6|
+=== Ability A09E (levels: 2) ===
+  name: TRIGSTR_6468 -> |cffe4cfa3Воскрешение|r
+  hotkey: R -> R
+  rtip: TRIGSTR_6469 -> |cffe4cfa3Воскрешение|r (|cffffffffR|r)
+  rubt: TRIGSTR_4368 -> |cffa6afb8СПОСОБНОСТЬ:|cffced4da Возвращает к жизни павших союзных бойцов в указанной области.|n|n|cffa6afb8Уровень 1:|cffced4da воскрешает до |cffffffff12|cffced4da бойцов.|n|cffa6afb8Уровень 2:|cffced4da воскрешает до |cffffffff24|cffced4da бойцов.|r
+  tip1: TRIGSTR_6470 -> |cffe4cfa3Воскрешение — уровень 1|r (|cffffffffR|r)
+  ubertip1: TRIGSTR_4369 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возвращает к жизни до |cffffffff12|cffced4da п
+  tip2: TRIGSTR_6466 -> |cffe4cfa3Воскрешение — уровень 2|r (|cffffffffR|r)
+  ubertip2: TRIGSTR_2581 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возвращает к жизни до |cffffffff24|cffced4da п
+=== Ability A09D (levels: 4) ===
+  name: TRIGSTR_6457 -> |cffe4cfa3Аура Воеводы|r
+  hotkey: None -> None
+  rtip: TRIGSTR_6460 -> |cffe4cfa3Аура Воеводы|r (|cffffffffE|r)
+  rubt: TRIGSTR_828 -> |cffa6afb8СПОСОБНОСТЬ:|cffced4da Постоянная аура паладина, увеличивающая урон от атак находящихся рядом союзных бойцов.|n|n|cffa6afb8Уровень 1:|cffced4da |cffc8e087+10%|cffced4da к урону.|n|cffa6afb8Уровень 2:|cffced4da |cffc8e087+15%|cffced4da к урону.|n|cffa6afb8Уровень 3:|cffced4da |cffc8e087+20%|cffced4da к урону.|n|cffa6afb8Уровень 4:|cffced4da |cffc8e087+25%|cffced4da к урону.|r
+  tip1: TRIGSTR_6458 -> |cffe4cfa3Аура Воеводы — уровень 1|r
+  ubertip1: TRIGSTR_2579 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон от атак ближайших союзников на |
+  tip2: TRIGSTR_6461 -> |cffe4cfa3Аура Воеводы — уровень 2|r
+  ubertip2: TRIGSTR_829 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон от атак ближайших союзников на |
+  tip3: TRIGSTR_6462 -> |cffe4cfa3Аура Воеводы — уровень 3|r
+  ubertip3: TRIGSTR_831 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон от атак ближайших союзников на |
+  tip4: TRIGSTR_6471 -> |cffe4cfa3Аура Воеводы — уровень 4|r
+  ubertip4: TRIGSTR_2577 -> '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон от атак ближайших союзников на |
+=== Ability A0DJ (levels: 2) ===
+  name: TRIGSTR_38106 -> |cfffa9696Арканитовые Стражи|r
+  hotkey: TRIGSTR_13491 -> R
+  rtip: TRIGSTR_38103 -> Изучить |cfffa9696Арканитовые Стражи|r [|cffffcc00%d-й уровень|r]
+  rubt: TRIGSTR_9720 -> Призывает стража.|nВремя существования: <ANsq,Dur1> сек. |n|n|cffffcc001-й уровень:|r <nqb1,realHP> здоровья, <nqb1,mindmg1>-<nqb1,maxdmg1> урона. |n|cffffcc002-й уровень:|r <nqb2,realHP> здоровья, <nqb2,mindmg1>-<nqb2,maxdmg1> урона и «Бешенство». |n|cffffcc003-й уровень:|r <nqb3,realHP> здоровья, <nqb3,mindmg1>-<nqb3,maxdmg1> урона, урон по области и «Бешенство».
+  tip1: TRIGSTR_38104 -> |cfffa9696Арканитовые Стражи|r [|cffffcc001-й уровень|r]
+  ubertip1: TRIGSTR_26719 -> 'Призывает арканитовых стражей с большим здоровьем и манащитом.'
+  tip2: TRIGSTR_38105 -> |cfffa9696Арканитовые Стражи|r [|cffffcc002-й уровень|r]
+  ubertip2: TRIGSTR_26720 -> 'Призывает арканитовых стражей с большим здоровьем и манащитом.'
+=== Ability A0DI (levels: 4) ===
+  name: TRIGSTR_38100 -> |cfffa9696Огненная стрела|r
+  hotkey: TRIGSTR_13936 -> Q
+  rtip: TRIGSTR_38102 -> Изучить «|cfffa9696Огненная стрела|r» [%d-й уровень]
+  rubt: TRIGSTR_25609 -> Выпускает сгусток огня, оглушающий врага.
+  tip1: TRIGSTR_38101 -> |cfffa9696Огненная стрела|r
+  ubertip1: "Выпускает сгусток огня, оглушающий врага." -> '"Выпускает сгусток огня, оглушающий врага."'
+  tip2: TRIGSTR_38097 -> |cfffa9696Огненная стрела|r
+  ubertip2: TRIGSTR_6574 -> 'Выпускает сгусток огня, оглушающий врага.'
+  tip3: TRIGSTR_38098 -> |cfffa9696Огненная стрела|r
+  ubertip3: TRIGSTR_6575 -> 'Выпускает сгусток огня, оглушающий врага.'
+  tip4: TRIGSTR_38099 -> |cfffa9696Огненная стрела|r
+  ubertip4: TRIGSTR_6576 -> 'Выпускает сгусток огня, оглушающий врага.'
+=== Ability A15O (levels: 4) ===
+  name: TRIGSTR_38124 -> |cfffa9696Огненный ливень|r
+  hotkey: TRIGSTR_22196 -> W
+  rtip: TRIGSTR_38125 -> Изучить «|cfffa9696Огненный ливень|r» [|cffffcc00%d-й уровень|r]
+  rubt: "Обрушивает на указанную область волны огня. Каждая волна наносит мгновенный, а затем периодический урон в течение <ANrf,Dur1> сек. |n|n|cffffcc001-й уровень:|r <ANrf,DataA1> волн, <ANrf,DataB1> урона мгновенно и <ANrf,DataE1> урона/сек. |n|cffffcc002-й уровень:|r <ANrf,DataA2> волн, <ANrf,DataB2> урона мгновенно и <ANrf,DataE2> урона/сек. |n|cffffcc003-й уровень:|r <ANrf,DataA3> волн, <ANrf,DataB3> урона мгновенно и <ANrf,DataE3> урона/сек." -> "Обрушивает на указанную область волны огня. Каждая волна наносит мгновенный, а затем периодический урон в течение <ANrf,Dur1> сек. |n|n|cffffcc001-й уровень:|r <ANrf,DataA1> волн, <ANrf,DataB1> урона мгновенно и <ANrf,DataE1> урона/сек. |n|cffffcc002-й уровень:|r <ANrf,DataA2> волн, <ANrf,DataB2> урона мгновенно и <ANrf,DataE2> урона/сек. |n|cffffcc003-й уровень:|r <ANrf,DataA3> волн, <ANrf,DataB3> урона мгновенно и <ANrf,DataE3> урона/сек."
+  tip1: TRIGSTR_38126 -> |cfffa9696Огненный ливень|r [|cffffcc001-й уровень|r]
+  ubertip1: "Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB1> урона мгновенно и <ANrf,DataE1> урона/сек. в течение <ANrf,Dur1> сек. |nВолн – <ANrf,DataA1>." -> '"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB1>
+  tip2: TRIGSTR_38127 -> |cfffa9696Огненный ливень|r [|cffffcc002-й уровень|r]
+  ubertip2: "Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB2> урона мгновенно и <ANrf,DataE2> урона/сек. в течение <ANrf,Dur2> сек. |nВолн – <ANrf,DataA2>." -> '"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB2>
+  tip3: TRIGSTR_38128 -> |cfffa9696Огненный ливень|r [|cffffcc003-й уровень|r]
+  ubertip3: "Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB3> урона мгновенно и <ANrf,DataE3> урона/сек. в течение <ANrf,Dur3> сек. |nВолн – <ANrf,DataA3>." -> '"Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB3>
+  tip4: TRIGSTR_38123 -> |cfffa9696Огненный ливень|r [|cffffcc004-й уровень|r]
+  ubertip4: TRIGSTR_26722 -> 'Обрушивает на указанную область волны огня. Каждая волна наносит <ANrf,DataB4> 
+=== Ability A0DH (levels: 4) ===
+  name: TRIGSTR_3066 -> |cfffa9696Аура Роммата|r
+  hotkey: None -> None
+  rtip: TRIGSTR_38096 -> Изучить «|cfffa9696Аура Роммата|r» [|cffffcc00%d-й уровень|r]
+  rubt: TRIGSTR_7477 -> Ускоряет регенерацию маны находящихся рядом союзников.
+  tip1: TRIGSTR_38092 -> |cfffa9696Аура Роммата|r [|cffffcc001-й уровень|r]
+  ubertip1: "Ускоряет регенерацию маны находящихся рядом союзников." -> '"Ускоряет регенерацию маны находящихся рядом союзников."'
+  tip2: TRIGSTR_38093 -> |cfffa9696Аура Роммата|r [|cffffcc002-й уровень|r]
+  ubertip2: "Ускоряет регенерацию маны находящихся рядом союзников." -> '"Ускоряет регенерацию маны находящихся рядом союзников."'
+  tip3: TRIGSTR_38094 -> |cfffa9696Аура Роммата|r [|cffffcc003-й уровень|r]
+  ubertip3: "Ускоряет регенерацию маны находящихся рядом союзников." -> '"Ускоряет регенерацию маны находящихся рядом союзников."'
+  tip4: TRIGSTR_38095 -> |cfffa9696Аура Роммата|r [|cffffcc004-й уровень|r]
+  ubertip4: TRIGSTR_6589 -> 'Ускоряет регенерацию маны находящихся рядом союзников.'
+=== Ability A1KW (levels: 4) ===
+  name: TRIGSTR_37985 -> |cfffa9696Волна исцеления|r
+  hotkey: TRIGSTR_28365 -> Q
+  rtip: TRIGSTR_37830 -> Изучить «|cfffa9696Волна исцеления|r» [|cffffcc00%d-й уровень|r]
+  rubt: TRIGSTR_36614 -> Создает волну энергии, которая восполняет здоровье цели и переходит к находящимся рядом союзникам. Эффективность снижается с каждым переходом. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AOhw,DataA1> здоровья, до <AOhw,DataB1> целей.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<AOhw,DataA2> здоровья, до <AOhw,DataB2> целей.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AOhw,DataA3> здоровья, до <AOhw,DataB3> целей.|r |n|cffffcc004-й уровень:|r |cffb4dcdc385 здоровья, до 20 целей.|r
+  tip1: TRIGSTR_35540 -> |cfffa9696Волна исцеления|r|r [|cffffcc001-й уровень|r]
+  ubertip1: TRIGSTR_36615 -> 'Создает волну энергии, которая восполняет здоровье цели и переходит к находящим
+  tip2: TRIGSTR_35541 -> |cfffa9696Волна исцеления|r|r [|cffffcc002-й уровень|r]
+  ubertip2: TRIGSTR_36659 -> 'Создает волну энергии, которая восполняет здоровье цели и переходит к находящим
+  tip3: TRIGSTR_36988 -> |cfffa9696Волна исцеления|r|r [|cffffcc003-й уровень|r]
+  ubertip3: TRIGSTR_36660 -> 'Создает волну энергии, которая восполняет здоровье цели и переходит к находящим
+  tip4: TRIGSTR_24378 -> |cfffa9696Волна исцеления|r|r [|cffffcc004-й уровень|r]
+  ubertip4: TRIGSTR_36613 -> 'Создает волну энергии, которая восполняет здоровье цели и переходит к находящим
+=== Ability A0DE (levels: 4) ===
+  name: TRIGSTR_38066 -> |cfffa9696Аура Лиандин|r
+  hotkey: None -> None
+  rtip: TRIGSTR_38067 -> Изучить «|cfffa9696Аура Лиандин|r» [|cffffcc00%d-й уровень|r]
+  rubt: "Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья. |n|cffffcc002-й уровень:|r +<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья. |n|cffffcc003-й уровень:|r +<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья." -> "Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья. |n|cffffcc002-й уровень:|r +<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья. |n|cffffcc003-й уровень:|r +<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья."
+  tip1: TRIGSTR_38068 -> |cfffa9696Аура Лиандин|r [|cffffcc001-й уровень|r]
+  ubertip1: TRIGSTR_38072 -> '+<A0DE,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к
+  tip2: TRIGSTR_38069 -> |cfffa9696Аура Лиандин|r [|cffffcc002-й уровень|r]
+  ubertip2: TRIGSTR_38073 -> '+<A0DE,DataA2,%>% к скорости передвижения находящихся рядом союзников и бонус к
+  tip3: TRIGSTR_38070 -> |cfffa9696Аура Лиандин|r [|cffffcc003-й уровень|r]
+  ubertip3: TRIGSTR_38074 -> '+<A0DE,DataA3,%>% к скорости передвижения находящихся рядом союзников и бонус к
+  tip4: TRIGSTR_38071 -> |cfffa9696Аура Лиандин|r [|cffffcc004-й уровень|r]
+  ubertip4: TRIGSTR_38075 -> '+<A0DE,DataA4,%>% к скорости передвижения находящихся рядом союзников и бонус к
+=== Ability A1KX (levels: 4) ===
+  name: TRIGSTR_38665 -> |cfffa9696Солнечный удар|r
+  hotkey: TRIGSTR_28548 -> W
+  rtip: TRIGSTR_38673 -> |cfffa9696Солнечный удар|r
+  rubt: TRIGSTR_38674 -> Наносит урон врагам в области и исцеляет союзников.
+  tip1: TRIGSTR_38663 -> |cfffa9696Солнечный удар|r
+  ubertip1: TRIGSTR_38664 -> 'Наносит урон врагам в области и исцеляет союзников.'
+  tip2: TRIGSTR_38667 -> |cfffa9696Солнечный удар|r
+  ubertip2: TRIGSTR_38670 -> 'Наносит урон врагам в области и исцеляет союзников.'
+  tip3: TRIGSTR_38668 -> |cfffa9696Солнечный удар|r
+  ubertip3: TRIGSTR_38671 -> 'Наносит урон врагам в области и исцеляет союзников.'
+  tip4: TRIGSTR_38669 -> |cfffa9696Солнечный удар|r
+  ubertip4: TRIGSTR_38672 -> 'Наносит урон врагам в области и исцеляет союзников.'
+=== Ability A0DC (levels: 4) ===
+  name: TRIGSTR_38056 -> |cfffa9696Критический удар|r
+  hotkey: None -> None
+  rtip: TRIGSTR_38057 -> Изучить «|cfffa9696Критический удар|r» [|cffffcc00%d-й уровень|r]
+  rubt: "Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон." -> "Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон."
+  tip1: TRIGSTR_38058 -> |cfffa9696Критический удар|r [|cffffcc001-й уровень|r]
+  ubertip1: TRIGSTR_27681 -> 'Дает <A0DC,DataA1>%-й шанс нанести <A0DC,DataB1>-кратный урон при атаке.'
+  tip2: TRIGSTR_38059 -> |cfffa9696Критический удар|r [|cffffcc002-й уровень|r]
+  ubertip2: TRIGSTR_27682 -> 'Дает <A0DC,DataA2>%-й шанс нанести <A0DC,DataB2>-кратный урон при атаке.'
+  tip3: TRIGSTR_38060 -> |cfffa9696Критический удар|r [|cffffcc003-й уровень|r]
+  ubertip3: TRIGSTR_27683 -> 'Дает <A0DC,DataA3>%-й шанс нанести <A0DC,DataB3>-кратный урон при атаке.'
+  tip4: TRIGSTR_38055 -> |cfffa9696Критический удар|r [|cffffcc004-й уровень|r]
+  ubertip4: TRIGSTR_27680 -> 'Дает <A0DC,DataA4>%-й шанс нанести <A0DC,DataB4>-кратный урон при атаке.'
+=== Ability AEbl (levels: 4) ===
+  name: TRIGSTR_25764 -> Jump
+  hotkey: TRIGSTR_9157 -> W
+  rtip: TRIGSTR_25765 -> Learn "Blink" [|cffffcc00%d level|r]
+  rubt: TRIGSTR_25763 -> Transports the Hero a short distance, allowing you to quickly enter and exit battle. |n|n|cffffcc001st level:|r <AEbl,Cool1> sec. restoration, <AEbl,Cost1> mana. |n|cffffcc001st level:|r <AEbl,Cool2> sec. restoration, <AEbl,Cost2> mana. |n|cffffcc003rd level:|r <AEbl,Cool3> sec. recovery, <AEbl,Cost3> mana.|n|cffffcc004th level:|r 11 sec. recovery, 20 mana.
+  tip1: "Скачок [|cffffcc001-й уровень|r]" -> "Скачок [|cffffcc001-й уровень|r]"
+  ubertip1: "Переносит на короткое расстояние, позволяя мгновенно вступить в бой или выйти из него." -> '"Переносит на короткое расстояние, позволяя мгновенно вступить в бой или выйти 
+  tip2: "Скачок [|cffffcc002-й уровень|r]" -> "Скачок [|cffffcc002-й уровень|r]"
+  ubertip2: "Переносит на короткое расстояние, позволяя мгновенно вступить в бой или выйти из него." -> '"Переносит на короткое расстояние, позволяя мгновенно вступить в бой или выйти 
+  tip3: "Скачок [|cffffcc003-й уровень|r]" -> "Скачок [|cffffcc003-й уровень|r]"
+  ubertip3: "Переносит на короткое расстояние, позволяя мгновенно вступить в бой или выйти из него." -> '"Переносит на короткое расстояние, позволяя мгновенно вступить в бой или выйти 
+  tip4: TRIGSTR_9615 -> Скачок [|cffffcc004-й уровень|r]
+  ubertip4: TRIGSTR_9616 -> 'Переносит на короткое расстояние, позволяя мгновенно вступить в бой или выйти и
+=== Ability A0DB (levels: 4) ===
+  name: Вихрь клинков -> Вихрь клинков
+  hotkey: TRIGSTR_13921 -> Q
+  rtip: Изучить «Вихрь клинков» -> Изучить «Вихрь клинков»
+  rubt: TRIGSTR_7248 -> Окружает Лортемара вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам.
+  tip1: Вихрь клинков -> Вихрь клинков
+  ubertip1: TRIGSTR_27676 -> 'Окружает мастера вихрем разрушительной силы, который дает невосприимчивость к м
+  tip2: TRIGSTR_9618 -> Вихрь клинков
+  ubertip2: TRIGSTR_27677 -> 'Окружает мастера вихрем разрушительной силы, который дает невосприимчивость к м
+  tip3: TRIGSTR_9619 -> Вихрь клинков
+  ubertip3: TRIGSTR_27678 -> 'Окружает мастера вихрем разрушительной силы, который дает невосприимчивость к м
+  tip4: TRIGSTR_23515 -> Вихрь клинков
+  ubertip4: TRIGSTR_27679 -> 'Окружает мастера вихрем разрушительной силы, который дает невосприимчивость к м
+=== Ability A08Q (levels: 4) ===
+  name: TRIGSTR_38027 -> |cfffa9696Огненный столб|r
+  hotkey: TRIGSTR_12396 -> Q
+  rtip: TRIGSTR_38028 -> Изучить «|cfffa9696Огненный столб|r» [|cffffcc00%d-й уровень|r]
+  rubt: "Создает огненный столб, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r 45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек. |n|cffffcc002-й уровень:|r 80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек. |n|cffffcc003-й уровень:|r 110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек." -> "Создает огненный столб, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r 45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек. |n|cffffcc002-й уровень:|r 80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек. |n|cffffcc003-й уровень:|r 110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек."
+  tip1: TRIGSTR_38029 -> |cfffa9696Огненный столб|r [|cffffcc001-й уровень|r]
+  ubertip1: TRIGSTR_6070 -> 'Создает огненный столб, наносящий наземным войскам в указанной области урон в т
+  tip2: TRIGSTR_38030 -> |cfffa9696Огненный столб|r [|cffffcc002-й уровень|r]
+  ubertip2: TRIGSTR_6071 -> 'Создает огненный столб, наносящий наземным войскам в указанной области урон в т
+  tip3: TRIGSTR_38031 -> |cfffa9696Огненный столб|r [|cffffcc003-й уровень|r]
+  ubertip3: TRIGSTR_6072 -> 'Создает огненный столб, наносящий наземным войскам в указанной области урон в т
+  tip4: TRIGSTR_38026 -> |cfffa9696Огненный столб|r [|cffffcc004-й уровень|r]
+  ubertip4: TRIGSTR_6068 -> 'Создает огненный столб, наносящий наземным войскам в указанной области урон в т
+=== Ability A08V (levels: 4) ===
+  name: TRIGSTR_38053 -> |cfffa9696Угольки|r
+  hotkey: TRIGSTR_14566 -> E
+  rtip: TRIGSTR_38047 -> Изучить «|cfffa9696Угольки|r» [|cffffcc00%d-й уровень|r]
+  rubt: TRIGSTR_38048 -> Обстреливает указанную область маленькими угольками, оглушая находящихся рядом наземных врагов на некоторое время и нанося им урон.
+  tip1: TRIGSTR_38049 -> |cfffa9696Угольки|r [|cffffcc001-й уровень|r]
+  ubertip1: "Обстреливает указанную область ракетами, нанося до 45 урона находящимся рядом наземным врагам и оглушая их на <ANcs,Dur1> сек. Также поражает механических существ и здания." -> '"Обстреливает указанную область ракетами, нанося до 45 урона находящимся рядом 
+  tip2: TRIGSTR_38050 -> |cfffa9696Угольки|r [|cffffcc002-й уровень|r]
+  ubertip2: TRIGSTR_6100 -> 'Обстреливает указанную область ракетами, нанося до 35 урона находящимся рядом н
+  tip3: TRIGSTR_38051 -> |cfffa9696Угольки|r [|cffffcc003-й уровень|r]
+  ubertip3: TRIGSTR_6101 -> 'Обстреливает указанную область ракетами, нанося до 35 урона находящимся рядом н
+  tip4: TRIGSTR_38052 -> |cfffa9696Угольки|r [|cffffcc004-й уровень|r]
+  ubertip4: TRIGSTR_6102 -> 'Обстреливает указанную область ракетами, нанося до 35 урона находящимся рядом н
+=== Ability A08S (levels: 1) ===
+  name: TRIGSTR_38039 -> |cfffa9696Ал'Ар|r
+  hotkey: TRIGSTR_11368 -> R
+  rtip: TRIGSTR_38040 -> Изучить «|cfffa9696Ал'Ар|r»
+  rubt: TRIGSTR_38041 -> Призывает грозного феникса, наносящего урон себе и находящимся рядом врагам. Феникс невосприимчив к магии и владеет «Устойчивой кожей», а в момент гибели откладывает яйцо, из которого вылупляется новый феникс.
+  tip1: TRIGSTR_39429 -> |cfffa9696Ал'Ар|r
+  ubertip1: TRIGSTR_38042 -> 'Призывает грозного феникса, наносящего урон себе и находящимся рядом врагам. Фе
+=== Ability A08U (levels: 1) ===
+  name: TRIGSTR_38044 -> |cfffa9696Огромная огненная глыба|r
+  hotkey: TRIGSTR_8013 -> D
+  rtip: TRIGSTR_38045 -> Изучить |cfffa9696Огромная огненная глыба|r
+  rubt: TRIGSTR_6116 -> Выпускает сгусток огня, оглушающий врага. Летит медленно, но бьет сильно.
+  tip1: TRIGSTR_38046 -> |cfffa9696Огромная огненная глыба|r
+  ubertip1: TRIGSTR_6093 -> 'Выпускает сгусток огня, оглушающий врага. Летит медленно, но бьет сильно.'

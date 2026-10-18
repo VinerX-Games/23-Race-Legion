@@ -1,0 +1,555 @@
+{
+  "scope": "Ульдуар (внешний), шесть общих команд/аур и два динамических показателя дохода всех пяти уровней",
+  "objects_before": [
+    {
+      "command": "get-objects-bulk",
+      "count": 8,
+      "map": "F:\\Gemini_23Race\\map.w3x",
+      "missing": [],
+      "objects": [
+        {
+          "fields": {
+            "area1": "1000.000000",
+            "code": "AOfs",
+            "cool1": "30.000000",
+            "dataa1": "3",
+            "datab1": "",
+            "dataf1": "",
+            "dur1": "50.000000",
+            "hotkey": "TRIGSTR_16930",
+            "levels": "1",
+            "name": "TRIGSTR_12216",
+            "tip1": "TRIGSTR_23303",
+            "tip2": "\"Дальнее зрение [|cffffcc002-й уровень|r]\"",
+            "tip3": "\"Дальнее зрение [|cffffcc003-й уровень|r]\"",
+            "tip4": "",
+            "tip5": "",
+            "ubertip1": "\"Открывает обзор в указанной области на <AOfs,Dur1> сек. Обнаруживает невидимые войска.\"",
+            "ubertip2": "",
+            "ubertip3": "",
+            "ubertip4": "",
+            "ubertip5": ""
+          },
+          "id": "A0MK",
+          "name": "Разведка"
+        },
+        {
+          "fields": {
+            "area1": "",
+            "code": "AAns",
+            "cool1": "0",
+            "dataa1": "600",
+            "datab1": "900",
+            "dataf1": "1",
+            "dur1": "0",
+            "hotkey": "TRIGSTR_12045",
+            "levels": "1",
+            "name": "TRIGSTR_17283",
+            "tip1": "TRIGSTR_17284",
+            "tip2": "",
+            "tip3": "",
+            "tip4": "",
+            "tip5": "",
+            "ubertip1": "TRIGSTR_8068",
+            "ubertip2": "",
+            "ubertip3": "",
+            "ubertip4": "",
+            "ubertip5": ""
+          },
+          "id": "A0B0",
+          "name": "|cffc8e6ffУкрепить Город|r"
+        },
+        {
+          "fields": {
+            "area1": "",
+            "code": "AAns",
+            "cool1": "0",
+            "dataa1": "900",
+            "datab1": "500",
+            "dataf1": "1",
+            "dur1": "0",
+            "hotkey": "TRIGSTR_13637",
+            "levels": "1",
+            "name": "TRIGSTR_17285",
+            "tip1": "TRIGSTR_17287",
+            "tip2": "",
+            "tip3": "",
+            "tip4": "",
+            "tip5": "",
+            "ubertip1": "TRIGSTR_17286",
+            "ubertip2": "",
+            "ubertip3": "",
+            "ubertip4": "",
+            "ubertip5": ""
+          },
+          "id": "A0B1",
+          "name": "|cffc8e6ffНаладить Производство|r"
+        },
+        {
+          "fields": {
+            "area1": "",
+            "code": "AAns",
+            "cool1": "0",
+            "dataa1": "600",
+            "datab1": "900",
+            "dataf1": "1",
+            "dur1": "0",
+            "hotkey": "TRIGSTR_15027",
+            "levels": "1",
+            "name": "TRIGSTR_17288",
+            "tip1": "TRIGSTR_17290",
+            "tip2": "",
+            "tip3": "",
+            "tip4": "",
+            "tip5": "",
+            "ubertip1": "TRIGSTR_17289",
+            "ubertip2": "",
+            "ubertip3": "",
+            "ubertip4": "",
+            "ubertip5": ""
+          },
+          "id": "A0B2",
+          "name": "|cffc8e6ffУвеличить Размер Города|r"
+        },
+        {
+          "fields": {
+            "area1": "",
+            "code": "AAns",
+            "cool1": "0",
+            "dataa1": "1250",
+            "datab1": "800",
+            "dataf1": "1",
+            "dur1": "0",
+            "hotkey": "TRIGSTR_13122",
+            "levels": "1",
+            "name": "TRIGSTR_17280",
+            "tip1": "TRIGSTR_17282",
+            "tip2": "",
+            "tip3": "",
+            "tip4": "",
+            "tip5": "",
+            "ubertip1": "TRIGSTR_17281",
+            "ubertip2": "",
+            "ubertip3": "",
+            "ubertip4": "",
+            "ubertip5": ""
+          },
+          "id": "A0AZ",
+          "name": "|cffc8e6ffУвеличить Сбор Дани|r"
+        },
+        {
+          "fields": {
+            "area1": "900",
+            "code": "AHad",
+            "cool1": "0",
+            "dataa1": "0.000000",
+            "datab1": "0",
+            "dataf1": "",
+            "dur1": "0",
+            "hotkey": "",
+            "levels": "1",
+            "name": "TRIGSTR_7394",
+            "tip1": "",
+            "tip2": "\"Аура благочестия [|cffffcc002-й уровень|r]\"",
+            "tip3": "\"Аура благочестия [|cffffcc003-й уровень|r]\"",
+            "tip4": "",
+            "tip5": "",
+            "ubertip1": "",
+            "ubertip2": "\"+<AHad,DataA2,.> к броне находящихся рядом союзников.\"",
+            "ubertip3": "\"+<AHad,DataA3,.> к броне находящихся рядом союзников.\"",
+            "ubertip4": "",
+            "ubertip5": ""
+          },
+          "id": "AHad",
+          "name": "Поселение"
+        },
+        {
+          "fields": {
+            "area1": "",
+            "code": "APai",
+            "cool1": "0",
+            "dataa1": "",
+            "datab1": "",
+            "dataf1": "",
+            "dur1": "0",
+            "hotkey": "",
+            "levels": "5",
+            "name": "TRIGSTR_17267",
+            "tip1": "TRIGSTR_33521",
+            "tip2": "TRIGSTR_33522",
+            "tip3": "TRIGSTR_33523",
+            "tip4": "TRIGSTR_33524",
+            "tip5": "TRIGSTR_33544",
+            "ubertip1": "TRIGSTR_17269",
+            "ubertip2": "TRIGSTR_17275",
+            "ubertip3": "TRIGSTR_17276",
+            "ubertip4": "TRIGSTR_17277",
+            "ubertip5": "TRIGSTR_17278"
+          },
+          "id": "A0AY",
+          "name": "|cffc8e6ffСбор Дани|r"
+        },
+        {
+          "fields": {
+            "area1": "",
+            "code": "APai",
+            "cool1": "0",
+            "dataa1": "",
+            "datab1": "",
+            "dataf1": "",
+            "dur1": "0",
+            "hotkey": "",
+            "levels": "5",
+            "name": "TRIGSTR_17317",
+            "tip1": "TRIGSTR_33629",
+            "tip2": "TRIGSTR_33630",
+            "tip3": "TRIGSTR_33638",
+            "tip4": "TRIGSTR_33667",
+            "tip5": "TRIGSTR_33668",
+            "ubertip1": "TRIGSTR_17319",
+            "ubertip2": "TRIGSTR_17325",
+            "ubertip3": "TRIGSTR_17326",
+            "ubertip4": "TRIGSTR_17327",
+            "ubertip5": "TRIGSTR_17328"
+          },
+          "id": "A0B5",
+          "name": "|cffc8e6ffНалаженное Производство|r"
+        }
+      ],
+      "ok": true,
+      "schema_version": 1,
+      "tool": "HiveWE_cli",
+      "type": "ability"
+    },
+    {
+      "command": "get-objects-bulk",
+      "count": 1,
+      "map": "F:\\Gemini_23Race\\map.w3x",
+      "missing": [],
+      "objects": [
+        {
+          "fields": {
+            "abillist": "A0MK,A0B0,A0B1,A0B2,A0AZ,AHad",
+            "hotkey": "U",
+            "name": "TRIGSTR_12414",
+            "tip": "",
+            "trains": "U02F",
+            "ubertip": "",
+            "weapson": "0"
+          },
+          "id": "h0DR",
+          "name": "|cffe6beaaУльдуар (внешний)|r"
+        }
+      ],
+      "ok": true,
+      "schema_version": 1,
+      "tool": "HiveWE_cli",
+      "type": "unit"
+    },
+    {
+      "command": "get-objects-bulk",
+      "count": 1,
+      "map": "F:\\Gemini_23Race\\map.w3x",
+      "missing": [],
+      "objects": [
+        {
+          "fields": {
+            "bufftip": "TRIGSTR_6723",
+            "buffubertip": ""
+          },
+          "id": "B023",
+          "name": "|cff808000Поселение|r"
+        }
+      ],
+      "ok": true,
+      "schema_version": 1,
+      "tool": "HiveWE_cli",
+      "type": "buff"
+    }
+  ],
+  "strings": [
+    {
+      "rawcode": "A0MK",
+      "field": "name",
+      "before": "Разведка",
+      "after": "|cffe4cfa3Разведка|r"
+    },
+    {
+      "rawcode": "A0MK",
+      "field": "tip1",
+      "before": "Разведка",
+      "after": "|cffe4cfa3Разведка|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A0MK",
+      "field": "ubertip1",
+      "before": "\"Открывает обзор в указанной области на <AOfs,Dur1> сек. Обнаруживает невидимые войска.\"",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает обзор в выбранной области радиусом |cffffffff1000|cffced4da на |cffffffff50|cffced4da сек. и обнаруживает невидимые войска. Перезарядка — |cffffffff30|cffced4da сек.|r"
+    },
+    {
+      "rawcode": "A0B0",
+      "field": "name",
+      "before": "|cffc8e6ffУкрепить Город|r",
+      "after": "|cffe4cfa3Укрепление города|r"
+    },
+    {
+      "rawcode": "A0B0",
+      "field": "tip1",
+      "before": "|cffc8e6ffУкрепить Город|r",
+      "after": "|cffe4cfa3Укрепление города|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "A0B0",
+      "field": "ubertip1",
+      "before": "Увеличивает защиту здания на 4 ед.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Команда укрепления защиты города.|n|n|cffe69a8dУлучшение в текущей версии недоступно.|cffced4da Применение не повышает броню здания.|r"
+    },
+    {
+      "rawcode": "A0B1",
+      "field": "name",
+      "before": "|cffc8e6ffНаладить Производство|r",
+      "after": "|cffe4cfa3Развитие производства|r"
+    },
+    {
+      "rawcode": "A0B1",
+      "field": "tip1",
+      "before": "|cffc8e6ffНаладить Производство|r",
+      "after": "|cffe4cfa3Развитие производства|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A0B1",
+      "field": "ubertip1",
+      "before": "Увеличить доход древесины на 50.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает вклад поселения в доход древесины за каждый доходный цикл на |cffc8e087+50|cffced4da. При применении поселение должно оставаться выделенным.|n|nСтоимость — |cffffffff900|cffced4da золота и |cffffffff500|cffced4da древесины. Доступность команды зависит от текущей ступени развития поселения.|r"
+    },
+    {
+      "rawcode": "A0B2",
+      "field": "name",
+      "before": "|cffc8e6ffУвеличить Размер Города|r",
+      "after": "|cffe4cfa3Расширение города|r"
+    },
+    {
+      "rawcode": "A0B2",
+      "field": "tip1",
+      "before": "|cffc8e6ffУвеличить Размер Города|r",
+      "after": "|cffe4cfa3Расширение города|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "A0B2",
+      "field": "ubertip1",
+      "before": "Увеличить здоровье здания на 2500.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Команда расширения города.|n|n|cffe69a8dУлучшение в текущей версии недоступно.|cffced4da Применение не повышает максимальное здоровье здания.|r"
+    },
+    {
+      "rawcode": "A0AZ",
+      "field": "name",
+      "before": "|cffc8e6ffУвеличить Сбор Дани|r",
+      "after": "|cffe4cfa3Увеличение сбора дани|r"
+    },
+    {
+      "rawcode": "A0AZ",
+      "field": "tip1",
+      "before": "|cffc8e6ffУвеличить Сбор Дани|r",
+      "after": "|cffe4cfa3Увеличение сбора дани|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A0AZ",
+      "field": "ubertip1",
+      "before": "Увеличить доход золота на 100.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает вклад поселения в базовый доход золота за каждый доходный цикл на |cffc8e087+100|cffced4da. Итоговый доход золота зависит от модификаторов экономики. При применении поселение должно оставаться выделенным.|n|nСтоимость — |cffffffff1250|cffced4da золота и |cffffffff800|cffced4da древесины. Доступность команды зависит от текущей ступени развития поселения.|r"
+    },
+    {
+      "rawcode": "AHad",
+      "field": "name",
+      "before": "Поселение",
+      "after": "|cffe4cfa3Поселение|r"
+    },
+    {
+      "rawcode": "AHad",
+      "field": "tip1",
+      "before": "",
+      "after": "|cffe4cfa3Поселение|r"
+    },
+    {
+      "rawcode": "AHad",
+      "field": "ubertip1",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обозначает поселение. Эта аура не даёт бонуса к броне.|r"
+    },
+    {
+      "rawcode": "A0AY",
+      "field": "name",
+      "before": "|cffc8e6ffСбор Дани|r",
+      "after": "|cffe4cfa3Сбор дани|r"
+    },
+    {
+      "rawcode": "A0AY",
+      "field": "tip1",
+      "before": "|cffc8e6ffСбор Дани|r |cffefda50[1]|r",
+      "after": "|cffe4cfa3Сбор дани|r"
+    },
+    {
+      "rawcode": "A0AY",
+      "field": "ubertip1",
+      "before": "Приносит |cff96ff96+100|r золота.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в базовый доход золота за каждый доходный цикл: |cffc8e087+100|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей. Итоговый доход золота зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff1|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0AY",
+      "field": "tip2",
+      "before": "|cffc8e6ffСбор Дани|r |cffefda50[2]|r",
+      "after": "|cffe4cfa3Сбор дани|r"
+    },
+    {
+      "rawcode": "A0AY",
+      "field": "ubertip2",
+      "before": "Приносит |cff96ff96+200|r золота.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в базовый доход золота за каждый доходный цикл: |cffc8e087+200|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей. Итоговый доход золота зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff2|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0AY",
+      "field": "tip3",
+      "before": "|cffc8e6ffСбор Дани|r |cffefda50[3]|r",
+      "after": "|cffe4cfa3Сбор дани|r"
+    },
+    {
+      "rawcode": "A0AY",
+      "field": "ubertip3",
+      "before": "Приносит |cff96ff96+300|r золота.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в базовый доход золота за каждый доходный цикл: |cffc8e087+300|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей. Итоговый доход золота зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff3|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0AY",
+      "field": "tip4",
+      "before": "|cffc8e6ffСбор Дани|r |cffefda50[4]|r",
+      "after": "|cffe4cfa3Сбор дани|r"
+    },
+    {
+      "rawcode": "A0AY",
+      "field": "ubertip4",
+      "before": "Приносит |cff96ff96+400|r золота.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в базовый доход золота за каждый доходный цикл: |cffc8e087+400|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей. Итоговый доход золота зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0AY",
+      "field": "tip5",
+      "before": "|cffc8e6ffСбор Дани|r |cffefda50[5]|r",
+      "after": "|cffe4cfa3Сбор дани|r"
+    },
+    {
+      "rawcode": "A0AY",
+      "field": "ubertip5",
+      "before": "Приносит |cff96ff96+500|r золота.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в базовый доход золота за каждый доходный цикл: |cffc8e087+500|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей. Итоговый доход золота зависит от модификаторов экономики.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff5|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0B5",
+      "field": "name",
+      "before": "|cffc8e6ffНалаженное Производство|r",
+      "after": "|cffe4cfa3Налаженное производство|r"
+    },
+    {
+      "rawcode": "A0B5",
+      "field": "tip1",
+      "before": "|cffc8e6ffНалаженное Производство|r |cffefda50[1]|r",
+      "after": "|cffe4cfa3Налаженное производство|r"
+    },
+    {
+      "rawcode": "A0B5",
+      "field": "ubertip1",
+      "before": "Приносит |cff96ff96+50|r древесины.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в доход древесины за каждый доходный цикл: |cffc8e087+50|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff1|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0B5",
+      "field": "tip2",
+      "before": "|cffc8e6ffНалаженное Производство|r |cffefda50[2]|r",
+      "after": "|cffe4cfa3Налаженное производство|r"
+    },
+    {
+      "rawcode": "A0B5",
+      "field": "ubertip2",
+      "before": "Приносит |cff96ff96+100|r древесины.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в доход древесины за каждый доходный цикл: |cffc8e087+100|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff2|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0B5",
+      "field": "tip3",
+      "before": "|cffc8e6ffНалаженное Производство|r |cffefda50[3]|r",
+      "after": "|cffe4cfa3Налаженное производство|r"
+    },
+    {
+      "rawcode": "A0B5",
+      "field": "ubertip3",
+      "before": "Приносит |cff96ff96+150|r древесины.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в доход древесины за каждый доходный цикл: |cffc8e087+150|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff3|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0B5",
+      "field": "tip4",
+      "before": "|cffc8e6ffНалаженное Производство|r |cffefda50[4]|r",
+      "after": "|cffe4cfa3Налаженное производство|r"
+    },
+    {
+      "rawcode": "A0B5",
+      "field": "ubertip4",
+      "before": "Приносит |cff96ff96+200|r древесины.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в доход древесины за каждый доходный цикл: |cffc8e087+200|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff4|cffced4da.|r"
+    },
+    {
+      "rawcode": "A0B5",
+      "field": "tip5",
+      "before": "|cffc8e6ffНалаженное Производство|r |cffefda50[5]|r",
+      "after": "|cffe4cfa3Налаженное производство|r"
+    },
+    {
+      "rawcode": "A0B5",
+      "field": "ubertip5",
+      "before": "Приносит |cff96ff96+250|r древесины.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вклад этой ступени развития поселения в доход древесины за каждый доходный цикл: |cffc8e087+250|cffced4da. Это суммарное значение ступени, а не прибавка к предыдущей.|n|n|cffa6afb8Ступень:|cffced4da |cffffffff5|cffced4da.|r"
+    },
+    {
+      "rawcode": "h0DR",
+      "field": "name",
+      "before": "|cffe6beaaУльдуар (внешний)|r",
+      "after": "|cffe4cfa3Ульдуар (внешний)|r"
+    },
+    {
+      "rawcode": "h0DR",
+      "field": "tip",
+      "before": "",
+      "after": "|cffe4cfa3Ульдуар (внешний)|r (|cffffffffU|r)"
+    },
+    {
+      "rawcode": "h0DR",
+      "field": "ubertip",
+      "before": "",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Поселение, в котором Безликие могут нанять легендарного героя.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВерховный генерал|cffced4da: требуется выбор расы Безликих.|n|n|cffa6afb8Возможности:|cffced4da|n- |cffa9c7deРазведка|cffced4da: временно открывает обзор и обнаруживает невидимые войска.|n- |cffa9c7deУвеличение сбора дани|cffced4da: повышает базовый доход золота поселения.|n- |cffa9c7deРазвитие производства|cffced4da: повышает доход древесины поселения.|n- |cffa9c7deПоселение|cffced4da: городская аура без бонуса к броне.|n|n|cffe6c07bУкрепление и расширение города в текущей версии недоступны.|r"
+    },
+    {
+      "rawcode": "B023",
+      "field": "bufftip",
+      "before": "|cff808000Поселение|r",
+      "after": "|cffe4cfa3Поселение|r"
+    },
+    {
+      "rawcode": "B023",
+      "field": "buffubertip",
+      "before": "",
+      "after": "|cffa6afb8ЭФФЕКТ:|cffced4da Городская аура. Не изменяет броню здания.|r"
+    }
+  ],
+  "in_game_checked": false,
+  "evidence": [
+    "01_core_economy.lua Trig_Upgrade_Gold_C and Trig_Upgrade_Lumber: income increments and selected-unit guards",
+    "54_count_dis.lua: city income equals A0AY level * 100, A0B5 level * 50",
+    "A0B0/A0B2 only referenced by removal in canonical Lua; AAns native only charges resources",
+    "Native A0MK duration 50, area 1000; AHad armor bonus zero; U02F requires R0F9"
+  ],
+  "remaining": [
+    "Check city capture/replacement and recruitment gates in Warcraft III",
+    "Check resource charging, unavailable armor/health commands and income progression in engine",
+    "Automatic legendary grant maps h0DR to Demons, conflicting with the player's Faceless recruitment route; mechanics untouched",
+    "Audit related income/status buffs and other shared city text; no whole-map completion claimed"
+  ]
+}

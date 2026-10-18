@@ -1,0 +1,386 @@
+{
+  "operations": [
+    {
+      "type": "buff",
+      "id": "B01D",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Защитная аура|r"
+    },
+    {
+      "type": "buff",
+      "id": "B01D",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da В зависимости от источника аура изменяет защиту или восстановление здоровья цели.|r"
+    },
+    {
+      "type": "buff",
+      "id": "B030",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Аура восстановления|r"
+    },
+    {
+      "type": "buff",
+      "id": "B030",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Восстановление здоровья |cffc8e087ускорено|cffced4da. Величина бонуса определяется источником ауры.|r"
+    },
+    {
+      "type": "buff",
+      "id": "B05N",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Тёмное усиление|r"
+    },
+    {
+      "type": "buff",
+      "id": "B05N",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Урон от атак |cffc8e087повышен на 35%|cffced4da.|r"
+    },
+    {
+      "type": "buff",
+      "id": "B05O",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Отголосок Йогг`Сарона|r"
+    },
+    {
+      "type": "buff",
+      "id": "B05O",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Органические союзники ближнего боя восстанавливают здоровье в размере |cffc8e08710%|cffced4da урона своих атак.|r"
+    },
+    {
+      "type": "buff",
+      "id": "BEim",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Обжигающий жар|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BEim",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Существо окружено пламенем, наносящим |cffffffffпериодический урон|cffced4da находящимся рядом противникам.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BHab",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Аура маны|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BHab",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Аура изменяет восстановление маны цели. Направление и величина изменения зависят от способности-источника.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BHds",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Божественный щит|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BHds",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffc8e087неуязвима|cffced4da на время действия щита.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BHtc",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Раскат грома|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BHtc",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения и атаки |cffe69a8dснижена|cffced4da.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BIcb",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Порча|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BIcb",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Броня цели |cffe69a8dснижена|cffced4da.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BNab",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Кислотная бомба|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BNab",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель поражена кислотой. Заклинание может наносить периодический урон и ослаблять броню; параметры определяются источником.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BNht",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Ужасающий вой|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BNht",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Урон от атак цели |cffe69a8dснижен|cffced4da.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BOsf",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Призванное существо|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BOsf",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Существо создано призывающим заклинанием.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BOwd",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Призванное создание|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BOwd",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Существо создано магией призыва.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BOwk",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Танец ветра|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BOwk",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffc8e087невидима|cffced4da и передвигается быстрее. Атака из невидимости получает дополнительный урон и раскрывает атакующего.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BPSE",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Оглушение|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BPSE",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffe69a8dне может двигаться, атаковать и применять способности|cffced4da.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BUan",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Оживление мёртвых|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BUan",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Существо поднято из трупа и временно сражается на стороне призвавшего его владельца.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BUdd",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Смерть и разложение|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BUdd",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель получает |cffe69a8dпериодический урон|cffced4da от разлагающей магии.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BUfa",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Морозный доспех|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BUfa",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Броня |cffc8e087повышена|cffced4da. Противники, атакующие цель в ближнем бою, временно теряют скорость передвижения и атаки.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BUsl",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Оцепенение|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "BUsl",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffe69a8dне может двигаться, атаковать и применять способности|cffced4da до окончания эффекта.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Bakb",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Боевые барабаны|r"
+    },
+    {
+      "type": "buff",
+      "id": "Bakb",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Урон от атак союзника |cffc8e087повышен|cffced4da под действием ауры.|r"
+    },
+    {
+      "type": "buff",
+      "id": "Bcrs",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Проклятие|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Bcrs",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Проклятие |cffe69a8dповышает вероятность промаха|cffced4da при атаке.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Bena",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Опутывание|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Bena",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffe69a8dне может двигаться|cffced4da. Воздушная цель притянута к земле и считается наземной.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Beng",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Опутывание|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Beng",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffe69a8dне может двигаться|cffced4da. Воздушная цель притянута к земле и считается наземной.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Bfro",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Замедление холодом|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Bfro",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения цели |cffe69a8dснижена|cffced4da холодом.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Brej",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Омоложение|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Brej",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Восстанавливающее заклинание восполняет |cffc8e087здоровье и/или ману|cffced4da цели в зависимости от источника.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Bslo",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Замедление|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Bslo",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения и атаки цели |cffe69a8dснижена|cffced4da.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Bspl",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Духовная связь|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Bspl",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Часть получаемого урона перераспределяется между связанными существами. Доля урона определяется наложившим связь заклинанием.|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Bvng",
+      "field": "bufftip",
+      "value": "|cffe4cfa3Дух возмездия|r",
+      "base_object": true
+    },
+    {
+      "type": "buff",
+      "id": "Bvng",
+      "field": "buffubertip",
+      "value": "|cffa6afb8ЭФФЕКТ:|cffced4da Из этих останков создан призванный дух.|r",
+      "base_object": true
+    }
+  ]
+}

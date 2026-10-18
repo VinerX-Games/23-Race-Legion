@@ -1,0 +1,90 @@
+{
+  "scope": "Лесные тролли (ForestTrolls): категория 3 — Герои",
+  "heroes_count": 3,
+  "variants": [
+    "SD"
+  ],
+  "heroes": [
+    {
+      "id": "O057",
+      "hotkey": "A",
+      "propernames": "Зул'кис,Зул'абар,Зул'раджас,Зул'маран,Джо-Джо Собиратель Голов,Шака-зан,Шакти-лар,Мезил-кри",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32962,
+          "after": "|cffe4cfa3Мастер клинка|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32965,
+          "after": "|cffe4cfa3Мастер клинка|r (|cffffffffA|r)"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 32963,
+          "after": "|cffe4cfa3Мастер клинка|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 32964,
+          "after": "|cffe4cfa3Мастер клинка|r (|cffffffffA|r)"
+        }
+      ]
+    },
+    {
+      "id": "O058",
+      "hotkey": "Q",
+      "propernames": "Малакрас",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32966,
+          "after": "|cffe4cfa3Повелитель проклятий|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32969,
+          "after": "|cffe4cfa3Повелитель проклятий|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 32967,
+          "after": "|cffe4cfa3Повелитель проклятий|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 32968,
+          "after": "|cffe4cfa3Повелитель проклятий|r (|cffffffffQ|r)"
+        }
+      ]
+    },
+    {
+      "id": "O059",
+      "hotkey": "Z",
+      "propernames": "Дакаара",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32970,
+          "after": "|cffe4cfa3Военачальник|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32973,
+          "after": "|cffe4cfa3Военачальник|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 32971,
+          "after": "|cffe4cfa3Военачальник|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 32972,
+          "after": "|cffe4cfa3Военачальник|r (|cffffffffZ|r)"
+        }
+      ]
+    }
+  ]
+}

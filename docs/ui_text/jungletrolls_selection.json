@@ -1,0 +1,113 @@
+{
+  "scope": "Тролли джунглей (JungleTrolls): подсказка выбора расы A1DZ, маркеры и выбор фракций",
+  "object": "A1DZ",
+  "variants": [
+    "SD"
+  ],
+  "hotkey": {
+    "value": "C"
+  },
+  "levels": 1,
+  "evidence": [
+    "04_race_selection.lua: InitTrig_Race_JungleTrolls регистрирует способность A1DZ.",
+    "При выборе создаются 5 рабочих o04Q, исследуется маркер R0IH, запускается StartJungleTrolls.",
+    "Горячая клавиша C, создатель и куратор VinerX, сложность 3/5 (●●●○○), период «WoW: Classic» — «Battle for Azeroth»."
+  ],
+  "strings": [
+    {
+      "field": "name",
+      "wts_id": 32019,
+      "after": "|cffe4cfa3Тролли джунглей|r"
+    },
+    {
+      "field": "tip1",
+      "wts_id": 32430,
+      "after": "|cffe4cfa3Тролли джунглей|r (|cffffffffC|r)"
+    },
+    {
+      "field": "ubertip1",
+      "wts_id": 35186,
+      "after": "|cffa6afb8РАСА:|cffced4da Древняя цивилизация троллей Тернистой долины и островов Эхо, владеющая магией вуду, ядами и благословением свирепых Лоа.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Куратор расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Сложность:|r |cffffffff●●●|cffa6afb8○○|r|n|cffa6afb8Период:|r |cffa9c7de«World of Warcraft: Classic» — «Battle for Azeroth»|r|n|n|cffced4daТролли джунглей — древнейшая раса Азерота, некогда создавшая великую империю Гурубаши. Расколотые на племена после падения империи, они сохранили непревзойдённые навыки засад, метания копий и тайны кровавой магии вуду. В критический момент вожди джунглей могут избрать путь верности Орде и Лоа Смерти Бвонсамди (племя Чёрного Копья) либо предаться первобытной кровавой ярости и возродить культ Кровавого бога Хаккара (империя Гурубаши).|r"
+    }
+  ],
+  "markers": [
+    {
+      "id": "R0IH",
+      "name": "Тролли джунглей (маркер расы)",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 32049,
+          "after": "|cffe4cfa3Тролли джунглей|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32050,
+          "after": "|cffe4cfa3Тролли джунглей|r"
+        }
+      ]
+    },
+    {
+      "id": "R0IR",
+      "name": "Чёрное Копьё (маркер подфракции)",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 32959,
+          "after": "|cffe4cfa3Чёрное Копьё|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32960,
+          "after": "|cffe4cfa3Чёрное Копьё|r"
+        }
+      ]
+    }
+  ],
+  "branch_choices": [
+    {
+      "id": "A1EP",
+      "name": "Чёрное Копьё",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32646,
+          "after": "|cffe4cfa3Чёрное Копьё|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32647,
+          "after": "|cffe4cfa3Чёрное Копьё|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 32862,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Избрать путь племени |cffa9c7deЧёрного Копья|cffced4da, союзников Орды. Открывает доступ к |cffa9c7deМагам Чёрного Копья|cffced4da и призыву |cffa9c7deЛоа Смерти Бвонсамди|cffced4da.|n|n|cffe6c07bВнимание:|cffced4da взаимоисключающий выбор с империей Гурубаши.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1EQ",
+      "name": "Империя Гурубаши",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32650,
+          "after": "|cffe4cfa3Империя Гурубаши|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32651,
+          "after": "|cffe4cfa3Империя Гурубаши|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 32863,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Избрать путь древней империи |cffa9c7deГурубаши|cffced4da. Открывает доступ к |cffa9c7deКолдунам Вуду|cffced4da и призыву |cffa9c7deХаккара Свежевателя Душ|cffced4da.|n|n|cffe6c07bВнимание:|cffced4da взаимоисключающий выбор с Чёрным Копьём.|r"
+        }
+      ]
+    }
+  ]
+}

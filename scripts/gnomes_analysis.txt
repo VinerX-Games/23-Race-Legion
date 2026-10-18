@@ -1,0 +1,551 @@
+=== 1. SELECTION & MARKERS ===
+Selection ability: A0SD | Name: |cfff0c8a0Гномы|r | Tip: {'tip1': {'raw': 'TRIGSTR_38896', 'val': '|cfff0c8a0Гномы|r', 'sid': 38896}} | Ubertip: {'ubertip1': {'raw': 'TRIGSTR_35199', 'val': '|cff7dc87dСоздатель расы:|r |cff9bff0fVinerX|r|n|cff7dc87dСложность:|r |cffe91919Высокая|r|n|cff7dc87dПериод:|r |cffffde19WoW Vanila|r по |cff989279Battle for Azeroth|r|n|cff7dc87dОписание:|r |cffffc864Гномы|r - умныe, лиxиe и зaчacтyю экcцeнтpичныe – caмaя yдивитeльнaя из цивилизoвaнныx pac Aзepoтa. Эти нeyгoмoнныe, oблaдaющиe вeceлым нpaвoм гeниaльныe изoбpeтaтeли пepeжили пpeдaтeльcтвo, пoтepю poднoгo дoмa и eдвa нe были пoлнocтью yничтoжeны. Oптимизм, пpoявлeнный гнoмaми пepeд лицoм пoдoбныx нecчacтий, кaк нeльзя лyчшe xapaктepизyeт нeпoкoлeбимый дyx этoй pacы.', 'sid': 35199}}
+Marker R0BX: name={'name1': {'raw': 'TRIGSTR_9241', 'val': '|cffe6beaaГномы', 'sid': 9241}} tip={'tip1': {'raw': 'TRIGSTR_9242', 'val': '|cffe6beaaГномы', 'sid': 9242}} ubertip={'ubertip1': {'raw': 'TRIGSTR_20125', 'val': 'Умные, дерзкие и подчас чудаковатые гномы — самая удивительная из цивилизованных рас Азерота. Оптимизм перед лицом несчастий как нельзя лучше характеризует непоколебимый дух этой расы. ', 'sid': 20125}}
+Marker R0HW: name={'name1': {'raw': 'TRIGSTR_30254', 'val': '|cffe6beaaГномы|r или |cffaad2ffАльянс', 'sid': 30254}} tip={'tip1': {'raw': 'TRIGSTR_29941', 'val': '|cffaad2ffФракция с спец магами', 'sid': 29941}} ubertip={'ubertip1': {'raw': '', 'val': '', 'sid': None}}
+
+=== 2. BUILDINGS (10) ===
+Building h0FI: name=|cfff0c8afЭнергобашня|r |cffff0000(Активна)|r | tip=Построть |cffff0000Активную |r|cfff0c8afЭнергобашню|r | hotkey=Z | ubertip=Здание, приносящее инком. Может перейти в боевой режим.
+(Боевой режим активирован сразу)
+   trains=None | researches=None | upgrades_to=None | food= - /None
+Building h0FK: name=|cfff0c8afГлавный цех|r | tip=Построить |cfff0c8afГлавный цех|r | hotkey=Q | ubertip=|cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r|n|nБазовое здание. Обучает работников и хранит добытые ресурсы. Можно улучшить до форта, а затем до замка, чтобы получить доступ к новым зданиям и типам войск.
+   trains=h0FA | researches=R0CT,R0CU | upgrades_to=h0FR | food=50/None
+Building h0FL: name=|cfff0c8afЭнергобашня|r | tip=Построть |cfff0c8afЭнергобашню|r | hotkey=A | ubertip=Здание, приносящее инком. Может перейти в боевой режим.
+   trains=None | researches=None | upgrades_to=None | food=40/None
+Building h0FR: name=|cfff0c8afГлавный цех, V2|r | tip=Построить |cfff0c8afГлавный цех, V2|r | hotkey=Z | ubertip=|cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r|n|nБазовое здание. Обучает работников и хранит добытые ресурсы. Можно улучшить до форта, а затем до замка, чтобы получить доступ к новым зданиям и типам войск.
+   trains=h0FA | researches=R0CT,R0CU | upgrades_to=h0FS | food=100/None
+Building h0FS: name=|cfff0c8afГлавный цех, V3|r | tip=Построить |cfff0c8afГлавный цех, V3|r | hotkey=Z | ubertip=|cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r|n|nБазовое здание. Обучает работников и хранит добытые ресурсы. Можно улучшить до форта, а затем до замка, чтобы получить доступ к новым зданиям и типам войск.
+   trains=h0FA | researches=R0CT,R0CU | upgrades_to=None | food=150/None
+Building h0FY: name=|cfff0c8afФабрика | tip=Построить |cfff0c8afФабрику | hotkey=F | ubertip=|cff7dc87dВремя строительства:|r |cffaaf0aa60 сек.|r|n|n Здание для найма техники.
+   trains=h0FP,h0G1,h0FX,h0G4,h0G5,h0FH,h0G2,h0FW,h0FV | researches=R0CX | upgrades_to=None | food=0/None
+Building h0FZ: name=|cfff0c8afЭнергоядро|r | tip=Построить |cfff0c8afЭнергоядро | hotkey=E | ubertip=Здесь разрабатываются гномские проекты.
+   trains=None | researches=R0C7,R0C8,R0C4,R0BR,R0BQ,R0BA,R0B9,R0BB,R0BC,R0BD,R0BE,R0BF,R0BG,R0BH,R0BI,R0B5,R0BT,R0C0,R0C1,R0C2,R0C3,R0C4,R0C5,R0C6,R0C9,R0CA,R0CB,R0CC,R0CD,R0CE,R0CF,R0CG,R0CH,R0CI,R0CM,R0CJ,R0CK,R0CL,R0CN,R0CO,R0CP,R0CQ,R0CR,R0CS,R0B8,R0B7,R0BJ,R0BK,R0BL,R0BM,R0BN,R0BO,R0BP | upgrades_to=None | food=0/None
+Building h0G0: name=|cfff0c8afМастерская|r | tip=Построить |cfff0c8afМастерскую|r | hotkey=D | ubertip=|cff7dc87dВремя строительства:|r |cffaaf0aa60 сек.|r|n|n Здание для найма техники.
+   trains=h0FQ,h0FN,h0FO,h0FJ,h0FF,h0FG,h0FT | researches=R0CW | upgrades_to=None | food=0/None
+Building h0G3: name=|cfff0c8afМехаказармы|r | tip=Построить |cfff0c8afМехаказармы|r | hotkey=W | ubertip=|cff7dc87dВремя строительства:|r |cffaaf0aa60 сек.|r|n|nЗдание для найма пехоты.
+   trains=h0FC,h0FB,h0FD,h0FE,h0FU,h0FM | researches=R0CV,R0J2 | upgrades_to=None | food=0/None
+Building h0G7: name=|cfff0c8afАлтарь Великих Умов|r | tip=Построить |cfff0c8afАлтарь Великих Умов|r | hotkey=S | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nСооружение позволяющее призывать новых и воскрешает павших героев.
+   trains=H0GG,H0GE,H0GC | researches=None | upgrades_to=None | food=3/None
+
+=== 3. WORKERS (2) ===
+Worker h0FA: name=|cfff0c8afИнженер|r | tip=Обучить |cfff0c8afИнженера|r | hotkey=Q | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa15 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nБазовый рабочий. Добывает золото и древесину, а также строит и ремонтирует здания. Может пойти в ополчение. |n|n|cffffcc00Атакует наземные цели и деревья.|r
+   abillist=A0I3,A0VZ,Ahrp | builds=h0G7,h0FI,h011,h0FK,h0FZ,h0FL,h0G3,h0FY,h0G0
+Worker h0FX: name=|cfff0c8afКлап Клап (v0.58889)|r | tip=Построить |cfff0c8afКлап Клап (v0.58889)|r | hotkey=Q | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa12 сек.|r|n|nИзобретение, которое все еще пытаются довести до ума. В лечебнице уже 5 конструкторов.
+   abillist=A0SJ,A0SI | builds=None
+
+=== 4. UNITS (21) ===
+Unit h0FB: name=|cfff0c8afСтрелок|r | tip=Обучить |cfff0c8afСтрелка|r | hotkey=W | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa25 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальни бой|r|n
+Меткий стрелок армии гномов, эффективный на дальних дистанциях. 
+   abillist=A0TZ,A1B9 | upgrades=R0CT,R0CU,R0CV,R0J2 | atk1=pierce/ground,structure,debris,air,item,ward | atk2=normal/None
+Unit h0FC: name=|cfff0c8afГном пехотинец|r | tip=Обучить |cfff0c8afГнома пехотинца|r | hotkey=Q | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa21 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
+И такое бывает...
+   abillist=A00S,A1B9 | upgrades=R0CT,R0CU,R0CV,R0J2 | atk1=normal/ground,structure,debris,item,ward | atk2=normal/None
+Unit h0FD: name=|cfff0c8afШпион|r | tip=Обучить |cfff0c8afШпиона|r | hotkey=R | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
+Боец армии гномов, познавший искусства скрытности и шпионажа.
+   abillist=A0U1,A0U0,A165,A1B9 | upgrades=R0CT,R0CU,R0CV | atk1=normal/ground,structure,debris,item,ward | atk2=normal/None
+Unit h0FE: name=|cfff0c8afПодрывник|r | tip=Обучить |cfff0c8afПодрывника|r | hotkey=E | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальни бой|r|n
+Меткий стрелок, эффективный на дальних дистанциях. Можно снарядить длинноствольным мушкетом. |n|n|cffffcc00Атакует наземные и воздушные цели.|r
+   abillist=A0U5,A1B9 | upgrades=R0CT,R0CU,R0J2 | atk1=siege/ground,structure,debris,air,item,ward | atk2=normal/None
+Unit h0FF: name=|cfff0c8afУниверсальный танк|r | tip=Построит |cfff0c8afУниверсальный танк|r | hotkey=R | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n|nГрозная техника гномов, с огромным количеством способов уничтожить своих врагов.
+   abillist=A0S9,A0S8 | upgrades=R0CW,R0CE,R0CT,R0CU | atk1=pierce/ground,structure,debris,item,ward | atk2=pierce/air
+Unit h0FG: name=|cfff0c8afТанк "Венец"|r | tip=Построить |cfff0c8afТанк "Венец"|r | hotkey=S | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa80 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой, Осадный|r|n|nТяжелобронированная машина, гордость гномской инженерии.
+   abillist=A0S7,A0S6,A0S2 | upgrades=R0CW,R0C9,R0CA,R0CB,R0CT,R0CU | atk1=siege/ground,structure,debris,item,ward | atk2=pierce/enemies
+Unit h0FH: name=|cfff0c8afШагоход|r | tip=Построит |c00ffdb78Шагоход|r | hotkey=S | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n|nТяжелобронированная машина, гордость гоблинской нации.
+   abillist=A0SN,A0SO | upgrades=R0CX,R0CT,R0CU | atk1=pierce/ground,structure,debris,item,ward | atk2=pierce/air
+Unit h0FJ: name=|cfff0c8afСамоходная артиллерия|r | tip=Построит |cfff0c8afСамоходная артиллерия|r | hotkey=A | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa46 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный|r|n|nМашина, способная доставлять снаряды на огромные дистанции.
+   abillist= | upgrades=R0C3,R0CO,R0CN,R0CT,R0CU | atk1=siege/ground,structure,debris,item,ward | atk2=pierce/air
+Unit h0FM: name=|cfff0c8afГном чернокнижник|r | tip=Нанять |cfff0c8afГнома чернокнижника|r | hotkey=S | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa34 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|nГном, который считает себе достаточно способным для подчинения темных сил.
+   abillist=A0TY,A0TX,ACff,A1B9 | upgrades=R0CT,R0CU,R0CV,R0J2 | atk1=magic/ground,structure,debris,air,item,ward | atk2=normal/None
+Unit h0FN: name=|cfff0c8afМинитанк|r | tip=Построит |c00ffdb78Минитанк|r | hotkey=W | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa27 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n|nМашина размеров небольших, но очень полезная.
+   abillist=A0SB | upgrades=R0C5,R0C6,R0BT,R0CW,R0CT,R0CU | atk1=pierce/ground,structure,debris,item,ward | atk2=pierce/air
+Unit h0FO: name=|cfff0c8afЭкспериментальный ГГТ|r | tip=Нанять |cfff0c8afЭкспериментальный ГГТ|r | hotkey=E | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa32 сек.|r|n|nНикто так и не понял, зачем это нечто было изобретено. Но до конца оно будет доведено.
+   abillist=A0UA,A0U9 | upgrades=R0CT,R0CU,R0CH,R0CI,R0CM,R0CW | atk1=magic/enemies | atk2=pierce/enemies
+Unit h0FP: name=|cfff0c8afРеженоги|r | tip=Построить |cfff0c8afРеженоги|r | hotkey=W | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa20 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|nЗарежет. Ваши. Ноги.
+   abillist=A0SC | upgrades=R0CX,R0CT,R0CU | atk1=normal/ground,structure,debris,item,ward | atk2=pierce/air
+Unit h0FQ: name=|cfff0c8afБронемашина | tip=Построить |cfff0c8afБронемашину|r | hotkey=Q | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa34 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nМашина, способная перевозить гномов.
+   abillist=A0TL,S002,Achd,Sdro,A0SE | upgrades=R0CW,R0CJ,R0CK,R0CL,R0CT,R0CU | atk1=pierce/ground,structure,debris,item,ward | atk2=pierce/air
+Unit h0FT: name=|cfff0c8afМега-Артиллерия|r | tip=Построит |cfff0c8afМега-Артиллерию|r | hotkey=D | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa180 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный|r|n|nМегапроект Гномов, который должен перевернуть ход многих битв
+   abillist=A0SZ,A0SH | upgrades=R0CT,R0CU | atk1=siege/ground,structure,debris,item,ward | atk2=pierce/air
+Unit h0FU: name=|cfff0c8afГном маг|r | tip=Обучить |cfff0c8afГнома мага|r | hotkey=A | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa29 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|nГном, использующий магию на поле боя.
+   abillist=A0U4,A0U3,A0U2,A1B9 | upgrades=R0CT,R0CU,R0CV,R0J2 | atk1=magic/ground,structure,debris,air,item,ward | atk2=normal/None
+Unit h0FV: name=|cfff0c8afМеханопаук|r | tip=Построить |cfff0c8afМеханопаука|r | hotkey=R | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa33 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|nПримечательная попытка мимикрии под природу Азерота. С ракетами.
+   abillist=A0SA | upgrades=R0CR,R0CS,R0CT,R0CU | atk1=normal/ground,structure,debris,item,ward | atk2=pierce/air
+Unit h0FW: name=|cfff0c8afМехагигант|r | tip=Построть |cfff0c8afМехагиганта|r | hotkey=D | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa75 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|nТяжелобронированная машина, гордость гномской нации.
+   abillist=A0U8 | upgrades=R0CP,R0CQ,R0CX,R0CT,R0CU | atk1=normal/ground,structure,debris,item,ward | atk2=pierce/air
+Unit h0G1: name=|cfff0c8afМеханобоец | tip=Нанять |cfff0c8afМеханобойца | hotkey=E | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa33 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|nМалый рост компенсируется мехакулаками.
+   abillist=A0SK | upgrades=R0BR,R0BQ,R0CX,R0CT,R0CU | atk1=normal/ground,structure,debris,item,ward | atk2=normal/None
+Unit h0G2: name=|cfff0c8afНаногном|r | tip=Обучить |cfff0c8afНаногнома|r | hotkey=A | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa47 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|nНеобычный боец армии гномов, разящий своих врагов электричеством.
+   abillist=A16A,A0U7,A0T0,Alit | upgrades=R0C2,R0C8,R0CX,R0CT,R0CU | atk1=magic/ground,structure,debris,item,ward | atk2=normal/None
+Unit h0G4: name=|cfff0c8afКлап Клап (v1.0 Opt)|r | tip=Построить |cfff0c8afКлап Клап (Opt 1.5)|r | hotkey=Q | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa16 сек.|r|n|cff7dc87d|r|nИзобретение, которое все еще пытаются довести до ума. В лечебнице уже 5 конструкторов. Дешевое.
+   abillist=A0SJ,A0SI | upgrades=R0CT,R0CU,R0CX,R0B8,R0BJ,R0BK,R0BL,R0BM,R0BN,R0BO,R0BP | atk1=normal/ground,structure,debris,item,ward | atk2=pierce/air
+Unit h0G5: name=|cfff0c8afКлап Клап (v1.0 Big)|r | tip=Построит |cfff0c8afКлап Клап (v1.0 Big)|r | hotkey=Q | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa39 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|nГигант, который еще стрельнет.
+   abillist=A0SJ,A0UW | upgrades=R0CT,R0CU,R0CX,R0B8,R0BJ,R0BK,R0BL,R0BM,R0BN,R0BO,R0BP | atk1=normal/ground,structure,debris,item,ward | atk2=pierce/air
+
+=== 5. HEROES (8) ===
+Hero H0GC: name=|cfff0c8afТанк УТ v1.23 | propernames=Экипаж "Улет",Экипаж "Сила Гнормегана",Команда Мегабрякса,Команда Всюдублеска | tip=Создать |cfff0c8afТанк УТ v1.23 | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|nЭлитный танк, способный поддержать войско гномов мощью своих хитрых механизмов.
+   heroabillist=A0TD,ANab,A0TC,AHfs | abillist=A01C,AInv | primary=None | atk1=hero/ground,structure,debris,item,ward
+Hero H0GD: name=|cfff0c8afФронтовой Гений | propernames=Шайботайло,Стальнокрут,Шурупоклакс,Всюдунилли | tip=Нанять Фронтового Гения | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|nГерой гномов, возомнивший, что он равен по силе другим воинам Азерота. Причем, его уникальный экзоскелет призван это доказать...
+   heroabillist=A0TH,A0TG,A0TF,A0TE | abillist=A01C,AInv | primary=None | atk1=hero/ground,structure,debris,item,ward
+Hero H0GE: name=|cfff0c8afФронтовой Гений | propernames=Шайботайло,Стальнокрут,Шурупоклакс,Всюдунилли | tip=Нанять |cfff0c8afФронтового Гения | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|nГерой гномов, возомнивший, что он равен по силе другим воинам Азерота. Причем, его уникальный экзоскелет призван это доказать...
+   heroabillist=A0TH,A0TG,A0TF,A0TE | abillist=A01C,AInv | primary=None | atk1=hero/ground,structure,debris,item,ward
+Hero H0GF: name=|cfff0c8afФронтовой Гений | propernames=Шайботайло,Стальнокрут,Шурупоклакс,Всюдунилли | tip=Нанять Фронтового Гения | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|nГерой гномов, возомнивший, что он равен по силе другим воинам Азерота. Причем, его уникальный экзоскелет призван это доказать...
+   heroabillist=A0TH,A0TG,A0TF,A0TE | abillist=A01C,AInv | primary=None | atk1=hero/ground,structure,debris,item,ward
+Hero H0GG: name=|cfff0c8afСтрелок-ветеран | propernames=Дзынекрут,Брякобаск,Пародзяньс,Искроватт | tip=Нанять |cfff0c8afСтрелка-ветерана | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaЛовкость |r|nГном, настрелявший на своем веку в немалое количество целей. 
+   heroabillist=A0TK,A0TJ,A0D5,A0GW | abillist=A01C,AInv | primary=None | atk1=hero/ground,structure,debris,item,ward
+Hero H0HQ: name=|cfff0c8afКороль Гномрегана|r | propernames=Гелбин Меггакрут | tip=Призвать |cfff0c8afКороля Гномрегана|r | ubertip=|cfff0c8afГелбин Меггакрут|r занимает должность главного механика Гномрегана, но другие народы часто называют его королем гномов. Правление Гелбина совпало с самыми тяжелыми испытаниями для гномов за все времена. Поскольку должность Главного Механика является выборной, тот факт, что он по-прежнему занимает её, доказывает любовь народа к своему лидеру. После воссоединения Гномегана и Мехагона Гелбин был официально провозглашен королем гномов, первым монархом, который правил всеми гномами со времен короля Мехагона четыреста лет назад.
+   heroabillist=A0XG,A0XF,A0XE,A0XB | abillist=A0XC,A0XD,AInv | primary=None | atk1=hero/ground,structure,debris,air,item,ward
+Hero H0HS: name=|cfff0c8afКороль Гномрегана|r | propernames=Гелбин Меггакрут | tip=Призвать |cfff0c8afКороля Гномрегана|r | ubertip=|cfff0c8afГелбин Меггакрут|r занимает должность главного механика Гномрегана, но другие народы часто называют его королем гномов. Правление Гелбина совпало с самыми тяжелыми испытаниями для гномов за все времена. Поскольку должность Главного Механика является выборной, тот факт, что он по-прежнему занимает её, доказывает любовь народа к своему лидеру. После воссоединения Гномегана и Мехагона Гелбин был официально провозглашен королем гномов, первым монархом, который правил всеми гномами со времен короля Мехагона четыреста лет назад.
+   heroabillist=A0XG,A0XF,A0XE,A0XB | abillist=A0XC,A0XD,AInv | primary=None | atk1=hero/ground,structure,debris,air,item,ward
+Hero MIMH: name=|cffffc864Перекованый хранитель|r | propernames=Мимирон V2.0 | tip=Призвать |cffffc864Перекованного хранителя|r | ubertip=|cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaЛегендарный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|n                                                                                         Перекованный из остатков хранителя Мимирон гномами, этот шедевр мастерски чинит механизмы и способен сам создать машину рока.
+   heroabillist=MIM6,MIM1,MIM2,MIM3 | abillist=AInv,A01C | primary=None | atk1=hero/ground,structure,debris,air,item,ward
+
+=== 6. UPGRADES (60) ===
+Upgrade R0B5 (lvls=1):
+   Lvl 1: name=|cffffc864Проект "Механопаук" | tip=|cffffc864Начать проект "Механопаук" | hotkey=S | ubertip=|cffffc864Робот паук|r? Всё конструкторское бюро хочет видеть его в армии гномов! И точка.
+Upgrade R0B7 (lvls=1):
+   Lvl 1: name=|cffff0000Закрыть проект "Клап Клап"|r | tip=|cffff0000Закрыть проект "Клап Клап"|r | hotkey=R | ubertip=Все. Мы долгие годы пытались довести это чудное творение до ума, но робот так и не показал хороших результатов. Прощай, Клап Клап.
+Upgrade R0B8 (lvls=1):
+   Lvl 1: name=|cffffc864Клап Клап в военной сфере | tip=|cffffc864Клап Клап в военной сфере | hotkey=Q | ubertip=За |cffffc864Клап Клапом|r будущее фронта, и нам лишь нужно его доработать. +5 к атаке
+Upgrade R0B9 (lvls=1):
+   Lvl 1: name=|cffffc864Проект "Реженоги" | tip=|cffffc864Начать проект "Реженоги" | hotkey=|cffb4dc8c-(+300) к здоровью.|r
+|cffb4dc8c-(+4) к защите.|r
+|cffb4dc8c-Поглощает 15 ед. урона, минимальный входящий урон 3.|r
+
+|cffb4dc8c-(33%) поглощения магического урона.|r
+Броня сильнейшего воина азерота. | ubertip=Что если сделать маленькую шарообразную |cffffc864машину|r с кучей лезвий? Это точно изменит облик войны!
+Upgrade R0BA (lvls=1):
+   Lvl 1: name=|cffffc864Проект "Механобоец" | tip=|cffffc864Начать проект "Механобоец" | hotkey=A | ubertip=|cffffc864Машина|r чем-то будет напоминать дворфа, как по габаритам, так и по носимому оружию - молоту. 
+Upgrade R0BB (lvls=1):
+   Lvl 1: name=|cffffc864Проект "Минитанк" | tip=|cffffc864Начать проект "Минитанк" | hotkey=X | ubertip=Для |cffffc864гнома|r этот |cffffc864танк|r не будет таким уж и маленьким.
+Upgrade R0BC (lvls=1):
+   Lvl 1: name=|cffffc864Проект "Наногном" | tip=|cffffc864Начать проект "Наногном" | hotkey=A | ubertip=Электричество. Меха. Один отдельно взятый гениальный гном. Вот что нужно, чтобы создать супербойца. Гоблинам нас не догнать!
+Upgrade R0BD (lvls=1):
+   Lvl 1: name=|cffffc864Проект "Экспериментальный ГГТ" | tip=|cffffc864Начать проект "Экспериментальный ГГТ" | hotkey=Z | ubertip=|cffffc864Универсальный ГГТ|r - Гениальное |cffffc864Гномье|r Творение. Настолько Гениальное, что никто еще так и не понял, как его эффективно использовать. И настолько униврсальное, что может и перестать быть собой... (Есть ветки огнемета, мобильной фабрики и поддержки).
+Upgrade R0BE (lvls=1):
+   Lvl 1: name=|cffffc864Проект "Шагоход" | tip=|cffffc864Начать проект "Шагоход" | hotkey=S | ubertip=|cffffc864Шагоход|r будет очень мобилен, а его пулемет докажет, что будущее - за огнестрелом.
+Upgrade R0BF (lvls=1):
+   Lvl 1: name=|cffffc864Проект "Универсальный танк | tip=|cffffc864Начать проект "Универсальный танк" | hotkey=X | ubertip=|cffffc864Танк|r, способный выполнять на поле боя огромный спект задач. Но приоритеты придется выбрать.
+Upgrade R0BG (lvls=1):
+   Lvl 1: name=|cffffc864Проект "Танк Венец" | tip=|cffffc864Начать проект "Танк Венец" | hotkey=X | ubertip=|cffffc864Танк|r, одним своим содежанием в мирное время сжирающий |cffffc864Гномью|r экономику. Однако все это компенсируется чрезчвычайно огромной боевой мощью
+Upgrade R0BH (lvls=1):
+   Lvl 1: name=|cffffc864Проект "Механогигант" | tip=|cffffc864Начать проект "Механогигант" | hotkey=A | ubertip=Рост теперь точно не проблема.
+Upgrade R0BI (lvls=1):
+   Lvl 1: name=|cffffc864Проект "Бронемашина" | tip=|cffffc864Начать проект "Бронемашина" | hotkey=Z | ubertip=Чем мобильней армия, тем она опаснее, так как может совершать непредсказуемые манневры. |cffffc864Бронемашина|r же позволяет использовать это правило войны по полной.
+Upgrade R0BJ (lvls=1):
+   Lvl 1: name=|cffffc864Клап Клап на производственном фронте | tip=|cffffc864Клап Клап на производственном фронте | hotkey=W | ubertip=За |cffffc864Клап Клапом|r будущее производсвенного фронта, и нам лишь нужно его доработать. +15% к скорости передвижения и 15 к добываемой древесине.
+Upgrade R0BK (lvls=1):
+   Lvl 1: name=|cffffc864Клап Клап подрывник | tip=|cffffc864Клап Клап подрывник | hotkey=S | ubertip=Ладно, может сам |cffffc864Клап Клап|r и не очень боеспособный юнит, однако, если начинить его взрывчаткой... Клап Клапы получают способность "|cffffc864Подрыв|r".
+Upgrade R0BL (lvls=1):
+   Lvl 1: name=|cffffc864Клап Клап - механический щит | tip=|cffffc864Клап Клап - механический щит | hotkey=S | ubertip=На самом деле, иногда очень нужны резервы, способные удержать фронт от краха. Новый |cffffc864Клап Клап|r такое сможет! Еще один уровень брони и 150 хп.
+Upgrade R0BM (lvls=1):
+   Lvl 1: name=|cffffc864Клап Клап - добытчик древесины | tip=|cffffc864Клап Клап - добытчик древесины | hotkey=S | ubertip=Применение найдено! Новый |cffffc864Клап Клап|r будет сверэффективно рубить лес! +25 к добываемой древесине.
+Upgrade R0BN (lvls=1):
+   Lvl 1: name=|cffffc864Поставить Клап Клап на поток | tip=|cffffc864Поставить Клап Клап на поток | hotkey=S | ubertip=Новые методики прозводства позволят прозводить тоже количество робот по меньшей цене. 
+Upgrade R0BO (lvls=1):
+   Lvl 1: name=|cffffc864Огромный Клап Клап | tip=|cffffc864Огромный Клап Клап | hotkey=S | ubertip=|cffffc864Гномы|r - самая гениальная раса на Азероте. Что если просто увеличить |cffffc864Клапа|r в размерах?
+Upgrade R0BP (lvls=1):
+   Lvl 1: name=|cffffc864Улучшение добычи Клап Клапа | tip=|cffffc864Улучшение добычи Клап Клапа | hotkey=X | ubertip=Небольшое улучшение, +50 к собираемой древесине.
+Upgrade R0BQ (lvls=1):
+   Lvl 1: name=|cffffc864Мехавоин-защитник | tip=|cffffc864Мехавоин-защитник | hotkey=Q | ubertip=Увеличивает броню |cffffc864мехавоина|r на 1 пункт.
+Upgrade R0BR (lvls=1):
+   Lvl 1: name=|cffffc864Улучшенные поршни | tip=|cffffc864Улучшенные поршни | hotkey=W | ubertip=Увеличивает шанс оглушить врага c 15 до 25%.
+Upgrade R0BT (lvls=1):
+   Lvl 1: name=|cffffc864Переделать шасси | tip=|cffffc864Переделать шасси | hotkey=E | ubertip=Увеличивает скорость передвижения |cffffc864минитанка.
+Upgrade R0BX (lvls=1):
+   Lvl 1: name=|cffe6beaaГномы | tip=|cffe6beaaГномы | hotkey=None | ubertip=Умные, дерзкие и подчас чудаковатые гномы — самая удивительная из цивилизованных рас Азерота. Оптимизм перед лицом несчастий как нельзя лучше характеризует непоколебимый дух этой расы. 
+Upgrade R0C0 (lvls=1):
+   Lvl 1: name=|cffffc864Проект "Самоходная артиллерия" | tip=|cffffc864Начать проект проект "Самоходная артиллерия" | hotkey=Z | ubertip=Чудо техники, способное отправлять снаряды на огромные расстояния. 
+Upgrade R0C1 (lvls=1):
+   Lvl 1: name=|cffffc864Проект "Сверхмассвиная артиллерия" | tip=|cffffc864Изучить проект "Сверхмассвиная артиллерия" | hotkey=F | ubertip=Очень амбициозный проект, на который уйдет много времени и ресурсов.
+Upgrade R0C2 (lvls=1):
+   Lvl 1: name=|cffffc864Управление электронами | tip=|cffffc864Управление электронами | hotkey=Q | ubertip=Открывает способность |cffffc864наногному|r "|cffffc864Электрическое поле|r".
+Upgrade R0C3 (lvls=1):
+   Lvl 1: name=|cffffc864Улучшенный мотор | tip=|cffffc864Улучшенный мотор | hotkey=Сбрасывает все настройки, позволяя играть на всей карте. | ubertip=Увеличивает скорость |cffffc864самоходной артиллерии.
+Upgrade R0C4 (lvls=1):
+   Lvl 1: name=|cffffc864Проект "Мега-бомба" | tip=|cffffc864Начать проект проект "Мега-бомба" | hotkey=F | ubertip=Бомба, сравнимая по мощи с манабомбой, сброшеной на Терамор. Для разработки требуется очень много ресурсов и времени.
+Upgrade R0C5 (lvls=1):
+   Lvl 1: name=|cffffc864Оптимизировать перезарядку | tip=|cffffc864Оптимизировать перезарядку | hotkey=Q | ubertip=Увеличивает скорость атаки |cffffc864минитанка|r на 20%.
+Upgrade R0C6 (lvls=1):
+   Lvl 1: name=|cffffc864Новая модель артпушки | tip=|cffffc864Новая модель артпушки | hotkey=W | ubertip=Усиливает способность |cffffc864минитанка|r "|cffffc864Артвыстрел|r".
+Upgrade R0C7 (lvls=1):
+   Lvl 1: name=|cffffc864Улучшенная моторика | tip=|cffffc864Улучшенная моторика | hotkey=W | ubertip=Увеличивает скорость передвижения |cffffc864шагоходов.
+Upgrade R0C8 (lvls=1):
+   Lvl 1: name=|cffffc864Разрядка | tip=|cffffc864Разрядка | hotkey=W | ubertip=Атаки|cffffc864 наногнома|r смогут сжигать ману противника и наносить доп. урон.
+Upgrade R0C9 (lvls=1):
+   Lvl 1: name=|cffffc864Дополнительный слой брони | tip=|cffffc864Дополнительный слой брони | hotkey=Q | ubertip=Увеличивает здоровье танка "|cffffc864Венец|r" на 250 единиц, но уменьшает его скорость передвижения на 30 единиц.
+Upgrade R0CA (lvls=1):
+   Lvl 1: name=|cffffc864Качественные снаряды | tip=|cffffc864Качественные снаряды | hotkey=W | ubertip=Увеличивает урон танка "|cffffc864Венец|r".
+Upgrade R0CB (lvls=1):
+   Lvl 1: name=|cffffc864Продвинутая система подачи ракет | tip=|cffffc864Продвинутая система подачи ракет | hotkey=E | ubertip=Усиливает ракеты танка "|cffffc864Венец|r".
+Upgrade R0CC (lvls=1):
+   Lvl 1: name=|cffffc864Усилить пулеметы | tip=|cffffc864Усилить пулеметы | hotkey=W | ubertip=Повышает урон от способности |cffffc864универсального танка.
+Upgrade R0CD (lvls=1):
+   Lvl 1: name=|cffffc864Улучшенная перезарядка огнемета | tip=|cffffc864Улучшенная перезарядка огнемета | hotkey=E | ubertip=Снижает время перезарядки сгустка огня.
+Upgrade R0CE (lvls=1):
+   Lvl 1: name=|cffffc864Усилить снаряды | tip=|cffffc864Усилить снаряды | hotkey=Q | ubertip=Увеличивает урон, наносимый атаками |cffffc864универсального танка.
+Upgrade R0CF (lvls=1):
+   Lvl 1: name=|cffffc864Бронебойные снаряды | tip=|cffffc864Бронебойные снаряды | hotkey=Q | ubertip=Увеличивает урон шагохода по целям с тяжелой броней на 10%.
+Upgrade R0CG (lvls=1):
+   Lvl 1: name=|cffffc864Разрывные снаряды | tip=|cffffc864Разрывные снаряды | hotkey=W | ubertip=Увеличивает урон |cffffc864шагохода|r по целям с легкой броней на 20%.
+Upgrade R0CH (lvls=1):
+   Lvl 1: name=|cffffc864ГГТ - Огнеметный танк | tip=|cffffc864ГГТ - Огнеметный танк | hotkey=Q | ubertip=Открывает огненную атаку для |cffffc864ГГТ.
+Upgrade R0CI (lvls=1):
+   Lvl 1: name=|cffffc864ГГТ - минизавод на колесах | tip=|cffffc864ГГТ - минизавод на колесах | hotkey=W | ubertip=|cffffc864ГГТ|r сможет производить реженоги на месте.
+Upgrade R0CJ (lvls=1):
+   Lvl 1: name=|cffffc864Усилить моторы бронемашины | tip=|cffffc864Усилить моторы бронемашины | hotkey=Q | ubertip=Увеличивает скорость передвижения |cffffc864машины.
+Upgrade R0CK (lvls=1):
+   Lvl 1: name=|cffffc864Машина для снабжения | tip=|cffffc864Машина для снабжения | hotkey=E | ubertip=Добавляет ауру машине, которая будет повышать скорость атаки и передвижения техники.
+Upgrade R0CL (lvls=1):
+   Lvl 1: name=|cffffc864Улучшенный пулемет | tip=|cffffc864Улучшенный пулемет | hotkey=W | ubertip=|cffffc864Машина|r сможет наносить больше урона противнику.
+Upgrade R0CM (lvls=1):
+   Lvl 1: name=|cffffc864ГГТ - миноукладчик | tip=|cffffc864ГГТ - миноукладчик | hotkey=E | ubertip=|cffffc864ГГТ|r сможет закапывать мины.
+Upgrade R0CN (lvls=1):
+   Lvl 1: name=|cffffc864Улучшенная калибровка | tip=|cffffc864Улучшенная калибровка | hotkey=W | ubertip=Увеличивает дальность стрельбы |cffffc864самоходной артиллериии.
+Upgrade R0CO (lvls=1):
+   Lvl 1: name=|cffffc864Сверхмассивные снаряды | tip=|cffffc864Сверхмассивные снаряды | hotkey=Q | ubertip=Увеличивает урон |cffffc864артиллерии.
+Upgrade R0CP (lvls=1):
+   Lvl 1: name=|cffffc864Сверхмассивная броня | tip=|cffffc864Сверхмассивная броня | hotkey=Q | ubertip=Увеличивает здоровье |cffffc864механогиганта.
+Upgrade R0CQ (lvls=1):
+   Lvl 1: name=|cffffc864Шокоудары | tip=|cffffc864Шокоудары | hotkey=W | ubertip=Атаки |cffffc864механогиганта|r с некоторой вероятностью смогут наносить урон по области.
+Upgrade R0CR (lvls=1):
+   Lvl 1: name=|cffffc864Урон от когтей | tip=|cffffc864Урон от когтей | hotkey=Q | ubertip=Усиливает урон от атак |cffffc864механопаука.
+Upgrade R0CS (lvls=1):
+   Lvl 1: name=|cffffc864Улучшенный ракетомет | tip=|cffffc864Улучшенный ракетомет | hotkey=W | ubertip=Усиливает способность |cffffc864механопауков|r "|cffffc864Пуск ракет|r".
+Upgrade R0CT (lvls=6):
+   Lvl 1: name=|cffffc864Вооружение |cffffff00(уровень 1)|r | tip=Исследовать |cffffc864Вооружение |cffffff00(уровень 1)|r | hotkey=X | ubertip=Увеличивает урон дальнобойных юнитов |cffffc864гномов.
+   Lvl 2: name=|cffffc864Вооружение |cffffff00(уровень 2)|r | tip=Исследовать |cffffc864Вооружение |cffffff00(уровень 2)|r | hotkey=X | ubertip=Увеличивает урон дальнобойных юнитов |cffffc864гномов.
+   Lvl 3: name=|cffffc864Вооружение |cffffff00(уровень 3)|r | tip=Исследовать |cffffc864Вооружение |cffffff00(уровень 3)|r | hotkey=X | ubertip=Увеличивает урон дальнобойных юнитов |cffffc864гномов.
+   Lvl 4: name=|cffffc864Вооружение |cffffff00(уровень 4)|r | tip=Исследовать |cffffc864Вооружение |cffffff00(уровень 4)|r | hotkey=X | ubertip=Увеличивает урон дальнобойных юнитов |cffffc864гномов.
+   Lvl 5: name=|cffffc864Вооружение |cffffff00(уровень 5)|r | tip=Исследовать |cffffc864Вооружение |cffffff00(уровень 5)|r | hotkey=X | ubertip=Увеличивает урон дальнобойных юнитов |cffffc864гномов.
+   Lvl 6: name=|cffffc864Вооружение |cffffff00(уровень 6)|r | tip=Исследовать |cffffc864Вооружение |cffffff00(уровень 6)|r | hotkey=X | ubertip=Увеличивает урон дальнобойных юнитов |cffffc864гномов.
+Upgrade R0CU (lvls=6):
+   Lvl 1: name=|cffffc864Прочные детали |cffffff00(уровень 1)|r | tip=|cffffc864Исследовать прочные детали |cffffff00(уровень 1)|r | hotkey=C | ubertip=Увеличивает броню всех юнитов |cffffc864гномов.
+   Lvl 2: name=|cffffc864Прочные детали |cffffff00(уровень 2)|r | tip=|cffffc864Исследовать прочные детали |cffffff00(уровень 2)|r | hotkey=C | ubertip=Увеличивает броню всех юнитов |cffffc864гномов.
+   Lvl 3: name=|cffffc864Прочные детали |cffffff00(уровень 3)|r | tip=|cffffc864Исследовать прочные детали |cffffff00(уровень 3)|r | hotkey=C | ubertip=Увеличивает броню всех юнитов|cffffc864 гномов.
+   Lvl 4: name=|cffffc864Прочные детали |cffffff00(уровень 4)|r | tip=|cffffc864Исследовать прочные детали |cffffff00(уровень 4)|r | hotkey=C | ubertip=Увеличивает броню всех юнитов|cffffc864 гномов.
+   Lvl 5: name=|cffffc864Прочные детали |cffffff00(уровень 5)|r | tip=|cffffc864Исследовать прочные детали |cffffff00(уровень 5)|r | hotkey=C | ubertip=Увеличивает броню всех юнитов |cffffc864гномов.
+   Lvl 6: name=|cffffc864Прочные детали |cffffff00(уровень 6)|r | tip=|cffffc864Исследовать прочные детали |cffffff00(уровень 6)|r | hotkey=C | ubertip=Увеличивает броню всех юнитов |cffffc864гномов.
+Upgrade R0CV (lvls=6):
+   Lvl 1: name=|cffffc864Улучшенная тренировка пехоты | tip=|cffffc864Исследовать прочные детали |cffffff00(уровень 1)|r | hotkey=Z | ubertip=Усиливает |cffffc864гномов|r. Увеличивает скорость атаки и перемещения, а если юнит обладает маной, то повышается также запас маны и её регенерации.
+   Lvl 2: name=|cffffc864Улучшенная тренировка пехоты | tip=|cffffc864Исследовать прочные детали |cffffff00(уровень 2)|r | hotkey=Z | ubertip=Усиливает пехоту |cffffc864гномов|r. Увеличивает скорость атаки и перемещения, а если юнит обладает маной, то повышается также запас маны и её регенерации.
+   Lvl 3: name=|cffffc864Улучшенная тренировка пехоты | tip=|cffffc864Исследовать прочные детали |cffffff00(уровень 3)|r | hotkey=Z | ubertip=Усиливает пехоту |cffffc864гномов|r. Увеличивает скорость атаки и перемещения, а если юнит обладает маной, то повышается также запас маны и её регенерации.
+   Lvl 4: name=|cffffc864Улучшенная тренировка пехоты | tip=|cffffc864Исследовать прочные детали |cffffff00(уровень 4)|r | hotkey=Z | ubertip=Усиливает пехоту |cffffc864гномов|r. Увеличивает скорость атаки и перемещения, а если юнит обладает маной, то повышается также запас маны и её регенерации.
+   Lvl 5: name=|cffffc864Улучшенная тренировка пехоты | tip=|cffffc864Исследовать прочные детали |cffffff00(уровень 5)|r | hotkey=Z | ubertip=Усиливает пехоту |cffffc864гномов|r. Увеличивает скорость атаки и перемещения, а если юнит обладает маной, то повышается также запас маны и её регенерации.
+   Lvl 6: name=|cffffc864Улучшенная тренировка пехоты | tip=|cffffc864Исследовать прочные детали |cffffff00(уровень 6)|r | hotkey=Z | ubertip=Усиливает пехоту |cffffc864гномов|r. Увеличивает скорость атаки и перемещения, а если юнит обладает маной, то повышается также запас маны и её регенерации.
+Upgrade R0CW (lvls=6):
+   Lvl 1: name=|cffffc864Улучшенные компоненты | tip=|cffffc864Исследовать улучшенные компоненты |cffffff00(уровень 1)|r | hotkey=Z | ubertip=Увеличивает скорость атаки, передвижения, а также здоровье всех юнитом |cffffc864гномов|r, производимых в |cffffc864мастерской.
+   Lvl 2: name=|cffffc864Улучшенные компоненты | tip=|cffffc864Исследовать улучшенные компоненты |cffffff00(уровень 2)|r | hotkey=Z | ubertip=Увеличивает скорость атаки, передвижения, а также здоровье всех юнитом |cffffc864гномов|r, производимых в |cffffc864мастерской.
+   Lvl 3: name=|cffffc864Улучшенные компоненты | tip=|cffffc864Исследовать улучшенные компоненты |cffffff00(уровень 3)|r | hotkey=Z | ubertip=Увеличивает скорость атаки, передвижения, а также здоровье всех юнитом |cffffc864гномов|r, производимых в |cffffc864мастерской.
+   Lvl 4: name=|cffffc864Улучшенные компоненты | tip=|cffffc864Исследовать улучшенные компоненты |cffffff00(уровень 4)|r | hotkey=Z | ubertip=Увеличивает скорость атаки, передвижения, а также здоровье всех юнитом |cffffc864гномов|r, производимых в |cffffc864мастерской.
+   Lvl 5: name=|cffffc864Улучшенные компоненты | tip=|cffffc864Исследовать улучшенные компоненты |cffffff00(уровень 5)|r | hotkey=Z | ubertip=Увеличивает скорость атаки, передвижения, а также здоровье всех юнитом |cffffc864гномов|r, производимых в |cffffc864мастерской.
+   Lvl 6: name=|cffffc864Улучшенные компоненты | tip=|cffffc864Исследовать улучшенные компоненты |cffffff00(уровень 6)|r | hotkey=Z | ubertip=Увеличивает скорость атаки, передвижения, а также здоровье всех юнитом |cffffc864гномов|r, производимых в |cffffc864мастерской.
+Upgrade R0CX (lvls=6):
+   Lvl 1: name=|cffffc864Улучшенное управление | tip=|cffffc864Исследовать улучшенное управление |cffffff00(уровень 1)|r | hotkey=Z | ubertip=Увеличивает скорость атаки, передвижения, а также здоровье всех юнитом |cffffc864гномов|r, производимых на фабрике.
+   Lvl 2: name=|cffffc864Улучшенное управление | tip=|cffffc864Исследовать улучшенное управление |cffffff00(уровень 2)|r | hotkey=Z | ubertip=Увеличивает скорость атаки, передвижения, а также здоровье всех юнитом |cffffc864гномов|r, производимых на фабрике.
+   Lvl 3: name=|cffffc864Улучшенное управление | tip=|cffffc864Исследовать улучшенное управление |cffffff00(уровень 3)|r | hotkey=Z | ubertip=Увеличивает скорость атаки, передвижения, а также здоровье всех юнитом|cffffc864 гномов|r, производимых на фабрике.
+   Lvl 4: name=|cffffc864Улучшенное управление | tip=|cffffc864Исследовать улучшенное управление |cffffff00(уровень 4)|r | hotkey=Z | ubertip=Увеличивает скорость атаки, передвижения, а также здоровье всех юнитом |cffffc864гномов|r, производимых на фабрике.
+   Lvl 5: name=|cffffc864Улучшенное управление | tip=|cffffc864Исследовать улучшенное управление |cffffff00(уровень 5)|r | hotkey=Z | ubertip=Увеличивает скорость атаки, передвижения, а также здоровье всех юнитом |cffffc864гномов|r, производимых на фабрике.
+   Lvl 6: name=|cffffc864Улучшенное управление | tip=|cffffc864Исследовать улучшенное управление |cffffff00(уровень 6)|r | hotkey=Z | ubertip=Увеличивает скорость атаки, передвижения, а также здоровье всех юнитом |cffffc864гномов|r, производимых на фабрике.
+Upgrade R0HW (lvls=1):
+   Lvl 1: name=|cffe6beaaГномы|r или |cffaad2ffАльянс | tip=|cffaad2ffФракция с спец магами | hotkey=G | ubertip=
+Upgrade R0J2 (lvls=6):
+   Lvl 1: name=|cffffc864Усиленная броня | tip=Исследовать |cffffc864Усиленная броня|r |cffffff00(уровень 1)|r | hotkey=X | ubertip=Увеличивает здоровье пехоты |cffffc864гномов|r на 65 ед.
+   Lvl 2: name=|cffffc864Усиленная броня | tip=Исследовать |cffffc864Усиленная броня|r |cffffff00(уровень 2)|r | hotkey=X | ubertip=Увеличивает здоровье пехоты |cffffc864гномов|r на 65 ед.
+   Lvl 3: name=|cffffc864Усиленная броня | tip=Исследовать |cffffc864Усиленная броня|r |cffffff00(уровень 3)|r | hotkey=X | ubertip=Увеличивает здоровье пехоты |cffffc864гномов|r на 65 ед.
+   Lvl 4: name=|cffffc864Усиленная броня | tip=Исследовать |cffffc864Усиленная броня|r |cffffff00(уровень 4)|r | hotkey=X | ubertip=Увеличивает здоровье пехоты |cffffc864гномов|r на 65 ед.
+   Lvl 5: name=|cffffc864Усиленная броня | tip=Исследовать |cffffc864Усиленная броня|r |cffffff00(уровень 5)|r | hotkey=X | ubertip=Увеличивает здоровье пехоты |cffffc864гномов|r на 65 ед.
+   Lvl 6: name=|cffffc864Усиленная броня | tip=Исследовать |cffffc864Усиленная броня|r |cffffff00(уровень 6)|r | hotkey=X | ubertip=Увеличивает здоровье пехоты |cffffc864гномов|r на 65 ед.
+
+=== 7. ABILITIES (75) ===
+Ability A00S (lvls=1): name=Сильный удар | hotkey=None | rhotkey=B
+   Research: tip=Изучить «Сильный удар» [|cffffcc00%d-й уровень|r] | ubertip="Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. На <AHbh,DataC1> больше урона. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. На <AHbh,DataC2> больше урона. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс. На <AHbh,DataC3> больше урона."
+   Lvl 1: tip=Сильный удар | ubertip=С 12%-й вероятностью атака нанесет на 10 больше урона и оглушит цель на 1 сек. Не оглушает героев.
+Ability A01C (lvls=1): name=Графика: Свечение героя | hotkey=None | rhotkey=None
+   Lvl 1: tip=Графика: Свечение героя | ubertip=
+Ability A0D5 (lvls=4): name=|c00ffdb78Осколочная Граната|r | hotkey=W | rhotkey=W
+   Research: tip=Изучить «|c00ffdb78Осколочная граната|rк» [|cffffcc00%d-й уровень|r] | ubertip=Кидает в область гранату, нанося урон.
+   Lvl 1: tip=|c00ffdb78Осколочная граната|r [|cffffcc001-й уровень|r] | ubertip=Герой кидает в область гранату, нанося 40 ед. урона.
+   Lvl 2: tip=|c00ffdb78Осколочная граната|r [|cffffcc002-й уровень|r] | ubertip=Герой кидает в область гранату, нанося 60 ед. урона.
+   Lvl 3: tip=|c00ffdb78Осколочная граната|r [|cffffcc003-й уровень|r] | ubertip=Герой кидает в область гранату, нанося 80 ед. урона.
+   Lvl 4: tip=|c00ffdb78Осколочная граната|r [|cffffcc004-й уровень|r] | ubertip=Герой кидает в область гранату, нанося 100 ед. урона.
+Ability A0GW (lvls=4): name=|cffe4cfa3Аура меткости|r | hotkey=E | rhotkey=E
+   Research: tip=|cffe4cfa3Аура меткости|r (|cffffffffE|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон дистанционных атак находящихся рядом союзных войск.|n|n|cffa6afb8Уровень 1:|cffced4da |cffc8e087+10%|cffced4da к урону.|n|cffa6afb8Уровень 2:|cffced4da |cffc8e087+20%|cffced4da к урону.|n|cffa6afb8Уровень 3:|cffced4da |cffc8e087+30%|cffced4da к урону.|n|cffa6afb8Уровень 4:|cffced4da |cffc8e087+40%|cffced4da к урону.|r
+   Lvl 1: tip=|cffe4cfa3Аура меткости|r (|cffffffffE|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон союзных стрелков на |cffc8e087+10%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r
+   Lvl 2: tip=|cffe4cfa3Аура меткости|r (|cffffffffE|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон союзных стрелков на |cffc8e087+20%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r
+   Lvl 3: tip=|cffe4cfa3Аура меткости|r (|cffffffffE|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон союзных стрелков на |cffc8e087+30%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r
+   Lvl 4: tip=|cffe4cfa3Аура меткости|r (|cffffffffE|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон союзных стрелков на |cffc8e087+40%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r
+Ability A0I3 (lvls=1): name=|cffe4cfa3Небольшой скачок|r | hotkey=C | rhotkey=E
+   Research: tip=|cffe4cfa3Небольшой скачок|r (|cffffffffC|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r
+   Lvl 1: tip=|cffe4cfa3Небольшой скачок|r (|cffffffffC|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r
+Ability A0IQ (lvls=1): name=|cffffdcb4Обозначить столицу|r | hotkey=X | rhotkey=None
+   Lvl 1: tip=|cffffdcb4Обозначить столицу|r | ubertip=Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение.
+Ability A0LI (lvls=1): name=Обмен |cffffff00Золота |rна |cff00ff00Дерево|r | hotkey=S | rhotkey=None
+   Lvl 1: tip=Обмен |cffffff00Золота |rна |cff00ff00Дерево|r | ubertip=Отнимает у игрока|cffffd700 500 золота|r, но добавляет |cff228722100 дерева|r.
+Ability A0LJ (lvls=1): name=Обмен |cff00ff00Дерева |rна |cffffff00Золото|r | hotkey=A | rhotkey=None
+   Lvl 1: tip=Обмен |cff00ff00Дерева |rна |cffffff00Золото|r | ubertip=Отнимает у игрока |cff228722500 дерева|r, но добавляет |cffffd700100 золота|r.
+Ability A0S2 (lvls=1): name=|cfff0c8afДвойной выстрел|r | hotkey=None | rhotkey=None
+   Lvl 1: tip=|cfff0c8afДвойной выстрел|r | ubertip=За первой атакой следует вторая.
+Ability A0S6 (lvls=1): name=Переключить режим | hotkey=W | rhotkey=None
+   Lvl 1: tip=Переключить режим | ubertip=Меняет тип атаки
+Ability A0S7 (lvls=2): name=|cfff0c8afЗалп ракет|r | hotkey=Q | rhotkey=R
+   Research: tip=Изучить «Кассетные ракеты» [|cffffcc00%d-й уровень|r] | ubertip="Обстреливает указанную область ракетами, оглушая находящихся рядом наземных врагов на <ANc3,Dur1> сек. и нанося им урон. |n|n|cffffcc001-й уровень:|r 45 урона.|n|cffffcc002-й уровень:|r 75 урона.|n|cffffcc003-й уровень:|r 110 урона."
+   Lvl 1: tip=|cfff0c8afЗалп ракет|r | ubertip=Обстреливает указанную область ракетами, нанося до 10 урона находящимся рядом наземным врагам и оглушая их на <ANc3,Dur1> сек.
+   Lvl 2: tip=|cfff0c8afЗалп ракет|r | ubertip=Обстреливает указанную область ракетами, нанося до 20 урона находящимся рядом наземным врагам и оглушая их на <ANc3,Dur2> сек.
+Ability A0S8 (lvls=1): name=Сгусток огня | hotkey=Q | rhotkey="F"
+   Research: tip="Изучить «Пламенное дыхание» [|cffffcc00%d-й уровень|r]" | ubertip="Выдыхает огонь, нанося урон в секторе перед собой. Враги, пораженные «Хмельными парами», при этом загораются и получают периодический урон. |nВремя действия: <ANbf,Dur1> сек. |n|n|cffffcc001-й уровень:|r <ANbf,DataA1> урона мгновенно, <ANbf,DataE1> урона/сек. |n|cffffcc002-й уровень:|r <ANbf,DataA2> урона мгновенно, <ANbf,DataE2> урона/сек. |n|cffffcc003-й уровень:|r <ANbf,DataA3> урона мгновенно, <ANbf,DataE3> урона/сек."
+   Lvl 1: tip=Сгусток огня | ubertip=Стреляет во врагов из миниатюрного огнемета.
+Ability A0S9 (lvls=1): name=|cffffc864Прицельная пальба из пулеметов | hotkey=W | rhotkey=E
+   Research: tip=Прицельная пальба из пулеметов | ubertip="Вытягивает ману из врага или передает ману союзнику. |n|nПри этом запас маны мага крови может превысить максимальный, но неиспользованные излишки быстро исчезают. |nВремя действия: <AHdr,Dur1> сек.|n|n|cffffcc001-й уровень:|r <AHdr,DataB1> маны/сек. |n|cffffcc002-й уровень:|r <AHdr,DataB2> маны/сек. |n|cffffcc003-й уровень:|r <AHdr,DataB3> маны/сек."
+   Lvl 1: tip=|cffffc864Прицельная пальба из пулеметов | ubertip=Стреляет по конкретно выбранному юниту.
+Ability A0SA (lvls=2): name=|cfff0c8afЗалп ракет|r | hotkey=Q | rhotkey=R
+   Research: tip=Изучить «Кассетные ракеты» [|cffffcc00%d-й уровень|r] | ubertip="Обстреливает указанную область ракетами, оглушая находящихся рядом наземных врагов на <ANc3,Dur1> сек. и нанося им урон. |n|n|cffffcc001-й уровень:|r 45 урона.|n|cffffcc002-й уровень:|r 75 урона.|n|cffffcc003-й уровень:|r 110 урона."
+   Lvl 1: tip=|cfff0c8afЗалп ракет|r | ubertip=Обстреливает указанную область ракетами, нанося урон находящимся рядом наземным врагам.
+   Lvl 2: tip=|cfff0c8afЗалп ракет|r | ubertip=Обстреливает указанную область ракетами, нанося урон находящимся рядом наземным врагам.
+Ability A0SB (lvls=2): name=|cfff0c8afАртвыстрел|r | hotkey=Q | rhotkey=R
+   Research: tip=Изучить «Кассетные ракеты» [|cffffcc00%d-й уровень|r] | ubertip="Обстреливает указанную область ракетами, оглушая находящихся рядом наземных врагов на <ANc3,Dur1> сек. и нанося им урон. |n|n|cffffcc001-й уровень:|r 45 урона.|n|cffffcc002-й уровень:|r 75 урона.|n|cffffcc003-й уровень:|r 110 урона."
+   Lvl 1: tip=|cfff0c8afАртвыстрел|r | ubertip=Выстреливает в выбранную область. Наносит 75% урона зданиям.
+   Lvl 2: tip=|cfff0c8afАртвыстрел|r | ubertip=Выстреливает в выбранную область. Наносит 75% урона зданиям.
+Ability A0SC (lvls=1): name=Резня | hotkey=None | rhotkey=C
+   Research: tip=Изучить «Рассекающий удар» [|cffffcc00%d-й уровень|r] | ubertip="Атаки властителя преисподней наносят урон сразу нескольким целям. |n|n|cffffcc001-й уровень:|r <ANca,DataA1,%>% урона по области. |n|cffffcc002-й уровень:|r <ANca,DataA2,%>% урона по области. |n|cffffcc003-й уровень:|r <ANca,DataA3,%>% урона по области."
+   Lvl 1: tip=Резня | ubertip=Реженоги может задеть несколько противников сразу, но дополнительные цели получают лишь 50% урона.
+Ability A0SD (lvls=1): name=|cfff0c8a0Гномы|r | hotkey=Q | rhotkey=None
+   Lvl 1: tip=|cfff0c8a0Гномы|r | ubertip=|cff7dc87dСоздатель расы:|r |cff9bff0fVinerX|r|n|cff7dc87dСложность:|r |cffe91919Высокая|r|n|cff7dc87dПериод:|r |cffffde19WoW Vanila|r по |cff989279Battle for Azeroth|r|n|cff7dc87dОписание:|r |cffffc864Гномы|r - умныe, лиxиe и зaчacтyю экcцeнтpичныe – caмaя yдивитeльнaя из цивилизoвaнныx pac Aзepoтa. Эти нeyгoмoнныe, oблaдaющиe вeceлым нpaвoм гeниaльныe изoбpeтaтeли пepeжили пpeдaтeльcтвo, пoтepю poднoгo дoмa и eдвa нe были пoлнocтью yничтoжeны. Oптимизм, пpoявлeнный гнoмaми пepeд лицoм пoдoбныx нecчacтий, кaк нeльзя лyчшe xapaктepизyeт нeпoкoлeбимый дyx этoй pacы.
+Ability A0SE (lvls=1): name=Взять на борт | hotkey=L | rhotkey=None
+   Lvl 1: tip=Взять на борт | ubertip=Берет на борт наземного союзника.
+Ability A0SG (lvls=1): name=|cffffc864Сменить режим | hotkey=Q | rhotkey=None
+   Research: tip=Изучить |cff6f2583Облик ворона|r | ubertip=Позволяет принимать облик ворона
+   Lvl 1: tip=|cffffc864Сменить режим | ubertip=Перейти в боевой режим.
+Ability A0SH (lvls=1): name=|cfff0c8afАннигиляция|r | hotkey=R | rhotkey=Q
+   Research: tip=Изучить «Огненный столб» [|cffffcc00%d-й уровень|r] | ubertip="Создает огненный столб, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r 45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек. |n|cffffcc002-й уровень:|r 80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек. |n|cffffcc003-й уровень:|r 110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек."
+   Lvl 1: tip=|cfff0c8afАннигиляция|r | ubertip=Чудо |cffffc864техники|r, способное нанести колоссальный урон. |cffffc864Гномы|r говорят, что такого успеха они добились деля ядра какого-то Атома. Кто такой Атом и зачем им пришлось делить его (наверное пушечные) ядра нам неизвестно...
+Ability A0SI (lvls=1): name=Ба-бах! | hotkey=B | rhotkey=None
+   Lvl 1: tip=Ба-бах! | ubertip="Наносит <Asd3,DataB1> урона в небольшой области."
+Ability A0SJ (lvls=1): name=Добывать ресурсы | hotkey=G | rhotkey=None
+   Lvl 1: tip=Добывать ресурсы | ubertip=Добывает древесину из деревьев.
+Ability A0SK (lvls=2): name=|cfff0c8afСильный удар|r | hotkey=None | rhotkey=None
+   Lvl 1: tip=|cfff0c8afСильный удар|r | ubertip="С <ACbh,DataA1>%-й вероятностью атака нанесет на <ACbh,DataC1> больше урона и оглушит цель на <ACbh,Dur1> сек."
+   Lvl 2: tip=|cfff0c8afСильный удар|r | ubertip=С <ACbh,DataA2>%-й вероятностью атака нанесет на <ACbh,DataC2> больше урона и оглушит цель на <ACbh,Dur2> сек.
+Ability A0SN (lvls=1): name=|cffffc864Разрывные снаряды | hotkey=None | rhotkey=None
+   Lvl 1: tip=|cffffc864Разрывные снаряды | ubertip=+20% к урону по целям с легкой броней.
+Ability A0SO (lvls=1): name=|cffffc864Бронебойные снаряды|r | hotkey=None | rhotkey=None
+   Lvl 1: tip=|cffffc864Бронебойные снаряды|r | ubertip=10% к урону по целям с тяжелой броней.
+Ability A0SZ (lvls=1): name=|cffffc864Выстрелить один снаряд | hotkey=Q | rhotkey=R
+   Research: tip=Изучить «Кассетные ракеты» [|cffffcc00%d-й уровень|r] | ubertip="Обстреливает указанную область ракетами, оглушая находящихся рядом наземных врагов на <ANc3,Dur1> сек. и нанося им урон. |n|n|cffffcc001-й уровень:|r 45 урона.|n|cffffcc002-й уровень:|r 75 урона.|n|cffffcc003-й уровень:|r 110 урона."
+   Lvl 1: tip=|cffffc864Выстрелить один снаряд | ubertip=Стреляет в указанную область (Дальность действия огромная), наносит средний урон.
+Ability A0T0 (lvls=1): name=|cfff0c8afЭМИ|r | hotkey=Q | rhotkey=None
+   Lvl 1: tip=|cfff0c8afЭМИ|r | ubertip="Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r"
+Ability A0TC (lvls=4): name=Расстрел | hotkey=W | rhotkey=W
+   Research: tip=Изучить «Расстрел» [|cffffcc00%d-й уровень|r] | ubertip=Поражает пулями врагов в секторе перед собой. |n|n|cffffcc001-й уровень:|r <ANfl,DataA1> урона каждой цели. |n|cffffcc002-й уровень:|r <ANfl,DataA2> урона каждой цели. |n|cffffcc003-й уровень:|r <ANfl,DataA3> урона каждой цели.
+   Lvl 1: tip=Расстрел [|cffffcc001-й уровень|r] | ubertip=Поражает пулями до <ANfl,DataB1> врагов в секторе перед собой, нанося <ANfl,DataA1> урона.
+   Lvl 2: tip=Расстрел [|cffffcc002-й уровень|r] | ubertip=Поражает пулями до <ANfl,DataB2> врагов в секторе перед собой, нанося <ANfl,DataA2> урона.
+   Lvl 3: tip=Расстрел [|cffffcc003-й уровень|r] | ubertip=Поражает пулями до <ANfl,DataB3> врагов в секторе перед собой, нанося <ANfl,DataA3> урона.
+   Lvl 4: tip=Расстрел [|cffffcc004-й уровень|r] | ubertip=Поражает пулями до <ANfl,DataB4> врагов в секторе перед собой, нанося <ANfl,DataA4> урона.
+Ability A0TD (lvls=2): name=Экспериментальные аккумуляторы | hotkey=None | rhotkey=R
+   Research: tip=Изучить экспериментальные аккумуляторы[|cffffcc00%d-й уровень|r] | ubertip=Повышает интеллект на 25 за уровень. 
+   Lvl 1: tip=Экспериментальные аккумуляторы [|cffffcc001-й уровень|r] | ubertip=+25  к интеллекту.
+   Lvl 2: tip=Экспериментальные аккумуляторы [|cffffcc002-й уровень|r] | ubertip=+50 к интеллекту.
+Ability A0TE (lvls=4): name=Ремонтная аура | hotkey=None | rhotkey=E
+   Research: tip=Изучить «Ремонтная ауру» [|cffffcc00%d-й уровень|r] | ubertip=Ускоряет передвижение и регенерацию здоровья находящихся рядом механизмов.|n|n|cffffcc001-й уровень:|r +<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья. |n|cffffcc002-й уровень:|r +<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья. |n|cffffcc003-й уровень:|r +<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья.
+   Lvl 1: tip=Ремонтная аура [|cffffcc001-й уровень|r] | ubertip=+<AUau,DataA1,%>% к скорости передвижения находящихся рядом механизмов и бонус к регенерации их здоровья.
+   Lvl 2: tip=Ремонтная аура [|cffffcc002-й уровень|r] | ubertip=+<AUau,DataA2,%>% к скорости передвижения находящихся рядом механизмов и бонус к регенерации их здоровья.
+   Lvl 3: tip=Ремонтная аура [|cffffcc003-й уровень|r] | ubertip=+<AUau,DataA3,%>% к скорости передвижения находящихся рядом механизмов и бонус к регенерации их здоровья.
+   Lvl 4: tip=Ремонтная аура [|cffffcc004-й уровень|r] | ubertip=+<AUau,DataA4,%>% к скорости передвижения находящихся рядом механизмов и бонус к регенерации их здоровья.
+Ability A0TF (lvls=4): name=Разобрать бедолагу | hotkey=W | rhotkey=W
+   Research: tip=Разобрать бедолагу | ubertip=Убивает механичекого юнита, тем самым получая его здоровье.
+   Lvl 1: tip=Разобрать бедолагу | ubertip=Убивает механичекого юнита, тем самым получая его здоровье.
+   Lvl 2: tip=Разобрать бедолагу | ubertip=Убивает механичекого юнита, тем самым получая его здоровье.
+   Lvl 3: tip=Разобрать бедолагу | ubertip=Убивает механичекого юнита, тем самым получая его здоровье.
+   Lvl 4: tip=Разобрать бедолагу | ubertip=Убивает механичекого юнита, тем самым получая его здоровье.
+Ability A0TG (lvls=4): name=Раскат грома | hotkey=Q | rhotkey=Q
+   Research: tip=Изучить «Раскат грома» [|cffffcc00%d-й уровень|r] | ubertip="Бьет по земле, нанося урон находящимся рядом наземным врагам и замедляя их передвижение и атаку. |n|n|cffffcc001-й уровень:|r <AHtc,DataA1> урона, -<AHtc,DataC1,%>% от скорости передвижения, -<AHtc,DataD1,%>% от скорости атаки. |n|cffffcc002-й уровень:|r <AHtc,DataA2> урона, -<AHtc,DataC2,%>% от скорости передвижения, -<AHtc,DataD2,%>% от скорости атаки. |n|cffffcc003-й уровень:|r <AHtc,DataA3> урона, -<AHtc,DataC3,%>% от скорости передвижения, -<AHtc,DataD3,%>% от скорости атаки."
+   Lvl 1: tip="Раскат грома [|cffffcc001-й уровень|r]" | ubertip="Бьет по земле, нанося <AHtc,DataA1> урона находящимся рядом наземным врагам и замедляя их передвижение на <AHtc,DataC1,%>% и атаку на <AHtc,DataD1,%>%."
+   Lvl 2: tip="Раскат грома [|cffffcc002-й уровень|r]" | ubertip="Бьет по земле, нанося <AHtc,DataA2> урона находящимся рядом наземным врагам и замедляя их передвижение на <AHtc,DataC2,%>% и атаку на <AHtc,DataD2,%>%."
+   Lvl 3: tip="Раскат грома [|cffffcc003-й уровень|r]" | ubertip="Бьет по земле, нанося <AHtc,DataA3> урона находящимся рядом наземным врагам и замедляя их передвижение на <AHtc,DataC3,%>% и атаку на <AHtc,DataD3,%>%."
+   Lvl 4: tip=Раскат грома [|cffffcc004-й уровень|r] | ubertip=Бьет по земле, нанося <AHtc,DataA4> урона находящимся рядом наземным врагам и замедляя их передвижение на <AHtc,DataC4,%>% и атаку на <AHtc,DataD4,%>%.
+Ability A0TH (lvls=2): name=|cfff0c8afКод Красный|r | hotkey=R | rhotkey=R
+   Research: tip=Изучить «Код Красный» [|cffffcc00%d-й уровень|r] | ubertip=Герой переходит в режим, ускоряющий передвижение (на <ANcr,DataE1,%>%) и атаку. |nВремя действия: <ANcr,HeroDur1> сек. |n|n|cffffcc001-й уровень:|r +<ANcr,DataF1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<ANcr,DataF2,%>% к скорости атаки.|n|cffffcc003-й уровень:|r +<ANcr,DataF3,%>% к скорости атаки.
+   Lvl 1: tip=|cfff0c8afКод Красный|r [|cffffcc001-й уровень|r] | ubertip=Герой переключается пользуется режимом мехи, ускоряющим передвижение на <ANcr,DataE1,%>% и атаку на <ANcr,DataF1,%>% на <ANcr,HeroDur1> сек.
+   Lvl 2: tip=|cffe4cfa3Боевой рев|r [|cffffffff2-й уровень|r] (|cffffffffW|r) | ubertip=Герой переключается пользуется режимом мехи, ускоряющим передвижение на <ANcr,DataE2,%>% и атаку на <ANcr,DataF2,%>% на <ANcr,HeroDur2> сек.
+Ability A0TJ (lvls=4): name=Разрывные снаряды | hotkey=Q | rhotkey=None
+   Research: tip=Разрывные снаряды | ubertip=Увеличивет урон от атак героя. Атаки наносят урон по области.
+   Lvl 1: tip=Разрывные снаряды | ubertip=+<Afak,DataA1> к урону от атак героя. Атаки наносят урон по области.
+   Lvl 2: tip=Разрывные снаряды | ubertip=+<Afak,DataA2> к урону от атак героя. Атаки наносят урон по области.
+   Lvl 3: tip=Разрывные снаряды | ubertip=+<Afak,DataA3> к урону от атак героя. Атаки наносят урон по области.
+   Lvl 4: tip=Разрывные снаряды | ubertip=+<Afak,DataA4> к урону от атак героя. Атаки наносят урон по области.
+Ability A0TK (lvls=2): name=Ракетопад | hotkey=R | rhotkey=R
+   Research: tip=Изучить «Ракетопад» | ubertip=Обрушивает на находящихся рядом врагов волны падающих ракет. Каждая волна наносит <AEsf,DataA1> урона. |nВремя действия: <AEsf,Dur1> сек.
+   Lvl 1: tip=Ракетопад | ubertip=Обрушивает на находящихся рядом врагов волны падающих ракет. Каждая волна наносит <AEsf,DataA1> урона. |nВремя действия: <AEsf,Dur1> сек.
+   Lvl 2: tip=Ракетопад | ubertip=Обрушивает на находящихся рядом врагов волны падающих ракет. Каждая волна наносит <AEsf,DataA2> урона. |nВремя действия: <AEsf,Dur2> сек.
+Ability A0TL (lvls=1): name=Хорошая логистика | hotkey=None | rhotkey=E
+   Research: tip=Изучить «Ауру выносливости» [|cffffcc00%d-й уровень|r] | ubertip="Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки. |n|cffffcc003-й уровень:|r +<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки."
+   Lvl 1: tip=Хорошая логистика | ubertip=+<AOae,DataA1,%>% к скорости передвижения и +<AOae,DataB1,%>% к скорости атаки находящихся рядом мехвойск.
+Ability A0TX (lvls=1): name=|cfff0c8afПроклятие|r | hotkey=W | rhotkey=None
+   Lvl 1: tip=|cfff0c8afПроклятие|r | ubertip="Проклинает врага. С <Acrs,DataA1,%>%-й вероятностью жертва промахивается при атаке.|nВремя действия: <Acrs,Dur1> сек."
+Ability A0TY (lvls=1): name=Увечье | hotkey=E | rhotkey=None
+   Lvl 1: tip=Увечье | ubertip="Замедляет передвижение врага на <Acri,DataA1,%>% и атаку на <Acri,DataB1,%>%, уменьшает наносимый урон на <Acri,DataC1,%>%. |nВремя действия: <Acri,Dur1> сек."
+Ability A0TZ (lvls=1): name=Меткий выстрел | hotkey=Q | rhotkey=None
+   Lvl 1: tip=Меткий выстрел | ubertip="Дает <ACct,DataA1>%-й шанс нанести <ACct,DataB1>-кратный урон при атаке."
+Ability A0U0 (lvls=1): name=Отравленный кинжал | hotkey=W | rhotkey=D
+   Research: tip=Изучить «Отравленный кинжал» [|cffffcc00%d-й уровень|r] | ubertip="Бросает отравленный кинжал, наносящий мгновенный и периодический урон и временно замедляющий передвижение цели. |n|n|cffffcc001-й уровень:|r <AEsh,DataE1> урона мгновенно и <AEsh,DataA1> периодического урона. |n|cffffcc002-й уровень:|r <AEsh,DataE2> урона мгновенно и <AEsh,DataA2> периодического урона. |n|cffffcc003-й уровень:|r <AEsh,DataE3> урона мгновенно и <AEsh,DataA3> периодического урона."
+   Lvl 1: tip=Отравленный кинжал | ubertip=Бросает отравленный кинжал во врага, нанося 50 урона мгновенно и 3 урона раз в 1 сек. в течение 7 сек. Яд временно замедляет передвижение цели.
+Ability A0U1 (lvls=1): name=Отточенные навыки | hotkey=W | rhotkey=B
+   Research: tip=Изучить «Пьяного мастера» [|cffffcc00%d-й уровень|r] | ubertip="Дает шанс уклониться от атаки и <ANdb,DataA1>%-й шанс нанести больше урона. |n|n|cffffcc001-й уровень:|r <ANdb,DataD1,%>%-й шанс уклониться, <ANdb,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <ANdb,DataD2,%>%-й шанс уклониться, <ANdb,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <ANdb,DataD3,%>%-й шанс уклониться, <ANdb,DataB3>-кратный урон."
+   Lvl 1: tip=Отточенные навыки | ubertip="Дает <ANdb,DataD1,%>%-й шанс уклониться от атаки и <ANdb,DataA1>%-й шанс нанести <ANdb,DataB1>-кратный урон."
+Ability A0U2 (lvls=1): name=|cffffc864Снежная буря | hotkey=E | rhotkey=B
+   Research: tip=Изучить «Снежную бурю» [|cffffcc00%d-й уровень|r] | ubertip="Призывает волны ледяных осколков, наносящих урон в области действия. |n|n|cffffcc001-й уровень:|r <AHbz,DataA1> волн по <AHbz,DataB1> урона. |n|cffffcc002-й уровень:|r <AHbz,DataA2> волн по <AHbz,DataB2> урона. |n|cffffcc003-й уровень:|r <AHbz,DataA3> волн по <AHbz,DataB3> урона."
+   Lvl 1: tip=|cffffc864Снежная буря [|cffffcc001-й уровень|r] | ubertip=Обрушивает на указанную область 4 волны ледяных осколков, каждая из которых наносит <AHbz,DataB1> урона.
+Ability A0U3 (lvls=1): name=|cffffc864Ускорение | hotkey=Q | rhotkey=None
+   Lvl 1: tip=|cffffc864Ускорение | ubertip=Ускоряет атаку юнита на 10%  и передвижение на 10%. |nВремя действия: 30 сек.
+Ability A0U4 (lvls=1): name=|cfff0c8afМорозный доспех|r | hotkey=W | rhotkey=F
+   Research: tip=Изучить «Морозный доспех» [|cffffcc00%d-й уровень|r] | ubertip="Укрывает союзника ледяным щитом, который усиливает броню и замедляет атакующие его в ближнем бою войска. |n|n|cffffcc001-й уровень:|r +<AUfu,DataB1> к броне. |n|cffffcc002-й уровень:|r +<AUfu,DataB2> к броне. |n|cffffcc003-й уровень:|r +<AUfu,DataB3> к броне."
+   Lvl 1: tip=|cfff0c8afМорозный доспех|r | ubertip=Укрывает союзника ледяным щитом, который дает +3 к броне и замедляет атакующие его в ближнем бою войска на <AUfu,Dur1> сек. |nВремя действия: <AUfu,DataA1> сек.
+Ability A0U5 (lvls=1): name=Зажигательная граната | hotkey=Q | rhotkey=Q
+   Research: tip=Изучить «Огненный столб» [|cffffcc00%d-й уровень|r] | ubertip="Создает огненный столб, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r 45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек. |n|cffffcc002-й уровень:|r 80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек. |n|cffffcc003-й уровень:|r 110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек."
+   Lvl 1: tip=Зажигательная граната | ubertip=Создает огненный столб, наносящий наземным войскам в указанной области 3 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать незначительный урон.
+Ability A0U7 (lvls=1): name=|cfff0c8afСожжение|r | hotkey=None | rhotkey=None
+   Lvl 1: tip=|cfff0c8afСожжение|r | ubertip=Каждая атака уничтожает <A0U7,DataA1> маны цели и наносит ей столько же дополнительного урона.|n|nПризванные цели получают на <A0U7,DataE1> больше урона от атак этой башни.
+Ability A0U8 (lvls=2): name=|cfff0c8afШокоудары|r | hotkey=None | rhotkey=None
+   Lvl 1: tip=|cfff0c8afШокоудары|r | ubertip="С <Awar,DataA1>%-й вероятностью атака нанесет <Awar,DataB1> урона находящимся рядом войскам."
+   Lvl 2: tip=Усиленное сокрушение | ubertip="С <Awar,DataA2>%-й вероятностью атака нанесет <Awar,DataB2> урона находящимся рядом войскам."
+Ability A0U9 (lvls=1): name=|cffffc864Произвести реженоги | hotkey=Q | rhotkey=W
+   Research: tip=Изучить «Призыв элементаля воды» [|cffffcc00%d-й уровень|r] | ubertip="Призывает элементаля воды. |nВремя существования: <AHwe,Dur1> сек. |n|n|cffffcc00Элементаль атакует наземные и воздушные цели. |r|n|n|cffffcc001-й уровень:|r <hwat,realHP> здоровья, <hwat,mindmg1>-<hwat,maxdmg1> урона. |n|cffffcc002-й уровень:|r <hwt2,realHP> здоровья, <hwt2,mindmg1>-<hwt2,maxdmg1> урона. |n|cffffcc003-й уровень:|r <hwt3,realHP> здоровья, <hwt3,mindmg1>-<hwt3,maxdmg1> урона."
+   Lvl 1: tip=|cffffc864Произвести реженоги | ubertip=Создает вариант "|cffffc864Реженог|r" на 3 минуты работы.
+Ability A0UA (lvls=1): name=Закопать мину | hotkey=W | rhotkey=None
+   Lvl 1: tip=Закопать мину | ubertip=Закапывает мину в выбранной точке. Мина требует потребления.
+Ability A0UW (lvls=1): name=Ба-бах! | hotkey=B | rhotkey=None
+   Lvl 1: tip=Ба-бах! | ubertip=Наносит до 65 урона в небольшой области.
+Ability A0VZ (lvls=1): name=Добывать ресурсы | hotkey=G | rhotkey=None
+   Lvl 1: tip=Добывать ресурсы | ubertip=Добывает золото из рудников и древесину из деревьев.
+Ability A0XB (lvls=4): name=Композитная броня | hotkey=E | rhotkey=None
+   Research: tip=Композитная броня | ubertip=Уменьшает получаемый урон от атак врага.
+   Lvl 1: tip=Композитная броня | ubertip="-<Assk,DataC1> от получаемого горным великаном урона от атак. Минимальный урон от атак: <Assk,DataB1>."
+   Lvl 2: tip=Композитная броня | ubertip=-<Assk,DataC2> от получаемого горным великаном урона от атак. Минимальный урон от атак: <Assk,DataB2>.
+   Lvl 3: tip=Композитная броня | ubertip=-<Assk,DataC3> от получаемого горным великаном урона от атак. Минимальный урон от атак: <Assk,DataB3>.
+   Lvl 4: tip=Композитная броня | ubertip=-<Assk,DataC4> от получаемого горным великаном урона от атак. Минимальный урон от атак: <Assk,DataB4>.
+Ability A0XC (lvls=1): name=Защитные алгоритмы | hotkey=D | rhotkey=None
+   Lvl 1: tip=Защитные алгоритмы | ubertip=Чем меньше хп, тем больше брони у героя. При нажатии увеличивает здоровье на 10%.
+Бонусы меняются при получении урона.
+Ability A0XD (lvls=5): name=Бонус к броне | hotkey=None | rhotkey=None
+   Lvl 1: tip=None | ubertip=None
+   Lvl 2: tip=None | ubertip=None
+   Lvl 3: tip=None | ubertip=None
+   Lvl 4: tip=None | ubertip=None
+   Lvl 5: tip=None | ubertip=None
+Ability A0XE (lvls=4): name=Перегрузка | hotkey=Q | rhotkey=Q
+   Research: tip=Перегрузка | ubertip=Временно увеличивает скорость атаки, но уменьшает скорость передвижения.
+   Lvl 1: tip=Перегрузка | ubertip=+<Absk,DataB1,%>% к скорости атаки, но - 20% к скорости передвижения.
+   Lvl 2: tip=Перегрузка | ubertip=+<Absk,DataB2,%>% к скорости атаки, но - 20% к скорости передвижения.
+   Lvl 3: tip=Перегрузка | ubertip=+<Absk,DataB3,%>% к скорости атаки, но - 20% к скорости передвижения.
+   Lvl 4: tip=Перегрузка | ubertip=+<Absk,DataB4,%>% к скорости атаки, но - 20% к скорости передвижения.
+Ability A0XF (lvls=4): name=Раздвоенная молния | hotkey=W | rhotkey=W
+   Research: tip=Изучить «Раздвоенную молнию» [|cffffcc00%d-й уровень|r] | ubertip="Поражает молнией врагов в секторе перед собой. |n|n|cffffcc001-й уровень:|r <ANfl,DataA1> урона каждой цели. |n|cffffcc002-й уровень:|r <ANfl,DataA2> урона каждой цели. |n|cffffcc003-й уровень:|r <ANfl,DataA3> урона каждой цели."
+   Lvl 1: tip="Раздвоенная молния [|cffffcc001-й уровень|r]" | ubertip="Поражает молнией до <ANfl,DataB1> врагов в секторе перед собой, нанося <ANfl,DataA1> урона."
+   Lvl 2: tip="Раздвоенная молния [|cffffcc002-й уровень|r]" | ubertip="Поражает молнией до <ANfl,DataB2> врагов в секторе перед собой, нанося <ANfl,DataA2> урона."
+   Lvl 3: tip="Раздвоенная молния [|cffffcc003-й уровень|r]" | ubertip="Поражает молнией до <ANfl,DataB3> врагов в секторе перед собой, нанося <ANfl,DataA3> урона."
+   Lvl 4: tip=Раздвоенная молния [|cffffcc004-й уровень|r] | ubertip=Поражает молнией до <ANfl,DataB4> врагов в секторе перед собой, нанося <ANfl,DataA4> урона.
+Ability A0XG (lvls=2): name=|cfff0c8afРежим дальнего боя|r | hotkey=R | rhotkey=R
+   Research: tip=Изучить «Режим дальнего боя» | ubertip=Гелбин переходит в дальний бой
+   Lvl 1: tip=|cfff0c8afРежим дальнего боя|r | ubertip=Гелбин переходит в дальний бой
+   Lvl 2: tip=|cfff0c8afРежим дальнего боя|r | ubertip=Гелбин переходит в дальний бой
+Ability A165 (lvls=1): name=Скрыться | hotkey=Q | rhotkey=None
+   Lvl 1: tip=Скрыться | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки и перемещения цели.|r
+Ability A16A (lvls=1): name=|cfff0c8afЭлектрическое поле|r | hotkey=W | rhotkey=None
+   Lvl 1: tip=|cfff0c8afЭлектрическое поле|r | ubertip=Окружает цель молниями, которые наносят 15 урона/сек. находящимся рядом войскам, в том числе механизмам. |nВремя действия: <Alsh,Dur1> сек.
+Ability A1B9 (lvls=1): name=|cffffc864Фазовый спаситель | hotkey=D | rhotkey=None
+   Lvl 1: tip=|cffffc864Фазовый спаситель | ubertip=При получении урона переходит в иное измерение, получая защиту от дальнейшего урона. |nВремя действия: 0.5 сек. 
+Ability ACff (lvls=1): name=Волшебный огонь | hotkey=Q | rhotkey=None
+   Lvl 1: tip=Волшебный огонь | ubertip="Ослабляет броню врага на <ACff,DataA1> и раскрывает его местоположение. |nВремя действия: <ACff,Dur1> сек."
+Ability AHfs (lvls=4): name=|cffe4cfa3Огненный столб|r | hotkey=Q | rhotkey=Q
+   Research: tip=Изучить «|cffe4cfa3Огненный столб|r» [|cffffffff%d-й уровень|r] (|cffffffffQ|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на указанную область столб бушующего пламени, наносящий высокий урон в первые |cffffffff3|cffced4da сек. и малый урон в последующие |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: |cffffffff45|cffced4da ед. урона/сек.|n- |cffffffff2|cffced4da: |cffffffff80|cffced4da ед. урона/сек.|n- |cffffffff3|cffced4da: |cffffffff110|cffced4da ед. урона/сек.|n- |cffffffff4|cffced4da: |cffffffff150|cffced4da ед. урона/сек.|r
+   Lvl 1: tip=|cffe4cfa3Огненный столб|r [|cffffffff1-й уровень|r] (|cffffffffQ|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff45|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r
+   Lvl 2: tip=|cffe4cfa3Огненный столб|r [|cffffffff2-й уровень|r] (|cffffffffQ|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff80|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r
+   Lvl 3: tip=|cffe4cfa3Огненный столб|r [|cffffffff3-й уровень|r] (|cffffffffQ|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff110|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r
+   Lvl 4: tip=|cffe4cfa3Огненный столб|r [|cffffffff4-й уровень|r] (|cffffffffQ|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff150|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r
+Ability AInv (lvls=1): name=Инвентарь | hotkey=None | rhotkey=None
+   Lvl 1: tip=None | ubertip=None
+Ability ANab (lvls=4): name=|cffe4cfa3Кислотная бомба|r | hotkey=E | rhotkey=E
+   Research: tip=Изучить «|cffe4cfa3Кислотная бомба|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает во врага сосуд с едкой кислотой, которая разъедает броню цели и окружающих врагов, а также наносит им периодический урон в течение |cffffffff15|cffced4da сек.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: |cffffffff-4|cffced4da к броне, |cffffffff5|cffced4da ед. урона/сек. (|cffffffff3|cffced4da ед. по области)|n- |cffffffff2|cffced4da: |cffffffff-5|cffced4da к броне, |cffffffff10|cffced4da ед. урона/сек. (|cffffffff6|cffced4da ед. по области)|n- |cffffffff3|cffced4da: |cffffffff-6|cffced4da к броне, |cffffffff17|cffced4da ед. урона/сек. (|cffffffff11|cffced4da ед. по области)|n- |cffffffff4|cffced4da: |cffffffff-7|cffced4da к броне, |cffffffff20|cffced4da ед. урона/сек. (|cffffffff13|cffced4da ед. по области).|r
+   Lvl 1: tip=|cffe4cfa3Кислотная бомба|r [|cffffffff1-й уровень|r] (|cffffffffE|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цель и ближайших врагов кислотой на |cffffffff15|cffced4da сек., снижая броню на |cffffffff4|cffced4da ед. и нанося |cffffffff5|cffced4da ед. урона/сек. основной цели (|cffffffff3|cffced4da ед./сек. дополнительным целям).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r
+   Lvl 2: tip=|cffe4cfa3Кислотная бомба|r [|cffffffff2-й уровень|r] (|cffffffffE|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цель и ближайших врагов кислотой на |cffffffff15|cffced4da сек., снижая броню на |cffffffff5|cffced4da ед. и нанося |cffffffff10|cffced4da ед. урона/сек. основной цели (|cffffffff6|cffced4da ед./сек. дополнительным целям).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r
+   Lvl 3: tip=|cffe4cfa3Кислотная бомба|r [|cffffffff3-й уровень|r] (|cffffffffE|r) | ubertip=|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цель и ближайших врагов кислотой на |cffffffff15|cffced4da сек., снижая броню на |cffffffff6|cffced4da ед. и нанося |cffffffff17|cffced4da ед. урона/сек. основной цели (|cffffffff11|cffced4da ед./сек. дополнительным целям).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r
+   Lvl 4: tip=Кислотная бомба [|cffffcc004-й уровень|r] | ubertip=Бросает в цель сосуд с кислотой, который при попадании разбивается и поражает находящихся рядом врагов. |n|nОслабляет броню на <ANab,DataC4>, наносит <ANab,DataD4> урона/сек. основной цели и немного меньше урона дополнительным целям. |nВремя действия: <ANab,Dur4> сек.
+Ability Achd (lvls=1): name=Cargo Hold Death | hotkey=None | rhotkey=None
+   Lvl 1: tip=None | ubertip=None
+Ability Afbt (lvls=1): name=Противодействие | hotkey=None | rhotkey=None
+   Lvl 1: tip=Противодействие | ubertip="Каждая атака уничтожает <Afbt,DataA1> маны цели и наносит ей столько же дополнительного урона.|n|nПризванные цели получают на <Afbt,DataE1> больше урона от атак этой башни."
+Ability Ahrp (lvls=1): name=Ремонтировать | hotkey=R | rhotkey=None
+   Lvl 1: tip=Ремонтировать | ubertip=Ремонтирует здания и технику за счет ресурсов.
+Ability Alit (lvls=1): name=Грозовая атака | hotkey=None | rhotkey=None
+   Lvl 1: tip=None | ubertip=None
+Ability Argl (lvls=1): name=Вернуть золото и древесину | hotkey=None | rhotkey=None
+   Lvl 1: tip=None | ubertip=None
+Ability MIM1 (lvls=4): name=Меха гвардия | hotkey=Q | rhotkey=Q
+   Research: tip=Изучить «Меха гвардия» [|cffffcc00%d-й уровень|r] | ubertip=Призывает защитников перекованова хранителя.                                                                                                            |n|n|cffffcc001-й уровень:|r Призивает 2 Механабойца.|r                                                                                  |n|cffffcc002-й уровень:|r Призивает 4 Механабойца.|r                                                                                          |n|cffffcc003-й уровень:|r Призивает 4 Наногнома.|r                                                                               |n|cffffcc004-й уровень:|r Призивает 3 Мехагигантов.|r                                                                                    
+   Lvl 1: tip=Меха гвардия [|cffffcc001-й уровень|r] | ubertip=Призывает <MIM1,DataB1> Механабойцов |nВремя существования: <MIM1,Dur1> сек.
+   Lvl 2: tip=Меха гвардия [|cffffcc002-й уровень|r] | ubertip=Призывает <MIM1,DataB2> Механабойцов |nВремя существования: <MIM1,Dur2> сек.
+   Lvl 3: tip=Меха гвардия [|cffffcc003-й уровень|r] | ubertip=Призывает <MIM1,DataB3> Наногномов |nВремя существования: <MIM1,Dur3> сек.
+   Lvl 4: tip=Меха гвардия [|cffffcc004-й уровень|r] | ubertip=Призывает <MIM1,DataB4> Мехагигантов |nВремя существования: <MIM1,Dur4> сек.
+Ability MIM2 (lvls=4): name=Полевой ремонт  | hotkey=W | rhotkey=W
+   Research: tip=Изучить «Полевой ремонт» [|cffffcc00%d-й уровень|r] | ubertip=Используя технологии хранителей восполняет здоровье ближайшей техники. |n|n|cffffcc001-й уровень:|r 100 ед. здоровья каждой цели.|r |n|cffffcc002-й уровень:|r 150 ед. здоровья каждой цели.|r |n|cffffcc003-й уровень:|r 200 ед. здоровья каждой цели.|r|n|cffffcc004-й уровень:|r 300 ед. здоровья каждой цели.|r
+   Lvl 1: tip=Полевой ремонт  [|cffffcc001-й уровень|r] | ubertip=Восполняет здоровье ближайшей техники. |n|n|cffffcc001-й уровень:|r |cffb4dcdc100 ед. здоровья каждой цели.|r 
+   Lvl 2: tip=Полевой ремонт  [|cffffcc002-й уровень|r] | ubertip=Восполняет здоровье ближайшей техники .  |n|cffffcc002-й уровень:|r |cffb4dcdc150 ед. здоровья каждой цели.|r
+   Lvl 3: tip=Полевой ремонт  [|cffffcc003-й уровень|r] | ubertip=Восполняет здоровье ближайшей техники .|n|cffffcc003-й уровень:|r |cffb4dcdc200 ед. здоровья каждой цели.|r
+   Lvl 4: tip=Полевой ремонт  [|cffffcc004-й уровень|r] | ubertip=Восполняет здоровье ближайшей техники . |n|cffffcc004-й уровень:|r |cffb4dcdc300 ед. здоровья каждой цели.|r
+Ability MIM3 (lvls=4): name=Перегрузка | hotkey=E | rhotkey=E
+   Research: tip=Изучить «Перегрузка» [|cffffcc00%d-й уровень|r] | ubertip=Повишает скорость атаки взамен на здоров'я.                           |n|n|cffffcc001-й уровень:|r +<MIM3,DataA1,%>% к скорости атаки в обмен на <MIM3,DataB1> здоровья/сек.                                             |n|cffffcc002-й уровень:|r +<MIM3,DataA2,%>% к скорости атаки в обмен на <MIM3,DataB2> здоровья/сек.                                                           |n|cffffcc003-й уровень:|r +<MIM3,DataA3,%>% к скорости атаки в обмен на <MIM3,DataB3> здоровья/сек.                                                  |n|cffffcc004-й уровень:|r +<MIM3,DataA4,%>% к скорости атаки в обмен на <MIM3,DataB4> здоровья/сек.
+   Lvl 1: tip=Перегрузка [|cffffcc001-й уровень|r] | ubertip=Дает цели +<MIM3,DataA1,%>% к скорости атаки в обмен на <MIM3,DataB1> здоровья/сек. |nВремя действия: <MIM3,Dur1> сек.
+   Lvl 2: tip=Перегрузка [|cffffcc002-й уровень|r] | ubertip=Дает цели +<MIM3,DataA2,%>% к скорости атаки в обмен на <MIM3,DataB2> здоровья/сек. |nВремя действия: <MIM3,Dur2> сек.
+   Lvl 3: tip=Перегрузка [|cffffcc003-й уровень|r] | ubertip=Дает цели +<MIM3,DataA3,%>% к скорости атаки в обмен на <MIM3,DataB3> здоровья/сек. |nВремя действия: <MIM3,Dur3> сек.
+   Lvl 4: tip=Перегрузка [|cffffcc004-й уровень|r] | ubertip=Дает цели +<MIM3,DataA4,%>% к скорости атаки в обмен на <MIM3,DataB4> здоровья/сек. |nВремя действия: <MIM3,Dur4> сек.
+Ability MIM6 (lvls=2): name=Мастерство хранителя  | hotkey=R | rhotkey=R
+   Research: tip=Изучить «Мастерство хранителя» [|cffffcc00%d-й уровень|r] | ubertip=За |cffffff008000|r золота и дерева в течении 50 секунд создаёт железнова хранителя   |n|cffff0000Процесс нельзя прервать и контроль на героем будет утерян на это время.|r |n|cffffcc001-й уровень:|r Максимум 1 хранитель.|r                                                                                  |n|cffffcc002-й уровень:|r Максимум 2 хранитель.|r
+   Lvl 1: tip=Мастерство хранителя [|cffffcc001-й уровень|r] | ubertip=За |cffffff008000|r золота и дерева в течении 50 секунд создаёт железнова хранителя    |n|cffff0000Максимум 1 хранитель|r
+   Lvl 2: tip=Мастерство хранителя [|cffffcc002-й уровень|r] | ubertip=За |cffffff008000|r золота и дерева в течении 50 секунд создаёт железнова хранителя    |n|cffff0000Максимум 2 хранитель|r
+Ability S002 (lvls=1): name=Cargo Hold | hotkey=None | rhotkey=None
+   Lvl 1: tip=None | ubertip=None
+Ability Sdro (lvls=1): name=Выгрузить | hotkey=Q | rhotkey=None
+   Lvl 1: tip=Выгрузить всех | ubertip=Высаживает войска в указанном месте.
+
+=== 8. BUFFS (43) ===
+Buff AEsd: editorname=Starfall (Target) | tip=None | ubertip=None
+Buff B01O: editorname=None | tip=Призыв | ubertip=Этот юнит призван.
+Buff B02W: editorname=Колотов | tip=Колотов | ubertip=|cffa6afb8ЭФФЕКТ:|cffced4da Область объята горючей смесью, наносящей периодический урон всем оказавшимся в огне бойцам.|r
+Buff B030: editorname=Поле саморемонта | tip=|cffe4cfa3Аура восстановления|r | ubertip=|cffa6afb8ЭФФЕКТ:|cffced4da Восстановление здоровья |cffc8e087ускорено|cffced4da. Величина бонуса определяется источником ауры.|r
+Buff B03Y: editorname=None | tip=|cffe1c8ebАура меткости|r | ubertip=Повышение урона всех юнитов, сражающихся в дальнем бою.
+Buff B05E: editorname=Попадают пули | tip=None | ubertip=None
+Buff B05F: editorname=Стреляет пули | tip=None | ubertip=None
+Buff B05H: editorname=None | tip=|cffffc864Перегрузка|r (Код Красный) | ubertip=Скорость атаки Героя значительно увеличивается.
+Buff B05I: editorname=Ракетопад | tip=None | ubertip=None
+Buff B05J: editorname=|cffffc864Аура логистики | tip=|cffffc864Аура логистики | ubertip=|cffffc864Техника|r сражается и перемещается быстрее.
+Buff B05L: editorname=None | tip=|cffffc864Ускорение | ubertip=Передвижение и атака увеличины.
+Buff BEsh: editorname=None | tip=Теневой удар | ubertip="Периодический урон, передвижение замедлено."
+Buff BHbd: editorname=None | tip=Снежная буря | ubertip=Урон от «Снежной бури».
+Buff BHbz: editorname=Blizzard (Caster) | tip=None | ubertip=None
+Buff BHfs: editorname=None | tip=Огненный столб | ubertip=Периодический урон.
+Buff BHtc: editorname=None | tip=|cffe4cfa3Раскат грома|r | ubertip=|cffa6afb8ЭФФЕКТ:|cffced4da Скорость передвижения и атаки |cffe69a8dснижена|cffced4da.|r
+Buff BHwe: editorname=None | tip=Элементаль воды | ubertip=Призванные цели уязвимы к рассеивающим способностям.
+Buff BNab: editorname=None | tip=|cffe4cfa3Кислотная бомба|r | ubertip=|cffa6afb8ЭФФЕКТ:|cffced4da Цель поражена кислотой. Заклинание может наносить периодический урон и ослаблять броню; параметры определяются источником.|r
+Buff BNbf: editorname=None | tip=|cffe4cfa3Боевой рев|r | ubertip=|cffa6afb8ЭФФЕКТ:|cffced4da Получает периодический урон от поражения сгустком темной магии.|r
+Buff BNcr: editorname=None | tip=Эликсир ярости | ubertip=Передвижение и атака ускорены.
+Buff BNcs: editorname=None | tip=Кассетные ракеты | ubertip=Кассетные ракеты.
+Buff BOae: editorname=None | tip=|cffe4cfa3Аура скорости|r | ubertip=|cffa6afb8ЭФФЕКТ:|cffced4da Изменяет скорость передвижения и атаки. Источник ауры может ускорять или замедлять войска; величины указаны в описании способности-источника.|r
+Buff BOsf: editorname=None | tip=|cffe4cfa3Призванное существо|r | ubertip=|cffa6afb8ЭФФЕКТ:|cffced4da Существо создано призывающим заклинанием.|r
+Buff BOwk: editorname=None | tip=|cffe4cfa3Танец ветра|r | ubertip=|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffc8e087невидима|cffced4da и передвигается быстрее. Атака из невидимости получает дополнительный урон и раскрывает атакующего.|r
+Buff BPSE: editorname=None | tip=|cffe4cfa3Оглушение|r | ubertip=|cffa6afb8ЭФФЕКТ:|cffced4da Цель |cffe69a8dне может двигаться, атаковать и применять способности|cffced4da.|r
+Buff BUfa: editorname=None | tip=|cffe4cfa3Морозный доспех|r | ubertip=|cffa6afb8ЭФФЕКТ:|cffced4da Броня |cffc8e087повышена|cffced4da. Противники, атакующие цель в ближнем бою, временно теряют скорость передвижения и атаки.|r
+Buff BUhf: editorname=None | tip=None | ubertip=None
+Buff Bbsk: editorname=None | tip=Берсерк | ubertip=Наносимый и получаемый от атак урон увеличены.
+Buff Bcri: editorname=None | tip=Увечье | ubertip="Передвижение и атака замедлены, урон от атак уменьшен."
+Buff Bcrs: editorname=None | tip=|cffe4cfa3Проклятие|r | ubertip=|cffa6afb8ЭФФЕКТ:|cffced4da Проклятие |cffe69a8dповышает вероятность промаха|cffced4da при атаке.|r
+Buff Bdbb: editorname=None | tip=None | ubertip=None
+Buff Bdbl: editorname=None | tip=None | ubertip=None
+Buff Bdbm: editorname=None | tip=None | ubertip=None
+Buff Bdcb: editorname=Drain Life & Mana (Caster) | tip=None | ubertip=None
+Buff Bdcl: editorname=Drain Life (Caster) | tip=None | ubertip=None
+Buff Bdcm: editorname=Drain Mana (Caster) | tip=None | ubertip=None
+Buff Bdtb: editorname=Drain Life & Mana (Target) | tip=None | ubertip=None
+Buff Bdtl: editorname=Drain Life (Target) | tip=None | ubertip=None
+Buff Bdtm: editorname=Drain Mana (Target) | tip=None | ubertip=None
+Buff Bfae: editorname=None | tip=Волшебный огонь | ubertip="Броня ослаблена, местоположение раскрыто."
+Buff Blsa: editorname=Lightning Shield (Caster) | tip=None | ubertip=None
+Buff Blsh: editorname=None | tip=Щит молний | ubertip=Находящиеся рядом союзники и враги получают урон.
+Buff Bpsh: editorname=None | tip=Фазовый сдвиг | ubertip=Временная защита от урона.

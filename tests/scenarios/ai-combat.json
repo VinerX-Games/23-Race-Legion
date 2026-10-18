@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "name": "ai-cult-casts-skills-items-retreat",
+  "steps": [
+    {
+      "name": "spawn-fixtures",
+      "lua": "assert(not udg_AiControl[ScenarioSlot], 'slot already controlled'); createAiPlayer(ScenarioSlot, 'cult'); local p=Player(ScenarioSlot); local cap=playerCapital[ScenarioSlot]; assert(cap~=nil, 'capital missing'); CombatCheck={units={},x=GetUnitX(cap),y=GetUnitY(cap),savedAttacker=AiRaces.Cult.attackerData}; AiRaces.Cult.attackerData={}; for _,id in ipairs({'CD01','U02X','CD02'}) do local u=CreateUnit(p,FourCC(id),CombatCheck.x+500,CombatCheck.y,0); CombatCheck.units[#CombatCheck.units+1]=u; SetUnitAcquireRange(u,0); SetHeroLevel(u,6,false); AiRunGetLvl(u,AiRaces.Cult); assert(GetHeroSkillPoints(u)==0, 'unspent skills '..id); local required=({CD01='A0CP',U02X='AUfn',CD02='A0CL'})[id]; if GetUnitAbilityLevel(u,FourCC(required))==0 then UnitModifySkillPoints(u,1); SelectHeroSkill(u,FourCC(required)) end; assert(GetHeroSkillPoints(u)==0, 'fixture skill not learned'); SetUnitState(u,UNIT_STATE_MANA,GetUnitState(u,UNIT_STATE_MAX_MANA)) end; local enemy=CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE),FourCC('hfoo'),CombatCheck.x+650,CombatCheck.y,0); BlzSetUnitMaxHP(enemy,10000); SetUnitState(enemy,UNIT_STATE_LIFE,10000); PauseUnit(enemy,true); CombatCheck.enemy=enemy; CombatCheck.effects={}; for _,id in ipairs({'A0CP','AUfn','A0CL'}) do CombatCheck.effects[id]=(AiData[ScenarioSlot].castEffects or {})[FourCC(id)] or 0 end; return 'fixtures' ",
+      "expected": "fixtures"
+    },
+    {
+      "name": "issue-real-casts",
+      "lua": "local specs={{order='roar',type='immediate',needAbil=FourCC('A0CP')},{order='frostnova',needAbil=FourCC('AUfn')},{orderId=852667,type='immediate',needAbil=FourCC('A0CL')}}; for i,entry in ipairs(specs) do assert(_castAbility(CombatCheck.units[i],entry,CombatCheck.enemy,Player(ScenarioSlot)), 'order rejected '..tostring(entry.order or entry.orderId)) end; return 'issued' ",
+      "expected": "issued"
+    },
+    {
+      "name": "confirm-spell-effects",
+      "lua": "local effects=AiData[ScenarioSlot].castEffects or {}; for _,id in ipairs({'A0CP','AUfn','A0CL'}) do assert((effects[FourCC(id)] or 0)>CombatCheck.effects[id], 'no SPELL_EFFECT '..id) end; local lich=CombatCheck.units[2]; assert(GetUnitState(lich,UNIT_STATE_MANA)<GetUnitState(lich,UNIT_STATE_MAX_MANA), 'mana not spent'); assert(BlzGetUnitAbilityCooldownRemaining(lich,FourCC('AUfn'))>0, 'no cooldown'); return 'effects' ",
+      "expected": "effects",
+      "poll_for": 8
+    },
+    {
+      "name": "hero-retreat",
+      "lua": "local u=CombatCheck.units[1]; SetUnitState(u,UNIT_STATE_LIFE,GetUnitState(u,UNIT_STATE_MAX_LIFE)*0.2); AiHeroCombatTick(ScenarioSlot,u,{capX=CombatCheck.x,capY=CombatCheck.y},AiRaces.Cult); assert(AiCombatState(u).retreat, 'no retreat'); local g=CreateGroup(); GroupAddUnit(g,u); AiSquadOrderAtk(g,CombatCheck.x+1000,CombatCheck.y); DestroyGroup(g); assert(GetUnitCurrentOrder(u)==OrderId('move'), 'army overrode retreat'); SetUnitState(u,UNIT_STATE_LIFE,GetUnitState(u,UNIT_STATE_MAX_LIFE)*0.5); AiHeroCombatTick(ScenarioSlot,u,{capX=CombatCheck.x,capY=CombatCheck.y},AiRaces.Cult); assert(AiCombatState(u).retreat, 'rejoined too soon'); return 'retreat' ",
+      "expected": "retreat"
+    },
+    {
+      "name": "use-potion",
+      "lua": "local u=CombatCheck.units[1]; SetUnitState(u,UNIT_STATE_LIFE,GetUnitState(u,UNIT_STATE_MAX_LIFE)*0.2); CombatCheck.beforeHP=GetUnitState(u,UNIT_STATE_LIFE); CombatCheck.potion=UnitAddItemById(u,FourCC('phea')); assert(CombatCheck.potion~=nil, 'potion missing'); AiHeroCombatTick(ScenarioSlot,u,{capX=CombatCheck.x,capY=CombatCheck.y},nil); return 'potion-issued' ",
+      "expected": "potion-issued"
+    },
+    {
+      "name": "confirm-potion",
+      "lua": "assert(GetUnitState(CombatCheck.units[1],UNIT_STATE_LIFE)>CombatCheck.beforeHP, 'potion did not heal'); assert(not UnitHasItem(CombatCheck.units[1],CombatCheck.potion), 'potion not consumed'); return 'healed' ",
+      "expected": "healed",
+      "poll_for": 5
+    },
+    {
+      "name": "cleanup",
+      "lua": "for _,u in ipairs(CombatCheck.units) do AiData[ScenarioSlot].combat[u]=nil; RemoveUnit(u) end; RemoveUnit(CombatCheck.enemy); AiRaces.Cult.attackerData=CombatCheck.savedAttacker; CombatCheck=nil; return 'clean' ",
+      "expected": "clean"
+    }
+  ]
+}

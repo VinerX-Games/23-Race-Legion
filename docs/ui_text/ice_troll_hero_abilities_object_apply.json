@@ -1,0 +1,5246 @@
+{
+  "ok": true,
+  "applied": true,
+  "method": "Only explicit string modifications spliced; all unrelated records/mods byte-identical",
+  "changes": {
+    "war3map.w3a": [
+      [
+        "AOhw",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "AOhw",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "AOhw",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "AOhw",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "AOhw",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "AOhw",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "AOhw",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "AOhw",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "AOhw",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "AOhw",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "AOhw",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "AOsw",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "AOsw",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "AOsw",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "AOsw",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "AOsw",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "AOsw",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "AOsw",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "AOsw",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "AOsw",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "AOsw",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "AOsw",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "AOvd",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "AOvd",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "AOvd",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "AOvd",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "AOvd",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "AOvd",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "AOvd",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1CA",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1CA",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1CA",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1CB",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1CB",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1CB",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1CB",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1CB",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1CB",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1CB",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1CB",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1CB",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1CB",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1CB",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1CC",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1CC",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1CC",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1CC",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1CC",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1CC",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1CC",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1CC",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1CC",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1CC",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1CC",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1CD",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1CD",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1CD",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1CD",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1CD",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1CD",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1CD",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1CD",
+        "aut1",
+        1,
+        0
+      ],
+      [
+        "A1CD",
+        "aut1",
+        2,
+        0
+      ],
+      [
+        "A1CD",
+        "auu1",
+        1,
+        0
+      ],
+      [
+        "A1CD",
+        "auu1",
+        2,
+        0
+      ],
+      [
+        "A1CE",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1CE",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1CE",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1CE",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1CE",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1CE",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1CE",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1CE",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1CE",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1CE",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1CE",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1CE",
+        "aut1",
+        1,
+        0
+      ],
+      [
+        "A1CE",
+        "aut1",
+        2,
+        0
+      ],
+      [
+        "A1CE",
+        "aut1",
+        3,
+        0
+      ],
+      [
+        "A1CE",
+        "aut1",
+        4,
+        0
+      ],
+      [
+        "A1DA",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1DA",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1DA",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1DA",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1DA",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1DA",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1DA",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1DA",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1DA",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1DA",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1DA",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1DL",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1DL",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1DL",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1DL",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1DL",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1DL",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1DL",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1DL",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1DL",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1DL",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1DL",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1DR",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1DR",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1DR",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1DR",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1DR",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1DR",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1DR",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1DR",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1DR",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1DR",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1DR",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1DS",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1DS",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1DS",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1DS",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1DS",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1DS",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1DS",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1DS",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1DS",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1DS",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1DS",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1EB",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1EB",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1EB",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1EB",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1EB",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1EB",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1EB",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1EC",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1EC",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1EC",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1EC",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1EC",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1EC",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1EC",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1EC",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1EC",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1EC",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1EC",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1ED",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1ED",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1ED",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1ED",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1ED",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1ED",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1ED",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1ED",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1ED",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1ED",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1ED",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1EE",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1EE",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1EE",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1EE",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1EE",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1EE",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1EE",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1EE",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1EE",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1EE",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1EE",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1EF",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1EF",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1EF",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1EF",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1EF",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1EF",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1EF",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1PD",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1PD",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1PD",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1PD",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1PD",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1PD",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1PD",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1PD",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1PD",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1PD",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1PD",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1PE",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1PE",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1PE",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1PE",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1PE",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1PE",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1PE",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1PE",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1PE",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1PE",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1PE",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1PF",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1PF",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1PF",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1PF",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1PF",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1PF",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1PF",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1PF",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1PF",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1PF",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1PF",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1PG",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1PG",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1PG",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1PG",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1PG",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1PG",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1PG",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1PG",
+        "aut1",
+        1,
+        0
+      ],
+      [
+        "A1PG",
+        "aut1",
+        2,
+        0
+      ],
+      [
+        "A1PG",
+        "auu1",
+        1,
+        0
+      ],
+      [
+        "A1PG",
+        "auu1",
+        2,
+        0
+      ],
+      [
+        "A1PH",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1PH",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1PH",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1PH",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1PH",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1PH",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1PH",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1PH",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1PH",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1PH",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1PH",
+        "aub1",
+        4,
+        0
+      ]
+    ],
+    "war3mapSkin.w3a": [
+      [
+        "AOhw",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "AOhw",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "AOhw",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "AOhw",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "AOhw",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "AOhw",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "AOsw",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "AOsw",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "AOsw",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "AOvd",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "AOvd",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1CA",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1CA",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1CA",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1CB",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1CB",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1CB",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1CB",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1CB",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1CB",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1CB",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1CC",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1CC",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1CC",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1CC",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1CC",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1CC",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1CC",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1CC",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1CC",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1CC",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1CC",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1CD",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1CD",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1CD",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1CD",
+        "aut1",
+        1,
+        0
+      ],
+      [
+        "A1CD",
+        "aut1",
+        2,
+        0
+      ],
+      [
+        "A1CD",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1CD",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1CD",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1CD",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1CE",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1CE",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1CE",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1CE",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1CE",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1CE",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1CE",
+        "aut1",
+        1,
+        0
+      ],
+      [
+        "A1CE",
+        "aut1",
+        2,
+        0
+      ],
+      [
+        "A1CE",
+        "aut1",
+        3,
+        0
+      ],
+      [
+        "A1CE",
+        "aut1",
+        4,
+        0
+      ],
+      [
+        "A1CE",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1CE",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1CE",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1CE",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1CE",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1DA",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1DA",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1DA",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1DA",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1DA",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1DA",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1DA",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1DA",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1DA",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1DA",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1DA",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1DL",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1DL",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1DL",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1DL",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1DL",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1DL",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1DL",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1DL",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1DL",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1DL",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1DR",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1DR",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1DR",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1DR",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1DR",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1DR",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1DR",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1DR",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1DR",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1DR",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1DR",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1DS",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1DS",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1DS",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1DS",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1DS",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1DS",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1DS",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1DS",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1DS",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1DS",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1DS",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1EB",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1EB",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1EB",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1EB",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1EC",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1EC",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1EC",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1EC",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1EC",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1EC",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1EC",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1EC",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1EC",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1EC",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1EC",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1ED",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1ED",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1ED",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1ED",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1ED",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1ED",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1ED",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1ED",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1ED",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1ED",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1ED",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1EE",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1EE",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1EE",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1EE",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1EE",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1EE",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1EE",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1EE",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1EE",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1EE",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1EE",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1EF",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1EF",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1EF",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1EF",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1EF",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1PD",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1PD",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1PD",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1PD",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1PD",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1PD",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1PD",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1PD",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1PD",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1PD",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1PD",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1PE",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1PE",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1PE",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1PE",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1PE",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1PE",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1PE",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1PE",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1PE",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1PE",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1PE",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1PF",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1PF",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1PF",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1PF",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1PF",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1PF",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1PF",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1PF",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1PF",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1PF",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1PF",
+        "aub1",
+        4,
+        0
+      ],
+      [
+        "A1PG",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1PG",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1PG",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1PG",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1PG",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1PG",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1PG",
+        "aut1",
+        1,
+        0
+      ],
+      [
+        "A1PG",
+        "aut1",
+        2,
+        0
+      ],
+      [
+        "A1PG",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1PH",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "A1PH",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "A1PH",
+        "aret",
+        0,
+        0
+      ],
+      [
+        "A1PH",
+        "arut",
+        0,
+        0
+      ],
+      [
+        "A1PH",
+        "atp1",
+        2,
+        0
+      ],
+      [
+        "A1PH",
+        "atp1",
+        3,
+        0
+      ],
+      [
+        "A1PH",
+        "atp1",
+        4,
+        0
+      ],
+      [
+        "A1PH",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "A1PH",
+        "aub1",
+        2,
+        0
+      ],
+      [
+        "A1PH",
+        "aub1",
+        3,
+        0
+      ],
+      [
+        "A1PH",
+        "aub1",
+        4,
+        0
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "variant": "SD",
+      "rawcode": "AOhw",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOhw",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOhw",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOhw",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOhw",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOhw",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOhw",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOhw",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOhw",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOhw",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOhw",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DL",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DL",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DL",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DL",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DL",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DL",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DL",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DL",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DL",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DL",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DL",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOsw",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOsw",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOsw",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOsw",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOsw",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOsw",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOsw",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOsw",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOsw",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOsw",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOsw",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOvd",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOvd",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOvd",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOvd",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOvd",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOvd",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "AOvd",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DR",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DR",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DR",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DR",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DR",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DR",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DR",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DR",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DR",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DR",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DR",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DA",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DA",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DA",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DA",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DA",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DA",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DA",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DA",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DA",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DA",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DA",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DS",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DS",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DS",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DS",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DS",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DS",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DS",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DS",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DS",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DS",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1DS",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EB",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EB",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EB",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EB",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EB",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EB",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EB",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EE",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EE",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EE",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EE",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EE",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EE",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EE",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EE",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EE",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EE",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EE",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1ED",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1ED",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1ED",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1ED",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1ED",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1ED",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1ED",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1ED",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1ED",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1ED",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1ED",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EC",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EC",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EC",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EC",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EC",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EC",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EC",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EC",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EC",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EC",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EC",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EF",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EF",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EF",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EF",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EF",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EF",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1EF",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CE",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CE",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CE",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CE",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CE",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CE",
+      "field": "untip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CE",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CE",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CE",
+      "field": "untip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CE",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CE",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CE",
+      "field": "untip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CE",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CE",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CE",
+      "field": "untip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CB",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CB",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CB",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CB",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CB",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CB",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CB",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CB",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CB",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CB",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CB",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CC",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CC",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CC",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CC",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CC",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CC",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CC",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CC",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CC",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CC",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CC",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CD",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CD",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CD",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CD",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CD",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CD",
+      "field": "untip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CD",
+      "field": "unubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CD",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CD",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CD",
+      "field": "untip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CD",
+      "field": "unubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PD",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PD",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PD",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PD",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PD",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PD",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PD",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PD",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PD",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PD",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PD",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PE",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PE",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PE",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PE",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PE",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PE",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PE",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PE",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PE",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PE",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PE",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PF",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PF",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PF",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PF",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PF",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PF",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PF",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PF",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PF",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PF",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PF",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PG",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PG",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PG",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PG",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PG",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PG",
+      "field": "untip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PG",
+      "field": "unubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PG",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PG",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PG",
+      "field": "untip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PG",
+      "field": "unubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PH",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PH",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PH",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PH",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PH",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PH",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PH",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PH",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PH",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PH",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1PH",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CA",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CA",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A1CA",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOhw",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOhw",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOhw",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOhw",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOhw",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOhw",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOhw",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOhw",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOhw",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOhw",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOhw",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DL",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DL",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DL",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DL",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DL",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DL",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DL",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DL",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DL",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DL",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DL",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOsw",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOsw",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOsw",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOsw",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOsw",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOsw",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOsw",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOsw",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOsw",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOsw",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOsw",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOvd",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOvd",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOvd",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOvd",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOvd",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOvd",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "AOvd",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DR",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DR",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DR",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DR",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DR",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DR",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DR",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DR",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DR",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DR",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DR",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DA",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DA",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DA",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DA",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DA",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DA",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DA",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DA",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DA",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DA",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DA",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DS",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DS",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DS",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DS",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DS",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DS",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DS",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DS",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DS",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DS",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1DS",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EB",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EB",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EB",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EB",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EB",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EB",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EB",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EE",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EE",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EE",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EE",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EE",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EE",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EE",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EE",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EE",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EE",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EE",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1ED",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1ED",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1ED",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1ED",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1ED",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1ED",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1ED",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1ED",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1ED",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1ED",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1ED",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EC",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EC",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EC",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EC",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EC",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EC",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EC",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EC",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EC",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EC",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EC",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EF",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EF",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EF",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EF",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EF",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EF",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1EF",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CE",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CE",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CE",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CE",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CE",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CE",
+      "field": "untip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CE",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CE",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CE",
+      "field": "untip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CE",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CE",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CE",
+      "field": "untip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CE",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CE",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CE",
+      "field": "untip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CB",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CB",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CB",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CB",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CB",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CB",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CB",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CB",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CB",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CB",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CB",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CC",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CC",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CC",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CC",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CC",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CC",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CC",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CC",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CC",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CC",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CC",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CD",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CD",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CD",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CD",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CD",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CD",
+      "field": "untip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CD",
+      "field": "unubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CD",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CD",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CD",
+      "field": "untip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CD",
+      "field": "unubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PD",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PD",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PD",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PD",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PD",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PD",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PD",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PD",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PD",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PD",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PD",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PE",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PE",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PE",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PE",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PE",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PE",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PE",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PE",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PE",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PE",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PE",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PF",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PF",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PF",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PF",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PF",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PF",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PF",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PF",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PF",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PF",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PF",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PG",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PG",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PG",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PG",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PG",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PG",
+      "field": "untip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PG",
+      "field": "unubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PG",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PG",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PG",
+      "field": "untip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PG",
+      "field": "unubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PH",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PH",
+      "field": "researchtip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PH",
+      "field": "researchubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PH",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PH",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PH",
+      "field": "tip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PH",
+      "field": "ubertip2",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PH",
+      "field": "tip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PH",
+      "field": "ubertip3",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PH",
+      "field": "tip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1PH",
+      "field": "ubertip4",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CA",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CA",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A1CA",
+      "field": "ubertip1",
+      "exact_match": true
+    }
+  ],
+  "wts_unchanged": true
+}

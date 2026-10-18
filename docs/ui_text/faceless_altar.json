@@ -1,0 +1,81 @@
+{
+  "scope": "Безликие: алтарь; отдельная транзакция object data",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "in_game_checked": false,
+  "strings": [
+    {
+      "source": "map.w3x/war3map.w3u + inherited object data / Skin",
+      "rawcode": "h0HY",
+      "field": "name",
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before_reference": "TRIGSTR_7817",
+      "before": "|cffd7b4f5Алтарь Древних Богов|r",
+      "after": "|cffe4cfa3Алтарь Древних Богов|r",
+      "after_reference": "TRIGSTR_43190",
+      "wts_id": 43190
+    },
+    {
+      "source": "map.w3x/war3map.w3u + inherited object data / Skin",
+      "rawcode": "h0HY",
+      "field": "tip",
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before_reference": "TRIGSTR_16475",
+      "before": "Построить |cffd7b4f5Альтарь Древних Богов|r",
+      "after": "|cffe4cfa3Алтарь Древних Богов|r (|cffffffffS|r)",
+      "after_reference": "TRIGSTR_43191",
+      "wts_id": 43191
+    },
+    {
+      "source": "map.w3x/war3map.w3u + inherited object data / Skin",
+      "rawcode": "h0HY",
+      "field": "ubertip",
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before_reference": "Призывает новых и воскрешает павших героев.",
+      "before": "Призывает новых и воскрешает павших героев.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Призывает героев безликих и воскрешает павших героев.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВерховный Душегуб|cffced4da.|n- |cffa9c7deГенерал К`Траксис|cffced4da.|n- |cffa9c7deМаг Запредельной Тьмы|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da Найм мага телепортации для переброски войск.|r",
+      "after_reference": "|cffa6afb8ЗДАНИЕ:|cffced4da Призывает героев безликих и воскрешает павших героев.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВерховный Душегуб|cffced4da.|n- |cffa9c7deГенерал К`Траксис|cffced4da.|n- |cffa9c7deМаг Запредельной Тьмы|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da Найм мага телепортации для переброски войск.|r"
+    }
+  ],
+  "before_fields": {
+    "abillist": "Abds",
+    "hotkey": "TRIGSTR_3075",
+    "name": "TRIGSTR_7817",
+    "researches": "",
+    "revive": "1",
+    "sellunits": "h07A",
+    "tip": "TRIGSTR_16475",
+    "trains": "U02H,U02G,U02I",
+    "ubertip": "Призывает новых и воскрешает павших героев.",
+    "upgrade": ""
+  },
+  "evidence": [
+    "trains=U02H,U02G,U02I; revive=1; sellunits=h07A; researches пуст",
+    "hotkey=TRIGSTR_3075=S; SD/HD effective fields совпадают"
+  ],
+  "related_pending": [
+    "Карточка общего h07A переведена отдельной порцией: shared_teleport_mage.json; собственные подсказки способностей и связанные карточки остальных рас ещё не обновлены"
+  ],
+  "legacy_forms": {
+    "ids": [
+      "n01P",
+      "n01Q",
+      "n01R",
+      "n01S",
+      "n01U"
+    ],
+    "status": "Не закрыты: путь получения игроком пока не подтверждён",
+    "evidence": "Bezlikie.lua: InitTrig_ZdaniyaBezlik и все четыре Copy вызывают DisableTrigger; включения этих триггеров в секциях не найдено. В builds рабочего u02D этих форм нет."
+  },
+  "missing_shared_building": {
+    "id": "h0D1",
+    "name": "Верфь",
+    "evidence": "u02D builds содержит h0D1; общая категория"
+  },
+  "transaction_report": ".cache/wc3/faceless-altar-transaction.json"
+}

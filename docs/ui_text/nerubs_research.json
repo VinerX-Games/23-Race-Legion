@@ -1,0 +1,791 @@
+{
+  "scope": "Нерубы (Nerubs): категория 5 — Исследования и маркеры (22 технологий)",
+  "upgrades_count": 22,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R07N",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10679,
+          "after": "|cffe4cfa3Нерубы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10680,
+          "after": "|cffe4cfa3Нерубы|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20121,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к королевству Нерубов (Азжол-Неруб).|r"
+        }
+      ]
+    },
+    {
+      "id": "R074",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10544,
+          "after": "|cffe4cfa3Сильные передние конечности — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10543,
+          "after": "|cffe4cfa3Сильные передние конечности — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 10541,
+          "after": "|cffe4cfa3Сильные передние конечности — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 10542,
+          "after": "|cffe4cfa3Сильные передние конечности — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 10540,
+          "after": "|cffe4cfa3Сильные передние конечности — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 10539,
+          "after": "|cffe4cfa3Сильные передние конечности — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10547,
+          "after": "|cffe4cfa3Сильные передние конечности — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 10546,
+          "after": "|cffe4cfa3Сильные передние конечности — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 10545,
+          "after": "|cffe4cfa3Сильные передние конечности — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 10550,
+          "after": "|cffe4cfa3Сильные передние конечности — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 10549,
+          "after": "|cffe4cfa3Сильные передние конечности — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 10548,
+          "after": "|cffe4cfa3Сильные передние конечности — уровень 6|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 13923,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает силу ударов передних клешней, увеличивая урон от атак всех воинов Нерубов.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым единицам Нерубов.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/6|r."
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 15289,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает силу ударов передних клешней, увеличивая урон от атак всех воинов Нерубов.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым единицам Нерубов.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/6|r."
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 15290,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает силу ударов передних клешней, увеличивая урон от атак всех воинов Нерубов.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым единицам Нерубов.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/6|r."
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 2009,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает силу ударов передних клешней, увеличивая урон от атак всех воинов Нерубов.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым единицам Нерубов.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4/6|r."
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 2010,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает силу ударов передних клешней, увеличивая урон от атак всех воинов Нерубов.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым единицам Нерубов.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5/6|r."
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 13229,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает силу ударов передних клешней, увеличивая урон от атак всех воинов Нерубов.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым единицам Нерубов.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6/6|r."
+        }
+      ]
+    },
+    {
+      "id": "R075",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10554,
+          "after": "|cffe4cfa3Броня туловища — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10555,
+          "after": "|cffe4cfa3Броня туловища — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 10556,
+          "after": "|cffe4cfa3Броня туловища — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 10559,
+          "after": "|cffe4cfa3Броня туловища — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 10558,
+          "after": "|cffe4cfa3Броня туловища — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 10557,
+          "after": "|cffe4cfa3Броня туловища — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10560,
+          "after": "|cffe4cfa3Броня туловища — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 10561,
+          "after": "|cffe4cfa3Броня туловища — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 10562,
+          "after": "|cffe4cfa3Броня туловища — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 10565,
+          "after": "|cffe4cfa3Броня туловища — уровень 4|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 10564,
+          "after": "|cffe4cfa3Броня туловища — уровень 5|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 10563,
+          "after": "|cffe4cfa3Броня туловища — уровень 6|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 18387,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наращивает прочные хитиновые пластины на туловище, усиливая броню бойцов ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМолодой неруб|cffced4da, |cffa9c7deНерубский броненосец|cffced4da, |cffa9c7deГлубинный Неруб|cffced4da, |cffa9c7deКисло-плюй|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/6|r."
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 18388,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наращивает прочные хитиновые пластины на туловище, усиливая броню бойцов ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМолодой неруб|cffced4da, |cffa9c7deНерубский броненосец|cffced4da, |cffa9c7deГлубинный Неруб|cffced4da, |cffa9c7deКисло-плюй|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/6|r."
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 18389,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наращивает прочные хитиновые пластины на туловище, усиливая броню бойцов ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМолодой неруб|cffced4da, |cffa9c7deНерубский броненосец|cffced4da, |cffa9c7deГлубинный Неруб|cffced4da, |cffa9c7deКисло-плюй|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/6|r."
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 18384,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наращивает прочные хитиновые пластины на туловище, усиливая броню бойцов ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМолодой неруб|cffced4da, |cffa9c7deНерубский броненосец|cffced4da, |cffa9c7deГлубинный Неруб|cffced4da, |cffa9c7deКисло-плюй|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4/6|r."
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 18385,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наращивает прочные хитиновые пластины на туловище, усиливая броню бойцов ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМолодой неруб|cffced4da, |cffa9c7deНерубский броненосец|cffced4da, |cffa9c7deГлубинный Неруб|cffced4da, |cffa9c7deКисло-плюй|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5/6|r."
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 18386,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наращивает прочные хитиновые пластины на туловище, усиливая броню бойцов ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМолодой неруб|cffced4da, |cffa9c7deНерубский броненосец|cffced4da, |cffa9c7deГлубинный Неруб|cffced4da, |cffa9c7deКисло-плюй|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6/6|r."
+        }
+      ]
+    },
+    {
+      "id": "R076",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10575,
+          "after": "|cffe4cfa3Броня чрева — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10576,
+          "after": "|cffe4cfa3Броня чрева — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 10577,
+          "after": "|cffe4cfa3Броня чрева — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 10580,
+          "after": "|cffe4cfa3Броня чрева — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 10579,
+          "after": "|cffe4cfa3Броня чрева — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 10578,
+          "after": "|cffe4cfa3Броня чрева — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10583,
+          "after": "|cffe4cfa3Броня чрева — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 10582,
+          "after": "|cffe4cfa3Броня чрева — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 10581,
+          "after": "|cffe4cfa3Броня чрева — уровень 3|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 10586,
+          "after": "|cffe4cfa3Броня чрева — уровень 4|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 10585,
+          "after": "|cffe4cfa3Броня чрева — уровень 5|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 10584,
+          "after": "|cffe4cfa3Броня чрева — уровень 6|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 18393,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет уязвимое брюшко нерубианцев, повышая показатель защиты стрелков и заклинателей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВоин Нерубов|cffced4da, |cffa9c7deЯдовитый Неруб|cffced4da, |cffa9c7deНеруб Страж|cffced4da, |cffa9c7deНеруб Лекарь|cffced4da, |cffa9c7deВязальщик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/6|r."
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 18394,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет уязвимое брюшко нерубианцев, повышая показатель защиты стрелков и заклинателей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВоин Нерубов|cffced4da, |cffa9c7deЯдовитый Неруб|cffced4da, |cffa9c7deНеруб Страж|cffced4da, |cffa9c7deНеруб Лекарь|cffced4da, |cffa9c7deВязальщик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/6|r."
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 18395,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет уязвимое брюшко нерубианцев, повышая показатель защиты стрелков и заклинателей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВоин Нерубов|cffced4da, |cffa9c7deЯдовитый Неруб|cffced4da, |cffa9c7deНеруб Страж|cffced4da, |cffa9c7deНеруб Лекарь|cffced4da, |cffa9c7deВязальщик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/6|r."
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 18390,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет уязвимое брюшко нерубианцев, повышая показатель защиты стрелков и заклинателей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВоин Нерубов|cffced4da, |cffa9c7deЯдовитый Неруб|cffced4da, |cffa9c7deНеруб Страж|cffced4da, |cffa9c7deНеруб Лекарь|cffced4da, |cffa9c7deВязальщик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4/6|r."
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 18391,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет уязвимое брюшко нерубианцев, повышая показатель защиты стрелков и заклинателей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВоин Нерубов|cffced4da, |cffa9c7deЯдовитый Неруб|cffced4da, |cffa9c7deНеруб Страж|cffced4da, |cffa9c7deНеруб Лекарь|cffced4da, |cffa9c7deВязальщик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5/6|r."
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 18392,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет уязвимое брюшко нерубианцев, повышая показатель защиты стрелков и заклинателей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВоин Нерубов|cffced4da, |cffa9c7deЯдовитый Неруб|cffced4da, |cffa9c7deНеруб Страж|cffced4da, |cffa9c7deНеруб Лекарь|cffced4da, |cffa9c7deВязальщик|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6/6|r."
+        }
+      ]
+    },
+    {
+      "id": "R070",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10477,
+          "after": "|cffe4cfa3Мутация Панциря — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10479,
+          "after": "|cffe4cfa3Мутация Панциря — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 10480,
+          "after": "|cffe4cfa3Мутация Панциря — уровень 3|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10478,
+          "after": "|cffe4cfa3Мутация Панциря — уровень 1|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 10481,
+          "after": "|cffe4cfa3Мутация Панциря — уровень 2|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 10482,
+          "after": "|cffe4cfa3Мутация Панциря — уровень 3|r (|cffffffffE|r)"
+        }
+      ]
+    },
+    {
+      "id": "R06Z",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10470,
+          "after": "|cffe4cfa3Мутация крови — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10472,
+          "after": "|cffe4cfa3Мутация крови — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 10473,
+          "after": "|cffe4cfa3Мутация крови — уровень 3|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10471,
+          "after": "|cffe4cfa3Мутация крови — уровень 1|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 10474,
+          "after": "|cffe4cfa3Мутация крови — уровень 2|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 10475,
+          "after": "|cffe4cfa3Мутация крови — уровень 3|r (|cffffffffR|r)"
+        }
+      ]
+    },
+    {
+      "id": "R071",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10484,
+          "after": "|cffe4cfa3Мутация здоровья — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10486,
+          "after": "|cffe4cfa3Мутация здоровья — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 10487,
+          "after": "|cffe4cfa3Мутация здоровья — уровень 3|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10485,
+          "after": "|cffe4cfa3Мутация здоровья — уровень 1|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 10488,
+          "after": "|cffe4cfa3Мутация здоровья — уровень 2|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 10489,
+          "after": "|cffe4cfa3Мутация здоровья — уровень 3|r (|cffffffffD|r)"
+        }
+      ]
+    },
+    {
+      "id": "R072",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10491,
+          "after": "|cffe4cfa3Мутация конечностей — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10493,
+          "after": "|cffe4cfa3Мутация конечностей — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 10494,
+          "after": "|cffe4cfa3Мутация конечностей — уровень 3|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10492,
+          "after": "|cffe4cfa3Мутация конечностей — уровень 1|r (|cffffffffF|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 10495,
+          "after": "|cffe4cfa3Мутация конечностей — уровень 2|r (|cffffffffF|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 10496,
+          "after": "|cffe4cfa3Мутация конечностей — уровень 3|r (|cffffffffF|r)"
+        }
+      ]
+    },
+    {
+      "id": "R073",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10502,
+          "after": "|cffe4cfa3Мутация нерубов — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10504,
+          "after": "|cffe4cfa3Мутация нерубов — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 10505,
+          "after": "|cffe4cfa3Мутация нерубов — уровень 3|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10503,
+          "after": "|cffe4cfa3Мутация нерубов — уровень 1|r (|cffffffffC|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 10506,
+          "after": "|cffe4cfa3Мутация нерубов — уровень 2|r (|cffffffffC|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 10507,
+          "after": "|cffe4cfa3Мутация нерубов — уровень 3|r (|cffffffffC|r)"
+        }
+      ]
+    },
+    {
+      "id": "R0DR",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 16897,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 16901,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 16904,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 18220,
+          "after": "|cffe4cfa3Улучшенные инструменты — уровень 4|r"
+        }
+      ]
+    },
+    {
+      "id": "R077",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10596,
+          "after": "|cffe4cfa3Шипастый панцирь|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10597,
+          "after": "|cffe4cfa3Шипастый панцирь|r (|cffffffffZ|r)"
+        }
+      ]
+    },
+    {
+      "id": "R078",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10600,
+          "after": "|cffe4cfa3Яд нерубов|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10601,
+          "after": "|cffe4cfa3Яд нерубов|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 18396,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Покрывает наружный панцирь воинов острыми шипами, увеличивая броню на |cffc8e087+2|cffced4da и отражая |cffc8e08715%|cffced4da урона ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМолодой неруб|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R079",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10604,
+          "after": "|cffe4cfa3Мутации Ядовитого неруба — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10609,
+          "after": "|cffe4cfa3Мутации Ядовитого неруба — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 10757,
+          "after": "|cffe4cfa3Мутации Ядовитого неруба — уровень 3|r"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 10756,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость перемещения Ядовитого неруба на |cffc8e087+30%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЯдовитый Неруб|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/3|r."
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 10758,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость перемещения Ядовитого неруба на |cffc8e087+30%|cffced4da и наделяет способностью |cffa9c7deАнтимагический панцирь|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЯдовитый Неруб|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/3|r."
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 10611,
+          "after": "|cffe4cfa3Мутации Ядовитого неруба — уровень 2|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 10759,
+          "after": "|cffe4cfa3Мутации Ядовитого неруба — уровень 3|r (|cffffffffC|r)"
+        }
+      ]
+    },
+    {
+      "id": "R07T",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10802,
+          "after": "|cffe4cfa3Усилить Конечности|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10803,
+          "after": "|cffe4cfa3Усилить Конечности|r (|cffffffffQ|r)"
+        }
+      ]
+    },
+    {
+      "id": "R07R",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10785,
+          "after": "|cffe4cfa3Командирская аура|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10786,
+          "after": "|cffe4cfa3Командирская аура|r (|cffffffffE|r)"
+        }
+      ]
+    },
+    {
+      "id": "R07S",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10792,
+          "after": "|cffe4cfa3Толстый Панцирь|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10793,
+          "after": "|cffe4cfa3Толстый Панцирь|r (|cffffffffX|r)"
+        }
+      ]
+    },
+    {
+      "id": "R07P",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10767,
+          "after": "|cffe4cfa3Паучья слизь|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10768,
+          "after": "|cffe4cfa3Паучья слизь|r (|cffffffffS|r)"
+        }
+      ]
+    },
+    {
+      "id": "R07Q",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10775,
+          "after": "|cffe4cfa3Сильные конечности|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10776,
+          "after": "|cffe4cfa3Сильные конечности|r (|cffffffffZ|r)"
+        }
+      ]
+    },
+    {
+      "id": "R07O",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10760,
+          "after": "|cffe4cfa3Мутация ДНК ядов — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10764,
+          "after": "|cffe4cfa3Мутация ДНК ядов — уровень 2|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10761,
+          "after": "|cffe4cfa3Мутация ДНК ядов — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 10765,
+          "after": "|cffe4cfa3Мутация ДНК ядов — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 18397,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает способность заражать атакованные цели смертоносным токсином Нерубов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЯдовитый Неруб|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 18398,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Покрывает Глубинного неруба прозрачной вязкой слизью, увеличивающей показатель брони.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГлубинный Неруб|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R07U",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10778,
+          "after": "|cffe4cfa3Знания Нерубов — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10811,
+          "after": "|cffe4cfa3Знания Нерубов — уровень 2|r"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 10812,
+          "after": "|cffe4cfa3Знания Нерубов — уровень 2|r (|cffffffffA|r)"
+        }
+      ]
+    },
+    {
+      "id": "R07V",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10816,
+          "after": "|cffe4cfa3Ядовитый щит|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10817,
+          "after": "|cffe4cfa3Ядовитый щит|r (|cffffffffZ|r)"
+        }
+      ]
+    },
+    {
+      "id": "R07W",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10823,
+          "after": "|cffe4cfa3Мастерство плетения — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 10827,
+          "after": "|cffe4cfa3Мастерство плетения — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 10830,
+          "after": "|cffe4cfa3Мастерство плетения — уровень 3|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10824,
+          "after": "|cffe4cfa3Мастерство плетения — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 10828,
+          "after": "|cffe4cfa3Мастерство плетения — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 10831,
+          "after": "|cffe4cfa3Мастерство плетения — уровень 3|r (|cffffffffS|r)"
+        }
+      ]
+    }
+  ]
+}

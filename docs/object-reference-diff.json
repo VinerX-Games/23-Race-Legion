@@ -1,0 +1,106 @@
+[
+  {
+    "type": "unit",
+    "id": "e01Y",
+    "field": "abillist",
+    "name": "|cffe6beaaПаучок|r",
+    "before": "A1JE\r\nA1JE",
+    "after": "A1JE"
+  },
+  {
+    "type": "unit",
+    "id": "h0G2",
+    "field": "abillist",
+    "name": "|cfff0c8afНаногном|r",
+    "before": "A16A,A0U7,A0T0,alit",
+    "after": "A16A,A0U7,A0T0,Alit"
+  },
+  {
+    "type": "unit",
+    "id": "h0GJ",
+    "field": "trains",
+    "name": "|cfffc8c32Стальгорн|r",
+    "before": "h0P7\r\nh0P7",
+    "after": "h0P7"
+  },
+  {
+    "type": "unit",
+    "id": "n01W",
+    "field": "abillist",
+    "name": "Эфемерное существо",
+    "before": "A0LS,A0LR,asla",
+    "after": "A0LS,A0LR,Asla"
+  },
+  {
+    "type": "unit",
+    "id": "n01X",
+    "field": "abillist",
+    "name": "Эфемерное существо 2",
+    "before": "A0LS,A0LR,asla",
+    "after": "A0LS,A0LR,Asla"
+  },
+  {
+    "type": "unit",
+    "id": "n076",
+    "field": "abillist",
+    "name": "|cffd7b4f6Ша Гордыни|r",
+    "before": "A1MM,Acch",
+    "after": "A1MM,ACch"
+  },
+  {
+    "type": "unit",
+    "id": "nane",
+    "field": "abillist",
+    "name": "Арахнид-землекоп",
+    "before": "Acvs",
+    "after": "ACvs"
+  },
+  {
+    "type": "unit",
+    "id": "pa02",
+    "field": "abillist",
+    "name": "|cffb4d2ebБоевой Монах|r",
+    "before": "a003",
+    "after": "A003"
+  },
+  {
+    "type": "unit",
+    "id": "pa03",
+    "field": "abillist",
+    "name": "|cffb4d2ebВоин Бури|r",
+    "before": "a003",
+    "after": "A003"
+  },
+  {
+    "type": "unit",
+    "id": "pa17",
+    "field": "abillist",
+    "name": "|cffb4d2ebВоин Земли|r",
+    "before": "Amim,a003",
+    "after": "Amim,A003"
+  },
+  {
+    "type": "unit",
+    "id": "pa18",
+    "field": "abillist",
+    "name": "|cffb4d2ebМонах Бури|r",
+    "before": "a003",
+    "after": "A003"
+  },
+  {
+    "type": "unit",
+    "id": "pa19",
+    "field": "abillist",
+    "name": "|cffb4d2ebМонах Земли|r",
+    "before": "a003",
+    "after": "A003"
+  },
+  {
+    "type": "unit",
+    "id": "w203",
+    "field": "abillist",
+    "name": "|cffdcb496Метатель топоров|r",
+    "before": "w2a0\r\nw2a0",
+    "after": "w2a0"
+  }
+]

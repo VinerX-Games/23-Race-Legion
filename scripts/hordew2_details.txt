@@ -1,0 +1,1024 @@
+=== RACE INFO ===
+Race: HordeW2
+
+=== SELECTION ABILITY ===
+ID: A1JN
+Name: |cffdcb496Орда Второй Войны|r (raw: TRIGSTR_26684)
+Tips: {'tip1': {'raw': 'TRIGSTR_35847', 'val': '|cffdcb496Орда Второй Войны|r', 'sid': 35847}} (raw: None)
+Ubertips: {'ubertip1': {'raw': 'TRIGSTR_25701', 'val': "|cffa0beaaСоздатель расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaСложность:|r |cffdcd2aa●●●|r●●|r|n|cffa0beaaПериод:|r |cffc8dcaaWarcraft II|r|n|nВ последние дни Первой Войны, лидер Теневого Совета, колдун Гул'дан впал в глубокую кому, пытаясь проникнуть в разум Медива. Без происков Теневого Совета Орда стала жертвой междоусобиц. В результате государственного переворота, возглавляемого Оргримом Молотом Рока, чтобы покончить с тем, что он считал разлагающим влиянием на Орду, Теневой Совет был уничтожен, а также его марионеточный вождь, Чернорук Разрушитель. Молот Рока успешно взял под контроль оставшиеся силы Орды и начал подкреплять их опустошенные армии орками и ограми из Темного Портала. Тролли, огры и орки сражались бок о бок, и вскоре предприимчивые гоблины увидели потенциальную выгоду в помощи им. Орда получила поддержку от гоблинов-машинистов и наемников, и с помощью Души Демона сумела поработить Красного Дракона Алекстразу и большую часть ее выводка.", 'sid': 25701}} (raw: None)
+
+=== SELECTION MARKERS ===
+[R0KB]
+  names: {'name1': {'raw': 'TRIGSTR_32677', 'val': '|cffdcb496Орда Второй Войны', 'sid': 32677}}
+  tips: {'tip1': {'raw': 'TRIGSTR_32678', 'val': '|cffdcb496Орда Второй Войны', 'sid': 32678}}
+  ubertips: {'ubertip1': {'raw': '', 'val': '', 'sid': None}}
+
+[R0KC]
+  names: {'name1': {'raw': 'TRIGSTR_5595', 'val': '|cffe6beaaОрда скверны или Орда Второй Войны|r', 'sid': 5595}}
+  tips: {'tip1': {'raw': 'TRIGSTR_5596', 'val': '|cffe6beaaОрда скверны или Орда Второй Войны|r', 'sid': 5596}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_27305', 'val': 'Организация, состоящая полностью из людей и ставящая своей целью уничтожение всей нежити и ее пособников на территории бывшего Лордерона', 'sid': 27305}}
+
+[R0KD]
+  names: {'name1': {'raw': 'TRIGSTR_5598', 'val': '|cffe4cfa3Культ Сумеречного Молота|r', 'sid': 5598}}
+  tips: {'tip1': {'raw': 'TRIGSTR_5599', 'val': '|cffe4cfa3Культ Сумеречного Молота|r', 'sid': 5599}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37033', 'val': '|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер выбора ветви развития Культа Сумеречного Молота.|r', 'sid': 37033}}
+
+=== BUILDINGS (11) ===
+[w20q] |cffdcb496Дом вождей|r (HK: Q)
+  raw_name: TRIGSTR_11791 | raw_tip: TRIGSTR_11792 | raw_ubertip: None
+  tip: Построить |cffdcb496Дом вождей|r
+  ubertip: |cffa6afb8ЗДАНИЕ:|cffced4da Главный оплот и центр сбора ресурсов Орды. Обучает батраков и складирует ресурсы.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБатрак|cffced4da: базовый рабочий, строитель и добытчик ресурсов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deГрабеж|cffced4da: войска ближнего боя воруют золото при атаке вражеских зданий.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deКрепость|cffced4da: открывает новые постройки и войска.|r
+  trains: w200 | researches: w2r3,xdR1,xdR2 | upgrades_to: w20w
+  fmade: 50 | attacks: normal (None)
+
+[w20w] |cffdcb496Крепость|r (HK: Z)
+  raw_name: TRIGSTR_11793 | raw_tip: TRIGSTR_11794 | raw_ubertip: None
+  tip: Улучшить до |cffdcb496Крепости|r
+  ubertip: Дает доступ к новым зданиям и типам войск.
+  trains: w200 | researches: w2r3 | upgrades_to: w20e
+  fmade: 100 | attacks: normal (None)
+
+[w20e] |cffdcb496Цитадель|r (HK: Z)
+  raw_name: TRIGSTR_11795 | raw_tip: TRIGSTR_11814 | raw_ubertip: None
+  tip: Улучшить до |cffdcb496Цитадели|r
+  ubertip: Дает доступ к новым зданиям и типам войск.
+  trains: w200 | researches: w2r3 | upgrades_to: None
+  fmade: 150 | attacks: normal (None)
+
+[w20r] |cffdcb496Казармы|r (HK: W)
+  raw_name: TRIGSTR_11815 | raw_tip: TRIGSTR_11816 | raw_ubertip: None
+  tip: Построить |cffdcb496Казармы|r
+  ubertip: |cff7dc87dВремя постройки:|r |cffaaf0aa60 сек.|r|nЗдание для подготовки базовых войск. Обучает рубак и охотников за головами, а также строит разрушители. |nДает доступ к «Грубой силе», «Берсерку», «Регенерации троллей» и «Горючей смеси».
+  trains: w208,w203,w204,xd04 | researches: w2r7,w2r8,w2r9,w286 | upgrades_to: None
+  fmade:  -  | attacks: normal (None)
+
+[w20y] |cffdcb496Свиноферма|r (HK: A)
+  raw_name: TRIGSTR_11819 | raw_tip: TRIGSTR_11820 | raw_ubertip: None
+  tip: Построить |cffdcb496Свиноферма|r
+  ubertip: |cff7dc87dВремя постройки:|r |cffaaf0aa45 сек.|r|nЗдание, приносящее инком.
+  trains: None | researches: None | upgrades_to: None
+  fmade: 40 | attacks: normal (None)
+
+[w214] |cffdcb496Лесопилка|r (HK: E)
+  raw_name: TRIGSTR_11885 | raw_tip: TRIGSTR_11886 | raw_ubertip: None
+  tip: Построить |cffdcb496Лесопилку|r
+  ubertip: |cff7dc87dВремя постройки:|r |cffaaf0aa70 сек.|r|nХранит добытую древесину. |nДает доступ к улучшениям для доспехов и оружия, а также позволяет строить укрепления.
+  trains: None | researches: w2r1,w2r0,w2r2,w2rb | upgrades_to: None
+  fmade:  -  | attacks: normal (None)
+
+[w20a] |cffdcb496Алтарь бури|r (HK: S)
+  raw_name: TRIGSTR_11824 | raw_tip: TRIGSTR_11825 | raw_ubertip: None
+  tip: Построить |cffdcb496Алтарь бури|r
+  ubertip: |cff7dc87dВремя постройки:|r |cffaaf0aa60 сек.|r|nПризывает новых и воскрешает павших героев.
+  trains: W200,W202,W201,W203 | researches: None | upgrades_to: None
+  fmade: 3 | attacks: normal (None)
+
+[w20u] |cffdcb496Сторожевая башня|r (HK: Z)
+  raw_name: TRIGSTR_11822 | raw_tip: TRIGSTR_11823 | raw_ubertip: None
+  tip: Построить |cffdcb496Сторожевую башню|r
+  ubertip: |cff7dc87dВремя постройки:|r |cffaaf0aa55 сек.|r|nОборонительное сооружение. Можно улучшить с помощью укрепленных стен. |n|n|cffffcc00Атакует наземные и воздушные цели.|r
+  trains: None | researches: None | upgrades_to: None
+  fmade: None | attacks: pierce (ground,structure,debris,air,item,ward)
+
+[w20t] |cffdcb496Темный Храм|r (HK: R)
+  raw_name: TRIGSTR_069 | raw_tip: TRIGSTR_070 | raw_ubertip: None
+  tip: Построить |cffdcb496Темный Храм|r
+  ubertip: |cff7dc87dВремя постройки:|r |cffaaf0aa60 сек.|r|nОбучает налетчиков, кодо, а также наездников на нетопырях и ветрокрылах. |nДает доступ к «Опутыванию», «Отравленным копьям», «Жидкому огню» и «Боевым барабанам».
+  trains: w209,w211,w205,xd01,xd06 | researches: w2r4,w2r5,w2r6 | upgrades_to: None
+  fmade:  -  | attacks: normal (None)
+
+[w20i] |cffdcb496Гоблинская лабаратория|r (HK: D)
+  raw_name: TRIGSTR_11889 | raw_tip: TRIGSTR_11890 | raw_ubertip: None
+  tip: Построить |cffdcb496Гоблинскую лабараторию|r
+  ubertip: |cff7dc87dВремя постройки:|r |cffaaf0aa60 сек.|r|nОбучает налетчиков, кодо, а также наездников на нетопырях и ветрокрылах. |nДает доступ к «Опутыванию», «Отравленным копьям», «Жидкому огню» и «Боевым барабанам».
+  trains: w207,w201,w206,xd02,xd05 | researches: w2rq,w2re | upgrades_to: None
+  fmade:  -  | attacks: normal (None)
+
+[w210] |cffdcb496Логово красных драконов|r (HK: F)
+  raw_name: TRIGSTR_11829 | raw_tip: TRIGSTR_11830 | raw_ubertip: None
+  tip: Построить |cffdcb496Логово красных драконов|r
+  ubertip: |cff7dc87dВремя постройки:|r |cffaaf0aa60 сек.|r|nОбучает налетчиков, кодо, а также наездников на нетопырях и ветрокрылах. |nДает доступ к «Опутыванию», «Отравленным копьям», «Жидкому огню» и «Боевым барабанам».
+  trains: w202,xd07 | researches: w2ra | upgrades_to: None
+  fmade:  -  | attacks: normal (None)
+
+[w218] |cffdcb496Верфь|r (HK: C)
+  raw_name: TRIGSTR_22656 | raw_tip: TRIGSTR_22661 | raw_ubertip: None
+  tip: Построить |cffdcb496Верфь|r
+  ubertip: |cff7dc87dВремя строительства:|r |cffaaf0aa90 сек.|r|nСтроит транспорты, фрегаты и линкоры.
+  trains: h0D4,h0D6,h0D5,w220 | researches: R005,R006,R007,R002,R003 | upgrades_to: None
+  fmade: None | attacks: normal (None)
+
+[w219] |cffdcb496Нефтяная платформа|r (HK: Q)
+  raw_name: TRIGSTR_22670 | raw_tip: TRIGSTR_22676 | raw_ubertip: None
+  tip: Построить |cffdcb496Нефтяную платформу|r
+  ubertip: |cff7dc87dВремя постройки:|r |cffaaf0aa55 сек.|r|nУвеличивает инком.
+  trains: None | researches: None | upgrades_to: None
+  fmade: 50 | attacks: normal (None)
+
+=== HEROES (2) ===
+[W200] |cffdcb496Вождь Клана|r (HK: Z)
+  raw_name: TRIGSTR_11863 | raw_tip: TRIGSTR_11867 | raw_ubertip: None
+  propernames: Мейм,Некрош,Ренд (raw: TRIGSTR_11864)
+  awakentip: Воскресить |cffdcb496Вождя клана|r (raw: TRIGSTR_11865)
+  revivetip: Воскресить |cffdcb496Вождя клана|r (raw: TRIGSTR_11866)
+  heroabillist: w2ap,w2ak,w2ad,w2al | abillist: AInv,A01C
+  targs1: ground,structure,debris,item,ward | targs2: ground,structure,debris,air,item,ward
+  tip: Призвать |cffdcb496Вождя клана|r
+  ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|nЛовкий герой. Мастерски расправляется с одиночными целями и запутывает врагов. Может изучить «Зеркальную копию», «Танец ветра», «Критический удар» и «Вихрь клинков». |n|n|cffffcc00Атакует наземные цели.|r
+
+[W201] |cffdcb496Сумеречный маг|r (HK: C)
+  raw_name: TRIGSTR_11874 | raw_tip: TRIGSTR_11879 | raw_ubertip: None
+  propernames: Горлоп,Оммок,Дентарг (raw: TRIGSTR_11876)
+  awakentip: Воскресить |cffdcb496Сумеречного мага|r (raw: TRIGSTR_11877)
+  revivetip: Воскресить |cffdcb496Сумеречного мага|r (raw: TRIGSTR_11878)
+  heroabillist: w298,w299,w2aZ,w2aW | abillist: AInv,A01C
+  targs1: ground,structure,debris,item,ward | targs2: ground,structure,debris,air,item,ward
+  tip: Призвать |cffdcb496Сумеречного мага|r
+  ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|nЛовкий герой. Мастерски расправляется с одиночными целями и запутывает врагов. Может изучить «Зеркальную копию», «Танец ветра», «Критический удар» и «Вихрь клинков». |n|n|cffffcc00Атакует наземные цели.|r
+
+[W202] |cffdcb496Предводитель троллей|r (HK: X)
+  raw_name: TRIGSTR_11880 | raw_tip: TRIGSTR_11884 | raw_ubertip: None
+  propernames: Мэйм (raw: TRIGSTR_11881)
+  awakentip: Воскресить |cffdcb496Предводителя троллей|r (raw: TRIGSTR_11882)
+  revivetip: Воскресить |cffdcb496Предводителя троллей|r (raw: TRIGSTR_11883)
+  heroabillist: w2aQ,w2aA,w2af,w2ah | abillist: AInv,A01C
+  targs1: ground,structure,debris,item,ward | targs2: ground,structure,debris,air,item,ward
+  tip: Призвать |cffdcb496Предводителя троллей|r
+  ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaЛовкость |r|nЛовкий герой. Мастерски расправляется с одиночными целями и запутывает врагов. Может изучить «Зеркальную копию», «Танец ветра», «Критический удар» и «Вихрь клинков». |n|n|cffffcc00Атакует наземные цели.|r
+
+[W203] |cffdcb496Мэйм Блэкхенд|r (HK: B)
+  raw_name: |cffdcb496Мэйм Блэкхенд|r | raw_tip: Призвать мастера клинка | raw_ubertip: None
+  propernames: Тодзара,Никоро,Кадзинд,Микаса,Самуро,Акинос,Мадзуру,Йоцура,Дайсе,Кигами,Арасикаге,Мугул Хитрый,Дзюбей (raw: Тодзара,Никоро,Кадзинд,Микаса,Самуро,Акинос,Мадзуру,Йоцура,Дайсе,Кигами,Арасикаге,Мугул Хитрый,Дзюбей)
+  awakentip: Воскресить мастера клинка (raw: Воскресить мастера клинка)
+  revivetip: Воскресить мастера клинка (raw: Воскресить мастера клинка)
+  heroabillist: AOwk,AOcr,AOmi,AOww | abillist: AInv
+  targs1: ground,structure,debris,item,ward | targs2: ground,structure,debris,air,item,ward
+  tip: Призвать мастера клинка
+  ubertip: "Ловкий герой. Мастерски расправляется с одиночными целями и запутывает врагов. Может изучить «Зеркальную копию», «Танец ветра», «Критический удар» и «Вихрь клинков». |n|n|cffffcc00Атакует наземные цели.|r"
+
+=== UNITS (23) ===
+[w200] |cffdcb496Батрак|r (HK: Q)
+  raw_name: TRIGSTR_11731 | raw_tip: TRIGSTR_11745 | raw_ubertip: None
+  tip: Обучить |cffdcb496Батрака|r
+  ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa15 сек.|r|nБазовый рабочий. Добывает золото и древесину, а также строит и ремонтирует здания. Может оборонять базу, засев в землянке. |n|n|cffffcc00Атакует наземные цели и деревья.|r
+  abillist: Ahar,Arep,w2a0,A0I3
+  attacks: normal (ground,structure,debris,item,ward) / normal (tree)
+
+[w208] |cffdcb496Рубака|r (HK: Q)
+  raw_name: TRIGSTR_11787 | raw_tip: TRIGSTR_11788 | raw_ubertip: None
+  tip: Обучить |cffdcb496Рубаку|r
+  ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa21 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|nОрк-воин. Может изучить «Грубую силу». |n|n|cffffcc00Атакует наземные цели.|r
+  abillist: w2a0,w2an,w2am
+  attacks: normal (ground,structure,debris,item,ward) / normal (None)
+
+[w203] |cffdcb496Метатель топоров|r (HK: W)
+  raw_name: TRIGSTR_11750 | raw_tip: TRIGSTR_11751 | raw_ubertip: None
+  tip: Нанять |cffdcb496Метателя топоров|r
+  ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa25 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nВооружен метательными топорами.|n|n|cffffcc00Атакует наземные и воздушные цели.|r
+  abillist: w2a0
+  attacks: pierce (ground,structure,debris,air,item,ward) / normal (None)
+
+[w204] |cffdcb496Огр-воин|r (HK: E)
+  raw_name: TRIGSTR_11752 | raw_tip: TRIGSTR_11753 | raw_ubertip: None
+  tip: Нанять |cffdcb496Огра-воина|r
+  ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa40 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|nОбычный пехотинец Легиона огров. |n|n|cffffcc00Атакует наземные цели.|r
+  abillist: w2a0,w285,w2ag,w284
+  attacks: normal (ground,structure,debris,item,ward) / normal (None)
+
+[xd04] |cffdcb496Копьеметатель Драконьей Пасти|r (HK: T)
+  raw_name: |cffdcb496Копьеметатель Драконьей Пасти|r | raw_tip: Обучить охотника за головами | raw_ubertip: None
+  tip: Обучить охотника за головами
+  ubertip: "Универсальный копьеметатель, эффективный против воздушных целей. Владеет «Регенерацией троллей». Можно улучшить до берсерка, владеющего «Берсерком». |n|n|cffffcc00Атакует наземные и воздушные цели.|r"
+  abillist: Aven,A0ZA,A1LO,A1OJ
+  attacks: pierce (ground,structure,debris,air,item,ward) / normal (None)
+
+[w209] |cffdcb496Рыцарь смерти|r (HK: E)
+  raw_name: TRIGSTR_11789 | raw_tip: TRIGSTR_11790 | raw_ubertip: None
+  tip: Нанять |cffdcb496Рыцаря Смерти|r
+  ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|nЛегкий воин дальнего боя. Владеет «Развеиванием магии». |n|n|cffffcc00Атакует наземные и воздушные цели.|r
+  abillist: w2a0,w2a8,w2a5,w2av,w2ab
+  attacks: chaos (ground,structure,debris,air,item,ward) / normal (None)
+
+[w211] |cffdcb496Жрец|r (HK: Q)
+  raw_name: TRIGSTR_11857 | raw_tip: TRIGSTR_11858 | raw_ubertip: None
+  tip: Нанять |cffdcb496Жреца|r
+  ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa40 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r|nСтарший жрец-целитель. Атакует врагов огненными снарядами. Владеет «Рассеянием чар» и «Внутренним огнем». |n|n|cffffcc00Атакует наземные и воздушные цели.|r
+  abillist: w2az,w2ax,w2ac,w2a0
+  attacks: magic (ground,structure,debris,air,item,ward) / normal (None)
+
+[w205] |cffdcb496Огр-маг|r (HK: W)
+  raw_name: TRIGSTR_11754 | raw_tip: TRIGSTR_11755 | raw_ubertip: None
+  tip: Нанять |cffdcb496Огр-мага|r
+  ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|nВоин-маг Легиона огров. Владеет «Жаждой крови». |n|n|cffffcc00Атакует наземные цели.|r
+  abillist: w2a0,w2a4,w2a6,w2a9
+  attacks: normal (ground,structure,debris,item,ward) / normal (None)
+
+[xd01] |cffdcb496Чернокнижник Темной Орды|r (HK: S)
+  raw_name: |cffdcb496Чернокнижник Темной Орды|r | raw_tip: Обучить шамана | raw_ubertip: None
+  tip: Обучить шамана
+  ubertip: "Базовый маг. Владеет «Развеиванием магии», которое снимает магические эффекты и может обездвиживать врагов. Может изучить «Щит молний» и «Жажду крови». |n|n|cffffcc00Атакует наземные и воздушные цели.|r"
+  abillist: Ablo,Alsh,Aprg,Aion,A1LS,A1OJ
+  attacks: magic (ground,structure,debris,air,item,ward) / normal (None)
+
+[xd06] |cffdcb496Укротитель драконов|r (HK: S)
+  raw_name: |cffdcb496Укротитель драконов|r | raw_tip: Обучить шамана | raw_ubertip: None
+  tip: Обучить шамана
+  ubertip: "Базовый маг. Владеет «Развеиванием магии», которое снимает магические эффекты и может обездвиживать врагов. Может изучить «Щит молний» и «Жажду крови». |n|n|cffffcc00Атакует наземные и воздушные цели.|r"
+  abillist: Ablo,Alsh,Aprg,Aion,A1LS,A1OJ
+  attacks: magic (ground,structure,debris,air,item,ward) / normal (None)
+
+[w207] |cffdcb496Катапульта|r (HK: E)
+  raw_name: TRIGSTR_11785 | raw_tip: TRIGSTR_11786 | raw_ubertip: None
+  tip: Построить |cffdcb496Катапульту|r
+  ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa44 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный|r|nДальнобойное осадное орудие, эффективное против зданий, но медленное и уязвимое. Можно оснастить горючей смесью. |n|n|cffffcc00Атакует наземные цели и деревья.|r
+  abillist: w2a0
+  attacks: siege (ground,debris,tree,wall,item,ward) / siege (structure)
+
+[w201] |cffdcb496Дирижабль|r (HK: W)
+  raw_name: TRIGSTR_11746 | raw_tip: TRIGSTR_11747 | raw_ubertip: None
+  tip: Нанять |cffdcb496Дирижабль|r
+  ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r|nВоздушный транспорт.
+  abillist: Sch3,Achd,A1JO,Adro,w2a0,w2a1,w2a3,w2as,w296
+  attacks: siege (ground,structure,debris,item,ward) / normal (None)
+
+[w206] |cffdcb496Подрывной отряд|r (HK: Q)
+  raw_name: TRIGSTR_11756 | raw_tip: TRIGSTR_11784 | raw_ubertip: None
+  tip: Нанять |cffdcb496Подрывной отряд|r
+  ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa25 сек.|r|nГоблинский подрывной отряд, особенно эффективный против зданий. |n|cffffcc00Взрывает наземные цели и деревья.|r
+  abillist: w2a2,w2a0
+  attacks: normal (enemies) / normal (None)
+
+[xd02] |cffdcb496Осадный огр|r (HK: G)
+  raw_name: |cffdcb496Осадный огр|r | raw_tip: Обучить рубаку | raw_ubertip: None
+  tip: Обучить рубаку
+  ubertip: Орк-воин. Может изучить «Грубую силу». |n|n|cffffcc00Атакует наземные цели.|r
+  abillist: A178,A176
+  attacks: normal (ground,structure,debris,item,ward) / normal (None)
+
+[xd05] |cffdcb496Всадник Драконьей Пасти|r (HK: R)
+  raw_name: |cffdcb496Всадник Драконьей Пасти|r | raw_tip: Обучить налетчика | raw_ubertip: None
+  tip: Обучить налетчика
+  ubertip: "Быстрый наездник на волке, эффективный против зданий. Может изучить «Опутывание». |n|n|cffffcc00Атакует наземные цели.|r"
+  abillist: Asal,A0Z7,A1OJ
+  attacks: siege (ground,structure,debris,item,ward) / normal (None)
+
+[w202] |cffdcb496Красный дракон|r (HK: Q)
+  raw_name: TRIGSTR_11748 | raw_tip: TRIGSTR_11749 | raw_ubertip: None
+  tip: Призвать |cffdcb496Красного дракона|r
+  ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa52 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nНебольшой летающий воин дальнего боя.|n|n|cffffcc00Атакует наземные и воздушные цели.|r
+  abillist: w2a0,w290,w289,w288
+  attacks: pierce (ground,structure,debris,item,ward) / pierce (air)
+
+[xd07] |cffdcb496Черный дракончик|r (HK: W)
+  raw_name: |cffdcb496Черный дракончик|r | raw_tip: Призвать черного дракончика | raw_ubertip: None
+  tip: Призвать черного дракончика
+  ubertip: Мелкий летающий воин дальнего боя.|n|n|cffffcc00Атакует наземные и воздушные цели.|r
+  abillist: A0QO,A0RE
+  attacks: pierce (ground,structure,debris,item,ward) / pierce (air)
+
+[h0D4] |cffe4cfa3Транспорт|r (HK: Q)
+  raw_name: |cffe4cfa3Транспорт|r | raw_tip: |cffe4cfa3Транспорт|r (|cffffffffQ|r) | raw_ubertip: None
+  tip: |cffe4cfa3Транспорт|r (|cffffffffQ|r)
+  ubertip: "Прочное судно, предназначенное для перевозки войск."
+  abillist: A00I,A00A,A00B,Sch5,Slo3,Sdro
+  attacks: normal (None) / normal (None)
+
+[h0D6] |cffe4cfa3Фрегат|r (HK: W)
+  raw_name: TRIGSTR_3002 | raw_tip: Нанять фрегат | raw_ubertip: None
+  tip: Нанять фрегат
+  ubertip: |cffa6afb8ЮНИТ:|cffced4da Боевой патрульный корабль Орды, атакующий морские и береговые цели.|n|nАтакует наземные и воздушные цели.|r
+  abillist: A009,A002,A00B,A00G,A00A
+  attacks: normal (ground,structure,debris,air,item,ward) / normal (None)
+
+[h0D5] |cffe4cfa3Дредноут|r (HK: E)
+  raw_name: TRIGSTR_10916 | raw_tip: TRIGSTR_10918 | raw_ubertip: None
+  tip: |cffe4cfa3Дредноут|r (|cffffffffE|r)
+  ubertip: |cffa6afb8ЮНИТ:|cffced4da Тяжелый бронированный флагман флота Орды дальнего боя.|n|nАтакует наземные и воздушные цели.|r
+  abillist: A009,A003,A00B,A00G,A00A,A001
+  attacks: siege (ground,structure,debris,item,ward) / normal (None)
+
+[w220] |cffdcb496Нефтяной танкер|r (HK: A)
+  raw_name: TRIGSTR_22696 | raw_tip: TRIGSTR_22698 | raw_ubertip: None
+  tip: Произвести |cffdcb496Нефтяной танкер|r
+  ubertip: |cff7dc87dВремя подготовки:|r |cffaaf0aa35 сек.|r|nКорабль, необходимый для постройки нефтяных платформ.
+  abillist: A00B,A00A
+  attacks: siege (ground,structure,debris,item,ward) / normal (None)
+
+=== UPGRADES (17) ===
+[R002] levels: 6
+  names: {'name1': {'raw': '|cffe4cfa3Орудия флота — уровень 1|r', 'val': '|cffe4cfa3Орудия флота — уровень 1|r', 'sid': None}, 'name2': {'raw': '|cffe4cfa3Орудия флота — уровень 2|r', 'val': '|cffe4cfa3Орудия флота — уровень 2|r', 'sid': None}, 'name3': {'raw': '|cffe4cfa3Орудия флота — уровень 3|r', 'val': '|cffe4cfa3Орудия флота — уровень 3|r', 'sid': None}, 'name4': {'raw': '|cffe4cfa3Орудия флота — уровень 4|r', 'val': '|cffe4cfa3Орудия флота — уровень 4|r', 'sid': None}, 'name5': {'raw': '|cffe4cfa3Орудия флота — уровень 5|r', 'val': '|cffe4cfa3Орудия флота — уровень 5|r', 'sid': None}, 'name6': {'raw': '|cffe4cfa3Орудия флота — уровень 6|r', 'val': '|cffe4cfa3Орудия флота — уровень 6|r', 'sid': None}}
+  tips: {'tip1': {'raw': '|cffe4cfa3Орудия флота — уровень 1|r (|cffffffffA|r)', 'val': '|cffe4cfa3Орудия флота — уровень 1|r (|cffffffffA|r)', 'sid': None}, 'tip2': {'raw': '|cffe4cfa3Орудия флота — уровень 2|r (|cffffffffA|r)', 'val': '|cffe4cfa3Орудия флота — уровень 2|r (|cffffffffA|r)', 'sid': None}, 'tip3': {'raw': '|cffe4cfa3Орудия флота — уровень 3|r (|cffffffffA|r)', 'val': '|cffe4cfa3Орудия флота — уровень 3|r (|cffffffffA|r)', 'sid': None}, 'tip4': {'raw': '|cffe4cfa3Орудия флота — уровень 4|r (|cffffffffA|r)', 'val': '|cffe4cfa3Орудия флота — уровень 4|r (|cffffffffA|r)', 'sid': None}, 'tip5': {'raw': '|cffe4cfa3Орудия флота — уровень 5|r (|cffffffffA|r)', 'val': '|cffe4cfa3Орудия флота — уровень 5|r (|cffffffffA|r)', 'sid': None}, 'tip6': {'raw': '|cffe4cfa3Орудия флота — уровень 6|r (|cffffffffA|r)', 'val': '|cffe4cfa3Орудия флота — уровень 6|r (|cffffffffA|r)', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+17|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+3|cffced4da к урону.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+17|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+3|cffced4da к урону.|r", 'sid': None}, 'ubertip2': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+34|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+6|cffced4da к урону.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+34|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+20|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+2|cffced4da–|cffc8e087+6|cffced4da к урону.|r", 'sid': None}, 'ubertip3': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+51|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+9|cffced4da к урону.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+51|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+30|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+3|cffced4da–|cffc8e087+9|cffced4da к урону.|r", 'sid': None}, 'ubertip4': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+68|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+12|cffced4da к урону.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+68|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+40|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+4|cffced4da–|cffc8e087+12|cffced4da к урону.|r", 'sid': None}, 'ubertip5': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+85|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+15|cffced4da к урону.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+85|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+50|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+5|cffced4da–|cffc8e087+15|cffced4da к урону.|r", 'sid': None}, 'ubertip6': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff6|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+102|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+18|cffced4da к урону.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff6|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+102|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+90|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+60|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+6|cffced4da–|cffc8e087+18|cffced4da к урону.|r", 'sid': None}}
+
+[R003] levels: 6
+  names: {'name1': {'raw': '|cffe4cfa3Укреплённый корпус — уровень 1|r', 'val': '|cffe4cfa3Укреплённый корпус — уровень 1|r', 'sid': None}, 'name2': {'raw': '|cffe4cfa3Укреплённый корпус — уровень 2|r', 'val': '|cffe4cfa3Укреплённый корпус — уровень 2|r', 'sid': None}, 'name3': {'raw': '|cffe4cfa3Укреплённый корпус — уровень 3|r', 'val': '|cffe4cfa3Укреплённый корпус — уровень 3|r', 'sid': None}, 'name4': {'raw': '|cffe4cfa3Укреплённый корпус — уровень 4|r', 'val': '|cffe4cfa3Укреплённый корпус — уровень 4|r', 'sid': None}, 'name5': {'raw': '|cffe4cfa3Укреплённый корпус — уровень 5|r', 'val': '|cffe4cfa3Укреплённый корпус — уровень 5|r', 'sid': None}, 'name6': {'raw': '|cffe4cfa3Укреплённый корпус — уровень 6|r', 'val': '|cffe4cfa3Укреплённый корпус — уровень 6|r', 'sid': None}}
+  tips: {'tip1': {'raw': '|cffe4cfa3Укреплённый корпус — уровень 1|r (|cffffffffS|r)', 'val': '|cffe4cfa3Укреплённый корпус — уровень 1|r (|cffffffffS|r)', 'sid': None}, 'tip2': {'raw': '|cffe4cfa3Укреплённый корпус — уровень 2|r (|cffffffffS|r)', 'val': '|cffe4cfa3Укреплённый корпус — уровень 2|r (|cffffffffS|r)', 'sid': None}, 'tip3': {'raw': '|cffe4cfa3Укреплённый корпус — уровень 3|r (|cffffffffS|r)', 'val': '|cffe4cfa3Укреплённый корпус — уровень 3|r (|cffffffffS|r)', 'sid': None}, 'tip4': {'raw': '|cffe4cfa3Укреплённый корпус — уровень 4|r (|cffffffffS|r)', 'val': '|cffe4cfa3Укреплённый корпус — уровень 4|r (|cffffffffS|r)', 'sid': None}, 'tip5': {'raw': '|cffe4cfa3Укреплённый корпус — уровень 5|r (|cffffffffS|r)', 'val': '|cffe4cfa3Укреплённый корпус — уровень 5|r (|cffffffffS|r)', 'sid': None}, 'tip6': {'raw': '|cffe4cfa3Укреплённый корпус — уровень 6|r (|cffffffffS|r)', 'val': '|cffe4cfa3Укреплённый корпус — уровень 6|r (|cffffffffS|r)', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+100|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+1|cffced4da к броне.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+100|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+1|cffced4da к броне.|r", 'sid': None}, 'ubertip2': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+200|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+2|cffced4da к броне.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+200|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+2|cffced4da к броне.|r", 'sid': None}, 'ubertip3': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+300|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+3|cffced4da к броне.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+300|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+3|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+3|cffced4da к броне.|r", 'sid': None}, 'ubertip4': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+400|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+8|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+8|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+4|cffced4da к броне.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+400|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+8|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+4|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+8|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+4|cffced4da к броне.|r", 'sid': None}, 'ubertip5': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+500|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+10|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+10|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+5|cffced4da к броне.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+500|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+10|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+5|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+10|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+5|cffced4da к броне.|r", 'sid': None}, 'ubertip6': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+600|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff6|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+12|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+12|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+6|cffced4da к броне.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+600|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff6|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+12|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+6|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+12|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+6|cffced4da к броне.|r", 'sid': None}}
+
+[R004] levels: 1
+  names: {'name1': {'raw': 'TRIGSTR_13295', 'val': '|cffe4cfa3Улучшение до Кровавого Палача|r', 'sid': 13295}}
+  tips: {'tip1': {'raw': 'TRIGSTR_13298', 'val': '|cffe4cfa3Улучшение до Кровавого Палача|r', 'sid': 13298}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_18682', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Превращает  Властителя в Кровавого Палача. Усиливая его боевой потенциал.|r', 'sid': 18682}}
+
+[R005] levels: 5
+  names: {'name1': {'raw': '|cffe4cfa3Обстрел — уровень 1|r', 'val': '|cffe4cfa3Обстрел — уровень 1|r', 'sid': None}, 'name2': {'raw': '|cffe4cfa3Обстрел — уровень 2|r', 'val': '|cffe4cfa3Обстрел — уровень 2|r', 'sid': None}, 'name3': {'raw': '|cffe4cfa3Обстрел — уровень 3|r', 'val': '|cffe4cfa3Обстрел — уровень 3|r', 'sid': None}, 'name4': {'raw': '|cffe4cfa3Обстрел — уровень 4|r', 'val': '|cffe4cfa3Обстрел — уровень 4|r', 'sid': None}, 'name5': {'raw': '|cffe4cfa3Обстрел — уровень 5|r', 'val': '|cffe4cfa3Обстрел — уровень 5|r', 'sid': None}}
+  tips: {'tip1': {'raw': '|cffe4cfa3Обстрел — уровень 1|r (|cffffffffX|r)', 'val': '|cffe4cfa3Обстрел — уровень 1|r (|cffffffffX|r)', 'sid': None}, 'tip2': {'raw': '|cffe4cfa3Обстрел — уровень 2|r (|cffffffffX|r)', 'val': '|cffe4cfa3Обстрел — уровень 2|r (|cffffffffX|r)', 'sid': None}, 'tip3': {'raw': '|cffe4cfa3Обстрел — уровень 3|r (|cffffffffX|r)', 'val': '|cffe4cfa3Обстрел — уровень 3|r (|cffffffffX|r)', 'sid': None}, 'tip4': {'raw': '|cffe4cfa3Обстрел — уровень 4|r (|cffffffffX|r)', 'val': '|cffe4cfa3Обстрел — уровень 4|r (|cffffffffX|r)', 'sid': None}, 'tip5': {'raw': '|cffe4cfa3Обстрел — уровень 5|r (|cffffffffX|r)', 'val': '|cffe4cfa3Обстрел — уровень 5|r (|cffffffffX|r)', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+30|cffced4da. Открывает «Массированный обстрел» и боковые пушки линкора у кораблей, имеющих эти способности.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+30|cffced4da. Открывает «Массированный обстрел» и боковые пушки линкора у кораблей, имеющих эти способности.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r", 'sid': None}, 'ubertip2': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+60|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+60|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r", 'sid': None}, 'ubertip3': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+90|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+90|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r", 'sid': None}, 'ubertip4': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+120|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+120|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff4|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r", 'sid': None}, 'ubertip5': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+150|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+150|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff5|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r", 'sid': None}}
+
+[R006] levels: 3
+  names: {'name1': {'raw': '|cffe4cfa3Дополнительные паруса — уровень 1|r', 'val': '|cffe4cfa3Дополнительные паруса — уровень 1|r', 'sid': None}, 'name2': {'raw': '|cffe4cfa3Дополнительные паруса — уровень 2|r', 'val': '|cffe4cfa3Дополнительные паруса — уровень 2|r', 'sid': None}, 'name3': {'raw': '|cffe4cfa3Дополнительные паруса — уровень 3|r', 'val': '|cffe4cfa3Дополнительные паруса — уровень 3|r', 'sid': None}}
+  tips: {'tip1': {'raw': '|cffe4cfa3Дополнительные паруса — уровень 1|r (|cffffffffC|r)', 'val': '|cffe4cfa3Дополнительные паруса — уровень 1|r (|cffffffffC|r)', 'sid': None}, 'tip2': {'raw': '|cffe4cfa3Дополнительные паруса — уровень 2|r (|cffffffffC|r)', 'val': '|cffe4cfa3Дополнительные паруса — уровень 2|r (|cffffffffC|r)', 'sid': None}, 'tip3': {'raw': '|cffe4cfa3Дополнительные паруса — уровень 3|r (|cffffffffC|r)', 'val': '|cffe4cfa3Дополнительные паруса — уровень 3|r (|cffffffffC|r)', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+5%|cffced4da. Открывает «Тактическое ускорение» у кораблей, имеющих эту способность, включая фрегаты и линкоры.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+5%|cffced4da. Открывает «Тактическое ускорение» у кораблей, имеющих эту способность, включая фрегаты и линкоры.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r', 'sid': None}, 'ubertip2': {'raw': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+10%|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+10%|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r', 'sid': None}, 'ubertip3': {'raw': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+15%|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+15%|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r', 'sid': None}}
+
+[R007] levels: 3
+  names: {'name1': {'raw': '|cffe4cfa3Починка — уровень 1|r', 'val': '|cffe4cfa3Починка — уровень 1|r', 'sid': None}, 'name2': {'raw': '|cffe4cfa3Починка — уровень 2|r', 'val': '|cffe4cfa3Починка — уровень 2|r', 'sid': None}, 'name3': {'raw': '|cffe4cfa3Починка — уровень 3|r', 'val': '|cffe4cfa3Починка — уровень 3|r', 'sid': None}}
+  tips: {'tip1': {'raw': '|cffe4cfa3Починка — уровень 1|r (|cffffffffD|r)', 'val': '|cffe4cfa3Починка — уровень 1|r (|cffffffffD|r)', 'sid': None}, 'tip2': {'raw': '|cffe4cfa3Починка — уровень 2|r (|cffffffffD|r)', 'val': '|cffe4cfa3Починка — уровень 2|r (|cffffffffD|r)', 'sid': None}, 'tip3': {'raw': '|cffe4cfa3Починка — уровень 3|r (|cffffffffD|r)', 'val': '|cffe4cfa3Починка — уровень 3|r (|cffffffffD|r)', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+50|cffced4da. Открывает способность «Починка» у кораблей, имеющих её.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+50|cffced4da. Открывает способность «Починка» у кораблей, имеющих её.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r", 'sid': None}, 'ubertip2': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+100|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+100|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff2|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r", 'sid': None}, 'ubertip3': {'raw': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+150|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r", 'val': "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+150|cffced4da.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff3|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r", 'sid': None}}
+
+[R0KB] levels: 1
+  names: {'name1': {'raw': 'TRIGSTR_32677', 'val': '|cffdcb496Орда Второй Войны', 'sid': 32677}}
+  tips: {'tip1': {'raw': 'TRIGSTR_32678', 'val': '|cffdcb496Орда Второй Войны', 'sid': 32678}}
+  ubertips: {'ubertip1': {'raw': '', 'val': '', 'sid': None}}
+
+[R0KC] levels: 1
+  names: {'name1': {'raw': 'TRIGSTR_5595', 'val': '|cffe6beaaОрда скверны или Орда Второй Войны|r', 'sid': 5595}}
+  tips: {'tip1': {'raw': 'TRIGSTR_5596', 'val': '|cffe6beaaОрда скверны или Орда Второй Войны|r', 'sid': 5596}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_27305', 'val': 'Организация, состоящая полностью из людей и ставящая своей целью уничтожение всей нежити и ее пособников на территории бывшего Лордерона', 'sid': 27305}}
+
+[R0KD] levels: 1
+  names: {'name1': {'raw': 'TRIGSTR_5598', 'val': '|cffe4cfa3Культ Сумеречного Молота|r', 'sid': 5598}}
+  tips: {'tip1': {'raw': 'TRIGSTR_5599', 'val': '|cffe4cfa3Культ Сумеречного Молота|r', 'sid': 5599}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37033', 'val': '|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер выбора ветви развития Культа Сумеречного Молота.|r', 'sid': 37033}}
+
+[Rguv] levels: 1
+  names: {'name1': {'raw': 'Знак ночного зрения', 'val': 'Знак ночного зрения', 'sid': None}}
+  tips: {'tip1': {'raw': None, 'val': None, 'sid': None}}
+  ubertips: {'ubertip1': {'raw': None, 'val': None, 'sid': None}}
+
+[Roar] levels: 6
+  names: {'name1': {'raw': 'TRIGSTR_36184', 'val': '|cffe4cfa3Улучшенная броня — уровень 1|r', 'sid': 36184}, 'name2': {'raw': 'TRIGSTR_36186', 'val': '|cffe4cfa3Улучшенная броня — уровень 3|r', 'sid': 36186}, 'name3': {'raw': 'TRIGSTR_36185', 'val': '|cffe4cfa3Улучшенная броня — уровень 2|r', 'sid': 36185}, 'name4': {'raw': 'TRIGSTR_36173', 'val': '|cffff5454Улучшенная броня|r', 'sid': 36173}, 'name5': {'raw': 'TRIGSTR_36174', 'val': '|cffff5454Улучшенная броня|r', 'sid': 36174}, 'name6': {'raw': 'TRIGSTR_36175', 'val': '|cffff5454Улучшенная броня|r', 'sid': 36175}}
+  tips: {'tip1': {'raw': 'TRIGSTR_36187', 'val': '|cffe4cfa3Улучшенная броня — уровень 1|r (|cffffffffA|r)', 'sid': 36187}, 'tip2': {'raw': 'TRIGSTR_36188', 'val': '|cffe4cfa3Улучшенная броня — уровень 2|r (|cffffffffA|r)', 'sid': 36188}, 'tip3': {'raw': 'TRIGSTR_36189', 'val': '|cffe4cfa3Улучшенная броня — уровень 3|r (|cffffffffA|r)', 'sid': 36189}, 'tip4': {'raw': 'TRIGSTR_36176', 'val': 'Исследовать |cffff5454Улучшеннeю броня|r', 'sid': 36176}, 'tip5': {'raw': 'TRIGSTR_36177', 'val': 'Исследовать |cffff5454Улучшеннeю броня|r', 'sid': 36177}, 'tip6': {'raw': 'TRIGSTR_36178', 'val': '|cffe4cfa3Улучшенная броня — уровень 4|r (|cffffffffA|r)', 'sid': 36178}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_36190', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту наземных войск Орды на |cff60dc70+1|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРядовой воин Орды|cffced4da|n- |cffa9c7deОсновной воин Орды|cffced4da|n- |cffa9c7deРядовой стрелок Орды|cffced4da|n- |cffa9c7deКавалерия Орды|cffced4da|n- |cffa9c7deЭлитный воин Орды|cffced4da.|r', 'sid': 36190}, 'ubertip2': {'raw': 'TRIGSTR_36179', 'val': '|cffe4cfa3Улучшенная броня — уровень 5|r (|cffffffffA|r)', 'sid': 36179}, 'ubertip3': {'raw': 'TRIGSTR_36180', 'val': '|cffe4cfa3Улучшенная броня — уровень 6|r (|cffffffffA|r)', 'sid': 36180}, 'ubertip4': {'raw': 'TRIGSTR_36181', 'val': '|cffe4cfa3Улучшенная броня — уровень 4|r', 'sid': 36181}, 'ubertip5': {'raw': 'TRIGSTR_36182', 'val': '|cffe4cfa3Улучшенная броня — уровень 5|r', 'sid': 36182}, 'ubertip6': {'raw': 'TRIGSTR_36183', 'val': '|cffe4cfa3Улучшенная броня — уровень 6|r', 'sid': 36183}}
+
+[Robk] levels: 1
+  names: {'name1': {'raw': 'Улучшение до берсерка', 'val': 'Улучшение до берсерка', 'sid': None}}
+  tips: {'tip1': {'raw': 'Берсерк', 'val': 'Берсерк', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': 'Превращает охотников за головами в берсерков. Дает бонус к здоровью и способность «Берсерк».', 'val': 'Превращает охотников за головами в берсерков. Дает бонус к здоровью и способность «Берсерк».', 'sid': None}}
+
+[Robs] levels: 1
+  names: {'name1': {'raw': 'Грубая сила', 'val': 'Грубая сила', 'sid': None}}
+  tips: {'tip1': {'raw': 'Исследовать «Грубую силу»', 'val': 'Исследовать «Грубую силу»', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': '"+<Robs,base1> к запасу здоровья рубак и +<Robs,base2> к урону от их атак."', 'val': '"+<Robs,base1> к запасу здоровья рубак и +<Robs,base2> к урону от их атак."', 'sid': None}}
+
+[Roen] levels: 1
+  names: {'name1': {'raw': 'TRIGSTR_26346', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает силу заклинаний и магическую защиту служителей смерти Отрекшихся.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБанши|cffced4da|n- |cffa9c7deМёртвый маг|cffced4da|n- |cffa9c7deВалькира|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4/6|r.', 'sid': 26346}}
+  tips: {'tip1': {'raw': 'TRIGSTR_26347', 'val': 'Study "Entangling"', 'sid': 26347}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_26366', 'val': 'Teaches raiders "Entangling," which pulls an enemy to the ground and immobilizes them. Entangled air units are considered ground units.', 'sid': 26366}}
+
+[Rome] levels: 6
+  names: {'name1': {'raw': 'TRIGSTR_36197', 'val': '|cffe4cfa3Оружие ближнего боя — уровень 1|r', 'sid': 36197}, 'name2': {'raw': 'TRIGSTR_36198', 'val': '|cffe4cfa3Оружие ближнего боя — уровень 2|r', 'sid': 36198}, 'name3': {'raw': 'TRIGSTR_36199', 'val': '|cffe4cfa3Оружие ближнего боя — уровень 3|r', 'sid': 36199}, 'name4': {'raw': 'TRIGSTR_36191', 'val': '|cffe4cfa3Оружие ближнего боя — уровень 4|r', 'sid': 36191}, 'name5': {'raw': 'TRIGSTR_36192', 'val': '|cffe4cfa3Оружие ближнего боя — уровень 5|r', 'sid': 36192}, 'name6': {'raw': 'TRIGSTR_36193', 'val': '|cffe4cfa3Оружие ближнего боя — уровень 6|r', 'sid': 36193}}
+  tips: {'tip1': {'raw': 'TRIGSTR_36200', 'val': '|cffe4cfa3Оружие ближнего боя — уровень 1|r (|cffffffffQ|r)', 'sid': 36200}, 'tip2': {'raw': 'TRIGSTR_36201', 'val': '|cffe4cfa3Оружие ближнего боя — уровень 2|r (|cffffffffQ|r)', 'sid': 36201}, 'tip3': {'raw': 'TRIGSTR_36202', 'val': '|cffe4cfa3Оружие ближнего боя — уровень 3|r (|cffffffffQ|r)', 'sid': 36202}, 'tip4': {'raw': 'TRIGSTR_36194', 'val': '|cffe4cfa3Оружие ближнего боя — уровень 4|r (|cffffffffQ|r)', 'sid': 36194}, 'tip5': {'raw': 'TRIGSTR_36195', 'val': '|cffe4cfa3Оружие ближнего боя — уровень 5|r (|cffffffffQ|r)', 'sid': 36195}, 'tip6': {'raw': 'TRIGSTR_36196', 'val': '|cffe4cfa3Оружие ближнего боя — уровень 6|r (|cffffffffQ|r)', 'sid': 36196}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_22775', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя воинов Орды на |cff60dc70+1|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРядовой воин Орды|cffced4da|n- |cffa9c7deОсновной воин Орды|cffced4da|n- |cffa9c7deЭлитный воин Орды|cffced4da|n- |cffa9c7deКавалерия Орды|cffced4da.|r', 'sid': 22775}, 'ubertip2': {'raw': 'TRIGSTR_22776', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя воинов Орды на |cff60dc70+2|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРядовой воин Орды|cffced4da|n- |cffa9c7deОсновной воин Орды|cffced4da|n- |cffa9c7deЭлитный воин Орды|cffced4da|n- |cffa9c7deКавалерия Орды|cffced4da.|r', 'sid': 22776}, 'ubertip3': {'raw': 'TRIGSTR_22794', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя воинов Орды на |cff60dc70+3|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРядовой воин Орды|cffced4da|n- |cffa9c7deОсновной воин Орды|cffced4da|n- |cffa9c7deЭлитный воин Орды|cffced4da|n- |cffa9c7deКавалерия Орды|cffced4da.|r', 'sid': 22794}, 'ubertip4': {'raw': 'TRIGSTR_22795', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя воинов Орды на |cff60dc70+4|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРядовой воин Орды|cffced4da|n- |cffa9c7deОсновной воин Орды|cffced4da|n- |cffa9c7deЭлитный воин Орды|cffced4da|n- |cffa9c7deКавалерия Орды|cffced4da.|r', 'sid': 22795}, 'ubertip5': {'raw': 'TRIGSTR_22796', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя воинов Орды на |cff60dc70+5|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРядовой воин Орды|cffced4da|n- |cffa9c7deОсновной воин Орды|cffced4da|n- |cffa9c7deЭлитный воин Орды|cffced4da|n- |cffa9c7deКавалерия Орды|cffced4da.|r', 'sid': 22796}, 'ubertip6': {'raw': 'TRIGSTR_22797', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя воинов Орды на |cff60dc70+6|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРядовой воин Орды|cffced4da|n- |cffa9c7deОсновной воин Орды|cffced4da|n- |cffa9c7deЭлитный воин Орды|cffced4da|n- |cffa9c7deКавалерия Орды|cffced4da.|r', 'sid': 22797}}
+
+[Ropg] levels: 1
+  names: {'name1': {'raw': 'TRIGSTR_22401', 'val': '|cffe4cfa3Грабеж|r', 'sid': 22401}}
+  tips: {'tip1': {'raw': 'TRIGSTR_22402', 'val': '|cffe4cfa3Грабеж|r', 'sid': 22402}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_22403', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Воины ближнего боя Орды воруют золото при нанесении урона вражеским постройкам.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРядовой воин Орды|cffced4da|n- |cffa9c7deОсновной воин Орды|cffced4da|n- |cffa9c7deКавалерия Орды|cffced4da.|r', 'sid': 22403}}
+
+[Ropm] levels: 1
+  names: {'name1': {'raw': 'Рюкзак', 'val': 'Рюкзак', 'sid': None}}
+  tips: {'tip1': {'raw': 'Исследовать рюкзак', 'val': 'Исследовать рюкзак', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': 'Позволяет некоторым наземным войскам носить предметы.', 'val': 'Позволяет некоторым наземным войскам носить предметы.', 'sid': None}}
+
+[Rora] levels: 6
+  names: {'name1': {'raw': 'TRIGSTR_36167', 'val': '|cffe4cfa3Оружие дальнего боя — уровень 1|r', 'sid': 36167}, 'name2': {'raw': 'TRIGSTR_36168', 'val': '|cffe4cfa3Оружие дальнего боя — уровень 2|r', 'sid': 36168}, 'name3': {'raw': 'TRIGSTR_36169', 'val': '|cffe4cfa3Оружие дальнего боя — уровень 3|r', 'sid': 36169}, 'name4': {'raw': 'TRIGSTR_36161', 'val': '|cffe4cfa3Оружие дальнего боя — уровень 4|r', 'sid': 36161}, 'name5': {'raw': 'TRIGSTR_36162', 'val': '|cffe4cfa3Оружие дальнего боя — уровень 5|r', 'sid': 36162}, 'name6': {'raw': 'TRIGSTR_36163', 'val': '|cffe4cfa3Оружие дальнего боя — уровень 6|r', 'sid': 36163}}
+  tips: {'tip1': {'raw': 'TRIGSTR_36170', 'val': '|cffe4cfa3Оружие дальнего боя — уровень 1|r (|cffffffffW|r)', 'sid': 36170}, 'tip2': {'raw': 'TRIGSTR_36171', 'val': '|cffe4cfa3Оружие дальнего боя — уровень 2|r (|cffffffffW|r)', 'sid': 36171}, 'tip3': {'raw': 'TRIGSTR_36172', 'val': '|cffe4cfa3Оружие дальнего боя — уровень 3|r (|cffffffffW|r)', 'sid': 36172}, 'tip4': {'raw': 'TRIGSTR_36164', 'val': '|cffe4cfa3Оружие дальнего боя — уровень 4|r (|cffffffffW|r)', 'sid': 36164}, 'tip5': {'raw': 'TRIGSTR_36165', 'val': '|cffe4cfa3Оружие дальнего боя — уровень 5|r (|cffffffffW|r)', 'sid': 36165}, 'tip6': {'raw': 'TRIGSTR_36166', 'val': '|cffe4cfa3Оружие дальнего боя — уровень 6|r (|cffffffffW|r)', 'sid': 36166}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_22746', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак дальнего боя стрелков Орды на |cff60dc70+1|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРядовой стрелок Орды|cffced4da|n- |cffa9c7deОсновной стрелок Орды|cffced4da|n- |cffa9c7deБерсерк|cffced4da.|r', 'sid': 22746}, 'ubertip2': {'raw': 'TRIGSTR_22747', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак дальнего боя стрелков Орды на |cff60dc70+2|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРядовой стрелок Орды|cffced4da|n- |cffa9c7deОсновной стрелок Орды|cffced4da|n- |cffa9c7deБерсерк|cffced4da.|r', 'sid': 22747}, 'ubertip3': {'raw': 'TRIGSTR_22748', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак дальнего боя стрелков Орды на |cff60dc70+3|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРядовой стрелок Орды|cffced4da|n- |cffa9c7deОсновной стрелок Орды|cffced4da|n- |cffa9c7deБерсерк|cffced4da.|r', 'sid': 22748}, 'ubertip4': {'raw': 'TRIGSTR_22743', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак дальнего боя стрелков Орды на |cff60dc70+4|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРядовой стрелок Орды|cffced4da|n- |cffa9c7deОсновной стрелок Орды|cffced4da|n- |cffa9c7deБерсерк|cffced4da.|r', 'sid': 22743}, 'ubertip5': {'raw': 'TRIGSTR_22744', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак дальнего боя стрелков Орды на |cff60dc70+5|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРядовой стрелок Орды|cffced4da|n- |cffa9c7deОсновной стрелок Орды|cffced4da|n- |cffa9c7deБерсерк|cffced4da.|r', 'sid': 22744}, 'ubertip6': {'raw': 'TRIGSTR_22745', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак дальнего боя стрелков Орды на |cff60dc70+6|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРядовой стрелок Орды|cffced4da|n- |cffa9c7deОсновной стрелок Орды|cffced4da|n- |cffa9c7deБерсерк|cffced4da.|r', 'sid': 22745}}
+
+[Rost] levels: 3
+  names: {'name1': {'raw': 'TRIGSTR_36203', 'val': '|cffe4cfa3Обучение магов поддержки — ступень 1|r', 'sid': 36203}, 'name2': {'raw': 'TRIGSTR_36204', 'val': '|cffe4cfa3Обучение магов поддержки — ступень 2|r', 'sid': 36204}, 'name3': {'raw': 'TRIGSTR_36207', 'val': '|cffe4cfa3Обучение магов поддержки — ступень 3|r', 'sid': 36207}}
+  tips: {'tip1': {'raw': 'TRIGSTR_36205', 'val': '|cffe4cfa3Обучение магов поддержки — ступень 1|r (|cffffffffZ|r)', 'sid': 36205}, 'tip2': {'raw': 'TRIGSTR_36206', 'val': '|cffe4cfa3Обучение магов поддержки — ступень 2|r (|cffffffffZ|r)', 'sid': 36206}, 'tip3': {'raw': 'TRIGSTR_36208', 'val': '|cffe4cfa3Обучение магов поддержки — ступень 3|r (|cffffffffZ|r)', 'sid': 36208}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_23130', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас маны, скорость её восстановления и открывает новые заклинания шаманов Орды.|n|n|cffa6afb8Ступень обучения:|cffced4da |cffffffff1/3|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМаг Орды (поддержка)|cffced4da.|r', 'sid': 23130}, 'ubertip2': {'raw': 'TRIGSTR_23133', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас маны, скорость её восстановления и открывает новые заклинания шаманов Орды.|n|n|cffa6afb8Ступень обучения:|cffced4da |cffffffff2/3|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМаг Орды (поддержка)|cffced4da.|r', 'sid': 23133}, 'ubertip3': {'raw': 'TRIGSTR_23134', 'val': '|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас маны, скорость её восстановления и открывает новые заклинания шаманов Орды.|n|n|cffa6afb8Ступень обучения:|cffced4da |cffffffff3/3|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМаг Орды (поддержка)|cffced4da.|r', 'sid': 23134}}
+
+[Rotr] levels: 1
+  names: {'name1': {'raw': 'Регенерация троллей', 'val': 'Регенерация троллей', 'sid': None}}
+  tips: {'tip1': {'raw': '"Исследовать регенерацию троллей"', 'val': '"Исследовать регенерацию троллей"', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': '"Ускоряет регенерацию здоровья охотников за головами, знахарей и наездников на нетопырях."', 'val': '"Ускоряет регенерацию здоровья охотников за головами, знахарей и наездников на нетопырях."', 'sid': None}}
+
+[w286] levels: 1
+  names: {'name1': {'raw': 'TRIGSTR_37885', 'val': '|cffdcb496Зачарованные топоры|r', 'sid': 37885}}
+  tips: {'tip1': {'raw': 'TRIGSTR_37886', 'val': '|cffdcb496Зачарованные топоры|r', 'sid': 37886}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37888', 'val': 'Топоры спогут отскакивать в дополнительных противников.', 'sid': 37888}}
+
+[w291] levels: 1
+  names: {'name1': {'raw': 'TRIGSTR_37800', 'val': '|cffdcb496Драконы маг|r', 'sid': 37800}}
+  tips: {'tip1': {'raw': 'TRIGSTR_37801', 'val': '|cffdcb496Драконы маг|r', 'sid': 37801}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37802', 'val': '|cffdcb496Драконы маг|r', 'sid': 37802}}
+
+[w292] levels: 1
+  names: {'name1': {'raw': 'TRIGSTR_37791', 'val': '|cffdcb496Драконы хп|r', 'sid': 37791}}
+  tips: {'tip1': {'raw': 'TRIGSTR_37792', 'val': '|cffdcb496Драконы хп|r', 'sid': 37792}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37793', 'val': '|cffdcb496Драконы хп|r', 'sid': 37793}}
+
+[w293] levels: 1
+  names: {'name1': {'raw': 'TRIGSTR_37782', 'val': '|cffdcb496Драконы урон|r', 'sid': 37782}}
+  tips: {'tip1': {'raw': 'TRIGSTR_37783', 'val': '|cffdcb496Драконы урон|r', 'sid': 37783}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37784', 'val': '|cffdcb496Драконы урон|r', 'sid': 37784}}
+
+[w2r0] levels: 6
+  names: {'name1': {'raw': 'TRIGSTR_37490', 'val': '|cffdcb496Крепкая броня|r', 'sid': 37490}, 'name2': {'raw': 'TRIGSTR_37491', 'val': '|cffdcb496Крепкая броня|r', 'sid': 37491}, 'name3': {'raw': 'TRIGSTR_37492', 'val': '|cffdcb496Крепкая броня|r', 'sid': 37492}, 'name4': {'raw': 'TRIGSTR_37493', 'val': '|cffdcb496Крепкая броня|r', 'sid': 37493}, 'name5': {'raw': 'TRIGSTR_37494', 'val': '|cffdcb496Крепкая броня|r', 'sid': 37494}, 'name6': {'raw': 'TRIGSTR_37495', 'val': '|cffdcb496Крепкая броня|r', 'sid': 37495}}
+  tips: {'tip1': {'raw': 'TRIGSTR_37496', 'val': 'Исследовать |cffdcb496Крепкую броню|r', 'sid': 37496}, 'tip2': {'raw': 'TRIGSTR_37497', 'val': 'Исследовать |cffdcb496Крепкую броню|r', 'sid': 37497}, 'tip3': {'raw': 'TRIGSTR_37498', 'val': 'Исследовать |cffdcb496Крепкую броню|r', 'sid': 37498}, 'tip4': {'raw': 'TRIGSTR_37499', 'val': 'Исследовать |cffdcb496Крепкую броню|r', 'sid': 37499}, 'tip5': {'raw': 'TRIGSTR_37500', 'val': 'Исследовать |cffdcb496Крепкую броню|r', 'sid': 37500}, 'tip6': {'raw': 'TRIGSTR_37501', 'val': 'Исследовать |cffdcb496Крепкую броню|r', 'sid': 37501}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37502', 'val': 'Усиливает броню армию Орды.', 'sid': 37502}, 'ubertip2': {'raw': 'TRIGSTR_37503', 'val': 'Усиливает броню армию Орды.', 'sid': 37503}, 'ubertip3': {'raw': 'TRIGSTR_37504', 'val': 'Усиливает броню армию Орды.', 'sid': 37504}, 'ubertip4': {'raw': 'TRIGSTR_37505', 'val': 'Усиливает броню армию Орды.', 'sid': 37505}, 'ubertip5': {'raw': 'TRIGSTR_37506', 'val': 'Усиливает броню армию Орды.', 'sid': 37506}, 'ubertip6': {'raw': 'TRIGSTR_37507', 'val': 'Усиливает броню армию Орды.', 'sid': 37507}}
+
+[w2r1] levels: 6
+  names: {'name1': {'raw': 'TRIGSTR_37513', 'val': '|cffdcb496Оружие ближнего боя|r', 'sid': 37513}, 'name2': {'raw': 'TRIGSTR_37514', 'val': '|cffdcb496Оружие ближнего боя|r', 'sid': 37514}, 'name3': {'raw': 'TRIGSTR_37515', 'val': '|cffdcb496Оружие ближнего боя|r', 'sid': 37515}, 'name4': {'raw': 'TRIGSTR_37516', 'val': '|cffdcb496Оружие ближнего боя|r', 'sid': 37516}, 'name5': {'raw': 'TRIGSTR_37517', 'val': '|cffdcb496Оружие ближнего боя|r', 'sid': 37517}, 'name6': {'raw': 'TRIGSTR_37518', 'val': '|cffdcb496Оружие ближнего боя|r', 'sid': 37518}}
+  tips: {'tip1': {'raw': 'TRIGSTR_37519', 'val': 'Исследовать |cffdcb496Оружие ближнего боя|r', 'sid': 37519}, 'tip2': {'raw': 'TRIGSTR_37520', 'val': 'Исследовать |cffdcb496Оружие ближнего боя|r', 'sid': 37520}, 'tip3': {'raw': 'TRIGSTR_37521', 'val': 'Исследовать |cffdcb496Оружие ближнего боя|r', 'sid': 37521}, 'tip4': {'raw': 'TRIGSTR_37522', 'val': 'Исследовать |cffdcb496Оружие ближнего боя|r', 'sid': 37522}, 'tip5': {'raw': 'TRIGSTR_37523', 'val': 'Исследовать |cffdcb496Оружие ближнего боя|r', 'sid': 37523}, 'tip6': {'raw': 'TRIGSTR_37524', 'val': 'Исследовать |cffdcb496Оружие ближнего боя|r', 'sid': 37524}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37525', 'val': 'Усиливает урон воинов Орды ближнего боя.', 'sid': 37525}, 'ubertip2': {'raw': 'TRIGSTR_37526', 'val': 'Усиливает урон воинов Орды ближнего боя.', 'sid': 37526}, 'ubertip3': {'raw': 'TRIGSTR_37527', 'val': 'Усиливает урон воинов Орды ближнего боя.', 'sid': 37527}, 'ubertip4': {'raw': 'TRIGSTR_37528', 'val': 'Усиливает урон воинов Орды ближнего боя.', 'sid': 37528}, 'ubertip5': {'raw': 'TRIGSTR_37529', 'val': 'Усиливает урон воинов Орды ближнего боя.', 'sid': 37529}, 'ubertip6': {'raw': 'TRIGSTR_37530', 'val': 'Усиливает урон воинов Орды ближнего боя.', 'sid': 37530}}
+
+[w2r2] levels: 6
+  names: {'name1': {'raw': 'TRIGSTR_37539', 'val': '|cffdcb496Оружие дальнего боя|r', 'sid': 37539}, 'name2': {'raw': 'TRIGSTR_37540', 'val': '|cffdcb496Оружие дальнего боя|r', 'sid': 37540}, 'name3': {'raw': 'TRIGSTR_37541', 'val': '|cffdcb496Оружие дальнего боя|r', 'sid': 37541}, 'name4': {'raw': 'TRIGSTR_37542', 'val': '|cffdcb496Оружие дальнего боя|r', 'sid': 37542}, 'name5': {'raw': 'TRIGSTR_37543', 'val': '|cffdcb496Оружие дальнего боя|r', 'sid': 37543}, 'name6': {'raw': 'TRIGSTR_37544', 'val': '|cffdcb496Оружие дальнего боя|r', 'sid': 37544}}
+  tips: {'tip1': {'raw': 'TRIGSTR_37545', 'val': 'Исследовать |cffdcb496Оружие дальнего боя|r', 'sid': 37545}, 'tip2': {'raw': 'TRIGSTR_37546', 'val': 'Исследовать |cffdcb496Оружие ближнего боя|r', 'sid': 37546}, 'tip3': {'raw': 'TRIGSTR_37547', 'val': 'Исследовать |cffdcb496Оружие дальнего боя|r', 'sid': 37547}, 'tip4': {'raw': 'TRIGSTR_37548', 'val': 'Исследовать |cffdcb496Оружие дальнего боя|r', 'sid': 37548}, 'tip5': {'raw': 'TRIGSTR_37549', 'val': 'Исследовать |cffdcb496Оружие дальнего боя|r', 'sid': 37549}, 'tip6': {'raw': 'TRIGSTR_37550', 'val': 'Исследовать |cffdcb496Оружие дальнего боя|r', 'sid': 37550}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37551', 'val': 'Усиливает урон воинов Орды ближнего боя.', 'sid': 37551}, 'ubertip2': {'raw': 'TRIGSTR_37552', 'val': 'Усиливает урон воинов Орды ближнего боя.', 'sid': 37552}, 'ubertip3': {'raw': 'TRIGSTR_37553', 'val': 'Усиливает урон воинов Орды ближнего боя.', 'sid': 37553}, 'ubertip4': {'raw': 'TRIGSTR_37554', 'val': 'Усиливает урон воинов Орды ближнего боя.', 'sid': 37554}, 'ubertip5': {'raw': 'TRIGSTR_37555', 'val': 'Усиливает урон воинов Орды ближнего боя.', 'sid': 37555}, 'ubertip6': {'raw': 'TRIGSTR_37556', 'val': 'Усиливает урон воинов Орды ближнего боя.', 'sid': 37556}}
+
+[w2r3] levels: 4
+  names: {'name1': {'raw': 'TRIGSTR_37561', 'val': '|cffdcb496Военная экспертиза|r', 'sid': 37561}, 'name2': {'raw': 'TRIGSTR_37562', 'val': '|cffdcb496Военная экспертиза|r', 'sid': 37562}, 'name3': {'raw': 'TRIGSTR_37563', 'val': '|cffdcb496Военная экспертиза|r', 'sid': 37563}, 'name4': {'raw': 'TRIGSTR_37564', 'val': '|cffdcb496Военная экспертиза|r', 'sid': 37564}}
+  tips: {'tip1': {'raw': 'TRIGSTR_37565', 'val': 'Исследовать |cffdcb496Военную экспертизу|r', 'sid': 37565}, 'tip2': {'raw': 'TRIGSTR_37566', 'val': 'Исследовать |cffdcb496Военную экспертизу|r', 'sid': 37566}, 'tip3': {'raw': 'TRIGSTR_37567', 'val': 'Исследовать |cffdcb496Военную экспертизу|r', 'sid': 37567}, 'tip4': {'raw': 'TRIGSTR_37568', 'val': 'Исследовать |cffdcb496Военную экспертизу|r', 'sid': 37568}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37569', 'val': 'Увеличивает начальный опыт юнита, а тем самым и его характеристики.', 'sid': 37569}, 'ubertip2': {'raw': 'TRIGSTR_37573', 'val': 'Увеличивает начальный опыт юнита, а тем самым и его характеристики.', 'sid': 37573}, 'ubertip3': {'raw': 'TRIGSTR_37574', 'val': 'Увеличивает начальный опыт юнита, а тем самым и его характеристики.', 'sid': 37574}, 'ubertip4': {'raw': 'TRIGSTR_37575', 'val': 'Увеличивает начальный опыт юнита, а тем самым и его характеристики.', 'sid': 37575}}
+
+[w2r4] levels: 4
+  names: {'name1': {'raw': 'TRIGSTR_37579', 'val': '|cffdcb496Чародейства Огров|r', 'sid': 37579}, 'name2': {'raw': 'TRIGSTR_37580', 'val': '|cffdcb496Чародейства Огров|r', 'sid': 37580}, 'name3': {'raw': 'TRIGSTR_37581', 'val': '|cffdcb496Чародейства Огров|r', 'sid': 37581}, 'name4': {'raw': 'TRIGSTR_37582', 'val': '|cffdcb496Чародейства Огров|r', 'sid': 37582}}
+  tips: {'tip1': {'raw': 'TRIGSTR_37583', 'val': 'Исследовать |cffdcb496Чародейства Огров|r', 'sid': 37583}, 'tip2': {'raw': 'TRIGSTR_37586', 'val': 'Исследовать |cffdcb496Чародейства Огров|r', 'sid': 37586}, 'tip3': {'raw': 'TRIGSTR_37584', 'val': 'Исследовать |cffdcb496Чародейства Огров|r', 'sid': 37584}, 'tip4': {'raw': 'TRIGSTR_37585', 'val': 'Исследовать |cffdcb496Чародейства Огров|r', 'sid': 37585}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37589', 'val': 'Увеличивает запас здоровья и маны огров, ускоряет регенерацию их маны, а также обучает новым способностям.', 'sid': 37589}, 'ubertip2': {'raw': 'TRIGSTR_37590', 'val': 'Увеличивает запас здоровья и маны огров, ускоряет регенерацию их маны, а также обучает новым способностям.', 'sid': 37590}, 'ubertip3': {'raw': 'TRIGSTR_37591', 'val': 'Увеличивает запас здоровья и маны огров, ускоряет регенерацию их маны, а также обучает новым способностям.', 'sid': 37591}, 'ubertip4': {'raw': 'TRIGSTR_37592', 'val': 'Увеличивает запас здоровья и маны огров, ускоряет регенерацию их маны, а также обучает новым способностям.', 'sid': 37592}}
+
+[w2r5] levels: 4
+  names: {'name1': {'raw': 'TRIGSTR_37596', 'val': '|cffdcb496Ритуалы смерти|r', 'sid': 37596}, 'name2': {'raw': 'TRIGSTR_37597', 'val': '|cffdcb496Ритуалы смерти|r', 'sid': 37597}, 'name3': {'raw': 'TRIGSTR_37598', 'val': '|cffdcb496Ритуалы смерти|r', 'sid': 37598}, 'name4': {'raw': 'TRIGSTR_37599', 'val': '|cffdcb496Ритуалы смерти|r', 'sid': 37599}}
+  tips: {'tip1': {'raw': 'TRIGSTR_37600', 'val': 'Исследовать |cffdcb496Ритуалы смерти|r', 'sid': 37600}, 'tip2': {'raw': 'TRIGSTR_37603', 'val': 'Исследовать |cffdcb496Ритуалы смерти|r', 'sid': 37603}, 'tip3': {'raw': 'TRIGSTR_37601', 'val': 'Исследовать |cffdcb496Ритуалы смерти|r', 'sid': 37601}, 'tip4': {'raw': 'TRIGSTR_37602', 'val': 'Исследовать |cffdcb496Ритуалы смерти|r', 'sid': 37602}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37606', 'val': 'Увеличивает запас здоровья и маны рыцарей смерти, ускоряет регенерацию их маны, а также обучает новым способностям.', 'sid': 37606}, 'ubertip2': {'raw': 'TRIGSTR_37607', 'val': 'Увеличивает запас здоровья и маны рыцарей смерти, ускоряет регенерацию их маны, а также обучает новым способностям.', 'sid': 37607}, 'ubertip3': {'raw': 'TRIGSTR_37608', 'val': 'Увеличивает запас здоровья и маны рыцарей смерти, ускоряет регенерацию их маны, а также обучает новым способностям.', 'sid': 37608}, 'ubertip4': {'raw': 'TRIGSTR_37609', 'val': 'Увеличивает запас здоровья и маны рыцарей смерти, ускоряет регенерацию их маны, а также обучает новым способностям.', 'sid': 37609}}
+
+[w2r6] levels: 4
+  names: {'name1': {'raw': 'TRIGSTR_37613', 'val': '|cffdcb496Колдовство вуду|r', 'sid': 37613}, 'name2': {'raw': 'TRIGSTR_37614', 'val': '|cffdcb496Колдовство вуду|r', 'sid': 37614}, 'name3': {'raw': 'TRIGSTR_37615', 'val': '|cffdcb496Колдовство вуду|r', 'sid': 37615}, 'name4': {'raw': 'TRIGSTR_37616', 'val': '|cffdcb496Колдовство вуду|r', 'sid': 37616}}
+  tips: {'tip1': {'raw': 'TRIGSTR_37617', 'val': 'Исследовать |cffdcb496Колдовство вуду|r', 'sid': 37617}, 'tip2': {'raw': 'TRIGSTR_37620', 'val': 'Исследовать |cffdcb496Колдовство вуду|r', 'sid': 37620}, 'tip3': {'raw': 'TRIGSTR_37618', 'val': 'Исследовать |cffdcb496Колдовство вуду|r', 'sid': 37618}, 'tip4': {'raw': 'TRIGSTR_37619', 'val': 'Исследовать |cffdcb496Колдовство вуду|r', 'sid': 37619}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37623', 'val': 'Увеличивает запас здоровья и маны жрецов, ускоряет регенерацию их маны, а также обучает новым способностям.', 'sid': 37623}, 'ubertip2': {'raw': 'TRIGSTR_37624', 'val': 'Увеличивает запас здоровья и маны жрецов, ускоряет регенерацию их маны, а также обучает новым способностям.', 'sid': 37624}, 'ubertip3': {'raw': 'TRIGSTR_37625', 'val': 'Увеличивает запас здоровья и маны жрецов, ускоряет регенерацию их маны, а также обучает новым способностям.', 'sid': 37625}, 'ubertip4': {'raw': 'TRIGSTR_37626', 'val': 'Увеличивает запас здоровья и маны жрецов, ускоряет регенерацию их маны, а также обучает новым способностям.', 'sid': 37626}}
+
+[w2r7] levels: 3
+  names: {'name1': {'raw': 'TRIGSTR_22194', 'val': '|cffdcb496Тренировки рубак|r', 'sid': 22194}, 'name2': {'raw': 'TRIGSTR_37627', 'val': '|cffdcb496Тренировки рубак|r', 'sid': 37627}, 'name3': {'raw': 'TRIGSTR_37631', 'val': '|cffdcb496Тренировки рубак|r', 'sid': 37631}}
+  tips: {'tip1': {'raw': 'TRIGSTR_25319', 'val': 'Исследовать |cffdcb496Тренировки рубак|r', 'sid': 25319}, 'tip2': {'raw': 'TRIGSTR_37628', 'val': 'Исследовать |cffdcb496Тренировки рубак|r', 'sid': 37628}, 'tip3': {'raw': 'TRIGSTR_37634', 'val': 'Исследовать |cffdcb496Тренировки рубак|r', 'sid': 37634}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_5532', 'val': '+100 к запасу здоровья рубак и +5 к урону от их атак.', 'sid': 5532}, 'ubertip2': {'raw': 'TRIGSTR_5535', 'val': '+100 к запасу здоровья рубак и +5 к урону от их атак.', 'sid': 5535}, 'ubertip3': {'raw': 'TRIGSTR_7897', 'val': '+100 к запасу здоровья рубак и +5 к урону от их атак.', 'sid': 7897}}
+
+[w2r8] levels: 3
+  names: {'name1': {'raw': 'TRIGSTR_7899', 'val': '|cffdcb496Тренировки огров|r', 'sid': 7899}, 'name2': {'raw': 'TRIGSTR_37636', 'val': '|cffdcb496Тренировки огров|r', 'sid': 37636}, 'name3': {'raw': 'TRIGSTR_37640', 'val': '|cffdcb496Тренировки огров|r', 'sid': 37640}}
+  tips: {'tip1': {'raw': 'TRIGSTR_11817', 'val': 'Исследовать |cffdcb496Тренировки огров|r', 'sid': 11817}, 'tip2': {'raw': 'TRIGSTR_37637', 'val': 'Исследовать |cffdcb496Тренировки огров|r', 'sid': 37637}, 'tip3': {'raw': 'TRIGSTR_37643', 'val': 'Исследовать |cffdcb496Тренировки огров|r', 'sid': 37643}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_40228', 'val': '+125 к запасу здоровья огров.', 'sid': 40228}, 'ubertip2': {'raw': 'TRIGSTR_40229', 'val': '+125 к запасу здоровья огров.', 'sid': 40229}, 'ubertip3': {'raw': 'TRIGSTR_40230', 'val': '+125 к запасу здоровья огров.', 'sid': 40230}}
+
+[w2r9] levels: 3
+  names: {'name1': {'raw': 'TRIGSTR_18418', 'val': '|cffdcb496Тренировки метателей|r', 'sid': 18418}, 'name2': {'raw': 'TRIGSTR_37647', 'val': '|cffdcb496Тренировки метателей|r', 'sid': 37647}, 'name3': {'raw': 'TRIGSTR_37651', 'val': '|cffdcb496Тренировки метателей|r', 'sid': 37651}}
+  tips: {'tip1': {'raw': 'TRIGSTR_20461', 'val': 'Исследовать |cffdcb496Тренировки метателей|r', 'sid': 20461}, 'tip2': {'raw': 'TRIGSTR_37648', 'val': 'Исследовать |cffdcb496Тренировки метателей|r', 'sid': 37648}, 'tip3': {'raw': 'TRIGSTR_37654', 'val': 'Исследовать |cffdcb496Тренировки метателей|r', 'sid': 37654}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_5537', 'val': '+85 к запасу здоровья метателей топоров, +15% к скорости их атаки и +70 к дальности атаки.', 'sid': 5537}, 'ubertip2': {'raw': 'TRIGSTR_5556', 'val': '+85 к запасу здоровья метателей топоров, +15% к скорости их атаки и +70 к дальности атаки.', 'sid': 5556}, 'ubertip3': {'raw': 'TRIGSTR_21251', 'val': '+85 к запасу здоровья метателей топоров, +15% к скорости их атаки и +70 к дальности атаки.', 'sid': 21251}}
+
+[w2ra] levels: 2
+  names: {'name1': {'raw': 'TRIGSTR_37713', 'val': '|cffdcb496Разведение драконов|r', 'sid': 37713}, 'name2': {'raw': 'TRIGSTR_37714', 'val': '|cffdcb496Разведение драконов|r', 'sid': 37714}}
+  tips: {'tip1': {'raw': 'TRIGSTR_37717', 'val': 'Исследовать |cffdcb496Разведение драконов|r', 'sid': 37717}, 'tip2': {'raw': 'TRIGSTR_37720', 'val': 'Исследовать |cffdcb496Разведение драконов|r', 'sid': 37720}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_12715', 'val': 'Увеличивает дальность атаки драконов и поднимает их здоровье на 75.', 'sid': 12715}, 'ubertip2': {'raw': 'TRIGSTR_12958', 'val': 'Увеличивает дальность атаки драконов и поднимает их здоровье на 75.', 'sid': 12958}}
+
+[w2rb] levels: 6
+  names: {'name1': {'raw': 'TRIGSTR_37730', 'val': '|cffdcb496Улучшенные пилы|r', 'sid': 37730}, 'name2': {'raw': 'TRIGSTR_37748', 'val': '|cffdcb496Улучшенные пилы|r', 'sid': 37748}, 'name3': {'raw': 'TRIGSTR_37731', 'val': '|cffdcb496Улучшенные пилы|r', 'sid': 37731}, 'name4': {'raw': 'TRIGSTR_37732', 'val': '|cffdcb496Улучшенные пилы|r', 'sid': 37732}, 'name5': {'raw': 'TRIGSTR_37733', 'val': '|cffdcb496Улучшенные пилы|r', 'sid': 37733}, 'name6': {'raw': 'TRIGSTR_37734', 'val': '|cffdcb496Улучшенные пилы|r', 'sid': 37734}}
+  tips: {'tip1': {'raw': 'TRIGSTR_37735', 'val': 'Исследовать |cffdcb496Улучшенные пилы|r', 'sid': 37735}, 'tip2': {'raw': 'TRIGSTR_37749', 'val': 'Исследовать |cffdcb496Улучшенные пилы|r', 'sid': 37749}, 'tip3': {'raw': 'TRIGSTR_37736', 'val': 'Исследовать |cffdcb496Улучшенные пилы|r', 'sid': 37736}, 'tip4': {'raw': 'TRIGSTR_37737', 'val': 'Исследовать |cffdcb496Улучшенные пилы|r', 'sid': 37737}, 'tip5': {'raw': 'TRIGSTR_37738', 'val': 'Исследовать |cffdcb496Улучшенные пилы|r', 'sid': 37738}, 'tip6': {'raw': 'TRIGSTR_37739', 'val': 'Исследовать |cffdcb496Улучшенные пилы|r', 'sid': 37739}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37745', 'val': 'Увеличивают объем переносимой работниками древесины на 5.', 'sid': 37745}, 'ubertip2': {'raw': 'TRIGSTR_37740', 'val': 'Увеличивают объем переносимой работниками древесины на 5.', 'sid': 37740}, 'ubertip3': {'raw': 'TRIGSTR_37741', 'val': 'Увеличивают объем переносимой работниками древесины на 5.', 'sid': 37741}, 'ubertip4': {'raw': 'TRIGSTR_37742', 'val': 'Увеличивают объем переносимой работниками древесины на 5.', 'sid': 37742}, 'ubertip5': {'raw': 'TRIGSTR_37743', 'val': 'Увеличивают объем переносимой работниками древесины на 5.', 'sid': 37743}, 'ubertip6': {'raw': 'TRIGSTR_37744', 'val': 'Увеличивают объем переносимой работниками древесины на 5.', 'sid': 37744}}
+
+[w2re] levels: 2
+  names: {'name1': {'raw': 'TRIGSTR_37676', 'val': '|cffdcb496Заряды взрыводия|r', 'sid': 37676}, 'name2': {'raw': 'TRIGSTR_37677', 'val': '|cffdcb496Заряды взрыводия|r', 'sid': 37677}}
+  tips: {'tip1': {'raw': 'TRIGSTR_37680', 'val': 'Исследовать |cffdcb496Заряды взрыводия|r', 'sid': 37680}, 'tip2': {'raw': 'TRIGSTR_37683', 'val': 'Исследовать |cffdcb496Заряды взрыводия|r', 'sid': 37683}}
+  ubertips: {'ubertip1': {'raw': '', 'val': '', 'sid': None}, 'ubertip2': {'raw': '', 'val': '', 'sid': None}}
+
+[w2rq] levels: 2
+  names: {'name1': {'raw': 'TRIGSTR_37659', 'val': '|cffdcb496Комплектование дирижаблей|r', 'sid': 37659}, 'name2': {'raw': 'TRIGSTR_37660', 'val': '|cffdcb496Комплектование дирижаблей|r', 'sid': 37660}}
+  tips: {'tip1': {'raw': 'TRIGSTR_37663', 'val': 'Исследовать |cffdcb496Комплектование дирижаблей|r', 'sid': 37663}, 'tip2': {'raw': 'TRIGSTR_37666', 'val': 'Исследовать |cffdcb496Комплектование дирижаблей|r', 'sid': 37666}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37669', 'val': 'Увеличивает шансы, что дирижабли подберут убитых воинов, а также открывает новые способности.', 'sid': 37669}, 'ubertip2': {'raw': 'TRIGSTR_37670', 'val': 'Увеличивает шансы, что дирижабли подберут убитых воинов, а также открывает новые способности.', 'sid': 37670}}
+
+[xdR1] levels: 1
+  names: {'name1': {'raw': 'Темная Орда', 'val': 'Темная Орда', 'sid': None}}
+  tips: {'tip1': {'raw': 'Принять путь Темной Орды', 'val': 'Принять путь Темной Орды', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': 'Превращает вашу Орду Второй Войны в |cffff0000Темную Орду|r: тяжелые осадные огры, чернокнижники, чёрные дракончики и драконид. Сильнее в затяжной войне. |n|cffffcc00Выбор окончателен и исключает Клан Драконьей Пасти.|r', 'val': 'Превращает вашу Орду Второй Войны в |cffff0000Темную Орду|r: тяжелые осадные огры, чернокнижники, чёрные дракончики и драконид. Сильнее в затяжной войне. |n|cffffcc00Выбор окончателен и исключает Клан Драконьей Пасти.|r', 'sid': None}}
+
+[xdR2] levels: 1
+  names: {'name1': {'raw': 'Клан Драконьей Пасти', 'val': 'Клан Драконьей Пасти', 'sid': None}}
+  tips: {'tip1': {'raw': 'Связаться с кланом Драконьей Пасти', 'val': 'Связаться с кланом Драконьей Пасти', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': 'Превращает вашу Орду Второй Войны в |cffff5454Клан Драконьей Пасти|r: копьеметатели, всадники и укротители драконов, взрослая драконья элита. Быстрее выходит в пик силы. |n|cffffcc00Выбор окончателен и исключает Темную Орду.|r', 'val': 'Превращает вашу Орду Второй Войны в |cffff5454Клан Драконьей Пасти|r: копьеметатели, всадники и укротители драконов, взрослая драконья элита. Быстрее выходит в пик силы. |n|cffffcc00Выбор окончателен и исключает Темную Орду.|r', 'sid': None}}
+
+=== ABILITIES (37) ===
+[A001] |cffe4cfa3Абордаж!|r (levels: 1)
+  raw_name: TRIGSTR_287
+  tips: {'tip1': {'raw': 'TRIGSTR_285', 'val': '|cffe4cfa3Абордаж!|r', 'sid': 285}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_286', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Оглушает данный и вражеский корабль и постепенно наносит урон. Если здоровье одно из кораблей становится меньше 18%, он переходит на сторону врага.|r', 'sid': 286}}
+  researchtip: None | researchubertip: None
+
+[A002] |cffe4cfa3Боковые пушки|r (levels: 3)
+  raw_name: TRIGSTR_289
+  tips: {'tip1': {'raw': 'TRIGSTR_509', 'val': '|cffe4cfa3Боковые пушки 1|r', 'sid': 509}, 'tip2': {'raw': 'TRIGSTR_510', 'val': '|cffe4cfa3Боковые пушки 2|r', 'sid': 510}, 'tip3': {'raw': 'TRIGSTR_511', 'val': '|cffe4cfa3Боковые пушки 3|r', 'sid': 511}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_290', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном. Позволяют стрелять на ходу.|r', 'sid': 290}, 'ubertip2': {'raw': 'TRIGSTR_488', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном. Позволяют стрелять на ходу.|r', 'sid': 488}, 'ubertip3': {'raw': 'TRIGSTR_489', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном. Позволяют стрелять на ходу.|r', 'sid': 489}}
+  researchtip: None | researchubertip: None
+
+[A003] Боковые пушки (Линкор) (levels: 3)
+  raw_name: TRIGSTR_292
+  tips: {'tip1': {'raw': 'TRIGSTR_512', 'val': 'Боковые пушки 1 (Линкор)', 'sid': 512}, 'tip2': {'raw': 'TRIGSTR_513', 'val': 'Боковые пушки 2 (Линкор)', 'sid': 513}, 'tip3': {'raw': 'TRIGSTR_514', 'val': 'Боковые пушки 3 (Линкор)', 'sid': 514}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_293', 'val': 'Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.', 'sid': 293}, 'ubertip2': {'raw': 'TRIGSTR_492', 'val': 'Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.', 'sid': 492}, 'ubertip3': {'raw': 'TRIGSTR_493', 'val': 'Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.', 'sid': 493}}
+  researchtip: None | researchubertip: None
+
+[A009] |cffe4cfa3Сделать флагманом|r (levels: 1)
+  raw_name: TRIGSTR_27198
+  tips: {'tip1': {'raw': 'TRIGSTR_27197', 'val': '|cffe4cfa3Сделать флагманом|r', 'sid': 27197}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_565', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Делает корабль вашим флагманом. Его характеристики увеличиваются, а также дается аура на выбор.|r', 'sid': 565}}
+  researchtip: None | researchubertip: None
+
+[A00A] |cffe4cfa3Починка|r (levels: 3)
+  raw_name: TRIGSTR_313
+  tips: {'tip1': {'raw': 'TRIGSTR_473', 'val': '|cffe4cfa3Починка 1|r', 'sid': 473}, 'tip2': {'raw': 'TRIGSTR_474', 'val': '|cffe4cfa3Починка 2|r', 'sid': 474}, 'tip3': {'raw': 'TRIGSTR_475', 'val': '|cffe4cfa3Починка 3|r', 'sid': 475}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_320', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Корабль чинится, не используя главные орудия.|r', 'sid': 320}, 'ubertip2': {'raw': 'TRIGSTR_446', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Корабль чинится, не используя главные орудия.|r', 'sid': 446}, 'ubertip3': {'raw': 'TRIGSTR_447', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Корабль чинится, не используя главные орудия.|r', 'sid': 447}}
+  researchtip: Изучить «Спокойствие» | researchubertip: "Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек."
+
+[A00B] |cffe4cfa3Тактическое ускорение|r (levels: 3)
+  raw_name: TRIGSTR_327
+  tips: {'tip1': {'raw': 'TRIGSTR_515', 'val': '|cffe4cfa3Тактическое ускорение 1|r', 'sid': 515}, 'tip2': {'raw': 'TRIGSTR_516', 'val': '|cffe4cfa3Тактическое ускорение 2|r', 'sid': 516}, 'tip3': {'raw': 'TRIGSTR_517', 'val': '|cffe4cfa3Тактическое ускорение 3|r', 'sid': 517}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_559', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускорение перемещения за счет раскрытия всех парусов, при этом кораблю наносится повышенный урон.|r', 'sid': 559}, 'ubertip2': {'raw': 'TRIGSTR_560', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускорение перемещения за счет раскрытия всех парусов, при этом кораблю наносится повышенный урон.|r', 'sid': 560}, 'ubertip3': {'raw': 'TRIGSTR_561', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускорение перемещения за счет раскрытия всех парусов, при этом кораблю наносится повышенный урон.|r', 'sid': 561}}
+  researchtip: None | researchubertip: None
+
+[A00G] |cffe4cfa3Массированный обстрел|r (levels: 3)
+  raw_name: TRIGSTR_365
+  tips: {'tip1': {'raw': 'TRIGSTR_518', 'val': '|cffe4cfa3Массированный обстрел 1|r', 'sid': 518}, 'tip2': {'raw': 'TRIGSTR_519', 'val': '|cffe4cfa3Массированный обстрел 2|r', 'sid': 519}, 'tip3': {'raw': 'TRIGSTR_520', 'val': '|cffe4cfa3Массированный обстрел 3|r', 'sid': 520}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_367', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область.|r', 'sid': 367}, 'ubertip2': {'raw': 'TRIGSTR_484', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область.|r', 'sid': 484}, 'ubertip3': {'raw': 'TRIGSTR_485', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область.|r', 'sid': 485}}
+  researchtip: Изучить «Кассетные ракеты» [|cffffcc00%d-й уровень|r] | researchubertip: "Обстреливает указанную область ракетами, нанося урон наземным и воздушным врагам и оглушая их на <ANcs,Dur1> сек. Также поражает механических существ и здания. |n|n|cffffcc001-й уровень:|r 45 урона.|n|cffffcc002-й уровень:|r 75 урона.|n|cffffcc003-й уровень:|r 110 урона."
+
+[A00I] |cffe4cfa3Магическая посадка|r (levels: 1)
+  raw_name: TRIGSTR_534
+  tips: {'tip1': {'raw': 'TRIGSTR_532', 'val': '|cffe4cfa3Магическая посадка|r', 'sid': 532}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_563', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Телепортирует юнитов в выбранной области к берегу, где их постарается забрать корабль. Не факт что сработает, но часть войск должно спасти.|r', 'sid': 563}}
+  researchtip: None | researchubertip: None
+
+[A01C] |cffe4cfa3Свечение героя|r (levels: 1)
+  raw_name: TRIGSTR_2038
+  tips: {'tip1': {'raw': 'TRIGSTR_2039', 'val': '|cffe4cfa3Свечение героя|r', 'sid': 2039}}
+  ubertips: {'ubertip1': {'raw': '', 'val': '', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[A0I3] |cffe4cfa3Небольшой скачок|r (levels: 1)
+  raw_name: TRIGSTR_26484
+  tips: {'tip1': {'raw': 'TRIGSTR_26476', 'val': '|cffe4cfa3Небольшой скачок|r', 'sid': 26476}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_26477', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da СПОСОБНОСТЬ: Мгновенно переносит работника на небольшое расстояние.|r', 'sid': 26477}}
+  researchtip: |cffe4cfa3Небольшой скачок|r | researchubertip: |cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно перемещает строителя на короткое расстояние.|r
+
+[A0IQ] |cffe4cfa3Обозначить столицу|r (levels: 1)
+  raw_name: TRIGSTR_27193
+  tips: {'tip1': {'raw': 'TRIGSTR_27969', 'val': '|cffe4cfa3Обозначить столицу|r', 'sid': 27969}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_27970', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение.|r', 'sid': 27970}}
+  researchtip: None | researchubertip: None
+
+[A0LI] |cffe4cfa3Обмен Золота на Дерево|r (levels: 1)
+  raw_name: TRIGSTR_2888
+  tips: {'tip1': {'raw': 'TRIGSTR_3692', 'val': '|cffe4cfa3Обмен Золота на Дерево|r', 'sid': 3692}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_20630', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Отнимает у игрока 500 золота, но добавляет 100 дерева.|r', 'sid': 20630}}
+  researchtip: None | researchubertip: None
+
+[A0LJ] |cffe4cfa3Обмен Дерева на Золото|r (levels: 1)
+  raw_name: TRIGSTR_12857
+  tips: {'tip1': {'raw': 'TRIGSTR_12886', 'val': '|cffe4cfa3Обмен Дерева на Золото|r', 'sid': 12886}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_20631', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Отнимает у игрока 500 дерева, но добавляет 100 золота.|r', 'sid': 20631}}
+  researchtip: None | researchubertip: None
+
+[A0QO] |cff8080ffДраконья ярость|r (levels: 1)
+  raw_name: TRIGSTR_16381
+  tips: {'tip1': {'raw': 'TRIGSTR_16382', 'val': '|cff8080ffДраконья ярость|r', 'sid': 16382}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_16428', 'val': 'Дает |cff8080ff<AOcr,DataA1>%-й|r шанс нанести |cff8080ff<AOcr,DataB1>|r-кратный урон при атаке.', 'sid': 16428}}
+  researchtip: Изучить «Критический удар» [|cffffcc00%d-й уровень|r] | researchubertip: "Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон."
+
+[A0RE] |cff8080ffУскользание|r (levels: 1)
+  raw_name: TRIGSTR_16920
+  tips: {'tip1': {'raw': 'TRIGSTR_16921', 'val': '|cff8080ffУскользание|r', 'sid': 16921}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_16922', 'val': 'Дает |cff8080ff<ACev,DataA1,%>%-й|r шанс уклониться от атаки.', 'sid': 16922}}
+  researchtip: None | researchubertip: None
+
+[A0Z7] |cffff5454Усиленная броня|r (levels: 1)
+  raw_name: TRIGSTR_35389
+  tips: {'tip1': {'raw': 'TRIGSTR_35398', 'val': '|cffff5454Усиленная броня|r', 'sid': 35398}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_35956', 'val': '-4 от получаемого юнитом урона от атак. Минимальный урон от атак: 4.', 'sid': 35956}}
+  researchtip: None | researchubertip: None
+
+[A0ZA] |cffe4cfa3Скрытая ярость|r (levels: 1)
+  raw_name: TRIGSTR_36869
+  tips: {'tip1': {'raw': 'TRIGSTR_36868', 'val': '|cffff5454Скрытая ярость|r', 'sid': 36868}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_9882', 'val': 'С вероятность 4% воин войдет в состояние берсерка, с увеличенной скоростью атаки и передвижения.', 'sid': 9882}}
+  researchtip: None | researchubertip: None
+
+[A15N] |cffe4cfa3Зона ремонта|r (levels: 1)
+  raw_name: TRIGSTR_25578
+  tips: {'tip1': {'raw': 'TRIGSTR_25589', 'val': '|cffe4cfa3Зона ремонта|r', 'sid': 25589}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_25608', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье механическим юнитам поблизости.|r', 'sid': 25608}}
+  researchtip: |cffe4cfa3Зона ремонта|r | researchubertip: Восстанавливает здоровье механическим юнитам поблизости.
+
+[A176] |cffe4cfa3Сильный удар|r (levels: 1)
+  raw_name: TRIGSTR_28183
+  tips: {'tip1': {'raw': 'TRIGSTR_28182', 'val': '|cffe4cfa3Сильный удар|r', 'sid': 28182}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_28961', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff12%|cffced4da наносит в |cffffffff2|cffced4da раза больше урона и оглушает цель на |cffffffff1|cffced4da сек. (|cffffffff0.2|cffced4da сек. для героев).|r', 'sid': 28961}}
+  researchtip: Изучить «Сильный удар» [|cffffcc00%d-й уровень|r] | researchubertip: "Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. На <AHbh,DataC1> больше урона. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. На <AHbh,DataC2> больше урона. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс. На <AHbh,DataC3> больше урона."
+
+[A178] |cffe4cfa3Аура Защиты|r (levels: 1)
+  raw_name: TRIGSTR_27766
+  tips: {'tip1': {'raw': 'TRIGSTR_27767', 'val': '|cffe4cfa3Аура Защиты|r', 'sid': 27767}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_20305', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает броню находящихся рядом дружественных войск на |cffc8e087+2|cffced4da.|n|nРадиус действия: |cffffffff300|cffced4da.|r', 'sid': 20305}}
+  researchtip: Изучить «Ауру благочестия» [|cffffcc00%d-й уровень|r] | researchubertip: "Усиливает броню находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AHad,DataA1,.> к базовой броне. |n|cffffcc002-й уровень:|r +<AHad,DataA2,.> к базовой броне. |n|cffffcc003-й уровень:|r +<AHad,DataA3,.> к базовой броне."
+
+[A1JN] |cffdcb496Орда Второй Войны|r (levels: 1)
+  raw_name: TRIGSTR_26684
+  tips: {'tip1': {'raw': 'TRIGSTR_35847', 'val': '|cffdcb496Орда Второй Войны|r', 'sid': 35847}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_25701', 'val': "|cffa0beaaСоздатель расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaСложность:|r |cffdcd2aa●●●|r●●|r|n|cffa0beaaПериод:|r |cffc8dcaaWarcraft II|r|n|nВ последние дни Первой Войны, лидер Теневого Совета, колдун Гул'дан впал в глубокую кому, пытаясь проникнуть в разум Медива. Без происков Теневого Совета Орда стала жертвой междоусобиц. В результате государственного переворота, возглавляемого Оргримом Молотом Рока, чтобы покончить с тем, что он считал разлагающим влиянием на Орду, Теневой Совет был уничтожен, а также его марионеточный вождь, Чернорук Разрушитель. Молот Рока успешно взял под контроль оставшиеся силы Орды и начал подкреплять их опустошенные армии орками и ограми из Темного Портала. Тролли, огры и орки сражались бок о бок, и вскоре предприимчивые гоблины увидели потенциальную выгоду в помощи им. Орда получила поддержку от гоблинов-машинистов и наемников, и с помощью Души Демона сумела поработить Красного Дракона Алекстразу и большую часть ее выводка.", 'sid': 25701}}
+  researchtip: None | researchubertip: None
+
+[A1JO] |cffdcb496Взять на борт|r (levels: 1)
+  raw_name: TRIGSTR_32683
+  tips: {'tip1': {'raw': 'TRIGSTR_32684', 'val': '|cffdcb496Взять на борт|r', 'sid': 32684}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_32685', 'val': 'Берет на борт наземного союзника, не тахнику.', 'sid': 32685}}
+  researchtip: None | researchubertip: None
+
+[A1LO] |cffe4cfa3Жажда крови|r (levels: 1)
+  raw_name: TRIGSTR_39019
+  tips: {'tip1': {'raw': 'TRIGSTR_39021', 'val': '|cffff5454Жажда крови|r', 'sid': 39021}}
+  ubertips: {'ubertip1': {'raw': '"+<Ablo,DataA1,%>% к скорости атаки и +<Ablo,DataB1,%>% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur1> сек."', 'val': '"+<Ablo,DataA1,%>% к скорости атаки и +<Ablo,DataB1,%>% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur1> сек."', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[A1LS] |cffff5454Рассеивание заклинаний|r (levels: 1)
+  raw_name: TRIGSTR_39023
+  tips: {'tip1': {'raw': 'TRIGSTR_39024', 'val': '|cffff5454Рассеивание заклинаний|r', 'sid': 39024}}
+  ubertips: {'ubertip1': {'raw': '"Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r"', 'val': '"Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r"', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[A1OJ] |cffe4cfa3Воин Ша|r (levels: 1)
+  raw_name: TRIGSTR_10871
+  tips: {'tip1': {'raw': 'TRIGSTR_10873', 'val': '|cffff5454Воин Ша|r', 'sid': 10873}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_41120', 'val': '+20% к скорости атаки и перемещения, но +20% к получаемому урону.|nПассивно, при атаке врага юнит c шансом 1% может породить отголоски Ша.', 'sid': 41120}}
+  researchtip: None | researchubertip: None
+
+[AInv] Инвентарь (levels: 1)
+  raw_name: Инвентарь
+  tips: {'tip1': {'raw': None, 'val': None, 'sid': None}}
+  ubertips: {'ubertip1': {'raw': None, 'val': None, 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[AOcr] Критический удар (levels: 4)
+  raw_name: Критический удар
+  tips: {'tip1': {'raw': '"Критический удар [|cffffcc001-й уровень|r]"', 'val': '"Критический удар [|cffffcc001-й уровень|r]"', 'sid': None}, 'tip2': {'raw': '"Критический удар [|cffffcc002-й уровень|r]"', 'val': '"Критический удар [|cffffcc002-й уровень|r]"', 'sid': None}, 'tip3': {'raw': '"Критический удар [|cffffcc003-й уровень|r]"', 'val': '"Критический удар [|cffffcc003-й уровень|r]"', 'sid': None}, 'tip4': {'raw': 'TRIGSTR_9628', 'val': 'Критический удар [|cffffcc004-й уровень|r]', 'sid': 9628}}
+  ubertips: {'ubertip1': {'raw': '"Дает <AOcr,DataA1>%-й шанс нанести <AOcr,DataB1>-кратный урон при атаке."', 'val': '"Дает <AOcr,DataA1>%-й шанс нанести <AOcr,DataB1>-кратный урон при атаке."', 'sid': None}, 'ubertip2': {'raw': '"Дает <AOcr,DataA2>%-й шанс нанести <AOcr,DataB2>-кратный урон при атаке."', 'val': '"Дает <AOcr,DataA2>%-й шанс нанести <AOcr,DataB2>-кратный урон при атаке."', 'sid': None}, 'ubertip3': {'raw': '"Дает <AOcr,DataA3>%-й шанс нанести <AOcr,DataB3>-кратный урон при атаке."', 'val': '"Дает <AOcr,DataA3>%-й шанс нанести <AOcr,DataB3>-кратный урон при атаке."', 'sid': None}, 'ubertip4': {'raw': 'TRIGSTR_5166', 'val': 'Дает <AOcr,DataA4>%-й шанс нанести <AOcr,DataB4>-кратный урон при атаке.', 'sid': 5166}}
+  researchtip: Изучить «Критический удар» [|cffffcc00%d-й уровень|r] | researchubertip: "Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон."
+
+[AOmi] Зеркальная копия (levels: 4)
+  raw_name: Зеркальная копия
+  tips: {'tip1': {'raw': '"Зеркальная копия [|cffffcc001-й уровень|r]"', 'val': '"Зеркальная копия [|cffffcc001-й уровень|r]"', 'sid': None}, 'tip2': {'raw': '"Зеркальная копия [|cffffcc002-й уровень|r]"', 'val': '"Зеркальная копия [|cffffcc002-й уровень|r]"', 'sid': None}, 'tip3': {'raw': '"Зеркальная копия [|cffffcc003-й уровень|r]"', 'val': '"Зеркальная копия [|cffffcc003-й уровень|r]"', 'sid': None}, 'tip4': {'raw': 'TRIGSTR_22621', 'val': 'Зеркальная копия [|cffffcc004-й уровень|r]', 'sid': 22621}}
+  ubertips: {'ubertip1': {'raw': '"Создает <AOmi,DataA1> иллюзорную копию мастера клинка и снимает с него магические эффекты. |nВремя действия: <AOmi,Dur1> сек."', 'val': '"Создает <AOmi,DataA1> иллюзорную копию мастера клинка и снимает с него магические эффекты. |nВремя действия: <AOmi,Dur1> сек."', 'sid': None}, 'ubertip2': {'raw': 'TRIGSTR_22622', 'val': 'Создает <AOmi,DataA2> иллюзорную копию мастера клинка и снимает с него магические эффекты. |nВремя действия: <AOmi,Dur2> сек.', 'sid': 22622}, 'ubertip3': {'raw': 'TRIGSTR_22623', 'val': 'Создает <AOmi,DataA3> иллюзорную копию мастера клинка и снимает с него магические эффекты. |nВремя действия: <AOmi,Dur3> сек.', 'sid': 22623}, 'ubertip4': {'raw': 'TRIGSTR_22624', 'val': 'Создает <AOmi,DataA4> иллюзорную копию мастера клинка и снимает с него магические эффекты. |nВремя действия: <AOmi,Dur4> сек.', 'sid': 22624}}
+  researchtip: Изучить «Зеркальную копию» [|cffffcc00%d-й уровень|r] | researchubertip: "Создает иллюзорные копии мастера клинка и снимает с него магические эффекты. |n|n|cffffcc001-й уровень:|r <AOmi,DataA1> иллюзия. |n|cffffcc002-й уровень:|r <AOmi,DataA2> иллюзии. |n|cffffcc003-й уровень:|r <AOmi,DataA3> иллюзии."
+
+[AOwk] Танец ветра (levels: 4)
+  raw_name: Танец ветра
+  tips: {'tip1': {'raw': '"Танец ветра [|cffffcc001-й уровень|r]"', 'val': '"Танец ветра [|cffffcc001-й уровень|r]"', 'sid': None}, 'tip2': {'raw': '"Танец ветра [|cffffcc002-й уровень|r]"', 'val': '"Танец ветра [|cffffcc002-й уровень|r]"', 'sid': None}, 'tip3': {'raw': '"Танец ветра [|cffffcc003-й уровень|r]"', 'val': '"Танец ветра [|cffffcc003-й уровень|r]"', 'sid': None}, 'tip4': {'raw': 'TRIGSTR_23502', 'val': '|cffe4cfa3Танец ветра — [уровень 4]|r (|cffffffffW|r)', 'sid': 23502}}
+  ubertips: {'ubertip1': {'raw': '"Дает невидимость и +<AOwk,DataB1,%>% к скорости передвижения на <AOwk,Dur1> сек. Атакуя, мастер клинка становится видимым и наносит <AOwk,DataC1> дополнительного урона."', 'val': '"Дает невидимость и +<AOwk,DataB1,%>% к скорости передвижения на <AOwk,Dur1> сек. Атакуя, мастер клинка становится видимым и наносит <AOwk,DataC1> дополнительного урона."', 'sid': None}, 'ubertip2': {'raw': '"Дает невидимость и +<AOwk,DataB2,%>% к скорости передвижения на <AOwk,Dur2> сек. Атакуя, мастер клинка становится видимым и наносит <AOwk,DataC2> дополнительного урона."', 'val': '"Дает невидимость и +<AOwk,DataB2,%>% к скорости передвижения на <AOwk,Dur2> сек. Атакуя, мастер клинка становится видимым и наносит <AOwk,DataC2> дополнительного урона."', 'sid': None}, 'ubertip3': {'raw': '"Дает невидимость и +<AOwk,DataB3,%>% к скорости передвижения на <AOwk,Dur3> сек. Атакуя, мастер клинка становится видимым и наносит <AOwk,DataC3> дополнительного урона."', 'val': '"Дает невидимость и +<AOwk,DataB3,%>% к скорости передвижения на <AOwk,Dur3> сек. Атакуя, мастер клинка становится видимым и наносит <AOwk,DataC3> дополнительного урона."', 'sid': None}, 'ubertip4': {'raw': 'TRIGSTR_20908', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует невидимость и ускорение. Атака из невидимости наносит критический дополнительный урон.|r', 'sid': 20908}}
+  researchtip: Изучить «Танец ветра» [|cffffcc00%d-й уровень|r] | researchubertip: "Дает невидимость и временно ускоряет передвижение. Атакуя, мастер клинка становится видимым, но при этом наносит больше урона. |n|n|cffffcc001-й уровень:|r +<AOwk,DataB1,%>% к скорости передвижения, +<AOwk,DataC1> к урону, действует <AOwk,Dur1> сек. |n|cffffcc002-й уровень:|r +<AOwk,DataB2,%>% к скорости передвижения, +<AOwk,DataC2> к урону, действует <AOwk,Dur2> сек. |n|cffffcc003-й уровень:|r +<AOwk,DataB3,%>% к скорости передвижения, +<AOwk,DataC3> к урону, действует <AOwk,Dur3> сек."
+
+[AOww] Вихрь клинков (levels: 2)
+  raw_name: Вихрь клинков
+  tips: {'tip1': {'raw': 'Вихрь клинков', 'val': 'Вихрь клинков', 'sid': None}, 'tip2': {'raw': 'TRIGSTR_9617', 'val': 'Вихрь клинков', 'sid': 9617}}
+  ubertips: {'ubertip1': {'raw': '"Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur1> сек."', 'val': '"Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur1> сек."', 'sid': None}, 'ubertip2': {'raw': 'TRIGSTR_23512', 'val': 'Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA2> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur2> сек.', 'sid': 23512}}
+  researchtip: Изучить «Вихрь клинков» | researchubertip: "Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам."
+
+[Ablo] |cffff5454Жажда крови|r (levels: 1)
+  raw_name: TRIGSTR_32726
+  tips: {'tip1': {'raw': 'TRIGSTR_36909', 'val': '|cffa6afb8СПОСОБНОСТЬ:|cffced4da Скрытная атака, наносящая два быстрых удара подряд.|r', 'sid': 36909}}
+  ubertips: {'ubertip1': {'raw': '"+<Ablo,DataA1,%>% к скорости атаки и +<Ablo,DataB1,%>% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur1> сек."', 'val': '"+<Ablo,DataA1,%>% к скорости атаки и +<Ablo,DataB1,%>% к скорости передвижения союзника. |nВремя действия: <Ablo,Dur1> сек."', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Achd] Cargo Hold Death (levels: 1)
+  raw_name: Cargo Hold Death
+  tips: {'tip1': {'raw': None, 'val': None, 'sid': None}}
+  ubertips: {'ubertip1': {'raw': None, 'val': None, 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Adro] Выгрузить (levels: 1)
+  raw_name: Выгрузить
+  tips: {'tip1': {'raw': 'Выгрузить всех', 'val': 'Выгрузить всех', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': 'Высаживает войска в указанном месте.', 'val': 'Высаживает войска в указанном месте.', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Ahar] Добывать ресурсы (levels: 1)
+  raw_name: Добывать ресурсы
+  tips: {'tip1': {'raw': 'Добывать ресурсы', 'val': 'Добывать ресурсы', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': 'Добывает золото из рудников и древесину из деревьев.', 'val': 'Добывает золото из рудников и древесину из деревьев.', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Aion] Инвентарь (levels: 1)
+  raw_name: Инвентарь
+  tips: {'tip1': {'raw': 'Инвентарь', 'val': 'Инвентарь', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': 'Позволяет носить (но не использовать) предметы для героев.', 'val': 'Позволяет носить (но не использовать) предметы для героев.', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Alsh] |cffff5454Щит молний|r (levels: 1)
+  raw_name: TRIGSTR_39009
+  tips: {'tip1': {'raw': 'TRIGSTR_39008', 'val': '|cffff5454Щит молний|r', 'sid': 39008}}
+  ubertips: {'ubertip1': {'raw': '"Окружает цель молниями, которые наносят <Alsh,DataA1> урона/сек. находящимся рядом войскам. |nВремя действия: <Alsh,Dur1> сек."', 'val': '"Окружает цель молниями, которые наносят <Alsh,DataA1> урона/сек. находящимся рядом войскам. |nВремя действия: <Alsh,Dur1> сек."', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Aprg] |cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость перемещения и атаки союзника.|r (levels: 1)
+  raw_name: TRIGSTR_39011
+  tips: {'tip1': {'raw': 'TRIGSTR_39012', 'val': '|cffff5454Развеивание магии|r', 'sid': 39012}}
+  ubertips: {'ubertip1': {'raw': '"Снимает положительные эффекты с цели и замедляет ее передвижение в <Aprg,DataA1> раз. Замедление постепенно рассеивается за <Aprg,Dur1> сек. |n|cffffcc00Наносит <Aprg,DataC1> урона призванным целям.|r"', 'val': '"Снимает положительные эффекты с цели и замедляет ее передвижение в <Aprg,DataA1> раз. Замедление постепенно рассеивается за <Aprg,Dur1> сек. |n|cffffcc00Наносит <Aprg,DataC1> урона призванным целям.|r"', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Arep] Ремонтировать (levels: 1)
+  raw_name: Ремонтировать
+  tips: {'tip1': {'raw': 'Ремонтировать', 'val': 'Ремонтировать', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': 'Ремонтирует здания и технику за счет ресурсов.', 'val': 'Ремонтирует здания и технику за счет ресурсов.', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Argl] Вернуть золото и древесину (levels: 1)
+  raw_name: Вернуть золото и древесину
+  tips: {'tip1': {'raw': None, 'val': None, 'sid': None}}
+  ubertips: {'ubertip1': {'raw': None, 'val': None, 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Arlm] Вернуть древесину (levels: 1)
+  raw_name: Вернуть древесину
+  tips: {'tip1': {'raw': None, 'val': None, 'sid': None}}
+  ubertips: {'ubertip1': {'raw': None, 'val': None, 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Asal] Грабеж (levels: 1)
+  raw_name: Грабеж
+  tips: {'tip1': {'raw': 'Грабеж', 'val': 'Грабеж', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': '"Нанося урон зданиям, этот воин добывает ресурсы."', 'val': '"Нанося урон зданиям, этот воин добывает ресурсы."', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Aspi] Шипастые укрепления (levels: 1)
+  raw_name: Шипастые укрепления
+  tips: {'tip1': {'raw': None, 'val': None, 'sid': None}}
+  ubertips: {'ubertip1': {'raw': None, 'val': None, 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Aven] Отравленные копья (levels: 1)
+  raw_name: Отравленные копья
+  tips: {'tip1': {'raw': 'Отравленные копья', 'val': 'Отравленные копья', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': '"Яд наносит <Aven,DataA1> урона/сек. |nВремя действия: <Aven,Dur1> сек."', 'val': '"Яд наносит <Aven,DataA1> урона/сек. |nВремя действия: <Aven,Dur1> сек."', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Sch3] Cargo Hold (levels: 1)
+  raw_name: Cargo Hold
+  tips: {'tip1': {'raw': None, 'val': None, 'sid': None}}
+  ubertips: {'ubertip1': {'raw': None, 'val': None, 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Sch5] Cargo Hold (levels: 1)
+  raw_name: Cargo Hold
+  tips: {'tip1': {'raw': None, 'val': None, 'sid': None}}
+  ubertips: {'ubertip1': {'raw': None, 'val': None, 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Sdro] Выгрузить (levels: 1)
+  raw_name: Выгрузить
+  tips: {'tip1': {'raw': 'Выгрузить всех', 'val': 'Выгрузить всех', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': 'Высаживает войска в указанном месте.', 'val': 'Высаживает войска в указанном месте.', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[Slo3] Взять на борт (levels: 1)
+  raw_name: Взять на борт
+  tips: {'tip1': {'raw': 'Взять на борт', 'val': 'Взять на борт', 'sid': None}}
+  ubertips: {'ubertip1': {'raw': 'Берет на борт наземного союзника.', 'val': 'Берет на борт наземного союзника.', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[w284] |cffdcb496Сопротивление магии|r (levels: 1)
+  raw_name: TRIGSTR_38304
+  tips: {'tip1': {'raw': 'TRIGSTR_38303', 'val': '|cffdcb496Сопротивление магии|r', 'sid': 38303}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_27982', 'val': 'Огры получают лишь 35% магического урона.', 'sid': 27982}}
+  researchtip: None | researchubertip: None
+
+[w285] |cffdcb496Сопротивление магии|r (levels: 1)
+  raw_name: TRIGSTR_38302
+  tips: {'tip1': {'raw': None, 'val': None, 'sid': None}}
+  ubertips: {'ubertip1': {'raw': None, 'val': None, 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[w288] |cffdcb496Пламенное дыхание|r (levels: 1)
+  raw_name: TRIGSTR_37769
+  tips: {'tip1': {'raw': 'TRIGSTR_37770', 'val': '|cffdcb496Пламенное дыхание|r', 'sid': 37770}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37771', 'val': 'Выдыхает огонь, нанося 55 урона врагам в секторе перед собой.', 'sid': 37771}}
+  researchtip: None | researchubertip: None
+
+[w289] |cffdcb496Огненный столб|r (levels: 1)
+  raw_name: TRIGSTR_37767
+  tips: {'tip1': {'raw': 'TRIGSTR_37768', 'val': '|cffdcb496Огненный столб|r', 'sid': 37768}}
+  ubertips: {'ubertip1': {'raw': '"Создает огненный столб, наносящий наземным войскам в указанной области 45 урона/сек. в течение 2 сек. После исчезновения столба пораженные войска продолжают получать незначительный урон."', 'val': '"Создает огненный столб, наносящий наземным войскам в указанной области 45 урона/сек. в течение 2 сек. После исчезновения столба пораженные войска продолжают получать незначительный урон."', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[w290] |cffdcb496Прочная чешуя|r (levels: 1)
+  raw_name: TRIGSTR_37765
+  tips: {'tip1': {'raw': 'TRIGSTR_37766', 'val': '|cffdcb496Прочная чешуя|r', 'sid': 37766}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_4677', 'val': '-6 от получаемого драконом урона от атак. Минимальный урон от атак: 4.', 'sid': 4677}}
+  researchtip: None | researchubertip: None
+
+[w294] |cffdcb496Драконы защитники|r (levels: 1)
+  raw_name: TRIGSTR_37761
+  tips: {'tip1': {'raw': 'TRIGSTR_37762', 'val': '|cffdcb496Драконы защитники|r', 'sid': 37762}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37763', 'val': 'Увеличивает здоровье драконов и добавляет им способность.', 'sid': 37763}}
+  researchtip: None | researchubertip: None
+
+[w295] |cffdcb496Драконы поджигатели|r (levels: 1)
+  raw_name: TRIGSTR_37758
+  tips: {'tip1': {'raw': 'TRIGSTR_37759', 'val': '|cffdcb496Драконы поджигатели|r', 'sid': 37759}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37760', 'val': 'Добавляет драконам способности.', 'sid': 37760}}
+  researchtip: None | researchubertip: None
+
+[w296] |cffdcb496Обстрел|r (levels: 1)
+  raw_name: TRIGSTR_37399
+  tips: {'tip1': {'raw': 'TRIGSTR_37400', 'val': '|cffdcb496Обстрел|r', 'sid': 37400}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_26773', 'val': 'Дирижабль раз в 5 секунд выпускает ракету, наносящую 25 урона.', 'sid': 26773}}
+  researchtip: None | researchubertip: None
+
+[w297] |cffdcb496Драконы огнепускатели|r (levels: 1)
+  raw_name: TRIGSTR_11818
+  tips: {'tip1': {'raw': 'TRIGSTR_11958', 'val': '|cffdcb496Драконы огнепускатели|r', 'sid': 11958}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37757', 'val': 'Увеличивает урон атак драконов.', 'sid': 37757}}
+  researchtip: None | researchubertip: None
+
+[w298] |cffdcb496Страх|r (levels: 2)
+  raw_name: TRIGSTR_37398
+  tips: {'tip1': {'raw': 'TRIGSTR_37391', 'val': '|cffdcb496Страх|r', 'sid': 37391}, 'tip2': {'raw': 'TRIGSTR_37392', 'val': '|cffdcb496Страх|r', 'sid': 37392}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37393', 'val': 'Не дает врагам в указанной области атаковать и применять способности в течение 20 сек.', 'sid': 37393}, 'ubertip2': {'raw': 'TRIGSTR_37394', 'val': 'Не дает врагам в указанной области атаковать и применять способности в течение 20 сек.', 'sid': 37394}}
+  researchtip: |cffdcb496Страх|r | researchubertip: Не дает врагам в указанной области атаковать и применять способности в течение 20 сек.
+
+[w299] |cffdcb496Поле развоплощения|r (levels: 4)
+  raw_name: TRIGSTR_37384
+  tips: {'tip1': {'raw': 'TRIGSTR_37386', 'val': '|cffdcb496Поле развоплощения|r [|cffffcc001-й уровень|r]', 'sid': 37386}, 'tip2': {'raw': 'TRIGSTR_37387', 'val': '|cffdcb496Поле развоплощения|r [|cffffcc002-й уровень|r]', 'sid': 37387}, 'tip3': {'raw': 'TRIGSTR_37388', 'val': '|cffdcb496Поле развоплощения|r [|cffffcc003-й уровень|r]', 'sid': 37388}, 'tip4': {'raw': 'TRIGSTR_37389', 'val': '|cffdcb496Поле развоплощения|r [|cffffcc004-й уровень|r]', 'sid': 37389}}
+  ubertips: {'ubertip1': {'raw': '"Обрушивает на указанную область <AHbz,DataA1> волн ледяных осколков, каждая из которых наносит <AHbz,DataB1> урона."', 'val': '"Обрушивает на указанную область <AHbz,DataA1> волн ледяных осколков, каждая из которых наносит <AHbz,DataB1> урона."', 'sid': None}, 'ubertip2': {'raw': '"Обрушивает на указанную область <AHbz,DataA2> волн ледяных осколков, каждая из которых наносит <AHbz,DataB2> урона."', 'val': '"Обрушивает на указанную область <AHbz,DataA2> волн ледяных осколков, каждая из которых наносит <AHbz,DataB2> урона."', 'sid': None}, 'ubertip3': {'raw': '"Обрушивает на указанную область <AHbz,DataA3> волн ледяных осколков, каждая из которых наносит <AHbz,DataB3> урона."', 'val': '"Обрушивает на указанную область <AHbz,DataA3> волн ледяных осколков, каждая из которых наносит <AHbz,DataB3> урона."', 'sid': None}, 'ubertip4': {'raw': 'TRIGSTR_9844', 'val': 'Обрушивает на указанную область <AHbz,DataA4> волн ледяных осколков, каждая из которых наносит <AHbz,DataB4> урона.', 'sid': 9844}}
+  researchtip: Изучить |cffdcb496Поле развоплощения|r [|cffffcc00%d-й уровень|r] | researchubertip: "Призывает волны ледяных осколков, наносящих урон в области действия. |n|n|cffffcc001-й уровень:|r <AHbz,DataA1> волн по <AHbz,DataB1> урона. |n|cffffcc002-й уровень:|r <AHbz,DataA2> волн по <AHbz,DataB2> урона. |n|cffffcc003-й уровень:|r <AHbz,DataA3> волн по <AHbz,DataB3> урона."
+
+[w2a0] |cffdcb496Кузня войны|r (levels: 15)
+  raw_name: TRIGSTR_11961
+  tips: {'tip1': {'raw': 'TRIGSTR_11960', 'val': '|cffdcb496Кузня войны|r', 'sid': 11960}, 'tip2': {'raw': 'TRIGSTR_11969', 'val': '|cffdcb496Кузня войны|r', 'sid': 11969}, 'tip3': {'raw': 'TRIGSTR_11970', 'val': '|cffdcb496Кузня войны|r', 'sid': 11970}, 'tip4': {'raw': 'TRIGSTR_11971', 'val': '|cffdcb496Кузня войны|r', 'sid': 11971}, 'tip5': {'raw': 'TRIGSTR_11972', 'val': '|cffdcb496Кузня войны|r', 'sid': 11972}, 'tip6': {'raw': 'TRIGSTR_12088', 'val': '|cffdcb496Кузня войны|r', 'sid': 12088}, 'tip7': {'raw': 'TRIGSTR_12101', 'val': '|cffdcb496Кузня войны|r', 'sid': 12101}, 'tip8': {'raw': 'TRIGSTR_12102', 'val': '|cffdcb496Кузня войны|r', 'sid': 12102}, 'tip9': {'raw': 'TRIGSTR_12103', 'val': '|cffdcb496Кузня войны|r', 'sid': 12103}, 'tip10': {'raw': 'TRIGSTR_12104', 'val': '|cffdcb496Кузня войны|r', 'sid': 12104}, 'tip11': {'raw': 'TRIGSTR_12105', 'val': '|cffdcb496Кузня войны|r', 'sid': 12105}, 'tip12': {'raw': 'TRIGSTR_12106', 'val': '|cffdcb496Кузня войны|r', 'sid': 12106}, 'tip13': {'raw': 'TRIGSTR_12107', 'val': '|cffdcb496Кузня войны|r', 'sid': 12107}, 'tip14': {'raw': 'TRIGSTR_12108', 'val': '|cffdcb496Кузня войны|r', 'sid': 12108}, 'tip15': {'raw': 'TRIGSTR_12109', 'val': '|cffdcb496Герой Войны|r', 'sid': 12109}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_11968', 'val': 'Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 1|r', 'sid': 11968}, 'ubertip2': {'raw': 'TRIGSTR_12110', 'val': 'Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 2|r', 'sid': 12110}, 'ubertip3': {'raw': 'TRIGSTR_12111', 'val': 'Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 3|r', 'sid': 12111}, 'ubertip4': {'raw': 'TRIGSTR_12112', 'val': 'Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 4|r', 'sid': 12112}, 'ubertip5': {'raw': 'TRIGSTR_12113', 'val': 'Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 5|r', 'sid': 12113}, 'ubertip6': {'raw': 'TRIGSTR_12114', 'val': 'Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 6|r', 'sid': 12114}, 'ubertip7': {'raw': 'TRIGSTR_12115', 'val': 'Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 7|r', 'sid': 12115}, 'ubertip8': {'raw': 'TRIGSTR_12116', 'val': 'Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 8|r', 'sid': 12116}, 'ubertip9': {'raw': 'TRIGSTR_12117', 'val': 'Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 9|r', 'sid': 12117}, 'ubertip10': {'raw': 'TRIGSTR_12118', 'val': 'Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 10|r', 'sid': 12118}, 'ubertip11': {'raw': 'TRIGSTR_12167', 'val': 'Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 11|r', 'sid': 12167}, 'ubertip12': {'raw': 'TRIGSTR_12168', 'val': 'Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 12|r', 'sid': 12168}, 'ubertip13': {'raw': 'TRIGSTR_12169', 'val': 'Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 13|r', 'sid': 12169}, 'ubertip14': {'raw': 'TRIGSTR_12170', 'val': 'Данный юнит при любых своих полезных действиях набирается опыта. Чем боль опыт, тем выше его статы. |cffdcb496Текущий уровень 14|r', 'sid': 12170}, 'ubertip15': {'raw': 'TRIGSTR_12171', 'val': '|cffdcb496Текущий уровень бойца 15|r, потому он считается героем войны. ', 'sid': 12171}}
+  researchtip: None | researchubertip: None
+
+[w2a1] |cffdcb496Разыскная бригада|r (levels: 3)
+  raw_name: TRIGSTR_12173
+  tips: {'tip1': {'raw': 'TRIGSTR_12172', 'val': '|cffdcb496Разыскная пригада|r', 'sid': 12172}, 'tip2': {'raw': 'TRIGSTR_12176', 'val': '|cffdcb496Разыскная пригада|r', 'sid': 12176}, 'tip3': {'raw': 'TRIGSTR_12177', 'val': '|cffdcb496Разыскная пригада|r', 'sid': 12177}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_12175', 'val': 'Юниты, которые могли погибнуть от грядущей атаки с шансом 50% помещаются в дирижабль. Для подрывных бригад шанс 66%.', 'sid': 12175}, 'ubertip2': {'raw': 'TRIGSTR_12428', 'val': 'Юниты, которые могли погибнуть от грядущей атаки с шансом 50% помещаются в дирижабль. Для подрывных бригад шанс 66%.', 'sid': 12428}, 'ubertip3': {'raw': 'TRIGSTR_12431', 'val': 'Юниты, которые могли погибнуть от грядущей атаки с шансом 50% помещаются в дирижабль. Для подрывных бригад шанс 66%.', 'sid': 12431}}
+  researchtip: None | researchubertip: None
+
+[w2a2] |cffdcb496Ба-бах!|r (levels: 3)
+  raw_name: TRIGSTR_12493
+  tips: {'tip1': {'raw': 'TRIGSTR_12492', 'val': '|cffdcb496Ба-бах!|r', 'sid': 12492}, 'tip2': {'raw': 'TRIGSTR_12766', 'val': '|cffdcb496Ба-бах!|r', 'sid': 12766}, 'tip3': {'raw': 'TRIGSTR_12770', 'val': '|cffdcb496Ба-бах!|r', 'sid': 12770}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_12778', 'val': 'Наносит 100 урона в небольшой области. Особенно эффективен против зданий и деревьев.', 'sid': 12778}, 'ubertip2': {'raw': 'TRIGSTR_12791', 'val': 'Наносит 125 урона в небольшой области. Особенно эффективен против зданий и деревьев.', 'sid': 12791}, 'ubertip3': {'raw': 'TRIGSTR_12800', 'val': 'Наносит 150 урона в небольшой области. Особенно эффективен против зданий и деревьев.', 'sid': 12800}}
+  researchtip: None | researchubertip: None
+
+[w2a3] |cffdcb496Перелет|r (levels: 1)
+  raw_name: TRIGSTR_12488
+  tips: {'tip1': {'raw': 'TRIGSTR_12489', 'val': '|cffdcb496Перелет|r', 'sid': 12489}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_12490', 'val': 'В течении 30 секунд юнит сможет перелетать через юнитов (не зданий).', 'sid': 12490}}
+  researchtip: None | researchubertip: None
+
+[w2a4] |cffdcb496Жажда крови|r (levels: 1)
+  raw_name: TRIGSTR_16439
+  tips: {'tip1': {'raw': 'TRIGSTR_16440', 'val': '|cffdcb496Жажда крови|r', 'sid': 16440}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_16441', 'val': '+20% к скорости атаки и +10% к скорости передвижения союзника. |nВремя действия: 60 сек.', 'sid': 16441}}
+  researchtip: None | researchubertip: None
+
+[w2a5] |cffdcb496Воскрешение мертвых|r (levels: 1)
+  raw_name: TRIGSTR_16444
+  tips: {'tip1': {'raw': 'TRIGSTR_16445', 'val': '|cffdcb496Воскрешение мертвых|r', 'sid': 16445}}
+  ubertips: {'ubertip1': {'raw': '"Поднимает <Arai,DataA1> скелетов из трупа."', 'val': '"Поднимает <Arai,DataA1> скелетов из трупа."', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[w2a6] |cffdcb496Око Кил'Рога|r (levels: 1)
+  raw_name: TRIGSTR_16446
+  tips: {'tip1': {'raw': 'TRIGSTR_16447', 'val': "|cffdcb496Око Кил'Рога|r", 'sid': 16447}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_20211', 'val': 'Призывает Око Килрога, усиливающее армию рядом. |nВремя существования: 120 сек. ', 'sid': 20211}}
+  researchtip: None | researchubertip: None
+
+[w2a8] |cffdcb496Темный доспех|r (levels: 1)
+  raw_name: TRIGSTR_37256
+  tips: {'tip1': {'raw': 'TRIGSTR_37257', 'val': '|cffdcb496Темный доспех|r', 'sid': 37257}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37258', 'val': 'Укрывает союзника костяным щитом, который дает +8 к броне, но наносит магический урон в треть от текущего здоровья (максимум 500). |nВремя действия: 70 сек.', 'sid': 37258}}
+  researchtip: None | researchubertip: None
+
+[w2a9] |cffdcb496Взрывная руна|r (levels: 1)
+  raw_name: TRIGSTR_20757
+  tips: {'tip1': {'raw': 'TRIGSTR_20212', 'val': '|cffdcb496Взрывная руна|r', 'sid': 20212}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_20215', 'val': 'Создает 3 руны, которые через 3 секунды взорвуться и нанесут огромный урон.', 'sid': 20215}}
+  researchtip: Изучить «Темный портал» | researchubertip: "Открывает портал, впускающий на Азерот демонов Архимонда."
+
+[w2aA] |cffdcb496Ярость берсерка|r (levels: 4)
+  raw_name: TRIGSTR_37364
+  tips: {'tip1': {'raw': 'TRIGSTR_37350', 'val': '|cffdcb496Ярость берсерка|r', 'sid': 37350}, 'tip2': {'raw': 'TRIGSTR_37351', 'val': '|cffdcb496Ярость берсерка|r', 'sid': 37351}, 'tip3': {'raw': 'TRIGSTR_37352', 'val': '|cffdcb496Ярость берсерка|r', 'sid': 37352}, 'tip4': {'raw': 'TRIGSTR_37353', 'val': '|cffdcb496Ярость берсерка|r', 'sid': 37353}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37363', 'val': 'Ускоряет атаку на <w2aA,DataA1,%>% и передвижение на <w2aA,DataB1,%>% на <w2aA,Dur1> сек.', 'sid': 37363}, 'ubertip2': {'raw': 'TRIGSTR_37354', 'val': 'Ускоряет атаку на <w2aA,DataA1,%>% и передвижение на <w2aA,DataB1,%>% на <w2aA,Dur1> сек.', 'sid': 37354}, 'ubertip3': {'raw': 'TRIGSTR_37355', 'val': 'Ускоряет атаку на <w2aA,DataA1,%>% и передвижение на <w2aA,DataB1,%>% на <w2aA,Dur1> сек.', 'sid': 37355}, 'ubertip4': {'raw': 'TRIGSTR_37356', 'val': 'Ускоряет атаку на <w2aA,DataA1,%>% и передвижение на <w2aA,DataB1,%>% на <w2aA,Dur1> сек.', 'sid': 37356}}
+  researchtip: |cffdcb496Ярость берсерка|r | researchubertip: Ускоряет атаку и передвижение героя.
+
+[w2aQ] |cffdcb496Разъедающее зелье|r (levels: 2)
+  raw_name: TRIGSTR_37366
+  tips: {'tip1': {'raw': 'TRIGSTR_37367', 'val': '|cffdcb496Разъедающее зелье|r [|cffffcc001-й уровень|r]', 'sid': 37367}, 'tip2': {'raw': 'TRIGSTR_37368', 'val': '|cffdcb496Разъедающее зелье|r [|cffffcc002-й уровень|r]', 'sid': 37368}}
+  ubertips: {'ubertip1': {'raw': '"Бросает в цель сосуд с кислотой, который при попадании разбивается и поражает находящихся рядом врагов. |n|nОслабляет броню на <ANab,DataC1>, наносит <ANab,DataD1> урона/сек. основной цели и немного меньше урона дополнительным целям. |nВремя действия: <ANab,Dur1> сек."', 'val': '"Бросает в цель сосуд с кислотой, который при попадании разбивается и поражает находящихся рядом врагов. |n|nОслабляет броню на <ANab,DataC1>, наносит <ANab,DataD1> урона/сек. основной цели и немного меньше урона дополнительным целям. |nВремя действия: <ANab,Dur1> сек."', 'sid': None}, 'ubertip2': {'raw': '"Бросает в цель сосуд с кислотой, который при попадании разбивается и поражает находящихся рядом врагов. |n|nОслабляет броню на <ANab,DataC2>, наносит <ANab,DataD2> урона/сек. основной цели и немного меньше урона дополнительным целям. |nВремя действия: <ANab,Dur2> сек."', 'val': '"Бросает в цель сосуд с кислотой, который при попадании разбивается и поражает находящихся рядом врагов. |n|nОслабляет броню на <ANab,DataC2>, наносит <ANab,DataD2> урона/сек. основной цели и немного меньше урона дополнительным целям. |nВремя действия: <ANab,Dur2> сек."', 'sid': None}}
+  researchtip: Изучить |cffdcb496Разъедающее зелье|r [|cffffcc00%d-й уровень|r] | researchubertip: "Бросает в цель сосуд с кислотой, который при попадании разбивается и поражает находящихся рядом врагов. |n|nОслабляет броню, наносит существенный периодический урон основной цели и немного меньше урона дополнительным целям. |nВремя действия: <ANab,Dur1> сек. |n|n|cffffcc001-й уровень:|r до <ANab,DataD1> урона/сек., -<ANab,DataC1> от брони. |n|cffffcc002-й уровень:|r до <ANab,DataD2> урона/сек., -<ANab,DataC2> от брони. |n|cffffcc003-й уровень:|r до <ANab,DataD3> урона/сек., -<ANab,DataC3> от брони."
+
+[w2aW] |cffdcb496Стрелы тьмы|r (levels: 4)
+  raw_name: TRIGSTR_37370
+  tips: {'tip1': {'raw': 'TRIGSTR_37372', 'val': '|cffdcb496Стрелы тьмы|r [|cffffcc001-й уровень|r]', 'sid': 37372}, 'tip2': {'raw': 'TRIGSTR_37373', 'val': '|cffdcb496Стрелы тьмы|r [|cffffcc002-й уровень|r]', 'sid': 37373}, 'tip3': {'raw': 'TRIGSTR_37374', 'val': '|cffdcb496Стрелы тьмы|r [|cffffcc003-й уровень|r]', 'sid': 37374}, 'tip4': {'raw': 'TRIGSTR_37375', 'val': '|cffdcb496Стрелы тьмы|r [|cffffcc004-й уровень|r]', 'sid': 37375}}
+  ubertips: {'ubertip1': {'raw': '"Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA1> урона врагам на своем пути."', 'val': '"Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA1> урона врагам на своем пути."', 'sid': None}, 'ubertip2': {'raw': '"Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA2> урона врагам на своем пути."', 'val': '"Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA2> урона врагам на своем пути."', 'sid': None}, 'ubertip3': {'raw': '"Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA3> урона врагам на своем пути."', 'val': '"Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA3> урона врагам на своем пути."', 'sid': None}, 'ubertip4': {'raw': 'TRIGSTR_27451', 'val': 'Выпускает в секторе перед собой стаю нетопырей, наносящих по <AUcs,DataA4> урона врагам на своем пути.', 'sid': 27451}}
+  researchtip: Изучить |cffdcb496Стрелы тьмы|r [|cffffcc00%d-й уровень|r] | researchubertip: "Выпускает стаю нетопырей, атакующих врагов. |n|n|cffffcc001-й уровень:|r <AUcs,DataA1> урона каждой цели. |n|cffffcc002-й уровень:|r <AUcs,DataA2> урона каждой цели. |n|cffffcc003-й уровень:|r <AUcs,DataA3> урона каждой цели."
+
+[w2aZ] |cffdcb496Аура гениальности|r (levels: 4)
+  raw_name: TRIGSTR_37378
+  tips: {'tip1': {'raw': 'TRIGSTR_37379', 'val': '|cffdcb496Аура Гениальности|r [|cffffcc001-й уровень|r]', 'sid': 37379}, 'tip2': {'raw': 'TRIGSTR_37380', 'val': '|cffdcb496Аура Гениальности|r [|cffffcc002-й уровень|r]', 'sid': 37380}, 'tip3': {'raw': 'TRIGSTR_37381', 'val': '|cffdcb496Аура Гениальности|r [|cffffcc003-й уровень|r]', 'sid': 37381}, 'tip4': {'raw': 'TRIGSTR_37382', 'val': '|cffdcb496Аура Гениальности|r [|cffffcc004-й уровень|r]', 'sid': 37382}}
+  ubertips: {'ubertip1': {'raw': '"Ускоряет регенерацию маны находящихся рядом союзников."', 'val': '"Ускоряет регенерацию маны находящихся рядом союзников."', 'sid': None}, 'ubertip2': {'raw': '"Ускоряет регенерацию маны находящихся рядом союзников."', 'val': '"Ускоряет регенерацию маны находящихся рядом союзников."', 'sid': None}, 'ubertip3': {'raw': '"Ускоряет регенерацию маны находящихся рядом союзников."', 'val': '"Ускоряет регенерацию маны находящихся рядом союзников."', 'sid': None}, 'ubertip4': {'raw': 'TRIGSTR_37383', 'val': 'Ускоряет регенерацию маны находящихся рядом союзников.', 'sid': 37383}}
+  researchtip: Изучить «Ауру гениальности» [|cffffcc00%d-й уровень|r] | researchubertip: Ускоряет регенерацию маны находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r незначительный бонус. |n|cffffcc002-й уровень:|r средний бонус.|n|cffffcc003-й уровень:|r значительный бонус.
+
+[w2ab] |cffdcb496Похищение жизни|r (levels: 1)
+  raw_name: TRIGSTR_37263
+  tips: {'tip1': {'raw': 'TRIGSTR_37264', 'val': '|cffdcb496Похищение жизни|r', 'sid': 37264}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_2926', 'val': 'Похищает 40 здоровья/сек. у врага. |nВремя действия: 8 сек.', 'sid': 2926}}
+  researchtip: None | researchubertip: None
+
+[w2ac] |cffdcb496Замедление|r (levels: 1)
+  raw_name: TRIGSTR_36850
+  tips: {'tip1': {'raw': 'TRIGSTR_36849', 'val': '|cffdcb496Замедление|r', 'sid': 36849}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37074', 'val': 'Замедляет атаку врага на 15% и передвижение на 30% на 20 сек. На героев действует 2 секунды.', 'sid': 37074}}
+  researchtip: None | researchubertip: None
+
+[w2ad] |cffdcb496Вихрь клинков|r (levels: 4)
+  raw_name: TRIGSTR_37326
+  tips: {'tip1': {'raw': 'TRIGSTR_37328', 'val': '|cffdcb496Вихрь клинков|r', 'sid': 37328}, 'tip2': {'raw': 'TRIGSTR_37329', 'val': '|cffdcb496Вихрь клинков|r', 'sid': 37329}, 'tip3': {'raw': 'TRIGSTR_37330', 'val': '|cffdcb496Вихрь клинков|r', 'sid': 37330}, 'tip4': {'raw': 'TRIGSTR_37331', 'val': '|cffdcb496Вихрь клинков|r', 'sid': 37331}}
+  ubertips: {'ubertip1': {'raw': '"Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur1> сек."', 'val': '"Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur1> сек."', 'sid': None}, 'ubertip2': {'raw': 'TRIGSTR_37332', 'val': 'Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur1> сек.', 'sid': 37332}, 'ubertip3': {'raw': 'TRIGSTR_37333', 'val': 'Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur1> сек.', 'sid': 37333}, 'ubertip4': {'raw': 'TRIGSTR_37334', 'val': 'Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам. |nВремя действия: <AOww,Dur1> сек.', 'sid': 37334}}
+  researchtip: Изучить |cffdcb496Вихрь клинков|r | researchubertip: "Окружает мастера клинка вихрем разрушительной силы, который дает невосприимчивость к магии и наносит <AOww,DataA1> урона/сек. находящимся рядом наземным врагам."
+
+[w2af] |cffdcb496Метание топоров|r (levels: 4)
+  raw_name: TRIGSTR_37336
+  tips: {'tip1': {'raw': 'TRIGSTR_37337', 'val': '|cffdcb496Метание топоров|r', 'sid': 37337}, 'tip2': {'raw': 'TRIGSTR_37338', 'val': '|cffdcb496Метание топоров|r', 'sid': 37338}, 'tip3': {'raw': 'TRIGSTR_37339', 'val': '|cffdcb496Метание топоров|r', 'sid': 37339}, 'tip4': {'raw': 'TRIGSTR_37340', 'val': '|cffdcb496Метание топоров|r', 'sid': 37340}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37341', 'val': 'Метает топоры по каждому юниту в выбранной области.', 'sid': 37341}, 'ubertip2': {'raw': 'TRIGSTR_37342', 'val': 'Метает топоры по каждому юниту в выбранной области.', 'sid': 37342}, 'ubertip3': {'raw': 'TRIGSTR_37343', 'val': 'Метает топоры по каждому юниту в выбранной области.', 'sid': 37343}, 'ubertip4': {'raw': 'TRIGSTR_37344', 'val': 'Метает топоры по каждому юниту в выбранной области.', 'sid': 37344}}
+  researchtip: |cffdcb496Метание топоров|r | researchubertip: Метает топоры по каждому юниту в выбранной области.
+
+[w2ag] |cffdcb496Сильный удар|r (levels: 1)
+  raw_name: TRIGSTR_37284
+  tips: {'tip1': {'raw': 'TRIGSTR_37285', 'val': '|cffdcb496Сильный удар|r', 'sid': 37285}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37286', 'val': 'С 15%-й вероятностью атака нанесет на 20 больше урона и оглушит цель на 2 сек.', 'sid': 37286}}
+  researchtip: None | researchubertip: None
+
+[w2ah] |cffdcb496Аура меткости|r (levels: 4)
+  raw_name: TRIGSTR_37314
+  tips: {'tip1': {'raw': 'TRIGSTR_37317', 'val': '|cffdcb496Аура меткости|r [|cffffcc001-й уровень|r]', 'sid': 37317}, 'tip2': {'raw': 'TRIGSTR_37318', 'val': '|cffdcb496Аура меткости|r [|cffffcc002-й уровень|r]', 'sid': 37318}, 'tip3': {'raw': 'TRIGSTR_37319', 'val': '|cffdcb496Аура меткости|r [|cffffcc003-й уровень|r]', 'sid': 37319}, 'tip4': {'raw': 'TRIGSTR_37320', 'val': '|cffdcb496Аура меткости|r [|cffffcc004-й уровень|r]', 'sid': 37320}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37324', 'val': '+<w2ah,DataA1,%>% к урону от дальнобойных атак находящихся рядом союзников.', 'sid': 37324}, 'ubertip2': {'raw': 'TRIGSTR_37321', 'val': '+<w2ah,DataA1,%>% к урону от дальнобойных атак находящихся рядом союзников.', 'sid': 37321}, 'ubertip3': {'raw': 'TRIGSTR_37322', 'val': '+<w2ah,DataA1,%>% к урону от дальнобойных атак находящихся рядом союзников.', 'sid': 37322}, 'ubertip4': {'raw': 'TRIGSTR_37323', 'val': '+<w2ah,DataA1,%>% к урону от дальнобойных атак находящихся рядом союзников.', 'sid': 37323}}
+  researchtip: Изучить |cffdcb496Аура меткости|r [|cffffcc00%d-й уровень|r] | researchubertip: Увеличивает урон от дистанционных атак находящихся рядом союзников.
+
+[w2ak] |cffdcb496Аура выносливости|r (levels: 4)
+  raw_name: TRIGSTR_37300
+  tips: {'tip1': {'raw': 'TRIGSTR_37301', 'val': '|cffdcb496Аура выносливости|r [|cffffcc001-й уровень|r]', 'sid': 37301}, 'tip2': {'raw': 'TRIGSTR_37302', 'val': '|cffdcb496Аура выносливости|r [|cffffcc002-й уровень|r]', 'sid': 37302}, 'tip3': {'raw': 'TRIGSTR_37303', 'val': '|cffdcb496Аура выносливости|r [|cffffcc003-й уровень|r]', 'sid': 37303}, 'tip4': {'raw': 'TRIGSTR_37304', 'val': '|cffdcb496Аура выносливости|r [|cffffcc004-й уровень|r]', 'sid': 37304}}
+  ubertips: {'ubertip1': {'raw': '"+<AOae,DataA1,%>% к скорости передвижения и +<AOae,DataB1,%>% к скорости атаки находящихся рядом союзников."', 'val': '"+<AOae,DataA1,%>% к скорости передвижения и +<AOae,DataB1,%>% к скорости атаки находящихся рядом союзников."', 'sid': None}, 'ubertip2': {'raw': '"+<AOae,DataA2,%>% к скорости передвижения и +<AOae,DataB2,%>% к скорости атаки находящихся рядом союзников."', 'val': '"+<AOae,DataA2,%>% к скорости передвижения и +<AOae,DataB2,%>% к скорости атаки находящихся рядом союзников."', 'sid': None}, 'ubertip3': {'raw': '"+<AOae,DataA3,%>% к скорости передвижения и +<AOae,DataB3,%>% к скорости атаки находящихся рядом союзников."', 'val': '"+<AOae,DataA3,%>% к скорости передвижения и +<AOae,DataB3,%>% к скорости атаки находящихся рядом союзников."', 'sid': None}, 'ubertip4': {'raw': None, 'val': None, 'sid': None}}
+  researchtip: Изучить «Ауру выносливости» [|cffffcc00%d-й уровень|r] | researchubertip: "Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки. |n|cffffcc003-й уровень:|r +<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки."
+
+[w2al] |cffdcb496Держать строй|r (levels: 4)
+  raw_name: TRIGSTR_37289
+  tips: {'tip1': {'raw': 'TRIGSTR_37288', 'val': '|cffdcb496Держать строй|r', 'sid': 37288}, 'tip2': {'raw': 'TRIGSTR_37291', 'val': '|cffdcb496Держать строй|r', 'sid': 37291}, 'tip3': {'raw': 'TRIGSTR_37290', 'val': '|cffdcb496Держать строй|r', 'sid': 37290}, 'tip4': {'raw': 'TRIGSTR_37292', 'val': '|cffdcb496Держать строй|r', 'sid': 37292}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37293', 'val': 'Увеличивает броню и регенерацию союзников рядом на 20 секунд.', 'sid': 37293}, 'ubertip2': {'raw': 'TRIGSTR_37294', 'val': 'Увеличивает броню и регенерацию союзников рядом на 20 секунд.', 'sid': 37294}, 'ubertip3': {'raw': 'TRIGSTR_37295', 'val': 'Увеличивает броню и регенерацию союзников рядом на 20 секунд.', 'sid': 37295}, 'ubertip4': {'raw': 'TRIGSTR_37296', 'val': 'Увеличивает броню и регенерацию союзников рядом на 20 секунд.', 'sid': 37296}}
+  researchtip: |cffdcb496Держать строй|r | researchubertip: Увеличивает броню и регенерацию союзников рядом на 20 секунд.
+
+[w2am] |cffdcb496Отработанные навыки|r (levels: 1)
+  raw_name: TRIGSTR_37269
+  tips: {'tip1': {'raw': 'TRIGSTR_37270', 'val': '|cffdcb496Отработанные навыки|r', 'sid': 37270}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37271', 'val': 'Дает 5-й шанс уклониться от атаки и 5%-й шанс нанести 2-кратный урон.', 'sid': 37271}}
+  researchtip: Изучить «Пьяного мастера» [|cffffcc00%d-й уровень|r] | researchubertip: "Дает шанс уклониться от атаки и <ANdb,DataA1>%-й шанс нанести больше урона. |n|n|cffffcc001-й уровень:|r <ANdb,DataD1,%>%-й шанс уклониться, <ANdb,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <ANdb,DataD2,%>%-й шанс уклониться, <ANdb,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <ANdb,DataD3,%>%-й шанс уклониться, <ANdb,DataB3>-кратный урон."
+
+[w2an] |cffdcb496Ярость|r (levels: 1)
+  raw_name: TRIGSTR_37266
+  tips: {'tip1': {'raw': 'TRIGSTR_37267', 'val': '|cffdcb496Ярость|r', 'sid': 37267}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_27227', 'val': 'Ускоряет атаку на 20% и передвижение на 15% на 9 сек.', 'sid': 27227}}
+  researchtip: None | researchubertip: None
+
+[w2ap] |cffdcb496Резня слабаков|r (levels: 2)
+  raw_name: TRIGSTR_37306
+  tips: {'tip1': {'raw': 'TRIGSTR_37307', 'val': '|cffdcb496Резня слабаков|r', 'sid': 37307}, 'tip2': {'raw': 'TRIGSTR_37308', 'val': '|cffdcb496Резня слабаков|r', 'sid': 37308}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37310', 'val': '3-кратно увеличивает урон от атак по юнитам не героям.', 'sid': 37310}, 'ubertip2': {'raw': 'TRIGSTR_32681', 'val': '4-кратно увеличивает урон от атак по юнитам не героям.', 'sid': 32681}}
+  researchtip: |cffdcb496Резня слабаков|r | researchubertip: Увеличивает урон от атак по юнитам не героям.
+
+[w2as] |cffdcb496Ракетный обстел|r (levels: 1)
+  raw_name: TRIGSTR_37272
+  tips: {'tip1': {'raw': 'TRIGSTR_37273', 'val': '|cffdcb496Ракетный обстел|r', 'sid': 37273}}
+  ubertips: {'ubertip1': {'raw': 'Поджигает находящихся рядом врагов.', 'val': 'Поджигает находящихся рядом врагов.', 'sid': None}}
+  researchtip: None | researchubertip: None
+
+[w2av] |cffdcb496Сфера разрушения|r (levels: 1)
+  raw_name: TRIGSTR_37259
+  tips: {'tip1': {'raw': 'TRIGSTR_37260', 'val': '|cffdcb496Сфера разрушения|r', 'sid': 37260}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_37261', 'val': '+20 к урону от атак юнита. Атаки наносят урон по области.', 'sid': 37261}}
+  researchtip: None | researchubertip: None
+
+[w2ax] |cffdcb496Рассеивание заклинаний|r (levels: 1)
+  raw_name: TRIGSTR_35606
+  tips: {'tip1': {'raw': 'TRIGSTR_35784', 'val': '|cffdcb496Рассеивание заклинаний|r', 'sid': 35784}}
+  ubertips: {'ubertip1': {'raw': 'TRIGSTR_36762', 'val': 'Снимает положительные эффекты с войск в указанной области. Наносит 200 урона призванным юнитам.', 'sid': 36762}}
+  researchtip: None | researchubertip: None
+
+[w2az] |cffdcb496Исцеление|r (levels: 1)
+  raw_name: TRIGSTR_31629
+  tips: {'tip1': {'raw': 'TRIGSTR_30004', 'val': '|cffdcb496Исцеление|r', 'sid': 30004}}
+  ubertips: {'ubertip1': {'raw': 'Восполняет здоровье раненому союзнику. Не действует на технику.', 'val': 'Восполняет здоровье раненому союзнику. Не действует на технику.', 'sid': None}}
+  researchtip: None | researchubertip: None
+

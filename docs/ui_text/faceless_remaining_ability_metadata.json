@@ -1,0 +1,113 @@
+{
+  "source": "Installed Warcraft III CASC: units/abilitymetadata.slk + ui/worldeditstrings.txt",
+  "codes": {
+    "AOfs": [
+      {
+        "ID": "Ofs1",
+        "data": "1",
+        "field": "Data",
+        "displayName": "WESTRING_AEVAL_OFS1",
+        "label": "Detection Type"
+      }
+    ],
+    "Arej": [
+      {
+        "ID": "Rej1",
+        "data": "1",
+        "field": "Data",
+        "displayName": "WESTRING_AEVAL_REJ1",
+        "label": "Hit Points Gained"
+      },
+      {
+        "ID": "Rej2",
+        "data": "2",
+        "field": "Data",
+        "displayName": "WESTRING_AEVAL_REJ2",
+        "label": "Mana Points Gained"
+      },
+      {
+        "ID": "Rej3",
+        "data": "3",
+        "field": "Data",
+        "displayName": "WESTRING_AEVAL_REJ3",
+        "label": "Allow When Full"
+      },
+      {
+        "ID": "Rej4",
+        "data": "4",
+        "field": "Data",
+        "displayName": "WESTRING_AEVAL_REJ4",
+        "label": "No Target Required"
+      }
+    ],
+    "AIbl": [
+      {
+        "ID": "Ibl1",
+        "data": "0",
+        "field": "UnitID",
+        "displayName": "WESTRING_AEVAL_IBL1",
+        "label": "Unit Created (per player race)"
+      }
+    ],
+    "AUls": [
+      {
+        "ID": "Uls1",
+        "data": "1",
+        "field": "Data",
+        "displayName": "WESTRING_AEVAL_ULS1",
+        "label": "Number of Swarm Units"
+      },
+      {
+        "ID": "Uls2",
+        "data": "2",
+        "field": "Data",
+        "displayName": "WESTRING_AEVAL_ULS2",
+        "label": "Unit Release Interval (seconds)"
+      },
+      {
+        "ID": "Uls3",
+        "data": "3",
+        "field": "Data",
+        "displayName": "WESTRING_AEVAL_ULS3",
+        "label": "Max Swarm Units Per Target"
+      },
+      {
+        "ID": "Uls4",
+        "data": "4",
+        "field": "Data",
+        "displayName": "WESTRING_AEVAL_ULS4",
+        "label": "Damage Return Factor"
+      },
+      {
+        "ID": "Uls5",
+        "data": "5",
+        "field": "Data",
+        "displayName": "WESTRING_AEVAL_ULS5",
+        "label": "Damage Return Threshold"
+      },
+      {
+        "ID": "Ulsu",
+        "data": "0",
+        "field": "UnitID",
+        "displayName": "WESTRING_AEVAL_ULSU",
+        "label": "Swarm Unit Type"
+      }
+    ],
+    "Aspl": [
+      {
+        "ID": "spl1",
+        "data": "1",
+        "field": "Data",
+        "displayName": "WESTRING_AEVAL_SPL1",
+        "label": "Distributed Damage Factor"
+      },
+      {
+        "ID": "spl2",
+        "data": "2",
+        "field": "Data",
+        "displayName": "WESTRING_AEVAL_SPL2",
+        "label": "Maximum Number of Targets"
+      }
+    ]
+  }
+}

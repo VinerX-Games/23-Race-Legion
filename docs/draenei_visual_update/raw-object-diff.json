@@ -1,0 +1,262 @@
+{
+  "ok": true,
+  "changes": [
+    {
+      "file": "war3map.w3a",
+      "id": "A063",
+      "field": "ahky",
+      "level": 0,
+      "pointer": 0,
+      "change": "added"
+    },
+    {
+      "file": "war3map.w3a",
+      "id": "A063",
+      "field": "atp1",
+      "level": 1,
+      "pointer": 0,
+      "change": "added"
+    },
+    {
+      "file": "war3map.w3a",
+      "id": "ADr5",
+      "field": "abpx",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3a",
+      "id": "ADr5",
+      "field": "ahky",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3a",
+      "id": "ADr5",
+      "field": "atp1",
+      "level": 1,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "e000",
+      "field": "utub",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h01O",
+      "field": "utub",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h01R",
+      "field": "utub",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h033",
+      "field": "uico",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h033",
+      "field": "umdl",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h033",
+      "field": "unam",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h033",
+      "field": "usca",
+      "level": 0,
+      "pointer": 0,
+      "change": "added"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h033",
+      "field": "utip",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h033",
+      "field": "utub",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h055",
+      "field": "uico",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h055",
+      "field": "umdl",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h055",
+      "field": "usca",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h056",
+      "field": "uico",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h056",
+      "field": "umdl",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h056",
+      "field": "usca",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h057",
+      "field": "uico",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h057",
+      "field": "umdl",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h057",
+      "field": "unam",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h057",
+      "field": "usca",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h057",
+      "field": "utip",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h057",
+      "field": "utub",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h059",
+      "field": "utub",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "n005",
+      "field": "uabi",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "n005",
+      "field": "utub",
+      "level": 0,
+      "pointer": 0,
+      "change": "modified"
+    },
+    {
+      "file": "war3mapSkin.w3a",
+      "id": "A063",
+      "field": "ahky",
+      "level": 0,
+      "pointer": 0,
+      "change": "removed"
+    },
+    {
+      "file": "war3mapSkin.w3a",
+      "id": "A063",
+      "field": "atp1",
+      "level": 1,
+      "pointer": 0,
+      "change": "removed"
+    },
+    {
+      "file": "war3mapSkin.w3a",
+      "id": "A1C8",
+      "field": "abpx",
+      "level": 0,
+      "pointer": 0,
+      "change": "removed"
+    }
+  ],
+  "limitation": "Full HiveWE semantic diff crashed; unchanged records and fields were verified from binary spans."
+}

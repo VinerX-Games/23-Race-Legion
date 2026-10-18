@@ -1,0 +1,446 @@
+{
+  "scope": "Безликие: 11 юнитов; рабочий, остальные обучаемые войска и звери",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "in_game_checked": false,
+  "objects_before": [
+    {
+      "fields": {
+        "abillist": "A115,A114,A116",
+        "atktype1": "normal",
+        "builds": "",
+        "hotkey": "TRIGSTR_4780",
+        "name": "TRIGSTR_25370",
+        "targs1": "ground,structure,debris,item,ward",
+        "targs2": "",
+        "tip": "TRIGSTR_25372",
+        "ubertip": "TRIGSTR_27765",
+        "upgrades": "R0F7,R0F8,R0EX,R0ER,R0ET",
+        "weapson": "1"
+      },
+      "id": "h0ID",
+      "name": "|cffd7b4f5Злобный бичеватель разума|r"
+    },
+    {
+      "fields": {
+        "abillist": "A126,A112,A1R2,A1R3",
+        "atktype1": "magic",
+        "builds": "",
+        "hotkey": "TRIGSTR_5056",
+        "name": "TRIGSTR_5538",
+        "targs1": "ground,structure,debris,item,ward",
+        "targs2": "",
+        "tip": "TRIGSTR_6115",
+        "ubertip": "TRIGSTR_28002",
+        "upgrades": "R0EW,R0F7,R0F8,R0ER,R0ET",
+        "weapson": "1"
+      },
+      "id": "h0IE",
+      "name": "|cffd7b4f5Пожиратель Бездны|r"
+    },
+    {
+      "fields": {
+        "abillist": "A10P,A123",
+        "atktype1": "chaos",
+        "builds": "",
+        "hotkey": "TRIGSTR_4781",
+        "name": "TRIGSTR_25376",
+        "targs1": "ground,structure,debris,item,ward",
+        "targs2": "",
+        "tip": "TRIGSTR_25378",
+        "ubertip": "TRIGSTR_28452",
+        "upgrades": "R0F8,R0F7,R0ER,R0ET",
+        "weapson": "1"
+      },
+      "id": "h0IF",
+      "name": "|cffd7b4f5Бессмертый страж|r"
+    },
+    {
+      "fields": {
+        "abillist": "A10Y,A111,A0RR,A1N5",
+        "atktype1": "normal",
+        "builds": "",
+        "hotkey": "TRIGSTR_5057",
+        "name": "TRIGSTR_25379",
+        "targs1": "debris,ground,item,ward",
+        "targs2": "ground,structure",
+        "tip": "TRIGSTR_8800",
+        "ubertip": "TRIGSTR_28779",
+        "upgrades": "R0F8,R0F7,R0EV,R0ER,R0ET",
+        "weapson": "1"
+      },
+      "id": "h0IG",
+      "name": "|cffd7b4f5К`Траксис|r"
+    },
+    {
+      "fields": {
+        "abillist": "A16O,A16N,A16P",
+        "atktype1": "magic",
+        "builds": "",
+        "hotkey": "TRIGSTR_6753",
+        "name": "TRIGSTR_25115",
+        "targs1": "ground,structure,debris,item,ward",
+        "targs2": "",
+        "tip": "TRIGSTR_26542",
+        "ubertip": "TRIGSTR_31858",
+        "upgrades": "R0F7,R0F8,R0ER,R0ET",
+        "weapson": "1"
+      },
+      "id": "h0K2",
+      "name": "|cffd7b4f5Проклинатель Бездны|r"
+    },
+    {
+      "fields": {
+        "abillist": "A122,A113,A0PC",
+        "atktype1": "chaos",
+        "builds": "",
+        "hotkey": "TRIGSTR_3036",
+        "name": "TRIGSTR_31182",
+        "targs1": "ground,structure,debris,item,ward",
+        "targs2": "",
+        "tip": "TRIGSTR_15449",
+        "ubertip": "TRIGSTR_35444",
+        "upgrades": "R0F7,R0F8,R0ER,R0ET",
+        "weapson": "1"
+      },
+      "id": "h0MO",
+      "name": "|cffd7b4f5Безликий Кошмар|r"
+    },
+    {
+      "fields": {
+        "abillist": "A10Z,ACen",
+        "atktype1": "chaos",
+        "builds": "",
+        "hotkey": "TRIGSTR_5920",
+        "name": "TRIGSTR_29947",
+        "targs1": "ground,structure,debris,item,ward",
+        "targs2": "",
+        "tip": "TRIGSTR_29967",
+        "ubertip": "TRIGSTR_31907",
+        "upgrades": "R0F8,R0F7,R0ER,R0ET",
+        "weapson": "1"
+      },
+      "id": "n05I",
+      "name": "|cffd7b4f5Водное Порождение|r"
+    },
+    {
+      "fields": {
+        "abillist": "A0I3,ANha,Arst",
+        "atktype1": "normal",
+        "builds": "h0K3,h0D1,h0HZ,h0HY,h0I2,h0I6,h0I4,h0I1",
+        "hotkey": "TRIGSTR_5004",
+        "name": "TRIGSTR_25382",
+        "targs1": "ground,structure,debris,item,ward",
+        "targs2": "",
+        "tip": "TRIGSTR_25383",
+        "ubertip": "TRIGSTR_31870",
+        "upgrades": "R0GE,Rguv",
+        "weapson": "1"
+      },
+      "id": "u02D",
+      "name": "|cffd7b4f5Безликий прислужник|r"
+    },
+    {
+      "fields": {
+        "abillist": "",
+        "atktype1": "normal",
+        "builds": "",
+        "hotkey": "TRIGSTR_6212",
+        "name": "TRIGSTR_31185",
+        "targs1": "ground,structure,debris,item,ward",
+        "targs2": "",
+        "tip": "TRIGSTR_30624",
+        "ubertip": "TRIGSTR_31854",
+        "upgrades": "R0F7,R0F8,R0ER,R0ET",
+        "weapson": "1"
+      },
+      "id": "h0MP",
+      "name": "|cffd7b4f5Поробощенный Зверь|r"
+    },
+    {
+      "fields": {
+        "abillist": "",
+        "atktype1": "chaos",
+        "builds": "",
+        "hotkey": "TRIGSTR_6414",
+        "name": "TRIGSTR_31240",
+        "targs1": "ground,structure,debris,item,ward",
+        "targs2": "",
+        "tip": "TRIGSTR_31184",
+        "ubertip": "TRIGSTR_31953",
+        "upgrades": "R0F7,R0F8,R0ER,R0ET",
+        "weapson": "1"
+      },
+      "id": "h0MQ",
+      "name": "|cffd7b4f5Жестокий Поробощенный Зверь|r"
+    },
+    {
+      "fields": {
+        "abillist": "A1CK,A1CF,A10X",
+        "atktype1": "normal",
+        "builds": "",
+        "hotkey": "TRIGSTR_6200",
+        "name": "TRIGSTR_30678",
+        "targs1": "ground,structure,debris,item,ward",
+        "targs2": "",
+        "tip": "TRIGSTR_11103",
+        "ubertip": "TRIGSTR_31934",
+        "upgrades": "R0ES,R0F7,R0F8,R0ER,R0ET",
+        "weapson": "1"
+      },
+      "id": "h0MN",
+      "name": "|cffd7b4f5Страх|r"
+    }
+  ],
+  "strings": [
+    {
+      "rawcode": "h0ID",
+      "field": "name",
+      "reference_before": "TRIGSTR_25370",
+      "before": "|cffd7b4f5Злобный бичеватель разума|r",
+      "after": "|cffe4cfa3Злобный бичеватель разума|r"
+    },
+    {
+      "rawcode": "h0ID",
+      "field": "tip",
+      "reference_before": "TRIGSTR_25372",
+      "before": "Обучить |cffd7b4f5Злобный бичеватель разума|r",
+      "after": "|cffe4cfa3Злобный бичеватель разума|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "h0ID",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_27765",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa33 сек.|r\n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r\nТот, кто спообен разрушить разум противника, как ментально, так и физически. Только так, можно охарактеризовать данное существо.\n|cfff0e68cВозможные улучшения|r:\n• Развить силу ИЛИ Развить скорость:\n• Укрепление древних знаний:\n - Пораждение щупалец\n - Замедление\n - Проклятие\n|cfff0e68cОсобенности|r:\n• Отсутсвует",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Заклинатель, ослабляющий противников.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗамедление|cffced4da: снижает скорость атаки и передвижения врага.|n- |cffa9c7deПорождение щупальца|cffced4da: призывает щупальце; требуется второй уровень «Укрепления Древних Знаний».|n- |cffa9c7deПроклятие|cffced4da: заставляет противника промахиваться; требуется третий уровень «Укрепления Древних Знаний».|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "h0IE",
+      "field": "name",
+      "reference_before": "TRIGSTR_5538",
+      "before": "|cffd7b4f5Пожиратель Бездны|r",
+      "after": "|cffe4cfa3Пожиратель Бездны|r"
+    },
+    {
+      "rawcode": "h0IE",
+      "field": "tip",
+      "reference_before": "TRIGSTR_6115",
+      "before": "Обучить |cffd7b4f5Пожирателя Бездны|r",
+      "after": "|cffe4cfa3Пожиратель Бездны|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "h0IE",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_28002",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa43 сек.|r\n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r\nТе, кто питаються людскими страданиями. Те, кто может пожирать все магические эффекты. Они ненасытны, а сожранная магия, дает им сил.\n|cfff0e68cВозможные улучшения|r:\n• Развить силу ИЛИ Развить скорость:\n• Расщирение знаний\n - Ледяная стрела\n - Пожирание магии\n - Иней\n|cfff0e68cОсобенности|r:\n• Пожирание: После смерти прага, Пожиратель бездны, получает дополнительный урон.",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Заклинатель для борьбы с магией и призванными существами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПожирание Магии|cffced4da: рассеивает магические эффекты, восстанавливает здоровье и ману; требуется первый уровень «Расширения Знаний».|n- |cffa9c7deЛедяная стрела|cffced4da: наносит урон и оглушает врага; требуется второй уровень «Расширения Знаний».|n- |cffa9c7deИней|cffced4da: поражает цель и окружающих врагов, замедляя их; требуется третий уровень «Расширения Знаний».|n- |cffa9c7deПожирание|cffced4da: после убийства даёт временный бонус к атаке; повторные убийства во время действия бонуса не складывают его.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "h0IF",
+      "field": "name",
+      "reference_before": "TRIGSTR_25376",
+      "before": "|cffd7b4f5Бессмертый страж|r",
+      "after": "|cffe4cfa3Бессмертный страж|r"
+    },
+    {
+      "rawcode": "h0IF",
+      "field": "tip",
+      "reference_before": "TRIGSTR_25378",
+      "before": "Обучить |cffd7b4f5Бессмертного стража|r",
+      "after": "|cffe4cfa3Бессмертный страж|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "h0IF",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_28452",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa53 сек.|r\n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r\nСамо воплощение бессмертия. Убив один раз, он восстанавливает свои силы, но если он поглотит вас, его реинкарнация будет продолжаться вечно.\n|cfff0e68cВозможные улучшения|r:\n• Развить силу ИЛИ Развить скорость:\n|cfff0e68cОсобенности|r:\n• Бессмертие: Реинкарнирует каждый раз, когда убивает любое существо.\n• Ужасающий вой: Издает ужасный громкий звук, что способен демороливать противника.",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Воин, ослабляющий врагов и возвращающийся после гибели.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУжасающий вой|cffced4da: временно снижает урон от атак окружающих врагов.|n- |cffa9c7deРеинкарнация|cffced4da: возрождает после гибели; требуется «Суть бессмертия». Убийство противника сбрасывает восстановление способности.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "h0IG",
+      "field": "name",
+      "reference_before": "TRIGSTR_25379",
+      "before": "|cffd7b4f5К`Траксис|r",
+      "after": "|cffe4cfa3К`Траксис|r"
+    },
+    {
+      "rawcode": "h0IG",
+      "field": "tip",
+      "reference_before": "TRIGSTR_8800",
+      "before": "Обучить |cffd7b4f5К`Траксис|r",
+      "after": "|cffe4cfa3К`Траксис|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "h0IG",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_28779",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa63 сек.|r\n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный-Осадный|r\nОгромное, страшное существо, что прибыло из самой безды. Огромные масштабы, Крепкий панцирь, и невероятная сила. Поистине могучие генералы...\n|cfff0e68cВозможные улучшения|r:\n• Развить силу ИЛИ Развить скорость:\n• Усиление К`Траксис:\n - Крепкий панцирь\n - Темная оболочка\n|cfff0e68cОсобенности|r:\n• Взрыв эфира: После смерти наносит, небольшой магический урон.",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый наземный боец с защитными способностями.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТёмная оболочка|cffced4da: возвращает часть урона атакующим в ближнем бою и повышает броню.|n- |cffa9c7deКрепкий панцирь|cffced4da: снижает получаемый урон от атак; требуется второй уровень «Усиления К`Траксис».|n- |cffa9c7deВзрыв Эфира|cffced4da: наносит урон вокруг воина при его гибели.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "h0K2",
+      "field": "name",
+      "reference_before": "TRIGSTR_25115",
+      "before": "|cffd7b4f5Проклинатель Бездны|r",
+      "after": "|cffe4cfa3Проклинатель Бездны|r"
+    },
+    {
+      "rawcode": "h0K2",
+      "field": "tip",
+      "reference_before": "TRIGSTR_26542",
+      "before": "Обучить |cffd7b4f5Проклинатель Бездны|r",
+      "after": "|cffe4cfa3Проклинатель Бездны|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "h0K2",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_31858",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa40 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|n\nМаг поддержки армии |cffd7b4f5Безликих|r",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Заклинатель, создающий существ из трупов и поддерживающий союзников.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПородить Кошмар|cffced4da: создаёт из трупа временного Кошмара.|n- |cffa9c7deПронзание|cffced4da: усиливает урон по целям без брони и со средней бронёй; требуется второй уровень «Знания проклинателей».|n- |cffa9c7deМорозный доспех|cffced4da: повышает броню союзника и замедляет атакующих его в ближнем бою; требуется третий уровень «Знания проклинателей».|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "h0MO",
+      "field": "name",
+      "reference_before": "TRIGSTR_31182",
+      "before": "|cffd7b4f5Безликий Кошмар|r",
+      "after": "|cffe4cfa3Безликий Кошмар|r"
+    },
+    {
+      "rawcode": "h0MO",
+      "field": "tip",
+      "reference_before": "TRIGSTR_15449",
+      "before": "Обучить |cffd7b4f5Безликий Кошмар|r",
+      "after": "|cffe4cfa3Безликий Кошмар|r (|cffffffffA|r)"
+    },
+    {
+      "rawcode": "h0MO",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_35444",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r\n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r\nВоплощение кошмара и страха любого жителя. Огромное тело, с щупальцами вместо рук, И это лицо... Его нету? \n|cfff0e68cВозможные улучшения|r:\n• Кража будущего:\n• Развить силу ИЛИ Развить скорость:\n|cfff0e68cОсобенности|r:\n• Кошмар: Погружает любого врага, в самый жесточайший кошмар, что наносит урон на менстально состояние.",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Боец, оглушающий врагов и наносящий дополнительный урон.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКража будущего|cffced4da: при начале атаки дополнительно наносит врагу урон от его максимального здоровья; не действует на здания.|n- |cffa9c7deКошмар|cffced4da: оглушает противника; на героях длительность меньше.|n- |cffa9c7deЯд кошмара|cffced4da: наносит периодический урон; на героях действует меньше времени.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "n05I",
+      "field": "name",
+      "reference_before": "TRIGSTR_29947",
+      "before": "|cffd7b4f5Водное Порождение|r",
+      "after": "|cffe4cfa3Водное Порождение|r"
+    },
+    {
+      "rawcode": "n05I",
+      "field": "tip",
+      "reference_before": "TRIGSTR_29967",
+      "before": "Обучить |cffd7b4f5Водное Порождение|r",
+      "after": "|cffe4cfa3Водное Порождение|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "n05I",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_31907",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa40 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|n\nМощный воин ближнего боя. Основная боевая единица Безликих.",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Наземный боец с критическими ударами и захватом противника.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСила Бездны|cffced4da: атаки могут нанести увеличенный урон.|n- |cffa9c7deОпутывание|cffced4da: обездвиживает врага и притягивает воздушную цель к земле; требует исследования сетей.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "u02D",
+      "field": "name",
+      "reference_before": "TRIGSTR_25382",
+      "before": "|cffd7b4f5Безликий прислужник|r",
+      "after": "|cffe4cfa3Безликий прислужник|r"
+    },
+    {
+      "rawcode": "u02D",
+      "field": "tip",
+      "reference_before": "TRIGSTR_25383",
+      "before": "Обучить |cffd7b4f5Безликого прислужника|r",
+      "after": "|cffe4cfa3Безликий прислужник|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "u02D",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_31870",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa10 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r\nБазовый рабочий |cffd7b4f5Безликих|r.",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Рабочий безликих: возводит здания, добывает золото и древесину, ремонтирует постройки и технику.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deНебольшой скачок|cffced4da: переносит рабочего на короткое расстояние.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "h0MP",
+      "field": "name",
+      "reference_before": "TRIGSTR_31185",
+      "before": "|cffd7b4f5Поробощенный Зверь|r",
+      "after": "|cffe4cfa3Порабощённый зверь|r"
+    },
+    {
+      "rawcode": "h0MP",
+      "field": "tip",
+      "reference_before": "TRIGSTR_30624",
+      "before": "Обучить |cffd7b4f5Безликого дозорного|r",
+      "after": "|cffe4cfa3Порабощённый зверь|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "h0MP",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_31854",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa23 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|n\nОсновная боевая единица |cffd7b4f5Безликих|r",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Наземный боец без собственных способностей.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "h0MQ",
+      "field": "name",
+      "reference_before": "TRIGSTR_31240",
+      "before": "|cffd7b4f5Жестокий Поробощенный Зверь|r",
+      "after": "|cffe4cfa3Жестокий порабощённый зверь|r"
+    },
+    {
+      "rawcode": "h0MQ",
+      "field": "tip",
+      "reference_before": "TRIGSTR_31184",
+      "before": "Обучить |cffd7b4f5Безликого дозорного|r",
+      "after": "|cffe4cfa3Жестокий порабощённый зверь|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "h0MQ",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_31953",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa23 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|n\nОсновная боевая единица |cffd7b4f5Безликих|r",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Наземный боец без собственных способностей.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "h0MN",
+      "field": "name",
+      "reference_before": "TRIGSTR_30678",
+      "before": "|cffd7b4f5Страх|r",
+      "after": "|cffe4cfa3Страх|r"
+    },
+    {
+      "rawcode": "h0MN",
+      "field": "tip",
+      "reference_before": "TRIGSTR_11103",
+      "before": "Обучить |cffd7b4f5Страх|r",
+      "after": "|cffe4cfa3Страх|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "h0MN",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_31934",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa43 сек.|r\n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r\nСтрах, естесвенное явление, но тот, кто внушает его, самый страшный.\n|cfff0e68cВозможные улучшения|r:\n• Развить силу ИЛИ Развить скорость:\n• Помутнение рассудка\n• Разрушение эфира\n|cfff0e68cОсобенности|r:\n• Отсутсвует",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Боец против заклинателей, разрушающий защиту противника.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПомутнение разума|cffced4da: атаки снижают броню цели; требуется «Помутнение рассудка».|n- |cffa9c7deРазрушение Эфира|cffced4da: атаки сжигают ману цели; требуется исследование «Разрушение Эфира».|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "related",
+      "field": "text",
+      "reference_before": "TRIGSTR_24911",
+      "before": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка высших существ Бездны и исследование их улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deВодное Порождение|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n- |cffa9c7deБессмертый страж|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n- |cffa9c7deК`Траксис|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n- |cffa9c7deМогущественная Сущность бездны|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deСуть бессмертия|cffced4da.|n- |cffa9c7deУсиление К`Траксис|cffced4da.|r",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготовка высших существ Бездны и исследование их улучшений.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deВодное Порождение|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n- |cffa9c7deБессмертный страж|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n- |cffa9c7deК`Траксис|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n- |cffa9c7deМогущественная Сущность бездны|cffced4da (требуется: Обитель Кошмаров, Обитель эволюции).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deСуть бессмертия|cffced4da.|n- |cffa9c7deУсиление К`Траксис|cffced4da.|r"
+    }
+  ],
+  "evidence": [
+    "faceless_ability_dependencies.json",
+    "Bezlikie.lua: Trig_Spell2 / Trig_SpellRes",
+    "Stromgard.lua: Trig_ChillBonus; A1R5 dataa1=3"
+  ],
+  "remaining": [
+    "Призываемые e009, h0OM; герои; собственные карточки способностей",
+    "Игровая проверка"
+  ]
+}

@@ -1,0 +1,733 @@
+{
+  "scope": "Тролли джунглей (JungleTrolls): категория 5 — Исследования",
+  "upgrades_count": 14,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R0IH",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 32049,
+          "after": "|cffe4cfa3Тролли джунглей|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32050,
+          "after": "|cffe4cfa3Тролли джунглей|r"
+        }
+      ]
+    },
+    {
+      "id": "R0IR",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 32959,
+          "after": "|cffe4cfa3Чёрное Копьё|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32960,
+          "after": "|cffe4cfa3Чёрное Копьё|r"
+        }
+      ]
+    },
+    {
+      "id": "R0I8",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 32155,
+          "after": "|cffe4cfa3Стальное оружие — уровень 1|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32529,
+          "after": "|cffe4cfa3Стальное оружие — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 31516,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак немагических воинов Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воителям, Охотникам за головами, Наездникам, Берсеркам и Гидрам.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/6|r."
+        },
+        {
+          "field": "name2",
+          "wts_id": 32403,
+          "after": "|cffe4cfa3Стальное оружие — уровень 2|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 32530,
+          "after": "|cffe4cfa3Стальное оружие — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 32020,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак немагических воинов Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воителям, Охотникам за головами, Наездникам, Берсеркам и Гидрам.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/6|r."
+        },
+        {
+          "field": "name3",
+          "wts_id": 32408,
+          "after": "|cffe4cfa3Стальное оружие — уровень 3|r"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 32531,
+          "after": "|cffe4cfa3Стальное оружие — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 32021,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак немагических воинов Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воителям, Охотникам за головами, Наездникам, Берсеркам и Гидрам.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/6|r."
+        },
+        {
+          "field": "name4",
+          "wts_id": 31501,
+          "after": "|cffe4cfa3Стальное оружие — уровень 4|r"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 32525,
+          "after": "|cffe4cfa3Стальное оружие — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 32151,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак немагических воинов Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воителям, Охотникам за головами, Наездникам, Берсеркам и Гидрам.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4/6|r."
+        },
+        {
+          "field": "name5",
+          "wts_id": 31505,
+          "after": "|cffe4cfa3Стальное оружие — уровень 5|r"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 32526,
+          "after": "|cffe4cfa3Стальное оружие — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 32152,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак немагических воинов Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воителям, Охотникам за головами, Наездникам, Берсеркам и Гидрам.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5/6|r."
+        },
+        {
+          "field": "name6",
+          "wts_id": 31507,
+          "after": "|cffe4cfa3Стальное оружие — уровень 6|r"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 32527,
+          "after": "|cffe4cfa3Стальное оружие — уровень 6|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 32153,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон от атак немагических воинов Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воителям, Охотникам за головами, Наездникам, Берсеркам и Гидрам.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6/6|r."
+        }
+      ]
+    },
+    {
+      "id": "R0I9",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 31583,
+          "after": "|cffe4cfa3Стальная броня — уровень 1|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32540,
+          "after": "|cffe4cfa3Стальная броня — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 32422,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает защиту и прочность доспехов всех войск Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым единицам Троллей джунглей.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/6|r."
+        },
+        {
+          "field": "name2",
+          "wts_id": 31586,
+          "after": "|cffe4cfa3Стальная броня — уровень 2|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 32541,
+          "after": "|cffe4cfa3Стальная броня — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 32535,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает защиту и прочность доспехов всех войск Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым единицам Троллей джунглей.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/6|r."
+        },
+        {
+          "field": "name3",
+          "wts_id": 31587,
+          "after": "|cffe4cfa3Стальная броня — уровень 3|r"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 32542,
+          "after": "|cffe4cfa3Стальная броня — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 32536,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает защиту и прочность доспехов всех войск Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым единицам Троллей джунглей.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/6|r."
+        },
+        {
+          "field": "name4",
+          "wts_id": 31571,
+          "after": "|cffe4cfa3Стальная броня — уровень 4|r"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 32532,
+          "after": "|cffe4cfa3Стальная броня — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 32537,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает защиту и прочность доспехов всех войск Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым единицам Троллей джунглей.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4/6|r."
+        },
+        {
+          "field": "name5",
+          "wts_id": 31572,
+          "after": "|cffe4cfa3Стальная броня — уровень 5|r"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 32533,
+          "after": "|cffe4cfa3Стальная броня — уровень 5|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 32538,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает защиту и прочность доспехов всех войск Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым единицам Троллей джунглей.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5/6|r."
+        },
+        {
+          "field": "name6",
+          "wts_id": 31573,
+          "after": "|cffe4cfa3Стальная броня — уровень 6|r"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 32534,
+          "after": "|cffe4cfa3Стальная броня — уровень 6|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 32539,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает защиту и прочность доспехов всех войск Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем боевым единицам Троллей джунглей.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6/6|r."
+        }
+      ]
+    },
+    {
+      "id": "R0IA",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 32496,
+          "after": "|cffe4cfa3Методы регенерации — уровень 1|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32420,
+          "after": "|cffe4cfa3Методы регенерации — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 27312,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет естественное восстановление здоровья у всех органических войск Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем органическим воинам Троллей джунглей.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/6|r."
+        },
+        {
+          "field": "name2",
+          "wts_id": 32497,
+          "after": "|cffe4cfa3Методы регенерации — уровень 2|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 32455,
+          "after": "|cffe4cfa3Методы регенерации — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 27313,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет естественное восстановление здоровья у всех органических войск Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем органическим воинам Троллей джунглей.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/6|r."
+        },
+        {
+          "field": "name3",
+          "wts_id": 32498,
+          "after": "|cffe4cfa3Методы регенерации — уровень 3|r"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 32464,
+          "after": "|cffe4cfa3Методы регенерации — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 27314,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет естественное восстановление здоровья у всех органических войск Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем органическим воинам Троллей джунглей.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/6|r."
+        },
+        {
+          "field": "name4",
+          "wts_id": 32490,
+          "after": "|cffe4cfa3Методы регенерации — уровень 4|r"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 27308,
+          "after": "|cffe4cfa3Методы регенерации — уровень 4|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 27686,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет естественное восстановление здоровья у всех органических войск Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем органическим воинам Троллей джунглей.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4/6|r."
+        },
+        {
+          "field": "name5",
+          "wts_id": 32491,
+          "after": "|cffe4cfa3Методы регенерации — уровень 5|r"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 27309,
+          "after": "|cffe4cfa3Методы регенерации — уровень 5|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 28589,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет естественное восстановление здоровья у всех органических войск Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем органическим воинам Троллей джунглей.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5/6|r."
+        },
+        {
+          "field": "name6",
+          "wts_id": 32492,
+          "after": "|cffe4cfa3Методы регенерации — уровень 6|r"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 27310,
+          "after": "|cffe4cfa3Методы регенерации — уровень 6|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 29044,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет естественное восстановление здоровья у всех органических войск Троллей джунглей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем органическим воинам Троллей джунглей.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6/6|r."
+        }
+      ]
+    },
+    {
+      "id": "R0IB",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 16588,
+          "after": "|cffe4cfa3Обучение жрецов — ступень 1|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 17346,
+          "after": "|cffe4cfa3Обучение жрецов — ступень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 18366,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья, запас маны, скорость её восстановления и открывает новые заклинания Жрецов.|n|n|cffa6afb8Применяется к:|cffced4da|n- Жрецам.|n|n|cffa6afb8Ступень обучения:|r |cffffffff1/3|r."
+        },
+        {
+          "field": "name2",
+          "wts_id": 16589,
+          "after": "|cffe4cfa3Обучение жрецов — ступень 2|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 17391,
+          "after": "|cffe4cfa3Обучение жрецов — ступень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 18650,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья, запас маны, скорость её восстановления и открывает новые заклинания Жрецов.|n|n|cffa6afb8Применяется к:|cffced4da|n- Жрецам.|n|n|cffa6afb8Ступень обучения:|r |cffffffff2/3|r."
+        },
+        {
+          "field": "name3",
+          "wts_id": 17414,
+          "after": "|cffe4cfa3Обучение жрецов — ступень 3|r"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 18237,
+          "after": "|cffe4cfa3Обучение жрецов — ступень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 18651,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья, запас маны, скорость её восстановления и открывает новые заклинания Жрецов.|n|n|cffa6afb8Применяется к:|cffced4da|n- Жрецам.|n|n|cffa6afb8Ступень обучения:|r |cffffffff3/3|r."
+        }
+      ]
+    },
+    {
+      "id": "R0IC",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 32550,
+          "after": "|cffe4cfa3Обучение знахарей — ступень 1|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32543,
+          "after": "|cffe4cfa3Обучение знахарей — ступень 1|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 32547,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья, запас маны, скорость её восстановления и открывает новые тотемы Знахарей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Знахарям.|n|n|cffa6afb8Ступень обучения:|r |cffffffff1/3|r."
+        },
+        {
+          "field": "name2",
+          "wts_id": 19900,
+          "after": "|cffe4cfa3Обучение знахарей — ступень 2|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 32544,
+          "after": "|cffe4cfa3Обучение знахарей — ступень 2|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 32548,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья, запас маны, скорость её восстановления и открывает новые тотемы Знахарей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Знахарям.|n|n|cffa6afb8Ступень обучения:|r |cffffffff2/3|r."
+        },
+        {
+          "field": "name3",
+          "wts_id": 32545,
+          "after": "|cffe4cfa3Обучение знахарей — ступень 3|r"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 32546,
+          "after": "|cffe4cfa3Обучение знахарей — ступень 3|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 32549,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья, запас маны, скорость её восстановления и открывает новые тотемы Знахарей.|n|n|cffa6afb8Применяется к:|cffced4da|n- Знахарям.|n|n|cffa6afb8Ступень обучения:|r |cffffffff3/3|r."
+        }
+      ]
+    },
+    {
+      "id": "R0ID",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 19961,
+          "after": "|cffe4cfa3Обучение высших магов — ступень 1|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 20005,
+          "after": "|cffe4cfa3Обучение высших магов — ступень 1|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 19287,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья, запас маны и открывает новые заклинания Колдунов Вуду и Магов Чёрного Копья.|n|n|cffa6afb8Применяется к:|cffced4da|n- Колдунам Вуду и Магам Чёрного Копья.|n|n|cffa6afb8Ступень обучения:|r |cffffffff1/3|r."
+        },
+        {
+          "field": "name2",
+          "wts_id": 19979,
+          "after": "|cffe4cfa3Обучение высших магов — ступень 2|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 20056,
+          "after": "|cffe4cfa3Обучение высших магов — ступень 2|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 19830,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья, запас маны и открывает новые заклинания Колдунов Вуду и Магов Чёрного Копья.|n|n|cffa6afb8Применяется к:|cffced4da|n- Колдунам Вуду и Магам Чёрного Копья.|n|n|cffa6afb8Ступень обучения:|r |cffffffff2/3|r."
+        },
+        {
+          "field": "name3",
+          "wts_id": 20097,
+          "after": "|cffe4cfa3Обучение высших магов — ступень 3|r"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 20140,
+          "after": "|cffe4cfa3Обучение высших магов — ступень 3|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 19893,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья, запас маны и открывает новые заклинания Колдунов Вуду и Магов Чёрного Копья.|n|n|cffa6afb8Применяется к:|cffced4da|n- Колдунам Вуду и Магам Чёрного Копья.|n|n|cffa6afb8Ступень обучения:|r |cffffffff3/3|r."
+        }
+      ]
+    },
+    {
+      "id": "R0II",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 32075,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 1|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32723,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 1|r (|cffffffffX|r)"
+        },
+        {
+          "field": "name2",
+          "wts_id": 32072,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 2|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 32722,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 2|r (|cffffffffX|r)"
+        },
+        {
+          "field": "name3",
+          "wts_id": 32058,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 3|r"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 32460,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 3|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 32066,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Улучшает топоры Ремесленников, увеличивая количество переносимой древесины на |cffc8e087+10|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- Ремесленникам.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/6|r."
+        },
+        {
+          "field": "name4",
+          "wts_id": 32059,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 4|r"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 32461,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 4|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 32067,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Улучшает топоры Ремесленников, увеличивая количество переносимой древесины на |cffc8e087+10|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- Ремесленникам.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4/6|r."
+        },
+        {
+          "field": "name5",
+          "wts_id": 32060,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 5|r"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 32462,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 5|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 32068,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Улучшает топоры Ремесленников, увеличивая количество переносимой древесины на |cffc8e087+10|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- Ремесленникам.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5/6|r."
+        },
+        {
+          "field": "name6",
+          "wts_id": 32061,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 6|r"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 32721,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 6|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 32069,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Улучшает топоры Ремесленников, увеличивая количество переносимой древесины на |cffc8e087+10|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- Ремесленникам.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6/6|r."
+        }
+      ]
+    },
+    {
+      "id": "R0IJ",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 32094,
+          "after": "|cffe4cfa3Корпуса построек — уровень 1|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32392,
+          "after": "|cffe4cfa3Корпуса построек — уровень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 19352,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет стены и каркасы зданий, повышая их прочность и броню.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем зданиям Троллей джунглей.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/3|r."
+        },
+        {
+          "field": "name2",
+          "wts_id": 32095,
+          "after": "|cffe4cfa3Корпуса построек — уровень 2|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 32393,
+          "after": "|cffe4cfa3Корпуса построек — уровень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 19354,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет стены и каркасы зданий, повышая их прочность и броню.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем зданиям Троллей джунглей.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/3|r."
+        },
+        {
+          "field": "name3",
+          "wts_id": 32389,
+          "after": "|cffe4cfa3Корпуса построек — уровень 3|r"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 32394,
+          "after": "|cffe4cfa3Корпуса построек — уровень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 19355,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет стены и каркасы зданий, повышая их прочность и броню.|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем зданиям Троллей джунглей.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/3|r."
+        }
+      ]
+    },
+    {
+      "id": "R0IK",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 32502,
+          "after": "|cffe4cfa3Эликсиры жизни — уровень 1|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32506,
+          "after": "|cffe4cfa3Эликсиры жизни — уровень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 32105,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья Воителей и Охотников за головами на |cffc8e087+100|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воителям и Охотникам за головами.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1/3|r."
+        },
+        {
+          "field": "name2",
+          "wts_id": 32503,
+          "after": "|cffe4cfa3Эликсиры жизни — уровень 2|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 32507,
+          "after": "|cffe4cfa3Эликсиры жизни — уровень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 32107,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья Воителей и Охотников за головами на |cffc8e087+100|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воителям и Охотникам за головами.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2/3|r."
+        },
+        {
+          "field": "name3",
+          "wts_id": 32504,
+          "after": "|cffe4cfa3Эликсиры жизни — уровень 3|r"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 33046,
+          "after": "|cffe4cfa3Эликсиры жизни — уровень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 32108,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья Воителей и Охотников за головами на |cffc8e087+100|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- Воителям и Охотникам за головами.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/3|r."
+        }
+      ]
+    },
+    {
+      "id": "R0IL",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 32307,
+          "after": "|cffe4cfa3Дрессировка животных|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32310,
+          "after": "|cffe4cfa3Дрессировка животных|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 32301,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Улучшает боевую выучку зверей, повышая скорость атаки и передвижения Наездников и Гидр.|n|n|cffa6afb8Применяется к:|cffced4da|n- Наездникам и Гидрам.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0IM",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 32206,
+          "after": "|cffe4cfa3Отравленные копья|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32730,
+          "after": "|cffe4cfa3Отравленные копья|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 32409,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Смазывает наконечники копий ядом джунглей. Атаки отравляют цель, нанося |cffe69a8d5|cffced4da ед. урона/сек. в течение |cffffffff25|cffced4da сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- Охотникам за головами и Наездникам.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0IN",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 32510,
+          "after": "|cffe4cfa3Чары гидр|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32511,
+          "after": "|cffe4cfa3Чары гидр|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 32340,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Пробуждает древнее разделение плоти гидр. При гибели взрослая Гидра порождает двух Малых гидр.|n|n|cffa6afb8Применяется к:|cffced4da|n- Гидрам.|r"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1817 @@
+{
+  "units": {
+    "command": "get-objects-bulk",
+    "count": 46,
+    "map": "F:\\Gemini_23Race\\map.w3x",
+    "missing": [],
+    "objects": [
+      {
+        "fields": {
+          "abillist": "A12G,A01C,AInv,A12I",
+          "builds": "",
+          "heroabillist": "A12H,A0V5,A12J,A0V7",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "U02F",
+        "name": "|cffe4cfa3Верховный генерал|r"
+      },
+      {
+        "fields": {
+          "abillist": "A01C,AInv",
+          "builds": "",
+          "heroabillist": "A10I,A10J,A10K,A10H",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "U02G",
+        "name": "|cffe4cfa3Генерал К`Траксис|r"
+      },
+      {
+        "fields": {
+          "abillist": "A01C,AInv",
+          "builds": "",
+          "heroabillist": "A1CJ,A10N,A10L,A1CG",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "U02H",
+        "name": "|cffe4cfa3Верховный Душегуб|r"
+      },
+      {
+        "fields": {
+          "abillist": "A01C,AInv",
+          "builds": "",
+          "heroabillist": "A10Q,A0WQ,A10R,A10S",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "U02I",
+        "name": "|cffe4cfa3Маг Запредельной Тьмы|r"
+      },
+      {
+        "fields": {
+          "abillist": "",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F7,R0F8,R0ER,R0ET"
+        },
+        "id": "e009",
+        "name": "|cffe4cfa3Кошмар|r"
+      },
+      {
+        "fields": {
+          "abillist": "A0IR,A0IO,A1IG",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "h07A",
+        "name": "|cffe4cfa3Маг телепортации|r"
+      },
+      {
+        "fields": {
+          "abillist": "A009,A002,A00B,A00G,A00A,A1PP",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R005,R007,R004,R003,R002"
+        },
+        "id": "h0CZ",
+        "name": "|cffe4cfa3Фрегат|r"
+      },
+      {
+        "fields": {
+          "abillist": "A009,A003,A00B,A00G,A00A,A001",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R005,R007,R004,R003,R002"
+        },
+        "id": "h0D0",
+        "name": "|cffe4cfa3Линкор|r"
+      },
+      {
+        "fields": {
+          "abillist": "A15N",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "R005,R006,R007,R002,R003",
+          "sellunits": "",
+          "trains": "h0D2,h0CZ,h0D0",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "h0D1",
+        "name": "|cffe4cfa3Верфь|r"
+      },
+      {
+        "fields": {
+          "abillist": "A00I,A00A,A00B,Sch5,Slo3,Sdro",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R006,R007,R004,R003"
+        },
+        "id": "h0D2",
+        "name": "|cffe4cfa3Транспорт|r"
+      },
+      {
+        "fields": {
+          "abillist": "A0MK,A0B0,A0B1,A0B2,A0AZ,AHad",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "U02F",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "h0DR",
+        "name": "|cffe4cfa3Ульдуар (внешний)|r"
+      },
+      {
+        "fields": {
+          "abillist": "A0Z5,Aloc,Avul,Aivs",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "h0G8",
+        "name": "|cffe4cfa3Торговля|r"
+      },
+      {
+        "fields": {
+          "abillist": "Abds",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "h07A",
+          "trains": "U02H,U02G,U02I",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "h0HY",
+        "name": "|cffe4cfa3Алтарь Древних Богов|r"
+      },
+      {
+        "fields": {
+          "abillist": "A11G,A10T,A0LJ,A0LI,A0IQ,Argl",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "h0G8",
+          "trains": "u02D",
+          "upgrade": "h0I7",
+          "upgrades": ""
+        },
+        "id": "h0HZ",
+        "name": "|cffe4cfa3Забытый|r"
+      },
+      {
+        "fields": {
+          "abillist": "Abds",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "R0ES,R0EL,R0EK",
+          "sellunits": "",
+          "trains": "h0MO,h0MN,h0I9,h0IA,h0IB",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "h0I1",
+        "name": "|cffe4cfa3Яма бездны|r"
+      },
+      {
+        "fields": {
+          "abillist": "Abds",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "R0GD,R0EW,R0EX",
+          "sellunits": "",
+          "trains": "h0IE,h0ID,h0K2",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "h0I2",
+        "name": "|cffe4cfa3Катакомбы магов|r"
+      },
+      {
+        "fields": {
+          "abillist": "Abds",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "R0FA,R0EV",
+          "sellunits": "",
+          "trains": "n05I,h0IF,h0IG,h0IC",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "h0I4",
+        "name": "|cffe4cfa3Портал Бездны|r"
+      },
+      {
+        "fields": {
+          "abillist": "Abds",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "R0GE,R0F7,R0F8,R0ET,R0ER",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "h0I6",
+        "name": "|cffe4cfa3Обитель эволюции|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1KB,A11G,A10T,A0LJ,A0LI,A0IQ,Argl",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "h0G8",
+          "trains": "u02D",
+          "upgrade": "h0I8",
+          "upgrades": ""
+        },
+        "id": "h0I7",
+        "name": "|cffe4cfa3Сущность Страха|r"
+      },
+      {
+        "fields": {
+          "abillist": "A11G,A10T,A0LJ,A0LI,A0IQ,Argl",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "h0G8",
+          "trains": "u02D",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "h0I8",
+        "name": "|cffe4cfa3Обитель Кошмаров|r"
+      },
+      {
+        "fields": {
+          "abillist": "",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F7,R0F8,R0ER,R0ET"
+        },
+        "id": "h0I9",
+        "name": "|cffe4cfa3Безликий дозорный|r"
+      },
+      {
+        "fields": {
+          "abillist": "",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F7,R0F8,R0ER,R0ET"
+        },
+        "id": "h0IA",
+        "name": "|cffe4cfa3Безликий разрушитель|r"
+      },
+      {
+        "fields": {
+          "abillist": "A10X,A10W",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F7,R0F8,R0ER,R0ET"
+        },
+        "id": "h0IB",
+        "name": "|cffe4cfa3Сущность бездны|r"
+      },
+      {
+        "fields": {
+          "abillist": "A10Z,A10X",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F7,R0F8,R0ER,R0ET"
+        },
+        "id": "h0IC",
+        "name": "|cffe4cfa3Могущественная Сущность бездны|r"
+      },
+      {
+        "fields": {
+          "abillist": "A115,A114,A116",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F7,R0F8,R0EX,R0ER,R0ET"
+        },
+        "id": "h0ID",
+        "name": "|cffe4cfa3Злобный бичеватель разума|r"
+      },
+      {
+        "fields": {
+          "abillist": "A126,A112,A1R2,A1R3",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0EW,R0F7,R0F8,R0ER,R0ET"
+        },
+        "id": "h0IE",
+        "name": "|cffe4cfa3Пожиратель Бездны|r"
+      },
+      {
+        "fields": {
+          "abillist": "A10P,A123",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F8,R0F7,R0ER,R0ET"
+        },
+        "id": "h0IF",
+        "name": "|cffe4cfa3Бессмертный страж|r"
+      },
+      {
+        "fields": {
+          "abillist": "A10Y,A111,A0RR,A1N5",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F8,R0F7,R0EV,R0ER,R0ET"
+        },
+        "id": "h0IG",
+        "name": "|cffe4cfa3К`Траксис|r"
+      },
+      {
+        "fields": {
+          "abillist": "A16O,A16N,A16P",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F7,R0F8,R0ER,R0ET"
+        },
+        "id": "h0K2",
+        "name": "|cffe4cfa3Проклинатель Бездны|r"
+      },
+      {
+        "fields": {
+          "abillist": "",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0ET"
+        },
+        "id": "h0K3",
+        "name": "|cffe4cfa3Башня Смерти|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1CK,A1CF,A10X",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0ES,R0F7,R0F8,R0ER,R0ET"
+        },
+        "id": "h0MN",
+        "name": "|cffe4cfa3Страх|r"
+      },
+      {
+        "fields": {
+          "abillist": "A122,A113,A0PC",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F7,R0F8,R0ER,R0ET"
+        },
+        "id": "h0MO",
+        "name": "|cffe4cfa3Безликий Кошмар|r"
+      },
+      {
+        "fields": {
+          "abillist": "",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F7,R0F8,R0ER,R0ET"
+        },
+        "id": "h0MP",
+        "name": "|cffe4cfa3Порабощённый зверь|r"
+      },
+      {
+        "fields": {
+          "abillist": "",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F7,R0F8,R0ER,R0ET"
+        },
+        "id": "h0MQ",
+        "name": "|cffe4cfa3Жестокий порабощённый зверь|r"
+      },
+      {
+        "fields": {
+          "abillist": "A0RR,ACtn,A0RS,A1N5",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F8,R0F7,R0ER,R0ET"
+        },
+        "id": "h0OM",
+        "name": "|cffe4cfa3Тварь из Бездны|r"
+      },
+      {
+        "fields": {
+          "abillist": "",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "n01T",
+        "name": "|cffe4cfa3Щупальце|r"
+      },
+      {
+        "fields": {
+          "abillist": "A16Q,A16R,A16T,A0T7,A1NA,A1NB,A1NC",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "n03A",
+        "name": "|cffe4cfa3Йогг`Сарон|r"
+      },
+      {
+        "fields": {
+          "abillist": "ACce",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F7,R0F8,R0ER,R0ET"
+        },
+        "id": "n03B",
+        "name": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+      },
+      {
+        "fields": {
+          "abillist": "ACce",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F7,R0F8,R0ER,R0ET"
+        },
+        "id": "n03C",
+        "name": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+      },
+      {
+        "fields": {
+          "abillist": "ACce",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F7,R0F8,R0ER,R0ET"
+        },
+        "id": "n04C",
+        "name": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+      },
+      {
+        "fields": {
+          "abillist": "ACce",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "n04M",
+        "name": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+      },
+      {
+        "fields": {
+          "abillist": "A10Z,ACen",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0F8,R0F7,R0ER,R0ET"
+        },
+        "id": "n05I",
+        "name": "|cffe4cfa3Водное Порождение|r"
+      },
+      {
+        "fields": {
+          "abillist": "",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "nfgt",
+        "name": "|cffe4cfa3Щупальце|r"
+      },
+      {
+        "fields": {
+          "abillist": "A0I3,ANha,Arst",
+          "builds": "h0K3,h0D1,h0HZ,h0HY,h0I2,h0I6,h0I4,h0I1",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": "R0GE,Rguv"
+        },
+        "id": "u02D",
+        "name": "|cffe4cfa3Безликий прислужник|r"
+      },
+      {
+        "fields": {
+          "abillist": "A11G,A06M",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "u02E",
+        "name": "|cffe4cfa3Малое порождение|r"
+      },
+      {
+        "fields": {
+          "abillist": "Aloc",
+          "builds": "",
+          "heroabillist": "",
+          "researches": "",
+          "sellunits": "",
+          "trains": "",
+          "upgrade": "",
+          "upgrades": ""
+        },
+        "id": "uloc",
+        "name": "|cffe4cfa3Саранча|r"
+      }
+    ],
+    "ok": true,
+    "schema_version": 1,
+    "tool": "HiveWE_cli",
+    "type": "unit"
+  },
+  "abilities": {
+    "command": "get-objects-bulk",
+    "count": 115,
+    "map": "F:\\Gemini_23Race\\map.w3x",
+    "missing": [],
+    "objects": [
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A001",
+        "name": "|cffe4cfa3Абордаж|r"
+      },
+      {
+        "fields": {
+          "levels": "3",
+          "requires": ""
+        },
+        "id": "A002",
+        "name": "|cffe4cfa3Боковые пушки фрегата|r"
+      },
+      {
+        "fields": {
+          "levels": "3",
+          "requires": "R005"
+        },
+        "id": "A003",
+        "name": "|cffe4cfa3Боковые пушки линкора|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A005",
+        "name": "|cffe4cfa3Аура стойкости|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A006",
+        "name": "|cffe4cfa3Аура меткости|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A007",
+        "name": "|cffe4cfa3Аура выносливости|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A008",
+        "name": "|cffe4cfa3Особенность флагмана|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A009",
+        "name": "|cffe4cfa3Назначение флагмана|r"
+      },
+      {
+        "fields": {
+          "levels": "3",
+          "requires": "R007"
+        },
+        "id": "A00A",
+        "name": "|cffe4cfa3Починка|r"
+      },
+      {
+        "fields": {
+          "levels": "3",
+          "requires": "R006"
+        },
+        "id": "A00B",
+        "name": "|cffe4cfa3Тактическое ускорение|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A00C",
+        "name": "|cffe4cfa3Аура стойкости|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A00E",
+        "name": "|cffe4cfa3Аура меткости|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A00F",
+        "name": "|cffe4cfa3Аура выносливости|r"
+      },
+      {
+        "fields": {
+          "levels": "3",
+          "requires": "R005"
+        },
+        "id": "A00G",
+        "name": "|cffe4cfa3Массированный обстрел|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A00I",
+        "name": "|cffe4cfa3Магическая посадка|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A01C",
+        "name": "|cffe4cfa3Свечение героя|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A06M",
+        "name": "|cffe4cfa3Дымка бездны|r"
+      },
+      {
+        "fields": {
+          "levels": "5",
+          "requires": "Rugf"
+        },
+        "id": "A0AY",
+        "name": "|cffe4cfa3Сбор дани|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0AZ",
+        "name": "|cffe4cfa3Увеличение сбора дани|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0B0",
+        "name": "|cffe4cfa3Укрепление города|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0B1",
+        "name": "|cffe4cfa3Развитие производства|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0B2",
+        "name": "|cffe4cfa3Расширение города|r"
+      },
+      {
+        "fields": {
+          "levels": "5",
+          "requires": "Rugf"
+        },
+        "id": "A0B5",
+        "name": "|cffe4cfa3Налаженное производство|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0DW",
+        "name": "|cffe4cfa3Сильный удар|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0HW",
+        "name": "|cffe4cfa3Безликие|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0I3",
+        "name": "|cffe4cfa3Небольшой скачок|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0I6",
+        "name": "|cffe4cfa3Антимагическая броня|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0IO",
+        "name": "|cffe4cfa3Тёмный призыв|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0IQ",
+        "name": "|cffe4cfa3Назначение столицы|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0IR",
+        "name": "|cffe4cfa3Массовая телепортация|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0LI",
+        "name": "|cffe4cfa3Обмен золота на древесину|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0LJ",
+        "name": "|cffe4cfa3Обмен древесины на золото|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0MK",
+        "name": "|cffe4cfa3Разведка|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0PB",
+        "name": "|cffe4cfa3Кошмар|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0PC",
+        "name": "|cffe4cfa3Яд кошмара|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0RR",
+        "name": "|cffe4cfa3Взрыв Эфира|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0RS",
+        "name": "|cffe4cfa3Рассекающий удар|r"
+      },
+      {
+        "fields": {
+          "levels": "100",
+          "requires": "Rugf"
+        },
+        "id": "A0SM",
+        "name": "|cffe4cfa3Налаженная торговля|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "Rhrt"
+        },
+        "id": "A0T3",
+        "name": "|cffe4cfa3Залповый огонь|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0T7",
+        "name": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+      },
+      {
+        "fields": {
+          "levels": "4",
+          "requires": ""
+        },
+        "id": "A0V5",
+        "name": "|cffe4cfa3Вечная служба|r"
+      },
+      {
+        "fields": {
+          "levels": "4",
+          "requires": ""
+        },
+        "id": "A0V7",
+        "name": "|cffe4cfa3Приказ генерала|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0VC",
+        "name": "|cffe4cfa3Касание безумия|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0VD",
+        "name": "|cffe4cfa3Тёмное усиление|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0VE",
+        "name": "|cffe4cfa3Порождение щупальца|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0VF",
+        "name": "|cffe4cfa3Аура отголоска Йогг`Сарона|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A0VG",
+        "name": "|cffe4cfa3Дар Йогг`Сарона|r"
+      },
+      {
+        "fields": {
+          "levels": "2",
+          "requires": ""
+        },
+        "id": "A0W4",
+        "name": "|cffe4cfa3Подчинение|r"
+      },
+      {
+        "fields": {
+          "levels": "4",
+          "requires": ""
+        },
+        "id": "A0WQ",
+        "name": "|cffe4cfa3Взрыв бездны|r"
+      },
+      {
+        "fields": {
+          "levels": "4",
+          "requires": ""
+        },
+        "id": "A10H",
+        "name": "|cffe4cfa3Удар клешнёй|r"
+      },
+      {
+        "fields": {
+          "levels": "4",
+          "requires": ""
+        },
+        "id": "A10I",
+        "name": "|cffe4cfa3Крепкий панцирь|r"
+      },
+      {
+        "fields": {
+          "levels": "4",
+          "requires": ""
+        },
+        "id": "A10J",
+        "name": "|cffe4cfa3Обжигающий жар|r"
+      },
+      {
+        "fields": {
+          "levels": "2",
+          "requires": ""
+        },
+        "id": "A10K",
+        "name": "|cffe4cfa3Тёмный портал|r"
+      },
+      {
+        "fields": {
+          "levels": "4",
+          "requires": ""
+        },
+        "id": "A10L",
+        "name": "|cffe4cfa3Сотрясение Бездны|r"
+      },
+      {
+        "fields": {
+          "levels": "4",
+          "requires": ""
+        },
+        "id": "A10N",
+        "name": "|cffe4cfa3Сокрытие Бездной|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A10P",
+        "name": "|cffe4cfa3Ужасающий вой|r"
+      },
+      {
+        "fields": {
+          "levels": "4",
+          "requires": ""
+        },
+        "id": "A10Q",
+        "name": "|cffe4cfa3Тёмный раскол|r"
+      },
+      {
+        "fields": {
+          "levels": "4",
+          "requires": ""
+        },
+        "id": "A10R",
+        "name": "|cffe4cfa3Аура Бездны|r"
+      },
+      {
+        "fields": {
+          "levels": "2",
+          "requires": ""
+        },
+        "id": "A10S",
+        "name": "|cffe4cfa3Пространство Бездны|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A10T",
+        "name": "|cffe4cfa3Рой саранчи|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A10U",
+        "name": "|cffe4cfa3Рой саранчи|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A10V",
+        "name": "|cffe4cfa3Рой саранчи|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "R0EK"
+        },
+        "id": "A10W",
+        "name": "|cffe4cfa3Сотрясение Бездны|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "R0EL"
+        },
+        "id": "A10X",
+        "name": "|cffe4cfa3Разрушение Эфира|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "R0EV"
+        },
+        "id": "A10Y",
+        "name": "|cffe4cfa3Крепкий панцирь|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A10Z",
+        "name": "|cffe4cfa3Сила Бездны|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A111",
+        "name": "|cffe4cfa3Тёмная оболочка|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "R0EW"
+        },
+        "id": "A112",
+        "name": "|cffe4cfa3Иней|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A113",
+        "name": "|cffe4cfa3Кошмар|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A114",
+        "name": "|cffe4cfa3Замедление|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "R0EX"
+        },
+        "id": "A115",
+        "name": "|cffe4cfa3Проклятие|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "R0EX"
+        },
+        "id": "A116",
+        "name": "|cffe4cfa3Порождение щупальца|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A11G",
+        "name": "|cffe4cfa3Порождение придатка|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "Rugf"
+        },
+        "id": "A122",
+        "name": "|cffe4cfa3Кража будущего|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "R0FA"
+        },
+        "id": "A123",
+        "name": "|cffe4cfa3Реинкарнация|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "R0EW"
+        },
+        "id": "A126",
+        "name": "|cffe4cfa3Ледяная стрела|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A12G",
+        "name": "|cffe4cfa3Служение Йогг`Сарону|r"
+      },
+      {
+        "fields": {
+          "levels": "4",
+          "requires": ""
+        },
+        "id": "A12H",
+        "name": "|cffe4cfa3Антимагическая аура|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A12I",
+        "name": "|cffe4cfa3Саронитовый панцирь|r"
+      },
+      {
+        "fields": {
+          "levels": "2",
+          "requires": ""
+        },
+        "id": "A12J",
+        "name": "|cffe4cfa3Пары саронита|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A145",
+        "name": "|cffe4cfa3Неуязвимость столицы|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A15N",
+        "name": "|cffe4cfa3Зона ремонта|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A16N",
+        "name": "|cffe4cfa3Порождение Кошмара|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "R0GD"
+        },
+        "id": "A16O",
+        "name": "|cffe4cfa3Морозный доспех|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "R0GD"
+        },
+        "id": "A16P",
+        "name": "|cffe4cfa3Пронзание|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A16Q",
+        "name": "|cffe4cfa3Смертельная связь|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A16R",
+        "name": "|cffe4cfa3Божественное видение|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A16T",
+        "name": "|cffe4cfa3Покровительство бога|r"
+      },
+      {
+        "fields": {
+          "levels": "3",
+          "requires": "R0ES"
+        },
+        "id": "A1CF",
+        "name": "|cffe4cfa3Помутнение рассудка|r"
+      },
+      {
+        "fields": {
+          "levels": "2",
+          "requires": ""
+        },
+        "id": "A1CG",
+        "name": "|cffe4cfa3Метка охотника|r"
+      },
+      {
+        "fields": {
+          "levels": "4",
+          "requires": ""
+        },
+        "id": "A1CH",
+        "name": "|cffe4cfa3Скорость бездны|r"
+      },
+      {
+        "fields": {
+          "levels": "4",
+          "requires": ""
+        },
+        "id": "A1CI",
+        "name": "|cffe4cfa3Вампиризм бездны|r"
+      },
+      {
+        "fields": {
+          "levels": "4",
+          "requires": ""
+        },
+        "id": "A1CJ",
+        "name": "|cffe4cfa3Безумие бездны|r"
+      },
+      {
+        "fields": {
+          "levels": "3",
+          "requires": "R0ES"
+        },
+        "id": "A1CK",
+        "name": "|cffe4cfa3Помутнение разума|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A1IG",
+        "name": "|cffe4cfa3Поддержание связи|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A1IH",
+        "name": "|cffe4cfa3Прекращение связи|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A1KB",
+        "name": "|cffe4cfa3Защита столицы|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "Rhlh"
+        },
+        "id": "A1N5",
+        "name": "|cffe4cfa3Взрыв Эфира|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A1NA",
+        "name": "|cffe4cfa3Призыв бессмертных стражей|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A1NB",
+        "name": "|cffe4cfa3Призыв сущностей Бездны|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A1NC",
+        "name": "|cffe4cfa3Портал в Бездну|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A1PP",
+        "name": "|cffe4cfa3Прицельная пальба|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "R0EW"
+        },
+        "id": "A1R2",
+        "name": "|cffe4cfa3Пожирание Магии|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "Rhan"
+        },
+        "id": "A1R3",
+        "name": "|cffe4cfa3Пожирание|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "A1R5",
+        "name": "|cffe4cfa3Пожирание|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "ACce",
+        "name": "|cffe4cfa3Рассекающий удар|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": "Roen"
+        },
+        "id": "ACen",
+        "name": "|cffe4cfa3Опутывание|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "ACtn",
+        "name": "|cffe4cfa3Порождение щупальца|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "AHad",
+        "name": "|cffe4cfa3Поселение|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "ANha",
+        "name": "|cffe4cfa3Добыча ресурсов|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "Argl",
+        "name": "|cffe4cfa3Приём ресурсов|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "Arst",
+        "name": "|cffe4cfa3Ремонт|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "Sch5",
+        "name": "|cffe4cfa3Грузовой отсек|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "Sdro",
+        "name": "|cffe4cfa3Высадка|r"
+      },
+      {
+        "fields": {
+          "levels": "1",
+          "requires": ""
+        },
+        "id": "Slo3",
+        "name": "|cffe4cfa3Посадка на борт|r"
+      }
+    ],
+    "ok": true,
+    "schema_version": 1,
+    "tool": "HiveWE_cli",
+    "type": "ability"
+  },
+  "technical_abilities": {
+    "command": "get-objects-bulk",
+    "count": 6,
+    "map": "F:\\Gemini_23Race\\map.w3x",
+    "missing": [],
+    "objects": [
+      {
+        "fields": {
+          "art": "",
+          "code": "AInv",
+          "name": "Инвентарь",
+          "tip1": "",
+          "ubertip1": ""
+        },
+        "id": "AInv",
+        "name": "Инвентарь"
+      },
+      {
+        "fields": {
+          "art": "ReplaceableTextures\\CommandButtons\\BTNDeathPact.blp",
+          "code": "ANcl",
+          "name": "TRIGSTR_2604",
+          "tip1": "TRIGSTR_2755",
+          "ubertip1": "TRIGSTR_3540"
+        },
+        "id": "A0Z5",
+        "name": "ДАММИ - ВНЕ ЭКОНОМИКИ"
+      },
+      {
+        "fields": {
+          "art": "",
+          "code": "Aloc",
+          "name": "Саранча",
+          "tip1": "",
+          "ubertip1": ""
+        },
+        "id": "Aloc",
+        "name": "Саранча"
+      },
+      {
+        "fields": {
+          "art": "",
+          "code": "Avul",
+          "name": "Неуязвимость",
+          "tip1": "",
+          "ubertip1": ""
+        },
+        "id": "Avul",
+        "name": "Неуязвимость"
+      },
+      {
+        "fields": {
+          "art": "ReplaceableTextures\\CommandButtons\\BTNInvisibility.blp",
+          "code": "Aivs",
+          "name": "Невидимость",
+          "tip1": "Невидимость",
+          "ubertip1": "\"Дает невидимость. Атаки и применение способностей снимают эффект. |nВремя действия: <Aivs,Dur1> сек.\""
+        },
+        "id": "Aivs",
+        "name": "Невидимость"
+      },
+      {
+        "fields": {
+          "art": "",
+          "code": "Abli",
+          "name": "Слабое рассеивание чумы",
+          "tip1": "",
+          "ubertip1": ""
+        },
+        "id": "Abds",
+        "name": "Слабое рассеивание чумы"
+      }
+    ],
+    "ok": true,
+    "schema_version": 1,
+    "tool": "HiveWE_cli",
+    "type": "ability"
+  },
+  "missing_units": {},
+  "unmigrated_ability_refs": {
+    "AInv": [
+      "U02F",
+      "U02G",
+      "U02H",
+      "U02I"
+    ],
+    "A0Z5": [
+      "h0G8"
+    ],
+    "Aloc": [
+      "h0G8",
+      "uloc"
+    ],
+    "Avul": [
+      "h0G8"
+    ],
+    "Aivs": [
+      "h0G8"
+    ],
+    "Abds": [
+      "h0HY",
+      "h0I1",
+      "h0I2",
+      "h0I4",
+      "h0I6"
+    ]
+  },
+  "external_research_refs": {
+    "R004": [
+      "h0CZ:upgrades",
+      "h0D0:upgrades",
+      "h0D2:upgrades"
+    ],
+    "Rguv": [
+      "u02D:upgrades"
+    ],
+    "Rugf": [
+      "A0AY:requires",
+      "A0B5:requires",
+      "A0SM:requires",
+      "A122:requires"
+    ],
+    "Rhrt": [
+      "A0T3:requires"
+    ],
+    "Rhlh": [
+      "A1N5:requires"
+    ],
+    "Rhan": [
+      "A1R3:requires"
+    ],
+    "Roen": [
+      "ACen:requires"
+    ]
+  },
+  "external_research_menus": {
+    "R004": [
+      "h0DY"
+    ],
+    "Rguv": [],
+    "Rugf": [
+      "usep"
+    ],
+    "Rhrt": [],
+    "Rhlh": [
+      "hlum"
+    ],
+    "Rhan": [
+      "h01W"
+    ],
+    "Roen": [
+      "w212"
+    ]
+  },
+  "unit_objects_scanned": 2785,
+  "in_game_checked": false,
+  "current_readback": {
+    "date": "2026-10-15",
+    "checks": [
+      {
+        "group": "units",
+        "variant": "SD",
+        "objects": 46,
+        "missing": []
+      },
+      {
+        "group": "units",
+        "variant": "HD",
+        "objects": 46,
+        "missing": []
+      },
+      {
+        "group": "abilities",
+        "variant": "SD",
+        "objects": 115,
+        "missing": []
+      },
+      {
+        "group": "abilities",
+        "variant": "HD",
+        "objects": 115,
+        "missing": []
+      },
+      {
+        "group": "technical_abilities",
+        "variant": "SD",
+        "objects": 6,
+        "missing": []
+      },
+      {
+        "group": "technical_abilities",
+        "variant": "HD",
+        "objects": 6,
+        "missing": []
+      }
+    ],
+    "differences": [],
+    "limitations": [
+      "Checks the saved explicit dependency scope; does not rediscover the entire map or prove gameplay availability."
+    ],
+    "input_sha256": {
+      "war3map.w3a": "d8c18918bf85a88182175da2da31035b407f71aab55fb1e19e76a96052832ca2",
+      "war3map.w3h": "597c5cb7eee85eddb45e85ea83f1ba2cfa74e74e75f199795c886cb353783f95",
+      "war3map.w3q": "203e191a3b2a8ee2712a1c5bed48ffe67694bd77025155396e8b165b38a9f6f9",
+      "war3map.w3u": "27dbc36484d43416d83b1399de5f1f437e95d626ede1d65851129e3ebfc360ae",
+      "war3map.wts": "575b41db9ef4b13f8d35fdb929754e25e1fb6e4a090fe3e2468c5bb0e19ad747",
+      "war3mapSkin.w3a": "ecf55a3b3387136afcb9b837f3e29feaca9932132cc8af78428138706c38f2c3",
+      "war3mapSkin.w3h": "7504aa1778a56043f380b0edbe8236472b36df1e20c92fa5890dde6e82659737",
+      "war3mapSkin.w3q": "9dfa0f618b000b025e9093e3cf52ee763c4228594e0ca687704a57eab50e19a9",
+      "war3mapSkin.w3u": "0642c190624839ccb851a3fa998848917c2145751bf0d83e42e7c6e6ca1e0424"
+    }
+  },
+  "static_exceptions": {
+    "technical_abilities": {
+      "AInv/Aloc/Avul/Abds": "Пустые art/tip1/ubertip1: функциональные способности без пользовательской кнопки.",
+      "A0Z5": "Техническая метка вне экономики на h0G8; кнопка скрыта buttonpos2=-11.",
+      "Aivs": "На техническом h0G8 с Aloc; не переносится как доступная игроку команда."
+    },
+    "external_research": {
+      "R004": "upgrades у h0CZ/h0D0/h0D2; меню исследования h0DY, вне исследовательского меню Безликих.",
+      "Rguv": "Служебное улучшение ночного зрения u02D, пустые tip1/ubertip1, вне меню исследований.",
+      "Rugf/Rhrt/Rhlh/Rhan": "Девять названий внешних требований проверены; внешние ветки исследований не входят в эту порцию.",
+      "Roen": "ACen checkdep=0; удалено ложное требование сетей из подсказки, механика сохранена."
+    },
+    "unresolved_references": "Bust/BHtb отсутствуют, источники A0PB:1/A126:1. Не считать исправленными.",
+    "scope": "Сверка сохранённого набора; не доказывает полноту всех строк карты и игровую доступность."
+  }
+}

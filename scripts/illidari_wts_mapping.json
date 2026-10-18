@@ -1,0 +1,4117 @@
+{
+  "selection": {
+    "A0OK": {
+      "name": [
+        38887,
+        "|cffc8dc8cИллидари|r"
+      ],
+      "tip1": [
+        38888,
+        "|cffc8dc8cИллидари|r"
+      ],
+      "ubertip1": [
+        35180,
+        "|cff7dc87dСоздатель расы:|r |cffe17d00Escanor (Яхве)|r|n|cff7dc87dСложность:|r |cff37ff37Средняя|r|n|cff7dc87dПериод:|r |cff23bc23Legion|r|n|cff7dc87dОписание:|r |cffc8dc8cИллидари|r - войска Иллидана Ярости Бури, Повелителя Запределья. Преимущественно эта фракция состоит из демонов разных видов, например, Натрезимов, Сайаад, Гончих, Стражей Скверны и Сатиров , бывших приспешниковПылающего Легиона , которые изменили своей присяге после поражения Магтеридона . \nВ большинстве своём они пребывают в Долине Призрачной Луны и Чёрном Храме, а несколько Иллидарских надсмотрщиков можно найти на Полуострове Адского Пламени .\nНадсмотрщики в Руинах Ша'наара полуострова Адского Пламени командуют Сломленными, которые ищут один из семи кристаллов Ата'мал. В Долине Призрачной Луны Иллидари находятся в авангарде пехоты Иллидана в его войне против Ша'тар, подступающих к Чёрному Храму.\n"
+      ],
+      "hotkey": "C"
+    }
+  },
+  "buildings": {
+    "h0E9": {
+      "name": [
+        14055,
+        "|cffc8dc8cАванпост|r"
+      ],
+      "tip": [
+        14056,
+        "Построить |cffc8dc8cАванпост|r"
+      ],
+      "ubertip": [
+        5699,
+        "|cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r|n|nБазовое здание. Обучает работников и хранит добытые ресурсы. Можно улучшить до форта, а затем до замка, чтобы получить доступ к новым зданиям и типам войск."
+      ],
+      "hotkey": [
+        3571,
+        "Q"
+      ],
+      "raw_mods": {
+        "upat": "PathTextures\\6x6SimpleSolid.tga",
+        "uupt": "h0EA",
+        "uabi": "A0LJ,A0LI,A0IQ,Argl",
+        "umpm": "�\u0007",
+        "umpi": "d",
+        "umpr": "b'\\x9a\\x99\\x19?'",
+        "utra": "h0EI",
+        "upap": "unwalkable",
+        "ufma": "2",
+        "ures": "R096",
+        "useu": "h0G8",
+        "umdl": "IllidariBlackTemple.mdl",
+        "uubs": "",
+        "unam": "TRIGSTR_14055",
+        "utip": "TRIGSTR_14056",
+        "ussc": "b'ff\\x86@'",
+        "usca": "b'333?'",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTN337.blp",
+        "ussi": "ReplaceableTextures\\CommandButtons\\BTN337.blp",
+        "uhot": "TRIGSTR_3571",
+        "utub": "TRIGSTR_5699",
+        "unsf": "TRIGSTR_6916"
+      }
+    },
+    "h0EA": {
+      "name": [
+        2702,
+        "|cffc8dc8cКомандный центр|r"
+      ],
+      "tip": [
+        14059,
+        "Улучшить до |cffc8dc8cКомандный центер|r"
+      ],
+      "ubertip": [
+        14060,
+        "|cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r|n|nДает доступ к новым зданиям и типам войск."
+      ],
+      "hotkey": [
+        10587,
+        "Z"
+      ],
+      "raw_mods": {
+        "upat": "PathTextures\\6x6SimpleSolid.tga",
+        "uupt": "h0EB",
+        "utra": "h0EI",
+        "uabi": "A0LJ,A0LI,Argl",
+        "umpm": "�\u000b",
+        "umpi": "d",
+        "umpr": "b'333?'",
+        "upap": "unwalkable",
+        "ufma": "d",
+        "ugol": "�\u0011",
+        "ulum": "�\u0011",
+        "ures": "R099,R09A,R09B,R096",
+        "useu": "h0G8",
+        "umdl": "IllidariBlackTemple.mdl",
+        "usca": "b'333?'",
+        "uubs": "",
+        "unam": "TRIGSTR_2702",
+        "utip": "TRIGSTR_14059",
+        "ussc": "b'ff\\x86@'",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTN338.blp",
+        "ussi": "ReplaceableTextures\\CommandButtons\\BTN338.blp",
+        "uhot": "TRIGSTR_10587",
+        "utub": "TRIGSTR_14060",
+        "unsf": "TRIGSTR_6932"
+      }
+    },
+    "h0EB": {
+      "name": [
+        14062,
+        "|cffc8dc8cШтаб|r"
+      ],
+      "tip": [
+        14063,
+        "Улучшить до |cffc8dc8cШтаб|r"
+      ],
+      "ubertip": [
+        14064,
+        "|cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r|n|nДает доступ к новым зданиям и типам войск."
+      ],
+      "hotkey": [
+        10589,
+        "Z"
+      ],
+      "raw_mods": {
+        "upat": "PathTextures\\6x6SimpleSolid.tga",
+        "ureq": "h0ED",
+        "utra": "h0EI",
+        "umpm": "�\u0013",
+        "umpi": "d",
+        "umpr": "b'\\xcd\\xccL?'",
+        "uabi": "A0LJ,A0LI,Argl",
+        "upap": "unwalkable",
+        "ugol": "�.",
+        "ulum": "�.",
+        "ufma": "�",
+        "ures": "R099,R09A,R09B,R096",
+        "useu": "h0G8",
+        "umdl": "IllidariBlackTemple.mdl",
+        "usca": "b'333?'",
+        "uubs": "",
+        "unam": "TRIGSTR_14062",
+        "utip": "TRIGSTR_14063",
+        "ussc": "b'ff\\x86@'",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTN339.blp",
+        "ussi": "ReplaceableTextures\\CommandButtons\\BTN339.blp",
+        "uabs": "Argl,A0GK",
+        "uhot": "TRIGSTR_10589",
+        "utub": "TRIGSTR_14064",
+        "unsf": "TRIGSTR_7904"
+      }
+    },
+    "h0EC": {
+      "name": [
+        14066,
+        "|cffc8dc8cНакопитель энергии|r"
+      ],
+      "tip": [
+        14067,
+        "Построить |cffc8dc8cНакопитель энергии|r"
+      ],
+      "ubertip": [
+        42689,
+        "|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.\n\n|cffffff00Приносит 40 инкома|r"
+      ],
+      "hotkey": [
+        2772,
+        "A"
+      ],
+      "raw_mods": {
+        "ufma": "(",
+        "upap": "unwalkable",
+        "ugol": ",\u0001",
+        "ulum": "�",
+        "unam": "TRIGSTR_14066",
+        "utip": "TRIGSTR_14067",
+        "umdl": "IllidariArcaneWell.mdl",
+        "usca": "b'fff?'",
+        "uubs": "",
+        "ussc": "",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTN336.blp",
+        "ussi": "ReplaceableTextures\\CommandButtons\\BTN336.blp",
+        "uhot": "TRIGSTR_2772",
+        "utub": "TRIGSTR_42689",
+        "unsf": "TRIGSTR_9827"
+      }
+    },
+    "h0ED": {
+      "name": [
+        14070,
+        "|cffc8dc8cАлтарь охоты|r"
+      ],
+      "tip": [
+        14071,
+        "Построить |cffc8dc8cАлтарь охоты|r"
+      ],
+      "ubertip": [
+        12976,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nСооружение позволяющее призыватьновых и воскрешает павших героев."
+      ],
+      "hotkey": [
+        2488,
+        "S"
+      ],
+      "raw_mods": {
+        "upat": "PathTextures\\4x4SimpleSolid.tga",
+        "utra": "H043,E01W,E025,E024",
+        "upap": "unwalkable",
+        "useu": "h07A",
+        "ufma": "\u0003",
+        "umdl": "IllidariAltar.mdl",
+        "unam": "TRIGSTR_14070",
+        "utip": "TRIGSTR_14071",
+        "usca": "b'333?'",
+        "uubs": "",
+        "ussc": "",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTN334.blp",
+        "ussi": "ReplaceableTextures\\CommandButtons\\BTN334.blp",
+        "utub": "TRIGSTR_12976",
+        "uhot": "TRIGSTR_2488",
+        "unsf": "TRIGSTR_10744"
+      }
+    },
+    "h0EE": {
+      "name": [
+        15182,
+        "|cffc8dc8cКазармы|r"
+      ],
+      "tip": [
+        15183,
+        "Построить |cffc8dc8cКазармы|r"
+      ],
+      "ubertip": [
+        13130,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nЗдание для подготовки базовых войск. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск."
+      ],
+      "hotkey": [
+        3592,
+        "W"
+      ],
+      "raw_mods": {
+        "upat": "PathTextures\\4x4SimpleSolid.tga",
+        "utra": "h0EJ,o01A,o01B,o019",
+        "ures": "R08Y,R091,R095",
+        "upap": "unwalkable",
+        "uabr": "",
+        "ugol": "�\u0001",
+        "ulum": "�\u0001",
+        "umdl": "IllidariForge.mdl",
+        "usca": "b'333?'",
+        "uubs": "",
+        "unam": "TRIGSTR_15182",
+        "utip": "TRIGSTR_15183",
+        "ussc": "",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTN3310.blp",
+        "ussi": "ReplaceableTextures\\CommandButtons\\BTN3310.blp",
+        "utub": "TRIGSTR_13130",
+        "uhot": "TRIGSTR_3592",
+        "unsf": "TRIGSTR_14037"
+      }
+    },
+    "h0EF": {
+      "name": [
+        14078,
+        "|cffc8dc8cХрам магии|r"
+      ],
+      "tip": [
+        14079,
+        "Построить |cffc8dc8cХрам магии|r"
+      ],
+      "ubertip": [
+        14080,
+        "|cff7dc87dВремя строительства:|r |cffaaf0aa60 сек.|r|n|nПризывает ночнорожденных к любви ко всей жизни. Позволяет нанимать войска защищающие и востанавливающие жизнь в любом ее проявлении."
+      ],
+      "hotkey": [
+        11471,
+        "F"
+      ],
+      "raw_mods": {
+        "upat": "PathTextures\\4x4SimpleSolid.tga",
+        "utra": "h0EK,h0EL",
+        "ures": "R08Z,R090",
+        "upap": "unwalkable",
+        "ureq": "h0EA,h0EH",
+        "ulum": "h\u0001",
+        "ugol": "�\u0001",
+        "umdl": "IllidariArcaneSanctum.mdl",
+        "unam": "TRIGSTR_14078",
+        "utip": "TRIGSTR_14079",
+        "usca": "b'333?'",
+        "uubs": "",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTN335.blp",
+        "ussi": "ReplaceableTextures\\CommandButtons\\BTN335.blp",
+        "uhot": "TRIGSTR_11471",
+        "utub": "TRIGSTR_14080",
+        "unsf": "TRIGSTR_14061",
+        "ussc": ""
+      }
+    },
+    "h0EG": {
+      "name": [
+        14082,
+        "|cffc8dc8cНерестилище|r"
+      ],
+      "tip": [
+        14083,
+        "Построить |cffc8dc8cНерестилище|r"
+      ],
+      "ubertip": [
+        5700,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nПозволяет обучать наг Иллидариев."
+      ],
+      "hotkey": [
+        4065,
+        "D"
+      ],
+      "raw_mods": {
+        "upat": "PathTextures\\4x4SimpleSolid.tga",
+        "utra": "n02O,n02M,n02N",
+        "ures": "R094,R092,R093",
+        "upap": "unwalkable",
+        "ureq": "h0EA",
+        "ugol": "�\u0001",
+        "ulum": "|\u0001",
+        "umdl": "IllidariSpawningGrounds.mdl",
+        "uubs": "",
+        "usca": "b'333?'",
+        "unam": "TRIGSTR_14082",
+        "utip": "TRIGSTR_14083",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTN3311.blp",
+        "ussi": "ReplaceableTextures\\CommandButtons\\BTN3311.blp",
+        "utub": "TRIGSTR_5700",
+        "uhot": "TRIGSTR_4065",
+        "unsf": "TRIGSTR_14065"
+      }
+    },
+    "h0EH": {
+      "name": [
+        15184,
+        "|cffc8dc8cЛесопилка|r"
+      ],
+      "tip": [
+        15185,
+        "Построить |cffc8dc8cЛесопилка|r"
+      ],
+      "ubertip": [
+        3159,
+        "|cff7dc87dВремя строительства:|r |cffaaf0aa60 сек.|r|n|nХранит добытую древесину. |nДает доступ к новым улучшениям и доступ к новой армии."
+      ],
+      "hotkey": [
+        4523,
+        "E"
+      ],
+      "raw_mods": {
+        "upat": "PathTextures\\4x4SimpleSolid.tga",
+        "ures": "R097",
+        "upap": "unwalkable",
+        "uubs": "",
+        "umdl": "IllidariVault.mdl",
+        "usca": "b'\\xcd\\xccL?'",
+        "unam": "TRIGSTR_15184",
+        "utip": "TRIGSTR_15185",
+        "ussc": "",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTN_Illidarii_Lumberrmill.blp",
+        "ussi": "ReplaceableTextures\\CommandButtons\\BTN_Illidarii_Lumberrmill.blp",
+        "uhot": "TRIGSTR_4523",
+        "utub": "TRIGSTR_3159",
+        "unsf": "TRIGSTR_14069"
+      }
+    },
+    "h0EM": {
+      "name": [
+        14798,
+        "|cffc8dc8cКузница|r"
+      ],
+      "tip": [
+        14799,
+        "Построить |cffc8dc8cКузницу|r"
+      ],
+      "ubertip": [
+        12968,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa70 сек.|r|n|nПозволяет улучшать доспехи, оружие и прочее"
+      ],
+      "hotkey": [
+        2663,
+        "R"
+      ],
+      "raw_mods": {
+        "uhpm": "�\u0005",
+        "upat": "PathTextures\\4x4SimpleSolid.tga",
+        "ureq": "",
+        "ures": "R08W,R08T,R08U,R08V,R08X",
+        "uabi": "",
+        "upgr": "R01N,Rgfo",
+        "upap": "unwalkable",
+        "unsf": "TRIGSTR_14373",
+        "usca": "b'\\xcd\\xccL?'",
+        "ussc": "b'333@'",
+        "ushb": "ShadowHouse",
+        "uubs": "",
+        "uclb": "�",
+        "uclg": "�",
+        "utub": "TRIGSTR_12968",
+        "umdl": "ElvenForge.mdl",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTNBloodElfForge.blp",
+        "uhot": "TRIGSTR_2663",
+        "unam": "TRIGSTR_14798",
+        "utip": "TRIGSTR_14799"
+      }
+    },
+    "h0EN": {
+      "name": [
+        14758,
+        "|cffc8dc8cМагическая башня|r"
+      ],
+      "tip": [
+        14759,
+        "Построить |cffc8dc8cМагическая башня|r"
+      ],
+      "ubertip": [
+        31765,
+        "|cff7dc87dВремя строительства:|r |cffaaf0aa50 сек.|r\nМагическое оборонительное сооружение, особенно эффективное против героев и магов. Атаки уничтожают ману врагов, нанося им урон, равный объему уничтоженной маны. Можно оснастить «Магическим стражем». |n|n|cffffcc00Атакует наземные и воздушные цели."
+      ],
+      "hotkey": [
+        3541,
+        "X"
+      ],
+      "raw_mods": {
+        "upap": "unwalkable",
+        "unam": "TRIGSTR_14758",
+        "utip": "TRIGSTR_14759",
+        "ubpx": "\u0001",
+        "uhot": "TRIGSTR_3541",
+        "unsf": "TRIGSTR_14377",
+        "utub": "TRIGSTR_31765"
+      }
+    },
+    "o01C": {
+      "name": [
+        14374,
+        "|cffc8dc8cХрам охоты|r"
+      ],
+      "tip": [
+        14375,
+        "Построить |cffc8dc8cХрам охоты|r"
+      ],
+      "ubertip": [
+        18691,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nТренирует Элитных солдат Иллидариев. Способно обучить их новым способностям."
+      ],
+      "hotkey": [
+        10809,
+        "Z"
+      ],
+      "raw_mods": {
+        "upat": "PathTextures\\4x4SimpleSolid.tga",
+        "urac": "human",
+        "upgr": "R08G",
+        "ures": "R098",
+        "utra": "h04Y,h04Z,h050",
+        "uabi": "",
+        "ulum": "�\u0001",
+        "ugol": "�\u0002",
+        "ubld": "7",
+        "upap": "unwalkable",
+        "ureq": "h0EB",
+        "umdl": "buildings\\undead\\TombOfRelics\\TombOfRelics.mdl",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTNTombOfRelics.blp",
+        "uubs": "",
+        "usca": "b'\\x9a\\x99\\x19?'",
+        "unsf": "TRIGSTR_14339",
+        "unam": "TRIGSTR_14374",
+        "utip": "TRIGSTR_14375",
+        "utub": "TRIGSTR_18691",
+        "uhot": "TRIGSTR_10809",
+        "ubpx": "",
+        "ubpy": "\u0002",
+        "uabs": ""
+      }
+    },
+    "h011": {
+      "name": [
+        368,
+        "Верфь"
+      ],
+      "tip": [
+        369,
+        "Построить верфь"
+      ],
+      "ubertip": [
+        370,
+        "Строит транспорты, фрегаты и линкоры."
+      ],
+      "hotkey": [
+        1609,
+        "C"
+      ],
+      "raw_mods": {
+        "useu": "",
+        "utra": "h00X,h00Y,h00Z",
+        "uhpm": "�\u0007",
+        "ubld": "Z",
+        "ugol": "�\u0001",
+        "ulum": "�\u0002",
+        "upap": "unfloat",
+        "upgr": "",
+        "ures": "R005,R006,R007,R002,R003",
+        "upat": "PathTextures\\4x4SimpleSolid.tga",
+        "uabi": "A15N",
+        "unam": "TRIGSTR_368",
+        "utip": "TRIGSTR_369",
+        "utub": "TRIGSTR_370",
+        "uspa": "",
+        "uubs": "",
+        "unsf": "TRIGSTR_1319",
+        "ubpy": "\u0002",
+        "ubpx": "\u0003",
+        "uhot": "TRIGSTR_1609"
+      }
+    }
+  },
+  "units": {
+    "h0EI": {
+      "name": [
+        14346,
+        "|cffc8dc8cСтроитель|r"
+      ],
+      "tip": [
+        14348,
+        "Обучить |cffc8dc8cСтроитель|r"
+      ],
+      "ubertip": [
+        20571,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa15 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nБазовый рабочий. Добывает  древесину, а также строит и ремонтирует здания."
+      ],
+      "hotkey": [
+        3572,
+        "Q"
+      ],
+      "uabi": "A0I3,ANha,Ahrp",
+      "upgr": "R097",
+      "raw_mods": {
+        "ucol": "",
+        "uabi": "A0I3,ANha,Ahrp",
+        "ufoo": "",
+        "ubui": "h0EM,h0D8,h0E9,h0EC,h0EE,h0EH,h0EN,h0ED,h0EF,h0EG,o01C",
+        "upgr": "R097",
+        "ugol": "A",
+        "umpr": "b'\\xcd\\xcc\\xcc='",
+        "umpi": "\u0005",
+        "ua1c": "b'ff\\xa6?'",
+        "ua1b": "\u0005",
+        "udp1": "",
+        "ubs1": "",
+        "unam": "TRIGSTR_14346",
+        "usnd": "BloodElfEngineer",
+        "umdl": "units\\critters\\HighElfPeasant\\HighElfPeasant.mdl",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTNBloodElfPeasant.blp",
+        "ussc": "",
+        "usca": "b'\\xcd\\xccL?'",
+        "utub": "TRIGSTR_20571",
+        "uabs": "Ahar,Ahrp",
+        "unsf": "TRIGSTR_14081",
+        "uhot": "TRIGSTR_3572",
+        "utip": "TRIGSTR_14348"
+      }
+    },
+    "h0EJ": {
+      "name": [
+        14354,
+        "|cffc8dc8cСтранник|r"
+      ],
+      "tip": [
+        14355,
+        "Обучить |cffc8dc8cСтранник|r"
+      ],
+      "ubertip": [
+        35864,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa26 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\n\nРядовой пехотинец примкнувший к |cffc8dc8cИлидири|r."
+      ],
+      "hotkey": [
+        3573,
+        "Q"
+      ],
+      "uabi": "A0O5,A0O2",
+      "upgr": "R09A,R096,R08U,R08T",
+      "raw_mods": {
+        "ucam": "",
+        "uhpm": "�\u0001",
+        "ugol": "�",
+        "ufoo": "",
+        "umpm": "�",
+        "ugor": "�",
+        "umpr": "b'\\xecQ\\xb8='",
+        "umpi": "\u0019",
+        "uabi": "A0O5,A0O2",
+        "upgr": "R09A,R096,R08U,R08T",
+        "umvs": "�",
+        "ucol": "",
+        "urac": "nightelf",
+        "ua1b": "\u0011",
+        "ubld": "\u001a",
+        "ulum": "<",
+        "udup": "\u0001",
+        "umdl": "units\\other\\BloodElfLieutenant\\BloodElfLieutenant.mdl",
+        "unam": "TRIGSTR_14354",
+        "utip": "TRIGSTR_14355",
+        "unsf": "TRIGSTR_14090",
+        "utub": "TRIGSTR_35864",
+        "usca": "",
+        "ussc": "b'fff?'",
+        "uhot": "TRIGSTR_3573"
+      }
+    },
+    "o01A": {
+      "name": [
+        14357,
+        "|cffc8dc8cРубака|r"
+      ],
+      "tip": [
+        14358,
+        "Обучить |cffc8dc8cРубака|r"
+      ],
+      "ubertip": [
+        35865,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa31 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\n \nОрк-воин. Способный солдат ближнего боя, яростный и бесстрашный."
+      ],
+      "hotkey": [
+        3734,
+        "W"
+      ],
+      "uabi": "A0O2,A0O5",
+      "upgr": "R09B,R096,R091,R08U,R08T",
+      "raw_mods": {
+        "upgr": "R09B,R096,R091,R08U,R08T",
+        "uabi": "A0O2,A0O5",
+        "ucol": "",
+        "ufoo": "",
+        "urac": "nightelf",
+        "ua1b": "\u0016",
+        "ureq": "h0EH,h0EM",
+        "ubld": "\u001f",
+        "ugol": "�",
+        "ulum": "F",
+        "udup": "\u0001",
+        "unam": "TRIGSTR_14357",
+        "utip": "TRIGSTR_14358",
+        "umdl": "units\\demon\\ChaosGrunt\\ChaosGrunt.mdl",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTNChaosGrunt.blp",
+        "unsf": "TRIGSTR_14204",
+        "ucua": "ReplaceableTextures\\CommandButtons\\BTNTwilights_Hammer_symbol.blp",
+        "utub": "TRIGSTR_35865",
+        "uhot": "TRIGSTR_3734",
+        "usca": "b'\\x9a\\x99Y?'"
+      }
+    },
+    "o01B": {
+      "name": [
+        14361,
+        "|cffc8dc8cСумеречный налетчик|r"
+      ],
+      "tip": [
+        14362,
+        "Обучить |cffc8dc8cСумеречный налетчик|r"
+      ],
+      "ubertip": [
+        35866,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa27 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|n\nБыстрый наездник на волке. Предназначен для фланговых и тыловых атак."
+      ],
+      "hotkey": [
+        4537,
+        "E"
+      ],
+      "uabi": "A0O2,A0O5",
+      "upgr": "R095,R09B,R096,R091,R08U,R08T",
+      "raw_mods": {
+        "upgr": "R095,R09B,R096,R091,R08U,R08T",
+        "uabi": "A0O2,A0O5",
+        "ucol": "",
+        "ureq": "h0EA,h0EM",
+        "ufoo": "",
+        "ubld": "\u001b",
+        "ugol": "�",
+        "ulum": "<",
+        "ua1t": "chaos",
+        "urac": "nightelf",
+        "ua1b": "\u001f",
+        "umvs": "\"\u0001",
+        "udup": "\u0001",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTNChaosWolfRider.blp",
+        "umdl": "units\\demon\\ChaosWolfRider\\ChaosWolfRider.mdl",
+        "unam": "TRIGSTR_14361",
+        "utip": "TRIGSTR_14362",
+        "unsf": "TRIGSTR_14214",
+        "ucua": "ReplaceableTextures\\CommandButtons\\BTNTwilights_Hammer_symbol.blp",
+        "uhot": "TRIGSTR_4537",
+        "utub": "TRIGSTR_35866"
+      }
+    },
+    "o019": {
+      "name": [
+        14351,
+        "|cffc8dc8cРазрушитель|r"
+      ],
+      "tip": [
+        14352,
+        "Построить |cffc8dc8cРазрушитель|r"
+      ],
+      "ubertip": [
+        35863,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa25 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный урон|r|n\nДальнобойное осадное орудие, эффективное против зданий, но медленное и уязвимое."
+      ],
+      "hotkey": [
+        2611,
+        "R"
+      ],
+      "uabi": "",
+      "upgr": "R08V,R08W",
+      "raw_mods": {
+        "uabi": "",
+        "ucol": "",
+        "upgr": "R08V,R08W",
+        "ureq": "h0EA,h0EM",
+        "ufoo": "",
+        "ua1c": "",
+        "ua1b": "2",
+        "ua1r": " \u0003",
+        "urac": "nightelf",
+        "ubld": "\u0019",
+        "ugol": "�",
+        "ulum": "7",
+        "udup": "\u0001",
+        "unam": "TRIGSTR_14351",
+        "utip": "TRIGSTR_14352",
+        "unsf": "TRIGSTR_14089",
+        "usca": "b'\\x9a\\x99\\x19?'",
+        "ussc": "b'\\x9a\\x99\\xf9?'",
+        "uhot": "TRIGSTR_2611",
+        "utub": "TRIGSTR_35863"
+      }
+    },
+    "h0EK": {
+      "name": [
+        14365,
+        "|cffc8dc8cМагистр|r"
+      ],
+      "tip": [
+        14366,
+        "Обучить |cffc8dc8cМагистр|r"
+      ],
+      "ubertip": [
+        35867,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa32 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая атака|r|n|nМаги огня, слегкостью повишающий характеристки союзникам, и выводит врагов из боя."
+      ],
+      "hotkey": [
+        3574,
+        "Q"
+      ],
+      "uabi": "A0O5,A0O2,A0O3,A1KL,A0DQ,A1KM",
+      "upgr": "R09A,R096,R08Z,R08V,R08X",
+      "raw_mods": {
+        "ufoo": "",
+        "uabi": "A0O5,A0O2,A0O3,A1KL,A0DQ,A1KM",
+        "ua1b": "\u0010",
+        "umpr": "",
+        "umpm": "�\u0001",
+        "umpi": "d",
+        "ulum": "F",
+        "ugol": "�",
+        "udaa": "A1KL",
+        "upgr": "R09A,R096,R08Z,R08V,R08X",
+        "urac": "nightelf",
+        "ureq": "h0EA,h0EM",
+        "uhpm": "�\u0001",
+        "ubld": " ",
+        "udup": "\u0001",
+        "unam": "TRIGSTR_14365",
+        "umdl": "BloodElf\\BloodElvenMagister.mdl",
+        "unsf": "TRIGSTR_14231",
+        "ua1m": "Missiles\\Shot Orange.mdl",
+        "usca": "",
+        "utip": "TRIGSTR_14366",
+        "utub": "TRIGSTR_35867",
+        "ubpx": "",
+        "ushx": "",
+        "ushh": "",
+        "ushw": "",
+        "ushy": "",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTNmagister.blp",
+        "uhot": "TRIGSTR_3574"
+      }
+    },
+    "h0EL": {
+      "name": [
+        9655,
+        "|cffc8dc8cЧернокнижник|r"
+      ],
+      "tip": [
+        10080,
+        "Обучить |cffc8dc8cЧернокнижник|r"
+      ],
+      "ubertip": [
+        35868,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa42 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая атака|r|n|nМаг, покорившый магию скверны для использования как в бою, так и для других целей."
+      ],
+      "hotkey": [
+        3769,
+        "W"
+      ],
+      "uabi": "A0O6,A0O2,A0O5,A0O4,A1KN,A1KO",
+      "upgr": "R09A,R096,R090,R08V,R08X",
+      "raw_mods": {
+        "ufoo": "",
+        "ua1b": "\u000f",
+        "uabi": "A0O6,A0O2,A0O5,A0O4,A1KN,A1KO",
+        "umpr": "",
+        "umpm": "�\u0001",
+        "udaa": "A1KO",
+        "upgr": "R09A,R096,R090,R08V,R08X",
+        "ucol": "",
+        "urac": "nightelf",
+        "ureq": "h0EA,h0EM",
+        "ubld": "*",
+        "uhpm": "0\u0002",
+        "ugol": "\u0013\u0001",
+        "ulum": "_",
+        "udup": "\u0001",
+        "umdl": "BloodElf\\BloodElvenThaumaturge.mdl",
+        "unsf": "TRIGSTR_14247",
+        "unam": "TRIGSTR_9655",
+        "ua1m": "Missiles\\Shot Green.mdl",
+        "usca": "",
+        "utip": "TRIGSTR_10080",
+        "utub": "TRIGSTR_35868",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTN_Bloodelf_chenoknichik.blp",
+        "uhot": "TRIGSTR_3769",
+        "uabs": ""
+      }
+    },
+    "n02O": {
+      "name": [
+        14553,
+        "|cffc8dc8cМорской варан|r"
+      ],
+      "tip": [
+        14554,
+        "Обучить |cffc8dc8cМорской варан|r"
+      ],
+      "ubertip": [
+        42374,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa31 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n\n\nЛовкое и быстрое морское создание, способно отравлять атакованых врагов."
+      ],
+      "hotkey": [
+        3575,
+        "Q"
+      ],
+      "uabi": "A0O2,A0O5",
+      "upgr": "R099,R096,R094,R08V,R08W",
+      "raw_mods": {
+        "urac": "nightelf",
+        "ucam": "",
+        "upgr": "R099,R096,R094,R08V,R08W",
+        "uabi": "A0O2,A0O5",
+        "ufoo": "",
+        "ureq": "h0EA",
+        "umvs": "\"\u0001",
+        "ucol": "",
+        "ubld": "\u001f",
+        "ugol": "�",
+        "ulum": "F",
+        "udup": "\u0001",
+        "usca": "b'333?'",
+        "ussc": "b'\\xcd\\xcc\\xcc?'",
+        "unam": "TRIGSTR_14553",
+        "utip": "TRIGSTR_14554",
+        "uhot": "TRIGSTR_3575",
+        "utub": "TRIGSTR_42374"
+      }
+    },
+    "n02M": {
+      "name": [
+        14349,
+        "|cffc8dc8cМирмидон|r"
+      ],
+      "tip": [
+        14350,
+        "Обучить |cffc8dc8cмирмидона|r"
+      ],
+      "ubertip": [
+        35261,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa44 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\nМощный воин ближнего боя. Предназначенный для фронтовых атак, или удержания врагов."
+      ],
+      "hotkey": [
+        3620,
+        "W"
+      ],
+      "uabi": "A0O2,A0O5,A0O8",
+      "upgr": "R099,R096,R094,R08U,R08T",
+      "raw_mods": {
+        "urac": "nightelf",
+        "ucam": "",
+        "umvs": "�",
+        "ufoo": "",
+        "uabi": "A0O2,A0O5,A0O8",
+        "upgr": "R099,R096,R094,R08U,R08T",
+        "uhpm": "�\u0003",
+        "ureq": "h0EA",
+        "ucol": "",
+        "ua1b": "\u001c",
+        "ubld": ",",
+        "ugol": "\"\u0001",
+        "ulum": "d",
+        "udup": "\u0001",
+        "unam": "TRIGSTR_14349",
+        "utip": "TRIGSTR_14350",
+        "unsf": "TRIGSTR_14085",
+        "usca": "b'333?'",
+        "uhot": "TRIGSTR_3620",
+        "utub": "TRIGSTR_35261"
+      }
+    },
+    "n02N": {
+      "name": [
+        14371,
+        "|cffc8dc8cСирена|r"
+      ],
+      "tip": [
+        14372,
+        "Обучить |cffc8dc8cСирену|r"
+      ],
+      "ubertip": [
+        42373,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa40 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая атака|r|n|nМогущественный маг. Владеет магией стихии воды, предназначен для нанисение магического урона врагам."
+      ],
+      "hotkey": [
+        4723,
+        "E"
+      ],
+      "uabi": "A0O5,A0O2,A0OB,A0OA,A0O9",
+      "upgr": "R093,R099,R096,R094,R08V,R08X",
+      "raw_mods": {
+        "urac": "nightelf",
+        "ucam": "",
+        "ufoo": "",
+        "uabi": "A0O5,A0O2,A0OB,A0OA,A0O9",
+        "upgr": "R093,R099,R096,R094,R08V,R08X",
+        "ureq": "h0EA",
+        "uhpm": "�\u0001",
+        "ubld": "(",
+        "ugol": "\t\u0001",
+        "ulum": "Z",
+        "udup": "\u0001",
+        "unam": "TRIGSTR_14371",
+        "utip": "TRIGSTR_14372",
+        "unsf": "TRIGSTR_14263",
+        "usca": "b'333?'",
+        "uhot": "TRIGSTR_4723",
+        "utub": "TRIGSTR_42373"
+      }
+    },
+    "h04Y": {
+      "name": [
+        14359,
+        "|cffc8dc8cПокоренный демон|r"
+      ],
+      "tip": [
+        14363,
+        "Обучить |cffc8dc8cПокоренного демона|r"
+      ],
+      "ubertip": [
+        15194,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|nМогучий верховой воин. Некогда служащий |cffc8dc8cПылающему легиону|r."
+      ],
+      "hotkey": [
+        1889,
+        "E"
+      ],
+      "uabi": "A0OH,A0OG,A0O5,A0O2",
+      "upgr": "R096,R08U,R08T",
+      "raw_mods": {
+        "urac": "nightelf",
+        "uabi": "A0OH,A0OG,A0O5,A0O2",
+        "ufoo": "",
+        "upgr": "R096,R08U,R08T",
+        "ureq": "h0EH,h0EB,h0EM",
+        "ubld": "-",
+        "ucol": "",
+        "ua1c": "b'33\\xb3?'",
+        "umvs": "h\u0001",
+        "ugol": ",\u0001",
+        "ulum": "d",
+        "udup": "\u0001",
+        "umdl": "Hero_Felreaper.mdl",
+        "unam": "TRIGSTR_14359",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTNMetamorphosis.blp",
+        "usca": "b'\\xcd\\xccL?'",
+        "utip": "TRIGSTR_14363",
+        "uhot": "TRIGSTR_1889",
+        "usnd": "Demoness",
+        "utub": "TRIGSTR_15194"
+      }
+    },
+    "h04Z": {
+      "name": [
+        14681,
+        "|cffc8dc8cОхотник Истребление|r"
+      ],
+      "tip": [
+        14682,
+        "Обучить |cffc8dc8cОхотника Истребление|r"
+      ],
+      "ubertip": [
+        35056,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|n\n\nЭлитные воска Илидари, в первую очередь предназначены для устранения |cffc8dc8cДемонов|r."
+      ],
+      "hotkey": [
+        1512,
+        "Q"
+      ],
+      "uabi": "A1GU,A0O5,A0OF,A0O2,A0O1,A0O0",
+      "upgr": "R09A,R096,R08U,R08T",
+      "raw_mods": {
+        "urac": "nightelf",
+        "uabi": "A1GU,A0O5,A0OF,A0O2,A0O1,A0O0",
+        "ufoo": "",
+        "upgr": "R09A,R096,R08U,R08T",
+        "ureq": "h0EH,h0EB,h0EM",
+        "ua1t": "chaos",
+        "ua1b": "!",
+        "ubld": "2",
+        "umvs": ",\u0001",
+        "ucol": "",
+        "ua1c": "b'\\xcd\\xcc\\xac?'",
+        "udty": "medium",
+        "ugol": "J\u0001",
+        "ulum": "n",
+        "udup": "\u0001",
+        "umdl": "HeroElvenDemonHunter.mdl",
+        "unam": "TRIGSTR_14681",
+        "utip": "TRIGSTR_14682",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTNMetamorphosis.blp",
+        "usca": "b'\\xcd\\xccL?'",
+        "ubpx": "",
+        "uhot": "TRIGSTR_1512",
+        "ucun": "TRIGSTR_14683",
+        "ucut": "TRIGSTR_14684",
+        "ucua": "ReplaceableTextures\\CommandButtons\\BTN3316.blp",
+        "utub": "TRIGSTR_35056"
+      }
+    },
+    "h050": {
+      "name": [
+        14685,
+        "|cffc8dc8cОхотник Месть|r"
+      ],
+      "tip": [
+        14686,
+        "Обучить |cffc8dc8cОхотник Месть|r"
+      ],
+      "ubertip": [
+        35243,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa59 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|n\n\nЭлитные воска Илидари, в первую очередь предназначены для устранения |cffc8dc8cДемонов|r."
+      ],
+      "hotkey": [
+        1643,
+        "W"
+      ],
+      "uabi": "A1GU,A0O5,A0OE,A0O2,A0O1,A0O0",
+      "upgr": "R09A,R096,R08U,R08T",
+      "raw_mods": {
+        "urac": "nightelf",
+        "uabi": "A1GU,A0O5,A0OE,A0O2,A0O1,A0O0",
+        "ufoo": "",
+        "upgr": "R09A,R096,R08U,R08T",
+        "ureq": "h0EH,h0EB,h0EM",
+        "uhpm": "�\u0003",
+        "ua1t": "chaos",
+        "ubld": ";",
+        "umvs": ",\u0001",
+        "ucol": "",
+        "ua1c": "b'\\xcd\\xcc\\x8c?'",
+        "ugol": "�\u0001",
+        "ulum": "�",
+        "udup": "\u0001",
+        "umdl": "HeroElvenDemonHunterV_2.mdl",
+        "unam": "TRIGSTR_14685",
+        "utip": "TRIGSTR_14686",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTNBEDemonHunter.blp",
+        "usca": "b'\\xcd\\xccL?'",
+        "uhot": "TRIGSTR_1643",
+        "ubpx": "\u0001",
+        "ucun": "TRIGSTR_14687",
+        "ucut": "TRIGSTR_14688",
+        "ucua": "ReplaceableTextures\\CommandButtons\\BTN3316.blp",
+        "utub": "TRIGSTR_35243"
+      }
+    }
+  },
+  "heroes": {
+    "H043": {
+      "name": [
+        4403,
+        "|cfffa9696Маг Крови|r"
+      ],
+      "propernames": [
+        null,
+        null
+      ],
+      "tip": [
+        5839,
+        "Призвать |cfffa9696Мага Крови|r"
+      ],
+      "ubertip": [
+        5011,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|nГерой-мистик, мастер магии, сражающийся в дальнем бою. "
+      ],
+      "awakentip": [
+        4490,
+        "Воскресить |cfffa9696Мага Крови|r"
+      ],
+      "revivetip": [
+        5840,
+        "Воскресить |cfffa9696Мага Крови|r"
+      ],
+      "hotkey": [
+        1198,
+        "A"
+      ],
+      "uhab": null,
+      "uabi": null,
+      "raw_mods": {
+        "urq2": "",
+        "urq1": "",
+        "ucol": "",
+        "ufoo": "\u0001",
+        "ubld": "<",
+        "uhpm": "�\u0002",
+        "ua1b": "\u0016",
+        "uint": "&",
+        "ustr": "\u0019",
+        "uagi": "\u001e",
+        "ua1s": "\u0007",
+        "unsf": "TRIGSTR_797",
+        "unam": "TRIGSTR_4403",
+        "uawt": "TRIGSTR_4490",
+        "utip": "TRIGSTR_5839",
+        "utpr": "TRIGSTR_5840",
+        "utub": "TRIGSTR_5011",
+        "uhot": "TRIGSTR_1198"
+      }
+    },
+    "E01W": {
+      "name": [
+        798,
+        "|cffc8dc8cОхотник на демонов|r"
+      ],
+      "propernames": [
+        802,
+        "|cffc8dc8cЯрость Теней|r"
+      ],
+      "tip": [
+        20840,
+        "Призвать |cffc8dc8cОхотника на демонов|r"
+      ],
+      "ubertip": [
+        31755,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaЛовкость |r|n\nОдин из лучший охотников на демонов, признанный самим Иллиданом."
+      ],
+      "awakentip": [
+        20839,
+        "Воскресить |cffc8dc8cОхотника на демонов|r"
+      ],
+      "revivetip": [
+        20841,
+        "Воскресить |cffc8dc8cОхотника на демонов|r"
+      ],
+      "hotkey": [
+        3493,
+        "Q"
+      ],
+      "uhab": "AEmb,AEim,AEev,A0NZ",
+      "uabi": "AInv,Ault,A0O5",
+      "raw_mods": {
+        "ucol": "",
+        "uhab": "AEmb,AEim,AEev,A0NZ",
+        "ufoo": "\u0001",
+        "uhpm": "�\u0002",
+        "ua1b": "\u0016",
+        "uhrt": "always",
+        "uabi": "AInv,Ault,A0O5",
+        "unam": "TRIGSTR_798",
+        "upro": "TRIGSTR_802",
+        "uawt": "TRIGSTR_20839",
+        "utip": "TRIGSTR_20840",
+        "upru": "\u0001",
+        "utpr": "TRIGSTR_20841",
+        "unsf": "TRIGSTR_1305",
+        "utub": "TRIGSTR_31755",
+        "uhot": "TRIGSTR_3493",
+        "ubpy": "",
+        "usca": "b'fff?'"
+      }
+    },
+    "E024": {
+      "name": [
+        942,
+        "|cffc8dc8cОхотник \"Месть\"|r"
+      ],
+      "propernames": [
+        1249,
+        "|cffc8dc8cТихая смерть|r"
+      ],
+      "tip": [
+        14787,
+        "Призвать |cffc8dc8cОхотник \"Месть\"|r"
+      ],
+      "ubertip": [
+        31757,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n\nОдин из лучший охотников на демонов, признанный самим Иллиданом."
+      ],
+      "awakentip": [
+        1248,
+        "Воскресить |cffc8dc8cОхотник \"Месть\"|r "
+      ],
+      "revivetip": [
+        1304,
+        "Воскресить |cffc8dc8cОхотник \"Месть\"|r "
+      ],
+      "hotkey": [
+        4530,
+        "E"
+      ],
+      "uhab": "A0UV,A0NJ,A0NS,A0NU",
+      "uabi": "A01C,AInv,Ault,A0O5",
+      "raw_mods": {
+        "ucam": "",
+        "uhab": "A0UV,A0NJ,A0NS,A0NU",
+        "ucol": "",
+        "uabi": "A01C,AInv,Ault,A0O5",
+        "upra": "STR",
+        "ufoo": "\u0001",
+        "uhpm": "�\u0002",
+        "umpm": "�",
+        "ua1b": "\u0016",
+        "uhrt": "always",
+        "unam": "TRIGSTR_942",
+        "uawt": "TRIGSTR_1248",
+        "upro": "TRIGSTR_1249",
+        "utpr": "TRIGSTR_1304",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTNBEDemonHunter.blp",
+        "ussi": "ReplaceableTextures\\CommandButtons\\BTNBEDemonHunter.blp",
+        "umdl": "HeroElvenDemonHunterV_2.mdl",
+        "uabs": "A01C,AInv,Ault",
+        "uclg": "�",
+        "uclr": "�",
+        "uclb": "�",
+        "unsf": "TRIGSTR_14073",
+        "utub": "TRIGSTR_31757",
+        "uhot": "TRIGSTR_4530",
+        "ubpx": "\u0002",
+        "utip": "TRIGSTR_14787",
+        "usca": "b'fff?'"
+      }
+    },
+    "E025": {
+      "name": [
+        14034,
+        "|cffc8dc8cОхотник \"Истребление\"|r"
+      ],
+      "propernames": [
+        6900,
+        "|cffc8dc8cЯростный охотник|r"
+      ],
+      "tip": [
+        14789,
+        "Призвать |cffc8dc8cОхотник Истребление|r "
+      ],
+      "ubertip": [
+        38606,
+        "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaЛовкость |r|n\nОдин из лучших охотников на демонов, чьи таланты были признанный даже самим Иллиданом."
+      ],
+      "awakentip": [
+        2051,
+        "Воскресить |cffc8dc8cОхотник Истребление|r "
+      ],
+      "revivetip": [
+        6904,
+        "Воскресить |cffc8dc8cОхотник Истребление|r "
+      ],
+      "hotkey": [
+        null,
+        null
+      ],
+      "uhab": "A0NF,A0NX,A0NW,A0NV",
+      "uabi": "A01C,AInv,Ault,A0O5",
+      "raw_mods": {
+        "ucam": "",
+        "uhab": "A0NF,A0NX,A0NW,A0NV",
+        "ucol": "",
+        "ustp": "b'33\\xb3?'",
+        "uabi": "A01C,AInv,Ault,A0O5",
+        "uagp": "",
+        "ufoo": "\u0001",
+        "uhpm": "�\u0002",
+        "ua1b": "\u0016",
+        "uhrt": "always",
+        "uico": "ReplaceableTextures\\CommandButtons\\BTNMetamorphosis.blp",
+        "ussi": "ReplaceableTextures\\CommandButtons\\BTNMetamorphosis.blp",
+        "umdl": "HeroElvenDemonHunter.mdl",
+        "uawt": "TRIGSTR_2051",
+        "unam": "TRIGSTR_14034",
+        "upro": "TRIGSTR_6900",
+        "utpr": "TRIGSTR_6904",
+        "uabs": "A01C,Ashm,AInv,Ault",
+        "unsf": "TRIGSTR_14077",
+        "usnd": "Illidan",
+        "utub": "TRIGSTR_38606",
+        "ubpx": "\u0001",
+        "ubpy": "",
+        "utip": "TRIGSTR_14789",
+        "usca": "b'fff?'"
+      }
+    }
+  },
+  "upgrades": {
+    "R08W": {
+      "class": [
+        20058,
+        "ranged"
+      ],
+      "editorsuffix1": [
+        14578,
+        "(Иллидарии)"
+      ],
+      "hotkey1": [
+        37446,
+        "W"
+      ],
+      "hotkey2": [
+        37447,
+        "W"
+      ],
+      "hotkey3": [
+        37453,
+        "W"
+      ],
+      "hotkey4": [
+        37454,
+        "W"
+      ],
+      "hotkey5": [
+        37459,
+        "W"
+      ],
+      "hotkey6": [
+        37460,
+        "W"
+      ],
+      "name1": [
+        14495,
+        "|cffc8dc8cОружие скверны|r"
+      ],
+      "name2": [
+        14493,
+        "|cffc8dc8cОружие скверны|r"
+      ],
+      "name3": [
+        14492,
+        "|cffc8dc8cОружие скверны|r"
+      ],
+      "name4": [
+        14491,
+        "|cffc8dc8cОружие скверны|r"
+      ],
+      "name5": [
+        14490,
+        "|cffc8dc8cОружие скверны|r"
+      ],
+      "name6": [
+        14489,
+        "|cffc8dc8cОружие скверны|r"
+      ],
+      "tip1": [
+        14500,
+        "Исследовать |cffc8dc8cОружие скверны|r"
+      ],
+      "tip2": [
+        14499,
+        "Исследовать |cffc8dc8cОружие скверны|r"
+      ],
+      "tip3": [
+        14498,
+        "Исследовать |cffc8dc8cОружие скверны|r"
+      ],
+      "tip4": [
+        14497,
+        "Исследовать |cffc8dc8cОружие скверны|r"
+      ],
+      "tip5": [
+        14496,
+        "Исследовать |cffc8dc8cОружие скверны|r"
+      ],
+      "tip6": [
+        14494,
+        "Исследовать |cffc8dc8cОружие скверны|r"
+      ],
+      "ubertip1": [
+        14501,
+        "Увеличивают урон от атак воинам |cffc8dc8cИллидари|r."
+      ],
+      "ubertip2": [
+        14502,
+        "Увеличивают урон от атак воинам |cffc8dc8cИллидари|r."
+      ],
+      "ubertip3": [
+        14503,
+        "Увеличивают урон от атак воинам |cffc8dc8cИллидари|r."
+      ],
+      "ubertip4": [
+        14505,
+        "Увеличивают урон от атак воинам |cffc8dc8cИллидари|r."
+      ],
+      "ubertip5": [
+        14504,
+        "Увеличивают урон от атак воинам |cffc8dc8cИллидари|r."
+      ],
+      "ubertip6": [
+        14506,
+        "Увеличивают урон от атак воинам |cffc8dc8cИллидари|r."
+      ]
+    },
+    "R08T": {
+      "editorsuffix1": [
+        14571,
+        "(Иллидарии)"
+      ],
+      "hotkey1": [
+        36672,
+        "Q"
+      ],
+      "hotkey2": [
+        36700,
+        "Q"
+      ],
+      "hotkey3": [
+        36738,
+        "Q"
+      ],
+      "hotkey4": [
+        36746,
+        "Q"
+      ],
+      "hotkey5": [
+        36845,
+        "Q"
+      ],
+      "hotkey6": [
+        36846,
+        "Q"
+      ],
+      "name1": [
+        14410,
+        "|cffc8dc8cПроклятое оружие|r"
+      ],
+      "name2": [
+        14411,
+        "|cffc8dc8cПроклятое оружие|r"
+      ],
+      "name3": [
+        14412,
+        "|cffc8dc8cПроклятое оружие|r"
+      ],
+      "name4": [
+        14415,
+        "|cffc8dc8cПроклятое оружие|r"
+      ],
+      "name5": [
+        14414,
+        "|cffc8dc8cПроклятое оружие|r"
+      ],
+      "name6": [
+        14413,
+        "|cffc8dc8cПроклятое оружие|r"
+      ],
+      "tip1": [
+        14416,
+        "«|cffc8dc8cПроклятое оружие|r» "
+      ],
+      "tip2": [
+        14417,
+        "«|cffc8dc8cПроклятое оружие|r» "
+      ],
+      "tip3": [
+        14418,
+        "«|cffc8dc8cПроклятое оружие|r» "
+      ],
+      "tip4": [
+        14421,
+        "«|cffc8dc8cПроклятое оружие|r» "
+      ],
+      "tip5": [
+        14420,
+        "«|cffc8dc8cПроклятое оружие|r» "
+      ],
+      "tip6": [
+        14419,
+        "«|cffc8dc8cПроклятое оружие|r» "
+      ],
+      "ubertip1": [
+        14431,
+        "Увеличивает урон солдат, сражающихся в ближнем бою."
+      ],
+      "ubertip2": [
+        14432,
+        "Увеличивает урон солдат, сражающихся в ближнем бою."
+      ],
+      "ubertip3": [
+        14433,
+        "Увеличивает урон солдат, сражающихся в ближнем бою."
+      ],
+      "ubertip4": [
+        14423,
+        "Увеличивает урон солдат, сражающихся в ближнем бою."
+      ],
+      "ubertip5": [
+        14422,
+        "Увеличивает урон солдат, сражающихся в ближнем бою."
+      ],
+      "ubertip6": [
+        14424,
+        "Увеличивает урон солдат, сражающихся в ближнем бою."
+      ]
+    },
+    "R08U": {
+      "editorsuffix1": [
+        14576,
+        "(Иллидарии)"
+      ],
+      "hotkey4": [
+        17666,
+        "A"
+      ],
+      "hotkey5": [
+        17667,
+        "A"
+      ],
+      "hotkey6": [
+        17690,
+        "A"
+      ],
+      "name1": [
+        14435,
+        "|cffc8dc8cОскверненные доспехи|r"
+      ],
+      "name2": [
+        14436,
+        "|cffc8dc8cОскверненные доспехи|r"
+      ],
+      "name3": [
+        14437,
+        "|cffc8dc8cОскверненные доспехи|r"
+      ],
+      "name4": [
+        14446,
+        "|cffc8dc8cОскверненные доспехи|r"
+      ],
+      "name5": [
+        14445,
+        "|cffc8dc8cОскверненные доспехи|r"
+      ],
+      "name6": [
+        14444,
+        "|cffc8dc8cОскверненные доспехи|r"
+      ],
+      "tip1": [
+        14438,
+        "Исследовать |cffc8dc8cОскверненные доспехи|r"
+      ],
+      "tip2": [
+        14439,
+        "Исследовать |cffc8dc8cОскверненные доспехи|r"
+      ],
+      "tip3": [
+        14440,
+        "Исследовать |cffc8dc8cОскверненные доспехи|r"
+      ],
+      "tip4": [
+        14449,
+        "Исследовать |cffc8dc8cОскверненные доспехи|r"
+      ],
+      "tip5": [
+        14448,
+        "Исследовать |cffc8dc8cОскверненные доспехи|r"
+      ],
+      "tip6": [
+        14447,
+        "Исследовать |cffc8dc8cОскверненные доспехи|r"
+      ],
+      "ubertip1": [
+        15974,
+        "Усиливает броню всех воинов, сражающихся в ближним бою."
+      ],
+      "ubertip2": [
+        15975,
+        "Усиливает броню всех воинов, сражающихся в ближним бою."
+      ],
+      "ubertip3": [
+        15976,
+        "Усиливает броню всех воинов, сражающихся в ближним бою."
+      ],
+      "ubertip4": [
+        15971,
+        "Усиливает броню всех воинов, сражающихся в ближним бою."
+      ],
+      "ubertip5": [
+        15972,
+        "Усиливает броню всех воинов, сражающихся в ближним бою."
+      ],
+      "ubertip6": [
+        15973,
+        "Усиливает броню всех воинов, сражающихся в ближним бою."
+      ]
+    },
+    "R08V": {
+      "editorsuffix1": [
+        14577,
+        "(Иллидарии)"
+      ],
+      "hotkey1": [
+        16337,
+        "S"
+      ],
+      "hotkey2": [
+        16874,
+        "S"
+      ],
+      "hotkey3": [
+        16963,
+        "S"
+      ],
+      "hotkey4": [
+        17005,
+        "S"
+      ],
+      "hotkey5": [
+        17009,
+        "S"
+      ],
+      "hotkey6": [
+        17473,
+        "S"
+      ],
+      "name1": [
+        14457,
+        "|cffc8dc8cУкрепление скверной|r"
+      ],
+      "name2": [
+        14458,
+        "|cffc8dc8cУкрепление скверной|r"
+      ],
+      "name3": [
+        14459,
+        "|cffc8dc8cУкрепление скверной|r"
+      ],
+      "name4": [
+        14468,
+        "|cffc8dc8cУкрепление скверной|r"
+      ],
+      "name5": [
+        14467,
+        "|cffc8dc8cУкрепление скверной|r"
+      ],
+      "name6": [
+        14466,
+        "|cffc8dc8cУкрепление скверной|r"
+      ],
+      "tip1": [
+        14460,
+        "Исследовать |cffc8dc8cУкрепление скверной|r"
+      ],
+      "tip2": [
+        14461,
+        "Исследовать |cffc8dc8cУкрепление скверной|r"
+      ],
+      "tip3": [
+        14462,
+        "Исследовать |cffc8dc8cУкрепление скверной|r"
+      ],
+      "tip4": [
+        14465,
+        "Исследовать |cffc8dc8cУкрепление скверной|r"
+      ],
+      "tip5": [
+        14464,
+        "Исследовать |cffc8dc8cУкрепление скверной|r"
+      ],
+      "tip6": [
+        14463,
+        "Исследовать |cffc8dc8cУкрепление скверной|r"
+      ],
+      "ubertip1": [
+        14479,
+        "Усиливают броню магов |cffc8dc8cИллидари|r."
+      ],
+      "ubertip2": [
+        14480,
+        "Усиливают броню магов |cffc8dc8cИллидари|r."
+      ],
+      "ubertip3": [
+        14481,
+        "Усиливают броню магов |cffc8dc8cИллидари|r."
+      ],
+      "ubertip4": [
+        14469,
+        "Усиливают броню магов |cffc8dc8cИллидари|r."
+      ],
+      "ubertip5": [
+        14470,
+        "Усиливают броню магов |cffc8dc8cИллидари|r."
+      ],
+      "ubertip6": [
+        13833,
+        "Усиливают броню магов |cffb4dc8cЛегиона|r."
+      ]
+    },
+    "R08X": {
+      "editorsuffix1": [
+        14603,
+        "(Иллидарии)"
+      ],
+      "hotkey1": [
+        28642,
+        "Z"
+      ],
+      "hotkey2": [
+        28643,
+        "Z"
+      ],
+      "hotkey3": [
+        28644,
+        "Z"
+      ],
+      "hotkey4": [
+        28645,
+        "Z"
+      ],
+      "hotkey5": [
+        28646,
+        "Z"
+      ],
+      "hotkey6": [
+        28698,
+        "Z"
+      ],
+      "name1": [
+        14508,
+        "|cffc8dc8cВладение магией|r"
+      ],
+      "name2": [
+        14509,
+        "|cffc8dc8cВладение магией|r"
+      ],
+      "name3": [
+        14510,
+        "|cffc8dc8cВладение магией|r"
+      ],
+      "name4": [
+        14513,
+        "|cffc8dc8cВладение магией|r"
+      ],
+      "name5": [
+        14512,
+        "|cffc8dc8cВладение магией|r"
+      ],
+      "name6": [
+        14511,
+        "|cffc8dc8cВладение магией|r"
+      ],
+      "tip1": [
+        14514,
+        "«|cffc8dc8cВладение магией|r» "
+      ],
+      "tip2": [
+        14515,
+        "«|cffc8dc8cВладение магией|r» "
+      ],
+      "tip3": [
+        14516,
+        "«|cffc8dc8cВладение магией|r» "
+      ],
+      "tip4": [
+        14519,
+        "«|cffc8dc8cВладение магией|r» "
+      ],
+      "tip5": [
+        14518,
+        "«|cffc8dc8cВладение магией|r» "
+      ],
+      "tip6": [
+        14517,
+        "«|cffc8dc8cВладение магией|r» "
+      ],
+      "ubertip1": [
+        14529,
+        "Увеличивает урон солдат, сражающихся в с помощью магии."
+      ],
+      "ubertip2": [
+        14530,
+        "Увеличивает урон солдат, сражающихся в с помощью магии."
+      ],
+      "ubertip3": [
+        14531,
+        "Увеличивает урон солдат, сражающихся в с помощью магии."
+      ],
+      "ubertip4": [
+        14521,
+        "Увеличивает урон солдат, сражающихся в с помощью магии."
+      ],
+      "ubertip5": [
+        14520,
+        "Увеличивает урон солдат, сражающихся в с помощью магии."
+      ],
+      "ubertip6": [
+        14522,
+        "Увеличивает урон солдат, сражающихся в с помощью магии."
+      ]
+    },
+    "R096": {
+      "editorsuffix1": [
+        14732,
+        "(Иллидарии)"
+      ],
+      "editorsuffix2": [
+        14753,
+        "(Иллидарии)"
+      ],
+      "editorsuffix3": [
+        14781,
+        "(Иллидарии)"
+      ],
+      "effect1": [
+        10783,
+        "rats"
+      ],
+      "effect2": [
+        12717,
+        "ratx"
+      ],
+      "effect3": [
+        19821,
+        "rlev"
+      ],
+      "hotkey1": [
+        32191,
+        "X"
+      ],
+      "hotkey2": [
+        32350,
+        "X"
+      ],
+      "hotkey3": [
+        32383,
+        "X"
+      ],
+      "name1": [
+        14802,
+        "|cffc8dc8cТренировки Охотников|r [|cffc8dc8c1|r]"
+      ],
+      "name2": [
+        14806,
+        "|cffc8dc8cТренировки Охотников|r [|cffc8dc8c2|r]"
+      ],
+      "name3": [
+        14807,
+        "|cffc8dc8cТренировки Охотников|r [|cffc8dc8c3|r]"
+      ],
+      "tip1": [
+        14728,
+        "Исследовать «|cffc8dc8cТренировки Охотников|r»"
+      ],
+      "tip2": [
+        14737,
+        "Исследовать «|cffc8dc8cТренировки Охотников|r»"
+      ],
+      "tip3": [
+        14738,
+        "Исследовать «|cffc8dc8cТренировки Охотников|r»"
+      ],
+      "ubertip1": [
+        38530,
+        "Охотники на демонов проходят сложнейшие тренировки, увеличивае свое мастерство.\n|cffc8dc8cУвеличивает скорость боя -  5%.\nУвеличивает урон - 4.\nУвеличивает шанс уклонения на 6%.|r"
+      ],
+      "ubertip2": [
+        38531,
+        "Охотники на демонов проходят сложнейшие тренировки, увеличивае свое мастерство.\n|cffc8dc8cУвеличивает скорость боя -  5%.\nУвеличивает урон - 4.\nУвеличивает шанс уклонения на 6%.|r"
+      ],
+      "ubertip3": [
+        38532,
+        "Охотники на демонов проходят сложнейшие тренировки, увеличивае свое мастерство.\n|cffc8dc8cУвеличивает скорость боя -  5%.\nУвеличивает урон - 4.\nУвеличивает шанс уклонения на 6%.|r"
+      ]
+    },
+    "R099": {
+      "editorsuffix1": [
+        14851,
+        "(Иллидарии)"
+      ],
+      "effect1": [
+        14724,
+        "ratx"
+      ],
+      "effect2": [
+        14712,
+        "rmvx"
+      ],
+      "hotkey1": [
+        37461,
+        "W"
+      ],
+      "name1": [
+        14852,
+        "|cffc8dc8cПриоритет Наги|r"
+      ],
+      "tip1": [
+        15228,
+        "Исследовать «|cffc8dc8cПриоритет Наги|r»"
+      ],
+      "ubertip1": [
+        14858,
+        "После этого исследования в приоритете будет тренировка войск |cffc8dc8cНаг|r.\n|cffc8dc8cУвеличивает урон - 4.\nУвеличивает скорость передвижения - 20.|r\n|cffff0000Важно: Исследовать \"Приоритет Эльфы\", \"Приоритет Орки\", будет невозможно.|r"
+      ]
+    },
+    "R09A": {
+      "editorsuffix1": [
+        14854,
+        "(Иллидарии)"
+      ],
+      "effect1": [
+        14863,
+        "rhpx"
+      ],
+      "effect2": [
+        12724,
+        "rats"
+      ],
+      "hotkey1": [
+        34579,
+        "E"
+      ],
+      "name1": [
+        14859,
+        "|cffc8dc8cПриоритет Эльфы|r"
+      ],
+      "tip1": [
+        14860,
+        "Исследовать «|cffc8dc8cПриоритет Эльфы|r»"
+      ],
+      "ubertip1": [
+        14865,
+        "После этого исследования в приоритете будет тренировка войск |cffc8dc8cЭльфы|r.\n|cffc8dc8cУвеличивает здоровье - 50.\nУвеличивает скорость боя - 15%.|r\n|cffff0000Важно: Исследовать \"Приоритет Наги\", \"Приоритет Орки\", будет невозможно.|r"
+      ]
+    },
+    "R09B": {
+      "editorsuffix1": [
+        14861,
+        "(Иллидарии)"
+      ],
+      "effect1": [
+        14741,
+        "ratx"
+      ],
+      "hotkey1": [
+        35752,
+        "R"
+      ],
+      "name1": [
+        14866,
+        "|cffc8dc8cПриоритет Орки|r"
+      ],
+      "tip1": [
+        14867,
+        "Исследовать «|cffc8dc8cПриоритет Орки|r»"
+      ],
+      "ubertip1": [
+        2950,
+        "После этого исследования в приоритете будет тренировка войск |cffc8dc8cОрков|r.\n|cffc8dc8cУвеличивает урон - 10.\n|cffff0000Важно: Исследовать \"Приоритет Наги\", \"Приоритет Эльфы\", будет невозможно.|r"
+      ]
+    },
+    "R08Y": {
+      "editorsuffix1": [
+        14640,
+        "(Иллидарии)"
+      ],
+      "hotkey1": [
+        17691,
+        "A"
+      ],
+      "name1": [
+        14541,
+        "|cffc8dc8cУкрыться за щитом|r"
+      ],
+      "tip1": [
+        14550,
+        "Исследовать «|cffc8dc8cУкрыться за щитом|r»"
+      ]
+    },
+    "R091": {
+      "editorsuffix1": [
+        14651,
+        "(Иллидарии)"
+      ],
+      "editorsuffix2": [
+        14652,
+        "(Иллидарии)"
+      ],
+      "editorsuffix3": [
+        14698,
+        "(Иллидарии)"
+      ],
+      "hotkey1": [
+        17590,
+        "S"
+      ],
+      "hotkey2": [
+        17591,
+        "S"
+      ],
+      "hotkey3": [
+        17592,
+        "S"
+      ],
+      "name1": [
+        14628,
+        "|cffc8dc8cГрубая сила|r"
+      ],
+      "name2": [
+        14633,
+        "|cffc8dc8cГрубая сила|r"
+      ],
+      "name3": [
+        14634,
+        "|cffc8dc8cГрубая сила|r"
+      ],
+      "tip1": [
+        14629,
+        "Исследовать «|cffc8dc8cГрубая сила|r»"
+      ],
+      "tip2": [
+        14636,
+        "Исследовать «|cffc8dc8cГрубая сила|r»"
+      ],
+      "tip3": [
+        14635,
+        "Исследовать «|cffc8dc8cГрубая сила|r»"
+      ],
+      "ubertip1": [
+        14637,
+        "|cffc8dc8c+<Robs,base1>|r к запасу здоровья |cffc8dc8cрубак|r, |cffc8dc8cСумеречных налетчиков|r и |cffc8dc8c+<Robs,base2>|r к урону от их атак."
+      ],
+      "ubertip2": [
+        14638,
+        "|cffc8dc8c+<Robs,base1>|r к запасу здоровья |cffc8dc8cрубак|r, |cffc8dc8cСумеречных налетчиков|r и |cffc8dc8c+<Robs,base2>|r к урону от их атак."
+      ],
+      "ubertip3": [
+        14639,
+        "|cffc8dc8c+<Robs,base1>|r к запасу здоровья |cffc8dc8cрубак|r, |cffc8dc8cСумеречных налетчиков|r и |cffc8dc8c+<Robs,base2>|r к урону от их атак."
+      ]
+    },
+    "R095": {
+      "editorsuffix1": [
+        14726,
+        "(иллидарии)"
+      ],
+      "effect1": [
+        10497,
+        "rmvx"
+      ],
+      "effect2": [
+        12641,
+        "ratx"
+      ],
+      "hotkey1": [
+        18621,
+        "D"
+      ],
+      "hotkey2": [
+        18622,
+        "D"
+      ],
+      "name1": [
+        14716,
+        "|cffc8dc8cЯростный рывок|r"
+      ],
+      "name2": [
+        14717,
+        "|cffc8dc8cЯростный рывок|r"
+      ],
+      "tip1": [
+        14720,
+        "|cffc8dc8cЯростный рывок|r"
+      ],
+      "tip2": [
+        14721,
+        "|cffc8dc8cЯростный рывок|r"
+      ],
+      "ubertip1": [
+        14722,
+        "Ускоряет передвижение |cffc8dc8cСумеречного налетчика|r, но понижает его урон.\n|cffc8dc8cК скорости передвижения - 35.\n|cffff0000Важно|r: |cffc8dc8cПонижает урон на (-3)|r.|r"
+      ],
+      "ubertip2": [
+        14725,
+        "Ускоряет передвижение |cffc8dc8cСумеречного налетчика|r, но понижает его урон.\n|cffc8dc8cК скорости передвижения - 35.\n|cffff0000Важно|r: |cffc8dc8cПонижает урон на (-3)|r.|r"
+      ]
+    },
+    "R08Z": {
+      "editorsuffix1": [
+        14641,
+        "(Иллидарии)"
+      ],
+      "hotkey1": [
+        17741,
+        "A"
+      ],
+      "hotkey2": [
+        17742,
+        "A"
+      ],
+      "hotkey3": [
+        17692,
+        "A"
+      ],
+      "hotkey4": [
+        17716,
+        "A"
+      ],
+      "hotkey5": [
+        17717,
+        "A"
+      ],
+      "hotkey6": [
+        17718,
+        "A"
+      ],
+      "name1": [
+        14585,
+        "|cffc8dc8cПосвящение магистров|r |cffffff00(Уровень 1)|r"
+      ],
+      "name2": [
+        14580,
+        "|cffc8dc8cПосвящение магистров|r |cffffff00(Уровень 2)|r"
+      ],
+      "name3": [
+        14581,
+        "|cffc8dc8cПосвящение магистров|r |cffffff00(Уровень 3)|r"
+      ],
+      "name4": [
+        14582,
+        "|cffc8dc8cПосвящение магистров|r |cffffff00(Уровень 4)|r"
+      ],
+      "name5": [
+        14583,
+        "|cffc8dc8cПосвящение магистров|r |cffffff00(Уровень 5)|r"
+      ],
+      "name6": [
+        14584,
+        "|cffc8dc8cПосвящение магистров|r |cffffff00(Уровень 6)|r"
+      ],
+      "tip1": [
+        14586,
+        "|cffc8dc8cПосвящение магистров|r |cffffff00(Уровень 1)|r"
+      ],
+      "tip2": [
+        14587,
+        "|cffc8dc8cПосвящение магистров|r |cffffff00(Уровень 2)|r"
+      ],
+      "tip3": [
+        14588,
+        "|cffc8dc8cПосвящение магистров|r |cffffff00(Уровень 3)|r"
+      ],
+      "tip4": [
+        14589,
+        "|cffc8dc8cПосвящение магистров|r |cffffff00(Уровень 4)|r"
+      ],
+      "tip5": [
+        14590,
+        "|cffc8dc8cПосвящение магистров|r |cffffff00(Уровень 5)|r"
+      ],
+      "tip6": [
+        14591,
+        "|cffc8dc8cПосвящение магистров|r |cffffff00(Уровень 6)|r"
+      ],
+      "ubertip1": [
+        15215,
+        "Увеличивает запас здоровья и маны магистров, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 50.\nРегенерацию маны + 0.3.\nЗдоровье + 40.|r"
+      ],
+      "ubertip2": [
+        15216,
+        "Увеличивает запас здоровья и маны магистров, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 50.\nРегенерацию маны + 0.3.\nЗдоровье + 40.|r"
+      ],
+      "ubertip3": [
+        15217,
+        "Увеличивает запас здоровья и маны магистров, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 50.\nРегенерацию маны + 0.3.\nЗдоровье + 40.|r"
+      ],
+      "ubertip4": [
+        15218,
+        "Увеличивает запас здоровья и маны магистров, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 50.\nРегенерацию маны + 0.3.\nЗдоровье + 40.|r"
+      ],
+      "ubertip5": [
+        15219,
+        "Увеличивает запас здоровья и маны магистров, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 50.\nРегенерацию маны + 0.3.\nЗдоровье + 40.|r"
+      ],
+      "ubertip6": [
+        15220,
+        "Увеличивает запас здоровья и маны магистров, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 50.\nРегенерацию маны + 0.3.\nЗдоровье + 40.|r"
+      ]
+    },
+    "R090": {
+      "editorsuffix1": [
+        14642,
+        "(Иллидарии)"
+      ],
+      "hotkey1": [
+        17573,
+        "S"
+      ],
+      "hotkey2": [
+        17589,
+        "S"
+      ],
+      "hotkey3": [
+        17480,
+        "S"
+      ],
+      "hotkey4": [
+        17487,
+        "S"
+      ],
+      "hotkey5": [
+        17571,
+        "S"
+      ],
+      "hotkey6": [
+        17572,
+        "S"
+      ],
+      "name1": [
+        14610,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 1)|r"
+      ],
+      "name2": [
+        14605,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 2)|r"
+      ],
+      "name3": [
+        14606,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 3)|r"
+      ],
+      "name4": [
+        14607,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 4)|r"
+      ],
+      "name5": [
+        14608,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 5)|r"
+      ],
+      "name6": [
+        14609,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 6)|r"
+      ],
+      "tip1": [
+        14611,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 1)|r"
+      ],
+      "tip2": [
+        14612,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 2)|r"
+      ],
+      "tip3": [
+        14613,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 3)|r"
+      ],
+      "tip4": [
+        14614,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 4)|r"
+      ],
+      "tip5": [
+        14615,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 5)|r"
+      ],
+      "tip6": [
+        14616,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 6)|r"
+      ],
+      "ubertip1": [
+        15221,
+        "Увеличивает запас здоровья и маны чернокнижников, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 40.\nРегенерацию маны + 0.5.\nЗдоровье + 40.|r"
+      ],
+      "ubertip2": [
+        15222,
+        "Увеличивает запас здоровья и маны чернокнижников, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 40.\nРегенерацию маны + 0.5.\nЗдоровье + 40.|r"
+      ],
+      "ubertip3": [
+        15223,
+        "Увеличивает запас здоровья и маны чернокнижников, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 40.\nРегенерацию маны + 0.5.\nЗдоровье + 40.|r"
+      ],
+      "ubertip4": [
+        15224,
+        "Увеличивает запас здоровья и маны чернокнижников, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 40.\nРегенерацию маны + 0.5.\nЗдоровье + 40.|r"
+      ],
+      "ubertip5": [
+        15225,
+        "Увеличивает запас здоровья и маны чернокнижников, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 40.\nРегенерацию маны + 0.5.\nЗдоровье + 40.|r"
+      ],
+      "ubertip6": [
+        15226,
+        "Увеличивает запас здоровья и маны чернокнижников, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 40.\nРегенерацию маны + 0.5.\nЗдоровье + 40.|r"
+      ]
+    },
+    "R094": {
+      "editorsuffix1": [
+        14715,
+        "(иллидарии)"
+      ],
+      "effect1": [
+        9621,
+        "rmvx"
+      ],
+      "effect2": [
+        14742,
+        "rhpx"
+      ],
+      "hotkey1": [
+        17766,
+        "A"
+      ],
+      "hotkey2": [
+        17767,
+        "A"
+      ],
+      "name1": [
+        14705,
+        "|cffc8dc8cМутация Наг|r"
+      ],
+      "name2": [
+        14706,
+        "|cffc8dc8cМутация Наг|r"
+      ],
+      "tip1": [
+        14709,
+        "|cffc8dc8cМутация Наг|r"
+      ],
+      "tip2": [
+        14710,
+        "|cffc8dc8cМутация Наг|r"
+      ],
+      "ubertip1": [
+        14711,
+        "Увеличивает запас здоровья, ускоряет передвижение, а также обучает их новым способностям.\n|cffc8dc8cК скорости передвижения - 20.\nК здоровью - 35.|r"
+      ],
+      "ubertip2": [
+        14714,
+        "Увеличивает запас здоровья, ускоряет передвижение, а также обучает их новым способностям.\n|cffc8dc8cК скорости передвижения - 20.\nК здоровью - 35.|r"
+      ]
+    },
+    "R092": {
+      "editorsuffix1": [
+        14729,
+        "(Иллидарии)"
+      ],
+      "hotkey1": [
+        17593,
+        "S"
+      ],
+      "hotkey2": [
+        17743,
+        "A"
+      ],
+      "name1": [
+        40385,
+        "|cffc8dc8cОпутывание|r"
+      ],
+      "name2": [
+        14648,
+        "|cffe1c8ebИсследование маны|r"
+      ],
+      "tip1": [
+        40386,
+        "|cffc8dc8cОпутывание|r"
+      ],
+      "tip2": [
+        14649,
+        "|cffe1c8ebИсследование маны|r"
+      ],
+      "ubertip1": [
+        14645,
+        "Выдать \"|cffc8dc8cСетку|r\" для поимки врагов."
+      ],
+      "ubertip2": [
+        14650,
+        "Открывает способности лечения, увеличивает количество маны и регенерацию."
+      ]
+    },
+    "R093": {
+      "editorsuffix1": [
+        14731,
+        "(Иллидарии)"
+      ],
+      "hotkey1": [
+        18597,
+        "D"
+      ],
+      "hotkey2": [
+        18620,
+        "D"
+      ],
+      "hotkey3": [
+        18458,
+        "D"
+      ],
+      "hotkey4": [
+        18589,
+        "D"
+      ],
+      "hotkey5": [
+        18590,
+        "D"
+      ],
+      "hotkey6": [
+        18591,
+        "D"
+      ],
+      "name1": [
+        14659,
+        "|cffc8dc8cМагия воды|r |cffffff00(Уровень 1)|r"
+      ],
+      "name2": [
+        14654,
+        "|cffc8dc8cМагия воды|r |cffffff00(Уровень 2)|r"
+      ],
+      "name3": [
+        14655,
+        "|cffc8dc8cМагия воды|r |cffffff00(Уровень 3)|r"
+      ],
+      "name4": [
+        14656,
+        "|cffc8dc8cМагия воды|r |cffffff00(Уровень 4)|r"
+      ],
+      "name5": [
+        14657,
+        "|cffc8dc8cМагия воды|r |cffffff00(Уровень 5)|r"
+      ],
+      "name6": [
+        14658,
+        "|cffc8dc8cМагия воды|r |cffffff00(Уровень 6)|r"
+      ],
+      "tip1": [
+        14660,
+        "|cffc8dc8cМагия воды|r |cffffff00(Уровень 1)|r"
+      ],
+      "tip2": [
+        14661,
+        "|cffc8dc8cМагия воды|r |cffffff00(Уровень 2)|r"
+      ],
+      "tip3": [
+        14662,
+        "|cffc8dc8cМагия воды|r |cffffff00(Уровень 3)|r"
+      ],
+      "tip4": [
+        14663,
+        "|cffc8dc8cМагия воды|r |cffffff00(Уровень 4)|r"
+      ],
+      "tip5": [
+        14664,
+        "|cffc8dc8cМагия воды|r |cffffff00(Уровень 5)|r"
+      ],
+      "tip6": [
+        14665,
+        "|cffc8dc8cМагия воды|r |cffffff00(Уровень 6)|r"
+      ],
+      "ubertip1": [
+        16042,
+        "Увеличивает запас здоровья и маны |cffc8dc8cнаге сирене|r, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 50.\nРегенерацию маны + 0.3.\nЗдоровье + 70.|r"
+      ],
+      "ubertip2": [
+        16043,
+        "Увеличивает запас здоровья и маны |cffc8dc8cнаге сирене|r, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 50.\nРегенерацию маны + 0.3.\nЗдоровье + 70.|r"
+      ],
+      "ubertip3": [
+        16044,
+        "Увеличивает запас здоровья и маны |cffc8dc8cнаге сирене|r, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 50.\nРегенерацию маны + 0.3.\nЗдоровье + 70.|r"
+      ],
+      "ubertip4": [
+        16045,
+        "Увеличивает запас здоровья и маны |cffc8dc8cнаге сирене|r, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 50.\nРегенерацию маны + 0.3.\nЗдоровье + 70.|r"
+      ],
+      "ubertip5": [
+        16046,
+        "Увеличивает запас здоровья и маны |cffc8dc8cнаге сирене|r, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 50.\nРегенерацию маны + 0.3.\nЗдоровье + 70.|r"
+      ],
+      "ubertip6": [
+        16047,
+        "Увеличивает запас здоровья и маны |cffc8dc8cнаге сирене|r, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 50.\nРегенерацию маны + 0.3.\nЗдоровье + 70.|r"
+      ]
+    },
+    "R097": {
+      "editorsuffix1": [
+        14808,
+        "(Иллидарии)"
+      ],
+      "hotkey1": [
+        36854,
+        "Q"
+      ],
+      "hotkey2": [
+        36855,
+        "Q"
+      ],
+      "hotkey3": [
+        36934,
+        "Q"
+      ],
+      "hotkey4": [
+        36935,
+        "Q"
+      ],
+      "hotkey5": [
+        36985,
+        "Q"
+      ],
+      "hotkey6": [
+        36986,
+        "Q"
+      ],
+      "name1": [
+        14745,
+        "|cffc8dc8cУлучшенные топоры|r"
+      ],
+      "name2": [
+        14746,
+        "|cffc8dc8cУлучшенные топоры|r"
+      ],
+      "name3": [
+        14755,
+        "|cffc8dc8cУлучшенные топоры|r"
+      ],
+      "name4": [
+        18382,
+        "|cffc8dc8cУлучшенные топоры|r"
+      ],
+      "name5": [
+        18383,
+        "|cffc8dc8cУлучшенные топоры|r"
+      ],
+      "name6": [
+        19466,
+        "|cffc8dc8cУлучшенные топоры|r"
+      ],
+      "tip1": [
+        14749,
+        "Исследовать |cffc8dc8cУлучшенные топоры|r"
+      ],
+      "tip2": [
+        14750,
+        "Исследовать |cffc8dc8cУлучшенные топоры|r"
+      ],
+      "tip3": [
+        14756,
+        "Исследовать |cffc8dc8cУлучшенные топоры|r"
+      ],
+      "tip4": [
+        20837,
+        "Исследовать |cffc8dc8cУлучшенные топоры|r"
+      ],
+      "tip5": [
+        20844,
+        "Исследовать |cffc8dc8cУлучшенные топоры|r"
+      ],
+      "tip6": [
+        20845,
+        "Исследовать |cffc8dc8cУлучшенные топоры|r"
+      ],
+      "ubertip1": [
+        14751,
+        "Увеличивают объем переносимой работниками древесины на |cffc8dc8c<Rhlh,mod1>|r."
+      ],
+      "ubertip2": [
+        14752,
+        "Увеличивают объем переносимой работниками древесины еще на |cffc8dc8c<Rhlh,mod1>|r."
+      ],
+      "ubertip3": [
+        14757,
+        "Увеличивают объем переносимой работниками древесины еще на |cffc8dc8c<Rhlh,mod1>|r."
+      ],
+      "ubertip4": [
+        20846,
+        "Увеличивают объем переносимой работниками древесины еще на |cffc8dc8c<Rhlh,mod1>|r."
+      ],
+      "ubertip5": [
+        20847,
+        "Увеличивают объем переносимой работниками древесины еще на |cffc8dc8c<Rhlh,mod1>|r."
+      ],
+      "ubertip6": [
+        20848,
+        "Увеличивают объем переносимой работниками древесины еще на |cffc8dc8c<Rhlh,mod1>|r."
+      ]
+    },
+    "R098": {
+      "editorsuffix1": [
+        14850,
+        "(Иллидарии)"
+      ],
+      "effect1": [
+        10782,
+        "rmvx"
+      ],
+      "hotkey1": [
+        17781,
+        "A"
+      ],
+      "hotkey2": [
+        18367,
+        "A"
+      ],
+      "hotkey3": [
+        17594,
+        "S"
+      ],
+      "hotkey4": [
+        17595,
+        "S"
+      ],
+      "hotkey5": [
+        17824,
+        "S"
+      ],
+      "hotkey6": [
+        17868,
+        "S"
+      ],
+      "name1": [
+        14815,
+        "|cffc8dc8cВладение скверной|r |cffffff00(Уровень 1)|r"
+      ],
+      "name2": [
+        14810,
+        "|cffc8dc8cВладение скверной|r |cffffff00(Уровень 2)|r"
+      ],
+      "name3": [
+        14811,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 3)|r"
+      ],
+      "name4": [
+        14812,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 4)|r"
+      ],
+      "name5": [
+        14813,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 5)|r"
+      ],
+      "name6": [
+        14814,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 6)|r"
+      ],
+      "tip1": [
+        14816,
+        "|cffc8dc8cВладение скверной|r |cffffff00(Уровень 1)|r"
+      ],
+      "tip2": [
+        14817,
+        "|cffc8dc8cВладение скверной|r |cffffff00(Уровень 2)|r"
+      ],
+      "tip3": [
+        14818,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 3)|r"
+      ],
+      "tip4": [
+        14819,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 4)|r"
+      ],
+      "tip5": [
+        14820,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 5)|r"
+      ],
+      "tip6": [
+        14821,
+        "|cffc8dc8cПосвящение чернокнижников|r |cffffff00(Уровень 6)|r"
+      ],
+      "ubertip1": [
+        14809,
+        "Позволяет |cffc8dc8cПокоренному демону|r использовать новые способности.\n"
+      ],
+      "ubertip2": [
+        14822,
+        "Позволяет |cffc8dc8cПокоренному демону|r использовать новые способности.\n"
+      ],
+      "ubertip3": [
+        14604,
+        "Увеличивает запас здоровья и маны чернокнижников, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 70.\nРегенерацию маны + 0.5.\nЗдоровье + 40.|r"
+      ],
+      "ubertip4": [
+        14617,
+        "Увеличивает запас здоровья и маны чернокнижников, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 70.\nРегенерацию маны + 0.5.\nЗдоровье + 40.|r"
+      ],
+      "ubertip5": [
+        14618,
+        "Увеличивает запас здоровья и маны чернокнижников, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 70.\nРегенерацию маны + 0.5.\nЗдоровье + 40.|r"
+      ],
+      "ubertip6": [
+        14619,
+        "Увеличивает запас здоровья и маны чернокнижников, ускоряет регенерацию их маны.\n|cffc8dc8cУвеличивает ману + 70.\nРегенерацию маны + 0.5.\nЗдоровье + 40.|r"
+      ]
+    },
+    "R07H": {
+      "name1": [
+        9219,
+        "|cffe6beaaИллидари"
+      ],
+      "tip1": [
+        9220,
+        "|cffe6beaaИллидари"
+      ],
+      "ubertip1": [
+        9444,
+        "Войско созданное и организованное Иллиданом Яростью Бури из собственных последователей, для борьбы с Пылающим Легионом."
+      ]
+    },
+    "R0KZ": {
+      "name1": [
+        5721,
+        "|cffe6beaaИллидари или Наги|r"
+      ],
+      "tip1": [
+        9416,
+        "|cffe6beaaИллидари или Наги|r"
+      ],
+      "ubertip1": [
+        12518,
+        "Войско созданное и организованное Иллиданом Яростью Бури из собственных последователей, для борьбы с Пылающим Легионом."
+      ]
+    },
+    "R0L0": {
+      "name1": [
+        12039,
+        "|cffe6beaaЭльфы Крови или Иллидари|r"
+      ],
+      "tip1": [
+        12062,
+        "|cffe6beaaЭльфы Крови или Иллидари|r"
+      ],
+      "ubertip1": [
+        20115,
+        "Войско созданное и организованное Иллиданом Яростью Бури из собственных последователей, для борьбы с Пылающим Легионом."
+      ]
+    }
+  },
+  "abilities": {
+    "AHfs": {
+      "editorsuffix": [
+        10983,
+        "(Общее)"
+      ],
+      "hotkey": [
+        8693,
+        "Q"
+      ],
+      "researchhotkey": [
+        8694,
+        "Q"
+      ],
+      "tip4": [
+        5617,
+        "|cffe4cfa3Огненный столб|r [|cffffffff4-й уровень|r] (|cffffffffQ|r)"
+      ],
+      "ubertip4": [
+        1441,
+        "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff150|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+      ]
+    },
+    "AHbn": {
+      "hotkey": [
+        8861,
+        "W"
+      ],
+      "name": [
+        25760,
+        "Banishment"
+      ],
+      "researchhotkey": [
+        8860,
+        "W"
+      ],
+      "researchtip": [
+        25761,
+        "Study \"Banishment\" [|cffffcc00%d level|r]"
+      ],
+      "researchubertip": [
+        25762,
+        "Banishes the target to another realm and temporarily slows its movement by <AHbn,DataA1,%>%. Banished targets cannot attack but can use abilities. Additionally, some abilities deal increased damage to them. Does not affect mechanical units.  \n|n|n|cffffcc001st level:|r lasts <AHbn,Dur1> sec., costs <AHbn,Cost1> mana.  \n|n|cffffcc002nd level:|r lasts <AHbn,Dur2> sec., costs <AHbn,Cost2> mana.  \n|n|cffffcc003rd level:|r lasts <AHbn,Dur3> sec., costs <AHbn,Cost3> mana."
+      ],
+      "tip4": [
+        5621,
+        "Изгнание [|cffffcc004-й уровень|r]"
+      ],
+      "ubertip4": [
+        5622,
+        "Изгоняет цель в иной мир и замедляет ее передвижение на <AHbn,DataA4,%>% на <AHbn,Dur4> сек. Изгнанные цели не могут атаковать, но могут применять способности. Кроме того, некоторые способности наносят им больше урона."
+      ]
+    },
+    "AHdr": {
+      "hotkey": [
+        10468,
+        "E"
+      ],
+      "researchhotkey": [
+        10467,
+        "E"
+      ],
+      "researchubertip": [
+        32062,
+        "Вытягивает ману из врага.|n|n|cffffcc001-й уровень:|r <AHdr,DataB1> маны/сек. |n|cffffcc002-й уровень:|r <AHdr,DataB2> маны/сек. |n|cffffcc003-й уровень:|r <AHdr,DataB3> маны/сек.|n|cffffcc004-й уровень:|r <AHdr,DataB4> маны/сек."
+      ],
+      "tip4": [
+        5619,
+        "Похищение маны [|cffffcc004-й уровень|r]"
+      ],
+      "ubertip4": [
+        5620,
+        "Вытягивает <AHdr,DataB4> маны/сек. из врага или передает <AHdr,DataE4> маны/сек. союзнику.|n|nПри этом запас маны мага крови может превысить максимальный, но неиспользованные излишки быстро исчезают.|nВремя действия: <AHdr,Dur4> сек."
+      ]
+    },
+    "AHpx": {
+      "hotkey": [
+        7168,
+        "R"
+      ],
+      "name": [
+        16143,
+        "|cffe4cfa3Феникс|r"
+      ],
+      "researchhotkey": [
+        7167,
+        "R"
+      ],
+      "researchtip": [
+        16142,
+        "Изучить «|cffe4cfa3Феникс|r» [|cffffffff%d-й уровень|r] (|cffffffffR|r)"
+      ],
+      "researchubertip": [
+        16144,
+        "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает могучего огненного феникса, сжигающего врагов в бою. Феникс невосприимчив к магии, обладает устойчивой кожей, а при гибели превращается в яйцо, из которого возрождается заново.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: призывает |cffffffff1|cffced4da феникса, перезарядка |cffffffff180|cffced4da сек.|n- |cffffffff2|cffced4da: призывает |cffffffff2|cffced4da фениксов, перезарядка |cffffffff120|cffced4da сек.|r"
+      ],
+      "tip2": [
+        5623,
+        "|cffe4cfa3Феникс|r [|cffffffff2-й уровень|r] (|cffffffffR|r)"
+      ],
+      "ubertip2": [
+        5624,
+        "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff2|cffced4da могучих огненных фениксов. Фениксы невосприимчивы к магии, наносят периодический урон огнём вокруг себя и перерождаются из яиц после гибели.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+      ]
+    },
+    "AEmb": {
+      "hotkey": [
+        8959,
+        "Q"
+      ],
+      "name": [
+        14288,
+        "|cffc8dc8cСожжение маны|r"
+      ],
+      "researchhotkey": [
+        8871,
+        "Q"
+      ],
+      "researchtip": [
+        14289,
+        "Изучить «|cffc8dc8cСожжение маны|r» [|cffffcc00%d-й уровень|r]"
+      ],
+      "researchubertip": [
+        14290,
+        "Сжигает ману врага и наносит ему урон, равный объему сожженной маны. |n|n|cffffcc001-й уровень:|r |cffc8dc8cсжигает до <AEmb,DataA1> маны.|r |n|cffffcc002-й уровень:|r |cffc8dc8cсжигает до <AEmb,DataA2> маны.|r |n|cffffcc003-й уровень:|r |cffc8dc8cсжигает до <AEmb,DataA3> маны.|r|n|cffffcc004-й уровень:|r |cffc8dc8cсжигает до 200 маны.|r"
+      ],
+      "tip1": [
+        14291,
+        "|cffc8dc8cСожжение маны|r [|cffffcc001-й уровень|r]"
+      ],
+      "tip2": [
+        14292,
+        "|cffc8dc8cСожжение маны|r [|cffffcc002-й уровень|r]"
+      ],
+      "tip3": [
+        14293,
+        "|cffc8dc8cСожжение маны|r [|cffffcc003-й уровень|r]"
+      ],
+      "tip4": [
+        14294,
+        "|cffc8dc8cСожжение маны|r [|cffffcc004-й уровень|r]"
+      ],
+      "ubertip1": [
+        14295,
+        "Сжигает до |cffc8dc8c<AEmb,DataA1>|r маны врага и наносит ему столько же урона."
+      ],
+      "ubertip2": [
+        14296,
+        "Сжигает до |cffc8dc8c<AEmb,DataA2>|r маны врага и наносит ему столько же урона."
+      ],
+      "ubertip3": [
+        14297,
+        "Сжигает до |cffc8dc8c<AEmb,DataA3>|r маны врага и наносит ему столько же урона."
+      ],
+      "ubertip4": [
+        14298,
+        "Сжигает до |cffc8dc8c200|r маны врага и наносит ему столько же урона."
+      ],
+      "unhotkey": [
+        8960,
+        "Q"
+      ]
+    },
+    "AEim": {
+      "hotkey": [
+        9209,
+        "W"
+      ],
+      "name": [
+        2052,
+        "|cffc8dc8cОбжигающий жар|r"
+      ],
+      "researchhotkey": [
+        9208,
+        "W"
+      ],
+      "researchtip": [
+        9742,
+        "Изучить «|cffc8dc8cОбжигающий жар|r» [|cffffcc00%d-й уровень|r]"
+      ],
+      "researchubertip": [
+        14287,
+        "Окружает охотника на демонов огнем, который наносит урон находящимся рядом наземным врагам. |nРасходует ману до отмены. |n|n|cffffcc001-й уровень:|r |cffc8dc8c<AEim,DataA1> урона/сек|r. |n|cffffcc002-й уровень:|r |cffc8dc8c<AEim,DataA2> урона/сек|r. |n|cffffcc003-й уровень:|r |cffc8dc8c<AEim,DataA3> урона/сек|r.|n|cffffcc004-й уровень:|r |cffc8dc8c25 урона/сек.|r"
+      ],
+      "tip1": [
+        9756,
+        "Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc001-й уровень|r]"
+      ],
+      "tip2": [
+        9758,
+        "Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc002-й уровень|r]"
+      ],
+      "tip3": [
+        9760,
+        "Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc003-й уровень|r]"
+      ],
+      "tip4": [
+        9910,
+        "Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc004-й уровень|r]"
+      ],
+      "ubertip1": [
+        14227,
+        "При использовании активирует огненную ауру, которая наносит |cffc8dc8c<AEim,DataA1> урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены."
+      ],
+      "ubertip2": [
+        14230,
+        "При использовании активирует огненную ауру, которая наносит |cffc8dc8c<AEim,DataA2> урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены."
+      ],
+      "ubertip3": [
+        14233,
+        "При использовании активирует огненную ауру, которая наносит |cffc8dc8c<AEim,DataA3> урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены."
+      ],
+      "ubertip4": [
+        14236,
+        "При использовании активирует огненную ауру, которая наносит |cffc8dc8c25 урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены."
+      ],
+      "unhotkey": [
+        9399,
+        "W"
+      ],
+      "untip1": [
+        14237,
+        "Отменить «|cffc8dc8cОбжигающий жар|r»"
+      ],
+      "untip2": [
+        14240,
+        "Отменить «|cffc8dc8cОбжигающий жар|r»"
+      ],
+      "untip3": [
+        14281,
+        "Отменить «|cffc8dc8cОбжигающий жар|r»"
+      ],
+      "untip4": [
+        14282,
+        "Отменить «|cffc8dc8cОбжигающий жар|r»"
+      ],
+      "unubertip1": [
+        14283,
+        "Прерывает «|cffc8dc8cОбжигающий жар|r». Останавливает расход маны."
+      ],
+      "unubertip2": [
+        14284,
+        "Прерывает «|cffc8dc8cОбжигающий жар|r». Останавливает расход маны."
+      ],
+      "unubertip3": [
+        14285,
+        "Прерывает «|cffc8dc8cОбжигающий жар|r». Останавливает расход маны."
+      ],
+      "unubertip4": [
+        14286,
+        "Прерывает «|cffc8dc8cОбжигающий жар|r». Останавливает расход маны."
+      ]
+    },
+    "AEev": {
+      "editorsuffix": [
+        12891,
+        "(Общее)"
+      ],
+      "hotkey": [
+        10745,
+        "E"
+      ],
+      "name": [
+        5770,
+        "|cffc8dc8cУскользание|r"
+      ],
+      "researchtip": [
+        8767,
+        "Изучить «|cffc8dc8cУскользание|r» [|cffffcc00%d-й уровень|r]"
+      ],
+      "researchubertip": [
+        12249,
+        "Дает шанс уклониться от атаки. |n|n|cffffcc001-й уровень:|r |cffc8dc8c<AEev,DataA1,%>%-й шанс.|r |n|cffffcc002-й уровень:|r |cffc8dc8c<AEev,DataA2,%>%-й шанс.|r |n|cffffcc003-й уровень:|r |cffc8dc8c<AEev,DataA3,%>%-й шанс.|r|n|cffffcc004-й уровень:|r |cffc8dc8c40%-й шанс.|r"
+      ],
+      "tip1": [
+        10941,
+        "|cffc8dc8cУскользание|r [|cffffcc001-й уровень|r]"
+      ],
+      "tip2": [
+        8771,
+        "|cffc8dc8cУскользание|r [|cffffcc002-й уровень|r]"
+      ],
+      "tip3": [
+        8772,
+        "|cffc8dc8cУскользание|r [|cffffcc003-й уровень|r]"
+      ],
+      "tip4": [
+        8775,
+        "|cffc8dc8cУскользание|r [|cffffcc004-й уровень|r]"
+      ],
+      "ubertip1": [
+        11335,
+        "Дает |cffc8dc8c<AEev,DataA1,%>%-й шанс|r уклониться от атаки."
+      ],
+      "ubertip2": [
+        8780,
+        "Дает |cffc8dc8c<AEev,DataA2,%>%-й шанс|r уклониться от атаки."
+      ],
+      "ubertip3": [
+        9392,
+        "Дает |cffc8dc8c<AEev,DataA3,%>%-й шанс|r уклониться от атаки."
+      ],
+      "ubertip4": [
+        12243,
+        "Дает |cffc8dc8c40%-й шанс|r уклониться от атаки."
+      ]
+    },
+    "A0NZ": {
+      "editorsuffix": [
+        24829,
+        "(Общее)"
+      ],
+      "hotkey": [
+        19647,
+        "R"
+      ],
+      "name": [
+        14310,
+        "|cffc8dc8cМетаморфоза|r"
+      ],
+      "researchhotkey": [
+        19690,
+        "R"
+      ],
+      "researchtip": [
+        14311,
+        "Изучить «|cffc8dc8cМетаморфоза|r»"
+      ],
+      "researchubertip": [
+        14312,
+        "Охотник превращается в демона с |cffc8dc8c<AEme,DataE1>|r здоровья, атакующего в дальнем бою. |nВремя действия:|cffc8dc8c <AEme,HeroDur1>|r сек."
+      ],
+      "tip1": [
+        14313,
+        "|cffc8dc8cМетаморфоза|r"
+      ],
+      "tip2": [
+        14314,
+        "|cffc8dc8cМетаморфоза|r"
+      ],
+      "ubertip1": [
+        14316,
+        "Охотник превращается в демона с |cffc8dc8c<AEme,DataE1>|r здоровья, атакующего в дальнем бою. |nВремя действия: |cffc8dc8c<AEme,HeroDur1>|r сек."
+      ],
+      "ubertip2": [
+        14315,
+        "Охотник превращается в демона с |cffc8dc8c700|r здоровья, атакующего в дальнем бою. |nВремя действия: |cffc8dc8c<AEme,HeroDur1>|r сек."
+      ]
+    },
+    "A0UV": {
+      "editorsuffix": [
+        14570,
+        "(Иллидарии)"
+      ],
+      "hotkey": [
+        21261,
+        "E"
+      ],
+      "name": [
+        6801,
+        "|cffc8dc8cВспышка скверны|r"
+      ],
+      "researchtip": [
+        10663,
+        "Изучить |cffc8dc8cВспышка скверны|r"
+      ],
+      "researchubertip": [
+        15469,
+        "+<Amfl,DataE1> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |n\n|n|cffffcc001-й уровень:|r|cffc8dc8cВремя действия: 30 сек. наносит урона 300 ед.|r|n|cffffcc002-й уровень:|r|cffc8dc8cВремя действия: 30 сек. наносит урона 350 ед.|r|n|cffffcc003-й уровень:|r|cffc8dc8cВремя действия: 30 сек. наносит урона 400 ед.|r|n|cffffcc004-й уровень:|r|cffc8dc8cВремя действия: 30 сек. наносит урона 450 ед.|r"
+      ],
+      "tip1": [
+        6802,
+        "|cffc8dc8cВспышка скверны|r"
+      ],
+      "tip2": [
+        6803,
+        "|cffc8dc8cВспышка скверны|r"
+      ],
+      "tip3": [
+        6806,
+        "|cffc8dc8cВспышка скверны|r"
+      ],
+      "tip4": [
+        10672,
+        "|cffc8dc8cВспышка скверны|r"
+      ],
+      "ubertip2": [
+        10666,
+        "+<Amfl,DataE2> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: <Amfl,Dur1> сек."
+      ],
+      "ubertip3": [
+        10669,
+        "+<Amfl,DataE3> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: <Amfl,Dur1> сек."
+      ],
+      "ubertip4": [
+        10675,
+        "+<Amfl,DataE4> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: <Amfl,Dur1> сек."
+      ],
+      "unhotkey": [
+        21302,
+        "E"
+      ],
+      "untip1": [
+        6807,
+        "Отменить «|cffc8dc8cВспышка скверны|r»"
+      ],
+      "untip2": [
+        7746,
+        "Отменить «|cffc8dc8cВспышка скверны|r»"
+      ],
+      "untip3": [
+        10283,
+        "Отменить «|cffc8dc8cВспышка скверны|r»"
+      ],
+      "untip4": [
+        10678,
+        "Отменить «|cffc8dc8cВспышка скверны|r»"
+      ],
+      "unubertip1": [
+        10618,
+        "Прерывает действие «|cffc8dc8cВспышка скверны|r»."
+      ],
+      "unubertip2": [
+        10622,
+        "Прерывает действие «|cffc8dc8cВспышка скверны|r»."
+      ],
+      "unubertip3": [
+        10654,
+        "Прерывает действие «|cffc8dc8cВспышка скверны|r»."
+      ],
+      "unubertip4": [
+        10681,
+        "Прерывает действие «|cffc8dc8cВспышка скверны|r»."
+      ]
+    },
+    "A0NJ": {
+      "editorsuffix": [
+        14383,
+        "(Иллидарии)"
+      ],
+      "hotkey": [
+        15998,
+        "W"
+      ],
+      "name": [
+        9824,
+        "|cffc8dc8cЖар поглощения|r"
+      ],
+      "researchhotkey": [
+        16041,
+        "W"
+      ],
+      "researchtip": [
+        9828,
+        "|cffc8dc8cЖар поглощения|r"
+      ],
+      "researchubertip": [
+        14029,
+        "Выпускает внутренний огонь скверны, который поглощает здоровье всех окружающих существ, передвая его охотнику. Длительность - |cffc8dc8c15 сек.|r|n|cffffcc001-й уровень:|r |cffc8dc8cРадиус поражения -180, урона 10 в сек.|r|n|cffffcc002-й уровень:|r |cffc8dc8cРадиус поражения -220, урона 10 в сек.|r|n|cffffcc003-й уровень:|r |cffc8dc8cРадиус поражения -220, урона 20 в сек.|r|n|cffffcc004-й уровень:|r |cffc8dc8cРадиус поражения -220, урона 30 в сек."
+      ],
+      "tip1": [
+        9826,
+        "|cffc8dc8cЖар поглощения|r"
+      ],
+      "tip2": [
+        9912,
+        "|cffc8dc8cЖар поглощения|r"
+      ],
+      "tip3": [
+        9911,
+        "|cffc8dc8cЖар поглощения|r"
+      ],
+      "tip4": [
+        11099,
+        "|cffc8dc8cЖар поглощения|r"
+      ],
+      "ubertip1": [
+        14035,
+        "Выпускает внутренний огонь скверны, который поглощает здоровье всех окружающих существ, передвая его охотнику. Длительность - |cffc8dc8c15 сек.|r|n|cffffcc001-й уровень:|r |cffc8dc8cРадиус поражения -180, урона 10 в сек."
+      ],
+      "ubertip2": [
+        14036,
+        "Выпускает внутренний огонь скверны, который поглощает здоровье всех окружающих существ, передвая его охотнику. Длительность - |cffc8dc8c15 сек.|r|n|cffffcc002-й уровень:|r |cffc8dc8cРадиус поражения -220, урона 10 в сек."
+      ],
+      "ubertip3": [
+        14039,
+        "Выпускает внутренний огонь скверны, который поглощает здоровье всех окружающих существ, передвая его охотнику. Длительность - |cffc8dc8c15 сек.|r|n|cffffcc003-й уровень:|r |cffc8dc8cРадиус поражения -220, урона 20 в сек."
+      ],
+      "ubertip4": [
+        14096,
+        "Выпускает внутренний огонь скверны, который поглощает здоровье всех окружающих существ, передвая его охотнику. Длительность - |cffc8dc8c15 сек.|r|n|cffffcc004-й уровень:|r |cffc8dc8cРадиус поражения -220, урона 30 в сек."
+      ],
+      "unhotkey": [
+        16470,
+        "W"
+      ]
+    },
+    "A0NS": {
+      "editorsuffix": [
+        14384,
+        "(Иллидарии)"
+      ],
+      "hotkey": [
+        16116,
+        "Q"
+      ],
+      "name": [
+        14194,
+        "|cffc8dc8cВзор скверны|r"
+      ],
+      "researchhotkey": [
+        16115,
+        "Q"
+      ],
+      "researchtip": [
+        14195,
+        "Изучить «|cffc8dc8cВзор скверны|r» [|cffffcc00%d-й уровень|r]"
+      ],
+      "researchubertip": [
+        14205,
+        "Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r |cffc8dc8c<AOcr,DataA1>%-й|r шанс, |cffc8dc8c<AOcr,DataB1>|r-кратный урон. |n|cffffcc002-й уровень:|r |cffc8dc8c<AOcr,DataA2>%-й|r шанс, |cffc8dc8c<AOcr,DataB2>|r-кратный урон. |n|cffffcc003-й уровень:|r |cffc8dc8c<AOcr,DataA3>%-й|r шанс, |cffc8dc8c<AOcr,DataB3>|r-кратный урон.|n|cffffcc004-й уровень:|r |cffc8dc8c15%-й|r шанс, |cffc8dc8c6|r-кратный урон."
+      ],
+      "tip1": [
+        14196,
+        "|cffc8dc8cВзор скверны|r [|cffffcc001-й уровень|r]"
+      ],
+      "tip2": [
+        14197,
+        "|cffc8dc8cВзор скверны|r [|cffffcc002-й уровень|r]"
+      ],
+      "tip3": [
+        14198,
+        "|cffc8dc8cВзор скверны|r [|cffffcc003-й уровень|r]"
+      ],
+      "tip4": [
+        14199,
+        "|cffc8dc8cВзор скверны|r [|cffffcc004-й уровень|r]"
+      ],
+      "ubertip1": [
+        14201,
+        "Дает |cffc8dc8c<AOcr,DataA1>%-й|r шанс нанести |cffc8dc8c<AOcr,DataB1>|r-кратный урон при атаке."
+      ],
+      "ubertip2": [
+        14202,
+        "Дает |cffc8dc8c<AOcr,DataA2>%-й|r шанс нанести |cffc8dc8c<AOcr,DataB2>|r-кратный урон при атаке."
+      ],
+      "ubertip3": [
+        14203,
+        "Дает |cffc8dc8c<AOcr,DataA3>%-й|r шанс нанести |cffc8dc8c<AOcr,DataB3>|r-кратный урон при атаке."
+      ],
+      "ubertip4": [
+        14200,
+        "Дает |cffc8dc8c15-й|r шанс нанести |cffc8dc8c6|r-кратный урон при атаке."
+      ]
+    },
+    "A0NU": {
+      "editorsuffix": [
+        14385,
+        "(Иллидарии)"
+      ],
+      "hotkey": [
+        19641,
+        "R"
+      ],
+      "name": [
+        14211,
+        "|cffc8dc8cПламенная боль|r"
+      ],
+      "researchhotkey": [
+        19642,
+        "R"
+      ],
+      "researchtip": [
+        14215,
+        "|cffc8dc8cПламенная боль|r"
+      ],
+      "researchubertip": [
+        14216,
+        "Возвращает весь нанесенный урон по союзным войскам. Радиус действия - |cffc8dc8c900|r|r|n|cffffcc001-й уровень:|r |cffc8dc8cДлительность действия - 20 сек.|r|n|cffffcc002-й уровень:|r |cffc8dc8cДлительность действия - 20 сек."
+      ],
+      "tip1": [
+        14212,
+        "|cffc8dc8cПламенная боль|r"
+      ],
+      "tip2": [
+        14218,
+        "|cffc8dc8cПламенная боль|r"
+      ],
+      "tip3": [
+        14217,
+        "|cffc8dc8cЖар поглощения|r"
+      ],
+      "tip4": [
+        14219,
+        "|cffc8dc8cЖар поглощения|r"
+      ],
+      "ubertip1": [
+        14213,
+        "Возвращает весь нанесенный урон по союзным войскам. Радиус действия - |cffc8dc8c900|r|r|n|cffffcc001-й уровень:|r |cffc8dc8cДлительность действия - 20 сек."
+      ],
+      "ubertip2": [
+        14220,
+        "Возвращает весь нанесенный урон по союзным войскам. Радиус действия - |cffc8dc8c900|r|r|n|cffffcc002-й уровень:|r |cffc8dc8cДлительность действия - 20 сек."
+      ],
+      "ubertip3": [
+        14221,
+        "Выпускает внутренний огонь скверны, который поглощает здоровье всех окружающих существ, передвая его охотнику. Длительность - |cffc8dc8c15 сек.|r|n|cffffcc003-й уровень:|r |cffc8dc8cРадиус поражения -220, урона 20 в сек."
+      ],
+      "ubertip4": [
+        14222,
+        "Выпускает внутренний огонь скверны, который поглощает здоровье всех окружающих существ, передвая его охотнику. Длительность - |cffc8dc8c15 сек.|r|n|cffffcc004-й уровень:|r |cffc8dc8cРадиус поражения -220, урона 30 в сек."
+      ],
+      "unhotkey": [
+        19643,
+        "R"
+      ]
+    },
+    "A0NF": {
+      "editorsuffix": [
+        14381,
+        "(Иллидарии)"
+      ],
+      "hotkey": [
+        16037,
+        "Q"
+      ],
+      "name": [
+        6918,
+        "|cffc8dc8cРывок Скверны|r"
+      ],
+      "researchhotkey": [
+        16036,
+        "Q"
+      ],
+      "researchtip": [
+        6920,
+        "Изучить |cffc8dc8cРывок Скверны|r"
+      ],
+      "researchubertip": [
+        2752,
+        "Охотник на демонов совершает рывок в указаном направлении нанося урон всем задетым врагам.\n |n|n|cffffcc001-й уровень:|r |cffc8dc8c75 урона всем врагам.|r|n|cffffcc002-й уровень:|r |cffc8dc8c150 урона всем врагам.|r|n|cffffcc003-й уровень:|r |cffc8dc8c220 урона всем врагам.|r|n|cffffcc004-й уровень:|r |cffc8dc8c300 урона всем врагам.|r"
+      ],
+      "tip1": [
+        6922,
+        "|cffc8dc8cРывок Скверны|r"
+      ],
+      "tip2": [
+        6925,
+        "|cffc8dc8cРывок Скверны|r"
+      ],
+      "tip3": [
+        6928,
+        "|cffc8dc8cРывок Скверны|r"
+      ],
+      "tip4": [
+        6933,
+        "|cffc8dc8cРывок Скверны|r"
+      ],
+      "ubertip1": [
+        7132,
+        "Охотник на демонов совершает рывок в указаном направлении нанося урон всем задетым врагам.\n |n|n|cffffcc001-й уровень:|r |cffc8dc8c75 урона всем врагам.|r"
+      ],
+      "ubertip2": [
+        7202,
+        "Охотник на демонов совершает рывок в указаном направлении нанося урон всем задетым врагам.r|n|cffffcc002-й уровень:|r |cffc8dc8c150 урона всем врагам.|r"
+      ],
+      "ubertip3": [
+        12043,
+        "Охотник на демонов совершает рывок в указаном направлении нанося урон всем задетым врагам.\n|n|cffffcc003-й уровень:|r |cffc8dc8c220 урона всем врагам.|r"
+      ],
+      "ubertip4": [
+        12053,
+        "Охотник на демонов совершает рывок в указаном направлении нанося урон всем задетым врагам.r|n|cffffcc004-й уровень:|r |cffc8dc8c300 урона всем врагам.|r"
+      ]
+    },
+    "A0NX": {
+      "editorsuffix": [
+        14388,
+        "(Иллидарии)"
+      ],
+      "hotkey": [
+        16512,
+        "W"
+      ],
+      "name": [
+        14248,
+        "|cffc8dc8cЯрость скверны|r"
+      ],
+      "researchhotkey": [
+        16513,
+        "W"
+      ],
+      "researchtip": [
+        14249,
+        "|cffc8dc8cЯрость скверны|r"
+      ],
+      "researchubertip": [
+        14258,
+        "Увеличивает скорость боя, но так же увеличивает урон по цели. Длительность воздействия |cffb4dc8c12 сек|r.\n|cffb4dc8c1-й уровень:+400% к скорости атаки, но +50% к получаемому урону.\n2-й уровень:+400% к скорости атаки, но +40% к получаемому урону.\n3-й уровень:+400% к скорости атаки, но +30% к получаемому урону.\n4-й уровень:+400% к скорости атаки, но +20% к получаемому урону.|r"
+      ],
+      "tip1": [
+        14250,
+        "|cffc8dc8cЯрость скверны|r"
+      ],
+      "tip2": [
+        14251,
+        "|cffc8dc8cЯрость скверны|r"
+      ],
+      "tip3": [
+        14252,
+        "|cffc8dc8cЯрость скверны|r"
+      ],
+      "tip4": [
+        14253,
+        "|cffc8dc8cЯрость скверны|r"
+      ],
+      "ubertip1": [
+        14259,
+        "|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+50%|r к получаемому урону."
+      ],
+      "ubertip2": [
+        14260,
+        "|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+40%|r к получаемому урону."
+      ],
+      "ubertip3": [
+        14261,
+        "|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+30%|r к получаемому урону."
+      ],
+      "ubertip4": [
+        14262,
+        "|cffb4dc8c+400% |rк скорости атаки, но |cffb4dc8c+20%|r к получаемому урону."
+      ],
+      "untip1": [
+        14254,
+        "|cffc8dc8cЯрость скверны|r"
+      ],
+      "untip2": [
+        14255,
+        "|cffc8dc8cЯрость скверны|r"
+      ],
+      "untip3": [
+        14256,
+        "|cffc8dc8cЯрость скверны|r"
+      ],
+      "untip4": [
+        14257,
+        "|cffc8dc8cЯрость скверны|r"
+      ]
+    },
+    "A0NW": {
+      "editorsuffix": [
+        14387,
+        "(Иллидарии)"
+      ],
+      "hotkey": [
+        19791,
+        "E"
+      ],
+      "name": [
+        14235,
+        "|cffc8dc8cРазлом|r"
+      ],
+      "researchhotkey": [
+        19790,
+        "E"
+      ],
+      "researchtip": [
+        14241,
+        "Изучить «|cffc8dc8cРазлом|r» [|cffffcc00%d-й уровень|r]"
+      ],
+      "researchubertip": [
+        14242,
+        "Дает шанс нанести при атаке  больше урона и оглушить цель. |n|n|cffffcc001-й уровень:|r |cffc8dc8c20 шанс, действует на героя 0.5 сек, на солдат 1.5 сек.|r |n|cffffcc002-й уровень:|r |cffc8dc8c30 шанс, действует на героя 0.5 сек, на солдат 1.5 сек.|r |n|cffffcc003-й уровень:|r |cffc8dc8c40 шанс, действует на героя 0.5 сек, на солдат 1.5 сек.|r.|n|cffffcc004-й уровень:|r |cffc8dc8c45 шанс, действует на героя 0.5 сек, на солдат 1.5 сек."
+      ],
+      "tip1": [
+        14243,
+        "|cffc8dc8cРазлом|r [|cffffcc001-й уровень|r]"
+      ],
+      "tip2": [
+        14244,
+        "|cffc8dc8cРазлом|r [|cffffcc002-й уровень|r]"
+      ],
+      "tip3": [
+        14245,
+        "|cffc8dc8cРазлом|r [|cffffcc003-й уровень|r]"
+      ],
+      "tip4": [
+        14246,
+        "|cffc8dc8cРазлом|r [|cffffcc004-й уровень|r]"
+      ],
+      "unhotkey": [
+        19792,
+        "E"
+      ]
+    },
+    "A0NV": {
+      "editorsuffix": [
+        14386,
+        "(Иллидарии)"
+      ],
+      "hotkey": [
+        19644,
+        "R"
+      ],
+      "name": [
+        14228,
+        "|cffc8dc8cКлинки скверны|r"
+      ],
+      "researchhotkey": [
+        19645,
+        "R"
+      ],
+      "researchtip": [
+        14232,
+        "Изучить \"|cffc8dc8cКлинки скверны|r\""
+      ],
+      "researchubertip": [
+        14277,
+        "Атаки героя наносят урон рядом стоящим с атакованной целью. Длительность - |cffc8dc8c25 сек.|r|n|cffffcc001-й уровень:|r |cffc8dc8c40% урона, радиус - 180.|r|n|cffffcc002-й уровень:|r |cffc8dc8c40% урона, радиус - 180"
+      ],
+      "tip1": [
+        14264,
+        "|cffc8dc8cКлинки скверны|r"
+      ],
+      "tip2": [
+        14265,
+        "|cffc8dc8cКлинки скверны|r"
+      ],
+      "tip3": [
+        14229,
+        "|cffc8dc8cРазлом|r"
+      ],
+      "tip4": [
+        14234,
+        "|cffc8dc8cРазлом|r"
+      ],
+      "ubertip1": [
+        14276,
+        "Атаки героя наносят урон рядом стоящим с атакованной целью. Длительность - |cffc8dc8c25 сек.|r|n|cffffcc001-й уровень:|r |cffc8dc8c40% урона, радиус - 180."
+      ],
+      "ubertip2": [
+        14278,
+        "Атаки героя наносят урон рядом стоящим с атакованной целью. Длительность - |cffc8dc8c25 сек.|r|n|cffffcc002-й уровень:|r |cffc8dc8c40% урона, радиус - 180"
+      ],
+      "ubertip3": [
+        14238,
+        "Выпускает внутренний огонь скверны, который поглощает здоровье всех окружающих существ, передвая его охотнику. Длительность - |cffc8dc8c15 сек.|r|n|cffffcc003-й уровень:|r |cffc8dc8cРадиус поражения -220, урона 20 в сек."
+      ],
+      "ubertip4": [
+        14239,
+        "Выпускает внутренний огонь скверны, который поглощает здоровье всех окружающих существ, передвая его охотнику. Длительность - |cffc8dc8c15 сек.|r|n|cffffcc004-й уровень:|r |cffc8dc8cРадиус поражения -220, урона 30 в сек."
+      ],
+      "unhotkey": [
+        19646,
+        "R"
+      ]
+    },
+    "A0O2": {
+      "name": [
+        38522,
+        "|cffc8dc8cЛовкость иллидари|r"
+      ],
+      "tip1": [
+        38524,
+        "|cffc8dc8cЛовкость иллидари|r"
+      ],
+      "tip2": [
+        38525,
+        "|cffc8dc8cЛовкость иллидари|r"
+      ],
+      "tip3": [
+        38526,
+        "|cffc8dc8cЛовкость иллидари|r"
+      ],
+      "tip4": [
+        38546,
+        "|cffc8dc8cЛовкость иллидари|r"
+      ],
+      "ubertip1": [
+        38523,
+        "Дает |cffc8dc8c<A0O2,DataA1,%>%-й шанс|r уклониться от атаки."
+      ],
+      "ubertip2": [
+        38527,
+        "Дает |cffc8dc8c<A0O2,DataA2,%>%-й шанс|r уклониться от атаки."
+      ],
+      "ubertip3": [
+        38528,
+        "Дает |cffc8dc8c<A0O2,DataA3,%>%-й шанс|r уклониться от атаки."
+      ],
+      "ubertip4": [
+        38529,
+        "Дает |cffc8dc8c<A0O2,DataA4,%>%-й шанс|r уклониться от атаки."
+      ]
+    },
+    "A0O5": {
+      "editorsuffix": [
+        14434,
+        "(Иллидарии)"
+      ],
+      "name": [
+        38548,
+        "|cffc8dc8cПоглощение силы|r"
+      ],
+      "tip1": [
+        38550,
+        "|cffc8dc8cПоглощение силы|r"
+      ],
+      "ubertip1": [
+        14533,
+        "Каждый нанесенный урон восстанавливает 0.5% от максимального здоровья юнита. Если урон способностью, то процент равен 0.25."
+      ]
+    },
+    "A0OH": {
+      "editorsuffix": [
+        14551,
+        "(Иллидарии)"
+      ],
+      "name": [
+        14769,
+        "|cffc8dc8cЯрость демон-зверя|r"
+      ],
+      "tip1": [
+        14770,
+        "|cffc8dc8cЯрость демон-зверя|r"
+      ],
+      "ubertip1": [
+        14771,
+        "Увеличивает скорость передвижения |cffc8dc8cПокоренному демону|r.\n|cffc8dc8cУвеличивает скорость - 50.|r"
+      ]
+    },
+    "A0OG": {
+      "name": [
+        14766,
+        "|cffc8dc8cОстрые клинки|r"
+      ],
+      "tip1": [
+        14767,
+        "|cffc8dc8cОстрые клинки|r"
+      ],
+      "ubertip1": [
+        14768,
+        "|cffc8dc8c+<Ahsb,DataB1,%>%|r к урону по целям со средней броней."
+      ]
+    },
+    "A1GU": {
+      "name": [
+        794,
+        "Поглощение осколков"
+      ],
+      "tip1": [
+        2215,
+        "Поглощение осколков"
+      ],
+      "ubertip1": [
+        2219,
+        "Когда Охотник на демонов атакует цель, он разбивает ее душу на множество осколов, и поглощает эти осколки, что позволяет ему востанавливать себе здоровье в розмере 15% от урона. \n"
+      ]
+    },
+    "A0OF": {
+      "name": [
+        14763,
+        "|cffc8dc8cАура истребления|r"
+      ],
+      "tip1": [
+        14764,
+        "|cffc8dc8cАура истребления|r"
+      ],
+      "ubertip1": [
+        14765,
+        "Увеличивает урон от атак находящихся рядом союзников.\n|cffc8dc8cРадиус действия - 400.\nБонус к урону - 10%.|r"
+      ]
+    },
+    "A0OE": {
+      "hotkey": [
+        19877,
+        "E"
+      ],
+      "name": [
+        14760,
+        "|cffc8dc8cПропитка скверной|r"
+      ],
+      "tip1": [
+        14761,
+        "|cffc8dc8cПропитка скверной|r"
+      ],
+      "ubertip1": [
+        15038,
+        "|cffc8dc8c-<Assk,DataC1> |rот получаемого  урона от атак. Минимальный урон от атак: |cffc8dc8c<Assk,DataB1>|r."
+      ]
+    },
+    "A0O1": {
+      "editorsuffix": [
+        14389,
+        "(Иллидарии)"
+      ],
+      "hotkey": [
+        16514,
+        "W"
+      ],
+      "name": [
+        14329,
+        "|cffc8dc8cВзор скверны|r"
+      ],
+      "researchhotkey": [
+        16117,
+        "Q"
+      ],
+      "researchtip": [
+        14330,
+        "Изучить «|cffc8dc8cВзор скверны|r» [|cffffcc00%d-й уровень|r]"
+      ],
+      "researchubertip": [
+        14340,
+        "Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r |cffc8dc8c<AOcr,DataA1>%-й|r шанс, |cffc8dc8c<AOcr,DataB1>|r-кратный урон. |n|cffffcc002-й уровень:|r |cffc8dc8c<AOcr,DataA2>%-й|r шанс, |cffc8dc8c<AOcr,DataB2>|r-кратный урон. |n|cffffcc003-й уровень:|r |cffc8dc8c<AOcr,DataA3>%-й|r шанс, |cffc8dc8c<AOcr,DataB3>|r-кратный урон.|n|cffffcc004-й уровень:|r |cffc8dc8c15%-й|r шанс, |cffc8dc8c6|r-кратный урон."
+      ],
+      "tip1": [
+        14331,
+        "|cffc8dc8cВзор скверны|r [|cffffcc001-й уровень|r]"
+      ],
+      "tip2": [
+        14332,
+        "|cffc8dc8cВзор скверны|r [|cffffcc002-й уровень|r]"
+      ],
+      "tip3": [
+        14333,
+        "|cffc8dc8cВзор скверны|r [|cffffcc003-й уровень|r]"
+      ],
+      "tip4": [
+        14334,
+        "|cffc8dc8cВзор скверны|r [|cffffcc004-й уровень|r]"
+      ],
+      "ubertip1": [
+        14336,
+        "Дает |cffc8dc8c<AOcr,DataA1>%-й|r шанс нанести |cffc8dc8c<AOcr,DataB1>|r-кратный урон при атаке."
+      ],
+      "ubertip2": [
+        14337,
+        "Дает |cffc8dc8c<AOcr,DataA2>%-й|r шанс нанести |cffc8dc8c<AOcr,DataB2>|r-кратный урон при атаке."
+      ],
+      "ubertip3": [
+        14338,
+        "Дает |cffc8dc8c<AOcr,DataA3>%-й|r шанс нанести |cffc8dc8c<AOcr,DataB3>|r-кратный урон при атаке."
+      ],
+      "ubertip4": [
+        14335,
+        "Дает |cffc8dc8c15-й|r шанс нанести |cffc8dc8c6|r-кратный урон при атаке."
+      ]
+    },
+    "A0O0": {
+      "name": [
+        14317,
+        "|cffc8dc8cПротиводействие|r"
+      ],
+      "tip1": [
+        14318,
+        "|cffc8dc8cПротиводействие|r"
+      ],
+      "ubertip1": [
+        12939,
+        "Каждая атака Охотников на демонов уничтожает ману цели, нанося дополнительный урон.\n|cffc8dc8c6 ед. маны - героям.\n20 ед. маны - солдатам.|r"
+      ]
+    },
+    "A048": {
+      "editorsuffix": [
+        972,
+        "осн - Проклятие"
+      ],
+      "hotkey": [
+        10849,
+        "Q"
+      ],
+      "name": [
+        2967,
+        "|cff00ff00Инфернальный прыжок|r"
+      ],
+      "tip1": [
+        2968,
+        "|cff00ff00Инфернальный прыжок|r"
+      ],
+      "ubertip1": [
+        927,
+        "Совершает рывок к противнику, нанося урон."
+      ],
+      "unhotkey": [
+        10850,
+        "Q"
+      ]
+    },
+    "A1KL": {
+      "editorsuffix": [
+        38567,
+        "осн - Проклятие Иллидари"
+      ],
+      "hotkey": [
+        28194,
+        "Q"
+      ],
+      "name": [
+        38565,
+        "|cffc8dc8cОгненная стрела|r"
+      ],
+      "tip1": [
+        38566,
+        "|cffc8dc8cОгненная стрела|r"
+      ],
+      "tip2": [
+        38568,
+        "Огненная стрела"
+      ],
+      "tip3": [
+        38569,
+        "Огненная стрела"
+      ],
+      "ubertip1": [
+        38607,
+        "Выпускает сгусток огня, оглушающий врага."
+      ],
+      "ubertip2": [
+        38570,
+        "Выпускает сгусток огня, оглушающий врага, а также поджигающий его."
+      ],
+      "ubertip3": [
+        38571,
+        "Выпускает сгусток огня, оглушающий врага, а также поджигающий его."
+      ],
+      "unhotkey": [
+        28216,
+        "Q"
+      ],
+      "untip2": [
+        35983,
+        "|cffc3dbffПКМ – включить автоприменение.|r"
+      ],
+      "untip3": [
+        35984,
+        "|cffc3dbffПКМ – включить автоприменение.|r"
+      ],
+      "unubertip2": [
+        35988,
+        "|cffc3dbffПКМ – отключить автоприменение.|r"
+      ],
+      "unubertip3": [
+        36914,
+        "|cffc3dbffПКМ – отключить автоприменение.|r"
+      ]
+    },
+    "A1KO": {
+      "editorsuffix": [
+        38592,
+        "осн - Проклятие Иллидари)"
+      ],
+      "hotkey": [
+        28218,
+        "Q"
+      ],
+      "name": [
+        38590,
+        "|cffc8dc8cСтрела скверны|r"
+      ],
+      "tip1": [
+        38591,
+        "|cffc8dc8cСтрела скверны|r"
+      ],
+      "tip2": [
+        38593,
+        "Стрела скверны"
+      ],
+      "tip3": [
+        38594,
+        "Стрела скверны"
+      ],
+      "ubertip1": [
+        38595,
+        "Выпускает сгусток скверны, наносящий урон и ослабляющий броню цели и врагов поблизости."
+      ],
+      "ubertip2": [
+        38596,
+        "Выпускает сгусток скверны, оглушающий врага, а также снижающий броню врагов."
+      ],
+      "ubertip3": [
+        38597,
+        "Выпускает сгусток скверны, оглушающий врага, а также снижающий броню врагов."
+      ],
+      "unhotkey": [
+        28232,
+        "Q"
+      ],
+      "untip2": [
+        35985,
+        "|cffc3dbffПКМ – включить автоприменение.|r"
+      ],
+      "untip3": [
+        37357,
+        "|cffc3dbffПКМ – включить автоприменение.|r"
+      ],
+      "unubertip2": [
+        36915,
+        "|cffc3dbffПКМ – отключить автоприменение.|r"
+      ],
+      "unubertip3": [
+        37360,
+        "|cffc3dbffПКМ – отключить автоприменение.|r"
+      ]
+    },
+    "A0NI": {
+      "name": [
+        9741,
+        "Ускользание +100"
+      ]
+    },
+    "A0NT": {
+      "editorsuffix": [
+        14210,
+        "(1 уровень)"
+      ],
+      "name": [
+        14208,
+        "|cffc8dc8cПламенная боль|r"
+      ],
+      "researchtip": [
+        14209,
+        "Изучить «|cffc8dc8cПламенная боль|r» [|cffffcc00%d-й уровень|r]"
+      ],
+      "tip4": [
+        14206,
+        "Аура шипов [|cffffcc004-й уровень|r]"
+      ],
+      "ubertip4": [
+        14207,
+        "Дает находящимся рядом союзникам щит, который отражает <AEah,DataA4,%>% получаемого в ближнем бою урона от атак в атакующих врагов."
+      ]
+    },
+    "A0NY": {
+      "editorsuffix": [
+        14266,
+        "(1 ронвень)"
+      ],
+      "name": [
+        14279,
+        "|cffc8dc8cКлинки скверны|r"
+      ],
+      "tip1": [
+        14280,
+        "|cffc8dc8cКлинки скверны|r"
+      ]
+    },
+    "A0NO": {
+      "editorsuffix": [
+        11542,
+        "(Востановление хп) 1 уровень"
+      ],
+      "name": [
+        11509,
+        "|cffc8dc8cЖар поглощения|r"
+      ],
+      "tip4": [
+        11563,
+        "Нечистая аура [|cffffcc004-й уровень|r]"
+      ],
+      "ubertip4": [
+        9069,
+        "+<AUau,DataA4,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+      ]
+    },
+    "A0NM": {
+      "editorsuffix": [
+        11351,
+        "(Нанисение урона)1 уровень"
+      ],
+      "name": [
+        11291,
+        "|cffc8dc8cЖар поглощения|r"
+      ]
+    },
+    "A0NP": {
+      "editorsuffix": [
+        11552,
+        "(Востановление хп) 2 уровень"
+      ],
+      "name": [
+        11548,
+        "|cffc8dc8cЖар поглощения|r"
+      ],
+      "tip4": [
+        11978,
+        "Нечистая аура [|cffffcc004-й уровень|r]"
+      ],
+      "ubertip4": [
+        11507,
+        "+<AUau,DataA4,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+      ]
+    },
+    "A0NK": {
+      "editorsuffix": [
+        11280,
+        "(Нанисение урона)2 уровень"
+      ],
+      "name": [
+        11138,
+        "|cffc8dc8cЖар поглощения|r"
+      ]
+    },
+    "A0NR": {
+      "editorsuffix": [
+        13822,
+        "(Востановление хп) 3 уровень"
+      ],
+      "name": [
+        12850,
+        "|cffc8dc8cЖар поглощения|r"
+      ],
+      "tip4": [
+        13306,
+        "Нечистая аура [|cffffcc004-й уровень|r]"
+      ],
+      "ubertip4": [
+        12246,
+        "+<AUau,DataA4,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+      ]
+    },
+    "A0NL": {
+      "editorsuffix": [
+        11290,
+        "(Нанисение урона)3 уровень"
+      ],
+      "name": [
+        11282,
+        "|cffc8dc8cЖар поглощения|r"
+      ]
+    },
+    "A0NQ": {
+      "editorsuffix": [
+        12837,
+        "(Востановление хп) 4 уровень"
+      ],
+      "name": [
+        12252,
+        "|cffc8dc8cЖар поглощения|r"
+      ],
+      "tip4": [
+        12846,
+        "Нечистая аура [|cffffcc004-й уровень|r]"
+      ],
+      "ubertip4": [
+        11546,
+        "+<AUau,DataA4,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+      ]
+    },
+    "A0NN": {
+      "editorsuffix": [
+        11354,
+        "(Нанисение урона)4 уровень"
+      ],
+      "name": [
+        11352,
+        "|cffc8dc8cЖар поглощения|r"
+      ],
+      "tip1": [
+        11366,
+        "|cffc8dc8cЖар поглощения|r"
+      ]
+    }
+  }
+}

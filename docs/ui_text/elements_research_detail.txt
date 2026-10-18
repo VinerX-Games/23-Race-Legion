@@ -1,0 +1,317 @@
+=== [R09G] MaxLevel: 6 Pos: (0, 0) Req: ['hkee', 'h0ER'] ===
+  Level 1:
+    Name: |cffb4dcdcОгонь|r (Raw: TRIGSTR_15297)
+    Tip:  Исследовать |cffb4dcdcОгонь|r |cffffff00[1]|r (Raw: TRIGSTR_8986)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r. (Raw: TRIGSTR_16090)
+    HK:   TRIGSTR_37235
+  Level 2:
+    Name: |cffb4dcdcОгонь|r (Raw: TRIGSTR_15293)
+    Tip:  Исследовать |cffb4dcdcОгонь|r |cffffff00[2]|r (Raw: TRIGSTR_8985)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r. (Raw: TRIGSTR_16091)
+    HK:   TRIGSTR_37236
+  Level 3:
+    Name: |cffb4dcdcОгонь|r (Raw: TRIGSTR_8953)
+    Tip:  Исследовать |cffb4dcdcОгонь|r |cffffff00[3]|r (Raw: TRIGSTR_8970)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r. (Raw: TRIGSTR_16092)
+    HK:   TRIGSTR_37237
+  Level 4:
+    Name: |cffb4dcdcОгонь|r (Raw: TRIGSTR_8944)
+    Tip:  Исследовать |cffb4dcdcОгонь|r |cffffff00[4]|r (Raw: TRIGSTR_8966)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r. (Raw: TRIGSTR_16094)
+    HK:   TRIGSTR_37418
+  Level 5:
+    Name: |cffb4dcdcОгонь|r (Raw: TRIGSTR_8943)
+    Tip:  Исследовать |cffb4dcdcОгонь|r |cffffff00[5]|r (Raw: TRIGSTR_8957)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r. (Raw: TRIGSTR_16093)
+    HK:   TRIGSTR_37419
+  Level 6:
+    Name: |cffb4dcdcОгонь|r (Raw: TRIGSTR_8942)
+    Tip:  Исследовать |cffb4dcdcОгонь|r |cffffff00[6]|r (Raw: TRIGSTR_8952)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям огня|r. (Raw: TRIGSTR_16095)
+    HK:   TRIGSTR_37420
+  Effects:
+    {'effect': 'ratd', 'base': '1', 'mod': '1', 'code': None, 'target': None}
+    {'effect': 'TRIGSTR_15570', 'base': None, 'mod': None, 'code': None, 'target': None}
+
+=== [R09H] MaxLevel: 6 Pos: (3, 1) Req: ['hkee', 'h0ER'] ===
+  Level 1:
+    Name: |cffb4dcdcВода|r (Raw: TRIGSTR_15303)
+    Tip:  Исследовать |cffb4dcdcВода|r |cffffff00[1]|r (Raw: TRIGSTR_11984)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r. (Raw: TRIGSTR_16096)
+    HK:   S
+  Level 2:
+    Name: |cffb4dcdcВода|r (Raw: TRIGSTR_15299)
+    Tip:  Исследовать |cffb4dcdcВода|r |cffffff00[2]|r (Raw: TRIGSTR_11980)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r. (Raw: TRIGSTR_16097)
+    HK:   S
+  Level 3:
+    Name: |cffb4dcdcВода|r (Raw: TRIGSTR_9093)
+    Tip:  Исследовать |cffb4dcdcВода|r |cffffff00[3]|r (Raw: TRIGSTR_9528)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r. (Raw: TRIGSTR_16098)
+    HK:   S
+  Level 4:
+    Name: |cffb4dcdcВода|r (Raw: TRIGSTR_9091)
+    Tip:  Исследовать |cffb4dcdcВода|r |cffffff00[4]|r (Raw: TRIGSTR_9116)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r. (Raw: TRIGSTR_16100)
+    HK:   TRIGSTR_17869
+  Level 5:
+    Name: |cffb4dcdcВода|r (Raw: TRIGSTR_9090)
+    Tip:  Исследовать |cffb4dcdcВода|r |cffffff00[5]|r (Raw: TRIGSTR_9115)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r. (Raw: TRIGSTR_16099)
+    HK:   TRIGSTR_17870
+  Level 6:
+    Name: |cffb4dcdcВода|r (Raw: TRIGSTR_9086)
+    Tip:  Исследовать |cffb4dcdcВода|r |cffffff00[6]|r (Raw: TRIGSTR_9092)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям воды|r. (Raw: TRIGSTR_16101)
+    HK:   TRIGSTR_17871
+  Effects:
+    {'effect': 'ratd', 'base': '1', 'mod': '1', 'code': None, 'target': None}
+    {'effect': 'TRIGSTR_15596', 'base': None, 'mod': None, 'code': None, 'target': None}
+
+=== [R09I] MaxLevel: 6 Pos: (2, 1) Req: ['hkee', 'h0ER'] ===
+  Level 1:
+    Name: |cffb4dcdcЗемля|r (Raw: TRIGSTR_15558)
+    Tip:  Исследовать |cffb4dcdcЗемля|r |cffffff00[1]|r (Raw: TRIGSTR_15563)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r. (Raw: TRIGSTR_16102)
+    HK:   TRIGSTR_18568
+  Level 2:
+    Name: |cffb4dcdcЗемля|r (Raw: TRIGSTR_15556)
+    Tip:  Исследовать |cffb4dcdcЗемля|r |cffffff00[2]|r (Raw: TRIGSTR_15562)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r. (Raw: TRIGSTR_16103)
+    HK:   TRIGSTR_18569
+  Level 3:
+    Name: |cffb4dcdcЗемля|r (Raw: TRIGSTR_15555)
+    Tip:  Исследовать |cffb4dcdcЗемля|r |cffffff00[3]|r (Raw: TRIGSTR_15561)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r. (Raw: TRIGSTR_16104)
+    HK:   TRIGSTR_18598
+  Level 4:
+    Name: |cffb4dcdcЗемля|r (Raw: TRIGSTR_15554)
+    Tip:  Исследовать |cffb4dcdcЗемля|r |cffffff00[4]|r (Raw: TRIGSTR_15560)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r. (Raw: TRIGSTR_16106)
+    HK:   TRIGSTR_18599
+  Level 5:
+    Name: |cffb4dcdcЗемля|r (Raw: TRIGSTR_15553)
+    Tip:  Исследовать |cffb4dcdcЗемля|r |cffffff00[5]|r (Raw: TRIGSTR_15559)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r. (Raw: TRIGSTR_16105)
+    HK:   TRIGSTR_18600
+  Level 6:
+    Name: |cffb4dcdcЗемля|r (Raw: TRIGSTR_15552)
+    Tip:  Исследовать |cffb4dcdcЗемля|r |cffffff00[6]|r (Raw: TRIGSTR_15557)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям земли|r. (Raw: TRIGSTR_16107)
+    HK:   TRIGSTR_18648
+  Effects:
+    {'effect': 'ratd', 'base': '1', 'mod': '1', 'code': None, 'target': None}
+    {'effect': 'TRIGSTR_15956', 'base': None, 'mod': None, 'code': None, 'target': None}
+
+=== [R09J] MaxLevel: 6 Pos: (1, 0) Req: ['hkee', 'h0ER'] ===
+  Level 1:
+    Name: |cffb4dcdcВетер|r (Raw: TRIGSTR_15582)
+    Tip:  Исследовать |cffb4dcdcВетер|r |cffffff00[1]|r (Raw: TRIGSTR_15589)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r. (Raw: TRIGSTR_16108)
+    HK:   TRIGSTR_37462
+  Level 2:
+    Name: |cffb4dcdcВетер|r (Raw: TRIGSTR_15581)
+    Tip:  Исследовать |cffb4dcdcВетер|r |cffffff00[2]|r (Raw: TRIGSTR_15588)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r. (Raw: TRIGSTR_16109)
+    HK:   TRIGSTR_37463
+  Level 3:
+    Name: |cffb4dcdcВетер|r (Raw: TRIGSTR_15580)
+    Tip:  Исследовать |cffb4dcdcВетер|r |cffffff00[3]|r (Raw: TRIGSTR_15587)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r. (Raw: TRIGSTR_16110)
+    HK:   TRIGSTR_38218
+  Level 4:
+    Name: |cffb4dcdcВетер|r (Raw: TRIGSTR_15579)
+    Tip:  Исследовать |cffb4dcdcВетер|r |cffffff00[4]|r (Raw: TRIGSTR_15586)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r. (Raw: TRIGSTR_16112)
+    HK:   TRIGSTR_38227
+  Level 5:
+    Name: |cffb4dcdcВетер|r (Raw: TRIGSTR_15578)
+    Tip:  Исследовать |cffb4dcdcВетер|r |cffffff00[5]|r (Raw: TRIGSTR_15585)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r. (Raw: TRIGSTR_16111)
+    HK:   TRIGSTR_38454
+  Level 6:
+    Name: |cffb4dcdcВетер|r (Raw: TRIGSTR_15315)
+    Tip:  Исследовать |cffb4dcdcВетер|r |cffffff00[6]|r (Raw: TRIGSTR_15583)
+    Uber: Увеличивает броню и атаку всем |cffb4dcdcэелементалям ветра|r. (Raw: TRIGSTR_16113)
+    HK:   TRIGSTR_38486
+  Effects:
+    {'effect': 'ratd', 'base': '1', 'mod': '1', 'code': None, 'target': None}
+    {'effect': 'TRIGSTR_16114', 'base': None, 'mod': None, 'code': None, 'target': None}
+
+=== [R09Q] MaxLevel: 1 Pos: (2, 1) Req: ['h0ES'] ===
+  Level 1:
+    Name: |cffb4dcdcЯрость|r (Raw: TRIGSTR_41424)
+    Tip:  Исследовать «|cffb4dcdcЯрость|r» (Raw: TRIGSTR_16243)
+    Uber: Увеличивает ярость, целой уменьшения здоровья.
+Увеличивает всем элементалям |cffff0000огня|r.
+ |cffb4dcdcУвеличивает урон - 5 ед.|r
+ |cffb4dcdcУменьшает здоровье - 50 ед|r.|cffff0000
+ (Raw: TRIGSTR_16244)
+    HK:   TRIGSTR_18649
+  Effects:
+    {'effect': 'TRIGSTR_14870', 'base': '5.000000', 'mod': '5.000000', 'code': None, 'target': None}
+    {'effect': 'TRIGSTR_16249', 'base': '-50.000000', 'mod': '-50.000000', 'code': None, 'target': None}
+
+=== [R09R] MaxLevel: 2 Pos: (3, 1) Req: ['h0ER,R09C', 'h0ER,R09C'] ===
+  Level 1:
+    Name: |cffb4dcdcПовышение температуры|r (Raw: TRIGSTR_16251)
+    Tip:  Исследовать «|cffb4dcdcПовышение температуры|r» (Raw: TRIGSTR_16252)
+    Uber: Позволяет |cffb4dcdcВозжигателю|r использовать более высокие температуры для сотворения заклинаний.
+
+ |cffb4dcdcУвеличивает ману - 20 ед.|r
+ |cffb4dcdcУвеличивает здоровье - 25 ед|r.|cffff0000
+ (Raw: TRIGSTR_32315)
+    HK:   TRIGSTR_17872
+  Level 2:
+    Name: |cffb4dcdcПовышение температуры|r (Raw: TRIGSTR_16255)
+    Tip:  Исследовать «|cffb4dcdcПовышение температуры|r» (Raw: TRIGSTR_16256)
+    Uber: Позволяет |cffb4dcdcВозжигателю|r использовать более высокие температуры для сотворения заклинаний.
+
+ |cffb4dcdcУвеличивает ману - 20 ед.|r
+ |cffb4dcdcУвеличивает здоровье - 25 ед|r.|cffff0000
+ (Raw: TRIGSTR_32319)
+    HK:   TRIGSTR_17873
+  Effects:
+    {'effect': 'TRIGSTR_16998', 'base': '20.000000', 'mod': '20.000000', 'code': None, 'target': None}
+    {'effect': 'TRIGSTR_16258', 'base': '25.000000', 'mod': '25.000000', 'code': None, 'target': None}
+
+=== [R09S] MaxLevel: 1 Pos: (0, 2) Req: ['R09C', 'h0ES'] ===
+  Level 1:
+    Name: |cffb4dcdcРассекающий удар|r (Raw: TRIGSTR_41413)
+    Tip:  Исследовать «|cffb4dcdcРассекающий удар|r» (Raw: TRIGSTR_16262)
+    Uber: Позволяет гончей пламени наносить удары по области.
+ (Raw: TRIGSTR_16263)
+    HK:   D
+
+=== [R09T] MaxLevel: 1 Pos: (2, 1) Req: ['h0ES'] ===
+  Level 1:
+    Name: |cffb4dcdcМагия воды|r (Raw: TRIGSTR_16269)
+    Tip:  Исследовать «|cffb4dcdcМагия воды|r» (Raw: TRIGSTR_16270)
+    Uber: Силы стихий наполняют |cffb4dcdcЭлементалей воды|r увеличивая ману на |cffb4dcdc50 ед.|r (Raw: TRIGSTR_32356)
+    HK:   TRIGSTR_18702
+  Effects:
+    {'effect': 'TRIGSTR_19465', 'base': '50.000000', 'mod': '50.000000', 'code': None, 'target': None}
+
+=== [R09U] MaxLevel: 2 Pos: (3, 1) Req: ['R09D', 'R09D'] ===
+  Level 1:
+    Name: |cffb4dcdcЛедяные стрелы|r (Raw: TRIGSTR_16278)
+    Tip:  Исследовать «|cffb4dcdcЛедяные стрелы|r» (Raw: TRIGSTR_16279)
+    Uber: Позволяет |cffb4dcdcЭлементалю морей|r, использовать ледяные стрелы. Увеличивает ману на |cffb4dcdc30 ед.|r (Raw: TRIGSTR_16280)
+    HK:   TRIGSTR_17874
+  Level 2:
+    Name: |cffb4dcdcЛедяные стрелы|r (Raw: TRIGSTR_16282)
+    Tip:  Исследовать «|cffb4dcdcЛедяные стрелы|r» (Raw: TRIGSTR_16283)
+    Uber: Позволяет |cffb4dcdcЭлементалю морей|r, использовать ледяные стрелы. Увеличивает ману на |cffb4dcdc30 ед.|r (Raw: TRIGSTR_16285)
+    HK:   TRIGSTR_17887
+  Effects:
+    {'effect': 'TRIGSTR_21358', 'base': '30.000000', 'mod': '30.000000', 'code': None, 'target': None}
+
+=== [R09V] MaxLevel: 2 Pos: (0, 2) Req: ['R09D,h0ER', 'R09D,h0ER'] ===
+  Level 1:
+    Name: |cffb4dcdcМагия морей|r (Raw: TRIGSTR_16287)
+    Tip:  Исследовать «|cffb4dcdcМагия морей|r» (Raw: TRIGSTR_16288)
+    Uber: Позволяет |cffb4dcdcРифовым элементалям|r, атакующую и востанавливающую магию морей. Увеличивает ману на |cffb4dcdc30 ед.|r  (Raw: TRIGSTR_39678)
+    HK:   D
+  Level 2:
+    Name: |cffb4dcdcМагия морей|r (Raw: TRIGSTR_16291)
+    Tip:  Исследовать «|cffb4dcdcМагия морей|r» (Raw: TRIGSTR_16292)
+    Uber: Позволяет |cffb4dcdcРифовым элементалям|r, атакующую и востанавливающую магию морей. Увеличивает ману на |cffb4dcdc30 ед.|r  (Raw: TRIGSTR_39679)
+    HK:   TRIGSTR_18699
+  Effects:
+    {'effect': 'TRIGSTR_21386', 'base': '30.000000', 'mod': '30.000000', 'code': None, 'target': None}
+
+=== [R09X] MaxLevel: 3 Pos: (3, 1) Req: ['h0ER', 'h0ER', 'h0ES'] ===
+  Level 1:
+    Name: |cffb4dcdcКаменное здоровье|r (Raw: TRIGSTR_16304)
+    Tip:  Исследовать «|cffb4dcdcКаменное здоровье|r» (Raw: TRIGSTR_16305)
+    Uber: Увеличивает здоровье элементалям земли. 
+|cffb4dcdcУвеличивает на 30 ед.|r (Raw: TRIGSTR_16306)
+    HK:   TRIGSTR_17888
+  Level 2:
+    Name: |cffb4dcdcКаменное здоровье|r (Raw: TRIGSTR_16308)
+    Tip:  Исследовать «|cffb4dcdcКаменное здоровье|r» (Raw: TRIGSTR_16309)
+    Uber: Увеличивает здоровье элементалям земли. 
+|cffb4dcdcУвеличивает на 30 ед.|r (Raw: TRIGSTR_16311)
+    HK:   TRIGSTR_17889
+  Level 3:
+    Name: |cffb4dcdcКаменное здоровье|r (Raw: TRIGSTR_16313)
+    Tip:  Исследовать «|cffb4dcdcКаменное здоровье|r» (Raw: TRIGSTR_16314)
+    Uber: Увеличивает здоровье элементалям земли. 
+|cffb4dcdcУвеличивает на 30 ед.|r (Raw: TRIGSTR_16315)
+    HK:   TRIGSTR_17910
+  Effects:
+    {'effect': 'TRIGSTR_16312', 'base': '30.000000', 'mod': '30.000000', 'code': None, 'target': None}
+
+=== [R09Y] MaxLevel: 1 Pos: (0, 2) Req: ['h0ES', 'h0ER', 'h0ES'] ===
+  Level 1:
+    Name: |cffb4dcdcСокрушение|r (Raw: TRIGSTR_41416)
+    Tip:  Исследовать «|cffb4dcdcСокрушение|r» (Raw: TRIGSTR_16317)
+    Uber: Позволяет |cffb4dcdcяростному голему|r использовать сокрушение. (Raw: TRIGSTR_16318)
+    HK:   D
+
+=== [R09Z] MaxLevel: 2 Pos: (2, 1) Req: ['h0ER', 'h0ES'] ===
+  Level 1:
+    Name: |cffb4dcdcЛегкость воздуха|r (Raw: TRIGSTR_16338)
+    Tip:  Исследовать «|cffb4dcdcЛегкость воздуха|r» (Raw: TRIGSTR_16339)
+    Uber: Увеличивает скорость предвижения всех |cffb4dcdcэлементалей ветра|r.
+|cffb4dcdcУвеличивает скорость передвижения на 30 ед.|r (Raw: TRIGSTR_16340)
+    HK:   TRIGSTR_18703
+  Level 2:
+    Name: |cffb4dcdcЛегкость воздуха|r (Raw: TRIGSTR_16341)
+    Tip:  Исследовать «|cffb4dcdcЛегкость воздуха|r» (Raw: TRIGSTR_16342)
+    Uber: Увеличивает скорость предвижения всех |cffb4dcdcэлементалей ветра|r.
+|cffb4dcdcУвеличивает скорость передвижения на 30 ед.|r (Raw: TRIGSTR_16344)
+    HK:   TRIGSTR_18704
+  Effects:
+    {'effect': 'TRIGSTR_14723', 'base': '30.000000', 'mod': '30.000000', 'code': None, 'target': None}
+
+=== [R0A0] MaxLevel: 1 Pos: (3, 1) Req: ['h0ER', 'h0ER', 'h0ES'] ===
+  Level 1:
+    Name: |cffb4dcdcКритический удар|r (Raw: TRIGSTR_41399)
+    Tip:  Исследовать «|cffb4dcdcКритический удар|r» (Raw: TRIGSTR_16350)
+    Uber: Позволяет |cffb4dcdcгрозовым эдементалям|r наносить двухкратный урон. (Raw: TRIGSTR_16351)
+    HK:   TRIGSTR_17911
+
+=== [R0A1] MaxLevel: 1 Pos: (0, 2) Req: ['h0ES', 'h0ER', 'h0ES'] ===
+  Level 1:
+    Name: |cffb4dcdcЯрость грома|r (Raw: TRIGSTR_16359)
+    Tip:  Исследовать «|cffb4dcdcЯрость грома|r» (Raw: TRIGSTR_16360)
+    Uber: Позволяет |cffb4dcdcштормовому элементалю|r атаковать сразу несколько целей. (Raw: TRIGSTR_16361)
+    HK:   D
+
+=== [R0DS] MaxLevel: 5 Pos: (0, 2) Req: ['h0ER', 'h0ER'] ===
+  Level 1:
+    Name: |cffdcaa92Улучшенная добыча (Raw: TRIGSTR_15847)
+    Tip:  Исследовать |cffdcaa92Улучшенную добычу (Raw: TRIGSTR_15850)
+    Uber: "Увеличивают объем переносимой работниками древесины на <Rhlh,mod1>." (Raw: "Увеличивают объем переносимой работниками древесины на <Rhlh,mod1>.")
+    HK:   TRIGSTR_30641
+  Level 2:
+    Name: |cffdcaa92Улучшенная добыча (Raw: TRIGSTR_15848)
+    Tip:  Исследовать |cffdcaa92Улучшенную добычу (Raw: TRIGSTR_15851)
+    Uber: "Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>." (Raw: "Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>.")
+    HK:   TRIGSTR_30642
+  Level 3:
+    Name: |cffdcaa92Улучшенная добыча (Raw: TRIGSTR_16619)
+    Tip:  Исследовать |cffdcaa92Улучшенную добычу (Raw: TRIGSTR_17215)
+    Uber: Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>. (Raw: TRIGSTR_21373)
+    HK:   TRIGSTR_30643
+  Level 4:
+    Name: |cffdcaa92Улучшенная добыча (Raw: TRIGSTR_16622)
+    Tip:  Исследовать |cffdcaa92Улучшенную добычу (Raw: TRIGSTR_19487)
+    Uber: Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>. (Raw: TRIGSTR_21374)
+    HK:   TRIGSTR_30644
+  Level 5:
+    Name: |cffdcaa92Улучшенная добыча (Raw: TRIGSTR_16623)
+    Tip:  Исследовать |cffdcaa92Улучшенную добычу (Raw: TRIGSTR_19488)
+    Uber: Увеличивают объем переносимой работниками древесины еще на <Rhlh,mod1>. (Raw: TRIGSTR_21684)
+    HK:   TRIGSTR_30645
+  Effects:
+    {'effect': 'rlum', 'base': '10', 'mod': '10', 'code': None, 'target': None}
+    {'effect': 'rlev', 'base': '1', 'mod': '1', 'code': 'Ahlh', 'target': None}
+
+=== [Resi] MaxLevel: 1 Pos: (0, 1) Req: [] ===
+  Level 1:
+    Name: |cffbebedcРассеяние чар|r (Raw: TRIGSTR_27115)
+    Tip:  Исследовать «|cffbebedcРассеяние чар|r» (Raw: TRIGSTR_27116)
+    Uber: Позволяет дриадам снимать положительные эффекты с врагов и отрицательные с союзников. |nНаносит урон призванным целям. (Raw: Позволяет дриадам снимать положительные эффекты с врагов и отрицательные с союзников. |nНаносит урон призванным целям.)
+    HK:   TRIGSTR_5291

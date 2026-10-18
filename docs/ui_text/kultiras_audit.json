@@ -1,0 +1,119 @@
+{
+  "race": "Кул-Тирас (Kul Tiras)",
+  "race_id": 17,
+  "selection_ability": "A0HO",
+  "objects_audit": {
+    "buildings": {
+      "count": 13,
+      "ids": [
+        "h01X",
+        "h01Y",
+        "h01Z",
+        "h020",
+        "h021",
+        "h0G6",
+        "h022",
+        "h023",
+        "h024",
+        "h025",
+        "h026",
+        "h027",
+        "kt02"
+      ],
+      "economy_building": {
+        "id": "h024",
+        "name": "Ферма",
+        "food_provided": 40,
+        "gold_income_per_25s": 20,
+        "verified_via": "53_economy.lua and unit object stats"
+      }
+    },
+    "units": {
+      "count": 31,
+      "ids": [
+        "h013",
+        "h019",
+        "h01A",
+        "h01C",
+        "h01D",
+        "h01E",
+        "h01F",
+        "h01G",
+        "h01H",
+        "h01I",
+        "kt00",
+        "h0NC",
+        "h0ND",
+        "h0NE",
+        "h0NF",
+        "h0NG",
+        "h0NH",
+        "h0NI",
+        "h0NJ",
+        "h0NS",
+        "h0NL",
+        "h0NM",
+        "h0NN",
+        "h0NO",
+        "h0NP",
+        "h0NQ",
+        "h0NR",
+        "h0NK",
+        "h0NT",
+        "h0NU",
+        "h0NV"
+      ]
+    },
+    "heroes": {
+      "count": 3,
+      "ids": [
+        "H01L",
+        "H01N",
+        "H01K"
+      ],
+      "names": {
+        "H01L": "Капитан (Ловкость, ближний бой)",
+        "H01N": "Верховная Жрица Морей (Интеллект, дальний бой)",
+        "H01K": "Адмирал (Сила, ближний бой)"
+      }
+    },
+    "abilities": {
+      "count": 26,
+      "total_wts_updated": 528
+    },
+    "researches": {
+      "count": 29,
+      "mutually_exclusive_paths": {
+        "R027": "Инвестировать в Флот — усиливает корабли, исключает армию",
+        "R02S": "Инвестировать в Армию — усиливает пехоту, исключает флот"
+      },
+      "markers_list": {
+        "R07D": "Маркер расы Кул-Тирас",
+        "R0HX": "Маркер Кул-Тирас или Альянс"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items or inventory artifacts found in war3map.w3t for Kul Tiras."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "No race-specific floating messages or game UI strings found in war3map.wts for Kul Tiras."
+  },
+  "buffs_audit": {
+    "custom_buffs": [],
+    "standard_buffs_used": [
+      "Bdef",
+      "Bfro",
+      "Bblo",
+      "Binf",
+      "BOac",
+      "Bcri",
+      "Bshs"
+    ],
+    "status": "All buffs used by Kul Tiras abilities are standard Warcraft III engine buffs. No custom text modification required."
+  },
+  "total_wts_updates": 528,
+  "total_checks": 502
+}

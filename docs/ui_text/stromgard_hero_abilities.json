@@ -1,0 +1,145 @@
+{
+  "race": "Стромгард",
+  "category": "Способности и эффекты: способности героев (партия 1)",
+  "scope": "Все 17 способностей героев Стромгарда",
+  "hero_abilities": [
+    {
+      "id": "A0XW",
+      "name": "|cffe4cfa3Ударная волна|r",
+      "hotkey": "Q",
+      "levels": 4,
+      "is_passive": false,
+      "is_innate": false
+    },
+    {
+      "id": "A0XM",
+      "name": "|cffe4cfa3Сторожевая башня|r",
+      "hotkey": "W",
+      "levels": 4,
+      "is_passive": false,
+      "is_innate": false
+    },
+    {
+      "id": "A0Y8",
+      "name": "|cffe4cfa3Жгучая кровь|r",
+      "hotkey": "E",
+      "levels": 4,
+      "is_passive": true,
+      "is_innate": false
+    },
+    {
+      "id": "A0XZ",
+      "name": "|cffe4cfa3Генеральская забава|r",
+      "hotkey": "R",
+      "levels": 2,
+      "is_passive": false,
+      "is_innate": false
+    },
+    {
+      "id": "A0ZO",
+      "name": "|cffe4cfa3Золотая ручка|r",
+      "hotkey": "Q",
+      "levels": 4,
+      "is_passive": false,
+      "is_innate": false
+    },
+    {
+      "id": "A0ZP",
+      "name": "|cffe4cfa3Налоги|r",
+      "hotkey": "W",
+      "levels": 4,
+      "is_passive": true,
+      "is_innate": false
+    },
+    {
+      "id": "A0XV",
+      "name": "|cffe4cfa3Казначейский талант|r",
+      "hotkey": "E",
+      "levels": 4,
+      "is_passive": true,
+      "is_innate": false
+    },
+    {
+      "id": "A0ZN",
+      "name": "|cffe4cfa3Прибавка к золоту|r",
+      "hotkey": "R",
+      "levels": 2,
+      "is_passive": false,
+      "is_innate": false
+    },
+    {
+      "id": "A0XK",
+      "name": "|cffe4cfa3Огненная стрела|r",
+      "hotkey": "Q",
+      "levels": 4,
+      "is_passive": false,
+      "is_innate": false
+    },
+    {
+      "id": "A0ZQ",
+      "name": "|cffe4cfa3Магический котел|r",
+      "hotkey": "W",
+      "levels": 4,
+      "is_passive": false,
+      "is_innate": false
+    },
+    {
+      "id": "A0Y6",
+      "name": "|cffe4cfa3Аура гениальности|r",
+      "hotkey": "E",
+      "levels": 4,
+      "is_passive": true,
+      "is_innate": false
+    },
+    {
+      "id": "A0Y7",
+      "name": "|cffe4cfa3Огненный ливень|r",
+      "hotkey": "R",
+      "levels": 2,
+      "is_passive": false,
+      "is_innate": false
+    },
+    {
+      "id": "A1LH",
+      "name": "|cffe4cfa3Аура ветерана|r",
+      "hotkey": null,
+      "levels": 1,
+      "is_passive": true,
+      "is_innate": true
+    },
+    {
+      "id": "A17V",
+      "name": "|cffe4cfa3Всплеск ярости|r",
+      "hotkey": "Q",
+      "levels": 4,
+      "is_passive": false,
+      "is_innate": false
+    },
+    {
+      "id": "A17X",
+      "name": "|cffe4cfa3Боевой клич|r",
+      "hotkey": "W",
+      "levels": 4,
+      "is_passive": false,
+      "is_innate": false
+    },
+    {
+      "id": "A17W",
+      "name": "|cffe4cfa3Ярость Трол'калар|r",
+      "hotkey": "E",
+      "levels": 4,
+      "is_passive": true,
+      "is_innate": false
+    },
+    {
+      "id": "A17S",
+      "name": "|cffe4cfa3Аватар|r",
+      "hotkey": "R",
+      "levels": 2,
+      "is_passive": false,
+      "is_innate": false
+    }
+  ],
+  "total_operations": 163,
+  "in_game_checked": false
+}

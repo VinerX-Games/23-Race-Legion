@@ -1,0 +1,581 @@
+﻿
+==================== SELECTION (1) ====================
+[A14O] Name: TRIGSTR_38901 -> '|cffa0d2d2═руш|r'
+      Hotkey: TRIGSTR_11297 -> 'D'
+      tip1: TRIGSTR_38902 (sid=38902) -> '|cffa0d2d2═руш|r'
+      ubertip1: TRIGSTR_32513 (sid=32513) -> '|cffa0beaa╤ючфрЄхы№ Ёрё√:|r |cffc8dcaaEscanor (▀їтх)|r|n|cffa0beaa╩єЁрЄюЁ Ёрё√:...
+
+==================== SELECTION_MARKERS (2) ====================
+[R0FS] Name: None -> None
+      name1: TRIGSTR_43187 (sid=43187) -> '|cff4280e1Naga|r'
+      tip1: TRIGSTR_43188 (sid=43188) -> '|cff4280e1Naga|r'
+      ubertip1: TRIGSTR_43189 (sid=43189) -> 'Blood Elves or Sin\'dorei in Thalassian ("children of the blood") Ц a race of h...
+[R0KZ] Name: None -> None
+      name1: TRIGSTR_5721 (sid=5721) -> '|cffe6beaa╚ыышфрЁш шыш ═руш|r'
+      tip1: TRIGSTR_9416 (sid=9416) -> '|cffe6beaa╚ыышфрЁш шыш ═руш|r'
+      ubertip1: TRIGSTR_12518 (sid=12518) -> '┬ющёъю ёючфрээюх ш юЁурэшчютрээюх ╚ыышфрэюь ▀ЁюёЄ№■ ┴єЁш шч ёюсёЄтхээ√ї яюёыхфю...
+
+==================== BUILDINGS (10) ====================
+[h0JW] Name: TRIGSTR_42986 -> '|cffa0d2d2Coral Crusher|r'
+      Tip: TRIGSTR_42987 -> 'Build |cffa0d2d2Coral Crusher|r'
+      Ubertip: TRIGSTR_42985 -> '|cff7dc87dConstruction time:|r |cffaaf0aa70 sec.|r|n|n\nAllows upgrading armor, weapons, and other ...
+      Hotkey: TRIGSTR_6602 -> 'E'
+[h0JX] Name: TRIGSTR_42992 -> '|cff4280deAbyssal Temple|r'
+      Tip: TRIGSTR_42991 -> 'Upgrade to |cff4280deAbyssal Temple|r'
+      Ubertip: TRIGSTR_42993 -> '|cff7dc87dUpgrade time:|r |cffaaf0aa140 sec.|r|n|n\nGrants access to new buildings and types of uni...
+      Hotkey: TRIGSTR_11530 -> 'Z'
+[h0JY] Name: TRIGSTR_42994 -> '|cff4280deCoral Temple|r'
+      Tip: TRIGSTR_42995 -> 'Upgrade to |cff4280deCoral Temple|r'
+      Ubertip: TRIGSTR_42996 -> '|cff7dc87dUpgrade time:|r |cffaaf0aa140 sec.|r|n|n\nGrants access to new buildings and unit types.'...
+      Hotkey: TRIGSTR_11602 -> 'Z'
+[n04L] Name: TRIGSTR_43006 -> "|cffa0d2d2Serpent's Lair|r"
+      Tip: TRIGSTR_43007 -> "Build |cffa0d2d2Serpent's Lair|r"
+      Ubertip: TRIGSTR_43008 -> '|cff7dc87d\nConstruction time:|r |cffaaf0aa60 sec.|r|n|n\nBuilding for summoning sea serpents.'...
+      Hotkey: TRIGSTR_8757 -> 'X'
+[n055] Name: TRIGSTR_42982 -> '|cffa0d2d2Sea Gates|r'
+      Tip: TRIGSTR_42983 -> 'Build |cffa0d2d2Sea Gates|r'
+      Ubertip: TRIGSTR_42984 -> '|cff7dc87dConstruction time:|r |cffaaf0aa60 sec.|r|n|n\nTrains Mirmidons, Sea Basilisks, and Naga S...
+      Hotkey: TRIGSTR_4163 -> 'D'
+[nnfm] Name: TRIGSTR_31829 -> '|cffa0d2d2Coral reef|r'
+      Tip: TRIGSTR_35837 -> 'Grow |cffa0d2d2Coral reef|r'
+      Ubertip: TRIGSTR_35937 -> '|cff7dc87dConstruction time:|r |cffaaf0aa45 sec.|r|n|nBrings 40 income.'...
+      Hotkey: TRIGSTR_037 -> 'A'
+[nnsa] Name: TRIGSTR_28025 -> '|cffa0d2d2Sanctuary of Azshara|r'
+      Tip: TRIGSTR_29009 -> 'Build |cffa0d2d2Sanctuary of Azshara|r'
+      Ubertip: TRIGSTR_29010 -> '|cff7dc87dConstruction time:|r |cffaaf0aa70 sec.|r|n|n\nTrains magical units of the Naga army.'...
+      Hotkey: TRIGSTR_121 -> 'R'
+[nnsg] Name: TRIGSTR_29028 -> '|cffa0d2d2Spawning groundr'
+      Tip: TRIGSTR_29077 -> 'Build |cffa0d2d2Spawning ground|r'
+      Ubertip: TRIGSTR_29079 -> '|cff7dc87dConstruction time:|r |cffaaf0aa60 sec.|r|n|nTrains melee and ranged warriors, as well as ...
+      Hotkey: TRIGSTR_019 -> 'W'
+[nntg] Name: TRIGSTR_42941 -> '|cffa0d2d2Tidal Guardian|r'
+      Tip: TRIGSTR_42942 -> 'Build |cffa0d2d2Tidal Guardian|r'
+      Ubertip: TRIGSTR_42943 -> '|cff7dc87dConstruction time:|r |cffaaf0aa45 sec.|r|n|n\nBasic defensive structure.'...
+      Hotkey: TRIGSTR_393 -> 'Z'
+[nntt] Name: TRIGSTR_8060 -> '|cffa0d2d2Temple of the Abyss|r'
+      Tip: TRIGSTR_8036 -> 'Build |cffa0d2d2Temple of the Abyss|r'
+      Ubertip: TRIGSTR_25675 -> '|cff7dc87dConstruction time:|r |cffaaf0aa140 sec.|r|n|n\nBasic building.Trains Murloc slaves and Mu...
+      Hotkey: TRIGSTR_409 -> 'Q'
+
+==================== WORKER (1) ====================
+[nmpe] Name: TRIGSTR_42944 -> '|cffa0d2d2Murloc Slave|r'
+      Tip: TRIGSTR_42945 -> 'Train |cff4280e1Murloc Slave|r'
+      Ubertip: TRIGSTR_42946 -> '|cff7dc87dPreparation time:|r |cffaaf0aa15 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaNormal|r|n\nA...
+      Hotkey: TRIGSTR_412 -> 'Q'
+
+==================== HEROES (5) ====================
+[H0JU] Name: TRIGSTR_42964 -> '|cffa0d2d2Lord Guardian|r'
+      Tip: TRIGSTR_42967 -> 'Summon |cffa0d2d2Lord Guardian|r'
+      Ubertip: TRIGSTR_42969 -> '|cff7dc87dPreparation Time:|r |cffaaf0aa60 sec.|r|n|cff7dc87dHero Type:|r |cffaaf0aaLegendary|r|n|c...
+      Hotkey: TRIGSTR_5116 -> 'X'
+[H0JV] Name: TRIGSTR_42970 -> '|cffa0d2d2Deep Huntress|r'
+      Tip: TRIGSTR_42974 -> 'Summon |cffa0d2d2Deep Huntress|r'
+      Ubertip: TRIGSTR_42975 -> '|cff7dc87dPreparation Time:|r |cffaaf0aa60 sec.|r|n|cff7dc87dHero Type:|r |cffaaf0aaLegendary|r|n|c...
+      Hotkey: TRIGSTR_7432 -> 'C'
+[H0OZ] Name: TRIGSTR_41066 -> '|cffa0d2d2╠єЁыюъ-├шурэЄ|r'
+      Tip: TRIGSTR_41069 -> '╧ЁшчтрЄ№ |cffa0d2d2╠єЁыюър-├шурэЄр|r'
+      Ubertip: TRIGSTR_41071 -> '|cff7dc87d┬Ёхь  яюфуюЄютъш:|r |cffaaf0aa60 ёхъ.|r|n|cff7dc87d╥шя ├хЁю :|r |cffaaf0aa╦хухэфрЁэ√щ |r|...
+      Hotkey: TRIGSTR_8758 -> 'X'
+[N07A] Name: TRIGSTR_43012 -> '|cffa0d2d2Murloc Sorcerer|r'
+      Tip: TRIGSTR_43014 -> 'Summon |cffa0d2d2Murloc Sorcerer|r'
+      Ubertip: TRIGSTR_43017 -> '|cff7dc87dPreparation Time:|r |cffaaf0aa60 sec.|r|n|cff7dc87dHero Type:|r |cffaaf0aaLegendary|r|n|c...
+      Hotkey: TRIGSTR_15630 -> 'Z'
+[N054] Name: TRIGSTR_25735 -> '|cffa0d2d2╠єЁыюъ-ўрЁюфхщ|r'
+      Tip: TRIGSTR_25738 -> '╧ЁшчтрЄ№ |cffa0d2d2╠єЁыюъ-ўрЁюфхщ|r'
+      Ubertip: TRIGSTR_26681 -> '|cff7dc87d┬Ёхь  яюфуюЄютъш:|r |cffaaf0aa60 ёхъ.|r|n|cff7dc87d╥шя ├хЁю :|r |cffaaf0aa╦хухэфрЁэ√щ |r|...
+      Hotkey: TRIGSTR_11503 -> 'Z'
+
+==================== UNITS (17) ====================
+[n04Z] Name: TRIGSTR_42958 -> '|cffa0d2d2Warrior of the Waves|r'
+      Tip: TRIGSTR_42959 -> 'Hire |cffa0d2d2Warrior of the Waves|r'
+      Ubertip: TRIGSTR_42960 -> '|cff7dc87dPreparation time:|r |cffaaf0aa20 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaNormal|r|n\nA...
+      Hotkey: TRIGSTR_5205 -> 'Q'
+[n050] Name: TRIGSTR_42961 -> '|cffa0d2d2Murloc Mutant|r'
+      Tip: TRIGSTR_42962 -> 'Hire |cffa0d2d2Murloc Mutant|r'
+      Ubertip: TRIGSTR_42963 -> '|cff7dc87dPreparation time:|r |cffaaf0aa45 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaChaos|r|n\nAn...
+      Hotkey: TRIGSTR_5221 -> 'Q'
+[n051] Name: TRIGSTR_42998 -> '|cff4280deAbyssal Dweller|r'
+      Tip: TRIGSTR_42997 -> 'Train |cff4280deAbyssal Dweller|r'
+      Ubertip: TRIGSTR_42999 -> '|cff7dc87dPreparation time:|r |cffaaf0aa28 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaMagical|r|n\n...
+      Hotkey: TRIGSTR_5319 -> 'Q'
+[n052] Name: TRIGSTR_42976 -> '|cffa0d2d2Murloc Hunter|r'
+      Tip: TRIGSTR_42977 -> 'Hire |cffa0d2d2Murloc Hunter|r'
+      Ubertip: TRIGSTR_42978 -> '|cff7dc87dPreparation time:|r |cffaaf0aa40 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaNormal|r|n\nA...
+      Hotkey: TRIGSTR_6539 -> 'E'
+[n053] Name: TRIGSTR_42979 -> '|cffa0d2d2Murloc - Dark Mage|r'
+      Tip: TRIGSTR_42980 -> 'Hire |cffa0d2d2Murloc - Dark Mage|r'
+      Ubertip: TRIGSTR_42981 -> '|cff7dc87dPreparation time:|r |cffaaf0aa40 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaMagical|r|n\n...
+      Hotkey: TRIGSTR_5309 -> 'Q'
+[n054] Name: TRIGSTR_43003 -> '|cffa0d2d2Murloc - Shaman|r'
+      Tip: TRIGSTR_43004 -> 'Hire |cffa0d2d2Murloc - Shaman|r'
+      Ubertip: TRIGSTR_43005 -> '|cff7dc87dPreparation time:|r |cffaaf0aa30 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaMagical|r|n\n...
+      Hotkey: TRIGSTR_8377 -> 'W'
+[n056] Name: TRIGSTR_42988 -> '|cffa0d2d2Sea Hunter|r'
+      Tip: TRIGSTR_42989 -> 'Summon |cffa0d2d2Sea Hunter|r'
+      Ubertip: TRIGSTR_42990 -> '|cff7dc87dPreparation time:|r |cffaaf0aa45 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaNormal|r|n\nA...
+      Hotkey: TRIGSTR_6603 -> 'E'
+[n057] Name: TRIGSTR_43001 -> '|cff4280deAncient Naga|r'
+      Tip: TRIGSTR_43000 -> 'Train |cff4280deAncient Naga|r'
+      Ubertip: TRIGSTR_43002 -> 'An incredibly powerful melee warrior. Master of "Diving," which allows hiding in water, "Tough Skin...
+[n079] Name: TRIGSTR_43009 -> '|cffa0d2d2Sea Serpent|r'
+      Tip: TRIGSTR_43010 -> 'Summon |cffa0d2d2Sea Serpent|r'
+      Ubertip: TRIGSTR_43011 -> '|cff7dc87dPreparation time:|r |cffaaf0aa50 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaChaos|r|n\nA ...
+      Hotkey: TRIGSTR_8069 -> 'Q'
+[nmyr] Name: TRIGSTR_42929 -> '|cffa0d2d2Myrmidon|r'
+      Tip: TRIGSTR_42930 -> 'Train |cffa0d2d2Myrmidon|r'
+      Ubertip: TRIGSTR_42931 -> '|cff7dc87dPreparation time:|r |cffaaf0aa40 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaNormal|r|n\nA...
+      Hotkey: TRIGSTR_268 -> 'E'
+[nnmg] Name: TRIGSTR_42920 -> '|cffa0d2d2Murloc Raider|r'
+      Tip: TRIGSTR_42921 -> 'Train |cffa0d2d2Murloc Raider|r'
+      Ubertip: TRIGSTR_42922 -> '|cff7dc87dPreparation time:|r |cffaaf0aa18 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaNormal|r|n\nA...
+      Hotkey: TRIGSTR_020 -> 'W'
+[nnrg] Name: TRIGSTR_42933 -> '|cffa0d2d2Naga Guard|r'
+      Tip: TRIGSTR_42932 -> 'Train |cffa0d2d2Naga Guard|r'
+      Ubertip: TRIGSTR_42934 -> '|cff7dc87dPreparation time:|r |cffaaf0aa40 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaChaos|r\nAn i...
+      Hotkey: TRIGSTR_410 -> 'Q'
+[nnsw] Name: TRIGSTR_42924 -> '|cffa0d2d2Siren|r'
+      Tip: TRIGSTR_42923 -> 'Train |cffa0d2d2Siren|r'
+      Ubertip: TRIGSTR_42925 -> '|cff7dc87dPreparation time:|r |cffaaf0aa28 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaMagical|r|n\n...
+      Hotkey: TRIGSTR_090 -> 'W'
+[nwgs] Name: TRIGSTR_42952 -> '|cffa0d2d2Couatl|r'
+      Tip: TRIGSTR_42953 -> 'Train |cffa0d2d2Couatl|r'
+      Ubertip: TRIGSTR_42954 -> '|cff7dc87dPreparation time:|r |cffaaf0aa35 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaRanged|r|n|nA...
+      Hotkey: TRIGSTR_642 -> 'W'
+[nsnp] Name: TRIGSTR_42926 -> '|cffa0d2d2Sea Basilisk|r'
+      Tip: TRIGSTR_42927 -> 'Train |cffa0d2d2Sea Basilisk|r'
+      Ubertip: TRIGSTR_42928 -> '|cff7dc87dPreparation time:|r |cffaaf0aa26 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaRanged|r|n\nA...
+      Hotkey: TRIGSTR_091 -> 'W'
+[nhyc] Name: TRIGSTR_42935 -> '|cffa0d2d2Dragon Turtle|r'
+      Tip: TRIGSTR_42936 -> 'Train |cffa0d2d2Dragon Turtle|r'
+      Ubertip: TRIGSTR_42937 -> '|cff7dc87dPreparation time:|r |cffaaf0aa40 sec.|r|n|cff7dc87dAttack type:|r |cffaaf0aaSiege|r\nA mi...
+      Hotkey: TRIGSTR_294 -> 'R'
+[ntor] Name: ╥юЁэрфю -> '╥юЁэрфю'
+
+==================== UPGRADES (16) ====================
+[R0FS] Name: None -> None
+      name1: TRIGSTR_43187 (sid=43187) -> '|cff4280e1Naga|r'
+      tip1: TRIGSTR_43188 (sid=43188) -> '|cff4280e1Naga|r'
+      ubertip1: TRIGSTR_43189 (sid=43189) -> 'Blood Elves or Sin\'dorei in Thalassian ("children of the blood") Ц a race of h...
+[R0FE] Name: None -> None
+      name1: TRIGSTR_43151 (sid=43151) -> '|cffa0d2d2Naga Domination|r'
+      tip1: TRIGSTR_43153 (sid=43153) -> '|cffa0d2d2Naga Domination|r'
+      ubertip1: TRIGSTR_43152 (sid=43152) -> 'Naga gain a dominant position, allowing the recruitment of new unit types.\nInc...
+[R0FF] Name: None -> None
+      name1: TRIGSTR_43154 (sid=43154) -> '|cffa0d2d2Murloc Domination|r'
+      tip1: TRIGSTR_43155 (sid=43155) -> '|cffa0d2d2Murloc Domination|r'
+      ubertip1: TRIGSTR_43156 (sid=43156) -> 'Murlocs gain a dominant position, allowing the recruitment of new unit types.\n...
+[R0FD] Name: None -> None
+      name1: TRIGSTR_43148 (sid=43148) -> '|cffa0d2d2Spiked Shell|r'
+      tip1: TRIGSTR_43149 (sid=43149) -> '|cffa0d2d2Spiked Shell|r'
+      ubertip1: TRIGSTR_43150 (sid=43150) -> 'Unlocks the ability |cffa0d2d2Spiked Shell|r for |cff4280e1Murlocs|r and |cff42...
+[R0FH] Name: None -> None
+      name1: TRIGSTR_43160 (sid=43160) -> '|cff4280d1Enhanced Grip|r'
+      name2: TRIGSTR_43161 (sid=43161) -> '|cff4280d2Enhanced Grip|r'
+      name3: TRIGSTR_43162 (sid=43162) -> '|cff4280d3Enhanced Grip|r'
+      name4: TRIGSTR_43163 (sid=43163) -> '|cff4280d4Enhanced Grip|r'
+      tip1: TRIGSTR_43164 (sid=43164) -> 'Research |cff4280deEnhanced Grip|r'
+      tip2: TRIGSTR_43165 (sid=43165) -> 'Research |cff4280deEnhanced Grip|r'
+      tip3: TRIGSTR_43166 (sid=43166) -> 'Research |cff4280deEnhanced Grip|r'
+      tip4: TRIGSTR_43167 (sid=43167) -> 'Research |cff4280deEnhanced Grip|r'
+      ubertip1: TRIGSTR_43171 (sid=43171) -> 'Increases the amount of wood carried by workers by 8.'...
+      ubertip2: TRIGSTR_43168 (sid=43168) -> 'Increases the amount of wood carried by workers by 8.'...
+      ubertip3: TRIGSTR_43169 (sid=43169) -> 'Increases the amount of wood carried by workers by 8.'...
+      ubertip4: TRIGSTR_43170 (sid=43170) -> 'Increases the amount of wood carried by workers by 8.'...
+[R0FP] Name: None -> None
+      name1: TRIGSTR_43172 (sid=43172) -> '|cffa0d2d2Crushing Blow|r'
+      tip1: TRIGSTR_43173 (sid=43173) -> 'Research |cffa0d2d2Crushing Blow|r'
+      ubertip1: TRIGSTR_43174 (sid=43174) -> 'Teaches |cffa0d2d2Sea Hunter|r |cffa0d2d2Crushing Blow|r, which has a chance to...
+[R0FQ] Name: None -> None
+      name1: TRIGSTR_43175 (sid=43175) -> '|cffa0d2d2Domination at Sea|r'
+      name2: TRIGSTR_43178 (sid=43178) -> '|cffa0d2d2Domination at Sea|r'
+      name3: TRIGSTR_43179 (sid=43179) -> '|cffa0d2d2Domination at Sea|r'
+      tip1: TRIGSTR_43176 (sid=43176) -> 'Research |cffa0d2d2Domination at Sea|r'
+      tip2: TRIGSTR_43180 (sid=43180) -> 'Research |cffa0d2d2Domination at Sea|r'
+      tip3: TRIGSTR_43181 (sid=43181) -> 'Research |cffa0d2d2Domination at Sea|r'
+      ubertip1: TRIGSTR_43177 (sid=43177) -> 'Increases the health of |cffa0d2d2Mutant Murloc|r by 40.'...
+      ubertip2: TRIGSTR_43182 (sid=43182) -> 'Increases the health of |cffa0d2d2Mutant Murloc|r by 40.'...
+      ubertip3: TRIGSTR_43183 (sid=43183) -> 'Increases the health of |cffa0d2d2Mutant Murloc|r by 40.'...
+[R0FR] Name: None -> None
+      name1: TRIGSTR_43184 (sid=43184) -> '|cff4280e1Slowing Poison|r'
+      tip1: TRIGSTR_43185 (sid=43185) -> '|cff4280e1Slowing Poison|r'
+      ubertip1: TRIGSTR_43186 (sid=43186) -> 'Allows |cff4280e1Sea Varanus|r to poison their enemies upon attack.'...
+[R0KP] Name: None -> None
+      name1: TRIGSTR_26369 (sid=26369) -> '|cffa0d2d2Anti-Magic Coatl|r'
+      tip1: TRIGSTR_26370 (sid=26370) -> 'Research |cffa0d2d2Anti-Magic Coatl|r'
+      ubertip1: TRIGSTR_26371 (sid=26371) -> 'Teaches |cffa0d2d2Coatl|r the spell |cffa0d2d2Counteraction|r, which burns enem...
+[Rnam] Name: None -> None
+      name1: TRIGSTR_43038 (sid=43038) -> '|cffa0d2d2Coral Scales|r'
+      name2: TRIGSTR_43024 (sid=43024) -> '|cffa0d2d2Coral Scales|r'
+      name3: TRIGSTR_43021 (sid=43021) -> '|cffa0d2d2Chitinous Scales|r'
+      name4: TRIGSTR_43025 (sid=43025) -> '|cffa0d2d2Chitinous Scales|r'
+      name5: TRIGSTR_43023 (sid=43023) -> '|cffa0d2d2Bone Scales|r'
+      name6: TRIGSTR_43022 (sid=43022) -> '|cffa0d2d2Bone Scales|r'
+      tip1: TRIGSTR_43026 (sid=43026) -> 'Research |cffa0d2d2Coral Scales|r'
+      tip2: TRIGSTR_43027 (sid=43027) -> 'Research |cffa0d2d2Coral Scales|r'
+      tip3: TRIGSTR_43028 (sid=43028) -> 'Research |cffa0d2d2Coral Scales|r'
+      tip4: TRIGSTR_43031 (sid=43031) -> 'Research |cffa0d2d2Coral Scales|r'
+      tip5: TRIGSTR_43030 (sid=43030) -> 'Research |cffa0d2d2Coral Scales|r'
+      tip6: TRIGSTR_43029 (sid=43029) -> 'Research |cffa0d2d2Coral Scales|r'
+      ubertip1: TRIGSTR_43032 (sid=43032) -> 'Enhances the armor of |cffa0d2d2Naga|r and |cffa0d2d2Murlocs|r.'...
+      ubertip2: TRIGSTR_43033 (sid=43033) -> 'Additionally strengthens the armor of |cffa0d2d2Naga|r and |cffa0d2d2Murlocs|r....
+      ubertip3: TRIGSTR_43034 (sid=43034) -> 'Additionally strengthens the armor of |cffa0d3d3Naga|r and |cffa0d3d3Murlocs|r....
+      ubertip4: TRIGSTR_43035 (sid=43035) -> 'Additionally strengthens the armor of |cffa0d4d4Naga|r and |cffa0d4d4Murlocs|r....
+      ubertip5: TRIGSTR_43036 (sid=43036) -> 'Additionally strengthens the armor of |cffa0d5d5Naga|r and |cffa0d5d5Murlocs|r....
+      ubertip6: TRIGSTR_43037 (sid=43037) -> 'Additionally strengthens the armor of |cffa0d6d6Naga|r and |cffa0d6d6Murlocs|r....
+[Rnat] Name: None -> None
+      name1: TRIGSTR_43039 (sid=43039) -> '|cffa0d2d2Coral Blades|r'
+      name2: TRIGSTR_43043 (sid=43043) -> '|cffa0d2d2Coral Blades|r'
+      name3: TRIGSTR_43040 (sid=43040) -> '|cffa0d2d2Chitinous Blades|r'
+      name4: TRIGSTR_43044 (sid=43044) -> '|cffa0d2d2Chitinous Blades|r'
+      name5: TRIGSTR_43042 (sid=43042) -> '|cffa0d2d2Bone Blades|r'
+      name6: TRIGSTR_43041 (sid=43041) -> '|cffa0d2d2Bone Blades|r'
+      tip1: TRIGSTR_43045 (sid=43045) -> 'Research |cffa0d2d2Coral Blades|r'
+      tip2: TRIGSTR_43049 (sid=43049) -> 'Research |cffa0d2d2Coral Blades|r'
+      tip3: TRIGSTR_43046 (sid=43046) -> 'Research |cffa0d2d2Chitin Blades|r'
+      tip4: TRIGSTR_43050 (sid=43050) -> 'Research |cffa0d2d2Chitin Blades|r'
+      tip5: TRIGSTR_43048 (sid=43048) -> 'Research |cffa0d2d2Bone Blades|r'
+      tip6: TRIGSTR_43047 (sid=43047) -> 'Research |cffa0d2d2Bone Blades|r'
+      ubertip1: TRIGSTR_43051 (sid=43051) -> 'Increase attack damage of |cffa0d2d2Nagas|r and |cffa0d2d2Murlocs|r.'...
+      ubertip2: TRIGSTR_43052 (sid=43052) -> 'Additionally increase attack damage of |cffa0d2d2Nagas|r and |cffa0d2d2Murlocs|...
+      ubertip3: TRIGSTR_43053 (sid=43053) -> 'Additionally increase attack damage of |cffa0d3d3Nagas|r and |cffa0d3d3Murlocs|...
+      ubertip4: TRIGSTR_43054 (sid=43054) -> 'Additionally increase attack damage of |cffa0d4d4Nagas|r and |cffa0d4d4Murlocs|...
+      ubertip5: TRIGSTR_43055 (sid=43055) -> 'Additionally increase attack damage of |cffa0d5d5Nagas|r and |cffa0d5d5Murlocs|...
+      ubertip6: TRIGSTR_43056 (sid=43056) -> 'Additionally increase attack damage of |cffa0d6d6Nagas|r and |cffa0d6d6Murlocs|...
+[Rnen] Name: None -> None
+      name1: TRIGSTR_25898 (sid=25898) -> 'Entangling'
+      tip1: TRIGSTR_25944 (sid=25944) -> 'Research |cffa0d2d2Entangling|r'
+      ubertip1: TRIGSTR_26330 (sid=26330) -> 'Teaches myrmidons "Entangling," which pulls an enemy to the ground and immobili...
+[Rnsb] Name: None -> None
+      name1: TRIGSTR_26331 (sid=26331) -> '|cffa0d2d2Dive|r'
+      tip1: TRIGSTR_26332 (sid=26332) -> 'Explore |cffa0d2d2Dive|r'
+      ubertip1: TRIGSTR_26333 (sid=26333) -> 'Allows naga troops to dive underwater, becoming invisible.'...
+[Rnsi] Name: None -> None
+      name1: TRIGSTR_26334 (sid=26334) -> '|cffa0d2d2Coral Magic|r'
+      name2: TRIGSTR_26337 (sid=26337) -> '|cffa0d2d2Coral Magic|r'
+      tip1: TRIGSTR_26335 (sid=26335) -> 'Research |cffa0d2d2Coral Magic|r'
+      tip2: TRIGSTR_26338 (sid=26338) -> 'Research |cffa0d2d2Coral Magic|r'
+      ubertip1: TRIGSTR_26336 (sid=26336) -> 'Enhances support mages, increasing their health by |cff4280e1 45|r, mana by |cf...
+      ubertip2: TRIGSTR_26339 (sid=26339) -> 'Enhances support mages, increasing their health by |cff4280e1 45|r, mana by |cf...
+[Rnsw] Name: None -> None
+      name1: TRIGSTR_26340 (sid=26340) -> '|cffa0d2d2Elemental Forces|r'
+      name2: TRIGSTR_26341 (sid=26341) -> '|cffa0d2d2Elemental Forces|r'
+      tip1: TRIGSTR_26342 (sid=26342) -> 'Research |cffa0d2d2Elemental Forces|r'
+      tip2: TRIGSTR_26343 (sid=26343) -> 'Research |cffa0d2d2Elemental Forces|r'
+      ubertip1: TRIGSTR_26344 (sid=26344) -> 'Enhances attack mages, increasing their health by |cff4280e1 45|r, mana by |cff...
+      ubertip2: TRIGSTR_26345 (sid=26345) -> 'Enhances attack mages, increasing their health by |cff4280e1 45|r, mana by |cff...
+[R0KZ] Name: None -> None
+      name1: TRIGSTR_5721 (sid=5721) -> '|cffe6beaa╚ыышфрЁш шыш ═руш|r'
+      tip1: TRIGSTR_9416 (sid=9416) -> '|cffe6beaa╚ыышфрЁш шыш ═руш|r'
+      ubertip1: TRIGSTR_12518 (sid=12518) -> '┬ющёъю ёючфрээюх ш юЁурэшчютрээюх ╚ыышфрэюь ▀ЁюёЄ№■ ┴єЁш шч ёюсёЄтхээ√ї яюёыхфю...
+
+==================== ABILITIES (56) ====================
+[A14O] Name: TRIGSTR_38901 -> '|cffa0d2d2═руш|r'
+      Hotkey: TRIGSTR_11297 -> 'D'
+      tip1: TRIGSTR_38902 (sid=38902) -> '|cffa0d2d2═руш|r'
+      ubertip1: TRIGSTR_32513 (sid=32513) -> '|cffa0beaa╤ючфрЄхы№ Ёрё√:|r |cffc8dcaaEscanor (▀їтх)|r|n|cffa0beaa╩єЁрЄюЁ Ёрё√:...
+[A13C] Name: TRIGSTR_35885 -> '|cff4280e2Madness|r'
+      Hotkey: TRIGSTR_22544 -> 'Q'
+      tip1: TRIGSTR_35887 (sid=35887) -> '|cff4280e2Madness|r'
+      tip2: TRIGSTR_35888 (sid=35888) -> '|cff4280e2Madness|r'
+      tip3: TRIGSTR_35889 (sid=35889) -> '|cff4280e2Madness|r'
+      tip4: TRIGSTR_35890 (sid=35890) -> '|cff4280e2Madness|r'
+      ubertip1: TRIGSTR_35896 (sid=35896) -> 'Mad rage awakens within the Naga, increasing her attack speed.\n|cffffcc001st l...
+      ubertip2: TRIGSTR_36108 (sid=36108) -> '|cffe4cfa3┴юхтющ Ёхт|r [|cffffffff3-щ єЁютхэ№|r] (|cffffffffW|r)'...
+      ubertip3: TRIGSTR_40069 (sid=40069) -> 'Mad rage awakens within the Naga, increasing her attack speed.\n|cffffcc003nd l...
+      ubertip4: TRIGSTR_40705 (sid=40705) -> 'Mad rage awakens within the Naga, increasing her attack speed.\n|cffffcc004nd l...
+[AEbl] Name: TRIGSTR_25764 -> '|cffe4cfa3╤ърўюъ|r'
+      Hotkey: TRIGSTR_9157 -> 'W'
+      tip1: "╤ърўюъ [|cffffcc001-щ єЁютхэ№|r]" (sid=None) -> '"╤ърўюъ [|cffffcc001-щ єЁютхэ№|r]"'
+      tip2: "╤ърўюъ [|cffffcc002-щ єЁютхэ№|r]" (sid=None) -> '"╤ърўюъ [|cffffcc002-щ єЁютхэ№|r]"'
+      tip3: "╤ърўюъ [|cffffcc003-щ єЁютхэ№|r]" (sid=None) -> '"╤ърўюъ [|cffffcc003-щ єЁютхэ№|r]"'
+      tip4: TRIGSTR_9615 (sid=9615) -> '|cffe4cfa3╤ърўюъ Ч єЁютхэ№ 4|r (|cffffffffW|r)'
+      ubertip1: "╧хЁхэюёшЄ эр ъюЁюЄъюх ЁрёёЄю эшх, яючтюы   ьуэютхээю тёЄєяшЄ№ т сющ шыш т√щЄш шч эхую." (sid=None) -> '"╧хЁхэюёшЄ эр ъюЁюЄъюх ЁрёёЄю эшх, яючтюы   ьуэютхээю тёЄєяшЄ№ т сющ шыш т√щЄш ...
+      ubertip2: "╧хЁхэюёшЄ эр ъюЁюЄъюх ЁрёёЄю эшх, яючтюы   ьуэютхээю тёЄєяшЄ№ т сющ шыш т√щЄш шч эхую." (sid=None) -> '"╧хЁхэюёшЄ эр ъюЁюЄъюх ЁрёёЄю эшх, яючтюы   ьуэютхээю тёЄєяшЄ№ т сющ шыш т√щЄш ...
+      ubertip3: "╧хЁхэюёшЄ эр ъюЁюЄъюх ЁрёёЄю эшх, яючтюы   ьуэютхээю тёЄєяшЄ№ т сющ шыш т√щЄш шч эхую." (sid=None) -> '"╧хЁхэюёшЄ эр ъюЁюЄъюх ЁрёёЄю эшх, яючтюы   ьуэютхээю тёЄєяшЄ№ т сющ шыш т√щЄш ...
+      ubertip4: TRIGSTR_9616 (sid=9616) -> '|cffa6afb8╤╧╬╤╬┴═╬╤╥▄:|cffced4da ╠уэютхээю яхЁхьх∙рхЄ ухЁю  эр ъюЁюЄъюх ЁрёёЄю ...
+[A13A] Name: TRIGSTR_35222 -> '|cffa0d2d2Double Strike|r'
+      Hotkey: TRIGSTR_22719 -> 'E'
+      tip1: TRIGSTR_35223 (sid=35223) -> '|cffa0d2d2Double Strike|r'
+      tip2: TRIGSTR_35230 (sid=35230) -> '|cffa0d2d2Double Strike|r'
+      tip3: TRIGSTR_35354 (sid=35354) -> '|cffa0d2d2Double Strike|r'
+      tip4: TRIGSTR_35355 (sid=35355) -> '|cffa0d2d2Double Strike|r'
+      ubertip1: TRIGSTR_35224 (sid=35224) -> 'Allows attacking two targets at once. Additionally increases agility.\n|cffffcc...
+      ubertip2: TRIGSTR_35566 (sid=35566) -> 'Allows attacking two targets at once. Additionally increases agility.\n|cffffcc...
+      ubertip3: TRIGSTR_35818 (sid=35818) -> 'Allows attacking two targets at once. Additionally increases agility.\n|cffffcc...
+      ubertip4: TRIGSTR_35875 (sid=35875) -> 'Allows attacking two targets at once. Additionally increases agility.\n|cffffcc...
+[A13D] Name: TRIGSTR_40925 -> '|cff4280e2Sea Master|r'
+      Hotkey: TRIGSTR_23147 -> 'R'
+      tip1: TRIGSTR_40932 (sid=40932) -> '|cff4280e2Sea Master|r [|cffffcc001st level|r]'
+      tip2: TRIGSTR_40962 (sid=40962) -> '|cff4280e2Sea Master|r [|cffffcc001st level|r]'
+      ubertip1: TRIGSTR_40995 (sid=40995) -> 'Gives a <Acdb,DataD1,%>% chance to evade an attack and a <Acdb,DataA1>% chance ...
+      ubertip2: TRIGSTR_40996 (sid=40996) -> 'Gives a <Acdb,DataD2,%>% chance to evade an attack and a <Acdb,DataA2>% chance ...
+[A136] Name: TRIGSTR_25756 -> '|cffa0d2d2╤ЄЁшцр■∙шщ ЄЁхчєсхЎ|r'
+      tip1: "╧ют√°хэшх їрЁръЄхЁшёЄшъ [|cffffcc001-щ єЁютхэ№|r]" (sid=None) -> '"╧ют√°хэшх їрЁръЄхЁшёЄшъ [|cffffcc001-щ єЁютхэ№|r]"'
+      ubertip1: "+<Aamk,DataA1> ъ ёшых, ыютъюёЄш ш шэЄхыыхъЄє." (sid=None) -> '"+<Aamk,DataA1> ъ ёшых, ыютъюёЄш ш шэЄхыыхъЄє."'...
+[A137] Name: TRIGSTR_25757 -> '|cffa0d2d2╤ЄЁшцр■∙шщ ЄЁхчєсхЎ|r'
+      tip1: "╧ют√°хэшх їрЁръЄхЁшёЄшъ [|cffffcc001-щ єЁютхэ№|r]" (sid=None) -> '"╧ют√°хэшх їрЁръЄхЁшёЄшъ [|cffffcc001-щ єЁютхэ№|r]"'
+      ubertip1: "+<Aamk,DataA1> ъ ёшых, ыютъюёЄш ш шэЄхыыхъЄє." (sid=None) -> '"+<Aamk,DataA1> ъ ёшых, ыютъюёЄш ш шэЄхыыхъЄє."'...
+[A138] Name: TRIGSTR_25758 -> '|cffa0d2d2╤ЄЁшцр■∙шщ ЄЁхчєсхЎ|r'
+      tip1: "╧ют√°хэшх їрЁръЄхЁшёЄшъ [|cffffcc001-щ єЁютхэ№|r]" (sid=None) -> '"╧ют√°хэшх їрЁръЄхЁшёЄшъ [|cffffcc001-щ єЁютхэ№|r]"'
+      ubertip1: "+<Aamk,DataA1> ъ ёшых, ыютъюёЄш ш шэЄхыыхъЄє." (sid=None) -> '"+<Aamk,DataA1> ъ ёшых, ыютъюёЄш ш шэЄхыыхъЄє."'...
+[A139] Name: TRIGSTR_25759 -> '|cffa0d2d2╤ЄЁшцр■∙шщ ЄЁхчєсхЎ|r'
+      tip1: "╧ют√°хэшх їрЁръЄхЁшёЄшъ [|cffffcc001-щ єЁютхэ№|r]" (sid=None) -> '"╧ют√°хэшх їрЁръЄхЁшёЄшъ [|cffffcc001-щ єЁютхэ№|r]"'
+      ubertip1: "+<Aamk,DataA1> ъ ёшых, ыютъюёЄш ш шэЄхыыхъЄє." (sid=None) -> '"+<Aamk,DataA1> ъ ёшых, ыютъюёЄш ш шэЄхыыхъЄє."'...
+[A135] Name: TRIGSTR_31589 -> '|cffa0d2d2Piercing Trident|r'
+      tip1: TRIGSTR_31591 (sid=31591) -> '|cffa0d2d2Piercing Trident|r'
+      tip2: TRIGSTR_31592 (sid=31592) -> '|cffa0d2d2Piercing Trident|r'
+      tip3: TRIGSTR_31716 (sid=31716) -> '|cffa0d2d2Piercing Trident|r'
+      tip4: TRIGSTR_31900 (sid=31900) -> '|cffa0d2d2Piercing Trident|r'
+      ubertip1: TRIGSTR_31902 (sid=31902) -> "When throwing the trident, it doesn't stop at one target but continues along th...
+      ubertip2: TRIGSTR_35219 (sid=35219) -> "When throwing the trident, it doesn't stop at one target but continues along th...
+      ubertip3: TRIGSTR_35220 (sid=35220) -> "When throwing the trident, it doesn't stop at one target but continues along th...
+      ubertip4: TRIGSTR_35221 (sid=35221) -> "When throwing the trident, it doesn't stop at one target but continues along th...
+[A14F] Name: TRIGSTR_41000 -> '|cff4280deTail Strike|r'
+      Hotkey: TRIGSTR_21469 -> 'W'
+      tip1: TRIGSTR_41001 (sid=41001) -> '|cff4280deTail Strike|r'
+      tip2: TRIGSTR_41002 (sid=41002) -> '|cff4280deTail Strike|r'
+      tip3: TRIGSTR_41003 (sid=41003) -> '|cff4280deTail Strike|r'
+      tip4: TRIGSTR_41006 (sid=41006) -> '|cff4280deTail Strike|r'
+      ubertip1: TRIGSTR_41012 (sid=41012) -> 'Strikes the ground with its tail, dealing damage to nearby enemies and stunning...
+      ubertip2: TRIGSTR_41013 (sid=41013) -> 'Strikes the ground with its tail, dealing damage to nearby enemies and stunning...
+      ubertip3: TRIGSTR_41014 (sid=41014) -> 'Strikes the ground with its tail, dealing damage to nearby enemies and stunning...
+      ubertip4: TRIGSTR_41015 (sid=41015) -> 'Strikes the ground with its tail, dealing damage to nearby enemies and stunning...
+[A14G] Name: TRIGSTR_41029 -> "|cff4280deWater's Vengeance|r"
+      Hotkey: TRIGSTR_24407 -> "|cffa6afb8╤╧╬╤╬┴═╬╤╥▄:|cffced4da ╧Ёшч√трхЄ эр яюью∙№ тхЁэ√ї тюшэют ╩юЁ'╩Ёюэр.|r"
+      tip1: TRIGSTR_41041 (sid=41041) -> "|cff4280deWater's Vengeance|r"
+      tip2: TRIGSTR_41042 (sid=41042) -> 'Learn "|cff4280deWater\'s Vengeance|r"'
+      ubertip1: TRIGSTR_41043 (sid=41043) -> 'Marks the target for the incarnation of |cff4280deAncient Naga|r. The victim ca...
+      ubertip2: TRIGSTR_41044 (sid=41044) -> 'Marks the target for the incarnation of |cff4280deAncient Naga|r. The victim ca...
+[A14H] Name: TRIGSTR_41045 -> '|cffa0d2d2Evasion|r'
+      Hotkey: TRIGSTR_23345 -> 'E'
+      tip1: TRIGSTR_41047 (sid=41047) -> '|cffa0d2d2Evasion|r [|cffffcc001st level|r]'
+      tip2: TRIGSTR_41048 (sid=41048) -> '|cffa0d2d2Evasion|r [|cffffcc002nd level|r]'
+      tip3: TRIGSTR_41049 (sid=41049) -> '|cffa0d2d2Evasion|r [|cffffcc003rd level|r]'
+      tip4: TRIGSTR_41050 (sid=41050) -> '|cffa0d2d2Evasion|r [|cffffcc004th level|r]'
+      ubertip1: TRIGSTR_41051 (sid=41051) -> 'Grants a |cffc8dc8c<AEev,DataA1,%>% chance|r to evade an attack.'...
+      ubertip2: TRIGSTR_41052 (sid=41052) -> 'Grants a |cffc8dc8c<AEev,DataA2,%>% chance|r to evade an attack.'...
+      ubertip3: TRIGSTR_41053 (sid=41053) -> 'Grants a |cffc8dc8c<AEev,DataA3,%>% chance|r to evade an attack.'...
+      ubertip4: TRIGSTR_41054 (sid=41054) -> 'Grants a |cffc8dc8c40%|r chance to evade an attack.'...
+[A14I] Name: TRIGSTR_41056 -> '|cff4280e1Frost Ring|r'
+      Hotkey: TRIGSTR_22787 -> 'Q'
+      tip1: TRIGSTR_41078 (sid=41078) -> 'Frost Ring [|cffffcc001st level|r]'
+      tip2: TRIGSTR_41079 (sid=41079) -> 'Frost Ring [|cffffcc002st level|r]'
+      tip3: TRIGSTR_43057 (sid=43057) -> 'Frost Ring [|cffffcc003st level|r]'
+      tip4: TRIGSTR_43058 (sid=43058) -> 'Frost Ring [|cffffcc004st level|r]'
+      ubertip1: TRIGSTR_41063 (sid=41063) -> 'Strikes enemies around the target with an icy wave, slowing movement and attack...
+      ubertip2: TRIGSTR_41064 (sid=41064) -> 'Strikes enemies around the target with an icy wave, slowing movement and attack...
+      ubertip3: TRIGSTR_41065 (sid=41065) -> 'Strikes enemies around the target with an icy wave, slowing movement and attack...
+      ubertip4: TRIGSTR_41074 (sid=41074) -> 'Strikes enemies around the target with an icy wave, slowing movement and attack...
+[AEtq] Name: TRIGSTR_25766 -> 'Calm'
+      Hotkey: TRIGSTR_7255 -> 'R'
+      tip1: |cffe4cfa3╙ьшЁюЄтюЁхэшх|r [|cffffffff1-щ єЁютхэ№|r] (|cffffffffR|r) (sid=None) -> '|cffe4cfa3╙ьшЁюЄтюЁхэшх|r [|cffffffff1-щ єЁютхэ№|r] (|cffffffffR|r)'
+      tip2: TRIGSTR_2292 (sid=2292) -> '╤яюъющёЄтшх'
+      ubertip1: |cffa6afb8╤╧╬╤╬┴═╬╤╥▄:|cffced4da ╧Ёшч√трхЄ яюЄюъ ЎхышЄхы№эющ ¤эхЁушш, тюёёЄрэртыштр■∙шщ ёю■чэшърь т юсырёЄш |cffffffff48|cffced4da хф. чфюЁют№  т ёхъєэфє т Єхўхэшх |cffffffff25|cffced4da ёхъ.|n|n|cffa6afb8╙Ёютхэ№ ёяюёюсэюёЄш:|cffced4da |cffffffff1/2|cffced4da.|r (sid=None) -> '|cffa6afb8╤╧╬╤╬┴═╬╤╥▄:|cffced4da ╧Ёшч√трхЄ яюЄюъ ЎхышЄхы№эющ ¤эхЁушш, тюёёЄрэрт...
+      ubertip2: TRIGSTR_2306 (sid=2306) -> '╧Ёшч√трхЄ яюЄюъ ЎхышЄхы№эющ ¤эхЁушш, тюёяюыэ ■∙хщ <AEtq,DataA2> чфюЁют№ /ёхъ. ё...
+[AHbn] Name: TRIGSTR_25760 -> '|cffe4cfa3╚чуэрэшх|r'
+      Hotkey: TRIGSTR_8861 -> 'W'
+      tip1: "╚чуэрэшх [|cffffcc001-щ єЁютхэ№|r]" (sid=None) -> '"╚чуэрэшх [|cffffcc001-щ єЁютхэ№|r]"'
+      tip2: "╚чуэрэшх [|cffffcc002-щ єЁютхэ№|r]" (sid=None) -> '"╚чуэрэшх [|cffffcc002-щ єЁютхэ№|r]"'
+      tip3: "╚чуэрэшх [|cffffcc003-щ єЁютхэ№|r]" (sid=None) -> '"╚чуэрэшх [|cffffcc003-щ єЁютхэ№|r]"'
+      tip4: TRIGSTR_5621 (sid=5621) -> '|cffe4cfa3╚чуэрэшх|r [|cffffffff4-щ єЁютхэ№|r] (|cffffffffW|r)'
+      ubertip1: "╚чуюэ хЄ Ўхы№ т шэющ ьшЁ ш чрьхфы хЄ хх яхЁхфтшцхэшх эр <AHbn,DataA1,%>% эр <AHbn,Dur1> ёхъ. ╚чуэрээ√х Ўхыш эх ьюуєЄ рЄръютрЄ№, эю ьюуєЄ яЁшьхэ Є№ ёяюёюсэюёЄш. ╩Ёюьх Єюую, эхъюЄюЁ√х ёяюёюсэюёЄш эрэюё Є шь сюы№°х єЁюэр. ═х фхщёЄтєхЄ эр Єхїэшъє." (sid=None) -> '"╚чуюэ хЄ Ўхы№ т шэющ ьшЁ ш чрьхфы хЄ хх яхЁхфтшцхэшх эр <AHbn,DataA1,%>% эр <A...
+      ubertip2: "╚чуюэ хЄ Ўхы№ т шэющ ьшЁ ш чрьхфы хЄ хх яхЁхфтшцхэшх эр <AHbn,DataA2,%>% эр <AHbn,Dur2> ёхъ. ╚чуэрээ√х Ўхыш эх ьюуєЄ рЄръютрЄ№, эю ьюуєЄ яЁшьхэ Є№ ёяюёюсэюёЄш. ╩Ёюьх Єюую, эхъюЄюЁ√х ёяюёюсэюёЄш эрэюё Є шь сюы№°х єЁюэр." (sid=None) -> '"╚чуюэ хЄ Ўхы№ т шэющ ьшЁ ш чрьхфы хЄ хх яхЁхфтшцхэшх эр <AHbn,DataA2,%>% эр <A...
+      ubertip3: "╚чуюэ хЄ Ўхы№ т шэющ ьшЁ ш чрьхфы хЄ хх яхЁхфтшцхэшх эр <AHbn,DataA3,%>% эр <AHbn,Dur3> ёхъ. ╚чуэрээ√х Ўхыш эх ьюуєЄ рЄръютрЄ№, эю ьюуєЄ яЁшьхэ Є№ ёяюёюсэюёЄш. ╩Ёюьх Єюую, эхъюЄюЁ√х ёяюёюсэюёЄш эрэюё Є шь сюы№°х єЁюэр." (sid=None) -> '"╚чуюэ хЄ Ўхы№ т шэющ ьшЁ ш чрьхфы хЄ хх яхЁхфтшцхэшх эр <AHbn,DataA3,%>% эр <A...
+      ubertip4: TRIGSTR_5622 (sid=5622) -> '|cffa6afb8╤╧╬╤╬┴═╬╤╥▄:|cffced4da ╚чуюэ хЄ Ўхы№ т рёЄЁры№э√щ яырэ эр |cffffffff5...
+[AHab] Name: TRIGSTR_23080 -> 'Aura of genius'
+      Hotkey: TRIGSTR_10352 -> 'E'
+      tip1: "└єЁр ухэшры№эюёЄш [|cffffcc001-щ єЁютхэ№|r]" (sid=None) -> '"└єЁр ухэшры№эюёЄш [|cffffcc001-щ єЁютхэ№|r]"'
+      tip2: "└єЁр ухэшры№эюёЄш [|cffffcc002-щ єЁютхэ№|r]" (sid=None) -> '"└єЁр ухэшры№эюёЄш [|cffffcc002-щ єЁютхэ№|r]"'
+      tip3: "└єЁр ухэшры№эюёЄш [|cffffcc003-щ єЁютхэ№|r]" (sid=None) -> '"└єЁр ухэшры№эюёЄш [|cffffcc003-щ єЁютхэ№|r]"'
+      tip4: None (sid=None) -> None
+      ubertip1: "╙ёъюЁ хЄ ЁхухэхЁрЎш■ ьрэ√ эрїюф ∙шїё  Ё фюь ёю■чэшъют." (sid=None) -> '"╙ёъюЁ хЄ ЁхухэхЁрЎш■ ьрэ√ эрїюф ∙шїё  Ё фюь ёю■чэшъют."'...
+      ubertip2: "╙ёъюЁ хЄ ЁхухэхЁрЎш■ ьрэ√ эрїюф ∙шїё  Ё фюь ёю■чэшъют." (sid=None) -> '"╙ёъюЁ хЄ ЁхухэхЁрЎш■ ьрэ√ эрїюф ∙шїё  Ё фюь ёю■чэшъют."'...
+      ubertip3: "╙ёъюЁ хЄ ЁхухэхЁрЎш■ ьрэ√ эрїюф ∙шїё  Ё фюь ёю■чэшъют." (sid=None) -> '"╙ёъюЁ хЄ ЁхухэхЁрЎш■ ьрэ√ эрїюф ∙шїё  Ё фюь ёю■чэшъют."'...
+      ubertip4: TRIGSTR_2016 (sid=2016) -> '╙ёъюЁ хЄ ЁхухэхЁрЎш■ ьрэ√ эрїюф ∙шїё  Ё фюь ёю■чэшъют.'...
+[ANrf] Name: TRIGSTR_25841 -> 'Rain of Fire'
+      Hotkey: TRIGSTR_8626 -> 'Q'
+      tip1: "╬уэхээ√щ ыштхэ№ [|cffffcc001-щ єЁютхэ№|r]" (sid=None) -> '"╬уэхээ√щ ыштхэ№ [|cffffcc001-щ єЁютхэ№|r]"'
+      tip2: "╬уэхээ√щ ыштхэ№ [|cffffcc002-щ єЁютхэ№|r]" (sid=None) -> '"╬уэхээ√щ ыштхэ№ [|cffffcc002-щ єЁютхэ№|r]"'
+      tip3: "╬уэхээ√щ ыштхэ№ [|cffffcc003-щ єЁютхэ№|r]" (sid=None) -> '"╬уэхээ√щ ыштхэ№ [|cffffcc003-щ єЁютхэ№|r]"'
+      tip4: TRIGSTR_2014 (sid=2014) -> '╬уэхээ√щ ыштхэ№ [|cffffcc004-щ єЁютхэ№|r]'
+      ubertip1: "╬сЁє°штрхЄ эр єърчрээє■ юсырёЄ№ тюыэ√ юуэ . ╩рцфр  тюыэр эрэюёшЄ <ANrf,DataB1> єЁюэр ьуэютхээю ш <ANrf,DataE1> єЁюэр/ёхъ. т Єхўхэшх <ANrf,Dur1> ёхъ. |n┬юыэ Ц <ANrf,DataA1>." (sid=None) -> '"╬сЁє°штрхЄ эр єърчрээє■ юсырёЄ№ тюыэ√ юуэ . ╩рцфр  тюыэр эрэюёшЄ <ANrf,DataB1>...
+      ubertip2: "╬сЁє°штрхЄ эр єърчрээє■ юсырёЄ№ тюыэ√ юуэ . ╩рцфр  тюыэр эрэюёшЄ <ANrf,DataB2> єЁюэр ьуэютхээю ш <ANrf,DataE2> єЁюэр/ёхъ. т Єхўхэшх <ANrf,Dur2> ёхъ. |n┬юыэ Ц <ANrf,DataA2>." (sid=None) -> '"╬сЁє°штрхЄ эр єърчрээє■ юсырёЄ№ тюыэ√ юуэ . ╩рцфр  тюыэр эрэюёшЄ <ANrf,DataB2>...
+      ubertip3: "╬сЁє°штрхЄ эр єърчрээє■ юсырёЄ№ тюыэ√ юуэ . ╩рцфр  тюыэр эрэюёшЄ <ANrf,DataB3> єЁюэр ьуэютхээю ш <ANrf,DataE3> єЁюэр/ёхъ. т Єхўхэшх <ANrf,Dur3> ёхъ. |n┬юыэ Ц <ANrf,DataA3>." (sid=None) -> '"╬сЁє°штрхЄ эр єърчрээє■ юсырёЄ№ тюыэ√ юуэ . ╩рцфр  тюыэр эрэюёшЄ <ANrf,DataB3>...
+      ubertip4: TRIGSTR_2015 (sid=2015) -> '╬сЁє°штрхЄ эр єърчрээє■ юсырёЄ№ тюыэ√ юуэ . ╩рцфр  тюыэр эрэюёшЄ <ANrf,DataB4> ...
+[A16B] Name: TRIGSTR_43079 -> 'Split Lightning'
+      Hotkey: TRIGSTR_23068 -> 'Q'
+      tip1: TRIGSTR_43085 (sid=43085) -> 'Split Lightning [|cffffcc001st level|r]'
+      tip2: TRIGSTR_43086 (sid=43086) -> 'Split Lightning [|cffffcc002nd level|r]'
+      tip3: TRIGSTR_43087 (sid=43087) -> 'Split Lightning [|cffffcc003rd level|r]'
+      tip4: TRIGSTR_43078 (sid=43078) -> 'Split Lightning [|cffffcc004rd level|r]'
+      ubertip1: TRIGSTR_43082 (sid=43082) -> 'Strikes up to <ANfl,DataB1> enemies in the sector in front of you with lightnin...
+      ubertip2: TRIGSTR_43083 (sid=43083) -> 'Strikes up to <ANfl,DataB2> enemies in the sector in front of you with lightnin...
+      ubertip3: TRIGSTR_43084 (sid=43084) -> 'Strikes up to <ANfl,DataB3> enemies in the sector in front of you with lightnin...
+      ubertip4: TRIGSTR_43077 (sid=43077) -> 'Strikes up to <ANfl,DataB4> enemies in the sector in front of you with lightnin...
+[A16C] Name: TRIGSTR_43096 -> 'Ice Arrows'
+      Hotkey: TRIGSTR_22632 -> 'W'
+      tip1: TRIGSTR_43100 (sid=43100) -> 'Ice Arrows [|cffffcc001st level|r]'
+      tip2: TRIGSTR_43102 (sid=43102) -> 'Ice Arrows [|cffffcc002nd level|r]'
+      tip3: TRIGSTR_43104 (sid=43104) -> 'Ice Arrows [|cffffcc003rd level|r]'
+      tip4: TRIGSTR_43088 (sid=43088) -> 'Ice Arrows [|cffffcc004th level|r]'
+      ubertip1: TRIGSTR_43099 (sid=43099) -> "Adds an ice effect to attacks, dealing <ANfa,DataA1> damage and slowing the ene...
+      ubertip2: TRIGSTR_43101 (sid=43101) -> "Adds an ice effect to attacks, dealing <ANfa,DataA2> damage and slowing the ene...
+      ubertip3: TRIGSTR_43103 (sid=43103) -> "Adds an ice effect to attacks, dealing <ANfa,DataA3> damage and slowing the ene...
+      ubertip4: TRIGSTR_43089 (sid=43089) -> "Adds an ice effect to attacks, dealing <ANfa,DataA4> damage and slowing the ene...
+[A16D] Name: TRIGSTR_43110 -> 'Ring of Ice'
+      Hotkey: N -> 'N'
+      tip1: TRIGSTR_43113 (sid=43113) -> 'Ring of Ice [|cffffcc001st level|r]'
+      tip2: TRIGSTR_43115 (sid=43115) -> 'Ring of Ice [|cffffcc002nd level|r]'
+      tip3: TRIGSTR_43117 (sid=43117) -> 'Ring of Ice [|cffffcc003rd level|r]'
+      tip4: TRIGSTR_43108 (sid=43108) -> 'Ring of Ice [|cffffcc001st level|r]'
+      ubertip1: TRIGSTR_43107 (sid=43107) -> 'Releases an icy wave, dealing <AUfn,DataB2> damage to the target and <AUfn,Data...
+      ubertip2: TRIGSTR_43114 (sid=43114) -> 'Releases an icy wave, dealing <AUfn,DataB2> damage to the target and <AUfn,Data...
+      ubertip3: TRIGSTR_43116 (sid=43116) -> 'Releases an icy wave, dealing <AUfn,DataB3> damage to the target and <AUfn,Data...
+      ubertip4: TRIGSTR_43109 (sid=43109) -> 'Releases an icy wave, dealing <AUfn,DataB2> damage to the target and <AUfn,Data...
+[A16E] Name: TRIGSTR_43118 -> 'Storm'
+      Hotkey: TRIGSTR_25120 -> 'R'
+      tip1: TRIGSTR_43119 (sid=43119) -> 'Storm'
+      tip2: TRIGSTR_43124 (sid=43124) -> 'Storm'
+      ubertip1: TRIGSTR_43122 (sid=43122) -> 'A tornado appears at the selected location, dealing damage and lifting enemies ...
+      ubertip2: TRIGSTR_43123 (sid=43123) -> 'A tornado appears at the selected location, dealing damage and lifting enemies ...
+[A1LT] Name: TRIGSTR_43125 -> '|cffa0d2d2Own Element|r'
+      Hotkey: TRIGSTR_11517 -> 'D'
+      tip1: TRIGSTR_43126 (sid=43126) -> '|cffa0d2d2Own Element|r'
+      ubertip1: TRIGSTR_43127 (sid=43127) -> 'If the unit is in water, grants a 10% attack speed and 35% movement speed boost...
+[S00E] Name: TRIGSTR_43132 -> '|cffa0d2d2Own Element|r'
+      tip1: TRIGSTR_43133 (sid=43133) -> '|cffa0d2d2Own Element|r'
+      ubertip1: TRIGSTR_43134 (sid=43134) -> '+<SCae,DataA1,%>% to movement speed and +<SCae,DataB1,%>% to attack speed of ne...
+[A1LV] Name: TRIGSTR_43128 -> 'Naga Movement Speed Bonus'
+      tip1: None (sid=None) -> None
+      ubertip1: None (sid=None) -> None...
+[A13B] Name: TRIGSTR_35882 -> '|cffa0d2d2Spiked Shell|r'
+      tip1: TRIGSTR_35883 (sid=35883) -> '|cffa0d2d2Spiked Shell|r'
+      ubertip1: TRIGSTR_35884 (sid=35884) -> "The spikes on the turtle's shell return 15% of the damage it receives in melee ...
+[A14J] Name: TRIGSTR_43059 -> '|cff4280e1Slowing Poison|r'
+      tip1: TRIGSTR_43060 (sid=43060) -> '|cff4280e1Slowing Poison|r'
+      ubertip1: TRIGSTR_43061 (sid=43061) -> 'Poisons the target, dealing <Aspo,DataA1> damage per second, and also slowing i...
+[A14K] Name: TRIGSTR_43062 -> '|cff4280e1Evasion|r'
+      tip1: TRIGSTR_43063 (sid=43063) -> '|cff4280e1Evasion|r'
+      ubertip1: TRIGSTR_43064 (sid=43064) -> 'Gives a <ACev,DataA1,%>% chance to evade an attack.'...
+[A14L] Name: TRIGSTR_27493 -> '|cff4280e1Dispel Spells|r'
+      Hotkey: TRIGSTR_22800 -> 'Q'
+      tip1: TRIGSTR_27494 (sid=27494) -> '|cff4280e1Dispel Spells|r'
+      ubertip1: TRIGSTR_27502 (sid=27502) -> 'Removes positive effects from troops in the specified area. |n|cffffcc00Deals <...
+[A14M] Name: TRIGSTR_43065 -> '|cff4280e1Surge of Power|r'
+      Hotkey: TRIGSTR_21480 -> 'W'
+      tip1: TRIGSTR_43066 (sid=43066) -> '|cff4280e1Surge of Power|r'
+      tip2: TRIGSTR_43067 (sid=43067) -> '|cff4280e1Surge of Power|r'
+      ubertip1: TRIGSTR_43068 (sid=43068) -> 'Deep Ones inspire allies, increasing the movement speed of nearby allied units ...
+      ubertip2: TRIGSTR_43069 (sid=43069) -> 'Deep Ones inspire allies, increasing the movement speed of nearby allied units ...
+[A14N] Name: TRIGSTR_43072 -> '|cffa0d2d2Healing Water|r'
+      Hotkey: TRIGSTR_21540 -> 'W'
+      tip1: TRIGSTR_43073 (sid=43073) -> '|cffa0d2d2Healing Water|r'
+      ubertip1: TRIGSTR_43074 (sid=43074) -> 'Restores 25 health to an injured ally. Does not affect mechanical units.'...
+[A1OL] Name: TRIGSTR_43130 -> '|cffa0d2d2Counteraction|r'
+      tip1: TRIGSTR_43129 (sid=43129) -> '|cffa0d2d2Counteraction|r'
+      ubertip1: TRIGSTR_43131 (sid=43131) -> 'Each attack by a Coatl drains 20 mana from the target (4 for heroes), dealing a...
+[A1OM] Name: TRIGSTR_43018 -> '|cffa0d2d2Acid Spit|r'
+      Hotkey: TRIGSTR_30412 -> 'Q'
+      tip1: TRIGSTR_43019 (sid=43019) -> '|cffa0d2d2Acid Spit|r'
+      ubertip1: TRIGSTR_43020 (sid=43020) -> 'Throws acid at a target, which damages nearby enemies upon impact.\n\nReduces a...
+[A1ON] Name: TRIGSTR_43136 -> '|cffa0d2d2Lightning Shield|r'
+      Hotkey: TRIGSTR_30541 -> 'W'
+      tip1: TRIGSTR_43135 (sid=43135) -> '|cffa0d2d2Lightning Shield|r'
+      ubertip1: TRIGSTR_43137 (sid=43137) -> 'Surrounds the target with lightning that deals <Alsh,DataA1> damage/sec to near...
+[A1OO] Name: TRIGSTR_43138 -> '|cffa0d2d2Lightning Power|r'
+      Hotkey: TRIGSTR_30445 -> 'Q'
+      tip1: None (sid=None) -> None
+      ubertip1: None (sid=None) -> None...
+[A1OP] Name: TRIGSTR_43139 -> '|cffa0d2d2Chain Lightning|r'
+      Hotkey: TRIGSTR_30640 -> 'E'
+      tip1: TRIGSTR_43140 (sid=43140) -> '|cffa0d2d2Chain Lightning|r'
+      ubertip1: TRIGSTR_43141 (sid=43141) -> 'Summons a lightning bolt that deals 100 damage to the target and bounces up to ...
+[A1OQ] Name: TRIGSTR_43142 -> '|cffa0d2d2Lightning Power|r'
+      tip1: TRIGSTR_43143 (sid=43143) -> '|cffa0d2d2Lightning Power|r'
+      ubertip1: TRIGSTR_43144 (sid=43144) -> 'With a certain chance, the attack will cast a dispel spell on the target.'...
+[A1OR] Name: TRIGSTR_43145 -> '|cffa0d2d2Cannibalism|r'
+      Hotkey: TRIGSTR_30508 -> 'Q'
+      tip1: TRIGSTR_43146 (sid=43146) -> '|cffa0d2d2Cannibalism|r'
+      ubertip1: TRIGSTR_43147 (sid=43147) -> 'Consumes a nearby corpse, restoring 15 health/sec.'...
+[AChx] Name: TRIGSTR_26682 -> '|cff4280e1Eye Curse|r'
+      Hotkey: TRIGSTR_11387 -> 'E'
+      tip1: TRIGSTR_29612 (sid=29612) -> '|cff4280e1Eye Curse|r'
+      ubertip1: TRIGSTR_25830 (sid=25830) -> 'Transforms an enemy into a random animal for <AChx,Dur1> seconds.'...
+[S00A] Name: TRIGSTR_25867 -> '|cff4280e1Sea Endurance|r'
+      tip1: TRIGSTR_25882 (sid=25882) -> '|cff4280e1Sea Endurance|r'
+      ubertip1: TRIGSTR_25892 (sid=25892) -> '+<SCae,DataA1,%>% movement speed and +<SCae,DataB1,%>% attack speed for nearby ...
+[ACcb] Name: TRIGSTR_25822 -> '|cff4280e1Ice Arrow|r'
+      Hotkey: TRIGSTR_9810 -> 'W'
+      tip1: TRIGSTR_25826 (sid=25826) -> '|cff4280e1Ice Arrow|r'
+      ubertip1: TRIGSTR_25829 (sid=25829) -> 'Deals <ACcb,DataA1> damage to the enemy and stuns them for <ACcb,Dur1> sec.'...
+[ACen] Name: TRIGSTR_26448 -> 'Entanglement'
+      Hotkey: "E" -> '"E"'
+      tip1: TRIGSTR_26452 (sid=26452) -> 'Entanglement'
+      ubertip1: TRIGSTR_26453 (sid=26453) -> 'Pulls the target to the ground and immobilizes them. Entangled air targets are ...
+[ACfu] Name: TRIGSTR_26410 -> '|cffa0d2d2Frost Armor|r'
+      Hotkey: TRIGSTR_10165 -> 'W'
+      tip1: TRIGSTR_26412 (sid=26412) -> '|cffa0d2d2Frost Armor|r'
+      ubertip1: TRIGSTR_26413 (sid=26413) -> 'Covers an ally with an ice shield, which gives +<ACfu,DataB1> to armor and slow...
+[ACpv] Name: TRIGSTR_25786 -> '|cff4280e1Crush|r'
+      tip1: TRIGSTR_25800 (sid=25800) -> '|cff4280e1Crush|r'
+      ubertip1: TRIGSTR_25817 (sid=25817) -> 'With a |cff4280e1<ACpv,DataA1>%|r chance, an attack will deal |cff4280e1<ACpv,D...
+[ACsk] Name: TRIGSTR_26379 -> '|cff4280e1╙ёЄющўштр  ъюцр|r'
+      tip1: TRIGSTR_26380 (sid=26380) -> '|cff4280e1╙ёЄющўштр  ъюцр|r'
+      ubertip1: "╤юъЁр∙рхЄ тЁхь  фхщёЄтш  юЄЁшЎрЄхы№э√ї ¤ЇЇхъЄют, фрхЄ эхтюёяЁшшьўштюёЄ№ ъ эхъюЄюЁ√ь ёяюёюсэюёЄ ь." (sid=None) -> '"╤юъЁр∙рхЄ тЁхь  фхщёЄтш  юЄЁшЎрЄхы№э√ї ¤ЇЇхъЄют, фрхЄ эхтюёяЁшшьўштюёЄ№ ъ эхъю...
+[ANen] Name: TRIGSTR_25812 -> '|cffa0d2d2╬яєЄ√трэшх|r'
+      Hotkey: TRIGSTR_10208 -> 'Q'
+      tip1: TRIGSTR_29831 (sid=29831) -> '|cffa0d2d2╬яєЄ√трэшх|r'
+      ubertip1: "╧ЁшЄ уштрхЄ тЁрур ъ чхьых ш юсхчфтшцштрхЄ хую эр <Aens,Dur1> ёхъ. ╬яєЄрээ√х тючфє°э√х Ўхыш ёўшЄр■Єё  эрчхьэ√ьш." (sid=None) -> '"╧ЁшЄ уштрхЄ тЁрур ъ чхьых ш юсхчфтшцштрхЄ хую эр <Aens,Dur1> ёхъ. ╬яєЄрээ√х тю...
+[ANpa] Name: TRIGSTR_26402 -> '|cffa0d2d2Parasite|r'
+      Hotkey: R -> 'R'
+      tip1: TRIGSTR_26403 (sid=26403) -> '|cffa0d2d2Parasite|r'
+      ubertip1: TRIGSTR_26404 (sid=26404) -> 'Infects an enemy with a deadly parasite that deals <ANpa,DataA1> damage/sec. fo...
+[Acny] Name: TRIGSTR_26405 -> '|cffa0d2d2Tornado|r'
+      Hotkey: C -> 'C'
+      tip1: TRIGSTR_26406 (sid=26406) -> '|cffa0d2d2Tornado|r'
+      ubertip1: TRIGSTR_26407 (sid=26407) -> 'Throws an enemy into the air, preventing them from moving, attacking, or using ...
+[Asb2] Name: TRIGSTR_26454 -> 'Dive'
+      Hotkey: U -> 'U'
+      tip1: TRIGSTR_26455 (sid=26455) -> 'Dive'
+      ubertip1: TRIGSTR_26456 (sid=26456) -> 'The warrior dives under water, becoming invisible.'...
+[drAq] Name: TRIGSTR_17102 -> '|cff8080ff╦хф эр  ёЄЁхыр|r'
+      Hotkey: TRIGSTR_28855 -> 'Q'
+      tip1: TRIGSTR_17107 (sid=17107) -> '|cff8080ff╦хф эр  ёЄЁхыр|r'
+      ubertip1: TRIGSTR_23597 (sid=23597) -> '═рэюёшЄ тЁрує 140 єЁюэр ш юуыє°рхЄ хую эр 7 ёхъ. (ухЁюхт 0.5).'...
+[A06U] Name: TRIGSTR_4690 -> '|cffe4cfa3╤юъЁє°шЄхы№эр  тюыэр|r'
+      Hotkey: TRIGSTR_11468 -> 'Q'
+      tip1: TRIGSTR_4691 (sid=4691) -> '|cffe4cfa3╤юъЁє°шЄхы№эр  тюыэр|r'
+      ubertip1: TRIGSTR_5689 (sid=5689) -> '|cffa6afb8╤╧╬╤╬┴═╬╤╥▄:|cffced4da ┬√яєёърхЄ тюыэє тюф√, эрэюё ∙є■ яю |cffffffff7...
+[A0I3] Name: TRIGSTR_26484 -> '|cffe4cfa3═хсюы№°ющ ёърўюъ|r'
+      Hotkey: TRIGSTR_9545 -> 'C'
+      tip1: TRIGSTR_26476 (sid=26476) -> '|cffe4cfa3═хсюы№°ющ ёърўюъ|r (|cffffffffC|r)'
+      ubertip1: TRIGSTR_26477 (sid=26477) -> '|cffa6afb8╤╧╬╤╬┴═╬╤╥▄:|cffced4da ╠уэютхээю яхЁхэюёшЄ ЁрсюЄэшър эр эхсюы№°юх Ёрё...
+[A0IQ] Name: TRIGSTR_27193 -> '|cffffdcb4╬сючэрўшЄ№ ёЄюышЎє|r'
+      Hotkey: TRIGSTR_11265 -> 'X'
+      tip1: TRIGSTR_27969 (sid=27969) -> '|cffffdcb4╬сючэрўшЄ№ ёЄюышЎє|r'
+      ubertip1: TRIGSTR_27970 (sid=27970) -> '╬сючэрўрхЄ ёЄюышЎє, єёЄрэртыштр  т√ёюъюх чэрэшх чфюЁют№  чфрэш■. ╧Ёш ушсхыш ёЄю...
+[A0LI] Name: TRIGSTR_2888 -> '╬сьхэ |cffffff00╟юыюЄр |rэр |cff00ff00─хЁхтю|r'
+      Hotkey: TRIGSTR_4247 -> 'S'
+      tip1: TRIGSTR_3692 (sid=3692) -> '╬сьхэ |cffffff00╟юыюЄр |rэр |cff00ff00─хЁхтю|r'
+      ubertip1: TRIGSTR_20630 (sid=20630) -> '╬ЄэшьрхЄ є шуЁюър|cffffd700 500 чюыюЄр|r, эю фюсрты хЄ |cff228722100 фхЁхтр|r.'...
+[A0LJ] Name: TRIGSTR_12857 -> '╬сьхэ |cff00ff00─хЁхтр |rэр |cffffff00╟юыюЄю|r'
+      Hotkey: TRIGSTR_4259 -> 'A'
+      tip1: TRIGSTR_12886 (sid=12886) -> '╬сьхэ |cff00ff00─хЁхтр |rэр |cffffff00╟юыюЄю|r'
+      ubertip1: TRIGSTR_20631 (sid=20631) -> '╬ЄэшьрхЄ є шуЁюър |cff228722500 фхЁхтр|r, эю фюсрты хЄ |cffffd700100 чюыюЄр|r.'...
+[A1KB] Name: TRIGSTR_38201 -> '╟р∙шЄр ёЄюышЎ√'
+      tip1: TRIGSTR_38229 (sid=38229) -> '╟р∙шЄр ёЄюышЎ√'
+      ubertip1: None (sid=None) -> None...
+
+==================== BUFFS (4) ====================
+[B06G] Name: None -> None
+      bufftip: TRIGSTR_25851 (sid=25851) -> '|cff4280e2┴хчєьшх|r'
+      buffubertip: ═рэюёшь√щ ш яюыєўрхь√щ юЄ рЄръ єЁюэ єтхышўхэ√. (sid=None) -> '═рэюёшь√щ ш яюыєўрхь√щ юЄ рЄръ єЁюэ єтхышўхэ√.'
+[B06P] Name: None -> None
+      bufftip: ╦хф э√х ёЄЁхы√ (sid=None) -> '╦хф э√х ёЄЁхы√'
+      buffubertip: └Єрър ш яхЁхфтшцхэшх чрьхфыхэ√. (sid=None) -> '└Єрър ш яхЁхфтшцхэшх чрьхфыхэ√.'
+[B06Q] Name: None -> None
+      bufftip: ╟рьхфыхэшх (sid=None) -> '╟рьхфыхэшх'
+      buffubertip: ╧хЁхфтшцхэшх чрьхфыхэю. (sid=None) -> '╧хЁхфтшцхэшх чрьхфыхэю.'
+[B08I] Name: None -> None
+      bufftip: TRIGSTR_30405 (sid=30405) -> '|cffa0d2d2╤тю  ёЄшїш |r'
+      buffubertip: TRIGSTR_35313 (sid=35313) -> '╤ъюЁюёЄ№ рЄръш ш яхЁхфтшцхэш  єтхышўхэр.'

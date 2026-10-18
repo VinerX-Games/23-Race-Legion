@@ -1,0 +1,132 @@
+[
+  {
+    "editor_suffix": "1",
+    "fields": {
+      "editorsuffix1": "",
+      "maxlevel": "1",
+      "name1": "TRIGSTR_10676"
+    },
+    "id": "R07M",
+    "name": "|cffe6beaaБезликие|r"
+  },
+  {
+    "editor_suffix": "0",
+    "fields": {
+      "editorsuffix1": "TRIGSTR_27735",
+      "maxlevel": "1",
+      "name1": "TRIGSTR_28130"
+    },
+    "id": "R0EK",
+    "name": "Улучшение |cffd7b4f5Сущности|r"
+  },
+  {
+    "editor_suffix": "0",
+    "fields": {
+      "editorsuffix1": "TRIGSTR_27771",
+      "maxlevel": "1",
+      "name1": "TRIGSTR_25428"
+    },
+    "id": "R0EL",
+    "name": "|cffd7b4f5Разрушение Эфира|r"
+  },
+  {
+    "editor_suffix": "0",
+    "fields": {
+      "editorsuffix1": "TRIGSTR_27847",
+      "maxlevel": "6",
+      "name1": "TRIGSTR_31257"
+    },
+    "id": "R0ET",
+    "name": "|cffd7b4f5Наращивание Силы|r |cffe1d700[1-й уровень]|r"
+  },
+  {
+    "editor_suffix": "0",
+    "fields": {
+      "editorsuffix1": "TRIGSTR_30698",
+      "maxlevel": "3",
+      "name1": "TRIGSTR_25488"
+    },
+    "id": "R0EV",
+    "name": "|cffd7b4f5Усиление К`Траксис|r |cffe1d700[1-й уровень]|r"
+  },
+  {
+    "editor_suffix": "0",
+    "fields": {
+      "editorsuffix1": "TRIGSTR_30699",
+      "maxlevel": "3",
+      "name1": "TRIGSTR_25500"
+    },
+    "id": "R0EW",
+    "name": "|cffd7b4f5Расширение Знаний|r |cffe1d700[1-й уровень]|r"
+  },
+  {
+    "editor_suffix": "0",
+    "fields": {
+      "editorsuffix1": "TRIGSTR_30700",
+      "maxlevel": "3",
+      "name1": "TRIGSTR_25520"
+    },
+    "id": "R0EX",
+    "name": "|cffd7b4f5Укрепление Древних Знаний|r |cffe1d700[1-й уровень]|r"
+  },
+  {
+    "editor_suffix": "0",
+    "fields": {
+      "editorsuffix1": "TRIGSTR_30701",
+      "maxlevel": "3",
+      "name1": "TRIGSTR_25534"
+    },
+    "id": "R0F7",
+    "name": "|cffd7b4f5Развить силу|r |cffffd700[1-й уровень]|r"
+  },
+  {
+    "editor_suffix": "0",
+    "fields": {
+      "editorsuffix1": "TRIGSTR_30702",
+      "maxlevel": "3",
+      "name1": "TRIGSTR_27752"
+    },
+    "id": "R0F8",
+    "name": "|cffd7b4f5Развить скорость|r |cffffd700[1-й уровень]|r"
+  },
+  {
+    "editor_suffix": "1",
+    "fields": {
+      "editorsuffix1": "",
+      "maxlevel": "1",
+      "name1": "TRIGSTR_25277"
+    },
+    "id": "R0F9",
+    "name": "|cff483d8bБезликие|r"
+  },
+  {
+    "editor_suffix": "0",
+    "fields": {
+      "editorsuffix1": "TRIGSTR_39668",
+      "maxlevel": "1",
+      "name1": "TRIGSTR_25567"
+    },
+    "id": "R0FA",
+    "name": "|cffd7b4f5Суть бессмертия|r"
+  },
+  {
+    "editor_suffix": "0",
+    "fields": {
+      "editorsuffix1": "TRIGSTR_39669",
+      "maxlevel": "3",
+      "name1": "TRIGSTR_27722"
+    },
+    "id": "R0GD",
+    "name": "|cffd7b4f5Знание проклинателей|r |cffe1d700[1-й уровень]|r"
+  },
+  {
+    "editor_suffix": "0",
+    "fields": {
+      "editorsuffix1": "TRIGSTR_39670",
+      "maxlevel": "3",
+      "name1": "TRIGSTR_28133"
+    },
+    "id": "R0ES",
+    "name": "|cffd7b4f5Помутнение рассудка|r"
+  }
+]

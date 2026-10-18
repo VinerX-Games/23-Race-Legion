@@ -1,0 +1,1109 @@
+{
+  "scope": "Ночные эльфы (Night Elf): категория 5 — Исследования и маркеры (35 технологий)",
+  "upgrades_count": 35,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R07L",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10673,
+          "after": "|cffe4cfa3Ночные эльфы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10674,
+          "after": "|cffe4cfa3Ночные эльфы|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20119,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к расе Ночных эльфов.|r"
+        }
+      ]
+    },
+    {
+      "id": "Renb",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27161,
+          "after": "|cffe4cfa3Благословение природы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40023,
+          "after": "|cffe4cfa3Благословение природы|r (|cffffffffW|r)"
+        }
+      ]
+    },
+    {
+      "id": "R0G1",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27190,
+          "after": "|cffe4cfa3Круг Кенария|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40869,
+          "after": "|cffe4cfa3Круг Кенария|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 41852,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Выбор пути друидов Круга Кенария и духов дикой природы. Открывает доступ к друидам и фурболгам, блокируя ветку Часовых Элуны.|n|n|cffa6afb8Открывает доступ к:|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deДруид-ворон|cffced4da|n- |cffa9c7deДруид-хищник|cffced4da|n- |cffa9c7deДруид-сова|cffced4da|n- |cffa9c7deФурболг-следопыт|cffced4da|n- |cffa9c7deФурболг-воитель|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0G2",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41838,
+          "after": "|cffe4cfa3Путь Элуны|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40871,
+          "after": "|cffe4cfa3Путь Элуны|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20295,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Выбор пути воинства Часовых и служителей богини Элуны. Открывает доступ к эльфийским воинам и стрелкам, блокируя ветку Круга Кенария.|n|n|cffa6afb8Открывает доступ к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДревний Гвардеец|cffced4da|n- |cffa9c7deТанец полумесяца|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0GB",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27604,
+          "after": "|cffe4cfa3Выбор направления|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27605,
+          "after": "|cffe4cfa3Выбор направления|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 41817,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер выбора пути развития расы Ночных эльфов (Круг Кенария или Путь Элуны).|r"
+        }
+      ]
+    },
+    {
+      "id": "Resm",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27059,
+          "after": "|cffe4cfa3Сила Луны — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 27061,
+          "after": "|cffe4cfa3Сила Луны — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 27060,
+          "after": "|cffe4cfa3Сила Луны — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 27064,
+          "after": "|cffe4cfa3Сила Луны — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 27063,
+          "after": "|cffe4cfa3Сила Луны — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 27062,
+          "after": "|cffe4cfa3Сила Луны — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27065,
+          "after": "|cffe4cfa3Сила Луны — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 27066,
+          "after": "|cffe4cfa3Сила Луны — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 27067,
+          "after": "|cffe4cfa3Сила Луны — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 27070,
+          "after": "|cffe4cfa3Сила Луны — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 27069,
+          "after": "|cffe4cfa3Сила Луны — уровень 5|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 27068,
+          "after": "|cffe4cfa3Сила Луны — уровень 6|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 27071,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 27072,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 27073,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 27074,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 27075,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 27076,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон стрелков дальнего боя на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rema",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27139,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 27140,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 27141,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 27144,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 27143,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 27142,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27145,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 27146,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 27147,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 27150,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 4|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 27149,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 5|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 27148,
+          "after": "|cffe4cfa3Лунные доспехи — уровень 6|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 27151,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 27152,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 27153,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 27154,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 27155,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 27156,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков и друидов на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da|n- |cffa9c7deГлефомет|cffced4da|n- |cffa9c7deДриада|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике ночного эльфа).|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "Resw",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27077,
+          "after": "|cffe4cfa3Сила леса — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 27078,
+          "after": "|cffe4cfa3Сила леса — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 27079,
+          "after": "|cffe4cfa3Сила леса — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 27082,
+          "after": "|cffe4cfa3Сила леса — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 27081,
+          "after": "|cffe4cfa3Сила леса — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 27080,
+          "after": "|cffe4cfa3Сила леса — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27083,
+          "after": "|cffe4cfa3Сила леса — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 27084,
+          "after": "|cffe4cfa3Сила леса — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 27085,
+          "after": "|cffe4cfa3Сила леса — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 27088,
+          "after": "|cffe4cfa3Сила леса — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 27087,
+          "after": "|cffe4cfa3Сила леса — уровень 5|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 27086,
+          "after": "|cffe4cfa3Сила леса — уровень 6|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 27089,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 27090,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 27091,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 27092,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 27093,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 27094,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов ближнего боя и зверей на |cffc8e087+10%|cffced4da за каждый уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "Rerh",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27117,
+          "after": "|cffe4cfa3Прочные шкуры — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 27118,
+          "after": "|cffe4cfa3Прочные шкуры — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 27119,
+          "after": "|cffe4cfa3Прочные шкуры — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 27122,
+          "after": "|cffe4cfa3Прочные шкуры — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 27121,
+          "after": "|cffe4cfa3Прочные шкуры — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 27120,
+          "after": "|cffe4cfa3Прочные шкуры — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27123,
+          "after": "|cffe4cfa3Прочные шкуры — уровень 1|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 27124,
+          "after": "|cffe4cfa3Прочные шкуры — уровень 2|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 27125,
+          "after": "|cffe4cfa3Прочные шкуры — уровень 3|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 27128,
+          "after": "|cffe4cfa3Прочные шкуры — уровень 4|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 27127,
+          "after": "|cffe4cfa3Прочные шкуры — уровень 5|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 27126,
+          "after": "|cffe4cfa3Прочные шкуры — уровень 6|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 27129,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 27130,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 27131,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 27132,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 27133,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 27134,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту воинов ближнего боя и зверей на |cffc8e087+2|cffced4da ед. брони за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДух леса|cffced4da|n- |cffa9c7deФурболги|cffced4da|n- |cffa9c7deГорный великан|cffced4da|n- |cffa9c7deДруиды|cffced4da (в облике зверей)|n- |cffa9c7deХимера|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "Reuv",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27135,
+          "after": "|cffe4cfa3Ночное зрение|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27136,
+          "after": "|cffe4cfa3Ночное зрение|r (|cffffffffU|r)"
+        }
+      ]
+    },
+    {
+      "id": "Rews",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27137,
+          "after": "|cffe4cfa3Лунный фонтан|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27138,
+          "after": "|cffe4cfa3Лунный фонтан|r (|cffffffffE|r)"
+        }
+      ]
+    },
+    {
+      "id": "Resc",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27105,
+          "after": "|cffe4cfa3Часовой|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27106,
+          "after": "|cffe4cfa3Часовой|r (|cffffffffS|r)"
+        }
+      ]
+    },
+    {
+      "id": "R0GC",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27655,
+          "after": "|cffe4cfa3Слияние с деревьями — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 27656,
+          "after": "|cffe4cfa3Слияние с деревьями — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 27657,
+          "after": "|cffe4cfa3Слияние с деревьями — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 27658,
+          "after": "|cffe4cfa3Слияние с деревьями — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 27659,
+          "after": "|cffe4cfa3Слияние с деревьями — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 27660,
+          "after": "|cffe4cfa3Слияние с деревьями — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27661,
+          "after": "|cffe4cfa3Слияние с деревьями — уровень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 27662,
+          "after": "|cffe4cfa3Слияние с деревьями — уровень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 27663,
+          "after": "|cffe4cfa3Слияние с деревьями — уровень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 27664,
+          "after": "|cffe4cfa3Слияние с деревьями — уровень 4|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 27665,
+          "after": "|cffe4cfa3Слияние с деревьями — уровень 5|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 27666,
+          "after": "|cffe4cfa3Слияние с деревьями — уровень 6|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 26003,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 25998,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 25999,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 26000,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 26001,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 26002,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой огоньками древесины на |cffc8e087+5|cffced4da ед. за уровень.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deОгонёк|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "Reib",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27099,
+          "after": "|cffe4cfa3Улучшенные луки|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27100,
+          "after": "|cffe4cfa3Улучшенные луки|r (|cffffffffA|r)"
+        }
+      ]
+    },
+    {
+      "id": "Remk",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27098,
+          "after": "|cffe4cfa3Тренировка меткости|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27097,
+          "after": "|cffe4cfa3Тренировка меткости|r (|cffffffffA|r)"
+        }
+      ]
+    },
+    {
+      "id": "Remg",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27101,
+          "after": "|cffe4cfa3Улучшенные лунные глефы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27102,
+          "after": "|cffe4cfa3Улучшенные лунные глефы|r (|cffffffffG|r)"
+        }
+      ]
+    },
+    {
+      "id": "Repb",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27095,
+          "after": "|cffe4cfa3Пронзающие лезвия|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27096,
+          "after": "|cffe4cfa3Пронзающие лезвия|r (|cffffffffP|r)"
+        }
+      ]
+    },
+    {
+      "id": "R0GA",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27594,
+          "after": "|cffe4cfa3Обучение друидизму|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27595,
+          "after": "|cffe4cfa3Обучение друидизму|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 27596,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает фурболгов тайным искусствам друидов. Повышает скорость атаки на |cffc8e087+15%|cffced4da и максимальный запас здоровья на |cffc8e087+50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deФурболг-следопыт|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0G9",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27579,
+          "after": "|cffe4cfa3Опутывание|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27580,
+          "after": "|cffe4cfa3Опутывание|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 27581,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет атаки Духов леса способностью оплетать врагов живыми лозами, замедляя их скорость атаки и передвижения.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДух леса|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0G7",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27561,
+          "after": "|cffe4cfa3Удлинённые клинки|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27562,
+          "after": "|cffe4cfa3Удлинённые клинки|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 27554,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает радиус поражения глефами и наделяет воинов способностью блокировать входящие заклинания.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный воин|cffced4da|n- |cffa9c7deДревний Гвардеец|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "Redt",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27111,
+          "after": "|cffe4cfa3Друид-ворон: посвящение в адепты|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 27112,
+          "after": "|cffe4cfa3Друид-ворон: посвящение в мастера|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27113,
+          "after": "|cffe4cfa3Друид-ворон: посвящение в адепты|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 27114,
+          "after": "|cffe4cfa3Друид-ворон: посвящение в мастера|r (|cffffffffA|r)"
+        }
+      ]
+    },
+    {
+      "id": "Reec",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27159,
+          "after": "|cffe4cfa3Знак ворона|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27160,
+          "after": "|cffe4cfa3Знак ворона|r (|cffffffffM|r)"
+        }
+      ]
+    },
+    {
+      "id": "R0G6",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27546,
+          "after": "|cffe4cfa3Аннулирование — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 27547,
+          "after": "|cffe4cfa3Аннулирование — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 27552,
+          "after": "|cffe4cfa3Аннулирование — уровень 3|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 8471,
+          "after": "|cffe4cfa3Аннулирование — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 8472,
+          "after": "|cffe4cfa3Аннулирование — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 27553,
+          "after": "|cffe4cfa3Аннулирование — уровень 3|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 8468,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает магическую защиту Древних Гвардейцев. Увеличивает скорость атаки на |cffc8e087+10%|cffced4da и регенерацию здоровья на |cffc8e087+0.5|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДревний Гвардеец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 8474,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает магическую защиту Древних Гвардейцев. Увеличивает скорость атаки на |cffc8e087+20%|cffced4da и регенерацию здоровья на |cffc8e087+1.0|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДревний Гвардеец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 8475,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает магическую защиту Древних Гвардейцев. Увеличивает скорость атаки на |cffc8e087+30%|cffced4da и регенерацию здоровья на |cffc8e087+1.5|cffced4da ед./сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДревний Гвардеец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "Redc",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27107,
+          "after": "|cffe4cfa3Друид-хищник: посвящение в адепты|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 27108,
+          "after": "|cffe4cfa3Друид-хищник: посвящение в мастера|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27109,
+          "after": "|cffe4cfa3Друид-хищник: посвящение в адепты|r (|cffffffffL|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 27110,
+          "after": "|cffe4cfa3Друид-хищник: посвящение в мастера|r (|cffffffffL|r)"
+        }
+      ]
+    },
+    {
+      "id": "Reeb",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27044,
+          "after": "|cffe4cfa3Знак хищника|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27045,
+          "after": "|cffe4cfa3Знак хищника|r (|cffffffffM|r)"
+        }
+      ]
+    },
+    {
+      "id": "Resi",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27115,
+          "after": "|cffe4cfa3Рассеяние чар|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27116,
+          "after": "|cffe4cfa3Рассеяние чар|r (|cffffffffA|r)"
+        }
+      ]
+    },
+    {
+      "id": "Rers",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27103,
+          "after": "|cffe4cfa3Устойчивая кожа|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27104,
+          "after": "|cffe4cfa3Устойчивая кожа|r (|cffffffffD|r)"
+        }
+      ]
+    },
+    {
+      "id": "Rehs",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27157,
+          "after": "|cffe4cfa3Каменная кожа|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27158,
+          "after": "|cffe4cfa3Каменная кожа|r (|cffffffffF|r)"
+        }
+      ]
+    },
+    {
+      "id": "R0G8",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 27570,
+          "after": "|cffe4cfa3Магия совы — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 27573,
+          "after": "|cffe4cfa3Магия совы — уровень 2|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 27571,
+          "after": "|cffe4cfa3Магия совы — уровень 1|r (|cffffffffM|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 27574,
+          "after": "|cffe4cfa3Магия совы — уровень 2|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 27572,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает друидов-сов, повышая здоровье на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+25|cffced4da ед. и скорость регенерации маны на |cffc8e087+20%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДруид-сова|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 27575,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает друидам-совам «Облик совуха», дополнительно увеличивая здоровье на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+25|cffced4da ед. и регенерацию маны на |cffc8e087+20%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deДруид-сова|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0KS",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 12378,
+          "after": "|cffe4cfa3Зов Элуны|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 41894,
+          "after": "|cffe4cfa3Зов Элуны|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11036,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет союзников благословением богини Луны, временно повышая скорость атаки и передвижения войск в области действия.|n|n|cffa6afb8Действует на:|cffced4da войска Ночных эльфов.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0KT",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41846,
+          "after": "|cffe4cfa3Ярость Элуны|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 41897,
+          "after": "|cffe4cfa3Ярость Элуны|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 41896,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Посвящает эльфийских воительниц в священный орден Ночных воительниц, наделяя их оружие дополнительным уроном тёмной лунной энергии.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛучница|cffced4da|n- |cffa9c7deОхотница|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0KU",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41849,
+          "after": "|cffe4cfa3Слёзы Элуны|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 41850,
+          "after": "|cffe4cfa3Слёзы Элуны|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 41848,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дарует павшим воинам шанс переродиться в виде священных светлячков-огоньков, возвращая ресурсы и поддерживая жизнь рощи.|n|n|cffa6afb8Действует на:|cffced4da павших воинов Ночных эльфов.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CY",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 41899,
+          "after": "|cffe4cfa3Призыв помощи|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 31803,
+          "after": "|cffe4cfa3Призыв помощи|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 41901,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Друиды обращаются за поддержкой к Диким Богам Азерота, призывая защитников чащи на помощь легионам эльфов.|n|n|cffa6afb8Действует на:|cffced4da силы природы Ночных эльфов.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0KV",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 33342,
+          "after": "|cffe4cfa3Милость Природы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 33380,
+          "after": "|cffe4cfa3Милость Природы|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 35428,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Орошает землю целительным дождём природы, исцеляющим раненых союзных воинов в выбранной области.|n|n|cffa6afb8Действует на:|cffced4da союзные войска Ночных эльфов.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0KW",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 35453,
+          "after": "|cffe4cfa3Ярость Природы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 35455,
+          "after": "|cffe4cfa3Ярость Природы|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 35456,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Призывает в выбранную рощу отряд могучих древней-защитников, сокрушающих нападающих врагов.|n|n|cffa6afb8Призывает:|cffced4da лесных древней.|r"
+        }
+      ]
+    }
+  ]
+}

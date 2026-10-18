@@ -1,0 +1,704 @@
+=== A00S (lvls=1) ===
+  name (None): Сильный удар
+  hotkey: None | rhotkey: B
+  researchtip (None): Изучить «Сильный удар» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. На <AHbh,DataC1> больше урона. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. На <AHbh,DataC2> больше урона. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс. На <AHbh,DataC3> больше урона."
+  Lvl 1:
+    tip (931): Сильный удар
+    ubertip (2000): С 12%-й вероятностью атака нанесет на 10 больше урона и оглушит цель на 1 сек. Не оглушает героев.
+=== A01C (lvls=1) ===
+  name (2038): Графика: Свечение героя
+  hotkey: None | rhotkey: None
+  Lvl 1:
+    tip (2039): Графика: Свечение героя
+    ubertip (None): 
+=== A0D5 (lvls=4) ===
+  name (22232): |c00ffdb78Осколочная Граната|r
+  hotkey: W | rhotkey: W
+  researchtip (22233): Изучить «|c00ffdb78Осколочная граната|rк» [|cffffcc00%d-й уровень|r]
+  researchubertip (9516): Кидает в область гранату, нанося урон.
+  Lvl 1:
+    tip (22238): |c00ffdb78Осколочная граната|r [|cffffcc001-й уровень|r]
+    ubertip (18414): Герой кидает в область гранату, нанося 40 ед. урона.
+  Lvl 2:
+    tip (22253): |c00ffdb78Осколочная граната|r [|cffffcc002-й уровень|r]
+    ubertip (18415): Герой кидает в область гранату, нанося 60 ед. урона.
+  Lvl 3:
+    tip (22254): |c00ffdb78Осколочная граната|r [|cffffcc003-й уровень|r]
+    ubertip (18412): Герой кидает в область гранату, нанося 80 ед. урона.
+  Lvl 4:
+    tip (22264): |c00ffdb78Осколочная граната|r [|cffffcc004-й уровень|r]
+    ubertip (19754): Герой кидает в область гранату, нанося 100 ед. урона.
+=== A0GW (lvls=4) ===
+  name (10220): |cffe4cfa3Аура меткости|r
+  hotkey: E | rhotkey: E
+  researchtip (10221): |cffe4cfa3Аура меткости|r (|cffffffffE|r)
+  researchubertip (39408): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон дистанционных атак находящихся рядом союзных войск.|n|n|cffa6afb8Уровень 1:|cffced4da |cffc8e087+10%|cffced4da к урону.|n|cffa6afb8Уровень 2:|cffced4da |cffc8e087+20%|cffced4da к урону.|n|cffa6afb8Уровень 3:|cffced4da |cffc8e087+30%|cffced4da к урону.|n|cffa6afb8Уровень 4:|cffced4da |cffc8e087+40%|cffced4da к урону.|r
+  Lvl 1:
+    tip (10222): |cffe4cfa3Аура меткости|r (|cffffffffE|r)
+    ubertip (39409): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон союзных стрелков на |cffc8e087+10%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r
+  Lvl 2:
+    tip (10223): |cffe4cfa3Аура меткости|r (|cffffffffE|r)
+    ubertip (39410): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон союзных стрелков на |cffc8e087+20%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r
+  Lvl 3:
+    tip (10224): |cffe4cfa3Аура меткости|r (|cffffffffE|r)
+    ubertip (39411): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон союзных стрелков на |cffc8e087+30%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r
+  Lvl 4:
+    tip (10218): |cffe4cfa3Аура меткости|r (|cffffffffE|r)
+    ubertip (39407): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон союзных стрелков на |cffc8e087+40%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r
+=== A0I3 (lvls=1) ===
+  name (26484): |cffe4cfa3Небольшой скачок|r
+  hotkey: C | rhotkey: E
+  researchtip (10064): |cffe4cfa3Небольшой скачок|r (|cffffffffC|r)
+  researchubertip (10976): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r
+  Lvl 1:
+    tip (26476): |cffe4cfa3Небольшой скачок|r (|cffffffffC|r)
+    ubertip (26477): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r
+=== A0IQ (lvls=1) ===
+  name (27193): |cffffdcb4Обозначить столицу|r
+  hotkey: X | rhotkey: None
+  Lvl 1:
+    tip (27969): |cffffdcb4Обозначить столицу|r
+    ubertip (27970): Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение.
+=== A0LI (lvls=1) ===
+  name (2888): Обмен |cffffff00Золота |rна |cff00ff00Дерево|r
+  hotkey: S | rhotkey: None
+  Lvl 1:
+    tip (3692): Обмен |cffffff00Золота |rна |cff00ff00Дерево|r
+    ubertip (20630): Отнимает у игрока|cffffd700 500 золота|r, но добавляет |cff228722100 дерева|r.
+=== A0LJ (lvls=1) ===
+  name (12857): Обмен |cff00ff00Дерева |rна |cffffff00Золото|r
+  hotkey: A | rhotkey: None
+  Lvl 1:
+    tip (12886): Обмен |cff00ff00Дерева |rна |cffffff00Золото|r
+    ubertip (20631): Отнимает у игрока |cff228722500 дерева|r, но добавляет |cffffd700100 золота|r.
+=== A0S2 (lvls=1) ===
+  name (26299): |cfff0c8afДвойной выстрел|r
+  hotkey: None | rhotkey: None
+  Lvl 1:
+    tip (26302): |cfff0c8afДвойной выстрел|r
+    ubertip (11607): За первой атакой следует вторая.
+=== A0S6 (lvls=1) ===
+  name (15070): Переключить режим
+  hotkey: W | rhotkey: None
+  Lvl 1:
+    tip (15670): Переключить режим
+    ubertip (15671): Меняет тип атаки
+=== A0S7 (lvls=2) ===
+  name (26303): |cfff0c8afЗалп ракет|r
+  hotkey: Q | rhotkey: R
+  researchtip (None): Изучить «Кассетные ракеты» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Обстреливает указанную область ракетами, оглушая находящихся рядом наземных врагов на <ANc3,Dur1> сек. и нанося им урон. |n|n|cffffcc001-й уровень:|r 45 урона.|n|cffffcc002-й уровень:|r 75 урона.|n|cffffcc003-й уровень:|r 110 урона."
+  Lvl 1:
+    tip (26304): |cfff0c8afЗалп ракет|r
+    ubertip (30204): Обстреливает указанную область ракетами, нанося до 10 урона находящимся рядом наземным врагам и оглушая их на <ANc3,Dur1> сек.
+  Lvl 2:
+    tip (26305): |cfff0c8afЗалп ракет|r
+    ubertip (31138): Обстреливает указанную область ракетами, нанося до 20 урона находящимся рядом наземным врагам и оглушая их на <ANc3,Dur2> сек.
+=== A0S8 (lvls=1) ===
+  name (17430): Сгусток огня
+  hotkey: Q | rhotkey: "F"
+  researchtip (None): "Изучить «Пламенное дыхание» [|cffffcc00%d-й уровень|r]"
+  researchubertip (None): "Выдыхает огонь, нанося урон в секторе перед собой. Враги, пораженные «Хмельными парами», при этом загораются и получают периодический урон. |nВремя действия: <ANbf,Dur1> сек. |n|n|cffffcc001-й уровень:|r <ANbf,DataA1> урона мгновенно, <ANbf,DataE1> урона/сек. |n|cffffcc002-й уровень:|r <ANbf,DataA2> урона мгновенно, <ANbf,DataE2> урона/сек. |n|cffffcc003-й уровень:|r <ANbf,DataA3> урона мгновенно, <ANbf,DataE3> урона/сек."
+  Lvl 1:
+    tip (17432): Сгусток огня
+    ubertip (17433): Стреляет во врагов из миниатюрного огнемета.
+=== A0S9 (lvls=1) ===
+  name (78): |cffffc864Прицельная пальба из пулеметов
+  hotkey: W | rhotkey: E
+  researchtip (17436): Прицельная пальба из пулеметов
+  researchubertip (None): "Вытягивает ману из врага или передает ману союзнику. |n|nПри этом запас маны мага крови может превысить максимальный, но неиспользованные излишки быстро исчезают. |nВремя действия: <AHdr,Dur1> сек.|n|n|cffffcc001-й уровень:|r <AHdr,DataB1> маны/сек. |n|cffffcc002-й уровень:|r <AHdr,DataB2> маны/сек. |n|cffffcc003-й уровень:|r <AHdr,DataB3> маны/сек."
+  Lvl 1:
+    tip (3057): |cffffc864Прицельная пальба из пулеметов
+    ubertip (17439): Стреляет по конкретно выбранному юниту.
+=== A0SA (lvls=2) ===
+  name (26306): |cfff0c8afЗалп ракет|r
+  hotkey: Q | rhotkey: R
+  researchtip (None): Изучить «Кассетные ракеты» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Обстреливает указанную область ракетами, оглушая находящихся рядом наземных врагов на <ANc3,Dur1> сек. и нанося им урон. |n|n|cffffcc001-й уровень:|r 45 урона.|n|cffffcc002-й уровень:|r 75 урона.|n|cffffcc003-й уровень:|r 110 урона."
+  Lvl 1:
+    tip (26307): |cfff0c8afЗалп ракет|r
+    ubertip (19926): Обстреливает указанную область ракетами, нанося урон находящимся рядом наземным врагам.
+  Lvl 2:
+    tip (26308): |cfff0c8afЗалп ракет|r
+    ubertip (19927): Обстреливает указанную область ракетами, нанося урон находящимся рядом наземным врагам.
+=== A0SB (lvls=2) ===
+  name (26313): |cfff0c8afАртвыстрел|r
+  hotkey: Q | rhotkey: R
+  researchtip (None): Изучить «Кассетные ракеты» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Обстреливает указанную область ракетами, оглушая находящихся рядом наземных врагов на <ANc3,Dur1> сек. и нанося им урон. |n|n|cffffcc001-й уровень:|r 45 урона.|n|cffffcc002-й уровень:|r 75 урона.|n|cffffcc003-й уровень:|r 110 урона."
+  Lvl 1:
+    tip (26314): |cfff0c8afАртвыстрел|r
+    ubertip (32906): Выстреливает в выбранную область. Наносит 75% урона зданиям.
+  Lvl 2:
+    tip (26317): |cfff0c8afАртвыстрел|r
+    ubertip (32907): Выстреливает в выбранную область. Наносит 75% урона зданиям.
+=== A0SC (lvls=1) ===
+  name (4475): Резня
+  hotkey: None | rhotkey: C
+  researchtip (None): Изучить «Рассекающий удар» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Атаки властителя преисподней наносят урон сразу нескольким целям. |n|n|cffffcc001-й уровень:|r <ANca,DataA1,%>% урона по области. |n|cffffcc002-й уровень:|r <ANca,DataA2,%>% урона по области. |n|cffffcc003-й уровень:|r <ANca,DataA3,%>% урона по области."
+  Lvl 1:
+    tip (4479): Резня
+    ubertip (4484): Реженоги может задеть несколько противников сразу, но дополнительные цели получают лишь 50% урона.
+=== A0SD (lvls=1) ===
+  name (38895): |cfff0c8a0Гномы|r
+  hotkey: Q | rhotkey: None
+  Lvl 1:
+    tip (38896): |cfff0c8a0Гномы|r
+    ubertip (35199): |cff7dc87dСоздатель расы:|r |cff9bff0fVinerX|r|n|cff7dc87dСложность:|r |cffe91919Высокая|r|n|cff7dc87dПериод:|r |cffffde19WoW Vanila|r по |cff989279Battle for Azeroth|r|n|cff7dc87dОписание:|r |cffffc864Гномы|r - умныe, лиxиe и зaчacтyю экcцeнтpичныe – caмaя yдивитeльнaя из цивилизoвaнныx pac Aзepoтa. Эти нeyгoмoнныe, oблaдaющиe вeceлым нpaвoм гeниaльныe изoбpeтaтeли пepeжили пpeдaтeльcтвo, пoтepю poднoгo дoмa и eдвa нe были пoлнocтью yничтoжeны. Oптимизм, пpoявлeнный гнoмaми пepeд лицoм пoдoбныx нecчacтий, кaк нeльзя лyчшe xapaктepизyeт нeпoкoлeбимый дyx этoй pacы.
+=== A0SE (lvls=1) ===
+  name (None): Взять на борт
+  hotkey: L | rhotkey: None
+  Lvl 1:
+    tip (None): Взять на борт
+    ubertip (None): Берет на борт наземного союзника.
+=== A0SG (lvls=1) ===
+  name (3058): |cffffc864Сменить режим
+  hotkey: Q | rhotkey: None
+  researchtip (8097): Изучить |cff6f2583Облик ворона|r
+  researchubertip (8098): Позволяет принимать облик ворона
+  Lvl 1:
+    tip (3059): |cffffc864Сменить режим
+    ubertip (5283): Перейти в боевой режим.
+=== A0SH (lvls=1) ===
+  name (39534): |cfff0c8afАннигиляция|r
+  hotkey: R | rhotkey: Q
+  researchtip (None): Изучить «Огненный столб» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Создает огненный столб, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r 45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек. |n|cffffcc002-й уровень:|r 80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек. |n|cffffcc003-й уровень:|r 110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек."
+  Lvl 1:
+    tip (39535): |cfff0c8afАннигиляция|r
+    ubertip (6224): Чудо |cffffc864техники|r, способное нанести колоссальный урон. |cffffc864Гномы|r говорят, что такого успеха они добились деля ядра какого-то Атома. Кто такой Атом и зачем им пришлось делить его (наверное пушечные) ядра нам неизвестно...
+=== A0SI (lvls=1) ===
+  name (None): Ба-бах!
+  hotkey: B | rhotkey: None
+  Lvl 1:
+    tip (None): Ба-бах!
+    ubertip (None): "Наносит <Asd3,DataB1> урона в небольшой области."
+=== A0SJ (lvls=1) ===
+  name (None): Добывать ресурсы
+  hotkey: G | rhotkey: None
+  Lvl 1:
+    tip (None): Добывать ресурсы
+    ubertip (None): Добывает древесину из деревьев.
+=== A0SK (lvls=2) ===
+  name (34320): |cfff0c8afСильный удар|r
+  hotkey: None | rhotkey: None
+  Lvl 1:
+    tip (34321): |cfff0c8afСильный удар|r
+    ubertip (None): "С <ACbh,DataA1>%-й вероятностью атака нанесет на <ACbh,DataC1> больше урона и оглушит цель на <ACbh,Dur1> сек."
+  Lvl 2:
+    tip (34319): |cfff0c8afСильный удар|r
+    ubertip (18149): С <ACbh,DataA2>%-й вероятностью атака нанесет на <ACbh,DataC2> больше урона и оглушит цель на <ACbh,Dur2> сек.
+=== A0SN (lvls=1) ===
+  name (6226): |cffffc864Разрывные снаряды
+  hotkey: None | rhotkey: None
+  Lvl 1:
+    tip (6225): |cffffc864Разрывные снаряды
+    ubertip (16893): +20% к урону по целям с легкой броней.
+=== A0SO (lvls=1) ===
+  name (1269): |cffffc864Бронебойные снаряды|r
+  hotkey: None | rhotkey: None
+  Lvl 1:
+    tip (1268): |cffffc864Бронебойные снаряды|r
+    ubertip (20165): 10% к урону по целям с тяжелой броней.
+=== A0SZ (lvls=1) ===
+  name (7001): |cffffc864Выстрелить один снаряд
+  hotkey: Q | rhotkey: R
+  researchtip (None): Изучить «Кассетные ракеты» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Обстреливает указанную область ракетами, оглушая находящихся рядом наземных врагов на <ANc3,Dur1> сек. и нанося им урон. |n|n|cffffcc001-й уровень:|r 45 урона.|n|cffffcc002-й уровень:|r 75 урона.|n|cffffcc003-й уровень:|r 110 урона."
+  Lvl 1:
+    tip (7346): |cffffc864Выстрелить один снаряд
+    ubertip (27703): Стреляет в указанную область (Дальность действия огромная), наносит средний урон.
+=== A0T0 (lvls=1) ===
+  name (26318): |cfff0c8afЭМИ|r
+  hotkey: Q | rhotkey: None
+  Lvl 1:
+    tip (26523): |cfff0c8afЭМИ|r
+    ubertip (None): "Снимает положительные эффекты с войск в указанной области. |n|cffffcc00Наносит <Adis,DataB1> урона призванным целям.|r"
+=== A0TC (lvls=4) ===
+  name (19671): Расстрел
+  hotkey: W | rhotkey: W
+  researchtip (19672): Изучить «Расстрел» [|cffffcc00%d-й уровень|r]
+  researchubertip (19673): Поражает пулями врагов в секторе перед собой. |n|n|cffffcc001-й уровень:|r <ANfl,DataA1> урона каждой цели. |n|cffffcc002-й уровень:|r <ANfl,DataA2> урона каждой цели. |n|cffffcc003-й уровень:|r <ANfl,DataA3> урона каждой цели.
+  Lvl 1:
+    tip (19674): Расстрел [|cffffcc001-й уровень|r]
+    ubertip (19678): Поражает пулями до <ANfl,DataB1> врагов в секторе перед собой, нанося <ANfl,DataA1> урона.
+  Lvl 2:
+    tip (19675): Расстрел [|cffffcc002-й уровень|r]
+    ubertip (19679): Поражает пулями до <ANfl,DataB2> врагов в секторе перед собой, нанося <ANfl,DataA2> урона.
+  Lvl 3:
+    tip (19676): Расстрел [|cffffcc003-й уровень|r]
+    ubertip (19680): Поражает пулями до <ANfl,DataB3> врагов в секторе перед собой, нанося <ANfl,DataA3> урона.
+  Lvl 4:
+    tip (19677): Расстрел [|cffffcc004-й уровень|r]
+    ubertip (19681): Поражает пулями до <ANfl,DataB4> врагов в секторе перед собой, нанося <ANfl,DataA4> урона.
+=== A0TD (lvls=2) ===
+  name (19682): Экспериментальные аккумуляторы
+  hotkey: None | rhotkey: R
+  researchtip (19683): Изучить экспериментальные аккумуляторы[|cffffcc00%d-й уровень|r]
+  researchubertip (19684): Повышает интеллект на 25 за уровень. 
+  Lvl 1:
+    tip (19685): Экспериментальные аккумуляторы [|cffffcc001-й уровень|r]
+    ubertip (27230): +25  к интеллекту.
+  Lvl 2:
+    tip (26828): Экспериментальные аккумуляторы [|cffffcc002-й уровень|r]
+    ubertip (27231): +50 к интеллекту.
+=== A0TE (lvls=4) ===
+  name (19712): Ремонтная аура
+  hotkey: None | rhotkey: E
+  researchtip (19713): Изучить «Ремонтная ауру» [|cffffcc00%d-й уровень|r]
+  researchubertip (19789): Ускоряет передвижение и регенерацию здоровья находящихся рядом механизмов.|n|n|cffffcc001-й уровень:|r +<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья. |n|cffffcc002-й уровень:|r +<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья. |n|cffffcc003-й уровень:|r +<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья.
+  Lvl 1:
+    tip (19718): Ремонтная аура [|cffffcc001-й уровень|r]
+    ubertip (19715): +<AUau,DataA1,%>% к скорости передвижения находящихся рядом механизмов и бонус к регенерации их здоровья.
+  Lvl 2:
+    tip (19719): Ремонтная аура [|cffffcc002-й уровень|r]
+    ubertip (19716): +<AUau,DataA2,%>% к скорости передвижения находящихся рядом механизмов и бонус к регенерации их здоровья.
+  Lvl 3:
+    tip (19720): Ремонтная аура [|cffffcc003-й уровень|r]
+    ubertip (19717): +<AUau,DataA3,%>% к скорости передвижения находящихся рядом механизмов и бонус к регенерации их здоровья.
+  Lvl 4:
+    tip (19710): Ремонтная аура [|cffffcc004-й уровень|r]
+    ubertip (19711): +<AUau,DataA4,%>% к скорости передвижения находящихся рядом механизмов и бонус к регенерации их здоровья.
+=== A0TF (lvls=4) ===
+  name (20949): Разобрать бедолагу
+  hotkey: W | rhotkey: W
+  researchtip (25621): Разобрать бедолагу
+  researchubertip (25622): Убивает механичекого юнита, тем самым получая его здоровье.
+  Lvl 1:
+    tip (19722): Разобрать бедолагу
+    ubertip (20948): Убивает механичекого юнита, тем самым получая его здоровье.
+  Lvl 2:
+    tip (20950): Разобрать бедолагу
+    ubertip (20953): Убивает механичекого юнита, тем самым получая его здоровье.
+  Lvl 3:
+    tip (20951): Разобрать бедолагу
+    ubertip (20954): Убивает механичекого юнита, тем самым получая его здоровье.
+  Lvl 4:
+    tip (20952): Разобрать бедолагу
+    ubertip (20955): Убивает механичекого юнита, тем самым получая его здоровье.
+=== A0TG (lvls=4) ===
+  name (None): Раскат грома
+  hotkey: Q | rhotkey: Q
+  researchtip (None): Изучить «Раскат грома» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Бьет по земле, нанося урон находящимся рядом наземным врагам и замедляя их передвижение и атаку. |n|n|cffffcc001-й уровень:|r <AHtc,DataA1> урона, -<AHtc,DataC1,%>% от скорости передвижения, -<AHtc,DataD1,%>% от скорости атаки. |n|cffffcc002-й уровень:|r <AHtc,DataA2> урона, -<AHtc,DataC2,%>% от скорости передвижения, -<AHtc,DataD2,%>% от скорости атаки. |n|cffffcc003-й уровень:|r <AHtc,DataA3> урона, -<AHtc,DataC3,%>% от скорости передвижения, -<AHtc,DataD3,%>% от скорости атаки."
+  Lvl 1:
+    tip (None): "Раскат грома [|cffffcc001-й уровень|r]"
+    ubertip (None): "Бьет по земле, нанося <AHtc,DataA1> урона находящимся рядом наземным врагам и замедляя их передвижение на <AHtc,DataC1,%>% и атаку на <AHtc,DataD1,%>%."
+  Lvl 2:
+    tip (None): "Раскат грома [|cffffcc002-й уровень|r]"
+    ubertip (None): "Бьет по земле, нанося <AHtc,DataA2> урона находящимся рядом наземным врагам и замедляя их передвижение на <AHtc,DataC2,%>% и атаку на <AHtc,DataD2,%>%."
+  Lvl 3:
+    tip (None): "Раскат грома [|cffffcc003-й уровень|r]"
+    ubertip (None): "Бьет по земле, нанося <AHtc,DataA3> урона находящимся рядом наземным врагам и замедляя их передвижение на <AHtc,DataC3,%>% и атаку на <AHtc,DataD3,%>%."
+  Lvl 4:
+    tip (19734): Раскат грома [|cffffcc004-й уровень|r]
+    ubertip (19735): Бьет по земле, нанося <AHtc,DataA4> урона находящимся рядом наземным врагам и замедляя их передвижение на <AHtc,DataC4,%>% и атаку на <AHtc,DataD4,%>%.
+=== A0TH (lvls=2) ===
+  name (34334): |cfff0c8afКод Красный|r
+  hotkey: R | rhotkey: R
+  researchtip (19738): Изучить «Код Красный» [|cffffcc00%d-й уровень|r]
+  researchubertip (36658): Герой переходит в режим, ускоряющий передвижение (на <ANcr,DataE1,%>%) и атаку. |nВремя действия: <ANcr,HeroDur1> сек. |n|n|cffffcc001-й уровень:|r +<ANcr,DataF1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<ANcr,DataF2,%>% к скорости атаки.|n|cffffcc003-й уровень:|r +<ANcr,DataF3,%>% к скорости атаки.
+  Lvl 1:
+    tip (36050): |cfff0c8afКод Красный|r [|cffffcc001-й уровень|r]
+    ubertip (19741): Герой переключается пользуется режимом мехи, ускоряющим передвижение на <ANcr,DataE1,%>% и атаку на <ANcr,DataF1,%>% на <ANcr,HeroDur1> сек.
+  Lvl 2:
+    tip (36106): |cffe4cfa3Боевой рев|r [|cffffffff2-й уровень|r] (|cffffffffW|r)
+    ubertip (19742): Герой переключается пользуется режимом мехи, ускоряющим передвижение на <ANcr,DataE2,%>% и атаку на <ANcr,DataF2,%>% на <ANcr,HeroDur2> сек.
+=== A0TJ (lvls=4) ===
+  name (18559): Разрывные снаряды
+  hotkey: Q | rhotkey: None
+  researchtip (19762): Разрывные снаряды
+  researchubertip (19772): Увеличивет урон от атак героя. Атаки наносят урон по области.
+  Lvl 1:
+    tip (19761): Разрывные снаряды
+    ubertip (19764): +<Afak,DataA1> к урону от атак героя. Атаки наносят урон по области.
+  Lvl 2:
+    tip (18560): Разрывные снаряды
+    ubertip (19765): +<Afak,DataA2> к урону от атак героя. Атаки наносят урон по области.
+  Lvl 3:
+    tip (18573): Разрывные снаряды
+    ubertip (19766): +<Afak,DataA3> к урону от атак героя. Атаки наносят урон по области.
+  Lvl 4:
+    tip (18576): Разрывные снаряды
+    ubertip (19767): +<Afak,DataA4> к урону от атак героя. Атаки наносят урон по области.
+=== A0TK (lvls=2) ===
+  name (19773): Ракетопад
+  hotkey: R | rhotkey: R
+  researchtip (19774): Изучить «Ракетопад»
+  researchubertip (19775): Обрушивает на находящихся рядом врагов волны падающих ракет. Каждая волна наносит <AEsf,DataA1> урона. |nВремя действия: <AEsf,Dur1> сек.
+  Lvl 1:
+    tip (19776): Ракетопад
+    ubertip (19778): Обрушивает на находящихся рядом врагов волны падающих ракет. Каждая волна наносит <AEsf,DataA1> урона. |nВремя действия: <AEsf,Dur1> сек.
+  Lvl 2:
+    tip (19777): Ракетопад
+    ubertip (19779): Обрушивает на находящихся рядом врагов волны падающих ракет. Каждая волна наносит <AEsf,DataA2> урона. |nВремя действия: <AEsf,Dur2> сек.
+=== A0TL (lvls=1) ===
+  name (19800): Хорошая логистика
+  hotkey: None | rhotkey: E
+  researchtip (None): Изучить «Ауру выносливости» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки. |n|cffffcc002-й уровень:|r +<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки. |n|cffffcc003-й уровень:|r +<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки."
+  Lvl 1:
+    tip (19801): Хорошая логистика
+    ubertip (19802): +<AOae,DataA1,%>% к скорости передвижения и +<AOae,DataB1,%>% к скорости атаки находящихся рядом мехвойск.
+=== A0TX (lvls=1) ===
+  name (39539): |cfff0c8afПроклятие|r
+  hotkey: W | rhotkey: None
+  Lvl 1:
+    tip (39540): |cfff0c8afПроклятие|r
+    ubertip (None): "Проклинает врага. С <Acrs,DataA1,%>%-й вероятностью жертва промахивается при атаке.|nВремя действия: <Acrs,Dur1> сек."
+=== A0TY (lvls=1) ===
+  name (None): Увечье
+  hotkey: E | rhotkey: None
+  Lvl 1:
+    tip (None): Увечье
+    ubertip (None): "Замедляет передвижение врага на <Acri,DataA1,%>% и атаку на <Acri,DataB1,%>%, уменьшает наносимый урон на <Acri,DataC1,%>%. |nВремя действия: <Acri,Dur1> сек."
+=== A0TZ (lvls=1) ===
+  name (6950): Меткий выстрел
+  hotkey: Q | rhotkey: None
+  Lvl 1:
+    tip (7934): Меткий выстрел
+    ubertip (None): "Дает <ACct,DataA1>%-й шанс нанести <ACct,DataB1>-кратный урон при атаке."
+=== A0U0 (lvls=1) ===
+  name (5627): Отравленный кинжал
+  hotkey: W | rhotkey: D
+  researchtip (5628): Изучить «Отравленный кинжал» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Бросает отравленный кинжал, наносящий мгновенный и периодический урон и временно замедляющий передвижение цели. |n|n|cffffcc001-й уровень:|r <AEsh,DataE1> урона мгновенно и <AEsh,DataA1> периодического урона. |n|cffffcc002-й уровень:|r <AEsh,DataE2> урона мгновенно и <AEsh,DataA2> периодического урона. |n|cffffcc003-й уровень:|r <AEsh,DataE3> урона мгновенно и <AEsh,DataA3> периодического урона."
+  Lvl 1:
+    tip (11557): Отравленный кинжал
+    ubertip (12483): Бросает отравленный кинжал во врага, нанося 50 урона мгновенно и 3 урона раз в 1 сек. в течение 7 сек. Яд временно замедляет передвижение цели.
+=== A0U1 (lvls=1) ===
+  name (14120): Отточенные навыки
+  hotkey: W | rhotkey: B
+  researchtip (None): Изучить «Пьяного мастера» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Дает шанс уклониться от атаки и <ANdb,DataA1>%-й шанс нанести больше урона. |n|n|cffffcc001-й уровень:|r <ANdb,DataD1,%>%-й шанс уклониться, <ANdb,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <ANdb,DataD2,%>%-й шанс уклониться, <ANdb,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <ANdb,DataD3,%>%-й шанс уклониться, <ANdb,DataB3>-кратный урон."
+  Lvl 1:
+    tip (14121): Отточенные навыки
+    ubertip (None): "Дает <ANdb,DataD1,%>%-й шанс уклониться от атаки и <ANdb,DataA1>%-й шанс нанести <ANdb,DataB1>-кратный урон."
+=== A0U2 (lvls=1) ===
+  name (7347): |cffffc864Снежная буря
+  hotkey: E | rhotkey: B
+  researchtip (None): Изучить «Снежную бурю» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Призывает волны ледяных осколков, наносящих урон в области действия. |n|n|cffffcc001-й уровень:|r <AHbz,DataA1> волн по <AHbz,DataB1> урона. |n|cffffcc002-й уровень:|r <AHbz,DataA2> волн по <AHbz,DataB2> урона. |n|cffffcc003-й уровень:|r <AHbz,DataA3> волн по <AHbz,DataB3> урона."
+  Lvl 1:
+    tip (7348): |cffffc864Снежная буря [|cffffcc001-й уровень|r]
+    ubertip (40052): Обрушивает на указанную область 4 волны ледяных осколков, каждая из которых наносит <AHbz,DataB1> урона.
+=== A0U3 (lvls=1) ===
+  name (7357): |cffffc864Ускорение
+  hotkey: Q | rhotkey: None
+  Lvl 1:
+    tip (7356): |cffffc864Ускорение
+    ubertip (30451): Ускоряет атаку юнита на 10%  и передвижение на 10%. |nВремя действия: 30 сек.
+=== A0U4 (lvls=1) ===
+  name (39542): |cfff0c8afМорозный доспех|r
+  hotkey: W | rhotkey: F
+  researchtip (None): Изучить «Морозный доспех» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Укрывает союзника ледяным щитом, который усиливает броню и замедляет атакующие его в ближнем бою войска. |n|n|cffffcc001-й уровень:|r +<AUfu,DataB1> к броне. |n|cffffcc002-й уровень:|r +<AUfu,DataB2> к броне. |n|cffffcc003-й уровень:|r +<AUfu,DataB3> к броне."
+  Lvl 1:
+    tip (39541): |cfff0c8afМорозный доспех|r
+    ubertip (19865): Укрывает союзника ледяным щитом, который дает +3 к броне и замедляет атакующие его в ближнем бою войска на <AUfu,Dur1> сек. |nВремя действия: <AUfu,DataA1> сек.
+=== A0U5 (lvls=1) ===
+  name (19868): Зажигательная граната
+  hotkey: Q | rhotkey: Q
+  researchtip (None): Изучить «Огненный столб» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Создает огненный столб, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r 45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек. |n|cffffcc002-й уровень:|r 80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек. |n|cffffcc003-й уровень:|r 110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек."
+  Lvl 1:
+    tip (19869): Зажигательная граната
+    ubertip (40053): Создает огненный столб, наносящий наземным войскам в указанной области 3 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать незначительный урон.
+=== A0U7 (lvls=1) ===
+  name (39552): |cfff0c8afСожжение|r
+  hotkey: None | rhotkey: None
+  Lvl 1:
+    tip (39553): |cfff0c8afСожжение|r
+    ubertip (19803): Каждая атака уничтожает <A0U7,DataA1> маны цели и наносит ей столько же дополнительного урона.|n|nПризванные цели получают на <A0U7,DataE1> больше урона от атак этой башни.
+=== A0U8 (lvls=2) ===
+  name (26537): |cfff0c8afШокоудары|r
+  hotkey: None | rhotkey: None
+  Lvl 1:
+    tip (26538): |cfff0c8afШокоудары|r
+    ubertip (None): "С <Awar,DataA1>%-й вероятностью атака нанесет <Awar,DataB1> урона находящимся рядом войскам."
+  Lvl 2:
+    tip (None): Усиленное сокрушение
+    ubertip (None): "С <Awar,DataA2>%-й вероятностью атака нанесет <Awar,DataB2> урона находящимся рядом войскам."
+=== A0U9 (lvls=1) ===
+  name (7362): |cffffc864Произвести реженоги
+  hotkey: Q | rhotkey: W
+  researchtip (None): Изучить «Призыв элементаля воды» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Призывает элементаля воды. |nВремя существования: <AHwe,Dur1> сек. |n|n|cffffcc00Элементаль атакует наземные и воздушные цели. |r|n|n|cffffcc001-й уровень:|r <hwat,realHP> здоровья, <hwat,mindmg1>-<hwat,maxdmg1> урона. |n|cffffcc002-й уровень:|r <hwt2,realHP> здоровья, <hwt2,mindmg1>-<hwt2,maxdmg1> урона. |n|cffffcc003-й уровень:|r <hwt3,realHP> здоровья, <hwt3,mindmg1>-<hwt3,maxdmg1> урона."
+  Lvl 1:
+    tip (7363): |cffffc864Произвести реженоги
+    ubertip (7364): Создает вариант "|cffffc864Реженог|r" на 3 минуты работы.
+=== A0UA (lvls=1) ===
+  name (9498): Закопать мину
+  hotkey: W | rhotkey: None
+  Lvl 1:
+    tip (9499): Закопать мину
+    ubertip (10633): Закапывает мину в выбранной точке. Мина требует потребления.
+=== A0UW (lvls=1) ===
+  name (None): Ба-бах!
+  hotkey: B | rhotkey: None
+  Lvl 1:
+    tip (None): Ба-бах!
+    ubertip (12485): Наносит до 65 урона в небольшой области.
+=== A0VZ (lvls=1) ===
+  name (None): Добывать ресурсы
+  hotkey: G | rhotkey: None
+  Lvl 1:
+    tip (None): Добывать ресурсы
+    ubertip (None): Добывает золото из рудников и древесину из деревьев.
+=== A0XB (lvls=4) ===
+  name (86): Композитная броня
+  hotkey: E | rhotkey: None
+  researchtip (20440): Композитная броня
+  researchubertip (20441): Уменьшает получаемый урон от атак врага.
+  Lvl 1:
+    tip (20379): Композитная броня
+    ubertip (None): "-<Assk,DataC1> от получаемого горным великаном урона от атак. Минимальный урон от атак: <Assk,DataB1>."
+  Lvl 2:
+    tip (20442): Композитная броня
+    ubertip (20445): -<Assk,DataC2> от получаемого горным великаном урона от атак. Минимальный урон от атак: <Assk,DataB2>.
+  Lvl 3:
+    tip (20443): Композитная броня
+    ubertip (20446): -<Assk,DataC3> от получаемого горным великаном урона от атак. Минимальный урон от атак: <Assk,DataB3>.
+  Lvl 4:
+    tip (20444): Композитная броня
+    ubertip (20453): -<Assk,DataC4> от получаемого горным великаном урона от атак. Минимальный урон от атак: <Assk,DataB4>.
+=== A0XC (lvls=1) ===
+  name (21646): Защитные алгоритмы
+  hotkey: D | rhotkey: None
+  Lvl 1:
+    tip (21647): Защитные алгоритмы
+    ubertip (21648): Чем меньше хп, тем больше брони у героя. При нажатии увеличивает здоровье на 10%.
+Бонусы меняются при получении урона.
+=== A0XD (lvls=5) ===
+  name (None): Бонус к броне
+  hotkey: None | rhotkey: None
+  Lvl 1:
+    tip (None): None
+    ubertip (None): None
+  Lvl 2:
+    tip (None): None
+    ubertip (None): None
+  Lvl 3:
+    tip (None): None
+    ubertip (None): None
+  Lvl 4:
+    tip (None): None
+    ubertip (None): None
+  Lvl 5:
+    tip (None): None
+    ubertip (None): None
+=== A0XE (lvls=4) ===
+  name (19379): Перегрузка
+  hotkey: Q | rhotkey: Q
+  researchtip (21382): Перегрузка
+  researchubertip (21384): Временно увеличивает скорость атаки, но уменьшает скорость передвижения.
+  Lvl 1:
+    tip (21383): Перегрузка
+    ubertip (21399): +<Absk,DataB1,%>% к скорости атаки, но - 20% к скорости передвижения.
+  Lvl 2:
+    tip (21387): Перегрузка
+    ubertip (21401): +<Absk,DataB2,%>% к скорости атаки, но - 20% к скорости передвижения.
+  Lvl 3:
+    tip (21389): Перегрузка
+    ubertip (21402): +<Absk,DataB3,%>% к скорости атаки, но - 20% к скорости передвижения.
+  Lvl 4:
+    tip (21393): Перегрузка
+    ubertip (21403): +<Absk,DataB4,%>% к скорости атаки, но - 20% к скорости передвижения.
+=== A0XF (lvls=4) ===
+  name (None): Раздвоенная молния
+  hotkey: W | rhotkey: W
+  researchtip (None): Изучить «Раздвоенную молнию» [|cffffcc00%d-й уровень|r]
+  researchubertip (None): "Поражает молнией врагов в секторе перед собой. |n|n|cffffcc001-й уровень:|r <ANfl,DataA1> урона каждой цели. |n|cffffcc002-й уровень:|r <ANfl,DataA2> урона каждой цели. |n|cffffcc003-й уровень:|r <ANfl,DataA3> урона каждой цели."
+  Lvl 1:
+    tip (None): "Раздвоенная молния [|cffffcc001-й уровень|r]"
+    ubertip (None): "Поражает молнией до <ANfl,DataB1> врагов в секторе перед собой, нанося <ANfl,DataA1> урона."
+  Lvl 2:
+    tip (None): "Раздвоенная молния [|cffffcc002-й уровень|r]"
+    ubertip (None): "Поражает молнией до <ANfl,DataB2> врагов в секторе перед собой, нанося <ANfl,DataA2> урона."
+  Lvl 3:
+    tip (None): "Раздвоенная молния [|cffffcc003-й уровень|r]"
+    ubertip (None): "Поражает молнией до <ANfl,DataB3> врагов в секторе перед собой, нанося <ANfl,DataA3> урона."
+  Lvl 4:
+    tip (26897): Раздвоенная молния [|cffffcc004-й уровень|r]
+    ubertip (21352): Поражает молнией до <ANfl,DataB4> врагов в секторе перед собой, нанося <ANfl,DataA4> урона.
+=== A0XG (lvls=2) ===
+  name (26574): |cfff0c8afРежим дальнего боя|r
+  hotkey: R | rhotkey: R
+  researchtip (21637): Изучить «Режим дальнего боя»
+  researchubertip (21638): Гелбин переходит в дальний бой
+  Lvl 1:
+    tip (26580): |cfff0c8afРежим дальнего боя|r
+    ubertip (21641): Гелбин переходит в дальний бой
+  Lvl 2:
+    tip (26572): |cfff0c8afРежим дальнего боя|r
+    ubertip (21633): Гелбин переходит в дальний бой
+=== A165 (lvls=1) ===
+  name (5396): Скрыться
+  hotkey: Q | rhotkey: None
+  Lvl 1:
+    tip (5403): Скрыться
+    ubertip (39020): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки и перемещения цели.|r
+=== A16A (lvls=1) ===
+  name (26539): |cfff0c8afЭлектрическое поле|r
+  hotkey: W | rhotkey: None
+  Lvl 1:
+    tip (26540): |cfff0c8afЭлектрическое поле|r
+    ubertip (33884): Окружает цель молниями, которые наносят 15 урона/сек. находящимся рядом войскам, в том числе механизмам. |nВремя действия: <Alsh,Dur1> сек.
+=== A1B9 (lvls=1) ===
+  name (7947): |cffffc864Фазовый спаситель
+  hotkey: D | rhotkey: None
+  Lvl 1:
+    tip (7948): |cffffc864Фазовый спаситель
+    ubertip (30454): При получении урона переходит в иное измерение, получая защиту от дальнейшего урона. |nВремя действия: 0.5 сек. 
+=== ACff (lvls=1) ===
+  name (None): Волшебный огонь
+  hotkey: Q | rhotkey: None
+  Lvl 1:
+    tip (None): Волшебный огонь
+    ubertip (None): "Ослабляет броню врага на <ACff,DataA1> и раскрывает его местоположение. |nВремя действия: <ACff,Dur1> сек."
+=== AHfs (lvls=4) ===
+  name (None): |cffe4cfa3Огненный столб|r
+  hotkey: Q | rhotkey: Q
+  researchtip (None): Изучить «|cffe4cfa3Огненный столб|r» [|cffffffff%d-й уровень|r] (|cffffffffQ|r)
+  researchubertip (None): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на указанную область столб бушующего пламени, наносящий высокий урон в первые |cffffffff3|cffced4da сек. и малый урон в последующие |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: |cffffffff45|cffced4da ед. урона/сек.|n- |cffffffff2|cffced4da: |cffffffff80|cffced4da ед. урона/сек.|n- |cffffffff3|cffced4da: |cffffffff110|cffced4da ед. урона/сек.|n- |cffffffff4|cffced4da: |cffffffff150|cffced4da ед. урона/сек.|r
+  Lvl 1:
+    tip (None): |cffe4cfa3Огненный столб|r [|cffffffff1-й уровень|r] (|cffffffffQ|r)
+    ubertip (None): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff45|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r
+  Lvl 2:
+    tip (None): |cffe4cfa3Огненный столб|r [|cffffffff2-й уровень|r] (|cffffffffQ|r)
+    ubertip (None): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff80|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r
+  Lvl 3:
+    tip (None): |cffe4cfa3Огненный столб|r [|cffffffff3-й уровень|r] (|cffffffffQ|r)
+    ubertip (None): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff110|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r
+  Lvl 4:
+    tip (5617): |cffe4cfa3Огненный столб|r [|cffffffff4-й уровень|r] (|cffffffffQ|r)
+    ubertip (1441): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит наземным войскам в области |cffffffff150|cffced4da ед. урона/сек. в течение |cffffffff3|cffced4da сек., а затем незначительный урон ещё |cffffffff6|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r
+=== AInv (lvls=1) ===
+  name (None): Инвентарь
+  hotkey: None | rhotkey: None
+  Lvl 1:
+    tip (None): None
+    ubertip (None): None
+=== ANab (lvls=4) ===
+  name (None): |cffe4cfa3Кислотная бомба|r
+  hotkey: E | rhotkey: E
+  researchtip (None): Изучить «|cffe4cfa3Кислотная бомба|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r)
+  researchubertip (None): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает во врага сосуд с едкой кислотой, которая разъедает броню цели и окружающих врагов, а также наносит им периодический урон в течение |cffffffff15|cffced4da сек.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: |cffffffff-4|cffced4da к броне, |cffffffff5|cffced4da ед. урона/сек. (|cffffffff3|cffced4da ед. по области)|n- |cffffffff2|cffced4da: |cffffffff-5|cffced4da к броне, |cffffffff10|cffced4da ед. урона/сек. (|cffffffff6|cffced4da ед. по области)|n- |cffffffff3|cffced4da: |cffffffff-6|cffced4da к броне, |cffffffff17|cffced4da ед. урона/сек. (|cffffffff11|cffced4da ед. по области)|n- |cffffffff4|cffced4da: |cffffffff-7|cffced4da к броне, |cffffffff20|cffced4da ед. урона/сек. (|cffffffff13|cffced4da ед. по области).|r
+  Lvl 1:
+    tip (None): |cffe4cfa3Кислотная бомба|r [|cffffffff1-й уровень|r] (|cffffffffE|r)
+    ubertip (None): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цель и ближайших врагов кислотой на |cffffffff15|cffced4da сек., снижая броню на |cffffffff4|cffced4da ед. и нанося |cffffffff5|cffced4da ед. урона/сек. основной цели (|cffffffff3|cffced4da ед./сек. дополнительным целям).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r
+  Lvl 2:
+    tip (None): |cffe4cfa3Кислотная бомба|r [|cffffffff2-й уровень|r] (|cffffffffE|r)
+    ubertip (None): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цель и ближайших врагов кислотой на |cffffffff15|cffced4da сек., снижая броню на |cffffffff5|cffced4da ед. и нанося |cffffffff10|cffced4da ед. урона/сек. основной цели (|cffffffff6|cffced4da ед./сек. дополнительным целям).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r
+  Lvl 3:
+    tip (None): |cffe4cfa3Кислотная бомба|r [|cffffffff3-й уровень|r] (|cffffffffE|r)
+    ubertip (None): |cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цель и ближайших врагов кислотой на |cffffffff15|cffced4da сек., снижая броню на |cffffffff6|cffced4da ед. и нанося |cffffffff17|cffced4da ед. урона/сек. основной цели (|cffffffff11|cffced4da ед./сек. дополнительным целям).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r
+  Lvl 4:
+    tip (10969): Кислотная бомба [|cffffcc004-й уровень|r]
+    ubertip (10970): Бросает в цель сосуд с кислотой, который при попадании разбивается и поражает находящихся рядом врагов. |n|nОслабляет броню на <ANab,DataC4>, наносит <ANab,DataD4> урона/сек. основной цели и немного меньше урона дополнительным целям. |nВремя действия: <ANab,Dur4> сек.
+=== Achd (lvls=1) ===
+  name (None): Cargo Hold Death
+  hotkey: None | rhotkey: None
+  Lvl 1:
+    tip (None): None
+    ubertip (None): None
+=== Afbt (lvls=1) ===
+  name (None): Противодействие
+  hotkey: None | rhotkey: None
+  Lvl 1:
+    tip (None): Противодействие
+    ubertip (None): "Каждая атака уничтожает <Afbt,DataA1> маны цели и наносит ей столько же дополнительного урона.|n|nПризванные цели получают на <Afbt,DataE1> больше урона от атак этой башни."
+=== Ahrp (lvls=1) ===
+  name (None): Ремонтировать
+  hotkey: R | rhotkey: None
+  Lvl 1:
+    tip (None): Ремонтировать
+    ubertip (None): Ремонтирует здания и технику за счет ресурсов.
+=== Alit (lvls=1) ===
+  name (None): Грозовая атака
+  hotkey: None | rhotkey: None
+  Lvl 1:
+    tip (None): None
+    ubertip (None): None
+=== Argl (lvls=1) ===
+  name (None): Вернуть золото и древесину
+  hotkey: None | rhotkey: None
+  Lvl 1:
+    tip (None): None
+    ubertip (None): None
+=== MIM1 (lvls=4) ===
+  name (17896): Меха гвардия
+  hotkey: Q | rhotkey: Q
+  researchtip (18062): Изучить «Меха гвардия» [|cffffcc00%d-й уровень|r]
+  researchubertip (18068): Призывает защитников перекованова хранителя.                                                                                                            |n|n|cffffcc001-й уровень:|r Призивает 2 Механабойца.|r                                                                                  |n|cffffcc002-й уровень:|r Призивает 4 Механабойца.|r                                                                                          |n|cffffcc003-й уровень:|r Призивает 4 Наногнома.|r                                                                               |n|cffffcc004-й уровень:|r Призивает 3 Мехагигантов.|r                                                                                    
+  Lvl 1:
+    tip (17935): Меха гвардия [|cffffcc001-й уровень|r]
+    ubertip (17980): Призывает <MIM1,DataB1> Механабойцов |nВремя существования: <MIM1,Dur1> сек.
+  Lvl 2:
+    tip (17938): Меха гвардия [|cffffcc002-й уровень|r]
+    ubertip (18018): Призывает <MIM1,DataB2> Механабойцов |nВремя существования: <MIM1,Dur2> сек.
+  Lvl 3:
+    tip (17944): Меха гвардия [|cffffcc003-й уровень|r]
+    ubertip (18021): Призывает <MIM1,DataB3> Наногномов |nВремя существования: <MIM1,Dur3> сек.
+  Lvl 4:
+    tip (17977): Меха гвардия [|cffffcc004-й уровень|r]
+    ubertip (18059): Призывает <MIM1,DataB4> Мехагигантов |nВремя существования: <MIM1,Dur4> сек.
+=== MIM2 (lvls=4) ===
+  name (18100): Полевой ремонт 
+  hotkey: W | rhotkey: W
+  researchtip (18103): Изучить «Полевой ремонт» [|cffffcc00%d-й уровень|r]
+  researchubertip (18729): Используя технологии хранителей восполняет здоровье ближайшей техники. |n|n|cffffcc001-й уровень:|r 100 ед. здоровья каждой цели.|r |n|cffffcc002-й уровень:|r 150 ед. здоровья каждой цели.|r |n|cffffcc003-й уровень:|r 200 ед. здоровья каждой цели.|r|n|cffffcc004-й уровень:|r 300 ед. здоровья каждой цели.|r
+  Lvl 1:
+    tip (18157): Полевой ремонт  [|cffffcc001-й уровень|r]
+    ubertip (18201): Восполняет здоровье ближайшей техники. |n|n|cffffcc001-й уровень:|r |cffb4dcdc100 ед. здоровья каждой цели.|r 
+  Lvl 2:
+    tip (18160): Полевой ремонт  [|cffffcc002-й уровень|r]
+    ubertip (18563): Восполняет здоровье ближайшей техники .  |n|cffffcc002-й уровень:|r |cffb4dcdc150 ед. здоровья каждой цели.|r
+  Lvl 3:
+    tip (18166): Полевой ремонт  [|cffffcc003-й уровень|r]
+    ubertip (18564): Восполняет здоровье ближайшей техники .|n|cffffcc003-й уровень:|r |cffb4dcdc200 ед. здоровья каждой цели.|r
+  Lvl 4:
+    tip (18198): Полевой ремонт  [|cffffcc004-й уровень|r]
+    ubertip (18728): Восполняет здоровье ближайшей техники . |n|cffffcc004-й уровень:|r |cffb4dcdc300 ед. здоровья каждой цели.|r
+=== MIM3 (lvls=4) ===
+  name (21398): Перегрузка
+  hotkey: E | rhotkey: E
+  researchtip (19398): Изучить «Перегрузка» [|cffffcc00%d-й уровень|r]
+  researchubertip (19407): Повишает скорость атаки взамен на здоров'я.                           |n|n|cffffcc001-й уровень:|r +<MIM3,DataA1,%>% к скорости атаки в обмен на <MIM3,DataB1> здоровья/сек.                                             |n|cffffcc002-й уровень:|r +<MIM3,DataA2,%>% к скорости атаки в обмен на <MIM3,DataB2> здоровья/сек.                                                           |n|cffffcc003-й уровень:|r +<MIM3,DataA3,%>% к скорости атаки в обмен на <MIM3,DataB3> здоровья/сек.                                                  |n|cffffcc004-й уровень:|r +<MIM3,DataA4,%>% к скорости атаки в обмен на <MIM3,DataB4> здоровья/сек.
+  Lvl 1:
+    tip (19382): Перегрузка [|cffffcc001-й уровень|r]
+    ubertip (19386): Дает цели +<MIM3,DataA1,%>% к скорости атаки в обмен на <MIM3,DataB1> здоровья/сек. |nВремя действия: <MIM3,Dur1> сек.
+  Lvl 2:
+    tip (19391): Перегрузка [|cffffcc002-й уровень|r]
+    ubertip (19387): Дает цели +<MIM3,DataA2,%>% к скорости атаки в обмен на <MIM3,DataB2> здоровья/сек. |nВремя действия: <MIM3,Dur2> сек.
+  Lvl 3:
+    tip (19395): Перегрузка [|cffffcc003-й уровень|r]
+    ubertip (19388): Дает цели +<MIM3,DataA3,%>% к скорости атаки в обмен на <MIM3,DataB3> здоровья/сек. |nВремя действия: <MIM3,Dur3> сек.
+  Lvl 4:
+    tip (19396): Перегрузка [|cffffcc004-й уровень|r]
+    ubertip (19390): Дает цели +<MIM3,DataA4,%>% к скорости атаки в обмен на <MIM3,DataB4> здоровья/сек. |nВремя действия: <MIM3,Dur4> сек.
+=== MIM6 (lvls=2) ===
+  name (18794): Мастерство хранителя 
+  hotkey: R | rhotkey: R
+  researchtip (19377): Изучить «Мастерство хранителя» [|cffffcc00%d-й уровень|r]
+  researchubertip (18803): За |cffffff008000|r золота и дерева в течении 50 секунд создаёт железнова хранителя   |n|cffff0000Процесс нельзя прервать и контроль на героем будет утерян на это время.|r |n|cffffcc001-й уровень:|r Максимум 1 хранитель.|r                                                                                  |n|cffffcc002-й уровень:|r Максимум 2 хранитель.|r
+  Lvl 1:
+    tip (19053): Мастерство хранителя [|cffffcc001-й уровень|r]
+    ubertip (19363): За |cffffff008000|r золота и дерева в течении 50 секунд создаёт железнова хранителя    |n|cffff0000Максимум 1 хранитель|r
+  Lvl 2:
+    tip (19128): Мастерство хранителя [|cffffcc002-й уровень|r]
+    ubertip (19376): За |cffffff008000|r золота и дерева в течении 50 секунд создаёт железнова хранителя    |n|cffff0000Максимум 2 хранитель|r
+=== S002 (lvls=1) ===
+  name (None): Cargo Hold
+  hotkey: None | rhotkey: None
+  Lvl 1:
+    tip (None): None
+    ubertip (None): None
+=== Sdro (lvls=1) ===
+  name (None): Выгрузить
+  hotkey: Q | rhotkey: None
+  Lvl 1:
+    tip (None): Выгрузить всех
+    ubertip (None): Высаживает войска в указанном месте.

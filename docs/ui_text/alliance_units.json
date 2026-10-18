@@ -1,0 +1,992 @@
+{
+  "scope": "Альянс (Alliance): категория 2 — Юниты (63 юнитов)",
+  "units_count": 63,
+  "variants": [
+    "SD"
+  ],
+  "units": [
+    {
+      "id": "hpea",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 39029,
+          "after": "|cffe4cfa3Работник|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 39030,
+          "after": "|cffe4cfa3Работника|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 3157,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 17 сек.|n|nБазовый рабочий. Добывает древесину, а также строит и ремонтирует здания. Может пойти в ополчение. |n|n|r"
+        }
+      ]
+    },
+    {
+      "id": "hfoo",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3048,
+          "after": "|cffe4cfa3Рядовой пехотинец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 3049,
+          "after": "|cffe4cfa3Рядового пехотинца|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 1546,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 23 сек.|n|nПодготавливает случайную боевую единицу ближнего боя из доступных.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0K4",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 29141,
+          "after": "|cffe4cfa3Основной пехотинец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 29551,
+          "after": "|cffe4cfa3Основного пехотинца|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28201,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 39 сек.|n|nПодготавливает случайную боевую единицу дальнего боя средней силы из доступных.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0K7",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 29557,
+          "after": "|cffe4cfa3Элитный пехотинец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 27966,
+          "after": "|cffe4cfa3Элитного пехотинца|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28221,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 53 сек.|n|nПодготавливает случайную боевую единицу ближнего боя огромной силы из доступных.|r"
+        }
+      ]
+    },
+    {
+      "id": "hrif",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4132,
+          "after": "|cffe4cfa3Рядовой стрелок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 4133,
+          "after": "|cffe4cfa3Рядовой стрелка|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 21913,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 26 сек.|n|nПодготавливает случайную боевую единицу дальнего боя из доступных.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0K5",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 29555,
+          "after": "|cffe4cfa3Основной стрелок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 29556,
+          "after": "|cffe4cfa3Основного стрелка|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28210,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 33 сек.|n|nПодготавливает случайную боевую единицу ближнего боя средней силы из доступных.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0K6",
+      "hotkey": "D",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 29485,
+          "after": "|cffe4cfa3Элитный стрелок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 29532,
+          "after": "|cffe4cfa3Элитного стрелка|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28220,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 41 сек.|n|nПодготавливает случайную боевую единицу дальнего боя огромной силы из доступных.|r"
+        }
+      ]
+    },
+    {
+      "id": "hkni",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35358,
+          "after": "|cffe4cfa3Кавалерия|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35905,
+          "after": "|cffe4cfa3Кавалерию|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 27841,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 57 сек.|n|nПодготавливает случайную боевую единицу с высокой маневренностью и большим здоровьем из доступных.|r"
+        }
+      ]
+    },
+    {
+      "id": "hmtm",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6939,
+          "after": "|cffe4cfa3Осадный боец|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 6941,
+          "after": "|cffe4cfa3Осадного бойца|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 27852,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 30 сек.|n|nПодготавливает случайную боевую единицу из доступных с осадным потенциалом.|r"
+        }
+      ]
+    },
+    {
+      "id": "hmtt",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 39904,
+          "after": "|cffe4cfa3Техника Альянса|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 39905,
+          "after": "|cffe4cfa3Технику Альянса|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 27855,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 62 сек.|n|nПодготавливает случайную боевую механическую единицу из доступных.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KI",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 30265,
+          "after": "|cffe4cfa3Осадная башня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 32797,
+          "after": "|cffe4cfa3Осадную башню|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 28237,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 120 сек.|nТип атаки: Осадный|n|nПодготавливает случайную боевую единицу дальнего боя из доступных.Огромное сооружение для осады особо укрепленных объктов.|r"
+        }
+      ]
+    },
+    {
+      "id": "hmpr",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 7328,
+          "after": "|cffe4cfa3Маг|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 7332,
+          "after": "|cffe4cfa3Мага|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 27888,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 27 сек.|n|nПодготавливает случайного мага класса поддержки из доступных.|r"
+        }
+      ]
+    },
+    {
+      "id": "hsor",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 882,
+          "after": "|cffe4cfa3Маг|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 924,
+          "after": "|cffe4cfa3Мага|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 3158,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 42 сек.|n|nПодготавливает случайную боевую единицу из доступных с повышенным потенциалом к ненесению урона.|r"
+        }
+      ]
+    },
+    {
+      "id": "hspt",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 30271,
+          "after": "|cffe4cfa3Маг|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 8205,
+          "after": "|cffe4cfa3Мага|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 27944,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 28 сек.|n|nПодготавливает случайную боевую единицу из доступных с специфическими качествами.|r"
+        }
+      ]
+    },
+    {
+      "id": "h00X",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 276,
+          "after": "|cffe4cfa3Транспорт|r"
+        }
+      ]
+    },
+    {
+      "id": "h0L0",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 20967,
+          "after": "|cffe4cfa3Легкий корабль Альянса|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 20971,
+          "after": "|cffe4cfa3Легкий корабль Альянса|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 24411,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Корабль, предназначенный для морских битв.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0L1",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 21892,
+          "after": "|cffe4cfa3Тяжелый корабль Альянса|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 24376,
+          "after": "|cffe4cfa3Тяжелый корабль Альянса|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 22187,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Мощный корабль, эффективный как в морском бою, так и против зданий.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KD",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 29632,
+          "after": "|cffe4cfa3Штормградский воитель|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KH",
+      "hotkey": "K",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 40239,
+          "after": "|cffe4cfa3Кавалерист Штормграда|r"
+        }
+      ]
+    },
+    {
+      "id": "h0LW",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34301,
+          "after": "|cffe4cfa3Новобранец 7-го Легиона|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KE",
+      "hotkey": "K",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 5519,
+          "after": "|cffe4cfa3Боец 7-го Легиона|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31030,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Седьмой легион - это элитный полк специального назначения, состоящий из ветеранов Альянса. Они присутствовали за кулисами почти всех крупных наступательных и военных столкновений, которые когда-либо проводил Альянс. |n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0LU",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6015,
+          "after": "|cffe4cfa3Агент ШРУ|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 29196,
+          "after": "|cffe4cfa3Агента ШРУ|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 22453,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 36 сек.|nТип атаки: Ближний бой|nПрофессиональный убийца Черного Ворона, хорошо убивающий героев вражеской стороны.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0OW",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 1123,
+          "after": "|cffe4cfa3Ветеран войны|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 1125,
+          "after": "|cffe4cfa3Ветерана воины|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 105,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Ветеран 2 войны. Могущественные воины Альянса, которые прошли вторую войну и имеют за спиной не малый опыт сражения |n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KR",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26491,
+          "after": "|cffe4cfa3Пехотинец Лордерона|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KC",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3143,
+          "after": "|cffe4cfa3Пехотинец|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KK",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 5540,
+          "after": "|cffe4cfa3Ветеран Лордерона|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31031,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Выживший ветеран Лордерона. После его разгрома присоеденился к Штормграду. Меткий стрелок, эффективный против воздушных целей. Можно снарядить длинноствольным мушкетом. |n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KW",
+      "hotkey": "K",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6013,
+          "after": "|cffe4cfa3Кавалерист Лордерона|r"
+        }
+      ]
+    },
+    {
+      "id": "h0M9",
+      "hotkey": "F",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 19425,
+          "after": "|cffe4cfa3Воитель Стромгарда|r"
+        }
+      ]
+    },
+    {
+      "id": "h0MA",
+      "hotkey": "K",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 19493,
+          "after": "|cffe4cfa3Кавалерист Стромгарда|r"
+        }
+      ]
+    },
+    {
+      "id": "h0M7",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 29442,
+          "after": "|cffe4cfa3Стрелок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 1420,
+          "after": "|cffe4cfa3Стрелка|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31612,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 26 сек.|nТип атаки: Дальни бой|n\nМеткий стрелок, эффективный на дальних дистанциях. Можно снарядить длинноствольным мушкетом. |n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0M5",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 16509,
+          "after": "|cffe4cfa3Жрец Штормов|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 4678,
+          "after": "|cffe4cfa3Жрец Штормов|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31613,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 40 сек.|nТип атаки: Магический урон|n\nОсновной маг Кул-Тираса. Владеет «Сокрушительная волна». Может изучить « Дух Моря» и «Морская прохлада».|r"
+        }
+      ]
+    },
+    {
+      "id": "h0M6",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 16122,
+          "after": "|cffe4cfa3Галеон|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 16132,
+          "after": "|cffe4cfa3Галеон|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 24413,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Корабль, предназначенный для морских битв.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0M2",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34318,
+          "after": "|cffe4cfa3Лютый ворген|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 9334,
+          "after": "|cffe4cfa3Лютый ворген|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31871,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 55 сек.|nТип атаки: Обычная|n\nВорген чья звериная личность доминирует в их симбиозе.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0M3",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 16133,
+          "after": "|cffe4cfa3Стрелок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 22837,
+          "after": "|cffe4cfa3Стрелка|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31864,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 26 сек.|nТип атаки: Дальний бой|n\nМеткий стрелок, эффективный на дальних дистанциях. Можно снарядить длинноствольным мушкетом. |n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KN",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32802,
+          "after": "|cffe4cfa3Лучница|r"
+        }
+      ]
+    },
+    {
+      "id": "h0L2",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34300,
+          "after": "|cffe4cfa3Лучница|r"
+        }
+      ]
+    },
+    {
+      "id": "h0LZ",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34315,
+          "after": "|cffe4cfa3Часовая|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KT",
+      "hotkey": "P",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6010,
+          "after": "|cffe4cfa3Друид|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KO",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6009,
+          "after": "|cffe4cfa3Дворфийский стрелок|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KY",
+      "hotkey": "P",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 40240,
+          "after": "|cffe4cfa3Гном-чернокнижник|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KJ",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32798,
+          "after": "|cffe4cfa3Паровой танк v2|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KS",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32805,
+          "after": "|cffe4cfa3Паровой танк|r"
+        }
+      ]
+    },
+    {
+      "id": "h0LY",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 40241,
+          "after": "|cffe4cfa3Старый танк|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KP",
+      "hotkey": "M",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32803,
+          "after": "|cffe4cfa3Орудие|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KZ",
+      "hotkey": "M",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32861,
+          "after": "|cffe4cfa3Орудийный расчет|r"
+        }
+      ]
+    },
+    {
+      "id": "o044",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 40242,
+          "after": "|cffe4cfa3Голем Черного Железа|r"
+        }
+      ]
+    },
+    {
+      "id": "h0MB",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 19495,
+          "after": "|cffe4cfa3Жрица Наару|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 29142,
+          "after": "|cffe4cfa3Жрицу Наару|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31622,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Время подготовки: 35 сек.|nТип атаки: Магический|n|nМаг света. Владеет заклинанием «Спасительный свет», востанавливает здоровье союзникам. Может изучить «Внутреннее жжение» и «Воскрешение».|r"
+        }
+      ]
+    },
+    {
+      "id": "h0MC",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 20547,
+          "after": "|cffe4cfa3Жрица Тьмы|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 29949,
+          "after": "|cffe4cfa3Жрицу Наару|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31947,
+          "after": "|cffe4cfa3Ветеран войны|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KX",
+      "hotkey": "K",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6014,
+          "after": "|cffe4cfa3Воздаятель|r"
+        }
+      ]
+    },
+    {
+      "id": "o042",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34317,
+          "after": "|cffe4cfa3Мастер боя|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 5525,
+          "after": "|cffe4cfa3Q|r"
+        }
+      ]
+    },
+    {
+      "id": "o043",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 8795,
+          "after": "|cffe4cfa3Воин Шадо-Пан|r"
+        }
+      ]
+    },
+    {
+      "id": "h0M8",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 29050,
+          "after": "|cffe4cfa3Воин Шадо-Пан|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 29051,
+          "after": "|cffe4cfa3Воин Шадо-Пан|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31946,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Закалённый в битвах ветеран Второй войны. Вдохновляет окружающих союзников командирской аурой и обладает колоссальной стойкостью.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Ветерана|cffced4da: повышает характеристики находящихся рядом бойцов.|n- |cffa9c7deНеубиваемые|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o040",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 29858,
+          "after": "|cffe4cfa3Антимагический кристалл|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KA",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 29559,
+          "after": "|cffe4cfa3Лучник|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KB",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3570,
+          "after": "|cffe4cfa3Арбалетчик|r"
+        }
+      ]
+    },
+    {
+      "id": "h0K9",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25550,
+          "after": "|cffe4cfa3Стрелок|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 29027,
+          "after": "|cffe4cfa3Стрелок|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KL",
+      "hotkey": "P",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32799,
+          "after": "|cffe4cfa3Жрец|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KM",
+      "hotkey": "P",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 5544,
+          "after": "|cffe4cfa3Заклинатель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 8063,
+          "after": "|cffe4cfa3Заклинатель|r"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 3595,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Маг разрушения Кирин-Тора. Обрушивает на врагов огненные кольца, снежные бури и раскалённые ядра.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСнежная буря|cffced4da: обрушивает ледяной град на область.|n- |cffa9c7deКольцо огня|cffced4da: поражает врагов волной пламени.|n- |cffa9c7deОгненные ядра|cffced4da: выпускает взрывные сгустки огня.|n|nАтакует наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KQ",
+      "hotkey": "P",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32804,
+          "after": "|cffe4cfa3Мудрец|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KU",
+      "hotkey": "P",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32806,
+          "after": "|cffe4cfa3Целитель|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KV",
+      "hotkey": "S",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 6012,
+          "after": "|cffe4cfa3Волшебница|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KF",
+      "hotkey": "K",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 30234,
+          "after": "|cffe4cfa3Паладин|r"
+        }
+      ]
+    },
+    {
+      "id": "h0KG",
+      "hotkey": "K",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27910,
+          "after": "|cffe4cfa3Тяжелый пехотинец|r"
+        }
+      ]
+    }
+  ]
+}

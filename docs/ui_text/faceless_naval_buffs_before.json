@@ -1,0 +1,48 @@
+{
+  "command": "get-objects-bulk",
+  "count": 4,
+  "map": "F:\\Gemini_23Race\\map.w3x",
+  "missing": [],
+  "objects": [
+    {
+      "fields": {
+        "bufftip": "TRIGSTR_453",
+        "buffubertip": "TRIGSTR_454",
+        "editorname": ""
+      },
+      "id": "B002",
+      "name": "Все паруса"
+    },
+    {
+      "fields": {
+        "bufftip": "Аура меткости",
+        "buffubertip": "Дальнобойные атаки наносят больше урона.",
+        "editorname": ""
+      },
+      "id": "BEar",
+      "name": "Аура меткости"
+    },
+    {
+      "fields": {
+        "bufftip": "Аура благочестия",
+        "buffubertip": "Броня усилена.",
+        "editorname": ""
+      },
+      "id": "BHad",
+      "name": "Аура благочестия"
+    },
+    {
+      "fields": {
+        "bufftip": "Аура выносливости",
+        "buffubertip": "Атака и передвижение ускорены.",
+        "editorname": ""
+      },
+      "id": "BOae",
+      "name": "Аура выносливости"
+    }
+  ],
+  "ok": true,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "type": "buff"
+}

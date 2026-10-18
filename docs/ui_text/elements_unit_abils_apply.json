@@ -1,0 +1,17 @@
+{
+  "race": "elements",
+  "category": "unit_abilities_and_buffs",
+  "total_abilities": 25,
+  "total_buffs": 5,
+  "total_checks": 85,
+  "all_matched": true,
+  "wts_keys_updated": 73,
+  "ability_ops": 11,
+  "buff_ops": 1,
+  "hashes": {
+    "wts": {
+      "before": "bdc24b2d034f5bb6cad6064ef4266649d5e8df598f5c096201166efa60ec314a",
+      "after": "0c03f262bde89970b61ba2f3f58900867443604a2526f8386771576657f0fe31"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "race": "HordeW2",
+  "race_name_ru": "Орда Второй Войны",
+  "race_id": 35,
+  "mode": "apply",
+  "wts_updates_applied": 491,
+  "checks_summary": {
+    "total": 405,
+    "passed": 405,
+    "failed": 0,
+    "success_percent": 100.0
+  },
+  "hashes": {
+    "original_wts": "f5a24447dc5802605a0ddcc4496c05df62b7e6298c50e75a0ab769264c8d5a25",
+    "updated_wts": "f5a24447dc5802605a0ddcc4496c05df62b7e6298c50e75a0ab769264c8d5a25"
+  },
+  "failures": []
+}

@@ -1,0 +1,92 @@
+{
+  "race": "Ночнорождённые (Nightborne)",
+  "race_id": 18,
+  "selection_ability": "A0HU",
+  "objects_audit": {
+    "buildings": {
+      "count": 12,
+      "ids": [
+        "h0CB",
+        "h0CC",
+        "h0CD",
+        "h0CE",
+        "h0CF",
+        "h0CG",
+        "h0CH",
+        "h0CI",
+        "h0CK",
+        "h0CL",
+        "h0CM",
+        "h0D8"
+      ],
+      "economy_building": {
+        "id": "h0CE",
+        "name": "Кристалл маны",
+        "food_provided": 15,
+        "gold_income_per_25s": 20,
+        "verified_via": "53_economy.lua and unit object stats"
+      }
+    },
+    "units": {
+      "count": 11,
+      "ids": [
+        "h0CJ",
+        "e013",
+        "e014",
+        "e015",
+        "e016",
+        "e017",
+        "e018",
+        "e019",
+        "e01A",
+        "e01B",
+        "h0CA"
+      ]
+    },
+    "heroes": {
+      "count": 3,
+      "ids": [
+        "E01E",
+        "E01D",
+        "E01F"
+      ],
+      "names": {
+        "E01E": "Капитан Шал'дорайской стражи (Сила, ближний бой)",
+        "E01D": "Мрачная Тень (Ловкость, дальний бой)",
+        "E01F": "Верховный лунный маг (Интеллект, дальний бой)"
+      }
+    },
+    "abilities": {
+      "count": 36,
+      "total_wts_updated": 427
+    },
+    "researches": {
+      "count": 16,
+      "markers_list": {
+        "R07J": "Маркер расы Ночнорождённые (Шал'дорай)"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items or inventory artifacts found in war3map.w3t for Nightborne."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "No race-specific floating messages or game UI strings found in war3map.wts for Nightborne."
+  },
+  "buffs_audit": {
+    "custom_buffs": [],
+    "standard_buffs_used": [
+      "Bspe",
+      "Bfro",
+      "Bdef",
+      "BOac",
+      "Bcri",
+      "Bshs"
+    ],
+    "status": "All buffs used by Nightborne abilities are standard Warcraft III engine buffs. No custom text modification required."
+  },
+  "total_wts_updates": 427,
+  "total_checks": 184
+}

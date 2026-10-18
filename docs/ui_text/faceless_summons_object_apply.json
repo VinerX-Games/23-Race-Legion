@@ -1,0 +1,498 @@
+{
+  "ok": true,
+  "applied": true,
+  "method": "Only explicit string modifications spliced; all unrelated records/mods byte-identical",
+  "changes": {
+    "war3map.w3u": [
+      [
+        "nfgt",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "nfgt",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "nfgt",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "uloc",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "uloc",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "uloc",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "n01T",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "n01T",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "n01T",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "n03A",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "n03A",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "n03A",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "n03B",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "n03B",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "n03B",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "n03C",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "n03C",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "n03C",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "n04C",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "n04C",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "n04C",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "e009",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "e009",
+        "utip",
+        0,
+        0
+      ],
+      [
+        "e009",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "h0OM",
+        "unam",
+        0,
+        0
+      ],
+      [
+        "h0OM",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "h0OM",
+        "utip",
+        0,
+        0
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "variant": "SD",
+      "rawcode": "e009",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "e009",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "e009",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0OM",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0OM",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0OM",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n01T",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n01T",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n01T",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "nfgt",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "nfgt",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "nfgt",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "uloc",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "uloc",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "uloc",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n03B",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n03B",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n03B",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n03C",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n03C",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n03C",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n04C",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n04C",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n04C",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n03A",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n03A",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "n03A",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "e009",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "e009",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "e009",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0OM",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0OM",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0OM",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n01T",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n01T",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n01T",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "nfgt",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "nfgt",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "nfgt",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "uloc",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "uloc",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "uloc",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n03B",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n03B",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n03B",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n03C",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n03C",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n03C",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n04C",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n04C",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n04C",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n03A",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n03A",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "n03A",
+      "field": "ubertip",
+      "exact_match": true
+    }
+  ],
+  "wts_unchanged": true
+}

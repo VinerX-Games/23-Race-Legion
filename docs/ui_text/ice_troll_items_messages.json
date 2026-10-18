@@ -1,0 +1,71 @@
+{
+  "scope": "Расовый маркер ледяных троллей R0L1, предметы, сообщения и специальные интерфейсы",
+  "objects_before": {
+    "command": "get-object",
+    "fields": {
+      "maxlevel": "1",
+      "name1": "TRIGSTR_12519",
+      "tip1": "TRIGSTR_12520",
+      "ubertip1": ""
+    },
+    "id": "R0L1",
+    "map": "F:\\Gemini_23Race\\map.w3x",
+    "name": "|cffe6beaaЛедяные тролли|r",
+    "ok": true,
+    "overrides": {
+      "art1": "ReplaceableTextures\\CommandButtons\\BTNBandit.blp",
+      "class": "",
+      "effect1": "",
+      "goldbase": "0",
+      "goldmod": "0",
+      "hotkey1": "",
+      "lumberbase": "0",
+      "lumbermod": "0",
+      "maxlevel": "1",
+      "name1": "TRIGSTR_12519",
+      "oldid": "Rnam",
+      "race": "other",
+      "timebase": "0",
+      "timemod": "0",
+      "tip1": "TRIGSTR_12520",
+      "ubertip1": ""
+    },
+    "schema_version": 1,
+    "tool": "HiveWE_cli",
+    "type": "upgrade"
+  },
+  "strings": [
+    {
+      "rawcode": "R0L1",
+      "field": "name1",
+      "before": "|cffe6beaaЛедяные тролли|r",
+      "after": "|cffe4cfa3Ледяные тролли|r"
+    },
+    {
+      "rawcode": "R0L1",
+      "field": "tip1",
+      "before": "|cffe6beaaЛедяные тролли|r",
+      "after": "|cffe4cfa3Ледяные тролли|r"
+    },
+    {
+      "rawcode": "R0L1",
+      "field": "ubertip1",
+      "before": "",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Расовое знание ледяных троллей Драккари, необходимое для найма Властелина Холода. Выдаётся автоматически при выборе расы.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВластелин Холода|cffced4da в Зул`Драке.|r"
+    }
+  ],
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "in_game_checked": false,
+  "evidence": [
+    "04_race_selection.lua:329: SetPlayerTechResearchedSwap(FourCC('R0L1'), 1, GetOwningPlayer(GetTriggerUnit()))",
+    "libraries/13_Races.lua:3600: SetPlayerTechResearchedSwap(FourCC('R0L1'), 1, p)",
+    "h09K Зул`Драк trains O06L Властелин Холода",
+    "O06L requires R0L1"
+  ],
+  "items_audit": "Не применимо: у Ледяных троллей нет собственных предметов; поля sellitems/makeitems пусты у всех 16 зданий; в скриптах карты нет создания или выдачи расовых предметов.",
+  "messages_audit": "Не применимо: триггеры расы в IceTrolls.lua не содержат видимых игровых сообщений (DisplayTextToPlayer отключены в отладочных комментариях).",
+  "interfaces_audit": "Не применимо: раса не использует специальных диалогов, интерфейсных панелей или фреймов."
+}

@@ -1,0 +1,1314 @@
+{
+  "scope": "Безликие: 13 исследований, все 42 действующих уровня",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "in_game_checked": false,
+  "objects_before": [
+    {
+      "fields": {
+        "hotkey1": "TRIGSTR_26617",
+        "hotkey2": "",
+        "hotkey3": "",
+        "hotkey4": "",
+        "hotkey5": "",
+        "hotkey6": "",
+        "maxlevel": "1",
+        "name1": "TRIGSTR_28130",
+        "name2": "",
+        "name3": "",
+        "name4": "",
+        "name5": "",
+        "name6": "",
+        "tip1": "TRIGSTR_28131",
+        "tip2": "",
+        "tip3": "",
+        "tip4": "",
+        "tip5": "",
+        "tip6": "",
+        "ubertip1": "TRIGSTR_25430",
+        "ubertip2": "",
+        "ubertip3": "",
+        "ubertip4": "",
+        "ubertip5": "",
+        "ubertip6": ""
+      },
+      "id": "R0EK",
+      "name": "Улучшение |cffd7b4f5Сущности|r"
+    },
+    {
+      "fields": {
+        "hotkey1": "TRIGSTR_33375",
+        "hotkey2": "",
+        "hotkey3": "",
+        "hotkey4": "",
+        "hotkey5": "",
+        "hotkey6": "",
+        "maxlevel": "1",
+        "name1": "TRIGSTR_25428",
+        "name2": "",
+        "name3": "",
+        "name4": "",
+        "name5": "",
+        "name6": "",
+        "tip1": "TRIGSTR_25429",
+        "tip2": "",
+        "tip3": "",
+        "tip4": "",
+        "tip5": "",
+        "tip6": "",
+        "ubertip1": "TRIGSTR_28132",
+        "ubertip2": "",
+        "ubertip3": "",
+        "ubertip4": "",
+        "ubertip5": "",
+        "ubertip6": ""
+      },
+      "id": "R0EL",
+      "name": "|cffd7b4f5Разрушение Эфира|r"
+    },
+    {
+      "fields": {
+        "hotkey1": "TRIGSTR_24722",
+        "hotkey2": "TRIGSTR_24723",
+        "hotkey3": "TRIGSTR_24724",
+        "hotkey4": "TRIGSTR_24725",
+        "hotkey5": "TRIGSTR_24726",
+        "hotkey6": "TRIGSTR_24727",
+        "maxlevel": "6",
+        "name1": "TRIGSTR_31246",
+        "name2": "TRIGSTR_31247",
+        "name3": "TRIGSTR_31248",
+        "name4": "TRIGSTR_31251",
+        "name5": "TRIGSTR_31250",
+        "name6": "TRIGSTR_31249",
+        "tip1": "TRIGSTR_25438",
+        "tip2": "TRIGSTR_25439",
+        "tip3": "TRIGSTR_25440",
+        "tip4": "TRIGSTR_25443",
+        "tip5": "TRIGSTR_25442",
+        "tip6": "TRIGSTR_25441",
+        "ubertip1": "TRIGSTR_24617",
+        "ubertip2": "TRIGSTR_24618",
+        "ubertip3": "TRIGSTR_24619",
+        "ubertip4": "TRIGSTR_24608",
+        "ubertip5": "TRIGSTR_24609",
+        "ubertip6": "TRIGSTR_24610"
+      },
+      "id": "R0ER",
+      "name": "|cffd7b4f5Усиление|r |cffe1d700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "hotkey1": "TRIGSTR_39943",
+        "hotkey2": "TRIGSTR_39660",
+        "hotkey3": "TRIGSTR_39889",
+        "hotkey4": "TRIGSTR_39896",
+        "hotkey5": "TRIGSTR_39925",
+        "hotkey6": "",
+        "maxlevel": "3",
+        "name1": "TRIGSTR_28133",
+        "name2": "TRIGSTR_28137",
+        "name3": "TRIGSTR_28138",
+        "name4": "TRIGSTR_22458",
+        "name5": "TRIGSTR_22484",
+        "name6": "",
+        "tip1": "TRIGSTR_28134",
+        "tip2": "TRIGSTR_28139",
+        "tip3": "TRIGSTR_28140",
+        "tip4": "TRIGSTR_22502",
+        "tip5": "TRIGSTR_31226",
+        "tip6": "",
+        "ubertip1": "TRIGSTR_28135",
+        "ubertip2": "TRIGSTR_28142",
+        "ubertip3": "TRIGSTR_28144",
+        "ubertip4": "TRIGSTR_31229",
+        "ubertip5": "TRIGSTR_25669",
+        "ubertip6": ""
+      },
+      "id": "R0ES",
+      "name": "|cffd7b4f5Помутнение рассудка|r"
+    },
+    {
+      "fields": {
+        "hotkey1": "TRIGSTR_38774",
+        "hotkey2": "TRIGSTR_38775",
+        "hotkey3": "TRIGSTR_38776",
+        "hotkey4": "TRIGSTR_38777",
+        "hotkey5": "TRIGSTR_38778",
+        "hotkey6": "TRIGSTR_38779",
+        "maxlevel": "6",
+        "name1": "TRIGSTR_31257",
+        "name2": "TRIGSTR_31256",
+        "name3": "TRIGSTR_31254",
+        "name4": "TRIGSTR_31255",
+        "name5": "TRIGSTR_31253",
+        "name6": "TRIGSTR_31252",
+        "tip1": "TRIGSTR_25464",
+        "tip2": "TRIGSTR_25463",
+        "tip3": "TRIGSTR_25462",
+        "tip4": "TRIGSTR_25467",
+        "tip5": "TRIGSTR_25466",
+        "tip6": "TRIGSTR_25465",
+        "ubertip1": "TRIGSTR_24667",
+        "ubertip2": "TRIGSTR_24668",
+        "ubertip3": "TRIGSTR_24669",
+        "ubertip4": "TRIGSTR_24664",
+        "ubertip5": "TRIGSTR_24665",
+        "ubertip6": "TRIGSTR_24666"
+      },
+      "id": "R0ET",
+      "name": "|cffd7b4f5Наращивание Силы|r |cffe1d700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "hotkey1": "TRIGSTR_34627",
+        "hotkey2": "TRIGSTR_34628",
+        "hotkey3": "TRIGSTR_34629",
+        "hotkey4": "TRIGSTR_38788",
+        "hotkey5": "TRIGSTR_24843",
+        "hotkey6": "TRIGSTR_24846",
+        "maxlevel": "3",
+        "name1": "TRIGSTR_25488",
+        "name2": "TRIGSTR_25487",
+        "name3": "TRIGSTR_25486",
+        "name4": "TRIGSTR_24680",
+        "name5": "TRIGSTR_24678",
+        "name6": "TRIGSTR_24677",
+        "tip1": "TRIGSTR_25491",
+        "tip2": "TRIGSTR_25490",
+        "tip3": "TRIGSTR_25489",
+        "tip4": "TRIGSTR_24688",
+        "tip5": "TRIGSTR_24687",
+        "tip6": "TRIGSTR_24686",
+        "ubertip1": "TRIGSTR_39665",
+        "ubertip2": "TRIGSTR_39666",
+        "ubertip3": "TRIGSTR_39667",
+        "ubertip4": "TRIGSTR_24689",
+        "ubertip5": "TRIGSTR_24690",
+        "ubertip6": "TRIGSTR_24691"
+      },
+      "id": "R0EV",
+      "name": "|cffd7b4f5Усиление К`Траксис|r |cffe1d700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "hotkey1": "S",
+        "hotkey2": "S",
+        "hotkey3": "S",
+        "hotkey4": "TRIGSTR_24750",
+        "hotkey5": "TRIGSTR_24751",
+        "hotkey6": "TRIGSTR_24752",
+        "maxlevel": "3",
+        "name1": "TRIGSTR_25500",
+        "name2": "TRIGSTR_25499",
+        "name3": "TRIGSTR_25497",
+        "name4": "TRIGSTR_25498",
+        "name5": "TRIGSTR_25496",
+        "name6": "TRIGSTR_25495",
+        "tip1": "TRIGSTR_25503",
+        "tip2": "TRIGSTR_25502",
+        "tip3": "TRIGSTR_25501",
+        "tip4": "TRIGSTR_25506",
+        "tip5": "TRIGSTR_25505",
+        "tip6": "TRIGSTR_25504",
+        "ubertip1": "TRIGSTR_40413",
+        "ubertip2": "TRIGSTR_40481",
+        "ubertip3": "TRIGSTR_40482",
+        "ubertip4": "TRIGSTR_25507",
+        "ubertip5": "TRIGSTR_25508",
+        "ubertip6": "TRIGSTR_25509"
+      },
+      "id": "R0EW",
+      "name": "|cffd7b4f5Расширение Знаний|r |cffe1d700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "hotkey1": "TRIGSTR_24754",
+        "hotkey2": "TRIGSTR_24753",
+        "hotkey3": "TRIGSTR_24755",
+        "hotkey4": "TRIGSTR_26091",
+        "hotkey5": "TRIGSTR_26092",
+        "hotkey6": "TRIGSTR_26473",
+        "maxlevel": "3",
+        "name1": "TRIGSTR_25520",
+        "name2": "TRIGSTR_25519",
+        "name3": "TRIGSTR_25517",
+        "name4": "TRIGSTR_25518",
+        "name5": "TRIGSTR_25516",
+        "name6": "TRIGSTR_25515",
+        "tip1": "TRIGSTR_25523",
+        "tip2": "TRIGSTR_25522",
+        "tip3": "TRIGSTR_25521",
+        "tip4": "TRIGSTR_25526",
+        "tip5": "TRIGSTR_25525",
+        "tip6": "TRIGSTR_25524",
+        "ubertip1": "TRIGSTR_40483",
+        "ubertip2": "TRIGSTR_40484",
+        "ubertip3": "TRIGSTR_40521",
+        "ubertip4": "TRIGSTR_25527",
+        "ubertip5": "TRIGSTR_25528",
+        "ubertip6": "TRIGSTR_25529"
+      },
+      "id": "R0EX",
+      "name": "|cffd7b4f5Укрепление Древних Знаний|r |cffe1d700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "hotkey1": "TRIGSTR_37538",
+        "hotkey2": "TRIGSTR_37557",
+        "hotkey3": "TRIGSTR_37558",
+        "hotkey4": "TRIGSTR_37559",
+        "hotkey5": "TRIGSTR_37560",
+        "hotkey6": "TRIGSTR_37570",
+        "maxlevel": "3",
+        "name1": "TRIGSTR_25534",
+        "name2": "TRIGSTR_25536",
+        "name3": "TRIGSTR_25537",
+        "name4": "TRIGSTR_25538",
+        "name5": "TRIGSTR_25539",
+        "name6": "TRIGSTR_25540",
+        "tip1": "TRIGSTR_25535",
+        "tip2": "TRIGSTR_25541",
+        "tip3": "TRIGSTR_25542",
+        "tip4": "TRIGSTR_25543",
+        "tip5": "TRIGSTR_25544",
+        "tip6": "TRIGSTR_25545",
+        "ubertip1": "TRIGSTR_25994",
+        "ubertip2": "TRIGSTR_25995",
+        "ubertip3": "TRIGSTR_25996",
+        "ubertip4": "TRIGSTR_27827",
+        "ubertip5": "TRIGSTR_27826",
+        "ubertip6": "TRIGSTR_27828"
+      },
+      "id": "R0F7",
+      "name": "|cffd7b4f5Развить силу|r |cffffd700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "hotkey1": "TRIGSTR_37071",
+        "hotkey2": "TRIGSTR_37073",
+        "hotkey3": "TRIGSTR_37072",
+        "hotkey4": "TRIGSTR_37465",
+        "hotkey5": "TRIGSTR_37466",
+        "hotkey6": "TRIGSTR_37467",
+        "maxlevel": "3",
+        "name1": "TRIGSTR_27752",
+        "name2": "TRIGSTR_27754",
+        "name3": "TRIGSTR_27755",
+        "name4": "TRIGSTR_27756",
+        "name5": "TRIGSTR_27757",
+        "name6": "TRIGSTR_27758",
+        "tip1": "TRIGSTR_27753",
+        "tip2": "TRIGSTR_27759",
+        "tip3": "TRIGSTR_27760",
+        "tip4": "TRIGSTR_27761",
+        "tip5": "TRIGSTR_27762",
+        "tip6": "TRIGSTR_27763",
+        "ubertip1": "TRIGSTR_22451",
+        "ubertip2": "TRIGSTR_23572",
+        "ubertip3": "TRIGSTR_23573",
+        "ubertip4": "TRIGSTR_28186",
+        "ubertip5": "TRIGSTR_28185",
+        "ubertip6": "TRIGSTR_28187"
+      },
+      "id": "R0F8",
+      "name": "|cffd7b4f5Развить скорость|r |cffffd700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "hotkey1": "TRIGSTR_34635",
+        "hotkey2": "TRIGSTR_38790",
+        "hotkey3": "TRIGSTR_38791",
+        "hotkey4": "TRIGSTR_38792",
+        "hotkey5": "TRIGSTR_38793",
+        "hotkey6": "TRIGSTR_38794",
+        "maxlevel": "1",
+        "name1": "TRIGSTR_25567",
+        "name2": "TRIGSTR_23680",
+        "name3": "TRIGSTR_22867",
+        "name4": "TRIGSTR_23677",
+        "name5": "TRIGSTR_22552",
+        "name6": "TRIGSTR_22550",
+        "tip1": "TRIGSTR_25568",
+        "tip2": "TRIGSTR_23696",
+        "tip3": "TRIGSTR_23691",
+        "tip4": "TRIGSTR_24663",
+        "tip5": "TRIGSTR_24662",
+        "tip6": "TRIGSTR_24423",
+        "ubertip1": "TRIGSTR_25283",
+        "ubertip2": "TRIGSTR_25284",
+        "ubertip3": "TRIGSTR_25285",
+        "ubertip4": "TRIGSTR_25280",
+        "ubertip5": "TRIGSTR_25281",
+        "ubertip6": "TRIGSTR_25282"
+      },
+      "id": "R0FA",
+      "name": "|cffd7b4f5Суть бессмертия|r"
+    },
+    {
+      "fields": {
+        "hotkey1": "TRIGSTR_28456",
+        "hotkey2": "TRIGSTR_28457",
+        "hotkey3": "TRIGSTR_28464",
+        "hotkey4": "TRIGSTR_27868",
+        "hotkey5": "TRIGSTR_27907",
+        "hotkey6": "TRIGSTR_27967",
+        "maxlevel": "3",
+        "name1": "TRIGSTR_27722",
+        "name2": "TRIGSTR_27721",
+        "name3": "TRIGSTR_27719",
+        "name4": "TRIGSTR_27720",
+        "name5": "TRIGSTR_27718",
+        "name6": "TRIGSTR_27717",
+        "tip1": "TRIGSTR_26490",
+        "tip2": "TRIGSTR_26489",
+        "tip3": "TRIGSTR_25997",
+        "tip4": "TRIGSTR_27728",
+        "tip5": "TRIGSTR_27727",
+        "tip6": "TRIGSTR_27726",
+        "ubertip1": "TRIGSTR_27732",
+        "ubertip2": "TRIGSTR_27733",
+        "ubertip3": "TRIGSTR_27734",
+        "ubertip4": "TRIGSTR_25530",
+        "ubertip5": "TRIGSTR_25532",
+        "ubertip6": "TRIGSTR_27729"
+      },
+      "id": "R0GD",
+      "name": "|cffd7b4f5Знание проклинателей|r |cffe1d700[1-й уровень]|r"
+    },
+    {
+      "fields": {
+        "hotkey1": "TRIGSTR_37747",
+        "hotkey2": "TRIGSTR_37786",
+        "hotkey3": "TRIGSTR_37795",
+        "hotkey4": "TRIGSTR_38146",
+        "hotkey5": "TRIGSTR_38147",
+        "hotkey6": "TRIGSTR_38440",
+        "maxlevel": "6",
+        "name1": "TRIGSTR_27772",
+        "name2": "TRIGSTR_27773",
+        "name3": "TRIGSTR_27781",
+        "name4": "TRIGSTR_27782",
+        "name5": "TRIGSTR_27783",
+        "name6": "TRIGSTR_27784",
+        "tip1": "TRIGSTR_27785",
+        "tip2": "TRIGSTR_27774",
+        "tip3": "TRIGSTR_27786",
+        "tip4": "TRIGSTR_27787",
+        "tip5": "TRIGSTR_27788",
+        "tip6": "TRIGSTR_27789",
+        "ubertip1": "TRIGSTR_27795",
+        "ubertip2": "TRIGSTR_27790",
+        "ubertip3": "TRIGSTR_27791",
+        "ubertip4": "TRIGSTR_27792",
+        "ubertip5": "TRIGSTR_27793",
+        "ubertip6": "TRIGSTR_27794"
+      },
+      "id": "R0GE",
+      "name": "|cffd7b4f5Дереводобыча|r"
+    }
+  ],
+  "strings": [
+    {
+      "rawcode": "R0EK",
+      "field": "name1",
+      "reference_before": "TRIGSTR_28130",
+      "before": "Улучшение |cffd7b4f5Сущности|r",
+      "after": "|cffe4cfa3Улучшение Сущности|r"
+    },
+    {
+      "rawcode": "R0EK",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_28131",
+      "before": "Исследовать Улучшение |cffd7b4f5Сущности|r",
+      "after": "|cffe4cfa3Улучшение Сущности|r (|cffffffffC|r)"
+    },
+    {
+      "rawcode": "R0EK",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_25430",
+      "before": "Добавляет способность |cffd7b4f5Сущности Бездны|r",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает «Сотрясение Бездны»: атаки могут оглушить противника и нанести дополнительный урон.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСущность бездны — Сотрясение Бездны|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0EL",
+      "field": "name1",
+      "reference_before": "TRIGSTR_25428",
+      "before": "|cffd7b4f5Разрушение Эфира|r",
+      "after": "|cffe4cfa3Разрушение Эфира|r"
+    },
+    {
+      "rawcode": "R0EL",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_25429",
+      "before": "Исследовать |cffd7b4f5Разрушение Эфира|r",
+      "after": "|cffe4cfa3Разрушение Эфира|r (|cffffffffX|r)"
+    },
+    {
+      "rawcode": "R0EL",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_28132",
+      "before": "Добавляет способность |cffd7b4f5Сущности Бездны|r",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает «Разрушение Эфира»: атаки сжигают ману и наносят урон за каждую сожжённую единицу.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСущность бездны|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны|cffced4da.|n- |cffa9c7deСтрах|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "name1",
+      "reference_before": "TRIGSTR_31246",
+      "before": "|cffd7b4f5Усиление|r |cffe1d700[1-й уровень]|r",
+      "after": "|cffe4cfa3Усиление мышц|r — уровень |cffffffff1|r"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_25438",
+      "before": "Исследовать |cffd7b4f5Усиление мышц|r |cffe1d700[1-й уровень]|r",
+      "after": "|cffe4cfa3Усиление мышц|r — уровень |cffffffff1|r (|cffffffffA|r)"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_24617",
+      "before": "Усиливает броню Безликих",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню перечисленных существ. Суммарный бонус после изучения этого уровня указан у каждой цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий дозорный: |cffc8e087+1|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий разрушитель: |cffc8e087+1|cffced4da к броне|cffced4da.|n- |cffa9c7deСущность бездны: |cffc8e087+1|cffced4da к броне|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны: |cffc8e087+1|cffced4da к броне|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума: |cffc8e087+1|cffced4da к броне|cffced4da.|n- |cffa9c7deПожиратель Бездны: |cffc8e087+1|cffced4da к броне|cffced4da.|n- |cffa9c7deБессмертный страж: |cffc8e087+1|cffced4da к броне|cffced4da.|n- |cffa9c7deК`Траксис: |cffc8e087+1|cffced4da к броне|cffced4da.|n- |cffa9c7deПроклинатель Бездны: |cffc8e087+1|cffced4da к броне|cffced4da.|n- |cffa9c7deКошмар: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deВодное Порождение: |cffc8e087+1|cffced4da к броне|cffced4da.|n- |cffa9c7deСтрах: |cffc8e087+1|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий Кошмар: |cffc8e087+1|cffced4da к броне|cffced4da.|n- |cffa9c7deПорабощённый зверь: |cffc8e087+1|cffced4da к броне|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь: |cffc8e087+1|cffced4da к броне|cffced4da.|n- |cffa9c7deТварь из Бездны: |cffc8e087+2|cffced4da к броне|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "name2",
+      "reference_before": "TRIGSTR_31247",
+      "before": "|cffd7b4f5Усиление|r |cffe2d700[2-й уровень]|r",
+      "after": "|cffe4cfa3Усиление мышц|r — уровень |cffffffff2|r"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_25439",
+      "before": "Исследовать |cffd7b4f5Усиление мышц|r |cffe1d700[2-й уровень]|r",
+      "after": "|cffe4cfa3Усиление мышц|r — уровень |cffffffff2|r (|cffffffffA|r)"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_24618",
+      "before": "Усиливает броню Безликих",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню перечисленных существ. Суммарный бонус после изучения этого уровня указан у каждой цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий дозорный: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий разрушитель: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deСущность бездны: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deПожиратель Бездны: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deБессмертный страж: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deК`Траксис: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deПроклинатель Бездны: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deКошмар: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deВодное Порождение: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deСтрах: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий Кошмар: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deПорабощённый зверь: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь: |cffc8e087+2|cffced4da к броне|cffced4da.|n- |cffa9c7deТварь из Бездны: |cffc8e087+4|cffced4da к броне|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "name3",
+      "reference_before": "TRIGSTR_31248",
+      "before": "|cffd7b4f5Усиление|r |cffe3d700[3-й уровень]|r",
+      "after": "|cffe4cfa3Усиление мышц|r — уровень |cffffffff3|r"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_25440",
+      "before": "Исследовать |cffd7b4f5Усиление мышц|r |cffe1d700[3-й уровень]|r",
+      "after": "|cffe4cfa3Усиление мышц|r — уровень |cffffffff3|r (|cffffffffA|r)"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_24619",
+      "before": "Усиливает броню Безликих",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню перечисленных существ. Суммарный бонус после изучения этого уровня указан у каждой цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий дозорный: |cffc8e087+3|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий разрушитель: |cffc8e087+3|cffced4da к броне|cffced4da.|n- |cffa9c7deСущность бездны: |cffc8e087+3|cffced4da к броне|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны: |cffc8e087+3|cffced4da к броне|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума: |cffc8e087+3|cffced4da к броне|cffced4da.|n- |cffa9c7deПожиратель Бездны: |cffc8e087+3|cffced4da к броне|cffced4da.|n- |cffa9c7deБессмертный страж: |cffc8e087+3|cffced4da к броне|cffced4da.|n- |cffa9c7deК`Траксис: |cffc8e087+3|cffced4da к броне|cffced4da.|n- |cffa9c7deПроклинатель Бездны: |cffc8e087+3|cffced4da к броне|cffced4da.|n- |cffa9c7deКошмар: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deВодное Порождение: |cffc8e087+3|cffced4da к броне|cffced4da.|n- |cffa9c7deСтрах: |cffc8e087+3|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий Кошмар: |cffc8e087+3|cffced4da к броне|cffced4da.|n- |cffa9c7deПорабощённый зверь: |cffc8e087+3|cffced4da к броне|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь: |cffc8e087+3|cffced4da к броне|cffced4da.|n- |cffa9c7deТварь из Бездны: |cffc8e087+6|cffced4da к броне|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "name4",
+      "reference_before": "TRIGSTR_31251",
+      "before": "|cffd7b4f5Усиление|r |cffe4d700[4-й уровень]|r",
+      "after": "|cffe4cfa3Усиление мышц|r — уровень |cffffffff4|r"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "tip4",
+      "reference_before": "TRIGSTR_25443",
+      "before": "Исследовать |cffd7b4f5Усиление мышц|r |cffe1d700[4-й уровень]|r",
+      "after": "|cffe4cfa3Усиление мышц|r — уровень |cffffffff4|r (|cffffffffA|r)"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "ubertip4",
+      "reference_before": "TRIGSTR_24608",
+      "before": "Усиливает броню Безликих",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню перечисленных существ. Суммарный бонус после изучения этого уровня указан у каждой цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+8|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий дозорный: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий разрушитель: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deСущность бездны: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deПожиратель Бездны: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deБессмертный страж: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deК`Траксис: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deПроклинатель Бездны: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deКошмар: |cffc8e087+8|cffced4da к броне|cffced4da.|n- |cffa9c7deВодное Порождение: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deСтрах: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий Кошмар: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deПорабощённый зверь: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь: |cffc8e087+4|cffced4da к броне|cffced4da.|n- |cffa9c7deТварь из Бездны: |cffc8e087+8|cffced4da к броне|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "name5",
+      "reference_before": "TRIGSTR_31250",
+      "before": "|cffd7b4f5Усиление|r |cffe5d700[5-й уровень]|r",
+      "after": "|cffe4cfa3Усиление мышц|r — уровень |cffffffff5|r"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "tip5",
+      "reference_before": "TRIGSTR_25442",
+      "before": "Исследовать |cffd7b4f5Усиление мышц|r |cffe1d700[5-й уровень]|r",
+      "after": "|cffe4cfa3Усиление мышц|r — уровень |cffffffff5|r (|cffffffffA|r)"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "ubertip5",
+      "reference_before": "TRIGSTR_24609",
+      "before": "Усиливает броню Безликих",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню перечисленных существ. Суммарный бонус после изучения этого уровня указан у каждой цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+10|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий дозорный: |cffc8e087+5|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий разрушитель: |cffc8e087+5|cffced4da к броне|cffced4da.|n- |cffa9c7deСущность бездны: |cffc8e087+5|cffced4da к броне|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны: |cffc8e087+5|cffced4da к броне|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума: |cffc8e087+5|cffced4da к броне|cffced4da.|n- |cffa9c7deПожиратель Бездны: |cffc8e087+5|cffced4da к броне|cffced4da.|n- |cffa9c7deБессмертный страж: |cffc8e087+5|cffced4da к броне|cffced4da.|n- |cffa9c7deК`Траксис: |cffc8e087+5|cffced4da к броне|cffced4da.|n- |cffa9c7deПроклинатель Бездны: |cffc8e087+5|cffced4da к броне|cffced4da.|n- |cffa9c7deКошмар: |cffc8e087+10|cffced4da к броне|cffced4da.|n- |cffa9c7deВодное Порождение: |cffc8e087+5|cffced4da к броне|cffced4da.|n- |cffa9c7deСтрах: |cffc8e087+5|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий Кошмар: |cffc8e087+5|cffced4da к броне|cffced4da.|n- |cffa9c7deПорабощённый зверь: |cffc8e087+5|cffced4da к броне|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь: |cffc8e087+5|cffced4da к броне|cffced4da.|n- |cffa9c7deТварь из Бездны: |cffc8e087+10|cffced4da к броне|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "name6",
+      "reference_before": "TRIGSTR_31249",
+      "before": "|cffd7b4f5Усиление|r |cffe6d700[6-й уровень]|r",
+      "after": "|cffe4cfa3Усиление мышц|r — уровень |cffffffff6|r"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "tip6",
+      "reference_before": "TRIGSTR_25441",
+      "before": "Исследовать |cffd7b4f5Усиление мышц|r |cffe1d700[6-й уровень]|r",
+      "after": "|cffe4cfa3Усиление мышц|r — уровень |cffffffff6|r (|cffffffffA|r)"
+    },
+    {
+      "rawcode": "R0ER",
+      "field": "ubertip6",
+      "reference_before": "TRIGSTR_24610",
+      "before": "Усиливает броню Безликих",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню перечисленных существ. Суммарный бонус после изучения этого уровня указан у каждой цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+12|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий дозорный: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий разрушитель: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deСущность бездны: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deПожиратель Бездны: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deБессмертный страж: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deК`Траксис: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deПроклинатель Бездны: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deКошмар: |cffc8e087+12|cffced4da к броне|cffced4da.|n- |cffa9c7deВодное Порождение: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deСтрах: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deБезликий Кошмар: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deПорабощённый зверь: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь: |cffc8e087+6|cffced4da к броне|cffced4da.|n- |cffa9c7deТварь из Бездны: |cffc8e087+12|cffced4da к броне|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0ES",
+      "field": "name1",
+      "reference_before": "TRIGSTR_28133",
+      "before": "|cffd7b4f5Помутнение рассудка|r",
+      "after": "|cffe4cfa3Помутнение рассудка|r — уровень |cffffffff1|r"
+    },
+    {
+      "rawcode": "R0ES",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_28134",
+      "before": "|cffd7b4f5Помутнение рассудка|r |cffe1d700[1-й уровень]|r",
+      "after": "|cffe4cfa3Помутнение рассудка|r — уровень |cffffffff1|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "R0ES",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_28135",
+      "before": "Страх, своими атаками может сотрясти разум противника и ослабить его броню на 2 ед.",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Даёт Страху бонус к уровню «Помутнения разума» и «Помутнения рассудка»: |cffc8e087+1|cffced4da относительно исходного уровня способностей.|n|n|cffa6afb8Примечание:|cffced4da способности имеют по три уровня; исследование не добавляет новых уровней сверх их максимума.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрах — Помутнение разума и Помутнение рассудка|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0ES",
+      "field": "name2",
+      "reference_before": "TRIGSTR_28137",
+      "before": "|cffd7b4f5Помутнение рассудка|r",
+      "after": "|cffe4cfa3Помутнение рассудка|r — уровень |cffffffff2|r"
+    },
+    {
+      "rawcode": "R0ES",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_28139",
+      "before": "|cffd7b4f5Помутнение рассудка|r |cffe2d700[2-й уровень]|r",
+      "after": "|cffe4cfa3Помутнение рассудка|r — уровень |cffffffff2|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "R0ES",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_28142",
+      "before": "Страх, своими атаками может сотрясти разум противника и ослабить его броню на 3 ед.",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Даёт Страху бонус к уровню «Помутнения разума» и «Помутнения рассудка»: |cffc8e087+2|cffced4da относительно исходного уровня способностей.|n|n|cffa6afb8Примечание:|cffced4da способности имеют по три уровня; исследование не добавляет новых уровней сверх их максимума.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрах — Помутнение разума и Помутнение рассудка|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0ES",
+      "field": "name3",
+      "reference_before": "TRIGSTR_28138",
+      "before": "|cffd7b4f5Помутнение рассудка|r",
+      "after": "|cffe4cfa3Помутнение рассудка|r — уровень |cffffffff3|r"
+    },
+    {
+      "rawcode": "R0ES",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_28140",
+      "before": "|cffd7b4f5Помутнение рассудка|r |cffe3d700[3-й уровень]|r",
+      "after": "|cffe4cfa3Помутнение рассудка|r — уровень |cffffffff3|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "R0ES",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_28144",
+      "before": "Страх, своими атаками может сотрясти разум противника и ослабить его броню на 4 ед.",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Даёт Страху бонус к уровню «Помутнения разума» и «Помутнения рассудка»: |cffc8e087+3|cffced4da относительно исходного уровня способностей.|n|n|cffa6afb8Примечание:|cffced4da способности имеют по три уровня; исследование не добавляет новых уровней сверх их максимума.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрах — Помутнение разума и Помутнение рассудка|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "name1",
+      "reference_before": "TRIGSTR_31257",
+      "before": "|cffd7b4f5Наращивание Силы|r |cffe1d700[1-й уровень]|r",
+      "after": "|cffe4cfa3Наращивание мышц|r — уровень |cffffffff1|r"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_25464",
+      "before": "Исследовать |cffd7b4f5Наращивание Мышц|r |cffe1d700[1-й уровень]|r",
+      "after": "|cffe4cfa3Наращивание мышц|r — уровень |cffffffff1|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_24667",
+      "before": "Увеличивает урон от атак всех Безликих",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск и башни. Суммарная прибавка к диапазону урона после изучения этого уровня указана у каждой цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|cffced4da.|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+1|cffced4da–|cffc8e087+5|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий дозорный: |cffc8e087+1|cffced4da–|cffc8e087+2|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий разрушитель: |cffc8e087+1|cffced4da–|cffc8e087+4|cffced4da к урону|cffced4da.|n- |cffa9c7deСущность бездны: |cffc8e087+1|cffced4da–|cffc8e087+2|cffced4da к урону|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны: |cffc8e087+1|cffced4da–|cffc8e087+2|cffced4da к урону|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума: |cffc8e087+1|cffced4da–|cffc8e087+2|cffced4da к урону|cffced4da.|n- |cffa9c7deПожиратель Бездны: |cffc8e087+1|cffced4da–|cffc8e087+2|cffced4da к урону|cffced4da.|n- |cffa9c7deБессмертный страж: |cffc8e087+1|cffced4da–|cffc8e087+2|cffced4da к урону|cffced4da.|n- |cffa9c7deК`Траксис: |cffc8e087+1|cffced4da–|cffc8e087+2|cffced4da к урону|cffced4da.|n- |cffa9c7deПроклинатель Бездны: |cffc8e087+1|cffced4da–|cffc8e087+2|cffced4da к урону|cffced4da.|n- |cffa9c7deКошмар: |cffc8e087+1|cffced4da–|cffc8e087+3|cffced4da к урону|cffced4da.|n- |cffa9c7deВодное Порождение: |cffc8e087+1|cffced4da–|cffc8e087+3|cffced4da к урону|cffced4da.|n- |cffa9c7deБашня Смерти: |cffc8e087+1|cffced4da–|cffc8e087+4|cffced4da к урону|cffced4da.|n- |cffa9c7deСтрах: |cffc8e087+1|cffced4da–|cffc8e087+3|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий Кошмар: |cffc8e087+1|cffced4da–|cffc8e087+2|cffced4da к урону|cffced4da.|n- |cffa9c7deПорабощённый зверь: |cffc8e087+1|cffced4da–|cffc8e087+2|cffced4da к урону|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь: |cffc8e087+1|cffced4da–|cffc8e087+2|cffced4da к урону|cffced4da.|n- |cffa9c7deТварь из Бездны: |cffc8e087+1|cffced4da–|cffc8e087+16|cffced4da к урону|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "name2",
+      "reference_before": "TRIGSTR_31256",
+      "before": "|cffd7b4f5Наращивание Силы|r |cffe2d700[2-й уровень]|r",
+      "after": "|cffe4cfa3Наращивание мышц|r — уровень |cffffffff2|r"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_25463",
+      "before": "Исследовать |cffd7b4f5Наращивание Мышц|r |cffe1d700[2-й уровень]|r",
+      "after": "|cffe4cfa3Наращивание мышц|r — уровень |cffffffff2|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_24668",
+      "before": "Увеличивает урон от атак всех Безликих",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск и башни. Суммарная прибавка к диапазону урона после изучения этого уровня указана у каждой цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+3|cffced4da–|cffc8e087+45|cffced4da к урону|cffced4da.|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+3|cffced4da–|cffc8e087+15|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий дозорный: |cffc8e087+3|cffced4da–|cffc8e087+6|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий разрушитель: |cffc8e087+3|cffced4da–|cffc8e087+12|cffced4da к урону|cffced4da.|n- |cffa9c7deСущность бездны: |cffc8e087+3|cffced4da–|cffc8e087+6|cffced4da к урону|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны: |cffc8e087+3|cffced4da–|cffc8e087+6|cffced4da к урону|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума: |cffc8e087+3|cffced4da–|cffc8e087+6|cffced4da к урону|cffced4da.|n- |cffa9c7deПожиратель Бездны: |cffc8e087+3|cffced4da–|cffc8e087+6|cffced4da к урону|cffced4da.|n- |cffa9c7deБессмертный страж: |cffc8e087+3|cffced4da–|cffc8e087+6|cffced4da к урону|cffced4da.|n- |cffa9c7deК`Траксис: |cffc8e087+3|cffced4da–|cffc8e087+6|cffced4da к урону|cffced4da.|n- |cffa9c7deПроклинатель Бездны: |cffc8e087+3|cffced4da–|cffc8e087+6|cffced4da к урону|cffced4da.|n- |cffa9c7deКошмар: |cffc8e087+3|cffced4da–|cffc8e087+9|cffced4da к урону|cffced4da.|n- |cffa9c7deВодное Порождение: |cffc8e087+3|cffced4da–|cffc8e087+9|cffced4da к урону|cffced4da.|n- |cffa9c7deБашня Смерти: |cffc8e087+3|cffced4da–|cffc8e087+12|cffced4da к урону|cffced4da.|n- |cffa9c7deСтрах: |cffc8e087+3|cffced4da–|cffc8e087+9|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий Кошмар: |cffc8e087+3|cffced4da–|cffc8e087+6|cffced4da к урону|cffced4da.|n- |cffa9c7deПорабощённый зверь: |cffc8e087+3|cffced4da–|cffc8e087+6|cffced4da к урону|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь: |cffc8e087+3|cffced4da–|cffc8e087+6|cffced4da к урону|cffced4da.|n- |cffa9c7deТварь из Бездны: |cffc8e087+3|cffced4da–|cffc8e087+48|cffced4da к урону|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "name3",
+      "reference_before": "TRIGSTR_31254",
+      "before": "|cffd7b4f5Наращивание Силы|r |cffe3d700[3-й уровень]|r",
+      "after": "|cffe4cfa3Наращивание мышц|r — уровень |cffffffff3|r"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_25462",
+      "before": "Исследовать |cffd7b4f5Наращивание Мышц|r |cffe1d700[3-й уровень]|r",
+      "after": "|cffe4cfa3Наращивание мышц|r — уровень |cffffffff3|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_24669",
+      "before": "Увеличивает урон от атак всех Безликих",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск и башни. Суммарная прибавка к диапазону урона после изучения этого уровня указана у каждой цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+5|cffced4da–|cffc8e087+75|cffced4da к урону|cffced4da.|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+5|cffced4da–|cffc8e087+25|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий дозорный: |cffc8e087+5|cffced4da–|cffc8e087+10|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий разрушитель: |cffc8e087+5|cffced4da–|cffc8e087+20|cffced4da к урону|cffced4da.|n- |cffa9c7deСущность бездны: |cffc8e087+5|cffced4da–|cffc8e087+10|cffced4da к урону|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны: |cffc8e087+5|cffced4da–|cffc8e087+10|cffced4da к урону|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума: |cffc8e087+5|cffced4da–|cffc8e087+10|cffced4da к урону|cffced4da.|n- |cffa9c7deПожиратель Бездны: |cffc8e087+5|cffced4da–|cffc8e087+10|cffced4da к урону|cffced4da.|n- |cffa9c7deБессмертный страж: |cffc8e087+5|cffced4da–|cffc8e087+10|cffced4da к урону|cffced4da.|n- |cffa9c7deК`Траксис: |cffc8e087+5|cffced4da–|cffc8e087+10|cffced4da к урону|cffced4da.|n- |cffa9c7deПроклинатель Бездны: |cffc8e087+5|cffced4da–|cffc8e087+10|cffced4da к урону|cffced4da.|n- |cffa9c7deКошмар: |cffc8e087+5|cffced4da–|cffc8e087+15|cffced4da к урону|cffced4da.|n- |cffa9c7deВодное Порождение: |cffc8e087+5|cffced4da–|cffc8e087+15|cffced4da к урону|cffced4da.|n- |cffa9c7deБашня Смерти: |cffc8e087+5|cffced4da–|cffc8e087+20|cffced4da к урону|cffced4da.|n- |cffa9c7deСтрах: |cffc8e087+5|cffced4da–|cffc8e087+15|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий Кошмар: |cffc8e087+5|cffced4da–|cffc8e087+10|cffced4da к урону|cffced4da.|n- |cffa9c7deПорабощённый зверь: |cffc8e087+5|cffced4da–|cffc8e087+10|cffced4da к урону|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь: |cffc8e087+5|cffced4da–|cffc8e087+10|cffced4da к урону|cffced4da.|n- |cffa9c7deТварь из Бездны: |cffc8e087+5|cffced4da–|cffc8e087+80|cffced4da к урону|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "name4",
+      "reference_before": "TRIGSTR_31255",
+      "before": "|cffd7b4f5Наращивание Силы|r |cffe4d700[4-й уровень]|r",
+      "after": "|cffe4cfa3Наращивание мышц|r — уровень |cffffffff4|r"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "tip4",
+      "reference_before": "TRIGSTR_25467",
+      "before": "Исследовать |cffd7b4f5Наращивание Мышц|r |cffe1d700[4-й уровень]|r",
+      "after": "|cffe4cfa3Наращивание мышц|r — уровень |cffffffff4|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "ubertip4",
+      "reference_before": "TRIGSTR_24664",
+      "before": "Увеличивает урон от атак всех Безликих",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск и башни. Суммарная прибавка к диапазону урона после изучения этого уровня указана у каждой цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+7|cffced4da–|cffc8e087+105|cffced4da к урону|cffced4da.|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+7|cffced4da–|cffc8e087+35|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий дозорный: |cffc8e087+7|cffced4da–|cffc8e087+14|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий разрушитель: |cffc8e087+7|cffced4da–|cffc8e087+28|cffced4da к урону|cffced4da.|n- |cffa9c7deСущность бездны: |cffc8e087+7|cffced4da–|cffc8e087+14|cffced4da к урону|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны: |cffc8e087+7|cffced4da–|cffc8e087+14|cffced4da к урону|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума: |cffc8e087+7|cffced4da–|cffc8e087+14|cffced4da к урону|cffced4da.|n- |cffa9c7deПожиратель Бездны: |cffc8e087+7|cffced4da–|cffc8e087+14|cffced4da к урону|cffced4da.|n- |cffa9c7deБессмертный страж: |cffc8e087+7|cffced4da–|cffc8e087+14|cffced4da к урону|cffced4da.|n- |cffa9c7deК`Траксис: |cffc8e087+7|cffced4da–|cffc8e087+14|cffced4da к урону|cffced4da.|n- |cffa9c7deПроклинатель Бездны: |cffc8e087+7|cffced4da–|cffc8e087+14|cffced4da к урону|cffced4da.|n- |cffa9c7deКошмар: |cffc8e087+7|cffced4da–|cffc8e087+21|cffced4da к урону|cffced4da.|n- |cffa9c7deВодное Порождение: |cffc8e087+7|cffced4da–|cffc8e087+21|cffced4da к урону|cffced4da.|n- |cffa9c7deБашня Смерти: |cffc8e087+7|cffced4da–|cffc8e087+28|cffced4da к урону|cffced4da.|n- |cffa9c7deСтрах: |cffc8e087+7|cffced4da–|cffc8e087+21|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий Кошмар: |cffc8e087+7|cffced4da–|cffc8e087+14|cffced4da к урону|cffced4da.|n- |cffa9c7deПорабощённый зверь: |cffc8e087+7|cffced4da–|cffc8e087+14|cffced4da к урону|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь: |cffc8e087+7|cffced4da–|cffc8e087+14|cffced4da к урону|cffced4da.|n- |cffa9c7deТварь из Бездны: |cffc8e087+7|cffced4da–|cffc8e087+112|cffced4da к урону|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "name5",
+      "reference_before": "TRIGSTR_31253",
+      "before": "|cffd7b4f5Наращивание Силы|r |cffe5d700[5-й уровень]|r",
+      "after": "|cffe4cfa3Наращивание мышц|r — уровень |cffffffff5|r"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "tip5",
+      "reference_before": "TRIGSTR_25466",
+      "before": "Исследовать |cffd7b4f5Наращивание Мышц|r |cffe1d700[5-й уровень]|r",
+      "after": "|cffe4cfa3Наращивание мышц|r — уровень |cffffffff5|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "ubertip5",
+      "reference_before": "TRIGSTR_24665",
+      "before": "Увеличивает урон от атак всех Безликих",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск и башни. Суммарная прибавка к диапазону урона после изучения этого уровня указана у каждой цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+9|cffced4da–|cffc8e087+135|cffced4da к урону|cffced4da.|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+9|cffced4da–|cffc8e087+45|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий дозорный: |cffc8e087+9|cffced4da–|cffc8e087+18|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий разрушитель: |cffc8e087+9|cffced4da–|cffc8e087+36|cffced4da к урону|cffced4da.|n- |cffa9c7deСущность бездны: |cffc8e087+9|cffced4da–|cffc8e087+18|cffced4da к урону|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны: |cffc8e087+9|cffced4da–|cffc8e087+18|cffced4da к урону|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума: |cffc8e087+9|cffced4da–|cffc8e087+18|cffced4da к урону|cffced4da.|n- |cffa9c7deПожиратель Бездны: |cffc8e087+9|cffced4da–|cffc8e087+18|cffced4da к урону|cffced4da.|n- |cffa9c7deБессмертный страж: |cffc8e087+9|cffced4da–|cffc8e087+18|cffced4da к урону|cffced4da.|n- |cffa9c7deК`Траксис: |cffc8e087+9|cffced4da–|cffc8e087+18|cffced4da к урону|cffced4da.|n- |cffa9c7deПроклинатель Бездны: |cffc8e087+9|cffced4da–|cffc8e087+18|cffced4da к урону|cffced4da.|n- |cffa9c7deКошмар: |cffc8e087+9|cffced4da–|cffc8e087+27|cffced4da к урону|cffced4da.|n- |cffa9c7deВодное Порождение: |cffc8e087+9|cffced4da–|cffc8e087+27|cffced4da к урону|cffced4da.|n- |cffa9c7deБашня Смерти: |cffc8e087+9|cffced4da–|cffc8e087+36|cffced4da к урону|cffced4da.|n- |cffa9c7deСтрах: |cffc8e087+9|cffced4da–|cffc8e087+27|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий Кошмар: |cffc8e087+9|cffced4da–|cffc8e087+18|cffced4da к урону|cffced4da.|n- |cffa9c7deПорабощённый зверь: |cffc8e087+9|cffced4da–|cffc8e087+18|cffced4da к урону|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь: |cffc8e087+9|cffced4da–|cffc8e087+18|cffced4da к урону|cffced4da.|n- |cffa9c7deТварь из Бездны: |cffc8e087+9|cffced4da–|cffc8e087+144|cffced4da к урону|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "name6",
+      "reference_before": "TRIGSTR_31252",
+      "before": "|cffd7b4f5Наращивание Силы|r |cffe6d700[6-й уровень]|r",
+      "after": "|cffe4cfa3Наращивание мышц|r — уровень |cffffffff6|r"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "tip6",
+      "reference_before": "TRIGSTR_25465",
+      "before": "Исследовать |cffd7b4f5Наращивание Мышц|r |cffe1d700[6-й уровень]|r",
+      "after": "|cffe4cfa3Наращивание мышц|r — уровень |cffffffff6|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "R0ET",
+      "field": "ubertip6",
+      "reference_before": "TRIGSTR_24666",
+      "before": "Увеличивает урон от атак всех Безликих",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск и башни. Суммарная прибавка к диапазону урона после изучения этого уровня указана у каждой цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+11|cffced4da–|cffc8e087+165|cffced4da к урону|cffced4da.|n- |cffa9c7deЩупальце Йогг`Сарона: |cffc8e087+11|cffced4da–|cffc8e087+55|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий дозорный: |cffc8e087+11|cffced4da–|cffc8e087+22|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий разрушитель: |cffc8e087+11|cffced4da–|cffc8e087+44|cffced4da к урону|cffced4da.|n- |cffa9c7deСущность бездны: |cffc8e087+11|cffced4da–|cffc8e087+22|cffced4da к урону|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны: |cffc8e087+11|cffced4da–|cffc8e087+22|cffced4da к урону|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума: |cffc8e087+11|cffced4da–|cffc8e087+22|cffced4da к урону|cffced4da.|n- |cffa9c7deПожиратель Бездны: |cffc8e087+11|cffced4da–|cffc8e087+22|cffced4da к урону|cffced4da.|n- |cffa9c7deБессмертный страж: |cffc8e087+11|cffced4da–|cffc8e087+22|cffced4da к урону|cffced4da.|n- |cffa9c7deК`Траксис: |cffc8e087+11|cffced4da–|cffc8e087+22|cffced4da к урону|cffced4da.|n- |cffa9c7deПроклинатель Бездны: |cffc8e087+11|cffced4da–|cffc8e087+22|cffced4da к урону|cffced4da.|n- |cffa9c7deКошмар: |cffc8e087+11|cffced4da–|cffc8e087+33|cffced4da к урону|cffced4da.|n- |cffa9c7deВодное Порождение: |cffc8e087+11|cffced4da–|cffc8e087+33|cffced4da к урону|cffced4da.|n- |cffa9c7deБашня Смерти: |cffc8e087+11|cffced4da–|cffc8e087+44|cffced4da к урону|cffced4da.|n- |cffa9c7deСтрах: |cffc8e087+11|cffced4da–|cffc8e087+33|cffced4da к урону|cffced4da.|n- |cffa9c7deБезликий Кошмар: |cffc8e087+11|cffced4da–|cffc8e087+22|cffced4da к урону|cffced4da.|n- |cffa9c7deПорабощённый зверь: |cffc8e087+11|cffced4da–|cffc8e087+22|cffced4da к урону|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь: |cffc8e087+11|cffced4da–|cffc8e087+22|cffced4da к урону|cffced4da.|n- |cffa9c7deТварь из Бездны: |cffc8e087+11|cffced4da–|cffc8e087+176|cffced4da к урону|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0EV",
+      "field": "name1",
+      "reference_before": "TRIGSTR_25488",
+      "before": "|cffd7b4f5Усиление К`Траксис|r |cffe1d700[1-й уровень]|r",
+      "after": "|cffe4cfa3Усиление К`Траксис|r — уровень |cffffffff1|r"
+    },
+    {
+      "rawcode": "R0EV",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_25491",
+      "before": "Исследовать |cffd7b4f5Усиление К`Траксис|r |cffe1d700[1-й уровень]|r",
+      "after": "|cffe4cfa3Усиление К`Траксис|r — уровень |cffffffff1|r (|cffffffffX|r)"
+    },
+    {
+      "rawcode": "R0EV",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_39665",
+      "before": "Открывает способности и увеличивает хп 20%, а так же регенерацию здоровья на 20% |cffd7b4f5К`Траксис|r",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус: |cffc8e087+10%|cffced4da к максимальному здоровью и |cffc8e087+20%|cffced4da к восстановлению здоровья.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deК`Траксис|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0EV",
+      "field": "name2",
+      "reference_before": "TRIGSTR_25487",
+      "before": "|cffd7b4f5Усиление К`Траксис|r |cffe1d700[2-й уровень]|r",
+      "after": "|cffe4cfa3Усиление К`Траксис|r — уровень |cffffffff2|r"
+    },
+    {
+      "rawcode": "R0EV",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_25490",
+      "before": "Исследовать |cffd7b4f5Усиление К`Траксис|r |cffe1d700[2-й уровень]|r",
+      "after": "|cffe4cfa3Усиление К`Траксис|r — уровень |cffffffff2|r (|cffffffffX|r)"
+    },
+    {
+      "rawcode": "R0EV",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_39666",
+      "before": "Открывает способности и увеличивает хп 10%, а так же регенерацию здоровья на 10% |cffd7b4f5К`Траксис|r",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус: |cffc8e087+15%|cffced4da к максимальному здоровью и |cffc8e087+30%|cffced4da к восстановлению здоровья.|n|nОткрывает «Крепкий панцирь».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deК`Траксис|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0EV",
+      "field": "name3",
+      "reference_before": "TRIGSTR_25486",
+      "before": "|cffd7b4f5Усиление К`Траксис|r |cffe1d700[3-й уровень]|r",
+      "after": "|cffe4cfa3Усиление К`Траксис|r — уровень |cffffffff3|r"
+    },
+    {
+      "rawcode": "R0EV",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_25489",
+      "before": "Исследовать |cffd7b4f5Усиление К`Траксис|r |cffe1d700[3-й уровень]|r",
+      "after": "|cffe4cfa3Усиление К`Траксис|r — уровень |cffffffff3|r (|cffffffffX|r)"
+    },
+    {
+      "rawcode": "R0EV",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_39667",
+      "before": "Открывает способности и увеличивает хп 10%, а так же регенерацию здоровья на 10% |cffd7b4f5К`Траксис|r",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус: |cffc8e087+20%|cffced4da к максимальному здоровью и |cffc8e087+40%|cffced4da к восстановлению здоровья.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deК`Траксис|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0EW",
+      "field": "name1",
+      "reference_before": "TRIGSTR_25500",
+      "before": "|cffd7b4f5Расширение Знаний|r |cffe1d700[1-й уровень]|r",
+      "after": "|cffe4cfa3Расширение Знаний|r — уровень |cffffffff1|r"
+    },
+    {
+      "rawcode": "R0EW",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_25503",
+      "before": "Исследовать |cffd7b4f5Расширение Знаний|r |cffe1d700[1-й уровень]|r",
+      "after": "|cffe4cfa3Расширение Знаний|r — уровень |cffffffff1|r (|cffffffffS|r)"
+    },
+    {
+      "rawcode": "R0EW",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_40413",
+      "before": "Увеличивает Скорость атаки, Дальность атаки и ману |cffd7b4f5Магической Сущности|r. добавляет способности",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарные бонусы Пожирателя Бездны: |cffc8e087+1|cffced4da–|cffc8e087+2|cffced4da к урону атак, |cffc8e087+20%|cffced4da к максимальной мане, |cffc8e087+25|cffced4da к дальности атак и |cffc8e087+30%|cffced4da к скорости атаки.|n|nОткрывает «Пожирание Магии».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПожиратель Бездны|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0EW",
+      "field": "name2",
+      "reference_before": "TRIGSTR_25499",
+      "before": "|cffd7b4f5Расширение Знаний|r |cffe1d700[2-й уровень]|r",
+      "after": "|cffe4cfa3Расширение Знаний|r — уровень |cffffffff2|r"
+    },
+    {
+      "rawcode": "R0EW",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_25502",
+      "before": "Исследовать |cffd7b4f5Расширение Знаний|r |cffe1d700[2-й уровень]|r",
+      "after": "|cffe4cfa3Расширение Знаний|r — уровень |cffffffff2|r (|cffffffffS|r)"
+    },
+    {
+      "rawcode": "R0EW",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_40481",
+      "before": "Увеличивает Скорость атаки, Дальность атаки и ману |cffd7b4f5Магической Сущности|r. добавляет способности",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарные бонусы Пожирателя Бездны: |cffc8e087+2|cffced4da–|cffc8e087+4|cffced4da к урону атак, |cffc8e087+30%|cffced4da к максимальной мане, |cffc8e087+35|cffced4da к дальности атак и |cffc8e087+40%|cffced4da к скорости атаки.|n|nОткрывает «Ледяная стрела».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПожиратель Бездны|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0EW",
+      "field": "name3",
+      "reference_before": "TRIGSTR_25497",
+      "before": "|cffd7b4f5Расширение Знаний|r |cffe1d700[3-й уровень]|r",
+      "after": "|cffe4cfa3Расширение Знаний|r — уровень |cffffffff3|r"
+    },
+    {
+      "rawcode": "R0EW",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_25501",
+      "before": "Исследовать |cffd7b4f5Расширение Знаний|r |cffe1d700[3-й уровень]|r",
+      "after": "|cffe4cfa3Расширение Знаний|r — уровень |cffffffff3|r (|cffffffffS|r)"
+    },
+    {
+      "rawcode": "R0EW",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_40482",
+      "before": "Увеличивает Скорость атаки, Дальность атаки и ману |cffd7b4f5Магической Сущности|r. добавляет способности",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарные бонусы Пожирателя Бездны: |cffc8e087+3|cffced4da–|cffc8e087+6|cffced4da к урону атак, |cffc8e087+40%|cffced4da к максимальной мане, |cffc8e087+45|cffced4da к дальности атак и |cffc8e087+50%|cffced4da к скорости атаки.|n|nОткрывает «Иней».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПожиратель Бездны|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0EX",
+      "field": "name1",
+      "reference_before": "TRIGSTR_25520",
+      "before": "|cffd7b4f5Укрепление Древних Знаний|r |cffe1d700[1-й уровень]|r",
+      "after": "|cffe4cfa3Укрепление Древних Знаний|r — уровень |cffffffff1|r"
+    },
+    {
+      "rawcode": "R0EX",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_25523",
+      "before": "Исследовать |cffd7b4f5Укрепление Древних Знаний|r |cffe1d700[1-й уровень]|r",
+      "after": "|cffe4cfa3Укрепление Древних Знаний|r — уровень |cffffffff1|r (|cffffffffA|r)"
+    },
+    {
+      "rawcode": "R0EX",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_40483",
+      "before": "Увеличивает Ману и Хп |cffd7b4f5Злобного бичевателя разума|r. добавляет способности",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарные бонусы: |cffc8e087+5%|cffced4da к максимальному здоровью и |cffc8e087+20%|cffced4da к максимальной мане.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЗлобный бичеватель разума|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0EX",
+      "field": "name2",
+      "reference_before": "TRIGSTR_25519",
+      "before": "|cffd7b4f5Укрепление Древних Знаний|r |cffe1d700[2-й уровень]|r",
+      "after": "|cffe4cfa3Укрепление Древних Знаний|r — уровень |cffffffff2|r"
+    },
+    {
+      "rawcode": "R0EX",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_25522",
+      "before": "Исследовать |cffd7b4f5Укрепление Древних Знаний|r |cffe1d700[2-й уровень]|r",
+      "after": "|cffe4cfa3Укрепление Древних Знаний|r — уровень |cffffffff2|r (|cffffffffA|r)"
+    },
+    {
+      "rawcode": "R0EX",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_40484",
+      "before": "Увеличивает Ману и Хп |cffd7b4f5Злобного бичевателя разума|r. добавляет способности",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарные бонусы: |cffc8e087+15%|cffced4da к максимальному здоровью и |cffc8e087+25%|cffced4da к максимальной мане.|n|nОткрывает «Порождение щупальца».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЗлобный бичеватель разума|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0EX",
+      "field": "name3",
+      "reference_before": "TRIGSTR_25517",
+      "before": "|cffd7b4f5Укрепление Древних Знаний|r |cffe1d700[3-й уровень]|r",
+      "after": "|cffe4cfa3Укрепление Древних Знаний|r — уровень |cffffffff3|r"
+    },
+    {
+      "rawcode": "R0EX",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_25521",
+      "before": "Исследовать |cffd7b4f5Укрепление Древних Знаний|r |cffe1d700[3-й уровень]|r",
+      "after": "|cffe4cfa3Укрепление Древних Знаний|r — уровень |cffffffff3|r (|cffffffffA|r)"
+    },
+    {
+      "rawcode": "R0EX",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_40521",
+      "before": "Увеличивает Ману и Хп |cffd7b4f5Злобного бичевателя разума|r. добавляет способности",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарные бонусы: |cffc8e087+25%|cffced4da к максимальному здоровью и |cffc8e087+30%|cffced4da к максимальной мане.|n|nОткрывает «Проклятие».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЗлобный бичеватель разума|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0F7",
+      "field": "name1",
+      "reference_before": "TRIGSTR_25534",
+      "before": "|cffd7b4f5Развить силу|r |cffffd700[1-й уровень]|r",
+      "after": "|cffe4cfa3Развитие силы|r — уровень |cffffffff1|r"
+    },
+    {
+      "rawcode": "R0F7",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_25535",
+      "before": "Исследовать |cffd7b4f5Развить силу|r |cffffd700[1-й уровень]|r",
+      "after": "|cffe4cfa3Развитие силы|r — уровень |cffffffff1|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "R0F7",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_25994",
+      "before": "Безликие Увеличивают свою Физическую силу что сильно увеличивает их здоровье и регенерацию.\n|cffd7b4f5\nУвеличивает здоровье на 10%.|r\n|cffd7b4f5Регенерация здоровья на 50%|r\n\n|cffff0000ИСКЛЮЧАЕТ ВОЗМОЖНСТЬ СДЕЛАТЬ АЛЬТЕРНАТИВЫНЙ ГРЕЙД|r",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус: |cffc8e087+10%|cffced4da к максимальному здоровью и |cffc8e087+50%|cffced4da к восстановлению здоровья.|n|n|cffe6c07bВзаимоисключается с исследованием «Развитие скорости».|cffced4da|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона|cffced4da.|n- |cffa9c7deБезликий дозорный|cffced4da.|n- |cffa9c7deБезликий разрушитель|cffced4da.|n- |cffa9c7deСущность бездны|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума|cffced4da.|n- |cffa9c7deПожиратель Бездны|cffced4da.|n- |cffa9c7deБессмертный страж|cffced4da.|n- |cffa9c7deК`Траксис|cffced4da.|n- |cffa9c7deПроклинатель Бездны|cffced4da.|n- |cffa9c7deКошмар|cffced4da.|n- |cffa9c7deВодное Порождение|cffced4da.|n- |cffa9c7deСтрах|cffced4da.|n- |cffa9c7deБезликий Кошмар|cffced4da.|n- |cffa9c7deПорабощённый зверь|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь|cffced4da.|n- |cffa9c7deТварь из Бездны|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0F7",
+      "field": "name2",
+      "reference_before": "TRIGSTR_25536",
+      "before": "|cffd7b4f5Развить силу|r |cffffd700[2-й уровень]|r",
+      "after": "|cffe4cfa3Развитие силы|r — уровень |cffffffff2|r"
+    },
+    {
+      "rawcode": "R0F7",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_25541",
+      "before": "Исследовать |cffd7b4f5Развить силу|r |cffffd700[2-й уровень]|r",
+      "after": "|cffe4cfa3Развитие силы|r — уровень |cffffffff2|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "R0F7",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_25995",
+      "before": "Безликие Увеличивают свою Физическую силу что сильно увеличивает их здоровье и регенерацию.\n|cffd7b4f5\nУвеличивает здоровье на 5%.|r\n|cffd7b4f5Регенерация здоровья на 40%|r\n\n|cffff0000ИСКЛЮЧАЕТ ВОЗМОЖНСТЬ СДЕЛАТЬ АЛЬТЕРНАТИВЫНЙ ГРЕЙД|r",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус: |cffc8e087+15%|cffced4da к максимальному здоровью и |cffc8e087+90%|cffced4da к восстановлению здоровья.|n|n|cffe6c07bВзаимоисключается с исследованием «Развитие скорости».|cffced4da|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона|cffced4da.|n- |cffa9c7deБезликий дозорный|cffced4da.|n- |cffa9c7deБезликий разрушитель|cffced4da.|n- |cffa9c7deСущность бездны|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума|cffced4da.|n- |cffa9c7deПожиратель Бездны|cffced4da.|n- |cffa9c7deБессмертный страж|cffced4da.|n- |cffa9c7deК`Траксис|cffced4da.|n- |cffa9c7deПроклинатель Бездны|cffced4da.|n- |cffa9c7deКошмар|cffced4da.|n- |cffa9c7deВодное Порождение|cffced4da.|n- |cffa9c7deСтрах|cffced4da.|n- |cffa9c7deБезликий Кошмар|cffced4da.|n- |cffa9c7deПорабощённый зверь|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь|cffced4da.|n- |cffa9c7deТварь из Бездны|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0F7",
+      "field": "name3",
+      "reference_before": "TRIGSTR_25537",
+      "before": "|cffd7b4f5Развить силу|r |cffffd700[3-й уровень]|r",
+      "after": "|cffe4cfa3Развитие силы|r — уровень |cffffffff3|r"
+    },
+    {
+      "rawcode": "R0F7",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_25542",
+      "before": "Исследовать |cffd7b4f5Развить силу|r |cffffd700[3-й уровень]|r",
+      "after": "|cffe4cfa3Развитие силы|r — уровень |cffffffff3|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "R0F7",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_25996",
+      "before": "Безликие Увеличивают свою Физическую силу что сильно увеличивает их здоровье и регенерацию.\n|cffd7b4f5\nУвеличивает здоровье на 5%.|r\n|cffd7b4f5Регенерация здоровья на 40%|r\n\n|cffff0000ИСКЛЮЧАЕТ ВОЗМОЖНСТЬ СДЕЛАТЬ АЛЬТЕРНАТИВЫНЙ ГРЕЙД|r",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус: |cffc8e087+20%|cffced4da к максимальному здоровью и |cffc8e087+130%|cffced4da к восстановлению здоровья.|n|n|cffe6c07bВзаимоисключается с исследованием «Развитие скорости».|cffced4da|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона|cffced4da.|n- |cffa9c7deБезликий дозорный|cffced4da.|n- |cffa9c7deБезликий разрушитель|cffced4da.|n- |cffa9c7deСущность бездны|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума|cffced4da.|n- |cffa9c7deПожиратель Бездны|cffced4da.|n- |cffa9c7deБессмертный страж|cffced4da.|n- |cffa9c7deК`Траксис|cffced4da.|n- |cffa9c7deПроклинатель Бездны|cffced4da.|n- |cffa9c7deКошмар|cffced4da.|n- |cffa9c7deВодное Порождение|cffced4da.|n- |cffa9c7deСтрах|cffced4da.|n- |cffa9c7deБезликий Кошмар|cffced4da.|n- |cffa9c7deПорабощённый зверь|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь|cffced4da.|n- |cffa9c7deТварь из Бездны|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0F8",
+      "field": "name1",
+      "reference_before": "TRIGSTR_27752",
+      "before": "|cffd7b4f5Развить скорость|r |cffffd700[1-й уровень]|r",
+      "after": "|cffe4cfa3Развитие скорости|r — уровень |cffffffff1|r"
+    },
+    {
+      "rawcode": "R0F8",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_27753",
+      "before": "Исследовать |cffd7b4f5Развить Скорость|r |cffffd700[1-й уровень]|r",
+      "after": "|cffe4cfa3Развитие скорости|r — уровень |cffffffff1|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "R0F8",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_22451",
+      "before": "Безликие Увеличивают свою Физическую силу что сильно увеличивает их здоровье и регенерацию.\n\n|cffd7b4f5Увеличивает Скорость атаки на 40%.|r\n|cffd7b4f5Увеличивает Скорость бега на 10%|r\n\n|cffff0000ИСКЛЮЧАЕТ ВОЗМОЖНСТЬ СДЕЛАТЬ АЛЬТЕРНАТИВЫНЙ ГРЕЙД|r",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус: |cffc8e087+10%|cffced4da к скорости передвижения и |cffc8e087+30%|cffced4da к скорости атаки.|n|n|cffe6c07bВзаимоисключается с исследованием «Развитие силы».|cffced4da|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона|cffced4da.|n- |cffa9c7deБезликий дозорный|cffced4da.|n- |cffa9c7deБезликий разрушитель|cffced4da.|n- |cffa9c7deСущность бездны|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума|cffced4da.|n- |cffa9c7deПожиратель Бездны|cffced4da.|n- |cffa9c7deБессмертный страж|cffced4da.|n- |cffa9c7deК`Траксис|cffced4da.|n- |cffa9c7deПроклинатель Бездны|cffced4da.|n- |cffa9c7deКошмар|cffced4da.|n- |cffa9c7deВодное Порождение|cffced4da.|n- |cffa9c7deСтрах|cffced4da.|n- |cffa9c7deБезликий Кошмар|cffced4da.|n- |cffa9c7deПорабощённый зверь|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь|cffced4da.|n- |cffa9c7deТварь из Бездны|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0F8",
+      "field": "name2",
+      "reference_before": "TRIGSTR_27754",
+      "before": "|cffd7b4f5Развить скорость|r |cffffd700[2-й уровень]|r",
+      "after": "|cffe4cfa3Развитие скорости|r — уровень |cffffffff2|r"
+    },
+    {
+      "rawcode": "R0F8",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_27759",
+      "before": "Исследовать |cffd7b4f5Развить Скорость|r |cffffd700[2-й уровень]|r",
+      "after": "|cffe4cfa3Развитие скорости|r — уровень |cffffffff2|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "R0F8",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_23572",
+      "before": "Безликие Увеличивают свою Физическую силу что сильно увеличивает их здоровье и регенерацию.\n\n|cffd7b4f5Увеличивает Скорость атаки на 10%.|r\n|cffd7b4f5Увеличивает Скорость бега на 5%|r\n\n|cffff0000ИСКЛЮЧАЕТ ВОЗМОЖНСТЬ СДЕЛАТЬ АЛЬТЕРНАТИВЫНЙ ГРЕЙД|r",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус: |cffc8e087+15%|cffced4da к скорости передвижения и |cffc8e087+37%|cffced4da к скорости атаки.|n|n|cffe6c07bВзаимоисключается с исследованием «Развитие силы».|cffced4da|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона|cffced4da.|n- |cffa9c7deБезликий дозорный|cffced4da.|n- |cffa9c7deБезликий разрушитель|cffced4da.|n- |cffa9c7deСущность бездны|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума|cffced4da.|n- |cffa9c7deПожиратель Бездны|cffced4da.|n- |cffa9c7deБессмертный страж|cffced4da.|n- |cffa9c7deК`Траксис|cffced4da.|n- |cffa9c7deПроклинатель Бездны|cffced4da.|n- |cffa9c7deКошмар|cffced4da.|n- |cffa9c7deВодное Порождение|cffced4da.|n- |cffa9c7deСтрах|cffced4da.|n- |cffa9c7deБезликий Кошмар|cffced4da.|n- |cffa9c7deПорабощённый зверь|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь|cffced4da.|n- |cffa9c7deТварь из Бездны|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0F8",
+      "field": "name3",
+      "reference_before": "TRIGSTR_27755",
+      "before": "|cffd7b4f5Развить скорость|r |cffffd700[3-й уровень]|r",
+      "after": "|cffe4cfa3Развитие скорости|r — уровень |cffffffff3|r"
+    },
+    {
+      "rawcode": "R0F8",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_27760",
+      "before": "Исследовать |cffd7b4f5Развить Скорость|r |cffffd700[3-й уровень]|r",
+      "after": "|cffe4cfa3Развитие скорости|r — уровень |cffffffff3|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "R0F8",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_23573",
+      "before": "Безликие Увеличивают свою Физическую силу что сильно увеличивает их здоровье и регенерацию.\n\n|cffd7b4f5Увеличивает Скорость атаки на 10%.|r\n|cffd7b4f5Увеличивает Скорость бега на 5%|r\n\n|cffff0000ИСКЛЮЧАЕТ ВОЗМОЖНСТЬ СДЕЛАТЬ АЛЬТЕРНАТИВЫНЙ ГРЕЙД|r",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус: |cffc8e087+20%|cffced4da к скорости передвижения и |cffc8e087+44%|cffced4da к скорости атаки.|n|n|cffe6c07bВзаимоисключается с исследованием «Развитие силы».|cffced4da|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЩупальце Йогг`Сарона|cffced4da.|n- |cffa9c7deБезликий дозорный|cffced4da.|n- |cffa9c7deБезликий разрушитель|cffced4da.|n- |cffa9c7deСущность бездны|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны|cffced4da.|n- |cffa9c7deЗлобный бичеватель разума|cffced4da.|n- |cffa9c7deПожиратель Бездны|cffced4da.|n- |cffa9c7deБессмертный страж|cffced4da.|n- |cffa9c7deК`Траксис|cffced4da.|n- |cffa9c7deПроклинатель Бездны|cffced4da.|n- |cffa9c7deКошмар|cffced4da.|n- |cffa9c7deВодное Порождение|cffced4da.|n- |cffa9c7deСтрах|cffced4da.|n- |cffa9c7deБезликий Кошмар|cffced4da.|n- |cffa9c7deПорабощённый зверь|cffced4da.|n- |cffa9c7deЖестокий порабощённый зверь|cffced4da.|n- |cffa9c7deТварь из Бездны|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0FA",
+      "field": "name1",
+      "reference_before": "TRIGSTR_25567",
+      "before": "|cffd7b4f5Суть бессмертия|r",
+      "after": "|cffe4cfa3Суть бессмертия|r"
+    },
+    {
+      "rawcode": "R0FA",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_25568",
+      "before": "Исследовать |cffd7b4f5Суть бессмертия|r",
+      "after": "|cffe4cfa3Суть бессмертия|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "R0FA",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_25283",
+      "before": "Позволяет Бессмертным безликих перерождаться",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает «Реинкарнацию»: Бессмертный страж возвращается после гибели; убийство противника сбрасывает восстановление способности.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБессмертный страж — Реинкарнация|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0GD",
+      "field": "name1",
+      "reference_before": "TRIGSTR_27722",
+      "before": "|cffd7b4f5Знание проклинателей|r |cffe1d700[1-й уровень]|r",
+      "after": "|cffe4cfa3Знание проклинателей|r — уровень |cffffffff1|r"
+    },
+    {
+      "rawcode": "R0GD",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_26490",
+      "before": "Исследовать |cffd7b4f5Знание проклинателей|r |cffe1d700[1-й уровень]|r",
+      "after": "|cffe4cfa3Знание проклинателей|r — уровень |cffffffff1|r (|cffffffffD|r)"
+    },
+    {
+      "rawcode": "R0GD",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_27732",
+      "before": "Увеличивает Ману и Хп |cffd7b4f5Проклинателя|r. добавляет способности",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Подготавливает изучение следующих уровней знаний проклинателей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПроклинатель Бездны|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0GD",
+      "field": "name2",
+      "reference_before": "TRIGSTR_27721",
+      "before": "|cffd7b4f5Знание проклинателей|r |cffe1d700[2-й уровень]|r",
+      "after": "|cffe4cfa3Знание проклинателей|r — уровень |cffffffff2|r"
+    },
+    {
+      "rawcode": "R0GD",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_26489",
+      "before": "Исследовать |cffd7b4f5Знание проклинателей|r |cffe2d700[2-й уровень]|r",
+      "after": "|cffe4cfa3Знание проклинателей|r — уровень |cffffffff2|r (|cffffffffD|r)"
+    },
+    {
+      "rawcode": "R0GD",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_27733",
+      "before": "Увеличивает Ману и Хп |cffd7b4f5Проклинателя|r. добавляет способности",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает «Пронзание».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПроклинатель Бездны|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0GD",
+      "field": "name3",
+      "reference_before": "TRIGSTR_27719",
+      "before": "|cffd7b4f5Знание проклинателей|r |cffe1d700[3-й уровень]|r",
+      "after": "|cffe4cfa3Знание проклинателей|r — уровень |cffffffff3|r"
+    },
+    {
+      "rawcode": "R0GD",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_25997",
+      "before": "Исследовать |cffd7b4f5Знание проклинателей|r |cffe3d700[3-й уровень]|r",
+      "after": "|cffe4cfa3Знание проклинателей|r — уровень |cffffffff3|r (|cffffffffD|r)"
+    },
+    {
+      "rawcode": "R0GD",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_27734",
+      "before": "Увеличивает Ману и Хп |cffd7b4f5Проклинателя|r. добавляет способности",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает «Морозный доспех».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПроклинатель Бездны|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "name1",
+      "reference_before": "TRIGSTR_27772",
+      "before": "|cffd7b4f5Дереводобыча|r",
+      "after": "|cffe4cfa3Дереводобыча|r — уровень |cffffffff1|r"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_27785",
+      "before": "Исследовать |cffd7b4f5Дереводобыча|r",
+      "after": "|cffe4cfa3Дереводобыча|r — уровень |cffffffff1|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_27795",
+      "before": "Увеличивают объем переносимой древесины на <Rhlh,mod1>.",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой древесины Безликого прислужника. Суммарный бонус: |cffc8e087+10|cffced4da древесины за одну доставку.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "name2",
+      "reference_before": "TRIGSTR_27773",
+      "before": "|cffd7b4f5Дереводобыча|r",
+      "after": "|cffe4cfa3Дереводобыча|r — уровень |cffffffff2|r"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "tip2",
+      "reference_before": "TRIGSTR_27774",
+      "before": "Исследовать |cffd7b4f5Дереводобыча|r",
+      "after": "|cffe4cfa3Дереводобыча|r — уровень |cffffffff2|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "ubertip2",
+      "reference_before": "TRIGSTR_27790",
+      "before": "Увеличивают объем переносимой вурдалаками древесины на <Rhlh,mod2>.",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой древесины Безликого прислужника. Суммарный бонус: |cffc8e087+20|cffced4da древесины за одну доставку.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "name3",
+      "reference_before": "TRIGSTR_27781",
+      "before": "|cffd7b4f5Дереводобыча|r",
+      "after": "|cffe4cfa3Дереводобыча|r — уровень |cffffffff3|r"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "tip3",
+      "reference_before": "TRIGSTR_27786",
+      "before": "Исследовать |cffd7b4f5Дереводобыча|r",
+      "after": "|cffe4cfa3Дереводобыча|r — уровень |cffffffff3|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "ubertip3",
+      "reference_before": "TRIGSTR_27791",
+      "before": "Увеличивают объем переносимой вурдалаками древесины на <Rhlh,mod3>.",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой древесины Безликого прислужника. Суммарный бонус: |cffc8e087+30|cffced4da древесины за одну доставку.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "name4",
+      "reference_before": "TRIGSTR_27782",
+      "before": "|cffd7b4f5Дереводобыча|r",
+      "after": "|cffe4cfa3Дереводобыча|r — уровень |cffffffff4|r"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "tip4",
+      "reference_before": "TRIGSTR_27787",
+      "before": "Исследовать |cffd7b4f5Дереводобыча|r",
+      "after": "|cffe4cfa3Дереводобыча|r — уровень |cffffffff4|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "ubertip4",
+      "reference_before": "TRIGSTR_27792",
+      "before": "Увеличивают объем переносимой вурдалаками древесины на <Rhlh,mod4>.",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой древесины Безликого прислужника. Суммарный бонус: |cffc8e087+40|cffced4da древесины за одну доставку.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "name5",
+      "reference_before": "TRIGSTR_27783",
+      "before": "|cffd7b4f5Дереводобыча|r",
+      "after": "|cffe4cfa3Дереводобыча|r — уровень |cffffffff5|r"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "tip5",
+      "reference_before": "TRIGSTR_27788",
+      "before": "Исследовать |cffd7b4f5Дереводобыча|r",
+      "after": "|cffe4cfa3Дереводобыча|r — уровень |cffffffff5|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "ubertip5",
+      "reference_before": "TRIGSTR_27793",
+      "before": "Увеличивают объем переносимой вурдалаками древесины на <Rhlh,mod5>.",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой древесины Безликого прислужника. Суммарный бонус: |cffc8e087+50|cffced4da древесины за одну доставку.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "name6",
+      "reference_before": "TRIGSTR_27784",
+      "before": "|cffd7b4f5Дереводобыча|r",
+      "after": "|cffe4cfa3Дереводобыча|r — уровень |cffffffff6|r"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "tip6",
+      "reference_before": "TRIGSTR_27789",
+      "before": "Исследовать |cffd7b4f5Дереводобыча|r",
+      "after": "|cffe4cfa3Дереводобыча|r — уровень |cffffffff6|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "R0GE",
+      "field": "ubertip6",
+      "reference_before": "TRIGSTR_27794",
+      "before": "Увеличивают объем переносимой вурдалаками древесины на <Rhlh,mod6>.",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой древесины Безликого прислужника. Суммарный бонус: |cffc8e087+60|cffced4da древесины за одну доставку.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Предлагаемый уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+    }
+  ],
+  "notes": [
+    "R0GD is absent from h0K2.upgrades: its percentage stat effects do not apply to that unit; ability requirements still unlock A16P/A16O.",
+    "R0ES rlev is a bonus to original ability level; both affected abilities have three levels. Runtime level cap needs verification.",
+    "R0ET ratd changes attack dice; named damage ranges use each unit's sides1. R0EW uses the same effect.",
+    "Empty effect3/effect4 slots were excluded, even when stale numeric data exists."
+  ],
+  "evidence": [
+    "faceless_research_dependencies.json",
+    "faceless_research_consumers.json",
+    "faceless_effect_metadata.json",
+    "Bezlikie.lua: Trig_Sila1/2, Trig_Skorost1/2"
+  ],
+  "remaining": [
+    "Расовые маркеры R07M/R0F9",
+    "Связанные списки зданий",
+    "Игровая проверка уровней и высоты списков"
+  ]
+}

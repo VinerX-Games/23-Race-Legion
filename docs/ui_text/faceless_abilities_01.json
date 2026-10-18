@@ -1,0 +1,139 @@
+{
+  "scope": "Безликие: три пассивные способности; только единственный действующий уровень",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "in_game_checked": false,
+  "objects_before": [
+    {
+      "fields": {
+        "code": "Afbk",
+        "dataa1": "20",
+        "datab1": "2.000000",
+        "datac1": "10.000000",
+        "datad1": "2.000000",
+        "datae1": "0",
+        "dur1": "0",
+        "herodur1": "0",
+        "levels": "1",
+        "name": "TRIGSTR_25394",
+        "requires": "R0EL",
+        "targs1": "air,ground,enemy,neutral",
+        "tip1": "TRIGSTR_25395",
+        "ubertip1": "TRIGSTR_25396"
+      },
+      "id": "A10X",
+      "name": "|cffd7b4f5Разрушение Эфира|r"
+    },
+    {
+      "fields": {
+        "code": "AHbh",
+        "dataa1": "10.000000",
+        "datab1": "0",
+        "datac1": "10.000000",
+        "datad1": "0",
+        "datae1": "",
+        "dur1": "0.500000",
+        "herodur1": "0.200000",
+        "levels": "1",
+        "name": "TRIGSTR_25392",
+        "requires": "R0EK",
+        "targs1": "ground,air",
+        "tip1": "TRIGSTR_40015",
+        "ubertip1": "TRIGSTR_25393"
+      },
+      "id": "A10W",
+      "name": "|cffd7b4f5Сотресение Бездны|r"
+    },
+    {
+      "fields": {
+        "code": "AOcr",
+        "dataa1": "15",
+        "datab1": "1.900000",
+        "datac1": "0",
+        "datad1": "0",
+        "datae1": "0",
+        "dur1": "0",
+        "herodur1": "0",
+        "levels": "1",
+        "name": "TRIGSTR_25400",
+        "requires": "",
+        "targs1": "air,ground,enemy,neutral",
+        "tip1": "TRIGSTR_25401",
+        "ubertip1": "TRIGSTR_2008"
+      },
+      "id": "A10Z",
+      "name": "|cffd7b4f5Сила Бездны|r"
+    }
+  ],
+  "strings": [
+    {
+      "rawcode": "A10X",
+      "field": "name",
+      "reference_before": "TRIGSTR_25394",
+      "before": "|cffd7b4f5Разрушение Эфира|r",
+      "after": "|cffe4cfa3Разрушение Эфира|r"
+    },
+    {
+      "rawcode": "A10X",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_25395",
+      "before": "|cffd7b4f5Разрушение Эфира|r",
+      "after": "|cffe4cfa3Разрушение Эфира|r"
+    },
+    {
+      "rawcode": "A10X",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_25396",
+      "before": "Каждая атака Сущности затрагивает внутреннюю среду существа разрушаю ее магический потенциал.\n\n|cffffd700Герой:|r |cffd7b4f5Сжигает 10 ед. маны|r\n|cffffd700Юнит:|r |cffd7b4f5Сжигает 20 ед. маны|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке сжигает до |cffffffff20|cffced4da ед. маны у обычного противника или до |cffffffff10|cffced4da ед. у героя. Каждая сожжённая единица маны наносит |cffffffff2|cffced4da ед. урона.|n|n|cffe6c07bТребуется исследование «Разрушение Эфира».|r"
+    },
+    {
+      "rawcode": "A10W",
+      "field": "name",
+      "reference_before": "TRIGSTR_25392",
+      "before": "|cffd7b4f5Сотресение Бездны|r",
+      "after": "|cffe4cfa3Сотрясение Бездны|r"
+    },
+    {
+      "rawcode": "A10W",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_40015",
+      "before": "|cffd7b4f5Сотресение Бездны|r",
+      "after": "|cffe4cfa3Сотрясение Бездны|r"
+    },
+    {
+      "rawcode": "A10W",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_25393",
+      "before": "С некоторым шансом может нанести дополнительный урон и оглушить цель на несколько секунд.\n\n|cffd7b4f510% Оглушить цель и нанести доп. 10 урона.\n|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff10%|cffced4da атака наносит |cffffffff10|cffced4da дополнительного урона и оглушает цель на |cffffffff0,5|cffced4da сек. Герои оглушаются на |cffffffff0,2|cffced4da сек.|n|n|cffe6c07bТребуется исследование «Улучшение Сущности».|r"
+    },
+    {
+      "rawcode": "A10Z",
+      "field": "name",
+      "reference_before": "TRIGSTR_25400",
+      "before": "|cffd7b4f5Сила Бездны|r",
+      "after": "|cffe4cfa3Сила Бездны|r"
+    },
+    {
+      "rawcode": "A10Z",
+      "field": "tip1",
+      "reference_before": "TRIGSTR_25401",
+      "before": "|cffd7b4f5Сила Бездны|r",
+      "after": "|cffe4cfa3Сила Бездны|r"
+    },
+    {
+      "rawcode": "A10Z",
+      "field": "ubertip1",
+      "reference_before": "TRIGSTR_2008",
+      "before": "Дает 15%-й шанс нанести 1.9-кратный урон при атаке.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff15%|cffced4da атака наносит |cffffffff1,9|cffced4da-кратный урон.|r"
+    }
+  ],
+  "remaining": [
+    "Остальные способности, эффекты и уровни",
+    "Проверка в игре"
+  ]
+}

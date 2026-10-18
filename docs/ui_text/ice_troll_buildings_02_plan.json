@@ -1,0 +1,279 @@
+{
+  "operations": [
+    {
+      "type": "unit",
+      "id": "h0HO",
+      "field": "name",
+      "value": "|cffe4cfa3Верфь|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0HO",
+      "field": "tip",
+      "value": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0HO",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Строит корабли и исследует общие улучшения флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da.|n- |cffa9c7deЛегкий корабль Орды|cffced4da.|n- |cffa9c7deТяжелый корабль Орды|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбстрел|cffced4da.|n- |cffa9c7deДополнительные паруса|cffced4da.|n- |cffa9c7deПочинка|cffced4da.|n- |cffa9c7deОрудия флота|cffced4da.|n- |cffa9c7deУкреплённый корпус|cffced4da.|n|n|cffa9c7deЗона ремонта|cffced4da восстанавливает |cffc8e0872,5|cffced4da здоровья/сек. союзным наземным механическим войскам в радиусе |cffffffff550|cffced4da.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "o06H",
+      "field": "name",
+      "value": "|cffe4cfa3Алтарь Лоа|r"
+    },
+    {
+      "type": "unit",
+      "id": "o06H",
+      "field": "tip",
+      "value": "|cffe4cfa3Алтарь Лоа|r (|cffffffffX|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o06H",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище для призыва великих Лоа или поглощения их сил. Обеспечивает |cffffffff3|cffced4da ед. пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deАкали|cffced4da (требуется: выбран путь «Ритуал поклонения»).|n- |cffa9c7deМам'тот|cffced4da (требуется: выбран путь «Ритуал поклонения»).|n- |cffa9c7deРунок|cffced4da (требуется: выбран путь «Ритуал поклонения»).|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПоглощение Акали|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n- |cffa9c7deПоглощение Мам'Тота|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n- |cffa9c7deПоглощение Рунока|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deАлтарь Рунока|cffced4da (требуется: выбран путь «Ритуал поклонения»).|n- |cffa9c7deАлтарь Акали|cffced4da (требуется: выбран путь «Ритуал поклонения»).|n- |cffa9c7deАлтарь Мам'Тота|cffced4da (требуется: выбран путь «Ритуал поклонения»).|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "o06I",
+      "field": "name",
+      "value": "|cffe4cfa3Алтарь Рунока|r"
+    },
+    {
+      "type": "unit",
+      "id": "o06I",
+      "field": "tip",
+      "value": "|cffe4cfa3Алтарь Рунока|r (|cffffffffA|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o06I",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Специализированное святилище Лоа Рунока. Обеспечивает |cffffffff3|cffced4da ед. пищи и открывает способности Рунока: «Ярость» и «Аура Рунока».|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРунок|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПоглощение Акали|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n- |cffa9c7deПоглощение Мам'Тота|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n- |cffa9c7deПоглощение Рунока|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "o06J",
+      "field": "name",
+      "value": "|cffe4cfa3Алтарь Акали|r"
+    },
+    {
+      "type": "unit",
+      "id": "o06J",
+      "field": "tip",
+      "value": "|cffe4cfa3Алтарь Акали|r (|cffffffffS|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o06J",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Специализированное святилище Лоа Акали. Обеспечивает |cffffffff3|cffced4da ед. пищи и открывает способности Акали: «Аура Акали» и «Раздвоенная молния».|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deАкали|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПоглощение Акали|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n- |cffa9c7deПоглощение Мам'Тота|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n- |cffa9c7deПоглощение Рунока|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "o06K",
+      "field": "name",
+      "value": "|cffe4cfa3Алтарь Мам'Тота|r"
+    },
+    {
+      "type": "unit",
+      "id": "o06K",
+      "field": "tip",
+      "value": "|cffe4cfa3Алтарь Мам'Тота|r (|cffffffffD|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o06K",
+      "field": "ubertip",
+      "value": "|cffa6afb8ЗДАНИЕ:|cffced4da Специализированное святилище Лоа Мам'Тота. Обеспечивает |cffffffff3|cffced4da ед. пищи и открывает способности Мам'Тота: «Реинкарнация» и «Аура Мам'Тота».|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deМам'тот|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПоглощение Акали|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n- |cffa9c7deПоглощение Мам'Тота|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n- |cffa9c7deПоглощение Рунока|cffced4da (требуется: выбран путь «Чрезвычайные меры»).|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+      "marker": "ЗДАНИЕ:"
+    },
+    {
+      "type": "unit",
+      "id": "o05B",
+      "field": "name",
+      "value": "|cffe4cfa3Акали|r"
+    },
+    {
+      "type": "unit",
+      "id": "o05B",
+      "field": "tip",
+      "value": "|cffe4cfa3Акали|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n062",
+      "field": "name",
+      "value": "|cffe4cfa3Мам'тот|r"
+    },
+    {
+      "type": "unit",
+      "id": "n062",
+      "field": "tip",
+      "value": "|cffe4cfa3Мам'тот|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n061",
+      "field": "name",
+      "value": "|cffe4cfa3Рунок|r"
+    },
+    {
+      "type": "unit",
+      "id": "n061",
+      "field": "tip",
+      "value": "|cffe4cfa3Рунок|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0D4",
+      "field": "name",
+      "value": "|cffe4cfa3Транспорт|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0D4",
+      "field": "tip",
+      "value": "|cffe4cfa3Транспорт|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0HN",
+      "field": "name",
+      "value": "|cffe4cfa3Легкий корабль Орды|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0HN",
+      "field": "tip",
+      "value": "|cffe4cfa3Легкий корабль Орды|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0HK",
+      "field": "name",
+      "value": "|cffe4cfa3Тяжелый корабль Орды|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0HK",
+      "field": "tip",
+      "value": "|cffe4cfa3Тяжелый корабль Орды|r (|cffffffffE|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AI",
+      "field": "name1",
+      "value": "|cffe4cfa3Поглощение Акали|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AI",
+      "field": "tip1",
+      "value": "|cffe4cfa3Поглощение Акали|r — уровень |cffffffff1|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AI",
+      "field": "name2",
+      "value": "|cffe4cfa3Поглощение Акали|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AI",
+      "field": "tip2",
+      "value": "|cffe4cfa3Поглощение Акали|r — уровень |cffffffff2|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AI",
+      "field": "name3",
+      "value": "|cffe4cfa3Поглощение Акали|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AI",
+      "field": "tip3",
+      "value": "|cffe4cfa3Поглощение Акали|r — уровень |cffffffff3|r (|cffffffffW|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AJ",
+      "field": "name1",
+      "value": "|cffe4cfa3Поглощение Мам'Тота|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AJ",
+      "field": "tip1",
+      "value": "|cffe4cfa3Поглощение Мам'Тота|r — уровень |cffffffff1|r (|cffffffffE|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AJ",
+      "field": "name2",
+      "value": "|cffe4cfa3Поглощение Мам'Тота|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AJ",
+      "field": "tip2",
+      "value": "|cffe4cfa3Поглощение Мам'Тота|r — уровень |cffffffff2|r (|cffffffffE|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AJ",
+      "field": "name3",
+      "value": "|cffe4cfa3Поглощение Мам'Тота|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AJ",
+      "field": "tip3",
+      "value": "|cffe4cfa3Поглощение Мам'Тота|r — уровень |cffffffff3|r (|cffffffffE|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AD",
+      "field": "name1",
+      "value": "|cffe4cfa3Поглощение Рунока|r — уровень |cffffffff1|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AD",
+      "field": "tip1",
+      "value": "|cffe4cfa3Поглощение Рунока|r — уровень |cffffffff1|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AD",
+      "field": "name2",
+      "value": "|cffe4cfa3Поглощение Рунока|r — уровень |cffffffff2|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AD",
+      "field": "tip2",
+      "value": "|cffe4cfa3Поглощение Рунока|r — уровень |cffffffff2|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AD",
+      "field": "name3",
+      "value": "|cffe4cfa3Поглощение Рунока|r — уровень |cffffffff3|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0AD",
+      "field": "tip3",
+      "value": "|cffe4cfa3Поглощение Рунока|r — уровень |cffffffff3|r (|cffffffffQ|r)"
+    }
+  ]
+}

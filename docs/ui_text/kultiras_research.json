@@ -1,0 +1,1313 @@
+{
+  "scope": "Кул-Тирас (Kul Tiras): категория 5 — Исследования и маркеры (29 технологий)",
+  "upgrades_count": 29,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R07D",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 9500,
+          "after": "|cffe4cfa3Кул-Тирас|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 9591,
+          "after": "|cffe4cfa3Кул-Тирас|r"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 20111,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Кул-Тирасу.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HX",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 30266,
+          "after": "|cffe4cfa3Кул-Тирас или Альянс|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 29942,
+          "after": "|cffe4cfa3Кул-Тирас или Альянс|r"
+        }
+      ]
+    },
+    {
+      "id": "R0KL",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 39967,
+          "after": "|cffe4cfa3Улучшенная кладка|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 39948,
+          "after": "|cffe4cfa3Улучшенная кладка|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 39949,
+          "after": "|cffe4cfa3Улучшенная кладка|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 39950,
+          "after": "|cffe4cfa3Улучшенная кладка|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 39951,
+          "after": "|cffe4cfa3Улучшенная кладка|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 39952,
+          "after": "|cffe4cfa3Улучшенная кладка|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 39968,
+          "after": "|cffe4cfa3Улучшенная кладка — уровень 1|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 39953,
+          "after": "|cffe4cfa3Улучшенная кладка — уровень 2|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 39954,
+          "after": "|cffe4cfa3Улучшенная кладка — уровень 3|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 39955,
+          "after": "|cffe4cfa3Улучшенная кладка — уровень 4|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 39956,
+          "after": "|cffe4cfa3Улучшенная кладка — уровень 5|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 39957,
+          "after": "|cffe4cfa3Улучшенная кладка — уровень 6|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 39958,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас прочности и броню всех сооружений Кул-Тираса.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 39959,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас прочности и броню всех сооружений Кул-Тираса.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 39960,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас прочности и броню всех сооружений Кул-Тираса.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 39961,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас прочности и броню всех сооружений Кул-Тираса.|n|nУровень исследования: |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 39962,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас прочности и броню всех сооружений Кул-Тираса.|n|nУровень исследования: |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 39963,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас прочности и броню всех сооружений Кул-Тираса.|n|nУровень исследования: |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R035",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4755,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 4756,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 4757,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 4765,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 4766,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 4767,
+          "after": "|cffe4cfa3Магическая атака|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4758,
+          "after": "|cffe4cfa3Магическая атака — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 4759,
+          "after": "|cffe4cfa3Магическая атака — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 4760,
+          "after": "|cffe4cfa3Магическая атака — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 4768,
+          "after": "|cffe4cfa3Магическая атака — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 4769,
+          "after": "|cffe4cfa3Магическая атака — уровень 5|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 4770,
+          "after": "|cffe4cfa3Магическая атака — уровень 6|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 4761,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон магических атак заклинателей Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец Штормов|cffced4da.|n- |cffa9c7deПалубный Доктор|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 4762,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон магических атак заклинателей Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец Штормов|cffced4da.|n- |cffa9c7deПалубный Доктор|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 4763,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон магических атак заклинателей Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец Штормов|cffced4da.|n- |cffa9c7deПалубный Доктор|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 4771,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон магических атак заклинателей Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец Штормов|cffced4da.|n- |cffa9c7deПалубный Доктор|cffced4da.|n|nУровень исследования: |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 4772,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон магических атак заклинателей Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец Штормов|cffced4da.|n- |cffa9c7deПалубный Доктор|cffced4da.|n|nУровень исследования: |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 4773,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон магических атак заклинателей Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец Штормов|cffced4da.|n- |cffa9c7deПалубный Доктор|cffced4da.|n|nУровень исследования: |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R036",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4790,
+          "after": "|cffe4cfa3Железные мечи|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 4788,
+          "after": "|cffe4cfa3Железные мечи|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 4787,
+          "after": "|cffe4cfa3Железные мечи|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 4786,
+          "after": "|cffe4cfa3Железные мечи|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 4785,
+          "after": "|cffe4cfa3Железные мечи|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 4784,
+          "after": "|cffe4cfa3Железные мечи|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4795,
+          "after": "|cffe4cfa3Железные мечи — уровень 1|r (|cffffffffM|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 4794,
+          "after": "|cffe4cfa3Железные мечи — уровень 2|r (|cffffffffM|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 4793,
+          "after": "|cffe4cfa3Железные мечи — уровень 3|r (|cffffffffM|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 4792,
+          "after": "|cffe4cfa3Железные мечи — уровень 4|r (|cffffffffM|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 4791,
+          "after": "|cffe4cfa3Железные мечи — уровень 5|r (|cffffffffM|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 4789,
+          "after": "|cffe4cfa3Железные мечи — уровень 6|r (|cffffffffM|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 4796,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя пехоты Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|n- |cffa9c7deРыцарь|cffced4da.|n- |cffa9c7deГвардеец|cffced4da.|n- |cffa9c7deАлебардщик|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 4797,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя пехоты Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|n- |cffa9c7deРыцарь|cffced4da.|n- |cffa9c7deГвардеец|cffced4da.|n- |cffa9c7deАлебардщик|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 4798,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя пехоты Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|n- |cffa9c7deРыцарь|cffced4da.|n- |cffa9c7deГвардеец|cffced4da.|n- |cffa9c7deАлебардщик|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 4800,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя пехоты Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|n- |cffa9c7deРыцарь|cffced4da.|n- |cffa9c7deГвардеец|cffced4da.|n- |cffa9c7deАлебардщик|cffced4da.|n|nУровень исследования: |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 4799,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя пехоты Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|n- |cffa9c7deРыцарь|cffced4da.|n- |cffa9c7deГвардеец|cffced4da.|n- |cffa9c7deАлебардщик|cffced4da.|n|nУровень исследования: |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 4801,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя пехоты Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|n- |cffa9c7deРыцарь|cffced4da.|n- |cffa9c7deГвардеец|cffced4da.|n- |cffa9c7deАлебардщик|cffced4da.|n|nУровень исследования: |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R037",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4805,
+          "after": "|cffe4cfa3Железная броня|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 4807,
+          "after": "|cffe4cfa3Железная броня|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 4806,
+          "after": "|cffe4cfa3Железная броня|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 4810,
+          "after": "|cffe4cfa3Железная броня|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 4809,
+          "after": "|cffe4cfa3Железная броня|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 4808,
+          "after": "|cffe4cfa3Железная броня|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4811,
+          "after": "|cffe4cfa3Железная броня — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 4812,
+          "after": "|cffe4cfa3Железная броня — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 4813,
+          "after": "|cffe4cfa3Железная броня — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 4816,
+          "after": "|cffe4cfa3Железная броня — уровень 4|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 4815,
+          "after": "|cffe4cfa3Железная броня — уровень 5|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 4814,
+          "after": "|cffe4cfa3Железная броня — уровень 6|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 4817,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту тяжелой пехоты и кавалерии Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|n- |cffa9c7deРыцарь|cffced4da.|n- |cffa9c7deГвардеец|cffced4da.|n- |cffa9c7deАлебардщик|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 4818,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту тяжелой пехоты и кавалерии Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|n- |cffa9c7deРыцарь|cffced4da.|n- |cffa9c7deГвардеец|cffced4da.|n- |cffa9c7deАлебардщик|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 4819,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту тяжелой пехоты и кавалерии Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|n- |cffa9c7deРыцарь|cffced4da.|n- |cffa9c7deГвардеец|cffced4da.|n- |cffa9c7deАлебардщик|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R038",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4826,
+          "after": "|cffe4cfa3Доспехи из клепаной кожи|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 4833,
+          "after": "|cffe4cfa3Доспехи из клепаной кожи|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 4827,
+          "after": "|cffe4cfa3Доспехи из клепаной кожи|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 4844,
+          "after": "|cffe4cfa3Доспехи из клепаной кожи|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 4843,
+          "after": "|cffe4cfa3Доспехи из клепаной кожи|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 4828,
+          "after": "|cffe4cfa3Доспехи из клепаной кожи|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4834,
+          "after": "|cffe4cfa3Доспехи из клепаной кожи — уровень 1|r (|cffffffffL|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 4835,
+          "after": "|cffe4cfa3Доспехи из клепаной кожи — уровень 2|r (|cffffffffL|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 4836,
+          "after": "|cffe4cfa3Доспехи из клепаной кожи — уровень 3|r (|cffffffffL|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 4847,
+          "after": "|cffe4cfa3Доспехи из клепаной кожи — уровень 4|r (|cffffffffL|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 4846,
+          "after": "|cffe4cfa3Доспехи из клепаной кожи — уровень 5|r (|cffffffffL|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 4845,
+          "after": "|cffe4cfa3Доспехи из клепаной кожи — уровень 6|r (|cffffffffL|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 4837,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков, морских волков, заклинателей и расчетов мортир.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n- |cffa9c7deЖрец Штормов|cffced4da.|n- |cffa9c7deПалубный Доктор|cffced4da.|n- |cffa9c7deМортирный расчет|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 4838,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков, морских волков, заклинателей и расчетов мортир.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n- |cffa9c7deЖрец Штормов|cffced4da.|n- |cffa9c7deПалубный Доктор|cffced4da.|n- |cffa9c7deМортирный расчет|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 4839,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков, морских волков, заклинателей и расчетов мортир.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n- |cffa9c7deЖрец Штормов|cffced4da.|n- |cffa9c7deПалубный Доктор|cffced4da.|n- |cffa9c7deМортирный расчет|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 4848,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков, морских волков, заклинателей и расчетов мортир.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n- |cffa9c7deЖрец Штормов|cffced4da.|n- |cffa9c7deПалубный Доктор|cffced4da.|n- |cffa9c7deМортирный расчет|cffced4da.|n|nУровень исследования: |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 4849,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков, морских волков, заклинателей и расчетов мортир.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n- |cffa9c7deЖрец Штормов|cffced4da.|n- |cffa9c7deПалубный Доктор|cffced4da.|n- |cffa9c7deМортирный расчет|cffced4da.|n|nУровень исследования: |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 4850,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков, морских волков, заклинателей и расчетов мортир.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n- |cffa9c7deЖрец Штормов|cffced4da.|n- |cffa9c7deПалубный Доктор|cffced4da.|n- |cffa9c7deМортирный расчет|cffced4da.|n|nУровень исследования: |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R039",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4851,
+          "after": "|cffe4cfa3Черный порох|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 4852,
+          "after": "|cffe4cfa3Черный порох|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 4853,
+          "after": "|cffe4cfa3Черный порох|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 4869,
+          "after": "|cffe4cfa3Черный порох|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 4868,
+          "after": "|cffe4cfa3Черный порох|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 4867,
+          "after": "|cffe4cfa3Черный порох|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4854,
+          "after": "|cffe4cfa3Черный порох — уровень 1|r (|cffffffffG|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 4855,
+          "after": "|cffe4cfa3Черный порох — уровень 2|r (|cffffffffG|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 4856,
+          "after": "|cffe4cfa3Черный порох — уровень 3|r (|cffffffffG|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 4872,
+          "after": "|cffe4cfa3Черный порох — уровень 4|r (|cffffffffG|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 4871,
+          "after": "|cffe4cfa3Черный порох — уровень 5|r (|cffffffffG|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 4870,
+          "after": "|cffe4cfa3Черный порох — уровень 6|r (|cffffffffG|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 4857,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон дистанционных атак стрелков, морских волков и артиллерии.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n- |cffa9c7deМортирный расчет|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 4858,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон дистанционных атак стрелков, морских волков и артиллерии.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n- |cffa9c7deМортирный расчет|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 4859,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон дистанционных атак стрелков, морских волков и артиллерии.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n- |cffa9c7deМортирный расчет|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 4873,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон дистанционных атак стрелков, морских волков и артиллерии.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n- |cffa9c7deМортирный расчет|cffced4da.|n|nУровень исследования: |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 4874,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон дистанционных атак стрелков, морских волков и артиллерии.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n- |cffa9c7deМортирный расчет|cffced4da.|n|nУровень исследования: |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 4875,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон дистанционных атак стрелков, морских волков и артиллерии.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n- |cffa9c7deМортирный расчет|cffced4da.|n|nУровень исследования: |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "kt01",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 42025,
+          "after": "|cffe4cfa3Новые типы ядер|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 31804,
+          "after": "|cffe4cfa3Новые типы ядер|r (|cffffffffB|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 31986,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Снабжает военные корабли Кул-Тираса разрывными снарядами, увеличивающими урон в морских сражениях.|r"
+        }
+      ]
+    },
+    {
+      "id": "R027",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4524,
+          "after": "|cffe4cfa3Инвестировать в Флот|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4525,
+          "after": "|cffe4cfa3Инвестировать в Флот|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 12585,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает боевые характеристики кораблей флота: скорость боя |cffc8e087+20%|cffced4da, скорость движения |cffc8e087+40%|cffced4da, запас прочности |cffc8e087+140|cffced4da ед. Открывает новые морские технологии.|n|n|cffe6c07bВнимание: исключает возможность исследования «Инвестировать в Армию».|r"
+        }
+      ]
+    },
+    {
+      "id": "R02S",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4531,
+          "after": "|cffe4cfa3Инвестировать в Армию|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4532,
+          "after": "|cffe4cfa3Инвестировать в Армию|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 32755,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает боевые характеристики сухопутных войск Кул-Тираса: скорость боя |cffc8e087+10%|cffced4da, запас здоровья |cffc8e087+100|cffced4da ед., запас маны |cffc8e087+100|cffced4da ед., регенерацию маны |cffc8e087+20%|cffced4da. Открывает новые военные технологии.|n|n|cffe6c07bВнимание: исключает возможность исследования «Инвестировать в Флот».|r"
+        }
+      ]
+    },
+    {
+      "id": "R02Y",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4599,
+          "after": "|cffe4cfa3Тренировка с порохом|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 4600,
+          "after": "|cffe4cfa3Тренировка с порохом|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4602,
+          "after": "|cffe4cfa3Тренировка с порохом — уровень 1|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 4603,
+          "after": "|cffe4cfa3Тренировка с порохом — уровень 2|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 4605,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет перезарядку огнестрельного оружия стрелков и морских волков.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 4606,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Ускоряет перезарядку огнестрельного оружия стрелков и морских волков.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02X",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4588,
+          "after": "|cffe4cfa3Удлиненные стволы|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 4589,
+          "after": "|cffe4cfa3Удлиненные стволы|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 4590,
+          "after": "|cffe4cfa3Удлиненные стволы|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4591,
+          "after": "|cffe4cfa3Удлиненные стволы — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 4592,
+          "after": "|cffe4cfa3Удлиненные стволы — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 4593,
+          "after": "|cffe4cfa3Удлиненные стволы — уровень 3|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 4594,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает дальность стрельбы стрелков и морских волков.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 4595,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает дальность стрельбы стрелков и морских волков.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 4596,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает дальность стрельбы стрелков и морских волков.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02W",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4571,
+          "after": "|cffe4cfa3Укрепленные тяжелые доспехи|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4572,
+          "after": "|cffe4cfa3Укрепленные тяжелые доспехи|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 4574,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает броню дополнительными защитными пластинами, снижая входящий физический урон.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|n- |cffa9c7deГвардеец|cffced4da.|n- |cffa9c7deРыцарь|cffced4da.|n- |cffa9c7deАлебардщик|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02V",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4561,
+          "after": "|cffe4cfa3Тренировка ветерана|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4562,
+          "after": "|cffe4cfa3Тренировка ветерана|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 4564,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет гвардейцам воодушевлять союзников на поле боя, повышая их защиту.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГвардеец|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02U",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4542,
+          "after": "|cffe4cfa3Мастерство|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4543,
+          "after": "|cffe4cfa3Мастерство|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 4545,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает бойцов искусству критических ударов, даруя способность «Мастерство».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|n- |cffa9c7deГвардеец|cffced4da.|n- |cffa9c7deРыцарь|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02T",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4539,
+          "after": "|cffe4cfa3Укрыться за щитом|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4540,
+          "after": "|cffe4cfa3Укрыться за щитом|r (|cffffffffA|r)"
+        }
+      ]
+    },
+    {
+      "id": "R01U",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4510,
+          "after": "|cffe4cfa3Перековка меча|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 4511,
+          "after": "|cffe4cfa3Перековка меча|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 4512,
+          "after": "|cffe4cfa3Перековка меча|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4513,
+          "after": "|cffe4cfa3Перековка меча — уровень 1|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 4514,
+          "after": "|cffe4cfa3Перековка меча — уровень 2|r (|cffffffffD|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 4515,
+          "after": "|cffe4cfa3Перековка меча — уровень 3|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 15104,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает мастерство фехтования и урон атак пехоты ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|n- |cffa9c7deГвардеец|cffced4da.|n- |cffa9c7deАлебардщик|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 15105,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает мастерство фехтования и урон атак пехоты ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|n- |cffa9c7deГвардеец|cffced4da.|n- |cffa9c7deАлебардщик|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 15106,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает мастерство фехтования и урон атак пехоты ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da.|n- |cffa9c7deГвардеец|cffced4da.|n- |cffa9c7deАлебардщик|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0H4",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 39939,
+          "after": "|cffe4cfa3Улучшенные топоры|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 39940,
+          "after": "|cffe4cfa3Улучшенные топоры|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 39931,
+          "after": "|cffe4cfa3Улучшенные топоры|r"
+        },
+        {
+          "field": "name4",
+          "wts_id": 39932,
+          "after": "|cffe4cfa3Улучшенные топоры|r"
+        },
+        {
+          "field": "name5",
+          "wts_id": 39933,
+          "after": "|cffe4cfa3Улучшенные топоры|r"
+        },
+        {
+          "field": "name6",
+          "wts_id": 39934,
+          "after": "|cffe4cfa3Улучшенные топоры|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 39941,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 39942,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 39935,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 39936,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 4|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip5",
+          "wts_id": 39937,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 5|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip6",
+          "wts_id": 39938,
+          "after": "|cffe4cfa3Улучшенные топоры — уровень 6|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 28918,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём древесины, переносимой работниками за одну ходку.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 28919,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём древесины, переносимой работниками за одну ходку.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|nУровень исследования: |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip5",
+          "wts_id": 28920,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём древесины, переносимой работниками за одну ходку.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|nУровень исследования: |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip6",
+          "wts_id": 28921,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём древесины, переносимой работниками за одну ходку.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|nУровень исследования: |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03A",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4876,
+          "after": "|cffe4cfa3Фолиант познаний магии морей|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 4881,
+          "after": "|cffe4cfa3Фолиант познаний магии морей|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 4882,
+          "after": "|cffe4cfa3Фолиант познаний магии морей|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4877,
+          "after": "|cffe4cfa3Фолиант познаний магии морей — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 4883,
+          "after": "|cffe4cfa3Фолиант познаний магии морей — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 4884,
+          "after": "|cffe4cfa3Фолиант познаний магии морей — уровень 3|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 4880,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает жрецов штормов тайным техникам магии глубин, увеличивая их запас маны на |cffffffff50|cffced4da ед., здоровье на |cffffffff30|cffced4da ед. и скорость регенерации маны на |cffffffff0.3|cffced4da/сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец Штормов|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 4885,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает жрецов штормов тайным техникам магии глубин, увеличивая их запас маны на |cffffffff50|cffced4da ед., здоровье на |cffffffff30|cffced4da ед. и скорость регенерации маны на |cffffffff0.3|cffced4da/сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец Штормов|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 4886,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает жрецов штормов тайным техникам магии глубин, увеличивая их запас маны на |cffffffff50|cffced4da ед., здоровье на |cffffffff30|cffced4da ед. и скорость регенерации маны на |cffffffff0.3|cffced4da/сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец Штормов|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03B",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4892,
+          "after": "|cffe4cfa3Обучение доктора|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 4897,
+          "after": "|cffe4cfa3Обучение доктора|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 4898,
+          "after": "|cffe4cfa3Обучение доктора|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4893,
+          "after": "|cffe4cfa3Обучение доктора — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 4899,
+          "after": "|cffe4cfa3Обучение доктора — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 4900,
+          "after": "|cffe4cfa3Обучение доктора — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 4896,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Улучшает медицинские навыки палубных докторов, увеличивая их запас маны на |cffffffff75|cffced4da ед. и здоровье на |cffffffff10|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПалубный Доктор|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 4901,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Улучшает медицинские навыки палубных докторов, увеличивая их запас маны на |cffffffff75|cffced4da ед. и здоровье на |cffffffff10|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПалубный Доктор|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 4902,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Улучшает медицинские навыки палубных докторов, увеличивая их запас маны на |cffffffff75|cffced4da ед. и здоровье на |cffffffff10|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПалубный Доктор|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03G",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4935,
+          "after": "|cffe4cfa3Высшее познание|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 4936,
+          "after": "|cffe4cfa3Высшее познание|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4937,
+          "after": "|cffe4cfa3Высшее познание — уровень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 4938,
+          "after": "|cffe4cfa3Высшее познание — уровень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 4939,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья и маны, а также ускоряет регенерацию маны всех заклинателей Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец Штормов|cffced4da.|n- |cffa9c7deПалубный Доктор|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff2|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 4940,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья и маны, а также ускоряет регенерацию маны всех заклинателей Кул-Тираса.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЖрец Штормов|cffced4da.|n- |cffa9c7deПалубный Доктор|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff2|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R03H",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4944,
+          "after": "|cffe4cfa3Жертвоприношение Владыкам Моря|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4946,
+          "after": "|cffe4cfa3Жертвоприношение Владыкам Моря|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 34844,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Древний ритуал подношения морским духам. Дарует солдатам Кул-Тираса бонус к скорости боя |cffc8e087+10%|cffced4da, скорости перемещения |cffc8e087+10%|cffced4da и запас маны |cffc8e087+40|cffced4da ед., но снижает урон атак на |cffe69a8d-4|cffced4da ед.|r"
+        }
+      ]
+    },
+    {
+      "id": "R034",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4749,
+          "after": "|cffe4cfa3Шрапнель|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4750,
+          "after": "|cffe4cfa3Шрапнель|r (|cffffffffD|r)"
+        }
+      ]
+    },
+    {
+      "id": "R033",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4733,
+          "after": "|cffe4cfa3Заточка и освящение|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4734,
+          "after": "|cffe4cfa3Заточка и освящение|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 20138,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Использует древние техники заточки и благословения стали, повышая урон алебардщиков по средней броне.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАлебардщик|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R032",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4672,
+          "after": "|cffe4cfa3Свинцовые пули|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4673,
+          "after": "|cffe4cfa3Свинцовые пули|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 34843,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обеспечивает стрелков и морских волков особыми тяжелыми пулями, увеличивающими урон по тяжелобронированным целям.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|n- |cffa9c7deМорской волк|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R031",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4724,
+          "after": "|cffe4cfa3Новый сплав|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 4727,
+          "after": "|cffe4cfa3Новый сплав|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 4728,
+          "after": "|cffe4cfa3Новый сплав|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4725,
+          "after": "|cffe4cfa3Новый сплав — уровень 1|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 4729,
+          "after": "|cffe4cfa3Новый сплав — уровень 2|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 4730,
+          "after": "|cffe4cfa3Новый сплав — уровень 3|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 21899,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает прочность и урон алебард за счёт применения передовых металлических сплавов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАлебардщик|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 21900,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает прочность и урон алебард за счёт применения передовых металлических сплавов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАлебардщик|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 21901,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает прочность и урон алебард за счёт применения передовых металлических сплавов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deАлебардщик|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R02Z",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4641,
+          "after": "|cffe4cfa3Увеличение количества пороха|r"
+        },
+        {
+          "field": "name2",
+          "wts_id": 4649,
+          "after": "|cffe4cfa3Увеличение количества пороха|r"
+        },
+        {
+          "field": "name3",
+          "wts_id": 4650,
+          "after": "|cffe4cfa3Увеличение количества пороха|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4642,
+          "after": "|cffe4cfa3Увеличение количества пороха — уровень 1|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 4651,
+          "after": "|cffe4cfa3Увеличение количества пороха — уровень 2|r (|cffffffffS|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 4652,
+          "after": "|cffe4cfa3Увеличение количества пороха — уровень 3|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 4645,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает пороховой заряд патронов, повышая урон выстрелов морских волков.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМорской волк|cffced4da.|n|nУровень исследования: |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 4653,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает пороховой заряд патронов, повышая урон выстрелов морских волков.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМорской волк|cffced4da.|n|nУровень исследования: |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 4654,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает пороховой заряд патронов, повышая урон выстрелов морских волков.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМорской волк|cffced4da.|n|nУровень исследования: |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R030",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 4636,
+          "after": "|cffe4cfa3Оглушающий выстрел|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 4637,
+          "after": "|cffe4cfa3Оглушающий выстрел|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 34764,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает морских волков вести огонь на подавление, даруя способность «Оглушающий выстрел».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМорской волк|cffced4da.|r"
+        }
+      ]
+    }
+  ]
+}

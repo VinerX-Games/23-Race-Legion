@@ -1,0 +1,1703 @@
+{
+  "scope": "Дренеи (Draeneis): категория 4 — Способности (59 способностей)",
+  "abilities_count": 59,
+  "variants": [
+    "SD"
+  ],
+  "abilities": [
+    {
+      "id": "A0HS",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38873,
+          "after": "|cffe4cfa3Дренеи|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38874,
+          "after": "|cffe4cfa3Дренеи|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 35194,
+          "after": "|cffa6afb8РАСА:|cffced4da Благородный народ эредаров, бежавший с Аргуса под предводительством пророка Велена и ведомый священным Светом Наару.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor (Яхве)|r|n|cffa6afb8Куратор расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Сложность:|r |cffffffff●●|cffa6afb8●●●|r|n|cffa6afb8Период:|r |cffa9c7de«The Burning Crusade»|r|n|n|cffced4daДренеи — непреклонные защитники Света, отвергшие скверну Пылающего Легиона. Обладая высокими технологиями Аргуса, силой священных кристаллов и поддержкой Наару, они объединяют под своим знаменем благочестивых паладинов Озарённых и мудрых изгнанников Сломленных. Их армия опирается на крепкую оборону, исцеляющие чары и разрушительную магию Света.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0Z3",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23313,
+          "after": "|cffe4cfa3Ювелирное мастерство|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 23314,
+          "after": "|cffe4cfa3Ювелирное мастерство|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 23315,
+          "after": "|cffe4cfa3Ювелирное мастерство|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 23321,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Инженер имеет |cffffffff50%|cffced4da шанс начать строительство здания с |cffffffff20%|cffced4da начального прогресса.|r"
+        }
+      ]
+    },
+    {
+      "id": "A04Y",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3736,
+          "after": "|cffe4cfa3Свет небес|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3735,
+          "after": "|cffe4cfa3Свет небес|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3737,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восполняет |cffffffff150|cffced4da ед. здоровья живому союзнику или наносит вдвое меньший урон нежити.|r"
+        }
+      ]
+    },
+    {
+      "id": "A04W",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3715,
+          "after": "|cffe4cfa3Свет небес|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3716,
+          "after": "|cffe4cfa3Свет небес|r (|cffffffffR|r)"
+        }
+      ]
+    },
+    {
+      "id": "A04U",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3709,
+          "after": "|cffe4cfa3Аура света|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3710,
+          "after": "|cffe4cfa3Аура света|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 8515,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость регенерации здоровья всем союзникам поблизости на |cffc8e087+0.5|cffced4da ед./сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A04T",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3706,
+          "after": "|cffe4cfa3Возрождение|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3707,
+          "after": "|cffe4cfa3Возрождение|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3708,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Озарённый паладин мгновенно возрождается после гибели.|r"
+        }
+      ]
+    },
+    {
+      "id": "A05V",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "tip_tip1",
+          "wts_id": 2175,
+          "after": "|cffe4cfa3Ускользание|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 30855,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт шанс |cffffffff17%|cffced4da уклониться от вражеской атаки.|r"
+        }
+      ]
+    },
+    {
+      "id": "A05T",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3950,
+          "after": "|cffe4cfa3Пламя света|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3951,
+          "after": "|cffe4cfa3Пламя света|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 4022,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Священный огонь атакует ближайших врагов, нанося |cffffffff20|cffced4da ед. урона и поджигая их на |cffffffff1|cffced4da ед./сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A05C",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23187,
+          "after": "|cffe4cfa3Пламя света|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 23188,
+          "after": "|cffe4cfa3Пламя света|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 1587,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поджигает находящихся рядом врагов, нанося |cffffffff20|cffced4da ед. урона и |cffffffff2|cffced4da ед./сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A05A",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23185,
+          "after": "|cffe4cfa3Рассеивание заклинаний|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 23186,
+          "after": "|cffe4cfa3Рассеивание заклинаний|r (|cffffffffW|r)"
+        }
+      ]
+    },
+    {
+      "id": "A059",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23183,
+          "after": "|cffe4cfa3Исцеление|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 23184,
+          "after": "|cffe4cfa3Исцеление|r (|cffffffffQ|r)"
+        }
+      ]
+    },
+    {
+      "id": "A055",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3826,
+          "after": "|cffe4cfa3Воскрешение|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3827,
+          "after": "|cffe4cfa3Воскрешение|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 4203,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Воскрешает |cffffffff1|cffced4da павшего союзного воина поблизости.|r"
+        }
+      ]
+    },
+    {
+      "id": "A054",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3823,
+          "after": "|cffe4cfa3Внутреннее жжение|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3824,
+          "after": "|cffe4cfa3Внутреннее жжение|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3825,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает урон врагов и уменьшает их показатель брони.|r"
+        }
+      ]
+    },
+    {
+      "id": "A05X",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3968,
+          "after": "|cffe4cfa3Тяжелые удары|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3969,
+          "after": "|cffe4cfa3Тяжелые удары|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3970,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон по целям с тяжёлой бронёй.|r"
+        }
+      ]
+    },
+    {
+      "id": "A05W",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 23192,
+          "after": "|cffe4cfa3Усиленная броня|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 23193,
+          "after": "|cffe4cfa3Усиленная броня|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 23348,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает получаемый юнитом урон от вражеских атак.|r"
+        }
+      ]
+    },
+    {
+      "id": "A052",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4201,
+          "after": "|cffe4cfa3Древние знания Света|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4202,
+          "after": "|cffe4cfa3Древние знания Света|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 8535,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускоряет регенерацию маны находящихся рядом союзников на |cffc8e087+0.55|cffced4da ед./сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A051",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3813,
+          "after": "|cffe4cfa3Цепная молния|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 3814,
+          "after": "|cffe4cfa3Цепная молния|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3815,
+          "after": "|cffe4cfa3Цепная молния|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 41155,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает молнией цель, нанося |cffffffff85|cffced4da ед. урона, и переходит до |cffffffff4|cffced4da раз к другим врагам.|r"
+        }
+      ]
+    },
+    {
+      "id": "A050",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3755,
+          "after": "|cffe4cfa3Сглаз|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3754,
+          "after": "|cffe4cfa3Сглаз|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3757,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Изгоняет вражескую цель в астрал, замедляя её и лишая возможности атаковать.|r"
+        }
+      ]
+    },
+    {
+      "id": "A04Z",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3751,
+          "after": "|cffe4cfa3Сглаз|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3752,
+          "after": "|cffe4cfa3Сглаз|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 8528,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Временно превращает врага в безобидное животное.|r"
+        }
+      ]
+    },
+    {
+      "id": "A058",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3837,
+          "after": "|cffe4cfa3Немота|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3838,
+          "after": "|cffe4cfa3Немота|r (|cffffffffE|r)"
+        }
+      ]
+    },
+    {
+      "id": "A057",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3835,
+          "after": "|cffe4cfa3Замедление|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3836,
+          "after": "|cffe4cfa3Замедление|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38968,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Замедляет скорость атаки врага на |cffff808025%|cffced4da и скорость передвижения на |cffff808035%|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "A056",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3833,
+          "after": "|cffe4cfa3Похищение маны|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3834,
+          "after": "|cffe4cfa3Похищение маны|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 15187,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вытягивает запас маны из вражеского юнита или передаёт ману союзнику.|r"
+        }
+      ]
+    },
+    {
+      "id": "A05L",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3922,
+          "after": "|cffe4cfa3Посвященное оружие|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3923,
+          "after": "|cffe4cfa3Посвященное оружие|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3974,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон целям со всеми типами брони.|r"
+        }
+      ]
+    },
+    {
+      "id": "A05N",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3929,
+          "after": "|cffe4cfa3Посвященное оружие|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3930,
+          "after": "|cffe4cfa3Посвященное оружие|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3927,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон целям со всеми типами брони.|r"
+        }
+      ]
+    },
+    {
+      "id": "A05P",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3937,
+          "after": "|cffe4cfa3Посвященное оружие|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3938,
+          "after": "|cffe4cfa3Посвященное оружие|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3935,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон целям со всеми типами брони.|r"
+        }
+      ]
+    },
+    {
+      "id": "A05M",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3925,
+          "after": "|cffe4cfa3Посвященное оружие|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3926,
+          "after": "|cffe4cfa3Посвященное оружие|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3924,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон целям со всеми типами брони.|r"
+        }
+      ]
+    },
+    {
+      "id": "A05O",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3933,
+          "after": "|cffe4cfa3Посвященное оружие|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3934,
+          "after": "|cffe4cfa3Посвященное оружие|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3931,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон целям со всеми типами брони.|r"
+        }
+      ]
+    },
+    {
+      "id": "A05Q",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3941,
+          "after": "|cffe4cfa3Посвященное оружие|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3942,
+          "after": "|cffe4cfa3Посвященное оружие|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3939,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон целям со всеми типами брони.|r"
+        }
+      ]
+    },
+    {
+      "id": "A05R",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3945,
+          "after": "|cffe4cfa3Посвященное оружие|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3946,
+          "after": "|cffe4cfa3Посвященное оружие|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3943,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон целям со всеми типами брони.|r"
+        }
+      ]
+    },
+    {
+      "id": "A061",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3985,
+          "after": "|cffe4cfa3Сжигание маны|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3986,
+          "after": "|cffe4cfa3Сжигание маны|r"
+        }
+      ]
+    },
+    {
+      "id": "A060",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3984,
+          "after": "|cffe4cfa3Рассекающий удар|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3982,
+          "after": "|cffe4cfa3Рассекающий удар|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 13096,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит круговой урон по площади врагам рядом с основной целью.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1C6",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 30865,
+          "after": "|cffe4cfa3Спасение в тени|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 30866,
+          "after": "|cffe4cfa3Спасение в тени|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 30867,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При гибели воина есть |cffffffff50%|cffced4da шанс, что он возродится у логова Сломленных.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1C5",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "researchtip",
+          "wts_id": 30861,
+          "after": "|cffe4cfa3Скачок|r (|cffffffffB|r)"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 30863,
+          "after": "|cffe4cfa3Скачок|r (|cffffffffB|r)"
+        }
+      ]
+    },
+    {
+      "id": "A1C4",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 30856,
+          "after": "|cffe4cfa3Стремительное приближение|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 30857,
+          "after": "|cffe4cfa3Стремительное приближение|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 30858,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выбранные мастера совершают стремительный телепорт в указанную точку.|r"
+        }
+      ]
+    },
+    {
+      "id": "A05Z",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3979,
+          "after": "|cffe4cfa3Отравленное оружие|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3980,
+          "after": "|cffe4cfa3Отравленное оружие|r"
+        }
+      ]
+    },
+    {
+      "id": "A05Y",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3975,
+          "after": "|cffe4cfa3Танец ветра|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3976,
+          "after": "|cffe4cfa3Танец ветра|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3977,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует невидимость и ускорение. Первая атака из невидимости наносит повышенный урон.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1C8",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 30875,
+          "after": "|cffe4cfa3Поле слома|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 10266,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Значительно снижает скорость дальнобойной атаки врагов в указанной области.|r"
+        }
+      ]
+    },
+    {
+      "id": "A063",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 3991,
+          "after": "|cffe4cfa3Щит молний|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 3992,
+          "after": "|cffe4cfa3Щит молний|r (|cffffffffE|r)"
+        }
+      ]
+    },
+    {
+      "id": "A067",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4023,
+          "after": "|cffe4cfa3Массовое исцеление|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4101,
+          "after": "|cffe4cfa3Массовое исцеление|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 13106,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff125|cffced4da ед. здоровья всем союзникам в радиусе |cffffffff300|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "A066",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4016,
+          "after": "|cffe4cfa3Безумие|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4017,
+          "after": "|cffe4cfa3Безумие|r (|cffffffffQ|r)"
+        }
+      ]
+    },
+    {
+      "id": "AOhw",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "researchubertip",
+          "wts_id": 28015,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создает волну энергии, восстанавливающую здоровье цели и переходящую к ближайшим союзникам.|n|n|cffa6afb8Уровень 1:|r |cffffffff130|cffced4da ед., до |cffffffff3|cffced4da целей.|n|cffa6afb8Уровень 2:|r |cffffffff205|cffced4da ед., до |cffffffff4|cffced4da целей.|n|cffa6afb8Уровень 3:|r |cffffffff280|cffced4da ед., до |cffffffff5|cffced4da целей.|n|cffa6afb8Уровень 4:|r |cffffffff385|cffced4da ед., до |cffffffff20|cffced4da целей.|r"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 63,
+          "after": "|cffe4cfa3Волна исцеления|r [|cffffffff4|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 627,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff130|cffced4da ед. здоровья цели и переходит к |cffffffff3|cffced4da союзникам.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 628,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff205|cffced4da ед. здоровья цели и переходит к |cffffffff4|cffced4da союзникам.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 4411,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff280|cffced4da ед. здоровья цели и переходит к |cffffffff5|cffced4da союзникам.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 28014,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff385|cffced4da ед. здоровья цели и переходит к |cffffffff20|cffced4da союзникам.|r"
+        }
+      ]
+    },
+    {
+      "id": "A06C",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4380,
+          "after": "|cffe4cfa3Благодать|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 4381,
+          "after": "|cffe4cfa3Благодать|r (|cffffffffR|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 5843,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует неуязвимость окружающим союзникам. Сам паладин остаётся уязвимым.|n|n|cffa6afb8Уровень 1:|r длительность |cffffffff30|cffced4da сек.|n|cffa6afb8Уровень 2:|r длительность |cffffffff40|cffced4da сек.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4384,
+          "after": "|cffe4cfa3Благодать|r [|cffffffff1|r] (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4385,
+          "after": "|cffe4cfa3Благодать|r [|cffffffff2|r] (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 5861,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует неуязвимость окружающим союзникам на |cffffffff30|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 5844,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует неуязвимость окружающим союзникам на |cffffffff40|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A068",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4321,
+          "after": "|cffe4cfa3Аура Доблести|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 4323,
+          "after": "|cffe4cfa3Аура Доблести|r (|cffffffffE|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 8176,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон от атак находящихся рядом союзников.|n|n|cffa6afb8Уровень 1:|r |cffc8e087+10%|cffced4da к урону.|n|cffa6afb8Уровень 2:|r |cffc8e087+20%|cffced4da к урону.|n|cffa6afb8Уровень 3:|r |cffc8e087+30%|cffced4da к урону.|n|cffa6afb8Уровень 4:|r |cffc8e087+40%|cffced4da к урону.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4322,
+          "after": "|cffe4cfa3Аура Доблести|r [|cffffffff1|r]"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4325,
+          "after": "|cffe4cfa3Аура Доблести|r [|cffffffff2|r]"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 4326,
+          "after": "|cffe4cfa3Аура Доблести|r [|cffffffff3|r]"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 4327,
+          "after": "|cffe4cfa3Аура Доблести|r [|cffffffff4|r]"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 4324,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзников на |cffc8e087+20%|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 4328,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзников на |cffc8e087+30%|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 4329,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзников на |cffc8e087+40%|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "A069",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4346,
+          "after": "|cffe4cfa3Сокрушение|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 4347,
+          "after": "|cffe4cfa3Сокрушение|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 25661,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт шанс нанести дополнительный урон окружающим войскам при атаке.|n|n|cffa6afb8Уровень 1:|r шанс |cffffffff15%|cffced4da, |cffffffff80|cffced4da ед. урона.|n|cffa6afb8Уровень 2:|r шанс |cffffffff20%|cffced4da, |cffffffff100|cffced4da ед. урона.|n|cffa6afb8Уровень 3:|r шанс |cffffffff25%|cffced4da, |cffffffff150|cffced4da ед. урона.|n|cffa6afb8Уровень 4:|r шанс |cffffffff30%|cffced4da, |cffffffff180|cffced4da ед. урона.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4339,
+          "after": "|cffe4cfa3Сокрушение|r [|cffffffff1|r]"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4340,
+          "after": "|cffe4cfa3Сокрушение|r [|cffffffff2|r]"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 4341,
+          "after": "|cffe4cfa3Сокрушение|r [|cffffffff3|r]"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 4342,
+          "after": "|cffe4cfa3Сокрушение|r [|cffffffff4|r]"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 25662,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке с шансом |cffffffff15%|cffced4da наносит |cffffffff80|cffced4da ед. урона по площади.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 25663,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке с шансом |cffffffff20%|cffced4da наносит |cffffffff100|cffced4da ед. урона по площади.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 25654,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке с шансом |cffffffff25%|cffced4da наносит |cffffffff150|cffced4da ед. урона по площади.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 25655,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке с шансом |cffffffff30%|cffced4da наносит |cffffffff180|cffced4da ед. урона по площади.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0Z0",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26659,
+          "after": "|cffe4cfa3Кара света|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 26658,
+          "after": "|cffe4cfa3Кара света|r"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 7585,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает вспышки Света на врагов вокруг героя, нанося урон раз в несколько секунд.|n|n|cffa6afb8Уровень 1:|r |cffffffff50|cffced4da ед. урона раз в |cffffffff4|cffced4da сек.|n|cffa6afb8Уровень 2:|r |cffffffff80|cffced4da ед. урона раз в |cffffffff3.5|cffced4da сек.|n|cffa6afb8Уровень 3:|r |cffffffff100|cffced4da ед. урона раз в |cffffffff3|cffced4da сек.|n|cffa6afb8Уровень 4:|r |cffffffff120|cffced4da ед. урона раз в |cffffffff2|cffced4da сек.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 26373,
+          "after": "|cffe4cfa3Кара света|r [|cffffffff1|r]"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 26408,
+          "after": "|cffe4cfa3Кара света|r [|cffffffff2|r]"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 26411,
+          "after": "|cffe4cfa3Кара света|r [|cffffffff3|r]"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 26468,
+          "after": "|cffe4cfa3Кара света|r [|cffffffff4|r]"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 26661,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff50|cffced4da ед. урона врагам вокруг раз в |cffffffff4|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 26662,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff80|cffced4da ед. урона врагам вокруг раз в |cffffffff3.5|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 26663,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff100|cffced4da ед. урона врагам вокруг раз в |cffffffff3|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 26664,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff120|cffced4da ед. урона врагам вокруг раз в |cffffffff2|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A06F",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4427,
+          "after": "|cffe4cfa3Идеальный Удар|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 4428,
+          "after": "|cffe4cfa3Идеальный Удар|r (|cffffffffB|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 3615,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит мощный удар в ближнем бою, нанося урон и оглушая цель.|n|n|cffa6afb8Уровень 1:|r |cffffffff100|cffced4da ед. урона, оглушение |cffffffff2|cffced4da сек.|n|cffa6afb8Уровень 2:|r |cffffffff200|cffced4da ед. урона, оглушение |cffffffff3|cffced4da сек.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4429,
+          "after": "|cffe4cfa3Идеальный Удар|r [|cffffffff1|r]"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4430,
+          "after": "|cffe4cfa3Идеальный Удар|r [|cffffffff2|r]"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 3658,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff100|cffced4da ед. урона цели и оглушает её на |cffffffff2|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 5830,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff200|cffced4da ед. урона цели и оглушает её на |cffffffff3|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A06E",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4420,
+          "after": "|cffe4cfa3Удачливость|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 4421,
+          "after": "|cffe4cfa3Удачливость|r (|cffffffffE|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 3557,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует шанс уклониться от ударов противника и нанести критический урон.|n|n|cffa6afb8Уровень 1:|r шанс |cffffffff10%|cffced4da.|n|cffa6afb8Уровень 2:|r шанс |cffffffff15%|cffced4da.|n|cffa6afb8Уровень 3:|r шанс |cffffffff20%|cffced4da.|n|cffa6afb8Уровень 4:|r шанс |cffffffff25%|cffced4da.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4422,
+          "after": "|cffe4cfa3Удачливость|r [|cffffffff1|r]"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4423,
+          "after": "|cffe4cfa3Удачливость|r [|cffffffff2|r]"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 4424,
+          "after": "|cffe4cfa3Удачливость|r [|cffffffff3|r]"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 4425,
+          "after": "|cffe4cfa3Удачливость|r [|cffffffff4|r]"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 4426,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует шанс |cffffffff25%|cffced4da уклониться от ударов или нанести критический урон.|r"
+        }
+      ]
+    },
+    {
+      "id": "A06A",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 7583,
+          "after": "|cffe4cfa3Священная кара|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 4396,
+          "after": "|cffe4cfa3Священная кара|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 31512,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цель и врагов вокруг волной святой энергии.|n|n|cffa6afb8Уровень 1:|r |cffffffff100|cffced4da ед. цели, |cffffffff50|cffced4da по области.|n|cffa6afb8Уровень 2:|r |cffffffff150|cffced4da ед. цели, |cffffffff100|cffced4da по области.|n|cffa6afb8Уровень 3:|r |cffffffff200|cffced4da ед. цели, |cffffffff150|cffced4da по области.|n|cffa6afb8Уровень 4:|r |cffffffff350|cffced4da ед. цели, |cffffffff200|cffced4da по области.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4397,
+          "after": "|cffe4cfa3Священная кара|r [|cffffffff1|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4398,
+          "after": "|cffe4cfa3Священная кара|r [|cffffffff2|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 4399,
+          "after": "|cffe4cfa3Священная кара|r [|cffffffff3|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 4400,
+          "after": "|cffe4cfa3Священная кара|r [|cffffffff4|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 2177,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff100|cffced4da ед. цели и |cffffffff50|cffced4da ед. врагам по области.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 889,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff150|cffced4da ед. цели и |cffffffff100|cffced4da ед. врагам по области.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 1010,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff200|cffced4da ед. цели и |cffffffff150|cffced4da ед. врагам по области.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 1281,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff350|cffced4da ед. цели и |cffffffff200|cffced4da ед. врагам по области.|r"
+        }
+      ]
+    },
+    {
+      "id": "A06J",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4458,
+          "after": "|cffe4cfa3Снежная буря|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 4459,
+          "after": "|cffe4cfa3Снежная буря|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 500,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает волны ледяных осколков, наносящих урон в области действия.|n|n|cffa6afb8Уровень 1:|r |cffffffff6|cffced4da волн по |cffffffff25|cffced4da ед. урона.|n|cffa6afb8Уровень 2:|r |cffffffff8|cffced4da волн по |cffffffff35|cffced4da ед. урона.|n|cffa6afb8Уровень 3:|r |cffffffff10|cffced4da волн по |cffffffff45|cffced4da ед. урона.|n|cffa6afb8Уровень 4:|r |cffffffff14|cffced4da волн по |cffffffff60|cffced4da ед. урона.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4460,
+          "after": "|cffe4cfa3Снежная буря|r [|cffffffff1|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4461,
+          "after": "|cffe4cfa3Снежная буря|r [|cffffffff2|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 4462,
+          "after": "|cffe4cfa3Снежная буря|r [|cffffffff3|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 4463,
+          "after": "|cffe4cfa3Снежная буря|r [|cffffffff4|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 501,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff6|cffced4da волн ледяных осколков по |cffffffff25|cffced4da ед. урона.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 502,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff8|cffced4da волн ледяных осколков по |cffffffff35|cffced4da ед. урона.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 539,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff10|cffced4da волн ледяных осколков по |cffffffff45|cffced4da ед. урона.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 490,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff14|cffced4da волн ледяных осколков по |cffffffff60|cffced4da ед. урона.|r"
+        }
+      ]
+    },
+    {
+      "id": "A06I",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4447,
+          "after": "|cffe4cfa3Зов помощи|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 4448,
+          "after": "|cffe4cfa3Зов помощи|r (|cffffffffW|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 352,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает на помощь верных воинов дренеев.|n|n|cffa6afb8Уровень 1:|r |cffffffff1|cffced4da воин дреней.|n|cffa6afb8Уровень 2:|r |cffffffff2|cffced4da воина дренея.|n|cffa6afb8Уровень 3:|r |cffffffff3|cffced4da воина дренея.|n|cffa6afb8Уровень 4:|r |cffffffff4|cffced4da воина дренея.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4450,
+          "after": "|cffe4cfa3Зов помощи|r [|cffffffff1|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4451,
+          "after": "|cffe4cfa3Зов помощи|r [|cffffffff2|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 4452,
+          "after": "|cffe4cfa3Зов помощи|r [|cffffffff3|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 4453,
+          "after": "|cffe4cfa3Зов помощи|r [|cffffffff4|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 353,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff1|cffced4da воина дренея на помощь.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 354,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff2|cffced4da воинов дренеев на помощь.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 355,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff3|cffced4da воинов дренеев на помощь.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 444,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff4|cffced4da воинов дренеев на помощь.|r"
+        }
+      ]
+    },
+    {
+      "id": "A06H",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 4440,
+          "after": "|cffe4cfa3Внушение|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 4441,
+          "after": "|cffe4cfa3Внушение|r (|cffffffffE|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 32283,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников.|n|n|cffa6afb8Уровень 1:|r |cffc8e087+10%|cffced4da к скорости, малый бонус к регенерации.|n|cffa6afb8Уровень 2:|r |cffc8e087+20%|cffced4da к скорости, средний бонус к регенерации.|n|cffa6afb8Уровень 3:|r |cffc8e087+30%|cffced4da к скорости, высокий бонус к регенерации.|n|cffa6afb8Уровень 4:|r |cffc8e087+40%|cffced4da к скорости, высший бонус к регенерации.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4442,
+          "after": "|cffe4cfa3Внушение|r [|cffffffff1|r]"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4443,
+          "after": "|cffe4cfa3Внушение|r [|cffffffff2|r]"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 4444,
+          "after": "|cffe4cfa3Внушение|r [|cffffffff3|r]"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 4445,
+          "after": "|cffe4cfa3Внушение|r [|cffffffff4|r]"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20574,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость перемещения на |cffc8e087+10%|cffced4da и повышает восстановление здоровья.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 20575,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость перемещения на |cffc8e087+20%|cffced4da и повышает восстановление здоровья.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 20576,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость перемещения на |cffc8e087+30%|cffced4da и повышает восстановление здоровья.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 20573,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость перемещения на |cffc8e087+40%|cffced4da и повышает восстановление здоровья.|r"
+        }
+      ]
+    },
+    {
+      "id": "A06G",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 201,
+          "after": "|cffe4cfa3Спокойствие|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 4438,
+          "after": "|cffe4cfa3Спокойствие|r (|cffffffffR|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 62,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает поток целительной энергии, восполняющей здоровье союзникам в обширной области.|n|n|cffa6afb8Уровень 1:|r |cffffffff20|cffced4da ед. здоровья в сек.|n|cffa6afb8Уровень 2:|r |cffffffff30|cffced4da ед. здоровья в сек.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 4437,
+          "after": "|cffe4cfa3Спокойствие|r [|cffffffff1|r] (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 4439,
+          "after": "|cffe4cfa3Спокойствие|r [|cffffffff2|r] (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 663,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восполняет союзникам |cffffffff20|cffced4da ед. здоровья в сек. в обширной области.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 667,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восполняет союзникам |cffffffff30|cffced4da ед. здоровья в сек. в обширной области.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1L3",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38806,
+          "after": "|cffe4cfa3Свет Надежды|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38807,
+          "after": "|cffe4cfa3Свет Надежды|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38802,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждые |cffffffff12|cffced4da сек. наару выпускает волну света, исцеляющую союзника на |cffffffff100|cffced4da ед. здоровья и переходящую к другим целям.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1L2",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 37764,
+          "after": "|cffe4cfa3Волна исцеления|r"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 38654,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создает волну энергии, восстанавливающую здоровье цели и переходящую к ближайшим союзникам.|n|n|cffa6afb8Уровень 1:|r |cffffffff130|cffced4da ед., до |cffffffff3|cffced4da целей.|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38655,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создает волну энергии, восстанавливающую |cffffffff130|cffced4da ед. здоровья цели и переходящую к |cffffffff3|cffced4da союзникам.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1L1",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 28012,
+          "after": "|cffe4cfa3Исцеление|r"
+        }
+      ]
+    },
+    {
+      "id": "A1L6",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38809,
+          "after": "|cffe4cfa3Аура Спасения|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 15567,
+          "after": "|cffe4cfa3Аура Спасения|r (|cffffffffE|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 38811,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню находящихся рядом врагов и даёт шанс предотвратить гибель союзника рядом.|n|n|cffa6afb8Уровень 1:|r |cffff8080-1|cffced4da к броне врагов.|n|cffa6afb8Уровень 2:|r |cffff8080-2|cffced4da к броне врагов.|n|cffa6afb8Уровень 3:|r |cffff8080-3|cffced4da к броне врагов.|n|cffa6afb8Уровень 4:|r |cffff8080-4|cffced4da к броне врагов.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38759,
+          "after": "|cffe4cfa3Аура Спасения|r [|cffffffff1|r]"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 38760,
+          "after": "|cffe4cfa3Аура Спасения|r [|cffffffff2|r]"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 23417,
+          "after": "|cffe4cfa3Аура Спасения|r [|cffffffff3|r]"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 35178,
+          "after": "|cffe4cfa3Аура Спасения|r [|cffffffff4|r]"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 38813,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врагов на |cffff8080-1|cffced4da и предотвращает гибель союзников.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 38814,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врагов на |cffff8080-2|cffced4da и предотвращает гибель союзников.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 35200,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врагов на |cffff8080-3|cffced4da и предотвращает гибель союзников.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 35184,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врагов на |cffff8080-4|cffced4da и предотвращает гибель союзников.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1L7",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 16463,
+          "after": "|cffe4cfa3Массовое исцеление|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 16461,
+          "after": "|cffe4cfa3Массовое исцеление|r (|cffffffffR|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 16462,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье союзникам поблизости.|n|n|cffa6afb8Уровень 1:|r |cffffffff250|cffced4da ед. здоровья.|n|cffa6afb8Уровень 2:|r |cffffffff350|cffced4da ед. здоровья.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11597,
+          "after": "|cffe4cfa3Массовое исцеление|r [|cffffffff1|r] (|cffffffffR|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 16456,
+          "after": "|cffe4cfa3Массовое исцеление|r [|cffffffff2|r] (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 12655,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff250|cffced4da ед. здоровья союзникам поблизости.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 16457,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffffffff350|cffced4da ед. здоровья союзникам поблизости.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1L4",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38599,
+          "after": "|cffe4cfa3Благословление|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 38713,
+          "after": "|cffe4cfa3Благословление|r (|cffffffffW|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 38714,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Покрывает божественным щитом союзников вокруг, повышая урон на |cffc8e087+10%|cffced4da и регенерацию здоровья на |cffc8e087+5|cffced4da ед./сек. на |cffffffff20|cffced4da сек.|n|n|cffa6afb8Уровень 1:|r |cffc8e087+10|cffced4da к броне.|n|cffa6afb8Уровень 2:|r |cffc8e087+20|cffced4da к броне.|n|cffa6afb8Уровень 3:|r |cffc8e087+30|cffced4da к броне.|n|cffa6afb8Уровень 4:|r |cffc8e087+40|cffced4da к броне.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38598,
+          "after": "|cffe4cfa3Благословление|r [|cffffffff1|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 38601,
+          "after": "|cffe4cfa3Благословление|r [|cffffffff2|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 38604,
+          "after": "|cffe4cfa3Благословление|r [|cffffffff3|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 38616,
+          "after": "|cffe4cfa3Благословление|r [|cffffffff4|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 775,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Покрывает щитом союзников вокруг на |cffffffff30|cffced4da сек., даруя |cffc8e087+2|cffced4da к броне.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 779,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Покрывает щитом союзников вокруг на |cffffffff30|cffced4da сек., даруя |cffc8e087+3|cffced4da к броне.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 780,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Покрывает щитом союзников вокруг на |cffffffff30|cffced4da сек., даруя |cffc8e087+4|cffced4da к броне.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 810,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Покрывает щитом союзников вокруг на |cffffffff30|cffced4da сек., даруя |cffc8e087+6|cffced4da к броне.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1L5",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38736,
+          "after": "|cffe4cfa3Воскрешение|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 38737,
+          "after": "|cffe4cfa3Воскрешение|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 38743,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возвращает к жизни павших союзных воинов вокруг героя.|n|n|cffa6afb8Уровень 1:|r до |cffffffff6|cffced4da союзников.|n|cffa6afb8Уровень 2:|r до |cffffffff8|cffced4da союзников.|n|cffa6afb8Уровень 3:|r до |cffffffff10|cffced4da союзников.|n|cffa6afb8Уровень 4:|r до |cffffffff12|cffced4da союзников.|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38738,
+          "after": "|cffe4cfa3Воскрешение|r [|cffffffff1|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 38734,
+          "after": "|cffe4cfa3Воскрешение|r [|cffffffff2|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 38739,
+          "after": "|cffe4cfa3Воскрешение|r [|cffffffff3|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 38740,
+          "after": "|cffe4cfa3Воскрешение|r [|cffffffff4|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 38600,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возвращает к жизни до |cffffffff8|cffced4da павших союзников.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 38741,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возвращает к жизни до |cffffffff10|cffced4da павших союзников.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 38742,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Возвращает к жизни до |cffffffff12|cffced4da павших союзников.|r"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1275 @@
+{
+  "race": "Bandits",
+  "total_wts_updates": 493,
+  "wts_updates": {
+    "67": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения на |cffc8e087+7%|cffced4da и скорость атаки на |cffc8e087+5%|cffced4da находящихся рядом союзников.|r",
+    "218": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Воин улучшает экипировку, переходя на следующий класс с повышением характеристик и новыми навыками.|r",
+    "689": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Привлекает синдикат «Чёрный Ворон», открывая наём Киллеров в Посольстве.|n|n|cffe6c07bВнимание: исключает одновременную вербовку аристократов Синдиката.|cffced4da|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deКиллер|cffced4da.|r",
+    "693": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Привлекает дворян Синдиката, открывая наём Обедневших аристократов в Посольстве.|n|n|cffe6c07bВнимание: исключает одновременную вербовку убийц Чёрного Ворона.|cffced4da|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deОбедневший аристократ|cffced4da.|r",
+    "697": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Заключает контракт с Картелем Трюмных Вод, открывая наём Огров-Дуболомов в Посольстве и постройку Башен Трюмных вод.|n|n|cffe6c07bВнимание: исключает одновременную покупку механизмов Картеля Хитрой Шестеренки.|cffced4da|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deОгр-Дуболом|cffced4da|n- |cffa9c7deБашня ТК Трюмных вод|cffced4da.|r",
+    "705": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Заключает союз с пиратами Кровавого Паруса, открывая постройку Пиратских Фрегатов и Пиратских линкоров на Верфи.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da.|r",
+    "709": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Привлекает мятежников Братства Справедливости, открывая наём Партизан в Посольстве.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deПартизан|cffced4da.|r",
+    "870": "|cffe4cfa3Пиратский линкор|r",
+    "871": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый артиллерийский флагман пиратов Кровавого Паруса. Сокрушает вражеские укрепления и корабли бортовыми залпами.|n|nАтакует наземные цели.|r",
+    "872": "|cffe4cfa3Пиратский Фрегат|r",
+    "873": "|cffa6afb8ЮНИТ:|cffced4da Быстроходный трёхмачтовый парусник пиратов Кровавого Паруса. Эффективен в морских сражениях против кораблей и береговой авиации.|n|nАтакует наземные и воздушные цели.|r",
+    "879": "|cffe4cfa3Союз Бандитов|r",
+    "880": "|cffe4cfa3Союз Бандитов|r",
+    "881": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Расовый маркер технологий Союза Бандитов.|r",
+    "895": "|cffe4cfa3Большой грабеж — уровень 1|r (|cffffffffE|r)",
+    "896": "|cffe4cfa3Большой грабеж — уровень 2|r",
+    "897": "|cffe4cfa3Большой грабеж — уровень 3|r",
+    "902": "|cffe4cfa3Большой грабеж — уровень 1|r",
+    "903": "|cffe4cfa3Большой грабеж — уровень 2|r (|cffffffffE|r)",
+    "904": "|cffe4cfa3Большой грабеж — уровень 4|r",
+    "907": "|cffe4cfa3Большой грабеж — уровень 3|r (|cffffffffE|r)",
+    "922": "|cffe4cfa3Качественная броня|r",
+    "923": "|cffe4cfa3Качественная броня|r",
+    "928": "|cffe4cfa3Рассекающий удар|r",
+    "931": "|cffe4cfa3Сильный удар|r",
+    "944": "|cffe4cfa3Меч-фламберг|r",
+    "945": "|cffe4cfa3Меч-фламберг|r",
+    "953": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffc8e087+50%|cffced4da дополнительного урона героям.|r",
+    "954": "|cffe4cfa3Обнищавшая свита|r",
+    "956": "|cffe4cfa3Призыв свиты|r",
+    "957": "|cffe4cfa3Призыв свиты|r (|cffffffffQ|r)",
+    "958": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает ополченцев свиты на поле боя на |cffffffff2|cffced4da мин.|r",
+    "985": "|cffa6afb8ЮНИТ:|cffced4da Базовый стрелок Союза Бандитов. Поражает врагов из лука на расстоянии. При наличии золота улучшает снаряжение прямо в бою.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deГрабеж|cffced4da: добывает ресурсы при нанесении урона.|n- |cffa9c7deДозакупка снаряжения|cffced4da: улучшается до Опытного грабителя.|n|nАтакует наземные и воздушные цели.|r",
+    "1017": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак стрелков и осадных орудий на |cffc8e087+1|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой грабитель|cffced4da|n- |cffa9c7deОпытный грабитель|cffced4da|n- |cffa9c7deЛегендарный грабитель|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "1018": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак стрелков и осадных орудий на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой грабитель|cffced4da|n- |cffa9c7deОпытный грабитель|cffced4da|n- |cffa9c7deЛегендарный грабитель|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "1019": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак стрелков и осадных орудий на |cffc8e087+3|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой грабитель|cffced4da|n- |cffa9c7deОпытный грабитель|cffced4da|n- |cffa9c7deЛегендарный грабитель|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "1020": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак стрелков и осадных орудий на |cffc8e087+4|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой грабитель|cffced4da|n- |cffa9c7deОпытный грабитель|cffced4da|n- |cffa9c7deЛегендарный грабитель|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "1021": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак стрелков и осадных орудий на |cffc8e087+5|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой грабитель|cffced4da|n- |cffa9c7deОпытный грабитель|cffced4da|n- |cffa9c7deЛегендарный грабитель|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "1022": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак стрелков и осадных орудий на |cffc8e087+6|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой грабитель|cffced4da|n- |cffa9c7deОпытный грабитель|cffced4da|n- |cffa9c7deЛегендарный грабитель|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "1024": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя на |cffc8e087+1|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой бандит|cffced4da|n- |cffa9c7deОпытный бандит|cffced4da|n- |cffa9c7deЛегендарный бандит|cffced4da|n- |cffa9c7deАтаман|cffced4da|n- |cffa9c7deПартизан|cffced4da|n- |cffa9c7deКиллер|cffced4da|n- |cffa9c7deОгр-Дуболом|cffced4da|n- |cffa9c7deОбедневший аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "1037": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой бандит|cffced4da|n- |cffa9c7deОпытный бандит|cffced4da|n- |cffa9c7deЛегендарный бандит|cffced4da|n- |cffa9c7deАтаман|cffced4da|n- |cffa9c7deПартизан|cffced4da|n- |cffa9c7deКиллер|cffced4da|n- |cffa9c7deОгр-Дуболом|cffced4da|n- |cffa9c7deОбедневший аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "1038": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя на |cffc8e087+3|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой бандит|cffced4da|n- |cffa9c7deОпытный бандит|cffced4da|n- |cffa9c7deЛегендарный бандит|cffced4da|n- |cffa9c7deАтаман|cffced4da|n- |cffa9c7deПартизан|cffced4da|n- |cffa9c7deКиллер|cffced4da|n- |cffa9c7deОгр-Дуболом|cffced4da|n- |cffa9c7deОбедневший аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "1039": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя на |cffc8e087+4|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой бандит|cffced4da|n- |cffa9c7deОпытный бандит|cffced4da|n- |cffa9c7deЛегендарный бандит|cffced4da|n- |cffa9c7deАтаман|cffced4da|n- |cffa9c7deПартизан|cffced4da|n- |cffa9c7deКиллер|cffced4da|n- |cffa9c7deОгр-Дуболом|cffced4da|n- |cffa9c7deОбедневший аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "1040": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя на |cffc8e087+5|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой бандит|cffced4da|n- |cffa9c7deОпытный бандит|cffced4da|n- |cffa9c7deЛегендарный бандит|cffced4da|n- |cffa9c7deАтаман|cffced4da|n- |cffa9c7deПартизан|cffced4da|n- |cffa9c7deКиллер|cffced4da|n- |cffa9c7deОгр-Дуболом|cffced4da|n- |cffa9c7deОбедневший аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "1041": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак ближнего боя на |cffc8e087+6|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой бандит|cffced4da|n- |cffa9c7deОпытный бандит|cffced4da|n- |cffa9c7deЛегендарный бандит|cffced4da|n- |cffa9c7deАтаман|cffced4da|n- |cffa9c7deПартизан|cffced4da|n- |cffa9c7deКиллер|cffced4da|n- |cffa9c7deОгр-Дуболом|cffced4da|n- |cffa9c7deОбедневший аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "1066": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню воинов ближнего боя и техники на |cffc8e087+1|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой бандит|cffced4da|n- |cffa9c7deОпытный бандит|cffced4da|n- |cffa9c7deЛегендарный бандит|cffced4da|n- |cffa9c7deАтаман|cffced4da|n- |cffa9c7deПартизан|cffced4da|n- |cffa9c7deБоевой крошшер|cffced4da|n- |cffa9c7deОгр-Дуболом|cffced4da|n- |cffa9c7deОбедневший аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "1067": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню воинов ближнего боя и техники на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой бандит|cffced4da|n- |cffa9c7deОпытный бандит|cffced4da|n- |cffa9c7deЛегендарный бандит|cffced4da|n- |cffa9c7deАтаман|cffced4da|n- |cffa9c7deПартизан|cffced4da|n- |cffa9c7deБоевой крошшер|cffced4da|n- |cffa9c7deОгр-Дуболом|cffced4da|n- |cffa9c7deОбедневший аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "1068": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню воинов ближнего боя и техники на |cffc8e087+3|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой бандит|cffced4da|n- |cffa9c7deОпытный бандит|cffced4da|n- |cffa9c7deЛегендарный бандит|cffced4da|n- |cffa9c7deАтаман|cffced4da|n- |cffa9c7deПартизан|cffced4da|n- |cffa9c7deБоевой крошшер|cffced4da|n- |cffa9c7deОгр-Дуболом|cffced4da|n- |cffa9c7deОбедневший аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "1069": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню воинов ближнего боя и техники на |cffc8e087+4|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой бандит|cffced4da|n- |cffa9c7deОпытный бандит|cffced4da|n- |cffa9c7deЛегендарный бандит|cffced4da|n- |cffa9c7deАтаман|cffced4da|n- |cffa9c7deПартизан|cffced4da|n- |cffa9c7deБоевой крошшер|cffced4da|n- |cffa9c7deОгр-Дуболом|cffced4da|n- |cffa9c7deОбедневший аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "1070": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню воинов ближнего боя и техники на |cffc8e087+5|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой бандит|cffced4da|n- |cffa9c7deОпытный бандит|cffced4da|n- |cffa9c7deЛегендарный бандит|cffced4da|n- |cffa9c7deАтаман|cffced4da|n- |cffa9c7deПартизан|cffced4da|n- |cffa9c7deБоевой крошшер|cffced4da|n- |cffa9c7deОгр-Дуболом|cffced4da|n- |cffa9c7deОбедневший аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "1071": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню воинов ближнего боя и техники на |cffc8e087+6|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой бандит|cffced4da|n- |cffa9c7deОпытный бандит|cffced4da|n- |cffa9c7deЛегендарный бандит|cffced4da|n- |cffa9c7deАтаман|cffced4da|n- |cffa9c7deПартизан|cffced4da|n- |cffa9c7deБоевой крошшер|cffced4da|n- |cffa9c7deОгр-Дуболом|cffced4da|n- |cffa9c7deОбедневший аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "1084": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков, магов и катапульт на |cffc8e087+1|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой грабитель|cffced4da|n- |cffa9c7deОпытный грабитель|cffced4da|n- |cffa9c7deЛегендарный грабитель|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "1085": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков, магов и катапульт на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой грабитель|cffced4da|n- |cffa9c7deОпытный грабитель|cffced4da|n- |cffa9c7deЛегендарный грабитель|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "1086": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков, магов и катапульт на |cffc8e087+3|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой грабитель|cffced4da|n- |cffa9c7deОпытный грабитель|cffced4da|n- |cffa9c7deЛегендарный грабитель|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "1087": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков, магов и катапульт на |cffc8e087+4|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой грабитель|cffced4da|n- |cffa9c7deОпытный грабитель|cffced4da|n- |cffa9c7deЛегендарный грабитель|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "1088": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков, магов и катапульт на |cffc8e087+5|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой грабитель|cffced4da|n- |cffa9c7deОпытный грабитель|cffced4da|n- |cffa9c7deЛегендарный грабитель|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "1089": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту стрелков, магов и катапульт на |cffc8e087+6|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой грабитель|cffced4da|n- |cffa9c7deОпытный грабитель|cffced4da|n- |cffa9c7deЛегендарный грабитель|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "1251": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Воин приобретает снаряжение ветерана, получая максимальный класс и высшие боевые способности.|r",
+    "1320": "|cffe4cfa3Верфь|r",
+    "1321": "|cffe4cfa3Верфь|r (|cffffffffC|r)",
+    "1322": "|cffa6afb8ЗДАНИЕ:|cffced4da Прибрежная верфь пиратов и контрабандистов. Позволяет спускать на воду боевые корабли и изучать улучшения флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da: манёвренный боевой корабль.|n- |cffa9c7deПиратский линкор|cffced4da: тяжёлый артиллерийский корабль.|n- |cffa9c7deТранспорт|cffced4da: морское десантное судно.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОрудия флота|cffced4da: увеличивает урон корабельных орудий.|n- |cffa9c7deУкреплённый корпус|cffced4da: повышает прочность и защиту кораблей.|n- |cffa9c7deОбстрел|cffced4da: повышает дальность атак кораблей.|n- |cffa9c7deДополнительные паруса|cffced4da: увеличивает скорость кораблей.|n- |cffa9c7deПочинка|cffced4da: позволяет кораблям восстанавливать прочность.|r",
+    "1332": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас прочности и броню построек Союза Бандитов.|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все здания и оборонительные башни.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "1333": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас прочности и броню построек Союза Бандитов.|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все здания и оборонительные башни.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "1334": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас прочности и броню построек Союза Бандитов.|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все здания и оборонительные башни.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "1335": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас прочности и броню построек Союза Бандитов.|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все здания и оборонительные башни.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "1336": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас прочности и броню построек Союза Бандитов.|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все здания и оборонительные башни.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "1337": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас прочности и броню построек Союза Бандитов.|n|n|cffa6afb8Затрагивает:|cffced4da|n- Все здания и оборонительные башни.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "1339": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья и маны колдунов на |cffc8e087+50|cffced4da, ускоряет регенерацию маны.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "1352": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья и маны колдунов на |cffc8e087+100|cffced4da, ускоряет регенерацию маны.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "1353": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья и маны колдунов на |cffc8e087+150|cffced4da, ускоряет регенерацию маны.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "1354": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья и маны колдунов на |cffc8e087+200|cffced4da, ускоряет регенерацию маны.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "1355": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья и маны колдунов на |cffc8e087+250|cffced4da, ускоряет регенерацию маны.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "1356": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья и маны колдунов на |cffc8e087+300|cffced4da, ускоряет регенерацию маны.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "1385": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья и маны жрецов на |cffc8e087+50|cffced4da, ускоряет регенерацию маны.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "1386": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья и маны жрецов на |cffc8e087+100|cffced4da, ускоряет регенерацию маны.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "1387": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья и маны жрецов на |cffc8e087+150|cffced4da, ускоряет регенерацию маны.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "1388": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья и маны жрецов на |cffc8e087+200|cffced4da, ускоряет регенерацию маны.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "1389": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья и маны жрецов на |cffc8e087+250|cffced4da, ускоряет регенерацию маны.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "1390": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья и маны жрецов на |cffc8e087+300|cffced4da, ускоряет регенерацию маны.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "1394": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает рой летучих тварей по сектору перед собой, наносящий по |cffffffff65|cffced4da ед. урона врагам на своём пути.|r",
+    "1410": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу магических атак заклинателей на |cffc8e087+1|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "1411": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу магических атак заклинателей на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "1412": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу магических атак заклинателей на |cffc8e087+3|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "1413": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу магических атак заклинателей на |cffc8e087+4|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "1414": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу магических атак заклинателей на |cffc8e087+5|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "1415": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу магических атак заклинателей на |cffc8e087+6|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da|n- |cffa9c7deОпытный колдун|cffced4da|n- |cffa9c7deЛегендарный колдун|cffced4da|n- |cffa9c7deРядовой жрец|cffced4da|n- |cffa9c7deОпытный жрец|cffced4da|n- |cffa9c7deЛегендарный жрец|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "1540": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает боевых псов, сражающихся на стороне героя.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "1541": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает боевых псов, сражающихся на стороне героя.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "1542": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает боевых псов, сражающихся на стороне героя.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "1543": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает боевых псов, сражающихся на стороне героя.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "1545": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает свору боевых псов, сражающихся на стороне героя.|r",
+    "1550": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Притягивает цель к земле и обездвиживает её.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "1554": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Притягивает цель к земле и обездвиживает её.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "1555": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Притягивает цель к земле и обездвиживает её.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "1556": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Притягивает цель к земле и обездвиживает её.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "1560": "|cffe4cfa3Жажда крови — уровень 2|r (|cffffffffR|r)",
+    "1992": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Окружает цель барьером, поглощающим до |cffffffff300|cffced4da ед. урона от заклинаний.|r",
+    "2000": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff12%|cffced4da атака нанесёт на |cffffffff10|cffced4da больше урона и оглушит цель на |cffffffff1|cffced4da сек. (не оглушает героев).|r",
+    "2002": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Притягивает цель к земле и удерживает её на |cffffffff8|cffced4da сек.|r",
+    "2014": "|cffe4cfa3Огненный ливень — уровень 4|r (|cffffffffW|r)",
+    "2015": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на указанную область волны огня, наносящие мгновенный и периодический урон.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "2016": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно ускоряет регенерацию маны находящихся рядом союзников.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "2025": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает управляемый смерч, замедляющий и подбрасывающий наземных врагов и наносящий урон по области.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+    "2026": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает управляемый смерч, замедляющий и подбрасывающий наземных врагов и наносящий урон по области.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r",
+    "2027": "|cffe4cfa3Огненный торнадо|r",
+    "2028": "|cffe4cfa3Огненный торнадо — уровень 1|r (|cffffffffR|r)",
+    "2035": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает управляемый вихрь, подбрасывающий наземных врагов и наносящий урон по области.|r",
+    "2036": "|cffe4cfa3Огненный торнадо — уровень 2|r (|cffffffffR|r)",
+    "2045": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает ловчую сеть, притягивая воздушные цели к земле и обездвиживая врага.|r",
+    "2063": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну чистой энергии, поражающую наземных врагов на своём пути.|r",
+    "2089": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно даёт шанс поглотить значительную часть урона от физических атак противника.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "2093": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно даёт шанс поглотить значительную часть урона от физических атак противника.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "2094": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно даёт шанс поглотить значительную часть урона от физических атак противника.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "2095": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно даёт шанс поглотить значительную часть урона от физических атак противника.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "2100": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон по всем целям, кроме героев и зданий.|r",
+    "2188": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость атаки и передвижения на |cffc8e087+25%|cffced4da на короткое время.|r",
+    "2374": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Автоматически призывает на помощь двух ополченцев свиты при появлении противника.|r",
+    "3794": "|cffe4cfa3Большой грабеж — уровень 4|r (|cffffffffE|r)",
+    "4497": "|cffe4cfa3Пиратский линкор|r (|cffffffffE|r)",
+    "5079": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой рабочими древесины на |cffc8e087+10|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deКаменщик|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "5080": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой рабочими древесины на |cffc8e087+15|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deКаменщик|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "5081": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой рабочими древесины на |cffc8e087+20|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deКаменщик|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "5082": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой рабочими древесины на |cffc8e087+25|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deКаменщик|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "5083": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой рабочими древесины на |cffc8e087+30|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deКаменщик|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "5084": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём переносимой рабочими древесины на |cffc8e087+5|cffced4da.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deКаменщик|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "5239": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Укрывает союзника ледяным щитом, дающим |cffc8e087+3|cffced4da к броне и замедляющим атакующих в ближнем бою врагов.|r",
+    "5396": "|cffe4cfa3Скрыться|r",
+    "5403": "|cffe4cfa3Скрыться|r (|cffffffffQ|r)",
+    "7058": "|cffa6afb8ЗДАНИЕ:|cffced4da Чародейская дозорная вышка. Каждым выстрелом уничтожает ману цели, нанося эквивалентный дополнительный урон, и наносит повышенный урон призванным существам.|n|nАтакует наземные и воздушные цели.|r",
+    "7390": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает получаемый от вражеских атак урон на |cffc8e0872|cffced4da ед. Минимальный получаемый урон: |cffffffff10|cffced4da.|r",
+    "7443": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Элитное переоснащение боевой единицы.|r",
+    "7514": "|cffe4cfa3Лагерь воров|r",
+    "9737": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий Союза Бандитов. Возводит и ремонтирует постройки, добывает золото в рудниках и рубит деревья.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСкачок|cffced4da: мгновенно переносится на короткое расстояние.|n- |cffa9c7deГрабеж|cffced4da: добывает ресурсы при нанесении урона.|n|nАтакует наземные цели.|r",
+    "9813": "|cffe4cfa3Лагерь воров|r (|cffffffffQ|r)",
+    "9971": "|cffa6afb8ЗДАНИЕ:|cffced4da Лагерный пункт сбора и тренировки бойцов Союза Бандитов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРядовой бандит|cffced4da: пехотинец ближнего боя.|n- |cffa9c7deОпытный бандит|cffced4da: закалённый штурмовик.|n- |cffa9c7deЛегендарный бандит|cffced4da: элитный тяжеловооружённый головорез.|n- |cffa9c7deРядовой грабитель|cffced4da: базовый стрелок дальнего боя.|n- |cffa9c7deОпытный грабитель|cffced4da: меткий засадный стрелок.|n- |cffa9c7deЛегендарный грабитель|cffced4da: ветеран дальнего боя.|n- |cffa9c7deАтаман|cffced4da: верховой лидер и командир шайки.|n- |cffa9c7deКатапульта|cffced4da: осадное орудие дальнего боя.|r",
+    "10113": "|cffa6afb8ЗДАНИЕ:|cffced4da Главный оплот и центр сбора ресурсов Союза Бандитов (первая ступень). Позволяет обучать каменщиков и доставлять добытые золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deКаменщик|cffced4da: базовый рабочий, строитель и добытчик ресурсов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deБольшой грабеж|cffced4da: добыча ресурсов при атаках.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deОплот воров|cffced4da: открывает передовые постройки и войска.|r",
+    "10141": "|cffa6afb8ЗДАНИЕ:|cffced4da Обитель тёмных чародеев и отлученных жрецов, поставивших магию на службу разбою.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРядовой колдун|cffced4da: начинающий заклинатель с морозным доспехом.|n- |cffa9c7deОпытный колдун|cffced4da: искусный чародей с антимагическим щитом.|n- |cffa9c7deЛегендарный колдун|cffced4da: верховный чернокнижник с рассеиванием чар.|n- |cffa9c7deРядовой жрец|cffced4da: целитель и боевой лекарь банды.|n- |cffa9c7deОпытный жрец|cffced4da: жрец поддержки с волшебным огнём.|n- |cffa9c7deЛегендарный жрец|cffced4da: могучий иерарх с тёмной стаей.|r",
+    "10652": "|cffe4cfa3Оплот воров|r",
+    "10682": "|cffe4cfa3Оплот воров|r (|cffffffffZ|r)",
+    "10685": "|cffe4cfa3Импровизированные казармы|r",
+    "10686": "|cffe4cfa3Импровизированные казармы|r (|cffffffffW|r)",
+    "10690": "|cffe4cfa3Чёрная академия|r",
+    "10870": "|cffe4cfa3Чёрная академия|r (|cffffffffF|r)",
+    "11167": "|cffa6afb8ЮНИТ:|cffced4da Базовый пехотинец ближнего боя. Вооружён топором и щитом. При накоплении золота может улучшить своё снаряжение прямо на поле боя.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deГрабеж|cffced4da: добывает ресурсы при нанесении урона.|n- |cffa9c7deДозакупка снаряжения|cffced4da: улучшается до Опытного бандита.|n|nАтакует наземные цели.|r",
+    "11172": "|cffe4cfa3Импровизированное посольство|r",
+    "11531": "|cffe4cfa3Посольство|r",
+    "11532": "|cffe4cfa3Посольство|r (|cffffffffB|r)",
+    "11550": "|cffe4cfa3Кузница|r (|cffffffffR|r)",
+    "11568": "|cffe4cfa3Кузница|r",
+    "11620": "|cffe4cfa3Каменщик|r",
+    "11621": "|cffe4cfa3Каменщик|r (|cffffffffQ|r)",
+    "11634": "|cffe4cfa3Рядовой бандит|r (|cffffffffQ|r)",
+    "11692": "|cffe4cfa3Рядовой грабитель|r",
+    "11694": "|cffe4cfa3Рядовой грабитель|r (|cffffffffW|r)",
+    "11703": "|cffe4cfa3Опытный бандит|r",
+    "11707": "|cffe4cfa3Легендарный бандит|r",
+    "11711": "|cffe4cfa3Опытный грабитель|r",
+    "11712": "|cffe4cfa3Бастион воров|r",
+    "11713": "|cffe4cfa3Бастион воров|r (|cffffffffZ|r)",
+    "12087": "|cffe4cfa3Избушка|r",
+    "12452": "|cffe4cfa3Рядовой колдун|r (|cffffffffW|r)",
+    "12453": "|cffe4cfa3Рядовой колдун|r",
+    "12460": "|cffe4cfa3Атаман|r",
+    "12501": "|cffe4cfa3Атаман|r (|cffffffffD|r)",
+    "12671": "|cffa6afb8ЗДАНИЕ:|cffced4da Дипломатический штаб связи с криминальными синдикатами, бандами и гоблинскими картелями.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПартизан|cffced4da: диверсант Братства Справедливости.|n- |cffa9c7deБоевой крошшер|cffced4da: шагоход Картеля Хитрой Шестеренки.|n- |cffa9c7deКиллер|cffced4da: профессиональный убийца Чёрного Ворона.|n- |cffa9c7deОгр-Дуболом|cffced4da: громила Картеля Трюмных Вод.|n- |cffa9c7deОбедневший аристократ|cffced4da: дворянин Синдиката с личной свитой.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПривлечь Братство Справедливости|cffced4da: открывает Партизан.|n- |cffa9c7deЗакупить механизмы Картеля|cffced4da: открывает Крошшеров.|n- |cffa9c7deПривлечь убийц Чёрного Ворона|cffced4da: открывает Киллеров.|n- |cffa9c7deПривлечь дуболомов Картеля|cffced4da: открывает Огров-Дуболомов.|n- |cffa9c7deПривлечь аристократов Синдиката|cffced4da: открывает Аристократов.|n- |cffa9c7deПривлечь пиратов Кровавого Паруса|cffced4da: открывает пиратские корабли.|r",
+    "12703": "|cffe4cfa3Опытный колдун|r",
+    "12747": "|cffa6afb8ЮНИТ:|cffced4da Элитный ветеран ближнего боя. Защищён качественной бронёй и сокрушает противников смертоносными выпадами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКачественная броня|cffced4da: снижает входящий физический урон.|n- |cffa9c7deКритический удар|cffced4da: шанс нанести дополнительный урон.|n- |cffa9c7deГрабеж|cffced4da: добывает ресурсы при нанесении урона.|n|nАтакует наземные цели.|r",
+    "12751": "|cffa6afb8ЮНИТ:|cffced4da Закалённый засадный стрелок. Использует отравленные стрелы, замедляющие жертву, и умеет сливаться с ночной тенью.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗамедляющий яд|cffced4da: отравляет цель, снижая скорость атаки и перемещения.|n- |cffa9c7deСлияние с тенью|cffced4da: скрывается в ночное время.|n- |cffa9c7deГрабеж|cffced4da: добывает ресурсы при нанесении урона.|n- |cffa9c7deДозакупка снаряжения|cffced4da: улучшается до Легендарного грабителя.|n|nАтакует наземные и воздушные цели.|r",
+    "12754": "|cffe4cfa3Легендарный колдун|r",
+    "12762": "|cffe4cfa3Легендарный грабитель|r",
+    "12769": "|cffe4cfa3Катапульта|r",
+    "12775": "|cffe4cfa3Катапульта|r (|cffffffffE|r)",
+    "12788": "|cffe4cfa3Импровизированное посольство|r (|cffffffffD|r)",
+    "12797": "|cffe4cfa3Рядовой жрец|r (|cffffffffQ|r)",
+    "12804": "|cffe4cfa3Рядовой жрец|r",
+    "12835": "|cffe4cfa3Опытный жрец|r",
+    "12996": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает показатель брони находящихся рядом союзников на |cffc8e087+2|cffced4da.|r",
+    "13176": "|cffe4cfa3Легендарный жрец|r",
+    "13177": "|cffe4cfa3Партизан|r",
+    "13179": "|cffe4cfa3Партизан|r (|cffffffffQ|r)",
+    "13180": "|cffe4cfa3Боевой крошшер|r",
+    "13181": "|cffe4cfa3Боевой крошшер|r (|cffffffffX|r)",
+    "13541": "|cffe4cfa3Киллер|r",
+    "13542": "|cffe4cfa3Киллер|r (|cffffffffS|r)",
+    "13543": "|cffe4cfa3Огр-Дуболом|r",
+    "13613": "|cffe4cfa3Огр-Дуболом|r (|cffffffffQ|r)",
+    "13647": "|cffe4cfa3Обедневший аристократ|r",
+    "13648": "|cffe4cfa3Обедневший аристократ|r (|cffffffffA|r)",
+    "13654": "|cffe4cfa3Хилая башня|r",
+    "13655": "|cffe4cfa3Хилая башня|r (|cffffffffZ|r)",
+    "13657": "|cffe4cfa3Псарь|r",
+    "13662": "|cffe4cfa3Псарь|r (|cffffffffX|r)",
+    "13666": "|cffe4cfa3Чёрный маг|r",
+    "13669": "|cffe4cfa3Чёрный маг|r (|cffffffffZ|r)",
+    "13671": "|cffe4cfa3Воевода|r",
+    "13673": "|cffe4cfa3Воевода|r (|cffffffffC|r)",
+    "13675": "|cffe4cfa3Алтарь воров|r",
+    "13676": "|cffe4cfa3Алтарь воров|r (|cffffffffS|r)",
+    "13677": "|cffe4cfa3Башня ТК Хитрой Шестеренки|r",
+    "13678": "|cffe4cfa3Башня ТК Хитрой Шестеренки|r (|cffffffffV|r)",
+    "13679": "|cffe4cfa3Башня ТК Трюмных вод|r",
+    "13680": "|cffe4cfa3Башня ТК Трюмных вод|r (|cffffffffC|r)",
+    "13681": "|cffe4cfa3Рядовой бандит|r",
+    "13682": "|cffe4cfa3Лесопилка|r",
+    "13683": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)",
+    "14679": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Отравляет цель при попадании, нанося периодический урон и снижая скорость её передвижения и атаки.|r",
+    "14874": "|cffa6afb8ЮНИТ:|cffced4da Начинающий тёмный маг поддержки. Защищает союзников морозным доспехом, замедляющим вражеских бойцов ближнего боя.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМорозный доспех|cffced4da: повышает броню цели и замедляет атакующих.|n- |cffa9c7deГрабеж|cffced4da: добывает ресурсы при нанесении урона.|n- |cffa9c7deДозакупка снаряжения|cffced4da: улучшается до Опытного колдуна.|n|nАтакует наземные и воздушные цели.|r",
+    "14891": "|cffa6afb8ЮНИТ:|cffced4da Легендарный конный командир Союза Бандитов. Вдохновляет войско аурой выносливости, совершает стремительный рывок и сокрушает врагов критическими ударами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРывок|cffced4da: временно увеличивает скорость атаки и бега.|n- |cffa9c7deАура выносливости|cffced4da: ускоряет окружающих союзников.|n- |cffa9c7deКритический удар|cffced4da: шанс нанести дополнительный урон.|n- |cffa9c7deКачественная броня|cffced4da: снижает входящий физический урон.|n- |cffa9c7deГрабеж|cffced4da: добывает ресурсы при нанесении урона.|n|nАтакует наземные цели.|r",
+    "14892": "|cffa6afb8ЮНИТ:|cffced4da Опытный тёмный заклинатель. Ограждает союзников морозным доспехом и накладывает антимагический щит, поглощающий заклинания.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАнтимагический щит|cffced4da: поглощает урон от заклинаний.|n- |cffa9c7deМорозный доспех|cffced4da: повышает защиту и замедляет атакующих.|n- |cffa9c7deГрабеж|cffced4da: добывает ресурсы при нанесении урона.|n- |cffa9c7deДозакупка снаряжения|cffced4da: улучшается до Легендарного колдуна.|n|nАтакует наземные и воздушные цели.|r",
+    "14894": "|cffa6afb8ЮНИТ:|cffced4da Высший чернокнижник банды. Владеет полным арсеналом тёмной магии: морозным доспехом, антимагическим щитом и развеиванием чар.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАнтимагия|cffced4da: развеивает эффекты, сжигает ману и наносит урон призванным.|n- |cffa9c7deАнтимагический щит|cffced4da: поглощает урон от заклинаний.|n- |cffa9c7deМорозный доспех|cffced4da: повышает броню и замедляет атакующих.|n- |cffa9c7deГрабеж|cffced4da: добывает ресурсы при нанесении урона.|n|nАтакует наземные и воздушные цели.|r",
+    "14895": "|cffa6afb8ЮНИТ:|cffced4da Элитный снайпер и мастер засад. Опутывает врагов сетями, поражает отравленными стрелами и скрывается в ночи.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deОпутывание|cffced4da: притягивает и обездвиживает врага на земле.|n- |cffa9c7deЗамедляющий яд|cffced4da: отравляет цель, снижая скорость атаки и перемещения.|n- |cffa9c7deСлияние с тенью|cffced4da: скрывается в ночное время.|n- |cffa9c7deГрабеж|cffced4da: добывает ресурсы при нанесении урона.|n|nАтакует наземные и воздушные цели.|r",
+    "15278": "|cffa6afb8ЮНИТ:|cffced4da Дальнобойное осадное орудие. Эффективно разрушает здания и поражает скопления пехоты на большой дистанции.|n|nАтакует наземные цели.|r",
+    "15279": "|cffa6afb8ЮНИТ:|cffced4da Целитель и духовный наставник банды. Поддерживает жизнь бойцов исцеляющей молитвой прямо в разгаре битвы.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deИсцеление|cffced4da: восстанавливает здоровье раненым союзникам.|n- |cffa9c7deГрабеж|cffced4da: добывает ресурсы при нанесении урона.|n- |cffa9c7deДозакупка снаряжения|cffced4da: улучшается до Опытного жреца.|n|nАтакует наземные и воздушные цели.|r",
+    "15280": "|cffa6afb8ЮНИТ:|cffced4da Опытный священнослужитель бандитов. Исцеляет раненых и ослабляет вражескую броню волшебным огнём.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолшебный огонь|cffced4da: снижает броню врага и раскрывает невидимость.|n- |cffa9c7deИсцеление|cffced4da: восстанавливает здоровье раненым союзникам.|n- |cffa9c7deГрабеж|cffced4da: добывает ресурсы при нанесении урона.|n- |cffa9c7deДозакупка снаряжения|cffced4da: улучшается до Легендарного жреца.|n|nАтакует наземные и воздушные цели.|r",
+    "15281": "|cffa6afb8ЮНИТ:|cffced4da Первосвященник падшей веры. Исцеляет соратников, разъедает защиту врагов волшебным огнём и поражает ряды неприятеля тёмной стаей.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТёмная стая|cffced4da: выпускает рой летучих тварей, наносящих урон по конусу.|n- |cffa9c7deВолшебный огонь|cffced4da: снижает броню врага и раскрывает невидимость.|n- |cffa9c7deИсцеление|cffced4da: восстанавливает здоровье раненым союзникам.|n- |cffa9c7deГрабеж|cffced4da: добывает ресурсы при нанесении урона.|n|nАтакует наземные и воздушные цели.|r",
+    "15282": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый пилотируемый шагоход Картеля Хитрой Шестеренки. Защищён качественной бронёй, наносит рассекающие удары по толпе и способен рубить лес.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРассекающий удар|cffced4da: наносит урон окружающим целям при атаке.|n- |cffa9c7deКачественная броня|cffced4da: снижает входящий физический урон.|n- |cffa9c7deДобыча ресурсов|cffced4da: добывает древесину из деревьев.|n|nАтакует наземные цели.|r",
+    "15287": "|cffa6afb8ЮНИТ:|cffced4da Профессиональный наёмный убийца синдиката «Чёрный Ворон». Специализируется на ликвидации вражеских героев и командиров.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМеч-фламберг|cffced4da: наносит |cffc8e087+50%|cffced4da урона героям.|n- |cffa9c7deЗамедляющий яд|cffced4da: отравляет цель, снижая скорость атаки и бега.|n- |cffa9c7deСкрыться|cffced4da: даёт невидимость и бонус к урону из засады.|n|nАтакует наземные цели.|r",
+    "15291": "|cffa6afb8ЮНИТ:|cffced4da Массивный наёмный громила Картеля Трюмных Вод. Обладает огромным запасом здоровья, оглушает врагов сильными ударами и способен быстро восстанавливать здоровье.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСильный удар|cffced4da: шанс оглушить врага и нанести дополнительный урон.|n- |cffa9c7deСамолечение|cffced4da: восстанавливает 50 ед. здоровья в секунду.|n|nАтакует наземные цели.|r",
+    "15292": "|cffa6afb8ЮНИТ:|cffced4da Опальный дворянин Синдиката. Защищает союзников аурой благочестия и призывает на подмогу верную вооружённую свиту.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПризыв свиты|cffced4da: призывает ополченцев свиты на поле боя.|n- |cffa9c7deАура благочестия|cffced4da: повышает броню окружающих союзников.|n|nАтакует наземные цели.|r",
+    "15365": "|cffa6afb8ЗДАНИЕ:|cffced4da Дополнительное представительство бандитских союзов и наёмных гильдий.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРядовой бандит|cffced4da: пехотинец ближнего боя.|n- |cffa9c7deОпытный бандит|cffced4da: закалённый штурмовик.|n- |cffa9c7deЛегендарный бандит|cffced4da: элитный головорез.|n- |cffa9c7deАтаман|cffced4da: верховой командир.|r",
+    "15418": "|cffa6afb8ЮНИТ:|cffced4da Скрытный боец Братства Справедливости. Незаметно пробирается в тыл врага, ставит капканы и наносит внезапный урон из невидимости.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСкрыться|cffced4da: даёт невидимость и бонус к урону при ударе из засады.|n- |cffa9c7deКапкан|cffced4da: обездвиживает вражескую единицу.|n- |cffa9c7deРемонт|cffced4da: чинит технику и постройки.|n- |cffa9c7deГрабеж|cffced4da: добывает ресурсы при нанесении урона.|n|nАтакует наземные цели.|r",
+    "15421": "|cffa6afb8ЗДАНИЕ:|cffced4da Арсенал и мастерская оружейников Союза Бандитов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМечи|cffced4da: увеличивает урон ближнего боя.|n- |cffa9c7deСтрелы|cffced4da: увеличивает урон стрелков.|n- |cffa9c7deТяжёлая броня|cffced4da: повышает защиту ближнего боя.|n- |cffa9c7deЛёгкая броня|cffced4da: повышает защиту стрелков и магов.|n- |cffa9c7deМагические талисманы|cffced4da: увеличивает урон заклинателей.|n- |cffa9c7deКонтрабанда фолиантов|cffced4da: усиливает здоровье и ману колдунов.|n- |cffa9c7deКонтрабанда писаний|cffced4da: усиливает здоровье и ману жрецов.|r",
+    "15422": "|cffa6afb8ЗДАНИЕ:|cffced4da Склад древесины и мастерская лесорубов. Служит пунктом приёма добытого дерева.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенные инструменты|cffced4da: увеличивает объём переносимой рабочими древесины.|n- |cffa9c7deУлучшенная кладка|cffced4da: повышает прочность и броню построек.|r",
+    "15423": "|cffa6afb8ЗДАНИЕ:|cffced4da Укреплённая стрелковая вышка Союза Бандитов. Обстреливает противников стрелами.|n|nАтакует наземные и воздушные цели.|r",
+    "15424": "|cffa6afb8ЗДАНИЕ:|cffced4da Укреплённый оплот бандитов (вторая ступень). Расширяет возможности базы, открывая доступ к Чёрной академии и новым технологиям.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deКаменщик|cffced4da: базовый рабочий, строитель и добытчик ресурсов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deБольшой грабеж|cffced4da: добыча ресурсов при атаках.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deБастион воров|cffced4da: высшая ступень ставки бандитов.|r",
+    "15425": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище предводителей Союза Бандитов. Служит для призыва и воскрешения павших героев.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deПсарь|cffced4da: свирепый дрессировщик боевых псов.|n- |cffa9c7deЧёрный маг|cffced4da: повелитель разрушительного огня и порождений лавы.|n- |cffa9c7deВоевода|cffced4da: несокрушимый конный командир и штурмовик.|r",
+    "15426": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовый сторожевой дозор. Имеет слабую атаку, но служит основой для возведения специализированных оборонительных вышек.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deХилая башня|cffced4da: укреплённая стрелковая вышка.|n- |cffa9c7deХилая магическая башня|cffced4da: сжигает ману и поражает призванных существ.|n- |cffa9c7deБашня ТК Трюмных вод|cffced4da: скорострельная противопехотная башня.|n- |cffa9c7deБашня ТК Хитрой Шестеренки|cffced4da: мощная тяжёлая пушка.|n|nАтакует наземные и воздушные цели.|r",
+    "15427": "|cffa6afb8ЗДАНИЕ:|cffced4da Тяжёлая осадная турель Картеля Хитрой Шестеренки. Обладает большим временем перезарядки, но наносит колоссальный урон каждым залпом.|n|nАтакует наземные и воздушные цели.|r",
+    "15428": "|cffa6afb8ЗДАНИЕ:|cffced4da Скорострельная защитная вышка Картеля Трюмных Вод. Ведёт непрерывный беглый огонь, подавляя скопления лёгких вражеских сил.|n|nАтакует наземные и воздушные цели.|r",
+    "15565": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает подготовку Атаманов — верховых командиров бандитских шаек — в Импровизированных казармах.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deИмпровизированные казармы|cffced4da.|r",
+    "18411": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ставит скрытый капкан, обездвиживающий наступившего врага на |cffffffff5|cffced4da сек.|r",
+    "20022": "|cffa6afb8ГЕРОЙ:|cffced4da Свирепый дрессировщик и охотник. Основная характеристика — |cffffffffсила|cffced4da. Призывает стаю боевых псов, вдохновляет союзников яростным воем, связывает врагов ловчей сетью и наделяет бойцов аурой выносливости.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПризвать собак|cffced4da: призывает боевых псов, сражающихся на стороне героя.|n- |cffa9c7deЖажда крови|cffced4da: существенно ускоряет атаку и перемещение цели.|n- |cffa9c7deАура выносливости|cffced4da: пассивно повышает скорость атаки и передвижения союзников.|n- |cffa9c7deОпутывание|cffced4da: притягивает и удерживает врага сетью.|n|nАтакует наземные цели.|r",
+    "20023": "|cffa6afb8ГЕРОЙ:|cffced4da Закалённый конный предводитель армии бандитов. Основная характеристика — |cffffffffсила|cffced4da. Защищён зачарованной бронёй, сотрясает ряды неприятеля волной силы, совершает стремительный марш-бросок и безжалостно расправляется с рядовыми войсками врага.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолна силы|cffced4da: выпускает волну энергии, наносящую урон в секторе.|n- |cffa9c7deМарш-бросок|cffced4da: временно ускоряет передвижение окружающих войск.|n- |cffa9c7deЗачарованная броня|cffced4da: поглощает значительную часть входящего физического урона.|n- |cffa9c7deРезня слабаков|cffced4da: многократно увеличивает урон по всем целям, кроме героев и зданий.|n|nАтакует наземные цели.|r",
+    "20030": "|cffa6afb8ГЕРОЙ:|cffced4da Могущественный чародей-мистик и повелитель стихий. Основная характеристика — |cffffffffинтеллект|cffced4da. Обрушивает на врагов огненный ливень, призывает размножающихся лавовых тварей, питает армию аурой гениальности и вздымает сокрушительный огненный торнадо.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deОгненный ливень|cffced4da: обрушивает волны огня на указанную область.|n- |cffa9c7deПризыв порождения лавы|cffced4da: призывает растущее огненное существо.|n- |cffa9c7deАура гениальности|cffced4da: пассивно ускоряет восстановление маны союзников.|n- |cffa9c7deОгненный торнадо|cffced4da: призывает вихрь, подбрасывающий и сжигающий врагов.|n|nАтакует наземные и воздушные цели.|r",
+    "20159": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Снаряды катапульт покрываются горючей смесью, поджигая поражённую область и нанося периодический урон огнём.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|r",
+    "20161": "|cffa6afb8ЮНИТ:|cffced4da Закалённый боец ближнего боя. Обладает повышенным запасом здоровья и шансом нанести критический удар.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКритический удар|cffced4da: шанс нанести дополнительный урон.|n- |cffa9c7deГрабеж|cffced4da: добывает ресурсы при нанесении урона.|n- |cffa9c7deДозакупка снаряжения|cffced4da: улучшается до Легендарного бандита.|n|nАтакует наземные цели.|r",
+    "20451": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Резко повышает скорость передвижения героя и союзников поблизости.|r",
+    "20455": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Резко увеличивает скорость передвижения воинов вокруг героя на короткое время.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "20456": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Резко увеличивает скорость передвижения воинов вокруг героя на короткое время.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "20457": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Резко увеличивает скорость передвижения воинов вокруг героя на короткое время.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "20458": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Резко увеличивает скорость передвижения воинов вокруг героя на короткое время.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "21817": "|cffe4cfa3Тёмная стая|r (|cffffffffE|r)",
+    "22460": "|cffe4cfa3Опытный бандит|r (|cffffffffA|r)",
+    "22503": "|cffe4cfa3Легендарный бандит|r (|cffffffffZ|r)",
+    "22511": "|cffe4cfa3Опытный грабитель|r (|cffffffffS|r)",
+    "22811": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость атаки на |cffc8e087+300%|cffced4da и скорость передвижения на |cffc8e087+130%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r",
+    "22817": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость атаки на |cffc8e087+200%|cffced4da и скорость передвижения на |cffc8e087+70%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+    "23080": "|cffe4cfa3Аура гениальности|r",
+    "23529": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки наносят |cffffffff7%|cffced4da урона всем врагам рядом с основной целью.|r",
+    "24336": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость передвижения на |cffc8e087+19%|cffced4da и атаки на |cffc8e087+14%|cffced4da находящихся рядом союзников.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "25056": "|cffe4cfa3Волна силы|r",
+    "25057": "|cffe4cfa3Волна силы|r",
+    "25058": "|cffe4cfa3Волна силы — уровень 1|r (|cffffffffQ|r)",
+    "25079": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает положительные эффекты с врагов в указанной области, сжигает |cffffffff15|cffced4da ед. маны и наносит |cffffffff225|cffced4da ед. урона призванным существам.|r",
+    "25178": "|cffe4cfa3Опытный колдун|r (|cffffffffS|r)",
+    "25181": "|cffe4cfa3Легендарный колдун|r (|cffffffffX|r)",
+    "25576": "|cffe4cfa3Легендарный грабитель|r (|cffffffffX|r)",
+    "25580": "|cffe4cfa3Опытный жрец|r (|cffffffffA|r)",
+    "25584": "|cffe4cfa3Легендарный жрец|r (|cffffffffZ|r)",
+    "25595": "|cffe4cfa3Хилая башня|r",
+    "25599": "|cffe4cfa3Хилая башня|r (|cffffffffZ|r)",
+    "25720": "|cffe4cfa3Аура гениальности|r",
+    "25744": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно ускоряет восстановление маны находящихся рядом союзников.|r",
+    "26356": "|cffe4cfa3Дозакупка снаряжения|r (|cffffffffD|r)",
+    "26357": "|cffe4cfa3Дозакупка снаряжения|r",
+    "26387": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Притягивает цель к земле и удерживает её на |cffffffff7|cffced4da сек. (на героев действует |cffffffff0.5|cffced4da сек.).|r",
+    "27460": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость передвижения на |cffc8e087+7%|cffced4da и атаки на |cffc8e087+5%|cffced4da находящихся рядом союзников.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "27461": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость передвижения на |cffc8e087+11%|cffced4da и атаки на |cffc8e087+8%|cffced4da находящихся рядом союзников.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "27462": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость передвижения на |cffc8e087+15%|cffced4da и атаки на |cffc8e087+11%|cffced4da находящихся рядом союзников.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "27465": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём ресурсов, добываемых бойцами при нанесении урона вражеским войскам и строениям.|n|n|cffa6afb8Затрагивает:|cffced4da|n- Способность «Грабеж».|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "27466": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём ресурсов, добываемых бойцами при нанесении урона вражеским войскам и строениям.|n|n|cffa6afb8Затрагивает:|cffced4da|n- Способность «Грабеж».|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "27468": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём ресурсов, добываемых бойцами при нанесении урона вражеским войскам и строениям.|n|n|cffa6afb8Затрагивает:|cffced4da|n- Способность «Грабеж».|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "27469": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём ресурсов, добываемых бойцами при нанесении урона вражеским войскам и строениям.|n|n|cffa6afb8Затрагивает:|cffced4da|n- Способность «Грабеж».|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "28196": "|cffa6afb8ЗДАНИЕ:|cffced4da Неприступная цитадель главарей бандитов (третья ступень). Открывает высшие улучшения расы и возможность подготовки атаманов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deКаменщик|cffced4da: базовый рабочий, строитель и добытчик ресурсов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deВыбор атаманов|cffced4da: открывает обучение атаманов в казармах.|n- |cffa9c7deБольшой грабеж|cffced4da: добыча ресурсов при атаках.|r",
+    "28629": "|cffe4cfa3Опутывание|r",
+    "28630": "|cffe4cfa3Дозакупка снаряжения|r (|cffffffffD|r)",
+    "28668": "|cffe4cfa3Капкан|r",
+    "28729": "|cffe4cfa3Капкан|r (|cffffffffE|r)",
+    "29115": "|cffe4cfa3Дозакупка снаряжения|r",
+    "29507": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Снижает стоимость улучшения экипировки бойцов до класса Атамана.|n|n|cffa6afb8Затрагивает:|cffced4da|n- Способность «Дозакупка снаряжения».|r",
+    "29511": "|cffe4cfa3Удешевление дозакупки|r",
+    "29512": "|cffe4cfa3Удешевление дозакупки|r (|cffffffffG|r)",
+    "29521": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Нанося урон врагам, боец добывает ресурсы в казну. Также при атаке имеет шанс повысить свой класс.|r",
+    "29624": "|cffe4cfa3Дозакупка снаряжения|r (|cffffffffD|r)",
+    "29625": "|cffe4cfa3Дозакупка снаряжения|r",
+    "30182": "|cffe4cfa3Грабеж|r",
+    "30183": "|cffe4cfa3Грабеж|r",
+    "30185": "|cffe4cfa3Критический удар|r",
+    "30186": "|cffe4cfa3Критический удар|r",
+    "30232": "|cffe4cfa3Аура выносливости|r",
+    "30287": "|cffe4cfa3Аура выносливости|r",
+    "30329": "|cffe4cfa3Тёмная стая|r",
+    "30371": "|cffe4cfa3Волшебный огонь|r",
+    "30394": "|cffe4cfa3Волшебный огонь|r (|cffffffffW|r)",
+    "30395": "|cffe4cfa3Аура благочестия|r",
+    "30396": "|cffe4cfa3Аура благочестия|r",
+    "30397": "|cffe4cfa3Опутывание|r (|cffffffffQ|r)",
+    "30400": "|cffe4cfa3Опутывание|r",
+    "31099": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну силы по конусу перед собой, наносящую урон врагам на своём пути.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "31100": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну силы по конусу перед собой, наносящую урон врагам на своём пути.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "31101": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну силы по конусу перед собой, наносящую урон врагам на своём пути.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "31102": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну силы по конусу перед собой, наносящую урон врагам на своём пути.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "31210": "|cffe4cfa3Призыв свиты|r",
+    "31606": "|cffa6afb8ЗДАНИЕ:|cffced4da Жилое убежище бандитов. Обеспечивает лагерь припасами, поддерживая численность банды и принося чистый доход в казну.|n|n|cffa6afb8Особенности:|cffced4da|n- Даёт |cffc8e087+20|cffced4da к доходу за выплату.|r",
+    "31872": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает в |cffffffff3|cffced4da раза урон по любым существам, кроме героев и зданий.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+    "32268": "|cffe4cfa3Призыв свиты|r (|cffffffffW|r)",
+    "32410": "|cffe4cfa3Опутывание|r (|cffffffffQ|r)",
+    "32687": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает в |cffffffff4|cffced4da раза урон по любым существам, кроме героев и зданий.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r",
+    "33546": "|cffe4cfa3Антимагический щит|r (|cffffffffW|r)",
+    "34604": "|cffe4cfa3Антимагический щит|r",
+    "34819": "|cffe4cfa3Антимагический панцирь|r",
+    "34824": "|cffe4cfa3Призвать собак|r",
+    "34825": "|cffe4cfa3Призвать собак — уровень 1|r (|cffffffffW|r)",
+    "35193": "|cffa6afb8РАСА:|cffced4da Конгломерат преступных синдикатов, воровских шаек и наёмников.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Сложность:|r |cffffffff●●●|cffa6afb8●●|r|n|cffa6afb8Период:|r |cffa9c7de«Классический WoW»|r|n|n|cffced4daСоюз Бандитов — разношёрстная, но опасная фракция воров, грабителей, наёмных убийц, контрабандистов и морских пиратов. По отдельности их банды разобщены и слабы, но под единым знаменем они представляют грозную силу, способную подорвать порядок на всём Азероте... если только не перегрызутся между собой.|r",
+    "35241": "|cffe4cfa3Призвать собак — уровень 2|r (|cffffffffW|r)",
+    "35247": "|cffe4cfa3Призвать собак — уровень 3|r (|cffffffffW|r)",
+    "35253": "|cffe4cfa3Призвать собак — уровень 4|r (|cffffffffW|r)",
+    "35256": "|cffe4cfa3Призвать собак|r",
+    "35259": "|cffe4cfa3Аура выносливости — уровень 4|r",
+    "35262": "|cffe4cfa3Аура выносливости|r",
+    "35268": "|cffe4cfa3Аура выносливости|r",
+    "35276": "|cffe4cfa3Аура выносливости — уровень 1|r",
+    "35570": "|cffe4cfa3Аура выносливости — уровень 2|r",
+    "35571": "|cffe4cfa3Аура выносливости — уровень 3|r",
+    "35861": "|cffe4cfa3Опутывание — уровень 2|r (|cffffffffE|r)",
+    "36585": "|cffe4cfa3Опутывание — уровень 3|r (|cffffffffE|r)",
+    "36586": "|cffe4cfa3Опутывание — уровень 4|r (|cffffffffE|r)",
+    "36600": "|cffe4cfa3Опутывание — уровень 1|r (|cffffffffE|r)",
+    "36621": "|cffe4cfa3Опутывание|r",
+    "36622": "|cffe4cfa3Опутывание|r",
+    "36623": "|cffe4cfa3Жажда крови|r",
+    "36975": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Значительно повышает скорость атаки и передвижения выбранного союзника.|r",
+    "37588": "|cffe4cfa3Жажда крови|r",
+    "37690": "|cffe4cfa3Волна силы — уровень 2|r (|cffffffffQ|r)",
+    "37709": "|cffe4cfa3Волна силы — уровень 3|r (|cffffffffQ|r)",
+    "37753": "|cffe4cfa3Волна силы — уровень 4|r (|cffffffffQ|r)",
+    "38236": "|cffe4cfa3Зачарованная броня|r",
+    "38237": "|cffe4cfa3Зачарованная броня — уровень 1|r",
+    "38238": "|cffe4cfa3Зачарованная броня — уровень 2|r",
+    "38239": "|cffe4cfa3Зачарованная броня — уровень 3|r",
+    "38240": "|cffe4cfa3Зачарованная броня — уровень 4|r",
+    "38241": "|cffe4cfa3Зачарованная броня|r",
+    "38242": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поглощает часть урона от каждой вражеской атаки.|r",
+    "38243": "|cffe4cfa3Резня слабаков — уровень 1|r (|cffffffffR|r)",
+    "38244": "|cffe4cfa3Резня слабаков — уровень 2|r (|cffffffffR|r)",
+    "38245": "|cffe4cfa3Резня слабаков|r",
+    "38246": "|cffe4cfa3Резня слабаков|r",
+    "38247": "|cffe4cfa3Морозный доспех|r (|cffffffffQ|r)",
+    "38248": "|cffe4cfa3Морозный доспех|r",
+    "38280": "|cffe4cfa3Рывок|r",
+    "38281": "|cffe4cfa3Рывок|r (|cffffffffQ|r)",
+    "38282": "|cffe4cfa3Марш-бросок|r",
+    "38283": "|cffe4cfa3Марш-бросок|r",
+    "38284": "|cffe4cfa3Марш-бросок — уровень 1|r (|cffffffffW|r)",
+    "38285": "|cffe4cfa3Марш-бросок — уровень 2|r (|cffffffffW|r)",
+    "38286": "|cffe4cfa3Марш-бросок — уровень 3|r (|cffffffffW|r)",
+    "38287": "|cffe4cfa3Марш-бросок — уровень 4|r (|cffffffffW|r)",
+    "38292": "|cffe4cfa3Антимагия|r",
+    "38293": "|cffe4cfa3Антимагия|r (|cffffffffE|r)",
+    "38294": "|cffe4cfa3Замедляющий яд|r",
+    "38295": "|cffe4cfa3Замедляющий яд|r",
+    "38296": "|cffe4cfa3Самолечение|r (|cffffffffQ|r)",
+    "38297": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восполняет по |cffc8e08750|cffced4da ед. здоровья в секунду на протяжении |cffffffff10|cffced4da сек.|r",
+    "38298": "|cffe4cfa3Самолечение|r",
+    "38919": "|cffe4cfa3Союз Бандитов|r",
+    "38920": "|cffe4cfa3Союз Бандитов|r (|cffffffffZ|r)",
+    "39020": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует невидимость и |cffc8e087+15%|cffced4da к скорости передвижения. Первая атака из невидимости наносит |cffffffff25|cffced4da дополнительного урона.|r",
+    "40036": "|cffe4cfa3Избушка|r (|cffffffffA|r)",
+    "40042": "|cffe4cfa3Хилая магическая башня|r",
+    "40101": "|cffe4cfa3Хилая магическая башня|r (|cffffffffX|r)",
+    "40207": "|cffe4cfa3Привлечь убийц Чёрного Ворона|r",
+    "40209": "|cffe4cfa3Привлечь убийц Чёрного Ворона|r (|cffffffffS|r)",
+    "40212": "|cffe4cfa3Привлечь аристократов Синдиката|r",
+    "40213": "|cffe4cfa3Привлечь аристократов Синдиката|r (|cffffffffA|r)",
+    "40214": "|cffe4cfa3Привлечь дуболомов Картеля|r",
+    "40215": "|cffe4cfa3Привлечь дуболомов Картеля|r (|cffffffffZ|r)",
+    "40216": "|cffe4cfa3Закупить механизмы Картеля|r",
+    "40223": "|cffe4cfa3Закупить механизмы Картеля|r (|cffffffffX|r)",
+    "40263": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Заключает контракт с Картелем Хитрой Шестеренки, открывая наём Боевых крошшеров в Посольстве и постройку Башен Хитрой Шестеренки.|n|n|cffe6c07bВнимание: исключает одновременный найм дуболомов Картеля Трюмных Вод.|cffced4da|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deБоевой крошшер|cffced4da|n- |cffa9c7deБашня ТК Хитрой Шестеренки|cffced4da.|r",
+    "40264": "|cffe4cfa3Привлечь пиратов Кровавого Паруса|r",
+    "40287": "|cffe4cfa3Привлечь пиратов Кровавого Паруса|r (|cffffffffW|r)",
+    "40292": "|cffe4cfa3Привлечь Братство Справедливости|r",
+    "40293": "|cffe4cfa3Привлечь Братство Справедливости|r (|cffffffffQ|r)",
+    "40328": "|cffe4cfa3Стрелы — уровень 1|r",
+    "40329": "|cffe4cfa3Стрелы — уровень 2|r",
+    "40348": "|cffe4cfa3Стрелы — уровень 3|r",
+    "40349": "|cffe4cfa3Стрелы — уровень 1|r (|cffffffffW|r)",
+    "40689": "|cffe4cfa3Стрелы — уровень 4|r",
+    "40690": "|cffe4cfa3Стрелы — уровень 5|r",
+    "40691": "|cffe4cfa3Стрелы — уровень 6|r",
+    "40693": "|cffe4cfa3Стрелы — уровень 2|r (|cffffffffW|r)",
+    "40702": "|cffe4cfa3Стрелы — уровень 3|r (|cffffffffW|r)",
+    "40718": "|cffe4cfa3Стрелы — уровень 4|r (|cffffffffW|r)",
+    "40719": "|cffe4cfa3Стрелы — уровень 5|r (|cffffffffW|r)",
+    "40720": "|cffe4cfa3Стрелы — уровень 6|r (|cffffffffW|r)",
+    "40721": "|cffe4cfa3Мечи — уровень 1|r",
+    "40722": "|cffe4cfa3Мечи — уровень 2|r",
+    "40723": "|cffe4cfa3Мечи — уровень 3|r",
+    "40724": "|cffe4cfa3Мечи — уровень 4|r",
+    "40725": "|cffe4cfa3Мечи — уровень 5|r",
+    "40726": "|cffe4cfa3Мечи — уровень 6|r",
+    "40727": "|cffe4cfa3Мечи — уровень 1|r (|cffffffffQ|r)",
+    "40728": "|cffe4cfa3Мечи — уровень 2|r (|cffffffffQ|r)",
+    "40729": "|cffe4cfa3Мечи — уровень 3|r (|cffffffffQ|r)",
+    "40730": "|cffe4cfa3Мечи — уровень 4|r (|cffffffffQ|r)",
+    "40731": "|cffe4cfa3Мечи — уровень 5|r (|cffffffffQ|r)",
+    "40732": "|cffe4cfa3Мечи — уровень 6|r (|cffffffffQ|r)",
+    "40733": "|cffe4cfa3Тяжёлая броня — уровень 2|r",
+    "40734": "|cffe4cfa3Тяжёлая броня — уровень 3|r",
+    "40735": "|cffe4cfa3Тяжёлая броня — уровень 4|r",
+    "40736": "|cffe4cfa3Тяжёлая броня — уровень 5|r",
+    "40737": "|cffe4cfa3Тяжёлая броня — уровень 6|r",
+    "40738": "|cffe4cfa3Тяжёлая броня — уровень 1|r",
+    "40739": "|cffe4cfa3Тяжёлая броня — уровень 1|r (|cffffffffA|r)",
+    "40740": "|cffe4cfa3Тяжёлая броня — уровень 2|r (|cffffffffA|r)",
+    "40741": "|cffe4cfa3Тяжёлая броня — уровень 3|r (|cffffffffA|r)",
+    "40742": "|cffe4cfa3Тяжёлая броня — уровень 4|r (|cffffffffA|r)",
+    "40743": "|cffe4cfa3Тяжёлая броня — уровень 5|r (|cffffffffA|r)",
+    "40744": "|cffe4cfa3Тяжёлая броня — уровень 6|r (|cffffffffA|r)",
+    "40745": "|cffe4cfa3Лёгкая броня — уровень 1|r",
+    "40746": "|cffe4cfa3Лёгкая броня — уровень 2|r",
+    "40747": "|cffe4cfa3Лёгкая броня — уровень 3|r",
+    "40748": "|cffe4cfa3Лёгкая броня — уровень 4|r",
+    "40749": "|cffe4cfa3Лёгкая броня — уровень 5|r",
+    "40750": "|cffe4cfa3Лёгкая броня — уровень 6|r",
+    "40751": "|cffe4cfa3Лёгкая броня — уровень 1|r (|cffffffffS|r)",
+    "40752": "|cffe4cfa3Лёгкая броня — уровень 2|r (|cffffffffS|r)",
+    "40753": "|cffe4cfa3Лёгкая броня — уровень 3|r (|cffffffffS|r)",
+    "40754": "|cffe4cfa3Лёгкая броня — уровень 4|r (|cffffffffS|r)",
+    "40755": "|cffe4cfa3Лёгкая броня — уровень 5|r (|cffffffffS|r)",
+    "40756": "|cffe4cfa3Лёгкая броня — уровень 6|r (|cffffffffS|r)",
+    "40757": "|cffe4cfa3Улучшенные инструменты — уровень 1|r",
+    "40758": "|cffe4cfa3Улучшенные инструменты — уровень 2|r",
+    "40759": "|cffe4cfa3Улучшенные инструменты — уровень 3|r",
+    "40760": "|cffe4cfa3Улучшенные инструменты — уровень 4|r",
+    "40761": "|cffe4cfa3Улучшенные инструменты — уровень 5|r",
+    "40762": "|cffe4cfa3Улучшенные инструменты — уровень 6|r",
+    "40763": "|cffe4cfa3Улучшенные инструменты — уровень 1|r (|cffffffffQ|r)",
+    "40764": "|cffe4cfa3Улучшенные инструменты — уровень 2|r (|cffffffffQ|r)",
+    "40765": "|cffe4cfa3Улучшенные инструменты — уровень 3|r (|cffffffffQ|r)",
+    "40766": "|cffe4cfa3Улучшенные инструменты — уровень 4|r (|cffffffffQ|r)",
+    "40767": "|cffe4cfa3Улучшенные инструменты — уровень 5|r (|cffffffffQ|r)",
+    "40768": "|cffe4cfa3Улучшенные инструменты — уровень 6|r (|cffffffffQ|r)",
+    "40769": "|cffe4cfa3Улучшенная кладка — уровень 2|r",
+    "40770": "|cffe4cfa3Улучшенная кладка — уровень 3|r",
+    "40771": "|cffe4cfa3Улучшенная кладка — уровень 4|r",
+    "40772": "|cffe4cfa3Улучшенная кладка — уровень 5|r",
+    "40773": "|cffe4cfa3Улучшенная кладка — уровень 6|r",
+    "40774": "|cffe4cfa3Улучшенная кладка — уровень 2|r (|cffffffffW|r)",
+    "40775": "|cffe4cfa3Улучшенная кладка — уровень 3|r (|cffffffffW|r)",
+    "40776": "|cffe4cfa3Улучшенная кладка — уровень 4|r (|cffffffffW|r)",
+    "40777": "|cffe4cfa3Улучшенная кладка — уровень 5|r (|cffffffffW|r)",
+    "40778": "|cffe4cfa3Улучшенная кладка — уровень 6|r (|cffffffffW|r)",
+    "40779": "|cffe4cfa3Улучшенная кладка — уровень 1|r",
+    "40780": "|cffe4cfa3Улучшенная кладка — уровень 1|r (|cffffffffW|r)",
+    "40781": "|cffe4cfa3Контрабанда писаний — уровень 2|r",
+    "40782": "|cffe4cfa3Контрабанда писаний — уровень 3|r",
+    "40783": "|cffe4cfa3Контрабанда писаний — уровень 4|r",
+    "40784": "|cffe4cfa3Контрабанда писаний — уровень 5|r",
+    "40785": "|cffe4cfa3Контрабанда писаний — уровень 6|r",
+    "40786": "|cffe4cfa3Контрабанда писаний — уровень 1|r",
+    "40787": "|cffe4cfa3Контрабанда писаний — уровень 1|r (|cffffffffZ|r)",
+    "40788": "|cffe4cfa3Контрабанда писаний — уровень 2|r (|cffffffffZ|r)",
+    "40789": "|cffe4cfa3Контрабанда писаний — уровень 3|r (|cffffffffZ|r)",
+    "40790": "|cffe4cfa3Контрабанда писаний — уровень 4|r (|cffffffffZ|r)",
+    "40791": "|cffe4cfa3Контрабанда писаний — уровень 5|r (|cffffffffZ|r)",
+    "40792": "|cffe4cfa3Контрабанда писаний — уровень 6|r (|cffffffffZ|r)",
+    "40793": "|cffe4cfa3Контрабанда фолиантов — уровень 2|r",
+    "40794": "|cffe4cfa3Контрабанда фолиантов — уровень 3|r",
+    "40795": "|cffe4cfa3Контрабанда фолиантов — уровень 4|r",
+    "40796": "|cffe4cfa3Контрабанда фолиантов — уровень 5|r",
+    "40797": "|cffe4cfa3Контрабанда фолиантов — уровень 6|r",
+    "40798": "|cffe4cfa3Контрабанда фолиантов — уровень 1|r",
+    "40799": "|cffe4cfa3Контрабанда фолиантов — уровень 1|r (|cffffffffX|r)",
+    "40800": "|cffe4cfa3Контрабанда фолиантов — уровень 2|r (|cffffffffX|r)",
+    "40801": "|cffe4cfa3Контрабанда фолиантов — уровень 3|r (|cffffffffX|r)",
+    "40802": "|cffe4cfa3Контрабанда фолиантов — уровень 4|r (|cffffffffX|r)",
+    "40803": "|cffe4cfa3Контрабанда фолиантов — уровень 5|r (|cffffffffX|r)",
+    "40804": "|cffe4cfa3Контрабанда фолиантов — уровень 6|r (|cffffffffX|r)",
+    "40805": "|cffe4cfa3Магические талисманы — уровень 1|r",
+    "40806": "|cffe4cfa3Магические талисманы — уровень 2|r",
+    "40807": "|cffe4cfa3Магические талисманы — уровень 3|r",
+    "40808": "|cffe4cfa3Магические талисманы — уровень 1|r (|cffffffffC|r)",
+    "40809": "|cffe4cfa3Магические талисманы — уровень 4|r",
+    "40810": "|cffe4cfa3Магические талисманы — уровень 5|r",
+    "40811": "|cffe4cfa3Магические талисманы — уровень 6|r",
+    "40812": "|cffe4cfa3Магические талисманы — уровень 2|r (|cffffffffC|r)",
+    "40813": "|cffe4cfa3Магические талисманы — уровень 3|r (|cffffffffC|r)",
+    "40814": "|cffe4cfa3Магические талисманы — уровень 4|r (|cffffffffC|r)",
+    "40815": "|cffe4cfa3Магические талисманы — уровень 5|r (|cffffffffC|r)",
+    "40816": "|cffe4cfa3Магические талисманы — уровень 6|r (|cffffffffC|r)",
+    "40818": "|cffe4cfa3Выбор атаманов|r",
+    "40819": "|cffe4cfa3Выбор атаманов|r (|cffffffffQ|r)"
+  },
+  "checks_def": [
+    {
+      "type": "ability",
+      "id": "A0HR",
+      "field": "name",
+      "expected_sid": 38919
+    },
+    {
+      "type": "ability",
+      "id": "A0HR",
+      "field": "tip1",
+      "expected_sid": 38920
+    },
+    {
+      "type": "ability",
+      "id": "A0HR",
+      "field": "ubertip1",
+      "expected_sid": 35193
+    },
+    {
+      "type": "unit",
+      "id": "h007",
+      "field": "name",
+      "expected_sid": 7514
+    },
+    {
+      "type": "unit",
+      "id": "h007",
+      "field": "tip",
+      "expected_sid": 9813
+    },
+    {
+      "type": "unit",
+      "id": "h007",
+      "field": "ubertip",
+      "expected_sid": 10113
+    },
+    {
+      "type": "unit",
+      "id": "h008",
+      "field": "name",
+      "expected_sid": 10652
+    },
+    {
+      "type": "unit",
+      "id": "h008",
+      "field": "tip",
+      "expected_sid": 10682
+    },
+    {
+      "type": "unit",
+      "id": "h008",
+      "field": "ubertip",
+      "expected_sid": 15424
+    },
+    {
+      "type": "unit",
+      "id": "h009",
+      "field": "name",
+      "expected_sid": 11712
+    },
+    {
+      "type": "unit",
+      "id": "h009",
+      "field": "tip",
+      "expected_sid": 11713
+    },
+    {
+      "type": "unit",
+      "id": "h009",
+      "field": "ubertip",
+      "expected_sid": 28196
+    },
+    {
+      "type": "unit",
+      "id": "h00A",
+      "field": "name",
+      "expected_sid": 12087
+    },
+    {
+      "type": "unit",
+      "id": "h00A",
+      "field": "tip",
+      "expected_sid": 40036
+    },
+    {
+      "type": "unit",
+      "id": "h00A",
+      "field": "ubertip",
+      "expected_sid": 31606
+    },
+    {
+      "type": "unit",
+      "id": "h00B",
+      "field": "name",
+      "expected_sid": 10685
+    },
+    {
+      "type": "unit",
+      "id": "h00B",
+      "field": "tip",
+      "expected_sid": 10686
+    },
+    {
+      "type": "unit",
+      "id": "h00B",
+      "field": "ubertip",
+      "expected_sid": 9971
+    },
+    {
+      "type": "unit",
+      "id": "h00O",
+      "field": "name",
+      "expected_sid": 10690
+    },
+    {
+      "type": "unit",
+      "id": "h00O",
+      "field": "tip",
+      "expected_sid": 10870
+    },
+    {
+      "type": "unit",
+      "id": "h00O",
+      "field": "ubertip",
+      "expected_sid": 10141
+    },
+    {
+      "type": "unit",
+      "id": "h01V",
+      "field": "name",
+      "expected_sid": 11172
+    },
+    {
+      "type": "unit",
+      "id": "h01V",
+      "field": "tip",
+      "expected_sid": 12788
+    },
+    {
+      "type": "unit",
+      "id": "h01V",
+      "field": "ubertip",
+      "expected_sid": 12671
+    },
+    {
+      "type": "unit",
+      "id": "h01W",
+      "field": "name",
+      "expected_sid": 11531
+    },
+    {
+      "type": "unit",
+      "id": "h01W",
+      "field": "tip",
+      "expected_sid": 11532
+    },
+    {
+      "type": "unit",
+      "id": "h01W",
+      "field": "ubertip",
+      "expected_sid": 15365
+    },
+    {
+      "type": "unit",
+      "id": "h03O",
+      "field": "name",
+      "expected_sid": 11568
+    },
+    {
+      "type": "unit",
+      "id": "h03O",
+      "field": "tip",
+      "expected_sid": 11550
+    },
+    {
+      "type": "unit",
+      "id": "h03O",
+      "field": "ubertip",
+      "expected_sid": 15421
+    },
+    {
+      "type": "unit",
+      "id": "h03P",
+      "field": "name",
+      "expected_sid": 13682
+    },
+    {
+      "type": "unit",
+      "id": "h03P",
+      "field": "tip",
+      "expected_sid": 13683
+    },
+    {
+      "type": "unit",
+      "id": "h03P",
+      "field": "ubertip",
+      "expected_sid": 15422
+    },
+    {
+      "type": "unit",
+      "id": "h03Q",
+      "field": "name",
+      "expected_sid": 13654
+    },
+    {
+      "type": "unit",
+      "id": "h03Q",
+      "field": "tip",
+      "expected_sid": 13655
+    },
+    {
+      "type": "unit",
+      "id": "h03Q",
+      "field": "ubertip",
+      "expected_sid": 15423
+    },
+    {
+      "type": "unit",
+      "id": "h03R",
+      "field": "name",
+      "expected_sid": 1320
+    },
+    {
+      "type": "unit",
+      "id": "h03R",
+      "field": "tip",
+      "expected_sid": 1321
+    },
+    {
+      "type": "unit",
+      "id": "h03R",
+      "field": "ubertip",
+      "expected_sid": 1322
+    },
+    {
+      "type": "unit",
+      "id": "h051",
+      "field": "name",
+      "expected_sid": 13675
+    },
+    {
+      "type": "unit",
+      "id": "h051",
+      "field": "tip",
+      "expected_sid": 13676
+    },
+    {
+      "type": "unit",
+      "id": "h051",
+      "field": "ubertip",
+      "expected_sid": 15425
+    },
+    {
+      "type": "unit",
+      "id": "h07G",
+      "field": "name",
+      "expected_sid": 25595
+    },
+    {
+      "type": "unit",
+      "id": "h07G",
+      "field": "tip",
+      "expected_sid": 25599
+    },
+    {
+      "type": "unit",
+      "id": "h07G",
+      "field": "ubertip",
+      "expected_sid": 15426
+    },
+    {
+      "type": "unit",
+      "id": "h0DF",
+      "field": "name",
+      "expected_sid": 13677
+    },
+    {
+      "type": "unit",
+      "id": "h0DF",
+      "field": "tip",
+      "expected_sid": 13678
+    },
+    {
+      "type": "unit",
+      "id": "h0DF",
+      "field": "ubertip",
+      "expected_sid": 15427
+    },
+    {
+      "type": "unit",
+      "id": "h0DG",
+      "field": "name",
+      "expected_sid": 13679
+    },
+    {
+      "type": "unit",
+      "id": "h0DG",
+      "field": "tip",
+      "expected_sid": 13680
+    },
+    {
+      "type": "unit",
+      "id": "h0DG",
+      "field": "ubertip",
+      "expected_sid": 15428
+    },
+    {
+      "type": "unit",
+      "id": "h0DH",
+      "field": "name",
+      "expected_sid": 40042
+    },
+    {
+      "type": "unit",
+      "id": "h0DH",
+      "field": "tip",
+      "expected_sid": 40101
+    },
+    {
+      "type": "unit",
+      "id": "h0DH",
+      "field": "ubertip",
+      "expected_sid": 7058
+    },
+    {
+      "type": "unit",
+      "id": "H03S",
+      "field": "name",
+      "expected_sid": 13657
+    },
+    {
+      "type": "unit",
+      "id": "H03S",
+      "field": "tip",
+      "expected_sid": 13662
+    },
+    {
+      "type": "unit",
+      "id": "H03S",
+      "field": "ubertip",
+      "expected_sid": 20022
+    },
+    {
+      "type": "unit",
+      "id": "H047",
+      "field": "name",
+      "expected_sid": 13666
+    },
+    {
+      "type": "unit",
+      "id": "H047",
+      "field": "tip",
+      "expected_sid": 13669
+    },
+    {
+      "type": "unit",
+      "id": "H047",
+      "field": "ubertip",
+      "expected_sid": 20030
+    },
+    {
+      "type": "unit",
+      "id": "H048",
+      "field": "name",
+      "expected_sid": 13671
+    },
+    {
+      "type": "unit",
+      "id": "H048",
+      "field": "tip",
+      "expected_sid": 13673
+    },
+    {
+      "type": "unit",
+      "id": "H048",
+      "field": "ubertip",
+      "expected_sid": 20023
+    },
+    {
+      "type": "unit",
+      "id": "h002",
+      "field": "name",
+      "expected_sid": 11620
+    },
+    {
+      "type": "unit",
+      "id": "h002",
+      "field": "tip",
+      "expected_sid": 11621
+    },
+    {
+      "type": "unit",
+      "id": "h002",
+      "field": "ubertip",
+      "expected_sid": 9737
+    },
+    {
+      "type": "unit",
+      "id": "h003",
+      "field": "name",
+      "expected_sid": 13681
+    },
+    {
+      "type": "unit",
+      "id": "h003",
+      "field": "tip",
+      "expected_sid": 11634
+    },
+    {
+      "type": "unit",
+      "id": "h003",
+      "field": "ubertip",
+      "expected_sid": 11167
+    },
+    {
+      "type": "unit",
+      "id": "h005",
+      "field": "name",
+      "expected_sid": 11703
+    },
+    {
+      "type": "unit",
+      "id": "h005",
+      "field": "tip",
+      "expected_sid": 22460
+    },
+    {
+      "type": "unit",
+      "id": "h005",
+      "field": "ubertip",
+      "expected_sid": 20161
+    },
+    {
+      "type": "unit",
+      "id": "h006",
+      "field": "name",
+      "expected_sid": 11707
+    },
+    {
+      "type": "unit",
+      "id": "h006",
+      "field": "tip",
+      "expected_sid": 22503
+    },
+    {
+      "type": "unit",
+      "id": "h006",
+      "field": "ubertip",
+      "expected_sid": 12747
+    },
+    {
+      "type": "unit",
+      "id": "h00P",
+      "field": "name",
+      "expected_sid": 12453
+    },
+    {
+      "type": "unit",
+      "id": "h00P",
+      "field": "tip",
+      "expected_sid": 12452
+    },
+    {
+      "type": "unit",
+      "id": "h00P",
+      "field": "ubertip",
+      "expected_sid": 14874
+    },
+    {
+      "type": "unit",
+      "id": "h00Q",
+      "field": "name",
+      "expected_sid": 12460
+    },
+    {
+      "type": "unit",
+      "id": "h00Q",
+      "field": "tip",
+      "expected_sid": 12501
+    },
+    {
+      "type": "unit",
+      "id": "h00Q",
+      "field": "ubertip",
+      "expected_sid": 14891
+    },
+    {
+      "type": "unit",
+      "id": "h00S",
+      "field": "name",
+      "expected_sid": 12703
+    },
+    {
+      "type": "unit",
+      "id": "h00S",
+      "field": "tip",
+      "expected_sid": 25178
+    },
+    {
+      "type": "unit",
+      "id": "h00S",
+      "field": "ubertip",
+      "expected_sid": 14892
+    },
+    {
+      "type": "unit",
+      "id": "h00U",
+      "field": "name",
+      "expected_sid": 12754
+    },
+    {
+      "type": "unit",
+      "id": "h00U",
+      "field": "tip",
+      "expected_sid": 25181
+    },
+    {
+      "type": "unit",
+      "id": "h00U",
+      "field": "ubertip",
+      "expected_sid": 14894
+    },
+    {
+      "type": "unit",
+      "id": "h029",
+      "field": "name",
+      "expected_sid": 12804
+    },
+    {
+      "type": "unit",
+      "id": "h029",
+      "field": "tip",
+      "expected_sid": 12797
+    },
+    {
+      "type": "unit",
+      "id": "h029",
+      "field": "ubertip",
+      "expected_sid": 15279
+    },
+    {
+      "type": "unit",
+      "id": "h02A",
+      "field": "name",
+      "expected_sid": 12835
+    },
+    {
+      "type": "unit",
+      "id": "h02A",
+      "field": "tip",
+      "expected_sid": 25580
+    },
+    {
+      "type": "unit",
+      "id": "h02A",
+      "field": "ubertip",
+      "expected_sid": 15280
+    },
+    {
+      "type": "unit",
+      "id": "h02B",
+      "field": "name",
+      "expected_sid": 13176
+    },
+    {
+      "type": "unit",
+      "id": "h02B",
+      "field": "tip",
+      "expected_sid": 25584
+    },
+    {
+      "type": "unit",
+      "id": "h02B",
+      "field": "ubertip",
+      "expected_sid": 15281
+    },
+    {
+      "type": "unit",
+      "id": "h02Q",
+      "field": "name",
+      "expected_sid": 13177
+    },
+    {
+      "type": "unit",
+      "id": "h02Q",
+      "field": "tip",
+      "expected_sid": 13179
+    },
+    {
+      "type": "unit",
+      "id": "h02Q",
+      "field": "ubertip",
+      "expected_sid": 15418
+    },
+    {
+      "type": "unit",
+      "id": "h02R",
+      "field": "name",
+      "expected_sid": 13180
+    },
+    {
+      "type": "unit",
+      "id": "h02R",
+      "field": "tip",
+      "expected_sid": 13181
+    },
+    {
+      "type": "unit",
+      "id": "h02R",
+      "field": "ubertip",
+      "expected_sid": 15282
+    },
+    {
+      "type": "unit",
+      "id": "h02S",
+      "field": "name",
+      "expected_sid": 13541
+    },
+    {
+      "type": "unit",
+      "id": "h02S",
+      "field": "tip",
+      "expected_sid": 13542
+    },
+    {
+      "type": "unit",
+      "id": "h02S",
+      "field": "ubertip",
+      "expected_sid": 15287
+    },
+    {
+      "type": "unit",
+      "id": "h02T",
+      "field": "name",
+      "expected_sid": 13543
+    },
+    {
+      "type": "unit",
+      "id": "h02T",
+      "field": "tip",
+      "expected_sid": 13613
+    },
+    {
+      "type": "unit",
+      "id": "h02T",
+      "field": "ubertip",
+      "expected_sid": 15291
+    },
+    {
+      "type": "unit",
+      "id": "h02U",
+      "field": "name",
+      "expected_sid": 13647
+    },
+    {
+      "type": "unit",
+      "id": "h02U",
+      "field": "tip",
+      "expected_sid": 13648
+    },
+    {
+      "type": "unit",
+      "id": "h02U",
+      "field": "ubertip",
+      "expected_sid": 15292
+    },
+    {
+      "type": "unit",
+      "id": "h03K",
+      "field": "name",
+      "expected_sid": 870
+    },
+    {
+      "type": "unit",
+      "id": "h03K",
+      "field": "tip",
+      "expected_sid": 4497
+    },
+    {
+      "type": "unit",
+      "id": "h03K",
+      "field": "ubertip",
+      "expected_sid": 871
+    },
+    {
+      "type": "unit",
+      "id": "h03L",
+      "field": "name",
+      "expected_sid": 872
+    },
+    {
+      "type": "unit",
+      "id": "h03L",
+      "field": "ubertip",
+      "expected_sid": 873
+    },
+    {
+      "type": "unit",
+      "id": "h03N",
+      "field": "name",
+      "expected_sid": 954
+    },
+    {
+      "type": "unit",
+      "id": "n000",
+      "field": "name",
+      "expected_sid": 11692
+    },
+    {
+      "type": "unit",
+      "id": "n000",
+      "field": "tip",
+      "expected_sid": 11694
+    },
+    {
+      "type": "unit",
+      "id": "n000",
+      "field": "ubertip",
+      "expected_sid": 985
+    },
+    {
+      "type": "unit",
+      "id": "n002",
+      "field": "name",
+      "expected_sid": 11711
+    },
+    {
+      "type": "unit",
+      "id": "n002",
+      "field": "tip",
+      "expected_sid": 22511
+    },
+    {
+      "type": "unit",
+      "id": "n002",
+      "field": "ubertip",
+      "expected_sid": 12751
+    },
+    {
+      "type": "unit",
+      "id": "n004",
+      "field": "name",
+      "expected_sid": 12762
+    },
+    {
+      "type": "unit",
+      "id": "n004",
+      "field": "tip",
+      "expected_sid": 25576
+    },
+    {
+      "type": "unit",
+      "id": "n004",
+      "field": "ubertip",
+      "expected_sid": 14895
+    },
+    {
+      "type": "unit",
+      "id": "o00C",
+      "field": "name",
+      "expected_sid": 12769
+    },
+    {
+      "type": "unit",
+      "id": "o00C",
+      "field": "tip",
+      "expected_sid": 12775
+    },
+    {
+      "type": "unit",
+      "id": "o00C",
+      "field": "ubertip",
+      "expected_sid": 15278
+    }
+  ]
+}

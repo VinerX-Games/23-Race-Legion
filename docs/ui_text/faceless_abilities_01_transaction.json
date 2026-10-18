@@ -1,0 +1,610 @@
+{
+  "ok": false,
+  "applied": false,
+  "changes": [
+    {
+      "type": "ability",
+      "id": "A10X",
+      "field": "name",
+      "value": "|cffe4cfa3Разрушение Эфира|r",
+      "before": "TRIGSTR_25394",
+      "after": "TRIGSTR_43204",
+      "resolved_after": "|cffe4cfa3Разрушение Эфира|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10X",
+      "field": "tip1",
+      "value": "|cffe4cfa3Разрушение Эфира|r",
+      "before": "TRIGSTR_25395",
+      "after": "TRIGSTR_43205",
+      "resolved_after": "|cffe4cfa3Разрушение Эфира|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10X",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке сжигает до |cffffffff20|cffced4da ед. маны у обычного противника или до |cffffffff10|cffced4da ед. у героя. Каждая сожжённая единица маны наносит |cffffffff2|cffced4da ед. урона.|n|n|cffe6c07bТребуется исследование «Разрушение Эфира».|r",
+      "before": "TRIGSTR_25396",
+      "after": "TRIGSTR_43206",
+      "resolved_after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da При атаке сжигает до |cffffffff20|cffced4da ед. маны у обычного противника или до |cffffffff10|cffced4da ед. у героя. Каждая сожжённая единица маны наносит |cffffffff2|cffced4da ед. урона.|n|n|cffe6c07bТребуется исследование «Разрушение Эфира».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10W",
+      "field": "name",
+      "value": "|cffe4cfa3Сотрясение Бездны|r",
+      "before": "TRIGSTR_25392",
+      "after": "TRIGSTR_43207",
+      "resolved_after": "|cffe4cfa3Сотрясение Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10W",
+      "field": "tip1",
+      "value": "|cffe4cfa3Сотрясение Бездны|r",
+      "before": "TRIGSTR_40015",
+      "after": "TRIGSTR_43208",
+      "resolved_after": "|cffe4cfa3Сотрясение Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10W",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff10%|cffced4da атака наносит |cffffffff10|cffced4da дополнительного урона и оглушает цель на |cffffffff0,5|cffced4da сек. Герои оглушаются на |cffffffff0,2|cffced4da сек.|n|n|cffe6c07bТребуется исследование «Улучшение Сущности».|r",
+      "before": "TRIGSTR_25393",
+      "after": "TRIGSTR_43209",
+      "resolved_after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff10%|cffced4da атака наносит |cffffffff10|cffced4da дополнительного урона и оглушает цель на |cffffffff0,5|cffced4da сек. Герои оглушаются на |cffffffff0,2|cffced4da сек.|n|n|cffe6c07bТребуется исследование «Улучшение Сущности».|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10Z",
+      "field": "name",
+      "value": "|cffe4cfa3Сила Бездны|r",
+      "before": "TRIGSTR_25400",
+      "after": "TRIGSTR_43210",
+      "resolved_after": "|cffe4cfa3Сила Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10Z",
+      "field": "tip1",
+      "value": "|cffe4cfa3Сила Бездны|r",
+      "before": "TRIGSTR_25401",
+      "after": "TRIGSTR_43211",
+      "resolved_after": "|cffe4cfa3Сила Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10Z",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff15%|cffced4da атака наносит |cffffffff1,9|cffced4da-кратный урон.|r",
+      "before": "TRIGSTR_2008",
+      "after": "TRIGSTR_43212",
+      "resolved_after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff15%|cffced4da атака наносит |cffffffff1,9|cffced4da-кратный урон.|r"
+    }
+  ],
+  "error": "Staged serialization changed unrelated effective fields",
+  "unexpected": [
+    {
+      "type": "ability",
+      "id": "A000",
+      "field": "dataa1",
+      "name": "|cffe6beaaДозакупка снаряжения|r",
+      "before": "150",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A000",
+      "field": "datab1",
+      "name": "|cffe6beaaДозакупка снаряжения|r",
+      "before": "50",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A000",
+      "field": "datae1",
+      "name": "|cffe6beaaДозакупка снаряжения|r",
+      "before": "berserk",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A0TM",
+      "field": "datab1",
+      "name": "|cff8cc8a0Наследная Ловкость|r",
+      "before": "3.000000",
+      "after": "2"
+    },
+    {
+      "type": "ability",
+      "id": "A0TM",
+      "field": "datab2",
+      "name": "|cff8cc8a0Наследная Ловкость|r",
+      "before": "4.000000",
+      "after": "3"
+    },
+    {
+      "type": "ability",
+      "id": "A0WX",
+      "field": "dataa1",
+      "name": "Бонус к скорости атаки",
+      "before": "0.300000",
+      "after": "0"
+    },
+    {
+      "type": "ability",
+      "id": "A0WX",
+      "field": "dataa2",
+      "name": "Бонус к скорости атаки",
+      "before": "0.600000",
+      "after": "0"
+    },
+    {
+      "type": "ability",
+      "id": "A0WX",
+      "field": "dataa3",
+      "name": "Бонус к скорости атаки",
+      "before": "0.900000",
+      "after": "0"
+    },
+    {
+      "type": "ability",
+      "id": "A10C",
+      "field": "datab1",
+      "name": "Пандаренская ловкость",
+      "before": "1.500000",
+      "after": "2"
+    },
+    {
+      "type": "ability",
+      "id": "A11C",
+      "field": "datab1",
+      "name": "|cffe6beaaЗвериные рефлексы|r",
+      "before": "1.500000",
+      "after": "2"
+    },
+    {
+      "type": "ability",
+      "id": "A11Q",
+      "field": "datab1",
+      "name": "|cffe6beaaВолчьи рефлексы|r",
+      "before": "1.500000",
+      "after": "2"
+    },
+    {
+      "type": "ability",
+      "id": "A11Q",
+      "field": "datab2",
+      "name": "|cffe6beaaВолчьи рефлексы|r",
+      "before": "2.000000",
+      "after": "3"
+    },
+    {
+      "type": "ability",
+      "id": "A11Q",
+      "field": "datab3",
+      "name": "|cffe6beaaВолчьи рефлексы|r",
+      "before": "2.500000",
+      "after": "4"
+    },
+    {
+      "type": "ability",
+      "id": "A11Q",
+      "field": "datab4",
+      "name": "|cffe6beaaВолчьи рефлексы|r",
+      "before": "3.000000",
+      "after": "6"
+    },
+    {
+      "type": "ability",
+      "id": "A127",
+      "field": "datab1",
+      "name": "Пандаренская ловкость",
+      "before": "1.500000",
+      "after": "2"
+    },
+    {
+      "type": "ability",
+      "id": "A193",
+      "field": "datab1",
+      "name": "Ярость",
+      "before": "0.100000",
+      "after": "0.25"
+    },
+    {
+      "type": "ability",
+      "id": "A193",
+      "field": "datab2",
+      "name": "Ярость",
+      "before": "0.150000",
+      "after": " - "
+    },
+    {
+      "type": "ability",
+      "id": "A193",
+      "field": "datab3",
+      "name": "Ярость",
+      "before": "0.200000",
+      "after": " - "
+    },
+    {
+      "type": "ability",
+      "id": "A193",
+      "field": "datab4",
+      "name": "Ярость",
+      "before": "0.250000",
+      "after": " - "
+    },
+    {
+      "type": "ability",
+      "id": "A19A",
+      "field": "datab1",
+      "name": "|cffaad2ffЗа Лотара!",
+      "before": "0.300000",
+      "after": "0.25"
+    },
+    {
+      "type": "ability",
+      "id": "A19Y",
+      "field": "datab1",
+      "name": "|cffaad2ffВсплеск ярости|r",
+      "before": "0.300000",
+      "after": "0.25"
+    },
+    {
+      "type": "ability",
+      "id": "A1A9",
+      "field": "cast1",
+      "name": "|cffaad2ffИсцеление|r",
+      "before": "8",
+      "after": "8.000000"
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "dataa1",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "0.000000",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "dataa2",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "0.000000",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "dataa3",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "0.000000",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "dataa4",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "0.000000",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datab1",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "2",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datab2",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "2",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datab3",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "2",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datab4",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "2",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datac1",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "7",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datac2",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "7",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datac3",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "7",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datac4",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "7",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datad1",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "0.000000",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datad2",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "0.000000",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datad3",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "0.000000",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datad4",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "0.000000",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datae1",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "0",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datae2",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "0",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datae3",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "0",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "datae4",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "0",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "dataf1",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "acidbomb",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "dataf2",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "acidbomb",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "dataf3",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "acidbomb",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1HE",
+      "field": "dataf4",
+      "name": "|cffc3b4f0Поток льда|r",
+      "before": "acidbomb",
+      "after": null
+    },
+    {
+      "type": "ability",
+      "id": "A1KD",
+      "field": "datab1",
+      "name": "|cffe6beaaБешенство|r",
+      "before": "0.150000",
+      "after": "0.25"
+    },
+    {
+      "type": "ability",
+      "id": "A1NP",
+      "field": "datab2",
+      "name": "|cff0064ffСтойкость Лотара|r",
+      "before": "2.500000",
+      "after": "3"
+    },
+    {
+      "type": "ability",
+      "id": "A1NP",
+      "field": "datab3",
+      "name": "|cff0064ffСтойкость Лотара|r",
+      "before": "3.000000",
+      "after": "4"
+    },
+    {
+      "type": "ability",
+      "id": "A1NP",
+      "field": "datab4",
+      "name": "|cff0064ffСтойкость Лотара|r",
+      "before": "3.500000",
+      "after": "5"
+    },
+    {
+      "type": "ability",
+      "id": "A1OA",
+      "field": "datab2",
+      "name": "|cffaad2ffСтойкость Ветерана|r",
+      "before": "2.500000",
+      "after": "3"
+    },
+    {
+      "type": "ability",
+      "id": "A1OA",
+      "field": "datab3",
+      "name": "|cffaad2ffСтойкость Ветерана|r",
+      "before": "3.000000",
+      "after": "4"
+    },
+    {
+      "type": "ability",
+      "id": "A1OA",
+      "field": "datab4",
+      "name": "|cffaad2ffСтойкость Ветерана|r",
+      "before": "3.500000",
+      "after": "5"
+    },
+    {
+      "type": "ability",
+      "id": "A1Q0",
+      "field": "datab1",
+      "name": "Бешенство",
+      "before": "0.200000",
+      "after": "0.25"
+    },
+    {
+      "type": "ability",
+      "id": "A1RB",
+      "field": "cast1",
+      "name": "|cffb4d2ebИсцеление|r",
+      "before": "8",
+      "after": "8.000000"
+    },
+    {
+      "type": "ability",
+      "id": "PA68",
+      "field": "datab1",
+      "name": "|cffb4d2ebЧувство баланса|r",
+      "before": "1.200000",
+      "after": "2"
+    },
+    {
+      "type": "ability",
+      "id": "VLJ7",
+      "field": "datab1",
+      "name": "Мощь теневова охотника ",
+      "before": "3.000000",
+      "after": "2"
+    },
+    {
+      "type": "ability",
+      "id": "VLJ7",
+      "field": "datab2",
+      "name": "Мощь теневова охотника ",
+      "before": "4.000000",
+      "after": "3"
+    },
+    {
+      "type": "ability",
+      "id": "VLJ7",
+      "field": "datab3",
+      "name": "Мощь теневова охотника ",
+      "before": "5.000000",
+      "after": "4"
+    },
+    {
+      "type": "ability",
+      "id": "VLJ7",
+      "field": "datab4",
+      "name": "Мощь теневова охотника ",
+      "before": "6.000000",
+      "after": "5"
+    },
+    {
+      "type": "ability",
+      "id": "cDa8",
+      "field": "cast1",
+      "name": "|cffc3b4f0Призрачное касание|r",
+      "before": "5",
+      "after": "5.000000"
+    },
+    {
+      "type": "ability",
+      "id": "cDa9",
+      "field": "cast1",
+      "name": "|cffc3b4f0Чумная эссенция|r",
+      "before": "10",
+      "after": "10.000000"
+    },
+    {
+      "type": "ability",
+      "id": "drAs",
+      "field": "datab1",
+      "name": "|cff8080ffСингулярная перегрузка|r",
+      "before": "0.150000",
+      "after": "0.25"
+    },
+    {
+      "type": "ability",
+      "id": "w2aA",
+      "field": "datab1",
+      "name": "|cffdcb496Ярость берсерка|r",
+      "before": "0.000000",
+      "after": "0.25"
+    },
+    {
+      "type": "ability",
+      "id": "w2an",
+      "field": "datab1",
+      "name": "|cffdcb496Ярость|r",
+      "before": "0.150000",
+      "after": "0.25"
+    }
+  ]
+}

@@ -1,0 +1,1002 @@
+{
+  "race": "Dragon",
+  "category": "researches",
+  "wts_keys_updated": [
+    13756,
+    14087,
+    15867,
+    15868,
+    15869,
+    15870,
+    15871,
+    15872,
+    15873,
+    15874,
+    15875,
+    15876,
+    15886,
+    15887,
+    15888,
+    15889,
+    15892,
+    15893,
+    15894,
+    15895,
+    16387,
+    16388,
+    16396,
+    16397,
+    16404,
+    16405,
+    16412,
+    16413,
+    16420,
+    16421,
+    16699,
+    16702,
+    16703,
+    16704,
+    16705,
+    16912,
+    16913,
+    16934,
+    16936,
+    16958,
+    16985,
+    16987,
+    16991,
+    16994,
+    16995,
+    16997,
+    17006,
+    17007,
+    17010,
+    17011,
+    17012,
+    17013,
+    17014,
+    17015,
+    17021,
+    17022,
+    17023,
+    17024,
+    17025,
+    17026,
+    17027,
+    17028,
+    17029,
+    17030,
+    17031,
+    17032,
+    17044,
+    17045,
+    17046,
+    17047,
+    17048,
+    17049,
+    17050,
+    17051,
+    17052,
+    17053,
+    17054,
+    17055,
+    17056,
+    17057,
+    17058,
+    17059,
+    17060,
+    17061,
+    17067,
+    17068,
+    17069,
+    17070,
+    17071,
+    17072,
+    17073,
+    17074,
+    17075,
+    17076,
+    17077,
+    17078,
+    17079,
+    17080,
+    17081,
+    17082,
+    17083,
+    17084,
+    17087,
+    17100,
+    17105,
+    17106,
+    17110,
+    17113,
+    17114,
+    17117,
+    17120,
+    17121,
+    17155,
+    17156,
+    17157,
+    17159,
+    18672,
+    18673,
+    18685,
+    18686,
+    19414,
+    21956,
+    21970,
+    21971,
+    21972,
+    21979,
+    21982,
+    21985,
+    22395,
+    25604,
+    25606,
+    25607,
+    25610,
+    25614,
+    25615,
+    25617,
+    25670,
+    25671,
+    25672,
+    33850,
+    36800,
+    37790,
+    39198,
+    39298,
+    39471,
+    39630,
+    39650,
+    39651,
+    39652,
+    39653,
+    39702,
+    39703,
+    39712,
+    39713,
+    39734,
+    39735,
+    39736,
+    39737,
+    39738,
+    39739,
+    39749,
+    39750,
+    39751,
+    39752,
+    39785,
+    39786,
+    39787,
+    39788,
+    39789,
+    39790,
+    39791,
+    39792,
+    39801,
+    39802,
+    39804,
+    39805,
+    39806,
+    39807,
+    39808,
+    39809,
+    39835,
+    39837,
+    39838,
+    39839,
+    39840,
+    39841,
+    39842,
+    39843,
+    39844,
+    39845,
+    39846,
+    39847,
+    39848,
+    39849,
+    39850,
+    39851
+  ],
+  "wts_hash_before": "415935ebcefe24d013bd10cc2dc2fdd825285578f195b1de4a481f9d9783dcc2",
+  "wts_hash_after": "4441087d894f66352d7102cc9fe3725394d829a9be36640088b56765e8377a6b",
+  "w3q_hash_before": "c7bcf938d4702bd6f862424f30effc6908a857fcf337868dfc7b0eed773941b8",
+  "w3q_hash_after": "135b21ad8ced6b949d7afd6c25f1ca434fa422bda00e79d0c18eb2ee2886ca58",
+  "w3q_skin_hash_before": "ab1a6f9b655796639927a51b63ef0676296df365651e144402250c027a628234",
+  "w3q_skin_hash_after": "20e7986e8a87fe5100835268f53e5ff06f3585154197803c3b46839872a4f6d7",
+  "other_binary_hashes": {
+    "war3map.doo": "5f761068c726841056cb3148ba7da01c835e44601ab6f9554e19968f9c58dfae",
+    "war3map.imp": "d741f1b70bcc664a100317f93d41bba6b178c94a635b542ac2d35c33a624939a",
+    "war3map.lua": "27c5381999f073371dcb75f0798d3de20eeae2e4043eaabe7d63980c73d3e2f7",
+    "war3map.mmp": "75b5d57923c1be4442105bdf9ffbf72d23d2d914fe12d19f2b0a04edf88e170b",
+    "war3map.shd": "0c660f2bd3eff3150dd0040789abe2291613b9af319df870203d4f77a4913a5f",
+    "war3map.w3a": "9c2c640c6042358cc7f35e4b9812c8624a26d45f275cf0312346085c71be0494",
+    "war3map.w3b": "22b32d7d8cedc48e448f8b96ad7df304601555fd0c10590cdb21600691d4fa78",
+    "war3map.w3c": "c74a2d46a6ecca8769a47200c16612eef9c7e2d67d43659be78e4adcde9930e7",
+    "war3map.w3d": "de15401141bd2d5f9fa34a8cda9e705d686238514976e1e78e28b3f9b7a93a62",
+    "war3map.w3e": "d2339819215d6d05cd811ef9d78f9cea1b146a6696f62aaf4ba663c4abd3fb42",
+    "war3map.w3h": "c9ce62e19889c4e9e9d5d88703c4c4a02b334d5a9dd91925b40bfedc46af04a7",
+    "war3map.w3i": "24ba48092f8e0b52ec19f6690087a6e14628376246f7239dad6c521e2b5cc158",
+    "war3map.w3r": "52d7bd22e25a4f4ef45e9cc294aea213786dc69678864f7a86f138ecd4865b85",
+    "war3map.w3s": "8bd8d80bf943c640d0b49b770dc5dde79011c6c033edb32c609096e1330ff274",
+    "war3map.w3t": "06c2ae97366168984df0539ed71902e2884a39a1a4b0d1a5fb98e41a0b77e6ea",
+    "war3map.w3u": "8de53960699ae9aac41c1cae1c3e259e73b97029587b1ad12239f39b6cee92af",
+    "war3map.wct": "1c6491633c7f24691b97aeda8278a5fe2a5e4ca28e08faae2da81b6ffa201c76",
+    "war3map.wpm": "65312b9fa890fa313fac906eaa35fc4d1b9e904d2b1ae5ca94c5b9a56814dd41",
+    "war3map.wtg": "41023b2781753cc02179fa4251e324354542496fddd3cfcdc53b88fd9e16dbf6",
+    "war3mapExtra.txt": "f57b1049d3d8e81cd1df86a1904a360d81e8ef42ac55a1f054aea37cb72b8e0e",
+    "war3mapMap.blp": "63d25390bd65b340f4e0c1140edce0910f74944a18e64047d4d87c82d991ee9f",
+    "war3mapMisc.txt": "989514d23cddec9974892ea8edf5f1b2215abd839bfea1dc2480ce4a151c524f",
+    "war3mapSkin.txt": "0ea3115c01452748b57ec637b87687a79de385ae169d02316fb5127d81588316",
+    "war3mapSkin.w3a": "a19a695d68d83a146d504b4854a98264492b9363820ffc87442087bed86dcf6d",
+    "war3mapSkin.w3b": "e7b0b0c14239d3e9ca6a3f80a446dbd585526e9cc323146cc2c4fc9f60eb0c4b",
+    "war3mapSkin.w3d": "721bed7219463d0b88ad83945acf66da5fdc9325d1507fbb6c8076b9c65a0a2d",
+    "war3mapSkin.w3h": "333aae6d0cdeeebeefa002259a20fa745fc68610253bd5146a8d8751702bd6a6",
+    "war3mapSkin.w3t": "21100b19421fd5844a0528a350d9e599705e3ab955730e608d1a40069eb39d45",
+    "war3mapSkin.w3u": "c17a5b28261fbba307107306791c2c7c6abd1ca52183aa85c5cdd218781ba10f",
+    "war3mapUnits.doo": "5eae6f3bb4296d7ec41b9b2f88fdd6ac62f15dd7fd824cb2d8c865f91b0d3c22"
+  },
+  "checks": [
+    {
+      "id": "R0D9",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2"
+      ]
+    },
+    {
+      "id": "R0DT",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3"
+      ]
+    },
+    {
+      "id": "R0B0",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3"
+      ]
+    },
+    {
+      "id": "R0AV",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3",
+        "name4",
+        "tip4",
+        "ubertip4",
+        "name5",
+        "tip5",
+        "ubertip5",
+        "name6",
+        "tip6",
+        "ubertip6"
+      ]
+    },
+    {
+      "id": "R0AW",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3",
+        "name4",
+        "tip4",
+        "ubertip4",
+        "name5",
+        "tip5",
+        "ubertip5",
+        "name6",
+        "tip6",
+        "ubertip6"
+      ]
+    },
+    {
+      "id": "R0AX",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3",
+        "name4",
+        "tip4",
+        "ubertip4",
+        "name5",
+        "tip5",
+        "ubertip5",
+        "name6",
+        "tip6",
+        "ubertip6"
+      ]
+    },
+    {
+      "id": "R0AY",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3",
+        "name4",
+        "tip4",
+        "ubertip4",
+        "name5",
+        "tip5",
+        "ubertip5",
+        "name6",
+        "tip6",
+        "ubertip6"
+      ]
+    },
+    {
+      "id": "R0AZ",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3",
+        "name4",
+        "tip4",
+        "ubertip4",
+        "name5",
+        "tip5",
+        "ubertip5",
+        "name6",
+        "tip6",
+        "ubertip6"
+      ]
+    },
+    {
+      "id": "R0AT",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3",
+        "name4",
+        "tip4",
+        "ubertip4"
+      ]
+    },
+    {
+      "id": "R0AC",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0AB",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0AP",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "name3",
+        "tip3",
+        "name4",
+        "tip4"
+      ]
+    },
+    {
+      "id": "R0A9",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0AA",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0AS",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "name3",
+        "tip3",
+        "name4",
+        "tip4"
+      ]
+    },
+    {
+      "id": "R0A5",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0A6",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0B3",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3",
+        "name4",
+        "tip4",
+        "ubertip4"
+      ]
+    },
+    {
+      "id": "R0A3",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0A4",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0B4",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0B2",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0AU",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0A7",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0A8",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0B1",
+      "type": "upgrade",
+      "variant": "SD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0D9",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2"
+      ]
+    },
+    {
+      "id": "R0DT",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3"
+      ]
+    },
+    {
+      "id": "R0B0",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3"
+      ]
+    },
+    {
+      "id": "R0AV",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3",
+        "name4",
+        "tip4",
+        "ubertip4",
+        "name5",
+        "tip5",
+        "ubertip5",
+        "name6",
+        "tip6",
+        "ubertip6"
+      ]
+    },
+    {
+      "id": "R0AW",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3",
+        "name4",
+        "tip4",
+        "ubertip4",
+        "name5",
+        "tip5",
+        "ubertip5",
+        "name6",
+        "tip6",
+        "ubertip6"
+      ]
+    },
+    {
+      "id": "R0AX",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3",
+        "name4",
+        "tip4",
+        "ubertip4",
+        "name5",
+        "tip5",
+        "ubertip5",
+        "name6",
+        "tip6",
+        "ubertip6"
+      ]
+    },
+    {
+      "id": "R0AY",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3",
+        "name4",
+        "tip4",
+        "ubertip4",
+        "name5",
+        "tip5",
+        "ubertip5",
+        "name6",
+        "tip6",
+        "ubertip6"
+      ]
+    },
+    {
+      "id": "R0AZ",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3",
+        "name4",
+        "tip4",
+        "ubertip4",
+        "name5",
+        "tip5",
+        "ubertip5",
+        "name6",
+        "tip6",
+        "ubertip6"
+      ]
+    },
+    {
+      "id": "R0AT",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3",
+        "name4",
+        "tip4",
+        "ubertip4"
+      ]
+    },
+    {
+      "id": "R0AC",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0AB",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0AP",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "name3",
+        "tip3",
+        "name4",
+        "tip4"
+      ]
+    },
+    {
+      "id": "R0A9",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0AA",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0AS",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "name3",
+        "tip3",
+        "name4",
+        "tip4"
+      ]
+    },
+    {
+      "id": "R0A5",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0A6",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0B3",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1",
+        "name2",
+        "tip2",
+        "ubertip2",
+        "name3",
+        "tip3",
+        "ubertip3",
+        "name4",
+        "tip4",
+        "ubertip4"
+      ]
+    },
+    {
+      "id": "R0A3",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0A4",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0B4",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0B2",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0AU",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0A7",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0A8",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    },
+    {
+      "id": "R0B1",
+      "type": "upgrade",
+      "variant": "HD",
+      "fields_verified": [
+        "name1",
+        "tip1",
+        "ubertip1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1053 @@
+{
+  "scope": "Лесные тролли (ForestTrolls): категория 4 — Способности",
+  "abilities_count": 39,
+  "variants": [
+    "SD"
+  ],
+  "abilities": [
+    {
+      "id": "A0P8",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33643,
+          "after": "|cffe4cfa3Смерть врагам Амани|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33644,
+          "after": "|cffe4cfa3Смерть врагам Амани|r"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33647,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Позволяет атакам дальнего боя поражать сразу несколько целей одновременно.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1DX",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32011,
+          "after": "|cffe4cfa3Жертва кровью|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32012,
+          "after": "|cffe4cfa3Жертва кровью|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 36104,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Приносит в жертву |cffe69a8d100|cffced4da ед. здоровья, мгновенно восстанавливая |cffc8e087100|cffced4da ед. маны.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1E3",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32118,
+          "after": "|cffe4cfa3Хитроумный ритуал|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 32041,
+          "after": "|cffe4cfa3Хитроумный ритуал|r [|cffffffff1|r] (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 32112,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Герой жертвует |cffe69a8d50%|cffced4da текущего здоровья, после чего в течение |cffffffff7|cffced4da сек. восстанавливает существенно больше здоровья.|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 32042,
+          "after": "|cffe4cfa3Хитроумный ритуал|r [|cffffffff2|r] (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 32113,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Герой жертвует |cffe69a8d50%|cffced4da текущего здоровья, после чего в течение |cffffffff7|cffced4da сек. восстанавливает существенно больше здоровья.|r"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 32043,
+          "after": "|cffe4cfa3Хитроумный ритуал|r [|cffffffff3|r] (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 32114,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Герой жертвует |cffe69a8d50%|cffced4da текущего здоровья, после чего в течение |cffffffff7|cffced4da сек. восстанавливает существенно больше здоровья.|r"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 32111,
+          "after": "|cffe4cfa3Хитроумный ритуал|r [|cffffffff4|r] (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 32115,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Герой жертвует |cffe69a8d50%|cffced4da текущего здоровья, после чего в течение |cffffffff7|cffced4da сек. восстанавливает существенно больше здоровья.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1F9",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 29586,
+          "after": "|cffe4cfa3Свирепость лесов|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 29588,
+          "after": "|cffe4cfa3Свирепость лесов|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 39303,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает скорость атаки тролля пропорционально недостающему здоровью.|n|nПри активации отнимает |cffe69a8d25%|cffced4da текущего здоровья, но повышает урон от атак на |cffc8e087+25%|cffced4da на |cffffffff25|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1FB",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33434,
+          "after": "|cffe4cfa3Удары духов|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33435,
+          "after": "|cffe4cfa3Удары духов|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33436,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область потоками магии духов, нанося урон вражеским войскам.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1FC",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 16197,
+          "after": "|cffe4cfa3Сети Амани|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 15255,
+          "after": "|cffe4cfa3Сети Амани|r [|cffffffff1|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 10425,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает прочные сети, опутывая всех врагов в указанной области и не позволяя им передвигаться.|n|nДлительность: |cffffffff7|cffced4da сек. (герои |cffffffff2|cffced4da сек.).|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 32990,
+          "after": "|cffe4cfa3Сети Амани|r [|cffffffff2|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 32992,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает прочные сети, опутывая всех врагов в указанной области и не позволяя им передвигаться.|n|nДлительность: |cffffffff7|cffced4da сек. (герои |cffffffff2|cffced4da сек.).|r"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 32991,
+          "after": "|cffe4cfa3Сети Амани|r [|cffffffff3|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 33700,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает прочные сети, опутывая всех врагов в указанной области и не позволяя им передвигаться.|n|nДлительность: |cffffffff7|cffced4da сек. (герои |cffffffff2|cffced4da сек.).|r"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 33697,
+          "after": "|cffe4cfa3Сети Амани|r [|cffffffff4|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 33701,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает прочные сети, опутывая всех врагов в указанной области и не позволяя им передвигаться.|n|nДлительность: |cffffffff7|cffced4da сек. (герои |cffffffff2|cffced4da сек.).|r"
+        }
+      ]
+    },
+    {
+      "id": "A1FE",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32998,
+          "after": "|cffe4cfa3Зачарованный топор|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33000,
+          "after": "|cffe4cfa3Зачарованный топор|r [|cffffffff1|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33503,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает зачарованный топор по прямой, нанося |cffffffff90|cffced4da ед. урона всем врагам на своём пути.|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33001,
+          "after": "|cffe4cfa3Зачарованный топор|r [|cffffffff2|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 33504,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает зачарованный топор по прямой, нанося |cffffffff180|cffced4da ед. урона всем врагам на своём пути.|r"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 33002,
+          "after": "|cffe4cfa3Зачарованный топор|r [|cffffffff3|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 35836,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает зачарованный топор по прямой, нанося |cffffffff270|cffced4da ед. урона всем врагам на своём пути.|r"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 32996,
+          "after": "|cffe4cfa3Зачарованный топор|r [|cffffffff4|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 33501,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает зачарованный топор по прямой, нанося |cffffffff360|cffced4da ед. урона всем врагам на своём пути.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1FG",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31403,
+          "after": "|cffe4cfa3Аура Медведя|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 31404,
+          "after": "|cffe4cfa3Аура Медведя|r"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 13008,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает защиту окружающих союзников на |cffc8e087+4|cffced4da к броне.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1FH",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33019,
+          "after": "|cffe4cfa3Аура Ястреба|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33020,
+          "after": "|cffe4cfa3Аура Ястреба|r"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33021,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускоряет регенерацию маны находящихся рядом союзников на |cffc8e087+3|cffced4da ед./сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1FI",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33023,
+          "after": "|cffe4cfa3Аура Волка|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33024,
+          "after": "|cffe4cfa3Аура Волка|r"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33025,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает силу атак находящихся рядом союзных войск на |cffc8e087+20%|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1FJ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33037,
+          "after": "|cffe4cfa3Прыжок медведя|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33027,
+          "after": "|cffe4cfa3Прыжок медведя|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33031,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Совершает мощный прыжок в указанную точку, нанося урон врагам при приземлении.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1FK",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33157,
+          "after": "|cffe4cfa3Целительный ритуал|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33158,
+          "after": "|cffe4cfa3Целительный ритуал|r (|cffffffffQ|r)"
+        }
+      ]
+    },
+    {
+      "id": "A1FL",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33163,
+          "after": "|cffe4cfa3Рассеивание заклинаний|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33164,
+          "after": "|cffe4cfa3Рассеивание заклинаний|r (|cffffffffW|r)"
+        }
+      ]
+    },
+    {
+      "id": "A1FM",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33165,
+          "after": "|cffe4cfa3Огонь Амани|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33166,
+          "after": "|cffe4cfa3Огонь Амани|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 36023,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Благословляет союзного воина священным пламенем, повышая его урон на |cffc8e087+15%|cffced4da и броню на |cffc8e087+3|cffced4da.|n|nВремя действия: |cffffffff60|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1FN",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38909,
+          "after": "|cffe4cfa3Лесные тролли|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 38910,
+          "after": "|cffe4cfa3Лесные тролли|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 32514,
+          "after": "|cffa6afb8РАСА:|cffced4da Свирепые лесные воители Зул'Амана с прирождённой регенерацией ран, боевым безумием и благословением звериных Лоа.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Куратор расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Сложность:|r |cffffffff●●●|cffa6afb8○○|r|n|cffa6afb8Период:|r |cffa9c7de«The Burning Crusade» — «Cataclysm»|r|n|n|cffced4daЛесные тролли — древняя и могущественная ветвь троллей Азерота, некогда правившая обширными землями империи Амани. Обладая непревзойдённой регенерацией тканей и яростью, они становятся смертоноснее по мере получения ран. В боях лесные тролли черпают силу звериных богов — Лоа Медведя, Волка и Ястреба, обращаясь в могучих полубожественных исполинов и сокрушая врагов неодолимым натиском.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1FO",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33175,
+          "after": "|cffe4cfa3Буря|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33176,
+          "after": "|cffe4cfa3Буря|r (|cffffffffR|r)"
+        }
+      ]
+    },
+    {
+      "id": "A1G1",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33440,
+          "after": "|cffe4cfa3Змеиный идол|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33441,
+          "after": "|cffe4cfa3Змеиный идол|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33442,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает неподвижного и невосприимчивого к магии идола, наносящего пронзающий урон наземным и воздушным целям.|n|nВремя действия: |cffffffff40|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1G3",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33509,
+          "after": "|cffe4cfa3Хочешь топор?|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33510,
+          "after": "|cffe4cfa3Хочешь топор?|r"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33511,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Любой урон, нанесённый троллем, оставляет на цели метку охотника, снижающую её броню на |cffe69a8d-4|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1G5",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33527,
+          "after": "|cffe4cfa3Заклятие жизни|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33528,
+          "after": "|cffe4cfa3Заклятие жизни|r [|cffffffff1|r] (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33530,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da В течение |cffffffff15|cffced4da сек. здоровье героя не может опуститься ниже смертельного порога, предотвращая гибель.|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33529,
+          "after": "|cffe4cfa3Заклятие жизни|r [|cffffffff2|r] (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 33531,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da В течение |cffffffff30|cffced4da сек. здоровье героя не может опуститься ниже смертельного порога, предотвращая гибель.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1G7",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33564,
+          "after": "|cffe4cfa3Проклятье Слабой Руки|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33550,
+          "after": "|cffe4cfa3Проклятье Слабой Руки|r [|cffffffff1|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33554,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Проклинает врага. Жертва промахивается при атаках с вероятностью |cffe69a8d33%|cffced4da.|n|nВремя действия: |cffffffff15|cffced4da сек.|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33551,
+          "after": "|cffe4cfa3Проклятье Слабой Руки|r [|cffffffff2|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 33555,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Проклинает врага. Жертва промахивается при атаках с вероятностью |cffe69a8d43%|cffced4da.|n|nВремя действия: |cffffffff20|cffced4da сек.|r"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 33552,
+          "after": "|cffe4cfa3Проклятье Слабой Руки|r [|cffffffff3|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 33556,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Проклинает врага. Жертва промахивается при атаках с вероятностью |cffe69a8d53%|cffced4da.|n|nВремя действия: |cffffffff25|cffced4da сек.|r"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 33553,
+          "after": "|cffe4cfa3Проклятье Слабой Руки|r [|cffffffff4|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 33557,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Проклинает врага. Жертва промахивается при атаках с вероятностью |cffe69a8d63%|cffced4da.|n|nВремя действия: |cffffffff30|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1G8",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33568,
+          "after": "|cffe4cfa3Проклятие хрупких доспехов|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33569,
+          "after": "|cffe4cfa3Проклятие хрупких доспехов|r [|cffffffff1|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33570,
+          "after": "|cffe4cfa3Проклятие хрупких доспехов|r [|cffffffff2|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 30682,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ослабляет броню врага на |cffe69a8d-5|cffced4da и раскрывает его местоположение на |cffffffff45|cffced4da сек.|r"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 33571,
+          "after": "|cffe4cfa3Проклятие хрупких доспехов|r [|cffffffff3|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 33574,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ослабляет броню врага на |cffe69a8d-6|cffced4da и раскрывает его местоположение на |cffffffff45|cffced4da сек.|r"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 33572,
+          "after": "|cffe4cfa3Проклятие хрупких доспехов|r [|cffffffff4|r] (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 33575,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ослабляет броню врага на |cffe69a8d-7|cffced4da и раскрывает его местоположение на |cffffffff45|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1G9",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33586,
+          "after": "|cffe4cfa3Тёмная аура|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33588,
+          "after": "|cffe4cfa3Тёмная аура|r [|cffffffff1|r]"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33589,
+          "after": "|cffe4cfa3Тёмная аура|r [|cffffffff2|r]"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 33590,
+          "after": "|cffe4cfa3Тёмная аура|r [|cffffffff3|r]"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 33584,
+          "after": "|cffe4cfa3Тёмная аура|r [|cffffffff4|r]"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 33585,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения ближайших союзников на |cffc8e087+24%|cffced4da и повышает скорость регенерации их здоровья на |cffc8e087+4|cffced4da ед./сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1GA",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33591,
+          "after": "|cffe4cfa3Ритуал Поглощения|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33592,
+          "after": "|cffe4cfa3Ритуал Поглощения|r [|cffffffff1|r] (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 35232,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает выбранного союзного тролля в могучего аватара Лоа (пехота — в Тролля-медведя, стрелки — в Тролля-волка, маги — в Тролля-ястреба).|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33593,
+          "after": "|cffe4cfa3Ритуал Поглощения|r [|cffffffff2|r] (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 35233,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает выбранного союзного тролля в могучего аватара Лоа (пехота — в Тролля-медведя, стрелки — в Тролля-волка, маги — в Тролля-ястреба).|r"
+        }
+      ]
+    },
+    {
+      "id": "A1GB",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33598,
+          "after": "|cffe4cfa3Веер клинков|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33600,
+          "after": "|cffe4cfa3Веер клинков|r [|cffffffff1|r] (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 35854,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает веер смертоносных кинжалов, нанося по |cffffffff85|cffced4da ед. урона окружающим врагам.|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33601,
+          "after": "|cffe4cfa3Веер клинков|r [|cffffffff2|r] (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 35855,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает веер смертоносных кинжалов, нанося по |cffffffff210|cffced4da ед. урона окружающим врагам.|r"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 33602,
+          "after": "|cffe4cfa3Веер клинков|r [|cffffffff3|r] (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip3",
+          "wts_id": 35856,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает веер смертоносных кинжалов, нанося по |cffffffff335|cffced4da ед. урона окружающим врагам.|r"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 33603,
+          "after": "|cffe4cfa3Веер клинков|r [|cffffffff4|r] (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 35853,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает веер смертоносных кинжалов, нанося по |cffffffff460|cffced4da ед. урона окружающим врагам.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1GC",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33607,
+          "after": "|cffe4cfa3Танец ветра|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33608,
+          "after": "|cffe4cfa3Танец ветра|r [|cffffffff1|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33609,
+          "after": "|cffe4cfa3Танец ветра|r [|cffffffff2|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 33610,
+          "after": "|cffe4cfa3Танец ветра|r [|cffffffff3|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 33605,
+          "after": "|cffe4cfa3Танец ветра|r [|cffffffff4|r] (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 25065,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует невидимость и |cffc8e087+100%|cffced4da к скорости передвижения на |cffffffff65|cffced4da сек. Атака из невидимости наносит |cffffffff+150|cffced4da ед. дополнительного урона.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1GD",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33616,
+          "after": "|cffe4cfa3Критический удар|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33614,
+          "after": "|cffe4cfa3Критический удар|r [|cffffffff1|r]"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33613,
+          "after": "|cffe4cfa3Критический удар|r [|cffffffff2|r]"
+        },
+        {
+          "field": "tip3",
+          "wts_id": 33615,
+          "after": "|cffe4cfa3Критический удар|r [|cffffffff3|r]"
+        },
+        {
+          "field": "tip4",
+          "wts_id": 33611,
+          "after": "|cffe4cfa3Критический удар|r [|cffffffff4|r]"
+        },
+        {
+          "field": "ubertip4",
+          "wts_id": 28789,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует |cffffffff15%|cffced4da шанс нанести |cffffffff5-кратный|cffced4da урон при атаке.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1GF",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33421,
+          "after": "|cffe4cfa3Берсерк|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33424,
+          "after": "|cffe4cfa3Берсерк|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33425,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость атаки на |cffc8e087+35%|cffced4da, но повышает получаемый урон на |cffe69a8d+30%|cffced4da.|n|nВремя действия: |cffffffff12|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1GG",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33649,
+          "after": "|cffe4cfa3Чудодейственный рёв|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33650,
+          "after": "|cffe4cfa3Чудодейственный рёв|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33651,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает броню окружающих союзников на |cffc8e087+2|cffced4da и значительно ускоряет их регенерацию здоровья на |cffffffff20|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1GH",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33654,
+          "after": "|cffe4cfa3Огромная сила|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33652,
+          "after": "|cffe4cfa3Огромная сила|r"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33653,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Удары тролля-медведя наносят |cffffffff15%|cffced4da рассекающего урона окружающим врагам в радиусе |cffffffff200|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1GI",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33655,
+          "after": "|cffe4cfa3Цепная молния|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33657,
+          "after": "|cffe4cfa3Цепная молния|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33658,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цель электрическим разрядом, наносящим |cffffffff70|cffced4da ед. урона и перескакивающим до |cffffffff10|cffced4da раз по соседним врагам.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1GJ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33659,
+          "after": "|cffe4cfa3Ужасающий вой|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33661,
+          "after": "|cffe4cfa3Ужасающий вой|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33662,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Оглушительный вой снижает броню вражеских войск поблизости на |cffe69a8d-3|cffced4da.|n|nВремя действия: |cffffffff15|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1GL",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33705,
+          "after": "|cffe4cfa3Вкус битвы|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33706,
+          "after": "|cffe4cfa3Вкус битвы|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33669,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пробуждает жажду крови, наделяя всех ближайших союзников |cffc8e08725%|cffced4da вампиризмом на |cffffffff20|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1GM",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33670,
+          "after": "|cffe4cfa3Безрассудный берсерк|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33671,
+          "after": "|cffe4cfa3Безрассудный берсерк|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 33672,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует |cffc8e087+100%|cffced4da к скорости атаки и |cffc8e087+25%|cffced4da к скорости бега, но повышает получаемый урон на |cffe69a8d+70%|cffced4da.|n|nВремя действия: |cffffffff12|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1GN",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33674,
+          "after": "|cffe4cfa3Сильный удар|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 30955,
+          "after": "|cffe4cfa3Сильный удар|r"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 15254,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует |cffffffff15%|cffced4da шанс нанести |cffffffff+15|cffced4da ед. урона и оглушить цель на |cffffffff1|cffced4da сек. (героев на |cffffffff0,1|cffced4da сек.).|r"
+        }
+      ]
+    },
+    {
+      "id": "A1GP",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 33250,
+          "after": "|cffe4cfa3Заклятие силы|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 33272,
+          "after": "|cffe4cfa3Заклятие силы|r [|cffffffff1|r] (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 10096,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da В течение |cffffffff20|cffced4da сек. возвращает |cffffffff100%|cffced4da всего полученного героем урона обратно врагам поблизости.|r"
+        },
+        {
+          "field": "tip2",
+          "wts_id": 33273,
+          "after": "|cffe4cfa3Заклятие силы|r [|cffffffff2|r] (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip2",
+          "wts_id": 10101,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da В течение |cffffffff40|cffced4da сек. возвращает |cffffffff100%|cffced4da всего полученного героем урона обратно врагам поблизости.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1GX",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35857,
+          "after": "|cffa6afb8Регенерация троллей (служебное)|r"
+        }
+      ]
+    },
+    {
+      "id": "A1ID",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 31333,
+          "after": "|cffe4cfa3Бешенство|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 31460,
+          "after": "|cffe4cfa3Бешенство|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 5422,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вводит до |cffffffff4|cffced4da воинов в радиусе в состояние бешенства: увеличивает скорость атаки на |cffc8e087+30%|cffced4da ценой потери |cffe69a8d3|cffced4da ед. здоровья/сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1MI",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 39307,
+          "after": "|cffe4cfa3Аманийское копьё|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 39308,
+          "after": "|cffe4cfa3Аманийское копьё|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 39309,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает тяжёлое копьё во врага, нанося |cffffffff65|cffced4da ед. урона и оглушая цель на |cffffffff2|cffced4da сек. (героев на |cffffffff0,1|cffced4da сек.).|r"
+        }
+      ]
+    },
+    {
+      "id": "A1MJ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 39310,
+          "after": "|cffe4cfa3Аманийские шипы|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 39311,
+          "after": "|cffe4cfa3Аманийские шипы|r"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 39312,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Острые шипы на броне медведя повышают защиту на |cffc8e087+2|cffced4da к броне и возвращают атакующим |cffffffff7%|cffced4da урона ближнего боя.|r"
+        }
+      ]
+    }
+  ]
+}

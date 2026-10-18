@@ -1,0 +1,108 @@
+{
+  "race": "Гномы (Gnomes)",
+  "race_id": 23,
+  "selection_ability": "A0SD",
+  "objects_audit": {
+    "buildings": {
+      "count": 10,
+      "ids": [
+        "h0FI",
+        "h0FK",
+        "h0FL",
+        "h0FR",
+        "h0FS",
+        "h0FY",
+        "h0FZ",
+        "h0G0",
+        "h0G3",
+        "h0G7"
+      ]
+    },
+    "workers": {
+      "count": 2,
+      "ids": [
+        "h0FA",
+        "h0FX"
+      ]
+    },
+    "units": {
+      "count": 21,
+      "ids": [
+        "h0FB",
+        "h0FC",
+        "h0FD",
+        "h0FE",
+        "h0FF",
+        "h0FG",
+        "h0FH",
+        "h0FJ",
+        "h0FM",
+        "h0FN",
+        "h0FO",
+        "h0FP",
+        "h0FQ",
+        "h0FT",
+        "h0FU",
+        "h0FV",
+        "h0FW",
+        "h0G1",
+        "h0G2",
+        "h0G4",
+        "h0G5"
+      ]
+    },
+    "heroes": {
+      "count": 8,
+      "ids": [
+        "H0GC",
+        "H0GD",
+        "H0GE",
+        "H0GF",
+        "H0GG",
+        "H0HQ",
+        "H0HS",
+        "MIMH"
+      ],
+      "names": {
+        "H0GC": "Танк УТ v1.23 (Интеллект, поддержка, наземная атака)",
+        "H0GD": "Фронтовой Гений (Сила, ближний бой, экзоскелет)",
+        "H0GE": "Фронтовой Гений (Сила, ближний бой, экзоскелет)",
+        "H0GF": "Фронтовой Гений (Сила, ближний бой, экзоскелет)",
+        "H0GG": "Стрелок-ветеран (Ловкость, дальний бой, ракеты)",
+        "H0HQ": "Король Гномрегана (Гелбин Меггакрут — Главный механик)",
+        "H0HS": "Король Гномрегана (Гелбин Меггакрут — Главный механик)",
+        "MIMH": "Перекованный хранитель (Мимирон V2.0 — Легендарный герой, Интеллект)"
+      }
+    },
+    "abilities": {
+      "count": 56,
+      "total_wts_updated": 700
+    },
+    "researches": {
+      "count": 60,
+      "markers_list": {
+        "R0BX": "Маркер расы Гномы",
+        "R0HW": "Маркер альянса/гномов"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items or inventory artifacts found in war3map.w3t for Gnomes."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "No race-specific floating messages or game UI strings found in war3map.wts for Gnomes."
+  },
+  "buffs_audit": {
+    "custom_buffs": [
+      "B03Y",
+      "B05H",
+      "B05J",
+      "B05L"
+    ],
+    "status": "Standardized custom buffs with secondary color labels and clean descriptions."
+  },
+  "total_wts_updates": 700,
+  "total_checks": 305
+}

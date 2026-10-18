@@ -117,11 +117,34 @@ RegisterAiRace("Draenei", {
 
             { at = 55, action = "techUp", from = FourCC('h016'), to = FourCC('h017'), cap = 3 },
 
+            { at = 25, action = "research", rows = {
+                {FourCC('h033'), FourCC('RDr1'), 1},
+            }},
+            { at = 55, action = "research", rows = {
+                {FourCC('h017'), FourCC('R02R'), 1},
+                {FourCC('h017'), FourCC('R02Q'), 1},
+                {FourCC('h058'), FourCC('RDr2'), 1},
+                {FourCC('h058'), FourCC('RDr3'), 1},
+                {FourCC('h058'), FourCC('RDr4'), 1},
+                {FourCC('h05A'), FourCC('RDr5'), 1},
+            }},
+
         },
 
     },
 
     attackerData = {
+
+        [FourCC('h01O')] = {
+            { order = "spiritlink", chance = 1, type = "draenei_vow", needAbil = FourCC('ADr3') },
+        },
+        [FourCC('h01R')] = {
+            { order = "healingwave", chance = 1, type = "heal", allyRange = 600,
+                needAbil = FourCC('ADr4'), organicOnly = true, minLostHP = 20 },
+        },
+        [FourCC('n005')] = {
+            { order = "healingward", chance = 1, type = "draenei_idol", needAbil = FourCC('ADr5') },
+        },
 
         [FourCC('h01S')] = {
 

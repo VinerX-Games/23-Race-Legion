@@ -1,0 +1,56 @@
+{
+  "scope": "Огры (Ogres): подсказка выбора расы A17N и маркер фракции R0HT",
+  "object": "A17N",
+  "variants": [
+    "SD"
+  ],
+  "hotkey": {
+    "value": "S"
+  },
+  "levels": 1,
+  "evidence": [
+    "04_race_selection.lua: InitTrig_Race_Ogres регистрирует способность A17N.",
+    "При выборе создаются 5 рабочих o03W, исследуется маркер R0HT, удаляется выбирающий юнит.",
+    "Горячая клавиша S, создатель NiCAmCHiK, куратор NiCAmCHiK, сложность 1/5 (●○○○○), период «Burning Crusade — Legion»."
+  ],
+  "strings": [
+    {
+      "field": "name",
+      "wts_id": 38905,
+      "after": "|cffe4cfa3Огры|r"
+    },
+    {
+      "field": "tip1",
+      "wts_id": 38906,
+      "after": "|cffe4cfa3Огры|r (|cffffffffS|r)"
+    },
+    {
+      "field": "ubertip1",
+      "wts_id": 25688,
+      "after": "|cffa6afb8РАСА:|cffced4da Могучие и свирепые великаны Дренора, полагающиеся на сокрушительную физическую мощь, древних исполинов и разрушительную магию.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deNiCAmCHiK|r|n|cffa6afb8Куратор расы:|r |cffa9c7deNiCAmCHiK|r|n|cffa6afb8Сложность:|r |cffffffff●|cffa6afb8○○○○|r|n|cffa6afb8Период:|r |cffa9c7de«Burning Crusade — Legion»|r|n|n|cffced4daОгры — древняя раса великанов, уроженцев Дренора, ведущих свой род от колоссальных гроннов. Обладая огромной силой и выносливостью, огры покоряют диких зверей, возводят цитадели и призывают свирепых великанов. Их двухголовые маги и шаманы черпают силу из крови и стихий, обращая врагов в бегство несокрушимым натиском.|r"
+    }
+  ],
+  "markers": [
+    {
+      "id": "R0HT",
+      "name": "Огры (маркер расы)",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 29642,
+          "after": "|cffe4cfa3Огры|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 29643,
+          "after": "|cffe4cfa3Огры|r"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 38930,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к расе Огров.|r"
+        }
+      ]
+    }
+  ]
+}

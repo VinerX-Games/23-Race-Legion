@@ -1,0 +1,337 @@
+{
+  "ok": true,
+  "applied": true,
+  "method": "WTS-only",
+  "changed_wts_ids": [
+    20436,
+    20454,
+    20466,
+    31727,
+    20473,
+    20459,
+    23618,
+    23619,
+    23622,
+    42684,
+    23623,
+    20484,
+    20430,
+    20431,
+    20434,
+    26718,
+    20435,
+    20433,
+    28772,
+    28773,
+    28775,
+    42686,
+    28777,
+    28774
+  ],
+  "binary_sha256_unchanged": {
+    "war3map.w3u": "a4738893013a54b937152ec9ab34a1b4709cd7ea8e7ad5479fbcd19a5ec87029",
+    "war3mapSkin.w3u": "0642c190624839ccb851a3fa998848917c2145751bf0d83e42e7c6e6ca1e0424",
+    "war3map.w3a": "cdc15d6a3f1c302d1c966bf0ede9e16aa900560805aceeaf0ab9d426da9c1f52",
+    "war3mapSkin.w3a": "d4451dff227e93e58766495292ddb1f05b2643722b57c2079c86fb6700465570",
+    "war3map.w3t": "06c2ae97366168984df0539ed71902e2884a39a1a4b0d1a5fb98e41a0b77e6ea",
+    "war3mapSkin.w3t": "21100b19421fd5844a0528a350d9e599705e3ab955730e608d1a40069eb39d45",
+    "war3map.w3q": "e146a41c61efa0a12610c6339e1bd24ef5da98c569ed009b0c0cd35d02074c1f",
+    "war3mapSkin.w3q": "3e1d59ae4d28778e845d325d87f37d9994587339d9d69f12b37478234b6aa773"
+  },
+  "before_wts_sha256": "a66075b19330513f8b11fb584d5d2855c70a3cfc3f5d91dfd8f3060ee2df591c",
+  "after_wts_sha256": "bf730ae047a01d26761db2ea6dd8452089ccde14120fc69c02c4bc6731df45b8",
+  "checks": [
+    {
+      "variant": "SD",
+      "rawcode": "H0HB",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HB",
+      "field": "propernames",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HB",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HB",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HB",
+      "field": "revivetip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HB",
+      "field": "awakentip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HL",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HL",
+      "field": "propernames",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HL",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HL",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HL",
+      "field": "revivetip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HL",
+      "field": "awakentip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HA",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HA",
+      "field": "propernames",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HA",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HA",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HA",
+      "field": "revivetip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0HA",
+      "field": "awakentip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0L4",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0L4",
+      "field": "propernames",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0L4",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0L4",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0L4",
+      "field": "revivetip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "H0L4",
+      "field": "awakentip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HB",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HB",
+      "field": "propernames",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HB",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HB",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HB",
+      "field": "revivetip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HB",
+      "field": "awakentip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HL",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HL",
+      "field": "propernames",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HL",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HL",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HL",
+      "field": "revivetip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HL",
+      "field": "awakentip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HA",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HA",
+      "field": "propernames",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HA",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HA",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HA",
+      "field": "revivetip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0HA",
+      "field": "awakentip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0L4",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0L4",
+      "field": "propernames",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0L4",
+      "field": "tip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0L4",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0L4",
+      "field": "revivetip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "H0L4",
+      "field": "awakentip",
+      "exact_match": true
+    }
+  ],
+  "total_checks": 48,
+  "palette_and_color_resets_ok": true,
+  "hotkeys_and_mechanics_unchanged": true,
+  "in_game_checked": false
+}

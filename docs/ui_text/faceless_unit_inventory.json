@@ -1,0 +1,290 @@
+[
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A0LP,A0LN,A0LO,A0LK,A0LM"
+    },
+    "id": "n01P",
+    "name": "|cff6f6483Забытый|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "ACfb,A0J8"
+    },
+    "id": "n01Q",
+    "name": "|cff6f6483Кислотные ямы|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "ACfb,A0J8"
+    },
+    "id": "n01R",
+    "name": "|cff6f6483Мерзкий алтарь|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "ACfb,A0J8"
+    },
+    "id": "n01S",
+    "name": "|cff6f6483Жуткий улей|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "ACfb,A0J8"
+    },
+    "id": "n01U",
+    "name": "|cff6f6483Обелиск приношений|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "Abds"
+    },
+    "id": "h0HY",
+    "name": "|cffe4cfa3Алтарь Древних Богов|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A11G,A10T,A0LJ,A0LI,A0IQ,Argl"
+    },
+    "id": "h0HZ",
+    "name": "|cffe4cfa3Забытый|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A11G,A06M"
+    },
+    "id": "u02E",
+    "name": "|cffe4cfa3Малое порождение|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "Abds"
+    },
+    "id": "h0I1",
+    "name": "|cffe4cfa3Яма бездны|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "Abds"
+    },
+    "id": "h0I2",
+    "name": "|cffe4cfa3Катакомбы магов|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "Abds"
+    },
+    "id": "h0I4",
+    "name": "|cffe4cfa3Портал Бездны|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "Abds"
+    },
+    "id": "h0I6",
+    "name": "|cffe4cfa3Обитель эволюции|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A01C,AInv"
+    },
+    "id": "U02G",
+    "name": "|cffd7b4f5Генерал К`Траксис|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A01C,AInv"
+    },
+    "id": "U02H",
+    "name": "|cffd7b4f5Верховный Душегуб|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A01C,AInv"
+    },
+    "id": "U02I",
+    "name": "|cffd7b4f5Маг Запредельной Тьмы|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A1KB,A11G,A10T,A0LJ,A0LI,A0IQ,Argl"
+    },
+    "id": "h0I7",
+    "name": "|cffe4cfa3Сущность Страха|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A11G,A10T,A0LJ,A0LI,A0IQ,Argl"
+    },
+    "id": "h0I8",
+    "name": "|cffe4cfa3Обитель Кошмаров|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": ""
+    },
+    "id": "h0I9",
+    "name": "|cffe4cfa3Безликий дозорный|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": ""
+    },
+    "id": "h0IA",
+    "name": "|cffe4cfa3Безликий разрушитель|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A10X,A10W"
+    },
+    "id": "h0IB",
+    "name": "|cffe4cfa3Сущность бездны|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A10Z,A10X"
+    },
+    "id": "h0IC",
+    "name": "|cffe4cfa3Могущественная Сущность бездны|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A115,A114,A116"
+    },
+    "id": "h0ID",
+    "name": "|cffe4cfa3Злобный бичеватель разума|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A126,A112,A1R2,A1R3"
+    },
+    "id": "h0IE",
+    "name": "|cffe4cfa3Пожиратель Бездны|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A10P,A123"
+    },
+    "id": "h0IF",
+    "name": "|cffe4cfa3Бессмертный страж|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A10Y,A111,A0RR,A1N5"
+    },
+    "id": "h0IG",
+    "name": "|cffe4cfa3К`Траксис|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A0I3,ANha,Arst"
+    },
+    "id": "u02D",
+    "name": "|cffe4cfa3Безликий прислужник|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A12G,A01C,AInv,A12I"
+    },
+    "id": "U02F",
+    "name": "|cffd7b4f5Верховный генерал|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A16O,A16N,A16P"
+    },
+    "id": "h0K2",
+    "name": "|cffe4cfa3Проклинатель Бездны|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": ""
+    },
+    "id": "e009",
+    "name": "|cffd7b4f5Кошмар|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A10Z,ACen"
+    },
+    "id": "n05I",
+    "name": "|cffe4cfa3Водное Порождение|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": ""
+    },
+    "id": "h0K3",
+    "name": "|cffe4cfa3Башня Смерти|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A1CK,A1CF,A10X"
+    },
+    "id": "h0MN",
+    "name": "|cffe4cfa3Страх|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A122,A113,A0PC"
+    },
+    "id": "h0MO",
+    "name": "|cffe4cfa3Безликий Кошмар|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": ""
+    },
+    "id": "h0MP",
+    "name": "|cffe4cfa3Порабощённый зверь|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": ""
+    },
+    "id": "h0MQ",
+    "name": "|cffe4cfa3Жестокий порабощённый зверь|r"
+  },
+  {
+    "editor_suffix": "(Безликие)",
+    "fields": {
+      "abillist": "A0RR,ACtn,A0RS,A1N5"
+    },
+    "id": "h0OM",
+    "name": "|cffd7b4f5Тварь Из Бездны"
+  }
+]

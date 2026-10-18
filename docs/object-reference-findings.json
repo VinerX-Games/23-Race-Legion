@@ -1,0 +1,134 @@
+{
+  "command": "validate-map",
+  "errors": 25,
+  "findings": [
+    {
+      "field": "builds",
+      "id": "opeo",
+      "message": "unknown unit reference",
+      "reference": "orbr",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "upgrades",
+      "id": "ewsp",
+      "message": "unknown upgrade reference",
+      "reference": "Rewd",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "name",
+      "id": "nnad",
+      "message": "unresolved WTS reference",
+      "reference": "TRIGSTR_42938",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "editorsuffix",
+      "id": "nnad",
+      "message": "unresolved WTS reference",
+      "reference": "TRIGSTR_25695",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "trains",
+      "id": "h07B",
+      "message": "unknown unit reference",
+      "reference": "TREH",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I027",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I028",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I029",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I02A",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I02B",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I024",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I02K",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I026",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "sellitems",
+      "id": "n01O",
+      "message": "unknown item reference",
+      "reference": "I02M",
+      "severity": "error",
+      "type": "unit"
+    },
+    {
+      "field": "trains",
+      "id": "h0EU",
+      "message": "unknown unit reference",
+      "reference": "n07P.n07U",
+      "severity": "error",
+      "type": "unit"
+    }
+  ],
+  "findings_total": 25,
+  "objects_checked": 10922,
+  "ok": false,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "warnings": 0,
+  "error": "CLI exit code 1",
+  "artifact": "F:\\Gemini_23Race\\.cache\\wc3\\hivewe-validate-map.json"
+}

@@ -1,0 +1,247 @@
+{
+  "status": "preview_only_not_imported",
+  "style": "existing custom stone and metal, muted turquoise at -40% saturation",
+  "common_material": "art/interface/23raceforever-inventory-cover.png; plain cloth sample x=222,y=514,w=182,h=124",
+  "files": [
+    {
+      "name": "hud-board",
+      "title": "Таблица игроков",
+      "frame": "BoxedTextBackgroundTemplate → hudBoard",
+      "size": [
+        512,
+        512
+      ],
+      "formats": [
+        "PNG",
+        "TGA"
+      ],
+      "sources_in_map": [
+        "UI/MiniMapBorder.dds",
+        "UI/Console/Human/HumanUITile-InventoryCover.dds"
+      ],
+      "png_sha256": "de3399eb7dcaa77e7b34960a27b63a10be5e3ca9080750c2b0c80ec285ab14ea"
+    },
+    {
+      "name": "timer-chip",
+      "title": "Таймеры",
+      "frame": "BoxedTextBackgroundTemplate → hudChip[1..4]",
+      "size": [
+        512,
+        64
+      ],
+      "formats": [
+        "PNG",
+        "TGA"
+      ],
+      "sources_in_map": [
+        "UI/MiniMapBorder.dds"
+      ],
+      "png_sha256": "d518b11db26a97e0153fe822e63eb14d4e9a85b69312b3781f990911609fb398"
+    },
+    {
+      "name": "tooltip",
+      "title": "Подсказки",
+      "frame": "BoxedText → доход, экономика, колонки и расы",
+      "size": [
+        512,
+        256
+      ],
+      "formats": [
+        "PNG",
+        "TGA"
+      ],
+      "sources_in_map": [
+        "UI/MiniMapBorder.dds"
+      ],
+      "png_sha256": "afff0fa70a43fd05b70b77b6913dc26359268cc1b16fa7c562c76153037e4fe3"
+    },
+    {
+      "name": "welcome-panel",
+      "title": "Приветственное окно",
+      "frame": "BoxedTextBackgroundTemplate → welcome",
+      "size": [
+        512,
+        512
+      ],
+      "formats": [
+        "PNG",
+        "TGA"
+      ],
+      "sources_in_map": [
+        "UI/MiniMapBorder.dds",
+        "UI/Console/Human/HumanUITile-InventoryCover.dds"
+      ],
+      "png_sha256": "d8bc72d210ede37295b408077547484f4b57cb290fba9376a315260a367a2108"
+    },
+    {
+      "name": "button-normal",
+      "title": "Кнопка · обычная",
+      "frame": "ScriptDialogButton / EscMenuButtonTemplate",
+      "size": [
+        256,
+        64
+      ],
+      "formats": [
+        "PNG",
+        "TGA"
+      ],
+      "sources_in_map": [
+        "UI/ButtonBorder.dds"
+      ],
+      "png_sha256": "8af7ae8e64c2e9037ceef14495d06e65663adb43535e6d2b52817b490f91a6b0"
+    },
+    {
+      "name": "button-hover",
+      "title": "Кнопка · наведение",
+      "frame": "ControlMouseOverHighlight",
+      "size": [
+        256,
+        64
+      ],
+      "formats": [
+        "PNG",
+        "TGA"
+      ],
+      "sources_in_map": [
+        "UI/ButtonBorder.dds"
+      ],
+      "png_sha256": "a025b3e2624865e91d6640e71a4a512b6a71f46143df3b03bc0dcc2d61863f34"
+    },
+    {
+      "name": "button-pressed",
+      "title": "Кнопка · нажатая",
+      "frame": "ControlPushedBackdrop",
+      "size": [
+        256,
+        64
+      ],
+      "formats": [
+        "PNG",
+        "TGA"
+      ],
+      "sources_in_map": [
+        "UI/ButtonBorder.dds"
+      ],
+      "png_sha256": "186949ef324ff013d3a05907fa567fe9ba002e9ccb6faac4ea7030fb53018dcb"
+    },
+    {
+      "name": "button-disabled",
+      "title": "Кнопка · недоступная",
+      "frame": "ControlDisabledBackdrop",
+      "size": [
+        256,
+        64
+      ],
+      "formats": [
+        "PNG",
+        "TGA"
+      ],
+      "sources_in_map": [
+        "UI/ButtonBorder.dds"
+      ],
+      "png_sha256": "373d5f2039f40015292fde9895c0f5eaf70ab6afb336e89cd677fc8b6cdc0f4b"
+    },
+    {
+      "name": "editbox",
+      "title": "Поле ссылки",
+      "frame": "EscMenuEditBoxTemplate → welcomeLink",
+      "size": [
+        512,
+        64
+      ],
+      "formats": [
+        "PNG",
+        "TGA"
+      ],
+      "sources_in_map": [
+        "UI/MiniMapBorder.dds"
+      ],
+      "png_sha256": "3f6d4f69b35131346271dd67b4b931bb5d5bd04829cb48206b70fbef44ed4e66"
+    },
+    {
+      "name": "toggle",
+      "title": "Переключатель таблицы",
+      "frame": "HudToggleFace",
+      "size": [
+        64,
+        64
+      ],
+      "formats": [
+        "PNG",
+        "TGA"
+      ],
+      "sources_in_map": [
+        "UI/ButtonBorder.dds"
+      ],
+      "png_sha256": "2d7f73caba5c4238b8d99277683ef3166fa1e9603daf94502770d2319550866c"
+    },
+    {
+      "name": "row-stripe",
+      "title": "Полоса строки",
+      "frame": "HudStripe / Textures/white.blp",
+      "size": [
+        512,
+        32
+      ],
+      "formats": [
+        "PNG",
+        "TGA"
+      ],
+      "sources_in_map": [
+        "UI/Console/Human/HumanUITile-InventoryCover.dds"
+      ],
+      "png_sha256": "771ce8996b5d8eddd79b2c2885002794925646772b58e25adc36c8b2589f672f"
+    },
+    {
+      "name": "separator",
+      "title": "Разделитель",
+      "frame": "HudStripe / Textures/white.blp",
+      "size": [
+        512,
+        8
+      ],
+      "formats": [
+        "PNG",
+        "TGA"
+      ],
+      "sources_in_map": [
+        "UI/MiniMapBorder.dds"
+      ],
+      "png_sha256": "0e42e45039bf11ca05bf3f08416e7be1feef2cc8cafb5d200c17d7f4cd5c42a0"
+    },
+    {
+      "name": "panel-background",
+      "title": "Общий фон",
+      "frame": "Материал для BackdropBackground",
+      "size": [
+        256,
+        256
+      ],
+      "formats": [
+        "PNG",
+        "TGA"
+      ],
+      "sources_in_map": [
+        "UI/Console/Human/HumanUITile-InventoryCover.dds"
+      ],
+      "png_sha256": "b9d524ff6fe4cc7e938aaf981b5c60d668bf3aa40e2fcefd6cefa591b0db013a"
+    },
+    {
+      "name": "panel-edge",
+      "title": "Общая рамка",
+      "frame": "Восьмисекционный BackdropEdgeFile",
+      "size": [
+        128,
+        16
+      ],
+      "formats": [
+        "PNG",
+        "TGA"
+      ],
+      "sources_in_map": [
+        "UI/MiniMapBorder.dds"
+      ],
+      "png_sha256": "8ac9e547162ee2e6e40cfea6972b97597af1144b4702f7504a267e870392b96c"
+    }
+  ]
+}

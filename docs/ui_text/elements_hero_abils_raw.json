@@ -1,0 +1,8269 @@
+{
+  "A1MR": {
+    "animnames": {
+      "raw": "spell,slam",
+      "text": "spell,slam"
+    },
+    "area1": {
+      "raw": "500",
+      "text": "500"
+    },
+    "area2": {
+      "raw": "500.000000",
+      "text": "500.000000"
+    },
+    "area3": {
+      "raw": "500.000000",
+      "text": "500.000000"
+    },
+    "area4": {
+      "raw": "500.000000",
+      "text": "500.000000"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNdeff.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNdeff.blp"
+    },
+    "buffid1": {
+      "raw": "BUfa",
+      "text": "BUfa"
+    },
+    "buffid2": {
+      "raw": "BUfa",
+      "text": "BUfa"
+    },
+    "buffid3": {
+      "raw": "BUfa",
+      "text": "BUfa"
+    },
+    "buffid4": {
+      "raw": "BUfa",
+      "text": "BUfa"
+    },
+    "buttonpos": {
+      "raw": "1",
+      "text": "1"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "Aroa",
+      "text": "Aroa"
+    },
+    "comments": {
+      "raw": "Roar",
+      "text": "Roar"
+    },
+    "cool1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cost1": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cost2": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cost3": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cost4": {
+      "raw": "100",
+      "text": "100"
+    },
+    "dataa1": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datab1": {
+      "raw": "2",
+      "text": "2"
+    },
+    "datab2": {
+      "raw": "3",
+      "text": "3"
+    },
+    "datab3": {
+      "raw": "4",
+      "text": "4"
+    },
+    "datab4": {
+      "raw": "5",
+      "text": "5"
+    },
+    "datac1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datad1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datae1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataf1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datag1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur1": {
+      "raw": "45",
+      "text": "45"
+    },
+    "dur2": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "dur3": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "dur4": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "editorsuffix": {
+      "raw": "TRIGSTR_16267",
+      "wts_id": 16267,
+      "text": "(Элементали)"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "45",
+      "text": "45"
+    },
+    "herodur2": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "herodur3": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "herodur4": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_28880",
+      "wts_id": 28880,
+      "text": "W"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_41392",
+      "wts_id": 41392,
+      "text": "|cffb4dcdcМорозный доспех|r"
+    },
+    "order": {
+      "raw": "roar",
+      "text": "roar"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNdeff.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNdeff.blp"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_28949",
+      "wts_id": 28949,
+      "text": "W"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_21844",
+      "wts_id": 21844,
+      "text": "|cffb4dcdcМорозный доспех|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_18244",
+      "wts_id": 18244,
+      "text": "Покрывает кристальным доспехом всех союзников стоящих рядом."
+    },
+    "sort": {
+      "raw": "unit",
+      "text": "unit"
+    },
+    "targs1": {
+      "raw": "air,ground,friend,self",
+      "text": "air,ground,friend,self"
+    },
+    "targs2": {
+      "raw": "air,ground,friend,self",
+      "text": "air,ground,friend,self"
+    },
+    "targs3": {
+      "raw": "air,ground,friend,self",
+      "text": "air,ground,friend,self"
+    },
+    "targs4": {
+      "raw": "air,ground,friend,self",
+      "text": "air,ground,friend,self"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_25231",
+      "wts_id": 25231,
+      "text": "|cffb4dcdcМорозный доспех|r"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_25921",
+      "wts_id": 25921,
+      "text": "|cffb4dcdcМорозный доспех|r"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_39348",
+      "wts_id": 39348,
+      "text": "|cffb4dcdcМорозный доспех|r"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_39448",
+      "wts_id": 39448,
+      "text": "|cffb4dcdcМорозный доспех|r"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_990",
+      "wts_id": 990,
+      "text": "Увеличение защиты"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_39445",
+      "wts_id": 39445,
+      "text": "Увеличение защиты"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_39446",
+      "wts_id": 39446,
+      "text": "Увеличение защиты"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_39447",
+      "wts_id": 39447,
+      "text": "Увеличение защиты"
+    },
+    "unart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNdeff.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNdeff.blp"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "0",
+      "text": "0"
+    }
+  },
+  "A0P4": {
+    "animnames": {
+      "raw": "spell,throw",
+      "text": "spell,throw"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNGolemStormBolt.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNGolemStormBolt.blp"
+    },
+    "buffid1": {
+      "raw": "BPSE",
+      "text": "BPSE"
+    },
+    "buffid2": {
+      "raw": "BPSE",
+      "text": "BPSE"
+    },
+    "buffid3": {
+      "raw": "BPSE",
+      "text": "BPSE"
+    },
+    "buffid4": {
+      "raw": "BPSE",
+      "text": "BPSE"
+    },
+    "buttonpos": {
+      "raw": "0",
+      "text": "0"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "AHtb",
+      "text": "AHtb"
+    },
+    "comments": {
+      "raw": "Mountain King - Thunder Bolt",
+      "text": "Mountain King - Thunder Bolt"
+    },
+    "cool1": {
+      "raw": "15.000000",
+      "text": "15.000000"
+    },
+    "cool2": {
+      "raw": "15.000000",
+      "text": "15.000000"
+    },
+    "cool3": {
+      "raw": "18.000000",
+      "text": "18.000000"
+    },
+    "cool4": {
+      "raw": "18.000000",
+      "text": "18.000000"
+    },
+    "cost1": {
+      "raw": "75",
+      "text": "75"
+    },
+    "cost2": {
+      "raw": "75",
+      "text": "75"
+    },
+    "cost3": {
+      "raw": "75",
+      "text": "75"
+    },
+    "cost4": {
+      "raw": "75",
+      "text": "75"
+    },
+    "dataa1": {
+      "raw": "100",
+      "text": "100"
+    },
+    "dataa2": {
+      "raw": "200.000000",
+      "text": "200.000000"
+    },
+    "dataa3": {
+      "raw": "300.000000",
+      "text": "300.000000"
+    },
+    "dataa4": {
+      "raw": "400.000000",
+      "text": "400.000000"
+    },
+    "dur1": {
+      "raw": "5",
+      "text": "5"
+    },
+    "dur2": {
+      "raw": "5",
+      "text": "5"
+    },
+    "dur3": {
+      "raw": "5",
+      "text": "5"
+    },
+    "dur4": {
+      "raw": "5",
+      "text": "5"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "3",
+      "text": "3"
+    },
+    "herodur2": {
+      "raw": "3",
+      "text": "3"
+    },
+    "herodur3": {
+      "raw": "3",
+      "text": "3"
+    },
+    "herodur4": {
+      "raw": "3",
+      "text": "3"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_16492",
+      "wts_id": 16492,
+      "text": "Q"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "missileart": {
+      "raw": "abilities\\weapons\\catapult\\catapultmissile.mdl",
+      "text": "abilities\\weapons\\catapult\\catapultmissile.mdl"
+    },
+    "missilehoming": {
+      "raw": "1",
+      "text": "1"
+    },
+    "missilespeed": {
+      "raw": "1000",
+      "text": "1000"
+    },
+    "name": {
+      "raw": "TRIGSTR_10306",
+      "wts_id": 10306,
+      "text": "|cffb4dcdcБросок валуна|r"
+    },
+    "order": {
+      "raw": "thunderbolt",
+      "text": "thunderbolt"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNGolemStormBolt.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNGolemStormBolt.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchbuttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_16491",
+      "wts_id": 16491,
+      "text": "Q"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_10510",
+      "wts_id": 10510,
+      "text": "Изучить «|cffb4dcdcБросок валуна|r» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_16186",
+      "wts_id": 16186,
+      "text": "Бросает молот, оглушая врага и нанося урон. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AHtb,DataA1> урона, <AHtb,Dur1> сек.|r |cffb4dcdcоглушения.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<AHtb,DataA2> урона, <AHtb,Dur2> сек. оглушения.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AHtb,DataA3> урона, <AHtb,Dur3> сек. оглушения.|r |n|cffffcc004-й уровень:|r |cffb4dcdc<AHtb,DataA4> урона, <AHtb,Dur4> сек. оглушения.|r"
+    },
+    "rng1": {
+      "raw": "600",
+      "text": "600"
+    },
+    "rng2": {
+      "raw": "600",
+      "text": "600"
+    },
+    "rng3": {
+      "raw": "600",
+      "text": "600"
+    },
+    "rng4": {
+      "raw": "600",
+      "text": "600"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "targs1": {
+      "raw": "air,ground,debris,enemy,neutral,organic",
+      "text": "air,ground,debris,enemy,neutral,organic"
+    },
+    "targs2": {
+      "raw": "air,ground,debris,enemy,neutral,organic",
+      "text": "air,ground,debris,enemy,neutral,organic"
+    },
+    "targs3": {
+      "raw": "air,ground,debris,enemy,neutral,organic",
+      "text": "air,ground,debris,enemy,neutral,organic"
+    },
+    "targs4": {
+      "raw": "air,ground,debris,enemy,neutral,organic",
+      "text": "air,ground,debris,enemy,neutral,organic"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_10511",
+      "wts_id": 10511,
+      "text": "|cffb4dcdcБросок валуна|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_12013",
+      "wts_id": 12013,
+      "text": "|cffb4dcdcБросок валуна|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_12722",
+      "wts_id": 12722,
+      "text": "|cffb4dcdcБросок валуна|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_12736",
+      "wts_id": 12736,
+      "text": "|cffb4dcdcБросок валуна|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16187",
+      "wts_id": 16187,
+      "text": "Бросает молот, оглушая врага и нанося урон. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AHtb,DataA1> урона, <AHtb,Dur1> сек.|r |cffb4dcdcоглушения.|r "
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16188",
+      "wts_id": 16188,
+      "text": "Бросает молот, оглушая врага и нанося урон. |n|cffffcc002-й уровень:|r |cffb4dcdc<AHtb,DataA2> урона, <AHtb,Dur2> сек. оглушения.|r "
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_16189",
+      "wts_id": 16189,
+      "text": "Бросает молот, оглушая врага и нанося урон. |n|cffffcc003-й уровень:|r |cffb4dcdc<AHtb,DataA3> урона, <AHtb,Dur3> сек. оглушения.|r "
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_16190",
+      "wts_id": 16190,
+      "text": "Бросает молот, оглушая врага и нанося урон.|n|cffffcc004-й уровень:|r |cffb4dcdc<AHtb,DataA4> урона, <AHtb,Dur4> сек. оглушения.|r"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "0",
+      "text": "0"
+    }
+  },
+  "A0P2": {
+    "art": {
+      "raw": "ReplaceableTextures\\PassiveButtons\\PASBTNHardenedSkin.blp",
+      "text": "ReplaceableTextures\\PassiveButtons\\PASBTNHardenedSkin.blp"
+    },
+    "buttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "Assk",
+      "text": "Assk"
+    },
+    "comments": {
+      "raw": "Hardened Skin",
+      "text": "Hardened Skin"
+    },
+    "cool1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cost1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataa1": {
+      "raw": "100",
+      "text": "100"
+    },
+    "dataa2": {
+      "raw": "100.000000",
+      "text": "100.000000"
+    },
+    "dataa3": {
+      "raw": "100.000000",
+      "text": "100.000000"
+    },
+    "dataa4": {
+      "raw": "100.000000",
+      "text": "100.000000"
+    },
+    "datab1": {
+      "raw": "3",
+      "text": "3"
+    },
+    "datab2": {
+      "raw": "3.000000",
+      "text": "3.000000"
+    },
+    "datab3": {
+      "raw": "3.000000",
+      "text": "3.000000"
+    },
+    "datab4": {
+      "raw": "3.000000",
+      "text": "3.000000"
+    },
+    "datac1": {
+      "raw": "5.000000",
+      "text": "5.000000"
+    },
+    "datac2": {
+      "raw": "9.000000",
+      "text": "9.000000"
+    },
+    "datac3": {
+      "raw": "13.000000",
+      "text": "13.000000"
+    },
+    "datac4": {
+      "raw": "18.000000",
+      "text": "18.000000"
+    },
+    "datad1": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datad2": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datad3": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datad4": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datae1": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datae2": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datae3": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datae4": {
+      "raw": "1",
+      "text": "1"
+    },
+    "dur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_20026",
+      "wts_id": 20026,
+      "text": "E"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_8349",
+      "wts_id": 8349,
+      "text": "|cffb4dcdcКаменная кожа|r"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\PassiveButtons\\PASBTNHardenedSkin.blp",
+      "text": "ReplaceableTextures\\PassiveButtons\\PASBTNHardenedSkin.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "researchbuttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_8348",
+      "wts_id": 8348,
+      "text": "|cffb4dcdcКаменная кожа|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_20314",
+      "wts_id": 20314,
+      "text": "Поглощает часть входящего физического урона. |n|n|cffffcc001-й уровень:|r |cffb4dcdc12 урона.|r |n|cffffcc002-й уровень:|r |cffb4dcdc15 урона.|r |n|cffffcc003-й уровень:|r |cffb4dcdc17 урона.|r |n|cffffcc004-й уровень:|r |cffb4dcdc20 урона.|r "
+    },
+    "sort": {
+      "raw": "unit",
+      "text": "unit"
+    },
+    "targs1": {
+      "raw": "enemy,ally",
+      "text": "enemy,ally"
+    },
+    "targs2": {
+      "raw": "enemy,ally",
+      "text": "enemy,ally"
+    },
+    "targs3": {
+      "raw": "enemy,ally",
+      "text": "enemy,ally"
+    },
+    "targs4": {
+      "raw": "enemy,ally",
+      "text": "enemy,ally"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_7693",
+      "wts_id": 7693,
+      "text": "|cffb4dcdcКаменная кожа|r"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_7696",
+      "wts_id": 7696,
+      "text": "|cffb4dcdcКаменная кожа|r"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_7704",
+      "wts_id": 7704,
+      "text": "|cffb4dcdcКаменная кожа|r"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_7700",
+      "wts_id": 7700,
+      "text": "|cffb4dcdcКаменная кожа|r"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16181",
+      "wts_id": 16181,
+      "text": "|cffb4dcdc-<Assk,DataC1>|r от получаемого урона от атак. Минимальный урон от атак: |cffb4dcdc<Assk,DataB1>.|r"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16182",
+      "wts_id": 16182,
+      "text": "|cffb4dcdc-<Assk,DataC2>|r от получаемого урона от атак. Минимальный урон от атак: |cffb4dcdc<Assk,DataB2>.|r"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_16183",
+      "wts_id": 16183,
+      "text": "|cffb4dcdc-<Assk,DataC3>|r от получаемого урона от атак. Минимальный урон от атак: |cffb4dcdc<Assk,DataB3>.|r"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_16184",
+      "wts_id": 16184,
+      "text": "|cffb4dcdc-<Assk,DataC4>|r от получаемого урона от атак. Минимальный урон от атак: |cffb4dcdc<Assk,DataB4>.|r"
+    },
+    "unbuttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "unbuttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "1",
+      "text": "1"
+    }
+  },
+  "AEtq": {
+    "animnames": {
+      "raw": "stand,channel",
+      "text": "stand,channel"
+    },
+    "area1": {
+      "raw": "900",
+      "text": "900"
+    },
+    "area2": {
+      "raw": "900",
+      "text": "900"
+    },
+    "area3": {
+      "raw": "900",
+      "text": "900"
+    },
+    "area4": {
+      "raw": "900",
+      "text": "900"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNTranquility.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNTranquility.blp"
+    },
+    "buffid1": {
+      "raw": "AEtr",
+      "text": "AEtr"
+    },
+    "buffid2": {
+      "raw": "AEtr",
+      "text": "AEtr"
+    },
+    "buffid3": {
+      "raw": "AEtr",
+      "text": "AEtr"
+    },
+    "buffid4": {
+      "raw": "AEtr",
+      "text": "AEtr"
+    },
+    "buttonpos": {
+      "raw": "3",
+      "text": "3"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "AEtq",
+      "text": "AEtq"
+    },
+    "comments": {
+      "raw": "Keeper - Tranquility",
+      "text": "Keeper - Tranquility"
+    },
+    "cool1": {
+      "raw": "85.000000",
+      "text": "85.000000"
+    },
+    "cool2": {
+      "raw": "60.000000",
+      "text": "60.000000"
+    },
+    "cool3": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cool4": {
+      "raw": "120",
+      "text": "120"
+    },
+    "cost1": {
+      "raw": "125",
+      "text": "125"
+    },
+    "cost2": {
+      "raw": "250",
+      "text": "250"
+    },
+    "cost3": {
+      "raw": "300",
+      "text": "300"
+    },
+    "cost4": {
+      "raw": "300",
+      "text": "300"
+    },
+    "dataa1": {
+      "raw": "48",
+      "text": "48"
+    },
+    "dataa2": {
+      "raw": "25.000000",
+      "text": "25.000000"
+    },
+    "dataa3": {
+      "raw": "40",
+      "text": "40"
+    },
+    "dataa4": {
+      "raw": "40",
+      "text": "40"
+    },
+    "datab1": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datab2": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datab3": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datab4": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datac1": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datad1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datad2": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datad3": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datad4": {
+      "raw": "1",
+      "text": "1"
+    },
+    "dur1": {
+      "raw": "25.000000",
+      "text": "25.000000"
+    },
+    "dur2": {
+      "raw": "25.000000",
+      "text": "25.000000"
+    },
+    "dur3": {
+      "raw": "15",
+      "text": "15"
+    },
+    "dur4": {
+      "raw": "15",
+      "text": "15"
+    },
+    "editorsuffix": {
+      "raw": "TRIGSTR_15885",
+      "wts_id": 15885,
+      "text": "(Общее R)"
+    },
+    "efctid1": {
+      "raw": "XEtq",
+      "text": "XEtq"
+    },
+    "efctid2": {
+      "raw": "XEtq",
+      "text": "XEtq"
+    },
+    "efctid3": {
+      "raw": "XEtq",
+      "text": "XEtq"
+    },
+    "efctid4": {
+      "raw": "XEtq",
+      "text": "XEtq"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "20.000000",
+      "text": "20.000000"
+    },
+    "herodur2": {
+      "raw": "20.000000",
+      "text": "20.000000"
+    },
+    "herodur3": {
+      "raw": "15",
+      "text": "15"
+    },
+    "herodur4": {
+      "raw": "15",
+      "text": "15"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_7255",
+      "wts_id": 7255,
+      "text": "R"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "2",
+      "text": "2"
+    },
+    "levelskip": {
+      "raw": "3",
+      "text": "3"
+    },
+    "name": {
+      "raw": "TRIGSTR_25766",
+      "wts_id": 25766,
+      "text": "Calm"
+    },
+    "order": {
+      "raw": "tranquility",
+      "text": "tranquility"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "nightelf",
+      "text": "nightelf"
+    },
+    "reqlevel": {
+      "raw": "6",
+      "text": "6"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNTranquility.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNTranquility.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "3",
+      "text": "3"
+    },
+    "researchbuttonpos2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_7231",
+      "wts_id": 7231,
+      "text": "R"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_25768",
+      "wts_id": 25768,
+      "text": "Explore \"Tranquility\""
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_25770",
+      "wts_id": 25770,
+      "text": "Summons a stream of healing energy that restores <AEtq,DataA1> health/sec. allies over a wide area. |nAction time: <AEtq,Dur1> sec."
+    },
+    "researchubertip:custom,v0": {
+      "raw": "\"Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек.\"",
+      "text": "\"Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек.\""
+    },
+    "researchubertip:custom,v1": {
+      "raw": "\"Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек.\"",
+      "text": "\"Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек.\""
+    },
+    "researchubertip:melee,v0": {
+      "raw": "\"Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек.\"",
+      "text": "\"Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек.\""
+    },
+    "rng1": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "rng2": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "rng3": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "rng4": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "targs1": {
+      "raw": "air,ground,friend,self,vuln,invu,neutral",
+      "text": "air,ground,friend,self,vuln,invu,neutral"
+    },
+    "targs2": {
+      "raw": "air,ground,friend,self,vuln,invu,neutral",
+      "text": "air,ground,friend,self,vuln,invu,neutral"
+    },
+    "targs3": {
+      "raw": "air,ground,friend,self,vuln,invu,neutral",
+      "text": "air,ground,friend,self,vuln,invu,neutral"
+    },
+    "targs4": {
+      "raw": "air,ground,friend,self,vuln,invu,neutral",
+      "text": "air,ground,friend,self,vuln,invu,neutral"
+    },
+    "tip1": {
+      "raw": "Спокойствие",
+      "text": "Спокойствие"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_2292",
+      "wts_id": 2292,
+      "text": "Спокойствие"
+    },
+    "ubertip1": {
+      "raw": "\"Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек.\"",
+      "text": "\"Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек.\""
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_2306",
+      "wts_id": 2306,
+      "text": "Призывает поток целительной энергии, восполняющей <AEtq,DataA2> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur2> сек."
+    },
+    "ubertip:custom,v01": {
+      "raw": "\"Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек.\"",
+      "text": "\"Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек.\""
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек.\"",
+      "text": "\"Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек.\""
+    },
+    "ubertip:melee,v01": {
+      "raw": "\"Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек.\"",
+      "text": "\"Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек.\""
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "0",
+      "text": "0"
+    }
+  },
+  "A0P9": {
+    "animnames": {
+      "raw": "spell,throw",
+      "text": "spell,throw"
+    },
+    "areaeffectart": {
+      "raw": "Abilities\\Spells\\NightElf\\Blink\\BlinkTarget.mdl",
+      "text": "Abilities\\Spells\\NightElf\\Blink\\BlinkTarget.mdl"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNBlink.blp"
+    },
+    "buttonpos": {
+      "raw": "1",
+      "text": "1"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "AEbl",
+      "text": "AEbl"
+    },
+    "comments": {
+      "raw": "Warden - Blink",
+      "text": "Warden - Blink"
+    },
+    "cool1": {
+      "raw": "15.000000",
+      "text": "15.000000"
+    },
+    "cool2": {
+      "raw": "12.000000",
+      "text": "12.000000"
+    },
+    "cool3": {
+      "raw": "10.000000",
+      "text": "10.000000"
+    },
+    "cool4": {
+      "raw": "10.000000",
+      "text": "10.000000"
+    },
+    "cost1": {
+      "raw": "50",
+      "text": "50"
+    },
+    "cost2": {
+      "raw": "40",
+      "text": "40"
+    },
+    "cost3": {
+      "raw": "30",
+      "text": "30"
+    },
+    "cost4": {
+      "raw": "20",
+      "text": "20"
+    },
+    "dataa1": {
+      "raw": "1000",
+      "text": "1000"
+    },
+    "dataa2": {
+      "raw": "1075",
+      "text": "1075"
+    },
+    "dataa3": {
+      "raw": "1150",
+      "text": "1150"
+    },
+    "dataa4": {
+      "raw": "1400.000000",
+      "text": "1400.000000"
+    },
+    "datab1": {
+      "raw": "200",
+      "text": "200"
+    },
+    "datab2": {
+      "raw": "200",
+      "text": "200"
+    },
+    "datab3": {
+      "raw": "200",
+      "text": "200"
+    },
+    "datab4": {
+      "raw": "200",
+      "text": "200"
+    },
+    "dur1": {
+      "raw": "0.33",
+      "text": "0.33"
+    },
+    "dur2": {
+      "raw": "0.33",
+      "text": "0.33"
+    },
+    "dur3": {
+      "raw": "0.33",
+      "text": "0.33"
+    },
+    "dur4": {
+      "raw": "0.33",
+      "text": "0.33"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_16871",
+      "wts_id": 16871,
+      "text": "W"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_15258",
+      "wts_id": 15258,
+      "text": "|cffb4dcdcСкачок|r"
+    },
+    "order": {
+      "raw": "blink",
+      "text": "blink"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "nightelf",
+      "text": "nightelf"
+    },
+    "reqlevel": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNBlink.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNBlink.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchbuttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_16863",
+      "wts_id": 16863,
+      "text": "W"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_15259",
+      "wts_id": 15259,
+      "text": "Изучить «|cffb4dcdcСкачок|r» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_16203",
+      "wts_id": 16203,
+      "text": "Переносит  на короткое расстояние, позволяя быстро вступить в бой и выйти из него. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AEbl,Cool1> сек. восстановления, <AEbl,Cost1> маны|r. |n|cffffcc002-й уровень:|r |cffb4dcdc<AEbl,Cool2> сек. восстановления, <AEbl,Cost2> маны.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AEbl,Cool3> сек. восстановления, <AEbl,Cost3> маны.|r |n|cffffcc004-й уровень:|r |cffb4dcdc<AEbl,Cool4> сек. восстановления, <AEbl,Cost4> маны.|r"
+    },
+    "rng1": {
+      "raw": "99999",
+      "text": "99999"
+    },
+    "rng2": {
+      "raw": "99999",
+      "text": "99999"
+    },
+    "rng3": {
+      "raw": "99999",
+      "text": "99999"
+    },
+    "rng4": {
+      "raw": "99999",
+      "text": "99999"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "specialart": {
+      "raw": "Abilities\\Spells\\NightElf\\Blink\\BlinkCaster.mdl",
+      "text": "Abilities\\Spells\\NightElf\\Blink\\BlinkCaster.mdl"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_15260",
+      "wts_id": 15260,
+      "text": "|cffb4dcdcСкачок|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_15261",
+      "wts_id": 15261,
+      "text": "|cffb4dcdcСкачок|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_15262",
+      "wts_id": 15262,
+      "text": "|cffb4dcdcСкачок|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_15256",
+      "wts_id": 15256,
+      "text": "|cffb4dcdcСкачок|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16204",
+      "wts_id": 16204,
+      "text": "Переносит  на короткое расстояние, позволяя быстро вступить в бой и выйти из него. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AEbl,Cool1> сек. восстановления, <AEbl,Cost1> маны|r."
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16205",
+      "wts_id": 16205,
+      "text": "Переносит  на короткое расстояние, позволяя быстро вступить в бой и выйти из него. |n|cffffcc002-й уровень:|r |cffb4dcdc<AEbl,Cool2> сек. восстановления, <AEbl,Cost2> маны.|r |r"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_16206",
+      "wts_id": 16206,
+      "text": "Переносит  на короткое расстояние, позволяя быстро вступить в бой и выйти из него.  |n|cffffcc003-й уровень:|r |cffb4dcdc<AEbl,Cool3> сек. восстановления, <AEbl,Cost3> маны.|r "
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_16202",
+      "wts_id": 16202,
+      "text": "Переносит  на короткое расстояние, позволяя быстро вступить в бой и выйти из него.|n|cffffcc004-й уровень:|r |cffb4dcdc<AEbl,Cool4> сек. восстановления, <AEbl,Cost4> маны.|r"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "1",
+      "text": "1"
+    }
+  },
+  "A0PA": {
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNPoisoning Shield.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNPoisoning Shield.blp"
+    },
+    "buttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "AEev",
+      "text": "AEev"
+    },
+    "comments": {
+      "raw": "Demon Hunter - Evasion",
+      "text": "Demon Hunter - Evasion"
+    },
+    "cool1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataa1": {
+      "raw": "0.1",
+      "text": "0.1"
+    },
+    "dataa2": {
+      "raw": "0.2",
+      "text": "0.2"
+    },
+    "dataa3": {
+      "raw": "0.3",
+      "text": "0.3"
+    },
+    "dataa4": {
+      "raw": "0.400000",
+      "text": "0.400000"
+    },
+    "dur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_20088",
+      "wts_id": 20088,
+      "text": "E"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_15263",
+      "wts_id": 15263,
+      "text": "|cffb4dcdcЛовкий как ветер|r"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "nightelf",
+      "text": "nightelf"
+    },
+    "reqlevel": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNPoisoning Shield.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNPoisoning Shield.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "researchbuttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "researchhotkey": {
+      "raw": "E",
+      "text": "E"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_15264",
+      "wts_id": 15264,
+      "text": "Изучить «|cffb4dcdcЛовкий как ветер|r» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_13585",
+      "wts_id": 13585,
+      "text": "Дает шанс уклониться от атаки. |n|n|cffffcc001-й уровень:|r |cffc8dc8c<AEev,DataA1,%>%-й шанс.|r |n|cffffcc002-й уровень:|r |cffc8dc8c<AEev,DataA2,%>%-й шанс.|r |n|cffffcc003-й уровень:|r |cffc8dc8c<AEev,DataA3,%>%-й шанс.|r|n|cffffcc004-й уровень:|r |cffc8dc8c40%-й шанс.|r"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_15265",
+      "wts_id": 15265,
+      "text": "|cffb4dcdcЛовкий как ветер|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_15266",
+      "wts_id": 15266,
+      "text": "|cffb4dcdcЛовкий как ветер|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_15267",
+      "wts_id": 15267,
+      "text": "|cffb4dcdcЛовкий как ветер|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_15268",
+      "wts_id": 15268,
+      "text": "|cffb4dcdcЛовкий как ветер|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_14305",
+      "wts_id": 14305,
+      "text": "Дает |cffc8dc8c<AEev,DataA1,%>%-й шанс|r уклониться от атаки."
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_11689",
+      "wts_id": 11689,
+      "text": "Дает |cffc8dc8c<AEev,DataA2,%>%-й шанс|r уклониться от атаки."
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_12228",
+      "wts_id": 12228,
+      "text": "Дает |cffc8dc8c<AEev,DataA3,%>%-й шанс|r уклониться от атаки."
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_13324",
+      "wts_id": 13324,
+      "text": "Дает |cffc8dc8c40%-й шанс|r уклониться от атаки."
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "0",
+      "text": "0"
+    }
+  },
+  "A1LE": {
+    "area1": {
+      "raw": "600.000000",
+      "text": "600.000000"
+    },
+    "area2": {
+      "raw": "600.000000",
+      "text": "600.000000"
+    },
+    "area3": {
+      "raw": "600.000000",
+      "text": "600.000000"
+    },
+    "area4": {
+      "raw": "600.000000",
+      "text": "600.000000"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNOrbOfLightning.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNOrbOfLightning.blp"
+    },
+    "buttonpos": {
+      "raw": "0",
+      "text": "0"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "Aroc",
+      "text": "Aroc"
+    },
+    "comments": {
+      "raw": "Rocket Attack",
+      "text": "Rocket Attack"
+    },
+    "cool1": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cool2": {
+      "raw": "2.000000",
+      "text": "2.000000"
+    },
+    "cool3": {
+      "raw": "2.000000",
+      "text": "2.000000"
+    },
+    "cool4": {
+      "raw": "2.000000",
+      "text": "2.000000"
+    },
+    "cost1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataa1": {
+      "raw": "0.100000",
+      "text": "0.100000"
+    },
+    "dataa2": {
+      "raw": "0.100000",
+      "text": "0.100000"
+    },
+    "dataa3": {
+      "raw": "0.100000",
+      "text": "0.100000"
+    },
+    "dataa4": {
+      "raw": "0.100000",
+      "text": "0.100000"
+    },
+    "datab1": {
+      "raw": "200.000000",
+      "text": "200.000000"
+    },
+    "datab2": {
+      "raw": "275.000000",
+      "text": "275.000000"
+    },
+    "datab3": {
+      "raw": "350.000000",
+      "text": "350.000000"
+    },
+    "datab4": {
+      "raw": "425.000000",
+      "text": "425.000000"
+    },
+    "datac1": {
+      "raw": "2",
+      "text": "2"
+    },
+    "datac2": {
+      "raw": "3",
+      "text": "3"
+    },
+    "datac3": {
+      "raw": "4",
+      "text": "4"
+    },
+    "datac4": {
+      "raw": "5",
+      "text": "5"
+    },
+    "dur1": {
+      "raw": "1",
+      "text": "1"
+    },
+    "dur2": {
+      "raw": "1.000000",
+      "text": "1.000000"
+    },
+    "dur3": {
+      "raw": "1.000000",
+      "text": "1.000000"
+    },
+    "dur4": {
+      "raw": "1.000000",
+      "text": "1.000000"
+    },
+    "editorsuffix": {
+      "raw": "TRIGSTR_21783",
+      "wts_id": 21783,
+      "text": "(Элемам хз работает ли)"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur2": {
+      "raw": "1.000000",
+      "text": "1.000000"
+    },
+    "herodur3": {
+      "raw": "1.000000",
+      "text": "1.000000"
+    },
+    "herodur4": {
+      "raw": "1.000000",
+      "text": "1.000000"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "missilearc": {
+      "raw": "0.15",
+      "text": "0.15"
+    },
+    "missileart": {
+      "raw": "Abilities\\Spells\\Orc\\LightningBolt\\LightningBoltMissile.mdl",
+      "text": "Abilities\\Spells\\Orc\\LightningBolt\\LightningBoltMissile.mdl"
+    },
+    "missilehoming": {
+      "raw": "1",
+      "text": "1"
+    },
+    "missilespeed": {
+      "raw": "900",
+      "text": "900"
+    },
+    "name": {
+      "raw": "TRIGSTR_16371",
+      "wts_id": 16371,
+      "text": "|cffb4dcdcМножественная атака|r"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNOrbOfLightning.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNOrbOfLightning.blp"
+    },
+    "sort": {
+      "raw": "unit",
+      "text": "unit"
+    },
+    "targs1": {
+      "raw": "enemies,ground",
+      "text": "enemies,ground"
+    },
+    "targs2": {
+      "raw": "enemies,ground",
+      "text": "enemies,ground"
+    },
+    "targs3": {
+      "raw": "enemies,ground",
+      "text": "enemies,ground"
+    },
+    "targs4": {
+      "raw": "enemies,ground",
+      "text": "enemies,ground"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_16386",
+      "wts_id": 16386,
+      "text": "|cffb4dcdcМножественная атака|r"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_16600",
+      "wts_id": 16600,
+      "text": "|cffb4dcdcМножественная атака|r"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_16601",
+      "wts_id": 16601,
+      "text": "|cffb4dcdcМножественная атака|r"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_17064",
+      "wts_id": 17064,
+      "text": "|cffb4dcdcМножественная атака|r"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16376",
+      "wts_id": 16376,
+      "text": "Позволяет атаковать еще на 1 цель больше."
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_17065",
+      "wts_id": 17065,
+      "text": "Позволяет атаковать еще на 1 цель больше."
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_21027",
+      "wts_id": 21027,
+      "text": "Позволяет атаковать еще на 1 цель больше."
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_21031",
+      "wts_id": 21031,
+      "text": "Позволяет атаковать еще на 1 цель больше."
+    },
+    "unart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNOrbOfLightning.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNOrbOfLightning.blp"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "1",
+      "text": "1"
+    }
+  },
+  "AHpx": {
+    "area1": {
+      "raw": "200",
+      "text": "200"
+    },
+    "area2": {
+      "raw": "200",
+      "text": "200"
+    },
+    "area3": {
+      "raw": "200",
+      "text": "200"
+    },
+    "area4": {
+      "raw": "200",
+      "text": "200"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNMarkOfFire.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNMarkOfFire.blp"
+    },
+    "buttonpos": {
+      "raw": "3",
+      "text": "3"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "AHpx",
+      "text": "AHpx"
+    },
+    "comments": {
+      "raw": "Blood Mage - Phoenix",
+      "text": "Blood Mage - Phoenix"
+    },
+    "cool1": {
+      "raw": "180",
+      "text": "180"
+    },
+    "cool2": {
+      "raw": "120",
+      "text": "120"
+    },
+    "cool3": {
+      "raw": "120",
+      "text": "120"
+    },
+    "cool4": {
+      "raw": "120",
+      "text": "120"
+    },
+    "cost1": {
+      "raw": "175",
+      "text": "175"
+    },
+    "cost2": {
+      "raw": "175",
+      "text": "175"
+    },
+    "cost3": {
+      "raw": "125",
+      "text": "125"
+    },
+    "cost4": {
+      "raw": "125",
+      "text": "125"
+    },
+    "dataa1": {
+      "raw": "1",
+      "text": "1"
+    },
+    "dataa2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "dataa3": {
+      "raw": "1",
+      "text": "1"
+    },
+    "dataa4": {
+      "raw": "1",
+      "text": "1"
+    },
+    "dur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_7168",
+      "wts_id": 7168,
+      "text": "R"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "2",
+      "text": "2"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_16143",
+      "wts_id": 16143,
+      "text": "|cffb4dcdcФеникс|r"
+    },
+    "order": {
+      "raw": "summonphoenix",
+      "text": "summonphoenix"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "human",
+      "text": "human"
+    },
+    "reqlevel": {
+      "raw": "6",
+      "text": "6"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNMarkOfFire.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNMarkOfFire.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "3",
+      "text": "3"
+    },
+    "researchbuttonpos2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_7167",
+      "wts_id": 7167,
+      "text": "R"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_16142",
+      "wts_id": 16142,
+      "text": "Изучить «|cffb4dcdcФеникс|r»"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_16144",
+      "wts_id": 16144,
+      "text": "Призывает грозного феникса, наносящего урон себе и находящимся рядом врагам. Феникс невосприимчив к магии и владеет «|cffb4dcdcУстойчивой кожей|r», а в момент гибели откладывает яйцо, из которого вылупляется новый феникс. |n|n|cffffcc00Феникс атакует наземные и воздушные цели.|r"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "specialart": {
+      "raw": "Abilities\\Spells\\Human\\MarkOfChaos\\MarkOfChaosTarget.mdl",
+      "text": "Abilities\\Spells\\Human\\MarkOfChaos\\MarkOfChaosTarget.mdl"
+    },
+    "tip1": {
+      "raw": "Феникс",
+      "text": "Феникс"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_5623",
+      "wts_id": 5623,
+      "text": "Фениксы"
+    },
+    "ubertip1": {
+      "raw": "\"Призывает грозного феникса, наносящего урон себе и находящимся рядом врагам. Феникс невосприимчив к магии и владеет «Устойчивой кожей», а в момент гибели откладывает яйцо, из которого вылупляется новый феникс. |n|n|cffffcc00Феникс атакует наземные и воздушные цели.|r\"",
+      "text": "\"Призывает грозного феникса, наносящего урон себе и находящимся рядом врагам. Феникс невосприимчив к магии и владеет «Устойчивой кожей», а в момент гибели откладывает яйцо, из которого вылупляется новый феникс. |n|n|cffffcc00Феникс атакует наземные и воздушные цели.|r\""
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_5624",
+      "wts_id": 5624,
+      "text": "Призывает грозных фениксов, наносящих урон себе и находящимся рядом врагам. Фениксы невосприимчивы к магии и владеют «Устойчивой кожей», а в момент гибели откладывает яйцо, из которого вылупляется новый феникс."
+    },
+    "unitid1": {
+      "raw": "hphx",
+      "text": "hphx"
+    },
+    "unitid2": {
+      "raw": "hphx",
+      "text": "hphx"
+    },
+    "unitid3": {
+      "raw": "hphx",
+      "text": "hphx"
+    },
+    "unitid4": {
+      "raw": "hphx",
+      "text": "hphx"
+    },
+    "unitskinid": {
+      "raw": "hphx,hphx,hphx,hphx",
+      "text": "hphx,hphx,hphx,hphx"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "1",
+      "text": "1"
+    }
+  },
+  "ANic": {
+    "art": {
+      "raw": "ReplaceableTextures\\PassiveButtons\\PASBTNIncinerate.blp",
+      "text": "ReplaceableTextures\\PassiveButtons\\PASBTNIncinerate.blp"
+    },
+    "buffid1": {
+      "raw": "BNic",
+      "text": "BNic"
+    },
+    "buffid2": {
+      "raw": "BNic",
+      "text": "BNic"
+    },
+    "buffid3": {
+      "raw": "BNic",
+      "text": "BNic"
+    },
+    "buffid4": {
+      "raw": "BNic",
+      "text": "BNic"
+    },
+    "buttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "ANic",
+      "text": "ANic"
+    },
+    "comments": {
+      "raw": "Firelord - Incinerate",
+      "text": "Firelord - Incinerate"
+    },
+    "cool1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cool2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cool3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cool4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cost1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cost2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cost3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cost4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataa1": {
+      "raw": "2",
+      "text": "2"
+    },
+    "dataa2": {
+      "raw": "3",
+      "text": "3"
+    },
+    "dataa3": {
+      "raw": "4",
+      "text": "4"
+    },
+    "dataa4": {
+      "raw": "5.000000",
+      "text": "5.000000"
+    },
+    "datab1": {
+      "raw": "30",
+      "text": "30"
+    },
+    "datab2": {
+      "raw": "45",
+      "text": "45"
+    },
+    "datab3": {
+      "raw": "60",
+      "text": "60"
+    },
+    "datab4": {
+      "raw": "80",
+      "text": "80"
+    },
+    "datac1": {
+      "raw": "120",
+      "text": "120"
+    },
+    "datac2": {
+      "raw": "120",
+      "text": "120"
+    },
+    "datac3": {
+      "raw": "120",
+      "text": "120"
+    },
+    "datac4": {
+      "raw": "120",
+      "text": "120"
+    },
+    "datad1": {
+      "raw": "15",
+      "text": "15"
+    },
+    "datad2": {
+      "raw": "22",
+      "text": "22"
+    },
+    "datad3": {
+      "raw": "30",
+      "text": "30"
+    },
+    "datad4": {
+      "raw": "40",
+      "text": "40"
+    },
+    "datae1": {
+      "raw": "240",
+      "text": "240"
+    },
+    "datae2": {
+      "raw": "240",
+      "text": "240"
+    },
+    "datae3": {
+      "raw": "240",
+      "text": "240"
+    },
+    "datae4": {
+      "raw": "240",
+      "text": "240"
+    },
+    "dataf1": {
+      "raw": "0.2",
+      "text": "0.2"
+    },
+    "dataf2": {
+      "raw": "0.2",
+      "text": "0.2"
+    },
+    "dataf3": {
+      "raw": "0.2",
+      "text": "0.2"
+    },
+    "dataf4": {
+      "raw": "0.2",
+      "text": "0.2"
+    },
+    "dur1": {
+      "raw": "4",
+      "text": "4"
+    },
+    "dur2": {
+      "raw": "4",
+      "text": "4"
+    },
+    "dur3": {
+      "raw": "4",
+      "text": "4"
+    },
+    "dur4": {
+      "raw": "4",
+      "text": "4"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "4",
+      "text": "4"
+    },
+    "herodur2": {
+      "raw": "4",
+      "text": "4"
+    },
+    "herodur3": {
+      "raw": "4",
+      "text": "4"
+    },
+    "herodur4": {
+      "raw": "4",
+      "text": "4"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_10882",
+      "wts_id": 10882,
+      "text": "E"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "missilearc": {
+      "raw": "0.35",
+      "text": "0.35"
+    },
+    "missileart": {
+      "raw": "Abilities\\Weapons\\LordofFlameMissile\\LordofFlameMissile.mdl",
+      "text": "Abilities\\Weapons\\LordofFlameMissile\\LordofFlameMissile.mdl"
+    },
+    "missilehoming": {
+      "raw": "1",
+      "text": "1"
+    },
+    "missilespeed": {
+      "raw": "1000",
+      "text": "1000"
+    },
+    "name": {
+      "raw": "TRIGSTR_15229",
+      "wts_id": 15229,
+      "text": "|cffb4dcdcИспепеление|r"
+    },
+    "order": {
+      "raw": "incinerate",
+      "text": "incinerate"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "creeps",
+      "text": "creeps"
+    },
+    "reqlevel": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNIncinerate.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNIncinerate.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "researchbuttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_10837",
+      "wts_id": 10837,
+      "text": "E"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_15230",
+      "wts_id": 15230,
+      "text": "Изучить «|cffb4dcdcИспепеление|r» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_16145",
+      "wts_id": 16145,
+      "text": "Усиливает атаки живыми огоньками. При первой атаке они наносят небольшой дополнительный урон, при второй – вдвое больший, при третьей – втрое, и т. д. |n|nЕсли цель погибает под действием этого эффекта, она загорается, нанося значительный урон находящимся рядом врагам. |n|n|cffffcc001-й уровень:|r |cffb4dcdc+<ANic,DataA1> к урону, <ANic,DataB1> урона от возгорания.|r |n|cffffcc002-й уровень:|r |cffb4dcdc+<ANic,DataA2> к урону, <ANic,DataB2> урона от возгорания.|r |n|cffffcc003-й уровень:|r |cffb4dcdc+<ANic,DataA3> к урону, <ANic,DataB3> урона от возгорания.|r|n|cffffcc004-й уровень:|r |cffb4dcdc+<ANic,DataA4> к урону, <ANic,DataB4> урона от возгорания.|r"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "targs1": {
+      "raw": "enemy,neutral,organic,nonancient",
+      "text": "enemy,neutral,organic,nonancient"
+    },
+    "targs2": {
+      "raw": "enemy,neutral,organic,nonancient",
+      "text": "enemy,neutral,organic,nonancient"
+    },
+    "targs3": {
+      "raw": "enemy,neutral,organic,nonancient",
+      "text": "enemy,neutral,organic,nonancient"
+    },
+    "targs4": {
+      "raw": "enemy,neutral,organic,nonancient",
+      "text": "enemy,neutral,organic,nonancient"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_15231",
+      "wts_id": 15231,
+      "text": "|cffb4dcdcИспепеление|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_15232",
+      "wts_id": 15232,
+      "text": "|cffb4dcdcИспепеление|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_15233",
+      "wts_id": 15233,
+      "text": "|cffb4dcdcИспепеление|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_15234",
+      "wts_id": 15234,
+      "text": "|cffb4dcdcИспепеление|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16146",
+      "wts_id": 16146,
+      "text": "Усиливает атаки живыми огоньками, которые добавляют |cffb4dcdc<ANic,DataA1>|r урона к первой атаке, вдвое больше ко второй, втрое больше к третьей и т. д. |n|nЕсли цель погибает под действием этого эффекта, она загорается, нанося до |cffb4dcdc<ANic,DataB1>|r урона находящимся рядом врагам."
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16147",
+      "wts_id": 16147,
+      "text": "Усиливает атаки живыми огоньками, которые добавляют|cffb4dcdc <ANic,DataA2>|r урона к первой атаке, вдвое больше ко второй, втрое больше к третьей и т. д. |n|nЕсли цель погибает под действием этого эффекта, она загорается, нанося до |cffb4dcdc<ANic,DataB2>|r урона находящимся рядом врагам."
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_16148",
+      "wts_id": 16148,
+      "text": "Усиливает атаки живыми огоньками, которые добавляют |cffb4dcdc<ANic,DataA3>|r урона к первой атаке, вдвое больше ко второй, втрое больше к третьей и т. д. |n|nЕсли цель погибает под действием этого эффекта, она загорается, нанося до |cffb4dcdc<ANic,DataB3>|r урона находящимся рядом врагам."
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_16149",
+      "wts_id": 16149,
+      "text": "Усиливает атаки живыми огоньками, которые добавляют |cffb4dcdc<ANic,DataA4>|r урона к первой атаке, вдвое больше ко второй, втрое больше к третьей и т. д. |n|nЕсли цель погибает под действием этого эффекта, она загорается, нанося до |cffb4dcdc<ANic,DataB4>|r урона находящимся рядом врагам."
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "1",
+      "text": "1"
+    }
+  },
+  "AHfs": {
+    "animnames": {
+      "raw": "spell,channel",
+      "text": "spell,channel"
+    },
+    "area1": {
+      "raw": "200",
+      "text": "200"
+    },
+    "area2": {
+      "raw": "200",
+      "text": "200"
+    },
+    "area3": {
+      "raw": "200",
+      "text": "200"
+    },
+    "area4": {
+      "raw": "200",
+      "text": "200"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNWallOfFire.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNWallOfFire.blp"
+    },
+    "buffid1": {
+      "raw": "BHfs",
+      "text": "BHfs"
+    },
+    "buffid2": {
+      "raw": "BHfs",
+      "text": "BHfs"
+    },
+    "buffid3": {
+      "raw": "BHfs",
+      "text": "BHfs"
+    },
+    "buffid4": {
+      "raw": "BHfs",
+      "text": "BHfs"
+    },
+    "buttonpos": {
+      "raw": "0",
+      "text": "0"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0.8",
+      "text": "0.8"
+    },
+    "cast2": {
+      "raw": "0.8",
+      "text": "0.8"
+    },
+    "cast3": {
+      "raw": "0.8",
+      "text": "0.8"
+    },
+    "cast4": {
+      "raw": "0.9",
+      "text": "0.9"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "AHfs",
+      "text": "AHfs"
+    },
+    "comments": {
+      "raw": "Blood Mage - Flame Strike",
+      "text": "Blood Mage - Flame Strike"
+    },
+    "cool1": {
+      "raw": "10",
+      "text": "10"
+    },
+    "cool2": {
+      "raw": "10",
+      "text": "10"
+    },
+    "cool3": {
+      "raw": "10",
+      "text": "10"
+    },
+    "cool4": {
+      "raw": "10",
+      "text": "10"
+    },
+    "cost1": {
+      "raw": "125",
+      "text": "125"
+    },
+    "cost2": {
+      "raw": "125",
+      "text": "125"
+    },
+    "cost3": {
+      "raw": "125",
+      "text": "125"
+    },
+    "cost4": {
+      "raw": "135",
+      "text": "135"
+    },
+    "dataa1": {
+      "raw": "15",
+      "text": "15"
+    },
+    "dataa2": {
+      "raw": "26.666",
+      "text": "26.666"
+    },
+    "dataa3": {
+      "raw": "36.666",
+      "text": "36.666"
+    },
+    "dataa4": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "datab1": {
+      "raw": "0.33",
+      "text": "0.33"
+    },
+    "datab2": {
+      "raw": "0.33",
+      "text": "0.33"
+    },
+    "datab3": {
+      "raw": "0.33",
+      "text": "0.33"
+    },
+    "datab4": {
+      "raw": "0.33",
+      "text": "0.33"
+    },
+    "datac1": {
+      "raw": "4",
+      "text": "4"
+    },
+    "datac2": {
+      "raw": "6",
+      "text": "6"
+    },
+    "datac3": {
+      "raw": "8",
+      "text": "8"
+    },
+    "datac4": {
+      "raw": "12.000000",
+      "text": "12.000000"
+    },
+    "datad1": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datad2": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datad3": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datad4": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datae1": {
+      "raw": "0.75",
+      "text": "0.75"
+    },
+    "datae2": {
+      "raw": "0.75",
+      "text": "0.75"
+    },
+    "datae3": {
+      "raw": "0.75",
+      "text": "0.75"
+    },
+    "datae4": {
+      "raw": "0.75",
+      "text": "0.75"
+    },
+    "dataf1": {
+      "raw": "2000.000000",
+      "text": "2000.000000"
+    },
+    "dataf2": {
+      "raw": "3500.000000",
+      "text": "3500.000000"
+    },
+    "dataf3": {
+      "raw": "5000.000000",
+      "text": "5000.000000"
+    },
+    "dataf4": {
+      "raw": "6500.000000",
+      "text": "6500.000000"
+    },
+    "dur1": {
+      "raw": "9",
+      "text": "9"
+    },
+    "dur2": {
+      "raw": "9",
+      "text": "9"
+    },
+    "dur3": {
+      "raw": "9",
+      "text": "9"
+    },
+    "dur4": {
+      "raw": "9",
+      "text": "9"
+    },
+    "editorsuffix": {
+      "raw": "TRIGSTR_10983",
+      "wts_id": 10983,
+      "text": "(Общее)"
+    },
+    "efctid1": {
+      "raw": "XHfs",
+      "text": "XHfs"
+    },
+    "efctid2": {
+      "raw": "XHfs",
+      "text": "XHfs"
+    },
+    "efctid3": {
+      "raw": "XHfs",
+      "text": "XHfs"
+    },
+    "efctid4": {
+      "raw": "XHfs",
+      "text": "XHfs"
+    },
+    "effectart": {
+      "raw": "Abilities\\Spells\\Human\\FlameStrike\\FlameStrikeTarget.mdl",
+      "text": "Abilities\\Spells\\Human\\FlameStrike\\FlameStrikeTarget.mdl"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "2.67",
+      "text": "2.67"
+    },
+    "herodur2": {
+      "raw": "2.67",
+      "text": "2.67"
+    },
+    "herodur3": {
+      "raw": "2.67",
+      "text": "2.67"
+    },
+    "herodur4": {
+      "raw": "2.67",
+      "text": "2.67"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_8693",
+      "wts_id": 8693,
+      "text": "Q"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "Огненный столб",
+      "text": "Огненный столб"
+    },
+    "order": {
+      "raw": "flamestrike",
+      "text": "flamestrike"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "human",
+      "text": "human"
+    },
+    "reqlevel": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNWallOfFire.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNWallOfFire.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchbuttonpos2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_8694",
+      "wts_id": 8694,
+      "text": "Q"
+    },
+    "researchtip": {
+      "raw": "Изучить «Огненный столб» [|cffffcc00%d-й уровень|r]",
+      "text": "Изучить «Огненный столб» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "\"Создает огненный столб, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r 45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек. |n|cffffcc002-й уровень:|r 80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек. |n|cffffcc003-й уровень:|r 110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.\"",
+      "text": "\"Создает огненный столб, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r 45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек. |n|cffffcc002-й уровень:|r 80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек. |n|cffffcc003-й уровень:|r 110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.\""
+    },
+    "rng1": {
+      "raw": "800",
+      "text": "800"
+    },
+    "rng2": {
+      "raw": "800",
+      "text": "800"
+    },
+    "rng3": {
+      "raw": "800",
+      "text": "800"
+    },
+    "rng4": {
+      "raw": "800",
+      "text": "800"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "specialart": {
+      "raw": "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl,Abilities\\Spells\\Human\\FlameStrike\\FlameStrike2.mdl,Abilities\\Spells\\Human\\FlameStrike\\FlameStrike.mdl",
+      "text": "Abilities\\Spells\\Human\\FlameStrike\\FlameStrike1.mdl,Abilities\\Spells\\Human\\FlameStrike\\FlameStrike2.mdl,Abilities\\Spells\\Human\\FlameStrike\\FlameStrike.mdl"
+    },
+    "targs1": {
+      "raw": "ground,enemy,neutral,friend,structure,self,tree,debris",
+      "text": "ground,enemy,neutral,friend,structure,self,tree,debris"
+    },
+    "targs2": {
+      "raw": "ground,enemy,neutral,friend,structure,self,tree,debris",
+      "text": "ground,enemy,neutral,friend,structure,self,tree,debris"
+    },
+    "targs3": {
+      "raw": "ground,enemy,neutral,friend,structure,self,tree,debris",
+      "text": "ground,enemy,neutral,friend,structure,self,tree,debris"
+    },
+    "targs4": {
+      "raw": "ground,enemy,neutral,friend,structure,self,tree,debris",
+      "text": "ground,enemy,neutral,friend,structure,self,tree,debris"
+    },
+    "tip1": {
+      "raw": "\"Огненный столб [|cffffcc001-й уровень|r]\"",
+      "text": "\"Огненный столб [|cffffcc001-й уровень|r]\""
+    },
+    "tip2": {
+      "raw": "\"Огненный столб [|cffffcc002-й уровень|r]\"",
+      "text": "\"Огненный столб [|cffffcc002-й уровень|r]\""
+    },
+    "tip3": {
+      "raw": "\"Огненный столб [|cffffcc003-й уровень|r]\"",
+      "text": "\"Огненный столб [|cffffcc003-й уровень|r]\""
+    },
+    "tip4": {
+      "raw": "TRIGSTR_5617",
+      "wts_id": 5617,
+      "text": "Огненный столб [|cffffcc004-й уровень|r]"
+    },
+    "ubertip1": {
+      "raw": "\"Создает огненный столб, наносящий наземным войскам в указанной области 45 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать незначительный урон.\"",
+      "text": "\"Создает огненный столб, наносящий наземным войскам в указанной области 45 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать незначительный урон.\""
+    },
+    "ubertip2": {
+      "raw": "\"Создает огненный столб, наносящий наземным войскам в указанной области 80 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать небольшой урон.\"",
+      "text": "\"Создает огненный столб, наносящий наземным войскам в указанной области 80 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать небольшой урон.\""
+    },
+    "ubertip3": {
+      "raw": "\"Создает огненный столб, наносящий наземным войскам в указанной области 110 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать умеренный урон.\"",
+      "text": "\"Создает огненный столб, наносящий наземным войскам в указанной области 110 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать умеренный урон.\""
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_1441",
+      "wts_id": 1441,
+      "text": "Создает огненный столб, наносящий наземным войскам в указанной области 110 урона/сек. в течение 4 сек. После исчезновения столба пораженные войска продолжают получать умеренный урон."
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "1",
+      "text": "1"
+    }
+  },
+  "ANlm": {
+    "area1": {
+      "raw": "200",
+      "text": "200"
+    },
+    "area2": {
+      "raw": "200",
+      "text": "200"
+    },
+    "area3": {
+      "raw": "200",
+      "text": "200"
+    },
+    "area4": {
+      "raw": "200",
+      "text": "200"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNLavaSpawn.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNLavaSpawn.blp"
+    },
+    "buffid1": {
+      "raw": "BNlm",
+      "text": "BNlm"
+    },
+    "buffid2": {
+      "raw": "BNlm",
+      "text": "BNlm"
+    },
+    "buffid3": {
+      "raw": "BNlm",
+      "text": "BNlm"
+    },
+    "buffid4": {
+      "raw": "BNlm",
+      "text": "BNlm"
+    },
+    "buttonpos": {
+      "raw": "1",
+      "text": "1"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "ANlm",
+      "text": "ANlm"
+    },
+    "comments": {
+      "raw": "Firelord - Summon Lava Spawn",
+      "text": "Firelord - Summon Lava Spawn"
+    },
+    "cool1": {
+      "raw": "32",
+      "text": "32"
+    },
+    "cool2": {
+      "raw": "32",
+      "text": "32"
+    },
+    "cool3": {
+      "raw": "32",
+      "text": "32"
+    },
+    "cool4": {
+      "raw": "35",
+      "text": "35"
+    },
+    "cost1": {
+      "raw": "150",
+      "text": "150"
+    },
+    "cost2": {
+      "raw": "150",
+      "text": "150"
+    },
+    "cost3": {
+      "raw": "150",
+      "text": "150"
+    },
+    "cost4": {
+      "raw": "150",
+      "text": "150"
+    },
+    "dataa1": {
+      "raw": "1",
+      "text": "1"
+    },
+    "dataa2": {
+      "raw": "1",
+      "text": "1"
+    },
+    "dataa3": {
+      "raw": "1",
+      "text": "1"
+    },
+    "dataa4": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datab1": {
+      "raw": "5",
+      "text": "5"
+    },
+    "datab2": {
+      "raw": "5",
+      "text": "5"
+    },
+    "datab3": {
+      "raw": "5",
+      "text": "5"
+    },
+    "datab4": {
+      "raw": "5",
+      "text": "5"
+    },
+    "datac1": {
+      "raw": "13",
+      "text": "13"
+    },
+    "datac2": {
+      "raw": "13",
+      "text": "13"
+    },
+    "datac3": {
+      "raw": "13",
+      "text": "13"
+    },
+    "datac4": {
+      "raw": "9",
+      "text": "9"
+    },
+    "datad1": {
+      "raw": "0.5",
+      "text": "0.5"
+    },
+    "datad2": {
+      "raw": "0.75",
+      "text": "0.75"
+    },
+    "datad3": {
+      "raw": "0.75",
+      "text": "0.75"
+    },
+    "datad4": {
+      "raw": "0.5",
+      "text": "0.5"
+    },
+    "datae1": {
+      "raw": "12",
+      "text": "12"
+    },
+    "datae2": {
+      "raw": "12",
+      "text": "12"
+    },
+    "datae3": {
+      "raw": "12",
+      "text": "12"
+    },
+    "datae4": {
+      "raw": "12",
+      "text": "12"
+    },
+    "dataf1": {
+      "raw": "3",
+      "text": "3"
+    },
+    "dataf2": {
+      "raw": "3",
+      "text": "3"
+    },
+    "dataf3": {
+      "raw": "3",
+      "text": "3"
+    },
+    "dataf4": {
+      "raw": "3",
+      "text": "3"
+    },
+    "dur1": {
+      "raw": "70",
+      "text": "70"
+    },
+    "dur2": {
+      "raw": "75.000000",
+      "text": "75.000000"
+    },
+    "dur3": {
+      "raw": "80.000000",
+      "text": "80.000000"
+    },
+    "dur4": {
+      "raw": "85.000000",
+      "text": "85.000000"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "70",
+      "text": "70"
+    },
+    "herodur2": {
+      "raw": "70",
+      "text": "70"
+    },
+    "herodur3": {
+      "raw": "70",
+      "text": "70"
+    },
+    "herodur4": {
+      "raw": "70.000000",
+      "text": "70.000000"
+    },
+    "hotkey": {
+      "raw": "W",
+      "text": "W"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_14823",
+      "wts_id": 14823,
+      "text": "|cffb4dcdcПризыв порождения лавы|r"
+    },
+    "order": {
+      "raw": "slimemonster",
+      "text": "slimemonster"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNLavaSpawn.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNLavaSpawn.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchbuttonpos2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchhotkey": {
+      "raw": "W",
+      "text": "W"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_14824",
+      "wts_id": 14824,
+      "text": "Изучить «|cffb4dcdcПризыв порождения лавы|r» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_14072",
+      "wts_id": 14072,
+      "text": "Призывает порождение лавы. Нанося урон, оно поглощает плоть жертвы, после чего разделяется на два порождения с полным запасом здоровья. |nВремя существования: |cffb4dcdc<ANlm,Dur1> сек.|r |n|n|cffffcc001-й уровень:|r |cffb4dcdc425 здоровья, <nlv1,mindmg1>-<nlv1,maxdmg1> урона.|r|r |n|cffffcc002-й уровень:|r |cffb4dcdc<nlv2,realHP> здоровья, <nlv2,mindmg1>-<nlv2,maxdmg1> урона.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<nlv3,realHP> здоровья, <nlv3,mindmg1>-<nlv3,maxdmg1> урона.|r |r|n|cffffcc004-й уровень:|r |cffb4dcdc900 здоровья, 37-61 урона. |n|r"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "targs1": {
+      "raw": "enemy,neutral,air,ground,ward",
+      "text": "enemy,neutral,air,ground,ward"
+    },
+    "targs2": {
+      "raw": "enemy,neutral,air,ground,ward",
+      "text": "enemy,neutral,air,ground,ward"
+    },
+    "targs3": {
+      "raw": "enemy,neutral,air,ground,ward",
+      "text": "enemy,neutral,air,ground,ward"
+    },
+    "targs4": {
+      "raw": "enemy,neutral,air,ground,ward",
+      "text": "enemy,neutral,air,ground,ward"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_14825",
+      "wts_id": 14825,
+      "text": "|cffb4dcdcПризыв порождения лавы|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_14826",
+      "wts_id": 14826,
+      "text": "|cffb4dcdcПризыв порождения лавы|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_14853",
+      "wts_id": 14853,
+      "text": "|cffb4dcdcПризыв порождения лавы|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_14792",
+      "wts_id": 14792,
+      "text": "|cffb4dcdcПризыв порождения лавы|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16141",
+      "wts_id": 16141,
+      "text": "Призывает порождение лавы. Нанося урон, оно поглощает плоть жертвы, после чего разделяется на два порождения с полным запасом здоровья. |n|cffb4dcdc|n<nlv1,realHP>|r здоровья, |cffb4dcdc<nlv1,mindmg1>-<nlv1,maxdmg1> |rурона.|nВремя существования: |cffb4dcdc<ANlm,Dur1> сек.|n|r"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16137",
+      "wts_id": 16137,
+      "text": "Призывает порождение лавы. Нанося урон, оно поглощает плоть жертвы, после чего разделяется на два порождения с полным запасом здоровья. |n|cffb4dcdc|n<nlv2,realHP>|r здоровья, |cffb4dcdc<nlv2,mindmg2>-<nlv2,maxdmg2>|r урона.|nВремя существования: |cffb4dcdc<ANlm,Dur2> сек.|n|r"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_16138",
+      "wts_id": 16138,
+      "text": "Призывает порождение лавы. Нанося урон, оно поглощает плоть жертвы, после чего разделяется на два порождения с полным запасом здоровья. |n|cffb4dcdc|n<nlv3,realHP>|r здоровья, |cffb4dcdc<nlv3,mindmg3>-<nlv3,maxdmg3>|r урона.|nВремя существования: |cffb4dcdc<ANlm,Dur3> сек.|n|r"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_16139",
+      "wts_id": 16139,
+      "text": "Призывает порождение лавы. Нанося урон, оно поглощает плоть жертвы, после чего разделяется на два порождения с полным запасом здоровья. |n|cffb4dcdc|n<nlv4,realHP>|r здоровья, |cffb4dcdc<nlv4,mindmg4>-<nlv4,maxdmg4>|r урона.|nВремя существования: |cffb4dcdc<ANlm,Dur4> сек.|n|r"
+    },
+    "unitid1": {
+      "raw": "nlv1",
+      "text": "nlv1"
+    },
+    "unitid2": {
+      "raw": "nlv2",
+      "text": "nlv2"
+    },
+    "unitid3": {
+      "raw": "nlv3",
+      "text": "nlv3"
+    },
+    "unitid4": {
+      "raw": "n00J",
+      "text": "n00J"
+    },
+    "unitskinid": {
+      "raw": "nlv1,nlv2,nlv3,nlv3",
+      "text": "nlv1,nlv2,nlv3,nlv3"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "1",
+      "text": "1"
+    }
+  },
+  "A0P7": {
+    "area1": {
+      "raw": "400.000000",
+      "text": "400.000000"
+    },
+    "area2": {
+      "raw": "400.000000",
+      "text": "400.000000"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\PassiveButtons\\PASBTNImmolation.blp",
+      "text": "ReplaceableTextures\\PassiveButtons\\PASBTNImmolation.blp"
+    },
+    "buffid1": {
+      "raw": "BNpi,Blsa",
+      "text": "BNpi,Blsa"
+    },
+    "buffid2": {
+      "raw": "BNpi,Blsa",
+      "text": "BNpi,Blsa"
+    },
+    "buttonpos": {
+      "raw": "3",
+      "text": "3"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "0",
+      "text": "0"
+    },
+    "code": {
+      "raw": "Alsh",
+      "text": "Alsh"
+    },
+    "comments": {
+      "raw": "Lightning Shield (creep)",
+      "text": "Lightning Shield (creep)"
+    },
+    "cool1": {
+      "raw": "55.000000",
+      "text": "55.000000"
+    },
+    "cool2": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "cost1": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cost2": {
+      "raw": "100",
+      "text": "100"
+    },
+    "dataa1": {
+      "raw": "30.000000",
+      "text": "30.000000"
+    },
+    "dataa2": {
+      "raw": "40.000000",
+      "text": "40.000000"
+    },
+    "dur1": {
+      "raw": "30.000000",
+      "text": "30.000000"
+    },
+    "dur2": {
+      "raw": "30.000000",
+      "text": "30.000000"
+    },
+    "editorsuffix": {
+      "raw": "TRIGSTR_14074",
+      "wts_id": 14074,
+      "text": "(Урон)"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "30.000000",
+      "text": "30.000000"
+    },
+    "herodur2": {
+      "raw": "30.000000",
+      "text": "30.000000"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_20642",
+      "wts_id": 20642,
+      "text": "R"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "2",
+      "text": "2"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_13852",
+      "wts_id": 13852,
+      "text": "|cffb4dcdcКольцо огня |r"
+    },
+    "order": {
+      "raw": "lightningshield",
+      "text": "lightningshield"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "6",
+      "text": "6"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\PassiveButtons\\PASBTNImmolation.blp",
+      "text": "ReplaceableTextures\\PassiveButtons\\PASBTNImmolation.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "3",
+      "text": "3"
+    },
+    "researchbuttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_14075",
+      "wts_id": 14075,
+      "text": "|cffb4dcdcКольцо огня |r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_1547",
+      "wts_id": 1547,
+      "text": "Накладывает на врага кольцо огня, которое высасывает здоровье у всех врагов вокруг кольца, и передает его Повелителю пламени, и всем союзникам вокруг.\n|n|cffffcc001-й уровень:|r |cffb4dcdcНаносит 30 ед./сек., востанавливает 20 ед.|r\n|n|cffffcc002-й уровень:|r |cffb4dcdcНаносит 40 ед./сек., востанавливает 20 ед.|r"
+    },
+    "rng1": {
+      "raw": "600",
+      "text": "600"
+    },
+    "rng2": {
+      "raw": "600.000000",
+      "text": "600.000000"
+    },
+    "sort": {
+      "raw": "unit",
+      "text": "unit"
+    },
+    "targs1": {
+      "raw": "ground,friend,enemy,neutral",
+      "text": "ground,friend,enemy,neutral"
+    },
+    "targs2": {
+      "raw": "ground,friend,enemy,neutral",
+      "text": "ground,friend,enemy,neutral"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_13853",
+      "wts_id": 13853,
+      "text": "|cffb4dcdcКольцо огня |r"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_14086",
+      "wts_id": 14086,
+      "text": "|cffb4dcdcКольцо огня |r"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16195",
+      "wts_id": 16195,
+      "text": "Накладывает на врага кольцо огня, которое высасывает здоровье у всех врагов вокруг кольца, и передает его Повелителю пламени, и всем союзникам вокруг.\n|n|cffffcc001-й уровень:|r |cffb4dcdcНаносит 20 ед./сек., востанавливает 20 ед.|r\n"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16196",
+      "wts_id": 16196,
+      "text": "Накладывает на врага кольцо огня, которое высасывает здоровье у всех врагов вокруг кольца, и передает его Повелителю пламени, и всем союзникам вокруг.\n\n|n|cffffcc002-й уровень:|r |cffb4dcdcНаносит 20 ед./сек., востанавливает 20 ед.|r"
+    },
+    "unbuttonpos": {
+      "raw": "3",
+      "text": "3"
+    },
+    "unbuttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "0",
+      "text": "0"
+    }
+  },
+  "A0OU": {
+    "animnames": {
+      "raw": "attack,slam",
+      "text": "attack,slam"
+    },
+    "area1": {
+      "raw": "100",
+      "text": "100"
+    },
+    "area2": {
+      "raw": "150.000000",
+      "text": "150.000000"
+    },
+    "area3": {
+      "raw": "200.000000",
+      "text": "200.000000"
+    },
+    "area4": {
+      "raw": "300.000000",
+      "text": "300.000000"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNCrushingWave.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNCrushingWave.blp"
+    },
+    "buffid1": {
+      "raw": "BUcs",
+      "text": "BUcs"
+    },
+    "buffid2": {
+      "raw": "BUcs",
+      "text": "BUcs"
+    },
+    "buffid3": {
+      "raw": "BUcs",
+      "text": "BUcs"
+    },
+    "buffid4": {
+      "raw": "BUcs",
+      "text": "BUcs"
+    },
+    "buttonpos": {
+      "raw": "0",
+      "text": "0"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "0",
+      "text": "0"
+    },
+    "code": {
+      "raw": "AUcs",
+      "text": "AUcs"
+    },
+    "comments": {
+      "raw": "Crushing Wave",
+      "text": "Crushing Wave"
+    },
+    "cool1": {
+      "raw": "15.000000",
+      "text": "15.000000"
+    },
+    "cool2": {
+      "raw": "15.000000",
+      "text": "15.000000"
+    },
+    "cool3": {
+      "raw": "15.000000",
+      "text": "15.000000"
+    },
+    "cool4": {
+      "raw": "15.000000",
+      "text": "15.000000"
+    },
+    "cost1": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cost2": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cost3": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cost4": {
+      "raw": "100",
+      "text": "100"
+    },
+    "dataa1": {
+      "raw": "175.000000",
+      "text": "175.000000"
+    },
+    "dataa2": {
+      "raw": "225.000000",
+      "text": "225.000000"
+    },
+    "dataa3": {
+      "raw": "275.000000",
+      "text": "275.000000"
+    },
+    "dataa4": {
+      "raw": "350.000000",
+      "text": "350.000000"
+    },
+    "datab1": {
+      "raw": "1000.000000",
+      "text": "1000.000000"
+    },
+    "datab2": {
+      "raw": "2000.000000",
+      "text": "2000.000000"
+    },
+    "datab3": {
+      "raw": "3000.000000",
+      "text": "3000.000000"
+    },
+    "datab4": {
+      "raw": "4000.000000",
+      "text": "4000.000000"
+    },
+    "datac1": {
+      "raw": "800",
+      "text": "800"
+    },
+    "datac2": {
+      "raw": "800.000000",
+      "text": "800.000000"
+    },
+    "datac3": {
+      "raw": "800.000000",
+      "text": "800.000000"
+    },
+    "datac4": {
+      "raw": "800.000000",
+      "text": "800.000000"
+    },
+    "datad1": {
+      "raw": "300",
+      "text": "300"
+    },
+    "datad2": {
+      "raw": "300.000000",
+      "text": "300.000000"
+    },
+    "datad3": {
+      "raw": "300.000000",
+      "text": "300.000000"
+    },
+    "datad4": {
+      "raw": "300.000000",
+      "text": "300.000000"
+    },
+    "dur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "editorsuffix": {
+      "raw": "TRIGSTR_15439",
+      "wts_id": 15439,
+      "text": "(Элементали)"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_16431",
+      "wts_id": 16431,
+      "text": "Q"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "missileart": {
+      "raw": "Abilities\\Spells\\Other\\CrushingWave\\CrushingWaveMissile.mdl",
+      "text": "Abilities\\Spells\\Other\\CrushingWave\\CrushingWaveMissile.mdl"
+    },
+    "missilespeed": {
+      "raw": "1100",
+      "text": "1100"
+    },
+    "name": {
+      "raw": "TRIGSTR_15001",
+      "wts_id": 15001,
+      "text": "|cffb4dcdcСокрушительная волна|r"
+    },
+    "order": {
+      "raw": "carrionswarm",
+      "text": "carrionswarm"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNCrushingWave.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNCrushingWave.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchbuttonpos2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_16476",
+      "wts_id": 16476,
+      "text": "Q"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_15000",
+      "wts_id": 15000,
+      "text": "|cffb4dcdcСокрушительная волна|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_16158",
+      "wts_id": 16158,
+      "text": "Выпускает волну воды, атакующих врагов. |n|n|cffffcc001-й уровень:|r |cffb4dcdc175 ед. урона. |r|n|cffffcc002-й уровень:|r |cffb4dcdc225 ед. урона. |r|n|cffffcc003-й уровень:|r |cffb4dcdc275 ед. урона. |r|n|cffffcc004-й уровень:|r |cffb4dcdc350 ед. урона. |r"
+    },
+    "rng1": {
+      "raw": "700",
+      "text": "700"
+    },
+    "rng2": {
+      "raw": "700.000000",
+      "text": "700.000000"
+    },
+    "rng3": {
+      "raw": "700.000000",
+      "text": "700.000000"
+    },
+    "rng4": {
+      "raw": "700.000000",
+      "text": "700.000000"
+    },
+    "sort": {
+      "raw": "unit",
+      "text": "unit"
+    },
+    "specialart": {
+      "raw": "Abilities\\Spells\\Other\\CrushingWave\\CrushingWaveDamage.mdl",
+      "text": "Abilities\\Spells\\Other\\CrushingWave\\CrushingWaveDamage.mdl"
+    },
+    "targs1": {
+      "raw": "ground,air,structure,enemy,neutral",
+      "text": "ground,air,structure,enemy,neutral"
+    },
+    "targs2": {
+      "raw": "ground,air,structure,enemy,neutral",
+      "text": "ground,air,structure,enemy,neutral"
+    },
+    "targs3": {
+      "raw": "ground,air,structure,enemy,neutral",
+      "text": "ground,air,structure,enemy,neutral"
+    },
+    "targs4": {
+      "raw": "ground,air,structure,enemy,neutral",
+      "text": "ground,air,structure,enemy,neutral"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_14996",
+      "wts_id": 14996,
+      "text": "|cffb4dcdcСокрушительная волна|r"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_14997",
+      "wts_id": 14997,
+      "text": "|cffb4dcdcСокрушительная волна|r"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_14998",
+      "wts_id": 14998,
+      "text": "|cffb4dcdcСокрушительная волна|r"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_14999",
+      "wts_id": 14999,
+      "text": "|cffb4dcdcСокрушительная волна|r"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16159",
+      "wts_id": 16159,
+      "text": "Выпускает волну воды, атакующих врагов. |n|n|cffffcc001-й уровень:|r |cffb4dcdc175 ед. урона."
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16160",
+      "wts_id": 16160,
+      "text": "Выпускает волну воды, атакующих врагов. \n|n|cffffcc002-й уровень:|r |cffb4dcdc225 ед. урона. |r"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_16161",
+      "wts_id": 16161,
+      "text": "Выпускает волну воды, атакующих врагов.\n |n|cffffcc003-й уровень:|r |cffb4dcdc275 ед. урона. |r"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_16162",
+      "wts_id": 16162,
+      "text": "Выпускает волну воды, атакующих врагов.\n|n|cffffcc004-й уровень:|r |cffb4dcdc350 ед. урона. |r"
+    },
+    "unhotkey": {
+      "raw": "TRIGSTR_16394",
+      "wts_id": 16394,
+      "text": "Q"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "1",
+      "text": "1"
+    }
+  },
+  "A0OT": {
+    "animnames": {
+      "raw": "spell",
+      "text": "spell"
+    },
+    "area1": {
+      "raw": "200.000000",
+      "text": "200.000000"
+    },
+    "area2": {
+      "raw": "225.000000",
+      "text": "225.000000"
+    },
+    "area3": {
+      "raw": "250.000000",
+      "text": "250.000000"
+    },
+    "area4": {
+      "raw": "300.000000",
+      "text": "300.000000"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNBanish.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNBanish.blp"
+    },
+    "buttonpos": {
+      "raw": "1",
+      "text": "1"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "casterattach": {
+      "raw": "origin",
+      "text": "origin"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "ANcl",
+      "text": "ANcl"
+    },
+    "comments": {
+      "raw": "Illidan - Channel",
+      "text": "Illidan - Channel"
+    },
+    "cool1": {
+      "raw": "14.000000",
+      "text": "14.000000"
+    },
+    "cool2": {
+      "raw": "14.000000",
+      "text": "14.000000"
+    },
+    "cool3": {
+      "raw": "14.000000",
+      "text": "14.000000"
+    },
+    "cool4": {
+      "raw": "14.000000",
+      "text": "14.000000"
+    },
+    "cost1": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cost2": {
+      "raw": "125",
+      "text": "125"
+    },
+    "cost3": {
+      "raw": "150",
+      "text": "150"
+    },
+    "cost4": {
+      "raw": "200",
+      "text": "200"
+    },
+    "dataa1": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "dataa2": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "dataa3": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "dataa4": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datab1": {
+      "raw": "2",
+      "text": "2"
+    },
+    "datab2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "datab3": {
+      "raw": "2",
+      "text": "2"
+    },
+    "datab4": {
+      "raw": "2",
+      "text": "2"
+    },
+    "datac1": {
+      "raw": "7",
+      "text": "7"
+    },
+    "datac2": {
+      "raw": "7",
+      "text": "7"
+    },
+    "datac3": {
+      "raw": "7",
+      "text": "7"
+    },
+    "datac4": {
+      "raw": "7",
+      "text": "7"
+    },
+    "datad1": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datad2": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datad3": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datad4": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datae1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datae2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datae3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datae4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataf1": {
+      "raw": "acidbomb",
+      "text": "acidbomb"
+    },
+    "dataf2": {
+      "raw": "acidbomb",
+      "text": "acidbomb"
+    },
+    "dataf3": {
+      "raw": "acidbomb",
+      "text": "acidbomb"
+    },
+    "dataf4": {
+      "raw": "acidbomb",
+      "text": "acidbomb"
+    },
+    "dur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "editorsuffix": {
+      "raw": "TRIGSTR_15438",
+      "wts_id": 15438,
+      "text": "(Элементали)"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_16776",
+      "wts_id": 16776,
+      "text": "W"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_14986",
+      "wts_id": 14986,
+      "text": "|cffb4dcdcПоле астрала|r"
+    },
+    "order": {
+      "raw": "blackarrowon",
+      "text": "blackarrowon"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "demon",
+      "text": "demon"
+    },
+    "reqlevel": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNBanish.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNBanish.blp"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_16777",
+      "wts_id": 16777,
+      "text": "W"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_14994",
+      "wts_id": 14994,
+      "text": "|cffb4dcdcПоле астрала|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_14995",
+      "wts_id": 14995,
+      "text": "Всех юнитов в области помещает в астрал. |n|cffffcc001-й уровень:|r |cffb4dcdcРадиус действия - 200.|r  |n|cffffcc002-й уровень:|r |cffb4dcdcРадиус действия - 225.|r  |n|cffffcc003-й уровень:|r |cffb4dcdcРадиус действия - 250.|r |n|cffffcc004-й уровень:|r |cffb4dcdcРадиус действия - 300.|r"
+    },
+    "rng1": {
+      "raw": "600.000000",
+      "text": "600.000000"
+    },
+    "rng2": {
+      "raw": "650.000000",
+      "text": "650.000000"
+    },
+    "rng3": {
+      "raw": "700.000000",
+      "text": "700.000000"
+    },
+    "rng4": {
+      "raw": "750.000000",
+      "text": "750.000000"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "targetattach": {
+      "raw": "origin",
+      "text": "origin"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_14984",
+      "wts_id": 14984,
+      "text": "|cffb4dcdcПоле астрала|r"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_14988",
+      "wts_id": 14988,
+      "text": "|cffb4dcdcПоле астрала|r"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_14989",
+      "wts_id": 14989,
+      "text": "|cffb4dcdcПоле астрала|r"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_14990",
+      "wts_id": 14990,
+      "text": "|cffb4dcdcПоле астрала|r"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_14985",
+      "wts_id": 14985,
+      "text": "Всех юнитов в области помещает в астрал.\n|cffb4dc8cРадиус действия - 150|r"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_14991",
+      "wts_id": 14991,
+      "text": "Всех юнитов в области помещает в астрал.\n|cffb4dc8cРадиус действия - 175|r"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_14992",
+      "wts_id": 14992,
+      "text": "Всех юнитов в области помещает в астрал.\n|cffb4dc8cРадиус действия - 200|r"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_14993",
+      "wts_id": 14993,
+      "text": "Всех юнитов в области помещает в астрал.\n|cffb4dc8cРадиус действия - 225|r"
+    },
+    "unart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNBanish.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNBanish.blp"
+    },
+    "unbuttonpos": {
+      "raw": "1",
+      "text": "1"
+    },
+    "unhotkey": {
+      "raw": "TRIGSTR_16778",
+      "wts_id": 16778,
+      "text": "W"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "0",
+      "text": "0"
+    }
+  },
+  "A0QL": {
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNNeutralManaShield.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNNeutralManaShield.blp"
+    },
+    "buffid1": {
+      "raw": "BNms",
+      "text": "BNms"
+    },
+    "buffid2": {
+      "raw": "BNms",
+      "text": "BNms"
+    },
+    "buffid3": {
+      "raw": "BNms",
+      "text": "BNms"
+    },
+    "buffid4": {
+      "raw": "BNms",
+      "text": "BNms"
+    },
+    "buttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "ANms",
+      "text": "ANms"
+    },
+    "comments": {
+      "raw": "Sea Witch - Mana Shield",
+      "text": "Sea Witch - Mana Shield"
+    },
+    "cool1": {
+      "raw": "10",
+      "text": "10"
+    },
+    "cool2": {
+      "raw": "10",
+      "text": "10"
+    },
+    "cool3": {
+      "raw": "10",
+      "text": "10"
+    },
+    "cool4": {
+      "raw": "10",
+      "text": "10"
+    },
+    "cost1": {
+      "raw": "10",
+      "text": "10"
+    },
+    "cost2": {
+      "raw": "10",
+      "text": "10"
+    },
+    "cost3": {
+      "raw": "10",
+      "text": "10"
+    },
+    "cost4": {
+      "raw": "25",
+      "text": "25"
+    },
+    "dataa1": {
+      "raw": "2",
+      "text": "2"
+    },
+    "dataa2": {
+      "raw": "3",
+      "text": "3"
+    },
+    "dataa3": {
+      "raw": "4",
+      "text": "4"
+    },
+    "dataa4": {
+      "raw": "2.500000",
+      "text": "2.500000"
+    },
+    "datab1": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datab2": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datab3": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datab4": {
+      "raw": "1",
+      "text": "1"
+    },
+    "dur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "editorsuffix": {
+      "raw": "TRIGSTR_16230",
+      "wts_id": 16230,
+      "text": "(Элементали)"
+    },
+    "effectsound": {
+      "raw": "ManaShieldCastSound",
+      "text": "ManaShieldCastSound"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_20339",
+      "wts_id": 20339,
+      "text": "E"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_16216",
+      "wts_id": 16216,
+      "text": "|cffb4dcdcЩит маны|r"
+    },
+    "orderoff": {
+      "raw": "manashieldoff",
+      "text": "manashieldoff"
+    },
+    "orderon": {
+      "raw": "manashieldon",
+      "text": "manashieldon"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNNeutralManaShield.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNNeutralManaShield.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "researchbuttonpos2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_20338",
+      "wts_id": 20338,
+      "text": "E"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_16215",
+      "wts_id": 16215,
+      "text": "Изучить «|cffb4dcdcЩит маны|r» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_9408",
+      "wts_id": 9408,
+      "text": "Создает щит, который поглощает урон за счет маны. |n|n|cffffcc001-й уровень:|r |cffb4dcdc1 урона за единицу маны.|r |n|cffffcc002-й уровень:|r |cffb4dcdc1,5 урона за единицу маны.|r |n|cffffcc003-й уровень:|r |cffb4dcdc2 урона за единицу маны.|r|n|cffffcc004-й уровень:|r |cffb4dcdc2.5 урона за единицу маны.|r"
+    },
+    "researchubertip:custom,v0": {
+      "raw": "\"Создает щит, который поглощает урон за счет маны. |n|n|cffffcc001-й уровень:|r 1 урона за единицу маны. |n|cffffcc002-й уровень:|r 1,5 урона за единицу маны. |n|cffffcc003-й уровень:|r 2 урона за единицу маны.\"",
+      "text": "\"Создает щит, который поглощает урон за счет маны. |n|n|cffffcc001-й уровень:|r 1 урона за единицу маны. |n|cffffcc002-й уровень:|r 1,5 урона за единицу маны. |n|cffffcc003-й уровень:|r 2 урона за единицу маны.\""
+    },
+    "researchubertip:custom,v1": {
+      "raw": "\"Создает щит, который поглощает урон за счет маны. |n|n|cffffcc001-й уровень:|r 1 урона за единицу маны. |n|cffffcc002-й уровень:|r 1,5 урона за единицу маны. |n|cffffcc003-й уровень:|r 2 урона за единицу маны.\"",
+      "text": "\"Создает щит, который поглощает урон за счет маны. |n|n|cffffcc001-й уровень:|r 1 урона за единицу маны. |n|cffffcc002-й уровень:|r 1,5 урона за единицу маны. |n|cffffcc003-й уровень:|r 2 урона за единицу маны.\""
+    },
+    "researchubertip:melee,v0": {
+      "raw": "\"Создает щит, который поглощает урон за счет маны. |n|n|cffffcc001-й уровень:|r 1 урона за единицу маны. |n|cffffcc002-й уровень:|r 1,5 урона за единицу маны. |n|cffffcc003-й уровень:|r 2 урона за единицу маны.\"",
+      "text": "\"Создает щит, который поглощает урон за счет маны. |n|n|cffffcc001-й уровень:|r 1 урона за единицу маны. |n|cffffcc002-й уровень:|r 1,5 урона за единицу маны. |n|cffffcc003-й уровень:|r 2 урона за единицу маны.\""
+    },
+    "rng1": {
+      "raw": "128",
+      "text": "128"
+    },
+    "rng2": {
+      "raw": "128",
+      "text": "128"
+    },
+    "rng3": {
+      "raw": "128",
+      "text": "128"
+    },
+    "rng4": {
+      "raw": "128",
+      "text": "128"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "targs1": {
+      "raw": "self",
+      "text": "self"
+    },
+    "targs2": {
+      "raw": "self",
+      "text": "self"
+    },
+    "targs3": {
+      "raw": "self",
+      "text": "self"
+    },
+    "targs4": {
+      "raw": "self",
+      "text": "self"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_16217",
+      "wts_id": 16217,
+      "text": "Активировать «|cffb4dcdcЩит маны|r» [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_16218",
+      "wts_id": 16218,
+      "text": "Активировать «|cffb4dcdcЩит маны|r» [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_16219",
+      "wts_id": 16219,
+      "text": "Активировать «|cffb4dcdcЩит маны|r» [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_16220",
+      "wts_id": 16220,
+      "text": "Активировать «|cffb4dcdcЩит маны|r» [|cffffcc004-й уровень|r]"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16224",
+      "wts_id": 16224,
+      "text": "Дает щит, который поглощает |cffb4dcdc1 урона|r за |cffb4dcdc1 ед.|r маны."
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16223",
+      "wts_id": 16223,
+      "text": "Дает щит, который поглощает |cffb4dcdc1,5 урона|r за |cffb4dcdc1 ед.|r маны."
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_16222",
+      "wts_id": 16222,
+      "text": "Дает щит, который поглощает |cffb4dcdc2 урона|r за |cffb4dcdc1 ед|r. маны."
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_16221",
+      "wts_id": 16221,
+      "text": "Дает щит, который поглощает |cffb4dcdc2.5 урона|r за |cffb4dcdc1 ед.|r маны."
+    },
+    "ubertip:custom,v01": {
+      "raw": "\"Дает щит, который поглощает 1 урона за 1 ед. маны.\"",
+      "text": "\"Дает щит, который поглощает 1 урона за 1 ед. маны.\""
+    },
+    "ubertip:custom,v02": {
+      "raw": "\"Дает щит, который поглощает 1,5 урона за 1 ед. маны.\"",
+      "text": "\"Дает щит, который поглощает 1,5 урона за 1 ед. маны.\""
+    },
+    "ubertip:custom,v03": {
+      "raw": "\"Дает щит, который поглощает 2 урона за 1 ед. маны.\"",
+      "text": "\"Дает щит, который поглощает 2 урона за 1 ед. маны.\""
+    },
+    "ubertip:custom,v11": {
+      "raw": "\"Дает щит, который поглощает 1 урона за 1 ед. маны.\"",
+      "text": "\"Дает щит, который поглощает 1 урона за 1 ед. маны.\""
+    },
+    "ubertip:custom,v12": {
+      "raw": "\"Дает щит, который поглощает 1,5 урона за 1 ед. маны.\"",
+      "text": "\"Дает щит, который поглощает 1,5 урона за 1 ед. маны.\""
+    },
+    "ubertip:custom,v13": {
+      "raw": "\"Дает щит, который поглощает 2 урона за 1 ед. маны.\"",
+      "text": "\"Дает щит, который поглощает 2 урона за 1 ед. маны.\""
+    },
+    "ubertip:melee,v01": {
+      "raw": "\"Дает щит, который поглощает 1 урона за 1 ед. маны.\"",
+      "text": "\"Дает щит, который поглощает 1 урона за 1 ед. маны.\""
+    },
+    "ubertip:melee,v02": {
+      "raw": "\"Дает щит, который поглощает 1,5 урона за 1 ед. маны.\"",
+      "text": "\"Дает щит, который поглощает 1,5 урона за 1 ед. маны.\""
+    },
+    "ubertip:melee,v03": {
+      "raw": "\"Дает щит, который поглощает 2 урона за 1 ед. маны.\"",
+      "text": "\"Дает щит, который поглощает 2 урона за 1 ед. маны.\""
+    },
+    "unart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNNeutralManaShieldOff.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNNeutralManaShieldOff.blp"
+    },
+    "unbuttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "unbuttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "unhotkey": {
+      "raw": "TRIGSTR_20340",
+      "wts_id": 20340,
+      "text": "E"
+    },
+    "untip1": {
+      "raw": "TRIGSTR_16225",
+      "wts_id": 16225,
+      "text": "Отменить «|cffb4dcdcЩит маны|r»"
+    },
+    "untip2": {
+      "raw": "TRIGSTR_16226",
+      "wts_id": 16226,
+      "text": "Отменить «|cffb4dcdcЩит маны|r»"
+    },
+    "untip3": {
+      "raw": "TRIGSTR_16227",
+      "wts_id": 16227,
+      "text": "Отменить «|cffb4dcdcЩит маны|r»"
+    },
+    "untip4": {
+      "raw": "TRIGSTR_16228",
+      "wts_id": 16228,
+      "text": "Отменить «|cffb4dcdcЩит маны|r»"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "1",
+      "text": "1"
+    }
+  },
+  "A0OR": {
+    "animnames": {
+      "raw": "spell,slam",
+      "text": "spell,slam"
+    },
+    "area1": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "area2": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "area3": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "area4": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNManaStone.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNManaStone.blp"
+    },
+    "buffid1": {
+      "raw": "BNht",
+      "text": "BNht"
+    },
+    "buffid2": {
+      "raw": "BNht",
+      "text": "BNht"
+    },
+    "buffid3": {
+      "raw": "BNht",
+      "text": "BNht"
+    },
+    "buffid4": {
+      "raw": "BNht",
+      "text": "BNht"
+    },
+    "buttonpos": {
+      "raw": "3",
+      "text": "3"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "ANht",
+      "text": "ANht"
+    },
+    "comments": {
+      "raw": "Pit Lord - Howl of Terror",
+      "text": "Pit Lord - Howl of Terror"
+    },
+    "cool1": {
+      "raw": "80.000000",
+      "text": "80.000000"
+    },
+    "cool2": {
+      "raw": "70.000000",
+      "text": "70.000000"
+    },
+    "cool3": {
+      "raw": "40.000000",
+      "text": "40.000000"
+    },
+    "cool4": {
+      "raw": "35.000000",
+      "text": "35.000000"
+    },
+    "cost1": {
+      "raw": "75",
+      "text": "75"
+    },
+    "cost2": {
+      "raw": "75",
+      "text": "75"
+    },
+    "cost3": {
+      "raw": "75",
+      "text": "75"
+    },
+    "cost4": {
+      "raw": "75",
+      "text": "75"
+    },
+    "dataa1": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "dataa2": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "dataa3": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "dataa4": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datab1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datab2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datab3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datab4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datac1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datac2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datac3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datac4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datad1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datad2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datad3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datad4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datae1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datae2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datae3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datae4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataf1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataf2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataf3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataf4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datag1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datag2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datag3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datag4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur1": {
+      "raw": "15",
+      "text": "15"
+    },
+    "dur2": {
+      "raw": "15",
+      "text": "15"
+    },
+    "dur3": {
+      "raw": "15",
+      "text": "15"
+    },
+    "dur4": {
+      "raw": "15",
+      "text": "15"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "15",
+      "text": "15"
+    },
+    "herodur2": {
+      "raw": "15",
+      "text": "15"
+    },
+    "herodur3": {
+      "raw": "15",
+      "text": "15"
+    },
+    "herodur4": {
+      "raw": "15",
+      "text": "15"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_19783",
+      "wts_id": 19783,
+      "text": "R"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "2",
+      "text": "2"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_14966",
+      "wts_id": 14966,
+      "text": "|cffb4dcdcНаводнение|r"
+    },
+    "order": {
+      "raw": "howlofterror",
+      "text": "howlofterror"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "6",
+      "text": "6"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNManaStone.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNManaStone.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "3",
+      "text": "3"
+    },
+    "researchbuttonpos2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_19743",
+      "wts_id": 19743,
+      "text": "R"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_14967",
+      "wts_id": 14967,
+      "text": "Изучить «|cffb4dcdcНаводнение|r» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_16155",
+      "wts_id": 16155,
+      "text": "Временно позволяет атаковать сразу несколько целей.\n|cffb4dcdcВремя действия - 25 сек, количество целей - 11.|r"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "targs1": {
+      "raw": "air,ground,enemy,neutral",
+      "text": "air,ground,enemy,neutral"
+    },
+    "targs2": {
+      "raw": "air,ground,enemy,neutral",
+      "text": "air,ground,enemy,neutral"
+    },
+    "targs3": {
+      "raw": "air,ground,enemy,neutral",
+      "text": "air,ground,enemy,neutral"
+    },
+    "targs4": {
+      "raw": "air,ground,enemy,neutral",
+      "text": "air,ground,enemy,neutral"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_14968",
+      "wts_id": 14968,
+      "text": "|cffb4dcdcНаводнение|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_14969",
+      "wts_id": 14969,
+      "text": "|cffb4dcdcНаводнение|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_14970",
+      "wts_id": 14970,
+      "text": "|cffb4dcdcКолосальный удар|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_14971",
+      "wts_id": 14971,
+      "text": "|cffb4dcdcКолосальный удар|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16156",
+      "wts_id": 16156,
+      "text": "Временно позволяет атаковать сразу несколько целей.\n|cffb4dcdcВремя действия - 25 сек, количество целей - 11.|r"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16157",
+      "wts_id": 16157,
+      "text": "Временно позволяет атаковать сразу несколько целей.\n|cffb4dcdcВремя действия - 25 сек, количество целей - 11.|r"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_14950",
+      "wts_id": 14950,
+      "text": "Временно позволяет наносить |cffb4dcdc100%|r сплеш урон в радиусе |cffb4dcdc200|r, от основной цели атаки.\n|cffb4dcdcВремя действия - 25 сек.|r"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_14951",
+      "wts_id": 14951,
+      "text": "Временно позволяет наносить |cffb4dcdc100%|r сплеш урон в радиусе |cffb4dcdc200|r, от основной цели атаки.\n|cffb4dcdcВремя действия - 25 сек.|r"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "1",
+      "text": "1"
+    }
+  },
+  "A0YH": {
+    "area1": {
+      "raw": "900",
+      "text": "900"
+    },
+    "area2": {
+      "raw": "900",
+      "text": "900"
+    },
+    "area3": {
+      "raw": "900",
+      "text": "900"
+    },
+    "area4": {
+      "raw": "900",
+      "text": "900"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\PassiveButtons\\PASBTNFrost.blp",
+      "text": "ReplaceableTextures\\PassiveButtons\\PASBTNFrost.blp"
+    },
+    "buffid1": {
+      "raw": "BUau",
+      "text": "BUau"
+    },
+    "buffid2": {
+      "raw": "BUau",
+      "text": "BUau"
+    },
+    "buffid3": {
+      "raw": "BUau",
+      "text": "BUau"
+    },
+    "buffid4": {
+      "raw": "BUau",
+      "text": "BUau"
+    },
+    "buttonpos": {
+      "raw": "1",
+      "text": "1"
+    },
+    "buttonpos2": {
+      "raw": "1",
+      "text": "1"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast2": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "cast3": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "cast4": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "AUau",
+      "text": "AUau"
+    },
+    "comments": {
+      "raw": "Death Knight - Unholy Aura",
+      "text": "Death Knight - Unholy Aura"
+    },
+    "cool1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cool2": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "cool3": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "cool4": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "cost1": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "cost2": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "cost3": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "cost4": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "dataa1": {
+      "raw": "0.200000",
+      "text": "0.200000"
+    },
+    "dataa2": {
+      "raw": "0.15",
+      "text": "0.15"
+    },
+    "dataa3": {
+      "raw": "0.2",
+      "text": "0.2"
+    },
+    "dataa4": {
+      "raw": "0.400000",
+      "text": "0.400000"
+    },
+    "datab1": {
+      "raw": "0.600000",
+      "text": "0.600000"
+    },
+    "datab2": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datab3": {
+      "raw": "1.5",
+      "text": "1.5"
+    },
+    "datab4": {
+      "raw": "2.000000",
+      "text": "2.000000"
+    },
+    "datac1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datac2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datac3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datac4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur2": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "dur3": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "dur4": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "editorsuffix": {
+      "raw": "TRIGSTR_9728",
+      "wts_id": 9728,
+      "text": "(Нептулон)"
+    },
+    "hero": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur2": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "herodur3": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "herodur4": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "1",
+      "text": "1"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_9694",
+      "wts_id": 9694,
+      "text": "Морской владыка"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "undead",
+      "text": "undead"
+    },
+    "reqlevel": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNUnholyAura.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNUnholyAura.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "researchbuttonpos2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchhotkey": {
+      "raw": "U",
+      "text": "U"
+    },
+    "researchtip": {
+      "raw": "Изучить «Нечистую ауру» [|cffffcc00%d-й уровень|r]",
+      "text": "Изучить «Нечистую ауру» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "\"Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья. |n|cffffcc002-й уровень:|r +<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья. |n|cffffcc003-й уровень:|r +<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья.\"",
+      "text": "\"Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья. |n|cffffcc002-й уровень:|r +<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья. |n|cffffcc003-й уровень:|r +<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья.\""
+    },
+    "rng1": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "rng2": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "rng3": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "rng4": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "targetart": {
+      "raw": "Abilities\\Spells\\NightElf\\SpiritOfVengeance\\SpiritOfVengeanceOrbs1.mdl",
+      "text": "Abilities\\Spells\\NightElf\\SpiritOfVengeance\\SpiritOfVengeanceOrbs1.mdl"
+    },
+    "targetattach": {
+      "raw": "origin",
+      "text": "origin"
+    },
+    "targs1": {
+      "raw": "air,ground,friend,self,vuln,invu",
+      "text": "air,ground,friend,self,vuln,invu"
+    },
+    "targs2": {
+      "raw": "air,ground,friend,self,vuln,invu",
+      "text": "air,ground,friend,self,vuln,invu"
+    },
+    "targs3": {
+      "raw": "air,ground,friend,self,vuln,invu",
+      "text": "air,ground,friend,self,vuln,invu"
+    },
+    "targs4": {
+      "raw": "air,ground,friend,self,vuln,invu",
+      "text": "air,ground,friend,self,vuln,invu"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_9726",
+      "wts_id": 9726,
+      "text": "Морской владыка"
+    },
+    "tip2": {
+      "raw": "\"Нечистая аура [|cffffcc002-й уровень|r]\"",
+      "text": "\"Нечистая аура [|cffffcc002-й уровень|r]\""
+    },
+    "tip3": {
+      "raw": "\"Нечистая аура [|cffffcc003-й уровень|r]\"",
+      "text": "\"Нечистая аура [|cffffcc003-й уровень|r]\""
+    },
+    "tip4": {
+      "raw": "TRIGSTR_20872",
+      "wts_id": 20872,
+      "text": "Нечистая аура [|cffffcc004-й уровень|r]"
+    },
+    "ubertip1": {
+      "raw": "\"+<AUau,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.\"",
+      "text": "\"+<AUau,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.\""
+    },
+    "ubertip2": {
+      "raw": "\"+<AUau,DataA2,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.\"",
+      "text": "\"+<AUau,DataA2,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.\""
+    },
+    "ubertip3": {
+      "raw": "\"+<AUau,DataA3,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.\"",
+      "text": "\"+<AUau,DataA3,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.\""
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_20873",
+      "wts_id": 20873,
+      "text": "+<AUau,DataA4,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "0",
+      "text": "0"
+    }
+  },
+  "A0P0": {
+    "animnames": {
+      "raw": "spell,channel",
+      "text": "spell,channel"
+    },
+    "area1": {
+      "raw": "200",
+      "text": "200"
+    },
+    "area2": {
+      "raw": "200",
+      "text": "200"
+    },
+    "area3": {
+      "raw": "200",
+      "text": "200"
+    },
+    "area4": {
+      "raw": "200",
+      "text": "200"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNCyclone.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNCyclone.blp"
+    },
+    "buffid1": {
+      "raw": "B054",
+      "text": "B054"
+    },
+    "buffid2": {
+      "raw": "B054",
+      "text": "B054"
+    },
+    "buffid3": {
+      "raw": "B054",
+      "text": "B054"
+    },
+    "buffid4": {
+      "raw": "B054",
+      "text": "B054"
+    },
+    "buttonpos": {
+      "raw": "0",
+      "text": "0"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0.8",
+      "text": "0.8"
+    },
+    "cast2": {
+      "raw": "0.8",
+      "text": "0.8"
+    },
+    "cast3": {
+      "raw": "0.8",
+      "text": "0.8"
+    },
+    "cast4": {
+      "raw": "0.9",
+      "text": "0.9"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "AHfs",
+      "text": "AHfs"
+    },
+    "comments": {
+      "raw": "Blood Mage - Flame Strike",
+      "text": "Blood Mage - Flame Strike"
+    },
+    "cool1": {
+      "raw": "10",
+      "text": "10"
+    },
+    "cool2": {
+      "raw": "10",
+      "text": "10"
+    },
+    "cool3": {
+      "raw": "10",
+      "text": "10"
+    },
+    "cool4": {
+      "raw": "10",
+      "text": "10"
+    },
+    "cost1": {
+      "raw": "125",
+      "text": "125"
+    },
+    "cost2": {
+      "raw": "125",
+      "text": "125"
+    },
+    "cost3": {
+      "raw": "125",
+      "text": "125"
+    },
+    "cost4": {
+      "raw": "135",
+      "text": "135"
+    },
+    "dataa1": {
+      "raw": "15",
+      "text": "15"
+    },
+    "dataa2": {
+      "raw": "26.666",
+      "text": "26.666"
+    },
+    "dataa3": {
+      "raw": "36.666",
+      "text": "36.666"
+    },
+    "dataa4": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "datab1": {
+      "raw": "0.33",
+      "text": "0.33"
+    },
+    "datab2": {
+      "raw": "0.33",
+      "text": "0.33"
+    },
+    "datab3": {
+      "raw": "0.33",
+      "text": "0.33"
+    },
+    "datab4": {
+      "raw": "0.33",
+      "text": "0.33"
+    },
+    "datac1": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datac2": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datac3": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datac4": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datad1": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datad2": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datad3": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datad4": {
+      "raw": "1",
+      "text": "1"
+    },
+    "datae1": {
+      "raw": "0.75",
+      "text": "0.75"
+    },
+    "datae2": {
+      "raw": "0.75",
+      "text": "0.75"
+    },
+    "datae3": {
+      "raw": "0.75",
+      "text": "0.75"
+    },
+    "datae4": {
+      "raw": "0.75",
+      "text": "0.75"
+    },
+    "dataf1": {
+      "raw": "1000.000000",
+      "text": "1000.000000"
+    },
+    "dataf2": {
+      "raw": "1500.000000",
+      "text": "1500.000000"
+    },
+    "dataf3": {
+      "raw": "2500.000000",
+      "text": "2500.000000"
+    },
+    "dataf4": {
+      "raw": "4000.000000",
+      "text": "4000.000000"
+    },
+    "dur1": {
+      "raw": "9",
+      "text": "9"
+    },
+    "dur2": {
+      "raw": "9",
+      "text": "9"
+    },
+    "dur3": {
+      "raw": "9",
+      "text": "9"
+    },
+    "dur4": {
+      "raw": "9",
+      "text": "9"
+    },
+    "effectart": {
+      "raw": "Abilities\\Spells\\Other\\Tornado\\TornadoElementalSmall.mdl",
+      "text": "Abilities\\Spells\\Other\\Tornado\\TornadoElementalSmall.mdl"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "2.67",
+      "text": "2.67"
+    },
+    "herodur2": {
+      "raw": "2.67",
+      "text": "2.67"
+    },
+    "herodur3": {
+      "raw": "2.67",
+      "text": "2.67"
+    },
+    "herodur4": {
+      "raw": "2.67",
+      "text": "2.67"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_16477",
+      "wts_id": 16477,
+      "text": "Q"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_1453",
+      "wts_id": 1453,
+      "text": "|cffb4dcdcТорнадо|r"
+    },
+    "order": {
+      "raw": "flamestrike",
+      "text": "flamestrike"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNCyclone.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNCyclone.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchbuttonpos2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_16478",
+      "wts_id": 16478,
+      "text": "Q"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_1472",
+      "wts_id": 1472,
+      "text": "Изучить «|cffb4dcdcТорнадо|r» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_16174",
+      "wts_id": 16174,
+      "text": "Создает |cffb4dcdcторнадо|r, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r |cffb4dcdc45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек.|r |n|cffffcc002-й уровень:|r |cffb4dcdc80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек.|r |n|cffffcc003-й уровень:|r |cffb4dcdc110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r |n|cffffcc004-й уровень:|r |cffb4dcdc150 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r"
+    },
+    "rng1": {
+      "raw": "800",
+      "text": "800"
+    },
+    "rng2": {
+      "raw": "800",
+      "text": "800"
+    },
+    "rng3": {
+      "raw": "800",
+      "text": "800"
+    },
+    "rng4": {
+      "raw": "800",
+      "text": "800"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "specialart": {
+      "raw": "Abilities\\Spells\\Other\\Tornado\\TornadoElementalSmall.mdl",
+      "text": "Abilities\\Spells\\Other\\Tornado\\TornadoElementalSmall.mdl"
+    },
+    "targs1": {
+      "raw": "ground,enemy,neutral,friend,structure,self,tree,debris",
+      "text": "ground,enemy,neutral,friend,structure,self,tree,debris"
+    },
+    "targs2": {
+      "raw": "ground,enemy,neutral,friend,structure,self,tree,debris",
+      "text": "ground,enemy,neutral,friend,structure,self,tree,debris"
+    },
+    "targs3": {
+      "raw": "ground,enemy,neutral,friend,structure,self,tree,debris",
+      "text": "ground,enemy,neutral,friend,structure,self,tree,debris"
+    },
+    "targs4": {
+      "raw": "ground,enemy,neutral,friend,structure,self,tree,debris",
+      "text": "ground,enemy,neutral,friend,structure,self,tree,debris"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_1482",
+      "wts_id": 1482,
+      "text": "|cffb4dcdcТорнадо|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_1495",
+      "wts_id": 1495,
+      "text": "|cffb4dcdcТорнадо|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_1631",
+      "wts_id": 1631,
+      "text": "|cffb4dcdcТорнадо|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_1423",
+      "wts_id": 1423,
+      "text": "|cffb4dcdcТорнадо|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16175",
+      "wts_id": 16175,
+      "text": "Создает |cffb4dcdcторнадо|r, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r |cffb4dcdc45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек.|r "
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16176",
+      "wts_id": 16176,
+      "text": "Создает |cffb4dcdcторнадо|r, наносящий периодический урон наземным войскам в указанной области. |n|cffffcc002-й уровень:|r |cffb4dcdc80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек.|r"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_16177",
+      "wts_id": 16177,
+      "text": "Создает |cffb4dcdcторнадо|r, наносящий периодический урон наземным войскам в указанной области.  |n|cffffcc003-й уровень:|r |cffb4dcdc110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_16173",
+      "wts_id": 16173,
+      "text": "Создает |cffb4dcdcторнадо|r, наносящий периодический урон наземным войскам в указанной области.  |n|cffffcc004-й уровень:|r |cffb4dcdc150 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "1",
+      "text": "1"
+    }
+  },
+  "A0OX": {
+    "animnames": {
+      "raw": "slam",
+      "text": "slam"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\PASGlaiveCrit.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\PASGlaiveCrit.blp"
+    },
+    "buttonpos": {
+      "raw": "1",
+      "text": "1"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "Awar",
+      "text": "Awar"
+    },
+    "comments": {
+      "raw": "Pulverize",
+      "text": "Pulverize"
+    },
+    "cool1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cool2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cost1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cost2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataa1": {
+      "raw": "25",
+      "text": "25"
+    },
+    "dataa2": {
+      "raw": "30.000000",
+      "text": "30.000000"
+    },
+    "dataa3": {
+      "raw": "35.000000",
+      "text": "35.000000"
+    },
+    "dataa4": {
+      "raw": "40.000000",
+      "text": "40.000000"
+    },
+    "datab1": {
+      "raw": "125.000000",
+      "text": "125.000000"
+    },
+    "datab2": {
+      "raw": "150.000000",
+      "text": "150.000000"
+    },
+    "datab3": {
+      "raw": "175.000000",
+      "text": "175.000000"
+    },
+    "datab4": {
+      "raw": "200.000000",
+      "text": "200.000000"
+    },
+    "datac1": {
+      "raw": "250",
+      "text": "250"
+    },
+    "datac2": {
+      "raw": "250.000000",
+      "text": "250.000000"
+    },
+    "datac3": {
+      "raw": "250.000000",
+      "text": "250.000000"
+    },
+    "datac4": {
+      "raw": "250.000000",
+      "text": "250.000000"
+    },
+    "datad1": {
+      "raw": "350",
+      "text": "350"
+    },
+    "datad2": {
+      "raw": "350.000000",
+      "text": "350.000000"
+    },
+    "datad3": {
+      "raw": "350.000000",
+      "text": "350.000000"
+    },
+    "datad4": {
+      "raw": "350.000000",
+      "text": "350.000000"
+    },
+    "dur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_15084",
+      "wts_id": 15084,
+      "text": "|cffb4dcdcРазрушающий взмах|r"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\PASGlaiveCrit.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\PASGlaiveCrit.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_15085",
+      "wts_id": 15085,
+      "text": "|cffb4dcdcРазрушающий взмах|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_16168",
+      "wts_id": 16168,
+      "text": "Позволяет при атаке с небольшим шансом нанести урон рядом стоящим от основной цели врагам.\n|n|cffffcc001-й уровень:|r |cffb4dcdc25% шанс, 125 ед. урона вокруг цели. |r|n|cffffcc002-й уровень:|r |cffb4dcdc30% шанс, 150 ед. урона вокруг цели. |r|n|cffffcc003-й уровень:|r |cffb4dcdc35% шанс, 175 ед. урона вокруг цели. |r|n|cffffcc004-й уровень:|r |cffb4dcdc40% шанс, 200 ед. урона вокруг цели. |r"
+    },
+    "sort": {
+      "raw": "unit",
+      "text": "unit"
+    },
+    "targs1": {
+      "raw": "ground,enemy,neutral,ward",
+      "text": "ground,enemy,neutral,ward"
+    },
+    "targs2": {
+      "raw": "ground,enemy,neutral",
+      "text": "ground,enemy,neutral"
+    },
+    "targs3": {
+      "raw": "ground,enemy,neutral",
+      "text": "ground,enemy,neutral"
+    },
+    "targs4": {
+      "raw": "ground,enemy,neutral",
+      "text": "ground,enemy,neutral"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_15086",
+      "wts_id": 15086,
+      "text": "|cffb4dcdcРазрушающий взмах|r"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_15087",
+      "wts_id": 15087,
+      "text": "|cffb4dcdcРазрушающий взмах|r"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_15088",
+      "wts_id": 15088,
+      "text": "|cffb4dcdcРазрушающий взмах|r"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_15089",
+      "wts_id": 15089,
+      "text": "|cffb4dcdcРазрушающий взмах|r"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16169",
+      "wts_id": 16169,
+      "text": "Позволяет при атаке с небольшим шансом нанести урон рядом стоящим от основной цели врагам.\n|n|cffffcc001-й уровень:|r |cffb4dcdc25% шанс, 125 ед. урона вокруг цели. |r"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16170",
+      "wts_id": 16170,
+      "text": "Позволяет при атаке с небольшим шансом нанести урон рядом стоящим от основной цели врагам.\n|n|cffffcc002-й уровень:|r |cffb4dcdc30% шанс, 150 ед. урона вокруг цели. |r"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_16171",
+      "wts_id": 16171,
+      "text": "Позволяет при атаке с небольшим шансом нанести урон рядом стоящим от основной цели врагам.\n|n|cffffcc003-й уровень:|r |cffb4dcdc35% шанс, 175 ед. урона вокруг цели. |r"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_16172",
+      "wts_id": 16172,
+      "text": "Позволяет при атаке с небольшим шансом нанести урон рядом стоящим от основной цели врагам.\n|n|cffffcc004-й уровень:|r |cffb4dcdc40% шанс, 200 ед. урона вокруг цели. |r"
+    },
+    "unart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\PASGlaiveCrit.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\PASGlaiveCrit.blp"
+    },
+    "unbuttonpos": {
+      "raw": "1",
+      "text": "1"
+    },
+    "unbuttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "0",
+      "text": "0"
+    }
+  },
+  "A0OW": {
+    "area1": {
+      "raw": "900",
+      "text": "900"
+    },
+    "area2": {
+      "raw": "900",
+      "text": "900"
+    },
+    "area3": {
+      "raw": "900",
+      "text": "900"
+    },
+    "area4": {
+      "raw": "900",
+      "text": "900"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\PASPoisoning Shield.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\PASPoisoning Shield.blp"
+    },
+    "buffid1": {
+      "raw": "BOae",
+      "text": "BOae"
+    },
+    "buffid2": {
+      "raw": "BOae",
+      "text": "BOae"
+    },
+    "buffid3": {
+      "raw": "BOae",
+      "text": "BOae"
+    },
+    "buffid4": {
+      "raw": "BOae",
+      "text": "BOae"
+    },
+    "buttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "AOae",
+      "text": "AOae"
+    },
+    "comments": {
+      "raw": "Chieftain - Endurance Aura",
+      "text": "Chieftain - Endurance Aura"
+    },
+    "cool1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataa1": {
+      "raw": "0.1",
+      "text": "0.1"
+    },
+    "dataa2": {
+      "raw": "0.15",
+      "text": "0.15"
+    },
+    "dataa3": {
+      "raw": "0.2",
+      "text": "0.2"
+    },
+    "dataa4": {
+      "raw": "0.400000",
+      "text": "0.400000"
+    },
+    "datab1": {
+      "raw": "0.150000",
+      "text": "0.150000"
+    },
+    "datab2": {
+      "raw": "0.200000",
+      "text": "0.200000"
+    },
+    "datab3": {
+      "raw": "0.250000",
+      "text": "0.250000"
+    },
+    "datab4": {
+      "raw": "0.300000",
+      "text": "0.300000"
+    },
+    "dur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "editorsuffix": {
+      "raw": "TRIGSTR_15983",
+      "wts_id": 15983,
+      "text": "(Элементали)"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_20018",
+      "wts_id": 20018,
+      "text": "E"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_15018",
+      "wts_id": 15018,
+      "text": "|cffb4dcdcСкорость ветра|r"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\PASPoisoning Shield.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\PASPoisoning Shield.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "researchbuttonpos2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchhotkey": {
+      "raw": "E",
+      "text": "E"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_15019",
+      "wts_id": 15019,
+      "text": "Изучить «|cffb4dcdcСкорость ветра|r» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_16163",
+      "wts_id": 16163,
+      "text": "Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdc+<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки.|r |n|cffffcc002-й уровень:|r |cffb4dcdc+<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки.|r |n|cffffcc003-й уровень:|r |cffb4dcdc+<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки.|r|n|cffffcc004-й уровень:|r |cffb4dcdc+<AOae,DataA4,%>% к скорости передвижения, +<AOae,DataB5,%>% к скорости атаки.|r"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "targetart": {
+      "raw": "Abilities\\Spells\\Undead\\ReplenishHealth\\ReplenishHealthCaster.mdl",
+      "text": "Abilities\\Spells\\Undead\\ReplenishHealth\\ReplenishHealthCaster.mdl"
+    },
+    "targetattach": {
+      "raw": "origin",
+      "text": "origin"
+    },
+    "targs1": {
+      "raw": "air,ground,friend,self,vuln,invu",
+      "text": "air,ground,friend,self,vuln,invu"
+    },
+    "targs2": {
+      "raw": "air,ground,friend,self,vuln,invu",
+      "text": "air,ground,friend,self,vuln,invu"
+    },
+    "targs3": {
+      "raw": "air,ground,friend,self,vuln,invu",
+      "text": "air,ground,friend,self,vuln,invu"
+    },
+    "targs4": {
+      "raw": "air,ground,friend,self,vuln,invu",
+      "text": "air,ground,friend,self,vuln,invu"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_15020",
+      "wts_id": 15020,
+      "text": "|cffb4dcdcСкорость ветра|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_15021",
+      "wts_id": 15021,
+      "text": "|cffb4dcdcСкорость ветра|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_15022",
+      "wts_id": 15022,
+      "text": "|cffb4dcdcСкорость ветра|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_15023",
+      "wts_id": 15023,
+      "text": "|cffb4dcdcСкорость ветра|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16164",
+      "wts_id": 16164,
+      "text": "Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdc+<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки.|r "
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16165",
+      "wts_id": 16165,
+      "text": "Ускоряет передвижение и атаку находящихся рядом союзников. |n|cffffcc002-й уровень:|r |cffb4dcdc+<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки.|r "
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_16166",
+      "wts_id": 16166,
+      "text": "Ускоряет передвижение и атаку находящихся рядом союзников. |n|cffffcc003-й уровень:|r |cffb4dcdc+<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки.|r"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_16167",
+      "wts_id": 16167,
+      "text": "Ускоряет передвижение и атаку находящихся рядом союзников.|n|cffffcc004-й уровень:|r |cffb4dcdc+<AOae,DataA4,%>% к скорости передвижения, +<AOae,DataB5,%>% к скорости атаки.|r"
+    },
+    "unhotkey": {
+      "raw": "TRIGSTR_20024",
+      "wts_id": 20024,
+      "text": "E"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "0",
+      "text": "0"
+    }
+  },
+  "A0P1": {
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNCloudOfFog.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNCloudOfFog.blp"
+    },
+    "buttonpos": {
+      "raw": "3",
+      "text": "3"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "ANdp",
+      "text": "ANdp"
+    },
+    "comments": {
+      "raw": "Dark Portal",
+      "text": "Dark Portal"
+    },
+    "cool1": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cool2": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cool3": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cool4": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cost1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cost2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cost3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cost4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataa1": {
+      "raw": "e02A",
+      "text": "e02A"
+    },
+    "dataa2": {
+      "raw": "e02A",
+      "text": "e02A"
+    },
+    "dataa3": {
+      "raw": "nbal,nfel",
+      "text": "nbal,nfel"
+    },
+    "dataa4": {
+      "raw": "nbal,nfel",
+      "text": "nbal,nfel"
+    },
+    "datab1": {
+      "raw": "3",
+      "text": "3"
+    },
+    "datab2": {
+      "raw": "3",
+      "text": "3"
+    },
+    "datab3": {
+      "raw": "5",
+      "text": "5"
+    },
+    "datab4": {
+      "raw": "5",
+      "text": "5"
+    },
+    "datac1": {
+      "raw": "5",
+      "text": "5"
+    },
+    "datac2": {
+      "raw": "6",
+      "text": "6"
+    },
+    "datac3": {
+      "raw": "6",
+      "text": "6"
+    },
+    "datac4": {
+      "raw": "6",
+      "text": "6"
+    },
+    "dur1": {
+      "raw": "1",
+      "text": "1"
+    },
+    "dur2": {
+      "raw": "1",
+      "text": "1"
+    },
+    "dur3": {
+      "raw": "1",
+      "text": "1"
+    },
+    "dur4": {
+      "raw": "1",
+      "text": "1"
+    },
+    "editorsuffix": {
+      "raw": "(Archimonde)",
+      "text": "(Archimonde)"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_20385",
+      "wts_id": 20385,
+      "text": "R"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "2",
+      "text": "2"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_2977",
+      "wts_id": 2977,
+      "text": "|cffb4dcdcГрозовые Облака|r"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "6",
+      "text": "6"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNCloudOfFog.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNCloudOfFog.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "3",
+      "text": "3"
+    },
+    "researchbuttonpos2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_19903",
+      "wts_id": 19903,
+      "text": "R"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_4232",
+      "wts_id": 4232,
+      "text": "Изучить «|cffb4dcdcГрозовые Облака|r»"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_16178",
+      "wts_id": 16178,
+      "text": "Создает несколько облаков, которые атакуют всех врагов вокруг себя.\n |n|cffffcc00Уровень 1|r - |cffb4dcdcМакс - 5 облаков, мин 3.|r\n|cffffcc00Уровень 2|r - |cffb4dcdcМакс - 6 облаков, мин 3.|r"
+    },
+    "rng1": {
+      "raw": "800",
+      "text": "800"
+    },
+    "rng2": {
+      "raw": "800",
+      "text": "800"
+    },
+    "rng3": {
+      "raw": "800",
+      "text": "800"
+    },
+    "rng4": {
+      "raw": "800",
+      "text": "800"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_4245",
+      "wts_id": 4245,
+      "text": "|cffb4dcdcГрозовые Облака|r"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_4258",
+      "wts_id": 4258,
+      "text": "|cffb4dcdcГрозовые Облака|r"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16179",
+      "wts_id": 16179,
+      "text": "Создает несколько облаков, которые атакуют всех врагов вокруг себя.\n |n|cffffcc00Уровень 1|r - |cffb4dcdcМакс - 5 облаков, мин 3.|r\n"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_16180",
+      "wts_id": 16180,
+      "text": "Создает несколько облаков, которые атакуют всех врагов вокруг себя.\n\n|cffffcc00Уровень 2|r - |cffb4dcdcМакс - 6 облаков, мин 3.|r"
+    },
+    "unbuttonpos": {
+      "raw": "3",
+      "text": "3"
+    },
+    "unbuttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "0",
+      "text": "0"
+    }
+  },
+  "A0YI": {
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\PASGreenDragonBreath.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\PASGreenDragonBreath.blp"
+    },
+    "buttonpos": {
+      "raw": "1",
+      "text": "1"
+    },
+    "buttonpos2": {
+      "raw": "1",
+      "text": "1"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "AEev",
+      "text": "AEev"
+    },
+    "comments": {
+      "raw": "Demon Hunter - Evasion",
+      "text": "Demon Hunter - Evasion"
+    },
+    "cool1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataa1": {
+      "raw": "0.350000",
+      "text": "0.350000"
+    },
+    "dataa2": {
+      "raw": "0.2",
+      "text": "0.2"
+    },
+    "dataa3": {
+      "raw": "0.3",
+      "text": "0.3"
+    },
+    "dataa4": {
+      "raw": "0.400000",
+      "text": "0.400000"
+    },
+    "dur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "editorsuffix": {
+      "raw": "TRIGSTR_12582",
+      "wts_id": 12582,
+      "text": "(ал Акир)"
+    },
+    "hero": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_21811",
+      "wts_id": 21811,
+      "text": "E"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "1",
+      "text": "1"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_10025",
+      "wts_id": 10025,
+      "text": "|cffc8dc8cУскользание|r"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "nightelf",
+      "text": "nightelf"
+    },
+    "reqlevel": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNEvasion.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNEvasion.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "researchbuttonpos2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchhotkey": {
+      "raw": "E",
+      "text": "E"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_10046",
+      "wts_id": 10046,
+      "text": "Изучить «|cffc8dc8cУскользание|r» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_14309",
+      "wts_id": 14309,
+      "text": "Дает шанс уклониться от атаки. |n|n|cffffcc001-й уровень:|r |cffc8dc8c<AEev,DataA1,%>%-й шанс.|r |n|cffffcc002-й уровень:|r |cffc8dc8c<AEev,DataA2,%>%-й шанс.|r |n|cffffcc003-й уровень:|r |cffc8dc8c<AEev,DataA3,%>%-й шанс.|r|n|cffffcc004-й уровень:|r |cffc8dc8c40%-й шанс.|r"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_14301",
+      "wts_id": 14301,
+      "text": "|cffc8dc8cУскользание|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_11100",
+      "wts_id": 11100,
+      "text": "|cffc8dc8cУскользание|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_11101",
+      "wts_id": 11101,
+      "text": "|cffc8dc8cУскользание|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_11102",
+      "wts_id": 11102,
+      "text": "|cffc8dc8cУскользание|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_14343",
+      "wts_id": 14343,
+      "text": "Дает |cffc8dc8c<AEev,DataA1,%>%-й шанс|r уклониться от атаки."
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_14306",
+      "wts_id": 14306,
+      "text": "Дает |cffc8dc8c<AEev,DataA2,%>%-й шанс|r уклониться от атаки."
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_14307",
+      "wts_id": 14307,
+      "text": "Дает |cffc8dc8c<AEev,DataA3,%>%-й шанс|r уклониться от атаки."
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_14308",
+      "wts_id": 14308,
+      "text": "Дает |cffc8dc8c40%-й шанс|r уклониться от атаки."
+    },
+    "unart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\PASGreenDragonBreath.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\PASGreenDragonBreath.blp"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "0",
+      "text": "0"
+    }
+  },
+  "A0OP": {
+    "animnames": {
+      "raw": "spell,slam",
+      "text": "spell,slam"
+    },
+    "area1": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "area2": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "area3": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "area4": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNHowlOfTerror.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNHowlOfTerror.blp"
+    },
+    "buffid1": {
+      "raw": "BNht",
+      "text": "BNht"
+    },
+    "buffid2": {
+      "raw": "BNht",
+      "text": "BNht"
+    },
+    "buffid3": {
+      "raw": "BNht",
+      "text": "BNht"
+    },
+    "buffid4": {
+      "raw": "BNht",
+      "text": "BNht"
+    },
+    "buttonpos": {
+      "raw": "0",
+      "text": "0"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "casterart": {
+      "raw": "Abilities\\Spells\\Other\\HowlOfTerror\\HowlCaster.mdl",
+      "text": "Abilities\\Spells\\Other\\HowlOfTerror\\HowlCaster.mdl"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "ANht",
+      "text": "ANht"
+    },
+    "comments": {
+      "raw": "Pit Lord - Howl of Terror",
+      "text": "Pit Lord - Howl of Terror"
+    },
+    "cool1": {
+      "raw": "50.000000",
+      "text": "50.000000"
+    },
+    "cool2": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "cool3": {
+      "raw": "40.000000",
+      "text": "40.000000"
+    },
+    "cool4": {
+      "raw": "35.000000",
+      "text": "35.000000"
+    },
+    "cost1": {
+      "raw": "75",
+      "text": "75"
+    },
+    "cost2": {
+      "raw": "75",
+      "text": "75"
+    },
+    "cost3": {
+      "raw": "75",
+      "text": "75"
+    },
+    "cost4": {
+      "raw": "75",
+      "text": "75"
+    },
+    "dataa1": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "dataa2": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "dataa3": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "dataa4": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datab1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datab2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datab3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datab4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datac1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datac2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datac3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datac4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datad1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datad2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datad3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datad4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datae1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datae2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datae3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datae4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataf1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataf2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataf3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataf4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datag1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datag2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datag3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datag4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur1": {
+      "raw": "15",
+      "text": "15"
+    },
+    "dur2": {
+      "raw": "15",
+      "text": "15"
+    },
+    "dur3": {
+      "raw": "15",
+      "text": "15"
+    },
+    "dur4": {
+      "raw": "15",
+      "text": "15"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "15",
+      "text": "15"
+    },
+    "herodur2": {
+      "raw": "15",
+      "text": "15"
+    },
+    "herodur3": {
+      "raw": "15",
+      "text": "15"
+    },
+    "herodur4": {
+      "raw": "15",
+      "text": "15"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_16390",
+      "wts_id": 16390,
+      "text": "Q"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_30569",
+      "wts_id": 30569,
+      "text": "|cffb4dcdcКоллосальный удар|r"
+    },
+    "order": {
+      "raw": "howlofterror",
+      "text": "howlofterror"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNHowlOfTerror.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNHowlOfTerror.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchbuttonpos2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_16389",
+      "wts_id": 16389,
+      "text": "Q"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_14944",
+      "wts_id": 14944,
+      "text": "Изучить «|cffb4dcdcКолосальный удар|r» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_27933",
+      "wts_id": 27933,
+      "text": "Временно позволяет наносить |cffb4dcdc70%|r сплеш урон в радиусе |cffb4dcdc200|r, от основной цели атаки.\n|n|cffffcc001-й уровень:|r |cffb4dcdcВремя действия - 25сек.|r|r |n|cffffcc002-й уровень:|r|cffb4dcdc Время действия - 25сек.|r|r |n|cffffcc003-й уровень:|r|cffb4dcdc Время действия - 25сек.|r|n|cffffcc004-й уровень:|r |cffb4dcdcВремя действия - 25сек.|r"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "targs1": {
+      "raw": "air,ground,enemy,neutral",
+      "text": "air,ground,enemy,neutral"
+    },
+    "targs2": {
+      "raw": "air,ground,enemy,neutral",
+      "text": "air,ground,enemy,neutral"
+    },
+    "targs3": {
+      "raw": "air,ground,enemy,neutral",
+      "text": "air,ground,enemy,neutral"
+    },
+    "targs4": {
+      "raw": "air,ground,enemy,neutral",
+      "text": "air,ground,enemy,neutral"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_14945",
+      "wts_id": 14945,
+      "text": "|cffb4dcdcКолосальный удар|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_14946",
+      "wts_id": 14946,
+      "text": "|cffb4dcdcКолосальный удар|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_14947",
+      "wts_id": 14947,
+      "text": "|cffb4dcdcКолосальный удар|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_14948",
+      "wts_id": 14948,
+      "text": "|cffb4dcdcКолосальный удар|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_27934",
+      "wts_id": 27934,
+      "text": "Временно позволяет наносить |cffb4dcdc70%|r сплеш урон в радиусе |cffb4dcdc200|r, от основной цели атаки.\n|cffb4dcdcВремя действия - 25 сек.|r"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_27935",
+      "wts_id": 27935,
+      "text": "Временно позволяет наносить |cffb4dcdc70%|r сплеш урон в радиусе |cffb4dcdc200|r, от основной цели атаки.\n|cffb4dcdcВремя действия - 25 сек.|r"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_27936",
+      "wts_id": 27936,
+      "text": "Временно позволяет наносить |cffb4dcdc70%|r сплеш урон в радиусе |cffb4dcdc200|r, от основной цели атаки.\n|cffb4dcdcВремя действия - 25 сек.|r"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_27937",
+      "wts_id": 27937,
+      "text": "Временно позволяет наносить |cffb4dcdc70%|r сплеш урон в радиусе |cffb4dcdc200|r, от основной цели атаки.\n|cffb4dcdcВремя действия - 25 сек.|r"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "1",
+      "text": "1"
+    }
+  },
+  "A0ON": {
+    "animnames": {
+      "raw": "spell,slam",
+      "text": "spell,slam"
+    },
+    "area1": {
+      "raw": "500",
+      "text": "500"
+    },
+    "area2": {
+      "raw": "600.000000",
+      "text": "600.000000"
+    },
+    "area3": {
+      "raw": "700.000000",
+      "text": "700.000000"
+    },
+    "area4": {
+      "raw": "800.000000",
+      "text": "800.000000"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNIncinerate.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNIncinerate.blp"
+    },
+    "buffid1": {
+      "raw": "Broa",
+      "text": "Broa"
+    },
+    "buttonpos": {
+      "raw": "1",
+      "text": "1"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "casterart": {
+      "raw": "Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl",
+      "text": "Abilities\\Spells\\Other\\Incinerate\\FireLordDeathExplode.mdl"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "Aroa",
+      "text": "Aroa"
+    },
+    "comments": {
+      "raw": "Roar",
+      "text": "Roar"
+    },
+    "cool1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cost1": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cost2": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cost3": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cost4": {
+      "raw": "100",
+      "text": "100"
+    },
+    "dataa1": {
+      "raw": "0.25",
+      "text": "0.25"
+    },
+    "dataa2": {
+      "raw": "0.350000",
+      "text": "0.350000"
+    },
+    "dataa3": {
+      "raw": "0.450000",
+      "text": "0.450000"
+    },
+    "dataa4": {
+      "raw": "0.550000",
+      "text": "0.550000"
+    },
+    "datab1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datac1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datad1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datae1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataf1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datag1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur1": {
+      "raw": "45",
+      "text": "45"
+    },
+    "dur2": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "dur3": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "dur4": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "editorsuffix": {
+      "raw": "TRIGSTR_15437",
+      "wts_id": 15437,
+      "text": "(Элементали)"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "45",
+      "text": "45"
+    },
+    "herodur2": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "herodur3": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "herodur4": {
+      "raw": "45.000000",
+      "text": "45.000000"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_16765",
+      "wts_id": 16765,
+      "text": "W"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_14927",
+      "wts_id": 14927,
+      "text": "|cffb4dcdcБлагодать Пламени|r"
+    },
+    "order": {
+      "raw": "roar",
+      "text": "roar"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNIncinerate.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNIncinerate.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_14928",
+      "wts_id": 14928,
+      "text": "|cffb4dcdcБлагодать Пламени|r"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_14930",
+      "wts_id": 14930,
+      "text": "Увеличивает урон всем союзным войскам по близости.\n|n|cffffcc001-й уровень:|r |cffb4dcdcУвеличивает на 25%, Время действия 45 сек., Радиус действия - 500.|r|r |n|cffffcc002-й уровень:|r|cffb4dcdcУвеличивает на 35%, Время действия 45 сек., Радиус действия - 600.|r|r |n|cffffcc003-й уровень:|r|cffb4dcdcУвеличивает на 45%, Время действия 45 сек., Радиус действия - 700|r.|r|n|cffffcc004-й уровень:|r |cffb4dcdcУвеличивает на 55%, Время действия 45 сек., Радиус действия - 800.|r|r"
+    },
+    "sort": {
+      "raw": "unit",
+      "text": "unit"
+    },
+    "targs1": {
+      "raw": "air,ground,friend,self",
+      "text": "air,ground,friend,self"
+    },
+    "targs2": {
+      "raw": "air,ground,friend,self",
+      "text": "air,ground,friend,self"
+    },
+    "targs3": {
+      "raw": "air,ground,friend,self",
+      "text": "air,ground,friend,self"
+    },
+    "targs4": {
+      "raw": "air,ground,friend,self",
+      "text": "air,ground,friend,self"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_14923",
+      "wts_id": 14923,
+      "text": "|cffb4dcdcБлагодать Пламени|r"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_14924",
+      "wts_id": 14924,
+      "text": "|cffb4dcdcБлагодать Пламени|r"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_14925",
+      "wts_id": 14925,
+      "text": "|cffb4dcdcБлагодать Пламени|r"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_14926",
+      "wts_id": 14926,
+      "text": "|cffb4dcdcБлагодать Пламени|r"
+    },
+    "ubertip1": {
+      "raw": "\"+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек.\"",
+      "text": "\"+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек.\""
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_9016",
+      "wts_id": 9016,
+      "text": "+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек."
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_9017",
+      "wts_id": 9017,
+      "text": "+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек."
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_9018",
+      "wts_id": 9018,
+      "text": "+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек."
+    },
+    "unhotkey": {
+      "raw": "TRIGSTR_16766",
+      "wts_id": 16766,
+      "text": "W"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "0",
+      "text": "0"
+    }
+  },
+  "A0QJ": {
+    "animnames": {
+      "raw": "spell,slam",
+      "text": "spell,slam"
+    },
+    "area1": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "area2": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "area3": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "area4": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNOrbOfFire.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNOrbOfFire.blp"
+    },
+    "buttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cast4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "AEfk",
+      "text": "AEfk"
+    },
+    "comments": {
+      "raw": "Warden - Fan of Knives",
+      "text": "Warden - Fan of Knives"
+    },
+    "cool1": {
+      "raw": "40.000000",
+      "text": "40.000000"
+    },
+    "cool2": {
+      "raw": "35.000000",
+      "text": "35.000000"
+    },
+    "cool3": {
+      "raw": "30.000000",
+      "text": "30.000000"
+    },
+    "cool4": {
+      "raw": "25.000000",
+      "text": "25.000000"
+    },
+    "cost1": {
+      "raw": "100",
+      "text": "100"
+    },
+    "cost2": {
+      "raw": "125",
+      "text": "125"
+    },
+    "cost3": {
+      "raw": "150",
+      "text": "150"
+    },
+    "cost4": {
+      "raw": "175",
+      "text": "175"
+    },
+    "dataa1": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "dataa2": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "dataa3": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "dataa4": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datab1": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datab2": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datab3": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datab4": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datac1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datac2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datac3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datac4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "datad1": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datad2": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datad3": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "datad4": {
+      "raw": "0.000000",
+      "text": "0.000000"
+    },
+    "dur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "editorsuffix": {
+      "raw": "TRIGSTR_16126",
+      "wts_id": 16126,
+      "text": "(Новый)"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur3": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur4": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_20267",
+      "wts_id": 20267,
+      "text": "E"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "4",
+      "text": "4"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "missilearc": {
+      "raw": "0.10",
+      "text": "0.10"
+    },
+    "missilespeed": {
+      "raw": "700",
+      "text": "700"
+    },
+    "name": {
+      "raw": "TRIGSTR_16123",
+      "wts_id": 16123,
+      "text": "|cffb4dcdcЯрость Пламени|r"
+    },
+    "order": {
+      "raw": "fanofknives",
+      "text": "fanofknives"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "naga",
+      "text": "naga"
+    },
+    "reqlevel": {
+      "raw": "1",
+      "text": "1"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNOrbOfFire.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNOrbOfFire.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "2",
+      "text": "2"
+    },
+    "researchbuttonpos2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchhotkey": {
+      "raw": "TRIGSTR_20266",
+      "wts_id": 20266,
+      "text": "E"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_16124",
+      "wts_id": 16124,
+      "text": "Изучить «|cffb4dcdcЯрость Пламени|r» [|cffffcc00%d-й уровень|r]"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_6976",
+      "wts_id": 6976,
+      "text": "Создает огненный поток который выстреливает сгустками огня во врагов. \nС каждый уровнем уменьшает востановление способности.\n|cffb4dc8cРадиус действия - 1000|r"
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "targs1": {
+      "raw": "air,ground,enemy,organic",
+      "text": "air,ground,enemy,organic"
+    },
+    "targs2": {
+      "raw": "air,ground,enemy,organic",
+      "text": "air,ground,enemy,organic"
+    },
+    "targs3": {
+      "raw": "air,ground,enemy,organic",
+      "text": "air,ground,enemy,organic"
+    },
+    "targs4": {
+      "raw": "air,ground,enemy,organic",
+      "text": "air,ground,enemy,organic"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_16127",
+      "wts_id": 16127,
+      "text": "|cffb4dcdcЯрость Пламени|r [|cffffcc001-й уровень|r]"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_16128",
+      "wts_id": 16128,
+      "text": "|cffb4dcdcЯрость Пламени|r [|cffffcc002-й уровень|r]"
+    },
+    "tip3": {
+      "raw": "TRIGSTR_16129",
+      "wts_id": 16129,
+      "text": "|cffb4dcdcЯрость Пламени|r [|cffffcc003-й уровень|r]"
+    },
+    "tip4": {
+      "raw": "TRIGSTR_16130",
+      "wts_id": 16130,
+      "text": "|cffb4dcdcЯрость Пламени|r [|cffffcc004-й уровень|r]"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_6977",
+      "wts_id": 6977,
+      "text": "Создает огненный поток который выстреливает сгустками огня во врагов. \nС каждый уровнем уменьшает востановление способности.\n|cffb4dc8cРадиус действия - 1000|r"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_6978",
+      "wts_id": 6978,
+      "text": "Создает огненный поток который выстреливает сгустками огня во врагов. \nС каждый уровнем уменьшает востановление способности.\n|cffb4dc8cРадиус действия - 1000|r"
+    },
+    "ubertip3": {
+      "raw": "TRIGSTR_6983",
+      "wts_id": 6983,
+      "text": "Создает огненный поток который выстреливает сгустками огня во врагов. \nС каждый уровнем уменьшает востановление способности.\n|cffb4dc8cРадиус действия - 1000|r"
+    },
+    "ubertip4": {
+      "raw": "TRIGSTR_16207",
+      "wts_id": 16207,
+      "text": "Создает огненный поток который выстреливает сгустками огня во врагов. \nС каждый уровнем уменьшает востановление способности.\n|cffb4dc8cРадиус действия - 1000|r"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "1",
+      "text": "1"
+    }
+  },
+  "A0OQ": {
+    "art": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNFire.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNFire.blp"
+    },
+    "buttonpos": {
+      "raw": "3",
+      "text": "3"
+    },
+    "buttonpos2": {
+      "raw": "2",
+      "text": "2"
+    },
+    "cast1": {
+      "raw": "3",
+      "text": "3"
+    },
+    "cast2": {
+      "raw": "3.000000",
+      "text": "3.000000"
+    },
+    "checkdep": {
+      "raw": "1",
+      "text": "1"
+    },
+    "code": {
+      "raw": "AOre",
+      "text": "AOre"
+    },
+    "comments": {
+      "raw": "Chieftain - Reincarnation",
+      "text": "Chieftain - Reincarnation"
+    },
+    "cool1": {
+      "raw": "240",
+      "text": "240"
+    },
+    "cool2": {
+      "raw": "150.000000",
+      "text": "150.000000"
+    },
+    "cool3": {
+      "raw": "240",
+      "text": "240"
+    },
+    "cool4": {
+      "raw": "240",
+      "text": "240"
+    },
+    "cost1": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "cost2": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "cost3": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "cost4": {
+      "raw": " - ",
+      "text": " - "
+    },
+    "dataa1": {
+      "raw": "5",
+      "text": "5"
+    },
+    "dataa2": {
+      "raw": "5",
+      "text": "5"
+    },
+    "dataa3": {
+      "raw": "5",
+      "text": "5"
+    },
+    "dataa4": {
+      "raw": "5",
+      "text": "5"
+    },
+    "dur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "editorsuffix": {
+      "raw": "TRIGSTR_14881",
+      "wts_id": 14881,
+      "text": "(Демоны)"
+    },
+    "efctid1": {
+      "raw": "XOre",
+      "text": "XOre"
+    },
+    "efctid2": {
+      "raw": "XOre",
+      "text": "XOre"
+    },
+    "efctid3": {
+      "raw": "XOre",
+      "text": "XOre"
+    },
+    "efctid4": {
+      "raw": "XOre",
+      "text": "XOre"
+    },
+    "effectart": {
+      "raw": "Abilities\\Spells\\Orc\\Reincarnation\\ReincarnationTarget.mdl",
+      "text": "Abilities\\Spells\\Orc\\Reincarnation\\ReincarnationTarget.mdl"
+    },
+    "hero": {
+      "raw": "1",
+      "text": "1"
+    },
+    "herodur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "hotkey": {
+      "raw": "TRIGSTR_19700",
+      "wts_id": 19700,
+      "text": "R"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "2",
+      "text": "2"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_14965",
+      "wts_id": 14965,
+      "text": "|cffb4dcdcПламенное перерождение|r"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "demon",
+      "text": "demon"
+    },
+    "reqlevel": {
+      "raw": "6",
+      "text": "6"
+    },
+    "researchart": {
+      "raw": "ReplaceableTextures\\CommandButtons\\BTNFire.blp",
+      "text": "ReplaceableTextures\\CommandButtons\\BTNFire.blp"
+    },
+    "researchbuttonpos": {
+      "raw": "3",
+      "text": "3"
+    },
+    "researchbuttonpos2": {
+      "raw": "0",
+      "text": "0"
+    },
+    "researchhotkey": {
+      "raw": "R",
+      "text": "R"
+    },
+    "researchtip": {
+      "raw": "TRIGSTR_14963",
+      "wts_id": 14963,
+      "text": "Изучить «|cffb4dcdcПламенное перерождение|r»"
+    },
+    "researchubertip": {
+      "raw": "TRIGSTR_14964",
+      "wts_id": 14964,
+      "text": "Возрождается после гибели. Время восстановления: |cffb4dcdc<AOre,Cool1>|r сек."
+    },
+    "sort": {
+      "raw": "hero",
+      "text": "hero"
+    },
+    "tip1": {
+      "raw": "TRIGSTR_14959",
+      "wts_id": 14959,
+      "text": "|cffb4dcdcПламенное перерождение|r"
+    },
+    "tip2": {
+      "raw": "TRIGSTR_14960",
+      "wts_id": 14960,
+      "text": "|cffb4dcdcПламенное перерождение|r"
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_15542",
+      "wts_id": 15542,
+      "text": "Возрождается после гибели. Время восстановления: |cffb4dcdc<AOre,Cool1> сек.|r"
+    },
+    "ubertip2": {
+      "raw": "TRIGSTR_14962",
+      "wts_id": 14962,
+      "text": "Возрождается после гибели. Время восстановления: |cffb4dcdc<AOre,Cool2> сек.|r"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "0",
+      "text": "0"
+    }
+  },
+  "A0YG": {
+    "area1": {
+      "raw": "900",
+      "text": "900"
+    },
+    "art": {
+      "raw": "ReplaceableTextures\\PassiveButtons\\PASBTNImmolation.blp",
+      "text": "ReplaceableTextures\\PassiveButtons\\PASBTNImmolation.blp"
+    },
+    "buffid1": {
+      "raw": "B071",
+      "text": "B071"
+    },
+    "buttonpos": {
+      "raw": "1",
+      "text": "1"
+    },
+    "buttonpos2": {
+      "raw": "1",
+      "text": "1"
+    },
+    "cast1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "checkdep": {
+      "raw": "0",
+      "text": "0"
+    },
+    "code": {
+      "raw": "AHad",
+      "text": "AHad"
+    },
+    "comments": {
+      "raw": "ItemAuraDevotion",
+      "text": "ItemAuraDevotion"
+    },
+    "cool1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "cost1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dataa1": {
+      "raw": "-5.000000",
+      "text": "-5.000000"
+    },
+    "datab1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "dur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "editorsuffix": {
+      "raw": "TRIGSTR_2945",
+      "wts_id": 2945,
+      "text": "(Рагнарос)"
+    },
+    "hero": {
+      "raw": "0",
+      "text": "0"
+    },
+    "herodur1": {
+      "raw": "0",
+      "text": "0"
+    },
+    "inbeta": {
+      "raw": "1",
+      "text": "1"
+    },
+    "item": {
+      "raw": "0",
+      "text": "0"
+    },
+    "levels": {
+      "raw": "1",
+      "text": "1"
+    },
+    "levelskip": {
+      "raw": "0",
+      "text": "0"
+    },
+    "name": {
+      "raw": "TRIGSTR_2267",
+      "wts_id": 2267,
+      "text": "Сожжение доспехов"
+    },
+    "priority": {
+      "raw": "0",
+      "text": "0"
+    },
+    "race": {
+      "raw": "other",
+      "text": "other"
+    },
+    "reqlevel": {
+      "raw": "0",
+      "text": "0"
+    },
+    "sort": {
+      "raw": "item",
+      "text": "item"
+    },
+    "targetart": {
+      "raw": "Abilities\\Spells\\Items\\AIfb\\AIfbTarget.mdl",
+      "text": "Abilities\\Spells\\Items\\AIfb\\AIfbTarget.mdl"
+    },
+    "targetattach": {
+      "raw": "origin",
+      "text": "origin"
+    },
+    "targs1": {
+      "raw": "air,ground,enemy,neutral",
+      "text": "air,ground,enemy,neutral"
+    },
+    "useineditor": {
+      "raw": "1",
+      "text": "1"
+    },
+    "version": {
+      "raw": "0",
+      "text": "0"
+    }
+  }
+}

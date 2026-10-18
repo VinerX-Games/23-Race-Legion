@@ -1,0 +1,972 @@
+{
+  "race": "Dragon",
+  "category": "researches",
+  "total_researches": 26,
+  "total_levels": 68,
+  "researches": [
+    {
+      "id": "R0D9",
+      "maxlevel": 2,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 39650,
+            "tip1": 39651,
+            "ubertip1": 18672
+          },
+          "values": {
+            "name1": "|cffe4cfa3Новое поколение|r — ступень |cffffffff1|r",
+            "tip1": "|cffe4cfa3Новое поколение|r — ступень |cffffffff1|r (|cffffffffZ|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет выводить драконов второй ступени (Т2) и увеличивает лимит доступных гнёзд драконов.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r"
+          }
+        },
+        "2": {
+          "wts": {
+            "name2": 39653,
+            "tip2": 39652,
+            "ubertip2": 18673
+          },
+          "values": {
+            "name2": "|cffe4cfa3Новое поколение|r — ступень |cffffffff2|r",
+            "tip2": "|cffe4cfa3Новое поколение|r — ступень |cffffffff2|r (|cffffffffZ|r)",
+            "ubertip2": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет выводить древних драконов третьей ступени (Т3) и дополнительно увеличивает лимит доступных гнёзд драконов.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0DT",
+      "maxlevel": 3,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 21956,
+            "tip1": 21971
+          },
+          "raw": {
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём древесины, переносимой строителями, на |cffffffff+10|cffced4da ед.|n|nЗатрагивает: |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+          },
+          "values": {
+            "name1": "|cffe4cfa3Улучшенная добыча|r — ступень |cffffffff1|r",
+            "tip1": "|cffe4cfa3Улучшенная добыча|r — ступень |cffffffff1|r (|cffffffffZ|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём древесины, переносимой строителями, на |cffffffff+10|cffced4da ед.|n|nЗатрагивает: |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+          }
+        },
+        "2": {
+          "wts": {
+            "name2": 21970,
+            "tip2": 21972
+          },
+          "raw": {
+            "ubertip2": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает объём древесины, переносимой строителями, на |cffffffff+10|cffced4da ед. (суммарно |cffffffff+20|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+          },
+          "values": {
+            "name2": "|cffe4cfa3Улучшенная добыча|r — ступень |cffffffff2|r",
+            "tip2": "|cffe4cfa3Улучшенная добыча|r — ступень |cffffffff2|r (|cffffffffZ|r)",
+            "ubertip2": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает объём древесины, переносимой строителями, на |cffffffff+10|cffced4da ед. (суммарно |cffffffff+20|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+          }
+        },
+        "3": {
+          "wts": {
+            "name3": 21979,
+            "tip3": 21982,
+            "ubertip3": 21985
+          },
+          "values": {
+            "name3": "|cffe4cfa3Улучшенная добыча|r — ступень |cffffffff3|r",
+            "tip3": "|cffe4cfa3Улучшенная добыча|r — ступень |cffffffff3|r (|cffffffffZ|r)",
+            "ubertip3": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает объём древесины, переносимой строителями, на |cffffffff+10|cffced4da ед. (суммарно |cffffffff+30|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deСтроитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0B0",
+      "maxlevel": 3,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 39839,
+            "tip1": 39840,
+            "ubertip1": 39841
+          },
+          "values": {
+            "name1": "|cffe4cfa3Практика полетов|r — ступень |cffffffff1|r",
+            "tip1": "|cffe4cfa3Практика полетов|r — ступень |cffffffff1|r (|cffffffffS|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость передвижения драконов на |cffffffff+20|cffced4da ед.|n|nЗатрагивает: |cffa9c7deдраконов всех стай|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r"
+          }
+        },
+        "2": {
+          "wts": {
+            "name2": 39842,
+            "tip2": 39844,
+            "ubertip2": 39846
+          },
+          "values": {
+            "name2": "|cffe4cfa3Практика полетов|r — ступень |cffffffff2|r",
+            "tip2": "|cffe4cfa3Практика полетов|r — ступень |cffffffff2|r (|cffffffffS|r)",
+            "ubertip2": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает скорость передвижения драконов на |cffffffff+20|cffced4da ед. (суммарно |cffffffff+40|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deдраконов всех стай|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r"
+          }
+        },
+        "3": {
+          "wts": {
+            "name3": 39843,
+            "tip3": 39845,
+            "ubertip3": 39847
+          },
+          "values": {
+            "name3": "|cffe4cfa3Практика полетов|r — ступень |cffffffff3|r",
+            "tip3": "|cffe4cfa3Практика полетов|r — ступень |cffffffff3|r (|cffffffffS|r)",
+            "ubertip3": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает скорость передвижения драконов на |cffffffff+20|cffced4da ед. (суммарно |cffffffff+60|cffced4da ед.).|n|nЗатрагивает: |cffa9c7deдраконов всех стай|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0AV",
+      "maxlevel": 6,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 15873,
+            "tip1": 15887,
+            "ubertip1": 15888
+          },
+          "values": {
+            "name1": "|cffe4cfa3Мудрость зеленой стаи|r — ступень |cffffffff1|r",
+            "tip1": "|cffe4cfa3Мудрость зеленой стаи|r — ступень |cffffffff1|r (|cffffffffQ|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню зелёных драконов на |cffffffff+1|cffced4da и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deЗеленый дракончик|cffced4da, |cffa9c7deИзумрудный страж|cffced4da, |cffa9c7deДревний зеленый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+          }
+        },
+        "2": {
+          "wts": {
+            "name2": 15871,
+            "tip2": 15886,
+            "ubertip2": 15889
+          },
+          "values": {
+            "name2": "|cffe4cfa3Мудрость зеленой стаи|r — ступень |cffffffff2|r",
+            "tip2": "|cffe4cfa3Мудрость зеленой стаи|r — ступень |cffffffff2|r (|cffffffffQ|r)",
+            "ubertip2": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню зелёных драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+2|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deЗеленый дракончик|cffced4da, |cffa9c7deИзумрудный страж|cffced4da, |cffa9c7deДревний зеленый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+          }
+        },
+        "3": {
+          "wts": {
+            "name3": 15870,
+            "tip3": 15876,
+            "ubertip3": 15892
+          },
+          "values": {
+            "name3": "|cffe4cfa3Мудрость зеленой стаи|r — ступень |cffffffff3|r",
+            "tip3": "|cffe4cfa3Мудрость зеленой стаи|r — ступень |cffffffff3|r (|cffffffffQ|r)",
+            "ubertip3": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню зелёных драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+3|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deЗеленый дракончик|cffced4da, |cffa9c7deИзумрудный страж|cffced4da, |cffa9c7deДревний зеленый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+          }
+        },
+        "4": {
+          "wts": {
+            "name4": 15869,
+            "tip4": 15875,
+            "ubertip4": 15894
+          },
+          "values": {
+            "name4": "|cffe4cfa3Мудрость зеленой стаи|r — ступень |cffffffff4|r",
+            "tip4": "|cffe4cfa3Мудрость зеленой стаи|r — ступень |cffffffff4|r (|cffffffffQ|r)",
+            "ubertip4": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню зелёных драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+4|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deЗеленый дракончик|cffced4da, |cffa9c7deИзумрудный страж|cffced4da, |cffa9c7deДревний зеленый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+          }
+        },
+        "5": {
+          "wts": {
+            "name5": 15868,
+            "tip5": 15874,
+            "ubertip5": 15893
+          },
+          "values": {
+            "name5": "|cffe4cfa3Мудрость зеленой стаи|r — ступень |cffffffff5|r",
+            "tip5": "|cffe4cfa3Мудрость зеленой стаи|r — ступень |cffffffff5|r (|cffffffffQ|r)",
+            "ubertip5": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню зелёных драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+5|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deЗеленый дракончик|cffced4da, |cffa9c7deИзумрудный страж|cffced4da, |cffa9c7deДревний зеленый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+          }
+        },
+        "6": {
+          "wts": {
+            "name6": 15867,
+            "tip6": 15872,
+            "ubertip6": 15895
+          },
+          "values": {
+            "name6": "|cffe4cfa3Мудрость зеленой стаи|r — ступень |cffffffff6|r",
+            "tip6": "|cffe4cfa3Мудрость зеленой стаи|r — ступень |cffffffff6|r (|cffffffffQ|r)",
+            "ubertip6": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню зелёных драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+6|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deЗеленый дракончик|cffced4da, |cffa9c7deИзумрудный страж|cffced4da, |cffa9c7deДревний зеленый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0AW",
+      "maxlevel": 6,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 16705,
+            "tip1": 16987,
+            "ubertip1": 16997
+          },
+          "values": {
+            "name1": "|cffe4cfa3Мудрость синей стаи|r — ступень |cffffffff1|r",
+            "tip1": "|cffe4cfa3Мудрость синей стаи|r — ступень |cffffffff1|r (|cffffffffR|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню синих драконов на |cffffffff+1|cffced4da и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deСиний дракончик|cffced4da, |cffa9c7deСиний дракон|cffced4da, |cffa9c7deДревний синий дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+          }
+        },
+        "2": {
+          "wts": {
+            "name2": 16703,
+            "tip2": 16958,
+            "ubertip2": 17011
+          },
+          "values": {
+            "name2": "|cffe4cfa3Мудрость синей стаи|r — ступень |cffffffff2|r",
+            "tip2": "|cffe4cfa3Мудрость синей стаи|r — ступень |cffffffff2|r (|cffffffffR|r)",
+            "ubertip2": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню синих драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+2|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deСиний дракончик|cffced4da, |cffa9c7deСиний дракон|cffced4da, |cffa9c7deДревний синий дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+          }
+        },
+        "3": {
+          "wts": {
+            "name3": 16702,
+            "tip3": 16936,
+            "ubertip3": 17012
+          },
+          "values": {
+            "name3": "|cffe4cfa3Мудрость синей стаи|r — ступень |cffffffff3|r",
+            "tip3": "|cffe4cfa3Мудрость синей стаи|r — ступень |cffffffff3|r (|cffffffffR|r)",
+            "ubertip3": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню синих драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+3|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deСиний дракончик|cffced4da, |cffa9c7deСиний дракон|cffced4da, |cffa9c7deДревний синий дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+          }
+        },
+        "4": {
+          "wts": {
+            "name4": 16699,
+            "tip4": 16913,
+            "ubertip4": 17014
+          },
+          "values": {
+            "name4": "|cffe4cfa3Мудрость синей стаи|r — ступень |cffffffff4|r",
+            "tip4": "|cffe4cfa3Мудрость синей стаи|r — ступень |cffffffff4|r (|cffffffffR|r)",
+            "ubertip4": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню синих драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+4|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deСиний дракончик|cffced4da, |cffa9c7deСиний дракон|cffced4da, |cffa9c7deДревний синий дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+          }
+        },
+        "5": {
+          "wts": {
+            "name5": 16388,
+            "tip5": 16912,
+            "ubertip5": 17013
+          },
+          "values": {
+            "name5": "|cffe4cfa3Мудрость синей стаи|r — ступень |cffffffff5|r",
+            "tip5": "|cffe4cfa3Мудрость синей стаи|r — ступень |cffffffff5|r (|cffffffffR|r)",
+            "ubertip5": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню синих драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+5|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deСиний дракончик|cffced4da, |cffa9c7deСиний дракон|cffced4da, |cffa9c7deДревний синий дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+          }
+        },
+        "6": {
+          "wts": {
+            "name6": 16387,
+            "tip6": 16704,
+            "ubertip6": 17015
+          },
+          "values": {
+            "name6": "|cffe4cfa3Мудрость синей стаи|r — ступень |cffffffff6|r",
+            "tip6": "|cffe4cfa3Мудрость синей стаи|r — ступень |cffffffff6|r (|cffffffffR|r)",
+            "ubertip6": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню синих драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+6|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deСиний дракончик|cffced4da, |cffa9c7deСиний дракон|cffced4da, |cffa9c7deДревний синий дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0AX",
+      "maxlevel": 6,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 17027,
+            "tip1": 17032,
+            "ubertip1": 39734
+          },
+          "values": {
+            "name1": "|cffe4cfa3Мудрость красной стаи|r — ступень |cffffffff1|r",
+            "tip1": "|cffe4cfa3Мудрость красной стаи|r — ступень |cffffffff1|r (|cffffffffE|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню красных драконов на |cffffffff+1|cffced4da и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deКрасный дракончик|cffced4da, |cffa9c7deКрасный дракон|cffced4da, |cffa9c7deДревний красный дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+          }
+        },
+        "2": {
+          "wts": {
+            "name2": 17025,
+            "tip2": 17031,
+            "ubertip2": 39735
+          },
+          "values": {
+            "name2": "|cffe4cfa3Мудрость красной стаи|r — ступень |cffffffff2|r",
+            "tip2": "|cffe4cfa3Мудрость красной стаи|r — ступень |cffffffff2|r (|cffffffffE|r)",
+            "ubertip2": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню красных драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+2|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deКрасный дракончик|cffced4da, |cffa9c7deКрасный дракон|cffced4da, |cffa9c7deДревний красный дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+          }
+        },
+        "3": {
+          "wts": {
+            "name3": 17024,
+            "tip3": 17030,
+            "ubertip3": 39736
+          },
+          "values": {
+            "name3": "|cffe4cfa3Мудрость красной стаи|r — ступень |cffffffff3|r",
+            "tip3": "|cffe4cfa3Мудрость красной стаи|r — ступень |cffffffff3|r (|cffffffffE|r)",
+            "ubertip3": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню красных драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+3|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deКрасный дракончик|cffced4da, |cffa9c7deКрасный дракон|cffced4da, |cffa9c7deДревний красный дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+          }
+        },
+        "4": {
+          "wts": {
+            "name4": 17023,
+            "tip4": 17029,
+            "ubertip4": 39738
+          },
+          "values": {
+            "name4": "|cffe4cfa3Мудрость красной стаи|r — ступень |cffffffff4|r",
+            "tip4": "|cffe4cfa3Мудрость красной стаи|r — ступень |cffffffff4|r (|cffffffffE|r)",
+            "ubertip4": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню красных драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+4|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deКрасный дракончик|cffced4da, |cffa9c7deКрасный дракон|cffced4da, |cffa9c7deДревний красный дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+          }
+        },
+        "5": {
+          "wts": {
+            "name5": 17022,
+            "tip5": 17028,
+            "ubertip5": 39737
+          },
+          "values": {
+            "name5": "|cffe4cfa3Мудрость красной стаи|r — ступень |cffffffff5|r",
+            "tip5": "|cffe4cfa3Мудрость красной стаи|r — ступень |cffffffff5|r (|cffffffffE|r)",
+            "ubertip5": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню красных драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+5|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deКрасный дракончик|cffced4da, |cffa9c7deКрасный дракон|cffced4da, |cffa9c7deДревний красный дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+          }
+        },
+        "6": {
+          "wts": {
+            "name6": 17021,
+            "tip6": 17026,
+            "ubertip6": 39739
+          },
+          "values": {
+            "name6": "|cffe4cfa3Мудрость красной стаи|r — ступень |cffffffff6|r",
+            "tip6": "|cffe4cfa3Мудрость красной стаи|r — ступень |cffffffff6|r (|cffffffffE|r)",
+            "ubertip6": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню красных драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+6|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deКрасный дракончик|cffced4da, |cffa9c7deКрасный дракон|cffced4da, |cffa9c7deДревний красный дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0AY",
+      "maxlevel": 6,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 17050,
+            "tip1": 17055,
+            "ubertip1": 17056
+          },
+          "values": {
+            "name1": "|cffe4cfa3Мудрость бронзовой стаи|r — ступень |cffffffff1|r",
+            "tip1": "|cffe4cfa3Мудрость бронзовой стаи|r — ступень |cffffffff1|r (|cffffffffW|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню бронзовых драконов на |cffffffff+1|cffced4da и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deБронзовый дракончик|cffced4da, |cffa9c7deБронзовый дракон|cffced4da, |cffa9c7deДревний бронзовый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+          }
+        },
+        "2": {
+          "wts": {
+            "name2": 17048,
+            "tip2": 17054,
+            "ubertip2": 17057
+          },
+          "values": {
+            "name2": "|cffe4cfa3Мудрость бронзовой стаи|r — ступень |cffffffff2|r",
+            "tip2": "|cffe4cfa3Мудрость бронзовой стаи|r — ступень |cffffffff2|r (|cffffffffW|r)",
+            "ubertip2": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню бронзовых драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+2|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deБронзовый дракончик|cffced4da, |cffa9c7deБронзовый дракон|cffced4da, |cffa9c7deДревний бронзовый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+          }
+        },
+        "3": {
+          "wts": {
+            "name3": 17047,
+            "tip3": 17053,
+            "ubertip3": 17058
+          },
+          "values": {
+            "name3": "|cffe4cfa3Мудрость бронзовой стаи|r — ступень |cffffffff3|r",
+            "tip3": "|cffe4cfa3Мудрость бронзовой стаи|r — ступень |cffffffff3|r (|cffffffffW|r)",
+            "ubertip3": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню бронзовых драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+3|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deБронзовый дракончик|cffced4da, |cffa9c7deБронзовый дракон|cffced4da, |cffa9c7deДревний бронзовый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+          }
+        },
+        "4": {
+          "wts": {
+            "name4": 17046,
+            "tip4": 17052,
+            "ubertip4": 17060
+          },
+          "values": {
+            "name4": "|cffe4cfa3Мудрость бронзовой стаи|r — ступень |cffffffff4|r",
+            "tip4": "|cffe4cfa3Мудрость бронзовой стаи|r — ступень |cffffffff4|r (|cffffffffW|r)",
+            "ubertip4": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню бронзовых драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+4|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deБронзовый дракончик|cffced4da, |cffa9c7deБронзовый дракон|cffced4da, |cffa9c7deДревний бронзовый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+          }
+        },
+        "5": {
+          "wts": {
+            "name5": 17045,
+            "tip5": 17051,
+            "ubertip5": 17059
+          },
+          "values": {
+            "name5": "|cffe4cfa3Мудрость бронзовой стаи|r — ступень |cffffffff5|r",
+            "tip5": "|cffe4cfa3Мудрость бронзовой стаи|r — ступень |cffffffff5|r (|cffffffffW|r)",
+            "ubertip5": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню бронзовых драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+5|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deБронзовый дракончик|cffced4da, |cffa9c7deБронзовый дракон|cffced4da, |cffa9c7deДревний бронзовый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+          }
+        },
+        "6": {
+          "wts": {
+            "name6": 17044,
+            "tip6": 17049,
+            "ubertip6": 17061
+          },
+          "values": {
+            "name6": "|cffe4cfa3Мудрость бронзовой стаи|r — ступень |cffffffff6|r",
+            "tip6": "|cffe4cfa3Мудрость бронзовой стаи|r — ступень |cffffffff6|r (|cffffffffW|r)",
+            "ubertip6": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню бронзовых драконов на |cffffffff+1|cffced4da (суммарно |cffffffff+6|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deБронзовый дракончик|cffced4da, |cffa9c7deБронзовый дракон|cffced4da, |cffa9c7deДревний бронзовый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0AZ",
+      "maxlevel": 6,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 17073,
+            "tip1": 17078,
+            "ubertip1": 17079
+          },
+          "values": {
+            "name1": "|cffe4cfa3Мудрость черной стаи|r — ступень |cffffffff1|r",
+            "tip1": "|cffe4cfa3Мудрость черной стаи|r — ступень |cffffffff1|r (|cffffffffA|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню чёрных драконов и драконидов на |cffffffff+1|cffced4da и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deДраконид – следопыт|cffced4da, |cffa9c7deЧерный дракончик|cffced4da, |cffa9c7deЧерный дракон|cffced4da, |cffa9c7deДревний черный дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+          }
+        },
+        "2": {
+          "wts": {
+            "name2": 17071,
+            "tip2": 17077,
+            "ubertip2": 17080
+          },
+          "values": {
+            "name2": "|cffe4cfa3Мудрость черной стаи|r — ступень |cffffffff2|r",
+            "tip2": "|cffe4cfa3Мудрость черной стаи|r — ступень |cffffffff2|r (|cffffffffA|r)",
+            "ubertip2": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню чёрных драконов и драконидов на |cffffffff+1|cffced4da (суммарно |cffffffff+2|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deДраконид – следопыт|cffced4da, |cffa9c7deЧерный дракончик|cffced4da, |cffa9c7deЧерный дракон|cffced4da, |cffa9c7deДревний черный дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+          }
+        },
+        "3": {
+          "wts": {
+            "name3": 17070,
+            "tip3": 17076,
+            "ubertip3": 17081
+          },
+          "values": {
+            "name3": "|cffe4cfa3Мудрость черной стаи|r — ступень |cffffffff3|r",
+            "tip3": "|cffe4cfa3Мудрость черной стаи|r — ступень |cffffffff3|r (|cffffffffA|r)",
+            "ubertip3": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню чёрных драконов и драконидов на |cffffffff+1|cffced4da (суммарно |cffffffff+3|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deДраконид – следопыт|cffced4da, |cffa9c7deЧерный дракончик|cffced4da, |cffa9c7deЧерный дракон|cffced4da, |cffa9c7deДревний черный дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+          }
+        },
+        "4": {
+          "wts": {
+            "name4": 17069,
+            "tip4": 17075,
+            "ubertip4": 17083
+          },
+          "values": {
+            "name4": "|cffe4cfa3Мудрость черной стаи|r — ступень |cffffffff4|r",
+            "tip4": "|cffe4cfa3Мудрость черной стаи|r — ступень |cffffffff4|r (|cffffffffA|r)",
+            "ubertip4": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню чёрных драконов и драконидов на |cffffffff+1|cffced4da (суммарно |cffffffff+4|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deДраконид – следопыт|cffced4da, |cffa9c7deЧерный дракончик|cffced4da, |cffa9c7deЧерный дракон|cffced4da, |cffa9c7deДревний черный дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+          }
+        },
+        "5": {
+          "wts": {
+            "name5": 17068,
+            "tip5": 17074,
+            "ubertip5": 17082
+          },
+          "values": {
+            "name5": "|cffe4cfa3Мудрость черной стаи|r — ступень |cffffffff5|r",
+            "tip5": "|cffe4cfa3Мудрость черной стаи|r — ступень |cffffffff5|r (|cffffffffA|r)",
+            "ubertip5": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню чёрных драконов и драконидов на |cffffffff+1|cffced4da (суммарно |cffffffff+5|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deДраконид – следопыт|cffced4da, |cffa9c7deЧерный дракончик|cffced4da, |cffa9c7deЧерный дракон|cffced4da, |cffa9c7deДревний черный дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+          }
+        },
+        "6": {
+          "wts": {
+            "name6": 17067,
+            "tip6": 17072,
+            "ubertip6": 17084
+          },
+          "values": {
+            "name6": "|cffe4cfa3Мудрость черной стаи|r — ступень |cffffffff6|r",
+            "tip6": "|cffe4cfa3Мудрость черной стаи|r — ступень |cffffffff6|r (|cffffffffA|r)",
+            "ubertip6": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно увеличивает броню чёрных драконов и драконидов на |cffffffff+1|cffced4da (суммарно |cffffffff+6|cffced4da) и повышает их урон от атак.|n|nЗатрагивает: |cffa9c7deДраконид – следопыт|cffced4da, |cffa9c7deЧерный дракончик|cffced4da, |cffa9c7deЧерный дракон|cffced4da, |cffa9c7deДревний черный дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0AT",
+      "maxlevel": 4,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 16994,
+            "tip1": 16995,
+            "ubertip1": 39713
+          },
+          "values": {
+            "name1": "|cffe4cfa3Магия времени|r — ступень |cffffffff1|r",
+            "tip1": "|cffe4cfa3Магия времени|r — ступень |cffffffff1|r (|cffffffffA|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья и маны бронзовых драконов, ускоряет восстановление маны и открывает способность «Зеркальное изображение».|n|nЗатрагивает: |cffa9c7deБронзовый дракончик|cffced4da, |cffa9c7deБронзовый дракон|cffced4da, |cffa9c7deДревний бронзовый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/4|cffced4da.|r"
+          }
+        },
+        "2": {
+          "wts": {
+            "name2": 18685,
+            "tip2": 18686,
+            "ubertip2": 39749
+          },
+          "values": {
+            "name2": "|cffe4cfa3Магия времени|r — ступень |cffffffff2|r",
+            "tip2": "|cffe4cfa3Магия времени|r — ступень |cffffffff2|r (|cffffffffA|r)",
+            "ubertip2": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно повышает запас здоровья и маны бронзовых драконов и открывает способность «Возврат времени».|n|nЗатрагивает: |cffa9c7deБронзовый дракончик|cffced4da, |cffa9c7deБронзовый дракон|cffced4da, |cffa9c7deДревний бронзовый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/4|cffced4da.|r"
+          }
+        },
+        "3": {
+          "wts": {
+            "name3": 39750,
+            "tip3": 39752,
+            "ubertip3": 39837
+          },
+          "values": {
+            "name3": "|cffe4cfa3Магия времени|r — ступень |cffffffff3|r",
+            "tip3": "|cffe4cfa3Магия времени|r — ступень |cffffffff3|r (|cffffffffA|r)",
+            "ubertip3": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно повышает запас здоровья и маны бронзовых драконов и открывает способность «Ускорение времени».|n|nЗатрагивает: |cffa9c7deБронзовый дракончик|cffced4da, |cffa9c7deБронзовый дракон|cffced4da, |cffa9c7deДревний бронзовый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/4|cffced4da.|r"
+          }
+        },
+        "4": {
+          "wts": {
+            "name4": 39751,
+            "tip4": 39835,
+            "ubertip4": 39838
+          },
+          "values": {
+            "name4": "|cffe4cfa3Магия времени|r — ступень |cffffffff4|r",
+            "tip4": "|cffe4cfa3Магия времени|r — ступень |cffffffff4|r (|cffffffffA|r)",
+            "ubertip4": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Доводит магические способности и боевые показатели бронзовых драконов до совершенства.|n|nЗатрагивает: |cffa9c7deБронзовый дракончик|cffced4da, |cffa9c7deБронзовый дракон|cffced4da, |cffa9c7deДревний бронзовый дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/4|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0AC",
+      "maxlevel": 1,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 36800,
+            "tip1": 16421,
+            "ubertip1": 25672
+          },
+          "values": {
+            "name1": "|cffe4cfa3Эволюция бронзовых драконов (Т2)|r",
+            "tip1": "|cffe4cfa3Эволюция бронзовых драконов (Т2)|r (|cffffffffX|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет обучать бронзовых драконов второй ступени (Т2).|n|nОткрывает: |cffa9c7deБронзовый дракон|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0AB",
+      "maxlevel": 1,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 33850,
+            "tip1": 16420,
+            "ubertip1": 25671
+          },
+          "values": {
+            "name1": "|cffe4cfa3Эволюция бронзовых драконов (Т3)|r",
+            "tip1": "|cffe4cfa3Эволюция бронзовых драконов (Т3)|r (|cffffffffC|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет обучать древних бронзовых драконов третьей ступени (Т3).|n|nОткрывает: |cffa9c7deДревний бронзовый дракон|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0AP",
+      "maxlevel": 4,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 13756,
+            "tip1": 14087,
+            "ubertip1": 37790
+          },
+          "values": {
+            "name1": "|cffe4cfa3Изумрудная связь|r — ступень |cffffffff1|r",
+            "tip1": "|cffe4cfa3Изумрудная связь|r — ступень |cffffffff1|r (|cffffffffA|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья и маны зелёных драконов, ускоряет восстановление маны и открывает способность «Изгнание».|n|nЗатрагивает: |cffa9c7deЗеленый дракончик|cffced4da, |cffa9c7deИзумрудный страж|cffced4da, |cffa9c7deДревний зеленый дракон|cffced4da.|r"
+          }
+        },
+        "2": {
+          "wts": {
+            "name2": 39198,
+            "tip2": 39630
+          },
+          "values": {
+            "name2": "|cffe4cfa3Изумрудная связь|r — ступень |cffffffff2|r",
+            "tip2": "|cffe4cfa3Изумрудная связь|r — ступень |cffffffff2|r (|cffffffffA|r)"
+          }
+        },
+        "3": {
+          "wts": {
+            "name3": 39298,
+            "tip3": 39702
+          },
+          "values": {
+            "name3": "|cffe4cfa3Изумрудная связь|r — ступень |cffffffff3|r",
+            "tip3": "|cffe4cfa3Изумрудная связь|r — ступень |cffffffff3|r (|cffffffffA|r)"
+          }
+        },
+        "4": {
+          "wts": {
+            "name4": 39471,
+            "tip4": 39703
+          },
+          "values": {
+            "name4": "|cffe4cfa3Изумрудная связь|r — ступень |cffffffff4|r",
+            "tip4": "|cffe4cfa3Изумрудная связь|r — ступень |cffffffff4|r (|cffffffffA|r)"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0A9",
+      "maxlevel": 1,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 17159,
+            "tip1": 16412,
+            "ubertip1": 25617
+          },
+          "values": {
+            "name1": "|cffe4cfa3Эволюция зеленых драконов (Т2)|r",
+            "tip1": "|cffe4cfa3Эволюция зеленых драконов (Т2)|r (|cffffffffX|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет обучать зелёных драконов второй ступени (Т2).|n|nОткрывает: |cffa9c7deИзумрудный страж|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0AA",
+      "maxlevel": 1,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 22395,
+            "tip1": 16413,
+            "ubertip1": 25670
+          },
+          "values": {
+            "name1": "|cffe4cfa3Эволюция зеленых драконов (Т3)|r",
+            "tip1": "|cffe4cfa3Эволюция зеленых драконов (Т3)|r (|cffffffffC|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет обучать древних зелёных драконов третьей ступени (Т3).|n|nОткрывает: |cffa9c7deДревний зеленый дракон|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0AS",
+      "maxlevel": 4,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 39801,
+            "tip1": 39802,
+            "ubertip1": 39712
+          },
+          "values": {
+            "name1": "|cffe4cfa3Мудрость жизни|r — ступень |cffffffff1|r",
+            "tip1": "|cffe4cfa3Мудрость жизни|r — ступень |cffffffff1|r (|cffffffffA|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья и маны красных драконов, ускоряет восстановление маны и открывает способность «Восстановление».|n|nЗатрагивает: |cffa9c7deКрасный дракончик|cffced4da, |cffa9c7deКрасный дракон|cffced4da, |cffa9c7deДревний красный дракон|cffced4da.|r"
+          }
+        },
+        "2": {
+          "wts": {
+            "name2": 39804,
+            "tip2": 39807
+          },
+          "values": {
+            "name2": "|cffe4cfa3Мудрость жизни|r — ступень |cffffffff2|r",
+            "tip2": "|cffe4cfa3Мудрость жизни|r — ступень |cffffffff2|r (|cffffffffA|r)"
+          }
+        },
+        "3": {
+          "wts": {
+            "name3": 39805,
+            "tip3": 39808
+          },
+          "values": {
+            "name3": "|cffe4cfa3Мудрость жизни|r — ступень |cffffffff3|r",
+            "tip3": "|cffe4cfa3Мудрость жизни|r — ступень |cffffffff3|r (|cffffffffA|r)"
+          }
+        },
+        "4": {
+          "wts": {
+            "name4": 39806,
+            "tip4": 39809
+          },
+          "values": {
+            "name4": "|cffe4cfa3Мудрость жизни|r — ступень |cffffffff4|r",
+            "tip4": "|cffe4cfa3Мудрость жизни|r — ступень |cffffffff4|r (|cffffffffA|r)"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0A5",
+      "maxlevel": 1,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 17087,
+            "tip1": 16396,
+            "ubertip1": 25607
+          },
+          "values": {
+            "name1": "|cffe4cfa3Эволюция красных драконов (Т2)|r",
+            "tip1": "|cffe4cfa3Эволюция красных драконов (Т2)|r (|cffffffffX|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет обучать красных драконов второй ступени (Т2).|n|nОткрывает: |cffa9c7deКрасный дракон|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0A6",
+      "maxlevel": 1,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 17100,
+            "tip1": 16397,
+            "ubertip1": 25610
+          },
+          "values": {
+            "name1": "|cffe4cfa3Эволюция красных драконов (Т3)|r",
+            "tip1": "|cffe4cfa3Эволюция красных драконов (Т3)|r (|cffffffffC|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет обучать древних красных драконов третьей ступени (Т3).|n|nОткрывает: |cffa9c7deДревний красный дракон|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0B3",
+      "maxlevel": 4,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 39785,
+            "tip1": 39789,
+            "ubertip1": 39848
+          },
+          "values": {
+            "name1": "|cffe4cfa3Практика арканы|r — ступень |cffffffff1|r",
+            "tip1": "|cffe4cfa3Практика арканы|r — ступень |cffffffff1|r (|cffffffffA|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья и маны синих драконов, ускоряет регенерацию маны и открывает способность «Буран».|n|nЗатрагивает: |cffa9c7deСиний дракончик|cffced4da, |cffa9c7deСиний дракон|cffced4da, |cffa9c7deДревний синий дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/4|cffced4da.|r"
+          }
+        },
+        "2": {
+          "wts": {
+            "name2": 39786,
+            "tip2": 39790,
+            "ubertip2": 39849
+          },
+          "values": {
+            "name2": "|cffe4cfa3Практика арканы|r — ступень |cffffffff2|r",
+            "tip2": "|cffe4cfa3Практика арканы|r — ступень |cffffffff2|r (|cffffffffA|r)",
+            "ubertip2": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно повышает запас здоровья и маны синих драконов и открывает способность «Кольцо льда».|n|nЗатрагивает: |cffa9c7deСиний дракончик|cffced4da, |cffa9c7deСиний дракон|cffced4da, |cffa9c7deДревний синий дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/4|cffced4da.|r"
+          }
+        },
+        "3": {
+          "wts": {
+            "name3": 39787,
+            "tip3": 39791,
+            "ubertip3": 39850
+          },
+          "values": {
+            "name3": "|cffe4cfa3Практика арканы|r — ступень |cffffffff3|r",
+            "tip3": "|cffe4cfa3Практика арканы|r — ступень |cffffffff3|r (|cffffffffA|r)",
+            "ubertip3": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно повышает запас здоровья и маны синих драконов и открывает способность «Похищение заклинаний».|n|nЗатрагивает: |cffa9c7deСиний дракончик|cffced4da, |cffa9c7deСиний дракон|cffced4da, |cffa9c7deДревний синий дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/4|cffced4da.|r"
+          }
+        },
+        "4": {
+          "wts": {
+            "name4": 39788,
+            "tip4": 39792,
+            "ubertip4": 39851
+          },
+          "values": {
+            "name4": "|cffe4cfa3Практика арканы|r — ступень |cffffffff4|r",
+            "tip4": "|cffe4cfa3Практика арканы|r — ступень |cffffffff4|r (|cffffffffA|r)",
+            "ubertip4": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно повышает запас здоровья и маны синих драконов и открывает способность «Вспышка маны».|n|nЗатрагивает: |cffa9c7deСиний дракончик|cffced4da, |cffa9c7deСиний дракон|cffced4da, |cffa9c7deДревний синий дракон|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/4|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0A3",
+      "maxlevel": 1,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 16985,
+            "tip1": 17157,
+            "ubertip1": 25604
+          },
+          "values": {
+            "name1": "|cffe4cfa3Эволюция синих драконов (Т2)|r",
+            "tip1": "|cffe4cfa3Эволюция синих драконов (Т2)|r (|cffffffffX|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет обучать синих драконов второй ступени (Т2).|n|nОткрывает: |cffa9c7deСиний дракон|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0A4",
+      "maxlevel": 1,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 16991,
+            "tip1": 19414,
+            "ubertip1": 25606
+          },
+          "values": {
+            "name1": "|cffe4cfa3Эволюция синих драконов (Т3)|r",
+            "tip1": "|cffe4cfa3Эволюция синих драконов (Т3)|r (|cffffffffC|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет обучать древних синих драконов третьей ступени (Т3).|n|nОткрывает: |cffa9c7deДревний синий дракон|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0B4",
+      "maxlevel": 1,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 17120,
+            "tip1": 17121,
+            "ubertip1": 16934
+          },
+          "values": {
+            "name1": "|cffe4cfa3Ярость земли|r",
+            "tip1": "|cffe4cfa3Ярость земли|r (|cffffffffZ|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает способность «Ярость земли», позволяющую древним чёрным драконам излучать ауру, увеличивающую урон союзников на |cffffffff+10%|cffced4da.|n|nЗатрагивает: |cffa9c7deДревний черный дракон|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0B2",
+      "maxlevel": 1,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 17113,
+            "tip1": 17114,
+            "ubertip1": 17117
+          },
+          "values": {
+            "name1": "|cffe4cfa3Ускользание|r",
+            "tip1": "|cffe4cfa3Ускользание|r (|cffffffffZ|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Даёт драконам и драконидам шанс уклониться от вражеских физических атак.|n|nЗатрагивает: |cffa9c7deдраконов и драконидов|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0AU",
+      "maxlevel": 1,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 17006,
+            "tip1": 17007,
+            "ubertip1": 17010
+          },
+          "values": {
+            "name1": "|cffe4cfa3Драконья ярость|r",
+            "tip1": "|cffe4cfa3Драконья ярость|r (|cffffffffA|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает способность «Драконья ярость», дающую чёрным драконам шанс нанести критический удар при атаке.|n|nЗатрагивает: |cffa9c7deЧерный дракон|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0A7",
+      "maxlevel": 1,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 17155,
+            "tip1": 16404,
+            "ubertip1": 25614
+          },
+          "values": {
+            "name1": "|cffe4cfa3Эволюция черных драконов (Т2)|r",
+            "tip1": "|cffe4cfa3Эволюция черных драконов (Т2)|r (|cffffffffD|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет обучать чёрных драконов второй ступени (Т2).|n|nОткрывает: |cffa9c7deЧерный дракон|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0A8",
+      "maxlevel": 1,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 17156,
+            "tip1": 16405,
+            "ubertip1": 25615
+          },
+          "values": {
+            "name1": "|cffe4cfa3Эволюция черных драконов (Т3)|r",
+            "tip1": "|cffe4cfa3Эволюция черных драконов (Т3)|r (|cffffffffX|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет обучать древних чёрных драконов третьей ступени (Т3).|n|nОткрывает: |cffa9c7deДревний черный дракон|cffced4da.|r"
+          }
+        }
+      }
+    },
+    {
+      "id": "R0B1",
+      "maxlevel": 1,
+      "levels_data": {
+        "1": {
+          "wts": {
+            "name1": 17105,
+            "tip1": 17106,
+            "ubertip1": 17110
+          },
+          "values": {
+            "name1": "|cffe4cfa3Тренировки драконидов|r",
+            "tip1": "|cffe4cfa3Тренировки драконидов|r (|cffffffffS|r)",
+            "ubertip1": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает драконидов боевым приёмам, открывая способность «Сильный удар» и увеличивая их скорость атаки на |cffffffff+20%|cffced4da.|n|nЗатрагивает: |cffa9c7deДраконид – следопыт|cffced4da.|r"
+          }
+        }
+      }
+    }
+  ]
+}

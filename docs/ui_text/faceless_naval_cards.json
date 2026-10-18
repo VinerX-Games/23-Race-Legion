@@ -1,0 +1,155 @@
+{
+  "scope": "Общая верфь рабочего Безликих и все три обучаемых корабля",
+  "objects_before": {
+    "command": "get-objects-bulk",
+    "count": 4,
+    "map": "F:\\Gemini_23Race\\map.w3x",
+    "missing": [],
+    "objects": [
+      {
+        "fields": {
+          "abillist": "A15N",
+          "hotkey": "TRIGSTR_4587",
+          "name": "TRIGSTR_6991",
+          "researches": "R005,R006,R007,R002,R003",
+          "targs1": "",
+          "tip": "TRIGSTR_6992",
+          "trains": "h0D2,h0CZ,h0D0",
+          "ubertip": "TRIGSTR_6993",
+          "weapson": "0"
+        },
+        "id": "h0D1",
+        "name": "Верфь"
+      },
+      {
+        "fields": {
+          "abillist": "A00I,A00A,A00B,Sch5,Slo3,Sdro",
+          "hotkey": "TRIGSTR_2974",
+          "name": "TRIGSTR_10747",
+          "researches": "",
+          "targs1": "",
+          "tip": "Нанять транспорт",
+          "trains": "",
+          "ubertip": "\"Прочное судно, предназначенное для перевозки войск.\"",
+          "weapson": "0"
+        },
+        "id": "h0D2",
+        "name": "Транспорт"
+      },
+      {
+        "fields": {
+          "abillist": "A009,A002,A00B,A00G,A00A,A1PP",
+          "hotkey": "TRIGSTR_3192",
+          "name": "TRIGSTR_1357",
+          "researches": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "tip": "Нанять фрегат",
+          "trains": "",
+          "ubertip": "TRIGSTR_3881",
+          "weapson": "1"
+        },
+        "id": "h0CZ",
+        "name": "Фрегат"
+      },
+      {
+        "fields": {
+          "abillist": "A009,A003,A00B,A00G,A00A,A001",
+          "hotkey": "TRIGSTR_4011",
+          "name": "TRIGSTR_10899",
+          "researches": "",
+          "targs1": "ground,structure,debris,item,ward",
+          "tip": "Нанять линкор",
+          "trains": "",
+          "ubertip": "TRIGSTR_6923",
+          "weapson": "1"
+        },
+        "id": "h0D0",
+        "name": "Линкор"
+      }
+    ],
+    "ok": true,
+    "schema_version": 1,
+    "tool": "HiveWE_cli",
+    "type": "unit"
+  },
+  "strings": [
+    {
+      "rawcode": "h0D1",
+      "field": "name",
+      "before": "Верфь",
+      "after": "|cffe4cfa3Верфь|r"
+    },
+    {
+      "rawcode": "h0D1",
+      "field": "tip",
+      "before": "Построить верфь",
+      "after": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+    },
+    {
+      "rawcode": "h0D1",
+      "field": "ubertip",
+      "before": "Строит транспорты, фрегаты и линкоры.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Строит корабли и исследует общие улучшения флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбстрел|cffced4da|n- |cffa9c7deДополнительные паруса|cffced4da|n- |cffa9c7deПочинка|cffced4da|n- |cffa9c7deОрудия флота|cffced4da|n- |cffa9c7deУкреплённый корпус|cffced4da.|n|n|cffa9c7deЗона ремонта|cffced4da восстанавливает |cffc8e0872,5|cffced4da здоровья/сек. союзным наземным механическим войскам в радиусе |cffffffff550|cffced4da.|r"
+    },
+    {
+      "rawcode": "h0D2",
+      "field": "name",
+      "before": "Транспорт",
+      "after": "|cffe4cfa3Транспорт|r"
+    },
+    {
+      "rawcode": "h0D2",
+      "field": "tip",
+      "before": "Нанять транспорт",
+      "after": "|cffe4cfa3Транспорт|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "h0D2",
+      "field": "ubertip",
+      "before": "\"Прочное судно, предназначенное для перевозки войск.\"",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Неатакующий корабль для перевозки наземных союзных войск. Грузовой отсек вмещает |cffffffff10|cffced4da мест.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМагическая посадка|cffced4da: перемещает подходящие войска игрока из выбранной области к выделенным транспортам того же типа и отдаёт приказ посадки.|n- |cffa9c7deПосадка на борт|cffced4da: принимает выбранного союзника при наличии места.|n- |cffa9c7deВысадка|cffced4da: высаживает груз в указанном месте.|n- |cffa9c7deТактическое ускорение|cffced4da: временно повышает скорость передвижения ценой увеличения получаемого урона; требует «Дополнительных парусов».|n- |cffa9c7deПочинка|cffced4da: восстанавливает здоровье при поддержании; требует одноимённого исследования.|r"
+    },
+    {
+      "rawcode": "h0CZ",
+      "field": "name",
+      "before": "Фрегат",
+      "after": "|cffe4cfa3Фрегат|r"
+    },
+    {
+      "rawcode": "h0CZ",
+      "field": "tip",
+      "before": "Нанять фрегат",
+      "after": "|cffe4cfa3Фрегат|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "h0CZ",
+      "field": "ubertip",
+      "before": "Корабль, предназначенный для морских битв.",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Боевой корабль для поддержки флота и обстрела противников.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБоковые пушки фрегата|cffced4da: автоматически стреляют по вражеским механическим целям, в том числе на ходу.|n- |cffa9c7deТактическое ускорение|cffced4da: временно повышает скорость передвижения ценой увеличения получаемого урона; требует «Дополнительных парусов».|n- |cffa9c7deМассированный обстрел|cffced4da: поражает противников в выбранной области; требует «Обстрела».|n- |cffa9c7deПочинка|cffced4da: восстанавливает здоровье при поддержании; требует одноимённого исследования.|n- |cffa9c7deПрицельная пальба|cffced4da: наносит урон и оглушает органическую цель.|n- |cffa9c7deНазначение флагмана|cffced4da: усиливает корабль и открывает выбор постоянной ауры.|n|nАтакует наземные и воздушные цели.|r"
+    },
+    {
+      "rawcode": "h0D0",
+      "field": "name",
+      "before": "Линкор",
+      "after": "|cffe4cfa3Линкор|r"
+    },
+    {
+      "rawcode": "h0D0",
+      "field": "tip",
+      "before": "Нанять линкор",
+      "after": "|cffe4cfa3Линкор|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "h0D0",
+      "field": "ubertip",
+      "before": "Мощный корабль, эффективный как в морском бою, так и против зданий. ",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый боевой корабль для обстрела наземных целей и зданий.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБоковые пушки линкора|cffced4da: автоматически стреляют по вражеским механическим целям, в том числе на ходу; требуют «Обстрела».|n- |cffa9c7deТактическое ускорение|cffced4da: временно повышает скорость передвижения ценой увеличения получаемого урона; требует «Дополнительных парусов».|n- |cffa9c7deМассированный обстрел|cffced4da: поражает противников в выбранной области; требует «Обстрела».|n- |cffa9c7deПочинка|cffced4da: восстанавливает здоровье при поддержании; требует одноимённого исследования.|n- |cffa9c7deАбордаж|cffced4da: захват кораблей в текущей версии недоступен.|n- |cffa9c7deНазначение флагмана|cffced4da: усиливает корабль и открывает выбор постоянной ауры.|n|nАтакует наземные цели.|r"
+    }
+  ],
+  "in_game_checked": false,
+  "remaining": [
+    "Check training, build hotkey and research gates in game",
+    "Check tooltip heights, ship skills and target restrictions in SD/HD",
+    "Flagship final numerical bonuses remain unverified; boarding unavailable in current Lua"
+  ]
+}

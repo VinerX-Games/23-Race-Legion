@@ -1,0 +1,153 @@
+{
+  "scope": "Гилнеас (Gilneas / Worgens): категория 3 — Герои (4 героев)",
+  "heroes_count": 4,
+  "variants": [
+    "SD"
+  ],
+  "heroes": [
+    {
+      "id": "H0J2",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 32680,
+          "after": "|cffe4cfa3Верховный охотник|r"
+        },
+        {
+          "field": "propernames",
+          "wts_id": 24537,
+          "after": "|cffe4cfa3Бузан Охотник|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 31874,
+          "after": "|cffe4cfa3Верховный охотник|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 25156,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Могучий вожак стаи и непревзойдённый следопыт. Специализируется на подавлении одиночных целей и сокрушительных ударах.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКопье охотника|cffced4da: оглушает врага и наносит урон.|n- |cffa9c7deСокрушающий удар|cffced4da: наносит урон по земле и замедляет противников.|n- |cffa9c7deСлабое место|cffced4da: пассивно наносит многократный критический урон.|n- |cffa9c7deДух древнего волка|cffced4da: призывает на помощь духов древних волков.|n|nАтакует наземные цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 31873,
+          "after": "|cffe4cfa3Верховный охотник|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 31875,
+          "after": "|cffe4cfa3Верховный охотник|r"
+        }
+      ]
+    },
+    {
+      "id": "H0J6",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 24944,
+          "after": "|cffe4cfa3Лорд друид|r"
+        },
+        {
+          "field": "propernames",
+          "wts_id": 24943,
+          "after": "|cffe4cfa3Друид|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 24946,
+          "after": "|cffe4cfa3Лорд друид|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 25157,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Мудрый повелитель сил природы, подчинивший звериную сущность. Обеспечивает союзников маной и сокрушает врагов молниями.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЦепная молния|cffced4da: поражает молнией несколько вражеских целей.|n- |cffa9c7deБлагословение духов|cffced4da: аура, ускоряющая восстановление маны союзников.|n- |cffa9c7deЩит маны|cffced4da: поглощает входящий урон за счёт маны.|n- |cffa9c7deЗов Духов|cffced4da: пассивно ускоряет регенерацию здоровья и маны героя.|n|nАтакует наземные цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 24945,
+          "after": "|cffe4cfa3Лорд друид|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 24947,
+          "after": "|cffe4cfa3Лорд друид|r"
+        }
+      ]
+    },
+    {
+      "id": "H0J7",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25018,
+          "after": "|cffe4cfa3Генерал Гилнеаса|r"
+        },
+        {
+          "field": "propernames",
+          "wts_id": 25017,
+          "after": "|cffe4cfa3Генерал|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 25021,
+          "after": "|cffe4cfa3Генерал Гилнеаса|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31876,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Храбрый военачальник королевства. Вдохновляет армию аурой урона, сокрушает ряды врагов и принимает несокрушимый облик.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолчьи рефлексы|cffced4da: шанс уклонения и нанесения критического урона.|n- |cffa9c7deВолна силы|cffced4da: выпускает сокрушительную волну энергии.|n- |cffa9c7deАура командира|cffced4da: увеличивает атаку союзных войск вокруг.|n- |cffa9c7deАватара зверя|cffced4da: дарует бонус к броне, здоровью, урону и иммунитет к магии.|n|nАтакует наземные цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 25019,
+          "after": "|cffe4cfa3Генерал Гилнеаса|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 25020,
+          "after": "|cffe4cfa3Генерал Гилнеаса|r"
+        }
+      ]
+    },
+    {
+      "id": "H0J8",
+      "hotkey": "C",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25049,
+          "after": "|cffe4cfa3Полубог|r"
+        },
+        {
+          "field": "propernames",
+          "wts_id": 25048,
+          "after": "|cffe4cfa3Голдринн|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 25052,
+          "after": "|cffe4cfa3Полубог|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31877,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Легендарный полубог-волк древности. Обладает сокрушительными ударами по площади, вампиризмом и боевым ревом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСокрушение|cffced4da: наносит урон по области при атаке.|n- |cffa9c7deПоглощение урона|cffced4da: снижает урон врагов и поглощает входящие удары.|n- |cffa9c7deВампирическая аура|cffced4da: союзники ближнего боя восстанавливают здоровье от нанесённого урона.|n- |cffa9c7deЗов Полубога|cffced4da: издаёт боевой рёв, временно усиливающий урон союзников.|n|nАтакует наземные цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 25050,
+          "after": "|cffe4cfa3Полубог|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 25051,
+          "after": "|cffe4cfa3Полубог|r"
+        }
+      ]
+    }
+  ]
+}

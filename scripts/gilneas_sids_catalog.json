@@ -1,0 +1,5427 @@
+{
+  "38899": {
+    "sid": 38899,
+    "val": "|cfff0c8a0Гилнеас|r",
+    "usages": [
+      {
+        "category": "selection",
+        "id": "A121",
+        "field": "name"
+      },
+      {
+        "category": "ability",
+        "id": "A121",
+        "field": "name"
+      }
+    ]
+  },
+  "4644": {
+    "sid": 4644,
+    "val": "A",
+    "usages": [
+      {
+        "category": "selection",
+        "id": "A121",
+        "field": "hotkey"
+      },
+      {
+        "category": "ability",
+        "id": "A121",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "38900": {
+    "sid": 38900,
+    "val": "|cfff0c8a0Гилнеас|r",
+    "usages": [
+      {
+        "category": "selection",
+        "id": "A121",
+        "field": "tip1"
+      },
+      {
+        "category": "ability",
+        "id": "A121",
+        "field": "tip1"
+      }
+    ]
+  },
+  "26678": {
+    "sid": 26678,
+    "val": "|cffa0beaaСоздатель расы:|r |cffc8dcaaEscanor(Яхве)|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaNiCAmCHiK|r|n|cffa0beaaСложность:|r |cff00ff00●|r●●●●|n|cffa0beaaПериод:|r|cffc8dcaa Cataclysm - Battle for Azeroth|r|n|nГилнеас - был одним из самых могущественных человеческих городов-государств, и из-за этого правитель королевства, Генн Седогрив, не был активным сторонником Альянса. Он полагал, что его собственной армии будет более чем достаточно, чтобы разделаться с любой угрозой. Несмотря на это, Гилнеас вовсе не был нейтрален по отношению к Орде, поэтому и присоединился к Альянсу в конце Второй войны, хотя Седогрив всегда выступал против его существования. Проклятие Воргенов которое настигло весь Гилнеас, источник которого находится в крепости Тёмного Клыка, подвергло всех его жителей необратимой трансформации. Почти всё население превратилось в звероподобных воргенов, сведя на нет все усилия Генна Седогрива по сохранению своего народа в безопасности. \n\n",
+    "usages": [
+      {
+        "category": "selection",
+        "id": "A121",
+        "field": "ubertip1"
+      },
+      {
+        "category": "ability",
+        "id": "A121",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "25159": {
+    "sid": 25159,
+    "val": "|cffe6beaaГилнеас|r",
+    "usages": [
+      {
+        "category": "selection_marker",
+        "id": "R0FX",
+        "field": "tip1"
+      },
+      {
+        "category": "upgrade",
+        "id": "R0FX",
+        "field": "tip1"
+      }
+    ]
+  },
+  "5600": {
+    "sid": 5600,
+    "val": "Организация, состоящая полностью из людей и ставящая своей целью уничтожение всей нежити и ее пособников на территории бывшего Лордерона",
+    "usages": [
+      {
+        "category": "selection_marker",
+        "id": "R0FX",
+        "field": "ubertip1"
+      },
+      {
+        "category": "upgrade",
+        "id": "R0FX",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "8429": {
+    "sid": 8429,
+    "val": "|cffe6beaaГилнеас|r",
+    "usages": [
+      {
+        "category": "selection_marker",
+        "id": "R0FX",
+        "field": "name1"
+      },
+      {
+        "category": "upgrade",
+        "id": "R0FX",
+        "field": "name1"
+      }
+    ]
+  },
+  "22563": {
+    "sid": 22563,
+    "val": "|cffe6beaaРатуша|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IJ",
+        "field": "name"
+      }
+    ]
+  },
+  "22564": {
+    "sid": 22564,
+    "val": "Построить |cff8cff96Ратушу|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IJ",
+        "field": "tip"
+      }
+    ]
+  },
+  "10184": {
+    "sid": 10184,
+    "val": "|cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r|n|nБазовое здание. Обучает работников и хранит добытые ресурсы. Можно улучшить до форта, а затем до замка, чтобы получить доступ к новым зданиям и типам войск.",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IJ",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "4782": {
+    "sid": 4782,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IJ",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22567": {
+    "sid": 22567,
+    "val": "|cffe6beaaФорт|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IK",
+        "field": "name"
+      }
+    ]
+  },
+  "22568": {
+    "sid": 22568,
+    "val": "Улучшить до |cffe6beaaФорт|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IK",
+        "field": "tip"
+      }
+    ]
+  },
+  "27622": {
+    "sid": 27622,
+    "val": "|cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск.",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IK",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "11419": {
+    "sid": 11419,
+    "val": "Z",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IK",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22573": {
+    "sid": 22573,
+    "val": "|cffe6beaaЗамок|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IL",
+        "field": "name"
+      }
+    ]
+  },
+  "22574": {
+    "sid": 22574,
+    "val": "Улучшить до |cffe6beaaЗамка|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IL",
+        "field": "tip"
+      }
+    ]
+  },
+  "27623": {
+    "sid": 27623,
+    "val": "|cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск.",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IL",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "11469": {
+    "sid": 11469,
+    "val": "Z",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IL",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22580": {
+    "sid": 22580,
+    "val": "|cffe6beaaФерма|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IM",
+        "field": "name"
+      }
+    ]
+  },
+  "22581": {
+    "sid": 22581,
+    "val": "Построить |cffe6beaaФерму|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IM",
+        "field": "tip"
+      }
+    ]
+  },
+  "31862": {
+    "sid": 31862,
+    "val": "|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальное количество инкома.\n\n|cffffff00Приносит 30 инкома|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IM",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "2892": {
+    "sid": 2892,
+    "val": "A",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IM",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22583": {
+    "sid": 22583,
+    "val": "|cffe6beaaАлтарь |r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IN",
+        "field": "name"
+      }
+    ]
+  },
+  "22585": {
+    "sid": 22585,
+    "val": "Построить |cffe6beaaАлтарь |r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IN",
+        "field": "tip"
+      }
+    ]
+  },
+  "27624": {
+    "sid": 27624,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nСооружение позволяющее призыватьновых и воскрешает павших героев.",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IN",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "3077": {
+    "sid": 3077,
+    "val": "S",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IN",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22587": {
+    "sid": 22587,
+    "val": "|cffe6beaaКазармы|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IO",
+        "field": "name"
+      }
+    ]
+  },
+  "22588": {
+    "sid": 22588,
+    "val": "Построить |cffe6beaaКазармы|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IO",
+        "field": "tip"
+      }
+    ]
+  },
+  "22454": {
+    "sid": 22454,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nЗдание для подготовки базовых войск. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск.",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IO",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "5058": {
+    "sid": 5058,
+    "val": "W",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IO",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22609": {
+    "sid": 22609,
+    "val": "|cffdcaa92Лесопилка|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IP",
+        "field": "name"
+      }
+    ]
+  },
+  "22610": {
+    "sid": 22610,
+    "val": "Построить |cffdcaa92Лесопилка|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IP",
+        "field": "tip"
+      }
+    ]
+  },
+  "28244": {
+    "sid": 28244,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nХранит добытую древесину. |nДает доступ к новым технологиям добычи древесины и строительства.",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IP",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "6127": {
+    "sid": 6127,
+    "val": "E",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IP",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22613": {
+    "sid": 22613,
+    "val": "|cffe6beaaКузница|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IQ",
+        "field": "name"
+      }
+    ]
+  },
+  "22615": {
+    "sid": 22615,
+    "val": "Построить |cffe6beaaКузница|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IQ",
+        "field": "tip"
+      }
+    ]
+  },
+  "28243": {
+    "sid": 28243,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa70 сек.|r|n|nПозволяет улучшать доспехи, оружие и порох.",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IQ",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "5145": {
+    "sid": 5145,
+    "val": "R",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IQ",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22619": {
+    "sid": 22619,
+    "val": "|cffe6beaaВоенная академия|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IR",
+        "field": "name"
+      }
+    ]
+  },
+  "22639": {
+    "sid": 22639,
+    "val": "Построить |cffe6beaaВоенная академия|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IR",
+        "field": "tip"
+      }
+    ]
+  },
+  "22433": {
+    "sid": 22433,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nМастера военного и магического дела |cffe6beaaГилнеаса|r, проходят свое обучение в Академии.",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IR",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "4151": {
+    "sid": 4151,
+    "val": "D",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IR",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22668": {
+    "sid": 22668,
+    "val": "|cffe6beaaХрам друидов|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IS",
+        "field": "name"
+      }
+    ]
+  },
+  "22669": {
+    "sid": 22669,
+    "val": "Построить |cffe6beaaХрам друидов|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IS",
+        "field": "tip"
+      }
+    ]
+  },
+  "22435": {
+    "sid": 22435,
+    "val": "|cff7dc87dВремя строительства:|r |cffaaf0aa60 сек.|r|n|nМесто концентрации и отдыха друидов, позволяет улучшать их способности.",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IS",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "11512": {
+    "sid": 11512,
+    "val": "F",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0IS",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "25420": {
+    "sid": 25420,
+    "val": "|cffe6beaaСторожевая Башня|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0JT",
+        "field": "name"
+      }
+    ]
+  },
+  "25674": {
+    "sid": 25674,
+    "val": "Построить |cffe6beaaСторожевая Башня|r",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0JT",
+        "field": "tip"
+      }
+    ]
+  },
+  "20491": {
+    "sid": 20491,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nБазовое оборонительное сооружение. ",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0JT",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "11499": {
+    "sid": 11499,
+    "val": "Z",
+    "usages": [
+      {
+        "category": "building",
+        "id": "h0JT",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22673": {
+    "sid": 22673,
+    "val": "|cffe6beaaПостройщик|r",
+    "usages": [
+      {
+        "category": "worker",
+        "id": "h0IT",
+        "field": "name"
+      }
+    ]
+  },
+  "22680": {
+    "sid": 22680,
+    "val": "Обучить |cffe6beaaПостройщик|r",
+    "usages": [
+      {
+        "category": "worker",
+        "id": "h0IT",
+        "field": "tip"
+      }
+    ]
+  },
+  "22674": {
+    "sid": 22674,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa15 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nБазовый рабочий. Добывает  древесину, а также строит и ремонтирует здания.",
+    "usages": [
+      {
+        "category": "worker",
+        "id": "h0IT",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "4783": {
+    "sid": 4783,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "worker",
+        "id": "h0IT",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22832": {
+    "sid": 22832,
+    "val": "|cffe6beaaПехотинец|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IU",
+        "field": "name"
+      }
+    ]
+  },
+  "22436": {
+    "sid": 22436,
+    "val": "Обучить |cffe6beaaПехотинца|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IU",
+        "field": "tip"
+      }
+    ]
+  },
+  "27684": {
+    "sid": 27684,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa23 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\nУниверсальный пехотинец. Может изучить «|cffe6beaaЗащиту|r». ",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IU",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "4915": {
+    "sid": 4915,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IU",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22836": {
+    "sid": 22836,
+    "val": "|cffe6beaaСтрелок|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IV",
+        "field": "name"
+      }
+    ]
+  },
+  "9361": {
+    "sid": 9361,
+    "val": "Обучить |cffe6beaaСтрелка|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IV",
+        "field": "tip"
+      }
+    ]
+  },
+  "27690": {
+    "sid": 27690,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa18 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n\nМеткий стрелок, эффективный на дальних дистанциях. Можно снарядить длинноствольным мушкетом. |n|n|cffffcc00Атакует наземные и воздушные цели.|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IV",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "5187": {
+    "sid": 5187,
+    "val": "W",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IV",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22478": {
+    "sid": 22478,
+    "val": "|cffe6beaaРыцарь|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IW",
+        "field": "name"
+      }
+    ]
+  },
+  "22600": {
+    "sid": 22600,
+    "val": "Обучить |cffe6beaaРыцарь|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IW",
+        "field": "tip"
+      }
+    ]
+  },
+  "31278": {
+    "sid": 31278,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa39 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\nНатренированный как физически так и ментально солдат, идеально выполняющий свою роль.",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IW",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "5222": {
+    "sid": 5222,
+    "val": "W",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IW",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22857": {
+    "sid": 22857,
+    "val": "|cffe6beaaВорген друид|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IX",
+        "field": "name"
+      }
+    ]
+  },
+  "22858": {
+    "sid": 22858,
+    "val": "Обучить |cffe6beaaВорген друид|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IX",
+        "field": "tip"
+      }
+    ]
+  },
+  "31470": {
+    "sid": 31470,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa58 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r|n\nВорген полностью гармонирующий со своей звериной формой, что позволяет ему использовать сильные стороны двух личностей.",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IX",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "4917": {
+    "sid": 4917,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IX",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22865": {
+    "sid": 22865,
+    "val": "|cffe6beaaПехотинец|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IY",
+        "field": "name"
+      }
+    ]
+  },
+  "22833": {
+    "sid": 22833,
+    "val": "Обучить |cffe6beaaПехотинеца|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IY",
+        "field": "tip"
+      }
+    ]
+  },
+  "31608": {
+    "sid": 31608,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa20 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\nУниверсальный пехотинец. Может изучить «|cff64ff00Защиту|r». ",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IY",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "5003": {
+    "sid": 5003,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IY",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22853": {
+    "sid": 22853,
+    "val": "|cffe6beaaРыцарь|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IZ",
+        "field": "name"
+      }
+    ]
+  },
+  "22854": {
+    "sid": 22854,
+    "val": "Обучить |cffe6beaaРыцарь|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IZ",
+        "field": "tip"
+      }
+    ]
+  },
+  "31610": {
+    "sid": 31610,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\nМогучий верховой воин. Может изучить «Дрессировку животных». |n|n|cffffcc00Атакует наземные цели.|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IZ",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "5223": {
+    "sid": 5223,
+    "val": "W",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0IZ",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22495": {
+    "sid": 22495,
+    "val": "|cffe6beaaВорген маг|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0J0",
+        "field": "name"
+      }
+    ]
+  },
+  "22497": {
+    "sid": 22497,
+    "val": "Обучить |cffe6beaaВоргена мага|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0J0",
+        "field": "tip"
+      }
+    ]
+  },
+  "31674": {
+    "sid": 31674,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa33 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|nМогучий маг покоривший тайны сотворения заклинаний.",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0J0",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "5020": {
+    "sid": 5020,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0J0",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22548": {
+    "sid": 22548,
+    "val": "|cffe6beaaПолу дикий ворген|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0J1",
+        "field": "name"
+      }
+    ]
+  },
+  "22551": {
+    "sid": 22551,
+    "val": "Обучить |cffe6beaaПолу дикий ворген|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0J1",
+        "field": "tip"
+      }
+    ]
+  },
+  "31726": {
+    "sid": 31726,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa49 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n\nВорген чья звериная личность доминирует в их симбиозе.",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0J1",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "5313": {
+    "sid": 5313,
+    "val": "W",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0J1",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "32792": {
+    "sid": 32792,
+    "val": "|cffe6beaaТопорометатель|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0NA",
+        "field": "name"
+      }
+    ]
+  },
+  "32793": {
+    "sid": 32793,
+    "val": "Обучить |cffe6beaaСтрелка|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0NA",
+        "field": "tip"
+      }
+    ]
+  },
+  "31729": {
+    "sid": 31729,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa42 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n\nМеткий стрелок, эффективный на дальних дистанциях. Можно снарядить длинноствольным мушкетом. |n|n|cffffcc00Атакует наземные и воздушные цели.|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0NA",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "8389": {
+    "sid": 8389,
+    "val": "E",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "h0NA",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22860": {
+    "sid": 22860,
+    "val": "|cffe6beaaКатапульта|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "o02T",
+        "field": "name"
+      }
+    ]
+  },
+  "22861": {
+    "sid": 22861,
+    "val": "Произвести |cffe6beaaКатапульту|r",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "o02T",
+        "field": "tip"
+      }
+    ]
+  },
+  "31609": {
+    "sid": 31609,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный|r|nКлассическое осадное орудие, простое но эффективное!\n",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "o02T",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "6128": {
+    "sid": 6128,
+    "val": "E",
+    "usages": [
+      {
+        "category": "unit",
+        "id": "o02T",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "32680": {
+    "sid": 32680,
+    "val": "|cffe6beaaВерховный охотник|r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J2",
+        "field": "name"
+      }
+    ]
+  },
+  "31874": {
+    "sid": 31874,
+    "val": "Призвать |cffe6beaaВерховного охотника|r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J2",
+        "field": "tip"
+      }
+    ]
+  },
+  "25156": {
+    "sid": 25156,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|nМастер охоты, большенство других воргенов охотников предпочтут пойти на охоту под его непосредственным руководством.",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J2",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "24537": {
+    "sid": 24537,
+    "val": "|cffe6beaaБузан Охотник|r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J2",
+        "field": "propernames"
+      }
+    ]
+  },
+  "31873": {
+    "sid": 31873,
+    "val": "Воскресить |cffe6beaaВерховного охотника|r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J2",
+        "field": "awakentip"
+      }
+    ]
+  },
+  "31875": {
+    "sid": 31875,
+    "val": "Воскресить |cffe6beaaВерховного охотника|r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J2",
+        "field": "revivetip"
+      }
+    ]
+  },
+  "6143": {
+    "sid": 6143,
+    "val": "E",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J2",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "24944": {
+    "sid": 24944,
+    "val": "|cffe6beaaЛорд друид|r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J6",
+        "field": "name"
+      }
+    ]
+  },
+  "24946": {
+    "sid": 24946,
+    "val": "Призвать |cffe6beaaЛорд друид|r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J6",
+        "field": "tip"
+      }
+    ]
+  },
+  "25157": {
+    "sid": 25157,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|nМогучий друид полностью подчинивший своей воле звериную сущность, гармонируя и используя сильнейшие стороны обоих.",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J6",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "24943": {
+    "sid": 24943,
+    "val": "|cffe6beaaДруид|r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J6",
+        "field": "propernames"
+      }
+    ]
+  },
+  "24945": {
+    "sid": 24945,
+    "val": "Воскресить |cffe6beaaЛорд друид|r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J6",
+        "field": "awakentip"
+      }
+    ]
+  },
+  "24947": {
+    "sid": 24947,
+    "val": "Призвать |cffe6beaaЛорд друид|r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J6",
+        "field": "revivetip"
+      }
+    ]
+  },
+  "5838": {
+    "sid": 5838,
+    "val": "W",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J6",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "25018": {
+    "sid": 25018,
+    "val": "|cffe6beaaГенерал Гилнеаса|r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J7",
+        "field": "name"
+      }
+    ]
+  },
+  "25021": {
+    "sid": 25021,
+    "val": "Призвать |cffe6beaaГенерал Гилнеаса|r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J7",
+        "field": "tip"
+      }
+    ]
+  },
+  "31876": {
+    "sid": 31876,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n\nВоеначальник гилнеаса, храбрый солдат ближнего боя, способен победить превосходящуюю по количеству армию.",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J7",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "25017": {
+    "sid": 25017,
+    "val": "|cffe6beaaГенерал |r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J7",
+        "field": "propernames"
+      }
+    ]
+  },
+  "25019": {
+    "sid": 25019,
+    "val": "Воскресить |cffe6beaaГенерал Гилнеаса|r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J7",
+        "field": "awakentip"
+      }
+    ]
+  },
+  "25020": {
+    "sid": 25020,
+    "val": "Воскресить |cffe6beaaГенерал Гилнеаса|r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J7",
+        "field": "revivetip"
+      }
+    ]
+  },
+  "5055": {
+    "sid": 5055,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J7",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "25049": {
+    "sid": 25049,
+    "val": "|cffe6beaaПолубог|r ",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J8",
+        "field": "name"
+      }
+    ]
+  },
+  "25052": {
+    "sid": 25052,
+    "val": "Призвать |cffe6beaaПолубог|r ",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J8",
+        "field": "tip"
+      }
+    ]
+  },
+  "31877": {
+    "sid": 31877,
+    "val": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaЛегендарный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n\nЕму было уже 10.000 лет, когда Пылающий Легион пришел в мир Азерот. Прежде чем пасть, полубог уничтожил сотни демонов. Считается, что Голдринн помог жителям Элдре'Таласа при обороне их города от войск Легиона, но после этого он исчез и никто его с тех пор не видел.",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J8",
+        "field": "ubertip"
+      }
+    ]
+  },
+  "25048": {
+    "sid": 25048,
+    "val": "|cffe6beaaГолдринн|r",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J8",
+        "field": "propernames"
+      }
+    ]
+  },
+  "25050": {
+    "sid": 25050,
+    "val": "Воскресить |cffe6beaaПолубог|r ",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J8",
+        "field": "awakentip"
+      }
+    ]
+  },
+  "25051": {
+    "sid": 25051,
+    "val": "Воскресить |cffe6beaaПолубог|r ",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J8",
+        "field": "revivetip"
+      }
+    ]
+  },
+  "7032": {
+    "sid": 7032,
+    "val": "C",
+    "usages": [
+      {
+        "category": "hero",
+        "id": "H0J8",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "21127": {
+    "sid": 21127,
+    "val": "Исследовать улучшенные инструменты",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EY",
+        "field": "tip1"
+      }
+    ]
+  },
+  "21188": {
+    "sid": 21188,
+    "val": "Исследовать улучшенные инструменты",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EY",
+        "field": "tip2"
+      }
+    ]
+  },
+  "21324": {
+    "sid": 21324,
+    "val": "Исследовать улучшенные инструменты",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EY",
+        "field": "tip3"
+      }
+    ]
+  },
+  "21343": {
+    "sid": 21343,
+    "val": "Исследовать улучшенные инструменты",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EY",
+        "field": "tip4"
+      }
+    ]
+  },
+  "24798": {
+    "sid": 24798,
+    "val": "Увеличивают объем переносимой работниками древесины на 8.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EY",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "24793": {
+    "sid": 24793,
+    "val": "Увеличивают объем переносимой работниками древесины на 8.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EY",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "24794": {
+    "sid": 24794,
+    "val": "Увеличивают объем переносимой работниками древесины на 8.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EY",
+        "field": "ubertip3"
+      }
+    ]
+  },
+  "24795": {
+    "sid": 24795,
+    "val": "Увеличивают объем переносимой работниками древесины на 8.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EY",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "19103": {
+    "sid": 19103,
+    "val": "Улучшенные инструменты",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EY",
+        "field": "name1"
+      }
+    ]
+  },
+  "19367": {
+    "sid": 19367,
+    "val": "Улучшенные инструменты",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EY",
+        "field": "name2"
+      }
+    ]
+  },
+  "19565": {
+    "sid": 19565,
+    "val": "Улучшенные инструменты",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EY",
+        "field": "name3"
+      }
+    ]
+  },
+  "21119": {
+    "sid": 21119,
+    "val": "Улучшенные инструменты",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EY",
+        "field": "name4"
+      }
+    ]
+  },
+  "24444": {
+    "sid": 24444,
+    "val": "Исследовать |cffe6beaaЖелезные мечи|r |cffffff00[1]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24443": {
+    "sid": 24443,
+    "val": "Исследовать |cffe6beaaЖелезные мечи|r |cffffff00[2]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "tip2"
+      }
+    ]
+  },
+  "24442": {
+    "sid": 24442,
+    "val": "Исследовать |cffe6beaaСтальные мечи|r |cffffff00[3]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "tip3"
+      }
+    ]
+  },
+  "24441": {
+    "sid": 24441,
+    "val": "Исследовать |cffe6beaaСтальные мечи|r |cffffff00[4]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "tip4"
+      }
+    ]
+  },
+  "24440": {
+    "sid": 24440,
+    "val": "Исследовать |cffe6beaaМифриловые мечи|r |cffffff00[5]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "tip5"
+      }
+    ]
+  },
+  "24438": {
+    "sid": 24438,
+    "val": "Исследовать |cffe6beaaМифриловые мечи|r |cffffff00[6]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "tip6"
+      }
+    ]
+  },
+  "24445": {
+    "sid": 24445,
+    "val": "Увеличивают урон от атак воинам |cffe6beaaГилнеаса|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "24446": {
+    "sid": 24446,
+    "val": "Увеличивают урон от атак воинам |cffe6beaaГилнеаса|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "24447": {
+    "sid": 24447,
+    "val": "Увеличивают урон от атак воинам |cffe6beaaГилнеаса|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "ubertip3"
+      }
+    ]
+  },
+  "24449": {
+    "sid": 24449,
+    "val": "Увеличивают урон от атак воинам |cffe6beaaГилнеаса|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "24448": {
+    "sid": 24448,
+    "val": "Увеличивают урон от атак воинам |cffe6beaaГилнеаса|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "ubertip5"
+      }
+    ]
+  },
+  "24450": {
+    "sid": 24450,
+    "val": "Увеличивают урон от атак воинам |cffe6beaaГилнеаса|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "ubertip6"
+      }
+    ]
+  },
+  "24439": {
+    "sid": 24439,
+    "val": "|cffe6beaaЖелезные мечи|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "name1"
+      }
+    ]
+  },
+  "24437": {
+    "sid": 24437,
+    "val": "|cffe6beaaЖелезные мечи|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "name2"
+      }
+    ]
+  },
+  "24436": {
+    "sid": 24436,
+    "val": "|cffe6beaaСтальные мечи|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "name3"
+      }
+    ]
+  },
+  "24435": {
+    "sid": 24435,
+    "val": "|cffe6beaaСтальные мечи|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "name4"
+      }
+    ]
+  },
+  "24434": {
+    "sid": 24434,
+    "val": "|cffe6beaaМифриловые мечи|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "name5"
+      }
+    ]
+  },
+  "24433": {
+    "sid": 24433,
+    "val": "|cffe6beaaМифриловые мечи|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EM",
+        "field": "name6"
+      }
+    ]
+  },
+  "24460": {
+    "sid": 24460,
+    "val": "Исследовать |cffe6beaaЖелезная броня|r |cffffff00[1]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24461": {
+    "sid": 24461,
+    "val": "Исследовать |cffe6beaaЖелезная броня|r |cffffff00[2]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "tip2"
+      }
+    ]
+  },
+  "24462": {
+    "sid": 24462,
+    "val": "Исследовать |cffe6beaaСтальная броня|r |cffffff00[3]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "tip3"
+      }
+    ]
+  },
+  "24465": {
+    "sid": 24465,
+    "val": "Исследовать |cffe6beaaСтальная броня|r |cffffff00[4]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "tip4"
+      }
+    ]
+  },
+  "24464": {
+    "sid": 24464,
+    "val": "Исследовать |cffe6beaaМифриловая броня|r |cffffff00[5]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "tip5"
+      }
+    ]
+  },
+  "24463": {
+    "sid": 24463,
+    "val": "Исследовать |cffe6beaaМифриловая броня|r |cffffff00[6]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "tip6"
+      }
+    ]
+  },
+  "24466": {
+    "sid": 24466,
+    "val": "Усиливает броню воинам |cffe6beaaГилнеаса|r.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "24467": {
+    "sid": 24467,
+    "val": "Усиливает броню воинам |cffe6beaaГилнеаса|r.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "24468": {
+    "sid": 24468,
+    "val": "Усиливает броню воинам |cffe6beaaГилнеаса|r.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "ubertip3"
+      }
+    ]
+  },
+  "24473": {
+    "sid": 24473,
+    "val": "Усиливает броню воинам |cffe6beaaГилнеаса|r.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "24474": {
+    "sid": 24474,
+    "val": "Усиливает броню воинам |cffe6beaaГилнеаса|r.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "ubertip5"
+      }
+    ]
+  },
+  "24475": {
+    "sid": 24475,
+    "val": "Усиливает броню воинам |cffe6beaaГилнеаса|r.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "ubertip6"
+      }
+    ]
+  },
+  "24454": {
+    "sid": 24454,
+    "val": "|cffe6beaaЖелезная броня|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "name1"
+      }
+    ]
+  },
+  "24456": {
+    "sid": 24456,
+    "val": "|cffe6beaaЖелезная броня|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "name2"
+      }
+    ]
+  },
+  "24455": {
+    "sid": 24455,
+    "val": "|cffe6beaaСтальная броня|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "name3"
+      }
+    ]
+  },
+  "24459": {
+    "sid": 24459,
+    "val": "|cffe6beaaСтальная броня|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "name4"
+      }
+    ]
+  },
+  "24458": {
+    "sid": 24458,
+    "val": "|cffe6beaaМифриловая броня|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "name5"
+      }
+    ]
+  },
+  "24457": {
+    "sid": 24457,
+    "val": "|cffe6beaaМифриловая броня|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EN",
+        "field": "name6"
+      }
+    ]
+  },
+  "24479": {
+    "sid": 24479,
+    "val": "Исследовать |cffe6beaaЧерный порох|r |cffffff00[1]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24480": {
+    "sid": 24480,
+    "val": "Исследовать |cffe6beaaЧерный порох|r |cffffff00[2]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "tip2"
+      }
+    ]
+  },
+  "24481": {
+    "sid": 24481,
+    "val": "Исследовать |cffe6beaaБездымный порох|r |cffffff00[3]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "tip3"
+      }
+    ]
+  },
+  "24497": {
+    "sid": 24497,
+    "val": "Исследовать |cffe6beaaБездымный порох|r |cffffff00[4]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "tip4"
+      }
+    ]
+  },
+  "24496": {
+    "sid": 24496,
+    "val": "Исследовать |cffe6beaaОбогащенный порох|r |cffffff00[5]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "tip5"
+      }
+    ]
+  },
+  "24495": {
+    "sid": 24495,
+    "val": "Исследовать |cffe6beaaОбогащенный порох|r |cffffff00[6]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "tip6"
+      }
+    ]
+  },
+  "24482": {
+    "sid": 24482,
+    "val": "Увеличивает урон от дистанционных атак стрелков и артилерии.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "24483": {
+    "sid": 24483,
+    "val": "Увеличивает урон от дистанционных атак стрелков и артилерии.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "24484": {
+    "sid": 24484,
+    "val": "Увеличивает урон от дистанционных атак стрелков и артилерии.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "ubertip3"
+      }
+    ]
+  },
+  "24498": {
+    "sid": 24498,
+    "val": "Увеличивает урон от дистанционных атак стрелков и артилерии.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "24499": {
+    "sid": 24499,
+    "val": "Увеличивает урон от дистанционных атак стрелков и артилерии.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "ubertip5"
+      }
+    ]
+  },
+  "24500": {
+    "sid": 24500,
+    "val": "Увеличивает урон от дистанционных атак стрелков и артилерии.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "ubertip6"
+      }
+    ]
+  },
+  "24476": {
+    "sid": 24476,
+    "val": "|cffe6beaaЧерный порох|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "name1"
+      }
+    ]
+  },
+  "24477": {
+    "sid": 24477,
+    "val": "|cffe6beaaЧерный порох|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "name2"
+      }
+    ]
+  },
+  "24478": {
+    "sid": 24478,
+    "val": "|cffe6beaaБездымный порох|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "name3"
+      }
+    ]
+  },
+  "24494": {
+    "sid": 24494,
+    "val": "|cffe6beaaБездымный порох|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "name4"
+      }
+    ]
+  },
+  "24493": {
+    "sid": 24493,
+    "val": "|cffe6beaaОбогащенный порох|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "name5"
+      }
+    ]
+  },
+  "24492": {
+    "sid": 24492,
+    "val": "|cffe6beaaОбогащенный порох|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EO",
+        "field": "name6"
+      }
+    ]
+  },
+  "24503": {
+    "sid": 24503,
+    "val": "Исследовать |cffe6beaaНакидки из клепаной кожи|r |cffffff00[1]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24504": {
+    "sid": 24504,
+    "val": "Исследовать |cffe6beaaНакидки из клепаной кожи|r |cffffff00[2]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "tip2"
+      }
+    ]
+  },
+  "24505": {
+    "sid": 24505,
+    "val": "Исследовать |cffe6beaaНакидки из армированной кожи|r |cffffff00[3]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "tip3"
+      }
+    ]
+  },
+  "24508": {
+    "sid": 24508,
+    "val": "Исследовать |cffe6beaaНакидки из армированной кожи|r |cffffff00[4]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "tip4"
+      }
+    ]
+  },
+  "24507": {
+    "sid": 24507,
+    "val": "Исследовать |cffe6beaaНакидки из драконьей кожи|r |cffffff00[5]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "tip5"
+      }
+    ]
+  },
+  "24506": {
+    "sid": 24506,
+    "val": "Исследовать |cffe6beaaНакидки из драконьей кожи|r |cffffff00[6]|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "tip6"
+      }
+    ]
+  },
+  "24519": {
+    "sid": 24519,
+    "val": "Усиливают броню стрелков и магов.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "24520": {
+    "sid": 24520,
+    "val": "Усиливают броню стрелков и магов.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "24521": {
+    "sid": 24521,
+    "val": "Усиливают броню стрелков и магов.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "ubertip3"
+      }
+    ]
+  },
+  "24512": {
+    "sid": 24512,
+    "val": "Усиливают броню стрелков и магов.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "24513": {
+    "sid": 24513,
+    "val": "Усиливают броню стрелков и магов.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "ubertip5"
+      }
+    ]
+  },
+  "24514": {
+    "sid": 24514,
+    "val": "Усиливают броню стрелков и магов.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "ubertip6"
+      }
+    ]
+  },
+  "24522": {
+    "sid": 24522,
+    "val": "|cffe6beaaНакидки из клепаной кожи|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "name1"
+      }
+    ]
+  },
+  "24501": {
+    "sid": 24501,
+    "val": "|cffe6beaaНакидки из клепаной кожи|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "name2"
+      }
+    ]
+  },
+  "24502": {
+    "sid": 24502,
+    "val": "|cffe6beaaНакидки из армированной кожи|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "name3"
+      }
+    ]
+  },
+  "24511": {
+    "sid": 24511,
+    "val": "|cffe6beaaНакидки из армированной кожи|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "name4"
+      }
+    ]
+  },
+  "24510": {
+    "sid": 24510,
+    "val": "|cffe6beaaНакидки из драконьей кожи|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "name5"
+      }
+    ]
+  },
+  "24509": {
+    "sid": 24509,
+    "val": "|cffe6beaaНакидки из драконьей кожи|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EP",
+        "field": "name6"
+      }
+    ]
+  },
+  "24530": {
+    "sid": 24530,
+    "val": "Исследовать |cffe6beaaНутро зверя|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EQ",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24531": {
+    "sid": 24531,
+    "val": "Исследовать |cffe6beaaНутро зверя|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EQ",
+        "field": "tip2"
+      }
+    ]
+  },
+  "24532": {
+    "sid": 24532,
+    "val": "Исследовать |cffe6beaaНутро зверя|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EQ",
+        "field": "tip3"
+      }
+    ]
+  },
+  "24818": {
+    "sid": 24818,
+    "val": "Позволяет воргенам в звериной форме при атаке разрывать ткани врагов, что приводит к |cffe6beaaкровотичению|r. Увеличивает скорость боя на |cffe6beaa7%|r.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EQ",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "24819": {
+    "sid": 24819,
+    "val": "Позволяет воргенам в звериной форме при атаке разрывать среднюю броню и ткани врагов, что приводит к |cffe6beaaкровотичению|r и игнорирование |cffe6beaa15%|r |cffe6beaaСредней брони|r. Увеличивает скорость боя на |cffe6beaa7%|r.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EQ",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "24820": {
+    "sid": 24820,
+    "val": "Позволяет воргенам в звериной форме при атаке разрывать броню и ткани врагов, что приводит к |cffe6beaaкровотичению|r и игнорированию |cffe6beaaТяжелой|r и |cffe6beaaЛегкой брони|r на |cffe6beaa15%|r. Увеличивает скорость боя на |cffe6beaa7%|r.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EQ",
+        "field": "ubertip3"
+      }
+    ]
+  },
+  "24815": {
+    "sid": 24815,
+    "val": "|cffe6beaaНутро зверя|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EQ",
+        "field": "name1"
+      }
+    ]
+  },
+  "24816": {
+    "sid": 24816,
+    "val": "|cffe6beaaНутро зверя|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EQ",
+        "field": "name2"
+      }
+    ]
+  },
+  "24817": {
+    "sid": 24817,
+    "val": "|cffe6beaaНутро зверя|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EQ",
+        "field": "name3"
+      }
+    ]
+  },
+  "32817": {
+    "sid": 32817,
+    "val": "Исследовать Тренировку топорометателей",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0IP",
+        "field": "tip1"
+      }
+    ]
+  },
+  "32818": {
+    "sid": 32818,
+    "val": "Открывает способности у Топорометателя",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0IP",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "32816": {
+    "sid": 32816,
+    "val": "|cffe6beaaТренировки Топорометателей",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0IP",
+        "field": "name1"
+      }
+    ]
+  },
+  "24939": {
+    "sid": 24939,
+    "val": "Исследовать |cffe6beaaВолчья кровь|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F6",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24940": {
+    "sid": 24940,
+    "val": "|cffe6beaaВолчья кровь|r увеличивает рефлексы и скорость мышления всех воргенов, что позволяет воргенам на |cffe6beaa10%|r быстрее принимать решения и атаковать врагов.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F6",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "24938": {
+    "sid": 24938,
+    "val": "|cffe6beaaВолчья кровь|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F6",
+        "field": "name1"
+      }
+    ]
+  },
+  "24931": {
+    "sid": 24931,
+    "val": "Исследовать |cffe6beaaТренировки|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F5",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24932": {
+    "sid": 24932,
+    "val": "Увеличивает запасу здоровья и регенерации рыцарей .\n|cffe6beaa+150|r здоровья.\n|cffe6beaa+20%|r к регенерации.\n",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F5",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "24930": {
+    "sid": 24930,
+    "val": "|cffe6beaaТренировки|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F5",
+        "field": "name1"
+      }
+    ]
+  },
+  "24840": {
+    "sid": 24840,
+    "val": "|cffe6beaaПознания магии|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EZ",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24841": {
+    "sid": 24841,
+    "val": "|cffe6beaaПознания магии|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EZ",
+        "field": "tip2"
+      }
+    ]
+  },
+  "24867": {
+    "sid": 24867,
+    "val": "Увеличивает запас здоровья и маны |cffe6beaaВоргенам магам|r, ускоряет регенерацию их маны, а также обучает их новым способностям.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EZ",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "24868": {
+    "sid": 24868,
+    "val": "Увеличивает запас здоровья и маны |cffe6beaaВоргенам магам|r, ускоряет регенерацию их маны, а также обучает их новым способностям.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EZ",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "24838": {
+    "sid": 24838,
+    "val": "|cffe6beaaПознания магии|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EZ",
+        "field": "name1"
+      }
+    ]
+  },
+  "24839": {
+    "sid": 24839,
+    "val": "|cffe6beaaПознания магии|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0EZ",
+        "field": "name2"
+      }
+    ]
+  },
+  "28001": {
+    "sid": 28001,
+    "val": "Исследовать |cffe6beaaЗвериные рефлексы|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F1",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24857": {
+    "sid": 24857,
+    "val": "Позволяет |cffe6beaaПолу дикому воргену|r уклонятся от атак, и наносить|cffe6beaa критический урон|r сразу после уклонения.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F1",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "27941": {
+    "sid": 27941,
+    "val": "|cffe6beaaЗвериные рефлексы|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F1",
+        "field": "name1"
+      }
+    ]
+  },
+  "24852": {
+    "sid": 24852,
+    "val": "Исследовать |cffe6beaaВолчьи конечности|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F0",
+        "field": "tip1"
+      }
+    ]
+  },
+  "25986": {
+    "sid": 25986,
+    "val": "Повышает скорость передвижения всех воргенов.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F0",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "24851": {
+    "sid": 24851,
+    "val": "|cffe6beaaВолчьи конечности|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F0",
+        "field": "name1"
+      }
+    ]
+  },
+  "24860": {
+    "sid": 24860,
+    "val": "|cffe6beaaСлияние с природой|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F2",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24861": {
+    "sid": 24861,
+    "val": "|cffe6beaaСлияние с природой|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F2",
+        "field": "tip2"
+      }
+    ]
+  },
+  "24862": {
+    "sid": 24862,
+    "val": "Увеличивает запас здоровья и маны |cffe6beaaВоргенам друидам|r, ускоряет регенерацию их маны, а также обучает их новым способностям.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F2",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "24863": {
+    "sid": 24863,
+    "val": "Увеличивает запас здоровья и маны |cffe6beaaВоргенам друидам|r, ускоряет регенерацию их маны, а также обучает их новым способностям.",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F2",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "24858": {
+    "sid": 24858,
+    "val": "|cffe6beaaСлияние с природой|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F2",
+        "field": "name1"
+      }
+    ]
+  },
+  "24859": {
+    "sid": 24859,
+    "val": "|cffe6beaaСлияние с природой|r",
+    "usages": [
+      {
+        "category": "upgrade",
+        "id": "R0F2",
+        "field": "name2"
+      }
+    ]
+  },
+  "24957": {
+    "sid": 24957,
+    "val": "|cffe6beaaКопье охотника|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11I",
+        "field": "name"
+      }
+    ]
+  },
+  "22199": {
+    "sid": 22199,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11I",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22198": {
+    "sid": 22198,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11I",
+        "field": "researchhotkey"
+      }
+    ]
+  },
+  "24958": {
+    "sid": 24958,
+    "val": "Изучить «|cffe6beaaКопье охотника|r» [|cffffcc00%d-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11I",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "24959": {
+    "sid": 24959,
+    "val": "|cffe6beaaКопье охотника|r [|cffffcc001-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11I",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24960": {
+    "sid": 24960,
+    "val": "|cffe6beaaКопье охотника|r [|cffffcc002-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11I",
+        "field": "tip2"
+      }
+    ]
+  },
+  "24961": {
+    "sid": 24961,
+    "val": "|cffe6beaaКопье охотника|r [|cffffcc003-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11I",
+        "field": "tip3"
+      }
+    ]
+  },
+  "24962": {
+    "sid": 24962,
+    "val": "|cffe6beaaКопье охотника|r [|cffffcc004-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11I",
+        "field": "tip4"
+      }
+    ]
+  },
+  "24963": {
+    "sid": 24963,
+    "val": "Бросает молот, оглушая врага на 1.5 сек. и нанося 475 урона.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11I",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "24951": {
+    "sid": 24951,
+    "val": "|cffe6beaaСокрушающий удар|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11H",
+        "field": "name"
+      }
+    ]
+  },
+  "20902": {
+    "sid": 20902,
+    "val": "W",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11H",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "20977": {
+    "sid": 20977,
+    "val": "W",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11H",
+        "field": "researchhotkey"
+      }
+    ]
+  },
+  "24952": {
+    "sid": 24952,
+    "val": "Изучить «|cffe6beaaСокрушающий удар|r» [|cffffcc00%d-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11H",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "40363": {
+    "sid": 40363,
+    "val": "Бьет по земле, нанося урон находящимся рядом наземным врагам и замедляя их передвижение и атаку. |n|n|cffffcc001-й уровень:|r 120 урона, |n|cffffcc002-й уровень:|r 175 урона |n|cffffcc003-й уровень:|r 225 урона.|n|cffffcc004-й уровень:|r 300 урона,",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11H",
+        "field": "researchubertip"
+      }
+    ]
+  },
+  "24954": {
+    "sid": 24954,
+    "val": "|cffe6beaaСокрушающий удар|r [|cffffcc001-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11H",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24955": {
+    "sid": 24955,
+    "val": "|cffe6beaaСокрушающий удар|r [|cffffcc002-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11H",
+        "field": "tip2"
+      }
+    ]
+  },
+  "24956": {
+    "sid": 24956,
+    "val": "|cffe6beaaСокрушающий удар|r [|cffffcc003-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11H",
+        "field": "tip3"
+      }
+    ]
+  },
+  "24949": {
+    "sid": 24949,
+    "val": "|cffe6beaaСокрушающий удар|r [|cffffcc004-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11H",
+        "field": "tip4"
+      }
+    ]
+  },
+  "24950": {
+    "sid": 24950,
+    "val": "Бьет по земле, нанося 300 урона находящимся рядом наземным врагам и замедляя их передвижение на <AHtc,DataC4,%>% и атаку на <AHtc,DataD4,%>%.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11H",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "24967": {
+    "sid": 24967,
+    "val": "|cffe6beaaСлабое место|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11J",
+        "field": "name"
+      }
+    ]
+  },
+  "22482": {
+    "sid": 22482,
+    "val": "E",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11J",
+        "field": "researchhotkey"
+      }
+    ]
+  },
+  "24968": {
+    "sid": 24968,
+    "val": "Изучить «|cffe6beaaСлабое место|r» [|cffffcc00%d-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11J",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "24972": {
+    "sid": 24972,
+    "val": "Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон.|n|cffffcc004-й уровень:|r <AOcr,DataA3>%-й шанс, 5-кратный урон.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11J",
+        "field": "researchubertip"
+      }
+    ]
+  },
+  "24969": {
+    "sid": 24969,
+    "val": "|cffe6beaaСлабое место|r [|cffffcc001-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11J",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24970": {
+    "sid": 24970,
+    "val": "|cffe6beaaСлабое место|r [|cffffcc002-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11J",
+        "field": "tip2"
+      }
+    ]
+  },
+  "24971": {
+    "sid": 24971,
+    "val": "|cffe6beaaСлабое место|r [|cffffcc003-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11J",
+        "field": "tip3"
+      }
+    ]
+  },
+  "24965": {
+    "sid": 24965,
+    "val": "|cffe6beaaСлабое место|r [|cffffcc004-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11J",
+        "field": "tip4"
+      }
+    ]
+  },
+  "24966": {
+    "sid": 24966,
+    "val": "Дает <AOcr,DataA4>%-й шанс нанести 5-кратный урон при атаке.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11J",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "24975": {
+    "sid": 24975,
+    "val": "|cffe6beaaДух древнего волка|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11K",
+        "field": "name"
+      }
+    ]
+  },
+  "22681": {
+    "sid": 22681,
+    "val": "R",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11K",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22653": {
+    "sid": 22653,
+    "val": "R",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11K",
+        "field": "researchhotkey"
+      }
+    ]
+  },
+  "24976": {
+    "sid": 24976,
+    "val": "Изучить «|cffe6beaaДух древнего волка|r» [|cffffcc00%d-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11K",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "32099": {
+    "sid": 32099,
+    "val": "Взывает к духам древних волков, вызывая их на поле боя. |nВремя существования: <AOsf,Dur1> сек. |n|n|cffffcc001-й уровень:|r 1 волк. |n|cffffcc002-й уровень:|r 2 волка. ",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11K",
+        "field": "researchubertip"
+      }
+    ]
+  },
+  "24977": {
+    "sid": 24977,
+    "val": "|cffe6beaaДух древнего волка|r [|cffffcc001-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11K",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24978": {
+    "sid": 24978,
+    "val": "|cffe6beaaДух древнего волка|r [|cffffcc002-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11K",
+        "field": "tip2"
+      }
+    ]
+  },
+  "32100": {
+    "sid": 32100,
+    "val": "Взывает к духам древних волков, вызывая их на поле боя. |nВремя существования: <AOsf,Dur1> сек. |n|n|cffffcc001-й уровень:|r 1 волк.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11K",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "32101": {
+    "sid": 32101,
+    "val": "Взывает к духам древних волков, вызывая их на поле боя. |nВремя существования: <AOsf,Dur1> сек. |n|n|cffffcc002-й уровень:|r 2 волка. ",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11K",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "39550": {
+    "sid": 39550,
+    "val": "|cffe6beaaЦепная молния|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11L",
+        "field": "name"
+      }
+    ]
+  },
+  "22335": {
+    "sid": 22335,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11L",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22281": {
+    "sid": 22281,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11L",
+        "field": "researchhotkey"
+      }
+    ]
+  },
+  "24983": {
+    "sid": 24983,
+    "val": "Изучить «|cffe6beaaЦепная молния|r» [|cffffcc00%d-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11L",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "24987": {
+    "sid": 24987,
+    "val": "Поражает цель молнией, которая рикошетит в находящихся рядом врагов, нанося меньше урона с каждым рикошетом. |n|n|cffffcc001-й уровень:|r <AOcl,DataA1> урона, до <AOcl,DataB1> дополнительных целей. |n|cffffcc002-й уровень:|r <AOcl,DataA2> урона, до <AOcl,DataB2> дополнительных целей. |n|cffffcc003-й уровень:|r <AOcl,DataA3> урона, до <AOcl,DataB3> дополнительных целей. |n|cffffcc004-й уровень:|r 275 урона, до 14 дополнительных целей.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11L",
+        "field": "researchubertip"
+      }
+    ]
+  },
+  "24984": {
+    "sid": 24984,
+    "val": "|cffe6beaaЦепная молния|r [|cffffcc001-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11L",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24985": {
+    "sid": 24985,
+    "val": "|cffe6beaaЦепная молния|r [|cffffcc002-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11L",
+        "field": "tip2"
+      }
+    ]
+  },
+  "24986": {
+    "sid": 24986,
+    "val": "|cffe6beaaЦепная молния|r [|cffffcc003-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11L",
+        "field": "tip3"
+      }
+    ]
+  },
+  "24980": {
+    "sid": 24980,
+    "val": "|cffe6beaaЦепная молния|r [|cffffcc004-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11L",
+        "field": "tip4"
+      }
+    ]
+  },
+  "24981": {
+    "sid": 24981,
+    "val": "Призывает молнию, которая наносит 275 урона цели и рикошетит до 14 раз, нанося меньше урона с каждым рикошетом.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11L",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "25024": {
+    "sid": 25024,
+    "val": "|cffe6beaaБлагословление духов|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11N",
+        "field": "name"
+      }
+    ]
+  },
+  "22510": {
+    "sid": 22510,
+    "val": "E",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11N",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22492": {
+    "sid": 22492,
+    "val": "E",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11N",
+        "field": "researchhotkey"
+      }
+    ]
+  },
+  "25025": {
+    "sid": 25025,
+    "val": "Изучить «|cffe6beaaБлагословление духов|r» [|cffffcc00%d-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11N",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "25026": {
+    "sid": 25026,
+    "val": "Ускоряет регенерацию маны находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r незначительный бонус. |n|cffffcc002-й уровень:|r средний бонус.|n|cffffcc003-й уровень:|r значительный бонус.|n|cffffcc004-й уровень:|r большой бонус.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11N",
+        "field": "researchubertip"
+      }
+    ]
+  },
+  "22527": {
+    "sid": 22527,
+    "val": "E",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11N",
+        "field": "unhotkey"
+      }
+    ]
+  },
+  "25027": {
+    "sid": 25027,
+    "val": "|cffe6beaaБлагословление духов|r [|cffffcc001-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11N",
+        "field": "tip1"
+      }
+    ]
+  },
+  "25028": {
+    "sid": 25028,
+    "val": "|cffe6beaaБлагословление духов|r [|cffffcc002-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11N",
+        "field": "tip2"
+      }
+    ]
+  },
+  "25029": {
+    "sid": 25029,
+    "val": "|cffe6beaaБлагословление духов|r [|cffffcc003-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11N",
+        "field": "tip3"
+      }
+    ]
+  },
+  "25030": {
+    "sid": 25030,
+    "val": "|cffe6beaaБлагословление духов|r [|cffffcc004-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11N",
+        "field": "tip4"
+      }
+    ]
+  },
+  "32183": {
+    "sid": 32183,
+    "val": "Ускоряет регенерацию маны находящихся рядом союзников.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11N",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "24988": {
+    "sid": 24988,
+    "val": "|cffe6beaaЩит маны|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11M",
+        "field": "name"
+      }
+    ]
+  },
+  "21035": {
+    "sid": 21035,
+    "val": "W",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11M",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "21034": {
+    "sid": 21034,
+    "val": "W",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11M",
+        "field": "researchhotkey"
+      }
+    ]
+  },
+  "24989": {
+    "sid": 24989,
+    "val": "Изучить «|cffe6beaaЩит маны|r» [|cffffcc00%d-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11M",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "24999": {
+    "sid": 24999,
+    "val": "Создает щит, который поглощает урон за счет маны. |n|n|cffffcc001-й уровень:|r 1 урона за единицу маны. |n|cffffcc002-й уровень:|r 1,5 урона за единицу маны. |n|cffffcc003-й уровень:|r 2 урона за единицу маны.|n|cffffcc004-й уровень:|r 2.5 урона за единицу маны.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11M",
+        "field": "researchubertip"
+      }
+    ]
+  },
+  "21038": {
+    "sid": 21038,
+    "val": "W",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11M",
+        "field": "unhotkey"
+      }
+    ]
+  },
+  "24990": {
+    "sid": 24990,
+    "val": "Активировать «|cffe6beaaЩит маны|r» [|cffffcc001-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11M",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24991": {
+    "sid": 24991,
+    "val": "Активировать «|cffe6beaaЩит маны|r» [|cffffcc002-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11M",
+        "field": "tip2"
+      }
+    ]
+  },
+  "24992": {
+    "sid": 24992,
+    "val": "Активировать «|cffe6beaaЩит маны|r» [|cffffcc003-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11M",
+        "field": "tip3"
+      }
+    ]
+  },
+  "24993": {
+    "sid": 24993,
+    "val": "Активировать «|cffe6beaaЩит маны|r» [|cffffcc004-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11M",
+        "field": "tip4"
+      }
+    ]
+  },
+  "24994": {
+    "sid": 24994,
+    "val": "Дает щит, который поглощает 2.5 урона за 1 ед. маны.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11M",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "25037": {
+    "sid": 25037,
+    "val": "|cffe6beaaЗов Духов|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11O",
+        "field": "name"
+      }
+    ]
+  },
+  "25035": {
+    "sid": 25035,
+    "val": "|cffe6beaaЗов Духов|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11O",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "35420": {
+    "sid": 35420,
+    "val": "Увелчивает регенерацию здоровья и маны всем вокруг и самому друиду.|n|cffffcc001-й уровень:|r +5 ед. регенерации маны и здоровья.|n|cffffcc002-й уровень:|r +8 ед. регенерации маны и здоровья.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11O",
+        "field": "researchubertip"
+      }
+    ]
+  },
+  "22682": {
+    "sid": 22682,
+    "val": "R",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11O",
+        "field": "unhotkey"
+      }
+    ]
+  },
+  "25031": {
+    "sid": 25031,
+    "val": "|cffe6beaaЗов Духов|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11O",
+        "field": "tip1"
+      }
+    ]
+  },
+  "25032": {
+    "sid": 25032,
+    "val": "|cffe6beaaЗов Духов|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11O",
+        "field": "tip2"
+      }
+    ]
+  },
+  "35411": {
+    "sid": 35411,
+    "val": "Увеличивает регенерацию здоровья и маны на |cffe6beaa5 ед|r.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11O",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "35412": {
+    "sid": 35412,
+    "val": "Увеличивает регенерацию здоровья и маны на |cffe6beaa8 ед|r.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11O",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "41962": {
+    "sid": 41962,
+    "val": "|cffe6beaaВолчьи рефлексы|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Q",
+        "field": "name"
+      }
+    ]
+  },
+  "31485": {
+    "sid": 31485,
+    "val": "W",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Q",
+        "field": "researchhotkey"
+      }
+    ]
+  },
+  "41963": {
+    "sid": 41963,
+    "val": "Изучить |cffe6beaaВолчьи Рефлексы|r [|cffffcc00%d-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Q",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "41964": {
+    "sid": 41964,
+    "val": "|cffe6beaaВолчьи рефлексы|r [|cffffcc001-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Q",
+        "field": "tip1"
+      }
+    ]
+  },
+  "41965": {
+    "sid": 41965,
+    "val": "|cffd45e29Волчьи рефлексы|r [|cffffcc002-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Q",
+        "field": "tip2"
+      }
+    ]
+  },
+  "41966": {
+    "sid": 41966,
+    "val": "|cffd45e39Волчьи рефлексы|r [|cffffcc003-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Q",
+        "field": "tip3"
+      }
+    ]
+  },
+  "41967": {
+    "sid": 41967,
+    "val": "|cffd45e49Волчьи рефлексы|r [|cffffcc004-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Q",
+        "field": "tip4"
+      }
+    ]
+  },
+  "42005": {
+    "sid": 42005,
+    "val": "Дает 5%-й шанс уклониться от атаки и 10%-й шанс нанести 1.5-кратный урон.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Q",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "42006": {
+    "sid": 42006,
+    "val": "Дает 10%-й шанс уклониться от атаки и 10%-й шанс нанести 2-кратный урон.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Q",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "42007": {
+    "sid": 42007,
+    "val": "Дает 15%-й шанс уклониться от атаки и 10%-й шанс нанести 2.5-кратный урон.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Q",
+        "field": "ubertip3"
+      }
+    ]
+  },
+  "42008": {
+    "sid": 42008,
+    "val": "Дает 20%-й шанс уклониться от атаки и 10%-й шанс нанести 3-кратный урон.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Q",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "38289": {
+    "sid": 38289,
+    "val": "|cffe6beaaВолна силы|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11P",
+        "field": "name"
+      }
+    ]
+  },
+  "22428": {
+    "sid": 22428,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11P",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22400": {
+    "sid": 22400,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11P",
+        "field": "researchhotkey"
+      }
+    ]
+  },
+  "38290": {
+    "sid": 38290,
+    "val": "Изучить «|cffe6beaaВолна силы|r» [|cffffcc00%d-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11P",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "27940": {
+    "sid": 27940,
+    "val": "Выпускает волну энергии, атакующих врагов. |n|n|cffffcc001-й уровень:|r <AUcs,DataA1> урона каждой цели. |n|cffffcc002-й уровень:|r <AUcs,DataA2> урона каждой цели. |n|cffffcc003-й уровень:|r <AUcs,DataA3> урона каждой цели.\n|cffffcc004-й уровень:|r 300 урона каждой цели.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11P",
+        "field": "researchubertip"
+      }
+    ]
+  },
+  "38291": {
+    "sid": 38291,
+    "val": "|cffe6beaaВолна силы|r [|cffffcc001-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11P",
+        "field": "tip1"
+      }
+    ]
+  },
+  "25059": {
+    "sid": 25059,
+    "val": "|cffe6beaaВолна силы|r [|cffffcc002-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11P",
+        "field": "tip2"
+      }
+    ]
+  },
+  "25060": {
+    "sid": 25060,
+    "val": "|cffe6beaaВолна силы|r [|cffffcc003-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11P",
+        "field": "tip3"
+      }
+    ]
+  },
+  "25054": {
+    "sid": 25054,
+    "val": "|cffe6beaaВолна силы|r [|cffffcc004-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11P",
+        "field": "tip4"
+      }
+    ]
+  },
+  "25061": {
+    "sid": 25061,
+    "val": "Выпускает в секторе перед собой волну энергии, наносящих по <AUcs,DataA1> урона врагам на своем пути.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11P",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "25062": {
+    "sid": 25062,
+    "val": "Выпускает в секторе перед собой волну энергии, наносящих по <AUcs,DataA2> урона врагам на своем пути.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11P",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "25063": {
+    "sid": 25063,
+    "val": "Выпускает в секторе перед собой волну энергии, наносящих по <AUcs,DataA3> урона врагам на своем пути.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11P",
+        "field": "ubertip3"
+      }
+    ]
+  },
+  "25055": {
+    "sid": 25055,
+    "val": "Выпускает в секторе перед собой волну энергии, наносящих по 300 урона врагам на своем пути.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11P",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "25071": {
+    "sid": 25071,
+    "val": "|cffe6beaaАура командира|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11R",
+        "field": "name"
+      }
+    ]
+  },
+  "22556": {
+    "sid": 22556,
+    "val": "E",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11R",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22537": {
+    "sid": 22537,
+    "val": "E",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11R",
+        "field": "researchhotkey"
+      }
+    ]
+  },
+  "25073": {
+    "sid": 25073,
+    "val": "|cffe6beaaАура командира|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11R",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "20168": {
+    "sid": 20168,
+    "val": "Увеличивает урон всех союзных войск рядом с генералом. |n|cffffcc001-й уровень:|r 7% к урону.|n|cffffcc002-й уровень:|r 10% к урону.|n|cffffcc003-й уровень:|r 15% к урону.|n|cffffcc004-й уровень:|r 30% к урону.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11R",
+        "field": "researchubertip"
+      }
+    ]
+  },
+  "22557": {
+    "sid": 22557,
+    "val": "E",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11R",
+        "field": "unhotkey"
+      }
+    ]
+  },
+  "25072": {
+    "sid": 25072,
+    "val": "|cffe6beaaАура командира|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11R",
+        "field": "tip1"
+      }
+    ]
+  },
+  "25074": {
+    "sid": 25074,
+    "val": "|cffe6beaaАура командира|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11R",
+        "field": "tip2"
+      }
+    ]
+  },
+  "25075": {
+    "sid": 25075,
+    "val": "|cffe6beaaАура командира|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11R",
+        "field": "tip3"
+      }
+    ]
+  },
+  "25076": {
+    "sid": 25076,
+    "val": "|cffe6beaaАура командира|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11R",
+        "field": "tip4"
+      }
+    ]
+  },
+  "32196": {
+    "sid": 32196,
+    "val": "Увеличивает урон всех союзных войск рядом с генералом. |n|cffffcc001-й уровень:|r 7% к урону.|n",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11R",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "32102": {
+    "sid": 32102,
+    "val": "Увеличивает урон всех союзных войск рядом с генералом.|n|cffffcc002-й уровень:|r 10% к урону.|n",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11R",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "32138": {
+    "sid": 32138,
+    "val": "Увеличивает урон всех союзных войск рядом с генералом. \n|cffffcc003-й уровень:|r 15% к урону.|n",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11R",
+        "field": "ubertip3"
+      }
+    ]
+  },
+  "20167": {
+    "sid": 20167,
+    "val": "Увеличивает урон всех союзных войск рядом с генералом.\n|cffffcc004-й уровень:|r 30% к урону.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11R",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "25082": {
+    "sid": 25082,
+    "val": "|cffe6beaaАватара зверя|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11S",
+        "field": "name"
+      }
+    ]
+  },
+  "22750": {
+    "sid": 22750,
+    "val": "R",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11S",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22732": {
+    "sid": 22732,
+    "val": "R",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11S",
+        "field": "researchhotkey"
+      }
+    ]
+  },
+  "25083": {
+    "sid": 25083,
+    "val": "Изучить «|cffe6beaaАватара зверя|r»",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11S",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "25086": {
+    "sid": 25086,
+    "val": "Увеличивает здоровье броню и здоровье генерала, так же запрещает использовать магию на генерале.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11S",
+        "field": "researchubertip"
+      }
+    ]
+  },
+  "22751": {
+    "sid": 22751,
+    "val": "R",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11S",
+        "field": "unhotkey"
+      }
+    ]
+  },
+  "25084": {
+    "sid": 25084,
+    "val": "Активировать «|cffe6beaaАватара зверя|r»",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11S",
+        "field": "tip1"
+      }
+    ]
+  },
+  "25087": {
+    "sid": 25087,
+    "val": "Активировать «|cffe6beaaАватара зверя|r»",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11S",
+        "field": "tip2"
+      }
+    ]
+  },
+  "25088": {
+    "sid": 25088,
+    "val": "При использовании дает генералу +<AHav,DataA1> к броне, +<AHav,DataB1> к запасу здоровья, +<AHav,DataC1> к урону и невосприимчивость к магии. |nВремя действия: <AHav,Dur1> сек.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11S",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "25089": {
+    "sid": 25089,
+    "val": "При использовании дает генералу +<AHav,DataA1> к броне, +<AHav,DataB1> к запасу здоровья, +<AHav,DataC1> к урону и невосприимчивость к магии. |nВремя действия: <AHav,Dur1> сек.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11S",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "25133": {
+    "sid": 25133,
+    "val": "|cffe6beaaСокрушение|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Z",
+        "field": "name"
+      }
+    ]
+  },
+  "25134": {
+    "sid": 25134,
+    "val": "|cffe6beaaСокрушение|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Z",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "31917": {
+    "sid": 31917,
+    "val": "Атаки |cffe6beaaПолубога|r столь сильные что способны нанести урон врагам рядом с основной атакуемой целью.\n|cffffcc001-й уровень:|r |cffe6beaa17%|r шанс нанести |cffe6beaa40|r ед. урона.\n|cffffcc002-й уровень:|r |cffe6beaa23%|r шанс нанести |cffe6beaa50|r ед. урона.\n|cffffcc003-й уровень:|r |cffe6beaa30%|r шанс нанести |cffe6beaa60|r ед. урона.\n|cffffcc003-й уровень:|r |cffe6beaa35%|r шанс нанести |cffe6beaa90|r ед. урона.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Z",
+        "field": "researchubertip"
+      }
+    ]
+  },
+  "25135": {
+    "sid": 25135,
+    "val": "|cffe6beaaСокрушение|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Z",
+        "field": "tip1"
+      }
+    ]
+  },
+  "25136": {
+    "sid": 25136,
+    "val": "|cffe6beaaСокрушение|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Z",
+        "field": "tip2"
+      }
+    ]
+  },
+  "25137": {
+    "sid": 25137,
+    "val": "|cffe6beaaСокрушение|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Z",
+        "field": "tip3"
+      }
+    ]
+  },
+  "25138": {
+    "sid": 25138,
+    "val": "|cffe6beaaСокрушение|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Z",
+        "field": "tip4"
+      }
+    ]
+  },
+  "31918": {
+    "sid": 31918,
+    "val": "С 17%-й вероятностью атака нанесет 40 урона находящимся рядом войскам.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Z",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "31919": {
+    "sid": 31919,
+    "val": "С 23%-й вероятностью атака нанесет 50 урона находящимся рядом войскам.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Z",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "31920": {
+    "sid": 31920,
+    "val": "С 30%-й вероятностью атака нанесет 60 урона находящимся рядом войскам.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Z",
+        "field": "ubertip3"
+      }
+    ]
+  },
+  "31921": {
+    "sid": 31921,
+    "val": "С 35%-й вероятностью атака нанесет 90 урона находящимся рядом войскам.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Z",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "20281": {
+    "sid": 20281,
+    "val": "|cffe6beaaПоглощение урона|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11U",
+        "field": "name"
+      }
+    ]
+  },
+  "21076": {
+    "sid": 21076,
+    "val": "W",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11U",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "21050": {
+    "sid": 21050,
+    "val": "W",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11U",
+        "field": "researchhotkey"
+      }
+    ]
+  },
+  "16590": {
+    "sid": 16590,
+    "val": "Изучить «|cffe6beaaПоглощение урона|r» [|cffffcc00%d-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11U",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "16675": {
+    "sid": 16675,
+    "val": "|cffe6beaaПоглощение урона|r [|cffffcc001-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11U",
+        "field": "tip1"
+      }
+    ]
+  },
+  "16676": {
+    "sid": 16676,
+    "val": "|cffe6beaaПоглощение урона|r [|cffffcc002-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11U",
+        "field": "tip2"
+      }
+    ]
+  },
+  "17828": {
+    "sid": 17828,
+    "val": "|cffe6beaaПоглощение урона|r [|cffffcc003-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11U",
+        "field": "tip3"
+      }
+    ]
+  },
+  "17830": {
+    "sid": 17830,
+    "val": "|cffe6beaaПоглощение урона|r [|cffffcc004-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11U",
+        "field": "tip4"
+      }
+    ]
+  },
+  "25091": {
+    "sid": 25091,
+    "val": "|cffe6beaaВампирическая аура|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11T",
+        "field": "name"
+      }
+    ]
+  },
+  "22558": {
+    "sid": 22558,
+    "val": "E",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11T",
+        "field": "researchhotkey"
+      }
+    ]
+  },
+  "25092": {
+    "sid": 25092,
+    "val": "Изучить «|cffe6beaaВампирическая аура|r» [|cffffcc00%d-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11T",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "24736": {
+    "sid": 24736,
+    "val": "Находящиеся рядом союзники ближнего боя восполняют здоровье, нанося урон.\n|n|n|cffffcc001-й уровень:|r 20% от атак.|r|n|n|cffffcc002-й уровень:|r 24% от атак.|r|n|n|cffffcc003-й уровень:|r 31% от атак.|r|n|n|cffffcc004-й уровень:|r 38% от атак.\n",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11T",
+        "field": "researchubertip"
+      }
+    ]
+  },
+  "25093": {
+    "sid": 25093,
+    "val": "|cffe6beaaВампирическая аура|r [|cffffcc001-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11T",
+        "field": "tip1"
+      }
+    ]
+  },
+  "25094": {
+    "sid": 25094,
+    "val": "|cffe6beaaВампирическая аура|r [|cffffcc002-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11T",
+        "field": "tip2"
+      }
+    ]
+  },
+  "25095": {
+    "sid": 25095,
+    "val": "|cffe6beaaВампирическая аура|r [|cffffcc003-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11T",
+        "field": "tip3"
+      }
+    ]
+  },
+  "25096": {
+    "sid": 25096,
+    "val": "|cffe6beaaВампирическая аура|r [|cffffcc004-й уровень|r]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11T",
+        "field": "tip4"
+      }
+    ]
+  },
+  "25185": {
+    "sid": 25185,
+    "val": "Находящиеся рядом союзники ближнего боя восполняют здоровье в объеме 20% от наносимого урона от атак.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11T",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "25591": {
+    "sid": 25591,
+    "val": "Находящиеся рядом союзники ближнего боя восполняют здоровье в объеме 24% от наносимого урона от атак.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11T",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "27000": {
+    "sid": 27000,
+    "val": "Находящиеся рядом союзники ближнего боя восполняют здоровье в объеме 31% от наносимого урона от атак.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11T",
+        "field": "ubertip3"
+      }
+    ]
+  },
+  "20570": {
+    "sid": 20570,
+    "val": "Находящиеся рядом союзники ближнего боя восполняют здоровье в объеме 38% от наносимого урона от атак.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11T",
+        "field": "ubertip4"
+      }
+    ]
+  },
+  "25142": {
+    "sid": 25142,
+    "val": "|cffe6beaaЗов Полубога|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A120",
+        "field": "name"
+      }
+    ]
+  },
+  "25143": {
+    "sid": 25143,
+    "val": "|cffe6beaaЗов Полубога|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A120",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "25149": {
+    "sid": 25149,
+    "val": "Зов полубога усиливает в многократно всех союзных солдат рядом с полубогом.|n|cffffcc001-й уровень:|r +6 ед. регенерации маны и здоровья, 25% к урону, 6 к защите.|n|cffffcc002-й уровень:|r +8 ед. регенерации маны и здоровья, 35% к урону, 6 к защите.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A120",
+        "field": "researchubertip"
+      }
+    ]
+  },
+  "22846": {
+    "sid": 22846,
+    "val": "R",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A120",
+        "field": "unhotkey"
+      }
+    ]
+  },
+  "25140": {
+    "sid": 25140,
+    "val": "|cffe6beaaЗов Полубога|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A120",
+        "field": "tip1"
+      }
+    ]
+  },
+  "25141": {
+    "sid": 25141,
+    "val": "|cffe6beaaЗов Полубога|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A120",
+        "field": "tip2"
+      }
+    ]
+  },
+  "9804": {
+    "sid": 9804,
+    "val": "+<Aroa,DataA2,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur2> сек.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A120",
+        "field": "ubertip2"
+      }
+    ]
+  },
+  "25100": {
+    "sid": 25100,
+    "val": "|cffe6beaaПоглощение урона|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11V",
+        "field": "name"
+      }
+    ]
+  },
+  "25107": {
+    "sid": 25107,
+    "val": "|cffe6beaaПоглощение урона|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11V",
+        "field": "tip1"
+      }
+    ]
+  },
+  "25108": {
+    "sid": 25108,
+    "val": "|cffe6beaaПоглощение урона|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11W",
+        "field": "name"
+      }
+    ]
+  },
+  "25110": {
+    "sid": 25110,
+    "val": "|cffe6beaaПоглощение урона|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11W",
+        "field": "tip1"
+      }
+    ]
+  },
+  "25111": {
+    "sid": 25111,
+    "val": "|cffe6beaaПоглощение урона|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11X",
+        "field": "name"
+      }
+    ]
+  },
+  "25113": {
+    "sid": 25113,
+    "val": "|cffe6beaaПоглощение урона|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11X",
+        "field": "tip1"
+      }
+    ]
+  },
+  "25114": {
+    "sid": 25114,
+    "val": "|cffe6beaaПоглощение урона|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Y",
+        "field": "name"
+      }
+    ]
+  },
+  "25116": {
+    "sid": 25116,
+    "val": "|cffe6beaaПоглощение урона|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11Y",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24527": {
+    "sid": 24527,
+    "val": "|cffe6beaaНутро зверя|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A117",
+        "field": "name"
+      }
+    ]
+  },
+  "24528": {
+    "sid": 24528,
+    "val": "|cffe6beaaНутро зверя|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A117",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24529": {
+    "sid": 24529,
+    "val": "|cffe6beaaНутро зверя|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A118",
+        "field": "name"
+      }
+    ]
+  },
+  "24803": {
+    "sid": 24803,
+    "val": "|cffe6beaaНутро зверя|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A118",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24805": {
+    "sid": 24805,
+    "val": "|cffe6beaaНутро зверя|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A119",
+        "field": "name"
+      }
+    ]
+  },
+  "24804": {
+    "sid": 24804,
+    "val": "|cffe6beaaНутро зверя|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A119",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24807": {
+    "sid": 24807,
+    "val": "Когти воргенов позволяют пробивать |cffe6beaaсреднюю|r, и |cffe6beaaтяжелую|r броню на |cffe6beaa15%|r. Оставляя |cffe6beaaкровотичение|r после своих атак.\n",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A119",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "29198": {
+    "sid": 29198,
+    "val": "|cffe6beaaКровотечение|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11A",
+        "field": "name"
+      }
+    ]
+  },
+  "29199": {
+    "sid": 29199,
+    "val": "|cffe6beaaКровотечение|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11A",
+        "field": "tip1"
+      }
+    ]
+  },
+  "36630": {
+    "sid": 36630,
+    "val": "Ранит цель, нанося 5 урона/сек на протяжении 5 секунд. Эффект не суммируется.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11A",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "24825": {
+    "sid": 24825,
+    "val": "|cffe6beaaДух зверя|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11B",
+        "field": "name"
+      }
+    ]
+  },
+  "20687": {
+    "sid": 20687,
+    "val": "W",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11B",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "20723": {
+    "sid": 20723,
+    "val": "W",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11B",
+        "field": "unhotkey"
+      }
+    ]
+  },
+  "24826": {
+    "sid": 24826,
+    "val": "|cffe6beaaДух зверя|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11B",
+        "field": "tip1"
+      }
+    ]
+  },
+  "27938": {
+    "sid": 27938,
+    "val": "|cffe6beaaЗвериные рефлексы|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11C",
+        "field": "name"
+      }
+    ]
+  },
+  "27939": {
+    "sid": 27939,
+    "val": "|cffe6beaaЗвериные рефлексы|r ",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11C",
+        "field": "tip1"
+      }
+    ]
+  },
+  "15379": {
+    "sid": 15379,
+    "val": "Дает 5%-й шанс уклониться от атаки и 6%-й шанс нанести 1.5-кратный урон.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11C",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "24879": {
+    "sid": 24879,
+    "val": "|cffe6beaaВой|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11D",
+        "field": "name"
+      }
+    ]
+  },
+  "20764": {
+    "sid": 20764,
+    "val": "W",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11D",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "24878": {
+    "sid": 24878,
+    "val": "|cffe6beaaВой|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11D",
+        "field": "tip1"
+      }
+    ]
+  },
+  "24881": {
+    "sid": 24881,
+    "val": "|cffe6beaaЭссенция здоровья|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11E",
+        "field": "name"
+      }
+    ]
+  },
+  "22059": {
+    "sid": 22059,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11E",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "22160": {
+    "sid": 22160,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11E",
+        "field": "unhotkey"
+      }
+    ]
+  },
+  "24882": {
+    "sid": 24882,
+    "val": "|cffe6beaaЭссенция здоровья|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A11E",
+        "field": "tip1"
+      }
+    ]
+  },
+  "32795": {
+    "sid": 32795,
+    "val": "|cffe6beaaЯростный бросок",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A1F0",
+        "field": "name"
+      }
+    ]
+  },
+  "32796": {
+    "sid": 32796,
+    "val": "|cff0064ffКритический удар|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A1F0",
+        "field": "tip1"
+      }
+    ]
+  },
+  "32807": {
+    "sid": 32807,
+    "val": "|cffe6beaaМетнуть топор",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A1F1",
+        "field": "name"
+      }
+    ]
+  },
+  "25558": {
+    "sid": 25558,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A1F1",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "25779": {
+    "sid": 25779,
+    "val": "W",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A1F1",
+        "field": "researchhotkey"
+      }
+    ]
+  },
+  "25343": {
+    "sid": 25343,
+    "val": "Изучить «|cffff0000Огненная стрела|r» [%d-й уровень]",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A1F1",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "29427": {
+    "sid": 29427,
+    "val": "Инквизитор выстреливает сгустком огня в противника, нанося урон и оглушая его.|n|cffffcc001-й уровень:|r |cffb4dcdc75 урона, оглушает Героя - 2, солдата - 2.|r|n|cffffcc002-й уровень:|r |cffb4dcdc150 урона, оглушает Героя - 2, солдата - 3.|r|n|cffffcc003-й уровень:|r |cffb4dcdc270 урона, оглушает Героя - 2, солдата - 4.|r|n|cffffcc004-й уровень:|r |cffb4dcdc350 урона, оглушает Героя - 2, солдата - 5.|r|n|cffffcc005-й уровень:|r |cffb4dcdc430 урона, оглушает Героя - 2, солдата - 6.|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A1F1",
+        "field": "researchubertip"
+      }
+    ]
+  },
+  "32801": {
+    "sid": 32801,
+    "val": "|cffe6beaaМетнуть топор",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A1F1",
+        "field": "tip1"
+      }
+    ]
+  },
+  "32809": {
+    "sid": 32809,
+    "val": "Кидает топор во врага, оглушая его.\n|cffe1d70075 урона, оглушает Героя - 2, солдата - 2.|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A1F1",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "39816": {
+    "sid": 39816,
+    "val": "|cffe6beaaТемная стая|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0PE",
+        "field": "name"
+      }
+    ]
+  },
+  "32084": {
+    "sid": 32084,
+    "val": "E",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0PE",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "40259": {
+    "sid": 40259,
+    "val": "|cffe6beaaТемная стая|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0PE",
+        "field": "tip1"
+      }
+    ]
+  },
+  "41717": {
+    "sid": 41717,
+    "val": "Выпускает стаю нетопырей, наносящих по 90 урона наземным врагам на прямой линии. Максимум – 400 урона.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0PE",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "4504": {
+    "sid": 4504,
+    "val": "|cffe4cfa3Мастерство|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A06L",
+        "field": "name"
+      }
+    ]
+  },
+  "4505": {
+    "sid": 4505,
+    "val": "|cffe4cfa3Мастерство|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A06L",
+        "field": "tip1"
+      }
+    ]
+  },
+  "25342": {
+    "sid": 25342,
+    "val": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует |cffffffff15%|cffced4da шанс нанести |cffffffff1.8|cffced4da-кратный критический урон при атаке.|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A06L",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "4558": {
+    "sid": 4558,
+    "val": "|cffe4cfa3Укрепленные тяжелые доспехи|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A06N",
+        "field": "name"
+      }
+    ]
+  },
+  "4559": {
+    "sid": 4559,
+    "val": "|cffe4cfa3Укрепленные тяжелые доспехи|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A06N",
+        "field": "tip1"
+      }
+    ]
+  },
+  "7957": {
+    "sid": 7957,
+    "val": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает входящий физический урон от вражеских атак.|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A06N",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "9626": {
+    "sid": 9626,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "Adef",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "9714": {
+    "sid": 9714,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "Adef",
+        "field": "unhotkey"
+      }
+    ]
+  },
+  "25772": {
+    "sid": 25772,
+    "val": "Spell Dispel",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "Adis",
+        "field": "name"
+      }
+    ]
+  },
+  "9715": {
+    "sid": 9715,
+    "val": "Q",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "Adis",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "25785": {
+    "sid": 25785,
+    "val": "Spell Dispel",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "Adis",
+        "field": "tip1"
+      }
+    ]
+  },
+  "25774": {
+    "sid": 25774,
+    "val": "Removes positive effects from units in the target area. |n|cffffcc00Deals <Adis,DataB1> damage to summoned units.|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "Adis",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "26484": {
+    "sid": 26484,
+    "val": "|cffe4cfa3Небольшой скачок|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0I3",
+        "field": "name"
+      }
+    ]
+  },
+  "9545": {
+    "sid": 9545,
+    "val": "C",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0I3",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "18243": {
+    "sid": 18243,
+    "val": "E",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0I3",
+        "field": "researchhotkey"
+      }
+    ]
+  },
+  "10064": {
+    "sid": 10064,
+    "val": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0I3",
+        "field": "researchtip"
+      }
+    ]
+  },
+  "10976": {
+    "sid": 10976,
+    "val": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0I3",
+        "field": "researchubertip"
+      }
+    ]
+  },
+  "26476": {
+    "sid": 26476,
+    "val": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0I3",
+        "field": "tip1"
+      }
+    ]
+  },
+  "26477": {
+    "sid": 26477,
+    "val": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0I3",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "12857": {
+    "sid": 12857,
+    "val": "Обмен |cff00ff00Дерева |rна |cffffff00Золото|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0LJ",
+        "field": "name"
+      }
+    ]
+  },
+  "4259": {
+    "sid": 4259,
+    "val": "A",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0LJ",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "12886": {
+    "sid": 12886,
+    "val": "Обмен |cff00ff00Дерева |rна |cffffff00Золото|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0LJ",
+        "field": "tip1"
+      }
+    ]
+  },
+  "20631": {
+    "sid": 20631,
+    "val": "Отнимает у игрока |cff228722500 дерева|r, но добавляет |cffffd700100 золота|r.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0LJ",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "2888": {
+    "sid": 2888,
+    "val": "Обмен |cffffff00Золота |rна |cff00ff00Дерево|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0LI",
+        "field": "name"
+      }
+    ]
+  },
+  "4247": {
+    "sid": 4247,
+    "val": "S",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0LI",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "3692": {
+    "sid": 3692,
+    "val": "Обмен |cffffff00Золота |rна |cff00ff00Дерево|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0LI",
+        "field": "tip1"
+      }
+    ]
+  },
+  "20630": {
+    "sid": 20630,
+    "val": "Отнимает у игрока|cffffd700 500 золота|r, но добавляет |cff228722100 дерева|r.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0LI",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "27193": {
+    "sid": 27193,
+    "val": "|cffffdcb4Обозначить столицу|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0IQ",
+        "field": "name"
+      }
+    ]
+  },
+  "11265": {
+    "sid": 11265,
+    "val": "X",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0IQ",
+        "field": "hotkey"
+      }
+    ]
+  },
+  "27969": {
+    "sid": 27969,
+    "val": "|cffffdcb4Обозначить столицу|r",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0IQ",
+        "field": "tip1"
+      }
+    ]
+  },
+  "27970": {
+    "sid": 27970,
+    "val": "Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение.",
+    "usages": [
+      {
+        "category": "ability",
+        "id": "A0IQ",
+        "field": "ubertip1"
+      }
+    ]
+  },
+  "29471": {
+    "sid": 29471,
+    "val": "|cffe6beaaКровотечение|r",
+    "usages": [
+      {
+        "category": "buff",
+        "id": "B06A",
+        "field": "bufftip"
+      }
+    ]
+  },
+  "24811": {
+    "sid": 24811,
+    "val": "Периодический урон.",
+    "usages": [
+      {
+        "category": "buff",
+        "id": "B06A",
+        "field": "buffubertip"
+      }
+    ]
+  },
+  "29472": {
+    "sid": 29472,
+    "val": "|cffe6beaaКровотечение|r",
+    "usages": [
+      {
+        "category": "buff",
+        "id": "B06B",
+        "field": "bufftip"
+      }
+    ]
+  },
+  "24813": {
+    "sid": 24813,
+    "val": "Периодический урон.",
+    "usages": [
+      {
+        "category": "buff",
+        "id": "B06B",
+        "field": "buffubertip"
+      }
+    ]
+  },
+  "25038": {
+    "sid": 25038,
+    "val": "|cffe6beaaЗов Духов|r",
+    "usages": [
+      {
+        "category": "buff",
+        "id": "B06C",
+        "field": "bufftip"
+      }
+    ]
+  },
+  "25039": {
+    "sid": 25039,
+    "val": "Регенерация маны и здоровья увеличена.",
+    "usages": [
+      {
+        "category": "buff",
+        "id": "B06C",
+        "field": "buffubertip"
+      }
+    ]
+  },
+  "25144": {
+    "sid": 25144,
+    "val": "|cffe6beaaЗов Полубога|r",
+    "usages": [
+      {
+        "category": "buff",
+        "id": "B06D",
+        "field": "bufftip"
+      }
+    ]
+  },
+  "25145": {
+    "sid": 25145,
+    "val": "Регенерация маны и здоровья увеличена.",
+    "usages": [
+      {
+        "category": "buff",
+        "id": "B06D",
+        "field": "buffubertip"
+      }
+    ]
+  }
+}

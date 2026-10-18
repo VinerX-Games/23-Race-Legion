@@ -1,0 +1,574 @@
+{
+  "ok": true,
+  "inventory": [
+    {
+      "type": "unit",
+      "id": "n01P",
+      "status": "unavailable_legacy",
+      "evidence": "faceless_legacy_reachability.json"
+    },
+    {
+      "type": "unit",
+      "id": "n01Q",
+      "status": "unavailable_legacy",
+      "evidence": "faceless_legacy_reachability.json"
+    },
+    {
+      "type": "unit",
+      "id": "n01R",
+      "status": "unavailable_legacy",
+      "evidence": "faceless_legacy_reachability.json"
+    },
+    {
+      "type": "unit",
+      "id": "n01S",
+      "status": "unavailable_legacy",
+      "evidence": "faceless_legacy_reachability.json"
+    },
+    {
+      "type": "unit",
+      "id": "n01U",
+      "status": "unavailable_legacy",
+      "evidence": "faceless_legacy_reachability.json"
+    },
+    {
+      "type": "unit",
+      "id": "h0HY",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0HZ",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "u02E",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0I1",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0I2",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0I4",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0I6",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "U02G",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "U02H",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "U02I",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0I7",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0I8",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0I9",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0IA",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0IB",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0IC",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0ID",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0IE",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0IF",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0IG",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "u02D",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "U02F",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0K2",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "e009",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "n05I",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0K3",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0MN",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0MO",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0MP",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0MQ",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "unit",
+      "id": "h0OM",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A0DW",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10H",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10I",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10K",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10L",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10N",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10Q",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10R",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10S",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10T",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10U",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10V",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10W",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10X",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10Y",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10Z",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A114",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A115",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A116",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A11G",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A122",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A123",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A16O",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A16P",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A1CF",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A1CG",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A1CH",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A1CI",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A1CJ",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A1CK",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A112",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A111",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A0RR",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A0RS",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A0WQ",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A10P",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A06M",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A126",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A1R2",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A113",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A1R3",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A1R5",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A0PB",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "ability",
+      "id": "A0PC",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "upgrade",
+      "id": "R07M",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "upgrade",
+      "id": "R0EK",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "upgrade",
+      "id": "R0EL",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "upgrade",
+      "id": "R0ET",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "upgrade",
+      "id": "R0EV",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "upgrade",
+      "id": "R0EW",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "upgrade",
+      "id": "R0EX",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "upgrade",
+      "id": "R0F7",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "upgrade",
+      "id": "R0F8",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "upgrade",
+      "id": "R0F9",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "upgrade",
+      "id": "R0FA",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "upgrade",
+      "id": "R0GD",
+      "status": "batch_present",
+      "missing": []
+    },
+    {
+      "type": "upgrade",
+      "id": "R0ES",
+      "status": "batch_present",
+      "missing": []
+    }
+  ],
+  "limitations": [
+    "Saved race-suffix inventory only; shared dependencies and Lua-created forms need separate reachability audit",
+    "Presence of a batch does not prove gameplay effects, all levels, current readback or UI rendering",
+    "Current SD/HD values are checked independently by check_faceless_text.py"
+  ]
+}

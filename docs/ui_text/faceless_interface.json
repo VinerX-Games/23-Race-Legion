@@ -1,0 +1,84 @@
+{
+  "scope": "Десять общих строк FrameDef, используемых в интерфейсе Безликих и остальных рас",
+  "strings": [
+    {
+      "rawcode": "FrameDef",
+      "field": "12089",
+      "reference_before": "TRIGSTR_12089",
+      "before": "Доход",
+      "after": "|cffa6afb8Пища|r"
+    },
+    {
+      "rawcode": "FrameDef",
+      "field": "11089",
+      "reference_before": "TRIGSTR_11089",
+      "before": "Хорошая карта для Warcraft 3 Reforged.",
+      "after": "|cffa6afb8Доход золота|r"
+    },
+    {
+      "rawcode": "FrameDef",
+      "field": "19833",
+      "reference_before": "TRIGSTR_19833",
+      "before": "Инфо [|Cfffed312F9|R]",
+      "after": "|cffe4cfa3Справка|r [|cffffffffF9|r]"
+    },
+    {
+      "rawcode": "FrameDef",
+      "field": "19831",
+      "reference_before": "TRIGSTR_19831",
+      "before": "Инфо",
+      "after": "|cffe4cfa3Справка|r"
+    },
+    {
+      "rawcode": "FrameDef",
+      "field": "17185",
+      "reference_before": "TRIGSTR_17185",
+      "before": "Ограничивает лимит героев.",
+      "after": "|cffa6afb8ИНТЕРФЕЙС:|cffced4da Показывает текущее потребление пищи и доступный предел.|r"
+    },
+    {
+      "rawcode": "FrameDef",
+      "field": "11093",
+      "reference_before": "TRIGSTR_11093",
+      "before": "Иначе бы зачем вы в неё бы играли?",
+      "after": "|cffa6afb8ИНТЕРФЕЙС:|cffced4da Доход и расходы определяются экономикой карты. Подробности доступны в панели дохода.|r"
+    },
+    {
+      "rawcode": "FrameDef",
+      "field": "11092",
+      "reference_before": "TRIGSTR_11092",
+      "before": "23 Race |cff00ff00Legion|r",
+      "after": "|cffe4cfa323 Race Legion|r"
+    },
+    {
+      "rawcode": "FrameDef",
+      "field": "11091",
+      "reference_before": "TRIGSTR_11091",
+      "before": "23 Race |cff00ff00Legion|r",
+      "after": "|cffe4cfa323 Race Legion|r"
+    },
+    {
+      "rawcode": "FrameDef",
+      "field": "11090",
+      "reference_before": "TRIGSTR_11090",
+      "before": "23 Race |cff00ff00Legion|r",
+      "after": "|cffe4cfa323 Race Legion|r"
+    },
+    {
+      "rawcode": "FrameDef",
+      "field": "19832",
+      "reference_before": "TRIGSTR_19832",
+      "before": "Инфо",
+      "after": "|cffe4cfa3Справка|r"
+    }
+  ],
+  "in_game_checked": false,
+  "evidence": [
+    "All ten WTS references occur only in war3mapSkin.txt among root object data / map-info / text files",
+    "60_income_tooltip.lua replaces upkeep/supply tooltips with income/state panels"
+  ],
+  "exceptions": [
+    "23 Race Legion is the map's existing proper name"
+  ],
+  "verification_owner": "Пользователь выполняет игровые проверки самостоятельно; они не являются условием задачи агента"
+}

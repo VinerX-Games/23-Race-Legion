@@ -1,0 +1,851 @@
+{
+  "scope": "Общие команды и зависимости безликих; награда за Йогг`Сарона",
+  "before": [
+    {
+      "command": "get-objects-bulk",
+      "count": 15,
+      "map": "F:\\Gemini_23Race\\map.w3x",
+      "missing": [],
+      "objects": [
+        {
+          "fields": {
+            "area1": "",
+            "code": "AAns",
+            "cool1": "0",
+            "cost1": "0",
+            "dataa1": "-100",
+            "datab1": "500",
+            "datac1": "",
+            "datad1": "",
+            "datae1": "neutralspell",
+            "dur1": "0",
+            "hotkey": "TRIGSTR_4259",
+            "levels": "1",
+            "name": "TRIGSTR_12857",
+            "targs1": "",
+            "tip1": "TRIGSTR_12886",
+            "ubertip1": "TRIGSTR_20631",
+            "unitid1": "",
+            "untip1": "",
+            "unubertip1": ""
+          },
+          "id": "A0LJ",
+          "name": "Обмен |cff00ff00Дерева |rна |cffffff00Золото|r"
+        },
+        {
+          "fields": {
+            "area1": "",
+            "code": "AAns",
+            "cool1": "0",
+            "cost1": "0",
+            "dataa1": "500",
+            "datab1": "-100",
+            "datac1": "",
+            "datad1": "",
+            "datae1": "parasite",
+            "dur1": "0",
+            "hotkey": "TRIGSTR_4247",
+            "levels": "1",
+            "name": "TRIGSTR_2888",
+            "targs1": "",
+            "tip1": "TRIGSTR_3692",
+            "ubertip1": "TRIGSTR_20630",
+            "unitid1": "",
+            "untip1": "",
+            "unubertip1": ""
+          },
+          "id": "A0LI",
+          "name": "Обмен |cffffff00Золота |rна |cff00ff00Дерево|r"
+        },
+        {
+          "fields": {
+            "area1": "",
+            "code": "ANcl",
+            "cool1": "0",
+            "cost1": "0",
+            "dataa1": "0.300000",
+            "datab1": "0",
+            "datac1": "1",
+            "datad1": "0.010000",
+            "datae1": "0",
+            "dur1": "0",
+            "hotkey": "TRIGSTR_11265",
+            "levels": "1",
+            "name": "TRIGSTR_27193",
+            "targs1": "",
+            "tip1": "TRIGSTR_27969",
+            "ubertip1": "TRIGSTR_27970",
+            "unitid1": "",
+            "untip1": "",
+            "unubertip1": ""
+          },
+          "id": "A0IQ",
+          "name": "|cffffdcb4Обозначить столицу|r"
+        },
+        {
+          "fields": {
+            "area1": "",
+            "code": "Artn",
+            "cool1": "0",
+            "cost1": "0",
+            "dataa1": "1",
+            "datab1": "1",
+            "datac1": "",
+            "datad1": "",
+            "datae1": "",
+            "dur1": "0",
+            "hotkey": "",
+            "levels": "1",
+            "name": "Вернуть золото и древесину",
+            "targs1": "",
+            "tip1": "",
+            "ubertip1": "",
+            "unitid1": "",
+            "untip1": "",
+            "unubertip1": ""
+          },
+          "id": "Argl",
+          "name": "Вернуть золото и древесину"
+        },
+        {
+          "fields": {
+            "area1": "900",
+            "code": "Ahar",
+            "cool1": "0",
+            "cost1": "0",
+            "dataa1": "5",
+            "datab1": "30",
+            "datac1": "10",
+            "datad1": "",
+            "datae1": "",
+            "dur1": "0.200000",
+            "hotkey": "G",
+            "levels": "1",
+            "name": "Добывать ресурсы",
+            "targs1": "tree,alive,dead",
+            "tip1": "Добывать ресурсы",
+            "ubertip1": "Добывает золото из рудников и древесину из деревьев.",
+            "unitid1": "",
+            "untip1": "Доставить ресурсы",
+            "unubertip1": "Относит добытые ресурсы в ближайший храм пучины."
+          },
+          "id": "ANha",
+          "name": "Добывать ресурсы"
+        },
+        {
+          "fields": {
+            "area1": "",
+            "code": "Arst",
+            "cool1": "0",
+            "cost1": "0",
+            "dataa1": "0.35",
+            "datab1": "1.5",
+            "datac1": "0",
+            "datad1": "0",
+            "datae1": "175",
+            "dur1": "0",
+            "hotkey": "R",
+            "levels": "1",
+            "name": "Ремонт",
+            "targs1": "mechanical,friend,nonancient,ground,air,structure,bridge,alive,dead,invu,vuln",
+            "tip1": "Ремонт",
+            "ubertip1": "Ремонтирует здания и технику за счет ресурсов.",
+            "unitid1": "",
+            "untip1": "|cffc3dbffПКМ – включить автоприменение.|r",
+            "unubertip1": "|cffc3dbffПКМ – отключить автоприменение.|r"
+          },
+          "id": "Arst",
+          "name": "Ремонт"
+        },
+        {
+          "fields": {
+            "area1": "450",
+            "code": "Aoar",
+            "cool1": "0",
+            "cost1": "0",
+            "dataa1": "-0.025000",
+            "datab1": "1",
+            "datac1": "",
+            "datad1": "",
+            "datae1": "",
+            "dur1": "0",
+            "hotkey": "",
+            "levels": "1",
+            "name": "TRIGSTR_38201",
+            "targs1": "air,ground,enemy,organic,neutral",
+            "tip1": "TRIGSTR_38229",
+            "ubertip1": "",
+            "unitid1": "",
+            "untip1": "",
+            "unubertip1": ""
+          },
+          "id": "A1KB",
+          "name": "Защита столицы"
+        },
+        {
+          "fields": {
+            "area1": "550.000000",
+            "code": "AUau",
+            "cool1": "0",
+            "cost1": " - ",
+            "dataa1": "0.000000",
+            "datab1": "2.500000",
+            "datac1": "0",
+            "datad1": "",
+            "datae1": "",
+            "dur1": "0",
+            "hotkey": "",
+            "levels": "1",
+            "name": "TRIGSTR_25578",
+            "targs1": "friend,ground,invulnerable,mechanical,self,vulnerable",
+            "tip1": "TRIGSTR_25589",
+            "ubertip1": "TRIGSTR_25608",
+            "unitid1": "",
+            "untip1": "",
+            "unubertip1": ""
+          },
+          "id": "A15N",
+          "name": "Зона ремонта"
+        },
+        {
+          "fields": {
+            "area1": "",
+            "code": "AIsr",
+            "cool1": "0",
+            "cost1": "0",
+            "dataa1": "0",
+            "datab1": "0.800000",
+            "datac1": "",
+            "datad1": "",
+            "datae1": "",
+            "dur1": "0",
+            "hotkey": "",
+            "levels": "1",
+            "name": "TRIGSTR_33690",
+            "targs1": "",
+            "tip1": "TRIGSTR_33685",
+            "ubertip1": "TRIGSTR_793",
+            "unitid1": "",
+            "untip1": "",
+            "unubertip1": ""
+          },
+          "id": "A0I6",
+          "name": "|cfffa9696Антимагическая броня|r"
+        },
+        {
+          "fields": {
+            "area1": "",
+            "code": "AHds",
+            "cool1": "360.000000",
+            "cost1": "0",
+            "dataa1": "0",
+            "datab1": "",
+            "datac1": "",
+            "datad1": "",
+            "datae1": "",
+            "dur1": "30.000000",
+            "hotkey": "TRIGSTR_9567",
+            "levels": "1",
+            "name": "TRIGSTR_25668",
+            "targs1": "invu,vuln",
+            "tip1": "TRIGSTR_26231",
+            "ubertip1": "TRIGSTR_26232",
+            "unitid1": "",
+            "untip1": "TRIGSTR_26233",
+            "unubertip1": ""
+          },
+          "id": "A145",
+          "name": "Неуязвимость столицы"
+        },
+        {
+          "fields": {
+            "area1": "",
+            "code": "AIab",
+            "cool1": "0",
+            "cost1": "0",
+            "dataa1": "15",
+            "datab1": "15",
+            "datac1": "15",
+            "datad1": "",
+            "datae1": "",
+            "dur1": "0",
+            "hotkey": "",
+            "levels": "1",
+            "name": "Бонус к характеристикам героя",
+            "targs1": "",
+            "tip1": "",
+            "ubertip1": "",
+            "unitid1": "",
+            "untip1": "",
+            "unubertip1": ""
+          },
+          "id": "A0VG",
+          "name": "Бонус к характеристикам героя"
+        },
+        {
+          "fields": {
+            "area1": "",
+            "code": "Aspb",
+            "cool1": "0",
+            "cost1": "0",
+            "dataa1": "A0VD,A0VE",
+            "datab1": "1",
+            "datac1": "2",
+            "datad1": "2",
+            "datae1": "spellbook",
+            "dur1": "0",
+            "hotkey": "",
+            "levels": "1",
+            "name": "TRIGSTR_15499",
+            "targs1": "",
+            "tip1": "",
+            "ubertip1": "",
+            "unitid1": "",
+            "untip1": "",
+            "unubertip1": ""
+          },
+          "id": "A0VC",
+          "name": "Касание безумия"
+        },
+        {
+          "fields": {
+            "area1": "500",
+            "code": "Aroa",
+            "cool1": "100.000000",
+            "cost1": "100",
+            "dataa1": "0.350000",
+            "datab1": "0",
+            "datac1": "0",
+            "datad1": "0",
+            "datae1": "0",
+            "dur1": "45",
+            "hotkey": "TRIGSTR_19540",
+            "levels": "1",
+            "name": "TRIGSTR_16892",
+            "targs1": "air,ground,friend,self",
+            "tip1": "TRIGSTR_16878",
+            "ubertip1": "TRIGSTR_30620",
+            "unitid1": "",
+            "untip1": "",
+            "unubertip1": ""
+          },
+          "id": "A0VD",
+          "name": "Темное усиление"
+        },
+        {
+          "fields": {
+            "area1": "",
+            "code": "AOwd",
+            "cool1": "12.000000",
+            "cost1": "25",
+            "dataa1": "1",
+            "datab1": "",
+            "datac1": "",
+            "datad1": "",
+            "datae1": "",
+            "dur1": "180",
+            "hotkey": "TRIGSTR_19913",
+            "levels": "1",
+            "name": "Порождение щупальца",
+            "targs1": "",
+            "tip1": "Порождение щупальца",
+            "ubertip1": "Поражает врага могучим щупальцем.",
+            "unitid1": "n04M",
+            "untip1": "",
+            "unubertip1": ""
+          },
+          "id": "A0VE",
+          "name": "Порождение щупальца"
+        },
+        {
+          "fields": {
+            "area1": "1500.000000",
+            "code": "AUav",
+            "cool1": "0",
+            "cost1": "",
+            "dataa1": "0.100000",
+            "datab1": "",
+            "datac1": "",
+            "datad1": "",
+            "datae1": "",
+            "dur1": "0",
+            "hotkey": "",
+            "levels": "1",
+            "name": "TRIGSTR_20559",
+            "targs1": "air,ground,friend,self,vuln,invu,organic",
+            "tip1": "\"Вампирическая аура [|cffffcc001-й уровень|r]\"",
+            "ubertip1": "\"Находящиеся рядом союзники ближнего боя восполняют здоровье в объеме <AUav,DataA1,%>% от наносимого урона от атак.\"",
+            "unitid1": "",
+            "untip1": "",
+            "unubertip1": ""
+          },
+          "id": "A0VF",
+          "name": "Аура отголоска Йогг'Сарона"
+        }
+      ],
+      "ok": true,
+      "schema_version": 1,
+      "tool": "HiveWE_cli",
+      "type": "ability"
+    },
+    {
+      "command": "get-objects-bulk",
+      "count": 4,
+      "map": "F:\\Gemini_23Race\\map.w3x",
+      "missing": [],
+      "objects": [
+        {
+          "fields": {
+            "abillist": "A11G,A10T,A0LJ,A0LI,A0IQ,Argl",
+            "isbldg": "1",
+            "name": "TRIGSTR_17212",
+            "targs1": "",
+            "tip": "TRIGSTR_20617",
+            "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff1|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deСущность Страха|cffced4da.|r",
+            "weapson": "0"
+          },
+          "id": "h0HZ",
+          "name": "|cffe4cfa3Забытый|r"
+        },
+        {
+          "fields": {
+            "abillist": "A1KB,A11G,A10T,A0LJ,A0LI,A0IQ,Argl",
+            "isbldg": "1",
+            "name": "TRIGSTR_25352",
+            "targs1": "",
+            "tip": "TRIGSTR_25353",
+            "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff2|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n- |cffa9c7deЗащита столицы|cffced4da: аура, ослабляющая броню ближайших противников.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deОбитель Кошмаров|cffced4da.|r",
+            "weapson": "0"
+          },
+          "id": "h0I7",
+          "name": "|cffe4cfa3Сущность Страха|r"
+        },
+        {
+          "fields": {
+            "abillist": "A11G,A10T,A0LJ,A0LI,A0IQ,Argl",
+            "isbldg": "1",
+            "name": "TRIGSTR_25355",
+            "targs1": "",
+            "tip": "TRIGSTR_25356",
+            "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff3|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|r",
+            "weapson": "0"
+          },
+          "id": "h0I8",
+          "name": "|cffe4cfa3Обитель Кошмаров|r"
+        },
+        {
+          "fields": {
+            "abillist": "ACce",
+            "isbldg": "0",
+            "name": "TRIGSTR_14843",
+            "targs1": "ground,structure,debris,item,ward",
+            "tip": "",
+            "ubertip": "Жуткое щупальце из морской пучины. |n|n|cffffcc00Атакует наземные цели.|r",
+            "weapson": "1"
+          },
+          "id": "n04M",
+          "name": "|cff806480Щупальце Йог-сарона|r"
+        }
+      ],
+      "ok": true,
+      "schema_version": 1,
+      "tool": "HiveWE_cli",
+      "type": "unit"
+    },
+    {
+      "command": "get-objects-bulk",
+      "count": 1,
+      "map": "F:\\Gemini_23Race\\map.w3x",
+      "missing": [],
+      "objects": [
+        {
+          "fields": {
+            "abillist": "A0VG,A0VC,A0VF",
+            "description": "TRIGSTR_15473",
+            "hotkey": "B",
+            "name": "TRIGSTR_14845",
+            "tip": "TRIGSTR_14846",
+            "ubertip": "TRIGSTR_4288"
+          },
+          "id": "I01Q",
+          "name": "Касание безумия"
+        }
+      ],
+      "ok": true,
+      "schema_version": 1,
+      "tool": "HiveWE_cli",
+      "type": "item"
+    }
+  ],
+  "strings": [
+    {
+      "rawcode": "A0LJ",
+      "field": "name",
+      "before": "Обмен |cff00ff00Дерева |rна |cffffff00Золото|r",
+      "after": "|cffe4cfa3Обмен древесины на золото|r"
+    },
+    {
+      "rawcode": "A0LJ",
+      "field": "tip1",
+      "before": "Обмен |cff00ff00Дерева |rна |cffffff00Золото|r",
+      "after": "|cffe4cfa3Обмен древесины на золото|r (|cffffffffA|r)"
+    },
+    {
+      "rawcode": "A0LJ",
+      "field": "ubertip1",
+      "before": "Отнимает у игрока |cff228722500 дерева|r, но добавляет |cffffd700100 золота|r.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает |cffe69a8d500|cffced4da древесины на |cffc8e087100|cffced4da золота.|r"
+    },
+    {
+      "rawcode": "A0LI",
+      "field": "name",
+      "before": "Обмен |cffffff00Золота |rна |cff00ff00Дерево|r",
+      "after": "|cffe4cfa3Обмен золота на древесину|r"
+    },
+    {
+      "rawcode": "A0LI",
+      "field": "tip1",
+      "before": "Обмен |cffffff00Золота |rна |cff00ff00Дерево|r",
+      "after": "|cffe4cfa3Обмен золота на древесину|r (|cffffffffS|r)"
+    },
+    {
+      "rawcode": "A0LI",
+      "field": "ubertip1",
+      "before": "Отнимает у игрока|cffffd700 500 золота|r, но добавляет |cff228722100 дерева|r.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает |cffe69a8d500|cffced4da золота на |cffc8e087100|cffced4da древесины.|r"
+    },
+    {
+      "rawcode": "A0IQ",
+      "field": "name",
+      "before": "|cffffdcb4Обозначить столицу|r",
+      "after": "|cffe4cfa3Назначение столицы|r"
+    },
+    {
+      "rawcode": "A0IQ",
+      "field": "tip1",
+      "before": "|cffffdcb4Обозначить столицу|r",
+      "after": "|cffe4cfa3Назначение столицы|r (|cffffffffX|r)"
+    },
+    {
+      "rawcode": "A0IQ",
+      "field": "ubertip1",
+      "before": "Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Назначает это здание столицей в соответствующем режиме игры. Завершает строительство, устанавливает |cffffffff10000|cffced4da максимального и текущего здоровья и |cffffffff30|cffced4da брони. Положение столицы становится видно всем игрокам. Она получает Антимагическую броню и Неуязвимость столицы.|n|n|cffe6c07bПосле назначения кнопка становится недоступной.|cffced4da|r"
+    },
+    {
+      "rawcode": "Argl",
+      "field": "name",
+      "before": "Вернуть золото и древесину",
+      "after": "|cffe4cfa3Приём ресурсов|r"
+    },
+    {
+      "rawcode": "Argl",
+      "field": "tip1",
+      "before": "",
+      "after": "|cffe4cfa3Приём ресурсов|r"
+    },
+    {
+      "rawcode": "Argl",
+      "field": "ubertip1",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Позволяет рабочим сдавать в это здание добытые золото и древесину.|r"
+    },
+    {
+      "rawcode": "ANha",
+      "field": "name",
+      "before": "Добывать ресурсы",
+      "after": "|cffe4cfa3Добыча ресурсов|r"
+    },
+    {
+      "rawcode": "ANha",
+      "field": "tip1",
+      "before": "Добывать ресурсы",
+      "after": "|cffe4cfa3Добыча ресурсов|r (|cffffffffG|r)"
+    },
+    {
+      "rawcode": "ANha",
+      "field": "ubertip1",
+      "before": "Добывает золото из рудников и древесину из деревьев.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Добывает золото из рудников и древесину из деревьев. За одну доставку переносит до |cffffffff10|cffced4da золота или |cffffffff30|cffced4da древесины. Объём переносимой древесины может быть увеличен исследованиями.|r"
+    },
+    {
+      "rawcode": "Arst",
+      "field": "name",
+      "before": "Ремонт",
+      "after": "|cffe4cfa3Ремонт|r"
+    },
+    {
+      "rawcode": "Arst",
+      "field": "tip1",
+      "before": "Ремонт",
+      "after": "|cffe4cfa3Ремонт|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "Arst",
+      "field": "ubertip1",
+      "before": "Ремонтирует здания и технику за счет ресурсов.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье дружественных зданий и механизмов, расходуя золото и древесину. Затраты зависят от ремонтной стоимости цели и восстановленного здоровья. Не действует на Древних.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "rawcode": "Arst",
+      "field": "untip1",
+      "before": "|cffc3dbffПКМ – включить автоприменение.|r",
+      "after": "|cffe4cfa3Ремонт|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "Arst",
+      "field": "unubertip1",
+      "before": "|cffc3dbffПКМ – отключить автоприменение.|r",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье дружественных зданий и механизмов, расходуя золото и древесину. Затраты зависят от ремонтной стоимости цели и восстановленного здоровья. Не действует на Древних.|n|n|cffa6afb8Автоприменение:|cffced4da переключается правой кнопкой мыши.|r"
+    },
+    {
+      "rawcode": "A1KB",
+      "field": "name",
+      "before": "Защита столицы",
+      "after": "|cffe4cfa3Защита столицы|r"
+    },
+    {
+      "rawcode": "A1KB",
+      "field": "tip1",
+      "before": "Защита столицы",
+      "after": "|cffe4cfa3Защита столицы|r"
+    },
+    {
+      "rawcode": "A1KB",
+      "field": "ubertip1",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da В радиусе |cffffffff450|cffced4da снижает восстановление здоровья органических врагов на |cffffffff2,5%|cffced4da их максимального здоровья в секунду. Действует на наземные и воздушные цели.|r"
+    },
+    {
+      "rawcode": "A15N",
+      "field": "name",
+      "before": "Зона ремонта",
+      "after": "|cffe4cfa3Зона ремонта|r"
+    },
+    {
+      "rawcode": "A15N",
+      "field": "tip1",
+      "before": "Зона ремонта",
+      "after": "|cffe4cfa3Зона ремонта|r"
+    },
+    {
+      "rawcode": "A15N",
+      "field": "ubertip1",
+      "before": "Восстанавливает здоровье механическим юнитам поблизости.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает восстановление здоровья дружественных наземных механизмов в радиусе |cffffffff550|cffced4da на |cffc8e0872,5|cffced4da ед. в секунду.|r"
+    },
+    {
+      "rawcode": "A0I6",
+      "field": "name",
+      "before": "|cfffa9696Антимагическая броня|r",
+      "after": "|cffe4cfa3Антимагическая броня|r"
+    },
+    {
+      "rawcode": "A0I6",
+      "field": "tip1",
+      "before": "|cfffa9696Антимагическая броня|r",
+      "after": "|cffe4cfa3Антимагическая броня|r"
+    },
+    {
+      "rawcode": "A0I6",
+      "field": "ubertip1",
+      "before": "Уменьшает урон от способностей и магических атак на 80%",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает получаемый урон от заклинаний на |cffc8e08780%|cffced4da.|r"
+    },
+    {
+      "rawcode": "A145",
+      "field": "name",
+      "before": "Неуязвимость столицы",
+      "after": "|cffe4cfa3Неуязвимость столицы|r"
+    },
+    {
+      "rawcode": "A145",
+      "field": "tip1",
+      "before": "Неуязвимость столицы",
+      "after": "|cffe4cfa3Неуязвимость столицы|r (|cffffffffC|r)"
+    },
+    {
+      "rawcode": "A145",
+      "field": "ubertip1",
+      "before": "Способность, позволяющаяя спасти столицу от неожиданной атаки, однако имеющая долгую перезарядку.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Делает столицу неуязвимой на |cffffffff30|cffced4da сек. Восстановление: |cffffffff360|cffced4da сек.|r"
+    },
+    {
+      "rawcode": "A145",
+      "field": "untip1",
+      "before": "Неуязвимость столицы",
+      "after": "|cffe4cfa3Неуязвимость столицы|r (|cffffffffC|r)"
+    },
+    {
+      "rawcode": "A145",
+      "field": "unubertip1",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Делает столицу неуязвимой на |cffffffff30|cffced4da сек. Восстановление: |cffffffff360|cffced4da сек.|r"
+    },
+    {
+      "rawcode": "A0VG",
+      "field": "name",
+      "before": "Бонус к характеристикам героя",
+      "after": "|cffe4cfa3Дар Йогг`Сарона|r"
+    },
+    {
+      "rawcode": "A0VG",
+      "field": "tip1",
+      "before": "",
+      "after": "|cffe4cfa3Дар Йогг`Сарона|r"
+    },
+    {
+      "rawcode": "A0VG",
+      "field": "ubertip1",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт герою |cffc8e087+15|cffced4da к силе, ловкости и интеллекту.|r"
+    },
+    {
+      "rawcode": "A0VC",
+      "field": "name",
+      "before": "Касание безумия",
+      "after": "|cffe4cfa3Касание безумия|r"
+    },
+    {
+      "rawcode": "A0VC",
+      "field": "tip1",
+      "before": "",
+      "after": "|cffe4cfa3Касание безумия|r"
+    },
+    {
+      "rawcode": "A0VC",
+      "field": "ubertip1",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает заклинания предмета.|n|n|cffa6afb8Содержит:|cffced4da|n- |cffa9c7deТёмное усиление|cffced4da: временно повышает урон союзников.|n- |cffa9c7deПорождение щупальца|cffced4da: призывает Щупальце Йогг`Сарона.|r"
+    },
+    {
+      "rawcode": "A0VD",
+      "field": "name",
+      "before": "Темное усиление",
+      "after": "|cffe4cfa3Тёмное усиление|r"
+    },
+    {
+      "rawcode": "A0VD",
+      "field": "tip1",
+      "before": "Темное усиление",
+      "after": "|cffe4cfa3Тёмное усиление|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "A0VD",
+      "field": "ubertip1",
+      "before": "+<A0VD,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da На |cffffffff45|cffced4da сек. повышает урон от атак союзников в радиусе |cffffffff500|cffced4da на |cffc8e08735%|cffced4da. Действует также на владельца.|r"
+    },
+    {
+      "rawcode": "A0VE",
+      "field": "name",
+      "before": "Порождение щупальца",
+      "after": "|cffe4cfa3Порождение щупальца|r"
+    },
+    {
+      "rawcode": "A0VE",
+      "field": "tip1",
+      "before": "Порождение щупальца",
+      "after": "|cffe4cfa3Порождение щупальца|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "A0VE",
+      "field": "ubertip1",
+      "before": "Поражает врага могучим щупальцем.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает одно |cffa9c7deЩупальце Йогг`Сарона|cffced4da на |cffffffff180|cffced4da сек. Оно атакует наземные цели и владеет Рассекающим ударом.|r"
+    },
+    {
+      "rawcode": "A0VF",
+      "field": "name",
+      "before": "Аура отголоска Йогг'Сарона",
+      "after": "|cffe4cfa3Аура отголоска Йогг`Сарона|r"
+    },
+    {
+      "rawcode": "A0VF",
+      "field": "tip1",
+      "before": "\"Вампирическая аура [|cffffcc001-й уровень|r]\"",
+      "after": "|cffe4cfa3Аура отголоска Йогг`Сарона|r"
+    },
+    {
+      "rawcode": "A0VF",
+      "field": "ubertip1",
+      "before": "\"Находящиеся рядом союзники ближнего боя восполняют здоровье в объеме <AUav,DataA1,%>% от наносимого урона от атак.\"",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Органические союзники ближнего боя в радиусе |cffffffff1500|cffced4da восстанавливают здоровье в размере |cffc8e08710%|cffced4da урона своих атак. Действует также на владельца, если он атакует в ближнем бою.|r"
+    },
+    {
+      "rawcode": "h0HZ",
+      "field": "ubertip",
+      "before": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff1|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deСущность Страха|cffced4da.|r",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff1|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deНазначение столицы|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deСущность Страха|cffced4da.|r"
+    },
+    {
+      "rawcode": "h0I7",
+      "field": "ubertip",
+      "before": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff2|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n- |cffa9c7deЗащита столицы|cffced4da: аура, ослабляющая броню ближайших противников.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deОбитель Кошмаров|cffced4da.|r",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff2|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deНазначение столицы|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n- |cffa9c7deЗащита столицы|cffced4da: аура, снижающая восстановление здоровья ближайших органических противников.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deОбитель Кошмаров|cffced4da.|r"
+    },
+    {
+      "rawcode": "h0I8",
+      "field": "ubertip",
+      "before": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff3|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|r",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff3|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПорождение придатка|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deНазначение столицы|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|r"
+    },
+    {
+      "rawcode": "n04M",
+      "field": "name",
+      "before": "|cff806480Щупальце Йог-сарона|r",
+      "after": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+    },
+    {
+      "rawcode": "n04M",
+      "field": "tip",
+      "before": "",
+      "after": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+    },
+    {
+      "rawcode": "n04M",
+      "field": "ubertip",
+      "before": "Жуткое щупальце из морской пучины. |n|n|cffffcc00Атакует наземные цели.|r",
+      "after": "|cffa6afb8ЮНИТ:|cffced4da Щупальце, призываемое Касанием безумия для наземного боя.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРассекающий удар|cffced4da: атаки задевают врагов рядом с основной целью.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "I01Q",
+      "field": "name",
+      "before": "Касание безумия",
+      "after": "|cffe4cfa3Касание безумия|r"
+    },
+    {
+      "rawcode": "I01Q",
+      "field": "tip",
+      "before": "Касание безумия",
+      "after": "|cffe4cfa3Касание безумия|r (|cffffffffB|r)"
+    },
+    {
+      "rawcode": "I01Q",
+      "field": "ubertip",
+      "before": "Сфера, в которой содержится часть энергии Древнего Бога Йогг'Сарона. Можно использовать для применения смертоносных заклинаний.\nГерой получает 15 ко всем характеристикам и ауру.",
+      "after": "|cffa6afb8ПРЕДМЕТ:|cffced4da Частица силы Йогг`Сарона. Даёт герою |cffc8e087+15|cffced4da к силе, ловкости и интеллекту.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТёмное усиление|cffced4da: на |cffffffff45|cffced4da сек. повышает урон союзников в радиусе |cffffffff500|cffced4da на |cffc8e08735%|cffced4da.|n- |cffa9c7deПорождение щупальца|cffced4da: создаёт Щупальце Йогг`Сарона на |cffffffff180|cffced4da сек.|n- |cffa9c7deАура отголоска Йогг`Сарона|cffced4da: союзники ближнего боя в радиусе |cffffffff1500|cffced4da получают |cffc8e08710%|cffced4da вампиризма.|n|nДля применения заклинаний откройте меню предмета.|r"
+    },
+    {
+      "rawcode": "I01Q",
+      "field": "description",
+      "before": "Касание безумия",
+      "after": "|cffa6afb8ПРЕДМЕТ:|cffced4da Даёт герою |cffc8e087+15|cffced4da ко всем характеристикам, ауру вампиризма и два заклинания: Тёмное усиление и Порождение щупальца.|r"
+    }
+  ],
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "in_game_checked": false,
+  "evidence": [
+    "02_game_modes.lua: MakeCapital / Trig_MakeStolica_Actions",
+    "OldGods.lua: Trig_Qogg_Die_Actions",
+    "Installed Warcraft III AbilityMetaData: Aoar Amount of Hit Points Regenerated, Percentage"
+  ],
+  "remaining": [
+    "Проверить ремонт, обмен, назначение столицы и предмет в игре",
+    "Общие здания, морские исследования и эффекты",
+    "Остальные сообщения и строки Lua"
+  ]
+}

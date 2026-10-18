@@ -1,0 +1,1026 @@
+{
+  "selection": {
+    "A0HV": {
+      "hotkey": 4246,
+      "name": 38877,
+      "tip1": 38878,
+      "ubertip1": 25783
+    }
+  },
+  "buildings": {
+    "n014": {
+      "hotkey": 2116,
+      "name": 8527,
+      "tip": 1236,
+      "ubertip": 41914
+    },
+    "u00F": {
+      "hotkey": 7203,
+      "name": 8554,
+      "tip": 1234,
+      "ubertip": 41907
+    },
+    "u00G": {
+      "hotkey": 7268,
+      "name": 8555,
+      "tip": 1235,
+      "ubertip": 41908
+    },
+    "u00H": {
+      "hotkey": 1646,
+      "name": 8556,
+      "tip": 12019,
+      "ubertip": 41909
+    },
+    "u00I": {
+      "hotkey": 7513,
+      "name": 8557,
+      "tip": 40236,
+      "ubertip": 41910
+    },
+    "u00J": {
+      "hotkey": 2538,
+      "name": 8558,
+      "tip": 40237,
+      "ubertip": 41911
+    },
+    "u00K": {
+      "hotkey": 1516,
+      "name": 8559,
+      "tip": 13004,
+      "ubertip": 13016
+    },
+    "u00L": {
+      "hotkey": 3400,
+      "name": 8560,
+      "tip": 13006,
+      "ubertip": 41517
+    },
+    "u00M": {
+      "hotkey": 4034,
+      "name": 8561,
+      "tip": 13007,
+      "ubertip": 41912
+    },
+    "u00N": {
+      "hotkey": 1866,
+      "name": 8562,
+      "tip": 12020,
+      "ubertip": 41913
+    },
+    "n012": {
+      "hotkey": 2316,
+      "name": 8519,
+      "tip": 12017,
+      "ubertip": 41832
+    },
+    "u03B": {
+      "hotkey": 9566,
+      "name": 2658,
+      "tip": 8999,
+      "ubertip": 13000
+    },
+    "u017": {
+      "hotkey": 1906,
+      "name": 9890,
+      "tip": 9891,
+      "ubertip": 13021
+    }
+  },
+  "heroes": {
+    "U00O": {
+      "awakentip": 41840,
+      "hotkey": 7620,
+      "name": 24784,
+      "propernames": 41834,
+      "revivetip": 41842,
+      "tip": 41841,
+      "ubertip": 31686
+    },
+    "U00V": {
+      "awakentip": 9056,
+      "hotkey": 2610,
+      "name": 9055,
+      "propernames": 9058,
+      "revivetip": 9057,
+      "tip": 1237,
+      "ubertip": 31687
+    },
+    "U00U": {
+      "awakentip": 9001,
+      "hotkey": 4175,
+      "name": 18652,
+      "propernames": 41829,
+      "revivetip": 41839,
+      "tip": 15177,
+      "ubertip": 31685
+    },
+    "U030": {
+      "awakentip": 25109,
+      "hotkey": 8723,
+      "name": 40365,
+      "propernames": 25220,
+      "revivetip": 25118,
+      "tip": 27913,
+      "ubertip": 29594
+    },
+    "U014": {
+      "awakentip": 20990,
+      "hotkey": 2245,
+      "name": 20994,
+      "propernames": 9111,
+      "revivetip": 20991,
+      "tip": 20993,
+      "ubertip": 20992
+    },
+    "CM00": {
+      "awakentip": 1229,
+      "hotkey": 8816,
+      "name": 1225,
+      "propernames": 1226,
+      "revivetip": 1228,
+      "tip": 1227,
+      "ubertip": 40360
+    },
+    "FL00": {
+      "awakentip": 1224,
+      "hotkey": 8755,
+      "name": 701,
+      "propernames": 703,
+      "revivetip": 708,
+      "tip": 707,
+      "ubertip": 40358
+    }
+  },
+  "units": {
+    "u00P": {
+      "hotkey": 2120,
+      "name": 8530,
+      "ubertip": 41915
+    },
+    "n011": {
+      "hotkey": 2005,
+      "name": 8517,
+      "tip": 8675,
+      "ubertip": 38398
+    },
+    "n013": {
+      "hotkey": 3370,
+      "name": 30586,
+      "tip": 30604,
+      "ubertip": 38399
+    },
+    "u03E": {
+      "hotkey": 8704,
+      "name": 8520,
+      "tip": 33298,
+      "ubertip": 42347
+    },
+    "u02B": {
+      "hotkey": 5834,
+      "name": 3848,
+      "tip": 3849,
+      "ubertip": 3954
+    },
+    "u00A": {
+      "hotkey": 3371,
+      "name": 8523,
+      "tip": 8607,
+      "ubertip": 38400
+    },
+    "u00B": {
+      "hotkey": 2080,
+      "name": 8524,
+      "tip": 8679,
+      "ubertip": 38401
+    },
+    "u00D": {
+      "hotkey": 2317,
+      "name": 8526,
+      "tip": 8681,
+      "ubertip": 38403
+    },
+    "u00C": {
+      "hotkey": 2087,
+      "name": 8525,
+      "tip": 8680,
+      "ubertip": 38402
+    },
+    "u008": {
+      "hotkey": 2584,
+      "name": 31243,
+      "tip": 8682,
+      "ubertip": 33326
+    },
+    "u00E": {
+      "hotkey": 3438,
+      "name": 8568,
+      "tip": 8683,
+      "ubertip": 41921
+    },
+    "u034": {
+      "hotkey": 7800,
+      "name": 39891,
+      "tip": 39892,
+      "ubertip": 42345
+    },
+    "ft00": {
+      "name": 39427,
+      "tip": 3806
+    },
+    "ft01": {
+      "tip": 630
+    },
+    "n07H": {
+      "name": 22330,
+      "tip": 12380,
+      "ubertip": 12381
+    },
+    "u03D": {
+      "name": 632,
+      "tip": 637
+    },
+    "n016": {
+      "name": 8684
+    },
+    "n017": {
+      "name": 12337
+    }
+  },
+  "researches": {
+    "R0DQ": {
+      "hotkey1": 36994,
+      "hotkey2": 37415,
+      "hotkey3": 36987,
+      "hotkey4": 36993,
+      "hotkey5": 38438,
+      "hotkey6": 38444,
+      "name1": 3216,
+      "name2": 3217,
+      "name3": 3218,
+      "name4": 3219,
+      "name5": 16877,
+      "name6": 16891,
+      "tip1": 3222,
+      "tip2": 3223,
+      "tip3": 3224,
+      "tip4": 3225,
+      "tip5": 20620,
+      "tip6": 20786,
+      "ubertip1": 21585,
+      "ubertip2": 21344,
+      "ubertip3": 21455,
+      "ubertip4": 21467,
+      "ubertip5": 21507,
+      "ubertip6": 21508
+    },
+    "R05I": {
+      "hotkey1": 26596,
+      "hotkey2": 26597,
+      "hotkey3": 26598,
+      "hotkey4": 26611,
+      "name1": 8706,
+      "name2": 8707,
+      "name3": 8714,
+      "name4": 8715,
+      "tip1": 8708,
+      "tip2": 8709,
+      "tip3": 8716,
+      "tip4": 8717,
+      "ubertip1": 29577,
+      "ubertip2": 29578,
+      "ubertip3": 29579,
+      "ubertip4": 29580
+    },
+    "R05J": {
+      "hotkey1": 27507,
+      "hotkey2": 27744,
+      "hotkey3": 27775,
+      "hotkey4": 27776,
+      "name1": 8724,
+      "name2": 8725,
+      "name3": 8732,
+      "name4": 8733,
+      "tip1": 8726,
+      "tip2": 8727,
+      "tip3": 8734,
+      "tip4": 8735,
+      "ubertip1": 29581,
+      "ubertip2": 29582,
+      "ubertip3": 29583,
+      "ubertip4": 29584
+    },
+    "R05N": {
+      "hotkey1": 35702,
+      "hotkey2": 35747,
+      "hotkey3": 35922,
+      "hotkey4": 35748,
+      "hotkey5": 35923,
+      "hotkey6": 35924,
+      "name1": 8844,
+      "name2": 8845,
+      "name3": 8846,
+      "name4": 8849,
+      "name5": 8848,
+      "name6": 8847,
+      "tip1": 8850,
+      "tip2": 8851,
+      "tip3": 8852,
+      "tip4": 8856,
+      "tip5": 8855,
+      "tip6": 8854,
+      "ubertip1": 8853,
+      "ubertip4": 8857,
+      "ubertip5": 8858,
+      "ubertip6": 8859
+    },
+    "R05O": {
+      "hotkey1": 34531,
+      "hotkey2": 34532,
+      "hotkey3": 34533,
+      "hotkey4": 34601,
+      "hotkey5": 34613,
+      "hotkey6": 34622,
+      "name1": 8877,
+      "name2": 8876,
+      "name3": 8874,
+      "name4": 8875,
+      "name5": 8873,
+      "name6": 8872,
+      "tip1": 8880,
+      "tip2": 8879,
+      "tip3": 8878,
+      "tip4": 8883,
+      "tip5": 8882,
+      "tip6": 8881,
+      "ubertip4": 8884,
+      "ubertip5": 8885,
+      "ubertip6": 8886
+    },
+    "R05P": {
+      "hotkey1": 12892,
+      "hotkey2": 12928,
+      "hotkey3": 12927,
+      "hotkey4": 13037,
+      "hotkey5": 13038,
+      "hotkey6": 13080,
+      "name1": 8887,
+      "name2": 8888,
+      "name3": 8889,
+      "name4": 8892,
+      "name5": 8891,
+      "name6": 8890,
+      "tip1": 8895,
+      "tip2": 8894,
+      "tip3": 8893,
+      "tip4": 8898,
+      "tip5": 8897,
+      "tip6": 8896,
+      "ubertip1": 5867,
+      "ubertip2": 5868,
+      "ubertip3": 5869,
+      "ubertip4": 558,
+      "ubertip5": 5859,
+      "ubertip6": 5860
+    },
+    "R05Q": {
+      "hotkey1": 11782,
+      "hotkey2": 11783,
+      "hotkey3": 11808,
+      "hotkey4": 11809,
+      "hotkey5": 11810,
+      "hotkey6": 11811,
+      "name1": 8908,
+      "name2": 8909,
+      "name3": 8910,
+      "name4": 8913,
+      "name5": 8912,
+      "name6": 8911,
+      "tip1": 8914,
+      "tip2": 8915,
+      "tip3": 8916,
+      "tip4": 8919,
+      "tip5": 8918,
+      "tip6": 8917,
+      "ubertip1": 9709,
+      "ubertip2": 10748,
+      "ubertip3": 12064,
+      "ubertip4": 6453,
+      "ubertip5": 6454,
+      "ubertip6": 6455
+    },
+    "R05L": {
+      "hotkey1": 27777,
+      "name1": 8759,
+      "tip1": 8760,
+      "ubertip1": 8761
+    },
+    "R05H": {
+      "hotkey1": 26595,
+      "name1": 8705,
+      "tip1": 8824,
+      "ubertip1": 13010
+    },
+    "R05E": {
+      "hotkey1": 11780,
+      "hotkey2": 11781,
+      "name1": 8639,
+      "name2": 8640,
+      "tip1": 8641,
+      "tip2": 8642
+    },
+    "R05F": {
+      "hotkey1": 17562,
+      "hotkey2": 17563,
+      "name1": 8643,
+      "name2": 8644,
+      "tip1": 8645,
+      "tip2": 8646,
+      "ubertip1": 8647,
+      "ubertip2": 8648
+    },
+    "R05G": {
+      "hotkey1": 12726,
+      "hotkey2": 12728,
+      "name1": 8657,
+      "name2": 8658,
+      "tip1": 8659,
+      "tip2": 8660,
+      "ubertip1": 31439,
+      "ubertip2": 39817
+    },
+    "R05A": {
+      "hotkey1": 27410,
+      "name1": 8628,
+      "tip1": 8629,
+      "ubertip1": 8630
+    },
+    "R05R": {
+      "hotkey1": 11812,
+      "name1": 8929,
+      "tip1": 8930,
+      "ubertip1": 9632
+    },
+    "R05D": {
+      "hotkey1": 25943,
+      "name1": 8638,
+      "tip1": 8637
+    },
+    "R05C": {
+      "hotkey1": 12718,
+      "name1": 8634,
+      "tip1": 8635,
+      "ubertip1": 8636
+    },
+    "R07I": {
+      "name1": 10664,
+      "tip1": 10665,
+      "ubertip1": 20116
+    },
+    "R0J5": {
+      "name1": 34715,
+      "tip1": 34716,
+      "ubertip1": 34717
+    }
+  },
+  "hero_abilities": {
+    "A0CO": {
+      "hotkey": 13735,
+      "name": 9006,
+      "researchhotkey": 13734,
+      "researchtip": 9007,
+      "researchubertip": 15504,
+      "tip1": 15505,
+      "tip2": 15506,
+      "tip3": 15507,
+      "tip4": 15502,
+      "ubertip1": 15508,
+      "ubertip2": 15509,
+      "ubertip3": 15510,
+      "ubertip4": 15503
+    },
+    "A0CP": {
+      "hotkey": 13794,
+      "name": 9010,
+      "researchhotkey": 13825,
+      "researchtip": 1267,
+      "researchubertip": 15514,
+      "tip1": 9011,
+      "tip2": 9012,
+      "tip3": 9013,
+      "tip4": 9014,
+      "ubertip1": 15515,
+      "ubertip2": 15511,
+      "ubertip3": 15512,
+      "ubertip4": 15513,
+      "untip1": 9022,
+      "untip2": 9023,
+      "untip3": 9024,
+      "untip4": 9025,
+      "unubertip1": 6545,
+      "unubertip2": 8505,
+      "unubertip3": 8506,
+      "unubertip4": 8548
+    },
+    "A0CR": {
+      "hotkey": 15694,
+      "name": 9066,
+      "researchhotkey": 15691,
+      "researchtip": 9067,
+      "researchubertip": 15523,
+      "tip1": 9070,
+      "tip2": 9071,
+      "tip3": 9072,
+      "tip4": 9068,
+      "ubertip1": 15520,
+      "ubertip2": 15521,
+      "ubertip3": 15522,
+      "ubertip4": 15519
+    },
+    "A0CN": {
+      "hotkey": 12911,
+      "name": 8992,
+      "researchhotkey": 12867,
+      "researchtip": 8993,
+      "researchubertip": 15500,
+      "tip1": 8994,
+      "tip2": 8995,
+      "ubertip1": 13587,
+      "ubertip2": 13547
+    },
+    "AQ95": {
+      "hotkey": 32916,
+      "researchhotkey": 32915,
+      "tip2": 41933,
+      "ubertip2": 41934
+    },
+    "UN99": {
+      "hotkey": 31112,
+      "researchhotkey": 31111,
+      "tip4": 35526,
+      "ubertip4": 35527
+    },
+    "A0CS": {
+      "hotkey": 13737,
+      "name": 9073,
+      "researchhotkey": 13736,
+      "researchtip": 9074,
+      "researchubertip": 14093,
+      "tip1": 9075,
+      "tip2": 9076,
+      "tip3": 9077,
+      "tip4": 9078,
+      "ubertip1": 14889,
+      "ubertip2": 15034,
+      "ubertip3": 15056,
+      "ubertip4": 21830
+    },
+    "AQ11": {
+      "hotkey": 31472,
+      "researchhotkey": 31471
+    },
+    "A0CK": {
+      "hotkey": 13729,
+      "name": 8939,
+      "researchhotkey": 13733,
+      "researchtip": 20090,
+      "researchubertip": 15484,
+      "tip1": 8940,
+      "tip2": 8965,
+      "tip3": 15107,
+      "tip4": 15108,
+      "ubertip1": 15480,
+      "ubertip2": 15481,
+      "ubertip3": 15482,
+      "ubertip4": 15483,
+      "unhotkey": 13730,
+      "untip2": 13441,
+      "untip3": 13442,
+      "untip4": 13504,
+      "unubertip2": 13475,
+      "unubertip3": 13507,
+      "unubertip4": 13508
+    },
+    "A0CM": {
+      "hotkey": 15685,
+      "name": 8971,
+      "researchhotkey": 15631,
+      "researchtip": 41279,
+      "researchubertip": 41305,
+      "tip1": 8972,
+      "tip2": 8973,
+      "tip3": 8974,
+      "tip4": 8975,
+      "ubertip1": 41290,
+      "ubertip2": 41291,
+      "ubertip3": 41292,
+      "ubertip4": 41293,
+      "untip1": 8976,
+      "untip2": 8981,
+      "untip3": 8982,
+      "untip4": 8983,
+      "unubertip1": 8977,
+      "unubertip2": 8978,
+      "unubertip3": 8979,
+      "unubertip4": 8980
+    },
+    "A0BW": {
+      "hotkey": 32914,
+      "name": 41617,
+      "researchhotkey": 32871,
+      "researchtip": 41665,
+      "researchubertip": 41716,
+      "tip1": 41843,
+      "tip2": 41844,
+      "ubertip1": 41739,
+      "ubertip2": 41628
+    },
+    "A1Q7": {
+      "hotkey": 31384,
+      "researchhotkey": 31382
+    },
+    "A1LI": {
+      "hotkey": 28540,
+      "name": 30949,
+      "researchhotkey": 28539,
+      "researchtip": 32930,
+      "researchubertip": 36134,
+      "tip1": 33507,
+      "tip2": 34354,
+      "tip3": 34687,
+      "tip4": 38108,
+      "ubertip1": 36889,
+      "ubertip2": 37032,
+      "ubertip3": 38107,
+      "ubertip4": 38658
+    },
+    "A1LJ": {
+      "name": 38827,
+      "researchhotkey": 29093,
+      "researchtip": 38828,
+      "tip1": 38845,
+      "tip2": 38847,
+      "tip3": 38848,
+      "tip4": 38800,
+      "ubertip1": 38960,
+      "ubertip2": 38961,
+      "ubertip3": 38962,
+      "ubertip4": 38959
+    },
+    "A1LL": {
+      "hotkey": 28755,
+      "name": 38932,
+      "researchhotkey": 28723,
+      "researchtip": 38933,
+      "tip1": 38934,
+      "tip2": 38935,
+      "tip3": 38936,
+      "tip4": 38937,
+      "ubertip1": 38939,
+      "ubertip2": 38940,
+      "ubertip3": 38941,
+      "ubertip4": 38938
+    },
+    "A1LM": {
+      "hotkey": 30488,
+      "name": 38945,
+      "researchhotkey": 30487,
+      "researchtip": 38946,
+      "tip1": 38947,
+      "tip2": 38942,
+      "ubertip2": 38943
+    },
+    "A1LK": {
+      "hotkey": 11505,
+      "name": 39640,
+      "tip1": 39639,
+      "ubertip1": 39641,
+      "unhotkey": 11506
+    },
+    "A0WD": {
+      "hotkey": 20304,
+      "name": 21846,
+      "researchhotkey": 20378,
+      "researchtip": 15316,
+      "researchubertip": 19730,
+      "tip1": 21831,
+      "tip2": 21832,
+      "tip3": 21833,
+      "tip4": 21834,
+      "ubertip1": 15584,
+      "ubertip2": 19726,
+      "ubertip3": 19727,
+      "ubertip4": 19728
+    },
+    "A0CX": {
+      "name": 41306,
+      "researchhotkey": 15755,
+      "researchtip": 41360,
+      "researchubertip": 21838,
+      "tip1": 21014,
+      "tip2": 21015,
+      "tip3": 21016,
+      "tip4": 21017,
+      "ubertip4": 6389
+    },
+    "A0WE": {
+      "hotkey": 19627,
+      "name": 41246,
+      "researchhotkey": 19628,
+      "researchtip": 41407,
+      "researchubertip": 23357,
+      "tip1": 41241,
+      "tip2": 41247,
+      "tip3": 41248,
+      "tip4": 41251,
+      "ubertip1": 23353,
+      "ubertip2": 23354,
+      "ubertip3": 23355,
+      "ubertip4": 23356
+    },
+    "A0CZ": {
+      "hotkey": 13108,
+      "name": 39443,
+      "researchhotkey": 13082,
+      "researchtip": 41405,
+      "tip1": 41438,
+      "tip2": 41471,
+      "ubertip1": 41239,
+      "ubertip2": 41238
+    },
+    "A0WB": {
+      "name": 39497,
+      "tip1": 39498,
+      "tip2": 7837,
+      "tip3": 7838,
+      "tip4": 7839,
+      "tip5": 7840,
+      "tip6": 7848,
+      "ubertip1": 20999,
+      "ubertip2": 10057,
+      "ubertip3": 10658,
+      "ubertip4": 10863,
+      "ubertip5": 10866,
+      "ubertip6": 10420
+    },
+    "A0WC": {
+      "name": 21011,
+      "researchtip": 21010
+    },
+    "A0WF": {},
+    "CM01": {
+      "hotkey": 29597,
+      "researchhotkey": 29596,
+      "tip4": 40147,
+      "ubertip1": 40048,
+      "ubertip2": 40151,
+      "ubertip3": 40152,
+      "ubertip4": 40148
+    },
+    "CM02": {
+      "hotkey": 32027,
+      "researchhotkey": 32025,
+      "tip2": 39677,
+      "ubertip2": 40085
+    },
+    "CM04": {
+      "name": 40094,
+      "researchhotkey": 30439,
+      "tip4": 40095,
+      "ubertip1": 40156,
+      "ubertip2": 10426,
+      "ubertip3": 9201,
+      "ubertip4": 5371
+    },
+    "CM05": {
+      "tip4": 27412,
+      "ubertip1": 40402,
+      "ubertip2": 40403,
+      "ubertip3": 40519,
+      "ubertip4": 35536
+    },
+    "FL01": {
+      "hotkey": 30158,
+      "name": 40067,
+      "researchhotkey": 30157,
+      "tip4": 40132,
+      "ubertip1": 40134,
+      "ubertip2": 40133,
+      "ubertip3": 40169,
+      "ubertip4": 26399,
+      "unhotkey": 30171
+    },
+    "FL02": {
+      "hotkey": 32023,
+      "name": 40118,
+      "researchhotkey": 31884,
+      "tip2": 40136,
+      "ubertip1": 40070,
+      "ubertip2": 40137,
+      "unhotkey": 32024,
+      "untip2": 40135
+    },
+    "FL03": {
+      "hotkey": 29479,
+      "name": 40072,
+      "researchhotkey": 29478,
+      "tip4": 40138,
+      "ubertip1": 40143,
+      "ubertip2": 40142,
+      "ubertip3": 40140,
+      "ubertip4": 40139
+    },
+    "FL04": {
+      "name": 40174,
+      "researchhotkey": 30434,
+      "researchtip": 40180,
+      "researchubertip": 40179,
+      "tip1": 40181,
+      "tip2": 40182,
+      "tip3": 40178,
+      "tip4": 40175,
+      "ubertip1": 40183,
+      "ubertip2": 3594,
+      "ubertip3": 40177,
+      "ubertip4": 40176
+    }
+  },
+  "unit_abilities": {
+    "A0BO": {
+      "name": 8588,
+      "tip1": 8589,
+      "ubertip1": 8590
+    },
+    "A0BP": {
+      "hotkey": 13379,
+      "name": 8592,
+      "tip1": 8593
+    },
+    "A0C5": {
+      "name": 8670,
+      "tip1": 8671
+    },
+    "Amel": {},
+    "Amed": {},
+    "A0C7": {
+      "name": 8688,
+      "tip1": 8689
+    },
+    "A0C8": {
+      "name": 8690,
+      "tip1": 8691
+    },
+    "A0BT": {
+      "hotkey": 13493,
+      "name": 8602,
+      "tip1": 8601,
+      "tip2": 8936,
+      "ubertip1": 22351,
+      "ubertip2": 22473,
+      "unhotkey": 13511,
+      "untip2": 12805,
+      "unubertip2": 13453
+    },
+    "A0BU": {
+      "hotkey": 13789,
+      "name": 8603,
+      "tip1": 8604
+    },
+    "A1PV": {
+      "hotkey": 31027,
+      "name": 17792,
+      "tip1": 20363,
+      "ubertip1": 2596,
+      "unhotkey": 31091
+    },
+    "A0C4": {
+      "name": 8668,
+      "tip1": 8669
+    },
+    "Arpl": {
+      "hotkey": 9108,
+      "name": 1244,
+      "tip1": 1245,
+      "unhotkey": 9109
+    },
+    "Arpm": {
+      "hotkey": 9422,
+      "name": 1242,
+      "tip1": 1243,
+      "unhotkey": 9423
+    },
+    "A0BX": {
+      "name": 8610,
+      "tip1": 8611,
+      "ubertip1": 33330
+    },
+    "unA5": {
+      "hotkey": 29848,
+      "name": 40320,
+      "tip1": 40321,
+      "unhotkey": 29849
+    },
+    "A1PY": {
+      "hotkey": 31381,
+      "name": 41762,
+      "researchhotkey": 31352,
+      "researchtip": 28849,
+      "researchubertip": 32808,
+      "tip1": 41756,
+      "tip2": 28845,
+      "tip3": 28846,
+      "tip4": 28847,
+      "tip5": 28848,
+      "ubertip1": 41777,
+      "ubertip2": 23063,
+      "ubertip3": 28841,
+      "ubertip4": 28842,
+      "ubertip5": 31690
+    },
+    "A0C0": {
+      "hotkey": 13555,
+      "name": 8618,
+      "tip1": 8619,
+      "ubertip1": 20572
+    },
+    "A0C2": {
+      "name": 8651,
+      "tip1": 8652,
+      "ubertip1": 8686
+    },
+    "A1PX": {
+      "hotkey": 31351,
+      "name": 22599,
+      "tip1": 41075,
+      "ubertip1": 40062
+    },
+    "unA0": {
+      "hotkey": 21861,
+      "name": 33334,
+      "tip1": 33338,
+      "ubertip1": 16400
+    },
+    "Aspa": {},
+    "A1N8": {
+      "hotkey": 29728,
+      "name": 8596,
+      "tip1": 8597,
+      "ubertip1": 39903,
+      "unhotkey": 29748,
+      "untip1": 8598
+    },
+    "Arst": {},
+    "Auns": {},
+    "Afra": {},
+    "A0BR": {
+      "name": 42120,
+      "tip1": 41512,
+      "tip2": 42240
+    },
+    "Agyd": {},
+    "Arlm": {},
+    "A0CA": {
+      "hotkey": 13557,
+      "name": 39433,
+      "researchtip": 8770,
+      "tip1": 42125,
+      "ubertip1": 41159
+    },
+    "A0CC": {
+      "hotkey": 13584,
+      "name": 42129,
+      "researchtip": 8782,
+      "tip1": 42166,
+      "ubertip1": 39438
+    },
+    "A1ND": {
+      "hotkey": 30143,
+      "name": 42241,
+      "tip1": 42243,
+      "ubertip1": 41833
+    },
+    "A0CG": {
+      "hotkey": 13793,
+      "name": 42232,
+      "tip1": 42231
+    },
+    "kel0": {
+      "hotkey": 29749,
+      "name": 39346,
+      "researchhotkey": 29850,
+      "researchtip": 39168,
+      "researchubertip": 39288,
+      "tip1": 36995,
+      "tip2": 36996,
+      "tip3": 37808,
+      "tip4": 39061,
+      "ubertip1": 39062,
+      "ubertip2": 39063,
+      "ubertip3": 39064,
+      "ubertip4": 39167
+    },
+    "A1E7": {
+      "name": 32145
+    }
+  }
+}

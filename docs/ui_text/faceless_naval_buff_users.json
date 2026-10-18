@@ -1,0 +1,884 @@
+{
+  "scanned_objects": 4103,
+  "max": 100000,
+  "objects": [
+    {
+      "id": "AEar",
+      "name": "Аура меткости",
+      "code": "AEar",
+      "levels": [
+        {
+          "buffid": "BEar",
+          "dataa": "0.1",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.2",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.3",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.400000",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "AOae",
+      "name": "Аура выносливости",
+      "code": "AOae",
+      "levels": [
+        {
+          "buffid": "BOae",
+          "dataa": "0.1",
+          "datab": "0.05",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.15",
+          "datab": "0.1",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.2",
+          "datab": "0.15",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "AOr2",
+      "name": "Аура выносливости",
+      "code": "AOae",
+      "levels": [
+        {
+          "buffid": "BOae",
+          "dataa": "0.1",
+          "datab": "0.05",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.2",
+          "datab": "0.1",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.3",
+          "datab": "0.15",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.4",
+          "datab": "0.25",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "ACav",
+      "name": "Аура благочестия",
+      "code": "AHad",
+      "levels": [
+        {
+          "buffid": "BHad",
+          "dataa": "3",
+          "datab": "0",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "SCae",
+      "name": "Аура выносливости",
+      "code": "AOae",
+      "levels": [
+        {
+          "buffid": "BOae",
+          "dataa": "0.1",
+          "datab": "0.05",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self"
+        }
+      ]
+    },
+    {
+      "id": "ACat",
+      "name": "Аура меткости",
+      "code": "AEar",
+      "levels": [
+        {
+          "buffid": "BEar",
+          "dataa": "0.1",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "AIad",
+      "name": "",
+      "code": "AHad",
+      "levels": [
+        {
+          "buffid": "BHad",
+          "dataa": "1.5",
+          "datab": "0",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "AIar",
+      "name": "",
+      "code": "AEar",
+      "levels": [
+        {
+          "buffid": "BEar",
+          "dataa": "0.075",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "AIae",
+      "name": "",
+      "code": "AOae",
+      "levels": [
+        {
+          "buffid": "BOae",
+          "dataa": "0.075",
+          "datab": "0.035",
+          "datac": " - ",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "Apsq",
+      "name": "Аура строевого щита",
+      "code": "AHad",
+      "levels": [
+        {
+          "buffid": "BHad",
+          "dataa": "2",
+          "datab": "0",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "A00B",
+      "name": "|cffe4cfa3Тактическое ускорение|r",
+      "code": "Absk",
+      "levels": [
+        {
+          "buffid": "B002",
+          "dataa": "0.400000",
+          "datab": "0.000000",
+          "datac": "0.250000",
+          "datad": "",
+          "targs": ""
+        },
+        {
+          "buffid": "B002",
+          "dataa": "0.500000",
+          "datab": "",
+          "datac": "0.200000",
+          "datad": "",
+          "targs": ""
+        },
+        {
+          "buffid": "B002",
+          "dataa": "0.600000",
+          "datab": "",
+          "datac": "0.150000",
+          "datad": "",
+          "targs": ""
+        }
+      ]
+    },
+    {
+      "id": "A005",
+      "name": "|cffe4cfa3Аура стойкости|r",
+      "code": "AHad",
+      "levels": [
+        {
+          "buffid": "BHad",
+          "dataa": "2",
+          "datab": "0",
+          "datac": "",
+          "datad": "",
+          "targs": "air,friend,ground,invulnerable,mechanical,self,vulnerable"
+        }
+      ]
+    },
+    {
+      "id": "A006",
+      "name": "|cffe4cfa3Аура меткости|r",
+      "code": "AEar",
+      "levels": [
+        {
+          "buffid": "BEar",
+          "dataa": "0.150000",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,friend,ground,invulnerable,mechanical,self,vulnerable"
+        }
+      ]
+    },
+    {
+      "id": "A007",
+      "name": "|cffe4cfa3Аура выносливости|r",
+      "code": "AOae",
+      "levels": [
+        {
+          "buffid": "BOae",
+          "dataa": "0.200000",
+          "datab": "0.05",
+          "datac": "",
+          "datad": "",
+          "targs": "air,friend,ground,invulnerable,mechanical,self,vulnerable"
+        }
+      ]
+    },
+    {
+      "id": "A00N",
+      "name": "|cffe6beaaАура выносливости|r",
+      "code": "AOae",
+      "levels": [
+        {
+          "buffid": "BOae",
+          "dataa": "0.070000",
+          "datab": "0.05",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "A00Z",
+      "name": "|cffe6beaaАура благочестия|r",
+      "code": "AHad",
+      "levels": [
+        {
+          "buffid": "BHad",
+          "dataa": "2.000000",
+          "datab": "0",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "A01H",
+      "name": "|cffe6beaaАура выносливости|r",
+      "code": "AOae",
+      "levels": [
+        {
+          "buffid": "BOae",
+          "dataa": "0.070000",
+          "datab": "0.05",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.110000",
+          "datab": "0.080000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.150000",
+          "datab": "0.110000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.190000",
+          "datab": "0.140000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "A05F",
+      "name": "|cff8cc8a0Аура Верховного Адмирала|r",
+      "code": "AHad",
+      "levels": [
+        {
+          "buffid": "BHad",
+          "dataa": "2",
+          "datab": "0",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BHad",
+          "dataa": "3.5",
+          "datab": "0",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BHad",
+          "dataa": "5",
+          "datab": "0",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BHad",
+          "dataa": "6.000000",
+          "datab": "",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "A094",
+      "name": "|cfff09696Аура страха|r",
+      "code": "AHad",
+      "levels": [
+        {
+          "buffid": "BHad",
+          "dataa": "-2.000000",
+          "datab": "0",
+          "datac": "",
+          "datad": "",
+          "targs": "air,enemies,ground"
+        },
+        {
+          "buffid": "BHad",
+          "dataa": "-3.000000",
+          "datab": "0",
+          "datac": "",
+          "datad": "",
+          "targs": "air,enemies,ground"
+        },
+        {
+          "buffid": "BHad",
+          "dataa": "-4.000000",
+          "datab": "0",
+          "datac": "",
+          "datad": "",
+          "targs": "air,enemies,ground"
+        },
+        {
+          "buffid": "BHad",
+          "dataa": "-5.000000",
+          "datab": "",
+          "datac": "",
+          "datad": "",
+          "targs": "air,enemies,ground"
+        }
+      ]
+    },
+    {
+      "id": "A0BL",
+      "name": "|cffffff00Ускорение",
+      "code": "Absk",
+      "levels": [
+        {
+          "buffid": "B002",
+          "dataa": "0.400000",
+          "datab": "0.000000",
+          "datac": "0.250000",
+          "datad": "",
+          "targs": ""
+        }
+      ]
+    },
+    {
+      "id": "A0FS",
+      "name": "|cffb4dc8cАура меткости|r",
+      "code": "AEar",
+      "levels": [
+        {
+          "buffid": "BEar",
+          "dataa": "0.1",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.2",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.3",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.400000",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "A0OW",
+      "name": "|cffb4dcdcСкорость ветра|r",
+      "code": "AOae",
+      "levels": [
+        {
+          "buffid": "BOae",
+          "dataa": "0.1",
+          "datab": "0.150000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.15",
+          "datab": "0.200000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.2",
+          "datab": "0.250000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.400000",
+          "datab": "0.300000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "A0WS",
+      "name": "|c00ff8e78Аура выносливости|r",
+      "code": "AOae",
+      "levels": [
+        {
+          "buffid": "BOae",
+          "dataa": "0.1",
+          "datab": "0.200000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "A11R",
+      "name": "|cffe6beaaАура командира|r",
+      "code": "AEar",
+      "levels": [
+        {
+          "buffid": "BEar",
+          "dataa": "0.070000",
+          "datab": "1",
+          "datac": "0",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.100000",
+          "datab": "1",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.150000",
+          "datab": "1",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.300000",
+          "datab": "1",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "A189",
+      "name": "|cffe6c8b4Аура меткости|r",
+      "code": "AEar",
+      "levels": [
+        {
+          "buffid": "BEar",
+          "dataa": "0.300000",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "A1EC",
+      "name": "|cffb4dcdcАура меткости|r",
+      "code": "AEar",
+      "levels": [
+        {
+          "buffid": "BEar",
+          "dataa": "0.1",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.2",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.3",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.400000",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "Мо",
+      "name": "Аура выносливости",
+      "code": "AOae",
+      "levels": [
+        {
+          "buffid": "BOae",
+          "dataa": "0.1",
+          "datab": "0.05",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self"
+        }
+      ]
+    },
+    {
+      "id": "PA54",
+      "name": "|cffb4d2ebАура Выносливости|r",
+      "code": "AOae",
+      "levels": [
+        {
+          "buffid": "BOae",
+          "dataa": "0.1",
+          "datab": "0.05",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.15",
+          "datab": "0.1",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.2",
+          "datab": "0.15",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.350000",
+          "datab": "0.200000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "A1J7",
+      "name": "Аура выносливости",
+      "code": "AOae",
+      "levels": [
+        {
+          "buffid": "BOae",
+          "dataa": "0.150000",
+          "datab": "0.100000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "w2ak",
+      "name": "|cffdcb496Аура выносливости|r",
+      "code": "AOae",
+      "levels": [
+        {
+          "buffid": "BOae",
+          "dataa": "0.050000",
+          "datab": "0.05",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.100000",
+          "datab": "0.1",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.150000",
+          "datab": "0.15",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "0.200000",
+          "datab": "0.200000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "w2ah",
+      "name": "|cffdcb496Аура меткости|r",
+      "code": "AEar",
+      "levels": [
+        {
+          "buffid": "BEar",
+          "dataa": "0.1",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.2",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.3",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.400000",
+          "datab": "0",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    },
+    {
+      "id": "A1MD",
+      "name": "Аура Страха",
+      "code": "AOae",
+      "levels": [
+        {
+          "buffid": "BOae",
+          "dataa": "-0.150000",
+          "datab": "-0.100000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,enemies,ground,invulnerable,vulnerable"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "-0.200000",
+          "datab": "-0.150000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,enemies,ground,invulnerable,vulnerable"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "-0.250000",
+          "datab": "-0.200000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,enemies,ground,invulnerable,vulnerable"
+        },
+        {
+          "buffid": "BOae",
+          "dataa": "-0.300000",
+          "datab": "-0.300000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,enemies,ground,invulnerable,vulnerable"
+        }
+      ]
+    },
+    {
+      "id": "FL04",
+      "name": "|cffc8cde1Мертвый надзор|r",
+      "code": "AEar",
+      "levels": [
+        {
+          "buffid": "BEar",
+          "dataa": "0.030000",
+          "datab": "1",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,invulnerable,player,self,vulnerable"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.060000",
+          "datab": "1",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,invulnerable,player,self,vulnerable"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.090000",
+          "datab": "1",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,invulnerable,player,self,vulnerable"
+        },
+        {
+          "buffid": "BEar",
+          "dataa": "0.120000",
+          "datab": "1",
+          "datac": "1",
+          "datad": "0",
+          "targs": "air,ground,invulnerable,player,self,vulnerable"
+        }
+      ]
+    },
+    {
+      "id": "A1NO",
+      "name": "|c00ff8e78Аура Ветерана|r",
+      "code": "AOae",
+      "levels": [
+        {
+          "buffid": "BOae",
+          "dataa": "0.1",
+          "datab": "0.200000",
+          "datac": "",
+          "datad": "",
+          "targs": "air,ground,friend,self,vuln,invu"
+        }
+      ]
+    }
+  ]
+}

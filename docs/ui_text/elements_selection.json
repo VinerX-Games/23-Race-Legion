@@ -1,0 +1,35 @@
+{
+  "scope": "Элементали (Elements): подсказка выбора расы A0QN",
+  "object": "A0QN",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "hotkey": {
+    "reference": "TRIGSTR_16869",
+    "value": "Q"
+  },
+  "levels": 1,
+  "evidence": [
+    "04_race_selection.lua:436, 1467: InitTrig_Race_Elements_O фильтрует A0QN; выбор создаёт 5 e00F, исследует R0A2 и запускает ElemOn().",
+    "A0QN находится на 4-й странице таверны выбора рас, позиция (0, 0), клавиша Q (TRIGSTR_16869).",
+    "Создатель Escanor, переработка и куратор Dawnguard, сложность 3/5, период «Катаклизм» и клавиша Q сохранены."
+  ],
+  "strings": [
+    {
+      "field": "name",
+      "wts_id": 38889,
+      "after": "|cffe4cfa3Элементали|r"
+    },
+    {
+      "field": "tip1",
+      "wts_id": 38890,
+      "after": "|cffe4cfa3Элементали|r (|cffffffffQ|r)"
+    },
+    {
+      "field": "ubertip1",
+      "wts_id": 41061,
+      "after": "|cffa6afb8РАСА:|cffced4da Первобытные повелители четырёх стихий и энергий мироздания.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor|r|n|cffa6afb8Переработка:|r |cffa9c7deDawnguard|r|n|cffa6afb8Куратор расы:|r |cffa9c7deDawnguard|r|n|cffa6afb8Сложность:|r |cffffffff●●●|cffa6afb8●●|r|n|cffa6afb8Период:|r |cffa9c7de«Катаклизм»|r|n|n|cffced4daЭлементали — древнейшие владыки огня, воды, земли и воздуха, заточённые в Обители стихий ради спасения Азерота. Прорывая грань между мирами, духи первозданных стихий несут в мир неукротимую мощь стихийного хаоса.|r"
+    }
+  ]
+}

@@ -1,0 +1,1414 @@
+{
+  "R0AG": {
+    "id": "R0AG",
+    "class": "ranged",
+    "maxlevel": 6,
+    "levels": {
+      "level_1": {
+        "hotkey": {
+          "raw": "W",
+          "is_wts": false,
+          "current_text": "W"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41702",
+          "is_wts": true,
+          "wts_id": 41702,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать «|cff228a22Сила природы|r» |cffffd700[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_20301",
+          "is_wts": true,
+          "wts_id": 20301,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Увеличивает урон всех воинов ближнего боя"
+        }
+      },
+      "level_2": {
+        "hotkey": {
+          "raw": "W",
+          "is_wts": false,
+          "current_text": "W"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41704",
+          "is_wts": true,
+          "wts_id": 41704,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать «|cff228a22Сила природы|r» |cffffd700[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_20302",
+          "is_wts": true,
+          "wts_id": 20302,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Увеличивает урон всех воинов ближнего боя"
+        }
+      },
+      "level_3": {
+        "hotkey": {
+          "raw": "W",
+          "is_wts": false,
+          "current_text": "W"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41706",
+          "is_wts": true,
+          "wts_id": 41706,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать «|cff228a22Мощь природы|r» |cffffd700[3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_20303",
+          "is_wts": true,
+          "wts_id": 20303,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Увеличивает урон всех воинов ближнего боя"
+        }
+      },
+      "level_4": {
+        "hotkey": {
+          "raw": "TRIGSTR_38487",
+          "is_wts": true,
+          "wts_id": 38487,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "W"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41712",
+          "is_wts": true,
+          "wts_id": 41712,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать «|cff228a22Мощь природы|r» |cffffd700[4]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_20310",
+          "is_wts": true,
+          "wts_id": 20310,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Увеличивает урон всех воинов ближнего боя"
+        }
+      },
+      "level_5": {
+        "hotkey": {
+          "raw": "TRIGSTR_38488",
+          "is_wts": true,
+          "wts_id": 38488,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "W"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41711",
+          "is_wts": true,
+          "wts_id": 41711,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать «|cff228a22Могущество природы|r» |cffffd700[5]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_20311",
+          "is_wts": true,
+          "wts_id": 20311,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Увеличивает урон всех воинов ближнего боя"
+        }
+      },
+      "level_6": {
+        "hotkey": {
+          "raw": "TRIGSTR_38489",
+          "is_wts": true,
+          "wts_id": 38489,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "W"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41710",
+          "is_wts": true,
+          "wts_id": 41710,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать «|cff228a22Могущество природы|r» |cffffd700[6]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_20312",
+          "is_wts": true,
+          "wts_id": 20312,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Увеличивает урон всех воинов ближнего боя"
+        }
+      }
+    }
+  },
+  "R0AE": {
+    "id": "R0AE",
+    "class": "armor",
+    "maxlevel": 6,
+    "levels": {
+      "level_1": {
+        "hotkey": {
+          "raw": "TRIGSTR_35463",
+          "is_wts": true,
+          "wts_id": 35463,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "E"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41686",
+          "is_wts": true,
+          "wts_id": 41686,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать |cff228a22Прочная кора|r |cffffd700[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41689",
+          "is_wts": true,
+          "wts_id": 41689,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Утолщают кору, усиливая показатели брони всех \"|cff228a22Энтов|r\""
+        }
+      },
+      "level_2": {
+        "hotkey": {
+          "raw": "TRIGSTR_35537",
+          "is_wts": true,
+          "wts_id": 35537,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "E"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41687",
+          "is_wts": true,
+          "wts_id": 41687,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать |cff228a22Прочная кора|r |cffffd700[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41690",
+          "is_wts": true,
+          "wts_id": 41690,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Утолщают кору, усиливая показатели брони всех \"|cff228a22Энтов|r\""
+        }
+      },
+      "level_3": {
+        "hotkey": {
+          "raw": "TRIGSTR_35538",
+          "is_wts": true,
+          "wts_id": 35538,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "E"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41688",
+          "is_wts": true,
+          "wts_id": 41688,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать |cff228a22Усиленная кора|r |cffffd700[3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41691",
+          "is_wts": true,
+          "wts_id": 41691,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Утолщают кору, усиливая показатели брони всех \"|cff228a22Энтов|r\""
+        }
+      },
+      "level_4": {
+        "hotkey": {
+          "raw": "TRIGSTR_34580",
+          "is_wts": true,
+          "wts_id": 34580,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "E"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41697",
+          "is_wts": true,
+          "wts_id": 41697,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать |cff228a22Усиленная кора|r |cffffd700[4]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41698",
+          "is_wts": true,
+          "wts_id": 41698,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Утолщают кору, усиливая показатели брони всех \"|cff228a22Энтов|r\""
+        }
+      },
+      "level_5": {
+        "hotkey": {
+          "raw": "TRIGSTR_34581",
+          "is_wts": true,
+          "wts_id": 34581,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "E"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41696",
+          "is_wts": true,
+          "wts_id": 41696,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать |cff228a22Непробиваемая кора|r |cffffd700[5]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41699",
+          "is_wts": true,
+          "wts_id": 41699,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Утолщают кору, усиливая показатели брони всех \"|cff228a22Энтов|r\""
+        }
+      },
+      "level_6": {
+        "hotkey": {
+          "raw": "TRIGSTR_34610",
+          "is_wts": true,
+          "wts_id": 34610,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "E"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41695",
+          "is_wts": true,
+          "wts_id": 41695,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать |cff228a22Непробиваемая кора|r |cffffd700[6]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41700",
+          "is_wts": true,
+          "wts_id": 41700,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Утолщают кору, усиливая показатели брони всех \"|cff228a22Энтов|r\""
+        }
+      }
+    }
+  },
+  "R09M": {
+    "id": "R09M",
+    "class": "",
+    "maxlevel": 6,
+    "levels": {
+      "level_1": {
+        "hotkey": {
+          "raw": "TRIGSTR_36020",
+          "is_wts": true,
+          "wts_id": 36020,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "R"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41677",
+          "is_wts": true,
+          "wts_id": 41677,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать «|cff228a22Благословение природы|r»|cffffd700 [1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_12993",
+          "is_wts": true,
+          "wts_id": 12993,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Увеличивает здоровье всех |cff7f8f18\"Энтов\"|r на |cffffd70020|r ед. Открывает новых юнитов."
+        }
+      },
+      "level_2": {
+        "hotkey": {
+          "raw": "TRIGSTR_36112",
+          "is_wts": true,
+          "wts_id": 36112,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "R"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41678",
+          "is_wts": true,
+          "wts_id": 41678,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать «|cff228a22Благословение природы|r»|cffffd700 [2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_13011",
+          "is_wts": true,
+          "wts_id": 13011,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Увеличивает здоровье всех |cff7f8f28\"Энтов\"|r на |cffffd70020|r ед. Открывает новых юнитов."
+        }
+      },
+      "level_3": {
+        "hotkey": {
+          "raw": "TRIGSTR_36113",
+          "is_wts": true,
+          "wts_id": 36113,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "R"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41679",
+          "is_wts": true,
+          "wts_id": 41679,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать «|cff228a22Благословение природы|r»|cffffd700 [3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_13022",
+          "is_wts": true,
+          "wts_id": 13022,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Увеличивает здоровье всех |cff7f8f38\"Энтов\"|r на |cffffd70020|r ед. Открывает новых юнитов."
+        }
+      },
+      "level_4": {
+        "hotkey": {
+          "raw": "TRIGSTR_36675",
+          "is_wts": true,
+          "wts_id": 36675,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "R"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41680",
+          "is_wts": true,
+          "wts_id": 41680,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать «|cff228a22Благословение природы|r»|cffffd700 [4]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_13073",
+          "is_wts": true,
+          "wts_id": 13073,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Увеличивает здоровье всех |cff7f8f48\"Энтов\"|r на |cffffd70020|r ед. Открывает новых юнитов."
+        }
+      },
+      "level_5": {
+        "hotkey": {
+          "raw": "TRIGSTR_36686",
+          "is_wts": true,
+          "wts_id": 36686,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "R"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41681",
+          "is_wts": true,
+          "wts_id": 41681,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать «|cff228a22Благословение природы|r»|cffffd700 [5]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_20054",
+          "is_wts": true,
+          "wts_id": 20054,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Увеличивает здоровье всех |cff7f8f58\"Энтов\"|r на |cffffd70020|r ед. Открывает новых юнитов."
+        }
+      },
+      "level_6": {
+        "hotkey": {
+          "raw": "TRIGSTR_36687",
+          "is_wts": true,
+          "wts_id": 36687,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "R"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41682",
+          "is_wts": true,
+          "wts_id": 41682,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать «|cff228a22Благословение природы|r»|cffffd700 [6]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_20145",
+          "is_wts": true,
+          "wts_id": 20145,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Увеличивает здоровье всех |cff7f8f68\"Энтов\"|r на |cffffd70020|r ед. Открывает новых юнитов."
+        }
+      }
+    }
+  },
+  "R09K": {
+    "id": "R09K",
+    "class": "",
+    "maxlevel": 1,
+    "levels": {
+      "level_1": {
+        "hotkey": {
+          "raw": "TRIGSTR_42584",
+          "is_wts": true,
+          "wts_id": 42584,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Z"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41720",
+          "is_wts": true,
+          "wts_id": 41720,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать |cff228a22Ядовитый сок|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41721",
+          "is_wts": true,
+          "wts_id": 41721,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Энты начинают спускать ядовитый сок, который при попадании в организм, сковывает движение и наносит переодический урон"
+        }
+      }
+    }
+  },
+  "R09N": {
+    "id": "R09N",
+    "class": "",
+    "maxlevel": 2,
+    "levels": {
+      "level_1": {
+        "hotkey": {
+          "raw": "D",
+          "is_wts": false,
+          "current_text": "D"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41725",
+          "is_wts": true,
+          "wts_id": 41725,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Усиление Ядра Маны|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41726",
+          "is_wts": true,
+          "wts_id": 41726,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Гончая Маны|r осваивает способность \"|cff228a22Камень маны|r\"\nУвеличение кол-ва маны |cff228a22Гончией Маны|r на|cffffd700 20|r ед.\nУвеличение урона от атак |cff228a22Гончией Маны|r на |cffffd7004|r ед."
+        }
+      },
+      "level_2": {
+        "hotkey": {
+          "raw": "TRIGSTR_35159",
+          "is_wts": true,
+          "wts_id": 35159,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "D"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41728",
+          "is_wts": true,
+          "wts_id": 41728,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Усиление Ядра Маны|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41729",
+          "is_wts": true,
+          "wts_id": 41729,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Гончая Маны|r осваивает способность \"|cff228a22Аура Ядра Маны|r\"\nУвеличение кол-ва маны |cff228a22Гончией Маны|r на|cffffd700 20|r ед.\nУвеличение урона от атак |cff228a22Гончией Маны|r на |cffffd7004|r ед."
+        }
+      }
+    }
+  },
+  "R0AF": {
+    "id": "R0AF",
+    "class": "",
+    "maxlevel": 2,
+    "levels": {
+      "level_1": {
+        "hotkey": {
+          "raw": "TRIGSTR_39887",
+          "is_wts": true,
+          "wts_id": 39887,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "S"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41733",
+          "is_wts": true,
+          "wts_id": 41733,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Усиление Ядра Жизни|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41734",
+          "is_wts": true,
+          "wts_id": 41734,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Гончая Жизни|r осваивает способность \"|cff228a22Камень маны|r\"\nУвеличение кол-ва хп |cff228a22Гончией Маны|r на|cffffd700 20|r ед.\nУвеличение урона от атак |cff228a22Гончией Маны|r на |cffffd7004|r ед."
+        }
+      },
+      "level_2": {
+        "hotkey": {
+          "raw": "TRIGSTR_40208",
+          "is_wts": true,
+          "wts_id": 40208,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "S"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41736",
+          "is_wts": true,
+          "wts_id": 41736,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Усиление Ядра Жизни|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41737",
+          "is_wts": true,
+          "wts_id": 41737,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Гончая Маны|r осваивает способность \"|cff228a22Аура Ядра Маны|r\"\nУвеличение кол-ва маны |cff228a22Гончией Маны|r на|cffffd700 20|r ед.\nУвеличение урона от атак |cff228a22Гончией Маны|r на |cffffd7004|r ед."
+        }
+      }
+    }
+  },
+  "R0AH": {
+    "id": "R0AH",
+    "class": "",
+    "maxlevel": 2,
+    "levels": {
+      "level_1": {
+        "hotkey": {
+          "raw": "TRIGSTR_41602",
+          "is_wts": true,
+          "wts_id": 41602,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "X"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41741",
+          "is_wts": true,
+          "wts_id": 41741,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Мастерство Войны|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41742",
+          "is_wts": true,
+          "wts_id": 41742,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Древо Войны|r осваивает способность \"|cff228a22Рассекающий Удар|r\"\nУвеличение кол-ва хп |cff228a22Древа Войны|r на|cffffd700 40|r ед.\nУвеличение урона от атак |cff228a22Древа Войны|r на |cffffd7006|r ед.\nУвеличение скорость атаки от атак |cff228a22Древа Войны|r на |cffffd70020%|r"
+        }
+      },
+      "level_2": {
+        "hotkey": {
+          "raw": "TRIGSTR_42580",
+          "is_wts": true,
+          "wts_id": 42580,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "X"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41745",
+          "is_wts": true,
+          "wts_id": 41745,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Мастерство Войны|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41746",
+          "is_wts": true,
+          "wts_id": 41746,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Древо Войны|r увеличивает характеристики:\nУвеличение кол-ва хп |cff228a22Древа Войны|r на|cffffd700 40|r ед.\nУвеличение урона от атак |cff228a22Древа Войны|r на |cffffd7006|r ед.\nУвеличение скорость атаки от атак |cff228a22Древа Войны|r на |cffffd70010%|r"
+        }
+      }
+    }
+  },
+  "R0AL": {
+    "id": "R0AL",
+    "class": "",
+    "maxlevel": 1,
+    "levels": {
+      "level_1": {
+        "hotkey": {
+          "raw": "TRIGSTR_18736",
+          "is_wts": true,
+          "wts_id": 18736,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "A"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41714",
+          "is_wts": true,
+          "wts_id": 41714,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Исследовать «|cff228a22Крепкий панцирь|r»"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41715",
+          "is_wts": true,
+          "wts_id": 41715,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Лесной Голем|r осваивает способность \"|cff228a22Крепкий Панцирь|r\"\nУвеличение хп |cff228a22Лесного Голема|r на|cffffd700 100|r ед."
+        }
+      }
+    }
+  },
+  "R0AK": {
+    "id": "R0AK",
+    "class": "",
+    "maxlevel": 2,
+    "levels": {
+      "level_1": {
+        "hotkey": {
+          "raw": "TRIGSTR_42586",
+          "is_wts": true,
+          "wts_id": 42586,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Z"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41750",
+          "is_wts": true,
+          "wts_id": 41750,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Благословение Ветра|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41751",
+          "is_wts": true,
+          "wts_id": 41751,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Древо Ветров|r осваивает способность \"|cff228a22Смерчь|r\"\nУвеличение дальность атаки |cff228a22Древа Ветров|r на|cffffd700 50|r ед.\nУвеличение скорости атаки |cff228a22Древа Ветров|r на |cffffd70015%|r"
+        }
+      },
+      "level_2": {
+        "hotkey": {
+          "raw": "TRIGSTR_42585",
+          "is_wts": true,
+          "wts_id": 42585,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Z"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41754",
+          "is_wts": true,
+          "wts_id": 41754,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Благословение Ветра|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41755",
+          "is_wts": true,
+          "wts_id": 41755,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Древо Ветров|r осваивает способность \"|cff228a22Аура Ветров|r\"\nУвеличение дальность атаки |cff228a22Древа Ветров|r на|cffffd700 50|r ед.\nУвеличение скорости атаки |cff228a22Древа Ветров|r на |cffffd70015%|r"
+        }
+      }
+    }
+  },
+  "R09O": {
+    "id": "R09O",
+    "class": "",
+    "maxlevel": 3,
+    "levels": {
+      "level_1": {
+        "hotkey": {
+          "raw": "D",
+          "is_wts": false,
+          "current_text": "D"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41760",
+          "is_wts": true,
+          "wts_id": 41760,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Учение Леса|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41761",
+          "is_wts": true,
+          "wts_id": 41761,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Древо Познания|r:\nУвеличение кол-ва маны |cff228a22Древа Познания|r на|cffffd700 40|r ед.\nУвеличение регенерации маны |cff228a22Древа Познания|r на |cffffd7000.45|r ед."
+        }
+      },
+      "level_2": {
+        "hotkey": {
+          "raw": "TRIGSTR_35160",
+          "is_wts": true,
+          "wts_id": 35160,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "D"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41765",
+          "is_wts": true,
+          "wts_id": 41765,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Учение Леса|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41766",
+          "is_wts": true,
+          "wts_id": 41766,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Древо Познания|r осваивает способность \"|cff228a22Покровительство Леса|r\"\nУвеличение кол-ва маны |cff228a22Древа Познания|r на|cffffd700 40|r ед.\nУвеличение регенерации маны |cff228a22Древа Познания|r на |cffffd7000.45|r ед."
+        }
+      },
+      "level_3": {
+        "hotkey": {
+          "raw": "TRIGSTR_35373",
+          "is_wts": true,
+          "wts_id": 35373,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "D"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41769",
+          "is_wts": true,
+          "wts_id": 41769,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Учение Леса|r |cffffff00[3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41770",
+          "is_wts": true,
+          "wts_id": 41770,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Древо Познания|r осваивает способность \"|cff228a22Мудрость|r\"\nУвеличение кол-ва маны |cff228a22Древа Познания|r на|cffffd700 40|r ед.\nУвеличение регенерации маны |cff228a22Древа Познания|r на |cffffd7000.45|r ед."
+        }
+      }
+    }
+  },
+  "R0AM": {
+    "id": "R0AM",
+    "class": "",
+    "maxlevel": 3,
+    "levels": {
+      "level_1": {
+        "hotkey": {
+          "raw": "TRIGSTR_40703",
+          "is_wts": true,
+          "wts_id": 40703,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "S"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41775",
+          "is_wts": true,
+          "wts_id": 41775,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Магию Духов|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41776",
+          "is_wts": true,
+          "wts_id": 41776,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Лесной Дух|r осваивает способность \"|cff228a22Контроль Магии|r\"\nУвеличение кол-ва маны |cff228a22Древа Познания|r на|cffffd700 40|r ед.\nУвеличение регенерации маны |cff228a22Древа Познания|r на |cffffd7000.25|r ед."
+        }
+      },
+      "level_2": {
+        "hotkey": {
+          "raw": "TRIGSTR_40704",
+          "is_wts": true,
+          "wts_id": 40704,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "S"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41780",
+          "is_wts": true,
+          "wts_id": 41780,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Магию Духов|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41781",
+          "is_wts": true,
+          "wts_id": 41781,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Лесной Дух|r осваивает способность \"|cff228a22Гнев Деревьев|r\"\nУвеличение кол-ва маны |cff228a22Древа Познания|r на|cffffd700 40|r ед.\nУвеличение регенерации маны |cff228a22Древа Познания|r на |cffffd7000.25|r ед."
+        }
+      },
+      "level_3": {
+        "hotkey": {
+          "raw": "TRIGSTR_41112",
+          "is_wts": true,
+          "wts_id": 41112,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "S"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16569",
+          "is_wts": true,
+          "wts_id": 16569,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Магию Духов|r |cffffff00[3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41785",
+          "is_wts": true,
+          "wts_id": 41785,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Лесной Дух|r осваивает способность \"|cff228a22Ядовитую Эссенцию|r\"\nУвеличение кол-ва маны |cff228a22Древа Познания|r на|cffffd700 40|r ед.\nУвеличение регенерации маны |cff228a22Древа Познания|r на |cffffd7000.25|r ед."
+        }
+      }
+    }
+  },
+  "R0KR": {
+    "id": "R0KR",
+    "class": "",
+    "maxlevel": 3,
+    "levels": {
+      "level_1": {
+        "hotkey": {
+          "raw": "D",
+          "is_wts": false,
+          "current_text": "D"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16540",
+          "is_wts": true,
+          "wts_id": 16540,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Мудрость дракончиков|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16541",
+          "is_wts": true,
+          "wts_id": 16541,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Дракончки|r осваивает способность \"|cff228a22Фазовый Сдвиг|r\""
+        }
+      },
+      "level_2": {
+        "hotkey": {
+          "raw": "TRIGSTR_36538",
+          "is_wts": true,
+          "wts_id": 36538,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "D"
+        },
+        "tip": {
+          "raw": "TRIGSTR_16544",
+          "is_wts": true,
+          "wts_id": 16544,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Мудрость дракончиков|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16566",
+          "is_wts": true,
+          "wts_id": 16566,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Дракончки|r осваивает способность \"|cff228a22Вспышка маны|r\""
+        }
+      },
+      "level_3": {
+        "hotkey": {
+          "raw": "TRIGSTR_36584",
+          "is_wts": true,
+          "wts_id": 36584,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "D"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41812",
+          "is_wts": true,
+          "wts_id": 41812,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Магию Духов|r |cffffff00[3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_16571",
+          "is_wts": true,
+          "wts_id": 16571,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Дракончки|r осваивает способность \"|cff228a22Невосприимчивость к магии|r\""
+        }
+      }
+    }
+  },
+  "R0AN": {
+    "id": "R0AN",
+    "class": "",
+    "maxlevel": 2,
+    "levels": {
+      "level_1": {
+        "hotkey": {
+          "raw": "TRIGSTR_39657",
+          "is_wts": true,
+          "wts_id": 39657,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "A"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41790",
+          "is_wts": true,
+          "wts_id": 41790,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Азы Дриад|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41791",
+          "is_wts": true,
+          "wts_id": 41791,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Дриада|r осваивает способность \"|cff228a22Рассеивание Чар|r\"\nУвеличение скорости атаки |cff228a22Дриады|r на|cffffd700 10%|r ед.\nУвеличение дальности атаки |cff228a22Дриады|r на |cffffd70025|r ед."
+        }
+      },
+      "level_2": {
+        "hotkey": {
+          "raw": "TRIGSTR_39658",
+          "is_wts": true,
+          "wts_id": 39658,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "A"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41795",
+          "is_wts": true,
+          "wts_id": 41795,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Мастерство|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41796",
+          "is_wts": true,
+          "wts_id": 41796,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Дриада|r осваивает способность \"|cff228a22Неуязвимость к магии|r\"\nУвеличение скорости атаки |cff228a22Дриады|r на|cffffd700 10%|r ед.\nУвеличение дальности атаки |cff228a22Дриады|r на |cffffd70025|r ед."
+        }
+      }
+    }
+  },
+  "R0KQ": {
+    "id": "R0KQ",
+    "class": "",
+    "maxlevel": 3,
+    "levels": {
+      "level_1": {
+        "hotkey": {
+          "raw": "TRIGSTR_41382",
+          "is_wts": true,
+          "wts_id": 41382,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "S"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41803",
+          "is_wts": true,
+          "wts_id": 41803,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Знания Хранителей|r |cffffff00[1]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41804",
+          "is_wts": true,
+          "wts_id": 41804,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Хранитель Рощи|r осваивает способность \"|cff228a22Древесный Покров|r\""
+        }
+      },
+      "level_2": {
+        "hotkey": {
+          "raw": "TRIGSTR_41383",
+          "is_wts": true,
+          "wts_id": 41383,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "S"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41808",
+          "is_wts": true,
+          "wts_id": 41808,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Знания Хранителей|r |cffffff00[2]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41809",
+          "is_wts": true,
+          "wts_id": 41809,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Хранитель Рощи|r осваивает способность \"|cff228a22Зов Древних|r\""
+        }
+      },
+      "level_3": {
+        "hotkey": {
+          "raw": "TRIGSTR_41473",
+          "is_wts": true,
+          "wts_id": 41473,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "S"
+        },
+        "tip": {
+          "raw": "TRIGSTR_41799",
+          "is_wts": true,
+          "wts_id": 41799,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "Изучить |cff228a22Магию Духов|r |cffffff00[3]|r"
+        },
+        "ubertip": {
+          "raw": "TRIGSTR_41813",
+          "is_wts": true,
+          "wts_id": 41813,
+          "used_in": [
+            "war3map.w3q",
+            "war3mapSkin.w3q"
+          ],
+          "current_text": "|cff228a22Хранитель Рощи|r осваивает способность \"|cff228a22Спокойствие Леса|r\""
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "cli": "F:/WARCRAFT III/WARCRAFT_SOFT/HiveWE/HiveWE_cli.exe",
+  "warcraft": "F:/Games/Warcraft III",
+  "map": "F:/Gemini_23Race/map.w3x",
+  "custom_data": "C:/Users/oleg7/Documents/Warcraft III/CustomMapData",
+  "model_cli": "F:/Gemini_Test/tools/mdlxl-cli/mdlxl-cli.mjs",
+  "mdlxl_home": "F:/WARCRAFT III/WARCRAFT_SOFT/MDLxL"
+}

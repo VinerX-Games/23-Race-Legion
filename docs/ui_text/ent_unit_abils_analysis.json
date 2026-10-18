@@ -1,0 +1,1481 @@
+{
+  "abilities": [
+    {
+      "id": "Aren",
+      "code": "Aren",
+      "levels": 1,
+      "hotkey": "R",
+      "fields": {
+        "name": {
+          "raw": "Обновление",
+          "is_wts": false,
+          "current_text": "Обновление"
+        },
+        "tip1": {
+          "raw": "Обновление",
+          "is_wts": false,
+          "current_text": "Обновление"
+        },
+        "ubertip1": {
+          "raw": "\"Исцеляет раненые древа, ремонтирует союзные здания и технику.\"",
+          "is_wts": false,
+          "current_text": "\"Исцеляет раненые древа, ремонтирует союзные здания и технику.\""
+        }
+      },
+      "buffs": []
+    },
+    {
+      "id": "A0I3",
+      "code": "AEbl",
+      "levels": 1,
+      "hotkey": "TRIGSTR_9545",
+      "fields": {
+        "name": {
+          "raw": "|cffe4cfa3Небольшой скачок|r",
+          "is_wts": false,
+          "current_text": "|cffe4cfa3Небольшой скачок|r"
+        },
+        "tip1": {
+          "raw": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)",
+          "is_wts": false,
+          "current_text": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_10139",
+          "is_wts": true,
+          "wts_id": 10139,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff6f2583Пространственный Скачек|r [|cffffcc002-й уровень|r]"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_10973",
+          "is_wts": true,
+          "wts_id": 10973,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff6f2583Пространственный Скачек|r [|cffffcc003-й уровень|r]"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_10974",
+          "is_wts": true,
+          "wts_id": 10974,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff6f2583Пространственный Скачек|r [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит владельца на расстояние до |cffffffff500|cffced4da.|n|nПерезарядка: |cff60b8d040|cffced4da сек.|r",
+          "is_wts": false,
+          "current_text": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит владельца на расстояние до |cffffffff500|cffced4da.|n|nПерезарядка: |cff60b8d040|cffced4da сек.|r"
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_10977",
+          "is_wts": true,
+          "wts_id": 10977,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Переносит на  расстояние, позволяя мгновенно вступить в бой или выйти из него."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_10978",
+          "is_wts": true,
+          "wts_id": 10978,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Переносит на  расстояние, позволяя мгновенно вступить в бой или выйти из него."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_10979",
+          "is_wts": true,
+          "wts_id": 10979,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Переносит на  расстояние, позволяя мгновенно вступить в бой или выйти из него."
+        }
+      },
+      "buffs": []
+    },
+    {
+      "id": "A0Q1",
+      "code": "Assk",
+      "levels": 1,
+      "hotkey": "TRIGSTR_16624",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41595",
+          "is_wts": true,
+          "wts_id": 41595,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Крепкий панцирь|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41596",
+          "is_wts": true,
+          "wts_id": 41596,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Крепкий панцирь|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_12137",
+          "is_wts": true,
+          "wts_id": 12137,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Поглащает |cffffd70012 ед|r. урона с шансом|cffffd700 100%|r. Минимальный проходимый урон |cffffd7003 ед|r."
+        }
+      },
+      "buffs": []
+    },
+    {
+      "id": "A1PK",
+      "code": "Amfl",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30886",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_15918",
+          "is_wts": true,
+          "wts_id": 15918,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228b22Вспышка маны|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_15919",
+          "is_wts": true,
+          "wts_id": 15919,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228b22Вспышка маны|r"
+        },
+        "ubertip1": {
+          "raw": "\"+<Amfl,DataE1> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: <Amfl,Dur1> сек.\"",
+          "is_wts": false,
+          "current_text": "\"+<Amfl,DataE1> к броне. Испускает отрицательную энергию, которая наносит урон находящимся рядом врагам, когда они применяют способности. |nВремя действия: <Amfl,Dur1> сек.\""
+        }
+      },
+      "buffs": [
+        "Bmfl,Bmfa"
+      ]
+    },
+    {
+      "id": "A1P0",
+      "code": "AEer",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30670",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41280",
+          "is_wts": true,
+          "wts_id": 41280,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228b22Гнев деревьев|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41281",
+          "is_wts": true,
+          "wts_id": 41281,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228b22Гнев деревьев|r"
+        },
+        "tip2": {
+          "raw": "\"Гнев деревьев [|cffffcc002-й уровень|r]\"",
+          "is_wts": false,
+          "current_text": "\"Гнев деревьев [|cffffcc002-й уровень|r]\""
+        },
+        "tip3": {
+          "raw": "\"Гнев деревьев [|cffffcc003-й уровень|r]\"",
+          "is_wts": false,
+          "current_text": "\"Гнев деревьев [|cffffcc003-й уровень|r]\""
+        },
+        "ubertip1": {
+          "raw": "\"Призывает из-под земли корни, которые обездвиживают и обезвреживают врага на <AEer,Dur1> сек. и наносят <AEer,DataA1> урона/сек.\"",
+          "is_wts": false,
+          "current_text": "\"Призывает из-под земли корни, которые обездвиживают и обезвреживают врага на <AEer,Dur1> сек. и наносят <AEer,DataA1> урона/сек.\""
+        },
+        "ubertip2": {
+          "raw": "\"Призывает из-под земли корни, которые обездвиживают и обезвреживают врага на <AEer,Dur2> сек. и наносят <AEer,DataA2> урона/сек.\"",
+          "is_wts": false,
+          "current_text": "\"Призывает из-под земли корни, которые обездвиживают и обезвреживают врага на <AEer,Dur2> сек. и наносят <AEer,DataA2> урона/сек.\""
+        },
+        "ubertip3": {
+          "raw": "\"Призывает из-под земли корни, которые обездвиживают и обезвреживают врага на <AEer,Dur3> сек. и наносят <AEer,DataA3> урона/сек.\"",
+          "is_wts": false,
+          "current_text": "\"Призывает из-под земли корни, которые обездвиживают и обезвреживают врага на <AEer,Dur3> сек. и наносят <AEer,DataA3> урона/сек.\""
+        }
+      },
+      "buffs": [
+        "BEer",
+        "BEer",
+        "BEer",
+        "BEer"
+      ]
+    },
+    {
+      "id": "A0PW",
+      "code": "AUts",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41624",
+          "is_wts": true,
+          "wts_id": 41624,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Крепкая кора|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41626",
+          "is_wts": true,
+          "wts_id": 41626,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Крепкая кора|r"
+        },
+        "tip2": {
+          "raw": "\"Шипастый панцирь [|cffffcc002-й уровень|r]\"",
+          "is_wts": false,
+          "current_text": "\"Шипастый панцирь [|cffffcc002-й уровень|r]\""
+        },
+        "tip3": {
+          "raw": "\"Шипастый панцирь [|cffffcc003-й уровень|r]\"",
+          "is_wts": false,
+          "current_text": "\"Шипастый панцирь [|cffffcc003-й уровень|r]\""
+        },
+        "tip4": {
+          "raw": "TRIGSTR_15141",
+          "is_wts": true,
+          "wts_id": 15141,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Шипастый панцирь [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_31026",
+          "is_wts": true,
+          "wts_id": 31026,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "За все существование энтов, их кора стала очень толстой и крепкой, от чего их показатель брони увеличился на |cffffd7001 ед.|r, а шипы на их коре возвращают |cffffff0010%|r урона"
+        },
+        "ubertip2": {
+          "raw": "\"Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC2> к броне и отражают <AUts,DataA2,%>% получаемого в ближнем бою урона в атакующих врагов.\"",
+          "is_wts": false,
+          "current_text": "\"Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC2> к броне и отражают <AUts,DataA2,%>% получаемого в ближнем бою урона в атакующих врагов.\""
+        },
+        "ubertip3": {
+          "raw": "\"Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC3> к броне и отражают <AUts,DataA3,%>% получаемого в ближнем бою урона в атакующих врагов.\"",
+          "is_wts": false,
+          "current_text": "\"Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC3> к броне и отражают <AUts,DataA3,%>% получаемого в ближнем бою урона в атакующих врагов.\""
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_15149",
+          "is_wts": true,
+          "wts_id": 15149,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC4> к броне и отражают <AUts,DataA4,%>% получаемого в ближнем бою урона в атакующих врагов."
+        }
+      },
+      "buffs": [
+        "BUts",
+        "BUts",
+        "BUts"
+      ]
+    },
+    {
+      "id": "A0Q5",
+      "code": "AEtq",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30824",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41610",
+          "is_wts": true,
+          "wts_id": 41610,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Cпокойствие Леса|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41611",
+          "is_wts": true,
+          "wts_id": 41611,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Спокойствие Леса|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_41262",
+          "is_wts": true,
+          "wts_id": 41262,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Спокойствие"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_41612",
+          "is_wts": true,
+          "wts_id": 41612,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Призывает поток целительной энергии, восполняющей 5 здоровья/сек. союзникам в обширной области. |nВремя действия: 10 сек."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_41263",
+          "is_wts": true,
+          "wts_id": 41263,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Призывает поток целительной энергии, восполняющей <AEtq,DataA2> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur2> сек."
+        }
+      },
+      "buffs": [
+        "AEtr",
+        "AEtr",
+        "AEtr",
+        "AEtr"
+      ]
+    },
+    {
+      "id": "A0O7",
+      "code": "Arpl",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30562",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41660",
+          "is_wts": true,
+          "wts_id": 41660,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Ядро Жизни|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41661",
+          "is_wts": true,
+          "wts_id": 41661,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Ядро Жизни|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_1349",
+          "is_wts": true,
+          "wts_id": 1349,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Гончая|r с помощью своего ядра способна восстанавливать |cffffff0015ед.|r здоровья своим союзникам"
+        }
+      },
+      "buffs": [
+        "Brpl"
+      ]
+    },
+    {
+      "id": "A1PL",
+      "code": "Apsh",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30729",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_8394",
+          "is_wts": true,
+          "wts_id": 8394,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228b22Слияние с Лесом|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8522",
+          "is_wts": true,
+          "wts_id": 8522,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228b22Слияние с Лесом|r"
+        },
+        "ubertip1": {
+          "raw": "\"При получении урона переходит в иное измерение, получая защиту от дальнейшего урона. |nВремя действия: <Apsh,Dur1> сек.\"",
+          "is_wts": false,
+          "current_text": "\"При получении урона переходит в иное измерение, получая защиту от дальнейшего урона. |nВремя действия: <Apsh,Dur1> сек.\""
+        }
+      },
+      "buffs": [
+        "Bpsh"
+      ]
+    },
+    {
+      "id": "A0PX",
+      "code": "AUau",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41655",
+          "is_wts": true,
+          "wts_id": 41655,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Аура ядра жизни|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41656",
+          "is_wts": true,
+          "wts_id": 41656,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Аура ядра жизни|r"
+        },
+        "tip2": {
+          "raw": "\"Нечистая аура [|cffffcc002-й уровень|r]\"",
+          "is_wts": false,
+          "current_text": "\"Нечистая аура [|cffffcc002-й уровень|r]\""
+        },
+        "tip3": {
+          "raw": "\"Нечистая аура [|cffffcc003-й уровень|r]\"",
+          "is_wts": false,
+          "current_text": "\"Нечистая аура [|cffffcc003-й уровень|r]\""
+        },
+        "tip4": {
+          "raw": "TRIGSTR_13383",
+          "is_wts": true,
+          "wts_id": 13383,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Нечистая аура [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_35513",
+          "is_wts": true,
+          "wts_id": 35513,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Ядро |cff228a22Гончией|r источает ауру леса, от чего все союзные воины получают повышенную регерацию на |cffffff00100%|r"
+        },
+        "ubertip2": {
+          "raw": "\"+<AUau,DataA2,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.\"",
+          "is_wts": false,
+          "current_text": "\"+<AUau,DataA2,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.\""
+        },
+        "ubertip3": {
+          "raw": "\"+<AUau,DataA3,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.\"",
+          "is_wts": false,
+          "current_text": "\"+<AUau,DataA3,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.\""
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_12848",
+          "is_wts": true,
+          "wts_id": 12848,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "+<AUau,DataA4,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+        }
+      },
+      "buffs": [
+        "B07R",
+        "BUau",
+        "BUau",
+        "BUau"
+      ]
+    },
+    {
+      "id": "A0Q6",
+      "code": "ANca",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41597",
+          "is_wts": true,
+          "wts_id": 41597,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Рассекающий удар|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41598",
+          "is_wts": true,
+          "wts_id": 41598,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Рассекающий удар|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_2401",
+          "is_wts": true,
+          "wts_id": 2401,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Своими мосивными ударами, |cff7f8f18Защитник леса|r задевает рядом стоящих юнитов, нанося им|cffffd700 13%|r урона"
+        }
+      },
+      "buffs": []
+    },
+    {
+      "id": "A0Q4",
+      "code": "AHad",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41629",
+          "is_wts": true,
+          "wts_id": 41629,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Древесный покров|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41630",
+          "is_wts": true,
+          "wts_id": 41630,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Древесный покров|r"
+        },
+        "tip2": {
+          "raw": "\"Аура благочестия [|cffffcc002-й уровень|r]\"",
+          "is_wts": false,
+          "current_text": "\"Аура благочестия [|cffffcc002-й уровень|r]\""
+        },
+        "tip3": {
+          "raw": "\"Аура благочестия [|cffffcc003-й уровень|r]\"",
+          "is_wts": false,
+          "current_text": "\"Аура благочестия [|cffffcc003-й уровень|r]\""
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_42094",
+          "is_wts": true,
+          "wts_id": 42094,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Опытный солдат способен поднимать боевой дух союзников.\n+2 к броне находящихся рядом союзников.\n|cffb4dc8cРадиус действия (300).|r"
+        },
+        "ubertip2": {
+          "raw": "\"+<AHad,DataA2,.> к броне находящихся рядом союзников.\"",
+          "is_wts": false,
+          "current_text": "\"+<AHad,DataA2,.> к броне находящихся рядом союзников.\""
+        },
+        "ubertip3": {
+          "raw": "\"+<AHad,DataA3,.> к броне находящихся рядом союзников.\"",
+          "is_wts": false,
+          "current_text": "\"+<AHad,DataA3,.> к броне находящихся рядом союзников.\""
+        }
+      },
+      "buffs": [
+        "B08X",
+        "BHad",
+        "BHad",
+        "BHad"
+      ]
+    },
+    {
+      "id": "Ault",
+      "code": "Ault",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "Ночное зрение",
+          "is_wts": false,
+          "current_text": "Ночное зрение"
+        }
+      },
+      "buffs": []
+    },
+    {
+      "id": "A1P1",
+      "code": "AEsh",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30827",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41282",
+          "is_wts": true,
+          "wts_id": 41282,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228b22Эссенция Яда|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41284",
+          "is_wts": true,
+          "wts_id": 41284,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228b22Эссенция Яда|r"
+        },
+        "tip2": {
+          "raw": "\"Теневой удар [|cffffcc002-й уровень|r]\"",
+          "is_wts": false,
+          "current_text": "\"Теневой удар [|cffffcc002-й уровень|r]\""
+        },
+        "tip3": {
+          "raw": "\"Теневой удар [|cffffcc003-й уровень|r]\"",
+          "is_wts": false,
+          "current_text": "\"Теневой удар [|cffffcc003-й уровень|r]\""
+        },
+        "ubertip1": {
+          "raw": "\"Бросает отравленный кинжал во врага, нанося <AEsh,DataE1> урона мгновенно и <AEsh,DataA1> урона раз в <AEsh,Cast1> сек. в течение <AEsh,Dur1> сек. Яд временно замедляет передвижение цели.\"",
+          "is_wts": false,
+          "current_text": "\"Бросает отравленный кинжал во врага, нанося <AEsh,DataE1> урона мгновенно и <AEsh,DataA1> урона раз в <AEsh,Cast1> сек. в течение <AEsh,Dur1> сек. Яд временно замедляет передвижение цели.\""
+        },
+        "ubertip2": {
+          "raw": "\"Бросает отравленный кинжал во врага, нанося <AEsh,DataE2> урона мгновенно и <AEsh,DataA2> урона раз в <AEsh,Cast2> сек. в течение <AEsh,Dur2> сек. Яд временно замедляет передвижение цели.\"",
+          "is_wts": false,
+          "current_text": "\"Бросает отравленный кинжал во врага, нанося <AEsh,DataE2> урона мгновенно и <AEsh,DataA2> урона раз в <AEsh,Cast2> сек. в течение <AEsh,Dur2> сек. Яд временно замедляет передвижение цели.\""
+        },
+        "ubertip3": {
+          "raw": "\"Бросает отравленный кинжал во врага, нанося <AEsh,DataE3> урона мгновенно и <AEsh,DataA3> урона раз в <AEsh,Cast3> сек. в течение <AEsh,Dur3> сек. Яд временно замедляет передвижение цели.\"",
+          "is_wts": false,
+          "current_text": "\"Бросает отравленный кинжал во врага, нанося <AEsh,DataE3> урона мгновенно и <AEsh,DataA3> урона раз в <AEsh,Cast3> сек. в течение <AEsh,Dur3> сек. Яд временно замедляет передвижение цели.\""
+        }
+      },
+      "buffs": [
+        "BEsh",
+        "BEsh",
+        "BEsh",
+        "BEsh"
+      ]
+    },
+    {
+      "id": "A0Q3",
+      "code": "AOwd",
+      "levels": 1,
+      "hotkey": "W",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41607",
+          "is_wts": true,
+          "wts_id": 41607,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Зов Древних|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41608",
+          "is_wts": true,
+          "wts_id": 41608,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Зов Древних|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_41252",
+          "is_wts": true,
+          "wts_id": 41252,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff7f8f18Зов Древних|r [|cffffcc002-й уровень|r]"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_41253",
+          "is_wts": true,
+          "wts_id": 41253,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff7f8f18Зов Древних|r [|cffffcc003-й уровень|r]"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_41254",
+          "is_wts": true,
+          "wts_id": 41254,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff7f8f18Зов Древних|r [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_41609",
+          "is_wts": true,
+          "wts_id": 41609,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Призывает |cffffd7002|r |cff228a22Малый Древень|r\n|cffffd700Время действия: 70 сек.|r"
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_41256",
+          "is_wts": true,
+          "wts_id": 41256,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Призывает |cffffd7004|r |cff7f8f18Древня|r\n|cffffd700Время действия: 70 сек.|r"
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_41257",
+          "is_wts": true,
+          "wts_id": 41257,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Призывает |cffffd7006|r |cff7f8f18Древня|r\n|cffffd700Время действия: 70 сек.|r"
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_41258",
+          "is_wts": true,
+          "wts_id": 41258,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Призывает |cffffd7008|r |cff7f8f18Древня|r\n|cffffd700Время действия: 70 сек.|r"
+        }
+      },
+      "buffs": [
+        "BOwd",
+        "BOwd",
+        "BOwd",
+        "BOwd"
+      ]
+    },
+    {
+      "id": "Amim",
+      "code": "Amim",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_15953",
+          "is_wts": true,
+          "wts_id": 15953,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Невосприимчивость к магии|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_15959",
+          "is_wts": true,
+          "wts_id": 15959,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Невосприимчивость к магии|r"
+        },
+        "ubertip1": {
+          "raw": "Дает невосприимчивость к магии и большинству способностей.",
+          "is_wts": false,
+          "current_text": "Дает невосприимчивость к магии и большинству способностей."
+        }
+      },
+      "buffs": []
+    },
+    {
+      "id": "A0QP",
+      "code": "Adis",
+      "levels": 1,
+      "hotkey": "TRIGSTR_16870",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_25745",
+          "is_wts": true,
+          "wts_id": 25745,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Рассеивание заклинаний|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_25746",
+          "is_wts": true,
+          "wts_id": 25746,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Рассеивание заклинаний|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_12142",
+          "is_wts": true,
+          "wts_id": 12142,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Развеивает все отрицательные и положительные эффекты в выделенной области.\n\n|cffffd700Наносит 200 ед. призванным юнитам|r"
+        }
+      },
+      "buffs": []
+    },
+    {
+      "id": "A1PM",
+      "code": "Amim",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41622",
+          "is_wts": true,
+          "wts_id": 41622,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Невосприимчивость к магии|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41623",
+          "is_wts": true,
+          "wts_id": 41623,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Невосприимчивость к магии|r"
+        },
+        "ubertip1": {
+          "raw": "Дает невосприимчивость к магии и большинству способностей.",
+          "is_wts": false,
+          "current_text": "Дает невосприимчивость к магии и большинству способностей."
+        }
+      },
+      "buffs": []
+    },
+    {
+      "id": "A0PU",
+      "code": "Aspo",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41653",
+          "is_wts": true,
+          "wts_id": 41653,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Ядовитый Сок|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41654",
+          "is_wts": true,
+          "wts_id": 41654,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Ядовитый Сок|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_27741",
+          "is_wts": true,
+          "wts_id": 27741,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Ядовитый сок, попавший на юнита, замедляет его скорость передвижения на|cffffd700 15%|r и скорость атаки на |cffffd70010%|r, при этом нанося|cffffd700 4 ед. урона в секунду.|r\nВремя дейсвия Юнит: |cffffd7005 сек.|r\nВремя дейсвия Герой: |cffffd7001 сек.|r"
+        }
+      },
+      "buffs": [
+        "Bspo,Bssd"
+      ]
+    },
+    {
+      "id": "A0PV",
+      "code": "Arpm",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30599",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41663",
+          "is_wts": true,
+          "wts_id": 41663,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Ядро Маны|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41664",
+          "is_wts": true,
+          "wts_id": 41664,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Ядро Маны|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_2518",
+          "is_wts": true,
+          "wts_id": 2518,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Гончая|r с помощью своего ядра способна восстанавливать |cffffff0010ед.|r маны своим союзникам"
+        }
+      },
+      "buffs": [
+        "Brpm"
+      ]
+    },
+    {
+      "id": "A1PQ",
+      "code": "Avng",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30923",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_8828",
+          "is_wts": true,
+          "wts_id": 8828,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228b22Страж Леса|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_8830",
+          "is_wts": true,
+          "wts_id": 8830,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228b22Страж Леса|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_12018",
+          "is_wts": true,
+          "wts_id": 12018,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Взращивает из трупа Стража леса. Время существования: <Avng,Dur1> сек. или до гибели аватары."
+        }
+      },
+      "buffs": [
+        "B090"
+      ]
+    },
+    {
+      "id": "A1OY",
+      "code": "Acyc",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30615",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41613",
+          "is_wts": true,
+          "wts_id": 41613,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Смерч|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41614",
+          "is_wts": true,
+          "wts_id": 41614,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Смерч|r"
+        },
+        "ubertip1": {
+          "raw": "\"Подбрасывает врага в воздух, не позволяя двигаться, атаковать и применять способности. При этом жертву нельзя выбрать целью. Не действует на технику. |nВремя действия: <Acyc,Dur1> сек.\"",
+          "is_wts": false,
+          "current_text": "\"Подбрасывает врага в воздух, не позволяя двигаться, атаковать и применять способности. При этом жертву нельзя выбрать целью. Не действует на технику. |nВремя действия: <Acyc,Dur1> сек.\""
+        }
+      },
+      "buffs": [
+        "Bcyc,Bcy2"
+      ]
+    },
+    {
+      "id": "A1P3",
+      "code": "Aadm",
+      "levels": 1,
+      "hotkey": "B",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41294",
+          "is_wts": true,
+          "wts_id": 41294,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228b22Рассеяние чар|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41295",
+          "is_wts": true,
+          "wts_id": 41295,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228b22Рассеяние чар|r"
+        },
+        "ubertip1": {
+          "raw": "\"Снимает положительные эффекты с врагов и отрицательные с союзников. |n|cffffcc00Наносит <Aadm,DataB1> урона призванным целям.|r\"",
+          "is_wts": false,
+          "current_text": "\"Снимает положительные эффекты с врагов и отрицательные с союзников. |n|cffffcc00Наносит <Aadm,DataB1> урона призванным целям.|r\""
+        }
+      },
+      "buffs": []
+    },
+    {
+      "id": "A1P2",
+      "code": "Asps",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30619",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41285",
+          "is_wts": true,
+          "wts_id": 41285,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228b22Контроль Магии|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41286",
+          "is_wts": true,
+          "wts_id": 41286,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228b22Контроль Магии|r"
+        },
+        "ubertip1": {
+          "raw": "Снимает положительный эффект с врага и дает его находящемуся рядом союзнику либо снимает отрицательный эффект с союзника и применяет его к находящемуся рядом врагу.",
+          "is_wts": false,
+          "current_text": "Снимает положительный эффект с врага и дает его находящемуся рядом союзнику либо снимает отрицательный эффект с союзника и применяет его к находящемуся рядом врагу."
+        }
+      },
+      "buffs": []
+    },
+    {
+      "id": "A0PY",
+      "code": "AHab",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30821",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_35520",
+          "is_wts": true,
+          "wts_id": 35520,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Аура магического ядра|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41666",
+          "is_wts": true,
+          "wts_id": 41666,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Аура магического ядра|r"
+        },
+        "tip2": {
+          "raw": "\"Аура гениальности [|cffffcc002-й уровень|r]\"",
+          "is_wts": false,
+          "current_text": "\"Аура гениальности [|cffffcc002-й уровень|r]\""
+        },
+        "tip3": {
+          "raw": "\"Аура гениальности [|cffffcc003-й уровень|r]\"",
+          "is_wts": false,
+          "current_text": "\"Аура гениальности [|cffffcc003-й уровень|r]\""
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_35525",
+          "is_wts": true,
+          "wts_id": 35525,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Ядро |cff228a22Гончией|r начинает источать магическую силу, от чего все союзные маги чувствуют прилив магических сил"
+        },
+        "ubertip2": {
+          "raw": "\"Ускоряет регенерацию маны находящихся рядом союзников.\"",
+          "is_wts": false,
+          "current_text": "\"Ускоряет регенерацию маны находящихся рядом союзников.\""
+        },
+        "ubertip3": {
+          "raw": "\"Ускоряет регенерацию маны находящихся рядом союзников.\"",
+          "is_wts": false,
+          "current_text": "\"Ускоряет регенерацию маны находящихся рядом союзников.\""
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_38132",
+          "is_wts": true,
+          "wts_id": 38132,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Ускоряет регенерацию маны находящихся рядом союзников."
+        }
+      },
+      "buffs": [
+        "BHab",
+        "BHab",
+        "BHab",
+        "BHab"
+      ]
+    },
+    {
+      "id": "A0PZ",
+      "code": "Ainf",
+      "levels": 1,
+      "hotkey": "TRIGSTR_17097",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41658",
+          "is_wts": true,
+          "wts_id": 41658,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Покровительство Леса|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41659",
+          "is_wts": true,
+          "wts_id": 41659,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Покровительство Леса|r"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_12136",
+          "is_wts": true,
+          "wts_id": 12136,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Увеличивает урон на |cffffd70010%|r, а показатели брони на |cffffd7005 ед|r."
+        }
+      },
+      "buffs": [
+        "B08V"
+      ]
+    },
+    {
+      "id": "Adtn",
+      "code": "Adtn",
+      "levels": 1,
+      "hotkey": "D",
+      "fields": {
+        "name": {
+          "raw": "Взорваться",
+          "is_wts": false,
+          "current_text": "Взорваться"
+        },
+        "tip1": {
+          "raw": "Взорваться",
+          "is_wts": false,
+          "current_text": "Взорваться"
+        },
+        "ubertip1": {
+          "raw": "\"Уничтожает огонька, рассеивая магические эффекты и сжигая по <Adtn,DataA1> маны у находящихся рядом войск. |n|cffffcc00Наносит <Adtn,DataB1> урона призванным целям.|r\"",
+          "is_wts": false,
+          "current_text": "\"Уничтожает огонька, рассеивая магические эффекты и сжигая по <Adtn,DataA1> маны у находящихся рядом войск. |n|cffffcc00Наносит <Adtn,DataB1> урона призванным целям.|r\""
+        }
+      },
+      "buffs": []
+    },
+    {
+      "id": "Awha",
+      "code": "Awha",
+      "levels": 1,
+      "hotkey": "G",
+      "fields": {
+        "name": {
+          "raw": "Добывать ресурсы",
+          "is_wts": false,
+          "current_text": "Добывать ресурсы"
+        },
+        "tip1": {
+          "raw": "Добывать ресурсы",
+          "is_wts": false,
+          "current_text": "Добывать ресурсы"
+        },
+        "ubertip1": {
+          "raw": "Добывает золото из оплетенных рудников и древесину из деревьев.",
+          "is_wts": false,
+          "current_text": "Добывает золото из оплетенных рудников и древесину из деревьев."
+        }
+      },
+      "buffs": []
+    },
+    {
+      "id": "A0Q7",
+      "code": "AIdd",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41669",
+          "is_wts": true,
+          "wts_id": 41669,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Мудрость Лесов|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41670",
+          "is_wts": true,
+          "wts_id": 41670,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Мудрость Лесов|r"
+        },
+        "ubertip1": {
+          "raw": "\"-<Aegr,DataA1,%>% к получаемому урону от пронзающих атак и -<Aegr,DataE1,%>% к получаемому урону от способностей и магических атак.\"",
+          "is_wts": false,
+          "current_text": "\"-<Aegr,DataA1,%>% к получаемому урону от пронзающих атак и -<Aegr,DataE1,%>% к получаемому урону от способностей и магических атак.\""
+        }
+      },
+      "buffs": []
+    },
+    {
+      "id": "A0Q2",
+      "code": "AHbh",
+      "levels": 1,
+      "hotkey": "",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41605",
+          "is_wts": true,
+          "wts_id": 41605,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Сильный удар|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41606",
+          "is_wts": true,
+          "wts_id": 41606,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Сильный удар|r"
+        },
+        "tip2": {
+          "raw": "\"Сильный удар [|cffffcc002-й уровень|r]\"",
+          "is_wts": false,
+          "current_text": "\"Сильный удар [|cffffcc002-й уровень|r]\""
+        },
+        "tip3": {
+          "raw": "\"Сильный удар [|cffffcc003-й уровень|r]\"",
+          "is_wts": false,
+          "current_text": "\"Сильный удар [|cffffcc003-й уровень|r]\""
+        },
+        "tip4": {
+          "raw": "TRIGSTR_41242",
+          "is_wts": true,
+          "wts_id": 41242,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Сильный удар [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "\"С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\"",
+          "is_wts": false,
+          "current_text": "\"С <AHbh,DataA1>%-й вероятностью атака нанесет на <AHbh,DataC1> больше урона и оглушит цель на <AHbh,Dur1> сек.\""
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_41243",
+          "is_wts": true,
+          "wts_id": 41243,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "С <AHbh,DataA2>%-й вероятностью атака нанесет на <AHbh,DataC2> больше урона и оглушит цель на <AHbh,Dur2> сек."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_41244",
+          "is_wts": true,
+          "wts_id": 41244,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "С <AHbh,DataA3>%-й вероятностью атака нанесет на <AHbh,DataC3> больше урона и оглушит цель на <AHbh,Dur3> сек."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_41245",
+          "is_wts": true,
+          "wts_id": 41245,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "С <AHbh,DataA4>%-й вероятностью атака нанесет на <AHbh,DataC4> больше урона и оглушит цель на <AHbh,Dur4> сек."
+        }
+      },
+      "buffs": [
+        "BPSE",
+        "BPSE",
+        "BPSE",
+        "BPSE"
+      ]
+    },
+    {
+      "id": "A1OZ",
+      "code": "AEev",
+      "levels": 1,
+      "hotkey": "TRIGSTR_30668",
+      "fields": {
+        "name": {
+          "raw": "TRIGSTR_41615",
+          "is_wts": true,
+          "wts_id": 41615,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Аура Ветров|r"
+        },
+        "tip1": {
+          "raw": "TRIGSTR_41616",
+          "is_wts": true,
+          "wts_id": 41616,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cff228a22Аура ветров|r"
+        },
+        "tip2": {
+          "raw": "TRIGSTR_41271",
+          "is_wts": true,
+          "wts_id": 41271,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cffc8dc8cУскользание|r [|cffffcc002-й уровень|r]"
+        },
+        "tip3": {
+          "raw": "TRIGSTR_41272",
+          "is_wts": true,
+          "wts_id": 41272,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cffc8dc8cУскользание|r [|cffffcc003-й уровень|r]"
+        },
+        "tip4": {
+          "raw": "TRIGSTR_41273",
+          "is_wts": true,
+          "wts_id": 41273,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "|cffc8dc8cУскользание|r [|cffffcc004-й уровень|r]"
+        },
+        "ubertip1": {
+          "raw": "TRIGSTR_26362",
+          "is_wts": true,
+          "wts_id": 26362,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Дает |cffc8dc8c<AEev,DataA1,%>%-й шанс|r уклониться от атаки."
+        },
+        "ubertip2": {
+          "raw": "TRIGSTR_37017",
+          "is_wts": true,
+          "wts_id": 37017,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Дает |cffc8dc8c<AEev,DataA2,%>%-й шанс|r уклониться от атаки."
+        },
+        "ubertip3": {
+          "raw": "TRIGSTR_37018",
+          "is_wts": true,
+          "wts_id": 37018,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Дает |cffc8dc8c<AEev,DataA3,%>%-й шанс|r уклониться от атаки."
+        },
+        "ubertip4": {
+          "raw": "TRIGSTR_37019",
+          "is_wts": true,
+          "wts_id": 37019,
+          "used_in": [
+            "war3mapSkin.w3a"
+          ],
+          "current_text": "Дает |cffc8dc8c40%-й шанс|r уклониться от атаки."
+        }
+      },
+      "buffs": []
+    }
+  ],
+  "buff_ids": [
+    "B08V",
+    "BOwd",
+    "Bcyc",
+    "Bmfa",
+    "BPSE",
+    "Brpm",
+    "B090",
+    "BUts",
+    "AEtr",
+    "Brpl",
+    "B07R",
+    "Bmfl",
+    "Bpsh",
+    "BUau",
+    "BHad",
+    "BEsh",
+    "Bssd",
+    "Bspo",
+    "B08X",
+    "BHab",
+    "BEer",
+    "Bcy2"
+  ]
+}

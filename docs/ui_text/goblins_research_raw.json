@@ -1,0 +1,359 @@
+{
+  "R0D4": {
+    "id": "R0D4",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_23617",
+        "tip": "|c00ffdb78Расширить банковский сектор|r",
+        "ubertip_raw": "TRIGSTR_3418",
+        "ubertip": "Увеличивает количество доступных инком-зданий."
+      }
+    ]
+  },
+  "R007": {
+    "id": "R007",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "|cffe4cfa3Починка — уровень 1|r (|cffffffffD|r)",
+        "tip": "|cffe4cfa3Починка — уровень 1|r (|cffffffffD|r)",
+        "ubertip_raw": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+50|cffced4da. Открывает способность «Починка» у кораблей, имеющих её.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r",
+        "ubertip": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+50|cffced4da. Открывает способность «Починка» у кораблей, имеющих её.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r"
+      }
+    ]
+  },
+  "R04P": {
+    "id": "R04P",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_34275",
+        "tip": "|cffffff00Биологические эксперименты|r [|cffffff001|r]",
+        "ubertip_raw": "TRIGSTR_41792",
+        "ubertip": "Увеличивает здоровье солдат на 4%, не влияет на технику."
+      }
+    ]
+  },
+  "R04E": {
+    "id": "R04E",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_27010",
+        "tip": "|cffffff00Пули|r [|cffffff001|r]",
+        "ubertip_raw": "TRIGSTR_7014",
+        "ubertip": "Увеличивает урон юнитов, стреляющих пулями, на 2."
+      }
+    ]
+  },
+  "R04F": {
+    "id": "R04F",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_30630",
+        "tip": "|cffffff00Ракеты|r [|cffffff001|r]",
+        "ubertip_raw": "TRIGSTR_7044",
+        "ubertip": "Увеличивает урон юнитов, стреляющих ракетами на 4."
+      }
+    ]
+  },
+  "R04G": {
+    "id": "R04G",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_31270",
+        "tip": "|cffffff00Огнеметы|r [|cffffff001|r]",
+        "ubertip_raw": "TRIGSTR_7074",
+        "ubertip": "Увеличивает урон юнитов, использующие огнеметы, на 3."
+      }
+    ]
+  },
+  "R04H": {
+    "id": "R04H",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_31652",
+        "tip": "|cffffff00Ударные механизмы|r [|cffffff001|r]",
+        "ubertip_raw": "TRIGSTR_7104",
+        "ubertip": "Увеличивает урон юнитов, сражающихся в ближнем бою, на 5."
+      }
+    ]
+  },
+  "R04I": {
+    "id": "R04I",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_34175",
+        "tip": "|cffffff00Моторы|r [|cffffff001|r]",
+        "ubertip_raw": "TRIGSTR_9486",
+        "ubertip": "Увеличивает скорость передвижения всей техники на 3%."
+      }
+    ]
+  },
+  "R04J": {
+    "id": "R04J",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_34187",
+        "tip": "|cffffff00Подвижные механизмы|r [|cffffff001|r]",
+        "ubertip_raw": "TRIGSTR_9492",
+        "ubertip": "Увеличивает скорость атаки всей меха-техники и бойцов с эндоскелетами на 3%."
+      }
+    ]
+  },
+  "R04K": {
+    "id": "R04K",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_34199",
+        "tip": "|cffffff00Легкая обшивка|r [|cffffff001|r]",
+        "ubertip_raw": "TRIGSTR_7194",
+        "ubertip": "Увеличивает броню всей пехоте, кроме супербойцов и операторов силовой брони."
+      }
+    ]
+  },
+  "R04L": {
+    "id": "R04L",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_34211",
+        "tip": "|cffffff00Тяжелая обшивка|r [|cffffff001|r]",
+        "ubertip_raw": "TRIGSTR_929",
+        "ubertip": "Увеличивает броню всей технике, а также супербойцам и операторам силовой брони."
+      }
+    ]
+  },
+  "R04M": {
+    "id": "R04M",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_22876",
+        "tip": "|cffffff00Увеличительная оптика|r [|cffffff001|r]",
+        "ubertip_raw": "TRIGSTR_7254",
+        "ubertip": "Увеличивает дальность атаки всех дальнобойных юнитов."
+      }
+    ]
+  },
+  "R056": {
+    "id": "R056",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_22269",
+        "tip": "Исследовать |cffffff00Ускорение|r",
+        "ubertip_raw": "TRIGSTR_34302",
+        "ubertip": "Открывает способность БРДМ \"|cffffff00Ускорение|r\"."
+      }
+    ]
+  },
+  "R07A": {
+    "id": "R07A",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_23516",
+        "tip": "Исследовать |cffffff00Колотов|r",
+        "ubertip_raw": "TRIGSTR_34333",
+        "ubertip": "Открывает способность рекрутов ТК \"|cffffff00Колотов|r\"."
+      }
+    ]
+  },
+  "R05X": {
+    "id": "R05X",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_22882",
+        "tip": "Исследовать |cffffff00ЭМИ гранату|r",
+        "ubertip_raw": "TRIGSTR_34327",
+        "ubertip": "Открывает способность суперсолдат \"|cffffff00ЭМИ граната|r\"."
+      }
+    ]
+  },
+  "R05Y": {
+    "id": "R05Y",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_34332",
+        "tip": "|cffffff00Адренолиновые инъекции",
+        "ubertip_raw": "TRIGSTR_34330",
+        "ubertip": "Открывает способность суперсолдат \"|cffffff00Адренолиновые инъекции|r\"."
+      }
+    ]
+  },
+  "R04N": {
+    "id": "R04N",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_22885",
+        "tip": "|cffffff00Стандарты потребления|r [|cffffff001|r]",
+        "ubertip_raw": "TRIGSTR_7398",
+        "ubertip": "Снижает потребление техники на 1 пункт."
+      }
+    ]
+  },
+  "R04Q": {
+    "id": "R04Q",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_34304",
+        "tip": "|cffffff00С/Б Ракет|r [|cffffff001|r]",
+        "ubertip_raw": "TRIGSTR_9401",
+        "ubertip": "Уменьшает шанс самопордрыва."
+      }
+    ]
+  },
+  "R04R": {
+    "id": "R04R",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_34277",
+        "tip": "|cffffff00С/Б Огнеметов|r [|cffffff001|r]",
+        "ubertip_raw": "TRIGSTR_9383",
+        "ubertip": "Уменьшает шанс самоподжога."
+      }
+    ]
+  },
+  "R053": {
+    "id": "R053",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_34293",
+        "tip": "|cffffff00Исследовать улучшенные пилы",
+        "ubertip_raw": "TRIGSTR_13139",
+        "ubertip": "Увеличивают объем переносимой работниками древесины на 6."
+      }
+    ]
+  },
+  "R05W": {
+    "id": "R05W",
+    "code": null,
+    "levels": 1,
+    "hotkey": null,
+    "name_raw": null,
+    "name": null,
+    "levels_info": [
+      {
+        "level": 1,
+        "tip_raw": "TRIGSTR_34316",
+        "tip": "|cffffff00С/К Пуль|r [|cffffff001|r]",
+        "ubertip_raw": "TRIGSTR_9420",
+        "ubertip": "Уменьшает шанс бракованного снаряда."
+      }
+    ]
+  }
+}

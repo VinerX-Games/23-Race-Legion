@@ -8,54 +8,8 @@ function Trig_ResoursesInterface_Copy_Actions()
 	local p = GetLocalPlayer()
 	local pi = GetPlayerId(p)
 	if pi < 0 or pi > 23 then return end
-	local text
-	local text2
-	local other = corruption[pi] + additional[pi]
-	
-	-- if DisOn then
-	--   call BlzFrameSetText(BlzGetFrameByName("Income0202",0), I2S(R2I(disincome[pi])))
-	--  else
-	--  call BlzFrameSetText(BlzGetFrameByName("Income0202",0), "|cffffff00"+I2S(R2I(disincome[pi]))+"(0)|r" )
-	--  endif
-	
-	
-	if balance[pi] > 0 then
-		BlzFrameSetText(IncomeTextFr, "|cffbeffa0" .. I2S(R2I(balance[pi])))
-		BlzFrameSetText(tooltipTitle, "|cffbeffa0Net income")
-	elseif balance[pi] == 0 then
-		BlzFrameSetText(IncomeTextFr, I2S(R2I(balance[pi])))
-		BlzFrameSetText(tooltipTitle, "Net income is balanced")
-	else
-		BlzFrameSetText(IncomeTextFr, "|cffffb4a0" .. I2S(R2I(balance[pi])))
-		BlzFrameSetText(tooltipTitle, "|cffffb4a0Net loss")
-	end
-	-- set balance[pi]=income[pi]-disincome[pi]+corruption[pi]-logistic[pi]+additional[pi]
-	
-	
-	-- ?????
-	text = "|cffbeffa0" .. I2S(R2I(income[pi])) .. "*(" .. R2S(IncomeMod) .. "-" .. R2S(AllyTax[pi]) .. ")|r-(|cffffb4a0" .. I2S(R2I(disincome[pi])) .. "|r+|cffffb4a0" .. I2S(R2I(logistic[pi])) .. "|r)"
-	if GetPlayerTechCount(p, FourCC('R07E'), true) > 0 then
-		text = text .. " + " .. I2S(R2I(corruption[pi]))
-	end
-	if GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) > 0 then
-		text = text .. " ? " .. I2S(R2I(additional[pi]))
-	end
-	
-	-- ?????????
-	text2 = "|n|cffbeffa0Income × modifiers and ally tax|r − (|cffffb4a0upkeep|r + |cffffb4a0logistics|r)"
-	if GetPlayerTechCount(p, FourCC('R07E'), true) > 0 then
-		text2 = text2 .. " + corruption income"
-	end
-	
-	if GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) > 0 then
-		text2 = text2 .. " + bonus income"
-	end
-	-- set text = "?????("+R2S(income[pi])+")-??????("+R2S()+")|n-?????????("+R2S(logistic[pi])+")"+"|n ?????? ???????? ? ??????????"
-	BlzFrameSetText(tooltipBody, text .. text2)
-	
-	
-	text = nil
-	p = nil
+	UpdateResourceTooltips(p, pi)
+
 end
 -- ===========================================================================
 ---@return nothing
@@ -205,7 +159,7 @@ function Trig_StartLobby_Actions()
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func008Func001A)
 	end
 	udg_LocalInteger = 4
-	DisplayTimedTextToForce(GetPlayersAll(), I2R(udg_LocalInteger), "TRIGSTR_10982")
+	if ShowWelcomePanel ~= nil then ShowWelcomePanel() end
 	udg_LocalInteger = udg_LocalInteger - 3
 	TriggerSleepAction(I2R(udg_LocalInteger))
 	ForForce(udg_AllPlayers, Trig_StartLobby_Func015A)
@@ -214,6 +168,8 @@ function Trig_StartLobby_Actions()
 	udg_LobbyTimerWindows = CreateTimerDialog(udg_LobbyTime)
 	TimerDialogSetTitle(udg_LobbyTimerWindows, GetLocalizedString("TRIGSTR_19360"))
 	TimerDialogDisplay(udg_LobbyTimerWindows, true)
+	-- Панель настроек хоста; старое здание-меню — только если панель не создалась.
+	if HostPanel_Open ~= nil and HostPanel_Open() then return end
 	ModeBuilding = CreateUnit(Player(0), FourCC('n04G'), GetRectCenterX(GetPlayableMapRect()), GetRectCenterY(GetPlayableMapRect()), bj_UNIT_FACING)
 	SelectUnitForPlayerSingle(ModeBuilding, Player(0))
 end
@@ -252,6 +208,8 @@ function Trig_EndLobby_and_Start_game_Func005A()
 end
 ---@return nothing
 function Trig_EndLobby_and_Start_game_Actions()
+	-- До колец выбора расы: панель возвращает интерфейс, кольца снова его скрывают.
+	if HostPanel_Close ~= nil then HostPanel_Close() end
 	TimerDialogDisplayBJ(false, udg_LobbyTimerWindows)
 	DestroyTimerDialogBJ(udg_LobbyTimerWindows)
 	DisplayTextToForce(GetPlayersAll(), "TRIGSTR_19369")
@@ -259,7 +217,7 @@ function Trig_EndLobby_and_Start_game_Actions()
 	ForGroupDestroy(GetUnitsInRectAll(gg_rct_HostReg2), Trig_EndLobby_and_Start_game_Func005A)
 	DisableTrigger(gg_trg_SaveSelection)
 	BlzEnableSelections(true, true)
-	RemoveUnit(ModeBuilding)	--  INLINED!!
+	if ModeBuilding ~= nil then RemoveUnit(ModeBuilding) end
 	ConditionalTriggerExecute(gg_trg_StartDal)
 	ConditionalTriggerExecute(gg_trg_NaxStart)
 	ConditionalTriggerExecute(gg_trg_TurtleStart)
@@ -408,7 +366,7 @@ function Trig_UpgradeStolica_Actions()
 	BlzSetUnitArmor(GetTriggerUnit(), 30.00)
 	BlzSetUnitMaxHP(GetTriggerUnit(), 10000)
 	UnitAddAbilityBJ(FourCC('A0I6'), GetTriggerUnit())
-	BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, "|cffd45e19???????:|r " .. GetUnitName(GetTriggerUnit()))
+	BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, "|cffd45e19Столица:|r " .. GetUnitName(GetTriggerUnit()))
 	UnitAddAbilityBJ(FourCC('A145'), GetTriggerUnit())
 end
 -- ===========================================================================
@@ -483,7 +441,7 @@ function MakeCapital(capital)
 	BlzSetUnitArmor(capital, 30.00)
 	UnitAddAbility(capital, FourCC('A0I6'))
 	UnitAddAbility(capital, FourCC('A145'))
-	BlzSetUnitStringFieldBJ(capital, UNIT_SF_NAME, "|cffd45e19???????:|r " .. GetUnitName(capital))
+	BlzSetUnitStringFieldBJ(capital, UNIT_SF_NAME, "|cffd45e19Столица:|r " .. GetUnitName(capital))
 	GroupAddUnit(udg_StolicaGroups, capital)
 	TriggerRegisterUnitEvent(gg_trg_StolicaAttacked, capital, EVENT_UNIT_ATTACKED)
 	unitShareVisionAll(capital, true)
@@ -594,10 +552,10 @@ function CheckAndCreateCapital(p)
 			u = BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
 			SetPlayerAbilityAvailable(p, FourCC('A0IQ'), false)
 			MakeCapital(u)
-			DisplayTimedTextToForce(udg_AllPlayers, 5, GetPlayerName(p) .. " - |cffffff00????? ????????|r|r, ??? |cffd45e19???????|r ?? ?? ???? ????????? ?? ???????, ? ?????? ???? ??????????? ?????????????.")
+			DisplayTimedTextToForce(udg_AllPlayers, 5, "|cffffcc00Игрок " .. GetPlayerName(p) .. "|r не успел заложить |cffd45e19столицу|r вовремя — она была размещена автоматически.")
 		else
 			if GetPlayerSlotState(p) == PLAYER_SLOT_STATE_PLAYING then
-				DisplayTimedTextToForce(udg_AllPlayers, 5, GetPlayerName(p) .. " - |cffff0000????????|r, ??? |cffd45e19??????? |r ?? ????????? ?? ???????. :(")
+				DisplayTimedTextToForce(udg_AllPlayers, 5, "|cffff4444Игрок " .. GetPlayerName(p) .. " проиграл!|r Столица не была построена в отведённое время.")
 			end
 			
 			ClearPlayer(p)
@@ -694,7 +652,7 @@ end
 function Trig_StolicaDead_Actions()
 	local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
 	SetPlayerAbilityAvailableBJ(true, FourCC('A0IQ'), GetOwningPlayer(GetTriggerUnit()))
-	DisplayTextToForce(GetPlayersAll(), GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. " - |cffff0000????????|r, ??? |cffd45e19??????? |r??????????.")
+	DisplayTextToForce(GetPlayersAll(), "|cffff4444Игрок " .. GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. " потерпел поражение!|r Его |cffd45e19столица|r уничтожена.")
 	ClearPlayer(Player(pi))
 	AiLimitsSet()
 end
@@ -905,7 +863,7 @@ end
 ---@return nothing
 function Freedom()
 	local p = GetEnumPlayer()
-	DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - ???? ????????")
+	DisplayTextToForce(udg_AllPlayers, "|cff55ff55Игрок " .. GetPlayerName(p) .. "|r освободился от вассальной зависимости!")
 	ClearOldAllies(p)
 	p = nil
 end
@@ -914,7 +872,7 @@ function ChangeAlly()
 	local p = udg_LocalPlayer
 	local p0 = GetEnumPlayer()
 	
-	DisplayTextToForce(udg_AllPlayers, GetPlayerName(p0) .. " - ??????? ???????? ??????? " .. GetPlayerName(p))
+	DisplayTextToForce(udg_AllPlayers, "|cffffcc00Игрок " .. GetPlayerName(p0) .. "|r перешёл под контроль сюзерена |cff00ffff" .. GetPlayerName(p) .. "|r!")
 	ClearOldAllies(p0)
 	Senior[GetPlayerId(p0)] = p
 	ForceAddPlayer(Vassals[GetPlayerId(p)], p0)
@@ -942,14 +900,14 @@ function HandleVassalization(capital, attacker)
 	-- Suicide case
 	if p == p2 then
 		ClearPlayer(p)
-		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - ????? ?????????? ???? ??????? - ??????")
+		DisplayTextToForce(udg_AllPlayers, "|cffff4444Игрок " .. GetPlayerName(p) .. "|r уничтожил собственную столицу и выбыл из игры!")
 		ForForce(Vassals[pi], Freedom)
 		return
 	end
 	
 	-- Captured by a free player
 	if Senior[pi2] == nil then
-		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - ??????? ???????? ??????? " .. GetPlayerName(p2))
+		DisplayTextToForce(udg_AllPlayers, "|cffffcc00Игрок " .. GetPlayerName(p) .. "|r стал вассалом игрока |cff00ffff" .. GetPlayerName(p2) .. "|r!")
 		-- Free defender
 		if Senior[pi] == nil then
 			Senior[pi] = p2
@@ -970,7 +928,7 @@ function HandleVassalization(capital, attacker)
 	else
 		p3 = Senior[pi2]
 		pi3 = GetPlayerId(p3)
-		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - ??????? ???????? ??????? " .. GetPlayerName(p3))
+		DisplayTextToForce(udg_AllPlayers, "|cffffcc00Игрок " .. GetPlayerName(p) .. "|r стал вассалом игрока |cff00ffff" .. GetPlayerName(p3) .. "|r!")
 		-- Free defender
 		if Senior[pi] == nil then
 			Senior[pi] = p3
@@ -1080,7 +1038,7 @@ end
 ---@return nothing
 function Trig_DominationButton_Actions()
 	udg_GameMode = 3
-	DisplayTextToForce(GetPlayersAll(), "????? ??????: ?????????")
+	DisplayTextToForce(GetPlayersAll(), "Режим выбран: Доминация")
 end
 -- ===========================================================================
 ---@return nothing
@@ -1113,7 +1071,7 @@ function ExpandTable()
 	
 	
 	ThirdColumnHeader = MultiboardGetItem(Multiboard, 0, 2)
-	MultiboardSetItemValue(ThirdColumnHeader, "Точек,%")
+	MultiboardSetItemValue(ThirdColumnHeader, "Города")
 	MultiboardSetItemWidth(ThirdColumnHeader, 0.06)
 	MultiboardReleaseItem(ThirdColumnHeader)
 	
@@ -1123,7 +1081,7 @@ function ExpandTable()
 		local ownerIndex = MultiboardItemOwnerIndex[i]
 		if ownerIndex ~= nil then
 			ThirdColumn[i] = MultiboardGetItem(Multiboard, ownerIndex, 2)
-			MultiboardSetItemValue(ThirdColumn[i], "0.000%")
+			MultiboardSetItemValue(ThirdColumn[i], "0%")
 			MultiboardSetItemWidth(ThirdColumn[i], 0.06)
 		end
 		i = i + 1
@@ -1143,7 +1101,7 @@ end
 -- endfunction
 ---@return nothing
 function Trig_Domination_start_Actions()
-	DisplayTextToForce(udg_AllPlayers, "??????? ????? ?????????. ????????? " .. I2S(PercentWin) .. "% ???????, ????? ????????!")
+	DisplayTextToForce(udg_AllPlayers, "|cffb99d66РЕЖИМ:|r Включён режим |cffffcc00«Доминация»|r. Захватите |cffffffff" .. I2S(PercentWin) .. "%|r стратегических точек, чтобы победить!")
 end
 -- ===========================================================================
 ---@return nothing
@@ -1159,8 +1117,8 @@ end
 ---@return nothing
 function Trig_DomCheckCommand_Actions()
 	local pi = GetPlayerId(GetTriggerPlayer())
-	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "?? ????????????? " .. I2S(CityPlayerCount[pi]) .. " ????? ?? " .. I2S(CityCount) .. " ?? ????? ? ?? " .. I2S(MathRound(CityCount * 0.01 * PercentWin)) .. " ??????????? ??? ??????")
-	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "????? ??????? ??? ??????? " .. R2SW(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount), 3, 3) .. "% ?? ??????????? " .. I2S(PercentWin) .. "%")
+	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffb99d66СТАТУС:|r Вы контролируете |cffffffff" .. I2S(CityPlayerCount[pi]) .. "|r из |cffffffff" .. I2S(CityCount) .. "|r точек на карте (требуется |cffffffff" .. I2S(MathRound(CityCount * 0.01 * PercentWin)) .. "|r для победы).")
+	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffb99d66ПРОГРЕСС:|r Ваш контроль: |cffffcc00" .. R2SW(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount), 1, 1) .. "%|r из необходимых |cffffffff" .. I2S(PercentWin) .. "%|r.")
 end
 -- ===========================================================================
 ---@return nothing
@@ -1184,7 +1142,7 @@ end
 ---@return nothing
 function Trig_FastTestSpell_Actions()
 	udg_GameMode = 4
-	DisplayTextToForce(GetPlayersAll(), "????? ??????: ????. ?????? -fast ? -fastoff ")
+	DisplayTextToForce(GetPlayersAll(), "Режим выбран: Тест. Пишите -fast и -fastoff ")
 end
 -- ===========================================================================
 ---@return nothing
@@ -1205,7 +1163,7 @@ function Trig_FastTest_Actions()
 		fastTest[GetPlayerId(GetTriggerPlayer())] = true
 		income[GetPlayerId(GetTriggerPlayer())] = income[GetPlayerId(GetTriggerPlayer())] + 25000
 		incomeW[GetPlayerId(GetTriggerPlayer())] = incomeW[GetPlayerId(GetTriggerPlayer())] + 25000
-		DisplayTimedTextToForce(udg_AllPlayers, 6, GetPlayerName(GetTriggerPlayer()) .. " - ??????? ???????? ?????!!!")
+		DisplayTimedTextToForce(udg_AllPlayers, 6, "|cffffcc00Игрок " .. GetPlayerName(GetTriggerPlayer()) .. "|r включил тестовый режим!")
 		SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_FOOD_CAP, 100)
 	end
 	
@@ -1235,7 +1193,7 @@ function Trig_FastTestOff_Actions()
 		fastTest[GetPlayerId(GetTriggerPlayer())] = false
 		income[GetPlayerId(GetTriggerPlayer())] = income[GetPlayerId(GetTriggerPlayer())] - 25000
 		incomeW[GetPlayerId(GetTriggerPlayer())] = incomeW[GetPlayerId(GetTriggerPlayer())] - 25000
-		DisplayTimedTextToForce(udg_AllPlayers, 6, GetPlayerName(GetTriggerPlayer()) .. " - ???????? ???????? ?????!")
+		DisplayTimedTextToForce(udg_AllPlayers, 6, "|cffffcc00Игрок " .. GetPlayerName(GetTriggerPlayer()) .. "|r выключил тестовый режим.")
 	end
 end
 -- ===========================================================================

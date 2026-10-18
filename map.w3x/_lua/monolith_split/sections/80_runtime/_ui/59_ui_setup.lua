@@ -34,10 +34,16 @@ function UISetup()
 	BlzFrameClearAllPoints(allyButton)
 	BlzFrameClearAllPoints(chatButton)
 	BlzFrameClearAllPoints(questButton)
-	BlzFrameSetAbsPoint(questButton, FRAMEPOINT_TOPLEFT, 0.05, 0.6)
-	BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPLEFT, -0.03, 0.6)
-	BlzFrameSetAbsPoint(allyButton, FRAMEPOINT_TOPLEFT, 0.05, 0.583)
-	BlzFrameSetAbsPoint(chatButton, FRAMEPOINT_TOPLEFT, -0.03, 0.583)
+	-- 2x2 grid left of the resource bar (it starts at x = 0.14).
+	local btnW, btnH, gap = 0.084, 0.0175, 0.002
+	BlzFrameSetSize(fh, btnW, btnH)
+	BlzFrameSetSize(questButton, btnW, btnH)
+	BlzFrameSetSize(allyButton, btnW, btnH)
+	BlzFrameSetSize(chatButton, btnW, btnH)
+	BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPLEFT, -0.03, 0.599)
+	BlzFrameSetAbsPoint(questButton, FRAMEPOINT_TOPLEFT, -0.03 + btnW + gap, 0.599)
+	BlzFrameSetAbsPoint(chatButton, FRAMEPOINT_TOPLEFT, -0.03, 0.599 - btnH - gap)
+	BlzFrameSetAbsPoint(allyButton, FRAMEPOINT_TOPLEFT, -0.03 + btnW + gap, 0.599 - btnH - gap)
 	
 	-- Hiding clock UI and creating new frame bar
 	BlzFrameSetTexture(imageTest, "UI\\ResourceBar.tga", 0, true)

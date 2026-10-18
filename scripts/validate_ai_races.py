@@ -10,14 +10,20 @@ Checks:
 - ecoWeights building references
 """
 import re
+import argparse
+import json
+import contextlib
+import io
 import os
 from pathlib import Path
 from collections import defaultdict
 
-RACES_ROOT = Path(r"map.w3x\_lua\monolith_split\sections")
+from wc3_project import ROOT, SPLIT, load_sections
+
+RACES_ROOT = SPLIT / "sections"
 RACES_FILE = str(RACES_ROOT / "82_ai_races.lua")
 RACE_EXTRA_DIR = RACES_ROOT / "82_ai_races"
-LIB_RACES_FILE = r"map.w3x\_lua\monolith_split\sections\libraries\13_Races.lua"
+LIB_RACES_FILE = RACES_ROOT / "libraries/13_Races.lua"
 
 # Read all rawcodes from the world editor files and lua code to get valid IDs
 VALID_RAWCODES = set()
@@ -57,11 +63,30 @@ def read_file(filepath):
 
 
 def read_race_sources():
-    parts = [read_file(RACES_FILE)]
-    if RACE_EXTRA_DIR.is_dir():
-        for path in sorted(RACE_EXTRA_DIR.glob("*.lua")):
-            parts.append("\n\n" + read_file(str(path)))
-    return "".join(parts)
+    return "".join(sec["text"] for sec in load_sections() if
+                   sec["file"] == "82_ai_races.lua" or sec["file"].startswith("82_ai_races/"))
+
+
+def issue_severity(issue):
+    # Explicit known migration hints; unknown diagnostics remain errors.
+    if issue.startswith(("has legacy ", "UNUSED GATE:", "PRODUCTION bld ", "ecoWeight bld ")):
+        return "warning"
+    return "error"
+
+
+def report():
+    content = read_race_sources()
+    all_codes = extract_fourcc_from_text(content) | extract_fourcc_from_file(LIB_RACES_FILE)
+    blocks = extract_race_blocks(content)
+    tokens, findings = {}, []
+    for name, block in blocks.items():
+        for issue in validate_race(name, block, tokens, all_codes):
+            findings.append({"race": name, "severity": issue_severity(issue), "message": issue})
+    if not blocks:
+        findings.append({"race": "", "severity": "error", "message": "No AI races loaded from manifest"})
+    return {"schema_version": 1, "ok": not any(f["severity"] == "error" for f in findings),
+            "races": len(blocks), "errors": sum(f["severity"] == "error" for f in findings),
+            "warnings": sum(f["severity"] == "warning" for f in findings), "findings": findings}
 
 
 def extract_race_blocks(content):
@@ -582,4 +607,15 @@ def main():
 
 
 if __name__ == '__main__':
-    exit(main())
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--json", action="store_true")
+    parser.add_argument("--strict-warnings", action="store_true")
+    args = parser.parse_args()
+    result = report()
+    if args.json:
+        print(json.dumps(result, ensure_ascii=False))
+    else:
+        print(f"AI races: {result['races']}; errors: {result['errors']}; warnings: {result['warnings']}")
+        for finding in result["findings"]:
+            print(f"[{finding['severity']}] {finding['race']}: {finding['message']}")
+    raise SystemExit(0 if result["ok"] and not (args.strict_warnings and result["warnings"]) else 1)

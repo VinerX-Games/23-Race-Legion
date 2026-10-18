@@ -1,0 +1,1096 @@
+=== 1. SELECTION ===
+ID: A0HV
+  Name: TRIGSTR_38877 -> |cffc8cde1Плеть|r
+  Tip: TRIGSTR_38878 -> |cffc8cde1Плеть|r
+  Ubertip: TRIGSTR_25783 -> |cffa0beaaСоздатель расы:|r |cffc8dcaaEscanor|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaСложность:|r |cfff0dc96●●●|r●●|r|n|cffa0beaaПериод:|r |cffc8dcaaWrath of the Lich King|r|n|n|cffc8cde1Плеть|r является одной из трех основных фракций нежити, существующих в мире Азерот, и основной силой, желающей захватить контроль над миром. Она имеет огромную "империю". Созданная изначально как предвестник вторжения Пылающего Легиона после предыдущих неудач, |cffc8cde1Плеть|r освободилась от ее демонических хозяев и под железной волей ужасающего Короля-лича создала свою базу на арктическом континенте Нордскол.
+  Hotkey: A
+
+=== 2. BUILDINGS ===
+ID: n014
+  Name: TRIGSTR_8527 -> |cffc8cde1Некрополь|r
+  Tip: TRIGSTR_1236 -> Призвать |cffc8cde1Некрополь|r
+  Ubertip: TRIGSTR_41914 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa100 сек.|r|n|nБазовое здание. Обучает послушников и хранит древесину. Можно улучшить до чертогов мертвых, а затем – до темной цитадели, чтобы получить доступ к новым зданиям и типам войск.
+  Hotkey: Q
+  Trains: u00P
+  Researches: None
+  Upgrades_to: u00F
+  Abils: None
+ID: u00F
+  Name: TRIGSTR_8554 -> |cffc8cde1Чертоги мертвых|r
+  Tip: TRIGSTR_1234 -> Улучшить до |cffc8cde1Чертогов мертвых|r
+  Ubertip: TRIGSTR_41907 -> |cff7dc87dВремя улучшения:|r |cffaaf0aa100 сек.|r|n|nУлучшите до чертогов мертвых, чтобы получить доступ к новым зданиям и типам войск. 
+  Hotkey: Z
+  Trains: u00P
+  Researches: None
+  Upgrades_to: u00G
+  Abils: None
+ID: u00G
+  Name: TRIGSTR_8555 -> |cffc8cde1Темная цитадель|r
+  Tip: TRIGSTR_1235 -> Улучшить до |cffc8cde1Темной цитадели|r
+  Ubertip: TRIGSTR_41908 -> |cff7dc87dВремя улучшения:|r |cffaaf0aa140 сек.|r|n|nУлучшите до темной цитадели, чтобы получить доступ к новым зданиям и типам войск. 
+  Hotkey: Z
+  Trains: u00P
+  Researches: None
+  Upgrades_to: None
+  Abils: None
+ID: u00H
+  Name: TRIGSTR_8556 -> |cffc8cde1Зиккурат|r
+  Tip: TRIGSTR_12019 -> Призвать |cffc8cde1Зиккурат|r
+  Ubertip: TRIGSTR_41909 -> |cff7dc87dВремя строительства:|r |cffaaf0aa50 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.Можно улучшить до оборонительного здания.
+
+|cffffff00Приносит 40 инкома|r
+  Hotkey: A
+  Trains: None
+  Researches: None
+  Upgrades_to: u00I,u00J
+  Abils: None
+ID: u00I
+  Name: TRIGSTR_8557 -> |cffc8cde1Башня духов|r
+  Tip: TRIGSTR_40236 -> Призвать |cffc8cde1Башню духов|r
+  Ubertip: TRIGSTR_41910 -> |cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nОборонительное сооружение.
+  Hotkey: Z
+  Trains: None
+  Researches: None
+  Upgrades_to: None
+  Abils: None
+ID: u00J
+  Name: TRIGSTR_8558 -> |cffc8cde1Нерубская башня|r
+  Tip: TRIGSTR_40237 -> Призвать |cffc8cde1Нерубскую башню|r
+  Ubertip: TRIGSTR_41911 -> |cff7dc87dВремя строительства:|r |cffaaf0aa30 сек.|r|n|nОборонительное сооружение.
+  Hotkey: X
+  Trains: None
+  Researches: None
+  Upgrades_to: None
+  Abils: None
+ID: u00K
+  Name: TRIGSTR_8559 -> |cffc8cde1Алтарь тьмы|r
+  Tip: TRIGSTR_13004 -> Призвать |cffc8cde1Алтарь тьмы|r
+  Ubertip: TRIGSTR_13016 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nСооружение позволяющее призывать новых и воскрешает павших героев.
+  Hotkey: S
+  Trains: U00O,U00V,U00U
+  Researches: None
+  Upgrades_to: None
+  Abils: None
+ID: u00L
+  Name: TRIGSTR_8560 -> |cffc8cde1Кладбище|r
+  Tip: TRIGSTR_13006 -> Призвать |cffc8cde1Кладбище|r
+  Ubertip: TRIGSTR_41517 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa80 сек.|r|n|nКладбище дает возможность производить исследования, улучшающие боевые характеристики существ армии Тьмы, а также является источником тел и хранилищем древесины.
+  Hotkey: E
+  Trains: None
+  Researches: R0DQ,R05I,R05J,R05N,R05O,R05P,R05Q
+  Upgrades_to: None
+  Abils: None
+ID: u00M
+  Name: TRIGSTR_8561 -> |cffc8cde1Бойня|r
+  Tip: TRIGSTR_13007 -> Призвать |cffc8cde1Бойня|r
+  Ubertip: TRIGSTR_41912 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nНа бойне можно нанимать мясников и труповозки, а также создавать обсидиановые статуи. Кроме того, она позволяет изобрести способности ''Ядовитое облако''.
+  Hotkey: D
+  Trains: u00B,u00D,u00A
+  Researches: R05L,R05H
+  Upgrades_to: None
+  Abils: None
+ID: u00N
+  Name: TRIGSTR_8562 -> |cffc8cde1Храм проклятых|r
+  Tip: TRIGSTR_12020 -> Призвать |cffc8cde1Храм проклятых|r
+  Ubertip: TRIGSTR_41913 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nХрам Проклятых позволяет нанимать магов армии Тьмы - некромантов, безумных ученых и Скелетов-магов
+  Hotkey: R
+  Trains: u00C,u008,u00E
+  Researches: R05E,R05F,R05G
+  Upgrades_to: None
+  Abils: None
+ID: n012
+  Name: TRIGSTR_8519 -> |cffc8cde1Склеп|r
+  Tip: TRIGSTR_12017 -> Построить |cffc8cde1Склеп|r
+  Ubertip: TRIGSTR_41832 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nСклеп позволяет нанимать основных воинов армии Тьмы - вурдалаков, могильщиков и горгулий. Также склеп позволяет изобрести способности ''Ярость вурдалака'', ''Каннибализм'', ''Статуя'', ''Паутина'' и ''Норы могильщиков''.
+  Hotkey: W
+  Trains: n011,n013,u03E
+  Researches: R05A,R05R,R05D,R05C
+  Upgrades_to: None
+  Abils: None
+ID: u03B
+  Name: TRIGSTR_2658 -> |cffc8cde1Костяной завод|r
+  Tip: TRIGSTR_8999 -> Призвать |cffc8cde1Костяной завод|r
+  Ubertip: TRIGSTR_13000 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa70 сек.|r|n|n На костяном заводе создаются ледяные змеи. 
+  Hotkey: X
+  Trains: u034
+  Researches: None
+  Upgrades_to: None
+  Abils: None
+ID: u017
+  Name: TRIGSTR_9890 -> |cffdcaa92Алтарь перевоплощения|r
+  Tip: TRIGSTR_9891 -> Призвать |cffdcaa92Алтарь перевоплощения|r
+  Ubertip: TRIGSTR_13021 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa65 сек.|r|n|nПозволяет совершать жертвоприношения, превращая послушников в невидимые тени. Тени обнаруживают невидимые войска, но не могут атаковать.
+  Hotkey: R
+  Trains: None
+  Researches: None
+  Upgrades_to: None
+  Abils: None
+ID: h0D1
+  Name: |cffe4cfa3Верфь|r -> |cffe4cfa3Верфь|r
+  Tip: |cffe4cfa3Верфь|r (|cffffffffC|r) -> |cffe4cfa3Верфь|r (|cffffffffC|r)
+  Ubertip: |cffa6afb8ЗДАНИЕ:|cffced4da Строит корабли и исследует общие улучшения флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбстрел|cffced4da|n- |cffa9c7deДополнительные паруса|cffced4da|n- |cffa9c7deПочинка|cffced4da|n- |cffa9c7deОрудия флота|cffced4da|n- |cffa9c7deУкреплённый корпус|cffced4da.|n|n|cffa9c7deЗона ремонта|cffced4da восстанавливает |cffc8e0872,5|cffced4da здоровья/сек. союзным наземным механическим войскам в радиусе |cffffffff550|cffced4da.|r -> |cffa6afb8ЗДАНИЕ:|cffced4da Строит корабли и исследует общие улучшения флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбстрел|cffced4da|n- |cffa9c7deДополнительные паруса|cffced4da|n- |cffa9c7deПочинка|cffced4da|n- |cffa9c7deОрудия флота|cffced4da|n- |cffa9c7deУкреплённый корпус|cffced4da.|n|n|cffa9c7deЗона ремонта|cffced4da восстанавливает |cffc8e0872,5|cffced4da здоровья/сек. союзным наземным механическим войскам в радиусе |cffffffff550|cffced4da.|r
+  Hotkey: C
+  Trains: h0D2,h0CZ,h0D0
+  Researches: R005,R006,R007,R002,R003
+  Upgrades_to: None
+  Abils: None
+
+=== 3. UNITS ===
+ID: u00P
+  Name: TRIGSTR_8530 -> |cffc8cde1Послушник|r
+  Tip: Обучить послушника -> Обучить послушника
+  Ubertip: TRIGSTR_41915 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa15 сек.|r|n|nБазовый рабочий. Призывает и ремонтирует здания, а также добывает золото. Можно принести в жертву в жертвенной яме, чтобы создать тень. |n|n|cffffcc00Атакует наземные цели.|r
+  Hotkey: Q
+  Trains: None
+  Abils: None
+  Upgrades: Rguv
+  Targs1: ground,structure,debris,item,ward | Weap1: WoodLightBash
+  Targs2: None | Weap2: None
+ID: n011
+  Name: TRIGSTR_8517 -> |cffc8cde1Вурдалак|r
+  Tip: TRIGSTR_8675 -> Воскресить |cffc8cde1вурдалака|r
+  Ubertip: TRIGSTR_38398 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa19 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|nБазовый воин, способный добывать древесину. Может изучить «Каннибализм» и «Ярость вурдалака». |n|n|cffffcc00Атакует наземные цели и деревья.|r
+  Hotkey: Q
+  Trains: None
+  Abils: None
+  Upgrades: R0DQ,R05O,R05Q,R05I,R05J,R05R
+  Targs1: ground,structure,debris,item,ward | Weap1: WoodMediumBash
+  Targs2: None | Weap2: None
+ID: n013
+  Name: TRIGSTR_30586 -> |cffc8cde1Горгулья|r
+  Tip: TRIGSTR_30604 -> Воскресить |cffc8cde1Горгулью|r
+  Ubertip: TRIGSTR_38399 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa28 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n|nМожет научиться превращаться в статую.|n|n|cffffcc00Атакует наземные
+  Hotkey: E
+  Trains: None
+  Abils: None
+  Upgrades: R05N,R05P,R05I,R05J
+  Targs1: ground,structure,debris,air,item,ward | Weap1: None
+  Targs2: None | Weap2: None
+ID: u03E
+  Name: TRIGSTR_8520 -> |cffc8cde1Некроарахнид|r
+  Tip: TRIGSTR_33298 -> Воскресить |cffc8cde1Некроарахнид|r
+  Ubertip: TRIGSTR_42347 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa33 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n|nВоин поддержки дальнего боя. Может изучить «Паутину» и «Закопаться». |n|n|cffffcc00Атакует наземные цели.|r
+  Hotkey: W
+  Trains: None
+  Abils: None
+  Upgrades: R05N,R05P,R05C,R05D,R05I,R05J
+  Targs1: ground,structure,debris,item,ward | Weap1: None
+  Targs2: None | Weap2: None
+ID: u02B
+  Name: TRIGSTR_3848 -> |cffc8cde1Некроарахнид|r
+  Tip: TRIGSTR_3849 -> Воскресить |cffc8cde1некроарахнида|r
+  Ubertip: TRIGSTR_3954 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n|nВоин поддержки дальнего боя. Может изучить «|cff808080Паутину|r» и «|cff808080Закопаться|r».
+  Hotkey: E
+  Trains: None
+  Abils: None
+  Upgrades: R05N,R05P,R05C,R05D,R05I,R05J
+  Targs1: ground,structure,debris,item,ward | Weap1: None
+  Targs2: None | Weap2: None
+ID: u00A
+  Name: TRIGSTR_8523 -> |cffc8cde1Поганище|r
+  Tip: TRIGSTR_8607 -> Воскресить |cffc8cde1поганище|r
+  Ubertip: TRIGSTR_38400 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa37 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|n
+Тяжелый воин ближнего боя. Может изучить «Болезнетворное облако» и «Каннибализм». |n|n|cffffcc00Атакует наземные цели.|r
+  Hotkey: E
+  Trains: None
+  Abils: None
+  Upgrades: R05Q,R05O,R05H,R05I,R05J
+  Targs1: ground,structure,debris,item,ward | Weap1: MetalHeavyChop
+  Targs2: None | Weap2: None
+ID: u00B
+  Name: TRIGSTR_8524 -> |cffc8cde1Мясной фургон|r
+  Tip: TRIGSTR_8679 -> Построить |cffc8cde1мясной фургон|r
+  Ubertip: TRIGSTR_38401 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa31 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный урон|r|n|n
+Транспорт для перевозки трупов, а также дальнобойное осадное орудие, эффективное против зданий, но медленное и уязвимое. Можно оснастить «Болезнетворным облаком». |n|n|cffffcc00Атакует наземные цели и деревья.|r
+  Hotkey: Q
+  Trains: None
+  Abils: None
+  Upgrades: R05H,R05O
+  Targs1: ground,debris,tree,wall,item,ward | Weap1: None
+  Targs2: structure | Weap2: None
+ID: u00D
+  Name: TRIGSTR_8526 -> |cffc8cde1Обсидиановая статуя|r
+  Tip: TRIGSTR_8681 -> Создать |cffc8cde1обсидиановую статую|r
+  Ubertip: TRIGSTR_38403 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa31 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r|n|nПрочная каменная статуя, оживленная с помощью магии. Способна манипулировать магической энергией. 
+  Hotkey: W
+  Trains: None
+  Abils: None
+  Upgrades: R05N,R05P
+  Targs1: ground,structure,debris,air,item,ward | Weap1: None
+  Targs2: None | Weap2: None
+ID: u00C
+  Name: TRIGSTR_8525 -> |cffc8cde1Некромант|r
+  Tip: TRIGSTR_8680 -> Воскресить |cffc8cde1некроманта|r
+  Ubertip: TRIGSTR_38402 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa25 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r|n|nВоин поддержки дальнего боя. Может изучить «Паутину» и «Закопаться». |n|n|cffffcc00Атакует наземные цели.|r
+  Hotkey: Q
+  Trains: None
+  Abils: None
+  Upgrades: R05E,R05I,R05J,R05N,R05P,R05I
+  Targs1: ground,structure,debris,air,item,ward | Weap1: None
+  Targs2: None | Weap2: None
+ID: u008
+  Name: TRIGSTR_31243 -> |cffc8cde1Безумный ученый|r
+  Tip: TRIGSTR_8682 -> |cffc8cde1Воскресить Безумца|r
+  Ubertip: TRIGSTR_33326 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa35 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r|n|nБезумный ученый Плети, прошедший через многие эксперементы. Способен лечить союзников и отравлять врагов.
+  Hotkey: W
+  Trains: None
+  Abils: None
+  Upgrades: R05G,R05I,R05J,R05N,R05P,R05I
+  Targs1: None | Weap1: None
+  Targs2: None | Weap2: None
+ID: u00E
+  Name: TRIGSTR_8568 -> |cffc8cde1Скелет-маг|r
+  Tip: TRIGSTR_8683 -> Воскресить |cffc8cde1Скелет-маг|r
+  Ubertip: TRIGSTR_41921 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa24 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r|n|nБазовый маг |cff808080Плети|r, способный на "|cff808080Огненный шар|r", "|cff808080Порча|r", "|cff808080Проклятие|r".
+  Hotkey: E
+  Trains: None
+  Abils: None
+  Upgrades: R05F,R05I,R05J,R05N,R05P,R05I
+  Targs1: ground,structure,debris,air,item,ward | Weap1: None
+  Targs2: None | Weap2: None
+ID: u034
+  Name: TRIGSTR_39891 -> |cffc8cde1Ледяной змей|r
+  Tip: TRIGSTR_39892 -> Создать |cffc8cde1Ледяного змея|r
+  Ubertip: TRIGSTR_42345 -> |cff7dc87dВремя восстановления заряда:|r |cffaaf0aa52 сек|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|nТяжелое летающее существо. Может изучить «Леденящее дыхание». |n|n|cffffcc00Атакует наземные и воздушные цели.|r
+  Hotkey: Q
+  Trains: None
+  Abils: None
+  Upgrades: R05N,R05P,R05I,R05J
+  Targs1: ground,structure,debris,item,ward | Weap1: None
+  Targs2: air | Weap2: None
+ID: h0CZ
+  Name: |cffe4cfa3Фрегат|r -> |cffe4cfa3Фрегат|r
+  Tip: |cffe4cfa3Фрегат|r (|cffffffffW|r) -> |cffe4cfa3Фрегат|r (|cffffffffW|r)
+  Ubertip: |cffa6afb8ЮНИТ:|cffced4da Боевой корабль для поддержки флота и обстрела противников.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБоковые пушки фрегата|cffced4da: автоматически стреляют по вражеским механическим целям, в том числе на ходу.|n- |cffa9c7deТактическое ускорение|cffced4da: временно повышает скорость передвижения ценой увеличения получаемого урона; требует «Дополнительных парусов».|n- |cffa9c7deМассированный обстрел|cffced4da: поражает противников в выбранной области; требует «Обстрела».|n- |cffa9c7deПочинка|cffced4da: восстанавливает здоровье при поддержании; требует одноимённого исследования.|n- |cffa9c7deПрицельная пальба|cffced4da: наносит урон и оглушает органическую цель.|n- |cffa9c7deНазначение флагмана|cffced4da: усиливает корабль и открывает выбор постоянной ауры.|n|nАтакует наземные и воздушные цели.|r -> |cffa6afb8ЮНИТ:|cffced4da Боевой корабль для поддержки флота и обстрела противников.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБоковые пушки фрегата|cffced4da: автоматически стреляют по вражеским механическим целям, в том числе на ходу.|n- |cffa9c7deТактическое ускорение|cffced4da: временно повышает скорость передвижения ценой увеличения получаемого урона; требует «Дополнительных парусов».|n- |cffa9c7deМассированный обстрел|cffced4da: поражает противников в выбранной области; требует «Обстрела».|n- |cffa9c7deПочинка|cffced4da: восстанавливает здоровье при поддержании; требует одноимённого исследования.|n- |cffa9c7deПрицельная пальба|cffced4da: наносит урон и оглушает органическую цель.|n- |cffa9c7deНазначение флагмана|cffced4da: усиливает корабль и открывает выбор постоянной ауры.|n|nАтакует наземные и воздушные цели.|r
+  Hotkey: W
+  Trains: None
+  Abils: None
+  Upgrades: R005,R007,R004,R003,R002
+  Targs1: ground,structure,debris,air,item,ward | Weap1: None
+  Targs2: None | Weap2: None
+ID: h0D0
+  Name: |cffe4cfa3Линкор|r -> |cffe4cfa3Линкор|r
+  Tip: |cffe4cfa3Линкор|r (|cffffffffE|r) -> |cffe4cfa3Линкор|r (|cffffffffE|r)
+  Ubertip: |cffa6afb8ЮНИТ:|cffced4da Тяжёлый боевой корабль для обстрела наземных целей и зданий.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБоковые пушки линкора|cffced4da: автоматически стреляют по вражеским механическим целям, в том числе на ходу; требуют «Обстрела».|n- |cffa9c7deТактическое ускорение|cffced4da: временно повышает скорость передвижения ценой увеличения получаемого урона; требует «Дополнительных парусов».|n- |cffa9c7deМассированный обстрел|cffced4da: поражает противников в выбранной области; требует «Обстрела».|n- |cffa9c7deПочинка|cffced4da: восстанавливает здоровье при поддержании; требует одноимённого исследования.|n- |cffa9c7deАбордаж|cffced4da: захват кораблей в текущей версии недоступен.|n- |cffa9c7deНазначение флагмана|cffced4da: усиливает корабль и открывает выбор постоянной ауры.|n|nАтакует наземные цели.|r -> |cffa6afb8ЮНИТ:|cffced4da Тяжёлый боевой корабль для обстрела наземных целей и зданий.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБоковые пушки линкора|cffced4da: автоматически стреляют по вражеским механическим целям, в том числе на ходу; требуют «Обстрела».|n- |cffa9c7deТактическое ускорение|cffced4da: временно повышает скорость передвижения ценой увеличения получаемого урона; требует «Дополнительных парусов».|n- |cffa9c7deМассированный обстрел|cffced4da: поражает противников в выбранной области; требует «Обстрела».|n- |cffa9c7deПочинка|cffced4da: восстанавливает здоровье при поддержании; требует одноимённого исследования.|n- |cffa9c7deАбордаж|cffced4da: захват кораблей в текущей версии недоступен.|n- |cffa9c7deНазначение флагмана|cffced4da: усиливает корабль и открывает выбор постоянной ауры.|n|nАтакует наземные цели.|r
+  Hotkey: E
+  Trains: None
+  Abils: None
+  Upgrades: R005,R007,R004,R003,R002
+  Targs1: ground,structure,debris,item,ward | Weap1: None
+  Targs2: None | Weap2: None
+ID: h0D2
+  Name: |cffe4cfa3Транспорт|r -> |cffe4cfa3Транспорт|r
+  Tip: |cffe4cfa3Транспорт|r (|cffffffffQ|r) -> |cffe4cfa3Транспорт|r (|cffffffffQ|r)
+  Ubertip: |cffa6afb8ЮНИТ:|cffced4da Неатакующий корабль для перевозки наземных союзных войск. Грузовой отсек вмещает |cffffffff10|cffced4da мест.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМагическая посадка|cffced4da: перемещает подходящие войска игрока из выбранной области к выделенным транспортам того же типа и отдаёт приказ посадки.|n- |cffa9c7deПосадка на борт|cffced4da: принимает выбранного союзника при наличии места.|n- |cffa9c7deВысадка|cffced4da: высаживает груз в указанном месте.|n- |cffa9c7deТактическое ускорение|cffced4da: временно повышает скорость передвижения ценой увеличения получаемого урона; требует «Дополнительных парусов».|n- |cffa9c7deПочинка|cffced4da: восстанавливает здоровье при поддержании; требует одноимённого исследования.|r -> |cffa6afb8ЮНИТ:|cffced4da Неатакующий корабль для перевозки наземных союзных войск. Грузовой отсек вмещает |cffffffff10|cffced4da мест.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМагическая посадка|cffced4da: перемещает подходящие войска игрока из выбранной области к выделенным транспортам того же типа и отдаёт приказ посадки.|n- |cffa9c7deПосадка на борт|cffced4da: принимает выбранного союзника при наличии места.|n- |cffa9c7deВысадка|cffced4da: высаживает груз в указанном месте.|n- |cffa9c7deТактическое ускорение|cffced4da: временно повышает скорость передвижения ценой увеличения получаемого урона; требует «Дополнительных парусов».|n- |cffa9c7deПочинка|cffced4da: восстанавливает здоровье при поддержании; требует одноимённого исследования.|r
+  Hotkey: Q
+  Trains: None
+  Abils: None
+  Upgrades: R006,R007,R004,R003
+  Targs1: None | Weap1: None
+  Targs2: None | Weap2: None
+ID: ft00
+  Name: TRIGSTR_39427 -> |cffc8cde1Скелет-воин|r
+  Tip: TRIGSTR_3806 -> Воскресить скелета-воина
+  Ubertip: None -> None
+  Hotkey: None
+  Trains: None
+  Abils: None
+  Upgrades: R05O,R05Q,R05I,R05J
+  Targs1: ground,structure,debris,item,ward | Weap1: MetalMediumSlice
+  Targs2: None | Weap2: None
+ID: ft01
+  Name: Скелет-лучник -> Скелет-лучник
+  Tip: TRIGSTR_630 -> Призвать скелета-лучника
+  Ubertip: Легкий воин дальнего боя. |n|n|cffffcc00Атакует наземные и воздушные цели.|r -> Легкий воин дальнего боя. |n|n|cffffcc00Атакует наземные и воздушные цели.|r
+  Hotkey: None
+  Trains: None
+  Abils: None
+  Upgrades: R05O,R05Q,R05I,R05J
+  Targs1: ground,structure,debris,air,item,ward | Weap1: None
+  Targs2: None | Weap2: None
+ID: n07H
+  Name: TRIGSTR_22330 -> |cffc8cde1Скелет-орк|r
+  Tip: TRIGSTR_12380 -> Воскресить скелета-орка
+  Ubertip: TRIGSTR_12381 -> Легкий воин ближнего боя. |n|n|cffffcc00Атакует наземные цели
+  Hotkey: None
+  Trains: None
+  Abils: None
+  Upgrades: R05O,R05Q,R05I,R05J
+  Targs1: ground,structure,debris,item,ward | Weap1: MetalMediumSlice
+  Targs2: None | Weap2: None
+ID: u03D
+  Name: TRIGSTR_632 -> |cffc8cde1Скелет-лучник|r
+  Tip: TRIGSTR_637 -> Воскресить скелета-лучника
+  Ubertip: None -> None
+  Hotkey: None
+  Trains: None
+  Abils: None
+  Upgrades: R05O,R05Q,R05I,R05J
+  Targs1: ground,structure,debris,item,ward | Weap1: None
+  Targs2: None | Weap2: None
+ID: n016
+  Name: TRIGSTR_8684 -> |cffc8cde1Вурдалак|r
+  Tip: Призвать зверя Скверны -> Призвать зверя Скверны
+  Ubertip: Легкий воин ближнего боя. |n|n|cffffcc00Атакует наземные цели.|r -> Легкий воин ближнего боя. |n|n|cffffcc00Атакует наземные цели.|r
+  Hotkey: F
+  Trains: None
+  Abils: None
+  Upgrades: R0DQ,R05O,R05Q,R05I,R05J,R05R
+  Targs1: ground,structure,debris,item,ward | Weap1: WoodMediumBash
+  Targs2: None | Weap2: None
+ID: n017
+  Name: TRIGSTR_12337 -> |cffc8cde1Хилой вурдалак|r
+  Tip: Призвать зверя Скверны -> Призвать зверя Скверны
+  Ubertip: Легкий воин ближнего боя. |n|n|cffffcc00Атакует наземные цели.|r -> Легкий воин ближнего боя. |n|n|cffffcc00Атакует наземные цели.|r
+  Hotkey: F
+  Trains: None
+  Abils: None
+  Upgrades: R0DQ,R05O,R05Q,R05I,R05J,R05R
+  Targs1: ground,structure,debris,item,ward | Weap1: WoodMediumBash
+  Targs2: None | Weap2: None
+ID: CM00
+  Name: TRIGSTR_1225 -> |cffc8cde1Мертвый капитан|r
+  Tip: TRIGSTR_1227 -> Призвать |cffc8cde1Мертвого капитана|r
+  Ubertip: TRIGSTR_40360 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa 50 сек  Тестовый минигерой.
+  Hotkey: C
+  Trains: None
+  Abils: None
+  Upgrades: None
+  Targs1: ground,structure,debris,item,ward | Weap1: MetalMediumSlice
+  Targs2: ground,structure,debris,air,item,ward | Weap2: None
+ID: FL00
+  Name: TRIGSTR_701 -> |cffc8cde1Мертвый капитан|r
+  Tip: TRIGSTR_707 -> Призвать |cffc8cde1Мертвого капитана|r
+  Ubertip: TRIGSTR_40358 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa 50 сек. Тестовый минигерой
+  Hotkey: X
+  Trains: None
+  Abils: None
+  Upgrades: None
+  Targs1: ground,structure,debris,item,ward | Weap1: MetalHeavySlice
+  Targs2: ground,structure,debris,air,item,ward | Weap2: None
+ID: Ujsm
+  Name: Жрец Тьмы -> Жрец Тьмы
+  Tip: None -> None
+  Ubertip: None -> None
+  Hotkey: S
+  Trains: None
+  Abils: None
+  Upgrades: None
+  Targs1: ground,structure,debris,air,item,ward | Weap1: None
+  Targs2: ground,structure,debris,air,item,ward | Weap2: None
+
+=== 4. HEROES ===
+ID: U00O
+  Name: TRIGSTR_24784 -> |cffc8cde1Рыцарь Смерти|r
+  Propernames: |cffc8cde1Орбаз Кровопорч|r
+  Tip: TRIGSTR_41841 -> Призвать |cffc8cde1Рыцарь смерти|r
+  Ubertip: TRIGSTR_31686 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n
+Лучший рыцарь смерти армии Короля лича, мастер ближнего боя.
+  Hotkey: Z
+  HeroAbils: A0CO,A0CP,A0CR,A0CN
+  Abils: None
+  Targs1: ground,structure,debris,item,ward | Weap1: MetalHeavySlice
+ID: U00V
+  Name: TRIGSTR_9055 -> |cffc8cde1Владыка склепа|r
+  Propernames:  |cffc8cde1Фебис-Ра|r
+  Tip: TRIGSTR_1237 -> Призвать |cffc8cde1Владыку склепа|r
+  Ubertip: TRIGSTR_31687 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n
+Один из павших владык нерубов, полностью подчиняющийся королю личу.
+  Hotkey: X
+  HeroAbils: AQ95,UN99,A0CS,AQ11
+  Abils: None
+  Targs1: ground,structure,debris,item,ward | Weap1: WoodHeavyBash
+ID: U00U
+  Name: TRIGSTR_18652 -> |cffc8cde1Некромант|r
+  Propernames: |cffc8cde1Нот Чумной|r
+  Tip: TRIGSTR_15177 -> Призвать |cffc8cde1Некромант|r
+  Ubertip: TRIGSTR_31685 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|n
+Один из лучших некромантов армии короля лича.
+  Hotkey: C
+  HeroAbils: A0CK,A0CM,A0BW,A1Q7
+  Abils: None
+  Targs1: ground,structure,debris,air,item,ward | Weap1: None
+ID: U030
+  Name: TRIGSTR_40365 -> |cffc8cde1Ануб`Арак|r
+  Propernames:  |cffc8cde1Ануб`Арак|r
+  Tip: TRIGSTR_27913 -> Призвать |cffc8cde1Короля-предателя|r
+  Ubertip: TRIGSTR_29594 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaЛегендарный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n
+Ануб'арак является царём нерубианского королевства Азжол-Неруб. Он был убит вместе с другими нерубианцами во времена Войны Паука, а позже был воскрешён Нер'зулом и стал подчиняться приказам Короля-лича.
+  Hotkey: X
+  HeroAbils: A1LI,A1LJ,A1LL,A1LM
+  Abils: None
+  Targs1: ground,structure,debris,item,ward | Weap1: WoodHeavyBash
+ID: U014
+  Name: TRIGSTR_20994 -> |cffc8cde1Король-Лич|r 
+  Propernames: |cffc8cde1Артас|r
+  Tip: TRIGSTR_20993 -> Призвать |cffc8cde1Короля-Лича|r 
+  Ubertip: TRIGSTR_20992 -> |cff7dc87dВремя подготовки:|r |cffaaf0aa 50 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaЛегендарный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n|cffc8cde1Король-Лич|r  – повелитель Плети, который мысленно управляет своим войском нежити с Ледяного Трона, расположенного на вершине Цитадели Ледяной Короны. Кил'джеден Искуситель создал Короля-лича из души орочьего шамана Нер'зула, чтобы нежить, ведомая им, ослабила Азерот перед вторжением Пылающего Легиона. Король-лич был пленён внутри Ледяного Трона вместе с Ледяной Скорбью и в конце концов предал Кил'джедена и слился воедино с человеческим принцем Артасом Менетилом. Во время войны в Нордсколе Король-лич был побежден Тирионом Фордрингом и его чемпионами Света.
+  Hotkey: Q
+  HeroAbils: A0WD,A0CX,A0WE,A0CZ
+  Abils: None
+  Targs1: ground,structure,debris,item,ward | Weap1: MetalHeavySlice
+
+=== 5. RESEARCHES ===
+ID: R002 | Levels: 1 | Class: ranged
+  Applies: None
+  Effects: {'effect1': 'ratd', 'code1': None, 'mod1': '1', 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=|cffe4cfa3Орудия флота — уровень 1|r -> |cffe4cfa3Орудия флота — уровень 1|r
+       tip=|cffe4cfa3Орудия флота — уровень 1|r (|cffffffffA|r) -> |cffe4cfa3Орудия флота — уровень 1|r (|cffffffffA|r)
+       ub=|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+17|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+3|cffced4da к урону.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак перечисленных войск. Суммарная прибавка к диапазону урона указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deФрегат Отррекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+17|cffced4da к урону|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+15|cffced4da к урону|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+10|cffced4da к урону|n- |cffa9c7deВоин Земли|cffced4da: |cffc8e087+1|cffced4da–|cffc8e087+3|cffced4da к урону.|r
+       hk=TRIGSTR_5687 -> A
+ID: R003 | Levels: 1 | Class: armor
+  Applies: None
+  Effects: {'effect1': 'TRIGSTR_1180', 'code1': None, 'mod1': '100.000000', 'effect2': 'TRIGSTR_047', 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=|cffe4cfa3Укреплённый корпус — уровень 1|r -> |cffe4cfa3Укреплённый корпус — уровень 1|r
+       tip=|cffe4cfa3Укреплённый корпус — уровень 1|r (|cffffffffS|r) -> |cffe4cfa3Укреплённый корпус — уровень 1|r (|cffffffffS|r)
+       ub=|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+100|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+1|cffced4da к броне.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью: |cffc8e087+100|cffced4da. Прибавка к броне указана у каждой цели.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff6|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deФрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский линкор|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deПиратский Фрегат|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deДредноут|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГалеон|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deБроненосец|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Орды|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deФрегат Син'Дорай|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deГордость Зандалара|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛинкор Отрекшихся|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deСудно Гоблинов|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deЛегкий корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deТяжелый корабль Альянса|cffced4da: |cffc8e087+1|cffced4da к броне|n- |cffa9c7deРыбацкая лодка|cffced4da: |cffc8e087+2|cffced4da к броне|n- |cffa9c7deНефтяной танкер|cffced4da: |cffc8e087+1|cffced4da к броне.|r
+       hk=TRIGSTR_6679 -> S
+ID: R005 | Levels: 1 | Class: None
+  Applies: None
+  Effects: {'effect1': 'TRIGSTR_543', 'code1': None, 'mod1': '30.000000', 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=|cffe4cfa3Обстрел — уровень 1|r -> |cffe4cfa3Обстрел — уровень 1|r
+       tip=|cffe4cfa3Обстрел — уровень 1|r (|cffffffffX|r) -> |cffe4cfa3Обстрел — уровень 1|r (|cffffffffX|r)
+       ub=|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+30|cffced4da. Открывает «Массированный обстрел» и боковые пушки линкора у кораблей, имеющих эти способности.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к дальности атак: |cffc8e087+30|cffced4da. Открывает «Массированный обстрел» и боковые пушки линкора у кораблей, имеющих эти способности.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff5|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da.|r
+       hk=TRIGSTR_14804 -> X
+ID: R006 | Levels: 1 | Class: None
+  Applies: None
+  Effects: {'effect1': 'TRIGSTR_547', 'code1': None, 'mod1': '0.050000', 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=|cffe4cfa3Дополнительные паруса — уровень 1|r -> |cffe4cfa3Дополнительные паруса — уровень 1|r
+       tip=|cffe4cfa3Дополнительные паруса — уровень 1|r (|cffffffffC|r) -> |cffe4cfa3Дополнительные паруса — уровень 1|r (|cffffffffC|r)
+       ub=|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+5%|cffced4da. Открывает «Тактическое ускорение» у кораблей, имеющих эту способность, включая фрегаты и линкоры.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к скорости передвижения перечисленных транспортов: |cffc8e087+5%|cffced4da. Открывает «Тактическое ускорение» у кораблей, имеющих эту способность, включая фрегаты и линкоры.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da.|r
+       hk=TRIGSTR_10942 -> C
+ID: R007 | Levels: 1 | Class: None
+  Applies: None
+  Effects: {'effect1': 'TRIGSTR_1282', 'code1': None, 'mod1': '50.000000', 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=|cffe4cfa3Починка — уровень 1|r -> |cffe4cfa3Починка — уровень 1|r
+       tip=|cffe4cfa3Починка — уровень 1|r (|cffffffffD|r) -> |cffe4cfa3Починка — уровень 1|r (|cffffffffD|r)
+       ub=|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+50|cffced4da. Открывает способность «Починка» у кораблей, имеющих её.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r -> |cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Суммарный бонус к максимальному здоровью перечисленных кораблей: |cffc8e087+50|cffced4da. Открывает способность «Починка» у кораблей, имеющих её.|n|n|cffa6afb8Уровень:|cffced4da |cffffffff1|cffced4da из |cffffffff3|cffced4da. Бонусы указаны относительно состояния без исследования.|n|n|cffa6afb8Затрагивает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da|n- |cffa9c7deПиратский линкор|cffced4da|n- |cffa9c7deПиратский Фрегат|cffced4da|n- |cffa9c7deДредноут|cffced4da|n- |cffa9c7deГалеон|cffced4da|n- |cffa9c7deБроненосец|cffced4da|n- |cffa9c7deЛегкий корабль Орды|cffced4da|n- |cffa9c7deФрегат Син'Дорай|cffced4da|n- |cffa9c7deФрегат Отррекшихся|cffced4da|n- |cffa9c7deГордость Зандалара|cffced4da|n- |cffa9c7deЛинкор Отрекшихся|cffced4da|n- |cffa9c7deСудно Гоблинов|cffced4da|n- |cffa9c7deЛегкий корабль Альянса|cffced4da|n- |cffa9c7deТяжелый корабль Альянса|cffced4da|n- |cffa9c7deРыбацкая лодка|cffced4da|n- |cffa9c7deНефтяной танкер|cffced4da.|r
+       hk=TRIGSTR_12361 -> D
+ID: R05A | Levels: 1 | Class: None
+  Applies: None
+  Effects: {'effect1': None, 'code1': None, 'mod1': None, 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=TRIGSTR_8628 -> |cffc8cde1Каннибализм|r
+       tip=TRIGSTR_8629 -> Исследовать «|cffc8cde1Каннибализм|r»
+       ub=TRIGSTR_8630 -> Обучает вурдалаков и поганищ «|cffc8cde1Каннибализму|r», который позволяет им восполнять здоровье, пожирая трупы.
+       hk=TRIGSTR_27410 -> Z
+ID: R05C | Levels: 1 | Class: None
+  Applies: None
+  Effects: {'effect1': None, 'code1': None, 'mod1': None, 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=TRIGSTR_8634 -> |cffc8cde1Паутина|r
+       tip=TRIGSTR_8635 -> Исследовать «|cffc8cde1Паутину|r»
+       ub=TRIGSTR_8636 -> Обучает некроарахнидов «|cffc8cde1Паутине|r», которая сковывает воздушного врага и притягивает его к земле. Пораженные цели считаются наземными.
+       hk=TRIGSTR_12718 -> S
+ID: R05D | Levels: 1 | Class: None
+  Applies: None
+  Effects: {'effect1': None, 'code1': None, 'mod1': None, 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=TRIGSTR_8638 -> |cffc8cde1Закопаться|r
+       tip=TRIGSTR_8637 -> Исследовать «|cffc8cde1Закопаться|r»
+       ub="Позволяет некроарахнидам закапываться в землю. Закопавшиеся некроарахниды не могут атаковать, но становятся невидимыми и регенерируют здоровье быстрее." -> "Позволяет некроарахнидам закапываться в землю. Закопавшиеся некроарахниды не могут атаковать, но становятся невидимыми и регенерируют здоровье быстрее."
+       hk=TRIGSTR_25943 -> X
+ID: R05E | Levels: 1 | Class: caster
+  Applies: None
+  Effects: {'effect1': 'rmnx', 'code1': None, 'mod1': '150.000000', 'effect2': 'rmnr', 'code2': None, 'mod2': '0.325', 'effect3': 'rhpx', 'code3': None, 'mod3': '40'}
+  L1: name=TRIGSTR_8639 -> |cffc8cde1Сделать некромантов адептами|r
+       tip=TRIGSTR_8641 -> |cffc8cde1Сделать некромантов адептами|r
+       ub="Увеличивает запас здоровья и маны некромантов, ускоряет регенерацию их маны, а также обучает их «Нечестивому бешенству»." -> "Увеличивает запас здоровья и маны некромантов, ускоряет регенерацию их маны, а также обучает их «Нечестивому бешенству»."
+       hk=TRIGSTR_11780 -> A
+ID: R05F | Levels: 1 | Class: caster
+  Applies: None
+  Effects: {'effect1': 'rmnx', 'code1': None, 'mod1': '150.000000', 'effect2': 'rmnr', 'code2': None, 'mod2': '0.325', 'effect3': 'rhpx', 'code3': None, 'mod3': '0.000000'}
+  L1: name=TRIGSTR_8643 -> |cffc8cde1Изучить магию смерти|r
+       tip=TRIGSTR_8645 -> |cffc8cde1Изучить магию смерти|r
+       ub=TRIGSTR_8647 -> Увеличивает запас здоровья и маны и урона, ускоряет регенерацию их маны.
+       hk=TRIGSTR_17562 -> D
+ID: R05G | Levels: 1 | Class: caster
+  Applies: None
+  Effects: {'effect1': 'rmnx', 'code1': None, 'mod1': '150.000000', 'effect2': 'rmnr', 'code2': None, 'mod2': '0.325', 'effect3': 'rhpx', 'code3': None, 'mod3': '40'}
+  L1: name=TRIGSTR_8657 -> |cffc8cde1Безумная наука|r
+       tip=TRIGSTR_8659 -> |cffc8cde1Безумная наука|r
+       ub=TRIGSTR_31439 -> Увеличивает запас здоровья и маны, а так же регенерацию маны.
+       hk=TRIGSTR_12726 -> S
+ID: R05H | Levels: 1 | Class: None
+  Applies: None
+  Effects: {'effect1': 'TRIGSTR_4904', 'code1': None, 'mod1': None, 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=TRIGSTR_8705 -> |cffc8cde1Болезнетворное облако|r
+       tip=TRIGSTR_8824 -> Исследовать |cffc8cde1Болезнетворное облако|r
+       ub=TRIGSTR_13010 -> Мясные фургоны испускают болезнетворное облако при каждой атаке, нанося находящимся рядом врагам <Aap2,DataB1> урона/сек. в течение <Aap2,DataA1> сек. |nБолезнетворное облако не действует на нежить.
+       hk=TRIGSTR_26595 -> X
+ID: R05I | Levels: 1 | Class: None
+  Applies: None
+  Effects: {'effect1': 'TRIGSTR_7100', 'code1': None, 'mod1': '4.000000', 'effect2': 'TRIGSTR_5805', 'code2': None, 'mod2': '-35.000000', 'effect3': None, 'code3': None, 'mod3': '-10.000000'}
+  L1: name=TRIGSTR_8706 -> |cffc8cde1Усугубить Разложение |r
+       tip=TRIGSTR_8708 -> |cffc8cde1Усугубить Разложение |r
+       ub=TRIGSTR_29577 -> Увеличивает урон нежити, при этом понижая хп.
+Урон (+4)
+Хп (-35)
+       hk=TRIGSTR_26596 -> X
+ID: R05J | Levels: 1 | Class: caster
+  Applies: None
+  Effects: {'effect1': 'TRIGSTR_7130', 'code1': None, 'mod1': '-4.000000', 'effect2': 'TRIGSTR_6179', 'code2': None, 'mod2': '35.000000', 'effect3': None, 'code3': None, 'mod3': '-10.000000'}
+  L1: name=TRIGSTR_8724 -> |cffc8cde1Остановить разложение|r
+       tip=TRIGSTR_8726 -> |cffc8cde1Остановить разложение|r
+       ub=TRIGSTR_29581 -> Увеличивает хп нежити, при этом понижая урон.
+Урон (-4)
+Хп (+35)
+       hk=TRIGSTR_27507 -> Z
+ID: R05L | Levels: 1 | Class: None
+  Applies: None
+  Effects: {'effect1': None, 'code1': None, 'mod1': None, 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=TRIGSTR_8759 -> |cffc8cde1Эксгумация|r
+       tip=TRIGSTR_8760 -> Исследовать «|cffc8cde1Эксгумацию|r»
+       ub=TRIGSTR_8761 -> Позволяет |cffc8cde1мясным фургонам|r пополнять запас тел.
+       hk=TRIGSTR_27777 -> Z
+ID: R05N | Levels: 1 | Class: ranged
+  Applies: None
+  Effects: {'effect1': 'ratd', 'code1': None, 'mod1': '1', 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=TRIGSTR_8844 -> |cffc8cde1Атаки чудовищ|r
+       tip=TRIGSTR_8850 -> Исследовать |cffc8cde1атаки чудовищ|r
+       ub=TRIGSTR_8853 -> Дополнительно увеличивают урон от атак некроарахнидов, горгулий, сфинксов и ледяных змеев.
+       hk=TRIGSTR_35702 -> W
+ID: R05O | Levels: 1 | Class: melee
+  Applies: None
+  Effects: {'effect1': 'ratd', 'code1': None, 'mod1': '1', 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=TRIGSTR_8877 -> |cffc8cde1Нечестивая сила|r
+       tip=TRIGSTR_8880 -> Исследовать |cffc8cde1нечестивую силу|r
+       ub="Увеличивает урон от атак вурдалаков, мясных фургонов, поганищ, скелетов-воинов и скелетов-магов." -> "Увеличивает урон от атак вурдалаков, мясных фургонов, поганищ, скелетов-воинов и скелетов-магов."
+       hk=TRIGSTR_34531 -> Q
+ID: R05P | Levels: 1 | Class: armor
+  Applies: None
+  Effects: {'effect1': 'rarm', 'code1': None, 'mod1': None, 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=TRIGSTR_8887 -> |cffc8cde1Броня чудовищ|r
+       tip=TRIGSTR_8895 -> Исследовать |cffc8cde1броню чудовищ|r
+       ub=TRIGSTR_5867 -> Усиливает броню солдатам дальнего боя армии Нежити.
+       hk=TRIGSTR_12892 -> S
+ID: R05Q | Levels: 1 | Class: armor
+  Applies: None
+  Effects: {'effect1': 'rarm', 'code1': None, 'mod1': None, 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=TRIGSTR_8908 -> |cffc8cde1Нечестивая броня|r
+       tip=TRIGSTR_8914 -> Исследовать |cffc8cde1нечестивую броню|r
+       ub=TRIGSTR_9709 -> Усиливает броню солдатам ближнего боя армии нежити.
+       hk=TRIGSTR_11782 -> A
+ID: R05R | Levels: 1 | Class: None
+  Applies: None
+  Effects: {'effect1': 'rats', 'code1': None, 'mod1': None, 'effect2': 'rmvx', 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=TRIGSTR_8929 -> |cffc8cde1Ярость вурдалака|r
+       tip=TRIGSTR_8930 -> Исследовать «|cffc8cde1Ярость вурдалака|r»
+       ub=TRIGSTR_9632 -> +35% к скорости атаки вурдалаков и бонус к их скорости передвижения.
+       hk=TRIGSTR_11812 -> A
+ID: R06Y | Levels: 1 | Class: TRIGSTR_10060
+  Applies: None
+  Effects: {'effect1': None, 'code1': None, 'mod1': None, 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=TRIGSTR_10056 -> |cffe1c8ebРодство с маной|r
+       tip=TRIGSTR_40854 -> Исследовать |cffe1c8ebРодство с маной|r
+       ub=TRIGSTR_11668 -> Войска ночнорождённых окружает магический щит, отражающий часть урона от пронзающих атак и способностей
+|cffffd700-65|r% от получению физичиских атак.
+|cffffd700-80|r% от получения магических атак и способностей.
+       hk=TRIGSTR_34421 -> E
+ID: R07I | Levels: 1 | Class: None
+  Applies: None
+  Effects: {'effect1': None, 'code1': None, 'mod1': None, 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=TRIGSTR_10664 -> |cffe6beaaПлеть|r
+       tip=TRIGSTR_10665 -> |cffe6beaaПлеть|r
+       ub=TRIGSTR_20116 -> Плеть является одной из трех основных фракций нежити, существующих в мире Азерот (двумя другими являются Отрекшиеся и рыцари Черного Клинка), и основной силой, желающей захватить контроль над миром. Она имеет огромную "империю". Созданная изначально как предвестник вторжения Пылающего Легиона после предыдущих неудач, Плеть освободилась от ее демонических хозяев и под железной волей ужасающего Короля-лича создала свою базу на арктическом континенте Нордскол.
+       hk=None -> None
+ID: R0DQ | Levels: 1 | Class: None
+  Applies: None
+  Effects: {'effect1': 'rlum', 'code1': None, 'mod1': '8.000000', 'effect2': 'rlev', 'code2': 'Ahlh', 'mod2': '1', 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=TRIGSTR_3216 -> Улучшенные инструменты
+       tip=TRIGSTR_3222 -> Исследовать улучшенные инструменты
+       ub=TRIGSTR_21585 -> Увеличивают объем переносимой работниками древесины на 8.
+       hk=TRIGSTR_36994 -> E
+ID: R0J5 | Levels: 1 | Class: None
+  Applies: None
+  Effects: {'effect1': None, 'code1': None, 'mod1': None, 'effect2': None, 'code2': None, 'mod2': None, 'effect3': None, 'code3': None, 'mod3': None}
+  L1: name=TRIGSTR_34715 -> |cffe6beaaПлеть или Культ проклятых|r
+       tip=TRIGSTR_34716 -> |cffe6beaaПлеть или Культ проклятых|r
+       ub=TRIGSTR_34717 -> |cffe6beaaПлеть или Культ проклятых|r
+       hk=None -> None
+
+=== 6. ABILITIES ===
+ID: A0BO | Levels: 1 | Name: TRIGSTR_8588 -> |cffc8cde1Разложение трупа|r | HK: None | ResHK: None
+  L1: tip=TRIGSTR_8589 -> |cffc8cde1Разложение трупа|r
+       ub=TRIGSTR_8590 -> Уменьшает хп солдатам нежити, но увеличивает их урон.Возможно с помощью магических ритуалов понижать или повышать разложение трупа, что повышает хп, и понижает урон, или наоборот.
+ID: A0BP | Levels: 1 | Name: TRIGSTR_8592 -> |cffc8cde1Каннибализм|r | HK: Q | ResHK: None
+  L1: tip=TRIGSTR_8593 -> |cffc8cde1Каннибализм|r
+       ub="Поглощает находящийся рядом труп, восполняя <Acan,DataA1> здоровья/сек." -> "Поглощает находящийся рядом труп, восполняя <Acan,DataA1> здоровья/сек."
+ID: A0BR | Levels: 1 | Name: TRIGSTR_42120 -> |cffc8cde1Воскрешение мертвых|r | HK: R | ResHK: None
+  L1: tip=TRIGSTR_41512 -> |cffc8cde1Воскрешение мертвых|r
+       ub="Поднимает <Arai,DataA1> скелетов из трупа." -> "Поднимает <Arai,DataA1> скелетов из трупа."
+ID: A0BT | Levels: 2 | Name: TRIGSTR_8602 -> |cffc8cde1Воскрешение мертвых|r | HK: Q | ResHK: None
+  L1: tip=TRIGSTR_8601 -> |cffc8cde1Воскрешение мертвых|r
+       ub=TRIGSTR_22351 -> Воскрешает скелета из трупа.
+  L2: tip=TRIGSTR_8936 -> |cffc8cde1Воскрешение мертвых|r
+       ub=TRIGSTR_22473 -> Воскрешает скелета из трупа.
+ID: A0BU | Levels: 1 | Name: TRIGSTR_8603 -> |cffc8cde1Нечестивое бешенство|r | HK: W | ResHK: None
+  L1: tip=TRIGSTR_8604 -> |cffc8cde1Нечестивое бешенство|r
+       ub="Приносит в жертву союзника-нежить. Находящиеся рядом войска получают «Нечестивое бешенство» и +<Auuf,DataA1,%>% к скорости атаки, но теряют <Auuf,DataB1> здоровья/сек. Не действует на технику. |nВремя действия: <Auuf,Dur1> сек." -> "Приносит в жертву союзника-нежить. Находящиеся рядом войска получают «Нечестивое бешенство» и +<Auuf,DataA1,%>% к скорости атаки, но теряют <Auuf,DataB1> здоровья/сек. Не действует на технику. |nВремя действия: <Auuf,Dur1> сек."
+ID: A0BW | Levels: 2 | Name: TRIGSTR_41617 -> Создание Лоскутика | HK: R | ResHK: R
+  L1: tip=TRIGSTR_41843 -> Призвать Лоскутика|r [|cffffcc001-й уровень|r]
+       ub=TRIGSTR_41739 -> Создает самое совершенное из созданных Плетью поганищ.Также известный как "воплощение войны".
+  L2: tip=TRIGSTR_41844 -> Призвать Лоскутика|r [|cffffcc002-й уровень|r]
+       ub=TRIGSTR_41628 -> Создает самое совершенное из созданных Плетью поганищ.Также известный как "воплощение войны".
+  Res: tip=TRIGSTR_41665 -> Изучить «|cff228b22Создание Лоскутика|r» [|cffffcc001-й уровень|r]
+       ub=TRIGSTR_41716 -> Создает самое совершенное из созданных Плетью поганищ.Также известный как "воплощение войны".
+ID: A0BX | Levels: 1 | Name: TRIGSTR_8610 -> |cffc8cde1Порча|r | HK: None | ResHK: None
+  L1: tip=TRIGSTR_8611 -> |cffc8cde1Порча|r
+       ub=TRIGSTR_33330 -> Порча наносит, отравляя на 5 урона/сек. |nВремя действия: 25 сек.
+ID: A0C0 | Levels: 1 | Name: TRIGSTR_8618 -> |cffc8cde1Ядовитое вещество |r | HK: Q | ResHK: None
+  L1: tip=TRIGSTR_8619 -> |cffc8cde1Ядовитое вещество |r
+       ub=TRIGSTR_20572 -> Призывает неподвижного идола, который восполняет союзникам рядом с собой 1.5% запаса здоровья в секунду. Не действует на технику. |nВремя существования: <Ahwd,Dur1> сек.
+ID: A0C2 | Levels: 1 | Name: TRIGSTR_8651 -> |cffc8cde1Отравление|r | HK: None | ResHK: None
+  L1: tip=TRIGSTR_8652 -> |cffc8cde1Отравление|r
+       ub=TRIGSTR_8686 -> Яд замедляет врага. |nВремя действия: <ACvs,Dur1> сек.
+ID: A0C4 | Levels: 1 | Name: TRIGSTR_8668 -> |cffc8cde1Невосприимчивость к магии|r | HK: None | ResHK: None
+  L1: tip=TRIGSTR_8669 -> |cffc8cde1Невосприимчивость к магии|r
+       ub=Дает невосприимчивость к способностям. -> Дает невосприимчивость к способностям.
+ID: A0C5 | Levels: 1 | Name: TRIGSTR_8670 -> |cffc8cde1Болезнетворное облако|r | HK: None | ResHK: None
+  L1: tip=TRIGSTR_8671 -> |cffc8cde1Болезнетворное облако|r
+       ub="Поражает находящихся рядом живых врагов болезнетворным облаком, наносящим <Aap1,DataB1> урона/сек. |nВремя действия: <Aap1,DataA1> сек." -> "Поражает находящихся рядом живых врагов болезнетворным облаком, наносящим <Aap1,DataB1> урона/сек. |nВремя действия: <Aap1,DataA1> сек."
+ID: A0C7 | Levels: 1 | Name: TRIGSTR_8688 -> |cffc8cde1Болезнетворное облако|r | HK: None | ResHK: None
+  L1: tip=TRIGSTR_8689 -> |cffc8cde1Болезнетворное облако|r
+       ub="Выпускает с каждой атакой болезнетворное облако, наносящее <Aap1,DataB1> урона/сек. |nВремя действия: <Aap1,DataA1> сек." -> "Выпускает с каждой атакой болезнетворное облако, наносящее <Aap1,DataB1> урона/сек. |nВремя действия: <Aap1,DataA1> сек."
+ID: A0C8 | Levels: 1 | Name: TRIGSTR_8690 -> |cffc8cde1Эксгумация|r | HK: None | ResHK: None
+  L1: tip=TRIGSTR_8691 -> |cffc8cde1Эксгумация|r
+       ub="Каждые <Aexh,Dur1> сек. мясной фургон выкапывает из земли очередное мертвое тело." -> "Каждые <Aexh,Dur1> сек. мясной фургон выкапывает из земли очередное мертвое тело."
+ID: A0CA | Levels: 1 | Name: TRIGSTR_39433 -> |cffc8cde1Удар смерти|r | HK: Q | ResHK: T
+  L1: tip=TRIGSTR_42125 -> |cffc8cde1Удар смерти|r
+       ub=TRIGSTR_41159 -> Наносит удар по врагу, нанося 50 урона. С 5% шансом удар будет применен автоматически.
+  Res: tip=TRIGSTR_8770 -> Изучить «|cffc81919Удар смерти|r» [|cffffcc00%d-й уровень|r]
+       ub="Бросает молот, оглушая врага и нанося урон. |n|n|cffffcc001-й уровень:|r <AHtb,DataA1> урона, <AHtb,Dur1> сек. оглушения. |n|cffffcc002-й уровень:|r <AHtb,DataA2> урона, <AHtb,Dur2> сек. оглушения. |n|cffffcc003-й уровень:|r <AHtb,DataA3> урона, <AHtb,Dur3> сек. оглушения." -> "Бросает молот, оглушая врага и нанося урон. |n|n|cffffcc001-й уровень:|r <AHtb,DataA1> урона, <AHtb,Dur1> сек. оглушения. |n|cffffcc002-й уровень:|r <AHtb,DataA2> урона, <AHtb,Dur2> сек. оглушения. |n|cffffcc003-й уровень:|r <AHtb,DataA3> урона, <AHtb,Dur3> сек. оглушения."
+ID: A0CC | Levels: 1 | Name: TRIGSTR_42129 -> |cffc8cde1Ледяной удар |r | HK: Q | ResHK: T
+  L1: tip=TRIGSTR_42166 -> |cffc8cde1Ледяной удар |r
+       ub=TRIGSTR_39438 -> Наносит удар по врагу,  нанося 100 урона. С 5% шансом способность применится автоматически.
+  Res: tip=TRIGSTR_8782 -> Изучить «|cffc81919Удар смерти|r» [|cffffcc00%d-й уровень|r]
+       ub="Бросает молот, оглушая врага и нанося урон. |n|n|cffffcc001-й уровень:|r <AHtb,DataA1> урона, <AHtb,Dur1> сек. оглушения. |n|cffffcc002-й уровень:|r <AHtb,DataA2> урона, <AHtb,Dur2> сек. оглушения. |n|cffffcc003-й уровень:|r <AHtb,DataA3> урона, <AHtb,Dur3> сек. оглушения." -> "Бросает молот, оглушая врага и нанося урон. |n|n|cffffcc001-й уровень:|r <AHtb,DataA1> урона, <AHtb,Dur1> сек. оглушения. |n|cffffcc002-й уровень:|r <AHtb,DataA2> урона, <AHtb,Dur2> сек. оглушения. |n|cffffcc003-й уровень:|r <AHtb,DataA3> урона, <AHtb,Dur3> сек. оглушения."
+ID: A0CG | Levels: 1 | Name: TRIGSTR_42232 -> |cffc8cde1Антимагический панцирь|r | HK: W | ResHK: None
+  L1: tip=TRIGSTR_42231 -> |cffc8cde1Антимагический панцирь|r
+       ub="Создает барьер, защищающий цель от способностей. |nВремя действия: <Aams,Dur1> сек." -> "Создает барьер, защищающий цель от способностей. |nВремя действия: <Aams,Dur1> сек."
+ID: A0CK | Levels: 4 | Name: TRIGSTR_8939 -> |cffc8cde1Воскрешение мертвых|r | HK: Q | ResHK: Q
+  L1: tip=TRIGSTR_8940 -> |cffc8cde1Воскрешение мертвых|r
+       ub=TRIGSTR_15480 -> Воскрешает мертвых, на службу королю Личу. |n|n|cffffcc001-й уровень:|r |cffb4dcdcСкелет воин.|r
+  L2: tip=TRIGSTR_8965 -> |cffc8cde1Воскрешение мертвых|r
+       ub=TRIGSTR_15481 -> Воскрешает мертвых, на службу королю Личу. |n|cffffcc002-й уровень:|r |cffb4dcdcВурдалак.|r 
+  L3: tip=TRIGSTR_15107 -> |cffc8cde1Воскрешение мертвых|r
+       ub=TRIGSTR_15482 -> Воскрешает мертвых, на службу королю Личу.  |n|cffffcc003-й уровень:|r |cffb4dcdcПоганище.|r 
+  L4: tip=TRIGSTR_15108 -> |cffc8cde1Воскрешение мертвых|r
+       ub=TRIGSTR_15483 -> Воскрешает мертвых, на службу королю Личу.  |n|cffffcc004-й уровень:|r |cffb4dcdcРыцарь смертик.|r
+  Res: tip=TRIGSTR_20090 -> |cffc8cde1Воскрешение мертвых|r
+       ub=TRIGSTR_15484 -> Воскрешает мертвых, на службу королю Личу. |n|n|cffffcc001-й уровень:|r |cffb4dcdcСкелет воин.|r|n|cffffcc002-й уровень:|r |cffb4dcdcВурдалак.|r |n|cffffcc003-й уровень:|r |cffb4dcdcПоганище.|r |n|cffffcc004-й уровень:|r |cffb4dcdcРыцарь смертик.|r
+ID: A0CM | Levels: 4 | Name: TRIGSTR_8971 -> |cffc8cde1Массовое проклятие|r | HK: E | ResHK: E
+  L1: tip=TRIGSTR_8972 -> |cffc8cde1Массовое проклятие|r
+       ub=TRIGSTR_41290 -> Проклинает всех врагов рядом.|n|cffffcc001-й уровень:|r |cffb4dcdc100 ед. урона.|r 
+  L2: tip=TRIGSTR_8973 -> |cffc8cde1Массовое проклятие|r
+       ub=TRIGSTR_41291 -> Проклинает всех врагов рядом. |n|cffffcc002-й уровень:|r |cffb4dcdc150 ед. урона.|r 
+  L3: tip=TRIGSTR_8974 -> |cffc8cde1Массовое проклятие|r
+       ub=TRIGSTR_41292 -> Проклинает всех врагов рядом. |n|cffffcc003-й уровень:|r |cffb4dcdc200 ед. урона.|r 
+  L4: tip=TRIGSTR_8975 -> |cffc8cde1Массовое проклятие|r
+       ub=TRIGSTR_41293 -> Проклинает всех врагов рядом.|n|cffffcc004-й уровень:|r |cffb4dcdc250 ед. урона.|r
+  Res: tip=TRIGSTR_41279 -> |cffc8cde1Массовое проклятие.|r
+       ub=TRIGSTR_41305 -> Проклинает всех врагов рядом.|n|cffffcc001-й уровень:|r |cffb4dcdc100 ед. урона.|r |n|cffffcc002-й уровень:|r |cffb4dcdc150 ед. урона.|r |n|cffffcc003-й уровень:|r |cffb4dcdc200 ед. урона.|r |n|cffffcc004-й уровень:|r |cffb4dcdc250 ед. урона.|r
+ID: A0CN | Levels: 2 | Name: TRIGSTR_8992 -> |cffc8cde1Оживление мертвых|r | HK: R | ResHK: R
+  L1: tip=TRIGSTR_8994 -> |cffc8cde1Оживление мертвых|r
+       ub=TRIGSTR_13587 -> Оживляет трупов в области действия. Сражаются на стороне некроманта.|n|cffffcc001-й уровень:|r |cffb4dcdcВоскрешает 8 трупов.|r 
+  L2: tip=TRIGSTR_8995 -> |cffc8cde1Оживление мертвых|r
+       ub=TRIGSTR_13547 -> Оживляет трупов в области действия. Сражаются на стороне некроманта. |n|cffffcc002-й уровень:|r |cffb4dcdcВоскрешает 12 трупов.|r
+  Res: tip=TRIGSTR_8993 -> Изучить «|cffc8cde1Оживление мертвых|r»
+       ub=TRIGSTR_15500 -> Оживляет трупов в области действия. Оживленные воины неуязвимы.|n|cffffcc001-й уровень:|r |cffb4dcdcВоскрешает 8 трупов.|r |n|cffffcc002-й уровень:|r |cffb4dcdcВоскрешает 12 трупов.|r
+ID: A0CO | Levels: 4 | Name: TRIGSTR_9006 -> |cffc8cde1Лик смерти|r | HK: Q | ResHK: Q
+  L1: tip=TRIGSTR_15505 -> |cffc8cde1Лик смерти|r [|cffffcc001-й уровень|r]
+       ub=TRIGSTR_15508 -> Восполняет |cffb4dcdc<AUdc,DataA1>|r здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу.
+  L2: tip=TRIGSTR_15506 -> |cffc8cde1Лик смерти|r [|cffffcc002-й уровень|r]
+       ub=TRIGSTR_15509 -> Восполняет |cffb4dcdc<AUdc,DataA2>|r здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу.
+  L3: tip=TRIGSTR_15507 -> |cffc8cde1Лик смерти|r [|cffffcc003-й уровень|r]
+       ub=TRIGSTR_15510 -> Восполняет |cffb4dcdc<AUdc,DataA3> |rздоровья союзнику-нежити или наносит вдвое меньше урона живому врагу.
+  L4: tip=TRIGSTR_15502 -> |cffc8cde1Лик смерти|r [|cffffcc003-й уровень|r]
+       ub=TRIGSTR_15503 -> Восполняет |cffb4dcdc<AUdc,DataA4>|r здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу.
+  Res: tip=TRIGSTR_9007 -> Изучить «|cffc8cde1Лик смерти|r» [|cffffcc00%d-й уровень|r]
+       ub=TRIGSTR_15504 -> Наносит урон живому врагу или восполняет здоровье союзнику-нежити. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AUdc,DataA1> здоровья.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<AUdc,DataA2> здоровья.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AUdc,DataA3> здоровья|r.|n|cffffcc004-й уровень:|r |cffb4dcdc<AUdc,DataA4> здоровья|r.
+ID: A0CP | Levels: 4 | Name: TRIGSTR_9010 -> |cffc8cde1Зов смерти|r | HK: W | ResHK: W
+  L1: tip=TRIGSTR_9011 -> |cffc8cde1Зов смерти|r
+       ub=TRIGSTR_15515 -> |cffb4dcdc+<Aroa,DataA1,%>%|r к урону находящихся рядом союзников. |nВремя действия: |cffb4dcdc<Aroa,Dur1> сек.|r
+  L2: tip=TRIGSTR_9012 -> |cffc8cde1Зов смерти|r
+       ub=TRIGSTR_15511 -> |cffb4dcdc+<Aroa,DataA2,%>%|r к урону находящихся рядом союзников. |nВремя действия: |cffb4dcdc<Aroa,Dur1> сек.|r
+  L3: tip=TRIGSTR_9013 -> |cffc8cde1Зов смерти|r
+       ub=TRIGSTR_15512 -> |cffb4dcdc+<Aroa,DataA3,%>%|r к урону находящихся рядом союзников. |nВремя действия: |cffb4dcdc<Aroa,Dur1> сек.|r
+  L4: tip=TRIGSTR_9014 -> |cffc8cde1Зов смерти|r
+       ub=TRIGSTR_15513 -> |cffb4dcdc+<Aroa,DataA4,%>%|r к урону находящихся рядом союзников. |nВремя действия: |cffb4dcdc<Aroa,Dur1> сек.|r
+  Res: tip=TRIGSTR_1267 -> Изучить |cffc8cde1Зов смерти|r
+       ub=TRIGSTR_15514 -> Увеличивает урон находящихся по близости созных войск. |n|cffffcc001-й уровень:|r|cffb4dcdc+15% урона.|r|n|cffffcc002-й уровень:|r|cffb4dcdc+20% урона.|r|n|cffffcc003-й уровень:|r|cffb4dcdc+25% урона.|r|n|cffffcc004-й уровень:|r|cffb4dcdc+35% урона.|r
+ID: A0CR | Levels: 4 | Name: TRIGSTR_9066 -> |cffc8cde1Нечистая аура|r | HK: E | ResHK: E
+  L1: tip=TRIGSTR_9070 -> |cffc8cde1Нечистая аура|r [|cffffcc001-й уровень|r]
+       ub=TRIGSTR_15520 -> |cffb4dcdc+<AUau,DataA1,%>%|r к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.
+  L2: tip=TRIGSTR_9071 -> |cffc8cde1Нечистая аура|r [|cffffcc002-й уровень|r]
+       ub=TRIGSTR_15521 -> |cffb4dcdc+<AUau,DataA2,%>% |rк скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.
+  L3: tip=TRIGSTR_9072 -> |cffc8cde1Нечистая аура|r [|cffffcc003-й уровень|r]
+       ub=TRIGSTR_15522 -> |cffb4dcdc+<AUau,DataA3,%>%|r к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.
+  L4: tip=TRIGSTR_9068 -> |cffc8cde1Нечистая аура|r [|cffffcc004-й уровень|r]
+       ub=TRIGSTR_15519 -> |cffb4dcdc+<AUau,DataA4,%>%|r к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.
+  Res: tip=TRIGSTR_9067 -> Изучить «|cffc8cde1Нечистая аура|r» [|cffffcc00%d-й уровень|r]
+       ub=TRIGSTR_15523 -> Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdc+<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья.|r |n|cffffcc002-й уровень:|r |cffb4dcdc+<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья.|r |n|cffffcc003-й уровень:|r |cffb4dcdc+<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья.|r|n|cffffcc004-й уровень:|r |cffb4dcdc+<AUau,DataA4,%>% к скорости передвижения, большой бонус к регенерации здоровья.|r
+ID: A0CS | Levels: 4 | Name: TRIGSTR_9073 -> |cffc8cde1Пронзание|r | HK: Q | ResHK: Q
+  L1: tip=TRIGSTR_9075 -> |cffc8cde1Пронзание|r [|cffffcc001-й уровень|r]
+       ub=TRIGSTR_14889 -> Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AUim,DataC1> урона, <AUim,Dur1> сек. оглушения.|r 
+  L2: tip=TRIGSTR_9076 -> |cffc8cde1Пронзание|r [|cffffcc002-й уровень|r]
+       ub=TRIGSTR_15034 -> Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их. |n|cffffcc002-й уровень:|r |cffb4dcdc<|AUim,DataC2> урона, <AUim,Dur2> сек. оглушения.|r|r 
+  L3: tip=TRIGSTR_9077 -> |cffc8cde1Пронзание|r [|cffffcc003-й уровень|r]
+       ub=TRIGSTR_15056 -> Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их.  |n|cffffcc003-й уровень:|r |cffb4dcdc<AUim,DataC3> урона, <AUim,Dur3> сек. оглушения.|r
+  L4: tip=TRIGSTR_9078 -> |cffc8cde1Пронзание|r [|cffffcc004-й уровень|r]
+       ub=TRIGSTR_21830 -> Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их. |n|cffffcc004-й уровень:|r |cffb4dcdc150 урона, 5 сек. оглушения.|r
+  Res: tip=TRIGSTR_9074 -> Изучить «|cffc8cde1Пронзание|r» [|cffffcc00%d-й уровень|r]
+       ub=TRIGSTR_14093 -> Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AUim,DataC1> урона, <AUim,Dur1> сек. оглушения.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<|AUim,DataC2> урона, <AUim,Dur2> сек. оглушения.|r|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AUim,DataC3> урона, <AUim,Dur3> сек. оглушения.|r|n|cffffcc004-й уровень:|r |cffb4dcdc140 урона, 2.4 сек. оглушения.|r
+ID: A0CX | Levels: 4 | Name: TRIGSTR_41306 -> |cffc8cde1Мощь Ледяной Скорбиr | HK: None | ResHK: E
+  L1: tip=TRIGSTR_21014 -> |cffc8cde1Мощь фростморна|r [|cffffcc001-й уровень|r]
+       ub="Дает <AOcr,DataA1>%-й шанс нанести <AOcr,DataB1>-кратный урон при атаке." -> "Дает <AOcr,DataA1>%-й шанс нанести <AOcr,DataB1>-кратный урон при атаке."
+  L2: tip=TRIGSTR_21015 -> |cffc8cde1Мощь фростморна|r [|cffffcc002-й уровень|r]
+       ub="Дает <AOcr,DataA2>%-й шанс нанести <AOcr,DataB2>-кратный урон при атаке." -> "Дает <AOcr,DataA2>%-й шанс нанести <AOcr,DataB2>-кратный урон при атаке."
+  L3: tip=TRIGSTR_21016 -> |cffc8cde1Мощь фростморна|r [|cffffcc003-й уровень|r]
+       ub="Дает <AOcr,DataA3>%-й шанс нанести <AOcr,DataB3>-кратный урон при атаке." -> "Дает <AOcr,DataA3>%-й шанс нанести <AOcr,DataB3>-кратный урон при атаке."
+  L4: tip=TRIGSTR_21017 -> |cffc8cde1Мощь фростморна|r [|cffffcc004-й уровень|r]
+       ub=TRIGSTR_6389 -> Дает <AOcr,DataA4>%-й шанс нанести <AOcr,DataB4>-кратный урон при атаке.
+  Res: tip=TRIGSTR_41360 -> Изучить «|cffc8cde1Мощь Ледяной Скорби|r» [|cffffcc00%d-й уровень|r]
+       ub=TRIGSTR_21838 -> Дает шанс нанести больше урона при атаке.
+
+|cffffcc001-й уровень:|r 5%-й шанс, 10-кратный урон. 
+|cffffcc002-й уровень:|r 7%-й шанс, 10-кратный урон.
+|cffffcc003-й уровень:|r 9%-й шанс, 10-кратный урон.
+|cffffcc004-й уровень:|r 11%-й шанс, 10-кратный урон.
+ID: A0CZ | Levels: 2 | Name: TRIGSTR_39443 -> |cffc8cde1Воскрешение мертвых|r | HK: R | ResHK: R
+  L1: tip=TRIGSTR_41438 -> |cffc8cde1Воскрешение мертвых|r
+       ub=TRIGSTR_41239 -> Оживляет 10 трупов в области 1500.
+  L2: tip=TRIGSTR_41471 -> |cffc8cde1Воскрешение мертвых|r
+       ub=TRIGSTR_41238 -> Оживляет 25 трупа в области 1500.
+  Res: tip=TRIGSTR_41405 -> Изучить «|cffc8cde1Воскрешение мертвых|r»
+       ub="Оживляет <AUan,DataA1> трупов в области действия на <AUan,Dur1> сек." -> "Оживляет <AUan,DataA1> трупов в области действия на <AUan,Dur1> сек."
+ID: A0GI | Levels: 1 | Name: TRIGSTR_10659 -> |cffe1c8ebМагические оковы|r | HK: E | ResHK: None
+  L1: tip=TRIGSTR_23412 -> |cffe1c8ebМагические оковы|r
+       ub=TRIGSTR_10861 -> Уменьшает скорость атаки противника на|cffffd700 0.25|r% и скорость передвижения на |cffffd7000.6|r%.
+Время действия Герой:|cffffd70010|r сек.
+Время действия Юниты:|cffffd70060|r сек.
+ID: A0HV | Levels: 1 | Name: TRIGSTR_38877 -> |cffc8cde1Плеть|r | HK: A | ResHK: None
+  L1: tip=TRIGSTR_38878 -> |cffc8cde1Плеть|r
+       ub=TRIGSTR_25783 -> |cffa0beaaСоздатель расы:|r |cffc8dcaaEscanor|r|n|cffa0beaaКуратор расы:|r |cffc8dcaaVinerX|r|n|cffa0beaaСложность:|r |cfff0dc96●●●|r●●|r|n|cffa0beaaПериод:|r |cffc8dcaaWrath of the Lich King|r|n|n|cffc8cde1Плеть|r является одной из трех основных фракций нежити, существующих в мире Азерот, и основной силой, желающей захватить контроль над миром. Она имеет огромную "империю". Созданная изначально как предвестник вторжения Пылающего Легиона после предыдущих неудач, |cffc8cde1Плеть|r освободилась от ее демонических хозяев и под железной волей ужасающего Короля-лича создала свою базу на арктическом континенте Нордскол.
+ID: A0IQ | Levels: 1 | Name: TRIGSTR_27193 -> |cffffdcb4Обозначить столицу|r | HK: X | ResHK: None
+  L1: tip=TRIGSTR_27969 -> |cffffdcb4Обозначить столицу|r
+       ub=TRIGSTR_27970 -> Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение.
+ID: A0LI | Levels: 1 | Name: TRIGSTR_2888 -> Обмен |cffffff00Золота |rна |cff00ff00Дерево|r | HK: S | ResHK: None
+  L1: tip=TRIGSTR_3692 -> Обмен |cffffff00Золота |rна |cff00ff00Дерево|r
+       ub=TRIGSTR_20630 -> Отнимает у игрока|cffffd700 500 золота|r, но добавляет |cff228722100 дерева|r.
+ID: A0LJ | Levels: 1 | Name: TRIGSTR_12857 -> Обмен |cff00ff00Дерева |rна |cffffff00Золото|r | HK: A | ResHK: None
+  L1: tip=TRIGSTR_12886 -> Обмен |cff00ff00Дерева |rна |cffffff00Золото|r
+       ub=TRIGSTR_20631 -> Отнимает у игрока |cff228722500 дерева|r, но добавляет |cffffd700100 золота|r.
+ID: A0WB | Levels: 1 | Name: TRIGSTR_39497 -> |cffc8cde1Правосудие смерти|r | HK: None | ResHK: None
+  L1: tip=TRIGSTR_39498 -> |cffc8cde1Правосудие смерти|r
+       ub=TRIGSTR_20999 -> Убитые Королем-Личом органические юниты после смерти возраждаются на его стороне.
+ID: A0WC | Levels: 1 | Name: TRIGSTR_21011 -> Дамми гальванизация | HK: D | ResHK: D
+  L1: tip=Оживление мертвых -> Оживление мертвых
+       ub="Оживляет <AUan,DataA1> трупов в области действия на <AUan,Dur1> сек." -> "Оживляет <AUan,DataA1> трупов в области действия на <AUan,Dur1> сек."
+  Res: tip=TRIGSTR_21010 -> Дамми гальванизация
+       ub="Оживляет <AUan,DataA1> трупов в области действия на <AUan,Dur1> сек." -> "Оживляет <AUan,DataA1> трупов в области действия на <AUan,Dur1> сек."
+ID: A0WD | Levels: 4 | Name: TRIGSTR_21846 -> |cff808080Лики смерти|r | HK: Q | ResHK: Q
+  L1: tip=TRIGSTR_21831 -> |cff808080Лики смерти|r |cffffff00[1-й уровень]|r
+       ub=TRIGSTR_15584 -> Во всех юнитов в указанной области прилетают лики смерти, ранящие врагов и лечащие дружескую нежить.
+  L2: tip=TRIGSTR_21832 -> |cff808080Лики смерти|r |cffffff00[2-й уровень]|r
+       ub=TRIGSTR_19726 -> Во всех юнитов в указанной области прилетают лики смерти, ранящие врагов и лечащие дружескую нежить.
+  L3: tip=TRIGSTR_21833 -> |cff808080Лики смерти|r |cffffff00[3-й уровень]|r
+       ub=TRIGSTR_19727 -> Во всех юнитов в указанной области прилетают лики смерти, ранящие врагов и лечащие дружескую нежить.
+  L4: tip=TRIGSTR_21834 -> |cff808080Лики смерти|r |cffffff00[4-й уровень]|r
+       ub=TRIGSTR_19728 -> Во всех юнитов в указанной области прилетают лики смерти, ранящие врагов и лечащие дружескую нежить.
+  Res: tip=TRIGSTR_15316 -> Лики смерти
+       ub=TRIGSTR_19730 -> Во всех юнитов в указанной области прилетают лики смерти, ранящие врагов и лечащие дружескую нежить.
+ID: A0WE | Levels: 4 | Name: TRIGSTR_41246 -> Неистовство Ледяной Скорби | HK: W | ResHK: W
+  L1: tip=TRIGSTR_41241 -> |cff808080Неистовство Ледяной Скорби|r |cffffff00[1-й уровень]|r
+       ub=TRIGSTR_23353 -> Наносит урон и замедляет врагов в радиусе от Короля лича.
+|cffffcc001-й уровень:|r 125 ед урона каждой цели.
+  L2: tip=TRIGSTR_41247 -> |cff808080Неистовство Ледяной Скорби|r |cffffff00[2-й уровень]|r
+       ub=TRIGSTR_23354 -> Наносит урон и замедляет врагов в радиусе от Короля лича.
+|cffffcc002-й уровень:|r 175 ед урона каждой цели.
+
+  L3: tip=TRIGSTR_41248 -> |cff808080Неистовство Ледяной Скорби|r |cffffff00[3-й уровень]|r
+       ub=TRIGSTR_23355 -> Наносит урон и замедляет врагов в радиусе от Короля лича.
+|cffffcc003-й уровень:|r 250 ед урона каждой цели.
+
+  L4: tip=TRIGSTR_41251 -> |cff808080Неистовство Ледяной Скорби|r |cffffff00[4-й уровень]|r
+       ub=TRIGSTR_23356 -> Наносит урон и замедляет врагов в радиусе от Короля лича.
+|cffffcc004-й уровень:|r 350 ед урона каждой цели.
+  Res: tip=TRIGSTR_41407 -> |cff808080Неистовство Ледяной Скорби|r
+       ub=TRIGSTR_23357 -> Наносит урон и замедляет врагов в радиусе от Короля лича.
+|cffffcc001-й уровень:|r 125 ед урона каждой цели.
+|cffffcc002-й уровень:|r 175 ед урона каждой цели.
+|cffffcc003-й уровень:|r 250 ед урона каждой цели.
+|cffffcc004-й уровень:|r 350 ед урона каждой цели.
+ID: A0WF | Levels: 4 | Name: Кольцо льда -> Кольцо льда | HK: N | ResHK: N
+  L1: tip="Кольцо льда [|cffffcc001-й уровень|r]" -> "Кольцо льда [|cffffcc001-й уровень|r]"
+       ub="Выпускает ледяную волну, нанося <AUfn,DataB1> урона цели и <AUfn,DataA1> урона по области. Урон от льда замедляет передвижение и атаку целей на <AUfn,Dur1> сек." -> "Выпускает ледяную волну, нанося <AUfn,DataB1> урона цели и <AUfn,DataA1> урона по области. Урон от льда замедляет передвижение и атаку целей на <AUfn,Dur1> сек."
+  L2: tip="Кольцо льда [|cffffcc002-й уровень|r]" -> "Кольцо льда [|cffffcc002-й уровень|r]"
+       ub="Выпускает ледяную волну, нанося <AUfn,DataB2> урона цели и <AUfn,DataA2> урона по области. Урон от льда замедляет передвижение и атаку целей на <AUfn,Dur2> сек." -> "Выпускает ледяную волну, нанося <AUfn,DataB2> урона цели и <AUfn,DataA2> урона по области. Урон от льда замедляет передвижение и атаку целей на <AUfn,Dur2> сек."
+  L3: tip="Кольцо льда [|cffffcc003-й уровень|r]" -> "Кольцо льда [|cffffcc003-й уровень|r]"
+       ub="Выпускает ледяную волну, нанося <AUfn,DataB3> урона цели и <AUfn,DataA3> урона по области. Урон от льда замедляет передвижение и атаку целей на <AUfn,Dur3> сек." -> "Выпускает ледяную волну, нанося <AUfn,DataB3> урона цели и <AUfn,DataA3> урона по области. Урон от льда замедляет передвижение и атаку целей на <AUfn,Dur3> сек."
+  L4: tip=None -> None
+       ub=None -> None
+  Res: tip=Изучить «Кольцо льда» [|cffffcc00%d-й уровень|r] -> Изучить «Кольцо льда» [|cffffcc00%d-й уровень|r]
+       ub="Поражает врагов вокруг цели ледяной волной, замедляющей передвижение и атаку. |n|n|cffffcc001-й уровень:|r <AUfn,DataB1> урона цели и <AUfn,DataA1> по области. |n|cffffcc002-й уровень:|r <AUfn,DataB2> урона цели и <AUfn,DataA2> по области. |n|cffffcc003-й уровень:|r <AUfn,DataB3> урона цели и <AUfn,DataA3> по области." -> "Поражает врагов вокруг цели ледяной волной, замедляющей передвижение и атаку. |n|n|cffffcc001-й уровень:|r <AUfn,DataB1> урона цели и <AUfn,DataA1> по области. |n|cffffcc002-й уровень:|r <AUfn,DataB2> урона цели и <AUfn,DataA2> по области. |n|cffffcc003-й уровень:|r <AUfn,DataB3> урона цели и <AUfn,DataA3> по области."
+ID: A15N | Levels: 1 | Name: TRIGSTR_25578 -> |cffe4cfa3Зона ремонта|r | HK: None | ResHK: None
+  L1: tip=TRIGSTR_25589 -> |cffe4cfa3Зона ремонта|r
+       ub=TRIGSTR_25608 -> |cffa6afb8СПОСОБНОСТЬ:|cffced4da Непрерывно ремонтирует повреждённые корабли и механизмы поблизости, восстанавливая по |cffffffff2.5|cffced4da ед. здоровья в секунду в радиусе |cffffffff550|cffced4da.|r
+  Res: tip=TRIGSTR_25582 -> Зона ремонта
+       ub=TRIGSTR_26500 -> Восстанавливает здоровье механическим юнитам поблизости.
+ID: A1E7 | Levels: 4 | Name: TRIGSTR_32145 -> |c00c5ff94Смерть и разложение|r | HK: D | ResHK: D
+  L1: tip=Смерть и разложение -> Смерть и разложение
+       ub="Наносит урон целям в области действия в объеме <AUdd,DataA1,%>% их запаса здоровья в секунду. Уничтожает деревья. |nВремя действия: <AUdd,Dur1> сек." -> "Наносит урон целям в области действия в объеме <AUdd,DataA1,%>% их запаса здоровья в секунду. Уничтожает деревья. |nВремя действия: <AUdd,Dur1> сек."
+  L2: tip=None -> None
+       ub=None -> None
+  L3: tip=None -> None
+       ub=None -> None
+  L4: tip=None -> None
+       ub=None -> None
+  Res: tip=Изучить «Смерть и разложение» -> Изучить «Смерть и разложение»
+       ub="Наносит урон целям в области действия в объеме <AUdd,DataA1,%>% их запаса здоровья в секунду. Уничтожает деревья." -> "Наносит урон целям в области действия в объеме <AUdd,DataA1,%>% их запаса здоровья в секунду. Уничтожает деревья."
+ID: A1KB | Levels: 1 | Name: TRIGSTR_38201 -> Защита столицы | HK: None | ResHK: None
+  L1: tip=TRIGSTR_38229 -> Защита столицы
+       ub=None -> None
+ID: A1LI | Levels: 4 | Name: TRIGSTR_30949 -> |cffc8cde1Подкоп | HK: Q | ResHK: Q
+  L1: tip=TRIGSTR_33507 -> |cffc8cde1Подкоп|r [|cffffcc00Уровень 1|r] 
+       ub=TRIGSTR_36889 -> Герой погружается под землю, проползая там до точки каста, подбрасывая всех врагов на своем пути. Враги получают урон от пдаения, зависящий от силы героя.
+
+Урон: 1.2 * силу героя + 50
+  L2: tip=TRIGSTR_34354 -> |cffc8cde1Подкоп|r [|cffffcc00Уровень 2|r] 
+       ub=TRIGSTR_37032 -> Герой погружается под землю, проползая там до точки каста, подбрасывая всех врагов на своем пути. Враги получают урон от пдаения, зависящий от силы героя.
+
+Урон: 2.4 * силу героя + 100
+  L3: tip=TRIGSTR_34687 -> |cffc8cde1Подкоп|r [|cffffcc00Уровень 3|r] 
+       ub=TRIGSTR_38107 -> Герой погружается под землю, проползая там до точки каста, подбрасывая всех врагов на своем пути. Враги получают урон от пдаения, зависящий от силы героя.
+
+Урон: 3.6 * силу героя + 150
+  L4: tip=TRIGSTR_38108 -> |cffc8cde1Подкоп|r [|cffffcc00Уровень 4|r] 
+       ub=TRIGSTR_38658 -> Герой погружается под землю, проползая там до точки каста, подбрасывая всех врагов на своем пути. Враги получают урон от пдаения, зависящий от силы героя.
+
+Урон: 4.8 * силу героя + 150
+  Res: tip=TRIGSTR_32930 -> |cffc8cde1Подкоп|r [|cffffcc00Уровень %d|r]
+       ub=TRIGSTR_36134 -> Герой погружается под землю, проползая там до точки каста, подбрасывая всех врагов на своем пути. Враги получают урон от пдаения, зависящий от силы героя.
+ID: A1LJ | Levels: 4 | Name: TRIGSTR_38827 -> |cffc8cde1Шипастый панцирь | HK: None | ResHK: E
+  L1: tip=TRIGSTR_38845 -> |cffc8cde1Шипастый панцирь [|cffffcc001-й уровень|r]
+       ub=TRIGSTR_38960 -> Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +4 к броне и отражают получаемый в ближнем бою урона в атакующих врагов в зависимости от силы героя.
+0.5*силу героя
+  L2: tip=TRIGSTR_38847 -> |cffc8cde1Шипастый панцирь [|cffffcc002-й уровень|r]
+       ub=TRIGSTR_38961 -> Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +7 к броне и отражают получаемый в ближнем бою урона в атакующих врагов в зависимости от силы героя.
+0.5*силу героя
+  L3: tip=TRIGSTR_38848 -> |cffc8cde1Шипастый панцирь [|cffffcc003-й уровень|r]
+       ub=TRIGSTR_38962 -> Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +10 к броне и отражают получаемый в ближнем бою урона в атакующих врагов в зависимости от силы героя.
+0.5*силу героя
+  L4: tip=TRIGSTR_38800 -> |cffc8cde1Шипастый панцирь [|cffffcc004-й уровень|r]
+       ub=TRIGSTR_38959 -> Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +13 к броне и отражают получаемый в ближнем бою урона в атакующих врагов в зависимости от силы героя.
+0.5*силу героя
+  Res: tip=TRIGSTR_38828 -> Изучить «|cffc8cde1Шипастый панцирь» [|cffffcc00%d-й уровень|r]
+       ub="Покрывает панцирь владыки склепа хитиновыми шипами, которые усиливают броню и отражают получаемый в ближнем бою урон в атакующих врагов. |n|n|cffffcc001-й уровень:|r отражение <AUts,DataA1,%>% урона, +<AUts,DataC1> к броне. |n|cffffcc002-й уровень:|r отражение <AUts,DataA2,%>% урона, +<AUts,DataC2> к броне. |n|cffffcc003-й уровень:|r отражение <AUts,DataA3,%>% урона, +<AUts,DataC3> к броне." -> "Покрывает панцирь владыки склепа хитиновыми шипами, которые усиливают броню и отражают получаемый в ближнем бою урон в атакующих врагов. |n|n|cffffcc001-й уровень:|r отражение <AUts,DataA1,%>% урона, +<AUts,DataC1> к броне. |n|cffffcc002-й уровень:|r отражение <AUts,DataA2,%>% урона, +<AUts,DataC2> к броне. |n|cffffcc003-й уровень:|r отражение <AUts,DataA3,%>% урона, +<AUts,DataC3> к броне."
+ID: A1LL | Levels: 4 | Name: TRIGSTR_38932 -> |cffc8cde1Смертельный союз | HK: W | ResHK: W
+  L1: tip=TRIGSTR_38934 -> |cffc8cde1Смертельный союз [|cffffcc001-й уровень|r]
+       ub=TRIGSTR_38939 -> Убивает союзника-нежить и передает <AUdp,DataB1,%>% его здоровья |cffc8cde1Ануб`Арака
+  L2: tip=TRIGSTR_38935 -> |cffc8cde1Смертельный союз [|cffffcc002-й уровень|r]
+       ub=TRIGSTR_38940 -> Убивает союзника-нежить и передает <AUdp,DataB2,%>% его здоровья |cffc8cde1Ануб`Арака
+  L3: tip=TRIGSTR_38936 -> |cffc8cde1Смертельный союз [|cffffcc003-й уровень|r]
+       ub=TRIGSTR_38941 -> Убивает союзника-нежить и передает <AUdp,DataB3,%>% его здоровья |cffc8cde1Ануб`Арака
+  L4: tip=TRIGSTR_38937 -> |cffc8cde1Смертельный союз [|cffffcc004-й уровень|r]
+       ub=TRIGSTR_38938 -> Убивает союзника-нежить и передает <AUdp,DataB4,%>% его здоровья |cffc8cde1Ануб`Арака
+  Res: tip=TRIGSTR_38933 -> Изучить «|cffc8cde1Смертельный союз» [|cffffcc00%d-й уровень|r]
+       ub="Убивает союзника-нежить и передает часть его здоровья рыцарю смерти.|n|n|cffffcc001-й уровень:|r <AUdp,DataB1,%>% здоровья. |n|cffffcc002-й уровень:|r <AUdp,DataB2,%>% здоровья. |n|cffffcc003-й уровень:|r <AUdp,DataB3,%>% здоровья." -> "Убивает союзника-нежить и передает часть его здоровья рыцарю смерти.|n|n|cffffcc001-й уровень:|r <AUdp,DataB1,%>% здоровья. |n|cffffcc002-й уровень:|r <AUdp,DataB2,%>% здоровья. |n|cffffcc003-й уровень:|r <AUdp,DataB3,%>% здоровья."
+ID: A1LM | Levels: 2 | Name: TRIGSTR_38945 -> |cffc8cde1Рой саранчи | HK: R | ResHK: R
+  L1: tip=TRIGSTR_38947 -> |cffc8cde1Рой саранчи (1)
+       ub="Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек." -> "Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек."
+  L2: tip=TRIGSTR_38942 -> |cffc8cde1Рой саранчи (2)
+       ub=TRIGSTR_38943 -> Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur2> сек.
+  Res: tip=TRIGSTR_38946 -> Изучить «|cffc8cde1Рой саранчи»
+       ub="Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек." -> "Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек."
+ID: A1N8 | Levels: 1 | Name: TRIGSTR_8596 -> |cffc8cde1Закопаться|r | HK: W | ResHK: None
+  L1: tip=TRIGSTR_8597 -> |cffc8cde1Закопаться|r
+       ub=TRIGSTR_39903 -> Некроарахнид закапывается в землю. При этом он становится невидимым и восполняет <ucrm,regenHP> здоровья/сек. |nЗакопавшийся некроарахнид не может атаковать. При малом здоровье некроарахнид сам закапывается в землю.
+ID: A1ND | Levels: 1 | Name: TRIGSTR_42241 -> |cffc8cde1Антимагический панцирь|r | HK: W | ResHK: None
+  L1: tip=TRIGSTR_42243 -> |cffc8cde1Антимагический панцирь|r
+       ub=TRIGSTR_41833 -> Применяет на себя антимагический щит, поглощающий 600 магический урона в течении 40 секунд.
+ID: A1OS | Levels: 2 | Name: TRIGSTR_15429 -> |cffe1c8ebАура Спасения|r | HK: None | ResHK: D
+  L1: tip=TRIGSTR_20137 -> |cffe1c8ebАура Спасения|r [|cffffcc001-й уровень|r]
+       ub=TRIGSTR_35185 -> С некоторым шансом телепортирует вашего воина к столице, если он получает критический урон. Отнимает 50 маны при применении (при отсутствии маны или столицы телепортации не происходит).
+  L2: tip=TRIGSTR_20728 -> |cffe1c8ebАура Спасения|r [|cffffcc002-й уровень|r]
+       ub=TRIGSTR_35190 -> С некоторым шансом телепортирует вашего воина к столице, если он получает критический урон. Отнимает 50 маны при применении (при отсутствии маны или столицы телепортации не происходит).
+  Res: tip=TRIGSTR_38810 -> Изучить «|cffffff96Аура Спасения|r» [|cffffcc00%d-й уровень|r]
+       ub=TRIGSTR_15568 -> С некоторым шансом телепортирует вашего воина к столице, если он получает критический урон.
+ID: A1PV | Levels: 1 | Name: TRIGSTR_17792 -> |cffc8cde1Увечье | HK: E | ResHK: None
+  L1: tip=TRIGSTR_20363 -> |cffc8cde1Увечье|r
+       ub=TRIGSTR_2596 -> Замедляет атаку врага на <cDap,DataB1,%>% и передвижение на <cDap,DataA1,%>%. |nВремя действия: <cDap,Dur1> сек.
+ID: A1PX | Levels: 1 | Name: TRIGSTR_22599 -> |cffc8cde1Сбор слизи|r | HK: W | ResHK: None
+  L1: tip=TRIGSTR_41075 -> |cffc8cde1Сбор слизи|r
+       ub=TRIGSTR_40062 -> Поглощает магические эффекты, действующие на войска в указанной области.
+ID: A1PY | Levels: 1 | Name: TRIGSTR_41762 -> |c00ff8e78Огненный шар|r | HK: W | ResHK: W
+  L1: tip=TRIGSTR_41756 -> |c00ff8e78Огненный шар|r
+       ub=TRIGSTR_41777 -> Выпускает огненный шар наносящий 100 урона, оглушающий врага. 
+
+  Res: tip=TRIGSTR_28849 -> Изучить «|cffff0000Огненная стрела|r» [%d-й уровень]
+       ub=TRIGSTR_32808 -> Инквизитор выстреливает сгустком огня в противника, нанося урон и оглушая его.|n|cffffcc001-й уровень:|r |cffb4dcdc75 урона, оглушает Героя - 2, солдата - 2.|r|n|cffffcc002-й уровень:|r |cffb4dcdc150 урона, оглушает Героя - 2, солдата - 3.|r|n|cffffcc003-й уровень:|r |cffb4dcdc270 урона, оглушает Героя - 2, солдата - 4.|r|n|cffffcc004-й уровень:|r |cffb4dcdc350 урона, оглушает Героя - 2, солдата - 5.|r|n|cffffcc005-й уровень:|r |cffb4dcdc430 урона, оглушает Героя - 2, солдата - 6.|r
+ID: A1Q7 | Levels: 3 | Name: Морозный доспех -> Морозный доспех | HK: W | ResHK: W
+  L1: tip="Морозный доспех [|cffffcc001-й уровень|r]" -> "Морозный доспех [|cffffcc001-й уровень|r]"
+       ub="Укрывает союзника ледяным щитом, который дает +<AUfu,DataB1> к броне и замедляет атакующие его в ближнем бою войска на <AUfu,Dur1> сек. |nВремя действия: <AUfu,DataA1> сек." -> "Укрывает союзника ледяным щитом, который дает +<AUfu,DataB1> к броне и замедляет атакующие его в ближнем бою войска на <AUfu,Dur1> сек. |nВремя действия: <AUfu,DataA1> сек."
+  L2: tip="Морозный доспех [|cffffcc002-й уровень|r]" -> "Морозный доспех [|cffffcc002-й уровень|r]"
+       ub="Укрывает союзника ледяным щитом, который дает +<AUfu,DataB2> к броне и замедляет атакующих в ближнем бою врагов на <AUfu,Dur2> сек. |nВремя действия: <AUfu,DataA2> сек." -> "Укрывает союзника ледяным щитом, который дает +<AUfu,DataB2> к броне и замедляет атакующих в ближнем бою врагов на <AUfu,Dur2> сек. |nВремя действия: <AUfu,DataA2> сек."
+  L3: tip="Морозный доспех [|cffffcc003-й уровень|r]" -> "Морозный доспех [|cffffcc003-й уровень|r]"
+       ub="Укрывает союзника ледяным щитом, который дает +<AUfu,DataB3> к броне и замедляет атакующих в ближнем бою врагов на <AUfu,Dur3> сек. |nВремя действия: <AUfu,DataA3> сек." -> "Укрывает союзника ледяным щитом, который дает +<AUfu,DataB3> к броне и замедляет атакующих в ближнем бою врагов на <AUfu,Dur3> сек. |nВремя действия: <AUfu,DataA3> сек."
+  Res: tip=Изучить «Морозный доспех» [|cffffcc00%d-й уровень|r] -> Изучить «Морозный доспех» [|cffffcc00%d-й уровень|r]
+       ub="Укрывает союзника ледяным щитом, который усиливает броню и замедляет атакующие его в ближнем бою войска. |n|n|cffffcc001-й уровень:|r +<AUfu,DataB1> к броне. |n|cffffcc002-й уровень:|r +<AUfu,DataB2> к броне. |n|cffffcc003-й уровень:|r +<AUfu,DataB3> к броне." -> "Укрывает союзника ледяным щитом, который усиливает броню и замедляет атакующие его в ближнем бою войска. |n|n|cffffcc001-й уровень:|r +<AUfu,DataB1> к броне. |n|cffffcc002-й уровень:|r +<AUfu,DataB2> к броне. |n|cffffcc003-й уровень:|r +<AUfu,DataB3> к броне."
+ID: AQ11 | Levels: 3 | Name: Жуки-падальщики -> Жуки-падальщики | HK: W | ResHK: W
+  L1: tip="Жуки-падальщики [|cffffcc001-й уровень|r]" -> "Жуки-падальщики [|cffffcc001-й уровень|r]"
+       ub="Призывает <AUcb,DataA1> жука-падальщика из указанного трупа. Жуки имеют <ucs1,realHP> здоровья, наносят <ucs1,mindmg1>-<ucs1,maxdmg1> урона и участвуют в бою, пока не погибнут. |nМаксимум жуков: <AUcb,DataE1>." -> "Призывает <AUcb,DataA1> жука-падальщика из указанного трупа. Жуки имеют <ucs1,realHP> здоровья, наносят <ucs1,mindmg1>-<ucs1,maxdmg1> урона и участвуют в бою, пока не погибнут. |nМаксимум жуков: <AUcb,DataE1>."
+  L2: tip="Жуки-падальщики [|cffffcc002-й уровень|r]" -> "Жуки-падальщики [|cffffcc002-й уровень|r]"
+       ub="Призывает <AUcb,DataA2> жука-падальщика из указанного трупа. Жуки имеют <ucs2,realHP> здоровья, наносят <ucs2,mindmg1>-<ucs2,maxdmg1> урона, могут изучить способность «Закопаться» и участвуют в бою, пока не погибнут. |nМаксимум жуков: <AUcb,DataE2>." -> "Призывает <AUcb,DataA2> жука-падальщика из указанного трупа. Жуки имеют <ucs2,realHP> здоровья, наносят <ucs2,mindmg1>-<ucs2,maxdmg1> урона, могут изучить способность «Закопаться» и участвуют в бою, пока не погибнут. |nМаксимум жуков: <AUcb,DataE2>."
+  L3: tip="Жуки-падальщики [|cffffcc003-й уровень|r]" -> "Жуки-падальщики [|cffffcc003-й уровень|r]"
+       ub="Призывает <AUcb,DataA3> жука-падальщика из указанного трупа. Жуки имеют <ucs3,realHP> здоровья, наносят <ucs3,mindmg1>-<ucs3,maxdmg1> урона, могут изучить способность «Закопаться» и участвуют в бою, пока не погибнут. |nМаксимум жуков: <AUcb,DataE3>." -> "Призывает <AUcb,DataA3> жука-падальщика из указанного трупа. Жуки имеют <ucs3,realHP> здоровья, наносят <ucs3,mindmg1>-<ucs3,maxdmg1> урона, могут изучить способность «Закопаться» и участвуют в бою, пока не погибнут. |nМаксимум жуков: <AUcb,DataE3>."
+  Res: tip=Изучить «Жуков-падальщиков» [|cffffcc00%d-й уровень|r] -> Изучить «Жуков-падальщиков» [|cffffcc00%d-й уровень|r]
+       ub="Владыка склепа призывает <AUcb,DataA1> жука-падальщика из указанного трупа, чтобы тот атаковал его противников. Жуки участвуют в бою, пока не погибнут. Максимум жуков: <AUcb,DataE1>. |n|n|cffffcc001-й уровень:|r <ucs1,realHP> здоровья, <ucs1,mindmg1>-<ucs1,maxdmg1> урона. |n|cffffcc002-й уровень:|r <ucs1,realHP> здоровья, <ucs1,mindmg1>-<ucs1,maxdmg1> урона, жуки могут закапываться в землю. |n|cffffcc003-й уровень:|r <ucs3,realHP> здоровья, <ucs3,mindmg1>-<ucs3,maxdmg1> урона, жуки могут закапываться в землю." -> "Владыка склепа призывает <AUcb,DataA1> жука-падальщика из указанного трупа, чтобы тот атаковал его противников. Жуки участвуют в бою, пока не погибнут. Максимум жуков: <AUcb,DataE1>. |n|n|cffffcc001-й уровень:|r <ucs1,realHP> здоровья, <ucs1,mindmg1>-<ucs1,maxdmg1> урона. |n|cffffcc002-й уровень:|r <ucs1,realHP> здоровья, <ucs1,mindmg1>-<ucs1,maxdmg1> урона, жуки могут закапываться в землю. |n|cffffcc003-й уровень:|r <ucs3,realHP> здоровья, <ucs3,mindmg1>-<ucs3,maxdmg1> урона, жуки могут закапываться в землю."
+ID: AQ95 | Levels: 2 | Name: Рой саранчи -> Рой саранчи | HK: R | ResHK: R
+  L1: tip=Рой саранчи -> Рой саранчи
+       ub="Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек." -> "Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек."
+  L2: tip=TRIGSTR_41933 -> Рой саранчи
+       ub=TRIGSTR_41934 -> Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur2> сек.
+  Res: tip=Изучить «Рой саранчи» -> Изучить «Рой саранчи»
+       ub="Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек." -> "Призывает рой саранчи, которая атакует находящихся рядом врагов. Когда саранча возвращается к владыке склепа, она восполняет ему здоровье пропорционально нанесенному урону.|nВремя существования: <AUls,HeroDur1> сек."
+ID: Afra | Levels: 1 | Name: Ледяная атака -> Ледяная атака | HK: None | ResHK: None
+  L1: tip=Ледяная атака -> Ледяная атака
+       ub="Добавляет к атакам эффект льда, который замедляет передвижение врагов." -> "Добавляет к атакам эффект льда, который замедляет передвижение врагов."
+ID: Agyd | Levels: 1 | Name: Создать труп -> Создать труп | HK: None | ResHK: None
+  L1: tip=None -> None
+       ub=None -> None
+ID: Amed | Levels: 1 | Name: Выгрузить труп -> Выгрузить труп | HK: D | ResHK: None
+  L1: tip=Выгрузить все трупы -> Выгрузить все трупы
+       ub=Выгружает все тела из мясного фургона. -> Выгружает все тела из мясного фургона.
+ID: Amel | Levels: 1 | Name: Погрузить труп -> Погрузить труп | HK: C | ResHK: None
+  L1: tip=Погрузить труп -> Погрузить труп
+       ub=Грузит труп в мясной фургон. -> Грузит труп в мясной фургон.
+ID: Argl | Levels: 1 | Name: Вернуть золото и древесину -> Вернуть золото и древесину | HK: None | ResHK: None
+  L1: tip=None -> None
+       ub=None -> None
+ID: Arlm | Levels: 1 | Name: Вернуть древесину -> Вернуть древесину | HK: None | ResHK: None
+  L1: tip=None -> None
+       ub=None -> None
+ID: Arpl | Levels: 1 | Name: TRIGSTR_1244 -> |cffc8cde1Чумная эссенция|r | HK: Q | ResHK: None
+  L1: tip=TRIGSTR_1245 -> |cffc8cde1Чумная эссенция|r
+       ub="Восполняет находящимся рядом союзникам (вплоть до 6) <Arpl,DataA1> здоровья. Не действует на технику." -> "Восполняет находящимся рядом союзникам (вплоть до 6) <Arpl,DataA1> здоровья. Не действует на технику."
+ID: Arpm | Levels: 1 | Name: TRIGSTR_1242 -> |cffc8cde1Призрачное касание|r | HK: W | ResHK: None
+  L1: tip=TRIGSTR_1243 -> |cffc8cde1Призрачное касание|r
+       ub="Восполняет находящимся рядом союзникам (вплоть до 6) <Arpm,DataB1> маны. Не действует на технику." -> "Восполняет находящимся рядом союзникам (вплоть до 6) <Arpm,DataB1> маны. Не действует на технику."
+ID: Arst | Levels: 1 | Name: Ремонт -> Ремонт | HK: R | ResHK: None
+  L1: tip=Ремонт -> Ремонт
+       ub=Ремонтирует здания и технику за счет ресурсов. -> Ремонтирует здания и технику за счет ресурсов.
+ID: Aspa | Levels: 1 | Name: Атака пауков -> Атака пауков | HK: None | ResHK: None
+  L1: tip=None -> None
+       ub=None -> None
+ID: Auns | Levels: 1 | Name: Развоплотить здание -> Развоплотить здание | HK: U | ResHK: None
+  L1: tip=Развоплотить здание -> Развоплотить здание
+       ub="Развоплощает ваше здание, возвращая <Auns,DataA1,%>% затраченных на него ресурсов." -> "Развоплощает ваше здание, возвращая <Auns,DataA1,%>% затраченных на него ресурсов."
+ID: CM01 | Levels: 4 | Name: Лик смерти -> Лик смерти | HK: Q | ResHK: Q
+  L1: tip="Лик смерти [|cffffcc001-й уровень|r]" -> "Лик смерти [|cffffcc001-й уровень|r]"
+       ub=TRIGSTR_40048 -> Восполняет 100 здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу.
+  L2: tip="Лик смерти [|cffffcc002-й уровень|r]" -> "Лик смерти [|cffffcc002-й уровень|r]"
+       ub=TRIGSTR_40151 -> Восполняет 150 здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу.
+  L3: tip="Лик смерти [|cffffcc003-й уровень|r]" -> "Лик смерти [|cffffcc003-й уровень|r]"
+       ub=TRIGSTR_40152 -> Восполняет 200 здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу.
+  L4: tip=TRIGSTR_40147 -> Лик смерти [|cffffcc004-й уровень|r]
+       ub=TRIGSTR_40148 -> Восполняет 250 здоровья союзнику-нежити или наносит вдвое меньше урона живому врагу.
+  Res: tip=Изучить «Лик смерти» [|cffffcc00%d-й уровень|r] -> Изучить «Лик смерти» [|cffffcc00%d-й уровень|r]
+       ub="Наносит урон живому врагу или восполняет здоровье союзнику-нежити или демону. |n|n|cffffcc001-й уровень:|r <AUdc,DataA1> здоровья. |n|cffffcc002-й уровень:|r <AUdc,DataA2> здоровья. |n|cffffcc003-й уровень:|r <AUdc,DataA3> здоровья." -> "Наносит урон живому врагу или восполняет здоровье союзнику-нежити или демону. |n|n|cffffcc001-й уровень:|r <AUdc,DataA1> здоровья. |n|cffffcc002-й уровень:|r <AUdc,DataA2> здоровья. |n|cffffcc003-й уровень:|r <AUdc,DataA3> здоровья."
+ID: CM02 | Levels: 2 | Name: Оживление мертвых -> Оживление мертвых | HK: R | ResHK: R
+  L1: tip=Оживление мертвых -> Оживление мертвых
+       ub="Оживляет <AUan,DataA1> трупов в области действия на <AUan,Dur1> сек." -> "Оживляет <AUan,DataA1> трупов в области действия на <AUan,Dur1> сек."
+  L2: tip=TRIGSTR_39677 -> Оживление мертвых
+       ub=TRIGSTR_40085 -> Оживляет 12 трупов в области действия на <AUan,Dur1> сек.
+  Res: tip=Изучить «Оживление мертвых» -> Изучить «Оживление мертвых»
+       ub="Оживляет <AUan,DataA1> трупов в области действия на <AUan,Dur1> сек." -> "Оживляет <AUan,DataA1> трупов в области действия на <AUan,Dur1> сек."
+ID: CM04 | Levels: 4 | Name: TRIGSTR_40094 -> Перо под Ребро | HK: None | ResHK: E
+  L1: tip="Критический удар [|cffffcc001-й уровень|r]" -> "Критический удар [|cffffcc001-й уровень|r]"
+       ub=TRIGSTR_40156 -> Дает 5%-й шанс нанести 2-кратный урон при атаке.
+  L2: tip="Критический удар [|cffffcc002-й уровень|r]" -> "Критический удар [|cffffcc002-й уровень|r]"
+       ub=TRIGSTR_10426 -> Дает 8%-й шанс нанести 2-кратный урон при атаке.
+  L3: tip="Критический удар [|cffffcc003-й уровень|r]" -> "Критический удар [|cffffcc003-й уровень|r]"
+       ub=TRIGSTR_9201 -> Дает 11%-й шанс нанести 2-кратный урон при атаке.
+  L4: tip=TRIGSTR_40095 -> Критический удар [|cffffcc004-й уровень|r]
+       ub=TRIGSTR_5371 -> Дает 14%-й шанс нанести 2-кратный урон при атаке.
+  Res: tip=Изучить «Критический удар» [|cffffcc00%d-й уровень|r] -> Изучить «Критический удар» [|cffffcc00%d-й уровень|r]
+       ub="Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон." -> "Дает шанс нанести больше урона при атаке. |n|n|cffffcc001-й уровень:|r <AOcr,DataA1>%-й шанс, <AOcr,DataB1>-кратный урон. |n|cffffcc002-й уровень:|r <AOcr,DataA2>%-й шанс, <AOcr,DataB2>-кратный урон. |n|cffffcc003-й уровень:|r <AOcr,DataA3>%-й шанс, <AOcr,DataB3>-кратный урон."
+ID: CM05 | Levels: 4 | Name: Нечистая аура -> Нечистая аура | HK: None | ResHK: U
+  L1: tip="Нечистая аура [|cffffcc001-й уровень|r]" -> "Нечистая аура [|cffffcc001-й уровень|r]"
+       ub=TRIGSTR_40402 -> +5% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.
+  L2: tip="Нечистая аура [|cffffcc002-й уровень|r]" -> "Нечистая аура [|cffffcc002-й уровень|r]"
+       ub=TRIGSTR_40403 -> +10% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.
+  L3: tip="Нечистая аура [|cffffcc003-й уровень|r]" -> "Нечистая аура [|cffffcc003-й уровень|r]"
+       ub=TRIGSTR_40519 -> +15% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.
+  L4: tip=TRIGSTR_27412 -> Нечистая аура [|cffffcc004-й уровень|r]
+       ub=TRIGSTR_35536 -> +20% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.
+  Res: tip=Изучить «Нечистую ауру» [|cffffcc00%d-й уровень|r] -> Изучить «Нечистую ауру» [|cffffcc00%d-й уровень|r]
+       ub="Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья. |n|cffffcc002-й уровень:|r +<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья. |n|cffffcc003-й уровень:|r +<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья." -> "Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья. |n|cffffcc002-й уровень:|r +<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья. |n|cffffcc003-й уровень:|r +<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья."
+ID: FL01 | Levels: 4 | Name: TRIGSTR_40067 -> Удар щитом | HK: W | ResHK: W
+  L1: tip="Сильный удар [|cffffcc001-й уровень|r]" -> "Сильный удар [|cffffcc001-й уровень|r]"
+       ub=TRIGSTR_40134 -> С 15%-й вероятностью атака нанесет на 15 больше урона и оглушит цель на <AHbh,Dur1> сек.
+  L2: tip="Сильный удар [|cffffcc002-й уровень|r]" -> "Сильный удар [|cffffcc002-й уровень|r]"
+       ub=TRIGSTR_40133 -> С 20%-й вероятностью атака нанесет на 20 больше урона и оглушит цель на <AHbh,Dur1> сек.
+  L3: tip="Сильный удар [|cffffcc003-й уровень|r]" -> "Сильный удар [|cffffcc003-й уровень|r]"
+       ub=TRIGSTR_40169 -> С 30%-й вероятностью атака нанесет на 25 больше урона и оглушит цель на <AHbh,Dur1> сек.
+  L4: tip=TRIGSTR_40132 -> Сильный удар [|cffffcc004-й уровень|r]
+       ub=TRIGSTR_26399 -> С 35%-й вероятностью атака нанесет на 30 больше урона и оглушит цель на <AHbh,Dur1> сек.
+  Res: tip=Изучить «Сильный удар» [|cffffcc00%d-й уровень|r] -> Изучить «Сильный удар» [|cffffcc00%d-й уровень|r]
+       ub="Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. На <AHbh,DataC1> больше урона. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. На <AHbh,DataC2> больше урона. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс. На <AHbh,DataC3> больше урона." -> "Дает шанс нанести при атаке на <AHbh,DataC1> больше урона и оглушить цель на <AHbh,Dur1> сек. |n|n|cffffcc001-й уровень:|r <AHbh,DataA1>%-й шанс. На <AHbh,DataC1> больше урона. |n|cffffcc002-й уровень:|r <AHbh,DataA2>%-й шанс. На <AHbh,DataC2> больше урона. |n|cffffcc003-й уровень:|r <AHbh,DataA3>%-й шанс. На <AHbh,DataC3> больше урона."
+ID: FL02 | Levels: 2 | Name: TRIGSTR_40118 -> Аватар | HK: R | ResHK: R
+  L1: tip=Активировать «Аватару» -> Активировать «Аватару»
+       ub=TRIGSTR_40070 -> При использовании дает Фалрику +<AHav,DataA1> к броне, +<AHav,DataB1> к запасу здоровья, +<AHav,DataC1> к урону и невосприимчивость к магии. |nВремя действия: <AHav,Dur1> сек.
+  L2: tip=TRIGSTR_40136 -> Активировать «Аватару»
+       ub=TRIGSTR_40137 -> При использовании дает Фалрику +10 к броне, +750 к запасу здоровья, +30 к урону и невосприимчивость к магии. |nВремя действия: <AHav,Dur1> сек.
+  Res: tip=Изучить «Аватару» -> Изучить «Аватару»
+       ub="Дает горному королю +<AHav,DataA1> к броне, +<AHav,DataB1> к запасу здоровья, +<AHav,DataC1> к урону и невосприимчивость к магии. |nВремя действия: <AHav,Dur1> сек." -> "Дает горному королю +<AHav,DataA1> к броне, +<AHav,DataB1> к запасу здоровья, +<AHav,DataC1> к урону и невосприимчивость к магии. |nВремя действия: <AHav,Dur1> сек."
+ID: FL03 | Levels: 4 | Name: TRIGSTR_40072 -> Сокрушительный удар | HK: Q | ResHK: Q
+  L1: tip="Ударная волна [|cffffcc001-й уровень|r]" -> "Ударная волна [|cffffcc001-й уровень|r]"
+       ub=TRIGSTR_40143 -> Выпускает волну энергии, нанося 100 урона наземным войскам на прямой линии.
+  L2: tip="Ударная волна [|cffffcc002-й уровень|r]" -> "Ударная волна [|cffffcc002-й уровень|r]"
+       ub=TRIGSTR_40142 -> Выпускает волну энергии, нанося 150 урона наземным войскам на прямой линии.
+  L3: tip="Ударная волна [|cffffcc003-й уровень|r]" -> "Ударная волна [|cffffcc003-й уровень|r]"
+       ub=TRIGSTR_40140 -> Выпускает волну энергии, нанося 200 урона наземным войскам на прямой линии.
+  L4: tip=TRIGSTR_40138 -> Ударная волна [|cffffcc004-й уровень|r]
+       ub=TRIGSTR_40139 -> Выпускает волну энергии, нанося 250 урона наземным войскам на прямой линии.
+  Res: tip=Изучить «Ударную волну» [|cffffcc00%d-й уровень|r] -> Изучить «Ударную волну» [|cffffcc00%d-й уровень|r]
+       ub="Выпускает волну энергии, нанося урон наземным войскам на прямой линии. |n|n|cffffcc001-й уровень:|r <AOsh,DataA1> урона. |n|cffffcc002-й уровень:|r <AOsh,DataA2> урона. |n|cffffcc003-й уровень:|r <AOsh,DataA3> урона." -> "Выпускает волну энергии, нанося урон наземным войскам на прямой линии. |n|n|cffffcc001-й уровень:|r <AOsh,DataA1> урона. |n|cffffcc002-й уровень:|r <AOsh,DataA2> урона. |n|cffffcc003-й уровень:|r <AOsh,DataA3> урона."
+ID: FL04 | Levels: 4 | Name: TRIGSTR_40174 -> |cffc8cde1Мертвый надзор|r | HK: None | ResHK: E
+  L1: tip=TRIGSTR_40181 -> |cffc8cde1Мертвый надзор|r [|cffffcc001-й уровень|r]
+       ub=TRIGSTR_40183 -> +3% к урону войск игрока рядом.
+  L2: tip=TRIGSTR_40182 -> |cffc8cde1Мертвый надзор|r [|cffffcc002-й уровень|r]
+       ub=TRIGSTR_3594 -> +6% к урону войск игрока рядом.
+  L3: tip=TRIGSTR_40178 -> |cffc8cde1Мертвый надзор|r [|cffffcc003-й уровень|r]
+       ub=TRIGSTR_40177 -> +9% к урону войск игрока рядом.
+  L4: tip=TRIGSTR_40175 -> |cffc8cde1Мертвый надзор|r [|cffffcc004-й уровень|r]
+       ub=TRIGSTR_40176 -> +12% к урону войск игрока рядом.
+  Res: tip=TRIGSTR_40180 -> Изучить «|cffc8cde1Мертвый надзор|r» [|cffffcc00%d-й уровень|r]
+       ub=TRIGSTR_40179 -> Увеличивает урон от всех атак находящихся рядом союзников.
+ID: Sch2 | Levels: 1 | Name: Cargo Hold -> Cargo Hold | HK: None | ResHK: None
+  L1: tip=None -> None
+       ub=None -> None
+ID: UN99 | Levels: 4 | Name: Шипастый панцирь -> Шипастый панцирь | HK: E | ResHK: E
+  L1: tip="Шипастый панцирь [|cffffcc001-й уровень|r]" -> "Шипастый панцирь [|cffffcc001-й уровень|r]"
+       ub="Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC1> к броне и отражают <AUts,DataA1,%>% получаемого в ближнем бою урона в атакующих врагов." -> "Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC1> к броне и отражают <AUts,DataA1,%>% получаемого в ближнем бою урона в атакующих врагов."
+  L2: tip="Шипастый панцирь [|cffffcc002-й уровень|r]" -> "Шипастый панцирь [|cffffcc002-й уровень|r]"
+       ub="Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC2> к броне и отражают <AUts,DataA2,%>% получаемого в ближнем бою урона в атакующих врагов." -> "Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC2> к броне и отражают <AUts,DataA2,%>% получаемого в ближнем бою урона в атакующих врагов."
+  L3: tip="Шипастый панцирь [|cffffcc003-й уровень|r]" -> "Шипастый панцирь [|cffffcc003-й уровень|r]"
+       ub="Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC3> к броне и отражают <AUts,DataA3,%>% получаемого в ближнем бою урона в атакующих врагов." -> "Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC3> к броне и отражают <AUts,DataA3,%>% получаемого в ближнем бою урона в атакующих врагов."
+  L4: tip=TRIGSTR_35526 -> Шипастый панцирь [|cffffcc004-й уровень|r]
+       ub=TRIGSTR_35527 -> Покрывает панцирь владыки склепа хитиновыми шипами, которые дают +<AUts,DataC4> к броне и отражают <AUts,DataA4,%>% получаемого в ближнем бою урона в атакующих врагов.
+  Res: tip=Изучить «Шипастый панцирь» [|cffffcc00%d-й уровень|r] -> Изучить «Шипастый панцирь» [|cffffcc00%d-й уровень|r]
+       ub="Покрывает панцирь владыки склепа хитиновыми шипами, которые усиливают броню и отражают получаемый в ближнем бою урон в атакующих врагов. |n|n|cffffcc001-й уровень:|r отражение <AUts,DataA1,%>% урона, +<AUts,DataC1> к броне. |n|cffffcc002-й уровень:|r отражение <AUts,DataA2,%>% урона, +<AUts,DataC2> к броне. |n|cffffcc003-й уровень:|r отражение <AUts,DataA3,%>% урона, +<AUts,DataC3> к броне." -> "Покрывает панцирь владыки склепа хитиновыми шипами, которые усиливают броню и отражают получаемый в ближнем бою урон в атакующих врагов. |n|n|cffffcc001-й уровень:|r отражение <AUts,DataA1,%>% урона, +<AUts,DataC1> к броне. |n|cffffcc002-й уровень:|r отражение <AUts,DataA2,%>% урона, +<AUts,DataC2> к броне. |n|cffffcc003-й уровень:|r отражение <AUts,DataA3,%>% урона, +<AUts,DataC3> к броне."
+ID: kel0 | Levels: 4 | Name: TRIGSTR_39346 -> |cffc8cde1Смерть и разложение|r | HK: W | ResHK: W
+  L1: tip=TRIGSTR_36995 -> |cffc8cde1Смерть и разложение|r
+       ub=TRIGSTR_39062 -> В выбранной области в течении 16 секунд юниты врага будут терять 1% здоровья каждую секунду. Работает на здания.
+  L2: tip=TRIGSTR_36996 -> |cffc8cde1Смерть и разложение|r
+       ub=TRIGSTR_39063 -> В выбранной области в течении 26 секунд юниты врага будут терять 2% здоровья каждую секунду. Работает на здания.
+  L3: tip=TRIGSTR_37808 -> |cffc8cde1Смерть и разложение|r
+       ub=TRIGSTR_39064 -> В выбранной области в течении 36 секунд юниты врага будут терять 3% здоровья каждую секунду. Работает на здания.
+  L4: tip=TRIGSTR_39061 -> |cffc8cde1Смерть и разложение|r
+       ub=TRIGSTR_39167 -> В выбранной области в течении 46 секунд юниты врага будут терять 4% здоровья каждую секунду. Работает на здания.
+  Res: tip=TRIGSTR_39168 -> |cffc8cde1Смерть и разложение|r
+       ub=TRIGSTR_39288 -> В выбранной области в течении 16 секунд юниты врага будут терять 1% здоровья каждую секунду. Работает на здания.
+ID: unA0 | Levels: 1 | Name: TRIGSTR_33334 -> |cffc8cde1Леденящее дыхание|r | HK: Z | ResHK: None
+  L1: tip=TRIGSTR_33338 -> |cffc8cde1Леденящее дыхание|r
+       ub=TRIGSTR_16400 -> Замедляет атакованного врага.
+ID: unA5 | Levels: 1 | Name: TRIGSTR_40320 -> |cffc8cde1Проклятие|r | HK: Q | ResHK: None
+  L1: tip=TRIGSTR_40321 -> |cffc8cde1Проклятие|r
+       ub="Проклинает врага. С <Acrs,DataA1,%>%-й вероятностью жертва промахивается при атаке.|nВремя действия: <Acrs,Dur1> сек." -> "Проклинает врага. С <Acrs,DataA1,%>%-й вероятностью жертва промахивается при атаке.|nВремя действия: <Acrs,Dur1> сек."

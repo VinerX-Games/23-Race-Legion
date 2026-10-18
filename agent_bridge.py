@@ -20,6 +20,8 @@ Usage:
   python agent_bridge.py exec "..." --timeout 12
 """
 import sys, os, re, time, glob, argparse, ctypes
+from contextlib import contextmanager
+from scripts.wc3_project import settings
 
 # Russian Windows consoles default to cp1251 and crash on UTF-8 output; force UTF-8.
 for _s in (sys.stdout, sys.stderr):
@@ -28,7 +30,7 @@ for _s in (sys.stdout, sys.stderr):
     except Exception:
         pass
 
-CMD_DIR = os.path.join(os.environ["USERPROFILE"], "Documents", "Warcraft III", "CustomMapData")
+CMD_DIR = settings()["custom_data"]
 EVAL_OUT = os.path.join(CMD_DIR, "23race_eval_out.pld")          # legacy fixed outbox
 OUT_GLOB = os.path.join(CMD_DIR, "23race_eval_out_[0-9]*.pld")    # per-seq outbox
 HB_FILE = os.path.join(CMD_DIR, "23race_eval_hb.pld")            # game-published seq
@@ -185,7 +187,7 @@ def wait_for_file(filepath, deadline):
     return os.path.exists(filepath)
 
 
-def cmd_reset():
+def _cmd_reset_locked():
     removed = 0
     failures = []
     # Drop inbox, every per-seq outbox, the legacy outbox, and the stale heartbeat.
@@ -204,7 +206,51 @@ def cmd_reset():
     return 0
 
 
+@contextmanager
+def bridge_lock():
+    """OS-owned lock: another agent cannot publish the same sequence concurrently."""
+    os.makedirs(CMD_DIR, exist_ok=True)
+    path = os.path.join(CMD_DIR, "23race_agent.lock")
+    with open(path, "a+b") as handle:
+        handle.seek(0)
+        handle.write(b"0")
+        handle.flush()
+        handle.seek(0)
+        if os.name == "nt":
+            import msvcrt
+            msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+        else:
+            import fcntl
+            fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        try:
+            yield
+        finally:
+            handle.seek(0)
+            if os.name == "nt":
+                msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
+            else:
+                fcntl.flock(handle, fcntl.LOCK_UN)
+
+
 def cmd_exec(code, timeout, use_watch=False):
+    try:
+        with bridge_lock():
+            return _cmd_exec_locked(code, timeout, use_watch)
+    except OSError as exc:
+        print("ERR bridge channel busy or unavailable: " + str(exc))
+        return 2
+
+
+def cmd_reset():
+    try:
+        with bridge_lock():
+            return _cmd_reset_locked()
+    except OSError as exc:
+        print("ERR bridge channel busy or unavailable: " + str(exc))
+        return 2
+
+
+def _cmd_exec_locked(code, timeout, use_watch=False):
     seq = next_seq()
     for stale in (out_file(seq), EVAL_OUT):  # drop stale results so we never read a previous one
         try:

@@ -1,0 +1,444 @@
+{
+  "scope": "Стромгард (Stromgard): партия 1 — основные и муниципальные здания (8 объектов, 24 поля)",
+  "building_ids": [
+    "h0GZ",
+    "h0H0",
+    "h0H1",
+    "h0H2",
+    "h0H3",
+    "h0H5",
+    "h0H6",
+    "h0HG"
+  ],
+  "total_buildings": 8,
+  "total_fields": 24,
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "buildings": [
+    {
+      "id": "h0GZ",
+      "wts": {
+        "name": 21263,
+        "tip": 42691,
+        "ubertip": 42690
+      },
+      "hotkey": "Q",
+      "name": "|cffe4cfa3Ратуша|r",
+      "tip": "|cffe4cfa3Ратуша|r (|cffffffffQ|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание первой ступени. Принимает добытые золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deФорт|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПризыв к оружию|cffced4da: временно превращает работников в ополченцев.|n- |cffa9c7deЗащита столицы|cffced4da: снижает восстановление здоровья ближайших органических врагов.|r"
+    },
+    {
+      "id": "h0H0",
+      "wts": {
+        "name": 21265,
+        "tip": 42692,
+        "ubertip": 22569
+      },
+      "hotkey": "D",
+      "name": "|cffe4cfa3Форт|r",
+      "tip": "|cffe4cfa3Форт|r (|cffffffffD|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание второй ступени. Принимает добытые золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffe4cfa3Профессиональная армия|cffced4da: усиливает характеристики войск казарм и магических башен.|n- |cffe4cfa3Призывная армия|cffced4da: позволяет нанимать войска парами со сниженными характеристиками.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deЗамок|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПризыв к оружию|cffced4da: временно превращает работников в ополченцев.|n- |cffa9c7deЗащита столицы|cffced4da: снижает восстановление здоровья ближайших органических врагов.|r"
+    },
+    {
+      "id": "h0H1",
+      "wts": {
+        "name": 21267,
+        "tip": 42693,
+        "ubertip": 22575
+      },
+      "hotkey": "Z",
+      "name": "|cffe4cfa3Замок|r",
+      "tip": "|cffe4cfa3Замок|r (|cffffffffZ|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание третьей, высшей ступени. Принимает добытые золото и древесину и открывает доступ к передовым технологиям.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПризыв к оружию|cffced4da: временно превращает работников в ополченцев.|n- |cffa9c7deЗащита столицы|cffced4da: снижает восстановление здоровья ближайших органических врагов.|r"
+    },
+    {
+      "id": "h0H2",
+      "wts": {
+        "name": 21115,
+        "tip": 42695,
+        "ubertip": 42694
+      },
+      "hotkey": "A",
+      "name": "|cffe4cfa3Ферма|r",
+      "tip": "|cffe4cfa3Ферма|r (|cffffffffA|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Хозяйственное строение. Обеспечивает провизией армию королевства, увеличивая базовый доход золота на |cffc8e08740|cffced4da за выплату.|n|nИтоговый доход зависит от текущих модификаторов экономики.|r"
+    },
+    {
+      "id": "h0H3",
+      "wts": {
+        "name": 21270,
+        "tip": 42696,
+        "ubertip": 20424
+      },
+      "hotkey": "S",
+      "name": "|cffe4cfa3Алтарь королей|r",
+      "tip": "|cffe4cfa3Алтарь королей|r (|cffffffffS|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Священное место сбора предводителей Стромгарда. Позволяет призывать и воскрешать павших героев королевства.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deГенерал|cffced4da: военачальник ближнего боя.|n- |cffa9c7deКазначей|cffced4da: маг поддержки и управления ресурсами.|n- |cffa9c7deВерховный маг|cffced4da: могущественный заклинатель дальнего боя.|r"
+    },
+    {
+      "id": "h0H5",
+      "wts": {
+        "name": 21274,
+        "tip": 42697,
+        "ubertip": 22611
+      },
+      "hotkey": "E",
+      "name": "|cffe4cfa3Лесопилка|r",
+      "tip": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Лесопильный двор. Принимает добытую древесину и позволяет исследовать улучшения добычи и прочности строений.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffe4cfa3Улучшенные инструменты|cffced4da: повышает вместимость добываемой работниками древесины.|n- |cffe4cfa3Улучшенная кладка|cffced4da: увеличивает запас здоровья и броню зданий.|r"
+    },
+    {
+      "id": "h0H6",
+      "wts": {
+        "name": 21276,
+        "tip": 42698,
+        "ubertip": 22616
+      },
+      "hotkey": "R",
+      "name": "|cffe4cfa3Кузница|r",
+      "tip": "|cffe4cfa3Кузница|r (|cffffffffR|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Оружейная кузница. Позволяет исследовать улучшения оружия, доспехов, пороха и стрел для армии Стромгарда.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffe4cfa3Железные мечи|cffced4da: увеличивает урон пехоты и рыцарей.|n- |cffe4cfa3Железная броня|cffced4da: увеличивает защиту пехоты и рыцарей.|n- |cffe4cfa3Чёрный порох|cffced4da: увеличивает урон стрелков и осадных орудий.|n- |cffe4cfa3Накидки из клёпаной кожи|cffced4da: увеличивает защиту стрелков.|n- |cffe4cfa3Магическая атака|cffced4da: увеличивает урон заклинателей.|n- |cffe4cfa3Огненные стрелы|cffced4da: наделяет стрелков огненными стрелами.|r"
+    },
+    {
+      "id": "h0HG",
+      "wts": {
+        "name": 21286,
+        "tip": 8048,
+        "ubertip": 12986
+      },
+      "hotkey": "Z",
+      "name": "|cffe4cfa3Сторожевая башня|r",
+      "tip": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)",
+      "ubertip": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовое оборонительное сооружение. Обстреливает противников стрелами с большого расстояния.|n|nАтакует наземные и воздушные цели.|r"
+    }
+  ],
+  "evidence": [
+    "h0GZ (Ратуша): trains=h0G9, upgrade=h0H0, abillist=Argl,A0IQ,A0LJ,A0LI, hotkey=Q",
+    "h0H0 (Форт): trains=h0G9, researches=R0D6,R0D5, upgrade=h0H1, abillist=A0LJ,A0LI,A0IQ,Argl, hotkey=D",
+    "h0H1 (Замок): trains=h0G9, abillist=A0LJ,A0LI,A0IQ,Argl, hotkey=Z",
+    "h0H2 (Ферма): fmade=40 (+40 базового дохода в 54_count_dis.lua), hotkey=A",
+    "h0H3 (Алтарь королей): trains=H0HB,H0HL,H0HA, воскрешение героев, hotkey=S",
+    "h0H5 (Лесопилка): researches=R0DM,R0DL, abillist=Abds,Arlm, склад древесины, hotkey=E",
+    "h0H6 (Кузница): researches=R0E2,R0DA,R0DB,R0DE,R0DD,R0DC, hotkey=R",
+    "h0HG (Сторожевая башня): weapson=1, atktype1=pierce, avgdmg1=25, rangen1=700, targs1=ground,structure,debris,air,item,ward, hotkey=Z"
+  ],
+  "strings": [
+    {
+      "rawcode": "h0GZ",
+      "field": "name",
+      "wts_id": 21263,
+      "before": "|c00ff8e78Ратуша|r",
+      "after": "|cffe4cfa3Ратуша|r"
+    },
+    {
+      "rawcode": "h0GZ",
+      "field": "tip",
+      "wts_id": 42691,
+      "before": "Построить |c00ff8e78Ратушу|r",
+      "after": "|cffe4cfa3Ратуша|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "h0GZ",
+      "field": "ubertip",
+      "wts_id": 42690,
+      "before": "|cff7dc87dВремя строительства:|r |cffaaf0aa120 сек.|r|n|nБазовое здание. Обучает работников и хранит добытые ресурсы. Можно улучшить до форта, а затем до Замка, чтобы получить доступ к новым зданиям и типам войск.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание первой ступени. Принимает добытые золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deФорт|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПризыв к оружию|cffced4da: временно превращает работников в ополченцев.|n- |cffa9c7deЗащита столицы|cffced4da: снижает восстановление здоровья ближайших органических врагов.|r"
+    },
+    {
+      "rawcode": "h0H0",
+      "field": "name",
+      "wts_id": 21265,
+      "before": "|c00ff8e78Форт|r",
+      "after": "|cffe4cfa3Форт|r"
+    },
+    {
+      "rawcode": "h0H0",
+      "field": "tip",
+      "wts_id": 42692,
+      "before": "Улучшить до |c00ff8e78Форта|r",
+      "after": "|cffe4cfa3Форт|r (|cffffffffD|r)"
+    },
+    {
+      "rawcode": "h0H0",
+      "field": "ubertip",
+      "wts_id": 22569,
+      "before": "|cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание второй ступени. Принимает добытые золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffe4cfa3Профессиональная армия|cffced4da: усиливает характеристики войск казарм и магических башен.|n- |cffe4cfa3Призывная армия|cffced4da: позволяет нанимать войска парами со сниженными характеристиками.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deЗамок|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПризыв к оружию|cffced4da: временно превращает работников в ополченцев.|n- |cffa9c7deЗащита столицы|cffced4da: снижает восстановление здоровья ближайших органических врагов.|r"
+    },
+    {
+      "rawcode": "h0H1",
+      "field": "name",
+      "wts_id": 21267,
+      "before": "|c00ff8e78Замок|r",
+      "after": "|cffe4cfa3Замок|r"
+    },
+    {
+      "rawcode": "h0H1",
+      "field": "tip",
+      "wts_id": 42693,
+      "before": "Улучшить до |c00ff8e78Замка|r",
+      "after": "|cffe4cfa3Замок|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "h0H1",
+      "field": "ubertip",
+      "wts_id": 22575,
+      "before": "|cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание третьей, высшей ступени. Принимает добытые золото и древесину и открывает доступ к передовым технологиям.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПризыв к оружию|cffced4da: временно превращает работников в ополченцев.|n- |cffa9c7deЗащита столицы|cffced4da: снижает восстановление здоровья ближайших органических врагов.|r"
+    },
+    {
+      "rawcode": "h0H2",
+      "field": "name",
+      "wts_id": 21115,
+      "before": "|c00ff8e78Ферма|r",
+      "after": "|cffe4cfa3Ферма|r"
+    },
+    {
+      "rawcode": "h0H2",
+      "field": "tip",
+      "wts_id": 42695,
+      "before": "Построить |c00ff8e78Ферму|r",
+      "after": "|cffe4cfa3Ферма|r (|cffffffffA|r)"
+    },
+    {
+      "rawcode": "h0H2",
+      "field": "ubertip",
+      "wts_id": 42694,
+      "before": "|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.\n\n|cffffff00Приносит 40 инкома|r",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Хозяйственное строение. Обеспечивает провизией армию королевства, увеличивая базовый доход золота на |cffc8e08740|cffced4da за выплату.|n|nИтоговый доход зависит от текущих модификаторов экономики.|r"
+    },
+    {
+      "rawcode": "h0H3",
+      "field": "name",
+      "wts_id": 21270,
+      "before": "|c00ff8e78Алтарь королей|r",
+      "after": "|cffe4cfa3Алтарь королей|r"
+    },
+    {
+      "rawcode": "h0H3",
+      "field": "tip",
+      "wts_id": 42696,
+      "before": "Построить |c00ff8e78Алтарь королей|r",
+      "after": "|cffe4cfa3Алтарь королей|r (|cffffffffS|r)"
+    },
+    {
+      "rawcode": "h0H3",
+      "field": "ubertip",
+      "wts_id": 20424,
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nСооружение позволяющее призывать новых и воскрешает павших героев.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Священное место сбора предводителей Стромгарда. Позволяет призывать и воскрешать павших героев королевства.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deГенерал|cffced4da: военачальник ближнего боя.|n- |cffa9c7deКазначей|cffced4da: маг поддержки и управления ресурсами.|n- |cffa9c7deВерховный маг|cffced4da: могущественный заклинатель дальнего боя.|r"
+    },
+    {
+      "rawcode": "h0H5",
+      "field": "name",
+      "wts_id": 21274,
+      "before": "|c00ff8e78Лесопилка|r",
+      "after": "|cffe4cfa3Лесопилка|r"
+    },
+    {
+      "rawcode": "h0H5",
+      "field": "tip",
+      "wts_id": 42697,
+      "before": "Построить |c00ff8e78Лесопилку|r",
+      "after": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "h0H5",
+      "field": "ubertip",
+      "wts_id": 22611,
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nХранит добытую древесину. |nДает доступ к новым технологиям добычи древесины и строительства.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Лесопильный двор. Принимает добытую древесину и позволяет исследовать улучшения добычи и прочности строений.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffe4cfa3Улучшенные инструменты|cffced4da: повышает вместимость добываемой работниками древесины.|n- |cffe4cfa3Улучшенная кладка|cffced4da: увеличивает запас здоровья и броню зданий.|r"
+    },
+    {
+      "rawcode": "h0H6",
+      "field": "name",
+      "wts_id": 21276,
+      "before": "|c00ff8e78Кузница|r",
+      "after": "|cffe4cfa3Кузница|r"
+    },
+    {
+      "rawcode": "h0H6",
+      "field": "tip",
+      "wts_id": 42698,
+      "before": "Построить|c00ff8e78 Кузницу|r",
+      "after": "|cffe4cfa3Кузница|r (|cffffffffR|r)"
+    },
+    {
+      "rawcode": "h0H6",
+      "field": "ubertip",
+      "wts_id": 22616,
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa70 сек.|r|n|nПозволяет улучшать доспехи, оружие и порох.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оружейная кузница. Позволяет исследовать улучшения оружия, доспехов, пороха и стрел для армии Стромгарда.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffe4cfa3Железные мечи|cffced4da: увеличивает урон пехоты и рыцарей.|n- |cffe4cfa3Железная броня|cffced4da: увеличивает защиту пехоты и рыцарей.|n- |cffe4cfa3Чёрный порох|cffced4da: увеличивает урон стрелков и осадных орудий.|n- |cffe4cfa3Накидки из клёпаной кожи|cffced4da: увеличивает защиту стрелков.|n- |cffe4cfa3Магическая атака|cffced4da: увеличивает урон заклинателей.|n- |cffe4cfa3Огненные стрелы|cffced4da: наделяет стрелков огненными стрелами.|r"
+    },
+    {
+      "rawcode": "h0HG",
+      "field": "name",
+      "wts_id": 21286,
+      "before": "|c00ff8e78Сторожевая Башня|r",
+      "after": "|cffe4cfa3Сторожевая башня|r"
+    },
+    {
+      "rawcode": "h0HG",
+      "field": "tip",
+      "wts_id": 8048,
+      "before": "Построить |c00ff8e78Сторожевую Башню|r",
+      "after": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)"
+    },
+    {
+      "rawcode": "h0HG",
+      "field": "ubertip",
+      "wts_id": 12986,
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nБазовое оборонительное сооружение. ",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовое оборонительное сооружение. Обстреливает противников стрелами с большого расстояния.|n|nАтакует наземные и воздушные цели.|r"
+    }
+  ],
+  "consumers": [
+    {
+      "file": "war3map.w3u",
+      "id": "h0GZ",
+      "field": "name",
+      "wts_id": 21263
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0GZ",
+      "field": "tip",
+      "wts_id": 42691
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0GZ",
+      "field": "ubertip",
+      "wts_id": 42690
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H0",
+      "field": "name",
+      "wts_id": 21265
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H0",
+      "field": "tip",
+      "wts_id": 42692
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H0",
+      "field": "ubertip",
+      "wts_id": 22569
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H1",
+      "field": "name",
+      "wts_id": 21267
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H1",
+      "field": "tip",
+      "wts_id": 42693
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H1",
+      "field": "ubertip",
+      "wts_id": 22575
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H2",
+      "field": "name",
+      "wts_id": 21115
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H2",
+      "field": "tip",
+      "wts_id": 42695
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H2",
+      "field": "ubertip",
+      "wts_id": 42694
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H3",
+      "field": "name",
+      "wts_id": 21270
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H3",
+      "field": "tip",
+      "wts_id": 42696
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H3",
+      "field": "ubertip",
+      "wts_id": 20424
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H5",
+      "field": "name",
+      "wts_id": 21274
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H5",
+      "field": "tip",
+      "wts_id": 42697
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H5",
+      "field": "ubertip",
+      "wts_id": 22611
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H6",
+      "field": "name",
+      "wts_id": 21276
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H6",
+      "field": "tip",
+      "wts_id": 42698
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0H6",
+      "field": "ubertip",
+      "wts_id": 22616
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0HG",
+      "field": "name",
+      "wts_id": 21286
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0HG",
+      "field": "tip",
+      "wts_id": 8048
+    },
+    {
+      "file": "war3map.w3u",
+      "id": "h0HG",
+      "field": "ubertip",
+      "wts_id": 12986
+    }
+  ],
+  "in_game_checked": false
+}

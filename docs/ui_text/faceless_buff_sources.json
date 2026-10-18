@@ -1,0 +1,672 @@
+{
+  "command": "get-objects-bulk",
+  "count": 66,
+  "map": "F:\\Gemini_23Race\\map.w3x",
+  "missing": [],
+  "objects": [
+    {
+      "fields": {
+        "buffid1": "B08F",
+        "buffid2": "BUau",
+        "buffid3": "BUau",
+        "buffid4": "BUau"
+      },
+      "id": "A06M",
+      "name": "|cffe4cfa3Дымка бездны|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BPSE",
+        "buffid2": "BPSE",
+        "buffid3": "BPSE",
+        "buffid4": "BPSE"
+      },
+      "id": "A0DW",
+      "name": "|cffe4cfa3Сильный удар|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A0I3",
+      "name": "|cffe4cfa3Небольшой скачок|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bust",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A0PB",
+      "name": "|cffe4cfa3Кошмар|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BNab",
+        "buffid2": "BNab",
+        "buffid3": "BNab",
+        "buffid4": "BNab"
+      },
+      "id": "A0PC",
+      "name": "|cffe4cfa3Яд кошмара|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A0RR",
+      "name": "|cffe4cfa3Взрыв Эфира|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A0RS",
+      "name": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A0T3",
+      "name": "|cffe4cfa3Залповый огонь|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BOwd",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A0T7",
+      "name": "|cffe4cfa3Щупальце Йогг`Сарона|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BUan",
+        "buffid2": "BUan",
+        "buffid3": "BUan",
+        "buffid4": "BUan"
+      },
+      "id": "A0V5",
+      "name": "|cffe4cfa3Вечная служба|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bakb",
+        "buffid2": "Bakb",
+        "buffid3": "Bakb",
+        "buffid4": "Bakb"
+      },
+      "id": "A0V7",
+      "name": "|cffe4cfa3Приказ генерала|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A0W4",
+      "name": "|cffe4cfa3Подчинение|r"
+    },
+    {
+      "fields": {
+        "buffid1": "B02L",
+        "buffid2": "B02L",
+        "buffid3": "B02L",
+        "buffid4": "B02L"
+      },
+      "id": "A0WQ",
+      "name": "|cffe4cfa3Взрыв бездны|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BHtc",
+        "buffid2": "BHtc",
+        "buffid3": "BHtc",
+        "buffid4": "BHtc"
+      },
+      "id": "A10H",
+      "name": "|cffe4cfa3Удар клешнёй|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A10I",
+      "name": "|cffe4cfa3Крепкий панцирь|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BEim,BEia",
+        "buffid2": "BEim,BEia",
+        "buffid3": "BEim,BEia",
+        "buffid4": "BEim,BEia"
+      },
+      "id": "A10J",
+      "name": "|cffe4cfa3Обжигающий жар|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A10K",
+      "name": "|cffe4cfa3Тёмный портал|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BPSE",
+        "buffid2": "BPSE",
+        "buffid3": "BPSE",
+        "buffid4": "BPSE"
+      },
+      "id": "A10L",
+      "name": "|cffe4cfa3Сотрясение Бездны|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BOwk",
+        "buffid2": "BOwk",
+        "buffid3": "BOwk",
+        "buffid4": "BOwk"
+      },
+      "id": "A10N",
+      "name": "|cffe4cfa3Сокрытие Бездной|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BNht",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A10P",
+      "name": "|cffe4cfa3Ужасающий вой|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A10Q",
+      "name": "|cffe4cfa3Тёмный раскол|r"
+    },
+    {
+      "fields": {
+        "buffid1": "B08E",
+        "buffid2": "B08E",
+        "buffid3": "B08E",
+        "buffid4": "B08E"
+      },
+      "id": "A10R",
+      "name": "|cffe4cfa3Аура Бездны|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BUdd",
+        "buffid2": "BUdd",
+        "buffid3": "BUdd",
+        "buffid4": "BUdd"
+      },
+      "id": "A10S",
+      "name": "|cffe4cfa3Пространство Бездны|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A10T",
+      "name": "|cffe4cfa3Рой саранчи|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A10U",
+      "name": "|cffe4cfa3Рой саранчи|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A10V",
+      "name": "|cffe4cfa3Рой саранчи|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BPSE",
+        "buffid2": "BPSE",
+        "buffid3": "BPSE",
+        "buffid4": "BPSE"
+      },
+      "id": "A10W",
+      "name": "|cffe4cfa3Сотрясение Бездны|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A10X",
+      "name": "|cffe4cfa3Разрушение Эфира|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A10Y",
+      "name": "|cffe4cfa3Крепкий панцирь|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A10Z",
+      "name": "|cffe4cfa3Сила Бездны|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BUts",
+        "buffid2": "BUts",
+        "buffid3": "BUts",
+        "buffid4": "BUts"
+      },
+      "id": "A111",
+      "name": "|cffe4cfa3Тёмная оболочка|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bfro",
+        "buffid2": "Bfro",
+        "buffid3": "Bfro",
+        "buffid4": "Bfro"
+      },
+      "id": "A112",
+      "name": "|cffe4cfa3Иней|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BUsl",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A113",
+      "name": "|cffe4cfa3Кошмар|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bslo",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A114",
+      "name": "|cffe4cfa3Замедление|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bcrs",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A115",
+      "name": "|cffe4cfa3Проклятие|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BOwd",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A116",
+      "name": "|cffe4cfa3Порождение щупальца|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A11G",
+      "name": "|cffe4cfa3Порождение придатка|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A122",
+      "name": "|cffe4cfa3Кража будущего|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A123",
+      "name": "|cffe4cfa3Реинкарнация|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BHtb",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A126",
+      "name": "|cffe4cfa3Ледяная стрела|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A12G",
+      "name": "|cffe4cfa3Служение Йогг`Сарону|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BHab",
+        "buffid2": "BHab",
+        "buffid3": "BHab",
+        "buffid4": "BHab"
+      },
+      "id": "A12H",
+      "name": "|cffe4cfa3Антимагическая аура|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A12I",
+      "name": "|cffe4cfa3Саронитовый панцирь|r"
+    },
+    {
+      "fields": {
+        "buffid1": "AEtr",
+        "buffid2": "AEtr",
+        "buffid3": "AEtr",
+        "buffid4": "AEtr"
+      },
+      "id": "A12J",
+      "name": "|cffe4cfa3Пары саронита|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bvng",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A16N",
+      "name": "|cffe4cfa3Порождение Кошмара|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BUfa",
+        "buffid2": "BUfa",
+        "buffid3": "BUfa",
+        "buffid4": "BUfa"
+      },
+      "id": "A16O",
+      "name": "|cffe4cfa3Морозный доспех|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A16P",
+      "name": "|cffe4cfa3Пронзание|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bspl",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A16Q",
+      "name": "|cffe4cfa3Смертельная связь|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A16R",
+      "name": "|cffe4cfa3Божественное видение|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Brej",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A16T",
+      "name": "|cffe4cfa3Покровительство бога|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BIcb",
+        "buffid2": "BIcb",
+        "buffid3": "BIcb",
+        "buffid4": "BIcb"
+      },
+      "id": "A1CF",
+      "name": "|cffe4cfa3Помутнение рассудка|r"
+    },
+    {
+      "fields": {
+        "buffid1": "B01I",
+        "buffid2": "B01I",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A1CG",
+      "name": "|cffe4cfa3Метка охотника|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A1CH",
+      "name": "|cffe4cfa3Скорость бездны|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A1CI",
+      "name": "|cffe4cfa3Вампиризм бездны|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A1CJ",
+      "name": "|cffe4cfa3Безумие бездны|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A1CK",
+      "name": "|cffe4cfa3Помутнение разума|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A1N5",
+      "name": "|cffe4cfa3Взрыв Эфира|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BOsf",
+        "buffid2": "BOsf",
+        "buffid3": "BOsf",
+        "buffid4": "BOsf"
+      },
+      "id": "A1NA",
+      "name": "|cffe4cfa3Призыв бессмертных стражей|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BOsf",
+        "buffid2": "BOsf",
+        "buffid3": "BOsf",
+        "buffid4": "BOsf"
+      },
+      "id": "A1NB",
+      "name": "|cffe4cfa3Призыв сущностей Бездны|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A1NC",
+      "name": "|cffe4cfa3Портал в Бездну|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A1R2",
+      "name": "|cffe4cfa3Пожирание Магии|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A1R3",
+      "name": "|cffe4cfa3Пожирание|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "A1R5",
+      "name": "|cffe4cfa3Пожирание|r"
+    },
+    {
+      "fields": {
+        "buffid1": "",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "ACce",
+      "name": "|cffe4cfa3Рассекающий удар|r"
+    },
+    {
+      "fields": {
+        "buffid1": "Bena,Beng",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "ACen",
+      "name": "|cffe4cfa3Опутывание|r"
+    },
+    {
+      "fields": {
+        "buffid1": "BOwd",
+        "buffid2": "",
+        "buffid3": "",
+        "buffid4": ""
+      },
+      "id": "ACtn",
+      "name": "|cffe4cfa3Порождение щупальца|r"
+    }
+  ],
+  "ok": true,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "type": "ability"
+}

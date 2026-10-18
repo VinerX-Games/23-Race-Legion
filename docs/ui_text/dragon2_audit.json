@@ -1,0 +1,42 @@
+{
+  "race": "Драконий Союз (Dragon2)",
+  "scope": "Аудит расы и обоснование категорий",
+  "selection_ability": "A1MZ",
+  "selection_card": {
+    "rawcode": "A1MZ",
+    "name": "|cffe4cfa3Драконий Союз|r",
+    "tip": "|cffe4cfa3Драконий Союз|r (|cffffffffQ|r)",
+    "registry": "docs/ui_text/dragon2_selection.json",
+    "apply": "docs/ui_text/dragon2_selection_apply.json"
+  },
+  "mechanics": {
+    "start_trigger": "04_race_selection.lua:383-401 (Trig_Race_Dragon2_Actions): создаёт 5 o01D (Строитель).",
+    "restriction_trigger": "Dragons.lua:128-144 (Trig_DragonUnionStart_Actions): блокирует Гнездо черных драконов n044, мутации R0A7 (Эволюция Т2) и R0AZ (Мудрость черной стаи)."
+  },
+  "categories": {
+    "buildings": {
+      "applicable": false,
+      "reason": "Не применимо: собственных зданий у варианта Dragon2 нет. Используются здания расы Драконов (dra0, h0F9, n03I, n03Z, n041, n042, n043, h0D8), стандартизированные в категории зданий Драконов (docs/ui_text/dragon_buildings.json). Гнездо черных драконов n044 заблокировано триггером."
+    },
+    "units": {
+      "applicable": false,
+      "reason": "Не применимо: собственных юнитов у варианта Dragon2 нет. Создаются строители o01D и доступны юниты бронзовой, зелёной, красной и синей стай расы Драконов, стандартизированные в категории юнитов Драконов (docs/ui_text/dragon_units.json). Чёрные драконы n03N, n03O, n03P, n05Q недоступны из-за блокировки гнезда."
+    },
+    "heroes": {
+      "applicable": false,
+      "reason": "Не применимо: используются те же 4 героя расы Драконов (N040 Ноздорму, N047 Изера, N046 Алекстраза, N045 Малигос и их драконьи формы N049, N04B, N048, N04A), стандартизированные в категории героев Драконов (docs/ui_text/dragon_heroes.json)."
+    },
+    "abilities": {
+      "applicable": false,
+      "reason": "Не применимо: используются те же способности героев, войск и баффы расы Драконов, стандартизированные в категории способностей Драконов (docs/ui_text/dragon_hero_abils.json, docs/ui_text/dragon_unit_abils.json)."
+    },
+    "researches": {
+      "applicable": false,
+      "reason": "Не применимо: используются те же исследования расы Драконов, стандартизированные в категории исследований Драконов (docs/ui_text/dragon_research.json). Исследования чёрной стаи R0A7 и R0AZ отключены триггером."
+    },
+    "items_messages_ui": {
+      "applicable": false,
+      "reason": "Не применимо: собственные предметы (sellitems/makeitems), триггерные сообщения игроку и спец. интерфейсы отсутствуют (docs/ui_text/dragon_items_messages.json)."
+    }
+  }
+}

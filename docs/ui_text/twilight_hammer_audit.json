@@ -1,0 +1,96 @@
+{
+  "race": "Культ Сумеречного Молота (Twilight Hammer)",
+  "race_id": 20,
+  "selection_ability": "A0HX",
+  "objects_audit": {
+    "buildings": {
+      "count": 9,
+      "ids": [
+        "o00K",
+        "o00T",
+        "o00L",
+        "o00R",
+        "o00V",
+        "o00P",
+        "o00U",
+        "o00Q",
+        "h0D3"
+      ],
+      "economy_building": {
+        "id": "o00T",
+        "name": "Землянка",
+        "food_provided": 40,
+        "gold_income_per_25s": 20,
+        "verified_via": "01_core_economy.lua and unit object stats"
+      }
+    },
+    "units": {
+      "count": 13,
+      "ids": [
+        "o00J",
+        "o00M",
+        "o00N",
+        "o00S",
+        "o002",
+        "u004",
+        "n00R",
+        "n00U",
+        "n00D",
+        "n00C",
+        "o00O",
+        "n00S",
+        "u005"
+      ]
+    },
+    "heroes": {
+      "count": 3,
+      "ids": [
+        "O011",
+        "N010",
+        "N00Z"
+      ],
+      "names": {
+        "O011": "Верховный Жрец бездны (Интеллект, дальний бой)",
+        "N010": "Военачальник Культа (Сила, ближний бой)",
+        "N00Z": "Темный волшебник (Интеллект, дальний бой)"
+      }
+    },
+    "abilities": {
+      "count": 32,
+      "total_wts_updated": 437
+    },
+    "researches": {
+      "count": 18,
+      "markers_list": {
+        "R07K": "Маркер расы Культ Сумеречного Молота",
+        "R0KD": "Маркер ветви развития Культа Сумеречного Молота"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items or inventory artifacts found in war3map.w3t for Twilight Hammer."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "No race-specific floating messages or game UI strings found in war3map.wts for Twilight Hammer."
+  },
+  "buffs_audit": {
+    "custom_buffs": [
+      "B025",
+      "B026",
+      "B02C",
+      "B02D",
+      "B02K",
+      "B00A",
+      "B00B",
+      "B02B",
+      "B02G",
+      "B02E",
+      "B02L"
+    ],
+    "status": "All Twilight Hammer custom buffs standardized to match ability names and effect labels."
+  },
+  "total_wts_updates": 437,
+  "total_checks": 398
+}

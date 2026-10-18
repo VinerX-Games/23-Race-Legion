@@ -1,0 +1,112 @@
+{
+  "scope": "Ночные эльфы (Night Elf): категория 3 — Герои (3 героев)",
+  "heroes_count": 3,
+  "variants": [
+    "SD"
+  ],
+  "heroes": [
+    {
+      "id": "E00V",
+      "hotkey": "X",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27634,
+          "after": "|cffe4cfa3Хранитель рощи|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 20328,
+          "after": "|cffe4cfa3Хранитель рощи|r (|cffffffffK|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 20330,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Полубог-мистик священных рощ Калимдора, повелевающий первозданными силами природы и леса.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСила природы|cffced4da: превращает деревья в преданных духов-древней.|n- |cffa9c7deЗамедляющие корни|cffced4da: атаки опутывают врагов, снижая скорость бега и атаки.|n- |cffa9c7deАура шипов|cffced4da: окружает союзников щитом, отражающим урон ближнего боя.|n- |cffa9c7deЯрость природы|cffced4da: массовое опутывание и поражение врагов грозовыми ударами.|n|n|cffa6afb8Основная характеристика:|r |cffffffffИнтеллект|r|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 20346,
+          "after": "|cffe4cfa3Хранитель рощи|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 20348,
+          "after": "|cffe4cfa3Хранитель рощи|r"
+        }
+      ]
+    },
+    {
+      "id": "E011",
+      "hotkey": "C",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 16268,
+          "after": "|cffe4cfa3Лунная охотница|r"
+        },
+        {
+          "field": "propernames",
+          "wts_id": 3714,
+          "after": "|cffa9c7deКатрис Звёздная Песня|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 3857,
+          "after": "|cffe4cfa3Лунная охотница|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31708,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Искусный верховный следопыт Часовых, разящая врагов стрелами Элуны с дистанции.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВзрыв маны|cffced4da: обстреливает область сгустками маны, оглушая врагов.|n- |cffa9c7deЛедяные стрелы|cffced4da: атаки наносят дополнительный урон и замедляют цель.|n- |cffa9c7deАура меткости|cffced4da: увеличивает урон дальнобойных атак союзников.|n- |cffa9c7deСмертельный выстрел|cffced4da: выпускает мощную стрелу, пронзающую врагов на линии.|n|n|cffa6afb8Основная характеристика:|r |cffffffffЛовкость|r|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 3856,
+          "after": "|cffe4cfa3Лунная охотница|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 3898,
+          "after": "|cffe4cfa3Лунная охотница|r"
+        }
+      ]
+    },
+    {
+      "id": "E00W",
+      "hotkey": "Z",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27385,
+          "after": "|cffe4cfa3Друид-мастер|r"
+        },
+        {
+          "field": "propernames",
+          "wts_id": 3606,
+          "after": "|cffa9c7deВерховный друид|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 8455,
+          "after": "|cffe4cfa3Друид-мастер|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31707,
+          "after": "|cffa6afb8ГЕРОЙ:|cffced4da Верховный архидруид, в совершенстве овладевший стихией бури, скрытностью и древними звериными формами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРаздвоенная молния|cffced4da: поражает веером молний группу противников перед собой.|n- |cffa9c7deСкачок|cffced4da: мгновенно телепортируется на короткую дистанцию.|n- |cffa9c7deУскользание|cffced4da: шанс уклониться от входящих атак.|n- |cffa9c7deОблик совухи|cffced4da: превращается в грозного совуха с усиленными характеристиками.|n|n|cffa6afb8Основная характеристика:|r |cffffffffИнтеллект|r|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+        },
+        {
+          "field": "awakentip",
+          "wts_id": 27386,
+          "after": "|cffe4cfa3Друид-мастер|r"
+        },
+        {
+          "field": "revivetip",
+          "wts_id": 27387,
+          "after": "|cffe4cfa3Друид-мастер|r"
+        }
+      ]
+    }
+  ]
+}

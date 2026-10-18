@@ -1,0 +1,123 @@
+{
+  "race": "Наги (Nagi)",
+  "race_id": 25,
+  "selection_ability": "A14O",
+  "selection_marker": "R0FS",
+  "objects_audit": {
+    "buildings": {
+      "count": 10,
+      "ids": [
+        "h0JW",
+        "h0JX",
+        "h0JY",
+        "n04L",
+        "n055",
+        "nnfm",
+        "nnsa",
+        "nnsg",
+        "nntg",
+        "nntt"
+      ],
+      "economy_building": {
+        "id": "nnfm",
+        "name": "Коралловый риф",
+        "food_provided": 40,
+        "gold_income_per_25s": 30,
+        "limit": 15,
+        "verified_via": "01_core_economy.lua and unit object stats"
+      }
+    },
+    "worker": {
+      "count": 1,
+      "ids": [
+        "nmpe"
+      ]
+    },
+    "units": {
+      "count": 16,
+      "ids": [
+        "n04Z",
+        "n050",
+        "n051",
+        "n052",
+        "n053",
+        "n054",
+        "n056",
+        "n057",
+        "n079",
+        "nmyr",
+        "nnmg",
+        "nnrg",
+        "nnsw",
+        "nwgs",
+        "nsnp",
+        "nhyc"
+      ]
+    },
+    "heroes": {
+      "count": 4,
+      "ids": [
+        "H0JU",
+        "H0JV",
+        "H0OZ",
+        "N07A"
+      ],
+      "duplicate_ids": [
+        "N054"
+      ],
+      "names": {
+        "H0JU": "Владыка-страж (Сила, ближний бой)",
+        "H0JV": "Глубинная охотница (Ловкость, дальний бой)",
+        "H0OZ": "Мурлок-гигант (Сила, ближний бой)",
+        "N07A": "Мурлок-чародей (Легендарный герой, Интеллект, дальний бой)",
+        "N054": "Мурлок-чародей (дубликат/сломанный)"
+      }
+    },
+    "researches": {
+      "count": 14,
+      "ids": [
+        "R0FS",
+        "R0KZ",
+        "R0FE",
+        "R0FF",
+        "R0FD",
+        "R0FH",
+        "R0FP",
+        "R0FQ",
+        "R0FR",
+        "R0KP",
+        "Rnam",
+        "Rnat",
+        "Rnen",
+        "Rnsb",
+        "Rnsi",
+        "Rnsw"
+      ]
+    },
+    "abilities": {
+      "count": 50,
+      "total_wts_updated": 395
+    },
+    "buffs": {
+      "count": 2,
+      "ids": [
+        "B06G",
+        "B08I"
+      ]
+    }
+  },
+  "triggers_audit": {
+    "file": "80_runtime/triggers/races/Naga.lua",
+    "findings": [
+      "InitTrig_NagaStart sets tech limits at 2s (n054, n053, n052, n050, n051, n057, nnsw, nmyr, nnrg, N07A=1, H0OZ=0, H0JU=0, H0JV=1, R0FQ=0).",
+      "InitTrig_Coatl sets flight height 240 for nwgs.",
+      "InitTrig_MurlokCan, InitTrig_MurlokBeg, InitTrig_MurlocFin handle mutual exclusivity for R0FF and unlocks n053, n052, n050, n054, H0OZ, R0FQ.",
+      "InitTrig_Nagi, InitTrig_Nagi2, InitTrig_NagaFinishCode handle mutual exclusivity for R0FE and unlocks n051, n057, nnsw, nmyr, nnrg, R0KZ, H0JU.",
+      "InitTrig_VaishBuria summons tornado ntor on A16E cast for 30s.",
+      "InitTrig_VaishArrow triggers dummy frost nova A16D on A16C attack.",
+      "InitTrig_NagaPas manages passive trident abilities A136..A139 based on A13A level.",
+      "InitTrig_NagaCommonSpell grants S00E for 180s on A1LT cast in water.",
+      "No custom items or player-facing chat/screen messages found in trigger code."
+    ]
+  }
+}

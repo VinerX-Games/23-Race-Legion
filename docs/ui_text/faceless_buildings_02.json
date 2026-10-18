@@ -1,0 +1,400 @@
+{
+  "scope": "Безликие: вторая партия зданий; не вся категория",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "in_game_checked": false,
+  "strings": [
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0HZ",
+      "field": "name",
+      "wts_id": 17212,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cffd7b4f5Забытый|r",
+      "after": "|cffe4cfa3Забытый|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0HZ",
+      "field": "tip",
+      "wts_id": 20617,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "Построить |cffd7b4f5Забытый|r",
+      "after": "|cffe4cfa3Забытый|r (|cffffffffQ|r)"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0HZ",
+      "field": "ubertip",
+      "wts_id": 31847,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cff7dc87dВремя строительства:|r |cffaaf0aa60 сек.|r\n\nБазовое здание, помогающее в развитии армии безликих.Способно нанимать рабочих, строить Инком здания и добывать древесину самостоятельно.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff1|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПородить придаток|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deСущность Страха|cffced4da.|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I7",
+      "field": "name",
+      "wts_id": 25352,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cffd7b4f5Сущность Страха|r",
+      "after": "|cffe4cfa3Сущность Страха|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I7",
+      "field": "tip",
+      "wts_id": 25353,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "Построить |cffd7b4f5Сущность Страха|r",
+      "after": "|cffe4cfa3Сущность Страха|r (|cffffffffZ|r)"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I7",
+      "field": "ubertip",
+      "wts_id": 31853,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cff7dc87dВремя строительства:|r |cffaaf0aa180 сек.|r\n\nБазовое здание, помогающее в развитии армии безликих.Способно нанимать рабочих, строить Инком здания и добывать древесину самостоятельно.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff2|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПородить придаток|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|n- |cffa9c7deЗащита столицы|cffced4da: аура, ослабляющая броню ближайших противников.|n|n|cffa6afb8Улучшение:|cffced4da |cffa9c7deОбитель Кошмаров|cffced4da.|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I8",
+      "field": "name",
+      "wts_id": 25355,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cffd7b4f5Обитель Кошмаров|r",
+      "after": "|cffe4cfa3Обитель Кошмаров|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I8",
+      "field": "tip",
+      "wts_id": 25356,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "Построить |cffd7b4f5Обитель Кошмаров|r",
+      "after": "|cffe4cfa3Обитель Кошмаров|r (|cffffffffZ|r)"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0I8",
+      "field": "ubertip",
+      "wts_id": 25357,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cff7dc87dВремя строительства:|r |cffaaf0aa260 сек.|r|n|nБазовое здание, помогающее в развитии армии безликих.Способно нанимать рабочих, строить Инком здания и добывать древесину самостоятельно.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание безликих, ступень |cffffffff3|cffced4da. Принимает золото и древесину.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБезликий прислужник|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПородить придаток|cffced4da: бесплатно создаёт |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deРой саранчи|cffced4da: саранча атакует ближайших врагов и восстанавливает здоровье здания при возвращении.|n- Обменивает |cffffffff500|cffced4da древесины на |cffffffff100|cffced4da золота или |cffffffff500|cffced4da золота на |cffffffff100|cffced4da древесины.|n- |cffa9c7deОбозначить столицу|cffced4da: позволяет назначить здание столицей.|n- |cffa9c7deТорговля|cffced4da: покупка увеличивает базовый доход на |cffc8e08775|cffced4da.|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0K3",
+      "field": "name",
+      "wts_id": 1369,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cffd7b4f5Башня Смерти|r",
+      "after": "|cffe4cfa3Башня Смерти|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0K3",
+      "field": "tip",
+      "wts_id": 27799,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": " |cffd7b4f5Оборонительной Башни|r",
+      "after": "|cffe4cfa3Башня Смерти|r (|cffffffffZ|r)"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "h0K3",
+      "field": "ubertip",
+      "wts_id": 25078,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cff7dc87dВремя улучшения:|r |cffaaf0aa25 сек.|r|n\nПростое оборонительное сооружение.",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительная башня для защиты базы.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "u02E",
+      "field": "name",
+      "wts_id": 22361,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cffd7b4f5Малое порождение|r",
+      "after": "|cffe4cfa3Малое порождение|r"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "u02E",
+      "field": "tip",
+      "wts_id": 22636,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "Вырастить |cffd7b4f5Малое порождение|r",
+      "after": "|cffe4cfa3Малое порождение|r (|cffffffffW|r)"
+    },
+    {
+      "source": "map.w3x/war3map.wts",
+      "rawcode": "u02E",
+      "field": "ubertip",
+      "wts_id": 31722,
+      "race": "Безликие (Bezlikie)",
+      "category": "Здания",
+      "before": "|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.\n\n|cffffff00Приносит 30 инкома|r",
+      "after": "|cffa6afb8ЗДАНИЕ:|cffced4da Доходная постройка безликих. Увеличивает базовый доход на |cffc8e08730|cffced4da.|n|n|cffa6afb8Дополнительные функции:|cffced4da|n- |cffa9c7deПородить придаток|cffced4da: бесплатно создаёт ещё одно |cffa9c7deМалое порождение|cffced4da с учётом расового лимита построек.|n- |cffa9c7deДымка бездны|cffced4da: аура, повышающая скорость передвижения и восстановление здоровья ближайших союзников.|r"
+    }
+  ],
+  "buildings": [
+    {
+      "fields": {
+        "abillist": "A11G,A10T,A0LJ,A0LI,A0IQ,Argl",
+        "fmade": "50",
+        "hotkey": "TRIGSTR_4708",
+        "name": "TRIGSTR_17212",
+        "researches": "",
+        "sellitems": "",
+        "sellunits": "h0G8",
+        "targs1": "",
+        "targs2": "",
+        "tip": "TRIGSTR_20617",
+        "trains": "u02D",
+        "ubertip": "TRIGSTR_31847",
+        "upgrade": "h0I7",
+        "weapson": "0"
+      },
+      "id": "h0HZ",
+      "name": "|cffd7b4f5Забытый|r"
+    },
+    {
+      "fields": {
+        "abillist": "A1KB,A11G,A10T,A0LJ,A0LI,A0IQ,Argl",
+        "fmade": "100",
+        "hotkey": "TRIGSTR_11406",
+        "name": "TRIGSTR_25352",
+        "researches": "",
+        "sellitems": "",
+        "sellunits": "h0G8",
+        "targs1": "",
+        "targs2": "",
+        "tip": "TRIGSTR_25353",
+        "trains": "u02D",
+        "ubertip": "TRIGSTR_31853",
+        "upgrade": "h0I8",
+        "weapson": "0"
+      },
+      "id": "h0I7",
+      "name": "|cffd7b4f5Сущность Страха|r"
+    },
+    {
+      "fields": {
+        "abillist": "A11G,A10T,A0LJ,A0LI,A0IQ,Argl",
+        "fmade": "150",
+        "hotkey": "TRIGSTR_11418",
+        "name": "TRIGSTR_25355",
+        "researches": "",
+        "sellitems": "",
+        "sellunits": "h0G8",
+        "targs1": "",
+        "targs2": "",
+        "tip": "TRIGSTR_25356",
+        "trains": "u02D",
+        "ubertip": "TRIGSTR_25357",
+        "upgrade": "",
+        "weapson": "0"
+      },
+      "id": "h0I8",
+      "name": "|cffd7b4f5Обитель Кошмаров|r"
+    },
+    {
+      "fields": {
+        "abillist": "",
+        "fmade": "0",
+        "hotkey": "TRIGSTR_12157",
+        "name": "TRIGSTR_1369",
+        "researches": "",
+        "sellitems": "",
+        "sellunits": "",
+        "targs1": "enemies,ground,neutral,structure",
+        "targs2": "",
+        "tip": "TRIGSTR_27799",
+        "trains": "",
+        "ubertip": "TRIGSTR_25078",
+        "upgrade": "",
+        "weapson": "1"
+      },
+      "id": "h0K3",
+      "name": "|cffd7b4f5Башня Смерти|r"
+    },
+    {
+      "fields": {
+        "abillist": "A11G,A06M",
+        "fmade": "30",
+        "hotkey": "TRIGSTR_4865",
+        "name": "TRIGSTR_22361",
+        "researches": "",
+        "sellitems": "",
+        "sellunits": "",
+        "targs1": "",
+        "targs2": "",
+        "tip": "TRIGSTR_22636",
+        "trains": "",
+        "ubertip": "TRIGSTR_31722",
+        "upgrade": "",
+        "weapson": "0"
+      },
+      "id": "u02E",
+      "name": "|cffd7b4f5Малое порождение|r"
+    }
+  ],
+  "wts_consumers": [
+    {
+      "variant": "SD",
+      "rawcode": "h0HZ",
+      "field": "tip",
+      "reference": "TRIGSTR_20617"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0HZ",
+      "field": "ubertip",
+      "reference": "TRIGSTR_31847"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "u02E",
+      "field": "tip",
+      "reference": "TRIGSTR_22636"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "u02E",
+      "field": "ubertip",
+      "reference": "TRIGSTR_31722"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0I7",
+      "field": "tip",
+      "reference": "TRIGSTR_25353"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0I7",
+      "field": "ubertip",
+      "reference": "TRIGSTR_31853"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0I8",
+      "field": "tip",
+      "reference": "TRIGSTR_25356"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0I8",
+      "field": "ubertip",
+      "reference": "TRIGSTR_25357"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0K3",
+      "field": "tip",
+      "reference": "TRIGSTR_27799"
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h0K3",
+      "field": "ubertip",
+      "reference": "TRIGSTR_25078"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0HZ",
+      "field": "tip",
+      "reference": "TRIGSTR_20617"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0HZ",
+      "field": "ubertip",
+      "reference": "TRIGSTR_31847"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "u02E",
+      "field": "tip",
+      "reference": "TRIGSTR_22636"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "u02E",
+      "field": "ubertip",
+      "reference": "TRIGSTR_31722"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0I7",
+      "field": "tip",
+      "reference": "TRIGSTR_25353"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0I7",
+      "field": "ubertip",
+      "reference": "TRIGSTR_31853"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0I8",
+      "field": "tip",
+      "reference": "TRIGSTR_25356"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0I8",
+      "field": "ubertip",
+      "reference": "TRIGSTR_25357"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0K3",
+      "field": "tip",
+      "reference": "TRIGSTR_27799"
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h0K3",
+      "field": "ubertip",
+      "reference": "TRIGSTR_25078"
+    }
+  ],
+  "evidence": [
+    "h0HZ upgrade=h0I7; h0I7 upgrade=h0I8; все три trains=u02D, sellunits=h0G8",
+    "A11G unitid1=u02E; cost1=0; FaselessFarmLimit: доступность зависит от расового лимита",
+    "A0LJ/A0LI: обмен 500 древесины/золота на 100 золота/древесины",
+    "01_core_economy.lua: Trig_Moneta_C_Actions, h0G8 даёт +75 к income",
+    "_lib/54_count_dis.lua: AddCountDis использует GetUnitFoodMade; u02E fmade=30",
+    "A06M: AUau, dataa1=0.06, datab1=1.5, targs1=air,ground,friend,self,vuln,invu",
+    "A1KB: Aoar, dataa1=-0.025, targs1=air,ground,enemy,organic,neutral; только h0I7 в этой партии",
+    "h0K3: weapson=1, targs1=enemies,ground,neutral,structure; воздушных целей нет"
+  ],
+  "findings": [
+    "Старое обещание автоматической добычи древесины удалено: InitTrig_LumberTest отключает триггер; включения в секциях не найдено. RunInitializationTriggers вызывает ConditionalTriggerExecute, но не включает периодический триггер.",
+    "Не переносить исследования в карточки главных зданий: researches пуст; abillist содержит способности.",
+    "upgrades — применяемые исследования, upgrade — следующая ступень здания; не путать при составлении реестра.",
+    "Алтарь h0HY имеет встроенное описание, а не WTS-ссылку; его правка и оставшиеся формы перенесены в следующую партию."
+  ]
+}

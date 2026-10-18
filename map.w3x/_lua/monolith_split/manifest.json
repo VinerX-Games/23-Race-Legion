@@ -1,7 +1,7 @@
 {
   "source_path": "C:\\Games\\23 Race\\23-Race-Legion\\map.w3x\\war3map.lua",
   "source_sha256": "5181648a70065e3b8632a083c3946e452fc8f9f5b6538dda68f69226ad9566bb",
-  "section_count": 147,
+  "section_count": 150,
   "sections": [
     {
       "name": "prelude",
@@ -254,6 +254,38 @@
     {
       "name": "gen:_ui_60_income_tooltip",
       "file": "80_runtime/_ui/60_income_tooltip.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:_ui_61_custom_hud",
+      "file": "80_runtime/_ui/61_custom_hud.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:_ui_62_welcome",
+      "file": "80_runtime/_ui/62_welcome.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:_ui_63_race_picker",
+      "file": "80_runtime/_ui/63_race_picker.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:_ui_64_host_panel",
+      "file": "80_runtime/_ui/64_host_panel.lua",
       "category": "generated_runtime",
       "start_line": 0,
       "end_line": 0,

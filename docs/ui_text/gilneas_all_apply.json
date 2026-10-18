@@ -1,0 +1,2071 @@
+{
+  "race": "Gilneas",
+  "race_id": 24,
+  "mode": "apply",
+  "total_updates": 398,
+  "total_checks": 206,
+  "failed_checks": 0,
+  "new_wts_hash": "fef0caedd0f8945eb8c2d0d42b36397916782e73be52f2fc8f7691e615c220e3",
+  "checks_results": [
+    {
+      "check": {
+        "type": "ability",
+        "id": "A121",
+        "field": "name",
+        "expected": "|cffe4cfa3Гилнеас|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Гилнеас|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A121",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Гилнеас|r (|cffffffffA|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Гилнеас|r (|cffffffffA|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A121",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8РАСА:|cffced4da Королевство людей, поражённое проклятием воргенов, сочетающее дисциплину армии и свирепую мощь диких зверей.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor (Яхве)|r|n|cffa6afb8Куратор расы:|r |cffa9c7deNiCAmCHiK|r|n|cffa6afb8Сложность:|r |cffffffff●|cffa6afb8○○○○|r|n|cffa6afb8Период:|r |cffa9c7de«Cataclysm — Battle for Azeroth»|r|n|n|cffced4daГилнеас был одним из самых могущественных человеческих королевств. Его правитель, Генн Седогрив, долгое время держал народ в изоляции за великой стеной. Однако древнее проклятие воргенов проникло в королевство, подвергнув жителей необратимой трансформации. Научившись контролировать звериную сущность, воины Гилнеаса обрушивают на врагов сокрушительные когти, ярость волчьей крови и смертоносную меткость стрелков.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8РАСА:|cffced4da Королевство людей, поражённое проклятием воргенов, сочетающее дисциплину а"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0FX",
+        "field": "name1",
+        "expected": "|cffe4cfa3Гилнеас|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Гилнеас|r"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0FX",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Гилнеас|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Гилнеас|r"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0FX",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к королевству Гилнеас.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к королевству Гилнеас.|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IJ",
+        "field": "name",
+        "expected": "|cffe4cfa3Ратуша|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Ратуша|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IJ",
+        "field": "tip",
+        "expected": "|cffe4cfa3Ратуша|r (|cffffffffQ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Ратуша|r (|cffffffffQ|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IJ",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Гилнеаса первой ступени. Обеспечивает запас пищи и добычу ресурсов.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПостройщик|cffced4da: рабочий строитель и добытчик ресурсов.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deФорт|cffced4da: открывает доступ к передовым сооружениям и технологиям.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Гилнеаса первой ступени. Обеспечивает запас пищи и добычу"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IK",
+        "field": "name",
+        "expected": "|cffe4cfa3Форт|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Форт|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IK",
+        "field": "tip",
+        "expected": "|cffe4cfa3Форт|r (|cffffffffZ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Форт|r (|cffffffffZ|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IK",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Гилнеаса второй ступени. Существенно увеличивает запас пищи.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПостройщик|cffced4da: рабочий строитель и добытчик ресурсов.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deЗамок|cffced4da: открывает доступ к высшим технологиям королевства.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Гилнеаса второй ступени. Существенно увеличивает запас пи"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IL",
+        "field": "name",
+        "expected": "|cffe4cfa3Замок|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Замок|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IL",
+        "field": "tip",
+        "expected": "|cffe4cfa3Замок|r (|cffffffffZ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Замок|r (|cffffffffZ|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IL",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Гилнеаса третьей ступени. Обеспечивает максимальный запас пищи.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПостройщик|cffced4da: рабочий строитель и добытчик ресурсов.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Гилнеаса третьей ступени. Обеспечивает максимальный запас"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IM",
+        "field": "name",
+        "expected": "|cffe4cfa3Ферма|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Ферма|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IM",
+        "field": "tip",
+        "expected": "|cffe4cfa3Ферма|r (|cffffffffA|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Ферма|r (|cffffffffA|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IM",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию королевства продовольствием.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию королевства продовольствием.|n|nДаёт |cffffffff40|cff"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IN",
+        "field": "name",
+        "expected": "|cffe4cfa3Алтарь предков|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Алтарь предков|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IN",
+        "field": "tip",
+        "expected": "|cffe4cfa3Алтарь предков|r (|cffffffffS|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Алтарь предков|r (|cffffffffS|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IN",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Позволяет призывать и воскрешать павших героев Гилнеаса.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВерховный охотник|cffced4da: мастер охоты ближнего боя.|n- |cffa9c7deЛорд друид|cffced4da: повелитель природных стихий и ауры маны.|n- |cffa9c7deГенерал Гилнеаса|cffced4da: вдохновляющий полководец с аурой урона.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Позволяет призывать и воскрешать павших героев Гилнеаса.|n|n|cffa6afb8Ге"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IO",
+        "field": "name",
+        "expected": "|cffe4cfa3Казармы|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Казармы|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IO",
+        "field": "tip",
+        "expected": "|cffe4cfa3Казармы|r (|cffffffffW|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Казармы|r (|cffffffffW|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IO",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает базовые боевые силы и осадную технику.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПехотинец|cffced4da: универсальный боец ближнего боя со щитом.|n- |cffa9c7deСтрелок|cffced4da: меткий стрелок дальнего боя с мушкетом.|n- |cffa9c7deКатапульта|cffced4da: дальнобойное осадное орудие.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deДлинноствольные мушкеты|cffced4da|n- |cffa9c7deЗащита|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает базовые боевые силы и осадную технику.|n|n|cffa6afb8Обуча"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IP",
+        "field": "name",
+        "expected": "|cffe4cfa3Лесопилка|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Лесопилка|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IP",
+        "field": "tip",
+        "expected": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IP",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Служит складом древесины и центром улучшения инструментов лесозаготовок.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУлучшенные инструменты|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Служит складом древесины и центром улучшения инструментов лесозаготовок."
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IQ",
+        "field": "name",
+        "expected": "|cffe4cfa3Кузница|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Кузница|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IQ",
+        "field": "tip",
+        "expected": "|cffe4cfa3Кузница|r (|cffffffffR|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Кузница|r (|cffffffffR|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IQ",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Центр усовершенствования вооружения, доспехов и звериных способностей воргенов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОружие ближнего боя|cffced4da|n- |cffa9c7deКованая броня|cffced4da|n- |cffa9c7deОружие дальнего боя|cffced4da|n- |cffa9c7deКожаная броня|cffced4da|n- |cffa9c7deНутро зверя|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Центр усовершенствования вооружения, доспехов и звериных способностей во"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IR",
+        "field": "name",
+        "expected": "|cffe4cfa3Военная академия|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Военная академия|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IR",
+        "field": "tip",
+        "expected": "|cffe4cfa3Военная академия|r (|cffffffffD|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Военная академия|r (|cffffffffD|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IR",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает специализированных бойцов и боевых магов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТопорометатель|cffced4da: стрелок поддержки с оглушающим броском.|n- |cffa9c7deРыцарь|cffced4da: тяжёлый всадник ближнего боя.|n- |cffa9c7deВорген маг|cffced4da: боевой заклинатель с рассеиванием и тёмной стаей.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deДрессировка Топорометателей|cffced4da|n- |cffa9c7deВолчья кровь|cffced4da|n- |cffa9c7deДрессировка|cffced4da|n- |cffa9c7deПознания магии|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает специализированных бойцов и боевых магов.|n|n|cffa6afb8Об"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IS",
+        "field": "name",
+        "expected": "|cffe4cfa3Храм друидов|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Храм друидов|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IS",
+        "field": "tip",
+        "expected": "|cffe4cfa3Храм друидов|r (|cffffffffF|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Храм друидов|r (|cffffffffF|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IS",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Место единения с природой и культивации первобытной силы воргенов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da: свирепый штурмовик ближнего боя.|n- |cffa9c7deВорген друид|cffced4da: целитель и заклинатель поддержки с боевым воем.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗвериные рефлексы|cffced4da|n- |cffa9c7deВолчьи конечности|cffced4da|n- |cffa9c7deСлияние с природой|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Место единения с природой и культивации первобытной силы воргенов.|n|n|c"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0JT",
+        "field": "name",
+        "expected": "|cffe4cfa3Сторожевая башня|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Сторожевая башня|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0JT",
+        "field": "tip",
+        "expected": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0JT",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение. Обнаруживает невидимых врагов.|n|nАтакует наземные и воздушные цели.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение. Обнаруживает невидимых врагов.|n|nАтакует наз"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IT",
+        "field": "name",
+        "expected": "|cffe4cfa3Постройщик|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Постройщик|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IT",
+        "field": "tip",
+        "expected": "|cffe4cfa3Постройщик|r (|cffffffffQ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Постройщик|r (|cffffffffQ|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IT",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий Гилнеаса. Добывает золото и древесину, возводит и ремонтирует здания.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deНебольшой скачок|cffced4da: мгновенно перемещается на короткую дистанцию.|n- |cffa9c7deСбор ресурсов|cffced4da: добывает золото в рудниках и рубит деревья.|n- |cffa9c7deРемонт|cffced4da: восстанавливает прочность зданий.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий Гилнеаса. Добывает золото и древесину, возводит и ремонтир"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IU",
+        "field": "name",
+        "expected": "|cffe4cfa3Пехотинец|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Пехотинец|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IU",
+        "field": "tip",
+        "expected": "|cffe4cfa3Пехотинец|r (|cffffffffQ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Пехотинец|r (|cffffffffQ|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IU",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЮНИТ:|cffced4da Базовый пехотинец ближнего боя в форме волка.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗащита|cffced4da: уменьшает получаемый урон от стрелков и отражает пронзающие атаки.|n- |cffa9c7deНутро зверя|cffced4da: пробивает среднюю и тяжёлую броню цели.|n- |cffa9c7deКровотечение|cffced4da: периодический урон после атаки.|n|nАтакует наземные цели.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЮНИТ:|cffced4da Базовый пехотинец ближнего боя в форме волка.|n|n|cffa6afb8Способности:|cf"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IV",
+        "field": "name",
+        "expected": "|cffe4cfa3Стрелок|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Стрелок|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IV",
+        "field": "tip",
+        "expected": "|cffe4cfa3Стрелок|r (|cffffffffW|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Стрелок|r (|cffffffffW|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IV",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЮНИТ:|cffced4da Меткий стрелок дальнего боя, вооружённый длинноствольным мушкетом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deДлинноствольные мушкеты|cffced4da: увеличивает дальность стрельбы.|n- |cffa9c7deНутро зверя|cffced4da: пробивает броню цели.|n- |cffa9c7deКровотечение|cffced4da: периодический урон после атаки.|n|nАтакует наземные и воздушные цели.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЮНИТ:|cffced4da Меткий стрелок дальнего боя, вооружённый длинноствольным мушкетом.|n|n|cff"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IW",
+        "field": "name",
+        "expected": "|cffe4cfa3Рыцарь|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Рыцарь|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IW",
+        "field": "tip",
+        "expected": "|cffe4cfa3Рыцарь|r (|cffffffffW|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Рыцарь|r (|cffffffffW|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IW",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый бронированный кавалерист Гилнеаса.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deНутро зверя|cffced4da: пробивает среднюю и тяжёлую броню цели.|n- |cffa9c7deКровотечение|cffced4da: периодический урон после атаки.|n|nАтакует наземные цели.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый бронированный кавалерист Гилнеаса.|n|n|cffa6afb8Способности:|cffce"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IX",
+        "field": "name",
+        "expected": "|cffe4cfa3Ворген друид|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Ворген друид|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IX",
+        "field": "tip",
+        "expected": "|cffe4cfa3Ворген друид|r (|cffffffffQ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Ворген друид|r (|cffffffffQ|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IX",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЮНИТ:|cffced4da Целитель и маг поддержки, черпающий силы из дикой природы.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЭссенция здоровья|cffced4da: восстанавливает здоровье союзникам рядом.|n- |cffa9c7deВой|cffced4da: повышает урон союзных войск на |cffffffff25%|cffced4da.|n- |cffa9c7deНутро зверя|cffced4da: пробивает броню цели.|n- |cffa9c7deКровотечение|cffced4da: периодический урон после атаки.|n|nАтакует наземные цели.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЮНИТ:|cffced4da Целитель и маг поддержки, черпающий силы из дикой природы.|n|n|cffa6afb8Сп"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IY",
+        "field": "name",
+        "expected": "|cffe4cfa3Пехотинец (человек)|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Пехотинец (человек)|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IY",
+        "field": "tip",
+        "expected": "|cffe4cfa3Пехотинец (человек)|r (|cffffffffQ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Пехотинец (человек)|r (|cffffffffQ|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IY",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЮНИТ:|cffced4da Человеческий пехотинец Гилнеаса со щитом и мечом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗащита|cffced4da: уменьшает получаемый урон от стрелков и отражает пронзающие атаки.|n|nАтакует наземные цели.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЮНИТ:|cffced4da Человеческий пехотинец Гилнеаса со щитом и мечом.|n|n|cffa6afb8Способности"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IZ",
+        "field": "name",
+        "expected": "|cffe4cfa3Рыцарь (человек)|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Рыцарь (человек)|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IZ",
+        "field": "tip",
+        "expected": "|cffe4cfa3Рыцарь (человек)|r (|cffffffffW|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Рыцарь (человек)|r (|cffffffffW|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0IZ",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЮНИТ:|cffced4da Человеческий кавалерист в тяжёлых доспехах.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМастерство|cffced4da: шанс нанести критический урон.|n- |cffa9c7deУкрепленные тяжелые доспехи|cffced4da: снижает получаемый физический урон.|n|nАтакует наземные цели.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЮНИТ:|cffced4da Человеческий кавалерист в тяжёлых доспехах.|n|n|cffa6afb8Способности:|cffc"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0J0",
+        "field": "name",
+        "expected": "|cffe4cfa3Ворген маг|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Ворген маг|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0J0",
+        "field": "tip",
+        "expected": "|cffe4cfa3Ворген маг|r (|cffffffffQ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Ворген маг|r (|cffffffffQ|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0J0",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЮНИТ:|cffced4da Боевой заклинатель, использующий тёмную магию и первобытные усиления.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРассеивание чар|cffced4da: снимает положительные заклинания с врагов и наносит урон призванным существам.|n- |cffa9c7deДух зверя|cffced4da: увеличивает скорость атаки и передвижения союзника.|n- |cffa9c7deТемная стая|cffced4da: выпускает стаю нетопырей, поражающую врагов на линии.|n- |cffa9c7deНутро зверя|cffced4da: пробивает броню цели.|n- |cffa9c7deКровотечение|cffced4da: периодический урон после атаки.|n|nАтакует наземные и воздушные цели.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЮНИТ:|cffced4da Боевой заклинатель, использующий тёмную магию и первобытные усиления.|n|n|"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0J1",
+        "field": "name",
+        "expected": "|cffe4cfa3Полудикий ворген|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Полудикий ворген|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0J1",
+        "field": "tip",
+        "expected": "|cffe4cfa3Полудикий ворген|r (|cffffffffW|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Полудикий ворген|r (|cffffffffW|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0J1",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЮНИТ:|cffced4da Свирепый боец передовой линии с острыми когтями.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗвериные рефлексы|cffced4da: шанс уклониться от вражеской атаки и нанести критический удар.|n- |cffa9c7deНутро зверя|cffced4da: пробивает среднюю и тяжёлую броню цели.|n- |cffa9c7deКровотечение|cffced4da: периодический урон после атаки.|n|nАтакует наземные цели.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЮНИТ:|cffced4da Свирепый боец передовой линии с острыми когтями.|n|n|cffa6afb8Способности:"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0NA",
+        "field": "name",
+        "expected": "|cffe4cfa3Топорометатель|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Топорометатель|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0NA",
+        "field": "tip",
+        "expected": "|cffe4cfa3Топорометатель|r (|cffffffffE|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Топорометатель|r (|cffffffffE|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "h0NA",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЮНИТ:|cffced4da Опытный метатель топоров, поражающий врагов на средней дистанции.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМетнуть топор|cffced4da: бросает топор, нанося урон и оглушая цель.|n- |cffa9c7deЯростный бросок|cffced4da: шанс нанести критический урон при атаке.|n- |cffa9c7deНутро зверя|cffced4da: пробивает броню цели.|n- |cffa9c7deКровотечение|cffced4da: периодический урон после атаки.|n|nАтакует наземные и воздушные цели.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЮНИТ:|cffced4da Опытный метатель топоров, поражающий врагов на средней дистанции.|n|n|cffa"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "o02T",
+        "field": "name",
+        "expected": "|cffe4cfa3Катапульта|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Катапульта|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "o02T",
+        "field": "tip",
+        "expected": "|cffe4cfa3Катапульта|r (|cffffffffE|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Катапульта|r (|cffffffffE|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "o02T",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлое осадное орудие дальнего боя. Наносит осадный урон по площади.|n|nАтакует наземные цели.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлое осадное орудие дальнего боя. Наносит осадный урон по площади.|n|nА"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J2",
+        "field": "name",
+        "expected": "|cffe4cfa3Верховный охотник|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Верховный охотник|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J2",
+        "field": "propernames",
+        "expected": "|cffe4cfa3Бузан Охотник|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Бузан Охотник|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J2",
+        "field": "tip",
+        "expected": "|cffe4cfa3Верховный охотник|r (|cffffffffE|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Верховный охотник|r (|cffffffffE|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J2",
+        "field": "awakentip",
+        "expected": "|cffe4cfa3Верховный охотник|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Верховный охотник|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J2",
+        "field": "revivetip",
+        "expected": "|cffe4cfa3Верховный охотник|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Верховный охотник|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J2",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Могучий вожак стаи и непревзойдённый следопыт. Специализируется на подавлении одиночных целей и сокрушительных ударах.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКопье охотника|cffced4da: оглушает врага и наносит урон.|n- |cffa9c7deСокрушающий удар|cffced4da: наносит урон по земле и замедляет противников.|n- |cffa9c7deСлабое место|cffced4da: пассивно наносит многократный критический урон.|n- |cffa9c7deДух древнего волка|cffced4da: призывает на помощь духов древних волков.|n|nАтакует наземные цели.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ГЕРОЙ:|cffced4da Могучий вожак стаи и непревзойдённый следопыт. Специализируется на подавл"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J6",
+        "field": "name",
+        "expected": "|cffe4cfa3Лорд друид|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Лорд друид|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J6",
+        "field": "propernames",
+        "expected": "|cffe4cfa3Друид|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Друид|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J6",
+        "field": "tip",
+        "expected": "|cffe4cfa3Лорд друид|r (|cffffffffW|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Лорд друид|r (|cffffffffW|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J6",
+        "field": "awakentip",
+        "expected": "|cffe4cfa3Лорд друид|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Лорд друид|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J6",
+        "field": "revivetip",
+        "expected": "|cffe4cfa3Лорд друид|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Лорд друид|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J6",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Мудрый повелитель сил природы, подчинивший звериную сущность. Обеспечивает союзников маной и сокрушает врагов молниями.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЦепная молния|cffced4da: поражает молнией несколько вражеских целей.|n- |cffa9c7deБлагословение духов|cffced4da: аура, ускоряющая восстановление маны союзников.|n- |cffa9c7deЩит маны|cffced4da: поглощает входящий урон за счёт маны.|n- |cffa9c7deЗов Духов|cffced4da: пассивно ускоряет регенерацию здоровья и маны героя.|n|nАтакует наземные цели.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ГЕРОЙ:|cffced4da Мудрый повелитель сил природы, подчинивший звериную сущность. Обеспечивае"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J7",
+        "field": "name",
+        "expected": "|cffe4cfa3Генерал Гилнеаса|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Генерал Гилнеаса|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J7",
+        "field": "propernames",
+        "expected": "|cffe4cfa3Генерал|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Генерал|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J7",
+        "field": "tip",
+        "expected": "|cffe4cfa3Генерал Гилнеаса|r (|cffffffffQ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Генерал Гилнеаса|r (|cffffffffQ|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J7",
+        "field": "awakentip",
+        "expected": "|cffe4cfa3Генерал Гилнеаса|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Генерал Гилнеаса|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J7",
+        "field": "revivetip",
+        "expected": "|cffe4cfa3Генерал Гилнеаса|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Генерал Гилнеаса|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J7",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Храбрый военачальник королевства. Вдохновляет армию аурой урона, сокрушает ряды врагов и принимает несокрушимый облик.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВолчьи рефлексы|cffced4da: шанс уклонения и нанесения критического урона.|n- |cffa9c7deВолна силы|cffced4da: выпускает сокрушительную волну энергии.|n- |cffa9c7deАура командира|cffced4da: увеличивает атаку союзных войск вокруг.|n- |cffa9c7deАватара зверя|cffced4da: дарует бонус к броне, здоровью, урону и иммунитет к магии.|n|nАтакует наземные цели.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ГЕРОЙ:|cffced4da Храбрый военачальник королевства. Вдохновляет армию аурой урона, сокрушае"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J8",
+        "field": "name",
+        "expected": "|cffe4cfa3Полубог|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Полубог|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J8",
+        "field": "propernames",
+        "expected": "|cffe4cfa3Голдринн|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Голдринн|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J8",
+        "field": "tip",
+        "expected": "|cffe4cfa3Полубог|r (|cffffffffC|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Полубог|r (|cffffffffC|r)"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J8",
+        "field": "awakentip",
+        "expected": "|cffe4cfa3Полубог|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Полубог|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J8",
+        "field": "revivetip",
+        "expected": "|cffe4cfa3Полубог|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Полубог|r"
+    },
+    {
+      "check": {
+        "type": "unit",
+        "id": "H0J8",
+        "field": "ubertip",
+        "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Легендарный полубог-волк древности. Обладает сокрушительными ударами по площади, вампиризмом и боевым ревом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСокрушение|cffced4da: наносит урон по области при атаке.|n- |cffa9c7deПоглощение урона|cffced4da: снижает урон врагов и поглощает входящие удары.|n- |cffa9c7deВампирическая аура|cffced4da: союзники ближнего боя восстанавливают здоровье от нанесённого урона.|n- |cffa9c7deЗов Полубога|cffced4da: издаёт боевой рёв, временно усиливающий урон союзников.|n|nАтакует наземные цели.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ГЕРОЙ:|cffced4da Легендарный полубог-волк древности. Обладает сокрушительными ударами по п"
+    },
+    {
+      "check": {
+        "type": "buff",
+        "id": "B06A",
+        "field": "bufftip",
+        "expected": "|cffe4cfa3Кровотечение|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Кровотечение|r"
+    },
+    {
+      "check": {
+        "type": "buff",
+        "id": "B06A",
+        "field": "buffubertip",
+        "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Этот юнит ранен когтями воргена и получает периодический урон.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЭФФЕКТ:|cffced4da Этот юнит ранен когтями воргена и получает периодический урон.|r"
+    },
+    {
+      "check": {
+        "type": "buff",
+        "id": "B06B",
+        "field": "bufftip",
+        "expected": "|cffe4cfa3Кровотечение|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Кровотечение|r"
+    },
+    {
+      "check": {
+        "type": "buff",
+        "id": "B06B",
+        "field": "buffubertip",
+        "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Этот юнит ранен когтями воргена и получает периодический урон.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЭФФЕКТ:|cffced4da Этот юнит ранен когтями воргена и получает периодический урон.|r"
+    },
+    {
+      "check": {
+        "type": "buff",
+        "id": "B06C",
+        "field": "bufftip",
+        "expected": "|cffe4cfa3Зов Духов|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Зов Духов|r"
+    },
+    {
+      "check": {
+        "type": "buff",
+        "id": "B06C",
+        "field": "buffubertip",
+        "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость восстановления здоровья и маны этого героя увеличена.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЭФФЕКТ:|cffced4da Скорость восстановления здоровья и маны этого героя увеличена.|r"
+    },
+    {
+      "check": {
+        "type": "buff",
+        "id": "B06D",
+        "field": "bufftip",
+        "expected": "|cffe4cfa3Зов Полубога|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Зов Полубога|r"
+    },
+    {
+      "check": {
+        "type": "buff",
+        "id": "B06D",
+        "field": "buffubertip",
+        "expected": "|cffa6afb8ЭФФЕКТ:|cffced4da Боевой рёв Полубога увеличивает урон от атак этого воина.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ЭФФЕКТ:|cffced4da Боевой рёв Полубога увеличивает урон от атак этого воина.|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11I",
+        "field": "name",
+        "expected": "|cffe4cfa3Копье охотника|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Копье охотника|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11I",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Копье охотника — уровень 1|r (|cffffffffQ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Копье охотника — уровень 1|r (|cffffffffQ|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11H",
+        "field": "name",
+        "expected": "|cffe4cfa3Сокрушающий удар|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Сокрушающий удар|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11H",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Сокрушающий удар — уровень 1|r (|cffffffffW|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Сокрушающий удар — уровень 1|r (|cffffffffW|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11J",
+        "field": "name",
+        "expected": "|cffe4cfa3Слабое место|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Слабое место|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11J",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Слабое место — уровень 1|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Слабое место — уровень 1|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11K",
+        "field": "name",
+        "expected": "|cffe4cfa3Дух древнего волка|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Дух древнего волка|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11K",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Дух древнего волка — уровень 1|r (|cffffffffR|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Дух древнего волка — уровень 1|r (|cffffffffR|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11K",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff1|cffced4da духа древнего волка на помощь герою. Время действия: |cffffffff60|cffced4da сек.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff1|cffced4da духа древнего волка на помощь герою"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11L",
+        "field": "name",
+        "expected": "|cffe4cfa3Цепная молния|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Цепная молния|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11L",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Цепная молния — уровень 1|r (|cffffffffQ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Цепная молния — уровень 1|r (|cffffffffQ|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11N",
+        "field": "name",
+        "expected": "|cffe4cfa3Благословение духов|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Благословение духов|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11N",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Благословение духов — уровень 1|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Благословение духов — уровень 1|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11M",
+        "field": "name",
+        "expected": "|cffe4cfa3Щит маны|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Щит маны|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11M",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Щит маны — уровень 1|r (|cffffffffW|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Щит маны — уровень 1|r (|cffffffffW|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11O",
+        "field": "name",
+        "expected": "|cffe4cfa3Зов Духов|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Зов Духов|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11O",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Зов Духов — уровень 1|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Зов Духов — уровень 1|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11O",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость регенерации здоровья и маны героя на |cffc8e0875|cffced4da ед./сек.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость регенерации здоровья и маны героя на |cffc8e08"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11Q",
+        "field": "name",
+        "expected": "|cffe4cfa3Волчьи рефлексы|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Волчьи рефлексы|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11Q",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Волчьи рефлексы — уровень 1|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Волчьи рефлексы — уровень 1|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11Q",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует |cffffffff5%|cffced4da шанс уклониться от атаки и |cffffffff10%|cffced4da шанс нанести |cffffffff1.5|cffced4da-кратный критический урон.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует |cffffffff5%|cffced4da шанс уклониться от атаки и |cffffffff"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11P",
+        "field": "name",
+        "expected": "|cffe4cfa3Волна силы|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Волна силы|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11P",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Волна силы — уровень 1|r (|cffffffffQ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Волна силы — уровень 1|r (|cffffffffQ|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11P",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну энергии, наносящую |cffffffff100|cffced4da ед. урона противникам на пути.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну энергии, наносящую |cffffffff100|cffced4da ед. урон"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11R",
+        "field": "name",
+        "expected": "|cffe4cfa3Аура командира|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Аура командира|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11R",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Аура командира — уровень 1|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Аура командира — уровень 1|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11R",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзных войск рядом на |cffc8e0877%|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзных войск рядом на |cffc8e0877%|cffced4da.|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11S",
+        "field": "name",
+        "expected": "|cffe4cfa3Аватара зверя|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Аватара зверя|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11S",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Аватара зверя — уровень 1|r (|cffffffffR|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Аватара зверя — уровень 1|r (|cffffffffR|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11S",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует генералу +|cffc8e0875|cffced4da к броне, +|cffc8e087500|cffced4da к здоровью, +|cffc8e08720|cffced4da к урону и невосприимчивость к магии на |cffffffff60|cffced4da сек.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует генералу +|cffc8e0875|cffced4da к броне, +|cffc8e087500|cffc"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11Z",
+        "field": "name",
+        "expected": "|cffe4cfa3Сокрушение|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Сокрушение|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11Z",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Сокрушение — уровень 1|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Сокрушение — уровень 1|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11Z",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff17%|cffced4da атака наносит |cffffffff40|cffced4da ед. урона врагам поблизости.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff17%|cffced4da атака наносит |cffffffff40|c"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11U",
+        "field": "name",
+        "expected": "|cffe4cfa3Поглощение урона|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Поглощение урона|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11U",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Поглощение урона — уровень 1|r (|cffffffffW|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Поглощение урона — уровень 1|r (|cffffffffW|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11T",
+        "field": "name",
+        "expected": "|cffe4cfa3Вампирическая аура|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Вампирическая аура|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11T",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Вампирическая аура — уровень 1|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Вампирическая аура — уровень 1|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11T",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Союзные войска ближнего боя рядом восстанавливают здоровье в объёме |cffc8e08720%|cffced4da от наносимого урона.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Союзные войска ближнего боя рядом восстанавливают здоровье в объёме"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A120",
+        "field": "name",
+        "expected": "|cffe4cfa3Зов Полубога|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Зов Полубога|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A120",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Зов Полубога — уровень 1|r (|cffffffffR|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Зов Полубога — уровень 1|r (|cffffffffR|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11A",
+        "field": "name",
+        "expected": "|cffe4cfa3Кровотечение|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Кровотечение|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11A",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Кровотечение|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Кровотечение|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11A",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ранит цель, нанося |cffffffff5|cffced4da ед. урона в секунду в течение |cffffffff5|cffced4da сек. Эффект не суммируется.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ранит цель, нанося |cffffffff5|cffced4da ед. урона в секунду в тече"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11B",
+        "field": "name",
+        "expected": "|cffe4cfa3Дух зверя|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Дух зверя|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11B",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Дух зверя|r (|cffffffffW|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Дух зверя|r (|cffffffffW|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11C",
+        "field": "name",
+        "expected": "|cffe4cfa3Звериные рефлексы|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Звериные рефлексы|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11C",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Звериные рефлексы|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Звериные рефлексы|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11C",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует |cffffffff5%|cffced4da шанс уклониться от вражеской атаки и |cffffffff6%|cffced4da шанс нанести |cffffffff1.5|cffced4da-кратный критический урон.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует |cffffffff5%|cffced4da шанс уклониться от вражеской атаки и "
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11D",
+        "field": "name",
+        "expected": "|cffe4cfa3Вой|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Вой|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11D",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Вой|r (|cffffffffW|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Вой|r (|cffffffffW|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11E",
+        "field": "name",
+        "expected": "|cffe4cfa3Эссенция здоровья|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Эссенция здоровья|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A11E",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Эссенция здоровья|r (|cffffffffQ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Эссенция здоровья|r (|cffffffffQ|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A1F0",
+        "field": "name",
+        "expected": "|cffe4cfa3Яростный бросок|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Яростный бросок|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A1F0",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Яростный бросок|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Яростный бросок|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A1F1",
+        "field": "name",
+        "expected": "|cffe4cfa3Метнуть топор|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Метнуть топор|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A1F1",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Метнуть топор|r (|cffffffffQ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Метнуть топор|r (|cffffffffQ|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A1F1",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор во врага, нанося |cffffffff75|cffced4da ед. урона и оглушая цель на |cffffffff2|cffced4da сек.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор во врага, нанося |cffffffff75|cffced4da ед. урона и о"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A0PE",
+        "field": "name",
+        "expected": "|cffe4cfa3Темная стая|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Темная стая|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A0PE",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Темная стая|r (|cffffffffE|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Темная стая|r (|cffffffffE|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "A0PE",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает стаю нетопырей, наносящую до |cffffffff90|cffced4da ед. урона наземным врагам на прямой линии (максимум |cffffffff400|cffced4da ед.).|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает стаю нетопырей, наносящую до |cffffffff90|cffced4da ед. у"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "Adis",
+        "field": "name",
+        "expected": "|cffe4cfa3Рассеивание чар|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Рассеивание чар|r"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "Adis",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Рассеивание чар|r (|cffffffffQ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Рассеивание чар|r (|cffffffffQ|r)"
+    },
+    {
+      "check": {
+        "type": "ability",
+        "id": "Adis",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает положительные эффекты с врагов в выбранной области и наносит |cffffffff200|cffced4da ед. урона призванным существам.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает положительные эффекты с врагов в выбранной области и наноси"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EY",
+        "field": "name1",
+        "expected": "|cffe4cfa3Улучшенные инструменты — уровень 1|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Улучшенные инструменты — уровень 1|r"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EY",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Улучшенные инструменты — уровень 1|r (|cffffffffE|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Улучшенные инструменты — уровень 1|r (|cffffffffE|r)"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EY",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой древесины рабочими на |cffc8e0878|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПостройщик|cffced4da.|n|nУровень исследования: |cffffffff1/4|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой древесины рабочими на |cffc8e08"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EM",
+        "field": "name1",
+        "expected": "|cffe4cfa3Железные мечи|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Железные мечи|r"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EM",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Железные мечи — уровень 1|r (|cffffffffQ|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Железные мечи — уровень 1|r (|cffffffffQ|r)"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EM",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон в ближнем бою пехотинцев, рыцарей, друидов и полудиких воргенов на |cffc8e0871|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|n|nУровень исследования: |cffffffff1/6|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон в ближнем бою пехотинцев, рыцарей, друидов и полудик"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EN",
+        "field": "name1",
+        "expected": "|cffe4cfa3Железная броня|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Железная броня|r"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EN",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Железная броня — уровень 1|r (|cffffffffA|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Железная броня — уровень 1|r (|cffffffffA|r)"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EN",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту пехотинцев, рыцарей, друидов и полудиких воргенов на |cffc8e0871.5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|n|nУровень исследования: |cffffffff1/6|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту пехотинцев, рыцарей, друидов и полудиких ворген"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EO",
+        "field": "name1",
+        "expected": "|cffe4cfa3Черный порох|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Черный порох|r"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EO",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Черный порох — уровень 1|r (|cffffffffW|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Черный порох — уровень 1|r (|cffffffffW|r)"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EO",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков, топорометателей, магов и катапульт на |cffc8e0871|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deТопорометатель|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|nУровень исследования: |cffffffff1/6|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков, топорометателей, магов и катапульт на |cff"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EP",
+        "field": "name1",
+        "expected": "|cffe4cfa3Накидки из клепаной кожи|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Накидки из клепаной кожи|r"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EP",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Накидки из клепаной кожи — уровень 1|r (|cffffffffS|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Накидки из клепаной кожи — уровень 1|r (|cffffffffS|r)"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EP",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту стрелков, топорометателей, магов и катапульт на |cffc8e0871.5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deТопорометатель|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deКатапульта|cffced4da.|n|nУровень исследования: |cffffffff1/6|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает защиту стрелков, топорометателей, магов и катапульт на"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EQ",
+        "field": "name1",
+        "expected": "|cffe4cfa3Нутро зверя — уровень 1|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Нутро зверя — уровень 1|r"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EQ",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Нутро зверя — уровень 1|r (|cffffffffD|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Нутро зверя — уровень 1|r (|cffffffffD|r)"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EQ",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет воинам воргенов пробивать среднюю броню цели на |cffc8e08715%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войскам воргенов.|n|nУровень исследования: |cffffffff1/3|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет воинам воргенов пробивать среднюю броню цели на |cffc8e0"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0IP",
+        "field": "name1",
+        "expected": "|cffe4cfa3Дрессировка Топорометателей|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Дрессировка Топорометателей|r"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0IP",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Дрессировка Топорометателей|r (|cffffffffA|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Дрессировка Топорометателей|r (|cffffffffA|r)"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0IP",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья топорометателей на |cffc8e087100|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТопорометатель|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья топорометателей на |cffc8e087100|cffced"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0F6",
+        "field": "name1",
+        "expected": "|cffe4cfa3Волчья кровь|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Волчья кровь|r"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0F6",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Волчья кровь|r (|cffffffffA|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Волчья кровь|r (|cffffffffA|r)"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0F6",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обостряет рефлексы воргенов, увеличивая скорость перемещения на |cffc8e08735|cffced4da ед. и скорость атаки на |cffc8e08710%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехотинец|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deРыцарь|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da|n- |cffa9c7deТопорометатель|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обостряет рефлексы воргенов, увеличивая скорость перемещения на |c"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0F5",
+        "field": "name1",
+        "expected": "|cffe4cfa3Дрессировка рыцарей|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Дрессировка рыцарей|r"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0F5",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Дрессировка рыцарей|r (|cffffffffS|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Дрессировка рыцарей|r (|cffffffffS|r)"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0F5",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья рыцарей на |cffc8e087100|cffced4da ед. и скорость атаки на |cffc8e08720%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРыцарь|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья рыцарей на |cffc8e087100|cffced4da ед. "
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EZ",
+        "field": "name1",
+        "expected": "|cffe4cfa3Познания магии — посвящение|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Познания магии — посвящение|r"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EZ",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Познания магии — посвящение|r (|cffffffffA|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Познания магии — посвящение|r (|cffffffffA|r)"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0EZ",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны воргенов-магов на |cffc8e087100|cffced4da ед., скорость восстановления маны на |cffc8e0870.325|cffced4da/сек. и запас здоровья на |cffc8e08740|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВорген маг|cffced4da.|n|nУровень исследования: |cffffffff1/2|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны воргенов-магов на |cffc8e087100|cffced4da е"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0F1",
+        "field": "name1",
+        "expected": "|cffe4cfa3Звериные рефлексы|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Звериные рефлексы|r"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0F1",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Звериные рефлексы|r (|cffffffffX|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Звериные рефлексы|r (|cffffffffX|r)"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0F1",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дарует полудиким воргенам способность «|cffa9c7deЗвериные рефлексы|cffced4da», позволяющую с вероятностью |cffc8e0875%|cffced4da уклониться от атаки и с вероятностью |cffc8e0876%|cffced4da нанести |cffffffff1.5|cffced4da-кратный урон.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дарует полудиким воргенам способность «|cffa9c7deЗвериные рефлексы"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0F0",
+        "field": "name1",
+        "expected": "|cffe4cfa3Волчьи конечности|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Волчьи конечности|r"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0F0",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Волчьи конечности|r (|cffffffffA|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Волчьи конечности|r (|cffffffffA|r)"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0F0",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость перемещения стрелков, друидов, магов, полудиких воргенов и топорометателей на |cffc8e08735|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deВорген друид|cffced4da|n- |cffa9c7deВорген маг|cffced4da|n- |cffa9c7deПолудикий ворген|cffced4da|n- |cffa9c7deТопорометатель|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость перемещения стрелков, друидов, магов, полудик"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0F2",
+        "field": "name1",
+        "expected": "|cffe4cfa3Слияние с природой — посвящение|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Слияние с природой — посвящение|r"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0F2",
+        "field": "tip1",
+        "expected": "|cffe4cfa3Слияние с природой — посвящение|r (|cffffffffS|r)"
+      },
+      "status": "PASSED",
+      "actual": "|cffe4cfa3Слияние с природой — посвящение|r (|cffffffffS|r)"
+    },
+    {
+      "check": {
+        "type": "upgrade",
+        "id": "R0F2",
+        "field": "ubertip1",
+        "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны друидов на |cffc8e087100|cffced4da ед., скорость восстановления маны на |cffc8e0870.325|cffced4da/сек. и запас здоровья на |cffc8e08740|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВорген друид|cffced4da.|n|nУровень исследования: |cffffffff1/2|cffced4da.|r"
+      },
+      "status": "PASSED",
+      "actual": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас маны друидов на |cffc8e087100|cffced4da ед., ско"
+    }
+  ]
+}

@@ -1,0 +1,3310 @@
+{
+  "race": "Fel Orcs",
+  "race_name_ru": "Орда Скверны",
+  "race_id": 31,
+  "selection_ability": "A1JL",
+  "faction_markers": [
+    "R0KA",
+    "R0KC"
+  ],
+  "total_wts_updates": 454,
+  "total_checks": 451,
+  "wts_updates": {
+    "38915": "|cffe4cfa3Орда Скверны|r",
+    "38916": "|cffe4cfa3Орда Скверны|r (|cffffffffC|r)",
+    "25691": "|cffa6afb8РАСА:|cffced4da Свирепые орки Дренора, порабощённые демонической скверной, обладающие несокрушимой яростью, тёмной магией и разрушительными осадными машинами.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor(Яхве)|r|n|cffa6afb8Куратор расы:|r |cffa9c7deNiCAmCHiK|r|n|cffa6afb8Сложность:|r |cffffffff●●●|cffa6afb8○○|r|n|cffa6afb8Период:|r |cffa9c7de«Warcraft III — Battle for Azeroth»|r|n|n|cffced4daОрда Скверны — орки Дренора, испившие демонической крови и подчинившиеся владыкам Пылающего Легиона и властителю Преисподней Магтеридону. Изменившись под воздействием скверны, они обрели кроваво-красную кожу, чудовищную силу и неутолимую жажду битвы. Опираясь на свирепых рубак, чернокнижников, налётчиков и некромантию, Орда Скверны сокрушает любые преграды на своём пути.|r",
+    "37022": "|cffe4cfa3Орда Скверны|r",
+    "37023": "|cffe4cfa3Орда Скверны|r",
+    "26689": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Орде Скверны.|r",
+    "5595": "|cffe4cfa3Орда Скверны|r",
+    "5596": "|cffe4cfa3Орда Скверны|r",
+    "27305": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Орде Скверны или Орде Второй Войны.|r",
+    "20727": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов и начальный лимит пищи.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da: базовый рабочий.|n- |cffa9c7deМутировавший Батрак|cffced4da: рабочий-воин с рассекающим ударом.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deГрабеж|cffced4da: воины добывают золото при атаке зданий.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deКрепость|cffced4da: открывает доступ к передовым сооружениям и войскам.|r",
+    "21453": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает запас пищи и открывает доступ к новым постройкам.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da: базовый рабочий.|n- |cffa9c7deМутировавший Батрак|cffced4da: рабочий-воин с рассекающим ударом.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deГрабеж|cffced4da: воины добывают золото при атаке зданий.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deЦитадель|cffced4da: открывает доступ к высшим технологиям расы.|r",
+    "25409": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание третьей ступени. Обеспечивает максимальный запас пищи и открывает все технологии расы.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da: базовый рабочий.|n- |cffa9c7deМутировавший Батрак|cffced4da: рабочий-воин с рассекающим ударом.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deГрабеж|cffced4da: воины добывают золото при атаке зданий.|r",
+    "33924": "|cffe4cfa3Свиноферма|r",
+    "33925": "|cffe4cfa3Свиноферма|r (|cffffffffA|r)",
+    "31830": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию Орды Скверны провизией. Позволяет укрывать батраков для защиты базы.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|n|n|cffa6afb8Атакует наземные и воздушные цели|cffced4da (при укрытии батраков).|r",
+    "33453": "|cffe4cfa3Алтарь скверны|r",
+    "33905": "|cffe4cfa3Алтарь скверны|r (|cffffffffS|r)",
+    "28995": "|cffa6afb8ЗДАНИЕ:|cffced4da Позволяет призывать и воскрешать павших героев Орды Скверны.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВоенный лорд|cffced4da: герой-воин ближнего боя (Сила).|n- |cffa9c7deМастер меча|cffced4da: мастер клинка ближнего боя (Ловкость).|n- |cffa9c7deОскверненный шаман|cffced4da: темный шаман дальнего боя (Интеллект).|r",
+    "28988": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовое производственное сооружение Орды Скверны. Подготавливает пехоту, стрелков и осадные орудия.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da: базовый боец ближнего боя.|n- |cffa9c7deСтрелок|cffced4da: стрелок с арбалетом.|n- |cffa9c7deКопьеметатель|cffced4da: метатель копий дальнего боя.|n- |cffa9c7deТелохранитель вождя|cffced4da: тяжелый воин с аурой защиты.|n- |cffa9c7deРазрушитель|cffced4da: осадная катапульта дальнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deГорючая смесь|cffced4da: поджигает землю при атаке разрушителей.|n- |cffa9c7deГрубая сила|cffced4da: повышает здоровье и урон рубак.|n- |cffa9c7deСверхлегкие копья|cffced4da: увеличивает дальность атаки копьеметателей.|n- |cffa9c7deЗаточеный болт|cffced4da: повышает урон стрелков по тяжелой броне.|r",
+    "30681": "|cffa6afb8ЗДАНИЕ:|cffced4da Служит пунктом сбора древесины и центром кузнечных разработок Орды Скверны.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОружие ближнего боя|cffced4da: повышает урон немагических войск ближнего боя.|n- |cffa9c7deОружие дальнего боя|cffced4da: повышает урон войск дальнего боя.|n- |cffa9c7deСтальная броня|cffced4da: повышает броню воинов ближнего боя.|n- |cffa9c7deУлучшенные пилы|cffced4da: увеличивает сбор древесины батраками.|n- |cffa9c7deПоощрять ярость|cffced4da: увеличивает урон бойцов ценой снижения здоровья.|n- |cffa9c7deПодавлять ярость|cffced4da: увеличивает здоровье бойцов ценой снижения урона.|n- |cffa9c7deГрабеж|cffced4da: воины добывают золото при атаке зданий.|r",
+    "30653": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает могущественных заклинателей и магов поддержки Орды Скверны.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЧернокнижник Скверны|cffced4da: темный маг с рассеиванием и огненной стрелой.|n- |cffa9c7deШаман|cffced4da: заклинатель с раздвоенной молнией и жаждой крови.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбучение шаманов|cffced4da: открывает новые ранги и способности шаманов.|n- |cffa9c7deЧерная магия|cffced4da: открывает новые ранги и способности чернокнижников.|r",
+    "22879": "|cffe4cfa3Зверинец|r (|cffffffffE|r)",
+    "30660": "|cffa6afb8ЗДАНИЕ:|cffced4da Содержит и тренирует боевых зверей, кавалерию и элитную охрану Орды Скверны.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da: быстрая волчья кавалерия с опутыванием и воем.|n- |cffa9c7deКодо Скверны|cffced4da: массивный зверь с пожиранием и аурой выносливости.|n- |cffa9c7deТелохранитель вождя|cffced4da: элитный тяжелый воин с аурой защиты.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deТренировки с волками|cffced4da: повышает скорость и урон налетчиков.|n- |cffa9c7deОбучение телохранителя|cffced4da: усиливает телохранителей вождя.|n- |cffa9c7deТренировки кодо|cffced4da: увеличивает запас здоровья и урон боевых кодо.|r",
+    "34730": "|cffe4cfa3Оскверненный источник|r",
+    "34732": "|cffe4cfa3Оскверненный источник|r (|cffffffffX|r)",
+    "30686": "|cffa6afb8ЗДАНИЕ:|cffced4da Мистический источник демонической энергии. Насыщает войска Скверной и открывает ритуалы развития армии.|n|n|cffa6afb8Ритуалы:|cffced4da|n- |cffa9c7deРитуал некромантии|cffced4da: открывает постройку Чертогов мертвых.|n- |cffa9c7deРитуал мутации|cffced4da: открывает обучение Мутировавших батраков.|n|n|cffa6afb8Улучшения:|cffced4da|n- Позволяет улучшать войска Орды Скверны до третьего ранга.|r",
+    "3807": "|cffe4cfa3Чертоги мертвых|r",
+    "33444": "|cffe4cfa3Чертоги мертвых|r (|cffffffffF|r)",
+    "30687": "|cffa6afb8ЗДАНИЕ:|cffced4da Центр изучения тёмных искусств и некромантии Орды Скверны.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deНекромант|cffced4da: темный маг, поднимающий скелетов из трупов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deИскусное воскрешение|cffced4da: позволяет призывать скелетов-защитников.|n- |cffa9c7deЖивучие скелеты|cffced4da: увеличивает длительность существования скелетов.|r",
+    "10901": "|cffe4cfa3Верфь|r",
+    "10902": "|cffe4cfa3Верфь|r (|cffffffffC|r)",
+    "22662": "|cffa6afb8ЗДАНИЕ:|cffced4da Строит корабли и исследует улучшения морского флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: перевозка сухопутных войск по воде.|n- |cffa9c7deФрегат|cffced4da: патрульный артиллерийский корабль.|n- |cffa9c7deДредноут|cffced4da: тяжелый бронированный флагман флота.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбстрел|cffced4da.|n- |cffa9c7deДополнительные паруса|cffced4da.|n- |cffa9c7deПочинка|cffced4da.|n- |cffa9c7deОрудия флота|cffced4da.|n- |cffa9c7deУкреплённый корпус|cffced4da.|n|n|cffa9c7deЗона ремонта|cffced4da восстанавливает |cffc8e0872,5|cffced4da ед. здоровья в секунду союзным кораблям поблизости.|r",
+    "36068": "|cffe4cfa3Сторожевая башня|r",
+    "36069": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)",
+    "3617": "|cffe4cfa3Оскверненный шаман|r",
+    "3618": "Ман-Шуру",
+    "35902": "|cffe4cfa3Оскверненный шаман|r (|cffffffffZ|r)",
+    "35901": "|cffe4cfa3Оскверненный шаман|r",
+    "35903": "|cffe4cfa3Оскверненный шаман|r (|cffffffffZ|r)",
+    "37008": "|cffa6afb8ГЕРОЙ:|cffced4da Предводитель шаманов Скверны дальнего боя. Сокрушает противников молниями и призывает древних чудовищ из глубин.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПерст боли|cffced4da: темный разряд, последовательно поражающий нескольких врагов.|n- |cffa9c7deРассеивание заклинаний|cffced4da: снимает магические эффекты и наносит урон призванным существам.|n- |cffa9c7deОтражение скверны|cffced4da: пассивный щит, отражающий часть урона ближнего боя обратно врагам.|n- |cffa9c7deПризыв Забытого|cffced4da: призывает колоссального Забытого, атакующего врагов и порождающего щупальца.|n|n|cffa6afb8Основная характеристика:|r |cffffffffИнтеллект|r|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "35033": "|cffe4cfa3Военный лорд|r",
+    "35020": "Дантур",
+    "35075": "|cffe4cfa3Военный лорд|r (|cffffffffC|r)",
+    "36706": "|cffe4cfa3Военный лорд|r",
+    "37009": "|cffa6afb8ГЕРОЙ:|cffced4da Грозный полководец ближнего боя. Ведёт солдат в бой, подавляя врагов аурой страха и сокрушительным расколом земли.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМетнуть топор|cffced4da: бросок топора, наносящий урон и оглушающий цель.|n- |cffa9c7deВсплеск ярости|cffced4da: значительно ускоряет атаку ценой увеличения получаемого урона.|n- |cffa9c7deАура Страха|cffced4da: снижает скорость передвижения и атаки находящихся рядом врагов.|n- |cffa9c7deРазкол|cffced4da: сокрушительный удар по земле с колоссальным уроном и замедлением.|n|n|cffa6afb8Основная характеристика:|r |cffffffffСила|r|n|cffa6afb8Атакует наземные цели.|r",
+    "30703": "|cffe4cfa3Мастер меча|r",
+    "36968": "Тантур",
+    "36976": "|cffe4cfa3Мастер меча|r (|cffffffffX|r)",
+    "36705": "|cffe4cfa3Мастер меча|r",
+    "37010": "|cffa6afb8ГЕРОЙ:|cffced4da Непревзойденный дуэлянт и мастер клинка. Рассекает врагов молниеносными атаками из тени и смертоносным вихрем стали.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТанец ветра|cffced4da: невидимость и ускорение с критическим ударом при выходе.|n- |cffa9c7deУскользание|cffced4da: вероятность уклониться от вражеских атак.|n- |cffa9c7deКритический удар|cffced4da: шанс нанести многократный урон при атаке.|n- |cffa9c7deВихрь клинков|cffced4da: вихрь ударов с невосприимчивостью к магии и уроном в секунду вокруг.|n|n|cffa6afb8Основная характеристика:|r |cffffffffЛовкость|r|n|cffa6afb8Атакует наземные цели.|r",
+    "10916": "|cffe4cfa3Дредноут|r",
+    "10918": "|cffe4cfa3Дредноут|r (|cffffffffE|r)",
+    "6926": "|cffa6afb8ЮНИТ:|cffced4da Тяжелый бронированный флагман флота Орды дальнего боя.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "3002": "|cffe4cfa3Фрегат|r",
+    "5542": "|cffa6afb8ЮНИТ:|cffced4da Боевой патрульный корабль Орды, атакующий морские и береговые цели.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "29065": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий Орды Скверны. Добывает золото и древесину, возводит и ремонтирует постройки.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "30675": "|cffe4cfa3Мутировавший Батрак|r",
+    "35722": "|cffe4cfa3Мутировавший Батрак|r (|cffffffffW|r)",
+    "35248": "|cffa6afb8ЮНИТ:|cffced4da Мутировавший рабочий-воин Орды Скверны.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРассекающий удар|cffced4da: наносит урон по области рядом с основной целью.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "15344": "|cffa6afb8ЮНИТ:|cffced4da Базовый воин ближнего боя первого ранга.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "36714": "|cffa6afb8ЮНИТ:|cffced4da Усиленный воин ближнего боя второго ранга.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "36723": "|cffa6afb8ЮНИТ:|cffced4da Элитный ветеран ближнего боя третьего ранга с повышенным запасом здоровья и уроном.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "20943": "|cffe4cfa3Стрелок|r",
+    "34261": "|cffe4cfa3Стрелок|r (|cffffffffE|r)",
+    "33387": "|cffa6afb8ЮНИТ:|cffced4da Базовый стрелок первого ранга с арбалетом.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "31903": "|cffe4cfa3Стрелок|r",
+    "35721": "|cffe4cfa3Стрелок|r (|cffffffffE|r)",
+    "36715": "|cffa6afb8ЮНИТ:|cffced4da Усиленный стрелок второго ранга с арбалетом.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "35808": "|cffe4cfa3Стрелок|r",
+    "35810": "|cffe4cfa3Стрелок|r (|cffffffffE|r)",
+    "36720": "|cffa6afb8ЮНИТ:|cffced4da Элитный стрелок третьего ранга с увеличенной дальностью и бронебойными болтами.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "26975": "|cffe4cfa3Копьеметатель|r",
+    "34565": "|cffe4cfa3Копьеметатель|r (|cffffffffW|r)",
+    "35251": "|cffa6afb8ЮНИТ:|cffced4da Метатель тяжелых копий первого ранга дальнего боя.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "34551": "|cffe4cfa3Копьеметатель|r",
+    "35723": "|cffe4cfa3Копьеметатель|r (|cffffffffW|r)",
+    "36712": "|cffa6afb8ЮНИТ:|cffced4da Усиленный метатель тяжелых копий второго ранга дальнего боя.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "35804": "|cffe4cfa3Копьеметатель|r",
+    "35805": "|cffe4cfa3Копьеметатель|r (|cffffffffW|r)",
+    "36728": "|cffa6afb8ЮНИТ:|cffced4da Элитный метатель тяжелых копий третьего ранга с повышенной дальностью поражения.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "33452": "|cffe4cfa3Телохранитель вождя|r",
+    "33391": "|cffe4cfa3Телохранитель вождя|r (|cffffffffE|r)",
+    "35245": "|cffa6afb8ЮНИТ:|cffced4da Тяжелый пехотинец первого ранга, защищающий вождей Орды.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Защиты|cffced4da: повышает броню находящихся рядом союзников.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "35812": "|cffe4cfa3Телохранитель вождя|r",
+    "36726": "|cffe4cfa3Телохранитель вождя|r (|cffffffffE|r)",
+    "36727": "|cffa6afb8ЮНИТ:|cffced4da Усиленный тяжелый пехотинец второго ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Защиты|cffced4da: повышает броню находящихся рядом союзников.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "34547": "|cffe4cfa3Телохранитель вождя|r",
+    "36716": "|cffe4cfa3Телохранитель вождя|r (|cffffffffE|r)",
+    "36717": "|cffa6afb8ЮНИТ:|cffced4da Элитный тяжелый пехотинец третьего ранга с непревзойденной защитой.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Защиты|cffced4da: повышает броню находящихся рядом союзников.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "29076": "|cffa6afb8ЮНИТ:|cffced4da Дальнобойная осадная катапульта, эффективная против зданий и укреплений.|n|n|cffa6afb8Атакует наземные цели и деревья.|r",
+    "10616": "|cffa6afb8ЮНИТ:|cffced4da Темный маг первого ранга, владеющий огненными стрелами и рассеиванием.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "36721": "|cffa6afb8ЮНИТ:|cffced4da Усиленный темный маг второго ранга.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "36718": "|cffa6afb8ЮНИТ:|cffced4da Высший чернокнижник третьего ранга с максимальным запасом маны.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "17861": "|cffe4cfa3Шаман|r",
+    "34537": "|cffe4cfa3Шаман|r (|cffffffffW|r)",
+    "33386": "|cffa6afb8ЮНИТ:|cffced4da Заклинатель поддержки первого ранга с раздвоенной молнией и жаждой крови.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "35814": "|cffe4cfa3Шаман|r",
+    "35816": "|cffe4cfa3Шаман|r (|cffffffffW|r)",
+    "36722": "|cffa6afb8ЮНИТ:|cffced4da Усиленный заклинатель поддержки второго ранга.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "34385": "|cffe4cfa3Шаман|r",
+    "35720": "|cffe4cfa3Шаман|r (|cffffffffW|r)",
+    "36719": "|cffa6afb8ЮНИТ:|cffced4da Высший шаман третьего ранга с мощными стихийными чарами.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "15345": "|cffa6afb8ЮНИТ:|cffced4da Быстрый кавалерист первого ранга на волке, способный обездвиживать врагов сетью.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "36724": "|cffa6afb8ЮНИТ:|cffced4da Усиленный кавалерист второго ранга с боевым кличем.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "36713": "|cffa6afb8ЮНИТ:|cffced4da Элитный налетчик третьего ранга с высокой скоростью и сокрушительным уроном.|n|n|cffa6afb8Атакует наземные цели.|r",
+    "33385": "|cffa6afb8ЮНИТ:|cffced4da Массивный боевой зверь первого ранга с барабанами и пожиранием.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "35254": "|cffa6afb8ЮНИТ:|cffced4da Усиленный боевой зверь второго ранга с аурой выносливости.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "36725": "|cffa6afb8ЮНИТ:|cffced4da Исполинский кодо третьего ранга с колоссальным запасом здоровья.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "36729": "|cffe4cfa3Некромант|r",
+    "36730": "|cffe4cfa3Некромант|r (|cffffffffQ|r)",
+    "36731": "|cffa6afb8ЮНИТ:|cffced4da Темный маг Орды Скверны, поднимающий скелетов из трупов врагов.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r",
+    "20159": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Покрывает снаряды катапульт горючей смесью, позволяя им поджигать землю и наносить периодический урон.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|r",
+    "31055": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск дальнего боя на |cffc8e087+5|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r",
+    "31056": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск дальнего боя на |cffc8e087+10|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r",
+    "31057": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск дальнего боя на |cffc8e087+15|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r",
+    "31052": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск дальнего боя на |cffc8e087+20|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r",
+    "31053": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск дальнего боя на |cffc8e087+25|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r",
+    "31054": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск дальнего боя на |cffc8e087+30|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r",
+    "22737": "|cffe4cfa3Оружие дальнего боя|r — уровень 4",
+    "22738": "|cffe4cfa3Оружие дальнего боя|r — уровень 5",
+    "22739": "|cffe4cfa3Оружие дальнего боя|r — уровень 6",
+    "22740": "|cffe4cfa3Оружие дальнего боя — уровень 4|r (|cffffffffR|r)",
+    "22741": "|cffe4cfa3Оружие дальнего боя — уровень 5|r (|cffffffffR|r)",
+    "22742": "|cffe4cfa3Оружие дальнего боя — уровень 6|r (|cffffffffR|r)",
+    "28247": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя Орды Скверны на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r",
+    "28248": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя Орды Скверны на |cffc8e087+4|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r",
+    "28249": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя Орды Скверны на |cffc8e087+6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r",
+    "28250": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя Орды Скверны на |cffc8e087+8|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r",
+    "28251": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя Орды Скверны на |cffc8e087+10|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r",
+    "28252": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя Орды Скверны на |cffc8e087+12|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r",
+    "29426": "|cffe4cfa3Стальная броня|r — уровень 1",
+    "22754": "|cffe4cfa3Стальная броня|r — уровень 4",
+    "22755": "|cffe4cfa3Стальная броня|r — уровень 5",
+    "22756": "|cffe4cfa3Стальная броня|r — уровень 6",
+    "22757": "|cffe4cfa3Стальная броня — уровень 4|r (|cffffffffA|r)",
+    "22758": "|cffe4cfa3Стальная броня — уровень 5|r (|cffffffffA|r)",
+    "22759": "|cffe4cfa3Стальная броня — уровень 6|r (|cffffffffA|r)",
+    "31972": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск ближнего боя на |cffc8e087+6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deМутировавший Батрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r",
+    "31973": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск ближнего боя на |cffc8e087+12|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deМутировавший Батрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r",
+    "31974": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск ближнего боя на |cffc8e087+18|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deМутировавший Батрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r",
+    "31975": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск ближнего боя на |cffc8e087+24|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deМутировавший Батрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r",
+    "31976": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск ближнего боя на |cffc8e087+30|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deМутировавший Батрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r",
+    "31977": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск ближнего боя на |cffc8e087+36|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deМутировавший Батрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r",
+    "20134": "|cffe4cfa3Оружие ближнего боя|r — уровень 1",
+    "22769": "|cffe4cfa3Оружие ближнего боя|r — уровень 4",
+    "22770": "|cffe4cfa3Оружие ближнего боя|r — уровень 5",
+    "22771": "|cffe4cfa3Оружие ближнего боя|r — уровень 6",
+    "31575": "|cffe4cfa3Оружие ближнего боя — уровень 4|r (|cffffffffM|r)",
+    "31576": "|cffe4cfa3Оружие ближнего боя — уровень 5|r (|cffffffffM|r)",
+    "31969": "|cffe4cfa3Оружие ближнего боя — уровень 6|r (|cffffffffM|r)",
+    "33573": "|cffe4cfa3Обучение шаманов|r — уровень 1",
+    "33583": "|cffe4cfa3Обучение шаманов|r — уровень 2",
+    "33426": "|cffe4cfa3Обучение шаманов|r — уровень 3",
+    "34160": "|cffe4cfa3Обучение шаманов — уровень 1|r (|cffffffffS|r)",
+    "34161": "|cffe4cfa3Обучение шаманов — уровень 2|r (|cffffffffS|r)",
+    "33429": "|cffe4cfa3Обучение шаманов — уровень 3|r (|cffffffffS|r)",
+    "30348": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья шаманов на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед. и скорость регенерации маны на |cffc8e087+33%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШаман|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r",
+    "30402": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья шаманов на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед. и скорость регенерации маны на |cffc8e087+33%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШаман|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r",
+    "33003": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья шаманов на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед. и скорость регенерации маны на |cffc8e087+33%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШаман|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r",
+    "36530": "|cffe4cfa3Черная магия|r — уровень 1",
+    "36531": "|cffe4cfa3Черная магия|r — уровень 2",
+    "25332": "|cffe4cfa3Черная магия|r — уровень 3",
+    "36533": "|cffe4cfa3Черная магия — уровень 1|r (|cffffffffA|r)",
+    "36534": "|cffe4cfa3Черная магия — уровень 2|r (|cffffffffA|r)",
+    "25334": "|cffe4cfa3Черная магия — уровень 3|r (|cffffffffA|r)",
+    "25331": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья чернокнижников на |cffc8e087+60|cffced4da ед., запас маны на |cffc8e087+50|cffced4da ед. и скорость регенерации маны на |cffc8e087+33%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЧернокнижник Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r",
+    "36524": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья чернокнижников на |cffc8e087+60|cffced4da ед., запас маны на |cffc8e087+50|cffced4da ед. и скорость регенерации маны на |cffc8e087+33%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЧернокнижник Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r",
+    "36528": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья чернокнижников на |cffc8e087+60|cffced4da ед., запас маны на |cffc8e087+50|cffced4da ед. и скорость регенерации маны на |cffc8e087+33%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЧернокнижник Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r",
+    "36546": "|cffe4cfa3Заточеный болт|r",
+    "36548": "|cffe4cfa3Заточеный болт|r (|cffffffffD|r)",
+    "36537": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков на |cffc8e087+5|cffced4da ед. и увеличивает эффективность пробития тяжелой брони.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|r",
+    "34164": "|cffe4cfa3Сверхлегкие копья|r — уровень 1",
+    "34165": "|cffe4cfa3Сверхлегкие копья|r — уровень 2",
+    "34166": "|cffe4cfa3Сверхлегкие копья — уровень 1|r (|cffffffffS|r)",
+    "34167": "|cffe4cfa3Сверхлегкие копья — уровень 2|r (|cffffffffS|r)",
+    "34162": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает дальность атаки копьеметателей на |cffc8e087+50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff2|cffced4da.|r",
+    "34163": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает дальность атаки копьеметателей на |cffc8e087+50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff2|cffced4da.|r",
+    "36565": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья рубак на |cffc8e087+100|cffced4da ед. и урон от их атак на |cffc8e087+3|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da.|r",
+    "34168": "|cffe4cfa3Тренировки с волками|r — уровень 1",
+    "34346": "|cffe4cfa3Тренировки с волками|r — уровень 2",
+    "35872": "|cffe4cfa3Тренировки с волками — уровень 1|r (|cffffffffA|r)",
+    "36105": "|cffe4cfa3Тренировки с волками — уровень 2|r (|cffffffffA|r)",
+    "36568": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость передвижения налетчиков на |cffc8e087+15|cffced4da ед. и повышает их урон на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff2|cffced4da.|r",
+    "36572": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость передвижения налетчиков на |cffc8e087+15|cffced4da ед. и повышает их урон на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff2|cffced4da.|r",
+    "36592": "|cffe4cfa3Обучение телохранителя|r — уровень 1",
+    "36593": "|cffe4cfa3Обучение телохранителя|r — уровень 2",
+    "36589": "|cffe4cfa3Обучение телохранителя|r — уровень 3",
+    "36594": "|cffe4cfa3Обучение телохранителя — уровень 1|r (|cffffffffD|r)",
+    "36595": "|cffe4cfa3Обучение телохранителя — уровень 2|r (|cffffffffD|r)",
+    "36590": "|cffe4cfa3Обучение телохранителя — уровень 3|r (|cffffffffD|r)",
+    "36583": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья телохранителей на |cffc8e087+30|cffced4da ед. и повышает их боевые характеристики.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r",
+    "36587": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья телохранителей на |cffc8e087+30|cffced4da ед. и повышает их боевые характеристики.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r",
+    "36588": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья телохранителей на |cffc8e087+30|cffced4da ед. и повышает их боевые характеристики.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r",
+    "36520": "|cffe4cfa3Улучшенные пилы|r — уровень 1",
+    "38572": "|cffe4cfa3Улучшенные пилы — уровень 1|r (|cffffffffS|r)",
+    "36761": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r",
+    "39877": "|cffe4cfa3Улучшенные пилы|r — уровень 2",
+    "39928": "|cffe4cfa3Улучшенные пилы — уровень 2|r (|cffffffffS|r)",
+    "36756": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffc8e087+10|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r",
+    "37390": "|cffe4cfa3Улучшенные пилы|r — уровень 3",
+    "39059": "|cffe4cfa3Улучшенные пилы — уровень 3|r (|cffffffffS|r)",
+    "36757": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffc8e087+15|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r",
+    "37486": "|cffe4cfa3Улучшенные пилы|r — уровень 4",
+    "39350": "|cffe4cfa3Улучшенные пилы — уровень 4|r (|cffffffffS|r)",
+    "36758": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffc8e087+20|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r",
+    "37594": "|cffe4cfa3Улучшенные пилы|r — уровень 5",
+    "39357": "|cffe4cfa3Улучшенные пилы — уровень 5|r (|cffffffffS|r)",
+    "36759": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffc8e087+25|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r",
+    "38549": "|cffe4cfa3Улучшенные пилы|r — уровень 6",
+    "39824": "|cffe4cfa3Улучшенные пилы — уровень 6|r (|cffffffffS|r)",
+    "36760": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffc8e087+30|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r",
+    "36774": "|cffe4cfa3Поощрять ярость|r — уровень 1",
+    "36776": "|cffe4cfa3Поощрять ярость — уровень 1|r (|cffffffffD|r)",
+    "11069": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов на |cffc8e087+8|cffced4da ед. ценой снижения их здоровья на |cffe69a8d-60|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r",
+    "36775": "|cffe4cfa3Поощрять ярость|r — уровень 2",
+    "36777": "|cffe4cfa3Поощрять ярость — уровень 2|r (|cffffffffD|r)",
+    "20381": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов на |cffc8e087+16|cffced4da ед. ценой снижения их здоровья на |cffe69a8d-120|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r",
+    "36771": "|cffe4cfa3Поощрять ярость|r — уровень 3",
+    "36772": "|cffe4cfa3Поощрять ярость — уровень 3|r (|cffffffffD|r)",
+    "20384": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов на |cffc8e087+24|cffced4da ед. ценой снижения их здоровья на |cffe69a8d-180|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r",
+    "36778": "|cffe4cfa3Поощрять ярость|r — уровень 4",
+    "36785": "|cffe4cfa3Поощрять ярость — уровень 4|r (|cffffffffD|r)",
+    "20386": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов на |cffc8e087+32|cffced4da ед. ценой снижения их здоровья на |cffe69a8d-240|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r",
+    "36779": "|cffe4cfa3Поощрять ярость|r — уровень 5",
+    "36786": "|cffe4cfa3Поощрять ярость — уровень 5|r (|cffffffffD|r)",
+    "24421": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов на |cffc8e087+40|cffced4da ед. ценой снижения их здоровья на |cffe69a8d-300|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r",
+    "36780": "|cffe4cfa3Поощрять ярость|r — уровень 6",
+    "36787": "|cffe4cfa3Поощрять ярость — уровень 6|r (|cffffffffD|r)",
+    "24539": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов на |cffc8e087+48|cffced4da ед. ценой снижения их здоровья на |cffe69a8d-360|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r",
+    "36809": "|cffe4cfa3Подавлять ярость|r — уровень 1",
+    "36811": "|cffe4cfa3Подавлять ярость — уровень 1|r (|cffffffffF|r)",
+    "24546": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье воинов на |cffc8e087+60|cffced4da ед. ценой снижения их урона на |cffe69a8d-8|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r",
+    "36810": "|cffe4cfa3Подавлять ярость|r — уровень 2",
+    "36812": "|cffe4cfa3Подавлять ярость — уровень 2|r (|cffffffffF|r)",
+    "24549": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье воинов на |cffc8e087+120|cffced4da ед. ценой снижения их урона на |cffe69a8d-16|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r",
+    "36806": "|cffe4cfa3Подавлять ярость|r — уровень 3",
+    "36807": "|cffe4cfa3Подавлять ярость — уровень 3|r (|cffffffffF|r)",
+    "24550": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье воинов на |cffc8e087+180|cffced4da ед. ценой снижения их урона на |cffe69a8d-24|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r",
+    "36813": "|cffe4cfa3Подавлять ярость|r — уровень 4",
+    "36820": "|cffe4cfa3Подавлять ярость — уровень 4|r (|cffffffffF|r)",
+    "24884": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье воинов на |cffc8e087+240|cffced4da ед. ценой снижения их урона на |cffe69a8d-32|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r",
+    "36814": "|cffe4cfa3Подавлять ярость|r — уровень 5",
+    "36821": "|cffe4cfa3Подавлять ярость — уровень 5|r (|cffffffffF|r)",
+    "24885": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье воинов на |cffc8e087+300|cffced4da ед. ценой снижения их урона на |cffe69a8d-40|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r",
+    "36815": "|cffe4cfa3Подавлять ярость|r — уровень 6",
+    "36822": "|cffe4cfa3Подавлять ярость — уровень 6|r (|cffffffffF|r)",
+    "25424": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье воинов на |cffc8e087+360|cffced4da ед. ценой снижения их урона на |cffe69a8d-48|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r",
+    "39974": "|cffe4cfa3Тренировки кодо|r — уровень 1",
+    "39975": "|cffe4cfa3Тренировки кодо|r — уровень 2",
+    "39980": "|cffe4cfa3Тренировки кодо — уровень 1|r (|cffffffffS|r)",
+    "39982": "|cffe4cfa3Тренировки кодо — уровень 2|r (|cffffffffS|r)",
+    "25326": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья кодо Скверны на |cffc8e087+50|cffced4da ед. и повышает их урон на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff2|cffced4da.|r",
+    "25330": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья кодо Скверны на |cffc8e087+50|cffced4da ед. и повышает их урон на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff2|cffced4da.|r",
+    "26495": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Один из скелетов, призываемых некромантами с помощью «Воскрешения мертвых», становится усиленным Орком-защитником.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНекромант|cffced4da.|r",
+    "28946": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает время жизни призванных скелетов-воинов и скелетов-магов на |cffc8e087+15|cffced4da сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНекромант|cffced4da.|r",
+    "26346": "|cffe4cfa3Опутывание|r",
+    "26347": "|cffe4cfa3Опутывание|r (|cffffffffN|r)",
+    "26366": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дарует налетчикам способность «Опутывание», притягивающую врага к земле и лишающую его возможности двигаться.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da.|r",
+    "22401": "|cffe4cfa3Грабеж|r",
+    "22402": "|cffe4cfa3Грабеж|r (|cffffffffR|r)",
+    "22403": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Воины ближнего боя Орды Скверны добывают золото при нанесении урона вражеским постройкам.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da.|r",
+    "2038": "|cffe4cfa3Свечение героя|r",
+    "2039": "|cffe4cfa3Свечение героя|r",
+    "8169": "|cffe4cfa3Призыв Забытого|r",
+    "8170": "|cffe4cfa3Призыв Забытого — уровень 1|r (|cffffffffR|r)",
+    "8172": "|cffe4cfa3Призыв Забытого — уровень 2|r (|cffffffffR|r)",
+    "10178": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает из глубин |cffffffff1|cffced4da Забытого, способного атаковать врагов и порождать щупальца.|r",
+    "10177": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает из глубин |cffffffff3|cffced4da Забытых, способных атаковать врагов и порождать щупальца.|r",
+    "10179": "|cffe4cfa3Призыв Забытого|r",
+    "10197": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает из глубин древних Забытых, способных порождать щупальца и сокрушать армии врагов.|n|n|cffa6afb8Уровень 1:|r призывает |cffffffff1|cffced4da Забытого.|n|cffa6afb8Уровень 2:|r призывает |cffffffff3|cffced4da Забытых.|r",
+    "8252": "|cffe4cfa3Рассеивание заклинаний|r",
+    "8253": "|cffe4cfa3Рассеивание заклинаний — уровень 1|r (|cffffffffW|r)",
+    "8256": "|cffe4cfa3Рассеивание заклинаний — уровень 2|r (|cffffffffW|r)",
+    "8257": "|cffe4cfa3Рассеивание заклинаний — уровень 3|r (|cffffffffW|r)",
+    "8258": "|cffe4cfa3Рассеивание заклинаний — уровень 4|r (|cffffffffW|r)",
+    "15474": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает магические эффекты в указанной области и наносит |cffe69a8d200|cffced4da ед. урона призванным существам.|r",
+    "15471": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает магические эффекты в указанной области и наносит |cffe69a8d300|cffced4da ед. урона призванным существам.|r",
+    "15472": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает магические эффекты в указанной области и наносит |cffe69a8d400|cffced4da ед. урона призванным существам.|r",
+    "13534": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает магические эффекты в указанной области и наносит |cffe69a8d600|cffced4da ед. урона призванным существам.|r",
+    "8254": "|cffe4cfa3Рассеивание заклинаний|r",
+    "15470": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает магические эффекты с войск в указанной области и наносит урон призванным существам.|n|n|cffa6afb8Уровень 1:|r наносит |cffe69a8d200|cffced4da урона призывам.|n|cffa6afb8Уровень 2:|r наносит |cffe69a8d300|cffced4da урона призывам.|n|cffa6afb8Уровень 3:|r наносит |cffe69a8d400|cffced4da урона призывам.|n|cffa6afb8Уровень 4:|r наносит |cffe69a8d600|cffced4da урона призывам.|r",
+    "328": "|cffe4cfa3Метнуть топор|r",
+    "331": "|cffe4cfa3Метнуть топор — уровень 1|r (|cffffffffQ|r)",
+    "332": "|cffe4cfa3Метнуть топор — уровень 2|r (|cffffffffQ|r)",
+    "333": "|cffe4cfa3Метнуть топор — уровень 3|r (|cffffffffQ|r)",
+    "334": "|cffe4cfa3Метнуть топор — уровень 4|r (|cffffffffQ|r)",
+    "15346": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc8e087100|cffced4da ед. урона и оглушая цель на |cffffffff5|cffced4da сек. (|cffffffff0,3|cffced4da сек. героев).|r",
+    "15347": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc8e087200|cffced4da ед. урона и оглушая цель на |cffffffff5|cffced4da сек. (|cffffffff0,4|cffced4da сек. героев).|r",
+    "15348": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc8e087325|cffced4da ед. урона и оглушая цель на |cffffffff5|cffced4da сек. (|cffffffff0,5|cffced4da сек. героев).|r",
+    "35263": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc8e087500|cffced4da ед. урона и оглушая цель на |cffffffff5|cffced4da сек. (|cffffffff0,6|cffced4da сек. героев).|r",
+    "329": "|cffe4cfa3Метнуть топор|r",
+    "35266": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, оглушая цель и нанося ей урон.|n|n|cffa6afb8Уровень 1:|r |cffc8e087100|cffced4da ед. урона, оглушение 5/0,3 сек.|n|cffa6afb8Уровень 2:|r |cffc8e087200|cffced4da ед. урона, оглушение 5/0,4 сек.|n|cffa6afb8Уровень 3:|r |cffc8e087325|cffced4da ед. урона, оглушение 5/0,5 сек.|n|cffa6afb8Уровень 4:|r |cffc8e087500|cffced4da ед. урона, оглушение 5/0,6 сек.|r",
+    "26484": "|cffe4cfa3Небольшой скачок|r",
+    "26476": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)",
+    "26477": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит рабочего на небольшое расстояние.|r",
+    "10064": "|cffe4cfa3Небольшой скачок|r",
+    "10976": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит рабочего на небольшое расстояние.|r",
+    "27193": "|cffe4cfa3Обозначить столицу|r",
+    "27969": "|cffe4cfa3Обозначить столицу|r (|cffffffffX|r)",
+    "27970": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Назначает главное здание столицей игрока, многократно увеличивая его запас прочности.|n|n|cffe6c07bВнимание:|r при потере столицы вы терпите поражение или переходите в статус вассала.|r",
+    "2888": "|cffe4cfa3Обмен золота на дерево|r",
+    "3692": "|cffe4cfa3Обмен золота на дерево|r (|cffffffffS|r)",
+    "20630": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает |cffe69a8d500|cffced4da ед. золота на |cffc8e087100|cffced4da ед. древесины.|r",
+    "12857": "|cffe4cfa3Обмен дерева на золото|r",
+    "12886": "|cffe4cfa3Обмен дерева на золото|r (|cffffffffA|r)",
+    "20631": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает |cffe69a8d500|cffced4da ед. древесины на |cffc8e087100|cffced4da ед. золота.|r",
+    "12036": "|cffe4cfa3Перст боли|r",
+    "13211": "|cffe4cfa3Перст боли — уровень 1|r (|cffffffffQ|r)",
+    "13207": "|cffe4cfa3Перст боли — уровень 2|r (|cffffffffQ|r)",
+    "12040": "|cffe4cfa3Перст боли — уровень 3|r (|cffffffffQ|r)",
+    "13261": "|cffe4cfa3Перст боли — уровень 4|r (|cffffffffQ|r)",
+    "13245": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Темный разряд, последовательно поражающий до |cffffffff4|cffced4da врагов и наносящий первому |cffc8e08785|cffced4da ед. урона.|r",
+    "13224": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Темный разряд, последовательно поражающий до |cffffffff6|cffced4da врагов и наносящий первому |cffc8e087160|cffced4da ед. урона.|r",
+    "13249": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Темный разряд, последовательно поражающий до |cffffffff8|cffced4da врагов и наносящий первому |cffc8e087250|cffced4da ед. урона.|r",
+    "30564": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Темный разряд, последовательно поражающий до |cffffffff12|cffced4da врагов и наносящий первому |cffc8e087355|cffced4da ед. урона.|r",
+    "12831": "|cffe4cfa3Перст боли|r",
+    "29002": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Темный разряд, последовательно поражающий нескольких противников с постепенным снижением урона.|n|n|cffa6afb8Уровень 1:|r |cffc8e08785|cffced4da ед. урона, до 4 целей.|n|cffa6afb8Уровень 2:|r |cffc8e087160|cffced4da ед. урона, до 6 целей.|n|cffa6afb8Уровень 3:|r |cffc8e087250|cffced4da ед. урона, до 8 целей.|n|cffa6afb8Уровень 4:|r |cffc8e087355|cffced4da ед. урона, до 12 целей.|r",
+    "27493": "|cffe4cfa3Рассеивание чар|r",
+    "27494": "|cffe4cfa3Рассеивание чар|r (|cffffffffQ|r)",
+    "27502": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает положительные эффекты с врагов и отрицательные с союзников в указанной области, а также наносит урон призывам.|r",
+    "24916": "|cffe4cfa3Кодо Скверны — ранг 2|r",
+    "25175": "|cffe4cfa3Кодо Скверны — ранг 2|r (|cffffffffX|r)",
+    "34734": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает кодо Скверны, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deНалетчиков Скверны|r.|r",
+    "34458": "|cffe4cfa3Копьеметатель — ранг 2|r",
+    "34459": "|cffe4cfa3Копьеметатель — ранг 2|r (|cffffffffX|r)",
+    "34753": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает копьеметателей, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deСтрелков|r.|r",
+    "30203": "|cffe4cfa3Налетчик Скверны — ранг 2|r",
+    "30243": "|cffe4cfa3Налетчик Скверны — ранг 2|r (|cffffffffQ|r)",
+    "35501": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает налетчиков Скверны, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deКодо Скверны|r.|r",
+    "34240": "|cffe4cfa3Рубака Скверны — ранг 2|r",
+    "34241": "|cffe4cfa3Рубака Скверны — ранг 2|r (|cffffffffZ|r)",
+    "35236": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает рубак Скверны, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deТелохранителей вождя|r.|r",
+    "34555": "|cffe4cfa3Стрелок — ранг 2|r",
+    "34556": "|cffe4cfa3Стрелок — ранг 2|r (|cffffffffC|r)",
+    "35838": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает стрелков, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deКопьеметателей|r.|r",
+    "34247": "|cffe4cfa3Телохранитель вождя — ранг 2|r",
+    "34248": "|cffe4cfa3Телохранитель вождя — ранг 2|r (|cffffffffC|r)",
+    "35839": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает телохранителей вождя, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deРубак Скверны|r.|r",
+    "9353": "|cffe4cfa3Чернокнижник Скверны — ранг 2|r",
+    "12215": "|cffe4cfa3Чернокнижник Скверны — ранг 2|r (|cffffffffQ|r)",
+    "35840": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает чернокнижников Скверны, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deШаманов|r.|r",
+    "26566": "|cffe4cfa3Шаман — ранг 2|r",
+    "26571": "|cffe4cfa3Шаман — ранг 2|r (|cffffffffQ|r)",
+    "23431": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает шаманов, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deЧернокнижников Скверны|r.|r",
+    "35908": "|cffe4cfa3Отражение скверны|r",
+    "35911": "|cffe4cfa3Отражение скверны — уровень 1|r (|cffffffffE|r)",
+    "35912": "|cffe4cfa3Отражение скверны — уровень 2|r (|cffffffffE|r)",
+    "35913": "|cffe4cfa3Отражение скверны — уровень 3|r (|cffffffffE|r)",
+    "35906": "|cffe4cfa3Отражение скверны — уровень 4|r (|cffffffffE|r)",
+    "35907": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Окружает союзников щитом, отражающим |cffc8e08721%|cffced4da полученного урона ближнего боя обратно атакующим врагам.|r",
+    "35909": "|cffe4cfa3Отражение скверны|r",
+    "35910": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует щит, отражающий часть получаемого в ближнем бою урона обратно врагам.|n|n|cffa6afb8Уровень 1:|r отражает |cffc8e08710%|cffced4da урона.|n|cffa6afb8Уровень 2:|r отражает |cffc8e08713%|cffced4da урона.|n|cffa6afb8Уровень 3:|r отражает |cffc8e08717%|cffced4da урона.|n|cffa6afb8Уровень 4:|r отражает |cffc8e08721%|cffced4da урона.|r",
+    "28119": "|cffe4cfa3Кодо Скверны — ранг 3|r",
+    "28127": "|cffe4cfa3Кодо Скверны — ранг 3|r (|cffffffffX|r)",
+    "35753": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает кодо Скверны, повышая их боевые характеристики до высшего 3 ранга.|r",
+    "34538": "|cffe4cfa3Копьеметатель — ранг 3|r",
+    "34539": "|cffe4cfa3Копьеметатель — ранг 3|r (|cffffffffQ|r)",
+    "35754": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает копьеметателей, повышая их боевые характеристики до высшего 3 ранга.|r",
+    "31567": "|cffe4cfa3Налетчик Скверны — ранг 3|r",
+    "32051": "|cffe4cfa3Налетчик Скверны — ранг 3|r (|cffffffffQ|r)",
+    "35755": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает налетчиков Скверны, повышая их боевые характеристики до высшего 3 ранга.|r",
+    "34242": "|cffe4cfa3Рубака Скверны — ранг 3|r",
+    "35017": "|cffe4cfa3Рубака Скверны — ранг 3|r (|cffffffffZ|r)",
+    "35756": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает рубак Скверны, повышая их боевые характеристики до высшего 3 ранга.|r",
+    "34557": "|cffe4cfa3Стрелок — ранг 3|r",
+    "34561": "|cffe4cfa3Стрелок — ранг 3|r (|cffffffffQ|r)",
+    "35757": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает стрелков, повышая их боевые характеристики до высшего 3 ранга.|r",
+    "34249": "|cffe4cfa3Телохранитель вождя — ранг 3|r",
+    "34257": "|cffe4cfa3Телохранитель вождя — ранг 3|r (|cffffffffC|r)",
+    "35758": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает телохранителей вождя, повышая их боевые характеристики до высшего 3 ранга.|r",
+    "12302": "|cffe4cfa3Чернокнижник Скверны — ранг 3|r",
+    "12845": "|cffe4cfa3Чернокнижник Скверны — ранг 3|r (|cffffffffQ|r)",
+    "35769": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает чернокнижников Скверны, повышая их боевые характеристики до высшего 3 ранга.|r",
+    "26581": "|cffe4cfa3Шаман — ранг 3|r",
+    "26601": "|cffe4cfa3Шаман — ранг 3|r (|cffffffffQ|r)",
+    "35770": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает шаманов, повышая их боевые характеристики до высшего 3 ранга.|r",
+    "36339": "|cffe4cfa3Ярость|r",
+    "36340": "|cffe4cfa3Ярость|r",
+    "30229": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Позволяет воинам Скверны балансировать между повышенным уроном и запасом здоровья.|r",
+    "36342": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает сгусток темного огня, наносящий |cffc8e087100|cffced4da ед. урона и оглушающий цель.|r",
+    "36344": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает молнией до |cffffffff3|cffced4da врагов в секторе перед собой, нанося |cffc8e087100|cffced4da ед. урона.|r",
+    "36345": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки союзника на |cffc8e087+40%|cffced4da и скорость передвижения на |cffc8e087+25%|cffced4da на |cffffffff30|cffced4da сек.|r",
+    "36347": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дает |cffffffff15%|cffced4da шанс нанести двукратный урон при атаке.|r",
+    "36348": "|cffe4cfa3Заточеный болт|r",
+    "36349": "|cffe4cfa3Заточеный болт|r",
+    "36350": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон по врагам с тяжелым типом брони.|r",
+    "26997": "|cffe4cfa3Вой|r",
+    "26991": "|cffe4cfa3Вой|r (|cffffffffE|r)",
+    "26998": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Издает свирепый вой, повышающий урон союзников на |cffc8e087+25%|cffced4da и броню на |cffc8e087+4|cffced4da ед. на |cffffffff30|cffced4da сек.|r",
+    "26999": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость атаки на |cffc8e087+50%|cffced4da ценой увеличения получаемого урона на |cffe69a8d+20%|cffced4da.|r",
+    "37641": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff15%|cffced4da наносит на |cffc8e087+20|cffced4da ед. больше урона и оглушает цель на |cffffffff2|cffced4da сек.|r",
+    "30230": "|cffe4cfa3Огненный болт|r",
+    "30231": "|cffe4cfa3Огненный болт|r (|cffffffffW|r)",
+    "30296": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Добавляет дополнительный огненный урон к каждой дистанционной атаке.|r",
+    "36597": "|cffe4cfa3Аура выносливости|r",
+    "36598": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения находящихся рядом союзников на |cffc8e087+10%|cffced4da и скорость их атаки на |cffc8e087+5%|cffced4da.|r",
+    "35204": "|cffe4cfa3Всплеск ярости|r",
+    "35283": "|cffe4cfa3Всплеск ярости — уровень 1|r (|cffffffffW|r)",
+    "35285": "|cffe4cfa3Всплеск ярости — уровень 2|r (|cffffffffW|r)",
+    "35289": "|cffe4cfa3Всплеск ярости — уровень 3|r (|cffffffffW|r)",
+    "35295": "|cffe4cfa3Всплеск ярости — уровень 4|r (|cffffffffW|r)",
+    "31220": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость атаки на |cffc8e087+400%|cffced4da, но увеличивает получаемый урон на |cffe69a8d+50%|cffced4da на |cffffffff12|cffced4da сек.|r",
+    "19976": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость атаки на |cffc8e087+400%|cffced4da, но увеличивает получаемый урон на |cffe69a8d+45%|cffced4da на |cffffffff12|cffced4da сек.|r",
+    "21300": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость атаки на |cffc8e087+400%|cffced4da, но увеличивает получаемый урон на |cffe69a8d+40%|cffced4da на |cffffffff12|cffced4da сек.|r",
+    "32754": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость атаки на |cffc8e087+400%|cffced4da, но увеличивает получаемый урон на |cffe69a8d+35%|cffced4da на |cffffffff12|cffced4da сек.|r",
+    "35281": "|cffe4cfa3Всплеск ярости|r",
+    "35316": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Многократно увеличивает скорость боя ценой получения повышенного урона. Действует 12 сек.|n|n|cffa6afb8Уровень 1:|r +400% скорости, +50% получаемого урона.|n|cffa6afb8Уровень 2:|r +400% скорости, +45% получаемого урона.|n|cffa6afb8Уровень 3:|r +400% скорости, +40% получаемого урона.|n|cffa6afb8Уровень 4:|r +400% скорости, +35% получаемого урона.|r",
+    "36680": "|cffe4cfa3Разкол|r",
+    "37036": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сокрушает землю, нанося |cffc8e087400|cffced4da ед. урона наземным врагам и замедляя их скорость передвижения и атаки.|r",
+    "37037": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сокрушает землю, нанося |cffc8e087500|cffced4da ед. урона наземным врагам и замедляя их скорость передвижения и атаки.|r",
+    "37035": "|cffe4cfa3Разкол|r",
+    "37034": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сокрушает землю, нанося урон наземным врагам вокруг и существенно замедляя их атаку и бег.|n|n|cffa6afb8Уровень 1:|r |cffc8e087400|cffced4da ед. урона.|n|cffa6afb8Уровень 2:|r |cffc8e087500|cffced4da ед. урона.|r",
+    "11947": "|cffe4cfa3Воскрешение мертвых|r (|cffffffffQ|r)",
+    "7614": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает |cffffffff2|cffced4da скелетов из трупа павшего воина.|r",
+    "11982": "|cffe4cfa3Ритуал некромантии|r",
+    "11983": "|cffe4cfa3Ритуал некромантии|r (|cffffffffR|r)",
+    "23530": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает доступ к возведению |cffa9c7deЧертогов мертвых|cffced4da и подготовке некромантов.|n|n|cffe6c07bВнимание:|r исключает проведение |cffa9c7deРитуала мутации|r.|r",
+    "11987": "|cffe4cfa3Ритуал мутации|r",
+    "23429": "|cffe4cfa3Ритуал мутации|r (|cffffffffE|r)",
+    "35841": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает доступ к подготовке |cffa9c7deМутировавших батраков|cffced4da в Доме вождей.|n|n|cffe6c07bВнимание:|r исключает проведение |cffa9c7deРитуала некромантии|r.|r",
+    "14299": "|cffe4cfa3Ускользание|r",
+    "26358": "|cffe4cfa3Ускользание — уровень 1|r",
+    "15961": "|cffe4cfa3Ускользание — уровень 2|r",
+    "17725": "|cffe4cfa3Ускользание — уровень 3|r",
+    "17731": "|cffe4cfa3Ускользание — уровень 4|r",
+    "15269": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дает |cffffffff10%|cffced4da шанс уклониться от вражеской атаки.|r",
+    "15270": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дает |cffffffff20%|cffced4da шанс уклониться от вражеской атаки.|r",
+    "17797": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дает |cffffffff30%|cffced4da шанс уклониться от вражеской атаки.|r",
+    "17800": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дает |cffffffff40%|cffced4da шанс уклониться от вражеской атаки.|r",
+    "14300": "|cffe4cfa3Ускользание|r",
+    "15273": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает вероятность уклониться от физической атаки противника.|n|n|cffa6afb8Уровень 1:|r |cffffffff10%|cffced4da шанс уклонения.|n|cffa6afb8Уровень 2:|r |cffffffff20%|cffced4da шанс уклонения.|n|cffa6afb8Уровень 3:|r |cffffffff30%|cffced4da шанс уклонения.|n|cffa6afb8Уровень 4:|r |cffffffff40%|cffced4da шанс уклонения.|r",
+    "39228": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бьет с огромной силой, нанося |cffc8e08715%|cffced4da урона врагам рядом с основной целью.|r",
+    "38201": "|cffe4cfa3Защита столицы|r",
+    "38229": "|cffe4cfa3Защита столицы|r",
+    "39203": "|cffe4cfa3Аура Защиты|r",
+    "39204": "|cffe4cfa3Аура Защиты|r",
+    "22257": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает броню находящихся рядом союзников на |cffc8e087+3|cffced4da ед.|r",
+    "39207": "|cffe4cfa3Аура Страха|r",
+    "39209": "|cffe4cfa3Аура Страха — уровень 1|r",
+    "39210": "|cffe4cfa3Аура Страха — уровень 2|r",
+    "39211": "|cffe4cfa3Аура Страха — уровень 3|r",
+    "39212": "|cffe4cfa3Аура Страха — уровень 4|r",
+    "39214": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает скорость передвижения врагов на |cffe69a8d-7%|cffced4da и скорость атаки на |cffe69a8d-5%|cffced4da.|r",
+    "39215": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает скорость передвижения врагов на |cffe69a8d-14%|cffced4da и скорость атаки на |cffe69a8d-10%|cffced4da.|r",
+    "39216": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает скорость передвижения врагов на |cffe69a8d-21%|cffced4da и скорость атаки на |cffe69a8d-15%|cffced4da.|r",
+    "39213": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает скорость передвижения врагов на |cffe69a8d-28%|cffced4da и скорость атаки на |cffe69a8d-20%|cffced4da.|r",
+    "8749": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Подавляет боевой дух находящихся рядом врагов, замедляя их скорость атаки и передвижения.|n|n|cffa6afb8Уровень 1:|r -7% к скорости бега, -5% к скорости боя.|n|cffa6afb8Уровень 2:|r -14% к скорости бега, -10% к скорости боя.|n|cffa6afb8Уровень 3:|r -21% к скорости бега, -15% к скорости боя.|n|cffa6afb8Уровень 4:|r -28% к скорости бега, -20% к скорости боя.|r",
+    "9628": "|cffe4cfa3Критический удар — уровень 4|r",
+    "5166": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дает |cffffffff15%|cffced4da шанс нанести четырехкратный урон при атаке.|r",
+    "23502": "|cffe4cfa3Танец ветра — уровень 4|r (|cffffffffQ|r)",
+    "20908": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует невидимость и ускорение на |cffffffff30|cffced4da сек. Атака из невидимости наносит |cffc8e087110|cffced4da ед. дополнительного урона.|r",
+    "9617": "|cffe4cfa3Вихрь клинков — уровень 2|r (|cffffffffR|r)",
+    "23512": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Окружает мастера клинка вихрем стали, даруя невосприимчивость к магии и нанося |cffc8e087160|cffced4da ед. урона в секунду всем врагам вокруг.|r",
+    "7613": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускоряет регенерацию здоровья находящихся рядом союзников.|r"
+  },
+  "checks_def": [
+    {
+      "type": "ability",
+      "id": "A1JL",
+      "field": "name",
+      "expected": "|cffe4cfa3Орда Скверны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JL",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Орда Скверны|r (|cffffffffC|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1JL",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8РАСА:|cffced4da Свирепые орки Дренора, порабощённые демонической скверной, обладающие несокрушимой яростью, тёмной магией и разрушительными осадными машинами.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor(Яхве)|r|n|cffa6afb8Куратор расы:|r |cffa9c7deNiCAmCHiK|r|n|cffa6afb8Сложность:|r |cffffffff●●●|cffa6afb8○○|r|n|cffa6afb8Период:|r |cffa9c7de«Warcraft III — Battle for Azeroth»|r|n|n|cffced4daОрда Скверны — орки Дренора, испившие демонической крови и подчинившиеся владыкам Пылающего Легиона и властителю Преисподней Магтеридону. Изменившись под воздействием скверны, они обрели кроваво-красную кожу, чудовищную силу и неутолимую жажду битвы. Опираясь на свирепых рубак, чернокнижников, налётчиков и некромантию, Орда Скверны сокрушает любые преграды на своём пути.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KA",
+      "field": "name1",
+      "expected": "|cffe4cfa3Орда Скверны|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KA",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Орда Скверны|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KA",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Орде Скверны.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KC",
+      "field": "name1",
+      "expected": "|cffe4cfa3Орда Скверны|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KC",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Орда Скверны|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0KC",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Орде Скверны или Орде Второй Войны.|r"
+    },
+    {
+      "type": "unit",
+      "id": "o05V",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов и начальный лимит пищи.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da: базовый рабочий.|n- |cffa9c7deМутировавший Батрак|cffced4da: рабочий-воин с рассекающим ударом.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deГрабеж|cffced4da: воины добывают золото при атаке зданий.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deКрепость|cffced4da: открывает доступ к передовым сооружениям и войскам.|r"
+    },
+    {
+      "type": "unit",
+      "id": "o05W",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает запас пищи и открывает доступ к новым постройкам.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da: базовый рабочий.|n- |cffa9c7deМутировавший Батрак|cffced4da: рабочий-воин с рассекающим ударом.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deГрабеж|cffced4da: воины добывают золото при атаке зданий.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deЦитадель|cffced4da: открывает доступ к высшим технологиям расы.|r"
+    },
+    {
+      "type": "unit",
+      "id": "o05X",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание третьей ступени. Обеспечивает максимальный запас пищи и открывает все технологии расы.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da: базовый рабочий.|n- |cffa9c7deМутировавший Батрак|cffced4da: рабочий-воин с рассекающим ударом.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deГрабеж|cffced4da: воины добывают золото при атаке зданий.|r"
+    },
+    {
+      "type": "unit",
+      "id": "o060",
+      "field": "name",
+      "expected": "|cffe4cfa3Свиноферма|r"
+    },
+    {
+      "type": "unit",
+      "id": "o060",
+      "field": "tip",
+      "expected": "|cffe4cfa3Свиноферма|r (|cffffffffA|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o060",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию Орды Скверны провизией. Позволяет укрывать батраков для защиты базы.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|n|n|cffa6afb8Атакует наземные и воздушные цели|cffced4da (при укрытии батраков).|r"
+    },
+    {
+      "type": "unit",
+      "id": "o05Y",
+      "field": "name",
+      "expected": "|cffe4cfa3Алтарь скверны|r"
+    },
+    {
+      "type": "unit",
+      "id": "o05Y",
+      "field": "tip",
+      "expected": "|cffe4cfa3Алтарь скверны|r (|cffffffffS|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o05Y",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Позволяет призывать и воскрешать павших героев Орды Скверны.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deВоенный лорд|cffced4da: герой-воин ближнего боя (Сила).|n- |cffa9c7deМастер меча|cffced4da: мастер клинка ближнего боя (Ловкость).|n- |cffa9c7deОскверненный шаман|cffced4da: темный шаман дальнего боя (Интеллект).|r"
+    },
+    {
+      "type": "unit",
+      "id": "o05Z",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Базовое производственное сооружение Орды Скверны. Подготавливает пехоту, стрелков и осадные орудия.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da: базовый боец ближнего боя.|n- |cffa9c7deСтрелок|cffced4da: стрелок с арбалетом.|n- |cffa9c7deКопьеметатель|cffced4da: метатель копий дальнего боя.|n- |cffa9c7deТелохранитель вождя|cffced4da: тяжелый воин с аурой защиты.|n- |cffa9c7deРазрушитель|cffced4da: осадная катапульта дальнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deГорючая смесь|cffced4da: поджигает землю при атаке разрушителей.|n- |cffa9c7deГрубая сила|cffced4da: повышает здоровье и урон рубак.|n- |cffa9c7deСверхлегкие копья|cffced4da: увеличивает дальность атаки копьеметателей.|n- |cffa9c7deЗаточеный болт|cffced4da: повышает урон стрелков по тяжелой броне.|r"
+    },
+    {
+      "type": "unit",
+      "id": "o05T",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Служит пунктом сбора древесины и центром кузнечных разработок Орды Скверны.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОружие ближнего боя|cffced4da: повышает урон немагических войск ближнего боя.|n- |cffa9c7deОружие дальнего боя|cffced4da: повышает урон войск дальнего боя.|n- |cffa9c7deСтальная броня|cffced4da: повышает броню воинов ближнего боя.|n- |cffa9c7deУлучшенные пилы|cffced4da: увеличивает сбор древесины батраками.|n- |cffa9c7deПоощрять ярость|cffced4da: увеличивает урон бойцов ценой снижения здоровья.|n- |cffa9c7deПодавлять ярость|cffced4da: увеличивает здоровье бойцов ценой снижения урона.|n- |cffa9c7deГрабеж|cffced4da: воины добывают золото при атаке зданий.|r"
+    },
+    {
+      "type": "unit",
+      "id": "o061",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает могущественных заклинателей и магов поддержки Орды Скверны.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЧернокнижник Скверны|cffced4da: темный маг с рассеиванием и огненной стрелой.|n- |cffa9c7deШаман|cffced4da: заклинатель с раздвоенной молнией и жаждой крови.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбучение шаманов|cffced4da: открывает новые ранги и способности шаманов.|n- |cffa9c7deЧерная магия|cffced4da: открывает новые ранги и способности чернокнижников.|r"
+    },
+    {
+      "type": "unit",
+      "id": "o062",
+      "field": "tip",
+      "expected": "|cffe4cfa3Зверинец|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o062",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Содержит и тренирует боевых зверей, кавалерию и элитную охрану Орды Скверны.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da: быстрая волчья кавалерия с опутыванием и воем.|n- |cffa9c7deКодо Скверны|cffced4da: массивный зверь с пожиранием и аурой выносливости.|n- |cffa9c7deТелохранитель вождя|cffced4da: элитный тяжелый воин с аурой защиты.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deТренировки с волками|cffced4da: повышает скорость и урон налетчиков.|n- |cffa9c7deОбучение телохранителя|cffced4da: усиливает телохранителей вождя.|n- |cffa9c7deТренировки кодо|cffced4da: увеличивает запас здоровья и урон боевых кодо.|r"
+    },
+    {
+      "type": "unit",
+      "id": "o066",
+      "field": "name",
+      "expected": "|cffe4cfa3Оскверненный источник|r"
+    },
+    {
+      "type": "unit",
+      "id": "o066",
+      "field": "tip",
+      "expected": "|cffe4cfa3Оскверненный источник|r (|cffffffffX|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o066",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Мистический источник демонической энергии. Насыщает войска Скверной и открывает ритуалы развития армии.|n|n|cffa6afb8Ритуалы:|cffced4da|n- |cffa9c7deРитуал некромантии|cffced4da: открывает постройку Чертогов мертвых.|n- |cffa9c7deРитуал мутации|cffced4da: открывает обучение Мутировавших батраков.|n|n|cffa6afb8Улучшения:|cffced4da|n- Позволяет улучшать войска Орды Скверны до третьего ранга.|r"
+    },
+    {
+      "type": "unit",
+      "id": "o067",
+      "field": "name",
+      "expected": "|cffe4cfa3Чертоги мертвых|r"
+    },
+    {
+      "type": "unit",
+      "id": "o067",
+      "field": "tip",
+      "expected": "|cffe4cfa3Чертоги мертвых|r (|cffffffffF|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o067",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Центр изучения тёмных искусств и некромантии Орды Скверны.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deНекромант|cffced4da: темный маг, поднимающий скелетов из трупов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deИскусное воскрешение|cffced4da: позволяет призывать скелетов-защитников.|n- |cffa9c7deЖивучие скелеты|cffced4da: увеличивает длительность существования скелетов.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0D3",
+      "field": "name",
+      "expected": "|cffe4cfa3Верфь|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0D3",
+      "field": "tip",
+      "expected": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0D3",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Строит корабли и исследует улучшения морского флота.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспорт|cffced4da: перевозка сухопутных войск по воде.|n- |cffa9c7deФрегат|cffced4da: патрульный артиллерийский корабль.|n- |cffa9c7deДредноут|cffced4da: тяжелый бронированный флагман флота.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОбстрел|cffced4da.|n- |cffa9c7deДополнительные паруса|cffced4da.|n- |cffa9c7deПочинка|cffced4da.|n- |cffa9c7deОрудия флота|cffced4da.|n- |cffa9c7deУкреплённый корпус|cffced4da.|n|n|cffa9c7deЗона ремонта|cffced4da восстанавливает |cffc8e0872,5|cffced4da ед. здоровья в секунду союзным кораблям поблизости.|r"
+    },
+    {
+      "type": "unit",
+      "id": "owtw",
+      "field": "name",
+      "expected": "|cffe4cfa3Сторожевая башня|r"
+    },
+    {
+      "type": "unit",
+      "id": "owtw",
+      "field": "tip",
+      "expected": "|cffe4cfa3Сторожевая башня|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "N06P",
+      "field": "name",
+      "expected": "|cffe4cfa3Оскверненный шаман|r"
+    },
+    {
+      "type": "unit",
+      "id": "N06P",
+      "field": "tip",
+      "expected": "|cffe4cfa3Оскверненный шаман|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "N06P",
+      "field": "awakentip",
+      "expected": "|cffe4cfa3Оскверненный шаман|r"
+    },
+    {
+      "type": "unit",
+      "id": "N06P",
+      "field": "revivetip",
+      "expected": "|cffe4cfa3Оскверненный шаман|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "N06P",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Предводитель шаманов Скверны дальнего боя. Сокрушает противников молниями и призывает древних чудовищ из глубин.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПерст боли|cffced4da: темный разряд, последовательно поражающий нескольких врагов.|n- |cffa9c7deРассеивание заклинаний|cffced4da: снимает магические эффекты и наносит урон призванным существам.|n- |cffa9c7deОтражение скверны|cffced4da: пассивный щит, отражающий часть урона ближнего боя обратно врагам.|n- |cffa9c7deПризыв Забытого|cffced4da: призывает колоссального Забытого, атакующего врагов и порождающего щупальца.|n|n|cffa6afb8Основная характеристика:|r |cffffffffИнтеллект|r|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "N072",
+      "field": "name",
+      "expected": "|cffe4cfa3Военный лорд|r"
+    },
+    {
+      "type": "unit",
+      "id": "N072",
+      "field": "tip",
+      "expected": "|cffe4cfa3Военный лорд|r (|cffffffffC|r)"
+    },
+    {
+      "type": "unit",
+      "id": "N072",
+      "field": "awakentip",
+      "expected": "|cffe4cfa3Военный лорд|r"
+    },
+    {
+      "type": "unit",
+      "id": "N072",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Грозный полководец ближнего боя. Ведёт солдат в бой, подавляя врагов аурой страха и сокрушительным расколом земли.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМетнуть топор|cffced4da: бросок топора, наносящий урон и оглушающий цель.|n- |cffa9c7deВсплеск ярости|cffced4da: значительно ускоряет атаку ценой увеличения получаемого урона.|n- |cffa9c7deАура Страха|cffced4da: снижает скорость передвижения и атаки находящихся рядом врагов.|n- |cffa9c7deРазкол|cffced4da: сокрушительный удар по земле с колоссальным уроном и замедлением.|n|n|cffa6afb8Основная характеристика:|r |cffffffffСила|r|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "N073",
+      "field": "name",
+      "expected": "|cffe4cfa3Мастер меча|r"
+    },
+    {
+      "type": "unit",
+      "id": "N073",
+      "field": "tip",
+      "expected": "|cffe4cfa3Мастер меча|r (|cffffffffX|r)"
+    },
+    {
+      "type": "unit",
+      "id": "N073",
+      "field": "awakentip",
+      "expected": "|cffe4cfa3Мастер меча|r"
+    },
+    {
+      "type": "unit",
+      "id": "N073",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Непревзойденный дуэлянт и мастер клинка. Рассекает врагов молниеносными атаками из тени и смертоносным вихрем стали.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТанец ветра|cffced4da: невидимость и ускорение с критическим ударом при выходе.|n- |cffa9c7deУскользание|cffced4da: вероятность уклониться от вражеских атак.|n- |cffa9c7deКритический удар|cffced4da: шанс нанести многократный урон при атаке.|n- |cffa9c7deВихрь клинков|cffced4da: вихрь ударов с невосприимчивостью к магии и уроном в секунду вокруг.|n|n|cffa6afb8Основная характеристика:|r |cffffffffЛовкость|r|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0D5",
+      "field": "name",
+      "expected": "|cffe4cfa3Дредноут|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0D5",
+      "field": "tip",
+      "expected": "|cffe4cfa3Дредноут|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0D5",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Тяжелый бронированный флагман флота Орды дальнего боя.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0D6",
+      "field": "name",
+      "expected": "|cffe4cfa3Фрегат|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0D6",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Боевой патрульный корабль Орды, атакующий морские и береговые цели.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06B",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий Орды Скверны. Добывает золото и древесину, возводит и ремонтирует постройки.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06F",
+      "field": "name",
+      "expected": "|cffe4cfa3Мутировавший Батрак|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06F",
+      "field": "tip",
+      "expected": "|cffe4cfa3Мутировавший Батрак|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n06F",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Мутировавший рабочий-воин Орды Скверны.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРассекающий удар|cffced4da: наносит урон по области рядом с основной целью.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n068",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Базовый воин ближнего боя первого ранга.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06L",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Усиленный воин ближнего боя второго ранга.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06T",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Элитный ветеран ближнего боя третьего ранга с повышенным запасом здоровья и уроном.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06D",
+      "field": "name",
+      "expected": "|cffe4cfa3Стрелок|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06D",
+      "field": "tip",
+      "expected": "|cffe4cfa3Стрелок|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n06D",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Базовый стрелок первого ранга с арбалетом.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06M",
+      "field": "name",
+      "expected": "|cffe4cfa3Стрелок|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06M",
+      "field": "tip",
+      "expected": "|cffe4cfa3Стрелок|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n06M",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Усиленный стрелок второго ранга с арбалетом.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06Q",
+      "field": "name",
+      "expected": "|cffe4cfa3Стрелок|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06Q",
+      "field": "tip",
+      "expected": "|cffe4cfa3Стрелок|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n06Q",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Элитный стрелок третьего ранга с увеличенной дальностью и бронебойными болтами.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06G",
+      "field": "name",
+      "expected": "|cffe4cfa3Копьеметатель|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06G",
+      "field": "tip",
+      "expected": "|cffe4cfa3Копьеметатель|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n06G",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Метатель тяжелых копий первого ранга дальнего боя.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06J",
+      "field": "name",
+      "expected": "|cffe4cfa3Копьеметатель|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06J",
+      "field": "tip",
+      "expected": "|cffe4cfa3Копьеметатель|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n06J",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Усиленный метатель тяжелых копий второго ранга дальнего боя.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06W",
+      "field": "name",
+      "expected": "|cffe4cfa3Копьеметатель|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06W",
+      "field": "tip",
+      "expected": "|cffe4cfa3Копьеметатель|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n06W",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Элитный метатель тяжелых копий третьего ранга с повышенной дальностью поражения.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "o05Q",
+      "field": "name",
+      "expected": "|cffe4cfa3Телохранитель вождя|r"
+    },
+    {
+      "type": "unit",
+      "id": "o05Q",
+      "field": "tip",
+      "expected": "|cffe4cfa3Телохранитель вождя|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o05Q",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Тяжелый пехотинец первого ранга, защищающий вождей Орды.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Защиты|cffced4da: повышает броню находящихся рядом союзников.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "o065",
+      "field": "name",
+      "expected": "|cffe4cfa3Телохранитель вождя|r"
+    },
+    {
+      "type": "unit",
+      "id": "o065",
+      "field": "tip",
+      "expected": "|cffe4cfa3Телохранитель вождя|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o065",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Усиленный тяжелый пехотинец второго ранга.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Защиты|cffced4da: повышает броню находящихся рядом союзников.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "o063",
+      "field": "name",
+      "expected": "|cffe4cfa3Телохранитель вождя|r"
+    },
+    {
+      "type": "unit",
+      "id": "o063",
+      "field": "tip",
+      "expected": "|cffe4cfa3Телохранитель вождя|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "o063",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Элитный тяжелый пехотинец третьего ранга с непревзойденной защитой.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Защиты|cffced4da: повышает броню находящихся рядом союзников.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "o05R",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Дальнобойная осадная катапульта, эффективная против зданий и укреплений.|n|n|cffa6afb8Атакует наземные цели и деревья.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n067",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Темный маг первого ранга, владеющий огненными стрелами и рассеиванием.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06R",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Усиленный темный маг второго ранга.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06N",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Высший чернокнижник третьего ранга с максимальным запасом маны.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06C",
+      "field": "name",
+      "expected": "|cffe4cfa3Шаман|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06C",
+      "field": "tip",
+      "expected": "|cffe4cfa3Шаман|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n06C",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Заклинатель поддержки первого ранга с раздвоенной молнией и жаждой крови.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06S",
+      "field": "name",
+      "expected": "|cffe4cfa3Шаман|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06S",
+      "field": "tip",
+      "expected": "|cffe4cfa3Шаман|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n06S",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Усиленный заклинатель поддержки второго ранга.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06O",
+      "field": "name",
+      "expected": "|cffe4cfa3Шаман|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06O",
+      "field": "tip",
+      "expected": "|cffe4cfa3Шаман|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n06O",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Высший шаман третьего ранга с мощными стихийными чарами.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n069",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Быстрый кавалерист первого ранга на волке, способный обездвиживать врагов сетью.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06U",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Усиленный кавалерист второго ранга с боевым кличем.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06K",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Элитный налетчик третьего ранга с высокой скоростью и сокрушительным уроном.|n|n|cffa6afb8Атакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06A",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Массивный боевой зверь первого ранга с барабанами и пожиранием.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06I",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Усиленный боевой зверь второго ранга с аурой выносливости.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n06V",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Исполинский кодо третьего ранга с колоссальным запасом здоровья.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "n070",
+      "field": "name",
+      "expected": "|cffe4cfa3Некромант|r"
+    },
+    {
+      "type": "unit",
+      "id": "n070",
+      "field": "tip",
+      "expected": "|cffe4cfa3Некромант|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "n070",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Темный маг Орды Скверны, поднимающий скелетов из трупов врагов.|n|n|cffa6afb8Атакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R00Y",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Покрывает снаряды катапульт горючей смесью, позволяя им поджигать землю и наносить периодический урон.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JQ",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск дальнего боя на |cffc8e087+5|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JQ",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск дальнего боя на |cffc8e087+10|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JQ",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск дальнего боя на |cffc8e087+15|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JQ",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск дальнего боя на |cffc8e087+20|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JQ",
+      "field": "ubertip5",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск дальнего боя на |cffc8e087+25|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JQ",
+      "field": "ubertip6",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск дальнего боя на |cffc8e087+30|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da|n- |cffa9c7deРазрушитель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JQ",
+      "field": "name4",
+      "expected": "|cffe4cfa3Оружие дальнего боя|r — уровень 4"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JQ",
+      "field": "name5",
+      "expected": "|cffe4cfa3Оружие дальнего боя|r — уровень 5"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JQ",
+      "field": "name6",
+      "expected": "|cffe4cfa3Оружие дальнего боя|r — уровень 6"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JQ",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Оружие дальнего боя — уровень 4|r (|cffffffffR|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JQ",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Оружие дальнего боя — уровень 5|r (|cffffffffR|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JQ",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Оружие дальнего боя — уровень 6|r (|cffffffffR|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JR",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя Орды Скверны на |cffc8e087+2|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JR",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя Орды Скверны на |cffc8e087+4|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JR",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя Орды Скверны на |cffc8e087+6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JR",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя Орды Скверны на |cffc8e087+8|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JR",
+      "field": "ubertip5",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя Орды Скверны на |cffc8e087+10|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JR",
+      "field": "ubertip6",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню воинов ближнего боя Орды Скверны на |cffc8e087+12|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JR",
+      "field": "name1",
+      "expected": "|cffe4cfa3Стальная броня|r — уровень 1"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JR",
+      "field": "name4",
+      "expected": "|cffe4cfa3Стальная броня|r — уровень 4"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JR",
+      "field": "name5",
+      "expected": "|cffe4cfa3Стальная броня|r — уровень 5"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JR",
+      "field": "name6",
+      "expected": "|cffe4cfa3Стальная броня|r — уровень 6"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JR",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Стальная броня — уровень 4|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JR",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Стальная броня — уровень 5|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JR",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Стальная броня — уровень 6|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JS",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск ближнего боя на |cffc8e087+6|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deМутировавший Батрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JS",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск ближнего боя на |cffc8e087+12|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deМутировавший Батрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JS",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск ближнего боя на |cffc8e087+18|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deМутировавший Батрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JS",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск ближнего боя на |cffc8e087+24|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deМутировавший Батрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JS",
+      "field": "ubertip5",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск ближнего боя на |cffc8e087+30|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deМутировавший Батрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JS",
+      "field": "ubertip6",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон немагических войск ближнего боя на |cffc8e087+36|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da|n- |cffa9c7deМутировавший Батрак|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JS",
+      "field": "name1",
+      "expected": "|cffe4cfa3Оружие ближнего боя|r — уровень 1"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JS",
+      "field": "name4",
+      "expected": "|cffe4cfa3Оружие ближнего боя|r — уровень 4"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JS",
+      "field": "name5",
+      "expected": "|cffe4cfa3Оружие ближнего боя|r — уровень 5"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JS",
+      "field": "name6",
+      "expected": "|cffe4cfa3Оружие ближнего боя|r — уровень 6"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JS",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Оружие ближнего боя — уровень 4|r (|cffffffffM|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JS",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Оружие ближнего боя — уровень 5|r (|cffffffffM|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JS",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Оружие ближнего боя — уровень 6|r (|cffffffffM|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JU",
+      "field": "name1",
+      "expected": "|cffe4cfa3Обучение шаманов|r — уровень 1"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JU",
+      "field": "name2",
+      "expected": "|cffe4cfa3Обучение шаманов|r — уровень 2"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JU",
+      "field": "name3",
+      "expected": "|cffe4cfa3Обучение шаманов|r — уровень 3"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JU",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Обучение шаманов — уровень 1|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JU",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Обучение шаманов — уровень 2|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JU",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Обучение шаманов — уровень 3|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JU",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья шаманов на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед. и скорость регенерации маны на |cffc8e087+33%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШаман|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JU",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья шаманов на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед. и скорость регенерации маны на |cffc8e087+33%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШаман|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JU",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья шаманов на |cffc8e087+40|cffced4da ед., запас маны на |cffc8e087+100|cffced4da ед. и скорость регенерации маны на |cffc8e087+33%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШаман|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JV",
+      "field": "name1",
+      "expected": "|cffe4cfa3Черная магия|r — уровень 1"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JV",
+      "field": "name2",
+      "expected": "|cffe4cfa3Черная магия|r — уровень 2"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JV",
+      "field": "name3",
+      "expected": "|cffe4cfa3Черная магия|r — уровень 3"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JV",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Черная магия — уровень 1|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JV",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Черная магия — уровень 2|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JV",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Черная магия — уровень 3|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JV",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья чернокнижников на |cffc8e087+60|cffced4da ед., запас маны на |cffc8e087+50|cffced4da ед. и скорость регенерации маны на |cffc8e087+33%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЧернокнижник Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JV",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья чернокнижников на |cffc8e087+60|cffced4da ед., запас маны на |cffc8e087+50|cffced4da ед. и скорость регенерации маны на |cffc8e087+33%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЧернокнижник Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JV",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья чернокнижников на |cffc8e087+60|cffced4da ед., запас маны на |cffc8e087+50|cffced4da ед. и скорость регенерации маны на |cffc8e087+33%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЧернокнижник Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JW",
+      "field": "name1",
+      "expected": "|cffe4cfa3Заточеный болт|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JW",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Заточеный болт|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JW",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелков на |cffc8e087+5|cffced4da ед. и увеличивает эффективность пробития тяжелой брони.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JX",
+      "field": "name1",
+      "expected": "|cffe4cfa3Сверхлегкие копья|r — уровень 1"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JX",
+      "field": "name2",
+      "expected": "|cffe4cfa3Сверхлегкие копья|r — уровень 2"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JX",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Сверхлегкие копья — уровень 1|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JX",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Сверхлегкие копья — уровень 2|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JX",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает дальность атаки копьеметателей на |cffc8e087+50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JX",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает дальность атаки копьеметателей на |cffc8e087+50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКопьеметатель|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JY",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас здоровья рубак на |cffc8e087+100|cffced4da ед. и урон от их атак на |cffc8e087+3|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JZ",
+      "field": "name1",
+      "expected": "|cffe4cfa3Тренировки с волками|r — уровень 1"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JZ",
+      "field": "name2",
+      "expected": "|cffe4cfa3Тренировки с волками|r — уровень 2"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JZ",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Тренировки с волками — уровень 1|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JZ",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Тренировки с волками — уровень 2|r (|cffffffffA|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JZ",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость передвижения налетчиков на |cffc8e087+15|cffced4da ед. и повышает их урон на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0JZ",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость передвижения налетчиков на |cffc8e087+15|cffced4da ед. и повышает их урон на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K0",
+      "field": "name1",
+      "expected": "|cffe4cfa3Обучение телохранителя|r — уровень 1"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K0",
+      "field": "name2",
+      "expected": "|cffe4cfa3Обучение телохранителя|r — уровень 2"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K0",
+      "field": "name3",
+      "expected": "|cffe4cfa3Обучение телохранителя|r — уровень 3"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K0",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Обучение телохранителя — уровень 1|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K0",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Обучение телохранителя — уровень 2|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K0",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Обучение телохранителя — уровень 3|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K0",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья телохранителей на |cffc8e087+30|cffced4da ед. и повышает их боевые характеристики.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K0",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья телохранителей на |cffc8e087+30|cffced4da ед. и повышает их боевые характеристики.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K0",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья телохранителей на |cffc8e087+30|cffced4da ед. и повышает их боевые характеристики.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff3|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "name1",
+      "expected": "|cffe4cfa3Улучшенные пилы|r — уровень 1"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Улучшенные пилы — уровень 1|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "name2",
+      "expected": "|cffe4cfa3Улучшенные пилы|r — уровень 2"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Улучшенные пилы — уровень 2|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffc8e087+10|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "name3",
+      "expected": "|cffe4cfa3Улучшенные пилы|r — уровень 3"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Улучшенные пилы — уровень 3|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffc8e087+15|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "name4",
+      "expected": "|cffe4cfa3Улучшенные пилы|r — уровень 4"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Улучшенные пилы — уровень 4|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffc8e087+20|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "name5",
+      "expected": "|cffe4cfa3Улучшенные пилы|r — уровень 5"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Улучшенные пилы — уровень 5|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "ubertip5",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffc8e087+25|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "name6",
+      "expected": "|cffe4cfa3Улучшенные пилы|r — уровень 6"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Улучшенные пилы — уровень 6|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K1",
+      "field": "ubertip6",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает количество переносимой батраками древесины на |cffc8e087+30|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБатрак Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "name1",
+      "expected": "|cffe4cfa3Поощрять ярость|r — уровень 1"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Поощрять ярость — уровень 1|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов на |cffc8e087+8|cffced4da ед. ценой снижения их здоровья на |cffe69a8d-60|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "name2",
+      "expected": "|cffe4cfa3Поощрять ярость|r — уровень 2"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Поощрять ярость — уровень 2|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов на |cffc8e087+16|cffced4da ед. ценой снижения их здоровья на |cffe69a8d-120|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "name3",
+      "expected": "|cffe4cfa3Поощрять ярость|r — уровень 3"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Поощрять ярость — уровень 3|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов на |cffc8e087+24|cffced4da ед. ценой снижения их здоровья на |cffe69a8d-180|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "name4",
+      "expected": "|cffe4cfa3Поощрять ярость|r — уровень 4"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Поощрять ярость — уровень 4|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов на |cffc8e087+32|cffced4da ед. ценой снижения их здоровья на |cffe69a8d-240|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "name5",
+      "expected": "|cffe4cfa3Поощрять ярость|r — уровень 5"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Поощрять ярость — уровень 5|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "ubertip5",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов на |cffc8e087+40|cffced4da ед. ценой снижения их здоровья на |cffe69a8d-300|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "name6",
+      "expected": "|cffe4cfa3Поощрять ярость|r — уровень 6"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Поощрять ярость — уровень 6|r (|cffffffffD|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K2",
+      "field": "ubertip6",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон воинов на |cffc8e087+48|cffced4da ед. ценой снижения их здоровья на |cffe69a8d-360|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "name1",
+      "expected": "|cffe4cfa3Подавлять ярость|r — уровень 1"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Подавлять ярость — уровень 1|r (|cffffffffF|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье воинов на |cffc8e087+60|cffced4da ед. ценой снижения их урона на |cffe69a8d-8|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "name2",
+      "expected": "|cffe4cfa3Подавлять ярость|r — уровень 2"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Подавлять ярость — уровень 2|r (|cffffffffF|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье воинов на |cffc8e087+120|cffced4da ед. ценой снижения их урона на |cffe69a8d-16|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "name3",
+      "expected": "|cffe4cfa3Подавлять ярость|r — уровень 3"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Подавлять ярость — уровень 3|r (|cffffffffF|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье воинов на |cffc8e087+180|cffced4da ед. ценой снижения их урона на |cffe69a8d-24|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "name4",
+      "expected": "|cffe4cfa3Подавлять ярость|r — уровень 4"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Подавлять ярость — уровень 4|r (|cffffffffF|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье воинов на |cffc8e087+240|cffced4da ед. ценой снижения их урона на |cffe69a8d-32|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff4|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "name5",
+      "expected": "|cffe4cfa3Подавлять ярость|r — уровень 5"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "tip5",
+      "expected": "|cffe4cfa3Подавлять ярость — уровень 5|r (|cffffffffF|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "ubertip5",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье воинов на |cffc8e087+300|cffced4da ед. ценой снижения их урона на |cffe69a8d-40|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff5|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "name6",
+      "expected": "|cffe4cfa3Подавлять ярость|r — уровень 6"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "tip6",
+      "expected": "|cffe4cfa3Подавлять ярость — уровень 6|r (|cffffffffF|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K3",
+      "field": "ubertip6",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье воинов на |cffc8e087+360|cffced4da ед. ценой снижения их урона на |cffe69a8d-48|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВойскам Орды Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff6|cffced4da/|cffffffff6|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K5",
+      "field": "name1",
+      "expected": "|cffe4cfa3Тренировки кодо|r — уровень 1"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K5",
+      "field": "name2",
+      "expected": "|cffe4cfa3Тренировки кодо|r — уровень 2"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K5",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Тренировки кодо — уровень 1|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K5",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Тренировки кодо — уровень 2|r (|cffffffffS|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K5",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья кодо Скверны на |cffc8e087+50|cffced4da ед. и повышает их урон на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff1|cffced4da/|cffffffff2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K5",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья кодо Скверны на |cffc8e087+50|cffced4da ед. и повышает их урон на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКодо Скверны|cffced4da.|n|n|cffa6afb8Уровень исследования:|r |cffffffff2|cffced4da/|cffffffff2|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K6",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Один из скелетов, призываемых некромантами с помощью «Воскрешения мертвых», становится усиленным Орком-защитником.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНекромант|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0K7",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает время жизни призванных скелетов-воинов и скелетов-магов на |cffc8e087+15|cffced4da сек.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНекромант|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Roen",
+      "field": "name1",
+      "expected": "|cffe4cfa3Опутывание|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Roen",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Опутывание|r (|cffffffffN|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Roen",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дарует налетчикам способность «Опутывание», притягивающую врага к земле и лишающую его возможности двигаться.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Ropg",
+      "field": "name1",
+      "expected": "|cffe4cfa3Грабеж|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "Ropg",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Грабеж|r (|cffffffffR|r)"
+    },
+    {
+      "type": "upgrade",
+      "id": "Ropg",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Воины ближнего боя Орды Скверны добывают золото при нанесении урона вражеским постройкам.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРубака Скверны|cffced4da|n- |cffa9c7deТелохранитель вождя|cffced4da|n- |cffa9c7deНалетчик Скверны|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A01C",
+      "field": "name",
+      "expected": "|cffe4cfa3Свечение героя|r"
+    },
+    {
+      "type": "ability",
+      "id": "A01C",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Свечение героя|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B7",
+      "field": "name",
+      "expected": "|cffe4cfa3Призыв Забытого|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B7",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Призыв Забытого — уровень 1|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0B7",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Призыв Забытого — уровень 2|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0B7",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает из глубин |cffffffff1|cffced4da Забытого, способного атаковать врагов и порождать щупальца.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B7",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает из глубин |cffffffff3|cffced4da Забытых, способных атаковать врагов и порождать щупальца.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B7",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Призыв Забытого|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0B7",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает из глубин древних Забытых, способных порождать щупальца и сокрушать армии врагов.|n|n|cffa6afb8Уровень 1:|r призывает |cffffffff1|cffced4da Забытого.|n|cffa6afb8Уровень 2:|r призывает |cffffffff3|cffced4da Забытых.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0BE",
+      "field": "name",
+      "expected": "|cffe4cfa3Рассеивание заклинаний|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0BE",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Рассеивание заклинаний — уровень 1|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0BE",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Рассеивание заклинаний — уровень 2|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0BE",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Рассеивание заклинаний — уровень 3|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0BE",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Рассеивание заклинаний — уровень 4|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0BE",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает магические эффекты в указанной области и наносит |cffe69a8d200|cffced4da ед. урона призванным существам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0BE",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает магические эффекты в указанной области и наносит |cffe69a8d300|cffced4da ед. урона призванным существам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0BE",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает магические эффекты в указанной области и наносит |cffe69a8d400|cffced4da ед. урона призванным существам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0BE",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает магические эффекты в указанной области и наносит |cffe69a8d600|cffced4da ед. урона призванным существам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0BE",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Рассеивание заклинаний|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0BE",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает магические эффекты с войск в указанной области и наносит урон призванным существам.|n|n|cffa6afb8Уровень 1:|r наносит |cffe69a8d200|cffced4da урона призывам.|n|cffa6afb8Уровень 2:|r наносит |cffe69a8d300|cffced4da урона призывам.|n|cffa6afb8Уровень 3:|r наносит |cffe69a8d400|cffced4da урона призывам.|n|cffa6afb8Уровень 4:|r наносит |cffe69a8d600|cffced4da урона призывам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0EN",
+      "field": "name",
+      "expected": "|cffe4cfa3Метнуть топор|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0EN",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Метнуть топор — уровень 1|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0EN",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Метнуть топор — уровень 2|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0EN",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Метнуть топор — уровень 3|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0EN",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Метнуть топор — уровень 4|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0EN",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc8e087100|cffced4da ед. урона и оглушая цель на |cffffffff5|cffced4da сек. (|cffffffff0,3|cffced4da сек. героев).|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0EN",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc8e087200|cffced4da ед. урона и оглушая цель на |cffffffff5|cffced4da сек. (|cffffffff0,4|cffced4da сек. героев).|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0EN",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc8e087325|cffced4da ед. урона и оглушая цель на |cffffffff5|cffced4da сек. (|cffffffff0,5|cffced4da сек. героев).|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0EN",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, нанося |cffc8e087500|cffced4da ед. урона и оглушая цель на |cffffffff5|cffced4da сек. (|cffffffff0,6|cffced4da сек. героев).|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0EN",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Метнуть топор|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0EN",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает топор, оглушая цель и нанося ей урон.|n|n|cffa6afb8Уровень 1:|r |cffc8e087100|cffced4da ед. урона, оглушение 5/0,3 сек.|n|cffa6afb8Уровень 2:|r |cffc8e087200|cffced4da ед. урона, оглушение 5/0,4 сек.|n|cffa6afb8Уровень 3:|r |cffc8e087325|cffced4da ед. урона, оглушение 5/0,5 сек.|n|cffa6afb8Уровень 4:|r |cffc8e087500|cffced4da ед. урона, оглушение 5/0,6 сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0I3",
+      "field": "name",
+      "expected": "|cffe4cfa3Небольшой скачок|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0I3",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0I3",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит рабочего на небольшое расстояние.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0I3",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Небольшой скачок|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0I3",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит рабочего на небольшое расстояние.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0IQ",
+      "field": "name",
+      "expected": "|cffe4cfa3Обозначить столицу|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0IQ",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Обозначить столицу|r (|cffffffffX|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0IQ",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Назначает главное здание столицей игрока, многократно увеличивая его запас прочности.|n|n|cffe6c07bВнимание:|r при потере столицы вы терпите поражение или переходите в статус вассала.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0LI",
+      "field": "name",
+      "expected": "|cffe4cfa3Обмен золота на дерево|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0LI",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Обмен золота на дерево|r (|cffffffffS|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0LI",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает |cffe69a8d500|cffced4da ед. золота на |cffc8e087100|cffced4da ед. древесины.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0LJ",
+      "field": "name",
+      "expected": "|cffe4cfa3Обмен дерева на золото|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0LJ",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Обмен дерева на золото|r (|cffffffffA|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0LJ",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает |cffe69a8d500|cffced4da ед. древесины на |cffc8e087100|cffced4da ед. золота.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0N7",
+      "field": "name",
+      "expected": "|cffe4cfa3Перст боли|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0N7",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Перст боли — уровень 1|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0N7",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Перст боли — уровень 2|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0N7",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Перст боли — уровень 3|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0N7",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Перст боли — уровень 4|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0N7",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Темный разряд, последовательно поражающий до |cffffffff4|cffced4da врагов и наносящий первому |cffc8e08785|cffced4da ед. урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0N7",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Темный разряд, последовательно поражающий до |cffffffff6|cffced4da врагов и наносящий первому |cffc8e087160|cffced4da ед. урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0N7",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Темный разряд, последовательно поражающий до |cffffffff8|cffced4da врагов и наносящий первому |cffc8e087250|cffced4da ед. урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0N7",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Темный разряд, последовательно поражающий до |cffffffff12|cffced4da врагов и наносящий первому |cffc8e087355|cffced4da ед. урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0N7",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Перст боли|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0N7",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Темный разряд, последовательно поражающий нескольких противников с постепенным снижением урона.|n|n|cffa6afb8Уровень 1:|r |cffc8e08785|cffced4da ед. урона, до 4 целей.|n|cffa6afb8Уровень 2:|r |cffc8e087160|cffced4da ед. урона, до 6 целей.|n|cffa6afb8Уровень 3:|r |cffc8e087250|cffced4da ед. урона, до 8 целей.|n|cffa6afb8Уровень 4:|r |cffc8e087355|cffced4da ед. урона, до 12 целей.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A14L",
+      "field": "name",
+      "expected": "|cffe4cfa3Рассеивание чар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A14L",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Рассеивание чар|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A14L",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снимает положительные эффекты с врагов и отрицательные с союзников в указанной области, а также наносит урон призывам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1HW",
+      "field": "name",
+      "expected": "|cffe4cfa3Кодо Скверны — ранг 2|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1HW",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Кодо Скверны — ранг 2|r (|cffffffffX|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1HW",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает кодо Скверны, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deНалетчиков Скверны|r.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1HX",
+      "field": "name",
+      "expected": "|cffe4cfa3Копьеметатель — ранг 2|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1HX",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Копьеметатель — ранг 2|r (|cffffffffX|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1HX",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает копьеметателей, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deСтрелков|r.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1HY",
+      "field": "name",
+      "expected": "|cffe4cfa3Налетчик Скверны — ранг 2|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1HY",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Налетчик Скверны — ранг 2|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1HY",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает налетчиков Скверны, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deКодо Скверны|r.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1HZ",
+      "field": "name",
+      "expected": "|cffe4cfa3Рубака Скверны — ранг 2|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1HZ",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Рубака Скверны — ранг 2|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1HZ",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает рубак Скверны, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deТелохранителей вождя|r.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1I0",
+      "field": "name",
+      "expected": "|cffe4cfa3Стрелок — ранг 2|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1I0",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Стрелок — ранг 2|r (|cffffffffC|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1I0",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает стрелков, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deКопьеметателей|r.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1I1",
+      "field": "name",
+      "expected": "|cffe4cfa3Телохранитель вождя — ранг 2|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1I1",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Телохранитель вождя — ранг 2|r (|cffffffffC|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1I1",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает телохранителей вождя, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deРубак Скверны|r.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1I2",
+      "field": "name",
+      "expected": "|cffe4cfa3Чернокнижник Скверны — ранг 2|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1I2",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Чернокнижник Скверны — ранг 2|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1I2",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает чернокнижников Скверны, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deШаманов|r.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1I3",
+      "field": "name",
+      "expected": "|cffe4cfa3Шаман — ранг 2|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1I3",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Шаман — ранг 2|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1I3",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает шаманов, повышая их боевые характеристики до 2 ранга.|n|n|cffe6c07bВнимание:|r исключает возможность усиления |cffa9c7deЧернокнижников Скверны|r.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1II",
+      "field": "name",
+      "expected": "|cffe4cfa3Отражение скверны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1II",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Отражение скверны — уровень 1|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1II",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Отражение скверны — уровень 2|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1II",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Отражение скверны — уровень 3|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1II",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Отражение скверны — уровень 4|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1II",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Окружает союзников щитом, отражающим |cffc8e08721%|cffced4da полученного урона ближнего боя обратно атакующим врагам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1II",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Отражение скверны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1II",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует щит, отражающий часть получаемого в ближнем бою урона обратно врагам.|n|n|cffa6afb8Уровень 1:|r отражает |cffc8e08710%|cffced4da урона.|n|cffa6afb8Уровень 2:|r отражает |cffc8e08713%|cffced4da урона.|n|cffa6afb8Уровень 3:|r отражает |cffc8e08717%|cffced4da урона.|n|cffa6afb8Уровень 4:|r отражает |cffc8e08721%|cffced4da урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IM",
+      "field": "name",
+      "expected": "|cffe4cfa3Кодо Скверны — ранг 3|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IM",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Кодо Скверны — ранг 3|r (|cffffffffX|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1IM",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает кодо Скверны, повышая их боевые характеристики до высшего 3 ранга.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IN",
+      "field": "name",
+      "expected": "|cffe4cfa3Копьеметатель — ранг 3|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IN",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Копьеметатель — ранг 3|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1IN",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает копьеметателей, повышая их боевые характеристики до высшего 3 ранга.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IO",
+      "field": "name",
+      "expected": "|cffe4cfa3Налетчик Скверны — ранг 3|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IO",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Налетчик Скверны — ранг 3|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1IO",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает налетчиков Скверны, повышая их боевые характеристики до высшего 3 ранга.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IP",
+      "field": "name",
+      "expected": "|cffe4cfa3Рубака Скверны — ранг 3|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IP",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Рубака Скверны — ранг 3|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1IP",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает рубак Скверны, повышая их боевые характеристики до высшего 3 ранга.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IQ",
+      "field": "name",
+      "expected": "|cffe4cfa3Стрелок — ранг 3|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IQ",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Стрелок — ранг 3|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1IQ",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает стрелков, повышая их боевые характеристики до высшего 3 ранга.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IR",
+      "field": "name",
+      "expected": "|cffe4cfa3Телохранитель вождя — ранг 3|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IR",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Телохранитель вождя — ранг 3|r (|cffffffffC|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1IR",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает телохранителей вождя, повышая их боевые характеристики до высшего 3 ранга.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IS",
+      "field": "name",
+      "expected": "|cffe4cfa3Чернокнижник Скверны — ранг 3|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IS",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Чернокнижник Скверны — ранг 3|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1IS",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает чернокнижников Скверны, повышая их боевые характеристики до высшего 3 ранга.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IT",
+      "field": "name",
+      "expected": "|cffe4cfa3Шаман — ранг 3|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IT",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Шаман — ранг 3|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1IT",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает шаманов, повышая их боевые характеристики до высшего 3 ранга.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IU",
+      "field": "name",
+      "expected": "|cffe4cfa3Ярость|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IU",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Ярость|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IU",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Позволяет воинам Скверны балансировать между повышенным уроном и запасом здоровья.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IV",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает сгусток темного огня, наносящий |cffc8e087100|cffced4da ед. урона и оглушающий цель.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IW",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает молнией до |cffffffff3|cffced4da врагов в секторе перед собой, нанося |cffc8e087100|cffced4da ед. урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IX",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки союзника на |cffc8e087+40%|cffced4da и скорость передвижения на |cffc8e087+25%|cffced4da на |cffffffff30|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IY",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дает |cffffffff15%|cffced4da шанс нанести двукратный урон при атаке.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IZ",
+      "field": "name",
+      "expected": "|cffe4cfa3Заточеный болт|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IZ",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Заточеный болт|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1IZ",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит дополнительный урон по врагам с тяжелым типом брони.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J1",
+      "field": "name",
+      "expected": "|cffe4cfa3Вой|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J1",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Вой|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1J1",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Издает свирепый вой, повышающий урон союзников на |cffc8e087+25%|cffced4da и броню на |cffc8e087+4|cffced4da ед. на |cffffffff30|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J3",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость атаки на |cffc8e087+50%|cffced4da ценой увеличения получаемого урона на |cffe69a8d+20%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J4",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff15%|cffced4da наносит на |cffc8e087+20|cffced4da ед. больше урона и оглушает цель на |cffffffff2|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J5",
+      "field": "name",
+      "expected": "|cffe4cfa3Огненный болт|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J5",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Огненный болт|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1J5",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Добавляет дополнительный огненный урон к каждой дистанционной атаке.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J7",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Аура выносливости|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J7",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения находящихся рядом союзников на |cffc8e087+10%|cffced4da и скорость их атаки на |cffc8e087+5%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J8",
+      "field": "name",
+      "expected": "|cffe4cfa3Всплеск ярости|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J8",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Всплеск ярости — уровень 1|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1J8",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Всплеск ярости — уровень 2|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1J8",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Всплеск ярости — уровень 3|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1J8",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Всплеск ярости — уровень 4|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1J8",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость атаки на |cffc8e087+400%|cffced4da, но увеличивает получаемый урон на |cffe69a8d+50%|cffced4da на |cffffffff12|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J8",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость атаки на |cffc8e087+400%|cffced4da, но увеличивает получаемый урон на |cffe69a8d+45%|cffced4da на |cffffffff12|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J8",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость атаки на |cffc8e087+400%|cffced4da, но увеличивает получаемый урон на |cffe69a8d+40%|cffced4da на |cffffffff12|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J8",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость атаки на |cffc8e087+400%|cffced4da, но увеличивает получаемый урон на |cffe69a8d+35%|cffced4da на |cffffffff12|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J8",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Всплеск ярости|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J8",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Многократно увеличивает скорость боя ценой получения повышенного урона. Действует 12 сек.|n|n|cffa6afb8Уровень 1:|r +400% скорости, +50% получаемого урона.|n|cffa6afb8Уровень 2:|r +400% скорости, +45% получаемого урона.|n|cffa6afb8Уровень 3:|r +400% скорости, +40% получаемого урона.|n|cffa6afb8Уровень 4:|r +400% скорости, +35% получаемого урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J9",
+      "field": "name",
+      "expected": "|cffe4cfa3Разкол|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J9",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сокрушает землю, нанося |cffc8e087400|cffced4da ед. урона наземным врагам и замедляя их скорость передвижения и атаки.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J9",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сокрушает землю, нанося |cffc8e087500|cffced4da ед. урона наземным врагам и замедляя их скорость передвижения и атаки.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J9",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Разкол|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1J9",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сокрушает землю, нанося урон наземным врагам вокруг и существенно замедляя их атаку и бег.|n|n|cffa6afb8Уровень 1:|r |cffc8e087400|cffced4da ед. урона.|n|cffa6afb8Уровень 2:|r |cffc8e087500|cffced4da ед. урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JG",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Воскрешение мертвых|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1JG",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает |cffffffff2|cffced4da скелетов из трупа павшего воина.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JH",
+      "field": "name",
+      "expected": "|cffe4cfa3Ритуал некромантии|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JH",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Ритуал некромантии|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1JH",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает доступ к возведению |cffa9c7deЧертогов мертвых|cffced4da и подготовке некромантов.|n|n|cffe6c07bВнимание:|r исключает проведение |cffa9c7deРитуала мутации|r.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JI",
+      "field": "name",
+      "expected": "|cffe4cfa3Ритуал мутации|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JI",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Ритуал мутации|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1JI",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает доступ к подготовке |cffa9c7deМутировавших батраков|cffced4da в Доме вождей.|n|n|cffe6c07bВнимание:|r исключает проведение |cffa9c7deРитуала некромантии|r.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JK",
+      "field": "name",
+      "expected": "|cffe4cfa3Ускользание|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JK",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Ускользание — уровень 1|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JK",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Ускользание — уровень 2|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JK",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Ускользание — уровень 3|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JK",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Ускользание — уровень 4|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JK",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дает |cffffffff10%|cffced4da шанс уклониться от вражеской атаки.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JK",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дает |cffffffff20%|cffced4da шанс уклониться от вражеской атаки.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JK",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дает |cffffffff30%|cffced4da шанс уклониться от вражеской атаки.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JK",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дает |cffffffff40%|cffced4da шанс уклониться от вражеской атаки.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JK",
+      "field": "researchtip",
+      "expected": "|cffe4cfa3Ускользание|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JK",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает вероятность уклониться от физической атаки противника.|n|n|cffa6afb8Уровень 1:|r |cffffffff10%|cffced4da шанс уклонения.|n|cffa6afb8Уровень 2:|r |cffffffff20%|cffced4da шанс уклонения.|n|cffa6afb8Уровень 3:|r |cffffffff30%|cffced4da шанс уклонения.|n|cffa6afb8Уровень 4:|r |cffffffff40%|cffced4da шанс уклонения.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1JP",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бьет с огромной силой, нанося |cffc8e08715%|cffced4da урона врагам рядом с основной целью.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1KB",
+      "field": "name",
+      "expected": "|cffe4cfa3Защита столицы|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1KB",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Защита столицы|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1MC",
+      "field": "name",
+      "expected": "|cffe4cfa3Аура Защиты|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1MC",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Аура Защиты|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1MC",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает броню находящихся рядом союзников на |cffc8e087+3|cffced4da ед.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1MD",
+      "field": "name",
+      "expected": "|cffe4cfa3Аура Страха|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1MD",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Аура Страха — уровень 1|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1MD",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Аура Страха — уровень 2|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1MD",
+      "field": "tip3",
+      "expected": "|cffe4cfa3Аура Страха — уровень 3|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1MD",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Аура Страха — уровень 4|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1MD",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает скорость передвижения врагов на |cffe69a8d-7%|cffced4da и скорость атаки на |cffe69a8d-5%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1MD",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает скорость передвижения врагов на |cffe69a8d-14%|cffced4da и скорость атаки на |cffe69a8d-10%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1MD",
+      "field": "ubertip3",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает скорость передвижения врагов на |cffe69a8d-21%|cffced4da и скорость атаки на |cffe69a8d-15%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1MD",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает скорость передвижения врагов на |cffe69a8d-28%|cffced4da и скорость атаки на |cffe69a8d-20%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1MD",
+      "field": "researchubertip",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Подавляет боевой дух находящихся рядом врагов, замедляя их скорость атаки и передвижения.|n|n|cffa6afb8Уровень 1:|r -7% к скорости бега, -5% к скорости боя.|n|cffa6afb8Уровень 2:|r -14% к скорости бега, -10% к скорости боя.|n|cffa6afb8Уровень 3:|r -21% к скорости бега, -15% к скорости боя.|n|cffa6afb8Уровень 4:|r -28% к скорости бега, -20% к скорости боя.|r"
+    },
+    {
+      "type": "ability",
+      "id": "AOcr",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Критический удар — уровень 4|r"
+    },
+    {
+      "type": "ability",
+      "id": "AOcr",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дает |cffffffff15%|cffced4da шанс нанести четырехкратный урон при атаке.|r"
+    },
+    {
+      "type": "ability",
+      "id": "AOwk",
+      "field": "tip4",
+      "expected": "|cffe4cfa3Танец ветра — уровень 4|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "AOwk",
+      "field": "ubertip4",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует невидимость и ускорение на |cffffffff30|cffced4da сек. Атака из невидимости наносит |cffc8e087110|cffced4da ед. дополнительного урона.|r"
+    },
+    {
+      "type": "ability",
+      "id": "AOww",
+      "field": "tip2",
+      "expected": "|cffe4cfa3Вихрь клинков — уровень 2|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "AOww",
+      "field": "ubertip2",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Окружает мастера клинка вихрем стали, даруя невосприимчивость к магии и нанося |cffc8e087160|cffced4da ед. урона в секунду всем врагам вокруг.|r"
+    },
+    {
+      "type": "ability",
+      "id": "Aabr",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускоряет регенерацию здоровья находящихся рядом союзников.|r"
+    }
+  ],
+  "categories": {
+    "buildings": [
+      "o05V",
+      "o05W",
+      "o05X",
+      "o060",
+      "o05Y",
+      "o05Z",
+      "o05T",
+      "o061",
+      "o062",
+      "o066",
+      "o067",
+      "h0D3",
+      "owtw"
+    ],
+    "units": [
+      "n06B",
+      "n06F",
+      "n068",
+      "n06L",
+      "n06T",
+      "n06D",
+      "n06M",
+      "n06Q",
+      "n06G",
+      "n06J",
+      "n06W",
+      "o05Q",
+      "o065",
+      "o063",
+      "o05R",
+      "n067",
+      "n06R",
+      "n06N",
+      "n06C",
+      "n06S",
+      "n06O",
+      "n069",
+      "n06U",
+      "n06K",
+      "n06A",
+      "n06I",
+      "n06V",
+      "n070",
+      "h0D4",
+      "h0D6",
+      "h0D5"
+    ],
+    "heroes": [
+      "N06P",
+      "N072",
+      "N073"
+    ],
+    "upgrades": [
+      "R0KA",
+      "R0KC",
+      "R00Y",
+      "R0JQ",
+      "R0JR",
+      "R0JS",
+      "R0JU",
+      "R0JV",
+      "R0JW",
+      "R0JX",
+      "R0JY",
+      "R0JZ",
+      "R0K0",
+      "R0K1",
+      "R0K2",
+      "R0K3",
+      "R0K5",
+      "R0K6",
+      "R0K7",
+      "Roen",
+      "Ropg"
+    ],
+    "abilities": [
+      "A1JL",
+      "A01C",
+      "A0B7",
+      "A0BE",
+      "A0EN",
+      "A0I3",
+      "A0IQ",
+      "A0LI",
+      "A0LJ",
+      "A0N7",
+      "A14L",
+      "A1HW",
+      "A1HX",
+      "A1HY",
+      "A1HZ",
+      "A1I0",
+      "A1I1",
+      "A1I2",
+      "A1I3",
+      "A1II",
+      "A1IM",
+      "A1IN",
+      "A1IO",
+      "A1IP",
+      "A1IQ",
+      "A1IR",
+      "A1IS",
+      "A1IT",
+      "A1IU",
+      "A1IV",
+      "A1IW",
+      "A1IX",
+      "A1IY",
+      "A1IZ",
+      "A1J1",
+      "A1J3",
+      "A1J4",
+      "A1J5",
+      "A1J7",
+      "A1J8",
+      "A1J9",
+      "A1JG",
+      "A1JH",
+      "A1JI",
+      "A1JK",
+      "A1JP",
+      "A1KB",
+      "A1MC",
+      "A1MD",
+      "AOcr",
+      "AOwk",
+      "AOww",
+      "Aabr"
+    ],
+    "buffs": []
+  }
+}

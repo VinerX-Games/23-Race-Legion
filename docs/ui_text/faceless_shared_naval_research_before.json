@@ -1,0 +1,87 @@
+{
+  "command": "get-objects-bulk",
+  "count": 5,
+  "map": "F:\\Gemini_23Race\\map.w3x",
+  "missing": [],
+  "objects": [
+    {
+      "fields": {
+        "base1": "30.000000",
+        "base2": "",
+        "effect1": "TRIGSTR_543",
+        "effect2": "",
+        "maxlevel": "5",
+        "mod1": "30.000000",
+        "mod2": "",
+        "name1": "TRIGSTR_455",
+        "ubertip1": "TRIGSTR_542"
+      },
+      "id": "R005",
+      "name": "Обстрел 1"
+    },
+    {
+      "fields": {
+        "base1": "0.050000",
+        "base2": "",
+        "effect1": "TRIGSTR_547",
+        "effect2": "",
+        "maxlevel": "3",
+        "mod1": "0.050000",
+        "mod2": "",
+        "name1": "TRIGSTR_464",
+        "ubertip1": "TRIGSTR_544"
+      },
+      "id": "R006",
+      "name": "Дополнительные паруса 1"
+    },
+    {
+      "fields": {
+        "base1": "50.000000",
+        "base2": "",
+        "effect1": "TRIGSTR_1282",
+        "effect2": "",
+        "maxlevel": "3",
+        "mod1": "50.000000",
+        "mod2": "",
+        "name1": "TRIGSTR_521",
+        "ubertip1": "TRIGSTR_548"
+      },
+      "id": "R007",
+      "name": "Починка 1"
+    },
+    {
+      "fields": {
+        "base1": "1",
+        "base2": "",
+        "effect1": "ratd",
+        "effect2": "",
+        "maxlevel": "6",
+        "mod1": "1",
+        "mod2": "",
+        "name1": "TRIGSTR_371",
+        "ubertip1": "TRIGSTR_377"
+      },
+      "id": "R002",
+      "name": "Орудия флота 1"
+    },
+    {
+      "fields": {
+        "base1": "100.000000",
+        "base2": "",
+        "effect1": "TRIGSTR_1180",
+        "effect2": "TRIGSTR_047",
+        "maxlevel": "6",
+        "mod1": "100.000000",
+        "mod2": "",
+        "name1": "TRIGSTR_8932",
+        "ubertip1": "TRIGSTR_5197"
+      },
+      "id": "R003",
+      "name": "Корпус и ошибка"
+    }
+  ],
+  "ok": true,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "type": "upgrade"
+}

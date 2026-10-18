@@ -1,0 +1,53 @@
+{
+  "race": "Demons",
+  "ability": "A0MY",
+  "wts_updated": [
+    38885,
+    38886,
+    35179
+  ],
+  "hashes_before": {
+    "wts": "9d124d9479bd96d9ce310dfd5a70edc7218e00ee8fdbb25020580cb907dd01db",
+    "w3u": "e5215968f5129fcb3f5e0d6de70c1cf91b8e15e85e5ee4e13645eb9c65ac204c",
+    "w3u_skin": "cef5efb14c79b52b9f9dd93b7990f1a79b02a28671f9161678b68d742acbe10a",
+    "w3a": "9376f2b203b2792b7b7a9a44636113055bf6c9c6c3911e1b699f8e7d8a6b2262",
+    "w3a_skin": "8f3973d444521b35dbb57318dcacab9def82952bd10a7213bfc27bbefaf20d2a",
+    "w3h": "2459a6453679843b0828809e4dedcad2cc96028ee9feaaae94700e261007f2c4",
+    "w3h_skin": "888e1c4c6bf1c0149e59959dcc7473d8a89d699e0873b2485f10e536cab97daf",
+    "w3q": "135b21ad8ced6b949d7afd6c25f1ca434fa422bda00e79d0c18eb2ee2886ca58",
+    "w3q_skin": "1013575457067009a0e37c88ca1b1d7b489ace113691b7b15369e4bcf7342e80"
+  },
+  "hashes_after": {
+    "wts": "91490811b0aa3d940281efd41d8d28570f444590921185f33084d37fa05ff39a",
+    "w3u": "e5215968f5129fcb3f5e0d6de70c1cf91b8e15e85e5ee4e13645eb9c65ac204c",
+    "w3u_skin": "cef5efb14c79b52b9f9dd93b7990f1a79b02a28671f9161678b68d742acbe10a",
+    "w3a": "9376f2b203b2792b7b7a9a44636113055bf6c9c6c3911e1b699f8e7d8a6b2262",
+    "w3a_skin": "8f3973d444521b35dbb57318dcacab9def82952bd10a7213bfc27bbefaf20d2a",
+    "w3h": "2459a6453679843b0828809e4dedcad2cc96028ee9feaaae94700e261007f2c4",
+    "w3h_skin": "888e1c4c6bf1c0149e59959dcc7473d8a89d699e0873b2485f10e536cab97daf",
+    "w3q": "135b21ad8ced6b949d7afd6c25f1ca434fa422bda00e79d0c18eb2ee2886ca58",
+    "w3q_skin": "1013575457067009a0e37c88ca1b1d7b489ace113691b7b15369e4bcf7342e80"
+  },
+  "binary_files_unchanged": true,
+  "checks": [
+    {
+      "field": "name",
+      "expected": "|cffe4cfa3Пылающий Легион|r",
+      "actual": "|cffe4cfa3Пылающий Легион|r",
+      "ok": true
+    },
+    {
+      "field": "tip1",
+      "expected": "|cffe4cfa3Пылающий Легион|r (|cffffffffZ|r)",
+      "actual": "|cffe4cfa3Пылающий Легион|r (|cffffffffZ|r)",
+      "ok": true
+    },
+    {
+      "field": "ubertip1",
+      "expected": "|cffa6afb8РАСА:|cffced4da Бесчисленная армия демонов и владык Скверны.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor (Яхве)|r|n|cffa6afb8Сложность:|r |cffffffff●●●|cffa6afb8●●|r|n|cffa6afb8Период:|r |cffa9c7de«Легион»|r|n|n|cffced4daПылающий Легион — колоссальная армия демонов, инферналов и развращённых народов, стремящаяся искоренить саму жизнь и уничтожить порядок во Вселенной. Легион неоднократно вторгался в Азерот, неся разрушение и оставляя неизгладимые шрамы: скверна демонов породила Орду, привела к созданию Плети и спровоцировала череду опустошительных войн. Лишь ценой невероятных жертв защитникам мира удавалось сдерживать натиск воинства Саргераса.|r",
+      "actual": "|cffa6afb8РАСА:|cffced4da Бесчисленная армия демонов и владык Скверны.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor (Яхве)|r|n|cffa6afb8Сложность:|r |cffffffff●●●|cffa6afb8●●|r|n|cffa6afb8Период:|r |cffa9c7de«Легион»|r|n|n|cffced4daПылающий Легион — колоссальная армия демонов, инферналов и развращённых народов, стремящаяся искоренить саму жизнь и уничтожить порядок во Вселенной. Легион неоднократно вторгался в Азерот, неся разрушение и оставляя неизгладимые шрамы: скверна демонов породила Орду, привела к созданию Плети и спровоцировала череду опустошительных войн. Лишь ценой невероятных жертв защитникам мира удавалось сдерживать натиск воинства Саргераса.|r",
+      "ok": true
+    }
+  ],
+  "all_checks_passed": true
+}

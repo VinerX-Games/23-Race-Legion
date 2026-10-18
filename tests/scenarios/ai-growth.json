@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "name": "ai-workers-and-army",
+  "steps": [
+    {"name": "spawn", "lua": "assert(not udg_AiControl[ScenarioSlot], 'slot already controlled'); createAiPlayer(ScenarioSlot, ScenarioToken); return 'spawned'", "expected": "spawned"},
+    {"name": "workers", "lua": "assert(AiRaceOf(ScenarioSlot)~=nil, 'race missing'); assert(udg_Ai_harvest[ScenarioSlot]~=nil and BlzGroupGetSize(udg_Ai_harvest[ScenarioSlot])>0, 'no harvesters'); return 'workers'", "expected": "workers", "poll_for": 60},
+    {"name": "army", "lua": "assert(udg_Ai_army[ScenarioSlot]~=nil and BlzGroupGetSize(udg_Ai_army[ScenarioSlot])>0, 'army has not grown'); return 'army'", "expected": "army", "poll_for": 120}
+  ]
+}

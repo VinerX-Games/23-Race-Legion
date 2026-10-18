@@ -1,0 +1,1714 @@
+{
+  "scope": "Гномы (Gnomes): категория 5 — Исследования и маркеры (60 технологий)",
+  "upgrades_count": 60,
+  "variants": [
+    "SD"
+  ],
+  "upgrades": [
+    {
+      "id": "R0B5",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9575,
+          "after": "|cffe4cfa3Проект «Механопаук»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9576,
+          "after": "|cffe4cfa3Проект «Механопаук»|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 9586,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает сборку Механопауков на Фабрике.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМеханопаук|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0B7",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 17569,
+          "after": "|cffe4cfa3Закрыть проект «Клап Клап»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 17570,
+          "after": "|cffe4cfa3Закрыть проект «Клап Клап»|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 17530,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Останавливает дальнейшее производство базовой версии роботов Клап Клап.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0B8",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9457,
+          "after": "|cffe4cfa3Клап Клап в военной сфере|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9461,
+          "after": "|cffe4cfa3Клап Клап в военной сфере|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 9462,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает атаку роботов серии Клап Клап на |cffc8e087+5|cffced4da ед.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКлап Клап (v0.58889)|cffced4da|n- |cffa9c7deКлап Клап (v1.0 Opt)|cffced4da|n- |cffa9c7deКлап Клап (v1.0 Big)|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0B9",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9467,
+          "after": "|cffe4cfa3Проект «Реженоги»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9478,
+          "after": "|cffe4cfa3Проект «Реженоги»|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 9482,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает производство скоростных роботов Реженоги на Фабрике.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРеженоги|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BA",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9483,
+          "after": "|cffe4cfa3Проект «Механобоец»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9549,
+          "after": "|cffe4cfa3Проект «Механобоец»|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 9550,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает сборку штурмовых Механобойцев на Фабрике.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМеханобоец|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BB",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9572,
+          "after": "|cffe4cfa3Проект «Минитанк»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9573,
+          "after": "|cffe4cfa3Проект «Минитанк»|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 9574,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает производство маневренных Минитанков в Мастерской.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМинитанк|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BC",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9587,
+          "after": "|cffe4cfa3Проект «Наногном»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9588,
+          "after": "|cffe4cfa3Проект «Наногном»|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 17680,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает подготовку Наногномов на Фабрике.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНаногном|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BD",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9589,
+          "after": "|cffe4cfa3Проект «Экспериментальный ГГТ»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9744,
+          "after": "|cffe4cfa3Проект «Экспериментальный ГГТ»|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 9745,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает производство модульных боевых машин ГГТ в Мастерской.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЭкспериментальный ГГТ|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BE",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9746,
+          "after": "|cffe4cfa3Проект «Шагоход»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9753,
+          "after": "|cffe4cfa3Проект «Шагоход»|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 9818,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает производство автоматических Шагоходов на Фабрике.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШагоход|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BF",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9819,
+          "after": "|cffe4cfa3Проект «Универсальный танк»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9820,
+          "after": "|cffe4cfa3Проект «Универсальный танк»|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 9821,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает производство Универсальных танков в Мастерской.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deУниверсальный танк|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BG",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9833,
+          "after": "|cffe4cfa3Проект «Танк Венец»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9834,
+          "after": "|cffe4cfa3Проект «Танк Венец»|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 9836,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает производство сверхтяжёлого танка «Венец» в Мастерской.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТанк «Венец»|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BH",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9837,
+          "after": "|cffe4cfa3Проект «Мехагигант»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9838,
+          "after": "|cffe4cfa3Проект «Мехагигант»|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 17806,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает сборку титанических Мехагигантов на Фабрике.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМехагигант|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BI",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9839,
+          "after": "|cffe4cfa3Проект «Бронемашина»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9841,
+          "after": "|cffe4cfa3Проект «Бронемашина»|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 9855,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает сборку Бронемашин десанта и снабжения в Мастерской.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБронемашина|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BJ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9857,
+          "after": "|cffe4cfa3Клап Клап на производственном фронте|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9860,
+          "after": "|cffe4cfa3Клап Клап на производственном фронте|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 9914,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость перемещения роботов на |cffc8e087+15%|cffced4da и добычу древесины на |cffc8e087+15|cffced4da ед.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКлап Клап (v0.58889)|cffced4da|n- |cffa9c7deКлап Клап (v1.0 Opt)|cffced4da|n- |cffa9c7deКлап Клап (v1.0 Big)|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BK",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9915,
+          "after": "|cffe4cfa3Клап Клап подрывник|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9916,
+          "after": "|cffe4cfa3Клап Клап подрывник|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 9917,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Оснащает роботов Клап Клап взрывчаткой, открывая способность взрываться при гибели.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКлап Клап (v0.58889)|cffced4da|n- |cffa9c7deКлап Клап (v1.0 Opt)|cffced4da|n- |cffa9c7deКлап Клап (v1.0 Big)|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BL",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9918,
+          "after": "|cffe4cfa3Клап Клап — механический щит|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9919,
+          "after": "|cffe4cfa3Клап Клап — механический щит|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 9920,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню на |cffc8e087+1|cffced4da и здоровье на |cffc8e087+150|cffced4da ед.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКлап Клап (v0.58889)|cffced4da|n- |cffa9c7deКлап Клап (v1.0 Opt)|cffced4da|n- |cffa9c7deКлап Клап (v1.0 Big)|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BM",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9921,
+          "after": "|cffe4cfa3Клап Клап — добытчик древесины|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9922,
+          "after": "|cffe4cfa3Клап Клап — добытчик древесины|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 9923,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём добываемой древесины на |cffc8e087+25|cffced4da ед.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКлап Клап (v0.58889)|cffced4da|n- |cffa9c7deКлап Клап (v1.0 Opt)|cffced4da|n- |cffa9c7deКлап Клап (v1.0 Big)|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BN",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9927,
+          "after": "|cffe4cfa3Поставить Клап Клап на поток|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9928,
+          "after": "|cffe4cfa3Поставить Клап Клап на поток|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 18027,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Снижает затраты ресурсов на производство всех моделей роботов Клап Клап.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКлап Клап (v0.58889)|cffced4da|n- |cffa9c7deКлап Клап (v1.0 Opt)|cffced4da|n- |cffa9c7deКлап Клап (v1.0 Big)|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BO",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9948,
+          "after": "|cffe4cfa3Огромный Клап Клап|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9950,
+          "after": "|cffe4cfa3Огромный Клап Клап|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 10532,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает сборку тяжёлой модификации робота Клап Клап (v1.0 Big) на Фабрике.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКлап Клап (v1.0 Big)|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BP",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10626,
+          "after": "|cffe4cfa3Улучшение добычи Клап Клапа|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10629,
+          "after": "|cffe4cfa3Улучшение добычи Клап Клапа|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 18109,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает объём собираемой древесины на |cffc8e087+50|cffced4da ед.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deКлап Клап (v0.58889)|cffced4da|n- |cffa9c7deКлап Клап (v1.0 Opt)|cffced4da|n- |cffa9c7deКлап Клап (v1.0 Big)|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BQ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10635,
+          "after": "|cffe4cfa3Мехавоин-защитник|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10636,
+          "after": "|cffe4cfa3Мехавоин-защитник|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 10639,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню Механобойца на |cffc8e087+1|cffced4da ед.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМеханобоец|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BR",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10641,
+          "after": "|cffe4cfa3Улучшенные поршни|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10994,
+          "after": "|cffe4cfa3Улучшенные поршни|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 18207,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает вероятность оглушения цели атаками Механобойца с |cffffffff15%|cffced4da до |cffc8e08725%|cffced4da.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМеханобоец|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BT",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10995,
+          "after": "|cffe4cfa3Переделать шасси|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10996,
+          "after": "|cffe4cfa3Переделать шасси|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 10997,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость перемещения Минитанка.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМинитанк|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0BX",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 9241,
+          "after": "|cffe4cfa3Гномы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 9242,
+          "after": "|cffe4cfa3Гномы|r"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20125,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Гномам (Гномреган).|r"
+        }
+      ]
+    },
+    {
+      "id": "R0C0",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 10998,
+          "after": "|cffe4cfa3Проект «Самоходная артиллерия»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 10999,
+          "after": "|cffe4cfa3Проект «Самоходная артиллерия»|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 18450,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает производство Самоходной артиллерии в Мастерской.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСамоходная артиллерия|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0C1",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11000,
+          "after": "|cffe4cfa3Проект «Сверхмассивная артиллерия»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11001,
+          "after": "|cffe4cfa3Проект «Сверхмассивная артиллерия»|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 19392,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает производство Мега-Артиллерии в Мастерской.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМега-Артиллерия|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0C2",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11002,
+          "after": "|cffe4cfa3Управление электронами|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11003,
+          "after": "|cffe4cfa3Управление электронами|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11004,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает Наногномам способность «Электрическое поле».|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНаногном|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0C3",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 19997,
+          "after": "|cffe4cfa3Улучшенный мотор|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 19998,
+          "after": "|cffe4cfa3Улучшенный мотор|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20083,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость перемещения Самоходной артиллерии.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСамоходная артиллерия|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0C4",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11005,
+          "after": "|cffe4cfa3Проект «Мега-бомба»|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11006,
+          "after": "|cffe4cfa3Проект «Мега-бомба»|r (|cffffffffF|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11007,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает для Мега-Артиллерии разрушительную ядерную способность «Аннигиляция».|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМега-Артиллерия|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0C5",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11008,
+          "after": "|cffe4cfa3Оптимизировать перезарядку|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11009,
+          "after": "|cffe4cfa3Оптимизировать перезарядку|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11010,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки Минитанка на |cffc8e087+20%|cffced4da.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМинитанк|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0C6",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11011,
+          "after": "|cffe4cfa3Новая модель артпушки|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11012,
+          "after": "|cffe4cfa3Новая модель артпушки|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11014,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает урон способности «Артвыстрел» у Минитанка.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМинитанк|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0C7",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 22044,
+          "after": "|cffe4cfa3Улучшенная моторика|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 22045,
+          "after": "|cffe4cfa3Улучшенная моторика|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 22046,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость перемещения Шагоходов.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШагоход|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0C8",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 7359,
+          "after": "|cffe4cfa3Разрядка|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 7360,
+          "after": "|cffe4cfa3Разрядка|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11017,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Атаки Наногнома сжигают ману цели и наносят равный дополнительный урон.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНаногном|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0C9",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11018,
+          "after": "|cffe4cfa3Дополнительный слой брони|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11019,
+          "after": "|cffe4cfa3Дополнительный слой брони|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11020,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас здоровья танка «Венец» на |cffc8e087+250|cffced4da ед., снижая его скорость бега на |cffe69a8d30|cffced4da ед.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТанк «Венец»|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CA",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11021,
+          "after": "|cffe4cfa3Качественные снаряды|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11022,
+          "after": "|cffe4cfa3Качественные снаряды|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11023,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон основных орудий танка «Венец».|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТанк «Венец»|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CB",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11024,
+          "after": "|cffe4cfa3Продвинутая система подачи ракет|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11025,
+          "after": "|cffe4cfa3Продвинутая система подачи ракет|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11027,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон ракетных залпов танка «Венец».|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТанк «Венец»|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CC",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11028,
+          "after": "|cffe4cfa3Усилить пулемёты|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11029,
+          "after": "|cffe4cfa3Усилить пулемёты|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11030,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон пулемётного огня Универсального танка.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deУниверсальный танк|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CD",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11031,
+          "after": "|cffe4cfa3Улучшенная перезарядка огнемёта|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11032,
+          "after": "|cffe4cfa3Улучшенная перезарядка огнемёта|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 19383,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Сокращает время перезарядки способности «Сгусток огня» Универсального танка.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deУниверсальный танк|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CE",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11033,
+          "after": "|cffe4cfa3Усилить снаряды|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11034,
+          "after": "|cffe4cfa3Усилить снаряды|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11035,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон орудийных атак Универсального танка.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deУниверсальный танк|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CF",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 6996,
+          "after": "|cffe4cfa3Бронебойные снаряды|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 7000,
+          "after": "|cffe4cfa3Бронебойные снаряды|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 20551,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон Шагохода по целям с тяжёлой бронёй на |cffc8e087+10%|cffced4da.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШагоход|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CG",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11038,
+          "after": "|cffe4cfa3Разрывные снаряды|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11039,
+          "after": "|cffe4cfa3Разрывные снаряды|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11040,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон Шагохода по целям с лёгкой бронёй на |cffc8e087+20%|cffced4da.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШагоход|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CH",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11041,
+          "after": "|cffe4cfa3ГГТ — Огнемётный танк|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11042,
+          "after": "|cffe4cfa3ГГТ — Огнемётный танк|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11043,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Открывает огнемётную атаку для экспериментального танка ГГТ.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЭкспериментальный ГГТ|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CI",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11044,
+          "after": "|cffe4cfa3ГГТ — минизавод на колёсах|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11045,
+          "after": "|cffe4cfa3ГГТ — минизавод на колёсах|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11046,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет экспериментальному танку ГГТ производить роботов Реженоги на поле боя.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЭкспериментальный ГГТ|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CJ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11047,
+          "after": "|cffe4cfa3Усилить моторы бронемашины|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11048,
+          "after": "|cffe4cfa3Усилить моторы бронемашины|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11049,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость передвижения Бронемашины.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБронемашина|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CK",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11050,
+          "after": "|cffe4cfa3Машина для снабжения|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11051,
+          "after": "|cffe4cfa3Машина для снабжения|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 19809,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет Бронемашину аурой хорошей логистики, повышающей скорость перемещения и атаки союзной техники.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБронемашина|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CL",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11052,
+          "after": "|cffe4cfa3Улучшенный пулемёт|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11053,
+          "after": "|cffe4cfa3Улучшенный пулемёт|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11054,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон бортового пулемёта Бронемашины.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deБронемашина|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CM",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11055,
+          "after": "|cffe4cfa3ГГТ — миноукладчик|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11056,
+          "after": "|cffe4cfa3ГГТ — миноукладчик|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11057,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Позволяет экспериментальному танку ГГТ устанавливать скрытые мины.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЭкспериментальный ГГТ|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CN",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11058,
+          "after": "|cffe4cfa3Улучшенная калибровка|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11059,
+          "after": "|cffe4cfa3Улучшенная калибровка|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11060,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает дальность стрельбы Самоходной артиллерии.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСамоходная артиллерия|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CO",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11061,
+          "after": "|cffe4cfa3Сверхмассивные снаряды|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11062,
+          "after": "|cffe4cfa3Сверхмассивные снаряды|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11063,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон снарядов Самоходной артиллерии.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСамоходная артиллерия|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CP",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11064,
+          "after": "|cffe4cfa3Сверхмассивная броня|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11072,
+          "after": "|cffe4cfa3Сверхмассивная броня|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11073,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает максимальный запас здоровья Мехагиганта.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМехагигант|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CQ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11074,
+          "after": "|cffe4cfa3Шокоудары|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11075,
+          "after": "|cffe4cfa3Шокоудары|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11076,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Атаки Мехагиганта получают способность наносить урон по области.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМехагигант|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CR",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11077,
+          "after": "|cffe4cfa3Урон от когтей|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11078,
+          "after": "|cffe4cfa3Урон от когтей|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11079,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон атак Механопаука.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМеханопаук|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CS",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11080,
+          "after": "|cffe4cfa3Улучшенный ракетомёт|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11081,
+          "after": "|cffe4cfa3Улучшенный ракетомёт|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11082,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает урон способности «Залп ракет» у Механопаука.|r|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deМеханопаук|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CT",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 38987,
+          "after": "|cffe4cfa3Вооружение — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 38988,
+          "after": "|cffe4cfa3Вооружение — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 38989,
+          "after": "|cffe4cfa3Вооружение — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 38991,
+          "after": "|cffe4cfa3Вооружение — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 38992,
+          "after": "|cffe4cfa3Вооружение — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 38993,
+          "after": "|cffe4cfa3Вооружение — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 38990,
+          "after": "|cffe4cfa3Вооружение — уровень 1|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 38994,
+          "after": "|cffe4cfa3Вооружение — уровень 2|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 38995,
+          "after": "|cffe4cfa3Вооружение — уровень 3|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 38996,
+          "after": "|cffe4cfa3Вооружение — уровень 4|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 38997,
+          "after": "|cffe4cfa3Вооружение — уровень 5|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 38998,
+          "after": "|cffe4cfa3Вооружение — уровень 6|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11189,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон дальнобойных боевых единиц гномов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deПодрывник|cffced4da|n- |cffa9c7deШагоход|cffced4da|n- |cffa9c7deСамоходная артиллерия|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 11190,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон дальнобойных боевых единиц гномов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deПодрывник|cffced4da|n- |cffa9c7deШагоход|cffced4da|n- |cffa9c7deСамоходная артиллерия|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 11214,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон дальнобойных боевых единиц гномов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deПодрывник|cffced4da|n- |cffa9c7deШагоход|cffced4da|n- |cffa9c7deСамоходная артиллерия|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 11215,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон дальнобойных боевых единиц гномов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deПодрывник|cffced4da|n- |cffa9c7deШагоход|cffced4da|n- |cffa9c7deСамоходная артиллерия|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 11216,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон дальнобойных боевых единиц гномов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deПодрывник|cffced4da|n- |cffa9c7deШагоход|cffced4da|n- |cffa9c7deСамоходная артиллерия|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 11217,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает урон дальнобойных боевых единиц гномов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deПодрывник|cffced4da|n- |cffa9c7deШагоход|cffced4da|n- |cffa9c7deСамоходная артиллерия|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CU",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11218,
+          "after": "|cffe4cfa3Прочные детали — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 11219,
+          "after": "|cffe4cfa3Прочные детали — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 11220,
+          "after": "|cffe4cfa3Прочные детали — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 11222,
+          "after": "|cffe4cfa3Прочные детали — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 11223,
+          "after": "|cffe4cfa3Прочные детали — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 11224,
+          "after": "|cffe4cfa3Прочные детали — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11221,
+          "after": "|cffe4cfa3Прочные детали — уровень 1|r (|cffffffffC|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 11225,
+          "after": "|cffe4cfa3Прочные детали — уровень 2|r (|cffffffffC|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 11226,
+          "after": "|cffe4cfa3Прочные детали — уровень 3|r (|cffffffffC|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 11227,
+          "after": "|cffe4cfa3Прочные детали — уровень 4|r (|cffffffffC|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 11228,
+          "after": "|cffe4cfa3Прочные детали — уровень 5|r (|cffffffffC|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 11229,
+          "after": "|cffe4cfa3Прочные детали — уровень 6|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11230,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню всех боевых единиц и техники гномов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехота и техника гномов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 11231,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню всех боевых единиц и техники гномов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехота и техника гномов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 11232,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню всех боевых единиц и техники гномов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехота и техника гномов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 11233,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню всех боевых единиц и техники гномов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехота и техника гномов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 11234,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню всех боевых единиц и техники гномов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехота и техника гномов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 11235,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает броню всех боевых единиц и техники гномов.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПехота и техника гномов|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CV",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11236,
+          "after": "|cffe4cfa3Улучшенная тренировка пехоты — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 11237,
+          "after": "|cffe4cfa3Улучшенная тренировка пехоты — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 11238,
+          "after": "|cffe4cfa3Улучшенная тренировка пехоты — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 11240,
+          "after": "|cffe4cfa3Улучшенная тренировка пехоты — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 11241,
+          "after": "|cffe4cfa3Улучшенная тренировка пехоты — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 11242,
+          "after": "|cffe4cfa3Улучшенная тренировка пехоты — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11239,
+          "after": "|cffe4cfa3Улучшенная тренировка пехоты — уровень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 11243,
+          "after": "|cffe4cfa3Улучшенная тренировка пехоты — уровень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 11244,
+          "after": "|cffe4cfa3Улучшенная тренировка пехоты — уровень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 11245,
+          "after": "|cffe4cfa3Улучшенная тренировка пехоты — уровень 4|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 11246,
+          "after": "|cffe4cfa3Улучшенная тренировка пехоты — уровень 5|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 11247,
+          "after": "|cffe4cfa3Улучшенная тренировка пехоты — уровень 6|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 11248,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки и перемещения пехоты, а также повышает запас и регенерацию маны заклинателей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГном-пехотинец|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deШпион|cffced4da|n- |cffa9c7deГном-маг|cffced4da|n- |cffa9c7deГном-чернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 11249,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки и перемещения пехоты, а также повышает запас и регенерацию маны заклинателей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГном-пехотинец|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deШпион|cffced4da|n- |cffa9c7deГном-маг|cffced4da|n- |cffa9c7deГном-чернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 11250,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки и перемещения пехоты, а также повышает запас и регенерацию маны заклинателей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГном-пехотинец|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deШпион|cffced4da|n- |cffa9c7deГном-маг|cffced4da|n- |cffa9c7deГном-чернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 11251,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки и перемещения пехоты, а также повышает запас и регенерацию маны заклинателей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГном-пехотинец|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deШпион|cffced4da|n- |cffa9c7deГном-маг|cffced4da|n- |cffa9c7deГном-чернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 11252,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки и перемещения пехоты, а также повышает запас и регенерацию маны заклинателей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГном-пехотинец|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deШпион|cffced4da|n- |cffa9c7deГном-маг|cffced4da|n- |cffa9c7deГном-чернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 11253,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки и перемещения пехоты, а также повышает запас и регенерацию маны заклинателей.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГном-пехотинец|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deШпион|cffced4da|n- |cffa9c7deГном-маг|cffced4da|n- |cffa9c7deГном-чернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CW",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 11254,
+          "after": "|cffe4cfa3Улучшенные компоненты — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 11255,
+          "after": "|cffe4cfa3Улучшенные компоненты — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 11256,
+          "after": "|cffe4cfa3Улучшенные компоненты — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 11258,
+          "after": "|cffe4cfa3Улучшенные компоненты — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 11259,
+          "after": "|cffe4cfa3Улучшенные компоненты — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 11260,
+          "after": "|cffe4cfa3Улучшенные компоненты — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 11257,
+          "after": "|cffe4cfa3Улучшенные компоненты — уровень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 11261,
+          "after": "|cffe4cfa3Улучшенные компоненты — уровень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 11361,
+          "after": "|cffe4cfa3Улучшенные компоненты — уровень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 11362,
+          "after": "|cffe4cfa3Улучшенные компоненты — уровень 4|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 11363,
+          "after": "|cffe4cfa3Улучшенные компоненты — уровень 5|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 11515,
+          "after": "|cffe4cfa3Улучшенные компоненты — уровень 6|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 12660,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки, перемещения и максимальный запас здоровья боевой техники Мастерской.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deУниверсальный танк|cffced4da|n- |cffa9c7deТанк «Венец»|cffced4da|n- |cffa9c7deМинитанк|cffced4da|n- |cffa9c7deЭкспериментальный ГГТ|cffced4da|n- |cffa9c7deБронемашина|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 12836,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки, перемещения и максимальный запас здоровья боевой техники Мастерской.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deУниверсальный танк|cffced4da|n- |cffa9c7deТанк «Венец»|cffced4da|n- |cffa9c7deМинитанк|cffced4da|n- |cffa9c7deЭкспериментальный ГГТ|cffced4da|n- |cffa9c7deБронемашина|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 12839,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки, перемещения и максимальный запас здоровья боевой техники Мастерской.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deУниверсальный танк|cffced4da|n- |cffa9c7deТанк «Венец»|cffced4da|n- |cffa9c7deМинитанк|cffced4da|n- |cffa9c7deЭкспериментальный ГГТ|cffced4da|n- |cffa9c7deБронемашина|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 12852,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки, перемещения и максимальный запас здоровья боевой техники Мастерской.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deУниверсальный танк|cffced4da|n- |cffa9c7deТанк «Венец»|cffced4da|n- |cffa9c7deМинитанк|cffced4da|n- |cffa9c7deЭкспериментальный ГГТ|cffced4da|n- |cffa9c7deБронемашина|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 12853,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки, перемещения и максимальный запас здоровья боевой техники Мастерской.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deУниверсальный танк|cffced4da|n- |cffa9c7deТанк «Венец»|cffced4da|n- |cffa9c7deМинитанк|cffced4da|n- |cffa9c7deЭкспериментальный ГГТ|cffced4da|n- |cffa9c7deБронемашина|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 14450,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки, перемещения и максимальный запас здоровья боевой техники Мастерской.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deУниверсальный танк|cffced4da|n- |cffa9c7deТанк «Венец»|cffced4da|n- |cffa9c7deМинитанк|cffced4da|n- |cffa9c7deЭкспериментальный ГГТ|cffced4da|n- |cffa9c7deБронемашина|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0CX",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 17162,
+          "after": "|cffe4cfa3Улучшенное управление — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 17175,
+          "after": "|cffe4cfa3Улучшенное управление — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 17176,
+          "after": "|cffe4cfa3Улучшенное управление — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 17178,
+          "after": "|cffe4cfa3Улучшенное управление — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 17179,
+          "after": "|cffe4cfa3Улучшенное управление — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 17180,
+          "after": "|cffe4cfa3Улучшенное управление — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 17177,
+          "after": "|cffe4cfa3Улучшенное управление — уровень 1|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 18358,
+          "after": "|cffe4cfa3Улучшенное управление — уровень 2|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 18359,
+          "after": "|cffe4cfa3Улучшенное управление — уровень 3|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 18360,
+          "after": "|cffe4cfa3Улучшенное управление — уровень 4|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 18361,
+          "after": "|cffe4cfa3Улучшенное управление — уровень 5|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 19473,
+          "after": "|cffe4cfa3Улучшенное управление — уровень 6|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 19508,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки, перемещения и максимальный запас здоровья боевых единиц Фабрики.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШагоход|cffced4da|n- |cffa9c7deРеженоги|cffced4da|n- |cffa9c7deМехагигант|cffced4da|n- |cffa9c7deМеханобоец|cffced4da|n- |cffa9c7deНаногном|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 19509,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки, перемещения и максимальный запас здоровья боевых единиц Фабрики.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШагоход|cffced4da|n- |cffa9c7deРеженоги|cffced4da|n- |cffa9c7deМехагигант|cffced4da|n- |cffa9c7deМеханобоец|cffced4da|n- |cffa9c7deНаногном|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 19871,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки, перемещения и максимальный запас здоровья боевых единиц Фабрики.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШагоход|cffced4da|n- |cffa9c7deРеженоги|cffced4da|n- |cffa9c7deМехагигант|cffced4da|n- |cffa9c7deМеханобоец|cffced4da|n- |cffa9c7deНаногном|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 19873,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки, перемещения и максимальный запас здоровья боевых единиц Фабрики.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШагоход|cffced4da|n- |cffa9c7deРеженоги|cffced4da|n- |cffa9c7deМехагигант|cffced4da|n- |cffa9c7deМеханобоец|cffced4da|n- |cffa9c7deНаногном|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 19874,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки, перемещения и максимальный запас здоровья боевых единиц Фабрики.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШагоход|cffced4da|n- |cffa9c7deРеженоги|cffced4da|n- |cffa9c7deМехагигант|cffced4da|n- |cffa9c7deМеханобоец|cffced4da|n- |cffa9c7deНаногном|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 19996,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает скорость атаки, перемещения и максимальный запас здоровья боевых единиц Фабрики.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШагоход|cffced4da|n- |cffa9c7deРеженоги|cffced4da|n- |cffa9c7deМехагигант|cffced4da|n- |cffa9c7deМеханобоец|cffced4da|n- |cffa9c7deНаногном|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HW",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 30254,
+          "after": "|cffe4cfa3Гномы|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 29941,
+          "after": "|cffe4cfa3Гномы|r"
+        }
+      ]
+    },
+    {
+      "id": "R0J2",
+      "levels": 6,
+      "strings": [
+        {
+          "field": "name_name1",
+          "wts_id": 22047,
+          "after": "|cffe4cfa3Усиленная броня — уровень 1|r"
+        },
+        {
+          "field": "name_name2",
+          "wts_id": 22295,
+          "after": "|cffe4cfa3Усиленная броня — уровень 2|r"
+        },
+        {
+          "field": "name_name3",
+          "wts_id": 23110,
+          "after": "|cffe4cfa3Усиленная броня — уровень 3|r"
+        },
+        {
+          "field": "name_name4",
+          "wts_id": 23339,
+          "after": "|cffe4cfa3Усиленная броня — уровень 4|r"
+        },
+        {
+          "field": "name_name5",
+          "wts_id": 23340,
+          "after": "|cffe4cfa3Усиленная броня — уровень 5|r"
+        },
+        {
+          "field": "name_name6",
+          "wts_id": 25937,
+          "after": "|cffe4cfa3Усиленная броня — уровень 6|r"
+        },
+        {
+          "field": "tip_tip1",
+          "wts_id": 40979,
+          "after": "|cffe4cfa3Усиленная броня — уровень 1|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip2",
+          "wts_id": 40980,
+          "after": "|cffe4cfa3Усиленная броня — уровень 2|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip3",
+          "wts_id": 40981,
+          "after": "|cffe4cfa3Усиленная броня — уровень 3|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip4",
+          "wts_id": 40982,
+          "after": "|cffe4cfa3Усиленная броня — уровень 4|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip5",
+          "wts_id": 40983,
+          "after": "|cffe4cfa3Усиленная броня — уровень 5|r (|cffffffffX|r)"
+        },
+        {
+          "field": "tip_tip6",
+          "wts_id": 40984,
+          "after": "|cffe4cfa3Усиленная броня — уровень 6|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertip_ubertip1",
+          "wts_id": 25947,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье пехоты гномов на |cffc8e087+65|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГном-пехотинец|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deПодрывник|cffced4da|n- |cffa9c7deГном-маг|cffced4da|n- |cffa9c7deГном-чернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip2",
+          "wts_id": 25949,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье пехоты гномов на |cffc8e087+130|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГном-пехотинец|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deПодрывник|cffced4da|n- |cffa9c7deГном-маг|cffced4da|n- |cffa9c7deГном-чернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip3",
+          "wts_id": 25952,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье пехоты гномов на |cffc8e087+195|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГном-пехотинец|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deПодрывник|cffced4da|n- |cffa9c7deГном-маг|cffced4da|n- |cffa9c7deГном-чернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip4",
+          "wts_id": 25953,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье пехоты гномов на |cffc8e087+260|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГном-пехотинец|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deПодрывник|cffced4da|n- |cffa9c7deГном-маг|cffced4da|n- |cffa9c7deГном-чернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip5",
+          "wts_id": 25954,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье пехоты гномов на |cffc8e087+325|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГном-пехотинец|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deПодрывник|cffced4da|n- |cffa9c7deГном-маг|cffced4da|n- |cffa9c7deГном-чернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r"
+        },
+        {
+          "field": "ubertip_ubertip6",
+          "wts_id": 28910,
+          "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает здоровье пехоты гномов на |cffc8e087+390|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГном-пехотинец|cffced4da|n- |cffa9c7deСтрелок|cffced4da|n- |cffa9c7deПодрывник|cffced4da|n- |cffa9c7deГном-маг|cffced4da|n- |cffa9c7deГном-чернокнижник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1639 @@
+{
+  "race": "Nightborne",
+  "wts_updates": {
+    "2": "|cffe4cfa3Стальной снаряд|r",
+    "101": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff2|cffced4da боевых леопардов.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "106": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Опутывает врага сетью, прижимая к земле и лишая подвижности.|n|nДлительность: |cffffffff12|cffced4da сек. (|cffffffff3|cffced4da сек. по героям).|r",
+    "202": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff4|cffced4da боевых леопарда.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "211": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Усиливает глефы Шал'дорайских воительниц, позволяя им поражать до |cffffffff3|cffced4da целей за удар.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da.|r",
+    "556": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Запускает шквал магических стрел, поражающих группу врагов.|n|n|cffa6afb8Уровень 1:|cffced4da |cffffffff300|cffced4da урона каждой цели (до |cffffffff15|cffced4da целей).|n|cffa6afb8Уровень 2:|cffced4da |cffffffff500|cffced4da урона каждой цели (до |cffffffff20|cffced4da целей).|r",
+    "710": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает боевого леопарда Звериного стража, повышая его скорость атаки на |cffc8e087+20%|cffced4da и скорость передвижения на |cffc8e087+30|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da.|r",
+    "970": "|cffe4cfa3Укрыться за щитом|r",
+    "1780": "|cffe4cfa3Всплеск маны|r (|cffffffffQ|r)",
+    "1781": "|cffe4cfa3Улучшенные инструменты|r",
+    "1782": "|cffe4cfa3Улучшенные инструменты|r",
+    "1783": "|cffe4cfa3Улучшенные инструменты|r",
+    "2953": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Окружает бойца магическим барьером, поглощающим |cffffffff1|cffced4da ед. урона за |cffffffff1|cffced4da ед. маны.|r",
+    "2975": "|cffe4cfa3Укрыться за щитом|r",
+    "3277": "|cffe4cfa3Магическая башня|r",
+    "3521": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "4560": "|cffe4cfa3Улучшенные инструменты|r",
+    "5130": "|cffe4cfa3Магическая сетка|r",
+    "5131": "|cffe4cfa3Магическая сетка|r (|cffffffffQ|r)",
+    "5692": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночнорождённых первой ступени. Обучает работников и служит складом ресурсов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deФорт|cffced4da: открывает доступ к передовым сооружениям и войскам Ночнорождённых.|r",
+    "6091": "|cffe4cfa3Шал'дорайская воительница|r",
+    "6092": "|cffe4cfa3Шал'дорайская воительница|r (|cffffffffQ|r)",
+    "6170": "|cffe4cfa3Наследник Сумеречной стражи|r",
+    "6177": "|cffe4cfa3Наследник Сумеречной стражи|r (|cffffffffW|r)",
+    "6704": "|cffe4cfa3Шал'дорайский аристократ|r",
+    "6722": "|cffe4cfa3Шал'дорайский аристократ|r (|cffffffffQ|r)",
+    "6751": "|cffe4cfa3Шал'дорайский гвардеец|r",
+    "6752": "|cffe4cfa3Шал'дорайский гвардеец|r (|cffffffffW|r)",
+    "6784": "|cffe4cfa3Звериный страж|r",
+    "6856": "|cffe4cfa3Звериный страж|r (|cffffffffW|r)",
+    "6890": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "6906": "|cffe4cfa3Сумеречный страж|r",
+    "6910": "|cffe4cfa3Сумеречный страж|r (|cffffffffE|r)",
+    "6969": "|cffe4cfa3Темный клинок|r",
+    "6974": "|cffe4cfa3Темный клинок|r (|cffffffffQ|r)",
+    "7154": "|cffe4cfa3Лунный маг|r",
+    "7155": "|cffe4cfa3Лунный маг|r (|cffffffffW|r)",
+    "7282": "|cffe4cfa3Кристалл маны|r",
+    "7283": "|cffe4cfa3Кристалл маны|r (|cffffffffA|r)",
+    "7284": "|cffe4cfa3Казармы|r",
+    "7293": "|cffe4cfa3Алтарь маны|r",
+    "7295": "|cffe4cfa3Ратуша|r",
+    "7298": "|cffe4cfa3Форт|r",
+    "7300": "|cffe4cfa3Замок|r",
+    "7302": "|cffe4cfa3Лесопилка|r",
+    "7305": "|cffe4cfa3Святилище маны|r",
+    "7306": "|cffe4cfa3Святилище маны|r (|cffffffffD|r)",
+    "7307": "|cffe4cfa3Работник|r",
+    "7308": "|cffe4cfa3Работник|r (|cffffffffQ|r)",
+    "7310": "|cffe4cfa3Глефомет|r",
+    "7316": "|cffe4cfa3Глефомет|r (|cffffffffE|r)",
+    "7318": "|cffe4cfa3Храм жизни|r",
+    "7319": "|cffe4cfa3Храм жизни|r (|cffffffffR|r)",
+    "7320": "|cffe4cfa3Дом Шал'дорайской стражи|r",
+    "7321": "|cffe4cfa3Дом Шал'дорайской стражи|r (|cffffffffD|r)",
+    "7324": "|cffe4cfa3Лунная глефа|r",
+    "7325": "|cffe4cfa3Лунная глефа|r",
+    "7327": "|cffe4cfa3Слияние с тенью|r",
+    "7329": "|cffe4cfa3Слияние с тенью|r (|cffffffffQ|r)",
+    "7342": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Шал'дорайских воительниц защитной стойке «Укрыться за щитом», снижающей получаемый урон от стрелковых атак.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da.|r",
+    "7344": "|cffe4cfa3Укрыться за щитом|r (|cffffffffQ|r)",
+    "7406": "|cffe4cfa3Призыв элементаля воды|r",
+    "7426": "|cffe4cfa3Призыв элементаля воды|r (|cffffffffW|r)",
+    "7427": "|cffe4cfa3Родство с магией|r",
+    "7428": "|cffe4cfa3Родство с магией|r",
+    "7429": "|cffe4cfa3Похищение маны|r",
+    "7430": "|cffe4cfa3Похищение маны|r (|cffffffffQ|r)",
+    "7467": "|cffe4cfa3Всплеск маны|r",
+    "7468": "|cffe4cfa3Всплеск маны|r (|cffffffffQ|r)",
+    "7485": "|cffe4cfa3Всплеск маны|r",
+    "7507": "|cffe4cfa3Волшебный огонь|r (|cffffffffW|r)",
+    "7519": "|cffe4cfa3Щит маны|r (|cffffffffD|r)",
+    "7520": "|cffe4cfa3Щит маны|r",
+    "7820": "|cffe4cfa3Щит маны|r",
+    "7841": "|cffe4cfa3Немота|r",
+    "7846": "|cffe4cfa3Командирская аура|r",
+    "7847": "|cffe4cfa3Командирская аура|r",
+    "7963": "|cffe4cfa3Благодать маны|r",
+    "7971": "|cffe4cfa3Благодать маны|r (|cffffffffX|r)",
+    "7976": "|cffe4cfa3Дар маны|r",
+    "7978": "|cffe4cfa3Дар маны|r (|cffffffffR|r)",
+    "8026": "|cffe4cfa3Тайная магия|r",
+    "8046": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "8090": "|cffe4cfa3Совместные тренировки|r",
+    "8398": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение Ночнорождённых. Атакует цели всплесками чистой магии, сжигающими запас маны и наносящими повышенный урон призванным существам.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПротиводействие|cffced4da: уничтожает ману цели при попадании.|n|nАтакует наземные и воздушные цели.|r",
+    "8403": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит умеренный урон цели и окружающим врагам.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "8531": "|cffe4cfa3Мана-броня|r",
+    "8551": "|cffe4cfa3Командирская аура|r",
+    "9326": "|cffe4cfa3Улучшенные инструменты|r",
+    "9382": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит высокий урон цели и окружающим врагам.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "9389": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит максимальный урон цели и окружающим врагам.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "9390": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает заряд тайной магии, нанося урон цели и расходясь взрывом по окружающим врагам.|n|n|cffa6afb8Уровень 1:|cffced4da начальный урон цели и по области.|n|cffa6afb8Уровень 2:|cffced4da умеренный урон цели и по области.|n|cffa6afb8Уровень 3:|cffced4da высокий урон цели и по области.|n|cffa6afb8Уровень 4:|cffced4da максимальный урон цели и по области.|r",
+    "9391": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит урон цели и окружающим врагам.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "9649": "|cffe4cfa3Зачарование силы|r",
+    "9650": "|cffe4cfa3Зачарование силы|r",
+    "9665": "|cffe4cfa3Зачарование силы|r",
+    "9666": "|cffe4cfa3Зачарование силы|r",
+    "9667": "|cffe4cfa3Зачарование силы|r",
+    "9668": "|cffe4cfa3Зачарование силы|r",
+    "9763": "|cffe4cfa3Зачарованный доспех|r",
+    "9946": "|cffe4cfa3Лунные доспехи|r",
+    "9989": "|cffe4cfa3Лунные доспехи|r",
+    "10000": "|cffe4cfa3Лунные доспехи|r",
+    "10001": "|cffe4cfa3Лунные доспехи — уровень 1|r (|cffffffffA|r)",
+    "10002": "|cffe4cfa3Лунные доспехи — уровень 2|r (|cffffffffA|r)",
+    "10003": "|cffe4cfa3Лунные доспехи — уровень 3|r (|cffffffffA|r)",
+    "10004": "|cffe4cfa3Лунные доспехи|r",
+    "10005": "|cffe4cfa3Лунные доспехи|r",
+    "10006": "|cffe4cfa3Лунные доспехи|r",
+    "10007": "|cffe4cfa3Лунные доспехи — уровень 6|r (|cffffffffA|r)",
+    "10008": "|cffe4cfa3Лунные доспехи — уровень 5|r (|cffffffffA|r)",
+    "10009": "|cffe4cfa3Лунные доспехи — уровень 4|r (|cffffffffA|r)",
+    "10013": "|cffe4cfa3Прочные доспехи|r",
+    "10014": "|cffe4cfa3Прочные доспехи|r",
+    "10015": "|cffe4cfa3Прочные доспехи|r",
+    "10016": "|cffe4cfa3Прочные доспехи|r",
+    "10017": "|cffe4cfa3Прочные доспехи|r",
+    "10018": "|cffe4cfa3Прочные доспехи|r",
+    "10019": "|cffe4cfa3Прочные доспехи — уровень 1|r (|cffffffffS|r)",
+    "10020": "|cffe4cfa3Прочные доспехи — уровень 2|r (|cffffffffS|r)",
+    "10021": "|cffe4cfa3Прочные доспехи — уровень 3|r (|cffffffffS|r)",
+    "10022": "|cffe4cfa3Прочные доспехи — уровень 6|r (|cffffffffS|r)",
+    "10023": "|cffe4cfa3Прочные доспехи — уровень 5|r (|cffffffffS|r)",
+    "10024": "|cffe4cfa3Прочные доспехи — уровень 4|r (|cffffffffS|r)",
+    "10034": "|cffe4cfa3Магическая атака|r",
+    "10035": "|cffe4cfa3Магическая атака|r",
+    "10036": "|cffe4cfa3Магическая атака|r",
+    "10037": "|cffe4cfa3Магическая атака|r",
+    "10038": "|cffe4cfa3Магическая атака|r",
+    "10039": "|cffe4cfa3Магическая атака|r",
+    "10040": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffc8e08725|cffced4da ед. здоровья раненому союзнику. Не действует на неживые объекты и механизмы.|r",
+    "10056": "|cffe4cfa3Родство с маной|r",
+    "10061": "|cffe4cfa3Родство с маной|r",
+    "10062": "|cffe4cfa3Родство с маной|r",
+    "10064": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)",
+    "10082": "|cffe4cfa3Калеастра|r",
+    "10083": "|cffe4cfa3Мрачная Тень|r",
+    "10086": "|cffe4cfa3Капитан Шал'дорайской стражи|r",
+    "10087": "|cffe4cfa3Квенель|r",
+    "10090": "|cffe4cfa3Верховный лунный маг|r",
+    "10091": "|cffe4cfa3Авнель|r",
+    "10094": "|cffe4cfa3Зачарованные доспехи|r",
+    "10095": "|cffe4cfa3Зачарованные доспехи|r",
+    "10097": "|cffe4cfa3Зачарованные доспехи|r",
+    "10098": "|cffe4cfa3Зачарованные доспехи|r",
+    "10099": "|cffe4cfa3Зачарованные доспехи|r",
+    "10100": "|cffe4cfa3Зачарованные доспехи|r",
+    "10102": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Максимально ускоряет восстановление маны союзников.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "10103": "|cffe4cfa3Противодействие|r",
+    "10104": "|cffe4cfa3Всплеск маны|r (|cffffffffQ|r)",
+    "10106": "|cffe4cfa3Всплеск маны|r (|cffffffffQ|r)",
+    "10109": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ускоряет восстановление маны находящихся поблизости союзных войск.|n|n|cffa6afb8Уровень 1:|cffced4da незначительный бонус к регенерации.|n|cffa6afb8Уровень 2:|cffced4da средний бонус к регенерации.|n|cffa6afb8Уровень 3:|cffced4da высокий бонус к регенерации.|n|cffa6afb8Уровень 4:|cffced4da максимальный бонус к регенерации.|r",
+    "10110": "|cffe4cfa3Призыв леопарда|r",
+    "10111": "|cffe4cfa3Всплеск маны|r (|cffffffffQ|r)",
+    "10112": "|cffe4cfa3Всплеск маны|r (|cffffffffQ|r)",
+    "10118": "|cffe4cfa3Призыв леопарда|r (|cffffffffQ|r)",
+    "10119": "|cffe4cfa3Призыв леопарда|r (|cffffffffQ|r)",
+    "10120": "|cffe4cfa3Призыв леопарда|r (|cffffffffQ|r)",
+    "10121": "|cffe4cfa3Призыв леопарда|r (|cffffffffQ|r)",
+    "10126": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Незначительно ускоряет восстановление маны союзников.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "10127": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "10128": "|cffe4cfa3Призыв леопарда|r (|cffffffffQ|r)",
+    "10130": "|cffe4cfa3Щит маны|r (|cffffffffW|r)",
+    "10131": "|cffe4cfa3Щит маны|r (|cffffffffW|r)",
+    "10132": "|cffe4cfa3Щит маны|r (|cffffffffW|r)",
+    "10133": "|cffe4cfa3Щит маны|r (|cffffffffW|r)",
+    "10134": "|cffe4cfa3Щит маны|r (|cffffffffW|r)",
+    "10142": "|cffe4cfa3Аура познаний|r",
+    "10143": "|cffe4cfa3Аура познаний|r (|cffffffffE|r)",
+    "10144": "|cffe4cfa3Аура познаний|r (|cffffffffE|r)",
+    "10145": "|cffe4cfa3Аура познаний|r (|cffffffffE|r)",
+    "10146": "|cffe4cfa3Аура познаний|r (|cffffffffE|r)",
+    "10147": "|cffe4cfa3Аура познаний|r (|cffffffffE|r)",
+    "10148": "|cffe4cfa3Защита маны|r",
+    "10149": "|cffe4cfa3Защита маны|r (|cffffffffR|r)",
+    "10150": "|cffe4cfa3Защита маны|r (|cffffffffR|r)",
+    "10152": "|cffe4cfa3Защита маны|r (|cffffffffR|r)",
+    "10171": "|cffe4cfa3Противодействие|r (|cffffffffQ|r)",
+    "10172": "|cffe4cfa3Противодействие|r (|cffffffffQ|r)",
+    "10173": "|cffe4cfa3Противодействие|r (|cffffffffQ|r)",
+    "10174": "|cffe4cfa3Противодействие|r (|cffffffffQ|r)",
+    "10175": "|cffe4cfa3Противодействие|r (|cffffffffQ|r)",
+    "10187": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Умеренно ускоряет восстановление маны союзников.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "10188": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Значительно ускоряет восстановление маны союзников.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "10189": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наделяет союзников в области вокруг мага полной неуязвимостью к любому урону. Сам чародей остаётся уязвимым.|n|n|cffa6afb8Уровень 1:|cffced4da длительность |cffffffff15|cffced4da сек.|n|cffa6afb8Уровень 2:|cffced4da длительность |cffffffff30|cffced4da сек.|r",
+    "10190": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует полную неуязвимость союзникам вокруг заклинателя.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+    "10191": "|cffe4cfa3Магический вампиризм|r",
+    "10192": "|cffe4cfa3Магический вампиризм|r (|cffffffffR|r)",
+    "10193": "|cffe4cfa3Магический вампиризм|r (|cffffffffR|r)",
+    "10194": "|cffe4cfa3Магический вампиризм|r (|cffffffffR|r)",
+    "10195": "|cffe4cfa3Стрела проклятия|r",
+    "10196": "|cffe4cfa3Стрела проклятия|r (|cffffffffW|r)",
+    "10198": "|cffe4cfa3Стрела проклятия|r (|cffffffffW|r)",
+    "10199": "|cffe4cfa3Стрела проклятия|r (|cffffffffW|r)",
+    "10200": "|cffe4cfa3Стрела проклятия|r (|cffffffffW|r)",
+    "10201": "|cffe4cfa3Стрела проклятия|r (|cffffffffW|r)",
+    "10218": "|cffe4cfa3Аура меткости|r (|cffffffffE|r)",
+    "10220": "|cffe4cfa3Аура меткости|r",
+    "10221": "|cffe4cfa3Аура меткости|r (|cffffffffE|r)",
+    "10222": "|cffe4cfa3Аура меткости|r (|cffffffffE|r)",
+    "10223": "|cffe4cfa3Аура меткости|r (|cffffffffE|r)",
+    "10224": "|cffe4cfa3Аура меткости|r (|cffffffffE|r)",
+    "10225": "|cffe4cfa3Разящие стрелы|r",
+    "10226": "|cffe4cfa3Разящие стрелы|r (|cffffffffR|r)",
+    "10227": "|cffe4cfa3Разящие стрелы|r (|cffffffffR|r)",
+    "10228": "|cffe4cfa3Разящие стрелы|r (|cffffffffR|r)",
+    "10279": "|cffe4cfa3Мрачная Тень|r (|cffffffffX|r)",
+    "10280": "|cffe4cfa3Капитан Шал'дорайской стражи|r (|cffffffffZ|r)",
+    "10627": "|cffe4cfa3Магическая сеть|r",
+    "10645": "|cffe4cfa3Зачарованный доспех|r",
+    "10646": "|cffe4cfa3Магическая сеть|r (|cffffffffS|r)",
+    "10648": "|cffe4cfa3Волшебный огонь|r",
+    "10649": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Укрепляет защитные доспехи Шал'дорайского гвардейца, повышая показатель брони на |cffc8e087+2|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da.|r",
+    "10656": "|cffe4cfa3Зачарованные доспехи|r",
+    "10659": "|cffe4cfa3Магические оковы|r",
+    "10660": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Сумеречного стража способности «Магические оковы», сковывающей движения врага.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da.|r",
+    "10667": "|cffe4cfa3Ночнорождённые|r",
+    "10668": "|cffe4cfa3Ночнорождённые|r",
+    "10687": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Дарует полную неуязвимость союзникам вокруг заклинателя на длительный срок.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r",
+    "10852": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Защитная стойка. Снижает получаемый урон от дальних атак на |cffc8e08750%|cffced4da, но уменьшает скорость перемещения на |cffe69a8d30%|cffced4da.|r",
+    "10856": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поглощает до |cffffffff15|cffced4da ед. физического урона от каждой атаки врага. Минимальный получаемый урон: |cffffffff5|cffced4da ед.|r",
+    "10859": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну чистой магии, нанося |cffffffff50|cffced4da ед. урона цели и |cffffffff50|cffced4da ед. по области, снижая скорость атаки и перемещения врагов на |cffffffff4|cffced4da сек. (|cffffffff2|cffced4da сек. по героям).|r",
+    "10860": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Окружает цель мерцающим сиянием, снижая броню на |cffe69a8d-4|cffced4da ед. и лишая невидимости на |cffffffff90|cffced4da сек. (|cffffffff60|cffced4da сек. по героям).|r",
+    "10861": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сковывает цель магическими узами, снижая скорость атаки на |cffe69a8d25%|cffced4da и скорость передвижения на |cffe69a8d60%|cffced4da.|n|nДлительность: |cffffffff60|cffced4da сек. (|cffffffff10|cffced4da сек. по героям).|r",
+    "10862": "|cffe4cfa3Контроль над маной|r",
+    "10864": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Шал'дорайского аристократа способности «Похищение маны» и увеличивает его запас маны на |cffc8e087+50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r",
+    "10865": "|cffe4cfa3Контроль над маной|r",
+    "10867": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Шал'дорайского аристократа заклинанию «Призыв элементаля воды» и увеличивает его запас маны на |cffc8e087+50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r",
+    "10876": "|cffe4cfa3Рассекание|r",
+    "10877": "|cffe4cfa3Рассекание|r",
+    "10879": "|cffe4cfa3Рассекающие клинки|r",
+    "10903": "|cffa6afb8ЗДАНИЕ:|cffced4da Морское сооружение для строительства и оснащения боевых кораблей.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспортный корабль|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da.|r",
+    "10907": "|cffe4cfa3Верфь|r",
+    "10908": "|cffe4cfa3Верфь|r (|cffffffffC|r)",
+    "10957": "|cffe4cfa3Стальной снаряд|r",
+    "10963": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон окружающих союзных войск на |cffc8e087+10%|cffced4da.|r",
+    "10964": "|cffe4cfa3Стальные снаряды|r",
+    "10965": "|cffe4cfa3Стальные снаряды|r (|cffffffffD|r)",
+    "10976": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r",
+    "11111": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает стрелу тёмной энергии, наносящую урон нескольким противникам.|n|n|cffa6afb8Уровень 1:|cffced4da начальный урон целям.|n|cffa6afb8Уровень 2:|cffced4da умеренный урон целям.|n|cffa6afb8Уровень 3:|cffced4da высокий урон целям.|n|cffa6afb8Уровень 4:|cffced4da сокрушительный урон целям.|r",
+    "11112": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает темную стрелу, поражающую нескольких врагов.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "11113": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает темную стрелу с умеренным уроном.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "11114": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает темную стрелу с высоким уроном.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "11155": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает темную стрелу с максимальным уроном.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "11421": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "11422": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает силу атаки бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "11423": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту и количество брони бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "11424": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту и количество брони бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "11425": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту и количество брони бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "11426": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту и количество брони бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "11427": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту и количество брони бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "11430": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает защиту и количество брони бойцов Ночнорождённых ближнего боя.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "11440": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и заклинателей Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "11441": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и заклинателей Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "11442": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и заклинателей Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "11443": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и заклинателей Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "11444": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и заклинателей Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "11445": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает броню стрелков и заклинателей Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "11446": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон дальних атак и боевых заклинаний стрелков и магов Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "11447": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон дальних атак и боевых заклинаний стрелков и магов Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "11448": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон дальних атак и боевых заклинаний стрелков и магов Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "11449": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон дальних атак и боевых заклинаний стрелков и магов Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "11450": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон дальних атак и боевых заклинаний стрелков и магов Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "11451": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает урон дальних атак и боевых заклинаний стрелков и магов Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deШал'дорайский аристократ|cffced4da|n- |cffa9c7deЛунный маг|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "11455": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивная защита Ночнорождённых. Снижает получаемый урон от физических атак на |cffc8e08765%|cffced4da и от заклинаний на |cffc8e08780%|cffced4da.|r",
+    "11643": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Оснащает глефомет тяжёлыми снарядами, пробивающими строй и поражающими врагов на линии огня позади цели.|r",
+    "11644": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает водяного элементаля для огневой поддержки. Элементаль обладает |cffffffff450|cffced4da ед. здоровья и атакой |cffffffff21-29|cffced4da ед.|n|nВремя существования: |cffffffff60|cffced4da сек.|r",
+    "11645": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Перекачивает |cffffffff20|cffced4da ед. маны в сек. из цели в запас мага.|n|nВремя действия: |cffffffff8|cffced4da сек.|r",
+    "11648": "|cffe4cfa3Немота|r (|cffffffffW|r)",
+    "11651": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Оснащает глефомёты пробивающими стальными снарядами, поражающими цели на линии огня позади основной цели.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deГлефомет|cffced4da.|r",
+    "11652": "|cffe4cfa3Посвящение Темпомантов|r",
+    "11653": "|cffe4cfa3Посвящение Темпомантов|r",
+    "11654": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Повышает запас маны Поклонника на |cffc8e087+60|cffced4da ед. и скорость её восстановления.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r",
+    "11657": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Дополнительно повышает запас маны Поклонника на |cffc8e087+60|cffced4da ед. и усиливает целительную силу.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r",
+    "11659": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Поклонника заклинанию «Рассеивание заклинаний», повышает запас маны на |cffc8e087+60|cffced4da ед. и атаку на |cffc8e087+4|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deПоклонник|cffced4da.|r",
+    "11660": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Темного клинка мастерству критического удара «Рассекание».|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deТемный клинок|cffced4da.|r",
+    "11661": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет Сумеречного стража аурой командира, повышающей атаку окружающих союзных войск на |cffc8e087+10%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deСумеречный страж|cffced4da.|r",
+    "11668": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Окружает войска Ночнорождённых магическим барьером, снижая получаемый физический урон на |cffc8e087-65%|cffced4da и магический урон на |cffc8e087-80%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войска Ночнорождённых.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/3|cffced4da.|r",
+    "11669": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Окружает войска Ночнорождённых магическим барьером, снижая получаемый физический урон на |cffc8e087-65%|cffced4da и магический урон на |cffc8e087-80%|cffced4da. Наделяет всех бойцов способностью «Щит маны».|n|n|cffa6afb8Применяется к:|cffced4da|n- Войска Ночнорождённых.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/3|cffced4da.|r",
+    "11670": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Окружает войска Ночнорождённых магическим барьером, снижая получаемый физический урон на |cffc8e087-65%|cffced4da и магический урон на |cffc8e087-80%|cffced4da.|n|n|cffa6afb8Применяется к:|cffced4da|n- Войска Ночнорождённых.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/3|cffced4da.|r",
+    "12379": "|cffa6afb8ЮНИТ:|cffced4da Ловкая воительница ближнего боя. Может обучиться защитной стойке со щитом и усиленным лунным глефам, поражающим нескольких врагов за удар.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: снижает урон от дальних атак за счёт скорости бега.|n- |cffa9c7deЛунные глефы|cffced4da: глефы отскакивают в дополнительных противников.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r",
+    "12940": "|cffe4cfa3Шипастая броня|r",
+    "12941": "|cffe4cfa3Шипастая броня|r (|cffffffffW|r)",
+    "12943": "|cffe4cfa3Шипастая броня|r (|cffffffffW|r)",
+    "12944": "|cffe4cfa3Шипастая броня|r (|cffffffffW|r)",
+    "12945": "|cffe4cfa3Шипастая броня|r (|cffffffffW|r)",
+    "12946": "|cffe4cfa3Шипастая броня|r (|cffffffffW|r)",
+    "12972": "|cffa6afb8ЗДАНИЕ:|cffced4da Позволяет призывать и воскрешать героев Ночнорождённых.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deКапитан Шал'дорайской стражи|cffced4da: могучий воин ближнего боя (Сила).|n- |cffa9c7deМрачная Тень|cffced4da: меткий стрелок дальнего боя (Ловкость).|n- |cffa9c7deВерховный лунный маг|cffced4da: повелитель тайной магии (Интеллект).|r",
+    "13009": "|cffa6afb8ЗДАНИЕ:|cffced4da Обучает заклинателей Ночнорождённых и открывает их магические способности.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЛунный маг|cffced4da: могущественный атакующий маг.|n- |cffa9c7deШал'дорайский аристократ|cffced4da: маг поддержки и призыватель.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deДревнее знание|cffced4da|n- |cffa9c7deКонтроль над маной|cffced4da.|r",
+    "13026": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает базовые пехотные и осадные силы Ночнорождённых.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da: ловкая мечница ближнего боя.|n- |cffa9c7deНаследник Сумеречной стражи|cffced4da: бронированный передовой боевой маг.|n- |cffa9c7deГлефомет|cffced4da: осадное орудие дальнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da|n- |cffa9c7deЛунные глефы|cffced4da|n- |cffa9c7deЗачарованные доспехи|cffced4da|n- |cffa9c7deСтальные снаряды|cffced4da.|r",
+    "13064": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночнорождённых второй ступени. Открывает доступ к новым сооружениям и улучшенным войскам.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deЗамок|cffced4da: открывает доступ к высшим технологиям и элитным войскам.|r",
+    "13065": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночнорождённых третьей ступени. Открывает доступ к высшим ступеням улучшений и могущественной способности «Благодать маны».|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|r",
+    "13068": "|cffa6afb8ЗДАНИЕ:|cffced4da Служит складом древесины и центром боевых улучшений армии Ночнорождённых.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗачарование силы|cffced4da|n- |cffa9c7deЛунные доспехи|cffced4da|n- |cffa9c7deМагическая атака|cffced4da|n- |cffa9c7deПрочные доспехи|cffced4da|n- |cffa9c7deРодство с маной|cffced4da|n- |cffa9c7deУлучшенные инструменты|cffced4da.|r",
+    "13069": "|cffa6afb8ЗДАНИЕ:|cffced4da Священная обитель, подготавливающая целителей и укротителей зверей Ночнорождённых.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da: всадник на боевом леопарде.|n- |cffa9c7deПоклонник|cffced4da: верховный целитель и темпомант.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение Темпомантов|cffced4da|n- |cffa9c7deТайная магия|cffced4da|n- |cffa9c7deМагическая сеть|cffced4da|n- |cffa9c7deСовместные тренировки|cffced4da.|r",
+    "13070": "|cffa6afb8ЗДАНИЕ:|cffced4da Военная академия, подготавливающая элитных бойцов и командиров Ночнорождённых.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da: тяжёлый пехотинец, подавляющий магию врагов.|n- |cffa9c7deТемный клинок|cffced4da: скрытный убийца, наносящий сокрушительные критические удары.|n- |cffa9c7deСумеречный страж|cffced4da: тактический командир с усиливающей аурой и замедляющими оковами.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМана-броня|cffced4da|n- |cffa9c7deРассекающие клинки|cffced4da|n- |cffa9c7deКомандирская аура|cffced4da|n- |cffa9c7deМагические оковы|cffced4da.|r",
+    "13417": "|cffa6afb8ЮНИТ:|cffced4da Основной рабочий Ночнорождённых. Добывает золото и древесину, возводит и чинит сооружения.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deДобыча ресурсов|cffced4da: заготовка древесины и золота.|n- |cffa9c7deРемонт|cffced4da: восстановление прочности повреждённых строений и механизмов.|n- |cffa9c7deНебольшой скачок|cffced4da: быстрое перемещение на короткую дистанцию.|n|nАтакует наземные цели.|r",
+    "15450": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Среднее поглощение урона от стрел, способностей и магических атак.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "15451": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сильное поглощение урона от стрел, способностей и магических атак.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "15452": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Максимальное поглощение урона от стрел, способностей и магических атак.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "15453": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поглощает урон от стрел, способностей и магических атак.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "15455": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff2|cffced4da боевых леопарда с повышенными параметрами.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "15457": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff4|cffced4da свирепых боевых леопарда.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "15459": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Усиливает броню героя и отражает часть полученного в ближнем бою урона обратно в атакующих врагов.|n|n|cffa6afb8Уровень 1:|cffced4da начальное отражение и бонус к броне.|n|cffa6afb8Уровень 2:|cffced4da умеренное отражение и бонус к броне.|n|cffa6afb8Уровень 3:|cffced4da высокое отражение и бонус к броне.|n|cffa6afb8Уровень 4:|cffced4da максимальное отражение и бонус к броне.|r",
+    "15460": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает броню и возвращает часть урона атакующим в ближнем бою врагам.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "15461": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает броню и возвращает умеренную часть урона врагам.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "15462": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает броню и возвращает значительную часть урона врагам.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "15463": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает броню и возвращает максимальную часть урона врагам.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "15465": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье союзников ближнего боя в размере |cffffffff35%|cffced4da от нанесённого урона.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+    "15466": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье союзников ближнего боя в размере |cffffffff40%|cffced4da от нанесённого урона.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r",
+    "15564": "|cffe4cfa3Улучшенные инструменты|r",
+    "16271": "|cffe4cfa3Ратуша|r (|cffffffffQ|r)",
+    "16276": "|cffe4cfa3Форт|r (|cffffffffZ|r)",
+    "16294": "|cffe4cfa3Замок|r (|cffffffffZ|r)",
+    "16303": "|cffe4cfa3Казармы|r (|cffffffffW|r)",
+    "20117": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Ночнорождённым (Шал'дорай).|r",
+    "20879": "|cffa6afb8ЮНИТ:|cffced4da Высший чародей дальнего боя. Атакует разрушительным уроном хаоса по области, ослабляет броню врагов волшебным огнём и обрушивает на ряды врагов всплески маны.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСфера разрушения|cffced4da: придает атакам рассеивающийся урон хаоса по области и даёт |cffc8e087+20|cffced4da к атаке.|n- |cffa9c7deВсплеск маны|cffced4da: наносит урон цели и области вокруг неё, замедляя врагов.|n- |cffa9c7deВолшебный огонь|cffced4da: снижает броню цели на |cffe69a8d-4|cffced4da ед. и раскрывает невидимость.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r",
+    "20964": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)",
+    "20965": "|cffe4cfa3Магическая башня|r (|cffffffffZ|r)",
+    "21603": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас переносимой работниками древесины на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/6|cffced4da.|r",
+    "21604": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас переносимой работниками древесины на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff3/6|cffced4da.|r",
+    "21605": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас переносимой работниками древесины на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff4/6|cffced4da.|r",
+    "21606": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас переносимой работниками древесины на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff5/6|cffced4da.|r",
+    "21880": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас переносимой работниками древесины на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff6/6|cffced4da.|r",
+    "21881": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Увеличивает запас переносимой работниками древесины на |cffc8e087+5|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/6|cffced4da.|r",
+    "21994": "|cffa6afb8РАСА:|cffced4da Древняя эльфийская цивилизация Сурамара, овладевшая мощью тайной магии Ночного Колодца.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor (Яхве)|r|n|cffa6afb8Куратор расы:|r |cffa9c7deNiCAmCHiK|r|n|cffa6afb8Сложность:|r |cffffffff●●|cffa6afb8●●●|r|n|cffa6afb8Период:|r |cffa9c7de«Legion — Battle for Azeroth»|r|n|n|cffced4daНочнорождённые — эльфы Сурамара, проведшие десять тысяч лет под защитой магического барьера. За долгие века изоляции они научились черпать неисчерпаемую силу из Ночного Колодца, создав непревзойдённую школу тайной магии. Отвоевав свободу в жестокой гражданской войне против демонов Пылающего Легиона, ночнорождённые присоединились к Орде. Их армия сочетает стойкую Сумеречную стражу, искусных лунных магов, зачарованные глефомёты и боевых зверей, защищённых древними чарами и щитами маны.|r",
+    "22228": "|cffe4cfa3Улучшенные инструменты — уровень 1|r (|cffffffffZ|r)",
+    "23412": "|cffe4cfa3Магические оковы|r (|cffffffffE|r)",
+    "23414": "|cffe4cfa3Магические оковы|r",
+    "23632": "|cffe4cfa3Улучшенные инструменты — уровень 2|r (|cffffffffZ|r)",
+    "25232": "|cffa6afb8ГЕРОЙ:|cffced4da Могучий военачальник ближнего боя. Ведёт войска в атаку, отражает вражеские удары шипами и поддерживает солдат вампирической аурой.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗачарованные доспехи|cffced4da: пассивно поглощает урон от заклинаний и магических атак.|n- |cffa9c7deПризыв леопарда|cffced4da: призывает верных боевых леопардов для сокрушения врагов.|n- |cffa9c7deШипастая броня|cffced4da: повышает броню и возвращает часть полученного урона атакующим врагам.|n- |cffa9c7deМагический вампиризм|cffced4da: аура, позволяющая союзникам восстанавливать здоровье при атаке.|n|nАтакует наземные цели.|r",
+    "25260": "|cffe4cfa3Улучшенные инструменты — уровень 3|r (|cffffffffZ|r)",
+    "25261": "|cffe4cfa3Улучшенные инструменты — уровень 4|r (|cffffffffZ|r)",
+    "25787": "|cffe4cfa3Поклонник|r",
+    "25794": "|cffe4cfa3Поклонник|r (|cffffffffQ|r)",
+    "25795": "|cffa6afb8ЮНИТ:|cffced4da Искусный маг поддержки и целитель (Темпомант). Исцеляет раненых соратников, рассеивает чары и призывает духов возмездия.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deДар исцеления|cffced4da: восстанавливает |cffc8e08725|cffced4da ед. здоровья союзнику.|n- |cffa9c7deРассеивание заклинаний|cffced4da: снимает эффекты чар и наносит |cffffffff200|cffced4da ед. урона призванным существам.|n- |cffa9c7deДух возмездия|cffced4da: призывает мстительного призрака из останков павшего воина.|n|nАтакует наземные и воздушные цели.|r",
+    "25798": "|cffe4cfa3Дар исцеления|r",
+    "25799": "|cffe4cfa3Дар исцеления|r (|cffffffffQ|r)",
+    "26476": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)",
+    "26477": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r",
+    "26484": "|cffe4cfa3Небольшой скачок|r",
+    "27926": "|cffe4cfa3Алтарь маны|r (|cffffffffS|r)",
+    "28308": "|cffe4cfa3Верховный лунный маг|r (|cffffffffC|r)",
+    "28371": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Лишает врагов в указанной области возможности произносить заклинания.|n|nДлительность: |cffffffff15|cffced4da сек. (|cffffffff1|cffced4da сек. по героям).|r",
+    "28372": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Высвобождает прилив энергии Ночного Колодца, повышая урон всех войск Ночнорождённых на карте на |cffc8e087+25%|cffced4da.|n|nВремя действия: |cffffffff45|cffced4da сек.|r",
+    "28662": "|cffe4cfa3Сфера разрушения|r",
+    "28664": "|cffe4cfa3Разгром|r",
+    "28665": "|cffe4cfa3Улучшенные инструменты — уровень 5|r (|cffffffffZ|r)",
+    "28686": "|cffe4cfa3Разгром|r",
+    "28827": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сжигает |cffffffff8|cffced4da ед. маны у героев, |cffffffff30|cffced4da ед. у воинов.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "28828": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сжигает |cffffffff10|cffced4da ед. маны у героев, |cffffffff35|cffced4da ед. у воинов.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "28912": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Свирепый боевой зверь наносит |cffffffff1.5|cffced4da-кратный урон по вражеским строениям.|r",
+    "29062": "|cffe4cfa3Улучшенные инструменты — уровень 6|r (|cffffffffZ|r)",
+    "31171": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сжигает |cffffffff12|cffced4da ед. маны у героев, |cffffffff40|cffced4da ед. у воинов.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "31181": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Каждая атака сжигает ману цели и наносит дополнительный урон.|n|n|cffa6afb8Уровень 1:|cffced4da сжигает |cffffffff6|cffced4da ед. у героев, |cffffffff20|cffced4da ед. у воинов.|n|cffa6afb8Уровень 2:|cffced4da сжигает |cffffffff8|cffced4da ед. у героев, |cffffffff30|cffced4da ед. у воинов.|n|cffa6afb8Уровень 3:|cffced4da сжигает |cffffffff10|cffced4da ед. у героев, |cffffffff35|cffced4da ед. у воинов.|n|cffa6afb8Уровень 4:|cffced4da сжигает |cffffffff12|cffced4da ед. у героев, |cffffffff40|cffced4da ед. у воинов.|r",
+    "31186": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сжигает |cffffffff6|cffced4da ед. маны у героев, |cffffffff20|cffced4da ед. у воинов.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "31698": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию Ночнорождённых запасом пищи и вырабатывает регулярный доход.|n|nДаёт |cffffffff15|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+20|cffced4da золота каждые |cffffffff25|cffced4da сек.|r",
+    "31709": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый боевой маг передовой. Защищён зачарованными латами, значительно снижающими весь входящий физический урон.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗачарованный доспех|cffced4da: блокирует |cffffffff15|cffced4da ед. входящего урона от каждой атаки.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r",
+    "31710": "|cffa6afb8ЮНИТ:|cffced4da Могущественный чародей дальнего боя. Способен похищать ману у вражеских заклинателей и призывать водяных элементалей.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПохищение маны|cffced4da: перекачивает |cffffffff20|cffced4da ед. маны в сек. у противника.|n- |cffa9c7deПризыв элементаля воды|cffced4da: вызывает верного водяного духа для поддержки в бою.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r",
+    "31711": "|cffa6afb8ЮНИТ:|cffced4da Элитный страж ближнего боя. Подавляет заклинания вражеских магов мощным заклятием немоты.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deНемота|cffced4da: лишает противников возможности творить заклинания в выбранной области.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r",
+    "31712": "|cffa6afb8ЮНИТ:|cffced4da Стремительный кавалерист верхом на свирепом сурамарском леопарде. Наносит сокрушительный урон осадным сооружениям и способен опутывать врагов сетью.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРазгром|cffced4da: наносит |cffffffff1.5|cffced4da-кратный урон по зданиям.|n- |cffa9c7deМагическая сетка|cffced4da: обездвиживает врага и спускает летающих существ на землю.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r",
+    "31713": "|cffa6afb8ЮНИТ:|cffced4da Офицер поддержки Сумеречной стражи. Усиливает урон окружающих союзников командирской аурой и сковывает движения врагов магическими оковами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКомандирская аура|cffced4da: повышает урон находящихся поблизости союзных войск на |cffc8e087+10%|cffced4da.|n- |cffa9c7deМагические оковы|cffced4da: замедляет скорость атаки и передвижения цели.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r",
+    "31714": "|cffa6afb8ЮНИТ:|cffced4da Мастер скрытных убийств. Способен сливаться с тенью и наносить смертоносные рассекающие критические удары.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСлияние с тенью|cffced4da: временно дарует невидимость и повышает скорость перемещения.|n- |cffa9c7deРассекание|cffced4da: с вероятностью |cffffffff15%|cffced4da наносит |cffffffff5|cffced4da-кратный критический урон.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r",
+    "31715": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает ловких сурамарских боевых леопардов для атаки противников.|n|n|cffa6afb8Уровень 1:|cffced4da |cffffffff2|cffced4da леопарда.|n|cffa6afb8Уровень 2:|cffced4da |cffffffff2|cffced4da леопарда с повышенными параметрами.|n|cffa6afb8Уровень 3:|cffced4da |cffffffff4|cffced4da леопарда.|n|cffa6afb8Уровень 4:|cffced4da |cffffffff4|cffced4da свирепых леопарда.|r",
+    "31718": "|cffa6afb8ЮНИТ:|cffced4da Дальнобойное осадное орудие. Эффективно против укреплений и скоплений пехоты. После улучшения способно поражать цели на линии огня стальными снарядами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСтальной снаряд|cffced4da: снаряды пробивают строй и поражают врагов позади основной цели.|n|nАтакует наземные цели.|r",
+    "31719": "|cffa6afb8ГЕРОЙ:|cffced4da Непревзойдённая лучница дальнего боя. Лишает магов их энергии, поражает вражеские ряды проклятыми стрелами и вдохновляет союзных стрелков.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПротиводействие|cffced4da: сжигает ману врагов и наносит дополнительный урон.|n- |cffa9c7deСтрела проклятия|cffced4da: выпускает темную стрелу, поражающую нескольких врагов.|n- |cffa9c7deАура меткости|cffced4da: увеличивает урон от дистанционных атак находящихся рядом союзников.|n- |cffa9c7deРазящие стрелы|cffced4da: выпускает град стрел, наносящий колоссальный урон группе врагов.|n|nАтакует наземные и воздушные цели.|r",
+    "31720": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поглощает |cffffffff6|cffced4da ед. урона за |cffffffff1|cffced4da ед. маны.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "31721": "|cffa6afb8ГЕРОЙ:|cffced4da Величайший мастер тайной магии Сурамара. Уничтожает скопления противников всплесками маны, защищает себя щитом маны и дарует союзникам неуязвимость.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВсплеск маны|cffced4da: наносит урон цели и расходится разрушительной волной по области.|n- |cffa9c7deЩит маны|cffced4da: поглощает входящий урон за счёт запаса маны.|n- |cffa9c7deАура познаний|cffced4da: ускоряет восстановление маны окружающих союзников.|n- |cffa9c7deЗащита маны|cffced4da: наделяет находящихся рядом союзников полной неуязвимостью.|n|nАтакует наземные и воздушные цели.|r",
+    "33470": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Позволяет глефам Шал'дорайских воительниц отскакивать в дополнительных противников, поражая до |cffffffff3|cffced4da целей за удар.|r",
+    "38875": "|cffe4cfa3Ночнорождённые|r",
+    "38876": "|cffe4cfa3Ночнорождённые|r (|cffffffffE|r)",
+    "39169": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наделяет армию Ночнорождённых благословением Колодца, повышая броню на |cffc8e087+3|cffced4da ед. и урон на |cffc8e087+50%|cffced4da.|r",
+    "39222": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff15%|cffced4da наносит смертоносный |cffffffff5|cffced4da-кратный критический урон при атаке.|r",
+    "39398": "|cffe4cfa3Сфера разрушения|r (|cffffffffE|r)",
+    "39399": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает атаку Лунного мага на |cffc8e087+20|cffced4da ед. и наделяет атаки рассеивающимся уроном по области.|r",
+    "39402": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт магический барьер, поглощающий входящий урон за счёт запаса маны мага.|n|n|cffa6afb8Уровень 1:|cffced4da поглощает |cffffffff3|cffced4da ед. урона за |cffffffff1|cffced4da ед. маны.|n|cffa6afb8Уровень 2:|cffced4da поглощает |cffffffff4|cffced4da ед. урона за |cffffffff1|cffced4da ед. маны.|n|cffa6afb8Уровень 3:|cffced4da поглощает |cffffffff5|cffced4da ед. урона за |cffffffff1|cffced4da ед. маны.|n|cffa6afb8Уровень 4:|cffced4da поглощает |cffffffff6|cffced4da ед. урона за |cffffffff1|cffced4da ед. маны.|r",
+    "39403": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поглощает |cffffffff3|cffced4da ед. урона за |cffffffff1|cffced4da ед. маны.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "39404": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поглощает |cffffffff4|cffced4da ед. урона за |cffffffff1|cffced4da ед. маны.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "39405": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поглощает |cffffffff5|cffced4da ед. урона за |cffffffff1|cffced4da ед. маны.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "39406": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Аура вампиризма. Союзные бойцы ближнего боя восполняют здоровье в размере части нанесённого урона.|n|n|cffa6afb8Уровень 1:|cffced4da |cffffffff35%|cffced4da от нанесённого урона.|n|cffa6afb8Уровень 2:|cffced4da |cffffffff40%|cffced4da от нанесённого урона.|r",
+    "39407": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон союзных стрелков на |cffc8e087+40%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r",
+    "39408": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон дистанционных атак находящихся рядом союзных войск.|n|n|cffa6afb8Уровень 1:|cffced4da |cffc8e087+10%|cffced4da к урону.|n|cffa6afb8Уровень 2:|cffced4da |cffc8e087+20%|cffced4da к урону.|n|cffa6afb8Уровень 3:|cffced4da |cffc8e087+30%|cffced4da к урону.|n|cffa6afb8Уровень 4:|cffced4da |cffc8e087+40%|cffced4da к урону.|r",
+    "39409": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон союзных стрелков на |cffc8e087+10%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+    "39410": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон союзных стрелков на |cffc8e087+20%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+    "39411": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон союзных стрелков на |cffc8e087+30%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+    "39412": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff300|cffced4da урона каждой цели (до |cffffffff15|cffced4da целей).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+    "39413": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff500|cffced4da урона каждой цели (до |cffffffff20|cffced4da целей).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r",
+    "40021": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Защитная магия доспехов поглощает урон от стрел, заклинаний и магических атак.|n|n|cffa6afb8Уровень 1:|cffced4da снижает урон от стрел и магии.|n|cffa6afb8Уровень 2:|cffced4da среднее снижение урона.|n|cffa6afb8Уровень 3:|cffced4da сильное снижение урона.|n|cffa6afb8Уровень 4:|cffced4da максимальное снижение урона.|r",
+    "40479": "|cffe4cfa3Укрыться за щитом|r (|cffffffffA|r)",
+    "40553": "|cffe4cfa3Лунные глефы|r",
+    "40706": "|cffe4cfa3Лунные глефы|r (|cffffffffZ|r)",
+    "40712": "|cffe4cfa3Зачарованные доспехи|r (|cffffffffS|r)",
+    "40713": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Наделяет Наследников Сумеречной стражи зачарованными латами, блокирующими |cffffffff15|cffced4da ед. входящего урона от каждой атаки.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deНаследник Сумеречной стражи|cffced4da.|r",
+    "40716": "|cffe4cfa3Посвящение Темпомантов — уровень 1|r (|cffffffffA|r)",
+    "40717": "|cffe4cfa3Посвящение Темпомантов — уровень 2|r (|cffffffffA|r)",
+    "40827": "|cffe4cfa3Тайная магия|r (|cffffffffZ|r)",
+    "40828": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Звериного стража способности «Магическая сетка», позволяющей связывать врагов и спускать воздушные цели на землю.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da.|r",
+    "40829": "|cffe4cfa3Совместные тренировки|r (|cffffffffX|r)",
+    "40830": "|cffe4cfa3Рассекающие клинки|r (|cffffffffA|r)",
+    "40831": "|cffe4cfa3Мана-броня|r (|cffffffffS|r)",
+    "40832": "|cffe4cfa3Командирская аура|r (|cffffffffD|r)",
+    "40833": "|cffe4cfa3Магические оковы|r (|cffffffffC|r)",
+    "40834": "|cffe4cfa3Контроль над маной — уровень 1|r (|cffffffffA|r)",
+    "40835": "|cffe4cfa3Контроль над маной — уровень 2|r (|cffffffffA|r)",
+    "40836": "|cffe4cfa3Древнее знание|r",
+    "40837": "|cffe4cfa3Древнее знание — уровень 1|r (|cffffffffS|r)",
+    "40838": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Лунного мага способности «Всплеск маны», а также повышает запас маны на |cffc8e087+75|cffced4da ед. и здоровье на |cffc8e087+50|cffced4da ед. всем войскам Ночнорождённых.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный маг|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff1/2|cffced4da.|r",
+    "40839": "|cffe4cfa3Древнее знание|r",
+    "40840": "|cffe4cfa3Древнее знание — уровень 2|r (|cffffffffS|r)",
+    "40841": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Обучает Лунного мага способности «Волшебный огонь», а также дополнительно повышает запас маны на |cffc8e087+75|cffced4da ед. и здоровье на |cffc8e087+50|cffced4da ед.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deЛунный маг|cffced4da.|n|n|cffa6afb8Уровень исследования:|cffced4da |cffffffff2/2|cffced4da.|r",
+    "40842": "|cffe4cfa3Зачарование силы — уровень 1|r (|cffffffffQ|r)",
+    "40843": "|cffe4cfa3Зачарование силы — уровень 2|r (|cffffffffQ|r)",
+    "40844": "|cffe4cfa3Зачарование силы — уровень 3|r (|cffffffffQ|r)",
+    "40845": "|cffe4cfa3Зачарование силы — уровень 6|r (|cffffffffQ|r)",
+    "40846": "|cffe4cfa3Зачарование силы — уровень 5|r (|cffffffffQ|r)",
+    "40847": "|cffe4cfa3Зачарование силы — уровень 4|r (|cffffffffQ|r)",
+    "40848": "|cffe4cfa3Магическая атака — уровень 1|r (|cffffffffW|r)",
+    "40849": "|cffe4cfa3Магическая атака — уровень 2|r (|cffffffffW|r)",
+    "40850": "|cffe4cfa3Магическая атака — уровень 3|r (|cffffffffW|r)",
+    "40851": "|cffe4cfa3Магическая атака — уровень 6|r (|cffffffffW|r)",
+    "40852": "|cffe4cfa3Магическая атака — уровень 5|r (|cffffffffW|r)",
+    "40853": "|cffe4cfa3Магическая атака — уровень 4|r (|cffffffffW|r)",
+    "40854": "|cffe4cfa3Родство с маной — уровень 1|r (|cffffffffE|r)",
+    "40855": "|cffe4cfa3Родство с маной — уровень 2|r (|cffffffffE|r)",
+    "40856": "|cffe4cfa3Родство с маной — уровень 3|r (|cffffffffE|r)",
+    "41599": "|cffe4cfa3Рассеивание заклинаний|r",
+    "41600": "|cffe4cfa3Рассеивание заклинаний|r (|cffffffffQ|r)",
+    "42076": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Развеивает все положительные и отрицательные магические эффекты в выбранной области, нанося |cffffffff200|cffced4da ед. урона призванным существам.|r"
+  },
+  "checks_def": [
+    {
+      "type": "ability",
+      "id": "A0HU",
+      "field": "name",
+      "expected": "|cffe4cfa3Ночнорождённые|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0HU",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Ночнорождённые|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0HU",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8РАСА:|cffced4da Древняя эльфийская цивилизация Сурамара, овладевшая мощью тайной магии Ночного Колодца.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deEscanor (Яхве)|r|n|cffa6afb8Куратор расы:|r |cffa9c7deNiCAmCHiK|r|n|cffa6afb8Сложность:|r |cffffffff●●|cffa6afb8●●●|r|n|cffa6afb8Период:|r |cffa9c7de«Legion — Battle for Azeroth»|r|n|n|cffced4daНочнорождённые — эльфы Сурамара, проведшие десять тысяч лет под защитой магического барьера. За долгие века изоляции они научились черпать неисчерпаемую силу из Ночного Колодца, создав непревзойдённую школу тайной магии. Отвоевав свободу в жестокой гражданской войне против демонов Пылающего Легиона, ночнорождённые присоединились к Орде. Их армия сочетает стойкую Сумеречную стражу, искусных лунных магов, зачарованные глефомёты и боевых зверей, защищённых древними чарами и щитами маны.|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R07J",
+      "field": "name1",
+      "expected": "|cffe4cfa3Ночнорождённые|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R07J",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Ночнорождённые|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R07J",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Ночнорождённым (Шал'дорай).|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CB",
+      "field": "name",
+      "expected": "|cffe4cfa3Ратуша|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CB",
+      "field": "tip",
+      "expected": "|cffe4cfa3Ратуша|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0CB",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночнорождённых первой ступени. Обучает работников и служит складом ресурсов.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deФорт|cffced4da: открывает доступ к передовым сооружениям и войскам Ночнорождённых.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CC",
+      "field": "name",
+      "expected": "|cffe4cfa3Форт|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CC",
+      "field": "tip",
+      "expected": "|cffe4cfa3Форт|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0CC",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночнорождённых второй ступени. Открывает доступ к новым сооружениям и улучшенным войскам.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|n|n|cffa6afb8Улучшение:|cffced4da|n- |cffa9c7deЗамок|cffced4da: открывает доступ к высшим технологиям и элитным войскам.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CD",
+      "field": "name",
+      "expected": "|cffe4cfa3Замок|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CD",
+      "field": "tip",
+      "expected": "|cffe4cfa3Замок|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0CD",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главное здание Ночнорождённых третьей ступени. Открывает доступ к высшим ступеням улучшений и могущественной способности «Благодать маны».|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deРаботник|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CE",
+      "field": "name",
+      "expected": "|cffe4cfa3Кристалл маны|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CE",
+      "field": "tip",
+      "expected": "|cffe4cfa3Кристалл маны|r (|cffffffffA|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0CE",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Обеспечивает армию Ночнорождённых запасом пищи и вырабатывает регулярный доход.|n|nДаёт |cffffffff15|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+20|cffced4da золота каждые |cffffffff25|cffced4da сек.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CF",
+      "field": "name",
+      "expected": "|cffe4cfa3Казармы|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CF",
+      "field": "tip",
+      "expected": "|cffe4cfa3Казармы|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0CF",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Подготавливает базовые пехотные и осадные силы Ночнорождённых.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deШал'дорайская воительница|cffced4da: ловкая мечница ближнего боя.|n- |cffa9c7deНаследник Сумеречной стражи|cffced4da: бронированный передовой боевой маг.|n- |cffa9c7deГлефомет|cffced4da: осадное орудие дальнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da|n- |cffa9c7deЛунные глефы|cffced4da|n- |cffa9c7deЗачарованные доспехи|cffced4da|n- |cffa9c7deСтальные снаряды|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CG",
+      "field": "name",
+      "expected": "|cffe4cfa3Алтарь маны|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CG",
+      "field": "tip",
+      "expected": "|cffe4cfa3Алтарь маны|r (|cffffffffS|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0CG",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Позволяет призывать и воскрешать героев Ночнорождённых.|n|n|cffa6afb8Герои:|cffced4da|n- |cffa9c7deКапитан Шал'дорайской стражи|cffced4da: могучий воин ближнего боя (Сила).|n- |cffa9c7deМрачная Тень|cffced4da: меткий стрелок дальнего боя (Ловкость).|n- |cffa9c7deВерховный лунный маг|cffced4da: повелитель тайной магии (Интеллект).|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CH",
+      "field": "name",
+      "expected": "|cffe4cfa3Лесопилка|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CH",
+      "field": "tip",
+      "expected": "|cffe4cfa3Лесопилка|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0CH",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Служит складом древесины и центром боевых улучшений армии Ночнорождённых.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗачарование силы|cffced4da|n- |cffa9c7deЛунные доспехи|cffced4da|n- |cffa9c7deМагическая атака|cffced4da|n- |cffa9c7deПрочные доспехи|cffced4da|n- |cffa9c7deРодство с маной|cffced4da|n- |cffa9c7deУлучшенные инструменты|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CI",
+      "field": "name",
+      "expected": "|cffe4cfa3Святилище маны|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CI",
+      "field": "tip",
+      "expected": "|cffe4cfa3Святилище маны|r (|cffffffffD|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0CI",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Обучает заклинателей Ночнорождённых и открывает их магические способности.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЛунный маг|cffced4da: могущественный атакующий маг.|n- |cffa9c7deШал'дорайский аристократ|cffced4da: маг поддержки и призыватель.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deДревнее знание|cffced4da|n- |cffa9c7deКонтроль над маной|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CK",
+      "field": "name",
+      "expected": "|cffe4cfa3Храм жизни|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CK",
+      "field": "tip",
+      "expected": "|cffe4cfa3Храм жизни|r (|cffffffffR|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0CK",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Священная обитель, подготавливающая целителей и укротителей зверей Ночнорождённых.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЗвериный страж|cffced4da: всадник на боевом леопарде.|n- |cffa9c7deПоклонник|cffced4da: верховный целитель и темпомант.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deПосвящение Темпомантов|cffced4da|n- |cffa9c7deТайная магия|cffced4da|n- |cffa9c7deМагическая сеть|cffced4da|n- |cffa9c7deСовместные тренировки|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CL",
+      "field": "name",
+      "expected": "|cffe4cfa3Дом Шал'дорайской стражи|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CL",
+      "field": "tip",
+      "expected": "|cffe4cfa3Дом Шал'дорайской стражи|r (|cffffffffD|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0CL",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Военная академия, подготавливающая элитных бойцов и командиров Ночнорождённых.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deШал'дорайский гвардеец|cffced4da: тяжёлый пехотинец, подавляющий магию врагов.|n- |cffa9c7deТемный клинок|cffced4da: скрытный убийца, наносящий сокрушительные критические удары.|n- |cffa9c7deСумеречный страж|cffced4da: тактический командир с усиливающей аурой и замедляющими оковами.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deМана-броня|cffced4da|n- |cffa9c7deРассекающие клинки|cffced4da|n- |cffa9c7deКомандирская аура|cffced4da|n- |cffa9c7deМагические оковы|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CM",
+      "field": "name",
+      "expected": "|cffe4cfa3Магическая башня|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CM",
+      "field": "tip",
+      "expected": "|cffe4cfa3Магическая башня|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0CM",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение Ночнорождённых. Атакует цели всплесками чистой магии, сжигающими запас маны и наносящими повышенный урон призванным существам.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПротиводействие|cffced4da: уничтожает ману цели при попадании.|n|nАтакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0D8",
+      "field": "name",
+      "expected": "|cffe4cfa3Верфь|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0D8",
+      "field": "tip",
+      "expected": "|cffe4cfa3Верфь|r (|cffffffffC|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0D8",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Морское сооружение для строительства и оснащения боевых кораблей.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспортный корабль|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CJ",
+      "field": "name",
+      "expected": "|cffe4cfa3Работник|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CJ",
+      "field": "tip",
+      "expected": "|cffe4cfa3Работник|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0CJ",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Основной рабочий Ночнорождённых. Добывает золото и древесину, возводит и чинит сооружения.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deДобыча ресурсов|cffced4da: заготовка древесины и золота.|n- |cffa9c7deРемонт|cffced4da: восстановление прочности повреждённых строений и механизмов.|n- |cffa9c7deНебольшой скачок|cffced4da: быстрое перемещение на короткую дистанцию.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "e013",
+      "field": "name",
+      "expected": "|cffe4cfa3Шал'дорайская воительница|r"
+    },
+    {
+      "type": "unit",
+      "id": "e013",
+      "field": "tip",
+      "expected": "|cffe4cfa3Шал'дорайская воительница|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e013",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Ловкая воительница ближнего боя. Может обучиться защитной стойке со щитом и усиленным лунным глефам, поражающим нескольких врагов за удар.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУкрыться за щитом|cffced4da: снижает урон от дальних атак за счёт скорости бега.|n- |cffa9c7deЛунные глефы|cffced4da: глефы отскакивают в дополнительных противников.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "e014",
+      "field": "name",
+      "expected": "|cffe4cfa3Наследник Сумеречной стражи|r"
+    },
+    {
+      "type": "unit",
+      "id": "e014",
+      "field": "tip",
+      "expected": "|cffe4cfa3Наследник Сумеречной стражи|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e014",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Тяжёлый боевой маг передовой. Защищён зачарованными латами, значительно снижающими весь входящий физический урон.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗачарованный доспех|cffced4da: блокирует |cffffffff15|cffced4da ед. входящего урона от каждой атаки.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "e015",
+      "field": "name",
+      "expected": "|cffe4cfa3Шал'дорайский аристократ|r"
+    },
+    {
+      "type": "unit",
+      "id": "e015",
+      "field": "tip",
+      "expected": "|cffe4cfa3Шал'дорайский аристократ|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e015",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Могущественный чародей дальнего боя. Способен похищать ману у вражеских заклинателей и призывать водяных элементалей.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПохищение маны|cffced4da: перекачивает |cffffffff20|cffced4da ед. маны в сек. у противника.|n- |cffa9c7deПризыв элементаля воды|cffced4da: вызывает верного водяного духа для поддержки в бою.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "e016",
+      "field": "name",
+      "expected": "|cffe4cfa3Шал'дорайский гвардеец|r"
+    },
+    {
+      "type": "unit",
+      "id": "e016",
+      "field": "tip",
+      "expected": "|cffe4cfa3Шал'дорайский гвардеец|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e016",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Элитный страж ближнего боя. Подавляет заклинания вражеских магов мощным заклятием немоты.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deНемота|cffced4da: лишает противников возможности творить заклинания в выбранной области.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "e017",
+      "field": "name",
+      "expected": "|cffe4cfa3Звериный страж|r"
+    },
+    {
+      "type": "unit",
+      "id": "e017",
+      "field": "tip",
+      "expected": "|cffe4cfa3Звериный страж|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e017",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Стремительный кавалерист верхом на свирепом сурамарском леопарде. Наносит сокрушительный урон осадным сооружениям и способен опутывать врагов сетью.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРазгром|cffced4da: наносит |cffffffff1.5|cffced4da-кратный урон по зданиям.|n- |cffa9c7deМагическая сетка|cffced4da: обездвиживает врага и спускает летающих существ на землю.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "e018",
+      "field": "name",
+      "expected": "|cffe4cfa3Сумеречный страж|r"
+    },
+    {
+      "type": "unit",
+      "id": "e018",
+      "field": "tip",
+      "expected": "|cffe4cfa3Сумеречный страж|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e018",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Офицер поддержки Сумеречной стражи. Усиливает урон окружающих союзников командирской аурой и сковывает движения врагов магическими оковами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКомандирская аура|cffced4da: повышает урон находящихся поблизости союзных войск на |cffc8e087+10%|cffced4da.|n- |cffa9c7deМагические оковы|cffced4da: замедляет скорость атаки и передвижения цели.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "e019",
+      "field": "name",
+      "expected": "|cffe4cfa3Темный клинок|r"
+    },
+    {
+      "type": "unit",
+      "id": "e019",
+      "field": "tip",
+      "expected": "|cffe4cfa3Темный клинок|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e019",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Мастер скрытных убийств. Способен сливаться с тенью и наносить смертоносные рассекающие критические удары.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСлияние с тенью|cffced4da: временно дарует невидимость и повышает скорость перемещения.|n- |cffa9c7deРассекание|cffced4da: с вероятностью |cffffffff15%|cffced4da наносит |cffffffff5|cffced4da-кратный критический урон.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "e01A",
+      "field": "name",
+      "expected": "|cffe4cfa3Лунный маг|r"
+    },
+    {
+      "type": "unit",
+      "id": "e01A",
+      "field": "tip",
+      "expected": "|cffe4cfa3Лунный маг|r (|cffffffffW|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e01A",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Высший чародей дальнего боя. Атакует разрушительным уроном хаоса по области, ослабляет броню врагов волшебным огнём и обрушивает на ряды врагов всплески маны.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСфера разрушения|cffced4da: придает атакам рассеивающийся урон хаоса по области и даёт |cffc8e087+20|cffced4da к атаке.|n- |cffa9c7deВсплеск маны|cffced4da: наносит урон цели и области вокруг неё, замедляя врагов.|n- |cffa9c7deВолшебный огонь|cffced4da: снижает броню цели на |cffe69a8d-4|cffced4da ед. и раскрывает невидимость.|n- |cffa9c7deЩит маны|cffced4da: поглощает урон ценой запаса маны.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "e01B",
+      "field": "name",
+      "expected": "|cffe4cfa3Глефомет|r"
+    },
+    {
+      "type": "unit",
+      "id": "e01B",
+      "field": "tip",
+      "expected": "|cffe4cfa3Глефомет|r (|cffffffffE|r)"
+    },
+    {
+      "type": "unit",
+      "id": "e01B",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Дальнобойное осадное орудие. Эффективно против укреплений и скоплений пехоты. После улучшения способно поражать цели на линии огня стальными снарядами.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСтальной снаряд|cffced4da: снаряды пробивают строй и поражают врагов позади основной цели.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CA",
+      "field": "name",
+      "expected": "|cffe4cfa3Поклонник|r"
+    },
+    {
+      "type": "unit",
+      "id": "h0CA",
+      "field": "tip",
+      "expected": "|cffe4cfa3Поклонник|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "h0CA",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЮНИТ:|cffced4da Искусный маг поддержки и целитель (Темпомант). Исцеляет раненых соратников, рассеивает чары и призывает духов возмездия.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deДар исцеления|cffced4da: восстанавливает |cffc8e08725|cffced4da ед. здоровья союзнику.|n- |cffa9c7deРассеивание заклинаний|cffced4da: снимает эффекты чар и наносит |cffffffff200|cffced4da ед. урона призванным существам.|n- |cffa9c7deДух возмездия|cffced4da: призывает мстительного призрака из останков павшего воина.|n|nАтакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "E01E",
+      "field": "name",
+      "expected": "|cffe4cfa3Капитан Шал'дорайской стражи|r"
+    },
+    {
+      "type": "unit",
+      "id": "E01E",
+      "field": "tip",
+      "expected": "|cffe4cfa3Капитан Шал'дорайской стражи|r (|cffffffffZ|r)"
+    },
+    {
+      "type": "unit",
+      "id": "E01E",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Могучий военачальник ближнего боя. Ведёт войска в атаку, отражает вражеские удары шипами и поддерживает солдат вампирической аурой.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЗачарованные доспехи|cffced4da: пассивно поглощает урон от заклинаний и магических атак.|n- |cffa9c7deПризыв леопарда|cffced4da: призывает верных боевых леопардов для сокрушения врагов.|n- |cffa9c7deШипастая броня|cffced4da: повышает броню и возвращает часть полученного урона атакующим врагам.|n- |cffa9c7deМагический вампиризм|cffced4da: аура, позволяющая союзникам восстанавливать здоровье при атаке.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "E01D",
+      "field": "name",
+      "expected": "|cffe4cfa3Мрачная Тень|r"
+    },
+    {
+      "type": "unit",
+      "id": "E01D",
+      "field": "tip",
+      "expected": "|cffe4cfa3Мрачная Тень|r (|cffffffffX|r)"
+    },
+    {
+      "type": "unit",
+      "id": "E01D",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Непревзойдённая лучница дальнего боя. Лишает магов их энергии, поражает вражеские ряды проклятыми стрелами и вдохновляет союзных стрелков.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deПротиводействие|cffced4da: сжигает ману врагов и наносит дополнительный урон.|n- |cffa9c7deСтрела проклятия|cffced4da: выпускает темную стрелу, поражающую нескольких врагов.|n- |cffa9c7deАура меткости|cffced4da: увеличивает урон от дистанционных атак находящихся рядом союзников.|n- |cffa9c7deРазящие стрелы|cffced4da: выпускает град стрел, наносящий колоссальный урон группе врагов.|n|nАтакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "unit",
+      "id": "E01F",
+      "field": "name",
+      "expected": "|cffe4cfa3Верховный лунный маг|r"
+    },
+    {
+      "type": "unit",
+      "id": "E01F",
+      "field": "tip",
+      "expected": "|cffe4cfa3Верховный лунный маг|r (|cffffffffC|r)"
+    },
+    {
+      "type": "unit",
+      "id": "E01F",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ГЕРОЙ:|cffced4da Величайший мастер тайной магии Сурамара. Уничтожает скопления противников всплесками маны, защищает себя щитом маны и дарует союзникам неуязвимость.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВсплеск маны|cffced4da: наносит урон цели и расходится разрушительной волной по области.|n- |cffa9c7deЩит маны|cffced4da: поглощает входящий урон за счёт запаса маны.|n- |cffa9c7deАура познаний|cffced4da: ускоряет восстановление маны окружающих союзников.|n- |cffa9c7deЗащита маны|cffced4da: наделяет находящихся рядом союзников полной неуязвимостью.|n|nАтакует наземные и воздушные цели.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GL",
+      "field": "name",
+      "expected": "|cffe4cfa3Дар маны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GL",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Дар маны|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0GL",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Высвобождает прилив энергии Ночного Колодца, повышая урон всех войск Ночнорождённых на карте на |cffc8e087+25%|cffced4da.|n|nВремя действия: |cffffffff45|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GK",
+      "field": "name",
+      "expected": "|cffe4cfa3Благодать маны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GK",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Благодать маны|r (|cffffffffX|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0GK",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наделяет армию Ночнорождённых благословением Колодца, повышая броню на |cffc8e087+3|cffced4da ед. и урон на |cffc8e087+50%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GE",
+      "field": "name",
+      "expected": "|cffe4cfa3Щит маны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GE",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Щит маны|r (|cffffffffD|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0GE",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Окружает бойца магическим барьером, поглощающим |cffffffff1|cffced4da ед. урона за |cffffffff1|cffced4da ед. маны.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G5",
+      "field": "name",
+      "expected": "|cffe4cfa3Родство с магией|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G5",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Родство с магией|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G5",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивная защита Ночнорождённых. Снижает получаемый урон от физических атак на |cffc8e08765%|cffced4da и от заклинаний на |cffc8e08780%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G1",
+      "field": "name",
+      "expected": "|cffe4cfa3Укрыться за щитом|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G1",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Укрыться за щитом|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0G1",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Защитная стойка. Снижает получаемый урон от дальних атак на |cffc8e08750%|cffced4da, но уменьшает скорость перемещения на |cffe69a8d30%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0FZ",
+      "field": "name",
+      "expected": "|cffe4cfa3Лунная глефа|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0FZ",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Лунная глефа|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0FZ",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Позволяет глефам Шал'дорайских воительниц отскакивать в дополнительных противников, поражая до |cffffffff3|cffced4da целей за удар.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G2",
+      "field": "name",
+      "expected": "|cffe4cfa3Зачарованный доспех|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G2",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Зачарованный доспех|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G2",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поглощает до |cffffffff15|cffced4da ед. физического урона от каждой атаки врага. Минимальный получаемый урон: |cffffffff5|cffced4da ед.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G4",
+      "field": "name",
+      "expected": "|cffe4cfa3Призыв элементаля воды|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G4",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Призыв элементаля воды|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0G4",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает водяного элементаля для огневой поддержки. Элементаль обладает |cffffffff450|cffced4da ед. здоровья и атакой |cffffffff21-29|cffced4da ед.|n|nВремя существования: |cffffffff60|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G6",
+      "field": "name",
+      "expected": "|cffe4cfa3Похищение маны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G6",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Похищение маны|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0G6",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Перекачивает |cffffffff20|cffced4da ед. маны в сек. из цели в запас мага.|n|nВремя действия: |cffffffff8|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GG",
+      "field": "name",
+      "expected": "|cffe4cfa3Немота|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GG",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Немота|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0GG",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Лишает врагов в указанной области возможности произносить заклинания.|n|nДлительность: |cffffffff15|cffced4da сек. (|cffffffff1|cffced4da сек. по героям).|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1O9",
+      "field": "name",
+      "expected": "|cffe4cfa3Разгром|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1O9",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Разгром|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1O9",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Свирепый боевой зверь наносит |cffffffff1.5|cffced4da-кратный урон по вражеским строениям.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GJ",
+      "field": "name",
+      "expected": "|cffe4cfa3Магическая сетка|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GJ",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Магическая сетка|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0GJ",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Опутывает врага сетью, прижимая к земле и лишая подвижности.|n|nДлительность: |cffffffff12|cffced4da сек. (|cffffffff3|cffced4da сек. по героям).|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GI",
+      "field": "name",
+      "expected": "|cffe4cfa3Магические оковы|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GI",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Магические оковы|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0GI",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сковывает цель магическими узами, снижая скорость атаки на |cffe69a8d25%|cffced4da и скорость передвижения на |cffe69a8d60%|cffced4da.|n|nДлительность: |cffffffff60|cffced4da сек. (|cffffffff10|cffced4da сек. по героям).|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GH",
+      "field": "name",
+      "expected": "|cffe4cfa3Командирская аура|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GH",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Командирская аура|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GH",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон окружающих союзных войск на |cffc8e087+10%|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A03C",
+      "field": "name",
+      "expected": "|cffe4cfa3Слияние с тенью|r"
+    },
+    {
+      "type": "ability",
+      "id": "A03C",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Слияние с тенью|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0GF",
+      "field": "name",
+      "expected": "|cffe4cfa3Рассекание|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GF",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Рассекание|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GF",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff15%|cffced4da наносит смертоносный |cffffffff5|cffced4da-кратный критический урон при атаке.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1MO",
+      "field": "name",
+      "expected": "|cffe4cfa3Сфера разрушения|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1MO",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Сфера разрушения|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1MO",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает атаку Лунного мага на |cffc8e087+20|cffced4da ед. и наделяет атаки рассеивающимся уроном по области.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G7",
+      "field": "name",
+      "expected": "|cffe4cfa3Всплеск маны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G7",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Всплеск маны|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0G7",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну чистой магии, нанося |cffffffff50|cffced4da ед. урона цели и |cffffffff50|cffced4da ед. по области, снижая скорость атаки и перемещения врагов на |cffffffff4|cffced4da сек. (|cffffffff2|cffced4da сек. по героям).|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GA",
+      "field": "name",
+      "expected": "|cffe4cfa3Волшебный огонь|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GA",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Волшебный огонь|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0GA",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Окружает цель мерцающим сиянием, снижая броню на |cffe69a8d-4|cffced4da ед. и лишая невидимости на |cffffffff90|cffced4da сек. (|cffffffff60|cffced4da сек. по героям).|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G3",
+      "field": "name",
+      "expected": "|cffe4cfa3Стальной снаряд|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G3",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Стальной снаряд|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0G3",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Оснащает глефомет тяжёлыми снарядами, пробивающими строй и поражающими врагов на линии огня позади цели.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1RK",
+      "field": "name",
+      "expected": "|cffe4cfa3Дар исцеления|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1RK",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Дар исцеления|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1RK",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffc8e08725|cffced4da ед. здоровья раненому союзнику. Не действует на неживые объекты и механизмы.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1RJ",
+      "field": "name",
+      "expected": "|cffe4cfa3Рассеивание заклинаний|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1RJ",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Рассеивание заклинаний|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1RJ",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Развеивает все положительные и отрицательные магические эффекты в выбранной области, нанося |cffffffff200|cffced4da ед. урона призванным существам.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0I3",
+      "field": "name",
+      "expected": "|cffe4cfa3Небольшой скачок|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0I3",
+      "field": "tip1",
+      "expected": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0I3",
+      "field": "ubertip1",
+      "expected": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GM",
+      "field": "name",
+      "expected": "|cffe4cfa3Зачарованные доспехи|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GO",
+      "field": "name",
+      "expected": "|cffe4cfa3Призыв леопарда|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GT",
+      "field": "name",
+      "expected": "|cffe4cfa3Шипастая броня|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GU",
+      "field": "name",
+      "expected": "|cffe4cfa3Магический вампиризм|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GS",
+      "field": "name",
+      "expected": "|cffe4cfa3Противодействие|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GV",
+      "field": "name",
+      "expected": "|cffe4cfa3Стрела проклятия|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GW",
+      "field": "name",
+      "expected": "|cffe4cfa3Аура меткости|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GX",
+      "field": "name",
+      "expected": "|cffe4cfa3Разящие стрелы|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GN",
+      "field": "name",
+      "expected": "|cffe4cfa3Всплеск маны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GP",
+      "field": "name",
+      "expected": "|cffe4cfa3Щит маны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GQ",
+      "field": "name",
+      "expected": "|cffe4cfa3Аура познаний|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0GR",
+      "field": "name",
+      "expected": "|cffe4cfa3Защита маны|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R0DU",
+      "field": "name1",
+      "expected": "|cffe4cfa3Улучшенные инструменты|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06U",
+      "field": "name1",
+      "expected": "|cffe4cfa3Зачарование силы|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06V",
+      "field": "name1",
+      "expected": "|cffe4cfa3Лунные доспехи|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06W",
+      "field": "name1",
+      "expected": "|cffe4cfa3Прочные доспехи|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06X",
+      "field": "name1",
+      "expected": "|cffe4cfa3Магическая атака|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06Y",
+      "field": "name1",
+      "expected": "|cffe4cfa3Родство с маной|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06G",
+      "field": "name1",
+      "expected": "|cffe4cfa3Укрыться за щитом|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06H",
+      "field": "name1",
+      "expected": "|cffe4cfa3Лунные глефы|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06I",
+      "field": "name1",
+      "expected": "|cffe4cfa3Зачарованные доспехи|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06J",
+      "field": "name1",
+      "expected": "|cffe4cfa3Стальные снаряды|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06T",
+      "field": "name1",
+      "expected": "|cffe4cfa3Древнее знание|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06S",
+      "field": "name1",
+      "expected": "|cffe4cfa3Контроль над маной|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06K",
+      "field": "name1",
+      "expected": "|cffe4cfa3Посвящение Темпомантов|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06L",
+      "field": "name1",
+      "expected": "|cffe4cfa3Тайная магия|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06M",
+      "field": "name1",
+      "expected": "|cffe4cfa3Магическая сеть|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06N",
+      "field": "name1",
+      "expected": "|cffe4cfa3Совместные тренировки|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06P",
+      "field": "name1",
+      "expected": "|cffe4cfa3Мана-броня|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06O",
+      "field": "name1",
+      "expected": "|cffe4cfa3Рассекающие клинки|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06Q",
+      "field": "name1",
+      "expected": "|cffe4cfa3Командирская аура|r"
+    },
+    {
+      "type": "upgrade",
+      "id": "R06R",
+      "field": "name1",
+      "expected": "|cffe4cfa3Магические оковы|r"
+    }
+  ],
+  "categories": {
+    "selection": [
+      "A0HU"
+    ],
+    "markers": [
+      "R07J"
+    ],
+    "buildings": [
+      "h0CB",
+      "h0CC",
+      "h0CD",
+      "h0CE",
+      "h0CF",
+      "h0CG",
+      "h0CH",
+      "h0CI",
+      "h0CK",
+      "h0CL",
+      "h0CM",
+      "h0D8"
+    ],
+    "units": [
+      "h0CJ",
+      "e013",
+      "e014",
+      "e015",
+      "e016",
+      "e017",
+      "e018",
+      "e019",
+      "e01A",
+      "e01B",
+      "h0CA"
+    ],
+    "heroes": [
+      "E01E",
+      "E01D",
+      "E01F"
+    ],
+    "upgrades": [
+      "R07J",
+      "R0DU",
+      "R06U",
+      "R06V",
+      "R06W",
+      "R06X",
+      "R06Y",
+      "R06G",
+      "R06H",
+      "R06I",
+      "R06J",
+      "R06T",
+      "R06S",
+      "R06K",
+      "R06L",
+      "R06M",
+      "R06N",
+      "R06P",
+      "R06O",
+      "R06Q",
+      "R06R"
+    ],
+    "abilities": [
+      "A0HU",
+      "A0GL",
+      "A0GK",
+      "A0GE",
+      "A0G5",
+      "A0G1",
+      "A0FZ",
+      "A0G2",
+      "A0G4",
+      "A0G6",
+      "A0GG",
+      "A1O9",
+      "A0GJ",
+      "A0GI",
+      "A0GH",
+      "A03C",
+      "A0GF",
+      "A1MO",
+      "A0G7",
+      "A0GA",
+      "A0G3",
+      "A1RK",
+      "A1RJ",
+      "A0I3",
+      "A0GM",
+      "A0GO",
+      "A0GT",
+      "A0GU",
+      "A0GS",
+      "A0GV",
+      "A0GW",
+      "A0GX",
+      "A0GN",
+      "A0GP",
+      "A0GQ",
+      "A0GR"
+    ]
+  }
+}

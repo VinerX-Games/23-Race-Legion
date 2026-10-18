@@ -108,12 +108,13 @@ def main():
     #   nntg (Tidal Guardian)
     # Custom:
     #   n055 (Portal / Barracks tier 2)
-    #   n04L (Treasury of Tides)
+    # n04L (Serpent's Lair) is intentionally excluded: sea-serpent production
+    # must stay on shallow water (preventplace=unwalkable,unfloat; movetp=float).
     #   h0JW (Naga Royal Vault)
     #   h0JX (Temple of Ages)
     #   h0JY (Temple of Eternity)
 
-    TARGETS = {'nntt', 'nnfm', 'nnsg', 'nnsa', 'nnad', 'nntg', 'n055', 'n04L', 'h0JW', 'h0JX', 'h0JY'}
+    TARGETS = {'nntt', 'nnfm', 'nnsg', 'nnsa', 'nnad', 'nntg', 'n055', 'h0JW', 'h0JX', 'h0JY'}
 
     modified_count = 0
     for tbl_name, objs in [('orig', orig_objs), ('custom', custom_objs)]:

@@ -1,0 +1,499 @@
+=== ABILITY STATS ===
+
+Ability A001: name=TRIGSTR_287, hotkey=TRIGSTR_10212, rhk=None, lvls=1
+  L1: mana=0, cool=10.000000, range=155.000000, dur=0/0, Data=(A:9.000000, B:1, C:31, D:0.000000, E:1)
+
+Ability A003: name=TRIGSTR_292, hotkey=None, rhk=None, lvls=3
+  L1: mana=0, cool=1.900000, range=None, dur=0.010000/0.010000, Data=(A:15.000000, B:0.000000, C:None, D:None, E:None)
+  L2: mana=None, cool=1.900000, range=None, dur=0.010000/0.010000, Data=(A:35.000000, B:None, C:None, D:None, E:None)
+  L3: mana=None, cool=1.900000, range=None, dur=0.010000/0.010000, Data=(A:55.000000, B:None, C:None, D:None, E:None)
+
+Ability A005: name=TRIGSTR_568, hotkey=None, rhk=V, lvls=1
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:2, B:0, C:None, D:None, E:None)
+
+Ability A006: name=Аура меткости, hotkey=None, rhk=T, lvls=1
+  L1: mana= - , cool=0, range= - , dur=0/0, Data=(A:0.150000, B:0, C:1, D:0, E:None)
+
+Ability A007: name=Аура выносливости, hotkey=None, rhk=E, lvls=1
+  L1: mana=None, cool=0, range=None, dur=0/0, Data=(A:0.200000, B:0.05, C:None, D:None, E:None)
+
+Ability A00E: name=TRIGSTR_584, hotkey=TRIGSTR_11966, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:250, B:250, C:None, D:None, E:mounthippogryph)
+
+Ability A0I3: name=TRIGSTR_26484, hotkey=TRIGSTR_9545, rhk=TRIGSTR_18243, lvls=1
+  L1: mana=0, cool=40.000000, range=99999, dur=0.33/0, Data=(A:500.000000, B:25.000000, C:None, D:None, E:None)
+
+Ability A0IQ: name=TRIGSTR_27193, hotkey=TRIGSTR_11265, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=0.000000, dur=0/0, Data=(A:0.300000, B:0, C:1, D:0.010000, E:0)
+
+Ability A0LI: name=TRIGSTR_2888, hotkey=TRIGSTR_4247, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:500, B:-100, C:None, D:None, E:parasite)
+
+Ability A0LJ: name=TRIGSTR_12857, hotkey=TRIGSTR_4259, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:-100, B:500, C:None, D:None, E:neutralspell)
+
+Ability A0Z5: name=TRIGSTR_2604, hotkey=C, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=0.000000, dur=0/0, Data=(A:0.000000, B:0, C:0, D:0.000000, E:1)
+
+Ability A1I6: name=TRIGSTR_38913, hotkey=TRIGSTR_19818, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=0.000000, dur=0/0, Data=(A:0.300000, B:0, C:1, D:0.98, E:0)
+
+Ability A1I7: name=TRIGSTR_35480, hotkey=None, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:None, B:None, C:None, D:None, E:None)
+
+Ability A1RB: name=TRIGSTR_42010, hotkey=TRIGSTR_31997, rhk=None, lvls=1
+  L1: mana=2, cool=1, range=250, dur=1/1, Data=(A:5.000000, B:None, C:0, D:None, E:7)
+
+Ability AInv: name=Инвентарь, hotkey=None, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:6, B:0, C:1, D:1, E:1)
+
+Ability ANbf: name=Пламенное дыхание, hotkey="F", rhk="F", lvls=3
+  L1: mana=75, cool=10, range=375, dur=5/5, Data=(A:80, B:600, C:375, D:175, E:10)
+  L2: mana=75, cool=10, range=375, dur=5/5, Data=(A:130, B:900, C:375, D:175, E:15)
+  L3: mana=75, cool=10, range=375, dur=5/5, Data=(A:180, B:1200, C:375, D:175, E:25)
+
+Ability ANdh: name=Хмельные пары, hotkey=D, rhk=D, lvls=3
+  L1: mana=70, cool=12, range=550, dur=12/5, Data=(A:0, B:0.45, C:0.15, D:0, E:None)
+  L2: mana=70, cool=12, range=550, dur=12/5, Data=(A:0, B:0.65, C:0.3, D:0, E:None)
+  L3: mana=70, cool=12, range=550, dur=12/5, Data=(A:0, B:0.8, C:0.5, D:0, E:None)
+
+Ability Ahrp: name=Ремонтировать, hotkey=R, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=50, dur=0/0, Data=(A:0.35, B:1.5, C:0.15, D:0.6, E:75)
+
+Ability Aloc: name=Саранча, hotkey=None, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:None, B:None, C:None, D:None, E:None)
+
+Ability Apiv: name=Постоянная невидимость, hotkey=None, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=None, dur=2/2, Data=(A:1, B:None, C:None, D:None, E:None)
+
+Ability Argl: name=Вернуть золото и древесину, hotkey=None, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:1, B:1, C:None, D:None, E:None)
+
+Ability Arlm: name=Вернуть древесину, hotkey=None, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:0, B:1, C:None, D:None, E:None)
+
+Ability Asph: name=Сфера, hotkey=None, rhk=None, lvls=1
+  L1: mana=0, cool=1, range=None, dur=0.01/0.01, Data=(A:None, B:None, C:None, D:None, E:None)
+
+Ability Avul: name=Неуязвимость, hotkey=None, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:None, B:None, C:None, D:None, E:None)
+
+Ability PA02: name=TRIGSTR_35484, hotkey=TRIGSTR_28748, rhk=TRIGSTR_28747, lvls=1
+  L1: mana=200, cool=180, range=None, dur=60/60, Data=(A:15.000000, B:700.000000, C:40.000000, D:100.000000, E:None)
+
+Ability PA03: name=TRIGSTR_35485, hotkey=TRIGSTR_26688, rhk=TRIGSTR_26625, lvls=4
+  L1: mana=100, cool=12.000000, range=None, dur=0/0, Data=(A:95.000000, B:500.000000, C:4, D:100, E:None)
+  L2: mana=90, cool=10.000000, range=None, dur=0/0, Data=(A:145.000000, B:825.000000, C:5, D:100, E:None)
+  L3: mana=85, cool=8.000000, range=None, dur=0/0, Data=(A:210.000000, B:1200, C:6, D:100, E:None)
+  L4: mana=65, cool=6.000000, range=None, dur=0/0, Data=(A:240.000000, B:1050.000000, C:7, D:100, E:None)
+
+Ability PA05: name=TRIGSTR_35486, hotkey=None, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:30.000000, B:1, C:20.000000, D:1, E:200.000000)
+
+Ability PA13: name=TRIGSTR_35487, hotkey=None, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:None, B:None, C:None, D:None, E:None)
+
+Ability PA15: name=TRIGSTR_36665, hotkey=None, rhk=None, lvls=4
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:0.070000, B:1, C:1, D:0, E:None)
+  L2: mana=None, cool=None, range=None, dur=None/None, Data=(A:0.140000, B:1, C:1, D:None, E:None)
+  L3: mana=None, cool=None, range=None, dur=None/None, Data=(A:0.210000, B:1, C:1, D:None, E:None)
+  L4: mana=None, cool=None, range=None, dur=None/None, Data=(A:0.280000, B:1, C:1, D:None, E:None)
+
+Ability PA16: name=TRIGSTR_40295, hotkey=TRIGSTR_27176, rhk=TRIGSTR_27175, lvls=1
+  L1: mana=90, cool=9, range=700, dur=0/0, Data=(A:45.000000, B:6, C:0.050000, D:None, E:None)
+
+Ability PA20: name=TRIGSTR_42409, hotkey=TRIGSTR_28300, rhk=TRIGSTR_28299, lvls=2
+  L1: mana=None, cool=0, range=None, dur=0/0, Data=(A:1.750000, B:0, C:None, D:None, E:None)
+  L2: mana=None, cool=None, range=None, dur=None/None, Data=(A:3.500000, B:0, C:None, D:None, E:None)
+
+Ability PA45: name=TRIGSTR_9143, hotkey=K, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:100, B:10.000000, C:18.000000, D:1, E:1)
+
+Ability PA46: name=TRIGSTR_12384, hotkey=D, rhk=None, lvls=1
+  L1: mana=125, cool=5, range=700.000000, dur=0/0, Data=(A:0, B:300.000000, C:None, D:None, E:None)
+
+Ability PA50: name=TRIGSTR_21395, hotkey=TRIGSTR_26478, rhk=TRIGSTR_26472, lvls=4
+  L1: mana=75, cool=9, range=600, dur=5/3, Data=(A:175.000000, B:None, C:None, D:None, E:None)
+  L2: mana=75, cool=10.000000, range=600, dur=5/3, Data=(A:250.000000, B:None, C:None, D:None, E:None)
+  L3: mana=75, cool=11.000000, range=600, dur=5/3, Data=(A:400.000000, B:None, C:None, D:None, E:None)
+  L4: mana=75, cool=12.000000, range=600, dur=6.000000/3, Data=(A:450.000000, B:None, C:None, D:None, E:None)
+
+Ability PA51: name=TRIGSTR_21427, hotkey=TRIGSTR_27560, rhk=TRIGSTR_27549, lvls=4
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:100, B:8.000000, C:12, D:1, E:1)
+  L2: mana=None, cool=None, range=None, dur=None/None, Data=(A:100.000000, B:8.000000, C:15.000000, D:1, E:1)
+  L3: mana=None, cool=None, range=None, dur=None/None, Data=(A:100.000000, B:8.000000, C:18.000000, D:1, E:1)
+  L4: mana=None, cool=None, range=None, dur=None/None, Data=(A:100.000000, B:8.000000, C:30.000000, D:1, E:1)
+
+Ability PA53: name=TRIGSTR_21766, hotkey=TRIGSTR_27475, rhk=None, lvls=1
+  L1: mana=50, cool=1, range=600, dur=60/60, Data=(A:0.500000, B:0.350000, C:0.3, D: - , E:None)
+
+Ability PA55: name=TRIGSTR_21924, hotkey=TRIGSTR_28744, rhk=TRIGSTR_28739, lvls=1
+  L1: mana=200, cool=120.000000, range=None, dur=7/5, Data=(A:180.000000, B:0, C:None, D:None, E:None)
+
+Ability PA57: name=TRIGSTR_29964, hotkey=W, rhk=W, lvls=4
+  L1: mana=35, cool=25.000000, range=None, dur=20/28.000000, Data=(A:0.6, B:0.1, C:40, D:1, E:1)
+  L2: mana=15, cool=20.000000, range=None, dur=35/35, Data=(A:0.6, B:0.4, C:70, D:1, E:1)
+  L3: mana=10, cool=15.000000, range=None, dur=50/50, Data=(A:0.6, B:0.7, C:100, D:1, E:1)
+  L4: mana=5, cool=7.000000, range=None, dur=60/60, Data=(A:0.6, B:0.900000, C:150.000000, D:1, E:1)
+
+Ability PA59: name=TRIGSTR_35264, hotkey=None, rhk=TRIGSTR_27592, lvls=4
+  L1: mana=None, cool=0, range=None, dur=0/0, Data=(A:15, B:2, C:0, D:0, E:0)
+  L2: mana=None, cool=None, range=None, dur=None/None, Data=(A:15, B:3, C:0, D:0, E:0)
+  L3: mana=None, cool=None, range=None, dur=None/None, Data=(A:15, B:4, C:0, D:0, E:0)
+  L4: mana=None, cool=None, range=None, dur=None/None, Data=(A:15, B:5.000000, C:0, D:0, E:0)
+
+Ability PA60: name=TRIGSTR_35400, hotkey=TRIGSTR_27519, rhk=TRIGSTR_27477, lvls=4
+  L1: mana=50, cool=9, range=800.000000, dur=0/0, Data=(A:95.000000, B:6, C:0.100000, D:None, E:None)
+  L2: mana=60, cool=9, range=800.000000, dur=None/None, Data=(A:135.000000, B:8, C:0.100000, D:None, E:None)
+  L3: mana=75, cool=9, range=800.000000, dur=None/None, Data=(A:180, B:10, C:0.100000, D:None, E:None)
+  L4: mana=85, cool=9, range=800.000000, dur=None/None, Data=(A:400.000000, B:15, C:0.050000, D:None, E:None)
+
+Ability PA61: name=TRIGSTR_35401, hotkey=None, rhk=U, lvls=1
+  L1: mana= - , cool=0, range= - , dur=0/0, Data=(A:0.150000, B:0.5, C:0, D:None, E:None)
+
+Ability PA62: name=TRIGSTR_42405, hotkey=TRIGSTR_26480, rhk=R, lvls=1
+  L1: mana=4, cool=0, range=500.000000, dur=0/0, Data=(A:5.000000, B:None, C:None, D:None, E:None)
+
+Ability PA63: name=TRIGSTR_35402, hotkey=TRIGSTR_27520, rhk=L, lvls=1
+  L1: mana=10, cool=0, range=None, dur=2.000000/2.000000, Data=(A:15.000000, B:3.200000, C:0.000000, D:None, E:None)
+
+Ability PA65: name=TRIGSTR_35406, hotkey=TRIGSTR_26507, rhk=None, lvls=1
+  L1: mana=100, cool=0, range=None, dur=45/45, Data=(A:0.150000, B:4, C:0, D:0, E:0)
+
+Ability PA66: name=TRIGSTR_22591, hotkey=C, rhk=C, lvls=1
+  L1: mana=0, cool=0, range=None, dur=4.000000/6.000000, Data=(A:4.000000, B:50.000000, C:100.000000, D:35.000000, E:190.000000)
+
+Ability PA67: name=TRIGSTR_35413, hotkey=TRIGSTR_26510, rhk="F", lvls=1
+  L1: mana=75, cool=10, range=375, dur=5/5, Data=(A:30.000000, B:1100.000000, C:375, D:175, E:9.000000)
+
+Ability PA68: name=TRIGSTR_22657, hotkey=None, rhk=B, lvls=1
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:10, B:1.200000, C:0, D:0.07, E:0)
+
+Ability PA69: name=TRIGSTR_35415, hotkey=None, rhk=C, lvls=1
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:0.050000, B:None, C:None, D:None, E:None)
+
+Ability PA70: name=TRIGSTR_35416, hotkey=TRIGSTR_27545, rhk=D, lvls=1
+  L1: mana=70, cool=15.000000, range=550, dur=12/5, Data=(A:0, B:0.45, C:0.350000, D:0, E:None)
+
+Ability PA73: name=TRIGSTR_35418, hotkey=TRIGSTR_26564, rhk=None, lvls=1
+  L1: mana=50, cool=11, range=600, dur=0.7/0, Data=(A:125.000000, B:4, C:900, D:300, E:None)
+
+Ability PA74: name=TRIGSTR_35472, hotkey=None, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=None, dur=2/0.300000, Data=(A:15, B:0, C:15.000000, D:0, E:0)
+
+Ability PA75: name=TRIGSTR_35473, hotkey=TRIGSTR_28746, rhk=TRIGSTR_28745, lvls=2
+  L1: mana=200, cool=100.000000, range=650.000000, dur=15.000000/15.000000, Data=(A:25.000000, B:0.800000, C:0.35, D:None, E:None)
+  L2: mana=300, cool=100.000000, range=650.000000, dur=15/15, Data=(A:35.000000, B:0.500000, C:0.35, D:None, E:None)
+
+Ability PA76: name=TRIGSTR_35479, hotkey=TRIGSTR_26624, rhk=TRIGSTR_26605, lvls=4
+  L1: mana=0, cool=60.000000, range=800, dur=1/0, Data=(A:pa05, B:1, C:1, D:None, E:None)
+  L2: mana=0, cool=50.000000, range=800, dur=1/0, Data=(A:pa04, B:2, C:2, D:None, E:None)
+  L3: mana=0, cool=40.000000, range=800, dur=1/0, Data=(A:pa10, B:3, C:3, D:None, E:None)
+  L4: mana=0, cool=30.000000, range=800, dur=1/0, Data=(A:pa04,pa10, B:4, C:4, D:None, E:None)
+
+Ability PA77: name=TRIGSTR_35414, hotkey=None, rhk=TRIGSTR_27968, lvls=3
+  L1: mana=0, cool=0, range=None, dur=0/0, Data=(A:10, B:2, C:0, D:0.07, E:None)
+  L2: mana=None, cool=None, range=None, dur=None/None, Data=(A:10, B:3, C:0, D:0.14, E:None)
+  L3: mana=None, cool=None, range=None, dur=None/None, Data=(A:10, B:4, C:0, D:0.21, E:None)
+
+Ability PA78: name=TRIGSTR_6735, hotkey=TRIGSTR_27641, rhk=TRIGSTR_27700, lvls=5
+  L1: mana=0, cool=20.000000, range=None, dur=7.000000/7.000000, Data=(A:1, B:0, C:5, D:1, E:3)
+  L2: mana=None, cool=18.000000, range=None, dur=7.000000/7.000000, Data=(A:1, B:None, C:10, D:None, E:None)
+  L3: mana=None, cool=16.000000, range=None, dur=7.000000/7.000000, Data=(A:1, B:None, C:20, D:None, E:None)
+  L4: mana=None, cool=14.000000, range=None, dur=7.000000/7.000000, Data=(A:1, B:None, C:30, D:None, E:None)
+  L5: mana=None, cool=12.000000, range=None, dur=7.000000/7.000000, Data=(A:1, B:None, C:40, D:None, E:None)
+
+Ability PA79: name=TRIGSTR_35426, hotkey=G, rhk=None, lvls=1
+  L1: mana=0, cool=0, range=125.000000, dur=0.200000/0, Data=(A:5, B:30, C:10, D:None, E:None)
+
+Ability pa15: name=TRIGSTR_41935, hotkey=TRIGSTR_28178, rhk=None, lvls=1
+  L1: mana=50, cool=11.000000, range=700.000000, dur=20/0.500000, Data=(A:1, B:None, C:None, D:None, E:None)
+
+Ability pa36: name=TRIGSTR_41632, hotkey=TRIGSTR_27299, rhk=None, lvls=1
+  L1: mana=75, cool=15.000000, range=800, dur=4.000000/3.000000, Data=(A:80.000000, B:None, C:None, D:None, E:None)
+
+Ability pa37: name=TRIGSTR_41819, hotkey=TRIGSTR_27446, rhk=TRIGSTR_27350, lvls=4
+  L1: mana=90, cool=9, range=700, dur=0/0, Data=(A:130, B:3, C:0.25, D:None, E:None)
+  L2: mana=90, cool=9, range=700, dur=None/None, Data=(A:215, B:4, C:0.25, D:None, E:None)
+  L3: mana=90, cool=9, range=700, dur=None/None, Data=(A:300, B:5, C:0.25, D:None, E:None)
+  L4: mana=90, cool=9, range=700, dur=None/None, Data=(A:300, B:5, C:0.25, D:None, E:None)
+
+Ability pa44: name=TRIGSTR_41820, hotkey=TRIGSTR_28923, rhk=TRIGSTR_28922, lvls=2
+  L1: mana=150, cool=180, range=None, dur=20.000000/15.000000, Data=(A:None, B:None, C:None, D:None, E:None)
+  L2: mana=150, cool=120.000000, range=None, dur=30/20.000000, Data=(A:None, B:None, C:None, D:None, E:None)
+
+=== UPGRADE STATS ===
+
+Upgrade PA10: lvls=2
+  L1: hotkey=TRIGSTR_39117, cost=None/None, time=None
+  L2: hotkey=TRIGSTR_39118, cost=None/None, time=None
+
+Upgrade PA11: lvls=1
+  L1: hotkey=None, cost=None/None, time=None
+
+Upgrade PA12: lvls=1
+  L1: hotkey=B, cost=None/None, time=None
+
+Upgrade PA14: lvls=1
+  L1: hotkey=TRIGSTR_41362, cost=None/None, time=None
+
+Upgrade PA80: lvls=6
+  L1: hotkey=TRIGSTR_34564, cost=None/None, time=None
+  L2: hotkey=TRIGSTR_34568, cost=None/None, time=None
+  L3: hotkey=TRIGSTR_34569, cost=None/None, time=None
+  L4: hotkey=TRIGSTR_34507, cost=None/None, time=None
+  L5: hotkey=TRIGSTR_34508, cost=None/None, time=None
+  L6: hotkey=TRIGSTR_34509, cost=None/None, time=None
+
+Upgrade PA81: lvls=6
+  L1: hotkey=TRIGSTR_42175, cost=None/None, time=None
+  L2: hotkey=TRIGSTR_42176, cost=None/None, time=None
+  L3: hotkey=TRIGSTR_42177, cost=None/None, time=None
+  L4: hotkey=TRIGSTR_42172, cost=None/None, time=None
+  L5: hotkey=TRIGSTR_42173, cost=None/None, time=None
+  L6: hotkey=TRIGSTR_42174, cost=None/None, time=None
+
+Upgrade PA82: lvls=1
+  L1: hotkey=TRIGSTR_41128, cost=None/None, time=None
+
+Upgrade PA83: lvls=1
+  L1: hotkey=TRIGSTR_39106, cost=None/None, time=None
+
+Upgrade PA84: lvls=6
+  L1: hotkey=TRIGSTR_35431, cost=None/None, time=None
+  L2: hotkey=TRIGSTR_35436, cost=None/None, time=None
+  L3: hotkey=TRIGSTR_35466, cost=None/None, time=None
+  L4: hotkey=TRIGSTR_35370, cost=None/None, time=None
+  L5: hotkey=TRIGSTR_35429, cost=None/None, time=None
+  L6: hotkey=TRIGSTR_35430, cost=None/None, time=None
+
+Upgrade PA85: lvls=1
+  L1: hotkey=TRIGSTR_41131, cost=None/None, time=None
+
+Upgrade PA86: lvls=2
+  L1: hotkey=TRIGSTR_41357, cost=None/None, time=None
+  L2: hotkey=TRIGSTR_41510, cost=None/None, time=None
+
+Upgrade PA87: lvls=2
+  L1: hotkey=TRIGSTR_39241, cost=None/None, time=None
+  L2: hotkey=TRIGSTR_39289, cost=None/None, time=None
+
+Upgrade PA88: lvls=2
+  L1: hotkey=TRIGSTR_42178, cost=None/None, time=None
+  L2: hotkey=TRIGSTR_42179, cost=None/None, time=None
+
+Upgrade PA89: lvls=2
+  L1: hotkey=TRIGSTR_34573, cost=None/None, time=None
+  L2: hotkey=TRIGSTR_34582, cost=None/None, time=None
+
+Upgrade PA90: lvls=3
+  L1: hotkey=TRIGSTR_40820, cost=None/None, time=None
+  L2: hotkey=TRIGSTR_40821, cost=None/None, time=None
+  L3: hotkey=TRIGSTR_40822, cost=None/None, time=None
+
+Upgrade PA91: lvls=2
+  L1: hotkey=TRIGSTR_35619, cost=None/None, time=None
+  L2: hotkey=TRIGSTR_35633, cost=None/None, time=None
+
+Upgrade PA92: lvls=3
+  L1: hotkey=TRIGSTR_39107, cost=None/None, time=None
+  L2: hotkey=TRIGSTR_39112, cost=None/None, time=None
+  L3: hotkey=TRIGSTR_39113, cost=None/None, time=None
+
+Upgrade PA93: lvls=6
+  L1: hotkey=TRIGSTR_41847, cost=None/None, time=None
+  L2: hotkey=TRIGSTR_41927, cost=None/None, time=None
+  L3: hotkey=TRIGSTR_41928, cost=None/None, time=None
+  L4: hotkey=TRIGSTR_41511, cost=None/None, time=None
+  L5: hotkey=TRIGSTR_41738, cost=None/None, time=None
+  L6: hotkey=TRIGSTR_41771, cost=None/None, time=None
+
+Upgrade PA94: lvls=6
+  L1: hotkey=TRIGSTR_41138, cost=None/None, time=None
+  L2: hotkey=TRIGSTR_41361, cost=None/None, time=None
+  L3: hotkey=TRIGSTR_41132, cost=None/None, time=None
+  L4: hotkey=TRIGSTR_41133, cost=None/None, time=None
+  L5: hotkey=TRIGSTR_41134, cost=None/None, time=None
+  L6: hotkey=TRIGSTR_41137, cost=None/None, time=None
+
+Upgrade PA95: lvls=1
+  L1: hotkey=TRIGSTR_39114, cost=None/None, time=None
+
+Upgrade R0L3: lvls=1
+  L1: hotkey=None, cost=None/None, time=None
+
+Upgrade Rhfl: lvls=1
+  L1: hotkey=R, cost=None/None, time=None
+
+Upgrade Rhfs: lvls=1
+  L1: hotkey=S, cost=None/None, time=None
+
+Upgrade pa16: lvls=1
+  L1: hotkey=TRIGSTR_42186, cost=None/None, time=None
+
+Upgrade pa21: lvls=1
+  L1: hotkey=TRIGSTR_40823, cost=None/None, time=None
+
+Upgrade pa39: lvls=2
+  L1: hotkey=TRIGSTR_34440, cost=None/None, time=None
+  L2: hotkey=TRIGSTR_35155, cost=None/None, time=None
+
+Upgrade pa46: lvls=1
+  L1: hotkey=None, cost=None/None, time=None
+
+Upgrade pa47: lvls=1
+  L1: hotkey=TRIGSTR_39391, cost=None/None, time=None
+
+=== UNIT & HERO STATS ===
+
+HEROE PA36: name=TRIGSTR_21966, hotkey=TRIGSTR_7791
+  cost=475/100, food=None, hp=650, mana=100
+  armor=2, atk1=2-12 (cool=2.000000, range=100)
+  primary=STR, STR=22+2.900000, AGI=13+1.700000, INT=17+1.900000
+
+HEROE PA37: name=TRIGSTR_36651, hotkey=TRIGSTR_7110
+  cost=475/100, food=None, hp=700, mana=100
+  armor=3, atk1=2-12 (cool=3.000000, range=100)
+  primary=STR, STR=24+2.500000, AGI=11+2.000000, INT=15+1.900000
+
+HEROE PA38: name=TRIGSTR_35265, hotkey=TRIGSTR_7145
+  cost=475/150, food=None, hp=550, mana=100
+  armor=0, atk1=2-8 (cool=1.450000, range=700)
+  primary=INT, STR=19+2.075000, AGI=16+1, INT=19+5.000000
+
+HEROE PA39: name=Хмелевар, hotkey=N
+  cost=425/100, food=None, hp=675, mana=100
+  armor=2, atk1=2-12 (cool=2.22, range=100)
+  primary=STR, STR=46+3, AGI=24+1.5, INT=30+1.5
+
+HEROE PA40: name=TRIGSTR_36648, hotkey=TRIGSTR_9125
+  cost=475/200, food=None, hp=650, mana=100
+  armor=7, atk1=2-12 (cool=1.200000, range=100)
+  primary=AGI, STR=22+1.250000, AGI=13+2.500000, INT=17+1.900000
+
+HEROE pa22: name=TRIGSTR_36637, hotkey=TRIGSTR_7109
+  cost=390/130, food=None, hp=675, mana=200
+  armor=7, atk1=2-12 (cool=1.750000, range=100)
+  primary=STR, STR=23+3, AGI=14+1.5, INT=16+1.5
+
+UNIT pa11: name=TRIGSTR_36626, hotkey=TRIGSTR_8834
+  cost=245/85, food= - , hp=885, mana= - 
+  armor=5, atk1=30-38 (cool=1.300000, range=100)
+
+UNIT pa29: name=TRIGSTR_30611, hotkey=TRIGSTR_8038
+  cost=150/50, food= - , hp=290, mana=100
+  armor=0, atk1=8-9 (cool=2, range=600)
+
+UNIT pa05: name=TRIGSTR_16554, hotkey=TRIGSTR_7020
+  cost=120/40, food= - , hp=420, mana= - 
+  armor=2, atk1=12-13 (cool=1.35, range=90)
+
+UNIT pa13: name=TRIGSTR_36628, hotkey=TRIGSTR_7689
+  cost=300/45, food= - , hp=535, mana=450
+  armor=0, atk1=18-24 (cool=1.4, range=650)
+
+UNIT pa04: name=TRIGSTR_15727, hotkey=TRIGSTR_8812
+  cost=290/100, food= - , hp=420, mana= - 
+  armor=2, atk1=12-13 (cool=1.300000, range=90)
+
+UNIT pa06: name=TRIGSTR_23143, hotkey=TRIGSTR_7107
+  cost=305/105, food= - , hp=420, mana=200
+  armor=3, atk1=12-13 (cool=1.250000, range=90)
+
+UNIT pa12: name=TRIGSTR_36627, hotkey=TRIGSTR_7654
+  cost=240/80, food= - , hp=535, mana=30
+  armor=0, atk1=18-24 (cool=1.300000, range=500)
+
+UNIT pa10: name=TRIGSTR_35299, hotkey=TRIGSTR_3669
+  cost=235/150, food= - , hp=420, mana= - 
+  armor=3, atk1=12-13 (cool=1.700000, range=400)
+
+UNIT pa38: name=TRIGSTR_36631, hotkey=TRIGSTR_7422
+  cost=120/40, food= - , hp=290, mana=100
+  armor=0, atk1=8-9 (cool=2, range=600)
+
+UNIT pa09: name=TRIGSTR_23448, hotkey=TRIGSTR_7108
+  cost=320/110, food= - , hp=420, mana= - 
+  armor=10, atk1=12-13 (cool=0.600000, range=90)
+
+UNIT pa01: name=TRIGSTR_14453, hotkey=TRIGSTR_7019
+  cost=75/0, food= - , hp=240, mana= - 
+  armor=0, atk1=5-6 (cool=2, range=90)
+
+UNIT pa14: name=TRIGSTR_36629, hotkey=TRIGSTR_7042
+  cost=160/55, food= - , hp=360, mana= - 
+  armor=0, atk1=52-64 (cool=3.5, range=900)
+
+UNIT pa07: name=TRIGSTR_23409, hotkey=TRIGSTR_8813
+  cost=310/105, food= - , hp=420, mana= - 
+  armor=2, atk1=12-13 (cool=1.950000, range=90)
+
+UNIT pa08: name=TRIGSTR_23447, hotkey=TRIGSTR_7021
+  cost=500/170, food= - , hp=420, mana=300
+  armor=5, atk1=12-13 (cool=1.120000, range=100)
+
+UNIT pa35: name=TRIGSTR_35244, hotkey=TRIGSTR_9107
+  cost=445/150, food= - , hp=600, mana=150
+  armor=3, atk1=13-15 (cool=1.200000, range=100)
+
+UNIT h00X: name=TRIGSTR_276, hotkey=TRIGSTR_993
+  cost=250/200, food= - , hp=1500, mana= - 
+  armor=0, atk1= - - -  (cool=None, range=None)
+
+UNIT h00Y: name=TRIGSTR_277, hotkey=TRIGSTR_995
+  cost=450/475, food= - , hp=575, mana= - 
+  armor=1, atk1=55-69 (cool=1.400000, range=500)
+
+UNIT h00Z: name=TRIGSTR_279, hotkey=TRIGSTR_426
+  cost=875/1000, food= - , hp=1000, mana= - 
+  armor=5, atk1=78-105 (cool=1.800000, range=750)
+
+=== BUILDING STATS ===
+
+BUILDING pa23: name=TRIGSTR_36638, hotkey=TRIGSTR_7092
+  cost=385/205, food=50, hp=1500, armor=5
+
+BUILDING pa24: name=TRIGSTR_3144, hotkey=U
+  cost=3500/3500, food=0, hp=2000, armor=5
+
+BUILDING pa25: name=TRIGSTR_3145, hotkey=U
+  cost=7000/7000, food=0, hp=2500, armor=5
+
+BUILDING pa26: name=TRIGSTR_36639, hotkey=TRIGSTR_3670
+  cost=400/100, food=65, hp=500, armor=15
+
+BUILDING pa27: name=TRIGSTR_36640, hotkey=TRIGSTR_3793
+  cost=250/175, food=3, hp=900, armor=5
+
+BUILDING pa28: name=TRIGSTR_36641, hotkey=TRIGSTR_7790
+  cost=300/375, food= - , hp=1500, armor=5
+
+BUILDING pa30: name=TRIGSTR_36642, hotkey=TRIGSTR_8835
+  cost=300/250, food= - , hp=1200, armor=5
+
+BUILDING pa31: name=TRIGSTR_36643, hotkey=TRIGSTR_4583
+  cost=400/375, food= - , hp=1200, armor=5
+
+BUILDING pa32: name=TRIGSTR_36644, hotkey=TRIGSTR_11521
+  cost=525/375, food= - , hp=1050, armor=5
+
+BUILDING pa33: name=TRIGSTR_36645, hotkey=R
+  cost=450/375, food= - , hp=1050, armor=5
+
+BUILDING pa34: name=TRIGSTR_2874, hotkey=TRIGSTR_14527
+  cost=145/120, food= - , hp=500, armor=5
+
+BUILDING h0NZ: name=TRIGSTR_36654, hotkey=TRIGSTR_7982
+  cost=550/200, food=100, hp=500, armor=5
+
+BUILDING h0P5: name=TRIGSTR_36646, hotkey=TRIGSTR_15824
+  cost=50/20, food= - , hp=500, armor=5
+
+BUILDING h0P3: name=TRIGSTR_9508, hotkey=TRIGSTR_15819
+  cost=145/120, food= - , hp=500, armor=5
+
+BUILDING h0P4: name=TRIGSTR_22644, hotkey=TRIGSTR_15820
+  cost=145/120, food= - , hp=500, armor=5
+
+BUILDING h011: name=TRIGSTR_368, hotkey=TRIGSTR_1609
+  cost=500/700, food=None, hp=1200, armor=5

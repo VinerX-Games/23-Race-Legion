@@ -1,0 +1,388 @@
+{
+  "scope": "Огры (Ogres): категория 2 — Юниты (19 юнитов)",
+  "units_count": 19,
+  "variants": [
+    "SD"
+  ],
+  "units": [
+    {
+      "id": "o03W",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 28179,
+          "after": "|cffe4cfa3Огр-Строитель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 42467,
+          "after": "|cffe4cfa3Огр-Строитель|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42468,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый рабочий огров. Добывает золото и древесину, а также возводит и чинит строения.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deДобыча ресурсов|cffced4da: сбор золота и заготовка древесины.|n- |cffa9c7deРемонт|cffced4da: восстановление запаса прочности зданий.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03F",
+      "hotkey": "R",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27843,
+          "after": "|cffe4cfa3Огр-Командир|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35443,
+          "after": "|cffe4cfa3Огр-Командир|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42702,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Элитный командир ближнего боя, вдохновляющий союзников и усиливающий их защиту.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАура Защиты|cffced4da: увеличивает броню находящихся рядом союзников на |cffffffff2|cffced4da ед.|n- |cffa9c7deСильный удар|cffced4da: вероятность оглушить цель и нанести дополнительный урон.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03G",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27845,
+          "after": "|cffe4cfa3Огр-Камнеметатель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 35483,
+          "after": "|cffe4cfa3Огр-Камнеметатель|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42703,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Осадный боец дальнего боя, мечущий массивные валуны по площади.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСильный удар|cffced4da: вероятность оглушить цель и нанести дополнительный урон.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03H",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 25373,
+          "after": "|cffe4cfa3Огр-Копьеметатель|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 36678,
+          "after": "|cffe4cfa3Огр-Копьеметатель|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42704,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Стрелок дальнего боя, метающий тяжелые копья.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deУсиленное копьё|cffced4da: пробивает небронированные цели и среднюю броню (требует исследования).|n- |cffa9c7deСильный удар|cffced4da: вероятность оглушить цель и нанести дополнительный урон.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03I",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27849,
+          "after": "|cffe4cfa3Огр-воин|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 41062,
+          "after": "|cffe4cfa3Огр-воин|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42705,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Базовый тяжелый боец ближнего боя армии Огров.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСильный удар|cffced4da: вероятность нанести удвоенный урон и оглушить цель.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03K",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27870,
+          "after": "|cffe4cfa3Огр-Наездник|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 41951,
+          "after": "|cffe4cfa3Огр-Наездник|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42706,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Быстрый мобильный всадник, выслеживающий и связывающий вражеские войска.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deВоля Охоты|cffced4da: увеличивает урон от атак по героям и юнитам в |cffffffff1.3|cffced4da раза.|n- |cffa9c7deОпутывание|cffced4da: обездвиживает цель и опускает воздушных врагов на землю (требует исследования).|n- |cffa9c7deСильный удар|cffced4da: вероятность оглушить цель и нанести дополнительный урон.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03L",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27872,
+          "after": "|cffe4cfa3Огр-Барабанщик|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 41952,
+          "after": "|cffe4cfa3Огр-Барабанщик|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42707,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Воин поддержки, поддерживающий боевой дух армии грохотом барабанов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБоевые барабаны|cffced4da: повышает урон атак союзников на |cffffffff10%|cffced4da.|n- |cffa9c7deДеморализующий звук|cffced4da: снижает урон вражеских войск на |cffffffff10%|cffced4da (требует исследования).|n- |cffa9c7deУдарная волна|cffced4da: наносит урон врагам ударной волной от барабана.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03M",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27874,
+          "after": "|cffe4cfa3Огр-Берсерк|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 42012,
+          "after": "|cffe4cfa3Огр-Берсерк|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42708,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Неистовый боец ближнего боя, атакующий с сокрушительной скоростью и силой.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deРассекающий удар|cffced4da: наносит урон соседним вражеским бойцам.|n- |cffa9c7deБешенство|cffced4da: ускоряет атаку и перемещение ценой получаемого урона.|n- |cffa9c7deСильный удар|cffced4da: вероятность оглушить цель и нанести дополнительный урон.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03N",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27876,
+          "after": "|cffe4cfa3Огр-Маг|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 42017,
+          "after": "|cffe4cfa3Огр-Маг|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 29047,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Двухголовый колдун поддержки, усиливающий армию кровожадностью и рассеивающий чары.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deОгненная стрела|cffced4da: наносит урон и оглушает врага.|n- |cffa9c7deРассеивание заклинаний|cffced4da: снимает эффекты заклинаний и наносит урон призывным существам.|n- |cffa9c7deЖажда крови|cffced4da: существенно ускоряет атаку и бег союзного воина.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03O",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27878,
+          "after": "|cffe4cfa3Огр-Боевой Маг|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 42421,
+          "after": "|cffe4cfa3Огр-Боевой Маг|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31787,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Тяжелый боевой маг, связывающий союзников узами духа и сковывающий врагов огненным лассо.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deДуховная Связь|cffced4da: распределяет получаемый урон между связанными союзниками.|n- |cffa9c7deЗачарованный руной Молот|cffced4da: поджигает атакованные вражеские здания.|n- |cffa9c7deОгненное лассо|cffced4da: сковывает цель, нанося периодический урон.|n- |cffa9c7deСильный удар|cffced4da: вероятность оглушить цель и нанести дополнительный урон.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03P",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27880,
+          "after": "|cffe4cfa3Шаман Мок'Натал|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 42423,
+          "after": "|cffe4cfa3Шаман Мок'Натал|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 31834,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Мудрый шаман полуорков-полуогров. Повелевает стихией молний и призывает свирепых зверей.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЩит молний|cffced4da: окружает цель электрическим щитом, наносящим урон вокруг.|n- |cffa9c7deПризыв вепря|cffced4da: призывает боевого иглобрюха.|n- |cffa9c7deЦепная молния|cffced4da: поражает цепь врагов электрическим разрядом.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03Q",
+      "hotkey": "Q",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27882,
+          "after": "|cffe4cfa3Огрон|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 42424,
+          "after": "|cffe4cfa3Огрон|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42712,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Массивный полу-гронн колоссальной силы, проламывающий ряды противника.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСильный удар|cffced4da: вероятность оглушить цель и нанести удвоенный урон.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03R",
+      "hotkey": "E",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27884,
+          "after": "|cffe4cfa3Огрон-синий|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 42457,
+          "after": "|cffe4cfa3Огрон-синий|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42713,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Северный огрон, закаленный ледяными ветрами. Защищает себя морозным щитом.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deМорозный доспех|cffced4da: повышает броню и замедляет атакующих в ближнем бою врагов (требует исследования).|n- |cffa9c7deСильный удар|cffced4da: вероятность оглушить цель и нанести дополнительный урон.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03S",
+      "hotkey": "W",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27886,
+          "after": "|cffe4cfa3Огрон Красный|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 42459,
+          "after": "|cffe4cfa3Огрон Красный|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42714,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Свирепый огрон, впадающий в неистовство в гуще сражения.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deНеистовство|cffced4da: кратковременно увеличивает скорость атаки (требует исследования).|n- |cffa9c7deСильный удар|cffced4da: вероятность оглушить цель и нанести дополнительный урон.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03T",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 28170,
+          "after": "|cffe4cfa3Гронн Черный|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 42461,
+          "after": "|cffe4cfa3Гронн Черный|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42715,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Древний исполин, покрытый каменными шипами. Отражает получаемый урон обратно во врагов.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deШипастый панцирь|cffced4da: отражает часть урона ближнего боя и повышает броню (требует исследования).|n- |cffa9c7deСильный удар|cffced4da: вероятность оглушить цель и нанести дополнительный урон.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03U",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 28173,
+          "after": "|cffe4cfa3Гронн Белый|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 42463,
+          "after": "|cffe4cfa3Гронн Белый|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42716,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Могучий северный исполин, сотрясающий землю ударами колоссальной силы.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deСокрушение|cffced4da: вероятность нанести урон по площади вокруг цели (требует исследования).|n- |cffa9c7deСильный удар|cffced4da: вероятность оглушить цель и нанести дополнительный урон.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "o03V",
+      "hotkey": "A",
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 28176,
+          "after": "|cffe4cfa3Гронн Красный|r"
+        },
+        {
+          "field": "tip",
+          "wts_id": 42465,
+          "after": "|cffe4cfa3Гронн Красный|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertip",
+          "wts_id": 42717,
+          "after": "|cffa6afb8ЮНИТ:|cffced4da Неукротимый великан, черпающий мощь в жажде битвы.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deЖажда Крови|cffced4da: накладывает на себя эффект ускорения атаки и бега (требует исследования).|n- |cffa9c7deСильный удар|cffced4da: вероятность оглушить цель и нанести дополнительный урон.|n|nАтакует |cffffffffназемные|cffced4da цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "n05M",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27764,
+          "after": "|cffe4cfa3Бешеный вепрь|r"
+        }
+      ]
+    },
+    {
+      "id": "n05N",
+      "hotkey": null,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27990,
+          "after": "|cffe4cfa3Ястреб-разведчик|r"
+        }
+      ]
+    }
+  ]
+}

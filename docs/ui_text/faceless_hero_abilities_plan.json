@@ -1,0 +1,1156 @@
+{
+  "operations": [
+    {
+      "type": "ability",
+      "id": "A10H",
+      "field": "name",
+      "value": "|cffe4cfa3Удар клешнёй|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10H",
+      "field": "tip1",
+      "value": "|cffe4cfa3Удар клешнёй|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10H",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит органическим наземным противникам в радиусе |cffffffff300|cffced4da |cffffffff100|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10H",
+      "field": "tip2",
+      "value": "|cffe4cfa3Удар клешнёй|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10H",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит органическим наземным противникам в радиусе |cffffffff325|cffced4da |cffffffff150|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10H",
+      "field": "tip3",
+      "value": "|cffe4cfa3Удар клешнёй|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10H",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит органическим наземным противникам в радиусе |cffffffff350|cffced4da |cffffffff200|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10H",
+      "field": "tip4",
+      "value": "|cffe4cfa3Удар клешнёй|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10H",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит органическим наземным противникам в радиусе |cffffffff400|cffced4da |cffffffff250|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10H",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Удар клешнёй|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10H",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Удар клешнёй.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Наносит органическим наземным противникам в радиусе |cffffffff300|cffced4da |cffffffff100|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|n- |cffffffff2|cffced4da: Наносит органическим наземным противникам в радиусе |cffffffff325|cffced4da |cffffffff150|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|n- |cffffffff3|cffced4da: Наносит органическим наземным противникам в радиусе |cffffffff350|cffced4da |cffffffff200|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|n- |cffffffff4|cffced4da: Наносит органическим наземным противникам в радиусе |cffffffff400|cffced4da |cffffffff250|cffced4da урона. Снижает скорость передвижения и атаки на |cffffffff15|cffced4da%. Замедление длится |cffffffff5|cffced4da сек., на героях — |cffffffff3|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10I",
+      "field": "name",
+      "value": "|cffe4cfa3Крепкий панцирь|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10I",
+      "field": "tip1",
+      "value": "|cffe4cfa3Крепкий панцирь|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10I",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает урон от атак ближнего и дальнего боя на |cffc8e0878|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10I",
+      "field": "tip2",
+      "value": "|cffe4cfa3Крепкий панцирь|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10I",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает урон от атак ближнего и дальнего боя на |cffc8e08715|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10I",
+      "field": "tip3",
+      "value": "|cffe4cfa3Крепкий панцирь|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10I",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает урон от атак ближнего и дальнего боя на |cffc8e08718|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10I",
+      "field": "tip4",
+      "value": "|cffe4cfa3Крепкий панцирь|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10I",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает урон от атак ближнего и дальнего боя на |cffc8e08721|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10I",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Крепкий панцирь|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10I",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Крепкий панцирь.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Снижает урон от атак ближнего и дальнего боя на |cffc8e0878|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|n- |cffffffff2|cffced4da: Снижает урон от атак ближнего и дальнего боя на |cffc8e08715|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|n- |cffffffff3|cffced4da: Снижает урон от атак ближнего и дальнего боя на |cffc8e08718|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|n- |cffffffff4|cffced4da: Снижает урон от атак ближнего и дальнего боя на |cffc8e08721|cffced4da, но не ниже |cffffffff3|cffced4da урона за удар.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "name",
+      "value": "|cffe4cfa3Обжигающий жар|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "tip1",
+      "value": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff6|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "untip1",
+      "value": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "unubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff6|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|n|n|cffa6afb8Состояние:|cffced4da включено; повторное применение отключает жар.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "tip2",
+      "value": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff11|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "untip2",
+      "value": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "unubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff11|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|n|n|cffa6afb8Состояние:|cffced4da включено; повторное применение отключает жар.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "tip3",
+      "value": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff17|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "untip3",
+      "value": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "unubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff17|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|n|n|cffa6afb8Состояние:|cffced4da включено; повторное применение отключает жар.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "tip4",
+      "value": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff25|cffced4da урона. Расходует |cffe69a8d6|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "untip4",
+      "value": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "unubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff25|cffced4da урона. Расходует |cffe69a8d6|cffced4da маны в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|n|n|cffa6afb8Состояние:|cffced4da включено; повторное применение отключает жар.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Обжигающий жар|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10J",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обжигающий жар.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff6|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n- |cffffffff2|cffced4da: Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff11|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n- |cffffffff3|cffced4da: Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff17|cffced4da урона. Расходует |cffe69a8d7|cffced4da маны в секунду.|n- |cffffffff4|cffced4da: Пока способность включена, каждые |cffffffff0,5|cffced4da сек. наносит органическим наземным врагам в радиусе |cffffffff160|cffced4da |cffffffff25|cffced4da урона. Расходует |cffe69a8d6|cffced4da маны в секунду.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10K",
+      "field": "name",
+      "value": "|cffe4cfa3Тёмный портал|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10K",
+      "field": "tip1",
+      "value": "|cffe4cfa3Тёмный портал|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10K",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает портал и призывает |cffffffff4|cffced4da воинов из следующего списка:|n- |cffa9c7deПорабощённый зверь|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10K",
+      "field": "tip2",
+      "value": "|cffe4cfa3Тёмный портал|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10K",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает портал и призывает |cffffffff8|cffced4da воинов из следующего списка:|n- |cffa9c7deЖестокий порабощённый зверь|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10K",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Тёмный портал|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10K",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Тёмный портал.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Открывает портал и призывает |cffffffff4|cffced4da воинов из следующего списка:|n- |cffa9c7deПорабощённый зверь|cffced4da.|n- |cffffffff2|cffced4da: Открывает портал и призывает |cffffffff8|cffced4da воинов из следующего списка:|n- |cffa9c7deЖестокий порабощённый зверь|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10L",
+      "field": "name",
+      "value": "|cffe4cfa3Сотрясение Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10L",
+      "field": "tip1",
+      "value": "|cffe4cfa3Сотрясение Бездны|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10L",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff10|cffced4da% атака наносит |cffffffff40|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10L",
+      "field": "tip2",
+      "value": "|cffe4cfa3Сотрясение Бездны|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10L",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff15|cffced4da% атака наносит |cffffffff50|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10L",
+      "field": "tip3",
+      "value": "|cffe4cfa3Сотрясение Бездны|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10L",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff20|cffced4da% атака наносит |cffffffff60|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10L",
+      "field": "tip4",
+      "value": "|cffe4cfa3Сотрясение Бездны|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10L",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff25|cffced4da% атака наносит |cffffffff70|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10L",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Сотрясение Бездны|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10L",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сотрясение Бездны.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: С вероятностью |cffffffff10|cffced4da% атака наносит |cffffffff40|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|n- |cffffffff2|cffced4da: С вероятностью |cffffffff15|cffced4da% атака наносит |cffffffff50|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|n- |cffffffff3|cffced4da: С вероятностью |cffffffff20|cffced4da% атака наносит |cffffffff60|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|n- |cffffffff4|cffced4da: С вероятностью |cffffffff25|cffced4da% атака наносит |cffffffff70|cffced4da дополнительного урона и оглушает цель на |cffffffff2|cffced4da сек. Герои оглушаются на |cffffffff1|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10N",
+      "field": "name",
+      "value": "|cffe4cfa3Сокрытие Бездной|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10N",
+      "field": "tip1",
+      "value": "|cffe4cfa3Сокрытие Бездной|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10N",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e08730|cffced4da%. Атака из невидимости наносит |cffffffff50|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10N",
+      "field": "tip2",
+      "value": "|cffe4cfa3Сокрытие Бездной|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10N",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e08760|cffced4da%. Атака из невидимости наносит |cffffffff100|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10N",
+      "field": "tip3",
+      "value": "|cffe4cfa3Сокрытие Бездной|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10N",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e08790|cffced4da%. Атака из невидимости наносит |cffffffff150|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10N",
+      "field": "tip4",
+      "value": "|cffe4cfa3Сокрытие Бездной|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10N",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e087120|cffced4da%. Атака из невидимости наносит |cffffffff200|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10N",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Сокрытие Бездной|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10N",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Сокрытие Бездной.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e08730|cffced4da%. Атака из невидимости наносит |cffffffff50|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|n- |cffffffff2|cffced4da: Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e08760|cffced4da%. Атака из невидимости наносит |cffffffff100|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|n- |cffffffff3|cffced4da: Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e08790|cffced4da%. Атака из невидимости наносит |cffffffff150|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|n- |cffffffff4|cffced4da: Через |cffffffff0,6|cffced4da сек. герой становится невидимым на |cffffffff25|cffced4da сек. Скорость передвижения повышается на |cffc8e087120|cffced4da%. Атака из невидимости наносит |cffffffff200|cffced4da дополнительного урона и раскрывает героя. Восстановление начинается после выхода из невидимости.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10Q",
+      "field": "name",
+      "value": "|cffe4cfa3Тёмный раскол|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10Q",
+      "field": "tip1",
+      "value": "|cffe4cfa3Тёмный раскол|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10Q",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает портал и призывает |cffffffff2|cffced4da воинов из следующего списка:|n- |cffa9c7deБезликий дозорный|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10Q",
+      "field": "tip2",
+      "value": "|cffe4cfa3Тёмный раскол|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10Q",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает портал и призывает |cffffffff3|cffced4da воинов из следующего списка:|n- |cffa9c7deБезликий дозорный|cffced4da.|n- |cffa9c7deСущность бездны|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10Q",
+      "field": "tip3",
+      "value": "|cffe4cfa3Тёмный раскол|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10Q",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает портал и призывает |cffffffff4|cffced4da воинов из следующего списка:|n- |cffa9c7deБессмертный страж|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10Q",
+      "field": "tip4",
+      "value": "|cffe4cfa3Тёмный раскол|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10Q",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Открывает портал и призывает |cffffffff5|cffced4da воинов из следующего списка:|n- |cffa9c7deК`Траксис|cffced4da.|n- |cffa9c7deБессмертный страж|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10Q",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Тёмный раскол|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10Q",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Тёмный раскол.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Открывает портал и призывает |cffffffff2|cffced4da воинов из следующего списка:|n- |cffa9c7deБезликий дозорный|cffced4da.|n- |cffffffff2|cffced4da: Открывает портал и призывает |cffffffff3|cffced4da воинов из следующего списка:|n- |cffa9c7deБезликий дозорный|cffced4da.|n- |cffa9c7deСущность бездны|cffced4da.|n- |cffffffff3|cffced4da: Открывает портал и призывает |cffffffff4|cffced4da воинов из следующего списка:|n- |cffa9c7deБессмертный страж|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны|cffced4da.|n- |cffffffff4|cffced4da: Открывает портал и призывает |cffffffff5|cffced4da воинов из следующего списка:|n- |cffa9c7deК`Траксис|cffced4da.|n- |cffa9c7deБессмертный страж|cffced4da.|n- |cffa9c7deМогущественная Сущность бездны|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0WQ",
+      "field": "name",
+      "value": "|cffe4cfa3Взрыв бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0WQ",
+      "field": "tip1",
+      "value": "|cffe4cfa3Взрыв бездны|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0WQ",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff15|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff5|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff2000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0WQ",
+      "field": "tip2",
+      "value": "|cffe4cfa3Взрыв бездны|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0WQ",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff20|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff7|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff4000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0WQ",
+      "field": "tip3",
+      "value": "|cffe4cfa3Взрыв бездны|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0WQ",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff30|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff9|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff6000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0WQ",
+      "field": "tip4",
+      "value": "|cffe4cfa3Взрыв бездны|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0WQ",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff45|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff12|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff8000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0WQ",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Взрыв бездны|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0WQ",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Взрыв бездны.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff15|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff5|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff2000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|n- |cffffffff2|cffced4da: Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff20|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff7|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff4000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|n- |cffffffff3|cffced4da: Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff30|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff9|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff6000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|n- |cffffffff4|cffced4da: Создаёт пламя Бездны в радиусе |cffffffff200|cffced4da. Сильное пламя наносит |cffffffff45|cffced4da урона за импульс с интервалом |cffffffff0,33|cffced4da сек.; остаточное пламя — |cffffffff12|cffced4da урона с интервалом |cffffffff1|cffced4da сек. Здания получают |cffffffff75|cffced4da% урона. Предел урона по области: |cffffffff8000|cffced4da.|n|n|cffe6c07bПоражает наземные цели, включая союзников и самого героя; уничтожает деревья.|cffced4da|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10R",
+      "field": "name",
+      "value": "|cffe4cfa3Аура Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10R",
+      "field": "tip1",
+      "value": "|cffe4cfa3Аура Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10R",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff3|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10R",
+      "field": "tip2",
+      "value": "|cffe4cfa3Аура Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10R",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff6|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10R",
+      "field": "tip3",
+      "value": "|cffe4cfa3Аура Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10R",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff8|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10R",
+      "field": "tip4",
+      "value": "|cffe4cfa3Аура Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10R",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff10|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10R",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Аура Бездны|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10R",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Аура Бездны.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff3|cffced4da ед. в секунду.|n- |cffffffff2|cffced4da: Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff6|cffced4da ед. в секунду.|n- |cffffffff3|cffced4da: Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff8|cffced4da ед. в секунду.|n- |cffffffff4|cffced4da: Снижает восстановление здоровья врагов в радиусе |cffffffff900|cffced4da на |cffffffff10|cffced4da ед. в секунду.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10S",
+      "field": "name",
+      "value": "|cffe4cfa3Пространство Бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10S",
+      "field": "tip1",
+      "value": "|cffe4cfa3Пространство Бездны|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10S",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока герой поддерживает заклинание, враги в радиусе |cffffffff300|cffced4da теряют |cffffffff4|cffced4da% максимального здоровья в секунду. Действует до |cffffffff35|cffced4da сек. Поражает также воздушные цели и здания; уничтожает деревья.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10S",
+      "field": "tip2",
+      "value": "|cffe4cfa3Пространство Бездны|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10S",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока герой поддерживает заклинание, враги в радиусе |cffffffff400|cffced4da теряют |cffffffff6|cffced4da% максимального здоровья в секунду. Действует до |cffffffff35|cffced4da сек. Поражает также воздушные цели и здания; уничтожает деревья.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A10S",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Пространство Бездны|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A10S",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пространство Бездны.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Пока герой поддерживает заклинание, враги в радиусе |cffffffff300|cffced4da теряют |cffffffff4|cffced4da% максимального здоровья в секунду. Действует до |cffffffff35|cffced4da сек. Поражает также воздушные цели и здания; уничтожает деревья.|n- |cffffffff2|cffced4da: Пока герой поддерживает заклинание, враги в радиусе |cffffffff400|cffced4da теряют |cffffffff6|cffced4da% максимального здоровья в секунду. Действует до |cffffffff35|cffced4da сек. Поражает также воздушные цели и здания; уничтожает деревья.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CJ",
+      "field": "name",
+      "value": "|cffe4cfa3Безумие бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CJ",
+      "field": "tip1",
+      "value": "|cffe4cfa3Безумие бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CJ",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08720|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08720|cffced4da% урона его атак.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CJ",
+      "field": "tip2",
+      "value": "|cffe4cfa3Безумие бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CJ",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08725|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08730|cffced4da% урона его атак.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CJ",
+      "field": "tip3",
+      "value": "|cffe4cfa3Безумие бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CJ",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08730|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08740|cffced4da% урона его атак.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CJ",
+      "field": "tip4",
+      "value": "|cffe4cfa3Безумие бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CJ",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08740|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08750|cffced4da% урона его атак.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CJ",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Безумие бездны|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1CJ",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Безумие бездны.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Повышает скорость атаки героя на |cffc8e08720|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08720|cffced4da% урона его атак.|n- |cffffffff2|cffced4da: Повышает скорость атаки героя на |cffc8e08725|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08730|cffced4da% урона его атак.|n- |cffffffff3|cffced4da: Повышает скорость атаки героя на |cffc8e08730|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08740|cffced4da% урона его атак.|n- |cffffffff4|cffced4da: Повышает скорость атаки героя на |cffc8e08740|cffced4da% и даёт вампиризм: восстанавливает здоровье в размере |cffc8e08750|cffced4da% урона его атак.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CH",
+      "field": "name",
+      "value": "|cffe4cfa3Скорость бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CH",
+      "field": "tip1",
+      "value": "|cffe4cfa3Скорость бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CH",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08720|cffced4da%. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CH",
+      "field": "tip2",
+      "value": "|cffe4cfa3Скорость бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CH",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08725|cffced4da%. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CH",
+      "field": "tip3",
+      "value": "|cffe4cfa3Скорость бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CH",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08730|cffced4da%. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CH",
+      "field": "tip4",
+      "value": "|cffe4cfa3Скорость бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CH",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает скорость атаки героя на |cffc8e08740|cffced4da%. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CI",
+      "field": "name",
+      "value": "|cffe4cfa3Вампиризм бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CI",
+      "field": "tip1",
+      "value": "|cffe4cfa3Вампиризм бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CI",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье в размере |cffc8e08720|cffced4da% урона атак владельца. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CI",
+      "field": "tip2",
+      "value": "|cffe4cfa3Вампиризм бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CI",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье в размере |cffc8e08730|cffced4da% урона атак владельца. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CI",
+      "field": "tip3",
+      "value": "|cffe4cfa3Вампиризм бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CI",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье в размере |cffc8e08740|cffced4da% урона атак владельца. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CI",
+      "field": "tip4",
+      "value": "|cffe4cfa3Вампиризм бездны|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CI",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает здоровье в размере |cffc8e08750|cffced4da% урона атак владельца. Эффект «Безумия бездны».|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CG",
+      "field": "name",
+      "value": "|cffe4cfa3Метка охотника|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CG",
+      "field": "tip1",
+      "value": "|cffe4cfa3Метка охотника|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1CG",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врага на |cffffffff10|cffced4da и позволяет видеть отмеченную цель, в том числе невидимую. Действует |cffffffff60|cffced4da сек.; на героях — |cffffffff15|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CG",
+      "field": "tip2",
+      "value": "|cffe4cfa3Метка охотника|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1CG",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает броню врага на |cffffffff15|cffced4da и позволяет видеть отмеченную цель, в том числе невидимую. Действует |cffffffff60|cffced4da сек.; на героях — |cffffffff20|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A1CG",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Метка охотника|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A1CG",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Метка охотника.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Снижает броню врага на |cffffffff10|cffced4da и позволяет видеть отмеченную цель, в том числе невидимую. Действует |cffffffff60|cffced4da сек.; на героях — |cffffffff15|cffced4da сек.|n- |cffffffff2|cffced4da: Снижает броню врага на |cffffffff15|cffced4da и позволяет видеть отмеченную цель, в том числе невидимую. Действует |cffffffff60|cffced4da сек.; на героях — |cffffffff20|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12G",
+      "field": "name",
+      "value": "|cffe4cfa3Служение Йогг`Сарону|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12G",
+      "field": "tip1",
+      "value": "|cffe4cfa3Служение Йогг`Сарону|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12G",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Передаёт игроку контроль над Древним богом Йогг`Сароном и делает его столицей. Его положение становится видно всем игрокам.|n|n|cffe6c07bПосле применения способность становится недоступна всем игрокам.|cffced4da|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12I",
+      "field": "name",
+      "value": "|cffe4cfa3Саронитовый панцирь|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12I",
+      "field": "tip1",
+      "value": "|cffe4cfa3Саронитовый панцирь|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A12I",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает урон от атак ближнего и дальнего боя на |cffc8e08738|cffced4da, но не ниже |cffffffff5|cffced4da урона за удар.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12H",
+      "field": "name",
+      "value": "|cffe4cfa3Антимагическая аура|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12H",
+      "field": "tip1",
+      "value": "|cffe4cfa3Антимагическая аура|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A12H",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff6|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12H",
+      "field": "tip2",
+      "value": "|cffe4cfa3Антимагическая аура|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A12H",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff10|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12H",
+      "field": "tip3",
+      "value": "|cffe4cfa3Антимагическая аура|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A12H",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff14|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12H",
+      "field": "tip4",
+      "value": "|cffe4cfa3Антимагическая аура|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A12H",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff18|cffced4da ед. в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12H",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Антимагическая аура|r (|cffffffffE|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A12H",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Антимагическая аура.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff6|cffced4da ед. в секунду.|n- |cffffffff2|cffced4da: Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff10|cffced4da ед. в секунду.|n- |cffffffff3|cffced4da: Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff14|cffced4da ед. в секунду.|n- |cffffffff4|cffced4da: Снижает восстановление маны врагов в радиусе |cffffffff900|cffced4da на |cffffffff18|cffced4da ед. в секунду.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0V5",
+      "field": "name",
+      "value": "|cffe4cfa3Вечная служба|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0V5",
+      "field": "tip1",
+      "value": "|cffe4cfa3Вечная служба|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0V5",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает до |cffffffff6|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины не наследуют исследования владельца.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0V5",
+      "field": "tip2",
+      "value": "|cffe4cfa3Вечная служба|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0V5",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает до |cffffffff10|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины наследуют исследования владельца.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0V5",
+      "field": "tip3",
+      "value": "|cffe4cfa3Вечная служба|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0V5",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает до |cffffffff14|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины наследуют исследования владельца.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0V5",
+      "field": "tip4",
+      "value": "|cffe4cfa3Вечная служба|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0V5",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает до |cffffffff18|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины наследуют исследования владельца.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0V5",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Вечная служба|r (|cffffffffQ|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0V5",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вечная служба.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Поднимает до |cffffffff6|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины не наследуют исследования владельца.|n- |cffffffff2|cffced4da: Поднимает до |cffffffff10|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины наследуют исследования владельца.|n- |cffffffff3|cffced4da: Поднимает до |cffffffff14|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины наследуют исследования владельца.|n- |cffffffff4|cffced4da: Поднимает до |cffffffff18|cffced4da павших воинов из трупов в радиусе |cffffffff1200|cffced4da на |cffffffff3600|cffced4da сек. Они сражаются на стороне героя. Поднятые воины наследуют исследования владельца.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12J",
+      "field": "name",
+      "value": "|cffe4cfa3Пары саронита|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12J",
+      "field": "tip1",
+      "value": "|cffe4cfa3Пары саронита|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A12J",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока герой поддерживает заклинание, лечит дружественные и нейтральные цели в радиусе |cffffffff2000|cffced4da, включая себя, на |cffc8e08760|cffced4da здоровья каждые |cffffffff1|cffced4da сек. Действует до |cffffffff15|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12J",
+      "field": "tip2",
+      "value": "|cffe4cfa3Пары саронита|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A12J",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пока герой поддерживает заклинание, лечит дружественные и нейтральные цели в радиусе |cffffffff2000|cffced4da, включая себя, на |cffc8e08775|cffced4da здоровья каждые |cffffffff1|cffced4da сек. Действует до |cffffffff15|cffced4da сек. В начале поддержания герой неуязвим в течение |cffc8e0871|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A12J",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Пары саронита|r (|cffffffffR|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A12J",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пары саронита.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Пока герой поддерживает заклинание, лечит дружественные и нейтральные цели в радиусе |cffffffff2000|cffced4da, включая себя, на |cffc8e08760|cffced4da здоровья каждые |cffffffff1|cffced4da сек. Действует до |cffffffff15|cffced4da сек.|n- |cffffffff2|cffced4da: Пока герой поддерживает заклинание, лечит дружественные и нейтральные цели в радиусе |cffffffff2000|cffced4da, включая себя, на |cffc8e08775|cffced4da здоровья каждые |cffffffff1|cffced4da сек. Действует до |cffffffff15|cffced4da сек. В начале поддержания герой неуязвим в течение |cffc8e0871|cffced4da сек.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0V7",
+      "field": "name",
+      "value": "|cffe4cfa3Приказ генерала|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0V7",
+      "field": "tip1",
+      "value": "|cffe4cfa3Приказ генерала|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0V7",
+      "field": "ubertip1",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08710|cffced4da%. Действует на ближний и дальний бой.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0V7",
+      "field": "tip2",
+      "value": "|cffe4cfa3Приказ генерала|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0V7",
+      "field": "ubertip2",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08715|cffced4da%. Действует на ближний и дальний бой.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0V7",
+      "field": "tip3",
+      "value": "|cffe4cfa3Приказ генерала|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0V7",
+      "field": "ubertip3",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08720|cffced4da%. Действует на ближний и дальний бой.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0V7",
+      "field": "tip4",
+      "value": "|cffe4cfa3Приказ генерала|r (|cffffffffW|r)"
+    },
+    {
+      "type": "ability",
+      "id": "A0V7",
+      "field": "ubertip4",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08725|cffced4da%. Действует на ближний и дальний бой.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0V7",
+      "field": "researchtip",
+      "value": "|cffe4cfa3Приказ генерала|r"
+    },
+    {
+      "type": "ability",
+      "id": "A0V7",
+      "field": "researchubertip",
+      "value": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Приказ генерала.|n|n|cffa6afb8Уровни:|cffced4da|n- |cffffffff1|cffced4da: Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08710|cffced4da%. Действует на ближний и дальний бой.|n- |cffffffff2|cffced4da: Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08715|cffced4da%. Действует на ближний и дальний бой.|n- |cffffffff3|cffced4da: Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08720|cffced4da%. Действует на ближний и дальний бой.|n- |cffffffff4|cffced4da: Повышает урон от атак союзных войск и самого героя в радиусе |cffffffff900|cffced4da на |cffc8e08725|cffced4da%. Действует на ближний и дальний бой.|r"
+    }
+  ]
+}

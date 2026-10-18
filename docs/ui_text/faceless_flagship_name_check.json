@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "scope": "Only the exact name-formatting Lua statements; not engine stat or spell-event validation",
+  "source_sha256": "69fb8ee616d54a274ef14ee92179372632419ede144d578f96ef12b115602179",
+  "checks": [
+    {
+      "initial": "Фрегат",
+      "after_five_calls": "|cffe4cfa3Флагман — Фрегат|r"
+    },
+    {
+      "initial": "|cffe4cfa3Линкор|r",
+      "after_five_calls": "|cffe4cfa3Флагман — Линкор|r"
+    },
+    {
+      "initial": "Флагман — Транспорт",
+      "after_five_calls": "|cffe4cfa3Флагман — Транспорт|r"
+    }
+  ]
+}

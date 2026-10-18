@@ -1,0 +1,658 @@
+{
+  "FT00": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_11193",
+    "ubertip_raw": "TRIGSTR_11198",
+    "desc_raw": "TRIGSTR_39478",
+    "gold": "500",
+    "lumber": "0"
+  },
+  "I000": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_7088",
+    "ubertip_raw": "TRIGSTR_7143",
+    "desc_raw": "TRIGSTR_12546",
+    "gold": "5000",
+    "lumber": null
+  },
+  "I001": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_10010",
+    "ubertip_raw": "TRIGSTR_21581",
+    "desc_raw": "TRIGSTR_12547",
+    "gold": "5400",
+    "lumber": "0"
+  },
+  "I002": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_10027",
+    "ubertip_raw": "TRIGSTR_21810",
+    "desc_raw": "TRIGSTR_12548",
+    "gold": "5500",
+    "lumber": "0"
+  },
+  "I003": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_11683",
+    "ubertip_raw": "TRIGSTR_29526",
+    "desc_raw": "TRIGSTR_12549",
+    "gold": "5700",
+    "lumber": "0"
+  },
+  "I004": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_11688",
+    "ubertip_raw": "TRIGSTR_21582",
+    "desc_raw": "TRIGSTR_12550",
+    "gold": "5600",
+    "lumber": "0"
+  },
+  "I005": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12079",
+    "ubertip_raw": "TRIGSTR_27903",
+    "desc_raw": "Ускоряет регенерацию здоровья.",
+    "gold": "1900",
+    "lumber": "0"
+  },
+  "I006": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_11896",
+    "ubertip_raw": "TRIGSTR_30941",
+    "desc_raw": "+2 к броне.",
+    "gold": "600",
+    "lumber": "0"
+  },
+  "I007": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_11899",
+    "ubertip_raw": "TRIGSTR_21679",
+    "desc_raw": "+2 к броне.",
+    "gold": "8500",
+    "lumber": "0"
+  },
+  "I008": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12012",
+    "ubertip_raw": "TRIGSTR_29527",
+    "desc_raw": "+2 к броне.",
+    "gold": "8000",
+    "lumber": "0"
+  },
+  "I009": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12027",
+    "ubertip_raw": "TRIGSTR_27540",
+    "desc_raw": "+2 к броне.",
+    "gold": "11000",
+    "lumber": "0"
+  },
+  "I00A": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12047",
+    "ubertip_raw": "TRIGSTR_21683",
+    "desc_raw": "+2 к броне.",
+    "gold": "2100",
+    "lumber": "0"
+  },
+  "I00B": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12050",
+    "ubertip_raw": "TRIGSTR_9722",
+    "desc_raw": "+2 к броне.",
+    "gold": "7800",
+    "lumber": "0"
+  },
+  "I00C": {
+    "name_raw": null,
+    "tip_raw": "Купить знак всевидения",
+    "ubertip_raw": "\"Открывает обзор всей карты на <AIrv,Dur1> сек.\"",
+    "desc_raw": "Открывает обзор всей карты.",
+    "gold": "5000",
+    "lumber": "0"
+  },
+  "I00D": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12830",
+    "ubertip_raw": "TRIGSTR_28960",
+    "desc_raw": "+2 к броне.",
+    "gold": "6500",
+    "lumber": "0"
+  },
+  "I00E": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12070",
+    "ubertip_raw": "TRIGSTR_30674",
+    "desc_raw": "TRIGSTR_12551",
+    "gold": "4500",
+    "lumber": "0"
+  },
+  "I00F": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12073",
+    "ubertip_raw": "TRIGSTR_9716",
+    "desc_raw": "TRIGSTR_12552",
+    "gold": "8000",
+    "lumber": "0"
+  },
+  "I00G": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12160",
+    "ubertip_raw": "TRIGSTR_11457",
+    "desc_raw": "TRIGSTR_12553",
+    "gold": "7600",
+    "lumber": "0"
+  },
+  "I00H": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12218",
+    "ubertip_raw": "TRIGSTR_39200",
+    "desc_raw": "TRIGSTR_12554",
+    "gold": "6000",
+    "lumber": "0"
+  },
+  "I00I": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12221",
+    "ubertip_raw": "TRIGSTR_39474",
+    "desc_raw": "TRIGSTR_12555",
+    "gold": "5600",
+    "lumber": "0"
+  },
+  "I00J": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12224",
+    "ubertip_raw": "TRIGSTR_39475",
+    "desc_raw": "TRIGSTR_12557",
+    "gold": "7000",
+    "lumber": "0"
+  },
+  "I00K": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12227",
+    "ubertip_raw": "TRIGSTR_21910",
+    "desc_raw": "TRIGSTR_1966",
+    "gold": "125",
+    "lumber": "0"
+  },
+  "I00L": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12230",
+    "ubertip_raw": "TRIGSTR_21934",
+    "desc_raw": "TRIGSTR_12556",
+    "gold": "1800",
+    "lumber": "0"
+  },
+  "I00M": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12233",
+    "ubertip_raw": "TRIGSTR_15324",
+    "desc_raw": "+2 к броне.",
+    "gold": "3000",
+    "lumber": "0"
+  },
+  "I00N": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12245",
+    "ubertip_raw": "TRIGSTR_21685",
+    "desc_raw": "+2 к броне.",
+    "gold": "5600",
+    "lumber": "0"
+  },
+  "I00O": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12248",
+    "ubertip_raw": "TRIGSTR_9723",
+    "desc_raw": "TRIGSTR_8312",
+    "gold": "8900",
+    "lumber": "0"
+  },
+  "I00P": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12251",
+    "ubertip_raw": "TRIGSTR_38970",
+    "desc_raw": "+2 к броне.",
+    "gold": "3400",
+    "lumber": "0"
+  },
+  "I00Q": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12254",
+    "ubertip_raw": "TRIGSTR_30275",
+    "desc_raw": "+2 к броне.",
+    "gold": "15000",
+    "lumber": "0"
+  },
+  "I00R": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12257",
+    "ubertip_raw": "TRIGSTR_30276",
+    "desc_raw": "TRIGSTR_12590",
+    "gold": "6700",
+    "lumber": "0"
+  },
+  "I00S": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12269",
+    "ubertip_raw": "TRIGSTR_11395",
+    "desc_raw": "TRIGSTR_12677",
+    "gold": "5670",
+    "lumber": "0"
+  },
+  "I00T": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12272",
+    "ubertip_raw": "TRIGSTR_11500",
+    "desc_raw": "+2 к броне.",
+    "gold": "6700",
+    "lumber": "0"
+  },
+  "I00U": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12278",
+    "ubertip_raw": "TRIGSTR_21935",
+    "desc_raw": "+2 к броне.",
+    "gold": "1900",
+    "lumber": "0"
+  },
+  "I00V": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12281",
+    "ubertip_raw": "TRIGSTR_11897",
+    "desc_raw": "+2 к броне.",
+    "gold": "3000",
+    "lumber": "0"
+  },
+  "I00W": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_29904",
+    "ubertip_raw": "TRIGSTR_39476",
+    "desc_raw": "TRIGSTR_12678",
+    "gold": "7000",
+    "lumber": "0"
+  },
+  "I00X": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12559",
+    "ubertip_raw": "TRIGSTR_38971",
+    "desc_raw": "+2 к броне.",
+    "gold": "4500",
+    "lumber": "0"
+  },
+  "I00Y": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12310",
+    "ubertip_raw": "TRIGSTR_1973",
+    "desc_raw": "Атаки героя наносят урон от молнии.",
+    "gold": "5000",
+    "lumber": "0"
+  },
+  "I00Z": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12313",
+    "ubertip_raw": "TRIGSTR_1974",
+    "desc_raw": "Атаки героя наносят урон от молнии.",
+    "gold": "1300",
+    "lumber": "0"
+  },
+  "I010": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12316",
+    "ubertip_raw": "TRIGSTR_15979",
+    "desc_raw": "TRIGSTR_12561",
+    "gold": "4500",
+    "lumber": "0"
+  },
+  "I011": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12319",
+    "ubertip_raw": "TRIGSTR_35359",
+    "desc_raw": "TRIGSTR_12583",
+    "gold": "8900",
+    "lumber": "0"
+  },
+  "I012": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12563",
+    "ubertip_raw": "TRIGSTR_599",
+    "desc_raw": "TRIGSTR_12679",
+    "gold": "7000",
+    "lumber": "0"
+  },
+  "I013": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12566",
+    "ubertip_raw": "TRIGSTR_21753",
+    "desc_raw": "TRIGSTR_12681",
+    "gold": "7000",
+    "lumber": "0"
+  },
+  "I014": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12569",
+    "ubertip_raw": "TRIGSTR_10421",
+    "desc_raw": "TRIGSTR_12680",
+    "gold": "6700",
+    "lumber": "0"
+  },
+  "I015": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12571",
+    "ubertip_raw": "TRIGSTR_4449",
+    "desc_raw": "TRIGSTR_9734",
+    "gold": "650",
+    "lumber": "0"
+  },
+  "I016": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12575",
+    "ubertip_raw": "TRIGSTR_21790",
+    "desc_raw": "+2 к броне.",
+    "gold": "6000",
+    "lumber": "0"
+  },
+  "I017": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12578",
+    "ubertip_raw": "TRIGSTR_34875",
+    "desc_raw": "+2 к броне.",
+    "gold": "9700",
+    "lumber": "0"
+  },
+  "I018": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12581",
+    "ubertip_raw": "TRIGSTR_21792",
+    "desc_raw": "TRIGSTR_12683",
+    "gold": "4500",
+    "lumber": "0"
+  },
+  "I019": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_21968",
+    "ubertip_raw": "TRIGSTR_21969",
+    "desc_raw": "+2 к броне.",
+    "gold": "2800",
+    "lumber": "0"
+  },
+  "I01A": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12588",
+    "ubertip_raw": "TRIGSTR_12286",
+    "desc_raw": "TRIGSTR_12682",
+    "gold": "7000",
+    "lumber": "0"
+  },
+  "I01B": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12592",
+    "ubertip_raw": "TRIGSTR_38972",
+    "desc_raw": "TRIGSTR_12594",
+    "gold": "700",
+    "lumber": "0"
+  },
+  "I01C": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12596",
+    "ubertip_raw": "TRIGSTR_38973",
+    "desc_raw": "+2 к броне.",
+    "gold": "12000",
+    "lumber": "0"
+  },
+  "I01D": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12599",
+    "ubertip_raw": "TRIGSTR_35360",
+    "desc_raw": "TRIGSTR_12684",
+    "gold": "12000",
+    "lumber": "0"
+  },
+  "I01E": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12602",
+    "ubertip_raw": "TRIGSTR_15984",
+    "desc_raw": "TRIGSTR_12686",
+    "gold": "12000",
+    "lumber": "0"
+  },
+  "I01F": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12605",
+    "ubertip_raw": "TRIGSTR_35361",
+    "desc_raw": "TRIGSTR_12687",
+    "gold": "12000",
+    "lumber": "0"
+  },
+  "I01G": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12608",
+    "ubertip_raw": "TRIGSTR_21797",
+    "desc_raw": "TRIGSTR_12688",
+    "gold": "12000",
+    "lumber": "0"
+  },
+  "I01H": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12611",
+    "ubertip_raw": "TRIGSTR_26685",
+    "desc_raw": "TRIGSTR_12613",
+    "gold": "1500",
+    "lumber": "0"
+  },
+  "I01I": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12615",
+    "ubertip_raw": "TRIGSTR_35362",
+    "desc_raw": "TRIGSTR_12685",
+    "gold": "9000",
+    "lumber": "0"
+  },
+  "I01J": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12618",
+    "ubertip_raw": "TRIGSTR_12320",
+    "desc_raw": "TRIGSTR_12620",
+    "gold": "4300",
+    "lumber": "0"
+  },
+  "I01K": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12622",
+    "ubertip_raw": "TRIGSTR_34887",
+    "desc_raw": "+2 к броне.",
+    "gold": "2300",
+    "lumber": "0"
+  },
+  "I01L": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12625",
+    "ubertip_raw": "TRIGSTR_21798",
+    "desc_raw": "+2 к броне.",
+    "gold": "6500",
+    "lumber": "0"
+  },
+  "I01M": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12628",
+    "ubertip_raw": "TRIGSTR_18869",
+    "desc_raw": "TRIGSTR_12690",
+    "gold": "7000",
+    "lumber": "0"
+  },
+  "I01N": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12631",
+    "ubertip_raw": "TRIGSTR_35419",
+    "desc_raw": "TRIGSTR_12692",
+    "gold": "5600",
+    "lumber": "0"
+  },
+  "I01O": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12634",
+    "ubertip_raw": "TRIGSTR_39477",
+    "desc_raw": "TRIGSTR_12693",
+    "gold": "7500",
+    "lumber": "0"
+  },
+  "I01P": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12637",
+    "ubertip_raw": "TRIGSTR_28272",
+    "desc_raw": "+2 к броне.",
+    "gold": "5600",
+    "lumber": "0"
+  },
+  "I01Q": {
+    "name_raw": null,
+    "tip_raw": "|cffe4cfa3Касание безумия|r (|cffffffffB|r)",
+    "ubertip_raw": "|cffa6afb8ПРЕДМЕТ:|cffced4da Частица силы Йогг`Сарона. Даёт герою |cffc8e087+15|cffced4da к силе, ловкости и интеллекту.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТёмное усиление|cffced4da: на |cffffffff45|cffced4da сек. повышает урон союзников в радиусе |cffffffff500|cffced4da на |cffc8e08735%|cffced4da.|n- |cffa9c7deПорождение щупальца|cffced4da: создаёт Щупальце Йогг`Сарона на |cffffffff180|cffced4da сек.|n- |cffa9c7deАура отголоска Йогг`Сарона|cffced4da: союзники ближнего боя в радиусе |cffffffff1500|cffced4da получают |cffc8e08710%|cffced4da вампиризма.|n|nДля применения заклинаний откройте меню предмета.|r",
+    "desc_raw": "|cffa6afb8ПРЕДМЕТ:|cffced4da Даёт герою |cffc8e087+15|cffced4da ко всем характеристикам, ауру вампиризма и два заклинания: Тёмное усиление и Порождение щупальца.|r",
+    "gold": "325",
+    "lumber": "0"
+  },
+  "I01R": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_20867",
+    "ubertip_raw": "TRIGSTR_20870",
+    "desc_raw": "TRIGSTR_20868",
+    "gold": "325",
+    "lumber": "0"
+  },
+  "I01S": {
+    "name_raw": null,
+    "tip_raw": "Купить кольцо регенерации",
+    "ubertip_raw": "\"Ускоряет регенерацию здоровья героя на <Arel,DataA1>/сек.\"",
+    "desc_raw": "Ускоряет регенерацию здоровья.",
+    "gold": "300",
+    "lumber": "0"
+  },
+  "I01T": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_22038",
+    "ubertip_raw": "Переносит героя к наземному союзнику или союзному зданию.",
+    "desc_raw": "TRIGSTR_22036",
+    "gold": "150",
+    "lumber": "0"
+  },
+  "I01U": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12284",
+    "ubertip_raw": "TRIGSTR_729",
+    "desc_raw": "TRIGSTR_25211",
+    "gold": "7000",
+    "lumber": "0"
+  },
+  "I01V": {
+    "name_raw": null,
+    "tip_raw": "Купить руну защиты",
+    "ubertip_raw": "\"Дает находящимся рядом союзникам щит, который блокирует следующую вражескую вредоносную способность.\"",
+    "desc_raw": "\"Дает находящимся рядом войскам щит, блокирующий одну вражескую способность.\"",
+    "gold": "300",
+    "lumber": "0"
+  },
+  "I01W": {
+    "name_raw": null,
+    "tip_raw": "Купить руну исцеления",
+    "ubertip_raw": "\"Восполняет находящимся рядом союзникам <APh2,DataA1> здоровья. Не действует на технику.\"",
+    "desc_raw": "Восполняет здоровье находящихся рядом войск.",
+    "gold": "200",
+    "lumber": "0"
+  },
+  "I01X": {
+    "name_raw": null,
+    "tip_raw": "Купить мощную руну исцеления",
+    "ubertip_raw": "\"Восполняет находящимся рядом союзникам <APh3,DataA1> здоровья. Не действует на технику.\"",
+    "desc_raw": "Восполняет здоровье находящихся рядом войск.",
+    "gold": "300",
+    "lumber": "0"
+  },
+  "I01Y": {
+    "name_raw": null,
+    "tip_raw": "Купить руну скорости",
+    "ubertip_raw": "\"Ускоряет передвижение находящихся рядом союзников до максимума. |nВремя действия: <APsa,Dur1> сек.\"",
+    "desc_raw": "Ускоряет передвижение войск.",
+    "gold": "200",
+    "lumber": "0"
+  },
+  "I01Z": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_29649",
+    "ubertip_raw": "TRIGSTR_29650",
+    "desc_raw": "TRIGSTR_29647",
+    "gold": "200",
+    "lumber": "0"
+  },
+  "I020": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_29057",
+    "ubertip_raw": "TRIGSTR_29058",
+    "desc_raw": "TRIGSTR_29055",
+    "gold": "200",
+    "lumber": "0"
+  },
+  "I021": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_39360",
+    "ubertip_raw": "TRIGSTR_39362",
+    "desc_raw": "TRIGSTR_39361",
+    "gold": "325",
+    "lumber": "0"
+  },
+  "I02S": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_10340",
+    "ubertip_raw": "TRIGSTR_15986",
+    "desc_raw": "+2 к броне.",
+    "gold": "300",
+    "lumber": "0"
+  },
+  "I02T": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_10395",
+    "ubertip_raw": "TRIGSTR_13606",
+    "desc_raw": "+2 к броне.",
+    "gold": "400",
+    "lumber": "0"
+  },
+  "I02W": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12825",
+    "ubertip_raw": "TRIGSTR_168",
+    "desc_raw": "TRIGSTR_12694",
+    "gold": "7800",
+    "lumber": "0"
+  },
+  "I02X": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_12834",
+    "ubertip_raw": "TRIGSTR_13608",
+    "desc_raw": "+2 к броне.",
+    "gold": "500",
+    "lumber": "0"
+  },
+  "I02Y": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_8310",
+    "ubertip_raw": "TRIGSTR_21801",
+    "desc_raw": "TRIGSTR_12689",
+    "gold": "700",
+    "lumber": "0"
+  },
+  "I02Z": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_13128",
+    "ubertip_raw": "TRIGSTR_13610",
+    "desc_raw": "+2 к броне.",
+    "gold": "500",
+    "lumber": "0"
+  },
+  "I030": {
+    "name_raw": null,
+    "tip_raw": "TRIGSTR_1965",
+    "ubertip_raw": "TRIGSTR_13611",
+    "desc_raw": "TRIGSTR_12691",
+    "gold": "125",
+    "lumber": "0"
+  }
+}

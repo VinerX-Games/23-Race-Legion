@@ -1,0 +1,2192 @@
+{
+  "source": "WL - Bane Burrow v1.63.w3x",
+  "objects": [
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "name",
+      "value": "Призматические наконечники"
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "editorsuffix",
+      "value": "(дренеи: переработка)"
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "art",
+      "value": "ReplaceableTextures\\PassiveButtons\\PASBTNDraeneiPrismatic.blp"
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "hero",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "item",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "race",
+      "value": "human"
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "levels",
+      "value": 3
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "reqlevel",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "requires",
+      "value": "RDr1"
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "buttonpos",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "buttonpos2",
+      "value": 2
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "targetart",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "casterart",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "effectart",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "hotkey",
+      "value": "P"
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "tip1",
+      "value": "Призматические наконечники (2/2)"
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "ubertip1",
+      "value": "Два заряда. Обычная атака по вражескому юниту расходует заряд, наносит ещё 8 урона основной цели и по 15 магического урона двум ближайшим врагам в радиусе 220. Не срабатывает у иллюзий и против зданий. Один заряд восстанавливается за 18 сек.; в поле собственного Идола памяти — за 12 сек. Усиленный выстрел не расходует ману."
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "cost1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "dataa1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "datab1",
+      "value": 1
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "datac1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "datad1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "datae1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "dataf1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "tip2",
+      "value": "Призматические наконечники (1/2)"
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "ubertip2",
+      "value": "Два заряда. Обычная атака по вражескому юниту расходует заряд, наносит ещё 8 урона основной цели и по 15 магического урона двум ближайшим врагам в радиусе 220. Не срабатывает у иллюзий и против зданий. Один заряд восстанавливается за 18 сек.; в поле собственного Идола памяти — за 12 сек. Усиленный выстрел не расходует ману."
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "cost2",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "dataa2",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "datab2",
+      "value": 1
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "datac2",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "datad2",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "datae2",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "dataf2",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "tip3",
+      "value": "Призматические наконечники (0/2)"
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "ubertip3",
+      "value": "Два заряда. Обычная атака по вражескому юниту расходует заряд, наносит ещё 8 урона основной цели и по 15 магического урона двум ближайшим врагам в радиусе 220. Не срабатывает у иллюзий и против зданий. Один заряд восстанавливается за 18 сек.; в поле собственного Идола памяти — за 12 сек. Усиленный выстрел не расходует ману."
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "cost3",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "dataa3",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "datab3",
+      "value": 1
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "datac3",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "datad3",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "datae3",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr1",
+      "field": "dataf3",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "name",
+      "value": "Озарённый клинок"
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "editorsuffix",
+      "value": "(дренеи: переработка)"
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "art",
+      "value": "ReplaceableTextures\\PassiveButtons\\PASBTNDraeneiBlade.blp"
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "hero",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "item",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "race",
+      "value": "human"
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "levels",
+      "value": 1
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "reqlevel",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "requires",
+      "value": "RDr2"
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "buttonpos",
+      "value": 3
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "buttonpos2",
+      "value": 1
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "targetart",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "casterart",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "effectart",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "hotkey",
+      "value": "L"
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "tip1",
+      "value": "Озарённый клинок"
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "ubertip1",
+      "value": "При здоровье не ниже 85% следующая обычная атака по вражескому юниту наносит ещё 30 урона. Восстановление: 8 сек. В поле собственного Идола памяти восстанавливается на 50% быстрее. Получение не менее 20 реальных HP от Спасительного света или Идола памяти сокращает оставшееся восстановление на 2 сек. Не срабатывает у иллюзий и против зданий."
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "cost1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "dataa1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "datab1",
+      "value": 1
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "datac1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "datad1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "datae1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr2",
+      "field": "dataf1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "name",
+      "value": "Обет защитника"
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "editorsuffix",
+      "value": "(дренеи: переработка)"
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "art",
+      "value": "ReplaceableTextures\\CommandButtons\\BTNDraeneiVow.blp"
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "hero",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "item",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "race",
+      "value": "human"
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "levels",
+      "value": 1
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "reqlevel",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "requires",
+      "value": "RDr3"
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "buttonpos",
+      "value": 1
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "buttonpos2",
+      "value": 2
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "targetart",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "casterart",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "effectart",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "hotkey",
+      "value": "B"
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "tip1",
+      "value": "Обет защитника"
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "ubertip1",
+      "value": "На 12 сек. даёт союзному юниту 3 заряда: каждая вражеская обычная атака расходует заряд и наносит на 30% меньше урона. На герое: 2 заряда, снижение урона 15%, длительность 8 сек. Не действует на здания и иллюзии. Повторное применение обновляет обет, эффекты не складываются. С благословением Спасительного света действует большее снижение урона. Дальность 600; 70 маны; восстановление 24 сек."
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "cost1",
+      "value": 70
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "dataa1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "datab1",
+      "value": 1
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "datac1",
+      "value": 17
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "datad1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "datae1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "dataf1",
+      "value": "spiritlink"
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "order",
+      "value": "spiritlink"
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "cool1",
+      "value": 24
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "rng1",
+      "value": 600
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "cast1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "targs1",
+      "value": "air,ground,friend,self,organic"
+    },
+    {
+      "type": "ability",
+      "id": "ADr3",
+      "field": "animnames",
+      "value": "spell"
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "name",
+      "value": "Спасительный свет"
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "editorsuffix",
+      "value": "(дренеи: переработка)"
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "art",
+      "value": "ReplaceableTextures\\CommandButtons\\BTNDraeneiSalvation.blp"
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "hero",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "item",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "race",
+      "value": "human"
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "levels",
+      "value": 1
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "reqlevel",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "requires",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "buttonpos",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "buttonpos2",
+      "value": 2
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "targetart",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "casterart",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "effectart",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "hotkey",
+      "value": "W"
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "tip1",
+      "value": "Спасительный свет"
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "ubertip1",
+      "value": "Исцеляет раненую союзную органическую цель на 130 HP, затем до двух ближайших раненых союзников на 97,5 и 73,125 HP. Радиус каждого перехода 500. После исследования Благословение Наару первая цель, получившая не менее 20 HP, получает на 4 сек. снижение вражеского урона на 10%; герой — на 3 сек. и 5%. Благословения не складываются. Не лечит здания, механизмы и иллюзии. Дальность 600; 90 маны; восстановление 30 сек."
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "cost1",
+      "value": 90
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "dataa1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "datab1",
+      "value": 1
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "datac1",
+      "value": 17
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "datad1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "datae1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "dataf1",
+      "value": "healingwave"
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "order",
+      "value": "healingwave"
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "cool1",
+      "value": 30
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "rng1",
+      "value": 600
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "cast1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "targs1",
+      "value": "air,ground,friend,self,organic"
+    },
+    {
+      "type": "ability",
+      "id": "ADr4",
+      "field": "animnames",
+      "value": "spell"
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "name",
+      "value": "Идол памяти"
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "editorsuffix",
+      "value": "(дренеи: переработка)"
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "art",
+      "value": "ReplaceableTextures\\CommandButtons\\BTNDraeneiMemory.blp"
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "hero",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "item",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "race",
+      "value": "human"
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "levels",
+      "value": 1
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "reqlevel",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "requires",
+      "value": "RDr5"
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "buttonpos",
+      "value": 1
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "buttonpos2",
+      "value": 2
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "targetart",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "casterart",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "effectart",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "hotkey",
+      "value": "I"
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "tip1",
+      "value": "Идол памяти"
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "ubertip1",
+      "value": "Создаёт Идол памяти на 25 сек. В радиусе 400 раз в секунду лечит до шести наиболее раненых собственных органических юнитов на 2% максимального HP (героев — на 1%), максимум 40 HP за импульс на цель. Ускоряет восстановление Призматических наконечников и Озарённого клинка на 50%. Поля и лечение идолов не складываются. Один идол на провидца. Не лечит здания, механизмы и иллюзии. Дальность 500; 150 маны; восстановление 30 сек."
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "cost1",
+      "value": 150
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "dataa1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "datab1",
+      "value": 2
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "datac1",
+      "value": 17
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "datad1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "datae1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "dataf1",
+      "value": "healingward"
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "order",
+      "value": "healingward"
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "cool1",
+      "value": 30
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "rng1",
+      "value": 500
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "cast1",
+      "value": 0
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "targs1",
+      "value": ""
+    },
+    {
+      "type": "ability",
+      "id": "ADr5",
+      "field": "animnames",
+      "value": "spell"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "name1",
+      "value": "Призматические наконечники"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "editorsuffix1",
+      "value": "(дренеи: переработка)"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "art1",
+      "value": "ReplaceableTextures\\CommandButtons\\BTNDraeneiPrismatic.blp"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "tip1",
+      "value": "Изучить Призматические наконечники"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "ubertip1",
+      "value": "Два заряда. Обычная атака по вражескому юниту расходует заряд, наносит ещё 8 урона основной цели и по 15 магического урона двум ближайшим врагам в радиусе 220. Не срабатывает у иллюзий и против зданий. Один заряд восстанавливается за 18 сек.; в поле собственного Идола памяти — за 12 сек. Усиленный выстрел не расходует ману."
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "maxlevel",
+      "value": 1
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "goldbase",
+      "value": 250
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "lumberbase",
+      "value": 200
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "goldmod",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "lumbermod",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "timebase",
+      "value": 45
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "timemod",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "requires1",
+      "value": "h016"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "requires2",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "requires3",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "race",
+      "value": "human"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "class",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "buttonpos",
+      "value": 1
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "buttonpos2",
+      "value": 1
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "hotkey1",
+      "value": "P"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "effect1",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "base1",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "mod1",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "effect2",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "base2",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "mod2",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "effect3",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "base3",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "mod3",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "effect4",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "base4",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr1",
+      "field": "mod4",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "name1",
+      "value": "Озарённый клинок"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "editorsuffix1",
+      "value": "(дренеи: переработка)"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "art1",
+      "value": "ReplaceableTextures\\CommandButtons\\BTNDraeneiBlade.blp"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "tip1",
+      "value": "Изучить Озарённый клинок"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "ubertip1",
+      "value": "При здоровье не ниже 85% следующая обычная атака по вражескому юниту наносит ещё 30 урона. Восстановление: 8 сек. В поле собственного Идола памяти восстанавливается на 50% быстрее. Получение не менее 20 реальных HP от Спасительного света или Идола памяти сокращает оставшееся восстановление на 2 сек. Не срабатывает у иллюзий и против зданий."
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "maxlevel",
+      "value": 1
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "goldbase",
+      "value": 350
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "lumberbase",
+      "value": 300
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "goldmod",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "lumbermod",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "timebase",
+      "value": 45
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "timemod",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "requires1",
+      "value": "h017"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "requires2",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "requires3",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "race",
+      "value": "human"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "class",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "buttonpos",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "buttonpos2",
+      "value": 2
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "hotkey1",
+      "value": "L"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "effect1",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "base1",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "mod1",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "effect2",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "base2",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "mod2",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "effect3",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "base3",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "mod3",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "effect4",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "base4",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr2",
+      "field": "mod4",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "name1",
+      "value": "Обет защитника"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "editorsuffix1",
+      "value": "(дренеи: переработка)"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "art1",
+      "value": "ReplaceableTextures\\CommandButtons\\BTNDraeneiVow.blp"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "tip1",
+      "value": "Изучить Обет защитника"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "ubertip1",
+      "value": "На 12 сек. даёт союзному юниту 3 заряда: каждая вражеская обычная атака расходует заряд и наносит на 30% меньше урона. На герое: 2 заряда, снижение урона 15%, длительность 8 сек. Не действует на здания и иллюзии. Повторное применение обновляет обет, эффекты не складываются. С благословением Спасительного света действует большее снижение урона. Дальность 600; 70 маны; восстановление 24 сек."
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "maxlevel",
+      "value": 1
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "goldbase",
+      "value": 300
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "lumberbase",
+      "value": 250
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "goldmod",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "lumbermod",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "timebase",
+      "value": 45
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "timemod",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "requires1",
+      "value": "h017"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "requires2",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "requires3",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "race",
+      "value": "human"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "class",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "buttonpos",
+      "value": 1
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "buttonpos2",
+      "value": 2
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "hotkey1",
+      "value": "B"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "effect1",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "base1",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "mod1",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "effect2",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "base2",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "mod2",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "effect3",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "base3",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "mod3",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "effect4",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "base4",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr3",
+      "field": "mod4",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "name1",
+      "value": "Благословение Наару"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "editorsuffix1",
+      "value": "(дренеи: переработка)"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "art1",
+      "value": "ReplaceableTextures\\CommandButtons\\BTNDraeneiSalvation.blp"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "tip1",
+      "value": "Изучить Благословение Наару"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "ubertip1",
+      "value": "Исцеляет раненую союзную органическую цель на 130 HP, затем до двух ближайших раненых союзников на 97,5 и 73,125 HP. Радиус каждого перехода 500. После исследования Благословение Наару первая цель, получившая не менее 20 HP, получает на 4 сек. снижение вражеского урона на 10%; герой — на 3 сек. и 5%. Благословения не складываются. Не лечит здания, механизмы и иллюзии. Дальность 600; 90 маны; восстановление 30 сек."
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "maxlevel",
+      "value": 1
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "goldbase",
+      "value": 300
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "lumberbase",
+      "value": 250
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "goldmod",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "lumbermod",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "timebase",
+      "value": 45
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "timemod",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "requires1",
+      "value": "h017"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "requires2",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "requires3",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "race",
+      "value": "human"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "class",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "buttonpos",
+      "value": 2
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "buttonpos2",
+      "value": 2
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "hotkey1",
+      "value": "W"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "effect1",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "base1",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "mod1",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "effect2",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "base2",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "mod2",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "effect3",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "base3",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "mod3",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "effect4",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "base4",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr4",
+      "field": "mod4",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "name1",
+      "value": "Память предков"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "editorsuffix1",
+      "value": "(дренеи: переработка)"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "art1",
+      "value": "ReplaceableTextures\\CommandButtons\\BTNDraeneiMemory.blp"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "tip1",
+      "value": "Изучить Память предков"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "ubertip1",
+      "value": "Создаёт Идол памяти на 25 сек. В радиусе 400 раз в секунду лечит до шести наиболее раненых собственных органических юнитов на 2% максимального HP (героев — на 1%), максимум 40 HP за импульс на цель. Ускоряет восстановление Призматических наконечников и Озарённого клинка на 50%. Поля и лечение идолов не складываются. Один идол на провидца. Не лечит здания, механизмы и иллюзии. Дальность 500; 150 маны; восстановление 30 сек."
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "maxlevel",
+      "value": 1
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "goldbase",
+      "value": 350
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "lumberbase",
+      "value": 300
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "goldmod",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "lumbermod",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "timebase",
+      "value": 45
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "timemod",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "requires1",
+      "value": "h017"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "requires2",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "requires3",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "race",
+      "value": "human"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "class",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "buttonpos",
+      "value": 2
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "buttonpos2",
+      "value": 2
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "hotkey1",
+      "value": "I"
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "effect1",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "base1",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "mod1",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "effect2",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "base2",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "mod2",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "effect3",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "base3",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "mod3",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "effect4",
+      "value": ""
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "base4",
+      "value": 0
+    },
+    {
+      "type": "upgrade",
+      "id": "RDr5",
+      "field": "mod4",
+      "value": 0
+    },
+    {
+      "type": "unit",
+      "id": "e000",
+      "field": "abillist",
+      "value": "ADr1,Ashm,Ault"
+    },
+    {
+      "type": "unit",
+      "id": "e000",
+      "field": "upgrades",
+      "value": "R024,R02P,R02R,RDr1"
+    },
+    {
+      "type": "unit",
+      "id": "h059",
+      "field": "abillist",
+      "value": "ADr2,A05L,A05N,A05P,A05M,A05O,A05Q,A05R"
+    },
+    {
+      "type": "unit",
+      "id": "h059",
+      "field": "upgrades",
+      "value": "R024,R02N,R023,R02R,RDr2"
+    },
+    {
+      "type": "unit",
+      "id": "h01O",
+      "field": "abillist",
+      "value": "A04Y,A04W,ADr3,A04U,A04T"
+    },
+    {
+      "type": "unit",
+      "id": "h01O",
+      "field": "upgrades",
+      "value": "R022,R024,R023,R02R,RDr3"
+    },
+    {
+      "type": "unit",
+      "id": "h01R",
+      "field": "abillist",
+      "value": "A055,A054,ADr4"
+    },
+    {
+      "type": "unit",
+      "id": "h01R",
+      "field": "upgrades",
+      "value": "R02M,R024,R02P,R02R,RDr4"
+    },
+    {
+      "type": "unit",
+      "id": "n005",
+      "field": "abillist",
+      "value": "A1C8,A064,A063,ADr5,A05V,A1C6"
+    },
+    {
+      "type": "unit",
+      "id": "n005",
+      "field": "upgrades",
+      "value": "R02P,R02G,R024,R02J,R02K,R02Q,RDr5"
+    },
+    {
+      "type": "unit",
+      "id": "h033",
+      "field": "researches",
+      "value": "R029,RDr1,R02B,R02C"
+    },
+    {
+      "type": "unit",
+      "id": "h058",
+      "field": "researches",
+      "value": "R022,R02M,R02L,R02N,RDr2,RDr3,RDr4"
+    },
+    {
+      "type": "unit",
+      "id": "h05A",
+      "field": "researches",
+      "value": "R02J,R02K,R02G,R02H,R02I,RDr5"
+    },
+    {
+      "type": "unit",
+      "id": "nDr1",
+      "field": "name",
+      "value": "Идол памяти"
+    },
+    {
+      "type": "unit",
+      "id": "nDr1",
+      "field": "editorsuffix",
+      "value": "(дренеи)"
+    },
+    {
+      "type": "unit",
+      "id": "nDr1",
+      "field": "abillist",
+      "value": "ACmi"
+    },
+    {
+      "type": "unit",
+      "id": "nDr1",
+      "field": "abilskinlist",
+      "value": ""
+    },
+    {
+      "type": "unit",
+      "id": "nDr1",
+      "field": "upgrades",
+      "value": ""
+    },
+    {
+      "type": "unit",
+      "id": "nDr1",
+      "field": "ubertip",
+      "value": "Создаёт Идол памяти на 25 сек. В радиусе 400 раз в секунду лечит до шести наиболее раненых собственных органических юнитов на 2% максимального HP (героев — на 1%), максимум 40 HP за импульс на цель. Ускоряет восстановление Призматических наконечников и Озарённого клинка на 50%. Поля и лечение идолов не складываются. Один идол на провидца. Не лечит здания, механизмы и иллюзии. Дальность 500; 150 маны; восстановление 30 сек."
+    },
+    {
+      "type": "unit",
+      "id": "e000",
+      "field": "ubertip",
+      "value": "Дренейка-охотница дальнего боя. После исследования Призматических наконечников готовит два заряженных выстрела с осколками. Идол памяти ускоряет восстановление зарядов."
+    },
+    {
+      "type": "unit",
+      "id": "h059",
+      "field": "ubertip",
+      "value": "Воин Озарённых ближнего боя. Сохраняет Посвященное оружие. После исследования Озарённого клинка при высоком здоровье готовит усиленный удар. Лечение и Идол памяти помогают быстрее подготовить следующий удар."
+    },
+    {
+      "type": "unit",
+      "id": "h01O",
+      "field": "ubertip",
+      "value": "Элитный воин дренеев. Сохраняет Свет небес, Ауру света и Возрождение. После исследования Обета защитника прикрывает одного союзника зарядами защиты от атак. Защита героев слабее и длится меньше."
+    },
+    {
+      "type": "unit",
+      "id": "h01R",
+      "field": "ubertip",
+      "value": "Жрица Наару лечит до трёх раненых союзников Спасительным светом. Благословение Наару позволяет кратко защищать первую существенно исцелённую цель. Сохраняет Внутреннее жжение и Воскрешение."
+    },
+    {
+      "type": "unit",
+      "id": "n005",
+      "field": "ubertip",
+      "value": "Сломленный провидец дальнего боя. Сохраняет Щит молний, Мудрость Предков и способности Сломленных. После исследования Памяти предков создаёт Идол памяти: лечит собственный отряд и ускоряет восстановление Призматических наконечников и Озарённого клинка."
+    }
+  ],
+  "assets": [
+    {
+      "source": "BTNExodar Draenei - Exiled Arrowhead.blp",
+      "path": "ReplaceableTextures/CommandButtons/BTNDraeneiPrismatic.blp",
+      "bytes": 5733,
+      "sha256": "48d3833f5fddca66aa6cd1755ffa2525d8bb90bfee7d1ec10d4e798b69e53db6"
+    },
+    {
+      "source": "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Exiled Arrowhead.blp",
+      "path": "ReplaceableTextures/CommandButtonsDisabled/DISBTNDraeneiPrismatic.blp",
+      "bytes": 3276,
+      "sha256": "8be33e6fb390baa746778f3d56d45f337e24afafcce1404ab60c34821fab77ba"
+    },
+    {
+      "source": "BTNLightforged - NovaFire.blp",
+      "path": "ReplaceableTextures/CommandButtons/BTNDraeneiBlade.blp",
+      "bytes": 6300,
+      "sha256": "f5f3779b7086ca2ac777faebfa1b4ddc279c49a4693932a16f29a4b902257350"
+    },
+    {
+      "source": "ReplaceableTextures/CommandButtonsDisabled/DISBTNLightforged - NovaFire.blp",
+      "path": "ReplaceableTextures/CommandButtonsDisabled/DISBTNDraeneiBlade.blp",
+      "bytes": 3212,
+      "sha256": "6a68bbe37a17dc3e7f7fd30f4037c86e1ac81f52a7b1a8297532dc541c49e76c"
+    },
+    {
+      "source": "BTNExodar Draenei - Shield of Argus.blp",
+      "path": "ReplaceableTextures/CommandButtons/BTNDraeneiVow.blp",
+      "bytes": 4978,
+      "sha256": "ff0e447a9186181372bfdb70826bcc9d1bda8c8203b4aa9d6f7903e268edc9b5"
+    },
+    {
+      "source": "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Shield of Argus.blp",
+      "path": "ReplaceableTextures/CommandButtonsDisabled/DISBTNDraeneiVow.blp",
+      "bytes": 3154,
+      "sha256": "456d83ddc74ef4581423a8b424d6783ac340e034759ef648d7472881310ff5ec"
+    },
+    {
+      "source": "BTNExodar Draenei - Harmonized.blp",
+      "path": "ReplaceableTextures/CommandButtons/BTNDraeneiSalvation.blp",
+      "bytes": 6274,
+      "sha256": "de112d516cc56b039ca171b986e9dfcf21b3def11b5f7dc8b99a3c2f901468e6"
+    },
+    {
+      "source": "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Harmonized.blp",
+      "path": "ReplaceableTextures/CommandButtonsDisabled/DISBTNDraeneiSalvation.blp",
+      "bytes": 4043,
+      "sha256": "b367c1be6f26d476e20105f11e79e3fee6b6bddb5b865ae12c8e81580e2087fe"
+    },
+    {
+      "source": "BTNExodar Draenei - Arkonite Radiance.blp",
+      "path": "ReplaceableTextures/CommandButtons/BTNDraeneiMemory.blp",
+      "bytes": 6300,
+      "sha256": "45c2c15ba6d515ebd7fe7b60033a210cdfd5eba22528373bf0b9697314fd846a"
+    },
+    {
+      "source": "ReplaceableTextures/CommandButtonsDisabled/DISBTNExodar Draenei - Arkonite Radiance.blp",
+      "path": "ReplaceableTextures/CommandButtonsDisabled/DISBTNDraeneiMemory.blp",
+      "bytes": 6300,
+      "sha256": "b2160de3dfcefcecc71c6712bcbc96776dacf85773305e28f735204c31dac787"
+    },
+    {
+      "source": "PASExodar Draenei - Exiled Arrowhead.blp",
+      "path": "ReplaceableTextures/PassiveButtons/PASBTNDraeneiPrismatic.blp",
+      "bytes": 4338,
+      "sha256": "9b9c82ab4686c5755bc3aaf4a73a9efd1dccab49c78d0e320d742744165eae30"
+    },
+    {
+      "source": "ReplaceableTextures/CommandButtonsDisabled/DISPASExodar Draenei - Exiled Arrowhead.blp",
+      "path": "ReplaceableTextures/CommandButtonsDisabled/DISPASBTNDraeneiPrismatic.blp",
+      "bytes": 3276,
+      "sha256": "8be33e6fb390baa746778f3d56d45f337e24afafcce1404ab60c34821fab77ba"
+    },
+    {
+      "source": "PASLightforged - NovaFire.blp",
+      "path": "ReplaceableTextures/PassiveButtons/PASBTNDraeneiBlade.blp",
+      "bytes": 4813,
+      "sha256": "58ca6dff619cd176244a8af7fbfc1240332483af81aaa026757465203778e26d"
+    },
+    {
+      "source": "ReplaceableTextures/CommandButtonsDisabled/DISPASLightforged - NovaFire.blp",
+      "path": "ReplaceableTextures/CommandButtonsDisabled/DISPASBTNDraeneiBlade.blp",
+      "bytes": 3212,
+      "sha256": "6a68bbe37a17dc3e7f7fd30f4037c86e1ac81f52a7b1a8297532dc541c49e76c"
+    },
+    {
+      "source": "Exodar Draenei - Nether Arrow.mdx",
+      "path": "Draenei/Effects/NetherArrow.mdx",
+      "bytes": 5057,
+      "sha256": "5c6981cfcc254aa7e41f723965d8d493976fa909663640f7b8992e144aa53666"
+    },
+    {
+      "source": "DraeneiCrystal.blp",
+      "path": "DraeneiCrystal.blp",
+      "bytes": 34973,
+      "sha256": "6727b16ca7e52da1d0d6e045df0739044955726fecf1cf4b93d5c349120ac663"
+    },
+    {
+      "source": "DranaiCrossbow.blp",
+      "path": "DranaiCrossbow.blp",
+      "bytes": 21621,
+      "sha256": "a37a80b35370795d50b4ec3a68fffe6cd672bf0a66ecba685bbf26232e4386d8"
+    },
+    {
+      "source": "Lightforged - BlazingSpecialArt.mdx",
+      "path": "Draenei/Effects/BlazingSpecialArt.mdx",
+      "bytes": 13133,
+      "sha256": "87d9645eabd9b13e39097f785ff22db268e06de15b36ab36daab70817eed3ccf"
+    },
+    {
+      "source": "Lightforged - GlowShield026.mdx",
+      "path": "Draenei/Effects/GlowShield.mdx",
+      "bytes": 5388,
+      "sha256": "ebfbf88ca5633b601e43bc8e91b9afea512780a27868ecb35d1aca2464bc4780"
+    },
+    {
+      "source": "Exodar Draenei - Reconstitute.mdx",
+      "path": "Draenei/Effects/Reconstitute.mdx",
+      "bytes": 6109,
+      "sha256": "14f2a6fad5a3dbf4e5c8fc560f7c9beeafbfeb2d20c4c8a3f9c878e9cb2e6470"
+    },
+    {
+      "source": "Lightforged - Runical-Holy Aura.mdx",
+      "path": "Draenei/Effects/HolyAura.mdx",
+      "bytes": 2840,
+      "sha256": "9c856c178922b8b7b6d98c602a9ba89eca1a9bffc3230f14308713d35a43c048"
+    }
+  ],
+  "before_hashes": {
+    "war3map.w3a": "3ddf389de1d168bb249458791386d6e3f33fa2281d685053bda3519bedf0a62c",
+    "war3mapSkin.w3a": "4934ebaa3d9339d29d55f88f56073d43c9d165a8a997b09c1b51508a18ecb589",
+    "war3map.w3q": "153b805bd1b51135c21f6c8ebe8ac791c10fea77a6c7ec87c9d81a41d6a2d66b",
+    "war3mapSkin.w3q": "2f0d336a8282019772704c10dcfe63185a2e5675ff9c4cec28111de6e0d24511",
+    "war3map.w3u": "9383ca664e7246efc846b1123eafd4c20018974ecd99d2e074402605d8f2feca",
+    "war3mapSkin.w3u": "a9a5a7edc6840b7a430d6559e237cc948e0f5b602e5ec17c4e101c199b11af85",
+    "war3map.wts": "63ac893c7b014d24f440ddfba24f3050fd9172f81d0d3b44525d2b265b31b189"
+  },
+  "changed_files": [
+    "war3map.w3a",
+    "war3mapSkin.w3a",
+    "war3map.w3q",
+    "war3mapSkin.w3q",
+    "war3map.w3u",
+    "war3mapSkin.w3u",
+    "war3map.imp"
+  ],
+  "ward_model_preserved": "units\\orc\\HealingWard\\HealingWard"
+}

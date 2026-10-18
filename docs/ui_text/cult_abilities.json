@@ -1,0 +1,1294 @@
+{
+  "scope": "Культ Проклятых (Cult of the Damned): категория 5 — Способности (56 способностей)",
+  "abilities_count": 56,
+  "variants": [
+    "SD"
+  ],
+  "abilities": [
+    {
+      "id": "A0CL",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 8955,
+          "after": "|cffe4cfa3Создать труп|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 8956,
+          "after": "|cffe4cfa3Создать труп|r (|cffffffffW|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 15488,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Извлекает из-под земли останки для нужд некромантии.|n|n|cffa6afb8Уровень 1:|r |cffffffff1|cffced4da труп, перезарядка |cffffffff32|cffced4da сек.|n|cffa6afb8Уровень 2:|r |cffffffff2|cffced4da трупа, перезарядка |cffffffff32|cffced4da сек.|n|cffa6afb8Уровень 3:|r |cffffffff3|cffced4da трупа, перезарядка |cffffffff32|cffced4da сек.|n|cffa6afb8Уровень 4:|r |cffffffff4|cffced4da трупа, перезарядка |cffffffff35|cffced4da сек.|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 8958,
+          "after": "|cffe4cfa3Создать труп — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 8963,
+          "after": "|cffe4cfa3Создать труп — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 8964,
+          "after": "|cffe4cfa3Создать труп — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tips_tip4",
+          "wts_id": 8962,
+          "after": "|cffe4cfa3Создать труп — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 15493,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Извлекает из глубин земли |cffffffff1|cffced4da труп(а) для использования в некромантии.|n|nРасход маны: |cffffffff150|cffced4da. Перезарядка: |cffffffff32|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 15485,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Извлекает из глубин земли |cffffffff2|cffced4da труп(а) для использования в некромантии.|n|nРасход маны: |cffffffff150|cffced4da. Перезарядка: |cffffffff32|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 15486,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Извлекает из глубин земли |cffffffff3|cffced4da труп(а) для использования в некромантии.|n|nРасход маны: |cffffffff150|cffced4da. Перезарядка: |cffffffff32|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertips_ubertip4",
+          "wts_id": 15487,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Извлекает из глубин земли |cffffffff4|cffced4da труп(а) для использования в некромантии.|n|nРасход маны: |cffffffff150|cffced4da. Перезарядка: |cffffffff35|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0CM",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 8971,
+          "after": "|cffe4cfa3Массовое проклятие|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 41279,
+          "after": "|cffe4cfa3Массовое проклятие|r (|cffffffffE|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 41305,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Проклинает всех врагов поблизости, нанося им мгновенный урон.|n|n|cffa6afb8Уровень 1:|r |cffffffff100|cffced4da ед. урона.|n|cffa6afb8Уровень 2:|r |cffffffff150|cffced4da ед. урона.|n|cffa6afb8Уровень 3:|r |cffffffff200|cffced4da ед. урона.|n|cffa6afb8Уровень 4:|r |cffffffff250|cffced4da ед. урона.|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 8972,
+          "after": "|cffe4cfa3Массовое проклятие — уровень 1|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 8973,
+          "after": "|cffe4cfa3Массовое проклятие — уровень 2|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 8974,
+          "after": "|cffe4cfa3Массовое проклятие — уровень 3|r (|cffffffffE|r)"
+        },
+        {
+          "field": "tips_tip4",
+          "wts_id": 8975,
+          "after": "|cffe4cfa3Массовое проклятие — уровень 4|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 41290,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff100|cffced4da ед. урона всем вражеским войскам вокруг героя в радиусе |cffffffff800|cffced4da.|n|nРасход маны: |cffffffff125|cffced4da. Перезарядка: |cffffffff15|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 41291,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff150|cffced4da ед. урона всем вражеским войскам вокруг героя в радиусе |cffffffff800|cffced4da.|n|nРасход маны: |cffffffff125|cffced4da. Перезарядка: |cffffffff20|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 41292,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff200|cffced4da ед. урона всем вражеским войскам вокруг героя в радиусе |cffffffff800|cffced4da.|n|nРасход маны: |cffffffff125|cffced4da. Перезарядка: |cffffffff26|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertips_ubertip4",
+          "wts_id": 41293,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит |cffffffff250|cffced4da ед. урона всем вражеским войскам вокруг героя в радиусе |cffffffff800|cffced4da.|n|nРасход маны: |cffffffff125|cffced4da. Перезарядка: |cffffffff30|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0CN",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 8992,
+          "after": "|cffe4cfa3Оживление мёртвых|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 8993,
+          "after": "|cffe4cfa3Оживление мёртвых|r (|cffffffffR|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 15500,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает из трупов неуязвимых бойцов, сражающихся на стороне героя.|n|n|cffa6afb8Уровень 1:|r |cffffffff8|cffced4da трупов.|n|cffa6afb8Уровень 2:|r |cffffffff12|cffced4da трупов.|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 8994,
+          "after": "|cffe4cfa3Оживление мёртвых — уровень 1|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 8995,
+          "after": "|cffe4cfa3Оживление мёртвых — уровень 2|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 13587,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает до |cffffffff8|cffced4da трупов в области действия в виде неуязвимых воинов, сражающихся на стороне героя.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 13547,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает до |cffffffff12|cffced4da трупов в области действия в виде неуязвимых воинов, сражающихся на стороне героя.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0CO",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 9006,
+          "after": "|cffe4cfa3Лик смерти|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 9007,
+          "after": "|cffe4cfa3Лик смерти|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 15504,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит урон живому врагу или исцеляет союзника-нежить.|n|n|cffa6afb8Уровень 1:|r лечение |cffc8e087200|cffced4da или |cffffffff100|cffced4da урона.|n|cffa6afb8Уровень 2:|r лечение |cffc8e087400|cffced4da или |cffffffff200|cffced4da урона.|n|cffa6afb8Уровень 3:|r лечение |cffc8e087600|cffced4da или |cffffffff300|cffced4da урона.|n|cffa6afb8Уровень 4:|r лечение |cffc8e087800|cffced4da или |cffffffff400|cffced4da урона.|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 15505,
+          "after": "|cffe4cfa3Лик смерти — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 15506,
+          "after": "|cffe4cfa3Лик смерти — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 15507,
+          "after": "|cffe4cfa3Лик смерти — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tips_tip4",
+          "wts_id": 15502,
+          "after": "|cffe4cfa3Лик смерти — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 15508,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffc8e087200|cffced4da ед. здоровья союзнику-нежити или наносит |cffffffff100|cffced4da ед. урона живому противнику.|n|nРасход маны: |cffffffff75|cffced4da. Перезарядка: |cffffffff6|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 15509,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffc8e087400|cffced4da ед. здоровья союзнику-нежити или наносит |cffffffff200|cffced4da ед. урона живому противнику.|n|nРасход маны: |cffffffff75|cffced4da. Перезарядка: |cffffffff6|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 15510,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffc8e087600|cffced4da ед. здоровья союзнику-нежити или наносит |cffffffff300|cffced4da ед. урона живому противнику.|n|nРасход маны: |cffffffff75|cffced4da. Перезарядка: |cffffffff6|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertips_ubertip4",
+          "wts_id": 15503,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffc8e087800|cffced4da ед. здоровья союзнику-нежити или наносит |cffffffff400|cffced4da ед. урона живому противнику.|n|nРасход маны: |cffffffff75|cffced4da. Перезарядка: |cffffffff6|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0CP",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 9010,
+          "after": "|cffe4cfa3Зов смерти|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 1267,
+          "after": "|cffe4cfa3Зов смерти|r (|cffffffffW|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 15514,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает урон союзных войск поблизости на |cffffffff45|cffced4da сек.|n|n|cffa6afb8Уровень 1:|r |cffc8e087+15%|cffced4da к урону.|n|cffa6afb8Уровень 2:|r |cffc8e087+20%|cffced4da к урону.|n|cffa6afb8Уровень 3:|r |cffc8e087+25%|cffced4da к урону.|n|cffa6afb8Уровень 4:|r |cffc8e087+35%|cffced4da к урону.|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 9011,
+          "after": "|cffe4cfa3Зов смерти — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 9012,
+          "after": "|cffe4cfa3Зов смерти — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 9013,
+          "after": "|cffe4cfa3Зов смерти — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tips_tip4",
+          "wts_id": 9014,
+          "after": "|cffe4cfa3Зов смерти — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 15515,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает атакуемый урон находящихся рядом союзных войск на |cffc8e087+15%|cffced4da на |cffffffff45|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 15511,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает атакуемый урон находящихся рядом союзных войск на |cffc8e087+20%|cffced4da на |cffffffff45|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 15512,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает атакуемый урон находящихся рядом союзных войск на |cffc8e087+25%|cffced4da на |cffffffff45|cffced4da сек.|r"
+        },
+        {
+          "field": "ubertips_ubertip4",
+          "wts_id": 15513,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает атакуемый урон находящихся рядом союзных войск на |cffc8e087+35%|cffced4da на |cffffffff45|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0CQ",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 9049,
+          "after": "|cffe4cfa3Пожирание|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 9050,
+          "after": "|cffe4cfa3Пожирание|r (|cffffffffR|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 16074,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну тёмных духов, поражающих окружающих противников.|n|n|cffa6afb8Уровень 1:|r |cffffffff300|cffced4da урона, до |cffffffff18|cffced4da целей.|n|cffa6afb8Уровень 2:|r |cffffffff450|cffced4da урона, до |cffffffff25|cffced4da целей.|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 9051,
+          "after": "|cffe4cfa3Пожирание — уровень 1|r (|cffffffffR|r)"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 9052,
+          "after": "|cffe4cfa3Пожирание — уровень 2|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 40049,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну тёмных духов, наносящих по |cffffffff300|cffced4da ед. урона каждому противнику вокруг героя (до |cffffffff18|cffced4da целей).|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 40050,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну тёмных духов, наносящих по |cffffffff450|cffced4da ед. урона каждому противнику вокруг героя (до |cffffffff25|cffced4da целей).|r"
+        }
+      ]
+    },
+    {
+      "id": "A0CR",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 9066,
+          "after": "|cffe4cfa3Нечистая аура|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 9067,
+          "after": "|cffe4cfa3Нечистая аура|r (|cffffffffE|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 15523,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно ускоряет передвижение и регенерацию здоровья союзников поблизости.|n|n|cffa6afb8Уровень 1:|r |cffc8e087+10%|cffced4da к скорости, |cffc8e087+1|cffced4da хп/сек.|n|cffa6afb8Уровень 2:|r |cffc8e087+15%|cffced4da к скорости, |cffc8e087+2|cffced4da хп/сек.|n|cffa6afb8Уровень 3:|r |cffc8e087+20%|cffced4da к скорости, |cffc8e087+3|cffced4da хп/сек.|n|cffa6afb8Уровень 4:|r |cffc8e087+25%|cffced4da к скорости, |cffc8e087+4|cffced4da хп/сек.|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 9070,
+          "after": "|cffe4cfa3Нечистая аура — уровень 1|r"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 9071,
+          "after": "|cffe4cfa3Нечистая аура — уровень 2|r"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 9072,
+          "after": "|cffe4cfa3Нечистая аура — уровень 3|r"
+        },
+        {
+          "field": "tips_tip4",
+          "wts_id": 9068,
+          "after": "|cffe4cfa3Нечистая аура — уровень 4|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 15520,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения союзных войск на |cffc8e087+10%|cffced4da и повышает скорость восстановления их здоровья.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 15521,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения союзных войск на |cffc8e087+15%|cffced4da и повышает скорость восстановления их здоровья.|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 15522,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения союзных войск на |cffc8e087+20%|cffced4da и повышает скорость восстановления их здоровья.|r"
+        },
+        {
+          "field": "ubertips_ubertip4",
+          "wts_id": 15519,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения союзных войск на |cffc8e087+25%|cffced4da и повышает скорость восстановления их здоровья.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0I3",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 26484,
+          "after": "|cffe4cfa3Небольшой скачок|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 10064,
+          "after": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 10976,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно перемещает строителя на короткое расстояние.|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 26476,
+          "after": "|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 26477,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно перемещает строителя на короткое расстояние.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0IQ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27193,
+          "after": "|cffe4cfa3Обозначить столицу|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 27969,
+          "after": "|cffe4cfa3Обозначить столицу|r (|cffffffffX|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 27970,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обозначает главное здание в качестве столицы фракции, существенно увеличивая его запас прочности. При уничтожении столицы игрок терпит поражение либо становится вассалом победителя (в зависимости от настроек партии).|n|n|cffe6c07bЕсли столица не выбрана в течение первых 10 минут игры, она будет назначена автоматически.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0LI",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 2888,
+          "after": "|cffe4cfa3Обмен золота на дерево|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 3692,
+          "after": "|cffe4cfa3Обмен золота на дерево|r (|cffffffffS|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 20630,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает |cffffffff500|cffced4da ед. золота на |cffffffff100|cffced4da ед. древесины.|r"
+        }
+      ]
+    },
+    {
+      "id": "A0LJ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12857,
+          "after": "|cffe4cfa3Обмен дерева на золото|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 12886,
+          "after": "|cffe4cfa3Обмен дерева на золото|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 20631,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обменивает |cffffffff500|cffced4da ед. древесины на |cffffffff100|cffced4da ед. золота.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1HA",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38911,
+          "after": "|cffe4cfa3Культ Проклятых|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 38912,
+          "after": "|cffe4cfa3Культ Проклятых|r (|cffffffffD|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 22000,
+          "after": "|cffa6afb8РАСА:|cffced4da Организация фанатиков и тёмных магов на службе Короля-лича, использующая некромантию, плотеобработку и силу чумы.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Куратор расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Сложность:|r |cffffffff●●●●●|r|n|cffa6afb8Период:|r |cffa9c7de«Warcraft III — Wrath of the Lich King»|r|n|n|cffced4daКульт Проклятых — тайное сообщество смертных, присягнувших на верность Королю-личу ради обретения могущества и бессмертия. Основанный верховным магом Кел'Тузадом по велению Нер'зула, Культ тайно распространял зерно чумы по Лордерону, подготавливая почву для победоносного шествия Плети. Сектанты возводят осквернённые цитадели, собирают колоссальных големов из тел павших и призывают легионы нежити во славу Ледяного Трона.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1HC",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34230,
+          "after": "|cffe4cfa3Защита распылителя|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 34231,
+          "after": "|cffe4cfa3Защита распылителя|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 9513,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Активирует орудия распылителя чумы на |cffffffff22|cffced4da сек., позволяя строению атаковать наземные и воздушные цели.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1HE",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34372,
+          "after": "|cffe4cfa3Поток льда|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 34379,
+          "after": "|cffe4cfa3Поток льда|r (|cffffffffW|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 34380,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на цели в указанной области ледяной шквал, нанося урон и временно изгоняя их в астральный план.|n|n|cffa6afb8Уровень 1:|r |cffffffff75|cffced4da урона.|n|cffa6afb8Уровень 2:|r |cffffffff150|cffced4da урона.|n|cffa6afb8Уровень 3:|r |cffffffff225|cffced4da урона.|n|cffa6afb8Уровень 4:|r |cffffffff300|cffced4da урона и изгнание в астрал.|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 34370,
+          "after": "|cffe4cfa3Поток льда — уровень 1|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 34373,
+          "after": "|cffe4cfa3Поток льда — уровень 2|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 34374,
+          "after": "|cffe4cfa3Поток льда — уровень 3|r (|cffffffffW|r)"
+        },
+        {
+          "field": "tips_tip4",
+          "wts_id": 34375,
+          "after": "|cffe4cfa3Поток льда — уровень 4|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 34371,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цели в выбранной области потоком ледяных стрел, нанося им |cffffffff75|cffced4da ед. урона.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 34376,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цели в выбранной области потоком ледяных стрел, нанося им |cffffffff150|cffced4da ед. урона.|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 34377,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цели в выбранной области потоком ледяных стрел, нанося им |cffffffff225|cffced4da ед. урона.|r"
+        },
+        {
+          "field": "ubertips_ubertip4",
+          "wts_id": 34378,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цели в области ледяным шквалом на |cffffffff300|cffced4da ед. урона и временно изгоняет их в астрал, делая неуязвимыми к физическим атакам, но восприимчивыми к магии.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1HH",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34869,
+          "after": "|cffe4cfa3Тёмная стая|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 34870,
+          "after": "|cffe4cfa3Тёмная стая|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 35073,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает рой нетопырей по прямой линии, наносящих по |cffffffff70|cffced4da ед. урона каждому поражённому наземному противнику (максимум |cffffffff300|cffced4da урона).|r"
+        }
+      ]
+    },
+    {
+      "id": "A1HI",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34871,
+          "after": "|cffe4cfa3Морозный доспех|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 34872,
+          "after": "|cffe4cfa3Морозный доспех|r (|cffffffffQ|r)"
+        }
+      ]
+    },
+    {
+      "id": "A1HM",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35092,
+          "after": "|cffe4cfa3Пожирание магии|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 35093,
+          "after": "|cffe4cfa3Пожирание магии|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 35094,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поглощает положительные и отрицательные заклинания с войск в указанной области. Восстанавливает заклинателю здоровье и ману за каждую цель, а также наносит урон призванным созданиям.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1HN",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35012,
+          "after": "|cffe4cfa3Лик смерти|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 35074,
+          "after": "|cffe4cfa3Лик смерти|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 35076,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восстанавливает |cffc8e087160|cffced4da ед. здоровья союзнику-нежити или наносит |cffffffff80|cffced4da ед. урона живому противнику.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1HO",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36961,
+          "after": "|cffe4cfa3Заразительная атака|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 36959,
+          "after": "|cffe4cfa3Заразительная атака|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 36960,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da С вероятностью |cffffffff33%|cffced4da каждая атака бойца заражает цель смертоносной чумой, наносящей периодический урон.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1IJ",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35961,
+          "after": "|cffa6afb8Служебный маркер|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 11590,
+          "after": "|cffa6afb8Служебный маркер|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 11606,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер строения вне экономики.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1IK",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34365,
+          "after": "|cffe4cfa3Зачумление|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 34366,
+          "after": "|cffe4cfa3Зачумление|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 12071,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Заражает врага паразитом, наносящим непрерывный периодический урон. Если цель погибает под действием заклятия, из её тела появляется прислужник нежити. Успешное применение восстанавливает заклинателю |cffc8e08715|cffced4da здоровья и |cffc8e0875|cffced4da маны.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1IL",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35974,
+          "after": "|cffe4cfa3Воскрешение мёртвых|r"
+        },
+        {
+          "field": "researchtip",
+          "wts_id": 35989,
+          "after": "|cffe4cfa3Воскрешение мёртвых|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "researchubertip",
+          "wts_id": 35990,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает из трупа могучего бойца нежити на службу культу.|n|n|cffa6afb8Уровень 1:|r Скелет-воин.|n|cffa6afb8Уровень 2:|r Вурдалак.|n|cffa6afb8Уровень 3:|r Поганище.|n|cffa6afb8Уровень 4:|r Рыцарь смерти.|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 35975,
+          "after": "|cffe4cfa3Воскрешение мёртвых — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 35976,
+          "after": "|cffe4cfa3Воскрешение мёртвых — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 35977,
+          "after": "|cffe4cfa3Воскрешение мёртвых — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tips_tip4",
+          "wts_id": 35978,
+          "after": "|cffe4cfa3Воскрешение мёртвых — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 35979,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает из выбранного трупа |cffa9c7deСкелета-воина|cffced4da на службу герою.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 35980,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает из выбранного трупа свирепого |cffa9c7deВурдалака|cffced4da на службу герою.|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 35981,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает из выбранного трупа массивное |cffa9c7deПоганище|cffced4da на службу герою.|r"
+        },
+        {
+          "field": "ubertips_ubertip4",
+          "wts_id": 35982,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает из выбранного трупа элитного |cffa9c7deРыцаря смерти|cffced4da на службу герою.|r"
+        }
+      ]
+    },
+    {
+      "id": "A1KB",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38201,
+          "after": "|cffe4cfa3Защита столицы|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 38229,
+          "after": "|cffe4cfa3Защита столицы|r"
+        }
+      ]
+    },
+    {
+      "id": "A1L9",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38662,
+          "after": "|cffe4cfa3Призыв на кладбище|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 38679,
+          "after": "|cffe4cfa3Воскрешать бойцов|r (|cffffffffC|r)"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 38756,
+          "after": "|cffe4cfa3Воскрешать слуг|r (|cffffffffC|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 38698,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Переключает кладбище на автоматическое воскрешение |cffa9c7deСкелетов-воинов|cffced4da вместо слуг-лесорубов.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 38757,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Переключает кладбище на автоматическое воскрешение слуг-лесорубов для добычи древесины.|r"
+        }
+      ]
+    },
+    {
+      "id": "AUdr",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "tips_tip4",
+          "wts_id": 29627,
+          "after": "|cffe4cfa3Тёмный ритуал — уровень 4|r (|cffffffffE|r)"
+        },
+        {
+          "field": "ubertips_ubertip4",
+          "wts_id": 29628,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Приносит в жертву союзную нежить, восстанавливая личу ману в размере |cffffffff100%|cffced4da от запаса здоровья принесённого юнита.|r"
+        }
+      ]
+    },
+    {
+      "id": "AUfn",
+      "levels": 4,
+      "strings": [
+        {
+          "field": "researchubertip",
+          "wts_id": 30532,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает врагов вокруг цели волной мороза, нанося урон и замедляя их передвижение и атаку.|n|n|cffa6afb8Уровень 1:|r |cffffffff100|cffced4da ед. урона цели, |cffffffff50|cffced4da по площади.|n|cffa6afb8Уровень 2:|r |cffffffff150|cffced4da ед. урона цели, |cffffffff100|cffced4da по площади.|n|cffa6afb8Уровень 3:|r |cffffffff275|cffced4da ед. урона цели, |cffffffff150|cffced4da по площади.|n|cffa6afb8Уровень 4:|r |cffffffff450|cffced4da ед. урона цели, |cffffffff200|cffced4da по площади.|r"
+        },
+        {
+          "field": "tips_tip4",
+          "wts_id": 2513,
+          "after": "|cffe4cfa3Кольцо льда — уровень 4|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertips_ubertip4",
+          "wts_id": 21411,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает ледяную волну, нанося |cffffffff450|cffced4da ед. урона цели и |cffffffff200|cffced4da ед. урона врагам поблизости, замедляя их передвижение и скорость атаки на |cffffffff8|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "cDA1",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 30317,
+          "after": "|cffe4cfa3Болезнетворное облако|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 35212,
+          "after": "|cffe4cfa3Болезнетворное облако|r"
+        }
+      ]
+    },
+    {
+      "id": "cDAZ",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 38637,
+          "after": "|cffe4cfa3Автоматическое воскрешение|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 38638,
+          "after": "|cffe4cfa3Отключить автоприменение воскрешения|r (|cffffffffA|r)"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 38640,
+          "after": "|cffe4cfa3Включить автоприменение воскрешения|r (|cffffffffA|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 38660,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Новые некроманты, обученные в этом здании, будут появляться с выключенным автоприменением «Воскрешения мёртвых».|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 38661,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Новые некроманты, обученные в этом здании, будут появляться со включённым автоприменением «Воскрешения мёртвых».|r"
+        }
+      ]
+    },
+    {
+      "id": "cDa2",
+      "levels": 3,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35206,
+          "after": "|cffe4cfa3Воскрешение мёртвых|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 26988,
+          "after": "|cffe4cfa3Воскрешение мёртвых — уровень 1|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 35205,
+          "after": "|cffe4cfa3Воскрешение мёртвых — уровень 2|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "tips_tip3",
+          "wts_id": 36912,
+          "after": "|cffe4cfa3Воскрешение мёртвых — уровень 3|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 12004,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает |cffffffff1|cffced4da скелета из трупа. При успешном поднятии восстанавливает заклинателю |cffc8e08715|cffced4da здоровья и |cffc8e0875|cffced4da маны.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 12009,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает |cffffffff1|cffced4da скелета-воина 2-го уровня из трупа. При успешном поднятии восстанавливает заклинателю |cffc8e08715|cffced4da здоровья и |cffc8e0875|cffced4da маны.|r"
+        },
+        {
+          "field": "ubertips_ubertip3",
+          "wts_id": 12011,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поднимает |cffffffff1|cffced4da скелета-воина 3-го уровня из трупа. При успешном поднятии восстанавливает заклинателю |cffc8e08715|cffced4da здоровья и |cffc8e0875|cffced4da маны.|r"
+        }
+      ]
+    },
+    {
+      "id": "cDa4",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35071,
+          "after": "|cffe4cfa3Воскрешение слуг|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 27222,
+          "after": "|cffe4cfa3Воскрешение слуг|r (|cffffffffZ|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 14535,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно воскрешает скелета-слугу для заготовки древесины.|r"
+        }
+      ]
+    },
+    {
+      "id": "cDa5",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27223,
+          "after": "|cffe4cfa3Плотеобработка|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 35207,
+          "after": "|cffe4cfa3Плотеобработка|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 35971,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Собирает группу мясных созданий в одного могучего голема. Поглощает до |cffffffff12|cffced4da юнитов из плоти в области применения (максимум до |cffffffff6500|cffced4da суммарного здоровья). Эффективность слияния составляет |cffffffff50%|cffced4da и повышается на |cffc8e087+5%|cffced4da за каждый уровень «Посвящения осквернителей».|r"
+        }
+      ]
+    },
+    {
+      "id": "cDa6",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27247,
+          "after": "|cffa6afb8Создание из плоти|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 11016,
+          "after": "|cffa6afb8Создание из плоти|r"
+        }
+      ]
+    },
+    {
+      "id": "cDa8",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 27250,
+          "after": "|cffe4cfa3Призрачное касание|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 38651,
+          "after": "|cffe4cfa3Призрачное касание|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 38652,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восполняет запас маны союзным заклинателям, находящимся поблизости от распылителя.|r"
+        }
+      ]
+    },
+    {
+      "id": "cDa9",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 28581,
+          "after": "|cffe4cfa3Чумная эссенция|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 34982,
+          "after": "|cffe4cfa3Чумная эссенция|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 34983,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Восполняет по |cffc8e08715|cffced4da ед. здоровья находящимся рядом союзным бойцам нежити (до |cffffffff10|cffced4da целей).|r"
+        }
+      ]
+    },
+    {
+      "id": "cDaa",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 34218,
+          "after": "|cffa6afb8Посвящение некромантов|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 34619,
+          "after": "|cffa6afb8Посвящение некромантов|r"
+        }
+      ]
+    },
+    {
+      "id": "cDad",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 36971,
+          "after": "|cffe4cfa3Кольцо льда|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 36970,
+          "after": "|cffe4cfa3Кольцо льда|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 12074,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает волну леденящего холода, наносящую |cffffffff75|cffced4da ед. урона основной цели и |cffffffff60|cffced4da ед. урона окружающим врагам, замедляя их на |cffffffff5|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "cDae",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 28776,
+          "after": "|cffe4cfa3Ледяные стрелы|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 34992,
+          "after": "|cffe4cfa3Ледяные стрелы|r (|cffffffffE|r)"
+        }
+      ]
+    },
+    {
+      "id": "cDai",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 30321,
+          "after": "|cffe4cfa3Порча издыхания|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 34842,
+          "after": "|cffe4cfa3Порча издыхания|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 38659,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Ослабляет вражеского бойца, снижая его атакуемый урон на |cffe69a8d15%|cffced4da и уменьшая показатель брони на |cffe69a8d3|cffced4da ед.|r"
+        }
+      ]
+    },
+    {
+      "id": "cDao",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 12145,
+          "after": "|cffe4cfa3Неистовство чужой души|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 30331,
+          "after": "|cffe4cfa3Неистовство чужой души|r (|cffffffffQ|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 12146,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Временно ускоряет атаку бойца на |cffc8e087+30%|cffced4da и скорость передвижения на |cffc8e087+25%|cffced4da на |cffffffff15|cffced4da сек.|r"
+        }
+      ]
+    },
+    {
+      "id": "cDap",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 696,
+          "after": "|cffe4cfa3Порча изнывания|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 19994,
+          "after": "|cffe4cfa3Порча изнывания|r (|cffffffffW|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 1342,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Замедляет скорость атаки противника на |cffe69a8d50%|cffced4da и скорость его передвижения на |cffe69a8d50%|cffced4da.|r"
+        }
+      ]
+    },
+    {
+      "id": "cDaq",
+      "levels": 2,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 28780,
+          "after": "|cffe4cfa3Эксгумация|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 34984,
+          "after": "|cffe4cfa3Эксгумация — уровень 1|r"
+        },
+        {
+          "field": "tips_tip2",
+          "wts_id": 34993,
+          "after": "|cffe4cfa3Эксгумация — уровень 2|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 34995,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Труповозка каждые |cffffffff30|cffced4da сек. автоматически извлекает из земли свежий труп.|r"
+        },
+        {
+          "field": "ubertips_ubertip2",
+          "wts_id": 34994,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Труповозка каждые |cffffffff15|cffced4da сек. автоматически извлекает из земли свежий труп.|r"
+        }
+      ]
+    },
+    {
+      "id": "cDar",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 30299,
+          "after": "|cffe4cfa3Костесборка|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 35209,
+          "after": "|cffe4cfa3Костесборка|r (|cffffffffR|r)"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 35972,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Собирает группу костяных созданий в одного могучего стража или титана. Поглощает до |cffffffff12|cffced4da скелетов в области применения (максимум до |cffffffff3500|cffced4da суммарного здоровья). Эффективность слияния составляет |cffffffff50%|cffced4da и повышается на |cffc8e087+5%|cffced4da за каждый уровень «Посвящения некромантов».|r"
+        }
+      ]
+    },
+    {
+      "id": "cDat",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 30301,
+          "after": "|cffa6afb8Костяное создание|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 34666,
+          "after": "|cffa6afb8Костяное создание|r"
+        }
+      ]
+    },
+    {
+      "id": "cDaw",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 30291,
+          "after": "|cffe4cfa3Чумная аура|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 34996,
+          "after": "|cffe4cfa3Чумная аура|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 35031,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно ускоряет восстановление здоровья находящейся поблизости союзной нежити.|r"
+        }
+      ]
+    },
+    {
+      "id": "cDay",
+      "levels": 1,
+      "strings": [
+        {
+          "field": "name",
+          "wts_id": 35211,
+          "after": "|cffe4cfa3Заразительные атаки|r"
+        },
+        {
+          "field": "tips_tip1",
+          "wts_id": 30308,
+          "after": "|cffe4cfa3Заразительные атаки|r"
+        },
+        {
+          "field": "ubertips_ubertip1",
+          "wts_id": 34840,
+          "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Атаки ядоголема заражают поражённых противников чумой, наносящей периодический урон.|r"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "scope": "Два расовых маркера безликих",
+  "objects_before": {
+    "command": "get-objects-bulk",
+    "count": 2,
+    "map": "F:\\Gemini_23Race\\map.w3x",
+    "missing": [],
+    "objects": [
+      {
+        "fields": {
+          "effect1": "",
+          "effect2": "",
+          "maxlevel": "1",
+          "name1": "TRIGSTR_10676",
+          "tip1": "TRIGSTR_10677",
+          "ubertip1": "TRIGSTR_20120"
+        },
+        "id": "R07M",
+        "name": "|cffe6beaaБезликие|r"
+      },
+      {
+        "fields": {
+          "effect1": "",
+          "effect2": "",
+          "maxlevel": "1",
+          "name1": "TRIGSTR_25277",
+          "tip1": "TRIGSTR_25278",
+          "ubertip1": "TRIGSTR_25279"
+        },
+        "id": "R0F9",
+        "name": "|cff483d8bБезликие|r"
+      }
+    ],
+    "ok": true,
+    "schema_version": 1,
+    "tool": "HiveWE_cli",
+    "type": "upgrade"
+  },
+  "strings": [
+    {
+      "rawcode": "R07M",
+      "field": "name1",
+      "before": "|cffe6beaaБезликие|r",
+      "after": "|cffe4cfa3Безликие|r"
+    },
+    {
+      "rawcode": "R07M",
+      "field": "tip1",
+      "before": "|cffe6beaaБезликие|r",
+      "after": "|cffe4cfa3Безликие|r"
+    },
+    {
+      "rawcode": "R07M",
+      "field": "ubertip1",
+      "before": "Н'раки, широко известные как безликие или безликие, - чудовищная раса, возникшая из органической материи, просочившейся из разрушенных форм Старых Богов в первобытную эру Азерота.",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Сведения о безликих. Н`раки появились из органической материи разрушенных тел Древних богов в первобытную эру Азерота.|r"
+    },
+    {
+      "rawcode": "R0F9",
+      "field": "name1",
+      "before": "|cff483d8bБезликие|r",
+      "after": "|cffe4cfa3Безликие|r"
+    },
+    {
+      "rawcode": "R0F9",
+      "field": "tip1",
+      "before": "|cff483d8bБезликие|r",
+      "after": "|cffe4cfa3Безликие|r"
+    },
+    {
+      "rawcode": "R0F9",
+      "field": "ubertip1",
+      "before": "Н`Раки или же Безликие, служители друвних богов со времен темной империи. Сильные и преданные войны которые поробащает все и вся на своем пути.",
+      "after": "|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Расовое знание безликих, необходимое для найма Верховного генерала. Выдаётся автоматически при выборе расы.|n|n|cffa6afb8Применяется к:|cffced4da|n- |cffa9c7deВерховный генерал|cffced4da в Ульдуаре (внешнем).|r"
+    }
+  ],
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "in_game_checked": false,
+  "evidence": [
+    "faceless_marker_consumers.json",
+    "04_race_selection.lua: SetPlayerTechResearchedSwap R0F9",
+    "13_Races.lua: bezlikie",
+    "h0DR trains U02F; U02F requires R0F9"
+  ],
+  "notes": [
+    "R07M has no acquisition/use reference found; its existing lore is edited without attributing gameplay bonuses."
+  ]
+}

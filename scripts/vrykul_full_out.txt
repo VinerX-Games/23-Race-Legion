@@ -1,0 +1,338 @@
+=== 1. SELECTION ===
+
+Selection A0HP:
+  name: [38871] |cffdcaa96Врайкулы|r
+  tip1: [38872] |cffdcaa96Врайкулы|r
+  ubertip1: [35175] |cff7dc87dСоздатель расы:|r |cffe17d00Escanor (Яхве)|r|n|cff7dc87dСложность:|r |cff37ff37Низкая|r|n|cff7dc87dПериод:|r |cffb1b1ffWrath of the Lich King|r|n|cff7dc87dОписание:|r Poдинa пoлyгигaнтoв |cffdcaa92Врайкулов |r— Peвyщий Фьopд нa югo-вocтoкe Hopдcкoлa. Гoвopят, чтo в дpeвнocти нapoд вpaйкyлoв coздaл пpoцвeтaющyю цивилизaцию в этиx кpaяx. Ho cлyчилocь тaк, чтo в oдин дeнь вpaйкyлы миcтичecки иcчeзли, ocтaвив пocлe ceбя лишь пycтынныe пoceлeния и зaбpoшeнныe xpaмы. B нaши дни, кoгдa нa зeмляx вpaйкyлoв был пocтpoeн Baльгapд, лaгepь Aльянca, oни вepнyлиcь. Пoд пpeдвoдитeльcтвoм кopoля Имиpoнa эти мoгyчиe вoины oбpyшилиcь нa ceлeния Opды и Aльянca, oбocнoвaвшиcь в Kpeпocти Утгapд, чтo нeдaлeкo oт Baльгapдa. Heизвecтнo, гдe вpaйкyлы пpoвeли нecкoлькo тыcяч лeт, нo ceйчac oни cpaжaютcя нa cтopoнe Kopoля-личa.
+  hotkey: [4181] A
+  buttonpos: [None] 0
+
+Selection A12Q:
+  name: [24728] Случайная раса\фракция
+  tip1: [24729] |cffff00ffС|r|cffff00ecл|r|cffff00d8у|r|cffff00c5ч|r|cffff00b1а|r|cffff009dй|r|cffff008aн|r|cffff0076а|r|cffff0063я|r|cffff004f |r|cffff003bр|r|cffff0028а|r|cffff0014с|r|cffff0000а|r
+  ubertip1: [25197] Выбирает случайную расу из имеющихся. 
+  hotkey: [13908] F
+  buttonpos: [None] 0
+
+=== 2. MARKERS ===
+
+Marker R07F:
+  name1: [10619] |cffe6beaaВрайкулы|r
+  tip1: [10620] |cffe6beaaВрайкулы|r
+  ubertip1: [20113] Раса разумных существ, живущая на побережье Ревущего Фьорда и Седых холмов в Нордсколе.
+  hotkey1: [None] 
+
+Marker R067:
+  name1: [1442] |cffdcaa92Примкнуть к Королю Личу|r
+  tip1: [1452] Исследовать |cffdcaa92Примкнуть к Королю Личу|r
+  ubertip1: [10874] Врайкулы переходят на сторону короля лича.
+|cffdcaa92Здоровье - (-150)
+Урон - +12
+Скорость боя - 30%
+Регенерация здоровья - +0.5|r
+|cffff0000Важно:|r Запрещает исследовать |cffdcaa92Поддерживать верность хранителям.|r
+  hotkey1: [17712] D
+
+Marker R068:
+  name1: [1072] |cffdcaa92Поддерживать верность хранителям|r
+  tip1: [1073] Исследовать |cffdcaa92Поддерживать верность хранителям|r
+  ubertip1: [25922] Врайкулы продолжают следовать традициям.
+|cffdcaa92Здоровье - +200
+Урон - +7
+Регенерация маны - +0.5
+Регенерация здоровья - +0.3|r
+|cffff0000Важно:|r Запрещает исследовать |cffdcaa92Примкнуть к Королю личу.|r
+  hotkey1: [13684] S
+
+=== 3. BUILDINGS ===
+
+Building h0BQ:
+  name: [9900] |cffdcaa92Дом Ярла|r
+  tip: [9901] Построить |cffdcaa92Дом Ярла|r
+  ubertip: [13012] |cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|nБазовое здание. Обучает работников и хранит добытые ресурсы. Можно улучшить до Залы Ярла, а Крепость Ярла до замка, чтобы получить доступ к новым зданиям и типам войск.
+  hotkey: [2264] Q
+  trains: h0A8,h0A7,h0C9
+  researches: 
+  upgrade: h0BR
+  abillist: A0LJ,A0LI,A0IQ,Argl
+
+Building h0BR:
+  name: [9902] |cffdcaa92Залы Ярла|r
+  tip: [9903] Улучшить до |cffdcaa92Залы Ярла|r
+  ubertip: [12978] |cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск.
+  hotkey: [8117] Z
+  trains: h0A8,h0A7,h0C9
+  researches: 
+  upgrade: h0BS
+  abillist: A0LJ,A0LI,A0IQ,Argl
+
+Building h0BS:
+  name: [9904] |cffdcaa92Крепость Ярла|r
+  tip: [9905] Улучшить до |cffdcaa92Крепость Ярла|r
+  ubertip: [12979] |cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск.
+  hotkey: [8152] Z
+  trains: h0A8,h0A7,h0C9
+  researches: R068,R067
+  abillist: A0LJ,A0LI,A0IQ,Argl
+
+Building h0BT:
+  name: [9906] |cffdcaa92Дом|r
+  tip: [9907] Построить |cffdcaa92Дом|r
+  ubertip: [31667] |cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.
+
+|cffffff00Приносит 20 инкома|r
+  hotkey: [1647] A
+  abillist: Abds
+
+Building h0BU:
+  name: [9873] |cffdcaa92Алтарь Героев|r
+  tip: [9874] Построить |cffdcaa92Алтарь Героев|r
+  ubertip: [19458] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nСооружение позволяющее призывать новых и воскрешает павших героев.
+  hotkey: [1517] S
+  trains: H0C6,H0C5,H0C7
+  abillist: Abds
+
+Building h0BV:
+  name: [9879] |cffdcaa92Дом Воинов|r
+  tip: [9880] Построить |cffdcaa92Дом Воинов|r
+  ubertip: [13017] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nЗдание для подготовки базовых войск. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск.
+  hotkey: [2748] W
+  trains: h0AA,h0AD,h0A5,h0A6
+  researches: R063,R05Z,R060,R064
+  abillist: Abds
+
+Building h0BW:
+  name: [9877] |cffdcaa92Лесопилка|r
+  tip: [9878] Построить |cffdcaa92Лесопилка|r
+  ubertip: [20432] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nХранит добытую древесину. |nДает доступ к новым технологиям добычи древесины и строительства.
+  hotkey: [3760] E
+  researches: R06F,R06E,R069,R06A,R06B,R06C,R06D
+  abillist: Abds,Arlm
+
+Building h0BX:
+  name: [9966] |cffdcaa92Дом Покорителей-севера|r
+  tip: [9967] Построить |cffdcaa92Дом Покорителей-севера|r
+  ubertip: [13019] |cff7dc87dВремя подготовки:|r |cffaaf0aa70 сек.|r|n|nПозволяет нанимать могучих и оптных врайкулов, для сражения с любым противником.
+  hotkey: R
+  trains: h0BP,h0A9,h0AC,h0AE
+  researches: R065,R066,R062,R061
+  abillist: Abds
+
+Building wk01:
+  name: [7371] |cffdcaa92Темные казармы|r
+  tip: [29441] Построить |cffdcaa92Темные казармы|r
+  ubertip: [27912] Здание для подготовки элитных войск. Обучает Валь'кир,Рыцарей смерти, Мёртвых врайкулов. |nДает доступ к «Защите», «Длинноствольным мушкетам» и «Дрессировке животных».
+  hotkey: [12023] F
+  trains: wk08,wk02,wk00
+  researches: 
+  abillist: 
+
+=== 4. HEROES ===
+
+Hero H0C4:
+  name: [9866] |cffdcaa92Король Имирон|r
+  propernames: [9867] |cffdcaa92Имирон|r
+  tip: [9869] Призвать |cffdcaa92Король Имирон|r
+  ubertip: [19272] |cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaЛегендарный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|nГерой-воин, мастер обороны. Усиливает находящихся рядом союзников. Может изучить «Свет небес», «Божественный щит», «Ауру благочестия» и «Воскрешение». 
+  awakentip: [9868] Воскресить |cffdcaa92Король Имирон|r
+  revivetip: [9870] Воскресить |cffdcaa92Король Имирон|r
+  hotkey: [8489] Z
+  heroabillist: A0ER,A0EY,A0EZ,A0Z1
+  abillist: A0YQ,AInv
+  targs1: ground,structure,debris,item,ward
+  targs2: ground,structure,debris,air,item,ward
+  weaptype1: MetalHeavyBash
+
+Hero H0C5:
+  name: [646] |cffdcaa92Берсерк|r
+  propernames: [644] |cffdcaa92Вандер Убийца|r
+  tip: [653] Призвать |cffdcaa92Берсерк|r
+  ubertip: [31699] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaЛовкость |r|n
+Яростный воин врайкулов, мастер ближнего боя, способен вдохновлять союзников на неистовою атаку.
+  awakentip: [648] Воскресить |cffdcaa92Берсерк|r
+  revivetip: [655] Воскресить |cffdcaa92Берсерк|r
+  hotkey: [3056] X
+  heroabillist: A0EN,A0EO,A0EM,A0EP
+  abillist: AInv
+  targs1: ground,structure,debris,item,ward
+  targs2: ground,structure,debris,air,item,ward
+  weaptype1: MetalHeavyBash
+
+Hero H0C6:
+  name: [524] |cffdcaa92Тан|r
+  propernames: [506] |cffdcaa92Бор Камнелом|r
+  tip: [526] Призвать |cffdcaa92Тан|r
+  ubertip: [31700] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n
+Один из правителей гордого народа врайкулов, способен вдохновить свои войска не только пламенными словами, но и крепким ударом по врагам.
+  awakentip: [525] Воскресить |cffdcaa92Тан|r
+  revivetip: [527] Воскресить |cffdcaa92Тан|r
+  hotkey: [8495] Z
+  heroabillist: A0ET,A0ES,A0EQ,A0ER
+  abillist: AInv
+  targs1: ground,structure,debris,item,ward
+  targs2: ground,structure,debris,air,item,ward
+  weaptype1: MetalMediumSlice
+
+Hero H0C7:
+  name: [529] |cffdcaa92Верховный жрец|r
+  propernames: [531] |cffdcaa92Далар Ткач|r
+  tip: [535] Призвать |cffdcaa92Верховный жрец|r
+  ubertip: [31701] |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|n
+Жрец способный как защитить союзников, так и проклясть врагов.
+  awakentip: [533] Воскресить |cffdcaa92Верховный жрец|r
+  revivetip: [536] Воскресить |cffdcaa92Верховный жрец|r
+  hotkey: [4206] C
+  heroabillist: A0EU,A0EV,A0EW,A0EX
+  abillist: AInv
+  targs1: ground,structure,debris,air,item,ward
+  targs2: ground,structure,debris,air,item,ward
+
+=== 5. UNITS ===
+
+Unit h0C9:
+  name: [9885] |cffdcaa92Строитель|r
+  tip: [778] Обучить |cffdcaa92Строитель|r
+  ubertip: [20569] |cff7dc87dВремя подготовки:|r |cffaaf0aa15 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaБлижний бой|r|nБазовый рабочий. Добывает  древесину, а также строит и ремонтирует здания. 
+  hotkey: [2272] Q
+  abillist: A0I3,ANha,Amil,Ahrp
+  upgrades: R06D,Rguv
+  targs1: ground,structure,debris,item,ward
+  weaptype1: MetalLightChop
+
+Unit h0AA:
+  name: [9272] |cffdcaa92Лендрман |r
+  tip: [9274] Обучить |cffdcaa92Лендрман |r
+  ubertip: [29270] |cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный, Дальний бой|r|n|n
+Универсальный солдат Врайкулов, способен сражаться как в ближнем и дальнем бою. Способен использовать Ярость севера
+  hotkey: [2746] W
+  abillist: A0E7,A0E3,Aihn
+  upgrades: R060,R06A,R069,R068,R067
+  targs1: ground,structure,debris,item,ward
+  weaptype1: MetalMediumSlice
+
+Unit h0AD:
+  name: [9281] |cffdcaa92Воин-волк|r
+  tip: [7370] Обучить |cffdcaa92Воина-волка|r
+  ubertip: [32629] |cff7dc87dВремя подготовки:|r |cffaaf0aa26 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|n
+Рядовой солдат врайкулов, не выделяеться на фоне инных солда. Способен использовать Ярость севера.
+  hotkey: [2262] Q
+  abillist: A0E3,Aihn
+  upgrades: R060,R06A,R069,R068,R067,R064
+  targs1: ground,structure,debris,item,ward
+  weaptype1: MetalMediumSlice
+
+Unit h0A5:
+  name: [9257] |cffdcaa92Воин|r
+  tip: [9259] Обучить |cffdcaa92Воин|r
+  ubertip: [21503] |cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|n
+Регулярный солдат армии Врайкулов, хороший в ближнем бою. Способен использовать Ярость севера
+  hotkey: [3589] E
+  abillist: A0E5,A0E3,A0E4
+  upgrades: R060,R06A,R069,R068,R067
+  targs1: ground,structure,debris,item,ward
+  weaptype1: MetalMediumSlice
+
+Unit h0A6:
+  name: [9260] |cffdcaa92Хёвдинг|r
+  tip: [9262] Обучить |cffdcaa92Хёвдинг|r
+  ubertip: [22350] |cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n|n
+Мастер боя средней дистанци, способен наносит Точные удары. Способен использовать Ярость севера.
+  hotkey: [1867] R
+  abillist: A0E3,A0E8
+  upgrades: R060,R06B,R06C,R067,R068
+  targs1: ground,structure,debris,item,ward
+  weaptype1: MetalMediumSlice
+
+Unit h0BP:
+  name: [9634] |cffdcaa92Заклинательница Рун|r
+  tip: [9635] Обучить |cffdcaa92Заклинательница Рун|r
+  ubertip: [33634] |cff7dc87dВремя подготовки:|r |cffaaf0aa43 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r|n|n
+Заклинательница предназначена для помощи в бою основной регулярной армии.
+  hotkey: [2263] Q
+  abillist: A0F1,A0ED,A0EE
+  upgrades: R065,R06B,R06C,R067,R068
+  targs1: ground,structure,debris,air,item,ward
+
+Unit h0A9:
+  name: [9269] |cffdcaa92Наездница Ульфхендар|r
+  tip: [9271] Обучить |cffdcaa92Наездница Ульфхендар|r
+  ubertip: [29269] |cff7dc87dВремя подготовки:|r |cffaaf0aa54 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n|n
+Могучий и меткий стрелок, способен замораживать атакованную цель. Способен использовать Ярость севера
+  hotkey: [2692] W
+  abillist: A0E3,A0EB
+  upgrades: R06B,R06C,R067,R068
+  targs1: ground,structure,debris,item,ward
+  weaptype1: 
+
+Unit h0AC:
+  name: [9630] |cffdcaa92Скальд|r
+  tip: [9631] Обучить |cffdcaa92Скальд|r
+  ubertip: [32103] |cff7dc87dВремя подготовки:|r |cffaaf0aa75 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|n
+Умелый наездник, покоривший могучее создание севера, способный наносить урон по области.
+  hotkey: [3732] E
+  abillist: A0EA,A0E9,A0E3,Aihn
+  upgrades: R061,R069,R06A,R067,R068
+  targs1: ground,structure,debris,item,ward
+  weaptype1: MetalMediumSlice
+
+Unit h0AE:
+  name: [9898] |cffdcaa92Наездник на прото-драконе|r
+  tip: [9899] |cffdcaa92Наездник на прото-драконе|r
+  ubertip: [32859] |cff7dc87dВремя подготовки:|r |cffaaf0aa73 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|n
+Прото-драконы одни из самых могучих зверей нордскола, способны внушать ужас во врагов.
+  hotkey: [1868] R
+  abillist: wk06,A0EI
+  upgrades: R06A,R069,R068,R067
+  targs1: ground,structure,debris,item,ward
+  weaptype1: MetalMediumSlice
+
+Unit wk08:
+  name: [699] |cffdcaa92Валькира|r
+  tip: [700] Обучить |cffdcaa92Валькиру|r
+  ubertip: [33814] |cff7dc87dВремя подготовки:|r |cffaaf0aa69 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r|nУниверсальный маг. Владеет «Замедлением», снижающим скорость передвижения и атаки врагов. Может изучить «Невидимость» и «Превращение». |n|n|cffffcc00Атакует наземные и воздушные цели.|r
+  hotkey: [9822] E
+  abillist: wk09,wk10
+  upgrades: R06A,R069,R068,R067
+  targs1: ground,structure,debris,air,item,ward
+
+Unit wk02:
+  name: [40141] |cffdcaa92Всадник прото-дракона(Меч и щит)
+  tip: [30181] Обучить Всадника прото-дракона(Меч и щит)
+  ubertip: [40301] Могучий воин, который может оседлать не менее могучего прото-дракона.
+  hotkey: [7974] Q
+  abillist: wk07,wk03
+  upgrades: R069,R06A,R060,R067,R068
+  targs1: ground,structure,debris,item,ward
+  weaptype1: MetalMediumSlice
+
+Unit wk00:
+  name: [40099] |cffdcaa92Всадник прото-дракона
+  tip: [3045] Обучить Всадника прото-дракона
+  ubertip: [3044] |cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n Всадник экипированный в тяжёлую броню и мастерски владеющий мечом.
+  hotkey: [8326] W
+  abillist: wk04,wk07
+  upgrades: R069,R06A,R060,R067,R068
+  targs1: ground,structure,debris,item,ward
+  weaptype1: MetalMediumSlice
+
+Unit h0A8:
+  name: [9266] |cffdcaa92Дикий Ульфхендар|r
+  tip: [9268] Обучить |cffdcaa92Дикий Ульфхендар|r
+  ubertip: [22365] |cff7dc87dВремя подготовки:|r |cffaaf0aa33 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|n
+Могучее создание северного континента, которое сложно даеться дресировке но сильно в бою.
+  hotkey: [2585] W
+  abillist: wk05,A0E3,Aihn
+  upgrades: R06A,R069,R068,R067,R064
+  targs1: ground,structure,debris,item,ward
+  weaptype1: MetalMediumSlice
+
+Unit h0A7:
+  name: [9263] |cffdcaa92Ульфхендар|r
+  tip: [9265] Обучить |cffdcaa92Ульфхендар|r
+  ubertip: [31691] |cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|n
+Могучее создание северного континента, которое сложно даеться дресировке но сильно в бою.
+  hotkey: [3614] E
+  abillist: wk05,A0E3,Aihn
+  upgrades: R06A,R069,R068,R067,R064
+  targs1: ground,structure,debris,item,ward
+  weaptype1: MetalMediumSlice

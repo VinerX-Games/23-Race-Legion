@@ -1,0 +1,463 @@
+
+=======================================================
+HERO: H0EZ - Кристальный владыка
+=======================================================
+
+Ability: A1MR (Base: Aroa, Levels: 4, Hotkey: W/W)
+  Name: |cffb4dcdcМорозный доспех|r
+  ResearchTip: |cffb4dcdcМорозный доспех|r
+  ResearchUbertip: Покрывает кристальным доспехом всех союзников стоящих рядом.
+  [Lvl 1] Tip: |cffb4dcdcМорозный доспех|r
+         Ubertip: Увеличение защиты
+         Stats: Mana=100, Cool=0, Dur=45/45, DataA=0.000000, DataB=2, DataC=0, DataD=0
+  [Lvl 2] Tip: |cffb4dcdcМорозный доспех|r
+         Ubertip: Увеличение защиты
+         Stats: Mana=100, Cool=, Dur=45.000000/45.000000, DataA=, DataB=3, DataC=, DataD=
+  [Lvl 3] Tip: |cffb4dcdcМорозный доспех|r
+         Ubertip: Увеличение защиты
+         Stats: Mana=100, Cool=, Dur=45.000000/45.000000, DataA=, DataB=4, DataC=, DataD=
+  [Lvl 4] Tip: |cffb4dcdcМорозный доспех|r
+         Ubertip: Увеличение защиты
+         Stats: Mana=100, Cool=, Dur=45.000000/45.000000, DataA=, DataB=5, DataC=, DataD=
+
+Ability: A0P4 (Base: AHtb, Levels: 4, Hotkey: Q/Q)
+  Name: |cffb4dcdcБросок валуна|r
+  ResearchTip: Изучить «|cffb4dcdcБросок валуна|r» [|cffffcc00%d-й уровень|r]
+  ResearchUbertip: Бросает молот, оглушая врага и нанося урон. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AHtb,DataA1> урона, <AHtb,Dur1> сек.|r |cffb4dcdcоглушения.|r |n|cffffcc002-й уровень:|r |cffb4dcdc<AHtb,DataA2> урона, <AHtb,Dur2> сек. оглушения.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AHtb,DataA3> урона, <AHtb,Dur3> сек. оглушения.|r |n|cffffcc004-й уровень:|r |cffb4dcdc<AHtb,DataA4> урона, <AHtb,Dur4> сек. оглушения.|r
+  [Lvl 1] Tip: |cffb4dcdcБросок валуна|r [|cffffcc001-й уровень|r]
+         Ubertip: Бросает молот, оглушая врага и нанося урон. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AHtb,DataA1> урона, <AHtb,Dur1> сек.|r |cffb4dcdcоглушения.|r 
+         Stats: Mana=75, Cool=15.000000, Dur=5/3, DataA=100, DataB=, DataC=, DataD=
+  [Lvl 2] Tip: |cffb4dcdcБросок валуна|r [|cffffcc002-й уровень|r]
+         Ubertip: Бросает молот, оглушая врага и нанося урон. |n|cffffcc002-й уровень:|r |cffb4dcdc<AHtb,DataA2> урона, <AHtb,Dur2> сек. оглушения.|r 
+         Stats: Mana=75, Cool=15.000000, Dur=5/3, DataA=200.000000, DataB=, DataC=, DataD=
+  [Lvl 3] Tip: |cffb4dcdcБросок валуна|r [|cffffcc003-й уровень|r]
+         Ubertip: Бросает молот, оглушая врага и нанося урон. |n|cffffcc003-й уровень:|r |cffb4dcdc<AHtb,DataA3> урона, <AHtb,Dur3> сек. оглушения.|r 
+         Stats: Mana=75, Cool=18.000000, Dur=5/3, DataA=300.000000, DataB=, DataC=, DataD=
+  [Lvl 4] Tip: |cffb4dcdcБросок валуна|r [|cffffcc004-й уровень|r]
+         Ubertip: Бросает молот, оглушая врага и нанося урон.|n|cffffcc004-й уровень:|r |cffb4dcdc<AHtb,DataA4> урона, <AHtb,Dur4> сек. оглушения.|r
+         Stats: Mana=75, Cool=18.000000, Dur=5/3, DataA=400.000000, DataB=, DataC=, DataD=
+
+Ability: A0P2 (Base: Assk, Levels: 4, Hotkey: E/)
+  Name: |cffb4dcdcКаменная кожа|r
+  ResearchTip: |cffb4dcdcКаменная кожа|r
+  ResearchUbertip: Поглощает часть входящего физического урона. |n|n|cffffcc001-й уровень:|r |cffb4dcdc12 урона.|r |n|cffffcc002-й уровень:|r |cffb4dcdc15 урона.|r |n|cffffcc003-й уровень:|r |cffb4dcdc17 урона.|r |n|cffffcc004-й уровень:|r |cffb4dcdc20 урона.|r 
+  [Lvl 1] Tip: |cffb4dcdcКаменная кожа|r
+         Ubertip: |cffb4dcdc-<Assk,DataC1>|r от получаемого урона от атак. Минимальный урон от атак: |cffb4dcdc<Assk,DataB1>.|r
+         Stats: Mana=0, Cool=0, Dur=0/0, DataA=100, DataB=3, DataC=5.000000, DataD=1
+  [Lvl 2] Tip: |cffb4dcdcКаменная кожа|r
+         Ubertip: |cffb4dcdc-<Assk,DataC2>|r от получаемого урона от атак. Минимальный урон от атак: |cffb4dcdc<Assk,DataB2>.|r
+         Stats: Mana=, Cool=, Dur=/, DataA=100.000000, DataB=3.000000, DataC=9.000000, DataD=1
+  [Lvl 3] Tip: |cffb4dcdcКаменная кожа|r
+         Ubertip: |cffb4dcdc-<Assk,DataC3>|r от получаемого урона от атак. Минимальный урон от атак: |cffb4dcdc<Assk,DataB3>.|r
+         Stats: Mana=, Cool=, Dur=/, DataA=100.000000, DataB=3.000000, DataC=13.000000, DataD=1
+  [Lvl 4] Tip: |cffb4dcdcКаменная кожа|r
+         Ubertip: |cffb4dcdc-<Assk,DataC4>|r от получаемого урона от атак. Минимальный урон от атак: |cffb4dcdc<Assk,DataB4>.|r
+         Stats: Mana=, Cool=, Dur=/, DataA=100.000000, DataB=3.000000, DataC=18.000000, DataD=1
+
+Ability: AEtq (Base: AEtq, Levels: 2, Hotkey: R/R)
+  Name: Calm
+  ResearchTip: Explore "Tranquility"
+  ResearchUbertip: Summons a stream of healing energy that restores <AEtq,DataA1> health/sec. allies over a wide area. |nAction time: <AEtq,Dur1> sec.
+  [Lvl 1] Tip: Спокойствие
+         Ubertip: "Призывает поток целительной энергии, восполняющей <AEtq,DataA1> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur1> сек."
+         Stats: Mana=125, Cool=85.000000, Dur=25.000000/20.000000, DataA=48, DataB=1, DataC=1, DataD=0
+  [Lvl 2] Tip: Спокойствие
+         Ubertip: Призывает поток целительной энергии, восполняющей <AEtq,DataA2> здоровья/сек. союзникам в обширной области. |nВремя действия: <AEtq,Dur2> сек.
+         Stats: Mana=250, Cool=60.000000, Dur=25.000000/20.000000, DataA=25.000000, DataB=1, DataC=, DataD=1
+
+=======================================================
+HERO: H0F0 - Мастер ветра
+=======================================================
+
+Ability: A0P9 (Base: AEbl, Levels: 4, Hotkey: W/W)
+  Name: |cffb4dcdcСкачок|r
+  ResearchTip: Изучить «|cffb4dcdcСкачок|r» [|cffffcc00%d-й уровень|r]
+  ResearchUbertip: Переносит  на короткое расстояние, позволяя быстро вступить в бой и выйти из него. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AEbl,Cool1> сек. восстановления, <AEbl,Cost1> маны|r. |n|cffffcc002-й уровень:|r |cffb4dcdc<AEbl,Cool2> сек. восстановления, <AEbl,Cost2> маны.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<AEbl,Cool3> сек. восстановления, <AEbl,Cost3> маны.|r |n|cffffcc004-й уровень:|r |cffb4dcdc<AEbl,Cool4> сек. восстановления, <AEbl,Cost4> маны.|r
+  [Lvl 1] Tip: |cffb4dcdcСкачок|r [|cffffcc001-й уровень|r]
+         Ubertip: Переносит  на короткое расстояние, позволяя быстро вступить в бой и выйти из него. |n|n|cffffcc001-й уровень:|r |cffb4dcdc<AEbl,Cool1> сек. восстановления, <AEbl,Cost1> маны|r.
+         Stats: Mana=50, Cool=15.000000, Dur=0.33/0, DataA=1000, DataB=200, DataC=, DataD=
+  [Lvl 2] Tip: |cffb4dcdcСкачок|r [|cffffcc002-й уровень|r]
+         Ubertip: Переносит  на короткое расстояние, позволяя быстро вступить в бой и выйти из него. |n|cffffcc002-й уровень:|r |cffb4dcdc<AEbl,Cool2> сек. восстановления, <AEbl,Cost2> маны.|r |r
+         Stats: Mana=40, Cool=12.000000, Dur=0.33/, DataA=1075, DataB=200, DataC=, DataD=
+  [Lvl 3] Tip: |cffb4dcdcСкачок|r [|cffffcc003-й уровень|r]
+         Ubertip: Переносит  на короткое расстояние, позволяя быстро вступить в бой и выйти из него.  |n|cffffcc003-й уровень:|r |cffb4dcdc<AEbl,Cool3> сек. восстановления, <AEbl,Cost3> маны.|r 
+         Stats: Mana=30, Cool=10.000000, Dur=0.33/, DataA=1150, DataB=200, DataC=, DataD=
+  [Lvl 4] Tip: |cffb4dcdcСкачок|r [|cffffcc004-й уровень|r]
+         Ubertip: Переносит  на короткое расстояние, позволяя быстро вступить в бой и выйти из него.|n|cffffcc004-й уровень:|r |cffb4dcdc<AEbl,Cool4> сек. восстановления, <AEbl,Cost4> маны.|r
+         Stats: Mana=20, Cool=10.000000, Dur=0.33/, DataA=1400.000000, DataB=200, DataC=, DataD=
+
+Ability: A0PA (Base: AEev, Levels: 4, Hotkey: E/E)
+  Name: |cffb4dcdcЛовкий как ветер|r
+  ResearchTip: Изучить «|cffb4dcdcЛовкий как ветер|r» [|cffffcc00%d-й уровень|r]
+  ResearchUbertip: Дает шанс уклониться от атаки. |n|n|cffffcc001-й уровень:|r |cffc8dc8c<AEev,DataA1,%>%-й шанс.|r |n|cffffcc002-й уровень:|r |cffc8dc8c<AEev,DataA2,%>%-й шанс.|r |n|cffffcc003-й уровень:|r |cffc8dc8c<AEev,DataA3,%>%-й шанс.|r|n|cffffcc004-й уровень:|r |cffc8dc8c40%-й шанс.|r
+  [Lvl 1] Tip: |cffb4dcdcЛовкий как ветер|r [|cffffcc001-й уровень|r]
+         Ubertip: Дает |cffc8dc8c<AEev,DataA1,%>%-й шанс|r уклониться от атаки.
+         Stats: Mana=, Cool=0, Dur=0/0, DataA=0.1, DataB=, DataC=, DataD=
+  [Lvl 2] Tip: |cffb4dcdcЛовкий как ветер|r [|cffffcc002-й уровень|r]
+         Ubertip: Дает |cffc8dc8c<AEev,DataA2,%>%-й шанс|r уклониться от атаки.
+         Stats: Mana=, Cool=, Dur=/, DataA=0.2, DataB=, DataC=, DataD=
+  [Lvl 3] Tip: |cffb4dcdcЛовкий как ветер|r [|cffffcc003-й уровень|r]
+         Ubertip: Дает |cffc8dc8c<AEev,DataA3,%>%-й шанс|r уклониться от атаки.
+         Stats: Mana=, Cool=, Dur=/, DataA=0.3, DataB=, DataC=, DataD=
+  [Lvl 4] Tip: |cffb4dcdcЛовкий как ветер|r [|cffffcc004-й уровень|r]
+         Ubertip: Дает |cffc8dc8c40%-й шанс|r уклониться от атаки.
+         Stats: Mana=, Cool=, Dur=/, DataA=0.400000, DataB=, DataC=, DataD=
+
+Ability: A1LE (Base: Aroc, Levels: 4, Hotkey: /)
+  Name: |cffb4dcdcМножественная атака|r
+  ResearchTip: 
+  ResearchUbertip: 
+  [Lvl 1] Tip: |cffb4dcdcМножественная атака|r
+         Ubertip: Позволяет атаковать еще на 1 цель больше.
+         Stats: Mana=0, Cool=2, Dur=1/1, DataA=0.100000, DataB=200.000000, DataC=2, DataD=
+  [Lvl 2] Tip: |cffb4dcdcМножественная атака|r
+         Ubertip: Позволяет атаковать еще на 1 цель больше.
+         Stats: Mana=, Cool=2.000000, Dur=1.000000/1.000000, DataA=0.100000, DataB=275.000000, DataC=3, DataD=
+  [Lvl 3] Tip: |cffb4dcdcМножественная атака|r
+         Ubertip: Позволяет атаковать еще на 1 цель больше.
+         Stats: Mana=, Cool=2.000000, Dur=1.000000/1.000000, DataA=0.100000, DataB=350.000000, DataC=4, DataD=
+  [Lvl 4] Tip: |cffb4dcdcМножественная атака|r
+         Ubertip: Позволяет атаковать еще на 1 цель больше.
+         Stats: Mana=, Cool=2.000000, Dur=1.000000/1.000000, DataA=0.100000, DataB=425.000000, DataC=5, DataD=
+
+Ability: AHpx (Base: AHpx, Levels: 2, Hotkey: R/R)
+  Name: |cffb4dcdcФеникс|r
+  ResearchTip: Изучить «|cffb4dcdcФеникс|r»
+  ResearchUbertip: Призывает грозного феникса, наносящего урон себе и находящимся рядом врагам. Феникс невосприимчив к магии и владеет «|cffb4dcdcУстойчивой кожей|r», а в момент гибели откладывает яйцо, из которого вылупляется новый феникс. |n|n|cffffcc00Феникс атакует наземные и воздушные цели.|r
+  [Lvl 1] Tip: Феникс
+         Ubertip: "Призывает грозного феникса, наносящего урон себе и находящимся рядом врагам. Феникс невосприимчив к магии и владеет «Устойчивой кожей», а в момент гибели откладывает яйцо, из которого вылупляется новый феникс. |n|n|cffffcc00Феникс атакует наземные и воздушные цели.|r"
+         Stats: Mana=175, Cool=180, Dur=0/0, DataA=1, DataB=, DataC=, DataD=
+  [Lvl 2] Tip: Фениксы
+         Ubertip: Призывает грозных фениксов, наносящих урон себе и находящимся рядом врагам. Фениксы невосприимчивы к магии и владеют «Устойчивой кожей», а в момент гибели откладывает яйцо, из которого вылупляется новый феникс.
+         Stats: Mana=175, Cool=120, Dur=0/0, DataA=2, DataB=, DataC=, DataD=
+
+=======================================================
+HERO: N037 - Повелитель огня
+=======================================================
+
+Ability: ANic (Base: ANic, Levels: 4, Hotkey: E/E)
+  Name: |cffb4dcdcИспепеление|r
+  ResearchTip: Изучить «|cffb4dcdcИспепеление|r» [|cffffcc00%d-й уровень|r]
+  ResearchUbertip: Усиливает атаки живыми огоньками. При первой атаке они наносят небольшой дополнительный урон, при второй – вдвое больший, при третьей – втрое, и т. д. |n|nЕсли цель погибает под действием этого эффекта, она загорается, нанося значительный урон находящимся рядом врагам. |n|n|cffffcc001-й уровень:|r |cffb4dcdc+<ANic,DataA1> к урону, <ANic,DataB1> урона от возгорания.|r |n|cffffcc002-й уровень:|r |cffb4dcdc+<ANic,DataA2> к урону, <ANic,DataB2> урона от возгорания.|r |n|cffffcc003-й уровень:|r |cffb4dcdc+<ANic,DataA3> к урону, <ANic,DataB3> урона от возгорания.|r|n|cffffcc004-й уровень:|r |cffb4dcdc+<ANic,DataA4> к урону, <ANic,DataB4> урона от возгорания.|r
+  [Lvl 1] Tip: |cffb4dcdcИспепеление|r [|cffffcc001-й уровень|r]
+         Ubertip: Усиливает атаки живыми огоньками, которые добавляют |cffb4dcdc<ANic,DataA1>|r урона к первой атаке, вдвое больше ко второй, втрое больше к третьей и т. д. |n|nЕсли цель погибает под действием этого эффекта, она загорается, нанося до |cffb4dcdc<ANic,DataB1>|r урона находящимся рядом врагам.
+         Stats: Mana=0, Cool=0, Dur=4/4, DataA=2, DataB=30, DataC=120, DataD=15
+  [Lvl 2] Tip: |cffb4dcdcИспепеление|r [|cffffcc002-й уровень|r]
+         Ubertip: Усиливает атаки живыми огоньками, которые добавляют|cffb4dcdc <ANic,DataA2>|r урона к первой атаке, вдвое больше ко второй, втрое больше к третьей и т. д. |n|nЕсли цель погибает под действием этого эффекта, она загорается, нанося до |cffb4dcdc<ANic,DataB2>|r урона находящимся рядом врагам.
+         Stats: Mana=0, Cool=0, Dur=4/4, DataA=3, DataB=45, DataC=120, DataD=22
+  [Lvl 3] Tip: |cffb4dcdcИспепеление|r [|cffffcc003-й уровень|r]
+         Ubertip: Усиливает атаки живыми огоньками, которые добавляют |cffb4dcdc<ANic,DataA3>|r урона к первой атаке, вдвое больше ко второй, втрое больше к третьей и т. д. |n|nЕсли цель погибает под действием этого эффекта, она загорается, нанося до |cffb4dcdc<ANic,DataB3>|r урона находящимся рядом врагам.
+         Stats: Mana=0, Cool=0, Dur=4/4, DataA=4, DataB=60, DataC=120, DataD=30
+  [Lvl 4] Tip: |cffb4dcdcИспепеление|r [|cffffcc004-й уровень|r]
+         Ubertip: Усиливает атаки живыми огоньками, которые добавляют |cffb4dcdc<ANic,DataA4>|r урона к первой атаке, вдвое больше ко второй, втрое больше к третьей и т. д. |n|nЕсли цель погибает под действием этого эффекта, она загорается, нанося до |cffb4dcdc<ANic,DataB4>|r урона находящимся рядом врагам.
+         Stats: Mana=0, Cool=0, Dur=4/4, DataA=5.000000, DataB=80, DataC=120, DataD=40
+
+Ability: AHfs (Base: AHfs, Levels: 4, Hotkey: Q/Q)
+  Name: Огненный столб
+  ResearchTip: Изучить «Огненный столб» [|cffffcc00%d-й уровень|r]
+  ResearchUbertip: "Создает огненный столб, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r 45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек. |n|cffffcc002-й уровень:|r 80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек. |n|cffffcc003-й уровень:|r 110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек."
+  [Lvl 1] Tip: "Огненный столб [|cffffcc001-й уровень|r]"
+         Ubertip: "Создает огненный столб, наносящий наземным войскам в указанной области 45 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать незначительный урон."
+         Stats: Mana=125, Cool=10, Dur=9/2.67, DataA=15, DataB=0.33, DataC=4, DataD=1
+  [Lvl 2] Tip: "Огненный столб [|cffffcc002-й уровень|r]"
+         Ubertip: "Создает огненный столб, наносящий наземным войскам в указанной области 80 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать небольшой урон."
+         Stats: Mana=125, Cool=10, Dur=9/2.67, DataA=26.666, DataB=0.33, DataC=6, DataD=1
+  [Lvl 3] Tip: "Огненный столб [|cffffcc003-й уровень|r]"
+         Ubertip: "Создает огненный столб, наносящий наземным войскам в указанной области 110 урона/сек. в течение 3 сек. После исчезновения столба пораженные войска продолжают получать умеренный урон."
+         Stats: Mana=125, Cool=10, Dur=9/2.67, DataA=36.666, DataB=0.33, DataC=8, DataD=1
+  [Lvl 4] Tip: Огненный столб [|cffffcc004-й уровень|r]
+         Ubertip: Создает огненный столб, наносящий наземным войскам в указанной области 110 урона/сек. в течение 4 сек. После исчезновения столба пораженные войска продолжают получать умеренный урон.
+         Stats: Mana=135, Cool=10, Dur=9/2.67, DataA=45.000000, DataB=0.33, DataC=12.000000, DataD=1
+
+Ability: ANlm (Base: ANlm, Levels: 4, Hotkey: W/W)
+  Name: |cffb4dcdcПризыв порождения лавы|r
+  ResearchTip: Изучить «|cffb4dcdcПризыв порождения лавы|r» [|cffffcc00%d-й уровень|r]
+  ResearchUbertip: Призывает порождение лавы. Нанося урон, оно поглощает плоть жертвы, после чего разделяется на два порождения с полным запасом здоровья. |nВремя существования: |cffb4dcdc<ANlm,Dur1> сек.|r |n|n|cffffcc001-й уровень:|r |cffb4dcdc425 здоровья, <nlv1,mindmg1>-<nlv1,maxdmg1> урона.|r|r |n|cffffcc002-й уровень:|r |cffb4dcdc<nlv2,realHP> здоровья, <nlv2,mindmg1>-<nlv2,maxdmg1> урона.|r |n|cffffcc003-й уровень:|r |cffb4dcdc<nlv3,realHP> здоровья, <nlv3,mindmg1>-<nlv3,maxdmg1> урона.|r |r|n|cffffcc004-й уровень:|r |cffb4dcdc900 здоровья, 37-61 урона. |n|r
+  [Lvl 1] Tip: |cffb4dcdcПризыв порождения лавы|r [|cffffcc001-й уровень|r]
+         Ubertip: Призывает порождение лавы. Нанося урон, оно поглощает плоть жертвы, после чего разделяется на два порождения с полным запасом здоровья. |n|cffb4dcdc|n<nlv1,realHP>|r здоровья, |cffb4dcdc<nlv1,mindmg1>-<nlv1,maxdmg1> |rурона.|nВремя существования: |cffb4dcdc<ANlm,Dur1> сек.|n|r
+         Stats: Mana=150, Cool=32, Dur=70/70, DataA=1, DataB=5, DataC=13, DataD=0.5
+  [Lvl 2] Tip: |cffb4dcdcПризыв порождения лавы|r [|cffffcc002-й уровень|r]
+         Ubertip: Призывает порождение лавы. Нанося урон, оно поглощает плоть жертвы, после чего разделяется на два порождения с полным запасом здоровья. |n|cffb4dcdc|n<nlv2,realHP>|r здоровья, |cffb4dcdc<nlv2,mindmg2>-<nlv2,maxdmg2>|r урона.|nВремя существования: |cffb4dcdc<ANlm,Dur2> сек.|n|r
+         Stats: Mana=150, Cool=32, Dur=75.000000/70, DataA=1, DataB=5, DataC=13, DataD=0.75
+  [Lvl 3] Tip: |cffb4dcdcПризыв порождения лавы|r [|cffffcc003-й уровень|r]
+         Ubertip: Призывает порождение лавы. Нанося урон, оно поглощает плоть жертвы, после чего разделяется на два порождения с полным запасом здоровья. |n|cffb4dcdc|n<nlv3,realHP>|r здоровья, |cffb4dcdc<nlv3,mindmg3>-<nlv3,maxdmg3>|r урона.|nВремя существования: |cffb4dcdc<ANlm,Dur3> сек.|n|r
+         Stats: Mana=150, Cool=32, Dur=80.000000/70, DataA=1, DataB=5, DataC=13, DataD=0.75
+  [Lvl 4] Tip: |cffb4dcdcПризыв порождения лавы|r [|cffffcc004-й уровень|r]
+         Ubertip: Призывает порождение лавы. Нанося урон, оно поглощает плоть жертвы, после чего разделяется на два порождения с полным запасом здоровья. |n|cffb4dcdc|n<nlv4,realHP>|r здоровья, |cffb4dcdc<nlv4,mindmg4>-<nlv4,maxdmg4>|r урона.|nВремя существования: |cffb4dcdc<ANlm,Dur4> сек.|n|r
+         Stats: Mana=150, Cool=35, Dur=85.000000/70.000000, DataA=1, DataB=5, DataC=9, DataD=0.5
+
+Ability: A0P7 (Base: Alsh, Levels: 2, Hotkey: R/)
+  Name: |cffb4dcdcКольцо огня |r
+  ResearchTip: |cffb4dcdcКольцо огня |r
+  ResearchUbertip: Накладывает на врага кольцо огня, которое высасывает здоровье у всех врагов вокруг кольца, и передает его Повелителю пламени, и всем союзникам вокруг.
+|n|cffffcc001-й уровень:|r |cffb4dcdcНаносит 30 ед./сек., востанавливает 20 ед.|r
+|n|cffffcc002-й уровень:|r |cffb4dcdcНаносит 40 ед./сек., востанавливает 20 ед.|r
+  [Lvl 1] Tip: |cffb4dcdcКольцо огня |r
+         Ubertip: Накладывает на врага кольцо огня, которое высасывает здоровье у всех врагов вокруг кольца, и передает его Повелителю пламени, и всем союзникам вокруг.
+|n|cffffcc001-й уровень:|r |cffb4dcdcНаносит 20 ед./сек., востанавливает 20 ед.|r
+
+         Stats: Mana=100, Cool=55.000000, Dur=30.000000/30.000000, DataA=30.000000, DataB=, DataC=, DataD=
+  [Lvl 2] Tip: |cffb4dcdcКольцо огня |r
+         Ubertip: Накладывает на врага кольцо огня, которое высасывает здоровье у всех врагов вокруг кольца, и передает его Повелителю пламени, и всем союзникам вокруг.
+
+|n|cffffcc002-й уровень:|r |cffb4dcdcНаносит 20 ед./сек., востанавливает 20 ед.|r
+         Stats: Mana=100, Cool=45.000000, Dur=30.000000/30.000000, DataA=40.000000, DataB=, DataC=, DataD=
+
+=======================================================
+HERO: E029 - Владыка морей
+=======================================================
+
+Ability: A0OU (Base: AUcs, Levels: 4, Hotkey: Q/Q)
+  Name: |cffb4dcdcСокрушительная волна|r
+  ResearchTip: |cffb4dcdcСокрушительная волна|r
+  ResearchUbertip: Выпускает волну воды, атакующих врагов. |n|n|cffffcc001-й уровень:|r |cffb4dcdc175 ед. урона. |r|n|cffffcc002-й уровень:|r |cffb4dcdc225 ед. урона. |r|n|cffffcc003-й уровень:|r |cffb4dcdc275 ед. урона. |r|n|cffffcc004-й уровень:|r |cffb4dcdc350 ед. урона. |r
+  [Lvl 1] Tip: |cffb4dcdcСокрушительная волна|r
+         Ubertip: Выпускает волну воды, атакующих врагов. |n|n|cffffcc001-й уровень:|r |cffb4dcdc175 ед. урона.
+         Stats: Mana=100, Cool=15.000000, Dur=0/0, DataA=175.000000, DataB=1000.000000, DataC=800, DataD=300
+  [Lvl 2] Tip: |cffb4dcdcСокрушительная волна|r
+         Ubertip: Выпускает волну воды, атакующих врагов. 
+|n|cffffcc002-й уровень:|r |cffb4dcdc225 ед. урона. |r
+         Stats: Mana=100, Cool=15.000000, Dur=/, DataA=225.000000, DataB=2000.000000, DataC=800.000000, DataD=300.000000
+  [Lvl 3] Tip: |cffb4dcdcСокрушительная волна|r
+         Ubertip: Выпускает волну воды, атакующих врагов.
+ |n|cffffcc003-й уровень:|r |cffb4dcdc275 ед. урона. |r
+         Stats: Mana=100, Cool=15.000000, Dur=/, DataA=275.000000, DataB=3000.000000, DataC=800.000000, DataD=300.000000
+  [Lvl 4] Tip: |cffb4dcdcСокрушительная волна|r
+         Ubertip: Выпускает волну воды, атакующих врагов.
+|n|cffffcc004-й уровень:|r |cffb4dcdc350 ед. урона. |r
+         Stats: Mana=100, Cool=15.000000, Dur=/, DataA=350.000000, DataB=4000.000000, DataC=800.000000, DataD=300.000000
+
+Ability: A0OT (Base: ANcl, Levels: 4, Hotkey: W/W)
+  Name: |cffb4dcdcПоле астрала|r
+  ResearchTip: |cffb4dcdcПоле астрала|r
+  ResearchUbertip: Всех юнитов в области помещает в астрал. |n|cffffcc001-й уровень:|r |cffb4dcdcРадиус действия - 200.|r  |n|cffffcc002-й уровень:|r |cffb4dcdcРадиус действия - 225.|r  |n|cffffcc003-й уровень:|r |cffb4dcdcРадиус действия - 250.|r |n|cffffcc004-й уровень:|r |cffb4dcdcРадиус действия - 300.|r
+  [Lvl 1] Tip: |cffb4dcdcПоле астрала|r
+         Ubertip: Всех юнитов в области помещает в астрал.
+|cffb4dc8cРадиус действия - 150|r
+         Stats: Mana=100, Cool=14.000000, Dur=0/0, DataA=0.000000, DataB=2, DataC=7, DataD=0.000000
+  [Lvl 2] Tip: |cffb4dcdcПоле астрала|r
+         Ubertip: Всех юнитов в области помещает в астрал.
+|cffb4dc8cРадиус действия - 175|r
+         Stats: Mana=125, Cool=14.000000, Dur=0/0, DataA=0.000000, DataB=2, DataC=7, DataD=0.000000
+  [Lvl 3] Tip: |cffb4dcdcПоле астрала|r
+         Ubertip: Всех юнитов в области помещает в астрал.
+|cffb4dc8cРадиус действия - 200|r
+         Stats: Mana=150, Cool=14.000000, Dur=0/0, DataA=0.000000, DataB=2, DataC=7, DataD=0.000000
+  [Lvl 4] Tip: |cffb4dcdcПоле астрала|r
+         Ubertip: Всех юнитов в области помещает в астрал.
+|cffb4dc8cРадиус действия - 225|r
+         Stats: Mana=200, Cool=14.000000, Dur=0/0, DataA=0.000000, DataB=2, DataC=7, DataD=0.000000
+
+Ability: A0QL (Base: ANms, Levels: 4, Hotkey: E/E)
+  Name: |cffb4dcdcЩит маны|r
+  ResearchTip: Изучить «|cffb4dcdcЩит маны|r» [|cffffcc00%d-й уровень|r]
+  ResearchUbertip: Создает щит, который поглощает урон за счет маны. |n|n|cffffcc001-й уровень:|r |cffb4dcdc1 урона за единицу маны.|r |n|cffffcc002-й уровень:|r |cffb4dcdc1,5 урона за единицу маны.|r |n|cffffcc003-й уровень:|r |cffb4dcdc2 урона за единицу маны.|r|n|cffffcc004-й уровень:|r |cffb4dcdc2.5 урона за единицу маны.|r
+  [Lvl 1] Tip: Активировать «|cffb4dcdcЩит маны|r» [|cffffcc001-й уровень|r]
+         Ubertip: Дает щит, который поглощает |cffb4dcdc1 урона|r за |cffb4dcdc1 ед.|r маны.
+         Stats: Mana=10, Cool=10, Dur=0/0, DataA=2, DataB=1, DataC=, DataD=
+  [Lvl 2] Tip: Активировать «|cffb4dcdcЩит маны|r» [|cffffcc002-й уровень|r]
+         Ubertip: Дает щит, который поглощает |cffb4dcdc1,5 урона|r за |cffb4dcdc1 ед.|r маны.
+         Stats: Mana=10, Cool=10, Dur=0/0, DataA=3, DataB=1, DataC=, DataD=
+  [Lvl 3] Tip: Активировать «|cffb4dcdcЩит маны|r» [|cffffcc003-й уровень|r]
+         Ubertip: Дает щит, который поглощает |cffb4dcdc2 урона|r за |cffb4dcdc1 ед|r. маны.
+         Stats: Mana=10, Cool=10, Dur=0/0, DataA=4, DataB=1, DataC=, DataD=
+  [Lvl 4] Tip: Активировать «|cffb4dcdcЩит маны|r» [|cffffcc004-й уровень|r]
+         Ubertip: Дает щит, который поглощает |cffb4dcdc2.5 урона|r за |cffb4dcdc1 ед.|r маны.
+         Stats: Mana=25, Cool=10, Dur=0/0, DataA=2.500000, DataB=1, DataC=, DataD=
+
+Ability: A0OR (Base: ANht, Levels: 2, Hotkey: R/R)
+  Name: |cffb4dcdcНаводнение|r
+  ResearchTip: Изучить «|cffb4dcdcНаводнение|r» [|cffffcc00%d-й уровень|r]
+  ResearchUbertip: Временно позволяет атаковать сразу несколько целей.
+|cffb4dcdcВремя действия - 25 сек, количество целей - 11.|r
+  [Lvl 1] Tip: |cffb4dcdcНаводнение|r [|cffffcc001-й уровень|r]
+         Ubertip: Временно позволяет атаковать сразу несколько целей.
+|cffb4dcdcВремя действия - 25 сек, количество целей - 11.|r
+         Stats: Mana=75, Cool=80.000000, Dur=15/15, DataA=0.000000, DataB=0, DataC=0, DataD=0
+  [Lvl 2] Tip: |cffb4dcdcНаводнение|r [|cffffcc002-й уровень|r]
+         Ubertip: Временно позволяет атаковать сразу несколько целей.
+|cffb4dcdcВремя действия - 25 сек, количество целей - 11.|r
+         Stats: Mana=75, Cool=70.000000, Dur=15/15, DataA=0.000000, DataB=0, DataC=0, DataD=0
+
+Ability: A0YH (Base: AUau, Levels: 1, Hotkey: /U)
+  Name: Морской владыка
+  ResearchTip: Изучить «Нечистую ауру» [|cffffcc00%d-й уровень|r]
+  ResearchUbertip: "Ускоряет передвижение и регенерацию здоровья находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r +<AUau,DataA1,%>% к скорости передвижения, незначительный бонус к регенерации здоровья. |n|cffffcc002-й уровень:|r +<AUau,DataA2,%>% к скорости передвижения, средний бонус к регенерации здоровья. |n|cffffcc003-й уровень:|r +<AUau,DataA3,%>% к скорости передвижения, значительный бонус к регенерации здоровья."
+  [Lvl 1] Tip: Морской владыка
+         Ubertip: "+<AUau,DataA1,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья."
+         Stats: Mana= - , Cool=0, Dur=0/0, DataA=0.200000, DataB=0.600000, DataC=0, DataD=
+
+=======================================================
+HERO: E027 - Владыка ветра
+=======================================================
+
+Ability: A0P0 (Base: AHfs, Levels: 4, Hotkey: Q/Q)
+  Name: |cffb4dcdcТорнадо|r
+  ResearchTip: Изучить «|cffb4dcdcТорнадо|r» [|cffffcc00%d-й уровень|r]
+  ResearchUbertip: Создает |cffb4dcdcторнадо|r, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r |cffb4dcdc45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек.|r |n|cffffcc002-й уровень:|r |cffb4dcdc80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек.|r |n|cffffcc003-й уровень:|r |cffb4dcdc110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r |n|cffffcc004-й уровень:|r |cffb4dcdc150 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r
+  [Lvl 1] Tip: |cffb4dcdcТорнадо|r [|cffffcc001-й уровень|r]
+         Ubertip: Создает |cffb4dcdcторнадо|r, наносящий периодический урон наземным войскам в указанной области. |n|n|cffffcc001-й уровень:|r |cffb4dcdc45 урона/сек. в первые 3 сек., незначительный урон в последующие 6 сек.|r 
+         Stats: Mana=125, Cool=10, Dur=9/2.67, DataA=15, DataB=0.33, DataC=0.000000, DataD=1
+  [Lvl 2] Tip: |cffb4dcdcТорнадо|r [|cffffcc002-й уровень|r]
+         Ubertip: Создает |cffb4dcdcторнадо|r, наносящий периодический урон наземным войскам в указанной области. |n|cffffcc002-й уровень:|r |cffb4dcdc80 урона/сек. в первые 3 сек., небольшой урон в последующие 6 сек.|r
+         Stats: Mana=125, Cool=10, Dur=9/2.67, DataA=26.666, DataB=0.33, DataC=0.000000, DataD=1
+  [Lvl 3] Tip: |cffb4dcdcТорнадо|r [|cffffcc003-й уровень|r]
+         Ubertip: Создает |cffb4dcdcторнадо|r, наносящий периодический урон наземным войскам в указанной области.  |n|cffffcc003-й уровень:|r |cffb4dcdc110 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r
+         Stats: Mana=125, Cool=10, Dur=9/2.67, DataA=36.666, DataB=0.33, DataC=0.000000, DataD=1
+  [Lvl 4] Tip: |cffb4dcdcТорнадо|r [|cffffcc004-й уровень|r]
+         Ubertip: Создает |cffb4dcdcторнадо|r, наносящий периодический урон наземным войскам в указанной области.  |n|cffffcc004-й уровень:|r |cffb4dcdc150 урона/сек. в первые 3 сек., умеренный урон в последующие 6 сек.|r
+         Stats: Mana=135, Cool=10, Dur=9/2.67, DataA=45.000000, DataB=0.33, DataC=0.000000, DataD=1
+
+Ability: A0OX (Base: Awar, Levels: 4, Hotkey: /)
+  Name: |cffb4dcdcРазрушающий взмах|r
+  ResearchTip: |cffb4dcdcРазрушающий взмах|r
+  ResearchUbertip: Позволяет при атаке с небольшим шансом нанести урон рядом стоящим от основной цели врагам.
+|n|cffffcc001-й уровень:|r |cffb4dcdc25% шанс, 125 ед. урона вокруг цели. |r|n|cffffcc002-й уровень:|r |cffb4dcdc30% шанс, 150 ед. урона вокруг цели. |r|n|cffffcc003-й уровень:|r |cffb4dcdc35% шанс, 175 ед. урона вокруг цели. |r|n|cffffcc004-й уровень:|r |cffb4dcdc40% шанс, 200 ед. урона вокруг цели. |r
+  [Lvl 1] Tip: |cffb4dcdcРазрушающий взмах|r
+         Ubertip: Позволяет при атаке с небольшим шансом нанести урон рядом стоящим от основной цели врагам.
+|n|cffffcc001-й уровень:|r |cffb4dcdc25% шанс, 125 ед. урона вокруг цели. |r
+         Stats: Mana=0, Cool=0, Dur=0/0, DataA=25, DataB=125.000000, DataC=250, DataD=350
+  [Lvl 2] Tip: |cffb4dcdcРазрушающий взмах|r
+         Ubertip: Позволяет при атаке с небольшим шансом нанести урон рядом стоящим от основной цели врагам.
+|n|cffffcc002-й уровень:|r |cffb4dcdc30% шанс, 150 ед. урона вокруг цели. |r
+         Stats: Mana=0, Cool=0, Dur=0/0, DataA=30.000000, DataB=150.000000, DataC=250.000000, DataD=350.000000
+  [Lvl 3] Tip: |cffb4dcdcРазрушающий взмах|r
+         Ubertip: Позволяет при атаке с небольшим шансом нанести урон рядом стоящим от основной цели врагам.
+|n|cffffcc003-й уровень:|r |cffb4dcdc35% шанс, 175 ед. урона вокруг цели. |r
+         Stats: Mana=, Cool=, Dur=/, DataA=35.000000, DataB=175.000000, DataC=250.000000, DataD=350.000000
+  [Lvl 4] Tip: |cffb4dcdcРазрушающий взмах|r
+         Ubertip: Позволяет при атаке с небольшим шансом нанести урон рядом стоящим от основной цели врагам.
+|n|cffffcc004-й уровень:|r |cffb4dcdc40% шанс, 200 ед. урона вокруг цели. |r
+         Stats: Mana=, Cool=, Dur=/, DataA=40.000000, DataB=200.000000, DataC=250.000000, DataD=350.000000
+
+Ability: A0OW (Base: AOae, Levels: 4, Hotkey: E/E)
+  Name: |cffb4dcdcСкорость ветра|r
+  ResearchTip: Изучить «|cffb4dcdcСкорость ветра|r» [|cffffcc00%d-й уровень|r]
+  ResearchUbertip: Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdc+<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки.|r |n|cffffcc002-й уровень:|r |cffb4dcdc+<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки.|r |n|cffffcc003-й уровень:|r |cffb4dcdc+<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки.|r|n|cffffcc004-й уровень:|r |cffb4dcdc+<AOae,DataA4,%>% к скорости передвижения, +<AOae,DataB5,%>% к скорости атаки.|r
+  [Lvl 1] Tip: |cffb4dcdcСкорость ветра|r [|cffffcc001-й уровень|r]
+         Ubertip: Ускоряет передвижение и атаку находящихся рядом союзников. |n|n|cffffcc001-й уровень:|r |cffb4dcdc+<AOae,DataA1,%>% к скорости передвижения, +<AOae,DataB1,%>% к скорости атаки.|r 
+         Stats: Mana=, Cool=0, Dur=0/0, DataA=0.1, DataB=0.150000, DataC=, DataD=
+  [Lvl 2] Tip: |cffb4dcdcСкорость ветра|r [|cffffcc002-й уровень|r]
+         Ubertip: Ускоряет передвижение и атаку находящихся рядом союзников. |n|cffffcc002-й уровень:|r |cffb4dcdc+<AOae,DataA2,%>% к скорости передвижения, +<AOae,DataB2,%>% к скорости атаки.|r 
+         Stats: Mana=, Cool=, Dur=/, DataA=0.15, DataB=0.200000, DataC=, DataD=
+  [Lvl 3] Tip: |cffb4dcdcСкорость ветра|r [|cffffcc003-й уровень|r]
+         Ubertip: Ускоряет передвижение и атаку находящихся рядом союзников. |n|cffffcc003-й уровень:|r |cffb4dcdc+<AOae,DataA3,%>% к скорости передвижения, +<AOae,DataB3,%>% к скорости атаки.|r
+         Stats: Mana=, Cool=, Dur=/, DataA=0.2, DataB=0.250000, DataC=, DataD=
+  [Lvl 4] Tip: |cffb4dcdcСкорость ветра|r [|cffffcc004-й уровень|r]
+         Ubertip: Ускоряет передвижение и атаку находящихся рядом союзников.|n|cffffcc004-й уровень:|r |cffb4dcdc+<AOae,DataA4,%>% к скорости передвижения, +<AOae,DataB5,%>% к скорости атаки.|r
+         Stats: Mana=, Cool=, Dur=/, DataA=0.400000, DataB=0.300000, DataC=, DataD=
+
+Ability: A0P1 (Base: ANdp, Levels: 2, Hotkey: R/R)
+  Name: |cffb4dcdcГрозовые Облака|r
+  ResearchTip: Изучить «|cffb4dcdcГрозовые Облака|r»
+  ResearchUbertip: Создает несколько облаков, которые атакуют всех врагов вокруг себя.
+ |n|cffffcc00Уровень 1|r - |cffb4dcdcМакс - 5 облаков, мин 3.|r
+|cffffcc00Уровень 2|r - |cffb4dcdcМакс - 6 облаков, мин 3.|r
+  [Lvl 1] Tip: |cffb4dcdcГрозовые Облака|r
+         Ubertip: Создает несколько облаков, которые атакуют всех врагов вокруг себя.
+ |n|cffffcc00Уровень 1|r - |cffb4dcdcМакс - 5 облаков, мин 3.|r
+
+         Stats: Mana=0, Cool=100, Dur=1/0, DataA=e02A, DataB=3, DataC=5, DataD=
+  [Lvl 2] Tip: |cffb4dcdcГрозовые Облака|r
+         Ubertip: Создает несколько облаков, которые атакуют всех врагов вокруг себя.
+
+|cffffcc00Уровень 2|r - |cffb4dcdcМакс - 6 облаков, мин 3.|r
+         Stats: Mana=0, Cool=100, Dur=1/0, DataA=e02A, DataB=3, DataC=6, DataD=
+
+Ability: A0YI (Base: AEev, Levels: 1, Hotkey: E/E)
+  Name: |cffc8dc8cУскользание|r
+  ResearchTip: Изучить «|cffc8dc8cУскользание|r» [|cffffcc00%d-й уровень|r]
+  ResearchUbertip: Дает шанс уклониться от атаки. |n|n|cffffcc001-й уровень:|r |cffc8dc8c<AEev,DataA1,%>%-й шанс.|r |n|cffffcc002-й уровень:|r |cffc8dc8c<AEev,DataA2,%>%-й шанс.|r |n|cffffcc003-й уровень:|r |cffc8dc8c<AEev,DataA3,%>%-й шанс.|r|n|cffffcc004-й уровень:|r |cffc8dc8c40%-й шанс.|r
+  [Lvl 1] Tip: |cffc8dc8cУскользание|r [|cffffcc001-й уровень|r]
+         Ubertip: Дает |cffc8dc8c<AEev,DataA1,%>%-й шанс|r уклониться от атаки.
+         Stats: Mana=, Cool=0, Dur=0/0, DataA=0.350000, DataB=, DataC=, DataD=
+
+=======================================================
+HERO: E028 - Владыка Огня
+=======================================================
+
+Ability: A0OP (Base: ANht, Levels: 4, Hotkey: Q/Q)
+  Name: |cffb4dcdcКоллосальный удар|r
+  ResearchTip: Изучить «|cffb4dcdcКолосальный удар|r» [|cffffcc00%d-й уровень|r]
+  ResearchUbertip: Временно позволяет наносить |cffb4dcdc70%|r сплеш урон в радиусе |cffb4dcdc200|r, от основной цели атаки.
+|n|cffffcc001-й уровень:|r |cffb4dcdcВремя действия - 25сек.|r|r |n|cffffcc002-й уровень:|r|cffb4dcdc Время действия - 25сек.|r|r |n|cffffcc003-й уровень:|r|cffb4dcdc Время действия - 25сек.|r|n|cffffcc004-й уровень:|r |cffb4dcdcВремя действия - 25сек.|r
+  [Lvl 1] Tip: |cffb4dcdcКолосальный удар|r [|cffffcc001-й уровень|r]
+         Ubertip: Временно позволяет наносить |cffb4dcdc70%|r сплеш урон в радиусе |cffb4dcdc200|r, от основной цели атаки.
+|cffb4dcdcВремя действия - 25 сек.|r
+         Stats: Mana=75, Cool=50.000000, Dur=15/15, DataA=0.000000, DataB=0, DataC=0, DataD=0
+  [Lvl 2] Tip: |cffb4dcdcКолосальный удар|r [|cffffcc002-й уровень|r]
+         Ubertip: Временно позволяет наносить |cffb4dcdc70%|r сплеш урон в радиусе |cffb4dcdc200|r, от основной цели атаки.
+|cffb4dcdcВремя действия - 25 сек.|r
+         Stats: Mana=75, Cool=45.000000, Dur=15/15, DataA=0.000000, DataB=0, DataC=0, DataD=0
+  [Lvl 3] Tip: |cffb4dcdcКолосальный удар|r [|cffffcc003-й уровень|r]
+         Ubertip: Временно позволяет наносить |cffb4dcdc70%|r сплеш урон в радиусе |cffb4dcdc200|r, от основной цели атаки.
+|cffb4dcdcВремя действия - 25 сек.|r
+         Stats: Mana=75, Cool=40.000000, Dur=15/15, DataA=0.000000, DataB=0, DataC=0, DataD=0
+  [Lvl 4] Tip: |cffb4dcdcКолосальный удар|r [|cffffcc004-й уровень|r]
+         Ubertip: Временно позволяет наносить |cffb4dcdc70%|r сплеш урон в радиусе |cffb4dcdc200|r, от основной цели атаки.
+|cffb4dcdcВремя действия - 25 сек.|r
+         Stats: Mana=75, Cool=35.000000, Dur=15/15, DataA=0.000000, DataB=0, DataC=0, DataD=0
+
+Ability: A0ON (Base: Aroa, Levels: 4, Hotkey: W/)
+  Name: |cffb4dcdcБлагодать Пламени|r
+  ResearchTip: |cffb4dcdcБлагодать Пламени|r
+  ResearchUbertip: Увеличивает урон всем союзным войскам по близости.
+|n|cffffcc001-й уровень:|r |cffb4dcdcУвеличивает на 25%, Время действия 45 сек., Радиус действия - 500.|r|r |n|cffffcc002-й уровень:|r|cffb4dcdcУвеличивает на 35%, Время действия 45 сек., Радиус действия - 600.|r|r |n|cffffcc003-й уровень:|r|cffb4dcdcУвеличивает на 45%, Время действия 45 сек., Радиус действия - 700|r.|r|n|cffffcc004-й уровень:|r |cffb4dcdcУвеличивает на 55%, Время действия 45 сек., Радиус действия - 800.|r|r
+  [Lvl 1] Tip: |cffb4dcdcБлагодать Пламени|r
+         Ubertip: "+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек."
+         Stats: Mana=100, Cool=0, Dur=45/45, DataA=0.25, DataB=0, DataC=0, DataD=0
+  [Lvl 2] Tip: |cffb4dcdcБлагодать Пламени|r
+         Ubertip: +<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек.
+         Stats: Mana=100, Cool=, Dur=45.000000/45.000000, DataA=0.350000, DataB=, DataC=, DataD=
+  [Lvl 3] Tip: |cffb4dcdcБлагодать Пламени|r
+         Ubertip: +<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек.
+         Stats: Mana=100, Cool=, Dur=45.000000/45.000000, DataA=0.450000, DataB=, DataC=, DataD=
+  [Lvl 4] Tip: |cffb4dcdcБлагодать Пламени|r
+         Ubertip: +<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек.
+         Stats: Mana=100, Cool=, Dur=45.000000/45.000000, DataA=0.550000, DataB=, DataC=, DataD=
+
+Ability: A0QJ (Base: AEfk, Levels: 4, Hotkey: E/E)
+  Name: |cffb4dcdcЯрость Пламени|r
+  ResearchTip: Изучить «|cffb4dcdcЯрость Пламени|r» [|cffffcc00%d-й уровень|r]
+  ResearchUbertip: Создает огненный поток который выстреливает сгустками огня во врагов. 
+С каждый уровнем уменьшает востановление способности.
+|cffb4dc8cРадиус действия - 1000|r
+  [Lvl 1] Tip: |cffb4dcdcЯрость Пламени|r [|cffffcc001-й уровень|r]
+         Ubertip: Создает огненный поток который выстреливает сгустками огня во врагов. 
+С каждый уровнем уменьшает востановление способности.
+|cffb4dc8cРадиус действия - 1000|r
+         Stats: Mana=100, Cool=40.000000, Dur=0/0, DataA=0.000000, DataB=0.000000, DataC=0, DataD=0.000000
+  [Lvl 2] Tip: |cffb4dcdcЯрость Пламени|r [|cffffcc002-й уровень|r]
+         Ubertip: Создает огненный поток который выстреливает сгустками огня во врагов. 
+С каждый уровнем уменьшает востановление способности.
+|cffb4dc8cРадиус действия - 1000|r
+         Stats: Mana=125, Cool=35.000000, Dur=0/0, DataA=0.000000, DataB=0.000000, DataC=0, DataD=0.000000
+  [Lvl 3] Tip: |cffb4dcdcЯрость Пламени|r [|cffffcc003-й уровень|r]
+         Ubertip: Создает огненный поток который выстреливает сгустками огня во врагов. 
+С каждый уровнем уменьшает востановление способности.
+|cffb4dc8cРадиус действия - 1000|r
+         Stats: Mana=150, Cool=30.000000, Dur=0/0, DataA=0.000000, DataB=0.000000, DataC=0, DataD=0.000000
+  [Lvl 4] Tip: |cffb4dcdcЯрость Пламени|r [|cffffcc004-й уровень|r]
+         Ubertip: Создает огненный поток который выстреливает сгустками огня во врагов. 
+С каждый уровнем уменьшает востановление способности.
+|cffb4dc8cРадиус действия - 1000|r
+         Stats: Mana=175, Cool=25.000000, Dur=0/0, DataA=0.000000, DataB=0.000000, DataC=0, DataD=0.000000
+
+Ability: A0OQ (Base: AOre, Levels: 2, Hotkey: R/R)
+  Name: |cffb4dcdcПламенное перерождение|r
+  ResearchTip: Изучить «|cffb4dcdcПламенное перерождение|r»
+  ResearchUbertip: Возрождается после гибели. Время восстановления: |cffb4dcdc<AOre,Cool1>|r сек.
+  [Lvl 1] Tip: |cffb4dcdcПламенное перерождение|r
+         Ubertip: Возрождается после гибели. Время восстановления: |cffb4dcdc<AOre,Cool1> сек.|r
+         Stats: Mana= - , Cool=240, Dur=0/0, DataA=5, DataB=, DataC=, DataD=
+  [Lvl 2] Tip: |cffb4dcdcПламенное перерождение|r
+         Ubertip: Возрождается после гибели. Время восстановления: |cffb4dcdc<AOre,Cool2> сек.|r
+         Stats: Mana= - , Cool=150.000000, Dur=/, DataA=5, DataB=, DataC=, DataD=
+
+Ability: A0YG (Base: AHad, Levels: 1, Hotkey: /)
+  Name: Сожжение доспехов
+  ResearchTip: 
+  ResearchUbertip: 
+  [Lvl 1] Tip: 
+         Ubertip: 
+         Stats: Mana=0, Cool=0, Dur=0/0, DataA=-5.000000, DataB=0, DataC=, DataD=

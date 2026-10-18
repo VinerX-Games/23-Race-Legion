@@ -1,0 +1,298 @@
+{
+  "race": "Demons",
+  "category": "Buildings",
+  "buildings_count": 11,
+  "fields_checked": 33,
+  "wts_updated": [
+    13204,
+    13205,
+    31733,
+    13208,
+    13209,
+    19467,
+    13242,
+    13243,
+    31740,
+    13246,
+    13247,
+    31741,
+    13250,
+    13251,
+    31742,
+    13254,
+    13255,
+    31743,
+    13258,
+    13259,
+    31744,
+    13262,
+    13263,
+    31745,
+    13266,
+    13267,
+    31746,
+    13284,
+    13285,
+    31748,
+    13269,
+    13270,
+    31747
+  ],
+  "hashes_before": {
+    "wts": "91490811b0aa3d940281efd41d8d28570f444590921185f33084d37fa05ff39a",
+    "w3u": "e5215968f5129fcb3f5e0d6de70c1cf91b8e15e85e5ee4e13645eb9c65ac204c",
+    "w3u_skin": "cef5efb14c79b52b9f9dd93b7990f1a79b02a28671f9161678b68d742acbe10a",
+    "w3a": "9376f2b203b2792b7b7a9a44636113055bf6c9c6c3911e1b699f8e7d8a6b2262",
+    "w3a_skin": "8f3973d444521b35dbb57318dcacab9def82952bd10a7213bfc27bbefaf20d2a",
+    "w3h": "2459a6453679843b0828809e4dedcad2cc96028ee9feaaae94700e261007f2c4",
+    "w3h_skin": "888e1c4c6bf1c0149e59959dcc7473d8a89d699e0873b2485f10e536cab97daf",
+    "w3q": "135b21ad8ced6b949d7afd6c25f1ca434fa422bda00e79d0c18eb2ee2886ca58",
+    "w3q_skin": "1013575457067009a0e37c88ca1b1d7b489ace113691b7b15369e4bcf7342e80"
+  },
+  "hashes_after": {
+    "wts": "33ae00b8fab31903965c11c70e73f090828c490bdcbc6bef39464fb89d1fb199",
+    "w3u": "e5215968f5129fcb3f5e0d6de70c1cf91b8e15e85e5ee4e13645eb9c65ac204c",
+    "w3u_skin": "cef5efb14c79b52b9f9dd93b7990f1a79b02a28671f9161678b68d742acbe10a",
+    "w3a": "9376f2b203b2792b7b7a9a44636113055bf6c9c6c3911e1b699f8e7d8a6b2262",
+    "w3a_skin": "8f3973d444521b35dbb57318dcacab9def82952bd10a7213bfc27bbefaf20d2a",
+    "w3h": "2459a6453679843b0828809e4dedcad2cc96028ee9feaaae94700e261007f2c4",
+    "w3h_skin": "888e1c4c6bf1c0149e59959dcc7473d8a89d699e0873b2485f10e536cab97daf",
+    "w3q": "135b21ad8ced6b949d7afd6c25f1ca434fa422bda00e79d0c18eb2ee2886ca58",
+    "w3q_skin": "1013575457067009a0e37c88ca1b1d7b489ace113691b7b15369e4bcf7342e80"
+  },
+  "binary_files_unchanged": true,
+  "checks": [
+    {
+      "building": "h0DS",
+      "field": "name",
+      "expected": "|cffe4cfa3Накопитель Скверны|r",
+      "actual": "|cffe4cfa3Накопитель Скверны|r",
+      "ok": true
+    },
+    {
+      "building": "h0DS",
+      "field": "tip",
+      "expected": "|cffe4cfa3Накопитель Скверны|r (|cffffffffA|r)",
+      "actual": "|cffe4cfa3Накопитель Скверны|r (|cffffffffA|r)",
+      "ok": true
+    },
+    {
+      "building": "h0DS",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Хозяйственное строение Скверны. Обеспечивает армию Легиона припасами, увеличивая чистый базовый доход золота на |cffc8e08734|cffced4da за выплату (+40 от припасов за вычетом 6 за содержание строения).|n|nИтоговый доход зависит от текущих модификаторов экономики.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Хозяйственное строение Скверны. Обеспечивает армию Легиона припасами, увеличивая чистый базовый доход золота на |cffc8e08734|cffced4da за выплату (+40 от припасов за вычетом 6 за содержание строения).|n|nИтоговый доход зависит от текущих модификаторов экономики.|r",
+      "ok": true
+    },
+    {
+      "building": "h0DT",
+      "field": "name",
+      "expected": "|cffe4cfa3Генератор Скверны|r",
+      "actual": "|cffe4cfa3Генератор Скверны|r",
+      "ok": true
+    },
+    {
+      "building": "h0DT",
+      "field": "tip",
+      "expected": "|cffe4cfa3Генератор Скверны|r (|cffffffffE|r)",
+      "actual": "|cffe4cfa3Генератор Скверны|r (|cffffffffE|r)",
+      "ok": true
+    },
+    {
+      "building": "h0DT",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Магический источник Скверны. Поддерживает стабильность демонических сооружений насквозь пропитанной порчей энергией.|n|n|cffa6afb8Особенности:|cffced4da|n- Аура Скверны: восстанавливает зданиям Легиона по |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Магический источник Скверны. Поддерживает стабильность демонических сооружений насквозь пропитанной порчей энергией.|n|n|cffa6afb8Особенности:|cffced4da|n- Аура Скверны: восстанавливает зданиям Легиона по |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.|r",
+      "ok": true
+    },
+    {
+      "building": "h0DU",
+      "field": "name",
+      "expected": "|cffe4cfa3Аванпост|r",
+      "actual": "|cffe4cfa3Аванпост|r",
+      "ok": true
+    },
+    {
+      "building": "h0DU",
+      "field": "tip",
+      "expected": "|cffe4cfa3Аванпост|r (|cffffffffQ|r)",
+      "actual": "|cffe4cfa3Аванпост|r (|cffffffffQ|r)",
+      "ok": true
+    },
+    {
+      "building": "h0DU",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Главный оплот передовой базы Легиона. Служит центром сбора добытых ресурсов и подготавливает рабочих.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deАрхитектор Скверны|cffced4da: базовый рабочий, строитель и ремонтник.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deШтаб Демонов|cffced4da: открывает передовые сооружения и доступ ко второму этапу развития.|n|nПозволяет обменивать ресурсы на рынке и назначать столицу.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Главный оплот передовой базы Легиона. Служит центром сбора добытых ресурсов и подготавливает рабочих.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deАрхитектор Скверны|cffced4da: базовый рабочий, строитель и ремонтник.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deШтаб Демонов|cffced4da: открывает передовые сооружения и доступ ко второму этапу развития.|n|nПозволяет обменивать ресурсы на рынке и назначать столицу.|r",
+      "ok": true
+    },
+    {
+      "building": "h0DV",
+      "field": "name",
+      "expected": "|cffe4cfa3Штаб Демонов|r",
+      "actual": "|cffe4cfa3Штаб Демонов|r",
+      "ok": true
+    },
+    {
+      "building": "h0DV",
+      "field": "tip",
+      "expected": "|cffe4cfa3Штаб Демонов|r (|cffffffffZ|r)",
+      "actual": "|cffe4cfa3Штаб Демонов|r (|cffffffffZ|r)",
+      "ok": true
+    },
+    {
+      "building": "h0DV",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Укреплённый штаб Легиона (вторая ступень). Открывает возведение Портала, Тёмной Библиотеки и новые уровни улучшений в Кузне.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deАрхитектор Скверны|cffced4da: базовый рабочий, строитель и ремонтник.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deПалаты Командования|cffced4da: высшая ступень ставки Легиона.|n|nПозволяет обменивать ресурсы на рынке и назначать столицу.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Укреплённый штаб Легиона (вторая ступень). Открывает возведение Портала, Тёмной Библиотеки и новые уровни улучшений в Кузне.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deАрхитектор Скверны|cffced4da: базовый рабочий, строитель и ремонтник.|n|n|cffa6afb8Улучшается до:|cffced4da|n- |cffa9c7deПалаты Командования|cffced4da: высшая ступень ставки Легиона.|n|nПозволяет обменивать ресурсы на рынке и назначать столицу.|r",
+      "ok": true
+    },
+    {
+      "building": "h0DW",
+      "field": "name",
+      "expected": "|cffe4cfa3Палаты Командования|r",
+      "actual": "|cffe4cfa3Палаты Командования|r",
+      "ok": true
+    },
+    {
+      "building": "h0DW",
+      "field": "tip",
+      "expected": "|cffe4cfa3Палаты Командования|r (|cffffffffZ|r)",
+      "actual": "|cffe4cfa3Палаты Командования|r (|cffffffffZ|r)",
+      "ok": true
+    },
+    {
+      "building": "h0DW",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Цитадель верховного командования Пылающего Легиона (третья ступень). Открывает максимальный предел Накопителей Скверны и высшие технологии расы.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deАрхитектор Скверны|cffced4da: базовый рабочий, строитель и ремонтник.|n|n|cffa6afb8Особенности:|cffced4da|n- Защита столицы: повышает броню союзников поблизости.|n- Позволяет обменивать ресурсы на рынке и назначать столицу.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Цитадель верховного командования Пылающего Легиона (третья ступень). Открывает максимальный предел Накопителей Скверны и высшие технологии расы.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deАрхитектор Скверны|cffced4da: базовый рабочий, строитель и ремонтник.|n|n|cffa6afb8Особенности:|cffced4da|n- Защита столицы: повышает броню союзников поблизости.|n- Позволяет обменивать ресурсы на рынке и назначать столицу.|r",
+      "ok": true
+    },
+    {
+      "building": "h0DX",
+      "field": "name",
+      "expected": "|cffe4cfa3Алтарь Командиров Скверны|r",
+      "actual": "|cffe4cfa3Алтарь Командиров Скверны|r",
+      "ok": true
+    },
+    {
+      "building": "h0DX",
+      "field": "tip",
+      "expected": "|cffe4cfa3Алтарь Командиров Скверны|r (|cffffffffS|r)",
+      "actual": "|cffe4cfa3Алтарь Командиров Скверны|r (|cffffffffS|r)",
+      "ok": true
+    },
+    {
+      "building": "h0DX",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище призыва высших командиров Легиона. Позволяет призывать новых и воскрешать павших героев.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deНатрезим|cffced4da: коварный владыка теней и ментальной магии.|n- |cffa9c7deЧернокнижник|cffced4da: владыка губительного колдовства и огня Скверны.|n- |cffa9c7deШиварра|cffced4da: шестирукая воительница и жрица пламени Скверны.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Святилище призыва высших командиров Легиона. Позволяет призывать новых и воскрешать павших героев.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deНатрезим|cffced4da: коварный владыка теней и ментальной магии.|n- |cffa9c7deЧернокнижник|cffced4da: владыка губительного колдовства и огня Скверны.|n- |cffa9c7deШиварра|cffced4da: шестирукая воительница и жрица пламени Скверны.|r",
+      "ok": true
+    },
+    {
+      "building": "h0DY",
+      "field": "name",
+      "expected": "|cffe4cfa3Малый Портал|r",
+      "actual": "|cffe4cfa3Малый Портал|r",
+      "ok": true
+    },
+    {
+      "building": "h0DY",
+      "field": "tip",
+      "expected": "|cffe4cfa3Малый Портал|r (|cffffffffW|r)",
+      "actual": "|cffe4cfa3Малый Портал|r (|cffffffffW|r)",
+      "ok": true
+    },
+    {
+      "building": "h0DY",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Врата призыва штурмовых отрядов Легиона.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deВластитель|cffced4da: ударный пехотинец ближнего боя.|n- |cffa9c7deЗверь Скверны|cffced4da: быстроногий боевой зверь.|n- |cffa9c7deМо'агр|cffced4da: тяжёлый громила с сокрушительным ударом.|n- |cffa9c7deАдская колесница|cffced4da: осадная машина дальнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗащита|cffced4da: повышает живучесть боевых единиц.|n- |cffa9c7deКровавый палач|cffced4da: улучшает Властителей до Кровавых палачей.|n- |cffa9c7deКровавое отродье|cffced4da: улучшает Кровавых палачей до Кровавых отродий.|n- |cffa9c7deКровопускатель|cffced4da: улучшает Кровавых отродий до Кровопускателей.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Врата призыва штурмовых отрядов Легиона.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deВластитель|cffced4da: ударный пехотинец ближнего боя.|n- |cffa9c7deЗверь Скверны|cffced4da: быстроногий боевой зверь.|n- |cffa9c7deМо'агр|cffced4da: тяжёлый громила с сокрушительным ударом.|n- |cffa9c7deАдская колесница|cffced4da: осадная машина дальнего боя.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deЗащита|cffced4da: повышает живучесть боевых единиц.|n- |cffa9c7deКровавый палач|cffced4da: улучшает Властителей до Кровавых палачей.|n- |cffa9c7deКровавое отродье|cffced4da: улучшает Кровавых палачей до Кровавых отродий.|n- |cffa9c7deКровопускатель|cffced4da: улучшает Кровавых отродий до Кровопускателей.|r",
+      "ok": true
+    },
+    {
+      "building": "h0DZ",
+      "field": "name",
+      "expected": "|cffe4cfa3Кузня Скверны|r",
+      "actual": "|cffe4cfa3Кузня Скверны|r",
+      "ok": true
+    },
+    {
+      "building": "h0DZ",
+      "field": "tip",
+      "expected": "|cffe4cfa3Кузня Скверны|r (|cffffffffR|r)",
+      "actual": "|cffe4cfa3Кузня Скверны|r (|cffffffffR|r)",
+      "ok": true
+    },
+    {
+      "building": "h0DZ",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Арсенал и мастерская тёмных инженеров Легиона.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОружие Скверны|cffced4da: увеличивает урон ближнего боя.|n- |cffa9c7deОсквернённая броня|cffced4da: повышает защиту ближнего боя.|n- |cffa9c7deМагия Скверны|cffced4da: увеличивает силу заклинаний и дальних атак.|n- |cffa9c7deУкрепление Скверной|cffced4da: повышает защиту дальнего боя и магов.|n- |cffa9c7deПознание Скверны|cffced4da: усиливает боевые параметры особых отрядов.|n- |cffa9c7deУлучшенная добыча|cffced4da: увеличивает переносимый объём древесины.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Арсенал и мастерская тёмных инженеров Легиона.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deОружие Скверны|cffced4da: увеличивает урон ближнего боя.|n- |cffa9c7deОсквернённая броня|cffced4da: повышает защиту ближнего боя.|n- |cffa9c7deМагия Скверны|cffced4da: увеличивает силу заклинаний и дальних атак.|n- |cffa9c7deУкрепление Скверной|cffced4da: повышает защиту дальнего боя и магов.|n- |cffa9c7deПознание Скверны|cffced4da: усиливает боевые параметры особых отрядов.|n- |cffa9c7deУлучшенная добыча|cffced4da: увеличивает переносимый объём древесины.|r",
+      "ok": true
+    },
+    {
+      "building": "h0E0",
+      "field": "name",
+      "expected": "|cffe4cfa3Тёмная Библиотека|r",
+      "actual": "|cffe4cfa3Тёмная Библиотека|r",
+      "ok": true
+    },
+    {
+      "building": "h0E0",
+      "field": "tip",
+      "expected": "|cffe4cfa3Тёмная Библиотека|r (|cffffffffD|r)",
+      "actual": "|cffe4cfa3Тёмная Библиотека|r (|cffffffffD|r)",
+      "ok": true
+    },
+    {
+      "building": "h0E0",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Хранилище запретных гримуаров и центр подготовки чернокнижников.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЭредар-колдун|cffced4da: могущественный заклинатель Скверны.|n- |cffa9c7deДемон-тюремщик|cffced4da: надзиратель, подавляющий волю врагов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deДревние знания эредаров|cffced4da: открывает способности Эредаров-колдунов.|n- |cffa9c7deМастерство владения Скверной|cffced4da: открывает способности Демонов-тюремщиков.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Хранилище запретных гримуаров и центр подготовки чернокнижников.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЭредар-колдун|cffced4da: могущественный заклинатель Скверны.|n- |cffa9c7deДемон-тюремщик|cffced4da: надзиратель, подавляющий волю врагов.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deДревние знания эредаров|cffced4da: открывает способности Эредаров-колдунов.|n- |cffa9c7deМастерство владения Скверной|cffced4da: открывает способности Демонов-тюремщиков.|r",
+      "ok": true
+    },
+    {
+      "building": "h0E1",
+      "field": "name",
+      "expected": "|cffe4cfa3Портал|r",
+      "actual": "|cffe4cfa3Портал|r",
+      "ok": true
+    },
+    {
+      "building": "h0E1",
+      "field": "tip",
+      "expected": "|cffe4cfa3Портал|r (|cffffffffF|r)",
+      "actual": "|cffe4cfa3Портал|r (|cffffffffF|r)",
+      "ok": true
+    },
+    {
+      "building": "h0E1",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Пространственные врата в глубины Круговерти Пустоты. Призывает элитных демонов и чудовищ Легиона.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЛовчий Скверны|cffced4da: быстрый охотник на магов и поглотитель маны.|n- |cffa9c7deИнфернал|cffced4da: пылающий исполин, защищённый от магии.|n- |cffa9c7deСтраж ужаса|cffced4da: крылатый палач с разрушительным арсеналом заклинаний.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deДрессировка зверей|cffced4da: усиливает параметры Ловчих Скверны.|n- |cffa9c7deМастерство устрашения|cffced4da: раскрывает боевой потенциал Стражей ужаса.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Пространственные врата в глубины Круговерти Пустоты. Призывает элитных демонов и чудовищ Легиона.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deЛовчий Скверны|cffced4da: быстрый охотник на магов и поглотитель маны.|n- |cffa9c7deИнфернал|cffced4da: пылающий исполин, защищённый от магии.|n- |cffa9c7deСтраж ужаса|cffced4da: крылатый палач с разрушительным арсеналом заклинаний.|n|n|cffa6afb8Исследования:|cffced4da|n- |cffa9c7deДрессировка зверей|cffced4da: усиливает параметры Ловчих Скверны.|n- |cffa9c7deМастерство устрашения|cffced4da: раскрывает боевой потенциал Стражей ужаса.|r",
+      "ok": true
+    },
+    {
+      "building": "n02C",
+      "field": "name",
+      "expected": "|cffe4cfa3Башня смерти|r",
+      "actual": "|cffe4cfa3Башня смерти|r",
+      "ok": true
+    },
+    {
+      "building": "n02C",
+      "field": "tip",
+      "expected": "|cffe4cfa3Башня смерти|r (|cffffffffZ|r)",
+      "actual": "|cffe4cfa3Башня смерти|r (|cffffffffZ|r)",
+      "ok": true
+    },
+    {
+      "building": "n02C",
+      "field": "ubertip",
+      "expected": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение Легиона. Поражает врагов сгустками разрушительной тёмной энергии.|n|nАтакует наземные и воздушные цели.|r",
+      "actual": "|cffa6afb8ЗДАНИЕ:|cffced4da Оборонительное сооружение Легиона. Поражает врагов сгустками разрушительной тёмной энергии.|n|nАтакует наземные и воздушные цели.|r",
+      "ok": true
+    }
+  ],
+  "all_checks_passed": true
+}

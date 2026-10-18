@@ -1,0 +1,117 @@
+{
+  "race": "Огры (Ogres)",
+  "race_id": 28,
+  "selection_ability": "A17N",
+  "objects_audit": {
+    "buildings": {
+      "count": 11,
+      "ids": [
+        "o035",
+        "o03D",
+        "o03E",
+        "o036",
+        "o037",
+        "o038",
+        "o03A",
+        "o039",
+        "o03J",
+        "o03C",
+        "o03B"
+      ],
+      "town_halls": {
+        "tier1": {
+          "id": "o035",
+          "name": "Дом огров",
+          "food": 50
+        },
+        "tier2": {
+          "id": "o03D",
+          "name": "Крепость огров",
+          "food": 100
+        },
+        "tier3": {
+          "id": "o03E",
+          "name": "Цитадель огров",
+          "food": 150
+        }
+      }
+    },
+    "units": {
+      "count": 19,
+      "ids": [
+        "o03W",
+        "o03F",
+        "o03G",
+        "o03H",
+        "o03I",
+        "o03K",
+        "o03L",
+        "o03M",
+        "o03N",
+        "o03O",
+        "o03P",
+        "o03Q",
+        "o03R",
+        "o03S",
+        "o03T",
+        "o03U",
+        "o03V",
+        "n05M",
+        "n05N"
+      ]
+    },
+    "heroes": {
+      "count": 4,
+      "ids": [
+        "N05J",
+        "N05K",
+        "N05L",
+        "N05O"
+      ],
+      "names": {
+        "N05J": "Военачальник Огров (Сила, ближний бой)",
+        "N05K": "Вождь Огров (Сила, ближний бой)",
+        "N05L": "Знахарь Огров (Интеллект, дальний бой)",
+        "N05O": "Последний Гронн (Груул — Легендарный герой, Сила, ближний бой)"
+      }
+    },
+    "abilities": {
+      "count": 41,
+      "total_wts_updated": 465
+    },
+    "researches": {
+      "count": 19,
+      "markers_list": {
+        "R0HT": "Маркер расы Огры"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items found in war3map.w3t for Ogres."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "No race-specific triggers/chat messages found for Ogres."
+  },
+  "buffs_audit": {
+    "custom_buffs": [
+      "B083",
+      "B097",
+      "B098"
+    ],
+    "standard_buffs_used": [
+      "BUfa",
+      "BUts",
+      "Bspl",
+      "Bliq",
+      "Bblo",
+      "Bfzy",
+      "Blsh",
+      "B05G"
+    ],
+    "status": "Standardized custom buffs with secondary color labels and clean descriptions."
+  },
+  "total_wts_updates": 465,
+  "total_checks": 338
+}

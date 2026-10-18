@@ -1,0 +1,816 @@
+# -*- coding: utf-8 -*-
+"""Update Goblins race hero abilities (25 abilities) with complete SD validation."""
+import hashlib
+import json
+from pathlib import Path
+import re
+import sys
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import wc3_hivewe as hw
+from wc3_object_tools import cli, require
+from apply_faceless_object_text import patch_blob
+
+def update_wts_string(wts_content: str, string_id: int, new_val: str) -> str:
+    pattern = rf"(STRING 0*{string_id}\s*\{{\s*\r?\n)([\s\S]*?)(\r?\n\}})"
+    match = re.search(pattern, wts_content)
+    if not match:
+        raise ValueError(f"STRING {string_id} not found in WTS")
+    return re.sub(pattern, rf"\g<1>{new_val}\g<3>", wts_content, count=1)
+
+# Definitions of all 25 Goblin hero abilities
+HERO_ABILITIES = [
+    # ==========================================
+    # HERO: H0BD Спецназовец
+    # ==========================================
+    {
+        "id": "A0D8",
+        "hero_id": "H0BD",
+        "name": "|cffe4cfa3Шоковая граната|r",
+        "hotkey": "Q",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Шоковая граната|r",
+            "researchtip": "Изучить «|cffe4cfa3Шоковая граната|r» [|cffffffff%d-й уровень|r] (|cffffffffQ|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает шоковую гранату, которая подавляет врагов в выбранной области, "
+                "лишая их возможности атаковать и применять заклинания на |cffffffff9|cffced4da сек. (|cffffffff1|cffced4da сек. для героев).|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: радиус |cffffffff250|cffced4da, перезарядка |cffffffff40|cffced4da сек., расход маны: |cffffffff75|cffced4da|n"
+                "- |cffffffff2|cffced4da: радиус |cffffffff275|cffced4da, перезарядка |cffffffff37|cffced4da сек., расход маны: |cffffffff80|cffced4da|n"
+                "- |cffffffff3|cffced4da: радиус |cffffffff300|cffced4da, перезарядка |cffffffff34|cffced4da сек., расход маны: |cffffffff85|cffced4da|n"
+                "- |cffffffff4|cffced4da: радиус |cffffffff325|cffced4da, перезарядка |cffffffff31|cffced4da сек., расход маны: |cffffffff90|cffced4da.|r"
+            ),
+            "tip1": "|cffe4cfa3Шоковая граната|r [|cffffffff1-й уровень|r] (|cffffffffQ|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает шоковую гранату в область радиусом |cffffffff250|cffced4da, не позволяя врагам атаковать и применять заклинания в течение |cffffffff9|cffced4da сек. (|cffffffff1|cffced4da сек. для героев).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Шоковая граната|r [|cffffffff2-й уровень|r] (|cffffffffQ|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает шоковую гранату в область радиусом |cffffffff275|cffced4da, не позволяя врагам атаковать и применять заклинания в течение |cffffffff9|cffced4da сек. (|cffffffff1|cffced4da сек. для героев).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Шоковая граната|r [|cffffffff3-й уровень|r] (|cffffffffQ|r)",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает шоковую гранату в область радиусом |cffffffff300|cffced4da, не позволяя врагам атаковать и применять заклинания в течение |cffffffff9|cffced4da сек. (|cffffffff1|cffced4da сек. для героев).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Шоковая граната|r [|cffffffff4-й уровень|r] (|cffffffffQ|r)",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает шоковую гранату в область радиусом |cffffffff325|cffced4da, не позволяя врагам атаковать и применять заклинания в течение |cffffffff9|cffced4da сек. (|cffffffff1|cffced4da сек. для героев).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "A0D5",
+        "hero_id": "H0BD",
+        "name": "|cffe4cfa3Осколочная граната|r",
+        "hotkey": "W",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Осколочная граната|r",
+            "researchtip": "Изучить «|cffe4cfa3Осколочная граната|r» [|cffffffff%d-й уровень|r] (|cffffffffW|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает осколочную гранату в указанную область, нанося взрывной урон наземным войскам противника.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff40|cffced4da ед. урона, радиус |cffffffff200|cffced4da, расход маны: |cffffffff70|cffced4da|n"
+                "- |cffffffff2|cffced4da: |cffffffff60|cffced4da ед. урона, радиус |cffffffff225|cffced4da, расход маны: |cffffffff80|cffced4da|n"
+                "- |cffffffff3|cffced4da: |cffffffff80|cffced4da ед. урона, радиус |cffffffff250|cffced4da, расход маны: |cffffffff95|cffced4da|n"
+                "- |cffffffff4|cffced4da: |cffffffff100|cffced4da ед. урона, радиус |cffffffff275|cffced4da, расход маны: |cffffffff115|cffced4da.|r"
+            ),
+            "tip1": "|cffe4cfa3Осколочная граната|r [|cffffffff1-й уровень|r] (|cffffffffW|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает осколочную гранату в область радиусом |cffffffff200|cffced4da, наносящую |cffffffff40|cffced4da ед. урона противникам.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Осколочная граната|r [|cffffffff2-й уровень|r] (|cffffffffW|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает осколочную гранату в область радиусом |cffffffff225|cffced4da, наносящую |cffffffff60|cffced4da ед. урона противникам.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Осколочная граната|r [|cffffffff3-й уровень|r] (|cffffffffW|r)",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает осколочную гранату в область радиусом |cffffffff250|cffced4da, наносящую |cffffffff80|cffced4da ед. урона противникам.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Осколочная граната|r [|cffffffff4-й уровень|r] (|cffffffffW|r)",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает осколочную гранату в область радиусом |cffffffff275|cffced4da, наносящую |cffffffff100|cffced4da ед. урона противникам.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "AEar",
+        "hero_id": "H0BD",
+        "name": "|cffe4cfa3Аура меткости|r",
+        "hotkey": "E",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Аура меткости|r",
+            "researchtip": "Изучить «|cffe4cfa3Аура меткости|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак всех находящихся рядом союзников.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff+10%|cffced4da к урону|n"
+                "- |cffffffff2|cffced4da: |cffffffff+20%|cffced4da к урону|n"
+                "- |cffffffff3|cffced4da: |cffffffff+30%|cffced4da к урону|n"
+                "- |cffffffff4|cffced4da: |cffffffff+40%|cffced4da к урону.|r"
+            ),
+            "tip1": "|cffe4cfa3Аура меткости|r [|cffffffff1-й уровень|r]",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак находящихся рядом союзников на |cffffffff10%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Аура меткости|r [|cffffffff2-й уровень|r]",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак находящихся рядом союзников на |cffffffff20%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Аура меткости|r [|cffffffff3-й уровень|r]",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак находящихся рядом союзников на |cffffffff30%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Аура меткости|r [|cffffffff4-й уровень|r]",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак находящихся рядом союзников на |cffffffff40%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "A0D7",
+        "hero_id": "H0BD",
+        "name": "|cffe4cfa3Артобстрел|r",
+        "hotkey": "R",
+        "levels": 2,
+        "values": {
+            "name": "|cffe4cfa3Артобстрел|r",
+            "researchtip": "Изучить «|cffe4cfa3Артобстрел|r» [|cffffffff%d-й уровень|r] (|cffffffffR|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на указанную область шквал ракетных залпов, наносящих урон по площади.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff10|cffced4da волн по |cffffffff15|cffced4da ед. урона, расход маны: |cffffffff125|cffced4da, перезарядка |cffffffff105|cffced4da сек.|n"
+                "- |cffffffff2|cffced4da: |cffffffff10|cffced4da волн по |cffffffff25|cffced4da ед. урона, расход маны: |cffffffff150|cffced4da, перезарядка |cffffffff90|cffced4da сек.|r"
+            ),
+            "tip1": "|cffe4cfa3Артобстрел|r [|cffffffff1-й уровень|r] (|cffffffffR|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на указанную область |cffffffff10|cffced4da волн ракет, каждая из которых наносит |cffffffff15|cffced4da ед. урона.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+            "tip2": "|cffe4cfa3Артобстрел|r [|cffffffff2-й уровень|r] (|cffffffffR|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на указанную область |cffffffff10|cffced4da волн ракет, каждая из которых наносит |cffffffff25|cffced4da ед. урона.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+        }
+    },
+
+    # ==========================================
+    # HERO: Galh Алхимик
+    # ==========================================
+    {
+        "id": "ANhs",
+        "hero_id": "Galh",
+        "name": "|cffe4cfa3Исцеляющий газ|r",
+        "hotkey": "Q",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Исцеляющий газ|r",
+            "researchtip": "Изучить «|cffe4cfa3Исцеляющий газ|r» [|cffffffff%d-й уровень|r] (|cffffffffQ|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Распыляет струю целебного газа, восполняющего здоровье союзным войскам в указанной области.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: до |cffffffff6|cffced4da волн по |cffffffff30|cffced4da ед. здоровья|n"
+                "- |cffffffff2|cffced4da: до |cffffffff6|cffced4da волн по |cffffffff65|cffced4da ед. здоровья|n"
+                "- |cffffffff3|cffced4da: до |cffffffff6|cffced4da волн по |cffffffff90|cffced4da ед. здоровья|n"
+                "- |cffffffff4|cffced4da: до |cffffffff6|cffced4da волн по |cffffffff115|cffced4da ед. здоровья.|r"
+            ),
+            "tip1": "|cffe4cfa3Исцеляющий газ|r [|cffffffff1-й уровень|r] (|cffffffffQ|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт до |cffffffff6|cffced4da облаков исцеляющего газа. Каждое облако восстанавливает |cffffffff30|cffced4da ед. здоровья союзникам в области действия (суммарно до |cffffffff500|cffced4da ед.).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Исцеляющий газ|r [|cffffffff2-й уровень|r] (|cffffffffQ|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт до |cffffffff6|cffced4da облаков исцеляющего газа. Каждое облако восстанавливает |cffffffff65|cffced4da ед. здоровья союзникам в области действия (суммарно до |cffffffff1000|cffced4da ед.).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Исцеляющий газ|r [|cffffffff3-й уровень|r] (|cffffffffQ|r)",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт до |cffffffff6|cffced4da облаков исцеляющего газа. Каждое облако восстанавливает |cffffffff90|cffced4da ед. здоровья союзникам в области действия (суммарно до |cffffffff1500|cffced4da ед.).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Исцеляющий газ|r [|cffffffff4-й уровень|r] (|cffffffffQ|r)",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Создаёт до |cffffffff6|cffced4da облаков исцеляющего газа. Каждое облако восстанавливает |cffffffff115|cffced4da ед. здоровья союзникам в области действия (суммарно до |cffffffff2000|cffced4da ед.).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "ANcr",
+        "hero_id": "Galh",
+        "name": "|cffe4cfa3Эликсир ярости|r",
+        "hotkey": "W",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Эликсир ярости|r",
+            "researchtip": "Изучить «|cffe4cfa3Эликсир ярости|r» [|cffffffff%d-й уровень|r] (|cffffffffW|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Алхимик поит огра химическим эликсиром, увеличивающим скорость передвижения на |cffffffff50%|cffced4da и значительно ускоряющим его атаку на |cffffffff15|cffced4da сек.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff+25%|cffced4da к скорости атаки|n"
+                "- |cffffffff2|cffced4da: |cffffffff+75%|cffced4da к скорости атаки|n"
+                "- |cffffffff3|cffced4da: |cffffffff+125%|cffced4da к скорости атаки|n"
+                "- |cffffffff4|cffced4da: |cffffffff+150%|cffced4da к скорости атаки, перезарядка |cffffffff20|cffced4da сек.|r"
+            ),
+            "tip1": "|cffe4cfa3Эликсир ярости|r [|cffffffff1-й уровень|r] (|cffffffffW|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения огра на |cffffffff50%|cffced4da и скорость атаки на |cffffffff25%|cffced4da на |cffffffff15|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Эликсир ярости|r [|cffffffff2-й уровень|r] (|cffffffffW|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения огра на |cffffffff50%|cffced4da и скорость атаки на |cffffffff75%|cffced4da на |cffffffff15|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Эликсир ярости|r [|cffffffff3-й уровень|r] (|cffffffffW|r)",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения огра на |cffffffff50%|cffced4da и скорость атаки на |cffffffff125%|cffced4da на |cffffffff15|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Эликсир ярости|r [|cffffffff4-й уровень|r] (|cffffffffW|r)",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Увеличивает скорость передвижения огра на |cffffffff50%|cffced4da и скорость атаки на |cffffffff150%|cffced4da на |cffffffff15|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "ANab",
+        "hero_id": "Galh",
+        "name": "|cffe4cfa3Кислотная бомба|r",
+        "hotkey": "E",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Кислотная бомба|r",
+            "researchtip": "Изучить «|cffe4cfa3Кислотная бомба|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Бросает во врага сосуд с едкой кислотой, которая разъедает броню цели и окружающих врагов, а также наносит им периодический урон в течение |cffffffff15|cffced4da сек.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff-4|cffced4da к броне, |cffffffff5|cffced4da ед. урона/сек. (|cffffffff3|cffced4da ед. по области)|n"
+                "- |cffffffff2|cffced4da: |cffffffff-5|cffced4da к броне, |cffffffff10|cffced4da ед. урона/сек. (|cffffffff6|cffced4da ед. по области)|n"
+                "- |cffffffff3|cffced4da: |cffffffff-6|cffced4da к броне, |cffffffff17|cffced4da ед. урона/сек. (|cffffffff11|cffced4da ед. по области)|n"
+                "- |cffffffff4|cffced4da: |cffffffff-7|cffced4da к броне, |cffffffff20|cffced4da ед. урона/сек. (|cffffffff13|cffced4da ед. по области).|r"
+            ),
+            "tip1": "|cffe4cfa3Кислотная бомба|r [|cffffffff1-й уровень|r] (|cffffffffE|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цель и ближайших врагов кислотой на |cffffffff15|cffced4da сек., снижая броню на |cffffffff4|cffced4da ед. и нанося |cffffffff5|cffced4da ед. урона/сек. основной цели (|cffffffff3|cffced4da ед./сек. дополнительным целям).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Кислотная бомба|r [|cffffffff2-й уровень|r] (|cffffffffE|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цель и ближайших врагов кислотой на |cffffffff15|cffced4da сек., снижая броню на |cffffffff5|cffced4da ед. и нанося |cffffffff10|cffced4da ед. урона/сек. основной цели (|cffffffff6|cffced4da ед./сек. дополнительным целям).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Кислотная бомба|r [|cffffffff3-й уровень|r] (|cffffffffE|r)",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цель и ближайших врагов кислотой на |cffffffff15|cffced4da сек., снижая броню на |cffffffff6|cffced4da ед. и нанося |cffffffff17|cffced4da ед. урона/сек. основной цели (|cffffffff11|cffced4da ед./сек. дополнительным целям).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Кислотная бомба|r [|cffffffff4-й уровень|r] (|cffffffffE|r)",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Поражает цель и ближайших врагов кислотой на |cffffffff15|cffced4da сек., снижая броню на |cffffffff7|cffced4da ед. и нанося |cffffffff20|cffced4da ед. урона/сек. основной цели (|cffffffff13|cffced4da ед./сек. дополнительным целям).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "ANtm",
+        "hero_id": "Galh",
+        "name": "|cffe4cfa3Трансмутация|r",
+        "hotkey": "R",
+        "levels": 2,
+        "values": {
+            "name": "|cffe4cfa3Трансмутация|r",
+            "researchtip": "Изучить «|cffe4cfa3Трансмутация|r» [|cffffffff%d-й уровень|r] (|cffffffffR|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно превращает существо в чистое золото, уничтожая его и пополняя казну в размере стоимости создания цели. Не действует на героев и монстров выше |cffffffff6-го|cffced4da уровня.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: даёт |cffffffff500%|cffced4da золота от стоимости цели, расход маны: |cffffffff150|cffced4da|n"
+                "- |cffffffff2|cffced4da: даёт |cffffffff1000%|cffced4da золота от стоимости цели, расход маны: |cffffffff200|cffced4da.|r"
+            ),
+            "tip1": "|cffe4cfa3Трансмутация|r [|cffffffff1-й уровень|r] (|cffffffffR|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно уничтожает указанное существо, превращая его в золото (|cffffffff500%|cffced4da от стоимости цели). Не действует на героев и монстров выше |cffffffff6-го|cffced4da уровня.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+            "tip2": "|cffe4cfa3Трансмутация|r [|cffffffff2-й уровень|r] (|cffffffffR|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно уничтожает указанное существо, превращая его в золото (|cffffffff1000%|cffced4da от стоимости цели). Не действует на героев и монстров выше |cffffffff6-го|cffced4da уровня.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+        }
+    },
+
+    # ==========================================
+    # HERO: Gmex Механик
+    # ==========================================
+    {
+        "id": "ANsy",
+        "hero_id": "Gmex",
+        "name": "|cffe4cfa3Портативная фабрика|r",
+        "hotkey": "Q",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Портативная фабрика|r",
+            "researchtip": "Изучить «|cffe4cfa3Портативная фабрика|r» [|cffffffff%d-й уровень|r] (|cffffffffQ|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Устанавливает портативную фабрику на |cffffffff40|cffced4da сек., которая каждые |cffffffff4|cffced4da сек. собирает боевого заводного гоблина. "
+                "При гибели заводные гоблины взрываются, нанося урон окружающим врагам.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: взрыв гоблина наносит |cffffffff30|cffced4da ед. урона|n"
+                "- |cffffffff2|cffced4da: взрыв гоблина наносит |cffffffff60|cffced4da ед. урона|n"
+                "- |cffffffff3|cffced4da: взрыв гоблина наносит |cffffffff80|cffced4da ед. урона|n"
+                "- |cffffffff4|cffced4da: взрыв гоблина наносит |cffffffff100|cffced4da ед. урона.|r"
+            ),
+            "tip1": "|cffe4cfa3Портативная фабрика|r [|cffffffff1-й уровень|r] (|cffffffffQ|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Размещает фабрику на |cffffffff40|cffced4da сек., производящую заводных гоблинов каждые |cffffffff4|cffced4da сек. Заводные гоблины имеют |cffffffff80|cffced4da ед. здоровья, наносят |cffffffff12-14|cffced4da ед. урона и взрываются при гибели, нанося |cffffffff30|cffced4da ед. урона врагам вокруг.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Портативная фабрика|r [|cffffffff2-й уровень|r] (|cffffffffQ|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Размещает фабрику на |cffffffff40|cffced4da сек., производящую заводных гоблинов каждые |cffffffff4|cffced4da сек. Заводные гоблины имеют |cffffffff80|cffced4da ед. здоровья, наносят |cffffffff12-14|cffced4da ед. урона и взрываются при гибели, нанося |cffffffff60|cffced4da ед. урона врагам вокруг.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Портативная фабрика|r [|cffffffff3-й уровень|r] (|cffffffffQ|r)",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Размещает фабрику на |cffffffff40|cffced4da сек., производящую заводных гоблинов каждые |cffffffff4|cffced4da сек. Заводные гоблины имеют |cffffffff80|cffced4da ед. здоровья, наносят |cffffffff12-14|cffced4da ед. урона и взрываются при гибели, нанося |cffffffff80|cffced4da ед. урона врагам вокруг.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Портативная фабрика|r [|cffffffff4-й уровень|r] (|cffffffffQ|r)",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Размещает фабрику на |cffffffff40|cffced4da сек., производящую заводных гоблинов каждые |cffffffff4|cffced4da сек. Заводные гоблины имеют |cffffffff80|cffced4da ед. здоровья, наносят |cffffffff12-14|cffced4da ед. урона и взрываются при гибели, нанося |cffffffff100|cffced4da ед. урона врагам вокруг.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "ANcs",
+        "hero_id": "Gmex",
+        "name": "|cffe4cfa3Кассетные ракеты|r",
+        "hotkey": "W",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Кассетные ракеты|r",
+            "researchtip": "Изучить «|cffe4cfa3Кассетные ракеты|r» [|cffffffff%d-й уровень|r] (|cffffffffW|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает указанную область градом мелких ракет, нанося урон наземным войскам, механизмам и зданиям противника, а также оглушая их на |cffffffff1|cffced4da сек.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: до |cffffffff45|cffced4da ед. урона|n"
+                "- |cffffffff2|cffced4da: до |cffffffff75|cffced4da ед. урона|n"
+                "- |cffffffff3|cffced4da: до |cffffffff110|cffced4da ед. урона|n"
+                "- |cffffffff4|cffced4da: до |cffffffff150|cffced4da ед. урона.|r"
+            ),
+            "tip1": "|cffe4cfa3Кассетные ракеты|r [|cffffffff1-й уровень|r] (|cffffffffW|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает выбранную область кассетными ракетами, нанося до |cffffffff45|cffced4da ед. урона наземным войскам, технике и зданиям, а также оглушая цели на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Кассетные ракеты|r [|cffffffff2-й уровень|r] (|cffffffffW|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает выбранную область кассетными ракетами, нанося до |cffffffff75|cffced4da ед. урона наземным войскам, технике и зданиям, а также оглушая цели на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Кассетные ракеты|r [|cffffffff3-й уровень|r] (|cffffffffW|r)",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает выбранную область кассетными ракетами, нанося до |cffffffff110|cffced4da ед. урона наземным войскам, технике и зданиям, а также оглушая цели на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Кассетные ракеты|r [|cffffffff4-й уровень|r] (|cffffffffW|r)",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обстреливает выбранную область кассетными ракетами, нанося до |cffffffff150|cffced4da ед. урона наземным войскам, технике и зданиям, а также оглушая цели на |cffffffff1|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "ANeg",
+        "hero_id": "Gmex",
+        "name": "|cffe4cfa3Улучшенная инженерия|r",
+        "hotkey": "E",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Улучшенная инженерия|r",
+            "researchtip": "Изучить «|cffe4cfa3Улучшенная инженерия|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно усиливает способности механика, а также увеличивает его урон от атак и скорость передвижения.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff+2|cffced4da к урону, |cffffffff+10%|cffced4da к скорости передвижения|n"
+                "- |cffffffff2|cffced4da: |cffffffff+4|cffced4da к урону, |cffffffff+20%|cffced4da к скорости передвижения|n"
+                "- |cffffffff3|cffced4da: |cffffffff+6|cffced4da к урону, |cffffffff+30%|cffced4da к скорости передвижения|n"
+                "- |cffffffff4|cffced4da: |cffffffff+9|cffced4da к урону, |cffffffff+30%|cffced4da к скорости передвижения.|r"
+            ),
+            "tip1": "|cffe4cfa3Улучшенная инженерия|r [|cffffffff1-й уровень|r]",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно улучшает портативную фабрику, ракеты и робогоблина механика, а также даёт |cffffffff+2|cffced4da к урону от атак и |cffffffff+10%|cffced4da к скорости передвижения.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Улучшенная инженерия|r [|cffffffff2-й уровень|r]",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно улучшает портативную фабрику, ракеты и робогоблина механика, а также даёт |cffffffff+4|cffced4da к урону от атак и |cffffffff+20%|cffced4da к скорости передвижения.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Улучшенная инженерия|r [|cffffffff3-й уровень|r]",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно улучшает портативную фабрику, ракеты и робогоблина механика, а также даёт |cffffffff+6|cffced4da к урону от атак и |cffffffff+30%|cffced4da к скорости передвижения.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Улучшенная инженерия|r [|cffffffff4-й уровень|r]",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно улучшает портативную фабрику, ракеты и робогоблина механика, а также даёт |cffffffff+9|cffced4da к урону от атак и |cffffffff+30%|cffced4da к скорости передвижения.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "ANrg",
+        "hero_id": "Gmex",
+        "name": "|cffe4cfa3Робогоблин|r",
+        "hotkey": "R",
+        "levels": 2,
+        "values": {
+            "name": "|cffe4cfa3Робогоблин|r",
+            "researchtip": "Изучить «|cffe4cfa3Робогоблин|r» [|cffffffff%d-й уровень|r] (|cffffffffR|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Механик трансформируется в тяжелобронированного робогоблина, становясь техникой и получая сопротивление магии и эффектам контроля, "
+                "способность «Разгром» против зданий, а также бонусы к силе и броне.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff+5|cffced4da к силе, |cffffffff+5|cffced4da к броне|n"
+                "- |cffffffff2|cffced4da: |cffffffff+7|cffced4da к силе, |cffffffff+10|cffced4da к броне.|r"
+            ),
+            "tip1": "|cffe4cfa3Робогоблин|r [|cffffffff1-й уровень|r] (|cffffffffR|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает механика в робогоблина: тип защиты меняется на технику, дарует невосприимчивость ко многим заклинаниям, способность «Разгром» по зданиям, |cffffffff+5|cffced4da к силе и |cffffffff+5|cffced4da к броне.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+            "tip2": "|cffe4cfa3Робогоблин|r [|cffffffff2-й уровень|r] (|cffffffffR|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Превращает механика в робогоблина: тип защиты меняется на технику, дарует невосприимчивость ко многим заклинаниям, способность «Разгром» по зданиям, |cffffffff+7|cffced4da к силе и |cffffffff+10|cffced4da к броне.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+        }
+    },
+
+    # ==========================================
+    # HERO: N018 Шеф Кабестана Газлоу
+    # ==========================================
+    {
+        "id": "A0DK",
+        "hero_id": "N018",
+        "name": "|cffe4cfa3Самодельная турель|r",
+        "hotkey": "Q",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Самодельная турель|r",
+            "researchtip": "Изучить «|cffe4cfa3Самодельная турель|r» [|cffffffff%d-й уровень|r] (|cffffffffQ|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Устанавливает автоматическую боевую турель, непрерывно обстреливающую наземных и воздушных противников.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff1|cffced4da турель на |cffffffff40|cffced4da сек., дальность |cffffffff500|cffced4da, расход маны: |cffffffff30|cffced4da|n"
+                "- |cffffffff2|cffced4da: |cffffffff1|cffced4da турель на |cffffffff50|cffced4da сек., дальность |cffffffff600|cffced4da, расход маны: |cffffffff45|cffced4da|n"
+                "- |cffffffff3|cffced4da: |cffffffff1|cffced4da турель на |cffffffff60|cffced4da сек., дальность |cffffffff700|cffced4da, расход маны: |cffffffff60|cffced4da|n"
+                "- |cffffffff4|cffced4da: |cffffffff2|cffced4da турели на |cffffffff70|cffced4da сек., дальность |cffffffff800|cffced4da, расход маны: |cffffffff75|cffced4da.|r"
+            ),
+            "tip1": "|cffe4cfa3Самодельная турель|r [|cffffffff1-й уровень|r] (|cffffffffQ|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Устанавливает |cffa9c7deсамодельную турель|cffced4da (|cffffffff650|cffced4da ед. здоровья, |cffffffff46-55|cffced4da ед. урона) на |cffffffff40|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Самодельная турель|r [|cffffffff2-й уровень|r] (|cffffffffQ|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Устанавливает |cffa9c7deсамодельную турель|cffced4da (|cffffffff650|cffced4da ед. здоровья, |cffffffff46-55|cffced4da ед. урона) на |cffffffff50|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Самодельная турель|r [|cffffffff3-й уровень|r] (|cffffffffQ|r)",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Устанавливает |cffa9c7deсамодельную турель|cffced4da (|cffffffff650|cffced4da ед. здоровья, |cffffffff46-55|cffced4da ед. урона) на |cffffffff60|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Самодельная турель|r [|cffffffff4-й уровень|r] (|cffffffffQ|r)",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Устанавливает |cffffffff2|cffced4da |cffa9c7deсамодельные турели|cffced4da (|cffffffff650|cffced4da ед. здоровья, |cffffffff46-55|cffced4da ед. урона) на |cffffffff70|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "A0DL",
+        "hero_id": "N018",
+        "name": "|cffe4cfa3Бочка-взрывучка|r",
+        "hotkey": "W",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Бочка-взрывучка|r",
+            "researchtip": "Изучить «|cffe4cfa3Бочка-взрывучка|r» [|cffffffff%d-й уровень|r] (|cffffffffW|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Устанавливает бочку с мощной взрывчаткой, которая детонирует через |cffffffff3|cffced4da сек. "
+                "и наносит сокрушительный урон противникам по площади.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff1|cffced4da бочка, |cffffffff150|cffced4da ед. урона, расход маны: |cffffffff250|cffced4da|n"
+                "- |cffffffff2|cffced4da: |cffffffff1|cffced4da бочка, |cffffffff200|cffced4da ед. урона, расход маны: |cffffffff300|cffced4da|n"
+                "- |cffffffff3|cffced4da: |cffffffff1|cffced4da бочка, |cffffffff250|cffced4da ед. урона, расход маны: |cffffffff350|cffced4da|n"
+                "- |cffffffff4|cffced4da: |cffffffff2|cffced4da бочки, по |cffffffff300|cffced4da ед. урона, расход маны: |cffffffff400|cffced4da.|r"
+            ),
+            "tip1": "|cffe4cfa3Бочка-взрывучка|r [|cffffffff1-й уровень|r] (|cffffffffW|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Устанавливает бочку с порохом, которая взрывается через |cffffffff3|cffced4da сек., нанося |cffffffff150|cffced4da ед. урона врагам по площади.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Бочка-взрывучка|r [|cffffffff2-й уровень|r] (|cffffffffW|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Устанавливает бочку с порохом, которая взрывается через |cffffffff3|cffced4da сек., нанося |cffffffff200|cffced4da ед. урона врагам по площади.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Бочка-взрывучка|r [|cffffffff3-й уровень|r] (|cffffffffW|r)",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Устанавливает бочку с порохом, которая взрывается через |cffffffff3|cffced4da сек., нанося |cffffffff250|cffced4da ед. урона врагам по площади.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Бочка-взрывучка|r [|cffffffff4-й уровень|r] (|cffffffffW|r)",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Устанавливает |cffffffff2|cffced4da бочки с порохом, которые взрываются через |cffffffff3|cffced4da сек., нанося по |cffffffff300|cffced4da ед. урона врагам по площади.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "A1KK",
+        "hero_id": "N018",
+        "name": "|cffe4cfa3Разряд!|r",
+        "hotkey": "E",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Разряд!|r",
+            "researchtip": "Изучить «|cffe4cfa3Разряд!|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает мощный электрический разряд по прямой линии на расстояние до |cffffffff900|cffced4da, наносящий урон всем врагам на пути. "
+                "Пассивно: часть любого нанесённого героем урона восстанавливает его здоровье.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff125|cffced4da ед. урона, исцеление |cffffffff1%|cffced4da, расход маны: |cffffffff130|cffced4da, перезарядка |cffffffff16|cffced4da сек.|n"
+                "- |cffffffff2|cffced4da: |cffffffff175|cffced4da ед. урона, исцеление |cffffffff2%|cffced4da, расход маны: |cffffffff110|cffced4da, перезарядка |cffffffff14|cffced4da сек.|n"
+                "- |cffffffff3|cffced4da: |cffffffff225|cffced4da ед. урона, исцеление |cffffffff3%|cffced4da, расход маны: |cffffffff95|cffced4da, перезарядка |cffffffff12|cffced4da сек.|n"
+                "- |cffffffff4|cffced4da: |cffffffff275|cffced4da ед. урона, исцеление |cffffffff4%|cffced4da, расход маны: |cffffffff85|cffced4da, перезарядка |cffffffff10|cffced4da сек.|r"
+            ),
+            "tip1": "|cffe4cfa3Разряд!|r [|cffffffff1-й уровень|r] (|cffffffffE|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает электрическую дугу на расстояние до |cffffffff900|cffced4da, наносящую |cffffffff125|cffced4da ед. урона врагам на пути. Пассивно: герой восстанавливает здоровье в размере |cffffffff1%|cffced4da от любого нанесённого им урона.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Разряд!|r [|cffffffff2-й уровень|r] (|cffffffffE|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает электрическую дугу на расстояние до |cffffffff900|cffced4da, наносящую |cffffffff175|cffced4da ед. урона врагам на пути. Пассивно: герой восстанавливает здоровье в размере |cffffffff2%|cffced4da от любого нанесённого им урона.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Разряд!|r [|cffffffff3-й уровень|r] (|cffffffffE|r)",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает электрическую дугу на расстояние до |cffffffff900|cffced4da, наносящую |cffffffff225|cffced4da ед. урона врагам на пути. Пассивно: герой восстанавливает здоровье в размере |cffffffff3%|cffced4da от любого нанесённого им урона.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Разряд!|r [|cffffffff4-й уровень|r] (|cffffffffE|r)",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает электрическую дугу на расстояние до |cffffffff900|cffced4da, наносящую |cffffffff275|cffced4da ед. урона врагам на пути. Пассивно: герой восстанавливает здоровье в размере |cffffffff4%|cffced4da от любого нанесённого им урона.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "A0DR",
+        "hero_id": "N018",
+        "name": "|cffe4cfa3Поле саморемонта|r",
+        "hotkey": "R",
+        "levels": 2,
+        "values": {
+            "name": "|cffe4cfa3Поле саморемонта|r",
+            "researchtip": "Изучить «|cffe4cfa3Поле саморемонта|r» [|cffffffff%d-й уровень|r] (|cffffffffR|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно окружает героя излучением наноремонта, ускоряющим передвижение и восстанавливающим здоровье союзным механизмам поблизости.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff+15%|cffced4da к скорости передвижения, |cffffffff+2|cffced4da ед. здоровья/сек.|n"
+                "- |cffffffff2|cffced4da: |cffffffff+15%|cffced4da к скорости передвижения, |cffffffff+4|cffced4da ед. здоровья/сек.|r"
+            ),
+            "tip1": "|cffe4cfa3Поле саморемонта|r [|cffffffff1-й уровень|r]",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает скорость передвижения союзных механизмов поблизости на |cffffffff15%|cffced4da и восстанавливает им |cffffffff2|cffced4da ед. здоровья в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+            "tip2": "|cffe4cfa3Поле саморемонта|r [|cffffffff2-й уровень|r]",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает скорость передвижения союзных механизмов поблизости на |cffffffff15%|cffced4da и восстанавливает им |cffffffff4|cffced4da ед. здоровья в секунду.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+        }
+    },
+
+    # ==========================================
+    # HERO: N019 Мастер осады Хеликс Черноплавс
+    # ==========================================
+    {
+        "id": "A0DU",
+        "hero_id": "N019",
+        "name": "|cffe4cfa3Взрыв|r",
+        "hotkey": "Q",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Взрыв|r",
+            "researchtip": "Изучить «|cffe4cfa3Взрыв|r» [|cffffffff%d-й уровень|r] (|cffffffffQ|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Выпускает тяжёлую ракету в цель, нанося урон цели и взрывной урон по области, "
+                "а также замедляя скорость передвижения и атаки врагов на время.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff100|cffced4da ед. цели, |cffffffff75|cffced4da ед. по области, замедление |cffffffff4|cffced4da сек., расход маны: |cffffffff125|cffced4da|n"
+                "- |cffffffff2|cffced4da: |cffffffff100|cffced4da ед. цели, |cffffffff130|cffced4da ед. по области, замедление |cffffffff5|cffced4da сек., расход маны: |cffffffff140|cffced4da|n"
+                "- |cffffffff3|cffced4da: |cffffffff100|cffced4da ед. цели, |cffffffff185|cffced4da ед. по области, замедление |cffffffff6|cffced4da сек., расход маны: |cffffffff155|cffced4da|n"
+                "- |cffffffff4|cffced4da: |cffffffff100|cffced4da ед. цели, |cffffffff240|cffced4da ед. по области, замедление |cffffffff8|cffced4da сек., расход маны: |cffffffff170|cffced4da.|r"
+            ),
+            "tip1": "|cffe4cfa3Взрыв|r [|cffffffff1-й уровень|r] (|cffffffffQ|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит цели |cffffffff100|cffced4da ед. урона и |cffffffff75|cffced4da ед. урона врагам поблизости, снижая их скорость передвижения и атаки на |cffffffff4|cffced4da сек. (|cffffffff2|cffced4da сек. для героев).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Взрыв|r [|cffffffff2-й уровень|r] (|cffffffffQ|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит цели |cffffffff100|cffced4da ед. урона и |cffffffff130|cffced4da ед. урона врагам поблизости, снижая их скорость передвижения и атаки на |cffffffff5|cffced4da сек. (|cffffffff2,5|cffced4da сек. для героев).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Взрыв|r [|cffffffff3-й уровень|r] (|cffffffffQ|r)",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит цели |cffffffff100|cffced4da ед. урона и |cffffffff185|cffced4da ед. урона врагам поблизости, снижая их скорость передвижения и атаки на |cffffffff6|cffced4da сек. (|cffffffff3|cffced4da сек. для героев).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Взрыв|r [|cffffffff4-й уровень|r] (|cffffffffQ|r)",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Наносит цели |cffffffff100|cffced4da ед. урона и |cffffffff240|cffced4da ед. урона врагам поблизости, снижая их скорость передвижения и атаки на |cffffffff8|cffced4da сек. (|cffffffff4|cffced4da сек. для героев).|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "A1N0",
+        "hero_id": "N019",
+        "name": "|cffe4cfa3Портативный завод|r",
+        "hotkey": "W",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Портативный завод|r",
+            "researchtip": "Изучить «|cffe4cfa3Портативный завод|r» [|cffffffff%d-й уровень|r] (|cffffffffW|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Размещает автоматический завод на |cffffffff80|cffced4da сек., который каждые |cffffffff4|cffced4da сек. "
+                "производит катящиеся Железные звёзды, взрывающиеся во вражеском строю.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: перезарядка |cffffffff70|cffced4da сек.|n"
+                "- |cffffffff2|cffced4da: перезарядка |cffffffff60|cffced4da сек.|n"
+                "- |cffffffff3|cffced4da: перезарядка |cffffffff50|cffced4da сек.|n"
+                "- |cffffffff4|cffced4da: перезарядка |cffffffff40|cffced4da сек.|r"
+            ),
+            "tip1": "|cffe4cfa3Портативный завод|r [|cffffffff1-й уровень|r] (|cffffffffW|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Размещает мини-завод на |cffffffff80|cffced4da сек., собирающий каждые |cffffffff4|cffced4da сек. Железные звёзды (|cffffffff400|cffced4da ед. здоровья), взрывающиеся при контакте с противником.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Портативный завод|r [|cffffffff2-й уровень|r] (|cffffffffW|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Размещает мини-завод на |cffffffff80|cffced4da сек., собирающий каждые |cffffffff4|cffced4da сек. Железные звёзды (|cffffffff400|cffced4da ед. здоровья), взрывающиеся при контакте с противником.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Портативный завод|r [|cffffffff3-й уровень|r] (|cffffffffW|r)",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Размещает мини-завод на |cffffffff80|cffced4da сек., собирающий каждые |cffffffff4|cffced4da сек. Железные звёзды (|cffffffff400|cffced4da ед. здоровья), взрывающиеся при контакте с противником.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Портативный завод|r [|cffffffff4-й уровень|r] (|cffffffffW|r)",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Размещает мини-завод на |cffffffff80|cffced4da сек., собирающий каждые |cffffffff4|cffced4da сек. Железные звёзды (|cffffffff400|cffced4da ед. здоровья), взрывающиеся при контакте с противником.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "A1N3",
+        "hero_id": "N019",
+        "name": "|cffe4cfa3Ракетопад|r",
+        "hotkey": "E",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Ракетопад|r",
+            "researchtip": "Изучить «|cffe4cfa3Ракетопад|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на выбранную область волны осколочных ракет, наносящих урон всем вражеским войскам по площади.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff5|cffced4da волн по |cffffffff25|cffced4da ед. урона|n"
+                "- |cffffffff2|cffced4da: |cffffffff5|cffced4da волн по |cffffffff35|cffced4da ед. урона|n"
+                "- |cffffffff3|cffced4da: |cffffffff5|cffced4da волн по |cffffffff45|cffced4da ед. урона|n"
+                "- |cffffffff4|cffced4da: |cffffffff5|cffced4da волн по |cffffffff55|cffced4da ед. урона.|r"
+            ),
+            "tip1": "|cffe4cfa3Ракетопад|r [|cffffffff1-й уровень|r] (|cffffffffE|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на указанную область |cffffffff5|cffced4da волн ракет, каждая из которых наносит |cffffffff25|cffced4da ед. урона врагам в зоне действия.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Ракетопад|r [|cffffffff2-й уровень|r] (|cffffffffE|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на указанную область |cffffffff5|cffced4da волн ракет, каждая из которых наносит |cffffffff35|cffced4da ед. урона врагам в зоне действия.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Ракетопад|r [|cffffffff3-й уровень|r] (|cffffffffE|r)",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на указанную область |cffffffff5|cffced4da волн ракет, каждая из которых наносит |cffffffff45|cffced4da ед. урона врагам в зоне действия.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Ракетопад|r [|cffffffff4-й уровень|r] (|cffffffffE|r)",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает на указанную область |cffffffff5|cffced4da волн ракет, каждая из которых наносит |cffffffff55|cffced4da ед. урона врагам в зоне действия.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "A1N1",
+        "hero_id": "N019",
+        "name": "|cffe4cfa3Автоматический ракетомет|r",
+        "hotkey": "D",
+        "levels": 3,
+        "values": {
+            "name": "|cffe4cfa3Автоматический ракетомет|r",
+            "researchtip": "Изучить «|cffe4cfa3Автоматический ракетомет|r» [|cffffffff%d-й уровень|r] (|cffffffffD|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно производит автоматический отстрел управляемых ракет по случайным врагам поблизости каждые |cffffffff2|cffced4da сек.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff25|cffced4da ед. урона за ракету|n"
+                "- |cffffffff2|cffced4da: |cffffffff35|cffced4da ед. урона за ракету|n"
+                "- |cffffffff3|cffced4da: |cffffffff45|cffced4da ед. урона за ракету.|r"
+            ),
+            "tip1": "|cffe4cfa3Автоматический ракетомет|r [|cffffffff1-й уровень|r]",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно выпускает ракету в случайного врага поблизости каждые |cffffffff2|cffced4da сек., нанося |cffffffff25|cffced4da ед. урона.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/3|cffced4da.|r",
+            "tip2": "|cffe4cfa3Автоматический ракетомет|r [|cffffffff2-й уровень|r]",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно выпускает ракету в случайного врага поблизости каждые |cffffffff2|cffced4da сек., нанося |cffffffff35|cffced4da ед. урона.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/3|cffced4da.|r",
+            "tip3": "|cffe4cfa3Автоматический ракетомет|r [|cffffffff3-й уровень|r]",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно выпускает ракету в случайного врага поблизости каждые |cffffffff2|cffced4da сек., нанося |cffffffff45|cffced4da ед. урона.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/3|cffced4da.|r"
+        }
+    },
+    {
+        "id": "A1N4",
+        "hero_id": "N019",
+        "name": "|cffe4cfa3Перезагрузка|r",
+        "hotkey": "R",
+        "levels": 2,
+        "values": {
+            "name": "|cffe4cfa3Перезагрузка|r",
+            "researchtip": "Изучить «|cffe4cfa3Перезагрузка|r» [|cffffffff%d-й уровень|r] (|cffffffffR|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно обнуляет время перезарядки всех способностей героя, позволяя применить их повторно без задержки.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: перезарядка |cffffffff55|cffced4da сек., расход маны: |cffffffff150|cffced4da|n"
+                "- |cffffffff2|cffced4da: перезарядка |cffffffff40|cffced4da сек., расход маны: |cffffffff150|cffced4da.|r"
+            ),
+            "tip1": "|cffe4cfa3Перезагрузка|r [|cffffffff1-й уровень|r] (|cffffffffR|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно завершает восстановление всех остальных способностей мастера осады.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+            "tip2": "|cffe4cfa3Перезагрузка|r [|cffffffff2-й уровень|r] (|cffffffffR|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно завершает восстановление всех остальных способностей мастера осады.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+        }
+    },
+
+    # ==========================================
+    # HERO: N01A Торговый Принц Джастор Галливикс
+    # ==========================================
+    {
+        "id": "A13G",
+        "hero_id": "N01A",
+        "name": "|cffe4cfa3Призвать мехи|r",
+        "hotkey": "E",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Призвать мехи|r",
+            "researchtip": "Изучить «|cffe4cfa3Призвать мехи|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Вызывает на поле боя тяжелобронированных штурмовых боевых роботов ближнего боя.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: призывает |cffffffff1|cffced4da меха, расход маны: |cffffffff90|cffced4da, перезарядка |cffffffff50|cffced4da сек.|n"
+                "- |cffffffff2|cffced4da: призывает |cffffffff2|cffced4da меха, расход маны: |cffffffff100|cffced4da, перезарядка |cffffffff46|cffced4da сек.|n"
+                "- |cffffffff3|cffced4da: призывает |cffffffff3|cffced4da меха, расход маны: |cffffffff110|cffced4da, перезарядка |cffffffff42|cffced4da сек.|n"
+                "- |cffffffff4|cffced4da: призывает |cffffffff5|cffced4da мехов, расход маны: |cffffffff120|cffced4da, перезарядка |cffffffff38|cffced4da сек.|r"
+            ),
+            "tip1": "|cffe4cfa3Призвать мехи|r [|cffffffff1-й уровень|r] (|cffffffffE|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff1|cffced4da |cffa9c7deтяжёлого меха|cffced4da ближнего боя на поле боя.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Призвать мехи|r [|cffffffff2-й уровень|r] (|cffffffffE|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff2|cffced4da |cffa9c7deтяжёлых меха|cffced4da ближнего боя на поле боя.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Призвать мехи|r [|cffffffff3-й уровень|r] (|cffffffffE|r)",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff3|cffced4da |cffa9c7deтяжёлых меха|cffced4da ближнего боя на поле боя.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Призвать мехи|r [|cffffffff4-й уровень|r] (|cffffffffE|r)",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает |cffffffff5|cffced4da |cffa9c7deтяжёлых мехов|cffced4da ближнего боя на поле боя.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "A0E0",
+        "hero_id": "N01A",
+        "name": "|cffe4cfa3Разрывные пули|r",
+        "hotkey": "W",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Разрывные пули|r",
+            "researchtip": "Изучить «|cffe4cfa3Разрывные пули|r» [|cffffffff%d-й уровень|r] (|cffffffffW|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Заряжает пулемёт шагохода разрывными боеприпасами, даруя шанс нанести увеличенный урон при выстреле.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff12%|cffced4da шанс нанести |cffffffff1,25-кратный|cffced4da урон|n"
+                "- |cffffffff2|cffced4da: |cffffffff17%|cffced4da шанс нанести |cffffffff1,50-кратный|cffced4da урон|n"
+                "- |cffffffff3|cffced4da: |cffffffff22%|cffced4da шанс нанести |cffffffff1,75-кратный|cffced4da урон|n"
+                "- |cffffffff4|cffced4da: |cffffffff27%|cffced4da шанс нанести |cffffffff2,00-кратный|cffced4da урон.|r"
+            ),
+            "tip1": "|cffe4cfa3Разрывные пули|r [|cffffffff1-й уровень|r]",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно даёт |cffffffff12%|cffced4da шанс нанести |cffffffff1,25-кратный|cffced4da урон при выстреле.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Разрывные пули|r [|cffffffff2-й уровень|r]",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно даёт |cffffffff17%|cffced4da шанс нанести |cffffffff1,50-кратный|cffced4da урон при выстреле.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Разрывные пули|r [|cffffffff3-й уровень|r]",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно даёт |cffffffff22%|cffced4da шанс нанести |cffffffff1,75-кратный|cffced4da урон при выстреле.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Разрывные пули|r [|cffffffff4-й уровень|r]",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно даёт |cffffffff27%|cffced4da шанс нанести |cffffffff2,00-кратный|cffced4da урон при выстреле.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "A0E2",
+        "hero_id": "N01A",
+        "name": "|cffe4cfa3Аура пропаганды|r",
+        "hotkey": "E",
+        "levels": 4,
+        "values": {
+            "name": "|cffe4cfa3Аура пропаганды|r",
+            "researchtip": "Изучить «|cffe4cfa3Аура пропаганды|r» [|cffffffff%d-й уровень|r] (|cffffffffE|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно вдохновляет всех союзных бойцов поблизости речами о богатстве и успехе, повышая наносимый ими урон от всех атак.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff+5%|cffced4da к урону союзников|n"
+                "- |cffffffff2|cffced4da: |cffffffff+9%|cffced4da к урону союзников|n"
+                "- |cffffffff3|cffced4da: |cffffffff+13%|cffced4da к урону союзников|n"
+                "- |cffffffff4|cffced4da: |cffffffff+17%|cffced4da к урону союзников.|r"
+            ),
+            "tip1": "|cffe4cfa3Аура пропаганды|r [|cffffffff1-й уровень|r]",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от атак всех союзных существ поблизости на |cffffffff5%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/4|cffced4da.|r",
+            "tip2": "|cffe4cfa3Аура пропаганды|r [|cffffffff2-й уровень|r]",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от атак всех союзных существ поблизости на |cffffffff9%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/4|cffced4da.|r",
+            "tip3": "|cffe4cfa3Аура пропаганды|r [|cffffffff3-й уровень|r]",
+            "ubertip3": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от атак всех союзных существ поблизости на |cffffffff13%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff3/4|cffced4da.|r",
+            "tip4": "|cffe4cfa3Аура пропаганды|r [|cffffffff4-й уровень|r]",
+            "ubertip4": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от атак всех союзных существ поблизости на |cffffffff17%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r"
+        }
+    },
+    {
+        "id": "A0E1",
+        "hero_id": "N01A",
+        "name": "|cffe4cfa3Большая Красная Кнопка|r",
+        "hotkey": "R",
+        "levels": 2,
+        "values": {
+            "name": "|cffe4cfa3Большая Красная Кнопка|r",
+            "researchtip": "Изучить «|cffe4cfa3Большая Красная Кнопка|r» [|cffffffff%d-й уровень|r] (|cffffffffR|r)",
+            "researchubertip": (
+                "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Запускает крылатую ракету колоссальной разрушительной силы в указанную точку, "
+                "вызывая огненный шквал и выжигая всё живое и здания в области удара.|n|n"
+                "|cffa6afb8Уровни:|cffced4da|n"
+                "- |cffffffff1|cffced4da: |cffffffff60|cffced4da ед. урона/сек. (|cffffffff10|cffced4da ед. вторичного урона), радиус |cffffffff300|cffced4da|n"
+                "- |cffffffff2|cffced4da: |cffffffff85|cffced4da ед. урона/сек. (|cffffffff20|cffced4da ед. вторичного урона), радиус |cffffffff300|cffced4da.|r"
+            ),
+            "tip1": "|cffe4cfa3Большая Красная Кнопка|r [|cffffffff1-й уровень|r] (|cffffffffR|r)",
+            "ubertip1": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает в выбранную область радиусом |cffffffff300|cffced4da крылатую ракету, наносящую |cffffffff60|cffced4da ед. урона в секунду по всем существам и зданиям в течение первых |cffffffff3|cffced4da сек., а затем |cffffffff10|cffced4da ед. урона/сек. ещё |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff1/2|cffced4da.|r",
+            "tip2": "|cffe4cfa3Большая Красная Кнопка|r [|cffffffff2-й уровень|r] (|cffffffffR|r)",
+            "ubertip2": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Обрушивает в выбранную область радиусом |cffffffff300|cffced4da крылатую ракету, наносящую |cffffffff85|cffced4da ед. урона в секунду по всем существам и зданиям в течение первых |cffffffff3|cffced4da сек., а затем |cffffffff20|cffced4da ед. урона/сек. ещё |cffffffff3|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r"
+        }
+    }
+]
+
+def main():
+    folder = ROOT / "docs/ui_text"
+    wts_path = ROOT / "map.w3x/war3map.wts"
+    w3a_skin_path = ROOT / "map.w3x/war3mapSkin.w3a"
+
+    original_wts = wts_path.read_text(encoding="utf-8")
+    original_wts_hash = hashlib.sha256(original_wts.encode("utf-8")).hexdigest()
+    original_w3a_skin_hash = hashlib.sha256(w3a_skin_path.read_bytes()).hexdigest()
+
+    source = ROOT / "map.w3x"
+    other_binary_hashes = {
+        p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+        for p in source.glob("war3map*")
+        if p.is_file() and p.name not in ["war3map.wts", "war3mapSkin.w3a"]
+    }
+
+    raw_data = json.loads((folder / "goblins_hero_abils_raw_full.json").read_text(encoding="utf-8"))
+
+    # Process WTS updates and patch_blob operations
+    updated_wts = original_wts
+    wts_changed = []
+    object_ops = []
+
+    for abil in HERO_ABILITIES:
+        aid = abil["id"]
+        raw_fields = raw_data.get(aid, {})
+        vals = abil.get("values", {})
+        for field, val in vals.items():
+            f_info = raw_fields.get(field)
+            if isinstance(f_info, dict) and "wts_id" in f_info:
+                wid = f_info["wts_id"]
+                updated_wts = update_wts_string(updated_wts, wid, val)
+                wts_changed.append(wid)
+            else:
+                object_ops.append({
+                    "type": "ability",
+                    "id": aid,
+                    "field": field,
+                    "value": val
+                })
+
+    print(f"Total WTS keys to update: {len(wts_changed)}")
+    print(f"Total inline object_ops to patch into war3mapSkin.w3a: {len(object_ops)}")
+    for op in object_ops:
+        print(f"  Op: [{op['id']}] {op['field']} -> {repr(op['value'][:50])}")
+
+    # Write WTS
+    wts_path.write_text(updated_wts, encoding="utf-8")
+    new_wts_hash = hashlib.sha256(wts_path.read_bytes()).hexdigest()
+
+    # Write binary patch to war3mapSkin.w3a ONLY (preserving war3map.w3a untouched)
+    if object_ops:
+        w3a_skin_bytes = w3a_skin_path.read_bytes()
+        new_w3a_skin, changed_mods = patch_blob(w3a_skin_bytes, object_ops, "ability", add_missing=True)
+        w3a_skin_path.write_bytes(new_w3a_skin)
+        new_w3a_skin_hash = hashlib.sha256(w3a_skin_path.read_bytes()).hexdigest()
+        print(f"war3mapSkin.w3a updated with {len(changed_mods)} mods.")
+    else:
+        new_w3a_skin_hash = original_w3a_skin_hash
+
+    # Readback checks in SD mode ONLY (User instruction: SD only, no HD)
+    abil_ids = [a["id"] for a in HERO_ABILITIES]
+    bulk = require(cli(["get-objects-bulk", "--type", "ability", "--ids", ",".join(abil_ids)]))
+    wts_dict = hw.load_wts_strings()
+    resolve = lambda s: wts_dict.get(int(s[8:]), s) if isinstance(s, str) and s.startswith("TRIGSTR_") else s
+
+    objects_by_id = {obj["id"]: obj["fields"] for obj in bulk.get("objects", [])}
+    checks = []
+    mismatches = []
+
+    for a in HERO_ABILITIES:
+        aid = a["id"]
+        fields = objects_by_id.get(aid, {})
+        for f, expected in a["values"].items():
+            actual = resolve(fields.get(f, ""))
+            matched = (actual == expected)
+            checks.append({
+                "id": aid,
+                "field": f,
+                "matched": matched,
+                "expected": expected,
+                "actual": actual
+            })
+            if not matched:
+                mismatches.append((aid, f, expected, actual))
+
+    print(f"\nSD readback validation: {len(checks) - len(mismatches)}/{len(checks)} fields matched.")
+    if mismatches:
+        print(f"FAILED: {len(mismatches)} mismatches:")
+        for aid, f, exp, act in mismatches:
+            print(f"  [{aid}] {f}:\n    Expected: {repr(exp)}\n    Actual:   {repr(act)}")
+        sys.exit(1)
+
+    # Save application report and registry
+    apply_report = {
+        "race": "goblins",
+        "category": "hero_abilities",
+        "total_abilities": len(HERO_ABILITIES),
+        "total_checks": len(checks),
+        "all_matched": len(mismatches) == 0,
+        "wts_keys_updated": len(wts_changed),
+        "inline_ops": len(object_ops),
+        "hashes": {
+            "wts": {"before": original_wts_hash, "after": new_wts_hash},
+            "w3a_skin": {"before": original_w3a_skin_hash, "after": new_w3a_skin_hash}
+        },
+        "base_binaries_untouched": all(
+            hashlib.sha256((source / name).read_bytes()).hexdigest() == h
+            for name, h in other_binary_hashes.items()
+        )
+    }
+    (folder / "goblins_hero_abils_apply.json").write_text(
+        json.dumps(apply_report, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    (folder / "goblins_hero_abils.json").write_text(
+        json.dumps(HERO_ABILITIES, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    print("Report saved to docs/ui_text/goblins_hero_abils_apply.json")
+    print("Registry saved to docs/ui_text/goblins_hero_abils.json")
+    print("All 25 hero abilities successfully validated in SD mode!")
+
+if __name__ == "__main__":
+    main()

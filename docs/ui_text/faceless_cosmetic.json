@@ -1,0 +1,47 @@
+{
+  "scope": "Декоративная способность четырёх героев Безликих",
+  "objects_before": {
+    "command": "get-objects-bulk",
+    "count": 1,
+    "map": "F:\\Gemini_23Race\\map.w3x",
+    "missing": [],
+    "objects": [
+      {
+        "fields": {
+          "code": "Aakb",
+          "dataa1": "0.000000",
+          "name": "TRIGSTR_2038",
+          "tip1": "TRIGSTR_2039",
+          "ubertip1": ""
+        },
+        "id": "A01C",
+        "name": "Графика: Свечение героя"
+      }
+    ],
+    "ok": true,
+    "schema_version": 1,
+    "tool": "HiveWE_cli",
+    "type": "ability"
+  },
+  "strings": [
+    {
+      "rawcode": "A01C",
+      "field": "name",
+      "before": "TRIGSTR_2038",
+      "after": "|cffe4cfa3Свечение героя|r"
+    },
+    {
+      "rawcode": "A01C",
+      "field": "tip1",
+      "before": "TRIGSTR_2039",
+      "after": "|cffe4cfa3Свечение героя|r"
+    },
+    {
+      "rawcode": "A01C",
+      "field": "ubertip1",
+      "before": "",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Декоративное свечение героя. Не повышает урон от атак.|r"
+    }
+  ],
+  "in_game_checked": false
+}

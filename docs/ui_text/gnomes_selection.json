@@ -1,0 +1,72 @@
+{
+  "scope": "Гномы (Gnomes): подсказка выбора расы A0SD и маркеры",
+  "object": "A0SD",
+  "variants": [
+    "SD"
+  ],
+  "hotkey": {
+    "value": "Q"
+  },
+  "levels": 1,
+  "evidence": [
+    "04_race_selection.lua: InitTrig_Race_Gnomes регистрирует способность A0SD.",
+    "При выборе создаются 5 рабочих Инженеров h0FA, 1 Клап Клап h0FX, исследуются маркеры R0BX и R0HW, удаляется выбирающий юнит, запускается триггер GnomesOn.",
+    "Горячая клавиша Q, создатель VinerX, куратор VinerX, сложность 4/5 (●●●●○), период «World of Warcraft: Classic — Battle for Azeroth»."
+  ],
+  "strings": [
+    {
+      "field": "name",
+      "wts_id": 38895,
+      "after": "|cffe4cfa3Гномы|r"
+    },
+    {
+      "field": "tip1",
+      "wts_id": 38896,
+      "after": "|cffe4cfa3Гномы|r (|cffffffffQ|r)"
+    },
+    {
+      "field": "ubertip1",
+      "wts_id": 35199,
+      "after": "|cffa6afb8РАСА:|cffced4da Гениальные инженеры и изобретатели Азерота, опирающиеся на боевые машины, шагоходы и передовые технологии.|r|n|n|cffa6afb8Создатель расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Куратор расы:|r |cffa9c7deVinerX|r|n|cffa6afb8Сложность:|r |cffffffff●●●●|cffa6afb8○|r|n|cffa6afb8Период:|r |cffa9c7de«World of Warcraft: Classic — Battle for Azeroth»|r|n|n|cffced4daУмные, дерзкие и чудаковатые гномы — одна из самых удивительных цивилизаций Азерота. Пережив катастрофу в Гномрегане и потерю родного дома, неугомонные изобретатели обратили всю мощь своего гения на военное дело: паровые танки, роботизированные экзоскелеты, скорострельные шагоходы и колоссальную артиллерию.|r"
+    }
+  ],
+  "markers": [
+    {
+      "id": "R0BX",
+      "name": "Гномы (маркер расы)",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 9241,
+          "after": "|cffe4cfa3Гномы|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 9242,
+          "after": "|cffe4cfa3Гномы|r"
+        },
+        {
+          "field": "ubertip1",
+          "wts_id": 20125,
+          "after": "|cffa6afb8ТЕХНОЛОГИЯ:|cffced4da Служебный маркер фракционной принадлежности к Гномам (Гномреган).|r"
+        }
+      ]
+    },
+    {
+      "id": "R0HW",
+      "name": "Гномы (маркер альянса)",
+      "strings": [
+        {
+          "field": "name1",
+          "wts_id": 30254,
+          "after": "|cffe4cfa3Гномы|r"
+        },
+        {
+          "field": "tip1",
+          "wts_id": 29941,
+          "after": "|cffe4cfa3Гномы|r"
+        }
+      ]
+    }
+  ]
+}

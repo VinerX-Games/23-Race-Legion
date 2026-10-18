@@ -1,0 +1,2130 @@
+STRING 45 [building] [emow.hotkey]:
+A
+
+STRING 217 [unit] [esen.name]:
+|cffbebedcОхотница|r
+
+STRING 219 [unit] [esen.tip]:
+Обучить |cffbebedcохотницу|r
+
+STRING 281 [unit] [emtg.hotkey]:
+E
+
+STRING 282 [unit] [esen.hotkey]:
+W
+
+STRING 285 [ability] [A001.tip1]:
+Абордаж!
+
+STRING 286 [ability] [A001.ubertip1]:
+Оглушает данный и вражеский корабль и постепенно наносит урон. Если здоровье одно из кораблей становится меньше |cffffff0018%|r, он переходит на сторону врага.
+
+STRING 287 [ability] [A001.name]:
+Абордаж!
+
+STRING 288 [unit] [edoc.hotkey]:
+W
+
+STRING 289 [ability] [A002.name]:
+Боковые пушки (Фрегат)
+
+STRING 290 [ability] [A002.ubertip1]:
+Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном. Позволяют стрелять на ходу.
+
+STRING 291 [unit] [edot.hotkey]:
+W
+
+STRING 292 [ability] [A003.name]:
+Боковые пушки (Линкор)
+
+STRING 293 [ability] [A003.ubertip1]:
+Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.
+
+STRING 298 [unit] [ebal.hotkey]:
+R
+
+STRING 311 [building] [eaow.hotkey]:
+R
+
+STRING 313 [ability] [A00A.name]:
+Починка
+
+STRING 320 [ability] [A00A.ubertip1]:
+Корабль чинится, не используя главные орудия.
+
+STRING 324 [building] [edob.hotkey]:
+E
+
+STRING 327 [ability] [A00B.name]:
+Тактическое ускорение
+
+STRING 330 [building] [eaom.hotkey]:
+W
+
+STRING 365 [ability] [A00G.name]:
+Массированный обстрел
+
+STRING 367 [ability] [A00G.ubertip1]:
+Обстреливает указанную область.
+
+STRING 394 [building] [etoa.hotkey]:
+Z
+
+STRING 418 [ability] [AEsh.name]:
+Отравленный кинжал
+
+STRING 419 [ability] [AEsh.researchtip]:
+Изучить «Отравленный кинжал» [|cffffcc00%d-й уровень|r]
+
+STRING 428 [unit] [earc.hotkey]:
+Q
+
+STRING 429 [unit] [edry.hotkey]:
+Q
+
+STRING 446 [ability] [A00A.ubertip2]:
+Корабль чинится, не используя главные орудия.
+
+STRING 447 [ability] [A00A.ubertip3]:
+Корабль чинится, не используя главные орудия.
+
+STRING 461 [building] [etol.hotkey]:
+Q
+
+STRING 470 [worker] [ewsp.hotkey]:
+Q
+
+STRING 471 [unit] [efdr.hotkey]:
+Q
+
+STRING 473 [ability] [A00A.tip1]:
+Починка 1
+
+STRING 474 [ability] [A00A.tip2]:
+Починка 2
+
+STRING 475 [ability] [A00A.tip3]:
+Починка 3
+
+STRING 484 [ability] [A00G.ubertip2]:
+Обстреливает указанную область.
+
+STRING 485 [ability] [A00G.ubertip3]:
+Обстреливает указанную область.
+
+STRING 488 [ability] [A002.ubertip2]:
+Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном. Позволяют стрелять на ходу.
+
+STRING 489 [ability] [A002.ubertip3]:
+Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном. Позволяют стрелять на ходу.
+
+STRING 492 [ability] [A003.ubertip2]:
+Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.
+
+STRING 493 [ability] [A003.ubertip3]:
+Дополнительные выстрелы из боковых пушек. От обычного выстрела отличается меньшей дистанцией и уроном.
+
+STRING 509 [ability] [A002.tip1]:
+Боковые пушки 1 (Фрегат)
+
+STRING 510 [ability] [A002.tip2]:
+Боковые пушки 2 (Фрегат)
+
+STRING 511 [ability] [A002.tip3]:
+Боковые пушки 3 (Фрегат)
+
+STRING 512 [ability] [A003.tip1]:
+Боковые пушки 1 (Линкор)
+
+STRING 513 [ability] [A003.tip2]:
+Боковые пушки 2 (Линкор)
+
+STRING 514 [ability] [A003.tip3]:
+Боковые пушки 3 (Линкор)
+
+STRING 515 [ability] [A00B.tip1]:
+Тактическое ускорение 1
+
+STRING 516 [ability] [A00B.tip2]:
+Тактическое ускорение 2
+
+STRING 517 [ability] [A00B.tip3]:
+Тактическое ускорение 3
+
+STRING 518 [ability] [A00G.tip1]:
+Массированный обстрел 1
+
+STRING 519 [ability] [A00G.tip2]:
+Массированный обстрел 2
+
+STRING 520 [ability] [A00G.tip3]:
+Массированный обстрел 3
+
+STRING 532 [ability] [A00I.tip1]:
+Магическая посадка
+
+STRING 534 [ability] [A00I.name]:
+Магическая посадка
+
+STRING 559 [ability] [A00B.ubertip1]:
+Ускорение перемещения за счет раскрытия всех парусов, при этом кораблю наносится повышенный урон.
+
+STRING 560 [ability] [A00B.ubertip2]:
+Ускорение перемещения за счет раскрытия всех парусов, при этом кораблю наносится повышенный урон.
+
+STRING 561 [ability] [A00B.ubertip3]:
+Ускорение перемещения за счет раскрытия всех парусов, при этом кораблю наносится повышенный урон.
+
+STRING 563 [ability] [A00I.ubertip1]:
+Телепортирует юнитов в выбранной области к берегу, где их постарается забрать корабль. Не факт что сработает, но часть войск должно спасти.
+
+STRING 565 [ability] [A009.ubertip1]:
+Делает корабль вашим флагманом. Его характеристики увеличиваются, а также дается аура на выбор.
+
+STRING 733 [building] [etoe.hotkey]:
+Z
+
+STRING 900 [building] [etrp.hotkey]:
+Z
+
+STRING 1065 [building] [edos.hotkey]:
+Z
+
+STRING 1091 [building] [eate.hotkey]:
+S
+
+STRING 1250 [unit] [esen.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
+Ловкий воин ближнего боя. Считается авангардом армии |cffbebedcэльфов|r.
+
+STRING 1252 [unit] [earc.name]:
+|cffbebedcЛучница|r
+
+STRING 1253 [unit] [earc.tip]:
+Обучить |cffbebedcлучницу|r
+
+STRING 1255 [unit] [earc.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa20 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaПронзающий|r|n
+Базовый воин дальнего боя. Стрелы лучницы могут поразить даже самых могучих существо со всего мира.
+
+STRING 1424 [unit] [ebal.name]:
+|cffbebedcГлефомет|r
+
+STRING 1522 [building] [eaoe.hotkey]:
+D
+
+STRING 2038 [ability] [A01C.name]:
+Графика: Свечение героя
+
+STRING 2039 [ability] [A01C.tip1]:
+Графика: Свечение героя
+
+STRING 2052 [ability] [AEim.name]:
+|cffc8dc8cОбжигающий жар|r
+
+STRING 2064 [building] [e03W.name]:
+|cffbd00ffХрам Элуны
+
+STRING 2287 [unit] [e00J.hotkey]:
+Q
+
+STRING 2292 [ability] [AEtq.tip2]:
+|cffe4cfa3Покой — уровень 2|r (|cffffffffR|r)
+
+STRING 2306 [ability] [AEtq.ubertip2]:
+|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает мощный поток целительной энергии, восстанавливающий союзникам в области |cffffffff90|cffced4da ед. здоровья в секунду в течение |cffffffff25|cffced4da сек.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff2/2|cffced4da.|r
+
+STRING 2643 [ability] [AEah.ubertip4]:
+|cffa6afb8СПОСОБНОСТЬ:|cffced4da Даёт окружающим союзникам щит, отражающий часть получаемого в ближнем бою урона обратно в атакующих.|r
+
+STRING 2731 [ability] [A0EF.name]:
+|cffbebedcТанец полумесяца|r
+
+STRING 2732 [ability] [A0EF.tip1]:
+|cffbebedcТанец полумесяца|r
+
+STRING 2884 [unit] [e00H.hotkey]:
+W
+
+STRING 2888 [ability] [A0LI.name]:
+Обмен |cffffff00Золота |rна |cff00ff00Дерево|r
+
+STRING 2909 [ability] [A0FB.name]:
+|cffb4dc8cЗачарованая глефа|r
+
+STRING 2910 [ability] [A0FB.tip1]:
+|cffb4dc8cЗачарованая глефа|r
+
+STRING 2916 [ability] [A0FH.ubertip1]:
+При атаке опутывает врагов, замедляя ее передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек.
+
+STRING 2917 [ability] [A0FD.name]:
+|cffb4dc8cУдлиненные мечи|r
+
+STRING 2918 [ability] [A0FD.tip1]:
+|cffb4dc8cУдлиненные мечи|r
+
+STRING 2924 [ability] [A0FD.ubertip1]:
+Бьет с большим радиусом поражения, нанося <ACce,DataA1,%>% урона врагам рядом с основной целью.
+
+STRING 2930 [building] [e03W.tip]:
+Построить |cffbd00ff Храм Элуны
+
+STRING 3106 [hero] [E00V.hotkey]:
+X
+
+STRING 3133 [unit] [h0D9.hotkey]:
+Q
+
+STRING 3194 [unit] [h0DB.hotkey]:
+W
+
+STRING 3229 [ability] [A0FH.ubertip2]:
+При атаке опутывает врагов, замедляя ее передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек.
+
+STRING 3297 [ability] [A0FH.ubertip3]:
+При атаке опутывает врагов, замедляя ее передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек.
+
+STRING 3298 [ability] [A0FH.ubertip4]:
+При атаке опутывает врагов, замедляя ее передвижение на <Aspo,DataB1,%>% и атаку на <Aspo,DataC1,%>%. Время действия: <Aspo,Dur1> сек.
+
+STRING 3300 [ability] [A0FI.name]:
+|cffb4dc8cАура шипов|r
+
+STRING 3338 [ability] [A0FI.researchtip]:
+Изучить «|cffb4dc8cАуру шипов|r» [|cffffcc00%d-й уровень|r]
+
+STRING 3341 [ability] [A0FI.tip1]:
+|cffb4dc8cАура шипов|r [|cffffcc001-й уровень|r]
+
+STRING 3342 [ability] [A0FI.tip2]:
+|cffb4dc8cАура шипов|r [|cffffcc002-й уровень|r]
+
+STRING 3427 [ability] [A0FI.tip3]:
+|cffb4dc8cАура шипов|r [|cffffcc003-й уровень|r]
+
+STRING 3429 [ability] [A0FI.tip4]:
+|cffb4dc8cАура шипов|r [|cffffcc004-й уровень|r]
+
+STRING 3430 [ability] [A0FI.ubertip4]:
+Дает находящимся рядом союзникам щит, который отражает <AEah,DataA3,%>% получаемого в ближнем бою урона от атак в атакующих врагов.
+
+STRING 3431 [ability] [A0FJ.tip1]:
+|cffb4dc8cСила природы|r
+
+STRING 3432 [ability] [A0FJ.tip2]:
+|cffb4dc8cСила природы|r
+
+STRING 3440 [ability] [A0FJ.tip3]:
+|cffb4dc8cСила природы|r
+
+STRING 3441 [ability] [A0FJ.tip4]:
+|cffb4dc8cСила природы|r
+
+STRING 3442 [ability] [A0FJ.ubertip1]:
+Призывает несколько духов природы.
+
+STRING 3443 [ability] [A0FJ.ubertip2]:
+Призывает несколько духов природы.
+
+STRING 3522 [ability] [A0FJ.ubertip3]:
+Призывает несколько духов природы.
+
+STRING 3523 [ability] [A0FJ.ubertip4]:
+Призывает несколько духов природы.
+
+STRING 3524 [ability] [A0FJ.name]:
+|cffb4dc8cСила природы|r
+
+STRING 3528 [ability] [A0FJ.researchtip]:
+Изучить «|cffb4dc8cСила природы|r»
+
+STRING 3606 [hero] [E00W.propernames]:
+|cffb4dc8cЭльф друид|r
+
+STRING 3692 [ability] [A0LI.tip1]:
+Обмен |cffffff00Золота |rна |cff00ff00Дерево|r
+
+STRING 3714 [hero] [E011.propernames]:
+|cffb4dc8cКатрис Звездная Песня|
+
+STRING 3762 [unit] [e00I.hotkey]:
+E
+
+STRING 3803 [building] [edob.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n
+Позволяет усиливать атаку и броню войск. Дает доступ к ночному зрению и лунному фонтану.
+
+STRING 3856 [hero] [E011.awakentip]:
+Воскресить жрицу Луны 
+
+STRING 3857 [hero] [E011.tip]:
+Призвать |cffb4dc8cКатрис Звездная Песня|r
+
+STRING 3898 [hero] [E011.revivetip]:
+Воскресить |cffb4dc8cКатрис Звездная Песня|r
+
+STRING 3899 [ability] [A0FL.name]:
+|cffb4dc8cОбстрел|r
+
+STRING 4001 [ability] [A0FL.researchtip]:
+Изучить «|cffb4dc8cОбстрел|r» [|cffffcc00%d-й уровень|r]
+
+STRING 4207 [hero] [E011.hotkey]:
+C
+
+STRING 4233 [ability] [A0HL.hotkey]:
+S
+
+STRING 4247 [ability] [A0LI.hotkey]:
+S
+
+STRING 4259 [ability] [A0LJ.hotkey]:
+A
+
+STRING 4268 [unit] [h0DA.hotkey]:
+E
+
+STRING 4357 [ability] [A0FL.tip1]:
+|cff0064ffВзрыв маны|r [|cffffcc001-й уровень|r]
+
+STRING 4358 [ability] [A0FL.tip2]:
+|cff0064ffВзрыв маны|r [|cffffcc002-й уровень|r]
+
+STRING 4376 [ability] [A0FM.researchtip]:
+|cffb4dc8cОблик совухи|r
+
+STRING 4379 [ability] [A0FM.name]:
+|cffb4dc8cОблик совухи|r
+
+STRING 4406 [ability] [A0FL.tip3]:
+|cff0064ffВзрыв маны|r [|cffffcc003-й уровень|r]
+
+STRING 4614 [ability] [A0FL.tip4]:
+|cff0064ffВзрыв маны|r [|cffffcc004-й уровень|r]
+
+STRING 4615 [ability] [A0FM.ubertip1]:
+Превращает друида в Совуху. Усиливает боевые характеристики, но замедляет регенерацию маны.
+
+STRING 4617 [ability] [A0FL.ubertip1]:
+Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur1> сек.
+
+STRING 4627 [ability] [A0FL.ubertip2]:
+Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur2> сек.
+
+STRING 4628 [ability] [A0FL.ubertip3]:
+Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur3> сек.
+
+STRING 4631 [ability] [A0FL.ubertip4]:
+Обстреливает указанную сгустками маны, нанося урон находящимся рядом наземным врагам и оглушая их на <ANcs,Dur4> сек.
+
+STRING 4662 [ability] [A0FQ.name]:
+|cffb4dc8cЛедяные стрелы|r
+
+STRING 4664 [ability] [A0FQ.tip1]:
+|cffb4dc8cЛедяные стрелы|r
+
+STRING 4666 [ability] [A0FM.tip1]:
+|cffb4dc8cОблик совухи|r
+
+STRING 4667 [ability] [A0FM.tip2]:
+|cffb4dc8cОблик совухи|r
+
+STRING 4668 [ability] [A0FQ.researchtip]:
+Изучить «|cffb4dc8cЛедяные стрелы|r» [|cffffcc00%d-й уровень|r]
+
+STRING 4669 [ability] [A0FM.ubertip2]:
+Превращает друида в Совуху. Усиливает боевые характеристики, но замедляет регенерацию маны.
+
+STRING 4906 [upgrade] [Remk.hotkey1]:
+A
+
+STRING 4923 [ability] [A0FQ.tip2]:
+|cffb4dc8cЛедяные стрелы|r
+
+STRING 4924 [ability] [A0FQ.tip3]:
+|cffb4dc8cЛедяные стрелы|r
+
+STRING 4925 [ability] [A0FQ.tip4]:
+|cffb4dc8cЛедяные стрелы|r
+
+STRING 4926 [ability] [A0FQ.ubertip4]:
+Добавляет к атакам эффект льда, который наносит <ANfa,DataA3> урона, а также замедляет атаку врага на <ANfa,DataB3,%>% и передвижение на <ANfa,DataC3,%>% на <ANfa,Dur3> сек.
+
+STRING 4964 [ability] [AEar.tip4]:
+|cffe4cfa3Аура меткости — уровень 4|r
+
+STRING 4967 [ability] [AEar.ubertip4]:
+|cffa6afb8СПОСОБНОСТЬ:|cffced4da Пассивно увеличивает урон от дальнобойных атак находящихся рядом союзников на |cffffffff40%|cffced4da.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r
+
+STRING 4968 [ability] [A0FS.name]:
+|cffb4dc8cАура меткости|r
+
+STRING 5022 [ability] [A0FS.researchtip]:
+Изучить «|cffb4dc8cАуру меткости|r» [|cffffcc00%d-й уровень|r]
+
+STRING 5023 [ability] [A0FT.name]:
+|cffb4dc8cСмертельный выстрел|r
+
+STRING 5045 [ability] [A0FT.researchtip]:
+Изучить «|cffb4dc8cСмертельный выстрел|r» [|cffffcc00%d-й уровень|r]
+
+STRING 5048 [ability] [A0FT.tip1]:
+|cffb4dc8cСмертельный выстрел|r [|cffffcc001-й уровень|r]
+
+STRING 5049 [ability] [A0FT.tip2]:
+|cffb4dc8cСмертельный выстрел|r [|cffffcc002-й уровень|r]
+
+STRING 5050 [ability] [A0FT.ubertip1]:
+Выпускает стрелу, нанося <AOsh,DataA1> урона наземным войскам на прямой линии.
+
+STRING 5051 [ability] [A0FT.ubertip2]:
+Выпускает стрелу, нанося <AOsh,DataA2> урона наземным войскам на прямой линии.
+
+STRING 5054 [ability] [A0FM.researchubertip]:
+Превращает друида в совуху. Усиливает боевые характеристики, но замедляет регенерацию маны.
+
+STRING 5093 [upgrade] [Reib.hotkey1]:
+A
+
+STRING 5291 [upgrade] [Resi.hotkey1]:
+A
+
+STRING 5292 [upgrade] [Rema.hotkey4]:
+A
+
+STRING 5294 [upgrade] [Rema.hotkey5]:
+A
+
+STRING 5295 [upgrade] [Rema.hotkey6]:
+A
+
+STRING 5481 [building] [etol.ubertip]:
+|cff7dc87dВремя строительства:|r |cffaaf0aa40 сек.|r|n|nБазовое здание. Призывает |cffbebedcогоньков|r и хранит добытые ресурсы. Можно улучшить, чтобы получить доступ к новым зданиям и типам войск.
+
+STRING 5520 [unit] [h0DB.name]:
+Фрегат
+
+STRING 5589 [upgrade] [R002.hotkey4]:
+A
+
+STRING 5590 [upgrade] [R002.hotkey5]:
+A
+
+STRING 5625 [ability] [A0FS.tip4]:
+Аура меткости [|cffffcc004-й уровень|r]
+
+STRING 5626 [ability] [A0FS.ubertip4]:
++<AEar,DataA4,%>% к урону от дальнобойных атак находящихся рядом союзников.
+
+STRING 5685 [upgrade] [R002.hotkey6]:
+A
+
+STRING 5687 [upgrade] [R002.hotkey1]:
+A
+
+STRING 5735 [upgrade] [R002.hotkey2]:
+A
+
+STRING 5736 [upgrade] [R002.hotkey3]:
+A
+
+STRING 5750 [unit] [n064.name]:
+|cff808000Фурболг – воитель|r
+
+STRING 5765 [unit] [n064.tip]:
+Нанять |cff808000Фурболг – воитель|r
+
+STRING 5770 [ability] [AEev.name]:
+|cffc8dc8cУскользание|r
+
+STRING 5885 [unit] [n05D.hotkey]:
+R
+
+STRING 5910 [ability] [Slo3.hotkey]:
+D
+
+STRING 5970 [unit] [n05H.hotkey]:
+W
+
+STRING 6114 [unit] [ebal.tip]:
+Построить |cffbebedcглефомет|r
+
+STRING 6227 [building] [h0D8.hotkey]:
+C
+
+STRING 6587 [upgrade] [R003.hotkey2]:
+S
+
+STRING 6675 [upgrade] [R003.hotkey3]:
+S
+
+STRING 6676 [upgrade] [R003.hotkey4]:
+S
+
+STRING 6677 [upgrade] [R003.hotkey5]:
+S
+
+STRING 6678 [upgrade] [R003.hotkey6]:
+S
+
+STRING 6679 [upgrade] [R003.hotkey1]:
+S
+
+STRING 6929 [unit] [h0DA.ubertip]:
+Мощный корабль, эффективный как в морском бою, так и против зданий. 
+
+STRING 7231 [ability] [AEtq.researchhotkey]:
+R
+
+STRING 7255 [ability] [AEtq.hotkey]:
+R
+
+STRING 7353 [ability] [Apsh.hotkey]:
+R
+
+STRING 7354 [ability] [Apsh.unhotkey]:
+R
+
+STRING 7408 [ability] [A00A.hotkey]:
+R
+
+STRING 7409 [ability] [A009.hotkey]:
+R
+
+STRING 7461 [buff] [B04A.bufftip]:
+|cffbec8f5Столб яда|r
+
+STRING 7792 [ability] [AEah.tip4]:
+|cffe4cfa3Аура шипов — уровень 4|r (|cffffffffE|r)
+
+STRING 8455 [hero] [E00W.tip]:
+Призвать |cffbebedcДруид Мастер|r
+
+STRING 8456 [ability] [A0FH.researchubertip]:
+Каждая атака хранителя рощи, замедляют атакованого врага.
+|n|cffffcc001-й уровень:|r 25% замедления.|n|cffffcc002-й уровень:|r 35% замедления.|n|cffffcc003-й уровень:|r 45% замедления.|n|cffffcc004-й уровень:|r 55% замедления.
+
+STRING 8458 [ability] [A0FI.researchubertip]:
+Дает находящимся рядом союзникам щит, который отражает часть получаемого в ближнем бою урона в атакующих врагов. |n|n|cffffcc001-й уровень:|r <AEah,DataA1,%>% урона. |n|cffffcc002-й уровень:|r <AEah,DataA2,%>% урона. |n|cffffcc003-й уровень:|r <AEah,DataA3,%>% урона.|n|cffffcc004-й уровень:|r 20% урона.
+
+STRING 8459 [ability] [A0FJ.researchubertip]:
+Позволяет призывать духов леса на помощ Эльфам и друидам.
+|n|n|cffffcc001-й уровень:|r 1 дух леса.|n|cffffcc002-й уровень:|r 2 духа леса.|n|cffffcc003-й уровень:|r 3 духа леса.|n|cffffcc004-й уровень:|r 4 духа леса.
+
+STRING 8461 [ability] [A0FL.researchubertip]:
+Обстреливает указанную область стрелами, оглушая находящихся рядом наземных врагов на <ANcs,Dur1> сек. и нанося им урон. |n|n|cffffcc001-й уровень:|r 35 урона.|n|cffffcc002-й уровень:|r 65 урона.|n|cffffcc003-й уровень:|r 100 урона.|n|cffffcc004-й уровень:|r 190 урона.
+
+STRING 8462 [ability] [A0FQ.researchubertip]:
+Добавляет к атакам эффект льда, который наносит дополнительный урон, а также замедляет атаку и передвижение врага. |n|n|cffffcc001-й уровень:|r -<ANfa,DataB1,%>% от скорости атаки, -<ANfa,DataC1,%>% от скорости передвижения, +<ANfa,DataA1> к урону. |n|cffffcc002-й уровень:|r -<ANfa,DataB2,%>% от скорости атаки, -<ANfa,DataC2,%>% от скорости передвижения, +<ANfa,DataA2> к урону. |n|cffffcc003-й уровень:|r -<ANfa,DataB3,%>% от скорости атаки, -<ANfa,DataC3,%>% от скорости передвижения, +<ANfa,DataA3> к урону.|n|cffffcc004-й уровень:|r -90% от скорости атаки, -90% от скорости передвижения, +20 к урону.
+
+STRING 8463 [ability] [A0FT.researchubertip]:
+Выпускает стрелу, нанося урон наземным войскам на прямой линии. |n|n|cffffcc001-й уровень:|r 300 урона. |n|cffffcc002-й уровень:|r 450 урона. 
+
+STRING 8468 [upgrade] [R0G6.ubertip1]:
+Познания магии |cffbebedcдревних гвардейцев|r находятся на высшем уровне, что позволяет им блокировать  вражескую магию. Увеличивает скорость боя на |cffbebedc10%|r. и регенерацию на |cffbebedc0.5|r.
+
+STRING 8469 [ability] [A16I.name]:
+|cffbebedcАнулирование|r
+
+STRING 8470 [ability] [A16I.tip1]:
+|cffbebedcАнулирование|r
+
+STRING 8471 [upgrade] [R0G6.tip1]:
+Исследовать «|cffbebedcАнулирование|r»
+
+STRING 8472 [upgrade] [R0G6.tip2]:
+Исследовать «|cffbebedcАнулирование|r»
+
+STRING 8474 [upgrade] [R0G6.ubertip2]:
+Познания магии |cffbebedcдревних гвардейцев|r находятся на высшем уровне, что позволяет им блокировать  вражескую магию. Увеличивает скорость боя на |cffbebedc10%|r. и регенерацию на |cffbebedc0.5|r.
+
+STRING 8475 [upgrade] [R0G6.ubertip3]:
+Познания магии |cffbebedcдревних гвардейцев|r находятся на высшем уровне, что позволяет им блокировать  вражескую магию. Увеличивает скорость боя на |cffbebedc10%|r. и регенерацию на |cffbebedc0.5|r.
+
+STRING 8479 [unit] [n064.hotkey]:
+E
+
+STRING 8504 [hero] [E00W.hotkey]:
+Z
+
+STRING 8676 [building] [e03X.name]:
+|cff00781eХрам Друидов
+
+STRING 8742 [building] [e03X.tip]:
+Построить |cff00781eХрам Друидов
+
+STRING 8767 [ability] [AEev.researchtip]:
+Изучить «|cffc8dc8cУскользание|r» [|cffffcc00%d-й уровень|r]
+
+STRING 8771 [ability] [AEev.tip2]:
+|cffc8dc8cУскользание|r [|cffffcc002-й уровень|r]
+
+STRING 8772 [ability] [AEev.tip3]:
+|cffc8dc8cУскользание|r [|cffffcc003-й уровень|r]
+
+STRING 8775 [ability] [AEev.tip4]:
+|cffc8dc8cУскользание|r [|cffffcc004-й уровень|r]
+
+STRING 8780 [ability] [AEev.ubertip2]:
+Дает |cffc8dc8c<AEev,DataA2,%>%-й шанс|r уклониться от атаки.
+
+STRING 8871 [ability] [AEmb.researchhotkey]:
+Q
+
+STRING 8959 [ability] [AEmb.hotkey]:
+Q
+
+STRING 8960 [ability] [AEmb.unhotkey]:
+Q
+
+STRING 9105 [building] [e03X.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n
+Храм друидов, тут вы можете использовать силы природы и попросить помощи у её обитателей
+
+STRING 9156 [ability] [AEbl.researchhotkey]:
+W
+
+STRING 9157 [ability] [AEbl.hotkey]:
+W
+
+STRING 9179 [ability] [Afae.hotkey]:
+Q
+
+STRING 9180 [ability] [Afae.unhotkey]:
+Q
+
+STRING 9181 [ability] [ANfl.researchhotkey]:
+Q
+
+STRING 9182 [ability] [ANfl.hotkey]:
+Q
+
+STRING 9208 [ability] [AEim.researchhotkey]:
+W
+
+STRING 9209 [ability] [AEim.hotkey]:
+W
+
+STRING 9217 [ability] [A160.researchubertip]:
+Усиливает броню находящихся рядом союзников. Наносит урон всем врагам вокруг. |n|n|cffffcc001-й уровень:|r +<AHad,DataA1,.> к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду. |n|cffffcc002-й уровень:|r +<AHad,DataA2,.> к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду. |n|cffffcc003-й уровень:|r +<AHad,DataA3,.> к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду.|n|cffffcc004-й уровень:|r +4 к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду.
+
+STRING 9218 [ability] [A160.ubertip4]:
+Усиливает броню находящихся рядом союзников. Наносит урон всем врагам вокруг.
+
+|cffffcc004-й уровень:|r +4 к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду.
+
+STRING 9392 [ability] [AEev.ubertip3]:
+Дает |cffc8dc8c<AEev,DataA3,%>%-й шанс|r уклониться от атаки.
+
+STRING 9399 [ability] [AEim.unhotkey]:
+W
+
+STRING 9545 [ability] [A0I3.hotkey]:
+C
+
+STRING 9615 [ability] [AEbl.tip4]:
+|cffe4cfa3Скачок — уровень 4|r (|cffffffffW|r)
+
+STRING 9616 [ability] [AEbl.ubertip4]:
+|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно перемещает охотницу на короткое расстояние, позволяя вступить в бой или выйти из него.|n|n|cffa6afb8Уровень способности:|cffced4da |cffffffff4/4|cffced4da.|r
+
+STRING 9742 [ability] [AEim.researchtip]:
+Изучить «|cffc8dc8cОбжигающий жар|r» [|cffffcc00%d-й уровень|r]
+
+STRING 9756 [ability] [AEim.tip1]:
+Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc001-й уровень|r]
+
+STRING 9758 [ability] [AEim.tip2]:
+Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc002-й уровень|r]
+
+STRING 9760 [ability] [AEim.tip3]:
+Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc003-й уровень|r]
+
+STRING 9910 [ability] [AEim.tip4]:
+Активировать «|cffc8dc8cОбжигающий жар|r» [|cffffcc004-й уровень|r]
+
+STRING 9999 [ability] [Afa2.unhotkey]:
+Q
+
+STRING 10012 [ability] [Afa2.hotkey]:
+Q
+
+STRING 10047 [ability] [ACfb.hotkey]:
+Q
+
+STRING 10054 [ability] [Amfl.hotkey]:
+W
+
+STRING 10064 [ability] [A0I3.researchtip]:
+|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)
+
+STRING 10066 [ability] [Amfl.unhotkey]:
+W
+
+STRING 10114 [building] [etoa.ubertip]:
+|cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск.
+
+STRING 10115 [building] [etoe.ubertip]:
+|cff7dc87dВремя строительства:|r |cffaaf0aa140 сек.|r|n|nДает доступ к новым зданиям и типам войск.
+
+STRING 10170 [building] [e03W.hotkey]:
+E
+
+STRING 10207 [ability] [Sdro.hotkey]:
+Q
+
+STRING 10209 [ability] [A00G.hotkey]:
+W
+
+STRING 10212 [ability] [A001.hotkey]:
+Q
+
+STRING 10213 [ability] [A00I.hotkey]:
+W
+
+STRING 10235 [building] [e03X.hotkey]:
+E
+
+STRING 10343 [buff] [B040.bufftip]:
+|cffbec8f5Бритвенно-острая паутина|r
+
+STRING 10469 [ability] [AEar.researchhotkey]:
+E
+
+STRING 10518 [ability] [AEar.hotkey]:
+E
+
+STRING 10519 [ability] [AEar.unhotkey]:
+E
+
+STRING 10520 [ability] [AEah.researchhotkey]:
+E
+
+STRING 10642 [ability] [AEah.hotkey]:
+E
+
+STRING 10673 [upgrade] [R07L.name1]:
+|cffe6beaaНочные Эльфы|r
+
+STRING 10674 [upgrade] [R07L.tip1]:
+|cffe6beaaКульт Сумеречного Молота|r
+
+STRING 10745 [ability] [AEev.hotkey]:
+E
+
+STRING 10898 [unit] [h0DB.ubertip]:
+Корабль, предназначенный для морских битв.
+
+STRING 10903 [building] [h0D8.ubertip]:
+|cffa6afb8ЗДАНИЕ:|cffced4da Морское сооружение для строительства и оснащения боевых кораблей.|n|n|cffa6afb8Обучает:|cffced4da|n- |cffa9c7deТранспортный корабль|cffced4da|n- |cffa9c7deФрегат|cffced4da|n- |cffa9c7deЛинкор|cffced4da.|r
+
+STRING 10907 [building] [h0D8.name]:
+|cffe4cfa3Верфь|r
+
+STRING 10908 [building] [h0D8.tip]:
+|cffe4cfa3Верфь|r (|cffffffffC|r)
+
+STRING 10911 [unit] [h0D9.name]:
+Транспорт
+
+STRING 10931 [unit] [h0DA.name]:
+Линкор
+
+STRING 10941 [ability] [AEev.tip1]:
+|cffc8dc8cУскользание|r [|cffffcc001-й уровень|r]
+
+STRING 10942 [upgrade] [R006.hotkey1]:
+C
+
+STRING 10976 [ability] [A0I3.researchubertip]:
+|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r
+
+STRING 11036 [upgrade] [R0KS.ubertip1]:
+Эльфы взывают в Элуне и та дает временное им усиление 
+
+STRING 11121 [buff] [B04E.bufftip]:
+|cffbec8f5Аура метаморфоз|r
+
+STRING 11205 [upgrade] [R006.hotkey2]:
+C
+
+STRING 11206 [upgrade] [R006.hotkey3]:
+C
+
+STRING 11265 [ability] [A0IQ.hotkey]:
+X
+
+STRING 11335 [ability] [AEev.ubertip1]:
+Дает |cffc8dc8c<AEev,DataA1,%>%-й шанс|r уклониться от атаки.
+
+STRING 11596 [ability] [A1MW.name]:
+|cff8080ffОплетение|r
+
+STRING 11852 [ability] [A00B.hotkey]:
+E
+
+STRING 12029 [ability] [A1PP.name]:
+Прицельная пальба
+
+STRING 12197 [upgrade] [Rers.hotkey1]:
+D
+
+STRING 12243 [ability] [AEev.ubertip4]:
+Дает |cffc8dc8c40%-й шанс|r уклониться от атаки.
+
+STRING 12249 [ability] [AEev.researchubertip]:
+Дает шанс уклониться от атаки. |n|n|cffffcc001-й уровень:|r |cffc8dc8c<AEev,DataA1,%>%-й шанс.|r |n|cffffcc002-й уровень:|r |cffc8dc8c<AEev,DataA2,%>%-й шанс.|r |n|cffffcc003-й уровень:|r |cffc8dc8c<AEev,DataA3,%>%-й шанс.|r|n|cffffcc004-й уровень:|r |cffc8dc8c40%-й шанс.|r
+
+STRING 12341 [ability] [A1PP.tip1]:
+Прицельная пальба
+
+STRING 12346 [ability] [A1PP.ubertip1]:
+Выстреливает специальным снарядом, нанося 100 урона и оглушая цель на 2 секунды (герой 0.5).
+
+STRING 12361 [upgrade] [R007.hotkey1]:
+D
+
+STRING 12371 [upgrade] [R007.hotkey2]:
+D
+
+STRING 12374 [upgrade] [R007.hotkey3]:
+D
+
+STRING 12378 [upgrade] [R0KS.name1]:
+|cffbd00ffЗов Элуны
+
+STRING 12857 [ability] [A0LJ.name]:
+Обмен |cff00ff00Дерева |rна |cffffff00Золото|r
+
+STRING 12886 [ability] [A0LJ.tip1]:
+Обмен |cff00ff00Дерева |rна |cffffff00Золото|r
+
+STRING 12948 [building] [eate.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nСооружение позволяющее призыватьновых и воскрешает павших героев.
+
+STRING 12949 [building] [eaom.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nЗдание для подготовки базовых войск. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск.
+
+STRING 13295 [upgrade] [R004.name1]:
+Улучшение до |cffb4dc8cКровавого Палача|r
+
+STRING 13298 [upgrade] [R004.tip1]:
+Улучшение до |cffb4dc8cКровавого Палача|r
+
+STRING 14084 [ability] [Amfl.name]:
+|cffbebedcВспышка маны|r
+
+STRING 14227 [ability] [AEim.ubertip1]:
+При использовании активирует огненную ауру, которая наносит |cffc8dc8c<AEim,DataA1> урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены.
+
+STRING 14230 [ability] [AEim.ubertip2]:
+При использовании активирует огненную ауру, которая наносит |cffc8dc8c<AEim,DataA2> урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены.
+
+STRING 14233 [ability] [AEim.ubertip3]:
+При использовании активирует огненную ауру, которая наносит |cffc8dc8c<AEim,DataA3> урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены.
+
+STRING 14236 [ability] [AEim.ubertip4]:
+При использовании активирует огненную ауру, которая наносит |cffc8dc8c25 урона/сек|r. находящимся рядом наземным врагам.|nРасходует ману до отмены.
+
+STRING 14273 [ability] [A0FH.name]:
+R
+
+STRING 14275 [ability] [A0FH.tip1]:
+R
+
+STRING 14287 [ability] [AEim.researchubertip]:
+Окружает охотника на демонов огнем, который наносит урон находящимся рядом наземным врагам. |nРасходует ману до отмены. |n|n|cffffcc001-й уровень:|r |cffc8dc8c<AEim,DataA1> урона/сек|r. |n|cffffcc002-й уровень:|r |cffc8dc8c<AEim,DataA2> урона/сек|r. |n|cffffcc003-й уровень:|r |cffc8dc8c<AEim,DataA3> урона/сек|r.|n|cffffcc004-й уровень:|r |cffc8dc8c25 урона/сек.|r
+
+STRING 14288 [ability] [AEmb.name]:
+|cffc8dc8cСожжение маны|r
+
+STRING 14289 [ability] [AEmb.researchtip]:
+Изучить «|cffc8dc8cСожжение маны|r» [|cffffcc00%d-й уровень|r]
+
+STRING 14290 [ability] [AEmb.researchubertip]:
+Сжигает ману врага и наносит ему урон, равный объему сожженной маны. |n|n|cffffcc001-й уровень:|r |cffc8dc8cсжигает до <AEmb,DataA1> маны.|r |n|cffffcc002-й уровень:|r |cffc8dc8cсжигает до <AEmb,DataA2> маны.|r |n|cffffcc003-й уровень:|r |cffc8dc8cсжигает до <AEmb,DataA3> маны.|r|n|cffffcc004-й уровень:|r |cffc8dc8cсжигает до 200 маны.|r
+
+STRING 14291 [ability] [AEmb.tip1]:
+|cffc8dc8cСожжение маны|r [|cffffcc001-й уровень|r]
+
+STRING 14292 [ability] [AEmb.tip2]:
+|cffc8dc8cСожжение маны|r [|cffffcc002-й уровень|r]
+
+STRING 14293 [ability] [AEmb.tip3]:
+|cffc8dc8cСожжение маны|r [|cffffcc003-й уровень|r]
+
+STRING 14294 [ability] [AEmb.tip4]:
+|cffc8dc8cСожжение маны|r [|cffffcc004-й уровень|r]
+
+STRING 14295 [ability] [AEmb.ubertip1]:
+Сжигает до |cffc8dc8c<AEmb,DataA1>|r маны врага и наносит ему столько же урона.
+
+STRING 14296 [ability] [AEmb.ubertip2]:
+Сжигает до |cffc8dc8c<AEmb,DataA2>|r маны врага и наносит ему столько же урона.
+
+STRING 14297 [ability] [AEmb.ubertip3]:
+Сжигает до |cffc8dc8c<AEmb,DataA3>|r маны врага и наносит ему столько же урона.
+
+STRING 14298 [ability] [AEmb.ubertip4]:
+Сжигает до |cffc8dc8c200|r маны врага и наносит ему столько же урона.
+
+STRING 14320 [ability] [A0FH.researchtip]:
+R
+
+STRING 14322 [ability] [A0FH.tip2]:
+R
+
+STRING 14325 [ability] [A0FJ.researchhotkey]:
+Q
+
+STRING 14344 [ability] [A0FJ.hotkey]:
+Q
+
+STRING 14391 [ability] [A0FH.tip3]:
+R
+
+STRING 14393 [ability] [A0FH.tip4]:
+R
+
+STRING 14398 [ability] [A0FL.researchhotkey]:
+Q
+
+STRING 14409 [ability] [A0FQ.hotkey]:
+W
+
+STRING 14425 [ability] [A0FL.hotkey]:
+Q
+
+STRING 14544 [ability] [A0FQ.unhotkey]:
+W
+
+STRING 14545 [ability] [A0FQ.researchhotkey]:
+W
+
+STRING 14594 [ability] [A0FM.researchhotkey]:
+R
+
+STRING 14804 [upgrade] [R005.hotkey1]:
+X
+
+STRING 14805 [upgrade] [R005.hotkey3]:
+X
+
+STRING 14835 [ability] [A160.name]:
+|cffbebedcПокровительство друидов|r
+
+STRING 14842 [ability] [A160.tip1]:
+|cffbebedcПокровительство друидов|r
+
+STRING 14980 [ability] [A0FM.hotkey]:
+R
+
+STRING 14981 [ability] [A0FM.unhotkey]:
+R
+
+STRING 15071 [ability] [A0FT.researchhotkey]:
+R
+
+STRING 15166 [upgrade] [R005.hotkey2]:
+X
+
+STRING 15180 [ability] [A160.ubertip1]:
+Усиливает броню находящихся рядом союзников. Наносит урон всем врагам вокруг. |n|n|cffffcc001-й уровень:|r +<AHad,DataA1,.> к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду. 
+
+STRING 15200 [ability] [A160.researchtip]:
+Изучить «|cffbebedcПокровительство друидов|r» [|cffffcc00%d-й уровень|r]
+
+STRING 15227 [upgrade] [R005.hotkey4]:
+X
+
+STRING 15435 [ability] [A0FT.hotkey]:
+R
+
+STRING 15468 [ability] [A160.tip2]:
+|cffbebedcПокровительство друидов|r
+
+STRING 15628 [upgrade] [R005.hotkey5]:
+X
+
+STRING 15762 [ability] [AEah.name]:
+|cffe4cfa3Аура шипов|r
+
+STRING 15763 [ability] [AEah.researchtip]:
+|cffe4cfa3Аура шипов|r
+
+STRING 15945 [ability] [Amfl.tip1]:
+|cffbebedcВспышка маны|r
+
+STRING 15946 [ability] [Apsh.name]:
+|cffbebedcФазовый сдвиг|r
+
+STRING 15950 [ability] [Apsh.tip1]:
+|cffbebedcФазовый сдвиг|r
+
+STRING 15970 [upgrade] [R004.hotkey1]:
+S
+
+STRING 16268 [hero] [E011.name]:
+|cffbebedcЛунная охотница|r
+
+STRING 16471 [ability] [A0FA.tip1]:
+|cff7f8f18Защита|r
+
+STRING 16759 [ability] [A0FI.researchhotkey]:
+E
+
+STRING 16859 [ability] [A0FS.researchhotkey]:
+E
+
+STRING 16860 [ability] [A0FS.hotkey]:
+E
+
+STRING 16861 [ability] [A0FS.unhotkey]:
+E
+
+STRING 18243 [ability] [A0I3.researchhotkey]:
+E
+
+STRING 18370 [ability] [A0FS.researchubertip]:
+|cffa6afb8ИССЛЕДОВАНИЕ:|cffced4da Глубинная трансформация массы тела, увеличивающая максимальный запас здоровья нерубов на |cffc8e087+15%|cffced4da.|n|n|cffe6c07bВнимание: исключает возможность исследования «Мутация конечностей».|r|n|n|cffa6afb8Применяется к:|cffced4da|n- Всем воинам армии Нерубов.|n|n|cffa6afb8Уровень исследования:|r |cffffffff3/3|r.
+
+STRING 18682 [upgrade] [R004.ubertip1]:
+Превращает  |cffb4dc8cВластителя|r в |cffb4dc8cКровавого Палача|r. Усиливая его боевой потенциал.
+
+STRING 19110 [upgrade] [Rehs.hotkey1]:
+F
+
+STRING 20119 [upgrade] [R07L.ubertip1]:
+Древняя раса таинственных ночных эльфов, называющих себя калдорай, сыграла важнейшую роль в истории Азерота. Хотя теперь ночные эльфы сражаются за Альянс, они и поныне хранят в памяти события, произошедшие более десяти тысяч лет назад. А именно — Войну древних, когда им удалось остановить первое вторжение Пылающего Легиона в Азерот.
+
+STRING 20295 [upgrade] [R0G2.ubertip1]:
+|cffbd00ffПозволяет нанимать войска стражей и жриц Элуны. А так же получить её благославление 
+
+STRING 20328 [hero] [E00V.tip]:
+Призвать |cffbebedcхранителя рощи|r
+
+STRING 20330 [hero] [E00V.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|n
+Герой-мистик, повелевающий силами природы. Главная цель его жызни - защищать лес!
+
+STRING 20346 [hero] [E00V.awakentip]:
+Воскресить |cffbebedcхранителя рощи|r
+
+STRING 20348 [hero] [E00V.revivetip]:
+Воскресить |cffbebedcхранителя рощи|r
+
+STRING 20630 [ability] [A0LI.ubertip1]:
+Отнимает у игрока|cffffd700 500 золота|r, но добавляет |cff228722100 дерева|r.
+
+STRING 20631 [ability] [A0LJ.ubertip1]:
+Отнимает у игрока |cff228722500 дерева|r, но добавляет |cffffd700100 золота|r.
+
+STRING 21406 [ability] [ANfl.tip4]:
+Раздвоенная молния [|cffffcc004-й уровень|r]
+
+STRING 22977 [ability] [A164.hotkey]:
+Q
+
+STRING 22978 [ability] [A164.unhotkey]:
+Q
+
+STRING 23097 [ability] [A16I.hotkey]:
+Q
+
+STRING 23098 [ability] [A16I.unhotkey]:
+Q
+
+STRING 23103 [ability] [A16K.hotkey]:
+Q
+
+STRING 23104 [ability] [A16K.unhotkey]:
+Q
+
+STRING 24420 [ability] [A160.researchhotkey]:
+E
+
+STRING 24656 [ability] [A12K.name]:
+|cffbebedcРассеивание заклинаний|r
+
+STRING 24657 [ability] [A12K.tip1]:
+|cffbebedcРассеивание заклинаний|r
+
+STRING 25578 [ability] [A15N.name]:
+Зона ремонта
+
+STRING 25582 [ability] [A15N.researchtip]:
+Зона ремонта
+
+STRING 25589 [ability] [A15N.tip1]:
+Зона ремонта
+
+STRING 25608 [ability] [A15N.ubertip1]:
+Восстанавливает здоровье механическим юнитам поблизости.
+
+STRING 25763 [ability] [AEbl.researchubertip]:
+|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно перемещает героя на короткое расстояние, позволяя быстро вступить в бой или выйти из окружения.|r
+
+STRING 25764 [ability] [AEbl.name]:
+|cffe4cfa3Скачок|r
+
+STRING 25765 [ability] [AEbl.researchtip]:
+|cffe4cfa3Скачок|r (|cffffffffW|r)
+
+STRING 25766 [ability] [AEtq.name]:
+|cffe4cfa3Покой|r
+
+STRING 25768 [ability] [AEtq.researchtip]:
+|cffe4cfa3Умиротворение|r
+
+STRING 25770 [ability] [AEtq.researchubertip]:
+|cffa6afb8СПОСОБНОСТЬ:|cffced4da Призывает поток целительной энергии, восстанавливающий здоровье всем союзникам в обширной области.|r
+
+STRING 25834 [ability] [Acyc.name]:
+Whirlwind
+
+STRING 25835 [ability] [Acyc.tip1]:
+Whirlwind
+
+STRING 25839 [ability] [Acyc.ubertip1]:
+Lifts the enemy into the air, preventing movement, attacking, and using abilities. The target cannot be selected while affected. Does not work on mechanical units. |nDuration: <Acyc,Dur1> sec.
+
+STRING 25998 [upgrade] [R0GC.ubertip2]:
+Увеличивают объем переносимой работниками древесины на 5.
+
+STRING 25999 [upgrade] [R0GC.ubertip3]:
+Увеличивают объем переносимой работниками древесины на 5.
+
+STRING 26000 [upgrade] [R0GC.ubertip4]:
+Увеличивают объем переносимой работниками древесины на 5.
+
+STRING 26001 [upgrade] [R0GC.ubertip5]:
+Увеличивают объем переносимой работниками древесины на 5.
+
+STRING 26002 [upgrade] [R0GC.ubertip6]:
+Увеличивают объем переносимой работниками древесины на 5.
+
+STRING 26003 [upgrade] [R0GC.ubertip1]:
+Увеличивают объем переносимой работниками древесины на 5.
+
+STRING 26277 [upgrade] [R0G9.hotkey1]:
+A
+
+STRING 26390 [ability] [ken0.name]:
+|cffb4dc8cЯрость природы|r
+
+STRING 26476 [ability] [A0I3.tip1]:
+|cffe4cfa3Небольшой скачок|r (|cffffffffC|r)
+
+STRING 26477 [ability] [A0I3.ubertip1]:
+|cffa6afb8СПОСОБНОСТЬ:|cffced4da Мгновенно переносит работника на небольшое расстояние.|r
+
+STRING 26484 [ability] [A0I3.name]:
+|cffe4cfa3Небольшой скачок|r
+
+STRING 26500 [ability] [A15N.researchubertip]:
+Восстанавливает здоровье механическим юнитам поблизости.
+
+STRING 26923 [building] [etol.name]:
+|cffbebedcДрево жизни|r
+
+STRING 26924 [building] [etol.tip]:
+Вырастить |cffbebedcдрево жизни|r
+
+STRING 26925 [building] [etoa.name]:
+|cffbebedcДрево столетий|r
+
+STRING 26935 [building] [etoa.tip]:
+Улучшить до |cffbebedcдрева столетий|r
+
+STRING 26936 [building] [etoe.name]:
+|cffbebedcДрево вечности|r
+
+STRING 26937 [building] [etoe.tip]:
+Улучшить до |cffbebedcдрева вечности|r
+
+STRING 26938 [building] [emow.name]:
+|cffbebedcЛунный колодец|r
+
+STRING 26939 [building] [emow.tip]:
+Построить |cffbebedcлунный колодец|r
+
+STRING 26940 [building] [eaom.name]:
+|cffbebedcДрево войны|r
+
+STRING 26941 [building] [eaom.tip]:
+Вырастить |cffbebedcдрево войны|r
+
+STRING 27021 [building] [eate.name]:
+|cffbebedcАлтарь старейшин|r
+
+STRING 27022 [building] [eate.tip]:
+Построить |cffbebedcалтарь старейшин|r
+
+STRING 27023 [building] [eaoe.name]:
+|cffbebedcДрево мудрости|r
+
+STRING 27024 [building] [eaoe.tip]:
+Вырастить |cffbebedcдрево мудрости|r
+
+STRING 27025 [building] [eaow.name]:
+|cffbebedcДрево ветров|r
+
+STRING 27026 [building] [eaow.tip]:
+Вырастить |cffbebedcдрево ветров|r
+
+STRING 27027 [building] [edob.name]:
+|cffbebedcДом охотников|r
+
+STRING 27028 [building] [edob.tip]:
+Построить |cffbebedcдом охотников|r
+
+STRING 27029 [building] [etrp.name]:
+|cffbebedcСторожевое древо|r
+
+STRING 27030 [building] [etrp.tip]:
+Вырастить |cffbebedcсторожевое древо|r
+
+STRING 27031 [building] [edos.name]:
+|cffbebedcГнездо химер|r
+
+STRING 27032 [building] [edos.tip]:
+Построить |cffbebedcгнездо химер|r
+
+STRING 27042 [worker] [ewsp.name]:
+|cffbebedcОгонек|r
+
+STRING 27043 [worker] [ewsp.tip]:
+Призвать |cffbebedcогонька|r
+
+STRING 27044 [upgrade] [Reeb.name1]:
+|cffbebedcЗнак хищника|r
+
+STRING 27045 [upgrade] [Reeb.tip1]:
+Исследовать «|cffbebedcЗнак хищника|r»
+
+STRING 27049 [unit] [edry.tip]:
+Обучить |cffbebedcдриаду|r
+
+STRING 27050 [unit] [edry.name]:
+|cffbebedcДриада|r
+
+STRING 27051 [unit] [edoc.name]:
+|cffbebedcДруид-хищник|r
+
+STRING 27052 [unit] [edoc.tip]:
+|cffbebedcОбучить друида-хищника|r
+
+STRING 27053 [unit] [emtg.name]:
+|cffbebedcГорный великан|r
+
+STRING 27054 [unit] [emtg.tip]:
+Обучить |cffbebedcгорного великана|r
+
+STRING 27055 [unit] [edot.name]:
+|cffbebedcДруид-ворон|r
+
+STRING 27056 [unit] [edot.tip]:
+Обучить |cffbebedcдруида-ворона|r
+
+STRING 27057 [unit] [efdr.name]:
+|cffbebedcЧудесный дракончик|r
+
+STRING 27058 [unit] [efdr.tip]:
+Обучить |cffbebedcчудесного дракончика|r
+
+STRING 27059 [upgrade] [Resm.name1]:
+|cffbebedcСила Луны|r
+
+STRING 27060 [upgrade] [Resm.name3]:
+|cffbebedcМощь Луны|r
+
+STRING 27061 [upgrade] [Resm.name2]:
+|cffbebedcСила Луны|r
+
+STRING 27062 [upgrade] [Resm.name6]:
+|cffbebedcМогущество Луны|r
+
+STRING 27063 [upgrade] [Resm.name5]:
+|cffbebedcМогущество Луны|r
+
+STRING 27064 [upgrade] [Resm.name4]:
+|cffbebedcМощь Луны|r
+
+STRING 27065 [upgrade] [Resm.tip1]:
+Исследовать «|cffbebedcСилу Луны|r»
+
+STRING 27066 [upgrade] [Resm.tip2]:
+Исследовать «|cffbebedcСилу Луны|r»
+
+STRING 27067 [upgrade] [Resm.tip3]:
+Исследовать «|cffbebedcМощь Луны|r»
+
+STRING 27068 [upgrade] [Resm.tip6]:
+Исследовать «|cffbebedcМогущество Луны|r»
+
+STRING 27069 [upgrade] [Resm.tip5]:
+Исследовать «|cffbebedcМогущество Луны|r»
+
+STRING 27070 [upgrade] [Resm.tip4]:
+Исследовать «|cffbebedcМощь Луны|r»
+
+STRING 27071 [upgrade] [Resm.ubertip1]:
+Увеличивает урон |cffbebedcэльфов|r, в дальнем бою.
+
+STRING 27072 [upgrade] [Resm.ubertip2]:
+Дополнительно увеличивает урон |cffbebedcэльфов|r , в дальнем бою.
+
+STRING 27073 [upgrade] [Resm.ubertip3]:
+Дополнительно увеличивает урон |cffbebedcэльфов|r , в дальнем бою.
+
+STRING 27074 [upgrade] [Resm.ubertip4]:
+Дополнительно увеличивает урон |cffbebedcэльфов|r , в дальнем бою.
+
+STRING 27075 [upgrade] [Resm.ubertip5]:
+Дополнительно увеличивает урон |cffbebedcэльфов|r , в дальнем бою.
+
+STRING 27076 [upgrade] [Resm.ubertip6]:
+Дополнительно увеличивает урон |cffbebedcэльфов|r , в дальнем бою.
+
+STRING 27077 [upgrade] [Resw.name1]:
+|cffbebedcСила леса|r
+
+STRING 27078 [upgrade] [Resw.name2]:
+|cffbebedcСила леса|r
+
+STRING 27079 [upgrade] [Resw.name3]:
+|cffbebedcМощь леса|r
+
+STRING 27080 [upgrade] [Resw.name6]:
+|cffbebedcМогущество леса|r
+
+STRING 27081 [upgrade] [Resw.name5]:
+|cffbebedcМогущество леса|r
+
+STRING 27082 [upgrade] [Resw.name4]:
+|cffbebedcМощь леса|r
+
+STRING 27083 [upgrade] [Resw.tip1]:
+Исследовать «|cffbebedcСилу леса|r»
+
+STRING 27084 [upgrade] [Resw.tip2]:
+Исследовать «|cffbebedcСилу леса|r»
+
+STRING 27085 [upgrade] [Resw.tip3]:
+Исследовать «|cffbebedcМощь леса|r»
+
+STRING 27086 [upgrade] [Resw.tip6]:
+Исследовать «|cffbebedcМогущество леса|r»
+
+STRING 27087 [upgrade] [Resw.tip5]:
+Исследовать «|cffbebedcМогущество леса|r»
+
+STRING 27088 [upgrade] [Resw.tip4]:
+Исследовать «|cffbebedcМощь леса|r»
+
+STRING 27089 [upgrade] [Resw.ubertip1]:
+Увеличивает урон |cffbebedcдруидов|r, и |cffbebedcэльфов|r ближнего боя.
+
+STRING 27090 [upgrade] [Resw.ubertip2]:
+Дополнительно увеличивает урон |cffbebedcдруидов|r и |cffbebedcэльфов|r ближнего боя.
+
+STRING 27091 [upgrade] [Resw.ubertip3]:
+Дополнительно увеличивает урон |cffbebedcдруидов|r и |cffbebedcэльфов|r ближнего боя.
+
+STRING 27092 [upgrade] [Resw.ubertip4]:
+Дополнительно увеличивает урон |cffbebedcдруидов|r и |cffbebedcэльфов|r ближнего боя.
+
+STRING 27093 [upgrade] [Resw.ubertip5]:
+Дополнительно увеличивает урон |cffbebedcдруидов|r и |cffbebedcэльфов|r ближнего боя.
+
+STRING 27094 [upgrade] [Resw.ubertip6]:
+Дополнительно увеличивает урон |cffbebedcдруидов|r и |cffbebedcэльфов|r ближнего боя.
+
+STRING 27095 [upgrade] [Repb.name1]:
+|cffbebedcСтрижающие клинки|r
+
+STRING 27096 [upgrade] [Repb.tip1]:
+Исследовать |cffbebedcстрижающие клинки|r
+
+STRING 27097 [upgrade] [Remk.tip1]:
+Исследовать «|cffbebedcТренировку меткости|r»
+
+STRING 27098 [upgrade] [Remk.name1]:
+|cffbebedcТренировка меткости|r
+
+STRING 27099 [upgrade] [Reib.name1]:
+|cffbebedcУлучшенные луки|r
+
+STRING 27100 [upgrade] [Reib.tip1]:
+Исследовать |cffbebedcулучшенные луки|r
+
+STRING 27101 [upgrade] [Remg.name1]:
+|cffbebedcУлучшить лунные глефы|r
+
+STRING 27102 [upgrade] [Remg.tip1]:
+|cffbebedcУлучшить лунные глефы|r
+
+STRING 27103 [upgrade] [Rers.name1]:
+|cffbebedcУстойчивая кожа|r
+
+STRING 27104 [upgrade] [Rers.tip1]:
+Исследовать «|cffbebedcУстойчивую кожу|r»
+
+STRING 27105 [upgrade] [Resc.name1]:
+|cffbebedcЧасовой|r
+
+STRING 27106 [upgrade] [Resc.tip1]:
+Исследовать «|cffbebedcЧасового|r»
+
+STRING 27107 [upgrade] [Redc.name1]:
+Сделать |cffbebedcдруидов-хищников адептами|r
+
+STRING 27108 [upgrade] [Redc.name2]:
+Сделать |cffbebedcдруидов-хищников мастерами|r
+
+STRING 27109 [upgrade] [Redc.tip1]:
+Сделать |cffbebedcдруидов-хищников адептами|r
+
+STRING 27110 [upgrade] [Redc.tip2]:
+Сделать |cffbebedcдруидов-хищников мастерами|r
+
+STRING 27111 [upgrade] [Redt.name1]:
+Сделать |cffbebedcдруидов-воронов адептами|r
+
+STRING 27112 [upgrade] [Redt.name2]:
+Сделать |cffbebedcдруидов-воронов мастерами|r
+
+STRING 27113 [upgrade] [Redt.tip1]:
+Сделать |cffbebedcдруидов-воронов адептами|r
+
+STRING 27114 [upgrade] [Redt.tip2]:
+Сделать |cffbebedcдруидов-воронов мастерами|r
+
+STRING 27115 [upgrade] [Resi.name1]:
+|cffbebedcРассеяние чар|r
+
+STRING 27116 [upgrade] [Resi.tip1]:
+Исследовать «|cffbebedcРассеяние чар|r»
+
+STRING 27117 [upgrade] [Rerh.name1]:
+|cffbebedcПрочные шкуры|r
+
+STRING 27118 [upgrade] [Rerh.name2]:
+|cffbebedcПрочные шкуры|r
+
+STRING 27119 [upgrade] [Rerh.name3]:
+|cffbebedcУсиленные шкуры|r
+
+STRING 27120 [upgrade] [Rerh.name6]:
+|cffbebedcНепробиваемые шкуры|r
+
+STRING 27121 [upgrade] [Rerh.name5]:
+|cffbebedcНепробиваемые шкуры|r
+
+STRING 27122 [upgrade] [Rerh.name4]:
+|cffbebedcУсиленные шкуры|r
+
+STRING 27123 [upgrade] [Rerh.tip1]:
+Исследовать |cffbebedcпрочные шкуры|r
+
+STRING 27124 [upgrade] [Rerh.tip2]:
+Исследовать |cffbebedcпрочные шкуры|r
+
+STRING 27125 [upgrade] [Rerh.tip3]:
+Исследовать |cffbebedcусиленные шкуры|r
+
+STRING 27126 [upgrade] [Rerh.tip6]:
+Исследовать |cffbebedcнепробиваемые шкуры|r
+
+STRING 27127 [upgrade] [Rerh.tip5]:
+Исследовать |cffbebedcнепробиваемые шкуры|r
+
+STRING 27128 [upgrade] [Rerh.tip4]:
+Исследовать |cffbebedcусиленные шкуры|r
+
+STRING 27129 [upgrade] [Rerh.ubertip1]:
+Усиливают броню |cffbebedcдруидов|r и |cffbebedcэльфов|r ближнего боя.
+
+STRING 27130 [upgrade] [Rerh.ubertip2]:
+Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльвоф|r ближнего боя.
+
+STRING 27131 [upgrade] [Rerh.ubertip3]:
+Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльвоф|r ближнего боя.
+
+STRING 27132 [upgrade] [Rerh.ubertip4]:
+Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльвоф|r ближнего боя.
+
+STRING 27133 [upgrade] [Rerh.ubertip5]:
+Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльвоф|r ближнего боя.
+
+STRING 27134 [upgrade] [Rerh.ubertip6]:
+Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльвоф|r ближнего боя.
+
+STRING 27135 [upgrade] [Reuv.name1]:
+|cffbebedcНочное зрение|r
+
+STRING 27136 [upgrade] [Reuv.tip1]:
+Исследовать |cffbebedcночное зрение|r
+
+STRING 27137 [upgrade] [Rews.name1]:
+|cffbebedcЛунный фонтан|r
+
+STRING 27138 [upgrade] [Rews.tip1]:
+Исследовать |cffbebedcлунный фонтан|r
+
+STRING 27139 [upgrade] [Rema.name1]:
+|cffbebedcЛунные доспехи|r
+
+STRING 27140 [upgrade] [Rema.name2]:
+|cffbebedcЛунные доспехи|r
+
+STRING 27141 [upgrade] [Rema.name3]:
+Улучшенные |cffbebedcлунные доспехи|r
+
+STRING 27142 [upgrade] [Rema.name6]:
+Усиленные |cffbebedcлунные доспехи|r
+
+STRING 27143 [upgrade] [Rema.name5]:
+Усиленные |cffbebedcлунные доспехи|r
+
+STRING 27144 [upgrade] [Rema.name4]:
+Улучшенные |cffbebedcлунные доспехи|r
+
+STRING 27145 [upgrade] [Rema.tip1]:
+Исследовать |cffbebedcлунные доспехи|r
+
+STRING 27146 [upgrade] [Rema.tip2]:
+Исследовать |cffbebedcлунные доспехи|r
+
+STRING 27147 [upgrade] [Rema.tip3]:
+Исследовать |cffbebedcулучшенные лунные доспехи|r
+
+STRING 27148 [upgrade] [Rema.tip6]:
+Исследовать |cffbebedcусиленные лунные доспехи|r
+
+STRING 27149 [upgrade] [Rema.tip5]:
+Исследовать |cffbebedcусиленные лунные доспехи|r
+
+STRING 27150 [upgrade] [Rema.tip4]:
+Исследовать |cffbebedcулучшенные лунные доспехи|r
+
+STRING 27151 [upgrade] [Rema.ubertip1]:
+Усиливают броню |cffbebedcдруидов|r и |cffbebedcэльфов|r дальнего боя.
+
+STRING 27152 [upgrade] [Rema.ubertip2]:
+Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльфов|r дальнего боя.
+
+STRING 27153 [upgrade] [Rema.ubertip3]:
+Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльфов|r дальнего боя.
+
+STRING 27154 [upgrade] [Rema.ubertip4]:
+Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльфов|r дальнего боя.
+
+STRING 27155 [upgrade] [Rema.ubertip5]:
+Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльфов|r дальнего боя.
+
+STRING 27156 [upgrade] [Rema.ubertip6]:
+Дополнительно усиливают броню |cffbebedcдруидов|r и |cffbebedcэльфов|r дальнего боя.
+
+STRING 27157 [upgrade] [Rehs.name1]:
+|cffbebedcКаменная кожа|r
+
+STRING 27158 [upgrade] [Rehs.tip1]:
+Исследовать «|cffbebedcКаменную кожу|r»
+
+STRING 27159 [upgrade] [Reec.name1]:
+|cffbebedcЗнак ворона|r
+
+STRING 27160 [upgrade] [Reec.tip1]:
+Исследовать «|cffbebedcЗнак ворона|r»
+
+STRING 27161 [upgrade] [Renb.name1]:
+|cffbebedcБлагословение природы|r
+
+STRING 27190 [upgrade] [R0G1.name1]:
+|cffbebedcКруг Кенария|r
+
+STRING 27193 [ability] [A0IQ.name]:
+|cffffdcb4Обозначить столицу|r
+
+STRING 27194 [unit] [n05D.name]:
+|cffbebedcДруид-сова|r
+
+STRING 27197 [ability] [A009.tip1]:
+Сделать флагманом
+
+STRING 27198 [ability] [A009.name]:
+Сделать флагманом
+
+STRING 27291 [unit] [e00H.name]:
+|cffbebedcДревний Гвардеец|r
+
+STRING 27292 [unit] [e00H.tip]:
+Обучить |cffbebedcДревний Гвардеец|r
+
+STRING 27293 [unit] [e00I.name]:
+|cffbebedcЛунный воин|r
+
+STRING 27294 [unit] [e00I.tip]:
+Обучить |cffbebedcЛунный воин|r
+
+STRING 27295 [unit] [e00J.name]:
+|cffbebedcДух леса|r
+
+STRING 27296 [unit] [e00J.tip]:
+Обучить |cffbebedcДух леса|r
+
+STRING 27372 [ability] [A160.tip3]:
+|cffbebedcПокровительство друидов|r
+
+STRING 27373 [ability] [A160.tip4]:
+|cffbebedcПокровительство друидов|r
+
+STRING 27374 [ability] [A160.ubertip2]:
+Усиливает броню находящихся рядом союзников. Наносит урон всем врагам вокруг. |n |n|cffffcc002-й уровень:|r +<AHad,DataA2,.> к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду. 
+
+STRING 27375 [ability] [A160.ubertip3]:
+Усиливает броню находящихся рядом союзников. Наносит урон всем врагам вокруг. |n |n|cffffcc003-й уровень:|r +<AHad,DataA3,.> к базовой броне, наносит 150% урона от регенерации юнита, каждую секунду.
+
+STRING 27379 [ability] [A161.name]:
+|cffbebedcПокровительство друидов|r
+
+STRING 27381 [ability] [A161.researchtip]:
+Изучить «|cffbebedcПокровительство друидов|r» [|cffffcc00%d-й уровень|r]
+
+STRING 27385 [hero] [E00W.name]:
+|cffbebedcДруид Мастер|r
+
+STRING 27386 [hero] [E00W.awakentip]:
+Воскресить |cffbebedcДруид Мастер|r
+
+STRING 27387 [hero] [E00W.revivetip]:
+Воскресить |cffbebedcДруид Мастер|r
+
+STRING 27418 [unit] [n05G.name]:
+|cffbebedcСовух-берсерк|r
+
+STRING 27420 [ability] [A164.name]:
+|cffbebedcОблик совы|r
+
+STRING 27421 [ability] [A164.tip1]:
+|cffbebedcОблик совы|r
+
+STRING 27546 [upgrade] [R0G6.name1]:
+|cffbebedcАнулирование|r
+
+STRING 27547 [upgrade] [R0G6.name2]:
+|cffbebedcАнулирование|r
+
+STRING 27552 [upgrade] [R0G6.name3]:
+|cffbebedcАнулирование|r
+
+STRING 27553 [upgrade] [R0G6.tip3]:
+Исследовать «|cffbebedcАнулирование|r»
+
+STRING 27554 [upgrade] [R0G7.ubertip1]:
+Познания магии |cffbebedcдревних гвардейцев|r находятся на высшем уровне, что позволяет им блокировать  вражескую магию.
+
+STRING 27555 [ability] [A16I.ubertip1]:
+При использовании дает невосприимчивость к магии.
+
+STRING 27561 [upgrade] [R0G7.name1]:
+|cffbebedcУдлененные мечи|r
+
+STRING 27562 [upgrade] [R0G7.tip1]:
+Исследовать «|cffbebedcУдлененные мечи|r»
+
+STRING 27563 [ability] [ANfl.ubertip4]:
+Поражает молнией до 10 врагов в секторе перед собой, нанося 300 урона.
+
+STRING 27565 [unit] [n05H.name]:
+|cffbebedcФурболг-следопыт|r
+
+STRING 27566 [unit] [n05H.tip]:
+Нанять |cffbebedcФурболг-следопыт|r
+
+STRING 27570 [upgrade] [R0G8.name1]:
+|cffbebedcМагия совы|r
+
+STRING 27571 [upgrade] [R0G8.tip1]:
+Исследовать «|cffbebedcМагия совы|r»
+
+STRING 27572 [upgrade] [R0G8.ubertip1]:
+Позволяет |cffbebedcдруидам-совухам|r использовать новые умения. Увеличивает здоровье на |cffbebedc40 ед|r., ману на |cffbebedc25 ед|r., и регенерацию маны на |cffbebedc20%|r.
+
+STRING 27573 [upgrade] [R0G8.name2]:
+|cffbebedcМагия совы|r
+
+STRING 27574 [upgrade] [R0G8.tip2]:
+Исследовать «|cffbebedcМагия совы|r»
+
+STRING 27575 [upgrade] [R0G8.ubertip2]:
+Позволяет |cffbebedcдруидам-совухам|r использовать новые умения, и |cffbebedcОблик Совухи|r. Увеличивает здоровье на |cffbebedc40 ед|r., ману на |cffbebedc25 ед|r., и регенерацию маны на |cffbebedc20%|r.
+
+STRING 27579 [upgrade] [R0G9.name1]:
+|cffbebedcОпутывание|r
+
+STRING 27580 [upgrade] [R0G9.tip1]:
+Исследовать «|cffbebedcОпутывание|r»
+
+STRING 27581 [upgrade] [R0G9.ubertip1]:
+Позволяет духам лесам опутывать врагов при каждой атаке.
+
+STRING 27594 [upgrade] [R0GA.name1]:
+|cffbebedcОбучение друидизму|r
+
+STRING 27595 [upgrade] [R0GA.tip1]:
+Исследовать «|cffbebedcОбучение друидизму|r»
+
+STRING 27596 [upgrade] [R0GA.ubertip1]:
+Открывает новые способности фурболгу, увеличивает скорость атаки на |cffbebedc15%|r, и здоровье на |cffbebedc50 ед|r.
+
+STRING 27604 [upgrade] [R0GB.name1]:
+|cffbebedcВыбор Направления|r
+
+STRING 27605 [upgrade] [R0GB.tip1]:
+Исследовать «|cffbebedcВыбор Направления|r»
+
+STRING 27627 [unit] [n05D.tip]:
+Призвать |cffbebedcДруид-сова|r
+
+STRING 27631 [ability] [A16L.name]:
+|cffbebedcНевосприимчивость к магии|r
+
+STRING 27632 [ability] [A16L.tip1]:
+|cffbebedcНевосприимчивость к магии|r
+
+STRING 27634 [hero] [E00V.name]:
+|cffbebedcХранитель рощи|r
+
+STRING 27644 [ability] [ANfl.researchubertip]:
+Поражает молнией врагов в секторе перед собой. |n|n|cffffcc001-й уровень:|r <ANfl,DataA1> урона каждой цели, 3 цели. |n|cffffcc002-й уровень:|r <ANfl,DataA2> урона каждой цели, 5 целей. |n|cffffcc003-й уровень:|r <ANfl,DataA3> урона каждой цели, 8 целей.|n|cffffcc004-й уровень:|r 300 урона каждой цели, 10 целей.
+
+STRING 27655 [upgrade] [R0GC.name1]:
+|cffbebedcСлияние с деревьями|r
+
+STRING 27656 [upgrade] [R0GC.name2]:
+|cffbebedcСлияние с деревьями|r
+
+STRING 27657 [upgrade] [R0GC.name3]:
+|cffbebedcСлияние с деревьями|r
+
+STRING 27658 [upgrade] [R0GC.name4]:
+|cffbebedcСлияние с деревьями|r
+
+STRING 27659 [upgrade] [R0GC.name5]:
+|cffbebedcСлияние с деревьями|r
+
+STRING 27660 [upgrade] [R0GC.name6]:
+|cffbebedcСлияние с деревьями|r
+
+STRING 27661 [upgrade] [R0GC.tip1]:
+Исследовать |cffbebedcСлияние с деревьями|r
+
+STRING 27662 [upgrade] [R0GC.tip2]:
+Исследовать |cffbebedcСлияние с деревьями|r
+
+STRING 27663 [upgrade] [R0GC.tip3]:
+Исследовать |cffbebedcСлияние с деревьями|r
+
+STRING 27664 [upgrade] [R0GC.tip4]:
+Исследовать |cffbebedcСлияние с деревьями|r
+
+STRING 27665 [upgrade] [R0GC.tip5]:
+Исследовать |cffbebedcСлияние с деревьями|r
+
+STRING 27666 [upgrade] [R0GC.tip6]:
+Исследовать |cffbebedcСлияние с деревьями|r
+
+STRING 27798 [upgrade] [R0G7.hotkey1]:
+D
+
+STRING 27969 [ability] [A0IQ.tip1]:
+|cffffdcb4Обозначить столицу|r
+
+STRING 27970 [ability] [A0IQ.ubertip1]:
+Обозначает столицу, устанавливая высокое знание здоровья зданию. При гибели столицы вы либо проигрываете, либо подчиняетесь (зависит от выбранных настроек игры).|nЕсли столица не выбрана за 10 минут, она выберется автоматически из главных зданий вашей расы. В противном случае вас ждет поражение.
+
+STRING 28616 [upgrade] [R0G6.hotkey1]:
+S
+
+STRING 28687 [upgrade] [R0G6.hotkey2]:
+S
+
+STRING 28696 [upgrade] [R0G6.hotkey3]:
+S
+
+STRING 28726 [upgrade] [R0GA.hotkey1]:
+S
+
+STRING 28754 [ability] [A12K.hotkey]:
+Q
+
+STRING 30523 [ability] [ken0.tip1]:
+|cffb4dc8cЯрость природы|r
+
+STRING 30922 [ability] [A1PP.hotkey]:
+Q
+
+STRING 31596 [unit] [edry.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa30 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaПронзающий|r|n
+Антимаг. Отравляет врагов, замедляя их и нанося им урон. Невосприимчива к магии и урону от магических способностей. 
+
+STRING 31597 [unit] [edoc.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa35 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
+Маг ближнего боя. Владеет «Ревом», который увеличивает урон от атак. Может изучить «Омоложение», облик медведя и «Знак хищника». |n|n|cffffcc00Атакует наземные цели.|r
+
+STRING 31598 [unit] [emtg.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
+Огромный воин ближнего боя. Выдерживает большой объем урона и поражает врагов эффектами контроля. 
+
+STRING 31599 [unit] [edot.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa22 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|n
+Мобильный маг. Владеет «Волшебным огнем», который ослабляет броню и раскрывает местоположение врага. Может изучить облик буревестника, «Смерч» и «Знак ворона». |n|n|cffffcc00Атакует наземные и воздушные цели.|r
+
+STRING 31600 [building] [emow.ubertip]:
+|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.
+
+|cffffff00Приносит 20 инкома|r
+
+STRING 31601 [building] [eaoe.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n
+Приют наземных магов. Позволяет проводить исследование , для обучения новым способностям.
+
+STRING 31602 [building] [eaow.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n
+Приют воздушных воинов и магов. Новые виды воск, более могучих, или более разумных.
+
+STRING 31603 [building] [e03W.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n
+Позволяет усиливать атаку и броню войск. Дает доступ к ночному зрению и лунному фонтану.
+
+STRING 31604 [building] [etrp.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n
+Оборонительное древо. Пустив корни, может метать камни в находящихся рядом врагов.|n|n
+
+STRING 31605 [worker] [ewsp.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa14 сек.|r|n
+Базовый рабочий. Добывает древесину, а также выращивает здания. Владеет «Обновлением». 
+
+STRING 31702 [unit] [e00H.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагическая|r|n
+Маг ближнего боя. Множество лет прожито в тренировках и изучении магии.
+
+STRING 31703 [unit] [e00I.ubertip]:
+Ловкий эльфийский боец ближнего боя с парными глефами. Владеет «Танцем полумесяца», позволяющим совершать стремительные перекаты вокруг врагов с рассекающим уроном.
+
+STRING 31704 [unit] [e00J.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa25 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
+Дух призванный защищать леси природу всего мира.
+
+STRING 31707 [hero] [E00W.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|n
+Мастер друид, его понимание природыф поражает воображение, но и так же повышает его опасность для врагов.
+
+STRING 31708 [hero] [E011.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaЛовкость |r|n 
+Мастер охоты, обучивший за свой век множество талантлевых и перспективных охотников Ночных эльфов.
+
+STRING 31803 [upgrade] [R0CY.tip1]:
+Друиды просят помощи у Диких Богов.
+
+STRING 31904 [unit] [n05D.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
+Рассудительный и могучий друид, легко вдохновляющий на борьбу всех своих союзников.
+
+STRING 31905 [unit] [n05H.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa35 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
+Тяжелый воин ближнего боя. Владеет «Волшебным огнем». 
+
+STRING 32028 [ability] [ken0.hotkey]:
+R
+
+STRING 32030 [ability] [ken0.researchhotkey]:
+R
+
+STRING 32254 [upgrade] [Resw.hotkey4]:
+W
+
+STRING 32359 [upgrade] [Resw.hotkey5]:
+W
+
+STRING 32366 [upgrade] [Resw.hotkey6]:
+W
+
+STRING 32367 [upgrade] [Renb.hotkey1]:
+W
+
+STRING 32773 [upgrade] [Resm.hotkey1]:
+Q
+
+STRING 32775 [upgrade] [Resm.hotkey2]:
+Q
+
+STRING 32776 [upgrade] [Resm.hotkey3]:
+Q
+
+STRING 32777 [upgrade] [Resm.hotkey4]:
+Q
+
+STRING 32785 [upgrade] [Resm.hotkey5]:
+Q
+
+STRING 32814 [upgrade] [Resm.hotkey6]:
+Q
+
+STRING 32922 [unit] [n05G.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa80 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|n|nТяжелый воин ближнего боя. Владеет «Сильным ударом» и «Громовой поступью». |n|n|cffffcc00Атакует наземные цели.|r
+
+STRING 33072 [upgrade] [Rerh.hotkey4]:
+R
+
+STRING 33135 [upgrade] [Rerh.hotkey5]:
+R
+
+STRING 33173 [upgrade] [Rerh.hotkey6]:
+R
+
+STRING 33189 [unit] [n064.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaХаос|r|n|nТяжелый воин ближнего боя. Владеет «Командирской аурой» и «Громовой поступью». |n|n|cffffcc00Атакует наземные цели.|r
+
+STRING 33342 [upgrade] [R0KV.name1]:
+|cff00781eМилость Природы
+
+STRING 33380 [upgrade] [R0KV.tip1]:
+Дает по области дождь, который лечит воинов
+
+STRING 33517 [unit] [ebal.ubertip]:
+|cff7dc87dВремя подготовки:|r |cffaaf0aa50 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОсадный|r|n
+Дальнобойное осадное орудие, эффективное против зданий. Можно оснастить стрижающими клинками, чтобы атаковать деревья. |n|n|cffffcc00Атакует наземные цели.|r
+
+STRING 35173 [ability] [A0HL.ubertip1]:
+|cff7dc87dСоздатель расы:|r |cffe17d00Escanor (Яхве)|r|n|cff7dc87dСложность:|r |cff37ff37Средняя|r|n|cff7dc87dПериод:|r |cffffde19WoW Vanila|r по|cff23bc23 Legion|r|n|cff7dc87dОписание:|r Ночные эльфы, или кал'дорай — древняя раса убеждённых отшельников, сыгравшая важнейшую роль в определении истории Азерота. Более десяти тысяч лет назад героизм эльфийских воинов позволил остановить первое вторжение Пылающего Легиона. Минули столетия. Разрозненные обломки Легиона вновь сплотились, заручившись помощью подлых сатиров, и эльфы опять выступили против врага. Последовавшая Война сатиров дорого обошлась ночным эльфам, но всё же они сумели изгнать со своей земли тех, кто сеял на ней хаос.
+
+STRING 35379 [ability] [A1MW.tip1]:
+|cffbec8f5Оплетение|r
+
+STRING 35428 [upgrade] [R0KV.ubertip1]:
+Дает по области дождь, который лечит воинов
+
+STRING 35453 [upgrade] [R0KW.name1]:
+|cff00781eЯрость Природы
+
+STRING 35455 [upgrade] [R0KW.tip1]:
+Призывает Энтов по области
+
+STRING 35456 [upgrade] [R0KW.ubertip1]:
+Призывает Энтов по области
+
+STRING 37712 [upgrade] [R0GC.hotkey3]:
+Z
+
+STRING 37726 [upgrade] [R0GC.hotkey4]:
+Z
+
+STRING 37727 [upgrade] [R0GC.hotkey5]:
+Z
+
+STRING 37728 [upgrade] [R0GC.hotkey6]:
+Z
+
+STRING 37729 [upgrade] [R0GC.hotkey1]:
+Z
+
+STRING 37746 [upgrade] [R0GC.hotkey2]:
+Z
+
+STRING 37953 [upgrade] [R0G1.hotkey1]:
+R
+
+STRING 38143 [upgrade] [R0G2.hotkey1]:
+E
+
+STRING 38863 [ability] [A0HL.name]:
+|cffbebedcНочные Эльфы|r
+
+STRING 38864 [ability] [A0HL.tip1]:
+|cffbebedcНочные Эльфы|r
+
+STRING 39686 [ability] [A0FC.name]:
+|cffb4dc8cОпутывание|r
+
+STRING 39688 [ability] [A0FC.tip1]:
+|cffb4dc8cОпутывание|r
+
+STRING 39689 [ability] [A0FC.ubertip1]:
+При атаке опутывает врагов, замедляя ее передвижение на 20% и атаку на 15%. Время действия: 5 сек. (герой 0.5).
+
+STRING 40023 [upgrade] [Renb.tip1]:
+Исследовать |cffbebedcБлагословение природы|r
+
+STRING 40189 [ability] [ken0.tip2]:
+|cffb4dc8cЯрость природы|r
+
+STRING 40192 [ability] [ken0.ubertip1]:
+Опутываеть врагов, оглушая находящихся рядом наземных врагов и нанося им урон.
+
+STRING 40193 [ability] [ken0.ubertip2]:
+Опутываеть врагов, оглушая находящихся рядом наземных врагов и нанося им урон.
+
+STRING 40869 [upgrade] [R0G1.tip1]:
+Ставка на |cffbebedcКруг Кенария|r
+
+STRING 40871 [upgrade] [R0G2.tip1]:
+Ставка на |cffbebedcНочные эльфов|r
+
+STRING 41199 [upgrade] [R0KU.hotkey1]:
+E
+
+STRING 41287 [upgrade] [R0KW.hotkey1]:
+E
+
+STRING 41817 [upgrade] [R0GB.ubertip1]:
+|cffc81919Власть крови|r
+
+STRING 41838 [upgrade] [R0G2.name1]:
+|cffc8cde1Орбаз Кровопорч|r
+
+STRING 41846 [upgrade] [R0KT.name1]:
+|cffbd00ffЯрость Элуны
+
+STRING 41848 [upgrade] [R0KU.ubertip1]:
+Дает по области перерождение воинов в виде светлячков
+
+STRING 41849 [upgrade] [R0KU.name1]:
+|cffbd00ffЗлезы Элуны
+
+STRING 41850 [upgrade] [R0KU.tip1]:
+Дает по области перерождение воинов в виде светлячков
+
+STRING 41852 [upgrade] [R0G1.ubertip1]:
+Применяет на себя антимагический щит, поглощающий 600 магический урона в течении 40 секунд.
+
+STRING 41894 [upgrade] [R0KS.tip1]:
+Дает по области временное усиление атаки и скорости
+
+STRING 41896 [upgrade] [R0KT.ubertip1]:
+Делает некоторых эльфиек ночными воительницами
+
+STRING 41897 [upgrade] [R0KT.tip1]:
+Делает некоторых эльфиек ночными воительницами
+
+STRING 41899 [upgrade] [R0CY.name1]:
+Призыв помощи
+
+STRING 41901 [upgrade] [R0CY.ubertip1]:
+Друиды просят помощи у Диких Богов.
+
+STRING 42399 [upgrade] [R0KS.hotkey1]:
+Q
+
+STRING 42449 [upgrade] [R0KT.hotkey1]:
+W
+
+STRING 42606 [upgrade] [R0CY.hotkey1]:
+Q
+
+STRING 42657 [upgrade] [R0KV.hotkey1]:
+W
+

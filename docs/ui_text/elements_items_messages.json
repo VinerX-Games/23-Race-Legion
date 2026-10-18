@@ -1,0 +1,9 @@
+{
+  "race": "elements",
+  "category": "items_messages_interfaces",
+  "buildings_with_items": {},
+  "has_sold_items": false,
+  "trigger_messages": [],
+  "custom_frames_or_ui": false,
+  "conclusion": "No racial items sold/manufactured, no custom UI dialogs or frames. Triggers perform only mechanic tech-tree unlocks."
+}

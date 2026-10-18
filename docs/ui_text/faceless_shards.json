@@ -1,0 +1,55 @@
+{
+  "scope": "Пронзание",
+  "objects_before": [
+    {
+      "fields": {
+        "area1": "100",
+        "dataa1": "225",
+        "datab1": "275",
+        "datac1": "25",
+        "datad1": "15",
+        "datae1": "10",
+        "name": "TRIGSTR_2602",
+        "requires": "R0GD",
+        "requiresamount": "2",
+        "tip1": "TRIGSTR_27673",
+        "ubertip1": "Увеличивает урон по целям без брони и со средней броней."
+      },
+      "id": "A16P",
+      "name": "|cffd7b4f5Пронзание|r"
+    }
+  ],
+  "strings": [
+    {
+      "rawcode": "A16P",
+      "field": "name",
+      "before": "|cffd7b4f5Пронзание|r",
+      "after": "|cffe4cfa3Пронзание|r"
+    },
+    {
+      "rawcode": "A16P",
+      "field": "tip1",
+      "before": "|cffd7b4f5Пронзание|r",
+      "after": "|cffe4cfa3Пронзание|r"
+    },
+    {
+      "rawcode": "A16P",
+      "field": "ubertip1",
+      "before": "Увеличивает урон по целям без брони и со средней броней.",
+      "after": "|cffa6afb8СПОСОБНОСТЬ:|cffced4da Осколки поражают наземных врагов вокруг цели атаки: |cffffffff25|cffced4da урона в радиусе |cffffffff100|cffced4da, |cffffffff15|cffced4da урона на расстоянии от |cffffffff100|cffced4da до |cffffffff225|cffced4da и |cffffffff10|cffced4da урона дальше, до радиуса |cffffffff275|cffced4da.|n|n|cffe6c07bТребуется второй уровень «Знания проклинателей».|r"
+    }
+  ],
+  "metadata": {
+    "source": "Warcraft III CASC: units/abilitymetadata.slk, ui/worldeditstrings.txt",
+    "ability": "Afsh",
+    "fields": {
+      "area": "Full damage radius",
+      "flk1/dataa": "Medium Damage Radius",
+      "flk2/datab": "Small Damage Radius",
+      "flk3/datac": "Full Damage Amount",
+      "flk4/datad": "Medium Damage Amount",
+      "flk5/datae": "Small Damage Amount"
+    }
+  },
+  "in_game_checked": false
+}

@@ -1,0 +1,699 @@
+{
+  "scope": "Ледяные тролли: вся категория юнитов — 17 объектов (рабочий o045, основные войска n05S/n05T/o04F, заклинатели n05U/n05Z/n07B, звери n05V/n05W/n05X, элита n05Y/o04T, Лоа o05B/n062/n061 и призывы n07F/u036)",
+  "in_game_checked": false,
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "unit_ids": [
+    "o045",
+    "n05S",
+    "n05T",
+    "o04F",
+    "n05U",
+    "n05Z",
+    "n07B",
+    "n05V",
+    "n05W",
+    "n05X",
+    "n05Y",
+    "o04T",
+    "o05B",
+    "n062",
+    "n061",
+    "n07F",
+    "u036"
+  ],
+  "objects_before": {
+    "SD": [
+      {
+        "fields": {
+          "abillist": "A0I3,Ahar,Arep,A1CA",
+          "builds": "o04E,h0HO,o046,o04C,o04A,o04B,o049,o04J,o04D,o013,o06H",
+          "hotkey": "TRIGSTR_5528",
+          "isbldg": "0",
+          "name": "TRIGSTR_39324",
+          "reqs": "",
+          "targs1": "ground,structure,debris,item,ward",
+          "targs2": "tree",
+          "tip": "TRIGSTR_39325",
+          "trains": "",
+          "ubertip": "TRIGSTR_20475",
+          "upgrades": "R0IX,R0IF,R0IE,R0I2,R0I3,R0AI,R0AJ,R0AD",
+          "weapson": "3"
+        },
+        "id": "o045",
+        "name": "|cffb4dcdcРаботник|r "
+      },
+      {
+        "fields": {
+          "abillist": "A1FF,A1CA",
+          "builds": "",
+          "hotkey": "TRIGSTR_5529",
+          "isbldg": "0",
+          "name": "TRIGSTR_4182",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_4183",
+          "trains": "",
+          "ubertip": "TRIGSTR_18735",
+          "upgrades": "R0IX,R0IE,R0I7,R0I3,R0HZ,R0I0,R0I2,R0AI,R0AJ,R0AD",
+          "weapson": "1"
+        },
+        "id": "n05S",
+        "name": "|cffb4dcdcВоитель|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1CW,A1FF,A10O,A1CA",
+          "builds": "",
+          "hotkey": "TRIGSTR_6674",
+          "isbldg": "0",
+          "name": "TRIGSTR_4189",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_4192",
+          "trains": "",
+          "ubertip": "TRIGSTR_42334",
+          "upgrades": "R0IX,R0IE,R0I7,R0I3,R0I1,R0I0,R0I2,R0AI,R0AJ,R0AD",
+          "weapson": "1"
+        },
+        "id": "n05T",
+        "name": "|cffb4dcdcОхотник|r"
+      },
+      {
+        "fields": {
+          "abillist": "",
+          "builds": "",
+          "hotkey": "TRIGSTR_7615",
+          "isbldg": "0",
+          "name": "TRIGSTR_30909",
+          "reqs": "",
+          "targs1": "debris,ground,item,structure,tree,wall,ward",
+          "targs2": "structure",
+          "tip": "TRIGSTR_30910",
+          "trains": "",
+          "ubertip": "TRIGSTR_42336",
+          "upgrades": "R0I1,R0I0",
+          "weapson": "1"
+        },
+        "id": "o04F",
+        "name": "|cffb4dcdcКатапульта|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1FF,A1CO,A1CP,A1CL,A1CA",
+          "builds": "",
+          "hotkey": "TRIGSTR_5531",
+          "isbldg": "0",
+          "name": "TRIGSTR_16586",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_20598",
+          "trains": "",
+          "ubertip": "TRIGSTR_42335",
+          "upgrades": "R0IX,R0IE,R0EU,R0I3,R0I1,R0I0,R0I2,R0AI,R0AJ,R0AD",
+          "weapson": "1"
+        },
+        "id": "n05U",
+        "name": "|cffb4dcdcЖрец|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1FF,A1CM,A1CN,A1CA,A1P5",
+          "builds": "",
+          "hotkey": "TRIGSTR_6701",
+          "isbldg": "0",
+          "name": "TRIGSTR_30928",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_20600",
+          "trains": "",
+          "ubertip": "TRIGSTR_42341",
+          "upgrades": "R0IX,R0IE,R0I3,R0I4,R0I1,R0I0,R0I2,R0AI,R0AJ,R0AD",
+          "weapson": "1"
+        },
+        "id": "n05Z",
+        "name": "|cffb4dcdcЖрец Лоа|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1CA,A1OV,A1P4,A1OW",
+          "builds": "",
+          "hotkey": "TRIGSTR_9925",
+          "isbldg": "0",
+          "name": "TRIGSTR_23398",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_23399",
+          "trains": "",
+          "ubertip": "TRIGSTR_42346",
+          "upgrades": "R0IX,R0IE,R0I3,R0I1,R0I0,R0I2,R09L,R0AI,R0AJ,R0AD",
+          "weapson": "1"
+        },
+        "id": "n07B",
+        "name": "|cffb4dcdcВзыватель душ|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1CS,A1CR",
+          "builds": "",
+          "hotkey": "TRIGSTR_5551",
+          "isbldg": "0",
+          "name": "TRIGSTR_39326",
+          "reqs": "",
+          "targs1": "ground,structure,debris,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_39327",
+          "trains": "",
+          "ubertip": "TRIGSTR_42337",
+          "upgrades": "R0IY,R0I6,R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "n05V",
+        "name": "|cffb4dcdcБелый медведь|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1CT",
+          "builds": "",
+          "hotkey": "TRIGSTR_6699",
+          "isbldg": "0",
+          "name": "TRIGSTR_30937",
+          "reqs": "",
+          "targs1": "ground,structure,debris,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_25912",
+          "trains": "",
+          "ubertip": "TRIGSTR_42338",
+          "upgrades": "R0IX,R0I6,R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "n05W",
+        "name": "|cffb4dcdcЛютый мамонт|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1DP,A1CM,A1CV",
+          "builds": "",
+          "hotkey": "TRIGSTR_7832",
+          "isbldg": "0",
+          "name": "TRIGSTR_30939",
+          "reqs": "",
+          "targs1": "ground,structure,debris,item,ward",
+          "targs2": "air",
+          "tip": "TRIGSTR_25919",
+          "trains": "",
+          "ubertip": "TRIGSTR_42339",
+          "upgrades": "R0IY,R0I5,R0I6,R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "n05X",
+        "name": "|cffb4dcdcМагнатавр-разрушитель|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1D7,A1D6,A1FF,A1CA",
+          "builds": "",
+          "hotkey": "TRIGSTR_5552",
+          "isbldg": "0",
+          "name": "TRIGSTR_37673",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_37688",
+          "trains": "",
+          "ubertip": "TRIGSTR_42340",
+          "upgrades": "R0AD,R0AI,R0AJ,R0IX,R0IG,R0IE,R0I3,R0HZ,R0I0,R0I2",
+          "weapson": "1"
+        },
+        "id": "n05Y",
+        "name": "|cffb4dcdcБерсерк|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1P6,A1PJ,A1PI",
+          "builds": "",
+          "hotkey": "TRIGSTR_6848",
+          "isbldg": "0",
+          "name": "TRIGSTR_41085",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_41086",
+          "trains": "",
+          "ubertip": "TRIGSTR_42342",
+          "upgrades": "R09P,R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "o04T",
+        "name": "|cffb4dcdcГолем|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1PC,A1FV,A1FU,A1PA,A0W1",
+          "builds": "",
+          "hotkey": "TRIGSTR_7078",
+          "isbldg": "0",
+          "name": "|cffe4cfa3Акали|r",
+          "reqs": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "|cffe4cfa3Акали|r (|cffffffffW|r)",
+          "trains": "",
+          "ubertip": "",
+          "upgrades": "R0I6,R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "o05B",
+        "name": "|cffe4cfa3Акали|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1PB,A1FX,A1CT,S00F",
+          "builds": "",
+          "hotkey": "TRIGSTR_8478",
+          "isbldg": "0",
+          "name": "|cffe4cfa3Мам'тот|r",
+          "reqs": "",
+          "targs1": "ground,structure,debris,item,ward",
+          "targs2": "",
+          "tip": "|cffe4cfa3Мам'тот|r (|cffffffffE|r)",
+          "trains": "",
+          "ubertip": "TRIGSTR_42344",
+          "upgrades": "R0I6,R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "n062",
+        "name": "|cffe4cfa3Мам'тот|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1FY,A1CS,A1CR,A1P9",
+          "builds": "",
+          "hotkey": "TRIGSTR_6035",
+          "isbldg": "0",
+          "name": "|cffe4cfa3Рунок|r",
+          "reqs": "",
+          "targs1": "ground,structure,debris,item,ward",
+          "targs2": "",
+          "tip": "|cffe4cfa3Рунок|r (|cffffffffQ|r)",
+          "trains": "",
+          "ubertip": "TRIGSTR_42343",
+          "upgrades": "R0I6,R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "n061",
+        "name": "|cffe4cfa3Рунок|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1FF",
+          "builds": "",
+          "hotkey": "",
+          "isbldg": "0",
+          "name": "TRIGSTR_41311",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "",
+          "trains": "",
+          "ubertip": "",
+          "upgrades": "R0I1,R0I0",
+          "weapson": "1"
+        },
+        "id": "n07F",
+        "name": "|cffb4dcdcЛедяная Змея|r"
+      },
+      {
+        "fields": {
+          "abillist": "",
+          "builds": "",
+          "hotkey": "",
+          "isbldg": "0",
+          "name": "TRIGSTR_31306",
+          "reqs": "",
+          "targs1": "ground,structure,debris,item,ward",
+          "targs2": "",
+          "tip": "Призвать скелета-воина",
+          "trains": "",
+          "ubertip": "",
+          "upgrades": "R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "u036",
+        "name": "|cffb4dcdcВосставший|r"
+      }
+    ],
+    "HD": [
+      {
+        "fields": {
+          "abillist": "A0I3,Ahar,Arep,A1CA",
+          "builds": "o04E,h0HO,o046,o04C,o04A,o04B,o049,o04J,o04D,o013,o06H",
+          "hotkey": "TRIGSTR_5528",
+          "isbldg": "0",
+          "name": "TRIGSTR_39324",
+          "reqs": "",
+          "targs1": "ground,structure,debris,item,ward",
+          "targs2": "tree",
+          "tip": "TRIGSTR_39325",
+          "trains": "",
+          "ubertip": "TRIGSTR_20475",
+          "upgrades": "R0IX,R0IF,R0IE,R0I2,R0I3,R0AI,R0AJ,R0AD",
+          "weapson": "3"
+        },
+        "id": "o045",
+        "name": "|cffb4dcdcРаботник|r "
+      },
+      {
+        "fields": {
+          "abillist": "A1FF,A1CA",
+          "builds": "",
+          "hotkey": "TRIGSTR_5529",
+          "isbldg": "0",
+          "name": "TRIGSTR_4182",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_4183",
+          "trains": "",
+          "ubertip": "TRIGSTR_18735",
+          "upgrades": "R0IX,R0IE,R0I7,R0I3,R0HZ,R0I0,R0I2,R0AI,R0AJ,R0AD",
+          "weapson": "1"
+        },
+        "id": "n05S",
+        "name": "|cffb4dcdcВоитель|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1CW,A1FF,A10O,A1CA",
+          "builds": "",
+          "hotkey": "TRIGSTR_6674",
+          "isbldg": "0",
+          "name": "TRIGSTR_4189",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_4192",
+          "trains": "",
+          "ubertip": "TRIGSTR_42334",
+          "upgrades": "R0IX,R0IE,R0I7,R0I3,R0I1,R0I0,R0I2,R0AI,R0AJ,R0AD",
+          "weapson": "1"
+        },
+        "id": "n05T",
+        "name": "|cffb4dcdcОхотник|r"
+      },
+      {
+        "fields": {
+          "abillist": "",
+          "builds": "",
+          "hotkey": "TRIGSTR_7615",
+          "isbldg": "0",
+          "name": "TRIGSTR_30909",
+          "reqs": "",
+          "targs1": "debris,ground,item,structure,tree,wall,ward",
+          "targs2": "structure",
+          "tip": "TRIGSTR_30910",
+          "trains": "",
+          "ubertip": "TRIGSTR_42336",
+          "upgrades": "R0I1,R0I0",
+          "weapson": "1"
+        },
+        "id": "o04F",
+        "name": "|cffb4dcdcКатапульта|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1FF,A1CO,A1CP,A1CL,A1CA",
+          "builds": "",
+          "hotkey": "TRIGSTR_5531",
+          "isbldg": "0",
+          "name": "TRIGSTR_16586",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_20598",
+          "trains": "",
+          "ubertip": "TRIGSTR_42335",
+          "upgrades": "R0IX,R0IE,R0EU,R0I3,R0I1,R0I0,R0I2,R0AI,R0AJ,R0AD",
+          "weapson": "1"
+        },
+        "id": "n05U",
+        "name": "|cffb4dcdcЖрец|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1FF,A1CM,A1CN,A1CA,A1P5",
+          "builds": "",
+          "hotkey": "TRIGSTR_6701",
+          "isbldg": "0",
+          "name": "TRIGSTR_30928",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_20600",
+          "trains": "",
+          "ubertip": "TRIGSTR_42341",
+          "upgrades": "R0IX,R0IE,R0I3,R0I4,R0I1,R0I0,R0I2,R0AI,R0AJ,R0AD",
+          "weapson": "1"
+        },
+        "id": "n05Z",
+        "name": "|cffb4dcdcЖрец Лоа|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1CA,A1OV,A1P4,A1OW",
+          "builds": "",
+          "hotkey": "TRIGSTR_9925",
+          "isbldg": "0",
+          "name": "TRIGSTR_23398",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_23399",
+          "trains": "",
+          "ubertip": "TRIGSTR_42346",
+          "upgrades": "R0IX,R0IE,R0I3,R0I1,R0I0,R0I2,R09L,R0AI,R0AJ,R0AD",
+          "weapson": "1"
+        },
+        "id": "n07B",
+        "name": "|cffb4dcdcВзыватель душ|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1CS,A1CR",
+          "builds": "",
+          "hotkey": "TRIGSTR_5551",
+          "isbldg": "0",
+          "name": "TRIGSTR_39326",
+          "reqs": "",
+          "targs1": "ground,structure,debris,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_39327",
+          "trains": "",
+          "ubertip": "TRIGSTR_42337",
+          "upgrades": "R0IY,R0I6,R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "n05V",
+        "name": "|cffb4dcdcБелый медведь|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1CT",
+          "builds": "",
+          "hotkey": "TRIGSTR_6699",
+          "isbldg": "0",
+          "name": "TRIGSTR_30937",
+          "reqs": "",
+          "targs1": "ground,structure,debris,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_25912",
+          "trains": "",
+          "ubertip": "TRIGSTR_42338",
+          "upgrades": "R0IX,R0I6,R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "n05W",
+        "name": "|cffb4dcdcЛютый мамонт|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1DP,A1CM,A1CV",
+          "builds": "",
+          "hotkey": "TRIGSTR_7832",
+          "isbldg": "0",
+          "name": "TRIGSTR_30939",
+          "reqs": "",
+          "targs1": "ground,structure,debris,item,ward",
+          "targs2": "air",
+          "tip": "TRIGSTR_25919",
+          "trains": "",
+          "ubertip": "TRIGSTR_42339",
+          "upgrades": "R0IY,R0I5,R0I6,R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "n05X",
+        "name": "|cffb4dcdcМагнатавр-разрушитель|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1D7,A1D6,A1FF,A1CA",
+          "builds": "",
+          "hotkey": "TRIGSTR_5552",
+          "isbldg": "0",
+          "name": "TRIGSTR_37673",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_37688",
+          "trains": "",
+          "ubertip": "TRIGSTR_42340",
+          "upgrades": "R0AD,R0AI,R0AJ,R0IX,R0IG,R0IE,R0I3,R0HZ,R0I0,R0I2",
+          "weapson": "1"
+        },
+        "id": "n05Y",
+        "name": "|cffb4dcdcБерсерк|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1P6,A1PJ,A1PI",
+          "builds": "",
+          "hotkey": "TRIGSTR_6848",
+          "isbldg": "0",
+          "name": "TRIGSTR_41085",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "TRIGSTR_41086",
+          "trains": "",
+          "ubertip": "TRIGSTR_42342",
+          "upgrades": "R09P,R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "o04T",
+        "name": "|cffb4dcdcГолем|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1PC,A1FV,A1FU,A1PA,A0W1",
+          "builds": "",
+          "hotkey": "TRIGSTR_7078",
+          "isbldg": "0",
+          "name": "|cffe4cfa3Акали|r",
+          "reqs": "",
+          "targs1": "",
+          "targs2": "",
+          "tip": "|cffe4cfa3Акали|r (|cffffffffW|r)",
+          "trains": "",
+          "ubertip": "",
+          "upgrades": "R0I6,R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "o05B",
+        "name": "|cffe4cfa3Акали|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1PB,A1FX,A1CT,S00F",
+          "builds": "",
+          "hotkey": "TRIGSTR_8478",
+          "isbldg": "0",
+          "name": "|cffe4cfa3Мам'тот|r",
+          "reqs": "",
+          "targs1": "ground,structure,debris,item,ward",
+          "targs2": "",
+          "tip": "|cffe4cfa3Мам'тот|r (|cffffffffE|r)",
+          "trains": "",
+          "ubertip": "TRIGSTR_42344",
+          "upgrades": "R0I6,R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "n062",
+        "name": "|cffe4cfa3Мам'тот|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1FY,A1CS,A1CR,A1P9",
+          "builds": "",
+          "hotkey": "TRIGSTR_6035",
+          "isbldg": "0",
+          "name": "|cffe4cfa3Рунок|r",
+          "reqs": "",
+          "targs1": "ground,structure,debris,item,ward",
+          "targs2": "",
+          "tip": "|cffe4cfa3Рунок|r (|cffffffffQ|r)",
+          "trains": "",
+          "ubertip": "TRIGSTR_42343",
+          "upgrades": "R0I6,R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "n061",
+        "name": "|cffe4cfa3Рунок|r"
+      },
+      {
+        "fields": {
+          "abillist": "A1FF",
+          "builds": "",
+          "hotkey": "",
+          "isbldg": "0",
+          "name": "TRIGSTR_41311",
+          "reqs": "",
+          "targs1": "ground,structure,debris,air,item,ward",
+          "targs2": "",
+          "tip": "",
+          "trains": "",
+          "ubertip": "",
+          "upgrades": "R0I1,R0I0",
+          "weapson": "1"
+        },
+        "id": "n07F",
+        "name": "|cffb4dcdcЛедяная Змея|r"
+      },
+      {
+        "fields": {
+          "abillist": "",
+          "builds": "",
+          "hotkey": "",
+          "isbldg": "0",
+          "name": "TRIGSTR_31306",
+          "reqs": "",
+          "targs1": "ground,structure,debris,item,ward",
+          "targs2": "",
+          "tip": "Призвать скелета-воина",
+          "trains": "",
+          "ubertip": "",
+          "upgrades": "R0HZ,R0I0",
+          "weapson": "1"
+        },
+        "id": "u036",
+        "name": "|cffb4dcdcВосставший|r"
+      }
+    ]
+  },
+  "operations_count": 51,
+  "input_sha256": {
+    "map.w3x/war3map.wts": "c13c2422bae119ac2479f3ba8c30dc674c27def94f9b1dc7c2233990ae47a5af",
+    "map.w3x/war3map.w3u": "1905714ab0ae6c75dbd3d19e47f8823428b3524c72e7a06be311eb53db67493f",
+    "map.w3x/war3mapSkin.w3u": "0642c190624839ccb851a3fa998848917c2145751bf0d83e42e7c6e6ca1e0424",
+    "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/IceTrolls.lua": "88dc8f4e6eb46ff9898fee1e3cec54bc58010faa0f037f1da991dba3278a529b"
+  },
+  "evidence": {
+    "mechanics": "Все роли, способности и допустимые цели атаки сверены с полями targs1/targs2/weapson и кодом заклинаний",
+    "hotkeys": "Все горячие клавиши обучения сверены с кодами hotkey (Q, W, E)",
+    "path_requirements": "Указаны необходимые пути развития («Ритуал поклонения» / «Чрезвычайные меры») и улучшения алтарей для способностей Лоа",
+    "summons": "Включены призванные существа тотем n07F (Ледяная Змея) и скелет u036 (Восставший)"
+  },
+  "remaining": [
+    "Герои ледяных троллей (полные карточки, имена и списки способностей)",
+    "Способности и эффекты ледяных троллей (все уровни и состояния)",
+    "Исследования ледяных троллей (эффекты, уровни и затрагиваемые объекты)",
+    "Расовые предметы, сообщения и специальные интерфейсы",
+    "Игровые проверки в Warcraft III выполняет пользователь"
+  ]
+}

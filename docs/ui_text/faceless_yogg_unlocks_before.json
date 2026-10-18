@@ -1,0 +1,64 @@
+{
+  "command": "get-objects-bulk",
+  "count": 2,
+  "map": "F:\\Gemini_23Race\\map.w3x",
+  "missing": [],
+  "objects": [
+    {
+      "fields": {
+        "area1": "600.000000",
+        "code": "Aroc",
+        "dataa1": "300.000000",
+        "dataa2": "",
+        "datab1": "3000.000000",
+        "datac1": "9",
+        "hero": "0",
+        "hotkey": "",
+        "levels": "1",
+        "name": "TRIGSTR_11549",
+        "requires": "Rhrt",
+        "researchhotkey": "",
+        "researchtip": "",
+        "researchubertip": "",
+        "targs1": "enemies",
+        "targs2": "",
+        "tip1": "Залповый огонь",
+        "tip2": "",
+        "ubertip1": "Позволяет осадным машинам запускать ракеты в находящихся рядом воздушных врагов.",
+        "ubertip2": ""
+      },
+      "id": "A0T3",
+      "name": "Массовая атака Древние боги"
+    },
+    {
+      "fields": {
+        "area1": "",
+        "code": "ANch",
+        "dataa1": "7",
+        "dataa2": "7",
+        "datab1": "",
+        "datac1": "",
+        "hero": "1",
+        "hotkey": "TRIGSTR_21301",
+        "levels": "2",
+        "name": "Подчинение",
+        "requires": "",
+        "researchhotkey": "TRIGSTR_21370",
+        "researchtip": "Изучить «Подчинение»",
+        "researchubertip": "\"Навсегда подчиняет указанного врага. |nИгнорирует невосприимчивость к магии, но не действует на героев, а также на монстров выше <ANch,DataA1>-го уровня.\"",
+        "targs1": "air,enemies,ground,mechanical,neutral,nonhero,organic",
+        "targs2": "air,enemies,ground,mechanical,neutral,nonhero,organic",
+        "tip1": "Подчинение",
+        "tip2": "TRIGSTR_27232",
+        "ubertip1": "TRIGSTR_26271",
+        "ubertip2": "TRIGSTR_22171"
+      },
+      "id": "A0W4",
+      "name": "Подчинение"
+    }
+  ],
+  "ok": true,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "type": "ability"
+}

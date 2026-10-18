@@ -1,0 +1,86 @@
+{
+  "ok": true,
+  "applied": true,
+  "method": "Only explicit string modifications spliced; all unrelated records/mods byte-identical",
+  "changes": {
+    "war3map.w3q": [
+      [
+        "R0L1",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "R0L1",
+        "gtp1",
+        1,
+        0
+      ],
+      [
+        "R0L1",
+        "gub1",
+        1,
+        0
+      ]
+    ],
+    "war3mapSkin.w3q": [
+      [
+        "R0L1",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "R0L1",
+        "gtp1",
+        1,
+        0
+      ],
+      [
+        "R0L1",
+        "gub1",
+        1,
+        0
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "variant": "SD",
+      "rawcode": "R0L1",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0L1",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "R0L1",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0L1",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0L1",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "R0L1",
+      "field": "ubertip1",
+      "exact_match": true
+    }
+  ],
+  "wts_unchanged": true
+}

@@ -1,0 +1,422 @@
+{
+  "source": "Installed Warcraft III CASC: units/abilitymetadata.slk + ui/worldeditstrings.txt",
+  "codes": {
+    "AHab": [
+      {
+        "ID": "Hab1",
+        "data": "1",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HAB1",
+        "label": "Mana Regeneration Increase"
+      },
+      {
+        "ID": "Hab2",
+        "data": "2",
+        "type": "bool",
+        "displayName": "WESTRING_AEVAL_HAB2",
+        "label": "Percent Bonus"
+      }
+    ],
+    "AOwk": [
+      {
+        "ID": "Owk1",
+        "data": "1",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_OWK1",
+        "label": "Transition Time"
+      },
+      {
+        "ID": "Owk2",
+        "data": "2",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_OWK2",
+        "label": "Movement Speed Increase (%)"
+      },
+      {
+        "ID": "Owk3",
+        "data": "3",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_OWK3",
+        "label": "Backstab Damage"
+      },
+      {
+        "ID": "Owk4",
+        "data": "4",
+        "type": "bool",
+        "displayName": "WESTRING_AEVAL_OWK3",
+        "label": "Backstab Damage"
+      },
+      {
+        "ID": "Owk5",
+        "data": "5",
+        "type": "bool",
+        "displayName": "WESTRING_AEVAL_OWK5",
+        "label": "Start Cooldown when Decloak"
+      }
+    ],
+    "AUan": [
+      {
+        "ID": "Uan1",
+        "data": "1",
+        "type": "int",
+        "displayName": "WESTRING_AEVAL_UAN1",
+        "label": "Number of Corpses Raised"
+      },
+      {
+        "ID": "Uan3",
+        "data": "3",
+        "type": "bool",
+        "displayName": "WESTRING_AEVAL_UAN3",
+        "label": "Inherit Upgrades"
+      },
+      {
+        "ID": "Hre2",
+        "data": "2",
+        "type": "bool",
+        "displayName": "WESTRING_AEVAL_HRE2",
+        "label": "Raised Units Are Invulnerable"
+      }
+    ],
+    "AUau": [
+      {
+        "ID": "Uau1",
+        "data": "1",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_UAU1",
+        "label": "Movement Speed Increase (%)"
+      },
+      {
+        "ID": "Uau2",
+        "data": "2",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_UAU2",
+        "label": "Life Regeneration Increase (%)"
+      },
+      {
+        "ID": "Uau3",
+        "data": "3",
+        "type": "bool",
+        "displayName": "WESTRING_AEVAL_UAU3",
+        "label": "Percent Bonus"
+      }
+    ],
+    "AEim": [
+      {
+        "ID": "Eim1",
+        "data": "1",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_EIM1",
+        "label": "Damage per Interval"
+      },
+      {
+        "ID": "Eim2",
+        "data": "2",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_EIM2",
+        "label": "Mana Drained per Second"
+      },
+      {
+        "ID": "Eim3",
+        "data": "3",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_EIM3",
+        "label": "Buffer Mana Required"
+      }
+    ],
+    "AEtq": [
+      {
+        "ID": "Etq1",
+        "data": "1",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_ETQ1",
+        "label": "Life Healed"
+      },
+      {
+        "ID": "Etq2",
+        "data": "2",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_ETQ2",
+        "label": "Heal Interval"
+      },
+      {
+        "ID": "Etq3",
+        "data": "3",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_ETQ3",
+        "label": "Building Reduction"
+      },
+      {
+        "ID": "Etq4",
+        "data": "4",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_ETQ4",
+        "label": "Initial Immunity Duration"
+      }
+    ],
+    "AUdd": [
+      {
+        "ID": "Udd1",
+        "data": "1",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_UDD1",
+        "label": "Max Life Drained per Second (%)"
+      },
+      {
+        "ID": "Udd2",
+        "data": "2",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_UDD2",
+        "label": "Building Reduction"
+      }
+    ],
+    "Aakb": [
+      {
+        "ID": "Ear2",
+        "data": "2",
+        "type": "bool",
+        "displayName": "WESTRING_AEVAL_EAR2",
+        "label": "Melee Bonus"
+      },
+      {
+        "ID": "Ear3",
+        "data": "3",
+        "type": "bool",
+        "displayName": "WESTRING_AEVAL_EAR3",
+        "label": "Ranged Bonus"
+      },
+      {
+        "ID": "Ear4",
+        "data": "4",
+        "type": "bool",
+        "displayName": "WESTRING_AEVAL_EAR4",
+        "label": "Flat Bonus"
+      },
+      {
+        "ID": "Akb1",
+        "data": "1",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_AKB1",
+        "label": "Attack Damage Increase"
+      },
+      {
+        "ID": "Akb2",
+        "data": "5",
+        "type": "bool",
+        "displayName": "WESTRING_AEVAL_AKB2",
+        "label": "Play Channel Animation"
+      }
+    ],
+    "AHbh": [
+      {
+        "ID": "Hbh1",
+        "data": "1",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HBH1",
+        "label": "Chance to Bash"
+      },
+      {
+        "ID": "Hbh2",
+        "data": "2",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HBH2",
+        "label": "Damage Multiplier"
+      },
+      {
+        "ID": "Hbh3",
+        "data": "3",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HBH3",
+        "label": "Damage Bonus"
+      },
+      {
+        "ID": "Hbh4",
+        "data": "4",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HBH4",
+        "label": "Chance to Miss"
+      },
+      {
+        "ID": "Hbh5",
+        "data": "5",
+        "type": "bool",
+        "displayName": "WESTRING_AEVAL_HBH5",
+        "label": "Never Miss"
+      }
+    ],
+    "AHtc": [
+      {
+        "ID": "Htc1",
+        "data": "1",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HTC1",
+        "label": "AOE Damage"
+      },
+      {
+        "ID": "Htc2",
+        "data": "2",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HTC2",
+        "label": "Specific Target Damage"
+      },
+      {
+        "ID": "Htc3",
+        "data": "3",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HTC3",
+        "label": "Movement Speed Reduction (%)"
+      },
+      {
+        "ID": "Htc4",
+        "data": "4",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HTC4",
+        "label": "Attack Speed Reduction (%)"
+      },
+      {
+        "ID": "Htc5",
+        "data": "5",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HTC5",
+        "label": "Максимальный урон"
+      }
+    ],
+    "ANdp": [
+      {
+        "ID": "Ndp1",
+        "data": "1",
+        "type": "unitList",
+        "displayName": "WESTRING_AEVAL_NDP1",
+        "label": "Spawned Units"
+      },
+      {
+        "ID": "Ndp2",
+        "data": "2",
+        "type": "int",
+        "displayName": "WESTRING_AEVAL_NDP2",
+        "label": "Minimum Number of Units"
+      },
+      {
+        "ID": "Ndp3",
+        "data": "3",
+        "type": "int",
+        "displayName": "WESTRING_AEVAL_NDP3",
+        "label": "Maximum Number of Units"
+      }
+    ],
+    "Afae": [
+      {
+        "ID": "Fae1",
+        "data": "1",
+        "type": "int",
+        "displayName": "WESTRING_AEVAL_FAE1",
+        "label": "Defense Reduction"
+      },
+      {
+        "ID": "Fae2",
+        "data": "2",
+        "type": "bool",
+        "displayName": "WESTRING_AEVAL_FAE2",
+        "label": "Always Autocast"
+      }
+    ],
+    "AIva": [
+      {
+        "ID": "Ivam",
+        "data": "1",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_IVAM",
+        "label": "Life Stolen Per Attack"
+      }
+    ],
+    "AIas": [
+      {
+        "ID": "Isx1",
+        "data": "1",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_ISX1",
+        "label": "Attack Speed Increase"
+      }
+    ],
+    "Assk": [
+      {
+        "ID": "Ssk1",
+        "data": "1",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_SSK1",
+        "label": "Chance to Reduce Damage (%)"
+      },
+      {
+        "ID": "Ssk2",
+        "data": "2",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_SSK2",
+        "label": "Minimum Damage"
+      },
+      {
+        "ID": "Ssk3",
+        "data": "3",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_SSK3",
+        "label": "Ignored Damage"
+      },
+      {
+        "ID": "Ssk4",
+        "data": "4",
+        "type": "bool",
+        "displayName": "WESTRING_AEVAL_SSK4",
+        "label": "Include Ranged Damage"
+      },
+      {
+        "ID": "Ssk5",
+        "data": "5",
+        "type": "bool",
+        "displayName": "WESTRING_AEVAL_SSK5",
+        "label": "Include Melee Damage"
+      }
+    ],
+    "AHfs": [
+      {
+        "ID": "Hfs1",
+        "data": "1",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HFS1",
+        "label": "Full Damage Dealt"
+      },
+      {
+        "ID": "Hfs2",
+        "data": "2",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HFS2",
+        "label": "Full Damage Interval"
+      },
+      {
+        "ID": "Hfs3",
+        "data": "3",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HFS3",
+        "label": "Half Damage Dealt"
+      },
+      {
+        "ID": "Hfs4",
+        "data": "4",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HFS4",
+        "label": "Half Damage Interval"
+      },
+      {
+        "ID": "Hfs5",
+        "data": "5",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HFS5",
+        "label": "Building Reduction"
+      },
+      {
+        "ID": "Hfs6",
+        "data": "6",
+        "type": "unreal",
+        "displayName": "WESTRING_AEVAL_HFS6",
+        "label": "Maximum Damage"
+      }
+    ]
+  }
+}

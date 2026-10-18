@@ -1,0 +1,473 @@
+{
+  "A01N": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_1596",
+      "wts_id": 1596
+    },
+    "tip1": {
+      "raw": "TRIGSTR_1595",
+      "wts_id": 1595
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_1384",
+      "wts_id": 1384
+    },
+    "hotkey": "TRIGSTR_12331"
+  },
+  "A01R": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_1695",
+      "wts_id": 1695
+    },
+    "tip1": {
+      "raw": "TRIGSTR_1696",
+      "wts_id": 1696
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_2756",
+      "wts_id": 2756
+    },
+    "hotkey": null
+  },
+  "A01S": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_1699",
+      "wts_id": 1699
+    },
+    "tip1": {
+      "raw": "TRIGSTR_1698",
+      "wts_id": 1698
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_29525",
+      "wts_id": 29525
+    },
+    "hotkey": null
+  },
+  "A0CE": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_39439",
+      "wts_id": 39439
+    },
+    "tip1": {
+      "raw": "TRIGSTR_39440",
+      "wts_id": 39440
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_39441",
+      "wts_id": 39441
+    },
+    "hotkey": "TRIGSTR_32082"
+  },
+  "A0I3": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_26484",
+      "wts_id": 26484
+    },
+    "tip1": {
+      "raw": "TRIGSTR_26476",
+      "wts_id": 26476
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_26477",
+      "wts_id": 26477
+    },
+    "hotkey": "TRIGSTR_9545"
+  },
+  "A0OZ": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_645",
+      "wts_id": 645
+    },
+    "tip1": {
+      "raw": "TRIGSTR_1153",
+      "wts_id": 1153
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_1375",
+      "wts_id": 1375
+    },
+    "hotkey": null
+  },
+  "A0PG": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_6842",
+      "wts_id": 6842
+    },
+    "tip1": {
+      "raw": "TRIGSTR_8160",
+      "wts_id": 8160
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_8165",
+      "wts_id": 8165
+    },
+    "hotkey": "TRIGSTR_16518"
+  },
+  "A0PH": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_8166",
+      "wts_id": 8166
+    },
+    "tip1": {
+      "raw": "TRIGSTR_8167",
+      "wts_id": 8167
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_8168",
+      "wts_id": 8168
+    },
+    "hotkey": null
+  },
+  "A0Q8": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_16001",
+      "wts_id": 16001
+    },
+    "tip1": {
+      "raw": "TRIGSTR_16002",
+      "wts_id": 16002
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_8827",
+      "wts_id": 8827
+    },
+    "hotkey": "TRIGSTR_16625"
+  },
+  "A0Q9": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_16004",
+      "wts_id": 16004
+    },
+    "tip1": {
+      "raw": "TRIGSTR_16005",
+      "wts_id": 16005
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16006",
+      "wts_id": 16006
+    },
+    "hotkey": null
+  },
+  "A0QA": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_16009",
+      "wts_id": 16009
+    },
+    "tip1": {
+      "raw": "TRIGSTR_16010",
+      "wts_id": 16010
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16011",
+      "wts_id": 16011
+    },
+    "hotkey": null
+  },
+  "A0QC": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_16014",
+      "wts_id": 16014
+    },
+    "tip1": {
+      "raw": "TRIGSTR_16015",
+      "wts_id": 16015
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16016",
+      "wts_id": 16016
+    },
+    "hotkey": "TRIGSTR_16772"
+  },
+  "A0QD": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_16021",
+      "wts_id": 16021
+    },
+    "tip1": {
+      "raw": "TRIGSTR_16022",
+      "wts_id": 16022
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16023",
+      "wts_id": 16023
+    },
+    "hotkey": "TRIGSTR_17111"
+  },
+  "A0QE": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_7611",
+      "wts_id": 7611
+    },
+    "tip1": {
+      "raw": "TRIGSTR_7612",
+      "wts_id": 7612
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_8388",
+      "wts_id": 8388
+    },
+    "hotkey": "TRIGSTR_17125"
+  },
+  "A0QF": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_16029",
+      "wts_id": 16029
+    },
+    "tip1": {
+      "raw": "TRIGSTR_16030",
+      "wts_id": 16030
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_38133",
+      "wts_id": 38133
+    },
+    "hotkey": null
+  },
+  "A0QG": {
+    "type": "ability",
+    "name": {
+      "raw": "Снижение урона от способностей",
+      "wts_id": null
+    },
+    "tip1": {
+      "raw": null,
+      "wts_id": null
+    },
+    "ubertip1": {
+      "raw": null,
+      "wts_id": null
+    },
+    "hotkey": null
+  },
+  "A0QH": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_16051",
+      "wts_id": 16051
+    },
+    "tip1": {
+      "raw": "TRIGSTR_16052",
+      "wts_id": 16052
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_16053",
+      "wts_id": 16053
+    },
+    "hotkey": null
+  },
+  "A0QI": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_16075",
+      "wts_id": 16075
+    },
+    "tip1": {
+      "raw": "TRIGSTR_16076",
+      "wts_id": 16076
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_10939",
+      "wts_id": 10939
+    },
+    "hotkey": "TRIGSTR_16774"
+  },
+  "A0QM": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_16238",
+      "wts_id": 16238
+    },
+    "tip1": {
+      "raw": "TRIGSTR_16239",
+      "wts_id": 16239
+    },
+    "ubertip1": {
+      "raw": "Дает невосприимчивость к магии и большинству способностей.",
+      "wts_id": null
+    },
+    "hotkey": null
+  },
+  "A0W7": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_40313",
+      "wts_id": 40313
+    },
+    "tip1": {
+      "raw": "Поддержание",
+      "wts_id": null
+    },
+    "ubertip1": {
+      "raw": "Поддерживает мощные защитные чары.",
+      "wts_id": null
+    },
+    "hotkey": null
+  },
+  "A0W8": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_40670",
+      "wts_id": 40670
+    },
+    "tip1": {
+      "raw": "Поддержание",
+      "wts_id": null
+    },
+    "ubertip1": {
+      "raw": "Поддерживает мощные защитные чары.",
+      "wts_id": null
+    },
+    "hotkey": null
+  },
+  "A0W9": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_7551",
+      "wts_id": 7551
+    },
+    "tip1": {
+      "raw": "Поддержание",
+      "wts_id": null
+    },
+    "ubertip1": {
+      "raw": "Поддерживает мощные защитные чары.",
+      "wts_id": null
+    },
+    "hotkey": null
+  },
+  "A0WA": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_41562",
+      "wts_id": 41562
+    },
+    "tip1": {
+      "raw": "Поддержание",
+      "wts_id": null
+    },
+    "ubertip1": {
+      "raw": "Поддерживает мощные защитные чары.",
+      "wts_id": null
+    },
+    "hotkey": null
+  },
+  "A18B": {
+    "type": "ability",
+    "name": {
+      "raw": "Темный призыв",
+      "wts_id": null
+    },
+    "tip1": {
+      "raw": "Темный призыв",
+      "wts_id": null
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_14974",
+      "wts_id": 14974
+    },
+    "hotkey": "TRIGSTR_23297"
+  },
+  "A1MQ": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_2373",
+      "wts_id": 2373
+    },
+    "tip1": {
+      "raw": "TRIGSTR_13586",
+      "wts_id": 13586
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_8776",
+      "wts_id": 8776
+    },
+    "hotkey": null
+  },
+  "Adis": {
+    "type": "ability",
+    "name": {
+      "raw": "TRIGSTR_25772",
+      "wts_id": 25772
+    },
+    "tip1": {
+      "raw": "TRIGSTR_25785",
+      "wts_id": 25785
+    },
+    "ubertip1": {
+      "raw": "TRIGSTR_25774",
+      "wts_id": 25774
+    },
+    "hotkey": "TRIGSTR_9715"
+  },
+  "B008": {
+    "type": "buff",
+    "bufftip": {
+      "raw": "TRIGSTR_2452",
+      "wts_id": 2452
+    },
+    "buffubertip": {
+      "raw": "TRIGSTR_1701",
+      "wts_id": 1701
+    }
+  },
+  "B054": {
+    "type": "buff",
+    "bufftip": {
+      "raw": "TRIGSTR_1632",
+      "wts_id": 1632
+    },
+    "buffubertip": {
+      "raw": "Периодический урон.",
+      "wts_id": null
+    }
+  },
+  "B055": {
+    "type": "buff",
+    "bufftip": {
+      "raw": "TRIGSTR_8178",
+      "wts_id": 8178
+    },
+    "buffubertip": {
+      "raw": "TRIGSTR_8182",
+      "wts_id": 8182
+    }
+  },
+  "B056": {
+    "type": "buff",
+    "bufftip": {
+      "raw": "TRIGSTR_8202",
+      "wts_id": 8202
+    },
+    "buffubertip": {
+      "raw": "TRIGSTR_8231",
+      "wts_id": 8231
+    }
+  },
+  "B071": {
+    "type": "buff",
+    "bufftip": {
+      "raw": "TRIGSTR_149",
+      "wts_id": 149
+    },
+    "buffubertip": {
+      "raw": "TRIGSTR_157",
+      "wts_id": 157
+    }
+  }
+}

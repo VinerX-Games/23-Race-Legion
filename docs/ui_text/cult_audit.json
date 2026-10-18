@@ -1,0 +1,111 @@
+{
+  "race": "Культ Проклятых (Cult of the Damned)",
+  "race_id": 33,
+  "selection_ability": "A1HA",
+  "objects_audit": {
+    "buildings": {
+      "count": 10,
+      "ids": [
+        "cD26",
+        "cD12",
+        "cD29",
+        "cD31",
+        "cD30",
+        "cD28",
+        "cD27",
+        "cD25",
+        "cD24",
+        "h0D1"
+      ],
+      "town_halls": {
+        "tier1": {
+          "id": "cD26",
+          "name": "Некрополь",
+          "food": 50
+        },
+        "tier2": {
+          "id": "cD25",
+          "name": "Чертоги мёртвых",
+          "food": 100
+        },
+        "tier3": {
+          "id": "cD24",
+          "name": "Тёмная цитадель",
+          "food": 150
+        }
+      },
+      "income_farms": {
+        "cD12": {
+          "name": "Распылитель чумы",
+          "income": 75,
+          "food": 75
+        }
+      }
+    },
+    "units": {
+      "count": 18,
+      "ids": [
+        "cD14",
+        "cD33",
+        "cD09",
+        "cD10",
+        "cD02",
+        "cD19",
+        "cD35",
+        "cD11",
+        "cD34",
+        "cD08",
+        "cD13",
+        "cD03",
+        "cD22",
+        "cD18",
+        "cD05",
+        "h0D2",
+        "h0CZ",
+        "h0D0"
+      ]
+    },
+    "heroes": {
+      "count": 3,
+      "ids": [
+        "CD01",
+        "CD02",
+        "U02X"
+      ],
+      "names": {
+        "CD01": "Рыцарь смерти (Сила, ближний бой)",
+        "CD02": "Верховный некромант (Интеллект, дальний бой)",
+        "U02X": "Лич (Интеллект, дальний бой)"
+      }
+    },
+    "abilities": {
+      "count": 56,
+      "total_wts_updated": 501
+    },
+    "researches": {
+      "count": 20,
+      "markers_list": {
+        "R0J4": "Маркер расы Культ Проклятых",
+        "R0J5": "Маркер расы Плеть или Культ Проклятых"
+      }
+    }
+  },
+  "items_audit": {
+    "race_specific_items": [],
+    "status": "No race-specific shop items found for Cult of the Damned."
+  },
+  "messages_audit": {
+    "race_specific_messages": [],
+    "status": "Standardized race selection and activation triggers."
+  },
+  "buffs_audit": {
+    "custom_buffs": [],
+    "standard_buffs_used": [
+      "BNlm",
+      "BHab"
+    ],
+    "status": "All abilities and buffs follow unified UI color palette."
+  },
+  "total_wts_updates": 501,
+  "total_checks": 499
+}

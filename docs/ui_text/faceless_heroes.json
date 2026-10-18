@@ -1,0 +1,261 @@
+{
+  "scope": "Безликие: четыре героя, включая легендарного Везакса",
+  "variants": [
+    "SD",
+    "HD"
+  ],
+  "in_game_checked": false,
+  "objects_before": [
+    {
+      "fields": {
+        "abillist": "A01C,AInv",
+        "awakentip": "TRIGSTR_22532",
+        "heroabillist": "A10I,A10J,A10K,A10H",
+        "hotkey": "TRIGSTR_4778",
+        "name": "TRIGSTR_11401",
+        "propernames": "TRIGSTR_22534",
+        "revivetip": "TRIGSTR_22533",
+        "targs1": "ground,structure,debris,item,ward",
+        "targs2": "ground,structure,debris,air,item,ward",
+        "tip": "TRIGSTR_22535",
+        "ubertip": "TRIGSTR_31850",
+        "weapson": "1"
+      },
+      "id": "U02G",
+      "name": "|cffd7b4f5Генерал К`Траксис|r"
+    },
+    {
+      "fields": {
+        "abillist": "A01C,AInv",
+        "awakentip": "TRIGSTR_22542",
+        "heroabillist": "A1CJ,A10N,A10L,A1CG",
+        "hotkey": "TRIGSTR_4918",
+        "name": "TRIGSTR_22540",
+        "propernames": "TRIGSTR_22545",
+        "revivetip": "TRIGSTR_22543",
+        "targs1": "ground,structure,debris,item,ward",
+        "targs2": "ground,structure,debris,air,item,ward",
+        "tip": "TRIGSTR_22549",
+        "ubertip": "TRIGSTR_31851",
+        "weapson": "1"
+      },
+      "id": "U02H",
+      "name": "|cffd7b4f5Верховный Душегуб|r"
+    },
+    {
+      "fields": {
+        "abillist": "A01C,AInv",
+        "awakentip": "TRIGSTR_22582",
+        "heroabillist": "A10Q,A0WQ,A10R,A10S",
+        "hotkey": "TRIGSTR_5973",
+        "name": "TRIGSTR_22562",
+        "propernames": "TRIGSTR_22605",
+        "revivetip": "TRIGSTR_22589",
+        "targs1": "ground,structure,debris,item,ward",
+        "targs2": "ground,structure,debris,air,item,ward",
+        "tip": "TRIGSTR_22640",
+        "ubertip": "TRIGSTR_31852",
+        "weapson": "1"
+      },
+      "id": "U02I",
+      "name": "|cffd7b4f5Маг Запредельной Тьмы|r"
+    },
+    {
+      "fields": {
+        "abillist": "A12G,A01C,AInv,A12I",
+        "awakentip": "TRIGSTR_22838",
+        "heroabillist": "A12H,A0V5,A12J,A0V7",
+        "hotkey": "TRIGSTR_5935",
+        "name": "TRIGSTR_22671",
+        "propernames": "TRIGSTR_22866",
+        "revivetip": "TRIGSTR_22515",
+        "targs1": "ground,structure,debris,item,ward",
+        "targs2": "ground,structure,debris,air,item,ward",
+        "tip": "TRIGSTR_23681",
+        "ubertip": "TRIGSTR_31885",
+        "weapson": "1"
+      },
+      "id": "U02F",
+      "name": "|cffd7b4f5Верховный генерал|r"
+    }
+  ],
+  "strings": [
+    {
+      "rawcode": "U02G",
+      "field": "name",
+      "reference_before": "TRIGSTR_11401",
+      "before": "|cffd7b4f5Генерал К`Траксис|r",
+      "after": "|cffe4cfa3Генерал К`Траксис|r"
+    },
+    {
+      "rawcode": "U02G",
+      "field": "tip",
+      "reference_before": "TRIGSTR_22535",
+      "before": "Призвать |cffd7b4f5Генерал К`Траксис|r",
+      "after": "|cffe4cfa3Генерал К`Траксис|r (|cffffffffQ|r)"
+    },
+    {
+      "rawcode": "U02G",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_31850",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n\nОдин из Древних Генералов Безликих, опытный и очень крпкий воин ближнего боя.",
+      "after": "|cffa6afb8ГЕРОЙ:|cffced4da Герой ближнего боя: защищает себя панцирем и призывает подкрепления.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deКрепкий панцирь|cffced4da: снижает получаемый урон от атак.|n- |cffa9c7deОбжигающий жар|cffced4da: наносит урон окружающим врагам, расходуя ману, пока способность включена.|n- |cffa9c7deТёмный портал|cffced4da: призывает порабощённых зверей; состав зависит от уровня способности.|n- |cffa9c7deУдар клешнёй|cffced4da: наносит урон вокруг героя и снижает скорость атаки и передвижения врагов.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "U02G",
+      "field": "propernames",
+      "reference_before": "TRIGSTR_22534",
+      "before": "|cffd7b4f5Генерал К`Траксис|r",
+      "after": "|cffe4cfa3Генерал К`Траксис|r"
+    },
+    {
+      "rawcode": "U02G",
+      "field": "awakentip",
+      "reference_before": "TRIGSTR_22532",
+      "before": "Воскресить |cffd7b4f5Генерал К`Траксис|r",
+      "after": "|cffe4cfa3Генерал К`Траксис|r"
+    },
+    {
+      "rawcode": "U02G",
+      "field": "revivetip",
+      "reference_before": "TRIGSTR_22533",
+      "before": "Воскресить |cffd7b4f5Генерал К`Траксис|r",
+      "after": "|cffe4cfa3Генерал К`Траксис|r"
+    },
+    {
+      "rawcode": "U02H",
+      "field": "name",
+      "reference_before": "TRIGSTR_22540",
+      "before": "|cffd7b4f5Верховный Душегуб|r",
+      "after": "|cffe4cfa3Верховный Душегуб|r"
+    },
+    {
+      "rawcode": "U02H",
+      "field": "tip",
+      "reference_before": "TRIGSTR_22549",
+      "before": "Призвать |cffd7b4f5Верховный Душегуб|r",
+      "after": "|cffe4cfa3Верховный Душегуб|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "U02H",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_31851",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaЛовкость |r|n\nОдин из древних героев Безликих, ловкий и опасный.",
+      "after": "|cffa6afb8ГЕРОЙ:|cffced4da Герой ближнего боя для внезапных атак и ослабления брони противника.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deБезумие бездны|cffced4da: повышает скорость атаки и даёт вампиризм.|n- |cffa9c7deСокрытие Бездной|cffced4da: делает героя невидимым, ускоряет передвижение и усиливает удар из невидимости.|n- |cffa9c7deСотрясение Бездны|cffced4da: даёт шанс оглушить противника и нанести дополнительный урон при атаке.|n- |cffa9c7deМетка охотника|cffced4da: снижает броню врага и позволяет видеть отмеченную цель.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "U02H",
+      "field": "propernames",
+      "reference_before": "TRIGSTR_22545",
+      "before": "|cffd7b4f5Верховный Душегуб|r",
+      "after": "|cffe4cfa3Верховный Душегуб|r"
+    },
+    {
+      "rawcode": "U02H",
+      "field": "awakentip",
+      "reference_before": "TRIGSTR_22542",
+      "before": "Воскресить |cffd7b4f5Верховный Душегуб|r",
+      "after": "|cffe4cfa3Верховный Душегуб|r"
+    },
+    {
+      "rawcode": "U02H",
+      "field": "revivetip",
+      "reference_before": "TRIGSTR_22543",
+      "before": "Воскресить |cffd7b4f5Верховный Душегуб|r",
+      "after": "|cffe4cfa3Верховный Душегуб|r"
+    },
+    {
+      "rawcode": "U02I",
+      "field": "name",
+      "reference_before": "TRIGSTR_22562",
+      "before": "|cffd7b4f5Маг Запредельной Тьмы|r",
+      "after": "|cffe4cfa3Маг Запредельной Тьмы|r"
+    },
+    {
+      "rawcode": "U02I",
+      "field": "tip",
+      "reference_before": "TRIGSTR_22640",
+      "before": "Призвать |cffd7b4f5Маг Запредельной Тьмы|r",
+      "after": "|cffe4cfa3Маг Запредельной Тьмы|r (|cffffffffE|r)"
+    },
+    {
+      "rawcode": "U02I",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_31852",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтелект |r|n\nОдин из Мудрых и очень опасных магов бездны.",
+      "after": "|cffa6afb8ГЕРОЙ:|cffced4da Герой-заклинатель, призывающий войска и поражающий область магией Бездны.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deТёмный раскол|cffced4da: призывает воинов безликих; состав зависит от уровня способности.|n- |cffa9c7deВзрыв бездны|cffced4da: наносит периодический урон наземным целям в указанной области.|n- |cffa9c7deАура Бездны|cffced4da: снижает восстановление здоровья окружающих врагов.|n- |cffa9c7deПространство Бездны|cffced4da: наносит целям в области периодический урон от максимального здоровья и уничтожает деревья.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "U02I",
+      "field": "propernames",
+      "reference_before": "TRIGSTR_22605",
+      "before": "|cffd7b4f5Маг Запредельной Тьмы|",
+      "after": "|cffe4cfa3Маг Запредельной Тьмы|r"
+    },
+    {
+      "rawcode": "U02I",
+      "field": "awakentip",
+      "reference_before": "TRIGSTR_22582",
+      "before": "Воскресить |cffd7b4f5Маг Запредельной Тьмы|r",
+      "after": "|cffe4cfa3Маг Запредельной Тьмы|r"
+    },
+    {
+      "rawcode": "U02I",
+      "field": "revivetip",
+      "reference_before": "TRIGSTR_22589",
+      "before": "Воскресить |cffd7b4f5Маг Запредельной Тьмы|r",
+      "after": "|cffe4cfa3Маг Запредельной Тьмы|r"
+    },
+    {
+      "rawcode": "U02F",
+      "field": "name",
+      "reference_before": "TRIGSTR_22671",
+      "before": "|cffd7b4f5Верховный генерал|r",
+      "after": "|cffe4cfa3Верховный генерал|r"
+    },
+    {
+      "rawcode": "U02F",
+      "field": "tip",
+      "reference_before": "TRIGSTR_23681",
+      "before": "Призвать |cffd7b4f5Верховный генерал|r",
+      "after": "|cffe4cfa3Верховный генерал|r (|cffffffffW|r)"
+    },
+    {
+      "rawcode": "U02F",
+      "field": "ubertip",
+      "reference_before": "TRIGSTR_31885",
+      "before": "|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaЛегендарный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n\nДревних Генералов Безликих,Защищающий темницу Древнего бога Йогг`Сарону. Опытный и очень крепкий воин ближнего боя.",
+      "after": "|cffa6afb8ГЕРОЙ:|cffced4da Легендарный герой ближнего боя, поддерживающий войска аурами и лечением.|n|n|cffa6afb8Способности:|cffced4da|n- |cffa9c7deАнтимагическая аура|cffced4da: снижает восстановление маны окружающих врагов.|n- |cffa9c7deВечная служба|cffced4da: поднимает павших воинов для сражения на стороне героя.|n- |cffa9c7deПары саронита|cffced4da: восстанавливают здоровье союзников в области действия, пока герой поддерживает заклинание.|n- |cffa9c7deПриказ генерала|cffced4da: повышает урон от атак союзных войск рядом с героем.|n- |cffa9c7deСаронитовый панцирь|cffced4da: снижает получаемый урон от атак.|n- |cffa9c7deСтать слугой Йогг`Сарона|cffced4da: передаёт игроку контроль над Древним богом Йогг`Сароном.|n|nАтакует наземные цели.|r"
+    },
+    {
+      "rawcode": "U02F",
+      "field": "propernames",
+      "reference_before": "TRIGSTR_22866",
+      "before": "|cff483d8bГенерал Везакс|r",
+      "after": "|cffe4cfa3Генерал Везакс|r"
+    },
+    {
+      "rawcode": "U02F",
+      "field": "awakentip",
+      "reference_before": "TRIGSTR_22838",
+      "before": "Воскресить |cffd7b4f5Верховный генерал|r",
+      "after": "|cffe4cfa3Верховный генерал|r"
+    },
+    {
+      "rawcode": "U02F",
+      "field": "revivetip",
+      "reference_before": "TRIGSTR_22515",
+      "before": "Воскресить |cff483d8bГенерал К`Траксис|r",
+      "after": "|cffe4cfa3Верховный генерал|r"
+    }
+  ],
+  "evidence": [
+    "faceless_hero_dependencies.json",
+    "Bezlikie.lua: Trig_Sluga_qqgsarona",
+    "Stromgard.lua: Trig_Passive"
+  ],
+  "remaining": [
+    "Собственные карточки способностей: все уровни и изучение",
+    "Доступность Везакса и игровая проверка"
+  ]
+}
