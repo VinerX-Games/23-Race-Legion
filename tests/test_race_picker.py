@@ -8,6 +8,7 @@ from lupa.lua53 import LuaRuntime
 
 ROOT = Path(__file__).resolve().parents[1]
 SECTIONS = ROOT / 'map.w3x/_lua/monolith_split/sections'
+FRAME_PARK = (SECTIONS / '80_runtime/_ui/58_frame_park.lua').read_text(encoding='utf-8')
 
 FIXTURE = r'''
 FRAMEPOINT_TOPLEFT='tl'; FRAMEPOINT_BOTTOMLEFT='bl'; FRAMEPOINT_BOTTOMRIGHT='br'; FRAMEPOINT_TOP='t'
@@ -79,6 +80,7 @@ class RacePickerTests(unittest.TestCase):
         lua = LuaRuntime()
         self.lua = lua
         lua.execute(FIXTURE)
+        lua.execute(FRAME_PARK)
         src = (SECTIONS / '80_runtime/_ui/63_race_picker.lua').read_text(encoding='utf-8')
         for name in set(re.findall(r'"(Trig_Race_[A-Za-z0-9_]+_Actions)"', src)):
             lua.execute(f'makeAction("{name}")')
@@ -91,10 +93,12 @@ class RacePickerTests(unittest.TestCase):
             RacePickerAdopt(circle)''')
 
     def test_hidden_panel_is_parked_off_screen(self):
-        # Скрытая панель не должна ловить клики по миру: кнопки уведены за экран.
-        self.assertLess(self.lua.eval('buttons[1].x'), 0.0)
+        # Скрытая панель не должна ловить клики по миру: кнопки уведены вниз за экран.
+        self.assertLess(self.lua.eval('buttons[1].y'), 0.0)
         self.spawn_circle(0)
-        self.assertGreaterEqual(self.lua.eval('buttons[1].x'), 0.0)
+        self.assertGreaterEqual(self.lua.eval('buttons[1].y'), 0.0)
+        self.pick('A02A')
+        self.assertLess(self.lua.eval('buttons[1].y'), 0.0)
 
     def test_layout_fits_4_3_and_odd_groups_are_staggered(self):
         self.spawn_circle(0)
@@ -135,6 +139,7 @@ class RacePickerTests(unittest.TestCase):
     def test_circle_created_before_panel_is_stripped_when_ready(self):
         lua = LuaRuntime()
         lua.execute(FIXTURE)
+        lua.execute(FRAME_PARK)
         lua.execute((SECTIONS / '80_runtime/_ui/63_race_picker.lua').read_text(encoding='utf-8'))
         lua.execute('''
             circle={id='h0HJ', owner=0, abil={A02A=1, A0I1=1, Apiv=1}}

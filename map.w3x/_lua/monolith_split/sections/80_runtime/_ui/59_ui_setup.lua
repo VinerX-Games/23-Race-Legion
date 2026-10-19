@@ -121,8 +121,9 @@ function UISetup()
 	-- Minimap Border
 	minimapBorder = minimapBorder or BlzCreateFrameByType("BACKDROP", "MinimapBorder", MiniMap, "", 0)
 	fh = minimapBorder
-	BlzFrameSetPoint(fh, FRAMEPOINT_TOPLEFT, MiniMap, FRAMEPOINT_TOPLEFT, 0, 0)
-	BlzFrameSetPoint(fh, FRAMEPOINT_BOTTOMRIGHT, MiniMap, FRAMEPOINT_BOTTOMRIGHT, 0, 0)
+	FrameSetPoint(fh, FRAMEPOINT_TOPLEFT, MiniMap, FRAMEPOINT_TOPLEFT, 0, 0)
+	FrameSetPoint(fh, FRAMEPOINT_BOTTOMRIGHT, MiniMap, FRAMEPOINT_BOTTOMRIGHT, 0, 0)
+	FrameSetShown(fh, true)   -- на выборе расы рамка скрыта
 	BlzFrameSetTexture(fh, "UI\\MiniMapBorder.dds", 0, true)
 	
 	-- Tooltips

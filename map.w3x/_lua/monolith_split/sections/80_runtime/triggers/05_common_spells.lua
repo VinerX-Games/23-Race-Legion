@@ -7,7 +7,8 @@ function Trig_Leave_Ot_Func005C()
 end
 function Trig_Leave_Ot_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
-    DisplayTextToForce(udg_AllPlayers, GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r")
+    DisplayTextToForce(udg_AllPlayers, "|cffb99d66ИГРА:|cffced4da Игрок "
+        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. "|cffced4da покинул игру.|r")
     ClearPlayer(Player(pi))
     if Trig_Leave_Ot_Func005C() then
         ForForce(Vassals[pi], Freedom)

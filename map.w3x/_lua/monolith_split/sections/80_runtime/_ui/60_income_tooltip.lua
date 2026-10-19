@@ -40,8 +40,8 @@ function UpdateResourceTooltips(p, pi)
 		"Базовый доход: " .. ResourceAmount(base),
 		"Модификатор дохода: " .. ResourceValue(string.format("%.2f", modifier)),
 		"Налог союзникам: " .. ResourceValue(string.format("%.0f%%", tax * 100))
-			.. " (" .. ResourceAmount(-base * tax) .. ")",
-		"Доход после модификатора и налога: " .. ResourceAmount(base * (modifier - tax)),
+			.. " (" .. ResourceAmount(-base * modifier * tax) .. ")",
+		"Доход после модификатора и налога: " .. ResourceAmount(base * modifier * (1 - tax)),
 		"|nСодержание армии: " .. ResourceAmount(-upkeep),
 		"Логистика: " .. ResourceAmount(-transport),
 		"Доход от коррупции: " .. ResourceAmount(refund),
@@ -99,7 +99,9 @@ function Face2()
 	
 	BlzLoadTOCFile("war3mapimported\\BoxedText.toc")
 	incomeRoot = BlzCreateFrameByType("FRAME", "IncomeRoot", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-	BlzFrameSetAllPoints(incomeRoot, BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0))
+	-- Корень — точка, а не весь экран: дочерние фреймы стоят по своим точкам.
+	BlzFrameSetSize(incomeRoot, 0.001, 0.001)
+	FrameSetAbsPoint(incomeRoot, FRAMEPOINT_BOTTOMLEFT, 0.0, 0.0)
 	face = BlzCreateFrameByType("BACKDROP", "Face", incomeRoot, "", 0)
 	faceHover = BlzCreateFrameByType("FRAME", "FaceFrame", face, "", 0)
 	IncomeTextFr = BlzCreateFrameByType("TEXT", "MyTextFrame", incomeRoot, "", 0)
@@ -107,7 +109,7 @@ function Face2()
 	tooltipBody = BlzGetFrameByName("BoxedTextValue", 0)
 	tooltipTitle = BlzGetFrameByName("BoxedTextTitle", 0)
 	BlzFrameSetText(IncomeTextFr, "|cffffffff0|r")
-	BlzFrameSetAbsPoint(IncomeTextFr, FRAMEPOINT_TOPRIGHT, 0.2337, 0.5937)
+	FrameSetAbsPoint(IncomeTextFr, FRAMEPOINT_TOPRIGHT, 0.2337, 0.5937)
 	BlzFrameSetEnable(IncomeTextFr, false)
 	BlzFrameSetScale(IncomeTextFr, 1.075)
 	BlzFrameSetTextAlignment(IncomeTextFr, TEXT_JUSTIFY_CENTER, TEXT_JUSTIFY_LEFT)
@@ -115,7 +117,7 @@ function Face2()
 	BlzFrameSetTooltip(faceHover, tooltip)
 	
 	BlzFrameSetSize(face, 0.085, 0.015)
-	BlzFrameSetAbsPoint(face, FRAMEPOINT_TOPRIGHT, 0.239, 0.5965)
+	FrameSetAbsPoint(face, FRAMEPOINT_TOPRIGHT, 0.239, 0.5965)
 	BlzFrameClearAllPoints(tooltip)
 	BlzFrameSetAbsPoint(tooltip, FRAMEPOINT_TOPLEFT, 0.15, 0.575)
 	BlzFrameSetTextAlignment(tooltipBody, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
@@ -133,7 +135,7 @@ function Face2()
 	local resourceBar = BlzGetFrameByName("ResourceBarFrame", 0)
 	if supply ~= nil and resourceBar ~= nil then
 		stateHover = BlzCreateFrameByType("FRAME", "StateResourceHover", incomeRoot, "", 0)
-		BlzFrameSetPoint(stateHover, FRAMEPOINT_TOPRIGHT, supply, FRAMEPOINT_TOPRIGHT, 0.005, 0.003)
+		FrameSetPoint(stateHover, FRAMEPOINT_TOPRIGHT, supply, FRAMEPOINT_TOPRIGHT, 0.005, 0.003)
 		BlzFrameSetSize(stateHover, 0.095, 0.022)
 		BlzFrameSetLevel(stateHover, 5)
 		stateTooltip = BlzCreateFrame("BoxedText", stateHover, 0, 1)
@@ -146,16 +148,21 @@ function Face2()
 		BlzFrameSetVisible(stateTooltip, false)
 		BlzFrameSetTooltip(stateHover, stateTooltip)
 		local listener = BlzFrameGetChild(resourceBar, 3)
-		if listener ~= nil then BlzFrameSetVisible(listener, false) end
+		-- Нативная зона наведения на лимит больше не нужна: скрыта и уведена за экран навсегда.
+		FrameSetShown(listener, false)
 	end
 	if CustomHud_Create ~= nil then CustomHud_Create() end
 
 end
 
 -- Показатель дохода и зона подсказки «Государство» — прячутся вместе с консолью.
+-- Дочерние фреймы стоят по своим точкам, а не по корню: уводятся каждый сам.
 function IncomeUISetVisible(show)
 	if incomeRoot == nil then return end
-	BlzFrameSetVisible(incomeRoot, show)
+	FrameSetShown(incomeRoot, show)
+	FramePark(face, not show)
+	FramePark(IncomeTextFr, not show)
+	FramePark(stateHover, not show)
 	ProbeLogWrite("[UI] income visible=" .. tostring(show))
 end
 --  scope init2 begins

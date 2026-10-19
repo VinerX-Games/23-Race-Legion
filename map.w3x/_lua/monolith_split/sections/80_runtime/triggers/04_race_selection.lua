@@ -98,6 +98,11 @@ end
 ---@param pi integer
 ---@return integer|nil
 function EnsureMultiboardPlayerRow(pi)
+    -- Строки только у слотов игроков 0..23: нейтралы (Player(24) и выше) владеют
+    -- юнитами и городами, но в таблице им не место.
+    if pi == nil or pi < 0 or pi > 23 then
+        return nil
+    end
     local ownerIndex=MultiboardItemOwnerIndex[pi]
     if ownerIndex ~= nil then
         return ownerIndex

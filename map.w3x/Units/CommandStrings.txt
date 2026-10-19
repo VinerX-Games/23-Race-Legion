@@ -1,0 +1,326 @@
+// Map-owned Russian command strings; preserve original engine hotkeys.
+
+[CmdMove]
+Tip=|cffe4cfa3Перемещение|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Перемещает войска в указанную точку. При выборе союзника войска следуют за ним.|r"
+Hotkey=M
+
+[CmdAttack]
+Tip=|cffe4cfa3Атака|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da При выборе точки войска движутся к ней, атакуя встреченных врагов. При выборе противника сосредоточивают атаки на этой цели.|r"
+Hotkey=A
+
+[CmdAttackGround]
+Tip=|cffe4cfa3Атака по области|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Приказывает обстреливать указанную область до отмены или получения другого приказа.|r"
+Hotkey=G
+
+[CmdBuild]
+Tip=|cffe4cfa3Строительство|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Открывает список доступных зданий.|r"
+Hotkey=B
+
+[CmdBuildHuman]
+Tip=|cffe4cfa3Строительство|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Открывает список доступных зданий.|r"
+Hotkey=B
+
+[CmdBuildOrc]
+Tip=|cffe4cfa3Строительство|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Открывает список доступных зданий.|r"
+Hotkey=B
+
+[CmdBuildNightElf]
+Tip=|cffe4cfa3Строительство|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Открывает список доступных зданий.|r"
+Hotkey=B
+
+[CmdBuildUndead]
+Tip=|cffe4cfa3Строительство|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Открывает список доступных зданий.|r"
+Hotkey=B
+
+[CmdBuildNaga]
+Tip=|cffe4cfa3Строительство|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Открывает список доступных зданий.|r"
+Hotkey=B
+
+[CmdCancel]
+Tip=|cffe4cfa3Отмена|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Отменяет текущий выбор приказа или цели.|r"
+Hotkey=27
+Hotkey:custom,V0=512
+Hotkey:custom,V1=512
+Hotkey:melee,V0=512
+
+[CmdCancelBuild]
+Tip=|cffe4cfa3Отмена|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Отменяет строительство или выбор места для здания.|r"
+Hotkey=27
+Hotkey:custom,V0=512
+Hotkey:custom,V1=512
+Hotkey:melee,V0=512
+
+[CmdCancelTrain]
+Tip=|cffe4cfa3Отмена|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Прерывает обучение выбранного в очереди воина.|r"
+Hotkey=27
+Hotkey:custom,V0=512
+Hotkey:custom,V1=512
+Hotkey:melee,V0=512
+
+[CmdCancelRevive]
+Tip=|cffe4cfa3Отмена|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Прерывает воскрешение героя.|r"
+Hotkey=27
+Hotkey:custom,V0=512
+Hotkey:custom,V1=512
+Hotkey:melee,V0=512
+
+[CmdHoldPos]
+Tip=|cffe4cfa3Удержание позиции|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Удерживает войска на месте. Они атакуют доступных противников, но не преследуют их.|r"
+Hotkey=H
+
+[CmdPatrol]
+Tip=|cffe4cfa3Патрулирование|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Приказывает войскам перемещаться между текущей позицией и указанной точкой, вступая в бой со встреченными врагами.|r"
+Hotkey=P
+
+[CmdPurchase]
+Tip=|cffe4cfa3Продажа предметов|r
+Hotkey=s
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Позволяет продавать предметы магазину.|r"
+
+[CmdRally]
+Tip=|cffe4cfa3Точка сбора|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Задаёт точку назначения для новых войск. Рабочие могут сразу приступить к добыче, если целью выбран подходящий источник ресурсов.|r"
+Hotkey=Y
+
+[CmdSelectSkill]
+Tip=|cffe4cfa3Способности героя|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Открывает меню способностей героя для распределения доступных очков навыков.|r"
+Hotkey=O
+
+[CmdStop]
+Tip=|cffe4cfa3Остановка|r
+Ubertip="|cffa6afb8КОМАНДА:|cffced4da Прерывает текущий приказ. Войска останавливаются и могут самостоятельно атаковать ближайших противников.|r"
+Hotkey=S
+
+[Errors]
+Emptycontrolgroup="|cffa6afb8НЕДОСТУПНО:|cffe69a8d В отряде должны быть войска.|r"
+Invalidcontrolgroup="|cffa6afb8НЕДОСТУПНО:|cffe69a8d В отряде могут быть только войска под вашим контролем.|r"
+Nonunitincontrolgroup="|cffa6afb8НЕДОСТУПНО:|cffe69a8d В состав группы могут входить только войска.|r"
+Nofood="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Недостаточно доступной пищи для создания войска.|r","|cffa6afb8НЕДОСТУПНО:|cffe69a8d Недостаточно доступной пищи для создания войска.|r","|cffa6afb8НЕДОСТУПНО:|cffe69a8d Недостаточно доступной пищи для создания войска.|r","|cffa6afb8НЕДОСТУПНО:|cffe69a8d Недостаточно доступной пищи для создания войска.|r"
+Maxsupply="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Не удалось создать воина: достигнут лимит припасов.|r"
+Nogold="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Недостаточно золота.|r"
+Nolumber="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Недостаточно древесины.|r"
+Nomana="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Недостаточно маны.|r"
+Cooldown="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Способность еще не готова.|r"
+Noroom="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Недостаточно места.|r"
+Canttransport="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Невозможно погрузить цель.|r"
+Cantdevour="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Невозможно проглотить цель.|r"
+Cantcyclone="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Неподходящая цель для «Смерча».|r"
+Cantspiritwolf="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Неподходящая цель для «Духа волка».|r"
+Cantpossess="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Неподходящая цель для «Одержимости».|r"
+Cantmanaburn="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Неподходящая цель для «Сожжения маны».|r"
+Onlyattackers="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите цель, способную атаковать.|r"
+Notentangledmine="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Невозможно использовать оплетенный рудник.|r"
+Notblightedmine="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Невозможно использовать проклятый рудник.|r"
+Alreadyentangled="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Этот рудник уже оплетен.|r"
+Alreadyblightedmine="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Этот рудник уже проклят.|r"
+Targetwispresources="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью дерево или оплетенный рудник.|r"
+Targetblightedmine="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью проклятый рудник.|r"
+Entangleminefirst="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Сначала рудник нужно оплести.|r"
+Blightminefirst="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Прокляните рудник.|r"
+Entangledminefull="|cffa6afb8НЕДОСТУПНО:|cffe69a8d На этом руднике уже трудится максимальное количество огоньков.|r"
+Blightringfull="|cffa6afb8НЕДОСТУПНО:|cffe69a8d На этом руднике уже трудится максимальное количество послушников.|r"
+Acolytealreadymining="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выбранный послушник уже добывает золото.|r"
+Nototherplayersmine="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Этот рудник принадлежит другому игроку.|r"
+Targgetmine="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью рудник.|r"
+Targgetresources="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью источник ресурсов.|r"
+Humanbuilding="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью здание Альянса.|r"
+Undeadbuilding="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Нужно указать строение нежити.|r"
+Underconstruction="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Это здание еще не построено.|r"
+Alreadyrebuilding="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Это здание уже строится.|r"
+Creeptoopowerful="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Это существо слишком опасно.|r"
+Hibernating="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Цель уже впала в спячку.|r"
+Magicleashed="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Цель уже на поводке.|r"
+Immunetomagic="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Цель невосприимчива к магии.|r"
+Holybolttarget="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью живого союзника или врага-нежить.|r"
+Deathcoiltarget="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью живого врага или союзника-нежить.|r"
+Dispelmagictarget="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью воина или зачумленную землю.|r"
+Treeoccupied="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Это дерево занято. Выберите свободное дерево.|r"
+Coupletarget="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Не удалось объединить войска.|r"
+Mounthippogryphtarget="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью гиппогрифа.|r"
+Archerridertarget="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью лучницу.|r"
+Cantsee="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Сначала разведайте местность.|r"
+Cantplace="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Здесь нельзя строить.|r"
+Outofbounds="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Цель находится за пределами карты.|r"
+Offblight="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Здания можно призывать только на зачумленной земле.|r"
+Tooclosetomine="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Рудник находится слишком близко.|r"
+Tooclosetohall="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Рудник не может находиться так близко к базе.|r"
+Notonshoreline="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Это здание можно строить только на берегу.|r"
+Buildingblocked="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Недостаточно места для нового воина.|r"
+Teleportfail="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Этого воина нельзя телепортировать.|r"
+Stumpblocked="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Что-то блокирует корни этого дерева.|r"
+Cantland="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Здесь нельзя высадиться.|r"
+Cantroot="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Здесь нельзя пустить корни.|r"
+Cantrootunit="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Цель нельзя оплести.|r"
+Mustroottoentangle="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Чтобы оплести рудник, пустите корни рядом с ним.|r"
+Mustbeclosertomine="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Пустите корни ближе к руднику.|r"
+Minenotentangleable="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Этот рудник нельзя оплести.|r"
+Notinrange="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Цель слишком далеко.|r"
+UnderRange="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Цель слишком близко.|r"
+Notthisunit="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Неподходящая цель.|r"
+Targetunit="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите цель.|r"
+Targetstructuretree="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью здание или дерево.|r"
+Targetground="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите наземную цель.|r"
+Targetair="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите воздушную цель.|r"
+Targetstructure="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью здание.|r"
+Targetward="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью идола.|r"
+Targetitem="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью предмет.|r"
+Targettree="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью дерево.|r"
+Targetrepair="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью здание или технику.|r"
+Targetbridge="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью мост.|r"
+Targetnaval="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите плавающую цель.|r"
+Targetowned="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью вашего воина.|r"
+Targetally="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью союзника.|r"
+Targetneutral="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите нейтральную цель.|r"
+Targetenemy="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью врага.|r"
+Targetcontrol="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите подконтрольную вам цель.|r"
+Targethero="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью героя.|r"
+Targetenemyhero="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью вражеского героя.|r"
+Targetcorpse="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью труп.|r"
+Targetfleshycorpse="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью свежий труп.|r"
+Targetbonecorpse="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью кости.|r"
+Targetundead="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью нежить.|r"
+Targetmechanical="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью технику.|r"
+Targetmoveable="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите цель, способную передвигаться.|r"
+Targetorganicground="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите органическую наземную цель.|r"
+Targetancient="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью древо.|r"
+Targetarmoredtransport="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью бронированный транспорт.|r"
+Targetmanauser="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите цель с маной.|r"
+Targetbunkerunit="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью батрака.|r"
+Targetwisp="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью огонька.|r"
+Targetacolyte="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью послушника.|r"
+Targetpit="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью жертвенную яму.|r"
+Needemptytree="|cffa6afb8НЕДОСТУПНО:|cffe69a8d На этом дереве сидит сова.|r"
+Needowltree="|cffa6afb8НЕДОСТУПНО:|cffe69a8d На этом дереве нет совы.|r"
+Cantfindcorpse="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Поблизости нет подходящих трупов.|r"
+Cantfindfriendlycorpse="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Рядом нет погибших союзников.|r"
+Nounits="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Войска – неподходящая цель.|r"
+Noground="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Наземные войска – неподходящая цель.|r"
+Noair="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Воздушные войска – неподходящая цель.|r"
+Nostructure="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Здание – неподходящая цель.|r"
+Noward="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Идол – неподходящая цель.|r"
+Noitem="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Предмет – неподходящая цель.|r"
+Nodebris="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Обломки – неподходящая цель.|r"
+Notree="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Дерево – неподходящая цель.|r"
+Nowall="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Стена – неподходящая цель.|r"
+Nobridge="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Мост – неподходящая цель.|r"
+Notfrozenbldg="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Указанное здание заморожено.|r"
+Nonaval="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Корабль – неподходящая цель.|r"
+Nottownhall="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью союзный центр базы.|r","|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью союзный центр базы.|r","|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью союзный центр базы.|r","|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью союзный центр базы.|r"
+Notownportalhalls="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Нет ни одного союзного центра базы.|r","|cffa6afb8НЕДОСТУПНО:|cffe69a8d Нет ни одного союзного центра базы.|r","|cffa6afb8НЕДОСТУПНО:|cffe69a8d Нет ни одного союзного центра базы.|r","|cffa6afb8НЕДОСТУПНО:|cffe69a8d Нет ни одного союзного центра базы.|r"
+Notself="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Нельзя выбрать целью себя.|r"
+Notowned="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Ваши войска – неподходящая цель.|r"
+Notfriendly="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Союзник – неподходящая цель.|r"
+Notneutral="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Нейтральные войска – неподходящая цель.|r"
+Notenemy="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Враг – неподходящая цель.|r"
+Notcargo="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Войска в здании или транспорте – неподходящая цель.|r"
+Nothidden="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Цель не видна на карте. |r"
+Nothiddenitem="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Предмет в инвентаре – неподходящая цель.|r"
+Notinvulnerable="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Цель неуязвима.|r"
+Nohero="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Герой – неподходящая цель.|r"
+Notcorpse="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите живую цель.|r"
+Notfleshycorpse="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Труп – неподходящая цель.|r"
+Notbonecorpse="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Скелет – неподходящая цель.|r"
+Notmechanical="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите органическую цель.|r"
+Notorganic="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Органические войска – неподходящая цель.|r"
+Notdisabled="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Во время применения нельзя передвигаться.|r"
+Cantattackloc="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Здесь нельзя атаковать.|r"
+Canttargetloc="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Здесь нельзя выбрать цель.|r"
+Inventoryfull="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Инвентарь заполнен.|r"
+Inventoryinteract="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите воина с инвентарем.|r"
+NeedInventory="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Подбирать предметы могут только войска с инвентарем.|r"
+Needretrainablehero="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Этот предмет могут использовать только герои, чьи способности уже восстановились.|r"
+Neednearbyhero="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Герой должен быть рядом.|r"
+Neednearbypatron="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Покупатель должен быть рядом.|r"
+Notsapper="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Подрывной отряд – неподходящая цель.|r"
+Notancient="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Древо – неподходящая цель.|r"
+Notsummoned="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Не действует на призванные цели.|r"
+Nottransport="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Транспортное средство или укрытие – неподходящая цель.|r"
+Notunsummoned="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Цель развоплощается.|r"
+Notillusion="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Иллюзия – неподходящая цель.|r"
+Notmorphing="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Превращающийся воин – неподходящая цель.|r"
+Notdot="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Друид-ворон – неподходящая цель.|r"
+Illusionscantharvest="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Иллюзии не могут добывать ресурсы.|r"
+Illusionscantpickup="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Иллюзии не могут подбирать предметы.|r"
+Cantpolymorphunit="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Невосприимчивость к «Превращению».|r"
+Notundead="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Нежить – неподходящая цель.|r"
+Heromaxed="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Герой достиг максимального уровня.|r"
+HPmaxed="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Герой абсолютно здоров.|r"
+Manamaxed="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Запас маны полон.|r"
+HPmanamaxed="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Запасы здоровья и маны полны.|r"
+UnitHPmaxed="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Запас здоровья полон.|r"
+UnitManaMaxed="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Запас маны полон.|r"
+RepairHPmaxed="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Цель не повреждена.|r"
+Alreadybeinghealed="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Цель уже лечится.|r"
+Alreadybeingrepaired="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Цель уже ремонтируется.|r"
+Pitalreadysacrificing="|cffa6afb8НЕДОСТУПНО:|cffe69a8d В этой жертвенной яме уже совершается жертвоприношение.|r"
+Outofstock="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Товар кончился.|r"
+Cooldownstock="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Товар кончился.|r"
+Cantdrop="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Предмет должен оставаться в вашем инвентаре.|r"
+Cantpawn="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Предмет не продается.|r"
+Calltoarms="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Рядом нет работников.|r"
+Calltoarmspeasant="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Чтобы призвать работников в ополчение, нужна ратуша.|r"
+Backtowork="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Поблизости нет ополченцев.|r"
+Backtoworkmilitia="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Чтобы распустить ополчение, нужна ратуша.|r"
+BattleStations="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Рядом нет батраков.|r"
+Replaceme="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Напишите сюда толковое сообщение об ошибке!|r"
+Notliquidfirebldg="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Это здание поражено жидким огнем.|r"
+Notethereal="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Астральные существа уязвимы только для способностей и магических атак.|r"
+Needstealbuff="|cffa6afb8НЕДОСТУПНО:|cffe69a8d У цели нет эффектов, которые можно похитить.|r"
+Needmeleeattacker="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью воина ближнего боя.|r"
+Needrangedattacker="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью воина дальнего боя.|r"
+Needspecialattacker="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью особого воина.|r"
+Needattacker="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью воина.|r"
+Needcaster="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью мага.|r"
+Needattackerorcaster="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью воина или мага.|r"
+Nopreservationtarget="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Нет зданий, к которым можно телепортироваться.|r"
+Canttransformitem="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Превращение не удалось.|r"
+Notmocunit="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Этот объект уже принесен в жертву огню.|r"
+Cantimpale="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Неподходящая цель для пронзания.|r"
+Needpositivebuff="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью врага под действием положительных эффектов.|r"
+Needposbufforsummoned="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите призванную цель или врага под действием положительных эффектов.|r"
+Neednegativebuff="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите целью союзника под действием отрицательных эффектов.|r"
+Absorbmana="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Недостаточно маны для поглощения.|r"
+Canttakeitem="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Не удалось подобрать предмет.|r"
+Cantdropitem="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Этот предмет нельзя выбросить.|r"
+Cantuseitem="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Невозможно использовать этот предмет.|r"
+Notpowerup="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Использование невозможно.|r"
+Itemcooldown="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Этот предмет перезаряжается.|r"
+Cantfindcoupletarget="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Не найдена парная цель.|r"
+Notdisabledinventory="|cffa6afb8НЕДОСТУПНО:|cffe69a8d У этого воина нет инвентаря.|r"
+Resistantskin="|cffa6afb8НЕДОСТУПНО:|cffe69a8d «Устойчивая кожа».|r"
+Notinvulnerablespell="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Не удалось использовать предмет или способность, дающие неуязвимость.|r"
+Needsummoned="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Выберите призванную цель.|r"
+Cantsubmergethere="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Здесь нельзя погрузиться под воду.|r"
+Alreadydoomed="|cffa6afb8НЕДОСТУПНО:|cffe69a8d На этого воина уже действует «Рок».|r"
+Unitattack="|cffa6afb8НЕДОСТУПНО:|cffe69a8d Ваши войска вступили в бой.|r"
+Townattack="|cffa6afb8НЕДОСТУПНО:|cffe69a8d На нашу базу напали!|r"
+Herodies="|cffa6afb8СОБЫТИЕ:|cffe6c07b %s погибает в бою.|r"
+Allyunderattack="|cffa6afb8СОБЫТИЕ:|cffe6c07b %s вступает в бой.|r"
+Allytownattack="|cffa6afb8СОБЫТИЕ:|cffe6c07b На базу игрока %s напали!|r"
+Allyminimapping="|cffa6afb8СОБЫТИЕ:|cffe6c07b %s указывает путь.|r"
+Goldandlumberfromally="|cffa6afb8СОБЫТИЕ:|cffc8e087 Получено %d золота и %d древесины от игрока %s.|r"
+Goldfromally="|cffa6afb8СОБЫТИЕ:|cffc8e087 Получено %d золота от игрока %s.|r"
+Lumberfromally="|cffa6afb8СОБЫТИЕ:|cffc8e087 Получено %d древесины от игрока %s.|r"
+Goldminedestroyed="|cffa6afb8СОБЫТИЕ:|cffe6c07b Рудник истощен.|r","|cffa6afb8СОБЫТИЕ:|cffe6c07b Рудник истощен.|r","|cffa6afb8СОБЫТИЕ:|cffe6c07b Источник золота иссяк.|r","|cffa6afb8СОБЫТИЕ:|cffe6c07b Рудник выработан.|r"
+Upkeeplevel="|cffa6afb8СОБЫТИЕ:|cffced4da Уровень расходов: %d.|r"
+Herokilledhero="|cffa6afb8СОБЫТИЕ:|cffced4da Игрок %s одержал победу над игроком %s.|r"
+Herodeath="|cffa6afb8СОБЫТИЕ:|cffe6c07b %s (%s %d-го уровня) погибает.|r","|cffa6afb8СОБЫТИЕ:|cffe6c07b %s (%s %d-го уровня) умирает.|r","|cffa6afb8СОБЫТИЕ:|cffe6c07b %s (%s %d-го уровня) покидает этот мир.|r","|cffa6afb8СОБЫТИЕ:|cffe6c07b %s (%s %d-го уровня) погибает.|r"
+Goldminelow="|cffa6afb8СОБЫТИЕ:|cffe6c07b Рудник почти истощен.|r","|cffa6afb8СОБЫТИЕ:|cffe6c07b Рудник почти истощен.|r","|cffa6afb8СОБЫТИЕ:|cffe6c07b Источник золота скоро иссякнет.|r","|cffa6afb8СОБЫТИЕ:|cffe6c07b Рудник почти истощен.|r"
+Controlgranted="|cffa6afb8СОБЫТИЕ:|cffc8e087 Войска игрока %s перешли под ваше командование.|r"
+Controlrevoked="|cffa6afb8СОБЫТИЕ:|cffe69a8d %s теряет контроль над своей армией.|r"

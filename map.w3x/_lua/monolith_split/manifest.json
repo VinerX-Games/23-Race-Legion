@@ -244,6 +244,14 @@
       "library_name": null
     },
     {
+      "name": "gen:_ui_58_frame_park",
+      "file": "80_runtime/_ui/58_frame_park.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
       "name": "gen:_ui_59_ui_setup",
       "file": "80_runtime/_ui/59_ui_setup.lua",
       "category": "generated_runtime",

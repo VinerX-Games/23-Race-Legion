@@ -30,13 +30,22 @@ function ArmyExpGraph(pi)
 	if ownerIndex == nil or ArmyPowerColumnHeader == nil then return end
 	MultiboardSetCell(ownerIndex, 3, R2SW_Polyfill(ArmyExp[pi] or 0.001))
 end
+---@param unitCount integer
+---@return number
+function CalculateLogistics(unitCount)
+	local count = math.max(0, unitCount or 0)
+	local bracket = math.floor(count / 25)
+	local base = (500 + 100 * (bracket - 1)) / 2 * bracket
+	-- Preserve the old 25-unit anchors and interpolate the next bracket.
+	return base + (count - bracket * 25) * (250 + 100 * bracket) / 25
+end
+
 ---@param pi integer
 ---@return nothing
 function UpdateGraf(pi)
 	local p = Player(pi)
 	local ownerIndex = EnsureMultiboardPlayerRow(pi)
-	local r = R2I((udg_UnitsCount[pi] or 0) / 25.00)
-	logistic[pi] = (500 + 100 * (r - 1)) / 2 * r	--  ??????????
+	logistic[pi] = CalculateLogistics(udg_UnitsCount[pi])
 	
 	-- ????? ??????????? ????????
 	if (udg_MainPrice[pi] or 0) ~= 0 and GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) >= 1 then
@@ -45,9 +54,9 @@ function UpdateGraf(pi)
 	
 	
 	if DisOn then
-		balance[pi] = income[pi] - disincome[pi] + corruption[pi] - logistic[pi] + additional[pi]
+		balance[pi] = income[pi] * IncomeMod * (1 - AllyTax[pi]) - disincome[pi] + corruption[pi] - logistic[pi] + additional[pi]
 	else
-		balance[pi] = income[pi]
+		balance[pi] = income[pi] * IncomeMod * (1 - AllyTax[pi])
 	end
 	
 	--  ????????

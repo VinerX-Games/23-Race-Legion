@@ -1349,7 +1349,6 @@ end
 ---@return nothing
 function Trig_TimerIncome_Actions()
 	local i = 0
-	local r
 	local p
 	local t = 0
 	
@@ -1360,14 +1359,7 @@ function Trig_TimerIncome_Actions()
 		if DisOn then
 			
 			
-			--  ---------------------------??????? ????????????????-----------------------------
-			-- set logistic[i] = 500*R2I( udg_UnitsCount[i]/ 50.00 )
-			-- set logistic[i] = 250*R2I( udg_UnitsCount[i]/ 25.00 )
-			-- ?????? ??????
-			
-			
-			r = R2I(udg_UnitsCount[i] / 25.00)
-			logistic[i] = (500 + 100 * (r - 1)) / 2 * r	--  ??????????
+			logistic[i] = CalculateLogistics(udg_UnitsCount[i])
 			
 			
 			--  ---------------------------??????? ?????????-----------------------------
@@ -1392,9 +1384,9 @@ function Trig_TimerIncome_Actions()
 				
 			end
 			
-			balance[i] = income[i] * (IncomeMod - AllyTax[i]) - disincome[i] - logistic[i] + corruption[i] + additional[i]
+			balance[i] = income[i] * IncomeMod * (1 - AllyTax[i]) - disincome[i] - logistic[i] + corruption[i] + additional[i]
 		else
-			balance[i] = income[i] * (IncomeMod - AllyTax[i])
+			balance[i] = income[i] * IncomeMod * (1 - AllyTax[i])
 		end
 		
 		

@@ -1,0 +1,24 @@
+Frame "TEXT" "HudText" {
+	DecorateFileNames,
+	FontFlags "FIXEDSIZE",
+	FrameFont "MasterFont", 0.0095, "",
+	FontColor 1.0 1.0 1.0 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,
+	FontShadowOffset 0.001 -0.001,
+}
+Frame "TEXT" "HudTitle" {
+	DecorateFileNames,
+	FontFlags "FIXEDSIZE",
+	FrameFont "MasterFont", 0.016, "",
+	FontColor 1.0 1.0 1.0 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,
+	FontShadowOffset 0.001 -0.001,
+}
+Frame "TEXT" "HudBody" {
+	DecorateFileNames,
+	FontFlags "FIXEDSIZE",
+	FrameFont "MasterFont", 0.0115, "",
+	FontColor 1.0 1.0 1.0 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,
+	FontShadowOffset 0.001 -0.001,
+}

@@ -85,6 +85,8 @@ class IncomeTooltipTests(unittest.TestCase):
             playerCapital = {[0] = {life = 100, owner = 0, name = 'Столица'}}
             udg_UnitsCount = {[0] = 40}
         ''')
+        lua.execute((ROOT / 'map.w3x/_lua/monolith_split/sections/80_runtime/'
+                     '_ui/58_frame_park.lua').read_text(encoding='utf-8'))
         ui = (ROOT / 'map.w3x/_lua/monolith_split/sections/80_runtime/'
               '_ui/60_income_tooltip.lua').read_text(encoding='utf-8')
         lua.execute(ui)
@@ -124,9 +126,9 @@ class IncomeTooltipTests(unittest.TestCase):
         self.lua.globals().IncomeMod = 1.2
         self.lua.globals().AllyTax[0] = 0.1
         body = self.refresh()
-        self.assertIn('10% (-15)', plain_text(body))
-        self.assertIn('|cffef8173-15|cffced4da', body)
-        self.assertIn('налога: |cffc8e087+165|cffced4da', body)
+        self.assertIn('10% (-18)', plain_text(body))
+        self.assertIn('|cffef8173-18|cffced4da', body)
+        self.assertIn('налога: |cffc8e087+162|cffced4da', body)
 
     def test_top_counter_matches_integer_payout(self):
         self.lua.globals().balance[0] = 100.9

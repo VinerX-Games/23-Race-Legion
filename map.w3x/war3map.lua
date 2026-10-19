@@ -10076,13 +10076,22 @@ function ArmyExpGraph(pi)
 	if ownerIndex == nil or ArmyPowerColumnHeader == nil then return end
 	MultiboardSetCell(ownerIndex, 3, R2SW_Polyfill(ArmyExp[pi] or 0.001))
 end
+---@param unitCount integer
+---@return number
+function CalculateLogistics(unitCount)
+	local count = math.max(0, unitCount or 0)
+	local bracket = math.floor(count / 25)
+	local base = (500 + 100 * (bracket - 1)) / 2 * bracket
+	-- Preserve the old 25-unit anchors and interpolate the next bracket.
+	return base + (count - bracket * 25) * (250 + 100 * bracket) / 25
+end
+
 ---@param pi integer
 ---@return nothing
 function UpdateGraf(pi)
 	local p = Player(pi)
 	local ownerIndex = EnsureMultiboardPlayerRow(pi)
-	local r = R2I((udg_UnitsCount[pi] or 0) / 25.00)
-	logistic[pi] = (500 + 100 * (r - 1)) / 2 * r	--  ??????????
+	logistic[pi] = CalculateLogistics(udg_UnitsCount[pi])
 	
 	-- ????? ??????????? ????????
 	if (udg_MainPrice[pi] or 0) ~= 0 and GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) >= 1 then
@@ -10091,9 +10100,9 @@ function UpdateGraf(pi)
 	
 	
 	if DisOn then
-		balance[pi] = income[pi] - disincome[pi] + corruption[pi] - logistic[pi] + additional[pi]
+		balance[pi] = income[pi] * IncomeMod * (1 - AllyTax[pi]) - disincome[pi] + corruption[pi] - logistic[pi] + additional[pi]
 	else
-		balance[pi] = income[pi]
+		balance[pi] = income[pi] * IncomeMod * (1 - AllyTax[pi])
 	end
 	
 	--  ????????
@@ -10566,7 +10575,87 @@ function InitTrig_FeodalVassalMode()
 		TriggerRegisterPlayerChatEvent(trig, Player(i), "-feodmode ", false)
 	end
 	TriggerAddAction(trig, FeodalSetVassalMode)
+end-- ***************************************************************************
+-- *  FramePark
+-- Скрытый фрейм может по-прежнему перекрывать игровое поле и ловить мышь.
+-- Поэтому скрытие = BlzFrameSetVisible(false) + увод фрейма вниз за нижний
+-- край экрана, а показ возвращает запомненные точки привязки. Точки, которые
+-- нужно восстанавливать, ставятся через FrameSetAbsPoint/FrameSetPoint.
+-- Позиции фреймов — только внешний вид: вызовы безопасны внутри
+-- GetLocalPlayer()-веток, каждый клиент уводит фреймы у себя.
+-- Только для своих фреймов карты: нативные фреймы игры лишь скрываются
+-- (BlzFrameSetVisible) — их исходные привязки не прочитать и не восстановить.
+-- Локалы — внутри do-блока: главный чанк war3map.lua упирается в лимит регистров Lua.
+FRAME_PARK_Y = -0.5   -- верх уведённого фрейма: ниже нижнего края экрана (y = 0)
+
+do
+	local frameAnchors = {}   -- [frame] = { { point, x, y [, rel, relPoint] }, ... }
+	local frameParked = {}    -- [frame] = true, пока фрейм уведён за экран
+
+	local function FrameRemember(f, a)
+		local list = frameAnchors[f]
+		if list == nil then
+			list = {}
+			frameAnchors[f] = list
+		end
+		for i = 1, #list do
+			if list[i].point == a.point then
+				list[i] = a
+				return
+			end
+		end
+		list[#list + 1] = a
+	end
+
+	-- BlzFrameSetAbsPoint с запоминанием. Уведённый фрейм остаётся за экраном до показа.
+	function FrameSetAbsPoint(f, point, x, y)
+		FrameRemember(f, { point = point, x = x, y = y })
+		if not frameParked[f] then BlzFrameSetAbsPoint(f, point, x, y) end
+	end
+
+	-- BlzFrameSetPoint с запоминанием.
+	function FrameSetPoint(f, point, rel, relPoint, x, y)
+		FrameRemember(f, { point = point, x = x, y = y, rel = rel, relPoint = relPoint })
+		if not frameParked[f] then BlzFrameSetPoint(f, point, rel, relPoint, x, y) end
+	end
+
+	-- BlzFrameClearAllPoints с забыванием запомненных точек.
+	function FrameClearAllPoints(f)
+		frameAnchors[f] = nil
+		if not frameParked[f] then BlzFrameClearAllPoints(f) end
+	end
+
+	-- Увести фрейм за экран или вернуть его, не трогая видимость (для фреймов, чью
+	-- видимость ведёт движок). Без запомненных точек фрейм при возврате остаётся
+	-- без привязки: такой фрейм расставляет вызывающий (например, UISetup).
+	function FramePark(f, park)
+		if f == nil or (frameParked[f] == true) == park then return end
+		BlzFrameClearAllPoints(f)
+		if park then
+			frameParked[f] = true
+			BlzFrameSetAbsPoint(f, FRAMEPOINT_TOP, 0.4, FRAME_PARK_Y)
+			return
+		end
+		frameParked[f] = nil
+		local list = frameAnchors[f] or {}
+		for i = 1, #list do
+			local a = list[i]
+			if a.rel == nil then
+				BlzFrameSetAbsPoint(f, a.point, a.x, a.y)
+			else
+				BlzFrameSetPoint(f, a.point, a.rel, a.relPoint, a.x, a.y)
+			end
+		end
+	end
+
+	-- Показать фрейм на месте или скрыть и увести за нижний край экрана.
+	function FrameSetShown(f, show)
+		if f == nil then return end
+		BlzFrameSetVisible(f, show)
+		FramePark(f, not show)
+	end
 end
+
 -- ***************************************************************************
 -- *  PlayerUI
 local imageTest
@@ -10689,8 +10778,9 @@ function UISetup()
 	-- Minimap Border
 	minimapBorder = minimapBorder or BlzCreateFrameByType("BACKDROP", "MinimapBorder", MiniMap, "", 0)
 	fh = minimapBorder
-	BlzFrameSetPoint(fh, FRAMEPOINT_TOPLEFT, MiniMap, FRAMEPOINT_TOPLEFT, 0, 0)
-	BlzFrameSetPoint(fh, FRAMEPOINT_BOTTOMRIGHT, MiniMap, FRAMEPOINT_BOTTOMRIGHT, 0, 0)
+	FrameSetPoint(fh, FRAMEPOINT_TOPLEFT, MiniMap, FRAMEPOINT_TOPLEFT, 0, 0)
+	FrameSetPoint(fh, FRAMEPOINT_BOTTOMRIGHT, MiniMap, FRAMEPOINT_BOTTOMRIGHT, 0, 0)
+	FrameSetShown(fh, true)   -- на выборе расы рамка скрыта
 	BlzFrameSetTexture(fh, "UI\\MiniMapBorder.dds", 0, true)
 	
 	-- Tooltips
@@ -10799,8 +10889,8 @@ function UpdateResourceTooltips(p, pi)
 		"Базовый доход: " .. ResourceAmount(base),
 		"Модификатор дохода: " .. ResourceValue(string.format("%.2f", modifier)),
 		"Налог союзникам: " .. ResourceValue(string.format("%.0f%%", tax * 100))
-			.. " (" .. ResourceAmount(-base * tax) .. ")",
-		"Доход после модификатора и налога: " .. ResourceAmount(base * (modifier - tax)),
+			.. " (" .. ResourceAmount(-base * modifier * tax) .. ")",
+		"Доход после модификатора и налога: " .. ResourceAmount(base * modifier * (1 - tax)),
 		"|nСодержание армии: " .. ResourceAmount(-upkeep),
 		"Логистика: " .. ResourceAmount(-transport),
 		"Доход от коррупции: " .. ResourceAmount(refund),
@@ -10858,7 +10948,9 @@ function Face2()
 	
 	BlzLoadTOCFile("war3mapimported\\BoxedText.toc")
 	incomeRoot = BlzCreateFrameByType("FRAME", "IncomeRoot", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-	BlzFrameSetAllPoints(incomeRoot, BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0))
+	-- Корень — точка, а не весь экран: дочерние фреймы стоят по своим точкам.
+	BlzFrameSetSize(incomeRoot, 0.001, 0.001)
+	FrameSetAbsPoint(incomeRoot, FRAMEPOINT_BOTTOMLEFT, 0.0, 0.0)
 	face = BlzCreateFrameByType("BACKDROP", "Face", incomeRoot, "", 0)
 	faceHover = BlzCreateFrameByType("FRAME", "FaceFrame", face, "", 0)
 	IncomeTextFr = BlzCreateFrameByType("TEXT", "MyTextFrame", incomeRoot, "", 0)
@@ -10866,7 +10958,7 @@ function Face2()
 	tooltipBody = BlzGetFrameByName("BoxedTextValue", 0)
 	tooltipTitle = BlzGetFrameByName("BoxedTextTitle", 0)
 	BlzFrameSetText(IncomeTextFr, "|cffffffff0|r")
-	BlzFrameSetAbsPoint(IncomeTextFr, FRAMEPOINT_TOPRIGHT, 0.2337, 0.5937)
+	FrameSetAbsPoint(IncomeTextFr, FRAMEPOINT_TOPRIGHT, 0.2337, 0.5937)
 	BlzFrameSetEnable(IncomeTextFr, false)
 	BlzFrameSetScale(IncomeTextFr, 1.075)
 	BlzFrameSetTextAlignment(IncomeTextFr, TEXT_JUSTIFY_CENTER, TEXT_JUSTIFY_LEFT)
@@ -10874,7 +10966,7 @@ function Face2()
 	BlzFrameSetTooltip(faceHover, tooltip)
 	
 	BlzFrameSetSize(face, 0.085, 0.015)
-	BlzFrameSetAbsPoint(face, FRAMEPOINT_TOPRIGHT, 0.239, 0.5965)
+	FrameSetAbsPoint(face, FRAMEPOINT_TOPRIGHT, 0.239, 0.5965)
 	BlzFrameClearAllPoints(tooltip)
 	BlzFrameSetAbsPoint(tooltip, FRAMEPOINT_TOPLEFT, 0.15, 0.575)
 	BlzFrameSetTextAlignment(tooltipBody, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
@@ -10892,7 +10984,7 @@ function Face2()
 	local resourceBar = BlzGetFrameByName("ResourceBarFrame", 0)
 	if supply ~= nil and resourceBar ~= nil then
 		stateHover = BlzCreateFrameByType("FRAME", "StateResourceHover", incomeRoot, "", 0)
-		BlzFrameSetPoint(stateHover, FRAMEPOINT_TOPRIGHT, supply, FRAMEPOINT_TOPRIGHT, 0.005, 0.003)
+		FrameSetPoint(stateHover, FRAMEPOINT_TOPRIGHT, supply, FRAMEPOINT_TOPRIGHT, 0.005, 0.003)
 		BlzFrameSetSize(stateHover, 0.095, 0.022)
 		BlzFrameSetLevel(stateHover, 5)
 		stateTooltip = BlzCreateFrame("BoxedText", stateHover, 0, 1)
@@ -10905,16 +10997,21 @@ function Face2()
 		BlzFrameSetVisible(stateTooltip, false)
 		BlzFrameSetTooltip(stateHover, stateTooltip)
 		local listener = BlzFrameGetChild(resourceBar, 3)
-		if listener ~= nil then BlzFrameSetVisible(listener, false) end
+		-- Нативная зона наведения на лимит больше не нужна: скрыта и уведена за экран навсегда.
+		FrameSetShown(listener, false)
 	end
 	if CustomHud_Create ~= nil then CustomHud_Create() end
 
 end
 
 -- Показатель дохода и зона подсказки «Государство» — прячутся вместе с консолью.
+-- Дочерние фреймы стоят по своим точкам, а не по корню: уводятся каждый сам.
 function IncomeUISetVisible(show)
 	if incomeRoot == nil then return end
-	BlzFrameSetVisible(incomeRoot, show)
+	FrameSetShown(incomeRoot, show)
+	FramePark(face, not show)
+	FramePark(IncomeTextFr, not show)
+	FramePark(stateHover, not show)
 	ProbeLogWrite("[UI] income visible=" .. tostring(show))
 end
 --  scope init2 begins
@@ -11182,8 +11279,17 @@ local function HudValue(col, raw)
 	return HUD_VALUE .. v .. "|r"
 end
 
+-- Пока стандартный интерфейс скрыт (панели выбора расы и хоста), HUD уведён за экран.
+-- Глобал, а не local: главный чанк war3map.lua упирается в лимит регистров Lua.
+CustomHudHidden = false
+
 function CustomHudRender()
 	if hudBoard == nil then return end
+	if CustomHudHidden then
+		for i = 1, HUD_MAX_CHIPS do FrameSetShown(hudChip[i], false) end
+		FrameSetShown(hudBoard, false)
+		return
+	end
 	local right = HudRightEdge() - 0.006
 	local top = HUD_TOP
 
@@ -11210,38 +11316,38 @@ function CustomHudRender()
 		if rec.shown and n < HUD_MAX_CHIPS then
 			n = n + 1
 			BlzFrameSetSize(hudChip[n], chipW, HUD_CHIP_H)
-			BlzFrameClearAllPoints(hudChip[n])
-			BlzFrameSetAbsPoint(hudChip[n], FRAMEPOINT_TOPRIGHT, x, top)
+			FrameClearAllPoints(hudChip[n])
+			FrameSetAbsPoint(hudChip[n], FRAMEPOINT_TOPRIGHT, x, top)
 			BlzFrameSetText(hudChipText[n], HUD_LABEL .. rec.title .. "  " .. HUD_VALUE
 				.. HudTime(TimerGetRemaining(rec.timer)) .. "|r")
-			BlzFrameSetVisible(hudChip[n], true)
+			FrameSetShown(hudChip[n], true)
 			x = x - chipW - 0.004
 		end
 	end
-	for i = n + 1, HUD_MAX_CHIPS do BlzFrameSetVisible(hudChip[i], false) end
+	for i = n + 1, HUD_MAX_CHIPS do FrameSetShown(hudChip[i], false) end
 	if n > 0 then top = top - HUD_CHIP_H - 0.004 end
 
 	-- Board.
 	if not hudBoardShown or Multiboard == nil or hudRows < 1 then
-		BlzFrameSetVisible(hudBoard, false)
+		FrameSetShown(hudBoard, false)
 		return
 	end
 	local cols = math.min(hudCols, HUD_COLS)
 	local players = math.min(hudRows - 1, HUD_MAX_ROWS - 1)
 	local shownPlayers = hudCollapsed and 0 or players
-	BlzFrameClearAllPoints(hudBoard)
-	BlzFrameSetAbsPoint(hudBoard, FRAMEPOINT_TOPRIGHT, right, top)
+	FrameClearAllPoints(hudBoard)
+	FrameSetAbsPoint(hudBoard, FRAMEPOINT_TOPRIGHT, right, top)
 	BlzFrameSetSize(hudBoard, boardW, HUD_PAD * 2 + HUD_HEAD_H
 		+ (shownPlayers > 0 and (HUD_SEP_GAP + HUD_ROW_H * shownPlayers) or 0))
-	BlzFrameSetVisible(hudBoard, true)
+	FrameSetShown(hudBoard, true)
 
 	BlzFrameSetText(hudToggleText, HUD_VALUE .. (hudCollapsed and "+" or "-") .. "|r")
 	BlzFrameSetText(hudText[0], HUD_LABEL .. "Игроки " .. HUD_VALUE .. players .. "|r")
-	BlzFrameSetVisible(hudText[0], true)
+	FrameSetShown(hudText[0], true)
 	for col = 1, HUD_COLS - 1 do
-		BlzFrameSetVisible(hudIcon[col], col < cols)
+		FrameSetShown(hudIcon[col], col < cols)
 	end
-	BlzFrameSetVisible(hudSep, shownPlayers > 0)
+	FrameSetShown(hudSep, shownPlayers > 0)
 	BlzFrameSetSize(hudSep, boardW - 0.012, 0.0008)
 	local rowPi = {}
 	for pi = 0, 23 do
@@ -11255,8 +11361,8 @@ function CustomHudRender()
 			BlzFrameSetTexture(hudRaceIcon[row], BlzGetAbilityIcon(abil), 0, true)
 			BlzFrameSetText(hudRaceTipText[row], "|cffebc56c" .. HudPlain(GetAbilityName(abil)) .. "|r")
 		end
-		BlzFrameSetVisible(hudRaceIcon[row], abil ~= nil)
-		BlzFrameSetVisible(hudStripe[row], visibleRow and row % 2 == 0)
+		FrameSetShown(hudRaceIcon[row], abil ~= nil)
+		FrameSetShown(hudStripe[row], visibleRow and row % 2 == 0)
 		BlzFrameSetSize(hudStripe[row], boardW - 0.008, HUD_ROW_H)
 		BlzFrameSetSize(hudText[row * HUD_COLS], nameW, HUD_ROW_H)
 		for col = 0, HUD_COLS - 1 do
@@ -11266,9 +11372,15 @@ function CustomHudRender()
 				local raw = hudCell[row * HUD_COLS + col] or ""
 				BlzFrameSetText(f, col == 0 and raw or HudValue(col, raw))
 			end
-			BlzFrameSetVisible(f, visible)
+			FrameSetShown(f, visible)
 		end
 	end
+end
+
+-- Только локально: вызывается из StandardUISetVisible.
+function CustomHudSetVisible(show)
+	CustomHudHidden = not show
+	CustomHudRender()
 end
 
 local function HudToggleClick()
@@ -11299,12 +11411,12 @@ function CustomHud_Create()
 		BlzFrameSetSize(hudChip[i], HUD_CHIP_W, HUD_CHIP_H)
 		hudChipText[i] = HudNewText(hudChip[i], 100 + i, TEXT_JUSTIFY_CENTER)
 		BlzFrameSetAllPoints(hudChipText[i], hudChip[i])
-		BlzFrameSetVisible(hudChip[i], false)
+		FrameSetShown(hudChip[i], false)
 	end
 
 	hudBoard = BlzCreateFrame("BoxedTextBackgroundTemplate", hudParent, 0, 200)
 	hudMeasure = BlzCreateFrame("HudText", hudParent, 0, 900)
-	BlzFrameSetAbsPoint(hudMeasure, FRAMEPOINT_TOPLEFT, 0.0, 0.0)
+	BlzFrameSetAbsPoint(hudMeasure, FRAMEPOINT_TOPLEFT, 0.0, FRAME_PARK_Y)
 	BlzFrameSetAlpha(hudMeasure, 0)
 	BlzFrameSetEnable(hudMeasure, false)
 
@@ -11324,13 +11436,13 @@ function CustomHud_Create()
 
 	hudText[0] = HudNewText(hudBoard, 300, TEXT_JUSTIFY_LEFT)
 	BlzFrameSetSize(hudText[0], 0.08, HUD_HEAD_H)
-	BlzFrameSetPoint(hudText[0], FRAMEPOINT_LEFT, btn, FRAMEPOINT_RIGHT, 0.004, 0)
+	FrameSetPoint(hudText[0], FRAMEPOINT_LEFT, btn, FRAMEPOINT_RIGHT, 0.004, 0)
 
 	for col = 1, HUD_COLS - 1 do
 		local icon = BlzCreateFrameByType("BACKDROP", "HudColIcon", hudBoard, "", col)
 		BlzFrameSetTexture(icon, HUD_COL_ICON[col], 0, true)
 		BlzFrameSetSize(icon, HUD_ICON, HUD_ICON)
-		BlzFrameSetPoint(icon, FRAMEPOINT_CENTER, hudBoard, FRAMEPOINT_TOPRIGHT, HudColX(col) - HUD_BOARD_W, headMid)
+		FrameSetPoint(icon, FRAMEPOINT_CENTER, hudBoard, FRAMEPOINT_TOPRIGHT, HudColX(col) - HUD_BOARD_W, headMid)
 		local hover = BlzCreateFrameByType("FRAME", "HudColHover", icon, "", col)
 		BlzFrameSetAllPoints(hover, icon)
 		local tip = BlzCreateFrame("BoxedText", hover, 0, 400 + col)
@@ -11346,18 +11458,18 @@ function CustomHud_Create()
 
 	hudSep = HudNewStripe(hudBoard, 70)
 	BlzFrameSetSize(hudSep, HUD_BOARD_W - 0.012, 0.0008)
-	BlzFrameSetPoint(hudSep, FRAMEPOINT_TOPLEFT, hudBoard, FRAMEPOINT_TOPLEFT, 0.006,
+	FrameSetPoint(hudSep, FRAMEPOINT_TOPLEFT, hudBoard, FRAMEPOINT_TOPLEFT, 0.006,
 		-HUD_PAD - HUD_HEAD_H - HUD_SEP_GAP / 2)
 
 	for row = 1, HUD_MAX_ROWS - 1 do
 		local y = HudRowY(row)
 		hudStripe[row] = HudNewStripe(hudBoard, 14)
 		BlzFrameSetSize(hudStripe[row], HUD_BOARD_W - 0.008, HUD_ROW_H)
-		BlzFrameSetPoint(hudStripe[row], FRAMEPOINT_TOPLEFT, hudBoard, FRAMEPOINT_TOPLEFT, 0.004, y)
-		BlzFrameSetVisible(hudStripe[row], false)
+		FrameSetPoint(hudStripe[row], FRAMEPOINT_TOPLEFT, hudBoard, FRAMEPOINT_TOPLEFT, 0.004, y)
+		FrameSetShown(hudStripe[row], false)
 		local icon = BlzCreateFrameByType("BACKDROP", "HudRaceIcon", hudBoard, "", row)
 		BlzFrameSetSize(icon, HUD_ROW_H - 0.001, HUD_ROW_H - 0.001)
-		BlzFrameSetPoint(icon, FRAMEPOINT_TOPLEFT, hudBoard, FRAMEPOINT_TOPLEFT, 0.008, y - 0.0005)
+		FrameSetPoint(icon, FRAMEPOINT_TOPLEFT, hudBoard, FRAMEPOINT_TOPLEFT, 0.008, y - 0.0005)
 		local hover = BlzCreateFrameByType("FRAME", "HudRaceHover", icon, "", row)
 		BlzFrameSetAllPoints(hover, icon)
 		local tip = BlzCreateFrame("BoxedText", hover, 0, 500 + row)
@@ -11368,23 +11480,23 @@ function CustomHud_Create()
 		BlzFrameSetPoint(tip, FRAMEPOINT_TOPRIGHT, icon, FRAMEPOINT_TOPLEFT, -0.004, 0.004)
 		BlzFrameSetTooltip(hover, tip)
 		BlzFrameSetVisible(tip, false)
-		BlzFrameSetVisible(icon, false)
+		FrameSetShown(icon, false)
 		hudRaceIcon[row] = icon
 		for col = 0, HUD_COLS - 1 do
 			local f = HudNewText(hudBoard, 300 + row * HUD_COLS + col,
 				col == 0 and TEXT_JUSTIFY_LEFT or TEXT_JUSTIFY_CENTER)
 			if col == 0 then
 				BlzFrameSetSize(f, HUD_NAME_BASE_W, HUD_ROW_H)
-				BlzFrameSetPoint(f, FRAMEPOINT_TOPLEFT, hudBoard, FRAMEPOINT_TOPLEFT, HUD_NAME_X, y)
+				FrameSetPoint(f, FRAMEPOINT_TOPLEFT, hudBoard, FRAMEPOINT_TOPLEFT, HUD_NAME_X, y)
 			else
 				BlzFrameSetSize(f, HUD_COL_W, HUD_ROW_H)
-				BlzFrameSetPoint(f, FRAMEPOINT_TOP, hudBoard, FRAMEPOINT_TOPRIGHT, HudColX(col) - HUD_BOARD_W, y)
+				FrameSetPoint(f, FRAMEPOINT_TOP, hudBoard, FRAMEPOINT_TOPRIGHT, HudColX(col) - HUD_BOARD_W, y)
 			end
-			BlzFrameSetVisible(f, false)
+			FrameSetShown(f, false)
 			hudText[row * HUD_COLS + col] = f
 		end
 	end
-	BlzFrameSetVisible(hudBoard, false)
+	FrameSetShown(hudBoard, false)
 
 	for i = 1, #HUD_RACES do
 		local r = HUD_RACES[i]
@@ -11416,14 +11528,14 @@ local WELCOME_BODY_H = 0.058   -- two short paragraphs at HudBody size
 
 local welcome, welcomeLink
 
--- Map version, taken from the map name ("23 Race Forever 1.6.515") so it has one source.
+-- Map version, taken from the map name ("23 Race Forever 1.6.NNN") so it has one source.
 local function WelcomeVersion()
 	local name = GetLocalizedString("TRIGSTR_003") or ""
 	return string.match(name, "(%d+%.%d+%.%d+)") or "—"
 end
 
 local function WelcomeHide()
-	if welcome ~= nil then BlzFrameSetVisible(welcome, false) end
+	FrameSetShown(welcome, false)
 end
 
 function ShowWelcomePanel()
@@ -11498,8 +11610,8 @@ function ShowWelcomePanel()
 	y = y - 0.028 - 0.012
 
 	BlzFrameSetSize(welcome, WELCOME_W, -y)
-	BlzFrameSetAbsPoint(welcome, FRAMEPOINT_CENTER, 0.4, 0.37)
-	BlzFrameSetVisible(welcome, true)
+	FrameSetAbsPoint(welcome, FRAMEPOINT_CENTER, 0.4, 0.37)
+	FrameSetShown(welcome, true)
 	-- Hold, then fade out and hide.
 	local step, steps = 0, R2I(WELCOME_FADE / 0.05)
 	TimerStart(CreateTimer(), WELCOME_HOLD, false, function()
@@ -11589,25 +11701,18 @@ local rpCircle = {}      -- [pi] = кольцо выбора игрока
 local rpShown = false    -- панель показана локальному игроку
 local rpReady = false    -- панель создана (одинаково у всех клиентов)
 local rpRoot, rpHint
-local rpPlaced = {}      -- { frame, point, x, y }: фреймы панели с абсолютной позицией
+local rpPlaced = {}      -- фреймы панели с абсолютной позицией
 
 -- Скрытый фрейм может продолжать ловить мышь, поэтому при скрытии фреймы панели
--- ещё и уводятся за экран, а при показе возвращаются. Только локально.
+-- ещё и уводятся вниз за экран, а при показе возвращаются. Только локально.
 local function RpPlace(f, point, x, y)
-	BlzFrameSetAbsPoint(f, point, x, y)
-	rpPlaced[#rpPlaced + 1] = { f, point, x, y }
+	FrameSetAbsPoint(f, point, x, y)
+	rpPlaced[#rpPlaced + 1] = f
 end
 
-local function RpPark(park)
-	for i = 1, #rpPlaced do
-		local e = rpPlaced[i]
-		BlzFrameClearAllPoints(e[1])
-		if park then
-			BlzFrameSetAbsPoint(e[1], FRAMEPOINT_TOPRIGHT, -1.0, -1.0)
-		else
-			BlzFrameSetAbsPoint(e[1], e[2], e[3], e[4])
-		end
-	end
+local function RpSetShown(show)
+	BlzFrameSetVisible(rpRoot, show)
+	for i = 1, #rpPlaced do FramePark(rpPlaced[i], not show) end
 end
 
 -- Снять с кольца старое меню выбора, чтобы раса выбиралась только через панель.
@@ -11649,6 +11754,8 @@ end
 
 -- Стандартный интерфейс: скрыть всё, кроме «Меню» и «Чата». Только локально.
 -- Общий для панелей выбора расы и настроек хоста.
+-- Нативные фреймы консоли только скрываются, без увода за экран: их исходные
+-- привязки не прочитать, и после возврата они перекрывали игровое поле.
 function StandardUISetVisible(show)
 	BlzHideOriginFrames(not show)
 	local f = BlzGetFrameByName("ConsoleUIBackdrop", 0)
@@ -11662,6 +11769,7 @@ function StandardUISetVisible(show)
 	f = BlzGetFrameByName("UpperButtonBarAlliesButton", 0)
 	if f ~= nil then BlzFrameSetVisible(f, show) end
 	if IncomeUISetVisible ~= nil then IncomeUISetVisible(show) end
+	if CustomHudSetVisible ~= nil then CustomHudSetVisible(show) end
 end
 
 -- Показать или спрятать панель локальному игроку по наличию у него кольца.
@@ -11671,9 +11779,18 @@ local function RpApply()
 	local open = RpValid(rpCircle[GetPlayerId(p)], p)
 	if open == rpShown then return end
 	rpShown = open
-	RpPark(not open)
-	BlzFrameSetVisible(rpRoot, open)
+	RpSetShown(open)
 	StandardUISetVisible(not open)
+	-- Миникарта на выборе расы: в правом верхнем углу, над подсказками и иконками,
+	-- без рамки. После выбора UISetup возвращает её и рамку на место.
+	local minimap = BlzGetFrameByName("MiniMapFrame", 0)
+	if open and minimap ~= nil then
+		FrameSetShown(BlzGetFrameByName("MinimapBorder", 0), false)
+		BlzFrameSetVisible(minimap, true)
+		BlzFrameClearAllPoints(minimap)
+		BlzFrameSetAbsPoint(minimap, FRAMEPOINT_TOPRIGHT, 0.795, 0.595)
+		BlzFrameSetAbsPoint(minimap, FRAMEPOINT_BOTTOMLEFT, 0.645, 0.445)
+	end
 	if not open and UISetup ~= nil then UISetup() end
 end
 
@@ -11737,7 +11854,8 @@ local function RpButton(texture, tip, x, y, id, onClick)
 	BlzFrameSetTextAlignment(text, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
 	BlzFrameSetSize(text, RP_TIP_W, 0)
 	local tx = math.max(0.005, math.min(x + RP_ICON / 2 - RP_TIP_W / 2, 0.795 - RP_TIP_W))
-	RpPlace(text, FRAMEPOINT_BOTTOMLEFT, tx, rpTipTop)
+	-- Подсказку показывает и прячет движок: её не уводим, она стоит на месте.
+	BlzFrameSetAbsPoint(text, FRAMEPOINT_BOTTOMLEFT, tx, rpTipTop)
 	BlzFrameSetText(text, tip)
 	BlzFrameSetPoint(box, FRAMEPOINT_TOPLEFT, text, FRAMEPOINT_TOPLEFT, -0.007, 0.007)
 	BlzFrameSetPoint(box, FRAMEPOINT_BOTTOMRIGHT, text, FRAMEPOINT_BOTTOMRIGHT, 0.007, -0.007)
@@ -11829,8 +11947,7 @@ function RacePicker_Create()
 	BlzFrameSetText(rpHint, "|cffffffffПКМ|cffced4da по карте — место высадки, затем раса|r")
 	BlzFrameSetEnable(rpHint, false)
 
-	BlzFrameSetVisible(rpRoot, false)
-	RpPark(true)
+	RpSetShown(false)
 	rpReady = true
 	-- Кольца, созданные до готовности панели, теряют старое меню только сейчас.
 	for pi = 0, bj_MAX_PLAYER_SLOTS - 1 do
@@ -11950,7 +12067,7 @@ local HP_ALL_MAP_ICON = HP_BTN .. "BTN_CONT_All.blp"
 
 local hpRoot, hpTime, hpMinute, hpTick, hpMeasure
 local hpButtons = {}   -- { text, mark, name, selected = function() }
-local hpPlaced = {}    -- фреймы с абсолютной позицией: при закрытии уводятся за экран
+local hpPlaced = {}    -- фреймы с абсолютной позицией: при скрытии уводятся за экран
 local hpShown = false
 
 local function HpIsHost(p)
@@ -11982,26 +12099,24 @@ local function HpRefresh()
 	for i = 1, #hpButtons do
 		local b = hpButtons[i]
 		local on = b.selected()
-		BlzFrameSetVisible(b.mark, on)
+		FrameSetShown(b.mark, on)
 		BlzFrameSetText(b.text, (on and "|cffebc56c" or "|cffced4da") .. b.name .. "|r")
 	end
 end
 
--- Абсолютная позиция с учётом для HpPark.
+-- Абсолютная позиция с учётом для HpSetShown.
 local function HpPlace(f, point, x, y)
-	BlzFrameSetAbsPoint(f, point, x, y)
+	FrameSetAbsPoint(f, point, x, y)
 	hpPlaced[#hpPlaced + 1] = f
 end
 
--- Скрытый фрейм может продолжать ловить мышь: уводим всю панель за экран.
-local function HpPark()
-	for i = 1, #hpPlaced do
-		BlzFrameClearAllPoints(hpPlaced[i])
-		BlzFrameSetAbsPoint(hpPlaced[i], FRAMEPOINT_TOPRIGHT, -1.0, -1.0)
-	end
-	BlzFrameClearAllPoints(hpRoot)
-	BlzFrameSetSize(hpRoot, 0.001, 0.001)
-	BlzFrameSetAbsPoint(hpRoot, FRAMEPOINT_TOPRIGHT, -1.0, -1.0)
+-- Скрытый фрейм может продолжать ловить мышь: при скрытии вся панель уводится
+-- вниз за экран, при показе возвращается. Только локально.
+local function HpSetShown(show)
+	FrameSetShown(hpRoot, show)
+	for i = 1, #hpPlaced do FramePark(hpPlaced[i], not show) end
+	-- «+1 минута» уже использована: кнопка остаётся скрытой.
+	if not IsTriggerEnabled(gg_trg_AddMinute) then FrameSetShown(hpMinute, false) end
 end
 
 -- Снять фокус с кнопки, иначе пробел/Enter продолжают нажимать её.
@@ -12018,7 +12133,8 @@ local function HpTip(parent, x, y, w, id, tip)
 	BlzFrameSetTextAlignment(text, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
 	BlzFrameSetSize(text, HP_TIP_W, 0)
 	local tx = math.max(0.005, math.min(x + w / 2 - HP_TIP_W / 2, 0.795 - HP_TIP_W))
-	HpPlace(text, FRAMEPOINT_BOTTOMLEFT, tx, y + HP_BTN_H + 0.012)
+	-- Подсказку показывает и прячет движок: её не уводим, она стоит на месте.
+	BlzFrameSetAbsPoint(text, FRAMEPOINT_BOTTOMLEFT, tx, y + HP_BTN_H + 0.012)
 	BlzFrameSetText(text, tip)
 	BlzFrameSetPoint(box, FRAMEPOINT_TOPLEFT, text, FRAMEPOINT_TOPLEFT, -0.007, 0.007)
 	BlzFrameSetPoint(box, FRAMEPOINT_BOTTOMRIGHT, text, FRAMEPOINT_BOTTOMRIGHT, 0.007, -0.007)
@@ -12033,10 +12149,11 @@ local function HpButton(x, y, w, id, opt)
 	BlzFrameSetSize(b, w, HP_BTN_H)
 	HpPlace(b, FRAMEPOINT_BOTTOMLEFT, x, y)
 	local mark = BlzCreateFrameByType("BACKDROP", "HostPanelMark", b, "", id)
-	BlzFrameSetAllPoints(mark, b)
+	FrameSetPoint(mark, FRAMEPOINT_TOPLEFT, b, FRAMEPOINT_TOPLEFT, 0, 0)
+	FrameSetPoint(mark, FRAMEPOINT_BOTTOMRIGHT, b, FRAMEPOINT_BOTTOMRIGHT, 0, 0)
 	BlzFrameSetTexture(mark, HP_SELECTED, 0, true)
 	BlzFrameSetEnable(mark, false)
-	BlzFrameSetVisible(mark, false)
+	FrameSetShown(mark, false)
 	local icon = BlzCreateFrameByType("BACKDROP", "HostPanelIcon", b, "", id)
 	BlzFrameSetSize(icon, HP_ICON, HP_ICON)
 	BlzFrameSetPoint(icon, FRAMEPOINT_LEFT, b, FRAMEPOINT_LEFT, HP_INSET, 0)
@@ -12147,7 +12264,7 @@ local function HpLobbyButtons()
 				if not IsTriggerEnabled(gg_trg_AddMinute) then return end
 				TimerStart(udg_LobbyTime, TimerGetRemaining(udg_LobbyTime) + 60.00, false, nil)
 				DisableTrigger(gg_trg_AddMinute)
-				BlzFrameSetVisible(hpMinute, false)
+				FrameSetShown(hpMinute, false)
 				DisplayTimedTextToForce(GetPlayersAll(), 6, "|cffb99d66ЛОББИ:|cffced4da Хост продлил лобби на |cffffffff1|cffced4da минуту.|r")
 			end },
 	}
@@ -12167,7 +12284,7 @@ local function HpShow(show)
 	if hpRoot == nil or hpShown == show then return end
 	hpShown = show
 	if GetLocalPlayer() == Player(HP_HOST) then
-		BlzFrameSetVisible(hpRoot, show)
+		HpSetShown(show)
 		if StandardUISetVisible ~= nil then StandardUISetVisible(not show) end
 		if not show and UISetup ~= nil then UISetup() end
 	end
@@ -12186,7 +12303,7 @@ function HostPanel_Open()
 	hpRoot = BlzCreateFrame("BoxedTextBackgroundTemplate", parent, 0, 2000)
 	BlzFrameSetLevel(hpRoot, 5)
 	hpMeasure = BlzCreateFrame("HudBody", hpRoot, 0, 2001)
-	HpPlace(hpMeasure, FRAMEPOINT_TOPLEFT, 0.0, 0.0)
+	BlzFrameSetAbsPoint(hpMeasure, FRAMEPOINT_TOPLEFT, 0.0, FRAME_PARK_Y)
 	BlzFrameSetAlpha(hpMeasure, 0)
 	BlzFrameSetEnable(hpMeasure, false)
 
@@ -12259,10 +12376,10 @@ function HostPanel_Open()
 	hpMinute = HpButton(0.4 + HP_GAP / 2, y - HP_BTN_H, lobbyW, id, lobby[2])
 	y = y - HP_BTN_H - HP_PAD
 
-	BlzFrameSetAbsPoint(hpRoot, FRAMEPOINT_TOPLEFT, left, top)
-	BlzFrameSetAbsPoint(hpRoot, FRAMEPOINT_BOTTOMRIGHT, left + width, y)
-	BlzFrameSetVisible(hpMeasure, false)
-	BlzFrameSetVisible(hpRoot, false)
+	FrameSetAbsPoint(hpRoot, FRAMEPOINT_TOPLEFT, left, top)
+	FrameSetAbsPoint(hpRoot, FRAMEPOINT_BOTTOMRIGHT, left + width, y)
+	FrameSetShown(hpMeasure, false)
+	HpSetShown(false)
 	HpRefresh()
 	HpTickFn()
 	hpTick = CreateTimer()
@@ -12275,7 +12392,6 @@ end
 function HostPanel_Close()
 	if hpRoot == nil then return end
 	HpShow(false)
-	HpPark()
 	if hpTick ~= nil then
 		PauseTimer(hpTick)
 		DestroyTimer(hpTick)
@@ -16851,7 +16967,6 @@ end
 ---@return nothing
 function Trig_TimerIncome_Actions()
 	local i = 0
-	local r
 	local p
 	local t = 0
 	
@@ -16862,14 +16977,7 @@ function Trig_TimerIncome_Actions()
 		if DisOn then
 			
 			
-			--  ---------------------------??????? ????????????????-----------------------------
-			-- set logistic[i] = 500*R2I( udg_UnitsCount[i]/ 50.00 )
-			-- set logistic[i] = 250*R2I( udg_UnitsCount[i]/ 25.00 )
-			-- ?????? ??????
-			
-			
-			r = R2I(udg_UnitsCount[i] / 25.00)
-			logistic[i] = (500 + 100 * (r - 1)) / 2 * r	--  ??????????
+			logistic[i] = CalculateLogistics(udg_UnitsCount[i])
 			
 			
 			--  ---------------------------??????? ?????????-----------------------------
@@ -16894,9 +17002,9 @@ function Trig_TimerIncome_Actions()
 				
 			end
 			
-			balance[i] = income[i] * (IncomeMod - AllyTax[i]) - disincome[i] - logistic[i] + corruption[i] + additional[i]
+			balance[i] = income[i] * IncomeMod * (1 - AllyTax[i]) - disincome[i] - logistic[i] + corruption[i] + additional[i]
 		else
-			balance[i] = income[i] * (IncomeMod - AllyTax[i])
+			balance[i] = income[i] * IncomeMod * (1 - AllyTax[i])
 		end
 		
 		
@@ -20867,6 +20975,11 @@ end
 ---@param pi integer
 ---@return integer|nil
 function EnsureMultiboardPlayerRow(pi)
+    -- Строки только у слотов игроков 0..23: нейтралы (Player(24) и выше) владеют
+    -- юнитами и городами, но в таблице им не место.
+    if pi == nil or pi < 0 or pi > 23 then
+        return nil
+    end
     local ownerIndex=MultiboardItemOwnerIndex[pi]
     if ownerIndex ~= nil then
         return ownerIndex
@@ -22325,7 +22438,8 @@ function Trig_Leave_Ot_Func005C()
 end
 function Trig_Leave_Ot_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
-    DisplayTextToForce(udg_AllPlayers, GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r")
+    DisplayTextToForce(udg_AllPlayers, "|cffb99d66ИГРА:|cffced4da Игрок "
+        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. "|cffced4da покинул игру.|r")
     ClearPlayer(Player(pi))
     if Trig_Leave_Ot_Func005C() then
         ForForce(Vassals[pi], Freedom)
@@ -50280,7 +50394,8 @@ function Trig_GG_Func004A()
 end
 function Trig_GG_Actions()
     --local integer pi = GetPlayerId(GetTriggerPlayer())
-    DisplayTextToForce(udg_AllPlayers, GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r")
+    DisplayTextToForce(udg_AllPlayers, "|cffb99d66ИГРА:|cffced4da Игрок "
+        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. "|cffced4da сдался.|r")
     --call GroupEnumUnitsOfPlayer( udg_LocalOtrad2, GetTriggerPlayer(), null )
     --call ForGroupBJ( udg_LocalOtrad2, function Trig_GG_Func004A )
     --call ForForce(Vassals[pi], function Freedom)

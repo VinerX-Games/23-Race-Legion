@@ -471,7 +471,8 @@ function Trig_GG_Func004A()
 end
 function Trig_GG_Actions()
     --local integer pi = GetPlayerId(GetTriggerPlayer())
-    DisplayTextToForce(udg_AllPlayers, GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r")
+    DisplayTextToForce(udg_AllPlayers, "|cffb99d66ИГРА:|cffced4da Игрок "
+        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. "|cffced4da сдался.|r")
     --call GroupEnumUnitsOfPlayer( udg_LocalOtrad2, GetTriggerPlayer(), null )
     --call ForGroupBJ( udg_LocalOtrad2, function Trig_GG_Func004A )
     --call ForForce(Vassals[pi], function Freedom)
