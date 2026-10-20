@@ -202,7 +202,13 @@ end
 -- Trigger: ChillBonus
 --===========================================================================
 function Trig_ChillBonus_Conditions()
-    return GetUnitAbilityLevel(GetKillingUnit(), FourCC('A1R3')) > 0 and GetUnitAbilityLevel(GetKillingUnit(), FourCC('A1R5')) == 0
+    local killer = GetKillingUnit()
+    local victim = GetTriggerUnit()
+    return killer ~= nil
+        and GetUnitAbilityLevel(killer, FourCC('A1R3')) > 0
+        and GetUnitAbilityLevel(killer, FourCC('A1R5')) == 0
+        and IsUnitEnemy(victim, GetOwningPlayer(killer))
+        and not IsUnitType(victim, UNIT_TYPE_SUMMONED)
 end
 function Trig_ChillBonus_Actions()
         UnitAddAbility(GetKillingUnit(), FourCC('A1R5'))

@@ -887,7 +887,7 @@
   },
   "h0HY": {
    "type": "building",
-   "name": "TRIGSTR_43190",
+   "name": "Алтарь Древних Богов",
    "base": "halt",
    "time": 60,
    "food_made": 3,
@@ -980,7 +980,7 @@
   },
   "h0I9": {
    "type": "unit",
-   "name": "TRIGSTR_43192",
+   "name": "Безликий дозорный",
    "base": "hfoo",
    "time": 30,
    "gold": 195,
@@ -989,7 +989,7 @@
   },
   "h0IA": {
    "type": "unit",
-   "name": "TRIGSTR_43195",
+   "name": "Безликий разрушитель",
    "base": "hfoo",
    "time": 23,
    "gold": 150,
@@ -1002,7 +1002,7 @@
   },
   "h0IB": {
    "type": "unit",
-   "name": "TRIGSTR_43198",
+   "name": "Сущность бездны",
    "base": "hfoo",
    "time": 29,
    "gold": 190,
@@ -1015,7 +1015,7 @@
   },
   "h0IC": {
    "type": "unit",
-   "name": "TRIGSTR_43201",
+   "name": "Могущественная Сущность бездны",
    "base": "hfoo",
    "time": 58,
    "gold": 385,

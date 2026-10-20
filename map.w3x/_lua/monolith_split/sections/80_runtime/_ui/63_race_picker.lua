@@ -154,15 +154,24 @@ local function RpApply()
 	RpSetShown(open)
 	StandardUISetVisible(not open)
 	-- Миникарта на выборе расы: в правом верхнем углу, над подсказками и иконками,
-	-- без рамки. После выбора UISetup возвращает её и рамку на место.
+	-- без рамки, с тем же размером, что в игре. Рамка командной карты привязана к
+	-- миникарте и иначе остаётся поверх иконок рас. После выбора UISetup
+	-- возвращает миникарту и обе рамки на место.
 	local minimap = BlzGetFrameByName("MiniMapFrame", 0)
 	if open and minimap ~= nil then
 		FrameSetShown(BlzGetFrameByName("MinimapBorder", 0), false)
+		FrameSetShown(BlzGetFrameByName("CommandBorder", 0), false)
 		BlzFrameSetVisible(minimap, true)
 		BlzFrameClearAllPoints(minimap)
 		BlzFrameSetAbsPoint(minimap, FRAMEPOINT_TOPRIGHT, 0.795, 0.595)
-		BlzFrameSetAbsPoint(minimap, FRAMEPOINT_BOTTOMLEFT, 0.645, 0.445)
+		BlzFrameSetAbsPoint(minimap, FRAMEPOINT_BOTTOMLEFT, 0.795 - MINIMAP_W, 0.595 - MINIMAP_H)
 	end
+	-- Мёртвая зона (xgm.guru/p/wc3/deadframezone): ConsoleUI child 5 — невидимый фрейм
+	-- над 12 кнопками командной карты, блокирует клики даже скрытым. На выборе расы
+	-- уменьшаем его масштабом до 0.001, после выбора возвращаем исходный масштаб 1.
+	local consoleUI = BlzGetFrameByName("ConsoleUI", 0)
+	local deadZone = consoleUI ~= nil and BlzFrameGetChild(consoleUI, 5) or nil
+	if deadZone ~= nil then BlzFrameSetScale(deadZone, open and 0.001 or 1.0) end
 	if not open and UISetup ~= nil then UISetup() end
 end
 

@@ -403,6 +403,14 @@
    "name": "Инвентарь",
    "levels": 1
   },
+  "AMn1": {
+   "type": "ability",
+   "name": "Лунный снаряд",
+   "levels": 1,
+   "requires": [
+    "RMn1"
+   ]
+  },
   "ANha": {
    "type": "ability",
    "name": "Добывать ресурсы",
@@ -784,6 +792,17 @@
    "levels": 6,
    "time": 60,
    "time_per_level": 30
+  },
+  "RMn1": {
+   "type": "upgrade",
+   "name": "Лунный снаряд",
+   "gold": 250,
+   "lumber": 250,
+   "levels": 1,
+   "requires": [
+    "h0CC"
+   ],
+   "time": 45
   },
   "Reuv": {
    "type": "upgrade",
@@ -1281,6 +1300,7 @@
   "A0GI requires R06R",
   "A0GJ requires R06M",
   "A0GN requires R06T",
+  "AMn1 requires RMn1",
   "Ault requires Reuv",
   "E01D has-ability AInv",
   "E01D has-ability Ashm",
@@ -1326,6 +1346,7 @@
   "R06V requires etoa",
   "R06W requires etoa",
   "R06X requires etoa",
+  "RMn1 requires h0CC",
   "Rhac requires hkee",
   "e013 has-ability A0FZ",
   "e013 has-ability A0G1",
@@ -1415,10 +1436,12 @@
   "e01A researches R06X",
   "e01A researches R06Y",
   "e01B has-ability A0G3",
+  "e01B has-ability AMn1",
   "e01B has-ability Ault",
   "e01B requires h0CH",
   "e01B researches R06J",
   "e01B researches R06U",
+  "e01B researches RMn1",
   "h0CA has-ability A1RJ",
   "h0CA has-ability A1RK",
   "h0CA has-ability A1RL",
@@ -1464,6 +1487,7 @@
   "h0CF researches R06H",
   "h0CF researches R06I",
   "h0CF researches R06J",
+  "h0CF researches RMn1",
   "h0CF researches Rgfo",
   "h0CF researches Rhac",
   "h0CF trains e013",

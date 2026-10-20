@@ -177,8 +177,8 @@ RegisterAiRace("Silitids", {
         [FourCC('e01R')] = {
             -- A0ZU "Создать личинку" (Create Larva): Channel-based, order "channel", no target.
             { order = "channel",        chance = 4, type = "immediate" },
-            -- A0KQ "Волна исцеления" (Healing Wave): heals a damaged ally in range.
-            { order = "healingwave",    chance = 4, type = "heal", allyRange = 700 },
+            -- Rescue a wounded silitid; ordinary heal selection includes invalid species.
+            { order = "ancestralspirit", chance = 4, type = "silitid_cocoon", needAbil = FourCC('ASrc') },
         },
 
         [FourCC('U025')] = {

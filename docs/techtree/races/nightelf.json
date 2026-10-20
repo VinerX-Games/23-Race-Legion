@@ -868,7 +868,7 @@
    "type": "upgrade",
    "name": "Танец полумесяца",
    "gold": 125,
-   "lumber": 100,
+   "lumber": 480,
    "levels": 1,
    "requires": [
     "Redc",

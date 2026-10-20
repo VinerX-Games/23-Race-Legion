@@ -101,6 +101,7 @@ RegisterAiRace("Bandits", {
                 {FourCC('h03O'),FourCC('R00N'),6},  -- armor
                 {FourCC('h03O'),FourCC('R00X'),6},  -- melee
                 {FourCC('h03P'),FourCC('R00V'),6},  -- armor
+                {FourCC('h009'),FourCC('RBn1'),1},  -- Делёж добычи
             }},
 
 

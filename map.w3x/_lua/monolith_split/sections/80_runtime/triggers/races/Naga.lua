@@ -271,3 +271,209 @@ function InitTrig_NagaCommonSpell()
         Trig_NagaCommonSpell_Actions()
     end)
 end
+
+--===========================================================================
+-- Наги: Мутация (мурлок-мутант) и Гарпун (морской охотник).
+-- Мутация выпадает один раз при появлении юнита: общая пассивка AMu1 заменяется
+-- пассивкой выпавшей мутации, поэтому повторный вход в мир ничего не меняет.
+-- Списки жабр и притягиваний — массивы: порядок обхода детерминирован.
+--===========================================================================
+NagaCombat = {
+    gills = {}, pulls = {}, pulling = {}, regenTimer = nil, pullTimer = nil, probe = nil,
+    ids = {
+        mutation = FourCC('AMu1'), claws = FourCC('AMu2'), shell = FourCC('AMu3'), gills = FourCC('AMu4'),
+        harpoon = FourCC('AMh1'), harpoonTech = FourCC('R0FP'),
+    },
+    clawsDamage = 8, shellArmor = 3,
+    gillsRegen = 8, regenTick = 0.5,        -- HP в секунду, пока мутант в воде
+    harpoonOrder = "acidbomb",              -- базовый приказ Канала в AMh1
+    harpoonDamage = 40, harpoonPull = 300, harpoonHeroPull = 150,
+    harpoonGap = 90,                        -- цель не притягивается вплотную к охотнику
+    harpoonAiMin = 250, harpoonAiRange = 500,
+    pullSpeed = 1000, pullTick = 0.03125,
+    fx = {
+        hit = "Objects\\Spawnmodels\\Critters\\Albatross\\CritterBloodAlbatross.mdl",
+        rope = "LEAS",
+    },
+}
+
+function NagaCombat.Alive(u)
+    return u ~= nil and GetUnitTypeId(u) ~= 0 and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+end
+
+function NagaCombat.InWater(u)
+    return not IsTerrainPathable(GetUnitX(u), GetUnitY(u), PATHING_TYPE_FLOATABILITY)
+end
+
+function NagaCombat.Mutate(u)
+    local ids = NagaCombat.ids
+    if GetUnitAbilityLevel(u, ids.mutation) == 0 or IsUnitIllusion(u) then return end
+    UnitRemoveAbility(u, ids.mutation)
+    local roll = GetRandomInt(1, 3)
+    if roll == 1 then
+        UnitAddAbility(u, ids.claws)
+        BlzSetUnitBaseDamage(u, BlzGetUnitBaseDamage(u, 0) + NagaCombat.clawsDamage, 0)
+    elseif roll == 2 then
+        UnitAddAbility(u, ids.shell)
+        BlzSetUnitArmor(u, BlzGetUnitArmor(u) + NagaCombat.shellArmor)
+    else
+        UnitAddAbility(u, ids.gills)
+        NagaCombat.gills[#NagaCombat.gills + 1] = u
+        if NagaCombat.regenTimer == nil then
+            NagaCombat.regenTimer = CreateTimer()
+            TimerStart(NagaCombat.regenTimer, NagaCombat.regenTick, true, NagaCombat.Regen)
+        end
+    end
+end
+
+function NagaCombat.Regen()
+    local list, amount = NagaCombat.gills, NagaCombat.gillsRegen * NagaCombat.regenTick
+    for i = #list, 1, -1 do
+        local u = list[i]
+        -- Мёртвый мутант остаётся в списке, пока есть труп: его могут воскресить.
+        if GetUnitTypeId(u) == 0 or GetUnitAbilityLevel(u, NagaCombat.ids.gills) == 0 then
+            table.remove(list, i)
+        elseif NagaCombat.Alive(u) and not IsUnitLoaded(u) and NagaCombat.InWater(u) then
+            SetUnitState(u, UNIT_STATE_LIFE, GetUnitState(u, UNIT_STATE_LIFE) + amount)
+        end
+    end
+    if #list == 0 then
+        local t = NagaCombat.regenTimer
+        NagaCombat.regenTimer = nil
+        if t ~= nil then DestroyTimer(t) end
+    end
+end
+
+function NagaCombat.HarpoonTarget(caster, target)
+    return NagaCombat.Alive(caster) and NagaCombat.Alive(target) and target ~= caster
+        and IsUnitEnemy(target, GetOwningPlayer(caster))
+        and not IsUnitType(target, UNIT_TYPE_STRUCTURE) and not IsUnitType(target, UNIT_TYPE_FLYING)
+        and not IsUnitType(target, UNIT_TYPE_WARD) and not BlzIsUnitInvulnerable(target)
+        and not IsUnitHidden(target) and not IsUnitLoaded(target)
+        and not NagaCombat.pulling[target]
+end
+
+function NagaCombat.Harpoon(caster, target)
+    if not NagaCombat.HarpoonTarget(caster, target) then return false end
+    local cx, cy, tx, ty = GetUnitX(caster), GetUnitY(caster), GetUnitX(target), GetUnitY(target)
+    local dx, dy = cx - tx, cy - ty
+    local distance = math.sqrt(dx * dx + dy * dy)
+    local pull = IsUnitType(target, UNIT_TYPE_HERO) and NagaCombat.harpoonHeroPull or NagaCombat.harpoonPull
+    pull = math.min(pull, distance - NagaCombat.harpoonGap)
+    UnitDamageTarget(caster, target, NagaCombat.harpoonDamage, false, false, ATTACK_TYPE_NORMAL,
+        DAMAGE_TYPE_NORMAL, WEAPON_TYPE_WHOKNOWS)
+    DestroyEffect(AddSpecialEffectTarget(NagaCombat.fx.hit, target, "chest"))
+    if pull < 1 or not NagaCombat.Alive(target) then return true end
+    local state = {caster = caster, target = target, owner = GetOwningPlayer(target),
+        ux = dx / distance, uy = dy / distance, left = pull, x = tx, y = ty,
+        rope = AddLightning(NagaCombat.fx.rope, true, cx, cy, tx, ty)}
+    NagaCombat.pulls[#NagaCombat.pulls + 1] = state
+    NagaCombat.pulling[target] = true
+    if NagaCombat.pullTimer == nil then
+        NagaCombat.pullTimer = CreateTimer()
+        TimerStart(NagaCombat.pullTimer, NagaCombat.pullTick, true, NagaCombat.PullTick)
+    end
+    return true
+end
+
+-- Скрытый предмет проверяет динамическую проходимость (деревья, здания) в точке шага.
+function NagaCombat.Passable(x, y)
+    if IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then return false end
+    if NagaCombat.probe == nil then
+        NagaCombat.probe = CreateItem(FourCC('ratf'), x, y)
+    end
+    SetItemVisible(NagaCombat.probe, true)
+    SetItemPosition(NagaCombat.probe, x, y)
+    local ix, iy = GetItemX(NagaCombat.probe), GetItemY(NagaCombat.probe)
+    SetItemVisible(NagaCombat.probe, false)
+    return (ix - x) ^ 2 + (iy - y) ^ 2 <= 1
+end
+
+-- Возвращает true, когда притягивание закончено.
+function NagaCombat.PullStep(state)
+    local target = state.target
+    if not NagaCombat.Alive(target) or GetOwningPlayer(target) ~= state.owner
+        or IsUnitHidden(target) or IsUnitLoaded(target) or BlzIsUnitInvulnerable(target)
+        or IsUnitType(target, UNIT_TYPE_FLYING) then return true end
+    local tx, ty = GetUnitX(target), GetUnitY(target)
+    -- Телепорт или чужое принудительное перемещение прерывают притягивание.
+    if (tx - state.x) ^ 2 + (ty - state.y) ^ 2 > 96 * 96 then return true end
+    local step = math.min(NagaCombat.pullSpeed * NagaCombat.pullTick, state.left)
+    local nx, ny = tx + state.ux * step, ty + state.uy * step
+    if not NagaCombat.Passable(nx, ny) then return true end
+    -- SetUnitPosition сбросил бы приказы: цель продолжает драться во время рывка.
+    SetUnitX(target, nx)
+    SetUnitY(target, ny)
+    state.x, state.y, state.left = GetUnitX(target), GetUnitY(target), state.left - step
+    local caster = state.caster
+    if GetUnitTypeId(caster) ~= 0 then
+        MoveLightning(state.rope, true, GetUnitX(caster), GetUnitY(caster), state.x, state.y)
+    end
+    return state.left <= 0.5
+end
+
+function NagaCombat.PullTick()
+    local list = NagaCombat.pulls
+    for i = #list, 1, -1 do
+        local state = list[i]
+        if NagaCombat.PullStep(state) then
+            DestroyLightning(state.rope)
+            NagaCombat.pulling[state.target] = nil
+            table.remove(list, i)
+        end
+    end
+    if #list == 0 then
+        local t = NagaCombat.pullTimer
+        NagaCombat.pullTimer = nil
+        if t ~= nil then DestroyTimer(t) end
+    end
+end
+
+-- ИИ гарпунит дальнюю цель: сначала героев, затем стрелков; ближняя цель и так в бою.
+function NagaCombat.AiHarpoon(caster)
+    local ids, owner = NagaCombat.ids, GetOwningPlayer(caster)
+    if BlzGetUnitAbilityCooldownRemaining(caster, ids.harpoon) > 0
+        or GetPlayerTechCount(owner, ids.harpoonTech, true) == 0 then return false end
+    local x, y = GetUnitX(caster), GetUnitY(caster)
+    local group = CreateGroup()
+    GroupEnumUnitsInRange(group, x, y, NagaCombat.harpoonAiRange, nil)
+    local best, bestScore = nil, -1
+    for i = 0, BlzGroupGetSize(group) - 1 do
+        local t = BlzGroupUnitAt(group, i)
+        if NagaCombat.HarpoonTarget(caster, t) and IsUnitVisible(t, owner)
+            and (GetUnitX(t) - x) ^ 2 + (GetUnitY(t) - y) ^ 2 >= NagaCombat.harpoonAiMin ^ 2 then
+            local score = (IsUnitType(t, UNIT_TYPE_HERO) and 2 or 0)
+                + (IsUnitType(t, UNIT_TYPE_RANGED_ATTACKER) and 1 or 0)
+            if score > bestScore or (score == bestScore and GetHandleId(t) < GetHandleId(best)) then
+                best, bestScore = t, score
+            end
+        end
+    end
+    DestroyGroup(group)
+    return best ~= nil and IssueTargetOrder(caster, NagaCombat.harpoonOrder, best)
+end
+
+function NagaCombat.Init()
+    if NagaCombat.spellTrigger ~= nil then return end
+    NagaCombat.spellTrigger = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(NagaCombat.spellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddAction(NagaCombat.spellTrigger, function()
+        if GetSpellAbilityId() ~= NagaCombat.ids.harpoon then return end
+        local caster = GetTriggerUnit()
+        if not NagaCombat.Harpoon(caster, GetSpellTargetUnit()) then
+            BlzEndUnitAbilityCooldown(caster, NagaCombat.ids.harpoon)
+        end
+    end)
+    -- Обученные, призванные и созданные скриптом мутанты одинаково входят в регион мира.
+    local bounds = GetWorldBounds()
+    NagaCombat.world = CreateRegion()
+    RegionAddRect(NagaCombat.world, bounds)
+    RemoveRect(bounds)
+    NagaCombat.enterTrigger = CreateTrigger()
+    TriggerRegisterEnterRegion(NagaCombat.enterTrigger, NagaCombat.world, nil)
+    TriggerAddAction(NagaCombat.enterTrigger, function() NagaCombat.Mutate(GetTriggerUnit()) end)
+end
+
+function InitTrig_NagaCombat()
+    NagaCombat.Init()
+end

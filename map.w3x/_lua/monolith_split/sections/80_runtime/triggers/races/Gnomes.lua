@@ -2447,11 +2447,12 @@ function Trig_Klap_Klap_War_small_Conditions()
     return GetResearched() == FourCC('R0BN')
 end
 function Trig_Klap_Klap_War_small_Actions()
-    SetPlayerTechMaxAllowedSwap(FourCC('R0BO'), 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('R0B7'), 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('h0FX'), 0, Player(0))
-    SetPlayerTechMaxAllowedSwap(FourCC('h0G4'), - 1, Player(0))
-    udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
+    local p = GetOwningPlayer(GetTriggerUnit())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BO'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0B7'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FX'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('h0G4'), - 1, p)
+    udg_LocalPlayer=p
     TriggerExecute(gg_trg_All_Gnomes)
 end
 --===========================================================================

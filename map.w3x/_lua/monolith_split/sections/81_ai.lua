@@ -531,6 +531,12 @@ function _castAbility(u, entry, target, p)
         return AiCombatOrderResult(u, DraeneiCombat.AiVow(u))
     elseif tp == "draenei_idol" then
         return AiCombatOrderResult(u, DraeneiCombat.AiIdol(u))
+    elseif tp == "silitid_cocoon" then
+        return AiCombatOrderResult(u, SilitidRescue.AiCast(u))
+    elseif tp == "bear_grip" then
+        return AiCombatOrderResult(u, BearGrip.AiCast(u, target))
+    elseif tp == "naga_harpoon" then
+        return AiCombatOrderResult(u, NagaCombat.AiHarpoon(u))
     elseif tp == "immediate" then
         if entry.orderId ~= nil then
             return AiCombatOrderResult(u, IssueImmediateOrderById(u, entry.orderId))

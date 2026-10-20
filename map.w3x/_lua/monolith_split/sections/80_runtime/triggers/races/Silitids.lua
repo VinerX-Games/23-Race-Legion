@@ -94,9 +94,134 @@ function Trig_StartSilitids_Actions()
 end
 --===========================================================================
 function InitTrig_StartSilitids()
+    SilitidRescue.Init()
     gg_trg_StartSilitids=CreateTrigger()
     TriggerRegisterTimerEventSingle(gg_trg_StartSilitids, 5.00)
     TriggerAddAction(gg_trg_StartSilitids, Trig_StartSilitids_Actions)
+end
+
+-- Rescue cocoon: retain the original unit, its upgrades, food and runtime state.
+SilitidRescue = {targets = {}, cocoons = {}}
+do
+    local S = SilitidRescue
+    local ability = FourCC('ASrc')
+    local cocoonType = FourCC('nSrc')
+    local eligible = {}
+    for _, code in ipairs({'e01O', 'e01P', 'e01Q', 'e01R', 'e01S', 'e01T',
+                           'e01U', 'e01V', 'e01Z', 'e02W',
+                           'U023', 'U024', 'U025', 'U02R', 'U02S'}) do
+        eligible[FourCC(code)] = true
+    end
+
+    local function alive(u)
+        return u ~= nil and GetUnitTypeId(u) ~= 0
+            and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+    end
+
+    function S.ValidTarget(caster, target)
+        return alive(caster) and alive(target) and eligible[GetUnitTypeId(target)] == true
+            and IsUnitAlly(target, GetOwningPlayer(caster))
+            and not IsUnitIllusion(target) and not IsUnitHidden(target)
+            and not IsUnitPaused(target) and not BlzIsUnitInvulnerable(target)
+            and not IsUnitType(target, UNIT_TYPE_STRUCTURE)
+            and not IsUnitType(target, UNIT_TYPE_MECHANICAL)
+            and S.targets[target] == nil
+            and GetUnitState(target, UNIT_STATE_LIFE) < GetUnitState(target, UNIT_STATE_MAX_LIFE)
+    end
+
+    function S.Release(state)
+        if state == nil or state.finished then return end
+        state.finished = true
+        S.targets[state.target] = nil
+        S.cocoons[state.cocoon] = nil
+        PauseTimer(state.timer)
+        DestroyTimer(state.timer)
+        if GetUnitTypeId(state.target) ~= 0 then
+            SetUnitInvulnerable(state.target, false)
+            ShowUnit(state.target, true)
+            PauseUnit(state.target, false)
+        end
+        if GetUnitTypeId(state.cocoon) ~= 0 then RemoveUnit(state.cocoon) end
+    end
+
+    function S.Tick(state)
+        if state.finished then return end
+        local target, cocoon = state.target, state.cocoon
+        -- Death/removal/ownership changes never resurrect or transfer the patient.
+        if not alive(target) or not alive(cocoon)
+            or GetOwningPlayer(target) ~= state.owner
+            or GetOwningPlayer(cocoon) ~= state.cocoonOwner then
+            S.Release(state)
+            return
+        end
+        state.elapsed = state.elapsed + 0.25
+        local maximum = GetUnitState(target, UNIT_STATE_MAX_LIFE)
+        SetUnitState(target, UNIT_STATE_LIFE,
+            math.min(maximum, GetUnitState(target, UNIT_STATE_LIFE) + maximum * state.healPerTick))
+        if state.elapsed >= state.duration or GetUnitState(target, UNIT_STATE_LIFE) >= maximum then
+            S.Release(state)
+        end
+    end
+
+    function S.Cast(caster, target)
+        if not S.ValidTarget(caster, target) then return false end
+        local cocoon = CreateUnit(GetOwningPlayer(target), cocoonType,
+            GetUnitX(target), GetUnitY(target), GetUnitFacing(target))
+        if cocoon == nil then return false end
+        SetUnitPathing(cocoon, false)
+        local hero = IsUnitType(target, UNIT_TYPE_HERO)
+        local state = {target = target, cocoon = cocoon, owner = GetOwningPlayer(target),
+            cocoonOwner = GetOwningPlayer(cocoon), elapsed = 0, timer = CreateTimer(),
+            duration = hero and 2 or 8, healPerTick = hero and 0.0075 or 0.02}
+        S.targets[target], S.cocoons[cocoon] = state, state
+        PauseUnit(target, true)
+        SetUnitInvulnerable(target, true)
+        ShowUnit(target, false)
+        TimerStart(state.timer, 0.25, true, function() S.Tick(state) end)
+        return true
+    end
+
+    function S.AiCast(caster)
+        local group = CreateGroup()
+        GroupEnumUnitsInRange(group, GetUnitX(caster), GetUnitY(caster), 700, nil)
+        local best, lowest = nil, 0.65
+        for i = 0, BlzGroupGetSize(group) - 1 do
+            local target = BlzGroupUnitAt(group, i)
+            if S.ValidTarget(caster, target) then
+                local fraction = GetUnitState(target, UNIT_STATE_LIFE)
+                    / GetUnitState(target, UNIT_STATE_MAX_LIFE)
+                if fraction < lowest then best, lowest = target, fraction end
+            end
+        end
+        DestroyGroup(group)
+        return best ~= nil and IssueTargetOrder(caster, 'ancestralspirit', best)
+    end
+
+    function S.Init()
+        if S.initialized then return end
+        S.initialized = true
+        local spell = CreateTrigger()
+        TriggerRegisterAnyUnitEventBJ(spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+        TriggerAddAction(spell, function()
+            if GetSpellAbilityId() ~= ability then return end
+            local caster = GetTriggerUnit()
+            if not S.Cast(caster, GetSpellTargetUnit()) then
+                -- Channel has broad engine targets; rejected species cost nothing.
+                SetUnitState(caster, UNIT_STATE_MANA,
+                    math.min(GetUnitState(caster, UNIT_STATE_MAX_MANA),
+                        GetUnitState(caster, UNIT_STATE_MANA) + 100))
+                BlzEndUnitAbilityCooldown(caster, ability)
+                DisplayTextToPlayer(GetOwningPlayer(caster), 0, 0,
+                    '|cffef8173Требуется раненый союзный силитид. Рабочие и личинки не подходят.|r')
+            end
+        end)
+        local death = CreateTrigger()
+        TriggerRegisterAnyUnitEventBJ(death, EVENT_PLAYER_UNIT_DEATH)
+        TriggerAddAction(death, function()
+            local unit = GetTriggerUnit()
+            S.Release(S.cocoons[unit] or S.targets[unit])
+        end)
+    end
 end
 --===========================================================================
 -- Trigger: QTunServe

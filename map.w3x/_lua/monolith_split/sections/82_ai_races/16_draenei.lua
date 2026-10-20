@@ -127,6 +127,7 @@ RegisterAiRace("Draenei", {
                 {FourCC('h058'), FourCC('RDr3'), 1},
                 {FourCC('h058'), FourCC('RDr4'), 1},
                 {FourCC('h05A'), FourCC('RDr5'), 1},
+                {FourCC('h05A'), FourCC('RDr6'), 1},  -- Память Аргуса
             }},
 
         },

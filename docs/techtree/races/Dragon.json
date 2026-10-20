@@ -781,7 +781,12 @@
    "name": "Изумрудная связь",
    "gold": 600,
    "lumber": 600,
-   "levels": 4
+   "levels": 4,
+   "requires": [
+    "ofrt",
+    "ofor"
+   ],
+   "time": 40
   },
   "R0AS": {
    "type": "upgrade",
@@ -1666,6 +1671,8 @@
   "R0AB requires ofrt",
   "R0AC requires ofor",
   "R0AC requires ofrt",
+  "R0AP requires ofor",
+  "R0AP requires ofrt",
   "R0AS requires ofor",
   "R0AS requires ofrt",
   "R0AT requires ofor",

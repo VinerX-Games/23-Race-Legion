@@ -158,11 +158,7 @@ RegisterAiRace("IceTrolls", {
         },
 
         [FourCC('n05V')] = {
-
-            { order = "parasite",    chance = 4, type = "target" },
-
-            { order = "curse",       chance = 4, type = "target" },
-
+            { order = "ensnare", chance = 2, type = "bear_grip", needAbil = FourCC('ABgr'), range = 180 },
         },
 
     },

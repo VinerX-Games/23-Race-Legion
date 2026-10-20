@@ -10662,6 +10662,11 @@ local imageTest
 local minimapBorder
 local commandBorder
 
+-- Размер миникарты. Выбор расы только переносит её, не меняя размер:
+-- после смены размера движок рисует карту в неверном масштабе.
+MINIMAP_W = 0.16
+MINIMAP_H = 0.141
+
 ---@return nothing
 function UISetup()
 	-- Local Variables
@@ -10749,7 +10754,7 @@ function UISetup()
 	BlzFrameSetVisible(MiniMap, true)
 	BlzFrameClearAllPoints(MiniMap)
 	BlzFrameSetAbsPoint(MiniMap, FRAMEPOINT_BOTTOMLEFT, 0.0525, 0.0)
-	BlzFrameSetAbsPoint(MiniMap, FRAMEPOINT_TOPRIGHT, 0.2125, 0.141)
+	BlzFrameSetAbsPoint(MiniMap, FRAMEPOINT_TOPRIGHT, 0.0525 + MINIMAP_W, MINIMAP_H)
 	
 	-- Minimap Buttons
 	fh = BlzGetFrameByName("MiniMapCreepButton", 0)
@@ -10806,9 +10811,10 @@ function UISetup()
 	-- Command buttons border
 	commandBorder = commandBorder or BlzCreateFrameByType("BACKDROP", "CommandBorder", MiniMap, "", 0)
 	fh = commandBorder
-	BlzFrameSetPoint(fh, FRAMEPOINT_TOPLEFT, gridButtons, FRAMEPOINT_TOPLEFT, -0.007, 0.007)
-	BlzFrameSetPoint(fh, FRAMEPOINT_BOTTOMRIGHT, gridButtons, FRAMEPOINT_BOTTOMRIGHT, 0.0025, -0.005)
+	FrameSetPoint(fh, FRAMEPOINT_TOPLEFT, gridButtons, FRAMEPOINT_TOPLEFT, -0.007, 0.007)
+	FrameSetPoint(fh, FRAMEPOINT_BOTTOMRIGHT, gridButtons, FRAMEPOINT_BOTTOMRIGHT, 0.0025, -0.005)
 	BlzFrameSetTexture(fh, "UI\\CommandCard.dds", 0, true)
+	FrameSetShown(fh, true)   -- на выборе расы рамка скрыта
 	
 	--  Prevent multiplayer desyncs by forcing the creation of the QuestDialog frame
 	-- 	call BlzFrameClick(BlzGetFrameByName("UpperButtonBarQuestsButton", 0))
@@ -11782,15 +11788,24 @@ local function RpApply()
 	RpSetShown(open)
 	StandardUISetVisible(not open)
 	-- Миникарта на выборе расы: в правом верхнем углу, над подсказками и иконками,
-	-- без рамки. После выбора UISetup возвращает её и рамку на место.
+	-- без рамки, с тем же размером, что в игре. Рамка командной карты привязана к
+	-- миникарте и иначе остаётся поверх иконок рас. После выбора UISetup
+	-- возвращает миникарту и обе рамки на место.
 	local minimap = BlzGetFrameByName("MiniMapFrame", 0)
 	if open and minimap ~= nil then
 		FrameSetShown(BlzGetFrameByName("MinimapBorder", 0), false)
+		FrameSetShown(BlzGetFrameByName("CommandBorder", 0), false)
 		BlzFrameSetVisible(minimap, true)
 		BlzFrameClearAllPoints(minimap)
 		BlzFrameSetAbsPoint(minimap, FRAMEPOINT_TOPRIGHT, 0.795, 0.595)
-		BlzFrameSetAbsPoint(minimap, FRAMEPOINT_BOTTOMLEFT, 0.645, 0.445)
+		BlzFrameSetAbsPoint(minimap, FRAMEPOINT_BOTTOMLEFT, 0.795 - MINIMAP_W, 0.595 - MINIMAP_H)
 	end
+	-- Мёртвая зона (xgm.guru/p/wc3/deadframezone): ConsoleUI child 5 — невидимый фрейм
+	-- над 12 кнопками командной карты, блокирует клики даже скрытым. На выборе расы
+	-- уменьшаем его масштабом до 0.001, после выбора возвращаем исходный масштаб 1.
+	local consoleUI = BlzGetFrameByName("ConsoleUI", 0)
+	local deadZone = consoleUI ~= nil and BlzFrameGetChild(consoleUI, 5) or nil
+	if deadZone ~= nil then BlzFrameSetScale(deadZone, open and 0.001 or 1.0) end
 	if not open and UISetup ~= nil then UISetup() end
 end
 
@@ -17752,7 +17767,7 @@ function Trig_DeadSituastion_Actions()
 	u2 = CreateUnit(p, GetUnitTypeId(u), GetUnitX(u), GetUnitY(u), GetUnitFacing(u))
 	GroupAddUnit(udg_ZahvatBuildings, u2)
 	BlzSetUnitArmor(u2, 3)
-	SetUnitState(u2, UNIT_STATE_LIFE, 5000)
+	SetUnitState(u2, UNIT_STATE_LIFE, GetUnitState(u2, UNIT_STATE_MAX_LIFE))
 	GroupAddUnit(udg_BuildedSctructure[1], u2)
 	
 	-- ??????? ??? ????? ??????
@@ -26899,7 +26914,13 @@ end
 -- Trigger: ChillBonus
 --===========================================================================
 function Trig_ChillBonus_Conditions()
-    return GetUnitAbilityLevel(GetKillingUnit(), FourCC('A1R3')) > 0 and GetUnitAbilityLevel(GetKillingUnit(), FourCC('A1R5')) == 0
+    local killer = GetKillingUnit()
+    local victim = GetTriggerUnit()
+    return killer ~= nil
+        and GetUnitAbilityLevel(killer, FourCC('A1R3')) > 0
+        and GetUnitAbilityLevel(killer, FourCC('A1R5')) == 0
+        and IsUnitEnemy(victim, GetOwningPlayer(killer))
+        and not IsUnitType(victim, UNIT_TYPE_SUMMONED)
 end
 function Trig_ChillBonus_Actions()
         UnitAddAbility(GetKillingUnit(), FourCC('A1R5'))
@@ -26932,6 +26953,7 @@ function InitTrig_Passive()
     TriggerAddCondition(gg_trg_Passive, Condition(Trig_Passive_Conditions))
     TriggerAddAction(gg_trg_Passive, Trig_Passive_Actions)
 end
+
 --===========================================================================
 -- Trigger: Sluga qqgsarona
 --===========================================================================
@@ -27302,7 +27324,12 @@ end
 -- Trigger: SpellRes
 --===========================================================================
 function Trig_SpellRes_Conditions()
-    return GetUnitAbilityLevelSwapped(FourCC('A123'), GetKillingUnitBJ()) == 1
+    local killer = GetKillingUnit()
+    local victim = GetTriggerUnit()
+    return killer ~= nil
+        and GetUnitAbilityLevel(killer, FourCC('A123')) == 1
+        and IsUnitEnemy(victim, GetOwningPlayer(killer))
+        and not IsUnitType(victim, UNIT_TYPE_SUMMONED)
 end
 function Trig_SpellRes_Actions()
     BlzEndUnitAbilityCooldown(GetKillingUnitBJ(), FourCC('A123'))
@@ -27563,9 +27590,9 @@ function Trig_DamageBeforeW2_Actions()
     DisableTrigger(gg_trg_DamageBeforeW2)
     DisableTrigger(gg_trg_DamagerW2)
     if u ~= nil then
-        UnitDamageTargetBJ(u, GetTriggerUnit(), damage * 0.02 * lvl, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL)
+        UnitDamageTargetBJ(u, GetTriggerUnit(), damage * 0.01 * lvl, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL)
     else
-        UnitDamageTargetBJ(GetTriggerUnit(), GetTriggerUnit(), damage * 0.02 * lvl, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL)
+        UnitDamageTargetBJ(GetTriggerUnit(), GetTriggerUnit(), damage * 0.01 * lvl, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL)
     end
     EnableTrigger(gg_trg_DamageBeforeW2)
     EnableTrigger(gg_trg_DamagerW2)
@@ -27761,7 +27788,10 @@ end
 -- Trigger: KillW2
 --===========================================================================
 function Trig_KillW2_Conditions()
-    return GetUnitAbilityLevel(GetKillingUnit(), FourCC('w2a0')) > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
+    local killer = GetKillingUnit()
+    return killer ~= nil
+        and GetUnitAbilityLevel(killer, FourCC('w2a0')) > 0
+        and IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(killer))
 end
 function Trig_KillW2_Actions()
     local u= GetKillingUnit()
@@ -36915,11 +36945,12 @@ function Trig_Klap_Klap_War_small_Conditions()
     return GetResearched() == FourCC('R0BN')
 end
 function Trig_Klap_Klap_War_small_Actions()
-    SetPlayerTechMaxAllowedSwap(FourCC('R0BO'), 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('R0B7'), 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('h0FX'), 0, Player(0))
-    SetPlayerTechMaxAllowedSwap(FourCC('h0G4'), - 1, Player(0))
-    udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
+    local p = GetOwningPlayer(GetTriggerUnit())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BO'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0B7'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FX'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('h0G4'), - 1, p)
+    udg_LocalPlayer=p
     TriggerExecute(gg_trg_All_Gnomes)
 end
 --===========================================================================
@@ -36950,6 +36981,7 @@ function InitTrig_Klap_Klap_War_big()
     TriggerAddCondition(gg_trg_Klap_Klap_War_big, Condition(Trig_Klap_Klap_War_big_Conditions))
     TriggerAddAction(gg_trg_Klap_Klap_War_big, Trig_Klap_Klap_War_big_Actions)
 end
+
 --===========================================================================
 -- Trigger: HordeOn
 --===========================================================================
@@ -39986,9 +40018,134 @@ function Trig_StartSilitids_Actions()
 end
 --===========================================================================
 function InitTrig_StartSilitids()
+    SilitidRescue.Init()
     gg_trg_StartSilitids=CreateTrigger()
     TriggerRegisterTimerEventSingle(gg_trg_StartSilitids, 5.00)
     TriggerAddAction(gg_trg_StartSilitids, Trig_StartSilitids_Actions)
+end
+
+-- Rescue cocoon: retain the original unit, its upgrades, food and runtime state.
+SilitidRescue = {targets = {}, cocoons = {}}
+do
+    local S = SilitidRescue
+    local ability = FourCC('ASrc')
+    local cocoonType = FourCC('nSrc')
+    local eligible = {}
+    for _, code in ipairs({'e01O', 'e01P', 'e01Q', 'e01R', 'e01S', 'e01T',
+                           'e01U', 'e01V', 'e01Z', 'e02W',
+                           'U023', 'U024', 'U025', 'U02R', 'U02S'}) do
+        eligible[FourCC(code)] = true
+    end
+
+    local function alive(u)
+        return u ~= nil and GetUnitTypeId(u) ~= 0
+            and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+    end
+
+    function S.ValidTarget(caster, target)
+        return alive(caster) and alive(target) and eligible[GetUnitTypeId(target)] == true
+            and IsUnitAlly(target, GetOwningPlayer(caster))
+            and not IsUnitIllusion(target) and not IsUnitHidden(target)
+            and not IsUnitPaused(target) and not BlzIsUnitInvulnerable(target)
+            and not IsUnitType(target, UNIT_TYPE_STRUCTURE)
+            and not IsUnitType(target, UNIT_TYPE_MECHANICAL)
+            and S.targets[target] == nil
+            and GetUnitState(target, UNIT_STATE_LIFE) < GetUnitState(target, UNIT_STATE_MAX_LIFE)
+    end
+
+    function S.Release(state)
+        if state == nil or state.finished then return end
+        state.finished = true
+        S.targets[state.target] = nil
+        S.cocoons[state.cocoon] = nil
+        PauseTimer(state.timer)
+        DestroyTimer(state.timer)
+        if GetUnitTypeId(state.target) ~= 0 then
+            SetUnitInvulnerable(state.target, false)
+            ShowUnit(state.target, true)
+            PauseUnit(state.target, false)
+        end
+        if GetUnitTypeId(state.cocoon) ~= 0 then RemoveUnit(state.cocoon) end
+    end
+
+    function S.Tick(state)
+        if state.finished then return end
+        local target, cocoon = state.target, state.cocoon
+        -- Death/removal/ownership changes never resurrect or transfer the patient.
+        if not alive(target) or not alive(cocoon)
+            or GetOwningPlayer(target) ~= state.owner
+            or GetOwningPlayer(cocoon) ~= state.cocoonOwner then
+            S.Release(state)
+            return
+        end
+        state.elapsed = state.elapsed + 0.25
+        local maximum = GetUnitState(target, UNIT_STATE_MAX_LIFE)
+        SetUnitState(target, UNIT_STATE_LIFE,
+            math.min(maximum, GetUnitState(target, UNIT_STATE_LIFE) + maximum * state.healPerTick))
+        if state.elapsed >= state.duration or GetUnitState(target, UNIT_STATE_LIFE) >= maximum then
+            S.Release(state)
+        end
+    end
+
+    function S.Cast(caster, target)
+        if not S.ValidTarget(caster, target) then return false end
+        local cocoon = CreateUnit(GetOwningPlayer(target), cocoonType,
+            GetUnitX(target), GetUnitY(target), GetUnitFacing(target))
+        if cocoon == nil then return false end
+        SetUnitPathing(cocoon, false)
+        local hero = IsUnitType(target, UNIT_TYPE_HERO)
+        local state = {target = target, cocoon = cocoon, owner = GetOwningPlayer(target),
+            cocoonOwner = GetOwningPlayer(cocoon), elapsed = 0, timer = CreateTimer(),
+            duration = hero and 2 or 8, healPerTick = hero and 0.0075 or 0.02}
+        S.targets[target], S.cocoons[cocoon] = state, state
+        PauseUnit(target, true)
+        SetUnitInvulnerable(target, true)
+        ShowUnit(target, false)
+        TimerStart(state.timer, 0.25, true, function() S.Tick(state) end)
+        return true
+    end
+
+    function S.AiCast(caster)
+        local group = CreateGroup()
+        GroupEnumUnitsInRange(group, GetUnitX(caster), GetUnitY(caster), 700, nil)
+        local best, lowest = nil, 0.65
+        for i = 0, BlzGroupGetSize(group) - 1 do
+            local target = BlzGroupUnitAt(group, i)
+            if S.ValidTarget(caster, target) then
+                local fraction = GetUnitState(target, UNIT_STATE_LIFE)
+                    / GetUnitState(target, UNIT_STATE_MAX_LIFE)
+                if fraction < lowest then best, lowest = target, fraction end
+            end
+        end
+        DestroyGroup(group)
+        return best ~= nil and IssueTargetOrder(caster, 'ancestralspirit', best)
+    end
+
+    function S.Init()
+        if S.initialized then return end
+        S.initialized = true
+        local spell = CreateTrigger()
+        TriggerRegisterAnyUnitEventBJ(spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+        TriggerAddAction(spell, function()
+            if GetSpellAbilityId() ~= ability then return end
+            local caster = GetTriggerUnit()
+            if not S.Cast(caster, GetSpellTargetUnit()) then
+                -- Channel has broad engine targets; rejected species cost nothing.
+                SetUnitState(caster, UNIT_STATE_MANA,
+                    math.min(GetUnitState(caster, UNIT_STATE_MAX_MANA),
+                        GetUnitState(caster, UNIT_STATE_MANA) + 100))
+                BlzEndUnitAbilityCooldown(caster, ability)
+                DisplayTextToPlayer(GetOwningPlayer(caster), 0, 0,
+                    '|cffef8173Требуется раненый союзный силитид. Рабочие и личинки не подходят.|r')
+            end
+        end)
+        local death = CreateTrigger()
+        TriggerRegisterAnyUnitEventBJ(death, EVENT_PLAYER_UNIT_DEATH)
+        TriggerAddAction(death, function()
+            local unit = GetTriggerUnit()
+            S.Release(S.cocoons[unit] or S.targets[unit])
+        end)
+    end
 end
 --===========================================================================
 -- Trigger: QTunServe
@@ -41353,6 +41510,7 @@ function InitTrig_TankF()
     TriggerAddCondition(gg_trg_TankF, Condition(Trig_TankF_Conditions))
     TriggerAddAction(gg_trg_TankF, Trig_TankF_Actions)
 end
+
 --===========================================================================
 -- Trigger: GoblinsOn
 --===========================================================================
@@ -41653,14 +41811,15 @@ function Trig_Potreblenie_Func005A()
     SetUnitAbilityLevelSwapped(FourCC('A0A5'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04N'), GetOwningPlayer(GetTriggerUnit())) + 1)
 end
 function Trig_Potreblenie_Actions()
+    local p = GetOwningPlayer(GetTriggerUnit())
     if Trig_Potreblenie_Func001C() then
-        SetPlayerAbilityAvailableBJ(false, FourCC('A0A5'), GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0A5'), p)
         return
     end
-    udg_Boolexpr = CachedFilter(Trig_Potreblenie_Func002002)
-    GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
-    ForGroupBJ(udg_LocalOtrad2, Trig_Potreblenie_Func005A)
-    GroupClear(udg_LocalOtrad2)
+    local g = CreateGroup()
+    GroupEnumUnitsOfPlayer(g, p, CachedFilter(Trig_Potreblenie_Func002002))
+    ForGroupBJ(g, Trig_Potreblenie_Func005A)
+    DestroyGroup(g)
 end
 --===========================================================================
 function InitTrig_Potreblenie()
@@ -41674,10 +41833,17 @@ end
 -- Trigger: PotreblenieTrain
 --===========================================================================
 function Trig_PotreblenieTrain_Conditions()
-    return GetUnitAbilityLevelSwapped(FourCC('A0A5'), GetTriggerUnit()) >= 1
+    return GetUnitAbilityLevelSwapped(FourCC('A0A5'), GetTrainedUnit()) >= 1
 end
 function Trig_PotreblenieTrain_Actions()
-    SetUnitAbilityLevelSwapped(FourCC('A0A5'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04N'), GetOwningPlayer(GetTriggerUnit())) + 1)
+    local u = GetTrainedUnit()
+    local p = GetOwningPlayer(u)
+    local level = GetPlayerTechCountSimple(FourCC('R04N'), p)
+    if level >= 6 then
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0A5'), p)
+    else
+        SetUnitAbilityLevelSwapped(FourCC('A0A5'), u, level + 1)
+    end
 end
 --===========================================================================
 function InitTrig_PotreblenieTrain()
@@ -41700,17 +41866,18 @@ function Trig_BracResearch_Func002002()
     return GetUnitAbilityLevelSwapped(FourCC('A0A6'), GetFilterUnit()) ~= 0
 end
 function Trig_BracResearch_Func005A()
-    SetUnitAbilityLevelSwapped(FourCC('A0A6'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R05W'), GetOwningPlayer(GetTriggerUnit())))
+    SetUnitAbilityLevelSwapped(FourCC('A0A6'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R05W'), GetOwningPlayer(GetTriggerUnit())) + 1)
 end
 function Trig_BracResearch_Actions()
+    local p = GetOwningPlayer(GetTriggerUnit())
     if Trig_BracResearch_Func001C() then
-        SetPlayerAbilityAvailableBJ(false, FourCC('A0A6'), GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0A6'), p)
         return
     end
-    udg_Boolexpr = CachedFilter(Trig_BracResearch_Func002002)
-    GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
-    ForGroupBJ(udg_LocalOtrad2, Trig_BracResearch_Func005A)
-    GroupClear(udg_LocalOtrad2)
+    local g = CreateGroup()
+    GroupEnumUnitsOfPlayer(g, p, CachedFilter(Trig_BracResearch_Func002002))
+    ForGroupBJ(g, Trig_BracResearch_Func005A)
+    DestroyGroup(g)
 end
 --===========================================================================
 function InitTrig_BracResearch()
@@ -41724,10 +41891,17 @@ end
 -- Trigger: BracTrain
 --===========================================================================
 function Trig_BracTrain_Conditions()
-    return GetUnitAbilityLevelSwapped(FourCC('A0A6'), GetTriggerUnit()) >= 1
+    return GetUnitAbilityLevelSwapped(FourCC('A0A6'), GetTrainedUnit()) >= 1
 end
 function Trig_BracTrain_Actions()
-    SetUnitAbilityLevelSwapped(FourCC('A0A6'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R05W'), GetOwningPlayer(GetTriggerUnit())))
+    local u = GetTrainedUnit()
+    local p = GetOwningPlayer(u)
+    local level = GetPlayerTechCountSimple(FourCC('R05W'), p)
+    if level >= 6 then
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0A6'), p)
+    else
+        SetUnitAbilityLevelSwapped(FourCC('A0A6'), u, level + 1)
+    end
 end
 --===========================================================================
 function InitTrig_BracTrain()
@@ -41750,17 +41924,18 @@ function Trig_PodjogResearch_Func002002()
     return GetUnitAbilityLevelSwapped(FourCC('A0AR'), GetFilterUnit()) ~= 0
 end
 function Trig_PodjogResearch_Func005A()
-    SetUnitAbilityLevelSwapped(FourCC('A0AR'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04R'), GetOwningPlayer(GetTriggerUnit())))
+    SetUnitAbilityLevelSwapped(FourCC('A0AR'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04R'), GetOwningPlayer(GetTriggerUnit())) + 1)
 end
 function Trig_PodjogResearch_Actions()
+    local p = GetOwningPlayer(GetTriggerUnit())
     if Trig_PodjogResearch_Func001C() then
-        SetPlayerAbilityAvailableBJ(false, FourCC('A0AR'), GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0AR'), p)
         return
     end
-    udg_Boolexpr = CachedFilter(Trig_PodjogResearch_Func002002)
-    GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
-    ForGroupBJ(udg_LocalOtrad2, Trig_PodjogResearch_Func005A)
-    GroupClear(udg_LocalOtrad2)
+    local g = CreateGroup()
+    GroupEnumUnitsOfPlayer(g, p, CachedFilter(Trig_PodjogResearch_Func002002))
+    ForGroupBJ(g, Trig_PodjogResearch_Func005A)
+    DestroyGroup(g)
 end
 --===========================================================================
 function InitTrig_PodjogResearch()
@@ -41777,7 +41952,14 @@ function Trig_PodjogTrain_Conditions()
     return GetUnitAbilityLevelSwapped(FourCC('A0AR'), GetTrainedUnit()) >= 1
 end
 function Trig_PodjogTrain_Actions()
-    SetUnitAbilityLevelSwapped(FourCC('A0AR'), GetTrainedUnit(), GetPlayerTechCountSimple(FourCC('R04R'), GetOwningPlayer(GetTriggerUnit())))
+    local u = GetTrainedUnit()
+    local p = GetOwningPlayer(u)
+    local level = GetPlayerTechCountSimple(FourCC('R04R'), p)
+    if level >= 6 then
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0AR'), p)
+    else
+        SetUnitAbilityLevelSwapped(FourCC('A0AR'), u, level + 1)
+    end
 end
 --===========================================================================
 function InitTrig_PodjogTrain()
@@ -41803,14 +41985,15 @@ function Trig_PodruvResearc_Func005A()
     SetUnitAbilityLevelSwapped(FourCC('A0A9'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04Q'), GetOwningPlayer(GetTriggerUnit())) + 1)
 end
 function Trig_PodruvResearc_Actions()
+    local p = GetOwningPlayer(GetTriggerUnit())
     if Trig_PodruvResearc_Func001C() then
-        SetPlayerAbilityAvailableBJ(false, FourCC('A0A9'), GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0A9'), p)
         return
     end
-    udg_Boolexpr = CachedFilter(Trig_PodruvResearc_Func002002)
-    GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
-    ForGroupBJ(udg_LocalOtrad2, Trig_PodruvResearc_Func005A)
-    GroupClear(udg_LocalOtrad2)
+    local g = CreateGroup()
+    GroupEnumUnitsOfPlayer(g, p, CachedFilter(Trig_PodruvResearc_Func002002))
+    ForGroupBJ(g, Trig_PodruvResearc_Func005A)
+    DestroyGroup(g)
 end
 --===========================================================================
 function InitTrig_PodruvResearc()
@@ -41827,7 +42010,14 @@ function Trig_PodruvTrain_Conditions()
     return GetUnitAbilityLevelSwapped(FourCC('A0A9'), GetTrainedUnit()) >= 1
 end
 function Trig_PodruvTrain_Actions()
-    SetUnitAbilityLevelSwapped(FourCC('A0A9'), GetTrainedUnit(), GetPlayerTechCountSimple(FourCC('R04Q'), GetOwningPlayer(GetTriggerUnit())))
+    local u = GetTrainedUnit()
+    local p = GetOwningPlayer(u)
+    local level = GetPlayerTechCountSimple(FourCC('R04Q'), p)
+    if level >= 6 then
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0A9'), p)
+    else
+        SetUnitAbilityLevelSwapped(FourCC('A0A9'), u, level + 1)
+    end
 end
 --===========================================================================
 function InitTrig_PodruvTrain()
@@ -42414,6 +42604,7 @@ function InitTrig_Podlodka1()
     TriggerAddCondition(gg_trg_Podlodka1, Condition(Trig_Podlodka1_Conditions))
     TriggerAddAction(gg_trg_Podlodka1, Trig_Podlodka1_Actions)
 end
+
 --===========================================================================
 -- Trigger: BloodElvesOn
 --===========================================================================
@@ -44648,6 +44839,73 @@ function InitTrig_AreaOfDeath2()
 end
 
 --===========================================================================
+-- Бандиты: Делёж добычи атамана. Игрок получает золото за каждого вражеского юнита,
+-- убитого его войсками рядом с его атаманом (один раз за убийство, сколько бы атаманов
+-- ни стояло рядом).
+--===========================================================================
+BanditLoot = {
+    ids = {loot = FourCC('ABn1'), tech = FourCC('RBn1')},
+    gold = 1, radius = 800,
+}
+
+function BanditLoot.Alive(u)
+    return u ~= nil and GetUnitTypeId(u) ~= 0 and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+end
+
+function BanditLoot.Countable(victim, owner)
+    return IsUnitEnemy(victim, owner) and not IsUnitType(victim, UNIT_TYPE_STRUCTURE)
+        and not IsUnitType(victim, UNIT_TYPE_WARD) and not IsUnitIllusion(victim)
+end
+
+function BanditLoot.HasAtaman(owner, x, y)
+    local group = CreateGroup()
+    GroupEnumUnitsInRange(group, x, y, BanditLoot.radius, nil)
+    local found = false
+    for i = 0, BlzGroupGetSize(group) - 1 do
+        local u = BlzGroupUnitAt(group, i)
+        if GetOwningPlayer(u) == owner and GetUnitAbilityLevel(u, BanditLoot.ids.loot) > 0
+            and BanditLoot.Alive(u) and not IsUnitIllusion(u) then
+            found = true
+            break
+        end
+    end
+    DestroyGroup(group)
+    return found
+end
+
+function BanditLoot.Death()
+    local killer, victim = GetKillingUnit(), GetTriggerUnit()
+    if killer == nil or GetUnitTypeId(killer) == 0 then return end
+    local owner = GetOwningPlayer(killer)
+    if GetPlayerTechCount(owner, BanditLoot.ids.tech, true) == 0
+        or not BanditLoot.Countable(victim, owner) then return end
+    local x, y = GetUnitX(victim), GetUnitY(victim)
+    if not BanditLoot.HasAtaman(owner, x, y) then return end
+    SetPlayerState(owner, PLAYER_STATE_RESOURCE_GOLD,
+        GetPlayerState(owner, PLAYER_STATE_RESOURCE_GOLD) + BanditLoot.gold)
+    -- Текст создаётся у всех игроков, виден только получателю: хендлы остаются синхронными.
+    local tag = CreateTextTag()
+    SetTextTagText(tag, "|cffffcc00+" .. BanditLoot.gold .. "|r", 0.023)
+    SetTextTagPos(tag, x, y, 40)
+    SetTextTagVelocity(tag, 0, 0.03)
+    SetTextTagPermanent(tag, false)
+    SetTextTagLifespan(tag, 2)
+    SetTextTagFadepoint(tag, 1)
+    SetTextTagVisibility(tag, GetLocalPlayer() == owner)
+end
+
+function BanditLoot.Init()
+    if BanditLoot.deathTrigger ~= nil then return end
+    BanditLoot.deathTrigger = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(BanditLoot.deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddAction(BanditLoot.deathTrigger, BanditLoot.Death)
+end
+
+function InitTrig_BanditLoot()
+    BanditLoot.Init()
+end
+
+--===========================================================================
 -- Trigger: Global
 --===========================================================================
 --===========================================================================
@@ -46232,6 +46490,212 @@ function InitTrig_NagaCommonSpell()
         Trig_NagaCommonSpell_Actions()
     end)
 end
+
+--===========================================================================
+-- Наги: Мутация (мурлок-мутант) и Гарпун (морской охотник).
+-- Мутация выпадает один раз при появлении юнита: общая пассивка AMu1 заменяется
+-- пассивкой выпавшей мутации, поэтому повторный вход в мир ничего не меняет.
+-- Списки жабр и притягиваний — массивы: порядок обхода детерминирован.
+--===========================================================================
+NagaCombat = {
+    gills = {}, pulls = {}, pulling = {}, regenTimer = nil, pullTimer = nil, probe = nil,
+    ids = {
+        mutation = FourCC('AMu1'), claws = FourCC('AMu2'), shell = FourCC('AMu3'), gills = FourCC('AMu4'),
+        harpoon = FourCC('AMh1'), harpoonTech = FourCC('R0FP'),
+    },
+    clawsDamage = 8, shellArmor = 3,
+    gillsRegen = 8, regenTick = 0.5,        -- HP в секунду, пока мутант в воде
+    harpoonOrder = "acidbomb",              -- базовый приказ Канала в AMh1
+    harpoonDamage = 40, harpoonPull = 300, harpoonHeroPull = 150,
+    harpoonGap = 90,                        -- цель не притягивается вплотную к охотнику
+    harpoonAiMin = 250, harpoonAiRange = 500,
+    pullSpeed = 1000, pullTick = 0.03125,
+    fx = {
+        hit = "Objects\\Spawnmodels\\Critters\\Albatross\\CritterBloodAlbatross.mdl",
+        rope = "LEAS",
+    },
+}
+
+function NagaCombat.Alive(u)
+    return u ~= nil and GetUnitTypeId(u) ~= 0 and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+end
+
+function NagaCombat.InWater(u)
+    return not IsTerrainPathable(GetUnitX(u), GetUnitY(u), PATHING_TYPE_FLOATABILITY)
+end
+
+function NagaCombat.Mutate(u)
+    local ids = NagaCombat.ids
+    if GetUnitAbilityLevel(u, ids.mutation) == 0 or IsUnitIllusion(u) then return end
+    UnitRemoveAbility(u, ids.mutation)
+    local roll = GetRandomInt(1, 3)
+    if roll == 1 then
+        UnitAddAbility(u, ids.claws)
+        BlzSetUnitBaseDamage(u, BlzGetUnitBaseDamage(u, 0) + NagaCombat.clawsDamage, 0)
+    elseif roll == 2 then
+        UnitAddAbility(u, ids.shell)
+        BlzSetUnitArmor(u, BlzGetUnitArmor(u) + NagaCombat.shellArmor)
+    else
+        UnitAddAbility(u, ids.gills)
+        NagaCombat.gills[#NagaCombat.gills + 1] = u
+        if NagaCombat.regenTimer == nil then
+            NagaCombat.regenTimer = CreateTimer()
+            TimerStart(NagaCombat.regenTimer, NagaCombat.regenTick, true, NagaCombat.Regen)
+        end
+    end
+end
+
+function NagaCombat.Regen()
+    local list, amount = NagaCombat.gills, NagaCombat.gillsRegen * NagaCombat.regenTick
+    for i = #list, 1, -1 do
+        local u = list[i]
+        -- Мёртвый мутант остаётся в списке, пока есть труп: его могут воскресить.
+        if GetUnitTypeId(u) == 0 or GetUnitAbilityLevel(u, NagaCombat.ids.gills) == 0 then
+            table.remove(list, i)
+        elseif NagaCombat.Alive(u) and not IsUnitLoaded(u) and NagaCombat.InWater(u) then
+            SetUnitState(u, UNIT_STATE_LIFE, GetUnitState(u, UNIT_STATE_LIFE) + amount)
+        end
+    end
+    if #list == 0 then
+        local t = NagaCombat.regenTimer
+        NagaCombat.regenTimer = nil
+        if t ~= nil then DestroyTimer(t) end
+    end
+end
+
+function NagaCombat.HarpoonTarget(caster, target)
+    return NagaCombat.Alive(caster) and NagaCombat.Alive(target) and target ~= caster
+        and IsUnitEnemy(target, GetOwningPlayer(caster))
+        and not IsUnitType(target, UNIT_TYPE_STRUCTURE) and not IsUnitType(target, UNIT_TYPE_FLYING)
+        and not IsUnitType(target, UNIT_TYPE_WARD) and not BlzIsUnitInvulnerable(target)
+        and not IsUnitHidden(target) and not IsUnitLoaded(target)
+        and not NagaCombat.pulling[target]
+end
+
+function NagaCombat.Harpoon(caster, target)
+    if not NagaCombat.HarpoonTarget(caster, target) then return false end
+    local cx, cy, tx, ty = GetUnitX(caster), GetUnitY(caster), GetUnitX(target), GetUnitY(target)
+    local dx, dy = cx - tx, cy - ty
+    local distance = math.sqrt(dx * dx + dy * dy)
+    local pull = IsUnitType(target, UNIT_TYPE_HERO) and NagaCombat.harpoonHeroPull or NagaCombat.harpoonPull
+    pull = math.min(pull, distance - NagaCombat.harpoonGap)
+    UnitDamageTarget(caster, target, NagaCombat.harpoonDamage, false, false, ATTACK_TYPE_NORMAL,
+        DAMAGE_TYPE_NORMAL, WEAPON_TYPE_WHOKNOWS)
+    DestroyEffect(AddSpecialEffectTarget(NagaCombat.fx.hit, target, "chest"))
+    if pull < 1 or not NagaCombat.Alive(target) then return true end
+    local state = {caster = caster, target = target, owner = GetOwningPlayer(target),
+        ux = dx / distance, uy = dy / distance, left = pull, x = tx, y = ty,
+        rope = AddLightning(NagaCombat.fx.rope, true, cx, cy, tx, ty)}
+    NagaCombat.pulls[#NagaCombat.pulls + 1] = state
+    NagaCombat.pulling[target] = true
+    if NagaCombat.pullTimer == nil then
+        NagaCombat.pullTimer = CreateTimer()
+        TimerStart(NagaCombat.pullTimer, NagaCombat.pullTick, true, NagaCombat.PullTick)
+    end
+    return true
+end
+
+-- Скрытый предмет проверяет динамическую проходимость (деревья, здания) в точке шага.
+function NagaCombat.Passable(x, y)
+    if IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then return false end
+    if NagaCombat.probe == nil then
+        NagaCombat.probe = CreateItem(FourCC('ratf'), x, y)
+    end
+    SetItemVisible(NagaCombat.probe, true)
+    SetItemPosition(NagaCombat.probe, x, y)
+    local ix, iy = GetItemX(NagaCombat.probe), GetItemY(NagaCombat.probe)
+    SetItemVisible(NagaCombat.probe, false)
+    return (ix - x) ^ 2 + (iy - y) ^ 2 <= 1
+end
+
+-- Возвращает true, когда притягивание закончено.
+function NagaCombat.PullStep(state)
+    local target = state.target
+    if not NagaCombat.Alive(target) or GetOwningPlayer(target) ~= state.owner
+        or IsUnitHidden(target) or IsUnitLoaded(target) or BlzIsUnitInvulnerable(target)
+        or IsUnitType(target, UNIT_TYPE_FLYING) then return true end
+    local tx, ty = GetUnitX(target), GetUnitY(target)
+    -- Телепорт или чужое принудительное перемещение прерывают притягивание.
+    if (tx - state.x) ^ 2 + (ty - state.y) ^ 2 > 96 * 96 then return true end
+    local step = math.min(NagaCombat.pullSpeed * NagaCombat.pullTick, state.left)
+    local nx, ny = tx + state.ux * step, ty + state.uy * step
+    if not NagaCombat.Passable(nx, ny) then return true end
+    -- SetUnitPosition сбросил бы приказы: цель продолжает драться во время рывка.
+    SetUnitX(target, nx)
+    SetUnitY(target, ny)
+    state.x, state.y, state.left = GetUnitX(target), GetUnitY(target), state.left - step
+    local caster = state.caster
+    if GetUnitTypeId(caster) ~= 0 then
+        MoveLightning(state.rope, true, GetUnitX(caster), GetUnitY(caster), state.x, state.y)
+    end
+    return state.left <= 0.5
+end
+
+function NagaCombat.PullTick()
+    local list = NagaCombat.pulls
+    for i = #list, 1, -1 do
+        local state = list[i]
+        if NagaCombat.PullStep(state) then
+            DestroyLightning(state.rope)
+            NagaCombat.pulling[state.target] = nil
+            table.remove(list, i)
+        end
+    end
+    if #list == 0 then
+        local t = NagaCombat.pullTimer
+        NagaCombat.pullTimer = nil
+        if t ~= nil then DestroyTimer(t) end
+    end
+end
+
+-- ИИ гарпунит дальнюю цель: сначала героев, затем стрелков; ближняя цель и так в бою.
+function NagaCombat.AiHarpoon(caster)
+    local ids, owner = NagaCombat.ids, GetOwningPlayer(caster)
+    if BlzGetUnitAbilityCooldownRemaining(caster, ids.harpoon) > 0
+        or GetPlayerTechCount(owner, ids.harpoonTech, true) == 0 then return false end
+    local x, y = GetUnitX(caster), GetUnitY(caster)
+    local group = CreateGroup()
+    GroupEnumUnitsInRange(group, x, y, NagaCombat.harpoonAiRange, nil)
+    local best, bestScore = nil, -1
+    for i = 0, BlzGroupGetSize(group) - 1 do
+        local t = BlzGroupUnitAt(group, i)
+        if NagaCombat.HarpoonTarget(caster, t) and IsUnitVisible(t, owner)
+            and (GetUnitX(t) - x) ^ 2 + (GetUnitY(t) - y) ^ 2 >= NagaCombat.harpoonAiMin ^ 2 then
+            local score = (IsUnitType(t, UNIT_TYPE_HERO) and 2 or 0)
+                + (IsUnitType(t, UNIT_TYPE_RANGED_ATTACKER) and 1 or 0)
+            if score > bestScore or (score == bestScore and GetHandleId(t) < GetHandleId(best)) then
+                best, bestScore = t, score
+            end
+        end
+    end
+    DestroyGroup(group)
+    return best ~= nil and IssueTargetOrder(caster, NagaCombat.harpoonOrder, best)
+end
+
+function NagaCombat.Init()
+    if NagaCombat.spellTrigger ~= nil then return end
+    NagaCombat.spellTrigger = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(NagaCombat.spellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddAction(NagaCombat.spellTrigger, function()
+        if GetSpellAbilityId() ~= NagaCombat.ids.harpoon then return end
+        local caster = GetTriggerUnit()
+        if not NagaCombat.Harpoon(caster, GetSpellTargetUnit()) then
+            BlzEndUnitAbilityCooldown(caster, NagaCombat.ids.harpoon)
+        end
+    end)
+    -- Обученные, призванные и созданные скриптом мутанты одинаково входят в регион мира.
+    local bounds = GetWorldBounds()
+    NagaCombat.world = CreateRegion()
+    RegionAddRect(NagaCombat.world, bounds)
+    RemoveRect(bounds)
+    NagaCombat.enterTrigger = CreateTrigger()
+    TriggerRegisterEnterRegion(NagaCombat.enterTrigger, NagaCombat.world, nil)
+    TriggerAddAction(NagaCombat.enterTrigger, function() NagaCombat.Mutate(GetTriggerUnit()) end)
+end
+
+function InitTrig_NagaCombat()
+    NagaCombat.Init()
+end
 --===========================================================================
 -- Trigger: StartWorgens
 --===========================================================================
@@ -46903,19 +47367,22 @@ end
 -- Each timer services only units/effects that have used these mechanics.
 --===========================================================================
 DraeneiCombat = {
-    units = {}, protection = {}, wards = {}, clock = 0, timer = nil,
+    units = {}, protection = {}, wards = {}, spirits = {}, clock = 0, timer = nil,
     ids = {
         arrows = FourCC('ADr1'), blade = FourCC('ADr2'), vow = FourCC('ADr3'),
-        wave = FourCC('ADr4'), idol = FourCC('ADr5'), ward = FourCC('nDr1'),
+        wave = FourCC('ADr4'), idol = FourCC('ADr5'), argus = FourCC('ADr6'), ward = FourCC('nDr1'),
         arrowTech = FourCC('RDr1'), bladeTech = FourCC('RDr2'),
         vowTech = FourCC('RDr3'), waveTech = FourCC('RDr4'), idolTech = FourCC('RDr5'),
+        argusTech = FourCC('RDr6'), shadowRescue = FourCC('A1C6'),
     },
+    argusChance = 15, argusDuration = 5,
     fx = {
         arrow = "Draenei\\Effects\\NetherArrow.mdx",
         blade = "Draenei\\Effects\\BlazingSpecialArt.mdx",
         shield = "Draenei\\Effects\\GlowShield.mdx",
         heal = "Draenei\\Effects\\Reconstitute.mdx",
         blessing = "Draenei\\Effects\\HolyAura.mdx",
+        spirit = "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl",
     },
 }
 
@@ -47273,6 +47740,37 @@ function DraeneiCombat.Init()
     DraeneiCombat.spellTrigger = CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(DraeneiCombat.spellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(DraeneiCombat.spellTrigger, DraeneiCombat.Spell)
+    DraeneiCombat.deathTrigger = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(DraeneiCombat.deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddAction(DraeneiCombat.deathTrigger, DraeneiCombat.ArgusDeath)
+end
+
+-- Память Аргуса: дух погибшего Сломленного — призванный юнит с таймером жизни,
+-- поэтому его рассеивают обычные развеивающие способности. Дух не порождает
+-- новых духов и не спасается в тени (NoDeath), иначе смерть духа вернула бы юнит.
+function DraeneiCombat.ArgusDeath()
+    local u = GetTriggerUnit()
+    local ids = DraeneiCombat.ids
+    if DraeneiCombat.spirits[u] then
+        DraeneiCombat.spirits[u] = nil
+        return
+    end
+    -- NoDeath регистрируется раньше и удаляет юнит, спасённый в логово: духа нет.
+    if GetUnitTypeId(u) == 0 or GetUnitAbilityLevel(u, ids.argus) == 0 or IsUnitIllusion(u) then return end
+    local owner = GetOwningPlayer(u)
+    if not DraeneiCombat.HasTech(owner, ids.argusTech)
+        or GetRandomInt(1, 100) > DraeneiCombat.argusChance then return end
+    local x, y = GetUnitX(u), GetUnitY(u)
+    local spirit = CreateUnit(owner, GetUnitTypeId(u), x, y, GetUnitFacing(u))
+    if spirit == nil then return end
+    DraeneiCombat.spirits[spirit] = true
+    UnitRemoveAbility(spirit, ids.argus)
+    UnitRemoveAbility(spirit, ids.shadowRescue)
+    UnitAddType(spirit, UNIT_TYPE_SUMMONED)
+    SetUnitVertexColor(spirit, 140, 190, 255, 150)
+    UnitApplyTimedLife(spirit, FourCC('BTLF'), DraeneiCombat.argusDuration)
+    DraeneiCombat.Flash(DraeneiCombat.fx.spirit, spirit)
+    IssuePointOrder(spirit, "attack", x, y)
 end
 
 function DraeneiCombat.AiVow(caster)
@@ -49285,9 +49783,177 @@ function Trig_IceTrollsStart_Actions()
 end
 --===========================================================================
 function InitTrig_IceTrollsStart()
+    BearGrip.Init()
     gg_trg_IceTrollsStart=CreateTrigger()
     TriggerRegisterTimerEventSingle(gg_trg_IceTrollsStart, 0.01)
     TriggerAddAction(gg_trg_IceTrollsStart, Trig_IceTrollsStart_Actions)
+end
+
+-- A separate ensnare buff roots the victim without pausing attacks or spells.
+BearGrip = {bears = {}, targets = {}}
+do
+    local G = BearGrip
+    local ability, buff = FourCC('ABgr'), FourCC('BBgr')
+    local function alive(u)
+        return u ~= nil and GetUnitTypeId(u) ~= 0
+            and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+    end
+    local function distanceSquared(x1, y1, x2, y2)
+        return (x1 - x2) ^ 2 + (y1 - y2) ^ 2
+    end
+
+    function G.ValidTarget(bear, target)
+        return alive(bear) and GetUnitTypeId(bear) == FourCC('n05V') and alive(target)
+            and IsUnitEnemy(target, GetOwningPlayer(bear))
+            and not IsUnitType(target, UNIT_TYPE_STRUCTURE)
+            and not IsUnitType(target, UNIT_TYPE_MECHANICAL)
+            and not IsUnitType(target, UNIT_TYPE_FLYING)
+            and not IsUnitType(target, UNIT_TYPE_WARD)
+            and not IsUnitHidden(bear) and not IsUnitPaused(bear) and not IsUnitLoaded(bear)
+            and not IsUnitHidden(target) and not IsUnitPaused(target) and not IsUnitLoaded(target)
+            and not BlzIsUnitInvulnerable(target)
+            and G.bears[bear] == nil and G.targets[bear] == nil
+            and G.targets[target] == nil and G.bears[target] == nil
+            and GetUnitAbilityLevel(target, buff) == 0
+            and distanceSquared(GetUnitX(bear), GetUnitY(bear), GetUnitX(target), GetUnitY(target)) <= 180 ^ 2
+    end
+
+    function G.Release(state)
+        if state == nil or state.finished then return end
+        state.finished = true
+        G.bears[state.bear], G.targets[state.target] = nil, nil
+        PauseTimer(state.timer)
+        DestroyTimer(state.timer)
+        if GetUnitTypeId(state.bear) ~= 0 then
+            BlzSetUnitWeaponBooleanField(state.bear, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0, state.attack0)
+            BlzSetUnitWeaponBooleanField(state.bear, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1, state.attack1)
+        end
+        if GetUnitTypeId(state.target) ~= 0 then UnitRemoveAbility(state.target, buff) end
+        if GetUnitTypeId(state.dummy) ~= 0 then RemoveUnit(state.dummy) end
+        if GetItemTypeId(state.probe) ~= 0 then RemoveItem(state.probe) end
+    end
+
+    function G.Tick(state)
+        if state.finished then return end
+        local bear, target = state.bear, state.target
+        if not alive(bear) or not alive(target) or GetUnitTypeId(bear) ~= FourCC('n05V')
+            or GetOwningPlayer(bear) ~= state.owner or GetOwningPlayer(target) ~= state.targetOwner
+            or not IsUnitEnemy(target, GetOwningPlayer(bear))
+            or IsUnitHidden(bear) or IsUnitHidden(target) or IsUnitPaused(bear) or IsUnitPaused(target)
+            or IsUnitLoaded(bear) or IsUnitLoaded(target)
+            or IsUnitType(target, UNIT_TYPE_FLYING) or BlzIsUnitInvulnerable(target)
+            or GetUnitAbilityLevel(bear, ability) == 0 then
+            G.Release(state)
+            return
+        end
+        state.elapsed = state.elapsed + 0.03125
+        local hasBuff = GetUnitAbilityLevel(target, buff) > 0
+        if hasBuff then state.applied = true end
+        if state.elapsed >= state.duration or (not hasBuff and (state.applied or state.elapsed >= 0.25)) then
+            G.Release(state)
+            return
+        end
+        if not hasBuff then return end
+        local bx, by, tx, ty = GetUnitX(bear), GetUnitY(bear), GetUnitX(target), GetUnitY(target)
+        -- Teleports and abrupt forced movement break the grip, never drag across portals.
+        if distanceSquared(bx, by, state.bx, state.by) > 96 ^ 2
+            or distanceSquared(tx, ty, state.tx, state.ty) > 96 ^ 2
+            or distanceSquared(bx, by, tx, ty) > 256 ^ 2 then
+            G.Release(state)
+            return
+        end
+        local dx, dy = bx + state.offsetX - tx, by + state.offsetY - ty
+        local distance = math.sqrt(dx * dx + dy * dy)
+        if distance > 0.5 then
+            local step = math.min(distance, 24)
+            local nx, ny = tx + dx / distance * step, ty + dy / distance * step
+            -- Sample terrain and probe dynamic pathing without stopping the victim's orders.
+            for i = 1, 3 do
+                if IsTerrainPathable(tx + (nx - tx) * i / 3, ty + (ny - ty) * i / 3,
+                    PATHING_TYPE_WALKABILITY) then
+                    G.Release(state)
+                    return
+                end
+            end
+            SetItemPosition(state.probe, nx, ny)
+            if distanceSquared(GetItemX(state.probe), GetItemY(state.probe), nx, ny) > 1 then
+                G.Release(state)
+                return
+            end
+            -- SetUnitPosition cancels orders, which would prevent the victim fighting back.
+            SetUnitX(target, nx)
+            SetUnitY(target, ny)
+        end
+        state.bx, state.by, state.tx, state.ty = bx, by, GetUnitX(target), GetUnitY(target)
+        if state.ai and state.elapsed >= state.nextMove then
+            state.nextMove = state.elapsed + 0.5
+            IssuePointOrder(bear, 'move', state.retreatX, state.retreatY)
+        end
+    end
+
+    function G.Cast(bear, target)
+        if not G.ValidTarget(bear, target) then return false end
+        local bx, by, tx, ty = GetUnitX(bear), GetUnitY(bear), GetUnitX(target), GetUnitY(target)
+        local dummy = CreateUnit(GetOwningPlayer(bear), FourCC('nBgr'), bx, by, 0)
+        if dummy == nil then return false end
+        local probe = CreateItem(FourCC('ratf'), tx, ty)
+        if probe == nil then RemoveUnit(dummy); return false end
+        SetItemVisible(probe, false)
+        if not IssueTargetOrder(dummy, 'ensnare', target) then
+            RemoveUnit(dummy)
+            RemoveItem(probe)
+            return false
+        end
+        local state = {bear = bear, target = target, dummy = dummy, probe = probe, owner = GetOwningPlayer(bear),
+            targetOwner = GetOwningPlayer(target), bx = bx, by = by, tx = tx, ty = ty,
+            offsetX = tx - bx, offsetY = ty - by, elapsed = 0, timer = CreateTimer(),
+            duration = IsUnitType(target, UNIT_TYPE_HERO) and 1 or 5,
+            attack0 = BlzGetUnitWeaponBooleanField(bear, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0),
+            attack1 = BlzGetUnitWeaponBooleanField(bear, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1)}
+        G.bears[bear], G.targets[target] = state, state
+        BlzSetUnitWeaponBooleanField(bear, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0, false)
+        BlzSetUnitWeaponBooleanField(bear, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1, false)
+        TimerStart(state.timer, 0.03125, true, function() G.Tick(state) end)
+        UnitDamageTarget(bear, target, 30, false, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL,
+            WEAPON_TYPE_WHOKNOWS)
+        if state.finished then return true end
+        if not alive(target) then G.Release(state); return true end
+        if udg_AiControl and udg_AiControl[GetPlayerId(state.owner)] then
+            local length = math.sqrt((tx - bx) ^ 2 + (ty - by) ^ 2)
+            if length > 1 then
+                state.ai, state.nextMove = true, 0.5
+                state.retreatX, state.retreatY = bx - (tx - bx) / length * 350, by - (ty - by) / length * 350
+                IssuePointOrder(bear, 'move', state.retreatX, state.retreatY)
+            end
+        end
+        return true
+    end
+
+    function G.AiCast(bear, target)
+        return G.ValidTarget(bear, target) and IssueTargetOrder(bear, 'ensnare', target)
+    end
+
+    function G.Init()
+        if G.initialized then return end
+        G.initialized = true
+        local spell = CreateTrigger()
+        TriggerRegisterAnyUnitEventBJ(spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+        TriggerAddAction(spell, function()
+            if GetSpellAbilityId() ~= ability then return end
+            local bear = GetTriggerUnit()
+            if not G.Cast(bear, GetSpellTargetUnit()) then
+                BlzEndUnitAbilityCooldown(bear, ability)
+                DisplayTextToPlayer(GetOwningPlayer(bear), 0, 0,
+                    '|cffef8173Хватка требует наземного вражеского бойца рядом. Здания и механизмы не подходят.|r')
+            end
+        end)
+        local death = CreateTrigger()
+        TriggerRegisterAnyUnitEventBJ(death, EVENT_PLAYER_UNIT_DEATH)
+        TriggerAddAction(death, function()
+            local unit = GetTriggerUnit()
+            G.Release(G.bears[unit] or G.targets[unit])
+        end)
+    end
 end
 --===========================================================================
 -- Trigger: KillLoa
@@ -51534,6 +52200,456 @@ function InitTrig_QoggSpawn()
     TriggerAddCondition(gg_trg_QoggSpawn, Condition(Trig_QoggSpawn_Conditions))
     TriggerAddAction(gg_trg_QoggSpawn, Trig_QoggSpawn_Actions)
 end
+--===========================================================================
+-- Огры: Пригвоздить (копьеметатель), Нарастающая ярость (огроны), Поступь гронна, Пиршество.
+-- Пригвоздить и Пиршество хранят состояние в уровне пассивки: при смерти или удалении
+-- юнита ничего не утекает. Отдельный список ведётся только для гроннов.
+--===========================================================================
+OgreCombat = {
+    gronns = {}, clock = 0, timer = nil,
+    ids = {
+        pin = FourCC('AOg1'), rage = FourCC('AOg2'), stride = FourCC('AOg3'), feast = FourCC('AOg4'),
+        root = FourCC('AOg5'), slow = FourCC('AOg6'), caster = FourCC('nOg1'),
+        rageTech = FourCC('ROg2'), feastTech = FourCC('ROg4'),
+    },
+    pinEvery = 5,           -- уровни 1..5: засчитано (уровень - 1) бросков
+    rageStep = 0.02,        -- за каждые полные 10% потерянного здоровья
+    strideCooldown = 6, strideRadius = 250, strideBuildingDamage = 30,
+    feastLife = 15, feastLevels = 11,  -- уровни 1..11: +0..+150 к максимуму здоровья
+    tick = 0.25,
+    fx = {
+        stride = "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl",
+        feast = "Abilities\\Spells\\Undead\\VampiricAura\\VampiricAuraTarget.mdl",
+    },
+}
+
+function OgreCombat.Alive(u)
+    return u ~= nil and GetUnitTypeId(u) ~= 0 and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+end
+
+function OgreCombat.HasTech(p, id)
+    return GetPlayerTechCount(p, id, true) > 0
+end
+
+-- Служебный юнит без точки каста применяет корни/замедление от имени огра.
+function OgreCombat.Cast(owner, x, y, order, target)
+    local caster = CreateUnit(owner, OgreCombat.ids.caster, x, y, 0)
+    if caster == nil then return false end
+    local ok
+    if target ~= nil then
+        ok = IssueTargetOrder(caster, order, target)
+    else
+        ok = IssueImmediateOrder(caster, order)
+    end
+    if ok then
+        RemoveUnitTimed(caster, 2.0)
+    else
+        RemoveUnit(caster)
+    end
+    return ok
+end
+
+function OgreCombat.Pinnable(target, owner)
+    return OgreCombat.Alive(target) and IsUnitEnemy(target, owner)
+        and not IsUnitType(target, UNIT_TYPE_STRUCTURE)
+        and not IsUnitType(target, UNIT_TYPE_MAGIC_IMMUNE)
+        and not BlzIsUnitInvulnerable(target)
+end
+
+function OgreCombat.RageBonus(u)
+    local max = GetUnitState(u, UNIT_STATE_MAX_LIFE)
+    if max <= 0 then return 0 end
+    local missing = 1 - GetUnitState(u, UNIT_STATE_LIFE) / max
+    return OgreCombat.rageStep * math.floor(missing * 10 + 0.000001)
+end
+
+function OgreCombat.Damage()
+    local amount = GetEventDamage()
+    if amount <= 0 or not BlzGetEventIsAttack() then return end
+    local source, target = GetEventDamageSource(), BlzGetEventDamageTarget()
+    if not OgreCombat.Alive(source) or IsUnitIllusion(source) then return end
+    local ids, owner = OgreCombat.ids, GetOwningPlayer(source)
+    if GetUnitAbilityLevel(source, ids.rage) > 0 and OgreCombat.HasTech(owner, ids.rageTech) then
+        local bonus = OgreCombat.RageBonus(source)
+        if bonus > 0 then BlzSetEventDamage(amount * (1 + bonus)) end
+    end
+    local level = GetUnitAbilityLevel(source, ids.pin)
+    if level > 0 and OgreCombat.Pinnable(target, owner) then
+        if level >= OgreCombat.pinEvery then
+            SetUnitAbilityLevel(source, ids.pin, 1)
+            OgreCombat.Cast(owner, GetUnitX(source), GetUnitY(source), "ensnare", target)
+        else
+            SetUnitAbilityLevel(source, ids.pin, level + 1)
+        end
+    end
+end
+
+function OgreCombat.Death()
+    local killer, victim = GetKillingUnit(), GetTriggerUnit()
+    if not OgreCombat.Alive(killer) or IsUnitIllusion(killer) then return end
+    local ids, owner = OgreCombat.ids, GetOwningPlayer(killer)
+    local level = GetUnitAbilityLevel(killer, ids.feast)
+    if level == 0 or level >= OgreCombat.feastLevels
+        or not OgreCombat.HasTech(owner, ids.feastTech)
+        or not IsUnitEnemy(victim, owner) or IsUnitType(victim, UNIT_TYPE_STRUCTURE)
+        or IsUnitType(victim, UNIT_TYPE_WARD) or IsUnitIllusion(victim) then return end
+    SetUnitAbilityLevel(killer, ids.feast, level + 1)
+    BlzSetUnitMaxHP(killer, BlzGetUnitMaxHP(killer) + OgreCombat.feastLife)
+    SetUnitState(killer, UNIT_STATE_LIFE, GetUnitState(killer, UNIT_STATE_LIFE) + OgreCombat.feastLife)
+    DestroyEffect(AddSpecialEffectTarget(OgreCombat.fx.feast, killer, "origin"))
+end
+
+function OgreCombat.EnsureTimer()
+    if OgreCombat.timer == nil then
+        OgreCombat.timer = CreateTimer()
+        TimerStart(OgreCombat.timer, OgreCombat.tick, true, OgreCombat.Tick)
+    end
+end
+
+function OgreCombat.Track(u)
+    if GetUnitAbilityLevel(u, OgreCombat.ids.stride) == 0 then return end
+    for _, data in ipairs(OgreCombat.gronns) do
+        if data.unit == u then return end
+    end
+    OgreCombat.gronns[#OgreCombat.gronns + 1] = {unit = u, ready = OgreCombat.clock}
+    OgreCombat.EnsureTimer()
+end
+
+-- Возвращает true, если топот сработал: в радиусе были наземные враги или вражеские здания.
+function OgreCombat.Stride(u)
+    local owner, x, y = GetOwningPlayer(u), GetUnitX(u), GetUnitY(u)
+    local group = CreateGroup()
+    GroupEnumUnitsInRange(group, x, y, OgreCombat.strideRadius, nil)
+    local buildings, slowed = {}, false
+    for i = 0, BlzGroupGetSize(group) - 1 do
+        local t = BlzGroupUnitAt(group, i)
+        if OgreCombat.Alive(t) and IsUnitEnemy(t, owner) and not IsUnitType(t, UNIT_TYPE_FLYING) then
+            if IsUnitType(t, UNIT_TYPE_STRUCTURE) then
+                buildings[#buildings + 1] = t
+            elseif not BlzIsUnitInvulnerable(t) then
+                slowed = true
+            end
+        end
+    end
+    DestroyGroup(group)
+    if #buildings == 0 and not slowed then return false end
+    DestroyEffect(AddSpecialEffect(OgreCombat.fx.stride, x, y))
+    for _, b in ipairs(buildings) do
+        UnitDamageTarget(u, b, OgreCombat.strideBuildingDamage, false, false, ATTACK_TYPE_CHAOS,
+            DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
+    end
+    if slowed then OgreCombat.Cast(owner, x, y, "thunderclap", nil) end
+    return true
+end
+
+function OgreCombat.Tick()
+    OgreCombat.clock = OgreCombat.clock + OgreCombat.tick
+    local now = OgreCombat.clock
+    for i = #OgreCombat.gronns, 1, -1 do
+        local data = OgreCombat.gronns[i]
+        local u = data.unit
+        -- Мёртвый гронн остаётся в списке, пока есть труп: его могут воскресить.
+        if GetUnitTypeId(u) == 0 or GetUnitAbilityLevel(u, OgreCombat.ids.stride) == 0 then
+            table.remove(OgreCombat.gronns, i)
+        elseif now >= data.ready and OgreCombat.Alive(u) and not IsUnitHidden(u)
+            and not IsUnitPaused(u) and not IsUnitLoaded(u) and OgreCombat.Stride(u) then
+            data.ready = now + OgreCombat.strideCooldown
+        end
+    end
+    if #OgreCombat.gronns == 0 then
+        local t = OgreCombat.timer
+        OgreCombat.timer = nil
+        if t ~= nil then DestroyTimer(t) end
+    end
+end
+
+function OgreCombat.Init()
+    if OgreCombat.damageTrigger ~= nil then return end
+    OgreCombat.damageTrigger = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(OgreCombat.damageTrigger, EVENT_PLAYER_UNIT_DAMAGING)
+    TriggerAddAction(OgreCombat.damageTrigger, OgreCombat.Damage)
+    OgreCombat.deathTrigger = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(OgreCombat.deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddAction(OgreCombat.deathTrigger, OgreCombat.Death)
+    -- Обученные, призванные и созданные скриптом гронны одинаково входят в регион мира.
+    local bounds = GetWorldBounds()
+    OgreCombat.world = CreateRegion()
+    RegionAddRect(OgreCombat.world, bounds)
+    RemoveRect(bounds)
+    OgreCombat.enterTrigger = CreateTrigger()
+    TriggerRegisterEnterRegion(OgreCombat.enterTrigger, OgreCombat.world, nil)
+    TriggerAddAction(OgreCombat.enterTrigger, function() OgreCombat.Track(GetTriggerUnit()) end)
+end
+
+function InitTrig_OgreCombat()
+    OgreCombat.Init()
+end
+--===========================================================================
+-- Пандарены: Пьянящая настойка хмелевара.
+-- APb1 (автоприменяемое «Проклятие») лишь выбирает цель и вешает короткий баф без
+-- промахов, чтобы автокаст не повторялся по той же цели. Настоящий эффект APb2
+-- накладывает даммик в момент, когда долетает бочка.
+--===========================================================================
+PandarenBrew = {
+    missiles = {}, timer = nil, loc = nil,
+    ids = {barrel = FourCC('APb1'), drunk = FourCC('APb2')},
+    speed = 900, tick = 0.03125, launchZ = 60, impactZ = 60, arc = 0.15,
+    fx = {missile = "Abilities\\Weapons\\BrewmasterMissile\\BrewmasterMissile.mdl"},
+}
+
+function PandarenBrew.Alive(u)
+    return u ~= nil and GetUnitTypeId(u) ~= 0 and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+end
+
+function PandarenBrew.GroundZ(x, y)
+    if PandarenBrew.loc == nil then PandarenBrew.loc = Location(x, y) end
+    MoveLocation(PandarenBrew.loc, x, y)
+    return GetLocationZ(PandarenBrew.loc)
+end
+
+function PandarenBrew.Launch(caster, target)
+    if not PandarenBrew.Alive(caster) or not PandarenBrew.Alive(target) then return end
+    local x, y = GetUnitX(caster), GetUnitY(caster)
+    local missile = {target = target, owner = GetOwningPlayer(caster), x = x, y = y,
+        z = PandarenBrew.GroundZ(x, y) + PandarenBrew.launchZ, travelled = 0,
+        effect = AddSpecialEffect(PandarenBrew.fx.missile, x, y)}
+    local dx, dy = GetUnitX(target) - x, GetUnitY(target) - y
+    missile.total = math.max(1, math.sqrt(dx * dx + dy * dy))
+    BlzSetSpecialEffectZ(missile.effect, missile.z)
+    BlzSetSpecialEffectYaw(missile.effect, Atan2(dy, dx))
+    PandarenBrew.missiles[#PandarenBrew.missiles + 1] = missile
+    if PandarenBrew.timer == nil then
+        PandarenBrew.timer = CreateTimer()
+        TimerStart(PandarenBrew.timer, PandarenBrew.tick, true, PandarenBrew.Tick)
+    end
+end
+
+function PandarenBrew.Impact(missile)
+    local target = missile.target
+    if not PandarenBrew.Alive(target) then return end
+    local dummy = CreateUnit(missile.owner, gDummy, GetUnitX(target), GetUnitY(target), 0)
+    if dummy == nil then return end
+    UnitAddAbility(dummy, PandarenBrew.ids.drunk)
+    IssueTargetOrder(dummy, "curse", target)
+    RemoveUnitTimed(dummy, 2.0)
+end
+
+-- Возвращает true, когда бочка долетела или цель пропала.
+function PandarenBrew.Step(missile)
+    local target = missile.target
+    if GetUnitTypeId(target) == 0 then return true end
+    local tx, ty = GetUnitX(target), GetUnitY(target)
+    local dx, dy = tx - missile.x, ty - missile.y
+    local distance = math.sqrt(dx * dx + dy * dy)
+    local step = PandarenBrew.speed * PandarenBrew.tick
+    if distance <= step then
+        PandarenBrew.Impact(missile)
+        return true
+    end
+    missile.x, missile.y = missile.x + dx / distance * step, missile.y + dy / distance * step
+    missile.travelled = missile.travelled + step
+    -- Дуга по доле пройденного пути; цель может убегать, поэтому доля ограничена.
+    local t = math.min(1, missile.travelled / (missile.travelled + distance - step))
+    local base = missile.z + (PandarenBrew.GroundZ(tx, ty) + PandarenBrew.impactZ - missile.z) * t
+    local height = PandarenBrew.arc * missile.total * 4 * t * (1 - t)
+    BlzSetSpecialEffectPosition(missile.effect, missile.x, missile.y, base + height)
+    BlzSetSpecialEffectYaw(missile.effect, Atan2(dy, dx))
+    return false
+end
+
+function PandarenBrew.Tick()
+    local list = PandarenBrew.missiles
+    for i = #list, 1, -1 do
+        local missile = list[i]
+        if PandarenBrew.Step(missile) then
+            DestroyEffect(missile.effect)
+            table.remove(list, i)
+        end
+    end
+    if #list == 0 then
+        local t = PandarenBrew.timer
+        PandarenBrew.timer = nil
+        if t ~= nil then DestroyTimer(t) end
+    end
+end
+
+function PandarenBrew.Init()
+    if PandarenBrew.spellTrigger ~= nil then return end
+    PandarenBrew.spellTrigger = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(PandarenBrew.spellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddAction(PandarenBrew.spellTrigger, function()
+        if GetSpellAbilityId() ~= PandarenBrew.ids.barrel then return end
+        PandarenBrew.Launch(GetTriggerUnit(), GetSpellTargetUnit())
+    end)
+    -- Автоприменение включено с появления хмелевара (и у ботов); игрок может выключить.
+    local bounds = GetWorldBounds()
+    PandarenBrew.world = CreateRegion()
+    RegionAddRect(PandarenBrew.world, bounds)
+    RemoveRect(bounds)
+    PandarenBrew.enterTrigger = CreateTrigger()
+    TriggerRegisterEnterRegion(PandarenBrew.enterTrigger, PandarenBrew.world, nil)
+    TriggerAddAction(PandarenBrew.enterTrigger, function()
+        local u = GetTriggerUnit()
+        if GetUnitAbilityLevel(u, PandarenBrew.ids.barrel) > 0 then IssueImmediateOrder(u, "curseon") end
+    end)
+end
+
+function InitTrig_PandarenBrew()
+    PandarenBrew.Init()
+end
+--===========================================================================
+-- Ночнорождённые: Лунный снаряд глефомёта. Ночью после попадания глефа дважды
+-- отскакивает в ближайших ещё не задетых врагов, теряя 20% урона за отскок.
+-- Артиллерийский сплэш даёт по событию урона на каждого задетого юнита: отскоки
+-- запускает только первое событие выстрела, остальные в том же кадре пропускаются.
+--===========================================================================
+NightborneGlaive = {
+    flights = {}, busy = {}, timer = nil, loc = nil,
+    ids = {moon = FourCC('AMn1'), tech = FourCC('RMn1')},
+    bounces = 2, falloff = 0.8, radius = 450, speed = 800, tick = 0.03125, height = 60,
+    fx = {missile = "Abilities\\Weapons\\GlaiveMissile\\GlaiveMissile.mdl"},
+}
+
+function NightborneGlaive.Alive(u)
+    return u ~= nil and GetUnitTypeId(u) ~= 0 and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+end
+
+function NightborneGlaive.IsNight()
+    local time = GetFloatGameState(GAME_STATE_TIME_OF_DAY)
+    return time < 6 or time >= 18
+end
+
+function NightborneGlaive.Z(x, y)
+    if NightborneGlaive.loc == nil then NightborneGlaive.loc = Location(x, y) end
+    MoveLocation(NightborneGlaive.loc, x, y)
+    return GetLocationZ(NightborneGlaive.loc) + NightborneGlaive.height
+end
+
+-- Урон одного выстрела без сплэша: база с улучшениями плюс среднее по кубикам.
+function NightborneGlaive.ShotDamage(u)
+    local dice, sides = BlzGetUnitDiceNumber(u, 0), BlzGetUnitDiceSides(u, 0)
+    return BlzGetUnitBaseDamage(u, 0) + dice * (sides + 1) / 2
+end
+
+function NightborneGlaive.Bounceable(u, owner, hit)
+    return NightborneGlaive.Alive(u) and not hit[u] and IsUnitEnemy(u, owner)
+        and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_FLYING)
+        and not IsUnitType(u, UNIT_TYPE_WARD) and not BlzIsUnitInvulnerable(u)
+        and not IsUnitHidden(u) and IsUnitVisible(u, owner)
+end
+
+-- Ближайшая цель; равные расстояния разрешаются по handle — выбор детерминирован.
+function NightborneGlaive.Next(x, y, owner, hit)
+    local group = CreateGroup()
+    GroupEnumUnitsInRange(group, x, y, NightborneGlaive.radius, nil)
+    local best, bestDistance = nil, nil
+    for i = 0, BlzGroupGetSize(group) - 1 do
+        local u = BlzGroupUnitAt(group, i)
+        if NightborneGlaive.Bounceable(u, owner, hit) then
+            local d = (GetUnitX(u) - x) ^ 2 + (GetUnitY(u) - y) ^ 2
+            if best == nil or d < bestDistance or (d == bestDistance and GetHandleId(u) < GetHandleId(best)) then
+                best, bestDistance = u, d
+            end
+        end
+    end
+    DestroyGroup(group)
+    return best
+end
+
+-- Запустить следующий отскок из точки x, y; false — целей нет или отскоки кончились.
+function NightborneGlaive.Launch(flight, x, y)
+    if flight.left <= 0 then return false end
+    local target = NightborneGlaive.Next(x, y, flight.owner, flight.hit)
+    if target == nil then return false end
+    flight.left, flight.target, flight.x, flight.y = flight.left - 1, target, x, y
+    flight.damage = flight.damage * NightborneGlaive.falloff
+    flight.hit[target] = true
+    if flight.effect == nil then
+        flight.effect = AddSpecialEffect(NightborneGlaive.fx.missile, x, y)
+    end
+    BlzSetSpecialEffectPosition(flight.effect, x, y, NightborneGlaive.Z(x, y))
+    return true
+end
+
+function NightborneGlaive.Start(source, primary)
+    local owner = GetOwningPlayer(source)
+    local flight = {source = source, owner = owner, left = NightborneGlaive.bounces,
+        damage = NightborneGlaive.ShotDamage(source), hit = {[primary] = true}}
+    if not NightborneGlaive.Launch(flight, GetUnitX(primary), GetUnitY(primary)) then return end
+    NightborneGlaive.flights[#NightborneGlaive.flights + 1] = flight
+    if NightborneGlaive.timer == nil then
+        NightborneGlaive.timer = CreateTimer()
+        TimerStart(NightborneGlaive.timer, NightborneGlaive.tick, true, NightborneGlaive.Tick)
+    end
+end
+
+-- Возвращает true, когда глефа закончила полёт.
+function NightborneGlaive.Step(flight)
+    local target = flight.target
+    if GetUnitTypeId(target) == 0 then return true end
+    local tx, ty = GetUnitX(target), GetUnitY(target)
+    local dx, dy = tx - flight.x, ty - flight.y
+    local distance = math.sqrt(dx * dx + dy * dy)
+    local step = NightborneGlaive.speed * NightborneGlaive.tick
+    if distance > step then
+        flight.x, flight.y = flight.x + dx / distance * step, flight.y + dy / distance * step
+        BlzSetSpecialEffectPosition(flight.effect, flight.x, flight.y, NightborneGlaive.Z(flight.x, flight.y))
+        BlzSetSpecialEffectYaw(flight.effect, Atan2(dy, dx))
+        return false
+    end
+    if NightborneGlaive.Alive(target) and GetUnitTypeId(flight.source) ~= 0 then
+        -- attack=false: отскок не считается атакой и не запускает новые отскоки.
+        UnitDamageTarget(flight.source, target, flight.damage, false, true, ATTACK_TYPE_SIEGE,
+            DAMAGE_TYPE_NORMAL, WEAPON_TYPE_WHOKNOWS)
+    end
+    return not NightborneGlaive.Launch(flight, tx, ty)
+end
+
+function NightborneGlaive.Tick()
+    local list = NightborneGlaive.flights
+    for i = #list, 1, -1 do
+        local flight = list[i]
+        if NightborneGlaive.Step(flight) then
+            DestroyEffect(flight.effect)
+            table.remove(list, i)
+        end
+    end
+    if #list == 0 then
+        local t = NightborneGlaive.timer
+        NightborneGlaive.timer = nil
+        if t ~= nil then DestroyTimer(t) end
+    end
+end
+
+function NightborneGlaive.Damage()
+    if not BlzGetEventIsAttack() then return end
+    local source = GetEventDamageSource()
+    if source == nil or GetUnitAbilityLevel(source, NightborneGlaive.ids.moon) == 0
+        or NightborneGlaive.busy[source] or IsUnitIllusion(source) then return end
+    if GetPlayerTechCount(GetOwningPlayer(source), NightborneGlaive.ids.tech, true) == 0
+        or not NightborneGlaive.IsNight() then return end
+    local target = BlzGetEventDamageTarget()
+    if not NightborneGlaive.Alive(target) then return end
+    NightborneGlaive.busy[source] = true
+    local t = CreateTimer()
+    TimerStart(t, 0, false, function()
+        DestroyTimer(t)
+        NightborneGlaive.busy[source] = nil
+    end)
+    NightborneGlaive.Start(source, target)
+end
+
+function NightborneGlaive.Init()
+    if NightborneGlaive.damageTrigger ~= nil then return end
+    NightborneGlaive.damageTrigger = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(NightborneGlaive.damageTrigger, EVENT_PLAYER_UNIT_DAMAGING)
+    TriggerAddAction(NightborneGlaive.damageTrigger, NightborneGlaive.Damage)
+end
+
+function InitTrig_NightborneGlaive()
+    NightborneGlaive.Init()
+end
+
 --===========================================================================
 -- Trigger: TurnAi
 --===========================================================================
@@ -55916,6 +57032,12 @@ function _castAbility(u, entry, target, p)
         return AiCombatOrderResult(u, DraeneiCombat.AiVow(u))
     elseif tp == "draenei_idol" then
         return AiCombatOrderResult(u, DraeneiCombat.AiIdol(u))
+    elseif tp == "silitid_cocoon" then
+        return AiCombatOrderResult(u, SilitidRescue.AiCast(u))
+    elseif tp == "bear_grip" then
+        return AiCombatOrderResult(u, BearGrip.AiCast(u, target))
+    elseif tp == "naga_harpoon" then
+        return AiCombatOrderResult(u, NagaCombat.AiHarpoon(u))
     elseif tp == "immediate" then
         if entry.orderId ~= nil then
             return AiCombatOrderResult(u, IssueImmediateOrderById(u, entry.orderId))
@@ -57328,6 +58450,8 @@ RegisterAiRace("Naga", {
 
                 {FourCC('nnsg'), FourCC('R0FR'), 6}, {FourCC('nnsg'), FourCC('Rnen'), 6},
 
+                {FourCC('n055'), FourCC('R0FP'), 1},  -- Гарпун
+
             }},
 
             { at = 17, action = "tryBuy" },
@@ -57347,6 +58471,12 @@ RegisterAiRace("Naga", {
         pre = {
 
             { order = "blight", chance = 1, type = "immediate", terrain = "water", notAbil = FourCC('S00E'), ret = true },
+
+        },
+
+        [FourCC('n056')] = {
+
+            { order = "acidbomb", chance = 2, type = "naga_harpoon", needAbil = FourCC('AMh1') },
 
         },
 
@@ -59599,6 +60729,7 @@ RegisterAiRace("Bandits", {
                 {FourCC('h03O'),FourCC('R00N'),6},  -- armor
                 {FourCC('h03O'),FourCC('R00X'),6},  -- melee
                 {FourCC('h03P'),FourCC('R00V'),6},  -- armor
+                {FourCC('h009'),FourCC('RBn1'),1},  -- Делёж добычи
             }},
 
 
@@ -60509,6 +61640,7 @@ RegisterAiRace("Draenei", {
                 {FourCC('h058'), FourCC('RDr3'), 1},
                 {FourCC('h058'), FourCC('RDr4'), 1},
                 {FourCC('h05A'), FourCC('RDr5'), 1},
+                {FourCC('h05A'), FourCC('RDr6'), 1},  -- Память Аргуса
             }},
 
         },
@@ -61398,6 +62530,13 @@ RegisterAiRace("Ogres", {
 
             { at = 55, action = "techUp", from = FourCC('o03D'), to = FourCC('o03E'), cap = 3 },
 
+            { at = 25, action = "research", rows = {
+                {FourCC('o03A'), FourCC('ROg4'), 1},  -- Пиршество
+            }},
+            { at = 55, action = "research", rows = {
+                {FourCC('o03C'), FourCC('ROg2'), 1},  -- Нарастающая ярость
+            }},
+
         },
 
     },
@@ -61936,8 +63075,8 @@ RegisterAiRace("Silitids", {
         [FourCC('e01R')] = {
             -- A0ZU "Создать личинку" (Create Larva): Channel-based, order "channel", no target.
             { order = "channel",        chance = 4, type = "immediate" },
-            -- A0KQ "Волна исцеления" (Healing Wave): heals a damaged ally in range.
-            { order = "healingwave",    chance = 4, type = "heal", allyRange = 700 },
+            -- Rescue a wounded silitid; ordinary heal selection includes invalid species.
+            { order = "ancestralspirit", chance = 4, type = "silitid_cocoon", needAbil = FourCC('ASrc') },
         },
 
         [FourCC('U025')] = {
@@ -63290,11 +64429,7 @@ RegisterAiRace("IceTrolls", {
         },
 
         [FourCC('n05V')] = {
-
-            { order = "parasite",    chance = 4, type = "target" },
-
-            { order = "curse",       chance = 4, type = "target" },
-
+            { order = "ensnare", chance = 2, type = "bear_grip", needAbil = FourCC('ABgr'), range = 180 },
         },
 
     },
@@ -70930,6 +72065,11 @@ function InitCustomTriggers()
     InitTrig_Auto_hil()
     InitTrig_Auto_hil_Copy()
     InitTrig_Draenei_Build_Abill()
+    InitTrig_OgreCombat()
+    InitTrig_NagaCombat()
+    InitTrig_PandarenBrew()
+    InitTrig_BanditLoot()
+    InitTrig_NightborneGlaive()
     InitTrig_flot1()
     InitTrig_flot2()
     InitTrig_arm1()

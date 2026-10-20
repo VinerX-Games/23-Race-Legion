@@ -61,9 +61,9 @@ function Trig_DamageBeforeW2_Actions()
     DisableTrigger(gg_trg_DamageBeforeW2)
     DisableTrigger(gg_trg_DamagerW2)
     if u ~= nil then
-        UnitDamageTargetBJ(u, GetTriggerUnit(), damage * 0.02 * lvl, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL)
+        UnitDamageTargetBJ(u, GetTriggerUnit(), damage * 0.01 * lvl, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL)
     else
-        UnitDamageTargetBJ(GetTriggerUnit(), GetTriggerUnit(), damage * 0.02 * lvl, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL)
+        UnitDamageTargetBJ(GetTriggerUnit(), GetTriggerUnit(), damage * 0.01 * lvl, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL)
     end
     EnableTrigger(gg_trg_DamageBeforeW2)
     EnableTrigger(gg_trg_DamagerW2)
@@ -259,7 +259,10 @@ end
 -- Trigger: KillW2
 --===========================================================================
 function Trig_KillW2_Conditions()
-    return GetUnitAbilityLevel(GetKillingUnit(), FourCC('w2a0')) > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
+    local killer = GetKillingUnit()
+    return killer ~= nil
+        and GetUnitAbilityLevel(killer, FourCC('w2a0')) > 0
+        and IsUnitEnemy(GetTriggerUnit(), GetOwningPlayer(killer))
 end
 function Trig_KillW2_Actions()
     local u= GetKillingUnit()

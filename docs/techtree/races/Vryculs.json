@@ -564,7 +564,8 @@
    "levels": 3,
    "requires": [
     "R067"
-   ]
+   ],
+   "time": 15
   },
   "R067": {
    "type": "upgrade",

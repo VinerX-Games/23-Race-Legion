@@ -1,7 +1,7 @@
 {
   "source_path": "C:\\Games\\23 Race\\23-Race-Legion\\map.w3x\\war3map.lua",
   "source_sha256": "5181648a70065e3b8632a083c3946e452fc8f9f5b6538dda68f69226ad9566bb",
-  "section_count": 150,
+  "section_count": 151,
   "sections": [
     {
       "name": "prelude",
@@ -870,6 +870,30 @@
     {
       "name": "gen:OldGods",
       "file": "80_runtime/triggers/races/OldGods.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Ogres",
+      "file": "80_runtime/triggers/races/Ogres.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Pandarens",
+      "file": "80_runtime/triggers/races/Pandarens.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Nightborne",
+      "file": "80_runtime/triggers/races/Nightborne.lua",
       "category": "generated_runtime",
       "start_line": 0,
       "end_line": 0,

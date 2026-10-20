@@ -37,7 +37,8 @@
   "A000": {
    "type": "ability",
    "name": "Дозакупка снаряжения",
-   "hotkey": "D"
+   "hotkey": "D",
+   "levels": 1
   },
   "A001": {
    "type": "ability",
@@ -442,6 +443,14 @@
    "name": "Прицельная пальба",
    "hotkey": "Q",
    "levels": 1
+  },
+  "ABn1": {
+   "type": "ability",
+   "name": "Делёж добычи",
+   "levels": 1,
+   "requires": [
+    "RBn1"
+   ]
   },
   "AHab": {
    "type": "ability",
@@ -902,6 +911,14 @@
    "levels": 2,
    "time": 45,
    "time_per_level": 1
+  },
+  "RBn1": {
+   "type": "upgrade",
+   "name": "Делёж добычи",
+   "gold": 300,
+   "lumber": 200,
+   "levels": 1,
+   "time": 45
   },
   "Rhme": {
    "type": "upgrade",
@@ -1555,6 +1572,7 @@
   "A00U requires Rhsb",
   "A01A requires h008",
   "A01B requires h009",
+  "ABn1 requires RBn1",
   "Aosp requires Rosp",
   "H03S has-ability A00M",
   "H03S has-ability A01C",
@@ -1665,6 +1683,7 @@
   "h009 researches R00I",
   "h009 researches R00V",
   "h009 researches R0BS",
+  "h009 researches RBn1",
   "h009 trains h002",
   "h00A researches R00V",
   "h00B researches R00V",
@@ -1695,9 +1714,11 @@
   "h00Q has-ability A00M",
   "h00Q has-ability A00N",
   "h00Q has-ability A00P",
+  "h00Q has-ability ABn1",
   "h00Q requires R0BS",
   "h00Q researches R00L",
   "h00Q researches R00M",
+  "h00Q researches RBn1",
   "h00S has-ability A00M",
   "h00S has-ability A013",
   "h00S has-ability A016",

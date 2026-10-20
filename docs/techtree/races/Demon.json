@@ -168,6 +168,7 @@
    "type": "ability",
    "name": "Разрушение заклинаний",
    "hotkey": "W",
+   "levels": 1,
    "requires": [
     "R08Q"
    ]

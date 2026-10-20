@@ -119,6 +119,13 @@ RegisterAiRace("Ogres", {
 
             { at = 55, action = "techUp", from = FourCC('o03D'), to = FourCC('o03E'), cap = 3 },
 
+            { at = 25, action = "research", rows = {
+                {FourCC('o03A'), FourCC('ROg4'), 1},  -- Пиршество
+            }},
+            { at = 55, action = "research", rows = {
+                {FourCC('o03C'), FourCC('ROg2'), 1},  -- Нарастающая ярость
+            }},
+
         },
 
     },

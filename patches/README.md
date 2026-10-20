@@ -14,6 +14,9 @@ Implemented natively:
 - `HIVEWE_CLI_ONLY=ON`, avoiding Qt/editor dependencies and privileged data-directory symlinks.
 - writing merged main/Skin values without leaving stale Skin overrides; counting only serialized fields;
 - allocating a separate WTS entry for ordinary text edits (`--shared-string` explicitly changes the shared entry).
+- `copy-object` from a custom source inherits its fields and base-game id, as editor copy/paste does
+  (previously the clone was written with the custom object as its base, which the game cannot load);
+  the result reports `base_id` and `inherited_fields`. `validate-map` reports objects based on custom objects.
 
 Build on Windows with Visual Studio 2022 17.14+:
 

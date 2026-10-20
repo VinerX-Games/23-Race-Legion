@@ -777,7 +777,10 @@
   "R03B": {
    "type": "upgrade",
    "name": "Обучение доктора",
-   "levels": 3
+   "gold": 125,
+   "lumber": 75,
+   "levels": 3,
+   "time": 40
   },
   "R03G": {
    "type": "upgrade",

@@ -125,14 +125,6 @@
     "R0FR"
    ]
   },
-  "A14K": {
-   "type": "ability",
-   "name": "Уклонение",
-   "levels": 1,
-   "requires": [
-    "R0FQ"
-   ]
-  },
   "A14L": {
    "type": "ability",
    "name": "Рассеивание чар",
@@ -259,14 +251,6 @@
    ],
    "requires_amount": 2
   },
-  "ACpv": {
-   "type": "ability",
-   "name": "Сокрушение",
-   "levels": 1,
-   "requires": [
-    "R0FP"
-   ]
-  },
   "ACsk": {
    "type": "ability",
    "name": "Устойчивая кожа",
@@ -311,6 +295,20 @@
   "AInv": {
    "type": "ability",
    "name": "Инвентарь",
+   "levels": 1
+  },
+  "AMh1": {
+   "type": "ability",
+   "name": "Гарпун",
+   "hotkey": "X",
+   "levels": 1,
+   "requires": [
+    "R0FP"
+   ]
+  },
+  "AMu1": {
+   "type": "ability",
+   "name": "Мутация",
    "levels": 1
   },
   "ANen": {
@@ -500,7 +498,7 @@
   },
   "R0FP": {
    "type": "upgrade",
-   "name": "Сокрушительный удар",
+   "name": "Гарпун",
    "gold": 340,
    "lumber": 430,
    "levels": 1,
@@ -895,10 +893,11 @@
   },
   "nnad": {
    "type": "building",
-   "name": "TRIGSTR_42938",
+   "name": "Алтарь глубин",
    "time": 60,
    "food_made": 3,
    "gold": 255,
+   "hotkey": "S",
    "hp": 900,
    "lumber": 100
   },
@@ -1019,7 +1018,6 @@
   "A13B requires R0FD",
   "A13C requires Robk",
   "A14J requires R0FR",
-  "A14K requires R0FQ",
   "A14M requires Rnsi",
   "A14N requires Rnsi",
   "A1OL requires R0KP",
@@ -1029,8 +1027,8 @@
   "ACen requires Roen",
   "ACfu requires Rnsw",
   "AChx requires Rnsi",
-  "ACpv requires R0FP",
   "ACsk requires R0FQ",
+  "AMh1 requires R0FP",
   "ANen requires Rnen",
   "Acny requires Rnsw",
   "Asb1 requires Rnsb",
@@ -1095,9 +1093,9 @@
   "n04Z researches Rnam",
   "n04Z researches Rnat",
   "n050 has-ability A13B",
-  "n050 has-ability A14K",
   "n050 has-ability A1LT",
   "n050 has-ability A1OR",
+  "n050 has-ability AMu1",
   "n050 requires h0JY",
   "n050 researches R0FF",
   "n050 researches R0FQ",
@@ -1152,7 +1150,7 @@
   "n055 trains nwgs",
   "n056 has-ability A1LT",
   "n056 has-ability ACen",
-  "n056 has-ability ACpv",
+  "n056 has-ability AMh1",
   "n056 has-ability S00A",
   "n056 requires h0JY",
   "n056 researches Rnam",

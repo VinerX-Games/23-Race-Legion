@@ -210,37 +210,6 @@
    "name": "Инвентарь",
    "levels": 1
   },
-  "AOcr": {
-   "type": "ability",
-   "name": "Критический удар",
-   "hero": true,
-   "levels": 4,
-   "hero_level_req": 1
-  },
-  "AOmi": {
-   "type": "ability",
-   "name": "Зеркальная копия",
-   "hero": true,
-   "hotkey": "R",
-   "levels": 4,
-   "hero_level_req": 1
-  },
-  "AOwk": {
-   "type": "ability",
-   "name": "Танец ветра",
-   "hero": true,
-   "hotkey": "Q",
-   "levels": 4,
-   "hero_level_req": 1
-  },
-  "AOww": {
-   "type": "ability",
-   "name": "Вихрь клинков",
-   "hero": true,
-   "hotkey": "R",
-   "levels": 2,
-   "hero_level_req": 6
-  },
   "Ablo": {
    "type": "ability",
    "name": "Жажда крови",
@@ -293,7 +262,7 @@
   },
   "Aprg": {
    "type": "ability",
-   "name": "СПОСОБНОСТЬ: Увеличивает скорость перемещения и атаки союзника.",
+   "name": "Развеивание магии",
    "hotkey": "Q",
    "levels": 1
   },
@@ -437,10 +406,37 @@
    ],
    "time": 40
   },
-  "R0ED": {
+  "R0AZ": {
+   "type": "upgrade",
+   "name": "Мудрость черных драконов",
+   "gold": 500,
+   "gold_per_level": 750,
+   "lumber": 450,
+   "lumber_per_level": 750,
+   "levels": 6,
+   "requires": [
+    "hkee"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R0D9": {
    "type": "upgrade",
    "name": "",
    "only_required": true,
+   "gold": 3000,
+   "gold_per_level": 4000,
+   "lumber": 3000,
+   "lumber_per_level": 4000,
+   "levels": 2,
+   "requires": [
+    "hcas"
+   ],
+   "time": 55
+  },
+  "R0EC": {
+   "type": "upgrade",
+   "name": "Тренировка ближнего боя — уровень 1",
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
@@ -451,6 +447,91 @@
    ],
    "time": 30,
    "time_per_level": 15
+  },
+  "R0ED": {
+   "type": "upgrade",
+   "name": "Тренировка дальнего боя — уровень 1",
+   "gold": 500,
+   "gold_per_level": 500,
+   "lumber": 500,
+   "lumber_per_level": 500,
+   "levels": 3,
+   "requires": [
+    "etoa"
+   ],
+   "time": 30,
+   "time_per_level": 15
+  },
+  "R0G5": {
+   "type": "upgrade",
+   "name": "Артефакты — уровень 1",
+   "gold": 500,
+   "gold_per_level": 500,
+   "lumber": 500,
+   "lumber_per_level": 500,
+   "levels": 6,
+   "requires": [
+    "etoa"
+   ],
+   "time": 30,
+   "time_per_level": 15
+  },
+  "R0GL": {
+   "type": "upgrade",
+   "name": "Заостренные дубины — уровень 1",
+   "gold": 500,
+   "gold_per_level": 1000,
+   "lumber": 450,
+   "lumber_per_level": 900,
+   "levels": 6,
+   "requires": [
+    "ostr"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R0GM": {
+   "type": "upgrade",
+   "name": "Шкуры зверей — уровень 1",
+   "gold": 500,
+   "gold_per_level": 1000,
+   "lumber": 450,
+   "lumber_per_level": 900,
+   "levels": 6,
+   "requires": [
+    "ostr"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R0GO": {
+   "type": "upgrade",
+   "name": "Крепость плоти — уровень 1",
+   "gold": 450,
+   "gold_per_level": 250,
+   "lumber": 150,
+   "lumber_per_level": 150,
+   "levels": 3,
+   "requires": [
+    "ostr",
+    "o03D"
+   ],
+   "time": 40
+  },
+  "R0GP": {
+   "type": "upgrade",
+   "name": "Сила предков — уровень 1",
+   "gold": 450,
+   "gold_per_level": 250,
+   "lumber": 100,
+   "lumber_per_level": 150,
+   "levels": 3,
+   "requires": [
+    "ostr",
+    "ofor",
+    "o03D"
+   ],
+   "time": 35
   },
   "R0KB": {
    "type": "upgrade",
@@ -466,6 +547,17 @@
    "type": "upgrade",
    "name": "Культ Сумеречного Молота",
    "levels": 1
+  },
+  "R0KO": {
+   "type": "upgrade",
+   "name": "Использовать Сердце И'Шараджа",
+   "gold": 500,
+   "gold_per_level": 500,
+   "lumber": 500,
+   "lumber_per_level": 350,
+   "levels": 1,
+   "time": 45,
+   "time_per_level": 1
   },
   "Rgfo": {
    "type": "upgrade",
@@ -489,6 +581,20 @@
    "time": 60,
    "time_per_level": 15
   },
+  "Rhme": {
+   "type": "upgrade",
+   "name": "Мифриловые мечи — уровень 1",
+   "gold": 500,
+   "gold_per_level": 550,
+   "lumber": 450,
+   "lumber_per_level": 900,
+   "levels": 6,
+   "requires": [
+    "hkee"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
   "Roar": {
    "type": "upgrade",
    "name": "Улучшенная броня — уровень 1",
@@ -505,7 +611,8 @@
   },
   "Robk": {
    "type": "upgrade",
-   "name": "Улучшение до берсерка",
+   "name": "",
+   "only_required": true,
    "gold": 75,
    "lumber": 175,
    "levels": 1,
@@ -513,25 +620,6 @@
     "ofrt",
     "ofor"
    ],
-   "time": 40
-  },
-  "Robs": {
-   "type": "upgrade",
-   "name": "Грубая сила",
-   "gold": 50,
-   "lumber": 150,
-   "levels": 1,
-   "requires": [
-    "ostr"
-   ],
-   "time": 40
-  },
-  "Roen": {
-   "type": "upgrade",
-   "name": "Опутывание",
-   "gold": 50,
-   "lumber": 75,
-   "levels": 1,
    "time": 40
   },
   "Rome": {
@@ -550,7 +638,8 @@
   },
   "Ropg": {
    "type": "upgrade",
-   "name": "Грабеж",
+   "name": "",
+   "only_required": true,
    "gold": 75,
    "lumber": 25,
    "levels": 1,
@@ -558,7 +647,8 @@
   },
   "Ropm": {
    "type": "upgrade",
-   "name": "Рюкзак",
+   "name": "",
+   "only_required": true,
    "gold": 50,
    "lumber": 25,
    "levels": 1,
@@ -604,18 +694,6 @@
     "ofrt"
    ],
    "time": 60
-  },
-  "Rotr": {
-   "type": "upgrade",
-   "name": "Регенерация троллей",
-   "gold": 100,
-   "lumber": 100,
-   "levels": 1,
-   "requires": [
-    "ostr",
-    "ofor"
-   ],
-   "time": 35
   },
   "Rugf": {
    "type": "upgrade",
@@ -682,15 +760,26 @@
   "W203": {
    "type": "hero",
    "name": "Мэйм Блэкхенд",
-   "base": "W202",
+   "base": "Obla",
    "time": 55,
-   "food": 5,
+   "food": 1,
    "gold": 400,
-   "hotkey": "B",
-   "hp": 100,
-   "lumber": 100,
+   "hotkey": "X",
+   "hp": 250,
+   "lumber": 100
+  },
+  "etoa": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 140,
+   "food_made": 100,
+   "gold": 4500,
+   "hotkey": "Z",
+   "hp": 1700,
+   "lumber": 4500,
    "requires": [
-    "ostr"
+    "R0GB"
    ]
   },
   "h0D4": {
@@ -768,6 +857,28 @@
    "hotkey": "Z",
    "hp": 2000,
    "lumber": 4500
+  },
+  "o03D": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 135,
+   "food_made": 100,
+   "gold": 4500,
+   "hotkey": "Z",
+   "hp": 2500,
+   "lumber": 4500
+  },
+  "o03E": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 135,
+   "food_made": 150,
+   "gold": 12000,
+   "hotkey": "Z",
+   "hp": 3000,
+   "lumber": 12000
   },
   "ofor": {
    "type": "unit",
@@ -1366,48 +1477,48 @@
   },
   "xd01": {
    "type": "unit",
-   "name": "Чернокнижник Темной Орды",
-   "base": "o02G",
+   "name": "Чернокнижник Тёмной Орды",
+   "base": "oshm",
    "time": 30,
-   "food": 2,
    "gold": 185,
-   "hotkey": "S",
+   "hotkey": "Q",
    "hp": 350,
    "lumber": 20
   },
   "xd02": {
    "type": "unit",
    "name": "Осадный огр",
-   "base": "o03F",
-   "time": 30,
-   "food": 3,
+   "base": "ogru",
+   "time": 58,
    "gold": 385,
-   "hotkey": "G",
-   "hp": 700,
-   "lumber": 130
+   "hotkey": "R",
+   "hp": 1100,
+   "lumber": 130,
+   "requires": [
+    "o03E"
+   ]
   },
   "xd03": {
    "type": "unit",
-   "name": "Черный драконид",
-   "base": "n05Q",
+   "name": "Чёрный драконид",
+   "base": "nbdw",
    "time": 40,
-   "food": 4,
    "gold": 250,
-   "hp": 775,
-   "lumber": 50
+   "hotkey": "W",
+   "hp": 600,
+   "lumber": 50,
+   "requires": [
+    "R0D9"
+   ]
   },
   "xd04": {
    "type": "unit",
    "name": "Копьеметатель Драконьей Пасти",
-   "base": "o01X",
+   "base": "ohun",
    "time": 22,
-   "equivalents": [
-    "otbk"
-   ],
-   "food": 2,
    "gold": 165,
-   "hotkey": "T",
-   "hp": 375,
+   "hotkey": "Q",
+   "hp": 425,
    "lumber": 20,
    "requires": [
     "ofor"
@@ -1416,34 +1527,34 @@
   "xd05": {
    "type": "unit",
    "name": "Всадник Драконьей Пасти",
-   "base": "o01Z",
+   "base": "orai",
    "time": 28,
-   "food": 3,
    "gold": 210,
-   "hotkey": "R",
-   "hp": 610,
-   "lumber": 40
+   "hotkey": "E",
+   "hp": 650,
+   "lumber": 40,
+   "requires": [
+    "ostr"
+   ]
   },
   "xd06": {
    "type": "unit",
    "name": "Укротитель драконов",
-   "base": "o02G",
+   "base": "oshm",
    "time": 30,
-   "food": 2,
    "gold": 185,
-   "hotkey": "S",
+   "hotkey": "Q",
    "hp": 350,
    "lumber": 20
   },
   "xd07": {
    "type": "unit",
-   "name": "Черный дракончик",
-   "base": "n03N",
+   "name": "Чёрный дракончик",
+   "base": "nbdr",
    "time": 30,
-   "food": 2,
    "gold": 200,
-   "hotkey": "W",
-   "hp": 340,
+   "hotkey": "E",
+   "hp": 670,
    "lumber": 20
   },
   "xdR1": {
@@ -1476,16 +1587,23 @@
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
+  "R0AZ requires hkee",
+  "R0EC requires etoa",
+  "R0ED requires etoa",
+  "R0G5 requires etoa",
+  "R0GL requires ostr",
+  "R0GM requires ostr",
+  "R0GO requires o03D",
+  "R0GO requires ostr",
+  "R0GP requires o03D",
+  "R0GP requires ofor",
+  "R0GP requires ostr",
+  "Rhme requires hkee",
   "Roar requires ostr",
-  "Robk requires ofor",
-  "Robk requires ofrt",
-  "Robs requires ostr",
   "Rome requires ostr",
   "Rora requires ostr",
   "Rosp requires ostr",
   "Rost requires ofrt",
-  "Rotr requires ofor",
-  "Rotr requires ostr",
   "W200 has-ability A01C",
   "W200 has-ability AInv",
   "W200 hero-ability w2ad",
@@ -1504,12 +1622,12 @@
   "W202 hero-ability w2aQ",
   "W202 hero-ability w2af",
   "W202 hero-ability w2ah",
+  "W203 has-ability A01C",
   "W203 has-ability AInv",
-  "W203 hero-ability AOcr",
-  "W203 hero-ability AOmi",
-  "W203 hero-ability AOwk",
-  "W203 hero-ability AOww",
-  "W203 requires ostr",
+  "W203 hero-ability w2aA",
+  "W203 hero-ability w2aQ",
+  "W203 hero-ability w2af",
+  "W203 hero-ability w2ah",
   "h0D4 has-ability A00A",
   "h0D4 has-ability A00B",
   "h0D4 has-ability A00I",
@@ -1737,47 +1855,49 @@
   "xd01 has-ability Aion",
   "xd01 has-ability Alsh",
   "xd01 has-ability Aprg",
-  "xd01 researches Rguv",
-  "xd01 researches Ropm",
+  "xd01 researches R0G5",
+  "xd01 researches R0KO",
+  "xd01 researches Roar",
   "xd01 researches Rost",
   "xd02 has-ability A176",
   "xd02 has-ability A178",
-  "xd02 researches Rguv",
-  "xd02 researches Roar",
-  "xd02 researches Robs",
-  "xd02 researches Rome",
-  "xd02 researches Ropg",
-  "xd02 researches Ropm",
+  "xd02 requires o03E",
+  "xd02 researches R0GL",
+  "xd02 researches R0GM",
+  "xd02 researches R0GO",
+  "xd02 researches R0GP",
+  "xd03 requires R0D9",
   "xd04 has-ability A0ZA",
   "xd04 has-ability A1LO",
   "xd04 has-ability A1OJ",
   "xd04 has-ability Aven",
   "xd04 requires ofor",
+  "xd04 researches R0ED",
+  "xd04 researches R0KO",
   "xd04 researches Rguv",
   "xd04 researches Roar",
-  "xd04 researches Robk",
-  "xd04 researches Ropm",
   "xd04 researches Rora",
-  "xd04 researches Rotr",
   "xd05 has-ability A0Z7",
   "xd05 has-ability A1OJ",
   "xd05 has-ability Asal",
-  "xd05 researches Rguv",
+  "xd05 requires ostr",
+  "xd05 researches R0EC",
+  "xd05 researches R0KO",
+  "xd05 researches Rhme",
   "xd05 researches Roar",
-  "xd05 researches Roen",
   "xd05 researches Rome",
-  "xd05 researches Ropg",
-  "xd05 researches Ropm",
   "xd06 has-ability A1LS",
   "xd06 has-ability A1OJ",
   "xd06 has-ability Ablo",
   "xd06 has-ability Aion",
   "xd06 has-ability Alsh",
   "xd06 has-ability Aprg",
-  "xd06 researches Rguv",
-  "xd06 researches Ropm",
+  "xd06 researches R0G5",
+  "xd06 researches R0KO",
+  "xd06 researches Roar",
   "xd06 researches Rost",
   "xd07 has-ability A0QO",
-  "xd07 has-ability A0RE"
+  "xd07 has-ability A0RE",
+  "xd07 researches R0AZ"
  ]
 }

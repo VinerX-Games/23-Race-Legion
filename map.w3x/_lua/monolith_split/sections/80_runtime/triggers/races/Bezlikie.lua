@@ -369,7 +369,12 @@ end
 -- Trigger: SpellRes
 --===========================================================================
 function Trig_SpellRes_Conditions()
-    return GetUnitAbilityLevelSwapped(FourCC('A123'), GetKillingUnitBJ()) == 1
+    local killer = GetKillingUnit()
+    local victim = GetTriggerUnit()
+    return killer ~= nil
+        and GetUnitAbilityLevel(killer, FourCC('A123')) == 1
+        and IsUnitEnemy(victim, GetOwningPlayer(killer))
+        and not IsUnitType(victim, UNIT_TYPE_SUMMONED)
 end
 function Trig_SpellRes_Actions()
     BlzEndUnitAbilityCooldown(GetKillingUnitBJ(), FourCC('A123'))

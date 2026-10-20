@@ -5,6 +5,11 @@ local imageTest
 local minimapBorder
 local commandBorder
 
+-- Размер миникарты. Выбор расы только переносит её, не меняя размер:
+-- после смены размера движок рисует карту в неверном масштабе.
+MINIMAP_W = 0.16
+MINIMAP_H = 0.141
+
 ---@return nothing
 function UISetup()
 	-- Local Variables
@@ -92,7 +97,7 @@ function UISetup()
 	BlzFrameSetVisible(MiniMap, true)
 	BlzFrameClearAllPoints(MiniMap)
 	BlzFrameSetAbsPoint(MiniMap, FRAMEPOINT_BOTTOMLEFT, 0.0525, 0.0)
-	BlzFrameSetAbsPoint(MiniMap, FRAMEPOINT_TOPRIGHT, 0.2125, 0.141)
+	BlzFrameSetAbsPoint(MiniMap, FRAMEPOINT_TOPRIGHT, 0.0525 + MINIMAP_W, MINIMAP_H)
 	
 	-- Minimap Buttons
 	fh = BlzGetFrameByName("MiniMapCreepButton", 0)
@@ -149,9 +154,10 @@ function UISetup()
 	-- Command buttons border
 	commandBorder = commandBorder or BlzCreateFrameByType("BACKDROP", "CommandBorder", MiniMap, "", 0)
 	fh = commandBorder
-	BlzFrameSetPoint(fh, FRAMEPOINT_TOPLEFT, gridButtons, FRAMEPOINT_TOPLEFT, -0.007, 0.007)
-	BlzFrameSetPoint(fh, FRAMEPOINT_BOTTOMRIGHT, gridButtons, FRAMEPOINT_BOTTOMRIGHT, 0.0025, -0.005)
+	FrameSetPoint(fh, FRAMEPOINT_TOPLEFT, gridButtons, FRAMEPOINT_TOPLEFT, -0.007, 0.007)
+	FrameSetPoint(fh, FRAMEPOINT_BOTTOMRIGHT, gridButtons, FRAMEPOINT_BOTTOMRIGHT, 0.0025, -0.005)
 	BlzFrameSetTexture(fh, "UI\\CommandCard.dds", 0, true)
+	FrameSetShown(fh, true)   -- на выборе расы рамка скрыта
 	
 	--  Prevent multiplayer desyncs by forcing the creation of the QuestDialog frame
 	-- 	call BlzFrameClick(BlzGetFrameByName("UpperButtonBarQuestsButton", 0))

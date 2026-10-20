@@ -40,19 +40,22 @@ end
 -- Each timer services only units/effects that have used these mechanics.
 --===========================================================================
 DraeneiCombat = {
-    units = {}, protection = {}, wards = {}, clock = 0, timer = nil,
+    units = {}, protection = {}, wards = {}, spirits = {}, clock = 0, timer = nil,
     ids = {
         arrows = FourCC('ADr1'), blade = FourCC('ADr2'), vow = FourCC('ADr3'),
-        wave = FourCC('ADr4'), idol = FourCC('ADr5'), ward = FourCC('nDr1'),
+        wave = FourCC('ADr4'), idol = FourCC('ADr5'), argus = FourCC('ADr6'), ward = FourCC('nDr1'),
         arrowTech = FourCC('RDr1'), bladeTech = FourCC('RDr2'),
         vowTech = FourCC('RDr3'), waveTech = FourCC('RDr4'), idolTech = FourCC('RDr5'),
+        argusTech = FourCC('RDr6'), shadowRescue = FourCC('A1C6'),
     },
+    argusChance = 15, argusDuration = 5,
     fx = {
         arrow = "Draenei\\Effects\\NetherArrow.mdx",
         blade = "Draenei\\Effects\\BlazingSpecialArt.mdx",
         shield = "Draenei\\Effects\\GlowShield.mdx",
         heal = "Draenei\\Effects\\Reconstitute.mdx",
         blessing = "Draenei\\Effects\\HolyAura.mdx",
+        spirit = "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl",
     },
 }
 
@@ -410,6 +413,37 @@ function DraeneiCombat.Init()
     DraeneiCombat.spellTrigger = CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(DraeneiCombat.spellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(DraeneiCombat.spellTrigger, DraeneiCombat.Spell)
+    DraeneiCombat.deathTrigger = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(DraeneiCombat.deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddAction(DraeneiCombat.deathTrigger, DraeneiCombat.ArgusDeath)
+end
+
+-- Память Аргуса: дух погибшего Сломленного — призванный юнит с таймером жизни,
+-- поэтому его рассеивают обычные развеивающие способности. Дух не порождает
+-- новых духов и не спасается в тени (NoDeath), иначе смерть духа вернула бы юнит.
+function DraeneiCombat.ArgusDeath()
+    local u = GetTriggerUnit()
+    local ids = DraeneiCombat.ids
+    if DraeneiCombat.spirits[u] then
+        DraeneiCombat.spirits[u] = nil
+        return
+    end
+    -- NoDeath регистрируется раньше и удаляет юнит, спасённый в логово: духа нет.
+    if GetUnitTypeId(u) == 0 or GetUnitAbilityLevel(u, ids.argus) == 0 or IsUnitIllusion(u) then return end
+    local owner = GetOwningPlayer(u)
+    if not DraeneiCombat.HasTech(owner, ids.argusTech)
+        or GetRandomInt(1, 100) > DraeneiCombat.argusChance then return end
+    local x, y = GetUnitX(u), GetUnitY(u)
+    local spirit = CreateUnit(owner, GetUnitTypeId(u), x, y, GetUnitFacing(u))
+    if spirit == nil then return end
+    DraeneiCombat.spirits[spirit] = true
+    UnitRemoveAbility(spirit, ids.argus)
+    UnitRemoveAbility(spirit, ids.shadowRescue)
+    UnitAddType(spirit, UNIT_TYPE_SUMMONED)
+    SetUnitVertexColor(spirit, 140, 190, 255, 150)
+    UnitApplyTimedLife(spirit, FourCC('BTLF'), DraeneiCombat.argusDuration)
+    DraeneiCombat.Flash(DraeneiCombat.fx.spirit, spirit)
+    IssuePointOrder(spirit, "attack", x, y)
 end
 
 function DraeneiCombat.AiVow(caster)

@@ -38,9 +38,177 @@ function Trig_IceTrollsStart_Actions()
 end
 --===========================================================================
 function InitTrig_IceTrollsStart()
+    BearGrip.Init()
     gg_trg_IceTrollsStart=CreateTrigger()
     TriggerRegisterTimerEventSingle(gg_trg_IceTrollsStart, 0.01)
     TriggerAddAction(gg_trg_IceTrollsStart, Trig_IceTrollsStart_Actions)
+end
+
+-- A separate ensnare buff roots the victim without pausing attacks or spells.
+BearGrip = {bears = {}, targets = {}}
+do
+    local G = BearGrip
+    local ability, buff = FourCC('ABgr'), FourCC('BBgr')
+    local function alive(u)
+        return u ~= nil and GetUnitTypeId(u) ~= 0
+            and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+    end
+    local function distanceSquared(x1, y1, x2, y2)
+        return (x1 - x2) ^ 2 + (y1 - y2) ^ 2
+    end
+
+    function G.ValidTarget(bear, target)
+        return alive(bear) and GetUnitTypeId(bear) == FourCC('n05V') and alive(target)
+            and IsUnitEnemy(target, GetOwningPlayer(bear))
+            and not IsUnitType(target, UNIT_TYPE_STRUCTURE)
+            and not IsUnitType(target, UNIT_TYPE_MECHANICAL)
+            and not IsUnitType(target, UNIT_TYPE_FLYING)
+            and not IsUnitType(target, UNIT_TYPE_WARD)
+            and not IsUnitHidden(bear) and not IsUnitPaused(bear) and not IsUnitLoaded(bear)
+            and not IsUnitHidden(target) and not IsUnitPaused(target) and not IsUnitLoaded(target)
+            and not BlzIsUnitInvulnerable(target)
+            and G.bears[bear] == nil and G.targets[bear] == nil
+            and G.targets[target] == nil and G.bears[target] == nil
+            and GetUnitAbilityLevel(target, buff) == 0
+            and distanceSquared(GetUnitX(bear), GetUnitY(bear), GetUnitX(target), GetUnitY(target)) <= 180 ^ 2
+    end
+
+    function G.Release(state)
+        if state == nil or state.finished then return end
+        state.finished = true
+        G.bears[state.bear], G.targets[state.target] = nil, nil
+        PauseTimer(state.timer)
+        DestroyTimer(state.timer)
+        if GetUnitTypeId(state.bear) ~= 0 then
+            BlzSetUnitWeaponBooleanField(state.bear, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0, state.attack0)
+            BlzSetUnitWeaponBooleanField(state.bear, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1, state.attack1)
+        end
+        if GetUnitTypeId(state.target) ~= 0 then UnitRemoveAbility(state.target, buff) end
+        if GetUnitTypeId(state.dummy) ~= 0 then RemoveUnit(state.dummy) end
+        if GetItemTypeId(state.probe) ~= 0 then RemoveItem(state.probe) end
+    end
+
+    function G.Tick(state)
+        if state.finished then return end
+        local bear, target = state.bear, state.target
+        if not alive(bear) or not alive(target) or GetUnitTypeId(bear) ~= FourCC('n05V')
+            or GetOwningPlayer(bear) ~= state.owner or GetOwningPlayer(target) ~= state.targetOwner
+            or not IsUnitEnemy(target, GetOwningPlayer(bear))
+            or IsUnitHidden(bear) or IsUnitHidden(target) or IsUnitPaused(bear) or IsUnitPaused(target)
+            or IsUnitLoaded(bear) or IsUnitLoaded(target)
+            or IsUnitType(target, UNIT_TYPE_FLYING) or BlzIsUnitInvulnerable(target)
+            or GetUnitAbilityLevel(bear, ability) == 0 then
+            G.Release(state)
+            return
+        end
+        state.elapsed = state.elapsed + 0.03125
+        local hasBuff = GetUnitAbilityLevel(target, buff) > 0
+        if hasBuff then state.applied = true end
+        if state.elapsed >= state.duration or (not hasBuff and (state.applied or state.elapsed >= 0.25)) then
+            G.Release(state)
+            return
+        end
+        if not hasBuff then return end
+        local bx, by, tx, ty = GetUnitX(bear), GetUnitY(bear), GetUnitX(target), GetUnitY(target)
+        -- Teleports and abrupt forced movement break the grip, never drag across portals.
+        if distanceSquared(bx, by, state.bx, state.by) > 96 ^ 2
+            or distanceSquared(tx, ty, state.tx, state.ty) > 96 ^ 2
+            or distanceSquared(bx, by, tx, ty) > 256 ^ 2 then
+            G.Release(state)
+            return
+        end
+        local dx, dy = bx + state.offsetX - tx, by + state.offsetY - ty
+        local distance = math.sqrt(dx * dx + dy * dy)
+        if distance > 0.5 then
+            local step = math.min(distance, 24)
+            local nx, ny = tx + dx / distance * step, ty + dy / distance * step
+            -- Sample terrain and probe dynamic pathing without stopping the victim's orders.
+            for i = 1, 3 do
+                if IsTerrainPathable(tx + (nx - tx) * i / 3, ty + (ny - ty) * i / 3,
+                    PATHING_TYPE_WALKABILITY) then
+                    G.Release(state)
+                    return
+                end
+            end
+            SetItemPosition(state.probe, nx, ny)
+            if distanceSquared(GetItemX(state.probe), GetItemY(state.probe), nx, ny) > 1 then
+                G.Release(state)
+                return
+            end
+            -- SetUnitPosition cancels orders, which would prevent the victim fighting back.
+            SetUnitX(target, nx)
+            SetUnitY(target, ny)
+        end
+        state.bx, state.by, state.tx, state.ty = bx, by, GetUnitX(target), GetUnitY(target)
+        if state.ai and state.elapsed >= state.nextMove then
+            state.nextMove = state.elapsed + 0.5
+            IssuePointOrder(bear, 'move', state.retreatX, state.retreatY)
+        end
+    end
+
+    function G.Cast(bear, target)
+        if not G.ValidTarget(bear, target) then return false end
+        local bx, by, tx, ty = GetUnitX(bear), GetUnitY(bear), GetUnitX(target), GetUnitY(target)
+        local dummy = CreateUnit(GetOwningPlayer(bear), FourCC('nBgr'), bx, by, 0)
+        if dummy == nil then return false end
+        local probe = CreateItem(FourCC('ratf'), tx, ty)
+        if probe == nil then RemoveUnit(dummy); return false end
+        SetItemVisible(probe, false)
+        if not IssueTargetOrder(dummy, 'ensnare', target) then
+            RemoveUnit(dummy)
+            RemoveItem(probe)
+            return false
+        end
+        local state = {bear = bear, target = target, dummy = dummy, probe = probe, owner = GetOwningPlayer(bear),
+            targetOwner = GetOwningPlayer(target), bx = bx, by = by, tx = tx, ty = ty,
+            offsetX = tx - bx, offsetY = ty - by, elapsed = 0, timer = CreateTimer(),
+            duration = IsUnitType(target, UNIT_TYPE_HERO) and 1 or 5,
+            attack0 = BlzGetUnitWeaponBooleanField(bear, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0),
+            attack1 = BlzGetUnitWeaponBooleanField(bear, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1)}
+        G.bears[bear], G.targets[target] = state, state
+        BlzSetUnitWeaponBooleanField(bear, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0, false)
+        BlzSetUnitWeaponBooleanField(bear, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1, false)
+        TimerStart(state.timer, 0.03125, true, function() G.Tick(state) end)
+        UnitDamageTarget(bear, target, 30, false, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL,
+            WEAPON_TYPE_WHOKNOWS)
+        if state.finished then return true end
+        if not alive(target) then G.Release(state); return true end
+        if udg_AiControl and udg_AiControl[GetPlayerId(state.owner)] then
+            local length = math.sqrt((tx - bx) ^ 2 + (ty - by) ^ 2)
+            if length > 1 then
+                state.ai, state.nextMove = true, 0.5
+                state.retreatX, state.retreatY = bx - (tx - bx) / length * 350, by - (ty - by) / length * 350
+                IssuePointOrder(bear, 'move', state.retreatX, state.retreatY)
+            end
+        end
+        return true
+    end
+
+    function G.AiCast(bear, target)
+        return G.ValidTarget(bear, target) and IssueTargetOrder(bear, 'ensnare', target)
+    end
+
+    function G.Init()
+        if G.initialized then return end
+        G.initialized = true
+        local spell = CreateTrigger()
+        TriggerRegisterAnyUnitEventBJ(spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+        TriggerAddAction(spell, function()
+            if GetSpellAbilityId() ~= ability then return end
+            local bear = GetTriggerUnit()
+            if not G.Cast(bear, GetSpellTargetUnit()) then
+                BlzEndUnitAbilityCooldown(bear, ability)
+                DisplayTextToPlayer(GetOwningPlayer(bear), 0, 0,
+                    '|cffef8173Хватка требует наземного вражеского бойца рядом. Здания и механизмы не подходят.|r')
+            end
+        end)
+        local death = CreateTrigger()
+        TriggerRegisterAnyUnitEventBJ(death, EVENT_PLAYER_UNIT_DEATH)
+        TriggerAddAction(death, function()
+            local unit = GetTriggerUnit()
+            G.Release(G.bears[unit] or G.targets[unit])
+        end)
+    end
 end
 --===========================================================================
 -- Trigger: KillLoa

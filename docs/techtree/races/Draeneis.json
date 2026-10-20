@@ -588,6 +588,14 @@
     "RDr5"
    ]
   },
+  "ADr6": {
+   "type": "ability",
+   "name": "Память Аргуса",
+   "levels": 1,
+   "requires": [
+    "RDr6"
+   ]
+  },
   "AInv": {
    "type": "ability",
    "name": "Инвентарь",
@@ -1119,6 +1127,17 @@
     "h017"
    ],
    "time": 45
+  },
+  "RDr6": {
+   "type": "upgrade",
+   "name": "Память Аргуса",
+   "gold": 350,
+   "lumber": 300,
+   "levels": 1,
+   "requires": [
+    "h017"
+   ],
+   "time": 50
   },
   "Reuv": {
    "type": "upgrade",
@@ -1664,6 +1683,7 @@
   "ADr2 requires RDr2",
   "ADr3 requires RDr3",
   "ADr5 requires RDr5",
+  "ADr6 requires RDr6",
   "Aihn requires Rhpm",
   "Ault requires Reuv",
   "H05K has-ability AInv",
@@ -1720,6 +1740,7 @@
   "RDr3 requires h017",
   "RDr4 requires h017",
   "RDr5 requires h017",
+  "RDr6 requires h017",
   "Rhac requires hkee",
   "e000 has-ability ADr1",
   "e000 has-ability Ashm",
@@ -1948,6 +1969,7 @@
   "h05A researches R02J",
   "h05A researches R02K",
   "h05A researches RDr5",
+  "h05A researches RDr6",
   "h05A researches Rgfo",
   "h05A trains h05D",
   "h05A trains h05E",
@@ -1960,6 +1982,7 @@
   "h05D has-ability A060",
   "h05D has-ability A061",
   "h05D has-ability A1C6",
+  "h05D has-ability ADr6",
   "h05D has-ability Aihn",
   "h05D requires h017",
   "h05D researches R023",
@@ -1967,12 +1990,14 @@
   "h05D researches R02J",
   "h05D researches R02K",
   "h05D researches R02Q",
+  "h05D researches RDr6",
   "h05E has-ability A05V",
   "h05E has-ability A05Y",
   "h05E has-ability A05Z",
   "h05E has-ability A1C4",
   "h05E has-ability A1C5",
   "h05E has-ability A1C6",
+  "h05E has-ability ADr6",
   "h05E has-ability Aihn",
   "h05E requires h017",
   "h05E researches R023",
@@ -1980,11 +2005,13 @@
   "h05E researches R02J",
   "h05E researches R02K",
   "h05E researches R02Q",
+  "h05E researches RDr6",
   "n005 has-ability A05V",
   "n005 has-ability A063",
   "n005 has-ability A1C6",
   "n005 has-ability A1C8",
   "n005 has-ability ADr5",
+  "n005 has-ability ADr6",
   "n005 requires h017",
   "n005 researches R024",
   "n005 researches R02G",
@@ -1993,6 +2020,7 @@
   "n005 researches R02P",
   "n005 researches R02Q",
   "n005 researches RDr5",
+  "n005 researches RDr6",
   "n00P has-ability A066",
   "n00P has-ability A067",
   "n00P requires h016",

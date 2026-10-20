@@ -164,6 +164,12 @@
    "levels": 3,
    "hero_level_req": 1
   },
+  "APb1": {
+   "type": "ability",
+   "name": "Пьянящая настойка",
+   "hotkey": "V",
+   "levels": 1
+  },
   "Abds": {
    "type": "ability",
    "name": "Слабое рассеивание чумы",
@@ -1342,6 +1348,7 @@
   "pa14 researches PA93",
   "pa14 researches Rhfl",
   "pa14 researches Rhfs",
+  "pa22 has-ability APb1",
   "pa22 has-ability PA61",
   "pa22 has-ability PA67",
   "pa22 has-ability PA68",

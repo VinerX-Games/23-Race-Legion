@@ -148,6 +148,8 @@ RegisterAiRace("Naga", {
 
                 {FourCC('nnsg'), FourCC('R0FR'), 6}, {FourCC('nnsg'), FourCC('Rnen'), 6},
 
+                {FourCC('n055'), FourCC('R0FP'), 1},  -- Гарпун
+
             }},
 
             { at = 17, action = "tryBuy" },
@@ -167,6 +169,12 @@ RegisterAiRace("Naga", {
         pre = {
 
             { order = "blight", chance = 1, type = "immediate", terrain = "water", notAbil = FourCC('S00E'), ret = true },
+
+        },
+
+        [FourCC('n056')] = {
+
+            { order = "acidbomb", chance = 2, type = "naga_harpoon", needAbil = FourCC('AMh1') },
 
         },
 

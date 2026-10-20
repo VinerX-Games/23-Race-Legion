@@ -15,6 +15,7 @@ FRAMEPOINT_TOPLEFT='tl'; FRAMEPOINT_BOTTOMLEFT='bl'; FRAMEPOINT_BOTTOMRIGHT='br'
 TEXT_JUSTIFY_TOP=1; TEXT_JUSTIFY_LEFT=2; TEXT_JUSTIFY_MIDDLE=3; TEXT_JUSTIFY_CENTER=4
 FRAMEEVENT_CONTROL_CLICK='click'; ORIGIN_FRAME_GAME_UI='gameui'
 bj_MAX_PLAYER_SLOTS=24
+MINIMAP_W=0.16; MINIMAP_H=0.141   -- из 59_ui_setup.lua
 function FourCC(s) return s end
 function Player(i) return i end
 function GetPlayerId(p) return p end
@@ -46,6 +47,8 @@ function BlzFrameSetText(f,t) f.text=t end
 function BlzFrameSetTextAlignment() end
 function BlzFrameSetTooltip(b,t) b.tip=t end
 function BlzFrameSetVisible(f,v) f.visible=v end
+function BlzFrameGetChild(f,i) f.kids=f.kids or {}; f.kids[i]=f.kids[i] or frame('child', i); return f.kids[i] end
+function BlzFrameSetScale(f,v) f.scale=v end
 function BlzFrameSetEnable() end
 function BlzHideOriginFrames(v) uiHidden=v end
 function CreateTrigger() return {} end
@@ -99,6 +102,14 @@ class RacePickerTests(unittest.TestCase):
         self.assertGreaterEqual(self.lua.eval('buttons[1].y'), 0.0)
         self.pick('A02A')
         self.assertLess(self.lua.eval('buttons[1].y'), 0.0)
+
+    def test_dead_zone_shrunk_while_picking_and_restored(self):
+        # ConsoleUI child 5 блокирует клики над командной картой даже скрытым.
+        self.lua.execute('deadZone = BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 5)')
+        self.spawn_circle(0)
+        self.assertEqual(self.lua.eval('deadZone.scale'), 0.001)
+        self.pick('A02A')
+        self.assertEqual(self.lua.eval('deadZone.scale'), 1.0)
 
     def test_layout_fits_4_3_and_odd_groups_are_staggered(self):
         self.spawn_circle(0)

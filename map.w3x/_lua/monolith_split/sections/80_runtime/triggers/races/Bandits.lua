@@ -864,3 +864,70 @@ function InitTrig_AreaOfDeath2()
         Trig_AreaOfDeath2_Actions()
     end)
 end
+
+--===========================================================================
+-- Бандиты: Делёж добычи атамана. Игрок получает золото за каждого вражеского юнита,
+-- убитого его войсками рядом с его атаманом (один раз за убийство, сколько бы атаманов
+-- ни стояло рядом).
+--===========================================================================
+BanditLoot = {
+    ids = {loot = FourCC('ABn1'), tech = FourCC('RBn1')},
+    gold = 1, radius = 800,
+}
+
+function BanditLoot.Alive(u)
+    return u ~= nil and GetUnitTypeId(u) ~= 0 and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+end
+
+function BanditLoot.Countable(victim, owner)
+    return IsUnitEnemy(victim, owner) and not IsUnitType(victim, UNIT_TYPE_STRUCTURE)
+        and not IsUnitType(victim, UNIT_TYPE_WARD) and not IsUnitIllusion(victim)
+end
+
+function BanditLoot.HasAtaman(owner, x, y)
+    local group = CreateGroup()
+    GroupEnumUnitsInRange(group, x, y, BanditLoot.radius, nil)
+    local found = false
+    for i = 0, BlzGroupGetSize(group) - 1 do
+        local u = BlzGroupUnitAt(group, i)
+        if GetOwningPlayer(u) == owner and GetUnitAbilityLevel(u, BanditLoot.ids.loot) > 0
+            and BanditLoot.Alive(u) and not IsUnitIllusion(u) then
+            found = true
+            break
+        end
+    end
+    DestroyGroup(group)
+    return found
+end
+
+function BanditLoot.Death()
+    local killer, victim = GetKillingUnit(), GetTriggerUnit()
+    if killer == nil or GetUnitTypeId(killer) == 0 then return end
+    local owner = GetOwningPlayer(killer)
+    if GetPlayerTechCount(owner, BanditLoot.ids.tech, true) == 0
+        or not BanditLoot.Countable(victim, owner) then return end
+    local x, y = GetUnitX(victim), GetUnitY(victim)
+    if not BanditLoot.HasAtaman(owner, x, y) then return end
+    SetPlayerState(owner, PLAYER_STATE_RESOURCE_GOLD,
+        GetPlayerState(owner, PLAYER_STATE_RESOURCE_GOLD) + BanditLoot.gold)
+    -- Текст создаётся у всех игроков, виден только получателю: хендлы остаются синхронными.
+    local tag = CreateTextTag()
+    SetTextTagText(tag, "|cffffcc00+" .. BanditLoot.gold .. "|r", 0.023)
+    SetTextTagPos(tag, x, y, 40)
+    SetTextTagVelocity(tag, 0, 0.03)
+    SetTextTagPermanent(tag, false)
+    SetTextTagLifespan(tag, 2)
+    SetTextTagFadepoint(tag, 1)
+    SetTextTagVisibility(tag, GetLocalPlayer() == owner)
+end
+
+function BanditLoot.Init()
+    if BanditLoot.deathTrigger ~= nil then return end
+    BanditLoot.deathTrigger = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(BanditLoot.deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddAction(BanditLoot.deathTrigger, BanditLoot.Death)
+end
+
+function InitTrig_BanditLoot()
+    BanditLoot.Init()
+end

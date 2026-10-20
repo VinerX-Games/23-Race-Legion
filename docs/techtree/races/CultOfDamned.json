@@ -179,8 +179,10 @@
   "A1HE": {
    "type": "ability",
    "name": "Поток льда",
+   "hero": true,
    "hotkey": "W",
-   "levels": 4
+   "levels": 4,
+   "hero_level_req": 1
   },
   "A1HH": {
    "type": "ability",

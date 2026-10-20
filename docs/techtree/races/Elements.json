@@ -1058,10 +1058,10 @@
    "name": "Огненный голем",
    "base": "nggr",
    "time": 55,
-   "gold": 295,
+   "gold": 325,
    "hotkey": "R",
    "hp": 1250,
-   "lumber": 95,
+   "lumber": 125,
    "requires": [
     "h0ES"
    ]
@@ -1071,10 +1071,10 @@
    "name": "Ледяной Голем",
    "base": "nggr",
    "time": 55,
-   "gold": 290,
+   "gold": 320,
    "hotkey": "R",
    "hp": 1250,
-   "lumber": 90,
+   "lumber": 120,
    "requires": [
     "h0ES"
    ]

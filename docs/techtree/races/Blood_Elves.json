@@ -908,7 +908,12 @@
    "gold_per_level": 250,
    "lumber": 250,
    "lumber_per_level": 250,
-   "time": 35
+   "levels": 3,
+   "requires": [
+    "hkee"
+   ],
+   "time": 35,
+   "time_per_level": 15
   },
   "R01E": {
    "type": "upgrade",
@@ -1988,6 +1993,7 @@
   "R006 requires hcas",
   "R007 requires hcas",
   "R00V requires hkee",
+  "R01D requires hkee",
   "R01E requires hkee",
   "R01F requires hkee",
   "R01G requires hkee",

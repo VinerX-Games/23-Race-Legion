@@ -453,6 +453,16 @@
    "levels": 1,
    "hero_level_req": 1
   },
+  "ABgr": {
+   "type": "ability",
+   "name": "Медвежья хватка",
+   "hotkey": "W",
+   "levels": 1,
+   "requires": [
+    "R0I6"
+   ],
+   "requires_amount": 2
+  },
   "AInv": {
    "type": "ability",
    "name": "Инвентарь",
@@ -1494,6 +1504,7 @@
   "A1P9 requires o06I",
   "A1PA requires o06J",
   "A1PC requires o06J",
+  "ABgr requires R0I6",
   "Aorb requires Rorb",
   "O04G has-ability A1CA",
   "O04G has-ability AInv",
@@ -1642,7 +1653,7 @@
   "n05U researches R0IE",
   "n05U researches R0IX",
   "n05V has-ability A1CR",
-  "n05V has-ability A1CS",
+  "n05V has-ability ABgr",
   "n05V researches R0HZ",
   "n05V researches R0I0",
   "n05V researches R0I6",

@@ -212,17 +212,6 @@
    "name": "Вязкая слизь",
    "levels": 1
   },
-  "A0KQ": {
-   "type": "ability",
-   "name": "Волна исцеления",
-   "hotkey": "E",
-   "levels": 1,
-   "hero_level_req": 1,
-   "requires": [
-    "R088"
-   ],
-   "requires_amount": 2
-  },
   "A0KR": {
    "type": "ability",
    "name": "Сон",
@@ -439,6 +428,16 @@
    "hotkey": "W",
    "levels": 4,
    "hero_level_req": 1
+  },
+  "ASrc": {
+   "type": "ability",
+   "name": "Спасительный кокон",
+   "hotkey": "E",
+   "levels": 1,
+   "requires": [
+    "R088"
+   ],
+   "requires_amount": 2
   },
   "AUau": {
    "type": "ability",
@@ -1361,6 +1360,14 @@
    "hp": 2000,
    "lumber": 4500
   },
+  "nSrc": {
+   "type": "unit",
+   "name": "Спасительный кокон",
+   "base": "hfoo",
+   "time": 20,
+   "hotkey": "F",
+   "hp": 300
+  },
   "o015": {
    "type": "building",
    "name": "Храм Аз'Акиров",
@@ -1469,10 +1476,10 @@
   "A00B requires R006",
   "A00G requires R005",
   "A0J9 requires R086",
-  "A0KQ requires R088",
   "A0KR requires R088",
   "A1B7 requires R0BV",
   "A1KD requires R08A",
+  "ASrc requires R088",
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
@@ -1604,11 +1611,11 @@
   "e01O requires o017",
   "e01Q requires e01K",
   "e01R has-ability A0IW",
-  "e01R has-ability A0KQ",
   "e01R has-ability A0KR",
   "e01R has-ability A0SW",
   "e01R has-ability A0SX",
   "e01R has-ability A0ZU",
+  "e01R has-ability ASrc",
   "e01R researches R07X",
   "e01R researches R07Y",
   "e01R researches R07Z",

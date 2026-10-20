@@ -369,7 +369,7 @@ index 092a815..d09a2b6 100644
 +	}
  }
 diff --git a/src/cli/object_data_cli.cpp b/src/cli/object_data_cli.cpp
-index 519c57b..27733c0 100644
+index 519c57b..7ab082f 100644
 --- a/src/cli/object_data_cli.cpp
 +++ b/src/cli/object_data_cli.cpp
 @@ -31,6 +31,26 @@ import PlacedUnits;
@@ -415,7 +415,7 @@ index 519c57b..27733c0 100644
  std::string display_name(const slk::SLK& slk, const std::string& id, const TriggerStrings& ts) {
  	for (const char* col : {"name", "editorname", "name1", "bufftip"}) {
  		if (slk.column_headers.contains(col)) {
-@@ -2817,6 +2846,88 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
+@@ -2817,6 +2846,97 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
  		return error(std::string("failed to load object data: ") + e.what());
  	}
  
@@ -454,6 +454,15 @@ index 519c57b..27733c0 100644
 +			const auto table = type_for(type);
 +			for (const auto& [id, row] : table->slk->row_headers) {
 +				++checked;
++				if (const auto shadow = table->slk->shadow_data.find(id); shadow != table->slk->shadow_data.end()) {
++					if (const auto old = shadow->second.find("oldid"); old != shadow->second.end()) {
++						const auto base = table->slk->shadow_data.find(old->second);
++						if (base != table->slk->shadow_data.end() && base->second.contains("oldid")) {
++							finding("error", type, id, "oldid", old->second,
++									"custom object based on another custom object; the game cannot load it");
++						}
++					}
++				}
 +				for (const auto& [field, target] : references) {
 +					const auto raw = table->slk->data<std::string>(field, id);
 +					for (const auto& reference : split_csv(raw)) {
@@ -504,7 +513,7 @@ index 519c57b..27733c0 100644
  	const auto type_opt = args.get("type");
  	if (!type_opt) {
  		return error("missing required option: --type <unit|item|ability|doodad|destructible|upgrade|buff>");
-@@ -2973,11 +3084,18 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
+@@ -2973,11 +3093,18 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
  		}
  		const std::string field = to_lower(*field_opt);
  		const std::string& id = *id_opt;
@@ -525,7 +534,7 @@ index 519c57b..27733c0 100644
  			ts.save();
  		} else {
  			slk.set_shadow_data(field, id, *value_opt);
-@@ -2985,7 +3103,7 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
+@@ -2985,7 +3112,7 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
  		const std::string new_value = old_value.starts_with("TRIGSTR") ? *value_opt : slk.data<std::string>(field, id);
  
  		// Persist the modification table back into the map folder.
@@ -534,7 +543,34 @@ index 519c57b..27733c0 100644
  		{
  			JsonObject log;
  			log.str("ts", changelog_ts());
-@@ -3037,7 +3155,7 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
+@@ -3019,25 +3146,29 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
+ 		if (!source_opt) return error("missing required option: --source <rawcode>");
+ 		if (!new_id_opt) return error("missing required option: --new-id <rawcode>");
+ 		if (new_id_opt->size() != 4) return error("--new-id must be exactly 4 characters, got: " + *new_id_opt);
+-		if (!slk.base_data.contains(*source_opt) && !slk.shadow_data.contains(*source_opt)) {
+-			if (slk.row_headers.contains(*source_opt)) {
+-				return error("copy-object requires source to be a base-game object, not a custom object. Use get-object to check base_id.");
+-			}
++		if (!slk.base_data.contains(*source_opt)) {
+ 			return error("source object not found in type " + *type_opt + ": " + *source_opt);
+ 		}
+ 		if (slk.row_headers.contains(*new_id_opt)) {
+ 			return error("new-id already exists in type " + *type_opt + ": " + *new_id_opt);
+ 		}
+ 
++		// A custom source keeps its base in "oldid". Copying its shadow data (like the editor's
++		// copy/paste) inherits both its fields and its base-game id; otherwise the clone would be
++		// written with a custom object as its base, which the game cannot load.
++		const auto source_shadow = slk.shadow_data.find(*source_opt);
++		const bool custom_source = source_shadow != slk.shadow_data.end() && source_shadow->second.contains("oldid");
++		const std::string base_id = custom_source ? source_shadow->second.at("oldid") : *source_opt;
++
+ 		const bool dry_run = args.has_flag("dry-run");
+ 		if (!dry_run) {
+-			slk.copy_row(*source_opt, *new_id_opt, false);
++			slk.copy_row(*source_opt, *new_id_opt, custom_source);
+ 
+ 			if (const auto name_opt = args.get("name")) {
  				slk.set_shadow_data("name", *new_id_opt, *name_opt);
  			}
  
@@ -543,7 +579,16 @@ index 519c57b..27733c0 100644
  			{
  				JsonObject log;
  				log.str("ts", changelog_ts());
-@@ -3125,7 +3243,7 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
+@@ -3057,6 +3188,8 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
+ 		o.str("type", *type_opt);
+ 		o.str("source", *source_opt);
+ 		o.str("new_id", *new_id_opt);
++		o.str("base_id", base_id);
++		o.boolean("inherited_fields", custom_source);
+ 		if (const auto name_opt3 = args.get("name")) o.str("name", *name_opt3);
+ 		o.boolean("dry_run", dry_run);
+ 		o.str("written", dry_run ? "" : info->mod_file);
+@@ -3125,7 +3258,7 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
  		changed_arr += "]";
  
  		if (!dry_run) {
@@ -552,7 +597,7 @@ index 519c57b..27733c0 100644
  			ts.save();
  			{
  				JsonObject log;
-@@ -3230,6 +3348,11 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
+@@ -3230,6 +3363,11 @@ export std::string hivewe_object_command(int argc, char* argv[], const std::stri
  		if (const auto f = args.get("fields")) {
  			use_fields = split_csv(*f);
  			for (auto& col : use_fields) col = to_lower(col);
@@ -564,6 +609,27 @@ index 519c57b..27733c0 100644
  		} else {
  			if (type_name == "unit") {
  				use_fields = {"name", "editorsuffix", "goldcost", "lumbercost", "foodcost", "hitpoints",
+diff --git a/src/file_formats/slk.ixx b/src/file_formats/slk.ixx
+index 8951395..9eecb77 100644
+--- a/src/file_formats/slk.ixx
++++ b/src/file_formats/slk.ixx
+@@ -486,10 +486,14 @@ namespace slk {
+ 			assert(base_data.contains(row_header));
+ 			assert(!base_data.contains(new_row_header));
+ 
+-			base_data[new_row_header] = base_data.at(row_header);
++			// Copy first: inserting the new key may reallocate the dense map's value storage
++			// and invalidate a reference obtained by at().
++			auto base_row = base_data.at(row_header);
++			base_data[new_row_header] = std::move(base_row);
+ 
+ 			if (copy_shadow_data && shadow_data.contains(row_header)) {
+-				shadow_data[new_row_header] = shadow_data.at(row_header);
++				auto shadow_row = shadow_data.at(row_header);
++				shadow_data[new_row_header] = std::move(shadow_row);
+ 			}
+ 
+ 			size_t index = row_headers.size();
 diff --git a/src/utilities/modification_tables.ixx b/src/utilities/modification_tables.ixx
 index 307fe3c..4ea6578 100644
 --- a/src/utilities/modification_tables.ixx

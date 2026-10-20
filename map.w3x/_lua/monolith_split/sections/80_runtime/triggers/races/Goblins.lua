@@ -299,14 +299,15 @@ function Trig_Potreblenie_Func005A()
     SetUnitAbilityLevelSwapped(FourCC('A0A5'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04N'), GetOwningPlayer(GetTriggerUnit())) + 1)
 end
 function Trig_Potreblenie_Actions()
+    local p = GetOwningPlayer(GetTriggerUnit())
     if Trig_Potreblenie_Func001C() then
-        SetPlayerAbilityAvailableBJ(false, FourCC('A0A5'), GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0A5'), p)
         return
     end
-    udg_Boolexpr = CachedFilter(Trig_Potreblenie_Func002002)
-    GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
-    ForGroupBJ(udg_LocalOtrad2, Trig_Potreblenie_Func005A)
-    GroupClear(udg_LocalOtrad2)
+    local g = CreateGroup()
+    GroupEnumUnitsOfPlayer(g, p, CachedFilter(Trig_Potreblenie_Func002002))
+    ForGroupBJ(g, Trig_Potreblenie_Func005A)
+    DestroyGroup(g)
 end
 --===========================================================================
 function InitTrig_Potreblenie()
@@ -320,10 +321,17 @@ end
 -- Trigger: PotreblenieTrain
 --===========================================================================
 function Trig_PotreblenieTrain_Conditions()
-    return GetUnitAbilityLevelSwapped(FourCC('A0A5'), GetTriggerUnit()) >= 1
+    return GetUnitAbilityLevelSwapped(FourCC('A0A5'), GetTrainedUnit()) >= 1
 end
 function Trig_PotreblenieTrain_Actions()
-    SetUnitAbilityLevelSwapped(FourCC('A0A5'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04N'), GetOwningPlayer(GetTriggerUnit())) + 1)
+    local u = GetTrainedUnit()
+    local p = GetOwningPlayer(u)
+    local level = GetPlayerTechCountSimple(FourCC('R04N'), p)
+    if level >= 6 then
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0A5'), p)
+    else
+        SetUnitAbilityLevelSwapped(FourCC('A0A5'), u, level + 1)
+    end
 end
 --===========================================================================
 function InitTrig_PotreblenieTrain()
@@ -346,17 +354,18 @@ function Trig_BracResearch_Func002002()
     return GetUnitAbilityLevelSwapped(FourCC('A0A6'), GetFilterUnit()) ~= 0
 end
 function Trig_BracResearch_Func005A()
-    SetUnitAbilityLevelSwapped(FourCC('A0A6'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R05W'), GetOwningPlayer(GetTriggerUnit())))
+    SetUnitAbilityLevelSwapped(FourCC('A0A6'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R05W'), GetOwningPlayer(GetTriggerUnit())) + 1)
 end
 function Trig_BracResearch_Actions()
+    local p = GetOwningPlayer(GetTriggerUnit())
     if Trig_BracResearch_Func001C() then
-        SetPlayerAbilityAvailableBJ(false, FourCC('A0A6'), GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0A6'), p)
         return
     end
-    udg_Boolexpr = CachedFilter(Trig_BracResearch_Func002002)
-    GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
-    ForGroupBJ(udg_LocalOtrad2, Trig_BracResearch_Func005A)
-    GroupClear(udg_LocalOtrad2)
+    local g = CreateGroup()
+    GroupEnumUnitsOfPlayer(g, p, CachedFilter(Trig_BracResearch_Func002002))
+    ForGroupBJ(g, Trig_BracResearch_Func005A)
+    DestroyGroup(g)
 end
 --===========================================================================
 function InitTrig_BracResearch()
@@ -370,10 +379,17 @@ end
 -- Trigger: BracTrain
 --===========================================================================
 function Trig_BracTrain_Conditions()
-    return GetUnitAbilityLevelSwapped(FourCC('A0A6'), GetTriggerUnit()) >= 1
+    return GetUnitAbilityLevelSwapped(FourCC('A0A6'), GetTrainedUnit()) >= 1
 end
 function Trig_BracTrain_Actions()
-    SetUnitAbilityLevelSwapped(FourCC('A0A6'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R05W'), GetOwningPlayer(GetTriggerUnit())))
+    local u = GetTrainedUnit()
+    local p = GetOwningPlayer(u)
+    local level = GetPlayerTechCountSimple(FourCC('R05W'), p)
+    if level >= 6 then
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0A6'), p)
+    else
+        SetUnitAbilityLevelSwapped(FourCC('A0A6'), u, level + 1)
+    end
 end
 --===========================================================================
 function InitTrig_BracTrain()
@@ -396,17 +412,18 @@ function Trig_PodjogResearch_Func002002()
     return GetUnitAbilityLevelSwapped(FourCC('A0AR'), GetFilterUnit()) ~= 0
 end
 function Trig_PodjogResearch_Func005A()
-    SetUnitAbilityLevelSwapped(FourCC('A0AR'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04R'), GetOwningPlayer(GetTriggerUnit())))
+    SetUnitAbilityLevelSwapped(FourCC('A0AR'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04R'), GetOwningPlayer(GetTriggerUnit())) + 1)
 end
 function Trig_PodjogResearch_Actions()
+    local p = GetOwningPlayer(GetTriggerUnit())
     if Trig_PodjogResearch_Func001C() then
-        SetPlayerAbilityAvailableBJ(false, FourCC('A0AR'), GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0AR'), p)
         return
     end
-    udg_Boolexpr = CachedFilter(Trig_PodjogResearch_Func002002)
-    GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
-    ForGroupBJ(udg_LocalOtrad2, Trig_PodjogResearch_Func005A)
-    GroupClear(udg_LocalOtrad2)
+    local g = CreateGroup()
+    GroupEnumUnitsOfPlayer(g, p, CachedFilter(Trig_PodjogResearch_Func002002))
+    ForGroupBJ(g, Trig_PodjogResearch_Func005A)
+    DestroyGroup(g)
 end
 --===========================================================================
 function InitTrig_PodjogResearch()
@@ -423,7 +440,14 @@ function Trig_PodjogTrain_Conditions()
     return GetUnitAbilityLevelSwapped(FourCC('A0AR'), GetTrainedUnit()) >= 1
 end
 function Trig_PodjogTrain_Actions()
-    SetUnitAbilityLevelSwapped(FourCC('A0AR'), GetTrainedUnit(), GetPlayerTechCountSimple(FourCC('R04R'), GetOwningPlayer(GetTriggerUnit())))
+    local u = GetTrainedUnit()
+    local p = GetOwningPlayer(u)
+    local level = GetPlayerTechCountSimple(FourCC('R04R'), p)
+    if level >= 6 then
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0AR'), p)
+    else
+        SetUnitAbilityLevelSwapped(FourCC('A0AR'), u, level + 1)
+    end
 end
 --===========================================================================
 function InitTrig_PodjogTrain()
@@ -449,14 +473,15 @@ function Trig_PodruvResearc_Func005A()
     SetUnitAbilityLevelSwapped(FourCC('A0A9'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04Q'), GetOwningPlayer(GetTriggerUnit())) + 1)
 end
 function Trig_PodruvResearc_Actions()
+    local p = GetOwningPlayer(GetTriggerUnit())
     if Trig_PodruvResearc_Func001C() then
-        SetPlayerAbilityAvailableBJ(false, FourCC('A0A9'), GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0A9'), p)
         return
     end
-    udg_Boolexpr = CachedFilter(Trig_PodruvResearc_Func002002)
-    GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
-    ForGroupBJ(udg_LocalOtrad2, Trig_PodruvResearc_Func005A)
-    GroupClear(udg_LocalOtrad2)
+    local g = CreateGroup()
+    GroupEnumUnitsOfPlayer(g, p, CachedFilter(Trig_PodruvResearc_Func002002))
+    ForGroupBJ(g, Trig_PodruvResearc_Func005A)
+    DestroyGroup(g)
 end
 --===========================================================================
 function InitTrig_PodruvResearc()
@@ -473,7 +498,14 @@ function Trig_PodruvTrain_Conditions()
     return GetUnitAbilityLevelSwapped(FourCC('A0A9'), GetTrainedUnit()) >= 1
 end
 function Trig_PodruvTrain_Actions()
-    SetUnitAbilityLevelSwapped(FourCC('A0A9'), GetTrainedUnit(), GetPlayerTechCountSimple(FourCC('R04Q'), GetOwningPlayer(GetTriggerUnit())))
+    local u = GetTrainedUnit()
+    local p = GetOwningPlayer(u)
+    local level = GetPlayerTechCountSimple(FourCC('R04Q'), p)
+    if level >= 6 then
+        SetPlayerAbilityAvailableBJ(false, FourCC('A0A9'), p)
+    else
+        SetUnitAbilityLevelSwapped(FourCC('A0A9'), u, level + 1)
+    end
 end
 --===========================================================================
 function InitTrig_PodruvTrain()
