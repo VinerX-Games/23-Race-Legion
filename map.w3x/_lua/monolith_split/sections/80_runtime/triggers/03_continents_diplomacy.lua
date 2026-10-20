@@ -492,7 +492,7 @@ end
 --===========================================================================
 function InitTrig_EasternOn_Set()
     gg_trg_EasternOn_Set=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_EasternOn_Set, Player(0), " .. ek", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_EasternOn_Set, Player(0), "+ek", true)
     TriggerAddAction(gg_trg_EasternOn_Set, Trig_EasternOn_Set_Actions)
 end
 --===========================================================================
@@ -572,7 +572,7 @@ end
 --===========================================================================
 function InitTrig_KalimOn_2_set()
     gg_trg_KalimOn_2_set=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_KalimOn_2_set, Player(0), " .. ka", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_KalimOn_2_set, Player(0), "+ka", true)
     TriggerAddAction(gg_trg_KalimOn_2_set, Trig_KalimOn_2_set_Actions)
 end
 --===========================================================================
@@ -645,7 +645,7 @@ end
 --===========================================================================
 function InitTrig_Outland_3_set()
     gg_trg_Outland_3_set=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Outland_3_set, Player(0), " .. ot", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Outland_3_set, Player(0), "+ot", true)
     TriggerAddAction(gg_trg_Outland_3_set, Trig_Outland_3_set_Actions)
 end
 --===========================================================================
@@ -725,7 +725,7 @@ end
 --===========================================================================
 function InitTrig_NordOn_4_set()
     gg_trg_NordOn_4_set=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_NordOn_4_set, Player(0), " .. nd", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_NordOn_4_set, Player(0), "+nd", true)
     TriggerAddAction(gg_trg_NordOn_4_set, Trig_NordOn_4_set_Actions)
 end
 --===========================================================================
@@ -797,7 +797,7 @@ end
 --===========================================================================
 function InitTrig_Pandaria_5_set()
     gg_trg_Pandaria_5_set=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Pandaria_5_set, Player(0), " .. pd", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Pandaria_5_set, Player(0), "+pd", true)
     TriggerAddAction(gg_trg_Pandaria_5_set, Trig_Pandaria_5_set_Actions)
 end
 --===========================================================================
@@ -869,7 +869,7 @@ end
 --===========================================================================
 function InitTrig_Argus_6_set()
     gg_trg_Argus_6_set=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Argus_6_set, Player(0), " .. ar", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Argus_6_set, Player(0), "+ar", true)
     TriggerAddAction(gg_trg_Argus_6_set, Trig_Argus_6_set_Actions)
 end
 --===========================================================================
@@ -941,7 +941,7 @@ end
 --===========================================================================
 function InitTrig_BrokenIsled_7_set()
     gg_trg_BrokenIsled_7_set=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_BrokenIsled_7_set, Player(0), " .. bi", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_BrokenIsled_7_set, Player(0), "+bi", true)
     TriggerAddAction(gg_trg_BrokenIsled_7_set, Trig_BrokenIsled_7_set_Actions)
 end
 --===========================================================================
@@ -1055,7 +1055,7 @@ end
 --===========================================================================
 function InitTrig_StartDarkMode_Command()
     gg_trg_StartDarkMode_Command=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_StartDarkMode_Command, Player(0), " - dmon", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_StartDarkMode_Command, Player(0), "-dmon", true)
     TriggerAddAction(gg_trg_StartDarkMode_Command, Trig_StartDarkMode_Command_Actions)
 end
 --===========================================================================
@@ -1071,7 +1071,7 @@ end
 --===========================================================================
 function InitTrig_OfDarkModeCommand()
     gg_trg_OfDarkModeCommand=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_OfDarkModeCommand, Player(0), " - dmoff", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_OfDarkModeCommand, Player(0), "-dmoff", true)
     TriggerAddAction(gg_trg_OfDarkModeCommand, Trig_OfDarkModeCommand_Actions)
 end
 --===========================================================================
@@ -1431,7 +1431,7 @@ end
 --===========================================================================
 function InitTrig_ChangeTimerHost()
     gg_trg_ChangeTimerHost=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_ChangeTimerHost, Player(0), " - ", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_ChangeTimerHost, Player(0), "-timer", false)
     TriggerAddAction(gg_trg_ChangeTimerHost, Trig_ChangeTimerHost_Actions)
 end
 --===========================================================================

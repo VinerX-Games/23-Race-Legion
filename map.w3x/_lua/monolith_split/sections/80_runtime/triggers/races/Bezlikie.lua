@@ -15,6 +15,21 @@ end
 function Trig_Sluga_qqgsarona_Func017A()
     UnitShareVisionBJ(true, gg_unit_n03A_0657, GetEnumPlayer())
 end
+-- Щупальца вокруг Йогг`Сарона (n03B/n03C) переходят новому хозяину вместе с ним.
+function YoggTentaclesTransfer(p)
+    local g= CreateGroup()
+    local u
+    GroupEnumUnitsInRange(g, GetUnitX(gg_unit_n03A_0657), GetUnitY(gg_unit_n03A_0657), 2000.0, nil)
+    while true do
+        u=FirstOfGroup(g)
+        if u == nil then break end
+        GroupRemoveUnit(g, u)
+        if (GetUnitTypeId(u) == FourCC('n03B') or GetUnitTypeId(u) == FourCC('n03C')) and GetOwningPlayer(u) == Player(PLAYER_NEUTRAL_AGGRESSIVE) then
+            SetUnitOwner(u, p, true)
+        end
+    end
+    DestroyGroup(g)
+end
 function Trig_Sluga_qqgsarona_Actions()
     SetUnitOwner(gg_unit_n03A_0657, GetOwningPlayer(GetSpellAbilityUnit()), true)
     RemoveUnit(gg_unit_n03C_0660)
@@ -25,6 +40,7 @@ function Trig_Sluga_qqgsarona_Actions()
     RemoveUnit(gg_unit_n03B_0665)
     RemoveUnit(gg_unit_n03B_0658)
     RemoveUnit(gg_unit_n03B_0659)
+    YoggTentaclesTransfer(GetOwningPlayer(GetSpellAbilityUnit()))
     ForForce(GetPlayersAll(), Trig_Sluga_qqgsarona_Func010A)
     -- --
     ForGroupDestroy(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), CachedFilter(Trig_Sluga_qqgsarona_Func012001002)), Trig_Sluga_qqgsarona_Func012A)

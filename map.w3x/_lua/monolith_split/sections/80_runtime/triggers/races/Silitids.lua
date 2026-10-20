@@ -293,58 +293,46 @@ end
 --===========================================================================
 -- Trigger: ChoseLich
 --===========================================================================
+-- «Выбрать личинки»: A0SW у Матери роя, A0T1 у ульев. Оба на базе Channel с одним приказом,
+-- поэтому при групповом касте событие приходит от каждого кастующего в один момент.
+-- Первый каст в тике очищает выделение, остальные добавляют личинок к нему (всего до 12).
+ChoseLichCount = {}
 function Trig_ChoseLich_Conditions()
+    local id = GetSpellAbilityId()
+    return id == FourCC('A0SW') or id == FourCC('A0T1')
 end
 function HaveSpell()
     return GetUnitAbilityLevel(GetFilterUnit(), FourCC('A0SW')) + GetUnitAbilityLevel(GetFilterUnit(), FourCC('A0T1')) ~= 0
 end
 function Trig_ChoseLich_Func003002()
-    return GetUnitTypeId(GetFilterUnit()) == FourCC('e01I') and GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetFilterUnit())
+    return GetUnitTypeId(GetFilterUnit()) == FourCC('e01I') and GetOwningPlayer(GetFilterUnit()) == GetOwningPlayer(GetTriggerUnit()) and UnitAlive(GetFilterUnit())
 end
 function Trig_ChoseLich_Actions()
-    local u1
+    local u = GetTriggerUnit()
+    local p = GetOwningPlayer(u)
+    local pi = GetPlayerId(p)
+    local g = CreateGroup()
     local u2
-    local g= CreateGroup()
-    local g2= CreateGroup()
-    local i= 0
-    local p= GetOwningPlayer(GetTriggerUnit())
-    ClearSelectionForPlayer(p)
-    udg_Boolexpr = CachedFilter(HaveSpell)
-    GroupEnumUnitsSelected(g, p, udg_Boolexpr)
-    udg_Boolexpr = CachedFilter(Trig_ChoseLich_Func003002)
-    
-    while true do
-        u1=FirstOfGroup(g)
-        if u1 == nil or i >= 12 then break end
-        
-        GroupEnumUnitsInRangeCounted(g2, GetUnitX(u1), GetUnitY(u1), 1200, udg_Boolexpr, IMaxBJ(12 - i, 1))
-        while true do
-            u2=FirstOfGroup(g2)
-            if u2 == nil or i >= 12 then break end
-        
-            SelectUnitAddForPlayer(u2, p)
-    
-            i=i + 1
-            GroupRemoveUnit(g2, u2)
-        end
-         
-    
-        
-        GroupRemoveUnit(g, u1)
+    if ChoseLichCount[pi] == nil then
+        ChoseLichCount[pi] = 0
+        ClearSelectionForPlayer(p)
+        local t = CreateTimer()
+        TimerStart(t, 0.0, false, function()
+            ChoseLichCount[pi] = nil
+            DestroyTimer(t)
+        end)
     end
-    
-    
-    
-    
-    
-   
+    if ChoseLichCount[pi] < 12 then
+        GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 1200, CachedFilter(Trig_ChoseLich_Func003002), 12 - ChoseLichCount[pi])
+        while true do
+            u2 = FirstOfGroup(g)
+            if u2 == nil or ChoseLichCount[pi] >= 12 then break end
+            GroupRemoveUnit(g, u2)
+            SelectUnitAddForPlayer(u2, p)
+            ChoseLichCount[pi] = ChoseLichCount[pi] + 1
+        end
+    end
     DestroyGroup(g)
-    DestroyGroup(g2)
-    g=nil
-    g2=nil
-    u1=nil
-    u2=nil
-    
 end
 --===========================================================================
 function InitTrig_ChoseLich()
@@ -352,7 +340,6 @@ function InitTrig_ChoseLich()
     DisableTrigger(gg_trg_ChoseLich)
     TriggerRegisterAnyUnitEventBJ(gg_trg_ChoseLich, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_ChoseLich, function()
-        if GetSpellAbilityId() ~= FourCC('A0SW') then return end
         if not Trig_ChoseLich_Conditions() then return end
         Trig_ChoseLich_Actions()
     end)

@@ -589,7 +589,7 @@ function Trig_Race_Horde_Actions(caster)
     SetPlayerTechResearchedSwap(FourCC('R0IR'), 1, GetOwningPlayer(caster))
     SetPlayerTechResearchedSwap(FourCC('R0J3'), 1, GetOwningPlayer(caster))
     ConditionalTriggerExecute(gg_trg_HordeOn)
-    ConditionalTriggerExecute(gg_trg_StartHorde)
+    HordeStartLimitsFor(GetOwningPlayer(caster))
     RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
@@ -1168,6 +1168,7 @@ function Trig_Race_Random_Actions(caster)
         SetPlayerTechResearchedSwap(FourCC('R0DV'), 1, p)
         SetPlayerTechResearchedSwap(FourCC('R0J3'), 1, p)
         ConditionalTriggerExecute(gg_trg_HordeOn)
+        HordeStartLimitsFor(p)
     end
     --Dalaran
     if racechance == incN() then

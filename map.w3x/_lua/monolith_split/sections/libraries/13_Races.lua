@@ -1950,7 +1950,7 @@ function startHorde(pi)
 	NumberSet(pi, FourCC('ogre'), 1)
 	SetPlayerName(Player(pi), "Орда (" .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "NG"
-	TriggerExecute(gg_trg_StartHorde)
+	HordeStartLimitsFor(Player(pi))
 	TriggerExecute(gg_trg_HordeOn)
 	
 	AiRace[pi] = "Horde"

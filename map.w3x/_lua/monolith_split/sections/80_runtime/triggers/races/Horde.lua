@@ -2897,39 +2897,43 @@ end
 --===========================================================================
 -- Trigger: StartHorde
 --===========================================================================
+-- Стартовые лимиты Орды для одного игрока: закрытые ветки, скрытые способности Ша.
+function HordeStartLimitsFor(p)
+    SetPlayerTechMaxAllowedSwap(FourCC('Oshd'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('Otch'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('Ofar'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('Obla'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('O02P'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('Othr'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('o029'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('o02B'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('h0CY'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D1'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D2'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E0'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E1'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E3'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E4'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E5'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E9'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EA'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EE'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EI'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EH'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0F4'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0F3'), 0, p)
+    
+    SetPlayerTechMaxAllowedSwap(FourCC('R0F3'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0KO'), 0, p) -- Sha
+    SetPlayerAbilityAvailable(p, FourCC('A1LO'), false)
+    
+    SetPlayerAbilityAvailable(p, FourCC('A1OJ'), false) -- ?? ??????
+    SetPlayerAbilityAvailable(p, FourCC('A1OK'), false) -- ?? ?????? ????
+    countAll(p)
+end
 function HordeStartLimits()
-    SetPlayerTechMaxAllowedSwap(FourCC('Oshd'), 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('Otch'), 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('Ofar'), 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('Obla'), 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('O02P'), 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('Othr'), 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('o029'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('o02B'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('h0CY'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0D1'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0D2'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0E0'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0E1'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0E3'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0E4'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0E5'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0E9'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0EA'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0EE'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0EI'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0EH'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0F4'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0F3'), 0, GetEnumPlayer())
-    
-    SetPlayerTechMaxAllowedSwap(FourCC('R0F3'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0KO'), 0, GetEnumPlayer()) -- Sha
-    SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1LO'), false)
-    
-    SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1OJ'), false) -- ?? ??????
-    SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1OK'), false) -- ?? ?????? ????
-    countAll(GetEnumPlayer())
+    HordeStartLimitsFor(GetEnumPlayer())
 end
 function Trig_StartHorde_Actions()
     ForForce(udg_AllPlayers, HordeStartLimits)

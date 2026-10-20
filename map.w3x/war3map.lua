@@ -6873,7 +6873,7 @@ function startHorde(pi)
 	NumberSet(pi, FourCC('ogre'), 1)
 	SetPlayerName(Player(pi), "Орда (" .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "NG"
-	TriggerExecute(gg_trg_StartHorde)
+	HordeStartLimitsFor(Player(pi))
 	TriggerExecute(gg_trg_HordeOn)
 	
 	AiRace[pi] = "Horde"
@@ -19929,7 +19929,7 @@ end
 --===========================================================================
 function InitTrig_EasternOn_Set()
     gg_trg_EasternOn_Set=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_EasternOn_Set, Player(0), " .. ek", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_EasternOn_Set, Player(0), "+ek", true)
     TriggerAddAction(gg_trg_EasternOn_Set, Trig_EasternOn_Set_Actions)
 end
 --===========================================================================
@@ -20009,7 +20009,7 @@ end
 --===========================================================================
 function InitTrig_KalimOn_2_set()
     gg_trg_KalimOn_2_set=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_KalimOn_2_set, Player(0), " .. ka", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_KalimOn_2_set, Player(0), "+ka", true)
     TriggerAddAction(gg_trg_KalimOn_2_set, Trig_KalimOn_2_set_Actions)
 end
 --===========================================================================
@@ -20082,7 +20082,7 @@ end
 --===========================================================================
 function InitTrig_Outland_3_set()
     gg_trg_Outland_3_set=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Outland_3_set, Player(0), " .. ot", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Outland_3_set, Player(0), "+ot", true)
     TriggerAddAction(gg_trg_Outland_3_set, Trig_Outland_3_set_Actions)
 end
 --===========================================================================
@@ -20162,7 +20162,7 @@ end
 --===========================================================================
 function InitTrig_NordOn_4_set()
     gg_trg_NordOn_4_set=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_NordOn_4_set, Player(0), " .. nd", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_NordOn_4_set, Player(0), "+nd", true)
     TriggerAddAction(gg_trg_NordOn_4_set, Trig_NordOn_4_set_Actions)
 end
 --===========================================================================
@@ -20234,7 +20234,7 @@ end
 --===========================================================================
 function InitTrig_Pandaria_5_set()
     gg_trg_Pandaria_5_set=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Pandaria_5_set, Player(0), " .. pd", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Pandaria_5_set, Player(0), "+pd", true)
     TriggerAddAction(gg_trg_Pandaria_5_set, Trig_Pandaria_5_set_Actions)
 end
 --===========================================================================
@@ -20306,7 +20306,7 @@ end
 --===========================================================================
 function InitTrig_Argus_6_set()
     gg_trg_Argus_6_set=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Argus_6_set, Player(0), " .. ar", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Argus_6_set, Player(0), "+ar", true)
     TriggerAddAction(gg_trg_Argus_6_set, Trig_Argus_6_set_Actions)
 end
 --===========================================================================
@@ -20378,7 +20378,7 @@ end
 --===========================================================================
 function InitTrig_BrokenIsled_7_set()
     gg_trg_BrokenIsled_7_set=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_BrokenIsled_7_set, Player(0), " .. bi", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_BrokenIsled_7_set, Player(0), "+bi", true)
     TriggerAddAction(gg_trg_BrokenIsled_7_set, Trig_BrokenIsled_7_set_Actions)
 end
 --===========================================================================
@@ -20492,7 +20492,7 @@ end
 --===========================================================================
 function InitTrig_StartDarkMode_Command()
     gg_trg_StartDarkMode_Command=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_StartDarkMode_Command, Player(0), " - dmon", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_StartDarkMode_Command, Player(0), "-dmon", true)
     TriggerAddAction(gg_trg_StartDarkMode_Command, Trig_StartDarkMode_Command_Actions)
 end
 --===========================================================================
@@ -20508,7 +20508,7 @@ end
 --===========================================================================
 function InitTrig_OfDarkModeCommand()
     gg_trg_OfDarkModeCommand=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_OfDarkModeCommand, Player(0), " - dmoff", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_OfDarkModeCommand, Player(0), "-dmoff", true)
     TriggerAddAction(gg_trg_OfDarkModeCommand, Trig_OfDarkModeCommand_Actions)
 end
 --===========================================================================
@@ -20868,7 +20868,7 @@ end
 --===========================================================================
 function InitTrig_ChangeTimerHost()
     gg_trg_ChangeTimerHost=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_ChangeTimerHost, Player(0), " - ", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_ChangeTimerHost, Player(0), "-timer", false)
     TriggerAddAction(gg_trg_ChangeTimerHost, Trig_ChangeTimerHost_Actions)
 end
 --===========================================================================
@@ -21481,7 +21481,7 @@ function Trig_Race_Horde_Actions(caster)
     SetPlayerTechResearchedSwap(FourCC('R0IR'), 1, GetOwningPlayer(caster))
     SetPlayerTechResearchedSwap(FourCC('R0J3'), 1, GetOwningPlayer(caster))
     ConditionalTriggerExecute(gg_trg_HordeOn)
-    ConditionalTriggerExecute(gg_trg_StartHorde)
+    HordeStartLimitsFor(GetOwningPlayer(caster))
     RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
 end
@@ -22060,6 +22060,7 @@ function Trig_Race_Random_Actions(caster)
         SetPlayerTechResearchedSwap(FourCC('R0DV'), 1, p)
         SetPlayerTechResearchedSwap(FourCC('R0J3'), 1, p)
         ConditionalTriggerExecute(gg_trg_HordeOn)
+        HordeStartLimitsFor(p)
     end
     --Dalaran
     if racechance == incN() then
@@ -24909,30 +24910,30 @@ end
 --===========================================================================
 function InitTrig_F2_Start()
     gg_trg_F2_Start=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(0), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(1), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(2), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(3), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(4), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(5), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(6), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(7), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(8), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(9), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(10), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(11), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(12), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(13), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(14), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(15), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(16), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(17), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(18), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(19), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(20), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(21), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(22), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(23), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(0), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(1), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(2), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(3), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(4), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(5), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(6), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(7), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(8), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(9), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(10), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(11), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(12), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(13), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(14), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(15), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(16), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(17), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(18), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(19), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(20), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(21), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(22), "-f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(23), "-f2", true)
     TriggerAddCondition(gg_trg_F2_Start, Condition(Trig_F2_Start_Conditions))
     TriggerAddAction(gg_trg_F2_Start, Trig_F2_Start_Actions)
 end
@@ -25552,7 +25553,7 @@ end
 --===========================================================================
 function InitTrig_InFGroup()
     gg_trg_InFGroup=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_InFGroup, Player(0), " - f2gr", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_InFGroup, Player(0), "-f2gr", true)
     TriggerAddAction(gg_trg_InFGroup, Trig_InFGroup_Actions)
 end
 --===========================================================================
@@ -26970,6 +26971,21 @@ end
 function Trig_Sluga_qqgsarona_Func017A()
     UnitShareVisionBJ(true, gg_unit_n03A_0657, GetEnumPlayer())
 end
+-- Щупальца вокруг Йогг`Сарона (n03B/n03C) переходят новому хозяину вместе с ним.
+function YoggTentaclesTransfer(p)
+    local g= CreateGroup()
+    local u
+    GroupEnumUnitsInRange(g, GetUnitX(gg_unit_n03A_0657), GetUnitY(gg_unit_n03A_0657), 2000.0, nil)
+    while true do
+        u=FirstOfGroup(g)
+        if u == nil then break end
+        GroupRemoveUnit(g, u)
+        if (GetUnitTypeId(u) == FourCC('n03B') or GetUnitTypeId(u) == FourCC('n03C')) and GetOwningPlayer(u) == Player(PLAYER_NEUTRAL_AGGRESSIVE) then
+            SetUnitOwner(u, p, true)
+        end
+    end
+    DestroyGroup(g)
+end
 function Trig_Sluga_qqgsarona_Actions()
     SetUnitOwner(gg_unit_n03A_0657, GetOwningPlayer(GetSpellAbilityUnit()), true)
     RemoveUnit(gg_unit_n03C_0660)
@@ -26980,6 +26996,7 @@ function Trig_Sluga_qqgsarona_Actions()
     RemoveUnit(gg_unit_n03B_0665)
     RemoveUnit(gg_unit_n03B_0658)
     RemoveUnit(gg_unit_n03B_0659)
+    YoggTentaclesTransfer(GetOwningPlayer(GetSpellAbilityUnit()))
     ForForce(GetPlayersAll(), Trig_Sluga_qqgsarona_Func010A)
     -- --
     ForGroupDestroy(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), CachedFilter(Trig_Sluga_qqgsarona_Func012001002)), Trig_Sluga_qqgsarona_Func012A)
@@ -39880,39 +39897,43 @@ end
 --===========================================================================
 -- Trigger: StartHorde
 --===========================================================================
+-- Стартовые лимиты Орды для одного игрока: закрытые ветки, скрытые способности Ша.
+function HordeStartLimitsFor(p)
+    SetPlayerTechMaxAllowedSwap(FourCC('Oshd'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('Otch'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('Ofar'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('Obla'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('O02P'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('Othr'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('o029'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('o02B'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('h0CY'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D1'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D2'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E0'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E1'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E3'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E4'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E5'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E9'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EA'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EE'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EI'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EH'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0F4'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0F3'), 0, p)
+    
+    SetPlayerTechMaxAllowedSwap(FourCC('R0F3'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0KO'), 0, p) -- Sha
+    SetPlayerAbilityAvailable(p, FourCC('A1LO'), false)
+    
+    SetPlayerAbilityAvailable(p, FourCC('A1OJ'), false) -- ?? ??????
+    SetPlayerAbilityAvailable(p, FourCC('A1OK'), false) -- ?? ?????? ????
+    countAll(p)
+end
 function HordeStartLimits()
-    SetPlayerTechMaxAllowedSwap(FourCC('Oshd'), 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('Otch'), 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('Ofar'), 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('Obla'), 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('O02P'), 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('Othr'), 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('o029'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('o02B'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('h0CY'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0D1'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0D2'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0E0'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0E1'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0E3'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0E4'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0E5'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0E9'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0EA'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0EE'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0EI'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0EH'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0F4'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0F3'), 0, GetEnumPlayer())
-    
-    SetPlayerTechMaxAllowedSwap(FourCC('R0F3'), 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap(FourCC('R0KO'), 0, GetEnumPlayer()) -- Sha
-    SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1LO'), false)
-    
-    SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1OJ'), false) -- ?? ??????
-    SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1OK'), false) -- ?? ?????? ????
-    countAll(GetEnumPlayer())
+    HordeStartLimitsFor(GetEnumPlayer())
 end
 function Trig_StartHorde_Actions()
     ForForce(udg_AllPlayers, HordeStartLimits)
@@ -40217,58 +40238,46 @@ end
 --===========================================================================
 -- Trigger: ChoseLich
 --===========================================================================
+-- «Выбрать личинки»: A0SW у Матери роя, A0T1 у ульев. Оба на базе Channel с одним приказом,
+-- поэтому при групповом касте событие приходит от каждого кастующего в один момент.
+-- Первый каст в тике очищает выделение, остальные добавляют личинок к нему (всего до 12).
+ChoseLichCount = {}
 function Trig_ChoseLich_Conditions()
+    local id = GetSpellAbilityId()
+    return id == FourCC('A0SW') or id == FourCC('A0T1')
 end
 function HaveSpell()
     return GetUnitAbilityLevel(GetFilterUnit(), FourCC('A0SW')) + GetUnitAbilityLevel(GetFilterUnit(), FourCC('A0T1')) ~= 0
 end
 function Trig_ChoseLich_Func003002()
-    return GetUnitTypeId(GetFilterUnit()) == FourCC('e01I') and GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetFilterUnit())
+    return GetUnitTypeId(GetFilterUnit()) == FourCC('e01I') and GetOwningPlayer(GetFilterUnit()) == GetOwningPlayer(GetTriggerUnit()) and UnitAlive(GetFilterUnit())
 end
 function Trig_ChoseLich_Actions()
-    local u1
+    local u = GetTriggerUnit()
+    local p = GetOwningPlayer(u)
+    local pi = GetPlayerId(p)
+    local g = CreateGroup()
     local u2
-    local g= CreateGroup()
-    local g2= CreateGroup()
-    local i= 0
-    local p= GetOwningPlayer(GetTriggerUnit())
-    ClearSelectionForPlayer(p)
-    udg_Boolexpr = CachedFilter(HaveSpell)
-    GroupEnumUnitsSelected(g, p, udg_Boolexpr)
-    udg_Boolexpr = CachedFilter(Trig_ChoseLich_Func003002)
-    
-    while true do
-        u1=FirstOfGroup(g)
-        if u1 == nil or i >= 12 then break end
-        
-        GroupEnumUnitsInRangeCounted(g2, GetUnitX(u1), GetUnitY(u1), 1200, udg_Boolexpr, IMaxBJ(12 - i, 1))
-        while true do
-            u2=FirstOfGroup(g2)
-            if u2 == nil or i >= 12 then break end
-        
-            SelectUnitAddForPlayer(u2, p)
-    
-            i=i + 1
-            GroupRemoveUnit(g2, u2)
-        end
-         
-    
-        
-        GroupRemoveUnit(g, u1)
+    if ChoseLichCount[pi] == nil then
+        ChoseLichCount[pi] = 0
+        ClearSelectionForPlayer(p)
+        local t = CreateTimer()
+        TimerStart(t, 0.0, false, function()
+            ChoseLichCount[pi] = nil
+            DestroyTimer(t)
+        end)
     end
-    
-    
-    
-    
-    
-   
+    if ChoseLichCount[pi] < 12 then
+        GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 1200, CachedFilter(Trig_ChoseLich_Func003002), 12 - ChoseLichCount[pi])
+        while true do
+            u2 = FirstOfGroup(g)
+            if u2 == nil or ChoseLichCount[pi] >= 12 then break end
+            GroupRemoveUnit(g, u2)
+            SelectUnitAddForPlayer(u2, p)
+            ChoseLichCount[pi] = ChoseLichCount[pi] + 1
+        end
+    end
     DestroyGroup(g)
-    DestroyGroup(g2)
-    g=nil
-    g2=nil
-    u1=nil
-    u2=nil
-    
 end
 --===========================================================================
 function InitTrig_ChoseLich()
@@ -40276,7 +40285,6 @@ function InitTrig_ChoseLich()
     DisableTrigger(gg_trg_ChoseLich)
     TriggerRegisterAnyUnitEventBJ(gg_trg_ChoseLich, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_ChoseLich, function()
-        if GetSpellAbilityId() ~= FourCC('A0SW') then return end
         if not Trig_ChoseLich_Conditions() then return end
         Trig_ChoseLich_Actions()
     end)
@@ -50753,30 +50761,30 @@ end
 --===========================================================================
 function InitTrig_Kill()
     gg_trg_Kill=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(0), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(1), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(2), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(3), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(4), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(5), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(6), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(7), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(8), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(9), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(10), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(11), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(12), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(13), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(14), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(15), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(16), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(17), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(18), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(19), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(20), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(21), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(22), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(23), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(0), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(1), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(2), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(3), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(4), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(5), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(6), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(7), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(8), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(9), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(10), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(11), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(12), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(13), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(14), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(15), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(16), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(17), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(18), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(19), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(20), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(21), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(22), "-kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(23), "-kill", true)
     TriggerAddAction(gg_trg_Kill, Trig_Kill_Actions)
 end
 --===========================================================================
@@ -50800,30 +50808,30 @@ end
 --===========================================================================
 function InitTrig_Rep()
     gg_trg_Rep=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(0), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(1), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(2), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(3), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(4), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(5), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(6), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(7), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(8), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(9), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(10), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(11), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(12), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(13), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(14), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(15), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(16), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(17), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(18), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(19), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(20), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(21), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(22), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(23), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(0), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(1), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(2), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(3), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(4), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(5), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(6), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(7), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(8), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(9), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(10), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(11), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(12), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(13), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(14), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(15), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(16), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(17), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(18), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(19), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(20), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(21), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(22), "-rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(23), "-rep", true)
     TriggerAddAction(gg_trg_Rep, Trig_Rep_Actions)
 end
 --===========================================================================
@@ -50847,30 +50855,30 @@ end
 --===========================================================================
 function InitTrig_Camera_command_O()
     gg_trg_Camera_command_O=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(0), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(1), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(2), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(3), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(4), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(5), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(6), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(7), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(8), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(9), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(10), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(11), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(12), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(13), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(14), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(15), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(16), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(17), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(18), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(19), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(20), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(21), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(22), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(23), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(0), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(1), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(2), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(3), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(4), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(5), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(6), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(7), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(8), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(9), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(10), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(11), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(12), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(13), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(14), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(15), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(16), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(17), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(18), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(19), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(20), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(21), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(22), "-cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(23), "-cam", false)
     TriggerAddAction(gg_trg_Camera_command_O, Trig_Camera_command_O_Actions)
 end
 --===========================================================================
@@ -51071,31 +51079,31 @@ end
 --===========================================================================
 function InitTrig_GG()
     gg_trg_GG=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(0), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(1), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(2), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(3), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(4), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(5), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(6), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(7), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(8), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(9), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(10), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(11), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(12), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(13), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(15), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(14), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(16), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(17), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(18), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(19), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(20), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(21), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(22), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(23), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(24), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(0), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(1), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(2), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(3), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(4), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(5), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(6), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(7), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(8), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(9), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(10), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(11), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(12), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(13), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(15), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(14), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(16), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(17), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(18), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(19), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(20), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(21), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(22), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(23), "-gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(24), "-gg", true)
     
     
     TriggerAddAction(gg_trg_GG, Trig_GG_Actions)
@@ -51109,7 +51117,9 @@ function Trig_Untitled_Trigger_006_Func003A()
 end
 function Trig_Observer_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
-    DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "")
+    if IsPlayerInForce(GetTriggerPlayer(), Observers) then return end
+    DisplayTextToForce(udg_AllPlayers, "|cffb99d66ИГРА:|cffced4da Игрок "
+        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. "|cffced4da стал наблюдателем.|r")
     ClearPlayer(GetTriggerPlayer())
     ForceAddPlayer(Observers, GetTriggerPlayer())
     udg_Visibl[pi]=CreateFogModifierRectBJ(true, GetTriggerPlayer(), FOG_OF_WAR_VISIBLE, bj_mapInitialPlayableArea)
@@ -51125,7 +51135,7 @@ function InitTrig_Observer()
     while true do
         if i > 23 then break end
         
-        TriggerRegisterPlayerChatEvent(gg_trg_Observer, Player(i), " - observer", true)
+        TriggerRegisterPlayerChatEvent(gg_trg_Observer, Player(i), "-observer", true)
         
         i=i + 1
     end
@@ -51153,7 +51163,8 @@ end
 --===========================================================================
 function Trig_ObserverOff_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
-    DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "")
+    if not IsPlayerInForce(GetTriggerPlayer(), Observers) then return end
+    DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffb99d66ИГРА:|cffced4da Обзор всей карты отключён.|r")
     
     ForceRemovePlayer(Observers, GetTriggerPlayer())
     FogModifierStop(udg_Visibl[pi])
@@ -51169,7 +51180,7 @@ function InitTrig_ObserverOff()
     while true do
         if i > 23 then break end
         
-        TriggerRegisterPlayerChatEvent(gg_trg_ObserverOff, Player(i), " - observeroff", true)
+        TriggerRegisterPlayerChatEvent(gg_trg_ObserverOff, Player(i), "-observeroff", true)
         
         i=i + 1
     end
@@ -51192,7 +51203,7 @@ function InitTrig_Hunter()
     gg_trg_Hunter=CreateTrigger()
     while true do
         if i >= 24 then break end
-        TriggerRegisterPlayerChatEvent(gg_trg_Hunter, Player(i), " - s", true)
+        TriggerRegisterPlayerChatEvent(gg_trg_Hunter, Player(i), "-s", true)
         i=i + 1
     
     end
@@ -51224,7 +51235,7 @@ function InitTrig_ArchontMode()
     while true do
         if i > 23 then break end
         
-        TriggerRegisterPlayerChatEvent(gg_trg_ArchontMode, Player(i), " - arhont", false)
+        TriggerRegisterPlayerChatEvent(gg_trg_ArchontMode, Player(i), "-arhont", false)
         
         i=i + 1
     end
@@ -51267,7 +51278,7 @@ function InitTrig_ArchontModeOff()
     while true do
         if i > 23 then break end
         
-        TriggerRegisterPlayerChatEvent(gg_trg_ArchontModeOff, Player(i), " - arhoff", false)
+        TriggerRegisterPlayerChatEvent(gg_trg_ArchontModeOff, Player(i), "-arhoff", false)
         
         i=i + 1
     end
@@ -51479,7 +51490,7 @@ end
 --===========================================================================
 function InitTrig_Setlvl()
     gg_trg_Setlvl=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Setlvl, Player(0), " - setlvl", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Setlvl, Player(0), "-setlvl", false)
     TriggerRegisterPlayerChatEvent(gg_trg_Setlvl, Player(1), "setlvl", false)
     TriggerRegisterPlayerChatEvent(gg_trg_Setlvl, Player(2), "setlvl", false)
     TriggerAddAction(gg_trg_Setlvl, Trig_Setlvl_Actions)
@@ -51553,7 +51564,7 @@ end
 --===========================================================================
 function InitTrig_Visible_Copy()
     gg_trg_Visible_Copy=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Visible_Copy, Player(0), " - v", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Visible_Copy, Player(0), "-v", true)
     TriggerAddAction(gg_trg_Visible_Copy, Trig_Visible_Copy_Actions)
 end
 -- Helper: parse "2,3,5-7" into array of player numbers (1..24)
@@ -52741,7 +52752,7 @@ end
 --===========================================================================
 function InitTrig_EveryAiEnemy()
     gg_trg_EveryAiEnemy=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_EveryAiEnemy, Player(0), " - AllIn", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_EveryAiEnemy, Player(0), "-AllIn", true)
     TriggerAddAction(gg_trg_EveryAiEnemy, Trig_EveryAiEnemy_Actions)
 end
 --===========================================================================
@@ -52907,7 +52918,7 @@ end
 function InitTrig_OchetStart()
     gg_trg_OchetStart=CreateTrigger()
     DisableTrigger(gg_trg_OchetStart)
-    TriggerRegisterPlayerChatEvent(gg_trg_OchetStart, Player(0), " - Os", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_OchetStart, Player(0), "-Os", true)
     TriggerAddAction(gg_trg_OchetStart, Trig_OchetStart_Actions)
 end
 --===========================================================================
@@ -52920,7 +52931,7 @@ end
 function InitTrig_OchetEnd()
     gg_trg_OchetEnd=CreateTrigger()
     DisableTrigger(gg_trg_OchetEnd)
-    TriggerRegisterPlayerChatEvent(gg_trg_OchetEnd, Player(0), " - Oe", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_OchetEnd, Player(0), "-Oe", true)
     TriggerAddAction(gg_trg_OchetEnd, Trig_OchetEnd_Actions)
 end
 --===========================================================================
@@ -52965,7 +52976,7 @@ end
 --===========================================================================
 function InitTrig_CheckOrderType()
     gg_trg_CheckOrderType=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_CheckOrderType, Player(0), " - getOrder", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_CheckOrderType, Player(0), "-getOrder", true)
     TriggerAddAction(gg_trg_CheckOrderType, Trig_CheckOrderType_Actions)
 end
 --===========================================================================
@@ -52998,7 +53009,7 @@ end
 --===========================================================================
 function InitTrig_CheckGroup()
     gg_trg_CheckGroup=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_CheckGroup, Player(0), " - gr", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_CheckGroup, Player(0), "-gr", false)
     TriggerAddAction(gg_trg_CheckGroup, Trig_CheckGroup_Actions)
     TriggerAddCondition(gg_trg_CheckGroup, Condition(ConditionPlayerNumber))
 end
@@ -53013,7 +53024,7 @@ end
 --===========================================================================
 function InitTrig_AiMoney()
     gg_trg_AiMoney=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_AiMoney, Player(0), " - aimoney", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_AiMoney, Player(0), "-aimoney", false)
     TriggerAddAction(gg_trg_AiMoney, Trig_AiMoney_Actions)
     
 end
@@ -53028,7 +53039,7 @@ end
 --===========================================================================
 function InitTrig_AiRepeat()
     gg_trg_AiRepeat=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_AiRepeat, Player(0), " - airepeat", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_AiRepeat, Player(0), "-airepeat", false)
     TriggerAddAction(gg_trg_AiRepeat, Trig_AiRepeat_Actions)
 end
 --===========================================================================
@@ -53042,7 +53053,7 @@ end
 --===========================================================================
 function InitTrig_AiRadius()
     gg_trg_AiRadius=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_AiRadius, Player(0), " - airadius", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_AiRadius, Player(0), "-airadius", false)
     TriggerAddAction(gg_trg_AiRadius, Trig_AiRadius_Actions)
 end
 --===========================================================================
@@ -53056,7 +53067,7 @@ end
 --===========================================================================
 function InitTrig_AiMass()
     gg_trg_AiMass=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_AiMass, Player(0), " - aimass", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_AiMass, Player(0), "-aimass", false)
     TriggerAddAction(gg_trg_AiMass, Trig_AiMass_Actions)
 end
 --===========================================================================
@@ -53070,7 +53081,7 @@ end
 --===========================================================================
 function InitTrig_Ailimit()
     gg_trg_Ailimit=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Ailimit, Player(0), " - ailimit", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Ailimit, Player(0), "-ailimit", false)
     TriggerAddAction(gg_trg_Ailimit, Trig_Ailimit_Actions)
 end
 --===========================================================================
@@ -54435,7 +54446,7 @@ end
 --===========================================================================
 function InitTrig_TestgGroup()
     gg_trg_TestgGroup=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_TestgGroup, Player(0), " - gGr", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_TestgGroup, Player(0), "-gGr", true)
     TriggerAddAction(gg_trg_TestgGroup, Trig_TestgGroup_Actions)
 end
 --===========================================================================
@@ -54459,7 +54470,7 @@ end
 --===========================================================================
 function InitTrig_AiRepCommand()
     gg_trg_AiRepCommand=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_AiRepCommand, Player(0), " - airep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_AiRepCommand, Player(0), "-airep", true)
     TriggerAddAction(gg_trg_AiRepCommand, Trig_AiRepCommand_Actions)
 end
 --===========================================================================
@@ -54542,7 +54553,7 @@ end
 --===========================================================================
 function InitTrig_AiLogAll()
     gg_trg_AiLogAll=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_AiLogAll, Player(0), " - chai", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_AiLogAll, Player(0), "-chai", false)
     TriggerAddCondition(gg_trg_AiLogAll, Condition(Trig_AiLogAll_Conditions))
     TriggerAddAction(gg_trg_AiLogAll, Trig_AiLogAll_Actions)
 end
