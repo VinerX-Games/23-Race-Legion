@@ -56,6 +56,7 @@ TEXT_FIELDS = {
 
 COLOR = re.compile(r"\|c[0-9a-fA-F]{8}")
 FORMAT = re.compile(r"%(?:\d+\$)?[sdifxXc%]")
+TOKEN = re.compile(r"<[^<>\s]+>")
 CYRILLIC = re.compile(r"[А-Яа-яЁё]")
 LOC_CALL = re.compile(r"\bLoc\(\s*[\"']([^\"']+)[\"']\s*\)")
 
@@ -368,6 +369,8 @@ def check_text(source: str, target: str):
         problems.append("color sequence differs")
     if Counter(FORMAT.findall(source)) != Counter(FORMAT.findall(target)):
         problems.append("format placeholders differ")
+    if Counter(TOKEN.findall(source)) != Counter(TOKEN.findall(target)):
+        problems.append("ability data references differ")
     if Counter(re.findall(r"\d+", COLOR.sub("", source))) != Counter(re.findall(r"\d+", COLOR.sub("", target))):
         problems.append("numbers differ")
     if source.count("|n") != target.count("|n"):

@@ -33,6 +33,12 @@ class TranslationTests(unittest.TestCase):
         self.assertIn('color sequence differs', wc3_l10n.check_text(source, '|cff00ff0010 damage|r'))
         self.assertIn('Cyrillic text remains', wc3_l10n.check_text(source, '|cffff000010 урона|r'))
 
+    def test_ability_data_reference_drift_is_rejected(self):
+        source = 'Deals <ANbf,DataA1> damage for <ANbf,Dur1> sec.'
+        self.assertEqual([], wc3_l10n.check_text(source, source))
+        broken = 'Deals <ANbf,DataA2> damage for <ANbf,Dur1> sec.'
+        self.assertIn('ability data references differ', wc3_l10n.check_text(source, broken))
+
     def test_shared_wts_id_rejects_conflicting_translations(self):
         catalog = {'entries': [
             {'key': 'A/unit/name', 'sid': 7, 'skin': False, 'text': 'Имя'},
