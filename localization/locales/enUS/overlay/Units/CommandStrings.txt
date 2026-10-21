@@ -1,0 +1,326 @@
+// English command strings for enUS; original engine hotkeys preserved.
+
+[CmdMove]
+Tip=|cffebc56cMove|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Moves troops to the target point. When an ally is selected, troops follow that ally.|r"
+Hotkey=M
+
+[CmdAttack]
+Tip=|cffebc56cAttack|r
+Ubertip="|cffb99d66COMMAND:|cffced4da When a point is selected, troops move there and attack enemies they meet. When an enemy is selected, attacks are focused on that target.|r"
+Hotkey=A
+
+[CmdAttackGround]
+Tip=|cffebc56cAttack Ground|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Orders troops to bombard the target area until the order is cancelled or replaced.|r"
+Hotkey=G
+
+[CmdBuild]
+Tip=|cffebc56cBuild|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Opens the list of available buildings.|r"
+Hotkey=B
+
+[CmdBuildHuman]
+Tip=|cffebc56cBuild|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Opens the list of available buildings.|r"
+Hotkey=B
+
+[CmdBuildOrc]
+Tip=|cffebc56cBuild|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Opens the list of available buildings.|r"
+Hotkey=B
+
+[CmdBuildNightElf]
+Tip=|cffebc56cBuild|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Opens the list of available buildings.|r"
+Hotkey=B
+
+[CmdBuildUndead]
+Tip=|cffebc56cBuild|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Opens the list of available buildings.|r"
+Hotkey=B
+
+[CmdBuildNaga]
+Tip=|cffebc56cBuild|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Opens the list of available buildings.|r"
+Hotkey=B
+
+[CmdCancel]
+Tip=|cffebc56cCancel|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Cancels the current order or target selection.|r"
+Hotkey=27
+Hotkey:custom,V0=512
+Hotkey:custom,V1=512
+Hotkey:melee,V0=512
+
+[CmdCancelBuild]
+Tip=|cffebc56cCancel|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Cancels construction or building placement.|r"
+Hotkey=27
+Hotkey:custom,V0=512
+Hotkey:custom,V1=512
+Hotkey:melee,V0=512
+
+[CmdCancelTrain]
+Tip=|cffebc56cCancel|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Cancels training of the selected unit in the queue.|r"
+Hotkey=27
+Hotkey:custom,V0=512
+Hotkey:custom,V1=512
+Hotkey:melee,V0=512
+
+[CmdCancelRevive]
+Tip=|cffebc56cCancel|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Cancels the hero revival.|r"
+Hotkey=27
+Hotkey:custom,V0=512
+Hotkey:custom,V1=512
+Hotkey:melee,V0=512
+
+[CmdHoldPos]
+Tip=|cffebc56cHold Position|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Holds troops in place. They attack available enemies but do not pursue them.|r"
+Hotkey=H
+
+[CmdPatrol]
+Tip=|cffebc56cPatrol|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Orders troops to move between their current position and the target point, fighting enemies they meet.|r"
+Hotkey=P
+
+[CmdPurchase]
+Tip=|cffebc56cSell Items|r
+Hotkey=s
+Ubertip="|cffb99d66COMMAND:|cffced4da Allows items to be sold to the shop.|r"
+
+[CmdRally]
+Tip=|cffebc56cRally Point|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Sets the destination for newly trained troops. Workers can begin gathering immediately if a suitable resource source is targeted.|r"
+Hotkey=Y
+
+[CmdSelectSkill]
+Tip=|cffebc56cHero Abilities|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Opens the hero ability menu to spend available skill points.|r"
+Hotkey=O
+
+[CmdStop]
+Tip=|cffebc56cStop|r
+Ubertip="|cffb99d66COMMAND:|cffced4da Cancels the current order. Troops stop and may attack nearby enemies on their own.|r"
+Hotkey=S
+
+[Errors]
+Emptycontrolgroup="|cffb99d66UNAVAILABLE:|cffef8173 The group must contain troops.|r"
+Invalidcontrolgroup="|cffb99d66UNAVAILABLE:|cffef8173 Only troops under your control can be added to the group.|r"
+Nonunitincontrolgroup="|cffb99d66UNAVAILABLE:|cffef8173 Only troops can be part of a control group.|r"
+Nofood="|cffb99d66UNAVAILABLE:|cffef8173 Not enough available food to create the unit.|r","|cffb99d66UNAVAILABLE:|cffef8173 Not enough available food to create the unit.|r","|cffb99d66UNAVAILABLE:|cffef8173 Not enough available food to create the unit.|r","|cffb99d66UNAVAILABLE:|cffef8173 Not enough available food to create the unit.|r"
+Maxsupply="|cffb99d66UNAVAILABLE:|cffef8173 Could not create the unit: the supply limit has been reached.|r"
+Nogold="|cffb99d66UNAVAILABLE:|cffef8173 Not enough gold.|r"
+Nolumber="|cffb99d66UNAVAILABLE:|cffef8173 Not enough lumber.|r"
+Nomana="|cffb99d66UNAVAILABLE:|cffef8173 Not enough mana.|r"
+Cooldown="|cffb99d66UNAVAILABLE:|cffef8173 The ability is not ready yet.|r"
+Noroom="|cffb99d66UNAVAILABLE:|cffef8173 Not enough room.|r"
+Canttransport="|cffb99d66UNAVAILABLE:|cffef8173 The target cannot be loaded.|r"
+Cantdevour="|cffb99d66UNAVAILABLE:|cffef8173 The target cannot be devoured.|r"
+Cantcyclone="|cffb99d66UNAVAILABLE:|cffef8173 Invalid target for Cyclone.|r"
+Cantspiritwolf="|cffb99d66UNAVAILABLE:|cffef8173 Invalid target for Spirit Wolf.|r"
+Cantpossess="|cffb99d66UNAVAILABLE:|cffef8173 Invalid target for Possession.|r"
+Cantmanaburn="|cffb99d66UNAVAILABLE:|cffef8173 Invalid target for Mana Burn.|r"
+Onlyattackers="|cffb99d66UNAVAILABLE:|cffef8173 Select a target that can attack.|r"
+Notentangledmine="|cffb99d66UNAVAILABLE:|cffef8173 An entangled gold mine cannot be used.|r"
+Notblightedmine="|cffb99d66UNAVAILABLE:|cffef8173 A blighted gold mine cannot be used.|r"
+Alreadyentangled="|cffb99d66UNAVAILABLE:|cffef8173 This gold mine is already entangled.|r"
+Alreadyblightedmine="|cffb99d66UNAVAILABLE:|cffef8173 This gold mine is already blighted.|r"
+Targetwispresources="|cffb99d66UNAVAILABLE:|cffef8173 Target a tree or an entangled gold mine.|r"
+Targetblightedmine="|cffb99d66UNAVAILABLE:|cffef8173 Target a blighted gold mine.|r"
+Entangleminefirst="|cffb99d66UNAVAILABLE:|cffef8173 Entangle the gold mine first.|r"
+Blightminefirst="|cffb99d66UNAVAILABLE:|cffef8173 Blight the gold mine first.|r"
+Entangledminefull="|cffb99d66UNAVAILABLE:|cffef8173 The maximum number of wisps is already working this mine.|r"
+Blightringfull="|cffb99d66UNAVAILABLE:|cffef8173 The maximum number of acolytes is already working this mine.|r"
+Acolytealreadymining="|cffb99d66UNAVAILABLE:|cffef8173 The selected acolyte is already mining gold.|r"
+Nototherplayersmine="|cffb99d66UNAVAILABLE:|cffef8173 This gold mine belongs to another player.|r"
+Targgetmine="|cffb99d66UNAVAILABLE:|cffef8173 Target a gold mine.|r"
+Targgetresources="|cffb99d66UNAVAILABLE:|cffef8173 Target a resource source.|r"
+Humanbuilding="|cffb99d66UNAVAILABLE:|cffef8173 Target an Alliance building.|r"
+Undeadbuilding="|cffb99d66UNAVAILABLE:|cffef8173 Target an undead structure.|r"
+Underconstruction="|cffb99d66UNAVAILABLE:|cffef8173 This building is not finished yet.|r"
+Alreadyrebuilding="|cffb99d66UNAVAILABLE:|cffef8173 This building is already under construction.|r"
+Creeptoopowerful="|cffb99d66UNAVAILABLE:|cffef8173 This creature is too dangerous.|r"
+Hibernating="|cffb99d66UNAVAILABLE:|cffef8173 The target is already hibernating.|r"
+Magicleashed="|cffb99d66UNAVAILABLE:|cffef8173 The target is already magically leashed.|r"
+Immunetomagic="|cffb99d66UNAVAILABLE:|cffef8173 The target is immune to magic.|r"
+Holybolttarget="|cffb99d66UNAVAILABLE:|cffef8173 Target a living ally or an undead enemy.|r"
+Deathcoiltarget="|cffb99d66UNAVAILABLE:|cffef8173 Target a living enemy or an undead ally.|r"
+Dispelmagictarget="|cffb99d66UNAVAILABLE:|cffef8173 Target a unit or blighted land.|r"
+Treeoccupied="|cffb99d66UNAVAILABLE:|cffef8173 This tree is occupied. Choose an empty tree.|r"
+Coupletarget="|cffb99d66UNAVAILABLE:|cffef8173 The units could not be combined.|r"
+Mounthippogryphtarget="|cffb99d66UNAVAILABLE:|cffef8173 Target a hippogryph.|r"
+Archerridertarget="|cffb99d66UNAVAILABLE:|cffef8173 Target an archer.|r"
+Cantsee="|cffb99d66UNAVAILABLE:|cffef8173 Reveal the area first.|r"
+Cantplace="|cffb99d66UNAVAILABLE:|cffef8173 Construction is not allowed here.|r"
+Outofbounds="|cffb99d66UNAVAILABLE:|cffef8173 The target is outside the map.|r"
+Offblight="|cffb99d66UNAVAILABLE:|cffef8173 Buildings can only be summoned on blighted ground.|r"
+Tooclosetomine="|cffb99d66UNAVAILABLE:|cffef8173 The gold mine is too close.|r"
+Tooclosetohall="|cffb99d66UNAVAILABLE:|cffef8173 The gold mine cannot be this close to the base.|r"
+Notonshoreline="|cffb99d66UNAVAILABLE:|cffef8173 This building can only be constructed on the shore.|r"
+Buildingblocked="|cffb99d66UNAVAILABLE:|cffef8173 Not enough room for the new unit.|r"
+Teleportfail="|cffb99d66UNAVAILABLE:|cffef8173 This unit cannot be teleported.|r"
+Stumpblocked="|cffb99d66UNAVAILABLE:|cffef8173 Something is blocking the roots of this tree.|r"
+Cantland="|cffb99d66UNAVAILABLE:|cffef8173 Units cannot land here.|r"
+Cantroot="|cffb99d66UNAVAILABLE:|cffef8173 Roots cannot be planted here.|r"
+Cantrootunit="|cffb99d66UNAVAILABLE:|cffef8173 The target cannot be entangled.|r"
+Mustroottoentangle="|cffb99d66UNAVAILABLE:|cffef8173 Plant roots next to the gold mine to entangle it.|r"
+Mustbeclosertomine="|cffb99d66UNAVAILABLE:|cffef8173 Plant the roots closer to the gold mine.|r"
+Minenotentangleable="|cffb99d66UNAVAILABLE:|cffef8173 This gold mine cannot be entangled.|r"
+Notinrange="|cffb99d66UNAVAILABLE:|cffef8173 The target is too far away.|r"
+UnderRange="|cffb99d66UNAVAILABLE:|cffef8173 The target is too close.|r"
+Notthisunit="|cffb99d66UNAVAILABLE:|cffef8173 Invalid target.|r"
+Targetunit="|cffb99d66UNAVAILABLE:|cffef8173 Select a target.|r"
+Targetstructuretree="|cffb99d66UNAVAILABLE:|cffef8173 Target a building or a tree.|r"
+Targetground="|cffb99d66UNAVAILABLE:|cffef8173 Select a ground target.|r"
+Targetair="|cffb99d66UNAVAILABLE:|cffef8173 Select an air target.|r"
+Targetstructure="|cffb99d66UNAVAILABLE:|cffef8173 Target a building.|r"
+Targetward="|cffb99d66UNAVAILABLE:|cffef8173 Target a ward.|r"
+Targetitem="|cffb99d66UNAVAILABLE:|cffef8173 Target an item.|r"
+Targettree="|cffb99d66UNAVAILABLE:|cffef8173 Target a tree.|r"
+Targetrepair="|cffb99d66UNAVAILABLE:|cffef8173 Target a building or machinery.|r"
+Targetbridge="|cffb99d66UNAVAILABLE:|cffef8173 Target a bridge.|r"
+Targetnaval="|cffb99d66UNAVAILABLE:|cffef8173 Select a floating target.|r"
+Targetowned="|cffb99d66UNAVAILABLE:|cffef8173 Target one of your units.|r"
+Targetally="|cffb99d66UNAVAILABLE:|cffef8173 Target an ally.|r"
+Targetneutral="|cffb99d66UNAVAILABLE:|cffef8173 Select a neutral target.|r"
+Targetenemy="|cffb99d66UNAVAILABLE:|cffef8173 Target an enemy.|r"
+Targetcontrol="|cffb99d66UNAVAILABLE:|cffef8173 Select a target under your control.|r"
+Targethero="|cffb99d66UNAVAILABLE:|cffef8173 Target a hero.|r"
+Targetenemyhero="|cffb99d66UNAVAILABLE:|cffef8173 Target an enemy hero.|r"
+Targetcorpse="|cffb99d66UNAVAILABLE:|cffef8173 Target a corpse.|r"
+Targetfleshycorpse="|cffb99d66UNAVAILABLE:|cffef8173 Target a fresh corpse.|r"
+Targetbonecorpse="|cffb99d66UNAVAILABLE:|cffef8173 Target bones.|r"
+Targetundead="|cffb99d66UNAVAILABLE:|cffef8173 Target an undead unit.|r"
+Targetmechanical="|cffb99d66UNAVAILABLE:|cffef8173 Target machinery.|r"
+Targetmoveable="|cffb99d66UNAVAILABLE:|cffef8173 Select a target that can move.|r"
+Targetorganicground="|cffb99d66UNAVAILABLE:|cffef8173 Select an organic ground target.|r"
+Targetancient="|cffb99d66UNAVAILABLE:|cffef8173 Target an ancient.|r"
+Targetarmoredtransport="|cffb99d66UNAVAILABLE:|cffef8173 Target an armored transport.|r"
+Targetmanauser="|cffb99d66UNAVAILABLE:|cffef8173 Select a target with mana.|r"
+Targetbunkerunit="|cffb99d66UNAVAILABLE:|cffef8173 Target a peon.|r"
+Targetwisp="|cffb99d66UNAVAILABLE:|cffef8173 Target a wisp.|r"
+Targetacolyte="|cffb99d66UNAVAILABLE:|cffef8173 Target an acolyte.|r"
+Targetpit="|cffb99d66UNAVAILABLE:|cffef8173 Target a sacrificial pit.|r"
+Needemptytree="|cffb99d66UNAVAILABLE:|cffef8173 An owl is perched in this tree.|r"
+Needowltree="|cffb99d66UNAVAILABLE:|cffef8173 There is no owl in this tree.|r"
+Cantfindcorpse="|cffb99d66UNAVAILABLE:|cffef8173 There are no suitable corpses nearby.|r"
+Cantfindfriendlycorpse="|cffb99d66UNAVAILABLE:|cffef8173 There are no fallen allies nearby.|r"
+Nounits="|cffb99d66UNAVAILABLE:|cffef8173 Troops are an invalid target.|r"
+Noground="|cffb99d66UNAVAILABLE:|cffef8173 Ground troops are an invalid target.|r"
+Noair="|cffb99d66UNAVAILABLE:|cffef8173 Air troops are an invalid target.|r"
+Nostructure="|cffb99d66UNAVAILABLE:|cffef8173 A building is an invalid target.|r"
+Noward="|cffb99d66UNAVAILABLE:|cffef8173 A ward is an invalid target.|r"
+Noitem="|cffb99d66UNAVAILABLE:|cffef8173 An item is an invalid target.|r"
+Nodebris="|cffb99d66UNAVAILABLE:|cffef8173 Debris is an invalid target.|r"
+Notree="|cffb99d66UNAVAILABLE:|cffef8173 A tree is an invalid target.|r"
+Nowall="|cffb99d66UNAVAILABLE:|cffef8173 A wall is an invalid target.|r"
+Nobridge="|cffb99d66UNAVAILABLE:|cffef8173 A bridge is an invalid target.|r"
+Notfrozenbldg="|cffb99d66UNAVAILABLE:|cffef8173 The selected building is frozen.|r"
+Nonaval="|cffb99d66UNAVAILABLE:|cffef8173 A ship is an invalid target.|r"
+Nottownhall="|cffb99d66UNAVAILABLE:|cffef8173 Target an allied base center.|r","|cffb99d66UNAVAILABLE:|cffef8173 Target an allied base center.|r","|cffb99d66UNAVAILABLE:|cffef8173 Target an allied base center.|r","|cffb99d66UNAVAILABLE:|cffef8173 Target an allied base center.|r"
+Notownportalhalls="|cffb99d66UNAVAILABLE:|cffef8173 There are no allied base centers.|r","|cffb99d66UNAVAILABLE:|cffef8173 There are no allied base centers.|r","|cffb99d66UNAVAILABLE:|cffef8173 There are no allied base centers.|r","|cffb99d66UNAVAILABLE:|cffef8173 There are no allied base centers.|r"
+Notself="|cffb99d66UNAVAILABLE:|cffef8173 A unit cannot target itself.|r"
+Notowned="|cffb99d66UNAVAILABLE:|cffef8173 Your troops are an invalid target.|r"
+Notfriendly="|cffb99d66UNAVAILABLE:|cffef8173 An ally is an invalid target.|r"
+Notneutral="|cffb99d66UNAVAILABLE:|cffef8173 Neutral troops are an invalid target.|r"
+Notenemy="|cffb99d66UNAVAILABLE:|cffef8173 An enemy is an invalid target.|r"
+Notcargo="|cffb99d66UNAVAILABLE:|cffef8173 Troops inside a building or transport are an invalid target.|r"
+Nothidden="|cffb99d66UNAVAILABLE:|cffef8173 The target is not visible on the map. |r"
+Nothiddenitem="|cffb99d66UNAVAILABLE:|cffef8173 An item in the inventory is an invalid target.|r"
+Notinvulnerable="|cffb99d66UNAVAILABLE:|cffef8173 The target is invulnerable.|r"
+Nohero="|cffb99d66UNAVAILABLE:|cffef8173 A hero is an invalid target.|r"
+Notcorpse="|cffb99d66UNAVAILABLE:|cffef8173 Select a living target.|r"
+Notfleshycorpse="|cffb99d66UNAVAILABLE:|cffef8173 A corpse is an invalid target.|r"
+Notbonecorpse="|cffb99d66UNAVAILABLE:|cffef8173 A skeleton is an invalid target.|r"
+Notmechanical="|cffb99d66UNAVAILABLE:|cffef8173 Select an organic target.|r"
+Notorganic="|cffb99d66UNAVAILABLE:|cffef8173 Organic troops are an invalid target.|r"
+Notdisabled="|cffb99d66UNAVAILABLE:|cffef8173 A unit cannot move while using this ability.|r"
+Cantattackloc="|cffb99d66UNAVAILABLE:|cffef8173 This location cannot be attacked.|r"
+Canttargetloc="|cffb99d66UNAVAILABLE:|cffef8173 A target cannot be selected here.|r"
+Inventoryfull="|cffb99d66UNAVAILABLE:|cffef8173 The inventory is full.|r"
+Inventoryinteract="|cffb99d66UNAVAILABLE:|cffef8173 Select a unit with an inventory.|r"
+NeedInventory="|cffb99d66UNAVAILABLE:|cffef8173 Only troops with an inventory can pick up items.|r"
+Needretrainablehero="|cffb99d66UNAVAILABLE:|cffef8173 Only heroes whose abilities have been retrained can use this item.|r"
+Neednearbyhero="|cffb99d66UNAVAILABLE:|cffef8173 The hero must be nearby.|r"
+Neednearbypatron="|cffb99d66UNAVAILABLE:|cffef8173 The buyer must be nearby.|r"
+Notsapper="|cffb99d66UNAVAILABLE:|cffef8173 A sapper is an invalid target.|r"
+Notancient="|cffb99d66UNAVAILABLE:|cffef8173 An ancient is an invalid target.|r"
+Notsummoned="|cffb99d66UNAVAILABLE:|cffef8173 Does not affect summoned targets.|r"
+Nottransport="|cffb99d66UNAVAILABLE:|cffef8173 A transport or bunker is an invalid target.|r"
+Notunsummoned="|cffb99d66UNAVAILABLE:|cffef8173 The target is unsummoning.|r"
+Notillusion="|cffb99d66UNAVAILABLE:|cffef8173 An illusion is an invalid target.|r"
+Notmorphing="|cffb99d66UNAVAILABLE:|cffef8173 A morphing unit is an invalid target.|r"
+Notdot="|cffb99d66UNAVAILABLE:|cffef8173 A druid of the talon is an invalid target.|r"
+Illusionscantharvest="|cffb99d66UNAVAILABLE:|cffef8173 Illusions cannot gather resources.|r"
+Illusionscantpickup="|cffb99d66UNAVAILABLE:|cffef8173 Illusions cannot pick up items.|r"
+Cantpolymorphunit="|cffb99d66UNAVAILABLE:|cffef8173 The target is immune to Polymorph.|r"
+Notundead="|cffb99d66UNAVAILABLE:|cffef8173 Undead units are an invalid target.|r"
+Heromaxed="|cffb99d66UNAVAILABLE:|cffef8173 The hero has reached the maximum level.|r"
+HPmaxed="|cffb99d66UNAVAILABLE:|cffef8173 The hero is at full health.|r"
+Manamaxed="|cffb99d66UNAVAILABLE:|cffef8173 The mana pool is full.|r"
+HPmanamaxed="|cffb99d66UNAVAILABLE:|cffef8173 Health and mana are full.|r"
+UnitHPmaxed="|cffb99d66UNAVAILABLE:|cffef8173 The health pool is full.|r"
+UnitManaMaxed="|cffb99d66UNAVAILABLE:|cffef8173 The mana pool is full.|r"
+RepairHPmaxed="|cffb99d66UNAVAILABLE:|cffef8173 The target is undamaged.|r"
+Alreadybeinghealed="|cffb99d66UNAVAILABLE:|cffef8173 The target is already being healed.|r"
+Alreadybeingrepaired="|cffb99d66UNAVAILABLE:|cffef8173 The target is already being repaired.|r"
+Pitalreadysacrificing="|cffb99d66UNAVAILABLE:|cffef8173 A sacrifice is already being performed in this pit.|r"
+Outofstock="|cffb99d66UNAVAILABLE:|cffef8173 The item is out of stock.|r"
+Cooldownstock="|cffb99d66UNAVAILABLE:|cffef8173 The item is out of stock.|r"
+Cantdrop="|cffb99d66UNAVAILABLE:|cffef8173 The item must remain in your inventory.|r"
+Cantpawn="|cffb99d66UNAVAILABLE:|cffef8173 The item cannot be sold.|r"
+Calltoarms="|cffb99d66UNAVAILABLE:|cffef8173 There are no workers nearby.|r"
+Calltoarmspeasant="|cffb99d66UNAVAILABLE:|cffef8173 A town hall is required to call workers to arms.|r"
+Backtowork="|cffb99d66UNAVAILABLE:|cffef8173 There is no militia nearby.|r"
+Backtoworkmilitia="|cffb99d66UNAVAILABLE:|cffef8173 A town hall is required to dismiss the militia.|r"
+BattleStations="|cffb99d66UNAVAILABLE:|cffef8173 There are no peons nearby.|r"
+Replaceme="|cffb99d66UNAVAILABLE:|cffef8173 Replace this with a meaningful error message!|r"
+Notliquidfirebldg="|cffb99d66UNAVAILABLE:|cffef8173 This building is already affected by Liquid Fire.|r"
+Notethereal="|cffb99d66UNAVAILABLE:|cffef8173 Ethereal beings are only vulnerable to abilities and magic attacks.|r"
+Needstealbuff="|cffb99d66UNAVAILABLE:|cffef8173 The target has no effects to steal.|r"
+Needmeleeattacker="|cffb99d66UNAVAILABLE:|cffef8173 Target a melee unit.|r"
+Needrangedattacker="|cffb99d66UNAVAILABLE:|cffef8173 Target a ranged unit.|r"
+Needspecialattacker="|cffb99d66UNAVAILABLE:|cffef8173 Target a special unit.|r"
+Needattacker="|cffb99d66UNAVAILABLE:|cffef8173 Target a unit.|r"
+Needcaster="|cffb99d66UNAVAILABLE:|cffef8173 Target a spellcaster.|r"
+Needattackerorcaster="|cffb99d66UNAVAILABLE:|cffef8173 Target a unit or spellcaster.|r"
+Nopreservationtarget="|cffb99d66UNAVAILABLE:|cffef8173 There are no buildings to teleport to.|r"
+Canttransformitem="|cffb99d66UNAVAILABLE:|cffef8173 The transformation failed.|r"
+Notmocunit="|cffb99d66UNAVAILABLE:|cffef8173 This object has already been sacrificed to the fire.|r"
+Cantimpale="|cffb99d66UNAVAILABLE:|cffef8173 Invalid target for Impale.|r"
+Needpositivebuff="|cffb99d66UNAVAILABLE:|cffef8173 Target an enemy affected by positive effects.|r"
+Needposbufforsummoned="|cffb99d66UNAVAILABLE:|cffef8173 Target a summoned unit or an enemy affected by positive effects.|r"
+Neednegativebuff="|cffb99d66UNAVAILABLE:|cffef8173 Target an ally affected by negative effects.|r"
+Absorbmana="|cffb99d66UNAVAILABLE:|cffef8173 Not enough mana to absorb.|r"
+Canttakeitem="|cffb99d66UNAVAILABLE:|cffef8173 The item could not be picked up.|r"
+Cantdropitem="|cffb99d66UNAVAILABLE:|cffef8173 This item cannot be dropped.|r"
+Cantuseitem="|cffb99d66UNAVAILABLE:|cffef8173 This item cannot be used.|r"
+Notpowerup="|cffb99d66UNAVAILABLE:|cffef8173 This item cannot be used.|r"
+Itemcooldown="|cffb99d66UNAVAILABLE:|cffef8173 This item is recharging.|r"
+Cantfindcoupletarget="|cffb99d66UNAVAILABLE:|cffef8173 No matching target was found.|r"
+Notdisabledinventory="|cffb99d66UNAVAILABLE:|cffef8173 This unit has no inventory.|r"
+Resistantskin="|cffb99d66UNAVAILABLE:|cffef8173 Resistant Skin.|r"
+Notinvulnerablespell="|cffb99d66UNAVAILABLE:|cffef8173 The item or ability granting invulnerability could not be used.|r"
+Needsummoned="|cffb99d66UNAVAILABLE:|cffef8173 Select a summoned target.|r"
+Cantsubmergethere="|cffb99d66UNAVAILABLE:|cffef8173 Units cannot submerge here.|r"
+Alreadydoomed="|cffb99d66UNAVAILABLE:|cffef8173 This unit is already affected by Doom.|r"
+Unitattack="|cffb99d66UNAVAILABLE:|cffef8173 Your troops have entered combat.|r"
+Townattack="|cffb99d66UNAVAILABLE:|cffef8173 Our base is under attack!|r"
+Herodies="|cffb99d66EVENT:|cffef8173 %s has fallen in battle.|r"
+Allyunderattack="|cffb99d66EVENT:|cfff2a35e %s has entered combat.|r"
+Allytownattack="|cffb99d66EVENT:|cfff2a35e Player %s's base is under attack!|r"
+Allyminimapping="|cffb99d66EVENT:|cfff2a35e %s is pinging the map.|r"
+Goldandlumberfromally="|cffb99d66EVENT:|cffc8e087 Received %d gold and %d lumber from player %s.|r"
+Goldfromally="|cffb99d66EVENT:|cffc8e087 Received %d gold from player %s.|r"
+Lumberfromally="|cffb99d66EVENT:|cffc8e087 Received %d lumber from player %s.|r"
+Goldminedestroyed="|cffb99d66EVENT:|cfff2a35e A gold mine has been depleted.|r","|cffb99d66EVENT:|cfff2a35e A gold mine has been depleted.|r","|cffb99d66EVENT:|cfff2a35e The gold source has run dry.|r","|cffb99d66EVENT:|cfff2a35e A gold mine has been exhausted.|r"
+Upkeeplevel="|cffb99d66EVENT:|cffced4da Upkeep level: %d.|r"
+Herokilledhero="|cffb99d66EVENT:|cffced4da Player %s defeated player %s.|r"
+Herodeath="|cffb99d66EVENT:|cffef8173 %s (%s level %d) has fallen.|r","|cffb99d66EVENT:|cffef8173 %s (%s level %d) has died.|r","|cffb99d66EVENT:|cffef8173 %s (%s level %d) has left this world.|r","|cffb99d66EVENT:|cffef8173 %s (%s level %d) has fallen.|r"
+Goldminelow="|cffb99d66EVENT:|cfff2a35e A gold mine is almost depleted.|r","|cffb99d66EVENT:|cfff2a35e A gold mine is almost depleted.|r","|cffb99d66EVENT:|cfff2a35e The gold source will soon run dry.|r","|cffb99d66EVENT:|cfff2a35e A gold mine is almost depleted.|r"
+Controlgranted="|cffb99d66EVENT:|cffc8e087 Player %s's troops have come under your command.|r"
+Controlrevoked="|cffb99d66EVENT:|cffef8173 %s has lost control of their army.|r"

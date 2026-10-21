@@ -17,12 +17,17 @@ tmp_screen*.png
 /tmp
 /.cache/
 /wc3.local.json
+# Generated localization artifacts (rebuild with scripts/wc3_l10n.py)
+/localization/catalog.json
+/map.w3x/_Locales/*.w3mod/war3map.wts
+/map.w3x/_Locales/*.w3mod/Units/CommandStrings.txt
 hivewe.log
 results.txt
 23_race_*.w3x
 
 # Собранные карты, сторонние карты и тяжёлые диагностические артефакты
 /*.w3x
+!/map.w3x/
 /war3map.j
 /diagnostics/
 /scratch/

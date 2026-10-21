@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "locale": "enUS",
+  "default_locale": "ruRU",
+  "scope_races": ["Stromgard"],
+  "game_locales": ["enUS", "enGB"]
+}

@@ -9,6 +9,7 @@ from lupa.lua53 import LuaRuntime
 ROOT = Path(__file__).resolve().parents[1]
 SECTIONS = ROOT / 'map.w3x/_lua/monolith_split/sections'
 FRAME_PARK = (SECTIONS / '80_runtime/_ui/58_frame_park.lua').read_text(encoding='utf-8')
+LOCALIZATION = (SECTIONS / '03_localization.lua').read_text(encoding='utf-8')
 
 FIXTURE = r'''
 FRAMEPOINT_TOPLEFT='tl'; FRAMEPOINT_BOTTOMLEFT='bl'; FRAMEPOINT_BOTTOMRIGHT='br'; FRAMEPOINT_TOP='t'
@@ -83,6 +84,7 @@ class RacePickerTests(unittest.TestCase):
         lua = LuaRuntime()
         self.lua = lua
         lua.execute(FIXTURE)
+        lua.execute(LOCALIZATION)
         lua.execute(FRAME_PARK)
         src = (SECTIONS / '80_runtime/_ui/63_race_picker.lua').read_text(encoding='utf-8')
         for name in set(re.findall(r'"(Trig_Race_[A-Za-z0-9_]+_Actions)"', src)):

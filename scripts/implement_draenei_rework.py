@@ -13,6 +13,7 @@ import subprocess
 from pathlib import Path
 
 from wc3_project import settings
+from wc3_object_binary import object_records
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -141,48 +142,6 @@ def register_imports(path, assets):
     if additions:
         path.write_bytes(struct.pack('<II', version, count + len(additions)) + blob[8:] + b''.join(additions))
     return len(additions)
-
-
-def object_records(blob, extended):
-    """Read record boundaries without normalizing values, end tokens or unknown fields."""
-    version = struct.unpack_from('<I', blob)[0]
-    pos, tables = 4, []
-    for _ in range(2):
-        count = struct.unpack_from('<I', blob, pos)[0]
-        pos += 4
-        records = []
-        for _ in range(count):
-            start = pos
-            old, new = blob[pos:pos + 4], blob[pos + 4:pos + 8]
-            pos += 8
-            if version >= 3:
-                extra_count = struct.unpack_from('<I', blob, pos)[0]
-                pos += 4 + extra_count * 4
-            header = blob[start:pos]
-            mods_count = struct.unpack_from('<I', blob, pos)[0]
-            pos += 4
-            mods = []
-            for _ in range(mods_count):
-                mod_start = pos
-                field = blob[pos:pos + 4].decode('ascii')
-                value_type = struct.unpack_from('<I', blob, pos + 4)[0]
-                pos += 8
-                level, pointer = 0, 0
-                if extended:
-                    level, pointer = struct.unpack_from('<II', blob, pos)
-                    pos += 8
-                if value_type == 3:
-                    pos = blob.index(0, pos) + 1
-                else:
-                    assert value_type in (0, 1, 2)
-                    pos += 4
-                pos += 4  # Preserve original end token.
-                mods.append(((field, level, pointer), blob[mod_start:pos]))
-            code = (new if new != b'\0' * 4 else old).decode('latin1')
-            records.append({'id': code, 'header': header, 'mods': mods, 'raw': blob[start:pos]})
-        tables.append(records)
-    assert pos == len(blob), (pos, len(blob))
-    return version, tables
 
 
 def preserve_unrelated(original_path, edited_path, new_ids, unit_ids=()):

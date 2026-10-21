@@ -38,6 +38,7 @@
 | Файл | Описание |
 |---|---|
 | [LIVE_AGENT_BRIDGE.md](LIVE_AGENT_BRIDGE.md) | **Live Agent Bridge** — исполнение Lua в работающей карте без перезапуска. Устройство eval-канала v2 (heartbeat, hex-кодирование, per-seq файлы), использование `agent_bridge.py`, режимы ожидания (`--watch`), восстановление зависшего моста, управление логами (LogFilter), подводные камни (Preloader-кэш, атомарность, режем строки). |
+| [LOCALIZATION.md](LOCALIZATION.md) | **Локализация** — инвентарь object data, `_Locales/<locale>.w3mod/war3map.wts`, переводы по смысловым ключам, панель выбора расы, `CommandStrings.txt`, проверки палитры/чисел/плейсхолдеров и порядок упаковки. |
 | [LUA_WORK_PLAN.md](LUA_WORK_PLAN.md) | **План Lua-миграции** — цели (каноническая карта, сборка из split, CLI-тесты), порядок работ (сборка, автотесты, починка UI, смысловое разбиение кода, AI для всех рас, нормализация импортов), архитектурные правила. |
 | [PORTAL_GRAPH.md](PORTAL_GRAPH.md) | **Граф порталов** — собрано `ai_portal_graph_probe.lua`: 73 портала, рёбра continent→continent, непокрытые rect'ами, легенда 18 континентов. |
 
