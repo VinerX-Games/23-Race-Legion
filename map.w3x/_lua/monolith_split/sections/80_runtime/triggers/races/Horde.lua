@@ -180,6 +180,7 @@ function Trig_K1T1_Actions()
     local pi= GetPlayerId(p)
     
     
+    T1Count(p)
     i=CommonHash[pi]["T1_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["T1" .. i] or 0
@@ -283,6 +284,7 @@ function Trig_K1T2_Actions()
     local pi= GetPlayerId(p)
     
     -- 
+    T2Count(p)
     i=CommonHash[pi]["T2_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["T2" .. i] or 0
@@ -374,6 +376,7 @@ function Trig_K1T2b_Actions()
     
     
     -- 
+    T2bCount(p)
     i=CommonHash[pi]["T2b_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["T2b" .. i] or 0
@@ -494,6 +497,7 @@ function Trig_K1TCav_Actions()
     
     
     -- 
+    TCavCount(p)
     i=CommonHash[pi]["TCav_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["TCav" .. i] or 0
@@ -628,6 +632,7 @@ function Trig_K1T4_Actions()
     
     
     -- 
+    T3Count(p)
     i=CommonHash[pi]["T3_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["T3" .. i] or 0
@@ -742,6 +747,7 @@ function Trig_K2T1_Actions()
     
     
     -- 
+    K1Count(p)
     i=CommonHash[pi]["K1_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["K1" .. i] or 0
@@ -852,6 +858,7 @@ function Trig_K2T2_Actions()
     
     
     -- 
+    K2Count(p)
     i=CommonHash[pi]["K2_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["K2" .. i] or 0
@@ -959,6 +966,7 @@ function Trig_K2T2b_Actions()
     local pi= GetPlayerId(p)
     
     -- 
+    K2bCount(p)
     i=CommonHash[pi]["K2b_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["K2b" .. i] or 0
@@ -1060,6 +1068,7 @@ function Trig_K2T3_Actions()
     
     
     -- 
+    K3Count(p)
     i=CommonHash[pi]["K3_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["K3" .. i] or 0
@@ -1986,7 +1995,7 @@ end
 -- Trigger: CanselCommonHome
 --===========================================================================
 function Trig_CanselCommonHome_Conditions()
-    return GetResearched() == FourCC('R0E9')
+    return GetResearched() == FourCC('R0EH')
 end
 function Trig_CanselCommonHome_Func001C()
     return GetPlayerTechMaxAllowedSwap(FourCC('R0D1'), GetOwningPlayer(GetTriggerUnit())) == 0
@@ -2130,7 +2139,7 @@ end
 -- Trigger: NightBorn
 --===========================================================================
 function Trig_NightBorn_Conditions()
-    return GetResearched() == FourCC('R0F3')
+    return GetResearched() == FourCC('R0F4')
 end
 function Trig_NightBorn_Actions()
     local u= GetTriggerUnit()
@@ -2586,7 +2595,7 @@ end
 -- Trigger: Magnatavrs
 --===========================================================================
 function Trig_Magnatavrs_Conditions()
-    return GetResearched() == FourCC('R0E4')
+    return GetResearched() == FourCC('R0E5')
 end
 function Trig_Magnatavrs_Actions()
     local u= GetTriggerUnit()
@@ -2943,4 +2952,61 @@ end
 function InitTrig_StartHorde()
     gg_trg_StartHorde=CreateTrigger()
     TriggerAddAction(gg_trg_StartHorde, Trig_StartHorde_Actions)
+end
+
+HordeResearch = {pending = {}, ids = {}}
+
+function HordeUpdateResearchAvailability(p)
+    local pending = HordeResearch.pending[GetPlayerId(p)] or {}
+    local function chosen(id)
+        local code = FourCC(id)
+        return GetPlayerTechCount(p, code, true) > 0 or pending[code] == true
+    end
+    local function allow(id, available)
+        SetPlayerTechMaxAllowed(p, FourCC(id), available and 1 or 0)
+    end
+    local function completed(id)
+        return GetPlayerTechCount(p, FourCC(id), true) > 0
+    end
+    local refused = chosen('R0DW')
+    local common, radical, compromise = chosen('R0EH'), chosen('R0E9'), chosen('R0EI')
+    allow('R0DW', not (chosen('R0DX') or chosen('R0DY') or chosen('R0DZ')))
+    allow('R0DX', not (refused or common or compromise))
+    allow('R0DY', not (refused or radical or compromise))
+    allow('R0DZ', not refused)
+    allow('R0EH', completed('R0EE') and not (radical or compromise))
+    allow('R0E9', completed('R0E0') and not (common or compromise))
+    allow('R0EI', (completed('R0EE') or completed('R0E0')) and not (common or radical))
+    allow('R0EA', completed('R0E9') and not chosen('R0KO'))
+    allow('R0KO', completed('R0E9') and not chosen('R0EA'))
+end
+
+function InitTrig_HordeResearch()
+    if HordeResearch.initialized then return end
+    HordeResearch.initialized = true
+    for _, id in ipairs({'R0DW', 'R0DX', 'R0DY', 'R0DZ', 'R0D1', 'R0D2', 'R0D3',
+        'R0E0', 'R0E1', 'R0E3', 'R0E4', 'R0E5', 'R0E9', 'R0EA', 'R0EE',
+        'R0EH', 'R0EI', 'R0F3', 'R0F4', 'R0KO'}) do
+        HordeResearch.ids[FourCC(id)] = true
+    end
+    -- Регистрируется после старых обработчиков, чтобы учитывать их итоговые технологии.
+    local function changed(started, finished)
+        local id = GetResearched()
+        if not HordeResearch.ids[id] then return end
+        local p = GetOwningPlayer(GetTriggerUnit())
+        local pi = GetPlayerId(p)
+        HordeResearch.pending[pi] = HordeResearch.pending[pi] or {}
+        HordeResearch.pending[pi][id] = started or nil
+        HordeUpdateResearchAvailability(p)
+        if finished then countAll(p) end
+    end
+    local start = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(start, EVENT_PLAYER_UNIT_RESEARCH_START)
+    TriggerAddAction(start, function() changed(true, false) end)
+    local cancel = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(cancel, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    TriggerAddAction(cancel, function() changed(false, false) end)
+    local finish = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(finish, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    TriggerAddAction(finish, function() changed(false, true) end)
 end

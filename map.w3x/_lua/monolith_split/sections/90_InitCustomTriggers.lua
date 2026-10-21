@@ -1300,5 +1300,6 @@ function InitCustomTriggers()
     InitTrig_TurtleDiy()
     InitTrig_TurtleOut()
     InitTrig_DalIn_Copy()
+    InitTrig_HordeResearch()
 end
 --===========================================================================

@@ -21,9 +21,9 @@
   "A01N": {
    "type": "ability",
    "name": "Пламя феникса",
-   "hotkey": "E",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "E"
   },
   "A01R": {
    "type": "ability",
@@ -39,34 +39,34 @@
   "A0CE": {
    "type": "ability",
    "name": "Морозный доспех",
-   "hotkey": "E",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "E"
   },
   "A0I3": {
    "type": "ability",
    "name": "Небольшой скачок",
-   "hotkey": "C",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "C"
   },
   "A0IQ": {
    "type": "ability",
    "name": "Обозначить столицу",
-   "hotkey": "X",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "X"
   },
   "A0LI": {
    "type": "ability",
    "name": "Обмен золота на дерево",
-   "hotkey": "S",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "S"
   },
   "A0LJ": {
    "type": "ability",
    "name": "Обмен дерева на золото",
-   "hotkey": "A",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "A"
   },
   "A0OZ": {
    "type": "ability",
@@ -77,47 +77,47 @@
    "type": "ability",
    "name": "Каменная кожа",
    "hero": true,
-   "hotkey": "E",
-   "levels": 4
+   "levels": 4,
+   "hotkey": "E"
   },
   "A0P4": {
    "type": "ability",
    "name": "Бросок валуна",
    "hero": true,
-   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A0P7": {
    "type": "ability",
    "name": "Кольцо огня",
    "hero": true,
-   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "A0P9": {
    "type": "ability",
    "name": "Скачок",
    "hero": true,
-   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "A0PA": {
    "type": "ability",
    "name": "Ловкий как ветер",
    "hero": true,
-   "hotkey": "E",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "E"
   },
   "A0PG": {
    "type": "ability",
    "name": "Громовой удар",
-   "hotkey": "Q",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A0PH": {
    "type": "ability",
@@ -130,8 +130,8 @@
   "A0Q8": {
    "type": "ability",
    "name": "Сожжение доспехов",
-   "hotkey": "Q",
    "levels": 1,
+   "hotkey": "Q",
    "requires": [
     "R09R"
    ],
@@ -157,9 +157,9 @@
   "A0QC": {
    "type": "ability",
    "name": "Ледяные стрелы",
-   "hotkey": "Q",
    "levels": 2,
    "hero_level_req": 1,
+   "hotkey": "Q",
    "requires": [
     "R09U"
    ]
@@ -167,9 +167,9 @@
   "A0QD": {
    "type": "ability",
    "name": "Кольцо льда",
-   "hotkey": "W",
    "levels": 1,
    "hero_level_req": 1,
+   "hotkey": "W",
    "requires": [
     "R09V"
    ]
@@ -177,8 +177,8 @@
   "A0QE": {
    "type": "ability",
    "name": "Пламя жизни",
-   "hotkey": "W",
    "levels": 1,
+   "hotkey": "W",
    "requires_amount": 2
   },
   "A0QF": {
@@ -203,8 +203,8 @@
   "A0QI": {
    "type": "ability",
    "name": "Бросок валуна",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A0QM": {
    "type": "ability",
@@ -217,9 +217,9 @@
   "A0QN": {
    "type": "ability",
    "name": "Элементали",
-   "hotkey": "Q",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A0W7": {
    "type": "ability",
@@ -248,8 +248,8 @@
   "A18B": {
    "type": "ability",
    "name": "Тёмный призыв",
-   "hotkey": "W",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "W"
   },
   "A1LE": {
    "type": "ability",
@@ -267,32 +267,32 @@
    "type": "ability",
    "name": "Морозный доспех",
    "hero": true,
-   "hotkey": "|cffebc56cСтрелок Кул-Тираса|r",
-   "levels": 4
+   "levels": 4,
+   "hotkey": "|cffebc56cСтрелок Кул-Тираса|r"
   },
   "AEtq": {
    "type": "ability",
    "name": "Покой",
    "hero": true,
-   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "AHfs": {
    "type": "ability",
    "name": "Огненный столб",
    "hero": true,
-   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "AHpx": {
    "type": "ability",
    "name": "Феникс",
    "hero": true,
-   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "AInv": {
    "type": "ability",
@@ -303,23 +303,23 @@
    "type": "ability",
    "name": "Испепеление",
    "hero": true,
-   "hotkey": "E",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "E"
   },
   "ANlm": {
    "type": "ability",
    "name": "Призыв порождения лавы",
    "hero": true,
-   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "Aadm": {
    "type": "ability",
    "name": "Рассеяние чар",
-   "hotkey": "B",
    "levels": 1,
+   "hotkey": "B",
    "requires": [
     "Resi"
    ]
@@ -332,20 +332,20 @@
   "Adis": {
    "type": "ability",
    "name": "Рассеивание чар",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Adtn": {
    "type": "ability",
    "name": "Взорваться",
-   "hotkey": "D",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "D"
   },
   "Aren": {
    "type": "ability",
    "name": "Обновление",
-   "hotkey": "R",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "R"
   },
   "Argl": {
    "type": "ability",
@@ -363,280 +363,280 @@
   "Awha": {
    "type": "ability",
    "name": "Добывать ресурсы",
-   "hotkey": "G",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "G"
   },
   "H0EZ": {
    "type": "hero",
    "name": "Кристальный владыка",
    "base": "Hmkg",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "W",
+   "lumber": 100,
+   "food": 1,
    "hp": 700,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "W"
   },
   "H0F0": {
    "type": "hero",
    "name": "Мастер ветра",
    "base": "Hblm",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "Q",
+   "lumber": 100,
+   "food": 1,
    "hp": 700,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "Q"
   },
   "N037": {
    "type": "hero",
    "name": "Повелитель огня",
    "base": "Nfir",
-   "time": 55,
-   "food": 1,
    "gold": 425,
-   "hotkey": "E",
+   "lumber": 135,
+   "food": 1,
    "hp": 1000,
-   "lumber": 135
+   "time": 55,
+   "hotkey": "E"
   },
   "R01N": {
    "type": "upgrade",
    "name": "Улучшенная кладка",
+   "levels": 6,
    "gold": 250,
    "gold_per_level": 500,
    "lumber": 250,
    "lumber_per_level": 500,
-   "levels": 6,
+   "time": 30,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 30,
-   "time_per_level": 15
+   ]
   },
   "R09C": {
    "type": "upgrade",
    "name": "Огонь",
+   "levels": 1,
    "gold": 1500,
    "lumber": 1000,
-   "levels": 1,
    "time": 40
   },
   "R09D": {
    "type": "upgrade",
    "name": "Вода",
+   "levels": 1,
    "gold": 1500,
    "lumber": 1000,
-   "levels": 1,
    "time": 40
   },
   "R09E": {
    "type": "upgrade",
    "name": "Земля",
+   "levels": 1,
    "gold": 1500,
    "lumber": 1000,
-   "levels": 1,
    "time": 40
   },
   "R09F": {
    "type": "upgrade",
    "name": "Воздух",
+   "levels": 1,
    "gold": 1500,
    "lumber": 1000,
-   "levels": 1,
    "time": 40
   },
   "R09G": {
    "type": "upgrade",
    "name": "Огонь",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 1000,
    "lumber": 450,
    "lumber_per_level": 900,
-   "levels": 6,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "R09H": {
    "type": "upgrade",
    "name": "Вода",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 1000,
    "lumber": 450,
    "lumber_per_level": 900,
-   "levels": 6,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "R09I": {
    "type": "upgrade",
    "name": "Земля",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 1000,
    "lumber": 450,
    "lumber_per_level": 900,
-   "levels": 6,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "R09J": {
    "type": "upgrade",
    "name": "Ветер",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 1000,
    "lumber": 450,
    "lumber_per_level": 900,
-   "levels": 6,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "R09Q": {
    "type": "upgrade",
    "name": "Ярость",
+   "levels": 1,
    "gold": 430,
    "lumber": 430,
-   "levels": 1,
    "time": 40
   },
   "R09R": {
    "type": "upgrade",
    "name": "Повышение температуры",
+   "levels": 2,
    "gold": 540,
    "lumber": 650,
-   "levels": 2,
+   "time": 40,
    "requires": [
     "h0ER",
     "R09C"
-   ],
-   "time": 40
+   ]
   },
   "R09S": {
    "type": "upgrade",
    "name": "Рассекающий удар",
+   "levels": 1,
    "gold": 560,
    "lumber": 760,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "R09C"
-   ],
-   "time": 40
+   ]
   },
   "R09T": {
    "type": "upgrade",
    "name": "Магия воды",
+   "levels": 1,
    "gold": 430,
    "gold_per_level": 430,
    "lumber": 430,
-   "levels": 1,
    "time": 40
   },
   "R09U": {
    "type": "upgrade",
    "name": "Ледяные стрелы",
+   "levels": 2,
    "gold": 430,
    "lumber": 540,
-   "levels": 2,
+   "time": 40,
    "requires": [
     "R09D"
-   ],
-   "time": 40
+   ]
   },
   "R09V": {
    "type": "upgrade",
    "name": "Магия морей",
+   "levels": 2,
    "gold": 470,
    "gold_per_level": 450,
    "lumber": 760,
    "lumber_per_level": 435,
-   "levels": 2,
+   "time": 40,
    "requires": [
     "R09D",
     "h0ER"
-   ],
-   "time": 40
+   ]
   },
   "R09W": {
    "type": "upgrade",
    "name": "",
    "only_required": true,
+   "levels": 1,
    "gold": 450,
    "gold_per_level": 250,
    "lumber": 150,
    "lumber_per_level": 150,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "ostr",
     "o03B",
     "o03D"
-   ],
-   "time": 40
+   ]
   },
   "R09X": {
    "type": "upgrade",
    "name": "Каменное здоровье",
+   "levels": 3,
    "gold": 650,
    "gold_per_level": 650,
    "lumber": 740,
    "lumber_per_level": 740,
-   "levels": 3,
+   "time": 40,
    "requires": [
     "h0ER"
-   ],
-   "time": 40
+   ]
   },
   "R09Y": {
    "type": "upgrade",
    "name": "Сокрушение",
+   "levels": 1,
    "gold": 540,
    "lumber": 800,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "h0ES"
-   ],
-   "time": 40
+   ]
   },
   "R09Z": {
    "type": "upgrade",
    "name": "Легкость воздуха",
+   "levels": 2,
    "gold": 450,
    "gold_per_level": 450,
    "lumber": 555,
    "lumber_per_level": 555,
-   "levels": 2,
    "time": 40
   },
   "R0A0": {
    "type": "upgrade",
    "name": "Критический удар",
+   "levels": 1,
    "gold": 560,
    "lumber": 540,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "h0ER"
-   ],
-   "time": 40
+   ]
   },
   "R0A1": {
    "type": "upgrade",
    "name": "Ярость грома",
+   "levels": 1,
    "gold": 870,
    "lumber": 1200,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "h0ES"
-   ],
-   "time": 40
+   ]
   },
   "R0A2": {
    "type": "upgrade",
@@ -646,118 +646,118 @@
   "R0DS": {
    "type": "upgrade",
    "name": "Улучшенная добыча",
+   "levels": 5,
    "gold": 100,
    "gold_per_level": 250,
-   "levels": 5,
    "time": 60,
    "time_per_level": 15
   },
   "Resi": {
    "type": "upgrade",
    "name": "Рассеяние чар",
+   "levels": 1,
    "gold": 320,
    "lumber": 560,
-   "levels": 1,
    "time": 45
   },
   "Reuv": {
    "type": "upgrade",
    "name": "",
    "only_required": true,
+   "levels": 1,
    "gold": 50,
    "lumber": 50,
-   "levels": 1,
+   "time": 45,
    "requires": [
     "etoa"
-   ],
-   "time": 45
+   ]
   },
   "Rgfo": {
    "type": "upgrade",
    "name": "Знак укрепления",
+   "levels": 3,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
-   "levels": 3,
    "time": 60,
    "time_per_level": 15
   },
   "Rhac": {
    "type": "upgrade",
    "name": "Улучшенная кладка — уровень 1",
+   "levels": 3,
    "gold": 125,
    "gold_per_level": 500,
    "lumber": 50,
    "lumber_per_level": 450,
-   "levels": 3,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "e00F": {
    "type": "unit",
    "name": "Дух стихий",
    "base": "ewsp",
-   "time": 14,
    "gold": 70,
-   "hotkey": "Q",
-   "hp": 125
+   "hp": 125,
+   "time": 14,
+   "hotkey": "Q"
   },
   "h0EO": {
    "type": "building",
    "name": "Огненные недра",
    "base": "hbar",
-   "time": 60,
    "gold": 360,
-   "hotkey": "F",
+   "lumber": 500,
    "hp": 1500,
-   "lumber": 500
+   "time": 60,
+   "hotkey": "F"
   },
   "h0EP": {
    "type": "building",
    "name": "Магическая башня",
    "base": "hatw",
-   "time": 50,
    "gold": 250,
-   "hotkey": "Z",
+   "lumber": 150,
    "hp": 500,
-   "lumber": 150
+   "time": 50,
+   "hotkey": "Z"
   },
   "h0EQ": {
    "type": "building",
    "name": "Скопление стихий",
    "base": "htow",
-   "time": 180,
-   "food_made": 50,
    "gold": 385,
-   "hotkey": "Q",
+   "lumber": 205,
+   "food_made": 50,
    "hp": 1500,
-   "lumber": 205
+   "time": 180,
+   "hotkey": "Q"
   },
   "h0ER": {
    "type": "building",
    "name": "Наполнитель стихий",
    "base": "hkee",
-   "time": 140,
-   "food_made": 100,
    "gold": 4500,
-   "hotkey": "Z",
+   "lumber": 4500,
+   "food_made": 100,
    "hp": 2000,
-   "lumber": 4500
+   "time": 140,
+   "hotkey": "Z"
   },
   "h0ES": {
    "type": "building",
    "name": "Стихийный Бастион",
    "base": "hcas",
-   "time": 140,
-   "food_made": 150,
    "gold": 12000,
-   "hotkey": "Z",
-   "hp": 2500,
    "lumber": 12000,
+   "food_made": 150,
+   "hp": 2500,
+   "time": 140,
+   "hotkey": "Z",
    "requires": [
     "h0EY"
    ]
@@ -766,73 +766,73 @@
    "type": "building",
    "name": "Морской басейн",
    "base": "hbar",
-   "time": 60,
    "gold": 450,
-   "hotkey": "R",
+   "lumber": 270,
    "hp": 1500,
-   "lumber": 270
+   "time": 60,
+   "hotkey": "R"
   },
   "h0EU": {
    "type": "building",
    "name": "Ветролом",
    "base": "hbar",
-   "time": 60,
    "gold": 340,
-   "hotkey": "W",
+   "lumber": 450,
    "hp": 1500,
-   "lumber": 450
+   "time": 60,
+   "hotkey": "W"
   },
   "h0EV": {
    "type": "building",
    "name": "Элементальная мастерская",
    "base": "hbla",
-   "time": 70,
    "gold": 140,
-   "hotkey": "D",
+   "lumber": 40,
    "hp": 1500,
-   "lumber": 40
+   "time": 70,
+   "hotkey": "D"
   },
   "h0EW": {
    "type": "building",
    "name": "Каменоломня",
    "base": "hbar",
-   "time": 60,
    "gold": 400,
-   "hotkey": "E",
+   "lumber": 340,
    "hp": 1500,
-   "lumber": 340
+   "time": 60,
+   "hotkey": "E"
   },
   "h0EX": {
    "type": "building",
    "name": "Стихийный кристалл",
    "base": "hhou",
-   "time": 35,
-   "food_made": 40,
    "gold": 300,
-   "hotkey": "A",
+   "lumber": 150,
+   "food_made": 40,
    "hp": 500,
-   "lumber": 150
+   "time": 35,
+   "hotkey": "A"
   },
   "h0EY": {
    "type": "building",
    "name": "Алтарь Пространства",
    "base": "halt",
-   "time": 60,
-   "food_made": 3,
    "gold": 180,
-   "hotkey": "S",
+   "lumber": 50,
+   "food_made": 3,
    "hp": 900,
-   "lumber": 50
+   "time": 60,
+   "hotkey": "S"
   },
   "h0F1": {
    "type": "unit",
    "name": "Огненная птица",
    "base": "hphx",
-   "time": 54,
    "gold": 360,
-   "hotkey": "R",
-   "hp": 650,
    "lumber": 120,
+   "hp": 650,
+   "time": 54,
+   "hotkey": "R",
    "requires": [
     "h0ES"
    ]
@@ -841,11 +841,11 @@
    "type": "building",
    "name": "Магическая башня",
    "base": "hatw",
-   "time": 50,
    "gold": 10000,
-   "hotkey": "Z",
-   "hp": 500,
    "lumber": 10000,
+   "hp": 500,
+   "time": 50,
+   "hotkey": "Z",
    "requires": [
     "R09C"
    ]
@@ -854,134 +854,134 @@
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 140,
-   "food_made": 100,
    "gold": 4500,
-   "hotkey": "Z",
+   "lumber": 4500,
+   "food_made": 100,
    "hp": 2000,
-   "lumber": 4500
+   "time": 140,
+   "hotkey": "Z"
   },
   "n02P": {
    "type": "unit",
    "name": "Штормовой Элементаль",
    "base": "nmyr",
-   "time": 48,
-   "equivalents": [
-    "nmys"
-   ],
    "gold": 325,
-   "hotkey": "R",
-   "hp": 700,
    "lumber": 110,
+   "hp": 700,
+   "time": 48,
+   "hotkey": "R",
    "requires": [
     "h0ES"
+   ],
+   "equivalents": [
+    "nmys"
    ]
   },
   "n02Q": {
    "type": "unit",
    "name": "Элементаль Ветра",
    "base": "nmyr",
+   "gold": 170,
+   "hp": 450,
    "time": 25,
+   "hotkey": "Q",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 170,
-   "hotkey": "Q",
-   "hp": 450
+   ]
   },
   "n02R": {
    "type": "unit",
    "name": "Элементаль Огня",
    "base": "nmyr",
+   "gold": 160,
+   "hp": 550,
    "time": 26,
+   "hotkey": "Q",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 160,
-   "hotkey": "Q",
-   "hp": 550
+   ]
   },
   "n02S": {
    "type": "unit",
    "name": "Возжигатель",
    "base": "nmyr",
-   "time": 33,
-   "equivalents": [
-    "nmys"
-   ],
    "gold": 220,
-   "hotkey": "W",
-   "hp": 500,
    "lumber": 75,
+   "hp": 500,
+   "time": 33,
+   "hotkey": "W",
    "requires": [
     "h0ER",
     "R09C"
+   ],
+   "equivalents": [
+    "nmys"
    ]
   },
   "n02T": {
    "type": "unit",
    "name": "Элементаль Морей",
    "base": "nmyr",
-   "time": 35,
-   "equivalents": [
-    "nmys"
-   ],
    "gold": 235,
-   "hotkey": "E",
-   "hp": 450,
    "lumber": 80,
+   "hp": 450,
+   "time": 35,
+   "hotkey": "E",
    "requires": [
     "h0ER",
     "R09D"
+   ],
+   "equivalents": [
+    "nmys"
    ]
   },
   "n02U": {
    "type": "unit",
    "name": "Элементаль Воды",
    "base": "nmyr",
+   "gold": 175,
+   "hp": 500,
    "time": 24,
+   "hotkey": "Q",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 175,
-   "hotkey": "Q",
-   "hp": 500
+   ]
   },
   "n02V": {
    "type": "unit",
    "name": "Грозовой Элементаль",
    "base": "nmyr",
-   "time": 32,
-   "equivalents": [
-    "nmys"
-   ],
    "gold": 215,
-   "hotkey": "W",
-   "hp": 500,
    "lumber": 70,
+   "hp": 500,
+   "time": 32,
+   "hotkey": "W",
    "requires": [
     "R09F",
     "R09D"
+   ],
+   "equivalents": [
+    "nmys"
    ]
   },
   "n02W": {
    "type": "unit",
    "name": "Элементаль Земли",
    "base": "ngrk",
-   "time": 26,
    "gold": 150,
-   "hotkey": "Q",
-   "hp": 600
+   "hp": 600,
+   "time": 26,
+   "hotkey": "Q"
   },
   "n02X": {
    "type": "unit",
    "name": "Каменный голем",
    "base": "ngst",
-   "time": 38,
    "gold": 260,
-   "hotkey": "E",
-   "hp": 750,
    "lumber": 90,
+   "hp": 750,
+   "time": 38,
+   "hotkey": "E",
    "requires": [
     "h0ER"
    ]
@@ -990,11 +990,11 @@
    "type": "unit",
    "name": "Гранитный голем",
    "base": "nggr",
-   "time": 48,
    "gold": 330,
-   "hotkey": "R",
-   "hp": 900,
    "lumber": 110,
+   "hp": 900,
+   "time": 48,
+   "hotkey": "R",
    "requires": [
     "h0ES",
     "R09E"
@@ -1004,24 +1004,24 @@
    "type": "unit",
    "name": "Грязевой Элементаль",
    "base": "nmyr",
+   "gold": 210,
+   "lumber": 70,
+   "hp": 500,
    "time": 33,
+   "hotkey": "E",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 210,
-   "hotkey": "E",
-   "hp": 500,
-   "lumber": 70
+   ]
   },
   "n031": {
    "type": "unit",
    "name": "Кристальный голем",
    "base": "nggr",
-   "time": 55,
    "gold": 295,
-   "hotkey": "A",
-   "hp": 950,
    "lumber": 85,
+   "hp": 950,
+   "time": 55,
+   "hotkey": "A",
    "requires": [
     "h0ES"
    ]
@@ -1030,11 +1030,11 @@
    "type": "unit",
    "name": "Рифовый Эементаль",
    "base": "nsel",
-   "time": 57,
    "gold": 385,
-   "hotkey": "R",
-   "hp": 700,
    "lumber": 130,
+   "hp": 700,
+   "time": 57,
+   "hotkey": "R",
    "requires": [
     "h0ES",
     "R09D"
@@ -1044,11 +1044,11 @@
    "type": "unit",
    "name": "Яростный голем",
    "base": "nggr",
-   "time": 50,
    "gold": 315,
-   "hotkey": "R",
-   "hp": 1250,
    "lumber": 90,
+   "hp": 1250,
+   "time": 50,
+   "hotkey": "R",
    "requires": [
     "h0ES"
    ]
@@ -1057,11 +1057,11 @@
    "type": "unit",
    "name": "Огненный голем",
    "base": "nggr",
-   "time": 55,
    "gold": 325,
-   "hotkey": "R",
-   "hp": 1250,
    "lumber": 125,
+   "hp": 1250,
+   "time": 55,
+   "hotkey": "R",
    "requires": [
     "h0ES"
    ]
@@ -1070,11 +1070,11 @@
    "type": "unit",
    "name": "Ледяной Голем",
    "base": "nggr",
-   "time": 55,
    "gold": 320,
-   "hotkey": "R",
-   "hp": 1250,
    "lumber": 120,
+   "hp": 1250,
+   "time": 55,
+   "hotkey": "R",
    "requires": [
     "h0ES"
    ]
@@ -1083,113 +1083,113 @@
    "type": "unit",
    "name": "Гончая пламени",
    "base": "nmyr",
-   "time": 32,
-   "equivalents": [
-    "nmys"
-   ],
    "gold": 200,
-   "hotkey": "W",
-   "hp": 650,
    "lumber": 70,
+   "hp": 650,
+   "time": 32,
+   "hotkey": "W",
    "requires": [
     "R09C"
+   ],
+   "equivalents": [
+    "nmys"
    ]
   },
   "n07C": {
    "type": "unit",
    "name": "Элементаль Океана",
    "base": "nmyr",
+   "gold": 175,
+   "hp": 500,
    "time": 24,
+   "hotkey": "Q",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 175,
-   "hotkey": "Q",
-   "hp": 500
+   ]
   },
   "n07N": {
    "type": "unit",
    "name": "Огненный Страж",
    "base": "nmyr",
+   "gold": 170,
+   "hp": 450,
    "time": 25,
+   "hotkey": "Q",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 170,
-   "hotkey": "Q",
-   "hp": 450
+   ]
   },
   "n07O": {
    "type": "unit",
    "name": "Рядовой стрелок",
    "base": "nmyr",
+   "gold": 170,
+   "hp": 450,
    "time": 25,
+   "hotkey": "Q",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 170,
-   "hotkey": "Q",
-   "hp": 450
+   ]
   },
   "n07P": {
    "type": "unit",
    "name": "Воздушный волк",
    "base": "nmyr",
+   "gold": 170,
+   "hp": 450,
    "time": 25,
+   "hotkey": "Q",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 170,
-   "hotkey": "Q",
-   "hp": 450
+   ]
   },
   "n07Q": {
    "type": "unit",
    "name": "Воитель бури",
    "base": "nmyr",
+   "gold": 170,
+   "hp": 450,
    "time": 25,
+   "hotkey": "Q",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 170,
-   "hotkey": "Q",
-   "hp": 450
+   ]
   },
   "n07R": {
    "type": "unit",
    "name": "Загробник Бури",
    "base": "nmyr",
+   "gold": 170,
+   "hp": 450,
    "time": 25,
+   "hotkey": "Q",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 170,
-   "hotkey": "Q",
-   "hp": 450
+   ]
   },
   "n07S": {
    "type": "unit",
    "name": "Янтарный Загробник",
    "base": "nmyr",
+   "gold": 170,
+   "hp": 450,
    "time": 25,
+   "hotkey": "Q",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 170,
-   "hotkey": "Q",
-   "hp": 450
+   ]
   },
   "n07T": {
    "type": "unit",
    "name": "Загробник Глубин",
    "base": "nmyr",
+   "gold": 170,
+   "hp": 450,
    "time": 25,
+   "hotkey": "Q",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 170,
-   "hotkey": "Q",
-   "hp": 450
+   ]
   },
   "n07U": {
    "type": "unit",
@@ -1199,58 +1199,58 @@
    "type": "unit",
    "name": "Песчанный Элементаль",
    "base": "ngrk",
-   "time": 26,
    "gold": 150,
-   "hotkey": "Q",
-   "hp": 600
+   "hp": 600,
+   "time": 26,
+   "hotkey": "Q"
   },
   "n07W": {
    "type": "unit",
    "name": "Особый Земли",
    "base": "nmyr",
+   "gold": 170,
+   "hp": 450,
    "time": 25,
+   "hotkey": "Q",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 170,
-   "hotkey": "Q",
-   "hp": 450
+   ]
   },
   "n07X": {
    "type": "unit",
    "name": "Особый Воды",
    "base": "nmyr",
+   "gold": 170,
+   "hp": 450,
    "time": 25,
+   "hotkey": "Q",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 170,
-   "hotkey": "Q",
-   "hp": 450
+   ]
   },
   "n07Y": {
    "type": "unit",
    "name": "Особый Огня",
    "base": "nmyr",
+   "gold": 170,
+   "hp": 450,
    "time": 25,
+   "hotkey": "Q",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 170,
-   "hotkey": "Q",
-   "hp": 450
+   ]
   },
   "n07Z": {
    "type": "unit",
    "name": "Особый Ветра",
    "base": "nmyr",
+   "gold": 170,
+   "hp": 450,
    "time": 25,
+   "hotkey": "Q",
    "equivalents": [
     "nmys"
-   ],
-   "gold": 170,
-   "hotkey": "Q",
-   "hp": 450
+   ]
   }
  },
  "edges": [

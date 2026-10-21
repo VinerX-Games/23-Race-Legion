@@ -95,13 +95,8 @@ function PandarenBrew.Init()
         if GetSpellAbilityId() ~= PandarenBrew.ids.barrel then return end
         PandarenBrew.Launch(GetTriggerUnit(), GetSpellTargetUnit())
     end)
-    -- Автоприменение включено с появления хмелевара (и у ботов); игрок может выключить.
-    local bounds = GetWorldBounds()
-    PandarenBrew.world = CreateRegion()
-    RegionAddRect(PandarenBrew.world, bounds)
-    RemoveRect(bounds)
     PandarenBrew.enterTrigger = CreateTrigger()
-    TriggerRegisterEnterRegion(PandarenBrew.enterTrigger, PandarenBrew.world, nil)
+    TriggerRegisterEnterRegion(PandarenBrew.enterTrigger, Allmap, nil)
     TriggerAddAction(PandarenBrew.enterTrigger, function()
         local u = GetTriggerUnit()
         if GetUnitAbilityLevel(u, PandarenBrew.ids.barrel) > 0 then IssueImmediateOrder(u, "curseon") end

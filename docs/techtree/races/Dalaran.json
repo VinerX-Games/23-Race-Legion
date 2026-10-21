@@ -26,9 +26,9 @@
   "A001": {
    "type": "ability",
    "name": "Абордаж!",
-   "hotkey": "Q",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A002": {
    "type": "ability",
@@ -46,15 +46,15 @@
   "A009": {
    "type": "ability",
    "name": "Сделать флагманом",
-   "hotkey": "R",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "R"
   },
   "A00A": {
    "type": "ability",
    "name": "Починка",
-   "hotkey": "R",
    "levels": 3,
    "hero_level_req": 1,
+   "hotkey": "R",
    "requires": [
     "R007"
    ]
@@ -62,8 +62,8 @@
   "A00B": {
    "type": "ability",
    "name": "Тактическое ускорение",
-   "hotkey": "E",
    "levels": 3,
+   "hotkey": "E",
    "requires": [
     "R006"
    ]
@@ -71,9 +71,9 @@
   "A00G": {
    "type": "ability",
    "name": "Массированный обстрел",
-   "hotkey": "W",
    "levels": 3,
    "hero_level_req": 1,
+   "hotkey": "W",
    "requires": [
     "R005"
    ]
@@ -81,33 +81,33 @@
   "A00I": {
    "type": "ability",
    "name": "Магическая посадка",
-   "hotkey": "W",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "A00W": {
    "type": "ability",
    "name": "Огненная стрела",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A018": {
    "type": "ability",
    "name": "Восполнить ману",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A01F": {
    "type": "ability",
    "name": "Сменить оружие (Посох)",
-   "hotkey": "W",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "W"
   },
   "A01K": {
    "type": "ability",
    "name": "Искажение времени",
-   "hotkey": "W",
    "levels": 2,
+   "hotkey": "W",
    "requires": [
     "R011"
    ]
@@ -115,15 +115,15 @@
   "A01L": {
    "type": "ability",
    "name": "Сверхновая",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A01M": {
    "type": "ability",
    "name": "Зеркальное изображение",
-   "hotkey": "E",
    "levels": 1,
    "hero_level_req": 1,
+   "hotkey": "E",
    "requires": [
     "R011"
    ],
@@ -132,15 +132,15 @@
   "A01N": {
    "type": "ability",
    "name": "Пламя феникса",
-   "hotkey": "E",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "E"
   },
   "A01O": {
    "type": "ability",
    "name": "Поджигание",
-   "hotkey": "W",
    "levels": 1,
+   "hotkey": "W",
    "requires": [
     "R00Z"
    ]
@@ -148,9 +148,9 @@
   "A01Q": {
    "type": "ability",
    "name": "Призыв создания льда",
-   "hotkey": "R",
    "levels": 1,
    "hero_level_req": 1,
+   "hotkey": "R",
    "requires": [
     "R010"
    ],
@@ -159,15 +159,15 @@
   "A01T": {
    "type": "ability",
    "name": "Ледяная тюрьма",
-   "hotkey": "Q",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A01U": {
    "type": "ability",
    "name": "Морозный доспех",
-   "hotkey": "W",
    "levels": 1,
+   "hotkey": "W",
    "requires": [
     "R010"
    ]
@@ -175,9 +175,9 @@
   "A01V": {
    "type": "ability",
    "name": "Ледяные стрелы",
-   "hotkey": "E",
    "levels": 1,
    "hero_level_req": 1,
+   "hotkey": "E",
    "requires": [
     "R010"
    ],
@@ -186,9 +186,9 @@
   "A01W": {
    "type": "ability",
    "name": "Призыв создания огня",
-   "hotkey": "R",
    "levels": 1,
    "hero_level_req": 1,
+   "hotkey": "R",
    "requires": [
     "R00Z"
    ],
@@ -197,9 +197,9 @@
   "A01X": {
    "type": "ability",
    "name": "Призыв создания Бездны",
-   "hotkey": "E",
    "levels": 1,
    "hero_level_req": 1,
+   "hotkey": "E",
    "requires": [
     "h034"
    ]
@@ -207,8 +207,8 @@
   "A021": {
    "type": "ability",
    "name": "Безумие Бездны",
-   "hotkey": "Q",
    "levels": 1,
+   "hotkey": "Q",
    "requires": [
     "R016"
    ]
@@ -216,9 +216,9 @@
   "A022": {
    "type": "ability",
    "name": "Забывчивость",
-   "hotkey": "W",
    "levels": 1,
    "hero_level_req": 1,
+   "hotkey": "W",
    "requires": [
     "R016"
    ],
@@ -227,22 +227,22 @@
   "A02J": {
    "type": "ability",
    "name": "Огненная стрела",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A031": {
    "type": "ability",
    "name": "Изгнание",
-   "hotkey": "R",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "R"
   },
   "A03D": {
    "type": "ability",
    "name": "Аура мороза",
    "hero": true,
-   "hotkey": "E",
    "levels": 5,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "E"
   },
   "A03E": {
    "type": "ability",
@@ -260,8 +260,8 @@
   "A03H": {
    "type": "ability",
    "name": "Магический Щит",
-   "hotkey": "T",
    "levels": 1,
+   "hotkey": "T",
    "requires": [
     "R01A"
    ]
@@ -270,25 +270,25 @@
    "type": "ability",
    "name": "Ледяные оковы",
    "hero": true,
-   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "A03J": {
    "type": "ability",
    "name": "Кольцо льда",
    "hero": true,
-   "hotkey": "Q",
    "levels": 5,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A03K": {
    "type": "ability",
    "name": "Призыв элементаля воды",
    "hero": true,
-   "hotkey": "W",
    "levels": 5,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "A03L": {
    "type": "ability",
@@ -301,31 +301,31 @@
    "type": "ability",
    "name": "Огненный ливень",
    "hero": true,
-   "hotkey": "Q",
-   "levels": 5
+   "levels": 5,
+   "hotkey": "Q"
   },
   "A03O": {
    "type": "ability",
    "name": "Огненная стрела",
    "hero": true,
-   "hotkey": "W",
    "levels": 5,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "A03Q": {
    "type": "ability",
    "name": "Апокалипсис",
    "hero": true,
-   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "A03S": {
    "type": "ability",
    "name": "Массовая телепортация",
-   "hotkey": "R",
    "levels": 1,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "A03U": {
    "type": "ability",
@@ -338,9 +338,9 @@
    "type": "ability",
    "name": "Массовая телепортация",
    "hero": true,
-   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "A03W": {
    "type": "ability",
@@ -351,14 +351,14 @@
   "A03X": {
    "type": "ability",
    "name": "Магический тотем",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A03Y": {
    "type": "ability",
    "name": "Рассеивание заклинаний",
-   "hotkey": "W",
    "levels": 1,
+   "hotkey": "W",
    "requires": [
     "R01C"
    ],
@@ -377,17 +377,17 @@
   "A040": {
    "type": "ability",
    "name": "Изгнание",
-   "hotkey": "R",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "R"
   },
   "A044": {
    "type": "ability",
    "name": "Сила магии",
    "hero": true,
-   "hotkey": "W",
    "levels": 5,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "A045": {
    "type": "ability",
@@ -398,29 +398,29 @@
   "A0HN": {
    "type": "ability",
    "name": "Даларан",
-   "hotkey": "S",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "S"
   },
   "A0I3": {
    "type": "ability",
    "name": "Небольшой скачок",
-   "hotkey": "C",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "C"
   },
   "A0IQ": {
    "type": "ability",
    "name": "Обозначить столицу",
-   "hotkey": "X",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "X"
   },
   "A0LJ": {
    "type": "ability",
    "name": "Обмен дерева на золото",
-   "hotkey": "A",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "A"
   },
   "A15N": {
    "type": "ability",
@@ -432,21 +432,21 @@
    "type": "ability",
    "name": "Похищение маны",
    "hero": true,
-   "hotkey": "Q",
    "levels": 5,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A1MK": {
    "type": "ability",
    "name": "Трансформация Золота в Дерево",
-   "hotkey": "S",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "S"
   },
   "A1O5": {
    "type": "ability",
    "name": "Структурный щит",
-   "hotkey": "D",
    "levels": 1,
+   "hotkey": "D",
    "requires": [
     "h035"
    ]
@@ -454,8 +454,8 @@
   "A1PP": {
    "type": "ability",
    "name": "Прицельная пальба",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "AInv": {
    "type": "ability",
@@ -465,8 +465,8 @@
   "ANha": {
    "type": "ability",
    "name": "Добывать ресурсы",
-   "hotkey": "G",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "G"
   },
   "Abds": {
    "type": "ability",
@@ -476,8 +476,8 @@
   "Adef": {
    "type": "ability",
    "name": "Защита",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Adts": {
    "type": "ability",
@@ -495,8 +495,8 @@
   "Ane2": {
    "type": "ability",
    "name": "Выбрать воина",
-   "hotkey": "J",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "J"
   },
   "Argl": {
    "type": "ability",
@@ -511,8 +511,8 @@
   "Arst": {
    "type": "ability",
    "name": "Ремонт",
-   "hotkey": "R",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "R"
   },
   "Avul": {
    "type": "ability",
@@ -523,23 +523,23 @@
    "type": "hero",
    "name": "Верховный маг",
    "base": "Hamg",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "E",
+   "lumber": 100,
+   "food": 1,
    "hp": 700,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "E"
   },
   "H04W": {
    "type": "hero",
    "name": "Огненный мастер",
    "base": "Hamg",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "W",
-   "hp": 700,
    "lumber": 100,
+   "food": 1,
+   "hp": 700,
+   "time": 55,
+   "hotkey": "W",
    "requires": [
     "R0BW"
    ]
@@ -548,12 +548,12 @@
    "type": "hero",
    "name": "Мастер Тайной магии",
    "base": "Hamg",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "Q",
-   "hp": 700,
    "lumber": 100,
+   "food": 1,
+   "hp": 700,
+   "time": 55,
+   "hotkey": "Q",
    "requires": [
     "R0BW"
    ]
@@ -561,308 +561,308 @@
   "R002": {
    "type": "upgrade",
    "name": "Орудия флота — уровень 1",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 200,
    "lumber": 1200,
    "lumber_per_level": 300,
-   "levels": 6,
+   "time": 80,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 80,
-   "time_per_level": 15
+   ]
   },
   "R003": {
    "type": "upgrade",
    "name": "Укреплённый корпус — уровень 1",
+   "levels": 6,
    "gold": 900,
    "gold_per_level": 300,
    "lumber": 500,
    "lumber_per_level": 200,
-   "levels": 6,
+   "time": 80,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 80,
-   "time_per_level": 15
+   ]
   },
   "R004": {
    "type": "upgrade",
    "name": "Улучшение до Кровавого Палача",
+   "levels": 1,
    "gold": 600,
    "lumber": 500,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "ofrt",
     "ofor",
     "h0DV"
-   ],
-   "time": 40
+   ]
   },
   "R005": {
    "type": "upgrade",
    "name": "Обстрел — уровень 1",
+   "levels": 5,
    "gold": 500,
    "gold_per_level": 150,
    "lumber": 500,
    "lumber_per_level": 150,
-   "levels": 5,
+   "time": 90,
    "requires": [
     "hcas"
-   ],
-   "time": 90
+   ]
   },
   "R006": {
    "type": "upgrade",
    "name": "Дополнительные паруса — уровень 1",
+   "levels": 3,
    "gold": 500,
    "gold_per_level": 150,
    "lumber": 500,
    "lumber_per_level": 150,
-   "levels": 3,
+   "time": 90,
    "requires": [
     "hcas"
-   ],
-   "time": 90
+   ]
   },
   "R007": {
    "type": "upgrade",
    "name": "Починка — уровень 1",
+   "levels": 3,
    "gold": 500,
    "gold_per_level": 150,
    "lumber": 500,
    "lumber_per_level": 150,
-   "levels": 3,
+   "time": 90,
    "requires": [
     "hcas"
-   ],
-   "time": 90
+   ]
   },
   "R00Q": {
    "type": "upgrade",
    "name": "Волшебные Мечи",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 750,
    "lumber": 400,
    "lumber_per_level": 400,
-   "levels": 6,
    "time": 60,
    "time_per_level": 15
   },
   "R00R": {
    "type": "upgrade",
    "name": "Глубокие познания",
+   "levels": 5,
    "gold": 400,
    "gold_per_level": 400,
    "lumber": 250,
    "lumber_per_level": 250,
-   "levels": 5,
+   "time": 40,
    "requires": [
     "hcas"
-   ],
-   "time": 40
+   ]
   },
   "R00S": {
    "type": "upgrade",
    "name": "Магический Талисман",
+   "levels": 5,
    "gold": 400,
    "gold_per_level": 400,
    "lumber": 250,
    "lumber_per_level": 250,
-   "levels": 5,
+   "time": 40,
    "requires": [
     "hcas"
-   ],
-   "time": 40
+   ]
   },
   "R00T": {
    "type": "upgrade",
    "name": "Магическая накидка",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 1000,
    "lumber": 500,
    "lumber_per_level": 1000,
-   "levels": 6,
    "time": 60,
    "time_per_level": 15
   },
   "R00Z": {
    "type": "upgrade",
    "name": "Ученик стихии Огня",
+   "levels": 2,
    "gold": 350,
    "gold_per_level": 1500,
    "lumber": 400,
    "lumber_per_level": 1200,
-   "levels": 2,
+   "time": 60,
    "requires": [
     "h034"
-   ],
-   "time": 60
+   ]
   },
   "R010": {
    "type": "upgrade",
    "name": "Ученик стихии Льда",
+   "levels": 2,
    "gold": 350,
    "gold_per_level": 1500,
    "lumber": 400,
    "lumber_per_level": 1200,
-   "levels": 2,
+   "time": 60,
    "requires": [
     "h034"
-   ],
-   "time": 60
+   ]
   },
   "R011": {
    "type": "upgrade",
    "name": "Ученик Тайной магии",
+   "levels": 2,
    "gold": 350,
    "gold_per_level": 1500,
    "lumber": 400,
    "lumber_per_level": 1200,
-   "levels": 2,
+   "time": 60,
    "requires": [
     "h034"
-   ],
-   "time": 60
+   ]
   },
   "R012": {
    "type": "upgrade",
    "name": "Усиление посоха",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 1000,
    "lumber": 600,
    "lumber_per_level": 1200,
-   "levels": 6,
    "time": 60,
    "time_per_level": 15
   },
   "R013": {
    "type": "upgrade",
    "name": "Защита огня",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 1000,
    "lumber": 500,
    "lumber_per_level": 1000,
-   "levels": 6,
    "time": 60,
    "time_per_level": 15
   },
   "R014": {
    "type": "upgrade",
    "name": "Защита льда",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 1000,
    "lumber": 500,
    "lumber_per_level": 1000,
-   "levels": 6,
    "time": 60,
    "time_per_level": 15
   },
   "R015": {
    "type": "upgrade",
    "name": "Ускоренное произношение заклинаний",
+   "levels": 3,
    "gold": 600,
    "gold_per_level": 1200,
    "lumber": 400,
    "lumber_per_level": 800,
-   "levels": 3,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "R016": {
    "type": "upgrade",
    "name": "Взгляд в Бездну",
+   "levels": 5,
    "gold": 400,
    "gold_per_level": 400,
    "lumber": 250,
    "lumber_per_level": 250,
-   "levels": 5,
+   "time": 40,
    "requires": [
     "hcas"
-   ],
-   "time": 40
+   ]
   },
   "R017": {
    "type": "upgrade",
    "name": "Продолжительность жизни",
+   "levels": 10,
    "gold": 240,
    "gold_per_level": 900,
    "lumber": 250,
    "lumber_per_level": 900,
-   "levels": 10,
+   "time": 40,
    "requires": [
     "hcas"
-   ],
-   "time": 40
+   ]
   },
   "R018": {
    "type": "upgrade",
    "name": "Увеличение маны",
+   "levels": 10,
    "gold": 240,
    "gold_per_level": 900,
    "lumber": 250,
    "lumber_per_level": 900,
-   "levels": 10,
+   "time": 40,
    "requires": [
     "hcas"
-   ],
-   "time": 40
+   ]
   },
   "R01A": {
    "type": "upgrade",
    "name": "Магический Щит",
+   "levels": 1,
    "gold": 350,
    "gold_per_level": 1500,
    "lumber": 400,
    "lumber_per_level": 1200,
-   "levels": 1,
+   "time": 60,
    "requires": [
     "h034"
-   ],
-   "time": 60
+   ]
   },
   "R01B": {
    "type": "upgrade",
    "name": "Зачарованное оружие",
+   "levels": 1,
    "gold": 450,
    "gold_per_level": 1500,
    "lumber": 600,
    "lumber_per_level": 1200,
-   "levels": 1,
+   "time": 60,
    "requires": [
     "h034"
-   ],
-   "time": 60
+   ]
   },
   "R01C": {
    "type": "upgrade",
    "name": "Малые познания Света",
+   "levels": 3,
    "gold": 350,
    "gold_per_level": 1500,
    "lumber": 400,
    "lumber_per_level": 1200,
-   "levels": 3,
+   "time": 60,
    "requires": [
     "h034"
-   ],
-   "time": 60
+   ]
   },
   "R04D": {
    "type": "upgrade",
    "name": "",
    "only_required": true,
+   "levels": 6,
    "gold": 450,
    "gold_per_level": 700,
    "lumber": 300,
    "lumber_per_level": 700,
-   "levels": 6,
+   "time": 60,
    "requires": [
     "ofrt"
-   ],
-   "time": 60
+   ]
   },
   "R0BW": {
    "type": "upgrade",
@@ -872,22 +872,22 @@
   "R0H0": {
    "type": "upgrade",
    "name": "Фракция с спец магами",
+   "levels": 1,
    "gold": 75,
    "gold_per_level": 500,
    "lumber": 25,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0HI": {
    "type": "upgrade",
    "name": "Надавить на Даларан",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 500,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
@@ -899,53 +899,53 @@
   "Rgfo": {
    "type": "upgrade",
    "name": "Знак укрепления",
+   "levels": 3,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
-   "levels": 3,
    "time": 60,
    "time_per_level": 15
   },
   "Rguv": {
    "type": "upgrade",
    "name": "Знак ночного зрения",
+   "levels": 1,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
-   "levels": 1,
    "time": 60,
    "time_per_level": 15
   },
   "Rhac": {
    "type": "upgrade",
    "name": "Улучшенная кладка — уровень 1",
+   "levels": 3,
    "gold": 125,
    "gold_per_level": 500,
    "lumber": 50,
    "lumber_per_level": 450,
-   "levels": 3,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "Rhde": {
    "type": "upgrade",
    "name": "Защита",
+   "levels": 1,
    "gold": 125,
    "lumber": 75,
-   "levels": 1,
    "time": 40
   },
   "Rhse": {
    "type": "upgrade",
    "name": "Магический страж",
+   "levels": 1,
    "gold": 650,
    "lumber": 300,
-   "levels": 1,
    "time": 30
   },
   "Sch5": {
@@ -964,70 +964,70 @@
    "type": "building",
    "name": "Даларан",
    "base": "etol",
-   "time": 25,
    "gold": 500,
-   "hotkey": "Q",
+   "lumber": 185,
    "hp": 30000,
-   "lumber": 185
+   "time": 25,
+   "hotkey": "Q"
   },
   "h00X": {
    "type": "unit",
    "name": "Транспорт",
    "base": "hbot",
-   "time": 22,
    "gold": 250,
-   "hotkey": "Q",
+   "lumber": 200,
    "hp": 750,
-   "lumber": 200
+   "time": 22,
+   "hotkey": "Q"
   },
   "h00Y": {
    "type": "unit",
    "name": "Фрегат",
    "base": "hdes",
-   "time": 30,
    "gold": 450,
-   "hotkey": "W",
+   "lumber": 475,
    "hp": 800,
-   "lumber": 475
+   "time": 30,
+   "hotkey": "W"
   },
   "h00Z": {
    "type": "unit",
    "name": "Линкор",
    "base": "hbsh",
-   "time": 50,
    "gold": 875,
-   "hotkey": "E",
+   "lumber": 1000,
    "hp": 1400,
-   "lumber": 1000
+   "time": 50,
+   "hotkey": "E"
   },
   "h011": {
    "type": "building",
    "name": "Верфь",
    "base": "hshy",
-   "time": 90,
    "gold": 500,
-   "hotkey": "C",
+   "lumber": 700,
    "hp": 2000,
-   "lumber": 700
+   "time": 90,
+   "hotkey": "C"
   },
   "h02I": {
    "type": "unit",
    "name": "Пехотинец",
    "base": "hfoo",
-   "time": 20,
    "gold": 135,
-   "hotkey": "Q",
-   "hp": 420
+   "hp": 420,
+   "time": 20,
+   "hotkey": "Q"
   },
   "h02J": {
    "type": "unit",
    "name": "Пиромант",
    "base": "hmpr",
-   "time": 48,
    "gold": 320,
-   "hotkey": "Q",
-   "hp": 590,
    "lumber": 120,
+   "hp": 590,
+   "time": 48,
+   "hotkey": "Q",
    "requires": [
     "h036"
    ]
@@ -1036,11 +1036,11 @@
    "type": "unit",
    "name": "Чародей Льда",
    "base": "hmpr",
-   "time": 53,
    "gold": 355,
-   "hotkey": "W",
-   "hp": 670,
    "lumber": 120,
+   "hp": 670,
+   "time": 53,
+   "hotkey": "W",
    "requires": [
     "h036"
    ]
@@ -1049,11 +1049,11 @@
    "type": "unit",
    "name": "Заклинатель Света",
    "base": "hsor",
-   "time": 41,
    "gold": 270,
-   "hotkey": "E",
-   "hp": 450,
    "lumber": 90,
+   "hp": 450,
+   "time": 41,
+   "hotkey": "E",
    "requires": [
     "h034"
    ]
@@ -1062,11 +1062,11 @@
    "type": "unit",
    "name": "Арканист",
    "base": "hsor",
-   "time": 48,
    "gold": 320,
-   "hotkey": "E",
-   "hp": 550,
    "lumber": 110,
+   "hp": 550,
+   "time": 48,
+   "hotkey": "E",
    "requires": [
     "h036"
    ]
@@ -1075,11 +1075,11 @@
    "type": "unit",
    "name": "Зачарователь",
    "base": "hsor",
-   "time": 30,
    "gold": 200,
-   "hotkey": "W",
-   "hp": 550,
    "lumber": 70,
+   "hp": 550,
+   "time": 30,
+   "hotkey": "W",
    "requires": [
     "h034"
    ]
@@ -1088,11 +1088,11 @@
    "type": "unit",
    "name": "Маг Бездны",
    "base": "hsor",
-   "time": 56,
    "gold": 370,
-   "hotkey": "R",
-   "hp": 600,
    "lumber": 125,
+   "hp": 600,
+   "time": 56,
+   "hotkey": "R",
    "requires": [
     "h036"
    ]
@@ -1101,22 +1101,22 @@
    "type": "building",
    "name": "Алтарь Волшебства",
    "base": "halt",
-   "time": 60,
-   "food_made": 3,
    "gold": 180,
-   "hotkey": "S",
+   "lumber": 160,
+   "food_made": 3,
    "hp": 900,
-   "lumber": 160
+   "time": 60,
+   "hotkey": "S"
   },
   "h02W": {
    "type": "building",
    "name": "Волшебная Библиотека",
    "base": "hars",
-   "time": 70,
    "gold": 275,
-   "hotkey": "D",
-   "hp": 1050,
    "lumber": 165,
+   "hp": 1050,
+   "time": 70,
+   "hotkey": "D",
    "requires": [
     "h035"
    ]
@@ -1125,64 +1125,64 @@
    "type": "building",
    "name": "Волшебная Оружейная",
    "base": "hlum",
-   "time": 60,
    "gold": 340,
-   "hotkey": "W",
+   "lumber": 20,
    "hp": 900,
-   "lumber": 20
+   "time": 60,
+   "hotkey": "W"
   },
   "h02Y": {
    "type": "building",
    "name": "Магическая кузня",
    "base": "hbla",
-   "time": 70,
    "gold": 250,
-   "hotkey": "E",
+   "lumber": 200,
    "hp": 1200,
-   "lumber": 200
+   "time": 70,
+   "hotkey": "E"
   },
   "h030": {
    "type": "building",
    "name": "Волшебное Пристанище",
    "base": "htow",
-   "time": 180,
-   "food_made": 50,
    "gold": 385,
-   "hotkey": "Q",
+   "lumber": 205,
+   "food_made": 50,
    "hp": 1500,
-   "lumber": 205
+   "time": 180,
+   "hotkey": "Q"
   },
   "h031": {
    "type": "building",
    "name": "Конденсатор Маны",
    "base": "hhou",
-   "time": 25,
-   "food_made": 40,
    "gold": 300,
-   "hotkey": "A",
+   "lumber": 150,
+   "food_made": 40,
    "hp": 500,
-   "lumber": 150
+   "time": 25,
+   "hotkey": "A"
   },
   "h032": {
    "type": "building",
    "name": "Магическая Башня",
    "base": "hatw",
-   "time": 50,
    "gold": 125,
-   "hotkey": "Z",
+   "lumber": 70,
    "hp": 500,
-   "lumber": 70
+   "time": 50,
+   "hotkey": "Z"
   },
   "h034": {
    "type": "building",
    "name": "Хранилище Маны",
    "base": "hwtw",
-   "time": 50,
-   "food_made": 10,
    "gold": 2000,
-   "hotkey": "R",
-   "hp": 2500,
    "lumber": 2000,
+   "food_made": 10,
+   "hp": 2500,
+   "time": 50,
+   "hotkey": "R",
    "requires": [
     "h030"
    ]
@@ -1191,23 +1191,23 @@
    "type": "building",
    "name": "Хранилище Маны",
    "base": "hwtw",
-   "time": 70,
-   "food_made": 10,
    "gold": 4500,
-   "hotkey": "T",
+   "lumber": 4500,
+   "food_made": 10,
    "hp": 3000,
-   "lumber": 4500
+   "time": 70,
+   "hotkey": "T"
   },
   "h036": {
    "type": "building",
    "name": "Накопитель Маны",
    "base": "hwtw",
-   "time": 120,
-   "food_made": 10,
    "gold": 10000,
-   "hotkey": "F",
-   "hp": 4500,
    "lumber": 10000,
+   "food_made": 10,
+   "hp": 4500,
+   "time": 120,
+   "hotkey": "F",
    "requires": [
     "h035"
    ]
@@ -1216,33 +1216,33 @@
    "type": "building",
    "name": "Волшебная Темница",
    "base": "hwtw",
-   "time": 25,
    "gold": 30,
-   "hotkey": "T",
+   "lumber": 20,
    "hp": 300,
-   "lumber": 20
+   "time": 25,
+   "hotkey": "T"
   },
   "h0DV": {
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 240,
-   "food_made": 100,
    "gold": 4000,
-   "hotkey": "Z",
+   "lumber": 4000,
+   "food_made": 100,
    "hp": 2000,
-   "lumber": 4000
+   "time": 240,
+   "hotkey": "Z"
   },
   "hcas": {
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 140,
-   "food_made": 150,
    "gold": 12000,
-   "hotkey": "Z",
-   "hp": 2500,
    "lumber": 12000,
+   "food_made": 150,
+   "hp": 2500,
+   "time": 140,
+   "hotkey": "Z",
    "requires": [
     "halt"
    ]
@@ -1251,22 +1251,22 @@
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 140,
-   "food_made": 100,
    "gold": 4500,
-   "hotkey": "Z",
+   "lumber": 4500,
+   "food_made": 100,
    "hp": 2000,
-   "lumber": 4500
+   "time": 140,
+   "hotkey": "Z"
   },
   "n00B": {
    "type": "unit",
    "name": "Магический Эксперимент",
    "base": "nmdm",
-   "time": 41,
    "gold": 270,
-   "hotkey": "R",
-   "hp": 500,
    "lumber": 55,
+   "hp": 500,
+   "time": 41,
+   "hotkey": "R",
    "requires": [
     "h035"
    ]
@@ -1275,11 +1275,11 @@
    "type": "unit",
    "name": "Огр-маг",
    "base": "nomg",
-   "time": 53,
    "gold": 425,
-   "hotkey": "W",
-   "hp": 600,
    "lumber": 145,
+   "hp": 600,
+   "time": 53,
+   "hotkey": "W",
    "requires": [
     "R04D"
    ],
@@ -1289,11 +1289,11 @@
    "type": "unit",
    "name": "Огр-воин",
    "base": "nogr",
-   "time": 29,
    "gold": 185,
-   "hotkey": "Q",
-   "hp": 700,
    "lumber": 65,
+   "hp": 700,
+   "time": 29,
+   "hotkey": "Q",
    "requires": [
     "R04D"
    ],
@@ -1302,38 +1302,38 @@
   "nmr9": {
    "type": "building",
    "name": "Лагерь наемников",
-   "time": 3,
    "gold": 50,
-   "hp": 150000
+   "hp": 150000,
+   "time": 3
   },
   "ofor": {
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 70,
    "gold": 205,
-   "hotkey": "E",
-   "hp": 1000
+   "hp": 1000,
+   "time": 70,
+   "hotkey": "E"
   },
   "ofrt": {
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 140,
-   "food_made": 150,
    "gold": 12000,
-   "hotkey": "Z",
+   "lumber": 12000,
+   "food_made": 150,
    "hp": 2500,
-   "lumber": 12000
+   "time": 140,
+   "hotkey": "Z"
   },
   "u001": {
    "type": "unit",
    "name": "Конструктор",
    "base": "uaco",
-   "time": 15,
    "gold": 75,
-   "hotkey": "Q",
-   "hp": 230
+   "hp": 230,
+   "time": 15,
+   "hotkey": "Q"
   }
  },
  "edges": [

@@ -21,8 +21,8 @@
   "A06U": {
    "type": "ability",
    "name": "Сокрушительная волна",
-   "hotkey": "Q",
    "levels": 1,
+   "hotkey": "Q",
    "requires": [
     "R03A"
    ]
@@ -30,35 +30,35 @@
   "A0I3": {
    "type": "ability",
    "name": "Небольшой скачок",
-   "hotkey": "C",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "C"
   },
   "A0IQ": {
    "type": "ability",
    "name": "Обозначить столицу",
-   "hotkey": "X",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "X"
   },
   "A0LI": {
    "type": "ability",
    "name": "Обмен золота на дерево",
-   "hotkey": "S",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "S"
   },
   "A0LJ": {
    "type": "ability",
    "name": "Обмен дерева на золото",
-   "hotkey": "A",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "A"
   },
   "A13A": {
    "type": "ability",
    "name": "Двойной удар",
    "hero": true,
-   "hotkey": "E",
-   "levels": 4
+   "levels": 4,
+   "hotkey": "E"
   },
   "A13B": {
    "type": "ability",
@@ -72,8 +72,8 @@
    "type": "ability",
    "name": "Безумие",
    "hero": true,
-   "hotkey": "Q",
    "levels": 4,
+   "hotkey": "Q",
    "requires": [
     "Robk"
    ]
@@ -82,40 +82,40 @@
    "type": "ability",
    "name": "Повелитель моря",
    "hero": true,
-   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "A14F": {
    "type": "ability",
    "name": "Удар хвостом",
    "hero": true,
-   "hotkey": "W",
-   "levels": 4
+   "levels": 4,
+   "hotkey": "W"
   },
   "A14G": {
    "type": "ability",
    "name": "Месть вод",
    "hero": true,
-   "hotkey": "|cffb99d66СПОСОБНОСТЬ:|cffced4da Призывает на помощь верных воинов Кор'Крона.|r",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "|cffb99d66СПОСОБНОСТЬ:|cffced4da Призывает на помощь верных воинов Кор'Крона.|r"
   },
   "A14H": {
    "type": "ability",
    "name": "Уклонение",
    "hero": true,
-   "hotkey": "E",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "E"
   },
   "A14I": {
    "type": "ability",
    "name": "Кольцо льда",
    "hero": true,
-   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A14J": {
    "type": "ability",
@@ -128,14 +128,14 @@
   "A14L": {
    "type": "ability",
    "name": "Рассеивание чар",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A14M": {
    "type": "ability",
    "name": "Прилив сил",
-   "hotkey": "W",
    "levels": 2,
+   "hotkey": "W",
    "requires": [
     "Rnsi"
    ],
@@ -144,8 +144,8 @@
   "A14N": {
    "type": "ability",
    "name": "Целительная вода",
-   "hotkey": "W",
    "levels": 1,
+   "hotkey": "W",
    "requires": [
     "Rnsi"
    ]
@@ -153,9 +153,9 @@
   "A14O": {
    "type": "ability",
    "name": "Наги",
-   "hotkey": "D",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "D"
   },
   "A1KB": {
    "type": "ability",
@@ -165,9 +165,9 @@
   "A1LT": {
    "type": "ability",
    "name": "Своя стихия",
-   "hotkey": "D",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "D"
   },
   "A1OL": {
    "type": "ability",
@@ -180,15 +180,15 @@
   "A1OM": {
    "type": "ability",
    "name": "Едкая слюна",
-   "hotkey": "Q",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A1ON": {
    "type": "ability",
    "name": "Щит молний",
-   "hotkey": "W",
    "levels": 1,
+   "hotkey": "W",
    "requires": [
     "Rnsw"
    ]
@@ -196,14 +196,14 @@
   "A1OO": {
    "type": "ability",
    "name": "Сила молний",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A1OP": {
    "type": "ability",
    "name": "Цепь молний",
-   "hotkey": "E",
    "levels": 1,
+   "hotkey": "E",
    "requires": [
     "Rnsw"
    ],
@@ -212,22 +212,19 @@
   "A1OQ": {
    "type": "ability",
    "name": "Сила молний",
-   "levels": 1,
-   "requires": [
-    "Rugf"
-   ]
+   "levels": 1
   },
   "A1OR": {
    "type": "ability",
    "name": "Каннибализм",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "ACen": {
    "type": "ability",
    "name": "Опутывание",
-   "hotkey": "\"E\"",
    "levels": 1,
+   "hotkey": "\"E\"",
    "requires": [
     "Roen"
    ]
@@ -235,8 +232,8 @@
   "ACfu": {
    "type": "ability",
    "name": "Ледяная броня",
-   "hotkey": "W",
    "levels": 1,
+   "hotkey": "W",
    "requires": [
     "Rnsw"
    ]
@@ -244,8 +241,8 @@
   "AChx": {
    "type": "ability",
    "name": "Сглаз",
-   "hotkey": "E",
    "levels": 1,
+   "hotkey": "E",
    "requires": [
     "Rnsi"
    ],
@@ -264,33 +261,33 @@
    "type": "ability",
    "name": "Скачок",
    "hero": true,
-   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "AEtq": {
    "type": "ability",
    "name": "Покой",
    "hero": true,
-   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "AHab": {
    "type": "ability",
    "name": "Аура гениальности",
    "hero": true,
-   "hotkey": "E",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "E"
   },
   "AHbn": {
    "type": "ability",
    "name": "Изгнание",
    "hero": true,
-   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "AInv": {
    "type": "ability",
@@ -300,8 +297,8 @@
   "AMh1": {
    "type": "ability",
    "name": "Гарпун",
-   "hotkey": "X",
    "levels": 1,
+   "hotkey": "X",
    "requires": [
     "R0FP"
    ]
@@ -314,8 +311,8 @@
   "ANen": {
    "type": "ability",
    "name": "Опутывание",
-   "hotkey": "Q",
    "levels": 1,
+   "hotkey": "Q",
    "requires": [
     "Rnen"
    ]
@@ -323,28 +320,28 @@
   "ANha": {
    "type": "ability",
    "name": "Добывать ресурсы",
-   "hotkey": "G",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "G"
   },
   "ANpa": {
    "type": "ability",
    "name": "Паразит",
-   "hotkey": "R",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "R"
   },
   "ANrf": {
    "type": "ability",
    "name": "Огненный ливень",
    "hero": true,
-   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "Acny": {
    "type": "ability",
    "name": "Торнадо",
-   "hotkey": "C",
    "levels": 1,
+   "hotkey": "C",
    "requires": [
     "Rnsw"
    ],
@@ -358,8 +355,8 @@
   "Arep": {
    "type": "ability",
    "name": "Ремонтировать",
-   "hotkey": "R",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "R"
   },
   "Argl": {
    "type": "ability",
@@ -374,8 +371,8 @@
   "Asb1": {
    "type": "ability",
    "name": "Погружение",
-   "hotkey": "U",
    "levels": 1,
+   "hotkey": "U",
    "requires": [
     "Rnsb"
    ]
@@ -383,14 +380,14 @@
   "Asb2": {
    "type": "ability",
    "name": "Погружение",
-   "hotkey": "U",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "U"
   },
   "Asb3": {
    "type": "ability",
    "name": "Погружение",
-   "hotkey": "U",
    "levels": 1,
+   "hotkey": "U",
    "requires": [
     "Rnsb"
    ]
@@ -399,132 +396,132 @@
    "type": "hero",
    "name": "Владыка-страж",
    "base": "Hpal",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "X",
+   "lumber": 100,
+   "food": 1,
    "hp": 100,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "X"
   },
   "H0JV": {
    "type": "hero",
    "name": "Глубинная охотница",
    "base": "Hvsh",
-   "time": 40,
-   "food": 1,
    "gold": 425,
-   "hotkey": "C",
+   "lumber": 100,
+   "food": 1,
    "hp": 100,
-   "lumber": 100
+   "time": 40,
+   "hotkey": "C"
   },
   "N07A": {
    "type": "hero",
    "name": "Мурлок-чародей",
    "base": "Nmsr",
-   "time": 50,
-   "food": 1,
    "gold": 425,
-   "hotkey": "Z",
+   "lumber": 100,
+   "food": 1,
    "hp": 100,
-   "lumber": 100
+   "time": 50,
+   "hotkey": "Z"
   },
   "R01N": {
    "type": "upgrade",
    "name": "Улучшенная кладка",
+   "levels": 6,
    "gold": 250,
    "gold_per_level": 500,
    "lumber": 250,
    "lumber_per_level": 500,
-   "levels": 6,
+   "time": 30,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 30,
-   "time_per_level": 15
+   ]
   },
   "R03A": {
    "type": "upgrade",
    "name": "",
    "only_required": true,
+   "levels": 3,
    "gold": 125,
    "lumber": 75,
-   "levels": 3,
+   "time": 40,
    "requires": [
     "h01Z"
-   ],
-   "time": 40
+   ]
   },
   "R0FD": {
    "type": "upgrade",
    "name": "Шипастый панцирь",
+   "levels": 1,
    "gold": 250,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
-   "levels": 1,
    "time": 60,
    "time_per_level": 15
   },
   "R0FE": {
    "type": "upgrade",
    "name": "Владычество нагов",
+   "levels": 1,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
-   "levels": 1,
    "time": 1,
    "time_per_level": 15
   },
   "R0FF": {
    "type": "upgrade",
    "name": "Владычество мурлоков",
+   "levels": 1,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
-   "levels": 1,
    "time": 1,
    "time_per_level": 15
   },
   "R0FH": {
    "type": "upgrade",
    "name": "Улучшенный хват — уровень 1",
+   "levels": 4,
    "gold": 100,
    "gold_per_level": 350,
-   "levels": 4,
    "time": 60,
    "time_per_level": 30
   },
   "R0FP": {
    "type": "upgrade",
    "name": "Гарпун",
+   "levels": 1,
    "gold": 340,
    "lumber": 430,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "h0JY"
-   ],
-   "time": 40
+   ]
   },
   "R0FQ": {
    "type": "upgrade",
    "name": "Господство на море — уровень 1",
+   "levels": 3,
    "gold": 450,
    "gold_per_level": 510,
    "lumber": 560,
    "lumber_per_level": 340,
-   "levels": 3,
    "time": 40
   },
   "R0FR": {
    "type": "upgrade",
    "name": "Замедляющий яд",
+   "levels": 1,
    "gold": 230,
    "gold_per_level": 50,
    "lumber": 240,
    "lumber_per_level": 50,
-   "levels": 1,
    "time": 60,
    "time_per_level": 15
   },
@@ -536,135 +533,122 @@
   "R0KP": {
    "type": "upgrade",
    "name": "Антимагический коатль",
+   "levels": 1,
    "gold": 340,
    "lumber": 430,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "h0JY"
-   ],
-   "time": 40
+   ]
   },
   "Rgfo": {
    "type": "upgrade",
    "name": "Знак укрепления",
+   "levels": 3,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
-   "levels": 3,
    "time": 60,
    "time_per_level": 15
   },
   "Rguv": {
    "type": "upgrade",
    "name": "Знак ночного зрения",
+   "levels": 1,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
-   "levels": 1,
    "time": 60,
    "time_per_level": 15
   },
   "Rnam": {
    "type": "upgrade",
    "name": "Коралловая чешуя — уровень 1",
+   "levels": 6,
    "gold": 800,
    "gold_per_level": 1300,
    "lumber": 600,
    "lumber_per_level": 1200,
-   "levels": 6,
    "time": 60,
    "time_per_level": 15
   },
   "Rnat": {
    "type": "upgrade",
    "name": "Коралловые клинки — уровень 1",
+   "levels": 6,
    "gold": 800,
    "gold_per_level": 1300,
    "lumber": 600,
    "lumber_per_level": 1200,
-   "levels": 6,
    "time": 60,
    "time_per_level": 15
   },
   "Rnen": {
    "type": "upgrade",
    "name": "Опутывание",
+   "levels": 1,
    "gold": 340,
    "lumber": 230,
-   "levels": 1,
    "time": 40
   },
   "Rnsb": {
    "type": "upgrade",
    "name": "Погружение",
+   "levels": 1,
    "gold": 240,
    "lumber": 320,
-   "levels": 1,
    "time": 20
   },
   "Rnsi": {
    "type": "upgrade",
    "name": "Коралловая магия — уровень 1",
+   "levels": 2,
    "gold": 450,
    "gold_per_level": 430,
    "lumber": 430,
    "lumber_per_level": 340,
-   "levels": 2,
+   "time": 45,
    "requires": [
     "h0JX"
-   ],
-   "time": 45
+   ]
   },
   "Rnsw": {
    "type": "upgrade",
    "name": "Силы стихий — уровень 1",
+   "levels": 2,
    "gold": 450,
    "gold_per_level": 400,
    "lumber": 430,
    "lumber_per_level": 300,
-   "levels": 2,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "h0JX"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "Robk": {
    "type": "upgrade",
    "name": "",
    "only_required": true,
+   "levels": 1,
    "gold": 75,
    "lumber": 175,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "ofrt",
     "ofor"
-   ],
-   "time": 40
+   ]
   },
   "Roen": {
    "type": "upgrade",
    "name": "",
    "only_required": true,
+   "levels": 1,
    "gold": 50,
    "lumber": 75,
-   "levels": 1,
    "time": 40
-  },
-  "Rugf": {
-   "type": "upgrade",
-   "name": "",
-   "only_required": true,
-   "gold": 100,
-   "lumber": 150,
-   "levels": 1,
-   "requires": [
-    "ugrv",
-    "unp2"
-   ],
-   "time": 50
   },
   "S00A": {
    "type": "unknown",
@@ -678,22 +662,22 @@
    "type": "building",
    "name": "Коралловая кузница",
    "base": "hbla",
-   "time": 70,
    "gold": 140,
-   "hotkey": "E",
+   "lumber": 40,
    "hp": 1500,
-   "lumber": 40
+   "time": 70,
+   "hotkey": "E"
   },
   "h0JX": {
    "type": "building",
    "name": "Храм Бездны",
    "base": "hkee",
-   "time": 140,
-   "food_made": 100,
    "gold": 4500,
-   "hotkey": "Z",
-   "hp": 2000,
    "lumber": 4500,
+   "food_made": 100,
+   "hp": 2000,
+   "time": 140,
+   "hotkey": "Z",
    "requires": [
     "nnad",
     "h0JW"
@@ -703,12 +687,12 @@
    "type": "building",
    "name": "Коралловый храм",
    "base": "hcas",
-   "time": 140,
-   "food_made": 150,
    "gold": 12000,
-   "hotkey": "Z",
-   "hp": 2500,
    "lumber": 12000,
+   "food_made": 150,
+   "hp": 2500,
+   "time": 140,
+   "hotkey": "Z",
    "requires": [
     "nnad",
     "h0JW"
@@ -718,22 +702,22 @@
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 140,
-   "food_made": 100,
    "gold": 4500,
-   "hotkey": "Z",
+   "lumber": 4500,
+   "food_made": 100,
    "hp": 2000,
-   "lumber": 4500
+   "time": 140,
+   "hotkey": "Z"
   },
   "n04L": {
    "type": "building",
    "name": "Змеиное логово",
    "base": "nnsg",
-   "time": 60,
    "gold": 450,
-   "hotkey": "X",
-   "hp": 1500,
    "lumber": 300,
+   "hp": 1500,
+   "time": 60,
+   "hotkey": "X",
    "requires": [
     "h0JY",
     "h0JW"
@@ -743,21 +727,21 @@
    "type": "unit",
    "name": "Воин волн",
    "base": "nmtw",
-   "time": 20,
    "gold": 100,
-   "hotkey": "Q",
+   "lumber": 35,
    "hp": 400,
-   "lumber": 35
+   "time": 20,
+   "hotkey": "Q"
   },
   "n050": {
    "type": "unit",
    "name": "Мурлок-мутант",
    "base": "nmfs",
-   "time": 54,
    "gold": 385,
-   "hotkey": "Q",
-   "hp": 800,
    "lumber": 130,
+   "hp": 800,
+   "time": 54,
+   "hotkey": "Q",
    "requires": [
     "h0JY"
    ]
@@ -766,11 +750,11 @@
    "type": "unit",
    "name": "Глубинный житель",
    "base": "nnsw",
-   "time": 28,
    "gold": 230,
-   "hotkey": "Q",
-   "hp": 650,
    "lumber": 130,
+   "hp": 650,
+   "time": 28,
+   "hotkey": "Q",
    "requires": [
     "R0FE",
     "h0JX"
@@ -780,11 +764,11 @@
    "type": "unit",
    "name": "Мурлок-охотник",
    "base": "nmrr",
-   "time": 48,
    "gold": 285,
-   "hotkey": "E",
-   "hp": 770,
    "lumber": 95,
+   "hp": 770,
+   "time": 48,
+   "hotkey": "E",
    "requires": [
     "h0JX"
    ]
@@ -793,11 +777,11 @@
    "type": "unit",
    "name": "Мурлок-чернокнижник",
    "base": "nmsc",
-   "time": 40,
    "gold": 365,
-   "hotkey": "Q",
-   "hp": 525,
    "lumber": 120,
+   "hp": 525,
+   "time": 40,
+   "hotkey": "Q",
    "requires": [
     "h0JX"
    ]
@@ -806,11 +790,11 @@
    "type": "unit",
    "name": "Мурлок-шаман",
    "base": "nmsc",
-   "time": 43,
    "gold": 295,
-   "hotkey": "W",
-   "hp": 500,
    "lumber": 100,
+   "hp": 500,
+   "time": 43,
+   "hotkey": "W",
    "requires": [
     "h0JX"
    ]
@@ -819,11 +803,11 @@
    "type": "building",
    "name": "Морские врата",
    "base": "nnsg",
-   "time": 60,
    "gold": 450,
-   "hotkey": "D",
-   "hp": 1500,
    "lumber": 300,
+   "hp": 1500,
+   "time": 60,
+   "hotkey": "D",
    "requires": [
     "h0JY",
     "h0JW"
@@ -833,11 +817,11 @@
    "type": "unit",
    "name": "Морской охотник",
    "base": "nsgh",
-   "time": 52,
    "gold": 340,
-   "hotkey": "E",
-   "hp": 1000,
    "lumber": 115,
+   "hp": 1000,
+   "time": 52,
+   "hotkey": "E",
    "requires": [
     "h0JY"
    ]
@@ -846,11 +830,11 @@
    "type": "unit",
    "name": "Морской змей",
    "base": "nsgh",
-   "time": 50,
    "gold": 250,
-   "hotkey": "Q",
-   "hp": 1250,
    "lumber": 150,
+   "hp": 1250,
+   "time": 50,
+   "hotkey": "Q",
    "requires": [
     "h0JY"
    ]
@@ -858,11 +842,11 @@
   "nhyc": {
    "type": "unit",
    "name": "Драконья черепаха",
-   "time": 55,
    "gold": 330,
-   "hotkey": "R",
-   "hp": 750,
    "lumber": 110,
+   "hp": 750,
+   "time": 55,
+   "hotkey": "R",
    "requires": [
     "h0JX"
    ]
@@ -870,79 +854,79 @@
   "nmpe": {
    "type": "unit",
    "name": "Раб мурлоков",
-   "time": 15,
    "gold": 75,
-   "hotkey": "Q",
-   "hp": 250
+   "hp": 250,
+   "time": 15,
+   "hotkey": "Q"
   },
   "nmyr": {
    "type": "unit",
    "name": "Мирмидон",
-   "time": 49,
-   "equivalents": [
-    "nmys"
-   ],
    "gold": 320,
-   "hotkey": "E",
-   "hp": 1080,
    "lumber": 110,
+   "hp": 1080,
+   "time": 49,
+   "hotkey": "E",
    "requires": [
     "R0FE",
     "h0JX"
+   ],
+   "equivalents": [
+    "nmys"
    ]
   },
   "nnad": {
    "type": "building",
    "name": "Алтарь глубин",
-   "time": 60,
-   "food_made": 3,
    "gold": 255,
-   "hotkey": "S",
+   "lumber": 100,
+   "food_made": 3,
    "hp": 900,
-   "lumber": 100
+   "time": 60,
+   "hotkey": "S"
   },
   "nnfm": {
    "type": "building",
    "name": "Коралловый риф",
-   "time": 45,
-   "food_made": 40,
    "gold": 300,
-   "hotkey": "A",
+   "lumber": 150,
+   "food_made": 40,
    "hp": 500,
-   "lumber": 150
+   "time": 45,
+   "hotkey": "A"
   },
   "nnmg": {
    "type": "unit",
    "name": "Мурлок-налётчик",
-   "time": 21,
    "gold": 130,
-   "hotkey": "W",
-   "hp": 400
+   "hp": 400,
+   "time": 21,
+   "hotkey": "W"
   },
   "nnrg": {
    "type": "unit",
    "name": "Страж нагов",
-   "time": 62,
-   "equivalents": [
-    "nnrs"
-   ],
    "gold": 490,
-   "hotkey": "Q",
-   "hp": 1100,
    "lumber": 175,
+   "hp": 1100,
+   "time": 62,
+   "hotkey": "Q",
    "requires": [
     "R0FE",
     "h0JY"
+   ],
+   "equivalents": [
+    "nnrs"
    ]
   },
   "nnsa": {
    "type": "building",
    "name": "Святилище Азшары",
-   "time": 70,
    "gold": 320,
-   "hotkey": "R",
-   "hp": 1050,
    "lumber": 70,
+   "hp": 1050,
+   "time": 70,
+   "hotkey": "R",
    "requires": [
     "h0JX"
    ]
@@ -950,20 +934,20 @@
   "nnsg": {
    "type": "building",
    "name": "Нерестилище",
-   "time": 60,
    "gold": 370,
-   "hotkey": "W",
+   "lumber": 200,
    "hp": 1500,
-   "lumber": 200
+   "time": 60,
+   "hotkey": "W"
   },
   "nnsw": {
    "type": "unit",
    "name": "Сирена",
-   "time": 41,
    "gold": 280,
-   "hotkey": "W",
-   "hp": 550,
    "lumber": 95,
+   "hp": 550,
+   "time": 41,
+   "hotkey": "W",
    "requires": [
     "R0FE",
     "h0JX"
@@ -972,45 +956,45 @@
   "nntg": {
    "type": "building",
    "name": "Защитник приливов",
-   "time": 45,
    "gold": 130,
-   "hotkey": "Z",
+   "lumber": 80,
    "hp": 500,
-   "lumber": 80
+   "time": 45,
+   "hotkey": "Z"
   },
   "nntt": {
    "type": "building",
    "name": "Храм Глубин",
-   "time": 140,
-   "food_made": 100,
    "gold": 385,
-   "hotkey": "Q",
+   "lumber": 150,
+   "food_made": 100,
    "hp": 1500,
-   "lumber": 150
+   "time": 140,
+   "hotkey": "Q"
   },
   "nsnp": {
    "type": "unit",
    "name": "Морской василиск",
-   "time": 29,
-   "equivalents": [
-    "nsbs"
-   ],
    "gold": 195,
-   "hotkey": "W",
-   "hp": 500,
    "lumber": 65,
+   "hp": 500,
+   "time": 29,
+   "hotkey": "W",
    "requires": [
     "h0JW"
+   ],
+   "equivalents": [
+    "nsbs"
    ]
   },
   "nwgs": {
    "type": "unit",
    "name": "Коатль",
-   "time": 36,
    "gold": 235,
-   "hotkey": "W",
+   "lumber": 80,
    "hp": 600,
-   "lumber": 80
+   "time": 36,
+   "hotkey": "W"
   }
  },
  "edges": [
@@ -1023,7 +1007,6 @@
   "A1OL requires R0KP",
   "A1ON requires Rnsw",
   "A1OP requires Rnsw",
-  "A1OQ requires Rugf",
   "ACen requires Roen",
   "ACfu requires Rnsw",
   "AChx requires Rnsi",

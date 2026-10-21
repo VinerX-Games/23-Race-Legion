@@ -19,7 +19,7 @@ from wc3_hivewe import load_wts_strings
 
 FIELDS = {
     "unit": {"name": "unam", "tip": "utip", "ubertip": "utub", "propernames": "upro", "awakentip": "uawt", "revivetip": "utpr"},
-    "ability": {"name": "anam", "tip": "atp1", "ubertip": "aub1", "untip": "aut1", "unubertip": "auu1", "researchtip": "aret", "researchubertip": "arut"},
+    "ability": {"name": "anam", "tip": "atp1", "ubertip": "aub1", "untip": "aut1", "unubertip": "auu1", "researchtip": "aret", "researchubertip": "arut", "requires": "areq"},
     "upgrade": {"name": "gnam", "tip": "gtp1", "ubertip": "gub1"},
     "buff": {"name": "fnam", "tip": "ftip", "ubertip": "fube", "editorname": "fnam", "bufftip": "ftip", "buffubertip": "fube"},
     "item": {"name": "unam", "tip": "utip", "ubertip": "utub", "description": "ides"},

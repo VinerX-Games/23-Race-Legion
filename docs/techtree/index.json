@@ -14,7 +14,7 @@
     "hero": 3,
     "unit": 23,
     "unknown": 3,
-    "upgrade": 25
+    "upgrade": 23
    }
   },
   {
@@ -62,7 +62,7 @@
     "hero": 5,
     "unit": 27,
     "unknown": 35,
-    "upgrade": 39
+    "upgrade": 38
    }
   },
   {
@@ -77,7 +77,7 @@
     "hero": 4,
     "unit": 26,
     "unknown": 25,
-    "upgrade": 36
+    "upgrade": 35
    }
   },
   {
@@ -122,7 +122,7 @@
     "hero": 11,
     "unit": 28,
     "unknown": 6,
-    "upgrade": 32
+    "upgrade": 31
    }
   },
   {
@@ -138,7 +138,7 @@
     "hero": 6,
     "unit": 23,
     "unknown": 7,
-    "upgrade": 23
+    "upgrade": 22
    }
   },
   {
@@ -201,7 +201,7 @@
     "hero": 6,
     "unit": 27,
     "unknown": 8,
-    "upgrade": 33
+    "upgrade": 32
    }
   },
   {
@@ -219,7 +219,7 @@
     "hero": 14,
     "unit": 91,
     "unknown": 73,
-    "upgrade": 86
+    "upgrade": 85
    }
   },
   {
@@ -234,7 +234,7 @@
     "hero": 3,
     "unit": 28,
     "unknown": 4,
-    "upgrade": 50
+    "upgrade": 49
    }
   },
   {
@@ -296,7 +296,7 @@
     "hero": 3,
     "unit": 24,
     "unknown": 3,
-    "upgrade": 43
+    "upgrade": 42
    }
   },
   {
@@ -405,7 +405,7 @@
     "hero": 3,
     "unit": 17,
     "unknown": 2,
-    "upgrade": 22
+    "upgrade": 21
    }
   },
   {
@@ -436,7 +436,7 @@
     "hero": 3,
     "unit": 21,
     "unknown": 7,
-    "upgrade": 27
+    "upgrade": 26
    }
   },
   {
@@ -452,7 +452,7 @@
     "hero": 3,
     "unit": 26,
     "unknown": 3,
-    "upgrade": 31
+    "upgrade": 30
    }
   },
   {
@@ -468,7 +468,7 @@
     "hero": 11,
     "unit": 27,
     "unknown": 5,
-    "upgrade": 63
+    "upgrade": 62
    }
   },
   {
@@ -484,7 +484,7 @@
     "hero": 6,
     "unit": 21,
     "unknown": 3,
-    "upgrade": 21
+    "upgrade": 20
    }
   },
   {
@@ -515,7 +515,7 @@
     "hero": 5,
     "unit": 23,
     "unknown": 3,
-    "upgrade": 27
+    "upgrade": 26
    }
   },
   {
@@ -546,7 +546,7 @@
     "hero": 4,
     "unit": 24,
     "unknown": 64,
-    "upgrade": 18
+    "upgrade": 17
    }
   },
   {
@@ -562,7 +562,7 @@
     "hero": 4,
     "unit": 33,
     "unknown": 69,
-    "upgrade": 32
+    "upgrade": 31
    }
   }
  ]

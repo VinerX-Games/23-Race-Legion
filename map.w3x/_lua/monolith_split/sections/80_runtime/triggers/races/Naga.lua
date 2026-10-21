@@ -464,13 +464,8 @@ function NagaCombat.Init()
             BlzEndUnitAbilityCooldown(caster, NagaCombat.ids.harpoon)
         end
     end)
-    -- Обученные, призванные и созданные скриптом мутанты одинаково входят в регион мира.
-    local bounds = GetWorldBounds()
-    NagaCombat.world = CreateRegion()
-    RegionAddRect(NagaCombat.world, bounds)
-    RemoveRect(bounds)
     NagaCombat.enterTrigger = CreateTrigger()
-    TriggerRegisterEnterRegion(NagaCombat.enterTrigger, NagaCombat.world, nil)
+    TriggerRegisterEnterRegion(NagaCombat.enterTrigger, Allmap, nil)
     TriggerAddAction(NagaCombat.enterTrigger, function() NagaCombat.Mutate(GetTriggerUnit()) end)
 end
 

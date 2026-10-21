@@ -29,6 +29,10 @@
   },
   {
    "file": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/Horde.lua",
+   "symbol": "HordeStartLimitsFor"
+  },
+  {
+   "file": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/Horde.lua",
    "symbol": "InitTrig_StartHorde"
   },
   {
@@ -88,9 +92,9 @@
   "A001": {
    "type": "ability",
    "name": "Абордаж!",
-   "hotkey": "Q",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A002": {
    "type": "ability",
@@ -108,15 +112,15 @@
   "A009": {
    "type": "ability",
    "name": "Сделать флагманом",
-   "hotkey": "R",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "R"
   },
   "A00A": {
    "type": "ability",
    "name": "Починка",
-   "hotkey": "R",
    "levels": 3,
    "hero_level_req": 1,
+   "hotkey": "R",
    "requires": [
     "R007"
    ]
@@ -124,8 +128,8 @@
   "A00B": {
    "type": "ability",
    "name": "Тактическое ускорение",
-   "hotkey": "E",
    "levels": 3,
+   "hotkey": "E",
    "requires": [
     "R006"
    ]
@@ -133,9 +137,9 @@
   "A00G": {
    "type": "ability",
    "name": "Массированный обстрел",
-   "hotkey": "W",
    "levels": 3,
    "hero_level_req": 1,
+   "hotkey": "W",
    "requires": [
     "R005"
    ]
@@ -143,9 +147,9 @@
   "A00I": {
    "type": "ability",
    "name": "Магическая посадка",
-   "hotkey": "W",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "A01C": {
    "type": "ability",
@@ -156,15 +160,15 @@
    "type": "ability",
    "name": "Волна силы",
    "hero": true,
-   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A06U": {
    "type": "ability",
    "name": "Сокрушительная волна",
-   "hotkey": "Q",
    "levels": 1,
+   "hotkey": "Q",
    "requires": [
     "R03A"
    ]
@@ -172,28 +176,28 @@
   "A0I3": {
    "type": "ability",
    "name": "Небольшой скачок",
-   "hotkey": "C",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "C"
   },
   "A0IQ": {
    "type": "ability",
    "name": "Обозначить столицу",
-   "hotkey": "X",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "X"
   },
   "A0LI": {
    "type": "ability",
    "name": "Обмен золота на дерево",
-   "hotkey": "S",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "S"
   },
   "A0LJ": {
    "type": "ability",
    "name": "Обмен дерева на золото",
-   "hotkey": "A",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "A"
   },
   "A0QO": {
    "type": "ability",
@@ -217,63 +221,57 @@
   "A0YV": {
    "type": "ability",
    "name": "Орда",
-   "hotkey": "W",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "A0Z5": {
    "type": "ability",
    "name": "ДАММИ - ВНЕ ЭКОНОМИКИ",
-   "hotkey": "C",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "C"
   },
   "A0Z7": {
    "type": "ability",
    "name": "Усиленная броня",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A0ZA": {
    "type": "ability",
    "name": "Скрытая ярость",
-   "levels": 1,
-   "requires": [
-    "Rugf"
-   ]
+   "levels": 1
   },
   "A0ZB": {
    "type": "ability",
    "name": "Опутывание",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A0ZC": {
    "type": "ability",
    "name": "Состояние берсерка",
-   "levels": 1,
-   "requires": [
-    "Rugf"
-   ]
+   "levels": 1
   },
   "A0ZV": {
    "type": "ability",
    "name": "Ба-бах!",
-   "hotkey": "W",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "W"
   },
   "A0ZX": {
    "type": "ability",
    "name": "Пламенное дыхание",
-   "hotkey": "Q",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A103": {
    "type": "ability",
    "name": "Запустить протокол подрыва",
-   "hotkey": "Q",
    "levels": 1,
+   "hotkey": "Q",
    "requires": [
     "Robk"
    ]
@@ -281,16 +279,13 @@
   "A124": {
    "type": "ability",
    "name": "Антимагический щит",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A129": {
    "type": "ability",
    "name": "Неожиданный удар",
-   "levels": 1,
-   "requires": [
-    "Rugf"
-   ]
+   "levels": 1
   },
   "A12A": {
    "type": "ability",
@@ -301,48 +296,48 @@
    "type": "ability",
    "name": "Муссон",
    "hero": true,
-   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "A12F": {
    "type": "ability",
    "name": "Боевой рев",
    "hero": true,
-   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "A12M": {
    "type": "ability",
    "name": "За Орду!",
    "hero": true,
-   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "A12X": {
    "type": "ability",
    "name": "Цепная молния",
    "hero": true,
-   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A12Z": {
    "type": "ability",
    "name": "Земляные оковы",
    "hero": true,
-   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "A13A": {
    "type": "ability",
    "name": "Двойной удар",
    "hero": true,
-   "hotkey": "E",
-   "levels": 4
+   "levels": 4,
+   "hotkey": "E"
   },
   "A13B": {
    "type": "ability",
@@ -356,8 +351,8 @@
    "type": "ability",
    "name": "Безумие",
    "hero": true,
-   "hotkey": "Q",
    "levels": 4,
+   "hotkey": "Q",
    "requires": [
     "Robk"
    ]
@@ -366,9 +361,9 @@
    "type": "ability",
    "name": "Повелитель моря",
    "hero": true,
-   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "A13H": {
    "type": "ability",
@@ -385,32 +380,32 @@
    "type": "ability",
    "name": "Удар хвостом",
    "hero": true,
-   "hotkey": "W",
-   "levels": 4
+   "levels": 4,
+   "hotkey": "W"
   },
   "A14G": {
    "type": "ability",
    "name": "Месть вод",
    "hero": true,
-   "hotkey": "|cffb99d66СПОСОБНОСТЬ:|cffced4da Призывает на помощь верных воинов Кор'Крона.|r",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "|cffb99d66СПОСОБНОСТЬ:|cffced4da Призывает на помощь верных воинов Кор'Крона.|r"
   },
   "A14H": {
    "type": "ability",
    "name": "Уклонение",
    "hero": true,
-   "hotkey": "E",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "E"
   },
   "A14I": {
    "type": "ability",
    "name": "Кольцо льда",
    "hero": true,
-   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A14J": {
    "type": "ability",
@@ -423,14 +418,14 @@
   "A14L": {
    "type": "ability",
    "name": "Рассеивание чар",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A14M": {
    "type": "ability",
    "name": "Прилив сил",
-   "hotkey": "W",
    "levels": 2,
+   "hotkey": "W",
    "requires": [
     "Rnsi"
    ],
@@ -439,8 +434,8 @@
   "A14N": {
    "type": "ability",
    "name": "Целительная вода",
-   "hotkey": "W",
    "levels": 1,
+   "hotkey": "W",
    "requires": [
     "Rnsi"
    ]
@@ -467,15 +462,15 @@
   "A1JN": {
    "type": "ability",
    "name": "Орда Второй Войны",
-   "hotkey": "Z",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Z"
   },
   "A1JO": {
    "type": "ability",
    "name": "Взять на борт",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A1KB": {
    "type": "ability",
@@ -490,15 +485,15 @@
   "A1LS": {
    "type": "ability",
    "name": "Рассеивание заклинаний",
-   "hotkey": "W",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "W"
   },
   "A1LT": {
    "type": "ability",
    "name": "Своя стихия",
-   "hotkey": "D",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "D"
   },
   "A1MG": {
    "type": "ability",
@@ -508,8 +503,8 @@
   "A1OJ": {
    "type": "ability",
    "name": "Воин Ша",
-   "hotkey": "D",
    "levels": 1,
+   "hotkey": "D",
    "requires": [
     "Robk"
    ]
@@ -517,9 +512,9 @@
   "A1OK": {
    "type": "ability",
    "name": "Снаряд Ша",
-   "hotkey": "R",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "R"
   },
   "A1OL": {
    "type": "ability",
@@ -532,15 +527,15 @@
   "A1OM": {
    "type": "ability",
    "name": "Едкая слюна",
-   "hotkey": "Q",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A1ON": {
    "type": "ability",
    "name": "Щит молний",
-   "hotkey": "W",
    "levels": 1,
+   "hotkey": "W",
    "requires": [
     "Rnsw"
    ]
@@ -548,14 +543,14 @@
   "A1OO": {
    "type": "ability",
    "name": "Сила молний",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A1OP": {
    "type": "ability",
    "name": "Цепь молний",
-   "hotkey": "E",
    "levels": 1,
+   "hotkey": "E",
    "requires": [
     "Rnsw"
    ],
@@ -564,22 +559,19 @@
   "A1OQ": {
    "type": "ability",
    "name": "Сила молний",
-   "levels": 1,
-   "requires": [
-    "Rugf"
-   ]
+   "levels": 1
   },
   "A1OR": {
    "type": "ability",
    "name": "Каннибализм",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "ACen": {
    "type": "ability",
    "name": "Опутывание",
-   "hotkey": "\"E\"",
    "levels": 1,
+   "hotkey": "\"E\"",
    "requires": [
     "Roen"
    ]
@@ -587,8 +579,8 @@
   "ACfu": {
    "type": "ability",
    "name": "Ледяная броня",
-   "hotkey": "W",
    "levels": 1,
+   "hotkey": "W",
    "requires": [
     "Rnsw"
    ]
@@ -596,8 +588,8 @@
   "AChx": {
    "type": "ability",
    "name": "Сглаз",
-   "hotkey": "E",
    "levels": 1,
+   "hotkey": "E",
    "requires": [
     "Rnsi"
    ],
@@ -616,33 +608,33 @@
    "type": "ability",
    "name": "Скачок",
    "hero": true,
-   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "AEtq": {
    "type": "ability",
    "name": "Покой",
    "hero": true,
-   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "AHab": {
    "type": "ability",
    "name": "Аура гениальности",
    "hero": true,
-   "hotkey": "E",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "E"
   },
   "AHbn": {
    "type": "ability",
    "name": "Изгнание",
    "hero": true,
-   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "AInv": {
    "type": "ability",
@@ -652,8 +644,8 @@
   "AMh1": {
    "type": "ability",
    "name": "Гарпун",
-   "hotkey": "X",
    "levels": 1,
+   "hotkey": "X",
    "requires": [
     "R0FP"
    ]
@@ -666,8 +658,8 @@
   "ANen": {
    "type": "ability",
    "name": "Опутывание",
-   "hotkey": "Q",
    "levels": 1,
+   "hotkey": "Q",
    "requires": [
     "Rnen"
    ]
@@ -675,30 +667,30 @@
   "ANha": {
    "type": "ability",
    "name": "Добывать ресурсы",
-   "hotkey": "G",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "G"
   },
   "ANpa": {
    "type": "ability",
    "name": "Паразит",
-   "hotkey": "R",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "R"
   },
   "ANrf": {
    "type": "ability",
    "name": "Огненный ливень",
    "hero": true,
-   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "AOcl": {
    "type": "ability",
    "name": "Цепная молния",
    "hero": true,
-   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "AOcr": {
    "type": "ability",
@@ -711,9 +703,9 @@
    "type": "ability",
    "name": "Дальнее зрение",
    "hero": true,
-   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "AOr2": {
    "type": "ability",
@@ -733,33 +725,33 @@
    "type": "ability",
    "name": "Дух волка",
    "hero": true,
-   "hotkey": "E",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "E"
   },
   "AOw2": {
    "type": "ability",
    "name": "Громовая поступь",
    "hero": true,
-   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "AOwk": {
    "type": "ability",
    "name": "Танец ветра",
    "hero": true,
-   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "AOww": {
    "type": "ability",
    "name": "Вихрь клинков",
    "hero": true,
-   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "Abds": {
    "type": "ability",
@@ -769,8 +761,8 @@
   "Ablo": {
    "type": "ability",
    "name": "Жажда крови",
-   "hotkey": "E",
    "levels": 1,
+   "hotkey": "E",
    "requires": [
     "Rost"
    ]
@@ -778,8 +770,8 @@
   "Abtl": {
    "type": "ability",
    "name": "Боевая тревога",
-   "hotkey": "B",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "B"
   },
   "Abun": {
    "type": "ability",
@@ -794,8 +786,8 @@
   "Acny": {
    "type": "ability",
    "name": "Торнадо",
-   "hotkey": "C",
    "levels": 1,
+   "hotkey": "C",
    "requires": [
     "Rnsw"
    ],
@@ -804,8 +796,8 @@
   "Adro": {
    "type": "ability",
    "name": "Выгрузить",
-   "hotkey": "U",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "U"
   },
   "Advc": {
    "type": "ability",
@@ -815,8 +807,8 @@
   "Ahar": {
    "type": "ability",
    "name": "Добывать ресурсы",
-   "hotkey": "G",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "G"
   },
   "Aion": {
    "type": "ability",
@@ -829,8 +821,8 @@
   "Alsh": {
    "type": "ability",
    "name": "Щит молний",
-   "hotkey": "R",
    "levels": 1,
+   "hotkey": "R",
    "requires": [
     "Rost"
    ],
@@ -839,8 +831,8 @@
   "Amrf": {
    "type": "ability",
    "name": "Облик ворона",
-   "hotkey": "F",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "F"
   },
   "Aorb": {
    "type": "ability",
@@ -853,14 +845,14 @@
   "Apg2": {
    "type": "ability",
    "name": "Развеивание магии",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Aprg": {
    "type": "ability",
    "name": "Развеивание магии",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Arbr": {
    "type": "ability",
@@ -870,8 +862,8 @@
   "Arep": {
    "type": "ability",
    "name": "Ремонтировать",
-   "hotkey": "R",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "R"
   },
   "Argl": {
    "type": "ability",
@@ -894,8 +886,8 @@
   "Asb1": {
    "type": "ability",
    "name": "Погружение",
-   "hotkey": "U",
    "levels": 1,
+   "hotkey": "U",
    "requires": [
     "Rnsb"
    ]
@@ -903,14 +895,14 @@
   "Asb2": {
    "type": "ability",
    "name": "Погружение",
-   "hotkey": "U",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "U"
   },
   "Asb3": {
    "type": "ability",
    "name": "Погружение",
-   "hotkey": "U",
    "levels": 1,
+   "hotkey": "U",
    "requires": [
     "Rnsb"
    ]
@@ -923,8 +915,8 @@
   "Astd": {
    "type": "ability",
    "name": "Отбой",
-   "hotkey": "D",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "D"
   },
   "Aven": {
    "type": "ability",
@@ -951,45 +943,45 @@
    "type": "hero",
    "name": "Владыка-страж",
    "base": "Hpal",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "X",
+   "lumber": 100,
+   "food": 1,
    "hp": 100,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "X"
   },
   "H0JV": {
    "type": "hero",
    "name": "Глубинная охотница",
    "base": "Hvsh",
-   "time": 40,
-   "food": 1,
    "gold": 425,
-   "hotkey": "C",
+   "lumber": 100,
+   "food": 1,
    "hp": 100,
-   "lumber": 100
+   "time": 40,
+   "hotkey": "C"
   },
   "N07A": {
    "type": "hero",
    "name": "Мурлок-чародей",
    "base": "Nmsr",
-   "time": 50,
-   "food": 1,
    "gold": 425,
-   "hotkey": "Z",
+   "lumber": 100,
+   "food": 1,
    "hp": 100,
-   "lumber": 100
+   "time": 50,
+   "hotkey": "Z"
   },
   "O02P": {
    "type": "hero",
    "name": "Вождь Орды",
    "base": "Otch",
-   "time": 55,
-   "food": 2,
    "gold": 5000,
-   "hotkey": "Z",
-   "hp": 1000,
    "lumber": 3000,
+   "food": 2,
+   "hp": 1000,
+   "time": 55,
+   "hotkey": "Z",
    "requires": [
     "R0E9"
    ]
@@ -998,62 +990,62 @@
    "type": "hero",
    "name": "Генерал Орды",
    "base": "Otch",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "T",
+   "lumber": 100,
+   "food": 1,
    "hp": 100,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "T"
   },
   "Obla": {
    "type": "hero",
    "name": "Мастер клинка",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "Z",
+   "lumber": 100,
+   "food": 1,
    "hp": 250,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "Z"
   },
   "Ofar": {
    "type": "hero",
    "name": "Предсказатель",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "X",
+   "lumber": 100,
+   "food": 1,
    "hp": 200,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "X"
   },
   "Oshd": {
    "type": "hero",
    "name": "Темный охотник",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "H",
+   "lumber": 100,
+   "food": 1,
    "hp": 100,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "H"
   },
   "Otch": {
    "type": "hero",
    "name": "Вождь тауренов",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "C",
+   "lumber": 100,
+   "food": 1,
    "hp": 400,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "C"
   },
   "Othr": {
    "type": "hero",
    "name": "Лидер Орды",
-   "time": 55,
-   "food": 3,
    "gold": 5000,
-   "hotkey": "Z",
-   "hp": 1000,
    "lumber": 3000,
+   "food": 3,
+   "hp": 1000,
+   "time": 55,
+   "hotkey": "Z",
    "requires": [
     "R0DV"
    ]
@@ -1061,183 +1053,183 @@
   "R002": {
    "type": "upgrade",
    "name": "Орудия флота — уровень 1",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 200,
    "lumber": 1200,
    "lumber_per_level": 300,
-   "levels": 6,
+   "time": 80,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 80,
-   "time_per_level": 15
+   ]
   },
   "R003": {
    "type": "upgrade",
    "name": "Укреплённый корпус — уровень 1",
+   "levels": 6,
    "gold": 900,
    "gold_per_level": 300,
    "lumber": 500,
    "lumber_per_level": 200,
-   "levels": 6,
+   "time": 80,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 80,
-   "time_per_level": 15
+   ]
   },
   "R004": {
    "type": "upgrade",
    "name": "Улучшение до Кровавого Палача",
+   "levels": 1,
    "gold": 600,
    "lumber": 500,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "ofrt",
     "ofor",
     "h0DV"
-   ],
-   "time": 40
+   ]
   },
   "R005": {
    "type": "upgrade",
    "name": "Обстрел — уровень 1",
+   "levels": 5,
    "gold": 500,
    "gold_per_level": 150,
    "lumber": 500,
    "lumber_per_level": 150,
-   "levels": 5,
+   "time": 90,
    "requires": [
     "hcas"
-   ],
-   "time": 90
+   ]
   },
   "R006": {
    "type": "upgrade",
    "name": "Дополнительные паруса — уровень 1",
+   "levels": 3,
    "gold": 500,
    "gold_per_level": 150,
    "lumber": 500,
    "lumber_per_level": 150,
-   "levels": 3,
+   "time": 90,
    "requires": [
     "hcas"
-   ],
-   "time": 90
+   ]
   },
   "R007": {
    "type": "upgrade",
    "name": "Починка — уровень 1",
+   "levels": 3,
    "gold": 500,
    "gold_per_level": 150,
    "lumber": 500,
    "lumber_per_level": 150,
-   "levels": 3,
+   "time": 90,
    "requires": [
     "hcas"
-   ],
-   "time": 90
+   ]
   },
   "R01N": {
    "type": "upgrade",
    "name": "Улучшенная кладка",
+   "levels": 6,
    "gold": 250,
    "gold_per_level": 500,
    "lumber": 250,
    "lumber_per_level": 500,
-   "levels": 6,
+   "time": 30,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 30,
-   "time_per_level": 15
+   ]
   },
   "R03A": {
    "type": "upgrade",
    "name": "",
    "only_required": true,
+   "levels": 3,
    "gold": 125,
    "lumber": 75,
-   "levels": 3,
+   "time": 40,
    "requires": [
     "h01Z"
-   ],
-   "time": 40
+   ]
   },
   "R067": {
    "type": "upgrade",
    "name": "Примкнуть к Королю-личу",
+   "levels": 1,
    "gold": 1000,
    "lumber": 500,
-   "levels": 1,
    "time": 15
   },
   "R068": {
    "type": "upgrade",
    "name": "Поддерживать верность хранителям",
+   "levels": 1,
    "gold": 1000,
    "lumber": 500,
-   "levels": 1,
    "time": 15
   },
   "R0AU": {
    "type": "upgrade",
    "name": "",
    "only_required": true,
+   "levels": 1,
    "gold": 600,
    "lumber": 600,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "ofrt",
     "ofor",
     "R0A7"
-   ],
-   "time": 40
+   ]
   },
   "R0AZ": {
    "type": "upgrade",
    "name": "Мудрость черных драконов",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 750,
    "lumber": 450,
    "lumber_per_level": 750,
-   "levels": 6,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "R0D1": {
    "type": "upgrade",
    "name": "Амнистия Клана Черной Горы",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0D2": {
    "type": "upgrade",
    "name": "Эльфы в беде",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 500,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0D3": {
    "type": "upgrade",
    "name": "Предложение отрекшихся",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
@@ -1245,15 +1237,15 @@
    "type": "upgrade",
    "name": "",
    "only_required": true,
+   "levels": 2,
    "gold": 3000,
    "gold_per_level": 4000,
    "lumber": 3000,
    "lumber_per_level": 4000,
-   "levels": 2,
+   "time": 55,
    "requires": [
     "hcas"
-   ],
-   "time": 55
+   ]
   },
   "R0DV": {
    "type": "upgrade",
@@ -1263,119 +1255,119 @@
   "R0DW": {
    "type": "upgrade",
    "name": "Отказаться от Расширения",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0DX": {
    "type": "upgrade",
    "name": "Воссоединение орков",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0DY": {
    "type": "upgrade",
    "name": "Поиск союзников",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0DZ": {
    "type": "upgrade",
    "name": "Вопросы безопасности",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 500,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0E0": {
    "type": "upgrade",
    "name": "Усилить Кор'Крон",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0E1": {
    "type": "upgrade",
    "name": "Связаться с кланом Драконьей Пасти",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0E3": {
    "type": "upgrade",
    "name": "Дом Рыцарям смерти",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0E4": {
    "type": "upgrade",
    "name": "Сделка с Гоблинами",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0E5": {
    "type": "upgrade",
    "name": "Подчинить Магнатавров",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0E6": {
    "type": "upgrade",
    "name": "Улучшенные пилы — уровень 1",
+   "levels": 6,
    "gold": 100,
    "gold_per_level": 450,
-   "levels": 6,
    "time": 50,
    "time_per_level": 10
   },
   "R0E7": {
    "type": "upgrade",
    "name": "Фракция с магами (урон)",
+   "levels": 1,
    "gold": 75,
    "gold_per_level": 500,
    "lumber": 25,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
@@ -1383,277 +1375,277 @@
    "type": "upgrade",
    "name": "",
    "only_required": true,
+   "levels": 1,
    "gold": 75,
    "gold_per_level": 500,
    "lumber": 25,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0E9": {
    "type": "upgrade",
    "name": "Сформировать Истинную Орду",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0EA": {
    "type": "upgrade",
    "name": "Начать строительство Железной Орды",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0EC": {
    "type": "upgrade",
    "name": "Тренировка ближнего боя — уровень 1",
+   "levels": 3,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 500,
-   "levels": 3,
+   "time": 30,
+   "time_per_level": 15,
    "requires": [
     "etoa"
-   ],
-   "time": 30,
-   "time_per_level": 15
+   ]
   },
   "R0ED": {
    "type": "upgrade",
    "name": "Тренировка дальнего боя — уровень 1",
+   "levels": 3,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 500,
-   "levels": 3,
+   "time": 30,
+   "time_per_level": 15,
    "requires": [
     "etoa"
-   ],
-   "time": 30,
-   "time_per_level": 15
+   ]
   },
   "R0EE": {
    "type": "upgrade",
    "name": "Пандаренский вопрос",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0EF": {
    "type": "upgrade",
    "name": "Комплектование техники — уровень 1",
+   "levels": 3,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 500,
-   "levels": 3,
+   "time": 30,
+   "time_per_level": 15,
    "requires": [
     "etoa"
-   ],
-   "time": 30,
-   "time_per_level": 15
+   ]
   },
   "R0EH": {
    "type": "upgrade",
    "name": "Орда — общий дом",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0EI": {
    "type": "upgrade",
    "name": "Дорога к компромису",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0F3": {
    "type": "upgrade",
    "name": "Присоединение Зандаларов",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0F4": {
    "type": "upgrade",
    "name": "Принять Сурамарцев",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0FD": {
    "type": "upgrade",
    "name": "Шипастый панцирь",
+   "levels": 1,
    "gold": 250,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
-   "levels": 1,
    "time": 60,
    "time_per_level": 15
   },
   "R0FE": {
    "type": "upgrade",
    "name": "Владычество нагов",
+   "levels": 1,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
-   "levels": 1,
    "time": 1,
    "time_per_level": 15
   },
   "R0FF": {
    "type": "upgrade",
    "name": "Владычество мурлоков",
+   "levels": 1,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
-   "levels": 1,
    "time": 1,
    "time_per_level": 15
   },
   "R0FH": {
    "type": "upgrade",
    "name": "Улучшенный хват — уровень 1",
+   "levels": 4,
    "gold": 100,
    "gold_per_level": 350,
-   "levels": 4,
    "time": 60,
    "time_per_level": 30
   },
   "R0FP": {
    "type": "upgrade",
    "name": "Гарпун",
+   "levels": 1,
    "gold": 340,
    "lumber": 430,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "h0JY"
-   ],
-   "time": 40
+   ]
   },
   "R0FQ": {
    "type": "upgrade",
    "name": "Господство на море — уровень 1",
+   "levels": 3,
    "gold": 450,
    "gold_per_level": 510,
    "lumber": 560,
    "lumber_per_level": 340,
-   "levels": 3,
    "time": 40
   },
   "R0FR": {
    "type": "upgrade",
    "name": "Замедляющий яд",
+   "levels": 1,
    "gold": 230,
    "gold_per_level": 50,
    "lumber": 240,
    "lumber_per_level": 50,
-   "levels": 1,
    "time": 60,
    "time_per_level": 15
   },
   "R0G5": {
    "type": "upgrade",
    "name": "Артефакты — уровень 1",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 500,
-   "levels": 6,
+   "time": 30,
+   "time_per_level": 15,
    "requires": [
     "etoa"
-   ],
-   "time": 30,
-   "time_per_level": 15
+   ]
   },
   "R0GL": {
    "type": "upgrade",
    "name": "Заостренные дубины — уровень 1",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 1000,
    "lumber": 450,
    "lumber_per_level": 900,
-   "levels": 6,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "ostr"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "R0GM": {
    "type": "upgrade",
    "name": "Шкуры зверей — уровень 1",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 1000,
    "lumber": 450,
    "lumber_per_level": 900,
-   "levels": 6,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "ostr"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "R0GO": {
    "type": "upgrade",
    "name": "Крепость плоти — уровень 1",
+   "levels": 3,
    "gold": 450,
    "gold_per_level": 250,
    "lumber": 150,
    "lumber_per_level": 150,
-   "levels": 3,
+   "time": 40,
    "requires": [
     "ostr",
     "o03D"
-   ],
-   "time": 40
+   ]
   },
   "R0GP": {
    "type": "upgrade",
    "name": "Сила предков — уровень 1",
+   "levels": 3,
    "gold": 450,
    "gold_per_level": 250,
    "lumber": 100,
    "lumber_per_level": 150,
-   "levels": 3,
+   "time": 35,
    "requires": [
     "ostr",
     "ofor",
     "o03D"
-   ],
-   "time": 35
+   ]
   },
   "R0IR": {
    "type": "upgrade",
@@ -1683,351 +1675,338 @@
   "R0KO": {
    "type": "upgrade",
    "name": "Использовать Сердце И'Шараджа",
+   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
-   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0KP": {
    "type": "upgrade",
    "name": "Антимагический коатль",
+   "levels": 1,
    "gold": 340,
    "lumber": 430,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "h0JY"
-   ],
-   "time": 40
+   ]
   },
   "Rgfo": {
    "type": "upgrade",
    "name": "Знак укрепления",
+   "levels": 3,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
-   "levels": 3,
    "time": 60,
    "time_per_level": 15
   },
   "Rguv": {
    "type": "upgrade",
    "name": "Знак ночного зрения",
+   "levels": 1,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
-   "levels": 1,
    "time": 60,
    "time_per_level": 15
   },
   "Rhme": {
    "type": "upgrade",
    "name": "Мифриловые мечи — уровень 1",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 550,
    "lumber": 450,
    "lumber_per_level": 900,
-   "levels": 6,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "Rnam": {
    "type": "upgrade",
    "name": "Коралловая чешуя — уровень 1",
+   "levels": 6,
    "gold": 800,
    "gold_per_level": 1300,
    "lumber": 600,
    "lumber_per_level": 1200,
-   "levels": 6,
    "time": 60,
    "time_per_level": 15
   },
   "Rnat": {
    "type": "upgrade",
    "name": "Коралловые клинки — уровень 1",
+   "levels": 6,
    "gold": 800,
    "gold_per_level": 1300,
    "lumber": 600,
    "lumber_per_level": 1200,
-   "levels": 6,
    "time": 60,
    "time_per_level": 15
   },
   "Rnen": {
    "type": "upgrade",
    "name": "Опутывание",
+   "levels": 1,
    "gold": 340,
    "lumber": 230,
-   "levels": 1,
    "time": 40
   },
   "Rnsb": {
    "type": "upgrade",
    "name": "Погружение",
+   "levels": 1,
    "gold": 240,
    "lumber": 320,
-   "levels": 1,
    "time": 20
   },
   "Rnsi": {
    "type": "upgrade",
    "name": "Коралловая магия — уровень 1",
+   "levels": 2,
    "gold": 450,
    "gold_per_level": 430,
    "lumber": 430,
    "lumber_per_level": 340,
-   "levels": 2,
+   "time": 45,
    "requires": [
     "h0JX"
-   ],
-   "time": 45
+   ]
   },
   "Rnsw": {
    "type": "upgrade",
    "name": "Силы стихий — уровень 1",
+   "levels": 2,
    "gold": 450,
    "gold_per_level": 400,
    "lumber": 430,
    "lumber_per_level": 300,
-   "levels": 2,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "h0JX"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "Roar": {
    "type": "upgrade",
    "name": "Улучшенная броня — уровень 1",
+   "levels": 6,
    "gold": 600,
    "gold_per_level": 700,
    "lumber": 450,
    "lumber_per_level": 900,
-   "levels": 6,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "ostr"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "Robf": {
    "type": "upgrade",
    "name": "Горючая смесь",
+   "levels": 1,
    "gold": 50,
    "lumber": 150,
-   "levels": 1,
+   "time": 30,
    "requires": [
     "ofrt"
-   ],
-   "time": 30
+   ]
   },
   "Robk": {
    "type": "upgrade",
    "name": "Улучшение до берсерка",
+   "levels": 1,
    "gold": 75,
    "lumber": 175,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "ofrt",
     "ofor"
-   ],
-   "time": 40
+   ]
   },
   "Robs": {
    "type": "upgrade",
    "name": "Грубая сила",
+   "levels": 1,
    "gold": 50,
    "lumber": 150,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "ostr"
-   ],
-   "time": 40
+   ]
   },
   "Roen": {
    "type": "upgrade",
    "name": "Опутывание",
+   "levels": 1,
    "gold": 50,
    "lumber": 75,
-   "levels": 1,
    "time": 40
   },
   "Rolf": {
    "type": "upgrade",
    "name": "Жидкий огонь",
+   "levels": 1,
    "gold": 75,
    "lumber": 125,
-   "levels": 1,
+   "time": 75,
    "requires": [
     "ofrt",
     "ovln"
-   ],
-   "time": 75
+   ]
   },
   "Rome": {
    "type": "upgrade",
    "name": "Оружие ближнего боя — уровень 1",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 700,
    "lumber": 450,
    "lumber_per_level": 900,
-   "levels": 6,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "ostr"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "Ropg": {
    "type": "upgrade",
    "name": "Грабеж",
+   "levels": 1,
    "gold": 75,
    "lumber": 25,
-   "levels": 1,
    "time": 45
   },
   "Ropm": {
    "type": "upgrade",
    "name": "Рюкзак",
+   "levels": 1,
    "gold": 50,
    "lumber": 25,
-   "levels": 1,
    "time": 20
   },
   "Rora": {
    "type": "upgrade",
    "name": "Оружие дальнего боя — уровень 1",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 700,
    "lumber": 450,
    "lumber_per_level": 900,
-   "levels": 6,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "ostr"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "Rorb": {
    "type": "upgrade",
    "name": "Укрепленные стены",
+   "levels": 1,
    "gold": 450,
    "lumber": 175,
-   "levels": 1,
+   "time": 60,
    "requires": [
     "ostr"
-   ],
-   "time": 60
+   ]
   },
   "Rosp": {
    "type": "upgrade",
    "name": "Шипастые укрепления — уровень 1",
+   "levels": 2,
    "gold": 450,
    "gold_per_level": 600,
    "lumber": 300,
    "lumber_per_level": 600,
-   "levels": 2,
+   "time": 60,
+   "time_per_level": 15,
    "requires": [
     "ostr"
-   ],
-   "time": 60,
-   "time_per_level": 15
+   ]
   },
   "Rost": {
    "type": "upgrade",
    "name": "Обучение магов поддержки — ступень 1",
+   "levels": 3,
    "gold": 250,
    "gold_per_level": 350,
    "lumber": 200,
    "lumber_per_level": 300,
-   "levels": 3,
+   "time": 60,
    "requires": [
     "ofrt"
-   ],
-   "time": 60
+   ]
   },
   "Rotr": {
    "type": "upgrade",
    "name": "Регенерация троллей",
+   "levels": 1,
    "gold": 100,
    "lumber": 100,
-   "levels": 1,
+   "time": 35,
    "requires": [
     "ostr",
     "ofor"
-   ],
-   "time": 35
+   ]
   },
   "Rowd": {
    "type": "upgrade",
    "name": "Обучение специализированных магов — ступень 1",
+   "levels": 3,
    "gold": 250,
    "gold_per_level": 350,
    "lumber": 200,
    "lumber_per_level": 300,
-   "levels": 3,
+   "time": 60,
    "requires": [
     "ofrt"
-   ],
-   "time": 60
+   ]
   },
   "Rows": {
    "type": "upgrade",
    "name": "Увеличение урона от «Сокрушения»",
+   "levels": 1,
    "gold": 100,
    "lumber": 175,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "ofor",
     "ofrt"
-   ],
-   "time": 40
+   ]
   },
   "Rowt": {
    "type": "upgrade",
    "name": "Обучение боевых магов — ступень 1",
+   "levels": 3,
    "gold": 250,
    "gold_per_level": 350,
    "lumber": 200,
    "lumber_per_level": 300,
-   "levels": 3,
+   "time": 50,
+   "time_per_level": 10,
    "requires": [
     "R0E7"
-   ],
-   "time": 50,
-   "time_per_level": 10
-  },
-  "Rugf": {
-   "type": "upgrade",
-   "name": "",
-   "only_required": true,
-   "gold": 100,
-   "lumber": 150,
-   "levels": 1,
-   "requires": [
-    "ugrv",
-    "unp2"
-   ],
-   "time": 50
+   ]
   },
   "Rwdm": {
    "type": "upgrade",
    "name": "Бонус к урону от «Боевых барабанов»",
+   "levels": 1,
    "gold": 100,
    "lumber": 150,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "ofrt",
     "ofor"
-   ],
-   "time": 40
+   ]
   },
   "S00A": {
    "type": "unknown",
@@ -2053,45 +2032,45 @@
    "type": "hero",
    "name": "Вождь Клана",
    "base": "Obla",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "Z",
+   "lumber": 100,
+   "food": 1,
    "hp": 500,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "Z"
   },
   "W201": {
    "type": "hero",
    "name": "Сумеречный маг",
    "base": "Obla",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "C",
+   "lumber": 100,
+   "food": 1,
    "hp": 325,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "C"
   },
   "W202": {
    "type": "hero",
    "name": "Предводитель троллей",
    "base": "Obla",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "X",
+   "lumber": 100,
+   "food": 1,
    "hp": 250,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "X"
   },
   "W203": {
    "type": "hero",
    "name": "Мэйм Блэкхенд",
    "base": "Obla",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "X",
+   "lumber": 100,
+   "food": 1,
    "hp": 250,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "X"
   },
   "drAq": {
    "type": "unknown",
@@ -2101,12 +2080,12 @@
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 140,
-   "food_made": 100,
    "gold": 4500,
-   "hotkey": "Z",
-   "hp": 1700,
    "lumber": 4500,
+   "food_made": 100,
+   "hp": 1700,
+   "time": 140,
+   "hotkey": "Z",
    "requires": [
     "R0GB"
    ]
@@ -2115,183 +2094,183 @@
    "type": "unit",
    "name": "Маг телепортации",
    "base": "hmpr",
-   "time": 28,
    "gold": 5000,
-   "hotkey": "R",
+   "lumber": 5000,
    "hp": 1000,
-   "lumber": 5000
+   "time": 28,
+   "hotkey": "R"
   },
   "h0CY": {
    "type": "unit",
    "name": "Железная звезда",
    "base": "hmtt",
-   "time": 35,
    "gold": 260,
-   "hotkey": "E",
+   "lumber": 200,
    "hp": 300,
-   "lumber": 200
+   "time": 35,
+   "hotkey": "E"
   },
   "h0D4": {
    "type": "unit",
    "name": "Транспорт",
    "base": "hbot",
-   "time": 22,
    "gold": 250,
-   "hotkey": "Q",
+   "lumber": 200,
    "hp": 750,
-   "lumber": 200
+   "time": 22,
+   "hotkey": "Q"
   },
   "h0D5": {
    "type": "unit",
    "name": "Дредноут",
    "base": "hbsh",
-   "time": 50,
    "gold": 850,
-   "hotkey": "E",
+   "lumber": 1000,
    "hp": 1500,
-   "lumber": 1000
+   "time": 50,
+   "hotkey": "E"
   },
   "h0D6": {
    "type": "unit",
    "name": "Фрегат",
    "base": "hdes",
-   "time": 30,
    "gold": 450,
-   "hotkey": "W",
+   "lumber": 475,
    "hp": 800,
-   "lumber": 475
+   "time": 30,
+   "hotkey": "W"
   },
   "h0DV": {
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 240,
-   "food_made": 100,
    "gold": 4000,
-   "hotkey": "Z",
+   "lumber": 4000,
+   "food_made": 100,
    "hp": 2000,
-   "lumber": 4000
+   "time": 240,
+   "hotkey": "Z"
   },
   "h0HK": {
    "type": "unit",
    "name": "Тяжелый корабль Орды",
    "base": "hbsh",
-   "time": 50,
    "gold": 850,
-   "hotkey": "E",
+   "lumber": 1000,
    "hp": 1200,
-   "lumber": 1000
+   "time": 50,
+   "hotkey": "E"
   },
   "h0HM": {
    "type": "unit",
    "name": "Броненосец",
    "base": "hbsh",
-   "time": 50,
    "gold": 850,
-   "hotkey": "E",
+   "lumber": 1000,
    "hp": 1300,
-   "lumber": 1000
+   "time": 50,
+   "hotkey": "E"
   },
   "h0HN": {
    "type": "unit",
    "name": "Легкий корабль Орды",
    "base": "hdes",
-   "time": 30,
    "gold": 450,
-   "hotkey": "W",
+   "lumber": 450,
    "hp": 600,
-   "lumber": 450
+   "time": 30,
+   "hotkey": "W"
   },
   "h0HO": {
    "type": "building",
    "name": "Верфь",
    "base": "hshy",
-   "time": 90,
    "gold": 500,
-   "hotkey": "C",
+   "lumber": 700,
    "hp": 2000,
-   "lumber": 700
+   "time": 90,
+   "hotkey": "C"
   },
   "h0HT": {
    "type": "unit",
    "name": "Фрегат Син'Дорай",
    "base": "hdes",
-   "time": 30,
    "gold": 450,
-   "hotkey": "W",
+   "lumber": 600,
    "hp": 800,
-   "lumber": 600
+   "time": 30,
+   "hotkey": "W"
   },
   "h0I5": {
    "type": "unit",
    "name": "Линкор Отрекшихся",
    "base": "hbsh",
-   "time": 50,
    "gold": 850,
-   "hotkey": "E",
+   "lumber": 1350,
    "hp": 1450,
-   "lumber": 1350
+   "time": 50,
+   "hotkey": "E"
   },
   "h0IH": {
    "type": "unit",
    "name": "Отрекшийся-убийца",
    "base": "hfoo",
-   "time": 36,
    "gold": 210,
-   "hotkey": "S",
+   "lumber": 75,
    "hp": 550,
-   "lumber": 75
+   "time": 36,
+   "hotkey": "S"
   },
   "h0J3": {
    "type": "unit",
    "name": "Фрегат Отррекшихся",
    "base": "hdes",
-   "time": 30,
    "gold": 450,
-   "hotkey": "W",
+   "lumber": 600,
    "hp": 750,
-   "lumber": 600
+   "time": 30,
+   "hotkey": "W"
   },
   "h0J4": {
    "type": "unit",
    "name": "Гордость Зандалара",
    "base": "hdes",
-   "time": 30,
    "gold": 450,
-   "hotkey": "W",
+   "lumber": 600,
    "hp": 750,
-   "lumber": 600
+   "time": 30,
+   "hotkey": "W"
   },
   "h0JB": {
    "type": "unit",
    "name": "Судно Гоблинов",
    "base": "hdes",
-   "time": 30,
    "gold": 450,
-   "hotkey": "W",
+   "lumber": 600,
    "hp": 750,
-   "lumber": 600
+   "time": 30,
+   "hotkey": "W"
   },
   "h0JW": {
    "type": "building",
    "name": "Коралловая кузница",
    "base": "hbla",
-   "time": 70,
    "gold": 140,
-   "hotkey": "E",
+   "lumber": 40,
    "hp": 1500,
-   "lumber": 40
+   "time": 70,
+   "hotkey": "E"
   },
   "h0JX": {
    "type": "building",
    "name": "Храм Бездны",
    "base": "hkee",
-   "time": 140,
-   "food_made": 100,
    "gold": 4500,
-   "hotkey": "Z",
-   "hp": 2000,
    "lumber": 4500,
+   "food_made": 100,
+   "hp": 2000,
+   "time": 140,
+   "hotkey": "Z",
    "requires": [
     "nnad",
     "h0JW"
@@ -2301,12 +2280,12 @@
    "type": "building",
    "name": "Коралловый храм",
    "base": "hcas",
-   "time": 140,
-   "food_made": 150,
    "gold": 12000,
-   "hotkey": "Z",
-   "hp": 2500,
    "lumber": 12000,
+   "food_made": 150,
+   "hp": 2500,
+   "time": 140,
+   "hotkey": "Z",
    "requires": [
     "nnad",
     "h0JW"
@@ -2316,12 +2295,12 @@
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 140,
-   "food_made": 150,
    "gold": 12000,
-   "hotkey": "Z",
-   "hp": 2500,
    "lumber": 12000,
+   "food_made": 150,
+   "hp": 2500,
+   "time": 140,
+   "hotkey": "Z",
    "requires": [
     "halt"
    ]
@@ -2330,31 +2309,31 @@
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 140,
-   "food_made": 100,
    "gold": 4500,
-   "hotkey": "Z",
+   "lumber": 4500,
+   "food_made": 100,
    "hp": 2000,
-   "lumber": 4500
+   "time": 140,
+   "hotkey": "Z"
   },
   "n04J": {
    "type": "unit",
    "name": "СПОСОБНОСТЬ: Прокладывает подземный проход между двумя туннелями нерубов, позволяя мгновенно перебрасывать войска между ними.",
    "base": "nadr",
-   "time": 100,
-   "hotkey": "D",
+   "lumber": 200,
    "hp": 450,
-   "lumber": 200
+   "time": 100,
+   "hotkey": "D"
   },
   "n04L": {
    "type": "building",
    "name": "Змеиное логово",
    "base": "nnsg",
-   "time": 60,
    "gold": 450,
-   "hotkey": "X",
-   "hp": 1500,
    "lumber": 300,
+   "hp": 1500,
+   "time": 60,
+   "hotkey": "X",
    "requires": [
     "h0JY",
     "h0JW"
@@ -2364,21 +2343,21 @@
    "type": "unit",
    "name": "Воин волн",
    "base": "nmtw",
-   "time": 20,
    "gold": 100,
-   "hotkey": "Q",
+   "lumber": 35,
    "hp": 400,
-   "lumber": 35
+   "time": 20,
+   "hotkey": "Q"
   },
   "n050": {
    "type": "unit",
    "name": "Мурлок-мутант",
    "base": "nmfs",
-   "time": 54,
    "gold": 385,
-   "hotkey": "Q",
-   "hp": 800,
    "lumber": 130,
+   "hp": 800,
+   "time": 54,
+   "hotkey": "Q",
    "requires": [
     "h0JY"
    ]
@@ -2387,11 +2366,11 @@
    "type": "unit",
    "name": "Глубинный житель",
    "base": "nnsw",
-   "time": 28,
    "gold": 230,
-   "hotkey": "Q",
-   "hp": 650,
    "lumber": 130,
+   "hp": 650,
+   "time": 28,
+   "hotkey": "Q",
    "requires": [
     "R0FE",
     "h0JX"
@@ -2401,11 +2380,11 @@
    "type": "unit",
    "name": "Мурлок-охотник",
    "base": "nmrr",
-   "time": 48,
    "gold": 285,
-   "hotkey": "E",
-   "hp": 770,
    "lumber": 95,
+   "hp": 770,
+   "time": 48,
+   "hotkey": "E",
    "requires": [
     "h0JX"
    ]
@@ -2414,11 +2393,11 @@
    "type": "unit",
    "name": "Мурлок-чернокнижник",
    "base": "nmsc",
-   "time": 40,
    "gold": 365,
-   "hotkey": "Q",
-   "hp": 525,
    "lumber": 120,
+   "hp": 525,
+   "time": 40,
+   "hotkey": "Q",
    "requires": [
     "h0JX"
    ]
@@ -2427,11 +2406,11 @@
    "type": "unit",
    "name": "Мурлок-шаман",
    "base": "nmsc",
-   "time": 43,
    "gold": 295,
-   "hotkey": "W",
-   "hp": 500,
    "lumber": 100,
+   "hp": 500,
+   "time": 43,
+   "hotkey": "W",
    "requires": [
     "h0JX"
    ]
@@ -2440,11 +2419,11 @@
    "type": "building",
    "name": "Морские врата",
    "base": "nnsg",
-   "time": 60,
    "gold": 450,
-   "hotkey": "D",
-   "hp": 1500,
    "lumber": 300,
+   "hp": 1500,
+   "time": 60,
+   "hotkey": "D",
    "requires": [
     "h0JY",
     "h0JW"
@@ -2454,11 +2433,11 @@
    "type": "unit",
    "name": "Морской охотник",
    "base": "nsgh",
-   "time": 52,
    "gold": 340,
-   "hotkey": "E",
-   "hp": 1000,
    "lumber": 115,
+   "hp": 1000,
+   "time": 52,
+   "hotkey": "E",
    "requires": [
     "h0JY"
    ]
@@ -2467,11 +2446,11 @@
    "type": "unit",
    "name": "Морской змей",
    "base": "nsgh",
-   "time": 50,
    "gold": 250,
-   "hotkey": "Q",
-   "hp": 1250,
    "lumber": 150,
+   "hp": 1250,
+   "time": 50,
+   "hotkey": "Q",
    "requires": [
     "h0JY"
    ]
@@ -2479,11 +2458,11 @@
   "nhyc": {
    "type": "unit",
    "name": "Драконья черепаха",
-   "time": 55,
    "gold": 330,
-   "hotkey": "R",
-   "hp": 750,
    "lumber": 110,
+   "hp": 750,
+   "time": 55,
+   "hotkey": "R",
    "requires": [
     "h0JX"
    ]
@@ -2491,79 +2470,79 @@
   "nmpe": {
    "type": "unit",
    "name": "Раб мурлоков",
-   "time": 15,
    "gold": 75,
-   "hotkey": "Q",
-   "hp": 250
+   "hp": 250,
+   "time": 15,
+   "hotkey": "Q"
   },
   "nmyr": {
    "type": "unit",
    "name": "Мирмидон",
-   "time": 49,
-   "equivalents": [
-    "nmys"
-   ],
    "gold": 320,
-   "hotkey": "E",
-   "hp": 1080,
    "lumber": 110,
+   "hp": 1080,
+   "time": 49,
+   "hotkey": "E",
    "requires": [
     "R0FE",
     "h0JX"
+   ],
+   "equivalents": [
+    "nmys"
    ]
   },
   "nnad": {
    "type": "building",
    "name": "Алтарь глубин",
-   "time": 60,
-   "food_made": 3,
    "gold": 255,
-   "hotkey": "S",
+   "lumber": 100,
+   "food_made": 3,
    "hp": 900,
-   "lumber": 100
+   "time": 60,
+   "hotkey": "S"
   },
   "nnfm": {
    "type": "building",
    "name": "Коралловый риф",
-   "time": 45,
-   "food_made": 40,
    "gold": 300,
-   "hotkey": "A",
+   "lumber": 150,
+   "food_made": 40,
    "hp": 500,
-   "lumber": 150
+   "time": 45,
+   "hotkey": "A"
   },
   "nnmg": {
    "type": "unit",
    "name": "Мурлок-налётчик",
-   "time": 21,
    "gold": 130,
-   "hotkey": "W",
-   "hp": 400
+   "hp": 400,
+   "time": 21,
+   "hotkey": "W"
   },
   "nnrg": {
    "type": "unit",
    "name": "Страж нагов",
-   "time": 62,
-   "equivalents": [
-    "nnrs"
-   ],
    "gold": 490,
-   "hotkey": "Q",
-   "hp": 1100,
    "lumber": 175,
+   "hp": 1100,
+   "time": 62,
+   "hotkey": "Q",
    "requires": [
     "R0FE",
     "h0JY"
+   ],
+   "equivalents": [
+    "nnrs"
    ]
   },
   "nnsa": {
    "type": "building",
    "name": "Святилище Азшары",
-   "time": 70,
    "gold": 320,
-   "hotkey": "R",
-   "hp": 1050,
    "lumber": 70,
+   "hp": 1050,
+   "time": 70,
+   "hotkey": "R",
    "requires": [
     "h0JX"
    ]
@@ -2571,20 +2550,20 @@
   "nnsg": {
    "type": "building",
    "name": "Нерестилище",
-   "time": 60,
    "gold": 370,
-   "hotkey": "W",
+   "lumber": 200,
    "hp": 1500,
-   "lumber": 200
+   "time": 60,
+   "hotkey": "W"
   },
   "nnsw": {
    "type": "unit",
    "name": "Сирена",
-   "time": 41,
    "gold": 280,
-   "hotkey": "W",
-   "hp": 550,
    "lumber": 95,
+   "hp": 550,
+   "time": 41,
+   "hotkey": "W",
    "requires": [
     "R0FE",
     "h0JX"
@@ -2593,75 +2572,75 @@
   "nntg": {
    "type": "building",
    "name": "Защитник приливов",
-   "time": 45,
    "gold": 130,
-   "hotkey": "Z",
+   "lumber": 80,
    "hp": 500,
-   "lumber": 80
+   "time": 45,
+   "hotkey": "Z"
   },
   "nntt": {
    "type": "building",
    "name": "Храм Глубин",
-   "time": 140,
-   "food_made": 100,
    "gold": 385,
-   "hotkey": "Q",
+   "lumber": 150,
+   "food_made": 100,
    "hp": 1500,
-   "lumber": 150
+   "time": 140,
+   "hotkey": "Q"
   },
   "nsnp": {
    "type": "unit",
    "name": "Морской василиск",
-   "time": 29,
-   "equivalents": [
-    "nsbs"
-   ],
    "gold": 195,
-   "hotkey": "W",
-   "hp": 500,
    "lumber": 65,
+   "hp": 500,
+   "time": 29,
+   "hotkey": "W",
    "requires": [
     "h0JW"
+   ],
+   "equivalents": [
+    "nsbs"
    ]
   },
   "nwgs": {
    "type": "unit",
    "name": "Коатль",
-   "time": 36,
    "gold": 235,
-   "hotkey": "W",
+   "lumber": 80,
    "hp": 600,
-   "lumber": 80
+   "time": 36,
+   "hotkey": "W"
   },
   "o01J": {
    "type": "unit",
    "name": "Шаман",
    "base": "oshm",
-   "time": 30,
    "gold": 185,
-   "hotkey": "Q",
+   "lumber": 20,
    "hp": 375,
-   "lumber": 20
+   "time": 30,
+   "hotkey": "Q"
   },
   "o01K": {
    "type": "unit",
    "name": "Огр-маг",
    "base": "oshm",
-   "time": 30,
    "gold": 185,
-   "hotkey": "Q",
+   "lumber": 20,
    "hp": 650,
-   "lumber": 20
+   "time": 30,
+   "hotkey": "Q"
   },
   "o01L": {
    "type": "unit",
    "name": "Таурен-воитель",
    "base": "otau",
-   "time": 39,
    "gold": 400,
-   "hotkey": "R",
-   "hp": 1600,
    "lumber": 100,
+   "hp": 1600,
+   "time": 39,
+   "hotkey": "R",
    "requires": [
     "ofrt"
    ]
@@ -2670,11 +2649,11 @@
    "type": "unit",
    "name": "Основной воин Орды",
    "base": "ogru",
-   "time": 38,
    "gold": 250,
-   "hotkey": "W",
-   "hp": 900,
    "lumber": 85,
+   "hp": 900,
+   "time": 38,
+   "hotkey": "W",
    "requires": [
     "ostr"
    ]
@@ -2683,11 +2662,11 @@
    "type": "unit",
    "name": "Основной стрелок Орды",
    "base": "otbk",
-   "time": 29,
    "gold": 190,
-   "hotkey": "W",
-   "hp": 475,
    "lumber": 65,
+   "hp": 475,
+   "time": 29,
+   "hotkey": "W",
    "requires": [
     "ostr"
    ]
@@ -2696,11 +2675,11 @@
    "type": "unit",
    "name": "Разрушитель",
    "base": "ocat",
-   "time": 40,
    "gold": 200,
-   "hotkey": "Q",
-   "hp": 425,
    "lumber": 50,
+   "hp": 425,
+   "time": 40,
+   "hotkey": "Q",
    "requires": [
     "ofor",
     "ostr"
@@ -2710,21 +2689,21 @@
    "type": "unit",
    "name": "Темный шаман",
    "base": "oshm",
-   "time": 30,
    "gold": 200,
-   "hotkey": "Q",
+   "lumber": 20,
    "hp": 450,
-   "lumber": 20
+   "time": 30,
+   "hotkey": "Q"
   },
   "o01W": {
    "type": "unit",
    "name": "Маг Орды (Урон)",
    "base": "oshm",
-   "time": 30,
    "gold": 200,
-   "hotkey": "W",
-   "hp": 350,
    "lumber": 70,
+   "hp": 350,
+   "time": 30,
+   "hotkey": "W",
    "requires": [
     "R0E7"
    ]
@@ -2733,11 +2712,11 @@
    "type": "unit",
    "name": "Железный Разрушитель",
    "base": "ocat",
-   "time": 40,
    "gold": 200,
-   "hotkey": "Q",
-   "hp": 525,
    "lumber": 65,
+   "hp": 525,
+   "time": 40,
+   "hotkey": "Q",
    "requires": [
     "ofor",
     "ostr"
@@ -2747,11 +2726,11 @@
    "type": "unit",
    "name": "Техника Орды",
    "base": "ocat",
-   "time": 53,
    "gold": 350,
-   "hotkey": "W",
-   "hp": 425,
    "lumber": 120,
+   "hp": 425,
+   "time": 53,
+   "hotkey": "W",
    "requires": [
     "R0E8",
     "ofor",
@@ -2762,51 +2741,51 @@
    "type": "unit",
    "name": "Магистр",
    "base": "oshm",
-   "time": 30,
    "gold": 200,
-   "hotkey": "Q",
+   "lumber": 20,
    "hp": 310,
-   "lumber": 20
+   "time": 30,
+   "hotkey": "Q"
   },
   "o024": {
    "type": "unit",
    "name": "Знахарь",
    "base": "odoc",
-   "time": 30,
    "gold": 210,
-   "hotkey": "E",
+   "lumber": 25,
    "hp": 350,
-   "lumber": 25
+   "time": 30,
+   "hotkey": "E"
   },
   "o025": {
    "type": "unit",
    "name": "Ведьмак",
    "base": "odoc",
-   "time": 30,
    "gold": 210,
-   "hotkey": "E",
+   "lumber": 25,
    "hp": 650,
-   "lumber": 25
+   "time": 30,
+   "hotkey": "E"
   },
   "o026": {
    "type": "unit",
    "name": "Арканитовый страж",
    "base": "ocat",
-   "time": 40,
    "gold": 350,
-   "hotkey": "W",
+   "lumber": 50,
    "hp": 800,
-   "lumber": 50
+   "time": 40,
+   "hotkey": "W"
   },
   "o028": {
    "type": "unit",
    "name": "Гоблинский уничтожитель-3000",
    "base": "ocat",
-   "time": 40,
    "gold": 350,
-   "hotkey": "W",
-   "hp": 1200,
    "lumber": 50,
+   "hp": 1200,
+   "time": 40,
+   "hotkey": "W",
    "requires": [
     "ofor",
     "ostr"
@@ -2816,51 +2795,51 @@
    "type": "unit",
    "name": "Основной воин Орды",
    "base": "ogru",
-   "time": 45,
    "gold": 300,
-   "hotkey": "W",
+   "lumber": 100,
    "hp": 900,
-   "lumber": 100
+   "time": 45,
+   "hotkey": "W"
   },
   "o02B": {
    "type": "unit",
    "name": "Основной стрелок Орды",
    "base": "otbk",
-   "time": 33,
    "gold": 220,
-   "hotkey": "W",
+   "lumber": 75,
    "hp": 475,
-   "lumber": 75
+   "time": 33,
+   "hotkey": "W"
   },
   "o02G": {
    "type": "unit",
    "name": "Колдун",
    "base": "oshm",
-   "time": 30,
    "gold": 185,
-   "hotkey": "Q",
+   "lumber": 20,
    "hp": 350,
-   "lumber": 20
+   "time": 30,
+   "hotkey": "Q"
   },
   "o02I": {
    "type": "unit",
    "name": "Медик",
    "base": "odoc",
-   "time": 30,
    "gold": 145,
-   "hotkey": "E",
+   "lumber": 25,
    "hp": 350,
-   "lumber": 25
+   "time": 30,
+   "hotkey": "E"
   },
   "o02K": {
    "type": "unit",
    "name": "Баллиста",
    "base": "ocat",
-   "time": 40,
    "gold": 200,
-   "hotkey": "Q",
-   "hp": 425,
    "lumber": 50,
+   "hp": 425,
+   "time": 40,
+   "hotkey": "Q",
    "requires": [
     "ofor",
     "ostr"
@@ -2870,31 +2849,31 @@
    "type": "unit",
    "name": "Темный маг",
    "base": "odoc",
-   "time": 30,
    "gold": 210,
-   "hotkey": "E",
+   "lumber": 25,
    "hp": 385,
-   "lumber": 25
+   "time": 30,
+   "hotkey": "E"
   },
   "o02U": {
    "type": "unit",
    "name": "Зачарователь",
    "base": "oshm",
-   "time": 30,
    "gold": 185,
-   "hotkey": "Q",
+   "lumber": 20,
    "hp": 420,
-   "lumber": 20
+   "time": 30,
+   "hotkey": "Q"
   },
   "o032": {
    "type": "unit",
    "name": "Тен Тотем",
    "base": "otau",
-   "time": 39,
    "gold": 400,
-   "hotkey": "R",
-   "hp": 1650,
    "lumber": 100,
+   "hp": 1650,
+   "time": 39,
+   "hotkey": "R",
    "requires": [
     "ofrt"
    ]
@@ -2903,51 +2882,51 @@
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 135,
-   "food_made": 100,
    "gold": 4500,
-   "hotkey": "Z",
+   "lumber": 4500,
+   "food_made": 100,
    "hp": 2500,
-   "lumber": 4500
+   "time": 135,
+   "hotkey": "Z"
   },
   "o03E": {
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 135,
-   "food_made": 150,
    "gold": 12000,
-   "hotkey": "Z",
+   "lumber": 12000,
+   "food_made": 150,
    "hp": 3000,
-   "lumber": 12000
+   "time": 135,
+   "hotkey": "Z"
   },
   "oalt": {
    "type": "building",
    "name": "Алтарь бури",
-   "time": 60,
-   "food_made": 3,
    "gold": 180,
-   "hotkey": "S",
+   "lumber": 50,
+   "food_made": 3,
    "hp": 900,
-   "lumber": 50
+   "time": 60,
+   "hotkey": "S"
   },
   "obar": {
    "type": "building",
    "name": "Казармы",
-   "time": 60,
    "gold": 335,
-   "hotkey": "W",
+   "lumber": 50,
    "hp": 1200,
-   "lumber": 50
+   "time": 60,
+   "hotkey": "W"
   },
   "obea": {
    "type": "building",
    "name": "Стрельбище",
-   "time": 60,
    "gold": 335,
-   "hotkey": "R",
+   "lumber": 140,
    "hp": 1100,
-   "lumber": 140
+   "time": 60,
+   "hotkey": "R"
   },
   "obla": {
    "type": "unknown",
@@ -2956,11 +2935,11 @@
   "ocat": {
    "type": "unit",
    "name": "Осадная машина Орды",
-   "time": 30,
    "gold": 200,
-   "hotkey": "Q",
-   "hp": 425,
    "lumber": 70,
+   "hp": 425,
+   "time": 30,
+   "hotkey": "Q",
    "requires": [
     "ofor",
     "ostr"
@@ -2969,71 +2948,71 @@
   "odoc": {
    "type": "unit",
    "name": "Маг Орды (специализированный)",
-   "time": 32,
    "gold": 210,
-   "hotkey": "E",
+   "lumber": 70,
    "hp": 315,
-   "lumber": 70
+   "time": 32,
+   "hotkey": "E"
   },
   "ofor": {
    "type": "building",
    "name": "Лесопилка",
-   "time": 70,
    "gold": 205,
-   "hotkey": "E",
-   "hp": 1000
+   "hp": 1000,
+   "time": 70,
+   "hotkey": "E"
   },
   "ofrt": {
    "type": "building",
    "name": "Цитадель",
-   "time": 140,
-   "food_made": 150,
    "gold": 12000,
-   "hotkey": "Z",
+   "lumber": 12000,
+   "food_made": 150,
    "hp": 2500,
-   "lumber": 12000
+   "time": 140,
+   "hotkey": "Z"
   },
   "ogre": {
    "type": "building",
    "name": "Дом вождей",
-   "time": 135,
-   "food_made": 50,
    "gold": 385,
-   "hotkey": "Q",
+   "lumber": 185,
+   "food_made": 50,
    "hp": 1500,
-   "lumber": 185
+   "time": 135,
+   "hotkey": "Q"
   },
   "ogru": {
    "type": "unit",
    "name": "Рядовой воин Орды",
-   "time": 30,
    "gold": 200,
-   "hotkey": "Q",
-   "hp": 700
+   "hp": 700,
+   "time": 30,
+   "hotkey": "Q"
   },
   "ohun": {
    "type": "unit",
    "name": "Рядовой стрелок Орды",
-   "time": 25,
-   "equivalents": [
-    "otbk"
-   ],
    "gold": 165,
-   "hotkey": "Q",
-   "hp": 375,
    "lumber": 45,
+   "hp": 375,
+   "time": 25,
+   "hotkey": "Q",
    "requires": [
     "ofor"
+   ],
+   "equivalents": [
+    "otbk"
    ]
   },
   "okod": {
    "type": "unit",
    "name": "Элитный стрелок Орды",
-   "time": 50,
    "gold": 335,
-   "hotkey": "E",
-   "hp": 1000,
    "lumber": 115,
+   "hp": 1000,
+   "time": 50,
+   "hotkey": "E",
    "requires": [
     "ofrt"
    ]
@@ -3041,19 +3020,19 @@
   "opeo": {
    "type": "unit",
    "name": "Батрак",
-   "time": 15,
    "gold": 80,
-   "hotkey": "Q",
-   "hp": 250
+   "hp": 250,
+   "time": 15,
+   "hotkey": "Q"
   },
   "orai": {
    "type": "unit",
    "name": "Кавалерия Орды",
-   "time": 32,
    "gold": 210,
-   "hotkey": "E",
-   "hp": 610,
    "lumber": 70,
+   "hp": 610,
+   "time": 32,
+   "hotkey": "E",
    "requires": [
     "ostr"
    ]
@@ -3065,20 +3044,20 @@
   "oshm": {
    "type": "unit",
    "name": "Маг Орды (поддержка)",
-   "time": 28,
    "gold": 185,
-   "hotkey": "Q",
+   "lumber": 50,
    "hp": 350,
-   "lumber": 50
+   "time": 28,
+   "hotkey": "Q"
   },
   "osld": {
    "type": "building",
    "name": "Обитель духов",
-   "time": 70,
    "gold": 400,
-   "hotkey": "D",
-   "hp": 800,
    "lumber": 135,
+   "hp": 800,
+   "time": 70,
+   "hotkey": "D",
    "requires": [
     "ostr"
    ]
@@ -3086,27 +3065,27 @@
   "ospw": {
    "type": "unit",
    "name": "Духостранник",
-   "time": 35,
-   "equivalents": [
-    "ospm"
-   ],
    "gold": 195,
-   "hotkey": "W",
-   "hp": 500,
    "lumber": 35,
+   "hp": 500,
+   "time": 35,
+   "hotkey": "W",
    "requires": [
     "ofrt"
+   ],
+   "equivalents": [
+    "ospm"
    ]
   },
   "ostr": {
    "type": "building",
    "name": "Крепость",
-   "time": 140,
-   "food_made": 100,
    "gold": 4500,
-   "hotkey": "Z",
-   "hp": 2000,
    "lumber": 4500,
+   "food_made": 100,
+   "hp": 2000,
+   "time": 140,
+   "hotkey": "Z",
    "requires": [
     "oalt"
    ]
@@ -3114,11 +3093,11 @@
   "otau": {
    "type": "unit",
    "name": "Элитный воин Орды",
-   "time": 60,
    "gold": 400,
-   "hotkey": "R",
-   "hp": 1300,
    "lumber": 135,
+   "hp": 1300,
+   "time": 60,
+   "hotkey": "R",
    "requires": [
     "ofrt"
    ]
@@ -3126,21 +3105,21 @@
   "otrb": {
    "type": "building",
    "name": "Землянка",
-   "time": 50,
-   "food_made": 40,
    "gold": 300,
-   "hotkey": "A",
+   "lumber": 100,
+   "food_made": 40,
    "hp": 600,
-   "lumber": 100
+   "time": 50,
+   "hotkey": "A"
   },
   "otto": {
    "type": "building",
    "name": "Мастерская",
-   "time": 70,
    "gold": 400,
-   "hotkey": "F",
-   "hp": 900,
    "lumber": 155,
+   "hp": 900,
+   "time": 70,
+   "hotkey": "F",
    "requires": [
     "ostr",
     "ofor"
@@ -3149,60 +3128,60 @@
   "ovln": {
    "type": "building",
    "name": "Посольство Орды",
-   "time": 60,
    "gold": 500,
-   "hotkey": "X",
+   "lumber": 250,
    "hp": 1250,
-   "lumber": 250
+   "time": 60,
+   "hotkey": "X"
   },
   "owtw": {
    "type": "building",
    "name": "Сторожевая башня",
-   "time": 60,
    "gold": 110,
-   "hotkey": "Z",
+   "lumber": 80,
    "hp": 500,
-   "lumber": 80
+   "time": 60,
+   "hotkey": "Z"
   },
   "w200": {
    "type": "unit",
    "name": "Батрак",
    "base": "opeo",
-   "time": 15,
    "gold": 75,
-   "hotkey": "Q",
-   "hp": 250
+   "hp": 250,
+   "time": 15,
+   "hotkey": "Q"
   },
   "w201": {
    "type": "unit",
    "name": "Дирижабль",
    "base": "nzep",
-   "time": 40,
-   "food": 1,
    "gold": 240,
-   "hotkey": "W",
+   "lumber": 80,
+   "food": 1,
    "hp": 650,
-   "lumber": 80
+   "time": 40,
+   "hotkey": "W"
   },
   "w202": {
    "type": "unit",
    "name": "Красный дракон",
    "base": "nrdr",
-   "time": 65,
    "gold": 430,
-   "hotkey": "Q",
+   "lumber": 145,
    "hp": 700,
-   "lumber": 145
+   "time": 65,
+   "hotkey": "Q"
   },
   "w203": {
    "type": "unit",
    "name": "Метатель топоров",
    "base": "nftr",
-   "time": 35,
    "gold": 205,
-   "hotkey": "W",
-   "hp": 400,
    "lumber": 75,
+   "hp": 400,
+   "time": 35,
+   "hotkey": "W",
    "requires": [
     "w214"
    ]
@@ -3211,11 +3190,11 @@
    "type": "unit",
    "name": "Огр-воин",
    "base": "nogr",
-   "time": 50,
    "gold": 320,
-   "hotkey": "E",
-   "hp": 775,
    "lumber": 110,
+   "hp": 775,
+   "time": 50,
+   "hotkey": "E",
    "requires": [
     "w20w"
    ]
@@ -3224,31 +3203,31 @@
    "type": "unit",
    "name": "Огр-маг",
    "base": "nomg",
-   "time": 50,
    "gold": 320,
-   "hotkey": "W",
+   "lumber": 110,
    "hp": 600,
-   "lumber": 110
+   "time": 50,
+   "hotkey": "W"
   },
   "w206": {
    "type": "unit",
    "name": "Подрывной отряд",
    "base": "ngsp",
-   "time": 30,
    "gold": 180,
-   "hotkey": "Q",
+   "lumber": 60,
    "hp": 300,
-   "lumber": 60
+   "time": 30,
+   "hotkey": "Q"
   },
   "w207": {
    "type": "unit",
    "name": "Катапульта",
    "base": "ocat",
-   "time": 35,
    "gold": 220,
-   "hotkey": "E",
-   "hp": 425,
    "lumber": 75,
+   "hp": 425,
+   "time": 35,
+   "hotkey": "E",
    "requires": [
     "w214",
     "w20w"
@@ -3258,21 +3237,21 @@
    "type": "unit",
    "name": "Рубака",
    "base": "ogru",
-   "time": 40,
    "gold": 240,
-   "hotkey": "Q",
+   "lumber": 80,
    "hp": 625,
-   "lumber": 80
+   "time": 40,
+   "hotkey": "Q"
   },
   "w209": {
    "type": "unit",
    "name": "Рыцарь смерти",
    "base": "nsrh",
-   "time": 60,
    "gold": 370,
-   "hotkey": "E",
-   "hp": 450,
    "lumber": 130,
+   "hp": 450,
+   "time": 60,
+   "hotkey": "E",
    "requires": [
     "w20e"
    ]
@@ -3281,23 +3260,23 @@
    "type": "building",
    "name": "Алтарь бури",
    "base": "oalt",
-   "time": 60,
-   "food_made": 3,
    "gold": 180,
-   "hotkey": "S",
+   "lumber": 50,
+   "food_made": 3,
    "hp": 900,
-   "lumber": 50
+   "time": 60,
+   "hotkey": "S"
   },
   "w20e": {
    "type": "building",
    "name": "Цитадель",
    "base": "ofrt",
-   "time": 120,
-   "food_made": 150,
    "gold": 12000,
-   "hotkey": "Z",
-   "hp": 2500,
    "lumber": 12000,
+   "food_made": 150,
+   "hp": 2500,
+   "time": 120,
+   "hotkey": "Z",
    "requires": [
     "w20a"
    ]
@@ -3306,11 +3285,11 @@
    "type": "building",
    "name": "Гоблинская лаборатория",
    "base": "obea",
-   "time": 60,
    "gold": 400,
-   "hotkey": "D",
-   "hp": 1100,
    "lumber": 140,
+   "hp": 1100,
+   "time": 60,
+   "hotkey": "D",
    "requires": [
     "w20w"
    ]
@@ -3319,32 +3298,32 @@
    "type": "building",
    "name": "Дом вождей",
    "base": "ogre",
-   "time": 120,
-   "food_made": 50,
    "gold": 385,
-   "hotkey": "Q",
+   "lumber": 185,
+   "food_made": 50,
    "hp": 1500,
-   "lumber": 185
+   "time": 120,
+   "hotkey": "Q"
   },
   "w20r": {
    "type": "building",
    "name": "Казармы",
    "base": "obar",
-   "time": 60,
    "gold": 400,
-   "hotkey": "W",
+   "lumber": 50,
    "hp": 1200,
-   "lumber": 50
+   "time": 60,
+   "hotkey": "W"
   },
   "w20t": {
    "type": "building",
    "name": "Тёмный храм",
    "base": "obea",
-   "time": 60,
    "gold": 400,
-   "hotkey": "R",
-   "hp": 1100,
    "lumber": 140,
+   "hp": 1100,
+   "time": 60,
+   "hotkey": "R",
    "requires": [
     "w20w"
    ]
@@ -3353,11 +3332,11 @@
    "type": "building",
    "name": "Сторожевая башня",
    "base": "owtw",
-   "time": 60,
    "gold": 110,
-   "hotkey": "Z",
-   "hp": 500,
    "lumber": 80,
+   "hp": 500,
+   "time": 60,
+   "hotkey": "Z",
    "requires": [
     "w214"
    ]
@@ -3366,33 +3345,33 @@
    "type": "building",
    "name": "Крепость",
    "base": "ostr",
-   "time": 140,
-   "food_made": 100,
    "gold": 4500,
-   "hotkey": "Z",
+   "lumber": 4500,
+   "food_made": 100,
    "hp": 2000,
-   "lumber": 4500
+   "time": 140,
+   "hotkey": "Z"
   },
   "w20y": {
    "type": "building",
    "name": "Свиноферма",
    "base": "npgf",
-   "time": 45,
-   "food_made": 40,
    "gold": 300,
-   "hotkey": "A",
+   "lumber": 100,
+   "food_made": 40,
    "hp": 500,
-   "lumber": 100
+   "time": 45,
+   "hotkey": "A"
   },
   "w210": {
    "type": "building",
    "name": "Логово красных драконов",
    "base": "obea",
-   "time": 60,
    "gold": 600,
-   "hotkey": "F",
-   "hp": 1100,
    "lumber": 140,
+   "hp": 1100,
+   "time": 60,
+   "hotkey": "F",
    "requires": [
     "w20e"
    ]
@@ -3401,21 +3380,21 @@
    "type": "unit",
    "name": "Жрец",
    "base": "nfsh",
-   "time": 70,
    "gold": 425,
-   "hotkey": "Q",
+   "lumber": 145,
    "hp": 400,
-   "lumber": 145
+   "time": 70,
+   "hotkey": "Q"
   },
   "w212": {
    "type": "building",
    "name": "Логово черных драконов",
    "base": "obea",
-   "time": 60,
    "gold": 145,
-   "hotkey": "F",
-   "hp": 1100,
    "lumber": 140,
+   "hp": 1100,
+   "time": 60,
+   "hotkey": "F",
    "requires": [
     "w20e"
    ]
@@ -3424,58 +3403,58 @@
    "type": "unit",
    "name": "Черный дракон",
    "base": "nrdr",
-   "time": 60,
    "gold": 350,
-   "hotkey": "Q",
+   "lumber": 80,
    "hp": 950,
-   "lumber": 80
+   "time": 60,
+   "hotkey": "Q"
   },
   "w214": {
    "type": "building",
    "name": "Лесопилка",
    "base": "ofor",
-   "time": 70,
    "gold": 205,
-   "hotkey": "E",
-   "hp": 1000
+   "hp": 1000,
+   "time": 70,
+   "hotkey": "E"
   },
   "w216": {
    "type": "unit",
    "name": "Взрывная руна",
    "base": "oeye",
-   "time": 1,
-   "hp": 100
+   "hp": 100,
+   "time": 1
   },
   "w218": {
    "type": "building",
    "name": "Верфь",
    "base": "hshy",
-   "time": 90,
    "gold": 500,
-   "hotkey": "C",
+   "lumber": 700,
    "hp": 2000,
-   "lumber": 700
+   "time": 90,
+   "hotkey": "C"
   },
   "w219": {
    "type": "building",
    "name": "Нефтяная платформа",
    "base": "hhou",
-   "time": 55,
-   "food_made": 50,
    "gold": 300,
-   "hotkey": "Q",
+   "lumber": 200,
+   "food_made": 50,
    "hp": 250,
-   "lumber": 200
+   "time": 55,
+   "hotkey": "Q"
   },
   "w220": {
    "type": "unit",
    "name": "Нефтяной танкер",
    "base": "hbsh",
-   "time": 35,
    "gold": 300,
-   "hotkey": "A",
+   "lumber": 400,
    "hp": 600,
-   "lumber": 400
+   "time": 35,
+   "hotkey": "A"
   },
   "w284": {
    "type": "unknown",
@@ -3729,21 +3708,21 @@
    "type": "unit",
    "name": "Чернокнижник Тёмной Орды",
    "base": "oshm",
-   "time": 30,
    "gold": 185,
-   "hotkey": "Q",
+   "lumber": 20,
    "hp": 350,
-   "lumber": 20
+   "time": 30,
+   "hotkey": "Q"
   },
   "xd02": {
    "type": "unit",
    "name": "Осадный огр",
    "base": "ogru",
-   "time": 58,
    "gold": 385,
-   "hotkey": "R",
-   "hp": 1100,
    "lumber": 130,
+   "hp": 1100,
+   "time": 58,
+   "hotkey": "R",
    "requires": [
     "o03E"
    ]
@@ -3752,11 +3731,11 @@
    "type": "unit",
    "name": "Чёрный драконид",
    "base": "nbdw",
-   "time": 40,
    "gold": 250,
-   "hotkey": "W",
-   "hp": 600,
    "lumber": 50,
+   "hp": 600,
+   "time": 40,
+   "hotkey": "W",
    "requires": [
     "R0D9"
    ]
@@ -3765,11 +3744,11 @@
    "type": "unit",
    "name": "Копьеметатель Драконьей Пасти",
    "base": "ohun",
-   "time": 22,
    "gold": 165,
-   "hotkey": "Q",
-   "hp": 425,
    "lumber": 20,
+   "hp": 425,
+   "time": 22,
+   "hotkey": "Q",
    "requires": [
     "ofor"
    ]
@@ -3778,11 +3757,11 @@
    "type": "unit",
    "name": "Всадник Драконьей Пасти",
    "base": "orai",
-   "time": 28,
    "gold": 210,
-   "hotkey": "E",
-   "hp": 650,
    "lumber": 40,
+   "hp": 650,
+   "time": 28,
+   "hotkey": "E",
    "requires": [
     "ostr"
    ]
@@ -3791,21 +3770,21 @@
    "type": "unit",
    "name": "Укротитель драконов",
    "base": "oshm",
-   "time": 30,
    "gold": 185,
-   "hotkey": "Q",
+   "lumber": 20,
    "hp": 350,
-   "lumber": 20
+   "time": 30,
+   "hotkey": "Q"
   },
   "xd07": {
    "type": "unit",
    "name": "Чёрный дракончик",
    "base": "nbdr",
-   "time": 30,
    "gold": 200,
-   "hotkey": "E",
+   "lumber": 20,
    "hp": 670,
-   "lumber": 20
+   "time": 30,
+   "hotkey": "E"
   },
   "xdR1": {
    "type": "unknown",
@@ -3823,10 +3802,7 @@
   "A00G requires R005",
   "A06U requires R03A",
   "A0QO requires R0AU",
-  "A0ZA requires Rugf",
-  "A0ZC requires Rugf",
   "A103 requires Robk",
-  "A129 requires Rugf",
   "A13B requires R0FD",
   "A13C requires Robk",
   "A14J requires R0FR",
@@ -3836,7 +3812,6 @@
   "A1OL requires R0KP",
   "A1ON requires Rnsw",
   "A1OP requires Rnsw",
-  "A1OQ requires Rugf",
   "ACen requires Roen",
   "ACfu requires Rnsw",
   "AChx requires Rnsi",

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "name": "518-world-region-movement",
+  "steps": [
+    {
+      "name": "initialization-and-lobby",
+      "lua": "assert(InitErrors==nil or #InitErrors==0, 'initialization errors'); assert(TimerGetRemaining(udg_LobbyTime)<0.1, 'lobby active'); ProbeLogEnableFlush(); return 'ready'",
+      "expected": "ready",
+      "poll_for": 100
+    },
+    {
+      "name": "create-and-order-movement-controls",
+      "lua": "OgreCombat.Init(); NagaCombat.Init(); PandarenBrew.Init(); Movement518Units={}; for i,id in ipairs({'hpea','h0IT','h0IU','h0J1','hpea','hgry'}) do local x,y=-3989,29264+(i-1)*96; local u=CreateUnit(Player(0),FourCC(id),x,y,180); assert(u~=nil,'unit '..id); if i==5 then SetUnitPathing(u,false) end; Movement518Units[i]={unit=u,id=id,x=GetUnitX(u),y=GetUnitY(u),tx=-4400,ty=y}; assert(IssuePointOrder(u,'move',-4400,y),'move '..id) end; return 'ordered'",
+      "expected": "ordered"
+    },
+    {
+      "name": "workers-worgens-and-controls-reach-target",
+      "lua": "local out={}; for _,r in ipairs(Movement518Units) do local u=r.unit; local x,y=GetUnitX(u),GetUnitY(u); local moved=math.sqrt((x-r.x)^2+(y-r.y)^2); local left=math.sqrt((x-r.tx)^2+(y-r.ty)^2); out[#out+1]=r.id..':'..string.format('moved=%.1f,left=%.1f',moved,left); assert(GetWidgetLife(u)>0.405 and moved>300 and left<64,table.concat(out,'; ')) end; return table.concat(out,'; ')",
+      "poll_for": 20
+    },
+    {
+      "name": "cleanup",
+      "lua": "for _,r in ipairs(Movement518Units) do RemoveUnit(r.unit) end; Movement518Units=nil; return 'clean'",
+      "expected": "clean"
+    }
+  ]
+}

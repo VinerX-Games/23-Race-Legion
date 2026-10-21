@@ -252,36 +252,16 @@ end
 -- Trigger: Camera command O
 --===========================================================================
 function Trig_Camera_command_O_Actions()
-    udg_wawt=S2R(SubStringBJ(GetEventPlayerChatString(), 6, 9))
-    SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_TARGET_DISTANCE, udg_wawt, 1.00)
+    local distance = tonumber(ChatCommandArgument("cam") or "")
+    if distance == nil or distance <= 0 or distance >= math.huge then return end
+    SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_TARGET_DISTANCE, distance, 1.00)
 end
 --===========================================================================
 function InitTrig_Camera_command_O()
     gg_trg_Camera_command_O=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(0), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(1), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(2), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(3), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(4), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(5), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(6), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(7), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(8), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(9), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(10), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(11), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(12), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(13), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(14), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(15), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(16), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(17), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(18), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(19), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(20), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(21), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(22), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(23), "-cam", false)
+    for i = 0, 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(i), "", false)
+    end
     TriggerAddAction(gg_trg_Camera_command_O, Trig_Camera_command_O_Actions)
 end
 --===========================================================================
@@ -618,11 +598,11 @@ end
 -- Trigger: ArchontMode
 --===========================================================================
 function CorrectNumber(pi2)
-    return pi2 >= 0 and pi2 <= 24
+    return pi2 ~= nil and pi2 >= 0 and pi2 < 24 and pi2 % 1 == 0
 end
 function Trig_ArchontMode_Actions()
-    local s= SubStringBJ(GetEventPlayerChatString(), 8, 10)
-    local pi2= S2I(s) - 1
+    local number = tonumber(ChatCommandArgument("arhont") or "")
+    local pi2 = number and number - 1
     local pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) then
         DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi2)) .. "" .. I2S(pi2))
@@ -638,7 +618,7 @@ function InitTrig_ArchontMode()
     while true do
         if i > 23 then break end
         
-        TriggerRegisterPlayerChatEvent(gg_trg_ArchontMode, Player(i), "-arhont", false)
+        TriggerRegisterPlayerChatEvent(gg_trg_ArchontMode, Player(i), "", false)
         
         i=i + 1
     end
@@ -664,8 +644,8 @@ end
 -- Trigger: ArchontModeOff
 --===========================================================================
 function Trig_ArchontModeOff_Actions()
-    local s= SubStringBJ(GetEventPlayerChatString(), 8, 10)
-    local pi2= S2I(s) - 1
+    local number = tonumber(ChatCommandArgument("arhoff") or "")
+    local pi2 = number and number - 1
     local pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) and DipMode ~= 1 then
         DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi2)) .. "" .. I2S(pi2))
@@ -681,7 +661,7 @@ function InitTrig_ArchontModeOff()
     while true do
         if i > 23 then break end
         
-        TriggerRegisterPlayerChatEvent(gg_trg_ArchontModeOff, Player(i), "-arhoff", false)
+        TriggerRegisterPlayerChatEvent(gg_trg_ArchontModeOff, Player(i), "", false)
         
         i=i + 1
     end

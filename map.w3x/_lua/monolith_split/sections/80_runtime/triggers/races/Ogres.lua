@@ -170,13 +170,8 @@ function OgreCombat.Init()
     OgreCombat.deathTrigger = CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(OgreCombat.deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     TriggerAddAction(OgreCombat.deathTrigger, OgreCombat.Death)
-    -- Обученные, призванные и созданные скриптом гронны одинаково входят в регион мира.
-    local bounds = GetWorldBounds()
-    OgreCombat.world = CreateRegion()
-    RegionAddRect(OgreCombat.world, bounds)
-    RemoveRect(bounds)
     OgreCombat.enterTrigger = CreateTrigger()
-    TriggerRegisterEnterRegion(OgreCombat.enterTrigger, OgreCombat.world, nil)
+    TriggerRegisterEnterRegion(OgreCombat.enterTrigger, Allmap, nil)
     TriggerAddAction(OgreCombat.enterTrigger, function() OgreCombat.Track(GetTriggerUnit()) end)
 end
 

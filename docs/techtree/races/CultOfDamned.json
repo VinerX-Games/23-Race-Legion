@@ -17,9 +17,9 @@
   "A001": {
    "type": "ability",
    "name": "Абордаж!",
-   "hotkey": "Q",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A002": {
    "type": "ability",
@@ -37,15 +37,15 @@
   "A009": {
    "type": "ability",
    "name": "Сделать флагманом",
-   "hotkey": "R",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "R"
   },
   "A00A": {
    "type": "ability",
    "name": "Починка",
-   "hotkey": "R",
    "levels": 3,
    "hero_level_req": 1,
+   "hotkey": "R",
    "requires": [
     "R007"
    ]
@@ -53,8 +53,8 @@
   "A00B": {
    "type": "ability",
    "name": "Тактическое ускорение",
-   "hotkey": "E",
    "levels": 3,
+   "hotkey": "E",
    "requires": [
     "R006"
    ]
@@ -62,9 +62,9 @@
   "A00G": {
    "type": "ability",
    "name": "Массированный обстрел",
-   "hotkey": "W",
    "levels": 3,
    "hero_level_req": 1,
+   "hotkey": "W",
    "requires": [
     "R005"
    ]
@@ -72,89 +72,89 @@
   "A00I": {
    "type": "ability",
    "name": "Магическая посадка",
-   "hotkey": "W",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "A0CL": {
    "type": "ability",
    "name": "Создать труп",
    "hero": true,
-   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "A0CM": {
    "type": "ability",
    "name": "Массовое проклятие",
    "hero": true,
-   "hotkey": "E",
-   "levels": 4
+   "levels": 4,
+   "hotkey": "E"
   },
   "A0CN": {
    "type": "ability",
    "name": "Оживление мёртвых",
    "hero": true,
-   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "A0CO": {
    "type": "ability",
    "name": "Лик смерти",
    "hero": true,
-   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "A0CP": {
    "type": "ability",
    "name": "Зов смерти",
    "hero": true,
-   "hotkey": "W",
-   "levels": 4
+   "levels": 4,
+   "hotkey": "W"
   },
   "A0CQ": {
    "type": "ability",
    "name": "Пожирание",
    "hero": true,
-   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "A0CR": {
    "type": "ability",
    "name": "Нечистая аура",
    "hero": true,
-   "hotkey": "E",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "E"
   },
   "A0I3": {
    "type": "ability",
    "name": "Небольшой скачок",
-   "hotkey": "C",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "C"
   },
   "A0IQ": {
    "type": "ability",
    "name": "Обозначить столицу",
-   "hotkey": "X",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "X"
   },
   "A0LI": {
    "type": "ability",
    "name": "Обмен золота на дерево",
-   "hotkey": "S",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "S"
   },
   "A0LJ": {
    "type": "ability",
    "name": "Обмен дерева на золото",
-   "hotkey": "A",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "A"
   },
   "A15N": {
    "type": "ability",
@@ -165,30 +165,30 @@
   "A1HA": {
    "type": "ability",
    "name": "Культ Проклятых",
-   "hotkey": "D",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "D"
   },
   "A1HC": {
    "type": "ability",
    "name": "Защита распылителя",
-   "hotkey": "R",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "R"
   },
   "A1HE": {
    "type": "ability",
    "name": "Поток льда",
    "hero": true,
-   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "A1HH": {
    "type": "ability",
    "name": "Тёмная стая",
-   "hotkey": "E",
    "levels": 1,
+   "hotkey": "E",
    "requires": [
     "cDR5"
    ],
@@ -197,20 +197,20 @@
   "A1HI": {
    "type": "ability",
    "name": "Морозный доспех",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A1HM": {
    "type": "ability",
    "name": "Пожирание магии",
-   "hotkey": "W",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "W"
   },
   "A1HN": {
    "type": "ability",
    "name": "Лик смерти",
-   "hotkey": "E",
    "levels": 1,
+   "hotkey": "E",
    "requires": [
     "R0JH"
    ],
@@ -224,22 +224,22 @@
   "A1IJ": {
    "type": "ability",
    "name": "Служебный маркер",
-   "hotkey": "C",
    "levels": 1,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "C"
   },
   "A1IK": {
    "type": "ability",
    "name": "Зачумление",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "A1IL": {
    "type": "ability",
    "name": "Воскрешение мёртвых",
    "hero": true,
-   "hotkey": "Q",
-   "levels": 4
+   "levels": 4,
+   "hotkey": "Q"
   },
   "A1KB": {
    "type": "ability",
@@ -249,15 +249,15 @@
   "A1L9": {
    "type": "ability",
    "name": "Призыв на кладбище",
-   "hotkey": "C",
    "levels": 2,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "C"
   },
   "A1PP": {
    "type": "ability",
    "name": "Прицельная пальба",
-   "hotkey": "Q",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "Q"
   },
   "AInv": {
    "type": "ability",
@@ -268,31 +268,31 @@
    "type": "ability",
    "name": "Смерть и разложение",
    "hero": true,
-   "hotkey": "D",
    "levels": 1,
-   "hero_level_req": 6
+   "hero_level_req": 6,
+   "hotkey": "D"
   },
   "AUdr": {
    "type": "ability",
    "name": "Темный ритуал",
    "hero": true,
-   "hotkey": "E",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "E"
   },
   "AUfn": {
    "type": "ability",
    "name": "Кольцо льда",
    "hero": true,
-   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "Aaha": {
    "type": "ability",
    "name": "Добывать ресурсы",
-   "hotkey": "G",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "G"
   },
   "Agyd": {
    "type": "ability",
@@ -302,14 +302,14 @@
   "Amed": {
    "type": "ability",
    "name": "Выгрузить труп",
-   "hotkey": "D",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "D"
   },
   "Amel": {
    "type": "ability",
    "name": "Погрузить труп",
-   "hotkey": "C",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "C"
   },
   "Argl": {
    "type": "ability",
@@ -324,116 +324,116 @@
   "Arst": {
    "type": "ability",
    "name": "Ремонт",
-   "hotkey": "R",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "R"
   },
   "Auns": {
    "type": "ability",
    "name": "Развоплотить здание",
-   "hotkey": "U",
-   "levels": 1
+   "levels": 1,
+   "hotkey": "U"
   },
   "CD01": {
    "type": "hero",
    "name": "Рыцарь смерти",
    "base": "Udea",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "Q",
+   "lumber": 100,
+   "food": 1,
    "hp": 350,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "Q"
   },
   "CD02": {
    "type": "hero",
    "name": "Верховный некромант",
    "base": "Ulic",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "A",
+   "lumber": 100,
+   "food": 1,
    "hp": 200,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "A"
   },
   "R002": {
    "type": "upgrade",
    "name": "Орудия флота — уровень 1",
+   "levels": 6,
    "gold": 500,
    "gold_per_level": 200,
    "lumber": 1200,
    "lumber_per_level": 300,
-   "levels": 6,
+   "time": 80,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 80,
-   "time_per_level": 15
+   ]
   },
   "R003": {
    "type": "upgrade",
    "name": "Укреплённый корпус — уровень 1",
+   "levels": 6,
    "gold": 900,
    "gold_per_level": 300,
    "lumber": 500,
    "lumber_per_level": 200,
-   "levels": 6,
+   "time": 80,
+   "time_per_level": 15,
    "requires": [
     "hkee"
-   ],
-   "time": 80,
-   "time_per_level": 15
+   ]
   },
   "R004": {
    "type": "upgrade",
    "name": "Улучшение до Кровавого Палача",
+   "levels": 1,
    "gold": 600,
    "lumber": 500,
-   "levels": 1,
+   "time": 40,
    "requires": [
     "ofrt",
     "ofor",
     "h0DV"
-   ],
-   "time": 40
+   ]
   },
   "R005": {
    "type": "upgrade",
    "name": "Обстрел — уровень 1",
+   "levels": 5,
    "gold": 500,
    "gold_per_level": 150,
    "lumber": 500,
    "lumber_per_level": 150,
-   "levels": 5,
+   "time": 90,
    "requires": [
     "hcas"
-   ],
-   "time": 90
+   ]
   },
   "R006": {
    "type": "upgrade",
    "name": "Дополнительные паруса — уровень 1",
+   "levels": 3,
    "gold": 500,
    "gold_per_level": 150,
    "lumber": 500,
    "lumber_per_level": 150,
-   "levels": 3,
+   "time": 90,
    "requires": [
     "hcas"
-   ],
-   "time": 90
+   ]
   },
   "R007": {
    "type": "upgrade",
    "name": "Починка — уровень 1",
+   "levels": 3,
    "gold": 500,
    "gold_per_level": 150,
    "lumber": 500,
    "lumber_per_level": 150,
-   "levels": 3,
+   "time": 90,
    "requires": [
     "hcas"
-   ],
-   "time": 90
+   ]
   },
   "R0J4": {
    "type": "upgrade",
@@ -448,112 +448,112 @@
   "R0J6": {
    "type": "upgrade",
    "name": "Плоть не убить — уровень 1",
+   "levels": 3,
    "gold": 350,
    "gold_per_level": 350,
    "lumber": 350,
    "lumber_per_level": 350,
-   "levels": 3,
+   "time": 50,
    "requires": [
     "ugrv",
     "unp2"
-   ],
-   "time": 50
+   ]
   },
   "R0J7": {
    "type": "upgrade",
    "name": "Улучшенные инструменты — уровень 1",
+   "levels": 4,
    "gold": 100,
    "gold_per_level": 350,
-   "levels": 4,
    "time": 60,
    "time_per_level": 30
   },
   "R0J8": {
    "type": "upgrade",
    "name": "Кости всех переживут — уровень 1",
+   "levels": 3,
    "gold": 350,
    "gold_per_level": 350,
    "lumber": 350,
    "lumber_per_level": 350,
-   "levels": 3,
+   "time": 50,
    "requires": [
     "ugrv",
     "unp2"
-   ],
-   "time": 50
+   ]
   },
   "R0JH": {
    "type": "upgrade",
    "name": "Посвящение некромантов — ступень 1",
+   "levels": 4,
    "gold": 350,
    "gold_per_level": 350,
    "lumber": 350,
    "lumber_per_level": 350,
-   "levels": 4,
+   "time": 30,
+   "time_per_level": 15,
    "requires": [
     "unp2"
-   ],
-   "time": 30,
-   "time_per_level": 15
+   ]
   },
   "R0JI": {
    "type": "upgrade",
    "name": "Заражённые снаряды",
+   "levels": 1,
    "gold": 500,
    "lumber": 125,
-   "levels": 1,
+   "time": 15,
    "requires": [
     "unp2"
-   ],
-   "time": 15
+   ]
   },
   "R0K4": {
    "type": "upgrade",
    "name": "Улучшенное оживление — уровень 1",
+   "levels": 2,
    "gold": 650,
    "gold_per_level": 650,
    "lumber": 650,
    "lumber_per_level": 650,
-   "levels": 2,
+   "time": 15,
+   "time_per_level": 15,
    "requires": [
     "unp2",
     "cD25"
-   ],
-   "time": 15,
-   "time_per_level": 15
+   ]
   },
   "R0KE": {
    "type": "upgrade",
    "name": "Живучие скелеты — уровень 1",
+   "levels": 3,
    "gold": 450,
    "gold_per_level": 450,
    "lumber": 450,
    "lumber_per_level": 450,
-   "levels": 3,
+   "time": 15,
    "requires": [
     "unp2"
-   ],
-   "time": 15
+   ]
   },
   "Rgfo": {
    "type": "upgrade",
    "name": "Знак укрепления",
+   "levels": 3,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
-   "levels": 3,
    "time": 60,
    "time_per_level": 15
   },
   "Rguv": {
    "type": "upgrade",
    "name": "Знак ночного зрения",
+   "levels": 1,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
-   "levels": 1,
    "time": 60,
    "time_per_level": 15
   },
@@ -577,51 +577,51 @@
    "type": "hero",
    "name": "Лич",
    "base": "Ulic",
-   "time": 55,
-   "food": 1,
    "gold": 400,
-   "hotkey": "Z",
+   "lumber": 100,
+   "food": 1,
    "hp": 300,
-   "lumber": 100
+   "time": 55,
+   "hotkey": "Z"
   },
   "cD02": {
    "type": "unit",
    "name": "Послушник",
    "base": "uaco",
-   "time": 20,
    "gold": 80,
-   "hotkey": "Q",
-   "hp": 230
+   "hp": 230,
+   "time": 20,
+   "hotkey": "Q"
   },
   "cD03": {
    "type": "unit",
    "name": "Некромант",
    "base": "unec",
-   "time": 27,
    "gold": 175,
-   "hotkey": "Q",
+   "lumber": 60,
    "hp": 325,
-   "lumber": 60
+   "time": 27,
+   "hotkey": "Q"
   },
   "cD05": {
    "type": "unit",
    "name": "Осквернитель",
    "base": "unec",
-   "time": 28,
    "gold": 185,
-   "hotkey": "W",
+   "lumber": 65,
    "hp": 325,
-   "lumber": 65
+   "time": 28,
+   "hotkey": "W"
   },
   "cD08": {
    "type": "unit",
    "name": "Тёмный Адепт",
    "base": "unec",
-   "time": 37,
    "gold": 245,
-   "hotkey": "R",
-   "hp": 400,
    "lumber": 85,
+   "hp": 400,
+   "time": 37,
+   "hotkey": "R",
    "requires": [
     "cD25"
    ]
@@ -630,11 +630,11 @@
    "type": "unit",
    "name": "Мясной голем",
    "base": "nfgl",
-   "time": 86,
    "gold": 570,
-   "hotkey": "E",
-   "hp": 2500,
    "lumber": 190,
+   "hp": 2500,
+   "time": 86,
+   "hotkey": "E",
    "requires": [
     "cD24"
    ]
@@ -643,11 +643,11 @@
    "type": "unit",
    "name": "Поганище",
    "base": "uabo",
-   "time": 47,
    "gold": 310,
-   "hotkey": "W",
-   "hp": 1000,
    "lumber": 105,
+   "hp": 1000,
+   "time": 47,
+   "hotkey": "W",
    "requires": [
     "cD25"
    ]
@@ -656,31 +656,31 @@
    "type": "unit",
    "name": "Зомби",
    "base": "nzom",
-   "time": 22,
    "gold": 140,
-   "hotkey": "Q",
-   "hp": 280
+   "hp": 280,
+   "time": 22,
+   "hotkey": "Q"
   },
   "cD12": {
    "type": "unit",
    "name": "Распылитель чумы",
    "base": "ubsp",
-   "time": 45,
-   "food_made": 75,
    "gold": 500,
-   "hotkey": "A",
+   "lumber": 150,
+   "food_made": 75,
    "hp": 850,
-   "lumber": 150
+   "time": 45,
+   "hotkey": "A"
   },
   "cD13": {
    "type": "unit",
    "name": "Труповозка",
    "base": "umtw",
-   "time": 32,
    "gold": 210,
-   "hotkey": "E",
-   "hp": 450,
    "lumber": 70,
+   "hp": 450,
+   "time": 32,
+   "hotkey": "E",
    "requires": [
     "cD31"
    ]
@@ -689,11 +689,11 @@
    "type": "unit",
    "name": "Ядоголем",
    "base": "nfgl",
-   "time": 131,
    "gold": 875,
-   "hotkey": "R",
-   "hp": 2500,
    "lumber": 295,
+   "hp": 2500,
+   "time": 131,
+   "hotkey": "R",
    "requires": [
     "cD24"
    ]
@@ -702,11 +702,11 @@
    "type": "unit",
    "name": "Костяной привратник",
    "base": "unec",
-   "time": 43,
    "gold": 285,
-   "hotkey": "E",
-   "hp": 900,
    "lumber": 95,
+   "hp": 900,
+   "time": 43,
+   "hotkey": "E",
    "requires": [
     "cD24"
    ]
@@ -715,20 +715,20 @@
    "type": "unit",
    "name": "Скелет-воин",
    "base": "uske",
-   "time": 19,
    "gold": 60,
-   "hotkey": "Q",
-   "hp": 180
+   "hp": 180,
+   "time": 19,
+   "hotkey": "Q"
   },
   "cD22": {
    "type": "unit",
    "name": "Скелет-маг",
    "base": "uskm",
-   "time": 15,
    "gold": 95,
-   "hotkey": "W",
-   "hp": 240,
    "lumber": 35,
+   "hp": 240,
+   "time": 15,
+   "hotkey": "W",
    "requires": [
     "cD25"
    ]
@@ -737,12 +737,12 @@
    "type": "building",
    "name": "Тёмная цитадель",
    "base": "unp2",
-   "time": 140,
-   "food_made": 150,
    "gold": 12000,
-   "hotkey": "Z",
-   "hp": 2000,
    "lumber": 12000,
+   "food_made": 150,
+   "hp": 2000,
+   "time": 140,
+   "hotkey": "Z",
    "requires": [
     "cD30"
    ]
@@ -751,32 +751,32 @@
    "type": "building",
    "name": "Чертоги мёртвых",
    "base": "unp1",
-   "time": 140,
-   "food_made": 100,
    "gold": 4500,
-   "hotkey": "Z",
+   "lumber": 4500,
+   "food_made": 100,
    "hp": 1750,
-   "lumber": 4500
+   "time": 140,
+   "hotkey": "Z"
   },
   "cD26": {
    "type": "building",
    "name": "Некрополь",
    "base": "unpl",
-   "time": 70,
-   "food_made": 50,
    "gold": 225,
-   "hotkey": "Q",
-   "hp": 1500
+   "food_made": 50,
+   "hp": 1500,
+   "time": 70,
+   "hotkey": "Q"
   },
   "cD27": {
    "type": "building",
    "name": "Костомолка",
    "base": "utod",
-   "time": 60,
    "gold": 400,
-   "hotkey": "D",
-   "hp": 1100,
    "lumber": 140,
+   "hp": 1100,
+   "time": 60,
+   "hotkey": "D",
    "requires": [
     "cD31"
    ]
@@ -785,11 +785,11 @@
    "type": "building",
    "name": "Мясопилка",
    "base": "uslh",
-   "time": 60,
    "gold": 400,
-   "hotkey": "R",
-   "hp": 1200,
    "lumber": 135,
+   "hp": 1200,
+   "time": 60,
+   "hotkey": "R",
    "requires": [
     "cD31"
    ]
@@ -798,41 +798,41 @@
    "type": "building",
    "name": "Пристанище",
    "base": "usep",
-   "time": 60,
    "gold": 360,
-   "hotkey": "W",
+   "lumber": 50,
    "hp": 1300,
-   "lumber": 50
+   "time": 60,
+   "hotkey": "W"
   },
   "cD30": {
    "type": "building",
    "name": "Алтарь тьмы",
    "base": "uaod",
-   "time": 50,
-   "food_made": 3,
    "gold": 180,
-   "hotkey": "S",
+   "lumber": 50,
+   "food_made": 3,
    "hp": 900,
-   "lumber": 50
+   "time": 50,
+   "hotkey": "S"
   },
   "cD31": {
    "type": "building",
    "name": "Кладбище",
    "base": "ugrv",
-   "time": 70,
    "gold": 425,
-   "hotkey": "E",
-   "hp": 900
+   "hp": 900,
+   "time": 70,
+   "hotkey": "E"
   },
   "cD33": {
    "type": "unit",
    "name": "Костяной страж",
    "base": "uske",
-   "time": 81,
    "gold": 540,
-   "hotkey": "R",
-   "hp": 1500,
    "lumber": 180,
+   "hp": 1500,
+   "time": 81,
+   "hotkey": "R",
    "requires": [
     "cD24"
    ]
@@ -841,19 +841,19 @@
    "type": "unit",
    "name": "Скелет-воин",
    "base": "uske",
-   "time": 26,
    "gold": 110,
-   "hotkey": "Q",
-   "hp": 325
+   "hp": 325,
+   "time": 26,
+   "hotkey": "Q"
   },
   "cD35": {
    "type": "unit",
    "name": "Скелет-воин",
    "base": "uske",
-   "time": 33,
    "gold": 165,
-   "hotkey": "Q",
-   "hp": 485
+   "hp": 485,
+   "time": 33,
+   "hotkey": "Q"
   },
   "cDA1": {
    "type": "unknown",
@@ -975,63 +975,63 @@
    "type": "unit",
    "name": "Фрегат",
    "base": "hdes",
-   "time": 30,
    "gold": 450,
-   "hotkey": "W",
+   "lumber": 475,
    "hp": 800,
-   "lumber": 475
+   "time": 30,
+   "hotkey": "W"
   },
   "h0D0": {
    "type": "unit",
    "name": "Линкор",
    "base": "hbsh",
-   "time": 50,
    "gold": 875,
-   "hotkey": "E",
+   "lumber": 1000,
    "hp": 1400,
-   "lumber": 1000
+   "time": 50,
+   "hotkey": "E"
   },
   "h0D1": {
    "type": "building",
    "name": "Верфь",
    "base": "hshy",
-   "time": 90,
    "gold": 500,
-   "hotkey": "C",
+   "lumber": 700,
    "hp": 2000,
-   "lumber": 700
+   "time": 90,
+   "hotkey": "C"
   },
   "h0D2": {
    "type": "unit",
    "name": "Транспорт",
    "base": "hbot",
-   "time": 22,
    "gold": 250,
-   "hotkey": "Q",
+   "lumber": 200,
    "hp": 750,
-   "lumber": 200
+   "time": 22,
+   "hotkey": "Q"
   },
   "h0DV": {
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 240,
-   "food_made": 100,
    "gold": 4000,
-   "hotkey": "Z",
+   "lumber": 4000,
+   "food_made": 100,
    "hp": 2000,
-   "lumber": 4000
+   "time": 240,
+   "hotkey": "Z"
   },
   "hcas": {
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 140,
-   "food_made": 150,
    "gold": 12000,
-   "hotkey": "Z",
-   "hp": 2500,
    "lumber": 12000,
+   "food_made": 150,
+   "hp": 2500,
+   "time": 140,
+   "hotkey": "Z",
    "requires": [
     "halt"
    ]
@@ -1040,52 +1040,52 @@
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 140,
-   "food_made": 100,
    "gold": 4500,
-   "hotkey": "Z",
+   "lumber": 4500,
+   "food_made": 100,
    "hp": 2000,
-   "lumber": 4500
+   "time": 140,
+   "hotkey": "Z"
   },
   "ofor": {
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 70,
    "gold": 205,
-   "hotkey": "E",
-   "hp": 1000
+   "hp": 1000,
+   "time": 70,
+   "hotkey": "E"
   },
   "ofrt": {
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 140,
-   "food_made": 150,
    "gold": 12000,
-   "hotkey": "Z",
+   "lumber": 12000,
+   "food_made": 150,
    "hp": 2500,
-   "lumber": 12000
+   "time": 140,
+   "hotkey": "Z"
   },
   "ugrv": {
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 80,
    "gold": 215,
-   "hotkey": "V",
-   "hp": 900
+   "hp": 900,
+   "time": 80,
+   "hotkey": "V"
   },
   "unp2": {
    "type": "unit",
    "name": "",
    "only_required": true,
-   "time": 140,
-   "food_made": 10,
    "gold": 870,
-   "hotkey": "U",
-   "hp": 2000,
    "lumber": 440,
+   "food_made": 10,
+   "hp": 2000,
+   "time": 140,
+   "hotkey": "U",
    "requires": [
     "uaod"
    ]

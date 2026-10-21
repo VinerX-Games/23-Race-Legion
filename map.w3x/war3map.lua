@@ -37180,6 +37180,7 @@ function Trig_K1T1_Actions()
     local pi= GetPlayerId(p)
     
     
+    T1Count(p)
     i=CommonHash[pi]["T1_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["T1" .. i] or 0
@@ -37283,6 +37284,7 @@ function Trig_K1T2_Actions()
     local pi= GetPlayerId(p)
     
     -- 
+    T2Count(p)
     i=CommonHash[pi]["T2_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["T2" .. i] or 0
@@ -37374,6 +37376,7 @@ function Trig_K1T2b_Actions()
     
     
     -- 
+    T2bCount(p)
     i=CommonHash[pi]["T2b_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["T2b" .. i] or 0
@@ -37494,6 +37497,7 @@ function Trig_K1TCav_Actions()
     
     
     -- 
+    TCavCount(p)
     i=CommonHash[pi]["TCav_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["TCav" .. i] or 0
@@ -37628,6 +37632,7 @@ function Trig_K1T4_Actions()
     
     
     -- 
+    T3Count(p)
     i=CommonHash[pi]["T3_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["T3" .. i] or 0
@@ -37742,6 +37747,7 @@ function Trig_K2T1_Actions()
     
     
     -- 
+    K1Count(p)
     i=CommonHash[pi]["K1_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["K1" .. i] or 0
@@ -37852,6 +37858,7 @@ function Trig_K2T2_Actions()
     
     
     -- 
+    K2Count(p)
     i=CommonHash[pi]["K2_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["K2" .. i] or 0
@@ -37959,6 +37966,7 @@ function Trig_K2T2b_Actions()
     local pi= GetPlayerId(p)
     
     -- 
+    K2bCount(p)
     i=CommonHash[pi]["K2b_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["K2b" .. i] or 0
@@ -38060,6 +38068,7 @@ function Trig_K2T3_Actions()
     
     
     -- 
+    K3Count(p)
     i=CommonHash[pi]["K3_0"] or 0
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["K3" .. i] or 0
@@ -38986,7 +38995,7 @@ end
 -- Trigger: CanselCommonHome
 --===========================================================================
 function Trig_CanselCommonHome_Conditions()
-    return GetResearched() == FourCC('R0E9')
+    return GetResearched() == FourCC('R0EH')
 end
 function Trig_CanselCommonHome_Func001C()
     return GetPlayerTechMaxAllowedSwap(FourCC('R0D1'), GetOwningPlayer(GetTriggerUnit())) == 0
@@ -39130,7 +39139,7 @@ end
 -- Trigger: NightBorn
 --===========================================================================
 function Trig_NightBorn_Conditions()
-    return GetResearched() == FourCC('R0F3')
+    return GetResearched() == FourCC('R0F4')
 end
 function Trig_NightBorn_Actions()
     local u= GetTriggerUnit()
@@ -39586,7 +39595,7 @@ end
 -- Trigger: Magnatavrs
 --===========================================================================
 function Trig_Magnatavrs_Conditions()
-    return GetResearched() == FourCC('R0E4')
+    return GetResearched() == FourCC('R0E5')
 end
 function Trig_Magnatavrs_Actions()
     local u= GetTriggerUnit()
@@ -39944,6 +39953,64 @@ function InitTrig_StartHorde()
     gg_trg_StartHorde=CreateTrigger()
     TriggerAddAction(gg_trg_StartHorde, Trig_StartHorde_Actions)
 end
+
+HordeResearch = {pending = {}, ids = {}}
+
+function HordeUpdateResearchAvailability(p)
+    local pending = HordeResearch.pending[GetPlayerId(p)] or {}
+    local function chosen(id)
+        local code = FourCC(id)
+        return GetPlayerTechCount(p, code, true) > 0 or pending[code] == true
+    end
+    local function allow(id, available)
+        SetPlayerTechMaxAllowed(p, FourCC(id), available and 1 or 0)
+    end
+    local function completed(id)
+        return GetPlayerTechCount(p, FourCC(id), true) > 0
+    end
+    local refused = chosen('R0DW')
+    local common, radical, compromise = chosen('R0EH'), chosen('R0E9'), chosen('R0EI')
+    allow('R0DW', not (chosen('R0DX') or chosen('R0DY') or chosen('R0DZ')))
+    allow('R0DX', not (refused or common or compromise))
+    allow('R0DY', not (refused or radical or compromise))
+    allow('R0DZ', not refused)
+    allow('R0EH', completed('R0EE') and not (radical or compromise))
+    allow('R0E9', completed('R0E0') and not (common or compromise))
+    allow('R0EI', (completed('R0EE') or completed('R0E0')) and not (common or radical))
+    allow('R0EA', completed('R0E9') and not chosen('R0KO'))
+    allow('R0KO', completed('R0E9') and not chosen('R0EA'))
+end
+
+function InitTrig_HordeResearch()
+    if HordeResearch.initialized then return end
+    HordeResearch.initialized = true
+    for _, id in ipairs({'R0DW', 'R0DX', 'R0DY', 'R0DZ', 'R0D1', 'R0D2', 'R0D3',
+        'R0E0', 'R0E1', 'R0E3', 'R0E4', 'R0E5', 'R0E9', 'R0EA', 'R0EE',
+        'R0EH', 'R0EI', 'R0F3', 'R0F4', 'R0KO'}) do
+        HordeResearch.ids[FourCC(id)] = true
+    end
+    -- Регистрируется после старых обработчиков, чтобы учитывать их итоговые технологии.
+    local function changed(started, finished)
+        local id = GetResearched()
+        if not HordeResearch.ids[id] then return end
+        local p = GetOwningPlayer(GetTriggerUnit())
+        local pi = GetPlayerId(p)
+        HordeResearch.pending[pi] = HordeResearch.pending[pi] or {}
+        HordeResearch.pending[pi][id] = started or nil
+        HordeUpdateResearchAvailability(p)
+        if finished then countAll(p) end
+    end
+    local start = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(start, EVENT_PLAYER_UNIT_RESEARCH_START)
+    TriggerAddAction(start, function() changed(true, false) end)
+    local cancel = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(cancel, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    TriggerAddAction(cancel, function() changed(false, false) end)
+    local finish = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(finish, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    TriggerAddAction(finish, function() changed(false, true) end)
+end
+
 SilitidData = SilitidData or {}
 --===========================================================================
 -- Trigger: SilitidsOn
@@ -46691,19 +46758,15 @@ function NagaCombat.Init()
             BlzEndUnitAbilityCooldown(caster, NagaCombat.ids.harpoon)
         end
     end)
-    -- Обученные, призванные и созданные скриптом мутанты одинаково входят в регион мира.
-    local bounds = GetWorldBounds()
-    NagaCombat.world = CreateRegion()
-    RegionAddRect(NagaCombat.world, bounds)
-    RemoveRect(bounds)
     NagaCombat.enterTrigger = CreateTrigger()
-    TriggerRegisterEnterRegion(NagaCombat.enterTrigger, NagaCombat.world, nil)
+    TriggerRegisterEnterRegion(NagaCombat.enterTrigger, Allmap, nil)
     TriggerAddAction(NagaCombat.enterTrigger, function() NagaCombat.Mutate(GetTriggerUnit()) end)
 end
 
 function InitTrig_NagaCombat()
     NagaCombat.Init()
 end
+
 --===========================================================================
 -- Trigger: StartWorgens
 --===========================================================================
@@ -50849,36 +50912,16 @@ end
 -- Trigger: Camera command O
 --===========================================================================
 function Trig_Camera_command_O_Actions()
-    udg_wawt=S2R(SubStringBJ(GetEventPlayerChatString(), 6, 9))
-    SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_TARGET_DISTANCE, udg_wawt, 1.00)
+    local distance = tonumber(ChatCommandArgument("cam") or "")
+    if distance == nil or distance <= 0 or distance >= math.huge then return end
+    SetCameraFieldForPlayer(GetTriggerPlayer(), CAMERA_FIELD_TARGET_DISTANCE, distance, 1.00)
 end
 --===========================================================================
 function InitTrig_Camera_command_O()
     gg_trg_Camera_command_O=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(0), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(1), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(2), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(3), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(4), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(5), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(6), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(7), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(8), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(9), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(10), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(11), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(12), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(13), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(14), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(15), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(16), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(17), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(18), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(19), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(20), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(21), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(22), "-cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(23), "-cam", false)
+    for i = 0, 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(i), "", false)
+    end
     TriggerAddAction(gg_trg_Camera_command_O, Trig_Camera_command_O_Actions)
 end
 --===========================================================================
@@ -51215,11 +51258,11 @@ end
 -- Trigger: ArchontMode
 --===========================================================================
 function CorrectNumber(pi2)
-    return pi2 >= 0 and pi2 <= 24
+    return pi2 ~= nil and pi2 >= 0 and pi2 < 24 and pi2 % 1 == 0
 end
 function Trig_ArchontMode_Actions()
-    local s= SubStringBJ(GetEventPlayerChatString(), 8, 10)
-    local pi2= S2I(s) - 1
+    local number = tonumber(ChatCommandArgument("arhont") or "")
+    local pi2 = number and number - 1
     local pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) then
         DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi2)) .. "" .. I2S(pi2))
@@ -51235,7 +51278,7 @@ function InitTrig_ArchontMode()
     while true do
         if i > 23 then break end
         
-        TriggerRegisterPlayerChatEvent(gg_trg_ArchontMode, Player(i), "-arhont", false)
+        TriggerRegisterPlayerChatEvent(gg_trg_ArchontMode, Player(i), "", false)
         
         i=i + 1
     end
@@ -51261,8 +51304,8 @@ end
 -- Trigger: ArchontModeOff
 --===========================================================================
 function Trig_ArchontModeOff_Actions()
-    local s= SubStringBJ(GetEventPlayerChatString(), 8, 10)
-    local pi2= S2I(s) - 1
+    local number = tonumber(ChatCommandArgument("arhoff") or "")
+    local pi2 = number and number - 1
     local pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) and DipMode ~= 1 then
         DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi2)) .. "" .. I2S(pi2))
@@ -51278,7 +51321,7 @@ function InitTrig_ArchontModeOff()
     while true do
         if i > 23 then break end
         
-        TriggerRegisterPlayerChatEvent(gg_trg_ArchontModeOff, Player(i), "-arhoff", false)
+        TriggerRegisterPlayerChatEvent(gg_trg_ArchontModeOff, Player(i), "", false)
         
         i=i + 1
     end
@@ -51770,6 +51813,7 @@ function InitTrig_BeginDestroingTrain()
     TriggerAddCondition(gg_trg_BeginDestroingTrain, Condition(Trig_BeginDestroingTrain_Conditions))
     TriggerAddAction(gg_trg_BeginDestroingTrain, Trig_BeginDestroingTrain_Actions)
 end
+
 --===========================================================================
 -- Trigger: KakecCommon
 --===========================================================================
@@ -52382,13 +52426,8 @@ function OgreCombat.Init()
     OgreCombat.deathTrigger = CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(OgreCombat.deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     TriggerAddAction(OgreCombat.deathTrigger, OgreCombat.Death)
-    -- Обученные, призванные и созданные скриптом гронны одинаково входят в регион мира.
-    local bounds = GetWorldBounds()
-    OgreCombat.world = CreateRegion()
-    RegionAddRect(OgreCombat.world, bounds)
-    RemoveRect(bounds)
     OgreCombat.enterTrigger = CreateTrigger()
-    TriggerRegisterEnterRegion(OgreCombat.enterTrigger, OgreCombat.world, nil)
+    TriggerRegisterEnterRegion(OgreCombat.enterTrigger, Allmap, nil)
     TriggerAddAction(OgreCombat.enterTrigger, function() OgreCombat.Track(GetTriggerUnit()) end)
 end
 
@@ -52492,13 +52531,8 @@ function PandarenBrew.Init()
         if GetSpellAbilityId() ~= PandarenBrew.ids.barrel then return end
         PandarenBrew.Launch(GetTriggerUnit(), GetSpellTargetUnit())
     end)
-    -- Автоприменение включено с появления хмелевара (и у ботов); игрок может выключить.
-    local bounds = GetWorldBounds()
-    PandarenBrew.world = CreateRegion()
-    RegionAddRect(PandarenBrew.world, bounds)
-    RemoveRect(bounds)
     PandarenBrew.enterTrigger = CreateTrigger()
-    TriggerRegisterEnterRegion(PandarenBrew.enterTrigger, PandarenBrew.world, nil)
+    TriggerRegisterEnterRegion(PandarenBrew.enterTrigger, Allmap, nil)
     TriggerAddAction(PandarenBrew.enterTrigger, function()
         local u = GetTriggerUnit()
         if GetUnitAbilityLevel(u, PandarenBrew.ids.barrel) > 0 then IssueImmediateOrder(u, "curseon") end
@@ -72398,6 +72432,7 @@ function InitCustomTriggers()
     InitTrig_TurtleDiy()
     InitTrig_TurtleOut()
     InitTrig_DalIn_Copy()
+    InitTrig_HordeResearch()
 end
 --===========================================================================
 function RunInitializationTriggers()
