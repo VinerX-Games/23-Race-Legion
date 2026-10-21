@@ -1,0 +1,432 @@
+{
+ "schema_version": 1,
+ "scope": "Восстановление WTS-строк, на которые ссылаются поля горячих клавиш object data (SD и skin). Текстовый проход записал в эти строки названия и описания объектов, из-за чего карточки команд показывали текст вместо клавиши.",
+ "source": "map.w3x/war3map.wts",
+ "source_revision": "497b982 (последняя ревизия с корректными клавишами)",
+ "rule": "Значение поля горячей клавиши — одиночный символ; остальные поля объекта не изменялись.",
+ "count": 52,
+ "entries": [
+  {
+   "wts": 10608,
+   "key": "X",
+   "previous": "|cffebc56cМутации Ядовитого неруба — уровень 1|r (|cffffffffC|r)",
+   "objects": [
+    "A0GK:ahky:0"
+   ]
+  },
+  {
+   "wts": 12859,
+   "key": "R",
+   "previous": "|cffb99d66СПОСОБНОСТЬ:|cffced4da Обменивает запас древесины на золото в государственной казне.|r",
+   "objects": [
+    "A0C3:auhk:0"
+   ]
+  },
+  {
+   "wts": 18375,
+   "key": "F",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Насыщает гемолимфу нерубов регенеративными токсинами, увеличивая скорость восстановления здоровья на |cffc8e087+0.3|cffced4da ед./сек.|n|n|cffb99d66Применяется к:|cffced4da|n- Всем воинам армии Нерубов.|n|n|cffb99d66Уровень исследования:|r |cffffffff1/3|r.",
+   "objects": [
+    "A1KI:ahky:0"
+   ]
+  },
+  {
+   "wts": 18376,
+   "key": "F",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Насыщает гемолимфу нерубов регенеративными токсинами, увеличивая скорость восстановления здоровья на |cffc8e087+0.3|cffced4da ед./сек.|n|n|cffb99d66Применяется к:|cffced4da|n- Всем воинам армии Нерубов.|n|n|cffb99d66Уровень исследования:|r |cffffffff2/3|r.",
+   "objects": [
+    "A1MB:ahky:0"
+   ]
+  },
+  {
+   "wts": 18377,
+   "key": "F",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Насыщает гемолимфу нерубов регенеративными токсинами, увеличивая скорость восстановления здоровья на |cffc8e087+0.3|cffced4da ед./сек.|n|n|cffb99d66Применяется к:|cffced4da|n- Всем воинам армии Нерубов.|n|n|cffb99d66Уровень исследования:|r |cffffffff3/3|r.",
+   "objects": [
+    "drA2:ahky:0"
+   ]
+  },
+  {
+   "wts": 18380,
+   "key": "E",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Укрепляет жизненную силу органов нерубов, увеличивая базовый запас здоровья на |cffc8e087+75|cffced4da ед.|n|n|cffb99d66Применяется к:|cffced4da|n- Всем воинам армии Нерубов.|n|n|cffb99d66Уровень исследования:|r |cffffffff3/3|r.",
+   "objects": [
+    "A0IB:ahky:0"
+   ]
+  },
+  {
+   "wts": 18381,
+   "key": "E",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Удлиняет и облегчает лапы нерубов, повышая скорость передвижения на |cffc8e087+20|cffced4da и скорость боя на |cffc8e087+20%|cffced4da.|n|n|cfff2a35eВнимание: исключает возможность исследования «Мутация нерубов».|r|n|n|cffb99d66Применяется к:|cffced4da|n- Всем воинам армии Нерубов.|n|n|cffb99d66Уровень исследования:|r |cffffffff1/3|r.",
+   "objects": [
+    "A0IB:auhk:0"
+   ]
+  },
+  {
+   "wts": 18399,
+   "key": "F",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Ускоряет передвижение и повышает скорость атаки Глубинного неруба.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cГлубинный Неруб|cffced4da.|r",
+   "objects": [
+    "drA2:auhk:0"
+   ]
+  },
+  {
+   "wts": 18402,
+   "key": "E",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Укрепляет мышечные волокна лап, увеличивая скорость передвижения и силу удара в ближнем бою.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cГлубинный Неруб|cffced4da, |cffebc56cНерубский броненосец|cffced4da.|r",
+   "objects": [
+    "A0IL:arhk:0"
+   ]
+  },
+  {
+   "wts": 18404,
+   "key": "Q",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Обучает Нерубов Лекарей новым заклинаниям, увеличивает здоровье на |cffc8e087+25|cffced4da, запас маны на |cffc8e087+30%|cffced4da и регенерацию маны на |cffc8e087+40%|cffced4da.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cНеруб Лекарь|cffced4da.|n|n|cffb99d66Уровень исследования:|r |cffffffff2/2|r.",
+   "objects": [
+    "A0R5:ahky:0"
+   ]
+  },
+  {
+   "wts": 22500,
+   "key": "Q",
+   "previous": "|cffebc56cВождь Орды|r (|cffffffffZ|r)",
+   "objects": [
+    "A12D:ahky:0"
+   ]
+  },
+  {
+   "wts": 23420,
+   "key": "W",
+   "previous": "|cffebc56cТренировка ближнего боя — уровень 3|r",
+   "objects": [
+    "A184:ahky:0"
+   ]
+  },
+  {
+   "wts": 23666,
+   "key": "E",
+   "previous": "|cffb99d66СПОСОБНОСТЬ:|cffced4da Выпускает сгусток пламени, оглушающий цель.|r",
+   "objects": [
+    "A15U:ahky:0"
+   ]
+  },
+  {
+   "wts": 24407,
+   "key": "R",
+   "previous": "|cffb99d66СПОСОБНОСТЬ:|cffced4da Призывает на помощь верных воинов Кор'Крона.|r",
+   "objects": [
+    "A14G:ahky:0"
+   ]
+  },
+  {
+   "wts": 24408,
+   "key": "R",
+   "previous": "|cffebc56cПризвать Охрану|r [|cffffffff4-й уровень|r] (|cffffffffQ|r)",
+   "objects": [
+    "A14G:auhk:0"
+   ]
+  },
+  {
+   "wts": 24715,
+   "key": "Q",
+   "previous": "|cffebc56cРассекающий удар|r [|cffffffff4-й уровень|r]",
+   "objects": [
+    "A1DY:ahky:0"
+   ]
+  },
+  {
+   "wts": 26024,
+   "key": "Q",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Повышает урон ближнего боя пехоты и бойцов Отрекшихся.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cМёртвый воин|cffced4da|n- |cffebc56cСтраж Смерти|cffced4da|n- |cffebc56cВождь Орды|cffced4da|n- |cffebc56cУбийца|cffced4da.|n|n|cffb99d66Уровень исследования:|r |cffffffff1/6|r.",
+   "objects": [
+    "A00T:ahky:0"
+   ]
+  },
+  {
+   "wts": 26025,
+   "key": "Q",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Повышает урон ближнего боя пехоты и бойцов Отрекшихся.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cМёртвый воин|cffced4da|n- |cffebc56cСтраж Смерти|cffced4da|n- |cffebc56cВождь Орды|cffced4da|n- |cffebc56cУбийца|cffced4da.|n|n|cffb99d66Уровень исследования:|r |cffffffff3/6|r.",
+   "objects": [
+    "A1H7:auhk:0"
+   ]
+  },
+  {
+   "wts": 26026,
+   "key": "Q",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Повышает урон ближнего боя пехоты и бойцов Отрекшихся.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cМёртвый воин|cffced4da|n- |cffebc56cСтраж Смерти|cffced4da|n- |cffebc56cВождь Орды|cffced4da|n- |cffebc56cУбийца|cffced4da.|n|n|cffb99d66Уровень исследования:|r |cffffffff2/6|r.",
+   "objects": [
+    "A1H7:ahky:0"
+   ]
+  },
+  {
+   "wts": 26074,
+   "key": "Q",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелковых войск и осадных орудий Отрекшихся.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cЛучница|cffced4da|n- |cffebc56cТёмный следопыт|cffced4da|n- |cffebc56cГнилевозка|cffced4da|n- |cffebc56cУлучшенная Гнилевозка|cffced4da.|n|n|cffb99d66Уровень исследования:|r |cffffffff1/6|r.",
+   "objects": [
+    "MIM1:ahky:0"
+   ]
+  },
+  {
+   "wts": 26075,
+   "key": "Q",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелковых войск и осадных орудий Отрекшихся.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cЛучница|cffced4da|n- |cffebc56cТёмный следопыт|cffced4da|n- |cffebc56cГнилевозка|cffced4da|n- |cffebc56cУлучшенная Гнилевозка|cffced4da.|n|n|cffb99d66Уровень исследования:|r |cffffffff3/6|r.",
+   "objects": [
+    "MIM1:auhk:0"
+   ]
+  },
+  {
+   "wts": 26076,
+   "key": "Q",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Повышает урон стрелковых войск и осадных орудий Отрекшихся.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cЛучница|cffced4da|n- |cffebc56cТёмный следопыт|cffced4da|n- |cffebc56cГнилевозка|cffced4da|n- |cffebc56cУлучшенная Гнилевозка|cffced4da.|n|n|cffb99d66Уровень исследования:|r |cffffffff2/6|r.",
+   "objects": [
+    "TRE4:ahky:0"
+   ]
+  },
+  {
+   "wts": 26353,
+   "key": "R",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Повышает силу заклинаний и магическую защиту служителей смерти Отрекшихся.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cБанши|cffced4da|n- |cffebc56cМёртвый маг|cffced4da|n- |cffebc56cВалькира|cffced4da.|n|n|cffb99d66Уровень исследования:|r |cffffffff5/6|r.",
+   "objects": [
+    "A1BB:ahky:0"
+   ]
+  },
+  {
+   "wts": 26354,
+   "key": "R",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Повышает силу заклинаний и магическую защиту служителей смерти Отрекшихся.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cБанши|cffced4da|n- |cffebc56cМёртвый маг|cffced4da|n- |cffebc56cВалькира|cffced4da.|n|n|cffb99d66Уровень исследования:|r |cffffffff6/6|r.",
+   "objects": [
+    "A1BB:auhk:0"
+   ]
+  },
+  {
+   "wts": 26604,
+   "key": "W",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Увеличивает сопротивляемость войск Отрекшихся к чумным и ядовитым испарениям.|n|n|cffb99d66Применяется к:|cffced4da|n- войскам с изолирующей бронёй.|n|n|cffb99d66Уровень исследования:|r |cffffffff3/3|r.",
+   "objects": [
+    "VLJ1:ahky:0"
+   ]
+  },
+  {
+   "wts": 26688,
+   "key": "Q",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Усиливает ядовитые эффекты атак пехоты и стрелков армии Отрекшихся.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cМёртвый воин|cffced4da|n- |cffebc56cЛучница|cffced4da|n- |cffebc56cТёмный следопыт|cffced4da|n- |cffebc56cСтраж Смерти|cffced4da|n- |cffebc56cУбийца|cffced4da.|n|n|cffb99d66Уровень исследования:|r |cffffffff3/4|r.",
+   "objects": [
+    "PA03:ahky:0"
+   ]
+  },
+  {
+   "wts": 27376,
+   "key": "E",
+   "previous": "|cffebc56cПокровительство друидов — уровень 1|r",
+   "objects": [
+    "A1GJ:arhk:0"
+   ]
+  },
+  {
+   "wts": 27384,
+   "key": "E",
+   "previous": "|cffb99d66СПОСОБНОСТЬ:|cffced4da Повышает регенерацию маны и силу заклинаний друидов.|r",
+   "objects": [
+    "A1H3:ahky:0"
+   ]
+  },
+  {
+   "wts": 28169,
+   "key": "Q",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Древний народ ночных эльфов Калимдора направляет подкрепления в ряды Альянса.|n|nОткрывает лучниц и часовых, а также друида-заклинателя. |cffc8e087Снижает расходы на 4%|cffced4da.|n|n|cffb99d66Применяется к:|cffced4da|n- Казармам и Волшебному святилищу.|r",
+   "objects": [
+    "NQ14:auhk:0"
+   ]
+  },
+  {
+   "wts": 28172,
+   "key": "Q",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Союз короны с духовенством Света возрождает традиции рыцарей Серебряной Длани.|n|nДобавляет элитного пехотинца-паладина, усиливает исцеление жрецов, повышает их запас здоровья и маны. |cffef8173Повышает расходы на 3%|cffced4da.|n|n|cffb99d66Применяется к:|cffced4da|n- Пехотинцам и жрецам Альянса.|r",
+   "objects": [
+    "A1KD:ahky:0"
+   ]
+  },
+  {
+   "wts": 28175,
+   "key": "Q",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Передовые чертежи инженеров позволяют создать тяжёлую штурмовую башню.|n|nОткрывает производство осадных башен в Мастерской.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cМастерская|cffced4da.|r",
+   "objects": [
+    "A1KD:auhk:0"
+   ]
+  },
+  {
+   "wts": 28178,
+   "key": "W",
+   "previous": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Чествование подвига сэра Андуина Лотара и сыновей Лотара из экспедиции в Дренор.|n|nОткрывает ветерана войны, даёт всадникам новую способность и |cffc8e087+125 к здоровью|cffced4da. |cffef8173Повышает расходы на 15%|cffced4da.|n|n|cffb99d66Применяется к:|cffced4da|n- Кавалерии и пехоте Альянса.|r",
+   "objects": [
+    "pa15:ahky:0"
+   ]
+  },
+  {
+   "wts": 28190,
+   "key": "R",
+   "previous": "|cffebc56cУлучшенная кладка — уровень 2|r",
+   "objects": [
+    "TRE5:arhk:0"
+   ]
+  },
+  {
+   "wts": 28191,
+   "key": "E",
+   "previous": "|cffebc56cУлучшенная кладка — уровень 3|r",
+   "objects": [
+    "A1II:arhk:0"
+   ]
+  },
+  {
+   "wts": 28855,
+   "key": "Q",
+   "previous": "|cffebc56cМаг (Поддержка)|r (|cffffffffP|r)",
+   "objects": [
+    "drAq:ahky:0"
+   ]
+  },
+  {
+   "wts": 28856,
+   "key": "Q",
+   "previous": "|cffebc56cМаг (Урон)|r",
+   "objects": [
+    "drAq:auhk:0"
+   ]
+  },
+  {
+   "wts": 28874,
+   "key": "Q",
+   "previous": "|cffebc56cПехотинец|r",
+   "objects": [
+    "drAr:ahky:0"
+   ]
+  },
+  {
+   "wts": 28875,
+   "key": "Q",
+   "previous": "|cffebc56cВетеран Лордерона|r",
+   "objects": [
+    "drat:ahky:0"
+   ]
+  },
+  {
+   "wts": 28876,
+   "key": "Q",
+   "previous": "|cffebc56cКавалерист Лордерона|r",
+   "objects": [
+    "drat:auhk:0"
+   ]
+  },
+  {
+   "wts": 28877,
+   "key": "Q",
+   "previous": "|cffebc56cВоитель Стромгарда|r",
+   "objects": [
+    "drAs:ahky:0"
+   ]
+  },
+  {
+   "wts": 28878,
+   "key": "W",
+   "previous": "|cffebc56cКавалерист Стромгарда|r",
+   "objects": [
+    "NE04:ahky:0"
+   ]
+  },
+  {
+   "wts": 28879,
+   "key": "W",
+   "previous": "|cffebc56cСтрелок Кул-Тираса|r",
+   "objects": [
+    "A1MI:ahky:0"
+   ]
+  },
+  {
+   "wts": 28880,
+   "key": "W",
+   "previous": "|cffebc56cСтрелок Кул-Тираса|r",
+   "objects": [
+    "A1MR:ahky:0"
+   ]
+  },
+  {
+   "wts": 28883,
+   "key": "E",
+   "previous": "|cffebc56cГалеон|r",
+   "objects": [
+    "NQ07:arhk:0"
+   ]
+  },
+  {
+   "wts": 28884,
+   "key": "E",
+   "previous": "|cffebc56cГалеон|r",
+   "objects": [
+    "NQ07:ahky:0"
+   ]
+  },
+  {
+   "wts": 28902,
+   "key": "Q",
+   "previous": "|cffebc56cВоздаятель|r",
+   "objects": [
+    "drAs:auhk:0"
+   ]
+  },
+  {
+   "wts": 28903,
+   "key": "Q",
+   "previous": "|cffebc56cМастер боя|r",
+   "objects": [
+    "drAz:ahky:0"
+   ]
+  },
+  {
+   "wts": 29053,
+   "key": "E",
+   "previous": "|cffebc56cАрканист|r",
+   "objects": [
+    "A1KG:ahky:0"
+   ]
+  },
+  {
+   "wts": 29563,
+   "key": "R",
+   "previous": "|cffebc56cКомплектование техники — уровень 2|r",
+   "objects": [
+    "w2aQ:arhk:0"
+   ]
+  },
+  {
+   "wts": 29564,
+   "key": "W",
+   "previous": "|cffebc56cКомплектование техники — уровень 3|r",
+   "objects": [
+    "drA1:ahky:0"
+   ]
+  },
+  {
+   "wts": 29565,
+   "key": "W",
+   "previous": "|cffebc56cКомплектование техники — уровень 3|r",
+   "objects": [
+    "drA1:auhk:0"
+   ]
+  },
+  {
+   "wts": 29566,
+   "key": "E",
+   "previous": "|cffebc56cСпециализация: Защита|r",
+   "objects": [
+    "A1MO:ahky:0"
+   ]
+  }
+ ],
+ "checks": {
+  "command": "python scripts/check_hotkey_text.py",
+  "before": 52,
+  "after": 0,
+  "structure": "43190 строк до и после; BOM, CRLF и порядок блоков сохранены; изменены только 52 целевых блока"
+ }
+}
