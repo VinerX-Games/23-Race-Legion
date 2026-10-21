@@ -7070,8 +7070,6 @@ function Strateg_Horde(i, pi, p)
 		
 		--  nnsg (второй набор)
 		if i < 50 then
-			MakeGradeCheckCap(p, FourCC('nntt'), FourCC('R0FE'), 1)
-			MakeGradeCheckCap(p, FourCC('nntt'), FourCC('R0FF'), 1)
 		end
 		
 		if i > 17 then
@@ -7352,6 +7350,7 @@ function startNaga(pi)
 	SetPlayerName(Player(pi), "Стая (" .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "NG"
 	TriggerExecute(gg_trg_NagaStart)
+	NagaApplySubrace(Player(pi), GetRandomInt(0, 1) == 0 and "naga" or "murloc")
 	
 	AiRace[pi] = "Naga"
 	ProbeLogWrite("[AI] startNaga pi=" .. tostring(pi) .. " workers=8nmpe building=1nntt")
@@ -7539,8 +7538,6 @@ function Strateg_Naga(i, pi, p)
 		
 		--  nnsg (второй набор)
 		if i < 50 then
-			MakeGradeCheckCap(p, FourCC('nntt'), FourCC('R0FE'), 1)
-			MakeGradeCheckCap(p, FourCC('nntt'), FourCC('R0FF'), 1)
 		end
 		
 		if i > 17 then
@@ -11274,6 +11271,19 @@ end
 function CustomHudNoteRace(pi, abil)
 	if hudRaceByAbil[abil] then hudRaceAbil[pi] = abil end
 end
+
+function CustomHudRaceName(pi, abil)
+	if abil == FourCC('A1JN') then
+		local branch = HordeW2GetSubrace(pi)
+		if branch == "dark" then return "Тёмная Орда" end
+		if branch == "dragonmaw" then return "Клан Драконьей Пасти" end
+	elseif abil == FourCC('A14O') then
+		return GetPlayerTechCount(Player(pi), FourCC('R0FF'), true) > 0 and "Владычество мурлоков" or "Владычество нагов"
+	elseif abil == FourCC('A0RQ') or abil == FourCC('A1MZ') then
+		return "Драконий Союз"
+	end
+	return GetAbilityName(abil)
+end
 local hudToggleText
 
 local function HudValue(col, raw)
@@ -11365,7 +11375,7 @@ function CustomHudRender()
 		local abil = visibleRow and rowPi[row] ~= nil and HudRaceOf(rowPi[row]) or nil
 		if abil ~= nil then
 			BlzFrameSetTexture(hudRaceIcon[row], BlzGetAbilityIcon(abil), 0, true)
-			BlzFrameSetText(hudRaceTipText[row], "|cffebc56c" .. HudPlain(GetAbilityName(abil)) .. "|r")
+			BlzFrameSetText(hudRaceTipText[row], "|cffebc56c" .. HudPlain(CustomHudRaceName(rowPi[row], abil)) .. "|r")
 		end
 		FrameSetShown(hudRaceIcon[row], abil ~= nil)
 		FrameSetShown(hudStripe[row], visibleRow and row % 2 == 0)
@@ -11632,15 +11642,13 @@ function ShowWelcomePanel()
 		end)
 	end)
 end
+do
 -- ***************************************************************************
 -- *  RacePicker
 -- Панель выбора расы на фреймах вместо командной карты кольца выбора (h0HJ).
--- Пока у игрока есть кольцо, у него локально скрыт стандартный интерфейс
--- (кроме кнопок «Меню» и «Чат») и показана панель. Клик по иконке — синхронное
--- событие фрейма; он вызывает тот же Trig_Race_*_Actions, что и способность
--- выбора, передавая кольцо вместо кастера. Старый путь через способности
--- отключён: при появлении кольца с него снимаются способности выбора и листания
--- страниц (если панель не создалась, кольцо остаётся со старой командной картой).
+-- Родительская раса с ветками открывает второй экран; кольцо остаётся до
+-- окончательного выбора. Клик синхронно вызывает общий старт расы с ключом ветки.
+-- При недоступных шаблонах остаётся старая командная карта кольца.
 local RP_CIRCLE = FourCC('h0HJ')
 local RP_ICON = 0.032          -- сторона иконки
 local RP_GAP = 0.0032          -- зазор между иконками
@@ -11703,6 +11711,22 @@ local RP_RANDOM = { 'A12Q', "Trig_Race_Random_Actions" }
 -- Кнопки страниц старого меню и раса, которой нет в панели (Драконий Союз).
 local RP_OLD_MENU = { 'A0I1', 'A0HZ', 'A1GW', 'A0QR', 'A1MZ' }
 
+local RP_SUBFACTIONS = {
+	A0RQ = { title = "ДРАКОНЫ", choices = {
+		{ key = "union", name = "Драконий Союз", icon = "BTNRedDragon", tip = "Союз красной, зелёной, синей и бронзовой стай. Чёрная стая недоступна.", fn = "Trig_Race_Dragon2_Actions", id = "A1MZ" },
+	} },
+	A14O = { title = "НАГИ И МУРЛОКИ", choices = {
+		{ key = "naga", name = "Владычество нагов", icon = "BTNNagaMyrmidonRoyalGuard", tip = "Открывает наг-воинов, сирен, глубинниц и королевскую гвардию.", fn = "Trig_Race_Nagi_Actions" },
+		{ key = "murloc", name = "Владычество мурлоков", icon = "BTNMurgulBloodGill", tip = "Открывает мурлоков, их заклинателей, героя-защитника и особые улучшения.", fn = "Trig_Race_Nagi_Actions" },
+	} },
+	A1JN = { title = "ОРДА ВТОРОЙ ВОЙНЫ", choices = {
+		{ key = "base", name = "Орда Второй Войны", icon = "BTNGrunt", tip = "Классический состав. Опыт ветеранов: |cffffffff100%|cffced4da. Предел: |cffffffff10|cffced4da уровней.", fn = "Trig_Race_HordeW2_Actions" },
+		{ key = "dark", name = "Тёмная Орда", icon = "BTNChaosWarlock", tip = "Осадные огры, чернокнижники, интенданты, чёрный молодняк и дракониды. Опыт: |cffffffff85%|cffced4da. Предел: |cffffffff12|cffced4da уровней.", fn = "Trig_Race_HordeW2_Actions" },
+		{ key = "dragonmaw", name = "Клан Драконьей Пасти", icon = "BTNRedDragon", tip = "Орочьи копьеметатели, наездники, погонщики и Повелитель драконов. Опыт: |cffffffff115%|cffced4da. Предел: |cffffffff8|cffced4da уровней.", fn = "Trig_Race_HordeW2_Actions" },
+	} },
+}
+local rpPage, rpBuildPage = {}, nil
+
 local rpCircle = {}      -- [pi] = кольцо выбора игрока
 local rpShown = false    -- панель показана локальному игроку
 local rpReady = false    -- панель создана (одинаково у всех клиентов)
@@ -11713,12 +11737,18 @@ local rpPlaced = {}      -- фреймы панели с абсолютной п
 -- ещё и уводятся вниз за экран, а при показе возвращаются. Только локально.
 local function RpPlace(f, point, x, y)
 	FrameSetAbsPoint(f, point, x, y)
-	rpPlaced[#rpPlaced + 1] = f
+	rpPlaced[#rpPlaced + 1] = { frame = f, page = rpBuildPage }
 end
 
 local function RpSetShown(show)
 	BlzFrameSetVisible(rpRoot, show)
-	for i = 1, #rpPlaced do FramePark(rpPlaced[i], not show) end
+	local page = rpPage[GetPlayerId(GetLocalPlayer())]
+	for i = 1, #rpPlaced do
+		local item = rpPlaced[i]
+		local visible = show and item.page == page
+		BlzFrameSetVisible(item.frame, visible)
+		FramePark(item.frame, not visible)
+	end
 end
 
 -- Снять с кольца старое меню выбора, чтобы раса выбиралась только через панель.
@@ -11833,15 +11863,33 @@ local function RpPick(entry)
 		RpRelease(BlzGetTriggerFrame(), p)
 		local u = rpCircle[pi]
 		if not RpValid(u, p) then return end
+		if entry.key == nil and RP_SUBFACTIONS[entry.id] ~= nil then
+			rpPage[pi] = entry.id
+			if GetLocalPlayer() == p then RpSetShown(true) end
+			return
+		end
+		if entry.key ~= nil and rpPage[pi] ~= entry.parent then return end
+		if entry.key == nil and rpPage[pi] ~= nil then return end
+		local act = _G[entry.fn]
+		if act == nil then return end
 		rpCircle[pi] = nil
+		rpPage[pi] = nil
 		RpApply()
 		ProbeLogWrite("[RACEPICK] p=" .. pi .. " abil=" .. entry.id)
 		-- Порядок как у способности: сначала обработчики SPELL_EFFECT, потом SPELL_FINISH.
 		if entry.extra ~= nil and _G[entry.extra] ~= nil then _G[entry.extra](u) end
-		local act = _G[entry.fn]
-		if act ~= nil then act(u) end
+		act(u, entry.key)
 		if CustomHudNoteRace ~= nil then CustomHudNoteRace(pi, entry.abil) end
 	end
+end
+
+local function RpBack()
+	local p = GetTriggerPlayer()
+	local pi = GetPlayerId(p)
+	RpRelease(BlzGetTriggerFrame(), p)
+	if not RpValid(rpCircle[pi], p) then return end
+	rpPage[pi] = nil
+	if GetLocalPlayer() == p then RpSetShown(true) end
 end
 
 local function RpCamera()
@@ -11961,6 +12009,36 @@ function RacePicker_Create()
 	BlzFrameSetTextAlignment(rpHint, TEXT_JUSTIFY_MIDDLE, TEXT_JUSTIFY_CENTER)
 	BlzFrameSetText(rpHint, "|cffffffffПКМ|cffced4da по карте — место высадки, затем раса|r")
 	BlzFrameSetEnable(rpHint, false)
+	local pageId = id + 10
+	for _, parentId in ipairs({ "A0RQ", "A14O", "A1JN" }) do
+		local page = RP_SUBFACTIONS[parentId]
+		rpBuildPage = parentId
+		local heading = BlzCreateFrame("HudBody", rpRoot, 0, pageId)
+		BlzFrameSetSize(heading, 0.6, 0.04)
+		RpPlace(heading, FRAMEPOINT_TOP, 0.4, 0.585)
+		BlzFrameSetTextAlignment(heading, TEXT_JUSTIFY_MIDDLE, TEXT_JUSTIFY_CENTER)
+		BlzFrameSetText(heading, "|cffebc56c" .. page.title .. "|r|n|cffced4daВыберите подфракцию. Выбор бесплатный и окончательный.|r")
+		BlzFrameSetEnable(heading, false)
+		for i = 1, #page.choices do
+			local choice = page.choices[i]
+			local abil = FourCC(choice.id or parentId)
+			local e = { id = choice.id or parentId, abil = abil, fn = choice.fn, key = choice.key, parent = parentId }
+			local bx = 0.4 + (i - (#page.choices + 1) / 2) * 0.17 - RP_ICON / 2
+			pageId = pageId + 1
+			RpButton("ReplaceableTextures\\CommandButtons\\" .. choice.icon .. ".blp",
+				"|cffebc56c" .. choice.name .. "|r|n|cffb99d66ПОДФРАКЦИЯ:|cffced4da " .. choice.tip .. "|r", bx, rowHigh, pageId, RpPick(e))
+			local label = BlzCreateFrame("HudText", rpRoot, 0, pageId + 100)
+			BlzFrameSetSize(label, 0.16, 0.026)
+			RpPlace(label, FRAMEPOINT_TOP, bx + RP_ICON / 2, rowHigh - 0.004)
+			BlzFrameSetTextAlignment(label, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+			BlzFrameSetText(label, "|cffebc56c" .. choice.name .. "|r")
+			BlzFrameSetEnable(label, false)
+		end
+		RpButton("ReplaceableTextures\\CommandButtons\\BTNReplay-Loop.blp", "|cffebc56cНазад|r|n|cffced4daВернуться к выбору расы.|r", 0.4 - RP_ICON - RP_GAP / 2, headY, pageId + 1, RpBack)
+		RpButton(RP_CAM_ICON, "|cffebc56cК месту высадки|r|n|cffced4daПеренести камеру к кольцу.|r", 0.4 + RP_GAP / 2, headY, pageId + 2, RpCamera)
+		pageId = pageId + 3
+	end
+	rpBuildPage = nil
 
 	RpSetShown(false)
 	rpReady = true
@@ -11978,6 +12056,7 @@ end
 function RacePickerAdopt(u)
 	if u == nil or GetUnitTypeId(u) ~= RP_CIRCLE then return end
 	rpCircle[GetPlayerId(GetOwningPlayer(u))] = u
+	rpPage[GetPlayerId(GetOwningPlayer(u))] = nil
 	if not rpReady then return end
 	RpStripOldMenu(u)
 	RpApply()
@@ -11990,6 +12069,8 @@ function RacePicker_Init()
 		DestroyTimer(delay)
 		ProbeStep("RacePicker_Create", RacePicker_Create)
 	end)
+end
+
 end
 -- ***************************************************************************
 -- *  HostPanel
@@ -12764,7 +12845,9 @@ end
 ---@return integer
 function HordeW2GetVeterancyCap(pOrPi)
 	local subrace = HordeW2GetSubrace(pOrPi)
-	if subrace == "dragonmaw" then
+	if subrace == "dark" then
+		return 12
+	elseif subrace == "dragonmaw" then
 		return 8
 	end
 	return 10
@@ -12774,17 +12857,17 @@ end
 ---@return nothing
 function HordeW2ApplyDragonPreset(p)
 	local subrace = HordeW2GetSubrace(p)
+	SetPlayerTechResearched(p, FourCC('xdR1'), subrace == "dark" and 1 or 0)
+	SetPlayerTechResearched(p, FourCC('xdR2'), subrace == "dragonmaw" and 1 or 0)
+	for _, id in ipairs({ 'w291', 'w292', 'w293' }) do SetPlayerTechResearched(p, FourCC(id), 0) end
+	for _, id in ipairs({ 'w294', 'w297', 'w295' }) do
+		SetPlayerAbilityAvailable(p, FourCC(id), subrace == "base")
+	end
 	if subrace == "dark" then
 		SetPlayerTechResearchedSwap(FourCC('w292'), 1, p)
 		SetPlayerAbilityAvailableBJ(true, FourCC('w290'), p)
-		SetPlayerAbilityAvailableBJ(false, FourCC('w294'), p)
-		SetPlayerAbilityAvailableBJ(false, FourCC('w297'), p)
-		SetPlayerAbilityAvailableBJ(false, FourCC('w295'), p)
 	elseif subrace == "dragonmaw" then
 		SetPlayerTechResearchedSwap(FourCC('w293'), 1, p)
-		SetPlayerAbilityAvailableBJ(false, FourCC('w294'), p)
-		SetPlayerAbilityAvailableBJ(false, FourCC('w297'), p)
-		SetPlayerAbilityAvailableBJ(false, FourCC('w295'), p)
 	end
 end
 
@@ -12793,49 +12876,29 @@ end
 function HordeW2ApplySubraceRoster(p)
 	local subrace = HordeW2GetSubrace(p)
 
-	SetPlayerTechMaxAllowedSwap(FourCC('xd01'), 0, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('xd02'), 0, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('xd03'), 0, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('xd04'), 0, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('xd05'), 0, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('xd06'), 0, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('xd07'), 0, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('W200'), 1, p)
-
-	SetPlayerTechMaxAllowedSwap(FourCC('w201'), -1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('w202'), -1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('w203'), -1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('w205'), -1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('w206'), -1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('w213'), -1, p)
-
-	-- Heroes (uppercase rawcodes). All branches keep W200 + W201 (Cho'gall).
-	-- The 3rd slot: W202 Troll Leader on base/dragonmaw, W203 Maim on Dark Horde
-	-- (full unit swap, same altar card slot — never both visible).
-	SetPlayerTechMaxAllowedSwap(FourCC('W201'), 1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('W202'), 1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('W203'), 0, p)
-
+	local common = { 'w201', 'w202', 'w203', 'w205', 'w206', 'w209', 'w211', 'w213' }
+	local unique = { 'xd01', 'xd02', 'xd03', 'xd04', 'xd05', 'xd06', 'xd07', 'xd08', 'xd09', 'xd0A' }
+	for _, id in ipairs(common) do SetPlayerTechMaxAllowed(p, FourCC(id), -1) end
+	for _, id in ipairs(unique) do SetPlayerTechMaxAllowed(p, FourCC(id), 0) end
+	for _, id in ipairs({ 'W200', 'W201', 'W202' }) do SetPlayerTechMaxAllowed(p, FourCC(id), 1) end
+	SetPlayerTechMaxAllowed(p, FourCC('W203'), 0)
+	SetPlayerTechMaxAllowed(p, FourCC('W204'), 0)
+	SetPlayerTechMaxAllowed(p, FourCC('w212'), subrace == "dark" and -1 or 0)
+	SetPlayerTechMaxAllowed(p, FourCC('w213'), 0)
+	local disabled, enabled = {}, {}
 	if subrace == "dark" then
-		-- Dark Horde replaces the Troll Leader with Maim Blackhand.
-		SetPlayerTechMaxAllowedSwap(FourCC('W202'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('W203'), 1, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('w202'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('w205'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('w206'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('w213'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('xd01'), -1, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('xd02'), -1, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('xd03'), -1, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('xd07'), -1, p)
+		disabled = { 'w201', 'w202', 'w206', 'w211', 'w213' }
+		enabled = { 'xd01', 'xd02', 'xd03', 'xd07', 'xd08' }
+		SetPlayerTechMaxAllowed(p, FourCC('W202'), 0)
+		SetPlayerTechMaxAllowed(p, FourCC('W203'), 1)
 	elseif subrace == "dragonmaw" then
-		SetPlayerTechMaxAllowedSwap(FourCC('w201'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('W203'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('w205'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('xd04'), -1, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('xd05'), -1, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('xd06'), -1, p)
+		disabled = { 'w201', 'w202', 'w203', 'w205', 'w209', 'w211', 'w213' }
+		enabled = { 'xd04', 'xd05', 'xd06', 'xd09', 'xd0A' }
+		SetPlayerTechMaxAllowed(p, FourCC('W202'), 0)
+		SetPlayerTechMaxAllowed(p, FourCC('W204'), 1)
 	end
+	for _, id in ipairs(disabled) do SetPlayerTechMaxAllowed(p, FourCC(id), 0) end
+	for _, id in ipairs(enabled) do SetPlayerTechMaxAllowed(p, FourCC(id), -1) end
 end
 
 -- *  XpLevelW2
@@ -12864,7 +12927,7 @@ function AddXp(u, addXp)
 			BlzSetUnitBaseDamage(u, MathRound(BlzGetUnitBaseDamage(u, 1) * 1.04), 1)
 			xp = xp - (100 + 25 * lvl)
 			lvl = lvl + 1
-			SetUnitAbilityLevel(u, FourCC('w2a0'), lvl)
+			SetUnitAbilityLevel(u, FourCC('w2a0'), lvl + 1)
 			if lvl >= maxLvl then
 				xp = 0
 				break
@@ -21264,13 +21327,7 @@ end
 -- Trigger: Race Dragon O
 --===========================================================================
 function Trig_Race_Dragon_O_Actions(caster)
-    caster = caster or GetSpellAbilityUnit()
-    udg_LocalPosition2=GetUnitLoc(caster)
-    CreateNUnitsAtLoc(1, FourCC('dra1'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R0BY'), 1, GetOwningPlayer(caster))
-    RemoveUnit(caster)
-    RemoveLocation(udg_LocalPosition2)
-    DragonsOn()
+    Trig_Race_Dragon2_Actions(caster)
 end
 --===========================================================================
 function InitTrig_Race_Dragon_O()
@@ -21286,8 +21343,11 @@ end
 --===========================================================================
 function Trig_Race_Dragon2_Actions(caster)
     caster = caster or GetSpellAbilityUnit()
+    local p = GetOwningPlayer(caster)
+    SetPlayerTechResearchedSwap(FourCC('R0BY'), 1, p)
+    DragonApplySubrace(p)
     udg_LocalPosition2=GetUnitLoc(caster)
-    CreateNUnitsAtLoc(5, FourCC('o01D'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(5, FourCC('o01D'), p, udg_LocalPosition2, bj_UNIT_FACING)
     --call SetPlayerTechResearchedSwap( 'R0BY', 1, GetOwningPlayer(caster) )
     RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
@@ -21727,8 +21787,10 @@ end
 --===========================================================================
 -- Trigger: Race Nagi
 --===========================================================================
-function Trig_Race_Nagi_Actions(caster)
+function Trig_Race_Nagi_Actions(caster, branch)
     caster = caster or GetSpellAbilityUnit()
+    local p = GetOwningPlayer(caster)
+    NagaApplySubrace(p, branch or "naga")
     udg_LocalPosition2=GetUnitLoc(caster)
     CreateNUnitsAtLoc(5, FourCC('nmpe'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
     SetPlayerTechResearchedSwap(FourCC('R0FS'), 1, GetOwningPlayer(caster))
@@ -21946,24 +22008,25 @@ end
 --===========================================================================
 -- Trigger: Race HordeW2
 --===========================================================================
-function Trig_Race_HordeW2_Actions(caster)
+function Trig_Race_HordeW2_Actions(caster, branch)
     caster = caster or GetSpellAbilityUnit()
+    local p = GetOwningPlayer(caster)
     udg_LocalPosition2=GetUnitLoc(caster)
-    HordeW2SetSubrace(GetOwningPlayer(caster), "base")
-    CreateNUnitsAtLoc(5, FourCC('w200'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    HordeW2SetSubrace(p, branch or "base")
+    CreateNUnitsAtLoc(5, FourCC('w200'), p, udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(caster)
     --call ConditionalTriggerExecute( gg_trg_AllyOn )
-    SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, GetOwningPlayer(caster))
-    SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, GetOwningPlayer(caster))
-    SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, p)
     
     --call SetPlayerTechResearchedSwap( 'R0J5', 1, GetOwningPlayer(caster) )
     --call Pstart(GetOwningPlayer(caster))
     RemoveLocation(udg_LocalPosition2)
     HordeW2On()
-    HordeW2ApplySubraceRoster(GetOwningPlayer(caster))
-    HordeW2ApplyDragonPreset(GetOwningPlayer(caster))
-    HordeW2EnableSubraceChoice(GetOwningPlayer(caster))
+    HordeW2ApplySubraceRoster(p)
+    HordeW2ApplyDragonPreset(p)
+    HordeW2LockSubraceChoice(p)
 end
 --===========================================================================
 function InitTrig_Race_HordeW2()
@@ -22000,9 +22063,9 @@ function Trig_Race_Random_Actions(caster)
     --???????
     if racechance == incN() then
         
-        CreateNUnitsAtLoc(1, FourCC('dra1'), p, l, bj_UNIT_FACING)
         SetPlayerTechResearchedSwap(FourCC('R0BY'), 1, p)
-        DragonsOn()
+        DragonApplySubrace(p)
+        CreateNUnitsAtLoc(5, FourCC('o01D'), p, l, bj_UNIT_FACING)
     end
     --??????????
     if racechance == incN() then
@@ -22134,6 +22197,7 @@ function Trig_Race_Random_Actions(caster)
     end
     
     if racechance == incN() then
+        NagaApplySubrace(p, GetRandomInt(0, 1) == 0 and 'naga' or 'murloc')
         CreateNUnitsAtLoc(5, FourCC('nmpe'), p, l, bj_UNIT_FACING)
         SetPlayerTechResearchedSwap(FourCC('R0FS'), 1, p)
         --call SetPlayerTechResearchedSwap( 'R0KZ', 1, p )
@@ -22168,7 +22232,7 @@ function Trig_Race_Random_Actions(caster)
     
     -- Horde W2
     if racechance == incN() then
-        HordeW2SetSubrace(p, "base")
+        HordeW2SetSubrace(p, ({ "base", "dark", "dragonmaw" })[GetRandomInt(1, 3)])
         CreateNUnitsAtLoc(5, FourCC('w200'), p, l, bj_UNIT_FACING)
         SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, p)
         SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
@@ -22176,7 +22240,7 @@ function Trig_Race_Random_Actions(caster)
         HordeW2On()
         HordeW2ApplySubraceRoster(p)
         HordeW2ApplyDragonPreset(p)
-        HordeW2EnableSubraceChoice(p)
+        HordeW2LockSubraceChoice(p)
     end
     --Pandarens
     if racechance == incN() then
@@ -27655,52 +27719,72 @@ end
 function Trig_AlmostDiyW2_Conditions()
     return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('w2a0')) > 0
 end
+function HordeW2IsRescuer(u, p)
+    return GetOwningPlayer(u) == p and UnitAlive(u) and
+        (GetUnitAbilityLevel(u, FourCC('w2a1')) > 0 or
+         GetUnitAbilityLevel(u, FourCC('xdA7')) > 0 or
+         GetUnitAbilityLevel(u, FourCC('xdA8')) > 0)
+end
 function FZepp()
-    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('w2a1')) > 0 and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and UnitAlive(GetFilterUnit()) --and GetUnitUserData(GetFilterUnit())<6
+    return HordeW2IsRescuer(GetFilterUnit(), udg_LocalPlayer)
 end
 function Trig_AlmostDiyW2_Actions()
-    local u= GetTriggerUnit()
-    local Damage= GetEventDamage()
-    local hp= GetUnitState(u, UNIT_STATE_LIFE)
-    local rescueBonus=0
-    local Zepp
-    local u2
-    local g
-    
-    
-    
-    
-    if HordeW2GetSubrace(GetOwningPlayer(u)) == "dragonmaw" then
-        rescueBonus = 1
+    local u = GetTriggerUnit()
+    local damage = GetEventDamage()
+    local hp = GetWidgetLife(u)
+    local uh = GetHandleId(u)
+    local d = UHData[uh] or { lvl = 0, xp = 0 }
+    if d.rescueGrace then
+        BlzSetEventDamage(0)
+        return
     end
-    if hp - Damage < 1 and Random(5 + GetPlayerTechCount(GetOwningPlayer(u), FourCC('w2rq'), true) + rescueBonus , 10) then
-        
-        udg_LocalPlayer=GetOwningPlayer(u)
-        Zepp=Condition(FZepp)
-        g=CreateGroup()
-        GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 1000, Zepp, 5)
-        
-        
-        u2=BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
-        if u2 ~= nil and UnitAlive(u2) then
-            
-            RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\FlakCannons\\FlakTarget.mdl", GetUnitX(u), GetUnitY(u)) , 1)
-            SetUnitState(u, UNIT_STATE_LIFE, hp + Damage)
-            SetUnitPosition(u, GetUnitX(u2), GetUnitY(u2))
-            IssueTargetOrder(u, "smart", u2)
+    if damage <= 0 or hp - damage >= 1 then return end
+    local p = GetOwningPlayer(u)
+    local branch = HordeW2GetSubrace(p)
+    if d.rescueCooldown then return end
+    local chance = 5 + GetPlayerTechCount(p, FourCC('w2rq'), true)
+    if branch == "dragonmaw" then chance = chance + 1 end
+    if not Random(chance, 10) then return end
+    local g = CreateGroup()
+    local rescuers = {}
+    GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 1000, nil)
+    while true do
+        local support = FirstOfGroup(g)
+        if support == nil then break end
+        GroupRemoveUnit(g, support)
+        if support ~= u and HordeW2IsRescuer(support, p) then
+            rescuers[#rescuers + 1] = support
         end
-        
-        DestroyGroup(g)
-        g=nil
-        u2=nil
     end
-    
-    
-    
-    
-    u=nil
-    
+    DestroyGroup(g)
+    if #rescuers == 0 then return end
+    local support = rescuers[GetRandomInt(1, #rescuers)]
+    if branch == "dark" then
+        BlzSetEventDamage(0)
+        SetWidgetLife(u, math.max(hp, BlzGetUnitMaxHP(u) * 0.15))
+    else
+        BlzSetEventDamage(0)
+        SetUnitPosition(u, GetUnitX(support), GetUnitY(support))
+    end
+    RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\FlakCannons\\FlakTarget.mdl", GetUnitX(u), GetUnitY(u)), 1)
+    d.rescueGrace = true
+    UHData[uh] = d
+    local graceTimer = CreateTimer()
+    TimerStart(graceTimer, 0, false, function()
+        if UHData[uh] == d then d.rescueGrace = nil end
+        DestroyTimer(graceTimer)
+    end)
+    if branch ~= "base" then
+        d.rescueCooldown = true
+        UHData[uh] = d
+        local timer = CreateTimer()
+        TimerStart(timer, 45, false, function()
+            if UHData[uh] == d then d.rescueCooldown = nil end
+            DestroyTimer(timer)
+        end)
+    end
 end
+
 --===========================================================================
 function InitTrig_AlmostDiyW2()
     gg_trg_AlmostDiyW2=CreateTrigger()
@@ -27747,12 +27831,13 @@ function Trig_DiyGoblinW2_Actions()
     if Random(3 , 4) then
         
         udg_LocalPlayer=GetOwningPlayer(u)
-        Zepp=Condition(FZepp)
+        Zepp=CachedFilter(FZepp)
         g=CreateGroup()
         GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 1000, Zepp, 5)
         
         
-        u2=BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
+        local size = BlzGroupGetSize(g)
+        if size > 0 then u2=BlzGroupUnitAt(g, GetRandomInt(0, size - 1)) end
         if u2 ~= nil and UnitAlive(u2) then
                    
             RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\FlakCannons\\FlakTarget.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
@@ -27762,7 +27847,7 @@ function Trig_DiyGoblinW2_Actions()
     end
     
     
-    DestroyGroup(g)
+    if g ~= nil then DestroyGroup(g) end
     g=nil
     u=nil
     u2=nil
@@ -28202,88 +28287,10 @@ function InitTrig_Duel()
     end)
 end
 --===========================================================================
--- HordeW2 subrace selection (player-facing, Naga-style mutually exclusive research)
---   xdR1 = Темная Орда (dark)   xdR2 = Клан Драконьей Пасти (dragonmaw)
---===========================================================================
-
--- Offer both subrace researches to a player (default branch stays "base").
----@param p player
----@return nothing
-function HordeW2EnableSubraceChoice(p)
-    HordeW2ApplySubraceRoster(p)
-    SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 1, p)
-    SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 1, p)
-end
-
--- Lock both subrace researches once a branch is committed.
----@param p player
----@return nothing
+-- HordeW2 branch is committed by the race picker before workers are spawned.
 function HordeW2LockSubraceChoice(p)
-    SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 0, p)
-    SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 0, p)
-end
-
--- RESEARCH_START: starting one branch hides the other so only one can be in progress.
-function Trig_HordeW2SubStart_Actions()
-    local r= GetResearched()
-    local p= GetOwningPlayer(GetTriggerUnit())
-    if r == FourCC('xdR1') then
-        SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 0, p)
-    elseif r == FourCC('xdR2') then
-        SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 0, p)
-    end
-end
-function InitTrig_HordeW2SubStart()
-    gg_trg_HordeW2SubStart=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_HordeW2SubStart, EVENT_PLAYER_UNIT_RESEARCH_START)
-    TriggerAddAction(gg_trg_HordeW2SubStart, function()
-        local r= GetResearched()
-        if r ~= FourCC('xdR1') and r ~= FourCC('xdR2') then return end
-        Trig_HordeW2SubStart_Actions()
-    end)
-end
--- RESEARCH_CANCEL: cancelling re-opens the other branch.
-function Trig_HordeW2SubCancel_Actions()
-    local r= GetResearched()
-    local p= GetOwningPlayer(GetTriggerUnit())
-    if r == FourCC('xdR1') then
-        SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 1, p)
-    elseif r == FourCC('xdR2') then
-        SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 1, p)
-    end
-end
-function InitTrig_HordeW2SubCancel()
-    gg_trg_HordeW2SubCancel=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_HordeW2SubCancel, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
-    TriggerAddAction(gg_trg_HordeW2SubCancel, function()
-        local r= GetResearched()
-        if r ~= FourCC('xdR1') and r ~= FourCC('xdR2') then return end
-        Trig_HordeW2SubCancel_Actions()
-    end)
-end
--- RESEARCH_FINISH: commit the branch — swap roster, apply dragon preset, lock the choice.
-function Trig_HordeW2SubFinish_Actions()
-    local r= GetResearched()
-    local p= GetOwningPlayer(GetTriggerUnit())
-    if r == FourCC('xdR1') then
-        HordeW2SetSubrace(p, "dark")
-    elseif r == FourCC('xdR2') then
-        HordeW2SetSubrace(p, "dragonmaw")
-    else
-        return
-    end
-    HordeW2ApplySubraceRoster(p)
-    HordeW2ApplyDragonPreset(p)
-    HordeW2LockSubraceChoice(p)
-end
-function InitTrig_HordeW2SubFinish()
-    gg_trg_HordeW2SubFinish=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_HordeW2SubFinish, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    TriggerAddAction(gg_trg_HordeW2SubFinish, function()
-        local r= GetResearched()
-        if r ~= FourCC('xdR1') and r ~= FourCC('xdR2') then return end
-        Trig_HordeW2SubFinish_Actions()
-    end)
+    SetPlayerTechMaxAllowed(p, FourCC('xdR1'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('xdR2'), 0)
 end
 
 --===========================================================================
@@ -46296,6 +46303,28 @@ end
 --===========================================================================
 -- Trigger: NagaStart
 --===========================================================================
+NagaSubraceByPlayer = NagaSubraceByPlayer or {}
+
+function NagaApplySubrace(p, branch)
+    branch = branch == "murloc" and "murloc" or "naga"
+    NagaSubraceByPlayer[GetPlayerId(p)] = branch
+    local murloc = branch == "murloc"
+    SetPlayerTechResearched(p, FourCC('R0FE'), murloc and 0 or 1)
+    SetPlayerTechResearched(p, FourCC('R0FF'), murloc and 1 or 0)
+    for _, id in ipairs({ 'n053', 'n052', 'n050', 'n054' }) do
+        SetPlayerTechMaxAllowed(p, FourCC(id), murloc and -1 or 0)
+    end
+    for _, id in ipairs({ 'n051', 'n057', 'nnsw', 'nmyr', 'nnrg' }) do
+        SetPlayerTechMaxAllowed(p, FourCC(id), murloc and 0 or -1)
+    end
+    SetPlayerTechMaxAllowed(p, FourCC('H0OZ'), murloc and 1 or 0)
+    SetPlayerTechMaxAllowed(p, FourCC('H0JU'), murloc and 0 or 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0FQ'), murloc and 3 or 0)
+    SetPlayerTechResearched(p, FourCC('R0KZ'), murloc and 0 or 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0FE'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0FF'), 0)
+end
+
 function NagaStartLimits_act()
     SetPlayerTechMaxAllowedSwap(FourCC('n054'), 0, GetEnumPlayer())
     SetPlayerTechMaxAllowedSwap(FourCC('n053'), 0, GetEnumPlayer())
@@ -46316,6 +46345,10 @@ function NagaStartLimits_act()
  
     --Murloc Grades
     SetPlayerTechMaxAllowedSwap(FourCC('R0FQ'), 0, GetEnumPlayer())
+    local p = GetEnumPlayer()
+    if NagaSubraceByPlayer[GetPlayerId(p)] ~= nil then
+        NagaApplySubrace(p, NagaSubraceByPlayer[GetPlayerId(p)])
+    end
     
 end
 function NagaStartLimits()
@@ -46350,117 +46383,6 @@ function InitTrig_Coatl()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Coatl, EVENT_PLAYER_UNIT_TRAIN_FINISH)
     TriggerAddCondition(gg_trg_Coatl, Condition(Trig_Coatl_Conditions))
     TriggerAddAction(gg_trg_Coatl, Trig_Coatl_Actions)
-end
---===========================================================================
--- Trigger: MurlokCan
---===========================================================================
-function Trig_MurlokCan_Conditions()
-    return GetResearched() == FourCC('R0FF')
-end
-function Trig_MurlokCan_Actions()
-    SetPlayerTechMaxAllowedSwap(FourCC('R0FE'), 1, GetOwningPlayer(GetTriggerUnit()))
-end
---===========================================================================
-function InitTrig_MurlokCan()
-    gg_trg_MurlokCan=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_MurlokCan, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
-    TriggerAddCondition(gg_trg_MurlokCan, Condition(Trig_MurlokCan_Conditions))
-    TriggerAddAction(gg_trg_MurlokCan, Trig_MurlokCan_Actions)
-end
---===========================================================================
--- Trigger: MurlokBeg
---===========================================================================
-function Trig_MurlokBeg_Conditions()
-    return GetResearched() == FourCC('R0FF')
-end
-function Trig_MurlokBeg_Actions()
-    SetPlayerTechMaxAllowedSwap(FourCC('R0FE'), 0, GetOwningPlayer(GetTriggerUnit()))
-end
---===========================================================================
-function InitTrig_MurlokBeg()
-    gg_trg_MurlokBeg=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_MurlokBeg, EVENT_PLAYER_UNIT_RESEARCH_START)
-    TriggerAddCondition(gg_trg_MurlokBeg, Condition(Trig_MurlokBeg_Conditions))
-    TriggerAddAction(gg_trg_MurlokBeg, Trig_MurlokBeg_Actions)
-end
---===========================================================================
--- Trigger: MurlocFin
---===========================================================================
-function Trig_MurlocFin_Conditions()
-    return GetResearched() == FourCC('R0FF')
-end
-function Trig_MurlocFin_Actions()
-    SetPlayerTechMaxAllowedSwap(FourCC('n053'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('n052'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('n050'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('n054'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    
-    
-    SetPlayerTechMaxAllowedSwap(FourCC('H0OZ'), 1, GetOwningPlayer(GetTriggerUnit())) --HERO TANK
-    
-    SetPlayerTechMaxAllowedSwap(FourCC('R0FQ'), 3, GetOwningPlayer(GetTriggerUnit()))
-end
---===========================================================================
-function InitTrig_MurlocFin()
-    gg_trg_MurlocFin=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_MurlocFin, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    TriggerAddCondition(gg_trg_MurlocFin, Condition(Trig_MurlocFin_Conditions))
-    TriggerAddAction(gg_trg_MurlocFin, Trig_MurlocFin_Actions)
-end
---===========================================================================
--- Trigger: Nagi
---===========================================================================
-function Trig_Nagi_Conditions()
-    return GetResearched() == FourCC('R0FE')
-end
-function Trig_Nagi_Actions()
-    SetPlayerTechMaxAllowedSwap(FourCC('R0FF'), 1, GetOwningPlayer(GetTriggerUnit()))
-end
---===========================================================================
-function InitTrig_Nagi()
-    gg_trg_Nagi=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Nagi, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
-    TriggerAddCondition(gg_trg_Nagi, Condition(Trig_Nagi_Conditions))
-    TriggerAddAction(gg_trg_Nagi, Trig_Nagi_Actions)
-end
---===========================================================================
--- Trigger: Nagi2
---===========================================================================
-function Trig_Nagi2_Conditions()
-    return GetResearched() == FourCC('R0FE')
-end
-function Trig_Nagi2_Actions()
-    SetPlayerTechMaxAllowedSwap(FourCC('R0FF'), 0, GetOwningPlayer(GetTriggerUnit()))
-end
---===========================================================================
-function InitTrig_Nagi2()
-    gg_trg_Nagi2=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Nagi2, EVENT_PLAYER_UNIT_RESEARCH_START)
-    TriggerAddCondition(gg_trg_Nagi2, Condition(Trig_Nagi2_Conditions))
-    TriggerAddAction(gg_trg_Nagi2, Trig_Nagi2_Actions)
-end
---===========================================================================
--- Trigger: NagaFinishCode
---===========================================================================
-function Trig_NagaFinishCode_Conditions()
-    return GetResearched() == FourCC('R0FE')
-end
-function Trig_NagaFinishCode_Actions()
-    SetPlayerTechMaxAllowedSwap(FourCC('n051'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('n057'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('nnsw'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('nmyr'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('nnrg'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    
-    SetPlayerTechResearchedSwap(FourCC('R0KZ'), 1, GetOwningPlayer(GetTriggerUnit())) --Illidary or Nagi
-    SetPlayerTechMaxAllowedSwap(FourCC('H0JU'), 1, GetOwningPlayer(GetTriggerUnit())) --HERO
-end
---===========================================================================
-function InitTrig_NagaFinishCode()
-    gg_trg_NagaFinishCode=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_NagaFinishCode, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    TriggerAddCondition(gg_trg_NagaFinishCode, Condition(Trig_NagaFinishCode_Conditions))
-    TriggerAddAction(gg_trg_NagaFinishCode, Trig_NagaFinishCode_Actions)
 end
 --===========================================================================
 -- Trigger: VaishBuria
@@ -48646,11 +48568,14 @@ end
 --===========================================================================
 -- Trigger: DragonUnionStart
 --===========================================================================
+function DragonApplySubrace(p)
+    SetPlayerTechMaxAllowed(p, FourCC('n044'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0A7'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0AZ'), 0)
+    DragonsOn()
+end
 function Trig_DragonUnionStart_Actions()
-    gPlayer=GetOwningPlayer(GetTriggerUnit())
-    SetPlayerTechMaxAllowed(gPlayer, FourCC('n044'), 0)
-    SetPlayerTechMaxAllowed(gPlayer, FourCC('R0A7'), 0)
-    SetPlayerTechMaxAllowed(gPlayer, FourCC('R0AZ'), 0)
+    DragonApplySubrace(GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_DragonUnionStart()
@@ -48708,6 +48633,7 @@ function InitTrig_TrainGreenSpellSteal()
     TriggerAddCondition(gg_trg_TrainGreenSpellSteal, Condition(Trig_TrainGreenSpellSteal_Conditions))
     TriggerAddAction(gg_trg_TrainGreenSpellSteal, Trig_TrainGreenSpellSteal_Actions)
 end
+
 --===========================================================================
 -- Trigger: Blood1 Copy 3
 --===========================================================================
@@ -58481,12 +58407,6 @@ RegisterAiRace("Naga", {
 
         steps = {
 
-            { before = 50, action = "research", rows = {
-
-                {FourCC('nntt'), FourCC('R0FE'), 1}, {FourCC('nntt'), FourCC('R0FF'), 1},
-
-            }},
-
             { at = 17, action = "research", rows = {
 
                 {FourCC('h0JW'), FourCC('R0FD'), 6}, {FourCC('h0JW'), FourCC('R0FH'), 6}, {FourCC('h0JW'), FourCC('Rnat'), 6}, {FourCC('h0JW'), FourCC('Rnam'), 6}, {FourCC('h0JW'), FourCC('Rnsb'), 6},
@@ -59663,15 +59583,19 @@ RegisterAiRace("HordeW2", {
 
         { FourCC('w20t'), 8, 6, gate = "tier2" },
 
-        { FourCC('w210'), 4, 4, gate = "tier2" },
+        { FourCC('w210'), 4, 4, gate = "tier3" },
 
-        { FourCC('w212'), 4, 4, gate = "tier2" },
+        { FourCC('w212'), 4, 4, gate = "black_roost" },
 
         { FourCC('w20u'), 25, 1 },
 
     },
 
     gates = {
+        tier3 = function(pi) return getAiCount(pi, FourCC('w20e')) >= 1 end,
+        black_roost = function(pi)
+            return getAiCount(pi, FourCC('w20e')) >= 1 and HordeW2GetSubrace(pi) == "dark"
+        end,
 
         tier2 = function(pi)
 
@@ -59693,10 +59617,6 @@ RegisterAiRace("HordeW2", {
 
         not_dragonmaw = function(pi)
             return HordeW2GetSubrace(pi) ~= "dragonmaw"
-        end,
-
-        not_dark = function(pi)
-            return HordeW2GetSubrace(pi) ~= "dark"
         end,
 
     },
@@ -59730,8 +59650,8 @@ RegisterAiRace("HordeW2", {
         [FourCC('w20i')] = {
 
             {FourCC('w201'), 2, gate = "base"},
-            {FourCC('w201'), 1, gate = "dark"},
-            {FourCC('xd05'), 3, gate = "dragonmaw"},
+            {FourCC('xd08'), 2, gate = "dark"},
+            {FourCC('xd0A'), 2, gate = "dragonmaw"},
             {FourCC('w206'), 3, gate = "base"},
             {FourCC('xd02'), 4, gate = "dark"},
             {FourCC('w206'), 1, gate = "dragonmaw"},
@@ -59743,15 +59663,13 @@ RegisterAiRace("HordeW2", {
 
         [FourCC('w20t')] = {
 
-            {FourCC('w205'), 3, gate = "base"},
+            {FourCC('w205'), 3, gate = "not_dragonmaw"},
             {FourCC('xd01'), 4, gate = "dark"},
             {FourCC('xd06'), 4, gate = "dragonmaw"},
-            {FourCC('w209'), 2, gate = "tier2"},
+            {FourCC('w209'), 2, gate = "base"},
             {FourCC('w209'), 3, gate = "dark"},
-            {FourCC('w209'), 1, gate = "dragonmaw"},
+            {FourCC('xd09'), 3, gate = "dragonmaw"},
             {FourCC('w211'), 3, gate = "base"},
-            {FourCC('w211'), 2, gate = "dark"},
-            {FourCC('w211'), 4, gate = "dragonmaw"},
 
         },
 
@@ -59759,21 +59677,20 @@ RegisterAiRace("HordeW2", {
 
             {FourCC('W200'), 1, limit = 1},
             {FourCC('W201'), 1, limit = 1},
-            {FourCC('W202'), 1, gate = "not_dark", limit = 1},
+            {FourCC('W202'), 1, gate = "base", limit = 1},
             {FourCC('W203'), 1, gate = "dark", limit = 1},
+            {FourCC('W204'), 1, gate = "dragonmaw", limit = 1},
 
         },
 
         [FourCC('w210')] = {
             {FourCC('w202'), 2, gate = "base"},
             {FourCC('xd07'), 2, gate = "dark"},
-            {FourCC('w202'), 4, gate = "dragonmaw"},
+            {FourCC('xd05'), 4, gate = "dragonmaw"},
         },
 
         [FourCC('w212')] = {
-            {FourCC('w213'), 2, gate = "base"},
             {FourCC('xd03'), 4, gate = "dark"},
-            {FourCC('w213'), 1, gate = "dragonmaw"},
         },
 
         worker = { id = FourCC('w200'), cap = 20, from = { FourCC('w20q'), FourCC('w20w'), FourCC('w20e') } },
@@ -59852,21 +59769,20 @@ RegisterAiRace("HordeW2", {
         },
 
         [FourCC('xd01')] = {
-
-            { order = "bloodlust", chance = 4, type = "target" },
-
-            { order = "lightningshield", chance = 5, type = "target" },
-
+            { order = "curse", chance = 4, type = "target" },
+            { order = "cripple", chance = 4, type = "target" },
         },
-
         [FourCC('xd06')] = {
-
-            { order = "bloodlust", chance = 4, type = "target" },
-
+            { order = "ensnare", chance = 4, type = "target" },
             { order = "purge", chance = 5, type = "target" },
-
         },
-
+        [FourCC('xd09')] = {
+            { order = "firebolt", chance = 4, type = "target" },
+            { order = "innerfire", chance = 4, type = "ally" },
+        },
+        [FourCC('W204')] = {
+            { order = "flamestrike", chance = 4, type = "point" },
+        },
         [FourCC('w209')] = {
 
             { order = "frostarmor", chance = 4, type = "target" },
@@ -59895,17 +59811,23 @@ RegisterAiRace("HordeW2", {
 
         [FourCC('xd05')] = {
 
-            { order = "ensnare", chance = 4, type = "target" },
+            { order = "breathoffire", chance = 4, type = "point" },
 
+        },
+        [FourCC('xd07')] = {
+            { order = "breathoffire", chance = 4, type = "point" },
         },
 
     },
 
+    getLvlData = {
+        [FourCC('W204')] = { ult = FourCC('AOre'), skills = { FourCC('AHfs'), FourCC('AOae'), FourCC('AOcr') } },
+    },
     join = Join_HordeW2,
 
     wall = FourCC('w20u'),
 
-    shipyard = FourCC('h0HO'),  -- orc worker (opeo) -> orc/goblin Верфь
+    shipyard = FourCC('w218'),
 
 
     diplomat = "pragmatic",
@@ -59936,6 +59858,10 @@ RegisterAiRace("HordeW2", {
         [FourCC('xd03')] = 0.0500,
         [FourCC('xd05')] = 0.0500,
         [FourCC('xd07')] = 0.0400,
+        [FourCC('xd08')] = 0.0400,
+        [FourCC('xd09')] = 0.0500,
+        [FourCC('xd0A')] = 0.0400,
+        [FourCC('W204')] = 0.0227,
         [FourCC('w201')] = 0.0455,
         [FourCC('w207')] = 0.0455,
         [FourCC('w209')] = 0.0455,
@@ -64985,6 +64911,7 @@ function startDragons(pi)
     NumberSet(pi, FourCC('dra0'), 1)
     AiData[pi][StringHash("Race")] = "DR"
     SetPlayerTechResearchedSwap(FourCC('R0BY'), 1, p)
+    DragonApplySubrace(p)
     SetPlayerName(p, "Dragons (" .. I2S(pi + 1) .. ")")
     DragonsOn()
     AiRace[pi] = "Dragons"
@@ -71503,9 +71430,6 @@ function InitCustomTriggers()
     InitTrig_DragonMage()
     InitTrig_OgrimmCharge()
     InitTrig_Duel()
-    InitTrig_HordeW2SubStart()
-    InitTrig_HordeW2SubCancel()
-    InitTrig_HordeW2SubFinish()
     InitTrig_RiseDeadWorkers()
     InitTrig_SummonCase()
     InitTrig_UpgradeSkelets()
@@ -72063,12 +71987,6 @@ function InitCustomTriggers()
     InitTrig_DruidOwlAstralPhases()
     InitTrig_NagaStart()
     InitTrig_Coatl()
-    InitTrig_MurlokCan()
-    InitTrig_MurlokBeg()
-    InitTrig_MurlocFin()
-    InitTrig_Nagi()
-    InitTrig_Nagi2()
-    InitTrig_NagaFinishCode()
     InitTrig_VaishBuria()
     InitTrig_VaishArrow()
     InitTrig_NagaPas()

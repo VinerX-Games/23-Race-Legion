@@ -391,8 +391,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -518,7 +516,6 @@
    "time": 15,
    "time_per_level": 15,
    "requires": [
-    "unp2",
     "cD25"
    ]
   },
@@ -566,12 +563,16 @@
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
   },
   "U02X": {
    "type": "hero",
@@ -856,120 +857,270 @@
    "hotkey": "Q"
   },
   "cDA1": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Болезнетворное облако",
+   "levels": 1,
+   "requires": [
+    "R0JI"
+   ]
   },
   "cDAZ": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Автоматическое воскрешение",
+   "levels": 2,
+   "hero_level_req": 1,
+   "hotkey": "A"
   },
   "cDR4": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Атака магов — уровень 1",
+   "levels": 6,
+   "gold": 350,
+   "gold_per_level": 350,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "time": 60,
+   "time_per_level": 15,
+   "requires": [
+    "unp1"
+   ]
   },
   "cDR5": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Посвящение осквернителей — ступень 1",
+   "levels": 4,
+   "gold": 350,
+   "gold_per_level": 350,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "time": 60,
+   "requires": [
+    "unp2"
+   ]
   },
   "cDR8": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Посвящение адептов — ступень 1",
+   "levels": 4,
+   "gold": 350,
+   "gold_per_level": 350,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "time": 60,
+   "requires": [
+    "cD25"
+   ]
   },
   "cDR9": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Защита магов — уровень 1",
+   "levels": 6,
+   "gold": 350,
+   "gold_per_level": 250,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "time": 60,
+   "time_per_level": 15,
+   "requires": [
+    "unp1"
+   ]
   },
   "cDa2": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Воскрешение мёртвых",
+   "levels": 3,
+   "hotkey": "Q"
   },
   "cDa4": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Воскрешение слуг",
+   "levels": 1,
+   "hotkey": "Z"
   },
   "cDa5": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Плотеобработка",
+   "levels": 1,
+   "hero_level_req": 1,
+   "hotkey": "R"
   },
   "cDa6": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Создание из плоти",
+   "levels": 1,
+   "hero_level_req": 1
   },
   "cDa8": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Призрачное касание",
+   "levels": 1,
+   "hotkey": "W"
   },
   "cDa9": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Чумная эссенция",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "cDaa": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Посвящение некромантов",
+   "levels": 1,
+   "hero_level_req": 1
   },
   "cDad": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Кольцо льда",
+   "levels": 1,
+   "hotkey": "R",
+   "requires": [
+    "cDR8"
+   ],
+   "requires_amount": 2
   },
   "cDae": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Ледяные стрелы",
+   "levels": 1,
+   "hotkey": "E",
+   "requires": [
+    "cDR8"
+   ]
   },
   "cDai": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Порча издыхания",
+   "levels": 1,
+   "hotkey": "W",
+   "requires": [
+    "cDR5"
+   ],
+   "requires_amount": 2
   },
   "cDao": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Неистовство чужой души",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "cDap": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Порча изнывания",
+   "levels": 1,
+   "hotkey": "W",
+   "requires": [
+    "R0JH"
+   ],
+   "requires_amount": 2
   },
   "cDaq": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Эксгумация",
+   "levels": 2
   },
   "cDar": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Костесборка",
+   "levels": 1,
+   "hero_level_req": 1,
+   "hotkey": "R"
   },
   "cDat": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Костяное создание",
+   "levels": 1,
+   "hero_level_req": 1
   },
   "cDaw": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Чумная аура",
+   "levels": 1
   },
   "cDay": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Заразительные атаки",
+   "levels": 1
   },
   "cDr0": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Атака костей — уровень 1",
+   "levels": 6,
+   "gold": 350,
+   "gold_per_level": 350,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "time": 60,
+   "time_per_level": 15,
+   "requires": [
+    "unp1"
+   ]
   },
   "cDr1": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Защита костей — уровень 1",
+   "levels": 6,
+   "gold": 350,
+   "gold_per_level": 350,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "time": 60,
+   "time_per_level": 15,
+   "requires": [
+    "unp1"
+   ]
   },
   "cDr3": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Атака плоти — уровень 1",
+   "levels": 6,
+   "gold": 350,
+   "gold_per_level": 350,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "time": 60,
+   "time_per_level": 15,
+   "requires": [
+    "unp1"
+   ]
   },
   "cDr4": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Защита плоти — уровень 1",
+   "levels": 6,
+   "gold": 350,
+   "gold_per_level": 350,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "time": 60,
+   "time_per_level": 15,
+   "requires": [
+    "unp1"
+   ]
   },
   "cDr6": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Ярость воскрешённых — уровень 1",
+   "levels": 3,
+   "gold": 250,
+   "gold_per_level": 250,
+   "lumber": 250,
+   "lumber_per_level": 250,
+   "time": 50,
+   "requires": [
+    "ugrv",
+    "unp2"
+   ]
   },
   "cDr7": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Ускоренная эксгумация",
+   "levels": 1,
+   "gold": 400,
+   "lumber": 50,
+   "time": 20,
+   "requires": [
+    "cD24"
+   ]
   },
   "h0CZ": {
    "type": "unit",
@@ -1013,7 +1164,7 @@
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "gold": 4000,
    "lumber": 4000,
@@ -1024,7 +1175,7 @@
   },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1038,7 +1189,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1047,38 +1198,29 @@
    "time": 140,
    "hotkey": "Z"
   },
-  "ofor": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 205,
-   "hp": 1000,
-   "time": 70,
-   "hotkey": "E"
-  },
-  "ofrt": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
-   "time": 140,
-   "hotkey": "Z"
-  },
   "ugrv": {
    "type": "unit",
-   "name": "",
+   "name": "Кладбище",
    "only_required": true,
    "gold": 215,
    "hp": 900,
    "time": 80,
    "hotkey": "V"
   },
+  "unp1": {
+   "type": "unit",
+   "name": "Чертоги мертвых",
+   "only_required": true,
+   "gold": 545,
+   "lumber": 210,
+   "food_made": 10,
+   "hp": 1750,
+   "time": 140,
+   "hotkey": "U"
+  },
   "unp2": {
    "type": "unit",
-   "name": "",
+   "name": "Темная цитадель",
    "only_required": true,
    "gold": 870,
    "lumber": 440,
@@ -1111,8 +1253,6 @@
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
@@ -1123,7 +1263,6 @@
   "R0JH requires unp2",
   "R0JI requires unp2",
   "R0K4 requires cD25",
-  "R0K4 requires unp2",
   "R0KE requires unp2",
   "U02X has-ability AInv",
   "U02X hero-ability A1HE",
@@ -1308,6 +1447,22 @@
   "cD35 researches R0KE",
   "cD35 researches cDr0",
   "cD35 researches cDr1",
+  "cDA1 requires R0JI",
+  "cDR4 requires unp1",
+  "cDR5 requires unp2",
+  "cDR8 requires cD25",
+  "cDR9 requires unp1",
+  "cDad requires cDR8",
+  "cDae requires cDR8",
+  "cDai requires cDR5",
+  "cDap requires R0JH",
+  "cDr0 requires unp1",
+  "cDr1 requires unp1",
+  "cDr3 requires unp1",
+  "cDr4 requires unp1",
+  "cDr6 requires ugrv",
+  "cDr6 requires unp2",
+  "cDr7 requires cD24",
   "h0CZ has-ability A002",
   "h0CZ has-ability A009",
   "h0CZ has-ability A00A",

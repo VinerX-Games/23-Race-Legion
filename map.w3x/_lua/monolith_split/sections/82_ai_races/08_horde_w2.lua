@@ -44,15 +44,19 @@ RegisterAiRace("HordeW2", {
 
         { FourCC('w20t'), 8, 6, gate = "tier2" },
 
-        { FourCC('w210'), 4, 4, gate = "tier2" },
+        { FourCC('w210'), 4, 4, gate = "tier3" },
 
-        { FourCC('w212'), 4, 4, gate = "tier2" },
+        { FourCC('w212'), 4, 4, gate = "black_roost" },
 
         { FourCC('w20u'), 25, 1 },
 
     },
 
     gates = {
+        tier3 = function(pi) return getAiCount(pi, FourCC('w20e')) >= 1 end,
+        black_roost = function(pi)
+            return getAiCount(pi, FourCC('w20e')) >= 1 and HordeW2GetSubrace(pi) == "dark"
+        end,
 
         tier2 = function(pi)
 
@@ -74,10 +78,6 @@ RegisterAiRace("HordeW2", {
 
         not_dragonmaw = function(pi)
             return HordeW2GetSubrace(pi) ~= "dragonmaw"
-        end,
-
-        not_dark = function(pi)
-            return HordeW2GetSubrace(pi) ~= "dark"
         end,
 
     },
@@ -111,8 +111,8 @@ RegisterAiRace("HordeW2", {
         [FourCC('w20i')] = {
 
             {FourCC('w201'), 2, gate = "base"},
-            {FourCC('w201'), 1, gate = "dark"},
-            {FourCC('xd05'), 3, gate = "dragonmaw"},
+            {FourCC('xd08'), 2, gate = "dark"},
+            {FourCC('xd0A'), 2, gate = "dragonmaw"},
             {FourCC('w206'), 3, gate = "base"},
             {FourCC('xd02'), 4, gate = "dark"},
             {FourCC('w206'), 1, gate = "dragonmaw"},
@@ -124,15 +124,13 @@ RegisterAiRace("HordeW2", {
 
         [FourCC('w20t')] = {
 
-            {FourCC('w205'), 3, gate = "base"},
+            {FourCC('w205'), 3, gate = "not_dragonmaw"},
             {FourCC('xd01'), 4, gate = "dark"},
             {FourCC('xd06'), 4, gate = "dragonmaw"},
-            {FourCC('w209'), 2, gate = "tier2"},
+            {FourCC('w209'), 2, gate = "base"},
             {FourCC('w209'), 3, gate = "dark"},
-            {FourCC('w209'), 1, gate = "dragonmaw"},
+            {FourCC('xd09'), 3, gate = "dragonmaw"},
             {FourCC('w211'), 3, gate = "base"},
-            {FourCC('w211'), 2, gate = "dark"},
-            {FourCC('w211'), 4, gate = "dragonmaw"},
 
         },
 
@@ -140,21 +138,20 @@ RegisterAiRace("HordeW2", {
 
             {FourCC('W200'), 1, limit = 1},
             {FourCC('W201'), 1, limit = 1},
-            {FourCC('W202'), 1, gate = "not_dark", limit = 1},
+            {FourCC('W202'), 1, gate = "base", limit = 1},
             {FourCC('W203'), 1, gate = "dark", limit = 1},
+            {FourCC('W204'), 1, gate = "dragonmaw", limit = 1},
 
         },
 
         [FourCC('w210')] = {
             {FourCC('w202'), 2, gate = "base"},
             {FourCC('xd07'), 2, gate = "dark"},
-            {FourCC('w202'), 4, gate = "dragonmaw"},
+            {FourCC('xd05'), 4, gate = "dragonmaw"},
         },
 
         [FourCC('w212')] = {
-            {FourCC('w213'), 2, gate = "base"},
             {FourCC('xd03'), 4, gate = "dark"},
-            {FourCC('w213'), 1, gate = "dragonmaw"},
         },
 
         worker = { id = FourCC('w200'), cap = 20, from = { FourCC('w20q'), FourCC('w20w'), FourCC('w20e') } },
@@ -233,21 +230,20 @@ RegisterAiRace("HordeW2", {
         },
 
         [FourCC('xd01')] = {
-
-            { order = "bloodlust", chance = 4, type = "target" },
-
-            { order = "lightningshield", chance = 5, type = "target" },
-
+            { order = "curse", chance = 4, type = "target" },
+            { order = "cripple", chance = 4, type = "target" },
         },
-
         [FourCC('xd06')] = {
-
-            { order = "bloodlust", chance = 4, type = "target" },
-
+            { order = "ensnare", chance = 4, type = "target" },
             { order = "purge", chance = 5, type = "target" },
-
         },
-
+        [FourCC('xd09')] = {
+            { order = "firebolt", chance = 4, type = "target" },
+            { order = "innerfire", chance = 4, type = "ally" },
+        },
+        [FourCC('W204')] = {
+            { order = "flamestrike", chance = 4, type = "point" },
+        },
         [FourCC('w209')] = {
 
             { order = "frostarmor", chance = 4, type = "target" },
@@ -276,17 +272,23 @@ RegisterAiRace("HordeW2", {
 
         [FourCC('xd05')] = {
 
-            { order = "ensnare", chance = 4, type = "target" },
+            { order = "breathoffire", chance = 4, type = "point" },
 
+        },
+        [FourCC('xd07')] = {
+            { order = "breathoffire", chance = 4, type = "point" },
         },
 
     },
 
+    getLvlData = {
+        [FourCC('W204')] = { ult = FourCC('AOre'), skills = { FourCC('AHfs'), FourCC('AOae'), FourCC('AOcr') } },
+    },
     join = Join_HordeW2,
 
     wall = FourCC('w20u'),
 
-    shipyard = FourCC('h0HO'),  -- orc worker (opeo) -> orc/goblin Верфь
+    shipyard = FourCC('w218'),
 
 
     diplomat = "pragmatic",
@@ -317,6 +319,10 @@ RegisterAiRace("HordeW2", {
         [FourCC('xd03')] = 0.0500,
         [FourCC('xd05')] = 0.0500,
         [FourCC('xd07')] = 0.0400,
+        [FourCC('xd08')] = 0.0400,
+        [FourCC('xd09')] = 0.0500,
+        [FourCC('xd0A')] = 0.0400,
+        [FourCC('W204')] = 0.0227,
         [FourCC('w201')] = 0.0455,
         [FourCC('w207')] = 0.0455,
         [FourCC('w209')] = 0.0455,

@@ -2147,8 +2147,6 @@ function Strateg_Horde(i, pi, p)
 		
 		--  nnsg (второй набор)
 		if i < 50 then
-			MakeGradeCheckCap(p, FourCC('nntt'), FourCC('R0FE'), 1)
-			MakeGradeCheckCap(p, FourCC('nntt'), FourCC('R0FF'), 1)
 		end
 		
 		if i > 17 then
@@ -2429,6 +2427,7 @@ function startNaga(pi)
 	SetPlayerName(Player(pi), "Стая (" .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "NG"
 	TriggerExecute(gg_trg_NagaStart)
+	NagaApplySubrace(Player(pi), GetRandomInt(0, 1) == 0 and "naga" or "murloc")
 	
 	AiRace[pi] = "Naga"
 	ProbeLogWrite("[AI] startNaga pi=" .. tostring(pi) .. " workers=8nmpe building=1nntt")
@@ -2616,8 +2615,6 @@ function Strateg_Naga(i, pi, p)
 		
 		--  nnsg (второй набор)
 		if i < 50 then
-			MakeGradeCheckCap(p, FourCC('nntt'), FourCC('R0FE'), 1)
-			MakeGradeCheckCap(p, FourCC('nntt'), FourCC('R0FF'), 1)
 		end
 		
 		if i > 17 then

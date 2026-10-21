@@ -121,7 +121,9 @@ end
 ---@return integer
 function HordeW2GetVeterancyCap(pOrPi)
 	local subrace = HordeW2GetSubrace(pOrPi)
-	if subrace == "dragonmaw" then
+	if subrace == "dark" then
+		return 12
+	elseif subrace == "dragonmaw" then
 		return 8
 	end
 	return 10
@@ -131,17 +133,17 @@ end
 ---@return nothing
 function HordeW2ApplyDragonPreset(p)
 	local subrace = HordeW2GetSubrace(p)
+	SetPlayerTechResearched(p, FourCC('xdR1'), subrace == "dark" and 1 or 0)
+	SetPlayerTechResearched(p, FourCC('xdR2'), subrace == "dragonmaw" and 1 or 0)
+	for _, id in ipairs({ 'w291', 'w292', 'w293' }) do SetPlayerTechResearched(p, FourCC(id), 0) end
+	for _, id in ipairs({ 'w294', 'w297', 'w295' }) do
+		SetPlayerAbilityAvailable(p, FourCC(id), subrace == "base")
+	end
 	if subrace == "dark" then
 		SetPlayerTechResearchedSwap(FourCC('w292'), 1, p)
 		SetPlayerAbilityAvailableBJ(true, FourCC('w290'), p)
-		SetPlayerAbilityAvailableBJ(false, FourCC('w294'), p)
-		SetPlayerAbilityAvailableBJ(false, FourCC('w297'), p)
-		SetPlayerAbilityAvailableBJ(false, FourCC('w295'), p)
 	elseif subrace == "dragonmaw" then
 		SetPlayerTechResearchedSwap(FourCC('w293'), 1, p)
-		SetPlayerAbilityAvailableBJ(false, FourCC('w294'), p)
-		SetPlayerAbilityAvailableBJ(false, FourCC('w297'), p)
-		SetPlayerAbilityAvailableBJ(false, FourCC('w295'), p)
 	end
 end
 
@@ -150,49 +152,29 @@ end
 function HordeW2ApplySubraceRoster(p)
 	local subrace = HordeW2GetSubrace(p)
 
-	SetPlayerTechMaxAllowedSwap(FourCC('xd01'), 0, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('xd02'), 0, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('xd03'), 0, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('xd04'), 0, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('xd05'), 0, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('xd06'), 0, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('xd07'), 0, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('W200'), 1, p)
-
-	SetPlayerTechMaxAllowedSwap(FourCC('w201'), -1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('w202'), -1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('w203'), -1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('w205'), -1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('w206'), -1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('w213'), -1, p)
-
-	-- Heroes (uppercase rawcodes). All branches keep W200 + W201 (Cho'gall).
-	-- The 3rd slot: W202 Troll Leader on base/dragonmaw, W203 Maim on Dark Horde
-	-- (full unit swap, same altar card slot — never both visible).
-	SetPlayerTechMaxAllowedSwap(FourCC('W201'), 1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('W202'), 1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('W203'), 0, p)
-
+	local common = { 'w201', 'w202', 'w203', 'w205', 'w206', 'w209', 'w211', 'w213' }
+	local unique = { 'xd01', 'xd02', 'xd03', 'xd04', 'xd05', 'xd06', 'xd07', 'xd08', 'xd09', 'xd0A' }
+	for _, id in ipairs(common) do SetPlayerTechMaxAllowed(p, FourCC(id), -1) end
+	for _, id in ipairs(unique) do SetPlayerTechMaxAllowed(p, FourCC(id), 0) end
+	for _, id in ipairs({ 'W200', 'W201', 'W202' }) do SetPlayerTechMaxAllowed(p, FourCC(id), 1) end
+	SetPlayerTechMaxAllowed(p, FourCC('W203'), 0)
+	SetPlayerTechMaxAllowed(p, FourCC('W204'), 0)
+	SetPlayerTechMaxAllowed(p, FourCC('w212'), subrace == "dark" and -1 or 0)
+	SetPlayerTechMaxAllowed(p, FourCC('w213'), 0)
+	local disabled, enabled = {}, {}
 	if subrace == "dark" then
-		-- Dark Horde replaces the Troll Leader with Maim Blackhand.
-		SetPlayerTechMaxAllowedSwap(FourCC('W202'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('W203'), 1, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('w202'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('w205'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('w206'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('w213'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('xd01'), -1, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('xd02'), -1, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('xd03'), -1, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('xd07'), -1, p)
+		disabled = { 'w201', 'w202', 'w206', 'w211', 'w213' }
+		enabled = { 'xd01', 'xd02', 'xd03', 'xd07', 'xd08' }
+		SetPlayerTechMaxAllowed(p, FourCC('W202'), 0)
+		SetPlayerTechMaxAllowed(p, FourCC('W203'), 1)
 	elseif subrace == "dragonmaw" then
-		SetPlayerTechMaxAllowedSwap(FourCC('w201'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('W203'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('w205'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('xd04'), -1, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('xd05'), -1, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('xd06'), -1, p)
+		disabled = { 'w201', 'w202', 'w203', 'w205', 'w209', 'w211', 'w213' }
+		enabled = { 'xd04', 'xd05', 'xd06', 'xd09', 'xd0A' }
+		SetPlayerTechMaxAllowed(p, FourCC('W202'), 0)
+		SetPlayerTechMaxAllowed(p, FourCC('W204'), 1)
 	end
+	for _, id in ipairs(disabled) do SetPlayerTechMaxAllowed(p, FourCC(id), 0) end
+	for _, id in ipairs(enabled) do SetPlayerTechMaxAllowed(p, FourCC(id), -1) end
 end
 
 -- *  XpLevelW2
@@ -221,7 +203,7 @@ function AddXp(u, addXp)
 			BlzSetUnitBaseDamage(u, MathRound(BlzGetUnitBaseDamage(u, 1) * 1.04), 1)
 			xp = xp - (100 + 25 * lvl)
 			lvl = lvl + 1
-			SetUnitAbilityLevel(u, FourCC('w2a0'), lvl)
+			SetUnitAbilityLevel(u, FourCC('w2a0'), lvl + 1)
 			if lvl >= maxLvl then
 				xp = 0
 				break

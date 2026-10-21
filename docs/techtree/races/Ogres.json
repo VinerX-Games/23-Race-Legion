@@ -544,8 +544,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -612,7 +610,6 @@
    "lumber_per_level": 150,
    "time": 40,
    "requires": [
-    "ostr",
     "o03B",
     "o03D"
    ]
@@ -735,7 +732,6 @@
    "lumber_per_level": 150,
    "time": 40,
    "requires": [
-    "ostr",
     "o03D"
    ]
   },
@@ -749,8 +745,6 @@
    "lumber_per_level": 150,
    "time": 35,
    "requires": [
-    "ostr",
-    "ofor",
     "o03D"
    ]
   },
@@ -851,7 +845,7 @@
   },
   "Robk": {
    "type": "upgrade",
-   "name": "",
+   "name": "Улучшение до берсерка",
    "only_required": true,
    "levels": 1,
    "gold": 75,
@@ -864,7 +858,7 @@
   },
   "Rorb": {
    "type": "upgrade",
-   "name": "",
+   "name": "Укрепленные стены",
    "only_required": true,
    "levels": 1,
    "gold": 450,
@@ -879,12 +873,16 @@
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
   },
   "h0D3": {
    "type": "building",
@@ -928,7 +926,7 @@
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "gold": 4000,
    "lumber": 4000,
@@ -949,7 +947,7 @@
   },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -963,7 +961,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1312,29 +1310,9 @@
    "time": 15,
    "hotkey": "Q"
   },
-  "ofor": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 205,
-   "hp": 1000,
-   "time": 70,
-   "hotkey": "E"
-  },
-  "ofrt": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
-   "time": 140,
-   "hotkey": "Z"
-  },
   "ostr": {
    "type": "unit",
-   "name": "",
+   "name": "Крепость",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1382,23 +1360,17 @@
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
   "R04R requires hcas",
   "R09W requires o03B",
   "R09W requires o03D",
-  "R09W requires ostr",
   "R0GL requires ostr",
   "R0GM requires ostr",
   "R0GN requires ostr",
   "R0GO requires o03D",
-  "R0GO requires ostr",
   "R0GP requires o03D",
-  "R0GP requires ofor",
-  "R0GP requires ostr",
   "R0GR requires o03D",
   "R0GS requires o03D",
   "R0GT requires o03D",

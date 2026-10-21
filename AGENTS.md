@@ -11,6 +11,15 @@ line without reset: 1.6.514 (last Legion) → 1.6.515 (first Forever) → 1.6.51
   `VinerX-Games/23-Race-Legion`; keep local `23-Race-Legion` paths. "Legion" in Demon race code
   (Burning Legion, `Fin7Legion`, AI token `legion`) is unrelated to the map name.
 
+## Выбор рас и подфракций
+
+Основной интерфейс — кастомная панель `80_runtime/_ui/63_race_picker.lua`.
+Для драконов, наг/мурлоков и Старой Орды используется второй экран этой панели
+до выдачи стартовых юнитов. Страницы способностей кольца — резервный старый путь.
+Не описывать основной выбор как исследование в главном здании или выбор через
+`dra1`. Читать [docs/RACE_SELECTION.md](docs/RACE_SELECTION.md): там актуальный
+путь игрока, общие обработчики игроков/AI и реализованный состав Старой Орды.
+
 ## Project Structure & Module Organization
 
 23 Race Forever is a Warcraft III: Reforged map using Lua 5.3. The unpacked `map.w3x/` directory contains map data, imported models, textures, and other assets.

@@ -14,7 +14,9 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import struct
 import sys
+from functools import lru_cache
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -40,6 +42,7 @@ RENAME = {"goldcost": "gold", "lumbercost": "lumber", "fused": "food", "fmade": 
           "dependencyor": "equivalents"}
 LIST_FIELDS = {"requires", "requires1", "dependencyor"}
 COLOR = re.compile(r"\|c[0-9a-fA-F]{8}|\|r")
+OBJECT_FIELDS_CACHE = {}
 
 
 def plain(text):
@@ -62,21 +65,53 @@ def race_tokens():
     return tokens
 
 
+@lru_cache(maxsize=1)
+def map_metadata():
+    from implement_draenei_rework import object_records
+    kinds, requirements = {}, {}
+    for ext, kind in [("w3u", "unit"), ("w3a", "ability"), ("w3q", "upgrade")]:
+        _, tables = object_records((MAP / ("war3map." + ext)).read_bytes(), ext != "w3u")
+        for record in (r for table in tables for r in table):
+            kinds[record["id"]] = kind
+            if kind == "upgrade":
+                for key, raw in record["mods"]:
+                    if key == ("greq", 1, 0) and struct.unpack_from("<I", raw, 4)[0] == 3:
+                        value = raw[16:-5].decode("utf-8")
+                        if value:
+                            requirements[record["id"]] = value
+    return kinds, requirements
+
+
 def object_fields(ids_by_kind, wts):
     """Поля object data для набора id, сгруппированных по типу."""
     result = {}
     for kind, ids in ids_by_kind.items():
-        ids = sorted(ids)
+        for oid in ids:
+            if (kind, oid) in OBJECT_FIELDS_CACHE:
+                result[oid] = OBJECT_FIELDS_CACHE[(kind, oid)]
+        ids = sorted(oid for oid in ids if (kind, oid) not in OBJECT_FIELDS_CACHE)
         for start in range(0, len(ids), 200):
             data = require(cli(["get-objects-bulk", "--type", kind, "--ids", ",".join(ids[start:start + 200]),
                                 "--fields", FIELDS[kind]]))
             for obj in data["objects"]:
                 fields = {}
-                for key, value in obj["fields"].items():
+                values = dict(obj["fields"])
+                values["name"] = values.get("name") or obj.get("name", "")
+                if kind == "upgrade":
+                    if obj["id"] in map_metadata()[1]:
+                        values["requires"] = map_metadata()[1][obj["id"]]
+                        values.pop("requires1", None)
+                for key, value in values.items():
+                    if key in ("name1", "hotkey1"):
+                        continue
                     value = (value or "").strip()
                     if value.startswith("TRIGSTR_"):
                         value = wts.get(int(value[8:]), "")
-                    if key == "name" or value in ("", "-", "0") and key not in ("hero", "item"):
+                    if key == "name":
+                        if value:
+                            fields["name"] = plain(value)
+                        continue
+                    if value in ("", "-", "0") and key not in ("hero", "item"):
                         continue
                     if key in LIST_FIELDS:
                         target = fields.setdefault("equivalents" if key == "dependencyor" else "requires", [])
@@ -88,6 +123,7 @@ def object_fields(ids_by_kind, wts):
                         continue
                     fields[RENAME.get(key, key)] = int(value) if re.fullmatch(r"-?\d+", value) else value
                 result[obj["id"]] = fields
+                OBJECT_FIELDS_CACHE[(kind, obj["id"])] = fields
     return result
 
 
@@ -102,9 +138,15 @@ def export_race(token, wts):
     data = require(cli(["describe-race", "--suffix", token]))
     view = data["agent_view"]
     nodes = {n["id"]: n for n in data["nodes"] if n["category"] != "race"}
+    kinds_by_id, requirements = map_metadata()
+    for oid, node in nodes.items():
+        if node["category"] == "unknown" and oid in kinds_by_id:
+            node["category"] = kinds_by_id[oid]
     edges = set()
     for e in data["edges"]:
         kind = e["kind"]
+        if kind == "requires" and e["from"] in requirements:
+            continue
         if kind == "has-ability" and e.get("detail") == "heroabillist":
             kind = "hero-ability"
         edges.add(f"{e['from']} {kind} {e['to']}")

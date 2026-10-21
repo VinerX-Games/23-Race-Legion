@@ -650,8 +650,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -751,8 +749,6 @@
    "lumber": 100,
    "time": 30,
    "requires": [
-    "ugrv",
-    "unp1",
     "u00L"
    ]
   },
@@ -764,8 +760,6 @@
    "lumber": 400,
    "time": 30,
    "requires": [
-    "unp1",
-    "ugrv",
     "u00L"
    ]
   },
@@ -819,7 +813,6 @@
    "lumber": 300,
    "time": 45,
    "requires": [
-    "unp2",
     "u00F"
    ]
   },
@@ -859,7 +852,6 @@
    "lumber": 300,
    "time": 20,
    "requires": [
-    "unp1",
     "u00F"
    ]
   },
@@ -929,8 +921,6 @@
    "lumber": 300,
    "time": 50,
    "requires": [
-    "ugrv",
-    "unp2",
     "u00L",
     "u00F"
    ]
@@ -978,7 +968,7 @@
   },
   "Rhri": {
    "type": "upgrade",
-   "name": "",
+   "name": "Длинноствольные мушкеты",
    "only_required": true,
    "levels": 1,
    "gold": 340,
@@ -990,7 +980,7 @@
   },
   "Rhsb": {
    "type": "upgrade",
-   "name": "",
+   "name": "Тяжелые клинки",
    "only_required": true,
    "levels": 1,
    "gold": 100,
@@ -1011,12 +1001,16 @@
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
   },
   "U00O": {
    "type": "hero",
@@ -1066,12 +1060,22 @@
    ]
   },
   "UN99": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Шипастый панцирь",
+   "hero": true,
+   "levels": 4,
+   "hero_level_req": 1,
+   "hotkey": "E"
   },
   "dk00": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Власть нечестивости",
+   "levels": 1,
+   "hero_level_req": 1,
+   "requires": [
+    "R059"
+   ],
+   "requires_amount": 3
   },
   "h0CZ": {
    "type": "unit",
@@ -1115,7 +1119,7 @@
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "gold": 4000,
    "lumber": 4000,
@@ -1126,7 +1130,7 @@
   },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1140,7 +1144,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1212,26 +1216,6 @@
    "hp": 125,
    "time": 50,
    "hotkey": "F"
-  },
-  "ofor": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 205,
-   "hp": 1000,
-   "time": 70,
-   "hotkey": "E"
-  },
-  "ofrt": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
-   "time": 140,
-   "hotkey": "Z"
   },
   "u008": {
    "type": "unit",
@@ -1491,26 +1475,21 @@
    "hp": 1100,
    "time": 80
   },
-  "ugrv": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 215,
-   "hp": 900,
-   "time": 80,
-   "hotkey": "V"
-  },
   "unA0": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Леденящее дыхание",
+   "levels": 1,
+   "hotkey": "Z"
   },
   "unA5": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Проклятие",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "unp1": {
    "type": "unit",
-   "name": "",
+   "name": "Чертоги мертвых",
    "only_required": true,
    "gold": 545,
    "lumber": 210,
@@ -1521,7 +1500,7 @@
   },
   "unp2": {
    "type": "unit",
-   "name": "",
+   "name": "Темная цитадель",
    "only_required": true,
    "gold": 870,
    "lumber": 440,
@@ -1567,8 +1546,6 @@
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
@@ -1576,25 +1553,17 @@
   "R058 requires unp1",
   "R059 requires unp1",
   "R05C requires u00L",
-  "R05C requires ugrv",
-  "R05C requires unp1",
   "R05D requires u00L",
-  "R05D requires ugrv",
-  "R05D requires unp1",
   "R05E requires u00F",
   "R05F requires u00F",
   "R05G requires u00F",
   "R05H requires u00F",
-  "R05H requires unp2",
   "R05I requires unp2",
   "R05J requires unp2",
   "R05L requires u00F",
-  "R05L requires unp1",
   "R05M requires u00G",
   "R05R requires u00F",
   "R05R requires u00L",
-  "R05R requires ugrv",
-  "R05R requires unp2",
   "U00O has-ability AInv",
   "U00O hero-ability A0CN",
   "U00O hero-ability A0CO",
@@ -1611,6 +1580,7 @@
   "U00V hero-ability AQ95",
   "U00V hero-ability UN99",
   "U030 requires R07I",
+  "dk00 requires R059",
   "h0CZ has-ability A002",
   "h0CZ has-ability A009",
   "h0CZ has-ability A00A",

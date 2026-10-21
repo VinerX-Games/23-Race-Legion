@@ -441,7 +441,7 @@
   },
   "R03A": {
    "type": "upgrade",
-   "name": "",
+   "name": "Фолиант познаний магии морей",
    "only_required": true,
    "levels": 3,
    "gold": 125,
@@ -465,6 +465,7 @@
   "R0FE": {
    "type": "upgrade",
    "name": "Владычество нагов",
+   "only_required": true,
    "levels": 1,
    "gold": 100,
    "gold_per_level": 50,
@@ -630,7 +631,7 @@
   },
   "Robk": {
    "type": "upgrade",
-   "name": "",
+   "name": "Улучшение до берсерка",
    "only_required": true,
    "levels": 1,
    "gold": 75,
@@ -643,7 +644,7 @@
   },
   "Roen": {
    "type": "upgrade",
-   "name": "",
+   "name": "Опутывание",
    "only_required": true,
    "levels": 1,
    "gold": 50,
@@ -651,12 +652,15 @@
    "time": 40
   },
   "S00A": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Стойкость моря",
+   "levels": 1
   },
   "drAq": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Ледяная стрела",
+   "levels": 1,
+   "hotkey": "|cffebc56cМаг (Поддержка)|r (|cffffffffP|r)"
   },
   "h0JW": {
    "type": "building",
@@ -700,7 +704,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1223,8 +1227,6 @@
   "nntt has-ability A0LJ",
   "nntt has-ability Argl",
   "nntt morphs-to h0JX",
-  "nntt researches R0FE",
-  "nntt researches R0FF",
   "nntt trains nmpe",
   "nntt trains nnmg",
   "nsnp has-ability A14J",

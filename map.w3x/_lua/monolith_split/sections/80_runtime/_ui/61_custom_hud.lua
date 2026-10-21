@@ -247,6 +247,19 @@ end
 function CustomHudNoteRace(pi, abil)
 	if hudRaceByAbil[abil] then hudRaceAbil[pi] = abil end
 end
+
+function CustomHudRaceName(pi, abil)
+	if abil == FourCC('A1JN') then
+		local branch = HordeW2GetSubrace(pi)
+		if branch == "dark" then return "Тёмная Орда" end
+		if branch == "dragonmaw" then return "Клан Драконьей Пасти" end
+	elseif abil == FourCC('A14O') then
+		return GetPlayerTechCount(Player(pi), FourCC('R0FF'), true) > 0 and "Владычество мурлоков" or "Владычество нагов"
+	elseif abil == FourCC('A0RQ') or abil == FourCC('A1MZ') then
+		return "Драконий Союз"
+	end
+	return GetAbilityName(abil)
+end
 local hudToggleText
 
 local function HudValue(col, raw)
@@ -338,7 +351,7 @@ function CustomHudRender()
 		local abil = visibleRow and rowPi[row] ~= nil and HudRaceOf(rowPi[row]) or nil
 		if abil ~= nil then
 			BlzFrameSetTexture(hudRaceIcon[row], BlzGetAbilityIcon(abil), 0, true)
-			BlzFrameSetText(hudRaceTipText[row], "|cffebc56c" .. HudPlain(GetAbilityName(abil)) .. "|r")
+			BlzFrameSetText(hudRaceTipText[row], "|cffebc56c" .. HudPlain(CustomHudRaceName(rowPi[row], abil)) .. "|r")
 		end
 		FrameSetShown(hudRaceIcon[row], abil ~= nil)
 		FrameSetShown(hudStripe[row], visibleRow and row % 2 == 0)

@@ -438,8 +438,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -714,7 +712,7 @@
   },
   "Rhpm": {
    "type": "upgrade",
-   "name": "",
+   "name": "Рюкзак",
    "only_required": true,
    "levels": 1,
    "gold": 50,
@@ -723,7 +721,7 @@
   },
   "Robk": {
    "type": "upgrade",
-   "name": "",
+   "name": "Улучшение до берсерка",
    "only_required": true,
    "levels": 1,
    "gold": 75,
@@ -764,12 +762,16 @@
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
   },
   "h0A5": {
    "type": "unit",
@@ -1027,7 +1029,7 @@
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "gold": 4000,
    "lumber": 4000,
@@ -1038,7 +1040,7 @@
   },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1052,7 +1054,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1071,29 +1073,9 @@
    "time": 60,
    "hotkey": "Z"
   },
-  "ofor": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 205,
-   "hp": 1000,
-   "time": 70,
-   "hotkey": "E"
-  },
-  "ofrt": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
-   "time": 140,
-   "hotkey": "Z"
-  },
   "ostr": {
    "type": "unit",
-   "name": "",
+   "name": "Крепость",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1139,24 +1121,36 @@
    "hotkey": "Q"
   },
   "wk03": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Защита (Всадник)",
+   "levels": 1,
+   "hotkey": "Q",
+   "requires": [
+    "R05Z"
+   ]
   },
   "wk04": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Пробитие доспехов",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "wk05": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Сильный укус",
+   "levels": 1
   },
   "wk06": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Пламенное дыхание",
+   "levels": 1,
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "wk07": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Броня из драконьей чешуи",
+   "levels": 1
   },
   "wk08": {
    "type": "unit",
@@ -1173,12 +1167,17 @@
    ]
   },
   "wk09": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Оживление мертвых",
+   "levels": 1,
+   "hero_level_req": 6,
+   "hotkey": "Q"
   },
   "wk10": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Нечистая аура",
+   "levels": 1,
+   "hero_level_req": 1
   }
  },
  "edges": [
@@ -1220,8 +1219,6 @@
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
@@ -1476,6 +1473,7 @@
   "wk02 researches R068",
   "wk02 researches R069",
   "wk02 researches R06A",
+  "wk03 requires R05Z",
   "wk08 has-ability wk09",
   "wk08 has-ability wk10",
   "wk08 requires R067",

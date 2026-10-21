@@ -617,8 +617,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -685,8 +683,6 @@
    "lumber_per_level": 470,
    "time": 35,
    "requires": [
-    "ostr",
-    "ofor",
     "o048"
    ]
   },
@@ -838,8 +834,6 @@
    "lumber_per_level": 470,
    "time": 35,
    "requires": [
-    "ostr",
-    "ofor",
     "o048"
    ]
   },
@@ -881,8 +875,6 @@
    "lumber_per_level": 470,
    "time": 35,
    "requires": [
-    "ostr",
-    "ofor",
     "o047"
    ]
   },
@@ -947,7 +939,7 @@
   },
   "Rhri": {
    "type": "upgrade",
-   "name": "",
+   "name": "Длинноствольные мушкеты",
    "only_required": true,
    "levels": 1,
    "gold": 340,
@@ -959,7 +951,7 @@
   },
   "Robk": {
    "type": "upgrade",
-   "name": "",
+   "name": "Улучшение до берсерка",
    "only_required": true,
    "levels": 1,
    "gold": 75,
@@ -996,20 +988,28 @@
    ]
   },
   "S00F": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Аура Мам'Тота",
+   "levels": 1,
+   "requires": [
+    "o06K"
+   ]
   },
   "Sch5": {
    "type": "unknown",
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
   },
   "h0D4": {
    "type": "unit",
@@ -1023,7 +1023,7 @@
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "gold": 4000,
    "lumber": 4000,
@@ -1064,7 +1064,7 @@
   },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1078,7 +1078,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1449,7 +1449,7 @@
   },
   "ofor": {
    "type": "unit",
-   "name": "",
+   "name": "Лесопилка",
    "only_required": true,
    "gold": 205,
    "hp": 1000,
@@ -1458,7 +1458,7 @@
   },
   "ofrt": {
    "type": "unit",
-   "name": "",
+   "name": "Цитадель",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1469,7 +1469,7 @@
   },
   "ostr": {
    "type": "unit",
-   "name": "",
+   "name": "Крепость",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1541,16 +1541,12 @@
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
   "R09L requires ofor",
   "R09L requires ostr",
   "R09P requires o048",
-  "R09P requires ofor",
-  "R09P requires ostr",
   "R0AD requires ofor",
   "R0AD requires ostr",
   "R0AI requires ofor",
@@ -1567,15 +1563,11 @@
   "R0I3 requires ostr",
   "R0I4 requires ofrt",
   "R0I5 requires o048",
-  "R0I5 requires ofor",
-  "R0I5 requires ostr",
   "R0I6 requires ofor",
   "R0I6 requires ostr",
   "R0I7 requires ofor",
   "R0I7 requires ostr",
   "R0IE requires o047",
-  "R0IE requires ofor",
-  "R0IE requires ostr",
   "R0IG requires ofor",
   "R0IG requires ostr",
   "R0IX requires ofor",
@@ -1584,6 +1576,7 @@
   "R0IY requires ostr",
   "Rorb requires ostr",
   "Rosp requires ostr",
+  "S00F requires o06K",
   "h0D4 has-ability A00A",
   "h0D4 has-ability A00B",
   "h0D4 has-ability A00I",

@@ -134,12 +134,6 @@ RegisterAiRace("Naga", {
 
         steps = {
 
-            { before = 50, action = "research", rows = {
-
-                {FourCC('nntt'), FourCC('R0FE'), 1}, {FourCC('nntt'), FourCC('R0FF'), 1},
-
-            }},
-
             { at = 17, action = "research", rows = {
 
                 {FourCC('h0JW'), FourCC('R0FD'), 6}, {FourCC('h0JW'), FourCC('R0FH'), 6}, {FourCC('h0JW'), FourCC('Rnat'), 6}, {FourCC('h0JW'), FourCC('Rnam'), 6}, {FourCC('h0JW'), FourCC('Rnsb'), 6},

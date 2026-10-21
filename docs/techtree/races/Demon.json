@@ -672,8 +672,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -724,8 +722,6 @@
    "lumber": 600,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV",
     "R004"
    ]
@@ -738,8 +734,6 @@
    "lumber": 600,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DW",
     "R08H"
    ]
@@ -900,7 +894,7 @@
   },
   "Robk": {
    "type": "upgrade",
-   "name": "",
+   "name": "Улучшение до берсерка",
    "only_required": true,
    "levels": 1,
    "gold": 75,
@@ -912,28 +906,44 @@
    ]
   },
   "S003": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Эволюция: Кровавое отродье",
+   "levels": 1,
+   "requires": [
+    "R08H"
+   ]
   },
   "S004": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Эволюция: Кровавый палач",
+   "levels": 1,
+   "requires": [
+    "R004"
+   ]
   },
   "S005": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Эволюция: Кровопускатель",
+   "levels": 1,
+   "requires": [
+    "R08I"
+   ]
   },
   "Sch5": {
    "type": "unknown",
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
   },
   "U028": {
    "type": "hero",
@@ -957,7 +967,7 @@
   },
   "etoa": {
    "type": "unit",
-   "name": "",
+   "name": "Древо столетий",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1155,7 +1165,7 @@
   },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1169,7 +1179,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1335,26 +1345,6 @@
    "requires": [
     "h0DV"
    ]
-  },
-  "ofor": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 205,
-   "hp": 1000,
-   "time": 70,
-   "hotkey": "E"
-  },
-  "ofrt": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
-   "time": 140,
-   "hotkey": "Z"
   }
  },
  "edges": [
@@ -1400,19 +1390,13 @@
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
   "R08H requires R004",
   "R08H requires h0DV",
-  "R08H requires ofor",
-  "R08H requires ofrt",
   "R08I requires R08H",
   "R08I requires h0DW",
-  "R08I requires ofor",
-  "R08I requires ofrt",
   "R08J requires hkee",
   "R08K requires hkee",
   "R08L requires hkee",
@@ -1424,6 +1408,9 @@
   "R08R requires hcas",
   "R08S requires hcas",
   "Reuv requires etoa",
+  "S003 requires R08H",
+  "S004 requires R004",
+  "S005 requires R08I",
   "U028 has-ability AInv",
   "U028 hero-ability A0MG",
   "U028 hero-ability A0MN",

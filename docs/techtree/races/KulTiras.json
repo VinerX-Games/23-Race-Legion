@@ -494,8 +494,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -689,7 +687,6 @@
    "lumber": 370,
    "time": 40,
    "requires": [
-    "hcas",
     "h01Z"
    ]
   },
@@ -910,7 +907,7 @@
   },
   "Rhpm": {
    "type": "upgrade",
-   "name": "",
+   "name": "Рюкзак",
    "only_required": true,
    "levels": 1,
    "gold": 50,
@@ -919,7 +916,7 @@
   },
   "Rhsb": {
    "type": "upgrade",
-   "name": "",
+   "name": "Тяжелые клинки",
    "only_required": true,
    "levels": 1,
    "gold": 100,
@@ -933,7 +930,7 @@
   },
   "Rhse": {
    "type": "upgrade",
-   "name": "",
+   "name": "Магический страж",
    "only_required": true,
    "levels": 1,
    "gold": 650,
@@ -945,12 +942,16 @@
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
   },
   "h013": {
    "type": "unit",
@@ -1211,7 +1212,7 @@
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "gold": 4000,
    "lumber": 4000,
@@ -1281,9 +1282,22 @@
    "time": 22,
    "hotkey": "Z"
   },
+  "hbla": {
+   "type": "unit",
+   "name": "Кузница",
+   "only_required": true,
+   "gold": 140,
+   "lumber": 40,
+   "hp": 1200,
+   "time": 70,
+   "hotkey": "R",
+   "requires": [
+    "htow"
+   ]
+  },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1297,7 +1311,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1306,9 +1320,27 @@
    "time": 140,
    "hotkey": "Z"
   },
+  "hlum": {
+   "type": "unit",
+   "name": "Лесопилка",
+   "only_required": true,
+   "gold": 120,
+   "hp": 900,
+   "time": 60,
+   "hotkey": "E"
+  },
   "kt01": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Новые типы ядер",
+   "levels": 1,
+   "gold": 3000,
+   "lumber": 1500,
+   "time": 120,
+   "requires": [
+    "hlum",
+    "hcas",
+    "hbla"
+   ]
   },
   "kt02": {
    "type": "building",
@@ -1319,26 +1351,6 @@
    "hp": 7500,
    "time": 180,
    "hotkey": "X"
-  },
-  "ofor": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 205,
-   "hp": 1000,
-   "time": 70,
-   "hotkey": "E"
-  },
-  "ofrt": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
-   "time": 140,
-   "hotkey": "Z"
   }
  },
  "edges": [
@@ -1381,8 +1393,6 @@
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
@@ -1395,7 +1405,6 @@
   "R02X requires h01Y",
   "R02Y requires h01Y",
   "R034 requires h01Z",
-  "R034 requires hcas",
   "R035 requires hkee",
   "R036 requires hkee",
   "R037 requires hkee",
@@ -1645,6 +1654,9 @@
   "h0NW researches R004",
   "h0NW researches R006",
   "h0NW researches R007",
+  "kt01 requires hbla",
+  "kt01 requires hcas",
+  "kt01 requires hlum",
   "race:KulTiras lua-start-tech R07D",
   "race:KulTiras lua-start-tech R0HX",
   "race:KulTiras lua-starts-with h013",

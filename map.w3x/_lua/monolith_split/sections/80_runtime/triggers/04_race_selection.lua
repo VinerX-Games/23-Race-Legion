@@ -372,13 +372,7 @@ end
 -- Trigger: Race Dragon O
 --===========================================================================
 function Trig_Race_Dragon_O_Actions(caster)
-    caster = caster or GetSpellAbilityUnit()
-    udg_LocalPosition2=GetUnitLoc(caster)
-    CreateNUnitsAtLoc(1, FourCC('dra1'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap(FourCC('R0BY'), 1, GetOwningPlayer(caster))
-    RemoveUnit(caster)
-    RemoveLocation(udg_LocalPosition2)
-    DragonsOn()
+    Trig_Race_Dragon2_Actions(caster)
 end
 --===========================================================================
 function InitTrig_Race_Dragon_O()
@@ -394,8 +388,11 @@ end
 --===========================================================================
 function Trig_Race_Dragon2_Actions(caster)
     caster = caster or GetSpellAbilityUnit()
+    local p = GetOwningPlayer(caster)
+    SetPlayerTechResearchedSwap(FourCC('R0BY'), 1, p)
+    DragonApplySubrace(p)
     udg_LocalPosition2=GetUnitLoc(caster)
-    CreateNUnitsAtLoc(5, FourCC('o01D'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(5, FourCC('o01D'), p, udg_LocalPosition2, bj_UNIT_FACING)
     --call SetPlayerTechResearchedSwap( 'R0BY', 1, GetOwningPlayer(caster) )
     RemoveUnit(caster)
     RemoveLocation(udg_LocalPosition2)
@@ -835,8 +832,10 @@ end
 --===========================================================================
 -- Trigger: Race Nagi
 --===========================================================================
-function Trig_Race_Nagi_Actions(caster)
+function Trig_Race_Nagi_Actions(caster, branch)
     caster = caster or GetSpellAbilityUnit()
+    local p = GetOwningPlayer(caster)
+    NagaApplySubrace(p, branch or "naga")
     udg_LocalPosition2=GetUnitLoc(caster)
     CreateNUnitsAtLoc(5, FourCC('nmpe'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
     SetPlayerTechResearchedSwap(FourCC('R0FS'), 1, GetOwningPlayer(caster))
@@ -1054,24 +1053,25 @@ end
 --===========================================================================
 -- Trigger: Race HordeW2
 --===========================================================================
-function Trig_Race_HordeW2_Actions(caster)
+function Trig_Race_HordeW2_Actions(caster, branch)
     caster = caster or GetSpellAbilityUnit()
+    local p = GetOwningPlayer(caster)
     udg_LocalPosition2=GetUnitLoc(caster)
-    HordeW2SetSubrace(GetOwningPlayer(caster), "base")
-    CreateNUnitsAtLoc(5, FourCC('w200'), GetOwningPlayer(caster), udg_LocalPosition2, bj_UNIT_FACING)
+    HordeW2SetSubrace(p, branch or "base")
+    CreateNUnitsAtLoc(5, FourCC('w200'), p, udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(caster)
     --call ConditionalTriggerExecute( gg_trg_AllyOn )
-    SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, GetOwningPlayer(caster))
-    SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, GetOwningPlayer(caster))
-    SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, GetOwningPlayer(caster))
+    SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, p)
     
     --call SetPlayerTechResearchedSwap( 'R0J5', 1, GetOwningPlayer(caster) )
     --call Pstart(GetOwningPlayer(caster))
     RemoveLocation(udg_LocalPosition2)
     HordeW2On()
-    HordeW2ApplySubraceRoster(GetOwningPlayer(caster))
-    HordeW2ApplyDragonPreset(GetOwningPlayer(caster))
-    HordeW2EnableSubraceChoice(GetOwningPlayer(caster))
+    HordeW2ApplySubraceRoster(p)
+    HordeW2ApplyDragonPreset(p)
+    HordeW2LockSubraceChoice(p)
 end
 --===========================================================================
 function InitTrig_Race_HordeW2()
@@ -1108,9 +1108,9 @@ function Trig_Race_Random_Actions(caster)
     --???????
     if racechance == incN() then
         
-        CreateNUnitsAtLoc(1, FourCC('dra1'), p, l, bj_UNIT_FACING)
         SetPlayerTechResearchedSwap(FourCC('R0BY'), 1, p)
-        DragonsOn()
+        DragonApplySubrace(p)
+        CreateNUnitsAtLoc(5, FourCC('o01D'), p, l, bj_UNIT_FACING)
     end
     --??????????
     if racechance == incN() then
@@ -1242,6 +1242,7 @@ function Trig_Race_Random_Actions(caster)
     end
     
     if racechance == incN() then
+        NagaApplySubrace(p, GetRandomInt(0, 1) == 0 and 'naga' or 'murloc')
         CreateNUnitsAtLoc(5, FourCC('nmpe'), p, l, bj_UNIT_FACING)
         SetPlayerTechResearchedSwap(FourCC('R0FS'), 1, p)
         --call SetPlayerTechResearchedSwap( 'R0KZ', 1, p )
@@ -1276,7 +1277,7 @@ function Trig_Race_Random_Actions(caster)
     
     -- Horde W2
     if racechance == incN() then
-        HordeW2SetSubrace(p, "base")
+        HordeW2SetSubrace(p, ({ "base", "dark", "dragonmaw" })[GetRandomInt(1, 3)])
         CreateNUnitsAtLoc(5, FourCC('w200'), p, l, bj_UNIT_FACING)
         SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, p)
         SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
@@ -1284,7 +1285,7 @@ function Trig_Race_Random_Actions(caster)
         HordeW2On()
         HordeW2ApplySubraceRoster(p)
         HordeW2ApplyDragonPreset(p)
-        HordeW2EnableSubraceChoice(p)
+        HordeW2LockSubraceChoice(p)
     end
     --Pandarens
     if racechance == incN() then

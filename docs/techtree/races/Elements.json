@@ -568,7 +568,7 @@
   },
   "R09W": {
    "type": "upgrade",
-   "name": "",
+   "name": "Усиленное копьё",
    "only_required": true,
    "levels": 1,
    "gold": 450,
@@ -577,7 +577,6 @@
    "lumber_per_level": 150,
    "time": 40,
    "requires": [
-    "ostr",
     "o03B",
     "o03D"
    ]
@@ -662,7 +661,7 @@
   },
   "Reuv": {
    "type": "upgrade",
-   "name": "",
+   "name": "Ночное зрение",
    "only_required": true,
    "levels": 1,
    "gold": 50,
@@ -852,7 +851,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,

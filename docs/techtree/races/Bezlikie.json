@@ -507,8 +507,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -570,7 +568,6 @@
    "lumber": 125,
    "time": 30,
    "requires": [
-    "hkee",
     "h0I7"
    ]
   },
@@ -598,7 +595,6 @@
    "lumber_per_level": 150,
    "time": 45,
    "requires": [
-    "unp2",
     "h0I7"
    ]
   },
@@ -739,7 +735,7 @@
   },
   "Rhan": {
    "type": "upgrade",
-   "name": "",
+   "name": "Дрессировка животных",
    "only_required": true,
    "levels": 1,
    "gold": 125,
@@ -753,7 +749,7 @@
   },
   "Roen": {
    "type": "upgrade",
-   "name": "",
+   "name": "Опутывание",
    "only_required": true,
    "levels": 1,
    "gold": 50,
@@ -765,12 +761,16 @@
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
   },
   "U02G": {
    "type": "hero",
@@ -847,7 +847,7 @@
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "gold": 4000,
    "lumber": 4000,
@@ -1105,7 +1105,7 @@
   },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1119,7 +1119,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1141,26 +1141,6 @@
     "h0I8",
     "h0I6"
    ]
-  },
-  "ofor": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 205,
-   "hp": 1000,
-   "time": 70,
-   "hotkey": "E"
-  },
-  "ofrt": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
-   "time": 140,
-   "hotkey": "Z"
   },
   "u02D": {
    "type": "unit",
@@ -1184,7 +1164,7 @@
   },
   "unp1": {
    "type": "unit",
-   "name": "",
+   "name": "Чертоги мертвых",
    "only_required": true,
    "gold": 545,
    "lumber": 210,
@@ -1192,20 +1172,6 @@
    "hp": 1750,
    "time": 140,
    "hotkey": "U"
-  },
-  "unp2": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 870,
-   "lumber": 440,
-   "food_made": 10,
-   "hp": 2000,
-   "time": 140,
-   "hotkey": "U",
-   "requires": [
-    "uaod"
-   ]
   }
  },
  "edges": [
@@ -1231,17 +1197,13 @@
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
   "R0EK requires hkee",
   "R0EL requires h0I7",
-  "R0EL requires hkee",
   "R0ER requires unp1",
   "R0ES requires h0I7",
-  "R0ES requires unp2",
   "R0ET requires unp1",
   "R0EV requires h0I7",
   "R0EW requires unp1",

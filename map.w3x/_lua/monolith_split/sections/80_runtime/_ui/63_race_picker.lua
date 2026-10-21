@@ -1,12 +1,10 @@
+do
 -- ***************************************************************************
 -- *  RacePicker
 -- Панель выбора расы на фреймах вместо командной карты кольца выбора (h0HJ).
--- Пока у игрока есть кольцо, у него локально скрыт стандартный интерфейс
--- (кроме кнопок «Меню» и «Чат») и показана панель. Клик по иконке — синхронное
--- событие фрейма; он вызывает тот же Trig_Race_*_Actions, что и способность
--- выбора, передавая кольцо вместо кастера. Старый путь через способности
--- отключён: при появлении кольца с него снимаются способности выбора и листания
--- страниц (если панель не создалась, кольцо остаётся со старой командной картой).
+-- Родительская раса с ветками открывает второй экран; кольцо остаётся до
+-- окончательного выбора. Клик синхронно вызывает общий старт расы с ключом ветки.
+-- При недоступных шаблонах остаётся старая командная карта кольца.
 local RP_CIRCLE = FourCC('h0HJ')
 local RP_ICON = 0.032          -- сторона иконки
 local RP_GAP = 0.0032          -- зазор между иконками
@@ -69,6 +67,22 @@ local RP_RANDOM = { 'A12Q', "Trig_Race_Random_Actions" }
 -- Кнопки страниц старого меню и раса, которой нет в панели (Драконий Союз).
 local RP_OLD_MENU = { 'A0I1', 'A0HZ', 'A1GW', 'A0QR', 'A1MZ' }
 
+local RP_SUBFACTIONS = {
+	A0RQ = { title = "ДРАКОНЫ", choices = {
+		{ key = "union", name = "Драконий Союз", icon = "BTNRedDragon", tip = "Союз красной, зелёной, синей и бронзовой стай. Чёрная стая недоступна.", fn = "Trig_Race_Dragon2_Actions", id = "A1MZ" },
+	} },
+	A14O = { title = "НАГИ И МУРЛОКИ", choices = {
+		{ key = "naga", name = "Владычество нагов", icon = "BTNNagaMyrmidonRoyalGuard", tip = "Открывает наг-воинов, сирен, глубинниц и королевскую гвардию.", fn = "Trig_Race_Nagi_Actions" },
+		{ key = "murloc", name = "Владычество мурлоков", icon = "BTNMurgulBloodGill", tip = "Открывает мурлоков, их заклинателей, героя-защитника и особые улучшения.", fn = "Trig_Race_Nagi_Actions" },
+	} },
+	A1JN = { title = "ОРДА ВТОРОЙ ВОЙНЫ", choices = {
+		{ key = "base", name = "Орда Второй Войны", icon = "BTNGrunt", tip = "Классический состав. Опыт ветеранов: |cffffffff100%|cffced4da. Предел: |cffffffff10|cffced4da уровней.", fn = "Trig_Race_HordeW2_Actions" },
+		{ key = "dark", name = "Тёмная Орда", icon = "BTNChaosWarlock", tip = "Осадные огры, чернокнижники, интенданты, чёрный молодняк и дракониды. Опыт: |cffffffff85%|cffced4da. Предел: |cffffffff12|cffced4da уровней.", fn = "Trig_Race_HordeW2_Actions" },
+		{ key = "dragonmaw", name = "Клан Драконьей Пасти", icon = "BTNRedDragon", tip = "Орочьи копьеметатели, наездники, погонщики и Повелитель драконов. Опыт: |cffffffff115%|cffced4da. Предел: |cffffffff8|cffced4da уровней.", fn = "Trig_Race_HordeW2_Actions" },
+	} },
+}
+local rpPage, rpBuildPage = {}, nil
+
 local rpCircle = {}      -- [pi] = кольцо выбора игрока
 local rpShown = false    -- панель показана локальному игроку
 local rpReady = false    -- панель создана (одинаково у всех клиентов)
@@ -79,12 +93,18 @@ local rpPlaced = {}      -- фреймы панели с абсолютной п
 -- ещё и уводятся вниз за экран, а при показе возвращаются. Только локально.
 local function RpPlace(f, point, x, y)
 	FrameSetAbsPoint(f, point, x, y)
-	rpPlaced[#rpPlaced + 1] = f
+	rpPlaced[#rpPlaced + 1] = { frame = f, page = rpBuildPage }
 end
 
 local function RpSetShown(show)
 	BlzFrameSetVisible(rpRoot, show)
-	for i = 1, #rpPlaced do FramePark(rpPlaced[i], not show) end
+	local page = rpPage[GetPlayerId(GetLocalPlayer())]
+	for i = 1, #rpPlaced do
+		local item = rpPlaced[i]
+		local visible = show and item.page == page
+		BlzFrameSetVisible(item.frame, visible)
+		FramePark(item.frame, not visible)
+	end
 end
 
 -- Снять с кольца старое меню выбора, чтобы раса выбиралась только через панель.
@@ -199,15 +219,33 @@ local function RpPick(entry)
 		RpRelease(BlzGetTriggerFrame(), p)
 		local u = rpCircle[pi]
 		if not RpValid(u, p) then return end
+		if entry.key == nil and RP_SUBFACTIONS[entry.id] ~= nil then
+			rpPage[pi] = entry.id
+			if GetLocalPlayer() == p then RpSetShown(true) end
+			return
+		end
+		if entry.key ~= nil and rpPage[pi] ~= entry.parent then return end
+		if entry.key == nil and rpPage[pi] ~= nil then return end
+		local act = _G[entry.fn]
+		if act == nil then return end
 		rpCircle[pi] = nil
+		rpPage[pi] = nil
 		RpApply()
 		ProbeLogWrite("[RACEPICK] p=" .. pi .. " abil=" .. entry.id)
 		-- Порядок как у способности: сначала обработчики SPELL_EFFECT, потом SPELL_FINISH.
 		if entry.extra ~= nil and _G[entry.extra] ~= nil then _G[entry.extra](u) end
-		local act = _G[entry.fn]
-		if act ~= nil then act(u) end
+		act(u, entry.key)
 		if CustomHudNoteRace ~= nil then CustomHudNoteRace(pi, entry.abil) end
 	end
+end
+
+local function RpBack()
+	local p = GetTriggerPlayer()
+	local pi = GetPlayerId(p)
+	RpRelease(BlzGetTriggerFrame(), p)
+	if not RpValid(rpCircle[pi], p) then return end
+	rpPage[pi] = nil
+	if GetLocalPlayer() == p then RpSetShown(true) end
 end
 
 local function RpCamera()
@@ -327,6 +365,36 @@ function RacePicker_Create()
 	BlzFrameSetTextAlignment(rpHint, TEXT_JUSTIFY_MIDDLE, TEXT_JUSTIFY_CENTER)
 	BlzFrameSetText(rpHint, "|cffffffffПКМ|cffced4da по карте — место высадки, затем раса|r")
 	BlzFrameSetEnable(rpHint, false)
+	local pageId = id + 10
+	for _, parentId in ipairs({ "A0RQ", "A14O", "A1JN" }) do
+		local page = RP_SUBFACTIONS[parentId]
+		rpBuildPage = parentId
+		local heading = BlzCreateFrame("HudBody", rpRoot, 0, pageId)
+		BlzFrameSetSize(heading, 0.6, 0.04)
+		RpPlace(heading, FRAMEPOINT_TOP, 0.4, 0.585)
+		BlzFrameSetTextAlignment(heading, TEXT_JUSTIFY_MIDDLE, TEXT_JUSTIFY_CENTER)
+		BlzFrameSetText(heading, "|cffebc56c" .. page.title .. "|r|n|cffced4daВыберите подфракцию. Выбор бесплатный и окончательный.|r")
+		BlzFrameSetEnable(heading, false)
+		for i = 1, #page.choices do
+			local choice = page.choices[i]
+			local abil = FourCC(choice.id or parentId)
+			local e = { id = choice.id or parentId, abil = abil, fn = choice.fn, key = choice.key, parent = parentId }
+			local bx = 0.4 + (i - (#page.choices + 1) / 2) * 0.17 - RP_ICON / 2
+			pageId = pageId + 1
+			RpButton("ReplaceableTextures\\CommandButtons\\" .. choice.icon .. ".blp",
+				"|cffebc56c" .. choice.name .. "|r|n|cffb99d66ПОДФРАКЦИЯ:|cffced4da " .. choice.tip .. "|r", bx, rowHigh, pageId, RpPick(e))
+			local label = BlzCreateFrame("HudText", rpRoot, 0, pageId + 100)
+			BlzFrameSetSize(label, 0.16, 0.026)
+			RpPlace(label, FRAMEPOINT_TOP, bx + RP_ICON / 2, rowHigh - 0.004)
+			BlzFrameSetTextAlignment(label, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+			BlzFrameSetText(label, "|cffebc56c" .. choice.name .. "|r")
+			BlzFrameSetEnable(label, false)
+		end
+		RpButton("ReplaceableTextures\\CommandButtons\\BTNReplay-Loop.blp", "|cffebc56cНазад|r|n|cffced4daВернуться к выбору расы.|r", 0.4 - RP_ICON - RP_GAP / 2, headY, pageId + 1, RpBack)
+		RpButton(RP_CAM_ICON, "|cffebc56cК месту высадки|r|n|cffced4daПеренести камеру к кольцу.|r", 0.4 + RP_GAP / 2, headY, pageId + 2, RpCamera)
+		pageId = pageId + 3
+	end
+	rpBuildPage = nil
 
 	RpSetShown(false)
 	rpReady = true
@@ -344,6 +412,7 @@ end
 function RacePickerAdopt(u)
 	if u == nil or GetUnitTypeId(u) ~= RP_CIRCLE then return end
 	rpCircle[GetPlayerId(GetOwningPlayer(u))] = u
+	rpPage[GetPlayerId(GetOwningPlayer(u))] = nil
 	if not rpReady then return end
 	RpStripOldMenu(u)
 	RpApply()
@@ -356,4 +425,6 @@ function RacePicker_Init()
 		DestroyTimer(delay)
 		ProbeStep("RacePicker_Create", RacePicker_Create)
 	end)
+end
+
 end

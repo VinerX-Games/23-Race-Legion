@@ -743,8 +743,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -858,7 +856,7 @@
   },
   "R0H0": {
    "type": "upgrade",
-   "name": "",
+   "name": "Фракция с спец магами",
    "only_required": true,
    "levels": 1,
    "gold": 75,
@@ -1424,16 +1422,20 @@
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
   },
   "etoa": {
    "type": "unit",
-   "name": "",
+   "name": "Древо столетий",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1480,7 +1482,7 @@
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "gold": 4000,
    "lumber": 4000,
@@ -1491,7 +1493,7 @@
   },
   "h0H1": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1871,7 +1873,7 @@
   },
   "hvlt": {
    "type": "unit",
-   "name": "",
+   "name": "Волшебное хранилище",
    "only_required": true,
    "gold": 130,
    "lumber": 30,
@@ -1894,26 +1896,6 @@
    "base": "oeye",
    "hp": 125,
    "time": 1
-  },
-  "ofor": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 205,
-   "hp": 1000,
-   "time": 70,
-   "hotkey": "E"
-  },
-  "ofrt": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
-   "time": 140,
-   "hotkey": "Z"
   }
  },
  "edges": [
@@ -1956,8 +1938,6 @@
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",

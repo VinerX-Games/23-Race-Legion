@@ -127,11 +127,14 @@ end
 --===========================================================================
 -- Trigger: DragonUnionStart
 --===========================================================================
+function DragonApplySubrace(p)
+    SetPlayerTechMaxAllowed(p, FourCC('n044'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0A7'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0AZ'), 0)
+    DragonsOn()
+end
 function Trig_DragonUnionStart_Actions()
-    gPlayer=GetOwningPlayer(GetTriggerUnit())
-    SetPlayerTechMaxAllowed(gPlayer, FourCC('n044'), 0)
-    SetPlayerTechMaxAllowed(gPlayer, FourCC('R0A7'), 0)
-    SetPlayerTechMaxAllowed(gPlayer, FourCC('R0AZ'), 0)
+    DragonApplySubrace(GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_DragonUnionStart()

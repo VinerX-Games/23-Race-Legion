@@ -635,8 +635,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -733,7 +731,6 @@
    "lumber": 480,
    "time": 1,
    "requires": [
-    "Redc",
     "etoa"
    ],
    "requires_amount": 2
@@ -748,7 +745,6 @@
    "lumber_per_level": 430,
    "time": 1,
    "requires": [
-    "Redc",
     "etoe"
    ],
    "requires_amount": 2
@@ -773,14 +769,13 @@
    "lumber": 320,
    "time": 1,
    "requires": [
-    "Redc",
     "etoa"
    ],
    "requires_amount": 2
   },
   "R0GB": {
    "type": "upgrade",
-   "name": "",
+   "name": "Выбор направления",
    "only_required": true,
    "levels": 1,
    "lumber": 100,
@@ -872,7 +867,6 @@
    "lumber": 480,
    "time": 30,
    "requires": [
-    "Redc",
     "etoa",
     "edcm"
    ],
@@ -944,8 +938,7 @@
    "lumber": 430,
    "time": 40,
    "requires": [
-    "etoe",
-    "eden"
+    "etoe"
    ]
   },
   "Reib": {
@@ -1052,8 +1045,7 @@
    "lumber": 450,
    "time": 75,
    "requires": [
-    "etoe",
-    "eden"
+    "etoe"
    ]
   },
   "Resc": {
@@ -1142,7 +1134,7 @@
   },
   "Rhde": {
    "type": "upgrade",
-   "name": "",
+   "name": "Защита",
    "only_required": true,
    "levels": 1,
    "gold": 125,
@@ -1151,7 +1143,7 @@
   },
   "Rhsb": {
    "type": "upgrade",
-   "name": "",
+   "name": "Тяжелые клинки",
    "only_required": true,
    "levels": 1,
    "gold": 100,
@@ -1165,7 +1157,7 @@
   },
   "Robk": {
    "type": "upgrade",
-   "name": "",
+   "name": "Улучшение до берсерка",
    "only_required": true,
    "levels": 1,
    "gold": 75,
@@ -1181,12 +1173,16 @@
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
   },
   "e00H": {
    "type": "unit",
@@ -1336,7 +1332,7 @@
   },
   "edcm": {
    "type": "unit",
-   "name": "",
+   "name": "Друид-хищник",
    "only_required": true,
    "gold": 255,
    "lumber": 80,
@@ -1346,16 +1342,6 @@
    "requires": [
     "etoa"
    ]
-  },
-  "eden": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 90,
-   "lumber": 30,
-   "hp": 450,
-   "time": 60,
-   "hotkey": "D"
   },
   "edob": {
    "type": "building",
@@ -1438,7 +1424,7 @@
   },
   "ehip": {
    "type": "unit",
-   "name": "",
+   "name": "Гиппогриф",
    "only_required": true,
    "gold": 160,
    "lumber": 20,
@@ -1579,7 +1565,7 @@
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "gold": 4000,
    "lumber": 4000,
@@ -1590,7 +1576,7 @@
   },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1604,7 +1590,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1614,8 +1600,12 @@
    "hotkey": "Z"
   },
   "ken0": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Ярость природы",
+   "hero": true,
+   "levels": 2,
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "n05D": {
    "type": "unit",
@@ -1661,26 +1651,6 @@
     "edob",
     "R0G1"
    ]
-  },
-  "ofor": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 205,
-   "hp": 1000,
-   "time": 70,
-   "hotkey": "E"
-  },
-  "ofrt": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
-   "time": 140,
-   "hotkey": "Z"
   }
  },
  "edges": [
@@ -1738,29 +1708,22 @@
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
   "R0G1 requires Redc",
   "R0G2 requires Redc",
   "R0G6 requires Redc",
-  "R0G7 requires Redc",
   "R0G7 requires etoa",
-  "R0G8 requires Redc",
   "R0G8 requires etoe",
   "R0G9 requires Redc",
-  "R0GA requires Redc",
   "R0GA requires etoa",
-  "R0LC requires Redc",
   "R0LC requires edcm",
   "R0LC requires etoa",
   "Redc requires etoe",
   "Redt requires etoe",
   "Reeb requires Redc",
   "Reec requires Redt",
-  "Rehs requires eden",
   "Rehs requires etoe",
   "Reib requires etoa",
   "Rema requires etoa",
@@ -1772,7 +1735,6 @@
   "Repb requires edob",
   "Repb requires etoa",
   "Rerh requires etoa",
-  "Rers requires eden",
   "Rers requires etoe",
   "Resc requires edob",
   "Resm requires etoa",

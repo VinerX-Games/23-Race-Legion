@@ -109,52 +109,72 @@ end
 function Trig_AlmostDiyW2_Conditions()
     return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('w2a0')) > 0
 end
+function HordeW2IsRescuer(u, p)
+    return GetOwningPlayer(u) == p and UnitAlive(u) and
+        (GetUnitAbilityLevel(u, FourCC('w2a1')) > 0 or
+         GetUnitAbilityLevel(u, FourCC('xdA7')) > 0 or
+         GetUnitAbilityLevel(u, FourCC('xdA8')) > 0)
+end
 function FZepp()
-    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('w2a1')) > 0 and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and UnitAlive(GetFilterUnit()) --and GetUnitUserData(GetFilterUnit())<6
+    return HordeW2IsRescuer(GetFilterUnit(), udg_LocalPlayer)
 end
 function Trig_AlmostDiyW2_Actions()
-    local u= GetTriggerUnit()
-    local Damage= GetEventDamage()
-    local hp= GetUnitState(u, UNIT_STATE_LIFE)
-    local rescueBonus=0
-    local Zepp
-    local u2
-    local g
-    
-    
-    
-    
-    if HordeW2GetSubrace(GetOwningPlayer(u)) == "dragonmaw" then
-        rescueBonus = 1
+    local u = GetTriggerUnit()
+    local damage = GetEventDamage()
+    local hp = GetWidgetLife(u)
+    local uh = GetHandleId(u)
+    local d = UHData[uh] or { lvl = 0, xp = 0 }
+    if d.rescueGrace then
+        BlzSetEventDamage(0)
+        return
     end
-    if hp - Damage < 1 and Random(5 + GetPlayerTechCount(GetOwningPlayer(u), FourCC('w2rq'), true) + rescueBonus , 10) then
-        
-        udg_LocalPlayer=GetOwningPlayer(u)
-        Zepp=Condition(FZepp)
-        g=CreateGroup()
-        GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 1000, Zepp, 5)
-        
-        
-        u2=BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
-        if u2 ~= nil and UnitAlive(u2) then
-            
-            RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\FlakCannons\\FlakTarget.mdl", GetUnitX(u), GetUnitY(u)) , 1)
-            SetUnitState(u, UNIT_STATE_LIFE, hp + Damage)
-            SetUnitPosition(u, GetUnitX(u2), GetUnitY(u2))
-            IssueTargetOrder(u, "smart", u2)
+    if damage <= 0 or hp - damage >= 1 then return end
+    local p = GetOwningPlayer(u)
+    local branch = HordeW2GetSubrace(p)
+    if d.rescueCooldown then return end
+    local chance = 5 + GetPlayerTechCount(p, FourCC('w2rq'), true)
+    if branch == "dragonmaw" then chance = chance + 1 end
+    if not Random(chance, 10) then return end
+    local g = CreateGroup()
+    local rescuers = {}
+    GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 1000, nil)
+    while true do
+        local support = FirstOfGroup(g)
+        if support == nil then break end
+        GroupRemoveUnit(g, support)
+        if support ~= u and HordeW2IsRescuer(support, p) then
+            rescuers[#rescuers + 1] = support
         end
-        
-        DestroyGroup(g)
-        g=nil
-        u2=nil
     end
-    
-    
-    
-    
-    u=nil
-    
+    DestroyGroup(g)
+    if #rescuers == 0 then return end
+    local support = rescuers[GetRandomInt(1, #rescuers)]
+    if branch == "dark" then
+        BlzSetEventDamage(0)
+        SetWidgetLife(u, math.max(hp, BlzGetUnitMaxHP(u) * 0.15))
+    else
+        BlzSetEventDamage(0)
+        SetUnitPosition(u, GetUnitX(support), GetUnitY(support))
+    end
+    RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\FlakCannons\\FlakTarget.mdl", GetUnitX(u), GetUnitY(u)), 1)
+    d.rescueGrace = true
+    UHData[uh] = d
+    local graceTimer = CreateTimer()
+    TimerStart(graceTimer, 0, false, function()
+        if UHData[uh] == d then d.rescueGrace = nil end
+        DestroyTimer(graceTimer)
+    end)
+    if branch ~= "base" then
+        d.rescueCooldown = true
+        UHData[uh] = d
+        local timer = CreateTimer()
+        TimerStart(timer, 45, false, function()
+            if UHData[uh] == d then d.rescueCooldown = nil end
+            DestroyTimer(timer)
+        end)
+    end
 end
+
 --===========================================================================
 function InitTrig_AlmostDiyW2()
     gg_trg_AlmostDiyW2=CreateTrigger()
@@ -201,12 +221,13 @@ function Trig_DiyGoblinW2_Actions()
     if Random(3 , 4) then
         
         udg_LocalPlayer=GetOwningPlayer(u)
-        Zepp=Condition(FZepp)
+        Zepp=CachedFilter(FZepp)
         g=CreateGroup()
         GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 1000, Zepp, 5)
         
         
-        u2=BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
+        local size = BlzGroupGetSize(g)
+        if size > 0 then u2=BlzGroupUnitAt(g, GetRandomInt(0, size - 1)) end
         if u2 ~= nil and UnitAlive(u2) then
                    
             RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\FlakCannons\\FlakTarget.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
@@ -216,7 +237,7 @@ function Trig_DiyGoblinW2_Actions()
     end
     
     
-    DestroyGroup(g)
+    if g ~= nil then DestroyGroup(g) end
     g=nil
     u=nil
     u2=nil
@@ -656,86 +677,8 @@ function InitTrig_Duel()
     end)
 end
 --===========================================================================
--- HordeW2 subrace selection (player-facing, Naga-style mutually exclusive research)
---   xdR1 = Темная Орда (dark)   xdR2 = Клан Драконьей Пасти (dragonmaw)
---===========================================================================
-
--- Offer both subrace researches to a player (default branch stays "base").
----@param p player
----@return nothing
-function HordeW2EnableSubraceChoice(p)
-    HordeW2ApplySubraceRoster(p)
-    SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 1, p)
-    SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 1, p)
-end
-
--- Lock both subrace researches once a branch is committed.
----@param p player
----@return nothing
+-- HordeW2 branch is committed by the race picker before workers are spawned.
 function HordeW2LockSubraceChoice(p)
-    SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 0, p)
-    SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 0, p)
-end
-
--- RESEARCH_START: starting one branch hides the other so only one can be in progress.
-function Trig_HordeW2SubStart_Actions()
-    local r= GetResearched()
-    local p= GetOwningPlayer(GetTriggerUnit())
-    if r == FourCC('xdR1') then
-        SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 0, p)
-    elseif r == FourCC('xdR2') then
-        SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 0, p)
-    end
-end
-function InitTrig_HordeW2SubStart()
-    gg_trg_HordeW2SubStart=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_HordeW2SubStart, EVENT_PLAYER_UNIT_RESEARCH_START)
-    TriggerAddAction(gg_trg_HordeW2SubStart, function()
-        local r= GetResearched()
-        if r ~= FourCC('xdR1') and r ~= FourCC('xdR2') then return end
-        Trig_HordeW2SubStart_Actions()
-    end)
-end
--- RESEARCH_CANCEL: cancelling re-opens the other branch.
-function Trig_HordeW2SubCancel_Actions()
-    local r= GetResearched()
-    local p= GetOwningPlayer(GetTriggerUnit())
-    if r == FourCC('xdR1') then
-        SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 1, p)
-    elseif r == FourCC('xdR2') then
-        SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 1, p)
-    end
-end
-function InitTrig_HordeW2SubCancel()
-    gg_trg_HordeW2SubCancel=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_HordeW2SubCancel, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
-    TriggerAddAction(gg_trg_HordeW2SubCancel, function()
-        local r= GetResearched()
-        if r ~= FourCC('xdR1') and r ~= FourCC('xdR2') then return end
-        Trig_HordeW2SubCancel_Actions()
-    end)
-end
--- RESEARCH_FINISH: commit the branch — swap roster, apply dragon preset, lock the choice.
-function Trig_HordeW2SubFinish_Actions()
-    local r= GetResearched()
-    local p= GetOwningPlayer(GetTriggerUnit())
-    if r == FourCC('xdR1') then
-        HordeW2SetSubrace(p, "dark")
-    elseif r == FourCC('xdR2') then
-        HordeW2SetSubrace(p, "dragonmaw")
-    else
-        return
-    end
-    HordeW2ApplySubraceRoster(p)
-    HordeW2ApplyDragonPreset(p)
-    HordeW2LockSubraceChoice(p)
-end
-function InitTrig_HordeW2SubFinish()
-    gg_trg_HordeW2SubFinish=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_HordeW2SubFinish, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    TriggerAddAction(gg_trg_HordeW2SubFinish, function()
-        local r= GetResearched()
-        if r ~= FourCC('xdR1') and r ~= FourCC('xdR2') then return end
-        Trig_HordeW2SubFinish_Actions()
-    end)
+    SetPlayerTechMaxAllowed(p, FourCC('xdR1'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('xdR2'), 0)
 end

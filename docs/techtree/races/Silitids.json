@@ -546,8 +546,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -729,8 +727,6 @@
    "time": 50,
    "time_per_level": 15,
    "requires": [
-    "ugrv",
-    "unp2",
     "e020"
    ]
   },
@@ -742,8 +738,6 @@
    "lumber": 1800,
    "time": 60,
    "requires": [
-    "ofor",
-    "ofrt",
     "e020"
    ]
   },
@@ -784,8 +778,6 @@
    "time": 50,
    "time_per_level": 15,
    "requires": [
-    "ugrv",
-    "unp2",
     "e01K"
    ]
   },
@@ -800,8 +792,6 @@
    "time": 50,
    "time_per_level": 15,
    "requires": [
-    "ugrv",
-    "unp2",
     "e021"
    ]
   },
@@ -816,8 +806,6 @@
    "time": 50,
    "time_per_level": 15,
    "requires": [
-    "ugrv",
-    "unp2",
     "e01K"
    ]
   },
@@ -832,8 +820,6 @@
    "time": 50,
    "time_per_level": 15,
    "requires": [
-    "ugrv",
-    "unp2",
     "e021"
    ]
   },
@@ -848,8 +834,6 @@
    "time": 50,
    "time_per_level": 15,
    "requires": [
-    "ugrv",
-    "unp2",
     "e021"
    ]
   },
@@ -864,8 +848,6 @@
    "time": 50,
    "time_per_level": 15,
    "requires": [
-    "ugrv",
-    "unp2",
     "e021"
    ]
   },
@@ -880,8 +862,6 @@
    "time": 50,
    "time_per_level": 15,
    "requires": [
-    "ugrv",
-    "unp2",
     "e021"
    ]
   },
@@ -918,12 +898,16 @@
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
   },
   "U023": {
    "type": "hero",
@@ -1313,7 +1297,7 @@
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "gold": 4000,
    "lumber": 4000,
@@ -1337,7 +1321,7 @@
   },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1351,7 +1335,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1400,26 +1384,6 @@
    "hp": 50,
    "time": 1
   },
-  "ofor": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 205,
-   "hp": 1000,
-   "time": 70,
-   "hotkey": "E"
-  },
-  "ofrt": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
-   "time": 140,
-   "hotkey": "Z"
-  },
   "u020": {
    "type": "unit",
    "name": "Обсидиановая статуя",
@@ -1448,7 +1412,7 @@
   },
   "ugrv": {
    "type": "unit",
-   "name": "",
+   "name": "Кладбище",
    "only_required": true,
    "gold": 215,
    "hp": 900,
@@ -1457,7 +1421,7 @@
   },
   "unp2": {
    "type": "unit",
-   "name": "",
+   "name": "Темная цитадель",
    "only_required": true,
    "gold": 870,
    "lumber": 440,
@@ -1483,8 +1447,6 @@
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
@@ -1500,34 +1462,16 @@
   "R084 requires ugrv",
   "R084 requires unp2",
   "R085 requires e020",
-  "R085 requires ugrv",
-  "R085 requires unp2",
   "R086 requires e020",
-  "R086 requires ofor",
-  "R086 requires ofrt",
   "R087 requires hcas",
   "R088 requires hcas",
   "R089 requires e01K",
-  "R089 requires ugrv",
-  "R089 requires unp2",
   "R08A requires e021",
-  "R08A requires ugrv",
-  "R08A requires unp2",
   "R08B requires e01K",
-  "R08B requires ugrv",
-  "R08B requires unp2",
   "R08C requires e021",
-  "R08C requires ugrv",
-  "R08C requires unp2",
   "R08D requires e021",
-  "R08D requires ugrv",
-  "R08D requires unp2",
   "R08E requires e021",
-  "R08E requires ugrv",
-  "R08E requires unp2",
   "R08F requires e021",
-  "R08F requires ugrv",
-  "R08F requires unp2",
   "R08G requires hkee",
   "U023 has-ability A01C",
   "U023 has-ability AInv",

@@ -194,48 +194,95 @@
    "levels": 1
   },
   "PA02": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Единение с Инь",
+   "hero": true,
+   "levels": 1,
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "PA03": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Веер Клинков",
+   "hero": true,
+   "levels": 4,
+   "hero_level_req": 1,
+   "hotkey": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Усиливает ядовитые эффекты атак пехоты и стрелков армии Отрекшихся.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cМёртвый воин|cffced4da|n- |cffebc56cЛучница|cffced4da|n- |cffebc56cТёмный следопыт|cffced4da|n- |cffebc56cСтраж Смерти|cffced4da|n- |cffebc56cУбийца|cffced4da.|n|n|cffb99d66Уровень исследования:|r |cffffffff3/4|r."
   },
   "PA05": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Удары Ци",
+   "levels": 1
   },
   "PA10": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Длинные Луки",
+   "levels": 2,
+   "gold": 2000,
+   "gold_per_level": 3000,
+   "lumber": 1250,
+   "lumber_per_level": 2000,
+   "time": 30,
+   "requires": [
+    "pa24"
+   ]
   },
   "PA11": {
    "type": "unknown",
    "name": ""
   },
   "PA12": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Укрепление Духа",
+   "levels": 1,
+   "gold": 600,
+   "lumber": 900,
+   "time": 40,
+   "requires": [
+    "pa24"
+   ]
   },
   "PA13": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Защита Ци",
+   "levels": 1
   },
   "PA14": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Защита Ци",
+   "levels": 1,
+   "gold": 2500,
+   "gold_per_level": 75,
+   "lumber": 3000,
+   "lumber_per_level": 125,
+   "time": 60,
+   "time_per_level": 15,
+   "requires": [
+    "pa24"
+   ]
   },
   "PA15": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Воодушевляющее Присутствие",
+   "hero": true,
+   "levels": 4
   },
   "PA16": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Энергия Ци",
+   "levels": 1,
+   "hero_level_req": 1,
+   "hotkey": "Q",
+   "requires": [
+    "PA90"
+   ]
   },
   "PA20": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Аура Умиротворённости",
+   "levels": 2,
+   "hero_level_req": 1,
+   "hotkey": "E"
   },
   "PA36": {
    "type": "hero",
@@ -282,168 +329,396 @@
    "hotkey": "E"
   },
   "PA45": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Нефритовые Доспехи",
+   "levels": 1,
+   "hotkey": "K",
+   "requires": [
+    "PA85"
+   ]
   },
   "PA46": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Рассеивание заклинаний",
+   "levels": 1,
+   "hotkey": "D",
+   "requires": [
+    "PA91"
+   ]
   },
   "PA50": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Удар Восходящего Солнца",
+   "hero": true,
+   "levels": 4,
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "PA51": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выдержка Монастыря Земли",
+   "hero": true,
+   "levels": 4,
+   "hotkey": "E"
   },
   "PA53": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Ярость",
+   "levels": 1,
+   "hotkey": "W",
+   "requires": [
+    "PA89"
+   ],
+   "requires_amount": 2
   },
   "PA55": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Буря Клинков",
+   "hero": true,
+   "levels": 1,
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "PA57": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Танец Ветра",
+   "hero": true,
+   "levels": 4,
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "PA59": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Техника Тысячи Порезов",
+   "hero": true,
+   "levels": 4,
+   "hero_level_req": 1
   },
   "PA60": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Цепная молния",
+   "hero": true,
+   "levels": 4,
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "PA61": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Багманское пиво",
+   "levels": 1,
+   "hero_level_req": 1
   },
   "PA62": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Грозовые Стрелы",
+   "levels": 1,
+   "hero_level_req": 1,
+   "hotkey": "Q",
+   "requires": [
+    "pa24"
+   ]
   },
   "PA63": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Обжигающее Пламя Дракона",
+   "levels": 1,
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "PA65": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Призыв к Балансу",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "PA66": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Испепеление",
+   "levels": 1,
+   "hero_level_req": 1,
+   "hotkey": "C"
   },
   "PA67": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Пламенное дыхание",
+   "levels": 1,
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "PA68": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Чувство баланса",
+   "levels": 1,
+   "hero_level_req": 1
   },
   "PA69": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Удар Гнева Земли",
+   "levels": 1,
+   "hero_level_req": 1
   },
   "PA70": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Хмельные Пары",
+   "levels": 1,
+   "hero_level_req": 1,
+   "hotkey": "W"
   },
   "PA73": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Раздвоенная молния",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "PA74": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Удар Хмельной Бочки",
+   "levels": 1
   },
   "PA75": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Катаклизм",
+   "hero": true,
+   "levels": 2,
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "PA76": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Призыв Помощи",
+   "hero": true,
+   "levels": 4,
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "PA77": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Пьяный Мастер",
+   "hero": true,
+   "levels": 3,
+   "hero_level_req": 1
   },
   "PA78": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Провокация",
+   "hero": true,
+   "levels": 5,
+   "hotkey": "W"
   },
   "PA79": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Добывать Ресурсы",
+   "levels": 1,
+   "hotkey": "G"
   },
   "PA80": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Доспехи из кожи",
+   "levels": 6,
+   "gold": 450,
+   "gold_per_level": 450,
+   "lumber": 450,
+   "lumber_per_level": 450,
+   "time": 50,
+   "time_per_level": 10,
+   "requires": [
+    "hkee"
+   ]
   },
   "PA81": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Железные Мечи",
+   "levels": 6,
+   "gold": 450,
+   "gold_per_level": 450,
+   "lumber": 450,
+   "lumber_per_level": 450,
+   "time": 50,
+   "time_per_level": 10,
+   "requires": [
+    "hkee"
+   ]
   },
   "PA82": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Изучение Хмелеварения",
+   "levels": 1,
+   "gold": 3500,
+   "lumber": 3500,
+   "time": 40,
+   "requires": [
+    "pa24"
+   ]
   },
   "PA83": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Изучить Геомантию",
+   "levels": 1,
+   "gold": 3500,
+   "lumber": 3500,
+   "time": 40,
+   "requires": [
+    "pa24"
+   ]
   },
   "PA84": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Железная Броня",
+   "levels": 6,
+   "gold": 450,
+   "gold_per_level": 450,
+   "lumber": 450,
+   "lumber_per_level": 450,
+   "time": 50,
+   "time_per_level": 10,
+   "requires": [
+    "hkee"
+   ]
   },
   "PA85": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Нефритовые Доспехи",
+   "levels": 1,
+   "gold": 1500,
+   "gold_per_level": 25,
+   "lumber": 2000,
+   "lumber_per_level": 100,
+   "time": 60,
+   "time_per_level": 15,
+   "requires": [
+    "pa24"
+   ]
   },
   "PA86": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Посвящение Мастеров Бури",
+   "levels": 2,
+   "gold": 3500,
+   "gold_per_level": 500,
+   "lumber": 2000,
+   "lumber_per_level": 3000,
+   "time": 50,
+   "time_per_level": 10,
+   "requires": [
+    "hcas"
+   ]
   },
   "PA87": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Посвящение Мастеров Земли",
+   "levels": 2,
+   "gold": 3500,
+   "gold_per_level": 500,
+   "lumber": 2000,
+   "lumber_per_level": 3000,
+   "time": 50,
+   "time_per_level": 10,
+   "requires": [
+    "hkee"
+   ]
   },
   "PA88": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Посвящение Мастеров Огня",
+   "levels": 2,
+   "gold": 5000,
+   "gold_per_level": 500,
+   "lumber": 2000,
+   "lumber_per_level": 3000,
+   "time": 50,
+   "time_per_level": 10,
+   "requires": [
+    "hkee"
+   ]
   },
   "PA89": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Посвящение Монахов Ян",
+   "levels": 2,
+   "gold": 450,
+   "gold_per_level": 1000,
+   "lumber": 500,
+   "lumber_per_level": 750,
+   "time": 60,
+   "requires": [
+    "hcas"
+   ]
   },
   "PA90": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Посвящение Геомантов",
+   "levels": 3,
+   "gold": 1500,
+   "gold_per_level": 500,
+   "lumber": 2000,
+   "lumber_per_level": 950,
+   "time": 60,
+   "time_per_level": 10,
+   "requires": [
+    "PA83"
+   ]
   },
   "PA91": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Посвящение Монахов Инь",
+   "levels": 2,
+   "gold": 700,
+   "gold_per_level": 200,
+   "lumber": 1500,
+   "lumber_per_level": 300,
+   "time": 50,
+   "time_per_level": 10,
+   "requires": [
+    "hcas"
+   ]
   },
   "PA92": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Посвящение Хмелеваров",
+   "levels": 3,
+   "gold": 1500,
+   "gold_per_level": 500,
+   "lumber": 2000,
+   "lumber_per_level": 950,
+   "time": 60,
+   "time_per_level": 10,
+   "requires": [
+    "PA82"
+   ]
   },
   "PA93": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Стальные Наконечники",
+   "levels": 6,
+   "gold": 300,
+   "gold_per_level": 1000,
+   "lumber": 300,
+   "lumber_per_level": 1000,
+   "time": 50,
+   "time_per_level": 10,
+   "requires": [
+    "etoa"
+   ]
   },
   "PA94": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Улучшенные топоры",
+   "levels": 6,
+   "gold": 100,
+   "gold_per_level": 200,
+   "time": 40,
+   "time_per_level": 10
   },
   "PA95": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Утяжелённая Рукоять",
+   "levels": 1,
+   "gold": 2500,
+   "lumber": 3000,
+   "time": 40,
+   "requires": [
+    "pa24"
+   ]
   },
   "R001": {
    "type": "upgrade",
@@ -492,8 +767,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -645,12 +918,30 @@
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
+  },
+  "etoa": {
+   "type": "unit",
+   "name": "Древо столетий",
+   "only_required": true,
+   "gold": 4500,
+   "lumber": 4500,
+   "food_made": 100,
+   "hp": 1700,
+   "time": 140,
+   "hotkey": "Z",
+   "requires": [
+    "R0GB"
+   ]
   },
   "h00X": {
    "type": "unit",
@@ -694,7 +985,7 @@
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "gold": 4000,
    "lumber": 4000,
@@ -744,9 +1035,22 @@
    "time": 50,
    "hotkey": "Z"
   },
+  "hbla": {
+   "type": "unit",
+   "name": "Кузница",
+   "only_required": true,
+   "gold": 140,
+   "lumber": 40,
+   "hp": 1200,
+   "time": 70,
+   "hotkey": "R",
+   "requires": [
+    "htow"
+   ]
+  },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -760,7 +1064,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -769,25 +1073,14 @@
    "time": 140,
    "hotkey": "Z"
   },
-  "ofor": {
+  "hlum": {
    "type": "unit",
-   "name": "",
+   "name": "Лесопилка",
    "only_required": true,
-   "gold": 205,
-   "hp": 1000,
-   "time": 70,
+   "gold": 120,
+   "hp": 900,
+   "time": 60,
    "hotkey": "E"
-  },
-  "ofrt": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
-   "time": 140,
-   "hotkey": "Z"
   },
   "pa01": {
    "type": "unit",
@@ -937,16 +1230,37 @@
    ]
   },
   "pa15": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Торнадо",
+   "levels": 1,
+   "hotkey": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Чествование подвига сэра Андуина Лотара и сыновей Лотара из экспедиции в Дренор.|n|nОткрывает ветерана войны, даёт всадникам новую способность и |cffc8e087+125 к здоровью|cffced4da. |cffef8173Повышает расходы на 15%|cffced4da.|n|n|cffb99d66Применяется к:|cffced4da|n- Кавалерии и пехоте Альянса.|r"
   },
   "pa16": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Усиление Мастеров Огня",
+   "levels": 1,
+   "gold": 10000,
+   "gold_per_level": 75,
+   "lumber": 10000,
+   "lumber_per_level": 125,
+   "time": 60,
+   "time_per_level": 15,
+   "requires": [
+    "pa25"
+   ]
   },
   "pa21": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Дрессировка Животных",
+   "levels": 1,
+   "gold": 1500,
+   "lumber": 2000,
+   "time": 40,
+   "requires": [
+    "hlum",
+    "hbla",
+    "hcas"
+   ]
   },
   "pa22": {
    "type": "unit",
@@ -1113,12 +1427,18 @@
    ]
   },
   "pa36": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Огненная стрела",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "pa37": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Волна исцеления",
+   "hero": true,
+   "levels": 4,
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "pa38": {
    "type": "unit",
@@ -1131,20 +1451,43 @@
    "hotkey": "Q"
   },
   "pa39": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Секреты Древних Мастеров",
+   "levels": 2,
+   "gold": 1000,
+   "gold_per_level": 700,
+   "lumber": 1500,
+   "lumber_per_level": 500,
+   "time": 60,
+   "requires": [
+    "pa25"
+   ]
   },
   "pa44": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Защита Древних Мастеров",
+   "hero": true,
+   "levels": 2,
+   "hero_level_req": 6,
+   "hotkey": "R"
   },
   "pa46": {
    "type": "unknown",
    "name": ""
   },
   "pa47": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Усиление Мастеров Земли",
+   "levels": 1,
+   "gold": 10000,
+   "gold_per_level": 75,
+   "lumber": 10000,
+   "lumber_per_level": 125,
+   "time": 60,
+   "time_per_level": 15,
+   "requires": [
+    "pa25"
+   ]
   }
  },
  "edges": [
@@ -1152,6 +1495,10 @@
   "A00A requires R007",
   "A00B requires R006",
   "A00G requires R005",
+  "PA10 requires pa24",
+  "PA12 requires pa24",
+  "PA14 requires pa24",
+  "PA16 requires PA90",
   "PA36 has-ability AInv",
   "PA36 hero-ability PA15",
   "PA36 hero-ability PA76",
@@ -1175,11 +1522,28 @@
   "PA40 hero-ability PA57",
   "PA40 hero-ability PA59",
   "PA40 hero-ability PA77",
+  "PA45 requires PA85",
+  "PA46 requires PA91",
+  "PA53 requires PA89",
+  "PA62 requires pa24",
+  "PA80 requires hkee",
+  "PA81 requires hkee",
+  "PA82 requires pa24",
+  "PA83 requires pa24",
+  "PA84 requires hkee",
+  "PA85 requires pa24",
+  "PA86 requires hcas",
+  "PA87 requires hkee",
+  "PA88 requires hkee",
+  "PA89 requires hcas",
+  "PA90 requires PA83",
+  "PA91 requires hcas",
+  "PA92 requires PA82",
+  "PA93 requires etoa",
+  "PA95 requires pa24",
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
@@ -1331,6 +1695,10 @@
   "pa14 researches PA93",
   "pa14 researches Rhfl",
   "pa14 researches Rhfs",
+  "pa16 requires pa25",
+  "pa21 requires hbla",
+  "pa21 requires hcas",
+  "pa21 requires hlum",
   "pa22 has-ability APb1",
   "pa22 has-ability PA61",
   "pa22 has-ability PA67",
@@ -1421,6 +1789,8 @@
   "pa38 has-ability PA65",
   "pa38 has-ability PA68",
   "pa38 researches PA89",
+  "pa39 requires pa25",
+  "pa47 requires pa25",
   "race:Pandarens lua-start-tech R0L3",
   "race:Pandarens lua-starts-with pa01",
   "race:Pandarens lua-starts-with pa23"

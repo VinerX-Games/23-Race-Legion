@@ -611,8 +611,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -663,9 +661,6 @@
    "lumber": 125,
    "time": 40,
    "requires": [
-    "hlum",
-    "hbla",
-    "hcas",
     "e02C"
    ]
   },
@@ -771,8 +766,6 @@
    "lumber": 2000,
    "time": 40,
    "requires": [
-    "etoe",
-    "eden",
     "e02C"
    ]
   },
@@ -860,12 +853,16 @@
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
   },
   "e02B": {
    "type": "building",
@@ -1144,19 +1141,9 @@
    ],
    "requires_amount": 6
   },
-  "eden": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 90,
-   "lumber": 30,
-   "hp": 450,
-   "time": 60,
-   "hotkey": "D"
-  },
   "etoa": {
    "type": "unit",
-   "name": "",
+   "name": "Древо столетий",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1170,7 +1157,7 @@
   },
   "etoe": {
    "type": "unit",
-   "name": "",
+   "name": "Древо вечности",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1224,7 +1211,7 @@
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "gold": 4000,
    "lumber": 4000,
@@ -1233,22 +1220,9 @@
    "time": 240,
    "hotkey": "Z"
   },
-  "hbla": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 140,
-   "lumber": 40,
-   "hp": 1200,
-   "time": 70,
-   "hotkey": "R",
-   "requires": [
-    "htow"
-   ]
-  },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1262,41 +1236,12 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
    "food_made": 100,
    "hp": 2000,
-   "time": 140,
-   "hotkey": "Z"
-  },
-  "hlum": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 120,
-   "hp": 900,
-   "time": 60,
-   "hotkey": "E"
-  },
-  "ofor": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 205,
-   "hp": 1000,
-   "time": 70,
-   "hotkey": "E"
-  },
-  "ofrt": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
    "time": 140,
    "hotkey": "Z"
   }
@@ -1356,15 +1301,10 @@
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
   "R09K requires e02C",
-  "R09K requires hbla",
-  "R09K requires hcas",
-  "R09K requires hlum",
   "R09M requires etoa",
   "R09N requires e02C",
   "R0AE requires etoa",
@@ -1373,8 +1313,6 @@
   "R0AH requires e02D",
   "R0AK requires e02D",
   "R0AL requires e02C",
-  "R0AL requires eden",
-  "R0AL requires etoe",
   "R0AM requires e02C",
   "R0KQ requires e02D",
   "R0KR requires e02D",

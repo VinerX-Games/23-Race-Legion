@@ -637,8 +637,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -811,8 +809,6 @@
    "lumber": 600,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0N8"
    ]
   },
@@ -908,14 +904,12 @@
    "lumber": 600,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0N8"
    ]
   },
   "Robk": {
    "type": "upgrade",
-   "name": "",
+   "name": "Улучшение до берсерка",
    "only_required": true,
    "levels": 1,
    "gold": 75,
@@ -931,12 +925,16 @@
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
   },
   "h05P": {
    "type": "unit",
@@ -988,7 +986,7 @@
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "gold": 4000,
    "lumber": 4000,
@@ -1125,7 +1123,7 @@
   },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1139,7 +1137,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1295,18 +1293,9 @@
    "time": 120,
    "hotkey": "Q"
   },
-  "ofor": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 205,
-   "hp": 1000,
-   "time": 70,
-   "hotkey": "E"
-  },
   "ofrt": {
    "type": "unit",
-   "name": "",
+   "name": "Цитадель",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1317,7 +1306,7 @@
   },
   "ostr": {
    "type": "unit",
-   "name": "",
+   "name": "Крепость",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1372,8 +1361,6 @@
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
@@ -1382,16 +1369,12 @@
   "R03P requires h0N8",
   "R0I8 requires ostr",
   "R0IQ requires h0N8",
-  "R0IQ requires ofor",
-  "R0IQ requires ofrt",
   "R0IT requires ostr",
   "R0IU requires ostr",
   "R0IV requires ofrt",
   "R0IW requires ofrt",
   "R0J0 requires ostr",
   "R0KI requires h0N8",
-  "R0KI requires ofor",
-  "R0KI requires ofrt",
   "h0D3 has-ability A15N",
   "h0D3 researches R002",
   "h0D3 researches R003",

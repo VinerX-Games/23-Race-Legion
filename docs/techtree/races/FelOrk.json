@@ -696,8 +696,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -748,13 +746,12 @@
    "lumber": 150,
    "time": 30,
    "requires": [
-    "ofrt",
     "h009"
    ]
   },
   "R0J9": {
    "type": "upgrade",
-   "name": "",
+   "name": "Усилить Рубаку",
    "only_required": true,
    "levels": 1,
    "gold": 540,
@@ -768,7 +765,7 @@
   },
   "R0JA": {
    "type": "upgrade",
-   "name": "",
+   "name": "Усилить Копьеметателя",
    "only_required": true,
    "levels": 1,
    "gold": 540,
@@ -782,7 +779,7 @@
   },
   "R0JB": {
    "type": "upgrade",
-   "name": "",
+   "name": "Усилить Стрелка",
    "only_required": true,
    "levels": 1,
    "gold": 540,
@@ -796,7 +793,7 @@
   },
   "R0JC": {
    "type": "upgrade",
-   "name": "",
+   "name": "Усилить Чернокнижника скверны",
    "only_required": true,
    "levels": 1,
    "gold": 540,
@@ -810,7 +807,7 @@
   },
   "R0JD": {
    "type": "upgrade",
-   "name": "",
+   "name": "Усилить Шамана",
    "only_required": true,
    "levels": 1,
    "gold": 540,
@@ -824,7 +821,7 @@
   },
   "R0JE": {
    "type": "upgrade",
-   "name": "",
+   "name": "Усилить Налетчика скверны",
    "only_required": true,
    "levels": 1,
    "gold": 540,
@@ -838,7 +835,7 @@
   },
   "R0JF": {
    "type": "upgrade",
-   "name": "",
+   "name": "Усилить Кодо скверны",
    "only_required": true,
    "levels": 1,
    "gold": 540,
@@ -852,7 +849,7 @@
   },
   "R0JG": {
    "type": "upgrade",
-   "name": "",
+   "name": "Усилить Телохранителя",
    "only_required": true,
    "levels": 1,
    "gold": 540,
@@ -866,7 +863,7 @@
   },
   "R0JJ": {
    "type": "upgrade",
-   "name": "",
+   "name": "Усилить Кодо скверны",
    "only_required": true,
    "levels": 1,
    "gold": 540,
@@ -880,7 +877,7 @@
   },
   "R0JN": {
    "type": "upgrade",
-   "name": "",
+   "name": "Усилить Стрелка",
    "only_required": true,
    "levels": 1,
    "gold": 540,
@@ -985,7 +982,6 @@
    "lumber": 150,
    "time": 40,
    "requires": [
-    "ostr",
     "o05W"
    ]
   },
@@ -1089,7 +1085,7 @@
   },
   "R0K8": {
    "type": "upgrade",
-   "name": "",
+   "name": "Ритуал некромантии",
    "only_required": true,
    "levels": 1,
    "gold": 75,
@@ -1101,7 +1097,7 @@
   },
   "R0K9": {
    "type": "upgrade",
-   "name": "",
+   "name": "Ритуал мутации",
    "only_required": true,
    "levels": 1,
    "gold": 75,
@@ -1134,7 +1130,7 @@
   },
   "Rhlh": {
    "type": "upgrade",
-   "name": "",
+   "name": "Улучшенная лесозаготовка",
    "only_required": true,
    "levels": 6,
    "gold": 100,
@@ -1155,7 +1151,7 @@
   },
   "Robk": {
    "type": "upgrade",
-   "name": "",
+   "name": "Улучшение до берсерка",
    "only_required": true,
    "levels": 1,
    "gold": 75,
@@ -1237,16 +1233,20 @@
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
   },
   "h009": {
    "type": "unit",
-   "name": "",
+   "name": "Бастион воров",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1297,7 +1297,7 @@
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "gold": 4000,
    "lumber": 4000,
@@ -1308,7 +1308,7 @@
   },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1322,7 +1322,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1740,18 +1740,9 @@
     "o05W"
    ]
   },
-  "ofor": {
-   "type": "unit",
-   "name": "",
-   "only_required": true,
-   "gold": 205,
-   "hp": 1000,
-   "time": 70,
-   "hotkey": "E"
-  },
   "ofrt": {
    "type": "unit",
-   "name": "",
+   "name": "Цитадель",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1762,7 +1753,7 @@
   },
   "ostr": {
    "type": "unit",
-   "name": "",
+   "name": "Крепость",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1785,7 +1776,7 @@
   },
   "unp2": {
    "type": "unit",
-   "name": "",
+   "name": "Темная цитадель",
    "only_required": true,
    "gold": 870,
    "lumber": 440,
@@ -1799,7 +1790,7 @@
   },
   "unpl": {
    "type": "unit",
-   "name": "",
+   "name": "Некрополь",
    "only_required": true,
    "gold": 225,
    "food_made": 10,
@@ -1864,19 +1855,15 @@
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
   "R00Y requires h009",
-  "R00Y requires ofrt",
   "R0JU requires ofrt",
   "R0JV requires ofrt",
   "R0JW requires o05W",
   "R0JX requires o05W",
   "R0JY requires o05W",
-  "R0JY requires ostr",
   "R0JZ requires o05W",
   "R0K0 requires o05W",
   "R0K2 requires ofrt",

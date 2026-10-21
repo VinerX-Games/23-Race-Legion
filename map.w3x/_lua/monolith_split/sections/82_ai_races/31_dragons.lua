@@ -14,6 +14,7 @@ function startDragons(pi)
     NumberSet(pi, FourCC('dra0'), 1)
     AiData[pi][StringHash("Race")] = "DR"
     SetPlayerTechResearchedSwap(FourCC('R0BY'), 1, p)
+    DragonApplySubrace(p)
     SetPlayerName(p, "Dragons (" .. I2S(pi + 1) .. ")")
     DragonsOn()
     AiRace[pi] = "Dragons"

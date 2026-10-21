@@ -2,6 +2,28 @@
 --===========================================================================
 -- Trigger: NagaStart
 --===========================================================================
+NagaSubraceByPlayer = NagaSubraceByPlayer or {}
+
+function NagaApplySubrace(p, branch)
+    branch = branch == "murloc" and "murloc" or "naga"
+    NagaSubraceByPlayer[GetPlayerId(p)] = branch
+    local murloc = branch == "murloc"
+    SetPlayerTechResearched(p, FourCC('R0FE'), murloc and 0 or 1)
+    SetPlayerTechResearched(p, FourCC('R0FF'), murloc and 1 or 0)
+    for _, id in ipairs({ 'n053', 'n052', 'n050', 'n054' }) do
+        SetPlayerTechMaxAllowed(p, FourCC(id), murloc and -1 or 0)
+    end
+    for _, id in ipairs({ 'n051', 'n057', 'nnsw', 'nmyr', 'nnrg' }) do
+        SetPlayerTechMaxAllowed(p, FourCC(id), murloc and 0 or -1)
+    end
+    SetPlayerTechMaxAllowed(p, FourCC('H0OZ'), murloc and 1 or 0)
+    SetPlayerTechMaxAllowed(p, FourCC('H0JU'), murloc and 0 or 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0FQ'), murloc and 3 or 0)
+    SetPlayerTechResearched(p, FourCC('R0KZ'), murloc and 0 or 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0FE'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0FF'), 0)
+end
+
 function NagaStartLimits_act()
     SetPlayerTechMaxAllowedSwap(FourCC('n054'), 0, GetEnumPlayer())
     SetPlayerTechMaxAllowedSwap(FourCC('n053'), 0, GetEnumPlayer())
@@ -22,6 +44,10 @@ function NagaStartLimits_act()
  
     --Murloc Grades
     SetPlayerTechMaxAllowedSwap(FourCC('R0FQ'), 0, GetEnumPlayer())
+    local p = GetEnumPlayer()
+    if NagaSubraceByPlayer[GetPlayerId(p)] ~= nil then
+        NagaApplySubrace(p, NagaSubraceByPlayer[GetPlayerId(p)])
+    end
     
 end
 function NagaStartLimits()
@@ -56,117 +82,6 @@ function InitTrig_Coatl()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Coatl, EVENT_PLAYER_UNIT_TRAIN_FINISH)
     TriggerAddCondition(gg_trg_Coatl, Condition(Trig_Coatl_Conditions))
     TriggerAddAction(gg_trg_Coatl, Trig_Coatl_Actions)
-end
---===========================================================================
--- Trigger: MurlokCan
---===========================================================================
-function Trig_MurlokCan_Conditions()
-    return GetResearched() == FourCC('R0FF')
-end
-function Trig_MurlokCan_Actions()
-    SetPlayerTechMaxAllowedSwap(FourCC('R0FE'), 1, GetOwningPlayer(GetTriggerUnit()))
-end
---===========================================================================
-function InitTrig_MurlokCan()
-    gg_trg_MurlokCan=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_MurlokCan, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
-    TriggerAddCondition(gg_trg_MurlokCan, Condition(Trig_MurlokCan_Conditions))
-    TriggerAddAction(gg_trg_MurlokCan, Trig_MurlokCan_Actions)
-end
---===========================================================================
--- Trigger: MurlokBeg
---===========================================================================
-function Trig_MurlokBeg_Conditions()
-    return GetResearched() == FourCC('R0FF')
-end
-function Trig_MurlokBeg_Actions()
-    SetPlayerTechMaxAllowedSwap(FourCC('R0FE'), 0, GetOwningPlayer(GetTriggerUnit()))
-end
---===========================================================================
-function InitTrig_MurlokBeg()
-    gg_trg_MurlokBeg=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_MurlokBeg, EVENT_PLAYER_UNIT_RESEARCH_START)
-    TriggerAddCondition(gg_trg_MurlokBeg, Condition(Trig_MurlokBeg_Conditions))
-    TriggerAddAction(gg_trg_MurlokBeg, Trig_MurlokBeg_Actions)
-end
---===========================================================================
--- Trigger: MurlocFin
---===========================================================================
-function Trig_MurlocFin_Conditions()
-    return GetResearched() == FourCC('R0FF')
-end
-function Trig_MurlocFin_Actions()
-    SetPlayerTechMaxAllowedSwap(FourCC('n053'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('n052'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('n050'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('n054'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    
-    
-    SetPlayerTechMaxAllowedSwap(FourCC('H0OZ'), 1, GetOwningPlayer(GetTriggerUnit())) --HERO TANK
-    
-    SetPlayerTechMaxAllowedSwap(FourCC('R0FQ'), 3, GetOwningPlayer(GetTriggerUnit()))
-end
---===========================================================================
-function InitTrig_MurlocFin()
-    gg_trg_MurlocFin=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_MurlocFin, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    TriggerAddCondition(gg_trg_MurlocFin, Condition(Trig_MurlocFin_Conditions))
-    TriggerAddAction(gg_trg_MurlocFin, Trig_MurlocFin_Actions)
-end
---===========================================================================
--- Trigger: Nagi
---===========================================================================
-function Trig_Nagi_Conditions()
-    return GetResearched() == FourCC('R0FE')
-end
-function Trig_Nagi_Actions()
-    SetPlayerTechMaxAllowedSwap(FourCC('R0FF'), 1, GetOwningPlayer(GetTriggerUnit()))
-end
---===========================================================================
-function InitTrig_Nagi()
-    gg_trg_Nagi=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Nagi, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
-    TriggerAddCondition(gg_trg_Nagi, Condition(Trig_Nagi_Conditions))
-    TriggerAddAction(gg_trg_Nagi, Trig_Nagi_Actions)
-end
---===========================================================================
--- Trigger: Nagi2
---===========================================================================
-function Trig_Nagi2_Conditions()
-    return GetResearched() == FourCC('R0FE')
-end
-function Trig_Nagi2_Actions()
-    SetPlayerTechMaxAllowedSwap(FourCC('R0FF'), 0, GetOwningPlayer(GetTriggerUnit()))
-end
---===========================================================================
-function InitTrig_Nagi2()
-    gg_trg_Nagi2=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Nagi2, EVENT_PLAYER_UNIT_RESEARCH_START)
-    TriggerAddCondition(gg_trg_Nagi2, Condition(Trig_Nagi2_Conditions))
-    TriggerAddAction(gg_trg_Nagi2, Trig_Nagi2_Actions)
-end
---===========================================================================
--- Trigger: NagaFinishCode
---===========================================================================
-function Trig_NagaFinishCode_Conditions()
-    return GetResearched() == FourCC('R0FE')
-end
-function Trig_NagaFinishCode_Actions()
-    SetPlayerTechMaxAllowedSwap(FourCC('n051'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('n057'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('nnsw'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('nmyr'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap(FourCC('nnrg'), - 1, GetOwningPlayer(GetTriggerUnit()))
-    
-    SetPlayerTechResearchedSwap(FourCC('R0KZ'), 1, GetOwningPlayer(GetTriggerUnit())) --Illidary or Nagi
-    SetPlayerTechMaxAllowedSwap(FourCC('H0JU'), 1, GetOwningPlayer(GetTriggerUnit())) --HERO
-end
---===========================================================================
-function InitTrig_NagaFinishCode()
-    gg_trg_NagaFinishCode=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_NagaFinishCode, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    TriggerAddCondition(gg_trg_NagaFinishCode, Condition(Trig_NagaFinishCode_Conditions))
-    TriggerAddAction(gg_trg_NagaFinishCode, Trig_NagaFinishCode_Actions)
 end
 --===========================================================================
 -- Trigger: VaishBuria

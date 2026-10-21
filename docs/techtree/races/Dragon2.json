@@ -3,7 +3,9 @@
  "start_units": [
   "o01D"
  ],
- "start_tech": [],
+ "start_tech": [
+  "R0BY"
+ ],
  "lua": [
   {
    "file": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/04_race_selection.lua",
@@ -497,8 +499,6 @@
    "lumber": 500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "h0DV"
    ]
   },
@@ -561,8 +561,6 @@
    "lumber": 3500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "R0A3"
    ]
   },
@@ -586,8 +584,6 @@
    "lumber": 3500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "R0A5"
    ]
   },
@@ -611,8 +607,6 @@
    "lumber": 3500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "R0A7"
    ]
   },
@@ -636,8 +630,6 @@
    "lumber": 3500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "R0A9"
    ]
   },
@@ -649,8 +641,6 @@
    "lumber": 3500,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "R0AC"
    ]
   },
@@ -710,8 +700,6 @@
    "lumber": 600,
    "time": 40,
    "requires": [
-    "ofrt",
-    "ofor",
     "R0A7"
    ]
   },
@@ -850,6 +838,11 @@
     "ofor"
    ]
   },
+  "R0BY": {
+   "type": "upgrade",
+   "name": "Драконы",
+   "levels": 1
+  },
   "R0D9": {
    "type": "upgrade",
    "name": "Новое поколение",
@@ -899,7 +892,7 @@
   },
   "Robk": {
    "type": "upgrade",
-   "name": "",
+   "name": "Улучшение до берсерка",
    "only_required": true,
    "levels": 1,
    "gold": 75,
@@ -915,92 +908,159 @@
    "name": ""
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "levels": 1,
+   "hotkey": "D"
   },
   "drA0": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "СПОСОБНОСТЬ: Снимает положительные эффекты с врагов и отрицательные эффекты с союзников.",
+   "levels": 1,
+   "hero_level_req": 1,
+   "hotkey": "Q"
   },
   "drA1": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Кольцо льда",
+   "levels": 1,
+   "hero_level_req": 1,
+   "hotkey": "|cffebc56cКомплектование техники — уровень 3|r",
+   "requires": [
+    "R0B3"
+   ]
   },
   "drA2": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Перелет",
+   "levels": 1,
+   "hero_level_req": 1,
+   "hotkey": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Насыщает гемолимфу нерубов регенеративными токсинами, увеличивая скорость восстановления здоровья на |cffc8e087+0.3|cffced4da ед./сек.|n|n|cffb99d66Применяется к:|cffced4da|n- Всем воинам армии Нерубов.|n|n|cffb99d66Уровень исследования:|r |cffffffff3/3|r."
   },
   "drA3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Благославление жизни",
+   "levels": 1,
+   "hotkey": "W"
   },
   "drA4": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Восстановление",
+   "levels": 1,
+   "hotkey": "E",
+   "requires": [
+    "R0AX"
+   ],
+   "requires_amount": 3
   },
   "drA5": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Прочная чешуя",
+   "levels": 1,
+   "hotkey": "R"
   },
   "drA6": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Буран",
+   "levels": 1,
+   "hotkey": "E",
+   "requires": [
+    "R0B3"
+   ],
+   "requires_amount": 2
   },
   "drA7": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Пожирание магии",
+   "levels": 1,
+   "hotkey": "Q"
   },
   "drA8": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Восполнение маны",
+   "levels": 1,
+   "hotkey": "R"
   },
   "drA9": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Вспышка маны",
+   "levels": 1,
+   "hotkey": "E",
+   "requires": [
+    "R0B3"
+   ],
+   "requires_amount": 2
   },
   "drAa": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Зеркальное изображение",
+   "levels": 1,
+   "hero_level_req": 1,
+   "hotkey": "W",
+   "requires": [
+    "R0AT"
+   ]
   },
   "drAd": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Поджог",
+   "levels": 1
   },
   "drAe": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Изгнание",
+   "levels": 1,
+   "hotkey": "W",
+   "requires": [
+    "R0AP"
+   ]
   },
   "drAq": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Ледяная стрела",
+   "levels": 1,
+   "hotkey": "|cffebc56cМаг (Поддержка)|r (|cffffffffP|r)"
   },
   "drAr": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Гнев деревьев",
+   "levels": 1,
+   "hotkey": "|cffebc56cПехотинец|r"
   },
   "drAs": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Сингулярная перегрузка",
+   "levels": 1,
+   "hotkey": "|cffebc56cВоитель Стромгарда|r"
   },
   "drAw": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Фазовый сдвиг",
+   "levels": 1,
+   "hotkey": "D"
   },
   "drAy": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Множественная атака",
+   "levels": 1
   },
   "drAz": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Цепная молния",
+   "levels": 1,
+   "hotkey": "|cffebc56cМастер боя|r"
   },
   "drEt": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Сон",
+   "levels": 1,
+   "hotkey": "E"
   },
   "dra0": {
    "type": "building",
@@ -1014,12 +1074,17 @@
    "hotkey": "Q"
   },
   "dra3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Телепортация",
+   "levels": 1,
+   "hero_level_req": 6,
+   "hotkey": "D"
   },
   "drat": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Замедление",
+   "levels": 1,
+   "hotkey": "|cffebc56cВетеран Лордерона|r"
   },
   "h0D8": {
    "type": "building",
@@ -1063,7 +1128,7 @@
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "gold": 4000,
    "lumber": 4000,
@@ -1085,7 +1150,7 @@
   },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1099,7 +1164,7 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "gold": 4500,
    "lumber": 4500,
@@ -1380,7 +1445,7 @@
   },
   "ofor": {
    "type": "unit",
-   "name": "",
+   "name": "Лесопилка",
    "only_required": true,
    "gold": 205,
    "hp": 1000,
@@ -1389,7 +1454,7 @@
   },
   "ofrt": {
    "type": "unit",
-   "name": "",
+   "name": "Цитадель",
    "only_required": true,
    "gold": 12000,
    "lumber": 12000,
@@ -1440,34 +1505,22 @@
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
-  "R004 requires ofor",
-  "R004 requires ofrt",
   "R005 requires hcas",
   "R006 requires hcas",
   "R007 requires hcas",
   "R0A3 requires ofor",
   "R0A3 requires ofrt",
   "R0A4 requires R0A3",
-  "R0A4 requires ofor",
-  "R0A4 requires ofrt",
   "R0A5 requires ofor",
   "R0A5 requires ofrt",
   "R0A6 requires R0A5",
-  "R0A6 requires ofor",
-  "R0A6 requires ofrt",
   "R0A7 requires ofor",
   "R0A7 requires ofrt",
   "R0A8 requires R0A7",
-  "R0A8 requires ofor",
-  "R0A8 requires ofrt",
   "R0A9 requires ofor",
   "R0A9 requires ofrt",
   "R0AA requires R0A9",
-  "R0AA requires ofor",
-  "R0AA requires ofrt",
   "R0AB requires R0AC",
-  "R0AB requires ofor",
-  "R0AB requires ofrt",
   "R0AC requires ofor",
   "R0AC requires ofrt",
   "R0AS requires ofor",
@@ -1475,8 +1528,6 @@
   "R0AT requires ofor",
   "R0AT requires ofrt",
   "R0AU requires R0A7",
-  "R0AU requires ofor",
-  "R0AU requires ofrt",
   "R0AV requires hkee",
   "R0AW requires hkee",
   "R0AX requires hkee",
@@ -1494,6 +1545,12 @@
   "R0B4 requires ofrt",
   "R0D9 requires hcas",
   "Rhac requires hkee",
+  "drA1 requires R0B3",
+  "drA4 requires R0AX",
+  "drA6 requires R0B3",
+  "drA9 requires R0B3",
+  "drAa requires R0AT",
+  "drAe requires R0AP",
   "dra0 has-ability A0IQ",
   "dra0 has-ability A0LI",
   "dra0 has-ability A0LJ",
@@ -1726,6 +1783,7 @@
   "o01D has-ability A1LR",
   "o01D has-ability Arep",
   "o01D researches R0DT",
+  "race:Dragon2 lua-start-tech R0BY",
   "race:Dragon2 lua-starts-with o01D"
  ]
 }
