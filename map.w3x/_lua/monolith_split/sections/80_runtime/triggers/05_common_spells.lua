@@ -130,23 +130,19 @@ end
 -- Trigger: No2SameItems
 --===========================================================================
 function Trig_No2SameItems_Actions()
-    local l= GetUnitLoc(GetTriggerUnit())
-    local i=0
-    local Item= GetManipulatedItem()
-    for bj_forLoopAIndex = 1, 6 do
-        if GetItemTypeId(Item) == GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) then
-            i=i + 1
+    local u = GetTriggerUnit()
+    local item = GetManipulatedItem()
+    if u == nil or item == nil or not UnitHasItem(u, item) then return end
+    local itemId = GetItemTypeId(item)
+    if itemId == 0 then return end
+    for slot = 0, UnitInventorySize(u) - 1 do
+        local other = UnitItemInSlot(u, slot)
+        if other ~= nil and other ~= item and GetItemTypeId(other) == itemId then
+            UnitDropItemPoint(u, item, GetUnitX(u), GetUnitY(u))
+            DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "TRIGSTR_1254")
+            return
         end
     end
-    
-    if i >= 2 then
-        UnitDropItemPointLoc(GetTriggerUnit(), Item, l)
-        DisplayTextToPlayer(GetOwningPlayer(GetTriggerUnit()), 0, 0, "TRIGSTR_1254")
-    
-    end
-    RemoveLocation(l)
-    l=nil
-    Item=nil
 end
 --===========================================================================
 function InitTrig_No2SameItems()
