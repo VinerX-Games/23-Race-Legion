@@ -7,8 +7,8 @@ function Trig_Leave_Ot_Func005C()
 end
 function Trig_Leave_Ot_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
-    DisplayTextToForce(udg_AllPlayers, "|cffb99d66ИГРА:|cffced4da Игрок "
-        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. "|cffced4da покинул игру.|r")
+    DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_9f7b0eb6b5703b2e")
+        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. Loc("lua.auto_fc870dbbe062e322"))
     ClearPlayer(Player(pi))
     if Trig_Leave_Ot_Func005C() then
         ForForce(Vassals[pi], Freedom)
@@ -742,8 +742,8 @@ function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     ForGroupBJ(udg_LocalOtrad2, Trig_Sdelat_Flagman_Ot_Copy_Func005A)
     GroupClear(udg_LocalOtrad2)
     BlzSetUnitWeaponIntegerFieldBJ(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0, BlzGetUnitWeaponIntegerField(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0) * 3)
-    local flagshipName = GetUnitName(GetTriggerUnit()):gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", ""):gsub("^Флагман — ", "")
-    BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, "|cffebc56cФлагман — " .. flagshipName .. "|r")
+    local flagshipName = GetUnitName(GetTriggerUnit()):gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", ""):gsub(Loc("lua.auto_0f1ed693c7d5cf0b"), "")
+    BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, Loc("lua.auto_37e73c9fab1b4508") .. flagshipName .. "|r")
     BlzSetUnitIntegerFieldBJ(GetTriggerUnit(), UNIT_IF_TINTING_COLOR_GREEN, 175)
     BlzSetUnitIntegerFieldBJ(GetTriggerUnit(), UNIT_IF_TINTING_COLOR_BLUE, 175)
     UnitAddTypeBJ(UNIT_TYPE_HERO, GetTriggerUnit())
@@ -791,7 +791,7 @@ function Trig_Flagman_die_Ot_Actions()
     ForGroupBJ(udg_LocalOtrad2, Trig_Flagman_die_Ot_Func006A)
     
     GroupClear(udg_LocalOtrad2)
-    DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "|cffb99d66ФЛОТ:|cffef8173 Флагман потерян.|r")
+    DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, Loc("lua.auto_a7db978294516c42"))
     SetPlayerAbilityAvailableBJ(true, FourCC('A009'), GetOwningPlayer(u))
     u=nil
 end

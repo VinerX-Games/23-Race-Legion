@@ -212,7 +212,7 @@ do
                         GetUnitState(caster, UNIT_STATE_MANA) + 100))
                 BlzEndUnitAbilityCooldown(caster, ability)
                 DisplayTextToPlayer(GetOwningPlayer(caster), 0, 0,
-                    '|cffef8173Требуется раненый союзный силитид. Рабочие и личинки не подходят.|r')
+                    Loc("lua.auto_d459f7426fdd98b9"))
             end
         end)
         local death = CreateTrigger()

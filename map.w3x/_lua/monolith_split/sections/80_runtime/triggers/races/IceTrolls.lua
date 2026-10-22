@@ -199,7 +199,7 @@ do
             if not G.Cast(bear, GetSpellTargetUnit()) then
                 BlzEndUnitAbilityCooldown(bear, ability)
                 DisplayTextToPlayer(GetOwningPlayer(bear), 0, 0,
-                    '|cffef8173Хватка требует наземного вражеского бойца рядом. Здания и механизмы не подходят.|r')
+                    Loc("lua.auto_cfd1306a95a64e0e"))
             end
         end)
         local death = CreateTrigger()

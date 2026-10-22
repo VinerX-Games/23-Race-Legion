@@ -3377,6 +3377,197 @@ end
 
 local UI_STRINGS = {
     enUS = {
+        ["lua.auto_00ec6500b4eba925"] = "Mode selected: Test. Type -fast or -fastoff ",
+        ["lua.auto_012084117924e404"] = "The player who captures the required share of strategic points on the map wins. Check progress with |cffffffff-domck|cffced4da.",
+        ["lua.auto_0692b40e58b4c901"] = "Astral Phase",
+        ["lua.auto_0a86b16e3d808b13"] = "|cffd45e19Capital:|r ",
+        ["lua.auto_0b8162990567631a"] = "Enabled",
+        ["lua.auto_0ba0e61dd07d8e2e"] = " was defeated!|r No capital was built before the deadline.",
+        ["lua.auto_0f1ed693c7d5cf0b"] = "^Flagship — ",
+        ["lua.auto_108968b5be7d38b0"] = "|cffb99d66SETTINGS:|cffced4da ",
+        ["lua.auto_10d2294a0945e72b"] = "|cffced4daCurrently supported and updated by: ",
+        ["lua.auto_10f79199643a1472"] = "Normal income.",
+        ["lua.auto_1287b176ee3a0776"] = "Domination",
+        ["lua.auto_14bcc1b1cb897657"] = "Game Settings",
+        ["lua.auto_180694aa118ab867"] = "Naga Dominion",
+        ["lua.auto_184376ce32f1a727"] = "Experience of the player's army.",
+        ["lua.auto_1b07bb787a6a599e"] = "% of cities (",
+        ["lua.auto_1c689d133282dbc4"] = "Channels pure starlight into a wounded ally, restoring 50 health.|n|nMana cost: 65.|nCooldown: 9 sec.",
+        ["lua.auto_1d8bf782f772edaa"] = "Scarlet Order (",
+        ["lua.auto_1d9ba41af9bd8982"] = "Northrend",
+        ["lua.auto_1df09de4504fc344"] = "Open",
+        ["lua.auto_1fdb1a6d1ffc67b3"] = "Blood Elves (",
+        ["lua.auto_22652b341e0e8f3c"] = "Solar Scorch",
+        ["lua.auto_245f55d3c204ee69"] = "Entire Map",
+        ["lua.auto_253c8bbcef699586"] = "|nArmy upkeep: ",
+        ["lua.auto_26dd9e3aae5c8d4c"] = "Combined",
+        ["lua.auto_28f26716a4cca51d"] = "Start Game",
+        ["lua.auto_2bbcac0f2a85b859"] = "|nNext payout in ",
+        ["lua.auto_2de1bebf53a4930d"] = "Cities: ",
+        ["lua.auto_30c03b2cc47d4534"] = "|r is close to victory: captured |cffffffff",
+        ["lua.auto_3309de798190ac84"] = "Flight (",
+        ["lua.auto_347c11e7f6f5f879"] = "|cffced4da is now a spectator.|r",
+        ["lua.auto_37e73c9fab1b4508"] = "|cffebc56cFlagship — ",
+        ["lua.auto_384d916bbcef012f"] = "Income",
+        ["lua.auto_39541f5c26153fcd"] = "Cities",
+        ["lua.auto_39613b8bfff3e719"] = "All players' income is reduced to |cffffffff75%|cffced4da.",
+        ["lua.auto_397a208e51cfdfed"] = "Dark Horde",
+        ["lua.auto_3b3b88d7791db525"] = "Territory share: ",
+        ["lua.auto_3c5e71a957484d52"] = "Mode selected: Domination",
+        ["lua.auto_3df40bc7ad332a07"] = " a second chance!",
+        ["lua.auto_3e90a8f5c00c5ff7"] = "Normal fog of war.",
+        ["lua.auto_3f53fb873461737d"] = "Mode",
+        ["lua.auto_4458c12f02185407"] = "Lumber per payout: ",
+        ["lua.auto_485f7a1e3d81ae2e"] = " was defeated!|r Their |cffd45e19capital|r was destroyed.",
+        ["lua.auto_498545b1520c0d1e"] = "Switches the druid's astral phase between Sun and Moon.|n|n|cffffaa00Sun Phase:|r|n• Attacks burn the enemy (up to 3 stacks, 1 damage every 0.5 sec).|n• Spell: \"Solar Scorch\" (40 damage + burning for 6 sec, 65 mana, 9 sec cooldown).|n|n|cff99bbffMoon Phase:|r|n• Attacks restore 10 mana to the lowest-mana ally within 500 range.|n• Spell: \"Star Beam\" (heals 50 health, costs 65 mana, 9 sec cooldown).|n|nCooldown: 2.5 sec.",
+        ["lua.auto_49f42b76e1fe7b33"] = "|cffb99d66LOBBY:|cffced4da The host is starting the game in |cffffffff5|cffced4da sec.|r",
+        ["lua.auto_4a978bae23429c8f"] = "Darkness",
+        ["lua.auto_4befbe5b117f5dc0"] = "Continents",
+        ["lua.auto_4e529aac8d8f3a28"] = "Ally tax: ",
+        ["lua.auto_4fc761f6b9fabde4"] = "|cffebc56cVinerX|cffced4da and |cffebc56cAgeron|cffced4da.|n|n",
+        ["lua.auto_509c0a93349416ca"] = "Standard",
+        ["lua.auto_50f00368e762f6ed"] = "Capitals and Domination are both active.",
+        ["lua.auto_514bbe15504ed8e0"] = "|cffb99d66LOBBY:|cffced4da The host extended the lobby by |cffffffff1|cffced4da minute.|r",
+        ["lua.auto_5245d442f69fa873"] = "|cffb99d66The total updates at each income payout.|cffced4da",
+        ["lua.auto_541666499cc23df8"] = "Income modifier: ",
+        ["lua.auto_55cbf0812cc59fa5"] = "Test",
+        ["lua.auto_56c66422c020837f"] = "|nFor victory: ",
+        ["lua.auto_5a577d90566052be"] = "Disabled",
+        ["lua.auto_5af126ac29237012"] = "|cffebc56cWelcome to 23 RACE: FOREVER!|r",
+        ["lua.auto_5b3de50cab8f5d39"] = "Income: ",
+        ["lua.auto_5c5acfd77dfabdcc"] = "|nVictory follows the selected mode's rules.",
+        ["lua.auto_5c617b8361f535c3"] = "The game starts in |cffffffff5|cffced4da sec.",
+        ["lua.auto_5deb09bfbea204d3"] = "|r of |cffffffff",
+        ["lua.auto_5fa5c72f7bbf1849"] = "|r is now under the control of liege |cff00ffff",
+        ["lua.auto_5fbd8d0d8fda64c7"] = "Income after modifiers and tax: ",
+        ["lua.auto_61379f15167d5f16"] = "Feudalism",
+        ["lua.auto_61a0bbfb1890c9be"] = "Each player builds a capital before upkeep begins.",
+        ["lua.auto_65b08c1f055c0a1a"] = "Free",
+        ["lua.auto_6bb89952eca7cf28"] = "|cffb99d66UNAVAILABLE:|cffef8173 Dark Summoning cannot be used while the mage is within |cffffffff1350|cffef8173 of an enemy capital.|r",
+        ["lua.auto_6ce872ab72265ae8"] = "Base income: ",
+        ["lua.auto_6cf6247be4e90074"] = "|cffffff00Light Well|r",
+        ["lua.auto_6ecc8a18cc1a0104"] = "Lumber: ",
+        ["lua.auto_6f4f17fc7201101f"] = "closed",
+        ["lua.auto_70bafa851b3ef731"] = "Eastern Kingdoms\\",
+        ["lua.auto_7192876cf690ad66"] = "|cffb99d66Starting in:|r |cffffffff",
+        ["lua.auto_722b5b8c030fcea9"] = "Free-for-All",
+        ["lua.auto_7247b1f076a06d67"] = "|r points on the map (|cffffffff",
+        ["lua.auto_726570465f08c41f"] = "|r points!",
+        ["lua.auto_73a7e0989cdf4053"] = "Star Beam",
+        ["lua.auto_752c8e81dfae30e3"] = "|cffb99d66MODE:|r Vassal inheritance: |cffffcc00transfer to the higher liege|r",
+        ["lua.auto_7552614d66b8a7a1"] = "Capitals",
+        ["lua.auto_78185876b7938ca9"] = "Alliances have no size limit.",
+        ["lua.auto_78d132d664cd635b"] = "Diplomacy",
+        ["lua.auto_7a0bc2f02438e548"] = "Starting in: 0:00",
+        ["lua.auto_7ae9b6161bdde40e"] = "|cffb99d66GAME:|cffced4da Full-map vision has been disabled.|r",
+        ["lua.auto_7c64961450656198"] = "|nArmy: ",
+        ["lua.auto_7ce677c1a8d3ae6a"] = "Additional: ",
+        ["lua.auto_7ceabbc5fbaf6343"] = "For race testing. The |cffffffff-fast|cffced4da and |cffffffff-fastoff|cffced4da chat commands toggle test income.",
+        ["lua.auto_7ecf36204230f363"] = "%|r of strategic points to win!",
+        ["lua.auto_7f975f91f883172f"] = "Players ",
+        ["lua.auto_7fd683127c1a4f4b"] = "Murloc Dominion",
+        ["lua.auto_8053af7449391a19"] = "|cffffaa00Warning!|r Player |cffffcc00",
+        ["lua.auto_81a7fd487c659924"] = "|nNet income: ",
+        ["lua.auto_82adbf29b8139f1b"] = "|cffebc56cNation|r",
+        ["lua.auto_83104b113adcbc77"] = "Oceania",
+        ["lua.auto_83c5a933a197458e"] = "Host ",
+        ["lua.auto_88897d593739ee25"] = "Eastern Kingdoms",
+        ["lua.auto_89204bd7b2a4d0a2"] = "Join our 23-race Discord server:|r",
+        ["lua.auto_89c561e16ea27fd9"] = "|cffebc56cIncome Equals Upkeep|r",
+        ["lua.auto_8bd88f056ebfbee3"] = "|cffb99d66INTERFACE:|cffced4da Nation status.|n|n",
+        ["lua.auto_8c8affbf5f913b68"] = "Upkeep: ",
+        ["lua.auto_8cbb62e18096daa5"] = "Dragon Union",
+        ["lua.auto_8df17ea2bcbcc4a3"] = "|r) and won!",
+        ["lua.auto_90d1fce9a7752e47"] = "|cff80ff80Fel Well|r",
+        ["lua.auto_91cf723beb3c0f96"] = "Pandaria",
+        ["lua.auto_9396b0f099dd5132"] = "|cff55ff55VICTORY!|r You captured the required number of points (|cffffffff",
+        ["lua.auto_94e9a959bd1c46f1"] = "|cff8080ffArcane Well|r",
+        ["lua.auto_9693fa514a0642f5"] = "Teams of 3",
+        ["lua.auto_9a0f6ad9710e2500"] = "Argus",
+        ["lua.auto_9b473bbb7f16794d"] = "|cffebc56cNet Income|r",
+        ["lua.auto_9d95f9afed5e3343"] = " units",
+        ["lua.auto_9df8266469c2c1aa"] = "+1 Minute",
+        ["lua.auto_9f56ccd4169ff595"] = "Extends the lobby by |cffffffff60|cffced4da sec. Can be used once.",
+        ["lua.auto_9f7b0eb6b5703b2e"] = "|cffb99d66GAME:|cffced4da Player ",
+        ["lua.auto_a072519c18109076"] = "Attacks have a 15% chance to make the warrior roll in a swift crescent behind the target, dealing 50% of base damage to all enemies in its path.",
+        ["lua.auto_a2953833fe9e429a"] = "Additional income: ",
+        ["lua.auto_a39ad47c922226a5"] = "Classic",
+        ["lua.auto_a46b2882d7a7cbf4"] = "Logistics: ",
+        ["lua.auto_a5de79ca324d2f35"] = "available",
+        ["lua.auto_a6037344d001bf42"] = "Dragonmaw Clan",
+        ["lua.auto_a6e92d645867d601"] = "|cff55ff55Warning!|r You are close to victory: captured |cffffffff",
+        ["lua.auto_a7a4033657e89fc9"] = "Close",
+        ["lua.auto_a7db978294516c42"] = "|cffb99d66FLEET:|cffef8173 Flagship lost.|r",
+        ["lua.auto_a7e7c6599d14a0cb"] = "Oceania and the Broken Isles",
+        ["lua.auto_a86e547890c577f5"] = "|cffb99d66INTERFACE:|cffced4da Income and expenses per payout.|n|n",
+        ["lua.auto_a8b013e5f35d8d2c"] = "|cffb99d66PROGRESS:|r Your control: |cffffcc00",
+        ["lua.auto_ac18f75e920230db"] = "|cffb99d66Map version:|r |cffffffff",
+        ["lua.auto_ac4d96817fdf1af9"] = "Standard game without capitals.",
+        ["lua.auto_ac8a4d534efd4fc8"] = "Teams of 2",
+        ["lua.auto_ad2516552a0f128e"] = "|cffff4444Defeat!|r Player |cffffcc00",
+        ["lua.auto_ad45a7d12d975f7d"] = "Outland",
+        ["lua.auto_ad9eec20f151ee97"] = " granted player ",
+        ["lua.auto_ada93d34276f5052"] = "Remaining to capture: ",
+        ["lua.auto_ae6bef78e3c5ad94"] = "Not set",
+        ["lua.auto_b1e530611cdfd0a8"] = "Horde (",
+        ["lua.auto_b49fb6e4d6777d0f"] = "|cffb99d66Upkeep is disabled in this mode.|cffced4da",
+        ["lua.auto_b4dea7c8121d6c2d"] = "|cffebc56cGame Settings|r",
+        ["lua.auto_b5034366e4d45ddf"] = "|cffb99d66MODE:|r |cffffcc00Domination|r is active. Capture |cffffffff",
+        ["lua.auto_b5e0c56f0bef7757"] = "|r destroyed their own capital and has been eliminated!",
+        ["lua.auto_b6ddb9708bc19b8b"] = "All continents are open from the start.",
+        ["lua.auto_b9cc9f71c3cb1e73"] = "entire map",
+        ["lua.auto_bb28d0c98efc8ffd"] = "Capital: ",
+        ["lua.auto_bb45d8092581d222"] = "Auto-Recruit",
+        ["lua.auto_bf312df3ad8c8ee7"] = "Portals to all other continents are closed.",
+        ["lua.auto_bfb3c47d9905583f"] = "Units: ",
+        ["lua.auto_c1e9f3793437db82"] = "Corruption income: ",
+        ["lua.auto_c23e06ea7fdd67ff"] = "Strikes an enemy with solar flame, dealing 40 magic damage and applying 1 burning effect for 6 sec.|n|nMana cost: 65.|nCooldown: 9 sec.",
+        ["lua.auto_c3a44d62b1c05fa8"] = "|cffb99d66STATUS:|r You control |cffffffff",
+        ["lua.auto_c48a1b9379356fa5"] = "Players can enable automatic replacement: a slain unit is added back to the recruitment queue.",
+        ["lua.auto_c68851d2b26a6198"] = "|cffebc56cNet Loss|r",
+        ["lua.auto_c7a2d35d77aa2938"] = "Alliances and resource sharing are disabled.",
+        ["lua.auto_c8df2979e7bbaf41"] = "Continents mode:|cffffff00 enabled|r",
+        ["lua.auto_c96bb111ec05e22b"] = "|cffced4da has surrendered.|r",
+        ["lua.auto_ce73238ceb73013d"] = "|r captured the required number of points (|cffffffff",
+        ["lua.auto_cfd1306a95a64e0e"] = "|cffef8173Grasp requires a nearby enemy ground unit. Buildings and mechanical units are invalid targets.|r",
+        ["lua.auto_d1c3886c9a5256df"] = "|cffffcc00Player ",
+        ["lua.auto_d1cca99d19051b82"] = "Alliances can have up to |cffffffff2|cffced4da players.",
+        ["lua.auto_d1e62e713eceeb7f"] = "|cff00ff00Available for play: |r",
+        ["lua.auto_d459f7426fdd98b9"] = "|cffef8173Requires a wounded allied Silithid. Workers and larvae are invalid targets.|r",
+        ["lua.auto_d4a26f1f32beea2c"] = "Share of the map's cities captured.",
+        ["lua.auto_d4c33d954fc31e3b"] = "One minute after the game starts, a black mask covers the map. Choose your base location in time.",
+        ["lua.auto_d82969ffdb24b51d"] = "Crescent Dance",
+        ["lua.auto_d86a665071769d9b"] = "Units",
+        ["lua.auto_d8c7592e079b1957"] = "|r has been freed from vassalage!",
+        ["lua.auto_d8d87791362fbe1a"] = "Alliances can have up to |cffffffff3|cffced4da players.",
+        ["lua.auto_d98698306a5ef2d9"] = "You have 15 minutes to establish a capital!",
+        ["lua.auto_d9b4c023c248c216"] = "|nPayouts begin after a game mode is selected.",
+        ["lua.auto_dab1f0e47a5117f2"] = " sec.",
+        ["lua.auto_db448c0d871437a0"] = "Automatic replacement of lost units is disabled.",
+        ["lua.auto_ddfc93285a52d9d9"] = "The entire map remains visible to all players for the whole game.",
+        ["lua.auto_dfa7051e5ad80179"] = "Cartel (",
+        ["lua.auto_e14f129d74957a41"] = "Experience",
+        ["lua.auto_e196a7394e64153f"] = "Number of units owned by the player.",
+        ["lua.auto_e351a792ffb40210"] = "|r disabled test mode.",
+        ["lua.auto_e3530102e24bb650"] = "|r enabled test mode!",
+        ["lua.auto_e62a95a27c886a02"] = "Limit exceeded. Some towers changed modes.",
+        ["lua.auto_e743cb8f290e683e"] = "|cffff00ffVoid Well|r",
+        ["lua.auto_e77dadba3b032403"] = "|cff55ff55Player ",
+        ["lua.auto_e8eac66ae70767e9"] = "|r has become a vassal of player |cff00ffff",
+        ["lua.auto_e9388424abca4e79"] = "%|r of the required |cffffffff",
+        ["lua.auto_e9d0bbbfdc575574"] = "|r) and won!",
+        ["lua.auto_ec0079fe99f86065"] = "Capitals and vassalage: attack enemy capitals to make their owners your vassals. Regular alliances are unavailable.",
+        ["lua.auto_ed58ee792770cf01"] = "|cffb99d66INTERFACE:|cffced4da Income after modifiers and upkeep.|r",
+        ["lua.auto_ee27e733524ef7b2"] = "Play only on selected continents: choose one or more. ",
+        ["lua.auto_f0e36c66f4165801"] = "|r required to win).",
+        ["lua.auto_f2f1624f23c8683e"] = "Corruption",
+        ["lua.auto_f6afbe572d5fb86b"] = "|r did not establish a |cffd45e19capital|r in time; one was placed automatically.",
+        ["lua.auto_f6fa02c187fd0122"] = "|cffb99d66MODE:|r Vassal inheritance: |cffff4444all vassals are eliminated|r",
+        ["lua.auto_f98207a144b1480b"] = "Kalimdor",
+        ["lua.auto_fac7927ccc7ca958"] = "Visibility",
+        ["lua.auto_fb3b7c4a5b089ead"] = "Total: ",
+        ["lua.auto_fc870dbbe062e322"] = "|cffced4da has left the game.|r",
+        ["lua.auto_fe8adae8c5188110"] = "|cffff4444Player ",
         ["race_picker.back.tip"] = "|cffebc56cBack|r|n|cffced4daReturn to race selection.|r",
         ["race_picker.camera.short"] = "|cffebc56cTo landing site|r|n|cffced4daMove the camera to the ring.|r",
         ["race_picker.camera.tip"] = "|cffebc56cTo landing site|r|n|cffced4daMoves the camera to your race selection ring.|r",
@@ -3405,6 +3596,197 @@ local UI_STRINGS = {
         ["race_picker.subfaction.naga.title"] = "NAGA AND MURLOCS",
     },
     ruRU = {
+        ["lua.auto_00ec6500b4eba925"] = "Режим выбран: Тест. Пишите -fast и -fastoff ",
+        ["lua.auto_012084117924e404"] = "Побеждает игрок, захвативший заданную долю стратегических точек карты. Проверка прогресса — |cffffffff-domck|cffced4da.",
+        ["lua.auto_0692b40e58b4c901"] = "Астральная фаза",
+        ["lua.auto_0a86b16e3d808b13"] = "|cffd45e19Столица:|r ",
+        ["lua.auto_0b8162990567631a"] = "Включён",
+        ["lua.auto_0ba0e61dd07d8e2e"] = " проиграл!|r Столица не была построена в отведённое время.",
+        ["lua.auto_0f1ed693c7d5cf0b"] = "^Флагман — ",
+        ["lua.auto_108968b5be7d38b0"] = "|cffb99d66НАСТРОЙКИ:|cffced4da ",
+        ["lua.auto_10d2294a0945e72b"] = "|cffced4daПоддержкой и обновлениями в данный момент занимаются: ",
+        ["lua.auto_10f79199643a1472"] = "Обычный доход.",
+        ["lua.auto_1287b176ee3a0776"] = "Доминация",
+        ["lua.auto_14bcc1b1cb897657"] = "Настройки игры",
+        ["lua.auto_180694aa118ab867"] = "Владычество нагов",
+        ["lua.auto_184376ce32f1a727"] = "Опыт армии игрока.",
+        ["lua.auto_1b07bb787a6a599e"] = "% городов (",
+        ["lua.auto_1c689d133282dbc4"] = "Направляет чистый свет звезд на раненого союзника, восполняя 50 единиц здоровья.|n|nЗатраты маны: 65.|nВремя восстановления: 9 сек.",
+        ["lua.auto_1d8bf782f772edaa"] = "Алый Орден (",
+        ["lua.auto_1d9ba41af9bd8982"] = "Нордскол",
+        ["lua.auto_1df09de4504fc344"] = "Открытая",
+        ["lua.auto_1fdb1a6d1ffc67b3"] = "Эльфы Крови (",
+        ["lua.auto_22652b341e0e8f3c"] = "Солнечный ожог",
+        ["lua.auto_245f55d3c204ee69"] = "Вся карта",
+        ["lua.auto_253c8bbcef699586"] = "|nСодержание армии: ",
+        ["lua.auto_26dd9e3aae5c8d4c"] = "Комбинированный",
+        ["lua.auto_28f26716a4cca51d"] = "Начать игру",
+        ["lua.auto_2bbcac0f2a85b859"] = "|nСледующая выплата через ",
+        ["lua.auto_2de1bebf53a4930d"] = "Города: ",
+        ["lua.auto_30c03b2cc47d4534"] = "|r близок к победе: захвачено |cffffffff",
+        ["lua.auto_3309de798190ac84"] = "Стая (",
+        ["lua.auto_347c11e7f6f5f879"] = "|cffced4da стал наблюдателем.|r",
+        ["lua.auto_37e73c9fab1b4508"] = "|cffebc56cФлагман — ",
+        ["lua.auto_384d916bbcef012f"] = "Доход",
+        ["lua.auto_39541f5c26153fcd"] = "Города",
+        ["lua.auto_39613b8bfff3e719"] = "Доход всех игроков снижен до |cffffffff75%|cffced4da.",
+        ["lua.auto_397a208e51cfdfed"] = "Тёмная Орда",
+        ["lua.auto_3b3b88d7791db525"] = "Доля территории: ",
+        ["lua.auto_3c5e71a957484d52"] = "Режим выбран: Доминация",
+        ["lua.auto_3df40bc7ad332a07"] = " второй шанс!",
+        ["lua.auto_3e90a8f5c00c5ff7"] = "Обычный туман войны.",
+        ["lua.auto_3f53fb873461737d"] = "Режим",
+        ["lua.auto_4458c12f02185407"] = "Древесина за выплату: ",
+        ["lua.auto_485f7a1e3d81ae2e"] = " потерпел поражение!|r Его |cffd45e19столица|r уничтожена.",
+        ["lua.auto_498545b1520c0d1e"] = "Переключает астральную фазу друида между Солнцем и Луной.|n|n|cffffaa00Фаза Солнца:|r|n• Атаки поджигают врага (до 3 стаков, 1 ед. урона раз в 0.5 сек).|n• Заклинание: «Солнечный ожог» (40 урона + поджигание на 6 сек, 65 маны, 9 сек КД).|n|n|cff99bbffФаза Луны:|r|n• Атаки восполняют 10 маны союзнику с наименьшей маной в радиусе 500.|n• Заклинание: «Звездный луч» (исцеляет 50 ед. здоровья, 65 маны, 9 сек КД).|n|nПерезарядка: 2.5 сек.",
+        ["lua.auto_49f42b76e1fe7b33"] = "|cffb99d66ЛОББИ:|cffced4da Хост начинает игру через |cffffffff5|cffced4da сек.|r",
+        ["lua.auto_4a978bae23429c8f"] = "Темнота",
+        ["lua.auto_4befbe5b117f5dc0"] = "Континенты",
+        ["lua.auto_4e529aac8d8f3a28"] = "Налог союзникам: ",
+        ["lua.auto_4fc761f6b9fabde4"] = "|cffebc56cVinerX|cffced4da и |cffebc56cAgeron|cffced4da.|n|n",
+        ["lua.auto_509c0a93349416ca"] = "Стандартная",
+        ["lua.auto_50f00368e762f6ed"] = "Столицы и Доминация одновременно.",
+        ["lua.auto_514bbe15504ed8e0"] = "|cffb99d66ЛОББИ:|cffced4da Хост продлил лобби на |cffffffff1|cffced4da минуту.|r",
+        ["lua.auto_5245d442f69fa873"] = "|cffb99d66Итог обновляется при выплате дохода.|cffced4da",
+        ["lua.auto_541666499cc23df8"] = "Модификатор дохода: ",
+        ["lua.auto_55cbf0812cc59fa5"] = "Тестовый",
+        ["lua.auto_56c66422c020837f"] = "|nДля победы: ",
+        ["lua.auto_5a577d90566052be"] = "Выключен",
+        ["lua.auto_5af126ac29237012"] = "|cffebc56cДобро пожаловать в 23 RACE: FOREVER!|r",
+        ["lua.auto_5b3de50cab8f5d39"] = "Доход: ",
+        ["lua.auto_5c5acfd77dfabdcc"] = "|nПобеда: по правилам выбранного режима.",
+        ["lua.auto_5c617b8361f535c3"] = "Игра начнётся через |cffffffff5|cffced4da сек.",
+        ["lua.auto_5deb09bfbea204d3"] = "|r из |cffffffff",
+        ["lua.auto_5fa5c72f7bbf1849"] = "|r перешёл под контроль сюзерена |cff00ffff",
+        ["lua.auto_5fbd8d0d8fda64c7"] = "Доход после модификатора и налога: ",
+        ["lua.auto_61379f15167d5f16"] = "Феодализм",
+        ["lua.auto_61a0bbfb1890c9be"] = "Каждый игрок строит столицу до начала расходов.",
+        ["lua.auto_65b08c1f055c0a1a"] = "Свободная",
+        ["lua.auto_6bb89952eca7cf28"] = "|cffb99d66НЕДОСТУПНО:|cffef8173 Тёмный призыв нельзя применить, пока маг находится в радиусе |cffffffff1350|cffef8173 от вражеской столицы.|r",
+        ["lua.auto_6ce872ab72265ae8"] = "Базовый доход: ",
+        ["lua.auto_6cf6247be4e90074"] = "|cffffff00Колодец света|r",
+        ["lua.auto_6ecc8a18cc1a0104"] = "Древесины: ",
+        ["lua.auto_6f4f17fc7201101f"] = "закрыт",
+        ["lua.auto_70bafa851b3ef731"] = "Восточные королевства\\",
+        ["lua.auto_7192876cf690ad66"] = "|cffb99d66До начала:|r |cffffffff",
+        ["lua.auto_722b5b8c030fcea9"] = "Каждый сам за себя",
+        ["lua.auto_7247b1f076a06d67"] = "|r точек на карте (требуется |cffffffff",
+        ["lua.auto_726570465f08c41f"] = "|r точек!",
+        ["lua.auto_73a7e0989cdf4053"] = "Звездный луч",
+        ["lua.auto_752c8e81dfae30e3"] = "|cffb99d66РЕЖИМ:|r Наследование вассалов: |cffffcc00переход к вышестоящему сюзерену|r",
+        ["lua.auto_7552614d66b8a7a1"] = "Столицы",
+        ["lua.auto_78185876b7938ca9"] = "Союзы без ограничений по размеру.",
+        ["lua.auto_78d132d664cd635b"] = "Дипломатия",
+        ["lua.auto_7a0bc2f02438e548"] = "До начала: 0:00",
+        ["lua.auto_7ae9b6161bdde40e"] = "|cffb99d66ИГРА:|cffced4da Обзор всей карты отключён.|r",
+        ["lua.auto_7c64961450656198"] = "|nАрмия: ",
+        ["lua.auto_7ce677c1a8d3ae6a"] = "Дополнительно: ",
+        ["lua.auto_7ceabbc5fbaf6343"] = "Для проверки рас. Чат-команды |cffffffff-fast|cffced4da и |cffffffff-fastoff|cffced4da включают и выключают тестовый доход.",
+        ["lua.auto_7ecf36204230f363"] = "%|r стратегических точек, чтобы победить!",
+        ["lua.auto_7f975f91f883172f"] = "Игроки ",
+        ["lua.auto_7fd683127c1a4f4b"] = "Владычество мурлоков",
+        ["lua.auto_8053af7449391a19"] = "|cffffaa00Осторожно!|r Игрок |cffffcc00",
+        ["lua.auto_81a7fd487c659924"] = "|nЧистый доход: ",
+        ["lua.auto_82adbf29b8139f1b"] = "|cffebc56cГосударство|r",
+        ["lua.auto_83104b113adcbc77"] = "Океания",
+        ["lua.auto_83c5a933a197458e"] = "Хост ",
+        ["lua.auto_88897d593739ee25"] = "Восточные королевства",
+        ["lua.auto_89204bd7b2a4d0a2"] = "Вступайте в наш дискорд-сервер по 23 расам:|r",
+        ["lua.auto_89c561e16ea27fd9"] = "|cffebc56cДоходы равны расходам|r",
+        ["lua.auto_8bd88f056ebfbee3"] = "|cffb99d66ИНТЕРФЕЙС:|cffced4da Состояние государства.|n|n",
+        ["lua.auto_8c8affbf5f913b68"] = "Расход: ",
+        ["lua.auto_8cbb62e18096daa5"] = "Драконий Союз",
+        ["lua.auto_8df17ea2bcbcc4a3"] = "|r) и одержали победу!",
+        ["lua.auto_90d1fce9a7752e47"] = "|cff80ff80Колодец скверны|r",
+        ["lua.auto_91cf723beb3c0f96"] = "Пандария",
+        ["lua.auto_9396b0f099dd5132"] = "|cff55ff55ПОБЕДА!|r Вы захватили требуемое число точек (|cffffffff",
+        ["lua.auto_94e9a959bd1c46f1"] = "|cff8080ffКолодец арканы|r",
+        ["lua.auto_9693fa514a0642f5"] = "Союзы по 3",
+        ["lua.auto_9a0f6ad9710e2500"] = "Аргус",
+        ["lua.auto_9b473bbb7f16794d"] = "|cffebc56cЧистый доход|r",
+        ["lua.auto_9d95f9afed5e3343"] = " юнитов",
+        ["lua.auto_9df8266469c2c1aa"] = "+1 минута",
+        ["lua.auto_9f56ccd4169ff595"] = "Продлевает лобби на |cffffffff60|cffced4da сек. Доступно один раз.",
+        ["lua.auto_9f7b0eb6b5703b2e"] = "|cffb99d66ИГРА:|cffced4da Игрок ",
+        ["lua.auto_a072519c18109076"] = "С вероятностью 15% при атаке воин совершает стремительный перекат полумесяцем за спину противника, нанося всем врагам на пути 50% от своего базового урона.",
+        ["lua.auto_a2953833fe9e429a"] = "Дополнительный доход: ",
+        ["lua.auto_a39ad47c922226a5"] = "Классический",
+        ["lua.auto_a46b2882d7a7cbf4"] = "Логистика: ",
+        ["lua.auto_a5de79ca324d2f35"] = "доступен",
+        ["lua.auto_a6037344d001bf42"] = "Клан Драконьей Пасти",
+        ["lua.auto_a6e92d645867d601"] = "|cff55ff55Внимание!|r Вы близки к победе: захвачено |cffffffff",
+        ["lua.auto_a7a4033657e89fc9"] = "Закрыть",
+        ["lua.auto_a7db978294516c42"] = "|cffb99d66ФЛОТ:|cffef8173 Флагман потерян.|r",
+        ["lua.auto_a7e7c6599d14a0cb"] = "Океания и Расколотые Острова",
+        ["lua.auto_a86e547890c577f5"] = "|cffb99d66ИНТЕРФЕЙС:|cffced4da Доходы и расходы за выплату.|n|n",
+        ["lua.auto_a8b013e5f35d8d2c"] = "|cffb99d66ПРОГРЕСС:|r Ваш контроль: |cffffcc00",
+        ["lua.auto_ac18f75e920230db"] = "|cffb99d66Версия карты:|r |cffffffff",
+        ["lua.auto_ac4d96817fdf1af9"] = "Обычная игра без столиц.",
+        ["lua.auto_ac8a4d534efd4fc8"] = "Союзы по 2",
+        ["lua.auto_ad2516552a0f128e"] = "|cffff4444Вы проиграли!|r Игрок |cffffcc00",
+        ["lua.auto_ad45a7d12d975f7d"] = "Запределье",
+        ["lua.auto_ad9eec20f151ee97"] = " дал игроку ",
+        ["lua.auto_ada93d34276f5052"] = "Осталось захватить: ",
+        ["lua.auto_ae6bef78e3c5ad94"] = "Не назначена",
+        ["lua.auto_b1e530611cdfd0a8"] = "Орда (",
+        ["lua.auto_b49fb6e4d6777d0f"] = "|cffb99d66Расходы отключены в этом режиме.|cffced4da",
+        ["lua.auto_b4dea7c8121d6c2d"] = "|cffebc56cНастройки игры|r",
+        ["lua.auto_b5034366e4d45ddf"] = "|cffb99d66РЕЖИМ:|r Включён режим |cffffcc00«Доминация»|r. Захватите |cffffffff",
+        ["lua.auto_b5e0c56f0bef7757"] = "|r уничтожил собственную столицу и выбыл из игры!",
+        ["lua.auto_b6ddb9708bc19b8b"] = "Все континенты открыты с начала игры.",
+        ["lua.auto_b9cc9f71c3cb1e73"] = "вся карта",
+        ["lua.auto_bb28d0c98efc8ffd"] = "Столица: ",
+        ["lua.auto_bb45d8092581d222"] = "Автозаказ",
+        ["lua.auto_bf312df3ad8c8ee7"] = "Порталы на остальные континенты закрыты.",
+        ["lua.auto_bfb3c47d9905583f"] = "Юнитов: ",
+        ["lua.auto_c1e9f3793437db82"] = "Доход от коррупции: ",
+        ["lua.auto_c23e06ea7fdd67ff"] = "Поражает врага сгустком солнечного пламени, нанося 40 единиц магического урона и накладывая 1 эффект поджигания на 6 сек.|n|nЗатраты маны: 65.|nВремя восстановления: 9 сек.",
+        ["lua.auto_c3a44d62b1c05fa8"] = "|cffb99d66СТАТУС:|r Вы контролируете |cffffffff",
+        ["lua.auto_c48a1b9379356fa5"] = "Игроки смогут включить перезаказ: погибший юнит снова ставится в очередь найма.",
+        ["lua.auto_c68851d2b26a6198"] = "|cffebc56cЧистый убыток|r",
+        ["lua.auto_c7a2d35d77aa2938"] = "Союзы и передача ресурсов запрещены.",
+        ["lua.auto_c8df2979e7bbaf41"] = "Режим континентов:|cffffff00 включен|r",
+        ["lua.auto_c96bb111ec05e22b"] = "|cffced4da сдался.|r",
+        ["lua.auto_ce73238ceb73013d"] = "|r захватил требуемое число точек (|cffffffff",
+        ["lua.auto_cfd1306a95a64e0e"] = "|cffef8173Хватка требует наземного вражеского бойца рядом. Здания и механизмы не подходят.|r",
+        ["lua.auto_d1c3886c9a5256df"] = "|cffffcc00Игрок ",
+        ["lua.auto_d1cca99d19051b82"] = "В союзе не больше |cffffffff2|cffced4da игроков.",
+        ["lua.auto_d1e62e713eceeb7f"] = "|cff00ff00Итого доступны для игры: |r",
+        ["lua.auto_d459f7426fdd98b9"] = "|cffef8173Требуется раненый союзный силитид. Рабочие и личинки не подходят.|r",
+        ["lua.auto_d4a26f1f32beea2c"] = "Доля захваченных городов карты.",
+        ["lua.auto_d4c33d954fc31e3b"] = "Через минуту после старта вся карта скрывается чёрной маской. Успейте выбрать место для базы.",
+        ["lua.auto_d82969ffdb24b51d"] = "Танец полумесяца",
+        ["lua.auto_d86a665071769d9b"] = "Юниты",
+        ["lua.auto_d8c7592e079b1957"] = "|r освободился от вассальной зависимости!",
+        ["lua.auto_d8d87791362fbe1a"] = "В союзе не больше |cffffffff3|cffced4da игроков.",
+        ["lua.auto_d98698306a5ef2d9"] = "У вас есть 15 минут на то, чтобы поставить столицу!",
+        ["lua.auto_d9b4c023c248c216"] = "|nВыплаты начнутся после выбора режима.",
+        ["lua.auto_dab1f0e47a5117f2"] = " сек.",
+        ["lua.auto_db448c0d871437a0"] = "Автоматический перезаказ войск недоступен.",
+        ["lua.auto_ddfc93285a52d9d9"] = "Вся карта видна всем игрокам всю игру.",
+        ["lua.auto_dfa7051e5ad80179"] = "Картель (",
+        ["lua.auto_e14f129d74957a41"] = "Опыт",
+        ["lua.auto_e196a7394e64153f"] = "Число юнитов игрока.",
+        ["lua.auto_e351a792ffb40210"] = "|r выключил тестовый режим.",
+        ["lua.auto_e3530102e24bb650"] = "|r включил тестовый режим!",
+        ["lua.auto_e62a95a27c886a02"] = "Превышен лимит. Некоторые башни сменили режим.",
+        ["lua.auto_e743cb8f290e683e"] = "|cffff00ffКолодец бездны|r",
+        ["lua.auto_e77dadba3b032403"] = "|cff55ff55Игрок ",
+        ["lua.auto_e8eac66ae70767e9"] = "|r стал вассалом игрока |cff00ffff",
+        ["lua.auto_e9388424abca4e79"] = "%|r из необходимых |cffffffff",
+        ["lua.auto_e9d0bbbfdc575574"] = "|r) и одержал победу!",
+        ["lua.auto_ec0079fe99f86065"] = "Столицы и вассалитет: атакуйте чужие столицы, чтобы сделать их владельцев своими вассалами. Обычные союзы недоступны.",
+        ["lua.auto_ed58ee792770cf01"] = "|cffb99d66ИНТЕРФЕЙС:|cffced4da Доход с учётом модификаторов и расходов.|r",
+        ["lua.auto_ee27e733524ef7b2"] = "Игра только на выбранных континентах: отметьте один или несколько. ",
+        ["lua.auto_f0e36c66f4165801"] = "|r для победы).",
+        ["lua.auto_f2f1624f23c8683e"] = "Коррупция",
+        ["lua.auto_f6afbe572d5fb86b"] = "|r не успел заложить |cffd45e19столицу|r вовремя — она была размещена автоматически.",
+        ["lua.auto_f6fa02c187fd0122"] = "|cffb99d66РЕЖИМ:|r Наследование вассалов: |cffff4444все вассалы выбывают|r",
+        ["lua.auto_f98207a144b1480b"] = "Калимдор",
+        ["lua.auto_fac7927ccc7ca958"] = "Видимость",
+        ["lua.auto_fb3b7c4a5b089ead"] = "Итого: ",
+        ["lua.auto_fc870dbbe062e322"] = "|cffced4da покинул игру.|r",
+        ["lua.auto_fe8adae8c5188110"] = "|cffff4444Игрок ",
         ["race_picker.back.tip"] = "|cffebc56cНазад|r|n|cffced4daВернуться к выбору расы.|r",
         ["race_picker.camera.short"] = "|cffebc56cК месту высадки|r|n|cffced4daПеренести камеру к кольцу.|r",
         ["race_picker.camera.tip"] = "|cffebc56cК месту высадки|r|n|cffced4daПереносит камеру к вашему кольцу выбора расы.|r",
@@ -5245,7 +5627,7 @@ function startBloodElves(pi)
 	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
 	NumberSet(pi, FourCC('h04K'), 8)
 	NumberSet(pi, FourCC('h04C'), 1)
-	SetPlayerName(Player(pi), "Эльфы Крови (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_1fdb1a6d1ffc67b3") .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "BE"
 	TriggerExecute(gg_trg_BloodElvesOn)
 	AiRace[pi] = "BloodElves"
@@ -5905,7 +6287,7 @@ function startScarlet(pi)
 
 	NumberSet(pi, FourCC('h014'), 8)
 	NumberSet(pi, FourCC('h05U'), 1)
-	SetPlayerName(Player(pi), "Алый Орден (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_1d8bf782f772edaa") .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "AO"
 	
 	AiRace[pi] = "Scarlet"
@@ -6549,7 +6931,7 @@ function startGoblins(pi)
 
 	NumberSet(pi, FourCC('n00V'), 8)
 	NumberSet(pi, FourCC('h070'), 1)
-	SetPlayerName(Player(pi), "Картель (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_dfa7051e5ad80179") .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "GB"
 	TriggerExecute(gg_trg_GoblinsOn)
 	TriggerExecute(gg_trg_StartG)
@@ -6949,7 +7331,7 @@ function startHorde(pi)
 
 	NumberSet(pi, FourCC('opeo'), 8)
 	NumberSet(pi, FourCC('ogre'), 1)
-	SetPlayerName(Player(pi), "Орда (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_b1e530611cdfd0a8") .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "NG"
 	HordeStartLimitsFor(Player(pi))
 	TriggerExecute(gg_trg_HordeOn)
@@ -7425,7 +7807,7 @@ function startNaga(pi)
 
 	NumberSet(pi, FourCC('nmpe'), 8)
 	NumberSet(pi, FourCC('nntt'), 1)
-	SetPlayerName(Player(pi), "Стая (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_3309de798190ac84") .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "NG"
 	TriggerExecute(gg_trg_NagaStart)
 	NagaApplySubrace(Player(pi), GetRandomInt(0, 1) == 0 and "naga" or "murloc")
@@ -10095,7 +10477,7 @@ function ExpandTableArmyExpr()
 	
 	local header = MultiboardGetItem(Multiboard, 0, 3)
 	ArmyPowerColumnHeader = header
-	MultiboardSetItemValue(header, "Опыт")
+	MultiboardSetItemValue(header, Loc("lua.auto_e14f129d74957a41"))
 	MultiboardSetItemWidth(header, 0.06)
 	MultiboardReleaseItem(header)
 	
@@ -10636,10 +11018,10 @@ function FeodalSetVassalMode()
 	local mode = tonumber(string.sub(msg, 11))
 	if mode == 1 then
 		FeodalVassalMode = 1
-		DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffb99d66РЕЖИМ:|r Наследование вассалов: |cffffcc00переход к вышестоящему сюзерену|r")
+		DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, Loc("lua.auto_752c8e81dfae30e3"))
 	elseif mode == 2 then
 		FeodalVassalMode = 2
-		DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffb99d66РЕЖИМ:|r Наследование вассалов: |cffff4444все вассалы выбывают|r")
+		DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, Loc("lua.auto_f6fa02c187fd0122"))
 	end
 end
 
@@ -10967,31 +11349,31 @@ function UpdateResourceTooltips(p, pi)
 	local bonus = DisOn and (additional[pi] or 0) or 0
 	local net = balance[pi] or 0
 	local rows = {
-		"Базовый доход: " .. ResourceAmount(base),
-		"Модификатор дохода: " .. ResourceValue(string.format("%.2f", modifier)),
-		"Налог союзникам: " .. ResourceValue(string.format("%.0f%%", tax * 100))
+		Loc("lua.auto_6ce872ab72265ae8") .. ResourceAmount(base),
+		Loc("lua.auto_541666499cc23df8") .. ResourceValue(string.format("%.2f", modifier)),
+		Loc("lua.auto_4e529aac8d8f3a28") .. ResourceValue(string.format("%.0f%%", tax * 100))
 			.. " (" .. ResourceAmount(-base * modifier * tax) .. ")",
-		"Доход после модификатора и налога: " .. ResourceAmount(base * modifier * (1 - tax)),
-		"|nСодержание армии: " .. ResourceAmount(-upkeep),
-		"Логистика: " .. ResourceAmount(-transport),
-		"Доход от коррупции: " .. ResourceAmount(refund),
-		"Дополнительный доход: " .. ResourceAmount(bonus),
-		"|nЧистый доход: " .. ResourceAmount(net),
-		"Древесина за выплату: " .. ResourceAmount(incomeW[pi] or 0),
+		Loc("lua.auto_5fbd8d0d8fda64c7") .. ResourceAmount(base * modifier * (1 - tax)),
+		Loc("lua.auto_253c8bbcef699586") .. ResourceAmount(-upkeep),
+		Loc("lua.auto_a46b2882d7a7cbf4") .. ResourceAmount(-transport),
+		Loc("lua.auto_c1e9f3793437db82") .. ResourceAmount(refund),
+		Loc("lua.auto_a2953833fe9e429a") .. ResourceAmount(bonus),
+		Loc("lua.auto_81a7fd487c659924") .. ResourceAmount(net),
+		Loc("lua.auto_4458c12f02185407") .. ResourceAmount(incomeW[pi] or 0),
 	}
-	if not DisOn then rows[#rows + 1] = "|cffb99d66Расходы отключены в этом режиме.|cffced4da" end
+	if not DisOn then rows[#rows + 1] = Loc("lua.auto_b49fb6e4d6777d0f") end
 	local remaining = udg_IncomeTimerSecond and TimerGetRemaining(udg_IncomeTimerSecond) or 0
 	rows[#rows + 1] = remaining > 0
-		and ("|nСледующая выплата через " .. ResourceValue(math.ceil(remaining)) .. " сек.")
-		or "|nВыплаты начнутся после выбора режима."
-	rows[#rows + 1] = "|cffb99d66Итог обновляется при выплате дохода.|cffced4da"
-	BlzFrameSetText(tooltipBody, "|cffb99d66ИНТЕРФЕЙС:|cffced4da Доходы и расходы за выплату.|n|n" .. table.concat(rows, "|n") .. "|r")
+		and (Loc("lua.auto_2bbcac0f2a85b859") .. ResourceValue(math.ceil(remaining)) .. Loc("lua.auto_dab1f0e47a5117f2"))
+		or Loc("lua.auto_d9b4c023c248c216")
+	rows[#rows + 1] = Loc("lua.auto_5245d442f69fa873")
+	BlzFrameSetText(tooltipBody, Loc("lua.auto_a86e547890c577f5") .. table.concat(rows, "|n") .. "|r")
 	if net > 0 then
-		BlzFrameSetText(tooltipTitle, "|cffebc56cЧистый доход|r")
+		BlzFrameSetText(tooltipTitle, Loc("lua.auto_9b473bbb7f16794d"))
 	elseif net < 0 then
-		BlzFrameSetText(tooltipTitle, "|cffebc56cЧистый убыток|r")
+		BlzFrameSetText(tooltipTitle, Loc("lua.auto_c68851d2b26a6198"))
 	else
-		BlzFrameSetText(tooltipTitle, "|cffebc56cДоходы равны расходам|r")
+		BlzFrameSetText(tooltipTitle, Loc("lua.auto_89c561e16ea27fd9"))
 	end
 	FitResourceTooltip(tooltip, tooltipBody, 0.32)
 	-- The actual payout uses R2I (truncate), rather than rounding the amount.
@@ -11001,25 +11383,25 @@ function UpdateResourceTooltips(p, pi)
 	local cities = CityPlayerCount[pi] or 0
 	local total = CityCount or 0
 	local capital = playerCapital[pi]
-	local capitalName = "Не назначена"
+	local capitalName = Loc("lua.auto_ae6bef78e3c5ad94")
 	if capital ~= nil and GetUnitState(capital, UNIT_STATE_LIFE) > 0.405
 		and GetOwningPlayer(capital) == p then
 		capitalName = GetUnitName(capital)
 	end
 	local state = {
-		"Города: " .. ResourceValue(cities) .. " / " .. ResourceValue(total),
-		"Доля территории: " .. ResourceValue(string.format("%.1f%%", total > 0 and cities * 100 / total or 0)),
-		"Столица: " .. capitalName .. "|cffced4da",
+		Loc("lua.auto_2de1bebf53a4930d") .. ResourceValue(cities) .. " / " .. ResourceValue(total),
+		Loc("lua.auto_3b3b88d7791db525") .. ResourceValue(string.format("%.1f%%", total > 0 and cities * 100 / total or 0)),
+		Loc("lua.auto_bb28d0c98efc8ffd") .. capitalName .. "|cffced4da",
 	}
 	if udg_GameMode == 3 or udg_GameMode == 5 then
 		local target = math.floor(total * PercentWin / 100 + 0.5)
-		state[#state + 1] = "|nДля победы: " .. ResourceValue(PercentWin) .. "% городов (" .. ResourceValue(target) .. ")"
-		state[#state + 1] = "Осталось захватить: " .. ResourceValue(math.max(0, target - cities))
+		state[#state + 1] = Loc("lua.auto_56c66422c020837f") .. ResourceValue(PercentWin) .. Loc("lua.auto_1b07bb787a6a599e") .. ResourceValue(target) .. ")"
+		state[#state + 1] = Loc("lua.auto_ada93d34276f5052") .. ResourceValue(math.max(0, target - cities))
 	else
-		state[#state + 1] = "|nПобеда: по правилам выбранного режима."
+		state[#state + 1] = Loc("lua.auto_5c5acfd77dfabdcc")
 	end
-	state[#state + 1] = "|nАрмия: " .. ResourceValue(udg_UnitsCount[pi] or 0) .. " юнитов"
-	BlzFrameSetText(stateBody, "|cffb99d66ИНТЕРФЕЙС:|cffced4da Состояние государства.|n|n" .. table.concat(state, "|n") .. "|r")
+	state[#state + 1] = Loc("lua.auto_7c64961450656198") .. ResourceValue(udg_UnitsCount[pi] or 0) .. Loc("lua.auto_9d95f9afed5e3343")
+	BlzFrameSetText(stateBody, Loc("lua.auto_8bd88f056ebfbee3") .. table.concat(state, "|n") .. "|r")
 	FitResourceTooltip(stateTooltip, stateBody, 0.30)
 end
 
@@ -11053,8 +11435,8 @@ function Face2()
 	BlzFrameSetTextAlignment(tooltipBody, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
 	BlzFrameSetVisible(tooltip, false)
 	
-	BlzFrameSetText(tooltipBody, "|cffb99d66ИНТЕРФЕЙС:|cffced4da Доход с учётом модификаторов и расходов.|r")
-	BlzFrameSetText(tooltipTitle, "|cffebc56cЧистый доход|r")
+	BlzFrameSetText(tooltipBody, Loc("lua.auto_ed58ee792770cf01"))
+	BlzFrameSetText(tooltipTitle, Loc("lua.auto_9b473bbb7f16794d"))
 	FitResourceTooltip(tooltip, tooltipBody, 0.32)
 	
 	BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
@@ -11070,7 +11452,7 @@ function Face2()
 		BlzFrameSetLevel(stateHover, 5)
 		stateTooltip = BlzCreateFrame("BoxedText", stateHover, 0, 1)
 		stateBody = BlzGetFrameByName("BoxedTextValue", 1)
-		BlzFrameSetText(BlzGetFrameByName("BoxedTextTitle", 1), "|cffebc56cГосударство|r")
+		BlzFrameSetText(BlzGetFrameByName("BoxedTextTitle", 1), Loc("lua.auto_82adbf29b8139f1b"))
 		BlzFrameSetTextAlignment(stateBody, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
 		BlzFrameClearAllPoints(stateTooltip)
 		BlzFrameSetAbsPoint(stateTooltip, FRAMEPOINT_TOPRIGHT, 0.65, 0.575)
@@ -11263,9 +11645,9 @@ local HUD_COL_ICON = {
 	[3] = "ReplaceableTextures\\CommandButtons\\BTNMedalionOfCourage.blp",
 }
 local HUD_COL_TIP = {
-	[1] = { "Юниты", "Число юнитов игрока." },
-	[2] = { "Города", "Доля захваченных городов карты." },
-	[3] = { "Опыт", "Опыт армии игрока." },
+	[1] = { Loc("lua.auto_d86a665071769d9b"), Loc("lua.auto_e196a7394e64153f") },
+	[2] = { Loc("lua.auto_39541f5c26153fcd"), Loc("lua.auto_d4a26f1f32beea2c") },
+	[3] = { Loc("lua.auto_e14f129d74957a41"), Loc("lua.auto_184376ce32f1a727") },
 }
 local hudIcon, hudStripe, hudSep = {}, {}, nil
 local hudMeasure
@@ -11353,12 +11735,12 @@ end
 function CustomHudRaceName(pi, abil)
 	if abil == FourCC('A1JN') then
 		local branch = HordeW2GetSubrace(pi)
-		if branch == "dark" then return "Тёмная Орда" end
-		if branch == "dragonmaw" then return "Клан Драконьей Пасти" end
+		if branch == "dark" then return Loc("lua.auto_397a208e51cfdfed") end
+		if branch == "dragonmaw" then return Loc("lua.auto_a6037344d001bf42") end
 	elseif abil == FourCC('A14O') then
-		return GetPlayerTechCount(Player(pi), FourCC('R0FF'), true) > 0 and "Владычество мурлоков" or "Владычество нагов"
+		return GetPlayerTechCount(Player(pi), FourCC('R0FF'), true) > 0 and Loc("lua.auto_7fd683127c1a4f4b") or Loc("lua.auto_180694aa118ab867")
 	elseif abil == FourCC('A0RQ') or abil == FourCC('A1MZ') then
-		return "Драконий Союз"
+		return Loc("lua.auto_8cbb62e18096daa5")
 	end
 	return GetAbilityName(abil)
 end
@@ -11436,7 +11818,7 @@ function CustomHudRender()
 	FrameSetShown(hudBoard, true)
 
 	BlzFrameSetText(hudToggleText, HUD_VALUE .. (hudCollapsed and "+" or "-") .. "|r")
-	BlzFrameSetText(hudText[0], HUD_LABEL .. "Игроки " .. HUD_VALUE .. players .. "|r")
+	BlzFrameSetText(hudText[0], HUD_LABEL .. Loc("lua.auto_7f975f91f883172f") .. HUD_VALUE .. players .. "|r")
 	FrameSetShown(hudText[0], true)
 	for col = 1, HUD_COLS - 1 do
 		FrameSetShown(hudIcon[col], col < cols)
@@ -11656,7 +12038,7 @@ function ShowWelcomePanel()
 	BlzFrameSetTextAlignment(title, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 	BlzFrameSetSize(title, WELCOME_W - 0.02, 0.02)
 	BlzFrameSetPoint(title, FRAMEPOINT_TOP, welcome, FRAMEPOINT_TOP, 0, y)
-	BlzFrameSetText(title, "|cffebc56cДобро пожаловать в 23 RACE: FOREVER!|r")
+	BlzFrameSetText(title, Loc("lua.auto_5af126ac29237012"))
 	BlzFrameSetEnable(title, false)
 	y = y - 0.026
 
@@ -11664,9 +12046,9 @@ function ShowWelcomePanel()
 	BlzFrameSetTextAlignment(body, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
 	BlzFrameSetSize(body, WELCOME_W - 0.03, WELCOME_BODY_H)
 	BlzFrameSetPoint(body, FRAMEPOINT_TOPLEFT, welcome, FRAMEPOINT_TOPLEFT, 0.015, y)
-	BlzFrameSetText(body, "|cffced4daПоддержкой и обновлениями в данный момент занимаются: "
-		.. "|cffebc56cVinerX|cffced4da и |cffebc56cAgeron|cffced4da.|n|n"
-		.. "Вступайте в наш дискорд-сервер по 23 расам:|r")
+	BlzFrameSetText(body, Loc("lua.auto_10d2294a0945e72b")
+		.. Loc("lua.auto_4fc761f6b9fabde4")
+		.. Loc("lua.auto_89204bd7b2a4d0a2"))
 	BlzFrameSetEnable(body, false)
 	y = y - WELCOME_BODY_H - 0.004
 
@@ -11688,14 +12070,14 @@ function ShowWelcomePanel()
 	BlzFrameSetTextAlignment(version, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
 	BlzFrameSetSize(version, WELCOME_W - 0.03, 0.016)
 	BlzFrameSetPoint(version, FRAMEPOINT_TOPLEFT, welcome, FRAMEPOINT_TOPLEFT, 0.015, y)
-	BlzFrameSetText(version, "|cffb99d66Версия карты:|r |cffffffff" .. WelcomeVersion() .. "|r")
+	BlzFrameSetText(version, Loc("lua.auto_ac18f75e920230db") .. WelcomeVersion() .. "|r")
 	BlzFrameSetEnable(version, false)
 	y = y - 0.018
 
 	local close = BlzCreateFrame("ScriptDialogButton", welcome, 0, 705)
 	BlzFrameSetSize(close, 0.09, 0.028)
 	BlzFrameSetPoint(close, FRAMEPOINT_TOP, welcome, FRAMEPOINT_TOP, 0, y)
-	BlzFrameSetText(close, "Закрыть")
+	BlzFrameSetText(close, Loc("lua.auto_a7a4033657e89fc9"))
 	local onClose = CreateTrigger()
 	BlzTriggerRegisterFrameEvent(onClose, close, FRAMEEVENT_CONTROL_CLICK)
 	TriggerAddAction(onClose, function()
@@ -12180,38 +12562,38 @@ local HP_BTN = "ReplaceableTextures\\CommandButtons\\"
 -- Строки настроек. Радио-строка: get() возвращает текущее значение, set(v) его
 -- задаёт; у опции { значение, название, описание, иконка }.
 local HP_ROWS = {
-	{ "Режим",
+	{ Loc("lua.auto_3f53fb873461737d"),
 		get = function() return udg_GameMode end,
 		set = function(v) udg_GameMode = v end,
-		{ 0, "Классический", "Обычная игра без столиц.", HP_BTN .. "BTNSorceressAdept.blp" },
-		{ 1, "Столицы", "Каждый игрок строит столицу до начала расходов.", HP_BTN .. "BTNCastle.blp" },
-		{ 2, "Феодализм", "Столицы и вассалитет: атакуйте чужие столицы, чтобы сделать их владельцев своими вассалами. Обычные союзы недоступны.", HP_BTN .. "BTNHelmutPurple.blp" },
-		{ 5, "Комбинированный", "Столицы и Доминация одновременно.", HP_BTN .. "BTNAltarOfKings.blp" },
-		{ 3, "Доминация", "Побеждает игрок, захвативший заданную долю стратегических точек карты. Проверка прогресса — |cffffffff-domck|cffced4da.", HP_BTN .. "BTNHumanBarracks.blp" },
-		{ 4, "Тестовый", "Для проверки рас. Чат-команды |cffffffff-fast|cffced4da и |cffffffff-fastoff|cffced4da включают и выключают тестовый доход.", HP_BTN .. "BTNScrollOfHaste.blp" },
+		{ 0, Loc("lua.auto_a39ad47c922226a5"), Loc("lua.auto_ac4d96817fdf1af9"), HP_BTN .. "BTNSorceressAdept.blp" },
+		{ 1, Loc("lua.auto_7552614d66b8a7a1"), Loc("lua.auto_61a0bbfb1890c9be"), HP_BTN .. "BTNCastle.blp" },
+		{ 2, Loc("lua.auto_61379f15167d5f16"), Loc("lua.auto_ec0079fe99f86065"), HP_BTN .. "BTNHelmutPurple.blp" },
+		{ 5, Loc("lua.auto_26dd9e3aae5c8d4c"), Loc("lua.auto_50f00368e762f6ed"), HP_BTN .. "BTNAltarOfKings.blp" },
+		{ 3, Loc("lua.auto_1287b176ee3a0776"), Loc("lua.auto_012084117924e404"), HP_BTN .. "BTNHumanBarracks.blp" },
+		{ 4, Loc("lua.auto_55cbf0812cc59fa5"), Loc("lua.auto_7ceabbc5fbaf6343"), HP_BTN .. "BTNScrollOfHaste.blp" },
 	},
-	{ "Видимость",
+	{ Loc("lua.auto_fac7927ccc7ca958"),
 		get = function() return udg_SET_VISIBLE_MODE end,
 		set = function(v) udg_SET_VISIBLE_MODE = v end,
-		{ 0, "Стандартная", "Обычный туман войны.", HP_BTN .. "BTNUndeadShrine.blp" },
-		{ 1, "Темнота", "Через минуту после старта вся карта скрывается чёрной маской. Успейте выбрать место для базы.", HP_BTN .. "BTNSentinel.blp" },
-		{ 2, "Открытая", "Вся карта видна всем игрокам всю игру.", HP_BTN .. "BTNFarSight.blp" },
+		{ 0, Loc("lua.auto_509c0a93349416ca"), Loc("lua.auto_3e90a8f5c00c5ff7"), HP_BTN .. "BTNUndeadShrine.blp" },
+		{ 1, Loc("lua.auto_4a978bae23429c8f"), Loc("lua.auto_d4c33d954fc31e3b"), HP_BTN .. "BTNSentinel.blp" },
+		{ 2, Loc("lua.auto_1df09de4504fc344"), Loc("lua.auto_ddfc93285a52d9d9"), HP_BTN .. "BTNFarSight.blp" },
 	},
-	{ "Дипломатия",
+	{ Loc("lua.auto_78d132d664cd635b"),
 		get = function() return DipMode end,
 		set = function(v) DipMode = v end,
-		{ 0, "Свободная", "Союзы без ограничений по размеру.", HP_BTN .. "BTNHumanCaptureFlag.blp" },
-		{ 1, "Каждый сам за себя", "Союзы и передача ресурсов запрещены.", HP_BTN .. "BTNAttack.blp" },
-		{ 2, "Союзы по 2", "В союзе не больше |cffffffff2|cffced4da игроков.", HP_BTN .. "BTNOrcCaptureFlag.blp" },
-		{ 3, "Союзы по 3", "В союзе не больше |cffffffff3|cffced4da игроков.", HP_BTN .. "BTNNightElfCaptureFlag.blp" },
+		{ 0, Loc("lua.auto_65b08c1f055c0a1a"), Loc("lua.auto_78185876b7938ca9"), HP_BTN .. "BTNHumanCaptureFlag.blp" },
+		{ 1, Loc("lua.auto_722b5b8c030fcea9"), Loc("lua.auto_c7a2d35d77aa2938"), HP_BTN .. "BTNAttack.blp" },
+		{ 2, Loc("lua.auto_ac8a4d534efd4fc8"), Loc("lua.auto_d1cca99d19051b82"), HP_BTN .. "BTNOrcCaptureFlag.blp" },
+		{ 3, Loc("lua.auto_9693fa514a0642f5"), Loc("lua.auto_d8d87791362fbe1a"), HP_BTN .. "BTNNightElfCaptureFlag.blp" },
 	},
-	{ "Доход",
+	{ Loc("lua.auto_384d916bbcef012f"),
 		get = function() return IncomeMod end,
 		set = function(v) IncomeMod = v end,
-		{ 0.75, "×0.75", "Доход всех игроков снижен до |cffffffff75%|cffced4da.", HP_BTN .. "BTNPillage.blp" },
-		{ 1, "×1.00", "Обычный доход.", HP_BTN .. "BTNChestOfGold.blp" },
+		{ 0.75, "×0.75", Loc("lua.auto_39613b8bfff3e719"), HP_BTN .. "BTNPillage.blp" },
+		{ 1, "×1.00", Loc("lua.auto_10f79199643a1472"), HP_BTN .. "BTNChestOfGold.blp" },
 	},
-	{ "Автозаказ",
+	{ Loc("lua.auto_bb45d8092581d222"),
 		get = function() return TotalProduction end,
 		set = function(v)
 			if v then
@@ -12221,21 +12603,21 @@ local HP_ROWS = {
 				for i = 0, 22 do SetPlayerAbilityAvailable(Player(i), FourCC('A1KH'), false) end
 			end
 		end,
-		{ false, "Выключен", "Автоматический перезаказ войск недоступен.", HP_BTN .. "BTNCancel.blp" },
-		{ true, "Включён", "Игроки смогут включить перезаказ: погибший юнит снова ставится в очередь найма.", HP_BTN .. "BTNRallyPoint.blp" },
+		{ false, Loc("lua.auto_5a577d90566052be"), Loc("lua.auto_db448c0d871437a0"), HP_BTN .. "BTNCancel.blp" },
+		{ true, Loc("lua.auto_0b8162990567631a"), Loc("lua.auto_c48a1b9379356fa5"), HP_BTN .. "BTNRallyPoint.blp" },
 	},
 }
 
 -- Континенты: индекс в udg_Continents, название, полное название, иконка.
 -- udg_Continents[0] = 0 — вся карта.
 local HP_CONTINENTS = {
-	{ 1, "Восточные королевства", "Восточные королевства", "CommonIcons\\PASBTN_CONT_EK.blp" },
-	{ 2, "Калимдор", "Калимдор", "CommonIcons\\PASBTN_CONT_Kalim.blp" },
-	{ 3, "Запределье", "Запределье", "CommonIcons\\PASBTN_CONT_Outland.blp" },
-	{ 4, "Нордскол", "Нордскол", "CommonIcons\\PASBTN_CONT_Nord.blp" },
-	{ 5, "Пандария", "Пандария", "CommonIcons\\PASBTN_CONT_Pandaria.blp" },
-	{ 7, "Океания", "Океания и Расколотые Острова", "CommonIcons\\PASBTN_CONT_Okeania.blp" },
-	{ 6, "Аргус", "Аргус", "CommonIcons\\PASBTN_CONT_Argus.blp" },
+	{ 1, Loc("lua.auto_88897d593739ee25"), Loc("lua.auto_88897d593739ee25"), "CommonIcons\\PASBTN_CONT_EK.blp" },
+	{ 2, Loc("lua.auto_f98207a144b1480b"), Loc("lua.auto_f98207a144b1480b"), "CommonIcons\\PASBTN_CONT_Kalim.blp" },
+	{ 3, Loc("lua.auto_ad45a7d12d975f7d"), Loc("lua.auto_ad45a7d12d975f7d"), "CommonIcons\\PASBTN_CONT_Outland.blp" },
+	{ 4, Loc("lua.auto_1d9ba41af9bd8982"), Loc("lua.auto_1d9ba41af9bd8982"), "CommonIcons\\PASBTN_CONT_Nord.blp" },
+	{ 5, Loc("lua.auto_91cf723beb3c0f96"), Loc("lua.auto_91cf723beb3c0f96"), "CommonIcons\\PASBTN_CONT_Pandaria.blp" },
+	{ 7, Loc("lua.auto_83104b113adcbc77"), Loc("lua.auto_a7e7c6599d14a0cb"), "CommonIcons\\PASBTN_CONT_Okeania.blp" },
+	{ 6, Loc("lua.auto_9a0f6ad9710e2500"), Loc("lua.auto_9a0f6ad9710e2500"), "CommonIcons\\PASBTN_CONT_Argus.blp" },
 }
 local HP_ALL_MAP_ICON = HP_BTN .. "BTN_CONT_All.blp"
 
@@ -12249,7 +12631,7 @@ local function HpIsHost(p)
 end
 
 local function HpAnnounce(what, value)
-	DisplayTimedTextToForce(GetPlayersAll(), 6, "|cffb99d66НАСТРОЙКИ:|cffced4da " .. what
+	DisplayTimedTextToForce(GetPlayersAll(), 6, Loc("lua.auto_108968b5be7d38b0") .. what
 		.. " — |cffebc56c" .. value .. "|r")
 end
 
@@ -12375,14 +12757,14 @@ end
 local function HpContinentsAll()
 	udg_Continents[0] = 0
 	for i = 1, 15 do udg_Continents[i] = 0 end
-	HpAnnounce("Континенты", "вся карта")
+	HpAnnounce(Loc("lua.auto_4befbe5b117f5dc0"), Loc("lua.auto_b9cc9f71c3cb1e73"))
 end
 
 local function HpContinentToggle(c)
 	local on = udg_Continents[c[1]] ~= 1
 	udg_Continents[c[1]] = on and 1 or 0
 	udg_Continents[0] = HpContinentsAny() and 1 or 0
-	HpAnnounce(c[3], on and "доступен" or "закрыт")
+	HpAnnounce(c[3], on and Loc("lua.auto_a5de79ca324d2f35") or Loc("lua.auto_6f4f17fc7201101f"))
 end
 
 -- Все строки панели в порядке показа: { title, options = { opt, ... } }.
@@ -12404,19 +12786,19 @@ local function HpLayoutRows()
 		rows[#rows + 1] = { title = row[1], options = opts }
 		-- Континенты — сразу после режима.
 		if r == 1 then
-			local cont = { { name = "Вся карта", icon = HP_ALL_MAP_ICON,
-				tip = "Все континенты открыты с начала игры.",
+			local cont = { { name = Loc("lua.auto_245f55d3c204ee69"), icon = HP_ALL_MAP_ICON,
+				tip = Loc("lua.auto_b6ddb9708bc19b8b"),
 				selected = function() return udg_Continents[0] ~= 1 end,
 				click = function() if udg_Continents[0] == 1 then HpContinentsAll() end end } }
 			for i = 1, #HP_CONTINENTS do
 				local c = HP_CONTINENTS[i]
 				cont[#cont + 1] = { name = c[2], title = c[3], icon = c[4],
-					tip = "Игра только на выбранных континентах: отметьте один или несколько. "
-						.. "Порталы на остальные континенты закрыты.",
+					tip = Loc("lua.auto_ee27e733524ef7b2")
+						.. Loc("lua.auto_bf312df3ad8c8ee7"),
 					selected = function() return udg_Continents[0] == 1 and udg_Continents[c[1]] == 1 end,
 					click = function() HpContinentToggle(c) end }
 			end
-			rows[#rows + 1] = { title = "Континенты", options = cont }
+			rows[#rows + 1] = { title = Loc("lua.auto_4befbe5b117f5dc0"), options = cont }
 		end
 	end
 	return rows
@@ -12424,29 +12806,29 @@ end
 
 local function HpLobbyButtons()
 	return {
-		{ name = "Начать игру", icon = "CommonIcons\\BTNTimeStop.blp",
-			tip = "Игра начнётся через |cffffffff5|cffced4da сек.",
+		{ name = Loc("lua.auto_28f26716a4cca51d"), icon = "CommonIcons\\BTNTimeStop.blp",
+			tip = Loc("lua.auto_5c617b8361f535c3"),
 			click = function()
 				if TimerGetRemaining(udg_LobbyTime) > 5.0 then
 					TimerStart(udg_LobbyTime, 5.00, false, nil)
-					DisplayTimedTextToForce(GetPlayersAll(), 6, "|cffb99d66ЛОББИ:|cffced4da Хост начинает игру через |cffffffff5|cffced4da сек.|r")
+					DisplayTimedTextToForce(GetPlayersAll(), 6, Loc("lua.auto_49f42b76e1fe7b33"))
 				end
 			end },
-		{ name = "+1 минута", icon = "CommonIcons\\BTNTimeSpell.blp",
-			tip = "Продлевает лобби на |cffffffff60|cffced4da сек. Доступно один раз.",
+		{ name = Loc("lua.auto_9df8266469c2c1aa"), icon = "CommonIcons\\BTNTimeSpell.blp",
+			tip = Loc("lua.auto_9f56ccd4169ff595"),
 			click = function()
 				if not IsTriggerEnabled(gg_trg_AddMinute) then return end
 				TimerStart(udg_LobbyTime, TimerGetRemaining(udg_LobbyTime) + 60.00, false, nil)
 				DisableTrigger(gg_trg_AddMinute)
 				FrameSetShown(hpMinute, false)
-				DisplayTimedTextToForce(GetPlayersAll(), 6, "|cffb99d66ЛОББИ:|cffced4da Хост продлил лобби на |cffffffff1|cffced4da минуту.|r")
+				DisplayTimedTextToForce(GetPlayersAll(), 6, Loc("lua.auto_514bbe15504ed8e0"))
 			end },
 	}
 end
 
 local function HpTimeText()
 	local s = R2I(TimerGetRemaining(udg_LobbyTime) + 0.99)
-	return "|cffb99d66До начала:|r |cffffffff" .. (s // 60) .. ":" .. string.format("%02d", s % 60) .. "|r"
+	return Loc("lua.auto_7192876cf690ad66") .. (s // 60) .. ":" .. string.format("%02d", s % 60) .. "|r"
 end
 
 local function HpTickFn()
@@ -12499,7 +12881,7 @@ function HostPanel_Open()
 	local lobbyW = 0
 	for i = 1, #lobby do lobbyW = math.max(lobbyW, HpButtonWidth(lobby[i].name)) end
 	lobbyW = lobbyW + 0.03
-	local headW = HpTextWidth("Настройки игры") * 1.4 + HpTextWidth("До начала: 0:00") + 0.03
+	local headW = HpTextWidth(Loc("lua.auto_14bcc1b1cb897657")) * 1.4 + HpTextWidth(Loc("lua.auto_7a0bc2f02438e548")) + 0.03
 	local innerW = math.max(labelW + gridW, lobbyW * 2 + HP_GAP, headW)
 	local width = innerW + HP_PAD * 2
 	local left = 0.4 - width / 2
@@ -12518,7 +12900,7 @@ function HostPanel_Open()
 	local title = BlzCreateFrame("HudTitle", hpRoot, 0, id)
 	BlzFrameSetSize(title, innerW / 2, 0.02)
 	HpPlace(title, FRAMEPOINT_TOPLEFT, left + HP_PAD, y)
-	BlzFrameSetText(title, "|cffebc56cНастройки игры|r")
+	BlzFrameSetText(title, Loc("lua.auto_b4dea7c8121d6c2d"))
 	BlzFrameSetEnable(title, false)
 	hpTime = BlzCreateFrame("HudBody", hpRoot, 0, id)
 	BlzFrameSetSize(hpTime, innerW / 2, 0.02)
@@ -12672,9 +13054,9 @@ function CheckCity(p)
 			if i >= 23 then break end
 			if i ~= winid then
 				ClearPlayer(Player(i))
-				DisplayTextToPlayer(Player(i), 0, 0, "|cffff4444Вы проиграли!|r Игрок |cffffcc00" .. GetPlayerName(p) .. "|r захватил требуемое число точек (|cffffffff" .. I2S(WinLimit) .. "|r) и одержал победу!")
+				DisplayTextToPlayer(Player(i), 0, 0, Loc("lua.auto_ad2516552a0f128e") .. GetPlayerName(p) .. Loc("lua.auto_ce73238ceb73013d") .. I2S(WinLimit) .. Loc("lua.auto_e9d0bbbfdc575574"))
 			else
-				DisplayTextToPlayer(Player(i), 0, 0, "|cff55ff55ПОБЕДА!|r Вы захватили требуемое число точек (|cffffffff" .. I2S(WinLimit) .. "|r) и одержали победу!")
+				DisplayTextToPlayer(Player(i), 0, 0, Loc("lua.auto_9396b0f099dd5132") .. I2S(WinLimit) .. Loc("lua.auto_8df17ea2bcbcc4a3"))
 			end
 			i = i + 1
 		end
@@ -12682,9 +13064,9 @@ function CheckCity(p)
 		while true do
 			if i >= 23 then break end
 			if i ~= winid then
-				DisplayTextToPlayer(Player(i), 0, 0, "|cffffaa00Осторожно!|r Игрок |cffffcc00" .. GetPlayerName(p) .. "|r близок к победе: захвачено |cffffffff" .. I2S(CityPlayerCount[winid]) .. "|r из |cffffffff" .. I2S(WinLimit) .. "|r точек!")
+				DisplayTextToPlayer(Player(i), 0, 0, Loc("lua.auto_8053af7449391a19") .. GetPlayerName(p) .. Loc("lua.auto_30c03b2cc47d4534") .. I2S(CityPlayerCount[winid]) .. Loc("lua.auto_5deb09bfbea204d3") .. I2S(WinLimit) .. Loc("lua.auto_726570465f08c41f"))
 			else
-				DisplayTextToPlayer(Player(i), 0, 0, "|cff55ff55Внимание!|r Вы близки к победе: захвачено |cffffffff" .. I2S(CityPlayerCount[winid]) .. "|r из |cffffffff" .. I2S(WinLimit) .. "|r точек!")
+				DisplayTextToPlayer(Player(i), 0, 0, Loc("lua.auto_a6e92d645867d601") .. I2S(CityPlayerCount[winid]) .. Loc("lua.auto_5deb09bfbea204d3") .. I2S(WinLimit) .. Loc("lua.auto_726570465f08c41f"))
 			end
 			i = i + 1
 		end
@@ -17009,7 +17391,7 @@ function Trig_GnomeNotToMuch_Actions()
 		income[pi] = income[pi] + 40
 		
 		
-		udg_LocalText2 = "Превышен лимит. Некоторые башни сменили режим."
+		udg_LocalText2 = Loc("lua.auto_e62a95a27c886a02")
 		GroupEnumUnitsOfPlayer(udg_LocalOtrad, p, udg_Boolexpr)
 		udg_LocalInteger = CountUnitsInGroup(udg_LocalOtrad)
 		if Tl == 1 and udg_LocalInteger >= 15 then
@@ -17141,7 +17523,7 @@ function Trig_TimerIncome_Actions()
 			if t > 1 then
 				corruption[i] = disincome[i] * ((t - 1) * 0.15)
 				if EcLog then
-					udg_LocalText2 = "Коррупция" .. I2S(R2I(corruption[i]))
+					udg_LocalText2 = Loc("lua.auto_f2f1624f23c8683e") .. I2S(R2I(corruption[i]))
 					DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 				end
 				
@@ -17152,7 +17534,7 @@ function Trig_TimerIncome_Actions()
 			if t >= 1 then
 				additional[i] = disincome[i] * (udg_MainPrice[i] / (-100.0))
 				if EcLog then
-					udg_LocalText2 = "Дополнительно: " .. I2S(R2I(additional[i]))
+					udg_LocalText2 = Loc("lua.auto_7ce677c1a8d3ae6a") .. I2S(R2I(additional[i]))
 					DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 				end
 				
@@ -17167,17 +17549,17 @@ function Trig_TimerIncome_Actions()
 		
 		
 		if EcLog then
-			udg_LocalText2 = "Доход: " .. R2S(income[i] * IncomeMod)
+			udg_LocalText2 = Loc("lua.auto_5b3de50cab8f5d39") .. R2S(income[i] * IncomeMod)
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = "Расход: " .. R2S(disincome[i])
+			udg_LocalText2 = Loc("lua.auto_8c8affbf5f913b68") .. R2S(disincome[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = "Логистика: " .. R2S(logistic[i])
+			udg_LocalText2 = Loc("lua.auto_a46b2882d7a7cbf4") .. R2S(logistic[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = "Юнитов: " .. I2S(udg_UnitsCount[i])
+			udg_LocalText2 = Loc("lua.auto_bfb3c47d9905583f") .. I2S(udg_UnitsCount[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = "Итого: " .. R2S(balance[i])
+			udg_LocalText2 = Loc("lua.auto_fb3b7c4a5b089ead") .. R2S(balance[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = "Древесины: " .. R2S(incomeW[i])
+			udg_LocalText2 = Loc("lua.auto_6ecc8a18cc1a0104") .. R2S(incomeW[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 		end
 		
@@ -18663,7 +19045,7 @@ function Trig_UpgradeStolica_Actions()
 	BlzSetUnitArmor(GetTriggerUnit(), 30.00)
 	BlzSetUnitMaxHP(GetTriggerUnit(), 10000)
 	UnitAddAbilityBJ(FourCC('A0I6'), GetTriggerUnit())
-	BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, "|cffd45e19Столица:|r " .. GetUnitName(GetTriggerUnit()))
+	BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, Loc("lua.auto_0a86b16e3d808b13") .. GetUnitName(GetTriggerUnit()))
 	UnitAddAbilityBJ(FourCC('A145'), GetTriggerUnit())
 end
 -- ===========================================================================
@@ -18738,7 +19120,7 @@ function MakeCapital(capital)
 	BlzSetUnitArmor(capital, 30.00)
 	UnitAddAbility(capital, FourCC('A0I6'))
 	UnitAddAbility(capital, FourCC('A145'))
-	BlzSetUnitStringFieldBJ(capital, UNIT_SF_NAME, "|cffd45e19Столица:|r " .. GetUnitName(capital))
+	BlzSetUnitStringFieldBJ(capital, UNIT_SF_NAME, Loc("lua.auto_0a86b16e3d808b13") .. GetUnitName(capital))
 	GroupAddUnit(udg_StolicaGroups, capital)
 	TriggerRegisterUnitEvent(gg_trg_StolicaAttacked, capital, EVENT_UNIT_ATTACKED)
 	unitShareVisionAll(capital, true)
@@ -18849,10 +19231,10 @@ function CheckAndCreateCapital(p)
 			u = BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
 			SetPlayerAbilityAvailable(p, FourCC('A0IQ'), false)
 			MakeCapital(u)
-			DisplayTimedTextToForce(udg_AllPlayers, 5, "|cffffcc00Игрок " .. GetPlayerName(p) .. "|r не успел заложить |cffd45e19столицу|r вовремя — она была размещена автоматически.")
+			DisplayTimedTextToForce(udg_AllPlayers, 5, Loc("lua.auto_d1c3886c9a5256df") .. GetPlayerName(p) .. Loc("lua.auto_f6afbe572d5fb86b"))
 		else
 			if GetPlayerSlotState(p) == PLAYER_SLOT_STATE_PLAYING then
-				DisplayTimedTextToForce(udg_AllPlayers, 5, "|cffff4444Игрок " .. GetPlayerName(p) .. " проиграл!|r Столица не была построена в отведённое время.")
+				DisplayTimedTextToForce(udg_AllPlayers, 5, Loc("lua.auto_fe8adae8c5188110") .. GetPlayerName(p) .. Loc("lua.auto_0ba0e61dd07d8e2e"))
 			end
 			
 			ClearPlayer(p)
@@ -18949,7 +19331,7 @@ end
 function Trig_StolicaDead_Actions()
 	local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
 	SetPlayerAbilityAvailableBJ(true, FourCC('A0IQ'), GetOwningPlayer(GetTriggerUnit()))
-	DisplayTextToForce(GetPlayersAll(), "|cffff4444Игрок " .. GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. " потерпел поражение!|r Его |cffd45e19столица|r уничтожена.")
+	DisplayTextToForce(GetPlayersAll(), Loc("lua.auto_fe8adae8c5188110") .. GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. Loc("lua.auto_485f7a1e3d81ae2e"))
 	ClearPlayer(Player(pi))
 	AiLimitsSet()
 end
@@ -19160,7 +19542,7 @@ end
 ---@return nothing
 function Freedom()
 	local p = GetEnumPlayer()
-	DisplayTextToForce(udg_AllPlayers, "|cff55ff55Игрок " .. GetPlayerName(p) .. "|r освободился от вассальной зависимости!")
+	DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_e77dadba3b032403") .. GetPlayerName(p) .. Loc("lua.auto_d8c7592e079b1957"))
 	ClearOldAllies(p)
 	p = nil
 end
@@ -19169,7 +19551,7 @@ function ChangeAlly()
 	local p = udg_LocalPlayer
 	local p0 = GetEnumPlayer()
 	
-	DisplayTextToForce(udg_AllPlayers, "|cffffcc00Игрок " .. GetPlayerName(p0) .. "|r перешёл под контроль сюзерена |cff00ffff" .. GetPlayerName(p) .. "|r!")
+	DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_d1c3886c9a5256df") .. GetPlayerName(p0) .. Loc("lua.auto_5fa5c72f7bbf1849") .. GetPlayerName(p) .. "|r!")
 	ClearOldAllies(p0)
 	Senior[GetPlayerId(p0)] = p
 	ForceAddPlayer(Vassals[GetPlayerId(p)], p0)
@@ -19197,14 +19579,14 @@ function HandleVassalization(capital, attacker)
 	-- Suicide case
 	if p == p2 then
 		ClearPlayer(p)
-		DisplayTextToForce(udg_AllPlayers, "|cffff4444Игрок " .. GetPlayerName(p) .. "|r уничтожил собственную столицу и выбыл из игры!")
+		DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_fe8adae8c5188110") .. GetPlayerName(p) .. Loc("lua.auto_b5e0c56f0bef7757"))
 		ForForce(Vassals[pi], Freedom)
 		return
 	end
 	
 	-- Captured by a free player
 	if Senior[pi2] == nil then
-		DisplayTextToForce(udg_AllPlayers, "|cffffcc00Игрок " .. GetPlayerName(p) .. "|r стал вассалом игрока |cff00ffff" .. GetPlayerName(p2) .. "|r!")
+		DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_d1c3886c9a5256df") .. GetPlayerName(p) .. Loc("lua.auto_e8eac66ae70767e9") .. GetPlayerName(p2) .. "|r!")
 		-- Free defender
 		if Senior[pi] == nil then
 			Senior[pi] = p2
@@ -19225,7 +19607,7 @@ function HandleVassalization(capital, attacker)
 	else
 		p3 = Senior[pi2]
 		pi3 = GetPlayerId(p3)
-		DisplayTextToForce(udg_AllPlayers, "|cffffcc00Игрок " .. GetPlayerName(p) .. "|r стал вассалом игрока |cff00ffff" .. GetPlayerName(p3) .. "|r!")
+		DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_d1c3886c9a5256df") .. GetPlayerName(p) .. Loc("lua.auto_e8eac66ae70767e9") .. GetPlayerName(p3) .. "|r!")
 		-- Free defender
 		if Senior[pi] == nil then
 			Senior[pi] = p3
@@ -19335,7 +19717,7 @@ end
 ---@return nothing
 function Trig_DominationButton_Actions()
 	udg_GameMode = 3
-	DisplayTextToForce(GetPlayersAll(), "Режим выбран: Доминация")
+	DisplayTextToForce(GetPlayersAll(), Loc("lua.auto_3c5e71a957484d52"))
 end
 -- ===========================================================================
 ---@return nothing
@@ -19368,7 +19750,7 @@ function ExpandTable()
 	
 	
 	ThirdColumnHeader = MultiboardGetItem(Multiboard, 0, 2)
-	MultiboardSetItemValue(ThirdColumnHeader, "Города")
+	MultiboardSetItemValue(ThirdColumnHeader, Loc("lua.auto_39541f5c26153fcd"))
 	MultiboardSetItemWidth(ThirdColumnHeader, 0.06)
 	MultiboardReleaseItem(ThirdColumnHeader)
 	
@@ -19398,7 +19780,7 @@ end
 -- endfunction
 ---@return nothing
 function Trig_Domination_start_Actions()
-	DisplayTextToForce(udg_AllPlayers, "|cffb99d66РЕЖИМ:|r Включён режим |cffffcc00«Доминация»|r. Захватите |cffffffff" .. I2S(PercentWin) .. "%|r стратегических точек, чтобы победить!")
+	DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_b5034366e4d45ddf") .. I2S(PercentWin) .. Loc("lua.auto_7ecf36204230f363"))
 end
 -- ===========================================================================
 ---@return nothing
@@ -19414,8 +19796,8 @@ end
 ---@return nothing
 function Trig_DomCheckCommand_Actions()
 	local pi = GetPlayerId(GetTriggerPlayer())
-	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffb99d66СТАТУС:|r Вы контролируете |cffffffff" .. I2S(CityPlayerCount[pi]) .. "|r из |cffffffff" .. I2S(CityCount) .. "|r точек на карте (требуется |cffffffff" .. I2S(MathRound(CityCount * 0.01 * PercentWin)) .. "|r для победы).")
-	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffb99d66ПРОГРЕСС:|r Ваш контроль: |cffffcc00" .. R2SW(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount), 1, 1) .. "%|r из необходимых |cffffffff" .. I2S(PercentWin) .. "%|r.")
+	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, Loc("lua.auto_c3a44d62b1c05fa8") .. I2S(CityPlayerCount[pi]) .. Loc("lua.auto_5deb09bfbea204d3") .. I2S(CityCount) .. Loc("lua.auto_7247b1f076a06d67") .. I2S(MathRound(CityCount * 0.01 * PercentWin)) .. Loc("lua.auto_f0e36c66f4165801"))
+	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, Loc("lua.auto_a8b013e5f35d8d2c") .. R2SW(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount), 1, 1) .. Loc("lua.auto_e9388424abca4e79") .. I2S(PercentWin) .. "%|r.")
 end
 -- ===========================================================================
 ---@return nothing
@@ -19439,7 +19821,7 @@ end
 ---@return nothing
 function Trig_FastTestSpell_Actions()
 	udg_GameMode = 4
-	DisplayTextToForce(GetPlayersAll(), "Режим выбран: Тест. Пишите -fast и -fastoff ")
+	DisplayTextToForce(GetPlayersAll(), Loc("lua.auto_00ec6500b4eba925"))
 end
 -- ===========================================================================
 ---@return nothing
@@ -19460,7 +19842,7 @@ function Trig_FastTest_Actions()
 		fastTest[GetPlayerId(GetTriggerPlayer())] = true
 		income[GetPlayerId(GetTriggerPlayer())] = income[GetPlayerId(GetTriggerPlayer())] + 25000
 		incomeW[GetPlayerId(GetTriggerPlayer())] = incomeW[GetPlayerId(GetTriggerPlayer())] + 25000
-		DisplayTimedTextToForce(udg_AllPlayers, 6, "|cffffcc00Игрок " .. GetPlayerName(GetTriggerPlayer()) .. "|r включил тестовый режим!")
+		DisplayTimedTextToForce(udg_AllPlayers, 6, Loc("lua.auto_d1c3886c9a5256df") .. GetPlayerName(GetTriggerPlayer()) .. Loc("lua.auto_e3530102e24bb650"))
 		SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_FOOD_CAP, 100)
 	end
 	
@@ -19490,7 +19872,7 @@ function Trig_FastTestOff_Actions()
 		fastTest[GetPlayerId(GetTriggerPlayer())] = false
 		income[GetPlayerId(GetTriggerPlayer())] = income[GetPlayerId(GetTriggerPlayer())] - 25000
 		incomeW[GetPlayerId(GetTriggerPlayer())] = incomeW[GetPlayerId(GetTriggerPlayer())] - 25000
-		DisplayTimedTextToForce(udg_AllPlayers, 6, "|cffffcc00Игрок " .. GetPlayerName(GetTriggerPlayer()) .. "|r выключил тестовый режим.")
+		DisplayTimedTextToForce(udg_AllPlayers, 6, Loc("lua.auto_d1c3886c9a5256df") .. GetPlayerName(GetTriggerPlayer()) .. Loc("lua.auto_e351a792ffb40210"))
 	end
 end
 -- ===========================================================================
@@ -19714,11 +20096,11 @@ function Trig_Continents_set_On_Func013A()
 end
 ---@return nothing
 function Trig_Continents_set_On_Actions()
-	udg_LocalText2 = "Режим континентов:|cffffff00 включен|r"
+	udg_LocalText2 = Loc("lua.auto_c8df2979e7bbaf41")
 	DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
-	udg_LocalText2 = "|cff00ff00Итого доступны для игры: |r"
+	udg_LocalText2 = Loc("lua.auto_d1e62e713eceeb7f")
 	if Trig_Continents_set_On_Func004C() then
-		udg_LocalText2 = udg_LocalText2 .. "Восточные королевства\\"
+		udg_LocalText2 = udg_LocalText2 .. Loc("lua.auto_70bafa851b3ef731")
     end
     if Trig_Continents_set_On_Func005C() then
         udg_LocalText2=udg_LocalText2 .. ""
@@ -21187,7 +21569,7 @@ function Trig_StartTableCode_Actions()
     MultiboardItem[0]=MultiboardGetItem(Multiboard, 0, 0)
     MultiboardItem[1]=MultiboardGetItem(Multiboard, 0, 1)
     MultiboardSetItemValue(MultiboardItem[0], "")
-    MultiboardSetItemValue(MultiboardItem[1], "Юниты")
+    MultiboardSetItemValue(MultiboardItem[1], Loc("lua.auto_d86a665071769d9b"))
     MultiboardSetItemWidth(MultiboardItem[0], 0.12)
     MultiboardSetItemWidth(MultiboardItem[1], 0.06)
     MultiboardReleaseItem(MultiboardItem[0])
@@ -22596,8 +22978,8 @@ function Trig_Leave_Ot_Func005C()
 end
 function Trig_Leave_Ot_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
-    DisplayTextToForce(udg_AllPlayers, "|cffb99d66ИГРА:|cffced4da Игрок "
-        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. "|cffced4da покинул игру.|r")
+    DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_9f7b0eb6b5703b2e")
+        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. Loc("lua.auto_fc870dbbe062e322"))
     ClearPlayer(Player(pi))
     if Trig_Leave_Ot_Func005C() then
         ForForce(Vassals[pi], Freedom)
@@ -23331,8 +23713,8 @@ function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     ForGroupBJ(udg_LocalOtrad2, Trig_Sdelat_Flagman_Ot_Copy_Func005A)
     GroupClear(udg_LocalOtrad2)
     BlzSetUnitWeaponIntegerFieldBJ(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0, BlzGetUnitWeaponIntegerField(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0) * 3)
-    local flagshipName = GetUnitName(GetTriggerUnit()):gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", ""):gsub("^Флагман — ", "")
-    BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, "|cffebc56cФлагман — " .. flagshipName .. "|r")
+    local flagshipName = GetUnitName(GetTriggerUnit()):gsub("|c%x%x%x%x%x%x%x%x", ""):gsub("|r", ""):gsub(Loc("lua.auto_0f1ed693c7d5cf0b"), "")
+    BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, Loc("lua.auto_37e73c9fab1b4508") .. flagshipName .. "|r")
     BlzSetUnitIntegerFieldBJ(GetTriggerUnit(), UNIT_IF_TINTING_COLOR_GREEN, 175)
     BlzSetUnitIntegerFieldBJ(GetTriggerUnit(), UNIT_IF_TINTING_COLOR_BLUE, 175)
     UnitAddTypeBJ(UNIT_TYPE_HERO, GetTriggerUnit())
@@ -23380,7 +23762,7 @@ function Trig_Flagman_die_Ot_Actions()
     ForGroupBJ(udg_LocalOtrad2, Trig_Flagman_die_Ot_Func006A)
     
     GroupClear(udg_LocalOtrad2)
-    DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "|cffb99d66ФЛОТ:|cffef8173 Флагман потерян.|r")
+    DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, Loc("lua.auto_a7db978294516c42"))
     SetPlayerAbilityAvailableBJ(true, FourCC('A009'), GetOwningPlayer(u))
     u=nil
 end
@@ -24209,7 +24591,7 @@ function Trig_NoTpNearCapital_Actions()
     end
     if found then
         IssueImmediateOrder(u, "stop")
-        DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "|cffb99d66НЕДОСТУПНО:|cffef8173 Тёмный призыв нельзя применить, пока маг находится в радиусе |cffffffff1350|cffef8173 от вражеской столицы.|r")
+        DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, Loc("lua.auto_6bb89952eca7cf28"))
     end
     
     DestroyGroup(g)
@@ -40305,7 +40687,7 @@ do
                         GetUnitState(caster, UNIT_STATE_MANA) + 100))
                 BlzEndUnitAbilityCooldown(caster, ability)
                 DisplayTextToPlayer(GetOwningPlayer(caster), 0, 0,
-                    '|cffef8173Требуется раненый союзный силитид. Рабочие и личинки не подходят.|r')
+                    Loc("lua.auto_d459f7426fdd98b9"))
             end
         end)
         local death = CreateTrigger()
@@ -43078,7 +43460,7 @@ function Trig_Arcana_Conditions()
     return Trig_Arcana_Func009C()
 end
 function Trig_Arcana_Func002A()
-    BlzSetUnitName(GetEnumUnit(), "|cff8080ffКолодец арканы|r")
+    BlzSetUnitName(GetEnumUnit(), Loc("lua.auto_94e9a959bd1c46f1"))
 end
 function Trig_Arcana_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -43152,7 +43534,7 @@ function Trig_Fel_Conditions()
     return Trig_Fel_Func007C()
 end
 function Trig_Fel_Func002A()
-    BlzSetUnitName(GetEnumUnit(), "|cff80ff80Колодец скверны|r")
+    BlzSetUnitName(GetEnumUnit(), Loc("lua.auto_90d1fce9a7752e47"))
 end
 function Trig_Fel_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -43243,7 +43625,7 @@ function Trig_Void_Conditions()
     return Trig_Void_Func008C()
 end
 function Trig_Void_Func002A()
-    BlzSetUnitName(GetEnumUnit(), "|cffff00ffКолодец бездны|r")
+    BlzSetUnitName(GetEnumUnit(), Loc("lua.auto_e743cb8f290e683e"))
 end
 function Trig_Void_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -43360,7 +43742,7 @@ function Trig_Light_Conditions()
     return Trig_Light_Func008C()
 end
 function Trig_Light_Func003A()
-    BlzSetUnitName(GetEnumUnit(), "|cffffff00Колодец света|r")
+    BlzSetUnitName(GetEnumUnit(), Loc("lua.auto_6cf6247be4e90074"))
 end
 function Trig_Light_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -43388,7 +43770,7 @@ function Trig_ArcanaBuild_Conditions()
     return Trig_ArcanaBuild_Func001C()
 end
 function Trig_ArcanaBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "|cff8080ffКолодец арканы|r")
+    BlzSetUnitName(GetTriggerUnit(), Loc("lua.auto_94e9a959bd1c46f1"))
 end
 --===========================================================================
 function InitTrig_ArcanaBuild()
@@ -43408,7 +43790,7 @@ function Trig_FelBuild_Conditions()
     return Trig_FelBuild_Func001C()
 end
 function Trig_FelBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "|cff80ff80Колодец скверны|r")
+    BlzSetUnitName(GetTriggerUnit(), Loc("lua.auto_90d1fce9a7752e47"))
 end
 --===========================================================================
 function InitTrig_FelBuild()
@@ -43428,7 +43810,7 @@ function Trig_VoidBuild_Conditions()
     return Trig_VoidBuild_Func001C()
 end
 function Trig_VoidBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "|cffff00ffКолодец бездны|r")
+    BlzSetUnitName(GetTriggerUnit(), Loc("lua.auto_e743cb8f290e683e"))
 end
 --===========================================================================
 function InitTrig_VoidBuild()
@@ -43448,7 +43830,7 @@ function Trig_LigthBuild_Conditions()
     return Trig_LigthBuild_Func001C()
 end
 function Trig_LigthBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "|cffffff00Колодец света|r")
+    BlzSetUnitName(GetTriggerUnit(), Loc("lua.auto_6cf6247be4e90074"))
 end
 --===========================================================================
 function InitTrig_LigthBuild()
@@ -46155,8 +46537,8 @@ function InitTrig_CrescentDance()
     TriggerAddCondition(gg_trg_CrescentDance, Condition(Trig_CrescentDance_Conditions))
     TriggerAddAction(gg_trg_CrescentDance, Trig_CrescentDance_Actions)
 
-    BlzSetAbilityTooltip(FourCC('A0EF'), "Танец полумесяца", 0)
-    BlzSetAbilityExtendedTooltip(FourCC('A0EF'), "С вероятностью 15% при атаке воин совершает стремительный перекат полумесяцем за спину противника, нанося всем врагам на пути 50% от своего базового урона.", 0)
+    BlzSetAbilityTooltip(FourCC('A0EF'), Loc("lua.auto_d82969ffdb24b51d"), 0)
+    BlzSetAbilityExtendedTooltip(FourCC('A0EF'), Loc("lua.auto_a072519c18109076"), 0)
     BlzSetAbilityIcon(FourCC('A0EF'), "ReplaceableTextures\\CommandButtons\\BTNAmbush.blp")
     BlzSetAbilityPosX(FourCC('A0EF'), 1)
     BlzSetAbilityPosY(FourCC('A0EF'), 2)
@@ -46347,25 +46729,25 @@ function InitTrig_DruidOwlAstralPhases()
     TriggerAddAction(gg_trg_DruidOwl_Train, Trig_DruidOwl_Train_Actions)
 
     -- Stance button
-    BlzSetAbilityTooltip(FourCC('Absk'), "Астральная фаза", 0)
-    BlzSetAbilityExtendedTooltip(FourCC('Absk'), "Переключает астральную фазу друида между Солнцем и Луной.|n|n|cffffaa00Фаза Солнца:|r|n• Атаки поджигают врага (до 3 стаков, 1 ед. урона раз в 0.5 сек).|n• Заклинание: «Солнечный ожог» (40 урона + поджигание на 6 сек, 65 маны, 9 сек КД).|n|n|cff99bbffФаза Луны:|r|n• Атаки восполняют 10 маны союзнику с наименьшей маной в радиусе 500.|n• Заклинание: «Звездный луч» (исцеляет 50 ед. здоровья, 65 маны, 9 сек КД).|n|nПерезарядка: 2.5 сек.", 0)
+    BlzSetAbilityTooltip(FourCC('Absk'), Loc("lua.auto_0692b40e58b4c901"), 0)
+    BlzSetAbilityExtendedTooltip(FourCC('Absk'), Loc("lua.auto_498545b1520c0d1e"), 0)
     BlzSetAbilityIcon(FourCC('Absk'), "ReplaceableTextures\\CommandButtons\\BTNMoonStone.blp")
     BlzSetAbilityPosX(FourCC('Absk'), 0)
     BlzSetAbilityPosY(FourCC('Absk'), 2)
 
     -- Solar Burn
-    BlzSetAbilityTooltip(FourCC('ACfb'), "Солнечный ожог", 0)
-    BlzSetAbilityExtendedTooltip(FourCC('ACfb'), "Поражает врага сгустком солнечного пламени, нанося 40 единиц магического урона и накладывая 1 эффект поджигания на 6 сек.|n|nЗатраты маны: 65.|nВремя восстановления: 9 сек.", 0)
+    BlzSetAbilityTooltip(FourCC('ACfb'), Loc("lua.auto_22652b341e0e8f3c"), 0)
+    BlzSetAbilityExtendedTooltip(FourCC('ACfb'), Loc("lua.auto_c23e06ea7fdd67ff"), 0)
     BlzSetAbilityIcon(FourCC('ACfb'), "ReplaceableTextures\\CommandButtons\\BTNSearingArrows.blp")
     BlzSetAbilityPosX(FourCC('ACfb'), 1)
     BlzSetAbilityPosY(FourCC('ACfb'), 2)
 
     -- Star Ray
-    BlzSetAbilityTooltip(FourCC('Anhe'), "Звездный луч", 0)
-    BlzSetAbilityExtendedTooltip(FourCC('Anhe'), "Направляет чистый свет звезд на раненого союзника, восполняя 50 единиц здоровья.|n|nЗатраты маны: 65.|nВремя восстановления: 9 сек.", 0)
+    BlzSetAbilityTooltip(FourCC('Anhe'), Loc("lua.auto_73a7e0989cdf4053"), 0)
+    BlzSetAbilityExtendedTooltip(FourCC('Anhe'), Loc("lua.auto_1c689d133282dbc4"), 0)
     BlzSetAbilityIcon(FourCC('Anhe'), "ReplaceableTextures\\CommandButtons\\BTNStarfall.blp")
-    BlzSetAbilityActivatedTooltip(FourCC('Anhe'), "Звездный луч", 0)
-    BlzSetAbilityActivatedExtendedTooltip(FourCC('Anhe'), "Направляет чистый свет звезд на раненого союзника, восполняя 50 единиц здоровья.|n|nЗатраты маны: 65.|nВремя восстановления: 9 сек.", 0)
+    BlzSetAbilityActivatedTooltip(FourCC('Anhe'), Loc("lua.auto_73a7e0989cdf4053"), 0)
+    BlzSetAbilityActivatedExtendedTooltip(FourCC('Anhe'), Loc("lua.auto_1c689d133282dbc4"), 0)
     BlzSetAbilityActivatedIcon(FourCC('Anhe'), "ReplaceableTextures\\CommandButtons\\BTNStarfall.blp")
     BlzSetAbilityPosX(FourCC('Anhe'), 1)
     BlzSetAbilityPosY(FourCC('Anhe'), 2)
@@ -50015,7 +50397,7 @@ do
             if not G.Cast(bear, GetSpellTargetUnit()) then
                 BlzEndUnitAbilityCooldown(bear, ability)
                 DisplayTextToPlayer(GetOwningPlayer(bear), 0, 0,
-                    '|cffef8173Хватка требует наземного вражеского бойца рядом. Здания и механизмы не подходят.|r')
+                    Loc("lua.auto_cfd1306a95a64e0e"))
             end
         end)
         local death = CreateTrigger()
@@ -51042,8 +51424,8 @@ function Trig_SecondChance_Actions()
     ProbeLogWrite("[CHAT] -raceselect target=" .. tostring(udg_LocalInteger))
     if Trig_SecondChance_Func003C() then
         udg_LocalPosition2=StartLoc[GetRandomInt(0, StartLocCount - 1)] -- INLINED!!
-        DisplayTimedTextToForce(GetPlayersAll(), 5.00, "Хост " .. GetPlayerName(GetTriggerPlayer()) .. " дал игроку " .. GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " второй шанс!")
-        DisplayTimedTextToPlayer(ConvertedPlayer(udg_LocalInteger), 0, 0, 15.00, "У вас есть 15 минут на то, чтобы поставить столицу!")
+        DisplayTimedTextToForce(GetPlayersAll(), 5.00, Loc("lua.auto_83c5a933a197458e") .. GetPlayerName(GetTriggerPlayer()) .. Loc("lua.auto_ad9eec20f151ee97") .. GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. Loc("lua.auto_3df40bc7ad332a07"))
+        DisplayTimedTextToPlayer(ConvertedPlayer(udg_LocalInteger), 0, 0, 15.00, Loc("lua.auto_d98698306a5ef2d9"))
         CreateNUnitsAtLoc(1, FourCC('h0HJ'), ConvertedPlayer(udg_LocalInteger), udg_LocalPosition2, bj_UNIT_FACING)
         RacePickerAdopt(GetLastCreatedUnit())
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_GOLD, 5000)
@@ -51111,8 +51493,8 @@ function Trig_GG_Func004A()
 end
 function Trig_GG_Actions()
     --local integer pi = GetPlayerId(GetTriggerPlayer())
-    DisplayTextToForce(udg_AllPlayers, "|cffb99d66ИГРА:|cffced4da Игрок "
-        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. "|cffced4da сдался.|r")
+    DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_9f7b0eb6b5703b2e")
+        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. Loc("lua.auto_c96bb111ec05e22b"))
     --call GroupEnumUnitsOfPlayer( udg_LocalOtrad2, GetTriggerPlayer(), null )
     --call ForGroupBJ( udg_LocalOtrad2, function Trig_GG_Func004A )
     --call ForForce(Vassals[pi], function Freedom)
@@ -51161,8 +51543,8 @@ end
 function Trig_Observer_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
     if IsPlayerInForce(GetTriggerPlayer(), Observers) then return end
-    DisplayTextToForce(udg_AllPlayers, "|cffb99d66ИГРА:|cffced4da Игрок "
-        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. "|cffced4da стал наблюдателем.|r")
+    DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_9f7b0eb6b5703b2e")
+        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. Loc("lua.auto_347c11e7f6f5f879"))
     ClearPlayer(GetTriggerPlayer())
     ForceAddPlayer(Observers, GetTriggerPlayer())
     udg_Visibl[pi]=CreateFogModifierRectBJ(true, GetTriggerPlayer(), FOG_OF_WAR_VISIBLE, bj_mapInitialPlayableArea)
@@ -51207,7 +51589,7 @@ end
 function Trig_ObserverOff_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
     if not IsPlayerInForce(GetTriggerPlayer(), Observers) then return end
-    DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffb99d66ИГРА:|cffced4da Обзор всей карты отключён.|r")
+    DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, Loc("lua.auto_7ae9b6161bdde40e"))
     
     ForceRemovePlayer(Observers, GetTriggerPlayer())
     FogModifierStop(udg_Visibl[pi])

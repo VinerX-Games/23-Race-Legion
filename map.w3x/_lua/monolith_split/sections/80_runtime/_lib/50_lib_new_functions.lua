@@ -52,7 +52,7 @@ function ExpandTableArmyExpr()
 	
 	local header = MultiboardGetItem(Multiboard, 0, 3)
 	ArmyPowerColumnHeader = header
-	MultiboardSetItemValue(header, "Опыт")
+	MultiboardSetItemValue(header, Loc("lua.auto_e14f129d74957a41"))
 	MultiboardSetItemWidth(header, 0.06)
 	MultiboardReleaseItem(header)
 	

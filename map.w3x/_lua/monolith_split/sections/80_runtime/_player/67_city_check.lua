@@ -18,9 +18,9 @@ function CheckCity(p)
 			if i >= 23 then break end
 			if i ~= winid then
 				ClearPlayer(Player(i))
-				DisplayTextToPlayer(Player(i), 0, 0, "|cffff4444Вы проиграли!|r Игрок |cffffcc00" .. GetPlayerName(p) .. "|r захватил требуемое число точек (|cffffffff" .. I2S(WinLimit) .. "|r) и одержал победу!")
+				DisplayTextToPlayer(Player(i), 0, 0, Loc("lua.auto_ad2516552a0f128e") .. GetPlayerName(p) .. Loc("lua.auto_ce73238ceb73013d") .. I2S(WinLimit) .. Loc("lua.auto_e9d0bbbfdc575574"))
 			else
-				DisplayTextToPlayer(Player(i), 0, 0, "|cff55ff55ПОБЕДА!|r Вы захватили требуемое число точек (|cffffffff" .. I2S(WinLimit) .. "|r) и одержали победу!")
+				DisplayTextToPlayer(Player(i), 0, 0, Loc("lua.auto_9396b0f099dd5132") .. I2S(WinLimit) .. Loc("lua.auto_8df17ea2bcbcc4a3"))
 			end
 			i = i + 1
 		end
@@ -28,9 +28,9 @@ function CheckCity(p)
 		while true do
 			if i >= 23 then break end
 			if i ~= winid then
-				DisplayTextToPlayer(Player(i), 0, 0, "|cffffaa00Осторожно!|r Игрок |cffffcc00" .. GetPlayerName(p) .. "|r близок к победе: захвачено |cffffffff" .. I2S(CityPlayerCount[winid]) .. "|r из |cffffffff" .. I2S(WinLimit) .. "|r точек!")
+				DisplayTextToPlayer(Player(i), 0, 0, Loc("lua.auto_8053af7449391a19") .. GetPlayerName(p) .. Loc("lua.auto_30c03b2cc47d4534") .. I2S(CityPlayerCount[winid]) .. Loc("lua.auto_5deb09bfbea204d3") .. I2S(WinLimit) .. Loc("lua.auto_726570465f08c41f"))
 			else
-				DisplayTextToPlayer(Player(i), 0, 0, "|cff55ff55Внимание!|r Вы близки к победе: захвачено |cffffffff" .. I2S(CityPlayerCount[winid]) .. "|r из |cffffffff" .. I2S(WinLimit) .. "|r точек!")
+				DisplayTextToPlayer(Player(i), 0, 0, Loc("lua.auto_a6e92d645867d601") .. I2S(CityPlayerCount[winid]) .. Loc("lua.auto_5deb09bfbea204d3") .. I2S(WinLimit) .. Loc("lua.auto_726570465f08c41f"))
 			end
 			i = i + 1
 		end

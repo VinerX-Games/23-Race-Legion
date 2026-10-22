@@ -737,7 +737,7 @@ function Trig_NoTpNearCapital_Actions()
     end
     if found then
         IssueImmediateOrder(u, "stop")
-        DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "|cffb99d66НЕДОСТУПНО:|cffef8173 Тёмный призыв нельзя применить, пока маг находится в радиусе |cffffffff1350|cffef8173 от вражеской столицы.|r")
+        DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, Loc("lua.auto_6bb89952eca7cf28"))
     end
     
     DestroyGroup(g)

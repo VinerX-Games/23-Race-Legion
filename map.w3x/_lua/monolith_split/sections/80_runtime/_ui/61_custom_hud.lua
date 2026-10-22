@@ -161,9 +161,9 @@ local HUD_COL_ICON = {
 	[3] = "ReplaceableTextures\\CommandButtons\\BTNMedalionOfCourage.blp",
 }
 local HUD_COL_TIP = {
-	[1] = { "Юниты", "Число юнитов игрока." },
-	[2] = { "Города", "Доля захваченных городов карты." },
-	[3] = { "Опыт", "Опыт армии игрока." },
+	[1] = { Loc("lua.auto_d86a665071769d9b"), Loc("lua.auto_e196a7394e64153f") },
+	[2] = { Loc("lua.auto_39541f5c26153fcd"), Loc("lua.auto_d4a26f1f32beea2c") },
+	[3] = { Loc("lua.auto_e14f129d74957a41"), Loc("lua.auto_184376ce32f1a727") },
 }
 local hudIcon, hudStripe, hudSep = {}, {}, nil
 local hudMeasure
@@ -251,12 +251,12 @@ end
 function CustomHudRaceName(pi, abil)
 	if abil == FourCC('A1JN') then
 		local branch = HordeW2GetSubrace(pi)
-		if branch == "dark" then return "Тёмная Орда" end
-		if branch == "dragonmaw" then return "Клан Драконьей Пасти" end
+		if branch == "dark" then return Loc("lua.auto_397a208e51cfdfed") end
+		if branch == "dragonmaw" then return Loc("lua.auto_a6037344d001bf42") end
 	elseif abil == FourCC('A14O') then
-		return GetPlayerTechCount(Player(pi), FourCC('R0FF'), true) > 0 and "Владычество мурлоков" or "Владычество нагов"
+		return GetPlayerTechCount(Player(pi), FourCC('R0FF'), true) > 0 and Loc("lua.auto_7fd683127c1a4f4b") or Loc("lua.auto_180694aa118ab867")
 	elseif abil == FourCC('A0RQ') or abil == FourCC('A1MZ') then
-		return "Драконий Союз"
+		return Loc("lua.auto_8cbb62e18096daa5")
 	end
 	return GetAbilityName(abil)
 end
@@ -334,7 +334,7 @@ function CustomHudRender()
 	FrameSetShown(hudBoard, true)
 
 	BlzFrameSetText(hudToggleText, HUD_VALUE .. (hudCollapsed and "+" or "-") .. "|r")
-	BlzFrameSetText(hudText[0], HUD_LABEL .. "Игроки " .. HUD_VALUE .. players .. "|r")
+	BlzFrameSetText(hudText[0], HUD_LABEL .. Loc("lua.auto_7f975f91f883172f") .. HUD_VALUE .. players .. "|r")
 	FrameSetShown(hudText[0], true)
 	for col = 1, HUD_COLS - 1 do
 		FrameSetShown(hudIcon[col], col < cols)

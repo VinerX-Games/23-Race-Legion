@@ -37,31 +37,31 @@ function UpdateResourceTooltips(p, pi)
 	local bonus = DisOn and (additional[pi] or 0) or 0
 	local net = balance[pi] or 0
 	local rows = {
-		"Базовый доход: " .. ResourceAmount(base),
-		"Модификатор дохода: " .. ResourceValue(string.format("%.2f", modifier)),
-		"Налог союзникам: " .. ResourceValue(string.format("%.0f%%", tax * 100))
+		Loc("lua.auto_6ce872ab72265ae8") .. ResourceAmount(base),
+		Loc("lua.auto_541666499cc23df8") .. ResourceValue(string.format("%.2f", modifier)),
+		Loc("lua.auto_4e529aac8d8f3a28") .. ResourceValue(string.format("%.0f%%", tax * 100))
 			.. " (" .. ResourceAmount(-base * modifier * tax) .. ")",
-		"Доход после модификатора и налога: " .. ResourceAmount(base * modifier * (1 - tax)),
-		"|nСодержание армии: " .. ResourceAmount(-upkeep),
-		"Логистика: " .. ResourceAmount(-transport),
-		"Доход от коррупции: " .. ResourceAmount(refund),
-		"Дополнительный доход: " .. ResourceAmount(bonus),
-		"|nЧистый доход: " .. ResourceAmount(net),
-		"Древесина за выплату: " .. ResourceAmount(incomeW[pi] or 0),
+		Loc("lua.auto_5fbd8d0d8fda64c7") .. ResourceAmount(base * modifier * (1 - tax)),
+		Loc("lua.auto_253c8bbcef699586") .. ResourceAmount(-upkeep),
+		Loc("lua.auto_a46b2882d7a7cbf4") .. ResourceAmount(-transport),
+		Loc("lua.auto_c1e9f3793437db82") .. ResourceAmount(refund),
+		Loc("lua.auto_a2953833fe9e429a") .. ResourceAmount(bonus),
+		Loc("lua.auto_81a7fd487c659924") .. ResourceAmount(net),
+		Loc("lua.auto_4458c12f02185407") .. ResourceAmount(incomeW[pi] or 0),
 	}
-	if not DisOn then rows[#rows + 1] = "|cffb99d66Расходы отключены в этом режиме.|cffced4da" end
+	if not DisOn then rows[#rows + 1] = Loc("lua.auto_b49fb6e4d6777d0f") end
 	local remaining = udg_IncomeTimerSecond and TimerGetRemaining(udg_IncomeTimerSecond) or 0
 	rows[#rows + 1] = remaining > 0
-		and ("|nСледующая выплата через " .. ResourceValue(math.ceil(remaining)) .. " сек.")
-		or "|nВыплаты начнутся после выбора режима."
-	rows[#rows + 1] = "|cffb99d66Итог обновляется при выплате дохода.|cffced4da"
-	BlzFrameSetText(tooltipBody, "|cffb99d66ИНТЕРФЕЙС:|cffced4da Доходы и расходы за выплату.|n|n" .. table.concat(rows, "|n") .. "|r")
+		and (Loc("lua.auto_2bbcac0f2a85b859") .. ResourceValue(math.ceil(remaining)) .. Loc("lua.auto_dab1f0e47a5117f2"))
+		or Loc("lua.auto_d9b4c023c248c216")
+	rows[#rows + 1] = Loc("lua.auto_5245d442f69fa873")
+	BlzFrameSetText(tooltipBody, Loc("lua.auto_a86e547890c577f5") .. table.concat(rows, "|n") .. "|r")
 	if net > 0 then
-		BlzFrameSetText(tooltipTitle, "|cffebc56cЧистый доход|r")
+		BlzFrameSetText(tooltipTitle, Loc("lua.auto_9b473bbb7f16794d"))
 	elseif net < 0 then
-		BlzFrameSetText(tooltipTitle, "|cffebc56cЧистый убыток|r")
+		BlzFrameSetText(tooltipTitle, Loc("lua.auto_c68851d2b26a6198"))
 	else
-		BlzFrameSetText(tooltipTitle, "|cffebc56cДоходы равны расходам|r")
+		BlzFrameSetText(tooltipTitle, Loc("lua.auto_89c561e16ea27fd9"))
 	end
 	FitResourceTooltip(tooltip, tooltipBody, 0.32)
 	-- The actual payout uses R2I (truncate), rather than rounding the amount.
@@ -71,25 +71,25 @@ function UpdateResourceTooltips(p, pi)
 	local cities = CityPlayerCount[pi] or 0
 	local total = CityCount or 0
 	local capital = playerCapital[pi]
-	local capitalName = "Не назначена"
+	local capitalName = Loc("lua.auto_ae6bef78e3c5ad94")
 	if capital ~= nil and GetUnitState(capital, UNIT_STATE_LIFE) > 0.405
 		and GetOwningPlayer(capital) == p then
 		capitalName = GetUnitName(capital)
 	end
 	local state = {
-		"Города: " .. ResourceValue(cities) .. " / " .. ResourceValue(total),
-		"Доля территории: " .. ResourceValue(string.format("%.1f%%", total > 0 and cities * 100 / total or 0)),
-		"Столица: " .. capitalName .. "|cffced4da",
+		Loc("lua.auto_2de1bebf53a4930d") .. ResourceValue(cities) .. " / " .. ResourceValue(total),
+		Loc("lua.auto_3b3b88d7791db525") .. ResourceValue(string.format("%.1f%%", total > 0 and cities * 100 / total or 0)),
+		Loc("lua.auto_bb28d0c98efc8ffd") .. capitalName .. "|cffced4da",
 	}
 	if udg_GameMode == 3 or udg_GameMode == 5 then
 		local target = math.floor(total * PercentWin / 100 + 0.5)
-		state[#state + 1] = "|nДля победы: " .. ResourceValue(PercentWin) .. "% городов (" .. ResourceValue(target) .. ")"
-		state[#state + 1] = "Осталось захватить: " .. ResourceValue(math.max(0, target - cities))
+		state[#state + 1] = Loc("lua.auto_56c66422c020837f") .. ResourceValue(PercentWin) .. Loc("lua.auto_1b07bb787a6a599e") .. ResourceValue(target) .. ")"
+		state[#state + 1] = Loc("lua.auto_ada93d34276f5052") .. ResourceValue(math.max(0, target - cities))
 	else
-		state[#state + 1] = "|nПобеда: по правилам выбранного режима."
+		state[#state + 1] = Loc("lua.auto_5c5acfd77dfabdcc")
 	end
-	state[#state + 1] = "|nАрмия: " .. ResourceValue(udg_UnitsCount[pi] or 0) .. " юнитов"
-	BlzFrameSetText(stateBody, "|cffb99d66ИНТЕРФЕЙС:|cffced4da Состояние государства.|n|n" .. table.concat(state, "|n") .. "|r")
+	state[#state + 1] = Loc("lua.auto_7c64961450656198") .. ResourceValue(udg_UnitsCount[pi] or 0) .. Loc("lua.auto_9d95f9afed5e3343")
+	BlzFrameSetText(stateBody, Loc("lua.auto_8bd88f056ebfbee3") .. table.concat(state, "|n") .. "|r")
 	FitResourceTooltip(stateTooltip, stateBody, 0.30)
 end
 
@@ -123,8 +123,8 @@ function Face2()
 	BlzFrameSetTextAlignment(tooltipBody, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
 	BlzFrameSetVisible(tooltip, false)
 	
-	BlzFrameSetText(tooltipBody, "|cffb99d66ИНТЕРФЕЙС:|cffced4da Доход с учётом модификаторов и расходов.|r")
-	BlzFrameSetText(tooltipTitle, "|cffebc56cЧистый доход|r")
+	BlzFrameSetText(tooltipBody, Loc("lua.auto_ed58ee792770cf01"))
+	BlzFrameSetText(tooltipTitle, Loc("lua.auto_9b473bbb7f16794d"))
 	FitResourceTooltip(tooltip, tooltipBody, 0.32)
 	
 	BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
@@ -140,7 +140,7 @@ function Face2()
 		BlzFrameSetLevel(stateHover, 5)
 		stateTooltip = BlzCreateFrame("BoxedText", stateHover, 0, 1)
 		stateBody = BlzGetFrameByName("BoxedTextValue", 1)
-		BlzFrameSetText(BlzGetFrameByName("BoxedTextTitle", 1), "|cffebc56cГосударство|r")
+		BlzFrameSetText(BlzGetFrameByName("BoxedTextTitle", 1), Loc("lua.auto_82adbf29b8139f1b"))
 		BlzFrameSetTextAlignment(stateBody, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
 		BlzFrameClearAllPoints(stateTooltip)
 		BlzFrameSetAbsPoint(stateTooltip, FRAMEPOINT_TOPRIGHT, 0.65, 0.575)

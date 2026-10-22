@@ -244,7 +244,7 @@ function startBloodElves(pi)
 	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
 	NumberSet(pi, FourCC('h04K'), 8)
 	NumberSet(pi, FourCC('h04C'), 1)
-	SetPlayerName(Player(pi), "Эльфы Крови (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_1fdb1a6d1ffc67b3") .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "BE"
 	TriggerExecute(gg_trg_BloodElvesOn)
 	AiRace[pi] = "BloodElves"
@@ -904,7 +904,7 @@ function startScarlet(pi)
 
 	NumberSet(pi, FourCC('h014'), 8)
 	NumberSet(pi, FourCC('h05U'), 1)
-	SetPlayerName(Player(pi), "Алый Орден (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_1d8bf782f772edaa") .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "AO"
 	
 	AiRace[pi] = "Scarlet"
@@ -1548,7 +1548,7 @@ function startGoblins(pi)
 
 	NumberSet(pi, FourCC('n00V'), 8)
 	NumberSet(pi, FourCC('h070'), 1)
-	SetPlayerName(Player(pi), "Картель (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_dfa7051e5ad80179") .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "GB"
 	TriggerExecute(gg_trg_GoblinsOn)
 	TriggerExecute(gg_trg_StartG)
@@ -1948,7 +1948,7 @@ function startHorde(pi)
 
 	NumberSet(pi, FourCC('opeo'), 8)
 	NumberSet(pi, FourCC('ogre'), 1)
-	SetPlayerName(Player(pi), "Орда (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_b1e530611cdfd0a8") .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "NG"
 	HordeStartLimitsFor(Player(pi))
 	TriggerExecute(gg_trg_HordeOn)
@@ -2424,7 +2424,7 @@ function startNaga(pi)
 
 	NumberSet(pi, FourCC('nmpe'), 8)
 	NumberSet(pi, FourCC('nntt'), 1)
-	SetPlayerName(Player(pi), "Стая (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_3309de798190ac84") .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "NG"
 	TriggerExecute(gg_trg_NagaStart)
 	NagaApplySubrace(Player(pi), GetRandomInt(0, 1) == 0 and "naga" or "murloc")

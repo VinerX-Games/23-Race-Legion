@@ -382,8 +382,8 @@ function Trig_SecondChance_Actions()
     ProbeLogWrite("[CHAT] -raceselect target=" .. tostring(udg_LocalInteger))
     if Trig_SecondChance_Func003C() then
         udg_LocalPosition2=StartLoc[GetRandomInt(0, StartLocCount - 1)] -- INLINED!!
-        DisplayTimedTextToForce(GetPlayersAll(), 5.00, "Хост " .. GetPlayerName(GetTriggerPlayer()) .. " дал игроку " .. GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " второй шанс!")
-        DisplayTimedTextToPlayer(ConvertedPlayer(udg_LocalInteger), 0, 0, 15.00, "У вас есть 15 минут на то, чтобы поставить столицу!")
+        DisplayTimedTextToForce(GetPlayersAll(), 5.00, Loc("lua.auto_83c5a933a197458e") .. GetPlayerName(GetTriggerPlayer()) .. Loc("lua.auto_ad9eec20f151ee97") .. GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. Loc("lua.auto_3df40bc7ad332a07"))
+        DisplayTimedTextToPlayer(ConvertedPlayer(udg_LocalInteger), 0, 0, 15.00, Loc("lua.auto_d98698306a5ef2d9"))
         CreateNUnitsAtLoc(1, FourCC('h0HJ'), ConvertedPlayer(udg_LocalInteger), udg_LocalPosition2, bj_UNIT_FACING)
         RacePickerAdopt(GetLastCreatedUnit())
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_GOLD, 5000)
@@ -451,8 +451,8 @@ function Trig_GG_Func004A()
 end
 function Trig_GG_Actions()
     --local integer pi = GetPlayerId(GetTriggerPlayer())
-    DisplayTextToForce(udg_AllPlayers, "|cffb99d66ИГРА:|cffced4da Игрок "
-        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. "|cffced4da сдался.|r")
+    DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_9f7b0eb6b5703b2e")
+        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. Loc("lua.auto_c96bb111ec05e22b"))
     --call GroupEnumUnitsOfPlayer( udg_LocalOtrad2, GetTriggerPlayer(), null )
     --call ForGroupBJ( udg_LocalOtrad2, function Trig_GG_Func004A )
     --call ForForce(Vassals[pi], function Freedom)
@@ -501,8 +501,8 @@ end
 function Trig_Observer_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
     if IsPlayerInForce(GetTriggerPlayer(), Observers) then return end
-    DisplayTextToForce(udg_AllPlayers, "|cffb99d66ИГРА:|cffced4da Игрок "
-        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. "|cffced4da стал наблюдателем.|r")
+    DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_9f7b0eb6b5703b2e")
+        .. PlayerColorHexWrap(GetTriggerPlayer(), GetPlayerName(GetTriggerPlayer())) .. Loc("lua.auto_347c11e7f6f5f879"))
     ClearPlayer(GetTriggerPlayer())
     ForceAddPlayer(Observers, GetTriggerPlayer())
     udg_Visibl[pi]=CreateFogModifierRectBJ(true, GetTriggerPlayer(), FOG_OF_WAR_VISIBLE, bj_mapInitialPlayableArea)
@@ -547,7 +547,7 @@ end
 function Trig_ObserverOff_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
     if not IsPlayerInForce(GetTriggerPlayer(), Observers) then return end
-    DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffb99d66ИГРА:|cffced4da Обзор всей карты отключён.|r")
+    DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, Loc("lua.auto_7ae9b6161bdde40e"))
     
     ForceRemovePlayer(Observers, GetTriggerPlayer())
     FogModifierStop(udg_Visibl[pi])

@@ -366,7 +366,7 @@ function Trig_UpgradeStolica_Actions()
 	BlzSetUnitArmor(GetTriggerUnit(), 30.00)
 	BlzSetUnitMaxHP(GetTriggerUnit(), 10000)
 	UnitAddAbilityBJ(FourCC('A0I6'), GetTriggerUnit())
-	BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, "|cffd45e19Столица:|r " .. GetUnitName(GetTriggerUnit()))
+	BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, Loc("lua.auto_0a86b16e3d808b13") .. GetUnitName(GetTriggerUnit()))
 	UnitAddAbilityBJ(FourCC('A145'), GetTriggerUnit())
 end
 -- ===========================================================================
@@ -441,7 +441,7 @@ function MakeCapital(capital)
 	BlzSetUnitArmor(capital, 30.00)
 	UnitAddAbility(capital, FourCC('A0I6'))
 	UnitAddAbility(capital, FourCC('A145'))
-	BlzSetUnitStringFieldBJ(capital, UNIT_SF_NAME, "|cffd45e19Столица:|r " .. GetUnitName(capital))
+	BlzSetUnitStringFieldBJ(capital, UNIT_SF_NAME, Loc("lua.auto_0a86b16e3d808b13") .. GetUnitName(capital))
 	GroupAddUnit(udg_StolicaGroups, capital)
 	TriggerRegisterUnitEvent(gg_trg_StolicaAttacked, capital, EVENT_UNIT_ATTACKED)
 	unitShareVisionAll(capital, true)
@@ -552,10 +552,10 @@ function CheckAndCreateCapital(p)
 			u = BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
 			SetPlayerAbilityAvailable(p, FourCC('A0IQ'), false)
 			MakeCapital(u)
-			DisplayTimedTextToForce(udg_AllPlayers, 5, "|cffffcc00Игрок " .. GetPlayerName(p) .. "|r не успел заложить |cffd45e19столицу|r вовремя — она была размещена автоматически.")
+			DisplayTimedTextToForce(udg_AllPlayers, 5, Loc("lua.auto_d1c3886c9a5256df") .. GetPlayerName(p) .. Loc("lua.auto_f6afbe572d5fb86b"))
 		else
 			if GetPlayerSlotState(p) == PLAYER_SLOT_STATE_PLAYING then
-				DisplayTimedTextToForce(udg_AllPlayers, 5, "|cffff4444Игрок " .. GetPlayerName(p) .. " проиграл!|r Столица не была построена в отведённое время.")
+				DisplayTimedTextToForce(udg_AllPlayers, 5, Loc("lua.auto_fe8adae8c5188110") .. GetPlayerName(p) .. Loc("lua.auto_0ba0e61dd07d8e2e"))
 			end
 			
 			ClearPlayer(p)
@@ -652,7 +652,7 @@ end
 function Trig_StolicaDead_Actions()
 	local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
 	SetPlayerAbilityAvailableBJ(true, FourCC('A0IQ'), GetOwningPlayer(GetTriggerUnit()))
-	DisplayTextToForce(GetPlayersAll(), "|cffff4444Игрок " .. GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. " потерпел поражение!|r Его |cffd45e19столица|r уничтожена.")
+	DisplayTextToForce(GetPlayersAll(), Loc("lua.auto_fe8adae8c5188110") .. GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. Loc("lua.auto_485f7a1e3d81ae2e"))
 	ClearPlayer(Player(pi))
 	AiLimitsSet()
 end
@@ -863,7 +863,7 @@ end
 ---@return nothing
 function Freedom()
 	local p = GetEnumPlayer()
-	DisplayTextToForce(udg_AllPlayers, "|cff55ff55Игрок " .. GetPlayerName(p) .. "|r освободился от вассальной зависимости!")
+	DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_e77dadba3b032403") .. GetPlayerName(p) .. Loc("lua.auto_d8c7592e079b1957"))
 	ClearOldAllies(p)
 	p = nil
 end
@@ -872,7 +872,7 @@ function ChangeAlly()
 	local p = udg_LocalPlayer
 	local p0 = GetEnumPlayer()
 	
-	DisplayTextToForce(udg_AllPlayers, "|cffffcc00Игрок " .. GetPlayerName(p0) .. "|r перешёл под контроль сюзерена |cff00ffff" .. GetPlayerName(p) .. "|r!")
+	DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_d1c3886c9a5256df") .. GetPlayerName(p0) .. Loc("lua.auto_5fa5c72f7bbf1849") .. GetPlayerName(p) .. "|r!")
 	ClearOldAllies(p0)
 	Senior[GetPlayerId(p0)] = p
 	ForceAddPlayer(Vassals[GetPlayerId(p)], p0)
@@ -900,14 +900,14 @@ function HandleVassalization(capital, attacker)
 	-- Suicide case
 	if p == p2 then
 		ClearPlayer(p)
-		DisplayTextToForce(udg_AllPlayers, "|cffff4444Игрок " .. GetPlayerName(p) .. "|r уничтожил собственную столицу и выбыл из игры!")
+		DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_fe8adae8c5188110") .. GetPlayerName(p) .. Loc("lua.auto_b5e0c56f0bef7757"))
 		ForForce(Vassals[pi], Freedom)
 		return
 	end
 	
 	-- Captured by a free player
 	if Senior[pi2] == nil then
-		DisplayTextToForce(udg_AllPlayers, "|cffffcc00Игрок " .. GetPlayerName(p) .. "|r стал вассалом игрока |cff00ffff" .. GetPlayerName(p2) .. "|r!")
+		DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_d1c3886c9a5256df") .. GetPlayerName(p) .. Loc("lua.auto_e8eac66ae70767e9") .. GetPlayerName(p2) .. "|r!")
 		-- Free defender
 		if Senior[pi] == nil then
 			Senior[pi] = p2
@@ -928,7 +928,7 @@ function HandleVassalization(capital, attacker)
 	else
 		p3 = Senior[pi2]
 		pi3 = GetPlayerId(p3)
-		DisplayTextToForce(udg_AllPlayers, "|cffffcc00Игрок " .. GetPlayerName(p) .. "|r стал вассалом игрока |cff00ffff" .. GetPlayerName(p3) .. "|r!")
+		DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_d1c3886c9a5256df") .. GetPlayerName(p) .. Loc("lua.auto_e8eac66ae70767e9") .. GetPlayerName(p3) .. "|r!")
 		-- Free defender
 		if Senior[pi] == nil then
 			Senior[pi] = p3
@@ -1038,7 +1038,7 @@ end
 ---@return nothing
 function Trig_DominationButton_Actions()
 	udg_GameMode = 3
-	DisplayTextToForce(GetPlayersAll(), "Режим выбран: Доминация")
+	DisplayTextToForce(GetPlayersAll(), Loc("lua.auto_3c5e71a957484d52"))
 end
 -- ===========================================================================
 ---@return nothing
@@ -1071,7 +1071,7 @@ function ExpandTable()
 	
 	
 	ThirdColumnHeader = MultiboardGetItem(Multiboard, 0, 2)
-	MultiboardSetItemValue(ThirdColumnHeader, "Города")
+	MultiboardSetItemValue(ThirdColumnHeader, Loc("lua.auto_39541f5c26153fcd"))
 	MultiboardSetItemWidth(ThirdColumnHeader, 0.06)
 	MultiboardReleaseItem(ThirdColumnHeader)
 	
@@ -1101,7 +1101,7 @@ end
 -- endfunction
 ---@return nothing
 function Trig_Domination_start_Actions()
-	DisplayTextToForce(udg_AllPlayers, "|cffb99d66РЕЖИМ:|r Включён режим |cffffcc00«Доминация»|r. Захватите |cffffffff" .. I2S(PercentWin) .. "%|r стратегических точек, чтобы победить!")
+	DisplayTextToForce(udg_AllPlayers, Loc("lua.auto_b5034366e4d45ddf") .. I2S(PercentWin) .. Loc("lua.auto_7ecf36204230f363"))
 end
 -- ===========================================================================
 ---@return nothing
@@ -1117,8 +1117,8 @@ end
 ---@return nothing
 function Trig_DomCheckCommand_Actions()
 	local pi = GetPlayerId(GetTriggerPlayer())
-	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffb99d66СТАТУС:|r Вы контролируете |cffffffff" .. I2S(CityPlayerCount[pi]) .. "|r из |cffffffff" .. I2S(CityCount) .. "|r точек на карте (требуется |cffffffff" .. I2S(MathRound(CityCount * 0.01 * PercentWin)) .. "|r для победы).")
-	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "|cffb99d66ПРОГРЕСС:|r Ваш контроль: |cffffcc00" .. R2SW(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount), 1, 1) .. "%|r из необходимых |cffffffff" .. I2S(PercentWin) .. "%|r.")
+	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, Loc("lua.auto_c3a44d62b1c05fa8") .. I2S(CityPlayerCount[pi]) .. Loc("lua.auto_5deb09bfbea204d3") .. I2S(CityCount) .. Loc("lua.auto_7247b1f076a06d67") .. I2S(MathRound(CityCount * 0.01 * PercentWin)) .. Loc("lua.auto_f0e36c66f4165801"))
+	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, Loc("lua.auto_a8b013e5f35d8d2c") .. R2SW(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount), 1, 1) .. Loc("lua.auto_e9388424abca4e79") .. I2S(PercentWin) .. "%|r.")
 end
 -- ===========================================================================
 ---@return nothing
@@ -1142,7 +1142,7 @@ end
 ---@return nothing
 function Trig_FastTestSpell_Actions()
 	udg_GameMode = 4
-	DisplayTextToForce(GetPlayersAll(), "Режим выбран: Тест. Пишите -fast и -fastoff ")
+	DisplayTextToForce(GetPlayersAll(), Loc("lua.auto_00ec6500b4eba925"))
 end
 -- ===========================================================================
 ---@return nothing
@@ -1163,7 +1163,7 @@ function Trig_FastTest_Actions()
 		fastTest[GetPlayerId(GetTriggerPlayer())] = true
 		income[GetPlayerId(GetTriggerPlayer())] = income[GetPlayerId(GetTriggerPlayer())] + 25000
 		incomeW[GetPlayerId(GetTriggerPlayer())] = incomeW[GetPlayerId(GetTriggerPlayer())] + 25000
-		DisplayTimedTextToForce(udg_AllPlayers, 6, "|cffffcc00Игрок " .. GetPlayerName(GetTriggerPlayer()) .. "|r включил тестовый режим!")
+		DisplayTimedTextToForce(udg_AllPlayers, 6, Loc("lua.auto_d1c3886c9a5256df") .. GetPlayerName(GetTriggerPlayer()) .. Loc("lua.auto_e3530102e24bb650"))
 		SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_FOOD_CAP, 100)
 	end
 	
@@ -1193,7 +1193,7 @@ function Trig_FastTestOff_Actions()
 		fastTest[GetPlayerId(GetTriggerPlayer())] = false
 		income[GetPlayerId(GetTriggerPlayer())] = income[GetPlayerId(GetTriggerPlayer())] - 25000
 		incomeW[GetPlayerId(GetTriggerPlayer())] = incomeW[GetPlayerId(GetTriggerPlayer())] - 25000
-		DisplayTimedTextToForce(udg_AllPlayers, 6, "|cffffcc00Игрок " .. GetPlayerName(GetTriggerPlayer()) .. "|r выключил тестовый режим.")
+		DisplayTimedTextToForce(udg_AllPlayers, 6, Loc("lua.auto_d1c3886c9a5256df") .. GetPlayerName(GetTriggerPlayer()) .. Loc("lua.auto_e351a792ffb40210"))
 	end
 end
 -- ===========================================================================

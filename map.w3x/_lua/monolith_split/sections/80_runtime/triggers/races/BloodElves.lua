@@ -316,7 +316,7 @@ function Trig_Arcana_Conditions()
     return Trig_Arcana_Func009C()
 end
 function Trig_Arcana_Func002A()
-    BlzSetUnitName(GetEnumUnit(), "|cff8080ffКолодец арканы|r")
+    BlzSetUnitName(GetEnumUnit(), Loc("lua.auto_94e9a959bd1c46f1"))
 end
 function Trig_Arcana_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -390,7 +390,7 @@ function Trig_Fel_Conditions()
     return Trig_Fel_Func007C()
 end
 function Trig_Fel_Func002A()
-    BlzSetUnitName(GetEnumUnit(), "|cff80ff80Колодец скверны|r")
+    BlzSetUnitName(GetEnumUnit(), Loc("lua.auto_90d1fce9a7752e47"))
 end
 function Trig_Fel_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -481,7 +481,7 @@ function Trig_Void_Conditions()
     return Trig_Void_Func008C()
 end
 function Trig_Void_Func002A()
-    BlzSetUnitName(GetEnumUnit(), "|cffff00ffКолодец бездны|r")
+    BlzSetUnitName(GetEnumUnit(), Loc("lua.auto_e743cb8f290e683e"))
 end
 function Trig_Void_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -598,7 +598,7 @@ function Trig_Light_Conditions()
     return Trig_Light_Func008C()
 end
 function Trig_Light_Func003A()
-    BlzSetUnitName(GetEnumUnit(), "|cffffff00Колодец света|r")
+    BlzSetUnitName(GetEnumUnit(), Loc("lua.auto_6cf6247be4e90074"))
 end
 function Trig_Light_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -626,7 +626,7 @@ function Trig_ArcanaBuild_Conditions()
     return Trig_ArcanaBuild_Func001C()
 end
 function Trig_ArcanaBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "|cff8080ffКолодец арканы|r")
+    BlzSetUnitName(GetTriggerUnit(), Loc("lua.auto_94e9a959bd1c46f1"))
 end
 --===========================================================================
 function InitTrig_ArcanaBuild()
@@ -646,7 +646,7 @@ function Trig_FelBuild_Conditions()
     return Trig_FelBuild_Func001C()
 end
 function Trig_FelBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "|cff80ff80Колодец скверны|r")
+    BlzSetUnitName(GetTriggerUnit(), Loc("lua.auto_90d1fce9a7752e47"))
 end
 --===========================================================================
 function InitTrig_FelBuild()
@@ -666,7 +666,7 @@ function Trig_VoidBuild_Conditions()
     return Trig_VoidBuild_Func001C()
 end
 function Trig_VoidBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "|cffff00ffКолодец бездны|r")
+    BlzSetUnitName(GetTriggerUnit(), Loc("lua.auto_e743cb8f290e683e"))
 end
 --===========================================================================
 function InitTrig_VoidBuild()
@@ -686,7 +686,7 @@ function Trig_LigthBuild_Conditions()
     return Trig_LigthBuild_Func001C()
 end
 function Trig_LigthBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "|cffffff00Колодец света|r")
+    BlzSetUnitName(GetTriggerUnit(), Loc("lua.auto_6cf6247be4e90074"))
 end
 --===========================================================================
 function InitTrig_LigthBuild()
