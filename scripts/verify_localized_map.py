@@ -10,7 +10,12 @@ from pathlib import Path
 
 def read_mpq_file(storm, archive, name: str) -> bytes:
     handle = ct.c_void_p()
-    if not storm.SFileOpenFileEx(archive, name.encode("utf-8"), 0, ct.byref(handle)):
+    names = (name, name.replace("/", "\\"))
+    opened = any(
+        storm.SFileOpenFileEx(archive, candidate.encode("utf-8"), 0, ct.byref(handle))
+        for candidate in names
+    )
+    if not opened:
         raise FileNotFoundError(f"MPQ entry is missing: {name}")
     try:
         high = ct.c_uint32()
