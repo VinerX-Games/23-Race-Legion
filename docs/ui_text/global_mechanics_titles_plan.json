@@ -1,0 +1,113 @@
+{
+ "scope": "Короткие названия четырёх способностей и пяти исследований, чьи описания сверены общей партией механики дренеев.",
+ "operations": [
+  {
+   "type": "ability",
+   "id": "ADr2",
+   "field": "name",
+   "value": "|cffebc56cОзарённый клинок|r"
+  },
+  {
+   "type": "ability",
+   "id": "ADr2",
+   "field": "tip1",
+   "value": "|cffebc56cОзарённый клинок|r"
+  },
+  {
+   "type": "ability",
+   "id": "ADr3",
+   "field": "name",
+   "value": "|cffebc56cОбет защитника|r"
+  },
+  {
+   "type": "ability",
+   "id": "ADr3",
+   "field": "tip1",
+   "value": "|cffebc56cОбет защитника|r"
+  },
+  {
+   "type": "ability",
+   "id": "ADr4",
+   "field": "name",
+   "value": "|cffebc56cСпасительный свет|r"
+  },
+  {
+   "type": "ability",
+   "id": "ADr4",
+   "field": "tip1",
+   "value": "|cffebc56cСпасительный свет|r"
+  },
+  {
+   "type": "ability",
+   "id": "ADr5",
+   "field": "name",
+   "value": "|cffebc56cИдол памяти|r"
+  },
+  {
+   "type": "ability",
+   "id": "ADr5",
+   "field": "tip1",
+   "value": "|cffebc56cИдол памяти|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "RDr1",
+   "field": "name1",
+   "value": "|cffebc56cПризматические наконечники|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "RDr1",
+   "field": "tip1",
+   "value": "|cffebc56cПризматические наконечники|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "RDr2",
+   "field": "name1",
+   "value": "|cffebc56cОзарённый клинок|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "RDr2",
+   "field": "tip1",
+   "value": "|cffebc56cОзарённый клинок|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "RDr3",
+   "field": "name1",
+   "value": "|cffebc56cОбет защитника|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "RDr3",
+   "field": "tip1",
+   "value": "|cffebc56cОбет защитника|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "RDr4",
+   "field": "name1",
+   "value": "|cffebc56cБлагословение Наару|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "RDr4",
+   "field": "tip1",
+   "value": "|cffebc56cБлагословение Наару|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "RDr5",
+   "field": "name1",
+   "value": "|cffebc56cПамять предков|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "RDr5",
+   "field": "tip1",
+   "value": "|cffebc56cПамять предков|r"
+  }
+ ]
+}

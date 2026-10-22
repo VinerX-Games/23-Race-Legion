@@ -16,6 +16,12 @@ Grades = {}
 AiDiplomatTicks = {}
 RACE = { key = "Test", diplomat = {} }
 function AiRaceOf(pi) return RACE end
+PLAYER_NAMES = {[0] = "Дренеи", [1] = "Наги"}
+function GetPlayerName(p) return PLAYER_NAMES[p] end
+CHAT = {}
+function DisplayTimedTextToPlayer(p, x, y, duration, text)
+    CHAT[#CHAT + 1] = {player=p, text=text}
+end
 '''
 
 
@@ -40,6 +46,16 @@ class AiDiplomatBreakTests(unittest.TestCase):
         brk, reason = self.lua.eval('AiDiplomatConsiderBreak(0, 1)')
         self.assertFalse(brk)
         self.assertIsNotNone(self.lua.eval('AiDiplomatState(0).betrayTargets[1]'))
+
+    def test_chat_uses_display_name_and_restores_body_color(self):
+        self.lua.execute('DipChat(0, 1, "Предлагаю заключить союз.")')
+        self.assertEqual(self.lua.eval('CHAT[1].player'), 1)
+        message = self.lua.eval('CHAT[1].text')
+        self.assertIn('Дренеи', message)
+        self.assertNotIn('Test', message)
+        self.assertIn('[Дренеи]', message)
+        self.assertIn('|r|cffced4da Предлагаю', message)
+        self.assertTrue(message.endswith('|r'))
 
 
 if __name__ == '__main__':

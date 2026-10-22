@@ -95,6 +95,9 @@ function PandarenBrew.Init()
         if GetSpellAbilityId() ~= PandarenBrew.ids.barrel then return end
         PandarenBrew.Launch(GetTriggerUnit(), GetSpellTargetUnit())
     end)
+    -- Автоприменение включено с появления хмелевара (и у ботов); игрок может выключить.
+    -- Только корневой Allmap (заполняется в StartInc): свой регион на всю карту,
+    -- созданный при инициализации, ломает наземные пути (docs/FEC12DE_MOVEMENT_INVESTIGATION.md).
     PandarenBrew.enterTrigger = CreateTrigger()
     TriggerRegisterEnterRegion(PandarenBrew.enterTrigger, Allmap, nil)
     TriggerAddAction(PandarenBrew.enterTrigger, function()

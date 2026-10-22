@@ -1,0 +1,678 @@
+{
+ "scope": "18 зданий Пылающего Легиона, Кул-Тираса и нерубов; точные меню, экономика, распад и поддержка; три исследования демонической цепочки.",
+ "requests": [
+  {
+   "id": "h0DU",
+   "sections": [
+    "morphs-to",
+    "trains"
+   ],
+   "intro": "Главное здание передовой базы Пылающего Легиона. Даёт |cffffffff50|cffced4da ед. дохода. Принимает добытые золото и древесину, позволяет обменивать ресурсы и назначать столицу.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.",
+   "reset_description": true
+  },
+  {
+   "id": "h0DV",
+   "sections": [
+    "morphs-to",
+    "trains"
+   ],
+   "intro": "Главное здание Пылающего Легиона второй ступени. Даёт |cffffffff100|cffced4da ед. дохода. Принимает добытые золото и древесину, позволяет обменивать ресурсы и назначать столицу.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.",
+   "reset_description": true
+  },
+  {
+   "id": "h0DW",
+   "sections": [
+    "trains"
+   ],
+   "intro": "Главное здание Пылающего Легиона высшей ступени. Даёт |cffffffff150|cffced4da ед. дохода. Принимает добытые золото и древесину, позволяет обменивать ресурсы и назначать столицу. Имеет способность |cffebc56cЗащита столицы|cffced4da.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.",
+   "reset_description": true
+  },
+  {
+   "id": "h0DX",
+   "sections": [
+    "trains"
+   ],
+   "intro": "Алтарь Пылающего Легиона. Призывает и воскрешает героев. Даёт |cffffffff3|cffced4da ед. дохода.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.",
+   "reset_description": true
+  },
+  {
+   "id": "h0DY",
+   "sections": [
+    "researches",
+    "trains"
+   ],
+   "intro": "Портал для подготовки основных войск Пылающего Легиона и исследования их улучшений.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.|n|n|cfff2a35eРазвитие войск:|cffced4da исследования цепочки |cffebc56cВластитель|cffced4da → |cffebc56cКровавый Палач|cffced4da → |cffebc56cКровавое отродье|cffced4da → |cffebc56cКровопускатель|cffced4da открывают следующую форму для найма и закрывают предыдущую.",
+   "reset_description": true
+  },
+  {
+   "id": "h0DZ",
+   "sections": [
+    "researches"
+   ],
+   "intro": "Кузня Пылающего Легиона. Принимает добытую древесину и исследует улучшения войск.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.",
+   "reset_description": true
+  },
+  {
+   "id": "h0E0",
+   "sections": [
+    "researches",
+    "trains"
+   ],
+   "intro": "Обитель заклинателей Пылающего Легиона. Подготавливает магические войска и изучает их улучшения.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.",
+   "reset_description": true
+  },
+  {
+   "id": "h0E1",
+   "sections": [
+    "researches",
+    "trains"
+   ],
+   "intro": "Портал для призыва тяжёлых войск и зверей Пылающего Легиона.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.",
+   "reset_description": true
+  },
+  {
+   "id": "h021",
+   "sections": [
+    "trains"
+   ],
+   "intro": "Алтарь Кул-Тираса. Призывает и воскрешает героев. Даёт |cffffffff3|cffced4da ед. дохода.",
+   "reset_description": true
+  },
+  {
+   "id": "h022",
+   "sections": [
+    "researches",
+    "trains"
+   ],
+   "intro": "Казармы Кул-Тираса. Подготавливают пехоту, стрелков и конницу, исследуют их улучшения.",
+   "reset_description": true
+  },
+  {
+   "id": "h026",
+   "sections": [
+    "researches",
+    "trains"
+   ],
+   "intro": "Храм заклинателей Кул-Тираса. Обучает жрецов и лекарей, исследует их улучшения.",
+   "reset_description": true
+  },
+  {
+   "id": "h027",
+   "sections": [
+    "researches",
+    "trains"
+   ],
+   "intro": "Мастерская Кул-Тираса. Подготавливает специализированную пехоту и артиллерию, исследует их улучшения.",
+   "reset_description": true
+  },
+  {
+   "id": "h0CO",
+   "sections": [
+    "morphs-to",
+    "trains"
+   ],
+   "intro": "Главное здание нерубов первой ступени. Даёт |cffffffff40|cffced4da ед. дохода. Принимает добытые золото и древесину, позволяет обменивать ресурсы и назначать столицу.",
+   "reset_description": true
+  },
+  {
+   "id": "h0CP",
+   "sections": [
+    "morphs-to",
+    "trains"
+   ],
+   "intro": "Главное здание нерубов второй ступени. Даёт |cffffffff100|cffced4da ед. дохода. Принимает добытые золото и древесину, позволяет обменивать ресурсы и назначать столицу.",
+   "reset_description": true
+  },
+  {
+   "id": "h0CQ",
+   "sections": [
+    "trains"
+   ],
+   "intro": "Главное здание нерубов высшей ступени. Даёт |cffffffff150|cffced4da ед. дохода. Принимает добытые золото и древесину, позволяет обменивать ресурсы и назначать столицу. Имеет способность |cffebc56cЗащита столицы|cffced4da.",
+   "reset_description": true
+  },
+  {
+   "id": "h0CU",
+   "sections": [
+    "trains"
+   ],
+   "intro": "Алтарь нерубов. Призывает и воскрешает героев. Даёт |cffffffff40|cffced4da ед. дохода.",
+   "reset_description": true
+  },
+  {
+   "id": "h0DS",
+   "sections": [],
+   "intro": "Хозяйственное здание Пылающего Легиона. Даёт |cffffffff40|cffced4da ед. дохода.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.",
+   "reset_description": true
+  },
+  {
+   "id": "h0DT",
+   "sections": [],
+   "intro": "Источник Скверны, поддерживающий собственные механические войска и здания. После завершения строительства получает |cffebc56cАуру Скверны|cffced4da.|n|nВ радиусе |cffffffff900|cffced4da аура повышает регенерацию здоровья собственных механических юнитов и зданий на |cffc8e0876|cffced4da ед./сек. и скорость перемещения на |cffc8e08710%|cffced4da.",
+   "reset_description": true
+  }
+ ],
+ "extra_operations": [
+  {
+   "type": "unit",
+   "id": "h0DU",
+   "field": "name",
+   "value": "|cffebc56cАванпост|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DV",
+   "field": "name",
+   "value": "|cffebc56cШтаб Демонов|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DW",
+   "field": "name",
+   "value": "|cffebc56cПалаты Командования|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DX",
+   "field": "name",
+   "value": "|cffebc56cАлтарь Командиров Скверны|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DY",
+   "field": "name",
+   "value": "|cffebc56cМалый Портал|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DZ",
+   "field": "name",
+   "value": "|cffebc56cКузня Скверны|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0E0",
+   "field": "name",
+   "value": "|cffebc56cТемная Библиотека|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0E1",
+   "field": "name",
+   "value": "|cffebc56cПортал|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "R004",
+   "field": "name1",
+   "value": "|cffebc56cКровавый Палач|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "R004",
+   "field": "tip1",
+   "value": "|cffebc56cКровавый Палач|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "R004",
+   "field": "ubertip1",
+   "value": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Открывает найм |cffebc56cКровавого Палача|cffced4da и закрывает найм |cffebc56cВластителя|cffced4da.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cКровавый Палач|cffced4da.|n- |cffebc56cВластитель|cffced4da.|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "R08H",
+   "field": "ubertip1",
+   "value": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Открывает найм |cffebc56cКровавого отродья|cffced4da и закрывает найм |cffebc56cКровавого Палача|cffced4da.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cКровавое отродье|cffced4da.|n- |cffebc56cКровавый Палач|cffced4da.|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "R08I",
+   "field": "ubertip1",
+   "value": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Открывает найм |cffebc56cКровопускателя|cffced4da и закрывает найм |cffebc56cКровавого отродья|cffced4da.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cКровопускатель|cffced4da.|n- |cffebc56cКровавое отродье|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DS",
+   "field": "name",
+   "value": "|cffebc56cНакопитель Скверны|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DT",
+   "field": "name",
+   "value": "|cffebc56cГенератор Скверны|r"
+  }
+ ],
+ "facts": {
+  "lua_sources": {
+   "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/Demon.lua": "4b38e6fef5fe80dc26e001c2f407438f21c0aea21e796b1f0c38d0d91e397c0a",
+   "map.w3x/_lua/monolith_split/sections/80_runtime/_lib/54_count_dis.lua": "75373f806ffb3fc4437ae1ae61ad26fb2d0c1a146ec8f5824f26e26c636139fb"
+  },
+  "demon_decay": {
+   "ids": [
+    "h0DU",
+    "h0DV",
+    "h0DW",
+    "h0DX",
+    "h0DY",
+    "h0DZ",
+    "h0E0",
+    "h0E1"
+   ],
+   "regenhp": -3,
+   "regentype": "always",
+   "type": "ancient,mechanical,townhall",
+   "read_from": "HiveWE get-objects-bulk unit regenhp,regentype,type"
+  },
+  "generator": {
+   "id": "h0DT",
+   "ability": "A0LU",
+   "added_by": "Trig_AuraStart_Actions on construct finish",
+   "native_fields": {
+    "code": "AUau",
+    "dataa1": 0.1,
+    "datab1": 6,
+    "datac1": 0,
+    "area1": 900,
+    "targs1": "mechanical,player"
+   }
+  },
+  "demon_chain": "R004 hides n025 and opens n026; R08H hides n026 and opens n02D; R08I hides n02D and opens n02E. Existing units are not described as transformed.",
+  "income": "FoodMade values in current graph; 54_count_dis.lua adds GetUnitFoodMade. No net-income estimate is invented.",
+  "kul_tiras": "Bodies of h021/h022/h026/h027 belonged to unrelated units; replaced using actual building type and menus.",
+  "R004_native_effects": {
+   "effect1": "rtma",
+   "code1": "n025",
+   "base1": 1,
+   "effect2": "rtma",
+   "code2": "n026",
+   "base2": -1,
+   "levels": 1
+  },
+  "research_texts": "Имена и эффект доступности согласованы с тремя callback исследовательской цепочки. Не обещается превращение существующих юнитов; числа усиления не придуманы.",
+  "planned_menu_rename": {
+   "R004": "Кровавый Палач"
+  },
+  "support_buildings": {
+   "h0DS": {
+    "food_made": 40,
+    "regenhp": -3,
+    "regentype": "always",
+    "type": "ancient,mechanical,townhall"
+   },
+   "h0DT": "A0LU: +6 HP regen/sec, +10% movement, radius 900, own mechanical targets. Aura added at construction finish."
+  },
+  "altar_revive": {
+   "field": "revive",
+   "values": {
+    "h0DX": 1,
+    "h021": 1,
+    "h0CU": 1
+   },
+   "read_from": "HiveWE get-objects-bulk unit revive"
+  }
+ },
+ "operations": [
+  {
+   "type": "unit",
+   "id": "h021",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Алтарь Кул-Тираса. Призывает и воскрешает героев. Даёт |cffffffff3|cffced4da ед. дохода.|n|n|cffb99d66Герои:|cffced4da|n- |cffebc56cАдмирал|cffced4da.|n- |cffebc56cКапитан|cffced4da.|n- |cffebc56cВерховная Жрица Морей|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h022",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Казармы Кул-Тираса. Подготавливают пехоту, стрелков и конницу, исследуют их улучшения.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПехотинец|cffced4da.|n- |cffebc56cРыцарь|cffced4da.|n- |cffebc56cГвардеец|cffced4da.|n- |cffebc56cСтрелок|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПерековка меча|cffced4da.|n- |cffebc56cУкрыться за щитом|cffced4da.|n- |cffebc56cМастерство|cffced4da.|n- |cffebc56cТренировка ветерана|cffced4da.|n- |cffebc56cУкрепленные тяжелые доспехи|cffced4da.|n- |cffebc56cУдлиненные стволы|cffced4da.|n- |cffebc56cТренировка с порохом|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h026",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Храм заклинателей Кул-Тираса. Обучает жрецов и лекарей, исследует их улучшения.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cЖрец Штормов|cffced4da.|n- |cffebc56cПалубный Доктор|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cФолиант познаний магии морей|cffced4da.|n- |cffebc56cОбучение доктора|cffced4da.|n- |cffebc56cВысшее познание|cffced4da.|n- |cffebc56cЖертвоприношение Владыкам Моря|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h027",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Мастерская Кул-Тираса. Подготавливает специализированную пехоту и артиллерию, исследует их улучшения.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cМорской волк|cffced4da.|n- |cffebc56cАлебардщик|cffced4da.|n- |cffebc56cМортирный расчет|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cУвеличение количества пороха|cffced4da.|n- |cffebc56cОглушающий выстрел|cffced4da.|n- |cffebc56cНовый сплав|cffced4da.|n- |cffebc56cСвинцовые пули|cffced4da.|n- |cffebc56cЗаточка и освящение|cffced4da.|n- |cffebc56cШрапнель|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0CO",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание нерубов первой ступени. Даёт |cffffffff40|cffced4da ед. дохода. Принимает добытые золото и древесину, позволяет обменивать ресурсы и назначать столицу.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПостройщик|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cПалаты Нерубов|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0CP",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание нерубов второй ступени. Даёт |cffffffff100|cffced4da ед. дохода. Принимает добытые золото и древесину, позволяет обменивать ресурсы и назначать столицу.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПостройщик|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cКрепость Нерубов|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0CQ",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание нерубов высшей ступени. Даёт |cffffffff150|cffced4da ед. дохода. Принимает добытые золото и древесину, позволяет обменивать ресурсы и назначать столицу. Имеет способность |cffebc56cЗащита столицы|cffced4da.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПостройщик|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0CU",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Алтарь нерубов. Призывает и воскрешает героев. Даёт |cffffffff40|cffced4da ед. дохода.|n|n|cffb99d66Герои:|cffced4da|n- |cffebc56cПророк|cffced4da.|n- |cffebc56cПаучий лорд|cffced4da.|n- |cffebc56cВысший Страж|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DU",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание передовой базы Пылающего Легиона. Даёт |cffffffff50|cffced4da ед. дохода. Принимает добытые золото и древесину, позволяет обменивать ресурсы и назначать столицу.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cАрхитектор Скверны|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cШтаб Демонов|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DV",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Пылающего Легиона второй ступени. Даёт |cffffffff100|cffced4da ед. дохода. Принимает добытые золото и древесину, позволяет обменивать ресурсы и назначать столицу.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cАрхитектор Скверны|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cПалаты Командования|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DW",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Пылающего Легиона высшей ступени. Даёт |cffffffff150|cffced4da ед. дохода. Принимает добытые золото и древесину, позволяет обменивать ресурсы и назначать столицу. Имеет способность |cffebc56cЗащита столицы|cffced4da.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cАрхитектор Скверны|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DX",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Алтарь Пылающего Легиона. Призывает и воскрешает героев. Даёт |cffffffff3|cffced4da ед. дохода.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.|n|n|cffb99d66Герои:|cffced4da|n- |cffebc56cЧернокнижник|cffced4da.|n- |cffebc56cНатрезим|cffced4da.|n- |cffebc56cШиварра|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DY",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Портал для подготовки основных войск Пылающего Легиона и исследования их улучшений.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.|n|n|cfff2a35eРазвитие войск:|cffced4da исследования цепочки |cffebc56cВластитель|cffced4da → |cffebc56cКровавый Палач|cffced4da → |cffebc56cКровавое отродье|cffced4da → |cffebc56cКровопускатель|cffced4da открывают следующую форму для найма и закрывают предыдущую.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cЗверь Скверны|cffced4da.|n- |cffebc56cВластитель|cffced4da.|n- |cffebc56cКровавый Палач|cffced4da.|n- |cffebc56cМо'агр|cffced4da.|n- |cffebc56cКровавое отродье|cffced4da.|n- |cffebc56cКровопускатель|cffced4da.|n- |cffebc56cАдская колесница|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cКровавый Палач|cffced4da.|n- |cffebc56cЭволюция: Кровавое отродье|cffced4da.|n- |cffebc56cЭволюция: Кровопускатель|cffced4da.|n- |cffebc56cЗащита|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DZ",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Кузня Пылающего Легиона. Принимает добытую древесину и исследует улучшения войск.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cОружие Скверны|cffced4da.|n- |cffebc56cОсквернённая броня|cffced4da.|n- |cffebc56cМагия Скверны|cffced4da.|n- |cffebc56cУкрепление Скверной|cffced4da.|n- |cffebc56cПознание Скверны|cffced4da.|n- |cffebc56cУлучшенная добыча|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0E0",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Обитель заклинателей Пылающего Легиона. Подготавливает магические войска и изучает их улучшения.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cЭредар-колдун|cffced4da.|n- |cffebc56cДемон-тюремщик|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cДревние знания эредаров|cffced4da.|n- |cffebc56cМастерство владения Скверной|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0E1",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Портал для призыва тяжёлых войск и зверей Пылающего Легиона.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cСтраж ужаса|cffced4da.|n- |cffebc56cИнфернал|cffced4da.|n- |cffebc56cЛовчий Скверны|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cДрессировка зверей|cffced4da.|n- |cffebc56cМастерство устрашения|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DU",
+   "field": "name",
+   "value": "|cffebc56cАванпост|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DV",
+   "field": "name",
+   "value": "|cffebc56cШтаб Демонов|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DW",
+   "field": "name",
+   "value": "|cffebc56cПалаты Командования|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DX",
+   "field": "name",
+   "value": "|cffebc56cАлтарь Командиров Скверны|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DY",
+   "field": "name",
+   "value": "|cffebc56cМалый Портал|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DZ",
+   "field": "name",
+   "value": "|cffebc56cКузня Скверны|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0E0",
+   "field": "name",
+   "value": "|cffebc56cТемная Библиотека|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0E1",
+   "field": "name",
+   "value": "|cffebc56cПортал|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "R004",
+   "field": "name1",
+   "value": "|cffebc56cКровавый Палач|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "R004",
+   "field": "tip1",
+   "value": "|cffebc56cКровавый Палач|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "R004",
+   "field": "ubertip1",
+   "value": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Открывает найм |cffebc56cКровавого Палача|cffced4da и закрывает найм |cffebc56cВластителя|cffced4da.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cКровавый Палач|cffced4da.|n- |cffebc56cВластитель|cffced4da.|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "R08H",
+   "field": "ubertip1",
+   "value": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Открывает найм |cffebc56cКровавого отродья|cffced4da и закрывает найм |cffebc56cКровавого Палача|cffced4da.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cКровавое отродье|cffced4da.|n- |cffebc56cКровавый Палач|cffced4da.|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "R08I",
+   "field": "ubertip1",
+   "value": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Открывает найм |cffebc56cКровопускателя|cffced4da и закрывает найм |cffebc56cКровавого отродья|cffced4da.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cКровопускатель|cffced4da.|n- |cffebc56cКровавое отродье|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DS",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Хозяйственное здание Пылающего Легиона. Даёт |cffffffff40|cffced4da ед. дохода.|n|n|cfff2a35eРаспад:|cffced4da базовая регенерация здоровья — |cffef8173−3|cffced4da ед./сек. Аура собственного |cffebc56cГенератора Скверны|cffced4da восстанавливает |cffffffff6|cffced4da ед. здоровья в секунду в радиусе |cffffffff900|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DS",
+   "field": "name",
+   "value": "|cffebc56cНакопитель Скверны|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DT",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Источник Скверны, поддерживающий собственные механические войска и здания. После завершения строительства получает |cffebc56cАуру Скверны|cffced4da.|n|nВ радиусе |cffffffff900|cffced4da аура повышает регенерацию здоровья собственных механических юнитов и зданий на |cffc8e0876|cffced4da ед./сек. и скорость перемещения на |cffc8e08710%|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0DT",
+   "field": "name",
+   "value": "|cffebc56cГенератор Скверны|r"
+  }
+ ],
+ "graph_sources": {
+  "docs/techtree/races/Demon.json": "e280f3455fa41b0ffcf65f8238d530c422ec23cf447d38a475b8428561fe213b",
+  "docs/techtree/races/KulTiras.json": "8b9b79b7366c4e3a95d22c5655c6cf0a5a8e7d91e90d13c14b5eb3880d627287",
+  "docs/techtree/races/Nerubs.json": "4928cb68d6a9006c8ca0b3816d9fb348519844217bba840b737e76119bff1292"
+ },
+ "menu_objects": {
+  "h0DU": {
+   "morphs-to": [
+    "h0DV"
+   ],
+   "trains": [
+    "e02Y"
+   ]
+  },
+  "h0DV": {
+   "morphs-to": [
+    "h0DW"
+   ],
+   "trains": [
+    "e02Y"
+   ]
+  },
+  "h0DW": {
+   "trains": [
+    "e02Y"
+   ]
+  },
+  "h0DX": {
+   "trains": [
+    "N02A",
+    "N02F",
+    "U028"
+   ]
+  },
+  "h0DY": {
+   "researches": [
+    "R004",
+    "R08H",
+    "R08I",
+    "R08O"
+   ],
+   "trains": [
+    "n023",
+    "n025",
+    "n026",
+    "n027",
+    "n02D",
+    "n02E",
+    "n02I"
+   ]
+  },
+  "h0DZ": {
+   "researches": [
+    "R08J",
+    "R08K",
+    "R08L",
+    "R08M",
+    "R08N",
+    "R0EG"
+   ]
+  },
+  "h0E0": {
+   "researches": [
+    "R08P",
+    "R08Q"
+   ],
+   "trains": [
+    "n020",
+    "n028"
+   ]
+  },
+  "h0E1": {
+   "researches": [
+    "R08R",
+    "R08S"
+   ],
+   "trains": [
+    "n021",
+    "n022",
+    "n024"
+   ]
+  },
+  "h021": {
+   "trains": [
+    "H01K",
+    "H01L",
+    "H01N"
+   ]
+  },
+  "h022": {
+   "researches": [
+    "R01U",
+    "R02T",
+    "R02U",
+    "R02V",
+    "R02W",
+    "R02X",
+    "R02Y"
+   ],
+   "trains": [
+    "h019",
+    "h01C",
+    "h01D",
+    "h01E"
+   ]
+  },
+  "h026": {
+   "researches": [
+    "R03A",
+    "R03B",
+    "R03G",
+    "R03H"
+   ],
+   "trains": [
+    "h01F",
+    "h01G"
+   ]
+  },
+  "h027": {
+   "researches": [
+    "R02Z",
+    "R030",
+    "R031",
+    "R032",
+    "R033",
+    "R034"
+   ],
+   "trains": [
+    "h01A",
+    "h01H",
+    "h01I"
+   ]
+  },
+  "h0CO": {
+   "morphs-to": [
+    "h0CP"
+   ],
+   "trains": [
+    "h0BE"
+   ]
+  },
+  "h0CP": {
+   "morphs-to": [
+    "h0CQ"
+   ],
+   "trains": [
+    "h0BE"
+   ]
+  },
+  "h0CQ": {
+   "trains": [
+    "h0BE"
+   ]
+  },
+  "h0CU": {
+   "trains": [
+    "U01U",
+    "U01V",
+    "U01W"
+   ]
+  }
+ }
+}

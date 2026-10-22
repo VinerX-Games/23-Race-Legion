@@ -25,9 +25,9 @@
   "A001": {
    "type": "ability",
    "name": "Абордаж!",
+   "hotkey": "Q",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "Q"
+   "hero_level_req": 1
   },
   "A002": {
    "type": "ability",
@@ -45,15 +45,15 @@
   "A009": {
    "type": "ability",
    "name": "Сделать флагманом",
-   "levels": 1,
-   "hotkey": "R"
+   "hotkey": "R",
+   "levels": 1
   },
   "A00A": {
    "type": "ability",
    "name": "Починка",
+   "hotkey": "R",
    "levels": 3,
    "hero_level_req": 1,
-   "hotkey": "R",
    "requires": [
     "R007"
    ]
@@ -61,8 +61,8 @@
   "A00B": {
    "type": "ability",
    "name": "Тактическое ускорение",
-   "levels": 3,
    "hotkey": "E",
+   "levels": 3,
    "requires": [
     "R006"
    ]
@@ -70,9 +70,9 @@
   "A00G": {
    "type": "ability",
    "name": "Массированный обстрел",
+   "hotkey": "W",
    "levels": 3,
    "hero_level_req": 1,
-   "hotkey": "W",
    "requires": [
     "R005"
    ]
@@ -80,35 +80,35 @@
   "A00I": {
    "type": "ability",
    "name": "Магическая посадка",
+   "hotkey": "W",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "A0I3": {
    "type": "ability",
    "name": "Небольшой скачок",
+   "hotkey": "C",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "C"
+   "hero_level_req": 1
   },
   "A0IQ": {
    "type": "ability",
    "name": "Обозначить столицу",
+   "hotkey": "X",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "X"
+   "hero_level_req": 1
   },
   "A0LI": {
    "type": "ability",
    "name": "Обмен золота на дерево",
-   "levels": 1,
-   "hotkey": "S"
+   "hotkey": "S",
+   "levels": 1
   },
   "A0LJ": {
    "type": "ability",
    "name": "Обмен дерева на золото",
-   "levels": 1,
-   "hotkey": "A"
+   "hotkey": "A",
+   "levels": 1
   },
   "A15N": {
    "type": "ability",
@@ -119,9 +119,9 @@
   "A1I6": {
    "type": "ability",
    "name": "Пандарены",
+   "hotkey": "Z",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "Z"
+   "hero_level_req": 1
   },
   "A1I7": {
    "type": "ability",
@@ -131,14 +131,14 @@
   "A1PP": {
    "type": "ability",
    "name": "Прицельная пальба",
-   "levels": 1,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 1
   },
   "A1RB": {
    "type": "ability",
    "name": "Исцеление",
-   "levels": 1,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 1
   },
   "AInv": {
    "type": "ability",
@@ -149,23 +149,23 @@
    "type": "ability",
    "name": "Пламенное дыхание",
    "hero": true,
+   "hotkey": "\"F\"",
    "levels": 3,
-   "hero_level_req": 1,
-   "hotkey": "\"F\""
+   "hero_level_req": 1
   },
   "ANdh": {
    "type": "ability",
    "name": "Хмельные пары",
    "hero": true,
+   "hotkey": "D",
    "levels": 3,
-   "hero_level_req": 1,
-   "hotkey": "D"
+   "hero_level_req": 1
   },
   "APb1": {
    "type": "ability",
    "name": "Пьянящая настойка",
-   "levels": 1,
-   "hotkey": "V"
+   "hotkey": "V",
+   "levels": 1
   },
   "Abds": {
    "type": "ability",
@@ -175,8 +175,8 @@
   "Ahrp": {
    "type": "ability",
    "name": "Ремонтировать",
-   "levels": 1,
-   "hotkey": "R"
+   "hotkey": "R",
+   "levels": 1
   },
   "Argl": {
    "type": "ability",
@@ -197,17 +197,17 @@
    "type": "ability",
    "name": "Единение с Инь",
    "hero": true,
+   "hotkey": "R",
    "levels": 1,
-   "hero_level_req": 6,
-   "hotkey": "R"
+   "hero_level_req": 6
   },
   "PA03": {
    "type": "ability",
    "name": "Веер Клинков",
    "hero": true,
+   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Усиливает ядовитые эффекты атак пехоты и стрелков армии Отрекшихся.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cМёртвый воин|cffced4da|n- |cffebc56cЛучница|cffced4da|n- |cffebc56cТёмный следопыт|cffced4da|n- |cffebc56cСтраж Смерти|cffced4da|n- |cffebc56cУбийца|cffced4da.|n|n|cffb99d66Уровень исследования:|r |cffffffff3/4|r."
+   "hero_level_req": 1
   },
   "PA05": {
    "type": "ability",
@@ -217,15 +217,15 @@
   "PA10": {
    "type": "upgrade",
    "name": "Длинные Луки",
-   "levels": 2,
    "gold": 2000,
    "gold_per_level": 3000,
    "lumber": 1250,
    "lumber_per_level": 2000,
-   "time": 30,
+   "levels": 2,
    "requires": [
     "pa24"
-   ]
+   ],
+   "time": 30
   },
   "PA11": {
    "type": "unknown",
@@ -234,13 +234,13 @@
   "PA12": {
    "type": "upgrade",
    "name": "Укрепление Духа",
-   "levels": 1,
    "gold": 600,
    "lumber": 900,
-   "time": 40,
+   "levels": 1,
    "requires": [
     "pa24"
-   ]
+   ],
+   "time": 40
   },
   "PA13": {
    "type": "ability",
@@ -250,16 +250,16 @@
   "PA14": {
    "type": "upgrade",
    "name": "Защита Ци",
-   "levels": 1,
    "gold": 2500,
    "gold_per_level": 75,
    "lumber": 3000,
    "lumber_per_level": 125,
-   "time": 60,
-   "time_per_level": 15,
+   "levels": 1,
    "requires": [
     "pa24"
-   ]
+   ],
+   "time": 60,
+   "time_per_level": 15
   },
   "PA15": {
    "type": "ability",
@@ -270,9 +270,9 @@
   "PA16": {
    "type": "ability",
    "name": "Энергия Ци",
+   "hotkey": "Q",
    "levels": 1,
    "hero_level_req": 1,
-   "hotkey": "Q",
    "requires": [
     "PA90"
    ]
@@ -280,59 +280,59 @@
   "PA20": {
    "type": "ability",
    "name": "Аура Умиротворённости",
+   "hotkey": "E",
    "levels": 2,
-   "hero_level_req": 1,
-   "hotkey": "E"
+   "hero_level_req": 1
   },
   "PA36": {
    "type": "hero",
    "name": "Лидер Шадо-Пан",
    "base": "Hpal",
-   "gold": 475,
-   "lumber": 100,
-   "food": 1,
-   "hp": 950,
    "time": 55,
-   "hotkey": "W"
+   "food": 1,
+   "gold": 475,
+   "hotkey": "W",
+   "hp": 950,
+   "lumber": 100
   },
   "PA37": {
    "type": "hero",
    "name": "Мастер Железной Лапы",
    "base": "Hmkg",
-   "gold": 475,
-   "lumber": 100,
-   "food": 1,
-   "hp": 1500,
    "time": 40,
-   "hotkey": "R"
+   "food": 1,
+   "gold": 475,
+   "hotkey": "R",
+   "hp": 1500,
+   "lumber": 100
   },
   "PA38": {
    "type": "hero",
    "name": "Высший Монах",
    "base": "Hblm",
-   "gold": 475,
-   "lumber": 150,
-   "food": 1,
-   "hp": 495,
    "time": 40,
-   "hotkey": "Q"
+   "food": 1,
+   "gold": 475,
+   "hotkey": "Q",
+   "hp": 495,
+   "lumber": 150
   },
   "PA40": {
    "type": "hero",
    "name": "Танцующий с Ветром",
    "base": "Hpal",
-   "gold": 475,
-   "lumber": 200,
-   "food": 1,
-   "hp": 100,
    "time": 40,
-   "hotkey": "E"
+   "food": 1,
+   "gold": 475,
+   "hotkey": "E",
+   "hp": 100,
+   "lumber": 200
   },
   "PA45": {
    "type": "ability",
    "name": "Нефритовые Доспехи",
-   "levels": 1,
    "hotkey": "K",
+   "levels": 1,
    "requires": [
     "PA85"
    ]
@@ -340,8 +340,8 @@
   "PA46": {
    "type": "ability",
    "name": "Рассеивание заклинаний",
-   "levels": 1,
    "hotkey": "D",
+   "levels": 1,
    "requires": [
     "PA91"
    ]
@@ -350,22 +350,22 @@
    "type": "ability",
    "name": "Удар Восходящего Солнца",
    "hero": true,
+   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "Q"
+   "hero_level_req": 1
   },
   "PA51": {
    "type": "ability",
    "name": "Выдержка Монастыря Земли",
    "hero": true,
-   "levels": 4,
-   "hotkey": "E"
+   "hotkey": "E",
+   "levels": 4
   },
   "PA53": {
    "type": "ability",
    "name": "Ярость",
-   "levels": 1,
    "hotkey": "W",
+   "levels": 1,
    "requires": [
     "PA89"
    ],
@@ -375,17 +375,17 @@
    "type": "ability",
    "name": "Буря Клинков",
    "hero": true,
+   "hotkey": "R",
    "levels": 1,
-   "hero_level_req": 6,
-   "hotkey": "R"
+   "hero_level_req": 6
   },
   "PA57": {
    "type": "ability",
    "name": "Танец Ветра",
    "hero": true,
+   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "PA59": {
    "type": "ability",
@@ -398,9 +398,9 @@
    "type": "ability",
    "name": "Цепная молния",
    "hero": true,
+   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "PA61": {
    "type": "ability",
@@ -411,9 +411,9 @@
   "PA62": {
    "type": "ability",
    "name": "Грозовые Стрелы",
+   "hotkey": "Q",
    "levels": 1,
    "hero_level_req": 1,
-   "hotkey": "Q",
    "requires": [
     "pa24"
    ]
@@ -421,29 +421,29 @@
   "PA63": {
    "type": "ability",
    "name": "Обжигающее Пламя Дракона",
+   "hotkey": "W",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "PA65": {
    "type": "ability",
    "name": "Призыв к Балансу",
-   "levels": 1,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 1
   },
   "PA66": {
    "type": "ability",
    "name": "Испепеление",
+   "hotkey": "C",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "C"
+   "hero_level_req": 1
   },
   "PA67": {
    "type": "ability",
    "name": "Пламенное дыхание",
+   "hotkey": "Q",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "Q"
+   "hero_level_req": 1
   },
   "PA68": {
    "type": "ability",
@@ -460,15 +460,15 @@
   "PA70": {
    "type": "ability",
    "name": "Хмельные Пары",
+   "hotkey": "W",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "PA73": {
    "type": "ability",
    "name": "Раздвоенная молния",
-   "levels": 1,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 1
   },
   "PA74": {
    "type": "ability",
@@ -479,17 +479,17 @@
    "type": "ability",
    "name": "Катаклизм",
    "hero": true,
+   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6,
-   "hotkey": "R"
+   "hero_level_req": 6
   },
   "PA76": {
    "type": "ability",
    "name": "Призыв Помощи",
    "hero": true,
+   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "Q"
+   "hero_level_req": 1
   },
   "PA77": {
    "type": "ability",
@@ -502,387 +502,387 @@
    "type": "ability",
    "name": "Провокация",
    "hero": true,
-   "levels": 5,
-   "hotkey": "W"
+   "hotkey": "W",
+   "levels": 5
   },
   "PA79": {
    "type": "ability",
    "name": "Добывать Ресурсы",
-   "levels": 1,
-   "hotkey": "G"
+   "hotkey": "G",
+   "levels": 1
   },
   "PA80": {
    "type": "upgrade",
    "name": "Доспехи из кожи",
-   "levels": 6,
    "gold": 450,
    "gold_per_level": 450,
    "lumber": 450,
    "lumber_per_level": 450,
-   "time": 50,
-   "time_per_level": 10,
+   "levels": 6,
    "requires": [
     "hkee"
-   ]
+   ],
+   "time": 50,
+   "time_per_level": 10
   },
   "PA81": {
    "type": "upgrade",
    "name": "Железные Мечи",
-   "levels": 6,
    "gold": 450,
    "gold_per_level": 450,
    "lumber": 450,
    "lumber_per_level": 450,
-   "time": 50,
-   "time_per_level": 10,
+   "levels": 6,
    "requires": [
     "hkee"
-   ]
+   ],
+   "time": 50,
+   "time_per_level": 10
   },
   "PA82": {
    "type": "upgrade",
    "name": "Изучение Хмелеварения",
-   "levels": 1,
    "gold": 3500,
    "lumber": 3500,
-   "time": 40,
+   "levels": 1,
    "requires": [
     "pa24"
-   ]
+   ],
+   "time": 40
   },
   "PA83": {
    "type": "upgrade",
    "name": "Изучить Геомантию",
-   "levels": 1,
    "gold": 3500,
    "lumber": 3500,
-   "time": 40,
+   "levels": 1,
    "requires": [
     "pa24"
-   ]
+   ],
+   "time": 40
   },
   "PA84": {
    "type": "upgrade",
    "name": "Железная Броня",
-   "levels": 6,
    "gold": 450,
    "gold_per_level": 450,
    "lumber": 450,
    "lumber_per_level": 450,
-   "time": 50,
-   "time_per_level": 10,
+   "levels": 6,
    "requires": [
     "hkee"
-   ]
+   ],
+   "time": 50,
+   "time_per_level": 10
   },
   "PA85": {
    "type": "upgrade",
    "name": "Нефритовые Доспехи",
-   "levels": 1,
    "gold": 1500,
    "gold_per_level": 25,
    "lumber": 2000,
    "lumber_per_level": 100,
-   "time": 60,
-   "time_per_level": 15,
+   "levels": 1,
    "requires": [
     "pa24"
-   ]
+   ],
+   "time": 60,
+   "time_per_level": 15
   },
   "PA86": {
    "type": "upgrade",
    "name": "Посвящение Мастеров Бури",
-   "levels": 2,
    "gold": 3500,
    "gold_per_level": 500,
    "lumber": 2000,
    "lumber_per_level": 3000,
-   "time": 50,
-   "time_per_level": 10,
+   "levels": 2,
    "requires": [
     "hcas"
-   ]
+   ],
+   "time": 50,
+   "time_per_level": 10
   },
   "PA87": {
    "type": "upgrade",
    "name": "Посвящение Мастеров Земли",
-   "levels": 2,
    "gold": 3500,
    "gold_per_level": 500,
    "lumber": 2000,
    "lumber_per_level": 3000,
-   "time": 50,
-   "time_per_level": 10,
+   "levels": 2,
    "requires": [
     "hkee"
-   ]
+   ],
+   "time": 50,
+   "time_per_level": 10
   },
   "PA88": {
    "type": "upgrade",
    "name": "Посвящение Мастеров Огня",
-   "levels": 2,
    "gold": 5000,
    "gold_per_level": 500,
    "lumber": 2000,
    "lumber_per_level": 3000,
-   "time": 50,
-   "time_per_level": 10,
+   "levels": 2,
    "requires": [
     "hkee"
-   ]
+   ],
+   "time": 50,
+   "time_per_level": 10
   },
   "PA89": {
    "type": "upgrade",
    "name": "Посвящение Монахов Ян",
-   "levels": 2,
    "gold": 450,
    "gold_per_level": 1000,
    "lumber": 500,
    "lumber_per_level": 750,
-   "time": 60,
+   "levels": 2,
    "requires": [
     "hcas"
-   ]
+   ],
+   "time": 60
   },
   "PA90": {
    "type": "upgrade",
    "name": "Посвящение Геомантов",
-   "levels": 3,
    "gold": 1500,
    "gold_per_level": 500,
    "lumber": 2000,
    "lumber_per_level": 950,
-   "time": 60,
-   "time_per_level": 10,
+   "levels": 3,
    "requires": [
     "PA83"
-   ]
+   ],
+   "time": 60,
+   "time_per_level": 10
   },
   "PA91": {
    "type": "upgrade",
    "name": "Посвящение Монахов Инь",
-   "levels": 2,
    "gold": 700,
    "gold_per_level": 200,
    "lumber": 1500,
    "lumber_per_level": 300,
-   "time": 50,
-   "time_per_level": 10,
+   "levels": 2,
    "requires": [
     "hcas"
-   ]
+   ],
+   "time": 50,
+   "time_per_level": 10
   },
   "PA92": {
    "type": "upgrade",
    "name": "Посвящение Хмелеваров",
-   "levels": 3,
    "gold": 1500,
    "gold_per_level": 500,
    "lumber": 2000,
    "lumber_per_level": 950,
-   "time": 60,
-   "time_per_level": 10,
+   "levels": 3,
    "requires": [
     "PA82"
-   ]
+   ],
+   "time": 60,
+   "time_per_level": 10
   },
   "PA93": {
    "type": "upgrade",
    "name": "Стальные Наконечники",
-   "levels": 6,
    "gold": 300,
    "gold_per_level": 1000,
    "lumber": 300,
    "lumber_per_level": 1000,
-   "time": 50,
-   "time_per_level": 10,
+   "levels": 6,
    "requires": [
     "etoa"
-   ]
+   ],
+   "time": 50,
+   "time_per_level": 10
   },
   "PA94": {
    "type": "upgrade",
    "name": "Улучшенные топоры",
-   "levels": 6,
    "gold": 100,
    "gold_per_level": 200,
+   "levels": 6,
    "time": 40,
    "time_per_level": 10
   },
   "PA95": {
    "type": "upgrade",
    "name": "Утяжелённая Рукоять",
-   "levels": 1,
    "gold": 2500,
    "lumber": 3000,
-   "time": 40,
+   "levels": 1,
    "requires": [
     "pa24"
-   ]
+   ],
+   "time": 40
   },
   "R001": {
    "type": "upgrade",
    "name": "Завершил ветку",
-   "levels": 1,
    "gold": 75,
    "gold_per_level": 500,
    "lumber": 25,
    "lumber_per_level": 350,
+   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R002": {
    "type": "upgrade",
    "name": "Орудия флота — уровень 1",
-   "levels": 6,
    "gold": 500,
    "gold_per_level": 200,
    "lumber": 1200,
    "lumber_per_level": 300,
-   "time": 80,
-   "time_per_level": 15,
+   "levels": 6,
    "requires": [
     "hkee"
-   ]
+   ],
+   "time": 80,
+   "time_per_level": 15
   },
   "R003": {
    "type": "upgrade",
    "name": "Укреплённый корпус — уровень 1",
-   "levels": 6,
    "gold": 900,
    "gold_per_level": 300,
    "lumber": 500,
    "lumber_per_level": 200,
-   "time": 80,
-   "time_per_level": 15,
+   "levels": 6,
    "requires": [
     "hkee"
-   ]
+   ],
+   "time": 80,
+   "time_per_level": 15
   },
   "R004": {
    "type": "upgrade",
-   "name": "Улучшение до Кровавого Палача",
-   "levels": 1,
+   "name": "Кровавый Палач",
    "gold": 600,
    "lumber": 500,
-   "time": 40,
+   "levels": 1,
    "requires": [
     "h0DV"
-   ]
+   ],
+   "time": 40
   },
   "R005": {
    "type": "upgrade",
    "name": "Обстрел — уровень 1",
-   "levels": 5,
    "gold": 500,
    "gold_per_level": 150,
    "lumber": 500,
    "lumber_per_level": 150,
-   "time": 90,
+   "levels": 5,
    "requires": [
     "hcas"
-   ]
+   ],
+   "time": 90
   },
   "R006": {
    "type": "upgrade",
    "name": "Дополнительные паруса — уровень 1",
-   "levels": 3,
    "gold": 500,
    "gold_per_level": 150,
    "lumber": 500,
    "lumber_per_level": 150,
-   "time": 90,
+   "levels": 3,
    "requires": [
     "hcas"
-   ]
+   ],
+   "time": 90
   },
   "R007": {
    "type": "upgrade",
    "name": "Починка — уровень 1",
-   "levels": 3,
    "gold": 500,
    "gold_per_level": 150,
    "lumber": 500,
    "lumber_per_level": 150,
-   "time": 90,
+   "levels": 3,
    "requires": [
     "hcas"
-   ]
+   ],
+   "time": 90
   },
   "R0EE": {
    "type": "upgrade",
    "name": "Пандаренский вопрос",
-   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
+   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0EH": {
    "type": "upgrade",
    "name": "Орда — общий дом",
-   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
+   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0EI": {
    "type": "upgrade",
    "name": "Дорога к компромису",
-   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 350,
+   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0HB": {
    "type": "upgrade",
    "name": "Принять к себе Пандаренов",
-   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 500,
+   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0HD": {
    "type": "upgrade",
    "name": "Диалог с Кул-Тирасом",
-   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 500,
+   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0HE": {
    "type": "upgrade",
    "name": "Децентрализация",
-   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 500,
+   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
   "R0HF": {
    "type": "upgrade",
    "name": "Союз равных",
-   "levels": 1,
    "gold": 500,
    "gold_per_level": 500,
    "lumber": 500,
    "lumber_per_level": 500,
+   "levels": 1,
    "time": 45,
    "time_per_level": 1
   },
@@ -894,582 +894,799 @@
   "Rhfl": {
    "type": "upgrade",
    "name": "Осветительный заряд",
-   "levels": 1,
    "gold": 50,
    "lumber": 50,
-   "time": 30,
+   "levels": 1,
    "requires": [
     "hkee"
-   ]
+   ],
+   "time": 30
   },
   "Rhfs": {
    "type": "upgrade",
    "name": "Шрапнель",
-   "levels": 1,
    "gold": 50,
    "lumber": 100,
-   "time": 40,
+   "levels": 1,
    "requires": [
     "hcas"
-   ]
+   ],
+   "time": 40
   },
   "Sch5": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Cargo Hold",
+   "levels": 1
   },
   "Sdro": {
    "type": "ability",
    "name": "Выгрузить",
-   "levels": 1,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 1
   },
   "Slo3": {
    "type": "ability",
    "name": "Взять на борт",
-   "levels": 1,
-   "hotkey": "D"
+   "hotkey": "D",
+   "levels": 1
+  },
+  "TALT": {
+   "type": "unknown",
+   "name": "",
+   "only_required": true
+  },
+  "TWN2": {
+   "type": "unknown",
+   "name": "",
+   "only_required": true
   },
   "etoa": {
    "type": "unit",
    "name": "Древо столетий",
    "only_required": true,
-   "gold": 4500,
-   "lumber": 4500,
-   "food_made": 100,
-   "hp": 1700,
    "time": 140,
+   "food_made": 100,
+   "gold": 4500,
    "hotkey": "Z",
+   "hp": 1700,
+   "lumber": 4500,
    "requires": [
     "R0GB"
+   ],
+   "researches": [
+    "Renb"
+   ],
+   "affected_by": [
+    "Renb",
+    "Rgfo"
    ]
   },
   "h00X": {
    "type": "unit",
    "name": "Транспорт",
    "base": "hbot",
-   "gold": 250,
-   "lumber": 200,
-   "hp": 750,
    "time": 22,
-   "hotkey": "Q"
+   "gold": 250,
+   "hotkey": "Q",
+   "hp": 750,
+   "lumber": 200,
+   "affected_by": [
+    "R006",
+    "R007",
+    "R004",
+    "R003"
+   ]
   },
   "h00Y": {
    "type": "unit",
    "name": "Фрегат",
    "base": "hdes",
-   "gold": 450,
-   "lumber": 475,
-   "hp": 800,
    "time": 30,
-   "hotkey": "W"
+   "gold": 450,
+   "hotkey": "W",
+   "hp": 800,
+   "lumber": 475,
+   "affected_by": [
+    "R005",
+    "R007",
+    "R003",
+    "R002"
+   ]
   },
   "h00Z": {
    "type": "unit",
    "name": "Линкор",
    "base": "hbsh",
-   "gold": 875,
-   "lumber": 1000,
-   "hp": 1400,
    "time": 50,
-   "hotkey": "E"
+   "gold": 875,
+   "hotkey": "E",
+   "hp": 1400,
+   "lumber": 1000,
+   "affected_by": [
+    "R005",
+    "R007",
+    "R003",
+    "R002"
+   ]
   },
   "h011": {
    "type": "building",
    "name": "Верфь",
    "base": "hshy",
-   "gold": 500,
-   "lumber": 700,
-   "hp": 2000,
    "time": 90,
-   "hotkey": "C"
+   "gold": 500,
+   "hotkey": "C",
+   "hp": 2000,
+   "lumber": 700,
+   "researches": [
+    "R005",
+    "R006",
+    "R007",
+    "R002",
+    "R003"
+   ]
   },
   "h0DV": {
    "type": "unit",
    "name": "Штаб Демонов",
    "only_required": true,
-   "gold": 4000,
-   "lumber": 4000,
-   "food_made": 100,
-   "hp": 2000,
    "time": 240,
-   "hotkey": "Z"
+   "food_made": 100,
+   "gold": 4000,
+   "hotkey": "Z",
+   "hp": 2000,
+   "lumber": 4000
   },
   "h0NZ": {
    "type": "building",
    "name": "Рыбацкий дом",
    "base": "hhou",
-   "gold": 550,
-   "lumber": 200,
-   "food_made": 100,
-   "hp": 800,
    "time": 35,
-   "hotkey": "X"
+   "food_made": 100,
+   "gold": 550,
+   "hotkey": "X",
+   "hp": 800,
+   "lumber": 200
   },
   "h0P3": {
    "type": "building",
    "name": "Магическая Башня Пандаренов",
    "base": "hgtw",
-   "gold": 145,
-   "lumber": 120,
-   "hp": 750,
    "time": 50,
-   "hotkey": "Z"
+   "gold": 145,
+   "hotkey": "Z",
+   "hp": 750,
+   "lumber": 120,
+   "affected_by": [
+    "PA93",
+    "PA80"
+   ]
   },
   "h0P4": {
    "type": "building",
    "name": "Осадная Башня Пандаренов",
    "base": "hgtw",
-   "gold": 145,
-   "lumber": 120,
-   "hp": 750,
    "time": 50,
-   "hotkey": "Z"
+   "gold": 145,
+   "hotkey": "Z",
+   "hp": 750,
+   "lumber": 120,
+   "affected_by": [
+    "PA93",
+    "PA80"
+   ]
   },
   "h0P5": {
    "type": "building",
    "name": "Башня Пандаренов",
    "base": "hgtw",
-   "gold": 50,
-   "lumber": 20,
-   "hp": 750,
    "time": 50,
-   "hotkey": "Z"
+   "gold": 50,
+   "hotkey": "Z",
+   "hp": 750,
+   "lumber": 20,
+   "affected_by": [
+    "PA93",
+    "PA80"
+   ]
   },
   "hbla": {
    "type": "unit",
    "name": "Кузница",
    "only_required": true,
-   "gold": 140,
-   "lumber": 40,
-   "hp": 1200,
    "time": 70,
+   "gold": 140,
    "hotkey": "R",
+   "hp": 1200,
+   "lumber": 40,
    "requires": [
     "htow"
+   ],
+   "researches": [
+    "R0HO",
+    "Rhme",
+    "Rhar",
+    "Rhla",
+    "Rhra"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
    ]
   },
   "hcas": {
    "type": "unit",
    "name": "Замок",
    "only_required": true,
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
    "time": 140,
+   "food_made": 150,
+   "gold": 12000,
    "hotkey": "Z",
+   "hp": 2500,
+   "lumber": 12000,
    "requires": [
     "halt"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
    ]
   },
   "hkee": {
    "type": "unit",
    "name": "Форт",
    "only_required": true,
-   "gold": 4500,
-   "lumber": 4500,
-   "food_made": 100,
-   "hp": 2000,
    "time": 140,
-   "hotkey": "Z"
+   "food_made": 100,
+   "gold": 4500,
+   "hotkey": "Z",
+   "hp": 2000,
+   "lumber": 4500,
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "hlum": {
    "type": "unit",
    "name": "Лесопилка",
    "only_required": true,
-   "gold": 120,
-   "hp": 900,
    "time": 60,
-   "hotkey": "E"
+   "gold": 120,
+   "hotkey": "E",
+   "hp": 900,
+   "researches": [
+    "Rhac",
+    "Rhlh"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "pa01": {
    "type": "unit",
    "name": "Рабочий Пандаренов",
    "base": "hpea",
-   "gold": 75,
-   "hp": 240,
    "time": 15,
-   "hotkey": "Q"
+   "gold": 75,
+   "hotkey": "Q",
+   "hp": 240,
+   "affected_by": [
+    "PA94",
+    "PA84"
+   ]
   },
   "pa04": {
    "type": "unit",
    "name": "Воин Нефритовой Стражи",
    "base": "hfoo",
-   "gold": 290,
-   "lumber": 100,
-   "hp": 750,
    "time": 46,
+   "gold": 290,
    "hotkey": "E",
+   "hp": 750,
+   "lumber": 100,
    "requires": [
     "pa24"
+   ],
+   "affected_by": [
+    "PA12",
+    "PA81",
+    "PA85",
+    "PA84",
+    "PA95"
    ]
   },
   "pa05": {
    "type": "unit",
    "name": "Воин Пандаренов",
    "base": "hfoo",
-   "gold": 120,
-   "lumber": 40,
-   "hp": 475,
    "time": 25,
-   "hotkey": "Q"
+   "gold": 120,
+   "hotkey": "Q",
+   "hp": 475,
+   "lumber": 40,
+   "affected_by": [
+    "PA12",
+    "PA81",
+    "PA84"
+   ]
   },
   "pa06": {
    "type": "unit",
    "name": "Мастер Геомант",
    "base": "hfoo",
-   "gold": 305,
-   "lumber": 105,
-   "hp": 875,
    "time": 48,
+   "gold": 305,
    "hotkey": "R",
+   "hp": 875,
+   "lumber": 105,
    "requires": [
     "PA83"
+   ],
+   "affected_by": [
+    "PA12",
+    "PA90",
+    "PA81",
+    "PA84"
    ]
   },
   "pa07": {
    "type": "unit",
    "name": "Мастер Земли",
    "base": "hfoo",
-   "gold": 310,
-   "lumber": 105,
-   "hp": 1100,
    "time": 49,
+   "gold": 310,
    "hotkey": "E",
+   "hp": 1100,
+   "lumber": 105,
    "requires": [
     "pa25"
+   ],
+   "affected_by": [
+    "pa46",
+    "PA12",
+    "PA87",
+    "PA81",
+    "PA84"
    ]
   },
   "pa08": {
    "type": "unit",
    "name": "Мастер Огня",
    "base": "hfoo",
-   "gold": 500,
-   "lumber": 170,
-   "hp": 825,
    "time": 72,
+   "gold": 500,
    "hotkey": "Q",
+   "hp": 825,
+   "lumber": 170,
    "requires": [
     "pa25"
+   ],
+   "affected_by": [
+    "pa16",
+    "PA12",
+    "PA88",
+    "PA84",
+    "PA81"
    ]
   },
   "pa09": {
    "type": "unit",
    "name": "Мастер Пьяной Лапы",
    "base": "hfoo",
-   "gold": 320,
-   "lumber": 110,
-   "hp": 475,
    "time": 50,
-   "hotkey": "R"
+   "gold": 320,
+   "hotkey": "R",
+   "hp": 475,
+   "lumber": 110,
+   "affected_by": [
+    "PA81",
+    "PA84",
+    "PA12"
+   ]
   },
   "pa10": {
    "type": "unit",
    "name": "Стражник Нефритовых Врат",
    "base": "hfoo",
-   "gold": 235,
-   "lumber": 150,
-   "hp": 950,
    "time": 36,
+   "gold": 235,
    "hotkey": "A",
+   "hp": 950,
+   "lumber": 150,
    "requires": [
     "pa24"
+   ],
+   "affected_by": [
+    "PA14",
+    "PA12",
+    "PA11",
+    "PA81",
+    "PA95",
+    "PA85",
+    "PA84"
    ]
   },
   "pa11": {
    "type": "unit",
    "name": "Всадник Пандарен",
    "base": "hkni",
-   "gold": 245,
-   "lumber": 85,
-   "hp": 885,
    "time": 47,
+   "gold": 245,
    "hotkey": "E",
+   "hp": 885,
+   "lumber": 85,
    "requires": [
     "pa24",
     "pa30"
+   ],
+   "affected_by": [
+    "pa21",
+    "PA12",
+    "PA81",
+    "PA84"
    ]
   },
   "pa12": {
    "type": "unit",
    "name": "Лучник Пандаренов",
    "base": "hrif",
-   "gold": 240,
-   "lumber": 80,
-   "hp": 475,
    "time": 33,
+   "gold": 240,
    "hotkey": "W",
+   "hp": 475,
+   "lumber": 80,
    "requires": [
     "pa30"
+   ],
+   "affected_by": [
+    "PA12",
+    "PA10",
+    "PA93",
+    "PA80"
    ]
   },
   "pa13": {
    "type": "unit",
    "name": "Мастер Бури",
    "base": "hrif",
-   "gold": 300,
-   "lumber": 45,
-   "hp": 575,
    "time": 33,
+   "gold": 300,
    "hotkey": "W",
+   "hp": 575,
+   "lumber": 45,
    "requires": [
     "pa25"
+   ],
+   "affected_by": [
+    "PA12",
+    "PA86",
+    "PA93",
+    "PA80"
    ]
   },
   "pa14": {
    "type": "unit",
    "name": "Орудийный Расчёт",
    "base": "hmtm",
-   "gold": 160,
-   "lumber": 55,
-   "hp": 425,
    "time": 24,
+   "gold": 160,
    "hotkey": "Q",
+   "hp": 425,
+   "lumber": 55,
    "requires": [
     "pa24"
+   ],
+   "affected_by": [
+    "PA93",
+    "PA80",
+    "Rhfl",
+    "Rhfs"
    ]
   },
   "pa15": {
    "type": "ability",
    "name": "Торнадо",
-   "levels": 1,
-   "hotkey": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Чествование подвига сэра Андуина Лотара и сыновей Лотара из экспедиции в Дренор.|n|nОткрывает ветерана войны, даёт всадникам новую способность и |cffc8e087+125 к здоровью|cffced4da. |cffef8173Повышает расходы на 15%|cffced4da.|n|n|cffb99d66Применяется к:|cffced4da|n- Кавалерии и пехоте Альянса.|r"
+   "hotkey": "W",
+   "levels": 1
   },
   "pa16": {
    "type": "upgrade",
    "name": "Усиление Мастеров Огня",
-   "levels": 1,
    "gold": 10000,
    "gold_per_level": 75,
    "lumber": 10000,
    "lumber_per_level": 125,
-   "time": 60,
-   "time_per_level": 15,
+   "levels": 1,
    "requires": [
     "pa25"
-   ]
+   ],
+   "time": 60,
+   "time_per_level": 15
   },
   "pa21": {
    "type": "upgrade",
    "name": "Дрессировка Животных",
-   "levels": 1,
    "gold": 1500,
    "lumber": 2000,
-   "time": 40,
+   "levels": 1,
    "requires": [
     "hlum",
     "hbla",
     "hcas"
-   ]
+   ],
+   "time": 40
   },
   "pa22": {
    "type": "unit",
    "name": "Хмелевар",
    "base": "Npbm",
-   "gold": 390,
-   "lumber": 130,
-   "hp": 875,
    "time": 59,
+   "gold": 390,
    "hotkey": "R",
+   "hp": 875,
+   "lumber": 130,
    "requires": [
     "PA82",
     "TWN2",
     "TALT"
+   ],
+   "affected_by": [
+    "PA92",
+    "PA81",
+    "PA84"
    ]
   },
   "pa23": {
    "type": "building",
    "name": "Ратуша Синего Зяблика",
    "base": "htow",
-   "gold": 385,
-   "lumber": 205,
-   "food_made": 50,
-   "hp": 1500,
    "time": 180,
-   "hotkey": "Q"
+   "food_made": 50,
+   "gold": 385,
+   "hotkey": "Q",
+   "hp": 1500,
+   "lumber": 205,
+   "researches": [
+    "pa47",
+    "pa16",
+    "PA82",
+    "PA83"
+   ]
   },
   "pa24": {
    "type": "building",
    "name": "Крепость Четырёх Мастеров",
    "base": "hkee",
-   "gold": 3500,
-   "lumber": 3500,
-   "hp": 2000,
    "time": 140,
-   "hotkey": "U"
+   "gold": 3500,
+   "hotkey": "U",
+   "hp": 2000,
+   "lumber": 3500,
+   "researches": [
+    "PA82",
+    "PA83"
+   ]
   },
   "pa25": {
    "type": "building",
    "name": "Цитадель Равновесия",
    "base": "hcas",
-   "gold": 7000,
-   "lumber": 7000,
-   "hp": 3500,
    "time": 160,
-   "hotkey": "U"
+   "gold": 7000,
+   "hotkey": "U",
+   "hp": 3500,
+   "lumber": 7000
   },
   "pa26": {
    "type": "building",
    "name": "Ферма",
    "base": "hhou",
-   "gold": 400,
-   "lumber": 100,
-   "food_made": 65,
-   "hp": 550,
    "time": 35,
-   "hotkey": "A"
+   "food_made": 65,
+   "gold": 400,
+   "hotkey": "A",
+   "hp": 550,
+   "lumber": 100
   },
   "pa27": {
    "type": "building",
    "name": "Алтарь Древних Мастеров",
    "base": "halt",
-   "gold": 250,
-   "lumber": 175,
-   "food_made": 3,
-   "hp": 900,
    "time": 60,
-   "hotkey": "S"
+   "food_made": 3,
+   "gold": 250,
+   "hotkey": "S",
+   "hp": 900,
+   "lumber": 175
   },
   "pa28": {
    "type": "building",
    "name": "Палаты мастеров",
    "base": "hbar",
-   "gold": 300,
-   "lumber": 375,
-   "hp": 1500,
    "time": 50,
-   "hotkey": "W"
+   "gold": 300,
+   "hotkey": "W",
+   "hp": 1500,
+   "lumber": 375,
+   "researches": [
+    "PA90",
+    "PA95",
+    "PA85",
+    "PA92"
+   ]
   },
   "pa29": {
    "type": "unit",
    "name": "Монах Инь",
    "base": "hmpr",
-   "gold": 150,
-   "lumber": 50,
-   "hp": 325,
    "time": 23,
+   "gold": 150,
    "hotkey": "W",
+   "hp": 325,
+   "lumber": 50,
    "requires": [
     "pa24"
+   ],
+   "affected_by": [
+    "PA91"
    ]
   },
   "pa30": {
    "type": "building",
    "name": "Башня размышления",
    "base": "hbla",
-   "gold": 300,
-   "lumber": 250,
-   "hp": 1200,
    "time": 70,
-   "hotkey": "E"
+   "gold": 300,
+   "hotkey": "E",
+   "hp": 1200,
+   "lumber": 250,
+   "researches": [
+    "PA81",
+    "PA80",
+    "PA84",
+    "PA93",
+    "PA94"
+   ]
   },
   "pa31": {
    "type": "building",
    "name": "Оружейная",
    "base": "harm",
-   "gold": 400,
-   "lumber": 375,
-   "hp": 1200,
    "time": 60,
+   "gold": 400,
    "hotkey": "D",
+   "hp": 1200,
+   "lumber": 375,
    "requires": [
     "pa24",
     "pa30"
+   ],
+   "researches": [
+    "pa21",
+    "PA10",
+    "PA14"
    ]
   },
   "pa32": {
    "type": "building",
    "name": "Вместилище Стихий",
    "base": "hars",
-   "gold": 525,
-   "lumber": 375,
-   "hp": 1750,
    "time": 50,
+   "gold": 525,
    "hotkey": "F",
+   "hp": 1750,
+   "lumber": 375,
    "requires": [
     "pa25"
+   ],
+   "researches": [
+    "PA88",
+    "PA86",
+    "PA87"
    ]
   },
   "pa33": {
    "type": "building",
    "name": "Обитель Монахов",
    "base": "hars",
-   "gold": 450,
-   "lumber": 375,
-   "hp": 1450,
    "time": 70,
+   "gold": 450,
    "hotkey": "R",
+   "hp": 1450,
+   "lumber": 375,
    "requires": [
     "pa24"
+   ],
+   "researches": [
+    "pa39",
+    "PA12",
+    "PA89",
+    "PA91"
    ]
   },
   "pa34": {
    "type": "building",
    "name": "Защитная Башня Пандаренов",
    "base": "hgtw",
-   "gold": 145,
-   "lumber": 120,
-   "hp": 750,
    "time": 50,
-   "hotkey": "Z"
+   "gold": 145,
+   "hotkey": "Z",
+   "hp": 750,
+   "lumber": 120,
+   "affected_by": [
+    "PA93",
+    "PA80"
+   ]
   },
   "pa35": {
    "type": "unit",
    "name": "Страж Храма",
    "base": "hspt",
-   "gold": 445,
-   "lumber": 150,
-   "hp": 800,
    "time": 67,
+   "gold": 445,
    "hotkey": "E",
+   "hp": 800,
+   "lumber": 150,
    "requires": [
     "pa25"
+   ],
+   "affected_by": [
+    "PA11",
+    "PA14",
+    "PA81",
+    "PA84",
+    "PA12"
    ]
   },
   "pa36": {
    "type": "ability",
    "name": "Огненная стрела",
-   "levels": 1,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 1
   },
   "pa37": {
    "type": "ability",
    "name": "Волна исцеления",
    "hero": true,
+   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "Q"
+   "hero_level_req": 1
   },
   "pa38": {
    "type": "unit",
    "name": "Монах Ян",
    "base": "hmpr",
-   "gold": 120,
-   "lumber": 40,
-   "hp": 290,
    "time": 18,
-   "hotkey": "Q"
+   "gold": 120,
+   "hotkey": "Q",
+   "hp": 290,
+   "lumber": 40,
+   "affected_by": [
+    "PA89"
+   ]
   },
   "pa39": {
    "type": "upgrade",
    "name": "Секреты Древних Мастеров",
-   "levels": 2,
    "gold": 1000,
    "gold_per_level": 700,
    "lumber": 1500,
    "lumber_per_level": 500,
-   "time": 60,
+   "levels": 2,
    "requires": [
     "pa25"
-   ]
+   ],
+   "time": 60
   },
   "pa44": {
    "type": "ability",
    "name": "Защита Древних Мастеров",
    "hero": true,
+   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6,
-   "hotkey": "R"
+   "hero_level_req": 6
   },
   "pa46": {
    "type": "unknown",
@@ -1478,16 +1695,16 @@
   "pa47": {
    "type": "upgrade",
    "name": "Усиление Мастеров Земли",
-   "levels": 1,
    "gold": 10000,
    "gold_per_level": 75,
    "lumber": 10000,
    "lumber_per_level": 125,
-   "time": 60,
-   "time_per_level": 15,
+   "levels": 1,
    "requires": [
     "pa25"
-   ]
+   ],
+   "time": 60,
+   "time_per_level": 15
   }
  },
  "edges": [
@@ -1549,36 +1766,36 @@
   "R007 requires hcas",
   "Rhfl requires hkee",
   "Rhfs requires hcas",
+  "h00X affected-by R003",
+  "h00X affected-by R004",
+  "h00X affected-by R006",
+  "h00X affected-by R007",
   "h00X has-ability A00A",
   "h00X has-ability A00B",
   "h00X has-ability A00I",
   "h00X has-ability Sch5",
   "h00X has-ability Sdro",
   "h00X has-ability Slo3",
-  "h00X researches R003",
-  "h00X researches R004",
-  "h00X researches R006",
-  "h00X researches R007",
+  "h00Y affected-by R002",
+  "h00Y affected-by R003",
+  "h00Y affected-by R005",
+  "h00Y affected-by R007",
   "h00Y has-ability A002",
   "h00Y has-ability A009",
   "h00Y has-ability A00A",
   "h00Y has-ability A00B",
   "h00Y has-ability A00G",
   "h00Y has-ability A1PP",
-  "h00Y researches R002",
-  "h00Y researches R003",
-  "h00Y researches R005",
-  "h00Y researches R007",
+  "h00Z affected-by R002",
+  "h00Z affected-by R003",
+  "h00Z affected-by R005",
+  "h00Z affected-by R007",
   "h00Z has-ability A001",
   "h00Z has-ability A003",
   "h00Z has-ability A009",
   "h00Z has-ability A00A",
   "h00Z has-ability A00B",
   "h00Z has-ability A00G",
-  "h00Z researches R002",
-  "h00Z researches R003",
-  "h00Z researches R005",
-  "h00Z researches R007",
   "h011 has-ability A15N",
   "h011 researches R002",
   "h011 researches R003",
@@ -1588,15 +1805,17 @@
   "h011 trains h00X",
   "h011 trains h00Y",
   "h011 trains h00Z",
-  "h0P3 researches PA80",
-  "h0P3 researches PA93",
-  "h0P4 researches PA80",
-  "h0P4 researches PA93",
+  "h0P3 affected-by PA80",
+  "h0P3 affected-by PA93",
+  "h0P4 affected-by PA80",
+  "h0P4 affected-by PA93",
+  "h0P5 affected-by PA80",
+  "h0P5 affected-by PA93",
   "h0P5 morphs-to h0P3",
   "h0P5 morphs-to h0P4",
   "h0P5 morphs-to pa34",
-  "h0P5 researches PA80",
-  "h0P5 researches PA93",
+  "pa01 affected-by PA84",
+  "pa01 affected-by PA94",
   "pa01 builds h011",
   "pa01 builds h0NZ",
   "pa01 builds h0P5",
@@ -1612,93 +1831,94 @@
   "pa01 has-ability Ahrp",
   "pa01 has-ability PA68",
   "pa01 has-ability PA79",
-  "pa01 researches PA84",
-  "pa01 researches PA94",
+  "pa04 affected-by PA12",
+  "pa04 affected-by PA81",
+  "pa04 affected-by PA84",
+  "pa04 affected-by PA85",
+  "pa04 affected-by PA95",
   "pa04 has-ability PA45",
   "pa04 has-ability PA68",
   "pa04 requires pa24",
-  "pa04 researches PA12",
-  "pa04 researches PA81",
-  "pa04 researches PA84",
-  "pa04 researches PA85",
-  "pa04 researches PA95",
+  "pa05 affected-by PA12",
+  "pa05 affected-by PA81",
+  "pa05 affected-by PA84",
   "pa05 has-ability PA68",
-  "pa05 researches PA12",
-  "pa05 researches PA81",
-  "pa05 researches PA84",
+  "pa06 affected-by PA12",
+  "pa06 affected-by PA81",
+  "pa06 affected-by PA84",
+  "pa06 affected-by PA90",
   "pa06 has-ability PA05",
   "pa06 has-ability PA16",
   "pa06 has-ability PA68",
   "pa06 requires PA83",
-  "pa06 researches PA12",
-  "pa06 researches PA81",
-  "pa06 researches PA84",
-  "pa06 researches PA90",
+  "pa07 affected-by PA12",
+  "pa07 affected-by PA81",
+  "pa07 affected-by PA84",
+  "pa07 affected-by PA87",
+  "pa07 affected-by pa46",
   "pa07 has-ability PA45",
   "pa07 has-ability PA68",
   "pa07 has-ability PA69",
   "pa07 requires pa25",
-  "pa07 researches PA12",
-  "pa07 researches PA81",
-  "pa07 researches PA84",
-  "pa07 researches PA87",
-  "pa07 researches pa46",
+  "pa08 affected-by PA12",
+  "pa08 affected-by PA81",
+  "pa08 affected-by PA84",
+  "pa08 affected-by PA88",
+  "pa08 affected-by pa16",
   "pa08 has-ability PA63",
   "pa08 has-ability PA66",
   "pa08 has-ability PA68",
   "pa08 requires pa25",
-  "pa08 researches PA12",
-  "pa08 researches PA81",
-  "pa08 researches PA84",
-  "pa08 researches PA88",
-  "pa08 researches pa16",
+  "pa09 affected-by PA12",
+  "pa09 affected-by PA81",
+  "pa09 affected-by PA84",
   "pa09 has-ability PA68",
   "pa09 has-ability PA74",
-  "pa09 researches PA12",
-  "pa09 researches PA81",
-  "pa09 researches PA84",
+  "pa10 affected-by PA11",
+  "pa10 affected-by PA12",
+  "pa10 affected-by PA14",
+  "pa10 affected-by PA81",
+  "pa10 affected-by PA84",
+  "pa10 affected-by PA85",
+  "pa10 affected-by PA95",
   "pa10 has-ability PA13",
   "pa10 has-ability PA45",
   "pa10 has-ability PA68",
   "pa10 requires pa24",
-  "pa10 researches PA11",
-  "pa10 researches PA12",
-  "pa10 researches PA14",
-  "pa10 researches PA81",
-  "pa10 researches PA84",
-  "pa10 researches PA85",
-  "pa10 researches PA95",
+  "pa11 affected-by PA12",
+  "pa11 affected-by PA81",
+  "pa11 affected-by PA84",
+  "pa11 affected-by pa21",
   "pa11 has-ability PA68",
   "pa11 requires pa24",
   "pa11 requires pa30",
-  "pa11 researches PA12",
-  "pa11 researches PA81",
-  "pa11 researches PA84",
-  "pa11 researches pa21",
+  "pa12 affected-by PA10",
+  "pa12 affected-by PA12",
+  "pa12 affected-by PA80",
+  "pa12 affected-by PA93",
   "pa12 has-ability PA62",
   "pa12 has-ability PA68",
   "pa12 requires pa30",
-  "pa12 researches PA10",
-  "pa12 researches PA12",
-  "pa12 researches PA80",
-  "pa12 researches PA93",
+  "pa13 affected-by PA12",
+  "pa13 affected-by PA80",
+  "pa13 affected-by PA86",
+  "pa13 affected-by PA93",
   "pa13 has-ability PA68",
   "pa13 has-ability PA73",
   "pa13 has-ability pa15",
   "pa13 requires pa25",
-  "pa13 researches PA12",
-  "pa13 researches PA80",
-  "pa13 researches PA86",
-  "pa13 researches PA93",
+  "pa14 affected-by PA80",
+  "pa14 affected-by PA93",
+  "pa14 affected-by Rhfl",
+  "pa14 affected-by Rhfs",
   "pa14 requires pa24",
-  "pa14 researches PA80",
-  "pa14 researches PA93",
-  "pa14 researches Rhfl",
-  "pa14 researches Rhfs",
   "pa16 requires pa25",
   "pa21 requires hbla",
   "pa21 requires hcas",
   "pa21 requires hlum",
+  "pa22 affected-by PA81",
+  "pa22 affected-by PA84",
+  "pa22 affected-by PA92",
   "pa22 has-ability APb1",
   "pa22 has-ability PA61",
   "pa22 has-ability PA67",
@@ -1709,9 +1929,6 @@
   "pa22 requires PA82",
   "pa22 requires TALT",
   "pa22 requires TWN2",
-  "pa22 researches PA81",
-  "pa22 researches PA84",
-  "pa22 researches PA92",
   "pa23 has-ability A0IQ",
   "pa23 has-ability A0LI",
   "pa23 has-ability A0LJ",
@@ -1722,6 +1939,8 @@
   "pa23 researches pa16",
   "pa23 researches pa47",
   "pa23 trains pa01",
+  "pa24 researches PA82",
+  "pa24 researches PA83",
   "pa27 trains PA36",
   "pa27 trains PA37",
   "pa27 trains PA38",
@@ -1736,11 +1955,11 @@
   "pa28 trains pa11",
   "pa28 trains pa12",
   "pa28 trains pa22",
+  "pa29 affected-by PA91",
   "pa29 has-ability A1RB",
   "pa29 has-ability PA46",
   "pa29 has-ability PA68",
   "pa29 requires pa24",
-  "pa29 researches PA91",
   "pa30 has-ability Arlm",
   "pa30 researches PA80",
   "pa30 researches PA81",
@@ -1774,21 +1993,21 @@
   "pa33 trains pa29",
   "pa33 trains pa35",
   "pa33 trains pa38",
-  "pa34 researches PA80",
-  "pa34 researches PA93",
+  "pa34 affected-by PA80",
+  "pa34 affected-by PA93",
+  "pa35 affected-by PA11",
+  "pa35 affected-by PA12",
+  "pa35 affected-by PA14",
+  "pa35 affected-by PA81",
+  "pa35 affected-by PA84",
   "pa35 has-ability PA20",
   "pa35 has-ability PA68",
   "pa35 has-ability pa36",
   "pa35 requires pa25",
-  "pa35 researches PA11",
-  "pa35 researches PA12",
-  "pa35 researches PA14",
-  "pa35 researches PA81",
-  "pa35 researches PA84",
+  "pa38 affected-by PA89",
   "pa38 has-ability PA53",
   "pa38 has-ability PA65",
   "pa38 has-ability PA68",
-  "pa38 researches PA89",
   "pa39 requires pa25",
   "pa47 requires pa25",
   "race:Pandarens lua-start-tech R0L3",

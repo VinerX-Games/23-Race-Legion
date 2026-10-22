@@ -2981,6 +2981,28 @@ function HordeUpdateResearchAvailability(p)
     allow('R0KO', completed('R0E9') and not chosen('R0EA'))
 end
 
+-- Взаимоисключающие ветки: финальный выбор Орды и Железная Орда / Ша.
+HordeResearch.rivals = {{'R0EH', 'R0E9', 'R0EI'}, {'R0EA', 'R0KO'}}
+
+function HordeResearchRival(p, id)
+    local pending = HordeResearch.pending[GetPlayerId(p)] or {}
+    for _, group in ipairs(HordeResearch.rivals) do
+        local member = false
+        for _, other in ipairs(group) do
+            if FourCC(other) == id then member = true end
+        end
+        if member then
+            for _, other in ipairs(group) do
+                local code = FourCC(other)
+                if code ~= id and (pending[code] == true or GetPlayerTechCount(p, code, true) > 0) then
+                    return true
+                end
+            end
+        end
+    end
+    return false
+end
+
 function InitTrig_HordeResearch()
     if HordeResearch.initialized then return end
     HordeResearch.initialized = true
@@ -2996,6 +3018,11 @@ function InitTrig_HordeResearch()
         local p = GetOwningPlayer(GetTriggerUnit())
         local pi = GetPlayerId(p)
         HordeResearch.pending[pi] = HordeResearch.pending[pi] or {}
+        -- Вторая ветка, поставленная в очередь до выбора первой, отменяется при старте.
+        if started and HordeResearchRival(p, id) then
+            IssueImmediateOrderById(GetTriggerUnit(), 851976) -- cancel
+            return
+        end
         HordeResearch.pending[pi][id] = started or nil
         HordeUpdateResearchAvailability(p)
         if finished then countAll(p) end

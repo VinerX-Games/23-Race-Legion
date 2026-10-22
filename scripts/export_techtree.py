@@ -29,7 +29,7 @@ RACE_TRIGGERS = MAP / "_lua/monolith_split/sections/80_runtime/triggers/04_race_
 SKIP_RACES = {"Random"}  # случайный выбор — объединение всех рас, отдельный файл не нужен
 
 FIELDS = {
-    "unit": "name,goldcost,lumbercost,fused,fmade,hp,bldtm,hotkey,requires,requires1,requiresamount,dependencyor",
+    "unit": "name,goldcost,lumbercost,fused,fmade,hp,bldtm,hotkey,requires,requires1,requiresamount,dependencyor,researches,upgrades",
     "upgrade": "name,maxlevel,goldbase,goldmod,lumberbase,lumbermod,timebase,timemod,hotkey,requires,requires1,requiresamount",
     "ability": "name,hero,item,levels,reqlevel,hotkey,requires,requiresamount",
     "item": "name,goldcost,lumbercost,hotkey,requires",
@@ -40,7 +40,8 @@ RENAME = {"goldcost": "gold", "lumbercost": "lumber", "fused": "food", "fmade": 
           "lumbermod": "lumber_per_level", "timebase": "time", "timemod": "time_per_level",
           "maxlevel": "levels", "reqlevel": "hero_level_req", "requiresamount": "requires_amount",
           "dependencyor": "equivalents"}
-LIST_FIELDS = {"requires", "requires1", "dependencyor"}
+LIST_FIELDS = {"requires", "requires1", "dependencyor", "researches", "upgrades"}
+LIST_KEYS = {"requires1": "requires", "dependencyor": "equivalents", "upgrades": "affected_by"}
 COLOR = re.compile(r"\|c[0-9a-fA-F]{8}|\|r")
 OBJECT_FIELDS_CACHE = {}
 
@@ -114,7 +115,7 @@ def object_fields(ids_by_kind, wts):
                     if value in ("", "-", "0") and key not in ("hero", "item"):
                         continue
                     if key in LIST_FIELDS:
-                        target = fields.setdefault("equivalents" if key == "dependencyor" else "requires", [])
+                        target = fields.setdefault(LIST_KEYS.get(key, key), [])
                         target += [x for x in value.split(",") if x and x not in target]
                         continue
                     if key in ("hero", "item"):
@@ -132,6 +133,22 @@ def category(node):
     if cat == "unit" and node["id"][:1].isupper():
         return "hero"
     return cat
+
+
+def normalize_research_edges(edges, nodes, fields):
+    """The CLI graph conflates research menus with UnitData 'Upgrades Used'.
+
+    Reconstruct these two relations from their distinct effective object fields.
+    An altar affected by masonry does not offer masonry in its command card.
+    """
+    unit_ids = {oid for oid, node in nodes.items() if node["category"] in {"unit", "building"}}
+    result = {edge for edge in edges
+              if not (edge.split(" ", 2)[0] in unit_ids and edge.split(" ", 2)[1] == "researches")}
+    for oid in sorted(unit_ids):
+        for field, relation in (("researches", "researches"), ("affected_by", "affected-by")):
+            for target in fields.get(oid, {}).get(field, []):
+                result.add(f"{oid} {relation} {target}")
+    return result
 
 
 def export_race(token, wts):
@@ -156,21 +173,49 @@ def export_race(token, wts):
         kind = {"building": "unit", "unit": "unit"}.get(node["category"], node["category"])
         if kind in kinds:
             kinds[kind].add(node["id"])
+    # describe-race can classify valid non-R upgrade IDs (kt01, PA85, ...)
+    # as unknown. The typed research relation tells us which object table to
+    # query; promote the node only if that read actually returns an object.
+    unknown_researches = {edge.split(" ", 2)[2] for edge in edges
+                         if edge.split(" ", 2)[1] in {"researches", "lua-start-tech", "affected-by"}
+                         and nodes.get(edge.split(" ", 2)[2], {}).get("category") == "unknown"}
+    unknown_abilities = {edge.split(" ", 2)[2] for edge in edges
+                         if edge.split(" ", 2)[1] in {"has-ability", "hero-ability"}
+                         and nodes.get(edge.split(" ", 2)[2], {}).get("category") == "unknown"}
+    # A graph keyed solely by rawcode cannot disambiguate conflicting typed
+    # references. Keep those unknown instead of borrowing another table's read.
+    ambiguous = unknown_researches & unknown_abilities
+    unknown_researches -= ambiguous
+    unknown_abilities -= ambiguous
+    kinds["upgrade"].update(unknown_researches)
+    kinds["ability"].update(unknown_abilities)
     fields = object_fields(kinds, wts)
+    for oid in unknown_researches & fields.keys():
+        nodes[oid]["category"] = "upgrade"
+    for oid in unknown_abilities & fields.keys():
+        nodes[oid]["category"] = "ability"
+    edges = normalize_research_edges(edges, nodes, fields)
 
     # требования — тоже рёбра графа; недостающие цели подтягиваем как узлы
     extra = {"unit": set(), "upgrade": set()}
+    missing_menu = set()
     for oid, f in fields.items():
+        for tech in f.get("researches", []):
+            if tech not in nodes:
+                missing_menu.add(tech)
+                extra["upgrade"].add(tech)
         for req in f.get("requires", []):
             edges.add(f"{oid} requires {req}")
             if req not in nodes:
                 extra["upgrade" if req[:1] == "R" else "unit"].add(req)
     if any(extra.values()):
         found = object_fields(extra, wts)
-        for oid in found:
-            nodes.setdefault(oid, {"id": oid, "category": "upgrade" if oid in extra["upgrade"] else "unit",
-                                   "name": "", "base_id": "", "source": "requires"})
-            fields.setdefault(oid, found[oid])
+        for oid in set().union(*extra.values()):
+            kind = "upgrade" if oid in extra["upgrade"] else "unit"
+            nodes.setdefault(oid, {"id": oid, "category": kind if oid in found else "unknown",
+                                   "name": "", "base_id": "", "source": "researches" if oid in missing_menu else "requires"})
+            if oid in found:
+                fields.setdefault(oid, found[oid])
 
     objects = {}
     for oid in sorted(nodes):

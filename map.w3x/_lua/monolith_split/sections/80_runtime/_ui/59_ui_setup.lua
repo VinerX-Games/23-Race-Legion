@@ -39,16 +39,20 @@ function UISetup()
 	BlzFrameClearAllPoints(allyButton)
 	BlzFrameClearAllPoints(chatButton)
 	BlzFrameClearAllPoints(questButton)
-	-- 2x2 grid left of the resource bar (it starts at x = 0.14).
-	local btnW, btnH, gap = 0.084, 0.0175, 0.002
+	-- 2x2 grid left of the resource bar (it starts at x = 0.14), привязана к «Справке».
+	-- Видимая рамка нативной кнопки уже фрейма примерно на inset по каждой оси,
+	-- поэтому кнопки стоят впритык с шагом «размер минус inset».
+	local btnW, btnH, inset = 0.084, 0.0175, 0.0053
+	local questX, top = 0.056, 0.599
+	local stepX, stepY = btnW - inset, btnH - inset
 	BlzFrameSetSize(fh, btnW, btnH)
 	BlzFrameSetSize(questButton, btnW, btnH)
 	BlzFrameSetSize(allyButton, btnW, btnH)
 	BlzFrameSetSize(chatButton, btnW, btnH)
-	BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPLEFT, -0.03, 0.599)
-	BlzFrameSetAbsPoint(questButton, FRAMEPOINT_TOPLEFT, -0.03 + btnW + gap, 0.599)
-	BlzFrameSetAbsPoint(chatButton, FRAMEPOINT_TOPLEFT, -0.03, 0.599 - btnH - gap)
-	BlzFrameSetAbsPoint(allyButton, FRAMEPOINT_TOPLEFT, -0.03 + btnW + gap, 0.599 - btnH - gap)
+	BlzFrameSetAbsPoint(questButton, FRAMEPOINT_TOPLEFT, questX, top)
+	BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPLEFT, questX - stepX, top)
+	BlzFrameSetAbsPoint(chatButton, FRAMEPOINT_TOPLEFT, questX - stepX, top - stepY)
+	BlzFrameSetAbsPoint(allyButton, FRAMEPOINT_TOPLEFT, questX, top - stepY)
 	
 	-- Hiding clock UI and creating new frame bar
 	BlzFrameSetTexture(imageTest, "UI\\ResourceBar.tga", 0, true)
@@ -190,6 +194,8 @@ function UISetup()
 	BlzFrameSetTexture(BlzGetFrameByName("InfoPanelIconAllyWoodIcon", 7), "UI\\RLReplacement.dds", 0, false)
 	BlzFrameSetTexture(BlzGetFrameByName("InfoPanelIconAllyFoodIcon", 7), "UI\\RSReplacement.dds", 0, false)
 	
+	-- Проходы UISetup идут и при открытой панели хоста/выбора расы: не возвращать скрытое.
+	if StandardUIHidden and StandardUISetVisible ~= nil then StandardUISetVisible(false) end
 end
 --  scope init begins
 ---@return nothing

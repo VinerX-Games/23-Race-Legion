@@ -1,0 +1,160 @@
+{
+ "scope": "Общая сверка: прямые зависимости после переработки дренеев и оставшиеся английские собственные имена нагов.",
+ "operations": [
+  {
+   "type": "ability",
+   "id": "ADr2",
+   "field": "ubertip1",
+   "value": "|cffb99d66СПОСОБНОСТЬ:|cffced4da При здоровье не ниже |cffffffff85%|cffced4da обычная атака по вражескому юниту наносит ещё |cffc8e08730|cffced4da урона. Время восстановления — |cffffffff8|cffced4da сек.; в поле собственного |cffebc56cИдола памяти|cffced4da восстановление идёт на |cffc8e08750%|cffced4da быстрее. Лечение от |cffebc56cСпасительного света|cffced4da или |cffebc56cИдола памяти|cffced4da, восстановившее не менее |cffffffff20|cffced4da ед. здоровья за один раз, сокращает оставшееся восстановление на |cffc8e0872|cffced4da сек. Не срабатывает у иллюзий и против зданий.|r"
+  },
+  {
+   "type": "ability",
+   "id": "ADr3",
+   "field": "ubertip1",
+   "value": "|cffb99d66СПОСОБНОСТЬ:|cffced4da Даёт союзному юниту |cffffffff3|cffced4da заряда на |cffffffff12|cffced4da сек. Каждая вражеская обычная атака расходует заряд и наносит на |cffc8e08730%|cffced4da меньше урона. На герое: |cffffffff2|cffced4da заряда на |cffffffff8|cffced4da сек. со снижением урона на |cffc8e08715%|cffced4da. Не действует на здания и иллюзии. Повторное применение обновляет обет; эффекты не складываются. С |cffebc56cБлагословением Наару|cffced4da применяется большее снижение урона.|r"
+  },
+  {
+   "type": "ability",
+   "id": "ADr4",
+   "field": "ubertip1",
+   "value": "|cffb99d66СПОСОБНОСТЬ:|cffced4da Восстанавливает раненому союзному органическому юниту до |cffc8e087130|cffced4da ед. здоровья, затем ещё двум ближайшим раненым союзникам — по |cffc8e08797,5|cffced4da и |cffc8e08773,125|cffced4da ед. Радиус каждого перехода — |cffffffff500|cffced4da. Не лечит здания, механизмы и иллюзии.|n|n|cfff2a35eПосле исследования |cffebc56cБлагословение Наару|cffced4da: После |cffebc56cСпасительного света|cffced4da первая цель, получившая не менее |cffffffff20|cffced4da ед. здоровья, на |cffffffff4|cffced4da сек. получает снижение вражеского урона на |cffc8e08710%|cffced4da. На герое: |cffc8e0875%|cffced4da на |cffffffff3|cffced4da сек. Благословения не складываются; с |cffebc56cОбетом защитника|cffced4da применяется большее снижение урона.|r"
+  },
+  {
+   "type": "ability",
+   "id": "ADr5",
+   "field": "ubertip1",
+   "value": "|cffb99d66СПОСОБНОСТЬ:|cffced4da Создаёт |cffebc56cИдол памяти|cffced4da на |cffffffff25|cffced4da сек. Раз в секунду в радиусе |cffffffff400|cffced4da восстанавливает до шести наиболее раненым собственным органическим юнитам по |cffc8e0872%|cffced4da максимального здоровья; героям — по |cffc8e0871%|cffced4da. Предел — |cffffffff40|cffced4da ед. здоровья за импульс на цель. В области идола восстановление |cffebc56cПризматических наконечников|cffced4da и |cffebc56cОзарённого клинка|cffced4da идёт на |cffc8e08750%|cffced4da быстрее. Эффекты нескольких идолов не складываются. Один идол на провидца: новый заменяет прежний. Не лечит здания, механизмы и иллюзии.|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "RDr1",
+   "field": "ubertip1",
+   "value": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Открывает |cffebc56cПризматические наконечники|cffced4da: два заряда усиленной обычной атаки по вражескому юниту. Выстрел наносит основной цели ещё |cffc8e0878|cffced4da урона и по |cffffffff15|cffced4da магического урона двум ближайшим врагам в радиусе |cffffffff220|cffced4da. Один заряд восстанавливается за |cffffffff18|cffced4da сек.; в поле собственного |cffebc56cИдола памяти|cffced4da — за |cffffffff12|cffced4da сек. Не срабатывает у иллюзий и против зданий; не расходует ману.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cРангари|cffced4da.|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "RDr2",
+   "field": "ubertip1",
+   "value": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Открывает |cffebc56cОзарённый клинок|cffced4da. При здоровье не ниже |cffffffff85%|cffced4da обычная атака по вражескому юниту наносит ещё |cffc8e08730|cffced4da урона. Время восстановления — |cffffffff8|cffced4da сек.; в поле собственного |cffebc56cИдола памяти|cffced4da восстановление идёт на |cffc8e08750%|cffced4da быстрее. Лечение от |cffebc56cСпасительного света|cffced4da или |cffebc56cИдола памяти|cffced4da, восстановившее не менее |cffffffff20|cffced4da ед. здоровья за один раз, сокращает оставшееся восстановление на |cffc8e0872|cffced4da сек. Не срабатывает у иллюзий и против зданий.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cМечник Озаренный|cffced4da.|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "RDr3",
+   "field": "ubertip1",
+   "value": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Открывает |cffebc56cОбет защитника|cffced4da. Даёт союзному юниту |cffffffff3|cffced4da заряда на |cffffffff12|cffced4da сек. Каждая вражеская обычная атака расходует заряд и наносит на |cffc8e08730%|cffced4da меньше урона. На герое: |cffffffff2|cffced4da заряда на |cffffffff8|cffced4da сек. со снижением урона на |cffc8e08715%|cffced4da. Не действует на здания и иллюзии. Повторное применение обновляет обет; эффекты не складываются. С |cffebc56cБлагословением Наару|cffced4da применяется большее снижение урона.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cОзаренный Паладин|cffced4da.|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "RDr4",
+   "field": "ubertip1",
+   "value": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da После |cffebc56cСпасительного света|cffced4da первая цель, получившая не менее |cffffffff20|cffced4da ед. здоровья, на |cffffffff4|cffced4da сек. получает снижение вражеского урона на |cffc8e08710%|cffced4da. На герое: |cffc8e0875%|cffced4da на |cffffffff3|cffced4da сек. Благословения не складываются; с |cffebc56cОбетом защитника|cffced4da применяется большее снижение урона.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cЖрица Наару|cffced4da.|r"
+  },
+  {
+   "type": "upgrade",
+   "id": "RDr5",
+   "field": "ubertip1",
+   "value": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Открывает |cffebc56cИдол памяти|cffced4da. Создаёт |cffebc56cИдол памяти|cffced4da на |cffffffff25|cffced4da сек. Раз в секунду в радиусе |cffffffff400|cffced4da восстанавливает до шести наиболее раненым собственным органическим юнитам по |cffc8e0872%|cffced4da максимального здоровья; героям — по |cffc8e0871%|cffced4da. Предел — |cffffffff40|cffced4da ед. здоровья за импульс на цель. В области идола восстановление |cffebc56cПризматических наконечников|cffced4da и |cffebc56cОзарённого клинка|cffced4da идёт на |cffc8e08750%|cffced4da быстрее. Эффекты нескольких идолов не складываются. Один идол на провидца: новый заменяет прежний. Не лечит здания, механизмы и иллюзии.|n|n|cffb99d66Применяется к:|cffced4da|n- |cffebc56cСломленный провидец|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h059",
+   "field": "ubertip",
+   "value": "|cffb99d66ЮНИТ:|cffced4da Воин Озарённых ближнего боя.|n|n|cffb99d66Способности:|cffced4da|n- |cffebc56cПосвященное оружие|cffced4da: наносит дополнительный урон целям с разными типами брони; требуется |cffebc56cОсвящение оружия|cffced4da.|n- |cffebc56cОзарённый клинок|cffced4da: при здоровье не ниже |cffffffff85%|cffced4da готовит удар с |cffc8e087+30|cffced4da урона; требуется одноимённое исследование. Лечение и собственный |cffebc56cИдол памяти|cffced4da ускоряют восстановление.|n|nАтакует наземные цели.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h01O",
+   "field": "ubertip",
+   "value": "|cffb99d66ЮНИТ:|cffced4da Тяжёлый воин дренеев ближнего боя. Поддерживает союзников лечением и защитой.|n|n|cffb99d66Способности:|cffced4da|n- |cffebc56cСвет небес|cffced4da: восстанавливает живому союзнику |cffc8e087150|cffced4da ед. здоровья или наносит нежити вдвое меньший урон.|n- |cffebc56cАура света|cffced4da: увеличивает восстановление здоровья союзников поблизости на |cffc8e0870,5|cffced4da ед./сек.; требуется |cffebc56cПосвящение Паладина|cffced4da, уровень |cffffffff2|cffced4da.|n- |cffebc56cВозрождение|cffced4da: позволяет возродиться после гибели; требуется |cffebc56cПосвящение Паладина|cffced4da, уровень |cffffffff3|cffced4da.|n- |cffebc56cОбет защитника|cffced4da: защищает союзника зарядами, уменьшающими урон вражеских обычных атак. На героях защита слабее и короче; требуется одноимённое исследование.|n|nАтакует наземные цели.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h01R",
+   "field": "ubertip",
+   "value": "|cffb99d66ЮНИТ:|cffced4da Жрица дренеев дальнего боя. Лечит союзников и ослабляет противников.|n|n|cffb99d66Способности:|cffced4da|n- |cffebc56cСпасительный свет|cffced4da: лечит до трёх раненых союзников. После исследования |cffebc56cБлагословение Наару|cffced4da первая существенно исцелённая цель получает временное снижение вражеского урона.|n- |cffebc56cВнутреннее жжение|cffced4da: уменьшает урон врага на |cffffffff10%|cffced4da и броню на |cffffffff5|cffced4da; требуется |cffebc56cУчение наару|cffced4da.|n- |cffebc56cВоскрешение|cffced4da: возвращает к жизни одного павшего союзного воина; требуется |cffebc56cУчение наару|cffced4da, уровень |cffffffff2|cffced4da.|n|nАтакует наземные и воздушные цели.|r"
+  },
+  {
+   "type": "ability",
+   "id": "A04T",
+   "field": "ubertip1",
+   "value": "|cffb99d66СПОСОБНОСТЬ:|cffced4da Позволяет Озарённому паладину возродиться после гибели.|r"
+  }
+ ],
+ "strings": [
+  {
+   "reference_before": "TRIGSTR_42965",
+   "before": "Yorn the Redeemer",
+   "after": "|cffebc56cЙорн Искупитель|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "H0JU",
+     "field": "upro",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_42972",
+   "before": "|cffa0d2d2Huntress|r",
+   "after": "|cffebc56cОхотница|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "H0JV",
+     "field": "upro",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_43013",
+   "before": "|cffa0d2d2MrglMrgl|r",
+   "after": "|cffebc56cМргл-Мргл|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "N07A",
+     "field": "upro",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  }
+ ],
+ "facts": {
+  "sources": {
+   "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/Draenei.lua": "f3ed5519f331540d85f22ebf7df998b0ecaffac0c3de0eea164bb7062ab5cf04",
+   "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/RedOrden.lua": "47fa05e85275ba1fb39a9e180dfb3d324a9753852f54ec863bed855b76d4b089",
+   "docs/techtree/races/Draeneis.json": "d87c9a5a4203b820a974d1737abf4ce2bf696336626312767487995eceecb807"
+  },
+  "attack_targets": {
+   "h059": "ground,structure,debris,item,ward",
+   "h01O": "ground,structure,debris,item,ward",
+   "h01R": "ground,structure,debris,air,item,ward"
+  },
+  "A054": {
+   "base": "Ainf",
+   "damage_bonus": -0.1,
+   "armor_bonus": -5
+  },
+  "A04U": {
+   "base": "AUau",
+   "regeneration": 0.5,
+   "requires": "R022 level 2"
+  },
+  "A04T": {
+   "base": "AOre",
+   "dataa1": 5,
+   "requires": "R022 level 3",
+   "reason": "Removed unverified promise of instant revival."
+  },
+  "naga_names": {
+   "42965": "Yorn the Redeemer → Йорн Искупитель",
+   "42972": "Huntress → Охотница",
+   "43013": "MrglMrgl → Мргл-Мргл"
+  }
+ }
+}

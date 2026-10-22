@@ -1,0 +1,856 @@
+{
+ "scope": "Все расы: «пища/лимит пищи/припасы» в описаниях ферм и главных зданий заменены на доход; число = фактический fmade (доход за тик 25 с, 54_count_dis.lua: income += GetUnitFoodMade)",
+ "date": "2026-10-22",
+ "changes": [
+  {
+   "id": "nntt",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_25675",
+   "fmade": "100",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание нагов первой ступени. Обеспечивает запас пищи, добычу ресурсов и выбор пути развития королевства.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРаб мурлоков|cffced4da.|n- |cffebc56cМурлок-налётчик|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cВладычество нагов|cffced4da.|n- |cffebc56cВладычество мурлоков|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cХрам Бездны|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание нагов первой ступени. Обеспечивает доход, добычу ресурсов и выбор пути развития королевства.|n|nДаёт |cffffffff100|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРаб мурлоков|cffced4da.|n- |cffebc56cМурлок-налётчик|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cВладычество нагов|cffced4da.|n- |cffebc56cВладычество мурлоков|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cХрам Бездны|cffced4da.|r"
+  },
+  {
+   "id": "nnfm",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_35937",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Ферма и источник дохода нагов. Обеспечивает войско пропитанием и приносит регулярный золотой доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит |cffffffff30|cffced4da ед. золота каждые |cffffffff25|cffced4da сек.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Ферма и источник дохода нагов. Приносит регулярный золотой доход.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "etol",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_5481",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Ночных эльфов первой ступени. Обеспечивает запас пищи и добычу ресурсов.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cОгонёк|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cКруг Кенария|cffced4da|n- |cffebc56cПуть Элуны|cffced4da|n- |cffebc56cБлагословение природы|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cДрево столетий|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Ночных эльфов первой ступени. Обеспечивает доход и добычу ресурсов.|n|nДаёт |cffffffff50|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cОгонёк|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cКруг Кенария|cffced4da|n- |cffebc56cПуть Элуны|cffced4da|n- |cffebc56cБлагословение природы|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cДрево столетий|cffced4da.|r"
+  },
+  {
+   "id": "etoa",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_10114",
+   "fmade": "100",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Ночных эльфов второй ступени. Существенно увеличивает запас пищи.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cОгонёк|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cБлагословение природы|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cДрево вечности|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Ночных эльфов второй ступени. Существенно увеличивает доход.|n|nДаёт |cffffffff100|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cОгонёк|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cБлагословение природы|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cДрево вечности|cffced4da.|r"
+  },
+  {
+   "id": "etoe",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_10115",
+   "fmade": "150",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Ночных эльфов третьей ступени. Обеспечивает максимальный запас пищи.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cОгонёк|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cБлагословение природы|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Ночных эльфов третьей ступени. Обеспечивает максимальный доход.|n|nДаёт |cffffffff150|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cОгонёк|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cБлагословение природы|cffced4da.|r"
+  },
+  {
+   "id": "emow",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31600",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Экономическое и вспомогательное сооружение. Накапливает живительную воду, восполняющую здоровье и ману союзников, а также приносит доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит |cffc8e087+20|cffced4da ед. дохода каждые |cffffffff25|cffced4da сек.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Экономическое и вспомогательное сооружение. Накапливает живительную воду, восполняющую здоровье и ману союзников, а также приносит доход.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "hhou",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_27950",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Обеспечивает армию продовольствием и увеличивает доход королевства.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи и увеличивает доход на |cffffffff40|cffced4da ед.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Увеличивает доход королевства.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "hkee",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_6464",
+   "fmade": "100",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает запас пищи и открывает новые технологии.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРаботник|cffced4da.|n|n|cffb99d66Улучшается до:|cffced4da|n- |cffebc56cЗамок|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает доход и открывает новые технологии.|n|nДаёт |cffffffff100|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРаботник|cffced4da.|n|n|cffb99d66Улучшается до:|cffced4da|n- |cffebc56cЗамок|cffced4da.|r"
+  },
+  {
+   "id": "htow",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_27956",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов, склад и базовый запас пищи.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРаботник|cffced4da.|n|n|cffb99d66Улучшается до:|cffced4da|n- |cffebc56cФорт|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов, склад и базовый доход.|n|nДаёт |cffffffff50|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРаботник|cffced4da.|n|n|cffb99d66Улучшается до:|cffced4da|n- |cffebc56cФорт|cffced4da.|r"
+  },
+  {
+   "id": "hcas",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_9936",
+   "fmade": "150",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание третьей ступени. Обеспечивает максимальный запас пищи и доступ к элитным силам Альянса.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРаботник|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание третьей ступени. Обеспечивает максимальный доход и доступ к элитным силам Альянса.|n|nДаёт |cffffffff150|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРаботник|cffced4da.|r"
+  },
+  {
+   "id": "h00A",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31606",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Жилое убежище бандитов. Обеспечивает лагерь припасами, поддерживая численность банды и принося чистый доход в казну.|n|n|cffb99d66Особенности:|cffced4da|n- Даёт |cffc8e087+20|cffced4da к доходу за выплату.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Жилое убежище бандитов. Приносит чистый доход в казну банды.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "h024",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31626",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Обеспечивает армию Кул-Тираса запасом пищи и вырабатывает регулярный доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+20|cffced4da золота каждые |cffffffff25|cffced4da сек.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Вырабатывает регулярный доход для армии Кул-Тираса.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "h031",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31636",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Обеспечивает войска Даларана запасом пищи и вырабатывает регулярный доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+20|cffced4da золота каждые |cffffffff25|cffced4da сек.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Вырабатывает регулярный доход для войск Даларана.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "h034",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_30627",
+   "fmade": "10",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Магическое сооружение первой ступени. Концентрирует запасы чародейской энергии и обеспечивает армию припасами.|n|nДаёт |cffffffff10|cffced4da ед. лимита пищи.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cХранилище Маны — уровень 2|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Магическое сооружение первой ступени. Концентрирует запасы чародейской энергии и приносит доход.|n|nДаёт |cffffffff10|cffced4da ед. дохода.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cХранилище Маны — уровень 2|cffced4da.|r"
+  },
+  {
+   "id": "h035",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_30628",
+   "fmade": "10",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Магическое сооружение второй ступени с расширенными резервуарами энергии.|n|nДаёт |cffffffff10|cffced4da ед. лимита пищи.|n|n|cffb99d66Способности:|cffced4da|n- |cffebc56cВосстановление маны|cffced4da: ускоряет регенерацию маны всех союзников по всей карте.|n- |cffebc56cВосполнить ману|cffced4da: мгновенно восстанавливает запас маны выбранного союзника.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cМагический Талисман|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Магическое сооружение второй ступени с расширенными резервуарами энергии.|n|nДаёт |cffffffff10|cffced4da ед. дохода.|n|n|cffb99d66Способности:|cffced4da|n- |cffebc56cВосстановление маны|cffced4da: ускоряет регенерацию маны всех союзников по всей карте.|n- |cffebc56cВосполнить ману|cffced4da: мгновенно восстанавливает запас маны выбранного союзника.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cМагический Талисман|cffced4da.|r"
+  },
+  {
+   "id": "h036",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_30954",
+   "fmade": "10",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Монументальный накопитель тайной магии. Аккумулирует колоссальные потоки чародейской силы и открывает высшие магические познания.|n|nДаёт |cffffffff10|cffced4da ед. лимита пищи.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cГлубокие познания|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Монументальный накопитель тайной магии. Аккумулирует колоссальные потоки чародейской силы и открывает высшие магические познания.|n|nДаёт |cffffffff10|cffced4da ед. дохода.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cГлубокие познания|cffced4da.|r"
+  },
+  {
+   "id": "h04M",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31649",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Обеспечивает армию Эльфов Крови запасом пищи и вырабатывает регулярный доход.|n|nДаёт |cffffffff15|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+40|cffced4da золота каждые |cffffffff25|cffced4da сек.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Вырабатывает регулярный доход для армии Эльфов Крови.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "h05C",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_18670",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Обеспечивает армию Дренеев продовольствием и приносит регулярный доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+40|cffced4da золота каждые |cffffffff25|cffced4da сек.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Приносит регулярный доход армии Дренеев.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "o00K",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_12989",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное святилище Культа Сумеречного Молота. Обучает батраков, исследует уровни «Фанатизма» и служит складом ресурсов.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cБатрак|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cФанатизм|cffced4da.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное святилище Культа Сумеречного Молота. Обучает батраков, исследует уровни «Фанатизма» и служит складом ресурсов.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cБатрак|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cФанатизм|cffced4da.|n|nДаёт |cffffffff50|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "o00T",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31676",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Обеспечивает армию Культа Сумеречного Молота припасами. Позволяет батракам укрыться внутри и вести огонь по противникам.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+20|cffced4da золота каждые |cffffffff25|cffced4da сек.|n|n|cffb99d66Атакует наземные и воздушные цели.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Приносит доход Культу Сумеречного Молота. Позволяет батракам укрыться внутри и вести огонь по противникам.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|n|n|cffb99d66Атакует наземные и воздушные цели.|r"
+  },
+  {
+   "id": "h070",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_6490",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное командное и экономическое здание картеля. Служит складом ресурсов, даёт начальные припасы и позволяет объявить город столицей.|r|n|n|cffb99d66Обучает:|r|n- |cffebc56cКрошшер|r|n|n|cffb99d66Исследования:|r|n- |cffebc56cРасширить банковский сектор|r|n|n|cffb99d66Особенности:|r|n|cffced4da- Столица: объявляет базу столицей государства.|r|n|cffced4da- Торговля: позволяет обменивать золото на древесину и древесину на золото.|r|n|cffced4da- Коррупция: позволяет регулировать уровень коррупции картеля.|r|n|cffced4da- Припасы: |cffffffff+50|r единиц.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное командное и экономическое здание картеля. Служит складом ресурсов, даёт начальный доход и позволяет объявить город столицей.|r|n|n|cffb99d66Обучает:|r|n- |cffebc56cКрошшер|r|n|n|cffb99d66Исследования:|r|n- |cffebc56cРасширить банковский сектор|r|n|n|cffb99d66Особенности:|r|n|cffced4da- Столица: объявляет базу столицей государства.|r|n|cffced4da- Торговля: позволяет обменивать золото на древесину и древесину на золото.|r|n|cffced4da- Коррупция: позволяет регулировать уровень коррупции картеля.|r|n|cffced4da- Доход: |cffffffff+50|r единиц.|r"
+  },
+  {
+   "id": "h077",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_20481",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Финансовый центр картеля. Обеспечивает кланы припасами и генерирует стабильный доход для расширения империи.|r|n|n|cffb99d66Особенности:|r|n|cffced4da- Доход: приносит |cffffffff+40|r золота каждые |cffffffff25|r с.|r|n|cffced4da- Припасы: |cffffffff+40|r единиц.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Финансовый центр картеля. Генерирует стабильный доход для расширения империи.|r|n|n|cffb99d66Особенности:|r|n|cffced4da- Доход: |cffffffff+40|r единиц.|r"
+  },
+  {
+   "id": "u00H",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_41909",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Опорное строение Плети. Обеспечивает базу припасами и приносит регулярный доход в казну. Может быть перестроено в оборонительную башню.|n|n|cffb99d66Особенности:|cffced4da|n- Даёт |cffc8e087+40|cffced4da к доходу за выплату.|n|n|cffb99d66Улучшается до:|cffced4da|n- |cffebc56cБашня духов|cffced4da.|n- |cffebc56cНерубская башня|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Опорное строение Плети. Приносит регулярный доход в казну. Может быть перестроено в оборонительную башню.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|n|n|cffb99d66Улучшается до:|cffced4da|n- |cffebc56cБашня духов|cffced4da.|n- |cffebc56cНерубская башня|cffced4da.|r"
+  },
+  {
+   "id": "h0BT",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31667",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|r |cffced4daЖилое жилище врайкулов. Обеспечивает поселение припасами и увеличивает базовый доход.|n|nПриносит |cffc8e087+20|cffced4da ед. золотого дохода каждые 25 сек.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|r |cffced4daЖилое жилище врайкулов. Увеличивает базовый доход поселения.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "e00N",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31705",
+   "fmade": "30",
+   "text": "|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.\r\n\r\n|cffffff00Приносит 7 инкома|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Увеличивает доход.|n|nДаёт |cffffffff30|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "h0CE",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31698",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Обеспечивает армию Ночнорождённых запасом пищи и вырабатывает регулярный доход.|n|nДаёт |cffffffff15|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+20|cffced4da золота каждые |cffffffff25|cffced4da сек.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Вырабатывает регулярный доход для армии Ночнорождённых.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "u019",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_21249",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Базовая основа для возведения любых сооружений Нерубов. Даёт лимит пищи и доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+30|cffced4da золота каждые |cffffffff25|cffced4da сек.|n|n|cffb99d66Мутирует в:|cffced4da любое здание Нерубов.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Базовая основа для возведения любых сооружений Нерубов. Даёт доход.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|n|n|cffb99d66Мутирует в:|cffced4da любое здание Нерубов.|r"
+  },
+  {
+   "id": "h0CO",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_13023",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Нерубов первой ступени. Обеспечивает запас пищи и добычу ресурсов.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cПалаты Нерубов|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Нерубов первой ступени. Обеспечивает доход и добычу ресурсов.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cПалаты Нерубов|cffced4da.|r"
+  },
+  {
+   "id": "e01H",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_9657",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает запас пищи и производит личинок роя.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cМать роя|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cЗащитная оболочка зданий|cffced4da|n- |cffebc56cПосвящение матерей|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cМегаулей|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание первой ступени. Приносит доход и производит личинок роя.|n|nДаёт |cffffffff50|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cМать роя|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cЗащитная оболочка зданий|cffced4da|n- |cffebc56cПосвящение матерей|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cМегаулей|cffced4da.|r"
+  },
+  {
+   "id": "o016",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_18417",
+   "fmade": "3",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Святилище коммерции и наёмного контракта. Позволяет призывать уникальных лидеров гоблинов и возвращать к жизни павших героев.|r|n|n|cffb99d66Обучает:|r|n- |cffebc56cСпецназовец|r|n- |cffebc56cАлхимик|r|n- |cffebc56cМеханик|r|n|n|cffb99d66Нанимает:|r|n- |cffebc56cМаг телепортации|r|n|n|cffb99d66Особенности:|r|n|cffced4da- Воскрешает павших героев.|r|n|cffced4da- Припасы: |cffffffff+3|r единицы.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Святилище коммерции и наёмного контракта. Позволяет призывать уникальных лидеров гоблинов и возвращать к жизни павших героев.|r|n|n|cffb99d66Обучает:|r|n- |cffebc56cСпецназовец|r|n- |cffebc56cАлхимик|r|n- |cffebc56cМеханик|r|n|n|cffb99d66Нанимает:|r|n- |cffebc56cМаг телепортации|r|n|n|cffb99d66Особенности:|r|n|cffced4da- Воскрешает павших героев.|r|n|cffced4da- Доход: |cffffffff+3|r единицы.|r"
+  },
+  {
+   "id": "e020",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_9708",
+   "fmade": "150",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Высшее главное здание третьей ступени. Обеспечивает максимальный запас пищи роя.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cМать роя|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cЗащитная оболочка зданий|cffced4da|n- |cffebc56cПосвящение матерей|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Высшее главное здание третьей ступени. Обеспечивает максимальный доход роя.|n|nДаёт |cffffffff150|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cМать роя|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cЗащитная оболочка зданий|cffced4da|n- |cffebc56cПосвящение матерей|cffced4da.|r"
+  },
+  {
+   "id": "e021",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_9719",
+   "fmade": "100",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает запас пищи.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cМать роя|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cЗащитная оболочка зданий|cffced4da|n- |cffebc56cПосвящение матерей|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cСверхулей|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает доход.|n|nДаёт |cffffffff100|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cМать роя|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cЗащитная оболочка зданий|cffced4da|n- |cffebc56cПосвящение матерей|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cСверхулей|cffced4da.|r"
+  },
+  {
+   "id": "h0DS",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31733",
+   "fmade": "40",
+   "text": "|cff7dc87dВремя строительства:|r |cffaaf0aa1 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.\r\n\r\n|cffffff00Приносит 34 инкома|r",
+   "new": "|cff7dc87dВремя строительства:|r |cffaaf0aa1 сек.|r|n|nДаёт |cffffffff40|cffced4da ед. дохода.|n|nУвеличивает доход."
+  },
+  {
+   "id": "h0EC",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_42689",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Обеспечивает армию Иллидари запасом пищи и вырабатывает регулярный доход.|n|nДаёт |cffffffff15|cffced4da ед. лимита пищи.|nПриносит доход |cffc8e087+40|cffced4da золота каждые |cffffffff25|cffced4da сек.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Вырабатывает регулярный доход для армии Иллидари.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "h0EQ",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_8099",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное святилище и центр концентрации первичных стихий. Позволяет призывать духов стихий, добывать и складировать ресурсы. Приносит |cffffffff1500|cffced4da ед. золота каждые |cffffffff25|cffced4da сек. и даёт |cffffffff50|cffced4da ед. пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cДух стихий|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cНаполнитель стихий|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное святилище и центр концентрации первичных стихий. Позволяет призывать духов стихий, добывать и складировать ресурсы.|n|nДаёт |cffffffff50|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cДух стихий|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cНаполнитель стихий|cffced4da.|r"
+  },
+  {
+   "id": "h0ER",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_15037",
+   "fmade": "100",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Развитое святилище стихий второго уровня. Позволяет призывать духов стихий, открывает доступ к новым типам стихийных войск и улучшениям. Приносит |cffffffff1500|cffced4da ед. золота каждые |cffffffff25|cffced4da сек. и увеличивает лимит пищи до |cffffffff100|cffced4da ед.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cДух стихий|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cСтихийный Бастион|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Развитое святилище стихий второго уровня. Позволяет призывать духов стихий, открывает доступ к новым типам стихийных войск и улучшениям.|n|nДаёт |cffffffff100|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cДух стихий|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cСтихийный Бастион|cffced4da.|r"
+  },
+  {
+   "id": "h0ES",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_15040",
+   "fmade": "150",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Высшая цитадель могущества стихий третьего уровня. Открывает доступ к элитным воинам стихий и высшим элементальным воплощениям. Приносит |cffffffff1500|cffced4da ед. золота каждые |cffffffff25|cffced4da сек. и увеличивает лимит пищи до |cffffffff150|cffced4da ед.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cДух стихий|cffced4da.|n- |cffebc56cОсобый Огня|cffced4da.|n- |cffebc56cОсобый Воды|cffced4da.|n- |cffebc56cОсобый Земли|cffced4da.|n- |cffebc56cОсобый Ветра|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Высшая цитадель могущества стихий третьего уровня. Открывает доступ к элитным воинам стихий и высшим элементальным воплощениям.|n|nДаёт |cffffffff150|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cДух стихий|cffced4da.|n- |cffebc56cОсобый Огня|cffced4da.|n- |cffebc56cОсобый Воды|cffced4da.|n- |cffebc56cОсобый Земли|cffced4da.|n- |cffebc56cОсобый Ветра|cffced4da.|r"
+  },
+  {
+   "id": "h0EX",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_30661",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Энергетический кристалл стихийного снабжения. Предоставляет пищу для поддержания стихийной армии и генерирует регулярный доход золота.|n|n|cffb99d66Свойства:|cffced4da|n- Предоставляет |cffffffff40|cffced4da ед. пищи.|n- Приносит |cffffffff30|cffced4da ед. золота каждые |cffffffff25|cffced4da сек.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Энергетический кристалл стихийного снабжения. Генерирует регулярный доход золота для стихийной армии.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "h0EY",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_12980",
+   "fmade": "3",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Священный алтарь героев стихий. Позволяет призывать великих лордов стихий и воскрешать павших героев. Предоставляет |cffffffff3|cffced4da ед. пищи.|n|n|cffb99d66Герои:|cffced4da|n- |cffebc56cКристальный владыка|cffced4da.|n- |cffebc56cМастер ветра|cffced4da.|n- |cffebc56cПовелитель огня|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Священный алтарь героев стихий. Позволяет призывать великих лордов стихий и воскрешать павших героев. Предоставляет |cffffffff3|cffced4da ед. дохода.|n|n|cffb99d66Герои:|cffced4da|n- |cffebc56cКристальный владыка|cffced4da.|n- |cffebc56cМастер ветра|cffced4da.|n- |cffebc56cПовелитель огня|cffced4da.|r"
+  },
+  {
+   "id": "e02E",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": null,
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Священный источник живительной влаги. Обеспечивает поселение пищей, восстанавливает здоровье и ману союзным войскам, а также приносит доход в |cffffffff+7|cffced4da золота каждые |cffffffff25|cffced4da сек.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Священный источник живительной влаги. Восстанавливает здоровье и ману союзным войскам.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "h0F6",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31717",
+   "fmade": "300",
+   "text": "|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.\r\n\r\n|cffffff00Приносит 20 инкома|r",
+   "new": "|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nДаёт |cffffffff300|cffced4da ед. дохода.|n|nУвеличивает доход."
+  },
+  {
+   "id": "h0FK",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_8105",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание гномов первой ступени. Обеспечивает добычу ресурсов и обучает рабочих.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cИнженер|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cВооружение|cffced4da|n- |cffebc56cПрочные детали|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cГлавный цех, V2|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание гномов первой ступени. Обеспечивает добычу ресурсов и обучает рабочих.|n|nДаёт |cffffffff50|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cИнженер|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cВооружение|cffced4da|n- |cffebc56cПрочные детали|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cГлавный цех, V2|cffced4da.|r"
+  },
+  {
+   "id": "h0FL",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_2764",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Энергетическое сооружение гномов, обеспечивающее запас пищи и доход.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|n|n|cffb99d66Способности:|cffced4da|n- |cffebc56cСменить режим|cffced4da: переходит в активный боевой режим для обороны базы.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Энергетическое сооружение гномов, приносящее доход.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|n|n|cffb99d66Способности:|cffced4da|n- |cffebc56cСменить режим|cffced4da: переходит в активный боевой режим для обороны базы.|r"
+  },
+  {
+   "id": "h0FR",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_8114",
+   "fmade": "100",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание гномов второй ступени. Существенно увеличивает запас пищи и открывает новые постройки.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cИнженер|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cВооружение|cffced4da|n- |cffebc56cПрочные детали|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cГлавный цех, V3|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание гномов второй ступени. Существенно увеличивает доход и открывает новые постройки.|n|nДаёт |cffffffff100|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cИнженер|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cВооружение|cffced4da|n- |cffebc56cПрочные детали|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cГлавный цех, V3|cffced4da.|r"
+  },
+  {
+   "id": "h0FS",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_8127",
+   "fmade": "150",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание гномов третьей ступени. Обеспечивает максимальный запас пищи.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cИнженер|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cВооружение|cffced4da|n- |cffebc56cПрочные детали|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание гномов третьей ступени. Обеспечивает максимальный доход.|n|nДаёт |cffffffff150|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cИнженер|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cВооружение|cffced4da|n- |cffebc56cПрочные детали|cffced4da.|r"
+  },
+  {
+   "id": "h0IJ",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_10184",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Гилнеаса первой ступени. Обеспечивает запас пищи и добычу ресурсов.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПостройщик|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cФорт|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Гилнеаса первой ступени. Обеспечивает доход и добычу ресурсов.|n|nДаёт |cffffffff50|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПостройщик|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cФорт|cffced4da.|r"
+  },
+  {
+   "id": "h0IK",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_27622",
+   "fmade": "100",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Гилнеаса второй ступени. Существенно увеличивает запас пищи.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПостройщик|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cЗамок|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Гилнеаса второй ступени. Существенно увеличивает доход.|n|nДаёт |cffffffff100|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПостройщик|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cЗамок|cffced4da.|r"
+  },
+  {
+   "id": "h0IL",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_27623",
+   "fmade": "150",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Гилнеаса третьей ступени. Обеспечивает максимальный запас пищи.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПостройщик|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Гилнеаса третьей ступени. Обеспечивает максимальный доход.|n|nДаёт |cffffffff150|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПостройщик|cffced4da.|r"
+  },
+  {
+   "id": "h0IM",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31862",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Обеспечивает армию королевства продовольствием.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Приносит доход королевству.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "h0JD",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31786",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Жилое сооружение Отрекшихся. Обеспечивает запас пищи и приносит регулярный доход в казну.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|nПриносит |cffffffff+20|cffced4da ед. дохода каждые |cffffffff25|cffced4da сек.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Жилое сооружение Отрекшихся. Приносит регулярный доход в казну.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "h0JL",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31890",
+   "fmade": "150",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Отрекшихся третьей ступени. Обеспечивает максимальный запас пищи и защиту королевства.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cСтроитель|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Отрекшихся третьей ступени. Обеспечивает максимальный доход и защиту королевства.|n|nДаёт |cffffffff150|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cСтроитель|cffced4da.|r"
+  },
+  {
+   "id": "h0JP",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_35934",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Отрекшихся первой ступени. Обеспечивает добычу ресурсов и базовый запас пищи.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cСтроитель|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cКрепость|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Отрекшихся первой ступени. Обеспечивает добычу ресурсов и базовый доход.|n|nДаёт |cffffffff50|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cСтроитель|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cКрепость|cffced4da.|r"
+  },
+  {
+   "id": "h0JQ",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31895",
+   "fmade": "100",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Отрекшихся второй ступени. Существенно увеличивает запас пищи и открывает передовые сооружения.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cСтроитель|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cБастион|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Отрекшихся второй ступени. Существенно увеличивает доход и открывает передовые сооружения.|n|nДаёт |cffffffff100|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cСтроитель|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cБастион|cffced4da.|r"
+  },
+  {
+   "id": "h0JX",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_42993",
+   "fmade": "100",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание нагов второй ступени. Служит центром сбора ресурсов и увеличивает запас пищи.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРаб мурлоков|cffced4da.|n- |cffebc56cМурлок-налётчик|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cКоралловый храм|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание нагов второй ступени. Служит центром сбора ресурсов и увеличивает доход.|n|nДаёт |cffffffff100|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРаб мурлоков|cffced4da.|n- |cffebc56cМурлок-налётчик|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cКоралловый храм|cffced4da.|r"
+  },
+  {
+   "id": "h0JY",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_42996",
+   "fmade": "150",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание нагов третьей ступени. Обеспечивает максимальный запас пищи и открывает высшие технологии расы.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРаб мурлоков|cffced4da.|n- |cffebc56cМурлок-налётчик|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание нагов третьей ступени. Обеспечивает максимальный доход и открывает высшие технологии расы.|n|nДаёт |cffffffff150|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРаб мурлоков|cffced4da.|n- |cffebc56cМурлок-налётчик|cffced4da.|r"
+  },
+  {
+   "id": "o035",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_3536",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов и начальный лимит пищи.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cОгр-Строитель|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cКрепость огров|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов и начальный доход.|n|nДаёт |cffffffff50|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cОгр-Строитель|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cКрепость огров|cffced4da.|r"
+  },
+  {
+   "id": "o036",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_11344",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Обеспечивает армию огров провизией. Позволяет укрывать рабочих для защиты от врагов.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Приносит доход армии огров. Позволяет укрывать рабочих для защиты от врагов.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "o03D",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_35441",
+   "fmade": "100",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает запас пищи и открывает доступ к новым постройкам.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cОгр-Строитель|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cЦитадель огров|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает доход и открывает доступ к новым постройкам.|n|nДаёт |cffffffff100|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cОгр-Строитель|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cЦитадель огров|cffced4da.|r"
+  },
+  {
+   "id": "o03E",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_35442",
+   "fmade": "150",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание третьей ступени. Обеспечивает максимальный запас пищи и открывает все технологии расы.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cОгр-Строитель|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание третьей ступени. Обеспечивает максимальный доход и открывает все технологии расы.|n|nДаёт |cffffffff150|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cОгр-Строитель|cffced4da.|r"
+  },
+  {
+   "id": "h0LA",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31767",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|r |cffced4daОбеспечивает гарнизон продовольствием и припасами.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|r |cffced4daПриносит доход гарнизону.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "h0MT",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_32614",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание лесных троллей первой ступени. Обеспечивает добычу ресурсов, начальный запас пищи и основу базы.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРемесленник|cffced4da.|n- |cffebc56cСобиратель|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cКрепость вождей|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание лесных троллей первой ступени. Обеспечивает добычу ресурсов, начальный доход и основу базы.|n|nДаёт |cffffffff50|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРемесленник|cffced4da.|n- |cffebc56cСобиратель|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cКрепость вождей|cffced4da.|r"
+  },
+  {
+   "id": "h0MV",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_37485",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Традиционное жилище троллей. Обеспечивает лимит пищи и приносит регулярный доход золота в казну каждые |cffffffff25|cffced4da сек.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Традиционное жилище троллей. Приносит регулярный доход золота в казну.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "h0N1",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_32605",
+   "fmade": "100",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Троллей джунглей второй ступени. Существенно увеличивает запас пищи и открывает доступ к новым постройкам.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРемесленник|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cЦитадель вождей|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Троллей джунглей второй ступени. Существенно увеличивает доход и открывает доступ к новым постройкам.|n|nДаёт |cffffffff100|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРемесленник|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cЦитадель вождей|cffced4da.|r"
+  },
+  {
+   "id": "h0N2",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_32612",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Базовое жилище троллей. Обеспечивает лимит пищи, приносит регулярный доход золота и способно обороняться дистанционными атаками.|n|nДаёт |cffffffff10|cffced4da ед. лимита пищи.|nПриносит регулярный доход золота каждые |cffffffff25|cffced4da сек.|n|n|cffb99d66Атакует наземные и воздушные цели.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Базовое жилище троллей. Приносит регулярный доход золота и способно обороняться дистанционными атаками.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|n|n|cffb99d66Атакует наземные и воздушные цели.|r"
+  },
+  {
+   "id": "h0N5",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_33542",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Троллей джунглей первой ступени. Обеспечивает запас пищи, добычу ресурсов и выбор направления развития расы.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРемесленник|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cЧёрное Копьё|cffced4da.|n- |cffebc56cИмперия Гурубаши|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cКрепость вождей|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Троллей джунглей первой ступени. Обеспечивает доход, добычу ресурсов и выбор направления развития расы.|n|nДаёт |cffffffff50|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРемесленник|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cЧёрное Копьё|cffced4da.|n- |cffebc56cИмперия Гурубаши|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cКрепость вождей|cffced4da.|r"
+  },
+  {
+   "id": "h0N6",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_32615",
+   "fmade": "150",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Троллей джунглей третьей ступени. Обеспечивает максимальный запас пищи и защиту племени.|n|nДаёт |cffffffff160|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРемесленник|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cЗащита столицы|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание Троллей джунглей третьей ступени. Обеспечивает максимальный доход и защиту племени.|n|nДаёт |cffffffff150|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРемесленник|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cЗащита столицы|cffced4da.|r"
+  },
+  {
+   "id": "h0N8",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_33548",
+   "fmade": "100",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание лесных троллей второй ступени. Существенно увеличивает запас пищи и открывает доступ к новым постройкам.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРемесленник|cffced4da.|n- |cffebc56cСобиратель|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cЦитадель вождей|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание лесных троллей второй ступени. Существенно увеличивает доход и открывает доступ к новым постройкам.|n|nДаёт |cffffffff100|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРемесленник|cffced4da.|n- |cffebc56cСобиратель|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cЦитадель вождей|cffced4da.|r"
+  },
+  {
+   "id": "h0N9",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_33549",
+   "fmade": "150",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание лесных троллей третьей ступени. Обеспечивает максимальный запас пищи и открывает доступ ко всем технологиям расы.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРемесленник|cffced4da.|n- |cffebc56cСобиратель|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание лесных троллей третьей ступени. Обеспечивает максимальный доход и открывает доступ ко всем технологиям расы.|n|nДаёт |cffffffff150|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРемесленник|cffced4da.|n- |cffebc56cСобиратель|cffced4da.|r"
+  },
+  {
+   "id": "o05V",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_20727",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов и начальный лимит пищи.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cБатрак Скверны|cffced4da.|n- |cffebc56cМутировавший Батрак|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cГрабеж|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cКрепость|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов и начальный доход.|n|nДаёт |cffffffff50|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cБатрак Скверны|cffced4da.|n- |cffebc56cМутировавший Батрак|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cГрабеж|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cКрепость|cffced4da.|r"
+  },
+  {
+   "id": "o05W",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_21453",
+   "fmade": "100",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает запас пищи и открывает доступ к новым постройкам.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cБатрак Скверны|cffced4da.|n- |cffebc56cМутировавший Батрак|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cГрабеж|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cЦитадель|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает доход и открывает доступ к новым постройкам.|n|nДаёт |cffffffff100|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cБатрак Скверны|cffced4da.|n- |cffebc56cМутировавший Батрак|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cГрабеж|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cЦитадель|cffced4da.|r"
+  },
+  {
+   "id": "o05X",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_25409",
+   "fmade": "150",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание третьей ступени. Обеспечивает максимальный запас пищи и открывает все технологии расы.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cБатрак Скверны|cffced4da.|n- |cffebc56cМутировавший Батрак|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cГрабеж|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание третьей ступени. Обеспечивает максимальный доход и открывает все технологии расы.|n|nДаёт |cffffffff150|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cБатрак Скверны|cffced4da.|n- |cffebc56cМутировавший Батрак|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cГрабеж|cffced4da.|r"
+  },
+  {
+   "id": "o060",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_31830",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Обеспечивает армию Орды Скверны провизией. Позволяет укрывать батраков для защиты базы.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|n|n|cffb99d66Атакует наземные и воздушные цели|cffced4da (при укрытии батраков).|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Приносит доход армии Орды Скверны. Позволяет укрывать батраков для защиты базы.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|n|n|cffb99d66Атакует наземные и воздушные цели|cffced4da (при укрытии батраков).|r"
+  },
+  {
+   "id": "cD24",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_35969",
+   "fmade": "150",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание третьей ступени. Обеспечивает максимальный запас пищи и открывает все технологии Культа Проклятых.|n|nДаёт |cffffffff150|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПослушник|cffced4da.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание третьей ступени. Обеспечивает максимальный доход и открывает все технологии Культа Проклятых.|n|nДаёт |cffffffff150|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПослушник|cffced4da.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+  },
+  {
+   "id": "cD25",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_35970",
+   "fmade": "100",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает запас пищи и открывает доступ к новым постройкам и улучшениям.|n|nДаёт |cffffffff100|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПослушник|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cТёмная цитадель|cffced4da.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание второй ступени. Существенно увеличивает доход и открывает доступ к новым постройкам и улучшениям.|n|nДаёт |cffffffff100|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПослушник|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cТёмная цитадель|cffced4da.|n|nАтакует |cffffffffназемные|cffced4da и |cffffffffвоздушные|cffced4da цели.|r"
+  },
+  {
+   "id": "cD26",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_35949",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов, сбор древесины и начальный запас пищи.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПослушник|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cЧертоги мёртвых|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов, сбор древесины и начальный доход.|n|nДаёт |cffffffff50|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПослушник|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cЧертоги мёртвых|cffced4da.|r"
+  },
+  {
+   "id": "pa23",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_2214",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|r |cffced4daГлавное здание первой ступени. Обеспечивает добычу ресурсов и начальный лимит пищи.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|r|cffced4da|n- |cffebc56cРабочий Пандаренов|cffced4da.|n|n|cffb99d66Исследования:|r|cffced4da|n- |cffebc56cУсиление Мастеров Земли|cffced4da|n- |cffebc56cУсиление Мастеров Огня|cffced4da|n- |cffebc56cИзучение Хмелеварения|cffced4da|n- |cffebc56cИзучить Геомантию|cffced4da.|n|n|cffb99d66Улучшение:|r|cffced4da|n- |cffebc56cКрепость Четырёх Мастеров|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|r |cffced4daГлавное здание первой ступени. Обеспечивает добычу ресурсов и начальный доход.|n|nДаёт |cffffffff50|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|r|cffced4da|n- |cffebc56cРабочий Пандаренов|cffced4da.|n|n|cffb99d66Исследования:|r|cffced4da|n- |cffebc56cУсиление Мастеров Земли|cffced4da|n- |cffebc56cУсиление Мастеров Огня|cffced4da|n- |cffebc56cИзучение Хмелеварения|cffced4da|n- |cffebc56cИзучить Геомантию|cffced4da.|n|n|cffb99d66Улучшение:|r|cffced4da|n- |cffebc56cКрепость Четырёх Мастеров|cffced4da.|r"
+  },
+  {
+   "id": "pa26",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_2241",
+   "fmade": "65",
+   "text": "|cffb99d66ЗДАНИЕ:|r |cffced4daОбеспечивает армию пандаренов провизией. Увеличение числа ферм усиливает здоровье воинов по расовой способности.|n|nДаёт |cffffffff20|cffced4da ед. лимита пищи.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|r |cffced4daПриносит доход армии пандаренов. Увеличение числа ферм усиливает здоровье воинов по расовой способности.|n|nДаёт |cffffffff65|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "h0NZ",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_3593",
+   "fmade": "100",
+   "text": "|cffb99d66ЗДАНИЕ:|r |cffced4daОбеспечивает припасами и свежей рыбой армию пандаренов. Засчитывается для перехода на следующие ступени цитадели.|n|nДаёт |cffffffff20|cffced4da ед. лимита пищи.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|r |cffced4daПриносит доход армии пандаренов. Засчитывается для перехода на следующие ступени цитадели.|n|nДаёт |cffffffff100|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "w20q",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_29700",
+   "fmade": "50",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов, начальный запас пищи и доступ к базовым сооружениям.|n|nДаёт |cffffffff50|cffced4da ед. лимита пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cБатрак|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cВоенная экспертиза|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cКрепость|cffced4da.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Главное здание первой ступени. Обеспечивает добычу ресурсов, начальный доход и доступ к базовым сооружениям.|n|nДаёт |cffffffff50|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cБатрак|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cВоенная экспертиза|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cКрепость|cffced4da.|r"
+  },
+  {
+   "id": "w20y",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_29732",
+   "fmade": "40",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Обеспечивает армию Орды провизией и увеличивает лимит войск.|n|nДаёт |cffffffff40|cffced4da ед. лимита пищи.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Приносит доход армии Орды.|n|nДаёт |cffffffff40|cffced4da ед. дохода.|r"
+  },
+  {
+   "id": "o06H",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": null,
+   "fmade": "3",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Святилище для призыва великих Лоа или поглощения их сил. Обеспечивает |cffffffff3|cffced4da ед. пищи.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cАкали|cffced4da (требуется.|n- |cffebc56cМам'тот|cffced4da (требуется.|n- |cffebc56cРунок|cffced4da (требуется.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПоглощение Акали|cffced4da (требуется.|n- |cffebc56cПоглощение Мам'Тота|cffced4da (требуется.|n- |cffebc56cПоглощение Рунока|cffced4da (требуется.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cАлтарь Рунока|cffced4da (требуется.|n- |cffebc56cАлтарь Акали|cffced4da (требуется.|n- |cffebc56cАлтарь Мам'Тота|cffced4da (требуется.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Святилище для призыва великих Лоа или поглощения их сил. Обеспечивает |cffffffff3|cffced4da ед. дохода.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cАкали|cffced4da (требуется.|n- |cffebc56cМам'тот|cffced4da (требуется.|n- |cffebc56cРунок|cffced4da (требуется.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПоглощение Акали|cffced4da (требуется.|n- |cffebc56cПоглощение Мам'Тота|cffced4da (требуется.|n- |cffebc56cПоглощение Рунока|cffced4da (требуется.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cАлтарь Рунока|cffced4da (требуется.|n- |cffebc56cАлтарь Акали|cffced4da (требуется.|n- |cffebc56cАлтарь Мам'Тота|cffced4da (требуется.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+  },
+  {
+   "id": "e03C",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": "TRIGSTR_41147",
+   "fmade": "30",
+   "text": "|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.\r\n\r\n|cffffff00Приносит 7 инкома|r",
+   "new": "|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nДаёт |cffffffff30|cffced4da ед. дохода.|n|nУвеличивает доход."
+  },
+  {
+   "id": "o06I",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": null,
+   "fmade": "3",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Специализированное святилище Лоа Рунока. Обеспечивает |cffffffff3|cffced4da ед. пищи и открывает способности Рунока: «Ярость» и «Аура Рунока».|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРунок|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПоглощение Акали|cffced4da (требуется.|n- |cffebc56cПоглощение Мам'Тота|cffced4da (требуется.|n- |cffebc56cПоглощение Рунока|cffced4da (требуется.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Специализированное святилище Лоа Рунока. Обеспечивает |cffffffff3|cffced4da ед. дохода и открывает способности Рунока: «Ярость» и «Аура Рунока».|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРунок|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПоглощение Акали|cffced4da (требуется.|n- |cffebc56cПоглощение Мам'Тота|cffced4da (требуется.|n- |cffebc56cПоглощение Рунока|cffced4da (требуется.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+  },
+  {
+   "id": "o06J",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": null,
+   "fmade": "3",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Специализированное святилище Лоа Акали. Обеспечивает |cffffffff3|cffced4da ед. пищи и открывает способности Акали: «Аура Акали» и «Раздвоенная молния».|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cАкали|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПоглощение Акали|cffced4da (требуется.|n- |cffebc56cПоглощение Мам'Тота|cffced4da (требуется.|n- |cffebc56cПоглощение Рунока|cffced4da (требуется.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Специализированное святилище Лоа Акали. Обеспечивает |cffffffff3|cffced4da ед. дохода и открывает способности Акали: «Аура Акали» и «Раздвоенная молния».|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cАкали|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПоглощение Акали|cffced4da (требуется.|n- |cffebc56cПоглощение Мам'Тота|cffced4da (требуется.|n- |cffebc56cПоглощение Рунока|cffced4da (требуется.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+  },
+  {
+   "id": "o06K",
+   "file": "war3map.w3u",
+   "field": "utub",
+   "lvl": 0,
+   "ref": null,
+   "fmade": "3",
+   "text": "|cffb99d66ЗДАНИЕ:|cffced4da Специализированное святилище Лоа Мам'Тота. Обеспечивает |cffffffff3|cffced4da ед. пищи и открывает способности Мам'Тота: «Реинкарнация» и «Аура Мам'Тота».|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cМам'тот|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПоглощение Акали|cffced4da (требуется.|n- |cffebc56cПоглощение Мам'Тота|cffced4da (требуется.|n- |cffebc56cПоглощение Рунока|cffced4da (требуется.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r",
+   "new": "|cffb99d66ЗДАНИЕ:|cffced4da Специализированное святилище Лоа Мам'Тота. Обеспечивает |cffffffff3|cffced4da ед. дохода и открывает способности Мам'Тота: «Реинкарнация» и «Аура Мам'Тота».|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cМам'тот|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПоглощение Акали|cffced4da (требуется.|n- |cffebc56cПоглощение Мам'Тота|cffced4da (требуется.|n- |cffebc56cПоглощение Рунока|cffced4da (требуется.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+  }
+ ]
+}

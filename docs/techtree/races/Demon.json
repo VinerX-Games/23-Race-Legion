@@ -37,9 +37,9 @@
   "A001": {
    "type": "ability",
    "name": "Абордаж!",
+   "hotkey": "Q",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "Q"
+   "hero_level_req": 1
   },
   "A002": {
    "type": "ability",
@@ -57,15 +57,15 @@
   "A009": {
    "type": "ability",
    "name": "Сделать флагманом",
-   "levels": 1,
-   "hotkey": "R"
+   "hotkey": "R",
+   "levels": 1
   },
   "A00A": {
    "type": "ability",
    "name": "Починка",
+   "hotkey": "R",
    "levels": 3,
    "hero_level_req": 1,
-   "hotkey": "R",
    "requires": [
     "R007"
    ]
@@ -73,8 +73,8 @@
   "A00B": {
    "type": "ability",
    "name": "Тактическое ускорение",
-   "levels": 3,
    "hotkey": "E",
+   "levels": 3,
    "requires": [
     "R006"
    ]
@@ -82,9 +82,9 @@
   "A00G": {
    "type": "ability",
    "name": "Массированный обстрел",
+   "hotkey": "W",
    "levels": 3,
    "hero_level_req": 1,
-   "hotkey": "W",
    "requires": [
     "R005"
    ]
@@ -92,49 +92,49 @@
   "A00I": {
    "type": "ability",
    "name": "Магическая посадка",
+   "hotkey": "W",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "A08R": {
    "type": "ability",
    "name": "Поле астрала",
    "hero": true,
+   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "A0I3": {
    "type": "ability",
    "name": "Небольшой скачок",
+   "hotkey": "C",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "C"
+   "hero_level_req": 1
   },
   "A0IQ": {
    "type": "ability",
    "name": "Обозначить столицу",
+   "hotkey": "X",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "X"
+   "hero_level_req": 1
   },
   "A0LI": {
    "type": "ability",
    "name": "Обмен золота на дерево",
-   "levels": 1,
-   "hotkey": "S"
+   "hotkey": "S",
+   "levels": 1
   },
   "A0LJ": {
    "type": "ability",
    "name": "Обмен дерева на золото",
-   "levels": 1,
-   "hotkey": "A"
+   "hotkey": "A",
+   "levels": 1
   },
   "A0LV": {
    "type": "ability",
    "name": "Укрыться за щитом",
-   "levels": 1,
    "hotkey": "D",
+   "levels": 1,
    "requires": [
     "R08O"
    ]
@@ -157,8 +157,8 @@
   "A0LZ": {
    "type": "ability",
    "name": "Пленение",
-   "levels": 1,
    "hotkey": "E",
+   "levels": 1,
    "requires": [
     "R08Q"
    ],
@@ -167,8 +167,8 @@
   "A0M0": {
    "type": "ability",
    "name": "Разрушение заклинаний",
-   "levels": 1,
    "hotkey": "W",
+   "levels": 1,
    "requires": [
     "R08Q"
    ]
@@ -176,21 +176,22 @@
   "A0M1": {
    "type": "ability",
    "name": "Похищение жизни",
-   "levels": 1,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 1
   },
   "A0M2": {
    "type": "ability",
    "name": "Проклятие",
-   "levels": 1,
    "hotkey": "W",
+   "levels": 1,
    "requires": [
     "R08P"
    ]
   },
   "A0M3": {
    "type": "ability",
-   "name": "Сокрушительный удар"
+   "name": "Сокрушительный удар",
+   "levels": 1
   },
   "A0M4": {
    "type": "ability",
@@ -200,14 +201,14 @@
   "A0M5": {
    "type": "ability",
    "name": "Боевая тревога",
-   "levels": 1,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 1
   },
   "A0M6": {
    "type": "ability",
    "name": "Огненный ливень",
-   "levels": 1,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 1
   },
   "A0M7": {
    "type": "ability",
@@ -230,69 +231,69 @@
    "type": "ability",
    "name": "Реинкарнация",
    "hero": true,
+   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6,
-   "hotkey": "R"
+   "hero_level_req": 6
   },
   "A0MA": {
    "type": "ability",
    "name": "Дары Скверны",
    "hero": true,
-   "levels": 4,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 4
   },
   "A0MB": {
    "type": "ability",
    "name": "Осквернение",
    "hero": true,
+   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "A0MC": {
    "type": "ability",
    "name": "Сгусток Скверны",
    "hero": true,
+   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "Q"
+   "hero_level_req": 1
   },
   "A0MD": {
    "type": "ability",
    "name": "Испепеление",
    "hero": true,
+   "hotkey": "E",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "E"
+   "hero_level_req": 1
   },
   "A0ME": {
    "type": "ability",
    "name": "Немота",
    "hero": true,
-   "levels": 4,
-   "hotkey": "W"
+   "hotkey": "W",
+   "levels": 4
   },
   "A0MF": {
    "type": "ability",
    "name": "Коррозия Скверны",
    "hero": true,
+   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6,
-   "hotkey": "R"
+   "hero_level_req": 6
   },
   "A0MG": {
    "type": "ability",
    "name": "Создание Скверны",
    "hero": true,
-   "levels": 4,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 4
   },
   "A0MK": {
    "type": "ability",
    "name": "Разведка",
+   "hotkey": "R",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "R"
+   "hero_level_req": 1
   },
   "A0MN": {
    "type": "ability",
@@ -305,8 +306,8 @@
    "type": "ability",
    "name": "Ярость Скверны",
    "hero": true,
-   "levels": 4,
    "hotkey": "W",
+   "levels": 4,
    "requires": [
     "Robk"
    ]
@@ -315,15 +316,15 @@
    "type": "ability",
    "name": "Щит Скверны",
    "hero": true,
+   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6,
-   "hotkey": "R"
+   "hero_level_req": 6
   },
   "A0MW": {
    "type": "ability",
    "name": "Сон",
-   "levels": 1,
    "hotkey": "R",
+   "levels": 1,
    "requires": [
     "R08Q"
    ],
@@ -340,25 +341,25 @@
   "A0MY": {
    "type": "ability",
    "name": "Пылающий Легион",
+   "hotkey": "Z",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "Z"
+   "hero_level_req": 1
   },
   "A0N9": {
    "type": "ability",
    "name": "Поле астрала",
+   "hotkey": "W",
    "item": true,
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "A0NB": {
    "type": "ability",
    "name": "Повелевание Скверной",
    "hero": true,
+   "hotkey": "E",
    "levels": 4,
-   "hero_level_req": 3,
-   "hotkey": "E"
+   "hero_level_req": 3
   },
   "A0NC": {
    "type": "ability",
@@ -374,8 +375,8 @@
   "A0VJ": {
    "type": "ability",
    "name": "Выбрать специализацию",
-   "levels": 1,
-   "hotkey": "R"
+   "hotkey": "R",
+   "levels": 1
   },
   "A0VR": {
    "type": "ability",
@@ -390,20 +391,20 @@
   "A0VT": {
    "type": "ability",
    "name": "Темный призыв",
-   "levels": 1,
-   "hotkey": "R"
+   "hotkey": "R",
+   "levels": 1
   },
   "A0VY": {
    "type": "ability",
    "name": "Сбор ресурсов",
-   "levels": 1,
-   "hotkey": "G"
+   "hotkey": "G",
+   "levels": 1
   },
   "A146": {
    "type": "ability",
    "name": "Демонтаж",
-   "levels": 1,
-   "hotkey": "C"
+   "hotkey": "C",
+   "levels": 1
   },
   "A15N": {
    "type": "ability",
@@ -414,9 +415,9 @@
   "A16J": {
    "type": "ability",
    "name": "Перст боли",
+   "hotkey": "E",
    "levels": 1,
    "hero_level_req": 1,
-   "hotkey": "E",
    "requires": [
     "R08P"
    ]
@@ -425,32 +426,32 @@
    "type": "ability",
    "name": "Поле астрала",
    "hero": true,
+   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "A1BZ": {
    "type": "ability",
    "name": "Поле астрала",
    "hero": true,
+   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "A1C0": {
    "type": "ability",
    "name": "Поле астрала",
    "hero": true,
+   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "A1C2": {
    "type": "ability",
    "name": "Разведка",
+   "hotkey": "R",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "R"
+   "hero_level_req": 1
   },
   "A1KB": {
    "type": "ability",
@@ -465,8 +466,8 @@
   "A1PP": {
    "type": "ability",
    "name": "Прицельная пальба",
-   "levels": 1,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 1
   },
   "ACce": {
    "type": "ability",
@@ -487,41 +488,41 @@
    "type": "ability",
    "name": "Ускользание",
    "hero": true,
+   "hotkey": "E",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "E"
+   "hero_level_req": 1
   },
   "AEim": {
    "type": "ability",
    "name": "Обжигающий жар",
    "hero": true,
+   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "AEmb": {
    "type": "ability",
    "name": "Сожжение маны",
    "hero": true,
+   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "Q"
+   "hero_level_req": 1
   },
   "AEme": {
    "type": "ability",
    "name": "Метаморфоза",
    "hero": true,
+   "hotkey": "T",
    "levels": 1,
-   "hero_level_req": 6,
-   "hotkey": "T"
+   "hero_level_req": 6
   },
   "AHbn": {
    "type": "ability",
    "name": "Изгнание",
    "hero": true,
+   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "AInv": {
    "type": "ability",
@@ -532,9 +533,9 @@
    "type": "ability",
    "name": "Поддержание",
    "hero": true,
+   "hotkey": "C",
    "levels": 3,
-   "hero_level_req": 1,
-   "hotkey": "C"
+   "hero_level_req": 1
   },
   "ANpi": {
    "type": "ability",
@@ -554,14 +555,14 @@
   "Ambb": {
    "type": "ability",
    "name": "Сожжение маны",
-   "levels": 1,
-   "hotkey": "B"
+   "hotkey": "B",
+   "levels": 1
   },
   "Aren": {
    "type": "ability",
    "name": "Обновление",
-   "levels": 1,
-   "hotkey": "R"
+   "hotkey": "R",
+   "levels": 1
   },
   "Argl": {
    "type": "ability",
@@ -588,284 +589,287 @@
   "Edmm": {
    "type": "hero",
    "name": "Охотник на демонов",
-   "gold": 400,
-   "lumber": 100,
-   "food": 1,
-   "hp": 100,
    "time": 55,
-   "hotkey": "D"
+   "food": 1,
+   "gold": 400,
+   "hotkey": "D",
+   "hp": 100,
+   "lumber": 100,
+   "affected_by": [
+    "Reuv"
+   ]
   },
   "Eidm": {
    "type": "hero",
    "name": "Охотник на демонов",
-   "gold": 425,
-   "lumber": 100,
-   "food": 2,
-   "hp": 500,
    "time": 55,
-   "hotkey": "D"
+   "food": 2,
+   "gold": 425,
+   "hotkey": "D",
+   "hp": 500,
+   "lumber": 100
   },
   "H0BN": {
    "type": "hero",
    "name": "Дамми Гер",
    "base": "Hamg",
-   "lumber": 100,
-   "hp": 100,
    "time": 55,
-   "hotkey": "A"
+   "hotkey": "A",
+   "hp": 100,
+   "lumber": 100
   },
   "N02A": {
    "type": "hero",
    "name": "Чернокнижник",
    "base": "Nklj",
-   "gold": 425,
-   "lumber": 100,
-   "food": 1,
-   "hp": 700,
    "time": 55,
-   "hotkey": "W"
+   "food": 1,
+   "gold": 425,
+   "hotkey": "W",
+   "hp": 700,
+   "lumber": 100
   },
   "N02F": {
    "type": "hero",
    "name": "Натрезим",
    "base": "Nman",
-   "gold": 425,
-   "lumber": 100,
-   "food": 1,
-   "hp": 700,
    "time": 60,
-   "hotkey": "M"
+   "food": 1,
+   "gold": 425,
+   "hotkey": "M",
+   "hp": 700,
+   "lumber": 100
   },
   "R002": {
    "type": "upgrade",
    "name": "Орудия флота — уровень 1",
-   "levels": 6,
    "gold": 500,
    "gold_per_level": 200,
    "lumber": 1200,
    "lumber_per_level": 300,
-   "time": 80,
-   "time_per_level": 15,
+   "levels": 6,
    "requires": [
     "hkee"
-   ]
+   ],
+   "time": 80,
+   "time_per_level": 15
   },
   "R003": {
    "type": "upgrade",
    "name": "Укреплённый корпус — уровень 1",
-   "levels": 6,
    "gold": 900,
    "gold_per_level": 300,
    "lumber": 500,
    "lumber_per_level": 200,
-   "time": 80,
-   "time_per_level": 15,
+   "levels": 6,
    "requires": [
     "hkee"
-   ]
+   ],
+   "time": 80,
+   "time_per_level": 15
   },
   "R004": {
    "type": "upgrade",
-   "name": "Улучшение до Кровавого Палача",
-   "levels": 1,
+   "name": "Кровавый Палач",
    "gold": 600,
    "lumber": 500,
-   "time": 40,
+   "levels": 1,
    "requires": [
     "h0DV"
-   ]
+   ],
+   "time": 40
   },
   "R005": {
    "type": "upgrade",
    "name": "Обстрел — уровень 1",
-   "levels": 5,
    "gold": 500,
    "gold_per_level": 150,
    "lumber": 500,
    "lumber_per_level": 150,
-   "time": 90,
+   "levels": 5,
    "requires": [
     "hcas"
-   ]
+   ],
+   "time": 90
   },
   "R006": {
    "type": "upgrade",
    "name": "Дополнительные паруса — уровень 1",
-   "levels": 3,
    "gold": 500,
    "gold_per_level": 150,
    "lumber": 500,
    "lumber_per_level": 150,
-   "time": 90,
+   "levels": 3,
    "requires": [
     "hcas"
-   ]
+   ],
+   "time": 90
   },
   "R007": {
    "type": "upgrade",
    "name": "Починка — уровень 1",
-   "levels": 3,
    "gold": 500,
    "gold_per_level": 150,
    "lumber": 500,
    "lumber_per_level": 150,
-   "time": 90,
+   "levels": 3,
    "requires": [
     "hcas"
-   ]
+   ],
+   "time": 90
   },
   "R08H": {
    "type": "upgrade",
    "name": "Эволюция: Кровавое отродье",
-   "levels": 1,
    "gold": 600,
    "lumber": 600,
-   "time": 40,
+   "levels": 1,
    "requires": [
     "h0DV",
     "R004"
-   ]
+   ],
+   "time": 40
   },
   "R08I": {
    "type": "upgrade",
    "name": "Эволюция: Кровопускатель",
-   "levels": 1,
    "gold": 600,
    "lumber": 600,
-   "time": 40,
+   "levels": 1,
    "requires": [
     "h0DW",
     "R08H"
-   ]
+   ],
+   "time": 40
   },
   "R08J": {
    "type": "upgrade",
    "name": "Оружие Скверны",
-   "levels": 6,
    "gold": 500,
    "gold_per_level": 1000,
    "lumber": 450,
    "lumber_per_level": 900,
-   "time": 60,
-   "time_per_level": 15,
+   "levels": 6,
    "requires": [
     "hkee"
-   ]
+   ],
+   "time": 60,
+   "time_per_level": 15
   },
   "R08K": {
    "type": "upgrade",
    "name": "Осквернённая броня",
-   "levels": 6,
    "gold": 500,
    "gold_per_level": 1000,
    "lumber": 450,
    "lumber_per_level": 900,
-   "time": 60,
-   "time_per_level": 15,
+   "levels": 6,
    "requires": [
     "hkee"
-   ]
+   ],
+   "time": 60,
+   "time_per_level": 15
   },
   "R08L": {
    "type": "upgrade",
    "name": "Магия Скверны",
-   "levels": 6,
    "gold": 450,
    "gold_per_level": 430,
    "lumber": 340,
    "lumber_per_level": 540,
-   "time": 60,
-   "time_per_level": 15,
+   "levels": 6,
    "requires": [
     "hkee"
-   ]
+   ],
+   "time": 60,
+   "time_per_level": 15
   },
   "R08M": {
    "type": "upgrade",
    "name": "Укрепление Скверной",
-   "levels": 6,
    "gold": 500,
    "gold_per_level": 1000,
    "lumber": 600,
    "lumber_per_level": 1200,
-   "time": 60,
-   "time_per_level": 15,
+   "levels": 6,
    "requires": [
     "hkee"
-   ]
+   ],
+   "time": 60,
+   "time_per_level": 15
   },
   "R08N": {
    "type": "upgrade",
    "name": "Познание Скверны",
-   "levels": 6,
    "gold": 350,
    "gold_per_level": 1500,
    "lumber": 400,
    "lumber_per_level": 1200,
-   "time": 60,
+   "levels": 6,
    "requires": [
     "hcas"
-   ]
+   ],
+   "time": 60
   },
   "R08O": {
    "type": "upgrade",
    "name": "Защита",
-   "levels": 1,
    "gold": 125,
    "lumber": 75,
-   "time": 40,
+   "levels": 1,
    "requires": [
     "h0DW"
-   ]
+   ],
+   "time": 40
   },
   "R08P": {
    "type": "upgrade",
    "name": "Древние знания эредаров",
-   "levels": 2,
    "gold": 340,
    "gold_per_level": 400,
    "lumber": 340,
    "lumber_per_level": 400,
-   "time": 60,
+   "levels": 2,
    "requires": [
     "hcas"
-   ]
+   ],
+   "time": 60
   },
   "R08Q": {
    "type": "upgrade",
    "name": "Мастерство владения Скверной",
-   "levels": 3,
    "gold": 100,
    "lumber": 50,
    "lumber_per_level": 100,
-   "time": 60,
+   "levels": 3,
    "requires": [
     "hcas"
-   ]
+   ],
+   "time": 60
   },
   "R08R": {
    "type": "upgrade",
    "name": "Дрессировка зверей",
-   "levels": 1,
    "gold": 430,
    "lumber": 400,
    "lumber_per_level": 100,
-   "time": 60,
+   "levels": 1,
    "requires": [
     "hcas"
-   ]
+   ],
+   "time": 60
   },
   "R08S": {
    "type": "upgrade",
    "name": "Мастерство устрашения",
-   "levels": 2,
    "gold": 500,
    "lumber": 500,
    "lumber_per_level": 100,
-   "time": 60,
+   "levels": 2,
    "requires": [
     "hcas"
-   ]
+   ],
+   "time": 60
   },
   "R0AO": {
    "type": "upgrade",
@@ -875,35 +879,35 @@
   "R0EG": {
    "type": "upgrade",
    "name": "Улучшенная добыча",
-   "levels": 5,
    "gold": 100,
    "gold_per_level": 250,
+   "levels": 5,
    "time": 60,
    "time_per_level": 15
   },
   "Reuv": {
    "type": "upgrade",
    "name": "Ночное зрение",
-   "levels": 1,
    "gold": 50,
    "lumber": 50,
-   "time": 45,
+   "levels": 1,
    "requires": [
     "etoa"
-   ]
+   ],
+   "time": 45
   },
   "Robk": {
    "type": "upgrade",
    "name": "Улучшение до берсерка",
    "only_required": true,
-   "levels": 1,
    "gold": 75,
    "lumber": 175,
-   "time": 40,
+   "levels": 1,
    "requires": [
     "ofrt",
     "ofor"
-   ]
+   ],
+   "time": 40
   },
   "S003": {
    "type": "ability",
@@ -930,125 +934,171 @@
    ]
   },
   "Sch5": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Cargo Hold",
+   "levels": 1
   },
   "Sdro": {
    "type": "ability",
    "name": "Выгрузить",
-   "levels": 1,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 1
   },
   "Slo3": {
    "type": "ability",
    "name": "Взять на борт",
-   "levels": 1,
-   "hotkey": "D"
+   "hotkey": "D",
+   "levels": 1
   },
   "U028": {
    "type": "hero",
    "name": "Шиварра",
    "base": "Umal",
-   "gold": 425,
-   "lumber": 100,
-   "food": 1,
-   "hp": 700,
    "time": 55,
-   "hotkey": "E"
+   "food": 1,
+   "gold": 425,
+   "hotkey": "E",
+   "hp": 700,
+   "lumber": 100
   },
   "e02Y": {
    "type": "unit",
    "name": "Архитектор Скверны",
    "base": "ewsp",
-   "gold": 60,
-   "hp": 125,
    "time": 14,
-   "hotkey": "Q"
+   "gold": 60,
+   "hotkey": "Q",
+   "hp": 125,
+   "affected_by": [
+    "R0EG",
+    "Reuv"
+   ]
   },
   "etoa": {
    "type": "unit",
    "name": "Древо столетий",
    "only_required": true,
-   "gold": 4500,
-   "lumber": 4500,
-   "food_made": 100,
-   "hp": 1700,
    "time": 140,
+   "food_made": 100,
+   "gold": 4500,
    "hotkey": "Z",
+   "hp": 1700,
+   "lumber": 4500,
    "requires": [
     "R0GB"
+   ],
+   "researches": [
+    "Renb"
+   ],
+   "affected_by": [
+    "Renb",
+    "Rgfo"
    ]
   },
   "h02C": {
    "type": "unit",
    "name": "Анимация постройки (леса)",
    "base": "hgyr",
-   "gold": 100,
-   "lumber": 30,
-   "hp": 250,
    "time": 13,
-   "hotkey": "F"
+   "gold": 100,
+   "hotkey": "F",
+   "hp": 250,
+   "lumber": 30
   },
   "h0CZ": {
    "type": "unit",
    "name": "Фрегат",
    "base": "hdes",
-   "gold": 450,
-   "lumber": 475,
-   "hp": 800,
    "time": 30,
-   "hotkey": "W"
+   "gold": 450,
+   "hotkey": "W",
+   "hp": 800,
+   "lumber": 475,
+   "affected_by": [
+    "R005",
+    "R007",
+    "R004",
+    "R003",
+    "R002"
+   ]
   },
   "h0D0": {
    "type": "unit",
    "name": "Линкор",
    "base": "hbsh",
-   "gold": 875,
-   "lumber": 1000,
-   "hp": 1400,
    "time": 50,
-   "hotkey": "E"
+   "gold": 875,
+   "hotkey": "E",
+   "hp": 1400,
+   "lumber": 1000,
+   "affected_by": [
+    "R005",
+    "R007",
+    "R004",
+    "R003",
+    "R002"
+   ]
   },
   "h0D1": {
    "type": "building",
    "name": "Верфь",
    "base": "hshy",
-   "gold": 500,
-   "lumber": 700,
-   "hp": 2000,
    "time": 90,
-   "hotkey": "C"
+   "gold": 500,
+   "hotkey": "C",
+   "hp": 2000,
+   "lumber": 700,
+   "researches": [
+    "R005",
+    "R006",
+    "R007",
+    "R002",
+    "R003"
+   ]
   },
   "h0D2": {
    "type": "unit",
    "name": "Транспорт",
    "base": "hbot",
-   "gold": 250,
-   "lumber": 200,
-   "hp": 750,
    "time": 22,
-   "hotkey": "Q"
+   "gold": 250,
+   "hotkey": "Q",
+   "hp": 750,
+   "lumber": 200,
+   "affected_by": [
+    "R006",
+    "R007",
+    "R004",
+    "R003"
+   ]
   },
   "h0D8": {
    "type": "building",
    "name": "Верфь",
    "base": "hshy",
-   "gold": 500,
-   "lumber": 700,
-   "hp": 2000,
    "time": 90,
-   "hotkey": "C"
+   "gold": 500,
+   "hotkey": "C",
+   "hp": 2000,
+   "lumber": 700,
+   "researches": [
+    "R005",
+    "R006",
+    "R007",
+    "R002",
+    "R003"
+   ]
   },
   "h0DS": {
    "type": "building",
    "name": "Накопитель Скверны",
    "base": "htow",
-   "gold": 425,
-   "lumber": 205,
-   "food_made": 40,
-   "hp": 1500,
    "time": 1,
+   "food_made": 40,
+   "gold": 425,
    "hotkey": "A",
+   "hp": 1500,
+   "lumber": 205,
    "requires": [
     "h0DT"
    ]
@@ -1057,56 +1107,56 @@
    "type": "building",
    "name": "Генератор Скверны",
    "base": "htow",
-   "gold": 385,
-   "lumber": 205,
-   "food_made": 30,
-   "hp": 1500,
    "time": 20,
-   "hotkey": "E"
+   "food_made": 30,
+   "gold": 385,
+   "hotkey": "E",
+   "hp": 1500,
+   "lumber": 205
   },
   "h0DU": {
    "type": "building",
    "name": "Аванпост",
    "base": "htow",
-   "gold": 560,
-   "lumber": 400,
-   "food_made": 50,
-   "hp": 1500,
    "time": 1,
-   "hotkey": "Q"
+   "food_made": 50,
+   "gold": 560,
+   "hotkey": "Q",
+   "hp": 1500,
+   "lumber": 400
   },
   "h0DV": {
    "type": "building",
    "name": "Штаб Демонов",
    "base": "hkee",
-   "gold": 4000,
-   "lumber": 4000,
-   "food_made": 100,
-   "hp": 2000,
    "time": 240,
-   "hotkey": "Z"
+   "food_made": 100,
+   "gold": 4000,
+   "hotkey": "Z",
+   "hp": 2000,
+   "lumber": 4000
   },
   "h0DW": {
    "type": "building",
    "name": "Палаты Командования",
    "base": "hcas",
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
    "time": 298,
-   "hotkey": "Z"
+   "food_made": 150,
+   "gold": 12000,
+   "hotkey": "Z",
+   "hp": 2500,
+   "lumber": 12000
   },
   "h0DX": {
    "type": "building",
    "name": "Алтарь Командиров Скверны",
    "base": "halt",
-   "gold": 620,
-   "lumber": 450,
-   "food_made": 3,
-   "hp": 900,
    "time": 1,
+   "food_made": 3,
+   "gold": 620,
    "hotkey": "S",
+   "hp": 900,
+   "lumber": 450,
    "requires": [
     "h0DT"
    ]
@@ -1115,200 +1165,284 @@
    "type": "building",
    "name": "Малый Портал",
    "base": "hbar",
-   "gold": 700,
-   "lumber": 500,
-   "hp": 1500,
    "time": 1,
+   "gold": 700,
    "hotkey": "W",
+   "hp": 1500,
+   "lumber": 500,
    "requires": [
     "h0DT"
+   ],
+   "researches": [
+    "R08O",
+    "R08I",
+    "R004",
+    "R08H"
    ]
   },
   "h0DZ": {
    "type": "building",
    "name": "Кузня Скверны",
    "base": "hbla",
-   "gold": 525,
-   "lumber": 430,
-   "hp": 1200,
    "time": 1,
+   "gold": 525,
    "hotkey": "R",
+   "hp": 1200,
+   "lumber": 430,
    "requires": [
     "h0DT"
+   ],
+   "researches": [
+    "R0EG",
+    "R08N",
+    "R08J",
+    "R08K",
+    "R08M",
+    "R08L"
    ]
   },
   "h0E0": {
    "type": "building",
    "name": "Темная Библиотека",
    "base": "hbla",
-   "gold": 630,
-   "lumber": 600,
-   "hp": 1200,
    "time": 1,
+   "gold": 630,
    "hotkey": "D",
+   "hp": 1200,
+   "lumber": 600,
    "requires": [
     "h0DV"
+   ],
+   "researches": [
+    "R08Q",
+    "R08P"
    ]
   },
   "h0E1": {
    "type": "building",
    "name": "Портал",
    "base": "hbar",
-   "gold": 1200,
-   "lumber": 900,
-   "hp": 1500,
    "time": 1,
+   "gold": 1200,
    "hotkey": "F",
+   "hp": 1500,
+   "lumber": 900,
    "requires": [
     "h0DW"
+   ],
+   "researches": [
+    "R08R",
+    "R08S"
    ]
   },
   "hcas": {
    "type": "unit",
    "name": "Замок",
    "only_required": true,
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
    "time": 140,
+   "food_made": 150,
+   "gold": 12000,
    "hotkey": "Z",
+   "hp": 2500,
+   "lumber": 12000,
    "requires": [
     "halt"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
    ]
   },
   "hkee": {
    "type": "unit",
    "name": "Форт",
    "only_required": true,
-   "gold": 4500,
-   "lumber": 4500,
-   "food_made": 100,
-   "hp": 2000,
    "time": 140,
-   "hotkey": "Z"
+   "food_made": 100,
+   "gold": 4500,
+   "hotkey": "Z",
+   "hp": 2000,
+   "lumber": 4500,
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "n020": {
    "type": "unit",
    "name": "Эредар-колдун",
    "base": "ners",
-   "gold": 195,
-   "lumber": 65,
-   "hp": 375,
    "time": 28,
-   "hotkey": "Q"
+   "gold": 195,
+   "hotkey": "Q",
+   "hp": 375,
+   "lumber": 65,
+   "affected_by": [
+    "R08P",
+    "R08M",
+    "R08L",
+    "R08N"
+   ]
   },
   "n021": {
    "type": "unit",
    "name": "Страж ужаса",
    "base": "nbal",
-   "gold": 480,
-   "lumber": 180,
-   "hp": 900,
    "time": 70,
+   "gold": 480,
    "hotkey": "E",
+   "hp": 900,
+   "lumber": 180,
    "requires": [
     "h0DW"
+   ],
+   "affected_by": [
+    "R08Q",
+    "R08K",
+    "R08J",
+    "R08N"
    ]
   },
   "n022": {
    "type": "unit",
    "name": "Инфернал",
    "base": "ninf",
-   "gold": 440,
-   "lumber": 150,
-   "hp": 1400,
    "time": 63,
+   "gold": 440,
    "hotkey": "W",
+   "hp": 1400,
+   "lumber": 150,
    "requires": [
     "h0DW"
+   ],
+   "affected_by": [
+    "R08K",
+    "R08J",
+    "R08N"
    ]
   },
   "n023": {
    "type": "unit",
    "name": "Зверь Скверны",
    "base": "npfl",
-   "gold": 115,
-   "lumber": 40,
-   "hp": 390,
    "time": 23,
-   "hotkey": "Q"
+   "gold": 115,
+   "hotkey": "Q",
+   "hp": 390,
+   "lumber": 40,
+   "affected_by": [
+    "R08K",
+    "R08J",
+    "R08N"
+   ]
   },
   "n024": {
    "type": "unit",
    "name": "Ловчий Скверны",
    "base": "nfel",
-   "gold": 340,
-   "lumber": 115,
-   "hp": 750,
    "time": 47,
-   "hotkey": "Q"
+   "gold": 340,
+   "hotkey": "Q",
+   "hp": 750,
+   "lumber": 115,
+   "affected_by": [
+    "R08R",
+    "R08K",
+    "R08J",
+    "R08N"
+   ]
   },
   "n025": {
    "type": "unit",
    "name": "Властитель",
    "base": "nfov",
-   "gold": 235,
-   "lumber": 80,
-   "hp": 775,
    "time": 36,
+   "gold": 235,
    "hotkey": "W",
+   "hp": 775,
+   "lumber": 80,
    "requires": [
     "h0DZ"
+   ],
+   "affected_by": [
+    "R08K",
+    "R08J",
+    "R08N"
    ]
   },
   "n026": {
    "type": "unit",
    "name": "Кровавый Палач",
    "base": "nfgb",
-   "gold": 240,
-   "lumber": 80,
-   "hp": 700,
    "time": 36,
-   "hotkey": "W"
+   "gold": 240,
+   "hotkey": "W",
+   "hp": 700,
+   "lumber": 80,
+   "affected_by": [
+    "R08K",
+    "R08J",
+    "R08N"
+   ]
   },
   "n027": {
    "type": "unit",
    "name": "Мо'агр",
    "base": "nfgb",
-   "gold": 215,
-   "lumber": 75,
-   "hp": 650,
    "time": 40,
+   "gold": 215,
    "hotkey": "E",
+   "hp": 650,
+   "lumber": 75,
    "requires": [
     "h0DV"
+   ],
+   "affected_by": [
+    "R08K",
+    "R08J",
+    "R08N"
    ]
   },
   "n028": {
    "type": "unit",
    "name": "Демон-тюремщик",
    "base": "ners",
-   "gold": 305,
-   "lumber": 105,
-   "hp": 425,
    "time": 44,
-   "hotkey": "W"
+   "gold": 305,
+   "hotkey": "W",
+   "hp": 425,
+   "lumber": 105,
+   "affected_by": [
+    "R08Q",
+    "R08M",
+    "R08L",
+    "R08N"
+   ]
   },
   "n029": {
    "type": "unit",
    "name": "Скверно-бот",
    "base": "nfgb",
-   "gold": 5000,
-   "lumber": 5000,
-   "hp": 8000,
    "time": 70,
-   "hotkey": "X"
+   "gold": 5000,
+   "hotkey": "X",
+   "hp": 8000,
+   "lumber": 5000,
+   "affected_by": [
+    "R08K",
+    "R08J",
+    "R08N"
+   ]
   },
   "n02C": {
    "type": "building",
    "name": "Башня смерти",
    "base": "ntt1",
-   "gold": 250,
-   "lumber": 100,
-   "hp": 500,
    "time": 30,
+   "gold": 250,
    "hotkey": "Z",
+   "hp": 500,
+   "lumber": 100,
    "requires": [
     "h0DT"
    ]
@@ -1317,33 +1451,48 @@
    "type": "unit",
    "name": "Кровавое отродье",
    "base": "nfgb",
-   "gold": 260,
-   "lumber": 90,
-   "hp": 700,
    "time": 39,
-   "hotkey": "W"
+   "gold": 260,
+   "hotkey": "W",
+   "hp": 700,
+   "lumber": 90,
+   "affected_by": [
+    "R08K",
+    "R08J",
+    "R08N"
+   ]
   },
   "n02E": {
    "type": "unit",
    "name": "Кровопускатель",
    "base": "nfgb",
-   "gold": 275,
-   "lumber": 95,
-   "hp": 700,
    "time": 41,
-   "hotkey": "W"
+   "gold": 275,
+   "hotkey": "W",
+   "hp": 700,
+   "lumber": 95,
+   "affected_by": [
+    "R08K",
+    "R08J",
+    "R08N"
+   ]
   },
   "n02I": {
    "type": "unit",
    "name": "Адская колесница",
    "base": "ninc",
-   "gold": 350,
-   "lumber": 120,
-   "hp": 600,
    "time": 56,
+   "gold": 350,
    "hotkey": "R",
+   "hp": 600,
+   "lumber": 120,
    "requires": [
     "h0DV"
+   ],
+   "affected_by": [
+    "R08M",
+    "R08L",
+    "R08N"
    ]
   }
  },
@@ -1362,13 +1511,13 @@
   "A0MX requires R08S",
   "A16J requires R08P",
   "Ault requires Reuv",
+  "Edmm affected-by Reuv",
   "Edmm has-ability AInv",
   "Edmm has-ability Ault",
   "Edmm hero-ability AEev",
   "Edmm hero-ability AEim",
   "Edmm hero-ability AEmb",
   "Edmm hero-ability AEme",
-  "Edmm researches Reuv",
   "Eidm has-ability A0OJ",
   "Eidm has-ability A1O1",
   "Eidm has-ability AInv",
@@ -1416,6 +1565,8 @@
   "U028 hero-ability A0MN",
   "U028 hero-ability A0MO",
   "U028 hero-ability A0MP",
+  "e02Y affected-by R0EG",
+  "e02Y affected-by Reuv",
   "e02Y builds h0D1",
   "e02Y builds h0DS",
   "e02Y builds h0DT",
@@ -1430,30 +1581,28 @@
   "e02Y has-ability A0I3",
   "e02Y has-ability A0VY",
   "e02Y has-ability Aren",
-  "e02Y researches R0EG",
-  "e02Y researches Reuv",
+  "h0CZ affected-by R002",
+  "h0CZ affected-by R003",
+  "h0CZ affected-by R004",
+  "h0CZ affected-by R005",
+  "h0CZ affected-by R007",
   "h0CZ has-ability A002",
   "h0CZ has-ability A009",
   "h0CZ has-ability A00A",
   "h0CZ has-ability A00B",
   "h0CZ has-ability A00G",
   "h0CZ has-ability A1PP",
-  "h0CZ researches R002",
-  "h0CZ researches R003",
-  "h0CZ researches R004",
-  "h0CZ researches R005",
-  "h0CZ researches R007",
+  "h0D0 affected-by R002",
+  "h0D0 affected-by R003",
+  "h0D0 affected-by R004",
+  "h0D0 affected-by R005",
+  "h0D0 affected-by R007",
   "h0D0 has-ability A001",
   "h0D0 has-ability A003",
   "h0D0 has-ability A009",
   "h0D0 has-ability A00A",
   "h0D0 has-ability A00B",
   "h0D0 has-ability A00G",
-  "h0D0 researches R002",
-  "h0D0 researches R003",
-  "h0D0 researches R004",
-  "h0D0 researches R005",
-  "h0D0 researches R007",
   "h0D1 has-ability A15N",
   "h0D1 researches R002",
   "h0D1 researches R003",
@@ -1463,16 +1612,21 @@
   "h0D1 trains h0CZ",
   "h0D1 trains h0D0",
   "h0D1 trains h0D2",
+  "h0D2 affected-by R003",
+  "h0D2 affected-by R004",
+  "h0D2 affected-by R006",
+  "h0D2 affected-by R007",
   "h0D2 has-ability A00A",
   "h0D2 has-ability A00B",
   "h0D2 has-ability A00I",
   "h0D2 has-ability Sch5",
   "h0D2 has-ability Sdro",
   "h0D2 has-ability Slo3",
-  "h0D2 researches R003",
-  "h0D2 researches R004",
-  "h0D2 researches R006",
-  "h0D2 researches R007",
+  "h0D8 researches R002",
+  "h0D8 researches R003",
+  "h0D8 researches R005",
+  "h0D8 researches R006",
+  "h0D8 researches R007",
   "h0DS requires h0DT",
   "h0DU has-ability A0IQ",
   "h0DU has-ability A0LI",
@@ -1528,80 +1682,80 @@
   "h0E1 trains n021",
   "h0E1 trains n022",
   "h0E1 trains n024",
+  "n020 affected-by R08L",
+  "n020 affected-by R08M",
+  "n020 affected-by R08N",
+  "n020 affected-by R08P",
   "n020 has-ability A0M1",
   "n020 has-ability A0M2",
   "n020 has-ability A16J",
-  "n020 researches R08L",
-  "n020 researches R08M",
-  "n020 researches R08N",
-  "n020 researches R08P",
+  "n021 affected-by R08J",
+  "n021 affected-by R08K",
+  "n021 affected-by R08N",
+  "n021 affected-by R08Q",
   "n021 has-ability A0M6",
   "n021 has-ability A0M7",
   "n021 has-ability A0MX",
   "n021 requires h0DW",
-  "n021 researches R08J",
-  "n021 researches R08K",
-  "n021 researches R08N",
-  "n021 researches R08Q",
+  "n022 affected-by R08J",
+  "n022 affected-by R08K",
+  "n022 affected-by R08N",
   "n022 has-ability ACmi",
   "n022 has-ability ACrk",
   "n022 has-ability ANpi",
   "n022 requires h0DW",
-  "n022 researches R08J",
-  "n022 researches R08K",
-  "n022 researches R08N",
-  "n023 researches R08J",
-  "n023 researches R08K",
-  "n023 researches R08N",
+  "n023 affected-by R08J",
+  "n023 affected-by R08K",
+  "n023 affected-by R08N",
+  "n024 affected-by R08J",
+  "n024 affected-by R08K",
+  "n024 affected-by R08N",
+  "n024 affected-by R08R",
   "n024 has-ability Ambb",
-  "n024 researches R08J",
-  "n024 researches R08K",
-  "n024 researches R08N",
-  "n024 researches R08R",
+  "n025 affected-by R08J",
+  "n025 affected-by R08K",
+  "n025 affected-by R08N",
   "n025 has-ability S004",
   "n025 requires h0DZ",
-  "n025 researches R08J",
-  "n025 researches R08K",
-  "n025 researches R08N",
+  "n026 affected-by R08J",
+  "n026 affected-by R08K",
+  "n026 affected-by R08N",
   "n026 has-ability S003",
-  "n026 researches R08J",
-  "n026 researches R08K",
-  "n026 researches R08N",
+  "n027 affected-by R08J",
+  "n027 affected-by R08K",
+  "n027 affected-by R08N",
   "n027 has-ability A0M3",
   "n027 requires h0DV",
-  "n027 researches R08J",
-  "n027 researches R08K",
-  "n027 researches R08N",
+  "n028 affected-by R08L",
+  "n028 affected-by R08M",
+  "n028 affected-by R08N",
+  "n028 affected-by R08Q",
   "n028 has-ability A0LY",
   "n028 has-ability A0LZ",
   "n028 has-ability A0M0",
   "n028 has-ability A0MW",
   "n028 has-ability Advc",
-  "n028 researches R08L",
-  "n028 researches R08M",
-  "n028 researches R08N",
-  "n028 researches R08Q",
+  "n029 affected-by R08J",
+  "n029 affected-by R08K",
+  "n029 affected-by R08N",
   "n029 has-ability A0M4",
   "n029 has-ability A0M5",
   "n029 has-ability ACce",
-  "n029 researches R08J",
-  "n029 researches R08K",
-  "n029 researches R08N",
   "n02C requires h0DT",
+  "n02D affected-by R08J",
+  "n02D affected-by R08K",
+  "n02D affected-by R08N",
   "n02D has-ability A0LW",
   "n02D has-ability S005",
-  "n02D researches R08J",
-  "n02D researches R08K",
-  "n02D researches R08N",
+  "n02E affected-by R08J",
+  "n02E affected-by R08K",
+  "n02E affected-by R08N",
   "n02E has-ability A0LV",
   "n02E has-ability A0LX",
-  "n02E researches R08J",
-  "n02E researches R08K",
-  "n02E researches R08N",
+  "n02I affected-by R08L",
+  "n02I affected-by R08M",
+  "n02I affected-by R08N",
   "n02I requires h0DV",
-  "n02I researches R08L",
-  "n02I researches R08M",
-  "n02I researches R08N",
   "race:Demon lua-start-tech R0AO",
   "race:Demon lua-starts-with e02Y",
   "race:Demon lua-starts-with h0DU"

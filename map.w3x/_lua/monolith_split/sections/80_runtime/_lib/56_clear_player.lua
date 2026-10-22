@@ -67,7 +67,7 @@ function ClearPlayer(p)
 					ForceAddPlayer(Vassals[inheritedPi], v)
 					NewAlly(v)
 				end)
-				DisplayTextToForce(udg_AllPlayers, GetPlayerName(inheritedSenior) .. " inherited vassals of dead player " .. GetPlayerName(p))
+				DisplayTextToForce(udg_AllPlayers, "|cffebc56c" .. GetPlayerName(inheritedSenior) .. "|cffced4da получает вассалов погибшего игрока |cffebc56c" .. GetPlayerName(p) .. "|cffced4da.|r")
 			else
 				-- No senior — free all vassals
 				ForForce(Vassals[pi], Freedom)
@@ -78,7 +78,7 @@ function ClearPlayer(p)
 				local v = GetEnumPlayer()
 				ClearPlayer(v)
 			end)
-			DisplayTextToForce(udg_AllPlayers, "Vassals of dead player " .. GetPlayerName(p) .. " are eliminated!")
+			DisplayTextToForce(udg_AllPlayers, "|cffced4daВассалы погибшего игрока |cffebc56c" .. GetPlayerName(p) .. "|cffef8173 выбывают из игры!|r")
 		end
 		-- Remove ourselves from our senior's vassal force
 		if inheritedSenior ~= nil then

@@ -1,0 +1,145 @@
+{
+ "scope": "Подтверждённые списки трёх верфей и трёх производственных зданий Безликих; только названия, без обрезанных пояснений.",
+ "operations": [
+  {
+   "type": "unit",
+   "id": "h0D8",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Морское сооружение для строительства и оснащения боевых кораблей.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cТранспорт|cffced4da.|n- |cffebc56cЛинкор|cffced4da.|n- |cffebc56cФрегат|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cОрудия флота|cffced4da.|n- |cffebc56cУкреплённый корпус|cffced4da.|n- |cffebc56cОбстрел|cffced4da.|n- |cffebc56cДополнительные паруса|cffced4da.|n- |cffebc56cПочинка|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0I1",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Подготовка войск безликих и исследование их улучшений.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cБезликий дозорный|cffced4da.|n- |cffebc56cБезликий разрушитель|cffced4da.|n- |cffebc56cСущность бездны|cffced4da.|n- |cffebc56cСтрах|cffced4da.|n- |cffebc56cБезликий Кошмар|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cУлучшение Сущности|cffced4da.|n- |cffebc56cРазрушение Эфира|cffced4da.|n- |cffebc56cПомутнение рассудка|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0I2",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Подготовка заклинателей Бездны и исследование их улучшений.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cЗлобный бичеватель разума|cffced4da.|n- |cffebc56cПожиратель Бездны|cffced4da.|n- |cffebc56cПроклинатель Бездны|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cРасширение Знаний|cffced4da.|n- |cffebc56cУкрепление Древних Знаний|cffced4da.|n- |cffebc56cЗнание проклинателей|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0I4",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Подготовка высших существ Бездны и исследование их улучшений.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cМогущественная Сущность бездны|cffced4da.|n- |cffebc56cБессмертный страж|cffced4da.|n- |cffebc56cК`Траксис|cffced4da.|n- |cffebc56cВодное Порождение|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cУсиление К`Траксис|cffced4da.|n- |cffebc56cСуть бессмертия|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0M4",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Прибрежная верфь Альянса. Строит боевые корабли и улучшает мощь королевского флота.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cТранспорт|cffced4da.|n- |cffebc56cЛегкий корабль Альянса|cffced4da.|n- |cffebc56cТяжелый корабль Альянса|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cОрудия флота|cffced4da.|n- |cffebc56cУкреплённый корпус|cffced4da.|n- |cffebc56cОбстрел|cffced4da.|n- |cffebc56cДополнительные паруса|cffced4da.|n- |cffebc56cПочинка|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "w218",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Прибрежная верфь для строительства военного флота и добычи нефти.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cТранспорт|cffced4da.|n- |cffebc56cДредноут|cffced4da.|n- |cffebc56cФрегат|cffced4da.|n- |cffebc56cНефтяной танкер|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cОрудия флота|cffced4da.|n- |cffebc56cУкреплённый корпус|cffced4da.|n- |cffebc56cОбстрел|cffced4da.|n- |cffebc56cДополнительные паруса|cffced4da.|n- |cffebc56cПочинка|cffced4da.|r"
+  }
+ ],
+ "facts": {
+  "sources": {
+   "docs/techtree/races/Alliance.json": "f2b74f9b37bcf59c9f01e6531be8c77b85821c90912062c24234943ca045ccbc",
+   "docs/techtree/races/Argvinol.json": "272f540315243a1b568eea865ec33e53d80e1f61d7ece6d5c078d1a644b6f8bb",
+   "docs/techtree/races/Bezlikie.json": "2af5d472b1d80284e4febd318deceadbc3a82ccb4bd5edcad08b1434c167d9ba",
+   "docs/techtree/races/Demon.json": "e0d2504c4f8c3e6f204c5eb01e3d6a2539bd49ed5137eada3be3f618444b6006",
+   "docs/techtree/races/Dragon.json": "0251967d890995d2219ebe4010d5c1bba766065fd174bc4b2545db7be741d7e4",
+   "docs/techtree/races/Dragon2.json": "e0928b00cacb5a509eb4c4942e167b6bcf68c28f500bd455e5624bc1cb21c57e",
+   "docs/techtree/races/Gilneas.json": "f46b272895310fd64e7b6b97fa59e8201fe8bd05d856682ea2f9b66e30c5ba47",
+   "docs/techtree/races/Horde.json": "6ca25d0fdd8464f3fc22cdca6211662d58ce18d1bba580559a3a2725bb7210e4",
+   "docs/techtree/races/HordeW2.json": "703e8e10f2c3fdd0539e5b299ea4365b6f157ef9a32f22eb7abda862cb040692",
+   "docs/techtree/races/Illidari.json": "a083379444207aa02446ee2cc8fcb7bf695b4fb79029f095e92658be105f5883",
+   "docs/techtree/races/nightelf.json": "d9de2760bdc4408759d9fb655a06f9ebe7552e1ec6c52ca5ab80542a14a4a2ff",
+   "docs/techtree/races/Nocnorogdennue.json": "c09f603a9d56b4c4310f7bf2beeeb27a5958c25e75ee9eba23745e17fcf46d99",
+   "docs/techtree/races/Silitids.json": "f5ffaff14a6055846de1a7962ec2cf69fa3317ca16b81069dc58cafd595afd5e"
+  },
+  "relations": {
+   "h0M4": {
+    "researches": [
+     "R002",
+     "R003",
+     "R005",
+     "R006",
+     "R007"
+    ],
+    "trains": [
+     "h00X",
+     "h0L0",
+     "h0L1"
+    ]
+   },
+   "h0D8": {
+    "researches": [
+     "R002",
+     "R003",
+     "R005",
+     "R006",
+     "R007"
+    ],
+    "trains": [
+     "h0D9",
+     "h0DA",
+     "h0DB"
+    ]
+   },
+   "h0I1": {
+    "researches": [
+     "R0EK",
+     "R0EL",
+     "R0ES"
+    ],
+    "trains": [
+     "h0I9",
+     "h0IA",
+     "h0IB",
+     "h0MN",
+     "h0MO"
+    ]
+   },
+   "h0I2": {
+    "researches": [
+     "R0EW",
+     "R0EX",
+     "R0GD"
+    ],
+    "trains": [
+     "h0ID",
+     "h0IE",
+     "h0K2"
+    ]
+   },
+   "h0I4": {
+    "researches": [
+     "R0EV",
+     "R0FA"
+    ],
+    "trains": [
+     "h0IC",
+     "h0IF",
+     "h0IG",
+     "n05I"
+    ]
+   },
+   "w218": {
+    "researches": [
+     "R002",
+     "R003",
+     "R005",
+     "R006",
+     "R007"
+    ],
+    "trains": [
+     "h0D4",
+     "h0D5",
+     "h0D6",
+     "w220"
+    ]
+   }
+  },
+  "deferred": {
+   "h03R": "До изменения списка проверить доступность стандартных и пиратских кораблей через Lua.",
+   "h0E7": "В меню есть kt01 без подтверждённого названия; требуется отдельная проверка."
+  }
+ }
+}

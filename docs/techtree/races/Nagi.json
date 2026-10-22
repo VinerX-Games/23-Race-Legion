@@ -21,8 +21,8 @@
   "A06U": {
    "type": "ability",
    "name": "Сокрушительная волна",
-   "levels": 1,
    "hotkey": "Q",
+   "levels": 1,
    "requires": [
     "R03A"
    ]
@@ -30,35 +30,35 @@
   "A0I3": {
    "type": "ability",
    "name": "Небольшой скачок",
+   "hotkey": "C",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "C"
+   "hero_level_req": 1
   },
   "A0IQ": {
    "type": "ability",
    "name": "Обозначить столицу",
+   "hotkey": "X",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "X"
+   "hero_level_req": 1
   },
   "A0LI": {
    "type": "ability",
    "name": "Обмен золота на дерево",
-   "levels": 1,
-   "hotkey": "S"
+   "hotkey": "S",
+   "levels": 1
   },
   "A0LJ": {
    "type": "ability",
    "name": "Обмен дерева на золото",
-   "levels": 1,
-   "hotkey": "A"
+   "hotkey": "A",
+   "levels": 1
   },
   "A13A": {
    "type": "ability",
    "name": "Двойной удар",
    "hero": true,
-   "levels": 4,
-   "hotkey": "E"
+   "hotkey": "E",
+   "levels": 4
   },
   "A13B": {
    "type": "ability",
@@ -72,8 +72,8 @@
    "type": "ability",
    "name": "Безумие",
    "hero": true,
-   "levels": 4,
    "hotkey": "Q",
+   "levels": 4,
    "requires": [
     "Robk"
    ]
@@ -82,40 +82,40 @@
    "type": "ability",
    "name": "Повелитель моря",
    "hero": true,
+   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6,
-   "hotkey": "R"
+   "hero_level_req": 6
   },
   "A14F": {
    "type": "ability",
    "name": "Удар хвостом",
    "hero": true,
-   "levels": 4,
-   "hotkey": "W"
+   "hotkey": "W",
+   "levels": 4
   },
   "A14G": {
    "type": "ability",
    "name": "Месть вод",
    "hero": true,
+   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6,
-   "hotkey": "|cffb99d66СПОСОБНОСТЬ:|cffced4da Призывает на помощь верных воинов Кор'Крона.|r"
+   "hero_level_req": 6
   },
   "A14H": {
    "type": "ability",
    "name": "Уклонение",
    "hero": true,
+   "hotkey": "E",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "E"
+   "hero_level_req": 1
   },
   "A14I": {
    "type": "ability",
    "name": "Кольцо льда",
    "hero": true,
+   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "Q"
+   "hero_level_req": 1
   },
   "A14J": {
    "type": "ability",
@@ -128,14 +128,14 @@
   "A14L": {
    "type": "ability",
    "name": "Рассеивание чар",
-   "levels": 1,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 1
   },
   "A14M": {
    "type": "ability",
    "name": "Прилив сил",
-   "levels": 2,
    "hotkey": "W",
+   "levels": 2,
    "requires": [
     "Rnsi"
    ],
@@ -144,8 +144,8 @@
   "A14N": {
    "type": "ability",
    "name": "Целительная вода",
-   "levels": 1,
    "hotkey": "W",
+   "levels": 1,
    "requires": [
     "Rnsi"
    ]
@@ -153,9 +153,9 @@
   "A14O": {
    "type": "ability",
    "name": "Наги",
+   "hotkey": "D",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "D"
+   "hero_level_req": 1
   },
   "A1KB": {
    "type": "ability",
@@ -165,9 +165,9 @@
   "A1LT": {
    "type": "ability",
    "name": "Своя стихия",
+   "hotkey": "D",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "D"
+   "hero_level_req": 1
   },
   "A1OL": {
    "type": "ability",
@@ -180,15 +180,15 @@
   "A1OM": {
    "type": "ability",
    "name": "Едкая слюна",
+   "hotkey": "Q",
    "levels": 1,
-   "hero_level_req": 1,
-   "hotkey": "Q"
+   "hero_level_req": 1
   },
   "A1ON": {
    "type": "ability",
    "name": "Щит молний",
-   "levels": 1,
    "hotkey": "W",
+   "levels": 1,
    "requires": [
     "Rnsw"
    ]
@@ -196,14 +196,14 @@
   "A1OO": {
    "type": "ability",
    "name": "Сила молний",
-   "levels": 1,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 1
   },
   "A1OP": {
    "type": "ability",
    "name": "Цепь молний",
-   "levels": 1,
    "hotkey": "E",
+   "levels": 1,
    "requires": [
     "Rnsw"
    ],
@@ -217,14 +217,14 @@
   "A1OR": {
    "type": "ability",
    "name": "Каннибализм",
-   "levels": 1,
-   "hotkey": "Q"
+   "hotkey": "Q",
+   "levels": 1
   },
   "ACen": {
    "type": "ability",
    "name": "Опутывание",
-   "levels": 1,
    "hotkey": "\"E\"",
+   "levels": 1,
    "requires": [
     "Roen"
    ]
@@ -232,8 +232,8 @@
   "ACfu": {
    "type": "ability",
    "name": "Ледяная броня",
-   "levels": 1,
    "hotkey": "W",
+   "levels": 1,
    "requires": [
     "Rnsw"
    ]
@@ -241,8 +241,8 @@
   "AChx": {
    "type": "ability",
    "name": "Сглаз",
-   "levels": 1,
    "hotkey": "E",
+   "levels": 1,
    "requires": [
     "Rnsi"
    ],
@@ -261,33 +261,33 @@
    "type": "ability",
    "name": "Скачок",
    "hero": true,
+   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "AEtq": {
    "type": "ability",
    "name": "Покой",
    "hero": true,
+   "hotkey": "R",
    "levels": 2,
-   "hero_level_req": 6,
-   "hotkey": "R"
+   "hero_level_req": 6
   },
   "AHab": {
    "type": "ability",
    "name": "Аура гениальности",
    "hero": true,
+   "hotkey": "E",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "E"
+   "hero_level_req": 1
   },
   "AHbn": {
    "type": "ability",
    "name": "Изгнание",
    "hero": true,
+   "hotkey": "W",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "W"
+   "hero_level_req": 1
   },
   "AInv": {
    "type": "ability",
@@ -297,8 +297,8 @@
   "AMh1": {
    "type": "ability",
    "name": "Гарпун",
-   "levels": 1,
    "hotkey": "X",
+   "levels": 1,
    "requires": [
     "R0FP"
    ]
@@ -311,8 +311,8 @@
   "ANen": {
    "type": "ability",
    "name": "Опутывание",
-   "levels": 1,
    "hotkey": "Q",
+   "levels": 1,
    "requires": [
     "Rnen"
    ]
@@ -320,28 +320,28 @@
   "ANha": {
    "type": "ability",
    "name": "Добывать ресурсы",
-   "levels": 1,
-   "hotkey": "G"
+   "hotkey": "G",
+   "levels": 1
   },
   "ANpa": {
    "type": "ability",
    "name": "Паразит",
-   "levels": 1,
-   "hotkey": "R"
+   "hotkey": "R",
+   "levels": 1
   },
   "ANrf": {
    "type": "ability",
    "name": "Огненный ливень",
    "hero": true,
+   "hotkey": "Q",
    "levels": 4,
-   "hero_level_req": 1,
-   "hotkey": "Q"
+   "hero_level_req": 1
   },
   "Acny": {
    "type": "ability",
    "name": "Торнадо",
-   "levels": 1,
    "hotkey": "C",
+   "levels": 1,
    "requires": [
     "Rnsw"
    ],
@@ -355,8 +355,8 @@
   "Arep": {
    "type": "ability",
    "name": "Ремонтировать",
-   "levels": 1,
-   "hotkey": "R"
+   "hotkey": "R",
+   "levels": 1
   },
   "Argl": {
    "type": "ability",
@@ -371,8 +371,8 @@
   "Asb1": {
    "type": "ability",
    "name": "Погружение",
-   "levels": 1,
    "hotkey": "U",
+   "levels": 1,
    "requires": [
     "Rnsb"
    ]
@@ -380,14 +380,14 @@
   "Asb2": {
    "type": "ability",
    "name": "Погружение",
-   "levels": 1,
-   "hotkey": "U"
+   "hotkey": "U",
+   "levels": 1
   },
   "Asb3": {
    "type": "ability",
    "name": "Погружение",
-   "levels": 1,
    "hotkey": "U",
+   "levels": 1,
    "requires": [
     "Rnsb"
    ]
@@ -396,69 +396,69 @@
    "type": "hero",
    "name": "Владыка-страж",
    "base": "Hpal",
-   "gold": 400,
-   "lumber": 100,
-   "food": 1,
-   "hp": 100,
    "time": 55,
-   "hotkey": "X"
+   "food": 1,
+   "gold": 400,
+   "hotkey": "X",
+   "hp": 100,
+   "lumber": 100
   },
   "H0JV": {
    "type": "hero",
    "name": "Глубинная охотница",
    "base": "Hvsh",
-   "gold": 425,
-   "lumber": 100,
-   "food": 1,
-   "hp": 100,
    "time": 40,
-   "hotkey": "C"
+   "food": 1,
+   "gold": 425,
+   "hotkey": "C",
+   "hp": 100,
+   "lumber": 100
   },
   "N07A": {
    "type": "hero",
    "name": "Мурлок-чародей",
    "base": "Nmsr",
-   "gold": 425,
-   "lumber": 100,
-   "food": 1,
-   "hp": 100,
    "time": 50,
-   "hotkey": "Z"
+   "food": 1,
+   "gold": 425,
+   "hotkey": "Z",
+   "hp": 100,
+   "lumber": 100
   },
   "R01N": {
    "type": "upgrade",
    "name": "Улучшенная кладка",
-   "levels": 6,
    "gold": 250,
    "gold_per_level": 500,
    "lumber": 250,
    "lumber_per_level": 500,
-   "time": 30,
-   "time_per_level": 15,
+   "levels": 6,
    "requires": [
     "hkee"
-   ]
+   ],
+   "time": 30,
+   "time_per_level": 15
   },
   "R03A": {
    "type": "upgrade",
    "name": "Фолиант познаний магии морей",
    "only_required": true,
-   "levels": 3,
    "gold": 125,
    "lumber": 75,
-   "time": 40,
+   "levels": 3,
    "requires": [
     "h01Z"
-   ]
+   ],
+   "time": 40
   },
   "R0FD": {
    "type": "upgrade",
    "name": "Шипастый панцирь",
-   "levels": 1,
    "gold": 250,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
+   "levels": 1,
    "time": 60,
    "time_per_level": 15
   },
@@ -466,63 +466,63 @@
    "type": "upgrade",
    "name": "Владычество нагов",
    "only_required": true,
-   "levels": 1,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
+   "levels": 1,
    "time": 1,
    "time_per_level": 15
   },
   "R0FF": {
    "type": "upgrade",
    "name": "Владычество мурлоков",
-   "levels": 1,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
+   "levels": 1,
    "time": 1,
    "time_per_level": 15
   },
   "R0FH": {
    "type": "upgrade",
    "name": "Улучшенный хват — уровень 1",
-   "levels": 4,
    "gold": 100,
    "gold_per_level": 350,
+   "levels": 4,
    "time": 60,
    "time_per_level": 30
   },
   "R0FP": {
    "type": "upgrade",
    "name": "Гарпун",
-   "levels": 1,
    "gold": 340,
    "lumber": 430,
-   "time": 40,
+   "levels": 1,
    "requires": [
     "h0JY"
-   ]
+   ],
+   "time": 40
   },
   "R0FQ": {
    "type": "upgrade",
    "name": "Господство на море — уровень 1",
-   "levels": 3,
    "gold": 450,
    "gold_per_level": 510,
    "lumber": 560,
    "lumber_per_level": 340,
+   "levels": 3,
    "time": 40
   },
   "R0FR": {
    "type": "upgrade",
    "name": "Замедляющий яд",
-   "levels": 1,
    "gold": 230,
    "gold_per_level": 50,
    "lumber": 240,
    "lumber_per_level": 50,
+   "levels": 1,
    "time": 60,
    "time_per_level": 15
   },
@@ -534,121 +534,121 @@
   "R0KP": {
    "type": "upgrade",
    "name": "Антимагический коатль",
-   "levels": 1,
    "gold": 340,
    "lumber": 430,
-   "time": 40,
+   "levels": 1,
    "requires": [
     "h0JY"
-   ]
+   ],
+   "time": 40
   },
   "Rgfo": {
    "type": "upgrade",
    "name": "Знак укрепления",
-   "levels": 3,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
+   "levels": 3,
    "time": 60,
    "time_per_level": 15
   },
   "Rguv": {
    "type": "upgrade",
    "name": "Знак ночного зрения",
-   "levels": 1,
    "gold": 100,
    "gold_per_level": 50,
    "lumber": 100,
    "lumber_per_level": 50,
+   "levels": 1,
    "time": 60,
    "time_per_level": 15
   },
   "Rnam": {
    "type": "upgrade",
    "name": "Коралловая чешуя — уровень 1",
-   "levels": 6,
    "gold": 800,
    "gold_per_level": 1300,
    "lumber": 600,
    "lumber_per_level": 1200,
+   "levels": 6,
    "time": 60,
    "time_per_level": 15
   },
   "Rnat": {
    "type": "upgrade",
    "name": "Коралловые клинки — уровень 1",
-   "levels": 6,
    "gold": 800,
    "gold_per_level": 1300,
    "lumber": 600,
    "lumber_per_level": 1200,
+   "levels": 6,
    "time": 60,
    "time_per_level": 15
   },
   "Rnen": {
    "type": "upgrade",
    "name": "Опутывание",
-   "levels": 1,
    "gold": 340,
    "lumber": 230,
+   "levels": 1,
    "time": 40
   },
   "Rnsb": {
    "type": "upgrade",
    "name": "Погружение",
-   "levels": 1,
    "gold": 240,
    "lumber": 320,
+   "levels": 1,
    "time": 20
   },
   "Rnsi": {
    "type": "upgrade",
    "name": "Коралловая магия — уровень 1",
-   "levels": 2,
    "gold": 450,
    "gold_per_level": 430,
    "lumber": 430,
    "lumber_per_level": 340,
-   "time": 45,
+   "levels": 2,
    "requires": [
     "h0JX"
-   ]
+   ],
+   "time": 45
   },
   "Rnsw": {
    "type": "upgrade",
    "name": "Силы стихий — уровень 1",
-   "levels": 2,
    "gold": 450,
    "gold_per_level": 400,
    "lumber": 430,
    "lumber_per_level": 300,
-   "time": 60,
-   "time_per_level": 15,
+   "levels": 2,
    "requires": [
     "h0JX"
-   ]
+   ],
+   "time": 60,
+   "time_per_level": 15
   },
   "Robk": {
    "type": "upgrade",
    "name": "Улучшение до берсерка",
    "only_required": true,
-   "levels": 1,
    "gold": 75,
    "lumber": 175,
-   "time": 40,
+   "levels": 1,
    "requires": [
     "ofrt",
     "ofor"
-   ]
+   ],
+   "time": 40
   },
   "Roen": {
    "type": "upgrade",
    "name": "Опутывание",
    "only_required": true,
-   "levels": 1,
    "gold": 50,
    "lumber": 75,
+   "levels": 1,
    "time": 40
   },
   "S00A": {
@@ -659,29 +659,40 @@
   "drAq": {
    "type": "ability",
    "name": "Ледяная стрела",
-   "levels": 1,
-   "hotkey": "|cffebc56cМаг (Поддержка)|r (|cffffffffP|r)"
+   "hotkey": "Q",
+   "levels": 1
   },
   "h0JW": {
    "type": "building",
    "name": "Коралловая кузница",
    "base": "hbla",
-   "gold": 140,
-   "lumber": 40,
-   "hp": 1500,
    "time": 70,
-   "hotkey": "E"
+   "gold": 140,
+   "hotkey": "E",
+   "hp": 1500,
+   "lumber": 40,
+   "researches": [
+    "R0FD",
+    "R0FH",
+    "Rnat",
+    "Rnam",
+    "Rnsb"
+   ],
+   "affected_by": [
+    "R01N",
+    "Rgfo"
+   ]
   },
   "h0JX": {
    "type": "building",
    "name": "Храм Бездны",
    "base": "hkee",
-   "gold": 4500,
-   "lumber": 4500,
-   "food_made": 100,
-   "hp": 2000,
    "time": 140,
+   "food_made": 100,
+   "gold": 4500,
    "hotkey": "Z",
+   "hp": 2000,
+   "lumber": 4500,
    "requires": [
     "nnad",
     "h0JW"
@@ -691,12 +702,12 @@
    "type": "building",
    "name": "Коралловый храм",
    "base": "hcas",
-   "gold": 12000,
-   "lumber": 12000,
-   "food_made": 150,
-   "hp": 2500,
    "time": 140,
+   "food_made": 150,
+   "gold": 12000,
    "hotkey": "Z",
+   "hp": 2500,
+   "lumber": 12000,
    "requires": [
     "nnad",
     "h0JW"
@@ -706,22 +717,26 @@
    "type": "unit",
    "name": "Форт",
    "only_required": true,
-   "gold": 4500,
-   "lumber": 4500,
-   "food_made": 100,
-   "hp": 2000,
    "time": 140,
-   "hotkey": "Z"
+   "food_made": 100,
+   "gold": 4500,
+   "hotkey": "Z",
+   "hp": 2000,
+   "lumber": 4500,
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "n04L": {
    "type": "building",
    "name": "Змеиное логово",
    "base": "nnsg",
-   "gold": 450,
-   "lumber": 300,
-   "hp": 1500,
    "time": 60,
+   "gold": 450,
    "hotkey": "X",
+   "hp": 1500,
+   "lumber": 300,
    "requires": [
     "h0JY",
     "h0JW"
@@ -731,274 +746,374 @@
    "type": "unit",
    "name": "Воин волн",
    "base": "nmtw",
-   "gold": 100,
-   "lumber": 35,
-   "hp": 400,
    "time": 20,
-   "hotkey": "Q"
+   "gold": 100,
+   "hotkey": "Q",
+   "hp": 400,
+   "lumber": 35,
+   "affected_by": [
+    "R0FF",
+    "Rnat",
+    "Rnam"
+   ]
   },
   "n050": {
    "type": "unit",
    "name": "Мурлок-мутант",
    "base": "nmfs",
-   "gold": 385,
-   "lumber": 130,
-   "hp": 800,
    "time": 54,
+   "gold": 385,
    "hotkey": "Q",
+   "hp": 800,
+   "lumber": 130,
    "requires": [
     "h0JY"
+   ],
+   "affected_by": [
+    "R0FF",
+    "Rnat",
+    "Rnam",
+    "R0FQ"
    ]
   },
   "n051": {
    "type": "unit",
    "name": "Глубинный житель",
    "base": "nnsw",
-   "gold": 230,
-   "lumber": 130,
-   "hp": 650,
    "time": 28,
+   "gold": 230,
    "hotkey": "Q",
+   "hp": 650,
+   "lumber": 130,
    "requires": [
     "R0FE",
     "h0JX"
+   ],
+   "affected_by": [
+    "Rnat",
+    "Rnam",
+    "Rnsi",
+    "Rguv"
    ]
   },
   "n052": {
    "type": "unit",
    "name": "Мурлок-охотник",
    "base": "nmrr",
-   "gold": 285,
-   "lumber": 95,
-   "hp": 770,
    "time": 48,
+   "gold": 285,
    "hotkey": "E",
+   "hp": 770,
+   "lumber": 95,
    "requires": [
     "h0JX"
+   ],
+   "affected_by": [
+    "R0FF",
+    "Rnat",
+    "Rnam"
    ]
   },
   "n053": {
    "type": "unit",
    "name": "Мурлок-чернокнижник",
    "base": "nmsc",
-   "gold": 365,
-   "lumber": 120,
-   "hp": 525,
    "time": 40,
+   "gold": 365,
    "hotkey": "Q",
+   "hp": 525,
+   "lumber": 120,
    "requires": [
     "h0JX"
+   ],
+   "affected_by": [
+    "R0FF",
+    "Rnsi",
+    "Rnat",
+    "Rnam"
    ]
   },
   "n054": {
    "type": "unit",
    "name": "Мурлок-шаман",
    "base": "nmsc",
-   "gold": 295,
-   "lumber": 100,
-   "hp": 500,
    "time": 43,
+   "gold": 295,
    "hotkey": "W",
+   "hp": 500,
+   "lumber": 100,
    "requires": [
     "h0JX"
+   ],
+   "affected_by": [
+    "R0FF",
+    "Rnsw",
+    "Rnat",
+    "Rnam"
    ]
   },
   "n055": {
    "type": "building",
    "name": "Морские врата",
    "base": "nnsg",
-   "gold": 450,
-   "lumber": 300,
-   "hp": 1500,
    "time": 60,
+   "gold": 450,
    "hotkey": "D",
+   "hp": 1500,
+   "lumber": 300,
    "requires": [
     "h0JY",
     "h0JW"
+   ],
+   "researches": [
+    "R0FQ",
+    "R0FP",
+    "R0KP"
    ]
   },
   "n056": {
    "type": "unit",
    "name": "Морской охотник",
    "base": "nsgh",
-   "gold": 340,
-   "lumber": 115,
-   "hp": 1000,
    "time": 52,
+   "gold": 340,
    "hotkey": "E",
+   "hp": 1000,
+   "lumber": 115,
    "requires": [
     "h0JY"
+   ],
+   "affected_by": [
+    "Rnat",
+    "Rnam"
    ]
   },
   "n079": {
    "type": "unit",
    "name": "Морской змей",
    "base": "nsgh",
-   "gold": 250,
-   "lumber": 150,
-   "hp": 1250,
    "time": 50,
+   "gold": 250,
    "hotkey": "Q",
+   "hp": 1250,
+   "lumber": 150,
    "requires": [
     "h0JY"
+   ],
+   "affected_by": [
+    "Rnat",
+    "Rnam"
    ]
   },
   "nhyc": {
    "type": "unit",
    "name": "Драконья черепаха",
-   "gold": 330,
-   "lumber": 110,
-   "hp": 750,
    "time": 55,
+   "gold": 330,
    "hotkey": "R",
+   "hp": 750,
+   "lumber": 110,
    "requires": [
     "h0JX"
+   ],
+   "affected_by": [
+    "Rguv",
+    "Rnam",
+    "Rnat"
    ]
   },
   "nmpe": {
    "type": "unit",
    "name": "Раб мурлоков",
-   "gold": 75,
-   "hp": 250,
    "time": 15,
-   "hotkey": "Q"
+   "gold": 75,
+   "hotkey": "Q",
+   "hp": 250,
+   "affected_by": [
+    "R0FH"
+   ]
   },
   "nmyr": {
    "type": "unit",
    "name": "Мирмидон",
-   "gold": 320,
-   "lumber": 110,
-   "hp": 1080,
    "time": 49,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 320,
    "hotkey": "E",
+   "hp": 1080,
+   "lumber": 110,
    "requires": [
     "R0FE",
     "h0JX"
    ],
-   "equivalents": [
-    "nmys"
+   "affected_by": [
+    "Rguv",
+    "Rnam",
+    "Rnat",
+    "Rnsb",
+    "Rnen"
    ]
   },
   "nnad": {
    "type": "building",
    "name": "Алтарь глубин",
-   "gold": 255,
-   "lumber": 100,
-   "food_made": 3,
-   "hp": 900,
    "time": 60,
-   "hotkey": "S"
+   "food_made": 3,
+   "gold": 255,
+   "hotkey": "S",
+   "hp": 900,
+   "lumber": 100
   },
   "nnfm": {
    "type": "building",
    "name": "Коралловый риф",
-   "gold": 300,
-   "lumber": 150,
-   "food_made": 40,
-   "hp": 500,
    "time": 45,
-   "hotkey": "A"
+   "food_made": 40,
+   "gold": 300,
+   "hotkey": "A",
+   "hp": 500,
+   "lumber": 150
   },
   "nnmg": {
    "type": "unit",
    "name": "Мурлок-налётчик",
-   "gold": 130,
-   "hp": 400,
    "time": 21,
-   "hotkey": "W"
+   "gold": 130,
+   "hotkey": "W",
+   "hp": 400,
+   "affected_by": [
+    "Rguv",
+    "Rnam",
+    "Rnat"
+   ]
   },
   "nnrg": {
    "type": "unit",
    "name": "Страж нагов",
-   "gold": 490,
-   "lumber": 175,
-   "hp": 1100,
    "time": 62,
+   "equivalents": [
+    "nnrs"
+   ],
+   "gold": 490,
    "hotkey": "Q",
+   "hp": 1100,
+   "lumber": 175,
    "requires": [
     "R0FE",
     "h0JY"
    ],
-   "equivalents": [
-    "nnrs"
+   "affected_by": [
+    "Rguv",
+    "Rnam",
+    "Rnat",
+    "Rnsb"
    ]
   },
   "nnsa": {
    "type": "building",
    "name": "Святилище Азшары",
-   "gold": 320,
-   "lumber": 70,
-   "hp": 1050,
    "time": 70,
+   "gold": 320,
    "hotkey": "R",
+   "hp": 1050,
+   "lumber": 70,
    "requires": [
     "h0JX"
+   ],
+   "researches": [
+    "Rnsw",
+    "Rnsi"
    ]
   },
   "nnsg": {
    "type": "building",
    "name": "Нерестилище",
-   "gold": 370,
-   "lumber": 200,
-   "hp": 1500,
    "time": 60,
-   "hotkey": "W"
+   "gold": 370,
+   "hotkey": "W",
+   "hp": 1500,
+   "lumber": 200,
+   "researches": [
+    "R0FR",
+    "Rnen"
+   ]
   },
   "nnsw": {
    "type": "unit",
    "name": "Сирена",
-   "gold": 280,
-   "lumber": 95,
-   "hp": 550,
    "time": 41,
+   "gold": 280,
    "hotkey": "W",
+   "hp": 550,
+   "lumber": 95,
    "requires": [
     "R0FE",
     "h0JX"
+   ],
+   "affected_by": [
+    "Rnat",
+    "Rnam",
+    "Rnsw",
+    "Rguv"
    ]
   },
   "nntg": {
    "type": "building",
    "name": "Защитник приливов",
-   "gold": 130,
-   "lumber": 80,
-   "hp": 500,
    "time": 45,
-   "hotkey": "Z"
+   "gold": 130,
+   "hotkey": "Z",
+   "hp": 500,
+   "lumber": 80,
+   "affected_by": [
+    "Rnat"
+   ]
   },
   "nntt": {
    "type": "building",
    "name": "Храм Глубин",
-   "gold": 385,
-   "lumber": 150,
-   "food_made": 100,
-   "hp": 1500,
    "time": 140,
-   "hotkey": "Q"
+   "food_made": 100,
+   "gold": 385,
+   "hotkey": "Q",
+   "hp": 1500,
+   "lumber": 150
   },
   "nsnp": {
    "type": "unit",
    "name": "Морской василиск",
-   "gold": 195,
-   "lumber": 65,
-   "hp": 500,
    "time": 29,
+   "equivalents": [
+    "nsbs"
+   ],
+   "gold": 195,
    "hotkey": "W",
+   "hp": 500,
+   "lumber": 65,
    "requires": [
     "h0JW"
    ],
-   "equivalents": [
-    "nsbs"
+   "affected_by": [
+    "Rguv",
+    "Rnam",
+    "Rnat",
+    "Rnsb"
    ]
   },
   "nwgs": {
    "type": "unit",
    "name": "Коатль",
-   "gold": 235,
-   "lumber": 80,
-   "hp": 600,
    "time": 36,
-   "hotkey": "W"
+   "gold": 235,
+   "hotkey": "W",
+   "hp": 600,
+   "lumber": 80,
+   "affected_by": [
+    "Rnat",
+    "Rnam"
+   ]
   }
  },
  "edges": [
@@ -1045,11 +1160,11 @@
   "R0KP requires h0JY",
   "Rnsi requires h0JX",
   "Rnsw requires h0JX",
+  "h0JW affected-by R01N",
+  "h0JW affected-by Rgfo",
   "h0JW has-ability Arlm",
-  "h0JW researches R01N",
   "h0JW researches R0FD",
   "h0JW researches R0FH",
-  "h0JW researches Rgfo",
   "h0JW researches Rnam",
   "h0JW researches Rnat",
   "h0JW researches Rnsb",
@@ -1074,47 +1189,51 @@
   "n04L requires h0JW",
   "n04L requires h0JY",
   "n04L trains n079",
+  "n04Z affected-by R0FF",
+  "n04Z affected-by Rnam",
+  "n04Z affected-by Rnat",
   "n04Z has-ability A13B",
   "n04Z has-ability A1LT",
-  "n04Z researches R0FF",
-  "n04Z researches Rnam",
-  "n04Z researches Rnat",
+  "n050 affected-by R0FF",
+  "n050 affected-by R0FQ",
+  "n050 affected-by Rnam",
+  "n050 affected-by Rnat",
   "n050 has-ability A13B",
   "n050 has-ability A1LT",
   "n050 has-ability A1OR",
   "n050 has-ability AMu1",
   "n050 requires h0JY",
-  "n050 researches R0FF",
-  "n050 researches R0FQ",
-  "n050 researches Rnam",
-  "n050 researches Rnat",
+  "n051 affected-by Rguv",
+  "n051 affected-by Rnam",
+  "n051 affected-by Rnat",
+  "n051 affected-by Rnsi",
   "n051 has-ability A14L",
   "n051 has-ability A14M",
   "n051 has-ability A14N",
   "n051 has-ability A1LT",
   "n051 requires R0FE",
   "n051 requires h0JX",
-  "n051 researches Rguv",
-  "n051 researches Rnam",
-  "n051 researches Rnat",
-  "n051 researches Rnsi",
+  "n052 affected-by R0FF",
+  "n052 affected-by Rnam",
+  "n052 affected-by Rnat",
   "n052 has-ability A13B",
   "n052 has-ability A1LT",
   "n052 has-ability ACen",
   "n052 requires h0JX",
-  "n052 researches R0FF",
-  "n052 researches Rnam",
-  "n052 researches Rnat",
+  "n053 affected-by R0FF",
+  "n053 affected-by Rnam",
+  "n053 affected-by Rnat",
+  "n053 affected-by Rnsi",
   "n053 has-ability A13B",
   "n053 has-ability A14L",
   "n053 has-ability A14N",
   "n053 has-ability A1LT",
   "n053 has-ability AChx",
   "n053 requires h0JX",
-  "n053 researches R0FF",
-  "n053 researches Rnam",
-  "n053 researches Rnat",
-  "n053 researches Rnsi",
+  "n054 affected-by R0FF",
+  "n054 affected-by Rnam",
+  "n054 affected-by Rnat",
+  "n054 affected-by Rnsw",
   "n054 has-ability A13B",
   "n054 has-ability A1LT",
   "n054 has-ability A1ON",
@@ -1122,10 +1241,6 @@
   "n054 has-ability A1OP",
   "n054 has-ability A1OQ",
   "n054 requires h0JX",
-  "n054 researches R0FF",
-  "n054 researches Rnam",
-  "n054 researches Rnat",
-  "n054 researches Rnsw",
   "n055 requires h0JW",
   "n055 requires h0JY",
   "n055 researches R0FP",
@@ -1135,25 +1250,26 @@
   "n055 trains n056",
   "n055 trains nnrg",
   "n055 trains nwgs",
+  "n056 affected-by Rnam",
+  "n056 affected-by Rnat",
   "n056 has-ability A1LT",
   "n056 has-ability ACen",
   "n056 has-ability AMh1",
   "n056 has-ability S00A",
   "n056 requires h0JY",
-  "n056 researches Rnam",
-  "n056 researches Rnat",
+  "n079 affected-by Rnam",
+  "n079 affected-by Rnat",
   "n079 has-ability A1LT",
   "n079 has-ability A1OM",
   "n079 requires h0JY",
-  "n079 researches Rnam",
-  "n079 researches Rnat",
+  "nhyc affected-by Rguv",
+  "nhyc affected-by Rnam",
+  "nhyc affected-by Rnat",
   "nhyc has-ability A13B",
   "nhyc has-ability A1LT",
   "nhyc has-ability Advc",
   "nhyc requires h0JX",
-  "nhyc researches Rguv",
-  "nhyc researches Rnam",
-  "nhyc researches Rnat",
+  "nmpe affected-by R0FH",
   "nmpe builds h0JW",
   "nmpe builds n04L",
   "nmpe builds n055",
@@ -1167,25 +1283,28 @@
   "nmpe has-ability A1LT",
   "nmpe has-ability ANha",
   "nmpe has-ability Arep",
-  "nmpe researches R0FH",
+  "nmyr affected-by Rguv",
+  "nmyr affected-by Rnam",
+  "nmyr affected-by Rnat",
+  "nmyr affected-by Rnen",
+  "nmyr affected-by Rnsb",
   "nmyr has-ability A1LT",
   "nmyr has-ability ANen",
   "nmyr has-ability Asb1",
   "nmyr requires R0FE",
   "nmyr requires h0JX",
-  "nmyr researches Rguv",
-  "nmyr researches Rnam",
-  "nmyr researches Rnat",
-  "nmyr researches Rnen",
-  "nmyr researches Rnsb",
   "nnad trains H0JU",
   "nnad trains H0JV",
   "nnad trains N07A",
+  "nnmg affected-by Rguv",
+  "nnmg affected-by Rnam",
+  "nnmg affected-by Rnat",
   "nnmg has-ability A13B",
   "nnmg has-ability A1LT",
-  "nnmg researches Rguv",
-  "nnmg researches Rnam",
-  "nnmg researches Rnat",
+  "nnrg affected-by Rguv",
+  "nnrg affected-by Rnam",
+  "nnrg affected-by Rnat",
+  "nnrg affected-by Rnsb",
   "nnrg has-ability A06U",
   "nnrg has-ability A1LT",
   "nnrg has-ability ACsk",
@@ -1193,10 +1312,6 @@
   "nnrg has-ability drAq",
   "nnrg requires R0FE",
   "nnrg requires h0JY",
-  "nnrg researches Rguv",
-  "nnrg researches Rnam",
-  "nnrg researches Rnat",
-  "nnrg researches Rnsb",
   "nnsa requires h0JX",
   "nnsa researches Rnsi",
   "nnsa researches Rnsw",
@@ -1211,17 +1326,17 @@
   "nnsg trains nhyc",
   "nnsg trains nmyr",
   "nnsg trains nsnp",
+  "nnsw affected-by Rguv",
+  "nnsw affected-by Rnam",
+  "nnsw affected-by Rnat",
+  "nnsw affected-by Rnsw",
   "nnsw has-ability A1LT",
   "nnsw has-ability ACfu",
   "nnsw has-ability ANpa",
   "nnsw has-ability Acny",
   "nnsw requires R0FE",
   "nnsw requires h0JX",
-  "nnsw researches Rguv",
-  "nnsw researches Rnam",
-  "nnsw researches Rnat",
-  "nnsw researches Rnsw",
-  "nntg researches Rnat",
+  "nntg affected-by Rnat",
   "nntt has-ability A0IQ",
   "nntt has-ability A0LI",
   "nntt has-ability A0LJ",
@@ -1229,18 +1344,18 @@
   "nntt morphs-to h0JX",
   "nntt trains nmpe",
   "nntt trains nnmg",
+  "nsnp affected-by Rguv",
+  "nsnp affected-by Rnam",
+  "nsnp affected-by Rnat",
+  "nsnp affected-by Rnsb",
   "nsnp has-ability A14J",
   "nsnp has-ability A1LT",
   "nsnp has-ability Asb3",
   "nsnp requires h0JW",
-  "nsnp researches Rguv",
-  "nsnp researches Rnam",
-  "nsnp researches Rnat",
-  "nsnp researches Rnsb",
+  "nwgs affected-by Rnam",
+  "nwgs affected-by Rnat",
   "nwgs has-ability A1LT",
   "nwgs has-ability A1OL",
-  "nwgs researches Rnam",
-  "nwgs researches Rnat",
   "race:Nagi lua-start-tech R0FS",
   "race:Nagi lua-starts-with nmpe"
  ]

@@ -7786,7 +7786,7 @@ function startJungleTrolls(pi)
 	NumberSet(pi, FourCC('h0N5'), 1)
 	AiData[pi][StringHash("Race")] = "JT"
 	SetPlayerTechResearchedSwap(FourCC('R0IH'), 1, Player(pi))
-	SetPlayerName(Player(pi), "Jungle Trolls (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), "Тролли джунглей (" .. I2S(pi + 1) .. ")")
 	StartJungleTrolls()
 	AiChooseJungleTrollsBranch(pi)
 	AiRace[pi] = "JungleTrolls"
@@ -8150,7 +8150,7 @@ function startForestTrolls(pi)
     SetPlayerTechMaxAllowedSwap(FourCC('O058'), 1, p)
     SetPlayerTechMaxAllowedSwap(FourCC('O059'), 1, p)
     SetPlayerTechMaxAllowedSwap(FourCC('o04Y'), 0, p)
-    SetPlayerName(Player(pi), "Forest Trolls (" .. I2S(pi + 1) .. ")")
+    SetPlayerName(Player(pi), "Лесные тролли (" .. I2S(pi + 1) .. ")")
     StartForestTrolls()
     AiRace[pi] = "ForestTrolls"
     ProbeLogWrite("[AI] startForestTrolls pi=" .. tostring(pi) .. " workers=5o04V building=1h0MT")
@@ -8239,7 +8239,7 @@ function startCult(pi)
     SetPlayerTechResearchedSwap(FourCC('R0J4'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0J5'), 1, p)
     if CultOn then CultOn() end
-    SetPlayerName(p, "Cult of the Damned (" .. I2S(pi + 1) .. ")")
+    SetPlayerName(p, "Культ Проклятых (" .. I2S(pi + 1) .. ")")
     AiRace[pi] = "Cult"
     ProbeLogWrite("[AI] startCult pi=" .. tostring(pi) .. " workers=3cD02 building=1cD26")
 end
@@ -10449,7 +10449,7 @@ function ClearPlayer(p)
 					ForceAddPlayer(Vassals[inheritedPi], v)
 					NewAlly(v)
 				end)
-				DisplayTextToForce(udg_AllPlayers, GetPlayerName(inheritedSenior) .. " inherited vassals of dead player " .. GetPlayerName(p))
+				DisplayTextToForce(udg_AllPlayers, "|cffebc56c" .. GetPlayerName(inheritedSenior) .. "|cffced4da получает вассалов погибшего игрока |cffebc56c" .. GetPlayerName(p) .. "|cffced4da.|r")
 			else
 				-- No senior — free all vassals
 				ForForce(Vassals[pi], Freedom)
@@ -10460,7 +10460,7 @@ function ClearPlayer(p)
 				local v = GetEnumPlayer()
 				ClearPlayer(v)
 			end)
-			DisplayTextToForce(udg_AllPlayers, "Vassals of dead player " .. GetPlayerName(p) .. " are eliminated!")
+			DisplayTextToForce(udg_AllPlayers, "|cffced4daВассалы погибшего игрока |cffebc56c" .. GetPlayerName(p) .. "|cffef8173 выбывают из игры!|r")
 		end
 		-- Remove ourselves from our senior's vassal force
 		if inheritedSenior ~= nil then
@@ -10694,16 +10694,20 @@ function UISetup()
 	BlzFrameClearAllPoints(allyButton)
 	BlzFrameClearAllPoints(chatButton)
 	BlzFrameClearAllPoints(questButton)
-	-- 2x2 grid left of the resource bar (it starts at x = 0.14).
-	local btnW, btnH, gap = 0.084, 0.0175, 0.002
+	-- 2x2 grid left of the resource bar (it starts at x = 0.14), привязана к «Справке».
+	-- Видимая рамка нативной кнопки уже фрейма примерно на inset по каждой оси,
+	-- поэтому кнопки стоят впритык с шагом «размер минус inset».
+	local btnW, btnH, inset = 0.084, 0.0175, 0.0053
+	local questX, top = 0.056, 0.599
+	local stepX, stepY = btnW - inset, btnH - inset
 	BlzFrameSetSize(fh, btnW, btnH)
 	BlzFrameSetSize(questButton, btnW, btnH)
 	BlzFrameSetSize(allyButton, btnW, btnH)
 	BlzFrameSetSize(chatButton, btnW, btnH)
-	BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPLEFT, -0.03, 0.599)
-	BlzFrameSetAbsPoint(questButton, FRAMEPOINT_TOPLEFT, -0.03 + btnW + gap, 0.599)
-	BlzFrameSetAbsPoint(chatButton, FRAMEPOINT_TOPLEFT, -0.03, 0.599 - btnH - gap)
-	BlzFrameSetAbsPoint(allyButton, FRAMEPOINT_TOPLEFT, -0.03 + btnW + gap, 0.599 - btnH - gap)
+	BlzFrameSetAbsPoint(questButton, FRAMEPOINT_TOPLEFT, questX, top)
+	BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPLEFT, questX - stepX, top)
+	BlzFrameSetAbsPoint(chatButton, FRAMEPOINT_TOPLEFT, questX - stepX, top - stepY)
+	BlzFrameSetAbsPoint(allyButton, FRAMEPOINT_TOPLEFT, questX, top - stepY)
 	
 	-- Hiding clock UI and creating new frame bar
 	BlzFrameSetTexture(imageTest, "UI\\ResourceBar.tga", 0, true)
@@ -10845,6 +10849,8 @@ function UISetup()
 	BlzFrameSetTexture(BlzGetFrameByName("InfoPanelIconAllyWoodIcon", 7), "UI\\RLReplacement.dds", 0, false)
 	BlzFrameSetTexture(BlzGetFrameByName("InfoPanelIconAllyFoodIcon", 7), "UI\\RSReplacement.dds", 0, false)
 	
+	-- Проходы UISetup идут и при открытой панели хоста/выбора расы: не возвращать скрытое.
+	if StandardUIHidden and StandardUISetVisible ~= nil then StandardUISetVisible(false) end
 end
 --  scope init begins
 ---@return nothing
@@ -11579,7 +11585,7 @@ function ShowWelcomePanel()
 	BlzFrameSetTextAlignment(title, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 	BlzFrameSetSize(title, WELCOME_W - 0.02, 0.02)
 	BlzFrameSetPoint(title, FRAMEPOINT_TOP, welcome, FRAMEPOINT_TOP, 0, y)
-	BlzFrameSetText(title, "|cffebc56cДобро пожаловать в 23 RACE: FOREVER!|r")
+	BlzFrameSetText(title, "|cffebc56cДобро пожаловать в 23 Race Forever!|r")
 	BlzFrameSetEnable(title, false)
 	y = y - 0.026
 
@@ -11794,6 +11800,7 @@ end
 -- Нативные фреймы консоли только скрываются, без увода за экран: их исходные
 -- привязки не прочитать, и после возврата они перекрывали игровое поле.
 function StandardUISetVisible(show)
+	StandardUIHidden = not show
 	BlzHideOriginFrames(not show)
 	local f = BlzGetFrameByName("ConsoleUIBackdrop", 0)
 	if f ~= nil then BlzFrameSetVisible(f, show) end
@@ -11805,6 +11812,21 @@ function StandardUISetVisible(show)
 	if f ~= nil then BlzFrameSetVisible(f, show) end
 	f = BlzGetFrameByName("UpperButtonBarAlliesButton", 0)
 	if f ~= nil then BlzFrameSetVisible(f, show) end
+	-- Рамки миникарты и командной карты, а также ячейки-родители командных кнопок:
+	-- невидимые SimpleFrame-ячейки перехватывают клики даже без кнопок.
+	f = BlzGetFrameByName("MinimapBorder", 0)
+	if f ~= nil then BlzFrameSetVisible(f, show) end
+	f = BlzGetFrameByName("CommandBorder", 0)
+	if f ~= nil then BlzFrameSetVisible(f, show) end
+	f = BlzGetFrameByName("CommandBarFrame", 0)
+	if f ~= nil then BlzFrameSetVisible(f, show) end
+	-- Выбор расы после этого сам показывает миникарту в правом верхнем углу.
+	f = BlzGetFrameByName("MiniMapFrame", 0)
+	if f ~= nil then BlzFrameSetVisible(f, show) end
+	for i = 0, 11 do
+		f = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, i)
+		if f ~= nil and BlzFrameGetParent(f) ~= nil then BlzFrameSetVisible(BlzFrameGetParent(f), show) end
+	end
 	if IncomeUISetVisible ~= nil then IncomeUISetVisible(show) end
 	if CustomHudSetVisible ~= nil then CustomHudSetVisible(show) end
 end
@@ -11952,6 +11974,9 @@ function RacePicker_Create()
 	rpRoot = BlzCreateFrameByType("FRAME", "RacePickRoot", parent, "", 0)
 	BlzFrameSetSize(rpRoot, 0.001, 0.001)
 	BlzFrameSetAbsPoint(rpRoot, FRAMEPOINT_BOTTOMLEFT, 0.0, 0.0)
+	-- Над всеми фреймами интерфейса (приветствие — 10, панель хоста — 5): иначе нативные
+	-- фреймы над командной картой перехватывают клики по иконкам справа.
+	BlzFrameSetLevel(rpRoot, 100)
 
 	-- Раскладка: группы по два ряда; нечётные — нижний ряд сдвинут на пол-иконки.
 	local groups, total = {}, 0
@@ -12823,11 +12848,11 @@ end
 function HordeW2GetSubraceLabel(pOrPi)
 	local subrace = HordeW2GetSubrace(pOrPi)
 	if subrace == "dark" then
-		return "Dark Horde"
+		return "Тёмная Орда"
 	elseif subrace == "dragonmaw" then
-		return "Dragonmaw"
+		return "Драконья Пасть"
 	end
-	return "Base"
+	return "Орда Второй войны"
 end
 
 ---@param pOrPi player|integer
@@ -39985,6 +40010,28 @@ function HordeUpdateResearchAvailability(p)
     allow('R0KO', completed('R0E9') and not chosen('R0EA'))
 end
 
+-- Взаимоисключающие ветки: финальный выбор Орды и Железная Орда / Ша.
+HordeResearch.rivals = {{'R0EH', 'R0E9', 'R0EI'}, {'R0EA', 'R0KO'}}
+
+function HordeResearchRival(p, id)
+    local pending = HordeResearch.pending[GetPlayerId(p)] or {}
+    for _, group in ipairs(HordeResearch.rivals) do
+        local member = false
+        for _, other in ipairs(group) do
+            if FourCC(other) == id then member = true end
+        end
+        if member then
+            for _, other in ipairs(group) do
+                local code = FourCC(other)
+                if code ~= id and (pending[code] == true or GetPlayerTechCount(p, code, true) > 0) then
+                    return true
+                end
+            end
+        end
+    end
+    return false
+end
+
 function InitTrig_HordeResearch()
     if HordeResearch.initialized then return end
     HordeResearch.initialized = true
@@ -40000,6 +40047,11 @@ function InitTrig_HordeResearch()
         local p = GetOwningPlayer(GetTriggerUnit())
         local pi = GetPlayerId(p)
         HordeResearch.pending[pi] = HordeResearch.pending[pi] or {}
+        -- Вторая ветка, поставленная в очередь до выбора первой, отменяется при старте.
+        if started and HordeResearchRival(p, id) then
+            IssueImmediateOrderById(GetTriggerUnit(), 851976) -- cancel
+            return
+        end
         HordeResearch.pending[pi][id] = started or nil
         HordeUpdateResearchAvailability(p)
         if finished then countAll(p) end
@@ -46677,6 +46729,9 @@ function NagaCombat.Init()
             BlzEndUnitAbilityCooldown(caster, NagaCombat.ids.harpoon)
         end
     end)
+    -- Обученные, призванные и созданные скриптом мутанты одинаково входят в регион мира.
+    -- Только корневой Allmap (заполняется в StartInc): свой регион на всю карту,
+    -- созданный при инициализации, ломает наземные пути (docs/FEC12DE_MOVEMENT_INVESTIGATION.md).
     NagaCombat.enterTrigger = CreateTrigger()
     TriggerRegisterEnterRegion(NagaCombat.enterTrigger, Allmap, nil)
     TriggerAddAction(NagaCombat.enterTrigger, function() NagaCombat.Mutate(GetTriggerUnit()) end)
@@ -50995,8 +51050,12 @@ function BridgeRaceSelect(target_index)
     local target_player = ConvertedPlayer(target_index)
     local t = SecondChance[GetPlayerId(target_player)]
     udg_LocalPosition2=StartLoc[GetRandomInt(0, StartLocCount - 1)]
-    DisplayTimedTextToForce(GetPlayersAll(), 5.00, "Bridge gave player " .. GetPlayerName(target_player) .. " race selection")
-    DisplayTimedTextToPlayer(target_player, 0, 0, 15.00, "You have 15 minutes to place your capital")
+    DisplayTimedTextToForce(GetPlayersAll(), 5.00, "|cffced4daИгроку |cffebc56c" .. GetPlayerName(target_player) .. "|cffc8e087 доступен повторный выбор расы.|r")
+    local capitalHint = "|cffced4daВыберите расу и разместите столицу.|r"
+    if udg_GameMode == 1 or udg_GameMode == 2 then
+        capitalHint = "|cffced4daВыберите расу. На размещение столицы — |cffffffff15|cffced4da минут.|r"
+    end
+    DisplayTimedTextToPlayer(target_player, 0, 0, 15.00, capitalHint)
     CreateNUnitsAtLoc(1, FourCC('h0HJ'), target_player, udg_LocalPosition2, bj_UNIT_FACING)
     RacePickerAdopt(GetLastCreatedUnit())
     SetPlayerStateBJ(target_player, PLAYER_STATE_RESOURCE_GOLD, 5000)
@@ -52349,6 +52408,9 @@ function OgreCombat.Init()
     OgreCombat.deathTrigger = CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(OgreCombat.deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     TriggerAddAction(OgreCombat.deathTrigger, OgreCombat.Death)
+    -- Обученные, призванные и созданные скриптом гронны одинаково входят в регион мира.
+    -- Только корневой Allmap (заполняется в StartInc): свой регион на всю карту,
+    -- созданный при инициализации, ломает наземные пути (docs/FEC12DE_MOVEMENT_INVESTIGATION.md).
     OgreCombat.enterTrigger = CreateTrigger()
     TriggerRegisterEnterRegion(OgreCombat.enterTrigger, Allmap, nil)
     TriggerAddAction(OgreCombat.enterTrigger, function() OgreCombat.Track(GetTriggerUnit()) end)
@@ -52454,6 +52516,9 @@ function PandarenBrew.Init()
         if GetSpellAbilityId() ~= PandarenBrew.ids.barrel then return end
         PandarenBrew.Launch(GetTriggerUnit(), GetSpellTargetUnit())
     end)
+    -- Автоприменение включено с появления хмелевара (и у ботов); игрок может выключить.
+    -- Только корневой Allmap (заполняется в StartInc): свой регион на всю карту,
+    -- созданный при инициализации, ломает наземные пути (docs/FEC12DE_MOVEMENT_INVESTIGATION.md).
     PandarenBrew.enterTrigger = CreateTrigger()
     TriggerRegisterEnterRegion(PandarenBrew.enterTrigger, Allmap, nil)
     TriggerAddAction(PandarenBrew.enterTrigger, function()
@@ -69510,14 +69575,13 @@ AiDiplomatMinAllyAge = AiDiplomatMinAllyAge or 40
 AiDiplomatReallyCooldown = AiDiplomatReallyCooldown or 60
 
 -- ====================================================================
--- Name helper: "[RaceName (Slot#)]" — disambiguates duplicate races.
+-- Display name helper: bot player names already include their slot number.
 -- ====================================================================
 ---@param pi integer
 ---@return string
 function DiplomatName(pi)
-    local race = AiRaceOf(pi)
-    local raceName = (race and race.key) or "Unknown"
-    return "[" .. raceName .. " (" .. tostring(pi) .. ")]"
+    local playerName = GetPlayerName(Player(pi)) or "Неизвестный игрок"
+    return "|cffebc56c[" .. playerName .. "]|r"
 end
 
 -- ====================================================================
@@ -69539,7 +69603,7 @@ end
 ---@param pi integer
 ---@param msg string
 function DipRpBroadcast(pi, msg)
-    local full = DiplomatName(pi) .. " says: \"" .. msg .. "\""
+    local full = DiplomatName(pi) .. "|cffced4da: «" .. msg .. "»|r"
     DipBroadcast(full)
     DipLog(pi, "[RP] " .. msg)
 end
@@ -69648,7 +69712,7 @@ end
 ---@param targetPi integer
 ---@param msg string
 function DipChat(pi, targetPi, msg)
-    local full = DiplomatName(pi) .. " " .. msg
+    local full = DiplomatName(pi) .. "|cffced4da " .. msg .. "|r"
     DisplayTimedTextToPlayer(Player(targetPi), 0, 0, 10.0, full)
     DipLog(pi, "chat to " .. tostring(targetPi) .. ": " .. msg)
 end
@@ -69662,184 +69726,184 @@ end
 AiDiplomatRpMessages = {
     diplomat = {
         allyPropose = {
-            "Together we shall prosper.",
-            "I sense a fruitful partnership ahead.",
-            "Let us build bridges, not walls.",
-            "An alliance of mutual benefit.",
+            "Вместе мы будем процветать.",
+            "Нас ждёт плодотворное сотрудничество.",
+            "Давайте строить мосты, а не стены.",
+            "Этот союз принесёт пользу нам обоим.",
         },
         allyAccept = {
-            "A new chapter of friendship begins!",
-            "Together, nothing can stop us.",
-            "Our combined strength will be legendary.",
-            "I welcome you as a true friend.",
+            "Начинается новая глава нашей дружбы!",
+            "Вместе нас ничто не остановит.",
+            "О нашей общей силе будут слагать легенды.",
+            "Приветствую тебя, верный друг.",
         },
         allyBreak  = {
-            "Perhaps another time, another place.",
-            "The road ahead parts here.",
-            "Our purposes no longer align.",
-            "Farewell, old friend. May we meet again in peace.",
+            "Возможно, в другой раз и в другом месте.",
+            "Здесь наши пути расходятся.",
+            "Наши цели больше не совпадают.",
+            "Прощай, старый друг. Надеюсь, мы встретимся с миром.",
         },
         trade = {
-            "A gift from a friend. No strings attached.",
-            "For your prosperity — and ours.",
-            "Share and share alike!",
+            "Подарок от друга. Без всяких условий.",
+            "Ради твоего процветания — и нашего.",
+            "Поделимся по-братски!",
         },
         idle = {
-            "Trade caravans report all is well.",
-            "The markets are stable. A good sign.",
-            "Diplomacy is the greatest weapon.",
+            "Торговые караваны сообщают, что всё спокойно.",
+            "Рынки стабильны. Хороший знак.",
+            "Дипломатия — величайшее оружие.",
         },
         underAttack = {
-            "We are under siege! Honoured allies, we need your aid!",
-            "The enemy is at our gates! Any help is welcome!",
+            "Мы в осаде! Дорогие союзники, нам нужна помощь!",
+            "Враг у наших ворот! Будем рады любой помощи!",
         },
     },
     pragmatic = {
         allyPropose = {
-            "Our interests align. Let us act on it.",
-            "The enemy of my enemy... you know the rest.",
-            "A temporary coalition. Nothing more.",
+            "Наши интересы совпадают. Пора действовать.",
+            "Враг моего врага... продолжение ты знаешь.",
+            "Временный союз. Не более того.",
         },
         allyAccept = {
-            "A strategic decision. Do not make me regret it.",
-            "Very well. We stand together — for now.",
-            "This alliance serves us both. Remember that.",
+            "Стратегическое решение. Не заставляй меня пожалеть о нём.",
+            "Хорошо. Пока мы на одной стороне.",
+            "Этот союз выгоден нам обоим. Помни об этом.",
         },
         allyBreak  = {
-            "The calculation has changed. We part ways.",
-            "Circumstances no longer favour this union.",
-            "Our priorities have shifted. Farewell.",
+            "Расчёты изменились. Наши пути расходятся.",
+            "Обстоятельства больше не благоприятствуют нашему союзу.",
+            "Наши приоритеты изменились. Прощай.",
         },
         trade = {
-            "Strategic resources. Use them wisely.",
-            "A calculated investment.",
-            "Spend it well. I expect results.",
+            "Стратегические ресурсы. Распорядись ими разумно.",
+            "Продуманное вложение.",
+            "Потрать с умом. Я жду результатов.",
         },
         idle = {
-            "The balance of power is... acceptable for now.",
-            "We watch. We wait. We calculate.",
-            "Every alliance is a transaction.",
+            "Соотношение сил... пока приемлемое.",
+            "Наблюдаем. Ждём. Рассчитываем.",
+            "Любой союз — это сделка.",
         },
         underAttack = {
-            "We are under assault. Any capable hands, rally to us!",
-            "Defensive protocols engaged. Allies, your turn.",
+            "Нас атакуют! Все, кто способен сражаться, к нам!",
+            "Оборона подготовлена. Союзники, теперь ваш ход.",
         },
     },
     traitor = {
         allyPropose = {
-            "Trust me... for now.",
-            "An alliance of convenience, shall we say?",
-            "I have a proposition you cannot refuse.",
+            "Доверься мне... пока что.",
+            "Назовём это союзом по расчёту?",
+            "У меня есть предложение, от которого ты не сможешь отказаться.",
         },
         allyAccept = {
-            "Ah, a new... friend. How delightful.",
-            "Yes, yes. Together we shall conquer!",
-            "Your trust is noted. I shall use it... wisely.",
+            "А, новый... друг. Как приятно.",
+            "Да-да. Вместе мы всех покорим!",
+            "Твоё доверие принято. Я воспользуюсь им... разумно.",
         },
         allyBreak  = {
-            "Did you really think we were friends?",
-            "Your usefulness has... expired.",
-            "A knife in the back is still a weapon.",
-            "Nothing personal. Just business.",
+            "Ты и вправду считал нас друзьями?",
+            "Ты больше... не нужен.",
+            "Нож в спину — тоже оружие.",
+            "Ничего личного. Только дело.",
         },
         trade = {
-            "Take it. The price comes later.",
-            "A token of my... appreciation.",
+            "Бери. Расплатишься потом.",
+            "Знак моей... признательности.",
         },
         idle = {
-            "The strong prey on the weak. It is the way of things.",
-            "Opportunity is everywhere. One must simply seize it.",
-            "Loyalty is a currency. Spend it freely, save it wisely.",
+            "Сильные пожирают слабых. Так устроен мир.",
+            "Возможности повсюду. Нужно лишь ими воспользоваться.",
+            "Верность — это валюта. Трать щедро, копи с умом.",
         },
         underAttack = {
-            "Imbeciles! They dare strike at us!",
-            "They will pay for this insolence!",
+            "Глупцы! Они посмели напасть на нас!",
+            "Они заплатят за эту дерзость!",
         },
     },
     isolationist = {
         allyPropose = {
-            "We have no need of outsiders.",
-            "Your kind is not welcome here.",
-            "Do not waste your breath.",
+            "Нам не нужны чужаки.",
+            "Таким, как ты, здесь не рады.",
+            "Не трать слова попусту.",
         },
         allyAccept = {
-            "... unexpected, but acceptable.",
-            "Do not overstep your bounds.",
+            "...Неожиданно, но приемлемо.",
+            "Не переходи границы дозволенного.",
         },
         allyBreak  = {
-            "As it was meant to be.",
-            "The solitude returns. Good.",
+            "Всё идёт как должно.",
+            "Мы снова одни. Хорошо.",
         },
         trade = {
-            "Do not expect gratitude.",
-            "Do not expect this again.",
+            "Не жди благодарности.",
+            "Не рассчитывай на повторение.",
         },
         idle = {
-            "The outside world is irrelevant.",
-            "Isolation is our greatest strength.",
+            "Внешний мир не имеет значения.",
+            "Наша сила — в уединении.",
         },
         underAttack = {
-            "Intruders! Defend the brood at all costs!",
-            "Our lands are being violated!",
+            "Чужаки! Защитим рой любой ценой!",
+            "Вторжение на наши земли!",
         },
     },
     loyal = {
         allyPropose = {
-            "Honour calls us to stand together.",
-            "A bond forged in trust is unbreakable.",
-            "Let our oath be eternal.",
+            "Честь зовёт нас встать плечом к плечу.",
+            "Союз, скреплённый доверием, нерушим.",
+            "Пусть наша клятва будет вечной.",
         },
         allyAccept = {
-            "By my honour, we are now one.",
-            "I swear to defend our alliance with my life.",
-            "Till the end of days, we stand united.",
+            "Клянусь честью, теперь мы едины.",
+            "Клянусь жизнью защищать наш союз.",
+            "До конца времён мы будем вместе.",
         },
         allyBreak  = {
-            "A heavy decision, but a necessary one.",
-            "Nothing lasts forever. Not even honour.",
-            "I release you from our bond.",
+            "Тяжёлое решение, но необходимое.",
+            "Ничто не вечно. Даже честь.",
+            "Я освобождаю тебя от нашей клятвы.",
         },
         trade = {
-            "For the cause. Always.",
-            "My sword, my gold — all for our covenant.",
+            "Ради общего дела. Всегда.",
+            "Мой меч и моё золото — всё ради нашего союза.",
         },
         idle = {
-            "Vigilance and honour guide our path.",
-            "True strength comes from unity.",
-            "We remember every debt, every kindness.",
+            "Бдительность и честь указывают нам путь.",
+            "Истинная сила — в единстве.",
+            "Мы помним каждый долг и каждое доброе дело.",
         },
         underAttack = {
-            "To arms, brothers! The enemy approaches!",
-            "Our sacred lands are under threat! Rally to us!",
+            "К оружию, братья! Враг приближается!",
+            "Наши священные земли под угрозой! Все на защиту!",
         },
     },
     balanced = {
         allyPropose = {
-            "Let us hunt together.",
-            "Strength in numbers. Always.",
-            "An alliance could benefit us both.",
+            "Будем охотиться вместе.",
+            "Наша сила — в численности. Всегда.",
+            "Союз может принести пользу нам обоим.",
         },
         allyAccept = {
-            "A worthy partner. Let us begin.",
-            "Together we are stronger.",
-            "I welcome this new alliance.",
+            "Достойный союзник. Начнём.",
+            "Вместе мы сильнее.",
+            "Приветствую наш новый союз.",
         },
         allyBreak  = {
-            "The time has come to part ways.",
-            "We walk our own path now.",
-            "Our alliance is no longer needed.",
+            "Пришла пора расстаться.",
+            "Теперь мы идём своим путём.",
+            "Наш союз больше не нужен.",
         },
         trade = {
-            "Take it. You need it more.",
-            "A fair exchange for a true ally.",
+            "Бери. Тебе нужнее.",
+            "Справедливый обмен для верного союзника.",
         },
         idle = {
-            "The wilds are quiet today.",
-            "The fire crackles. All is calm.",
+            "Сегодня в диких землях тихо.",
+            "Костёр потрескивает. Всё спокойно.",
         },
         underAttack = {
-            "Enemies at the gates! All warriors, defend!",
-            "We are beset! Any aid is welcome!",
+            "Враги у ворот! Все воины, к обороне!",
+            "Нас окружили! Будем рады любой помощи!",
         },
     },
 }
@@ -70075,7 +70139,7 @@ function AiDiplomatPropose(pi, otherPi)
 
     st.pendingOffers[otherPi] = AiDiplomatTicks[pi] or 0
     DipLog(pi, "propose alliance to " .. tostring(otherPi) .. " (" .. GetPlayerName(other) .. ")")
-    DipChat(pi, otherPi, "I propose an alliance.")
+    DipChat(pi, otherPi, "Предлагаю заключить союз.")
     AiDiplomatRpSay(pi, "allyPropose")
     return true
 end
@@ -70103,8 +70167,8 @@ function AiDiplomatAccept(pi, otherPi)
         st.relations[otherPi].trust = math.min((st.relations[otherPi].trust or 0.3) + 0.3, 1.0)
     end
     DipLog(pi, "accepted alliance with " .. tostring(otherPi))
-    DipChat(pi, otherPi, "I accept your alliance.")
-    DipBroadcast(DiplomatName(pi) .. " and " .. DiplomatName(otherPi) .. " are now allied!")
+    DipChat(pi, otherPi, "Принимаю твоё предложение союза.")
+    DipBroadcast(DiplomatName(pi) .. "|cffced4da и " .. DiplomatName(otherPi) .. "|cffc8e087 заключили союз!|r")
     AiDiplomatRpSay(pi, "allyAccept")
 end
 
@@ -70153,7 +70217,7 @@ function AiDiplomatBreak(pi, otherPi, reason)
     if reason ~= nil and reason ~= "" then
         DipChat(pi, otherPi, reason)
     end
-    DipBroadcast(DiplomatName(pi) .. " has broken their alliance with " .. DiplomatName(otherPi) .. ".")
+    DipBroadcast(DiplomatName(pi) .. "|cffef8173 разрывает союз с " .. DiplomatName(otherPi) .. "|cffced4da.|r")
     AiDiplomatRpSay(pi, "allyBreak")
 end
 
@@ -70228,9 +70292,9 @@ function AiDiplomatConsiderAlly(pi, otherPi)
         local rel = st.relations[otherPi]
         local reason = nil
         if rel ~= nil and rel.sharedEnemies > 0 then
-            reason = "We share a common enemy. Let us unite."
+            reason = "У нас общий враг. Объединим силы."
         elseif rel ~= nil and rel.threat > 0.5 then
-            reason = "We face the same threat. An alliance would serve us both."
+            reason = "Нам угрожает один враг. Союз поможет нам обоим."
         end
         return true, reason
     end
@@ -70252,7 +70316,7 @@ function AiDiplomatConsiderBreak(pi, otherPi)
 
     local st = AiDiplomatState(pi)
     local rel = st.relations[otherPi]
-    if rel == nil then return true, "You are no longer relevant." end
+    if rel == nil then return true, "В наших отношениях больше нет смысла." end
 
     -- Young alliances are protected from circumstantial breaks (weakness / no
     -- common threat) so power/proximity noise can't make bots ally-and-drop every
@@ -70266,12 +70330,12 @@ function AiDiplomatConsiderBreak(pi, otherPi)
         -- 1. Ally is too weak
         local weakness = 1.0 - (otherPower / math.max(myPower, 1))
         if weakness > cfg.breakOnWeakness then
-            return true, "You have grown too weak to be useful."
+            return true, "Ты слишком ослаб, чтобы приносить пользу."
         end
 
         -- 2. No common threat anymore
         if rel.sharedEnemies == 0 and cfg.breakOnNoThreat > 0.5 then
-            return true, "Our common enemy is gone. This alliance no longer serves me."
+            return true, "Нашего общего врага больше нет. Этот союз мне больше не нужен."
         end
     end
 
@@ -70279,7 +70343,7 @@ function AiDiplomatConsiderBreak(pi, otherPi)
     local breakRoll = GetRandomReal(0.0, 1.0)
     local breakChance = cfg.breakChanceBase * (1.0 - cfg.loyalty)
     if breakRoll < breakChance then
-        return true, "This alliance has run its course."
+        return true, "Наш союз исчерпал себя."
     end
 
     -- 4. Betrayal check (traitor personality)
@@ -70289,7 +70353,7 @@ function AiDiplomatConsiderBreak(pi, otherPi)
             local tickNow = AiDiplomatTicks[pi] or 0
             if tickNow >= st.betrayTargets[otherPi] then
                 st.betrayTargets[otherPi] = nil
-                return true, "Your trust was a mistake."
+                return true, "Зря ты мне доверился."
             end
         else
             local betrayalRoll = GetRandomReal(0.0, 1.0)
@@ -70350,11 +70414,11 @@ function AiDiplomatConsiderTrade(pi, otherPi)
 
     local reason = nil
     if rel ~= nil and rel.threat > 0.4 then
-        reason = "Hold the line. This should help."
+        reason = "Держи оборону. Это должно помочь."
     elseif otherPower < myPower * 0.5 then
-        reason = "You need this more than I do."
+        reason = "Тебе это нужнее, чем мне."
     else
-        reason = "A token of our alliance."
+        reason = "Знак нашего союза."
     end
 
     return maxGold, maxLumber, reason
@@ -70377,7 +70441,7 @@ function AiDiplomatRespondToProposal(pi, otherPi)
     local allyCount = DipAllyCount(pi)
     if allyCount >= cfg.allianceMax then
         AiDiplomatDecline(pi, otherPi)
-        DipChat(pi, otherPi, "I already have enough allies. Perhaps another time.")
+        DipChat(pi, otherPi, "У меня уже достаточно союзников. Возможно, в другой раз.")
         return
     end
 
@@ -70388,7 +70452,7 @@ function AiDiplomatRespondToProposal(pi, otherPi)
         AiDiplomatAccept(pi, otherPi)
     else
         AiDiplomatDecline(pi, otherPi)
-        DipChat(pi, otherPi, "I am not interested in an alliance right now.")
+        DipChat(pi, otherPi, "Сейчас я не заинтересован в союзе.")
     end
 end
 

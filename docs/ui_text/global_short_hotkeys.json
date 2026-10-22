@@ -1,0 +1,583 @@
+{
+ "scope": "Удаление повторного отображения хоткея в коротких заголовках; механика и поля клавиш сохранены.",
+ "strings": [
+  {
+   "reference_before": "TRIGSTR_36076",
+   "before": "|cffebc56cВождь тауренов|r (|cffffffffC|r)",
+   "after": "|cffebc56cВождь тауренов|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "Otch",
+     "field": "uawt",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_36079",
+   "before": "|cffebc56cВождь тауренов|r (|cffffffffC|r)",
+   "after": "|cffebc56cВождь тауренов|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "Otch",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_36080",
+   "before": "|cffebc56cМастер клинка|r (|cffffffffZ|r)",
+   "after": "|cffebc56cМастер клинка|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "Obla",
+     "field": "uawt",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_36082",
+   "before": "|cffebc56cМастер клинка|r (|cffffffffZ|r)",
+   "after": "|cffebc56cМастер клинка|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "Obla",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_36085",
+   "before": "|cffebc56cПредсказатель|r (|cffffffffX|r)",
+   "after": "|cffebc56cПредсказатель|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "Ofar",
+     "field": "uawt",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_36087",
+   "before": "|cffebc56cПредсказатель|r (|cffffffffX|r)",
+   "after": "|cffebc56cПредсказатель|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "Ofar",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_40233",
+   "before": "|cffebc56cЛидер Орды|r (|cffffffffZ|r)",
+   "after": "|cffebc56cЛидер Орды|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "Othr",
+     "field": "uawt",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_40234",
+   "before": "|cffebc56cЛидер Орды|r (|cffffffffZ|r)",
+   "after": "|cffebc56cЛидер Орды|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "Othr",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_29870",
+   "before": "|cffebc56cУкреплённый корпус — уровень 1|r (|cffffffffS|r)",
+   "after": "|cffebc56cУкреплённый корпус — уровень 1|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "h08E",
+     "field": "unam",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_16902",
+   "before": "|cffebc56cУлучшенные инструменты — уровень 2|r (|cffffffffE|r)",
+   "after": "|cffebc56cУлучшенные инструменты — уровень 2|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "N04B",
+     "field": "uawt",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_28439",
+   "before": "|cffebc56cВоеначальник Огров|r (|cffffffffX|r)",
+   "after": "|cffebc56cВоеначальник Огров|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "N05J",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_28442",
+   "before": "|cffebc56cВождь Огров|r (|cffffffffZ|r)",
+   "after": "|cffebc56cВождь Огров|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "N05K",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_28448",
+   "before": "|cffebc56cЗнахарь Огров|r (|cffffffffC|r)",
+   "after": "|cffebc56cЗнахарь Огров|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "N05L",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_29683",
+   "before": "|cffebc56cПоследний Гронн|r (|cffffffffX|r)",
+   "after": "|cffebc56cПоследний Гронн|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "N05O",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_29868",
+   "before": "|cffebc56cОрудия флота — уровень 1|r (|cffffffffA|r)",
+   "after": "|cffebc56cОрудия флота — уровень 1|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "o041",
+     "field": "unam",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_32964",
+   "before": "|cffebc56cМастер клинка|r (|cffffffffA|r)",
+   "after": "|cffebc56cМастер клинка|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "O057",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_32968",
+   "before": "|cffebc56cПовелитель проклятий|r (|cffffffffQ|r)",
+   "after": "|cffebc56cПовелитель проклятий|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "O058",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_32972",
+   "before": "|cffebc56cВоеначальник|r (|cffffffffZ|r)",
+   "after": "|cffebc56cВоеначальник|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "O059",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_23335",
+   "before": "|cffebc56cРыцарь смерти|r (|cffffffffQ|r)",
+   "after": "|cffebc56cРыцарь смерти|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "CD01",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_34757",
+   "before": "|cffebc56cВерховный некромант|r (|cffffffffA|r)",
+   "after": "|cffebc56cВерховный некромант|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "CD02",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_34848",
+   "before": "|cffebc56cЛич|r (|cffffffffZ|r)",
+   "after": "|cffebc56cЛич|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "U02X",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_35903",
+   "before": "|cffebc56cОскверненный шаман|r (|cffffffffZ|r)",
+   "after": "|cffebc56cОскверненный шаман|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "N06P",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_11866",
+   "before": "|cffebc56cВождь Клана|r (|cffffffffZ|r)",
+   "after": "|cffebc56cВождь Клана|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "W200",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_11878",
+   "before": "|cffebc56cСумеречный маг|r (|cffffffffC|r)",
+   "after": "|cffebc56cСумеречный маг|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "W201",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_11883",
+   "before": "|cffebc56cПредводитель троллей|r (|cffffffffX|r)",
+   "after": "|cffebc56cПредводитель троллей|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3u",
+     "id": "W202",
+     "field": "utpr",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_25818",
+   "before": "|cffebc56cГенерал Орды|r (|cffffffffT|r)",
+   "after": "|cffebc56cГенерал Орды|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3mapSkin.w3a",
+     "id": "ACcv",
+     "field": "anam",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_23656",
+   "before": "|cffebc56cЗа Орду!|r [|cffffffff4-й уровень|r] (|cffffffffW|r)",
+   "after": "|cffebc56cЗа Орду!|r [|cffffffff4-й уровень|r]",
+   "consumers": [
+    {
+     "source": "map.w3x/war3mapSkin.w3a",
+     "id": "A0ZO",
+     "field": "anam",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_24404",
+   "before": "|cffebc56cПризвать Охрану|r [|cffffffff2-й уровень|r] (|cffffffffQ|r)",
+   "after": "|cffebc56cПризвать Охрану|r [|cffffffff2-й уровень|r]",
+   "consumers": [
+    {
+     "source": "map.w3x/war3mapSkin.w3a",
+     "id": "A12H",
+     "field": "anam",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_28850",
+   "before": "|cffebc56cТехника Альянса|r (|cffffffffE|r)",
+   "after": "|cffebc56cТехника Альянса|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3mapSkin.w3a",
+     "id": "A0XK",
+     "field": "anam",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_3154",
+   "before": "|cffebc56cЗемляные оковы|r [|cffffffff3-й уровень|r] (|cffffffffW|r)",
+   "after": "|cffebc56cЗемляные оковы|r [|cffffffff3-й уровень|r]",
+   "consumers": [
+    {
+     "source": "map.w3x/war3mapSkin.w3a",
+     "id": "A181",
+     "field": "anam",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_28152",
+   "before": "|cffebc56cРаботник|r (|cffffffffQ|r)",
+   "after": "|cffebc56cРаботник|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3mapSkin.w3a",
+     "id": "A1DH",
+     "field": "anam",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_1448",
+   "before": "Мастер стихии |cffff0000Огня|r  |cffffff00(A)|r",
+   "after": "Мастер стихии |cffff0000Огня|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3q",
+     "id": "R00Z",
+     "field": "gnam",
+     "level": 3,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_1515",
+   "before": "Мастер стихии |cff0000ffЛьда|r |cffffff00(S)|r",
+   "after": "Мастер стихии |cff0000ffЛьда|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3q",
+     "id": "R010",
+     "field": "gnam",
+     "level": 3,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_10779",
+   "before": "|cffebc56cЗнания Нерубов — уровень 1|r (|cffffffffA|r)",
+   "after": "|cffebc56cЗнания Нерубов — уровень 1|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3q",
+     "id": "R07Q",
+     "field": "gnam",
+     "level": 2,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_18221",
+   "before": "|cffebc56cУлучшенные инструменты — уровень 4|r (|cffffffffE|r)",
+   "after": "|cffebc56cУлучшенные инструменты — уровень 4|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3q",
+     "id": "R0BR",
+     "field": "gnam",
+     "level": 7,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_23426",
+   "before": "|cffebc56cТренировка ближнего боя — уровень 2|r (|cffffffffZ|r)",
+   "after": "|cffebc56cТренировка ближнего боя — уровень 2|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3q",
+     "id": "R0EC",
+     "field": "gnam",
+     "level": 4,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_23427",
+   "before": "|cffebc56cТренировка ближнего боя — уровень 3|r (|cffffffffZ|r)",
+   "after": "|cffebc56cТренировка ближнего боя — уровень 3|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3q",
+     "id": "R0EC",
+     "field": "gnam",
+     "level": 5,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_23467",
+   "before": "|cffebc56cТренировка дальнего боя — уровень 2|r (|cffffffffZ|r)",
+   "after": "|cffebc56cТренировка дальнего боя — уровень 2|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3q",
+     "id": "R0ED",
+     "field": "gnam",
+     "level": 4,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_23468",
+   "before": "|cffebc56cТренировка дальнего боя — уровень 3|r (|cffffffffZ|r)",
+   "after": "|cffebc56cТренировка дальнего боя — уровень 3|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3q",
+     "id": "R0ED",
+     "field": "gnam",
+     "level": 5,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_28859",
+   "before": "|cffebc56cМаг (Специализированный)|r (|cffffffffB|r)",
+   "after": "|cffebc56cМаг (Специализированный)|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3map.w3q",
+     "id": "R0HO",
+     "field": "gnam",
+     "level": 1,
+     "pointer": 0
+    }
+   ]
+  },
+  {
+   "reference_before": "TRIGSTR_29872",
+   "before": "|cffebc56cОбстрел — уровень 1|r (|cffffffffX|r)",
+   "after": "|cffebc56cОбстрел — уровень 1|r",
+   "consumers": [
+    {
+     "source": "map.w3x/war3mapSkin.w3h",
+     "id": "B070",
+     "field": "ftip",
+     "level": 0,
+     "pointer": 0
+    }
+   ]
+  }
+ ],
+ "excluded": {
+  "23350": "Графика: электрострела (Ж): назначение суффикса ещё не установлено.",
+  "23351": "То же, отдельное поле."
+ }
+}

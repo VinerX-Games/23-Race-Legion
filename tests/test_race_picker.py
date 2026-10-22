@@ -49,6 +49,8 @@ function BlzFrameSetTooltip(b,t) b.tip=t end
 function BlzFrameSetVisible(f,v) f.visible=v end
 function BlzFrameGetChild(f,i) f.kids=f.kids or {}; f.kids[i]=f.kids[i] or frame('child', i); return f.kids[i] end
 function BlzFrameSetScale(f,v) f.scale=v end
+function BlzFrameSetLevel(f,v) f.level=v end
+function BlzFrameGetParent(f) return frame('cell') end
 function BlzFrameSetEnable() end
 function BlzHideOriginFrames(v) uiHidden=v end
 function CreateTrigger() return {} end

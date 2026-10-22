@@ -4,7 +4,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
-from scripts.wc3_project import load_sections, source_map
+from scripts.wc3_project import late_region_violations, load_sections, source_map
 
 
 def read_text(path: Path) -> str:
@@ -40,6 +40,14 @@ def main() -> int:
     parser.add_argument("--check-only", action="store_true")
     parser.add_argument("--source-map", type=Path, help="Write source map tied to the built hash")
     args = parser.parse_args()
+
+    violations = late_region_violations(load_sections(args.split_dir))
+    if violations:
+        print("ERROR: CreateRegion() вне корня 01_globals.lua ломает пути юнитов в игре.")
+        print("       Для события входа юнита на карту используйте корневой Allmap.")
+        for file, line, func, text in violations:
+            print(f"  {file} (war3map.lua:{line}, {func or 'корень'}): {text}")
+        return 1
 
     rebuilt_text = rebuild_from_manifest(args.split_dir)
     rebuilt_hash = sha256_text(rebuilt_text)

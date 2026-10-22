@@ -170,6 +170,9 @@ function OgreCombat.Init()
     OgreCombat.deathTrigger = CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(OgreCombat.deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     TriggerAddAction(OgreCombat.deathTrigger, OgreCombat.Death)
+    -- Обученные, призванные и созданные скриптом гронны одинаково входят в регион мира.
+    -- Только корневой Allmap (заполняется в StartInc): свой регион на всю карту,
+    -- созданный при инициализации, ломает наземные пути (docs/FEC12DE_MOVEMENT_INVESTIGATION.md).
     OgreCombat.enterTrigger = CreateTrigger()
     TriggerRegisterEnterRegion(OgreCombat.enterTrigger, Allmap, nil)
     TriggerAddAction(OgreCombat.enterTrigger, function() OgreCombat.Track(GetTriggerUnit()) end)

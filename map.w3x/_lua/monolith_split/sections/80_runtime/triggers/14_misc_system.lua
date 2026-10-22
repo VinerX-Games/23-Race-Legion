@@ -412,8 +412,12 @@ function BridgeRaceSelect(target_index)
     local target_player = ConvertedPlayer(target_index)
     local t = SecondChance[GetPlayerId(target_player)]
     udg_LocalPosition2=StartLoc[GetRandomInt(0, StartLocCount - 1)]
-    DisplayTimedTextToForce(GetPlayersAll(), 5.00, "Bridge gave player " .. GetPlayerName(target_player) .. " race selection")
-    DisplayTimedTextToPlayer(target_player, 0, 0, 15.00, "You have 15 minutes to place your capital")
+    DisplayTimedTextToForce(GetPlayersAll(), 5.00, "|cffced4daИгроку |cffebc56c" .. GetPlayerName(target_player) .. "|cffc8e087 доступен повторный выбор расы.|r")
+    local capitalHint = "|cffced4daВыберите расу и разместите столицу.|r"
+    if udg_GameMode == 1 or udg_GameMode == 2 then
+        capitalHint = "|cffced4daВыберите расу. На размещение столицы — |cffffffff15|cffced4da минут.|r"
+    end
+    DisplayTimedTextToPlayer(target_player, 0, 0, 15.00, capitalHint)
     CreateNUnitsAtLoc(1, FourCC('h0HJ'), target_player, udg_LocalPosition2, bj_UNIT_FACING)
     RacePickerAdopt(GetLastCreatedUnit())
     SetPlayerStateBJ(target_player, PLAYER_STATE_RESOURCE_GOLD, 5000)

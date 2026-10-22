@@ -105,14 +105,13 @@ AiDiplomatMinAllyAge = AiDiplomatMinAllyAge or 40
 AiDiplomatReallyCooldown = AiDiplomatReallyCooldown or 60
 
 -- ====================================================================
--- Name helper: "[RaceName (Slot#)]" — disambiguates duplicate races.
+-- Display name helper: bot player names already include their slot number.
 -- ====================================================================
 ---@param pi integer
 ---@return string
 function DiplomatName(pi)
-    local race = AiRaceOf(pi)
-    local raceName = (race and race.key) or "Unknown"
-    return "[" .. raceName .. " (" .. tostring(pi) .. ")]"
+    local playerName = GetPlayerName(Player(pi)) or "Неизвестный игрок"
+    return "|cffebc56c[" .. playerName .. "]|r"
 end
 
 -- ====================================================================
@@ -134,7 +133,7 @@ end
 ---@param pi integer
 ---@param msg string
 function DipRpBroadcast(pi, msg)
-    local full = DiplomatName(pi) .. " says: \"" .. msg .. "\""
+    local full = DiplomatName(pi) .. "|cffced4da: «" .. msg .. "»|r"
     DipBroadcast(full)
     DipLog(pi, "[RP] " .. msg)
 end
@@ -243,7 +242,7 @@ end
 ---@param targetPi integer
 ---@param msg string
 function DipChat(pi, targetPi, msg)
-    local full = DiplomatName(pi) .. " " .. msg
+    local full = DiplomatName(pi) .. "|cffced4da " .. msg .. "|r"
     DisplayTimedTextToPlayer(Player(targetPi), 0, 0, 10.0, full)
     DipLog(pi, "chat to " .. tostring(targetPi) .. ": " .. msg)
 end
@@ -257,184 +256,184 @@ end
 AiDiplomatRpMessages = {
     diplomat = {
         allyPropose = {
-            "Together we shall prosper.",
-            "I sense a fruitful partnership ahead.",
-            "Let us build bridges, not walls.",
-            "An alliance of mutual benefit.",
+            "Вместе мы будем процветать.",
+            "Нас ждёт плодотворное сотрудничество.",
+            "Давайте строить мосты, а не стены.",
+            "Этот союз принесёт пользу нам обоим.",
         },
         allyAccept = {
-            "A new chapter of friendship begins!",
-            "Together, nothing can stop us.",
-            "Our combined strength will be legendary.",
-            "I welcome you as a true friend.",
+            "Начинается новая глава нашей дружбы!",
+            "Вместе нас ничто не остановит.",
+            "О нашей общей силе будут слагать легенды.",
+            "Приветствую тебя, верный друг.",
         },
         allyBreak  = {
-            "Perhaps another time, another place.",
-            "The road ahead parts here.",
-            "Our purposes no longer align.",
-            "Farewell, old friend. May we meet again in peace.",
+            "Возможно, в другой раз и в другом месте.",
+            "Здесь наши пути расходятся.",
+            "Наши цели больше не совпадают.",
+            "Прощай, старый друг. Надеюсь, мы встретимся с миром.",
         },
         trade = {
-            "A gift from a friend. No strings attached.",
-            "For your prosperity — and ours.",
-            "Share and share alike!",
+            "Подарок от друга. Без всяких условий.",
+            "Ради твоего процветания — и нашего.",
+            "Поделимся по-братски!",
         },
         idle = {
-            "Trade caravans report all is well.",
-            "The markets are stable. A good sign.",
-            "Diplomacy is the greatest weapon.",
+            "Торговые караваны сообщают, что всё спокойно.",
+            "Рынки стабильны. Хороший знак.",
+            "Дипломатия — величайшее оружие.",
         },
         underAttack = {
-            "We are under siege! Honoured allies, we need your aid!",
-            "The enemy is at our gates! Any help is welcome!",
+            "Мы в осаде! Дорогие союзники, нам нужна помощь!",
+            "Враг у наших ворот! Будем рады любой помощи!",
         },
     },
     pragmatic = {
         allyPropose = {
-            "Our interests align. Let us act on it.",
-            "The enemy of my enemy... you know the rest.",
-            "A temporary coalition. Nothing more.",
+            "Наши интересы совпадают. Пора действовать.",
+            "Враг моего врага... продолжение ты знаешь.",
+            "Временный союз. Не более того.",
         },
         allyAccept = {
-            "A strategic decision. Do not make me regret it.",
-            "Very well. We stand together — for now.",
-            "This alliance serves us both. Remember that.",
+            "Стратегическое решение. Не заставляй меня пожалеть о нём.",
+            "Хорошо. Пока мы на одной стороне.",
+            "Этот союз выгоден нам обоим. Помни об этом.",
         },
         allyBreak  = {
-            "The calculation has changed. We part ways.",
-            "Circumstances no longer favour this union.",
-            "Our priorities have shifted. Farewell.",
+            "Расчёты изменились. Наши пути расходятся.",
+            "Обстоятельства больше не благоприятствуют нашему союзу.",
+            "Наши приоритеты изменились. Прощай.",
         },
         trade = {
-            "Strategic resources. Use them wisely.",
-            "A calculated investment.",
-            "Spend it well. I expect results.",
+            "Стратегические ресурсы. Распорядись ими разумно.",
+            "Продуманное вложение.",
+            "Потрать с умом. Я жду результатов.",
         },
         idle = {
-            "The balance of power is... acceptable for now.",
-            "We watch. We wait. We calculate.",
-            "Every alliance is a transaction.",
+            "Соотношение сил... пока приемлемое.",
+            "Наблюдаем. Ждём. Рассчитываем.",
+            "Любой союз — это сделка.",
         },
         underAttack = {
-            "We are under assault. Any capable hands, rally to us!",
-            "Defensive protocols engaged. Allies, your turn.",
+            "Нас атакуют! Все, кто способен сражаться, к нам!",
+            "Оборона подготовлена. Союзники, теперь ваш ход.",
         },
     },
     traitor = {
         allyPropose = {
-            "Trust me... for now.",
-            "An alliance of convenience, shall we say?",
-            "I have a proposition you cannot refuse.",
+            "Доверься мне... пока что.",
+            "Назовём это союзом по расчёту?",
+            "У меня есть предложение, от которого ты не сможешь отказаться.",
         },
         allyAccept = {
-            "Ah, a new... friend. How delightful.",
-            "Yes, yes. Together we shall conquer!",
-            "Your trust is noted. I shall use it... wisely.",
+            "А, новый... друг. Как приятно.",
+            "Да-да. Вместе мы всех покорим!",
+            "Твоё доверие принято. Я воспользуюсь им... разумно.",
         },
         allyBreak  = {
-            "Did you really think we were friends?",
-            "Your usefulness has... expired.",
-            "A knife in the back is still a weapon.",
-            "Nothing personal. Just business.",
+            "Ты и вправду считал нас друзьями?",
+            "Ты больше... не нужен.",
+            "Нож в спину — тоже оружие.",
+            "Ничего личного. Только дело.",
         },
         trade = {
-            "Take it. The price comes later.",
-            "A token of my... appreciation.",
+            "Бери. Расплатишься потом.",
+            "Знак моей... признательности.",
         },
         idle = {
-            "The strong prey on the weak. It is the way of things.",
-            "Opportunity is everywhere. One must simply seize it.",
-            "Loyalty is a currency. Spend it freely, save it wisely.",
+            "Сильные пожирают слабых. Так устроен мир.",
+            "Возможности повсюду. Нужно лишь ими воспользоваться.",
+            "Верность — это валюта. Трать щедро, копи с умом.",
         },
         underAttack = {
-            "Imbeciles! They dare strike at us!",
-            "They will pay for this insolence!",
+            "Глупцы! Они посмели напасть на нас!",
+            "Они заплатят за эту дерзость!",
         },
     },
     isolationist = {
         allyPropose = {
-            "We have no need of outsiders.",
-            "Your kind is not welcome here.",
-            "Do not waste your breath.",
+            "Нам не нужны чужаки.",
+            "Таким, как ты, здесь не рады.",
+            "Не трать слова попусту.",
         },
         allyAccept = {
-            "... unexpected, but acceptable.",
-            "Do not overstep your bounds.",
+            "...Неожиданно, но приемлемо.",
+            "Не переходи границы дозволенного.",
         },
         allyBreak  = {
-            "As it was meant to be.",
-            "The solitude returns. Good.",
+            "Всё идёт как должно.",
+            "Мы снова одни. Хорошо.",
         },
         trade = {
-            "Do not expect gratitude.",
-            "Do not expect this again.",
+            "Не жди благодарности.",
+            "Не рассчитывай на повторение.",
         },
         idle = {
-            "The outside world is irrelevant.",
-            "Isolation is our greatest strength.",
+            "Внешний мир не имеет значения.",
+            "Наша сила — в уединении.",
         },
         underAttack = {
-            "Intruders! Defend the brood at all costs!",
-            "Our lands are being violated!",
+            "Чужаки! Защитим рой любой ценой!",
+            "Вторжение на наши земли!",
         },
     },
     loyal = {
         allyPropose = {
-            "Honour calls us to stand together.",
-            "A bond forged in trust is unbreakable.",
-            "Let our oath be eternal.",
+            "Честь зовёт нас встать плечом к плечу.",
+            "Союз, скреплённый доверием, нерушим.",
+            "Пусть наша клятва будет вечной.",
         },
         allyAccept = {
-            "By my honour, we are now one.",
-            "I swear to defend our alliance with my life.",
-            "Till the end of days, we stand united.",
+            "Клянусь честью, теперь мы едины.",
+            "Клянусь жизнью защищать наш союз.",
+            "До конца времён мы будем вместе.",
         },
         allyBreak  = {
-            "A heavy decision, but a necessary one.",
-            "Nothing lasts forever. Not even honour.",
-            "I release you from our bond.",
+            "Тяжёлое решение, но необходимое.",
+            "Ничто не вечно. Даже честь.",
+            "Я освобождаю тебя от нашей клятвы.",
         },
         trade = {
-            "For the cause. Always.",
-            "My sword, my gold — all for our covenant.",
+            "Ради общего дела. Всегда.",
+            "Мой меч и моё золото — всё ради нашего союза.",
         },
         idle = {
-            "Vigilance and honour guide our path.",
-            "True strength comes from unity.",
-            "We remember every debt, every kindness.",
+            "Бдительность и честь указывают нам путь.",
+            "Истинная сила — в единстве.",
+            "Мы помним каждый долг и каждое доброе дело.",
         },
         underAttack = {
-            "To arms, brothers! The enemy approaches!",
-            "Our sacred lands are under threat! Rally to us!",
+            "К оружию, братья! Враг приближается!",
+            "Наши священные земли под угрозой! Все на защиту!",
         },
     },
     balanced = {
         allyPropose = {
-            "Let us hunt together.",
-            "Strength in numbers. Always.",
-            "An alliance could benefit us both.",
+            "Будем охотиться вместе.",
+            "Наша сила — в численности. Всегда.",
+            "Союз может принести пользу нам обоим.",
         },
         allyAccept = {
-            "A worthy partner. Let us begin.",
-            "Together we are stronger.",
-            "I welcome this new alliance.",
+            "Достойный союзник. Начнём.",
+            "Вместе мы сильнее.",
+            "Приветствую наш новый союз.",
         },
         allyBreak  = {
-            "The time has come to part ways.",
-            "We walk our own path now.",
-            "Our alliance is no longer needed.",
+            "Пришла пора расстаться.",
+            "Теперь мы идём своим путём.",
+            "Наш союз больше не нужен.",
         },
         trade = {
-            "Take it. You need it more.",
-            "A fair exchange for a true ally.",
+            "Бери. Тебе нужнее.",
+            "Справедливый обмен для верного союзника.",
         },
         idle = {
-            "The wilds are quiet today.",
-            "The fire crackles. All is calm.",
+            "Сегодня в диких землях тихо.",
+            "Костёр потрескивает. Всё спокойно.",
         },
         underAttack = {
-            "Enemies at the gates! All warriors, defend!",
-            "We are beset! Any aid is welcome!",
+            "Враги у ворот! Все воины, к обороне!",
+            "Нас окружили! Будем рады любой помощи!",
         },
     },
 }
@@ -670,7 +669,7 @@ function AiDiplomatPropose(pi, otherPi)
 
     st.pendingOffers[otherPi] = AiDiplomatTicks[pi] or 0
     DipLog(pi, "propose alliance to " .. tostring(otherPi) .. " (" .. GetPlayerName(other) .. ")")
-    DipChat(pi, otherPi, "I propose an alliance.")
+    DipChat(pi, otherPi, "Предлагаю заключить союз.")
     AiDiplomatRpSay(pi, "allyPropose")
     return true
 end
@@ -698,8 +697,8 @@ function AiDiplomatAccept(pi, otherPi)
         st.relations[otherPi].trust = math.min((st.relations[otherPi].trust or 0.3) + 0.3, 1.0)
     end
     DipLog(pi, "accepted alliance with " .. tostring(otherPi))
-    DipChat(pi, otherPi, "I accept your alliance.")
-    DipBroadcast(DiplomatName(pi) .. " and " .. DiplomatName(otherPi) .. " are now allied!")
+    DipChat(pi, otherPi, "Принимаю твоё предложение союза.")
+    DipBroadcast(DiplomatName(pi) .. "|cffced4da и " .. DiplomatName(otherPi) .. "|cffc8e087 заключили союз!|r")
     AiDiplomatRpSay(pi, "allyAccept")
 end
 
@@ -748,7 +747,7 @@ function AiDiplomatBreak(pi, otherPi, reason)
     if reason ~= nil and reason ~= "" then
         DipChat(pi, otherPi, reason)
     end
-    DipBroadcast(DiplomatName(pi) .. " has broken their alliance with " .. DiplomatName(otherPi) .. ".")
+    DipBroadcast(DiplomatName(pi) .. "|cffef8173 разрывает союз с " .. DiplomatName(otherPi) .. "|cffced4da.|r")
     AiDiplomatRpSay(pi, "allyBreak")
 end
 
@@ -823,9 +822,9 @@ function AiDiplomatConsiderAlly(pi, otherPi)
         local rel = st.relations[otherPi]
         local reason = nil
         if rel ~= nil and rel.sharedEnemies > 0 then
-            reason = "We share a common enemy. Let us unite."
+            reason = "У нас общий враг. Объединим силы."
         elseif rel ~= nil and rel.threat > 0.5 then
-            reason = "We face the same threat. An alliance would serve us both."
+            reason = "Нам угрожает один враг. Союз поможет нам обоим."
         end
         return true, reason
     end
@@ -847,7 +846,7 @@ function AiDiplomatConsiderBreak(pi, otherPi)
 
     local st = AiDiplomatState(pi)
     local rel = st.relations[otherPi]
-    if rel == nil then return true, "You are no longer relevant." end
+    if rel == nil then return true, "В наших отношениях больше нет смысла." end
 
     -- Young alliances are protected from circumstantial breaks (weakness / no
     -- common threat) so power/proximity noise can't make bots ally-and-drop every
@@ -861,12 +860,12 @@ function AiDiplomatConsiderBreak(pi, otherPi)
         -- 1. Ally is too weak
         local weakness = 1.0 - (otherPower / math.max(myPower, 1))
         if weakness > cfg.breakOnWeakness then
-            return true, "You have grown too weak to be useful."
+            return true, "Ты слишком ослаб, чтобы приносить пользу."
         end
 
         -- 2. No common threat anymore
         if rel.sharedEnemies == 0 and cfg.breakOnNoThreat > 0.5 then
-            return true, "Our common enemy is gone. This alliance no longer serves me."
+            return true, "Нашего общего врага больше нет. Этот союз мне больше не нужен."
         end
     end
 
@@ -874,7 +873,7 @@ function AiDiplomatConsiderBreak(pi, otherPi)
     local breakRoll = GetRandomReal(0.0, 1.0)
     local breakChance = cfg.breakChanceBase * (1.0 - cfg.loyalty)
     if breakRoll < breakChance then
-        return true, "This alliance has run its course."
+        return true, "Наш союз исчерпал себя."
     end
 
     -- 4. Betrayal check (traitor personality)
@@ -884,7 +883,7 @@ function AiDiplomatConsiderBreak(pi, otherPi)
             local tickNow = AiDiplomatTicks[pi] or 0
             if tickNow >= st.betrayTargets[otherPi] then
                 st.betrayTargets[otherPi] = nil
-                return true, "Your trust was a mistake."
+                return true, "Зря ты мне доверился."
             end
         else
             local betrayalRoll = GetRandomReal(0.0, 1.0)
@@ -945,11 +944,11 @@ function AiDiplomatConsiderTrade(pi, otherPi)
 
     local reason = nil
     if rel ~= nil and rel.threat > 0.4 then
-        reason = "Hold the line. This should help."
+        reason = "Держи оборону. Это должно помочь."
     elseif otherPower < myPower * 0.5 then
-        reason = "You need this more than I do."
+        reason = "Тебе это нужнее, чем мне."
     else
-        reason = "A token of our alliance."
+        reason = "Знак нашего союза."
     end
 
     return maxGold, maxLumber, reason
@@ -972,7 +971,7 @@ function AiDiplomatRespondToProposal(pi, otherPi)
     local allyCount = DipAllyCount(pi)
     if allyCount >= cfg.allianceMax then
         AiDiplomatDecline(pi, otherPi)
-        DipChat(pi, otherPi, "I already have enough allies. Perhaps another time.")
+        DipChat(pi, otherPi, "У меня уже достаточно союзников. Возможно, в другой раз.")
         return
     end
 
@@ -983,7 +982,7 @@ function AiDiplomatRespondToProposal(pi, otherPi)
         AiDiplomatAccept(pi, otherPi)
     else
         AiDiplomatDecline(pi, otherPi)
-        DipChat(pi, otherPi, "I am not interested in an alliance right now.")
+        DipChat(pi, otherPi, "Сейчас я не заинтересован в союзе.")
     end
 end
 

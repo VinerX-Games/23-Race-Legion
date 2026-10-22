@@ -46,7 +46,7 @@ function ShowWelcomePanel()
 	BlzFrameSetTextAlignment(title, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 	BlzFrameSetSize(title, WELCOME_W - 0.02, 0.02)
 	BlzFrameSetPoint(title, FRAMEPOINT_TOP, welcome, FRAMEPOINT_TOP, 0, y)
-	BlzFrameSetText(title, "|cffebc56cДобро пожаловать в 23 RACE: FOREVER!|r")
+	BlzFrameSetText(title, "|cffebc56cДобро пожаловать в 23 Race Forever!|r")
 	BlzFrameSetEnable(title, false)
 	y = y - 0.026
 
