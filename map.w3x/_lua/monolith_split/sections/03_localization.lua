@@ -5,13 +5,18 @@ local GAME_LOCALES = {
     ["enGB"] = "enUS",
     ["enUS"] = "enUS",
 }
-do
+local function SelectMapLocale()
     local locale = BlzGetLocale and BlzGetLocale() or "ruRU"
     local selected = GAME_LOCALES[locale]
     if selected == nil and GetLocalizedString then
         if GetLocalizedString("TRIGSTR_000") == "|cffebc56cPrecision Strike|r" then selected = "enUS" end
     end
     if selected then MapLocale = selected end
+end
+if TimerStart and CreateTimer then
+    TimerStart(CreateTimer(), 0.0, false, SelectMapLocale)
+else
+    SelectMapLocale()
 end
 
 local UI_STRINGS = {

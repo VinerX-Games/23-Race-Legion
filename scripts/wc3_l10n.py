@@ -271,7 +271,7 @@ def render_ui_lua(translations: dict[str, dict[str, str]], game_locales=None, lo
         lines.append(f"    [{lua_quote(game_locale)}] = {lua_quote(game_locales[game_locale])},")
     lines += [
         "}",
-        "do",
+        "local function SelectMapLocale()",
         "    local locale = BlzGetLocale and BlzGetLocale() or \"ruRU\"",
         "    local selected = GAME_LOCALES[locale]",
         "    if selected == nil and GetLocalizedString then",
@@ -281,6 +281,11 @@ def render_ui_lua(translations: dict[str, dict[str, str]], game_locales=None, lo
     lines += [
         "    end",
         "    if selected then MapLocale = selected end",
+        "end",
+        "if TimerStart and CreateTimer then",
+        "    TimerStart(CreateTimer(), 0.0, false, SelectMapLocale)",
+        "else",
+        "    SelectMapLocale()",
         "end",
         "",
         "local UI_STRINGS = {",

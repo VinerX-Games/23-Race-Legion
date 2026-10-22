@@ -124,6 +124,26 @@ class TranslationTests(unittest.TestCase):
         self.assertEqual('enUS', lua.eval('MapLocale'))
         self.assertEqual('English string', lua.eval('Loc("k")'))
 
+    @unittest.skipUnless(importlib.util.find_spec('lupa'), 'lupa is installed in localization CI')
+    def test_loc_defers_locale_detection_until_game_tick(self):
+        from lupa import LuaRuntime
+
+        generated = wc3_l10n.render_ui_lua(
+            {'ruRU': {'k': 'Русская строка'}, 'enUS': {'k': 'English string'}},
+            {'enUS': 'enUS'},
+        )
+        lua = LuaRuntime(unpack_returned_tuples=True)
+        state = {'locale': None, 'callback': None}
+        lua.globals().BlzGetLocale = lambda: state['locale']
+        lua.globals().CreateTimer = lambda: 'timer'
+        lua.globals().TimerStart = lambda _timer, _timeout, _periodic, callback: state.__setitem__('callback', callback)
+        lua.execute(generated)
+        self.assertEqual('ruRU', lua.eval('MapLocale'))
+        state['locale'] = 'enUS'
+        state['callback']()
+        self.assertEqual('enUS', lua.eval('MapLocale'))
+        self.assertEqual('English string', lua.eval('Loc("k")'))
+
 
 class PilotTests(unittest.TestCase):
     @classmethod
@@ -172,10 +192,10 @@ class PilotTests(unittest.TestCase):
         config, _, _ = wc3_l10n.locale_config('enUS')
         source_w3i = (ROOT / 'map.w3x/war3map.w3i').read_bytes()
         localized = wc3_l10n.render_localized_w3i(source_w3i, config['w3i_translations'])
-        self.assertIn('Версия: 1.6.524'.encode('utf-8'), source_w3i)
-        self.assertIn(b'Version: 1.6.524', localized)
+        self.assertIn('Версия: 1.6.525'.encode('utf-8'), source_w3i)
+        self.assertIn(b'Version: 1.6.525', localized)
         self.assertIn(b'Our Discord: discord.gg/UV5tbXXunU', localized)
-        self.assertNotIn('Версия: 1.6.524'.encode('utf-8'), localized)
+        self.assertNotIn('Версия: 1.6.525'.encode('utf-8'), localized)
 
     def test_locale_probe_matches_localized_wts(self):
         config, _, _ = wc3_l10n.locale_config('enUS')
