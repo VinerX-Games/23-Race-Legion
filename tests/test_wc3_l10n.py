@@ -108,6 +108,22 @@ class TranslationTests(unittest.TestCase):
             lua.execute(generated)
             self.assertEqual(expected, lua.eval('Loc("k")'))
 
+    @unittest.skipUnless(importlib.util.find_spec('lupa'), 'lupa is installed in localization CI')
+    def test_loc_uses_localized_wts_probe_when_native_locale_is_unmapped(self):
+        from lupa import LuaRuntime
+
+        generated = wc3_l10n.render_ui_lua(
+            {'ruRU': {'k': 'Русская строка'}, 'enUS': {'k': 'English string'}},
+            {'enUS': 'enUS'},
+            {'enUS': {'key': 'TRIGSTR_000', 'value': 'English marker'}},
+        )
+        lua = LuaRuntime(unpack_returned_tuples=True)
+        lua.globals().BlzGetLocale = lambda: 'ruRU'
+        lua.globals().GetLocalizedString = lambda key: 'English marker' if key == 'TRIGSTR_000' else None
+        lua.execute(generated)
+        self.assertEqual('enUS', lua.eval('MapLocale'))
+        self.assertEqual('English string', lua.eval('Loc("k")'))
+
 
 class PilotTests(unittest.TestCase):
     @classmethod
@@ -151,6 +167,23 @@ class PilotTests(unittest.TestCase):
         self.assertTrue(required <= set(translations))
         self.assertIn('MAP DESCRIPTION', translations['5'])
         self.assertEqual([], wc3_l10n.CYRILLIC.findall(translations['5']))
+
+    def test_loading_screen_literal_has_en_us_override(self):
+        config, _, _ = wc3_l10n.locale_config('enUS')
+        source_w3i = (ROOT / 'map.w3x/war3map.w3i').read_bytes()
+        localized = wc3_l10n.render_localized_w3i(source_w3i, config['w3i_translations'])
+        self.assertIn('Версия: 1.6.524'.encode('utf-8'), source_w3i)
+        self.assertIn(b'Version: 1.6.524', localized)
+        self.assertIn(b'Our Discord: discord.gg/UV5tbXXunU', localized)
+        self.assertNotIn('Версия: 1.6.524'.encode('utf-8'), localized)
+
+    def test_locale_probe_matches_localized_wts(self):
+        config, _, _ = wc3_l10n.locale_config('enUS')
+        resolved, conflicts = wc3_l10n.resolve_translations(self.catalog, config['translations'])
+        self.assertEqual([], conflicts)
+        probe = config['locale_probes']['enUS']
+        sid = int(probe['key'].removeprefix('TRIGSTR_'))
+        self.assertEqual(probe['value'], resolved[sid])
 
 
 if __name__ == '__main__':

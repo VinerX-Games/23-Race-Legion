@@ -3372,7 +3372,11 @@ local GAME_LOCALES = {
 }
 do
     local locale = BlzGetLocale and BlzGetLocale() or "ruRU"
-    if GAME_LOCALES[locale] then MapLocale = GAME_LOCALES[locale] end
+    local selected = GAME_LOCALES[locale]
+    if selected == nil and GetLocalizedString then
+        if GetLocalizedString("TRIGSTR_000") == "|cffebc56cPrecision Strike|r" then selected = "enUS" end
+    end
+    if selected then MapLocale = selected end
 end
 
 local UI_STRINGS = {

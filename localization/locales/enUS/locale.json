@@ -2,6 +2,12 @@
   "schema_version": 1,
   "locale": "enUS",
   "default_locale": "ruRU",
+  "locale_probes": {
+    "enUS": {
+      "key": "TRIGSTR_000",
+      "value": "|cffebc56cPrecision Strike|r"
+    }
+  },
   "scope_races": [
     "Stromgard",
     "IceTrols",

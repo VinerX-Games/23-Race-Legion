@@ -50,7 +50,9 @@ def verify(archive_path: Path, stormlib_path: Path, locale: str, map_dir: Path) 
     if not storm.SFileOpenArchive(str(archive_path), 0, 0x100, ct.byref(handle)):
         raise OSError(f"Could not open map archive: {archive_path}")
     expected = [
+        map_dir / "war3map.lua",
         map_dir / "_Locales" / f"{locale}.w3mod" / "war3map.wts",
+        map_dir / "_Locales" / f"{locale}.w3mod" / "war3map.w3i",
         map_dir / "_Locales" / f"{locale}.w3mod" / "Units" / "CommandStrings.txt",
     ]
     checked = []
