@@ -548,7 +548,10 @@
    "gold": 400,
    "hotkey": "Z",
    "hp": 700,
-   "lumber": 100
+   "lumber": 100,
+   "affected_by": [
+    "Reuv"
+   ]
   },
   "E02R": {
    "type": "hero",
@@ -559,7 +562,10 @@
    "gold": 400,
    "hotkey": "X",
    "hp": 700,
-   "lumber": 100
+   "lumber": 100,
+   "affected_by": [
+    "Reuv"
+   ]
   },
   "E02S": {
    "type": "hero",
@@ -573,7 +579,10 @@
    "gold": 400,
    "hotkey": "C",
    "hp": 700,
-   "lumber": 100
+   "lumber": 100,
+   "affected_by": [
+    "Reuv"
+   ]
   },
   "R002": {
    "type": "upgrade",
@@ -605,7 +614,7 @@
   },
   "R004": {
    "type": "upgrade",
-   "name": "Улучшение до Кровавого Палача",
+   "name": "Кровавый Палач",
    "gold": 600,
    "lumber": 500,
    "levels": 1,
@@ -856,16 +865,21 @@
    "time_per_level": 15
   },
   "Sch5": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Cargo Hold",
+   "levels": 1
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "hotkey": "Q",
+   "levels": 1
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "hotkey": "D",
+   "levels": 1
   },
   "e02B": {
    "type": "building",
@@ -876,7 +890,17 @@
    "gold": 340,
    "hotkey": "Q",
    "hp": 1500,
-   "lumber": 500
+   "lumber": 500,
+   "researches": [
+    "R0AG",
+    "R0AE",
+    "R09M"
+   ],
+   "affected_by": [
+    "R09M",
+    "R0AG",
+    "R0AE"
+   ]
   },
   "e02C": {
    "type": "building",
@@ -887,7 +911,17 @@
    "gold": 2000,
    "hotkey": "Z",
    "hp": 2500,
-   "lumber": 6000
+   "lumber": 6000,
+   "researches": [
+    "R0AG",
+    "R0AE",
+    "R09M"
+   ],
+   "affected_by": [
+    "R09M",
+    "R0AG",
+    "R0AE"
+   ]
   },
   "e02D": {
    "type": "building",
@@ -901,6 +935,16 @@
    "lumber": 18000,
    "requires": [
     "e02G"
+   ],
+   "researches": [
+    "R0AG",
+    "R0AE",
+    "R09M"
+   ],
+   "affected_by": [
+    "R09M",
+    "R0AG",
+    "R0AE"
    ]
   },
   "e02E": {
@@ -912,7 +956,11 @@
    "gold": 300,
    "hotkey": "A",
    "hp": 600,
-   "lumber": 150
+   "lumber": 150,
+   "affected_by": [
+    "Rews",
+    "Rgfo"
+   ]
   },
   "e02F": {
    "type": "building",
@@ -922,7 +970,18 @@
    "gold": 450,
    "hotkey": "W",
    "hp": 1500,
-   "lumber": 500
+   "lumber": 500,
+   "researches": [
+    "R09K",
+    "R09N",
+    "R0AF",
+    "R0AH"
+   ],
+   "affected_by": [
+    "R09M",
+    "R0AG",
+    "R0AE"
+   ]
   },
   "e02G": {
    "type": "building",
@@ -933,7 +992,12 @@
    "gold": 135,
    "hotkey": "S",
    "hp": 600,
-   "lumber": 340
+   "lumber": 340,
+   "affected_by": [
+    "R09M",
+    "R0AG",
+    "R0AE"
+   ]
   },
   "e02H": {
    "type": "building",
@@ -946,6 +1010,17 @@
    "lumber": 900,
    "requires": [
     "e02C"
+   ],
+   "researches": [
+    "R0AL",
+    "R0AK",
+    "R09O",
+    "R0AM"
+   ],
+   "affected_by": [
+    "R09M",
+    "R0AG",
+    "R0AE"
    ]
   },
   "e02I": {
@@ -956,7 +1031,12 @@
    "gold": 135,
    "hotkey": "Z",
    "hp": 600,
-   "lumber": 80
+   "lumber": 80,
+   "affected_by": [
+    "R09M",
+    "R0AG",
+    "R0AE"
+   ]
   },
   "e02J": {
    "type": "unit",
@@ -966,7 +1046,12 @@
    "gold": 130,
    "hotkey": "Q",
    "hp": 450,
-   "lumber": 45
+   "lumber": 45,
+   "affected_by": [
+    "R09M",
+    "R0AG",
+    "R0AE"
+   ]
   },
   "e02K": {
    "type": "unit",
@@ -980,7 +1065,12 @@
    "requires": [
     "R09M"
    ],
-   "requires_amount": 2
+   "requires_amount": 2,
+   "affected_by": [
+    "R09M",
+    "R0AG",
+    "R0AE"
+   ]
   },
   "e02L": {
    "type": "unit",
@@ -994,7 +1084,13 @@
    "requires": [
     "R09M"
    ],
-   "requires_amount": 3
+   "requires_amount": 3,
+   "affected_by": [
+    "R09M",
+    "R0AG",
+    "R0AE",
+    "R0AF"
+   ]
   },
   "e02M": {
    "type": "unit",
@@ -1008,7 +1104,13 @@
    "requires": [
     "R09M"
    ],
-   "requires_amount": 5
+   "requires_amount": 5,
+   "affected_by": [
+    "R0AK",
+    "R09M",
+    "R0AG",
+    "R0AE"
+   ]
   },
   "e02N": {
    "type": "unit",
@@ -1022,7 +1124,13 @@
    "requires": [
     "R09M"
    ],
-   "requires_amount": 3
+   "requires_amount": 3,
+   "affected_by": [
+    "R0AL",
+    "R09M",
+    "R0AG",
+    "R0AE"
+   ]
   },
   "e02O": {
    "type": "unit",
@@ -1036,7 +1144,13 @@
    "requires": [
     "R09M"
    ],
-   "requires_amount": 6
+   "requires_amount": 6,
+   "affected_by": [
+    "R0AH",
+    "R09M",
+    "R0AG",
+    "R0AE"
+   ]
   },
   "e02P": {
    "type": "unit",
@@ -1050,7 +1164,12 @@
    "requires": [
     "R09M"
    ],
-   "requires_amount": 3
+   "requires_amount": 3,
+   "affected_by": [
+    "R09M",
+    "R0AG",
+    "R0AE"
+   ]
   },
   "e02T": {
    "type": "unit",
@@ -1073,7 +1192,13 @@
    "requires": [
     "R09M"
    ],
-   "requires_amount": 4
+   "requires_amount": 4,
+   "affected_by": [
+    "R0AM",
+    "R09M",
+    "R0AG",
+    "R0AE"
+   ]
   },
   "e03A": {
    "type": "unit",
@@ -1087,7 +1212,13 @@
    "requires": [
     "R09M"
    ],
-   "requires_amount": 4
+   "requires_amount": 4,
+   "affected_by": [
+    "R09O",
+    "R09M",
+    "R0AG",
+    "R0AE"
+   ]
   },
   "e03G": {
    "type": "unit",
@@ -1101,7 +1232,13 @@
    "requires": [
     "R09M"
    ],
-   "requires_amount": 4
+   "requires_amount": 4,
+   "affected_by": [
+    "R09M",
+    "R0AG",
+    "R0AE",
+    "R09N"
+   ]
   },
   "e03M": {
    "type": "unit",
@@ -1115,7 +1252,11 @@
    "requires": [
     "R09M"
    ],
-   "requires_amount": 6
+   "requires_amount": 6,
+   "affected_by": [
+    "R09M",
+    "R0AE"
+   ]
   },
   "e03N": {
    "type": "building",
@@ -1128,6 +1269,11 @@
    "lumber": 250,
    "requires": [
     "e02C"
+   ],
+   "researches": [
+    "R0KR",
+    "R0AN",
+    "R0KQ"
    ]
   },
   "e03O": {
@@ -1142,21 +1288,30 @@
    "requires": [
     "R09M"
    ],
-   "requires_amount": 6
+   "requires_amount": 6,
+   "affected_by": [
+    "R09M",
+    "R0AG",
+    "R0AE"
+   ]
   },
   "eden": {
    "type": "unit",
-   "name": "",
+   "name": "Древо чудес",
    "only_required": true,
    "time": 60,
    "gold": 90,
    "hotkey": "D",
    "hp": 450,
-   "lumber": 30
+   "lumber": 30,
+   "affected_by": [
+    "Renb",
+    "Rgfo"
+   ]
   },
   "etoa": {
    "type": "unit",
-   "name": "",
+   "name": "Древо столетий",
    "only_required": true,
    "time": 140,
    "food_made": 100,
@@ -1166,11 +1321,18 @@
    "lumber": 4500,
    "requires": [
     "R0GB"
+   ],
+   "researches": [
+    "Renb"
+   ],
+   "affected_by": [
+    "Renb",
+    "Rgfo"
    ]
   },
   "etoe": {
    "type": "unit",
-   "name": "",
+   "name": "Древо вечности",
    "only_required": true,
    "time": 140,
    "food_made": 150,
@@ -1180,6 +1342,13 @@
    "lumber": 12000,
    "requires": [
     "eate"
+   ],
+   "researches": [
+    "Renb"
+   ],
+   "affected_by": [
+    "Renb",
+    "Rgfo"
    ]
   },
   "h0D8": {
@@ -1190,7 +1359,14 @@
    "gold": 500,
    "hotkey": "C",
    "hp": 2000,
-   "lumber": 700
+   "lumber": 700,
+   "researches": [
+    "R005",
+    "R006",
+    "R007",
+    "R002",
+    "R003"
+   ]
   },
   "h0D9": {
    "type": "unit",
@@ -1200,7 +1376,13 @@
    "gold": 250,
    "hotkey": "Q",
    "hp": 750,
-   "lumber": 200
+   "lumber": 200,
+   "affected_by": [
+    "R006",
+    "R007",
+    "R004",
+    "R003"
+   ]
   },
   "h0DA": {
    "type": "unit",
@@ -1210,7 +1392,13 @@
    "gold": 875,
    "hotkey": "E",
    "hp": 1400,
-   "lumber": 1000
+   "lumber": 1000,
+   "affected_by": [
+    "R005",
+    "R007",
+    "R003",
+    "R002"
+   ]
   },
   "h0DB": {
    "type": "unit",
@@ -1220,11 +1408,18 @@
    "gold": 450,
    "hotkey": "W",
    "hp": 800,
-   "lumber": 475
+   "lumber": 475,
+   "affected_by": [
+    "R005",
+    "R007",
+    "R004",
+    "R003",
+    "R002"
+   ]
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "time": 240,
    "food_made": 100,
@@ -1235,7 +1430,7 @@
   },
   "hbla": {
    "type": "unit",
-   "name": "",
+   "name": "Кузница",
    "only_required": true,
    "time": 70,
    "gold": 140,
@@ -1244,11 +1439,22 @@
    "lumber": 40,
    "requires": [
     "htow"
+   ],
+   "researches": [
+    "R0HO",
+    "Rhme",
+    "Rhar",
+    "Rhla",
+    "Rhra"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
    ]
   },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "time": 140,
    "food_made": 150,
@@ -1258,47 +1464,83 @@
    "lumber": 12000,
    "requires": [
     "halt"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
    ]
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "time": 140,
    "food_made": 100,
    "gold": 4500,
    "hotkey": "Z",
    "hp": 2000,
-   "lumber": 4500
+   "lumber": 4500,
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "hlum": {
    "type": "unit",
-   "name": "",
+   "name": "Лесопилка",
    "only_required": true,
    "time": 60,
    "gold": 120,
    "hotkey": "E",
-   "hp": 900
+   "hp": 900,
+   "researches": [
+    "Rhac",
+    "Rhlh"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "ofor": {
    "type": "unit",
-   "name": "",
+   "name": "Лесопилка",
    "only_required": true,
    "time": 70,
    "gold": 205,
    "hotkey": "E",
-   "hp": 1000
+   "hp": 1000,
+   "researches": [
+    "R0G5",
+    "R0E6",
+    "Rome",
+    "Roar",
+    "Rora",
+    "Rosp",
+    "Rorb"
+   ],
+   "affected_by": [
+    "Rosp",
+    "Rgfo"
+   ]
   },
   "ofrt": {
    "type": "unit",
-   "name": "",
+   "name": "Цитадель",
    "only_required": true,
    "time": 140,
    "food_made": 150,
    "gold": 12000,
    "hotkey": "Z",
    "hp": 2500,
-   "lumber": 12000
+   "lumber": 12000,
+   "researches": [
+    "Ropg"
+   ],
+   "affected_by": [
+    "Rosp",
+    "Rgfo"
+   ]
   }
  },
  "edges": [
@@ -1331,13 +1573,14 @@
   "Aews requires Rews",
   "Amim requires R0AN",
   "Ault requires Reuv",
+  "E02Q affected-by Reuv",
   "E02Q has-ability A01C",
   "E02Q has-ability AInv",
   "E02Q hero-ability A0PI",
   "E02Q hero-ability A0PJ",
   "E02Q hero-ability A0PK",
   "E02Q hero-ability A0PL",
-  "E02Q researches Reuv",
+  "E02R affected-by Reuv",
   "E02R has-ability AInv",
   "E02R has-ability Ashm",
   "E02R has-ability Ault",
@@ -1345,14 +1588,13 @@
   "E02R hero-ability A0PN",
   "E02R hero-ability A0PP",
   "E02R hero-ability A0V3",
-  "E02R researches Reuv",
+  "E02S affected-by Reuv",
   "E02S has-ability AInv",
   "E02S has-ability Ault",
   "E02S hero-ability A0C9",
   "E02S hero-ability A0FW",
   "E02S hero-ability A0PS",
   "E02S hero-ability A0PT",
-  "E02S researches Reuv",
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
@@ -1380,6 +1622,9 @@
   "R0KR requires e02D",
   "Reuv requires etoa",
   "Rews requires etoe",
+  "e02B affected-by R09M",
+  "e02B affected-by R0AE",
+  "e02B affected-by R0AG",
   "e02B has-ability A0IQ",
   "e02B has-ability A0LI",
   "e02B has-ability A0LJ",
@@ -1391,6 +1636,9 @@
   "e02B researches R0AE",
   "e02B researches R0AG",
   "e02B trains e02T",
+  "e02C affected-by R09M",
+  "e02C affected-by R0AE",
+  "e02C affected-by R0AG",
   "e02C has-ability A0IQ",
   "e02C has-ability A0LI",
   "e02C has-ability A0LJ",
@@ -1402,6 +1650,9 @@
   "e02C researches R0AE",
   "e02C researches R0AG",
   "e02C trains e02T",
+  "e02D affected-by R09M",
+  "e02D affected-by R0AE",
+  "e02D affected-by R0AG",
   "e02D has-ability A0IQ",
   "e02D has-ability A0LI",
   "e02D has-ability A0LJ",
@@ -1414,39 +1665,39 @@
   "e02D researches R0AE",
   "e02D researches R0AG",
   "e02D trains e02T",
+  "e02E affected-by Rews",
+  "e02E affected-by Rgfo",
   "e02E has-ability Abds",
   "e02E has-ability Aews",
   "e02E has-ability Ambt",
-  "e02E researches Rews",
-  "e02E researches Rgfo",
+  "e02F affected-by R09M",
+  "e02F affected-by R0AE",
+  "e02F affected-by R0AG",
   "e02F has-ability Abds",
   "e02F has-ability Aro1",
   "e02F researches R09K",
-  "e02F researches R09M",
   "e02F researches R09N",
-  "e02F researches R0AE",
   "e02F researches R0AF",
-  "e02F researches R0AG",
   "e02F researches R0AH",
   "e02F trains e02J",
   "e02F trains e02K",
   "e02F trains e02L",
   "e02F trains e02O",
   "e02F trains e03G",
+  "e02G affected-by R09M",
+  "e02G affected-by R0AE",
+  "e02G affected-by R0AG",
   "e02G has-ability Abds",
   "e02G has-ability Aro1",
-  "e02G researches R09M",
-  "e02G researches R0AE",
-  "e02G researches R0AG",
   "e02G trains E02Q",
   "e02G trains E02R",
   "e02G trains E02S",
+  "e02H affected-by R09M",
+  "e02H affected-by R0AE",
+  "e02H affected-by R0AG",
   "e02H has-ability Aro1",
   "e02H requires e02C",
-  "e02H researches R09M",
   "e02H researches R09O",
-  "e02H researches R0AE",
-  "e02H researches R0AG",
   "e02H researches R0AK",
   "e02H researches R0AL",
   "e02H researches R0AM",
@@ -1454,66 +1705,66 @@
   "e02H trains e02N",
   "e02H trains e02V",
   "e02H trains e03A",
+  "e02I affected-by R09M",
+  "e02I affected-by R0AE",
+  "e02I affected-by R0AG",
   "e02I has-ability Abds",
   "e02I has-ability Aro2",
-  "e02I researches R09M",
-  "e02I researches R0AE",
-  "e02I researches R0AG",
+  "e02J affected-by R09M",
+  "e02J affected-by R0AE",
+  "e02J affected-by R0AG",
   "e02J has-ability A0PU",
   "e02J has-ability A0PW",
   "e02J has-ability Ault",
-  "e02J researches R09M",
-  "e02J researches R0AE",
-  "e02J researches R0AG",
+  "e02K affected-by R09M",
+  "e02K affected-by R0AE",
+  "e02K affected-by R0AG",
   "e02K has-ability A0PW",
   "e02K has-ability A0Q2",
   "e02K requires R09M",
-  "e02K researches R09M",
-  "e02K researches R0AE",
-  "e02K researches R0AG",
+  "e02L affected-by R09M",
+  "e02L affected-by R0AE",
+  "e02L affected-by R0AF",
+  "e02L affected-by R0AG",
   "e02L has-ability A0O7",
   "e02L has-ability A0PU",
   "e02L has-ability A0PW",
   "e02L has-ability A0PX",
   "e02L requires R09M",
-  "e02L researches R09M",
-  "e02L researches R0AE",
-  "e02L researches R0AF",
-  "e02L researches R0AG",
+  "e02M affected-by R09M",
+  "e02M affected-by R0AE",
+  "e02M affected-by R0AG",
+  "e02M affected-by R0AK",
   "e02M has-ability A0PU",
   "e02M has-ability A0PW",
   "e02M has-ability A1OY",
   "e02M has-ability A1OZ",
   "e02M requires R09M",
-  "e02M researches R09M",
-  "e02M researches R0AE",
-  "e02M researches R0AG",
-  "e02M researches R0AK",
+  "e02N affected-by R09M",
+  "e02N affected-by R0AE",
+  "e02N affected-by R0AG",
+  "e02N affected-by R0AL",
   "e02N has-ability A0PU",
   "e02N has-ability A0PW",
   "e02N has-ability A0Q1",
   "e02N has-ability Ault",
   "e02N requires R09M",
-  "e02N researches R09M",
-  "e02N researches R0AE",
-  "e02N researches R0AG",
-  "e02N researches R0AL",
+  "e02O affected-by R09M",
+  "e02O affected-by R0AE",
+  "e02O affected-by R0AG",
+  "e02O affected-by R0AH",
   "e02O has-ability A0PU",
   "e02O has-ability A0PW",
   "e02O has-ability A0Q6",
   "e02O requires R09M",
-  "e02O researches R09M",
-  "e02O researches R0AE",
-  "e02O researches R0AG",
-  "e02O researches R0AH",
+  "e02P affected-by R09M",
+  "e02P affected-by R0AE",
+  "e02P affected-by R0AG",
   "e02P has-ability A0PU",
   "e02P has-ability A0PW",
   "e02P has-ability A1P3",
   "e02P has-ability Amim",
   "e02P requires R09M",
-  "e02P researches R09M",
-  "e02P researches R0AE",
-  "e02P researches R0AG",
   "e02T builds e02B",
   "e02T builds e02E",
   "e02T builds e02F",
@@ -1527,40 +1778,40 @@
   "e02T has-ability Aren",
   "e02T has-ability Ault",
   "e02T has-ability Awha",
+  "e02V affected-by R09M",
+  "e02V affected-by R0AE",
+  "e02V affected-by R0AG",
+  "e02V affected-by R0AM",
   "e02V has-ability A0PW",
   "e02V has-ability A1P0",
   "e02V has-ability A1P1",
   "e02V has-ability A1P2",
   "e02V requires R09M",
-  "e02V researches R09M",
-  "e02V researches R0AE",
-  "e02V researches R0AG",
-  "e02V researches R0AM",
+  "e03A affected-by R09M",
+  "e03A affected-by R09O",
+  "e03A affected-by R0AE",
+  "e03A affected-by R0AG",
   "e03A has-ability A0PW",
   "e03A has-ability A0PZ",
   "e03A has-ability A0Q7",
   "e03A has-ability A0QP",
   "e03A requires R09M",
-  "e03A researches R09M",
-  "e03A researches R09O",
-  "e03A researches R0AE",
-  "e03A researches R0AG",
+  "e03G affected-by R09M",
+  "e03G affected-by R09N",
+  "e03G affected-by R0AE",
+  "e03G affected-by R0AG",
   "e03G has-ability A0PU",
   "e03G has-ability A0PV",
   "e03G has-ability A0PW",
   "e03G has-ability A0PY",
   "e03G requires R09M",
-  "e03G researches R09M",
-  "e03G researches R09N",
-  "e03G researches R0AE",
-  "e03G researches R0AG",
+  "e03M affected-by R09M",
+  "e03M affected-by R0AE",
   "e03M has-ability A0PW",
   "e03M has-ability A0Q3",
   "e03M has-ability A0Q4",
   "e03M has-ability A0Q5",
   "e03M requires R09M",
-  "e03M researches R09M",
-  "e03M researches R0AE",
   "e03N has-ability Abds",
   "e03N requires e02C",
   "e03N researches R0AN",
@@ -1569,14 +1820,14 @@
   "e03N trains e02P",
   "e03N trains e03M",
   "e03N trains e03O",
+  "e03O affected-by R09M",
+  "e03O affected-by R0AE",
+  "e03O affected-by R0AG",
   "e03O has-ability A0PW",
   "e03O has-ability A1PK",
   "e03O has-ability A1PL",
   "e03O has-ability A1PM",
   "e03O requires R09M",
-  "e03O researches R09M",
-  "e03O researches R0AE",
-  "e03O researches R0AG",
   "h0D8 has-ability A15N",
   "h0D8 researches R002",
   "h0D8 researches R003",
@@ -1586,37 +1837,37 @@
   "h0D8 trains h0D9",
   "h0D8 trains h0DA",
   "h0D8 trains h0DB",
+  "h0D9 affected-by R003",
+  "h0D9 affected-by R004",
+  "h0D9 affected-by R006",
+  "h0D9 affected-by R007",
   "h0D9 has-ability A00A",
   "h0D9 has-ability A00B",
   "h0D9 has-ability A00I",
   "h0D9 has-ability Sch5",
   "h0D9 has-ability Sdro",
   "h0D9 has-ability Slo3",
-  "h0D9 researches R003",
-  "h0D9 researches R004",
-  "h0D9 researches R006",
-  "h0D9 researches R007",
+  "h0DA affected-by R002",
+  "h0DA affected-by R003",
+  "h0DA affected-by R005",
+  "h0DA affected-by R007",
   "h0DA has-ability A001",
   "h0DA has-ability A003",
   "h0DA has-ability A009",
   "h0DA has-ability A00A",
   "h0DA has-ability A00B",
   "h0DA has-ability A00G",
-  "h0DA researches R002",
-  "h0DA researches R003",
-  "h0DA researches R005",
-  "h0DA researches R007",
+  "h0DB affected-by R002",
+  "h0DB affected-by R003",
+  "h0DB affected-by R004",
+  "h0DB affected-by R005",
+  "h0DB affected-by R007",
   "h0DB has-ability A002",
   "h0DB has-ability A009",
   "h0DB has-ability A00A",
   "h0DB has-ability A00B",
   "h0DB has-ability A00G",
   "h0DB has-ability A1PP",
-  "h0DB researches R002",
-  "h0DB researches R003",
-  "h0DB researches R004",
-  "h0DB researches R005",
-  "h0DB researches R007",
   "race:Argvinol lua-start-tech R0BZ",
   "race:Argvinol lua-starts-with e02T"
  ]

@@ -1,0 +1,156 @@
+{
+  "ok": true,
+  "applied": true,
+  "method": "Only explicit string modifications spliced; all unrelated records/mods byte-identical",
+  "changes": {
+    "war3map.w3u": [
+      [
+        "o04A",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "o04D",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "o04E",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "o04J",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "o06H",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "o06I",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "o06J",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "o06K",
+        "utub",
+        0,
+        0
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "variant": "SD",
+      "rawcode": "o04A",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o04D",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o04E",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o04J",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06H",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06I",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06J",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "o06K",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o04A",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o04D",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o04E",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o04J",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06H",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06I",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06J",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "o06K",
+      "field": "ubertip",
+      "exact_match": true
+    }
+  ],
+  "wts_unchanged": true
+}

@@ -465,12 +465,10 @@ function NagaCombat.Init()
         end
     end)
     -- Обученные, призванные и созданные скриптом мутанты одинаково входят в регион мира.
-    local bounds = GetWorldBounds()
-    NagaCombat.world = CreateRegion()
-    RegionAddRect(NagaCombat.world, bounds)
-    RemoveRect(bounds)
+    -- Только корневой Allmap (заполняется в StartInc): свой регион на всю карту,
+    -- созданный при инициализации, ломает наземные пути (docs/FEC12DE_MOVEMENT_INVESTIGATION.md).
     NagaCombat.enterTrigger = CreateTrigger()
-    TriggerRegisterEnterRegion(NagaCombat.enterTrigger, NagaCombat.world, nil)
+    TriggerRegisterEnterRegion(NagaCombat.enterTrigger, Allmap, nil)
     TriggerAddAction(NagaCombat.enterTrigger, function() NagaCombat.Mutate(GetTriggerUnit()) end)
 end
 

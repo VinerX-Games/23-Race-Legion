@@ -57,6 +57,34 @@ def load_sections(split=SPLIT):
     return sections
 
 
+# Регион, созданный после корневого чанка (InitGlobals, InitTrig_*, таймеры) и заполненный
+# границами мира, ломает наземные пути: юниты встают, на их местах нельзя строить.
+# Механизм в движке не установлен, проверено только игрой (docs/FEC12DE_MOVEMENT_INVESTIGATION.md).
+# Регрессия возвращалась дважды: перенос Allmap в InitGlobals (fec12de) и свои регионы мира у
+# Наг/Огров/Пандаренов (8598f16). Регион на всю карту — только корневой Allmap из 01_globals.lua.
+REGION_ROOT_SECTION = "01_globals.lua"
+REGION_ALLOWED = {("80_runtime/triggers/01_core_economy.lua", "InitializeUnitIndexer")}  # легаси, работает годами
+
+
+def late_region_violations(sections):
+    """CreateRegion() вне корня 01_globals.lua: [(файл, строка в war3map.lua, функция, текст)]."""
+    found = []
+    for section in sections:
+        func = None
+        for number, raw in enumerate(section["lines"]):
+            code = raw.split("--", 1)[0]
+            head = re.match(r"(?:local\s+)?function\s+([\w.:]+)", code)
+            if head:
+                func = head.group(1)
+            if not re.search(r"\bCreateRegion\s*\(", code):
+                continue
+            root_level = section["file"] == REGION_ROOT_SECTION and not code[:1].isspace()
+            if root_level or (section["file"], func) in REGION_ALLOWED:
+                continue
+            found.append((section["file"], section["start_line"] + number, func, raw.strip()))
+    return found
+
+
 def source_map(sections):
     text = "".join(s["text"] for s in sections)
     return {"schema_version": 1, "sha256": digest(text),

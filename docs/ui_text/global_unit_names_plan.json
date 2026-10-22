@@ -1,0 +1,34 @@
+{
+ "scope": "Разделение ошибочных имён в object data и WTS: гном-пехотинец h0FC и Загробник Огня n07O. Без изменения чужих WTS-потребителей.",
+ "operations": [
+  {
+   "type": "unit",
+   "id": "h0FC",
+   "field": "name",
+   "value": "|cffebc56cГном-пехотинец|r"
+  },
+  {
+   "type": "unit",
+   "id": "n07O",
+   "field": "name",
+   "value": "|cffebc56cЗагробник Огня|r"
+  },
+  {
+   "type": "unit",
+   "id": "n07O",
+   "field": "tip",
+   "value": "|cffebc56cЗагробник Огня|r"
+  }
+ ],
+ "facts": {
+  "sources": {
+   "docs/ui_text/gnomes_units.json": "ff66964698e9413d56765e5c79a12b4992dfa49f9e394ad089151d3430659dc0",
+   "docs/ui_text/elements_units.json": "1f5c66d8c17585db0669b27737ba47a49b6b345a57b8db285868e0e08692539c"
+  },
+  "consumers": {
+   "h0FC": "h0G3 trains h0FC; Gnomes only",
+   "n07O": "h0EO trains n07O; Elements only; Elementals.lua controls its availability"
+  },
+  "corroboration": "Исходные расовые реестры и действующие описания войск совпадают по роли и названию. Восстанавливаются отдельные поля объектов, WTS со сторонними текстами не переписываются."
+ }
+}

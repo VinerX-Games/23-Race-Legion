@@ -1,0 +1,233 @@
+{
+ "scope": "Драккари: убрать обрезанные условия из списков четырёх производственных зданий и вынести подтверждённые условия путей Лоа в отдельные абзацы четырёх алтарей.",
+ "requests": [
+  {
+   "id": "o04A",
+   "sections": [
+    "trains",
+    "researches"
+   ],
+   "intro": "Подготовка основных войск и осадных орудий Драккари.|n|n|cfff2a35eДоступность:|cffced4da Для |cffebc56cКатапульты|cffced4da требуются |cffebc56cМастерская|cffced4da и |cffebc56cДом предков|cffced4da."
+  },
+  {
+   "id": "o04D",
+   "sections": [
+    "trains",
+    "researches"
+   ],
+   "intro": "Подготовка элитных войск Драккари и исследование их улучшений.|n|n|cfff2a35eДоступность:|cffced4da |cffebc56cБерсерк|cffced4da требует |cffebc56cЛедяной алтарь|cffced4da. Для |cffebc56cГолема|cffced4da и исследования |cffebc56cТёмные элементы|cffced4da нужно выбрать путь |cffebc56cЧрезвычайные меры|cffced4da."
+  },
+  {
+   "id": "o04E",
+   "sections": [
+    "trains",
+    "researches"
+   ],
+   "intro": "Подготовка заклинателей и исследование их улучшений.|n|n|cfff2a35eДоступность:|cffced4da Заклинатели требуют |cffebc56cДом предков|cffced4da. Для |cffebc56cВзывателя душ|cffced4da и исследования |cffebc56cАзы загробного мира|cffced4da нужно выбрать путь |cffebc56cЧрезвычайные меры|cffced4da."
+  },
+  {
+   "id": "o04J",
+   "sections": [
+    "trains",
+    "researches"
+   ],
+   "intro": "Подготовка приручённых зверей и исследование их улучшений.|n|n|cfff2a35eДоступность:|cffced4da Для |cffebc56cЛютого мамонта|cffced4da, |cffebc56cМагнатавра-разрушителя|cffced4da и исследования |cffebc56cДикая магия льда|cffced4da нужно выбрать путь |cffebc56cРитуал поклонения|cffced4da. Мамонты требуют |cffebc56cХрам Лоа|cffced4da; магнатавры — |cffebc56cХрам Лоа|cffced4da и |cffebc56cЛедяной алтарь|cffced4da."
+  },
+  {
+   "id": "o06H",
+   "sections": [
+    "trains",
+    "researches",
+    "morphs-to"
+   ],
+   "intro": "Святилище для призыва великих Лоа или поглощения их сил. Обеспечивает |cffffffff3|cffced4da ед. дохода.|n|n|cfff2a35eДоступность:|cffced4da |cffebc56cРитуал поклонения|cffced4da открывает призыв Лоа и улучшение в специализированные алтари. Для призыва Лоа также нужен |cffebc56cДом предков|cffced4da. Исследования поглощения требуют пути |cffebc56cЧрезвычайные меры|cffced4da. Эти пути исключают друг друга."
+  },
+  {
+   "id": "o06I",
+   "sections": [
+    "trains",
+    "researches"
+   ],
+   "intro": "Специализированное святилище Лоа Рунока. Обеспечивает |cffffffff3|cffced4da ед. дохода и открывает способности Рунока: «Ярость» и «Аура Рунока».|n|n|cfff2a35eДоступность:|cffced4da |cffebc56cРитуал поклонения|cffced4da открывает призыв Лоа и улучшение в специализированные алтари. Для призыва Лоа также нужен |cffebc56cДом предков|cffced4da. Исследования поглощения требуют пути |cffebc56cЧрезвычайные меры|cffced4da. Эти пути исключают друг друга."
+  },
+  {
+   "id": "o06J",
+   "sections": [
+    "trains",
+    "researches"
+   ],
+   "intro": "Специализированное святилище Лоа Акали. Обеспечивает |cffffffff3|cffced4da ед. дохода и открывает способности Акали: «Аура Акали» и «Раздвоенная молния».|n|n|cfff2a35eДоступность:|cffced4da |cffebc56cРитуал поклонения|cffced4da открывает призыв Лоа и улучшение в специализированные алтари. Для призыва Лоа также нужен |cffebc56cДом предков|cffced4da. Исследования поглощения требуют пути |cffebc56cЧрезвычайные меры|cffced4da. Эти пути исключают друг друга."
+  },
+  {
+   "id": "o06K",
+   "sections": [
+    "trains",
+    "researches"
+   ],
+   "intro": "Специализированное святилище Лоа Мам'Тота. Обеспечивает |cffffffff3|cffced4da ед. дохода и открывает способности Мам'Тота: «Реинкарнация» и «Аура Мам'Тота».|n|n|cfff2a35eДоступность:|cffced4da |cffebc56cРитуал поклонения|cffced4da открывает призыв Лоа и улучшение в специализированные алтари. Для призыва Лоа также нужен |cffebc56cДом предков|cffced4da. Исследования поглощения требуют пути |cffebc56cЧрезвычайные меры|cffced4da. Эти пути исключают друг друга."
+  }
+ ],
+ "facts": {
+  "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/IceTrolls.lua",
+  "sha256": "cd75c7107c32c2950ca78ce588337d7eb6e2e7de52d17ecd2805b28abba54af8",
+  "native_requirements": "docs/techtree/races/IceTrols.json; дополнительные требования веток — IceTrollsStartEach/Trig_KillLoa_Actions/Trig_ServeLoa_Actions",
+  "loa_abilities": {
+   "S00F": {
+    "name": "Аура Мам'Тота",
+    "requires": "o06K",
+    "confirmed_with": "HiveWE get-objects-bulk ability S00F"
+   },
+   "A1FX": {
+    "name": "Реинкарнация",
+    "requires": "o06K"
+   }
+  },
+  "preserved": "Доход 3, роль специализированного алтаря, открываемые способности и примечания о шипастых укреплениях сохранены. Числовые свойства и ограничения не меняются."
+ },
+ "operations": [
+  {
+   "type": "unit",
+   "id": "o04A",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Подготовка основных войск и осадных орудий Драккари.|n|n|cfff2a35eДоступность:|cffced4da Для |cffebc56cКатапульты|cffced4da требуются |cffebc56cМастерская|cffced4da и |cffebc56cДом предков|cffced4da.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cВоитель|cffced4da.|n- |cffebc56cОхотник|cffced4da.|n- |cffebc56cКатапульта|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cОблегченные топоры|cffced4da.|n- |cffebc56cТренировки троллей|cffced4da.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+  },
+  {
+   "type": "unit",
+   "id": "o04D",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Подготовка элитных войск Драккари и исследование их улучшений.|n|n|cfff2a35eДоступность:|cffced4da |cffebc56cБерсерк|cffced4da требует |cffebc56cЛедяной алтарь|cffced4da. Для |cffebc56cГолема|cffced4da и исследования |cffebc56cТёмные элементы|cffced4da нужно выбрать путь |cffebc56cЧрезвычайные меры|cffced4da.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cБерсерк|cffced4da.|n- |cffebc56cГолем|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cТёмные элементы|cffced4da.|n- |cffebc56cБесчисленные бои|cffced4da.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+  },
+  {
+   "type": "unit",
+   "id": "o04E",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Подготовка заклинателей и исследование их улучшений.|n|n|cfff2a35eДоступность:|cffced4da Заклинатели требуют |cffebc56cДом предков|cffced4da. Для |cffebc56cВзывателя душ|cffced4da и исследования |cffebc56cАзы загробного мира|cffced4da нужно выбрать путь |cffebc56cЧрезвычайные меры|cffced4da.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cЖрец|cffced4da.|n- |cffebc56cЖрец Лоа|cffced4da.|n- |cffebc56cВзыватель душ|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cАзы загробного мира|cffced4da.|n- |cffebc56cПознания жреца|cffced4da.|n- |cffebc56cЗнания Лоа|cffced4da.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+  },
+  {
+   "type": "unit",
+   "id": "o04J",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Подготовка приручённых зверей и исследование их улучшений.|n|n|cfff2a35eДоступность:|cffced4da Для |cffebc56cЛютого мамонта|cffced4da, |cffebc56cМагнатавра-разрушителя|cffced4da и исследования |cffebc56cДикая магия льда|cffced4da нужно выбрать путь |cffebc56cРитуал поклонения|cffced4da. Мамонты требуют |cffebc56cХрам Лоа|cffced4da; магнатавры — |cffebc56cХрам Лоа|cffced4da и |cffebc56cЛедяной алтарь|cffced4da.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cБелый медведь|cffced4da.|n- |cffebc56cЛютый мамонт|cffced4da.|n- |cffebc56cМагнатавр-разрушитель|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cДикая магия льда|cffced4da.|n- |cffebc56cТренировка зверей|cffced4da.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+  },
+  {
+   "type": "unit",
+   "id": "o06H",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Святилище для призыва великих Лоа или поглощения их сил. Обеспечивает |cffffffff3|cffced4da ед. дохода.|n|n|cfff2a35eДоступность:|cffced4da |cffebc56cРитуал поклонения|cffced4da открывает призыв Лоа и улучшение в специализированные алтари. Для призыва Лоа также нужен |cffebc56cДом предков|cffced4da. Исследования поглощения требуют пути |cffebc56cЧрезвычайные меры|cffced4da. Эти пути исключают друг друга.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРунок|cffced4da.|n- |cffebc56cМам'тот|cffced4da.|n- |cffebc56cАкали|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПоглощение Рунока|cffced4da.|n- |cffebc56cПоглощение Акали|cffced4da.|n- |cffebc56cПоглощение Мам'Тота|cffced4da.|n|n|cffb99d66Улучшение:|cffced4da|n- |cffebc56cАлтарь Рунока|cffced4da.|n- |cffebc56cАлтарь Акали|cffced4da.|n- |cffebc56cАлтарь Мам'Тота|cffced4da.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+  },
+  {
+   "type": "unit",
+   "id": "o06I",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Специализированное святилище Лоа Рунока. Обеспечивает |cffffffff3|cffced4da ед. дохода и открывает способности Рунока: «Ярость» и «Аура Рунока».|n|n|cfff2a35eДоступность:|cffced4da |cffebc56cРитуал поклонения|cffced4da открывает призыв Лоа и улучшение в специализированные алтари. Для призыва Лоа также нужен |cffebc56cДом предков|cffced4da. Исследования поглощения требуют пути |cffebc56cЧрезвычайные меры|cffced4da. Эти пути исключают друг друга.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cРунок|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПоглощение Рунока|cffced4da.|n- |cffebc56cПоглощение Акали|cffced4da.|n- |cffebc56cПоглощение Мам'Тота|cffced4da.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+  },
+  {
+   "type": "unit",
+   "id": "o06J",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Специализированное святилище Лоа Акали. Обеспечивает |cffffffff3|cffced4da ед. дохода и открывает способности Акали: «Аура Акали» и «Раздвоенная молния».|n|n|cfff2a35eДоступность:|cffced4da |cffebc56cРитуал поклонения|cffced4da открывает призыв Лоа и улучшение в специализированные алтари. Для призыва Лоа также нужен |cffebc56cДом предков|cffced4da. Исследования поглощения требуют пути |cffebc56cЧрезвычайные меры|cffced4da. Эти пути исключают друг друга.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cАкали|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПоглощение Рунока|cffced4da.|n- |cffebc56cПоглощение Акали|cffced4da.|n- |cffebc56cПоглощение Мам'Тота|cffced4da.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+  },
+  {
+   "type": "unit",
+   "id": "o06K",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Специализированное святилище Лоа Мам'Тота. Обеспечивает |cffffffff3|cffced4da ед. дохода и открывает способности Мам'Тота: «Реинкарнация» и «Аура Мам'Тота».|n|n|cfff2a35eДоступность:|cffced4da |cffebc56cРитуал поклонения|cffced4da открывает призыв Лоа и улучшение в специализированные алтари. Для призыва Лоа также нужен |cffebc56cДом предков|cffced4da. Исследования поглощения требуют пути |cffebc56cЧрезвычайные меры|cffced4da. Эти пути исключают друг друга.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cМам'тот|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПоглощение Рунока|cffced4da.|n- |cffebc56cПоглощение Акали|cffced4da.|n- |cffebc56cПоглощение Мам'Тота|cffced4da.|n|nШипастые укрепления наносят ответный урон атакующим в ближнем бою.|r"
+  }
+ ],
+ "graph_sources": {
+  "docs/techtree/races/IceTrols.json": "b11742c008972bbb014d422e32bd7661796fa3f587161e7be2964cf1233fefbd"
+ },
+ "menu_objects": {
+  "o04A": {
+   "researches": [
+    "R0I7",
+    "R0IE"
+   ],
+   "trains": [
+    "n05S",
+    "n05T",
+    "o04F"
+   ]
+  },
+  "o04D": {
+   "researches": [
+    "R09P",
+    "R0IG"
+   ],
+   "trains": [
+    "n05Y",
+    "o04T"
+   ]
+  },
+  "o04E": {
+   "researches": [
+    "R09L",
+    "R0EU",
+    "R0I4"
+   ],
+   "trains": [
+    "n05U",
+    "n05Z",
+    "n07B"
+   ]
+  },
+  "o04J": {
+   "researches": [
+    "R0I5",
+    "R0I6"
+   ],
+   "trains": [
+    "n05V",
+    "n05W",
+    "n05X"
+   ]
+  },
+  "o06H": {
+   "morphs-to": [
+    "o06I",
+    "o06J",
+    "o06K"
+   ],
+   "researches": [
+    "R0AD",
+    "R0AI",
+    "R0AJ"
+   ],
+   "trains": [
+    "n061",
+    "n062",
+    "o05B"
+   ]
+  },
+  "o06I": {
+   "researches": [
+    "R0AD",
+    "R0AI",
+    "R0AJ"
+   ],
+   "trains": [
+    "n061"
+   ]
+  },
+  "o06J": {
+   "researches": [
+    "R0AD",
+    "R0AI",
+    "R0AJ"
+   ],
+   "trains": [
+    "o05B"
+   ]
+  },
+  "o06K": {
+   "researches": [
+    "R0AD",
+    "R0AI",
+    "R0AJ"
+   ],
+   "trains": [
+    "n062"
+   ]
+  }
+ }
+}

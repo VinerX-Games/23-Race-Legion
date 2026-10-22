@@ -1951,7 +1951,9 @@ function Trig_Pandarens_Actions()
 --    call ChangeLandUnitsNow(p,pi)
 --    call ChangeEliteUnitsNow(p,pi)
     
-    SetPlayerTechMaxAllowed(p, FourCC('R0EH'), 1)
+    if HordeBranchStarted[pi] == nil then
+        SetPlayerTechMaxAllowed(p, FourCC('R0EH'), 1)
+    end
     --Compromise
     if GetPlayerTechCount(p, FourCC('R0EE'), true) == 1 then
         SetPlayerTechMaxAllowed(p, FourCC('R0EI'), 1)
@@ -1972,8 +1974,29 @@ end
 function Trig_BeginCommonHome_Conditions()
     return GetResearched() == FourCC('R0EH')
 end
+-- «Сформировать Истинную Орду» (R0E9) и «Орда — общий дом» (R0EH) взаимоисключающие.
+-- Выбранная ветка запоминается на старте; вторая, поставленная в очередь, отменяется.
+HordeBranchStarted = {}
+function HordeBranchTryStart(id)
+    local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    local started= HordeBranchStarted[pi]
+    if started ~= nil and started ~= id then
+        IssueImmediateOrderById(GetTriggerUnit(), 851976) -- cancel
+        return false
+    end
+    HordeBranchStarted[pi]=id
+    return true
+end
+function HordeBranchTryCancel(id)
+    local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    if HordeBranchStarted[pi] ~= id then return false end
+    HordeBranchStarted[pi]=nil
+    return true
+end
 function Trig_BeginCommonHome_Actions()
+    if not HordeBranchTryStart(FourCC('R0EH')) then return end
     SetPlayerTechMaxAllowedSwap(FourCC('R0DX'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E9'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_BeginCommonHome()
@@ -1986,12 +2009,18 @@ end
 -- Trigger: CanselCommonHome
 --===========================================================================
 function Trig_CanselCommonHome_Conditions()
-    return GetResearched() == FourCC('R0E9')
+    return GetResearched() == FourCC('R0EH')
 end
 function Trig_CanselCommonHome_Func001C()
     return GetPlayerTechMaxAllowedSwap(FourCC('R0D1'), GetOwningPlayer(GetTriggerUnit())) == 0
 end
 function Trig_CanselCommonHome_Actions()
+    local p= GetOwningPlayer(GetTriggerUnit())
+    if not HordeBranchTryCancel(FourCC('R0EH')) then return end
+    -- Истинная Орда открывается после Кор'Крона (CorCron)
+    if GetPlayerTechCount(p, FourCC('R0E0'), true) >= 1 then
+        SetPlayerTechMaxAllowed(p, FourCC('R0E9'), 1)
+    end
     if Trig_CanselCommonHome_Func001C() then
         SetPlayerTechMaxAllowedSwap(FourCC('R0DX'), 1, GetOwningPlayer(GetTriggerUnit()))
     end
@@ -2251,7 +2280,9 @@ function Trig_CorCron_Actions()
     
     
     
-    SetPlayerTechMaxAllowed(p, FourCC('R0E9'), 1)
+    if HordeBranchStarted[pi] == nil then
+        SetPlayerTechMaxAllowed(p, FourCC('R0E9'), 1)
+    end
     
     --Compromise
     if GetPlayerTechCount(p, FourCC('R0E0'), true) == 1 then
@@ -2276,6 +2307,7 @@ function Trig_StartTrueHorde_Conditions()
     return GetResearched() == FourCC('R0E9')
 end
 function Trig_StartTrueHorde_Actions()
+    if not HordeBranchTryStart(FourCC('R0E9')) then return end
     SetPlayerTechMaxAllowedSwap(FourCC('R0DY'), 0, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('R0EI'), 0, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('R0EH'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -2297,6 +2329,12 @@ function Trig_CanselTrueHorde_Func001C()
     return GetPlayerTechMaxAllowedSwap(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0
 end
 function Trig_CanselTrueHorde_Actions()
+    local p= GetOwningPlayer(GetTriggerUnit())
+    if not HordeBranchTryCancel(FourCC('R0E9')) then return end
+    -- Общий дом открывается после Пандаренского вопроса (Pandarens)
+    if GetPlayerTechCount(p, FourCC('R0EE'), true) >= 1 then
+        SetPlayerTechMaxAllowed(p, FourCC('R0EH'), 1)
+    end
     if Trig_CanselTrueHorde_Func001C() then
         SetPlayerTechMaxAllowedSwap(FourCC('R0DY'), 1, GetOwningPlayer(GetTriggerUnit()))
     end

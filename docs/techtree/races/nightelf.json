@@ -576,7 +576,10 @@
    "gold": 400,
    "hotkey": "X",
    "hp": 700,
-   "lumber": 100
+   "lumber": 100,
+   "affected_by": [
+    "Reuv"
+   ]
   },
   "E00W": {
    "type": "hero",
@@ -597,7 +600,10 @@
    "gold": 400,
    "hotkey": "C",
    "hp": 700,
-   "lumber": 100
+   "lumber": 100,
+   "affected_by": [
+    "Reuv"
+   ]
   },
   "R002": {
    "type": "upgrade",
@@ -629,7 +635,7 @@
   },
   "R004": {
    "type": "upgrade",
-   "name": "Улучшение до Кровавого Палача",
+   "name": "Кровавый Палач",
    "gold": 600,
    "lumber": 500,
    "levels": 1,
@@ -780,7 +786,7 @@
   },
   "R0GB": {
    "type": "upgrade",
-   "name": "",
+   "name": "Выбор направления",
    "only_required": true,
    "lumber": 100,
    "levels": 1,
@@ -1142,7 +1148,7 @@
   },
   "Rhde": {
    "type": "upgrade",
-   "name": "",
+   "name": "Защита",
    "only_required": true,
    "gold": 125,
    "lumber": 75,
@@ -1151,7 +1157,7 @@
   },
   "Rhsb": {
    "type": "upgrade",
-   "name": "",
+   "name": "Тяжелые клинки",
    "only_required": true,
    "gold": 100,
    "lumber": 150,
@@ -1165,7 +1171,7 @@
   },
   "Robk": {
    "type": "upgrade",
-   "name": "",
+   "name": "Улучшение до берсерка",
    "only_required": true,
    "gold": 75,
    "lumber": 175,
@@ -1177,16 +1183,21 @@
    "time": 40
   },
   "Sch5": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Cargo Hold",
+   "levels": 1
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "hotkey": "Q",
+   "levels": 1
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "hotkey": "D",
+   "levels": 1
   },
   "e00H": {
    "type": "unit",
@@ -1202,6 +1213,11 @@
    "lumber": 80,
    "requires": [
     "etoa"
+   ],
+   "affected_by": [
+    "R0G2",
+    "Rerh",
+    "Resw"
    ]
   },
   "e00I": {
@@ -1218,6 +1234,11 @@
    "lumber": 80,
    "requires": [
     "etoa"
+   ],
+   "affected_by": [
+    "R0G2",
+    "Rerh",
+    "Resw"
    ]
   },
   "e00J": {
@@ -1228,7 +1249,12 @@
    "gold": 165,
    "hotkey": "Q",
    "hp": 530,
-   "lumber": 80
+   "lumber": 80,
+   "affected_by": [
+    "R0G1",
+    "Rerh",
+    "Resw"
+   ]
   },
   "e03W": {
    "type": "building",
@@ -1241,6 +1267,14 @@
    "lumber": 3000,
    "requires": [
     "etol"
+   ],
+   "researches": [
+    "R0KS",
+    "R0KT",
+    "R0KU"
+   ],
+   "affected_by": [
+    "Rgfo"
    ]
   },
   "e03X": {
@@ -1254,6 +1288,14 @@
    "lumber": 3000,
    "requires": [
     "etol"
+   ],
+   "researches": [
+    "R0CY",
+    "R0KV",
+    "R0KW"
+   ],
+   "affected_by": [
+    "Rgfo"
    ]
   },
   "eaoe": {
@@ -1267,6 +1309,18 @@
    "requires": [
     "etoa",
     "edob"
+   ],
+   "researches": [
+    "R0G8",
+    "Resi",
+    "Redc",
+    "Rers",
+    "Rehs",
+    "Reeb"
+   ],
+   "affected_by": [
+    "Renb",
+    "Rgfo"
    ]
   },
   "eaom": {
@@ -1279,6 +1333,20 @@
    "lumber": 450,
    "requires": [
     "R0GB"
+   ],
+   "researches": [
+    "R0GA",
+    "R0G9",
+    "R0G7",
+    "Reib",
+    "Remk",
+    "Remg",
+    "Repb",
+    "R0LC"
+   ],
+   "affected_by": [
+    "Renb",
+    "Rgfo"
    ]
   },
   "eaow": {
@@ -1291,6 +1359,15 @@
    "lumber": 450,
    "requires": [
     "etoa"
+   ],
+   "researches": [
+    "R0G6",
+    "Redt",
+    "Reec"
+   ],
+   "affected_by": [
+    "Renb",
+    "Rgfo"
    ]
   },
   "earc": {
@@ -1300,7 +1377,16 @@
    "gold": 130,
    "hotkey": "Q",
    "hp": 275,
-   "lumber": 10
+   "lumber": 10,
+   "affected_by": [
+    "R0G2",
+    "Resm",
+    "Rema",
+    "Reib",
+    "Remk",
+    "Reuv",
+    "Repm"
+   ]
   },
   "eate": {
    "type": "building",
@@ -1310,7 +1396,10 @@
    "gold": 180,
    "hotkey": "S",
    "hp": 900,
-   "lumber": 50
+   "lumber": 50,
+   "affected_by": [
+    "Rgfo"
+   ]
   },
   "ebal": {
    "type": "unit",
@@ -1322,6 +1411,11 @@
    "lumber": 65,
    "requires": [
     "edob"
+   ],
+   "affected_by": [
+    "Resm",
+    "Reuv",
+    "Repb"
    ]
   },
   "echm": {
@@ -1332,11 +1426,17 @@
    "gold": 330,
    "hotkey": "C",
    "hp": 1000,
-   "lumber": 70
+   "lumber": 70,
+   "affected_by": [
+    "Resw",
+    "Rerh",
+    "Recb",
+    "Reuv"
+   ]
   },
   "edcm": {
    "type": "unit",
-   "name": "",
+   "name": "Друид-хищник",
    "only_required": true,
    "time": 30,
    "gold": 255,
@@ -1345,17 +1445,28 @@
    "lumber": 80,
    "requires": [
     "etoa"
+   ],
+   "affected_by": [
+    "Resw",
+    "Rerh",
+    "Reuv",
+    "Redc",
+    "Repm"
    ]
   },
   "eden": {
    "type": "unit",
-   "name": "",
+   "name": "Древо чудес",
    "only_required": true,
    "time": 60,
    "gold": 90,
    "hotkey": "D",
    "hp": 450,
-   "lumber": 30
+   "lumber": 30,
+   "affected_by": [
+    "Renb",
+    "Rgfo"
+   ]
   },
   "edob": {
    "type": "building",
@@ -1367,6 +1478,19 @@
    "lumber": 100,
    "requires": [
     "etol"
+   ],
+   "researches": [
+    "R0GC",
+    "Resc",
+    "Resm",
+    "Rema",
+    "Resw",
+    "Rerh",
+    "Reuv",
+    "Rews"
+   ],
+   "affected_by": [
+    "Rgfo"
    ]
   },
   "edoc": {
@@ -1384,6 +1508,15 @@
     "etoa",
     "edob",
     "R0G1"
+   ],
+   "affected_by": [
+    "R0G1",
+    "Resw",
+    "Rerh",
+    "Redc",
+    "Reuv",
+    "Repm",
+    "Reeb"
    ]
   },
   "edos": {
@@ -1396,6 +1529,12 @@
    "lumber": 190,
    "requires": [
     "etoe"
+   ],
+   "researches": [
+    "Recb"
+   ],
+   "affected_by": [
+    "Rgfo"
    ]
   },
   "edot": {
@@ -1413,6 +1552,15 @@
     "etoa",
     "edob",
     "R0G1"
+   ],
+   "affected_by": [
+    "R0G1",
+    "Resm",
+    "Rema",
+    "Redt",
+    "Reuv",
+    "Repm",
+    "Reec"
    ]
   },
   "edry": {
@@ -1422,7 +1570,14 @@
    "gold": 215,
    "hotkey": "Q",
    "hp": 670,
-   "lumber": 125
+   "lumber": 125,
+   "affected_by": [
+    "Resm",
+    "Rema",
+    "Resi",
+    "Reuv",
+    "Repm"
+   ]
   },
   "efdr": {
    "type": "unit",
@@ -1434,18 +1589,29 @@
    "lumber": 25,
    "requires": [
     "etoa"
+   ],
+   "affected_by": [
+    "Resw",
+    "Rerh",
+    "Reuv"
    ]
   },
   "ehip": {
    "type": "unit",
-   "name": "",
+   "name": "Гиппогриф",
    "only_required": true,
    "time": 30,
    "food": 2,
    "gold": 160,
    "hotkey": "H",
    "hp": 525,
-   "lumber": 20
+   "lumber": 20,
+   "affected_by": [
+    "Resw",
+    "Rerh",
+    "Reht",
+    "Reuv"
+   ]
   },
   "emow": {
    "type": "building",
@@ -1455,7 +1621,11 @@
    "gold": 300,
    "hotkey": "A",
    "hp": 600,
-   "lumber": 150
+   "lumber": 150,
+   "affected_by": [
+    "Rews",
+    "Rgfo"
+   ]
   },
   "emtg": {
    "type": "unit",
@@ -1467,6 +1637,14 @@
    "lumber": 250,
    "requires": [
     "etoa"
+   ],
+   "affected_by": [
+    "Resw",
+    "Rerh",
+    "Rers",
+    "Rehs",
+    "Repm",
+    "Reuv"
    ]
   },
   "esen": {
@@ -1479,6 +1657,15 @@
    "lumber": 20,
    "requires": [
     "edob"
+   ],
+   "affected_by": [
+    "R0G2",
+    "Resm",
+    "Rema",
+    "Resc",
+    "Reuv",
+    "Remg",
+    "Repm"
    ]
   },
   "etoa": {
@@ -1492,6 +1679,13 @@
    "lumber": 4500,
    "requires": [
     "R0GB"
+   ],
+   "researches": [
+    "Renb"
+   ],
+   "affected_by": [
+    "Renb",
+    "Rgfo"
    ]
   },
   "etoe": {
@@ -1505,6 +1699,13 @@
    "lumber": 12000,
    "requires": [
     "eate"
+   ],
+   "researches": [
+    "Renb"
+   ],
+   "affected_by": [
+    "Renb",
+    "Rgfo"
    ]
   },
   "etol": {
@@ -1515,7 +1716,16 @@
    "gold": 500,
    "hotkey": "Q",
    "hp": 1300,
-   "lumber": 185
+   "lumber": 185,
+   "researches": [
+    "R0G1",
+    "R0G2",
+    "Renb"
+   ],
+   "affected_by": [
+    "Renb",
+    "Rgfo"
+   ]
   },
   "etrp": {
    "type": "building",
@@ -1527,6 +1737,12 @@
    "lumber": 80,
    "requires": [
     "edob"
+   ],
+   "affected_by": [
+    "Resm",
+    "Rerh",
+    "Renb",
+    "Rgfo"
    ]
   },
   "ewsp": {
@@ -1535,7 +1751,12 @@
    "time": 14,
    "gold": 70,
    "hotkey": "Q",
-   "hp": 125
+   "hp": 125,
+   "affected_by": [
+    "Rewd",
+    "R0GC",
+    "Reuv"
+   ]
   },
   "h0D8": {
    "type": "building",
@@ -1545,7 +1766,14 @@
    "gold": 500,
    "hotkey": "C",
    "hp": 2000,
-   "lumber": 700
+   "lumber": 700,
+   "researches": [
+    "R005",
+    "R006",
+    "R007",
+    "R002",
+    "R003"
+   ]
   },
   "h0D9": {
    "type": "unit",
@@ -1555,7 +1783,13 @@
    "gold": 250,
    "hotkey": "Q",
    "hp": 750,
-   "lumber": 200
+   "lumber": 200,
+   "affected_by": [
+    "R006",
+    "R007",
+    "R004",
+    "R003"
+   ]
   },
   "h0DA": {
    "type": "unit",
@@ -1565,7 +1799,13 @@
    "gold": 875,
    "hotkey": "E",
    "hp": 1400,
-   "lumber": 1000
+   "lumber": 1000,
+   "affected_by": [
+    "R005",
+    "R007",
+    "R003",
+    "R002"
+   ]
   },
   "h0DB": {
    "type": "unit",
@@ -1575,11 +1815,18 @@
    "gold": 450,
    "hotkey": "W",
    "hp": 800,
-   "lumber": 475
+   "lumber": 475,
+   "affected_by": [
+    "R005",
+    "R007",
+    "R004",
+    "R003",
+    "R002"
+   ]
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "time": 240,
    "food_made": 100,
@@ -1590,7 +1837,7 @@
   },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "time": 140,
    "food_made": 150,
@@ -1600,22 +1847,34 @@
    "lumber": 12000,
    "requires": [
     "halt"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
    ]
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "time": 140,
    "food_made": 100,
    "gold": 4500,
    "hotkey": "Z",
    "hp": 2000,
-   "lumber": 4500
+   "lumber": 4500,
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "ken0": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Ярость природы",
+   "hero": true,
+   "hotkey": "R",
+   "levels": 2,
+   "hero_level_req": 6
   },
   "n05D": {
    "type": "unit",
@@ -1630,6 +1889,11 @@
     "etoe",
     "edob",
     "R0G1"
+   ],
+   "affected_by": [
+    "R0G1",
+    "Rerh",
+    "Resw"
    ]
   },
   "n05H": {
@@ -1645,6 +1909,11 @@
     "etoa",
     "edob",
     "R0G1"
+   ],
+   "affected_by": [
+    "R0GA",
+    "Rerh",
+    "Resw"
    ]
   },
   "n064": {
@@ -1660,27 +1929,52 @@
     "etoe",
     "edob",
     "R0G1"
+   ],
+   "affected_by": [
+    "R0G1",
+    "Rerh",
+    "Resw"
    ]
   },
   "ofor": {
    "type": "unit",
-   "name": "",
+   "name": "Лесопилка",
    "only_required": true,
    "time": 70,
    "gold": 205,
    "hotkey": "E",
-   "hp": 1000
+   "hp": 1000,
+   "researches": [
+    "R0G5",
+    "R0E6",
+    "Rome",
+    "Roar",
+    "Rora",
+    "Rosp",
+    "Rorb"
+   ],
+   "affected_by": [
+    "Rosp",
+    "Rgfo"
+   ]
   },
   "ofrt": {
    "type": "unit",
-   "name": "",
+   "name": "Цитадель",
    "only_required": true,
    "time": 140,
    "food_made": 150,
    "gold": 12000,
    "hotkey": "Z",
    "hp": 2500,
-   "lumber": 12000
+   "lumber": 12000,
+   "researches": [
+    "Ropg"
+   ],
+   "affected_by": [
+    "Rosp",
+    "Rgfo"
+   ]
   }
  },
  "edges": [
@@ -1713,13 +2007,13 @@
   "Arsk requires Rers",
   "Assk requires Rehs",
   "Ault requires Reuv",
+  "E00V affected-by Reuv",
   "E00V has-ability AInv",
   "E00V has-ability Ault",
   "E00V hero-ability A0FH",
   "E00V hero-ability A0FI",
   "E00V hero-ability A0FJ",
   "E00V hero-ability ken0",
-  "E00V researches Reuv",
   "E00W has-ability A01C",
   "E00W has-ability AInv",
   "E00W has-ability Ault",
@@ -1727,6 +2021,7 @@
   "E00W hero-ability AEbl",
   "E00W hero-ability AEev",
   "E00W hero-ability ANfl",
+  "E011 affected-by Reuv",
   "E011 has-ability AInv",
   "E011 has-ability Ashm",
   "E011 has-ability Ault",
@@ -1734,7 +2029,6 @@
   "E011 hero-ability A0FQ",
   "E011 hero-ability A0FS",
   "E011 hero-ability A0FT",
-  "E011 researches Reuv",
   "R002 requires hkee",
   "R003 requires hkee",
   "R004 requires h0DV",
@@ -1779,37 +2073,39 @@
   "Resw requires etoa",
   "Reuv requires etoa",
   "Rews requires etoe",
+  "e00H affected-by R0G2",
+  "e00H affected-by Rerh",
+  "e00H affected-by Resw",
   "e00H has-ability A0FA",
   "e00H has-ability A0FB",
   "e00H has-ability A16I",
   "e00H requires etoa",
-  "e00H researches R0G2",
-  "e00H researches Rerh",
-  "e00H researches Resw",
+  "e00I affected-by R0G2",
+  "e00I affected-by Rerh",
+  "e00I affected-by Resw",
   "e00I has-ability A0EF",
   "e00I has-ability A0FD",
   "e00I has-ability Ault",
   "e00I requires etoa",
-  "e00I researches R0G2",
-  "e00I researches Rerh",
-  "e00I researches Resw",
+  "e00J affected-by R0G1",
+  "e00J affected-by Rerh",
+  "e00J affected-by Resw",
   "e00J has-ability A0FC",
   "e00J has-ability Ault",
-  "e00J researches R0G1",
-  "e00J researches Rerh",
-  "e00J researches Resw",
+  "e03W affected-by Rgfo",
   "e03W has-ability Abds",
   "e03W requires etol",
   "e03W researches R0KS",
   "e03W researches R0KT",
   "e03W researches R0KU",
-  "e03W researches Rgfo",
+  "e03X affected-by Rgfo",
   "e03X has-ability Abds",
   "e03X requires etol",
   "e03X researches R0CY",
   "e03X researches R0KV",
   "e03X researches R0KW",
-  "e03X researches Rgfo",
+  "eaoe affected-by Renb",
+  "eaoe affected-by Rgfo",
   "eaoe has-ability Abds",
   "eaoe has-ability Aeat",
   "eaoe has-ability Aro1",
@@ -1819,14 +2115,14 @@
   "eaoe researches Redc",
   "eaoe researches Reeb",
   "eaoe researches Rehs",
-  "eaoe researches Renb",
   "eaoe researches Rers",
   "eaoe researches Resi",
-  "eaoe researches Rgfo",
   "eaoe trains edoc",
   "eaoe trains edry",
   "eaoe trains emtg",
   "eaoe trains n05D",
+  "eaom affected-by Renb",
+  "eaom affected-by Rgfo",
   "eaom has-ability Abds",
   "eaom has-ability Aeat",
   "eaom has-ability Aro1",
@@ -1838,15 +2134,15 @@
   "eaom researches Reib",
   "eaom researches Remg",
   "eaom researches Remk",
-  "eaom researches Renb",
   "eaom researches Repb",
-  "eaom researches Rgfo",
   "eaom trains e00I",
   "eaom trains e00J",
   "eaom trains earc",
   "eaom trains ebal",
   "eaom trains esen",
   "eaom trains n05H",
+  "eaow affected-by Renb",
+  "eaow affected-by Rgfo",
   "eaow has-ability Abds",
   "eaow has-ability Aeat",
   "eaow has-ability Aro1",
@@ -1854,12 +2150,17 @@
   "eaow researches R0G6",
   "eaow researches Redt",
   "eaow researches Reec",
-  "eaow researches Renb",
-  "eaow researches Rgfo",
   "eaow trains e00H",
   "eaow trains edot",
   "eaow trains efdr",
   "eaow trains n064",
+  "earc affected-by R0G2",
+  "earc affected-by Reib",
+  "earc affected-by Rema",
+  "earc affected-by Remk",
+  "earc affected-by Repm",
+  "earc affected-by Resm",
+  "earc affected-by Reuv",
   "earc has-ability Aco2",
   "earc has-ability Aegr",
   "earc has-ability Aeib",
@@ -1867,31 +2168,25 @@
   "earc has-ability Aien",
   "earc has-ability Ashm",
   "earc has-ability Ault",
-  "earc researches R0G2",
-  "earc researches Reib",
-  "earc researches Rema",
-  "earc researches Remk",
-  "earc researches Repm",
-  "earc researches Resm",
-  "earc researches Reuv",
+  "eate affected-by Rgfo",
   "eate has-ability Abds",
-  "eate researches Rgfo",
   "eate trains E00V",
   "eate trains E00W",
   "eate trains E011",
+  "ebal affected-by Repb",
+  "ebal affected-by Resm",
+  "ebal affected-by Reuv",
   "ebal has-ability Aimp",
   "ebal has-ability Ault",
   "ebal requires edob",
-  "ebal researches Repb",
-  "ebal researches Resm",
-  "ebal researches Reuv",
+  "echm affected-by Recb",
+  "echm affected-by Rerh",
+  "echm affected-by Resw",
+  "echm affected-by Reuv",
   "echm has-ability Acor",
   "echm has-ability Alit",
   "echm has-ability Ault",
-  "echm researches Recb",
-  "echm researches Rerh",
-  "echm researches Resw",
-  "echm researches Reuv",
+  "edob affected-by Rgfo",
   "edob has-ability Abds",
   "edob requires etol",
   "edob researches R0GC",
@@ -1902,7 +2197,13 @@
   "edob researches Resw",
   "edob researches Reuv",
   "edob researches Rews",
-  "edob researches Rgfo",
+  "edoc affected-by R0G1",
+  "edoc affected-by Redc",
+  "edoc affected-by Reeb",
+  "edoc affected-by Repm",
+  "edoc affected-by Rerh",
+  "edoc affected-by Resw",
+  "edoc affected-by Reuv",
   "edoc has-ability Abrf",
   "edoc has-ability Aien",
   "edoc has-ability Arej",
@@ -1911,18 +2212,18 @@
   "edoc requires R0G1",
   "edoc requires edob",
   "edoc requires etoa",
-  "edoc researches R0G1",
-  "edoc researches Redc",
-  "edoc researches Reeb",
-  "edoc researches Repm",
-  "edoc researches Rerh",
-  "edoc researches Resw",
-  "edoc researches Reuv",
+  "edos affected-by Rgfo",
   "edos has-ability Abds",
   "edos requires etoe",
   "edos researches Recb",
-  "edos researches Rgfo",
   "edos trains echm",
+  "edot affected-by R0G1",
+  "edot affected-by Redt",
+  "edot affected-by Reec",
+  "edot affected-by Rema",
+  "edot affected-by Repm",
+  "edot affected-by Resm",
+  "edot affected-by Reuv",
   "edot has-ability Acyc",
   "edot has-ability Afae",
   "edot has-ability Aien",
@@ -1931,35 +2232,34 @@
   "edot requires R0G1",
   "edot requires edob",
   "edot requires etoa",
-  "edot researches R0G1",
-  "edot researches Redt",
-  "edot researches Reec",
-  "edot researches Rema",
-  "edot researches Repm",
-  "edot researches Resm",
-  "edot researches Reuv",
+  "edry affected-by Rema",
+  "edry affected-by Repm",
+  "edry affected-by Resi",
+  "edry affected-by Resm",
+  "edry affected-by Reuv",
   "edry has-ability A16L",
   "edry has-ability Aadm",
   "edry has-ability Aien",
   "edry has-ability Aspo",
   "edry has-ability Ault",
-  "edry researches Rema",
-  "edry researches Repm",
-  "edry researches Resi",
-  "edry researches Resm",
-  "edry researches Reuv",
+  "efdr affected-by Rerh",
+  "efdr affected-by Resw",
+  "efdr affected-by Reuv",
   "efdr has-ability A12K",
   "efdr has-ability A16L",
   "efdr has-ability Amfl",
   "efdr has-ability Apsh",
   "efdr has-ability Ault",
   "efdr requires etoa",
-  "efdr researches Rerh",
-  "efdr researches Resw",
-  "efdr researches Reuv",
+  "emow affected-by Rews",
+  "emow affected-by Rgfo",
   "emow has-ability Ambt",
-  "emow researches Rews",
-  "emow researches Rgfo",
+  "emtg affected-by Rehs",
+  "emtg affected-by Repm",
+  "emtg affected-by Rerh",
+  "emtg affected-by Rers",
+  "emtg affected-by Resw",
+  "emtg affected-by Reuv",
   "emtg has-ability Agra",
   "emtg has-ability Aien",
   "emtg has-ability Arsk",
@@ -1967,12 +2267,13 @@
   "emtg has-ability Atau",
   "emtg has-ability Ault",
   "emtg requires etoa",
-  "emtg researches Rehs",
-  "emtg researches Repm",
-  "emtg researches Rerh",
-  "emtg researches Rers",
-  "emtg researches Resw",
-  "emtg researches Reuv",
+  "esen affected-by R0G2",
+  "esen affected-by Rema",
+  "esen affected-by Remg",
+  "esen affected-by Repm",
+  "esen affected-by Resc",
+  "esen affected-by Resm",
+  "esen affected-by Reuv",
   "esen has-ability Aesn",
   "esen has-ability Aien",
   "esen has-ability Amgi",
@@ -1980,13 +2281,8 @@
   "esen has-ability Ashm",
   "esen has-ability Ault",
   "esen requires edob",
-  "esen researches R0G2",
-  "esen researches Rema",
-  "esen researches Remg",
-  "esen researches Repm",
-  "esen researches Resc",
-  "esen researches Resm",
-  "esen researches Reuv",
+  "etoa affected-by Renb",
+  "etoa affected-by Rgfo",
   "etoa has-ability A0IQ",
   "etoa has-ability A0LI",
   "etoa has-ability A0LJ",
@@ -1997,8 +2293,9 @@
   "etoa morphs-to etoe",
   "etoa requires R0GB",
   "etoa researches Renb",
-  "etoa researches Rgfo",
   "etoa trains ewsp",
+  "etoe affected-by Renb",
+  "etoe affected-by Rgfo",
   "etoe has-ability A0LI",
   "etoe has-ability A0LJ",
   "etoe has-ability Aeat",
@@ -2007,8 +2304,9 @@
   "etoe has-ability Atol",
   "etoe requires eate",
   "etoe researches Renb",
-  "etoe researches Rgfo",
   "etoe trains ewsp",
+  "etol affected-by Renb",
+  "etol affected-by Rgfo",
   "etol has-ability A0IQ",
   "etol has-ability A0LI",
   "etol has-ability A0LJ",
@@ -2020,16 +2318,18 @@
   "etol researches R0G1",
   "etol researches R0G2",
   "etol researches Renb",
-  "etol researches Rgfo",
   "etol trains ewsp",
+  "etrp affected-by Renb",
+  "etrp affected-by Rerh",
+  "etrp affected-by Resm",
+  "etrp affected-by Rgfo",
   "etrp has-ability Abds",
   "etrp has-ability Aeat",
   "etrp has-ability Aro2",
   "etrp requires edob",
-  "etrp researches Renb",
-  "etrp researches Rerh",
-  "etrp researches Resm",
-  "etrp researches Rgfo",
+  "ewsp affected-by R0GC",
+  "ewsp affected-by Reuv",
+  "ewsp affected-by Rewd",
   "ewsp builds e03W",
   "ewsp builds e03X",
   "ewsp builds eaoe",
@@ -2047,9 +2347,6 @@
   "ewsp has-ability Aren",
   "ewsp has-ability Ault",
   "ewsp has-ability Awha",
-  "ewsp researches R0GC",
-  "ewsp researches Reuv",
-  "ewsp researches Rewd",
   "h0D8 has-ability A15N",
   "h0D8 researches R002",
   "h0D8 researches R003",
@@ -2059,59 +2356,59 @@
   "h0D8 trains h0D9",
   "h0D8 trains h0DA",
   "h0D8 trains h0DB",
+  "h0D9 affected-by R003",
+  "h0D9 affected-by R004",
+  "h0D9 affected-by R006",
+  "h0D9 affected-by R007",
   "h0D9 has-ability A00A",
   "h0D9 has-ability A00B",
   "h0D9 has-ability A00I",
   "h0D9 has-ability Sch5",
   "h0D9 has-ability Sdro",
   "h0D9 has-ability Slo3",
-  "h0D9 researches R003",
-  "h0D9 researches R004",
-  "h0D9 researches R006",
-  "h0D9 researches R007",
+  "h0DA affected-by R002",
+  "h0DA affected-by R003",
+  "h0DA affected-by R005",
+  "h0DA affected-by R007",
   "h0DA has-ability A001",
   "h0DA has-ability A003",
   "h0DA has-ability A009",
   "h0DA has-ability A00A",
   "h0DA has-ability A00B",
   "h0DA has-ability A00G",
-  "h0DA researches R002",
-  "h0DA researches R003",
-  "h0DA researches R005",
-  "h0DA researches R007",
+  "h0DB affected-by R002",
+  "h0DB affected-by R003",
+  "h0DB affected-by R004",
+  "h0DB affected-by R005",
+  "h0DB affected-by R007",
   "h0DB has-ability A002",
   "h0DB has-ability A009",
   "h0DB has-ability A00A",
   "h0DB has-ability A00B",
   "h0DB has-ability A00G",
   "h0DB has-ability A1PP",
-  "h0DB researches R002",
-  "h0DB researches R003",
-  "h0DB researches R004",
-  "h0DB researches R005",
-  "h0DB researches R007",
+  "n05D affected-by R0G1",
+  "n05D affected-by Rerh",
+  "n05D affected-by Resw",
   "n05D has-ability A164",
   "n05D has-ability ACfb",
   "n05D has-ability Absk",
   "n05D requires R0G1",
   "n05D requires edob",
   "n05D requires etoe",
-  "n05D researches R0G1",
-  "n05D researches Rerh",
-  "n05D researches Resw",
+  "n05H affected-by R0GA",
+  "n05H affected-by Rerh",
+  "n05H affected-by Resw",
   "n05H has-ability A16K",
   "n05H requires R0G1",
   "n05H requires edob",
   "n05H requires etoa",
-  "n05H researches R0GA",
-  "n05H researches Rerh",
-  "n05H researches Resw",
+  "n064 affected-by R0G1",
+  "n064 affected-by Rerh",
+  "n064 affected-by Resw",
   "n064 requires R0G1",
   "n064 requires edob",
   "n064 requires etoe",
-  "n064 researches R0G1",
-  "n064 researches Rerh",
-  "n064 researches Resw",
   "race:nightelf lua-start-tech R07L",
   "race:nightelf lua-starts-with ewsp"
  ]

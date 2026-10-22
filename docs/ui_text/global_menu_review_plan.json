@@ -1,0 +1,558 @@
+{
+ "scope": "Общий проход меню 21 здания: две верфи, прямые зависимости дренеев, точные названия исследований и раздельные герои.",
+ "requests": [
+  {
+   "id": "eaoe",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "eaow",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "h03R",
+   "sections": [
+    "trains"
+   ],
+   "intro": "Прибрежная верфь бандитов. Строит корабли и исследует улучшения флота. Исследование |cffebc56cПривлечь пиратов Кровавого Паруса|cffced4da заменяет имеющиеся фрегаты и линкоры пиратскими и открывает постройку пиратских вариантов вместо обычных."
+  },
+  {
+   "id": "h04D",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "h058",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "h0BW",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "h0E7",
+   "sections": [
+    "researches",
+    "trains"
+   ],
+   "intro": "Верфь Кул-Тираса. Строит транспортные и боевые корабли, исследует улучшения флота."
+  },
+  {
+   "id": "h0ET",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "h0H4",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "h0H5",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "h0H6",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "h0IQ",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "h0IR",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "h0IS",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "h0MU",
+   "sections": [
+    "trains"
+   ]
+  },
+  {
+   "id": "o00R",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "o015",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "o05T",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "pa28",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "pa33",
+   "sections": [
+    "researches"
+   ]
+  },
+  {
+   "id": "u00N",
+   "sections": [
+    "researches"
+   ]
+  }
+ ],
+ "facts": {
+  "sources": {
+   "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/races/Bandits.lua": "64c7fb852a270b5b0ddd51124cef01cf2233223c29123c5fd83c85f3c36a9c18"
+  },
+  "h03R": "Trig_StartBandits_Func001A запрещает h03K/h03L; R00E в Trig_Pirats_Actions разрешает их, запрещает h00Y/h00Z и заменяет существующие обычные корабли.",
+  "kt01": "Существующее исследование: эффективное name1=TRIGSTR_42025, «Новые типы ядер». Экспортёр подтверждает тип чтением из таблицы исследований.",
+  "preservation": "Меняются только запрошенные разделы; прочие абзацы, в том числе «Перестраивается в» у h0H4, сохраняются."
+ },
+ "operations": [
+  {
+   "type": "unit",
+   "id": "eaoe",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Подготавливает магов земли, целителей и тяжелых лесных исполинов.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cДриада|cffced4da.|n- |cffebc56cДруид-хищник|cffced4da.|n- |cffebc56cГорный великан|cffced4da.|n- |cffebc56cДруид-сова|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cМагия совы|cffced4da.|n- |cffebc56cДруид-хищник: посвящение в адепты|cffced4da.|n- |cffebc56cЗнак хищника|cffced4da.|n- |cffebc56cКаменная кожа|cffced4da.|n- |cffebc56cУстойчивая кожа|cffced4da.|n- |cffebc56cРассеяние чар|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "eaow",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Подготавливает летающих существ и магов стихии воздуха.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cДруид-ворон|cffced4da.|n- |cffebc56cЧудесный дракончик|cffced4da.|n- |cffebc56cДревний Гвардеец|cffced4da.|n- |cffebc56cФурболг-воитель|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cАннулирование|cffced4da.|n- |cffebc56cДруид-ворон: посвящение в адепты|cffced4da.|n- |cffebc56cЗнак ворона|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h03R",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Прибрежная верфь бандитов. Строит корабли и исследует улучшения флота. Исследование |cffebc56cПривлечь пиратов Кровавого Паруса|cffced4da заменяет имеющиеся фрегаты и линкоры пиратскими и открывает постройку пиратских вариантов вместо обычных.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cТранспорт|cffced4da.|n- |cffebc56cФрегат|cffced4da.|n- |cffebc56cЛинкор|cffced4da.|n- |cffebc56cПиратский линкор|cffced4da.|n- |cffebc56cПиратский Фрегат|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cОрудия флота|cffced4da.|n- |cffebc56cУкреплённый корпус|cffced4da.|n- |cffebc56cОбстрел|cffced4da.|n- |cffebc56cДополнительные паруса|cffced4da.|n- |cffebc56cПочинка|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h04D",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Подготавливает базовые пехотные и кавалерийские силы Эльфов Крови.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cСтранник|cffced4da.|n- |cffebc56cСледопыт|cffced4da.|n- |cffebc56cВсадник|cffced4da.|n- |cffebc56cРыцарь крови|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cДрессировка животных|cffced4da.|n- |cffebc56cТренировка следопытов|cffced4da.|n- |cffebc56cЗащита от магии|cffced4da.|n- |cffebc56cУлучшенные луки|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h058",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Священная обитель воинов Света. Обучает элитных бойцов Озарённых и исследует священные улучшения.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cМечник Озаренный|cffced4da.|n- |cffebc56cЖрица Наару|cffced4da.|n- |cffebc56cМаг Озаренный|cffced4da.|n- |cffebc56cОзаренный Паладин|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПосвящение Паладина|cffced4da.|n- |cffebc56cИзучение магии|cffced4da.|n- |cffebc56cУчение наару|cffced4da.|n- |cffebc56cОсвящение оружия|cffced4da.|n- |cffebc56cОзарённый клинок|cffced4da.|n- |cffebc56cОбет защитника|cffced4da.|n- |cffebc56cБлагословение Наару|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0BW",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|r |cffced4daСлужит складом древесины и центром кузнечных разработок врайкулов.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cЖелезные мечи|cffced4da.|n- |cffebc56cЖелезная броня|cffced4da.|n- |cffebc56cТренировки меткости|cffced4da.|n- |cffebc56cДоспехи из клёпаной кожи|cffced4da.|n- |cffebc56cУлучшенные топоры|cffced4da.|n- |cffebc56cМастерство владения мечом|cffced4da.|n- |cffebc56cМастерство защиты|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0E7",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Верфь Кул-Тираса. Строит транспортные и боевые корабли, исследует улучшения флота.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cФрегат|cffced4da.|n- |cffebc56cТранспорт|cffced4da.|n- |cffebc56cЛинкор|cffced4da.|n- |cffebc56cГалеон|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cОрудия флота|cffced4da.|n- |cffebc56cУкреплённый корпус|cffced4da.|n- |cffebc56cОбстрел|cffced4da.|n- |cffebc56cДополнительные паруса|cffced4da.|n- |cffebc56cПочинка|cffced4da.|n- |cffebc56cНовые типы ядер|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0ET",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Обитель первичной стихии Воды. Обучает элементалей воды, морей, океанов и грязи, а также исследует ледяные стрелы, рассеяние чар и водную магию.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cЭлементаль Воды|cffced4da.|n- |cffebc56cЭлементаль Океана|cffced4da.|n- |cffebc56cЭлементаль Морей|cffced4da.|n- |cffebc56cЗагробник Глубин|cffced4da.|n- |cffebc56cРифовый Элементаль|cffced4da.|n- |cffebc56cГрязевой Элементаль|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cМагия воды|cffced4da.|n- |cffebc56cЛедяные стрелы|cffced4da.|n- |cffebc56cМагия морей|cffced4da.|n- |cffebc56cРассеяние чар|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0H4",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Военный лагерь подготовки наземных войск Стромгарда.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cОполченец|cffced4da.|n- |cffebc56cПехотинец|cffced4da.|n- |cffebc56cЗащитник|cffced4da.|n- |cffebc56cАрбалетчик|cffced4da.|n- |cffebc56cРыцарь|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cВыучка рыцарей|cffced4da.|n- |cffebc56cЗащита|cffced4da.|n- |cffebc56cТренировки Защитников|cffced4da.|n|n|cffb99d66Перестраивается в:|cffced4da|n- |cffebc56cМагическая башня|cffced4da.|n- |cffebc56cРынок|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0H5",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Лесопильный двор. Принимает добытую древесину и позволяет исследовать улучшения добычи и прочности строений.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПрочные топоры|cffced4da.|n- |cffebc56cУлучшенная кладка|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0H6",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Оружейная кузница. Позволяет исследовать улучшения оружия, доспехов, пороха и стрел для армии Стромгарда.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cЖелезные мечи|cffced4da.|n- |cffebc56cЧерный порох|cffced4da.|n- |cffebc56cЖелезная броня|cffced4da.|n- |cffebc56cМагическое оружие|cffced4da.|n- |cffebc56cКлепаная кожа|cffced4da.|n- |cffebc56cОгненные стрелы|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0IQ",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Центр усовершенствования вооружения, доспехов и звериных способностей воргенов.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cЖелезные мечи|cffced4da.|n- |cffebc56cЖелезная броня|cffced4da.|n- |cffebc56cЧерный порох|cffced4da.|n- |cffebc56cНакидки из клепаной кожи|cffced4da.|n- |cffebc56cНутро зверя|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0IR",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Подготавливает специализированных бойцов и боевых магов.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cТопорометатель|cffced4da.|n- |cffebc56cРыцарь|cffced4da.|n- |cffebc56cВорген маг|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cПознания магии — посвящение|cffced4da.|n- |cffebc56cДрессировка рыцарей|cffced4da.|n- |cffebc56cВолчья кровь|cffced4da.|n- |cffebc56cДрессировка Топорометателей|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0IS",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Место единения с природой и культивации первобытной силы воргенов.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cПолудикий ворген|cffced4da.|n- |cffebc56cВорген друид|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cВолчьи конечности|cffced4da.|n- |cffebc56cЗвериные рефлексы|cffced4da.|n- |cffebc56cСлияние с природой — посвящение|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "h0MU",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Священный алтарь духов Лоа. Служит для призыва и воскрешения павших героев, а также найма воинов, впитавших силу звериных богов.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cТролль-медведь|cffced4da.|n- |cffebc56cТролль-волк|cffced4da.|n- |cffebc56cТролль-ястреб|cffced4da.|n|n|cffb99d66Герои:|cffced4da|n- |cffebc56cМастер клинка|cffced4da.|n- |cffebc56cПовелитель проклятий|cffced4da.|n- |cffebc56cВоеначальник|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cМетоды поглощения Лоа|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "o00R",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Пункт приёма древесины. Исследует улучшения вооружения, защиты и добычи ресурсов для войск Культа Сумеречного Молота.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cСтальное оружие ближнего боя|cffced4da.|n- |cffebc56cСтальная броня|cffced4da.|n- |cffebc56cМагия бездны|cffced4da.|n- |cffebc56cПокровительство Бездны|cffced4da.|n- |cffebc56cУлучшенные инструменты|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "o015",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Культовое сооружение империи Аз'Акиров. Пробуждает древних обсидиановых исполинов и чудовищных сфинксов.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cОбсидиановая статуя|cffced4da|n- |cffebc56cСфинкс|cffced4da|n- |cffebc56cАнубисат|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cКаменная оболочка|cffced4da.|n- |cffebc56cАтака анубисатов|cffced4da.|n- |cffebc56cПрочность|cffced4da.|n- |cffebc56cУвеличение урона от «Сокрушения»|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "o05T",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Служит пунктом сбора древесины и центром кузнечных разработок Орды Скверны.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cЖелезное оружие дальнего боя|cffced4da.|n- |cffebc56cСтальная броня|cffced4da.|n- |cffebc56cОружие ближнего боя|cffced4da.|n- |cffebc56cУлучшенные пилы|cffced4da.|n- |cffebc56cПоощрять ярость|cffced4da.|n- |cffebc56cПодавлять ярость|cffced4da.|n- |cffebc56cГрабеж|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "pa28",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|r |cffced4daБазовое военное сооружение. Обучает пехоту, стрелков, всадников и элитных мастеров.|n|n|cffb99d66Обучает:|r|cffced4da|n- |cffebc56cВоин Пандаренов|cffced4da.|n- |cffebc56cЛучник Пандаренов|cffced4da.|n- |cffebc56cВсадник Пандарен|cffced4da.|n- |cffebc56cМастер Геомант|cffced4da.|n- |cffebc56cХмелевар|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cНефритовые Доспехи|cffced4da.|n- |cffebc56cПосвящение Геомантов|cffced4da.|n- |cffebc56cПосвящение Хмелеваров|cffced4da.|n- |cffebc56cУтяжелённая Рукоять|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "pa33",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|r |cffced4daМонастырь боевых искусств. Обучает монахов Инь и Ян, стражей храма и мастеров стиля Пьяной Лапы.|n|n|cffb99d66Обучает:|r|cffced4da|n- |cffebc56cМонах Инь|cffced4da.|n- |cffebc56cМонах Ян|cffced4da.|n- |cffebc56cМастер Пьяной Лапы|cffced4da.|n- |cffebc56cСтраж Храма|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cУкрепление Духа|cffced4da.|n- |cffebc56cПосвящение Монахов Ян|cffced4da.|n- |cffebc56cПосвящение Монахов Инь|cffced4da.|n- |cffebc56cСекреты Древних Мастеров|cffced4da.|r"
+  },
+  {
+   "type": "unit",
+   "id": "u00N",
+   "field": "ubertip",
+   "value": "|cffb99d66ЗДАНИЕ:|cffced4da Обитель тёмных магов, алхимиков чумы и культистов Плети.|n|n|cffb99d66Обучает:|cffced4da|n- |cffebc56cНекромант|cffced4da.|n- |cffebc56cБезумный ученый|cffced4da.|n- |cffebc56cСкелет-маг|cffced4da.|n|n|cffb99d66Исследования:|cffced4da|n- |cffebc56cАдепты некромантов|cffced4da.|n- |cffebc56cМагия смерти|cffced4da.|n- |cffebc56cБезумная наука|cffced4da.|r"
+  }
+ ],
+ "graph_sources": {
+  "docs/techtree/races/Bandits.json": "fb065922179b067f98c71ec96d8c06326545799b6dbf10b279a157a58d7dcd9a",
+  "docs/techtree/races/Blood_Elves.json": "13d2951cbd23ae1f1f5cd3ede4eef81e73f6e949bb45f826b4d3b9359cc6600b",
+  "docs/techtree/races/Draeneis.json": "6236345dbfc1bedfabb68998a120473a605869ab6fd339402560ac30deed00be",
+  "docs/techtree/races/Elements.json": "26ea4c0ab51de32396e758b1349954df94c6a318cd3456ca704981b4b91709b9",
+  "docs/techtree/races/FelOrk.json": "9019d7a8f96ed9e992ef84c529535c9c14c5066491b5e80d8669d6bf41e77fdd",
+  "docs/techtree/races/ForestTrolls.json": "4c8d3e19a7aecd883928f48959420f796f44c5235a5c4c4b8629b770e1363092",
+  "docs/techtree/races/Gilneas.json": "ff0bb000fab3ae31a166d6f1f1d0d79ec01a5b5cdfe519a5514ec4866490e6b1",
+  "docs/techtree/races/Kult_Sum_Molota.json": "021aa024e96a9f95c8bd9e1cc6898992d737b81230d173d7b967a3e5f7cf1c4a",
+  "docs/techtree/races/KulTiras.json": "c064d54f8c15f33599d9e37eba3c66f97b542a36948b0797f71f12142f6edcaa",
+  "docs/techtree/races/nightelf.json": "e5d7c90c164bcd964c834a376b69d7d07f4bea91688c71e9d957ef233e1101a1",
+  "docs/techtree/races/Pandarens.json": "c29af494cfa7172e2510ec1ebd10ea6eb316199114cf0c14f06896a9bb3e33e2",
+  "docs/techtree/races/Silitids.json": "83696585a7c123c2722ec75fa8319955c524fa67053f546c7363cbacf1985d97",
+  "docs/techtree/races/Stromgard.json": "6e74639a704900c4cbcdbc70718690f0397d2e75936ff66cb08a91b1134d43b6",
+  "docs/techtree/races/Undead.json": "26e3d3b0d0281ecf426727546c1b99373ae553c400caa839fe2004e1cba4160a",
+  "docs/techtree/races/Vryculs.json": "9c73b5aec9e5b2b7c45f86423e427d279ea4dcb30f36852bb45f36de2c9f0c68"
+ },
+ "menu_objects": {
+  "h03R": {
+   "researches": [
+    "R002",
+    "R003",
+    "R005",
+    "R006",
+    "R007"
+   ],
+   "trains": [
+    "h00X",
+    "h00Y",
+    "h00Z",
+    "h03K",
+    "h03L"
+   ]
+  },
+  "h04D": {
+   "researches": [
+    "R01V",
+    "R01W",
+    "R01X",
+    "R01Y"
+   ],
+   "trains": [
+    "h03V",
+    "h03X",
+    "h03Y",
+    "n00I"
+   ]
+  },
+  "h058": {
+   "researches": [
+    "R022",
+    "R02L",
+    "R02M",
+    "R02N",
+    "RDr2",
+    "RDr3",
+    "RDr4"
+   ],
+   "trains": [
+    "h01O",
+    "h01R",
+    "h01T",
+    "h059"
+   ]
+  },
+  "h0ET": {
+   "researches": [
+    "R09T",
+    "R09U",
+    "R09V",
+    "Resi"
+   ],
+   "trains": [
+    "n02T",
+    "n02U",
+    "n02Z",
+    "n032",
+    "n07C",
+    "n07T"
+   ]
+  },
+  "o05T": {
+   "researches": [
+    "R0JQ",
+    "R0JR",
+    "R0JS",
+    "R0K1",
+    "R0K2",
+    "R0K3",
+    "Ropg"
+   ]
+  },
+  "h0MU": {
+   "researches": [
+    "R0J0"
+   ],
+   "trains": [
+    "O057",
+    "O058",
+    "O059",
+    "o05M",
+    "o05N",
+    "o05O"
+   ]
+  },
+  "h0IQ": {
+   "researches": [
+    "R0EM",
+    "R0EN",
+    "R0EO",
+    "R0EP",
+    "R0EQ"
+   ]
+  },
+  "h0IR": {
+   "researches": [
+    "R0EZ",
+    "R0F5",
+    "R0F6",
+    "R0IP"
+   ],
+   "trains": [
+    "h0IW",
+    "h0J0",
+    "h0NA"
+   ]
+  },
+  "h0IS": {
+   "researches": [
+    "R0F0",
+    "R0F1",
+    "R0F2"
+   ],
+   "trains": [
+    "h0IX",
+    "h0J1"
+   ]
+  },
+  "o00R": {
+   "researches": [
+    "R05S",
+    "R05T",
+    "R05U",
+    "R05V",
+    "R0EJ"
+   ]
+  },
+  "h0E7": {
+   "researches": [
+    "R002",
+    "R003",
+    "R005",
+    "R006",
+    "R007",
+    "kt01"
+   ],
+   "trains": [
+    "h0E4",
+    "h0E5",
+    "h0E6",
+    "h0E8"
+   ]
+  },
+  "eaoe": {
+   "researches": [
+    "R0G8",
+    "Redc",
+    "Reeb",
+    "Rehs",
+    "Rers",
+    "Resi"
+   ],
+   "trains": [
+    "edoc",
+    "edry",
+    "emtg",
+    "n05D"
+   ]
+  },
+  "eaow": {
+   "researches": [
+    "R0G6",
+    "Redt",
+    "Reec"
+   ],
+   "trains": [
+    "e00H",
+    "edot",
+    "efdr",
+    "n064"
+   ]
+  },
+  "pa28": {
+   "researches": [
+    "PA85",
+    "PA90",
+    "PA92",
+    "PA95"
+   ],
+   "trains": [
+    "pa05",
+    "pa06",
+    "pa11",
+    "pa12",
+    "pa22"
+   ]
+  },
+  "pa33": {
+   "researches": [
+    "PA12",
+    "PA89",
+    "PA91",
+    "pa39"
+   ],
+   "trains": [
+    "pa09",
+    "pa29",
+    "pa35",
+    "pa38"
+   ]
+  },
+  "o015": {
+   "researches": [
+    "R080",
+    "R081",
+    "R082",
+    "R086"
+   ],
+   "trains": [
+    "e01N",
+    "u020",
+    "u022"
+   ]
+  },
+  "h0H4": {
+   "researches": [
+    "R0DG",
+    "R0DJ",
+    "R0DN"
+   ],
+   "trains": [
+    "h0F4",
+    "h0GS",
+    "h0GT",
+    "h0GU",
+    "h0GV"
+   ]
+  },
+  "h0H5": {
+   "researches": [
+    "R0DL",
+    "R0DM"
+   ]
+  },
+  "h0H6": {
+   "researches": [
+    "R0DA",
+    "R0DB",
+    "R0DC",
+    "R0DD",
+    "R0DE",
+    "R0E2"
+   ]
+  },
+  "u00N": {
+   "researches": [
+    "R05E",
+    "R05F",
+    "R05G"
+   ],
+   "trains": [
+    "u008",
+    "u00C",
+    "u00E"
+   ]
+  },
+  "h0BW": {
+   "researches": [
+    "R069",
+    "R06A",
+    "R06B",
+    "R06C",
+    "R06D",
+    "R06E",
+    "R06F"
+   ]
+  }
+ }
+}

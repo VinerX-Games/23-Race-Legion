@@ -444,7 +444,7 @@
   },
   "R03A": {
    "type": "upgrade",
-   "name": "",
+   "name": "Фолиант познаний магии морей",
    "only_required": true,
    "gold": 125,
    "lumber": 75,
@@ -633,7 +633,7 @@
   },
   "Robk": {
    "type": "upgrade",
-   "name": "",
+   "name": "Улучшение до берсерка",
    "only_required": true,
    "gold": 75,
    "lumber": 175,
@@ -646,7 +646,7 @@
   },
   "Roen": {
    "type": "upgrade",
-   "name": "",
+   "name": "Опутывание",
    "only_required": true,
    "gold": 50,
    "lumber": 75,
@@ -655,7 +655,7 @@
   },
   "Rugf": {
    "type": "upgrade",
-   "name": "",
+   "name": "Ярость вурдалака",
    "only_required": true,
    "gold": 100,
    "lumber": 150,
@@ -667,12 +667,15 @@
    "time": 50
   },
   "S00A": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Стойкость моря",
+   "levels": 1
   },
   "drAq": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Ледяная стрела",
+   "hotkey": "|cffebc56cМаг (Поддержка)|r (|cffffffffP|r)",
+   "levels": 1
   },
   "h0JW": {
    "type": "building",
@@ -682,7 +685,18 @@
    "gold": 140,
    "hotkey": "E",
    "hp": 1500,
-   "lumber": 40
+   "lumber": 40,
+   "researches": [
+    "R0FD",
+    "R0FH",
+    "Rnat",
+    "Rnam",
+    "Rnsb"
+   ],
+   "affected_by": [
+    "R01N",
+    "Rgfo"
+   ]
   },
   "h0JX": {
    "type": "building",
@@ -716,14 +730,18 @@
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "time": 140,
    "food_made": 100,
    "gold": 4500,
    "hotkey": "Z",
    "hp": 2000,
-   "lumber": 4500
+   "lumber": 4500,
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "n04L": {
    "type": "building",
@@ -747,7 +765,12 @@
    "gold": 100,
    "hotkey": "Q",
    "hp": 400,
-   "lumber": 35
+   "lumber": 35,
+   "affected_by": [
+    "R0FF",
+    "Rnat",
+    "Rnam"
+   ]
   },
   "n050": {
    "type": "unit",
@@ -760,6 +783,12 @@
    "lumber": 130,
    "requires": [
     "h0JY"
+   ],
+   "affected_by": [
+    "R0FF",
+    "Rnat",
+    "Rnam",
+    "R0FQ"
    ]
   },
   "n051": {
@@ -774,6 +803,12 @@
    "requires": [
     "R0FE",
     "h0JX"
+   ],
+   "affected_by": [
+    "Rnat",
+    "Rnam",
+    "Rnsi",
+    "Rguv"
    ]
   },
   "n052": {
@@ -787,6 +822,11 @@
    "lumber": 95,
    "requires": [
     "h0JX"
+   ],
+   "affected_by": [
+    "R0FF",
+    "Rnat",
+    "Rnam"
    ]
   },
   "n053": {
@@ -800,6 +840,12 @@
    "lumber": 120,
    "requires": [
     "h0JX"
+   ],
+   "affected_by": [
+    "R0FF",
+    "Rnsi",
+    "Rnat",
+    "Rnam"
    ]
   },
   "n054": {
@@ -813,6 +859,12 @@
    "lumber": 100,
    "requires": [
     "h0JX"
+   ],
+   "affected_by": [
+    "R0FF",
+    "Rnsw",
+    "Rnat",
+    "Rnam"
    ]
   },
   "n055": {
@@ -827,6 +879,11 @@
    "requires": [
     "h0JY",
     "h0JW"
+   ],
+   "researches": [
+    "R0FQ",
+    "R0FP",
+    "R0KP"
    ]
   },
   "n056": {
@@ -840,6 +897,10 @@
    "lumber": 115,
    "requires": [
     "h0JY"
+   ],
+   "affected_by": [
+    "Rnat",
+    "Rnam"
    ]
   },
   "n079": {
@@ -853,6 +914,10 @@
    "lumber": 150,
    "requires": [
     "h0JY"
+   ],
+   "affected_by": [
+    "Rnat",
+    "Rnam"
    ]
   },
   "nhyc": {
@@ -865,6 +930,11 @@
    "lumber": 110,
    "requires": [
     "h0JX"
+   ],
+   "affected_by": [
+    "Rguv",
+    "Rnam",
+    "Rnat"
    ]
   },
   "nmpe": {
@@ -873,7 +943,10 @@
    "time": 15,
    "gold": 75,
    "hotkey": "Q",
-   "hp": 250
+   "hp": 250,
+   "affected_by": [
+    "R0FH"
+   ]
   },
   "nmyr": {
    "type": "unit",
@@ -889,6 +962,13 @@
    "requires": [
     "R0FE",
     "h0JX"
+   ],
+   "affected_by": [
+    "Rguv",
+    "Rnam",
+    "Rnat",
+    "Rnsb",
+    "Rnen"
    ]
   },
   "nnad": {
@@ -917,7 +997,12 @@
    "time": 21,
    "gold": 130,
    "hotkey": "W",
-   "hp": 400
+   "hp": 400,
+   "affected_by": [
+    "Rguv",
+    "Rnam",
+    "Rnat"
+   ]
   },
   "nnrg": {
    "type": "unit",
@@ -933,6 +1018,12 @@
    "requires": [
     "R0FE",
     "h0JY"
+   ],
+   "affected_by": [
+    "Rguv",
+    "Rnam",
+    "Rnat",
+    "Rnsb"
    ]
   },
   "nnsa": {
@@ -945,6 +1036,10 @@
    "lumber": 70,
    "requires": [
     "h0JX"
+   ],
+   "researches": [
+    "Rnsw",
+    "Rnsi"
    ]
   },
   "nnsg": {
@@ -954,7 +1049,11 @@
    "gold": 370,
    "hotkey": "W",
    "hp": 1500,
-   "lumber": 200
+   "lumber": 200,
+   "researches": [
+    "R0FR",
+    "Rnen"
+   ]
   },
   "nnsw": {
    "type": "unit",
@@ -967,6 +1066,12 @@
    "requires": [
     "R0FE",
     "h0JX"
+   ],
+   "affected_by": [
+    "Rnat",
+    "Rnam",
+    "Rnsw",
+    "Rguv"
    ]
   },
   "nntg": {
@@ -976,7 +1081,10 @@
    "gold": 130,
    "hotkey": "Z",
    "hp": 500,
-   "lumber": 80
+   "lumber": 80,
+   "affected_by": [
+    "Rnat"
+   ]
   },
   "nntt": {
    "type": "building",
@@ -986,7 +1094,11 @@
    "gold": 385,
    "hotkey": "Q",
    "hp": 1500,
-   "lumber": 150
+   "lumber": 150,
+   "researches": [
+    "R0FF",
+    "R0FE"
+   ]
   },
   "nsnp": {
    "type": "unit",
@@ -1001,6 +1113,12 @@
    "lumber": 65,
    "requires": [
     "h0JW"
+   ],
+   "affected_by": [
+    "Rguv",
+    "Rnam",
+    "Rnat",
+    "Rnsb"
    ]
   },
   "nwgs": {
@@ -1010,7 +1128,11 @@
    "gold": 235,
    "hotkey": "W",
    "hp": 600,
-   "lumber": 80
+   "lumber": 80,
+   "affected_by": [
+    "Rnat",
+    "Rnam"
+   ]
   }
  },
  "edges": [
@@ -1058,11 +1180,11 @@
   "R0KP requires h0JY",
   "Rnsi requires h0JX",
   "Rnsw requires h0JX",
+  "h0JW affected-by R01N",
+  "h0JW affected-by Rgfo",
   "h0JW has-ability Arlm",
-  "h0JW researches R01N",
   "h0JW researches R0FD",
   "h0JW researches R0FH",
-  "h0JW researches Rgfo",
   "h0JW researches Rnam",
   "h0JW researches Rnat",
   "h0JW researches Rnsb",
@@ -1087,47 +1209,51 @@
   "n04L requires h0JW",
   "n04L requires h0JY",
   "n04L trains n079",
+  "n04Z affected-by R0FF",
+  "n04Z affected-by Rnam",
+  "n04Z affected-by Rnat",
   "n04Z has-ability A13B",
   "n04Z has-ability A1LT",
-  "n04Z researches R0FF",
-  "n04Z researches Rnam",
-  "n04Z researches Rnat",
+  "n050 affected-by R0FF",
+  "n050 affected-by R0FQ",
+  "n050 affected-by Rnam",
+  "n050 affected-by Rnat",
   "n050 has-ability A13B",
   "n050 has-ability A1LT",
   "n050 has-ability A1OR",
   "n050 has-ability AMu1",
   "n050 requires h0JY",
-  "n050 researches R0FF",
-  "n050 researches R0FQ",
-  "n050 researches Rnam",
-  "n050 researches Rnat",
+  "n051 affected-by Rguv",
+  "n051 affected-by Rnam",
+  "n051 affected-by Rnat",
+  "n051 affected-by Rnsi",
   "n051 has-ability A14L",
   "n051 has-ability A14M",
   "n051 has-ability A14N",
   "n051 has-ability A1LT",
   "n051 requires R0FE",
   "n051 requires h0JX",
-  "n051 researches Rguv",
-  "n051 researches Rnam",
-  "n051 researches Rnat",
-  "n051 researches Rnsi",
+  "n052 affected-by R0FF",
+  "n052 affected-by Rnam",
+  "n052 affected-by Rnat",
   "n052 has-ability A13B",
   "n052 has-ability A1LT",
   "n052 has-ability ACen",
   "n052 requires h0JX",
-  "n052 researches R0FF",
-  "n052 researches Rnam",
-  "n052 researches Rnat",
+  "n053 affected-by R0FF",
+  "n053 affected-by Rnam",
+  "n053 affected-by Rnat",
+  "n053 affected-by Rnsi",
   "n053 has-ability A13B",
   "n053 has-ability A14L",
   "n053 has-ability A14N",
   "n053 has-ability A1LT",
   "n053 has-ability AChx",
   "n053 requires h0JX",
-  "n053 researches R0FF",
-  "n053 researches Rnam",
-  "n053 researches Rnat",
-  "n053 researches Rnsi",
+  "n054 affected-by R0FF",
+  "n054 affected-by Rnam",
+  "n054 affected-by Rnat",
+  "n054 affected-by Rnsw",
   "n054 has-ability A13B",
   "n054 has-ability A1LT",
   "n054 has-ability A1ON",
@@ -1135,10 +1261,6 @@
   "n054 has-ability A1OP",
   "n054 has-ability A1OQ",
   "n054 requires h0JX",
-  "n054 researches R0FF",
-  "n054 researches Rnam",
-  "n054 researches Rnat",
-  "n054 researches Rnsw",
   "n055 requires h0JW",
   "n055 requires h0JY",
   "n055 researches R0FP",
@@ -1148,25 +1270,26 @@
   "n055 trains n056",
   "n055 trains nnrg",
   "n055 trains nwgs",
+  "n056 affected-by Rnam",
+  "n056 affected-by Rnat",
   "n056 has-ability A1LT",
   "n056 has-ability ACen",
   "n056 has-ability AMh1",
   "n056 has-ability S00A",
   "n056 requires h0JY",
-  "n056 researches Rnam",
-  "n056 researches Rnat",
+  "n079 affected-by Rnam",
+  "n079 affected-by Rnat",
   "n079 has-ability A1LT",
   "n079 has-ability A1OM",
   "n079 requires h0JY",
-  "n079 researches Rnam",
-  "n079 researches Rnat",
+  "nhyc affected-by Rguv",
+  "nhyc affected-by Rnam",
+  "nhyc affected-by Rnat",
   "nhyc has-ability A13B",
   "nhyc has-ability A1LT",
   "nhyc has-ability Advc",
   "nhyc requires h0JX",
-  "nhyc researches Rguv",
-  "nhyc researches Rnam",
-  "nhyc researches Rnat",
+  "nmpe affected-by R0FH",
   "nmpe builds h0JW",
   "nmpe builds n04L",
   "nmpe builds n055",
@@ -1180,25 +1303,28 @@
   "nmpe has-ability A1LT",
   "nmpe has-ability ANha",
   "nmpe has-ability Arep",
-  "nmpe researches R0FH",
+  "nmyr affected-by Rguv",
+  "nmyr affected-by Rnam",
+  "nmyr affected-by Rnat",
+  "nmyr affected-by Rnen",
+  "nmyr affected-by Rnsb",
   "nmyr has-ability A1LT",
   "nmyr has-ability ANen",
   "nmyr has-ability Asb1",
   "nmyr requires R0FE",
   "nmyr requires h0JX",
-  "nmyr researches Rguv",
-  "nmyr researches Rnam",
-  "nmyr researches Rnat",
-  "nmyr researches Rnen",
-  "nmyr researches Rnsb",
   "nnad trains H0JU",
   "nnad trains H0JV",
   "nnad trains N07A",
+  "nnmg affected-by Rguv",
+  "nnmg affected-by Rnam",
+  "nnmg affected-by Rnat",
   "nnmg has-ability A13B",
   "nnmg has-ability A1LT",
-  "nnmg researches Rguv",
-  "nnmg researches Rnam",
-  "nnmg researches Rnat",
+  "nnrg affected-by Rguv",
+  "nnrg affected-by Rnam",
+  "nnrg affected-by Rnat",
+  "nnrg affected-by Rnsb",
   "nnrg has-ability A06U",
   "nnrg has-ability A1LT",
   "nnrg has-ability ACsk",
@@ -1206,10 +1332,6 @@
   "nnrg has-ability drAq",
   "nnrg requires R0FE",
   "nnrg requires h0JY",
-  "nnrg researches Rguv",
-  "nnrg researches Rnam",
-  "nnrg researches Rnat",
-  "nnrg researches Rnsb",
   "nnsa requires h0JX",
   "nnsa researches Rnsi",
   "nnsa researches Rnsw",
@@ -1224,17 +1346,17 @@
   "nnsg trains nhyc",
   "nnsg trains nmyr",
   "nnsg trains nsnp",
+  "nnsw affected-by Rguv",
+  "nnsw affected-by Rnam",
+  "nnsw affected-by Rnat",
+  "nnsw affected-by Rnsw",
   "nnsw has-ability A1LT",
   "nnsw has-ability ACfu",
   "nnsw has-ability ANpa",
   "nnsw has-ability Acny",
   "nnsw requires R0FE",
   "nnsw requires h0JX",
-  "nnsw researches Rguv",
-  "nnsw researches Rnam",
-  "nnsw researches Rnat",
-  "nnsw researches Rnsw",
-  "nntg researches Rnat",
+  "nntg affected-by Rnat",
   "nntt has-ability A0IQ",
   "nntt has-ability A0LI",
   "nntt has-ability A0LJ",
@@ -1244,18 +1366,18 @@
   "nntt researches R0FF",
   "nntt trains nmpe",
   "nntt trains nnmg",
+  "nsnp affected-by Rguv",
+  "nsnp affected-by Rnam",
+  "nsnp affected-by Rnat",
+  "nsnp affected-by Rnsb",
   "nsnp has-ability A14J",
   "nsnp has-ability A1LT",
   "nsnp has-ability Asb3",
   "nsnp requires h0JW",
-  "nsnp researches Rguv",
-  "nsnp researches Rnam",
-  "nsnp researches Rnat",
-  "nsnp researches Rnsb",
+  "nwgs affected-by Rnam",
+  "nwgs affected-by Rnat",
   "nwgs has-ability A1LT",
   "nwgs has-ability A1OL",
-  "nwgs researches Rnam",
-  "nwgs researches Rnat",
   "race:Nagi lua-start-tech R0FS",
   "race:Nagi lua-starts-with nmpe"
  ]

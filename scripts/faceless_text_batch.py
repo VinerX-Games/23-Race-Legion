@@ -26,7 +26,7 @@ def apply_wts_batch(inventory_path):
             assert replacements[sid] == row["after"], sid
             continue
         replacements[sid] = row["after"]
-        pattern = re.compile(rb"(STRING\s+" + str(sid).encode() + rb"\s*\{\r?\n)(.*?)(\r?\n\})", re.S)
+        pattern = re.compile(rb"(STRING\s+0*" + str(sid).encode() + rb"\s*\{\r?\n)(.*?)(\r?\n\})", re.S)
         matches = list(pattern.finditer(updated))
         assert len(matches) == 1, sid
         assert matches[0][2].decode("utf-8").replace("\r\n", "\n") == row["before"], sid

@@ -1,0 +1,84 @@
+{
+ "checks": [
+  {
+   "consumer": {
+    "source": "map.w3x/war3map.w3u",
+    "id": "H0JU",
+    "field": "upro",
+    "level": 0,
+    "pointer": 0
+   },
+   "variant": "SD",
+   "field": "propernames",
+   "exact_match": true,
+   "actual": "|cffebc56cЙорн Искупитель|r"
+  },
+  {
+   "consumer": {
+    "source": "map.w3x/war3map.w3u",
+    "id": "H0JV",
+    "field": "upro",
+    "level": 0,
+    "pointer": 0
+   },
+   "variant": "SD",
+   "field": "propernames",
+   "exact_match": true,
+   "actual": "|cffebc56cОхотница|r"
+  },
+  {
+   "consumer": {
+    "source": "map.w3x/war3map.w3u",
+    "id": "N07A",
+    "field": "upro",
+    "level": 0,
+    "pointer": 0
+   },
+   "variant": "SD",
+   "field": "propernames",
+   "exact_match": true,
+   "actual": "|cffebc56cМргл-Мргл|r"
+  },
+  {
+   "consumer": {
+    "source": "map.w3x/war3map.w3u",
+    "id": "H0JU",
+    "field": "upro",
+    "level": 0,
+    "pointer": 0
+   },
+   "variant": "HD",
+   "field": "propernames",
+   "exact_match": true,
+   "actual": "|cffebc56cЙорн Искупитель|r"
+  },
+  {
+   "consumer": {
+    "source": "map.w3x/war3map.w3u",
+    "id": "H0JV",
+    "field": "upro",
+    "level": 0,
+    "pointer": 0
+   },
+   "variant": "HD",
+   "field": "propernames",
+   "exact_match": true,
+   "actual": "|cffebc56cОхотница|r"
+  },
+  {
+   "consumer": {
+    "source": "map.w3x/war3map.w3u",
+    "id": "N07A",
+    "field": "upro",
+    "level": 0,
+    "pointer": 0
+   },
+   "variant": "HD",
+   "field": "propernames",
+   "exact_match": true,
+   "actual": "|cffebc56cМргл-Мргл|r"
+  }
+ ],
+ "exact_matches": 6,
+ "total": 6
+}

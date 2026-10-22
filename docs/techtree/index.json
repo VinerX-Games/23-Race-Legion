@@ -9,12 +9,11 @@
     "u02D"
    ],
    "counts": {
-    "ability": 61,
+    "ability": 64,
     "building": 11,
     "hero": 3,
     "unit": 23,
-    "unknown": 3,
-    "upgrade": 25
+    "upgrade": 24
    }
   },
   {
@@ -24,11 +23,11 @@
     "o045"
    ],
    "counts": {
-    "ability": 71,
+    "ability": 75,
     "building": 16,
     "hero": 4,
     "unit": 24,
-    "unknown": 4,
+    "unknown": 1,
     "upgrade": 32
    }
   },
@@ -40,11 +39,10 @@
     "h0GZ"
    ],
    "counts": {
-    "ability": 50,
+    "ability": 53,
     "building": 14,
     "hero": 3,
     "unit": 23,
-    "unknown": 3,
     "upgrade": 28
    }
   },
@@ -57,11 +55,11 @@
     "o01D"
    ],
    "counts": {
-    "ability": 67,
+    "ability": 92,
     "building": 9,
     "hero": 5,
     "unit": 27,
-    "unknown": 35,
+    "unknown": 10,
     "upgrade": 39
    }
   },
@@ -72,11 +70,10 @@
     "o01D"
    ],
    "counts": {
-    "ability": 56,
+    "ability": 81,
     "building": 9,
     "hero": 4,
     "unit": 26,
-    "unknown": 25,
     "upgrade": 36
    }
   },
@@ -87,11 +84,10 @@
     "e02T"
    ],
    "counts": {
-    "ability": 67,
+    "ability": 70,
     "building": 10,
     "hero": 3,
     "unit": 26,
-    "unknown": 3,
     "upgrade": 24
    }
   },
@@ -105,7 +101,7 @@
     "ability": 51,
     "building": 12,
     "hero": 3,
-    "unit": 34,
+    "unit": 33,
     "upgrade": 27
    }
   },
@@ -117,12 +113,12 @@
     "n00V"
    ],
    "counts": {
-    "ability": 68,
+    "ability": 73,
     "building": 12,
     "hero": 11,
     "unit": 28,
-    "unknown": 6,
-    "upgrade": 32
+    "unknown": 1,
+    "upgrade": 37
    }
   },
   {
@@ -133,11 +129,11 @@
     "h0DU"
    ],
    "counts": {
-    "ability": 79,
+    "ability": 85,
     "building": 13,
     "hero": 6,
     "unit": 23,
-    "unknown": 7,
+    "unknown": 1,
     "upgrade": 23
    }
   },
@@ -149,11 +145,10 @@
     "h0EI"
    ],
    "counts": {
-    "ability": 77,
+    "ability": 80,
     "building": 14,
     "hero": 4,
     "unit": 23,
-    "unknown": 3,
     "upgrade": 35
    }
   },
@@ -165,12 +160,11 @@
     "h007"
    ],
    "counts": {
-    "ability": 77,
+    "ability": 80,
     "building": 19,
     "hero": 3,
     "unit": 32,
-    "unknown": 3,
-    "upgrade": 32
+    "upgrade": 35
    }
   },
   {
@@ -180,11 +174,10 @@
     "h014"
    ],
    "counts": {
-    "ability": 63,
+    "ability": 66,
     "building": 13,
     "hero": 3,
     "unit": 22,
-    "unknown": 3,
     "upgrade": 36
    }
   },
@@ -196,11 +189,10 @@
     "u00P"
    ],
    "counts": {
-    "ability": 74,
+    "ability": 82,
     "building": 14,
     "hero": 6,
     "unit": 27,
-    "unknown": 8,
     "upgrade": 33
    }
   },
@@ -214,12 +206,12 @@
     "w20q"
    ],
    "counts": {
-    "ability": 119,
+    "ability": 164,
     "building": 39,
     "hero": 14,
-    "unit": 91,
-    "unknown": 73,
-    "upgrade": 86
+    "unit": 92,
+    "unknown": 8,
+    "upgrade": 107
    }
   },
   {
@@ -229,11 +221,11 @@
     "h04K"
    ],
    "counts": {
-    "ability": 107,
+    "ability": 110,
     "building": 15,
     "hero": 3,
     "unit": 28,
-    "unknown": 4,
+    "unknown": 1,
     "upgrade": 50
    }
   },
@@ -245,11 +237,10 @@
     "u001"
    ],
    "counts": {
-    "ability": 67,
+    "ability": 70,
     "building": 14,
     "hero": 3,
     "unit": 19,
-    "unknown": 3,
     "upgrade": 33
    }
   },
@@ -261,12 +252,11 @@
     "h01X"
    ],
    "counts": {
-    "ability": 51,
+    "ability": 54,
     "building": 14,
     "hero": 3,
-    "unit": 19,
-    "unknown": 4,
-    "upgrade": 44
+    "unit": 21,
+    "upgrade": 45
    }
   },
   {
@@ -276,11 +266,10 @@
     "h0CJ"
    ],
    "counts": {
-    "ability": 61,
+    "ability": 64,
     "building": 12,
     "hero": 3,
     "unit": 21,
-    "unknown": 3,
     "upgrade": 32
    }
   },
@@ -291,11 +280,10 @@
     "h012"
    ],
    "counts": {
-    "ability": 81,
+    "ability": 84,
     "building": 12,
     "hero": 3,
     "unit": 24,
-    "unknown": 3,
     "upgrade": 43
    }
   },
@@ -306,11 +294,10 @@
     "h0C9"
    ],
    "counts": {
-    "ability": 50,
+    "ability": 60,
     "building": 11,
     "hero": 3,
     "unit": 23,
-    "unknown": 10,
     "upgrade": 32
    }
   },
@@ -321,11 +308,10 @@
     "o00J"
    ],
    "counts": {
-    "ability": 56,
+    "ability": 59,
     "building": 9,
     "hero": 3,
     "unit": 20,
-    "unknown": 3,
     "upgrade": 33
    }
   },
@@ -337,11 +323,10 @@
     "h0CO"
    ],
    "counts": {
-    "ability": 54,
+    "ability": 57,
     "building": 12,
     "hero": 3,
     "unit": 21,
-    "unknown": 3,
     "upgrade": 32
    }
   },
@@ -353,11 +338,11 @@
     "e01H"
    ],
    "counts": {
-    "ability": 65,
+    "ability": 68,
     "building": 15,
     "hero": 5,
     "unit": 27,
-    "unknown": 6,
+    "unknown": 3,
     "upgrade": 29
    }
   },
@@ -370,11 +355,10 @@
     "h0FX"
    ],
    "counts": {
-    "ability": 76,
+    "ability": 80,
     "building": 11,
     "hero": 3,
     "unit": 32,
-    "unknown": 4,
     "upgrade": 68
    }
   },
@@ -385,11 +369,10 @@
     "h0IT"
    ],
    "counts": {
-    "ability": 50,
+    "ability": 53,
     "building": 12,
     "hero": 3,
     "unit": 19,
-    "unknown": 3,
     "upgrade": 25
    }
   },
@@ -400,11 +383,10 @@
     "nmpe"
    ],
    "counts": {
-    "ability": 51,
+    "ability": 53,
     "building": 11,
     "hero": 3,
     "unit": 17,
-    "unknown": 2,
     "upgrade": 22
    }
   },
@@ -415,11 +397,10 @@
     "ewsp"
    ],
    "counts": {
-    "ability": 77,
+    "ability": 81,
     "building": 14,
     "hero": 3,
     "unit": 27,
-    "unknown": 4,
     "upgrade": 51
    }
   },
@@ -431,11 +412,11 @@
     "h0JP"
    ],
    "counts": {
-    "ability": 82,
+    "ability": 85,
     "building": 12,
     "hero": 3,
     "unit": 21,
-    "unknown": 7,
+    "unknown": 4,
     "upgrade": 27
    }
   },
@@ -447,11 +428,10 @@
     "o03W"
    ],
    "counts": {
-    "ability": 65,
+    "ability": 68,
     "building": 13,
     "hero": 3,
     "unit": 26,
-    "unknown": 3,
     "upgrade": 31
    }
   },
@@ -463,11 +443,11 @@
     "htow"
    ],
    "counts": {
-    "ability": 77,
+    "ability": 80,
     "building": 17,
     "hero": 11,
     "unit": 27,
-    "unknown": 5,
+    "unknown": 2,
     "upgrade": 63
    }
   },
@@ -479,11 +459,10 @@
     "o04Q"
    ],
    "counts": {
-    "ability": 79,
+    "ability": 82,
     "building": 10,
     "hero": 6,
     "unit": 21,
-    "unknown": 3,
     "upgrade": 21
    }
   },
@@ -494,11 +473,10 @@
     "n06B"
    ],
    "counts": {
-    "ability": 80,
+    "ability": 83,
     "building": 13,
     "hero": 3,
     "unit": 40,
-    "unknown": 3,
     "upgrade": 47
    }
   },
@@ -510,11 +488,10 @@
     "o04V"
    ],
    "counts": {
-    "ability": 72,
+    "ability": 75,
     "building": 12,
     "hero": 5,
     "unit": 23,
-    "unknown": 3,
     "upgrade": 27
    }
   },
@@ -525,12 +502,11 @@
     "cD02"
    ],
    "counts": {
-    "ability": 46,
+    "ability": 69,
     "building": 9,
     "hero": 3,
-    "unit": 26,
-    "unknown": 33,
-    "upgrade": 17
+    "unit": 27,
+    "upgrade": 27
    }
   },
   {
@@ -541,12 +517,12 @@
     "pa23"
    ],
    "counts": {
-    "ability": 26,
+    "ability": 65,
     "building": 16,
     "hero": 4,
-    "unit": 24,
-    "unknown": 64,
-    "upgrade": 18
+    "unit": 28,
+    "unknown": 4,
+    "upgrade": 41
    }
   },
   {
@@ -557,12 +533,12 @@
     "w20q"
    ],
    "counts": {
-    "ability": 41,
+    "ability": 84,
     "building": 15,
     "hero": 4,
-    "unit": 33,
-    "unknown": 69,
-    "upgrade": 32
+    "unit": 34,
+    "unknown": 6,
+    "upgrade": 56
    }
   }
  ]

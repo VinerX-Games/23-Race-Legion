@@ -2865,7 +2865,7 @@ function startJungleTrolls(pi)
 	NumberSet(pi, FourCC('h0N5'), 1)
 	AiData[pi][StringHash("Race")] = "JT"
 	SetPlayerTechResearchedSwap(FourCC('R0IH'), 1, Player(pi))
-	SetPlayerName(Player(pi), "Jungle Trolls (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), "Тролли джунглей (" .. I2S(pi + 1) .. ")")
 	StartJungleTrolls()
 	AiChooseJungleTrollsBranch(pi)
 	AiRace[pi] = "JungleTrolls"
@@ -3229,7 +3229,7 @@ function startForestTrolls(pi)
     SetPlayerTechMaxAllowedSwap(FourCC('O058'), 1, p)
     SetPlayerTechMaxAllowedSwap(FourCC('O059'), 1, p)
     SetPlayerTechMaxAllowedSwap(FourCC('o04Y'), 0, p)
-    SetPlayerName(Player(pi), "Forest Trolls (" .. I2S(pi + 1) .. ")")
+    SetPlayerName(Player(pi), "Лесные тролли (" .. I2S(pi + 1) .. ")")
     StartForestTrolls()
     AiRace[pi] = "ForestTrolls"
     ProbeLogWrite("[AI] startForestTrolls pi=" .. tostring(pi) .. " workers=5o04V building=1h0MT")
@@ -3318,7 +3318,7 @@ function startCult(pi)
     SetPlayerTechResearchedSwap(FourCC('R0J4'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0J5'), 1, p)
     if CultOn then CultOn() end
-    SetPlayerName(p, "Cult of the Damned (" .. I2S(pi + 1) .. ")")
+    SetPlayerName(p, "Культ Проклятых (" .. I2S(pi + 1) .. ")")
     AiRace[pi] = "Cult"
     ProbeLogWrite("[AI] startCult pi=" .. tostring(pi) .. " workers=3cD02 building=1cD26")
 end

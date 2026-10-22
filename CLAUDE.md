@@ -111,6 +111,10 @@ KV-хранилище `AiData[pi][key]` (счётчики `getAiCount`/`NumberAd
 - Утечки: каждую `Location`/`GetUnitLoc`/группу из `GetUnits*` освобождать (`RemoveLocation`,
   `DestroyGroup`), особенно в периодических триггерах (0.03–0.1 с).
 - Lua-паттерны не поддерживают `|` (альтернацию).
+- **Регионы — только в корне `01_globals.lua`.** `CreateRegion()` в `InitGlobals`/`InitTrig_*`/таймерах
+  с заполнением границами мира ломает наземные пути (юниты встают, на их местах нельзя строить).
+  Для события «юнит вошёл на карту» вешать `TriggerRegisterEnterRegion` на корневой `Allmap`.
+  `build_map_lua.py` откажется собирать при нарушении (`late_region_violations` в `scripts/wc3_project.py`).
 
 ## Игровые тексты и база зависимостей (обязательно)
 

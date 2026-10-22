@@ -385,7 +385,7 @@
   },
   "R004": {
    "type": "upgrade",
-   "name": "Улучшение до Кровавого Палача",
+   "name": "Кровавый Палач",
    "gold": 600,
    "lumber": 500,
    "levels": 1,
@@ -558,20 +558,26 @@
    "time_per_level": 15
   },
   "Sch2": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Cargo Hold",
+   "levels": 1
   },
   "Sch5": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Cargo Hold",
+   "levels": 1
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "hotkey": "Q",
+   "levels": 1
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "hotkey": "D",
+   "levels": 1
   },
   "U02X": {
    "type": "hero",
@@ -591,7 +597,10 @@
    "time": 20,
    "gold": 80,
    "hotkey": "Q",
-   "hp": 230
+   "hp": 230,
+   "affected_by": [
+    "Rguv"
+   ]
   },
   "cD03": {
    "type": "unit",
@@ -601,7 +610,14 @@
    "gold": 175,
    "hotkey": "Q",
    "hp": 325,
-   "lumber": 60
+   "lumber": 60,
+   "affected_by": [
+    "R0JH",
+    "cDR4",
+    "cDR9",
+    "R0K4",
+    "R0KE"
+   ]
   },
   "cD05": {
    "type": "unit",
@@ -611,7 +627,12 @@
    "gold": 185,
    "hotkey": "W",
    "hp": 325,
-   "lumber": 65
+   "lumber": 65,
+   "affected_by": [
+    "cDR5",
+    "cDR4",
+    "cDR9"
+   ]
   },
   "cD08": {
    "type": "unit",
@@ -624,6 +645,11 @@
    "lumber": 85,
    "requires": [
     "cD25"
+   ],
+   "affected_by": [
+    "cDR8",
+    "cDR4",
+    "cDR9"
    ]
   },
   "cD09": {
@@ -637,6 +663,12 @@
    "lumber": 190,
    "requires": [
     "cD24"
+   ],
+   "affected_by": [
+    "cDr4",
+    "cDr3",
+    "R0J6",
+    "cDr6"
    ]
   },
   "cD10": {
@@ -650,6 +682,12 @@
    "lumber": 105,
    "requires": [
     "cD25"
+   ],
+   "affected_by": [
+    "cDr4",
+    "cDr3",
+    "R0J6",
+    "cDr6"
    ]
   },
   "cD11": {
@@ -659,7 +697,13 @@
    "time": 22,
    "gold": 140,
    "hotkey": "Q",
-   "hp": 280
+   "hp": 280,
+   "affected_by": [
+    "cDr4",
+    "cDr3",
+    "R0J6",
+    "cDr6"
+   ]
   },
   "cD12": {
    "type": "unit",
@@ -670,7 +714,13 @@
    "gold": 500,
    "hotkey": "A",
    "hp": 850,
-   "lumber": 150
+   "lumber": 150,
+   "affected_by": [
+    "cDr4",
+    "cDr3",
+    "cDr1",
+    "cDr0"
+   ]
   },
   "cD13": {
    "type": "unit",
@@ -683,6 +733,12 @@
    "lumber": 70,
    "requires": [
     "cD31"
+   ],
+   "affected_by": [
+    "cDr4",
+    "cDr3",
+    "cDr1",
+    "cDr0"
    ]
   },
   "cD14": {
@@ -696,6 +752,12 @@
    "lumber": 295,
    "requires": [
     "cD24"
+   ],
+   "affected_by": [
+    "cDr4",
+    "cDr3",
+    "R0J6",
+    "cDr6"
    ]
   },
   "cD18": {
@@ -709,6 +771,11 @@
    "lumber": 95,
    "requires": [
     "cD24"
+   ],
+   "affected_by": [
+    "cDr1",
+    "cDr0",
+    "R0J8"
    ]
   },
   "cD19": {
@@ -718,7 +785,13 @@
    "time": 19,
    "gold": 60,
    "hotkey": "Q",
-   "hp": 180
+   "hp": 180,
+   "affected_by": [
+    "cDr1",
+    "cDr0",
+    "R0J8",
+    "R0KE"
+   ]
   },
   "cD22": {
    "type": "unit",
@@ -731,6 +804,12 @@
    "lumber": 35,
    "requires": [
     "cD25"
+   ],
+   "affected_by": [
+    "cDr1",
+    "cDr0",
+    "R0J8",
+    "R0KE"
    ]
   },
   "cD24": {
@@ -779,6 +858,14 @@
    "lumber": 140,
    "requires": [
     "cD31"
+   ],
+   "researches": [
+    "R0J8",
+    "R0K4",
+    "R0KE"
+   ],
+   "affected_by": [
+    "Rgfo"
    ]
   },
   "cD28": {
@@ -792,6 +879,15 @@
    "lumber": 135,
    "requires": [
     "cD31"
+   ],
+   "researches": [
+    "R0J6",
+    "cDr6",
+    "cDr7",
+    "R0JI"
+   ],
+   "affected_by": [
+    "Rgfo"
    ]
   },
   "cD29": {
@@ -802,7 +898,12 @@
    "gold": 360,
    "hotkey": "W",
    "hp": 1300,
-   "lumber": 50
+   "lumber": 50,
+   "researches": [
+    "cDR5",
+    "R0JH",
+    "cDR8"
+   ]
   },
   "cD30": {
    "type": "building",
@@ -813,7 +914,10 @@
    "gold": 180,
    "hotkey": "S",
    "hp": 900,
-   "lumber": 50
+   "lumber": 50,
+   "affected_by": [
+    "Rgfo"
+   ]
   },
   "cD31": {
    "type": "building",
@@ -822,7 +926,19 @@
    "time": 70,
    "gold": 425,
    "hotkey": "E",
-   "hp": 900
+   "hp": 900,
+   "researches": [
+    "cDr0",
+    "cDr1",
+    "cDr4",
+    "cDr3",
+    "cDR4",
+    "cDR9",
+    "R0J7"
+   ],
+   "affected_by": [
+    "Rgfo"
+   ]
   },
   "cD33": {
    "type": "unit",
@@ -835,6 +951,11 @@
    "lumber": 180,
    "requires": [
     "cD24"
+   ],
+   "affected_by": [
+    "cDr1",
+    "cDr0",
+    "R0J8"
    ]
   },
   "cD34": {
@@ -844,7 +965,13 @@
    "time": 26,
    "gold": 110,
    "hotkey": "Q",
-   "hp": 325
+   "hp": 325,
+   "affected_by": [
+    "cDr1",
+    "cDr0",
+    "R0J8",
+    "R0KE"
+   ]
   },
   "cD35": {
    "type": "unit",
@@ -853,123 +980,280 @@
    "time": 33,
    "gold": 165,
    "hotkey": "Q",
-   "hp": 485
+   "hp": 485,
+   "affected_by": [
+    "cDr1",
+    "cDr0",
+    "R0J8",
+    "R0KE"
+   ]
   },
   "cDA1": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Болезнетворное облако",
+   "levels": 1,
+   "requires": [
+    "R0JI"
+   ]
   },
   "cDAZ": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Автоматическое воскрешение",
+   "hotkey": "A",
+   "levels": 2,
+   "hero_level_req": 1
   },
   "cDR4": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Атака магов — уровень 1",
+   "gold": 350,
+   "gold_per_level": 350,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "levels": 6,
+   "requires": [
+    "unp1"
+   ],
+   "time": 60,
+   "time_per_level": 15
   },
   "cDR5": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Посвящение осквернителей — ступень 1",
+   "gold": 350,
+   "gold_per_level": 350,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "levels": 4,
+   "requires": [
+    "unp2"
+   ],
+   "time": 60
   },
   "cDR8": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Посвящение адептов — ступень 1",
+   "gold": 350,
+   "gold_per_level": 350,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "levels": 4,
+   "requires": [
+    "cD25"
+   ],
+   "time": 60
   },
   "cDR9": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Защита магов — уровень 1",
+   "gold": 350,
+   "gold_per_level": 250,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "levels": 6,
+   "requires": [
+    "unp1"
+   ],
+   "time": 60,
+   "time_per_level": 15
   },
   "cDa2": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Воскрешение мёртвых",
+   "hotkey": "Q",
+   "levels": 3
   },
   "cDa4": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Воскрешение слуг",
+   "hotkey": "Z",
+   "levels": 1
   },
   "cDa5": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Плотеобработка",
+   "hotkey": "R",
+   "levels": 1,
+   "hero_level_req": 1
   },
   "cDa6": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Создание из плоти",
+   "levels": 1,
+   "hero_level_req": 1
   },
   "cDa8": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Призрачное касание",
+   "hotkey": "W",
+   "levels": 1
   },
   "cDa9": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Чумная эссенция",
+   "hotkey": "Q",
+   "levels": 1
   },
   "cDaa": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Посвящение некромантов",
+   "levels": 1,
+   "hero_level_req": 1
   },
   "cDad": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Кольцо льда",
+   "hotkey": "R",
+   "levels": 1,
+   "requires": [
+    "cDR8"
+   ],
+   "requires_amount": 2
   },
   "cDae": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Ледяные стрелы",
+   "hotkey": "E",
+   "levels": 1,
+   "requires": [
+    "cDR8"
+   ]
   },
   "cDai": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Порча издыхания",
+   "hotkey": "W",
+   "levels": 1,
+   "requires": [
+    "cDR5"
+   ],
+   "requires_amount": 2
   },
   "cDao": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Неистовство чужой души",
+   "hotkey": "Q",
+   "levels": 1
   },
   "cDap": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Порча изнывания",
+   "hotkey": "W",
+   "levels": 1,
+   "requires": [
+    "R0JH"
+   ],
+   "requires_amount": 2
   },
   "cDaq": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Эксгумация",
+   "levels": 2
   },
   "cDar": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Костесборка",
+   "hotkey": "R",
+   "levels": 1,
+   "hero_level_req": 1
   },
   "cDat": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Костяное создание",
+   "levels": 1,
+   "hero_level_req": 1
   },
   "cDaw": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Чумная аура",
+   "levels": 1
   },
   "cDay": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Заразительные атаки",
+   "levels": 1
   },
   "cDr0": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Атака костей — уровень 1",
+   "gold": 350,
+   "gold_per_level": 350,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "levels": 6,
+   "requires": [
+    "unp1"
+   ],
+   "time": 60,
+   "time_per_level": 15
   },
   "cDr1": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Защита костей — уровень 1",
+   "gold": 350,
+   "gold_per_level": 350,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "levels": 6,
+   "requires": [
+    "unp1"
+   ],
+   "time": 60,
+   "time_per_level": 15
   },
   "cDr3": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Атака плоти — уровень 1",
+   "gold": 350,
+   "gold_per_level": 350,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "levels": 6,
+   "requires": [
+    "unp1"
+   ],
+   "time": 60,
+   "time_per_level": 15
   },
   "cDr4": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Защита плоти — уровень 1",
+   "gold": 350,
+   "gold_per_level": 350,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "levels": 6,
+   "requires": [
+    "unp1"
+   ],
+   "time": 60,
+   "time_per_level": 15
   },
   "cDr6": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Ярость воскрешённых — уровень 1",
+   "gold": 250,
+   "gold_per_level": 250,
+   "lumber": 250,
+   "lumber_per_level": 250,
+   "levels": 3,
+   "requires": [
+    "ugrv",
+    "unp2"
+   ],
+   "time": 50
   },
   "cDr7": {
-   "type": "unknown",
-   "name": ""
+   "type": "upgrade",
+   "name": "Ускоренная эксгумация",
+   "gold": 400,
+   "lumber": 50,
+   "levels": 1,
+   "requires": [
+    "unp1",
+    "cD24"
+   ],
+   "time": 20
   },
   "h0CZ": {
    "type": "unit",
@@ -979,7 +1263,14 @@
    "gold": 450,
    "hotkey": "W",
    "hp": 800,
-   "lumber": 475
+   "lumber": 475,
+   "affected_by": [
+    "R005",
+    "R007",
+    "R004",
+    "R003",
+    "R002"
+   ]
   },
   "h0D0": {
    "type": "unit",
@@ -989,7 +1280,14 @@
    "gold": 875,
    "hotkey": "E",
    "hp": 1400,
-   "lumber": 1000
+   "lumber": 1000,
+   "affected_by": [
+    "R005",
+    "R007",
+    "R004",
+    "R003",
+    "R002"
+   ]
   },
   "h0D1": {
    "type": "building",
@@ -999,7 +1297,14 @@
    "gold": 500,
    "hotkey": "C",
    "hp": 2000,
-   "lumber": 700
+   "lumber": 700,
+   "researches": [
+    "R005",
+    "R006",
+    "R007",
+    "R002",
+    "R003"
+   ]
   },
   "h0D2": {
    "type": "unit",
@@ -1009,11 +1314,17 @@
    "gold": 250,
    "hotkey": "Q",
    "hp": 750,
-   "lumber": 200
+   "lumber": 200,
+   "affected_by": [
+    "R006",
+    "R007",
+    "R004",
+    "R003"
+   ]
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "time": 240,
    "food_made": 100,
@@ -1024,7 +1335,7 @@
   },
   "hcas": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "time": 140,
    "food_made": 150,
@@ -1034,51 +1345,105 @@
    "lumber": 12000,
    "requires": [
     "halt"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
    ]
   },
   "hkee": {
    "type": "unit",
-   "name": "",
+   "name": "Форт",
    "only_required": true,
    "time": 140,
    "food_made": 100,
    "gold": 4500,
    "hotkey": "Z",
    "hp": 2000,
-   "lumber": 4500
+   "lumber": 4500,
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "ofor": {
    "type": "unit",
-   "name": "",
+   "name": "Лесопилка",
    "only_required": true,
    "time": 70,
    "gold": 205,
    "hotkey": "E",
-   "hp": 1000
+   "hp": 1000,
+   "researches": [
+    "R0G5",
+    "R0E6",
+    "Rome",
+    "Roar",
+    "Rora",
+    "Rosp",
+    "Rorb"
+   ],
+   "affected_by": [
+    "Rosp",
+    "Rgfo"
+   ]
   },
   "ofrt": {
    "type": "unit",
-   "name": "",
+   "name": "Цитадель",
    "only_required": true,
    "time": 140,
    "food_made": 150,
    "gold": 12000,
    "hotkey": "Z",
    "hp": 2500,
-   "lumber": 12000
+   "lumber": 12000,
+   "researches": [
+    "Ropg"
+   ],
+   "affected_by": [
+    "Rosp",
+    "Rgfo"
+   ]
   },
   "ugrv": {
    "type": "unit",
-   "name": "",
+   "name": "Кладбище",
    "only_required": true,
    "time": 80,
    "gold": 215,
    "hotkey": "V",
-   "hp": 900
+   "hp": 900,
+   "researches": [
+    "Rume",
+    "Ruar",
+    "Rura",
+    "Rucr"
+   ],
+   "affected_by": [
+    "Rgfo"
+   ]
+  },
+  "unp1": {
+   "type": "unit",
+   "name": "Чертоги мертвых",
+   "only_required": true,
+   "time": 140,
+   "food_made": 10,
+   "gold": 545,
+   "hotkey": "U",
+   "hp": 1750,
+   "lumber": 210,
+   "researches": [
+    "Rupm"
+   ],
+   "affected_by": [
+    "Rgfo"
+   ]
   },
   "unp2": {
    "type": "unit",
-   "name": "",
+   "name": "Темная цитадель",
    "only_required": true,
    "time": 140,
    "food_made": 10,
@@ -1088,6 +1453,12 @@
    "lumber": 440,
    "requires": [
     "uaod"
+   ],
+   "researches": [
+    "Rupm"
+   ],
+   "affected_by": [
+    "Rgfo"
    ]
   }
  },
@@ -1130,6 +1501,7 @@
   "U02X hero-ability AUdd",
   "U02X hero-ability AUdr",
   "U02X hero-ability AUfn",
+  "cD02 affected-by Rguv",
   "cD02 builds cD12",
   "cD02 builds cD26",
   "cD02 builds cD27",
@@ -1142,92 +1514,91 @@
   "cD02 has-ability Aaha",
   "cD02 has-ability Arst",
   "cD02 has-ability Auns",
-  "cD02 researches Rguv",
+  "cD03 affected-by R0JH",
+  "cD03 affected-by R0K4",
+  "cD03 affected-by R0KE",
+  "cD03 affected-by cDR4",
+  "cD03 affected-by cDR9",
   "cD03 has-ability A1HN",
   "cD03 has-ability cDa2",
   "cD03 has-ability cDap",
   "cD03 has-ability cDar",
-  "cD03 researches R0JH",
-  "cD03 researches R0K4",
-  "cD03 researches R0KE",
-  "cD03 researches cDR4",
-  "cD03 researches cDR9",
+  "cD05 affected-by cDR4",
+  "cD05 affected-by cDR5",
+  "cD05 affected-by cDR9",
   "cD05 has-ability A1HH",
   "cD05 has-ability A1IK",
   "cD05 has-ability cDa5",
   "cD05 has-ability cDai",
-  "cD05 researches cDR4",
-  "cD05 researches cDR5",
-  "cD05 researches cDR9",
+  "cD08 affected-by cDR4",
+  "cD08 affected-by cDR8",
+  "cD08 affected-by cDR9",
   "cD08 has-ability A1HI",
   "cD08 has-ability A1HM",
   "cD08 has-ability cDad",
   "cD08 has-ability cDae",
   "cD08 requires cD25",
-  "cD08 researches cDR4",
-  "cD08 researches cDR8",
-  "cD08 researches cDR9",
+  "cD09 affected-by R0J6",
+  "cD09 affected-by cDr3",
+  "cD09 affected-by cDr4",
+  "cD09 affected-by cDr6",
   "cD09 has-ability cDa6",
   "cD09 requires cD24",
-  "cD09 researches R0J6",
-  "cD09 researches cDr3",
-  "cD09 researches cDr4",
-  "cD09 researches cDr6",
+  "cD10 affected-by R0J6",
+  "cD10 affected-by cDr3",
+  "cD10 affected-by cDr4",
+  "cD10 affected-by cDr6",
   "cD10 has-ability cDa6",
   "cD10 requires cD25",
-  "cD10 researches R0J6",
-  "cD10 researches cDr3",
-  "cD10 researches cDr4",
-  "cD10 researches cDr6",
+  "cD11 affected-by R0J6",
+  "cD11 affected-by cDr3",
+  "cD11 affected-by cDr4",
+  "cD11 affected-by cDr6",
   "cD11 has-ability A1HO",
   "cD11 has-ability cDa6",
-  "cD11 researches R0J6",
-  "cD11 researches cDr3",
-  "cD11 researches cDr4",
-  "cD11 researches cDr6",
+  "cD12 affected-by cDr0",
+  "cD12 affected-by cDr1",
+  "cD12 affected-by cDr3",
+  "cD12 affected-by cDr4",
   "cD12 has-ability A1HC",
   "cD12 has-ability A1IJ",
   "cD12 has-ability cDa8",
   "cD12 has-ability cDa9",
   "cD12 has-ability cDaa",
   "cD12 has-ability cDaw",
-  "cD12 researches cDr0",
-  "cD12 researches cDr1",
-  "cD12 researches cDr3",
-  "cD12 researches cDr4",
+  "cD13 affected-by cDr0",
+  "cD13 affected-by cDr1",
+  "cD13 affected-by cDr3",
+  "cD13 affected-by cDr4",
   "cD13 has-ability Amed",
   "cD13 has-ability Amel",
   "cD13 has-ability Sch2",
   "cD13 has-ability cDA1",
   "cD13 has-ability cDaq",
   "cD13 requires cD31",
-  "cD13 researches cDr0",
-  "cD13 researches cDr1",
-  "cD13 researches cDr3",
-  "cD13 researches cDr4",
+  "cD14 affected-by R0J6",
+  "cD14 affected-by cDr3",
+  "cD14 affected-by cDr4",
+  "cD14 affected-by cDr6",
   "cD14 has-ability cDa6",
   "cD14 has-ability cDay",
   "cD14 requires cD24",
-  "cD14 researches R0J6",
-  "cD14 researches cDr3",
-  "cD14 researches cDr4",
-  "cD14 researches cDr6",
+  "cD18 affected-by R0J8",
+  "cD18 affected-by cDr0",
+  "cD18 affected-by cDr1",
   "cD18 has-ability cDat",
   "cD18 requires cD24",
-  "cD18 researches R0J8",
-  "cD18 researches cDr0",
-  "cD18 researches cDr1",
+  "cD19 affected-by R0J8",
+  "cD19 affected-by R0KE",
+  "cD19 affected-by cDr0",
+  "cD19 affected-by cDr1",
   "cD19 has-ability cDat",
-  "cD19 researches R0J8",
-  "cD19 researches R0KE",
-  "cD19 researches cDr0",
-  "cD19 researches cDr1",
+  "cD22 affected-by R0J8",
+  "cD22 affected-by R0KE",
+  "cD22 affected-by cDr0",
+  "cD22 affected-by cDr1",
   "cD22 has-ability cDat",
   "cD22 requires cD25",
-  "cD22 researches R0J8",
-  "cD22 researches R0KE",
-  "cD22 researches cDr0",
-  "cD22 researches cDr1",
   "cD24 has-ability A0IQ",
   "cD24 has-ability A0LI",
   "cD24 has-ability A0LJ",
@@ -1247,21 +1618,21 @@
   "cD26 has-ability Argl",
   "cD26 morphs-to cD25",
   "cD26 trains cD02",
+  "cD27 affected-by Rgfo",
   "cD27 requires cD31",
   "cD27 researches R0J8",
   "cD27 researches R0K4",
   "cD27 researches R0KE",
-  "cD27 researches Rgfo",
   "cD27 trains cD18",
   "cD27 trains cD19",
   "cD27 trains cD22",
   "cD27 trains cD33",
   "cD27 trains cD34",
   "cD27 trains cD35",
+  "cD28 affected-by Rgfo",
   "cD28 requires cD31",
   "cD28 researches R0J6",
   "cD28 researches R0JI",
-  "cD28 researches Rgfo",
   "cD28 researches cDr6",
   "cD28 researches cDr7",
   "cD28 trains cD09",
@@ -1276,60 +1647,77 @@
   "cD29 trains cD05",
   "cD29 trains cD08",
   "cD29 trains cD13",
-  "cD30 researches Rgfo",
+  "cD30 affected-by Rgfo",
   "cD30 trains CD01",
   "cD30 trains CD02",
   "cD30 trains U02X",
+  "cD31 affected-by Rgfo",
   "cD31 has-ability A1L9",
   "cD31 has-ability Agyd",
   "cD31 has-ability Arlm",
   "cD31 has-ability cDa4",
   "cD31 researches R0J7",
-  "cD31 researches Rgfo",
   "cD31 researches cDR4",
   "cD31 researches cDR9",
   "cD31 researches cDr0",
   "cD31 researches cDr1",
   "cD31 researches cDr3",
   "cD31 researches cDr4",
+  "cD33 affected-by R0J8",
+  "cD33 affected-by cDr0",
+  "cD33 affected-by cDr1",
   "cD33 has-ability cDao",
   "cD33 has-ability cDat",
   "cD33 requires cD24",
-  "cD33 researches R0J8",
-  "cD33 researches cDr0",
-  "cD33 researches cDr1",
+  "cD34 affected-by R0J8",
+  "cD34 affected-by R0KE",
+  "cD34 affected-by cDr0",
+  "cD34 affected-by cDr1",
   "cD34 has-ability cDat",
-  "cD34 researches R0J8",
-  "cD34 researches R0KE",
-  "cD34 researches cDr0",
-  "cD34 researches cDr1",
+  "cD35 affected-by R0J8",
+  "cD35 affected-by R0KE",
+  "cD35 affected-by cDr0",
+  "cD35 affected-by cDr1",
   "cD35 has-ability cDat",
-  "cD35 researches R0J8",
-  "cD35 researches R0KE",
-  "cD35 researches cDr0",
-  "cD35 researches cDr1",
+  "cDA1 requires R0JI",
+  "cDR4 requires unp1",
+  "cDR5 requires unp2",
+  "cDR8 requires cD25",
+  "cDR9 requires unp1",
+  "cDad requires cDR8",
+  "cDae requires cDR8",
+  "cDai requires cDR5",
+  "cDap requires R0JH",
+  "cDr0 requires unp1",
+  "cDr1 requires unp1",
+  "cDr3 requires unp1",
+  "cDr4 requires unp1",
+  "cDr6 requires ugrv",
+  "cDr6 requires unp2",
+  "cDr7 requires cD24",
+  "cDr7 requires unp1",
+  "h0CZ affected-by R002",
+  "h0CZ affected-by R003",
+  "h0CZ affected-by R004",
+  "h0CZ affected-by R005",
+  "h0CZ affected-by R007",
   "h0CZ has-ability A002",
   "h0CZ has-ability A009",
   "h0CZ has-ability A00A",
   "h0CZ has-ability A00B",
   "h0CZ has-ability A00G",
   "h0CZ has-ability A1PP",
-  "h0CZ researches R002",
-  "h0CZ researches R003",
-  "h0CZ researches R004",
-  "h0CZ researches R005",
-  "h0CZ researches R007",
+  "h0D0 affected-by R002",
+  "h0D0 affected-by R003",
+  "h0D0 affected-by R004",
+  "h0D0 affected-by R005",
+  "h0D0 affected-by R007",
   "h0D0 has-ability A001",
   "h0D0 has-ability A003",
   "h0D0 has-ability A009",
   "h0D0 has-ability A00A",
   "h0D0 has-ability A00B",
   "h0D0 has-ability A00G",
-  "h0D0 researches R002",
-  "h0D0 researches R003",
-  "h0D0 researches R004",
-  "h0D0 researches R005",
-  "h0D0 researches R007",
   "h0D1 has-ability A15N",
   "h0D1 researches R002",
   "h0D1 researches R003",
@@ -1339,16 +1727,16 @@
   "h0D1 trains h0CZ",
   "h0D1 trains h0D0",
   "h0D1 trains h0D2",
+  "h0D2 affected-by R003",
+  "h0D2 affected-by R004",
+  "h0D2 affected-by R006",
+  "h0D2 affected-by R007",
   "h0D2 has-ability A00A",
   "h0D2 has-ability A00B",
   "h0D2 has-ability A00I",
   "h0D2 has-ability Sch5",
   "h0D2 has-ability Sdro",
   "h0D2 has-ability Slo3",
-  "h0D2 researches R003",
-  "h0D2 researches R004",
-  "h0D2 researches R006",
-  "h0D2 researches R007",
   "race:CultOfDamned lua-start-tech R0J4",
   "race:CultOfDamned lua-start-tech R0J5",
   "race:CultOfDamned lua-starts-with cD02"

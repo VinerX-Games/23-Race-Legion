@@ -1,0 +1,338 @@
+{
+  "ok": true,
+  "applied": true,
+  "method": "Only explicit string modifications spliced; all unrelated records/mods byte-identical",
+  "changes": {
+    "war3map.w3q": [
+      [
+        "RDr1",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "RDr1",
+        "gtp1",
+        1,
+        0
+      ],
+      [
+        "RDr2",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "RDr2",
+        "gtp1",
+        1,
+        0
+      ],
+      [
+        "RDr3",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "RDr3",
+        "gtp1",
+        1,
+        0
+      ],
+      [
+        "RDr4",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "RDr4",
+        "gtp1",
+        1,
+        0
+      ],
+      [
+        "RDr5",
+        "gnam",
+        1,
+        0
+      ],
+      [
+        "RDr5",
+        "gtp1",
+        1,
+        0
+      ]
+    ],
+    "war3map.w3a": [
+      [
+        "ADr2",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "ADr2",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "ADr3",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "ADr3",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "ADr4",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "ADr4",
+        "atp1",
+        1,
+        0
+      ],
+      [
+        "ADr5",
+        "anam",
+        0,
+        0
+      ],
+      [
+        "ADr5",
+        "atp1",
+        1,
+        0
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "variant": "SD",
+      "rawcode": "RDr1",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "RDr1",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "RDr2",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "RDr2",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "RDr3",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "RDr3",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "RDr4",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "RDr4",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "RDr5",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "RDr5",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "RDr1",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "RDr1",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "RDr2",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "RDr2",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "RDr3",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "RDr3",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "RDr4",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "RDr4",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "RDr5",
+      "field": "name1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "RDr5",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "ADr2",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "ADr2",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "ADr3",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "ADr3",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "ADr4",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "ADr4",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "ADr5",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "ADr5",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "ADr2",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "ADr2",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "ADr3",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "ADr3",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "ADr4",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "ADr4",
+      "field": "tip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "ADr5",
+      "field": "name",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "ADr5",
+      "field": "tip1",
+      "exact_match": true
+    }
+  ],
+  "wts_unchanged": true
+}

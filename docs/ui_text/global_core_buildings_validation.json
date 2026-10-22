@@ -1,0 +1,198 @@
+{
+ "baseline": "docs/ui_text/global_drakkari_validation.json after",
+ "after": {
+  "command": "validate-map",
+  "errors": 22,
+  "findings": [
+   {
+    "field": "builds",
+    "id": "opeo",
+    "message": "unknown unit reference",
+    "reference": "orbr",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "upgrades",
+    "id": "ewsp",
+    "message": "unknown upgrade reference",
+    "reference": "Rewd",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "trains",
+    "id": "h07B",
+    "message": "unknown unit reference",
+    "reference": "TREH",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "sellitems",
+    "id": "n01O",
+    "message": "unknown item reference",
+    "reference": "I027",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "sellitems",
+    "id": "n01O",
+    "message": "unknown item reference",
+    "reference": "I028",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "sellitems",
+    "id": "n01O",
+    "message": "unknown item reference",
+    "reference": "I029",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "sellitems",
+    "id": "n01O",
+    "message": "unknown item reference",
+    "reference": "I02A",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "sellitems",
+    "id": "n01O",
+    "message": "unknown item reference",
+    "reference": "I02B",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "sellitems",
+    "id": "n01O",
+    "message": "unknown item reference",
+    "reference": "I024",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "sellitems",
+    "id": "n01O",
+    "message": "unknown item reference",
+    "reference": "I02K",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "sellitems",
+    "id": "n01O",
+    "message": "unknown item reference",
+    "reference": "I026",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "sellitems",
+    "id": "n01O",
+    "message": "unknown item reference",
+    "reference": "I02M",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "upgrades",
+    "id": "e031",
+    "message": "unknown upgrade reference",
+    "reference": "Rewd",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "upgrades",
+    "id": "h0L5",
+    "message": "unknown upgrade reference",
+    "reference": "A0OZ",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "abillist",
+    "id": "O05U",
+    "message": "unknown ability reference",
+    "reference": "Asa2",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "upgrades",
+    "id": "pa07",
+    "message": "unknown upgrade reference",
+    "reference": "pa46",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "upgrades",
+    "id": "pa10",
+    "message": "unknown upgrade reference",
+    "reference": "PA11",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "abillist",
+    "id": "pa20",
+    "message": "unknown ability reference",
+    "reference": "PA19",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "upgrades",
+    "id": "pa35",
+    "message": "unknown upgrade reference",
+    "reference": "PA11",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "abillist",
+    "id": "u039",
+    "message": "unknown ability reference",
+    "reference": "un01",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "abillist",
+    "id": "u03A",
+    "message": "unknown ability reference",
+    "reference": "un01",
+    "severity": "error",
+    "type": "unit"
+   },
+   {
+    "field": "abillist",
+    "id": "cese",
+    "message": "unknown ability reference",
+    "reference": "ASYR",
+    "severity": "error",
+    "type": "item"
+   }
+  ],
+  "findings_total": 22,
+  "objects_checked": 10973,
+  "ok": false,
+  "schema_version": 1,
+  "tool": "HiveWE_cli",
+  "warnings": 0,
+  "error": "CLI exit code 1"
+ },
+ "findings_identical": true,
+ "new_findings": [],
+ "current_hashes": {
+  "war3map.w3q": "d13d5c108efc839f5426f114150cd95347349db1cb69578e7db604b2ea71f31e",
+  "war3map.w3u": "a03ee64dcfc881607cf401d6206a2628718f04837b917a409a8e26744c388cb8"
+ }
+}

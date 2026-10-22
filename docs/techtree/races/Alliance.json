@@ -755,7 +755,7 @@
   },
   "R004": {
    "type": "upgrade",
-   "name": "Улучшение до Кровавого Палача",
+   "name": "Кровавый Палач",
    "gold": 600,
    "lumber": 500,
    "levels": 1,
@@ -876,7 +876,7 @@
   },
   "R0H0": {
    "type": "upgrade",
-   "name": "",
+   "name": "Фракция с спец магами",
    "only_required": true,
    "gold": 75,
    "gold_per_level": 500,
@@ -1097,7 +1097,7 @@
   },
   "R0HO": {
    "type": "upgrade",
-   "name": "Маг (Специализированный) (B)",
+   "name": "Маг (Специализированный)",
    "gold": 500,
    "gold_per_level": 900,
    "lumber": 400,
@@ -1439,7 +1439,7 @@
   },
   "Rugf": {
    "type": "upgrade",
-   "name": "",
+   "name": "Ярость вурдалака",
    "only_required": true,
    "gold": 100,
    "lumber": 150,
@@ -1451,20 +1451,25 @@
    "time": 50
   },
   "Sch5": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Cargo Hold",
+   "levels": 1
   },
   "Sdro": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Выгрузить",
+   "hotkey": "Q",
+   "levels": 1
   },
   "Slo3": {
-   "type": "unknown",
-   "name": ""
+   "type": "ability",
+   "name": "Взять на борт",
+   "hotkey": "D",
+   "levels": 1
   },
   "etoa": {
    "type": "unit",
-   "name": "",
+   "name": "Древо столетий",
    "only_required": true,
    "time": 140,
    "food_made": 100,
@@ -1474,6 +1479,13 @@
    "lumber": 4500,
    "requires": [
     "R0GB"
+   ],
+   "researches": [
+    "Renb"
+   ],
+   "affected_by": [
+    "Renb",
+    "Rgfo"
    ]
   },
   "h00X": {
@@ -1484,7 +1496,13 @@
    "gold": 250,
    "hotkey": "Q",
    "hp": 750,
-   "lumber": 200
+   "lumber": 200,
+   "affected_by": [
+    "R006",
+    "R007",
+    "R004",
+    "R003"
+   ]
   },
   "h011": {
    "type": "building",
@@ -1494,7 +1512,14 @@
    "gold": 500,
    "hotkey": "C",
    "hp": 2000,
-   "lumber": 700
+   "lumber": 700,
+   "researches": [
+    "R005",
+    "R006",
+    "R007",
+    "R002",
+    "R003"
+   ]
   },
   "h02Z": {
    "type": "unit",
@@ -1507,11 +1532,18 @@
    "lumber": 300,
    "requires": [
     "h0H1"
+   ],
+   "affected_by": [
+    "R0DP",
+    "R0D5",
+    "R0D6",
+    "R0DA",
+    "R0DC"
    ]
   },
   "h0DV": {
    "type": "unit",
-   "name": "",
+   "name": "Штаб Демонов",
    "only_required": true,
    "time": 240,
    "food_made": 100,
@@ -1522,14 +1554,18 @@
   },
   "h0H1": {
    "type": "unit",
-   "name": "",
+   "name": "Замок",
    "only_required": true,
    "time": 140,
    "food_made": 150,
    "gold": 12000,
    "hotkey": "Z",
    "hp": 2500,
-   "lumber": 12000
+   "lumber": 12000,
+   "affected_by": [
+    "R0DM",
+    "Rgfo"
+   ]
   },
   "h0HX": {
    "type": "unit",
@@ -1542,6 +1578,13 @@
    "lumber": 250,
    "requires": [
     "h0H1"
+   ],
+   "affected_by": [
+    "R0DN",
+    "R0D6",
+    "R0D5",
+    "R0DA",
+    "R0DC"
    ]
   },
   "h0I3": {
@@ -1555,6 +1598,13 @@
    "lumber": 200,
    "requires": [
     "h0H1"
+   ],
+   "affected_by": [
+    "R0D6",
+    "R0D5",
+    "R0DO",
+    "R0DA",
+    "R0DC"
    ]
   },
   "h0K4": {
@@ -1570,6 +1620,13 @@
     "hlum",
     "hkee",
     "hbla"
+   ],
+   "affected_by": [
+    "Rhar",
+    "Rhme",
+    "Rhde",
+    "Rhpm",
+    "Rguv"
    ]
   },
   "h0K5": {
@@ -1585,6 +1642,13 @@
     "hlum",
     "hkee",
     "hbla"
+   ],
+   "affected_by": [
+    "Rhla",
+    "Rhra",
+    "Rhri",
+    "Rhpm",
+    "Rguv"
    ]
   },
   "h0K6": {
@@ -1600,6 +1664,13 @@
     "hlum",
     "hcas",
     "hbla"
+   ],
+   "affected_by": [
+    "Rhla",
+    "Rhra",
+    "Rhri",
+    "Rhpm",
+    "Rguv"
    ]
   },
   "h0K7": {
@@ -1614,6 +1685,14 @@
    "requires": [
     "hcas",
     "hbla"
+   ],
+   "affected_by": [
+    "Rhar",
+    "Rhme",
+    "Rhan",
+    "Rhpm",
+    "Rguv",
+    "Rhsb"
    ]
   },
   "h0KI": {
@@ -1627,6 +1706,11 @@
    "lumber": 750,
    "requires": [
     "R0HC"
+   ],
+   "affected_by": [
+    "R0GY",
+    "Rhar",
+    "Rhra"
    ]
   },
   "h0L0": {
@@ -1637,7 +1721,14 @@
    "gold": 450,
    "hotkey": "W",
    "hp": 800,
-   "lumber": 600
+   "lumber": 600,
+   "affected_by": [
+    "R005",
+    "R007",
+    "R004",
+    "R003",
+    "R002"
+   ]
   },
   "h0L1": {
    "type": "unit",
@@ -1647,7 +1738,13 @@
    "gold": 875,
    "hotkey": "E",
    "hp": 1400,
-   "lumber": 1000
+   "lumber": 1000,
+   "affected_by": [
+    "R005",
+    "R007",
+    "R003",
+    "R002"
+   ]
   },
   "h0M4": {
    "type": "building",
@@ -1657,7 +1754,14 @@
    "gold": 500,
    "hotkey": "C",
    "hp": 2000,
-   "lumber": 700
+   "lumber": 700,
+   "researches": [
+    "R005",
+    "R006",
+    "R007",
+    "R002",
+    "R003"
+   ]
   },
   "halt": {
    "type": "building",
@@ -1667,7 +1771,11 @@
    "gold": 180,
    "hotkey": "S",
    "hp": 900,
-   "lumber": 50
+   "lumber": 50,
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "harm": {
    "type": "building",
@@ -1680,6 +1788,13 @@
    "requires": [
     "hkee",
     "hbla"
+   ],
+   "researches": [
+    "R0GY"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
    ]
   },
   "hars": {
@@ -1692,6 +1807,16 @@
    "lumber": 125,
    "requires": [
     "hkee"
+   ],
+   "researches": [
+    "R0HU",
+    "Rhpt",
+    "Rhst",
+    "Rhse"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
    ]
   },
   "hatw": {
@@ -1701,7 +1826,12 @@
    "gold": 100,
    "hotkey": "C",
    "hp": 500,
-   "lumber": 70
+   "lumber": 70,
+   "affected_by": [
+    "R0HO",
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "hbar": {
    "type": "building",
@@ -1710,7 +1840,15 @@
    "gold": 400,
    "hotkey": "W",
    "hp": 1500,
-   "lumber": 150
+   "lumber": 150,
+   "researches": [
+    "R0GV",
+    "R0GW"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "hbla": {
    "type": "building",
@@ -1722,6 +1860,17 @@
    "lumber": 40,
    "requires": [
     "htow"
+   ],
+   "researches": [
+    "R0HO",
+    "Rhme",
+    "Rhar",
+    "Rhla",
+    "Rhra"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
    ]
   },
   "hcas": {
@@ -1735,6 +1884,10 @@
    "lumber": 12000,
    "requires": [
     "halt"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
    ]
   },
   "hctw": {
@@ -1747,6 +1900,11 @@
    "lumber": 120,
    "requires": [
     "harm"
+   ],
+   "affected_by": [
+    "Rhra",
+    "Rhac",
+    "Rgfo"
    ]
   },
   "hfoo": {
@@ -1755,7 +1913,14 @@
    "time": 23,
    "gold": 195,
    "hotkey": "Q",
-   "hp": 420
+   "hp": 420,
+   "affected_by": [
+    "Rhar",
+    "Rhme",
+    "Rhde",
+    "Rhpm",
+    "Rguv"
+   ]
   },
   "hgra": {
    "type": "building",
@@ -1764,7 +1929,37 @@
    "gold": 500,
    "hotkey": "X",
    "hp": 1250,
-   "lumber": 250
+   "lumber": 250,
+   "researches": [
+    "R0HV",
+    "R0HC",
+    "R0HS",
+    "R0HQ",
+    "R0HN",
+    "R0HM",
+    "R0HL",
+    "R0HK",
+    "R0HJ",
+    "R0HI",
+    "R0HH",
+    "R0HG",
+    "R0HF",
+    "R0HD",
+    "R0HB",
+    "R0HA",
+    "R0H9",
+    "R0H8",
+    "R0H7",
+    "R0H6",
+    "R0H5",
+    "R0HE",
+    "R0HR",
+    "R0GX"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "hgtw": {
    "type": "building",
@@ -1776,6 +1971,11 @@
    "lumber": 70,
    "requires": [
     "hlum"
+   ],
+   "affected_by": [
+    "Rhra",
+    "Rhac",
+    "Rgfo"
    ]
   },
   "hhou": {
@@ -1786,7 +1986,11 @@
    "gold": 300,
    "hotkey": "A",
    "hp": 500,
-   "lumber": 100
+   "lumber": 100,
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "hkee": {
    "type": "building",
@@ -1796,7 +2000,11 @@
    "gold": 4500,
    "hotkey": "Z",
    "hp": 2000,
-   "lumber": 4500
+   "lumber": 4500,
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "hkni": {
    "type": "unit",
@@ -1809,6 +2017,14 @@
    "requires": [
     "hcas",
     "hbla"
+   ],
+   "affected_by": [
+    "Rhar",
+    "Rhme",
+    "Rhan",
+    "Rhpm",
+    "Rguv",
+    "Rhsb"
    ]
   },
   "hlum": {
@@ -1817,7 +2033,15 @@
    "time": 60,
    "gold": 120,
    "hotkey": "E",
-   "hp": 900
+   "hp": 900,
+   "researches": [
+    "Rhac",
+    "Rhlh"
+   ],
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "hmpr": {
    "type": "unit",
@@ -1826,7 +2050,12 @@
    "gold": 150,
    "hotkey": "Q",
    "hp": 290,
-   "lumber": 10
+   "lumber": 10,
+   "affected_by": [
+    "Rhpt",
+    "Rhpm",
+    "Rguv"
+   ]
   },
   "hmtm": {
    "type": "unit",
@@ -1835,7 +2064,14 @@
    "gold": 200,
    "hotkey": "Q",
    "hp": 360,
-   "lumber": 70
+   "lumber": 70,
+   "affected_by": [
+    "Rhla",
+    "Rhra",
+    "Rhfl",
+    "Rhfs",
+    "Rguv"
+   ]
   },
   "hmtt": {
    "type": "unit",
@@ -1847,6 +2083,12 @@
    "lumber": 140,
    "requires": [
     "hcas"
+   ],
+   "affected_by": [
+    "Rhar",
+    "Rhra",
+    "Rhrt",
+    "Rguv"
    ]
   },
   "hpea": {
@@ -1855,7 +2097,11 @@
    "time": 17,
    "gold": 75,
    "hotkey": "Q",
-   "hp": 240
+   "hp": 240,
+   "affected_by": [
+    "Rhlh",
+    "Rguv"
+   ]
   },
   "hrif": {
    "type": "unit",
@@ -1867,6 +2113,13 @@
    "lumber": 60,
    "requires": [
     "hbla"
+   ],
+   "affected_by": [
+    "Rhla",
+    "Rhra",
+    "Rhri",
+    "Rhpm",
+    "Rguv"
    ]
   },
   "hsor": {
@@ -1876,7 +2129,12 @@
    "gold": 275,
    "hotkey": "W",
    "hp": 100000,
-   "lumber": 95
+   "lumber": 95,
+   "affected_by": [
+    "Rhst",
+    "Rhpm",
+    "Rguv"
+   ]
   },
   "hspt": {
    "type": "unit",
@@ -1888,6 +2146,13 @@
    "lumber": 65,
    "requires": [
     "R0H0"
+   ],
+   "affected_by": [
+    "Rhar",
+    "Rhme",
+    "Rhss",
+    "Rhpm",
+    "Rguv"
    ]
   },
   "htow": {
@@ -1898,17 +2163,25 @@
    "gold": 385,
    "hotkey": "Q",
    "hp": 1500,
-   "lumber": 205
+   "lumber": 205,
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "hvlt": {
    "type": "unit",
-   "name": "",
+   "name": "Волшебное хранилище",
    "only_required": true,
    "time": 60,
    "gold": 130,
    "hotkey": "D",
    "hp": 485,
-   "lumber": 30
+   "lumber": 30,
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "hwtw": {
    "type": "building",
@@ -1917,7 +2190,11 @@
    "gold": 30,
    "hotkey": "Z",
    "hp": 300,
-   "lumber": 20
+   "lumber": 20,
+   "affected_by": [
+    "Rhac",
+    "Rgfo"
+   ]
   },
   "o040": {
    "type": "unit",
@@ -1928,23 +2205,43 @@
   },
   "ofor": {
    "type": "unit",
-   "name": "",
+   "name": "Лесопилка",
    "only_required": true,
    "time": 70,
    "gold": 205,
    "hotkey": "E",
-   "hp": 1000
+   "hp": 1000,
+   "researches": [
+    "R0G5",
+    "R0E6",
+    "Rome",
+    "Roar",
+    "Rora",
+    "Rosp",
+    "Rorb"
+   ],
+   "affected_by": [
+    "Rosp",
+    "Rgfo"
+   ]
   },
   "ofrt": {
    "type": "unit",
-   "name": "",
+   "name": "Цитадель",
    "only_required": true,
    "time": 140,
    "food_made": 150,
    "gold": 12000,
    "hotkey": "Z",
    "hp": 2500,
-   "lumber": 12000
+   "lumber": 12000,
+   "researches": [
+    "Ropg"
+   ],
+   "affected_by": [
+    "Rosp",
+    "Rgfo"
+   ]
   }
  },
  "edges": [
@@ -2022,71 +2319,91 @@
   "Rhss requires hcas",
   "Rhss requires hvlt",
   "Rhst requires hcas",
+  "h00X affected-by R003",
+  "h00X affected-by R004",
+  "h00X affected-by R006",
+  "h00X affected-by R007",
   "h00X has-ability A00A",
   "h00X has-ability A00B",
   "h00X has-ability A00I",
   "h00X has-ability Sch5",
   "h00X has-ability Sdro",
   "h00X has-ability Slo3",
-  "h00X researches R003",
-  "h00X researches R004",
-  "h00X researches R006",
-  "h00X researches R007",
+  "h011 researches R002",
+  "h011 researches R003",
+  "h011 researches R005",
+  "h011 researches R006",
+  "h011 researches R007",
+  "h02Z affected-by R0D5",
+  "h02Z affected-by R0D6",
+  "h02Z affected-by R0DA",
+  "h02Z affected-by R0DC",
+  "h02Z affected-by R0DP",
   "h02Z requires h0H1",
+  "h0HX affected-by R0D5",
+  "h0HX affected-by R0D6",
+  "h0HX affected-by R0DA",
+  "h0HX affected-by R0DC",
+  "h0HX affected-by R0DN",
   "h0HX requires h0H1",
+  "h0I3 affected-by R0D5",
+  "h0I3 affected-by R0D6",
+  "h0I3 affected-by R0DA",
+  "h0I3 affected-by R0DC",
+  "h0I3 affected-by R0DO",
   "h0I3 requires h0H1",
+  "h0K4 affected-by Rguv",
+  "h0K4 affected-by Rhar",
+  "h0K4 affected-by Rhde",
+  "h0K4 affected-by Rhme",
+  "h0K4 affected-by Rhpm",
   "h0K4 has-ability A0Z5",
   "h0K4 requires hbla",
   "h0K4 requires hkee",
   "h0K4 requires hlum",
-  "h0K4 researches Rguv",
-  "h0K4 researches Rhar",
-  "h0K4 researches Rhde",
-  "h0K4 researches Rhme",
-  "h0K4 researches Rhpm",
+  "h0K5 affected-by Rguv",
+  "h0K5 affected-by Rhla",
+  "h0K5 affected-by Rhpm",
+  "h0K5 affected-by Rhra",
+  "h0K5 affected-by Rhri",
   "h0K5 has-ability A0Z5",
   "h0K5 requires hbla",
   "h0K5 requires hkee",
   "h0K5 requires hlum",
-  "h0K5 researches Rguv",
-  "h0K5 researches Rhla",
-  "h0K5 researches Rhpm",
-  "h0K5 researches Rhra",
-  "h0K5 researches Rhri",
+  "h0K6 affected-by Rguv",
+  "h0K6 affected-by Rhla",
+  "h0K6 affected-by Rhpm",
+  "h0K6 affected-by Rhra",
+  "h0K6 affected-by Rhri",
   "h0K6 has-ability A0Z5",
   "h0K6 requires hbla",
   "h0K6 requires hcas",
   "h0K6 requires hlum",
-  "h0K6 researches Rguv",
-  "h0K6 researches Rhla",
-  "h0K6 researches Rhpm",
-  "h0K6 researches Rhra",
-  "h0K6 researches Rhri",
+  "h0K7 affected-by Rguv",
+  "h0K7 affected-by Rhan",
+  "h0K7 affected-by Rhar",
+  "h0K7 affected-by Rhme",
+  "h0K7 affected-by Rhpm",
+  "h0K7 affected-by Rhsb",
   "h0K7 has-ability A0Z5",
   "h0K7 requires hbla",
   "h0K7 requires hcas",
-  "h0K7 researches Rguv",
-  "h0K7 researches Rhan",
-  "h0K7 researches Rhar",
-  "h0K7 researches Rhme",
-  "h0K7 researches Rhpm",
-  "h0K7 researches Rhsb",
+  "h0KI affected-by R0GY",
+  "h0KI affected-by Rhar",
+  "h0KI affected-by Rhra",
   "h0KI has-ability A19Q",
   "h0KI requires R0HC",
-  "h0KI researches R0GY",
-  "h0KI researches Rhar",
-  "h0KI researches Rhra",
+  "h0L0 affected-by R002",
+  "h0L0 affected-by R003",
+  "h0L0 affected-by R004",
+  "h0L0 affected-by R005",
+  "h0L0 affected-by R007",
   "h0L0 has-ability A0Z5",
-  "h0L0 researches R002",
-  "h0L0 researches R003",
-  "h0L0 researches R004",
-  "h0L0 researches R005",
-  "h0L0 researches R007",
+  "h0L1 affected-by R002",
+  "h0L1 affected-by R003",
+  "h0L1 affected-by R005",
+  "h0L1 affected-by R007",
   "h0L1 has-ability A0Z5",
-  "h0L1 researches R002",
-  "h0L1 researches R003",
-  "h0L1 researches R005",
-  "h0L1 researches R007",
   "h0M4 has-ability A15N",
   "h0M4 researches R002",
   "h0M4 researches R003",
@@ -2096,44 +2413,44 @@
   "h0M4 trains h00X",
   "h0M4 trains h0L0",
   "h0M4 trains h0L1",
+  "halt affected-by Rgfo",
+  "halt affected-by Rhac",
   "halt has-ability A0XH",
   "halt has-ability A0XI",
   "halt has-ability A0XJ",
-  "halt researches Rgfo",
-  "halt researches Rhac",
   "halt trains H0H7",
   "halt trains H0H8",
   "halt trains H0H9",
   "halt trains H0ME",
   "halt trains H0MF",
+  "harm affected-by Rgfo",
+  "harm affected-by Rhac",
   "harm requires hbla",
   "harm requires hkee",
   "harm researches R0GY",
-  "harm researches Rgfo",
-  "harm researches Rhac",
   "harm trains h0KI",
   "harm trains hmtm",
   "harm trains hmtt",
+  "hars affected-by Rgfo",
+  "hars affected-by Rhac",
   "hars requires hkee",
   "hars researches R0HU",
-  "hars researches Rgfo",
-  "hars researches Rhac",
   "hars researches Rhpt",
   "hars researches Rhse",
   "hars researches Rhst",
   "hars trains hmpr",
   "hars trains hsor",
   "hars trains hspt",
+  "hatw affected-by R0HO",
+  "hatw affected-by Rgfo",
+  "hatw affected-by Rhac",
   "hatw has-ability AHta",
   "hatw has-ability Adts",
   "hatw has-ability Afbt",
-  "hatw researches R0HO",
-  "hatw researches Rgfo",
-  "hatw researches Rhac",
+  "hbar affected-by Rgfo",
+  "hbar affected-by Rhac",
   "hbar researches R0GV",
   "hbar researches R0GW",
-  "hbar researches Rgfo",
-  "hbar researches Rhac",
   "hbar trains h0K4",
   "hbar trains h0K5",
   "hbar trains h0K6",
@@ -2141,34 +2458,36 @@
   "hbar trains hfoo",
   "hbar trains hkni",
   "hbar trains hrif",
+  "hbla affected-by Rgfo",
+  "hbla affected-by Rhac",
   "hbla requires htow",
   "hbla researches R0HO",
-  "hbla researches Rgfo",
-  "hbla researches Rhac",
   "hbla researches Rhar",
   "hbla researches Rhla",
   "hbla researches Rhme",
   "hbla researches Rhra",
+  "hcas affected-by Rgfo",
+  "hcas affected-by Rhac",
   "hcas has-ability A0IQ",
   "hcas has-ability A0LI",
   "hcas has-ability A0LJ",
   "hcas has-ability Amic",
   "hcas has-ability Argl",
   "hcas requires halt",
-  "hcas researches Rgfo",
-  "hcas researches Rhac",
   "hcas trains hpea",
+  "hctw affected-by Rgfo",
+  "hctw affected-by Rhac",
+  "hctw affected-by Rhra",
   "hctw has-ability Adts",
   "hctw requires harm",
-  "hctw researches Rgfo",
-  "hctw researches Rhac",
-  "hctw researches Rhra",
+  "hfoo affected-by Rguv",
+  "hfoo affected-by Rhar",
+  "hfoo affected-by Rhde",
+  "hfoo affected-by Rhme",
+  "hfoo affected-by Rhpm",
   "hfoo has-ability A0Z5",
-  "hfoo researches Rguv",
-  "hfoo researches Rhar",
-  "hfoo researches Rhde",
-  "hfoo researches Rhme",
-  "hfoo researches Rhpm",
+  "hgra affected-by Rgfo",
+  "hgra affected-by Rhac",
   "hgra has-ability A19M",
   "hgra researches R0GX",
   "hgra researches R0H5",
@@ -2194,53 +2513,54 @@
   "hgra researches R0HR",
   "hgra researches R0HS",
   "hgra researches R0HV",
-  "hgra researches Rgfo",
-  "hgra researches Rhac",
+  "hgtw affected-by Rgfo",
+  "hgtw affected-by Rhac",
+  "hgtw affected-by Rhra",
   "hgtw has-ability Adts",
   "hgtw requires hlum",
-  "hgtw researches Rgfo",
-  "hgtw researches Rhac",
-  "hgtw researches Rhra",
-  "hhou researches Rgfo",
-  "hhou researches Rhac",
+  "hhou affected-by Rgfo",
+  "hhou affected-by Rhac",
+  "hkee affected-by Rgfo",
+  "hkee affected-by Rhac",
   "hkee has-ability A0IQ",
   "hkee has-ability A0LI",
   "hkee has-ability A0LJ",
   "hkee has-ability Amic",
   "hkee has-ability Argl",
   "hkee morphs-to hcas",
-  "hkee researches Rgfo",
-  "hkee researches Rhac",
   "hkee trains hpea",
+  "hkni affected-by Rguv",
+  "hkni affected-by Rhan",
+  "hkni affected-by Rhar",
+  "hkni affected-by Rhme",
+  "hkni affected-by Rhpm",
+  "hkni affected-by Rhsb",
   "hkni has-ability A0Z5",
   "hkni requires hbla",
   "hkni requires hcas",
-  "hkni researches Rguv",
-  "hkni researches Rhan",
-  "hkni researches Rhar",
-  "hkni researches Rhme",
-  "hkni researches Rhpm",
-  "hkni researches Rhsb",
+  "hlum affected-by Rgfo",
+  "hlum affected-by Rhac",
   "hlum has-ability Arlm",
-  "hlum researches Rgfo",
   "hlum researches Rhac",
   "hlum researches Rhlh",
+  "hmpr affected-by Rguv",
+  "hmpr affected-by Rhpm",
+  "hmpr affected-by Rhpt",
   "hmpr has-ability A0Z5",
-  "hmpr researches Rguv",
-  "hmpr researches Rhpm",
-  "hmpr researches Rhpt",
+  "hmtm affected-by Rguv",
+  "hmtm affected-by Rhfl",
+  "hmtm affected-by Rhfs",
+  "hmtm affected-by Rhla",
+  "hmtm affected-by Rhra",
   "hmtm has-ability A0Z5",
-  "hmtm researches Rguv",
-  "hmtm researches Rhfl",
-  "hmtm researches Rhfs",
-  "hmtm researches Rhla",
-  "hmtm researches Rhra",
+  "hmtt affected-by Rguv",
+  "hmtt affected-by Rhar",
+  "hmtt affected-by Rhra",
+  "hmtt affected-by Rhrt",
   "hmtt has-ability A0Z5",
   "hmtt requires hcas",
-  "hmtt researches Rguv",
-  "hmtt researches Rhar",
-  "hmtt researches Rhra",
-  "hmtt researches Rhrt",
+  "hpea affected-by Rguv",
+  "hpea affected-by Rhlh",
   "hpea builds h0M4",
   "hpea builds halt",
   "hpea builds harm",
@@ -2256,41 +2576,39 @@
   "hpea has-ability Ahar",
   "hpea has-ability Ahrp",
   "hpea has-ability Amil",
-  "hpea researches Rguv",
-  "hpea researches Rhlh",
+  "hrif affected-by Rguv",
+  "hrif affected-by Rhla",
+  "hrif affected-by Rhpm",
+  "hrif affected-by Rhra",
+  "hrif affected-by Rhri",
   "hrif has-ability A0Z5",
   "hrif requires hbla",
-  "hrif researches Rguv",
-  "hrif researches Rhla",
-  "hrif researches Rhpm",
-  "hrif researches Rhra",
-  "hrif researches Rhri",
+  "hsor affected-by Rguv",
+  "hsor affected-by Rhpm",
+  "hsor affected-by Rhst",
   "hsor has-ability A0Z5",
-  "hsor researches Rguv",
-  "hsor researches Rhpm",
-  "hsor researches Rhst",
+  "hspt affected-by Rguv",
+  "hspt affected-by Rhar",
+  "hspt affected-by Rhme",
+  "hspt affected-by Rhpm",
+  "hspt affected-by Rhss",
   "hspt has-ability A0Z5",
   "hspt requires R0H0",
-  "hspt researches Rguv",
-  "hspt researches Rhar",
-  "hspt researches Rhme",
-  "hspt researches Rhpm",
-  "hspt researches Rhss",
+  "htow affected-by Rgfo",
+  "htow affected-by Rhac",
   "htow has-ability A0IQ",
   "htow has-ability A0LI",
   "htow has-ability A0LJ",
   "htow has-ability Amic",
   "htow has-ability Argl",
   "htow morphs-to hkee",
-  "htow researches Rgfo",
-  "htow researches Rhac",
   "htow trains hpea",
+  "hwtw affected-by Rgfo",
+  "hwtw affected-by Rhac",
   "hwtw has-ability Adts",
   "hwtw morphs-to hatw",
   "hwtw morphs-to hctw",
   "hwtw morphs-to hgtw",
-  "hwtw researches Rgfo",
-  "hwtw researches Rhac",
   "race:Alliance lua-start-tech R0GZ",
   "race:Alliance lua-start-tech R0HW",
   "race:Alliance lua-start-tech R0HX",

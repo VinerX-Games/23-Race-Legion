@@ -1,0 +1,1071 @@
+{
+ "scope": "Назначение оставшихся 150 составных Lua-строк по проверенным источникам и путям вывода; это не подтверждение правильности всех пользовательских текстов.",
+ "sources": {
+  "map.w3x/_lua/monolith_split/sections/00_prelude.lua": "040e0142aef18e6f84f4030fa8271d7cb15f6706b9c08a6ea313200cac6bd77b",
+  "map.w3x/_lua/monolith_split/sections/80_runtime/_races/74_w2_xp.lua": "9715282697b19a3cb66b34f1c484ee3d136f9c884ab6a943b3d160b220773567",
+  "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua": "65bce381e60c6f7b74cc3c4bb0095336212ae7fc011f019fde9d936320c8ce21",
+  "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/61_custom_hud.lua": "31863be1028896cde262491aa3d2071fd58e9597a6178134c2430072da2c661b",
+  "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/63_race_picker.lua": "9d2cfb1ed2bcf55968126c7bbabd3cadd7725c72eee19cbd643aa39c01d1899d",
+  "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua": "dcb374829ebcb7e7f237c29c7d093ff081ef3ee534eeb6270719c31ca718d8f9",
+  "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/01_core_economy.lua": "3a1622685fa66665b34e4a2c17a090ba92bde3917143d223a849e97121ea78c2",
+  "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/02_game_modes.lua": "2df3882a0b4554bb1764fdfca1875ab94f54aec59a13cf055a435c85c618f1d4",
+  "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/03_continents_diplomacy.lua": "29d713afffe2ddac74104d23bc34f0e5e11245947ce59c75903de3b7ba2bf84b",
+  "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/05_common_spells.lua": "9413c9b164e312496f9b60779ebed1d01187b018aff3cdc831d9dbc9b322b966",
+  "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/14_misc_system.lua": "d05b01ee50f4fac59a360bec7f0e70ec45325777ae44db782609d7f66be07335",
+  "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/15_ai_portals_cities.lua": "293cdc545e44024d20949ba2af045f0d6f89f0a7603865e69cd2c60d40987642",
+  "map.w3x/_lua/monolith_split/sections/83_ai_brain.lua": "b13621a5af184f6906b57c72006c5430fc2d4421d2caa83a6f14ab900cdb1ecf",
+  "map.w3x/_lua/monolith_split/sections/84_ai_diplomat.lua": "51024ad801fc9ab7adb2c87f8e12680e38e32dca33d446d35879bf8f01e32966"
+ },
+ "rows": [
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/00_prelude.lua",
+   "line": 354,
+   "text": "compile error: ",
+   "classification": "bridge_protocol_diagnostic",
+   "reason": "EvalWriteResult возвращает ошибку компиляции отладочному eval-клиенту моста."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/00_prelude.lua",
+   "line": 636,
+   "text": "Handle Counter: ",
+   "classification": "guarded_debug_command",
+   "reason": "Подпись ответа команды -handle в SetupHandleCounterChat; callback сначала проверяет DebugChatAllowed. Техническая диагностика по явной команде."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/00_prelude.lua",
+   "line": 767,
+   "text": "[CORE] Event dispatcher active (centralized TriggerRegisterAnyUnitEventBJ)",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Печать загрузочной диагностики; без доказанного отключения нельзя исключать из пользовательского текста. Содержание оставлено на проверку."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/00_prelude.lua",
+   "line": 778,
+   "text": " deferred steps...",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Печать загрузочной диагностики; без доказанного отключения нельзя исключать из пользовательского текста. Содержание оставлено на проверку."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/00_prelude.lua",
+   "line": 816,
+   "text": "[CORE] Framework loaded",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Печать загрузочной диагностики; без доказанного отключения нельзя исключать из пользовательского текста. Содержание оставлено на проверку."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_races/74_w2_xp.lua",
+   "line": 101,
+   "text": "Тёмная Орда",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Возвращаемая подпись подрасы в HordeW2GetSubraceLabel, отделённая от внутренних токенов base/dark/dragonmaw."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_races/74_w2_xp.lua",
+   "line": 103,
+   "text": "Драконья Пасть",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Возвращаемая подпись подрасы в HordeW2GetSubraceLabel, отделённая от внутренних токенов base/dark/dragonmaw."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_races/74_w2_xp.lua",
+   "line": 105,
+   "text": "Орда Второй войны",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Возвращаемая подпись подрасы в HordeW2GetSubraceLabel, отделённая от внутренних токенов base/dark/dragonmaw."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 40,
+   "text": "Базовый доход: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 41,
+   "text": "Модификатор дохода: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 42,
+   "text": "Налог союзникам: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 44,
+   "text": "Доход после модификатора и налога: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 45,
+   "text": "|nСодержание армии: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 46,
+   "text": "Логистика: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 47,
+   "text": "Доход от коррупции: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 48,
+   "text": "Дополнительный доход: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 49,
+   "text": "|nЧистый доход: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 50,
+   "text": "Древесина за выплату: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 52,
+   "text": "|cffb99d66Расходы отключены в этом режиме.|cffced4da",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 55,
+   "text": "|nСледующая выплата через ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 55,
+   "text": " сек.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 56,
+   "text": "|nВыплаты начнутся после выбора режима.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 57,
+   "text": "|cffb99d66Итог обновляется при выплате дохода.|cffced4da",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 74,
+   "text": "Не назначена",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 80,
+   "text": "Города: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 81,
+   "text": "Доля территории: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 82,
+   "text": "Столица: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 86,
+   "text": "|nДля победы: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 86,
+   "text": "% городов (",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 87,
+   "text": "Осталось захватить: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 89,
+   "text": "|nПобеда: по правилам выбранного режима.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 91,
+   "text": "|nАрмия: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/60_income_tooltip.lua",
+   "line": 91,
+   "text": " юнитов",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "UpdateResourceTooltips собирает подписи дохода/государства в строки и выводит в панели UI. Точность чисел/содержания проверяется отдельно."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/61_custom_hud.lua",
+   "line": 164,
+   "text": "Юниты",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Подписи и подсказки показателей HUD, передаваемые при создании элементов интерфейса."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/61_custom_hud.lua",
+   "line": 164,
+   "text": "Число юнитов игрока.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Подписи и подсказки показателей HUD, передаваемые при создании элементов интерфейса."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/61_custom_hud.lua",
+   "line": 165,
+   "text": "Города",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Подписи и подсказки показателей HUD, передаваемые при создании элементов интерфейса."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/61_custom_hud.lua",
+   "line": 165,
+   "text": "Доля захваченных городов карты.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Подписи и подсказки показателей HUD, передаваемые при создании элементов интерфейса."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/61_custom_hud.lua",
+   "line": 166,
+   "text": "Опыт",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Подписи и подсказки показателей HUD, передаваемые при создании элементов интерфейса."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/61_custom_hud.lua",
+   "line": 166,
+   "text": "Опыт армии игрока.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Подписи и подсказки показателей HUD, передаваемые при создании элементов интерфейса."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/63_race_picker.lua",
+   "line": 22,
+   "text": "АЛЬЯНС",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Названия групп RP_GROUPS и подсказка RpButton используются меню выбора рас."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/63_race_picker.lua",
+   "line": 32,
+   "text": "ОРДА",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Названия групп RP_GROUPS и подсказка RpButton используются меню выбора рас."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/63_race_picker.lua",
+   "line": 42,
+   "text": "ТЬМА",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Названия групп RP_GROUPS и подсказка RpButton используются меню выбора рас."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/63_race_picker.lua",
+   "line": 52,
+   "text": "ЭЛЬФЫ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Названия групп RP_GROUPS и подсказка RpButton используются меню выбора рас."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/63_race_picker.lua",
+   "line": 59,
+   "text": "НЕЙТРАЛЬНЫЕ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Названия групп RP_GROUPS и подсказка RpButton используются меню выбора рас."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/63_race_picker.lua",
+   "line": 340,
+   "text": "|cffebc56cК месту высадки|r|n|cffced4daПереносит камеру к вашему кольцу выбора расы.|r",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Названия групп RP_GROUPS и подсказка RpButton используются меню выбора рас."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 31,
+   "text": "Режим",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 34,
+   "text": "Классический",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 34,
+   "text": "Обычная игра без столиц.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 35,
+   "text": "Столицы",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 35,
+   "text": "Каждый игрок строит столицу до начала расходов.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 36,
+   "text": "Феодализм",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 36,
+   "text": "Столицы и вассалитет: атакуйте чужие столицы, чтобы сделать их владельцев своими вассалами. Обычные союзы недоступны.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 37,
+   "text": "Комбинированный",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 37,
+   "text": "Столицы и Доминация одновременно.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 38,
+   "text": "Доминация",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 38,
+   "text": "Побеждает игрок, захвативший заданную долю стратегических точек карты. Проверка прогресса — |cffffffff-domck|cffced4da.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 39,
+   "text": "Тестовый",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 39,
+   "text": "Для проверки рас. Чат-команды |cffffffff-fast|cffced4da и |cffffffff-fastoff|cffced4da включают и выключают тестовый доход.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 41,
+   "text": "Видимость",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 44,
+   "text": "Стандартная",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 44,
+   "text": "Обычный туман войны.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 45,
+   "text": "Темнота",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 45,
+   "text": "Через минуту после старта вся карта скрывается чёрной маской. Успейте выбрать место для базы.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 46,
+   "text": "Открытая",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 46,
+   "text": "Вся карта видна всем игрокам всю игру.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 48,
+   "text": "Дипломатия",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 51,
+   "text": "Свободная",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 51,
+   "text": "Союзы без ограничений по размеру.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 52,
+   "text": "Каждый сам за себя",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 52,
+   "text": "Союзы и передача ресурсов запрещены.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 53,
+   "text": "Союзы по 2",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 53,
+   "text": "В союзе не больше |cffffffff2|cffced4da игроков.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 54,
+   "text": "Союзы по 3",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 54,
+   "text": "В союзе не больше |cffffffff3|cffced4da игроков.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 56,
+   "text": "Доход",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 59,
+   "text": "Доход всех игроков снижен до |cffffffff75%|cffced4da.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 60,
+   "text": "Обычный доход.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 62,
+   "text": "Автозаказ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 72,
+   "text": "Выключен",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 72,
+   "text": "Автоматический перезаказ войск недоступен.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 73,
+   "text": "Включён",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 73,
+   "text": "Игроки смогут включить перезаказ: погибший юнит снова ставится в очередь найма.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 80,
+   "text": "Восточные королевства",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 80,
+   "text": "Восточные королевства",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 81,
+   "text": "Калимдор",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 81,
+   "text": "Калимдор",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 82,
+   "text": "Запределье",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 82,
+   "text": "Запределье",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 83,
+   "text": "Нордскол",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 83,
+   "text": "Нордскол",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 84,
+   "text": "Пандария",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 84,
+   "text": "Пандария",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 85,
+   "text": "Океания",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 85,
+   "text": "Океания и Расколотые Острова",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 86,
+   "text": "Аргус",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 86,
+   "text": "Аргус",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 226,
+   "text": "Континенты",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 226,
+   "text": "вся карта",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 233,
+   "text": "доступен",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 233,
+   "text": "закрыт",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 255,
+   "text": "Вся карта",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 256,
+   "text": "Все континенты открыты с начала игры.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 262,
+   "text": "Игра только на выбранных континентах: отметьте один или несколько. ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 263,
+   "text": "Порталы на остальные континенты закрыты.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 267,
+   "text": "Континенты",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 275,
+   "text": "Начать игру",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 276,
+   "text": "Игра начнётся через |cffffffff5|cffced4da сек.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 283,
+   "text": "+1 минута",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 284,
+   "text": "Продлевает лобби на |cffffffff60|cffced4da сек. Доступно один раз.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 297,
+   "text": "|cffb99d66До начала:|r |cffffffff",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 350,
+   "text": "Настройки игры",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua",
+   "line": 350,
+   "text": "До начала: 0:00",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Данные HP_ROWS, кнопки, подсказки и объявления панели ведущего; их вывод подтверждён HpButton/HpAnnounce/HpRefresh."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/01_core_economy.lua",
+   "line": 1238,
+   "text": "Превышен лимит. Некоторые башни сменили режим.",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/01_core_economy.lua",
+   "line": 1370,
+   "text": "Коррупция",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/01_core_economy.lua",
+   "line": 1381,
+   "text": "Дополнительно: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/01_core_economy.lua",
+   "line": 1396,
+   "text": "Доход: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/01_core_economy.lua",
+   "line": 1398,
+   "text": "Расход: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/01_core_economy.lua",
+   "line": 1400,
+   "text": "Логистика: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/01_core_economy.lua",
+   "line": 1402,
+   "text": "Юнитов: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/01_core_economy.lua",
+   "line": 1404,
+   "text": "Итого: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/01_core_economy.lua",
+   "line": 1406,
+   "text": "Древесины: ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/02_game_modes.lua",
+   "line": 369,
+   "text": "|cffd45e19Столица:|r ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/02_game_modes.lua",
+   "line": 444,
+   "text": "|cffd45e19Столица:|r ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/03_continents_diplomacy.lua",
+   "line": 139,
+   "text": "Режим континентов:|cffffff00 включен|r",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/03_continents_diplomacy.lua",
+   "line": 141,
+   "text": "|cff00ff00Итого доступны для игры: |r",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/03_continents_diplomacy.lua",
+   "line": 143,
+   "text": "Восточные королевства\\\\",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/05_common_spells.lua",
+   "line": 749,
+   "text": "^Флагман — ",
+   "classification": "technical_pattern",
+   "reason": "Шаблон gsub для снятия уже существующего префикса «Флагман —» перед формированием отображаемого имени; не переводить как отдельную подпись."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/05_common_spells.lua",
+   "line": 750,
+   "text": "|cffebc56cФлагман — ",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/14_misc_system.lua",
+   "line": 436,
+   "text": "|cffced4daВыберите расу и разместите столицу.|r",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/14_misc_system.lua",
+   "line": 438,
+   "text": "|cffced4daВыберите расу. На размещение столицы — |cffffffff15|cffced4da минут.|r",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/15_ai_portals_cities.lua",
+   "line": 186,
+   "text": "ally requires player list, e.g. ally:2,3,5-7 or ally:off:2,5",
+   "classification": "bridge_protocol_diagnostic",
+   "reason": "Ошибка разбора операции Live Agent Bridge (ally/log/числовые аргументы); диагностический ответ моста, не обычное игровое уведомление. Технический синтаксис сохраняется."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/15_ai_portals_cities.lua",
+   "line": 197,
+   "text": "bridge command requires numeric arg: ",
+   "classification": "bridge_protocol_diagnostic",
+   "reason": "Ошибка разбора операции Live Agent Bridge (ally/log/числовые аргументы); диагностический ответ моста, не обычное игровое уведомление. Технический синтаксис сохраняется."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/15_ai_portals_cities.lua",
+   "line": 200,
+   "text": "bridge target out of range: ",
+   "classification": "bridge_protocol_diagnostic",
+   "reason": "Ошибка разбора операции Live Agent Bridge (ally/log/числовые аргументы); диагностический ответ моста, не обычное игровое уведомление. Технический синтаксис сохраняется."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/15_ai_portals_cities.lua",
+   "line": 233,
+   "text": "log requires tag, e.g. log:on:AI",
+   "classification": "bridge_protocol_diagnostic",
+   "reason": "Ошибка разбора операции Live Agent Bridge (ally/log/числовые аргументы); диагностический ответ моста, не обычное игровое уведомление. Технический синтаксис сохраняется."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/15_ai_portals_cities.lua",
+   "line": 242,
+   "text": "unknown log sub-command: ",
+   "classification": "bridge_protocol_diagnostic",
+   "reason": "Ошибка разбора операции Live Agent Bridge (ally/log/числовые аргументы); диагностический ответ моста, не обычное игровое уведомление. Технический синтаксис сохраняется."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/15_ai_portals_cities.lua",
+   "line": 247,
+   "text": "unknown bridge command: ",
+   "classification": "bridge_protocol_diagnostic",
+   "reason": "Ошибка разбора операции Live Agent Bridge (ally/log/числовые аргументы); диагностический ответ моста, не обычное игровое уведомление. Технический синтаксис сохраняется."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/83_ai_brain.lua",
+   "line": 133,
+   "text": "no data",
+   "classification": "diagnostic_log_data",
+   "reason": "AiProfileDump возвращает данные профилирования для моста/логов; AiValidateRace собирает эти фрагменты в problems и передаёт BrainLogTag, AiBrainLogTagSafe — обёртка BrainLogTag. Это диагностические данные."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/83_ai_brain.lua",
+   "line": 140,
+   "text": "ms avg=",
+   "classification": "diagnostic_log_data",
+   "reason": "AiProfileDump возвращает данные профилирования для моста/логов; AiValidateRace собирает эти фрагменты в problems и передаёт BrainLogTag, AiBrainLogTagSafe — обёртка BrainLogTag. Это диагностические данные."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/83_ai_brain.lua",
+   "line": 3434,
+   "text": "no .production table",
+   "classification": "diagnostic_log_data",
+   "reason": "AiProfileDump возвращает данные профилирования для моста/логов; AiValidateRace собирает эти фрагменты в problems и передаёт BrainLogTag, AiBrainLogTagSafe — обёртка BrainLogTag. Это диагностические данные."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/83_ai_brain.lua",
+   "line": 3438,
+   "text": "no production.worker",
+   "classification": "diagnostic_log_data",
+   "reason": "AiProfileDump возвращает данные профилирования для моста/логов; AiValidateRace собирает эти фрагменты в problems и передаёт BrainLogTag, AiBrainLogTagSafe — обёртка BrainLogTag. Это диагностические данные."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/83_ai_brain.lua",
+   "line": 3440,
+   "text": "worker.id nil",
+   "classification": "diagnostic_log_data",
+   "reason": "AiProfileDump возвращает данные профилирования для моста/логов; AiValidateRace собирает эти фрагменты в problems и передаёт BrainLogTag, AiBrainLogTagSafe — обёртка BrainLogTag. Это диагностические данные."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/83_ai_brain.lua",
+   "line": 3442,
+   "text": "worker.from empty (cannot train workers)",
+   "classification": "diagnostic_log_data",
+   "reason": "AiProfileDump возвращает данные профилирования для моста/логов; AiValidateRace собирает эти фрагменты в problems и передаёт BrainLogTag, AiBrainLogTagSafe — обёртка BrainLogTag. Это диагностические данные."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/83_ai_brain.lua",
+   "line": 3450,
+   "text": "no .buildings table",
+   "classification": "diagnostic_log_data",
+   "reason": "AiProfileDump возвращает данные профилирования для моста/логов; AiValidateRace собирает эти фрагменты в problems и передаёт BrainLogTag, AiBrainLogTagSafe — обёртка BrainLogTag. Это диагностические данные."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/83_ai_brain.lua",
+   "line": 3453,
+   "text": "buildings.seed not a number",
+   "classification": "diagnostic_log_data",
+   "reason": "AiProfileDump возвращает данные профилирования для моста/логов; AiValidateRace собирает эти фрагменты в problems и передаёт BrainLogTag, AiBrainLogTagSafe — обёртка BrainLogTag. Это диагностические данные."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/83_ai_brain.lua",
+   "line": 3463,
+   "text": "buildings list empty",
+   "classification": "diagnostic_log_data",
+   "reason": "AiProfileDump возвращает данные профилирования для моста/логов; AiValidateRace собирает эти фрагменты в problems и передаёт BrainLogTag, AiBrainLogTagSafe — обёртка BrainLogTag. Это диагностические данные."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/83_ai_brain.lua",
+   "line": 3500,
+   "text": "compTarget unit ",
+   "classification": "diagnostic_log_data",
+   "reason": "AiProfileDump возвращает данные профилирования для моста/логов; AiValidateRace собирает эти фрагменты в problems и передаёт BrainLogTag, AiBrainLogTagSafe — обёртка BrainLogTag. Это диагностические данные."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/83_ai_brain.lua",
+   "line": 3501,
+   "text": " has no producer building",
+   "classification": "diagnostic_log_data",
+   "reason": "AiProfileDump возвращает данные профилирования для моста/логов; AiValidateRace собирает эти фрагменты в problems и передаёт BrainLogTag, AiBrainLogTagSafe — обёртка BrainLogTag. Это диагностические данные."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/83_ai_brain.lua",
+   "line": 3639,
+   "text": "tick fault #",
+   "classification": "diagnostic_log_data",
+   "reason": "AiProfileDump возвращает данные профилирования для моста/логов; AiValidateRace собирает эти фрагменты в problems и передаёт BrainLogTag, AiBrainLogTagSafe — обёртка BrainLogTag. Это диагностические данные."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/83_ai_brain.lua",
+   "line": 3645,
+   "text": " QUARANTINED for ",
+   "classification": "diagnostic_log_data",
+   "reason": "AiProfileDump возвращает данные профилирования для моста/логов; AiValidateRace собирает эти фрагменты в problems и передаёт BrainLogTag, AiBrainLogTagSafe — обёртка BrainLogTag. Это диагностические данные."
+  },
+  {
+   "source": "map.w3x/_lua/monolith_split/sections/84_ai_diplomat.lua",
+   "line": 113,
+   "text": "Неизвестный игрок",
+   "classification": "player_ui_data_requires_content_review",
+   "reason": "Константа или фрагмент формирования интерфейсного текста; назначение установлено, содержание и оформление ещё проверяются."
+  }
+ ]
+}

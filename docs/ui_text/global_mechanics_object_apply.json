@@ -1,0 +1,258 @@
+{
+  "ok": true,
+  "applied": true,
+  "method": "Only explicit string modifications spliced; all unrelated records/mods byte-identical",
+  "changes": {
+    "war3map.w3u": [
+      [
+        "h01O",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "h01R",
+        "utub",
+        0,
+        0
+      ],
+      [
+        "h059",
+        "utub",
+        0,
+        0
+      ]
+    ],
+    "war3map.w3q": [
+      [
+        "RDr1",
+        "gub1",
+        1,
+        0
+      ],
+      [
+        "RDr2",
+        "gub1",
+        1,
+        0
+      ],
+      [
+        "RDr3",
+        "gub1",
+        1,
+        0
+      ],
+      [
+        "RDr4",
+        "gub1",
+        1,
+        0
+      ],
+      [
+        "RDr5",
+        "gub1",
+        1,
+        0
+      ]
+    ],
+    "war3map.w3a": [
+      [
+        "A04T",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "ADr2",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "ADr3",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "ADr4",
+        "aub1",
+        1,
+        0
+      ],
+      [
+        "ADr5",
+        "aub1",
+        1,
+        0
+      ]
+    ],
+    "war3mapSkin.w3a": [
+      [
+        "A04T",
+        "aub1",
+        1,
+        0
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "variant": "SD",
+      "rawcode": "h059",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h01O",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "h01R",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h059",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h01O",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "h01R",
+      "field": "ubertip",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "RDr1",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "RDr2",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "RDr3",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "RDr4",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "RDr5",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "RDr1",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "RDr2",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "RDr3",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "RDr4",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "RDr5",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "ADr2",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "ADr3",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "ADr4",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "ADr5",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "SD",
+      "rawcode": "A04T",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "ADr2",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "ADr3",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "ADr4",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "ADr5",
+      "field": "ubertip1",
+      "exact_match": true
+    },
+    {
+      "variant": "HD",
+      "rawcode": "A04T",
+      "field": "ubertip1",
+      "exact_match": true
+    }
+  ],
+  "wts_unchanged": true
+}

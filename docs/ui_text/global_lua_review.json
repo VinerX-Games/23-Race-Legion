@@ -1,0 +1,468 @@
+{
+ "scope": "Перевод всех 98 реплик характеров и 14 прямых сообщений/причин дипломата; оформление имён и системных сообщений проверяется в diff.",
+ "sources": {
+  "map.w3x/_lua/monolith_split/sections/84_ai_diplomat.lua": {
+   "before_translation_sha256": "7b0e6e76c4d81acd518da3ffa88a808af6fe5dfb0d8c035e2a168081b2e72c80",
+   "after_sha256": "51024ad801fc9ab7adb2c87f8e12680e38e32dca33d446d35879bf8f01e32966"
+  }
+ },
+ "translations": [
+  {
+   "before": "Together we shall prosper.",
+   "after": "Вместе мы будем процветать."
+  },
+  {
+   "before": "I sense a fruitful partnership ahead.",
+   "after": "Нас ждёт плодотворное сотрудничество."
+  },
+  {
+   "before": "Let us build bridges, not walls.",
+   "after": "Давайте строить мосты, а не стены."
+  },
+  {
+   "before": "An alliance of mutual benefit.",
+   "after": "Этот союз принесёт пользу нам обоим."
+  },
+  {
+   "before": "A new chapter of friendship begins!",
+   "after": "Начинается новая глава нашей дружбы!"
+  },
+  {
+   "before": "Together, nothing can stop us.",
+   "after": "Вместе нас ничто не остановит."
+  },
+  {
+   "before": "Our combined strength will be legendary.",
+   "after": "О нашей общей силе будут слагать легенды."
+  },
+  {
+   "before": "I welcome you as a true friend.",
+   "after": "Приветствую тебя, верный друг."
+  },
+  {
+   "before": "Perhaps another time, another place.",
+   "after": "Возможно, в другой раз и в другом месте."
+  },
+  {
+   "before": "The road ahead parts here.",
+   "after": "Здесь наши пути расходятся."
+  },
+  {
+   "before": "Our purposes no longer align.",
+   "after": "Наши цели больше не совпадают."
+  },
+  {
+   "before": "Farewell, old friend. May we meet again in peace.",
+   "after": "Прощай, старый друг. Надеюсь, мы встретимся с миром."
+  },
+  {
+   "before": "A gift from a friend. No strings attached.",
+   "after": "Подарок от друга. Без всяких условий."
+  },
+  {
+   "before": "For your prosperity — and ours.",
+   "after": "Ради твоего процветания — и нашего."
+  },
+  {
+   "before": "Share and share alike!",
+   "after": "Поделимся по-братски!"
+  },
+  {
+   "before": "Trade caravans report all is well.",
+   "after": "Торговые караваны сообщают, что всё спокойно."
+  },
+  {
+   "before": "The markets are stable. A good sign.",
+   "after": "Рынки стабильны. Хороший знак."
+  },
+  {
+   "before": "Diplomacy is the greatest weapon.",
+   "after": "Дипломатия — величайшее оружие."
+  },
+  {
+   "before": "We are under siege! Honoured allies, we need your aid!",
+   "after": "Мы в осаде! Дорогие союзники, нам нужна помощь!"
+  },
+  {
+   "before": "The enemy is at our gates! Any help is welcome!",
+   "after": "Враг у наших ворот! Будем рады любой помощи!"
+  },
+  {
+   "before": "Our interests align. Let us act on it.",
+   "after": "Наши интересы совпадают. Пора действовать."
+  },
+  {
+   "before": "The enemy of my enemy... you know the rest.",
+   "after": "Враг моего врага... продолжение ты знаешь."
+  },
+  {
+   "before": "A temporary coalition. Nothing more.",
+   "after": "Временный союз. Не более того."
+  },
+  {
+   "before": "A strategic decision. Do not make me regret it.",
+   "after": "Стратегическое решение. Не заставляй меня пожалеть о нём."
+  },
+  {
+   "before": "Very well. We stand together — for now.",
+   "after": "Хорошо. Пока мы на одной стороне."
+  },
+  {
+   "before": "This alliance serves us both. Remember that.",
+   "after": "Этот союз выгоден нам обоим. Помни об этом."
+  },
+  {
+   "before": "The calculation has changed. We part ways.",
+   "after": "Расчёты изменились. Наши пути расходятся."
+  },
+  {
+   "before": "Circumstances no longer favour this union.",
+   "after": "Обстоятельства больше не благоприятствуют нашему союзу."
+  },
+  {
+   "before": "Our priorities have shifted. Farewell.",
+   "after": "Наши приоритеты изменились. Прощай."
+  },
+  {
+   "before": "Strategic resources. Use them wisely.",
+   "after": "Стратегические ресурсы. Распорядись ими разумно."
+  },
+  {
+   "before": "A calculated investment.",
+   "after": "Продуманное вложение."
+  },
+  {
+   "before": "Spend it well. I expect results.",
+   "after": "Потрать с умом. Я жду результатов."
+  },
+  {
+   "before": "The balance of power is... acceptable for now.",
+   "after": "Соотношение сил... пока приемлемое."
+  },
+  {
+   "before": "We watch. We wait. We calculate.",
+   "after": "Наблюдаем. Ждём. Рассчитываем."
+  },
+  {
+   "before": "Every alliance is a transaction.",
+   "after": "Любой союз — это сделка."
+  },
+  {
+   "before": "We are under assault. Any capable hands, rally to us!",
+   "after": "Нас атакуют! Все, кто способен сражаться, к нам!"
+  },
+  {
+   "before": "Defensive protocols engaged. Allies, your turn.",
+   "after": "Оборона подготовлена. Союзники, теперь ваш ход."
+  },
+  {
+   "before": "Trust me... for now.",
+   "after": "Доверься мне... пока что."
+  },
+  {
+   "before": "An alliance of convenience, shall we say?",
+   "after": "Назовём это союзом по расчёту?"
+  },
+  {
+   "before": "I have a proposition you cannot refuse.",
+   "after": "У меня есть предложение, от которого ты не сможешь отказаться."
+  },
+  {
+   "before": "Ah, a new... friend. How delightful.",
+   "after": "А, новый... друг. Как приятно."
+  },
+  {
+   "before": "Yes, yes. Together we shall conquer!",
+   "after": "Да-да. Вместе мы всех покорим!"
+  },
+  {
+   "before": "Your trust is noted. I shall use it... wisely.",
+   "after": "Твоё доверие принято. Я воспользуюсь им... разумно."
+  },
+  {
+   "before": "Did you really think we were friends?",
+   "after": "Ты и вправду считал нас друзьями?"
+  },
+  {
+   "before": "Your usefulness has... expired.",
+   "after": "Ты больше... не нужен."
+  },
+  {
+   "before": "A knife in the back is still a weapon.",
+   "after": "Нож в спину — тоже оружие."
+  },
+  {
+   "before": "Nothing personal. Just business.",
+   "after": "Ничего личного. Только дело."
+  },
+  {
+   "before": "Take it. The price comes later.",
+   "after": "Бери. Расплатишься потом."
+  },
+  {
+   "before": "A token of my... appreciation.",
+   "after": "Знак моей... признательности."
+  },
+  {
+   "before": "The strong prey on the weak. It is the way of things.",
+   "after": "Сильные пожирают слабых. Так устроен мир."
+  },
+  {
+   "before": "Opportunity is everywhere. One must simply seize it.",
+   "after": "Возможности повсюду. Нужно лишь ими воспользоваться."
+  },
+  {
+   "before": "Loyalty is a currency. Spend it freely, save it wisely.",
+   "after": "Верность — это валюта. Трать щедро, копи с умом."
+  },
+  {
+   "before": "Imbeciles! They dare strike at us!",
+   "after": "Глупцы! Они посмели напасть на нас!"
+  },
+  {
+   "before": "They will pay for this insolence!",
+   "after": "Они заплатят за эту дерзость!"
+  },
+  {
+   "before": "We have no need of outsiders.",
+   "after": "Нам не нужны чужаки."
+  },
+  {
+   "before": "Your kind is not welcome here.",
+   "after": "Таким, как ты, здесь не рады."
+  },
+  {
+   "before": "Do not waste your breath.",
+   "after": "Не трать слова попусту."
+  },
+  {
+   "before": "... unexpected, but acceptable.",
+   "after": "...Неожиданно, но приемлемо."
+  },
+  {
+   "before": "Do not overstep your bounds.",
+   "after": "Не переходи границы дозволенного."
+  },
+  {
+   "before": "As it was meant to be.",
+   "after": "Всё идёт как должно."
+  },
+  {
+   "before": "The solitude returns. Good.",
+   "after": "Мы снова одни. Хорошо."
+  },
+  {
+   "before": "Do not expect gratitude.",
+   "after": "Не жди благодарности."
+  },
+  {
+   "before": "Do not expect this again.",
+   "after": "Не рассчитывай на повторение."
+  },
+  {
+   "before": "The outside world is irrelevant.",
+   "after": "Внешний мир не имеет значения."
+  },
+  {
+   "before": "Isolation is our greatest strength.",
+   "after": "Наша сила — в уединении."
+  },
+  {
+   "before": "Intruders! Defend the brood at all costs!",
+   "after": "Чужаки! Защитим рой любой ценой!"
+  },
+  {
+   "before": "Our lands are being violated!",
+   "after": "Вторжение на наши земли!"
+  },
+  {
+   "before": "Honour calls us to stand together.",
+   "after": "Честь зовёт нас встать плечом к плечу."
+  },
+  {
+   "before": "A bond forged in trust is unbreakable.",
+   "after": "Союз, скреплённый доверием, нерушим."
+  },
+  {
+   "before": "Let our oath be eternal.",
+   "after": "Пусть наша клятва будет вечной."
+  },
+  {
+   "before": "By my honour, we are now one.",
+   "after": "Клянусь честью, теперь мы едины."
+  },
+  {
+   "before": "I swear to defend our alliance with my life.",
+   "after": "Клянусь жизнью защищать наш союз."
+  },
+  {
+   "before": "Till the end of days, we stand united.",
+   "after": "До конца времён мы будем вместе."
+  },
+  {
+   "before": "A heavy decision, but a necessary one.",
+   "after": "Тяжёлое решение, но необходимое."
+  },
+  {
+   "before": "Nothing lasts forever. Not even honour.",
+   "after": "Ничто не вечно. Даже честь."
+  },
+  {
+   "before": "I release you from our bond.",
+   "after": "Я освобождаю тебя от нашей клятвы."
+  },
+  {
+   "before": "For the cause. Always.",
+   "after": "Ради общего дела. Всегда."
+  },
+  {
+   "before": "My sword, my gold — all for our covenant.",
+   "after": "Мой меч и моё золото — всё ради нашего союза."
+  },
+  {
+   "before": "Vigilance and honour guide our path.",
+   "after": "Бдительность и честь указывают нам путь."
+  },
+  {
+   "before": "True strength comes from unity.",
+   "after": "Истинная сила — в единстве."
+  },
+  {
+   "before": "We remember every debt, every kindness.",
+   "after": "Мы помним каждый долг и каждое доброе дело."
+  },
+  {
+   "before": "To arms, brothers! The enemy approaches!",
+   "after": "К оружию, братья! Враг приближается!"
+  },
+  {
+   "before": "Our sacred lands are under threat! Rally to us!",
+   "after": "Наши священные земли под угрозой! Все на защиту!"
+  },
+  {
+   "before": "Let us hunt together.",
+   "after": "Будем охотиться вместе."
+  },
+  {
+   "before": "Strength in numbers. Always.",
+   "after": "Наша сила — в численности. Всегда."
+  },
+  {
+   "before": "An alliance could benefit us both.",
+   "after": "Союз может принести пользу нам обоим."
+  },
+  {
+   "before": "A worthy partner. Let us begin.",
+   "after": "Достойный союзник. Начнём."
+  },
+  {
+   "before": "Together we are stronger.",
+   "after": "Вместе мы сильнее."
+  },
+  {
+   "before": "I welcome this new alliance.",
+   "after": "Приветствую наш новый союз."
+  },
+  {
+   "before": "The time has come to part ways.",
+   "after": "Пришла пора расстаться."
+  },
+  {
+   "before": "We walk our own path now.",
+   "after": "Теперь мы идём своим путём."
+  },
+  {
+   "before": "Our alliance is no longer needed.",
+   "after": "Наш союз больше не нужен."
+  },
+  {
+   "before": "Take it. You need it more.",
+   "after": "Бери. Тебе нужнее."
+  },
+  {
+   "before": "A fair exchange for a true ally.",
+   "after": "Справедливый обмен для верного союзника."
+  },
+  {
+   "before": "The wilds are quiet today.",
+   "after": "Сегодня в диких землях тихо."
+  },
+  {
+   "before": "The fire crackles. All is calm.",
+   "after": "Костёр потрескивает. Всё спокойно."
+  },
+  {
+   "before": "Enemies at the gates! All warriors, defend!",
+   "after": "Враги у ворот! Все воины, к обороне!"
+  },
+  {
+   "before": "We are beset! Any aid is welcome!",
+   "after": "Нас окружили! Будем рады любой помощи!"
+  },
+  {
+   "before": "I propose an alliance.",
+   "after": "Предлагаю заключить союз."
+  },
+  {
+   "before": "I accept your alliance.",
+   "after": "Принимаю твоё предложение союза."
+  },
+  {
+   "before": "We share a common enemy. Let us unite.",
+   "after": "У нас общий враг. Объединим силы."
+  },
+  {
+   "before": "We face the same threat. An alliance would serve us both.",
+   "after": "Нам угрожает один враг. Союз поможет нам обоим."
+  },
+  {
+   "before": "You are no longer relevant.",
+   "after": "В наших отношениях больше нет смысла."
+  },
+  {
+   "before": "You have grown too weak to be useful.",
+   "after": "Ты слишком ослаб, чтобы приносить пользу."
+  },
+  {
+   "before": "Our common enemy is gone. This alliance no longer serves me.",
+   "after": "Нашего общего врага больше нет. Этот союз мне больше не нужен."
+  },
+  {
+   "before": "This alliance has run its course.",
+   "after": "Наш союз исчерпал себя."
+  },
+  {
+   "before": "Your trust was a mistake.",
+   "after": "Зря ты мне доверился."
+  },
+  {
+   "before": "Hold the line. This should help.",
+   "after": "Держи оборону. Это должно помочь."
+  },
+  {
+   "before": "You need this more than I do.",
+   "after": "Тебе это нужнее, чем мне."
+  },
+  {
+   "before": "A token of our alliance.",
+   "after": "Знак нашего союза."
+  },
+  {
+   "before": "I already have enough allies. Perhaps another time.",
+   "after": "У меня уже достаточно союзников. Возможно, в другой раз."
+  },
+  {
+   "before": "I am not interested in an alliance right now.",
+   "after": "Сейчас я не заинтересован в союзе."
+  }
+ ],
+ "formatting_notes": "Отображаемое имя игрока вместо внутреннего ключа расы; повторный индекс слота не добавляется, имя бота уже содержит номер. Подписи и тело сообщения используют утверждённую палитру.",
+ "verification": {
+  "rp_table_structure_and_entry_counts_unchanged": true,
+  "rp_entries": 98,
+  "warcraft_random_calls_unchanged": true,
+  "baseline": "git HEAD:map.w3x/_lua/monolith_split/sections/84_ai_diplomat.lua",
+  "baseline_source_sha256": "97594887ff310b36db8520e80bdf1df194b2442497f1326375bd801c13ac27b3",
+  "current_source_sha256": "51024ad801fc9ab7adb2c87f8e12680e38e32dca33d446d35879bf8f01e32966"
+ }
+}

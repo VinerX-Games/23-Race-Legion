@@ -129,6 +129,7 @@ end
 -- Нативные фреймы консоли только скрываются, без увода за экран: их исходные
 -- привязки не прочитать, и после возврата они перекрывали игровое поле.
 function StandardUISetVisible(show)
+	StandardUIHidden = not show
 	BlzHideOriginFrames(not show)
 	local f = BlzGetFrameByName("ConsoleUIBackdrop", 0)
 	if f ~= nil then BlzFrameSetVisible(f, show) end
@@ -140,6 +141,21 @@ function StandardUISetVisible(show)
 	if f ~= nil then BlzFrameSetVisible(f, show) end
 	f = BlzGetFrameByName("UpperButtonBarAlliesButton", 0)
 	if f ~= nil then BlzFrameSetVisible(f, show) end
+	-- Рамки миникарты и командной карты, а также ячейки-родители командных кнопок:
+	-- невидимые SimpleFrame-ячейки перехватывают клики даже без кнопок.
+	f = BlzGetFrameByName("MinimapBorder", 0)
+	if f ~= nil then BlzFrameSetVisible(f, show) end
+	f = BlzGetFrameByName("CommandBorder", 0)
+	if f ~= nil then BlzFrameSetVisible(f, show) end
+	f = BlzGetFrameByName("CommandBarFrame", 0)
+	if f ~= nil then BlzFrameSetVisible(f, show) end
+	-- Выбор расы после этого сам показывает миникарту в правом верхнем углу.
+	f = BlzGetFrameByName("MiniMapFrame", 0)
+	if f ~= nil then BlzFrameSetVisible(f, show) end
+	for i = 0, 11 do
+		f = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, i)
+		if f ~= nil and BlzFrameGetParent(f) ~= nil then BlzFrameSetVisible(BlzFrameGetParent(f), show) end
+	end
 	if IncomeUISetVisible ~= nil then IncomeUISetVisible(show) end
 	if CustomHudSetVisible ~= nil then CustomHudSetVisible(show) end
 end
@@ -269,6 +285,9 @@ function RacePicker_Create()
 	rpRoot = BlzCreateFrameByType("FRAME", "RacePickRoot", parent, "", 0)
 	BlzFrameSetSize(rpRoot, 0.001, 0.001)
 	BlzFrameSetAbsPoint(rpRoot, FRAMEPOINT_BOTTOMLEFT, 0.0, 0.0)
+	-- Над всеми фреймами интерфейса (приветствие — 10, панель хоста — 5): иначе нативные
+	-- фреймы над командной картой перехватывают клики по иконкам справа.
+	BlzFrameSetLevel(rpRoot, 100)
 
 	-- Раскладка: группы по два ряда; нечётные — нижний ряд сдвинут на пол-иконки.
 	local groups, total = {}, 0
