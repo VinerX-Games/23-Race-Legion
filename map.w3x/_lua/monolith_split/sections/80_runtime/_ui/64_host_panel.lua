@@ -28,38 +28,38 @@ local HP_BTN = "ReplaceableTextures\\CommandButtons\\"
 -- Строки настроек. Радио-строка: get() возвращает текущее значение, set(v) его
 -- задаёт; у опции { значение, название, описание, иконка }.
 local HP_ROWS = {
-	{ "Режим",
+	{ "lua.auto_3f53fb873461737d",
 		get = function() return udg_GameMode end,
 		set = function(v) udg_GameMode = v end,
-		{ 0, "Классический", "Обычная игра без столиц.", HP_BTN .. "BTNSorceressAdept.blp" },
-		{ 1, "Столицы", "Каждый игрок строит столицу до начала расходов.", HP_BTN .. "BTNCastle.blp" },
-		{ 2, "Феодализм", "Столицы и вассалитет: атакуйте чужие столицы, чтобы сделать их владельцев своими вассалами. Обычные союзы недоступны.", HP_BTN .. "BTNHelmutPurple.blp" },
-		{ 5, "Комбинированный", "Столицы и Доминация одновременно.", HP_BTN .. "BTNAltarOfKings.blp" },
-		{ 3, "Доминация", "Побеждает игрок, захвативший заданную долю стратегических точек карты. Проверка прогресса — |cffffffff-domck|cffced4da.", HP_BTN .. "BTNHumanBarracks.blp" },
-		{ 4, "Тестовый", "Для проверки рас. Чат-команды |cffffffff-fast|cffced4da и |cffffffff-fastoff|cffced4da включают и выключают тестовый доход.", HP_BTN .. "BTNScrollOfHaste.blp" },
+		{ 0, "lua.auto_a39ad47c922226a5", "lua.auto_ac4d96817fdf1af9", HP_BTN .. "BTNSorceressAdept.blp" },
+		{ 1, "lua.auto_7552614d66b8a7a1", "lua.auto_61a0bbfb1890c9be", HP_BTN .. "BTNCastle.blp" },
+		{ 2, "lua.auto_61379f15167d5f16", "lua.auto_ec0079fe99f86065", HP_BTN .. "BTNHelmutPurple.blp" },
+		{ 5, "lua.auto_26dd9e3aae5c8d4c", "lua.auto_50f00368e762f6ed", HP_BTN .. "BTNAltarOfKings.blp" },
+		{ 3, "lua.auto_1287b176ee3a0776", "lua.auto_012084117924e404", HP_BTN .. "BTNHumanBarracks.blp" },
+		{ 4, "lua.auto_55cbf0812cc59fa5", "lua.auto_7ceabbc5fbaf6343", HP_BTN .. "BTNScrollOfHaste.blp" },
 	},
-	{ "Видимость",
+	{ "lua.auto_fac7927ccc7ca958",
 		get = function() return udg_SET_VISIBLE_MODE end,
 		set = function(v) udg_SET_VISIBLE_MODE = v end,
-		{ 0, "Стандартная", "Обычный туман войны.", HP_BTN .. "BTNUndeadShrine.blp" },
-		{ 1, "Темнота", "Через минуту после старта вся карта скрывается чёрной маской. Успейте выбрать место для базы.", HP_BTN .. "BTNSentinel.blp" },
-		{ 2, "Открытая", "Вся карта видна всем игрокам всю игру.", HP_BTN .. "BTNFarSight.blp" },
+		{ 0, "lua.auto_509c0a93349416ca", "lua.auto_3e90a8f5c00c5ff7", HP_BTN .. "BTNUndeadShrine.blp" },
+		{ 1, "lua.auto_4a978bae23429c8f", "lua.auto_d4c33d954fc31e3b", HP_BTN .. "BTNSentinel.blp" },
+		{ 2, "lua.auto_1df09de4504fc344", "lua.auto_ddfc93285a52d9d9", HP_BTN .. "BTNFarSight.blp" },
 	},
-	{ "Дипломатия",
+	{ "lua.auto_78d132d664cd635b",
 		get = function() return DipMode end,
 		set = function(v) DipMode = v end,
-		{ 0, "Свободная", "Союзы без ограничений по размеру.", HP_BTN .. "BTNHumanCaptureFlag.blp" },
-		{ 1, "Каждый сам за себя", "Союзы и передача ресурсов запрещены.", HP_BTN .. "BTNAttack.blp" },
-		{ 2, "Союзы по 2", "В союзе не больше |cffffffff2|cffced4da игроков.", HP_BTN .. "BTNOrcCaptureFlag.blp" },
-		{ 3, "Союзы по 3", "В союзе не больше |cffffffff3|cffced4da игроков.", HP_BTN .. "BTNNightElfCaptureFlag.blp" },
+		{ 0, "lua.auto_65b08c1f055c0a1a", "lua.auto_78185876b7938ca9", HP_BTN .. "BTNHumanCaptureFlag.blp" },
+		{ 1, "lua.auto_722b5b8c030fcea9", "lua.auto_c7a2d35d77aa2938", HP_BTN .. "BTNAttack.blp" },
+		{ 2, "lua.auto_ac8a4d534efd4fc8", "lua.auto_d1cca99d19051b82", HP_BTN .. "BTNOrcCaptureFlag.blp" },
+		{ 3, "lua.auto_9693fa514a0642f5", "lua.auto_d8d87791362fbe1a", HP_BTN .. "BTNNightElfCaptureFlag.blp" },
 	},
-	{ "Доход",
+	{ "lua.auto_384d916bbcef012f",
 		get = function() return IncomeMod end,
 		set = function(v) IncomeMod = v end,
-		{ 0.75, "×0.75", "Доход всех игроков снижен до |cffffffff75%|cffced4da.", HP_BTN .. "BTNPillage.blp" },
-		{ 1, "×1.00", "Обычный доход.", HP_BTN .. "BTNChestOfGold.blp" },
+		{ 0.75, "×0.75", "lua.auto_39613b8bfff3e719", HP_BTN .. "BTNPillage.blp" },
+		{ 1, "×1.00", "lua.auto_10f79199643a1472", HP_BTN .. "BTNChestOfGold.blp" },
 	},
-	{ "Автозаказ",
+	{ "lua.auto_bb45d8092581d222",
 		get = function() return TotalProduction end,
 		set = function(v)
 			if v then
@@ -69,21 +69,21 @@ local HP_ROWS = {
 				for i = 0, 22 do SetPlayerAbilityAvailable(Player(i), FourCC('A1KH'), false) end
 			end
 		end,
-		{ false, "Выключен", "Автоматический перезаказ войск недоступен.", HP_BTN .. "BTNCancel.blp" },
-		{ true, "Включён", "Игроки смогут включить перезаказ: погибший юнит снова ставится в очередь найма.", HP_BTN .. "BTNRallyPoint.blp" },
+		{ false, "lua.auto_5a577d90566052be", "lua.auto_db448c0d871437a0", HP_BTN .. "BTNCancel.blp" },
+		{ true, "lua.auto_0b8162990567631a", "lua.auto_c48a1b9379356fa5", HP_BTN .. "BTNRallyPoint.blp" },
 	},
 }
 
 -- Континенты: индекс в udg_Continents, название, полное название, иконка.
 -- udg_Continents[0] = 0 — вся карта.
 local HP_CONTINENTS = {
-	{ 1, "Восточные королевства", "Восточные королевства", "CommonIcons\\PASBTN_CONT_EK.blp" },
-	{ 2, "Калимдор", "Калимдор", "CommonIcons\\PASBTN_CONT_Kalim.blp" },
-	{ 3, "Запределье", "Запределье", "CommonIcons\\PASBTN_CONT_Outland.blp" },
-	{ 4, "Нордскол", "Нордскол", "CommonIcons\\PASBTN_CONT_Nord.blp" },
-	{ 5, "Пандария", "Пандария", "CommonIcons\\PASBTN_CONT_Pandaria.blp" },
-	{ 7, "Океания", "Океания и Расколотые Острова", "CommonIcons\\PASBTN_CONT_Okeania.blp" },
-	{ 6, "Аргус", "Аргус", "CommonIcons\\PASBTN_CONT_Argus.blp" },
+	{ 1, "lua.auto_88897d593739ee25", "lua.auto_88897d593739ee25", "CommonIcons\\PASBTN_CONT_EK.blp" },
+	{ 2, "lua.auto_f98207a144b1480b", "lua.auto_f98207a144b1480b", "CommonIcons\\PASBTN_CONT_Kalim.blp" },
+	{ 3, "lua.auto_ad45a7d12d975f7d", "lua.auto_ad45a7d12d975f7d", "CommonIcons\\PASBTN_CONT_Outland.blp" },
+	{ 4, "lua.auto_1d9ba41af9bd8982", "lua.auto_1d9ba41af9bd8982", "CommonIcons\\PASBTN_CONT_Nord.blp" },
+	{ 5, "lua.auto_91cf723beb3c0f96", "lua.auto_91cf723beb3c0f96", "CommonIcons\\PASBTN_CONT_Pandaria.blp" },
+	{ 7, "lua.auto_83104b113adcbc77", "lua.auto_a7e7c6599d14a0cb", "CommonIcons\\PASBTN_CONT_Okeania.blp" },
+	{ 6, "lua.auto_9a0f6ad9710e2500", "lua.auto_9a0f6ad9710e2500", "CommonIcons\\PASBTN_CONT_Argus.blp" },
 }
 local HP_ALL_MAP_ICON = HP_BTN .. "BTN_CONT_All.blp"
 
@@ -97,7 +97,7 @@ local function HpIsHost(p)
 end
 
 local function HpAnnounce(what, value)
-	DisplayTimedTextToForce(GetPlayersAll(), 6, "|cffb99d66НАСТРОЙКИ:|cffced4da " .. what
+	DisplayTimedTextToForce(GetPlayersAll(), 6, Loc("lua.auto_108968b5be7d38b0") .. what
 		.. " — |cffebc56c" .. value .. "|r")
 end
 
@@ -223,14 +223,14 @@ end
 local function HpContinentsAll()
 	udg_Continents[0] = 0
 	for i = 1, 15 do udg_Continents[i] = 0 end
-	HpAnnounce("Континенты", "вся карта")
+	HpAnnounce(Loc("lua.auto_4befbe5b117f5dc0"), Loc("lua.auto_b9cc9f71c3cb1e73"))
 end
 
 local function HpContinentToggle(c)
 	local on = udg_Continents[c[1]] ~= 1
 	udg_Continents[c[1]] = on and 1 or 0
 	udg_Continents[0] = HpContinentsAny() and 1 or 0
-	HpAnnounce(c[3], on and "доступен" or "закрыт")
+	HpAnnounce(Loc(c[3]), on and Loc("lua.auto_a5de79ca324d2f35") or Loc("lua.auto_6f4f17fc7201101f"))
 end
 
 -- Все строки панели в порядке показа: { title, options = { opt, ... } }.
@@ -241,30 +241,30 @@ local function HpLayoutRows()
 		local opts = {}
 		for i = 2, #row do
 			local o = row[i]
-			opts[#opts + 1] = { name = o[2], tip = o[3], icon = o[4],
+				opts[#opts + 1] = { name = Loc(o[2]), tip = Loc(o[3]), icon = o[4],
 				selected = function() return row.get() == o[1] end,
 				click = function()
 					if row.get() == o[1] then return end
 					row.set(o[1])
-					HpAnnounce(row[1], o[2])
+					HpAnnounce(Loc(row[1]), Loc(o[2]))
 				end }
 		end
-		rows[#rows + 1] = { title = row[1], options = opts }
+		rows[#rows + 1] = { title = Loc(row[1]), options = opts }
 		-- Континенты — сразу после режима.
 		if r == 1 then
-			local cont = { { name = "Вся карта", icon = HP_ALL_MAP_ICON,
-				tip = "Все континенты открыты с начала игры.",
+			local cont = { { name = Loc("lua.auto_245f55d3c204ee69"), icon = HP_ALL_MAP_ICON,
+				tip = Loc("lua.auto_b6ddb9708bc19b8b"),
 				selected = function() return udg_Continents[0] ~= 1 end,
 				click = function() if udg_Continents[0] == 1 then HpContinentsAll() end end } }
 			for i = 1, #HP_CONTINENTS do
 				local c = HP_CONTINENTS[i]
-				cont[#cont + 1] = { name = c[2], title = c[3], icon = c[4],
-					tip = "Игра только на выбранных континентах: отметьте один или несколько. "
-						.. "Порталы на остальные континенты закрыты.",
+				cont[#cont + 1] = { name = Loc(c[2]), title = Loc(c[3]), icon = c[4],
+					tip = Loc("lua.auto_ee27e733524ef7b2")
+						.. Loc("lua.auto_bf312df3ad8c8ee7"),
 					selected = function() return udg_Continents[0] == 1 and udg_Continents[c[1]] == 1 end,
 					click = function() HpContinentToggle(c) end }
 			end
-			rows[#rows + 1] = { title = "Континенты", options = cont }
+			rows[#rows + 1] = { title = Loc("lua.auto_4befbe5b117f5dc0"), options = cont }
 		end
 	end
 	return rows
@@ -272,29 +272,29 @@ end
 
 local function HpLobbyButtons()
 	return {
-		{ name = "Начать игру", icon = "CommonIcons\\BTNTimeStop.blp",
-			tip = "Игра начнётся через |cffffffff5|cffced4da сек.",
+		{ name = Loc("lua.auto_28f26716a4cca51d"), icon = "CommonIcons\\BTNTimeStop.blp",
+			tip = Loc("lua.auto_5c617b8361f535c3"),
 			click = function()
 				if TimerGetRemaining(udg_LobbyTime) > 5.0 then
 					TimerStart(udg_LobbyTime, 5.00, false, nil)
-					DisplayTimedTextToForce(GetPlayersAll(), 6, "|cffb99d66ЛОББИ:|cffced4da Хост начинает игру через |cffffffff5|cffced4da сек.|r")
+					DisplayTimedTextToForce(GetPlayersAll(), 6, Loc("lua.auto_49f42b76e1fe7b33"))
 				end
 			end },
-		{ name = "+1 минута", icon = "CommonIcons\\BTNTimeSpell.blp",
-			tip = "Продлевает лобби на |cffffffff60|cffced4da сек. Доступно один раз.",
+		{ name = Loc("lua.auto_9df8266469c2c1aa"), icon = "CommonIcons\\BTNTimeSpell.blp",
+			tip = Loc("lua.auto_9f56ccd4169ff595"),
 			click = function()
 				if not IsTriggerEnabled(gg_trg_AddMinute) then return end
 				TimerStart(udg_LobbyTime, TimerGetRemaining(udg_LobbyTime) + 60.00, false, nil)
 				DisableTrigger(gg_trg_AddMinute)
 				FrameSetShown(hpMinute, false)
-				DisplayTimedTextToForce(GetPlayersAll(), 6, "|cffb99d66ЛОББИ:|cffced4da Хост продлил лобби на |cffffffff1|cffced4da минуту.|r")
+				DisplayTimedTextToForce(GetPlayersAll(), 6, Loc("lua.auto_514bbe15504ed8e0"))
 			end },
 	}
 end
 
 local function HpTimeText()
 	local s = R2I(TimerGetRemaining(udg_LobbyTime) + 0.99)
-	return "|cffb99d66До начала:|r |cffffffff" .. (s // 60) .. ":" .. string.format("%02d", s % 60) .. "|r"
+	return Loc("lua.auto_7192876cf690ad66") .. (s // 60) .. ":" .. string.format("%02d", s % 60) .. "|r"
 end
 
 local function HpTickFn()
@@ -347,7 +347,7 @@ function HostPanel_Open()
 	local lobbyW = 0
 	for i = 1, #lobby do lobbyW = math.max(lobbyW, HpButtonWidth(lobby[i].name)) end
 	lobbyW = lobbyW + 0.03
-	local headW = HpTextWidth("Настройки игры") * 1.4 + HpTextWidth("До начала: 0:00") + 0.03
+	local headW = HpTextWidth(Loc("lua.auto_14bcc1b1cb897657")) * 1.4 + HpTextWidth(Loc("lua.auto_7a0bc2f02438e548")) + 0.03
 	local innerW = math.max(labelW + gridW, lobbyW * 2 + HP_GAP, headW)
 	local width = innerW + HP_PAD * 2
 	local left = 0.4 - width / 2
@@ -366,7 +366,7 @@ function HostPanel_Open()
 	local title = BlzCreateFrame("HudTitle", hpRoot, 0, id)
 	BlzFrameSetSize(title, innerW / 2, 0.02)
 	HpPlace(title, FRAMEPOINT_TOPLEFT, left + HP_PAD, y)
-	BlzFrameSetText(title, "|cffebc56cНастройки игры|r")
+	BlzFrameSetText(title, Loc("lua.auto_b4dea7c8121d6c2d"))
 	BlzFrameSetEnable(title, false)
 	hpTime = BlzCreateFrame("HudBody", hpRoot, 0, id)
 	BlzFrameSetSize(hpTime, innerW / 2, 0.02)

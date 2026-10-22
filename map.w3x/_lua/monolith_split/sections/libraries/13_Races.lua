@@ -244,7 +244,7 @@ function startBloodElves(pi)
 	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
 	NumberSet(pi, FourCC('h04K'), 8)
 	NumberSet(pi, FourCC('h04C'), 1)
-	SetPlayerName(Player(pi), "Эльфы Крови (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_1fdb1a6d1ffc67b3") .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "BE"
 	TriggerExecute(gg_trg_BloodElvesOn)
 	AiRace[pi] = "BloodElves"
@@ -904,7 +904,7 @@ function startScarlet(pi)
 
 	NumberSet(pi, FourCC('h014'), 8)
 	NumberSet(pi, FourCC('h05U'), 1)
-	SetPlayerName(Player(pi), "Алый Орден (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_1d8bf782f772edaa") .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "AO"
 	
 	AiRace[pi] = "Scarlet"
@@ -1548,7 +1548,7 @@ function startGoblins(pi)
 
 	NumberSet(pi, FourCC('n00V'), 8)
 	NumberSet(pi, FourCC('h070'), 1)
-	SetPlayerName(Player(pi), "Картель (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_dfa7051e5ad80179") .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "GB"
 	TriggerExecute(gg_trg_GoblinsOn)
 	TriggerExecute(gg_trg_StartG)
@@ -1948,7 +1948,7 @@ function startHorde(pi)
 
 	NumberSet(pi, FourCC('opeo'), 8)
 	NumberSet(pi, FourCC('ogre'), 1)
-	SetPlayerName(Player(pi), "Орда (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_b1e530611cdfd0a8") .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "NG"
 	HordeStartLimitsFor(Player(pi))
 	TriggerExecute(gg_trg_HordeOn)
@@ -2424,7 +2424,7 @@ function startNaga(pi)
 
 	NumberSet(pi, FourCC('nmpe'), 8)
 	NumberSet(pi, FourCC('nntt'), 1)
-	SetPlayerName(Player(pi), "Стая (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_3309de798190ac84") .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "NG"
 	TriggerExecute(gg_trg_NagaStart)
 	NagaApplySubrace(Player(pi), GetRandomInt(0, 1) == 0 and "naga" or "murloc")
@@ -2862,7 +2862,7 @@ function startJungleTrolls(pi)
 	NumberSet(pi, FourCC('h0N5'), 1)
 	AiData[pi][StringHash("Race")] = "JT"
 	SetPlayerTechResearchedSwap(FourCC('R0IH'), 1, Player(pi))
-	SetPlayerName(Player(pi), "Тролли джунглей (" .. I2S(pi + 1) .. ")")
+	SetPlayerName(Player(pi), Loc("lua.auto_dcc5a0a0f209add1") .. I2S(pi + 1) .. ")")
 	StartJungleTrolls()
 	AiChooseJungleTrollsBranch(pi)
 	AiRace[pi] = "JungleTrolls"
@@ -3226,7 +3226,7 @@ function startForestTrolls(pi)
     SetPlayerTechMaxAllowedSwap(FourCC('O058'), 1, p)
     SetPlayerTechMaxAllowedSwap(FourCC('O059'), 1, p)
     SetPlayerTechMaxAllowedSwap(FourCC('o04Y'), 0, p)
-    SetPlayerName(Player(pi), "Лесные тролли (" .. I2S(pi + 1) .. ")")
+    SetPlayerName(Player(pi), Loc("lua.auto_725474e2ec74041d") .. I2S(pi + 1) .. ")")
     StartForestTrolls()
     AiRace[pi] = "ForestTrolls"
     ProbeLogWrite("[AI] startForestTrolls pi=" .. tostring(pi) .. " workers=5o04V building=1h0MT")
@@ -3315,7 +3315,7 @@ function startCult(pi)
     SetPlayerTechResearchedSwap(FourCC('R0J4'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0J5'), 1, p)
     if CultOn then CultOn() end
-    SetPlayerName(p, "Культ Проклятых (" .. I2S(pi + 1) .. ")")
+    SetPlayerName(p, Loc("lua.auto_4d2840e730c77c43") .. I2S(pi + 1) .. ")")
     AiRace[pi] = "Cult"
     ProbeLogWrite("[AI] startCult pi=" .. tostring(pi) .. " workers=3cD02 building=1cD26")
 end

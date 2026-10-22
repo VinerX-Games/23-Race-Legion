@@ -1,14 +1,19 @@
 """Панель выбора расы (63_race_picker.lua) на модели нативов фреймов."""
 import re
+import sys
 import unittest
 from pathlib import Path
 
 from lupa.lua53 import LuaRuntime
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from l10n_fixture import install_loc  # noqa: E402
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SECTIONS = ROOT / 'map.w3x/_lua/monolith_split/sections'
 FRAME_PARK = (SECTIONS / '80_runtime/_ui/58_frame_park.lua').read_text(encoding='utf-8')
+LOCALIZATION = (SECTIONS / '03_localization.lua').read_text(encoding='utf-8')
 
 FIXTURE = r'''
 FRAMEPOINT_TOPLEFT='tl'; FRAMEPOINT_BOTTOMLEFT='bl'; FRAMEPOINT_BOTTOMRIGHT='br'; FRAMEPOINT_TOP='t'
@@ -85,6 +90,7 @@ class RacePickerTests(unittest.TestCase):
         lua = LuaRuntime()
         self.lua = lua
         lua.execute(FIXTURE)
+        lua.execute(LOCALIZATION)
         lua.execute(FRAME_PARK)
         src = (SECTIONS / '80_runtime/_ui/63_race_picker.lua').read_text(encoding='utf-8')
         for name in set(re.findall(r'"(Trig_Race_[A-Za-z0-9_]+_Actions)"', src)):
@@ -152,6 +158,7 @@ class RacePickerTests(unittest.TestCase):
     def test_circle_created_before_panel_is_stripped_when_ready(self):
         lua = LuaRuntime()
         lua.execute(FIXTURE)
+        install_loc(lua)
         lua.execute(FRAME_PARK)
         lua.execute((SECTIONS / '80_runtime/_ui/63_race_picker.lua').read_text(encoding='utf-8'))
         lua.execute('''

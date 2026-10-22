@@ -1,7 +1,7 @@
 {
   "source_path": "C:\\Games\\23 Race\\23-Race-Legion\\map.w3x\\war3map.lua",
   "source_sha256": "5181648a70065e3b8632a083c3946e452fc8f9f5b6538dda68f69226ad9566bb",
-  "section_count": 151,
+  "section_count": 152,
   "sections": [
     {
       "name": "prelude",
@@ -25,6 +25,14 @@
       "category": "functions",
       "start_line": 2558,
       "end_line": 2635,
+      "library_name": null
+    },
+    {
+      "name": "localization",
+      "file": "03_localization.lua",
+      "category": "functions",
+      "start_line": null,
+      "end_line": null,
       "library_name": null
     },
     {

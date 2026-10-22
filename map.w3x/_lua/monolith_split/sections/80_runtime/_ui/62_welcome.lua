@@ -46,7 +46,7 @@ function ShowWelcomePanel()
 	BlzFrameSetTextAlignment(title, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 	BlzFrameSetSize(title, WELCOME_W - 0.02, 0.02)
 	BlzFrameSetPoint(title, FRAMEPOINT_TOP, welcome, FRAMEPOINT_TOP, 0, y)
-	BlzFrameSetText(title, "|cffebc56cДобро пожаловать в 23 Race Forever!|r")
+	BlzFrameSetText(title, Loc("lua.auto_5af126ac29237012"))
 	BlzFrameSetEnable(title, false)
 	y = y - 0.026
 
@@ -54,9 +54,9 @@ function ShowWelcomePanel()
 	BlzFrameSetTextAlignment(body, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
 	BlzFrameSetSize(body, WELCOME_W - 0.03, WELCOME_BODY_H)
 	BlzFrameSetPoint(body, FRAMEPOINT_TOPLEFT, welcome, FRAMEPOINT_TOPLEFT, 0.015, y)
-	BlzFrameSetText(body, "|cffced4daПоддержкой и обновлениями в данный момент занимаются: "
-		.. "|cffebc56cVinerX|cffced4da и |cffebc56cAgeron|cffced4da.|n|n"
-		.. "Вступайте в наш дискорд-сервер по 23 расам:|r")
+	BlzFrameSetText(body, Loc("lua.auto_10d2294a0945e72b")
+		.. Loc("lua.auto_4fc761f6b9fabde4")
+		.. Loc("lua.auto_89204bd7b2a4d0a2"))
 	BlzFrameSetEnable(body, false)
 	y = y - WELCOME_BODY_H - 0.004
 
@@ -78,14 +78,14 @@ function ShowWelcomePanel()
 	BlzFrameSetTextAlignment(version, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
 	BlzFrameSetSize(version, WELCOME_W - 0.03, 0.016)
 	BlzFrameSetPoint(version, FRAMEPOINT_TOPLEFT, welcome, FRAMEPOINT_TOPLEFT, 0.015, y)
-	BlzFrameSetText(version, "|cffb99d66Версия карты:|r |cffffffff" .. WelcomeVersion() .. "|r")
+	BlzFrameSetText(version, Loc("lua.auto_ac18f75e920230db") .. WelcomeVersion() .. "|r")
 	BlzFrameSetEnable(version, false)
 	y = y - 0.018
 
 	local close = BlzCreateFrame("ScriptDialogButton", welcome, 0, 705)
 	BlzFrameSetSize(close, 0.09, 0.028)
 	BlzFrameSetPoint(close, FRAMEPOINT_TOP, welcome, FRAMEPOINT_TOP, 0, y)
-	BlzFrameSetText(close, "Закрыть")
+	BlzFrameSetText(close, Loc("lua.auto_a7a4033657e89fc9"))
 	local onClose = CreateTrigger()
 	BlzTriggerRegisterFrameEvent(onClose, close, FRAMEEVENT_CONTROL_CLICK)
 	TriggerAddAction(onClose, function()

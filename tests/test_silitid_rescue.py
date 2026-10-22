@@ -1,8 +1,12 @@
 """Rescue retains the original patient and always releases it and its timer."""
+import sys
 import unittest
 from pathlib import Path
 
 from lupa.lua53 import LuaRuntime
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from l10n_fixture import install_loc  # noqa: E402
 
 
 SECTIONS = Path(__file__).resolve().parents[1] / 'map.w3x/_lua/monolith_split/sections'
@@ -66,6 +70,7 @@ class SilitidRescueTests(unittest.TestCase):
     def setUp(self):
         self.lua = LuaRuntime(unpack_returned_tuples=True)
         self.lua.execute(FIXTURE)
+        install_loc(self.lua)
         self.lua.execute((SECTIONS / '80_runtime/triggers/races/Silitids.lua').read_text(encoding='utf-8'))
 
     def check(self, code):

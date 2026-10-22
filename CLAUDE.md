@@ -55,7 +55,10 @@ python -m unittest tests.test_ai_teleport.AiTeleportTests.test_empty_army_does_n
   Новый файл секции не попадёт в сборку, пока его не добавить в манифест; порядок в манифесте =
   порядок определения глобалов/функций в итоговом скрипте.
 - Ошибки рантайма приходят с номером строки собранного `war3map.lua`; искать её там, чинить в секции.
-- Релиз: правка `version.txt` (формат `23_race_1_6_NNN`), версии в WTS `STRING 003` и строки версии в `docs/PROJECT_MAP.md`.
+- Релиз: правка `version.txt` (формат `23_race_1_6_NNN`), версии в WTS `STRING 003`, строки «Версия: 1.6.NNN» в
+  `war3map.w3i` и `localization/locales/enUS/w3i.json`, строки версии в `docs/PROJECT_MAP.md`. Файл релиза собирать
+  только `python scripts/build_localized_map.py --hivewe <HiveWE_cli.exe> --locale enUS --out 23_Race_Forever_v1_6_NNN.w3x`:
+  английский — основа `.w3x`, русский оригинал — `_Locales/ruRU.w3mod` (`docs/LOCALIZATION.md`).
 
 ## Архитектура Lua-скрипта
 
@@ -117,6 +120,13 @@ KV-хранилище `AiData[pi][key]` (счётчики `getAiCount`/`NumberAd
   `build_map_lua.py` откажется собирать при нарушении (`late_region_violations` в `scripts/wc3_project.py`).
 
 ## Игровые тексты и база зависимостей (обязательно)
+
+- **Локализация (ruRU / все остальные → enUS).** Новый или изменённый видимый текст требует перевода в том же
+  коммите: object data — `localization/locales/enUS/objects/*.json`, Lua — ключ `Loc("…")` + `localization/ui/ruRU.json`
+  и `localization/locales/enUS/ui.json`. Затем `python scripts/wc3_l10n.py extract`, `fingerprint`, `build`,
+  `python build_map_lua.py`, `python scripts/wc3_l10n.py check` → `"ok": true`. Строки в object data — только
+  `TRIGSTR_` (встроенную кириллицу выносит `wc3_l10n.py externalize`). Результат `Loc()` различается между клиентами:
+  только для показа, никогда в сравнениях, хешах и ветках логики. Подробно — `docs/LOCALIZATION.md`.
 
 - **Стандарт текстов.** Любые новые или изменяемые названия, подсказки, сообщения и UI-тексты (object data,
   WTS, Lua) — строго по `docs/UI_TEXT_STYLE.md` и палитре `docs/UI_COLOR_PALETTE.md`; порядок пакетной работы —

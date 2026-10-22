@@ -98,11 +98,11 @@ end
 function HordeW2GetSubraceLabel(pOrPi)
 	local subrace = HordeW2GetSubrace(pOrPi)
 	if subrace == "dark" then
-		return "Тёмная Орда"
+		return Loc("lua.auto_397a208e51cfdfed")
 	elseif subrace == "dragonmaw" then
-		return "Драконья Пасть"
+		return Loc("lua.auto_a596967d52b1e9c2")
 	end
-	return "Орда Второй войны"
+	return Loc("lua.auto_fe6e9fc5411a2a73")
 end
 
 ---@param pOrPi player|integer

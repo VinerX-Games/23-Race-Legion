@@ -1,8 +1,12 @@
 """World-region reuse and Horde production/research regressions reported on 518."""
+import sys
 import unittest
 from pathlib import Path
 
 from lupa.lua53 import LuaRuntime
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from l10n_fixture import install_loc  # noqa: E402
 from test_player_commands_and_research import FIXTURE as CHAT_FIXTURE
 
 SECTIONS = Path(__file__).resolve().parents[1] / 'map.w3x/_lua/monolith_split/sections'
@@ -165,6 +169,7 @@ class ChatRegressionTests(unittest.TestCase):
     def setUp(self):
         self.lua = LuaRuntime()
         self.lua.execute(CHAT_FIXTURE)
+        install_loc(self.lua)
         self.lua.execute('''
             Observers={}; udg_Visibl={}; cleared={}; alliances={}; cameras={}; DipMode=0
             function SetCameraFieldForPlayer(p,field,distance) cameras[p]=distance end

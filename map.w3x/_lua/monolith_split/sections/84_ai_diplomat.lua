@@ -110,7 +110,7 @@ AiDiplomatReallyCooldown = AiDiplomatReallyCooldown or 60
 ---@param pi integer
 ---@return string
 function DiplomatName(pi)
-    local playerName = GetPlayerName(Player(pi)) or "Неизвестный игрок"
+    local playerName = GetPlayerName(Player(pi)) or Loc("lua.auto_6b1e25143714815a")
     return "|cffebc56c[" .. playerName .. "]|r"
 end
 
@@ -133,6 +133,8 @@ end
 ---@param pi integer
 ---@param msg string
 function DipRpBroadcast(pi, msg)
+    -- RP-таблицы хранят ключи Loc(); текст выбирается по языку клиента только при показе.
+    msg = Loc(msg)
     local full = DiplomatName(pi) .. "|cffced4da: «" .. msg .. "»|r"
     DipBroadcast(full)
     DipLog(pi, "[RP] " .. msg)
@@ -256,184 +258,184 @@ end
 AiDiplomatRpMessages = {
     diplomat = {
         allyPropose = {
-            "Вместе мы будем процветать.",
-            "Нас ждёт плодотворное сотрудничество.",
-            "Давайте строить мосты, а не стены.",
-            "Этот союз принесёт пользу нам обоим.",
+            "lua.auto_487cb2e423b596c9",
+            "lua.auto_2a0268a2b2438f0a",
+            "lua.auto_78e39d8f0491048a",
+            "lua.auto_90f97e98871d67c6",
         },
         allyAccept = {
-            "Начинается новая глава нашей дружбы!",
-            "Вместе нас ничто не остановит.",
-            "О нашей общей силе будут слагать легенды.",
-            "Приветствую тебя, верный друг.",
+            "lua.auto_3adf15d8acdee018",
+            "lua.auto_cc0098411bdfded2",
+            "lua.auto_52b72d51138b5fcc",
+            "lua.auto_f228ed247b8ab8b8",
         },
         allyBreak  = {
-            "Возможно, в другой раз и в другом месте.",
-            "Здесь наши пути расходятся.",
-            "Наши цели больше не совпадают.",
-            "Прощай, старый друг. Надеюсь, мы встретимся с миром.",
+            "lua.auto_88c9b6df88b6a7a9",
+            "lua.auto_1e9d4ac70d581ac9",
+            "lua.auto_cc7d0fa625762203",
+            "lua.auto_c66104169db894d2",
         },
         trade = {
-            "Подарок от друга. Без всяких условий.",
-            "Ради твоего процветания — и нашего.",
-            "Поделимся по-братски!",
+            "lua.auto_881b3334aa5b9a01",
+            "lua.auto_c15e8f06388dbf31",
+            "lua.auto_4632fa726240a4aa",
         },
         idle = {
-            "Торговые караваны сообщают, что всё спокойно.",
-            "Рынки стабильны. Хороший знак.",
-            "Дипломатия — величайшее оружие.",
+            "lua.auto_cfcc38e097b1b449",
+            "lua.auto_b315ea9c15fef4d4",
+            "lua.auto_d2517423ca161661",
         },
         underAttack = {
-            "Мы в осаде! Дорогие союзники, нам нужна помощь!",
-            "Враг у наших ворот! Будем рады любой помощи!",
+            "lua.auto_921989ca41d09d7d",
+            "lua.auto_186fec03795bdff1",
         },
     },
     pragmatic = {
         allyPropose = {
-            "Наши интересы совпадают. Пора действовать.",
-            "Враг моего врага... продолжение ты знаешь.",
-            "Временный союз. Не более того.",
+            "lua.auto_a7a763294eee0f58",
+            "lua.auto_cd093072d36707cf",
+            "lua.auto_baefeee1fae640b3",
         },
         allyAccept = {
-            "Стратегическое решение. Не заставляй меня пожалеть о нём.",
-            "Хорошо. Пока мы на одной стороне.",
-            "Этот союз выгоден нам обоим. Помни об этом.",
+            "lua.auto_744df9d409c9bff0",
+            "lua.auto_1b575d0a41154235",
+            "lua.auto_f3e40effa4501577",
         },
         allyBreak  = {
-            "Расчёты изменились. Наши пути расходятся.",
-            "Обстоятельства больше не благоприятствуют нашему союзу.",
-            "Наши приоритеты изменились. Прощай.",
+            "lua.auto_d9b435e6379b51b7",
+            "lua.auto_c521ccfeb05d2c62",
+            "lua.auto_829e9ea89c8823ab",
         },
         trade = {
-            "Стратегические ресурсы. Распорядись ими разумно.",
-            "Продуманное вложение.",
-            "Потрать с умом. Я жду результатов.",
+            "lua.auto_bbd46f8e1a884f17",
+            "lua.auto_1b258ab3b8664f3d",
+            "lua.auto_9ff46ce314929e5b",
         },
         idle = {
-            "Соотношение сил... пока приемлемое.",
-            "Наблюдаем. Ждём. Рассчитываем.",
-            "Любой союз — это сделка.",
+            "lua.auto_c8279b22fbd487f6",
+            "lua.auto_4a4850b30fca3226",
+            "lua.auto_d8cdcc09ab611815",
         },
         underAttack = {
-            "Нас атакуют! Все, кто способен сражаться, к нам!",
-            "Оборона подготовлена. Союзники, теперь ваш ход.",
+            "lua.auto_ac9eb46460b94a40",
+            "lua.auto_6549c1a0b026f294",
         },
     },
     traitor = {
         allyPropose = {
-            "Доверься мне... пока что.",
-            "Назовём это союзом по расчёту?",
-            "У меня есть предложение, от которого ты не сможешь отказаться.",
+            "lua.auto_605e6bc1f82725fd",
+            "lua.auto_c7f644b941bc7b26",
+            "lua.auto_f99198d3f32a6ab6",
         },
         allyAccept = {
-            "А, новый... друг. Как приятно.",
-            "Да-да. Вместе мы всех покорим!",
-            "Твоё доверие принято. Я воспользуюсь им... разумно.",
+            "lua.auto_a980a0bd50fee674",
+            "lua.auto_78e059ed0c01a6ef",
+            "lua.auto_55101895916a788b",
         },
         allyBreak  = {
-            "Ты и вправду считал нас друзьями?",
-            "Ты больше... не нужен.",
-            "Нож в спину — тоже оружие.",
-            "Ничего личного. Только дело.",
+            "lua.auto_620b00def5cb23da",
+            "lua.auto_d80779e527f155e3",
+            "lua.auto_3a4389166dfb0f1d",
+            "lua.auto_04283c261c0e91fc",
         },
         trade = {
-            "Бери. Расплатишься потом.",
-            "Знак моей... признательности.",
+            "lua.auto_66aa12a5aa41764c",
+            "lua.auto_3552044f166990c7",
         },
         idle = {
-            "Сильные пожирают слабых. Так устроен мир.",
-            "Возможности повсюду. Нужно лишь ими воспользоваться.",
-            "Верность — это валюта. Трать щедро, копи с умом.",
+            "lua.auto_fd1841475615ff21",
+            "lua.auto_2923dad9669fa29e",
+            "lua.auto_335bce167404b79f",
         },
         underAttack = {
-            "Глупцы! Они посмели напасть на нас!",
-            "Они заплатят за эту дерзость!",
+            "lua.auto_ca9c6a3e40f1ae22",
+            "lua.auto_ebdfab741ed7ca40",
         },
     },
     isolationist = {
         allyPropose = {
-            "Нам не нужны чужаки.",
-            "Таким, как ты, здесь не рады.",
-            "Не трать слова попусту.",
+            "lua.auto_056face7438bf1e2",
+            "lua.auto_1297bcf319724468",
+            "lua.auto_51f3c7ca9a334170",
         },
         allyAccept = {
-            "...Неожиданно, но приемлемо.",
-            "Не переходи границы дозволенного.",
+            "lua.auto_3de0686ef68d8615",
+            "lua.auto_e1c8f191ac7cc4f8",
         },
         allyBreak  = {
-            "Всё идёт как должно.",
-            "Мы снова одни. Хорошо.",
+            "lua.auto_c6b5d4e0bc965e87",
+            "lua.auto_3ad24f004d4678de",
         },
         trade = {
-            "Не жди благодарности.",
-            "Не рассчитывай на повторение.",
+            "lua.auto_a58e69ffd8e77731",
+            "lua.auto_a99f325869b09616",
         },
         idle = {
-            "Внешний мир не имеет значения.",
-            "Наша сила — в уединении.",
+            "lua.auto_1ae9b38af6555abd",
+            "lua.auto_d1543cb1a2087c6f",
         },
         underAttack = {
-            "Чужаки! Защитим рой любой ценой!",
-            "Вторжение на наши земли!",
+            "lua.auto_f3afbe59a6694f66",
+            "lua.auto_ee7a0ac81f48ce66",
         },
     },
     loyal = {
         allyPropose = {
-            "Честь зовёт нас встать плечом к плечу.",
-            "Союз, скреплённый доверием, нерушим.",
-            "Пусть наша клятва будет вечной.",
+            "lua.auto_7025b930dbf5a909",
+            "lua.auto_3d9f5d2537f0b685",
+            "lua.auto_455ea841c4fc941a",
         },
         allyAccept = {
-            "Клянусь честью, теперь мы едины.",
-            "Клянусь жизнью защищать наш союз.",
-            "До конца времён мы будем вместе.",
+            "lua.auto_ce3108f24e36ed1f",
+            "lua.auto_821fb0c559254b08",
+            "lua.auto_8bf74d1151c0a3f0",
         },
         allyBreak  = {
-            "Тяжёлое решение, но необходимое.",
-            "Ничто не вечно. Даже честь.",
-            "Я освобождаю тебя от нашей клятвы.",
+            "lua.auto_1b3c8337b4056f10",
+            "lua.auto_9cbc51907261b2dd",
+            "lua.auto_56dc1bb6b8b17719",
         },
         trade = {
-            "Ради общего дела. Всегда.",
-            "Мой меч и моё золото — всё ради нашего союза.",
+            "lua.auto_35a82819f7edd4eb",
+            "lua.auto_06493b2250410b0b",
         },
         idle = {
-            "Бдительность и честь указывают нам путь.",
-            "Истинная сила — в единстве.",
-            "Мы помним каждый долг и каждое доброе дело.",
+            "lua.auto_086cc3df62fea0cd",
+            "lua.auto_28542eb46c29a4bf",
+            "lua.auto_fd5496e15a6cdbd5",
         },
         underAttack = {
-            "К оружию, братья! Враг приближается!",
-            "Наши священные земли под угрозой! Все на защиту!",
+            "lua.auto_ef84af40895c8afb",
+            "lua.auto_6bb048dd1d9c13b6",
         },
     },
     balanced = {
         allyPropose = {
-            "Будем охотиться вместе.",
-            "Наша сила — в численности. Всегда.",
-            "Союз может принести пользу нам обоим.",
+            "lua.auto_48a7800cf30d2f44",
+            "lua.auto_7430b6ff380a7807",
+            "lua.auto_88238c816d694e2c",
         },
         allyAccept = {
-            "Достойный союзник. Начнём.",
-            "Вместе мы сильнее.",
-            "Приветствую наш новый союз.",
+            "lua.auto_3d6e339f6a498578",
+            "lua.auto_5ef9d9dea170906c",
+            "lua.auto_48a57eb3a864bf6f",
         },
         allyBreak  = {
-            "Пришла пора расстаться.",
-            "Теперь мы идём своим путём.",
-            "Наш союз больше не нужен.",
+            "lua.auto_8a857dbbeebb4278",
+            "lua.auto_e30f6557e8cbf9ba",
+            "lua.auto_a012f5569f973005",
         },
         trade = {
-            "Бери. Тебе нужнее.",
-            "Справедливый обмен для верного союзника.",
+            "lua.auto_f782ed61d9fde6ff",
+            "lua.auto_ff8fbf0d28f7c01f",
         },
         idle = {
-            "Сегодня в диких землях тихо.",
-            "Костёр потрескивает. Всё спокойно.",
+            "lua.auto_e5ed3b6e985baeb3",
+            "lua.auto_a861396a52409720",
         },
         underAttack = {
-            "Враги у ворот! Все воины, к обороне!",
-            "Нас окружили! Будем рады любой помощи!",
+            "lua.auto_e4c85a17013236e1",
+            "lua.auto_3d2ecf22846819ec",
         },
     },
 }
@@ -669,7 +671,7 @@ function AiDiplomatPropose(pi, otherPi)
 
     st.pendingOffers[otherPi] = AiDiplomatTicks[pi] or 0
     DipLog(pi, "propose alliance to " .. tostring(otherPi) .. " (" .. GetPlayerName(other) .. ")")
-    DipChat(pi, otherPi, "Предлагаю заключить союз.")
+    DipChat(pi, otherPi, Loc("lua.auto_050b1d55eb021dc0"))
     AiDiplomatRpSay(pi, "allyPropose")
     return true
 end
@@ -697,8 +699,8 @@ function AiDiplomatAccept(pi, otherPi)
         st.relations[otherPi].trust = math.min((st.relations[otherPi].trust or 0.3) + 0.3, 1.0)
     end
     DipLog(pi, "accepted alliance with " .. tostring(otherPi))
-    DipChat(pi, otherPi, "Принимаю твоё предложение союза.")
-    DipBroadcast(DiplomatName(pi) .. "|cffced4da и " .. DiplomatName(otherPi) .. "|cffc8e087 заключили союз!|r")
+    DipChat(pi, otherPi, Loc("lua.auto_60b6c0130203ea96"))
+    DipBroadcast(DiplomatName(pi) .. Loc("lua.auto_523b687fa26b063f") .. DiplomatName(otherPi) .. Loc("lua.auto_c16c4a4e3dfe314c"))
     AiDiplomatRpSay(pi, "allyAccept")
 end
 
@@ -747,7 +749,7 @@ function AiDiplomatBreak(pi, otherPi, reason)
     if reason ~= nil and reason ~= "" then
         DipChat(pi, otherPi, reason)
     end
-    DipBroadcast(DiplomatName(pi) .. "|cffef8173 разрывает союз с " .. DiplomatName(otherPi) .. "|cffced4da.|r")
+    DipBroadcast(DiplomatName(pi) .. Loc("lua.auto_9b9987d941edc627") .. DiplomatName(otherPi) .. "|cffced4da.|r")
     AiDiplomatRpSay(pi, "allyBreak")
 end
 
@@ -822,9 +824,9 @@ function AiDiplomatConsiderAlly(pi, otherPi)
         local rel = st.relations[otherPi]
         local reason = nil
         if rel ~= nil and rel.sharedEnemies > 0 then
-            reason = "У нас общий враг. Объединим силы."
+            reason = Loc("lua.auto_f58bd7335e33de79")
         elseif rel ~= nil and rel.threat > 0.5 then
-            reason = "Нам угрожает один враг. Союз поможет нам обоим."
+            reason = Loc("lua.auto_b35316476b1d6537")
         end
         return true, reason
     end
@@ -846,7 +848,7 @@ function AiDiplomatConsiderBreak(pi, otherPi)
 
     local st = AiDiplomatState(pi)
     local rel = st.relations[otherPi]
-    if rel == nil then return true, "В наших отношениях больше нет смысла." end
+    if rel == nil then return true, Loc("lua.auto_57e1b6f2278e466c") end
 
     -- Young alliances are protected from circumstantial breaks (weakness / no
     -- common threat) so power/proximity noise can't make bots ally-and-drop every
@@ -860,12 +862,12 @@ function AiDiplomatConsiderBreak(pi, otherPi)
         -- 1. Ally is too weak
         local weakness = 1.0 - (otherPower / math.max(myPower, 1))
         if weakness > cfg.breakOnWeakness then
-            return true, "Ты слишком ослаб, чтобы приносить пользу."
+            return true, Loc("lua.auto_c85594debfc7d84e")
         end
 
         -- 2. No common threat anymore
         if rel.sharedEnemies == 0 and cfg.breakOnNoThreat > 0.5 then
-            return true, "Нашего общего врага больше нет. Этот союз мне больше не нужен."
+            return true, Loc("lua.auto_3db170aebb382755")
         end
     end
 
@@ -873,7 +875,7 @@ function AiDiplomatConsiderBreak(pi, otherPi)
     local breakRoll = GetRandomReal(0.0, 1.0)
     local breakChance = cfg.breakChanceBase * (1.0 - cfg.loyalty)
     if breakRoll < breakChance then
-        return true, "Наш союз исчерпал себя."
+        return true, Loc("lua.auto_9e7b2db0abe20846")
     end
 
     -- 4. Betrayal check (traitor personality)
@@ -883,7 +885,7 @@ function AiDiplomatConsiderBreak(pi, otherPi)
             local tickNow = AiDiplomatTicks[pi] or 0
             if tickNow >= st.betrayTargets[otherPi] then
                 st.betrayTargets[otherPi] = nil
-                return true, "Зря ты мне доверился."
+                return true, Loc("lua.auto_f2a717a6f2474817")
             end
         else
             local betrayalRoll = GetRandomReal(0.0, 1.0)
@@ -944,11 +946,11 @@ function AiDiplomatConsiderTrade(pi, otherPi)
 
     local reason = nil
     if rel ~= nil and rel.threat > 0.4 then
-        reason = "Держи оборону. Это должно помочь."
+        reason = Loc("lua.auto_d61e393c3d0e8626")
     elseif otherPower < myPower * 0.5 then
-        reason = "Тебе это нужнее, чем мне."
+        reason = Loc("lua.auto_61fbc5f7d8c24e68")
     else
-        reason = "Знак нашего союза."
+        reason = Loc("lua.auto_e7a855bb6239dd29")
     end
 
     return maxGold, maxLumber, reason
@@ -971,7 +973,7 @@ function AiDiplomatRespondToProposal(pi, otherPi)
     local allyCount = DipAllyCount(pi)
     if allyCount >= cfg.allianceMax then
         AiDiplomatDecline(pi, otherPi)
-        DipChat(pi, otherPi, "У меня уже достаточно союзников. Возможно, в другой раз.")
+        DipChat(pi, otherPi, Loc("lua.auto_c8ba8a55176c650f"))
         return
     end
 
@@ -982,7 +984,7 @@ function AiDiplomatRespondToProposal(pi, otherPi)
         AiDiplomatAccept(pi, otherPi)
     else
         AiDiplomatDecline(pi, otherPi)
-        DipChat(pi, otherPi, "Сейчас я не заинтересован в союзе.")
+        DipChat(pi, otherPi, Loc("lua.auto_f8a711f33c122d4b"))
     end
 end
 

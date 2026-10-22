@@ -1,9 +1,13 @@
 """Exercise the income tooltip with mocked frame natives."""
+import sys
 import unittest
 import re
 from pathlib import Path
 
 from lupa.lua53 import LuaRuntime
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from l10n_fixture import install_loc  # noqa: E402
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -85,6 +89,7 @@ class IncomeTooltipTests(unittest.TestCase):
             playerCapital = {[0] = {life = 100, owner = 0, name = 'Столица'}}
             udg_UnitsCount = {[0] = 40}
         ''')
+        install_loc(lua)
         lua.execute((ROOT / 'map.w3x/_lua/monolith_split/sections/80_runtime/'
                      '_ui/58_frame_park.lua').read_text(encoding='utf-8'))
         ui = (ROOT / 'map.w3x/_lua/monolith_split/sections/80_runtime/'
