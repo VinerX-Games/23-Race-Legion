@@ -1,6 +1,7 @@
 """Localization catalog, WTS generation and translation validation."""
 import json
 import importlib.util
+import re
 import sys
 import tempfile
 import unittest
@@ -138,6 +139,18 @@ class PilotTests(unittest.TestCase):
 
     def test_pilot_translations_validate(self):
         self.assertEqual(0, wc3_l10n.validate('enUS', check_output=False))
+
+    def test_w3i_metadata_wts_strings_are_translated(self):
+        config, _, _ = wc3_l10n.locale_config('enUS')
+        translations = config['wts_translations']
+        base, _ = wc3_l10n.load_wts()
+        w3i = (ROOT / 'map.w3x/war3map.w3i').read_bytes()
+        referenced = {str(int(sid)) for sid in re.findall(rb'TRIGSTR_([0-9]+)', w3i)}
+        required = {sid for sid in referenced if wc3_l10n.CYRILLIC.search(base[int(sid)])}
+        self.assertTrue({'4', '5', '10956', '19319', '19322'} <= required)
+        self.assertTrue(required <= set(translations))
+        self.assertIn('MAP DESCRIPTION', translations['5'])
+        self.assertEqual([], wc3_l10n.CYRILLIC.findall(translations['5']))
 
 
 if __name__ == '__main__':

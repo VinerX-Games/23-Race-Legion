@@ -233,6 +233,9 @@ def locale_config(locale: str):
     data["translations"] = translations
     ui_path = path / "ui.json"
     ui = read_json(ui_path) if ui_path.is_file() else {}
+    wts_path = path / "wts.json"
+    wts = read_json(wts_path).get("translations", {}) if wts_path.is_file() else {}
+    data["wts_translations"] = wts
     return data, ui, path
 
 
@@ -329,6 +332,12 @@ def build(locale: str, check: bool = False) -> int:
     base, meta = load_wts()
     merged = dict(base)
     merged.update(resolved)
+    wts_translations = config.get("wts_translations", {})
+    unknown_wts = sorted(set(wts_translations) - {str(sid) for sid in base})
+    if unknown_wts:
+        print(json.dumps({"ok": False, "unknown_wts_ids": unknown_wts}, ensure_ascii=False, indent=2))
+        return 1
+    merged.update({int(sid): text for sid, text in wts_translations.items()})
     output_wts, output_root = output_paths(locale)
     expected = [(output_wts, (codecs.BOM_UTF8 if meta["bom"] else b"") + dump_wts(merged, meta).encode("utf-8"))]
 
@@ -415,6 +424,12 @@ def source_hash_issues(by_key, translations, source_hashes):
 def localization_source_texts(catalog, locale_dir: Path):
     sources = {entry["key"]: entry["text"] for entry in catalog["entries"]}
     sources.update({f"ui/{key}": value for key, value in read_json(UI_SOURCE_PATH).items()})
+    wts_path = locale_dir / "wts.json"
+    if wts_path.is_file():
+        base_wts, _ = load_wts()
+        for sid in read_json(wts_path).get("translations", {}):
+            if str(sid).isdigit() and int(sid) in base_wts:
+                sources[f"wts/{sid}"] = base_wts[int(sid)]
     base = command_sections(MAP / "Units/CommandStrings.txt")
     for section, values in base.items():
         for key, value in values.items():
@@ -425,6 +440,10 @@ def localization_source_texts(catalog, locale_dir: Path):
 def localization_values(translations, locale_ui, locale_dir: Path):
     values = dict(translations)
     values.update({f"ui/{key}": value for key, value in locale_ui.items()})
+    wts_path = locale_dir / "wts.json"
+    if wts_path.is_file():
+        values.update({f"wts/{sid}": value for sid, value in
+                       read_json(wts_path).get("translations", {}).items()})
     overlay = locale_dir / "overlay/Units/CommandStrings.txt"
     if overlay.is_file():
         for section, entries in command_sections(overlay).items():
@@ -476,6 +495,7 @@ def validate(locale: str, check_output: bool = True) -> int:
         return 1
     config, locale_ui, locale_dir = locale_config(locale)
     translations = config.get("translations", {})
+    wts_translations = config.get("wts_translations", {})
     hashes_path = locale_dir / "source_hashes.json"
     source_hashes = read_json(hashes_path) if hashes_path.is_file() else {}
     by_key = {entry["key"]: entry for entry in catalog["entries"]}
@@ -503,6 +523,22 @@ def validate(locale: str, check_output: bool = True) -> int:
             errors.append({"key": key, "issue": "translation equals source"})
         if len(text) > len(entry["text"]) * 1.6 + 40:
             warnings.append({"key": key, "issue": "translation is much longer than source"})
+    base_wts, _ = load_wts()
+    w3i = (MAP / "war3map.w3i").read_bytes()
+    w3i_sids = {int(match) for match in re.findall(rb"TRIGSTR_([0-9]+)", w3i)}
+    required_wts = {str(sid) for sid in w3i_sids
+                    if sid in base_wts and CYRILLIC.search(base_wts[sid])}
+    for sid in sorted(set(wts_translations) - {str(value) for value in base_wts}):
+        errors.append({"key": f"wts/{sid}", "issue": "WTS translation ID is not in source"})
+    for sid in sorted(required_wts - set(wts_translations)):
+        errors.append({"key": f"wts/{sid}", "issue": "missing map metadata translation"})
+    for sid, text in sorted(wts_translations.items()):
+        if not sid.isdigit() or int(sid) not in base_wts:
+            continue
+        for problem in check_text(base_wts[int(sid)], text):
+            errors.append({"key": f"wts/{sid}", "issue": problem})
+        if CYRILLIC.search(base_wts[int(sid)]) and text == base_wts[int(sid)]:
+            errors.append({"key": f"wts/{sid}", "issue": "translation equals source"})
     resolved, conflicts = resolve_translations(catalog, translations)
     for conflict in conflicts:
         errors.append({"key": conflict["key"], "issue": f"shared WTS {conflict['sid']} has conflicting translations"})
