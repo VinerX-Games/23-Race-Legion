@@ -57,7 +57,7 @@ TEXT_FIELDS = {
 COLOR = re.compile(r"\|c[0-9a-fA-F]{8}")
 COLOR_START = re.compile(r"\|c", re.IGNORECASE)
 FORMAT = re.compile(r"%(?:\d+\$)?[sdifxXc%]")
-TOKEN = re.compile(r"<[^<>\s]+>")
+TOKEN = re.compile(r"<[A-Za-z0-9]{4},[A-Za-z0-9]+>")
 CYRILLIC = re.compile(r"[А-Яа-яЁё]")
 LOC_CALL = re.compile(r"\bLoc\(\s*[\"']([^\"']+)[\"']\s*\)")
 
@@ -459,6 +459,13 @@ def source_hash_issues(by_key, translations, source_hashes):
     return missing, stale
 
 
+def untranslated_lua_wts_ids(lua_text, base_wts, resolved, wts_translations):
+    referenced = {int(value) for value in re.findall(r"TRIGSTR_0*(\d+)", lua_text)}
+    return sorted(sid for sid in referenced
+                  if sid in base_wts and CYRILLIC.search(base_wts[sid])
+                  and sid not in resolved and str(sid) not in wts_translations)
+
+
 def localization_source_texts(catalog, locale_dir: Path):
     sources = {entry["key"]: entry["text"] for entry in catalog["entries"]}
     sources.update({f"ui/{key}": value for key, value in read_json(UI_SOURCE_PATH).items()})
@@ -548,8 +555,7 @@ def validate(locale: str, check_output: bool = True) -> int:
     by_key = {entry["key"]: entry for entry in catalog["entries"]}
     errors, warnings = [], []
     scope = set(config.get("scope_races", []))
-    required = {key for key, entry in by_key.items()
-                if in_scope(entry, scope) and CYRILLIC.search(entry["text"])}
+    required = {key for key, entry in by_key.items() if CYRILLIC.search(entry["text"])}
     source_texts = localization_source_texts(catalog, locale_dir)
     hash_values = localization_values(translations, locale_ui, locale_dir)
     missing_hashes, stale_hashes = source_hash_issues(source_texts, hash_values, source_hashes)
@@ -608,6 +614,9 @@ def validate(locale: str, check_output: bool = True) -> int:
     resolved, conflicts = resolve_translations(catalog, translations)
     for conflict in conflicts:
         errors.append({"key": conflict["key"], "issue": f"shared WTS {conflict['sid']} has conflicting translations"})
+    lua_source = (MAP / "war3map.lua").read_text(encoding="utf-8-sig")
+    for sid in untranslated_lua_wts_ids(lua_source, base_wts, resolved, wts_translations):
+        errors.append({"key": f"wts/{sid}", "issue": "missing translation for Lua-referenced WTS string"})
     for probe_locale, probe in sorted(config.get("locale_probes", {}).items()):
         match = re.fullmatch(r"TRIGSTR_(\d+)", probe.get("key", ""))
         if not match:

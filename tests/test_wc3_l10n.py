@@ -63,11 +63,34 @@ class TranslationTests(unittest.TestCase):
         self.assertEqual(['key-b'], missing)
         self.assertEqual(['key-a'], stale)
 
+    def test_untranslated_lua_referenced_wts_ids_are_reported(self):
+        missing = wc3_l10n.untranslated_lua_wts_ids(
+            'call Foo("TRIGSTR_0007")', {7: 'Русский', 8: 'Русский'}, {}, {})
+        self.assertEqual([7], missing)
+        covered_by_object = wc3_l10n.untranslated_lua_wts_ids(
+            'call Foo("TRIGSTR_0007")', {7: 'Русский'}, {7: 'English'}, {})
+        self.assertEqual([], covered_by_object)
+
     def test_ability_data_reference_drift_is_rejected(self):
         source = 'Deals <ANbf,DataA1> damage for <ANbf,Dur1> sec.'
         self.assertEqual([], wc3_l10n.check_text(source, source))
         broken = 'Deals <ANbf,DataA2> damage for <ANbf,Dur1> sec.'
         self.assertIn('ability data references differ', wc3_l10n.check_text(source, broken))
+
+    def test_translatable_angle_bracket_placeholders_can_be_localized(self):
+        source = 'Use -name <номер> to set the player name.'
+        target = 'Use -name <number> to set the player name.'
+        self.assertNotIn('ability data references differ', wc3_l10n.check_text(source, target))
+        self.assertNotIn('Cyrillic text remains', wc3_l10n.check_text(source, target))
+
+    def test_host_panel_resolves_localized_labels_when_laid_out(self):
+        source = (ROOT / 'map.w3x/_lua/monolith_split/sections/80_runtime/_ui/64_host_panel.lua').read_text(
+            encoding='utf-8')
+        tables = source[source.index('local HP_ROWS = {'):source.index('local hpRoot, hpTime')]
+        self.assertNotIn('Loc(', tables)
+        self.assertIn('name = Loc(o[2])', source)
+        self.assertIn('title = Loc(row[1])', source)
+        self.assertIn('name = Loc(c[2])', source)
 
     def test_shared_wts_id_rejects_conflicting_translations(self):
         catalog = {'entries': [
@@ -192,10 +215,10 @@ class PilotTests(unittest.TestCase):
         config, _, _ = wc3_l10n.locale_config('enUS')
         source_w3i = (ROOT / 'map.w3x/war3map.w3i').read_bytes()
         localized = wc3_l10n.render_localized_w3i(source_w3i, config['w3i_translations'])
-        self.assertIn('Версия: 1.6.525'.encode('utf-8'), source_w3i)
-        self.assertIn(b'Version: 1.6.525', localized)
+        self.assertIn('Версия: 1.6.526'.encode('utf-8'), source_w3i)
+        self.assertIn(b'Version: 1.6.526', localized)
         self.assertIn(b'Our Discord: discord.gg/UV5tbXXunU', localized)
-        self.assertNotIn('Версия: 1.6.525'.encode('utf-8'), localized)
+        self.assertNotIn('Версия: 1.6.526'.encode('utf-8'), localized)
 
     def test_locale_probe_matches_localized_wts(self):
         config, _, _ = wc3_l10n.locale_config('enUS')

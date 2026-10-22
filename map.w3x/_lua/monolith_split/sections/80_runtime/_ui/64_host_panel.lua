@@ -28,38 +28,38 @@ local HP_BTN = "ReplaceableTextures\\CommandButtons\\"
 -- Строки настроек. Радио-строка: get() возвращает текущее значение, set(v) его
 -- задаёт; у опции { значение, название, описание, иконка }.
 local HP_ROWS = {
-	{ Loc("lua.auto_3f53fb873461737d"),
+	{ "lua.auto_3f53fb873461737d",
 		get = function() return udg_GameMode end,
 		set = function(v) udg_GameMode = v end,
-		{ 0, Loc("lua.auto_a39ad47c922226a5"), Loc("lua.auto_ac4d96817fdf1af9"), HP_BTN .. "BTNSorceressAdept.blp" },
-		{ 1, Loc("lua.auto_7552614d66b8a7a1"), Loc("lua.auto_61a0bbfb1890c9be"), HP_BTN .. "BTNCastle.blp" },
-		{ 2, Loc("lua.auto_61379f15167d5f16"), Loc("lua.auto_ec0079fe99f86065"), HP_BTN .. "BTNHelmutPurple.blp" },
-		{ 5, Loc("lua.auto_26dd9e3aae5c8d4c"), Loc("lua.auto_50f00368e762f6ed"), HP_BTN .. "BTNAltarOfKings.blp" },
-		{ 3, Loc("lua.auto_1287b176ee3a0776"), Loc("lua.auto_012084117924e404"), HP_BTN .. "BTNHumanBarracks.blp" },
-		{ 4, Loc("lua.auto_55cbf0812cc59fa5"), Loc("lua.auto_7ceabbc5fbaf6343"), HP_BTN .. "BTNScrollOfHaste.blp" },
+		{ 0, "lua.auto_a39ad47c922226a5", "lua.auto_ac4d96817fdf1af9", HP_BTN .. "BTNSorceressAdept.blp" },
+		{ 1, "lua.auto_7552614d66b8a7a1", "lua.auto_61a0bbfb1890c9be", HP_BTN .. "BTNCastle.blp" },
+		{ 2, "lua.auto_61379f15167d5f16", "lua.auto_ec0079fe99f86065", HP_BTN .. "BTNHelmutPurple.blp" },
+		{ 5, "lua.auto_26dd9e3aae5c8d4c", "lua.auto_50f00368e762f6ed", HP_BTN .. "BTNAltarOfKings.blp" },
+		{ 3, "lua.auto_1287b176ee3a0776", "lua.auto_012084117924e404", HP_BTN .. "BTNHumanBarracks.blp" },
+		{ 4, "lua.auto_55cbf0812cc59fa5", "lua.auto_7ceabbc5fbaf6343", HP_BTN .. "BTNScrollOfHaste.blp" },
 	},
-	{ Loc("lua.auto_fac7927ccc7ca958"),
+	{ "lua.auto_fac7927ccc7ca958",
 		get = function() return udg_SET_VISIBLE_MODE end,
 		set = function(v) udg_SET_VISIBLE_MODE = v end,
-		{ 0, Loc("lua.auto_509c0a93349416ca"), Loc("lua.auto_3e90a8f5c00c5ff7"), HP_BTN .. "BTNUndeadShrine.blp" },
-		{ 1, Loc("lua.auto_4a978bae23429c8f"), Loc("lua.auto_d4c33d954fc31e3b"), HP_BTN .. "BTNSentinel.blp" },
-		{ 2, Loc("lua.auto_1df09de4504fc344"), Loc("lua.auto_ddfc93285a52d9d9"), HP_BTN .. "BTNFarSight.blp" },
+		{ 0, "lua.auto_509c0a93349416ca", "lua.auto_3e90a8f5c00c5ff7", HP_BTN .. "BTNUndeadShrine.blp" },
+		{ 1, "lua.auto_4a978bae23429c8f", "lua.auto_d4c33d954fc31e3b", HP_BTN .. "BTNSentinel.blp" },
+		{ 2, "lua.auto_1df09de4504fc344", "lua.auto_ddfc93285a52d9d9", HP_BTN .. "BTNFarSight.blp" },
 	},
-	{ Loc("lua.auto_78d132d664cd635b"),
+	{ "lua.auto_78d132d664cd635b",
 		get = function() return DipMode end,
 		set = function(v) DipMode = v end,
-		{ 0, Loc("lua.auto_65b08c1f055c0a1a"), Loc("lua.auto_78185876b7938ca9"), HP_BTN .. "BTNHumanCaptureFlag.blp" },
-		{ 1, Loc("lua.auto_722b5b8c030fcea9"), Loc("lua.auto_c7a2d35d77aa2938"), HP_BTN .. "BTNAttack.blp" },
-		{ 2, Loc("lua.auto_ac8a4d534efd4fc8"), Loc("lua.auto_d1cca99d19051b82"), HP_BTN .. "BTNOrcCaptureFlag.blp" },
-		{ 3, Loc("lua.auto_9693fa514a0642f5"), Loc("lua.auto_d8d87791362fbe1a"), HP_BTN .. "BTNNightElfCaptureFlag.blp" },
+		{ 0, "lua.auto_65b08c1f055c0a1a", "lua.auto_78185876b7938ca9", HP_BTN .. "BTNHumanCaptureFlag.blp" },
+		{ 1, "lua.auto_722b5b8c030fcea9", "lua.auto_c7a2d35d77aa2938", HP_BTN .. "BTNAttack.blp" },
+		{ 2, "lua.auto_ac8a4d534efd4fc8", "lua.auto_d1cca99d19051b82", HP_BTN .. "BTNOrcCaptureFlag.blp" },
+		{ 3, "lua.auto_9693fa514a0642f5", "lua.auto_d8d87791362fbe1a", HP_BTN .. "BTNNightElfCaptureFlag.blp" },
 	},
-	{ Loc("lua.auto_384d916bbcef012f"),
+	{ "lua.auto_384d916bbcef012f",
 		get = function() return IncomeMod end,
 		set = function(v) IncomeMod = v end,
-		{ 0.75, "×0.75", Loc("lua.auto_39613b8bfff3e719"), HP_BTN .. "BTNPillage.blp" },
-		{ 1, "×1.00", Loc("lua.auto_10f79199643a1472"), HP_BTN .. "BTNChestOfGold.blp" },
+		{ 0.75, "×0.75", "lua.auto_39613b8bfff3e719", HP_BTN .. "BTNPillage.blp" },
+		{ 1, "×1.00", "lua.auto_10f79199643a1472", HP_BTN .. "BTNChestOfGold.blp" },
 	},
-	{ Loc("lua.auto_bb45d8092581d222"),
+	{ "lua.auto_bb45d8092581d222",
 		get = function() return TotalProduction end,
 		set = function(v)
 			if v then
@@ -69,21 +69,21 @@ local HP_ROWS = {
 				for i = 0, 22 do SetPlayerAbilityAvailable(Player(i), FourCC('A1KH'), false) end
 			end
 		end,
-		{ false, Loc("lua.auto_5a577d90566052be"), Loc("lua.auto_db448c0d871437a0"), HP_BTN .. "BTNCancel.blp" },
-		{ true, Loc("lua.auto_0b8162990567631a"), Loc("lua.auto_c48a1b9379356fa5"), HP_BTN .. "BTNRallyPoint.blp" },
+		{ false, "lua.auto_5a577d90566052be", "lua.auto_db448c0d871437a0", HP_BTN .. "BTNCancel.blp" },
+		{ true, "lua.auto_0b8162990567631a", "lua.auto_c48a1b9379356fa5", HP_BTN .. "BTNRallyPoint.blp" },
 	},
 }
 
 -- Континенты: индекс в udg_Continents, название, полное название, иконка.
 -- udg_Continents[0] = 0 — вся карта.
 local HP_CONTINENTS = {
-	{ 1, Loc("lua.auto_88897d593739ee25"), Loc("lua.auto_88897d593739ee25"), "CommonIcons\\PASBTN_CONT_EK.blp" },
-	{ 2, Loc("lua.auto_f98207a144b1480b"), Loc("lua.auto_f98207a144b1480b"), "CommonIcons\\PASBTN_CONT_Kalim.blp" },
-	{ 3, Loc("lua.auto_ad45a7d12d975f7d"), Loc("lua.auto_ad45a7d12d975f7d"), "CommonIcons\\PASBTN_CONT_Outland.blp" },
-	{ 4, Loc("lua.auto_1d9ba41af9bd8982"), Loc("lua.auto_1d9ba41af9bd8982"), "CommonIcons\\PASBTN_CONT_Nord.blp" },
-	{ 5, Loc("lua.auto_91cf723beb3c0f96"), Loc("lua.auto_91cf723beb3c0f96"), "CommonIcons\\PASBTN_CONT_Pandaria.blp" },
-	{ 7, Loc("lua.auto_83104b113adcbc77"), Loc("lua.auto_a7e7c6599d14a0cb"), "CommonIcons\\PASBTN_CONT_Okeania.blp" },
-	{ 6, Loc("lua.auto_9a0f6ad9710e2500"), Loc("lua.auto_9a0f6ad9710e2500"), "CommonIcons\\PASBTN_CONT_Argus.blp" },
+	{ 1, "lua.auto_88897d593739ee25", "lua.auto_88897d593739ee25", "CommonIcons\\PASBTN_CONT_EK.blp" },
+	{ 2, "lua.auto_f98207a144b1480b", "lua.auto_f98207a144b1480b", "CommonIcons\\PASBTN_CONT_Kalim.blp" },
+	{ 3, "lua.auto_ad45a7d12d975f7d", "lua.auto_ad45a7d12d975f7d", "CommonIcons\\PASBTN_CONT_Outland.blp" },
+	{ 4, "lua.auto_1d9ba41af9bd8982", "lua.auto_1d9ba41af9bd8982", "CommonIcons\\PASBTN_CONT_Nord.blp" },
+	{ 5, "lua.auto_91cf723beb3c0f96", "lua.auto_91cf723beb3c0f96", "CommonIcons\\PASBTN_CONT_Pandaria.blp" },
+	{ 7, "lua.auto_83104b113adcbc77", "lua.auto_a7e7c6599d14a0cb", "CommonIcons\\PASBTN_CONT_Okeania.blp" },
+	{ 6, "lua.auto_9a0f6ad9710e2500", "lua.auto_9a0f6ad9710e2500", "CommonIcons\\PASBTN_CONT_Argus.blp" },
 }
 local HP_ALL_MAP_ICON = HP_BTN .. "BTN_CONT_All.blp"
 
@@ -230,7 +230,7 @@ local function HpContinentToggle(c)
 	local on = udg_Continents[c[1]] ~= 1
 	udg_Continents[c[1]] = on and 1 or 0
 	udg_Continents[0] = HpContinentsAny() and 1 or 0
-	HpAnnounce(c[3], on and Loc("lua.auto_a5de79ca324d2f35") or Loc("lua.auto_6f4f17fc7201101f"))
+	HpAnnounce(Loc(c[3]), on and Loc("lua.auto_a5de79ca324d2f35") or Loc("lua.auto_6f4f17fc7201101f"))
 end
 
 -- Все строки панели в порядке показа: { title, options = { opt, ... } }.
@@ -241,15 +241,15 @@ local function HpLayoutRows()
 		local opts = {}
 		for i = 2, #row do
 			local o = row[i]
-			opts[#opts + 1] = { name = o[2], tip = o[3], icon = o[4],
+				opts[#opts + 1] = { name = Loc(o[2]), tip = Loc(o[3]), icon = o[4],
 				selected = function() return row.get() == o[1] end,
 				click = function()
 					if row.get() == o[1] then return end
 					row.set(o[1])
-					HpAnnounce(row[1], o[2])
+					HpAnnounce(Loc(row[1]), Loc(o[2]))
 				end }
 		end
-		rows[#rows + 1] = { title = row[1], options = opts }
+		rows[#rows + 1] = { title = Loc(row[1]), options = opts }
 		-- Континенты — сразу после режима.
 		if r == 1 then
 			local cont = { { name = Loc("lua.auto_245f55d3c204ee69"), icon = HP_ALL_MAP_ICON,
@@ -258,7 +258,7 @@ local function HpLayoutRows()
 				click = function() if udg_Continents[0] == 1 then HpContinentsAll() end end } }
 			for i = 1, #HP_CONTINENTS do
 				local c = HP_CONTINENTS[i]
-				cont[#cont + 1] = { name = c[2], title = c[3], icon = c[4],
+				cont[#cont + 1] = { name = Loc(c[2]), title = Loc(c[3]), icon = c[4],
 					tip = Loc("lua.auto_ee27e733524ef7b2")
 						.. Loc("lua.auto_bf312df3ad8c8ee7"),
 					selected = function() return udg_Continents[0] == 1 and udg_Continents[c[1]] == 1 end,
