@@ -1,5 +1,6 @@
 """Localization catalog, WTS generation and translation validation."""
 import json
+import importlib.util
 import sys
 import tempfile
 import unittest
@@ -93,6 +94,18 @@ class TranslationTests(unittest.TestCase):
         self.assertIn('BlzGetLocale and BlzGetLocale()', lua)
         self.assertNotIn('GetLocale and GetLocale()', lua)
         self.assertIn('function Loc(key)', lua)
+
+    @unittest.skipUnless(importlib.util.find_spec('lupa'), 'lupa is installed in localization CI')
+    def test_loc_returns_values_for_en_us_and_ru_ru(self):
+        from lupa import LuaRuntime
+
+        source = {'ruRU': {'k': 'Русская строка'}, 'enUS': {'k': 'English string'}}
+        generated = wc3_l10n.render_ui_lua(source, {'enUS': 'enUS'})
+        for game_locale, expected in [('enUS', 'English string'), ('ruRU', 'Русская строка')]:
+            lua = LuaRuntime(unpack_returned_tuples=True)
+            lua.globals().BlzGetLocale = lambda: game_locale
+            lua.execute(generated)
+            self.assertEqual(expected, lua.eval('Loc("k")'))
 
 
 class PilotTests(unittest.TestCase):

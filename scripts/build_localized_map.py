@@ -17,6 +17,7 @@ def run(*args: str) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--hivewe", required=True, type=Path, help="path to HiveWE_cli.exe")
+    parser.add_argument("--stormlib", type=Path, help="path to StormLib.dll used to verify the result")
     parser.add_argument("--locale", default="enUS")
     parser.add_argument("--out", type=Path, required=True, help="output .w3x path")
     args = parser.parse_args()
@@ -25,6 +26,12 @@ def main() -> int:
     output = output.resolve()
     if not hivewe.is_file():
         parser.error(f"HiveWE_cli not found: {hivewe}")
+    stormlib = args.stormlib.resolve() if args.stormlib else next(
+        (candidate for candidate in (hivewe.parent / "StormLib.dll",
+                                     ROOT / ".cache/hivewe-build/Release/StormLib.dll") if candidate.is_file()),
+        None)
+    if stormlib is None:
+        parser.error("StormLib.dll not found next to HiveWE or in .cache/hivewe-build/Release; pass --stormlib")
 
     run(sys.executable, "scripts/wc3_l10n.py", "extract")
     run(sys.executable, "scripts/wc3_l10n.py", "check", "--locale", args.locale, "--no-output")
@@ -33,6 +40,8 @@ def main() -> int:
     run(sys.executable, "scripts/wc3_l10n.py", "check", "--locale", args.locale)
     output.parent.mkdir(parents=True, exist_ok=True)
     run(str(hivewe), "build-map", "--map", str(ROOT / "map.w3x"), "--out", str(output))
+    run(sys.executable, "scripts/verify_localized_map.py", "--archive", str(output),
+        "--stormlib", str(stormlib), "--locale", args.locale)
     return 0
 
 

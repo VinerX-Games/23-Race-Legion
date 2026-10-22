@@ -402,12 +402,35 @@ def in_scope(entry, scope) -> bool:
 def source_hash_issues(by_key, translations, source_hashes):
     missing, stale = [], []
     for key in sorted(set(translations) & set(by_key)):
-        expected = hashlib.sha256(by_key[key]["text"].encode("utf-8")).hexdigest()
+        source = by_key[key]
+        source_text = source["text"] if isinstance(source, dict) else source
+        expected = hashlib.sha256(source_text.encode("utf-8")).hexdigest()
         if key not in source_hashes:
             missing.append(key)
         elif source_hashes[key] != expected:
             stale.append(key)
     return missing, stale
+
+
+def localization_source_texts(catalog, locale_dir: Path):
+    sources = {entry["key"]: entry["text"] for entry in catalog["entries"]}
+    sources.update({f"ui/{key}": value for key, value in read_json(UI_SOURCE_PATH).items()})
+    base = command_sections(MAP / "Units/CommandStrings.txt")
+    for section, values in base.items():
+        for key, value in values.items():
+            sources[f"overlay/Units/CommandStrings.txt/{section}/{key}"] = value
+    return sources
+
+
+def localization_values(translations, locale_ui, locale_dir: Path):
+    values = dict(translations)
+    values.update({f"ui/{key}": value for key, value in locale_ui.items()})
+    overlay = locale_dir / "overlay/Units/CommandStrings.txt"
+    if overlay.is_file():
+        for section, entries in command_sections(overlay).items():
+            for key, value in entries.items():
+                values[f"overlay/Units/CommandStrings.txt/{section}/{key}"] = value
+    return values
 
 
 def command_sections(path: Path):
@@ -460,7 +483,9 @@ def validate(locale: str, check_output: bool = True) -> int:
     scope = set(config.get("scope_races", []))
     required = {key for key, entry in by_key.items()
                 if in_scope(entry, scope) and CYRILLIC.search(entry["text"])}
-    missing_hashes, stale_hashes = source_hash_issues(by_key, translations, source_hashes)
+    source_texts = localization_source_texts(catalog, locale_dir)
+    hash_values = localization_values(translations, locale_ui, locale_dir)
+    missing_hashes, stale_hashes = source_hash_issues(source_texts, hash_values, source_hashes)
     errors.extend({"key": key, "issue": "missing source_sha256"} for key in missing_hashes)
     errors.extend({"key": key, "issue": "stale translation source_sha256"} for key in stale_hashes)
     for key in sorted(set(translations) - set(by_key)):
@@ -530,11 +555,13 @@ def extract(check: bool = False) -> int:
     return 0 if not catalog["issues"] else 1
 
 
-def status(locale: str = "enUS") -> int:
+def status(locale: str = "enUS", all_races: bool = False) -> int:
     catalog = extract_catalog()
     config, locale_ui, _ = locale_config(locale)
     translations = config.get("translations", {})
     scope = set(config.get("scope_races", []))
+    if all_races:
+        scope = {race for entry in catalog["entries"] for race in entry.get("races", [])}
     rows = {}
     for entry in catalog["entries"]:
         if in_scope(entry, scope) and CYRILLIC.search(entry["text"]):
@@ -546,7 +573,16 @@ def status(locale: str = "enUS") -> int:
                     text = translations.get(entry["key"].removesuffix("@hd"))
                 if text is not None:
                     row["translated"] += 1
-    print(json.dumps({"ok": True, "locale": locale, "races": rows, "ui_keys": len(locale_ui)},
+    cyrillic = [entry for entry in catalog["entries"] if CYRILLIC.search(entry["text"])]
+    inventory = {
+        "cyrillic_entries": len(cyrillic),
+        "custom": sum(bool(entry["custom"]) for entry in cyrillic),
+        "shared_or_unassigned": sum(len(entry.get("races") or []) != 1 for entry in cyrillic),
+        "translated_object_keys": sum(entry["key"] in translations for entry in cyrillic),
+        "distinct_wts_ids": len({entry["sid"] for entry in cyrillic}),
+    }
+    print(json.dumps({"ok": True, "locale": locale, "all_races": all_races,
+                      "inventory": inventory, "races": rows, "ui_keys": len(locale_ui)},
                      ensure_ascii=False, indent=2))
     return 0
 
@@ -554,20 +590,21 @@ def status(locale: str = "enUS") -> int:
 def fingerprint(locale: str, refresh: set[str] | None = None) -> int:
     """Record source hashes for translated entries that have no baseline yet."""
     catalog = extract_catalog()
-    config, _, locale_dir = locale_config(locale)
+    config, locale_ui, locale_dir = locale_config(locale)
     translations = config.get("translations", {})
     path = locale_dir / "source_hashes.json"
     hashes = read_json(path) if path.is_file() else {}
-    by_key = {entry["key"]: entry for entry in catalog["entries"]}
+    sources = localization_source_texts(catalog, locale_dir)
+    values = localization_values(translations, locale_ui, locale_dir)
     added, unknown = 0, []
-    for key in translations:
-        entry = by_key.get(key)
-        if entry is None:
+    for key in values:
+        source = sources.get(key)
+        if source is None:
             unknown.append(key)
         elif key not in hashes or key in (refresh or set()):
-            hashes[key] = hashlib.sha256(entry["text"].encode("utf-8")).hexdigest()
+            hashes[key] = hashlib.sha256(source.encode("utf-8")).hexdigest()
             added += 1
-    unknown_refresh = sorted((refresh or set()) - set(translations))
+    unknown_refresh = sorted((refresh or set()) - set(values))
     unknown.extend(f"--refresh key is not translated: {key}" for key in unknown_refresh)
     path.write_text(json.dumps(hashes, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps({"ok": not unknown, "added": added, "unknown": unknown}, ensure_ascii=False, indent=2))
@@ -587,6 +624,7 @@ def main() -> int:
     p_check.add_argument("--no-output", action="store_true")
     p_status = sub.add_parser("status", help="translation coverage by race")
     p_status.add_argument("--locale", default="enUS")
+    p_status.add_argument("--all-races", action="store_true", help="report every race present in the catalog")
     p_fingerprint = sub.add_parser("fingerprint", help="record source hashes for new translations")
     p_fingerprint.add_argument("--locale", default="enUS")
     p_fingerprint.add_argument("--refresh", action="append", default=[], metavar="KEY",
@@ -600,7 +638,7 @@ def main() -> int:
         return validate(args.locale, not args.no_output)
     if args.command == "fingerprint":
         return fingerprint(args.locale, set(args.refresh))
-    return status(args.locale)
+    return status(args.locale, args.all_races)
 
 
 if __name__ == "__main__":

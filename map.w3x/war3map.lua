@@ -3386,7 +3386,7 @@ local UI_STRINGS = {
         ["race_picker.group.horde"] = "HORDE",
         ["race_picker.group.neutral"] = "NEUTRAL",
         ["race_picker.hint"] = "|cffffffffRMB|cffced4da on the map sets the landing site, then choose a race|r",
-        ["race_picker.subfaction.button"] = "|cffebc56c%s|r|n|cffb99d66SUBFRACTION:|cffced4da %s|r",
+        ["race_picker.subfaction.button"] = "|cffebc56c%s|r|n|cffb99d66SUBFACTION:|cffced4da %s|r",
         ["race_picker.subfaction.dragons.title"] = "DRAGONS",
         ["race_picker.subfaction.dragons.union.name"] = "Dragon Union",
         ["race_picker.subfaction.dragons.union.tip"] = "An alliance of the red, green, blue and bronze flights. The black flight is unavailable.",
@@ -3402,7 +3402,7 @@ local UI_STRINGS = {
         ["race_picker.subfaction.naga.murloc.tip"] = "Unlocks murlocs, their spellcasters, a defender hero and special upgrades.",
         ["race_picker.subfaction.naga.naga.name"] = "Naga Dominion",
         ["race_picker.subfaction.naga.naga.tip"] = "Unlocks naga warriors, sirens, sea witches and the royal guard.",
-        ["race_picker.subfaction.naga.title"] = "NAGA AND MURLOKS",
+        ["race_picker.subfaction.naga.title"] = "NAGA AND MURLOCS",
     },
     ruRU = {
         ["race_picker.back.tip"] = "|cffebc56cНазад|r|n|cffced4daВернуться к выбору расы.|r",

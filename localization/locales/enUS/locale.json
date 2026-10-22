@@ -2,6 +2,6 @@
   "schema_version": 1,
   "locale": "enUS",
   "default_locale": "ruRU",
-  "scope_races": ["Stromgard", "IceTrols"],
+  "scope_races": ["Stromgard", "IceTrols", "Dragon"],
   "game_locales": ["enUS", "enGB"]
 }
