@@ -260,6 +260,19 @@ function BuildT(p, before, after)
 end
 -- ***************************************************************************
 -- *  TryBuy
+local function AiTryBuyItem(p, u, itemId, cost)
+	if GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) < cost then return end
+	-- UnitAddItemById can return nil after leaving the created item on the ground.
+	local item = CreateItem(itemId, GetUnitX(u), GetUnitY(u))
+	if item == nil then return end
+	UnitAddItem(u, item)
+	if UnitHasItem(u, item) then
+		SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) - cost)
+	else
+		RemoveItem(item)
+	end
+end
+
 ---@param p player
 ---@param ePoints integer
 ---@return nothing
@@ -268,11 +281,13 @@ function TryBuy(p, ePoints)
 	local u
 	local itemId
 	local itemGoldCost = 1000
-	GroupEnumUnitsOfPlayer(gGroup, p, LiveHero)
-	u = GroupPickRandomUnit2(gGroup)
+	local heroes = CreateGroup()
+	GroupEnumUnitsOfPlayer(heroes, p, LiveHero)
+	u = GroupPickRandomUnit2(heroes)
+	DestroyGroup(heroes)
 	if u ~= nil then
 		local invSize = UnitInventorySize(u)
-		if invSize <= 0 then invSize = 6 end
+		if invSize <= 0 then return end
 
 		if UnitInventoryCount(u) >= invSize then
 			u = nil
@@ -298,14 +313,7 @@ function TryBuy(p, ePoints)
             consumable = FourCC('pman')
         end
         if consumable ~= nil then
-            if GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) >= 150 then
-                local it = UnitAddItemById(u, consumable)
-                if it ~= nil and UnitHasItem(u, it) then
-                    SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) - 150)
-                elseif it ~= nil then
-                    RemoveItem(it)
-                end
-            end
+            AiTryBuyItem(p, u, consumable, 150)
             return
         end
 
@@ -327,14 +335,7 @@ function TryBuy(p, ePoints)
 
 		if #available > 0 then
 			itemId = available[GetRandomInt(1, #available)]
-			if GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) >= itemGoldCost then
-				local it = UnitAddItemById(u, itemId)
-				if it ~= nil and UnitHasItem(u, it) then
-					SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) - itemGoldCost)
-				elseif it ~= nil then
-					RemoveItem(it)
-				end
-			end
+			AiTryBuyItem(p, u, itemId, itemGoldCost)
 		end
 
 	end

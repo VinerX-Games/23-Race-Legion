@@ -4671,6 +4671,19 @@ function BuildT(p, before, after)
 end
 -- ***************************************************************************
 -- *  TryBuy
+local function AiTryBuyItem(p, u, itemId, cost)
+	if GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) < cost then return end
+	-- UnitAddItemById can return nil after leaving the created item on the ground.
+	local item = CreateItem(itemId, GetUnitX(u), GetUnitY(u))
+	if item == nil then return end
+	UnitAddItem(u, item)
+	if UnitHasItem(u, item) then
+		SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) - cost)
+	else
+		RemoveItem(item)
+	end
+end
+
 ---@param p player
 ---@param ePoints integer
 ---@return nothing
@@ -4679,11 +4692,13 @@ function TryBuy(p, ePoints)
 	local u
 	local itemId
 	local itemGoldCost = 1000
-	GroupEnumUnitsOfPlayer(gGroup, p, LiveHero)
-	u = GroupPickRandomUnit2(gGroup)
+	local heroes = CreateGroup()
+	GroupEnumUnitsOfPlayer(heroes, p, LiveHero)
+	u = GroupPickRandomUnit2(heroes)
+	DestroyGroup(heroes)
 	if u ~= nil then
 		local invSize = UnitInventorySize(u)
-		if invSize <= 0 then invSize = 6 end
+		if invSize <= 0 then return end
 
 		if UnitInventoryCount(u) >= invSize then
 			u = nil
@@ -4709,14 +4724,7 @@ function TryBuy(p, ePoints)
             consumable = FourCC('pman')
         end
         if consumable ~= nil then
-            if GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) >= 150 then
-                local it = UnitAddItemById(u, consumable)
-                if it ~= nil and UnitHasItem(u, it) then
-                    SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) - 150)
-                elseif it ~= nil then
-                    RemoveItem(it)
-                end
-            end
+            AiTryBuyItem(p, u, consumable, 150)
             return
         end
 
@@ -4738,14 +4746,7 @@ function TryBuy(p, ePoints)
 
 		if #available > 0 then
 			itemId = available[GetRandomInt(1, #available)]
-			if GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) >= itemGoldCost then
-				local it = UnitAddItemById(u, itemId)
-				if it ~= nil and UnitHasItem(u, it) then
-					SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) - itemGoldCost)
-				elseif it ~= nil then
-					RemoveItem(it)
-				end
-			end
+			AiTryBuyItem(p, u, itemId, itemGoldCost)
 		end
 
 	end
@@ -22718,23 +22719,19 @@ end
 -- Trigger: No2SameItems
 --===========================================================================
 function Trig_No2SameItems_Actions()
-    local l= GetUnitLoc(GetTriggerUnit())
-    local i=0
-    local Item= GetManipulatedItem()
-    for bj_forLoopAIndex = 1, 6 do
-        if GetItemTypeId(Item) == GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) then
-            i=i + 1
+    local u = GetTriggerUnit()
+    local item = GetManipulatedItem()
+    if u == nil or item == nil or not UnitHasItem(u, item) then return end
+    local itemId = GetItemTypeId(item)
+    if itemId == 0 then return end
+    for slot = 0, UnitInventorySize(u) - 1 do
+        local other = UnitItemInSlot(u, slot)
+        if other ~= nil and other ~= item and GetItemTypeId(other) == itemId then
+            UnitDropItemPoint(u, item, GetUnitX(u), GetUnitY(u))
+            DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "TRIGSTR_1254")
+            return
         end
     end
-    
-    if i >= 2 then
-        UnitDropItemPointLoc(GetTriggerUnit(), Item, l)
-        DisplayTextToPlayer(GetOwningPlayer(GetTriggerUnit()), 0, 0, "TRIGSTR_1254")
-    
-    end
-    RemoveLocation(l)
-    l=nil
-    Item=nil
 end
 --===========================================================================
 function InitTrig_No2SameItems()
