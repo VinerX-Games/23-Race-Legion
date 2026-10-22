@@ -2,6 +2,15 @@
   "schema_version": 1,
   "locale": "enUS",
   "default_locale": "ruRU",
-  "scope_races": ["Stromgard", "IceTrols", "Dragon", "Nagi"],
-  "game_locales": ["enUS", "enGB"]
+  "scope_races": [
+    "Stromgard",
+    "IceTrols",
+    "Dragon",
+    "Nagi",
+    "nightelf"
+  ],
+  "game_locales": [
+    "enUS",
+    "enGB"
+  ]
 }
