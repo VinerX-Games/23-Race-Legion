@@ -55,6 +55,7 @@ TEXT_FIELDS = {
 }
 
 COLOR = re.compile(r"\|c[0-9a-fA-F]{8}")
+COLOR_START = re.compile(r"\|c", re.IGNORECASE)
 FORMAT = re.compile(r"%(?:\d+\$)?[sdifxXc%]")
 TOKEN = re.compile(r"<[^<>\s]+>")
 CYRILLIC = re.compile(r"[А-Яа-яЁё]")
@@ -79,6 +80,8 @@ def load_wts(path: Path = WTS_PATH):
     strings, order, current, buf = {}, [], None, []
     for line in text.splitlines():
         match = re.match(r"^STRING (\d+)\s*$", line)
+        if line.startswith("STRING") and match is None:
+            raise ValueError(f"invalid STRING ID declaration: {line!r} in {path}")
         if match:
             if current is not None:
                 raise ValueError(f"unterminated STRING {current} in {path}")
@@ -89,6 +92,8 @@ def load_wts(path: Path = WTS_PATH):
         if line.strip() == "{" and not buf:
             continue
         if line.strip() == "}":
+            if current in strings:
+                raise ValueError(f"duplicate STRING {current} in {path}")
             strings[current] = "\n".join(buf)
             order.append(current)
             current, buf = None, []
@@ -248,7 +253,7 @@ def render_ui_lua(translations: dict[str, dict[str, str]], game_locales=None) ->
     lines += [
         "}",
         "do",
-        "    local locale = GetLocale and GetLocale() or \"ruRU\"",
+        "    local locale = BlzGetLocale and BlzGetLocale() or \"ruRU\"",
         "    if GAME_LOCALES[locale] then MapLocale = GAME_LOCALES[locale] end",
         "end",
         "",
@@ -365,13 +370,16 @@ def build(locale: str, check: bool = False) -> int:
 
 def check_text(source: str, target: str):
     problems = []
+    for label, value in (("source", source), ("translation", target)):
+        if len(COLOR_START.findall(value)) != len(COLOR.findall(value)):
+            problems.append(f"malformed color code in {label}")
     if COLOR.findall(source) != COLOR.findall(target):
         problems.append("color sequence differs")
     if Counter(FORMAT.findall(source)) != Counter(FORMAT.findall(target)):
         problems.append("format placeholders differ")
     if Counter(TOKEN.findall(source)) != Counter(TOKEN.findall(target)):
         problems.append("ability data references differ")
-    if Counter(re.findall(r"\d+", COLOR.sub("", source))) != Counter(re.findall(r"\d+", COLOR.sub("", target))):
+    if re.findall(r"\d+", COLOR.sub("", source)) != re.findall(r"\d+", COLOR.sub("", target)):
         problems.append("numbers differ")
     if source.count("|n") != target.count("|n"):
         problems.append("line break count differs")
@@ -389,6 +397,17 @@ def check_text(source: str, target: str):
 def in_scope(entry, scope) -> bool:
     races = entry.get("races") or []
     return bool(entry.get("custom")) and len(races) == 1 and races[0] in scope
+
+
+def source_hash_issues(by_key, translations, source_hashes):
+    missing, stale = [], []
+    for key in sorted(set(translations) & set(by_key)):
+        expected = hashlib.sha256(by_key[key]["text"].encode("utf-8")).hexdigest()
+        if key not in source_hashes:
+            missing.append(key)
+        elif source_hashes[key] != expected:
+            stale.append(key)
+    return missing, stale
 
 
 def command_sections(path: Path):
@@ -422,7 +441,7 @@ def validate_overlay(locale_dir: Path, errors):
             left, right = base[section][key], translated[section][key]
             if Counter(FORMAT.findall(left)) != Counter(FORMAT.findall(right)):
                 errors.append({"key": f"CommandStrings/{section}/{key}", "issue": "format placeholders differ"})
-            if len(re.findall(r"\|c", right)) != len(COLOR.findall(right)):
+            if len(COLOR_START.findall(right)) != len(COLOR.findall(right)):
                 errors.append({"key": f"CommandStrings/{section}/{key}", "issue": "malformed color code"})
 
 
@@ -434,24 +453,28 @@ def validate(locale: str, check_output: bool = True) -> int:
         return 1
     config, locale_ui, locale_dir = locale_config(locale)
     translations = config.get("translations", {})
+    hashes_path = locale_dir / "source_hashes.json"
+    source_hashes = read_json(hashes_path) if hashes_path.is_file() else {}
     by_key = {entry["key"]: entry for entry in catalog["entries"]}
     errors, warnings = [], []
     scope = set(config.get("scope_races", []))
     required = {key for key, entry in by_key.items()
                 if in_scope(entry, scope) and CYRILLIC.search(entry["text"])}
+    missing_hashes, stale_hashes = source_hash_issues(by_key, translations, source_hashes)
+    errors.extend({"key": key, "issue": "missing source_sha256"} for key in missing_hashes)
+    errors.extend({"key": key, "issue": "stale translation source_sha256"} for key in stale_hashes)
     for key in sorted(set(translations) - set(by_key)):
         errors.append({"key": key, "issue": "translation key is not in catalog"})
-    for key in sorted(required):
-        text = translations.get(key)
-        if text is None and by_key[key]["skin"]:
-            text = translations.get(key.removesuffix("@hd"))
-        if text is None:
-            errors.append({"key": key, "issue": "missing translation"})
+    for key in sorted(required - set(translations)):
+        if by_key[key]["skin"] and translations.get(key.removesuffix("@hd")) is not None:
             continue
+        errors.append({"key": key, "issue": "missing translation"})
+    for key in sorted(set(translations) & set(by_key)):
+        text = translations[key]
         entry = by_key[key]
         for problem in check_text(entry["text"], text):
             errors.append({"key": key, "issue": problem})
-        if text == entry["text"]:
+        if text == entry["text"] and CYRILLIC.search(entry["text"]):
             errors.append({"key": key, "issue": "translation equals source"})
         if len(text) > len(entry["text"]) * 1.6 + 40:
             warnings.append({"key": key, "issue": "translation is much longer than source"})
@@ -480,7 +503,11 @@ def validate(locale: str, check_output: bool = True) -> int:
                          or (by_key[key]["skin"] and translations.get(key.removesuffix("@hd")) is not None))
         coverage[race] = {"total": len(keys), "translated": translated, "missing": len(keys) - translated}
     build_code = build(locale, check=True) if check_output else 0
+    stale_translations = [item for item in errors if item["issue"] == "stale translation source_sha256"]
+    missing_translations = [item for item in errors if item["issue"] == "missing translation"]
     report = {"ok": not errors and build_code == 0, "errors": errors, "warnings": warnings,
+              "stale": stale_translations, "missing": missing_translations,
+              "missing_source_hashes": [item for item in errors if item["issue"] == "missing source_sha256"],
               "coverage": coverage, "catalog_entries": len(by_key)}
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return 0 if report["ok"] else 1
@@ -524,6 +551,29 @@ def status(locale: str = "enUS") -> int:
     return 0
 
 
+def fingerprint(locale: str, refresh: set[str] | None = None) -> int:
+    """Record source hashes for translated entries that have no baseline yet."""
+    catalog = extract_catalog()
+    config, _, locale_dir = locale_config(locale)
+    translations = config.get("translations", {})
+    path = locale_dir / "source_hashes.json"
+    hashes = read_json(path) if path.is_file() else {}
+    by_key = {entry["key"]: entry for entry in catalog["entries"]}
+    added, unknown = 0, []
+    for key in translations:
+        entry = by_key.get(key)
+        if entry is None:
+            unknown.append(key)
+        elif key not in hashes or key in (refresh or set()):
+            hashes[key] = hashlib.sha256(entry["text"].encode("utf-8")).hexdigest()
+            added += 1
+    unknown_refresh = sorted((refresh or set()) - set(translations))
+    unknown.extend(f"--refresh key is not translated: {key}" for key in unknown_refresh)
+    path.write_text(json.dumps(hashes, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps({"ok": not unknown, "added": added, "unknown": unknown}, ensure_ascii=False, indent=2))
+    return 0 if not unknown else 1
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = parser.add_subparsers(dest="command", required=True)
@@ -537,6 +587,10 @@ def main() -> int:
     p_check.add_argument("--no-output", action="store_true")
     p_status = sub.add_parser("status", help="translation coverage by race")
     p_status.add_argument("--locale", default="enUS")
+    p_fingerprint = sub.add_parser("fingerprint", help="record source hashes for new translations")
+    p_fingerprint.add_argument("--locale", default="enUS")
+    p_fingerprint.add_argument("--refresh", action="append", default=[], metavar="KEY",
+                               help="refresh a reviewed stale translation hash; repeat for multiple keys")
     args = parser.parse_args()
     if args.command == "extract":
         return extract(args.check)
@@ -544,6 +598,8 @@ def main() -> int:
         return build(args.locale, args.check)
     if args.command == "check":
         return validate(args.locale, not args.no_output)
+    if args.command == "fingerprint":
+        return fingerprint(args.locale, set(args.refresh))
     return status(args.locale)
 
 

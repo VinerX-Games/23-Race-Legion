@@ -25,6 +25,20 @@ class WtsTests(unittest.TestCase):
                      wc3_l10n.dump_wts(strings, meta).encode('utf-8')
             self.assertEqual(raw, output)
 
+    def test_duplicate_string_ids_are_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'war3map.wts'
+            path.write_text('STRING 1\n{\nfirst\n}\nSTRING 001\n{\nsecond\n}\n', encoding='utf-8')
+            with self.assertRaisesRegex(ValueError, 'duplicate STRING 1'):
+                wc3_l10n.load_wts(path)
+
+    def test_invalid_string_id_declaration_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'war3map.wts'
+            path.write_text('STRING -1\n{\ntext\n}\n', encoding='utf-8')
+            with self.assertRaisesRegex(ValueError, 'invalid STRING ID'):
+                wc3_l10n.load_wts(path)
+
 
 class TranslationTests(unittest.TestCase):
     def test_format_drift_is_rejected(self):
@@ -32,6 +46,20 @@ class TranslationTests(unittest.TestCase):
         self.assertIn('numbers differ', wc3_l10n.check_text(source, '|cffff000020 damage|r'))
         self.assertIn('color sequence differs', wc3_l10n.check_text(source, '|cff00ff0010 damage|r'))
         self.assertIn('Cyrillic text remains', wc3_l10n.check_text(source, '|cffff000010 урона|r'))
+
+    def test_malformed_color_codes_are_rejected(self):
+        problems = wc3_l10n.check_text('|cffff0000Source|r', '|cffff0000Target|cffff|r')
+        self.assertIn('malformed color code in translation', problems)
+
+    def test_number_order_is_preserved(self):
+        self.assertIn('numbers differ', wc3_l10n.check_text('10 sec, 20 damage', '20 sec, 10 damage'))
+
+    def test_source_hash_report_separates_missing_and_stale(self):
+        catalog = {'key-a': {'text': 'Исходная строка'}, 'key-b': {'text': 'Другая строка'}}
+        missing, stale = wc3_l10n.source_hash_issues(
+            catalog, {'key-a': 'Translation A', 'key-b': 'Translation B'}, {'key-a': 'old-hash'})
+        self.assertEqual(['key-b'], missing)
+        self.assertEqual(['key-a'], stale)
 
     def test_ability_data_reference_drift_is_rejected(self):
         source = 'Deals <ANbf,DataA1> damage for <ANbf,Dur1> sec.'
@@ -62,6 +90,8 @@ class TranslationTests(unittest.TestCase):
         lua = wc3_l10n.render_ui_lua({'ruRU': {'k': 'строка'}, 'enUS': {'k': 'line "quoted"'}})
         self.assertIn('MapLocale = "ruRU"', lua)
         self.assertIn('["k"] = "line \\"quoted\\"",', lua)
+        self.assertIn('BlzGetLocale and BlzGetLocale()', lua)
+        self.assertNotIn('GetLocale and GetLocale()', lua)
         self.assertIn('function Loc(key)', lua)
 
 

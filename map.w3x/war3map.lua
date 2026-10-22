@@ -3371,7 +3371,7 @@ local GAME_LOCALES = {
     ["enUS"] = "enUS",
 }
 do
-    local locale = GetLocale and GetLocale() or "ruRU"
+    local locale = BlzGetLocale and BlzGetLocale() or "ruRU"
     if GAME_LOCALES[locale] then MapLocale = GAME_LOCALES[locale] end
 end
 
