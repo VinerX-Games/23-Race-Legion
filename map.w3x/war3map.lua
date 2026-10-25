@@ -12538,8 +12538,6 @@ function StandardUIAcquireCommandButtons()
 	end
 end
 
-StandardUIAcquireCommandButtons()
-
 function StandardUISetVisible(show)
 	StandardUIHidden = not show
 	BlzHideOriginFrames(not show)
