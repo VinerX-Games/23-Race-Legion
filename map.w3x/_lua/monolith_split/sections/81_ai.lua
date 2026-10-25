@@ -537,6 +537,12 @@ function _castAbility(u, entry, target, p)
         return AiCombatOrderResult(u, BearGrip.AiCast(u, target))
     elseif tp == "naga_harpoon" then
         return AiCombatOrderResult(u, NagaCombat.AiHarpoon(u))
+    elseif tp == "worgen_seed" then
+        return AiCombatOrderResult(u, WorgenDruid.AiSeed(u))
+    elseif tp == "worgen_curse" then
+        return AiCombatOrderResult(u, WorgenDruid.AiCurse(u, target))
+    elseif tp == "worgen_moon" then
+        return AiCombatOrderResult(u, WorgenDruid.AiMoon(u))
     elseif tp == "immediate" then
         if entry.orderId ~= nil then
             return AiCombatOrderResult(u, IssueImmediateOrderById(u, entry.orderId))

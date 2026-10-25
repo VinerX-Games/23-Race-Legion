@@ -51,6 +51,8 @@ These install test/syntax dependencies, rebuild Lua, report source/output hash a
 
 Use four-space indentation in Python and follow surrounding Lua indentation. Preserve existing Warcraft globals and function names. Python helpers use `snake_case`; Lua AI functions commonly use `Ai` prefixes. Register new sections in the manifest in dependency order. Keep files UTF-8; Russian comments, documentation, and commit descriptions are common. Syntax validation uses `luaparser`; preserve local formatting.
 
+Для создания новых иконок использовать [wc3-icon-authoring](.agents/skills/wc3-icon-authoring/SKILL.md): там сохранены утверждённый пользователем рисованный стиль Warcraft III Classic, образец и шаблон запросов.
+
 ## Обязательный стандарт игровых текстов
 
 При добавлении или изменении юнитов, героев, зданий, способностей, исследований и интерфейсных текстов обязательно применять [docs/UI_TEXT_STYLE.md](docs/UI_TEXT_STYLE.md) и единую палитру [docs/UI_COLOR_PALETTE.md](docs/UI_COLOR_PALETTE.md). Эти правила действуют для всех рас, object data и текстов, формируемых Lua.

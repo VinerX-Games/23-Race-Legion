@@ -367,7 +367,7 @@ function Trig_SecondChance_Func003Func008C()
     end
    
     if IsPlayerInForce(ConvertedPlayer(udg_LocalInteger), Observers) then
-        DisplayTimedTextToForce(GetPlayersAll(), 5.00, ( "" .. GetPlayerName(GetTriggerPlayer()) ) .. ( "" .. ( GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " not " ) ))
+        DisplayTimedTextToForce(GetPlayersAll(), 5.00, string.format(Loc("msg.second_chance.observer"), GetPlayerName(ConvertedPlayer(udg_LocalInteger))))
         return false
     end
     return true
@@ -609,8 +609,8 @@ function Trig_ArchontMode_Actions()
     local pi2 = number and number - 1
     local pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) then
-        DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi2)) .. "" .. I2S(pi2))
-        DisplayTextToPlayer(Player(pi2), 0, 0, "" .. GetPlayerName(Player(pi1)))
+        DisplayTextToPlayer(Player(pi1), 0, 0, string.format(Loc("msg.archont.on_self"), GetPlayerName(Player(pi2)), pi2 + 1))
+        DisplayTextToPlayer(Player(pi2), 0, 0, string.format(Loc("msg.archont.on_target"), GetPlayerName(Player(pi1))))
         SetPlayerAllianceStateBJ(Player(pi1), Player(pi2), bj_ALLIANCE_ALLIED_ADVUNITS)
     end
     MultiboardAllowDisplayBJ(true)
@@ -652,8 +652,8 @@ function Trig_ArchontModeOff_Actions()
     local pi2 = number and number - 1
     local pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) and DipMode ~= 1 then
-        DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi2)) .. "" .. I2S(pi2))
-        DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi1)))
+        DisplayTextToPlayer(Player(pi1), 0, 0, string.format(Loc("msg.archont.off_self"), GetPlayerName(Player(pi2)), pi2 + 1))
+        DisplayTextToPlayer(Player(pi2), 0, 0, string.format(Loc("msg.archont.off_target"), GetPlayerName(Player(pi1))))
         SetPlayerAllianceBJ(Player(pi1), ALLIANCE_SHARED_ADVANCED_CONTROL, false, Player(pi2))
     end
    
@@ -1148,7 +1148,7 @@ function Trig_BeginDestroingTrain_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0P7')
 end
 function Trig_BeginDestroingTrain_Actions()
-      DisplayTextToForce(udg_AllPlayers, " - ...")
+      DisplayTextToForce(udg_AllPlayers, Loc("msg.train.flood_warning"))
 end
 --===========================================================================
 function InitTrig_BeginDestroingTrain()

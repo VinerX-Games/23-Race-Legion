@@ -55,6 +55,19 @@ Frame "GLUETEXTBUTTON" "TasButtonTemplate" {
 
 }
 
+// TasButtonTemplate look without a button: overlay for native upper bar buttons.
+Frame "BACKDROP" "TasButtonLookTemplate" {
+    DecorateFileNames,
+    BackdropTileBackground,
+    BackdropBackgroundSize 0.1,
+    BackdropBackground "QuestDialogNormalBackground",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize 0.005,
+    BackdropBackgroundInsets 0.0005 0.0005 0.0005 0.0005,
+    BackdropEdgeFile "QuestDialogNormalBorder",
+    BackdropBlendAll,
+}
+
 Frame "TEXT" "TasButtonTextTemplate" {
     DecorateFileNames,
     FrameFont "MasterFont", 0.0095,"",

@@ -144,7 +144,8 @@ def register_imports(path, assets):
     return len(additions)
 
 
-def preserve_unrelated(original_path, edited_path, new_ids, unit_ids=()):
+def preserve_unrelated(original_path, edited_path, new_ids, unit_ids=(),
+                       allowed=('uabi', 'upgr', 'ures', 'utub')):
     """Keep existing records byte-for-byte; publish only the explicitly edited fields."""
     extended = original_path.suffix in ('.w3a', '.w3q')
     original = original_path.read_bytes()
@@ -153,7 +154,7 @@ def preserve_unrelated(original_path, edited_path, new_ids, unit_ids=()):
     _, after = object_records(edited, extended)
     lookup = {x['id']: x for table in after for x in table}
     output = bytearray(struct.pack('<I', version))
-    allowed = {'uabi', 'upgr', 'ures', 'utub'}
+    allowed = set(allowed)
     for index, table in enumerate(before):
         result = []
         for record in table:

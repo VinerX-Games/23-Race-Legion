@@ -121,15 +121,17 @@ class RacePickerTests(unittest.TestCase):
 
     def test_layout_fits_4_3_and_odd_groups_are_staggered(self):
         self.spawn_circle(0)
+        # Кнопки подфракций создаются заранее и до выбора уведены за экран — не считаем их.
         self.lua.execute('''
-            minX, maxX = 1, 0
-            for _,b in ipairs(buttons) do
+            minX, maxX, shown = 1, 0, 0
+            for _,b in ipairs(buttons) do if b.y >= 0 then
+                shown=shown+1
                 minX=math.min(minX,b.x); maxX=math.max(maxX,b.x+b.w)
-            end''')
+            end end''')
         self.assertGreaterEqual(self.lua.eval('minX'), 0.0)
         self.assertLessEqual(self.lua.eval('maxX'), 0.8)
         # 35 рас + случайная + камера.
-        self.assertEqual(self.lua.eval('#buttons'), 37)
+        self.assertEqual(self.lua.eval('shown'), 37)
         # Эльфы (5): нижний ряд сдвинут на пол-иконки; Альянс (8): ряды ровно друг под другом.
         self.lua.execute('''
             function rowsOf(ids)

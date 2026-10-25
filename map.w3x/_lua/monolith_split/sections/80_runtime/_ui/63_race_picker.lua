@@ -160,7 +160,8 @@ function StandardUISetVisible(show)
 	f = BlzGetFrameByName("UpperButtonBarQuestsButton", 0)
 	if f ~= nil then BlzFrameSetVisible(f, show) end
 	f = BlzGetFrameByName("UpperButtonBarAlliesButton", 0)
-	if f ~= nil then BlzFrameSetVisible(f, show) end
+	if f ~= nil then BlzFrameSetVisible(f, show and not AlliesPanelActive) end
+	if AlliesPanelSetUIShown ~= nil then AlliesPanelSetUIShown(show) end
 	-- Рамки миникарты и командной карты, а также ячейки-родители командных кнопок:
 	-- невидимые SimpleFrame-ячейки перехватывают клики даже без кнопок.
 	f = BlzGetFrameByName("MinimapBorder", 0)

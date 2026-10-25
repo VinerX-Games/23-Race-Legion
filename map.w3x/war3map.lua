@@ -3372,6 +3372,9 @@ MapLocale = "enUS"
 local GAME_LOCALES = {
     ["ruRU"] = "ruRU",
 }
+-- No handles here: a timer created in the Lua root desyncs the host in multiplayer.
+-- Until the natives answer, Loc() repeats the detection on every call.
+local mapLocaleSettled = false
 local function SelectMapLocale()
     local locale = BlzGetLocale and BlzGetLocale() or nil
     local selected = locale and GAME_LOCALES[locale] or nil
@@ -3379,15 +3382,83 @@ local function SelectMapLocale()
         if GetLocalizedString("TRIGSTR_000") == "|cffebc56cТочный удар|r" then selected = "ruRU" end
     end
     MapLocale = selected or "enUS"
+    mapLocaleSettled = selected ~= nil or (locale ~= nil and locale ~= "")
 end
 SelectMapLocale()
--- Repeat on the first tick in case the locale natives are not ready while the chunk loads.
-if TimerStart and CreateTimer then
-    TimerStart(CreateTimer(), 0.0, false, SelectMapLocale)
-end
 
 local UI_STRINGS = {
     enUS = {
+        ["allies.act.accept"] = "Accept",
+        ["allies.act.archont"] = "Archon",
+        ["allies.act.archont_on"] = "Archon: on",
+        ["allies.act.break"] = "Break",
+        ["allies.act.cancel"] = "Withdraw",
+        ["allies.act.decline"] = "Decline",
+        ["allies.act.propose"] = "Propose alliance",
+        ["allies.act.res"] = "Resources",
+        ["allies.button"] = "Allies",
+        ["allies.chip.allies"] = "|cffb99d66ALLIES:|cffffffff %d",
+        ["allies.chip.allies_of"] = "|cffb99d66ALLIES:|cffffffff %d|cffced4da of |cffffffff%d",
+        ["allies.chip.mode_ffa"] = "|cffb99d66MODE:|cffef8173 alliances disabled",
+        ["allies.chip.mode_free"] = "|cffb99d66MODE:|cffced4da free diplomacy",
+        ["allies.chip.mode_limit"] = "|cffb99d66MODE:|cffced4da alliances of up to |cffffffff%d|cffced4da players",
+        ["allies.chip.tax"] = "|cffb99d66ALLIANCE TAX: %s|cffced4da of income",
+        ["allies.chip.vassals"] = "|cffb99d66VASSALS:|cffffffff %d",
+        ["allies.col.actions"] = "ACTIONS",
+        ["allies.col.cities"] = "CITIES",
+        ["allies.col.player"] = "PLAYER",
+        ["allies.col.race"] = "RACE",
+        ["allies.col.status"] = "RELATION",
+        ["allies.empty"] = "No other players yet.",
+        ["allies.log"] = "Log",
+        ["allies.log.accepted_by"] = "|cffc8e087Alliances:|cffebc56c %s|cffced4da accepts the alliance with you.|r",
+        ["allies.log.archont_off"] = "|cfff2a35eArchon:|cffced4da you took back control of your units from |cffebc56c%s|cffced4da.|r",
+        ["allies.log.archont_off_by"] = "|cfff2a35eArchon:|cffebc56c %s|cffced4da takes back control of their units.|r",
+        ["allies.log.archont_on"] = "|cfff2a35eArchon:|cffced4da you gave full control of your units to |cffebc56c%s|cffced4da.|r",
+        ["allies.log.archont_on_by"] = "|cfff2a35eArchon:|cffebc56c %s|cffced4da gives you full control of their units.|r",
+        ["allies.log.bot_declines"] = "|cffef8173Alliances:|cffebc56c %s|cffced4da is a bot, bots do not make alliances right now.|r",
+        ["allies.log.broke"] = "|cffef8173Alliances:|cffced4da you broke the alliance with |cffebc56c%s|cffced4da.|r",
+        ["allies.log.broken_by"] = "|cffef8173Alliances:|cffebc56c %s|cffced4da breaks the alliance with you.|r",
+        ["allies.log.declined_by"] = "|cffef8173Alliances:|cffebc56c %s|cffced4da declines the alliance.|r",
+        ["allies.log.empty"] = "|cffb99d66Nothing yet.|r",
+        ["allies.log.expired_in"] = "|cffef8173Alliances:|cffced4da time to answer |cffebc56c%s|cffced4da is up, the offer is declined.|r",
+        ["allies.log.expired_out"] = "|cffef8173Alliances:|cffced4da |cffebc56c%s|cffced4da did not answer, the offer is declined.|r",
+        ["allies.log.limit_other"] = "|cfff2a35eAlliance limit:|cffced4da |cffebc56c%s|cffced4da already has the maximum number of allies.|r",
+        ["allies.log.limit_self"] = "|cfff2a35eAlliance limit:|cffced4da you already have the maximum number of allies. Break an alliance to make a new one.|r",
+        ["allies.log.proposed"] = "|cfff2a35eAlliances:|cffced4da you offered an alliance to |cffebc56c%s|cffced4da.|r",
+        ["allies.log.received"] = "|cfff2a35eAlliances:|cffebc56c %s|cffced4da offers you an alliance. Answer in the Allies window (F11).|r",
+        ["allies.log.received_res"] = "|cffebc56cResources:|cffebc56c %s|cffced4da sends you |cffffffff%d|cffced4da gold and |cffffffff%d|cffced4da lumber.|r",
+        ["allies.log.sent"] = "|cffebc56cResources:|cffced4da you sent |cffebc56c%s|cffced4da |cffffffff%d|cffced4da gold and |cffffffff%d|cffced4da lumber.|r",
+        ["allies.log.withdrawn"] = "|cffb99d66Alliances:|cffced4da you withdrew the offer to |cffebc56c%s|cffced4da.|r",
+        ["allies.log.withdrawn_by"] = "|cffb99d66Alliances:|cffebc56c %s|cffced4da withdraws the alliance offer.|r",
+        ["allies.log.you_accepted"] = "|cffc8e087Alliances:|cffced4da you accepted the alliance with |cffebc56c%s|cffced4da.|r",
+        ["allies.log.you_declined"] = "|cffef8173Alliances:|cffced4da you declined the offer from |cffebc56c%s|cffced4da.|r",
+        ["allies.range"] = "|cffb99d66Players |cffffffff%d–%d|cffb99d66 of |cffffffff%d|r",
+        ["allies.res.cancel"] = "Cancel",
+        ["allies.res.gold"] = "|cffb99d66GOLD:|cffffffff %d|cffced4da of %d|r",
+        ["allies.res.lumber"] = "|cffb99d66LUMBER:|cffffffff %d|cffced4da of %d|r",
+        ["allies.res.send"] = "Send",
+        ["allies.res.title"] = "Send resources",
+        ["allies.res.to"] = "|cffced4daRecipient: |cffebc56c%s|r",
+        ["allies.status.ally"] = "Alliance",
+        ["allies.status.liege"] = "Your liege",
+        ["allies.status.out"] = "Eliminated",
+        ["allies.status.pending_in"] = "Offers alliance",
+        ["allies.status.pending_out"] = "Offer sent",
+        ["allies.status.vassal"] = "Your vassal",
+        ["allies.status.war"] = "War",
+        ["allies.sub.bot"] = "bot",
+        ["allies.sub.vassal_of"] = "vassal of %s",
+        ["allies.sub.you"] = "you",
+        ["allies.tip.archont"] = "|cffebc56cArchon|r|n|cffced4daGives your ally full control of your units. Click again to take control back.|r",
+        ["allies.tip.propose"] = "|cffebc56cPropose alliance|r|n|cffced4daThe alliance starts when the player accepts. Without an answer the offer expires in |cffffffff30|cffced4da sec. Alliances raise the alliance tax.|r",
+        ["allies.title"] = "Allies",
+        ["allies.toast.text"] = "|cffebc56c%s|cffced4da (%s) offers you an alliance.|r",
+        ["allies.toast.timer"] = "|cffb99d66Without an answer the offer expires in |cffffffff%d|cffb99d66 sec. All offers are in the Allies window (F11).|r",
+        ["allies.toast.title"] = "ALLIANCE PROPOSAL",
+        ["allies.vassalage"] = "Vassalage",
+        ["allies.vassalage.line"] = "|cffebc56c%s|cffb99d66 → |cffced4da%s|r",
+        ["allies.vassalage.none"] = "|cffb99d66No vassals.|r",
         ["lua.auto_00ec6500b4eba925"] = "Mode selected: Test. Type -fast or -fastoff ",
         ["lua.auto_012084117924e404"] = "The player who captures the required share of strategic points on the map wins. Check progress with |cffffffff-domck|cffced4da.",
         ["lua.auto_04283c261c0e91fc"] = "Nothing personal. Just business.",
@@ -3707,6 +3778,28 @@ local UI_STRINGS = {
         ["lua.auto_fe6e9fc5411a2a73"] = "Second War Horde",
         ["lua.auto_fe8adae8c5188110"] = "|cffff4444Player ",
         ["lua.auto_ff8fbf0d28f7c01f"] = "A fair exchange for a loyal ally.",
+        ["msg.ai.economy_recalc"] = "|cffced4daThe economy of all bots has been recalculated to avoid errors. Experimental feature.|r",
+        ["msg.archont.off_self"] = "|cffced4daYou are trying to revoke full control of your units from |cffebc56c%s|cffced4da (#|cffffffff%d|cffced4da).|r",
+        ["msg.archont.off_target"] = "|cffced4daPlayer |cffebc56c%s|cffced4da is trying to revoke your full control of their units.|r",
+        ["msg.archont.on_self"] = "|cffced4daYou are trying to give full control of your units to |cffebc56c%s|cffced4da (#|cffffffff%d|cffced4da).|r",
+        ["msg.archont.on_target"] = "|cffced4daPlayer |cffebc56c%s|cffced4da is trying to give you full control of their units.|r",
+        ["msg.city.landing_near_capital"] = "|cffef8173Landing forbidden:|cffced4da closer than |cffffffff3000|cffced4da to another capital.|r",
+        ["msg.city.landing_uneven"] = "|cffef8173Landing failed:|cffced4da the ground is not level enough.|r",
+        ["msg.continents.circle_centered"] = "|cffced4daYour race selection circle has been moved to the center of the map.|r",
+        ["msg.diplomacy.allies_list"] = "|cfff2a35eAlliances:|cffced4da the alliance of |cffebc56c%s|cffced4da includes:|r",
+        ["msg.diplomacy.allies_reset"] = "|cfff2a35eAlliances:|cffced4da |cffebc56c%s|cffced4da has more allies than allowed. All of their alliances have been broken.|r",
+        ["msg.diplomacy.ally_name"] = "|cffced4da- |cffebc56c%s|r",
+        ["msg.lobby.dip_ffa"] = "|cffb99d66MODE:|cffced4da alliances are disabled. Let the hunger games begin.|r",
+        ["msg.lobby.dip_free"] = "|cffb99d66MODE:|cffced4da free diplomacy.|r",
+        ["msg.lobby.dip_limit"] = "|cffb99d66MODE:|cffced4da alliances of up to |cffffffff%d|cffced4da players.|r",
+        ["msg.lobby.income_100"] = "|cffb99d66MODE:|cffced4da normal income.|r",
+        ["msg.lobby.income_75"] = "|cffb99d66MODE:|cffced4da income is |cffef817375%|cffced4da of normal.|r",
+        ["msg.oldgods.kalec_failed"] = "|cffef8173You failed to defeat |cffebc56cKalecgos|cffef8173 within |cffffffff4|cffef8173 minutes.|r",
+        ["msg.oldgods.sha_defeated"] = "|cffebc56cThe Sha of Pride|cffced4da has been defeated. The victor receives resources and a valuable artifact.|r",
+        ["msg.second_chance.observer"] = "|cffef8173Second chance unavailable:|cffced4da |cffebc56c%s|cffced4da is an observer.|r",
+        ["msg.train.flood_warning"] = "|cfff2a35eSomeone is preparing to flood the underground train…|r",
+        ["msg.transport.empty"] = "|cffced4daNobody has boarded |cffebc56c%s|cffced4da yet.|r",
+        ["msg.transport.loaded"] = "|cffced4daAboard |cffebc56c%s|cffced4da: |cffffffff%d|cffced4da.|r",
         ["race_picker.back.tip"] = "|cffebc56cBack|r|n|cffced4daReturn to race selection.|r",
         ["race_picker.camera.short"] = "|cffebc56cTo landing site|r|n|cffced4daMove the camera to the ring.|r",
         ["race_picker.camera.tip"] = "|cffebc56cTo landing site|r|n|cffced4daMoves the camera to your race selection ring.|r",
@@ -3733,8 +3826,82 @@ local UI_STRINGS = {
         ["race_picker.subfaction.naga.naga.name"] = "Naga Dominion",
         ["race_picker.subfaction.naga.naga.tip"] = "Unlocks naga warriors, sirens, sea witches and the royal guard.",
         ["race_picker.subfaction.naga.title"] = "NAGA AND MURLOCS",
+        ["ui.upper.chat"] = "Log",
+        ["ui.upper.menu"] = "Menu",
+        ["ui.upper.quests"] = "Help",
     },
     ruRU = {
+        ["allies.act.accept"] = "Принять",
+        ["allies.act.archont"] = "Архонт",
+        ["allies.act.archont_on"] = "Архонт: вкл",
+        ["allies.act.break"] = "Разорвать",
+        ["allies.act.cancel"] = "Отозвать",
+        ["allies.act.decline"] = "Отклонить",
+        ["allies.act.propose"] = "Предложить союз",
+        ["allies.act.res"] = "Ресурсы",
+        ["allies.button"] = "Союзники",
+        ["allies.chip.allies"] = "|cffb99d66СОЮЗНИКИ:|cffffffff %d",
+        ["allies.chip.allies_of"] = "|cffb99d66СОЮЗНИКИ:|cffffffff %d|cffced4da из |cffffffff%d",
+        ["allies.chip.mode_ffa"] = "|cffb99d66РЕЖИМ:|cffef8173 союзы отключены",
+        ["allies.chip.mode_free"] = "|cffb99d66РЕЖИМ:|cffced4da свободная дипломатия",
+        ["allies.chip.mode_limit"] = "|cffb99d66РЕЖИМ:|cffced4da союзы до |cffffffff%d|cffced4da игроков",
+        ["allies.chip.tax"] = "|cffb99d66НАЛОГ СОЮЗА: %s|cffced4da дохода",
+        ["allies.chip.vassals"] = "|cffb99d66ВАССАЛЫ:|cffffffff %d",
+        ["allies.col.actions"] = "ДЕЙСТВИЯ",
+        ["allies.col.cities"] = "ГОРОДА",
+        ["allies.col.player"] = "ИГРОК",
+        ["allies.col.race"] = "РАСА",
+        ["allies.col.status"] = "ОТНОШЕНИЯ",
+        ["allies.empty"] = "Других игроков пока нет.",
+        ["allies.log"] = "Журнал",
+        ["allies.log.accepted_by"] = "|cffc8e087Союзы:|cffebc56c %s|cffced4da принимает союз с вами.|r",
+        ["allies.log.archont_off"] = "|cfff2a35eАрхонт:|cffced4da вы забрали у игрока |cffebc56c%s|cffced4da контроль своих юнитов.|r",
+        ["allies.log.archont_off_by"] = "|cfff2a35eАрхонт:|cffebc56c %s|cffced4da забирает у вас контроль своих юнитов.|r",
+        ["allies.log.archont_on"] = "|cfff2a35eАрхонт:|cffced4da вы передали полный контроль своих юнитов игроку |cffebc56c%s|cffced4da.|r",
+        ["allies.log.archont_on_by"] = "|cfff2a35eАрхонт:|cffebc56c %s|cffced4da передаёт вам полный контроль своих юнитов.|r",
+        ["allies.log.bot_declines"] = "|cffef8173Союзы:|cffebc56c %s|cffced4da — бот, боты сейчас не заключают союзы.|r",
+        ["allies.log.broke"] = "|cffef8173Союзы:|cffced4da вы разорвали союз с игроком |cffebc56c%s|cffced4da.|r",
+        ["allies.log.broken_by"] = "|cffef8173Союзы:|cffebc56c %s|cffced4da разрывает союз с вами.|r",
+        ["allies.log.declined_by"] = "|cffef8173Союзы:|cffebc56c %s|cffced4da отклоняет союз.|r",
+        ["allies.log.empty"] = "|cffb99d66Пока пусто.|r",
+        ["allies.log.expired_in"] = "|cffef8173Союзы:|cffced4da время ответа игроку |cffebc56c%s|cffced4da вышло, предложение отклонено.|r",
+        ["allies.log.expired_out"] = "|cffef8173Союзы:|cffced4da игрок |cffebc56c%s|cffced4da не ответил, предложение отклонено.|r",
+        ["allies.log.limit_other"] = "|cfff2a35eЛимит союзов:|cffced4da у игрока |cffebc56c%s|cffced4da уже максимум союзников.|r",
+        ["allies.log.limit_self"] = "|cfff2a35eЛимит союзов:|cffced4da у вас уже максимум союзников. Разорвите союз, чтобы заключить новый.|r",
+        ["allies.log.proposed"] = "|cfff2a35eСоюзы:|cffced4da вы предложили союз игроку |cffebc56c%s|cffced4da.|r",
+        ["allies.log.received"] = "|cfff2a35eСоюзы:|cffebc56c %s|cffced4da предлагает вам союз. Ответ — в окне «Союзники» (F11).|r",
+        ["allies.log.received_res"] = "|cffebc56cРесурсы:|cffebc56c %s|cffced4da отправляет вам |cffffffff%d|cffced4da золота и |cffffffff%d|cffced4da дерева.|r",
+        ["allies.log.sent"] = "|cffebc56cРесурсы:|cffced4da вы отправили игроку |cffebc56c%s|cffced4da |cffffffff%d|cffced4da золота и |cffffffff%d|cffced4da дерева.|r",
+        ["allies.log.withdrawn"] = "|cffb99d66Союзы:|cffced4da вы отозвали предложение игроку |cffebc56c%s|cffced4da.|r",
+        ["allies.log.withdrawn_by"] = "|cffb99d66Союзы:|cffebc56c %s|cffced4da отзывает предложение союза.|r",
+        ["allies.log.you_accepted"] = "|cffc8e087Союзы:|cffced4da вы приняли союз с игроком |cffebc56c%s|cffced4da.|r",
+        ["allies.log.you_declined"] = "|cffef8173Союзы:|cffced4da вы отклонили предложение игрока |cffebc56c%s|cffced4da.|r",
+        ["allies.range"] = "|cffb99d66Игроки |cffffffff%d–%d|cffb99d66 из |cffffffff%d|r",
+        ["allies.res.cancel"] = "Отмена",
+        ["allies.res.gold"] = "|cffb99d66ЗОЛОТО:|cffffffff %d|cffced4da из %d|r",
+        ["allies.res.lumber"] = "|cffb99d66ДЕРЕВО:|cffffffff %d|cffced4da из %d|r",
+        ["allies.res.send"] = "Отправить",
+        ["allies.res.title"] = "Передать ресурсы",
+        ["allies.res.to"] = "|cffced4daПолучатель: |cffebc56c%s|r",
+        ["allies.status.ally"] = "Союз",
+        ["allies.status.liege"] = "Ваш сюзерен",
+        ["allies.status.out"] = "Выбыл",
+        ["allies.status.pending_in"] = "Предлагает союз",
+        ["allies.status.pending_out"] = "Предложен союз",
+        ["allies.status.vassal"] = "Ваш вассал",
+        ["allies.status.war"] = "Война",
+        ["allies.sub.bot"] = "бот",
+        ["allies.sub.vassal_of"] = "вассал игрока %s",
+        ["allies.sub.you"] = "это вы",
+        ["allies.tip.archont"] = "|cffebc56cАрхонт|r|n|cffced4daОтдаёт союзнику полный контроль ваших юнитов. Повторное нажатие забирает контроль.|r",
+        ["allies.tip.propose"] = "|cffebc56cПредложить союз|r|n|cffced4daСоюз начнётся, когда игрок примет предложение. Без ответа предложение отклонится через |cffffffff30|cffced4da сек. Союзы повышают налог союза.|r",
+        ["allies.title"] = "Союзники",
+        ["allies.toast.text"] = "|cffebc56c%s|cffced4da (%s) предлагает вам союз.|r",
+        ["allies.toast.timer"] = "|cffb99d66Без ответа предложение отклонится через |cffffffff%d|cffb99d66 сек. Все предложения — в окне «Союзники» (F11).|r",
+        ["allies.toast.title"] = "ПРЕДЛОЖЕНИЕ СОЮЗА",
+        ["allies.vassalage"] = "Вассалитет",
+        ["allies.vassalage.line"] = "|cffebc56c%s|cffb99d66 → |cffced4da%s|r",
+        ["allies.vassalage.none"] = "|cffb99d66Вассалов нет.|r",
         ["lua.auto_00ec6500b4eba925"] = "Режим выбран: Тест. Пишите -fast и -fastoff ",
         ["lua.auto_012084117924e404"] = "Побеждает игрок, захвативший заданную долю стратегических точек карты. Проверка прогресса — |cffffffff-domck|cffced4da.",
         ["lua.auto_04283c261c0e91fc"] = "Ничего личного. Только дело.",
@@ -4054,6 +4221,28 @@ local UI_STRINGS = {
         ["lua.auto_fe6e9fc5411a2a73"] = "Орда Второй войны",
         ["lua.auto_fe8adae8c5188110"] = "|cffff4444Игрок ",
         ["lua.auto_ff8fbf0d28f7c01f"] = "Справедливый обмен для верного союзника.",
+        ["msg.ai.economy_recalc"] = "|cffced4daЭкономика всех ботов пересчитана, чтобы избежать ошибок. Экспериментальная функция.|r",
+        ["msg.archont.off_self"] = "|cffced4daВы пытаетесь забрать у игрока |cffebc56c%s|cffced4da (№|cffffffff%d|cffced4da) полный контроль своих юнитов.|r",
+        ["msg.archont.off_target"] = "|cffced4daИгрок |cffebc56c%s|cffced4da пытается забрать у вас полный контроль своих юнитов.|r",
+        ["msg.archont.on_self"] = "|cffced4daВы пытаетесь передать полный контроль своих юнитов игроку |cffebc56c%s|cffced4da (№|cffffffff%d|cffced4da).|r",
+        ["msg.archont.on_target"] = "|cffced4daИгрок |cffebc56c%s|cffced4da пытается передать вам полный контроль своих юнитов.|r",
+        ["msg.city.landing_near_capital"] = "|cffef8173Посадка запрещена:|cffced4da до чужой столицы меньше |cffffffff3000|cffced4da.|r",
+        ["msg.city.landing_uneven"] = "|cffef8173Посадка не удалась:|cffced4da поверхность недостаточно ровная.|r",
+        ["msg.continents.circle_centered"] = "|cffced4daВаш круг выбора расы перенесён в центр карты.|r",
+        ["msg.diplomacy.allies_list"] = "|cfff2a35eСоюзы:|cffced4da в союзе игрока |cffebc56c%s|cffced4da состоят:|r",
+        ["msg.diplomacy.allies_reset"] = "|cfff2a35eСоюзы:|cffced4da у игрока |cffebc56c%s|cffced4da больше союзников, чем разрешено. Все его союзы разорваны.|r",
+        ["msg.diplomacy.ally_name"] = "|cffced4da— |cffebc56c%s|r",
+        ["msg.lobby.dip_ffa"] = "|cffb99d66РЕЖИМ:|cffced4da союзы отключены. Да начнутся голодные игры.|r",
+        ["msg.lobby.dip_free"] = "|cffb99d66РЕЖИМ:|cffced4da свободная дипломатия.|r",
+        ["msg.lobby.dip_limit"] = "|cffb99d66РЕЖИМ:|cffced4da союзы до |cffffffff%d|cffced4da игроков.|r",
+        ["msg.lobby.income_100"] = "|cffb99d66РЕЖИМ:|cffced4da обычный доход.|r",
+        ["msg.lobby.income_75"] = "|cffb99d66РЕЖИМ:|cffced4da доход |cffef817375%|cffced4da от обычного.|r",
+        ["msg.oldgods.kalec_failed"] = "|cffef8173Вы не успели победить |cffebc56cКалесгоса|cffef8173 за |cffffffff4|cffef8173 минуты.|r",
+        ["msg.oldgods.sha_defeated"] = "|cffebc56cШа Гордыни|cffced4da повержен. Победитель получает ресурсы и ценный артефакт.|r",
+        ["msg.second_chance.observer"] = "|cffef8173Второй шанс недоступен:|cffced4da игрок |cffebc56c%s|cffced4da — зритель.|r",
+        ["msg.train.flood_warning"] = "|cfff2a35eКто-то готовит затопление подземного поезда…|r",
+        ["msg.transport.empty"] = "|cffced4daНа борт |cffebc56c%s|cffced4da ещё никто не поднимался.|r",
+        ["msg.transport.loaded"] = "|cffced4daНа борту |cffebc56c%s|cffced4da: |cffffffff%d|cffced4da.|r",
         ["race_picker.back.tip"] = "|cffebc56cНазад|r|n|cffced4daВернуться к выбору расы.|r",
         ["race_picker.camera.short"] = "|cffebc56cК месту высадки|r|n|cffced4daПеренести камеру к кольцу.|r",
         ["race_picker.camera.tip"] = "|cffebc56cК месту высадки|r|n|cffced4daПереносит камеру к вашему кольцу выбора расы.|r",
@@ -4080,10 +4269,14 @@ local UI_STRINGS = {
         ["race_picker.subfaction.naga.naga.name"] = "Владычество нагов",
         ["race_picker.subfaction.naga.naga.tip"] = "Открывает наг-воинов, сирен, глубинниц и королевскую гвардию.",
         ["race_picker.subfaction.naga.title"] = "НАГИ И МУРЛОКИ",
+        ["ui.upper.chat"] = "Журнал",
+        ["ui.upper.menu"] = "Меню",
+        ["ui.upper.quests"] = "Справка",
     },
 }
 
 function Loc(key)
+    if not mapLocaleSettled then SelectMapLocale() end
     local values = UI_STRINGS[MapLocale] or UI_STRINGS.ruRU
     local text = values[key]
     if text == nil then text = UI_STRINGS.ruRU[key] end
@@ -11434,7 +11627,14 @@ function UISetup()
 	BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPLEFT, questX - stepX, top)
 	BlzFrameSetAbsPoint(chatButton, FRAMEPOINT_TOPLEFT, questX - stepX, top - stepY)
 	BlzFrameSetAbsPoint(allyButton, FRAMEPOINT_TOPLEFT, questX, top - stepY)
-	
+	-- Окно «Союзники» заменяет стандартное: его кнопка встаёт на это место.
+	if AlliesPanelPlaceButton ~= nil then AlliesPanelPlaceButton(allyButton, questX, top - stepY, btnW, btnH) end
+	if AlliesPanelPlaceUpper ~= nil then
+		AlliesPanelPlaceUpper("quests", questX, top, btnW, btnH)
+		AlliesPanelPlaceUpper("menu", questX - stepX, top, btnW, btnH)
+		AlliesPanelPlaceUpper("chat", questX - stepX, top - stepY, btnW, btnH)
+	end
+
 	-- Hiding clock UI and creating new frame bar
 	BlzFrameSetTexture(imageTest, "UI\\ResourceBar.tga", 0, true)
 	BlzFrameSetPoint(imageTest, FRAMEPOINT_TOP, BlzGetOriginFrame(ORIGIN_FRAME_WORLD_FRAME, 0), FRAMEPOINT_TOP, 0, 0)
@@ -12017,6 +12217,12 @@ function CustomHudRaceName(pi, abil)
 	end
 	return GetAbilityName(abil)
 end
+
+-- Название расы игрока или nil, пока раса не выбрана (окно «Союзники»).
+function CustomHudPlayerRaceName(pi)
+	local abil = HudRaceOf(pi)
+	return abil ~= nil and CustomHudRaceName(pi, abil) or nil
+end
 local hudToggleText
 
 local function HudValue(col, raw)
@@ -12537,7 +12743,8 @@ function StandardUISetVisible(show)
 	f = BlzGetFrameByName("UpperButtonBarQuestsButton", 0)
 	if f ~= nil then BlzFrameSetVisible(f, show) end
 	f = BlzGetFrameByName("UpperButtonBarAlliesButton", 0)
-	if f ~= nil then BlzFrameSetVisible(f, show) end
+	if f ~= nil then BlzFrameSetVisible(f, show and not AlliesPanelActive) end
+	if AlliesPanelSetUIShown ~= nil then AlliesPanelSetUIShown(show) end
 	-- Рамки миникарты и командной карты, а также ячейки-родители командных кнопок:
 	-- невидимые SimpleFrame-ячейки перехватывают клики даже без кнопок.
 	f = BlzGetFrameByName("MinimapBorder", 0)
@@ -13245,6 +13452,989 @@ function HostPanel_Close()
 		DestroyTimer(hpTick)
 		hpTick = nil
 	end
+end
+-- ***************************************************************************
+-- *  AlliesPanel
+-- Окно «Союзники» вместо стандартного окна союзов (F11). Союз заключается
+-- предложением и согласием; лимит союзов (DipMode), налог союза, вассалитет и
+-- журнал видны в одном окне. Передача ресурсов — ползунками, архонт — кнопкой.
+-- Стандартное окно остаётся, но после DipStart смена союзов и передача ресурсов
+-- в нём заблокированы флагами карты: всё меняют триггеры этого окна.
+--
+-- Синхронизация: все клики, колесо мыши, ползунки и F11 — синхронные события
+-- фреймов; обработчики меняют общее состояние (AP.open/offset/pending/...).
+-- Отрисовка — только внешний вид фреймов локального игрока, без хендлов и без
+-- изменения игровых данных. Строка списка → игрок вычисляется из общего
+-- смещения AP.offset, поэтому клик попадает в того же игрока, что виден.
+-- У каждого действия своя кнопка: клик по устаревшей кнопке отбрасывается
+-- проверкой AP.Actions, а не превращается в другое действие.
+-- Локалы — внутри do-блока, состояние и функции — в таблице AP: главный чанк
+-- war3map.lua упирается в лимит регистров Lua.
+AlliesPanelActive = false   -- окно создано и заменяет стандартное
+
+do
+	local AP = {
+		W = 0.64, LEFT = 0.08, TOP = 0.565, PAD = 0.014,
+		ROWS = 9, ROW_H = 0.026, BTN_H = 0.019, GAP = 0.003,
+		TIMEOUT = 30, TICK = 0.5, LOG_MAX = 5, CHAR_W = 0.0058, SCROLL_W = 0.012,
+		TEAM_TEX = "ReplaceableTextures\\TeamColor\\TeamColor%02d.blp",
+		-- Порядок кнопок действий в строке.
+		KINDS = { "accept", "decline", "propose", "cancel", "break", "res", "archont" },
+		rows = {}, btnW = {}, upperSlot = {},
+		seen = {}, open = {}, offset = {}, pending = {}, log = {},
+		resTarget = {}, sendG = {}, sendL = {}, ctlAdded = {},
+		clock = 0, uiShown = true, sliderMax = -1,
+	}
+
+	-- Цвета палитры docs/UI_COLOR_PALETTE.md.
+	AP.C_TEXT, AP.C_WHITE, AP.C_POS, AP.C_NEG = "|cffced4da", "|cffffffff", "|cffc8e087", "|cffef8173"
+	AP.C_WARN, AP.C_NAME, AP.C_SEC = "|cfff2a35e", "|cffebc56c", "|cffb99d66"
+
+	-- ===================================================================
+	-- Состояние партии (синхронный код)
+	-- ===================================================================
+
+	function AP.IsParticipant(pi)
+		local p = Player(pi)
+		if Observers ~= nil and IsPlayerInForce(p, Observers) then return false end
+		return GetPlayerSlotState(p) == PLAYER_SLOT_STATE_PLAYING or udg_AiControl[pi] == true
+	end
+
+	-- Выбыл: ушёл из игры, стал зрителем или выбрал расу и остался без столицы.
+	function AP.IsOut(pi)
+		if not AP.IsParticipant(pi) then return true end
+		return CustomHudPlayerRaceName ~= nil and CustomHudPlayerRaceName(pi) ~= nil and playerCapital[pi] == nil
+	end
+
+	-- Все, кто когда-либо участвовал, кроме v; выбывшие остаются в списке, чтобы
+	-- строки не съезжали.
+	function AP.Targets(v)
+		local list = {}
+		for pi = 0, 23 do
+			if pi ~= v and AP.seen[pi] then list[#list + 1] = pi end
+		end
+		return list
+	end
+
+	function AP.MaxOffset(n)
+		return math.max(0, n - AP.ROWS)
+	end
+
+	function AP.Offset(v, n)
+		return math.max(0, math.min(AP.offset[v] or 0, AP.MaxOffset(n)))
+	end
+
+	function AP.Allied(a, b)
+		return IsPlayerAlly(Player(a), Player(b)) and IsPlayerAlly(Player(b), Player(a))
+	end
+
+	function AP.OtherAllies(p)
+		local n = 0
+		for j = 0, 23 do
+			if j ~= p and AP.Allied(p, j) then n = n + 1 end
+		end
+		return n
+	end
+
+	-- Счёт союзников так же, как в Trig_StartAlly_Actions: именно с ним
+	-- сравнивается DipMode при сбросе союзов.
+	function AP.EnumAllies(p)
+		ForceEnumAllies(AP.force, Player(p), nil)
+		local n = CountPlayersInForceBJ(AP.force)
+		ForceClear(AP.force)
+		return n
+	end
+
+	-- Новый союз превысит лимит и сбросит все союзы игрока.
+	function AP.Full(p)
+		return DipMode ~= nil and DipMode > 1 and AP.EnumAllies(p) + 1 > DipMode
+	end
+
+	-- Сколько союзников разрешено сверх самого игрока (для подписи «N из M»).
+	function AP.AllowedAllies()
+		if DipMode == nil or DipMode <= 1 then return nil end
+		return DipMode - (AP.selfInEnum and 1 or 0)
+	end
+
+	function AP.Pending(from, to)
+		return AP.pending[from] ~= nil and AP.pending[from][to] ~= nil
+	end
+
+	function AP.ClearPending(a, b)
+		if AP.pending[a] ~= nil then AP.pending[a][b] = nil end
+		if AP.pending[b] ~= nil then AP.pending[b][a] = nil end
+	end
+
+	function AP.Relation(v, t)
+		if AP.IsOut(t) then return "out" end
+		if Senior[t] == Player(v) then return "vassal" end
+		if Senior[v] == Player(t) then return "liege" end
+		if AP.Allied(v, t) then return "ally" end
+		if AP.Pending(t, v) then return "pending_in" end
+		if AP.Pending(v, t) then return "pending_out" end
+		return "war"
+	end
+
+	-- Доступные игроку v действия над игроком t, в порядке AP.KINDS.
+	function AP.Actions(v, t)
+		local rel = AP.Relation(v, t)
+		if rel == "out" or AP.IsOut(v) then return {} end
+		local ffa = DipMode == 1
+		local list
+		if rel == "vassal" or rel == "liege" then
+			list = { "res", "archont" }
+		elseif rel == "ally" then
+			list = { "break", "res", "archont" }
+		elseif rel == "pending_in" then
+			list = { "accept", "decline" }
+		elseif rel == "pending_out" then
+			list = { "cancel", "res" }
+		else
+			list = { "propose", "res" }
+		end
+		local out = {}
+		for i = 1, #list do
+			local k = list[i]
+			if not (ffa and (k == "res" or k == "propose")) then out[#out + 1] = k end
+		end
+		return out
+	end
+
+	function AP.Has(list, kind)
+		for i = 1, #list do
+			if list[i] == kind then return true end
+		end
+		return false
+	end
+
+	function AP.Name(pi)
+		return GetPlayerName(Player(pi)) or ""
+	end
+
+	-- Запись в журнал игрока p; chat — продублировать сообщением на экране.
+	-- Текст хранится ключом и аргументами: Loc() вызывается только при показе.
+	function AP.Note(p, chat, key, ...)
+		local list = AP.log[p]
+		if list == nil then
+			list = {}
+			AP.log[p] = list
+		end
+		list[#list + 1] = { t = AP.clock, key = key, args = { ... } }
+		if #list > AP.LOG_MAX then table.remove(list, 1) end
+		if chat then
+			DisplayTimedTextToPlayer(Player(p), 0, 0, 8, string.format(Loc(key), ...))
+		end
+	end
+
+	-- ===================================================================
+	-- Действия (синхронный код)
+	-- ===================================================================
+
+	function AP.MakeAlliance(a, b)
+		AP.ClearPending(a, b)
+		SetPlayerAllianceStateBJ(Player(a), Player(b), bj_ALLIANCE_ALLIED_VISION)
+		SetPlayerAllianceStateBJ(Player(b), Player(a), bj_ALLIANCE_ALLIED_VISION)
+	end
+
+	-- Ответ бота. Пока дипломатия ботов выключена (AiDiplomatEnabled), боты
+	-- союзов не заключают — так же, как при стандартном окне.
+	function AP.BotAnswer(bot, from)
+		if not AiDiplomatEnabled or AiDiplomatCfg == nil then return nil end
+		local cfg = AiDiplomatCfg(bot)
+		if cfg == nil then return nil end
+		if DipAllyCount(bot) >= cfg.allianceMax then return false end
+		return AiDiplomatEvaluate(bot, from) >= 1.0 - cfg.allianceDesire * 0.7
+	end
+
+	function AP.Propose(v, t)
+		if AP.Pending(t, v) then
+			AP.Accept(v, t)
+			return
+		end
+		if AP.Full(v) then
+			AP.Note(v, true, "allies.log.limit_self")
+			return
+		end
+		if AP.Full(t) then
+			AP.Note(v, true, "allies.log.limit_other", AP.Name(t))
+			return
+		end
+		if udg_AiControl[t] then
+			local yes = AP.BotAnswer(t, v)
+			if yes == nil then
+				AP.Note(v, true, "allies.log.bot_declines", AP.Name(t))
+			elseif yes then
+				AP.MakeAlliance(v, t)
+				AP.Note(v, true, "allies.log.accepted_by", AP.Name(t))
+			else
+				AP.Note(v, true, "allies.log.declined_by", AP.Name(t))
+			end
+			return
+		end
+		AP.pending[v] = AP.pending[v] or {}
+		AP.pending[v][t] = AP.clock + AP.TIMEOUT
+		AP.Note(v, false, "allies.log.proposed", AP.Name(t))
+		AP.Note(t, true, "allies.log.received", AP.Name(v))
+	end
+
+	function AP.Accept(v, from)
+		if not AP.Pending(from, v) then return end
+		if AP.Full(v) then
+			AP.Note(v, true, "allies.log.limit_self")
+			return
+		end
+		if AP.Full(from) then
+			AP.ClearPending(v, from)
+			AP.Note(v, true, "allies.log.limit_other", AP.Name(from))
+			return
+		end
+		AP.MakeAlliance(v, from)
+		AP.Note(v, false, "allies.log.you_accepted", AP.Name(from))
+		AP.Note(from, true, "allies.log.accepted_by", AP.Name(v))
+	end
+
+	function AP.Decline(v, from)
+		if not AP.Pending(from, v) then return end
+		AP.ClearPending(v, from)
+		AP.Note(v, false, "allies.log.you_declined", AP.Name(from))
+		AP.Note(from, true, "allies.log.declined_by", AP.Name(v))
+	end
+
+	function AP.Cancel(v, t)
+		if not AP.Pending(v, t) then return end
+		AP.pending[v][t] = nil
+		AP.Note(v, false, "allies.log.withdrawn", AP.Name(t))
+		AP.Note(t, true, "allies.log.withdrawn_by", AP.Name(v))
+	end
+
+	function AP.Break(v, t)
+		SetPlayerAllianceStateBJ(Player(v), Player(t), bj_ALLIANCE_UNALLIED)
+		SetPlayerAllianceStateBJ(Player(t), Player(v), bj_ALLIANCE_UNALLIED)
+		AP.Note(v, false, "allies.log.broke", AP.Name(t))
+		AP.Note(t, true, "allies.log.broken_by", AP.Name(v))
+	end
+
+	-- Архонт: полный контроль юнитов v отдаётся t. Обычный общий контроль,
+	-- который был до включения (вассал → сюзерен), при выключении остаётся.
+	function AP.Archont(v, t)
+		local p, q = Player(v), Player(t)
+		AP.ctlAdded[v] = AP.ctlAdded[v] or {}
+		if not GetPlayerAlliance(p, q, ALLIANCE_SHARED_ADVANCED_CONTROL) then
+			AP.ctlAdded[v][t] = not GetPlayerAlliance(p, q, ALLIANCE_SHARED_CONTROL)
+			SetPlayerAlliance(p, q, ALLIANCE_SHARED_CONTROL, true)
+			SetPlayerAlliance(p, q, ALLIANCE_SHARED_ADVANCED_CONTROL, true)
+			AP.Note(v, false, "allies.log.archont_on", AP.Name(t))
+			AP.Note(t, true, "allies.log.archont_on_by", AP.Name(v))
+		else
+			SetPlayerAlliance(p, q, ALLIANCE_SHARED_ADVANCED_CONTROL, false)
+			if AP.ctlAdded[v][t] then SetPlayerAlliance(p, q, ALLIANCE_SHARED_CONTROL, false) end
+			AP.ctlAdded[v][t] = nil
+			AP.Note(v, false, "allies.log.archont_off", AP.Name(t))
+			AP.Note(t, true, "allies.log.archont_off_by", AP.Name(v))
+		end
+	end
+
+	function AP.SendResources(v, t, gold, lumber)
+		local p, q = Player(v), Player(t)
+		gold = math.max(0, math.min(math.floor(gold or 0), GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD)))
+		lumber = math.max(0, math.min(math.floor(lumber or 0), GetPlayerState(p, PLAYER_STATE_RESOURCE_LUMBER)))
+		if gold + lumber <= 0 then return end
+		SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) - gold)
+		SetPlayerState(q, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(q, PLAYER_STATE_RESOURCE_GOLD) + gold)
+		SetPlayerState(p, PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(p, PLAYER_STATE_RESOURCE_LUMBER) - lumber)
+		SetPlayerState(q, PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(q, PLAYER_STATE_RESOURCE_LUMBER) + lumber)
+		AP.Note(v, false, "allies.log.sent", AP.Name(t), gold, lumber)
+		AP.Note(t, true, "allies.log.received_res", AP.Name(v), gold, lumber)
+	end
+
+	-- Входящее предложение для всплывающего оповещения: истекает раньше всех.
+	function AP.OldestIncoming(v)
+		local best, bestT
+		for from = 0, 23 do
+			if AP.Pending(from, v) and (bestT == nil or AP.pending[from][v] < bestT) then
+				best, bestT = from, AP.pending[from][v]
+			end
+		end
+		return best
+	end
+
+	function AP.IncomingCount(v)
+		local n = 0
+		for from = 0, 23 do
+			if AP.Pending(from, v) then n = n + 1 end
+		end
+		return n
+	end
+
+	-- Период: участники, истечение предложений, отрисовка.
+	function AP.Tick()
+		AP.clock = AP.clock + AP.TICK
+		for pi = 0, 23 do
+			if not AP.seen[pi] and AP.IsParticipant(pi) then AP.seen[pi] = true end
+		end
+		for from = 0, 23 do
+			for to = 0, 23 do
+				if AP.Pending(from, to) then
+					if AP.IsOut(from) or AP.IsOut(to) then
+						AP.pending[from][to] = nil
+					elseif AP.clock >= AP.pending[from][to] then
+						AP.pending[from][to] = nil
+						AP.Note(from, true, "allies.log.expired_out", AP.Name(to))
+						AP.Note(to, false, "allies.log.expired_in", AP.Name(from))
+					end
+				end
+			end
+		end
+		AP.Render()
+	end
+
+	-- ===================================================================
+	-- Отрисовка (только фреймы локального игрока)
+	-- ===================================================================
+
+	function AP.TextW(text)
+		local w = 0
+		if AP.measure ~= nil then
+			BlzFrameSetText(AP.measure, text)
+			w = BlzFrameGetWidth(AP.measure) or 0
+		end
+		return math.max(w, (utf8.len(text) or string.len(text)) * AP.CHAR_W)
+	end
+
+	function AP.Clock(t)
+		local s = math.floor(t)
+		return string.format("%d:%02d", s // 60, s % 60)
+	end
+
+	function AP.Color(pi)
+		return string.format(AP.TEAM_TEX, GetHandleId(GetPlayerColor(Player(pi))) % 100)
+	end
+
+	function AP.RaceName(pi)
+		local name = CustomHudPlayerRaceName ~= nil and CustomHudPlayerRaceName(pi) or nil
+		return name or "—"
+	end
+
+	AP.STATUS = {
+		ally = { "allies.status.ally", AP.C_POS },
+		war = { "allies.status.war", AP.C_NEG },
+		pending_in = { "allies.status.pending_in", AP.C_POS },
+		pending_out = { "allies.status.pending_out", AP.C_WARN },
+		vassal = { "allies.status.vassal", AP.C_NAME },
+		liege = { "allies.status.liege", AP.C_NAME },
+		out = { "allies.status.out", AP.C_SEC },
+	}
+
+	function AP.ChipsText(v)
+		local mode
+		if DipMode == 1 then
+			mode = Loc("allies.chip.mode_ffa")
+		elseif DipMode == nil or DipMode == 0 then
+			mode = Loc("allies.chip.mode_free")
+		else
+			mode = string.format(Loc("allies.chip.mode_limit"), DipMode)
+		end
+		local allowed = AP.AllowedAllies()
+		local allies = allowed ~= nil and string.format(Loc("allies.chip.allies_of"), AP.OtherAllies(v), allowed)
+			or string.format(Loc("allies.chip.allies"), AP.OtherAllies(v))
+		local pct = math.floor((AllyTax[v] or 0) * 100 + 0.5)
+		local tax = string.format(Loc("allies.chip.tax"),
+			pct > 0 and (AP.C_NEG .. "−" .. pct .. "%") or (AP.C_WHITE .. "0%"))
+		local vassals = Vassals[v] ~= nil and CountPlayersInForceBJ(Vassals[v]) or 0
+		return mode .. "     " .. allies .. "     " .. tax .. "     "
+			.. string.format(Loc("allies.chip.vassals"), vassals) .. "|r"
+	end
+
+	function AP.VassalageText()
+		local lines = {}
+		for j = 0, 23 do
+			local names = {}
+			for k = 0, 23 do
+				if Senior[k] ~= nil and Senior[k] == Player(j) then names[#names + 1] = AP.Name(k) end
+			end
+			if #names > 0 and #lines < AP.LOG_MAX then
+				lines[#lines + 1] = string.format(Loc("allies.vassalage.line"), AP.Name(j), table.concat(names, ", "))
+			end
+		end
+		if #lines == 0 then return Loc("allies.vassalage.none") end
+		return table.concat(lines, "|n")
+	end
+
+	function AP.LogText(v)
+		local list = AP.log[v]
+		if list == nil or #list == 0 then return Loc("allies.log.empty") end
+		local lines = {}
+		for i = #list, 1, -1 do
+			local e = list[i]
+			lines[#lines + 1] = AP.C_SEC .. AP.Clock(e.t) .. "|r  " .. string.format(Loc(e.key), table.unpack(e.args))
+		end
+		return table.concat(lines, "|n")
+	end
+
+	-- Закреплённая строка «Вы»: раса и города самого игрока, без кнопок.
+	function AP.RenderSelf(v)
+		local row = AP.selfRow
+		BlzFrameSetTexture(row.swatch, AP.Color(v), 0, true)
+		BlzFrameSetText(row.name, AP.C_NAME .. AP.Name(v) .. "|r")
+		local sub = Senior[v] ~= nil and string.format(Loc("allies.sub.vassal_of"), GetPlayerName(Senior[v]) or "")
+			or Loc("allies.sub.you")
+		BlzFrameSetText(row.sub, AP.C_SEC .. sub .. "|r")
+		BlzFrameSetText(row.race, AP.C_TEXT .. AP.RaceName(v) .. "|r")
+		BlzFrameSetText(row.cities, AP.C_WHITE .. math.floor(CityPlayerCount ~= nil and CityPlayerCount[v] or 0) .. "|r")
+		BlzFrameSetText(row.status, AP.IsOut(v) and (AP.C_SEC .. Loc("allies.status.out") .. "|r") or "")
+	end
+
+	function AP.RenderRow(v, row, t)
+		local show = t ~= nil
+		for _, f in ipairs(row.parts) do BlzFrameSetVisible(f, show) end
+		for i = 1, #AP.KINDS do FrameSetShown(row.btn[AP.KINDS[i]], false) end
+		if not show then return end
+		local rel = AP.Relation(v, t)
+		BlzFrameSetTexture(row.swatch, AP.Color(t), 0, true)
+		BlzFrameSetText(row.name, AP.C_NAME .. AP.Name(t) .. "|r")
+		local sub = ""
+		if Senior[t] ~= nil and rel ~= "vassal" and rel ~= "liege" then
+			sub = string.format(Loc("allies.sub.vassal_of"), GetPlayerName(Senior[t]) or "")
+		elseif udg_AiControl[t] then
+			sub = Loc("allies.sub.bot")
+		end
+		BlzFrameSetText(row.sub, AP.C_SEC .. sub .. "|r")
+		BlzFrameSetText(row.race, AP.C_TEXT .. AP.RaceName(t) .. "|r")
+		BlzFrameSetText(row.cities, AP.C_WHITE .. math.floor(CityPlayerCount ~= nil and CityPlayerCount[t] or 0) .. "|r")
+		local st = AP.STATUS[rel]
+		BlzFrameSetText(row.status, st[2] .. Loc(st[1]) .. "|r")
+		local x = 0
+		local acts = AP.Actions(v, t)
+		for i = 1, #acts do
+			local kind = acts[i]
+			local b = row.btn[kind]
+			if kind == "archont" then
+				local on = GetPlayerAlliance(Player(v), Player(t), ALLIANCE_SHARED_ADVANCED_CONTROL)
+				BlzFrameSetText(row.label.archont, on and (AP.C_WARN .. Loc("allies.act.archont_on") .. "|r")
+					or (AP.C_TEXT .. Loc("allies.act.archont") .. "|r"))
+			end
+			FrameSetPoint(b, FRAMEPOINT_LEFT, AP.root, FRAMEPOINT_TOPLEFT, row.actX + x, row.y)
+			FrameSetShown(b, true)
+			x = x + AP.btnW[kind] + AP.GAP
+		end
+	end
+
+	function AP.RenderToast(v)
+		local from = (not AP.open[v]) and AP.OldestIncoming(v) or nil
+		FrameSetShown(AP.toast, from ~= nil and AP.uiShown)
+		if from == nil then return end
+		local left = math.max(0, AP.pending[from][v] - AP.clock)
+		BlzFrameSetTexture(AP.toastSwatch, AP.Color(from), 0, true)
+		BlzFrameSetText(AP.toastBody, string.format(Loc("allies.toast.text"), AP.Name(from), AP.RaceName(from)))
+		BlzFrameSetText(AP.toastTimer, string.format(Loc("allies.toast.timer"), math.ceil(left)))
+		BlzFrameSetSize(AP.toastBar, math.max(0.001, AP.toastBarW * left / AP.TIMEOUT), 0.002)
+	end
+
+	function AP.RenderDialog(v)
+		local t = AP.resTarget[v]
+		FrameSetShown(AP.dialog, t ~= nil)
+		if t == nil then return end
+		local p = Player(v)
+		local gold, lumber = GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD), GetPlayerState(p, PLAYER_STATE_RESOURCE_LUMBER)
+		BlzFrameSetText(AP.dialogTo, string.format(Loc("allies.res.to"), AP.Name(t)))
+		BlzFrameSetText(AP.goldText, string.format(Loc("allies.res.gold"), math.min(AP.sendG[v] or 0, gold), gold))
+		BlzFrameSetText(AP.lumberText, string.format(Loc("allies.res.lumber"), math.min(AP.sendL[v] or 0, lumber), lumber))
+		-- Границы — только при изменении запаса: смена границ может сдвинуть ползунок.
+		if AP.dlgMaxG ~= gold then
+			AP.dlgMaxG = gold
+			BlzFrameSetMinMaxValue(AP.goldSlider, 0, math.max(gold, 1))
+		end
+		if AP.dlgMaxL ~= lumber then
+			AP.dlgMaxL = lumber
+			BlzFrameSetMinMaxValue(AP.lumberSlider, 0, math.max(lumber, 1))
+		end
+	end
+
+	function AP.Render()
+		if AP.root == nil then return end
+		local v = GetPlayerId(GetLocalPlayer())
+		local n = AP.IncomingCount(v)
+		BlzFrameSetText(AP.buttonText, AP.UpperLabel("allies.button", "F11")
+			.. (n > 0 and (" " .. AP.C_WARN .. "(" .. n .. ")") or "") .. "|r")
+		AP.RenderToast(v)
+		local open = AP.open[v] == true and AP.uiShown
+		FrameSetShown(AP.root, open)
+		if not open then return end
+		BlzFrameSetText(AP.chips, AP.ChipsText(v))
+		AP.RenderSelf(v)
+		local list = AP.Targets(v)
+		local off = AP.Offset(v, #list)
+		for r = 1, AP.ROWS do AP.RenderRow(v, AP.rows[r], list[off + r]) end
+		local maxOff = AP.MaxOffset(#list)
+		BlzFrameSetVisible(AP.empty, #list == 0)
+		BlzFrameSetVisible(AP.range, #list > 0)
+		BlzFrameSetText(AP.range, string.format(Loc("allies.range"),
+			math.min(#list, off + 1), math.min(#list, off + AP.ROWS), #list))
+		BlzFrameSetVisible(AP.slider, maxOff > 0)
+		if AP.sliderMax ~= maxOff then
+			AP.sliderMax = maxOff
+			BlzFrameSetMinMaxValue(AP.slider, 0, math.max(maxOff, 1))
+		end
+		-- У вертикального ползунка максимум сверху.
+		if maxOff > 0 and math.floor(BlzFrameGetValue(AP.slider) + 0.5) ~= maxOff - off then
+			BlzFrameSetValue(AP.slider, maxOff - off)
+		end
+		BlzFrameSetText(AP.vassalText, AP.VassalageText())
+		BlzFrameSetText(AP.logText, AP.LogText(v))
+		AP.RenderDialog(v)
+	end
+
+	-- ===================================================================
+	-- События фреймов (синхронные)
+	-- ===================================================================
+
+	-- Снять фокус с кнопки, иначе пробел/Enter продолжают нажимать её.
+	function AP.Release(p)
+		local f = BlzGetTriggerFrame()
+		if GetLocalPlayer() == p and f ~= nil then
+			BlzFrameSetEnable(f, false)
+			BlzFrameSetEnable(f, true)
+		end
+	end
+
+	function AP.OnEvent(frame, event, fn)
+		local t = CreateTrigger()
+		BlzTriggerRegisterFrameEvent(t, frame, event)
+		TriggerAddAction(t, function()
+			local p = GetTriggerPlayer()
+			if event == FRAMEEVENT_CONTROL_CLICK then AP.Release(p) end
+			fn(GetPlayerId(p))
+			AP.Render()
+		end)
+	end
+
+	function AP.Scroll(v, delta)
+		local n = #AP.Targets(v)
+		AP.offset[v] = math.max(0, math.min(AP.Offset(v, n) + delta, AP.MaxOffset(n)))
+	end
+
+	function AP.OnWheel(frame)
+		AP.OnEvent(frame, FRAMEEVENT_MOUSE_WHEEL, function(v)
+			AP.Scroll(v, BlzGetTriggerFrameValue() > 0 and -1 or 1)
+		end)
+	end
+
+	function AP.Toggle(v)
+		AP.open[v] = not AP.open[v]
+		if not AP.open[v] then AP.resTarget[v] = nil end
+	end
+
+	function AP.RowClick(v, r, kind)
+		if not AP.open[v] then return end
+		local list = AP.Targets(v)
+		local t = list[AP.Offset(v, #list) + r]
+		if t == nil or not AP.Has(AP.Actions(v, t), kind) then return end
+		if kind == "propose" then AP.Propose(v, t)
+		elseif kind == "accept" then AP.Accept(v, t)
+		elseif kind == "decline" then AP.Decline(v, t)
+		elseif kind == "cancel" then AP.Cancel(v, t)
+		elseif kind == "break" then AP.Break(v, t)
+		elseif kind == "archont" then AP.Archont(v, t)
+		elseif kind == "res" then
+			AP.resTarget[v], AP.sendG[v], AP.sendL[v] = t, 0, 0
+			if GetLocalPlayer() == Player(v) then
+				BlzFrameSetValue(AP.goldSlider, 0)
+				BlzFrameSetValue(AP.lumberSlider, 0)
+			end
+		end
+	end
+
+	-- ===================================================================
+	-- Создание фреймов (у всех клиентов одинаково)
+	-- ===================================================================
+
+	function AP.Text(parent, tpl, w, h, justifyH)
+		local f = BlzCreateFrame(tpl, parent, 0, 0)
+		BlzFrameSetSize(f, w, h)
+		BlzFrameSetTextAlignment(f, TEXT_JUSTIFY_MIDDLE, justifyH or TEXT_JUSTIFY_LEFT)
+		BlzFrameSetEnable(f, false)
+		return f
+	end
+
+	function AP.At(f, x, y, point)
+		BlzFrameSetPoint(f, point or FRAMEPOINT_TOPLEFT, AP.root, FRAMEPOINT_TOPLEFT, x, y)
+	end
+
+	-- Кнопка с подписью; возвращает кнопку и текст подписи.
+	function AP.Button(parent, w, label)
+		local b = BlzCreateFrame("TasButtonTemplate", parent, 0, 0)
+		BlzFrameSetSize(b, w, AP.BTN_H)
+		local text = BlzCreateFrame("HudText", b, 0, 0)
+		BlzFrameSetAllPoints(text, b)
+		BlzFrameSetTextAlignment(text, TEXT_JUSTIFY_MIDDLE, TEXT_JUSTIFY_CENTER)
+		BlzFrameSetText(text, label)
+		BlzFrameSetEnable(text, false)
+		return b, text
+	end
+
+	-- Подсказка над кнопкой; показывает и прячет её движок.
+	function AP.Tip(button, text)
+		local box = BlzCreateFrame("BoxedTextBackgroundTemplate", button, 0, 0)
+		local body = BlzCreateFrame("HudBody", box, 0, 0)
+		BlzFrameSetTextAlignment(body, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+		BlzFrameSetSize(body, 0.22, 0)
+		BlzFrameSetPoint(body, FRAMEPOINT_BOTTOM, button, FRAMEPOINT_TOP, 0, 0.012)
+		BlzFrameSetText(body, text)
+		BlzFrameSetPoint(box, FRAMEPOINT_TOPLEFT, body, FRAMEPOINT_TOPLEFT, -0.007, 0.007)
+		BlzFrameSetPoint(box, FRAMEPOINT_BOTTOMRIGHT, body, FRAMEPOINT_BOTTOMRIGHT, 0.007, -0.007)
+		BlzFrameSetTooltip(button, box)
+		BlzFrameSetVisible(box, false)
+	end
+
+	AP.ACT_KEY = {
+		accept = { "allies.act.accept", AP.C_POS },
+		decline = { "allies.act.decline", AP.C_NEG },
+		propose = { "allies.act.propose", AP.C_POS },
+		cancel = { "allies.act.cancel", AP.C_TEXT },
+		["break"] = { "allies.act.break", AP.C_NEG },
+		res = { "allies.act.res", AP.C_NAME },
+		archont = { "allies.act.archont", AP.C_TEXT },
+	}
+
+	-- Колонки: x от левого поля и ширина. «Города» — по центру своей ширины.
+	AP.COL_X = { 0.012, 0.135, 0.245, 0.305, 0.395 }
+	AP.COL_W = { 0.12, 0.105, 0.05, 0.088 }
+
+	-- Текстовые части строки игрока с верхним краем y.
+	function AP.CreateRowParts(y)
+		local colX, colW = AP.COL_X, AP.COL_W
+		local cy = y - AP.ROW_H / 2
+		local row = { y = cy, actX = AP.PAD + colX[5], btn = {}, label = {} }
+		row.swatch = BlzCreateFrameByType("BACKDROP", "AlliesPanelSwatch", AP.root, "", 0)
+		BlzFrameSetSize(row.swatch, 0.009, 0.009)
+		AP.At(row.swatch, AP.PAD, cy, FRAMEPOINT_LEFT)
+		row.name = AP.Text(AP.root, "HudBody", colW[1], 0.012)
+		AP.At(row.name, AP.PAD + colX[1], y - 0.002)
+		row.sub = AP.Text(AP.root, "HudText", colW[1], 0.011)
+		AP.At(row.sub, AP.PAD + colX[1], y - 0.0135)
+		row.race = AP.Text(AP.root, "HudText", colW[2], AP.ROW_H)
+		AP.At(row.race, AP.PAD + colX[2], y)
+		row.cities = AP.Text(AP.root, "HudBody", colW[3], AP.ROW_H, TEXT_JUSTIFY_CENTER)
+		AP.At(row.cities, AP.PAD + colX[3], y)
+		row.status = AP.Text(AP.root, "HudText", colW[4], AP.ROW_H)
+		AP.At(row.status, AP.PAD + colX[4], y)
+		row.parts = { row.swatch, row.name, row.sub, row.race, row.cities, row.status }
+		return row
+	end
+
+	function AP.CreateRows(innerW)
+		local colX = AP.COL_X
+		local headers = { "allies.col.player", "allies.col.race", "allies.col.cities", "allies.col.status", "allies.col.actions" }
+		local y0 = -(AP.PAD + 0.022 + 0.006 + 0.016 + 0.008)
+		for i = 1, #headers do
+			local center = i == 3
+			local h = AP.Text(AP.root, "HudText", center and AP.COL_W[3] or 0.1, 0.012,
+				center and TEXT_JUSTIFY_CENTER or nil)
+			AP.At(h, AP.PAD + colX[i], y0)
+			BlzFrameSetText(h, AP.C_SEC .. Loc(headers[i]) .. "|r")
+		end
+		AP.range = AP.Text(AP.root, "HudText", 0.14, 0.012, TEXT_JUSTIFY_RIGHT)
+		AP.At(AP.range, AP.W - AP.PAD - 0.14, y0)
+		AP.selfRow = AP.CreateRowParts(y0 - 0.014)
+		local rowsTop = y0 - 0.014 - AP.ROW_H
+		AP.empty = AP.Text(AP.root, "HudText", innerW, AP.ROW_H)
+		AP.At(AP.empty, AP.PAD + colX[1], rowsTop)
+		BlzFrameSetText(AP.empty, AP.C_SEC .. Loc("allies.empty") .. "|r")
+		for i = 1, #AP.KINDS do
+			local k = AP.KINDS[i]
+			local w = math.max(AP.TextW(Loc(AP.ACT_KEY[k][1])), k == "archont" and AP.TextW(Loc("allies.act.archont_on")) or 0)
+			AP.btnW[k] = math.max(0.036, w + 0.012)
+		end
+		for r = 1, AP.ROWS do
+			local row = AP.CreateRowParts(rowsTop - (r - 1) * AP.ROW_H)
+			for i = 1, #AP.KINDS do
+				local kind = AP.KINDS[i]
+				local key = AP.ACT_KEY[kind]
+				local b, text = AP.Button(AP.root, AP.btnW[kind], key[2] .. Loc(key[1]) .. "|r")
+				row.btn[kind], row.label[kind] = b, text
+				if kind == "archont" then AP.Tip(b, Loc("allies.tip.archont")) end
+				if kind == "propose" then AP.Tip(b, Loc("allies.tip.propose")) end
+				local rr = r
+				AP.OnEvent(b, FRAMEEVENT_CONTROL_CLICK, function(v) AP.RowClick(v, rr, kind) end)
+				AP.OnWheel(b)
+				FrameSetShown(b, false)
+			end
+			AP.rows[r] = row
+		end
+		-- Вертикальный ползунок справа от строк; стрелки — часть шаблона.
+		AP.slider = BlzCreateFrameByType("SLIDER", "AlliesPanelScroll", AP.root, "QuestMainListScrollBar", 0)
+		BlzFrameSetSize(AP.slider, AP.SCROLL_W, AP.ROWS * AP.ROW_H)
+		AP.At(AP.slider, AP.W - AP.PAD, rowsTop, FRAMEPOINT_TOPRIGHT)
+		BlzFrameSetStepSize(AP.slider, 1)
+		AP.OnWheel(AP.slider)
+		AP.OnEvent(AP.slider, FRAMEEVENT_SLIDER_VALUE_CHANGED, function(v)
+			local n = #AP.Targets(v)
+			local maxOff = AP.MaxOffset(n)
+			AP.offset[v] = math.max(0, math.min(maxOff - math.floor(BlzGetTriggerFrameValue() + 0.5), maxOff))
+		end)
+		return rowsTop - AP.ROWS * AP.ROW_H
+	end
+
+	function AP.CreateBottom(y, innerW)
+		local colW = 0.2
+		local h = 0.012 * AP.LOG_MAX
+		local vt = AP.Text(AP.root, "HudBody", colW, 0.014)
+		AP.At(vt, AP.PAD, y)
+		BlzFrameSetText(vt, AP.C_NAME .. Loc("allies.vassalage") .. "|r")
+		AP.vassalText = AP.Text(AP.root, "HudText", colW, h)
+		BlzFrameSetTextAlignment(AP.vassalText, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+		AP.At(AP.vassalText, AP.PAD, y - 0.016)
+		local lt = AP.Text(AP.root, "HudBody", innerW - colW - 0.02, 0.014)
+		AP.At(lt, AP.PAD + colW + 0.02, y)
+		BlzFrameSetText(lt, AP.C_NAME .. Loc("allies.log") .. "|r")
+		AP.logText = AP.Text(AP.root, "HudText", innerW - colW - 0.02, h)
+		BlzFrameSetTextAlignment(AP.logText, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
+		AP.At(AP.logText, AP.PAD + colW + 0.02, y - 0.016)
+		return y - 0.016 - h
+	end
+
+	function AP.CreateDialog(top)
+		local w, h = 0.30, 0.15
+		local d = BlzCreateFrame("BoxedTextBackgroundTemplate", AP.root, 0, 0)
+		AP.dialog = d
+		BlzFrameSetLevel(d, 3)
+		BlzFrameSetSize(d, w, h)
+		FrameSetPoint(d, FRAMEPOINT_TOP, AP.root, FRAMEPOINT_TOP, 0, top)
+		local block = BlzCreateFrameByType("BUTTON", "AlliesDialogBlocker", d, "", 0)
+		BlzFrameSetAllPoints(block, d)
+		local function at(f, x, y, point) BlzFrameSetPoint(f, point or FRAMEPOINT_TOPLEFT, d, FRAMEPOINT_TOPLEFT, x, y) end
+		local title = AP.Text(d, "HudTitle", w - 0.03, 0.02)
+		at(title, 0.015, -0.012)
+		BlzFrameSetText(title, AP.C_NAME .. Loc("allies.res.title") .. "|r")
+		AP.dialogTo = AP.Text(d, "HudBody", w - 0.03, 0.014)
+		at(AP.dialogTo, 0.015, -0.034)
+		AP.goldText = AP.Text(d, "HudBody", w - 0.03, 0.014)
+		at(AP.goldText, 0.015, -0.054)
+		AP.goldSlider = BlzCreateFrame("EscMenuSliderTemplate", d, 0, 0)
+		BlzFrameSetSize(AP.goldSlider, w - 0.03, 0.012)
+		at(AP.goldSlider, 0.015, -0.07)
+		AP.lumberText = AP.Text(d, "HudBody", w - 0.03, 0.014)
+		at(AP.lumberText, 0.015, -0.088)
+		AP.lumberSlider = BlzCreateFrame("EscMenuSliderTemplate", d, 0, 0)
+		BlzFrameSetSize(AP.lumberSlider, w - 0.03, 0.012)
+		at(AP.lumberSlider, 0.015, -0.104)
+		for _, s in ipairs({ AP.goldSlider, AP.lumberSlider }) do
+			BlzFrameSetMinMaxValue(s, 0, 1)
+			BlzFrameSetStepSize(s, 50)
+			BlzFrameSetValue(s, 0)
+		end
+		AP.OnEvent(AP.goldSlider, FRAMEEVENT_SLIDER_VALUE_CHANGED, function(v)
+			AP.sendG[v] = math.max(0, math.floor(BlzGetTriggerFrameValue() + 0.5))
+		end)
+		AP.OnEvent(AP.lumberSlider, FRAMEEVENT_SLIDER_VALUE_CHANGED, function(v)
+			AP.sendL[v] = math.max(0, math.floor(BlzGetTriggerFrameValue() + 0.5))
+		end)
+		local bw = 0.08
+		local cancel = AP.Button(d, bw, AP.C_TEXT .. Loc("allies.res.cancel") .. "|r")
+		at(cancel, w - 0.015 - bw * 2 - AP.GAP, -0.122)
+		AP.OnEvent(cancel, FRAMEEVENT_CONTROL_CLICK, function(v) AP.resTarget[v] = nil end)
+		local send = AP.Button(d, bw, AP.C_POS .. Loc("allies.res.send") .. "|r")
+		AP.dialogSend = send
+		at(send, w - 0.015 - bw, -0.122)
+		AP.OnEvent(send, FRAMEEVENT_CONTROL_CLICK, function(v)
+			local t = AP.resTarget[v]
+			AP.resTarget[v] = nil
+			if t ~= nil and AP.open[v] and AP.Has(AP.Actions(v, t), "res") then
+				AP.SendResources(v, t, AP.sendG[v], AP.sendL[v])
+			end
+		end)
+		FrameSetShown(d, false)
+	end
+
+	function AP.CreateToast(parent)
+		local w, h = 0.36, 0.07
+		local box = BlzCreateFrame("BoxedTextBackgroundTemplate", parent, 0, 0)
+		AP.toast = box
+		BlzFrameSetLevel(box, 5)
+		BlzFrameSetSize(box, w, h)
+		FrameSetAbsPoint(box, FRAMEPOINT_TOP, 0.4, AP.TOP)
+		local block = BlzCreateFrameByType("BUTTON", "AlliesToastBlocker", box, "", 0)
+		BlzFrameSetAllPoints(block, box)
+		local function at(f, x, y, point) BlzFrameSetPoint(f, point or FRAMEPOINT_TOPLEFT, box, FRAMEPOINT_TOPLEFT, x, y) end
+		AP.toastSwatch = BlzCreateFrameByType("BACKDROP", "AlliesToastSwatch", box, "", 0)
+		BlzFrameSetSize(AP.toastSwatch, 0.011, 0.011)
+		at(AP.toastSwatch, 0.012, -0.012)
+		local title = AP.Text(box, "HudText", 0.15, 0.012)
+		at(title, 0.028, -0.011)
+		BlzFrameSetText(title, AP.C_POS .. Loc("allies.toast.title") .. "|r")
+		AP.toastBody = AP.Text(box, "HudBody", w - 0.024, 0.014)
+		at(AP.toastBody, 0.012, -0.031)
+		local bw = 0.07
+		local accept = AP.Button(box, bw, AP.C_POS .. Loc("allies.act.accept") .. "|r")
+		at(accept, w - 0.012 - bw * 2 - AP.GAP, -0.009)
+		local decline = AP.Button(box, bw, AP.C_NEG .. Loc("allies.act.decline") .. "|r")
+		at(decline, w - 0.012 - bw, -0.009)
+		AP.toastAccept, AP.toastDecline = accept, decline
+		AP.OnEvent(accept, FRAMEEVENT_CONTROL_CLICK, function(v)
+			local from = AP.OldestIncoming(v)
+			if from ~= nil then AP.Accept(v, from) end
+		end)
+		AP.OnEvent(decline, FRAMEEVENT_CONTROL_CLICK, function(v)
+			local from = AP.OldestIncoming(v)
+			if from ~= nil then AP.Decline(v, from) end
+		end)
+		AP.toastBarW = w - 0.024
+		AP.toastBar = BlzCreateFrameByType("BACKDROP", "AlliesToastBar", box, "", 0)
+		BlzFrameSetTexture(AP.toastBar, string.format(AP.TEAM_TEX, 6), 0, true)
+		BlzFrameSetSize(AP.toastBar, AP.toastBarW, 0.002)
+		at(AP.toastBar, 0.012, -0.050)
+		AP.toastTimer = AP.Text(box, "HudText", w - 0.024, 0.011)
+		at(AP.toastTimer, 0.012, -0.055)
+		FrameSetShown(box, false)
+	end
+
+	-- Подпись кнопки верхней панели: название и горячая клавиша в скобках.
+	function AP.UpperLabel(key, hot)
+		return AP.C_TEXT .. Loc(key) .. " [" .. AP.C_NAME .. hot .. AP.C_TEXT .. "]|r"
+	end
+
+	-- Остальные кнопки верхней панели остаются нативными (клики, F9/F10/F12,
+	-- подсказки), сверху — подложка с подписью в стиле кнопки «Союзники».
+	-- Подложка и текст мышь не перехватывают.
+	AP.UPPER = {
+		{ kind = "menu", key = "ui.upper.menu", hot = "F10" },
+		{ kind = "quests", key = "ui.upper.quests", hot = "F9" },
+		{ kind = "chat", key = "ui.upper.chat", hot = "F12" },
+	}
+
+	function AP.CreateUpper(parent)
+		AP.upper = {}
+		for i = 1, #AP.UPPER do
+			local u = AP.UPPER[i]
+			local look = BlzCreateFrameByType("BACKDROP", "AlliesUpperLook", parent, "TasButtonLookTemplate", 0)
+			local text = BlzCreateFrame("HudText", look, 0, 0)
+			BlzFrameSetAllPoints(text, look)
+			BlzFrameSetTextAlignment(text, TEXT_JUSTIFY_MIDDLE, TEXT_JUSTIFY_CENTER)
+			BlzFrameSetText(text, AP.UpperLabel(u.key, u.hot))
+			BlzFrameSetEnable(text, false)
+			FrameSetShown(look, false)
+			AP.upper[u.kind] = look
+		end
+	end
+
+	function AP.PlaceUpper()
+		if AP.upper == nil then return end
+		for i = 1, #AP.UPPER do
+			local kind = AP.UPPER[i].kind
+			local look, s = AP.upper[kind], AP.upperSlot[kind]
+			if s ~= nil then
+				BlzFrameSetSize(look, s.w, s.h)
+				FrameSetAbsPoint(look, FRAMEPOINT_TOPLEFT, s.x, s.y)
+			end
+			FrameSetShown(look, s ~= nil and AP.uiShown)
+		end
+	end
+
+	-- Вызывается из UISetup: координаты нативной кнопки kind (menu/quests/chat).
+	function AlliesPanelPlaceUpper(kind, x, y, w, h)
+		AP.upperSlot[kind] = { x = x, y = y, w = w, h = h }
+		if AlliesPanelActive then AP.PlaceUpper() end
+	end
+
+	-- Кнопка «Союзники» на месте стандартной (координаты задаёт UISetup).
+	function AP.PlaceButton()
+		if AP.button == nil or AP.slot == nil then return end
+		local s = AP.slot
+		BlzFrameSetSize(AP.button, s.w, s.h)
+		FrameSetAbsPoint(AP.button, FRAMEPOINT_TOPLEFT, s.x, s.y)
+		if s.native ~= nil then BlzFrameSetVisible(s.native, false) end
+		FrameSetShown(AP.button, AP.uiShown)
+	end
+
+	-- Вызывается из UISetup на каждом проходе: нативную кнопку только скрываем.
+	function AlliesPanelPlaceButton(native, x, y, w, h)
+		AP.slot = { native = native, x = x, y = y, w = w, h = h }
+		if AlliesPanelActive then AP.PlaceButton() end
+	end
+
+	-- Стандартный интерфейс скрыт (выбор расы, панель хоста): прячем и окно. Локально.
+	function AlliesPanelSetUIShown(show)
+		AP.uiShown = show
+		if AP.root == nil then return end
+		FrameSetShown(AP.button, show)
+		AP.PlaceUpper()
+		AP.Render()
+	end
+
+	-- Создаёт окно у всех клиентов одинаково. false — шаблоны не загрузились,
+	-- тогда остаётся стандартное окно союзов.
+	function AlliesPanel_Create()
+		if AP.root ~= nil then return true end
+		if not BlzLoadTOCFile("war3mapimported\\HudText.toc") or not BlzLoadTOCFile("war3mapimported\\BoxedText.toc")
+			or not BlzLoadTOCFile("war3mapimported\\TasItemShop.toc") then
+			ProbeLogWrite("[ALLIES] templates not loaded, keeping native allies dialog")
+			return false
+		end
+		AP.force = CreateForce()
+		AP.selfInEnum = AP.EnumAllies(0) > AP.OtherAllies(0)
+		for pi = 0, 23 do AP.seen[pi] = AP.IsParticipant(pi) or nil end
+		AP.uiShown = not StandardUIHidden
+
+		local parent = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0)
+		AP.root = BlzCreateFrame("BoxedTextBackgroundTemplate", parent, 0, 0)
+		BlzFrameSetLevel(AP.root, 4)
+		AP.measure = BlzCreateFrame("HudText", AP.root, 0, 0)
+		BlzFrameSetAbsPoint(AP.measure, FRAMEPOINT_TOPLEFT, 0.0, FRAME_PARK_Y)
+		BlzFrameSetAlpha(AP.measure, 0)
+		BlzFrameSetEnable(AP.measure, false)
+		local innerW = AP.W - AP.PAD * 2
+		-- Подложка ловит колесо мыши и не пропускает клики в мир под окном.
+		local block = BlzCreateFrameByType("BUTTON", "AlliesPanelBlocker", AP.root, "", 0)
+		BlzFrameSetAllPoints(block, AP.root)
+		AP.OnWheel(block)
+
+		local title = AP.Text(AP.root, "HudTitle", 0.3, 0.022)
+		AP.At(title, AP.PAD, -AP.PAD)
+		BlzFrameSetText(title, AP.C_NAME .. Loc("allies.title") .. "|r")
+		local close = AP.Button(AP.root, 0.022, AP.C_TEXT .. "×|r")
+		BlzFrameSetSize(close, 0.022, 0.022)
+		AP.At(close, AP.W - AP.PAD, -AP.PAD, FRAMEPOINT_TOPRIGHT)
+		AP.OnEvent(close, FRAMEEVENT_CONTROL_CLICK, function(v)
+			AP.open[v] = nil
+			AP.resTarget[v] = nil
+		end)
+		AP.chips = AP.Text(AP.root, "HudText", innerW, 0.016)
+		AP.At(AP.chips, AP.PAD, -(AP.PAD + 0.022 + 0.006))
+
+		local y = AP.CreateRows(innerW)
+		y = AP.CreateBottom(y - 0.01, innerW)
+		local height = -y + AP.PAD
+		BlzFrameSetSize(AP.root, AP.W, height)
+		FrameSetAbsPoint(AP.root, FRAMEPOINT_TOPLEFT, AP.LEFT, AP.TOP)
+		AP.CreateDialog(-(AP.PAD + 0.07))
+		FrameSetShown(AP.measure, false)
+		FrameSetShown(AP.root, false)
+
+		AP.CreateToast(parent)
+		local text
+		AP.button, text = AP.Button(parent, 0.084, "")
+		AP.buttonText = text
+		AP.OnEvent(AP.button, FRAMEEVENT_CONTROL_CLICK, AP.Toggle)
+
+		local key = CreateTrigger()
+		for pi = 0, 23 do BlzTriggerRegisterPlayerKeyEvent(key, Player(pi), OSKEY_F11, 0, true) end
+		TriggerAddAction(key, function()
+			AP.Toggle(GetPlayerId(GetTriggerPlayer()))
+			AP.Render()
+		end)
+
+		AP.CreateUpper(parent)
+		AlliesPanelActive = true
+		AP.PlaceButton()
+		AP.PlaceUpper()
+		TimerStart(CreateTimer(), AP.TICK, true, AP.Tick)
+		AP.Render()
+		ProbeLogWrite("[ALLIES] panel created")
+		return true
+	end
+
+	-- Для тестов и моста: доступ к внутреннему состоянию.
+	AlliesPanelState = AP
 end
 
 --  scope init2 ends
@@ -15484,7 +16674,7 @@ function CreateNeutralHostileBuildings()
 	u = BlzCreateUnitWithSkin(p, FourCC('h07B'), 19488.0, -27040.0, 270.000, FourCC('h07B'))
 	u = BlzCreateUnitWithSkin(p, FourCC('h07E'), 22368.0, -29664.0, 270.000, FourCC('h07E'))
 	gg_unit_h08O_0444 = BlzCreateUnitWithSkin(p, FourCC('h08O'), -26176.0, -17280.0, 270.000, FourCC('h08O'))
-	u = BlzCreateUnitWithSkin(p, FourCC('h07F'), 22112.0, -27808.0, 270.000, FourCC('h07F'))
+	u = BlzCreateUnitWithSkin(p, FourCC('h07F'), 22048.0, -27616.0, 270.000, FourCC('h07F'))
 	u = BlzCreateUnitWithSkin(p, FourCC('h08P'), -25600.0, -1280.0, 270.000, FourCC('h08P'))
 	u = BlzCreateUnitWithSkin(p, FourCC('h08Q'), -24640.0, 3392.0, 270.000, FourCC('h08Q'))
 	gg_unit_h0II_0455 = BlzCreateUnitWithSkin(p, FourCC('h0II'), 22400.0, 19584.0, 270.000, FourCC('h0II'))
@@ -20502,7 +21692,7 @@ function Continents(u)
         elseif GetUnitTypeId(u) ~= FourCC('H049') then
             if GetUnitAbilityLevel(u, FourCC('A0U6')) > 0 then
                 SetUnitPosition(u, 0, 0)
-                DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "")
+                DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, Loc("msg.continents.circle_centered"))
             else
                 UnitAddAbility(u, FourCC('A0U6'))
                 e = AddSpecialEffectTarget("AbilitiesSpellsOtherTalkToMeTalkToMe", u, "overhead")
@@ -21332,7 +22522,7 @@ end
 -- Trigger: StartAlly
 --===========================================================================
 function WritePlayerName()
-    DisplayTextToForce(udg_AllPlayers, "" .. GetPlayerName(GetEnumPlayer()))
+    DisplayTextToForce(udg_AllPlayers, string.format(Loc("msg.diplomacy.ally_name"), GetPlayerName(GetEnumPlayer())))
 end
 function Trig_StartAlly_Actions()
     -- Suppress nested re-entry: when ClearAllies is unallying a player, each change
@@ -21347,14 +22537,14 @@ function Trig_StartAlly_Actions()
     if DipMode == 0 then
         --?????????? ? ??????????
         if AllyCount > 1 then
-            DisplayTextToForce(udg_AllPlayers, "" .. GetPlayerName(p) .. " not ")
+            DisplayTextToForce(udg_AllPlayers, string.format(Loc("msg.diplomacy.allies_list"), GetPlayerName(p)))
             ForForce(gForce, WritePlayerName)
             
         end
     else
         if AllyCount > DipMode then
             ClearAllies(p)
-            DisplayTextToForce(udg_AllPlayers, "" .. GetPlayerName(p) .. "")
+            DisplayTextToForce(udg_AllPlayers, string.format(Loc("msg.diplomacy.allies_reset"), GetPlayerName(p)))
             
         end
     
@@ -21380,7 +22570,7 @@ end
 --===========================================================================
 function Trig_NoDipFFA_Actions()
     DipMode=1
-    DisplayTextToForce(GetPlayersAll(), "..")
+    DisplayTextToForce(GetPlayersAll(), Loc("msg.lobby.dip_ffa"))
    
 end
 --===========================================================================
@@ -21397,7 +22587,7 @@ end
 --===========================================================================
 function Trig_Dip2_Actions()
     DipMode=2
-    DisplayTextToForce(GetPlayersAll(), "2")
+    DisplayTextToForce(GetPlayersAll(), string.format(Loc("msg.lobby.dip_limit"), 2))
 end
 --===========================================================================
 function InitTrig_Dip2()
@@ -21413,7 +22603,7 @@ end
 --===========================================================================
 function Trig_Dip3_Actions()
     DipMode=3
-    DisplayTextToForce(GetPlayersAll(), "3")
+    DisplayTextToForce(GetPlayersAll(), string.format(Loc("msg.lobby.dip_limit"), 3))
 end
 --===========================================================================
 function InitTrig_Dip3()
@@ -21429,7 +22619,7 @@ end
 --===========================================================================
 function Trig_FreeDip_Actions()
     DipMode=0
-    DisplayTextToForce(GetPlayersAll(), "")
+    DisplayTextToForce(GetPlayersAll(), Loc("msg.lobby.dip_free"))
 end
 --===========================================================================
 function InitTrig_FreeDip()
@@ -21462,10 +22652,16 @@ function Trig_DipStart_Actions()
         SetMapFlag(MAP_ALLIANCE_CHANGES_HIDDEN, false)
         SetMapFlag(MAP_LOCK_RESOURCE_TRADING, false)
         --if DipMode==0 then
-           
-           
+
+
         --endif
-    
+
+    end
+    -- Окно «Союзники» (F11) заменяет стандартное: в стандартном окне союзы и
+    -- передача ресурсов заблокированы, их меняют триггеры окна.
+    if AlliesPanel_Create ~= nil and AlliesPanel_Create() then
+        SetMapFlag(MAP_LOCK_ALLIANCE_CHANGES, true)
+        SetMapFlag(MAP_LOCK_RESOURCE_TRADING, true)
     end
 end
 --===========================================================================
@@ -21479,7 +22675,7 @@ end
 --===========================================================================
 function Trig_Income075_Actions()
     IncomeMod=0.75
-    DisplayTextToForce(GetPlayersAll(), "75")
+    DisplayTextToForce(GetPlayersAll(), Loc("msg.lobby.income_75"))
 end
 --===========================================================================
 function InitTrig_Income075()
@@ -21495,7 +22691,7 @@ end
 --===========================================================================
 function Trig_Income100_Actions()
     IncomeMod=1
-    DisplayTextToForce(GetPlayersAll(), "")
+    DisplayTextToForce(GetPlayersAll(), Loc("msg.lobby.income_100"))
 end
 --===========================================================================
 function InitTrig_Income100()
@@ -24253,9 +25449,9 @@ function Trig_TransportingUnitArray_Message_Func001C()
 end
 function Trig_TransportingUnitArray_Message_Actions()
     if Trig_TransportingUnitArray_Message_Func001C() then
-        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( "" .. GetUnitName(udg_TempUnit02) ) .. ( "" .. I2S(CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(udg_TempUnit02)])) ))
+        DisplayTimedTextToForce(GetPlayersAll(), 8.00, string.format(Loc("msg.transport.loaded"), GetUnitName(udg_TempUnit02), CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(udg_TempUnit02)])))
     else
-        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( "" .. GetUnitName(udg_TempUnit02) ) .. ".")
+        DisplayTimedTextToForce(GetPlayersAll(), 8.00, string.format(Loc("msg.transport.empty"), GetUnitName(udg_TempUnit02)))
     end
     UnitAddIndicatorBJ(udg_TempUnit02, 100, 100, 100, 0)
 end
@@ -47531,6 +48727,345 @@ function InitTrig_LegGer()
     end)
 end
 --===========================================================================
+-- Лорд друид (H0J6): Семя Тал'дорена, Тропа корней, Проклятие Гоэмона, Полнолуние.
+-- Q/E/R — Channel без своих эффектов, W — Berserk (ускорение). Метку Проклятия и промах
+-- Полнолуния накладывает даммик nWd1. Числа совпадают с scripts/implement_worgen_druid.py.
+-- Время семян и лоз считается целыми тиками по 0.05 сек.
+--===========================================================================
+WorgenDruid = {
+    seeds = {}, trails = {}, marks = {}, markCount = 0, step = 0, timer = nil, clock = nil,
+    ids = {
+        seed = FourCC('AWd1'), trail = FourCC('AWd2'), curse = FourCC('AWd3'), moon = FourCC('AWd4'),
+        mark = FourCC('AWd5'), miss = FourCC('AWd6'), markBuff = FourCC('BWd2'),
+        caster = FourCC('nWd1'),
+    },
+    tick = 0.05,
+    seedTicks = 60, seedRadius = 200, seedHeal = {120, 190, 260, 330},
+    seedRange = 700, seedMinLost = 100,
+    trailEvery = 10, trailDrops = 6, trailLife = 10,   -- 0.5 сек.; 6 лоз; живут 10 шагов (5 сек.)
+    trailRadius = 120, trailDamage = {5, 8, 11, 14},
+    markTime = 10, markJump = 300, markAmp = 1.5, markPrune = 200, curseRange = 700,
+    moonRadius = 1200, moonHeal = {150, 250}, moonMinEnemies = 8,
+    fx = {
+        seed = "Doodads\\Ashenvale\\Plants\\AshenBush0\\AshenBush0.mdl",
+        bloom = "Objects\\Spawnmodels\\NightElf\\NightElfLargeDeathExplode\\NightElfLargeDeathExplode.mdl",
+        heal = "Abilities\\Spells\\Human\\Heal\\HealTarget.mdl",
+        vine = "Abilities\\Spells\\NightElf\\EntanglingRoots\\EntanglingRootsTarget.mdl",
+        moon = "Abilities\\Spells\\NightElf\\MoonWell\\MoonWellCasterArt.mdl",
+    },
+}
+
+function WorgenDruid.Alive(u)
+    return u ~= nil and GetUnitTypeId(u) ~= 0 and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+end
+
+function WorgenDruid.Now()
+    return TimerGetElapsed(WorgenDruid.clock)
+end
+
+function WorgenDruid.Heal(u, amount)
+    SetUnitState(u, UNIT_STATE_LIFE, GetUnitState(u, UNIT_STATE_LIFE) + amount)
+    DestroyEffect(AddSpecialEffectTarget(WorgenDruid.fx.heal, u, "origin"))
+end
+
+-- Служебный юнит без точки каста применяет метку/промах от имени владельца друида.
+function WorgenDruid.Cast(owner, x, y, ability, level, order, target)
+    local caster = CreateUnit(owner, WorgenDruid.ids.caster, x, y, 0)
+    if caster == nil then return false end
+    SetUnitAbilityLevel(caster, ability, level)
+    if IssueTargetOrder(caster, order, target) then
+        RemoveUnitTimed(caster, 2.0)
+        return true
+    end
+    RemoveUnit(caster)
+    return false
+end
+
+-- Цель Проклятия Гоэмона: не герой, не механизм и не здание.
+function WorgenDruid.Markable(t, owner)
+    return WorgenDruid.Alive(t) and IsUnitEnemy(t, owner)
+        and not IsUnitType(t, UNIT_TYPE_HERO) and not IsUnitType(t, UNIT_TYPE_MECHANICAL)
+        and not IsUnitType(t, UNIT_TYPE_STRUCTURE) and not IsUnitType(t, UNIT_TYPE_MAGIC_IMMUNE)
+        and not BlzIsUnitInvulnerable(t)
+end
+
+function WorgenDruid.EnsureTimer()
+    if WorgenDruid.timer == nil then
+        WorgenDruid.timer = CreateTimer()
+        TimerStart(WorgenDruid.timer, WorgenDruid.tick, true, WorgenDruid.Tick)
+    end
+end
+
+function WorgenDruid.Seed(caster, x, y, level)
+    local fx = AddSpecialEffect(WorgenDruid.fx.seed, x, y)
+    BlzSetSpecialEffectScale(fx, 0.5)
+    WorgenDruid.seeds[#WorgenDruid.seeds + 1] = {
+        fx = fx, x = x, y = y, owner = GetOwningPlayer(caster), age = 0,
+        heal = WorgenDruid.seedHeal[level] or WorgenDruid.seedHeal[1],
+    }
+    WorgenDruid.EnsureTimer()
+end
+
+function WorgenDruid.Bloom(seed)
+    DestroyEffect(seed.fx)
+    DestroyEffect(AddSpecialEffect(WorgenDruid.fx.bloom, seed.x, seed.y))
+    local group = CreateGroup()
+    GroupEnumUnitsInRange(group, seed.x, seed.y, WorgenDruid.seedRadius, nil)
+    for i = 0, BlzGroupGetSize(group) - 1 do
+        local u = BlzGroupUnitAt(group, i)
+        if WorgenDruid.Alive(u) and IsUnitAlly(u, seed.owner)
+            and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
+            WorgenDruid.Heal(u, seed.heal)
+        end
+    end
+    DestroyGroup(group)
+end
+
+function WorgenDruid.Trail(caster, level)
+    local trail = {
+        caster = caster, owner = GetOwningPlayer(caster), start = WorgenDruid.step,
+        damage = WorgenDruid.trailDamage[level] or WorgenDruid.trailDamage[1], drops = 0, vines = {},
+    }
+    WorgenDruid.trails[#WorgenDruid.trails + 1] = trail
+    WorgenDruid.TrailStep(trail, 0)
+    WorgenDruid.EnsureTimer()
+end
+
+-- Шаг тропы k (раз в 0.5 сек.): новая лоза под друидом, затем урон всех старых лоз.
+-- Каждый враг получает урон от лоз одной тропы не больше раза за шаг.
+function WorgenDruid.TrailStep(trail, k)
+    local caster = trail.caster
+    if trail.drops < WorgenDruid.trailDrops then
+        if WorgenDruid.Alive(caster) then
+            local x, y = GetUnitX(caster), GetUnitY(caster)
+            trail.vines[#trail.vines + 1] = {fx = AddSpecialEffect(WorgenDruid.fx.vine, x, y),
+                x = x, y = y, born = k}
+            trail.drops = trail.drops + 1
+        else
+            trail.drops = WorgenDruid.trailDrops
+        end
+    end
+    local canHit = GetUnitTypeId(caster) ~= 0
+    local hit = {}
+    for i = #trail.vines, 1, -1 do
+        local vine = trail.vines[i]
+        if canHit and k > vine.born then
+            local group = CreateGroup()
+            GroupEnumUnitsInRange(group, vine.x, vine.y, WorgenDruid.trailRadius, nil)
+            for j = 0, BlzGroupGetSize(group) - 1 do
+                local t = BlzGroupUnitAt(group, j)
+                if not hit[t] and WorgenDruid.Alive(t) and IsUnitEnemy(t, trail.owner)
+                    and not IsUnitType(t, UNIT_TYPE_STRUCTURE) and not IsUnitType(t, UNIT_TYPE_FLYING) then
+                    hit[t] = true
+                    UnitDamageTarget(caster, t, trail.damage, false, false, ATTACK_TYPE_NORMAL,
+                        DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+                end
+            end
+            DestroyGroup(group)
+        end
+        if k - vine.born >= WorgenDruid.trailLife then
+            DestroyEffect(vine.fx)
+            table.remove(trail.vines, i)
+        end
+    end
+end
+
+function WorgenDruid.Tick()
+    WorgenDruid.step = WorgenDruid.step + 1
+    local seeds = WorgenDruid.seeds
+    for i = #seeds, 1, -1 do
+        local seed = seeds[i]
+        seed.age = seed.age + 1
+        if seed.age >= WorgenDruid.seedTicks then
+            table.remove(seeds, i)
+            WorgenDruid.Bloom(seed)
+        else
+            BlzSetSpecialEffectScale(seed.fx, 0.5 + 0.5 * seed.age / WorgenDruid.seedTicks)
+        end
+    end
+    local trails = WorgenDruid.trails
+    for i = #trails, 1, -1 do
+        local trail = trails[i]
+        local elapsed = WorgenDruid.step - trail.start
+        if elapsed % WorgenDruid.trailEvery == 0 then
+            WorgenDruid.TrailStep(trail, elapsed // WorgenDruid.trailEvery)
+            if trail.drops >= WorgenDruid.trailDrops and #trail.vines == 0 then
+                table.remove(trails, i)
+            end
+        end
+    end
+    if #seeds == 0 and #trails == 0 then
+        local t = WorgenDruid.timer
+        WorgenDruid.timer = nil
+        if t ~= nil then DestroyTimer(t) end
+    end
+end
+
+function WorgenDruid.Mark(target, owner)
+    local id = GetHandleId(target)
+    if WorgenDruid.marks[id] == nil then
+        WorgenDruid.markCount = WorgenDruid.markCount + 1
+        if WorgenDruid.markCount > WorgenDruid.markPrune then
+            -- Удаление истёкших меток не зависит от порядка обхода.
+            local now = WorgenDruid.Now()
+            for key, mark in pairs(WorgenDruid.marks) do
+                if mark.expire <= now then
+                    WorgenDruid.marks[key] = nil
+                    WorgenDruid.markCount = WorgenDruid.markCount - 1
+                end
+            end
+        end
+    end
+    WorgenDruid.marks[id] = {owner = owner, expire = WorgenDruid.Now() + WorgenDruid.markTime}
+end
+
+function WorgenDruid.Jump(victim, owner)
+    local x, y = GetUnitX(victim), GetUnitY(victim)
+    local group = CreateGroup()
+    GroupEnumUnitsInRange(group, x, y, WorgenDruid.markJump, nil)
+    local best, bestDist = nil, nil
+    for i = 0, BlzGroupGetSize(group) - 1 do
+        local t = BlzGroupUnitAt(group, i)
+        if t ~= victim and WorgenDruid.Markable(t, owner) then
+            local dx, dy = GetUnitX(t) - x, GetUnitY(t) - y
+            local dist = dx * dx + dy * dy
+            if bestDist == nil or dist < bestDist then best, bestDist = t, dist end
+        end
+    end
+    DestroyGroup(group)
+    if best == nil then return false end
+    return WorgenDruid.Cast(owner, GetUnitX(best), GetUnitY(best), WorgenDruid.ids.mark, 1,
+        "bloodlust", best)
+end
+
+function WorgenDruid.Moon(caster, level)
+    local owner, x, y = GetOwningPlayer(caster), GetUnitX(caster), GetUnitY(caster)
+    local heal = WorgenDruid.moonHeal[level] or WorgenDruid.moonHeal[1]
+    DestroyEffect(AddSpecialEffect(WorgenDruid.fx.moon, x, y))
+    local group = CreateGroup()
+    GroupEnumUnitsInRange(group, x, y, WorgenDruid.moonRadius, nil)
+    for i = 0, BlzGroupGetSize(group) - 1 do
+        local t = BlzGroupUnitAt(group, i)
+        if WorgenDruid.Alive(t) and not IsUnitType(t, UNIT_TYPE_STRUCTURE)
+            and not IsUnitType(t, UNIT_TYPE_MECHANICAL) then
+            if IsUnitAlly(t, owner) then
+                WorgenDruid.Heal(t, heal)
+            elseif IsUnitEnemy(t, owner) and not IsUnitType(t, UNIT_TYPE_MAGIC_IMMUNE)
+                and not BlzIsUnitInvulnerable(t) then
+                WorgenDruid.Cast(owner, GetUnitX(t), GetUnitY(t), WorgenDruid.ids.miss, level,
+                    "curse", t)
+            end
+        end
+    end
+    DestroyGroup(group)
+end
+
+function WorgenDruid.Spell()
+    local ids, id, u = WorgenDruid.ids, GetSpellAbilityId(), GetTriggerUnit()
+    if id == ids.seed then
+        WorgenDruid.Seed(u, GetSpellTargetX(), GetSpellTargetY(), GetUnitAbilityLevel(u, id))
+    elseif id == ids.trail then
+        WorgenDruid.Trail(u, GetUnitAbilityLevel(u, id))
+    elseif id == ids.curse then
+        local t = GetSpellTargetUnit()
+        if t ~= nil then
+            WorgenDruid.Cast(GetOwningPlayer(u), GetUnitX(t), GetUnitY(t), ids.mark, 1, "bloodlust", t)
+        end
+    elseif id == ids.mark then
+        WorgenDruid.Mark(GetSpellTargetUnit(), GetOwningPlayer(u))
+    elseif id == ids.moon then
+        WorgenDruid.Moon(u, GetUnitAbilityLevel(u, id))
+    end
+end
+
+function WorgenDruid.Damage()
+    local amount = GetEventDamage()
+    if amount > 0 and GetUnitAbilityLevel(BlzGetEventDamageTarget(), WorgenDruid.ids.markBuff) > 0 then
+        BlzSetEventDamage(amount * WorgenDruid.markAmp)
+    end
+end
+
+-- Бафф снимается до события смерти, поэтому метка хранится в таблице со сроком.
+function WorgenDruid.Death()
+    local victim = GetTriggerUnit()
+    local id = GetHandleId(victim)
+    local mark = WorgenDruid.marks[id]
+    if mark == nil then return end
+    WorgenDruid.marks[id] = nil
+    WorgenDruid.markCount = WorgenDruid.markCount - 1
+    if WorgenDruid.Now() < mark.expire then WorgenDruid.Jump(victim, mark.owner) end
+end
+
+-- ИИ: семя под самым раненым союзником, проклятие на крупного не-героя, луна в большой драке.
+function WorgenDruid.AiSeed(u)
+    local owner = GetOwningPlayer(u)
+    local group = CreateGroup()
+    GroupEnumUnitsInRange(group, GetUnitX(u), GetUnitY(u), WorgenDruid.seedRange, nil)
+    local best, lost = nil, WorgenDruid.seedMinLost
+    for i = 0, BlzGroupGetSize(group) - 1 do
+        local t = BlzGroupUnitAt(group, i)
+        if WorgenDruid.Alive(t) and IsUnitAlly(t, owner) and not IsUnitType(t, UNIT_TYPE_STRUCTURE) then
+            local missing = GetUnitState(t, UNIT_STATE_MAX_LIFE) - GetUnitState(t, UNIT_STATE_LIFE)
+            if missing >= lost then best, lost = t, missing end
+        end
+    end
+    DestroyGroup(group)
+    return best ~= nil and IssuePointOrder(u, "channel", GetUnitX(best), GetUnitY(best))
+end
+
+function WorgenDruid.AiCurse(u, target)
+    local owner = GetOwningPlayer(u)
+    if target == nil or not WorgenDruid.Markable(target, owner) then
+        local group = CreateGroup()
+        GroupEnumUnitsInRange(group, GetUnitX(u), GetUnitY(u), WorgenDruid.curseRange, nil)
+        local life = 0
+        target = nil
+        for i = 0, BlzGroupGetSize(group) - 1 do
+            local t = BlzGroupUnitAt(group, i)
+            if WorgenDruid.Markable(t, owner) and IsUnitVisible(t, owner)
+                and GetUnitState(t, UNIT_STATE_MAX_LIFE) > life then
+                target, life = t, GetUnitState(t, UNIT_STATE_MAX_LIFE)
+            end
+        end
+        DestroyGroup(group)
+    end
+    return target ~= nil and IssueTargetOrder(u, "curse", target)
+end
+
+function WorgenDruid.AiMoon(u)
+    local owner = GetOwningPlayer(u)
+    local group = CreateGroup()
+    GroupEnumUnitsInRange(group, GetUnitX(u), GetUnitY(u), WorgenDruid.moonRadius, nil)
+    local count = 0
+    for i = 0, BlzGroupGetSize(group) - 1 do
+        local t = BlzGroupUnitAt(group, i)
+        if WorgenDruid.Alive(t) and IsUnitEnemy(t, owner) and not IsUnitType(t, UNIT_TYPE_STRUCTURE) then
+            count = count + 1
+        end
+    end
+    DestroyGroup(group)
+    return count >= WorgenDruid.moonMinEnemies and IssueImmediateOrder(u, "starfall")
+end
+
+function WorgenDruid.Init()
+    if WorgenDruid.spellTrigger ~= nil then return end
+    WorgenDruid.clock = CreateTimer()
+    TimerStart(WorgenDruid.clock, 1000000.0, false, nil)
+    WorgenDruid.spellTrigger = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(WorgenDruid.spellTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddAction(WorgenDruid.spellTrigger, WorgenDruid.Spell)
+    WorgenDruid.damageTrigger = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(WorgenDruid.damageTrigger, EVENT_PLAYER_UNIT_DAMAGING)
+    TriggerAddAction(WorgenDruid.damageTrigger, WorgenDruid.Damage)
+    WorgenDruid.deathTrigger = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(WorgenDruid.deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddAction(WorgenDruid.deathTrigger, WorgenDruid.Death)
+end
+
+function InitTrig_WorgenDruid()
+    WorgenDruid.Init()
+end
+--===========================================================================
 -- Trigger: SpellOpletenie
 --===========================================================================
 function Trig_SpellOpletenie_Actions()
@@ -47659,7 +49194,71 @@ function InitTrig_AutocastSlowOn()
     TriggerRegisterAnyUnitEventBJ(gg_trg_AutocastSlowOn, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
     TriggerAddCondition(gg_trg_AutocastSlowOn, Condition(Trig_AutocastSlowOn_Conditions))
     TriggerAddAction(gg_trg_AutocastSlowOn, Trig_AutocastSlowOn_Actions)
+end-- Spell-scent charge lives in the passive ability level: no per-unit tables or timers.
+WorgenKnight = {unitId = FourCC('h0IW'), abilityId = FourCC('AWkn'), researchId = FourCC('RWkn')}
+
+function WorgenKnight.Eligible(unit)
+    return unit ~= nil and GetUnitTypeId(unit) == WorgenKnight.unitId
+        and GetUnitState(unit, UNIT_STATE_LIFE) > 0.405 and not IsUnitIllusion(unit)
+        and not IsUnitHidden(unit) and not IsUnitLoaded(unit)
+        and GetUnitAbilityLevel(unit, WorgenKnight.abilityId) > 0
+        and GetPlayerTechCount(GetOwningPlayer(unit), WorgenKnight.researchId, true) > 0
 end
+
+function WorgenKnight.Spell()
+    local caster = GetTriggerUnit()
+    if caster == nil or GetUnitTypeId(caster) == 0 then return end
+    local x, y, owner = GetUnitX(caster), GetUnitY(caster), GetOwningPlayer(caster)
+    local group = CreateGroup()
+    GroupEnumUnitsInRange(group, x, y, 600, nil)
+    for i = 0, BlzGroupGetSize(group) - 1 do
+        local knight = BlzGroupUnitAt(group, i)
+        if WorgenKnight.Eligible(knight) and IsUnitEnemy(knight, owner) then
+            local dx, dy = GetUnitX(knight) - x, GetUnitY(knight) - y
+            if dx * dx + dy * dy <= 600 * 600 then
+                SetUnitAbilityLevel(knight, WorgenKnight.abilityId, 2)
+            end
+        end
+    end
+    DestroyGroup(group)
+end
+
+function WorgenKnight.Damage()
+    if not BlzGetEventIsAttack() or GetEventDamage() <= 0 then return end
+    local knight = GetEventDamageSource()
+    if not WorgenKnight.Eligible(knight)
+        or GetUnitAbilityLevel(knight, WorgenKnight.abilityId) ~= 2 then return end
+    local target = BlzGetEventDamageTarget()
+    if target == nil or GetUnitTypeId(target) == 0
+        or not IsUnitEnemy(target, GetOwningPlayer(knight)) then return end
+    -- Modify the existing ordinary attack before armor; do not cause a nested damage event.
+    SetUnitAbilityLevel(knight, WorgenKnight.abilityId, 1)
+    BlzSetEventDamage(GetEventDamage() + 20)
+end
+
+function WorgenKnight.Reset()
+    local unit = GetTriggerUnit()
+    if unit ~= nil and GetUnitTypeId(unit) == WorgenKnight.unitId
+        and GetUnitAbilityLevel(unit, WorgenKnight.abilityId) > 0 then
+        SetUnitAbilityLevel(unit, WorgenKnight.abilityId, 1)
+    end
+end
+
+function InitTrig_WorgenKnight()
+    if WorgenKnight.initialized then return end
+    WorgenKnight.initialized = true
+    local spell = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddAction(spell, WorgenKnight.Spell)
+    local damage = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(damage, EVENT_PLAYER_UNIT_DAMAGING)
+    TriggerAddAction(damage, WorgenKnight.Damage)
+    local reset = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(reset, EVENT_PLAYER_UNIT_DEATH)
+    TriggerRegisterAnyUnitEventBJ(reset, EVENT_PLAYER_UNIT_CHANGE_OWNER)
+    TriggerAddAction(reset, WorgenKnight.Reset)
+end
+
 --===========================================================================
 -- Trigger: Red Orden
 --===========================================================================
@@ -51741,7 +53340,7 @@ function Trig_SecondChance_Func003Func008C()
     end
    
     if IsPlayerInForce(ConvertedPlayer(udg_LocalInteger), Observers) then
-        DisplayTimedTextToForce(GetPlayersAll(), 5.00, ( "" .. GetPlayerName(GetTriggerPlayer()) ) .. ( "" .. ( GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " not " ) ))
+        DisplayTimedTextToForce(GetPlayersAll(), 5.00, string.format(Loc("msg.second_chance.observer"), GetPlayerName(ConvertedPlayer(udg_LocalInteger))))
         return false
     end
     return true
@@ -51983,8 +53582,8 @@ function Trig_ArchontMode_Actions()
     local pi2 = number and number - 1
     local pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) then
-        DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi2)) .. "" .. I2S(pi2))
-        DisplayTextToPlayer(Player(pi2), 0, 0, "" .. GetPlayerName(Player(pi1)))
+        DisplayTextToPlayer(Player(pi1), 0, 0, string.format(Loc("msg.archont.on_self"), GetPlayerName(Player(pi2)), pi2 + 1))
+        DisplayTextToPlayer(Player(pi2), 0, 0, string.format(Loc("msg.archont.on_target"), GetPlayerName(Player(pi1))))
         SetPlayerAllianceStateBJ(Player(pi1), Player(pi2), bj_ALLIANCE_ALLIED_ADVUNITS)
     end
     MultiboardAllowDisplayBJ(true)
@@ -52026,8 +53625,8 @@ function Trig_ArchontModeOff_Actions()
     local pi2 = number and number - 1
     local pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) and DipMode ~= 1 then
-        DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi2)) .. "" .. I2S(pi2))
-        DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi1)))
+        DisplayTextToPlayer(Player(pi1), 0, 0, string.format(Loc("msg.archont.off_self"), GetPlayerName(Player(pi2)), pi2 + 1))
+        DisplayTextToPlayer(Player(pi2), 0, 0, string.format(Loc("msg.archont.off_target"), GetPlayerName(Player(pi1))))
         SetPlayerAllianceBJ(Player(pi1), ALLIANCE_SHARED_ADVANCED_CONTROL, false, Player(pi2))
     end
    
@@ -52522,7 +54121,7 @@ function Trig_BeginDestroingTrain_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0P7')
 end
 function Trig_BeginDestroingTrain_Actions()
-      DisplayTextToForce(udg_AllPlayers, " - ...")
+      DisplayTextToForce(udg_AllPlayers, Loc("msg.train.flood_warning"))
 end
 --===========================================================================
 function InitTrig_BeginDestroingTrain()
@@ -52555,7 +54154,7 @@ function Trig_KalecStart_Actions()
     if UnitAlive(u) then
         ShowUnit(u, false)
         RemoveUnit(u)
-        DisplayTextToPlayer(GetOwningPlayer(GetTriggerUnit()), 0, 0, "4")
+        DisplayTextToPlayer(GetOwningPlayer(GetTriggerUnit()), 0, 0, Loc("msg.oldgods.kalec_failed"))
         ForForce(udg_AllPlayers, EnableKalec)
         UnitAddAbility(GetTriggerUnit(), FourCC('A12R'))
     end
@@ -52621,7 +54220,7 @@ end
 --===========================================================================
 function Trig_ShaDead_Actions()
     SpawnGroundItem(FourCC('I021'), GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()))
-    DisplayTextToForce(udg_AllPlayers2, ".")
+    DisplayTextToForce(udg_AllPlayers2, Loc("msg.oldgods.sha_defeated"))
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnit()), PLAYER_STATE_RESOURCE_GOLD)
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnit()), PLAYER_STATE_RESOURCE_LUMBER)
     DisableTrigger(gg_trg_ShaStart)
@@ -55179,7 +56778,7 @@ function aiFixAll()
         aiRepUnvul(i)
         aiRep(i)
         
-        DisplayTextToPlayer(Player(i), 0, 0, "")
+        DisplayTextToPlayer(Player(i), 0, 0, Loc("msg.ai.economy_recalc"))
         i=i + 1
     end
     
@@ -55396,7 +56995,7 @@ function CheckNearCapitals(city)
         end
     end
     if found then
-        DisplayTextToPlayer(udg_LocalPlayer, 0, 0, "(3)")
+        DisplayTextToPlayer(udg_LocalPlayer, 0, 0, Loc("msg.city.landing_near_capital"))
         DestroyGroup(g)
         g=nil
         return false
@@ -56725,7 +58324,7 @@ function CheckPositionT(x, y, add)
     if IsTerrainPathable(x + add, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x + add, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x + add, y + add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y + add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y + add, PATHING_TYPE_FLOATABILITY) then
         return true
     end
-    DisplayTextToPlayer(udg_LocalPlayer, 0, 0, ".")
+    DisplayTextToPlayer(udg_LocalPlayer, 0, 0, Loc("msg.city.landing_uneven"))
     return false
 end
 --===========================================================================
@@ -57807,6 +59406,12 @@ function _castAbility(u, entry, target, p)
         return AiCombatOrderResult(u, BearGrip.AiCast(u, target))
     elseif tp == "naga_harpoon" then
         return AiCombatOrderResult(u, NagaCombat.AiHarpoon(u))
+    elseif tp == "worgen_seed" then
+        return AiCombatOrderResult(u, WorgenDruid.AiSeed(u))
+    elseif tp == "worgen_curse" then
+        return AiCombatOrderResult(u, WorgenDruid.AiCurse(u, target))
+    elseif tp == "worgen_moon" then
+        return AiCombatOrderResult(u, WorgenDruid.AiMoon(u))
     elseif tp == "immediate" then
         if entry.orderId ~= nil then
             return AiCombatOrderResult(u, IssueImmediateOrderById(u, entry.orderId))
@@ -63067,6 +64672,7 @@ RegisterAiRace("Worgen", {
             { at = 35, gate = "tier2", action = "research", rows = {
                 {FourCC('h0IR'), FourCC('R0IP'), 3}, {FourCC('h0IR'), FourCC('R0F6'), 3},
                 {FourCC('h0IR'), FourCC('R0F5'), 3}, {FourCC('h0IR'), FourCC('R0EZ'), 3},
+                {FourCC('h0IR'), FourCC('RWkn'), 1},
                 {FourCC('h0IS'), FourCC('R0F1'), 3}, {FourCC('h0IS'), FourCC('R0F0'), 3},
                 {FourCC('h0IS'), FourCC('R0F2'), 3},
             }},
@@ -63080,6 +64686,18 @@ RegisterAiRace("Worgen", {
     },
 
     attackerData = {
+
+        [FourCC('H0J6')] = {
+
+            { type = "worgen_moon",  chance = 3 },
+
+            { type = "worgen_curse", chance = 3 },
+
+            { type = "worgen_seed",  chance = 3 },
+
+            { order = "berserk",     chance = 4, type = "immediate" },
+
+        },
 
         [FourCC('h0IU')] = {
 
@@ -63131,7 +64749,7 @@ RegisterAiRace("Worgen", {
 
         [FourCC('H0J2')] = { skills = { FourCC('A11I'), FourCC('A11H'), FourCC('A11J'), FourCC('A11K') } },
 
-        [FourCC('H0J6')] = { skills = { FourCC('A11L'), FourCC('A11N'), FourCC('A11M'), FourCC('A11O') } },
+        [FourCC('H0J6')] = { skills = { FourCC('AWd1'), FourCC('AWd3'), FourCC('AWd2'), FourCC('AWd4') } },
 
         [FourCC('H0J7')] = { skills = { FourCC('A11Q'), FourCC('A11P'), FourCC('A11R'), FourCC('A11S') } },
 
@@ -72791,7 +74409,9 @@ function InitCustomTriggers()
     InitTrig_NagaPas()
     InitTrig_NagaCommonSpell()
     InitTrig_StartWorgens()
+    InitTrig_WorgenKnight()
     InitTrig_LegGer()
+    InitTrig_WorgenDruid()
     InitTrig_SpellOpletenie()
     InitTrig_flot1_Copy_O()
     InitTrig_flot2_Copy_O()

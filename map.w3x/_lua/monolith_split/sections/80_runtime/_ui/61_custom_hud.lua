@@ -260,6 +260,12 @@ function CustomHudRaceName(pi, abil)
 	end
 	return GetAbilityName(abil)
 end
+
+-- Название расы игрока или nil, пока раса не выбрана (окно «Союзники»).
+function CustomHudPlayerRaceName(pi)
+	local abil = HudRaceOf(pi)
+	return abil ~= nil and CustomHudRaceName(pi, abil) or nil
+end
 local hudToggleText
 
 local function HudValue(col, raw)

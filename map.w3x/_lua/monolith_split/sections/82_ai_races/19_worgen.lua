@@ -102,6 +102,7 @@ RegisterAiRace("Worgen", {
             { at = 35, gate = "tier2", action = "research", rows = {
                 {FourCC('h0IR'), FourCC('R0IP'), 3}, {FourCC('h0IR'), FourCC('R0F6'), 3},
                 {FourCC('h0IR'), FourCC('R0F5'), 3}, {FourCC('h0IR'), FourCC('R0EZ'), 3},
+                {FourCC('h0IR'), FourCC('RWkn'), 1},
                 {FourCC('h0IS'), FourCC('R0F1'), 3}, {FourCC('h0IS'), FourCC('R0F0'), 3},
                 {FourCC('h0IS'), FourCC('R0F2'), 3},
             }},
@@ -115,6 +116,18 @@ RegisterAiRace("Worgen", {
     },
 
     attackerData = {
+
+        [FourCC('H0J6')] = {
+
+            { type = "worgen_moon",  chance = 3 },
+
+            { type = "worgen_curse", chance = 3 },
+
+            { type = "worgen_seed",  chance = 3 },
+
+            { order = "berserk",     chance = 4, type = "immediate" },
+
+        },
 
         [FourCC('h0IU')] = {
 
@@ -166,7 +179,7 @@ RegisterAiRace("Worgen", {
 
         [FourCC('H0J2')] = { skills = { FourCC('A11I'), FourCC('A11H'), FourCC('A11J'), FourCC('A11K') } },
 
-        [FourCC('H0J6')] = { skills = { FourCC('A11L'), FourCC('A11N'), FourCC('A11M'), FourCC('A11O') } },
+        [FourCC('H0J6')] = { skills = { FourCC('AWd1'), FourCC('AWd3'), FourCC('AWd2'), FourCC('AWd4') } },
 
         [FourCC('H0J7')] = { skills = { FourCC('A11Q'), FourCC('A11P'), FourCC('A11R'), FourCC('A11S') } },
 

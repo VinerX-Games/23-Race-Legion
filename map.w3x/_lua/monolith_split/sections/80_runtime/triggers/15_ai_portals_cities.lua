@@ -1759,7 +1759,7 @@ function aiFixAll()
         aiRepUnvul(i)
         aiRep(i)
         
-        DisplayTextToPlayer(Player(i), 0, 0, "")
+        DisplayTextToPlayer(Player(i), 0, 0, Loc("msg.ai.economy_recalc"))
         i=i + 1
     end
     
@@ -1976,7 +1976,7 @@ function CheckNearCapitals(city)
         end
     end
     if found then
-        DisplayTextToPlayer(udg_LocalPlayer, 0, 0, "(3)")
+        DisplayTextToPlayer(udg_LocalPlayer, 0, 0, Loc("msg.city.landing_near_capital"))
         DestroyGroup(g)
         g=nil
         return false
@@ -3305,7 +3305,7 @@ function CheckPositionT(x, y, add)
     if IsTerrainPathable(x + add, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x + add, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x + add, y + add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y + add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y + add, PATHING_TYPE_FLOATABILITY) then
         return true
     end
-    DisplayTextToPlayer(udg_LocalPlayer, 0, 0, ".")
+    DisplayTextToPlayer(udg_LocalPlayer, 0, 0, Loc("msg.city.landing_uneven"))
     return false
 end
 --===========================================================================

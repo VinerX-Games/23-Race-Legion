@@ -53,7 +53,14 @@ function UISetup()
 	BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPLEFT, questX - stepX, top)
 	BlzFrameSetAbsPoint(chatButton, FRAMEPOINT_TOPLEFT, questX - stepX, top - stepY)
 	BlzFrameSetAbsPoint(allyButton, FRAMEPOINT_TOPLEFT, questX, top - stepY)
-	
+	-- Окно «Союзники» заменяет стандартное: его кнопка встаёт на это место.
+	if AlliesPanelPlaceButton ~= nil then AlliesPanelPlaceButton(allyButton, questX, top - stepY, btnW, btnH) end
+	if AlliesPanelPlaceUpper ~= nil then
+		AlliesPanelPlaceUpper("quests", questX, top, btnW, btnH)
+		AlliesPanelPlaceUpper("menu", questX - stepX, top, btnW, btnH)
+		AlliesPanelPlaceUpper("chat", questX - stepX, top - stepY, btnW, btnH)
+	end
+
 	-- Hiding clock UI and creating new frame bar
 	BlzFrameSetTexture(imageTest, "UI\\ResourceBar.tga", 0, true)
 	BlzFrameSetPoint(imageTest, FRAMEPOINT_TOP, BlzGetOriginFrame(ORIGIN_FRAME_WORLD_FRAME, 0), FRAMEPOINT_TOP, 0, 0)

@@ -1,7 +1,7 @@
 {
   "source_path": "C:\\Games\\23 Race\\23-Race-Legion\\map.w3x\\war3map.lua",
   "source_sha256": "5181648a70065e3b8632a083c3946e452fc8f9f5b6538dda68f69226ad9566bb",
-  "section_count": 152,
+  "section_count": 157,
   "sections": [
     {
       "name": "prelude",
@@ -302,6 +302,14 @@
     {
       "name": "gen:_ui_64_host_panel",
       "file": "80_runtime/_ui/64_host_panel.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:_ui_65_allies_panel",
+      "file": "80_runtime/_ui/65_allies_panel.lua",
       "category": "generated_runtime",
       "start_line": 0,
       "end_line": 0,
@@ -783,6 +791,14 @@
       "name": "gen:Worgens",
       "file": "80_runtime/triggers/races/Worgens.lua",
       "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "worgen_knight",
+      "file": "80_runtime/triggers/races/WorgenKnight.lua",
+      "category": "runtime",
       "start_line": 0,
       "end_line": 0,
       "library_name": null

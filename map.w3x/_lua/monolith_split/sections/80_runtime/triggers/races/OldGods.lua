@@ -22,7 +22,7 @@ function Trig_KalecStart_Actions()
     if UnitAlive(u) then
         ShowUnit(u, false)
         RemoveUnit(u)
-        DisplayTextToPlayer(GetOwningPlayer(GetTriggerUnit()), 0, 0, "4")
+        DisplayTextToPlayer(GetOwningPlayer(GetTriggerUnit()), 0, 0, Loc("msg.oldgods.kalec_failed"))
         ForForce(udg_AllPlayers, EnableKalec)
         UnitAddAbility(GetTriggerUnit(), FourCC('A12R'))
     end
@@ -88,7 +88,7 @@ end
 --===========================================================================
 function Trig_ShaDead_Actions()
     SpawnGroundItem(FourCC('I021'), GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()))
-    DisplayTextToForce(udg_AllPlayers2, ".")
+    DisplayTextToForce(udg_AllPlayers2, Loc("msg.oldgods.sha_defeated"))
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnit()), PLAYER_STATE_RESOURCE_GOLD)
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnit()), PLAYER_STATE_RESOURCE_LUMBER)
     DisableTrigger(gg_trg_ShaStart)

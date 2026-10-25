@@ -248,7 +248,7 @@ function Continents(u)
         elseif GetUnitTypeId(u) ~= FourCC('H049') then
             if GetUnitAbilityLevel(u, FourCC('A0U6')) > 0 then
                 SetUnitPosition(u, 0, 0)
-                DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "")
+                DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, Loc("msg.continents.circle_centered"))
             else
                 UnitAddAbility(u, FourCC('A0U6'))
                 e = AddSpecialEffectTarget("AbilitiesSpellsOtherTalkToMeTalkToMe", u, "overhead")
@@ -1078,7 +1078,7 @@ end
 -- Trigger: StartAlly
 --===========================================================================
 function WritePlayerName()
-    DisplayTextToForce(udg_AllPlayers, "" .. GetPlayerName(GetEnumPlayer()))
+    DisplayTextToForce(udg_AllPlayers, string.format(Loc("msg.diplomacy.ally_name"), GetPlayerName(GetEnumPlayer())))
 end
 function Trig_StartAlly_Actions()
     -- Suppress nested re-entry: when ClearAllies is unallying a player, each change
@@ -1093,14 +1093,14 @@ function Trig_StartAlly_Actions()
     if DipMode == 0 then
         --?????????? ? ??????????
         if AllyCount > 1 then
-            DisplayTextToForce(udg_AllPlayers, "" .. GetPlayerName(p) .. " not ")
+            DisplayTextToForce(udg_AllPlayers, string.format(Loc("msg.diplomacy.allies_list"), GetPlayerName(p)))
             ForForce(gForce, WritePlayerName)
             
         end
     else
         if AllyCount > DipMode then
             ClearAllies(p)
-            DisplayTextToForce(udg_AllPlayers, "" .. GetPlayerName(p) .. "")
+            DisplayTextToForce(udg_AllPlayers, string.format(Loc("msg.diplomacy.allies_reset"), GetPlayerName(p)))
             
         end
     
@@ -1126,7 +1126,7 @@ end
 --===========================================================================
 function Trig_NoDipFFA_Actions()
     DipMode=1
-    DisplayTextToForce(GetPlayersAll(), "..")
+    DisplayTextToForce(GetPlayersAll(), Loc("msg.lobby.dip_ffa"))
    
 end
 --===========================================================================
@@ -1143,7 +1143,7 @@ end
 --===========================================================================
 function Trig_Dip2_Actions()
     DipMode=2
-    DisplayTextToForce(GetPlayersAll(), "2")
+    DisplayTextToForce(GetPlayersAll(), string.format(Loc("msg.lobby.dip_limit"), 2))
 end
 --===========================================================================
 function InitTrig_Dip2()
@@ -1159,7 +1159,7 @@ end
 --===========================================================================
 function Trig_Dip3_Actions()
     DipMode=3
-    DisplayTextToForce(GetPlayersAll(), "3")
+    DisplayTextToForce(GetPlayersAll(), string.format(Loc("msg.lobby.dip_limit"), 3))
 end
 --===========================================================================
 function InitTrig_Dip3()
@@ -1175,7 +1175,7 @@ end
 --===========================================================================
 function Trig_FreeDip_Actions()
     DipMode=0
-    DisplayTextToForce(GetPlayersAll(), "")
+    DisplayTextToForce(GetPlayersAll(), Loc("msg.lobby.dip_free"))
 end
 --===========================================================================
 function InitTrig_FreeDip()
@@ -1208,10 +1208,16 @@ function Trig_DipStart_Actions()
         SetMapFlag(MAP_ALLIANCE_CHANGES_HIDDEN, false)
         SetMapFlag(MAP_LOCK_RESOURCE_TRADING, false)
         --if DipMode==0 then
-           
-           
+
+
         --endif
-    
+
+    end
+    -- Окно «Союзники» (F11) заменяет стандартное: в стандартном окне союзы и
+    -- передача ресурсов заблокированы, их меняют триггеры окна.
+    if AlliesPanel_Create ~= nil and AlliesPanel_Create() then
+        SetMapFlag(MAP_LOCK_ALLIANCE_CHANGES, true)
+        SetMapFlag(MAP_LOCK_RESOURCE_TRADING, true)
     end
 end
 --===========================================================================
@@ -1225,7 +1231,7 @@ end
 --===========================================================================
 function Trig_Income075_Actions()
     IncomeMod=0.75
-    DisplayTextToForce(GetPlayersAll(), "75")
+    DisplayTextToForce(GetPlayersAll(), Loc("msg.lobby.income_75"))
 end
 --===========================================================================
 function InitTrig_Income075()
@@ -1241,7 +1247,7 @@ end
 --===========================================================================
 function Trig_Income100_Actions()
     IncomeMod=1
-    DisplayTextToForce(GetPlayersAll(), "")
+    DisplayTextToForce(GetPlayersAll(), Loc("msg.lobby.income_100"))
 end
 --===========================================================================
 function InitTrig_Income100()

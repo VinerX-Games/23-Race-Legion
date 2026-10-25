@@ -210,38 +210,6 @@
    "levels": 2,
    "hero_level_req": 6
   },
-  "A11L": {
-   "type": "ability",
-   "name": "Цепная молния",
-   "hero": true,
-   "hotkey": "Q",
-   "levels": 4,
-   "hero_level_req": 1
-  },
-  "A11M": {
-   "type": "ability",
-   "name": "Щит маны",
-   "hero": true,
-   "hotkey": "W",
-   "levels": 4,
-   "hero_level_req": 1
-  },
-  "A11N": {
-   "type": "ability",
-   "name": "Благословение духов",
-   "hero": true,
-   "hotkey": "E",
-   "levels": 4,
-   "hero_level_req": 1
-  },
-  "A11O": {
-   "type": "ability",
-   "name": "Зов Духов",
-   "hero": true,
-   "hotkey": "R",
-   "levels": 2,
-   "hero_level_req": 6
-  },
   "A11P": {
    "type": "ability",
    "name": "Волна силы",
@@ -322,6 +290,47 @@
    "name": "Добывать ресурсы",
    "hotkey": "G",
    "levels": 1
+  },
+  "AWd1": {
+   "type": "ability",
+   "name": "Семя Тал'дорена",
+   "hero": true,
+   "hotkey": "Q",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "AWd2": {
+   "type": "ability",
+   "name": "Тропа корней",
+   "hero": true,
+   "hotkey": "W",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "AWd3": {
+   "type": "ability",
+   "name": "Проклятие Гоэмона",
+   "hero": true,
+   "hotkey": "E",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "AWd4": {
+   "type": "ability",
+   "name": "Полнолуние",
+   "hero": true,
+   "hotkey": "R",
+   "levels": 2,
+   "hero_level_req": 6
+  },
+  "AWkn": {
+   "type": "ability",
+   "name": "Чутьё на магию",
+   "levels": 2,
+   "requires": [
+    "RWkn"
+   ],
+   "requires_amount": 1
   },
   "Abdl": {
    "type": "ability",
@@ -670,7 +679,7 @@
   },
   "R0IP": {
    "type": "upgrade",
-   "name": "Дрессировка Топорометателей",
+   "name": "Дрессировка Топорометателей [1/2]",
    "gold": 125,
    "gold_per_level": 200,
    "lumber": 125,
@@ -680,6 +689,17 @@
     "h0IL"
    ],
    "time": 40
+  },
+  "RWkn": {
+   "type": "upgrade",
+   "name": "Чутьё на магию",
+   "gold": 250,
+   "lumber": 150,
+   "levels": 1,
+   "requires": [
+    "h0IL"
+   ],
+   "time": 45
   },
   "Rhde": {
    "type": "upgrade",
@@ -921,7 +941,8 @@
     "R0IP",
     "R0F6",
     "R0F5",
-    "R0EZ"
+    "R0EZ",
+    "RWkn"
    ]
   },
   "h0IS": {
@@ -1054,7 +1075,7 @@
   },
   "h0J1": {
    "type": "unit",
-   "name": "Полудикий ворген",
+   "name": "Дикий ворген",
    "base": "hkni",
    "time": 49,
    "gold": 330,
@@ -1177,6 +1198,7 @@
   "A11E requires R0F2",
   "A1F0 requires R0IP",
   "A1F1 requires R0IP",
+  "AWkn requires RWkn",
   "Adts requires Rhse",
   "Ahri requires Rhri",
   "H0J2 has-ability AInv",
@@ -1185,10 +1207,10 @@
   "H0J2 hero-ability A11J",
   "H0J2 hero-ability A11K",
   "H0J6 has-ability AInv",
-  "H0J6 hero-ability A11L",
-  "H0J6 hero-ability A11M",
-  "H0J6 hero-ability A11N",
-  "H0J6 hero-ability A11O",
+  "H0J6 hero-ability AWd1",
+  "H0J6 hero-ability AWd2",
+  "H0J6 hero-ability AWd3",
+  "H0J6 hero-ability AWd4",
   "H0J7 has-ability AInv",
   "H0J7 hero-ability A11P",
   "H0J7 hero-ability A11Q",
@@ -1212,6 +1234,7 @@
   "R0F5 requires h0IL",
   "R0F6 requires h0IL",
   "R0IP requires h0IL",
+  "RWkn requires h0IL",
   "Rhri requires hkee",
   "h0D8 has-ability A15N",
   "h0D8 researches R002",
@@ -1295,6 +1318,7 @@
   "h0IR researches R0F5",
   "h0IR researches R0F6",
   "h0IR researches R0IP",
+  "h0IR researches RWkn",
   "h0IR trains h0IW",
   "h0IR trains h0J0",
   "h0IR trains h0NA",
@@ -1350,6 +1374,7 @@
   "h0IW has-ability A118",
   "h0IW has-ability A119",
   "h0IW has-ability A11A",
+  "h0IW has-ability AWkn",
   "h0IW requires h0IK",
   "h0IW requires h0IP",
   "h0IW requires h0IQ",
