@@ -3200,6 +3200,8 @@ UnSkill = FourCC('A1LI')	---@type integer
 UnKofDmg1 = 1	---@type real	
 UnKofDmg2 = 30	---@type real	
 Gruul = {}	---@type unit	
+GruulCast = {}	---@type integer	-- номер последнего каста Груула у игрока
+GruulActive = 0	---@type integer	-- сколько кастов Груула идёт сейчас (gg_trg_RRR включён, пока > 0)
 -- TT	---@type texttag	
 -- hashtable Hash = InitHashtable()  // хэш новый, можно зименить на свой, если есть, но тогда менять придется во всём триггере или убрать эту строчку если используется он же
 JSTRSkill = FourCC('A1E2')	---@type integer	
@@ -16728,6 +16730,8 @@ end
 ---@return nothing
 function InitTrig_RRR()
 	gg_trg_RRR = CreateTrigger()
+	-- Включается только на время каста Груула (Trig_GruulSpell_Actions); раньше тикал с начала игры.
+	DisableTrigger(gg_trg_RRR)
 	TriggerRegisterTimerEventPeriodic(gg_trg_RRR, 0.04)
 	TriggerAddAction(gg_trg_RRR, Trig_RRR_Actions)
 end
@@ -27072,16 +27076,24 @@ end
 --===========================================================================
 function Trig_GruulSpell_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    -- Счётчик кастов: цикл выключается, только когда закончились все касты всех Груулов,
+    -- а повторный каст того же игрока не обрывается окончанием предыдущего.
+    local cast = (GruulCast[pi] or 0) + 1
+    GruulCast[pi]=cast
     Gruul[pi]=GetSpellAbilityUnit()
+    GruulActive=GruulActive + 1
     EnableTrigger(gg_trg_RRR)
-    
-    -- ????? ????? ?????? ?????? 1.10+ 0.15 ?????? ???
+
     TriggerSleepAction(1.10 + ( 0.15 * I2R(GetUnitAbilityLevel(Gruul[pi], FourCC('A18Q'))) ))
-    
-    
-    DisableTrigger(gg_trg_RRR)
-    -- ??????? ??????????
-    Gruul[pi]=nil
+
+    GruulActive=GruulActive - 1
+    if GruulActive <= 0 then
+        GruulActive=0
+        DisableTrigger(gg_trg_RRR)
+    end
+    if GruulCast[pi] == cast then
+        Gruul[pi]=nil
+    end
 end
 --===========================================================================
 function InitTrig_GruulSpell()

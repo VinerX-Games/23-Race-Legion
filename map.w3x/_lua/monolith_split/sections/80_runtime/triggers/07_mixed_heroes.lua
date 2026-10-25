@@ -634,16 +634,24 @@ end
 --===========================================================================
 function Trig_GruulSpell_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    -- Счётчик кастов: цикл выключается, только когда закончились все касты всех Груулов,
+    -- а повторный каст того же игрока не обрывается окончанием предыдущего.
+    local cast = (GruulCast[pi] or 0) + 1
+    GruulCast[pi]=cast
     Gruul[pi]=GetSpellAbilityUnit()
+    GruulActive=GruulActive + 1
     EnableTrigger(gg_trg_RRR)
-    
-    -- ????? ????? ?????? ?????? 1.10+ 0.15 ?????? ???
+
     TriggerSleepAction(1.10 + ( 0.15 * I2R(GetUnitAbilityLevel(Gruul[pi], FourCC('A18Q'))) ))
-    
-    
-    DisableTrigger(gg_trg_RRR)
-    -- ??????? ??????????
-    Gruul[pi]=nil
+
+    GruulActive=GruulActive - 1
+    if GruulActive <= 0 then
+        GruulActive=0
+        DisableTrigger(gg_trg_RRR)
+    end
+    if GruulCast[pi] == cast then
+        Gruul[pi]=nil
+    end
 end
 --===========================================================================
 function InitTrig_GruulSpell()

@@ -2382,6 +2382,8 @@ UnSkill = FourCC('A1LI')	---@type integer
 UnKofDmg1 = 1	---@type real	
 UnKofDmg2 = 30	---@type real	
 Gruul = {}	---@type unit	
+GruulCast = {}	---@type integer	-- номер последнего каста Груула у игрока
+GruulActive = 0	---@type integer	-- сколько кастов Груула идёт сейчас (gg_trg_RRR включён, пока > 0)
 -- TT	---@type texttag	
 -- hashtable Hash = InitHashtable()  // хэш новый, можно зименить на свой, если есть, но тогда менять придется во всём триггере или убрать эту строчку если используется он же
 JSTRSkill = FourCC('A1E2')	---@type integer	

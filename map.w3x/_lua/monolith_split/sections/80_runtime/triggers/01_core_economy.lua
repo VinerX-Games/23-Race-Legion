@@ -282,6 +282,8 @@ end
 ---@return nothing
 function InitTrig_RRR()
 	gg_trg_RRR = CreateTrigger()
+	-- Включается только на время каста Груула (Trig_GruulSpell_Actions); раньше тикал с начала игры.
+	DisableTrigger(gg_trg_RRR)
 	TriggerRegisterTimerEventPeriodic(gg_trg_RRR, 0.04)
 	TriggerAddAction(gg_trg_RRR, Trig_RRR_Actions)
 end
