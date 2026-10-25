@@ -152,23 +152,22 @@ class TranslationTests(unittest.TestCase):
             self.assertEqual(expected, lua.eval('Loc("k")'), marker)
 
     @unittest.skipUnless(importlib.util.find_spec('lupa'), 'lupa is installed in localization CI')
-    def test_loc_repeats_locale_detection_on_first_game_tick(self):
+    def test_loc_repeats_locale_detection_until_natives_answer(self):
         from lupa import LuaRuntime
 
         generated = wc3_l10n.render_ui_lua(
             {'ruRU': {'k': 'Русская строка'}, 'enUS': {'k': 'English string'}},
             {'ruRU': 'ruRU'}, default_locale='enUS',
         )
+        self.assertNotIn('CreateTimer', generated)
         lua = LuaRuntime(unpack_returned_tuples=True)
-        state = {'locale': None, 'callback': None}
+        state = {'locale': None}
         lua.globals().BlzGetLocale = lambda: state['locale']
-        lua.globals().CreateTimer = lambda: 'timer'
-        lua.globals().TimerStart = lambda _timer, _timeout, _periodic, callback: state.__setitem__('callback', callback)
         lua.execute(generated)
         self.assertEqual('enUS', lua.eval('MapLocale'))
         state['locale'] = 'ruRU'
-        state['callback']()
-        self.assertEqual('ruRU', lua.eval('MapLocale'))
+        self.assertEqual('Русская строка', lua.eval('Loc("k")'))
+        state['locale'] = 'deDE'
         self.assertEqual('Русская строка', lua.eval('Loc("k")'))
 
     def test_collect_ui_maps_only_ru_ru_and_defaults_to_english(self):

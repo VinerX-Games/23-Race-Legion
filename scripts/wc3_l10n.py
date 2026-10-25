@@ -357,6 +357,9 @@ def render_ui_lua(translations: dict[str, dict[str, str]], game_locales=None, lo
         lines.append(f"    [{lua_quote(game_locale)}] = {lua_quote(game_locales[game_locale])},")
     lines += [
         "}",
+        "-- No handles here: a timer created in the Lua root desyncs the host in multiplayer.",
+        "-- Until the natives answer, Loc() repeats the detection on every call.",
+        "local mapLocaleSettled = false",
         "local function SelectMapLocale()",
         "    local locale = BlzGetLocale and BlzGetLocale() or nil",
         "    local selected = locale and GAME_LOCALES[locale] or nil",
@@ -367,12 +370,9 @@ def render_ui_lua(translations: dict[str, dict[str, str]], game_locales=None, lo
     lines += [
         "    end",
         f"    MapLocale = selected or {lua_quote(default_locale)}",
+        "    mapLocaleSettled = selected ~= nil or (locale ~= nil and locale ~= \"\")",
         "end",
         "SelectMapLocale()",
-        "-- Repeat on the first tick in case the locale natives are not ready while the chunk loads.",
-        "if TimerStart and CreateTimer then",
-        "    TimerStart(CreateTimer(), 0.0, false, SelectMapLocale)",
-        "end",
         "",
         "local UI_STRINGS = {",
     ]
@@ -385,6 +385,7 @@ def render_ui_lua(translations: dict[str, dict[str, str]], game_locales=None, lo
         "}",
         "",
         "function Loc(key)",
+        "    if not mapLocaleSettled then SelectMapLocale() end",
         f"    local values = UI_STRINGS[MapLocale] or UI_STRINGS.{SOURCE_LOCALE}",
         "    local text = values[key]",
         f"    if text == nil then text = UI_STRINGS.{SOURCE_LOCALE}[key] end",
