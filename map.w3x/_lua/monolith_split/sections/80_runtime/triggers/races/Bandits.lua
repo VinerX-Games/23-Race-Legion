@@ -368,7 +368,6 @@ function InitTrig_Dovorougenie_Code_O()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Dovorougenie_Code_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Dovorougenie_Code_O, function()
         if GetSpellAbilityId() ~= FourCC('A000') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_Dovorougenie_Code_O_Actions()
     end)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
@@ -431,7 +430,6 @@ function InitTrig_Dovorougenie_2t_Code_O()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Dovorougenie_2t_Code_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Dovorougenie_2t_Code_O, function()
         if GetSpellAbilityId() ~= FourCC('A01A') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_Dovorougenie_2t_Code_O_Actions()
     end)
     TriggerAddAction(gg_trg_Dovorougenie_2t_Code_O, Trig_Del1FromTable_C_Actions)
@@ -439,9 +437,6 @@ end
 --===========================================================================
 -- Trigger: Dovorougenie 3t O
 --===========================================================================
-function Trig_Dovorougenie_3t_O_Conditions()
-    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 function Trig_Dovorougenie_3t_O_Func002Func002C()
     return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
@@ -469,7 +464,6 @@ function InitTrig_Dovorougenie_3t_O()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Dovorougenie_3t_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Dovorougenie_3t_O, function()
         if GetSpellAbilityId() ~= FourCC('A01B') then return end
-        if not Trig_Dovorougenie_3t_O_Conditions() then return end
         Trig_Dovorougenie_3t_O_Actions()
     end)
 end

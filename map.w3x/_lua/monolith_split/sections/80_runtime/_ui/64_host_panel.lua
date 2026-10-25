@@ -316,6 +316,7 @@ end
 -- Возвращает false, если шаблоны не загрузились: тогда нужно старое меню.
 function HostPanel_Open()
 	if hpRoot ~= nil then return true end
+	if StandardUIAcquireCommandButtons ~= nil then StandardUIAcquireCommandButtons() end
 	if not BlzLoadTOCFile("war3mapimported\\HudText.toc") or not BlzLoadTOCFile("war3mapimported\\BoxedText.toc")
 		or not BlzLoadTOCFile("war3mapimported\\TasItemShop.toc") then
 		ProbeLogWrite("[HOSTPANEL] templates not loaded, keeping mode building")

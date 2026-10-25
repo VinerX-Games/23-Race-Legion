@@ -148,6 +148,23 @@ end
 -- Общий для панелей выбора расы и настроек хоста.
 -- Нативные фреймы консоли только скрываются, без увода за экран: их исходные
 -- привязки не прочитать, и после возврата они перекрывали игровое поле.
+local standardUICommandParents = {}
+
+-- Первое получение фрейма расходует handle ID. Родителей командных кнопок
+-- забираем один раз у всех клиентов, а не в локальной ветке показа панели.
+function StandardUIAcquireCommandButtons()
+	if #standardUICommandParents > 0 then return end
+	for i = 0, 11 do
+		local f = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, i)
+		local parent = f ~= nil and BlzFrameGetParent(f) or nil
+		if parent ~= nil then
+			standardUICommandParents[#standardUICommandParents + 1] = parent
+		end
+	end
+end
+
+StandardUIAcquireCommandButtons()
+
 function StandardUISetVisible(show)
 	StandardUIHidden = not show
 	BlzHideOriginFrames(not show)
@@ -172,9 +189,8 @@ function StandardUISetVisible(show)
 	-- Выбор расы после этого сам показывает миникарту в правом верхнем углу.
 	f = BlzGetFrameByName("MiniMapFrame", 0)
 	if f ~= nil then BlzFrameSetVisible(f, show) end
-	for i = 0, 11 do
-		f = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, i)
-		if f ~= nil and BlzFrameGetParent(f) ~= nil then BlzFrameSetVisible(BlzFrameGetParent(f), show) end
+	for i = 1, #standardUICommandParents do
+		BlzFrameSetVisible(standardUICommandParents[i], show)
 	end
 	if IncomeUISetVisible ~= nil then IncomeUISetVisible(show) end
 	if CustomHudSetVisible ~= nil then CustomHudSetVisible(show) end
@@ -314,6 +330,7 @@ end
 
 function RacePicker_Create()
 	if rpRoot ~= nil then return end
+	StandardUIAcquireCommandButtons()
 	if not BlzLoadTOCFile("war3mapimported\\HudText.toc") or not BlzLoadTOCFile("war3mapimported\\BoxedText.toc") then
 		ProbeLogWrite("[RACEPICK] templates not loaded, keeping command card")
 		return

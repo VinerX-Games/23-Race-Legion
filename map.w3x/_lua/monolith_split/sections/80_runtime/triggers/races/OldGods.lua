@@ -37,7 +37,6 @@ function InitTrig_KalecStart()
     TriggerRegisterAnyUnitEventBJ(gg_trg_KalecStart, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_KalecStart, function()
         if GetSpellAbilityId() ~= FourCC('A12R') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_KalecStart_Actions()
     end)
 end
@@ -79,7 +78,6 @@ function InitTrig_ShaStart()
     TriggerRegisterAnyUnitEventBJ(gg_trg_ShaStart, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_ShaStart, function()
         if GetSpellAbilityId() ~= FourCC('A1ML') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_ShaStart_Actions()
     end)
 end
@@ -279,8 +277,8 @@ function Trig_SpawnQtun_Actions()
 
     if unitType and count > 0 then
         for _ = 1, count do
-            local spawnX = sx + (math.random() * 60.0 - 30.0)
-            local spawnY = sy + (math.random() * 60.0 - 30.0)
+            local spawnX = sx + GetRandomReal(-30.0, 30.0)
+            local spawnY = sy + GetRandomReal(-30.0, 30.0)
             local u = CreateUnit(p, unitType, spawnX, spawnY, bj_UNIT_FACING)
             if u then
                 UnitApplyTimedLifeBJ(30.00, FourCC('BTLF'), u)

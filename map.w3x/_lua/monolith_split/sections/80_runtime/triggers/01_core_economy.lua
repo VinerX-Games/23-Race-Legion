@@ -2237,7 +2237,6 @@ function InitTrig_Upgrade_Gold_C()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Gold_C, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Upgrade_Gold_C, function()
         if GetSpellAbilityId() ~= FourCC('A0AZ') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_Upgrade_Gold_C_Actions()
     end)
 end
@@ -2277,17 +2276,12 @@ function InitTrig_Upgrade_Lumber()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Lumber, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Upgrade_Lumber, function()
         if GetSpellAbilityId() ~= FourCC('A0B1') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_Upgrade_Lumber_Actions()
     end)
 end
 -- ===========================================================================
 --  Trigger: Upgrade Kontrol
 -- ===========================================================================
----@return boolean
-function Trig_Upgrade_Kontrol_Conditions()
-	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 ---@return nothing
 function Trig_Upgrade_Kontrol_Actions()
 	UnitAddAbilityBJ(FourCC('A0TW'), GetTriggerUnit())
@@ -2310,17 +2304,12 @@ function InitTrig_Upgrade_Kontrol()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Kontrol, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Upgrade_Kontrol, function()
         if GetSpellAbilityId() ~= FourCC('A0VQ') then return end
-        if not Trig_Upgrade_Kontrol_Conditions() then return end
         Trig_Upgrade_Kontrol_Actions()
     end)
 end
 -- ===========================================================================
 --  Trigger: Upgrade Razved
 -- ===========================================================================
----@return boolean
-function Trig_Upgrade_Razved_Conditions()
-	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 ---@return nothing
 function Trig_Upgrade_Razved_Actions()
 	UnitAddAbilityBJ(FourCC('A1C2'), GetTriggerUnit())
@@ -2338,7 +2327,6 @@ function InitTrig_Upgrade_Razved()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Razved, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Upgrade_Razved, function()
         if GetSpellAbilityId() ~= FourCC('A0VP') then return end
-        if not Trig_Upgrade_Razved_Conditions() then return end
         Trig_Upgrade_Razved_Actions()
     end)
 end
@@ -2370,10 +2358,6 @@ end
 -- ===========================================================================
 --  Trigger: Upgrade Oborona
 -- ===========================================================================
----@return boolean
-function Trig_Upgrade_Oborona_Conditions()
-	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 ---@return nothing
 function Trig_Upgrade_Oborona_Actions()
 	UnitAddAbilityBJ(FourCC('A0VR'), GetTriggerUnit())
@@ -2391,17 +2375,12 @@ function InitTrig_Upgrade_Oborona()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Oborona, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Upgrade_Oborona, function()
         if GetSpellAbilityId() ~= FourCC('A0VN') then return end
-        if not Trig_Upgrade_Oborona_Conditions() then return end
         Trig_Upgrade_Oborona_Actions()
     end)
 end
 -- ===========================================================================
 --  Trigger: Upgrade Mobile
 -- ===========================================================================
----@return boolean
-function Trig_Upgrade_Mobile_Conditions()
-	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 ---@return nothing
 function Trig_Upgrade_Mobile_Actions()
 	UnitAddAbilityBJ(FourCC('A0VT'), GetTriggerUnit())
@@ -2420,7 +2399,6 @@ function InitTrig_Upgrade_Mobile()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Mobile, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Upgrade_Mobile, function()
         if GetSpellAbilityId() ~= FourCC('A0VO') then return end
-        if not Trig_Upgrade_Mobile_Conditions() then return end
         Trig_Upgrade_Mobile_Actions()
     end)
 end
@@ -2487,7 +2465,6 @@ function InitTrig_Upgrade_Income()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Income, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Upgrade_Income, function()
         if GetSpellAbilityId() ~= FourCC('A0VM') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_Upgrade_Income_Actions()
     end)
 end
@@ -2517,7 +2494,6 @@ function InitTrig_Demontag()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Demontag, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Demontag, function()
         if GetSpellAbilityId() ~= FourCC('A146') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_Demontag_Actions()
     end)
 end
