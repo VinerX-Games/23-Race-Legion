@@ -12523,6 +12523,21 @@ end
 -- Общий для панелей выбора расы и настроек хоста.
 -- Нативные фреймы консоли только скрываются, без увода за экран: их исходные
 -- привязки не прочитать, и после возврата они перекрывали игровое поле.
+local standardUICommandParents = {}
+
+-- Первое получение фрейма расходует handle ID. Родителей командных кнопок
+-- забираем один раз у всех клиентов, а не в локальной ветке показа панели.
+function StandardUIAcquireCommandButtons()
+	if #standardUICommandParents > 0 then return end
+	for i = 0, 11 do
+		local f = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, i)
+		local parent = f ~= nil and BlzFrameGetParent(f) or nil
+		if parent ~= nil then
+			standardUICommandParents[#standardUICommandParents + 1] = parent
+		end
+	end
+end
+
 function StandardUISetVisible(show)
 	StandardUIHidden = not show
 	BlzHideOriginFrames(not show)
@@ -12547,9 +12562,8 @@ function StandardUISetVisible(show)
 	-- Выбор расы после этого сам показывает миникарту в правом верхнем углу.
 	f = BlzGetFrameByName("MiniMapFrame", 0)
 	if f ~= nil then BlzFrameSetVisible(f, show) end
-	for i = 0, 11 do
-		f = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, i)
-		if f ~= nil and BlzFrameGetParent(f) ~= nil then BlzFrameSetVisible(BlzFrameGetParent(f), show) end
+	for i = 1, #standardUICommandParents do
+		BlzFrameSetVisible(standardUICommandParents[i], show)
 	end
 	if IncomeUISetVisible ~= nil then IncomeUISetVisible(show) end
 	if CustomHudSetVisible ~= nil then CustomHudSetVisible(show) end
@@ -12689,6 +12703,7 @@ end
 
 function RacePicker_Create()
 	if rpRoot ~= nil then return end
+	StandardUIAcquireCommandButtons()
 	if not BlzLoadTOCFile("war3mapimported\\HudText.toc") or not BlzLoadTOCFile("war3mapimported\\BoxedText.toc") then
 		ProbeLogWrite("[RACEPICK] templates not loaded, keeping command card")
 		return
@@ -13140,6 +13155,7 @@ end
 -- Возвращает false, если шаблоны не загрузились: тогда нужно старое меню.
 function HostPanel_Open()
 	if hpRoot ~= nil then return true end
+	if StandardUIAcquireCommandButtons ~= nil then StandardUIAcquireCommandButtons() end
 	if not BlzLoadTOCFile("war3mapimported\\HudText.toc") or not BlzLoadTOCFile("war3mapimported\\BoxedText.toc")
 		or not BlzLoadTOCFile("war3mapimported\\TasItemShop.toc") then
 		ProbeLogWrite("[HOSTPANEL] templates not loaded, keeping mode building")
@@ -18683,7 +18699,6 @@ function InitTrig_Upgrade_Gold_C()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Gold_C, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Upgrade_Gold_C, function()
         if GetSpellAbilityId() ~= FourCC('A0AZ') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_Upgrade_Gold_C_Actions()
     end)
 end
@@ -18723,17 +18738,12 @@ function InitTrig_Upgrade_Lumber()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Lumber, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Upgrade_Lumber, function()
         if GetSpellAbilityId() ~= FourCC('A0B1') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_Upgrade_Lumber_Actions()
     end)
 end
 -- ===========================================================================
 --  Trigger: Upgrade Kontrol
 -- ===========================================================================
----@return boolean
-function Trig_Upgrade_Kontrol_Conditions()
-	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 ---@return nothing
 function Trig_Upgrade_Kontrol_Actions()
 	UnitAddAbilityBJ(FourCC('A0TW'), GetTriggerUnit())
@@ -18756,17 +18766,12 @@ function InitTrig_Upgrade_Kontrol()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Kontrol, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Upgrade_Kontrol, function()
         if GetSpellAbilityId() ~= FourCC('A0VQ') then return end
-        if not Trig_Upgrade_Kontrol_Conditions() then return end
         Trig_Upgrade_Kontrol_Actions()
     end)
 end
 -- ===========================================================================
 --  Trigger: Upgrade Razved
 -- ===========================================================================
----@return boolean
-function Trig_Upgrade_Razved_Conditions()
-	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 ---@return nothing
 function Trig_Upgrade_Razved_Actions()
 	UnitAddAbilityBJ(FourCC('A1C2'), GetTriggerUnit())
@@ -18784,7 +18789,6 @@ function InitTrig_Upgrade_Razved()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Razved, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Upgrade_Razved, function()
         if GetSpellAbilityId() ~= FourCC('A0VP') then return end
-        if not Trig_Upgrade_Razved_Conditions() then return end
         Trig_Upgrade_Razved_Actions()
     end)
 end
@@ -18816,10 +18820,6 @@ end
 -- ===========================================================================
 --  Trigger: Upgrade Oborona
 -- ===========================================================================
----@return boolean
-function Trig_Upgrade_Oborona_Conditions()
-	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 ---@return nothing
 function Trig_Upgrade_Oborona_Actions()
 	UnitAddAbilityBJ(FourCC('A0VR'), GetTriggerUnit())
@@ -18837,17 +18837,12 @@ function InitTrig_Upgrade_Oborona()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Oborona, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Upgrade_Oborona, function()
         if GetSpellAbilityId() ~= FourCC('A0VN') then return end
-        if not Trig_Upgrade_Oborona_Conditions() then return end
         Trig_Upgrade_Oborona_Actions()
     end)
 end
 -- ===========================================================================
 --  Trigger: Upgrade Mobile
 -- ===========================================================================
----@return boolean
-function Trig_Upgrade_Mobile_Conditions()
-	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 ---@return nothing
 function Trig_Upgrade_Mobile_Actions()
 	UnitAddAbilityBJ(FourCC('A0VT'), GetTriggerUnit())
@@ -18866,7 +18861,6 @@ function InitTrig_Upgrade_Mobile()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Mobile, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Upgrade_Mobile, function()
         if GetSpellAbilityId() ~= FourCC('A0VO') then return end
-        if not Trig_Upgrade_Mobile_Conditions() then return end
         Trig_Upgrade_Mobile_Actions()
     end)
 end
@@ -18933,7 +18927,6 @@ function InitTrig_Upgrade_Income()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Income, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Upgrade_Income, function()
         if GetSpellAbilityId() ~= FourCC('A0VM') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_Upgrade_Income_Actions()
     end)
 end
@@ -18963,7 +18956,6 @@ function InitTrig_Demontag()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Demontag, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Demontag, function()
         if GetSpellAbilityId() ~= FourCC('A146') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_Demontag_Actions()
     end)
 end
@@ -23958,8 +23950,8 @@ end
 function Trig_Research_Ot_Actions()
     local u = GetTriggerUnit()
     if not u then return end
-    local x = GetUnitX(u) + (math.random() * 30.0 - 15.0)
-    local y = GetUnitY(u) + (math.random() * 30.0 - 15.0)
+    local x = GetUnitX(u) + GetRandomReal(-15.0, 15.0)
+    local y = GetUnitY(u) + GetRandomReal(-15.0, 15.0)
     CreateUnit(GetOwningPlayer(u), FourCC('o00F'), x, y, bj_UNIT_FACING)
 end
 --===========================================================================
@@ -24085,9 +24077,6 @@ end
 --===========================================================================
 -- Trigger: Aura Flagmana Vinoslivost O
 --===========================================================================
-function Trig_Aura_Flagmana_Vinoslivost_O_Conditions()
-    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 function Trig_Aura_Flagmana_Vinoslivost_O_Actions()
     UnitAddAbilityBJ(FourCC('A007'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A008'), GetTriggerUnit())
@@ -24098,16 +24087,12 @@ function InitTrig_Aura_Flagmana_Vinoslivost_O()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Vinoslivost_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Aura_Flagmana_Vinoslivost_O, function()
         if GetSpellAbilityId() ~= FourCC('A00F') then return end
-        if not Trig_Aura_Flagmana_Vinoslivost_O_Conditions() then return end
         Trig_Aura_Flagmana_Vinoslivost_O_Actions()
     end)
 end
 --===========================================================================
 -- Trigger: Aura Flagmana Metkost O
 --===========================================================================
-function Trig_Aura_Flagmana_Metkost_O_Conditions()
-    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 function Trig_Aura_Flagmana_Metkost_O_Actions()
     UnitAddAbilityBJ(FourCC('A006'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A008'), GetTriggerUnit())
@@ -24118,16 +24103,12 @@ function InitTrig_Aura_Flagmana_Metkost_O()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Metkost_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Aura_Flagmana_Metkost_O, function()
         if GetSpellAbilityId() ~= FourCC('A00E') then return end
-        if not Trig_Aura_Flagmana_Metkost_O_Conditions() then return end
         Trig_Aura_Flagmana_Metkost_O_Actions()
     end)
 end
 --===========================================================================
 -- Trigger: Aura Flagmana Stoikost O
 --===========================================================================
-function Trig_Aura_Flagmana_Stoikost_O_Conditions()
-    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 function Trig_Aura_Flagmana_Stoikost_O_Actions()
     UnitAddAbilityBJ(FourCC('A005'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A008'), GetTriggerUnit())
@@ -24138,7 +24119,6 @@ function InitTrig_Aura_Flagmana_Stoikost_O()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Stoikost_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Aura_Flagmana_Stoikost_O, function()
         if GetSpellAbilityId() ~= FourCC('A00C') then return end
-        if not Trig_Aura_Flagmana_Stoikost_O_Conditions() then return end
         Trig_Aura_Flagmana_Stoikost_O_Actions()
     end)
 end
@@ -24277,9 +24257,6 @@ end
 --===========================================================================
 -- Trigger: MassPosadka2
 --===========================================================================
-function Trig_MassPosadka_Copy_Func006002()
-    return IsUnitSelected(GetFilterUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 function Trig_MassPosadka_Copy_Func008A()
     if GetUnitTypeId(GetTriggerUnit()) == GetUnitTypeId(GetEnumUnit()) then
         GroupAddUnit(udg_LocalOtrad, GetEnumUnit())
@@ -24319,8 +24296,9 @@ function Trig_MassPosadka2_Actions()
     -- ???????? ??????? (? ??????? ??????) ? ??????, ?????? ????????? ?????
     udg_LocalInteger=0
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr = CachedFilter(Trig_MassPosadka_Copy_Func006002)
-    GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
+    -- Выбор транспортов локален; SyncSelections выравнивает его у всех клиентов.
+    SyncSelections()
+    GroupEnumUnitsSelected(udg_LocalOtrad2, udg_LocalPlayer, nil)
     ForGroup(udg_LocalOtrad2, Trig_MassPosadka_Copy_Func008A)
     
     
@@ -45196,7 +45174,6 @@ function InitTrig_Dovorougenie_Code_O()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Dovorougenie_Code_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Dovorougenie_Code_O, function()
         if GetSpellAbilityId() ~= FourCC('A000') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_Dovorougenie_Code_O_Actions()
     end)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
@@ -45259,7 +45236,6 @@ function InitTrig_Dovorougenie_2t_Code_O()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Dovorougenie_2t_Code_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Dovorougenie_2t_Code_O, function()
         if GetSpellAbilityId() ~= FourCC('A01A') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_Dovorougenie_2t_Code_O_Actions()
     end)
     TriggerAddAction(gg_trg_Dovorougenie_2t_Code_O, Trig_Del1FromTable_C_Actions)
@@ -45267,9 +45243,6 @@ end
 --===========================================================================
 -- Trigger: Dovorougenie 3t O
 --===========================================================================
-function Trig_Dovorougenie_3t_O_Conditions()
-    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 function Trig_Dovorougenie_3t_O_Func002Func002C()
     return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
@@ -45297,7 +45270,6 @@ function InitTrig_Dovorougenie_3t_O()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Dovorougenie_3t_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Dovorougenie_3t_O, function()
         if GetSpellAbilityId() ~= FourCC('A01B') then return end
-        if not Trig_Dovorougenie_3t_O_Conditions() then return end
         Trig_Dovorougenie_3t_O_Actions()
     end)
 end
@@ -52558,7 +52530,6 @@ function InitTrig_KalecStart()
     TriggerRegisterAnyUnitEventBJ(gg_trg_KalecStart, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_KalecStart, function()
         if GetSpellAbilityId() ~= FourCC('A12R') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_KalecStart_Actions()
     end)
 end
@@ -52600,7 +52571,6 @@ function InitTrig_ShaStart()
     TriggerRegisterAnyUnitEventBJ(gg_trg_ShaStart, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_ShaStart, function()
         if GetSpellAbilityId() ~= FourCC('A1ML') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
         Trig_ShaStart_Actions()
     end)
 end
@@ -52800,8 +52770,8 @@ function Trig_SpawnQtun_Actions()
 
     if unitType and count > 0 then
         for _ = 1, count do
-            local spawnX = sx + (math.random() * 60.0 - 30.0)
-            local spawnY = sy + (math.random() * 60.0 - 30.0)
+            local spawnX = sx + GetRandomReal(-30.0, 30.0)
+            local spawnY = sy + GetRandomReal(-30.0, 30.0)
             local u = CreateUnit(p, unitType, spawnX, spawnY, bj_UNIT_FACING)
             if u then
                 UnitApplyTimedLifeBJ(30.00, FourCC('BTLF'), u)
@@ -52961,6 +52931,7 @@ function InitTrig_QoggSpawn()
     TriggerAddCondition(gg_trg_QoggSpawn, Condition(Trig_QoggSpawn_Conditions))
     TriggerAddAction(gg_trg_QoggSpawn, Trig_QoggSpawn_Actions)
 end
+
 --===========================================================================
 -- Огры: Пригвоздить (копьеметатель), Нарастающая ярость (огроны), Поступь гронна, Пиршество.
 -- Пригвоздить и Пиршество хранят состояние в уровне пассивки: при смерти или удалении

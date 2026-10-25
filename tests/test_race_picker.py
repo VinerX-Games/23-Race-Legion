@@ -103,6 +103,18 @@ class RacePickerTests(unittest.TestCase):
             circle={{id='h0HJ', owner={owner}, abil={{A02A=1, A0I1=1, A12Q=1, Apiv=1}}}}
             RacePickerAdopt(circle)''')
 
+    def test_script_load_does_not_touch_origin_frames(self):
+        # BlzGetOriginFrame до инициализации UI валит WC3 сразу после старта карты.
+        lua = LuaRuntime()
+        lua.execute(FIXTURE)
+        lua.execute(LOCALIZATION)
+        lua.execute(FRAME_PARK)
+        lua.execute('''
+            function BlzGetOriginFrame()
+                error('origin frames are not available during script load')
+            end''')
+        lua.execute((SECTIONS / '80_runtime/_ui/63_race_picker.lua').read_text(encoding='utf-8'))
+
     def test_hidden_panel_is_parked_off_screen(self):
         # Скрытая панель не должна ловить клики по миру: кнопки уведены вниз за экран.
         self.assertLess(self.lua.eval('buttons[1].y'), 0.0)

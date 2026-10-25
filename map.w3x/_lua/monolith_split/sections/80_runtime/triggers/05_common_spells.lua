@@ -697,8 +697,8 @@ end
 function Trig_Research_Ot_Actions()
     local u = GetTriggerUnit()
     if not u then return end
-    local x = GetUnitX(u) + (math.random() * 30.0 - 15.0)
-    local y = GetUnitY(u) + (math.random() * 30.0 - 15.0)
+    local x = GetUnitX(u) + GetRandomReal(-15.0, 15.0)
+    local y = GetUnitY(u) + GetRandomReal(-15.0, 15.0)
     CreateUnit(GetOwningPlayer(u), FourCC('o00F'), x, y, bj_UNIT_FACING)
 end
 --===========================================================================
@@ -824,9 +824,6 @@ end
 --===========================================================================
 -- Trigger: Aura Flagmana Vinoslivost O
 --===========================================================================
-function Trig_Aura_Flagmana_Vinoslivost_O_Conditions()
-    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 function Trig_Aura_Flagmana_Vinoslivost_O_Actions()
     UnitAddAbilityBJ(FourCC('A007'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A008'), GetTriggerUnit())
@@ -837,16 +834,12 @@ function InitTrig_Aura_Flagmana_Vinoslivost_O()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Vinoslivost_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Aura_Flagmana_Vinoslivost_O, function()
         if GetSpellAbilityId() ~= FourCC('A00F') then return end
-        if not Trig_Aura_Flagmana_Vinoslivost_O_Conditions() then return end
         Trig_Aura_Flagmana_Vinoslivost_O_Actions()
     end)
 end
 --===========================================================================
 -- Trigger: Aura Flagmana Metkost O
 --===========================================================================
-function Trig_Aura_Flagmana_Metkost_O_Conditions()
-    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 function Trig_Aura_Flagmana_Metkost_O_Actions()
     UnitAddAbilityBJ(FourCC('A006'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A008'), GetTriggerUnit())
@@ -857,16 +850,12 @@ function InitTrig_Aura_Flagmana_Metkost_O()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Metkost_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Aura_Flagmana_Metkost_O, function()
         if GetSpellAbilityId() ~= FourCC('A00E') then return end
-        if not Trig_Aura_Flagmana_Metkost_O_Conditions() then return end
         Trig_Aura_Flagmana_Metkost_O_Actions()
     end)
 end
 --===========================================================================
 -- Trigger: Aura Flagmana Stoikost O
 --===========================================================================
-function Trig_Aura_Flagmana_Stoikost_O_Conditions()
-    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 function Trig_Aura_Flagmana_Stoikost_O_Actions()
     UnitAddAbilityBJ(FourCC('A005'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A008'), GetTriggerUnit())
@@ -877,7 +866,6 @@ function InitTrig_Aura_Flagmana_Stoikost_O()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Stoikost_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Aura_Flagmana_Stoikost_O, function()
         if GetSpellAbilityId() ~= FourCC('A00C') then return end
-        if not Trig_Aura_Flagmana_Stoikost_O_Conditions() then return end
         Trig_Aura_Flagmana_Stoikost_O_Actions()
     end)
 end

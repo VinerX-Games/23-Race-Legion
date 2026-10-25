@@ -133,9 +133,6 @@ end
 --===========================================================================
 -- Trigger: MassPosadka2
 --===========================================================================
-function Trig_MassPosadka_Copy_Func006002()
-    return IsUnitSelected(GetFilterUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 function Trig_MassPosadka_Copy_Func008A()
     if GetUnitTypeId(GetTriggerUnit()) == GetUnitTypeId(GetEnumUnit()) then
         GroupAddUnit(udg_LocalOtrad, GetEnumUnit())
@@ -175,8 +172,9 @@ function Trig_MassPosadka2_Actions()
     -- ???????? ??????? (? ??????? ??????) ? ??????, ?????? ????????? ?????
     udg_LocalInteger=0
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr = CachedFilter(Trig_MassPosadka_Copy_Func006002)
-    GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
+    -- Выбор транспортов локален; SyncSelections выравнивает его у всех клиентов.
+    SyncSelections()
+    GroupEnumUnitsSelected(udg_LocalOtrad2, udg_LocalPlayer, nil)
     ForGroup(udg_LocalOtrad2, Trig_MassPosadka_Copy_Func008A)
     
     
