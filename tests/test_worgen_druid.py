@@ -128,7 +128,7 @@ class WorgenDruidTests(unittest.TestCase):
         self.lua.execute(druid_block())
         self.lua.execute('''
             local start = TimerStart
-            TimerStart = function(t,dt,r,fn) start(t,dt,r,fn); if fn then WorgenDruid.timer_fn = fn end end
+            TimerStart = function(t,dt,r,fn) start(t,dt,r,fn); if t == WorgenDruid.timer then WorgenDruid.timer_fn = fn end end
             InitTrig_WorgenDruid()
         ''')
 
@@ -151,13 +151,30 @@ class WorgenDruidTests(unittest.TestCase):
             tower = unit('htow',1,0,50,{hp=100,structure=true})
             cast(druid,'AWd1',nil,0,0)
             local seed = effects[1]
-            assert(seed.scale==0.5 and seed.model:find('AshenBush0'))
+            assert(seed.scale==0.5 and seed.model:find('TalDorenSeed'))
             tick(1.5)
             assert(math.abs(seed.scale-0.75)<1e-9 and near.hp==100)
             tick(1.5)
             assert(seed.destroyed and near.hp==290 and ally.hp==290)
             assert(far.hp==100 and foe.hp==100 and tower.hp==100)
             assert(#WorgenDruid.seeds==0 and WorgenDruid.timer==nil)
+            assert(effects[2].model:find('NECancelDeath'))
+        ''')
+
+    def test_seed_heals_at_most_eight_heroes_first_then_most_wounded(self):
+        self.check('''
+            druid = unit('H0J6',1,0,0,{abilities={AWd1=1}})
+            hero = unit('Hpal',1,10,0,{hp=990,hero=true})
+            wounded = {}
+            for i = 1, 12 do wounded[i] = unit('hfoo',1,i,0,{hp=1000-i*10}) end
+            cast(druid,'AWd1',nil,0,0)
+            tick(3)
+            assert(hero.hp==1000)
+            for i = 6, 12 do assert(wounded[i].hp==math.min(1000,1000-i*10+120), i) end
+            for i = 1, 5 do assert(wounded[i].hp==1000-i*10, i) end
+            local fx = 0
+            for _,e in ipairs(effects) do if e.unit and e.model:find('Rejuvenation') then fx = fx + 1; assert(not e.destroyed) end end
+            assert(fx==8)
         ''')
 
     def test_trail_drops_six_vines_and_damages_once_per_step(self):

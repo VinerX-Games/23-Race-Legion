@@ -68,6 +68,7 @@ frames={}
 local function frame(kind, name) local f={kind=kind, name=name, visible=true, handlers={}, value=0}; frames[#frames+1]=f; return f end
 function BlzLoadTOCFile() return true end
 function BlzGetOriginFrame() return frame('origin') end
+function BlzGetFrameByName(name) return frame('named', name) end
 function BlzCreateFrame(tpl, parent) local f=frame('tpl', tpl); f.parent=parent; return f end
 function BlzCreateFrameByType(kind, name, parent, inherit) local f=frame(kind, name); f.parent=parent; f.inherit=inherit; return f end
 function BlzFrameSetAllPoints() end

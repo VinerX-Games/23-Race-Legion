@@ -12731,6 +12731,27 @@ end
 -- Общий для панелей выбора расы и настроек хоста.
 -- Нативные фреймы консоли только скрываются, без увода за экран: их исходные
 -- привязки не прочитать, и после возврата они перекрывали игровое поле.
+local standardUICommandParents = { tooltips = {} }
+
+-- Первое получение фрейма расходует handle ID. Родителей командных кнопок
+-- и нативные подсказки забираем один раз у всех клиентов, а не в локальной
+-- ветке показа панели.
+function StandardUIAcquireCommandButtons()
+	local tooltips = standardUICommandParents.tooltips
+	if #standardUICommandParents > 0 or #tooltips > 0 then return end
+	for _, origin in ipairs({ ORIGIN_FRAME_TOOLTIP, ORIGIN_FRAME_UBERTOOLTIP }) do
+		local f = BlzGetOriginFrame(origin, 0)
+		if f ~= nil then tooltips[#tooltips + 1] = f end
+	end
+	for i = 0, 11 do
+		local f = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, i)
+		local parent = f ~= nil and BlzFrameGetParent(f) or nil
+		if parent ~= nil then
+			standardUICommandParents[#standardUICommandParents + 1] = parent
+		end
+	end
+end
+
 function StandardUISetVisible(show)
 	StandardUIHidden = not show
 	BlzHideOriginFrames(not show)
@@ -12756,9 +12777,18 @@ function StandardUISetVisible(show)
 	-- Выбор расы после этого сам показывает миникарту в правом верхнем углу.
 	f = BlzGetFrameByName("MiniMapFrame", 0)
 	if f ~= nil then BlzFrameSetVisible(f, show) end
-	for i = 0, 11 do
-		f = BlzGetOriginFrame(ORIGIN_FRAME_COMMAND_BUTTON, i)
-		if f ~= nil and BlzFrameGetParent(f) ~= nil then BlzFrameSetVisible(BlzFrameGetParent(f), show) end
+	for i = 1, #standardUICommandParents do
+		BlzFrameSetVisible(standardUICommandParents[i], show)
+	end
+	-- Кнопки миникарты остаются на месте над иконками рас: невидимые, они ловят
+	-- наведение, и их подсказка залипает на экране. Скрываем и кнопки, и подсказки.
+	for _, name in ipairs({ "MiniMapCreepButton", "MiniMapAllyButton", "MiniMapTerrainButton", "FormationButton" }) do
+		f = BlzGetFrameByName(name, 0)
+		if f ~= nil then BlzFrameSetVisible(f, show) end
+	end
+	local tooltips = standardUICommandParents.tooltips
+	for i = 1, #tooltips do
+		BlzFrameSetVisible(tooltips[i], show)
 	end
 	if IncomeUISetVisible ~= nil then IncomeUISetVisible(show) end
 	if CustomHudSetVisible ~= nil then CustomHudSetVisible(show) end
@@ -12898,6 +12928,7 @@ end
 
 function RacePicker_Create()
 	if rpRoot ~= nil then return end
+	StandardUIAcquireCommandButtons()
 	if not BlzLoadTOCFile("war3mapimported\\HudText.toc") or not BlzLoadTOCFile("war3mapimported\\BoxedText.toc") then
 		ProbeLogWrite("[RACEPICK] templates not loaded, keeping command card")
 		return
@@ -13349,6 +13380,7 @@ end
 -- Возвращает false, если шаблоны не загрузились: тогда нужно старое меню.
 function HostPanel_Open()
 	if hpRoot ~= nil then return true end
+	if StandardUIAcquireCommandButtons ~= nil then StandardUIAcquireCommandButtons() end
 	if not BlzLoadTOCFile("war3mapimported\\HudText.toc") or not BlzLoadTOCFile("war3mapimported\\BoxedText.toc")
 		or not BlzLoadTOCFile("war3mapimported\\TasItemShop.toc") then
 		ProbeLogWrite("[HOSTPANEL] templates not loaded, keeping mode building")
@@ -14100,11 +14132,24 @@ do
 	AP.COL_X = { 0.012, 0.135, 0.245, 0.305, 0.395 }
 	AP.COL_W = { 0.12, 0.105, 0.05, 0.088 }
 
-	-- Текстовые части строки игрока с верхним краем y.
+	-- Тонкая серая линия-разделитель по верхнему краю строки, слева от ползунка
+	-- (или заданной ширины w — для разделов окна).
+	function AP.Line(y, w)
+		local line = BlzCreateFrameByType("BACKDROP", "AlliesPanelLine", AP.root, "", 0)
+		BlzFrameSetTexture(line, string.format(AP.TEAM_TEX, 8), 0, true)
+		BlzFrameSetSize(line, w or (AP.W - AP.PAD * 2 - AP.SCROLL_W - 0.004), 0.0008)
+		BlzFrameSetAlpha(line, 110)
+		AP.At(line, AP.PAD, y)
+		return line
+	end
+
+	-- Текстовые части строки игрока с верхним краем y. Линия над строкой отделяет
+	-- её от предыдущей (у строки «вы» — от шапки колонок).
 	function AP.CreateRowParts(y)
 		local colX, colW = AP.COL_X, AP.COL_W
 		local cy = y - AP.ROW_H / 2
 		local row = { y = cy, actX = AP.PAD + colX[5], btn = {}, label = {} }
+		row.line = AP.Line(y + 0.001)
 		row.swatch = BlzCreateFrameByType("BACKDROP", "AlliesPanelSwatch", AP.root, "", 0)
 		BlzFrameSetSize(row.swatch, 0.009, 0.009)
 		AP.At(row.swatch, AP.PAD, cy, FRAMEPOINT_LEFT)
@@ -14118,7 +14163,7 @@ do
 		AP.At(row.cities, AP.PAD + colX[3], y)
 		row.status = AP.Text(AP.root, "HudText", colW[4], AP.ROW_H)
 		AP.At(row.status, AP.PAD + colX[4], y)
-		row.parts = { row.swatch, row.name, row.sub, row.race, row.cities, row.status }
+		row.parts = { row.line, row.swatch, row.name, row.sub, row.race, row.cities, row.status }
 		return row
 	end
 
@@ -14126,6 +14171,7 @@ do
 		local colX = AP.COL_X
 		local headers = { "allies.col.player", "allies.col.race", "allies.col.cities", "allies.col.status", "allies.col.actions" }
 		local y0 = -(AP.PAD + 0.022 + 0.006 + 0.016 + 0.008)
+		AP.Line(y0 + 0.004, innerW)  -- отделяет сводку от таблицы
 		for i = 1, #headers do
 			local center = i == 3
 			local h = AP.Text(AP.root, "HudText", center and AP.COL_W[3] or 0.1, 0.012,
@@ -14178,6 +14224,7 @@ do
 	function AP.CreateBottom(y, innerW)
 		local colW = 0.2
 		local h = 0.012 * AP.LOG_MAX
+		AP.Line(y + 0.005, innerW)  -- отделяет таблицу от вассалитета и журнала
 		local vt = AP.Text(AP.root, "HudBody", colW, 0.014)
 		AP.At(vt, AP.PAD, y)
 		BlzFrameSetText(vt, AP.C_NAME .. Loc("allies.vassalage") .. "|r")
@@ -14422,8 +14469,23 @@ do
 			AP.Toggle(GetPlayerId(GetTriggerPlayer()))
 			AP.Render()
 		end)
+		-- ESC закрывает сначала окно передачи ресурсов, затем само окно.
+		local esc = CreateTrigger()
+		for pi = 0, 23 do BlzTriggerRegisterPlayerKeyEvent(esc, Player(pi), OSKEY_ESCAPE, 0, true) end
+		TriggerAddAction(esc, function()
+			local v = GetPlayerId(GetTriggerPlayer())
+			if not AP.open[v] then return end
+			if AP.resTarget[v] ~= nil then
+				AP.resTarget[v] = nil
+			else
+				AP.Toggle(v)
+			end
+			AP.Render()
+		end)
 
-		AP.CreateUpper(parent)
+		-- Подложки «Меню» и «Журнала» стоят левее области 4:3 (x < 0), как и нативные
+		-- кнопки: вне её движок пускает только потомков ConsoleUIBackdrop.
+		AP.CreateUpper(BlzGetFrameByName("ConsoleUIBackdrop", 0) or parent)
 		AlliesPanelActive = true
 		AP.PlaceButton()
 		AP.PlaceUpper()
@@ -48740,16 +48802,16 @@ WorgenDruid = {
         caster = FourCC('nWd1'),
     },
     tick = 0.05,
-    seedTicks = 60, seedRadius = 200, seedHeal = {120, 190, 260, 330},
-    seedRange = 700, seedMinLost = 100,
+    seedTicks = 60, seedRadius = 200, seedHeal = {120, 190, 260, 330}, seedMaxTargets = 8,
+    seedRange = 700, seedMinLost = 100, healFxTime = 1.5,
     trailEvery = 10, trailDrops = 6, trailLife = 10,   -- 0.5 сек.; 6 лоз; живут 10 шагов (5 сек.)
     trailRadius = 120, trailDamage = {5, 8, 11, 14},
     markTime = 10, markJump = 300, markAmp = 1.5, markPrune = 200, curseRange = 700,
     moonRadius = 1200, moonHeal = {150, 250}, moonMinEnemies = 8,
     fx = {
-        seed = "Doodads\\Ashenvale\\Plants\\AshenBush0\\AshenBush0.mdl",
-        bloom = "Objects\\Spawnmodels\\NightElf\\NightElfLargeDeathExplode\\NightElfLargeDeathExplode.mdl",
-        heal = "Abilities\\Spells\\Human\\Heal\\HealTarget.mdl",
+        seed = "war3mapImported\\TalDorenSeed.mdl",   -- AshenBush0 с анимацией Death
+        bloom = "Objects\\Spawnmodels\\NightElf\\NECancelDeath\\NECancelDeath.mdl",   -- разрушение Древа Жизни
+        heal = "Abilities\\Spells\\NightElf\\Rejuvenation\\RejuvenationTarget.mdl",
         vine = "Abilities\\Spells\\NightElf\\EntanglingRoots\\EntanglingRootsTarget.mdl",
         moon = "Abilities\\Spells\\NightElf\\MoonWell\\MoonWellCasterArt.mdl",
     },
@@ -48763,9 +48825,15 @@ function WorgenDruid.Now()
     return TimerGetElapsed(WorgenDruid.clock)
 end
 
+-- Эффект лечения держится healFxTime сек.: зацикленная модель иначе не успевает показаться.
 function WorgenDruid.Heal(u, amount)
     SetUnitState(u, UNIT_STATE_LIFE, GetUnitState(u, UNIT_STATE_LIFE) + amount)
-    DestroyEffect(AddSpecialEffectTarget(WorgenDruid.fx.heal, u, "origin"))
+    local fx = AddSpecialEffectTarget(WorgenDruid.fx.heal, u, "origin")
+    local t = CreateTimer()
+    TimerStart(t, WorgenDruid.healFxTime, false, function()
+        DestroyEffect(fx)
+        DestroyTimer(t)
+    end)
 end
 
 -- Служебный юнит без точки каста применяет метку/промах от имени владельца друида.
@@ -48811,14 +48879,27 @@ function WorgenDruid.Bloom(seed)
     DestroyEffect(AddSpecialEffect(WorgenDruid.fx.bloom, seed.x, seed.y))
     local group = CreateGroup()
     GroupEnumUnitsInRange(group, seed.x, seed.y, WorgenDruid.seedRadius, nil)
+    local targets = {}
     for i = 0, BlzGroupGetSize(group) - 1 do
         local u = BlzGroupUnitAt(group, i)
         if WorgenDruid.Alive(u) and IsUnitAlly(u, seed.owner)
             and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
-            WorgenDruid.Heal(u, seed.heal)
+            targets[#targets + 1] = {
+                u = u, hero = IsUnitType(u, UNIT_TYPE_HERO), id = GetHandleId(u),
+                lost = GetUnitState(u, UNIT_STATE_MAX_LIFE) - GetUnitState(u, UNIT_STATE_LIFE),
+            }
         end
     end
     DestroyGroup(group)
+    -- Не больше seedMaxTargets целей: сначала герои, затем самые раненые.
+    table.sort(targets, function(a, b)
+        if a.hero ~= b.hero then return a.hero end
+        if a.lost ~= b.lost then return a.lost > b.lost end
+        return a.id < b.id
+    end)
+    for i = 1, math.min(#targets, WorgenDruid.seedMaxTargets) do
+        WorgenDruid.Heal(targets[i].u, seed.heal)
+    end
 end
 
 function WorgenDruid.Trail(caster, level)

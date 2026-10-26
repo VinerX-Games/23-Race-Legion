@@ -66,16 +66,16 @@ WorgenDruid = {
         caster = FourCC('nWd1'),
     },
     tick = 0.05,
-    seedTicks = 60, seedRadius = 200, seedHeal = {120, 190, 260, 330},
-    seedRange = 700, seedMinLost = 100,
+    seedTicks = 60, seedRadius = 200, seedHeal = {120, 190, 260, 330}, seedMaxTargets = 8,
+    seedRange = 700, seedMinLost = 100, healFxTime = 1.5,
     trailEvery = 10, trailDrops = 6, trailLife = 10,   -- 0.5 сек.; 6 лоз; живут 10 шагов (5 сек.)
     trailRadius = 120, trailDamage = {5, 8, 11, 14},
     markTime = 10, markJump = 300, markAmp = 1.5, markPrune = 200, curseRange = 700,
     moonRadius = 1200, moonHeal = {150, 250}, moonMinEnemies = 8,
     fx = {
-        seed = "Doodads\\Ashenvale\\Plants\\AshenBush0\\AshenBush0.mdl",
-        bloom = "Objects\\Spawnmodels\\NightElf\\NightElfLargeDeathExplode\\NightElfLargeDeathExplode.mdl",
-        heal = "Abilities\\Spells\\Human\\Heal\\HealTarget.mdl",
+        seed = "war3mapImported\\TalDorenSeed.mdl",   -- AshenBush0 с анимацией Death
+        bloom = "Objects\\Spawnmodels\\NightElf\\NECancelDeath\\NECancelDeath.mdl",   -- разрушение Древа Жизни
+        heal = "Abilities\\Spells\\NightElf\\Rejuvenation\\RejuvenationTarget.mdl",
         vine = "Abilities\\Spells\\NightElf\\EntanglingRoots\\EntanglingRootsTarget.mdl",
         moon = "Abilities\\Spells\\NightElf\\MoonWell\\MoonWellCasterArt.mdl",
     },
@@ -89,9 +89,15 @@ function WorgenDruid.Now()
     return TimerGetElapsed(WorgenDruid.clock)
 end
 
+-- Эффект лечения держится healFxTime сек.: зацикленная модель иначе не успевает показаться.
 function WorgenDruid.Heal(u, amount)
     SetUnitState(u, UNIT_STATE_LIFE, GetUnitState(u, UNIT_STATE_LIFE) + amount)
-    DestroyEffect(AddSpecialEffectTarget(WorgenDruid.fx.heal, u, "origin"))
+    local fx = AddSpecialEffectTarget(WorgenDruid.fx.heal, u, "origin")
+    local t = CreateTimer()
+    TimerStart(t, WorgenDruid.healFxTime, false, function()
+        DestroyEffect(fx)
+        DestroyTimer(t)
+    end)
 end
 
 -- Служебный юнит без точки каста применяет метку/промах от имени владельца друида.
@@ -137,14 +143,27 @@ function WorgenDruid.Bloom(seed)
     DestroyEffect(AddSpecialEffect(WorgenDruid.fx.bloom, seed.x, seed.y))
     local group = CreateGroup()
     GroupEnumUnitsInRange(group, seed.x, seed.y, WorgenDruid.seedRadius, nil)
+    local targets = {}
     for i = 0, BlzGroupGetSize(group) - 1 do
         local u = BlzGroupUnitAt(group, i)
         if WorgenDruid.Alive(u) and IsUnitAlly(u, seed.owner)
             and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
-            WorgenDruid.Heal(u, seed.heal)
+            targets[#targets + 1] = {
+                u = u, hero = IsUnitType(u, UNIT_TYPE_HERO), id = GetHandleId(u),
+                lost = GetUnitState(u, UNIT_STATE_MAX_LIFE) - GetUnitState(u, UNIT_STATE_LIFE),
+            }
         end
     end
     DestroyGroup(group)
+    -- Не больше seedMaxTargets целей: сначала герои, затем самые раненые.
+    table.sort(targets, function(a, b)
+        if a.hero ~= b.hero then return a.hero end
+        if a.lost ~= b.lost then return a.lost > b.lost end
+        return a.id < b.id
+    end)
+    for i = 1, math.min(#targets, WorgenDruid.seedMaxTargets) do
+        WorgenDruid.Heal(targets[i].u, seed.heal)
+    end
 end
 
 function WorgenDruid.Trail(caster, level)

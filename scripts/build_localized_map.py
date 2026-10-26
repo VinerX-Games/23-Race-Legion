@@ -71,6 +71,10 @@ def main() -> int:
     config, _, _ = wc3_l10n.locale_config(args.locale)
     if not config.get("base"):
         parser.error(f"{args.locale} is not the base locale; only the base locale is packaged by this script")
+    # Warcraft III does not read an LF-only WTS: every TRIGSTR shows up raw. git restores the file with LF.
+    raw = (wc3_l10n.MAP / "war3map.wts").read_bytes()
+    if raw.count(b"\n") != raw.count(b"\r\n"):
+        parser.error("map.w3x/war3map.wts must use CRLF line endings; Warcraft III shows raw TRIGSTR_ keys otherwise")
 
     run(sys.executable, "scripts/wc3_l10n.py", "extract")
     run(sys.executable, "scripts/wc3_l10n.py", "check", "--locale", args.locale, "--no-output")

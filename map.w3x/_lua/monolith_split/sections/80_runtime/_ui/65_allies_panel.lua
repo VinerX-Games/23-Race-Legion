@@ -645,11 +645,24 @@ do
 	AP.COL_X = { 0.012, 0.135, 0.245, 0.305, 0.395 }
 	AP.COL_W = { 0.12, 0.105, 0.05, 0.088 }
 
-	-- Текстовые части строки игрока с верхним краем y.
+	-- Тонкая серая линия-разделитель по верхнему краю строки, слева от ползунка
+	-- (или заданной ширины w — для разделов окна).
+	function AP.Line(y, w)
+		local line = BlzCreateFrameByType("BACKDROP", "AlliesPanelLine", AP.root, "", 0)
+		BlzFrameSetTexture(line, string.format(AP.TEAM_TEX, 8), 0, true)
+		BlzFrameSetSize(line, w or (AP.W - AP.PAD * 2 - AP.SCROLL_W - 0.004), 0.0008)
+		BlzFrameSetAlpha(line, 110)
+		AP.At(line, AP.PAD, y)
+		return line
+	end
+
+	-- Текстовые части строки игрока с верхним краем y. Линия над строкой отделяет
+	-- её от предыдущей (у строки «вы» — от шапки колонок).
 	function AP.CreateRowParts(y)
 		local colX, colW = AP.COL_X, AP.COL_W
 		local cy = y - AP.ROW_H / 2
 		local row = { y = cy, actX = AP.PAD + colX[5], btn = {}, label = {} }
+		row.line = AP.Line(y + 0.001)
 		row.swatch = BlzCreateFrameByType("BACKDROP", "AlliesPanelSwatch", AP.root, "", 0)
 		BlzFrameSetSize(row.swatch, 0.009, 0.009)
 		AP.At(row.swatch, AP.PAD, cy, FRAMEPOINT_LEFT)
@@ -663,7 +676,7 @@ do
 		AP.At(row.cities, AP.PAD + colX[3], y)
 		row.status = AP.Text(AP.root, "HudText", colW[4], AP.ROW_H)
 		AP.At(row.status, AP.PAD + colX[4], y)
-		row.parts = { row.swatch, row.name, row.sub, row.race, row.cities, row.status }
+		row.parts = { row.line, row.swatch, row.name, row.sub, row.race, row.cities, row.status }
 		return row
 	end
 
@@ -671,6 +684,7 @@ do
 		local colX = AP.COL_X
 		local headers = { "allies.col.player", "allies.col.race", "allies.col.cities", "allies.col.status", "allies.col.actions" }
 		local y0 = -(AP.PAD + 0.022 + 0.006 + 0.016 + 0.008)
+		AP.Line(y0 + 0.004, innerW)  -- отделяет сводку от таблицы
 		for i = 1, #headers do
 			local center = i == 3
 			local h = AP.Text(AP.root, "HudText", center and AP.COL_W[3] or 0.1, 0.012,
@@ -723,6 +737,7 @@ do
 	function AP.CreateBottom(y, innerW)
 		local colW = 0.2
 		local h = 0.012 * AP.LOG_MAX
+		AP.Line(y + 0.005, innerW)  -- отделяет таблицу от вассалитета и журнала
 		local vt = AP.Text(AP.root, "HudBody", colW, 0.014)
 		AP.At(vt, AP.PAD, y)
 		BlzFrameSetText(vt, AP.C_NAME .. Loc("allies.vassalage") .. "|r")
@@ -967,8 +982,23 @@ do
 			AP.Toggle(GetPlayerId(GetTriggerPlayer()))
 			AP.Render()
 		end)
+		-- ESC закрывает сначала окно передачи ресурсов, затем само окно.
+		local esc = CreateTrigger()
+		for pi = 0, 23 do BlzTriggerRegisterPlayerKeyEvent(esc, Player(pi), OSKEY_ESCAPE, 0, true) end
+		TriggerAddAction(esc, function()
+			local v = GetPlayerId(GetTriggerPlayer())
+			if not AP.open[v] then return end
+			if AP.resTarget[v] ~= nil then
+				AP.resTarget[v] = nil
+			else
+				AP.Toggle(v)
+			end
+			AP.Render()
+		end)
 
-		AP.CreateUpper(parent)
+		-- Подложки «Меню» и «Журнала» стоят левее области 4:3 (x < 0), как и нативные
+		-- кнопки: вне её движок пускает только потомков ConsoleUIBackdrop.
+		AP.CreateUpper(BlzGetFrameByName("ConsoleUIBackdrop", 0) or parent)
 		AlliesPanelActive = true
 		AP.PlaceButton()
 		AP.PlaceUpper()
